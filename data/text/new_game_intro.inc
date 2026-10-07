@@ -2,7 +2,7 @@ gOtherText_NewName::
     .string "NEW NAME$"
 
 gNameChoice_Green::
-    .string "GREEN$"
+    .string "ZEPHYR$"
 
 gNameChoice_Red::
     .string "RED$"
