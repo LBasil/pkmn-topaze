@@ -4285,8 +4285,7 @@ static void CB2_UseItem(void)
     {
         GiveMoveToMon(&gPlayerParty[gPartyMenu.slotId], ItemIdToBattleMoveId(gSpecialVar_ItemId));
         AdjustFriendship(&gPlayerParty[gPartyMenu.slotId], FRIENDSHIP_EVENT_LEARN_TMHM);
-        if (gSpecialVar_ItemId < ITEM_HM01)
-            RemoveBagItem(gSpecialVar_ItemId, 1);
+        // Topaze: les CT sont utilisables à l'infini (plus de RemoveBagItem)
         SetMainCallback2(gPartyMenu.exitCallback);
     }
     else
@@ -4305,8 +4304,7 @@ static void CB2_UseTMHMAfterForgettingMove(void)
         SetMonMoveSlot(mon, ItemIdToBattleMoveId(gSpecialVar_ItemId), moveIdx);
         AdjustFriendship(mon, FRIENDSHIP_EVENT_LEARN_TMHM);
         ItemUse_SetQuestLogEvent(QL_EVENT_USED_ITEM, mon, gSpecialVar_ItemId, move);
-        if (gSpecialVar_ItemId < ITEM_HM01)
-            RemoveBagItem(gSpecialVar_ItemId, 1);
+        // Topaze: les CT sont utilisables à l'infini (plus de RemoveBagItem)
         SetMainCallback2(gPartyMenu.exitCallback);
     }
     else
@@ -4723,11 +4721,7 @@ u16 ItemIdToBattleMoveId(u16 item)
 
 bool8 IsMoveHm(u16 move)
 {
-    u8 i;
-
-    for (i = 0; i < NUM_HIDDEN_MACHINES - 1; ++i) // no dive
-        if (sTMHMMoves[i + NUM_TECHNICAL_MACHINES] == move)
-            return TRUE;
+    // Topaze: les CS peuvent être oubliées librement.
     return FALSE;
 }
 
@@ -4809,8 +4803,7 @@ static void Task_LearnedMove(u8 taskId)
     if (learnMoveMethod == LEARN_VIA_TMHM)
     {
         AdjustFriendship(mon, FRIENDSHIP_EVENT_LEARN_TMHM);
-        if (item < ITEM_HM01)
-            RemoveBagItem(item, 1);
+        // Topaze: les CT sont utilisables à l'infini (plus de RemoveBagItem)
     }
     GetMonNickname(mon, gStringVar1);
     StringCopy(gStringVar2, gMoveNames[learnMoveId]);

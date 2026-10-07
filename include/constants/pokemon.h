@@ -114,6 +114,9 @@
 #define TYPE_DARK           17
 #define NUMBER_OF_MON_TYPES 18
 
+// Topaze TODO (jalon 1b): vrai type Fée. En attendant, les Pokémon Fée s'affichent en "???".
+#define TYPE_FAIRY          TYPE_MYSTERY
+
 // Pokemon egg groups
 #define EGG_GROUP_NONE         0
 #define EGG_GROUP_MONSTER      1
