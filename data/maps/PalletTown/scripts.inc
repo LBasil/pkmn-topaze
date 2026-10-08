@@ -24,7 +24,7 @@ PalletTown_EventScript_SetSignLadyDone::
 
 PalletTown_EventScript_SetSignLadyPos::
 	goto_if_set FLAG_PALLET_LADY_NOT_BLOCKING_SIGN, PalletTown_EventScript_MoveSignLadyToRouteEntrance
-	setobjectxyperm LOCALID_PALLET_SIGN_LADY, 5, 15
+	setobjectxyperm LOCALID_PALLET_SIGN_LADY, 4, 17
 	setobjectmovementtype LOCALID_PALLET_SIGN_LADY, MOVEMENT_TYPE_FACE_UP
 	return
 
@@ -462,4 +462,8 @@ PalletTown_EventScript_OnybrisGruntDefeated::
 	setflag FLAG_HIDE_GRENALUX_ONYBRIS_GRUNT
 	fadescreen FADE_FROM_BLACK
 	releaseall
+	end
+
+PalletTown_EventScript_MuseumSign::
+	msgbox PalletTown_Text_MuseumSign, MSGBOX_SIGN
 	end

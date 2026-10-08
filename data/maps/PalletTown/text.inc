@@ -29,7 +29,7 @@ PalletTown_Text_PlayersHouse::
     .string "{PLAYER}'s house$"
 
 PalletTown_Text_RivalsHouse::
-    .string "{RIVAL}'s house$"
+    .string "{RIVAL}'s family RANCH$"
 
 PalletTown_Text_TownSign::
     .string "GRENALUX\n"
@@ -86,3 +86,7 @@ PalletTown_Text_OnybrisGruntPostBattle::
     .string "Forget it. There are others who\n"
     .string "won't ask nicely.\p"
     .string "GRENALUX will see us again...$"
+
+PalletTown_Text_MuseumSign::
+    .string "GRENALUX MUSEUM\n"
+    .string "Home of the GRENAT gem.$"
