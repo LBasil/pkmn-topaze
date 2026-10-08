@@ -1183,18 +1183,9 @@ u8 GetPlayerAvatarGenderByGraphicsId(u8 gfxId)
 
 bool8 PartyHasMonWithSurf(void)
 {
-    u8 i;
-
+    // Topaze: Surf n'a plus besoin d'être appris, seule l'insigne compte
     if (!TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
-    {
-        for (i = 0; i < PARTY_SIZE; i++)
-        {
-            if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) == SPECIES_NONE)
-                break;
-            if (MonKnowsMove(&gPlayerParty[i], MOVE_SURF))
-                return TRUE;
-        }
-    }
+        return TRUE;
     return FALSE;
 }
 

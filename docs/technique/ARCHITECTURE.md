@@ -31,6 +31,10 @@ Le dépôt est celui de pokefirered ; seuls les éléments modifiés pour Topaze
 | CT infinies | `src/party_menu.c` : 3 appels `RemoveBagItem` supprimés pour `item < ITEM_HM01` |
 | CS oubliables | `src/party_menu.c` : `IsMoveHm()` retourne `FALSE` |
 | Coupe/Force/Éclate-Roc/Flash devenues des attaques | `src/data/battle_moves.h` |
+| **CS sans les apprendre** (Coupe, Éclate-Roc, Force, Cascade, Surf) | `data/scripts/field_moves.inc`, `data/scripts/surf.inc` : `checkpartymove` + test remplacés par `setvar VAR_RESULT, 0` (le Pokémon de tête joue l'animation) ; `src/field_player_avatar.c` : `PartyHasMonWithSurf()` renvoie TRUE hors surf. Les **insignes** restent exigés. Vol/Téléport/Flash/Plongée : inchangés (il faut toujours la CS). |
+| **Multi Exp. intégré** (tous les Pokémon vivants gagnent de l'XP) | `src/battle_script_commands.c` (3 tests `HOLD_EFFECT_EXP_SHARE` neutralisés, commentés « Topaze ») |
+| **Texte rapide** par défaut | `src/new_game.c` (`OPTIONS_TEXT_SPEED_FAST`) |
+| **Course partout** (intérieurs, grottes) | `src/bike.c` : `IsRunningDisallowed()` ignore `gMapHeader.allowRunning` |
 | Monde plus dur | `docs/topaze/harder_world.py` (appliqué une fois aux données) |
 | Champions | `src/data/trainer_parties.h` (`sParty_Leader*`), `docs/topaze/leaders_data.py` |
 
