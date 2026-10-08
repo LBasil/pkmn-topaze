@@ -746,3 +746,25 @@ const struct Tileset gTileset_HallOfFame =
     .callback = NULL,
 };
 
+
+const struct Tileset gTileset_GeneralEmerald =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralEmerald,
+    .palettes = gTilesetPalettes_GeneralEmerald,
+    .metatiles = gMetatiles_GeneralEmerald,
+    .metatileAttributes = gMetatileAttributes_GeneralEmerald,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_PetalburgEmerald =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PetalburgEmerald,
+    .palettes = gTilesetPalettes_PetalburgEmerald,
+    .metatiles = gMetatiles_PetalburgEmerald,
+    .metatileAttributes = gMetatileAttributes_PetalburgEmerald,
+    .callback = NULL,
+};

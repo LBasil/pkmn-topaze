@@ -1407,3 +1407,45 @@ const u16 gTilesetPalettes_HallOfFame[][16] =
 	INCBIN_U16("data/tilesets/secondary/hall_of_fame/palettes/14.gbapal"),
 	INCBIN_U16("data/tilesets/secondary/hall_of_fame/palettes/15.gbapal"),
 };
+
+const u32 gTilesetTiles_GeneralEmerald[] = INCBIN_U32("data/tilesets/primary/general_emerald/tiles.4bpp.lz");
+const u16 gTilesetPalettes_GeneralEmerald[][16] =
+{
+	INCBIN_U16("data/tilesets/primary/general_emerald/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_emerald/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_emerald/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_emerald/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_emerald/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_emerald/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_emerald/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_emerald/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_emerald/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_emerald/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_emerald/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_emerald/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_emerald/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_emerald/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_emerald/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_emerald/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_PetalburgEmerald[] = INCBIN_U32("data/tilesets/secondary/petalburg_emerald/tiles.4bpp.lz");
+const u16 gTilesetPalettes_PetalburgEmerald[][16] =
+{
+	INCBIN_U16("data/tilesets/secondary/petalburg_emerald/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/petalburg_emerald/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/petalburg_emerald/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/petalburg_emerald/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/petalburg_emerald/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/petalburg_emerald/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/petalburg_emerald/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/petalburg_emerald/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/petalburg_emerald/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/petalburg_emerald/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/petalburg_emerald/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/petalburg_emerald/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/petalburg_emerald/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/petalburg_emerald/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/petalburg_emerald/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/petalburg_emerald/palettes/15.gbapal"),
+};

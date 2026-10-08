@@ -30,7 +30,7 @@
       "local_id": "LOCALID_PALLET_SIGN_LADY",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
-      "x": 5,
+      "x": 4,
       "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -46,7 +46,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
       "x": 11,
-      "y": 13,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -104,15 +104,15 @@
   ],
   "warp_events": [
     {
-      "x": 5,
+      "x": 6,
       "y": 7,
       "elevation": 0,
       "dest_map": "MAP_PALLET_TOWN_PLAYERS_HOUSE_1F",
       "dest_warp_id": "1"
     },
     {
-      "x": 17,
-      "y": 7,
+      "x": 18,
+      "y": 6,
       "elevation": 0,
       "dest_map": "MAP_PALLET_TOWN_RIVALS_HOUSE",
       "dest_warp_id": "0"
@@ -125,7 +125,7 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 5,
+      "x": 6,
       "y": 14,
       "elevation": 0,
       "dest_map": "MAP_PALLET_TOWN_MUSEUM",
@@ -180,7 +180,7 @@
     },
     {
       "type": "sign",
-      "x": 14,
+      "x": 15,
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -204,8 +204,8 @@
     },
     {
       "type": "sign",
-      "x": 8,
-      "y": 14,
+      "x": 9,
+      "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PalletTown_EventScript_MuseumSign"
