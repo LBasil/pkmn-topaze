@@ -14,7 +14,7 @@ Route6_NorthEntrance_Text_ThanksIllShareTeaWithGuards::
     .string "Glug, glug…\l"
     .string "… …\l"
     .string "Gulp…\l"
-    .string "If you want to go to SAFFRON\l"
+    .string "If you want to go to HEMATOWN\l"
     .string "CITY…\l"
     .string "… …\l"
     .string "You can go on through.\p"

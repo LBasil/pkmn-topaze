@@ -130,7 +130,7 @@ ViridianCity_Gym_Text_ColePostBattle::
     .string "I was just careless!$"
 
 ViridianCity_Gym_Text_SamuelIntro::
-    .string "VIRIDIAN GYM was closed for a\n"
+    .string "OPANIHRUM GYM was closed for a\n"
     .string "long time.\p"
     .string "But now, our LEADER is back!$"
 
@@ -145,7 +145,7 @@ ViridianCity_Gym_Text_SamuelPostBattle::
 ViridianCity_Gym_Text_GymGuyAdvice::
     .string "Yo!\n"
     .string "Champ in the making!\p"
-    .string "Even I don't know the VIRIDIAN\n"
+    .string "Even I don't know the OPANIHRUM\n"
     .string "LEADER's identity.\p"
     .string "But one thing's certain.\n"
     .string "This will be the toughest of all\l"
@@ -155,16 +155,16 @@ ViridianCity_Gym_Text_GymGuyAdvice::
 
 ViridianCity_Gym_Text_GymGuyPostVictory::
     .string "Blow me away! GIOVANNI was the\n"
-    .string "GYM LEADER of VIRIDIAN?$"
+    .string "GYM LEADER of OPANIHRUM?$"
 
 ViridianCity_Gym_Text_GymStatue::
-    .string "VIRIDIAN POKéMON GYM\n"
+    .string "OPANIHRUM POKéMON GYM\n"
     .string "LEADER: ?\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}$"
 
 ViridianCity_Gym_Text_GymStatuePlayerWon::
-    .string "VIRIDIAN POKéMON GYM\n"
+    .string "OPANIHRUM POKéMON GYM\n"
     .string "LEADER: GIOVANNI\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"

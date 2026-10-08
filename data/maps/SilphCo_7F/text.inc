@@ -111,7 +111,7 @@ SilphCo_7F_Text_RivalIntro::
     .string "turn up if I waited here!\p"
     .string "I guess TEAM ONYBRIS slowed you\n"
     .string "down! Not that I care!\p"
-    .string "I saw you in SAFFRON, so I decided\n"
+    .string "I saw you in HEMATOWN, so I decided\n"
     .string "to see if you got better!$"
 
 SilphCo_7F_Text_RivalDefeat::

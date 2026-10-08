@@ -1,5 +1,5 @@
 CeladonCity_Text_GotMyKoffingInCinnabar::
-    .string "I got my KOFFING in CINNABAR.\p"
+    .string "I got my KOFFING in CHRONDROLIA.\p"
     .string "It's usually nice, but it breathes\n"
     .string "poison when it's angry.$"
 
@@ -8,7 +8,7 @@ CeladonCity_Text_GymIsGreatFullOfWomen::
     .string "It's full of women!$"
 
 CeladonCity_Text_GameCornerIsBadForCitysImage::
-    .string "CELADON takes pride in its efforts\n"
+    .string "BOURG QUARTZ takes pride in its efforts\n"
     .string "to keep the city beautiful.\p"
     .string "That's why the new GAME CORNER is\n"
     .string "bad for our city's image.$"
@@ -40,24 +40,24 @@ CeladonCity_Text_ExplainXAccuracyDireHit::
     .string "techniques.\p"
     .string "DIRE HIT jacks up the likelihood\n"
     .string "of critical hits.\p"
-    .string "Get your items at the CELADON\n"
+    .string "Get your items at the BOURG QUARTZ\n"
     .string "DEPT. STORE!$"
 
 CeladonCity_Text_CitySign::
-    .string "CELADON CITY\n"
+    .string "BOURG QUARTZ\n"
     .string "The City of Rainbow Dreams$"
 
 CeladonCity_Text_GymSign::
-    .string "CELADON CITY POKéMON GYM\n"
+    .string "BOURG QUARTZ POKéMON GYM\n"
     .string "LEADER: ERIKA\l"
     .string "The Nature-Loving Princess!$"
 
 CeladonCity_Text_MansionSign::
-    .string "CELADON MANSION$"
+    .string "BOURG QUARTZ MANSION$"
 
 CeladonCity_Text_DeptStoreSign::
     .string "Find what you need at the\n"
-    .string "CELADON DEPT. STORE!$"
+    .string "BOURG QUARTZ DEPT. STORE!$"
 
 CeladonCity_Text_GuardSpecProtectsFromStatus::
     .string "TRAINER TIPS\p"
@@ -65,7 +65,7 @@ CeladonCity_Text_GuardSpecProtectsFromStatus::
     .string "from status-reduction moves during\l"
     .string "battle.\p"
     .string "Get your items at the\n"
-    .string "CELADON DEPT. STORE!$"
+    .string "BOURG QUARTZ DEPT. STORE!$"
 
 CeladonCity_Text_PrizeExchangeSign::
     .string "COINS exchanged for prizes!\n"

@@ -1,7 +1,7 @@
 CinnabarIsland_Gym_Text_BlaineIntro::
     .string "Hah!\p"
     .string "I am BLAINE, the red-hot LEADER\n"
-    .string "of CINNABAR GYM!\p"
+    .string "of CHRONDROLIA GYM!\p"
     .string "My fiery POKéMON are all rough\n"
     .string "and ready with intense heat!\p"
     .string "They incinerate all challengers!\p"
@@ -138,13 +138,13 @@ CinnabarIsland_Gym_Text_GymGuyPostVictory::
     .string "You beat that firebrand!$"
 
 CinnabarIsland_Gym_Text_GymStatue::
-    .string "CINNABAR POKéMON GYM\n"
+    .string "CHRONDROLIA POKéMON GYM\n"
     .string "LEADER: BLAINE\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}$"
 
 CinnabarIsland_Gym_Text_GymStatuePlayerWon::
-    .string "CINNABAR POKéMON GYM\n"
+    .string "CHRONDROLIA POKéMON GYM\n"
     .string "LEADER: BLAINE\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"

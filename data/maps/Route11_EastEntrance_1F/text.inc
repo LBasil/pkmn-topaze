@@ -8,14 +8,14 @@ Route11_EastEntrance_1F_Text_ManInLavenderRatesNames::
     .string "up good names for POKéMON?\p"
     .string "Especially if you've caught a\n"
     .string "whole bunch?\p"
-    .string "In LAVENDER TOWN, there's a man\n"
+    .string "In SPINELLIA, there's a man\n"
     .string "who rates POKéMON nicknames.\p"
     .string "He can even help you rename your\n"
     .string "POKéMON, too.$"
 
 Route11_EastEntrance_1F_Text_RockTunnelToReachLavender::
-    .string "If you're aiming to reach LAVENDER\n"
+    .string "If you're aiming to reach SPINELLIA\n"
     .string "TOWN, take ROCK TUNNEL.\p"
     .string "You can get to ROCK TUNNEL from\n"
-    .string "CERULEAN CITY.$"
+    .string "TOURMALIA.$"
 

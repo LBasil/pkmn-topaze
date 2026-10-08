@@ -100,6 +100,6 @@ ViridianForest_Text_WeakenMonsBeforeCapture::
     .string "When healthy, they may escape!$"
 
 ViridianForest_Text_LeavingViridianForest::
-    .string "LEAVING VIRIDIAN FOREST\n"
-    .string "PEWTER CITY AHEAD$"
+    .string "LEAVING OPANIHRUM FOREST\n"
+    .string "PYROPIA AHEAD$"
 

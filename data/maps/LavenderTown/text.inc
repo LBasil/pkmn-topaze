@@ -22,7 +22,7 @@ LavenderTown_Text_GhostsAppearedInTower::
     .string "POKéMON that the ONYBRIS killed.$"
 
 LavenderTown_Text_TownSign::
-    .string "LAVENDER TOWN\n"
+    .string "SPINELLIA\n"
     .string "The Noble Purple Town$"
 
 LavenderTown_Text_SilphScopeNotice::
@@ -31,7 +31,7 @@ LavenderTown_Text_SilphScopeNotice::
     .string "SILPH CO.$"
 
 LavenderTown_Text_VolunteerPokemonHouse::
-    .string "LAVENDER VOLUNTEER\n"
+    .string "SPINELLIA VOLUNTEER\n"
     .string "POKéMON HOUSE$"
 
 LavenderTown_Text_PokemonTowerSign::

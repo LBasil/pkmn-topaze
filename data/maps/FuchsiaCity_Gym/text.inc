@@ -89,7 +89,7 @@ FuchsiaCity_Gym_Text_NatePostBattle::
 FuchsiaCity_Gym_Text_PhilIntro::
     .string "Stop right there!\p"
     .string "The famed invisible walls of\n"
-    .string "FUCHSIA GYM have you frustrated?$"
+    .string "AMETHIOLITE GYM have you frustrated?$"
 
 FuchsiaCity_Gym_Text_PhilDefeat::
     .string "Whoa!\n"
@@ -131,7 +131,7 @@ FuchsiaCity_Gym_Text_ShawnPostBattle::
 FuchsiaCity_Gym_Text_GymGuyAdvice::
     .string "Yo!\n"
     .string "Champ in the making!\p"
-    .string "FUCHSIA GYM is a tricked-up place.\n"
+    .string "AMETHIOLITE GYM is a tricked-up place.\n"
     .string "It's riddled with invisible walls!\p"
     .string "KOGA might appear close, but he's\n"
     .string "blocked off.\p"
@@ -143,13 +143,13 @@ FuchsiaCity_Gym_Text_GymGuyPostVictory::
     .string "even now!$"
 
 FuchsiaCity_Gym_Text_GymStatue::
-    .string "FUCHSIA POKéMON GYM\n"
+    .string "AMETHIOLITE POKéMON GYM\n"
     .string "LEADER: KOGA\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}$"
 
 FuchsiaCity_Gym_Text_GymStatuePlayerWon::
-    .string "FUCHSIA POKéMON GYM\n"
+    .string "AMETHIOLITE POKéMON GYM\n"
     .string "LEADER: KOGA\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"

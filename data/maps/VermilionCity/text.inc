@@ -9,7 +9,7 @@ VermilionCity_Text_DidYouSeeSSAnneInHarbor::
 
 VermilionCity_Text_SSAnneHasDepartedForYear::
     .string "So, the S.S. ANNE has departed?\p"
-    .string "She'll be back in VERMILION about\n"
+    .string "She'll be back in APATIA about\n"
     .string "this time next year.$"
 
 VermilionCity_Text_BuildingOnThisLand::
@@ -27,10 +27,10 @@ VermilionCity_Text_MachopStompingLandFlat::
 VermilionCity_Text_SSAnneVisitsOnceAYear::
     .string "The S.S. ANNE is a famous luxury\n"
     .string "cruise ship.\p"
-    .string "It visits VERMILION once a year.$"
+    .string "It visits APATIA once a year.$"
 
 VermilionCity_Text_CitySign::
-    .string "VERMILION CITY\n"
+    .string "APATIA\n"
     .string "The Port of Exquisite Sunsets$"
 
 VermilionCity_Text_SnorlaxBlockingRoute12::
@@ -38,20 +38,20 @@ VermilionCity_Text_SnorlaxBlockingRoute12::
     .string "ROUTE 12 may be blocked off by a\n"
     .string "sleeping POKéMON.\p"
     .string "Detour through ROCK TUNNEL to\n"
-    .string "LAVENDER TOWN.\p"
-    .string "VERMILION POLICE$"
+    .string "SPINELLIA.\p"
+    .string "APATIA POLICE$"
 
 VermilionCity_Text_PokemonFanClubSign::
     .string "POKéMON FAN CLUB\n"
     .string "All POKéMON fans welcome!$"
 
 VermilionCity_Text_GymSign::
-    .string "VERMILION CITY POKéMON GYM\n"
+    .string "APATIA POKéMON GYM\n"
     .string "LEADER: LT. SURGE\l"
     .string "The Lightning American!$"
 
 VermilionCity_Text_VermilionHarbor::
-    .string "VERMILION HARBOR$"
+    .string "APATIA HARBOR$"
 
 VermilionCity_Text_WelcomeToTheSSAnne::
     .string "Welcome to the S.S. ANNE!$"

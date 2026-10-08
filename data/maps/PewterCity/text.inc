@@ -31,7 +31,7 @@ PewterCity_Text_BrockOnlySeriousTrainerHere::
     .string "TRAINERS here.\p"
     .string "They're all like BUG CATCHERS,\n"
     .string "you know, just hobbyists.\p"
-    .string "But PEWTER GYM's BROCK isn't like\n"
+    .string "But PYROPIA GYM's BROCK isn't like\n"
     .string "that, not one bit.$"
 
 PewterCity_Text_DidYouCheckOutMuseum::
@@ -80,19 +80,19 @@ PewterCity_Text_CallPoliceIfInfoOnThieves::
     .string "NOTICE!\p"
     .string "Thieves have been stealing POKéMON\n"
     .string "fossils from MT. MOON.\p"
-    .string "Please call the PEWTER POLICE if\n"
+    .string "Please call the PYROPIA POLICE if\n"
     .string "you have any information.$"
 
 PewterCity_Text_MuseumOfScience::
-    .string "PEWTER MUSEUM OF SCIENCE$"
+    .string "PYROPIA MUSEUM OF SCIENCE$"
 
 PewterCity_Text_GymSign::
-    .string "PEWTER CITY POKéMON GYM\n"
+    .string "PYROPIA POKéMON GYM\n"
     .string "LEADER: BROCK\l"
     .string "The Rock-Solid POKéMON TRAINER!$"
 
 PewterCity_Text_CitySign::
-    .string "PEWTER CITY\n"
+    .string "PYROPIA\n"
     .string "A Stone Gray City$"
 
 @ The below 3 JP texts are unused. Possibly a cut NPC meant to give the player the Berry Pouch

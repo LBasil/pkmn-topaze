@@ -29,7 +29,7 @@ SSAnne_CaptainsOffice_Text_ExplainCut::
     .string "Using CUT, you can chop down\n"
     .string "small trees.\p"
     .string "Why not try it with the trees\n"
-    .string "around VERMILION CITY?$"
+    .string "around APATIA?$"
 
 SSAnne_CaptainsOffice_Text_SSAnneWillSetSailSoon::
     .string "CAPTAIN: …Whew!\p"
@@ -37,7 +37,7 @@ SSAnne_CaptainsOffice_Text_SSAnneWillSetSailSoon::
     .string "I guess it's time.\p"
     .string "The S.S. ANNE will set sail soon!\p"
     .string "Farewell, until our return to\n"
-    .string "VERMILION CITY!$"
+    .string "APATIA!$"
 
 SSAnne_CaptainsOffice_Text_YouHaveNoRoomForThis::
     .string "Oh, no!\n"

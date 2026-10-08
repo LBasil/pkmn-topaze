@@ -2,7 +2,7 @@ CinnabarIsland_Text_DoorIsLocked::
     .string "The door is locked…$"
 
 CinnabarIsland_Text_BlaineLivedHereSinceBeforeLab::
-    .string "CINNABAR GYM's BLAINE is quite the\n"
+    .string "CHRONDROLIA GYM's BLAINE is quite the\n"
     .string "odd fellow.\p"
     .string "He's lived on the island since way\n"
     .string "before the LAB was built.$"
@@ -14,14 +14,14 @@ CinnabarIsland_Text_ScientistsExperimentInMansion::
     .string "POKéMON MANSION.$"
 
 CinnabarIsland_Text_IslandSign::
-    .string "CINNABAR ISLAND\n"
+    .string "CHRONDROLIA\n"
     .string "The Fiery Town of Burning Desire$"
 
 CinnabarIsland_Text_PokemonLab::
     .string "POKéMON LAB$"
 
 CinnabarIsland_Text_GymSign::
-    .string "CINNABAR ISLAND POKéMON GYM\n"
+    .string "CHRONDROLIA POKéMON GYM\n"
     .string "LEADER: BLAINE\l"
     .string "The Hotheaded Quiz Master!$"
 
@@ -60,7 +60,7 @@ CinnabarIsland_Text_MyPalsBoatArrived::
     .string "Looks like my pal's boat arrived,\n"
     .string "too.\p"
     .string "He sent it specially here to\n"
-    .string "CINNABAR to pick me up.$"
+    .string "CHRONDROLIA to pick me up.$"
 
 CinnabarIsland_Text_IfYouHaveTriPassYouCanGoAgain::
     .string "Hey, wasn't that a long cruise?\p"
@@ -70,6 +70,6 @@ CinnabarIsland_Text_IfYouHaveTriPassYouCanGoAgain::
     .string "were to visit him again.\p"
     .string "If you have a TRI-PASS, you can\n"
     .string "always take a ferry there from\l"
-    .string "VERMILION PORT.\p"
+    .string "APATIA PORT.\p"
     .string "All right, thanks for your company!$"
 

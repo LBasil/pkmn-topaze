@@ -71,7 +71,7 @@ MtMoon_1F_Text_KentPostBattle::
 
 MtMoon_1F_Text_RobbyIntro::
     .string "You need to go through this cave\n"
-    .string "to get to CERULEAN CITY.$"
+    .string "to get to TOURMALIA.$"
 
 MtMoon_1F_Text_RobbyDefeat::
     .string "I lost.$"
@@ -88,5 +88,5 @@ MtMoon_1F_Text_ZubatIsABloodsucker::
 MtMoon_1F_Text_BrockHelpsExcavateFossils::
     .string "Hi, I'm excavating for fossils here\n"
     .string "under MT. MOON.\p"
-    .string "Sometimes, BROCK of PEWTER GYM\n"
+    .string "Sometimes, BROCK of PYROPIA GYM\n"
     .string "lends me a hand.$"

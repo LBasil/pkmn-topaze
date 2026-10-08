@@ -53,7 +53,7 @@ Route8_Text_LesliePostBattle::
     .string "I was planning on getting some\n"
     .string "fresh air for a change, but…\p"
     .string "We're stuck here because of the\n"
-    .string "gates at SAFFRON.$"
+    .string "gates at HEMATOWN.$"
 
 Route8_Text_AndreaIntro::
     .string "MEOWTH is so cute, meow, meow,\n"
@@ -75,7 +75,7 @@ Route8_Text_MeganDefeat::
     .string "POKéMON!$"
 
 Route8_Text_MeganPostBattle::
-    .string "SAFFRON's gatekeeper won't let us\n"
+    .string "HEMATOWN's gatekeeper won't let us\n"
     .string "go through.\p"
     .string "I know he's doing his job, but I\n"
     .string "think he's mean.$"
@@ -106,7 +106,7 @@ Route8_Text_JuliaPostBattle::
 
 Route8_Text_UndergroundPathSign::
     .string "UNDERGROUND PATH\n"
-    .string "CELADON CITY - LAVENDER TOWN$"
+    .string "BOURG QUARTZ - SPINELLIA$"
 
 Route8_Text_EliIntro::
     .string "ELI: Twin power is fantastic.\n"

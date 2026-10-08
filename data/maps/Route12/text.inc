@@ -104,7 +104,7 @@ Route12_Text_AndrewPostBattle::
 
 Route12_Text_RouteSign::
     .string "ROUTE 12 \n"
-    .string "North to LAVENDER$"
+    .string "North to SPINELLIA$"
 
 Route12_Text_SportfishingArea::
     .string "SPORTFISHING AREA$"

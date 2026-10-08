@@ -84,7 +84,7 @@ Route20_Text_NoraPostBattle::
     .string "CLOYSTER?$"
 
 Route20_Text_MissyIntro::
-    .string "I swam here from CINNABAR ISLAND.\n"
+    .string "I swam here from CHRONDROLIA.\n"
     .string "It wasn't easy, I tell you.$"
 
 Route20_Text_MissyDefeat::
@@ -92,12 +92,12 @@ Route20_Text_MissyDefeat::
 
 Route20_Text_MissyPostBattle::
     .string "POKéMON have taken over an\n"
-    .string "abandoned mansion on CINNABAR.\p"
+    .string "abandoned mansion on CHRONDROLIA.\p"
     .string "They call it the POKéMON MANSION\n"
     .string "now.$"
 
 Route20_Text_MelissaIntro::
-    .string "CINNABAR, in the west, has a LAB\n"
+    .string "CHRONDROLIA, in the west, has a LAB\n"
     .string "for POKéMON.\p"
     .string "My daddy works there.$"
 
@@ -106,7 +106,7 @@ Route20_Text_MelissaDefeat::
     .string "You're supposed to wait!$"
 
 Route20_Text_MelissaPostBattle::
-    .string "CINNABAR is a volcanic island.\p"
+    .string "CHRONDROLIA is a volcanic island.\p"
     .string "I heard it rose out of the sea\n"
     .string "when a volcano erupted.$"
 
@@ -117,4 +117,4 @@ Route20_Text_MistyTrainsHere::
     .string "Strong TRAINERS and WATER POKéMON\n"
     .string "are common sights in these parts.\p"
     .string "They say that MISTY of the\n"
-    .string "CERULEAN GYM trains here.$"
+    .string "TOURMALIA GYM trains here.$"

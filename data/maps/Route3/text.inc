@@ -1,12 +1,12 @@
 Route3_Text_TunnelFromCeruleanTiring::
     .string "Whew… I better take a rest…\n"
     .string "Groan…\p"
-    .string "That tunnel from CERULEAN takes a\n"
+    .string "That tunnel from TOURMALIA takes a\n"
     .string "lot out of you!$"
 
 Route3_Text_ColtonIntro::
     .string "Hey!\n"
-    .string "I saw you in VIRIDIAN FOREST!$"
+    .string "I saw you in OPANIHRUM FOREST!$"
 
 Route3_Text_ColtonDefeat::
     .string "You beat me again!$"

@@ -23,7 +23,7 @@ Route9_Text_ChrisPostBattle::
 
 Route9_Text_DrewIntro::
     .string "I'm taking the ROCK TUNNEL to\n"
-    .string "go to LAVENDER…$"
+    .string "go to SPINELLIA…$"
 
 Route9_Text_DrewDefeat::
     .string "Can't measure up…$"
@@ -102,5 +102,5 @@ Route9_Text_ConnerPostBattle::
 
 Route9_Text_RouteSign::
     .string "ROUTE 9\n"
-    .string "CERULEAN CITY - ROCK TUNNEL$"
+    .string "TOURMALIA - ROCK TUNNEL$"
 

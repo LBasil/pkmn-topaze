@@ -1,6 +1,6 @@
 ThreeIsland_Mart_Text_TrueThatCeldadonDeptStoreBigger::
     .string "Is it true?\p"
-    .string "CELADON DEPT. STORE is several\n"
+    .string "BOURG QUARTZ DEPT. STORE is several\n"
     .string "times bigger than this shop?$"
 
 ThreeIsland_Mart_Text_PeopleHealWithBerriesFromForest::

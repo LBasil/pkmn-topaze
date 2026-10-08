@@ -11,7 +11,7 @@ SaffronCity_Text_DontGetDefiantOrIllHurtYou::
     .string "Or I'll have to hurt you!$"
 
 SaffronCity_Text_SaffronBelongsToTeamRocket::
-    .string "SAFFRON belongs to TEAM ONYBRIS!$"
+    .string "HEMATOWN belongs to TEAM ONYBRIS!$"
 
 SaffronCity_Text_CriminalLifeMakesMeFeelAlive::
     .string "My life as a criminal makes me feel\n"
@@ -38,7 +38,7 @@ SaffronCity_Text_PeopleComingBackToSaffron::
     .string "People fled from here in droves\n"
     .string "when those ONYBRIS came.\p"
     .string "They should be flocking back to\n"
-    .string "SAFFRON now.$"
+    .string "HEMATOWN now.$"
 
 SaffronCity_Text_FlewHereOnPidgeot::
     .string "I flew here on my PIDGEOT when\n"
@@ -63,14 +63,14 @@ SaffronCity_Text_HesTakingASnooze::
     .string "Hah! He's taking a snooze!$"
 
 SaffronCity_Text_CitySign::
-    .string "SAFFRON CITY\n"
+    .string "HEMATOWN\n"
     .string "Shining, Golden Land of Commerce$"
 
 SaffronCity_Text_FightingDojo::
     .string "FIGHTING DOJO$"
 
 SaffronCity_Text_GymSign::
-    .string "SAFFRON CITY POKéMON GYM\n"
+    .string "HEMATOWN POKéMON GYM\n"
     .string "LEADER: SABRINA\l"
     .string "The Master of PSYCHIC POKéMON!$"
 

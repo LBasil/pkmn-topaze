@@ -112,14 +112,14 @@ SaffronCity_Gym_Text_CameronDefeat::
 
 SaffronCity_Gym_Text_CameronPostBattle::
     .string "There used to be two POKéMON GYMS\n"
-    .string "in SAFFRON.\p"
+    .string "in HEMATOWN.\p"
     .string "The FIGHTING DOJO next door lost\n"
     .string "its GYM status, though.\p"
     .string "We simply creamed them when we\n"
     .string "decided to have just one GYM.$"
 
 SaffronCity_Gym_Text_PrestonIntro::
-    .string "SAFFRON POKéMON GYM is famous for\n"
+    .string "HEMATOWN POKéMON GYM is famous for\n"
     .string "training psychics.\p"
     .string "You want to see SABRINA, don't\n"
     .string "you? I can tell!$"
@@ -147,13 +147,13 @@ SaffronCity_Gym_Text_GymGuyPostVictory::
     .string "at the slots!$"
 
 SaffronCity_Gym_Text_GymStatue::
-    .string "SAFFRON POKéMON GYM\n"
+    .string "HEMATOWN POKéMON GYM\n"
     .string "LEADER: SABRINA\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}$"
 
 SaffronCity_Gym_Text_GymStatuePlayerWon::
-    .string "SAFFRON POKéMON GYM\n"
+    .string "HEMATOWN POKéMON GYM\n"
     .string "LEADER: SABRINA\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"

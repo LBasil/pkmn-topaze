@@ -274,7 +274,7 @@
     },
     {
       "id": "MAPSEC_VIRIDIAN_CITY",
-      "name": "VIRIDIAN CITY",
+      "name": "OPANIHRUM",
       "x": 4,
       "y": 8,
       "width": 1,
@@ -282,7 +282,7 @@
     },
     {
       "id": "MAPSEC_PEWTER_CITY",
-      "name": "PEWTER CITY",
+      "name": "PYROPIA",
       "x": 4,
       "y": 4,
       "width": 1,
@@ -290,7 +290,7 @@
     },
     {
       "id": "MAPSEC_CERULEAN_CITY",
-      "name": "CERULEAN CITY",
+      "name": "TOURMALIA",
       "x": 14,
       "y": 3,
       "width": 1,
@@ -298,7 +298,7 @@
     },
     {
       "id": "MAPSEC_LAVENDER_TOWN",
-      "name": "LAVENDER TOWN",
+      "name": "SPINELLIA",
       "x": 18,
       "y": 6,
       "width": 1,
@@ -306,7 +306,7 @@
     },
     {
       "id": "MAPSEC_VERMILION_CITY",
-      "name": "VERMILION CITY",
+      "name": "APATIA",
       "x": 14,
       "y": 9,
       "width": 1,
@@ -314,7 +314,7 @@
     },
     {
       "id": "MAPSEC_CELADON_CITY",
-      "name": "CELADON CITY",
+      "name": "BOURG QUARTZ",
       "x": 11,
       "y": 6,
       "width": 1,
@@ -322,7 +322,7 @@
     },
     {
       "id": "MAPSEC_FUCHSIA_CITY",
-      "name": "FUCHSIA CITY",
+      "name": "AMETHIOLITE",
       "x": 12,
       "y": 12,
       "width": 1,
@@ -330,7 +330,7 @@
     },
     {
       "id": "MAPSEC_CINNABAR_ISLAND",
-      "name": "CINNABAR ISLAND",
+      "name": "CHRONDROLIA",
       "x": 4,
       "y": 14,
       "width": 1,
@@ -346,7 +346,7 @@
     },
     {
       "id": "MAPSEC_SAFFRON_CITY",
-      "name": "SAFFRON CITY",
+      "name": "HEMATOWN",
       "x": 14,
       "y": 6,
       "width": 1,

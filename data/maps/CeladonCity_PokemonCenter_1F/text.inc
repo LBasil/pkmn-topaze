@@ -5,7 +5,7 @@ CeladonCity_PokemonCenter_1F_Text_PokeFluteAwakensSleepingMons::
     .string "they can hear.$"
 
 CeladonCity_PokemonCenter_1F_Text_RodeHereFromFuchsia::
-    .string "I rode here from FUCHSIA.\p"
+    .string "I rode here from AMETHIOLITE.\p"
     .string "It's an uphill ride on CYCLING\n"
     .string "ROAD, so I'm exhausted.$"
 

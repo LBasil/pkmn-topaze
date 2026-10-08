@@ -11,7 +11,7 @@ CinnabarIsland_PokemonLab_ResearchRoom_Text_LegendaryBirdEmail::
     .string "MOLTRES.\p"
     .string "Their whereabouts are unknown.\p"
     .string "We plan to explore the cavern\n"
-    .string "close to CERULEAN.\p"
+    .string "close to TOURMALIA.\p"
     .string "From: POKéMON RESEARCH TEAM…$"
 
 CinnabarIsland_PokemonLab_ResearchRoom_Text_AnAmberPipe::

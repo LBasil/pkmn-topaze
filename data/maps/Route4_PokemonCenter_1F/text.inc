@@ -5,7 +5,7 @@ Route4_PokemonCenter_1F_Text_CanHaveSixMonsWithYou::
     .string "can have six POKéMON with you.$"
 
 Route4_PokemonCenter_1F_Text_TeamRocketAttacksCerulean::
-    .string "TEAM ONYBRIS attacks CERULEAN\n"
+    .string "TEAM ONYBRIS attacks TOURMALIA\n"
     .string "citizens…\p"
     .string "Not a day goes by without TEAM\n"
     .string "ONYBRIS being in the news.$"

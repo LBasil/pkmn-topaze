@@ -15,7 +15,7 @@ VSSeeker_Text_TrainersNotReady::
 
 Route3_Text_ColtonRematchIntro::
 	.string "Hey!\n"
-	.string "I saw you in VIRIDIAN FOREST!$"
+	.string "I saw you in OPANIHRUM FOREST!$"
 
 Route3_Text_BenRematchIntro::
 	.string "Hi! I like shorts!\n"
@@ -138,7 +138,7 @@ Route9_Text_ChrisRematchIntro::
 
 Route9_Text_DrewRematchIntro::
 	.string "I'm taking ROCK TUNNEL to go to\n"
-	.string "LAVENDER…\p"
+	.string "SPINELLIA…\p"
 	.string "But I keep getting stopped by\n"
 	.string "everyone along the way…$"
 
@@ -591,11 +591,11 @@ Route20_Text_NoraRematchIntro::
 	.string "And, they've grown bigger!$"
 
 Route20_Text_MissyRematchIntro::
-	.string "I swam here from CINNABAR ISLAND.\n"
+	.string "I swam here from CHRONDROLIA.\n"
 	.string "It wasn't easy, like I said.$"
 
 Route20_Text_MelissaRematchIntro::
-	.string "CINNABAR, in the west, has a LAB\n"
+	.string "CHRONDROLIA, in the west, has a LAB\n"
 	.string "for POKéMON.\p"
 	.string "My daddy works there.$"
 
@@ -647,7 +647,7 @@ Route25_Text_JoeyRematchIntro::
 
 Route25_Text_DanRematchIntro::
 	.string "Dad took me to a great party on\n"
-	.string "the S.S. ANNE at VERMILION CITY.$"
+	.string "the S.S. ANNE at APATIA.$"
 
 Route25_Text_FlintRematchIntro::
 	.string "I'm a cool guy.\n"
