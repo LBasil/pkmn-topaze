@@ -42,8 +42,8 @@
 - [x] Textes ONYBRIS : aucune ligne ne dépasse 36 caractères (max des textes d'origine : 40), pas de débordement attendu.
 - [x] Split physique/spécial : `MOVE_IS_PHYSICAL` est utilisé partout (dégâts, Hustle, suivi des dégâts) ; pas de test chiffré en jeu.
 - [x] Brûlure 1/16 des PV vérifiée en combat (160 PV max : −10 par tour). Paralysie ½ vitesse : changement de code simple, non mesuré.
-- [x] **Répétiteur d'attaques** dans tous les Centres Pokémon (infirmière, gratuit) : testé avec une ROM de debug (départ au Centre de Jadielle, Salamèche niv. 20) : question, choix du Pokémon, liste des attaques réapprenables. Astuce de test : voir `tools/topaze/emu/README.md` (ROM de debug, `TOPAZE_ROM`).
-- [x] Objets tenus des champions : combat contre le champion de Argenta/Pewter (KAY) : 1er Pokémon Goupix avec **Charbon** (lu en mémoire de combat).
+- [x] **Répétiteur d'attaques** dans tous les Centres Pokémon (infirmière, gratuit) : testé avec une ROM de debug (départ au Centre d’Opanihrum, Salamèche niv. 20) : question, choix du Pokémon, liste des attaques réapprenables. Astuce de test : voir `tools/topaze/emu/README.md` (ROM de debug, `TOPAZE_ROM`).
+- [x] Objets tenus des champions : combat contre le champion de Pyropia (KAY) : 1er Pokémon Goupix avec **Charbon** (lu en mémoire de combat).
 - [x] Coupe en jeu (Vermilion, badge 2, sans l'apprendre) : invite « Would you like to CUT it? », l'arbre disparaît.
 - [x] Split par attaque mesuré : avec Attaque 300 / Atq. Spé. 5, **Coup-Glace** (Glace, forcée physique) met le Goupix KO d'un coup, alors que **Lance-Flammes** (spéciale) ne lui retire rien.
 - [ ] Seul reste non mesuré : la vitesse paralysée (changement d'une ligne, relu dans le code).
@@ -60,8 +60,8 @@
 
 ## Limites connues
 - Sprites des champions = ceux des chefs d'arène d'origine.
-- Hepha utilise le slot de Giovanni (arène de Jadielle).
-- Pas de nouvelle ville/arène : les cartes sont celles de Kanto (travail Porymap à venir).
+- Hepha utilise le slot de Giovanni (arène d’Opanihrum).
+- Villes renommées (script `docs/topaze/rename_towns.py`) mais géographie de Kanto conservée : Grenalux=Bourg Palette, Opanihrum=Jadielle, Pyropia=Argenta, Tourmalia=Azuria, Apatia=Carmin, Bourg Quartz=Céladopole, Amethiolite=Parmanie, Hematown=Safrania, Chrondrolia=Cramois’Île, Spinellia=Lavanville. Reste : cartes originales (ambiance de chaque ville) et noms de lieux composés (Forêt, Grotte, Grand Magasin) liés au code de la carte région.
 - Ossatueur : branche d'évolution Sol/Spectre reportée (nécessite une nouvelle espèce et un sprite).
 
 ## Pokémon suiveur (follower) — étude, non implémenté
