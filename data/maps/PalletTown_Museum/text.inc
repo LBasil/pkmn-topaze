@@ -22,3 +22,21 @@ PalletTown_Museum_Text_AuraCase::
     .string "The AURA of ten years ago.\n"
     .string "Records show every POKéMON's type\l"
     .string "changed in a single night.$"
+
+PalletTown_Museum_Text_CuratorStrike::
+    .string "They came at dawn, all in black.\n"
+    .string "They took the GRENAT before I could\l"
+    .string "even reach the alarm.\p"
+    .string "They said it was for the POKéMON,\n"
+    .string "for their freedom... What does a\l"
+    .string "gem have to do with freedom?$"
+
+PalletTown_Museum_Text_OldManStrike::
+    .string "In my day, thieves at least had the\n"
+    .string "decency to hide their faces.\p"
+    .string "These ones were proud of it.$"
+
+PalletTown_Museum_Text_GarnetCaseStrike::
+    .string "The case is empty. A note is left\n"
+    .string "behind: POKéMON were never meant\l"
+    .string "to be owned. - TEAM ONYBRIS$"

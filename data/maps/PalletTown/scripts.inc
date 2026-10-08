@@ -536,6 +536,7 @@ PalletTown_EventScript_OnybrisGruntDefeated::
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_PALLET_ONYBRIS_GRUNT
 	setflag FLAG_HIDE_GRENALUX_ONYBRIS_GRUNT
+	setflag FLAG_GRENALUX_ONYBRIS_STRIKE
 	fadescreen FADE_FROM_BLACK
 	releaseall
 	end

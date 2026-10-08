@@ -2,17 +2,32 @@ PalletTown_Museum_MapScripts::
 	.byte 0
 
 PalletTown_Museum_EventScript_Curator::
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_Museum_EventScript_CuratorStrike
 	msgbox PalletTown_Museum_Text_Curator, MSGBOX_NPC
 	end
 
 PalletTown_Museum_EventScript_OldMan::
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_Museum_EventScript_OldManStrike
 	msgbox PalletTown_Museum_Text_OldMan, MSGBOX_NPC
 	end
 
 PalletTown_Museum_EventScript_GarnetCase::
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_Museum_EventScript_GarnetCaseStrike
 	msgbox PalletTown_Museum_Text_GarnetCase, MSGBOX_SIGN
 	end
 
 PalletTown_Museum_EventScript_AuraCase::
 	msgbox PalletTown_Museum_Text_AuraCase, MSGBOX_SIGN
+	end
+
+PalletTown_Museum_EventScript_CuratorStrike::
+	msgbox PalletTown_Museum_Text_CuratorStrike, MSGBOX_NPC
+	end
+
+PalletTown_Museum_EventScript_OldManStrike::
+	msgbox PalletTown_Museum_Text_OldManStrike, MSGBOX_NPC
+	end
+
+PalletTown_Museum_EventScript_GarnetCaseStrike::
+	msgbox PalletTown_Museum_Text_GarnetCaseStrike, MSGBOX_SIGN
 	end

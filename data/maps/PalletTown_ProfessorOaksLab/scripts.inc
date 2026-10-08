@@ -1244,6 +1244,7 @@ PalletTown_ProfessorOaksLab_EventScript_LastPokeBall::
 PalletTown_ProfessorOaksLab_EventScript_Aide1::
 	lock
 	faceplayer
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_ProfessorOaksLab_EventScript_AideStrike1
 	goto_if_set FLAG_SYS_GAME_CLEAR, PalletTown_ProfessorOaksLab_EventScript_Aide1GameClear
 	msgbox PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide
 	release
@@ -1258,6 +1259,7 @@ PalletTown_ProfessorOaksLab_EventScript_Aide1GameClear::
 PalletTown_ProfessorOaksLab_EventScript_Aide2::
 	lock
 	faceplayer
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_ProfessorOaksLab_EventScript_AideStrike2
 	goto_if_set FLAG_SYS_GAME_CLEAR, PalletTown_ProfessorOaksLab_EventScript_Aide2GameClear
 	msgbox PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide
 	release
@@ -1282,6 +1284,7 @@ PalletTown_ProfessorOaksLab_EventScript_Pokedex::
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_Computer::
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_ProfessorOaksLab_EventScript_ComputerStrike
 	msgbox PalletTown_ProfessorOaksLab_Text_EmailMessage, MSGBOX_SIGN
 	end
 
@@ -1299,4 +1302,18 @@ PalletTown_ProfessorOaksLab_EventScript_RightSign::
 PalletTown_ProfessorOaksLab_EventScript_RightSignAlt::
 	msgbox PalletTown_ProfessorOaksLab_Text_AllMonTypesHaveStrongAndWeakPoints
 	releaseall
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_AideStrike1::
+	msgbox PalletTown_ProfessorOaksLab_Text_AideStrike1
+	release
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_AideStrike2::
+	msgbox PalletTown_ProfessorOaksLab_Text_AideStrike2
+	release
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_ComputerStrike::
+	msgbox PalletTown_ProfessorOaksLab_Text_ComputerStrike, MSGBOX_SIGN
 	end

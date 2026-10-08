@@ -355,3 +355,22 @@ PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex::
     .string "ONE ISLAND first…\p"
     .string "Anyways, I'm outta here!$"
 
+
+PalletTown_ProfessorOaksLab_Text_AideStrike1::
+    .string "Someone got into the archive room\n"
+    .string "last night and copied every file\l"
+    .string "on gemstones.\p"
+    .string "Nothing else was touched. That's\n"
+    .string "what scares me.$"
+
+PalletTown_ProfessorOaksLab_Text_AideStrike2::
+    .string "The PROF. says the GRENAT in the\n"
+    .string "museum and the files here are two\l"
+    .string "halves of the same puzzle.\p"
+    .string "Whoever hit both knows exactly what\n"
+    .string "they're after.$"
+
+PalletTown_ProfessorOaksLab_Text_ComputerStrike::
+    .string "ACCESS LOG: archive opened at 4:12.\n"
+    .string "Files copied: GEMSTONES, AURA\l"
+    .string "RECORDS, JIRACHI.$"

@@ -83,10 +83,11 @@ PalletTown_Text_OnybrisGruntDefeat::
     .string "boss told us.$"
 
 PalletTown_Text_OnybrisGruntPostBattle::
-    .string "Forget it. There are others who\n"
-    .string "won't ask nicely.\p"
+    .string "Forget it. You're too late anyway.\p"
+    .string "The GRENAT is in our hands, and the\n"
+    .string "LAB's files on gems were copied at\l"
+    .string "dawn.\p"
     .string "GRENALUX will see us again...$"
-
 PalletTown_Text_MuseumSign::
     .string "GRENALUX MUSEUM\n"
     .string "Home of the GRENAT gem.$"

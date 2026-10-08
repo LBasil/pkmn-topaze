@@ -56,6 +56,8 @@
 
 - [x] **Ouverture selon le document de conception** : sans Pokémon, Zéphyr arrête le joueur à la sortie nord, l'emmène jusqu'au ranch (maison en haut à droite) ; scène en écran noir avec le père de Zéphyr et le Prof. Chêne (vol des Pokémon pisteurs par Onybris), puis arrivée au labo et choix du starter. (Scène du ranch encore en écran noir : l'intérieur sera mis en scène plus tard.)
 
+- [x] **Trois frappes d'Onybris (version « après coup »)** : ranch (raconté par le père de Zéphyr), musée (vitrine vide, conservateur et vieil homme changent de dialogue) et labo (assistants et ordinateur : fichiers sur les gemmes copiés), tous déclenchés par `FLAG_GRENALUX_ONYBRIS_STRIKE` posé quand le grunt de la route est battu. Testé : dialogues du musée. Reste à tester en jeu : dialogues du labo (même mécanisme).
+
 ## Limites connues
 - Sprites des champions = ceux des chefs d'arène d'origine.
 - Hepha utilise le slot de Giovanni (arène de Jadielle).
