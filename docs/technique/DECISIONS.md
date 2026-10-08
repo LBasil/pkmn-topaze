@@ -10,6 +10,7 @@
 | CT infinies, CS oubliables | Confort de jeu ; moins de blocages sans tests. |
 | Coupe/Force/etc. en vraies attaques | Les CS ne sont plus des « slots morts ». |
 | Monde ≈ +12 % de niveau | Compenser les Pokémon plus polyvalents grâce aux STAB. |
+| Split physique/spécial par attaque (Gen 4) | Inspiré de CFRU / Radical Red : sinon des Pokémon comme Gengar (Spectre/Ténèbre) ou les types ajoutés ont des attaques inadaptées à leurs stats. |
 | Texte en anglais | Limites de la Gen 3 ; pas de coût de traduction en v1. |
 | Champions dans les slots des chefs d'arène | Réutilise sprites, musiques, scripts et flags : zéro risque de blocage. |
 | Pas de scripts narratifs sans test | Un script mal écrit peut bloquer la partie ; reportés au premier test sur machine. |

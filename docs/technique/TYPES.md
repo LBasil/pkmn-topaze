@@ -18,8 +18,10 @@ Gen 3 a 17 slots de type (0–16, dont `???` à 9). Fée est ajouté à l'index 
 6. `list_menu.c` : `sMenuInfoIcons[TYPE_FAIRY + 1] = { 32, 12, 0x04 }` ; l'icône est dessinée en (32, 0) dans `graphics/interface/menu_info.png` (feuille 128×128, 16 tuiles/ligne, palette `pokemon_types.pal` de 16 couleurs entièrement utilisées : fond rose = index 12).
 7. `battle_message.c` : `gText_AFairyMove` + entrée de table ; `union_room.h` : entrée Fée.
 
-### Catégorie physique/spéciale
-Règle Gen 3 : selon le **type** de l'attaque (`type < TYPE_MYSTERY` = physique). Fée (18 ≥ 9) est donc spéciale sans code supplémentaire.
+### Catégorie physique/spéciale (par attaque, style Gen 4)
+Le moteur d'origine (Gen 3) décide par **type**. Topaze ajoute deux flags de move (`FLAG_FORCE_PHYSICAL` = bit 6, `FLAG_FORCE_SPECIAL` = bit 7, `include/constants/pokemon.h`) et la macro `MOVE_IS_PHYSICAL(move, type)` (`include/battle.h`) : le flag gagne, sinon on retombe sur la règle par type (utile pour Puissance Cachée, dont le type est dynamique ; Fée, index 18, est spécial par défaut).
+Utilisée dans `pokemon.c` (`CalculateBaseDamage` : objets de type, calcul physique/spécial), `battle_script_commands.c` (Hustle, enregistrement des dégâts pour Counter/Mirror Coat).
+Les 56 exceptions Gen 4 sont posées par `docs/topaze/split_moves.py` (idempotent) ; la page **Movedex** du site affiche la catégorie réelle.
 
 ### Attaques de type Fée
 Seules Covet, Hyper Voice et Sweet Kiss ont été retypées. Aucun nouveau move n'a été créé.

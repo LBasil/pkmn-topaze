@@ -9,6 +9,7 @@ Pour développeurs et contributeurs. Base : [pret/pokefirered](https://github.co
 | [TYPES.md](TYPES.md) | Le type Fée et la table des types (modifier les types, ajouter un type) |
 | [DONNEES.md](DONNEES.md) | Pokémon, attaques, apprentissages, dresseurs, rencontres, difficulté |
 | [OUTILS.md](OUTILS.md) | Scripts Python (`docs/topaze/`, `tools/topaze/`) et le site joueur |
+| [INSPIRATION_CFRU.md](INSPIRATION_CFRU.md) | Ce qu'on reprend des hacks CFRU (Radical Red…), fait / à faire |
 | [DECISIONS.md](DECISIONS.md) | Choix de conception et leurs raisons |
 | [TESTS.md](TESTS.md) | Check-list de test en jeu, limites connues, TODO |
 

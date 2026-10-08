@@ -23,6 +23,11 @@
 - [ ] Si le Pokémon de tête est un **œuf** : le message affiche « EGG » (à corriger si gênant).
 - [ ] Les combats donnent de l'XP à toute l'équipe ; l'XP totale par combat reste raisonnable.
 - [ ] Courir dans un bâtiment, une grotte ; texte rapide par défaut sur nouvelle sauvegarde.
+**Split physique/spécial et objets (jalon 5)**
+- [ ] Gengar / Alakazam : Shadow Ball inflige des dégâts spéciaux (utilise Atq. Spé) ; Bite et Fire Punch utilisent l'Attaque.
+- [ ] Counter ne répond qu'aux coups physiques, Mirror Coat aux coups spéciaux.
+- [ ] Hidden Power : catégorie suit toujours son type.
+- [ ] Les champions tiennent leurs objets (la Baie Sitrus soigne, les Restes soignent chaque tour).
 **Stabilité**
 - [ ] Sauvegarder / recharger ; évoluer ; apprentissage d'attaques sans plantage (limite de 20 par Pokémon).
 

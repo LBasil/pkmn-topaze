@@ -6,6 +6,9 @@ Python 3, aucune dépendance externe. Les scripts de `docs/topaze/` prennent **l
 |---|---|---|
 | `docs/topaze/leaders_data.py` | Écrit les équipes des 8 champions dans `trainer_parties.h` / `trainers.h` | Réécrit les équipes (rejouable) |
 | `docs/topaze/learnsets_stab.py` | Ajoute les attaques STAB aux apprentissages | Oui (ignore les attaques déjà apprises) |
+| `docs/topaze/leaders_items.py` | Objets tenus par les champions (après `leaders_data.py`) | Oui |
+| `docs/topaze/balance_moves.py` | Équilibrage de 25 attaques | **Non** (refuse si déjà appliqué) |
+| `docs/topaze/split_moves.py` | Flags physique/spécial par attaque | Oui |
 | `docs/topaze/harder_world.py` | Monte les niveaux des dresseurs et des herbes | **Non** : l'effet s'additionne |
 | `tools/topaze/build_site.py` | Génère `docs/data/*.js` pour le site joueur | Oui |
 

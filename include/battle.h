@@ -474,6 +474,8 @@ extern struct BattleStruct *gBattleStruct;
 
 #define IS_TYPE_PHYSICAL(moveType)(moveType < TYPE_MYSTERY)
 #define IS_TYPE_SPECIAL(moveType)(moveType > TYPE_MYSTERY)
+// Topaze: catégorie par attaque (flags) avec repli sur la règle par type (Hidden Power, etc.)
+#define MOVE_IS_PHYSICAL(move, moveType) ((gBattleMoves[move].flags & FLAG_FORCE_PHYSICAL) ? TRUE : ((gBattleMoves[move].flags & FLAG_FORCE_SPECIAL) ? FALSE : IS_TYPE_PHYSICAL(moveType)))
 
 #define TARGET_TURN_DAMAGED ((gSpecialStatuses[gBattlerTarget].physicalDmg != 0 || gSpecialStatuses[gBattlerTarget].specialDmg != 0))
 

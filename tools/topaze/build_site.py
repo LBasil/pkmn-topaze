@@ -44,7 +44,11 @@ for c, body in re.findall(r'\[MOVE_(\w+)\] =\s*\{(.*?)\n    \}', bm, re.S):
     g = lambda k: int(re.search(k + r' = (-?\d+)', body).group(1))
     ty = tname(re.search(r'\.type = (TYPE_\w+)', body).group(1))
     p = g(r'\.power')
-    cat = 'Status' if p == 0 else ('Special' if ty in ('Fire','Water','Grass','Electric','Psychic','Ice','Dragon','Dark','Fairy') else 'Physical')
+    fl = re.search(r'\.flags = ([^\n]*)', body).group(1)
+    if p == 0: cat = 'Status'
+    elif 'FLAG_FORCE_PHYSICAL' in fl: cat = 'Physical'
+    elif 'FLAG_FORCE_SPECIAL' in fl: cat = 'Special'
+    else: cat = 'Special' if ty in ('Fire','Water','Grass','Electric','Psychic','Ice','Dragon','Dark','Fairy') else 'Physical'
     moves.append(dict(name=mnames[c], type=ty, cat=cat, power=p, acc=g(r'\.accuracy'), pp=g(r'\.pp'), prio=g(r'\.priority')))
 
 # --- table des types ---
@@ -64,8 +68,8 @@ champs = []
 for i, (nm, city, ty, slot) in enumerate(leaders, 1):
     arr = re.search(r'sParty_Leader%s\[\] = \{(.*?)\n\};' % slot, tp, re.S).group(1)
     team = []
-    for lvl, sp, mv in re.findall(r'\.lvl = (\d+),\s*\.species = SPECIES_(\w+),\s*\.moves = \{([^}]*)\}', arr):
-        team.append(dict(species=sname[sp].title(), lvl=int(lvl), moves=[mnames.get(x.strip()[5:], x.strip()[5:]) for x in mv.split(',') if x.strip() and x.strip() != 'MOVE_NONE']))
+    for lvl, sp, it, mv in re.findall(r'\.lvl = (\d+),\s*\.species = SPECIES_(\w+),(?:\s*\.heldItem = ITEM_(\w+),)?\s*\.moves = \{([^}]*)\}', arr):
+        team.append(dict(species=sname[sp].title(), lvl=int(lvl), item=pretty(it) if it else '', moves=[mnames.get(x.strip()[5:], x.strip()[5:]) for x in mv.split(',') if x.strip() and x.strip() != 'MOVE_NONE']))
     champs.append(dict(n=i, name=nm, city=city, type=ty, team=team))
 
 # --- rencontres sauvages ---

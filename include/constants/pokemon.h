@@ -242,6 +242,9 @@
 #define FLAG_SNATCH_AFFECTED        (1 << 3)
 #define FLAG_MIRROR_MOVE_AFFECTED   (1 << 4)
 #define FLAG_KINGS_ROCK_AFFECTED    (1 << 5)
+// Topaze: catégorie physique/spéciale par attaque (sinon règle Gen 3 par type)
+#define FLAG_FORCE_PHYSICAL         (1 << 6)
+#define FLAG_FORCE_SPECIAL          (1 << 7)
 
 // Growth rates
 #define GROWTH_MEDIUM_FAST  0
