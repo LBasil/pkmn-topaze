@@ -1,0 +1,13 @@
+from play import run
+B=['run 300']
+for i in range(40): B+=['key START 4','run 20']
+for i in range(41): B+=['key A 4','run 25']
+B+=['run 40','key DOWN 4','run 10','key A 4','run 60','key A 4','run 60']
+for i in range(3): B+=['key A 4','run 40']
+B+=['key START 4','run 60','key A 4','run 60','key A 4','run 80']
+B+=['key A 4','run 60','key A 4','run 60','key A 4','run 40','key A 4','run 40','key A 4','run 40','key DOWN 4','run 10','key A 4','run 60','key A 4','run 60']
+for i in range(14): B+=['key A 4','run 40']
+B+=['run 200']
+def walk(d,n): return ['key %s %d'%(d,16*n-2),'run 4']
+H1=B+['key B 4','run 20']+walk('RIGHT',4)+walk('UP',4)+['run 60','key LEFT 20','run 200']
+OUT=H1+walk('DOWN',2)+walk('LEFT',1)+['key LEFT 4','run 10']+['key A 4','run 60']*5+['key B 4','run 20']+walk('DOWN',4)+walk('LEFT',5)+['run 300']
