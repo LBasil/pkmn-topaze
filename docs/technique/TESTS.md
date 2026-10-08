@@ -34,7 +34,8 @@
 ## Tests réels (banc mGBA sans écran)
 - [x] Intro, noms, dialogues Maman/Chen, choix du starter (Salamèche Feu/Glace), premier combat rival gagnable, efficacité des types (Mud-Slap super efficace).
 - [x] **CS sans les apprendre** : avec les badges, le prompt « Would you like to SURF? » apparaît sans Surf dans l'équipe, et le joueur navigue (Route 21 atteinte).
-- [ ] Coupe/Force/Flash sans les apprendre, Multi Exp global, course en intérieur, vitesse de texte, split physique/spécial, objets des champions, débordements de texte ONYBRIS, type Fée.
+- [x] Course (B) disponible dès le début et en intérieur (bug trouvé : les chaussures n'étaient données qu'à Argenta, corrigé dans `new_game.c`).
+- [ ] Coupe/Force/Flash sans les apprendre, Multi Exp global, vitesse de texte, split physique/spécial, objets des champions, débordements de texte ONYBRIS, type Fée.
 
 ## Limites connues
 - Sprites des champions = ceux des chefs d'arène d'origine.

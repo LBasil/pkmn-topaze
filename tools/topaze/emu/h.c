@@ -22,6 +22,7 @@ int main(int c,char**v){
  FILE*f=fopen(v[2],"r"); char l[512];
  while(fgets(l,sizeof l,f)){ char a[64],b[256]; int n=0;
   if(sscanf(l,"run %d",&n)==1) run(n);
+  else if(sscanf(l,"keys %63s %d",a,&n)==2){ int m=0; char*t=strtok(a,"+"); while(t){int k=keyid(t); if(k>=0)m|=1<<k; t=strtok(NULL,"+");} core->setKeys(core,m); run(n); core->setKeys(core,0); run(8);}
   else if(sscanf(l,"key %63s %d",a,&n)==2){ int k=keyid(a); core->setKeys(core,1<<k); run(n); core->setKeys(core,0); run(8);}
   else if(sscanf(l,"shot %255s",b)==1){ FILE*o=fopen(b,"wb"); fprintf(o,"P6\n%u %u\n255\n",W,H); for(unsigned i=0;i<W*H;i++){unsigned p=buf[i];fputc(p&0xff,o);fputc((p>>8)&0xff,o);fputc((p>>16)&0xff,o);} fclose(o);}
   else if(sscanf(l,"ss %255s",b)==1){ struct VFile*o=VFileOpen(b,O_CREAT|O_TRUNC|O_RDWR); mCoreSaveStateNamed(core,o,SAVESTATE_SAVEDATA|SAVESTATE_RTC); o->close(o);}

@@ -16,4 +16,4 @@ gcc -O1 $D -o h /chemin/tools/topaze/emu/h.c -I ../include -I include libmgba.a 
 Script texte : `run N` (N images), `key A|B|START|UP|... N`, `shot f.ppm`, `readp 03005008 0 6` (position : x, y, groupe, n° de carte via `gSaveBlock1Ptr`), `read ADDR N`, `write ADDR V`, `ss f` / `ls f` (états sauvegardés).
 Exemples d'usage : voir `base.py` (nouvelle partie jusqu'à Grenalux) et `pl.py`.
 
-Commandes ajoutées : `writepb PTRADDR OFF HEX` (écriture d'octets via pointeur, ex. badges : `writepb 03005008 fe4 ff`). `states.py <Starter>` régénère les états de départ ; `fight.py` joue le premier combat. Variable `TOPAZE_STATES` = dossier des états.
+Commandes ajoutées : `keys B+DOWN N` (touches combinées), `writepb PTRADDR OFF HEX` (écriture d'octets via pointeur, ex. badges : `writepb 03005008 fe4 ff`). `states.py <Starter>` régénère les états de départ ; `fight.py` joue le premier combat. Variable `TOPAZE_STATES` = dossier des états.
