@@ -31,6 +31,11 @@
 **Stabilité**
 - [ ] Sauvegarder / recharger ; évoluer ; apprentissage d'attaques sans plantage (limite de 20 par Pokémon).
 
+## Tests réels (banc mGBA sans écran)
+- [x] Intro, noms, dialogues Maman/Chen, choix du starter (Salamèche Feu/Glace), premier combat rival gagnable, efficacité des types (Mud-Slap super efficace).
+- [x] **CS sans les apprendre** : avec les badges, le prompt « Would you like to SURF? » apparaît sans Surf dans l'équipe, et le joueur navigue (Route 21 atteinte).
+- [ ] Coupe/Force/Flash sans les apprendre, Multi Exp global, course en intérieur, vitesse de texte, split physique/spécial, objets des champions, débordements de texte ONYBRIS, type Fée.
+
 ## Limites connues
 - Sprites des champions = ceux des chefs d'arène d'origine.
 - Hepha utilise le slot de Giovanni (arène de Jadielle).
@@ -39,7 +44,7 @@
 
 ## Pokémon suiveur (follower) — étude, non implémenté
 Faisable techniquement (le moteur pokeemerald-expansion a un système de followers), mais pas ici et pas maintenant :
-1. **Code** : porter un système de follower dans pokefirered (gestion d'un object event supplémentaire, collisions, passage de portes, surf/vélo, scripts de cinématique). Non testable sans émulateur : risque élevé de blocages.
+1. **Code** : porter un système de follower dans pokefirered (gestion d'un object event supplémentaire, collisions, passage de portes, surf/vélo, scripts de cinématique). Risque élevé de blocages (un banc de test mGBA existe maintenant : `tools/topaze/emu/`).
 2. **Graphismes** : il faut un **sprite overworld par espèce** (151 minimum, 16×32 avec 9 images) ; pokefirered n'en fournit pas. À créer ou à récupérer (licences !).
 Piste réaliste : faire d'abord le jeu jouable, puis ajouter un follower **limité aux espèces qui ont un sprite** (starters + Pikachu), les autres restant dans la balle.
 

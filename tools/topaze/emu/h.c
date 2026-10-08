@@ -27,6 +27,7 @@ int main(int c,char**v){
   else if(sscanf(l,"ss %255s",b)==1){ struct VFile*o=VFileOpen(b,O_CREAT|O_TRUNC|O_RDWR); mCoreSaveStateNamed(core,o,SAVESTATE_SAVEDATA|SAVESTATE_RTC); o->close(o);}
   else if(sscanf(l,"ls %255s",b)==1){ struct VFile*o=VFileOpen(b,O_RDONLY); if(o){ mCoreLoadStateNamed(core,o,SAVESTATE_SAVEDATA|SAVESTATE_RTC); o->close(o);} else puts("R: nostate");}
   else if(sscanf(l,"readp %63s %63s %d",a,b,&n)==3){ unsigned p=core->busRead32(core,strtoul(a,0,16)); unsigned ad=p+strtoul(b,0,16); printf("R: %x:",ad); for(int i=0;i<n;i++)printf(" %02x",core->busRead8(core,ad+i)); printf("\n");}
+  else if(sscanf(l,"writepb %63s %63s %63s",a,b,b+64)==3){ unsigned p=core->busRead32(core,strtoul(a,0,16)); core->busWrite8(core,p+strtoul(b,0,16),strtoul(b+64,0,16)&0xff);}
   else if(sscanf(l,"writep %63s %63s %63s",a,b,b+64)==3){ unsigned p=core->busRead32(core,strtoul(a,0,16)); unsigned ad=p+strtoul(b,0,16); unsigned v=strtoul(b+64,0,16); core->busWrite8(core,ad,v&0xff); core->busWrite8(core,ad+1,(v>>8)&0xff);}
   else if(sscanf(l,"write %63s %63s",a,b)==2){ unsigned ad=strtoul(a,0,16); unsigned v=strtoul(b,0,16); core->busWrite8(core,ad,v);}
   else if(sscanf(l,"read %63s %d",a,&n)==2){ unsigned ad=strtoul(a,0,16); printf("R: %s:",a); for(int i=0;i<n;i++)printf(" %02x",core->busRead8(core,ad+i)); printf("\n");}
