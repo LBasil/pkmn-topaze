@@ -384,9 +384,12 @@ for j in range(4):
 # puits
 wl, _, _ = well()
 place(wl, 12, 12, 2, 2)
+# bas de carte : meme herbe partout
+for x in range(3, 7): put(x, 17, 1); put(x, 18, 1)
+for x in range(11, 21): put(x, 17, 1); put(x, 18, 1)
 # arbres (2x2)
 tim, _, _ = tree()
-TREES = [(8, 12)]
+TREES = [(8, 12), (3, 16), (12, 17), (17, 17)]
 for (tx, ty) in TREES:
     place(tim, tx, ty, 2, 2)
 # haies, lampadaires, parterres, cloture, potager
@@ -407,8 +410,7 @@ for x in range(15, 19): put(x, 16, meta(fence('H')), 1)
 put(14, 16, meta(fence('E')), 1)
 put(20, 16, meta(garden(2)), 0)
 # haies sud-ouest
-for x in range(3, 8): put(x, 16, meta(flowers(80 + x)), 0)
-for x in range(11, 21): put(x, 17, 1)
+for x in range(5, 8): put(x, 16, meta(flowers(80 + x)), 0)
 # enseignes
 put(11, 7, 2, 1)        # panneau de ville (bloc d'origine)
 put(8, 7, 685, 1)       # boite aux lettres (maison du joueur)
