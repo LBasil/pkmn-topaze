@@ -24,7 +24,7 @@ PalletTown_EventScript_SetSignLadyDone::
 
 PalletTown_EventScript_SetSignLadyPos::
 	goto_if_set FLAG_PALLET_LADY_NOT_BLOCKING_SIGN, PalletTown_EventScript_MoveSignLadyToRouteEntrance
-	setobjectxyperm LOCALID_PALLET_SIGN_LADY, 4, 17
+	setobjectxyperm LOCALID_PALLET_SIGN_LADY, 4, 16
 	setobjectmovementtype LOCALID_PALLET_SIGN_LADY, MOVEMENT_TYPE_FACE_UP
 	return
 
@@ -62,12 +62,12 @@ PalletTown_EventScript_OakRatingScene::
 	applymovement LOCALID_PLAYER, PalletTown_Movement_PlayerWalkToLabFromHouse
 	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakWalkToLabFromHouse
 	waitmovement 0
-	opendoor 16, 13
+	opendoor 18, 14
 	waitdooranim
 	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakEnterLab
 	applymovement LOCALID_PLAYER, PalletTown_Movement_PlayerEnterLab
 	waitmovement 0
-	closedoor 16, 13
+	closedoor 18, 14
 	waitdooranim
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 7
 	setvar VAR_MAP_SCENE_PALLET_TOWN_OAK, 3
@@ -103,14 +103,17 @@ PalletTown_Movement_OakWalkToPlayersDoor::
 	walk_up
 	walk_up
 	walk_up
+	walk_right
 	walk_up
 	walk_up
+	walk_up
 	walk_left
 	walk_left
 	walk_left
 	walk_left
 	walk_left
-	walk_in_place_faster_up
+	walk_left
+	walk_in_place_faster_left
 	step_end
 
 PalletTown_Movement_OakExit::
@@ -119,8 +122,11 @@ PalletTown_Movement_OakExit::
 	walk_right
 	walk_right
 	walk_right
+	walk_right
 	walk_down
 	walk_down
+	walk_down
+	walk_left
 	walk_down
 	walk_down
 	walk_down
@@ -135,11 +141,17 @@ PalletTown_Movement_OakWalkToLabFromHouse::
 	walk_right
 	walk_right
 	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_left
 	walk_down
 	walk_down
 	walk_down
 	walk_down
-	walk_down
+	walk_right
+	walk_right
 	walk_right
 	walk_right
 	walk_right
@@ -149,17 +161,23 @@ PalletTown_Movement_OakWalkToLabFromHouse::
 	step_end
 
 PalletTown_Movement_PlayerWalkToLabFromHouse::
-	walk_down
 	walk_right
 	walk_right
 	walk_right
 	walk_right
 	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_down
+	walk_left
 	walk_down
 	walk_down
 	walk_down
 	walk_down
-	walk_down
+	walk_right
+	walk_right
 	walk_right
 	walk_right
 	walk_right
@@ -202,12 +220,12 @@ PalletTown_EventScript_OakTrigger::
 	delay 30
 	call_if_eq VAR_TEMP_1, 0, PalletTown_EventScript_RivalLeadPlayerToRanchLeft
 	call_if_eq VAR_TEMP_1, 1, PalletTown_EventScript_RivalLeadPlayerToRanchRight
-	opendoor 15, 7
+	opendoor 17, 7
 	waitdooranim
 	applymovement LOCALID_PALLET_RIVAL, PalletTown_Movement_RivalEnterRanch
 	applymovement LOCALID_PLAYER, PalletTown_Movement_PlayerEnterRanch
 	waitmovement 0
-	closedoor 15, 7
+	closedoor 17, 7
 	waitdooranim
 	setflag FLAG_HIDE_PALLET_RIVAL
 	setvar VAR_GRENALUX_OPENING, 1
@@ -239,41 +257,58 @@ PalletTown_EventScript_RivalLeadPlayerToRanchRight::
 	waitmovement 0
 	return
 
-	.macro walk_to_ranch
-	walk_left
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	.endm
-
 PalletTown_Movement_RivalWalkToRanchLeft::
 	walk_down
-	walk_to_ranch
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 PalletTown_Movement_RivalWalkToRanchRight::
 	walk_down
-	walk_left
-	walk_to_ranch
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 PalletTown_Movement_PlayerWalkToRanchLeft::
 	walk_down
 	walk_down
-	walk_to_ranch
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 PalletTown_Movement_PlayerWalkToRanchRight::
 	walk_down
 	walk_down
-	walk_left
-	walk_to_ranch
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 PalletTown_Movement_RivalEnterRanch::
@@ -282,105 +317,39 @@ PalletTown_Movement_RivalEnterRanch::
 	step_end
 
 PalletTown_Movement_PlayerEnterRanch::
+	walk_right
 	walk_up
 	set_invisible
 	step_end
 
-PalletTown_EventScript_OakEnterLeft::
-	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakEnterLeft
-	waitmovement 0
-	return
-
-PalletTown_EventScript_OakEnterRight::
-	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakEnterRight
-	waitmovement 0
-	return
-
-PalletTown_EventScript_OakLeadPlayerToLabLeft::
-	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakWalkToLabLeft
-	applymovement LOCALID_PLAYER, PalletTown_Movement_PlayerWalkToLabLeft
-	waitmovement 0
-	return
-
-PalletTown_EventScript_OakLeadPlayerToLabRight::
-	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakWalkToLabRight
-	applymovement LOCALID_PLAYER, PalletTown_Movement_PlayerWalkToLabRight
-	waitmovement 0
-	return
-
 PalletTown_Movement_OakEnterLeft::
+	walk_left
 	walk_up
 	walk_up
-	walk_right
 	walk_up
 	walk_up
-	walk_right
+	walk_up
+	walk_up
+	walk_up
 	walk_up
 	walk_up
 	step_end
 
 PalletTown_Movement_OakEnterRight::
-	walk_right
 	walk_up
 	walk_up
-	walk_right
 	walk_up
 	walk_up
-	walk_right
 	walk_up
 	walk_up
-	step_end
-
-	.macro walk_to_lab
-	walk_left
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	.endm
-
-PalletTown_Movement_OakWalkToLabLeft::
-	walk_down
-	walk_to_lab
-	walk_right
-	walk_in_place_faster_up
-	step_end
-
-PalletTown_Movement_OakWalkToLabRight::
-	walk_down
-	walk_left
-	walk_to_lab
-	walk_right
-	walk_in_place_faster_up
+	walk_up
+	walk_up
+	walk_up
 	step_end
 
 PalletTown_Movement_OakEnterLab::
 	walk_up
 	set_invisible
-	step_end
-
-PalletTown_Movement_PlayerWalkToLabLeft::
-	walk_down
-	walk_down
-	walk_to_lab
-	step_end
-
-PalletTown_Movement_PlayerWalkToLabRight::
-	walk_down
-	walk_down
-	walk_left
-	walk_to_lab
 	step_end
 
 PalletTown_Movement_PlayerEnterLab::

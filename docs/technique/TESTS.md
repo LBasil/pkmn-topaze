@@ -50,7 +50,8 @@
 
 - [x] **CS dans le sac obligatoire** : sans CS01, l'arbre affiche seulement « This tree looks like it can be CUT down! » ; avec CS01 + badge, « CHARMANDER used CUT! ». Même contrôle pour Surf (CS03), Force (CS04), Éclate-Roc (CS06), Cascade (CS07).
 
-- [x] **Grunt ONYBRIS à Grenalux** : après le combat du rival, un grunt arrête le joueur sur la route (x=10, y=6), dialogue Jirachi/aura, combat Rattata+Zubat niv. 4 gagnable avec le starter, puis il disparaît.
+- [x] **Grenalux v2 (originale)** : sortie de la maison du joueur sur la nouvelle carte vérifiée à l'émulateur (rendu correct, porte/warp OK). À confirmer sur ton ordinateur : cinématique du rival (trajet nord → ranch), retour d'Oak au labo, collisions (ruisseau, puits, parterres), panneaux.
+- [x] **Grunt ONYBRIS à Grenalux** : après le combat du rival, un grunt arrête le joueur sur la route (maintenant x=12, y=4), dialogue Jirachi/aura, combat Rattata+Zubat niv. 4 gagnable avec le starter, puis il disparaît.
 
 - [x] **Musée de Grenalux** : la porte de la façade mène à l'intérieur (carte neuve), le conservateur parle (GRENAT / aura), la sortie ramène devant la porte.
 

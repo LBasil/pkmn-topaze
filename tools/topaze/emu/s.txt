@@ -1,0 +1,267 @@
+run 300
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key START 4
+run 20
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+key A 4
+run 25
+run 40
+key DOWN 4
+run 10
+key A 4
+run 60
+key A 4
+run 60
+key A 4
+run 40
+key A 4
+run 40
+key A 4
+run 40
+key START 4
+run 60
+key A 4
+run 60
+key A 4
+run 80
+key A 4
+run 60
+key A 4
+run 60
+key A 4
+run 40
+key A 4
+run 40
+key A 4
+run 40
+key DOWN 4
+run 10
+key A 4
+run 60
+key A 4
+run 60
+key A 4
+run 40
+key A 4
+run 40
+key A 4
+run 40
+key A 4
+run 40
+key A 4
+run 40
+key A 4
+run 40
+key A 4
+run 40
+key A 4
+run 40
+key A 4
+run 40
+key A 4
+run 40
+key A 4
+run 40
+key A 4
+run 40
+key A 4
+run 40
+key A 4
+run 40
+run 200
+key B 4
+run 20
+key RIGHT 62
+run 4
+key UP 62
+run 4
+run 60
+key LEFT 20
+run 200
+key DOWN 30
+run 4
+key LEFT 14
+run 4
+key LEFT 4
+run 10
+key A 4
+run 60
+key A 4
+run 60
+key A 4
+run 60
+key A 4
+run 60
+key A 4
+run 60
+key B 4
+run 20
+key DOWN 62
+run 4
+key LEFT 78
+run 4
+run 300
+key DOWN 40
+run 120
+shot a.ppm
+readp 03005008 0 6
+key DOWN 20
+run 100
+shot b.ppm
+readp 03005008 0 6
