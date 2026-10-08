@@ -37,7 +37,11 @@
 - [x] Course (B) disponible dès le début et en intérieur (bug trouvé : les chaussures n'étaient données qu'à Argenta, corrigé dans `new_game.c`).
 - [x] Combat sauvage (Roucool niv. 5, Griffe, gain d'EXP, montée de niveau), vitesse de texte par défaut = FAST, style de combat SHIFT, sauvegarde en jeu.
 - [x] Coupe/Roche/Force/Flash : même mécanisme que Surf (script `setvar VAR_RESULT, 0`), vérifié par lecture, non rejoué en jeu.
-- [ ] Multi Exp global (nécessite 2 Pokémon), vitesse de texte, split physique/spécial, objets des champions, débordements de texte ONYBRIS, type Fée.
+- [x] Multi Exp global : un Clefairy niv. 3 resté dans l'équipe a gagné un niveau après un combat sauvage gagné par le Pokémon de tête (équipe de test fabriquée avec `tools/topaze/emu/mkmon.py`).
+- [x] Type Fée : Clefairy (FEE/SPECTRE) s'affiche avec la pastille rose « FAIRY » dans le résumé ; carte « Met in GRENALUX » correcte.
+- [x] Textes ONYBRIS : aucune ligne ne dépasse 36 caractères (max des textes d'origine : 40), pas de débordement attendu.
+- [x] Split physique/spécial : `MOVE_IS_PHYSICAL` est utilisé partout (dégâts, Hustle, suivi des dégâts) ; pas de test chiffré en jeu.
+- [ ] (reste) objets tenus des champions en combat réel, Coupe/Roche en jeu vitesse de texte, split physique/spécial, objets des champions, débordements de texte ONYBRIS, type Fée.
 
 ## Limites connues
 - Sprites des champions = ceux des chefs d'arène d'origine.
