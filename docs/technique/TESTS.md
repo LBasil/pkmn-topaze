@@ -62,6 +62,8 @@
 
 - [x] **Postgame (après la fin 1)** : l'inconnu de la route 22 (Giovanni jamais nommé, `TRAINER_PLAYER_LEAF`, 6 Pokémon niv. 66-72), puis RED dans la grotte de Tourmalia (`TRAINER_PLAYER_RED`, niv. 76-82, texte muet), puis épilogue avec Silver. Testé : dialogues et début du combat contre l'inconnu. Non testé : RED et l'épilogue (même mécanisme).
 
+- [x] **Tournoi de la Ligue** (première salle = arène) : 3 matchs de poule (JASPER, CORALIE, BORIS), quart (ALMA), demi en **combat double** (RUBEN), finale (LORELEI), puis Conseil (Bruno, Agatha, Lance, Champion). `VAR_TOURNAMENT_ROUND`, sprite de l'adversaire variable, rechargement de la salle entre les manches. Testé : manche 1 (combat), manche 4 (double, intro, sprite). Non testé en jeu : enchaînement complet des 6 manches et la finale.
+
 ## Limites connues
 - Sprites des champions = ceux des chefs d'arène d'origine.
 - Hepha utilise le slot de Giovanni (arène d’Opanihrum).

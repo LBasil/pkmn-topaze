@@ -26,7 +26,24 @@ PokemonLeague_LoreleisRoom_EventScript_SetDoorOpen::
 
 PokemonLeague_LoreleisRoom_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_POKEMON_LEAGUE_LORELEIS_ROOM
+	call PokemonLeague_LoreleisRoom_EventScript_SetOpponentGfx
 	end
+
+@ Topaze: the first hall is now the tournament arena (pool, quarter, semi, final)
+PokemonLeague_LoreleisRoom_EventScript_SetOpponentGfx::
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_BLACK_BELT
+	goto_if_eq VAR_TOURNAMENT_ROUND, 0, PokemonLeague_LoreleisRoom_EventScript_GfxDone
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_BEAUTY
+	goto_if_eq VAR_TOURNAMENT_ROUND, 1, PokemonLeague_LoreleisRoom_EventScript_GfxDone
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ROCKER
+	goto_if_eq VAR_TOURNAMENT_ROUND, 2, PokemonLeague_LoreleisRoom_EventScript_GfxDone
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_COOLTRAINER_F
+	goto_if_eq VAR_TOURNAMENT_ROUND, 3, PokemonLeague_LoreleisRoom_EventScript_GfxDone
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_COOLTRAINER_M
+	goto_if_eq VAR_TOURNAMENT_ROUND, 4, PokemonLeague_LoreleisRoom_EventScript_GfxDone
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LORELEI
+PokemonLeague_LoreleisRoom_EventScript_GfxDone::
+	return
 
 PokemonLeague_LoreleisRoom_OnWarp::
 	map_script_2 VAR_TEMP_1, 0, PokemonLeague_LoreleisRoom_EventScript_TurnPlayerNorth
@@ -52,6 +69,7 @@ PokemonLeague_LoreleisRoom_EventScript_Lorelei::
 	faceplayer
 	famechecker FAMECHECKER_LORELEI, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	goto_if_set FLAG_DEFEATED_LORELEI, PokemonLeague_LoreleisRoom_EventScript_PostBattle
+	goto_if_lt VAR_TOURNAMENT_ROUND, 5, PokemonLeague_LoreleisRoom_EventScript_TournamentMatch
 	famechecker FAMECHECKER_LORELEI, 0
 	famechecker FAMECHECKER_LORELEI, 1
 	call_if_unset FLAG_SYS_CAN_LINK_WITH_RS, PokemonLeague_LoreleisRoom_EventScript_Intro
@@ -90,4 +108,57 @@ PokemonLeague_LoreleisRoom_EventScript_DefeatedLorelei::
 	call PokemonLeague_EventScript_OpenDoor
 	msgbox PokemonLeague_LoreleisRoom_Text_PostBattle
 	release
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_TournamentMatch::
+	switch VAR_TOURNAMENT_ROUND
+	case 0, PokemonLeague_LoreleisRoom_EventScript_Round0
+	case 1, PokemonLeague_LoreleisRoom_EventScript_Round1
+	case 2, PokemonLeague_LoreleisRoom_EventScript_Round2
+	case 3, PokemonLeague_LoreleisRoom_EventScript_Round3
+	case 4, PokemonLeague_LoreleisRoom_EventScript_Round4
+	release
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_Round0::
+	msgbox PokemonLeague_LoreleisRoom_Text_Round0Intro
+	trainerbattle_no_intro TRAINER_LEAGUE_POOL_1, PokemonLeague_LoreleisRoom_Text_Round0Defeat
+	setvar VAR_TOURNAMENT_ROUND, 1
+	goto PokemonLeague_LoreleisRoom_EventScript_NextMatch
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_Round1::
+	msgbox PokemonLeague_LoreleisRoom_Text_Round1Intro
+	trainerbattle_no_intro TRAINER_LEAGUE_POOL_2, PokemonLeague_LoreleisRoom_Text_Round1Defeat
+	setvar VAR_TOURNAMENT_ROUND, 2
+	goto PokemonLeague_LoreleisRoom_EventScript_NextMatch
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_Round2::
+	msgbox PokemonLeague_LoreleisRoom_Text_Round2Intro
+	trainerbattle_no_intro TRAINER_LEAGUE_POOL_3, PokemonLeague_LoreleisRoom_Text_Round2Defeat
+	setvar VAR_TOURNAMENT_ROUND, 3
+	goto PokemonLeague_LoreleisRoom_EventScript_NextMatch
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_Round3::
+	msgbox PokemonLeague_LoreleisRoom_Text_Round3Intro
+	trainerbattle_no_intro TRAINER_LEAGUE_QUARTER, PokemonLeague_LoreleisRoom_Text_Round3Defeat
+	setvar VAR_TOURNAMENT_ROUND, 4
+	goto PokemonLeague_LoreleisRoom_EventScript_NextMatch
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_Round4::
+	msgbox PokemonLeague_LoreleisRoom_Text_Round4Intro
+	trainerbattle_no_intro TRAINER_LEAGUE_SEMI, PokemonLeague_LoreleisRoom_Text_Round4Defeat
+	setvar VAR_TOURNAMENT_ROUND, 5
+	goto PokemonLeague_LoreleisRoom_EventScript_NextMatch
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_NextMatch::
+	msgbox PokemonLeague_LoreleisRoom_Text_NextMatch
+	closemessage
+	fadescreen FADE_TO_BLACK
+	warp MAP_POKEMON_LEAGUE_LORELEIS_ROOM, 6, 10
+	waitstate
 	end

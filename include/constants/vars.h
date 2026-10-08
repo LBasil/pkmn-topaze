@@ -345,5 +345,6 @@
 #define NPC_TEXT_COLOR_DEFAULT 255 // If an NPC is selected, use the color specified by GetColorFromTextColorTable, otherwise use Neutral.
 
 #define VAR_TOPAZE_ENDING VAR_0x402A // 0 = none, 1 = let Jirachi go, 2 = Onybris dream, 3 = opportunist dream
+#define VAR_TOURNAMENT_ROUND VAR_0x402B // 0-2 pool, 3 quarter, 4 semi (double), 5 final
 
 #endif // GUARD_CONSTANTS_VARS_H

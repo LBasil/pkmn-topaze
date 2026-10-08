@@ -11036,3 +11036,124 @@ static const struct TrainerMonNoItemDefaultMoves sParty_CueBallPaxton[] = {
         .species = SPECIES_MUK,
     },
 };
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeaguePool1[] = {
+    {
+        .iv = 200,
+        .lvl = 46,
+        .species = SPECIES_HITMONLEE,
+    },
+    {
+        .iv = 200,
+        .lvl = 46,
+        .species = SPECIES_PRIMEAPE,
+    },
+    {
+        .iv = 200,
+        .lvl = 47,
+        .species = SPECIES_MACHAMP,
+    },
+    {
+        .iv = 200,
+        .lvl = 48,
+        .species = SPECIES_POLIWRATH,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeaguePool2[] = {
+    {
+        .iv = 200,
+        .lvl = 47,
+        .species = SPECIES_STARMIE,
+    },
+    {
+        .iv = 200,
+        .lvl = 47,
+        .species = SPECIES_VAPOREON,
+    },
+    {
+        .iv = 200,
+        .lvl = 47,
+        .species = SPECIES_SEAKING,
+    },
+    {
+        .iv = 200,
+        .lvl = 48,
+        .species = SPECIES_KINGLER,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeaguePool3[] = {
+    {
+        .iv = 200,
+        .lvl = 48,
+        .species = SPECIES_ELECTRODE,
+    },
+    {
+        .iv = 200,
+        .lvl = 48,
+        .species = SPECIES_MAGNETON,
+    },
+    {
+        .iv = 200,
+        .lvl = 49,
+        .species = SPECIES_RAICHU,
+    },
+    {
+        .iv = 200,
+        .lvl = 49,
+        .species = SPECIES_ELECTABUZZ,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeagueQuarter[] = {
+    {
+        .iv = 200,
+        .lvl = 50,
+        .species = SPECIES_ALAKAZAM,
+    },
+    {
+        .iv = 200,
+        .lvl = 49,
+        .species = SPECIES_HYPNO,
+    },
+    {
+        .iv = 200,
+        .lvl = 49,
+        .species = SPECIES_MR_MIME,
+    },
+    {
+        .iv = 200,
+        .lvl = 50,
+        .species = SPECIES_SLOWBRO,
+    },
+    {
+        .iv = 200,
+        .lvl = 50,
+        .species = SPECIES_EXEGGUTOR,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeagueSemi[] = {
+    {
+        .iv = 200,
+        .lvl = 51,
+        .species = SPECIES_GYARADOS,
+    },
+    {
+        .iv = 200,
+        .lvl = 51,
+        .species = SPECIES_DRAGONAIR,
+    },
+    {
+        .iv = 200,
+        .lvl = 52,
+        .species = SPECIES_ARCANINE,
+    },
+    {
+        .iv = 200,
+        .lvl = 52,
+        .species = SPECIES_AERODACTYL,
+    },
+};
+
