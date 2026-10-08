@@ -43,7 +43,9 @@
 - [x] Split physique/spécial : `MOVE_IS_PHYSICAL` est utilisé partout (dégâts, Hustle, suivi des dégâts) ; pas de test chiffré en jeu.
 - [x] Brûlure 1/16 des PV vérifiée en combat (160 PV max : −10 par tour). Paralysie ½ vitesse : changement de code simple, non mesuré.
 - [x] **Répétiteur d'attaques** dans tous les Centres Pokémon (infirmière, gratuit) : testé avec une ROM de debug (départ au Centre de Jadielle, Salamèche niv. 20) : question, choix du Pokémon, liste des attaques réapprenables. Astuce de test : voir `tools/topaze/emu/README.md` (ROM de debug, `TOPAZE_ROM`).
-- [ ] Restent : objets tenus des champions en combat réel, Coupe/Roche rejoués en jeu.
+- [x] Objets tenus des champions : combat contre le champion de Argenta/Pewter (KAY) : 1er Pokémon Goupix avec **Charbon** (lu en mémoire de combat).
+- [x] Coupe en jeu (Vermilion, badge 2, sans l'apprendre) : invite « Would you like to CUT it? », l'arbre disparaît.
+- [ ] Restent : mesure chiffrée du split physique/spécial et de la vitesse paralysée.
 
 ## Limites connues
 - Sprites des champions = ceux des chefs d'arène d'origine.
