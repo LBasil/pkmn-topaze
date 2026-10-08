@@ -41,6 +41,7 @@ Le dépôt est celui de pokefirered ; seuls les éléments modifiés pour Topaze
 ## Textes et narration
 | Élément | Fichier |
 |---|---|
+| Première rencontre ONYBRIS (Grenalux) | Grunt `TRAINER_TEAM_ROCKET_GRUNT_22` (Rattata/Zubat niv. 4), objet `LOCALID_PALLET_ONYBRIS_GRUNT` dans `PalletTown/map.json`, caché par `FLAG_HIDE_GRENALUX_ONYBRIS_GRUNT` (levé après le combat du rival dans le labo, `PalletTown_ProfessorOaksLab`) ; scripts/textes dans `PalletTown/scripts.inc|text.inc` |
 | Ville de départ Grenalux | `PalletTown` (`text.inc`), `region_map_entry_strings.h` |
 | Rival par défaut ZEPHYR | `data/text/new_game_intro.inc` |
 | Team Onybris | ~58 fichiers (classe de dresseur + dialogues), remplacement de « TEAM ROCKET » / « ROCKET » dans les `.string` uniquement |

@@ -50,6 +50,8 @@
 
 - [x] **CS dans le sac obligatoire** : sans CS01, l'arbre affiche seulement « This tree looks like it can be CUT down! » ; avec CS01 + badge, « CHARMANDER used CUT! ». Même contrôle pour Surf (CS03), Force (CS04), Éclate-Roc (CS06), Cascade (CS07).
 
+- [x] **Grunt ONYBRIS à Grenalux** : après le combat du rival, un grunt arrête le joueur sur la route (x=10, y=6), dialogue Jirachi/aura, combat Rattata+Zubat niv. 4 gagnable avec le starter, puis il disparaît.
+
 ## Limites connues
 - Sprites des champions = ceux des chefs d'arène d'origine.
 - Hepha utilise le slot de Giovanni (arène de Jadielle).
@@ -63,7 +65,7 @@ Faisable techniquement (le moteur pokeemerald-expansion a un système de followe
 Piste réaliste : faire d'abord le jeu jouable, puis ajouter un follower **limité aux espèces qui ont un sprite** (starters + Pikachu), les autres restant dans la balle.
 
 ## TODO
-- Scripts de Grenalux (rival, blocage sans Pokémon, attaques d'Onybris).
+- Suite des scripts de Grenalux (le blocage sans Pokémon est celui d'origine ; reste le reste de l'ouverture : attaque d'Onybris sur le labo, etc.).
 - Cartes et villes originales (12 villes, 8 arènes), Ligue en tournoi, trois fins, post-game (Giovanni puis Red).
 - Équilibrage après premiers tests ; équipes thématiques des dresseurs de route.
 - Vérifier s'il existe une « expansion » FireRed maintenue à adopter.

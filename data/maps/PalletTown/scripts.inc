@@ -447,3 +447,19 @@ PalletTown_EventScript_SignLadyStartShowSign::
 	call PalletTown_EventScript_SignLadyShowSign
 	release
 	end
+
+@ Topaze: first ONYBRIS encounter, on the road out of GRENALUX (appears once the rival fight in the lab is over)
+PalletTown_EventScript_OnybrisGrunt::
+	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_22, PalletTown_Text_OnybrisGruntIntro, PalletTown_Text_OnybrisGruntDefeat, PalletTown_EventScript_OnybrisGruntDefeated
+	msgbox PalletTown_Text_OnybrisGruntPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PalletTown_EventScript_OnybrisGruntDefeated::
+	msgbox PalletTown_Text_OnybrisGruntPostBattle
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_PALLET_ONYBRIS_GRUNT
+	setflag FLAG_HIDE_GRENALUX_ONYBRIS_GRUNT
+	fadescreen FADE_FROM_BLACK
+	releaseall
+	end

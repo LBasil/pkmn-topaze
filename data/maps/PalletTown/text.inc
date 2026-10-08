@@ -67,3 +67,21 @@ PalletTown_Text_OakYouEnjoyingTraveling::
     .string "Good for you, good for you.\n"
     .string "Hohoho.$"
 
+
+PalletTown_Text_OnybrisGruntIntro::
+    .string "Hold it, kid!\n"
+    .string "TEAM ONYBRIS watches this road now.\p"
+    .string "Ever since the AURA warped every\n"
+    .string "POKéMON's type, the boss has been\l"
+    .string "hunting for JIRACHI.\p"
+    .string "A new TRAINER with a fresh POKéMON?\n"
+    .string "You'll make a fine warm-up!$"
+
+PalletTown_Text_OnybrisGruntDefeat::
+    .string "Tch... the AURA favors the strong,\n"
+    .string "and today that wasn't me.$"
+
+PalletTown_Text_OnybrisGruntPostBattle::
+    .string "Don't think this is over.\n"
+    .string "GRENALUX isn't safe anymore.\p"
+    .string "Watch your back, kid...$"
