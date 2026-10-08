@@ -1,46 +1,45 @@
 FuchsiaCity_Gym_Text_KogaIntro::
-    .string "KOGA: Fwahahaha!\p"
-    .string "A mere child like you dares to\n"
-    .string "challenge me?\p"
-    .string "The very idea makes me shiver\n"
-    .string "with mirth!\p"
-    .string "Very well, I shall show you true\n"
-    .string "terror as a ninja master.\p"
-    .string "Poison brings steady doom.\n"
-    .string "Sleep renders foes helpless.\p"
-    .string "Despair to the creeping horror of\n"
-    .string "POISON-type POKéMON!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+    .string "Welcome to AMETHIOLITE GYM. I am\n"
+    .string "ACHLYS.\p"
+    .string "Venom is not cruelty. It is\n"
+    .string "patience. A little, then a little\p"
+    .string "more, and the fight is already\n"
+    .string "won.\p"
+    .string "My POKéMON are POISON-types, like\n"
+    .string "the violet mist of this town. Do\p"
+    .string "you have the nerve to breathe it?\p"
+    .string "Let us begin!$"
 
 FuchsiaCity_Gym_Text_KogaDefeat::
-    .string "Humph!\n"
-    .string "You have proven your worth!\p"
-    .string "Here!\n"
-    .string "Take the SOULBADGE!$"
+    .string "Hm. You cleaned the toxin out of\n"
+    .string "your own team. Impressive.\p"
+    .string "Here. Take the AMETHYST BADGE.$"
 
 FuchsiaCity_Gym_Text_KogaPostBattle::
-    .string "When afflicted by TOXIC, a POKéMON\n"
-    .string "suffers more and more.\p"
-    .string "It suffers worsening damage as the\n"
-    .string "battle wears on!\p"
-    .string "It will surely terrorize foes!$"
+    .string "The AURA twisted us all... but\n"
+    .string "poison stayed poison. Some things\p"
+    .string "hold.\p"
+    .string "You are ready for HEMATOWN. Its\n"
+    .string "LEADER hides in the dark. Keep\p"
+    .string "your eyes sharp.$"
 
 FuchsiaCity_Gym_Text_KogaExplainSoulBadge::
-    .string "Now that you have the SOULBADGE,\n"
-    .string "the DEFENSE of your POKéMON rises.\p"
+    .string "Now that you have the AMETHYST\n"
+    .string "BADGE, the DEFENSE of your\p"
+    .string "POKéMON rises.\p"
     .string "It also lets you SURF outside of\n"
-    .string "battle.\p"
-    .string "Ah!\n"
-    .string "Take this, too!$"
+    .string "battle, if you carry the HM.\p"
+    .string "Ah! Take this, too!$"
 
 FuchsiaCity_Gym_Text_ReceivedTM06FromKoga::
     .string "{PLAYER} received TM06\n"
-    .string "from KOGA.$"
+    .string "from ACHLYS.$"
 
 FuchsiaCity_Gym_Text_KogaExplainTM06::
-    .string "Sealed within that TM06 lies\n"
-    .string "TOXIC!\p"
-    .string "It is a secret technique dating\n"
-    .string "back some four hundred years.$"
+    .string "TM06 contains TOXIC.\p"
+    .string "It poisons the foe and gets worse\n"
+    .string "every turn. Poison, as I said, is\p"
+    .string "patience.$"
 
 FuchsiaCity_Gym_Text_MakeSpaceForThis::
     .string "Make space for this, child!$"
@@ -73,7 +72,7 @@ FuchsiaCity_Gym_Text_KirkDefeat::
 FuchsiaCity_Gym_Text_KirkPostBattle::
     .string "Even though I've lost, I will keep\n"
     .string "training according to the teachings\l"
-    .string "of KOGA, my ninja master.$"
+    .string "of ACHLYS, my ninja master.$"
 
 FuchsiaCity_Gym_Text_NateIntro::
     .string "Let's see you beat my special\n"
@@ -103,7 +102,7 @@ FuchsiaCity_Gym_Text_PhilPostBattle::
 
 FuchsiaCity_Gym_Text_EdgarIntro::
     .string "I also study the way of the ninja\n"
-    .string "with Master KOGA!\p"
+    .string "with Master ACHLYS!\p"
     .string "Ninja have a long history of using\n"
     .string "animals!$"
 
@@ -114,7 +113,7 @@ FuchsiaCity_Gym_Text_EdgarPostBattle::
     .string "I still have much to learn.$"
 
 FuchsiaCity_Gym_Text_ShawnIntro::
-    .string "Master KOGA comes from a long line\n"
+    .string "Master ACHLYS comes from a long line\n"
     .string "of ninjas.\p"
     .string "What did you descend from?$"
 
@@ -133,10 +132,10 @@ FuchsiaCity_Gym_Text_GymGuyAdvice::
     .string "Champ in the making!\p"
     .string "AMETHIOLITE GYM is a tricked-up place.\n"
     .string "It's riddled with invisible walls!\p"
-    .string "KOGA might appear close, but he's\n"
+    .string "ACHLYS might appear close, but she's\n"
     .string "blocked off.\p"
     .string "You have to find gaps in the walls\n"
-    .string "to reach him.$"
+    .string "to reach her.$"
 
 FuchsiaCity_Gym_Text_GymGuyPostVictory::
     .string "It's amazing how ninja can terrify,\n"
@@ -144,13 +143,13 @@ FuchsiaCity_Gym_Text_GymGuyPostVictory::
 
 FuchsiaCity_Gym_Text_GymStatue::
     .string "AMETHIOLITE POKéMON GYM\n"
-    .string "LEADER: KOGA\p"
+    .string "LEADER: ACHLYS\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}$"
 
 FuchsiaCity_Gym_Text_GymStatuePlayerWon::
     .string "AMETHIOLITE POKéMON GYM\n"
-    .string "LEADER: KOGA\p"
+    .string "LEADER: ACHLYS\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 

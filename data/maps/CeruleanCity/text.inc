@@ -177,6 +177,6 @@ CeruleanCity_Text_BikeShopSign::
 
 CeruleanCity_Text_GymSign::
     .string "TOURMALIA POKéMON GYM\n"
-    .string "LEADER: MISTY\l"
-    .string "The Tomboyish Mermaid!$"
+    .string "LEADER: SYLVESTRE\l"
+    .string "The Warden of the Forest!$"
 

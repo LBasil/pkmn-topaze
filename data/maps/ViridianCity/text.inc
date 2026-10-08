@@ -1,12 +1,14 @@
 ViridianCity_Text_CanCarryMonsAnywhere::
-    .string "Those POKé BALLS at your waist!\n"
-    .string "You have POKéMON, don't you?\p"
-    .string "It's great that you can carry and\n"
-    .string "use POKéMON anytime, anywhere.$"
+    .string "Ten years ago, the AURA changed\n"
+    .string "every POKéMON's TYPE overnight.\p"
+    .string "My dad still can't believe his\n"
+    .string "GROWLITHE is part ICE now.$"
 
 ViridianCity_Text_GymClosedWonderWhoLeaderIs::
-    .string "This POKéMON GYM is always closed.\p"
-    .string "I wonder who the LEADER is?$"
+    .string "This GYM has been closed ever since\n"
+    .string "the LEADER left on a long trip.\p"
+    .string "Rumor says HEPHA forges her own\n"
+    .string "steel. I'd love to see it.$"
 
 ViridianCity_Text_ViridiansGymLeaderReturned::
     .string "OPANIHRUM GYM's LEADER returned!$"
@@ -27,8 +29,8 @@ ViridianCity_Text_ExplainCaterpieWeedle::
 ViridianCity_Text_GrandpaHasntHadCoffeeYet::
     .string "Oh, Grandpa!\n"
     .string "Don't be so mean!\p"
-    .string "I'm so sorry.\n"
-    .string "He hasn't had his coffee yet.$"
+    .string "I'm so sorry. Since the TEAM ONYBRIS\n"
+    .string "news, he doesn't trust strangers.$"
 
 ViridianCity_Text_GoShoppingInPewterOccasionally::
     .string "I go shopping in PYROPIA\n"
@@ -101,7 +103,7 @@ ViridianCity_Text_TooBusyForTeachyTV::
 
 ViridianCity_Text_CitySign::
     .string "OPANIHRUM \n"
-    .string "The Eternally Green Paradise$"
+    .string "The City of the Black Opal$"
 
 ViridianCity_Text_CatchMonsForEasierBattles::
     .string "TRAINER TIPS\p"

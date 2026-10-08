@@ -42,8 +42,8 @@ FuchsiaCity_Text_SafariZoneOfficeSign::
 
 FuchsiaCity_Text_GymSign::
     .string "AMETHIOLITE POKéMON GYM\n"
-    .string "LEADER: KOGA\l"
-    .string "The Poisonous Ninja Master$"
+    .string "LEADER: ACHLYS\l"
+    .string "The Violet Venom Witch!$"
 
 FuchsiaCity_Text_ChanseySign::
     .string "Name: CHANSEY\n"

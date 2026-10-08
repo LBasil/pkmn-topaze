@@ -1,49 +1,42 @@
 CeladonCity_Gym_Text_ErikaIntro::
-    .string "Hello…\n"
-    .string "Lovely weather, isn't it?\l"
-    .string "It's so pleasant…\p"
-    .string "…Oh, dear…\n"
-    .string "I must have dozed off. Welcome.\p"
-    .string "My name is ERIKA.\n"
-    .string "I am the LEADER of BOURG QUARTZ GYM.\p"
-    .string "I am a student of the art of\n"
-    .string "flower arranging.\p"
-    .string "My POKéMON are solely of the\n"
-    .string "GRASS type.\p"
-    .string "…Oh, I'm sorry, I had no idea that\n"
-    .string "you wished to challenge me.\p"
-    .string "Very well, but I shall not lose.{PLAY_BGM MUS_ENCOUNTER_GYM_LEADER}$"
+    .string "...Oh. A challenger. I am GRIM.\p"
+    .string "BOURG QUARTZ is quiet under the\n"
+    .string "snow. My ICE POKéMON like it that\p"
+    .string "way, and so do I.\p"
+    .string "Do not be fooled by the silence.\n"
+    .string "A blizzard is only calm until it\p"
+    .string "moves.\p"
+    .string "Come, then.$"
 
 CeladonCity_Gym_Text_ErikaDefeat::
-    .string "Oh!\n"
-    .string "I concede defeat.\l"
-    .string "You are remarkably strong.\p"
-    .string "I must confer on you the\n"
-    .string "RAINBOWBADGE.$"
+    .string "...Thawed out, have I?\p"
+    .string "You are strong. I concede. Take\n"
+    .string "the QUARTZ BADGE.$"
 
 CeladonCity_Gym_Text_ErikaPostBattle::
-    .string "You are cataloging POKéMON?\n"
-    .string "I must say I'm impressed.\p"
-    .string "I would never collect POKéMON if\n"
-    .string "they were unattractive.$"
+    .string "The cold keeps old memories\n"
+    .string "fresh. ONYBRIS... I have heard\p"
+    .string "what they ask of the world.\p"
+    .string "I understand the dream. I do not\n"
+    .string "forgive the way.\p"
+    .string "Go on. AMETHIOLITE is waiting.$"
 
 CeladonCity_Gym_Text_ExplainRainbowBadgeTakeThis::
-    .string "The RAINBOWBADGE will make\n"
-    .string "POKéMON up to Lv. 50 obey.\p"
-    .string "It also allows POKéMON to use\n"
-    .string "STRENGTH in and out of battle.\p"
+    .string "The QUARTZ BADGE makes POKéMON up\n"
+    .string "to Lv. 50 obey.\p"
+    .string "It also lets POKéMON use STRENGTH\n"
+    .string "in and out of battle, if you\p"
+    .string "carry the HM.\p"
     .string "Please also take this with you.$"
 
 CeladonCity_Gym_Text_ReceivedTM19FromErika::
-    .string "{PLAYER} received TM19\n"
-    .string "from ERIKA.$"
+    .string "{PLAYER} received TM13\n"
+    .string "from GRIM.$"
 
 CeladonCity_Gym_Text_ExplainTM19::
-    .string "TM19 contains GIGA DRAIN.\p"
-    .string "Half the damage it inflicts is\n"
-    .string "drained to heal your POKéMON.\p"
-    .string "Wouldn't you agree that it's a\n"
-    .string "wonderful move?$"
+    .string "TM13 contains ICE BEAM.\p"
+    .string "It freezes slowly, but surely. I\n"
+    .string "find that suits me.$"
 
 CeladonCity_Gym_Text_ShouldMakeRoomForThis::
     .string "You should make room for this.$"
@@ -58,7 +51,7 @@ CeladonCity_Gym_Text_KayDefeat::
 
 CeladonCity_Gym_Text_KayPostBattle::
     .string "Bleaah!\n"
-    .string "I hope ERIKA wipes you out!$"
+    .string "I hope GRIM wipes you out!$"
 
 CeladonCity_Gym_Text_BridgetIntro::
     .string "Oh, welcome.\n"
@@ -81,7 +74,7 @@ CeladonCity_Gym_Text_TinaDefeat::
     .string "You're an eye-opener!$"
 
 CeladonCity_Gym_Text_TinaPostBattle::
-    .string "Oh, you were looking at ERIKA…\n"
+    .string "Oh, you were looking at GRIM…\n"
     .string "You weren't looking at me…$"
 
 CeladonCity_Gym_Text_TamiaIntro::
@@ -109,7 +102,7 @@ CeladonCity_Gym_Text_LisaDefeat::
     .string "You!$"
 
 CeladonCity_Gym_Text_LisaPostBattle::
-    .string "Our LEADER ERIKA might be quiet,\n"
+    .string "Our LEADER GRIM might be quiet,\n"
     .string "but she's famous around here.$"
 
 CeladonCity_Gym_Text_LoriIntro::
@@ -140,13 +133,13 @@ CeladonCity_Gym_Text_MaryPostBattle::
 
 CeladonCity_Gym_Text_GymStatue::
     .string "BOURG QUARTZ POKéMON GYM\n"
-    .string "LEADER: ERIKA\p"
+    .string "LEADER: GRIM\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}$"
 
 CeladonCity_Gym_Text_GymStatuePlayerWon::
     .string "BOURG QUARTZ POKéMON GYM\n"
-    .string "LEADER: ERIKA\p"
+    .string "LEADER: GRIM\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 

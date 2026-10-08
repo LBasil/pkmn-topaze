@@ -1,74 +1,66 @@
 PewterCity_Gym_Text_BrockIntro::
-    .string "So, you're here. I'm BROCK.\n"
-    .string "I'm PYROPIA's GYM LEADER.\p"
-    .string "My rock-hard willpower is evident\n"
-    .string "even in my POKéMON.\p"
-    .string "My POKéMON are all rock hard, and\n"
-    .string "have true-grit determination.\p"
-    .string "That's right - my POKéMON are all\n"
-    .string "the ROCK type!\p"
-    .string "Fuhaha! You're going to challenge\n"
-    .string "me knowing that you'll lose?\p"
-    .string "That's the TRAINER's honor that\n"
-    .string "compels you to challenge me.\p"
-    .string "Fine, then!\n"
-    .string "Show me your best!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+    .string "So, you made it through OPANIHRUM\n"
+    .string "and the forest. I'm KAY, LEADER\p"
+    .string "of PYROPIA GYM.\p"
+    .string "This town sleeps on a volcano.\n"
+    .string "Heat, pressure, patience... that\p"
+    .string "is how we live, and that is how\n"
+    .string "my POKéMON fight.\p"
+    .string "They are all FIRE-type! Since the\n"
+    .string "AURA changed everything ten years\p"
+    .string "ago, even ordinary flames burn\n"
+    .string "differently.\p"
+    .string "If you think you can take the\n"
+    .string "heat, come on. Show me your\p"
+    .string "best!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
 
 @ NOTE: This defeat text actually causes a buffer overflow. It's too long for the gDisplayedStringBattle
 @ buffer that it's put into, and it stomps all over the gBattleTextBuffs after, as well as the otherwise
 @ unused array after that, sFlickerArray. Perhaps that's the reason why said array exists.
 PewterCity_Gym_Text_BrockDefeat::
-    .string "I took you for granted, and so\n"
-    .string "I lost.\p"
-    .string "As proof of your victory, I confer\n"
-    .string "on you this…the official POKéMON\l"
-    .string "LEAGUE BOULDERBADGE.\p"
-    .string "{FONT_NORMAL}{PLAYER} received the BOULDERBADGE\n"
-    .string "from BROCK!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
-    .string "{FONT_MALE}Just having the BOULDERBADGE makes\n"
-    .string "your POKéMON more powerful.\p"
-    .string "It also enables the use of the\n"
-    .string "move FLASH outside of battle.\p"
-    .string "Of course, a POKéMON must know the\n"
-    .string "move FLASH to use it.$"
+    .string "Hah... I was burning too bright\n"
+    .string "and you stayed calm. Fair enough.\p"
+    .string "Take the PYROPE BADGE.\p"
+    .string "{FONT_NORMAL}{PLAYER} received the PYROPE BADGE\n"
+    .string "from KAY!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\p"
+    .string "{FONT_MALE}The PYROPE BADGE makes your\n"
+    .string "POKéMON more powerful.\p"
+    .string "It also lets you use FLASH outside\n"
+    .string "of battle, if you carry the HM.$"
 
 PewterCity_Gym_Text_TakeThisWithYou::
     .string "Wait!\n"
     .string "Take this with you.$"
 
 PewterCity_Gym_Text_ReceivedTM39FromBrock::
-    .string "{PLAYER} received TM39\n"
-    .string "from BROCK.$"
+    .string "{PLAYER} received TM35\n"
+    .string "from KAY.$"
 
 PewterCity_Gym_Text_ExplainTM39::
-    .string "A TM, Technical Machine, contains a\n"
-    .string "technique for POKéMON.\p"
-    .string "Using a TM teaches the move it\n"
-    .string "contains to a POKéMON.\p"
-    .string "A TM is good for only one use.\p"
-    .string "So, when you use one, pick the\n"
-    .string "POKéMON carefully.\p"
-    .string "Anyways…\n"
-    .string "TM39 contains ROCK TOMB.\p"
-    .string "It hurls boulders at the foe and\n"
-    .string "lowers its SPEED.$"
+    .string "TM35 contains FLAMETHROWER.\p"
+    .string "A reliable stream of fire that\n"
+    .string "may burn the target. Keep it for\p"
+    .string "a POKéMON that can really use it.$"
 
 PewterCity_Gym_Text_BrockPostBattle::
-    .string "There are all kinds of TRAINERS in\n"
-    .string "this huge world of ours.\p"
-    .string "You appear to be very gifted as a\n"
-    .string "POKéMON TRAINER.\p"
-    .string "So let me make a suggestion.\p"
-    .string "Go to the GYM in TOURMALIA and test\n"
-    .string "your abilities.$"
+    .string "Someone broke into the GRENALUX\n"
+    .string "MUSEUM and took the GRENAT gem, I\p"
+    .string "heard. TEAM ONYBRIS, they call\n"
+    .string "themselves.\p"
+    .string "They say POKé BALLS are chains.\n"
+    .string "Maybe so. But a chain you choose\p"
+    .string "and a chain someone forces on you\n"
+    .string "are not the same thing.\p"
+    .string "Go on to TOURMALIA. SYLVESTRE\n"
+    .string "will not go easy on you.$"
 
 PewterCity_Gym_Text_DontHaveRoomForThis::
     .string "You don't have room for this.$"
 
 PewterCity_Gym_Text_LiamIntro::
     .string "Stop right there, kid!\p"
-    .string "You're ten thousand light-years \n"
-    .string "from facing BROCK!$"
+    .string "You are ten thousand light-years\n"
+    .string "from facing KAY!$"
 
 PewterCity_Gym_Text_LiamDefeat::
     .string "Darn!\p"
@@ -76,8 +68,8 @@ PewterCity_Gym_Text_LiamDefeat::
     .string "It measures distance!$"
 
 PewterCity_Gym_Text_LiamPostBattle::
-    .string "You're pretty hot.\n"
-    .string "…But not as hot as BROCK!$"
+    .string "You're pretty hot. ...But not as\n"
+    .string "hot as KAY!$"
 
 PewterCity_Gym_Text_LetMeTakeYouToTheTop::
     .string "Hiya!\n"
@@ -110,13 +102,13 @@ PewterCity_Gym_Text_YoureChampMaterial::
 
 PewterCity_Gym_Text_GymStatue::
     .string "PYROPIA POKéMON GYM\n"
-    .string "LEADER: BROCK\p"
+    .string "LEADER: KAY\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}$"
 
 PewterCity_Gym_Text_GymStatuePlayerWon::
     .string "PYROPIA POKéMON GYM\n"
-    .string "LEADER: BROCK\p"
+    .string "LEADER: KAY\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 

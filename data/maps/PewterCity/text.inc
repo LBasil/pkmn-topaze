@@ -31,7 +31,7 @@ PewterCity_Text_BrockOnlySeriousTrainerHere::
     .string "TRAINERS here.\p"
     .string "They're all like BUG CATCHERS,\n"
     .string "you know, just hobbyists.\p"
-    .string "But PYROPIA GYM's BROCK isn't like\n"
+    .string "But PYROPIA GYM's KAY isn't like\n"
     .string "that, not one bit.$"
 
 PewterCity_Text_DidYouCheckOutMuseum::
@@ -64,12 +64,12 @@ PewterCity_Text_SprayingRepelToKeepWildMonsOut::
 
 PewterCity_Text_BrocksLookingForChallengersFollowMe::
     .string "You're a TRAINER, right?\p"
-    .string "BROCK's looking for new\n"
+    .string "KAY is looking for new\n"
     .string "challengers. Follow me!$"
 
 PewterCity_Text_GoTakeOnBrock::
     .string "If you have the right stuff,\n"
-    .string "go take on BROCK!$"
+    .string "go take on KAY!$"
 
 PewterCity_Text_TrainerTipsEarningEXP::
     .string "TRAINER TIPS\p"
@@ -88,8 +88,8 @@ PewterCity_Text_MuseumOfScience::
 
 PewterCity_Text_GymSign::
     .string "PYROPIA POKéMON GYM\n"
-    .string "LEADER: BROCK\l"
-    .string "The Rock-Solid POKéMON TRAINER!$"
+    .string "LEADER: KAY\l"
+    .string "The Volcano Keeper!$"
 
 PewterCity_Text_CitySign::
     .string "PYROPIA\n"

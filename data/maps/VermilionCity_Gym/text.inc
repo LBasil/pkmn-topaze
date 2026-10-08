@@ -1,48 +1,52 @@
 VermilionCity_Gym_Text_LtSurgeIntro::
-    .string "Hey, kid! What do you think you're\n"
-    .string "doing here?\p"
-    .string "You won't live long in combat!\n"
-    .string "Not with your puny power!\p"
-    .string "I tell you, kid, electric POKéMON\n"
-    .string "saved me during the war!\p"
-    .string "They zapped my enemies into\n"
-    .string "paralysis!\p"
-    .string "The same as I'll do to you!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+    .string "I am HERA, LEADER of APATIA GYM,\n"
+    .string "up here where the air is thin.\p"
+    .string "Only those who can stand the cold\n"
+    .string "and the wind reach this high. My\p"
+    .string "DRAGON and FLYING POKéMON were\n"
+    .string "born for it.\p"
+    .string "Show me you can handle the\n"
+    .string "altitude. Hit me with everything\p"
+    .string "you've got!$"
 
 VermilionCity_Gym_Text_LtSurgePostBattle::
-    .string "A little word of advice, kid!\p"
-    .string "Electricity is sure powerful!\p"
-    .string "But, it's useless against GROUND-\n"
-    .string "type POKéMON!$"
+    .string "The mountain says what the sea\n"
+    .string "doesn't: those with the strongest\p"
+    .string "will stay in the air.\p"
+    .string "Keep climbing, kid. BOURG QUARTZ\n"
+    .string "is next, and it's very cold\p"
+    .string "there. Dress warmly.$"
 
 VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis::
-    .string "The THUNDERBADGE cranks up your\n"
-    .string "POKéMON's SPEED!\p"
-    .string "It also lets your POKéMON FLY\n"
-    .string "lightning-quick anytime, kid!\p"
-    .string "You're special, kid!\n"
-    .string "Take this!$"
+    .string "The APATITE BADGE lets your\n"
+    .string "POKéMON use FLY out of battle, if\p"
+    .string "you carry the HM.\p"
+    .string "It also makes your POKéMON\n"
+    .string "faster.\p"
+    .string "Take this too!$"
 
 VermilionCity_Gym_Text_ReceivedTM34FromLtSurge::
-    .string "{PLAYER} received TM34\n"
-    .string "from LT. SURGE.$"
+    .string "{PLAYER} received TM02\n"
+    .string "from HERA.$"
 
 VermilionCity_Gym_Text_ExplainTM34::
-    .string "TM34 contains SHOCK WAVE!\p"
-    .string "Teach it to an ELECTRIC POKéMON!$"
+    .string "TM02 contains DRAGON CLAW.\p"
+    .string "A savage slash that suits any\n"
+    .string "POKéMON with real talons.$"
 
 VermilionCity_Gym_Text_MakeRoomInYourBag::
     .string "Yo, kid, make room in your BAG!$"
 
 VermilionCity_Gym_Text_LtSurgeDefeat::
-    .string "Now that's a shocker!\p"
-    .string "You're the real deal, kid!\p"
-    .string "Fine, then, take the THUNDERBADGE!$"
+    .string "Hah! You flew right through my\n"
+    .string "guard.\p"
+    .string "I respect that. Take the APATITE\n"
+    .string "BADGE!$"
 
 VermilionCity_Gym_Text_TuckerIntro::
-    .string "When I was in the Army, LT. SURGE\n"
-    .string "was my strict CO.\p"
-    .string "He was a hard taskmaster.$"
+    .string "I trained on the peaks with HERA.\n"
+    .string "She was my strict teacher.\p"
+    .string "She was a hard taskmaster.$"
 
 VermilionCity_Gym_Text_TuckerDefeat::
     .string "Stop!\n"
@@ -50,8 +54,8 @@ VermilionCity_Gym_Text_TuckerDefeat::
 
 VermilionCity_Gym_Text_TuckerPostBattle::
     .string "It's not easy opening that door.\p"
-    .string "LT. SURGE was always famous for\n"
-    .string "his cautious nature in the Army.$"
+    .string "HERA was always famous for\n"
+    .string "her cautious nature up in the cold.$"
 
 VermilionCity_Gym_Text_BailyIntro::
     .string "I'm a lightweight, but I'm good\n"
@@ -63,7 +67,7 @@ VermilionCity_Gym_Text_BailyDefeat::
 
 VermilionCity_Gym_Text_BailyPostBattle::
     .string "Okay, I'll talk!\p"
-    .string "LT. SURGE said he hid door\n"
+    .string "HERA said she hid door\n"
     .string "switches inside something.$"
 
 VermilionCity_Gym_Text_DwayneIntro::
@@ -75,27 +79,22 @@ VermilionCity_Gym_Text_DwayneDefeat::
     .string "Surprised me!$"
 
 VermilionCity_Gym_Text_DwaynePostBattle::
-    .string "LT. SURGE installed the traps in\n"
-    .string "the GYM himself.\p"
-    .string "He set up double locks everywhere.\n"
+    .string "HERA installed the traps in\n"
+    .string "the GYM herself.\p"
+    .string "She set up double locks everywhere.\n"
     .string "Let me give you a hint.\p"
     .string "When you open the first lock, the\n"
     .string "second lock is right next to it.$"
 
 VermilionCity_Gym_Text_GymGuyAdvice::
-    .string "Yo!\n"
-    .string "Champ in the making!\p"
-    .string "LT. SURGE has a nickname.\p"
-    .string "People refer to him as the\n"
-    .string "Lightning American!\p"
-    .string "He's an expert on electric\n"
-    .string "POKéMON.\p"
-    .string "BIRD/WATER-type POKéMON match\n"
-    .string "poorly against the ELECTRIC type.\p"
-    .string "Beware of paralysis, too.\p"
-    .string "LT. SURGE is very cautious.\p"
-    .string "He's locked himself in, so it won't\n"
-    .string "be easy getting to him.$"
+    .string "Yo, champ!\p"
+    .string "HERA uses DRAGON and FLYING\n"
+    .string "POKéMON. Cold hurts her a lot:\p"
+    .string "ICE is super effective on both\n"
+    .string "types.\p"
+    .string "ROCK and FAIRY hurt too. ELECTRIC\n"
+    .string "works on the FLYING ones, but\p"
+    .string "DRAGONS shrug it off.$"
 
 VermilionCity_Gym_Text_GymGuyPostVictory::
     .string "Whew!\n"
@@ -103,13 +102,13 @@ VermilionCity_Gym_Text_GymGuyPostVictory::
 
 VermilionCity_Gym_Text_GymStatue::
     .string "APATIA POKéMON GYM\n"
-    .string "LEADER: LT. SURGE\p"
+    .string "LEADER: HERA\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}$"
 
 VermilionCity_Gym_Text_GymStatuePlayerWon::
     .string "APATIA POKéMON GYM\n"
-    .string "LEADER: LT. SURGE\p"
+    .string "LEADER: HERA\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 

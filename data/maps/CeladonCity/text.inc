@@ -49,8 +49,8 @@ CeladonCity_Text_CitySign::
 
 CeladonCity_Text_GymSign::
     .string "BOURG QUARTZ POKéMON GYM\n"
-    .string "LEADER: ERIKA\l"
-    .string "The Nature-Loving Princess!$"
+    .string "LEADER: GRIM\l"
+    .string "The Frozen Recluse!$"
 
 CeladonCity_Text_MansionSign::
     .string "BOURG QUARTZ MANSION$"

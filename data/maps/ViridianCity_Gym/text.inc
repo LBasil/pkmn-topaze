@@ -1,53 +1,45 @@
 ViridianCity_Gym_Text_GiovanniIntro::
-    .string "Fwahahaha!\n"
-    .string "Welcome to my hideout!\p"
-    .string "It shall be so until I can restore\n"
-    .string "TEAM ONYBRIS to its former glory.\p"
-    .string "But, you have found me again.\n"
-    .string "So be it.\l"
-    .string "This time, I'm not holding back!\p"
-    .string "Once more, you shall face\n"
-    .string "GIOVANNI, the greatest TRAINER!{PLAY_BGM}{MUS_ENCOUNTER_ROCKET}$"
+    .string "So the gate opens at last. I am\n"
+    .string "HEPHA.\p"
+    .string "I forge my own steel. It does not\n"
+    .string "rust, it does not bend, and it\p"
+    .string "does not forget.\p"
+    .string "My POKéMON are STEEL-types, born\n"
+    .string "in the black opal furnaces under\p"
+    .string "this city.\p"
+    .string "Do you think you can break what I\n"
+    .string "made? Come and try!$"
 
 ViridianCity_Gym_Text_GiovanniDefeat::
-    .string "Ha!\n"
-    .string "That was a truly intense fight.\l"
-    .string "You have won!\p"
-    .string "As proof, here is the EARTHBADGE!\n"
-    .string "{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}$"
+    .string "Hmph... A crack. Just one.\p"
+    .string "You are the first to leave one in\n"
+    .string "a long while. Take the OPAL\p"
+    .string "BADGE.$"
 
 ViridianCity_Gym_Text_GiovanniPostBattle::
-    .string "Having lost in this fashion, \n"
-    .string "I can't face my followers.\l"
-    .string "I have betrayed their trust.\p"
-    .string "As of today, TEAM ONYBRIS is\n"
-    .string "finished forever!\p"
-    .string "As for myself, I shall dedicate\n"
-    .string "my life to training again.\p"
-    .string "Let us meet again someday!\n"
-    .string "Farewell!$"
+    .string "All eight stones are in your\n"
+    .string "hands, or soon will be.\p"
+    .string "Remember what the opal teaches:\n"
+    .string "the darker it is, the more colors\p"
+    .string "it hides.\p"
+    .string "The LEAGUE awaits.$"
 
 ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis::
-    .string "The EARTHBADGE makes POKéMON of\n"
-    .string "any level obey without question.\p"
-    .string "It is evidence of your mastery as\n"
-    .string "a POKéMON TRAINER.\p"
-    .string "With it, you can challenge the\n"
-    .string "POKéMON LEAGUE.\p"
-    .string "Also, take this TM.\p"
-    .string "Consider it a gift for your POKéMON\n"
-    .string "LEAGUE challenge.$"
+    .string "The OPAL BADGE makes every\n"
+    .string "POKéMON obey, regardless of\p"
+    .string "level.\p"
+    .string "It is the last stone on your road\n"
+    .string "to the POKéMON LEAGUE.\p"
+    .string "Take this, too.$"
 
 ViridianCity_Gym_Text_ReceivedTM26FromGiovanni::
-    .string "{PLAYER} received TM26\n"
-    .string "from GIOVANNI.$"
+    .string "{PLAYER} received TM47\n"
+    .string "from HEPHA.$"
 
 ViridianCity_Gym_Text_ExplainTM26::
-    .string "TM26 contains EARTHQUAKE.\p"
-    .string "It is a powerful attack that causes\n"
-    .string "a massive tremor.\p"
-    .string "I made it when I ran the GYM here,\n"
-    .string "far too long ago… $"
+    .string "TM47 contains STEEL WING.\p"
+    .string "A strong, fast strike. Honest\n"
+    .string "metal.$"
 
 ViridianCity_Gym_Text_YouDoNotHaveSpace::
     .string "You do not have space for this!$"
@@ -154,7 +146,7 @@ ViridianCity_Gym_Text_GymGuyAdvice::
     .string "here like GROUND-type POKéMON.$"
 
 ViridianCity_Gym_Text_GymGuyPostVictory::
-    .string "Blow me away! GIOVANNI was the\n"
+    .string "Blow me away! HEPHA was the\n"
     .string "GYM LEADER of OPANIHRUM?$"
 
 ViridianCity_Gym_Text_GymStatue::
@@ -165,7 +157,7 @@ ViridianCity_Gym_Text_GymStatue::
 
 ViridianCity_Gym_Text_GymStatuePlayerWon::
     .string "OPANIHRUM POKéMON GYM\n"
-    .string "LEADER: GIOVANNI\p"
+    .string "LEADER: HEPHA\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 

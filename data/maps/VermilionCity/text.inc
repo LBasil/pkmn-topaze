@@ -47,8 +47,8 @@ VermilionCity_Text_PokemonFanClubSign::
 
 VermilionCity_Text_GymSign::
     .string "APATIA POKéMON GYM\n"
-    .string "LEADER: LT. SURGE\l"
-    .string "The Lightning American!$"
+    .string "LEADER: HERA\l"
+    .string "The Queen of the Peaks!$"
 
 VermilionCity_Text_VermilionHarbor::
     .string "APATIA HARBOR$"

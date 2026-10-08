@@ -2,7 +2,7 @@ CinnabarIsland_Text_DoorIsLocked::
     .string "The door is locked…$"
 
 CinnabarIsland_Text_BlaineLivedHereSinceBeforeLab::
-    .string "CHRONDROLIA GYM's BLAINE is quite the\n"
+    .string "CHRONDROLIA GYM's EDDIE is quite the\n"
     .string "odd fellow.\p"
     .string "He's lived on the island since way\n"
     .string "before the LAB was built.$"
@@ -22,7 +22,7 @@ CinnabarIsland_Text_PokemonLab::
 
 CinnabarIsland_Text_GymSign::
     .string "CHRONDROLIA POKéMON GYM\n"
-    .string "LEADER: BLAINE\l"
+    .string "LEADER: EDDIE\l"
     .string "The Hotheaded Quiz Master!$"
 
 CinnabarIsland_Text_HeyIfItIsntPlayer::

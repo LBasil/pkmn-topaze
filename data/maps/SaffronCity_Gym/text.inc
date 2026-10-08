@@ -1,50 +1,48 @@
 SaffronCity_Gym_Text_SabrinaIntro::
-    .string "I had a vision of your arrival.\p"
-    .string "I have had psychic powers since\n"
-    .string "I was a child.\p"
-    .string "It started when a spoon I\n"
-    .string "carelessly tossed, bent.\p"
-    .string "I dislike battling, but if you wish,\n"
-    .string "I will show you my powers!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+    .string "You find your way here in the\n"
+    .string "dark, challenger. Good.\p"
+    .string "I am NOX. HEMATOWN never sees the\n"
+    .string "sun, and neither do my DARK\p"
+    .string "POKéMON.\p"
+    .string "They hide, they steal, they\n"
+    .string "strike where you do not look. Let\p"
+    .string "me show you!$"
 
 SaffronCity_Gym_Text_SabrinaDefeat::
-    .string "This loss shocks me!\n"
-    .string "But, a loss is a loss.\p"
-    .string "I admit, I didn't work hard enough\n"
-    .string "to win.\p"
-    .string "Your victory has earned you the\n"
-    .string "MARSHBADGE.$"
+    .string "So you can fight what you cannot\n"
+    .string "see.\p"
+    .string "Take the HEMATITE BADGE.$"
 
 SaffronCity_Gym_Text_SabrinaPostBattle::
-    .string "Psychic power isn't something that\n"
-    .string "only a few people have.\p"
-    .string "Everyone has psychic power.\n"
-    .string "People just don't realize it.$"
+    .string "Light fades when too many people\n"
+    .string "want it.\p"
+    .string "There is one more LEADER before\n"
+    .string "the road ends. And a certain wish\p"
+    .string "still floating out there.$"
 
 SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis::
-    .string "The MARSHBADGE makes POKéMON up\n"
-    .string "to Lv. 70 obey you.\p"
-    .string "Stronger POKéMON will become wild,\n"
-    .string "ignoring your orders in battle.\p"
-    .string "Just don't raise your POKéMON too\n"
-    .string "much to avoid that problem.\p"
-    .string "Wait, please take this TM with you.$"
+    .string "The HEMATITE BADGE makes your\n"
+    .string "POKéMON obey up to Lv. 70.\p"
+    .string "It also lets you use ROCK SMASH\n"
+    .string "outside of battle, if you carry\p"
+    .string "the HM.\p"
+    .string "Take this too.$"
 
 SaffronCity_Gym_Text_ReceivedTM04FromSabrina::
-    .string "{PLAYER} received TM04 from\n"
-    .string "SABRINA.$"
+    .string "{PLAYER} received TM46 from\n"
+    .string "NOX.$"
 
 SaffronCity_Gym_Text_ExplainTM04::
-    .string "TM04 is CALM MIND.\p"
-    .string "It makes the POKéMON concentrate\n"
-    .string "to raise both SP. ATK and SP. DEF.$"
+    .string "TM46 contains THIEF.\p"
+    .string "It snatches the foe's item. That\n"
+    .string "is rude. But effective.$"
 
 SaffronCity_Gym_Text_BagFullOfOtherItems::
     .string "Your BAG is full of other items.$"
 
 SaffronCity_Gym_Text_AmandaIntro::
-    .string "SABRINA is far younger than I,\n"
-    .string "but she has earned my respect.$"
+    .string "NOX is far younger than I,\n"
+    .string "but he has earned my respect.$"
 
 SaffronCity_Gym_Text_AmandaDefeat::
     .string "Not good enough!$"
@@ -52,7 +50,7 @@ SaffronCity_Gym_Text_AmandaDefeat::
 SaffronCity_Gym_Text_AmandaPostBattle::
     .string "In a battle of equals, the one\n"
     .string "with the stronger will wins.\p"
-    .string "If you wish to beat SABRINA, focus\n"
+    .string "If you wish to beat NOX, focus\n"
     .string "and will yourself to victory.$"
 
 SaffronCity_Gym_Text_JohanIntro::
@@ -87,7 +85,7 @@ SaffronCity_Gym_Text_TyronDefeat::
     .string "I don't believe this!$"
 
 SaffronCity_Gym_Text_TyronPostBattle::
-    .string "SABRINA just wiped out the KARATE\n"
+    .string "NOX just wiped out the KARATE\n"
     .string "MASTER next door.$"
 
 SaffronCity_Gym_Text_TashaIntro::
@@ -102,9 +100,9 @@ SaffronCity_Gym_Text_TashaPostBattle::
     .string "place.$"
 
 SaffronCity_Gym_Text_CameronIntro::
-    .string "SABRINA is young, but she's also\n"
+    .string "NOX is young, but he's also\n"
     .string "our highly skilled LEADER.\p"
-    .string "You won't reach her easily!$"
+    .string "You won't reach him easily!$"
 
 SaffronCity_Gym_Text_CameronDefeat::
     .string "Ow!\n"
@@ -121,7 +119,7 @@ SaffronCity_Gym_Text_CameronPostBattle::
 SaffronCity_Gym_Text_PrestonIntro::
     .string "HEMATOWN POKéMON GYM is famous for\n"
     .string "training psychics.\p"
-    .string "You want to see SABRINA, don't\n"
+    .string "You want to see NOX, don't\n"
     .string "you? I can tell!$"
 
 SaffronCity_Gym_Text_PrestonDefeat::
@@ -134,7 +132,7 @@ SaffronCity_Gym_Text_PrestonPostBattle::
 SaffronCity_Gym_Text_GymGuyAdvice::
     .string "Yo!\n"
     .string "Champ in the making!\p"
-    .string "SABRINA's POKéMON use psychic\n"
+    .string "NOX's POKéMON use psychic\n"
     .string "power instead of force.\p"
     .string "FIGHTING POKéMON are especially\n"
     .string "weak against PSYCHIC POKéMON.\p"
@@ -148,13 +146,13 @@ SaffronCity_Gym_Text_GymGuyPostVictory::
 
 SaffronCity_Gym_Text_GymStatue::
     .string "HEMATOWN POKéMON GYM\n"
-    .string "LEADER: SABRINA\p"
+    .string "LEADER: NOX\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}$"
 
 SaffronCity_Gym_Text_GymStatuePlayerWon::
     .string "HEMATOWN POKéMON GYM\n"
-    .string "LEADER: SABRINA\p"
+    .string "LEADER: NOX\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 

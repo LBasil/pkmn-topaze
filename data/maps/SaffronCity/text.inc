@@ -71,8 +71,8 @@ SaffronCity_Text_FightingDojo::
 
 SaffronCity_Text_GymSign::
     .string "HEMATOWN POKéMON GYM\n"
-    .string "LEADER: SABRINA\l"
-    .string "The Master of PSYCHIC POKéMON!$"
+    .string "LEADER: NOX\l"
+    .string "The Shadow of the City!$"
 
 SaffronCity_Text_FullHealCuresStatus::
     .string "TRAINER TIPS\p"

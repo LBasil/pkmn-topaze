@@ -1,38 +1,40 @@
 CinnabarIsland_Gym_Text_BlaineIntro::
-    .string "Hah!\p"
-    .string "I am BLAINE, the red-hot LEADER\n"
-    .string "of CHRONDROLIA GYM!\p"
-    .string "My fiery POKéMON are all rough\n"
-    .string "and ready with intense heat!\p"
-    .string "They incinerate all challengers!\p"
-    .string "Hah!\n"
-    .string "You better have BURN HEAL!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+    .string "Hah! Welcome to CHRONDROLIA GYM!\p"
+    .string "I am EDDIE, and I am wired! My\n"
+    .string "ELECTRIC POKéMON light up this\p"
+    .string "whole yellow city.\p"
+    .string "Before you get to them, answer my\n"
+    .string "quiz or beat my trainers! Either\p"
+    .string "way, you will feel the shock!\p"
+    .string "Come on, let's turn up the\n"
+    .string "voltage!$"
 
 CinnabarIsland_Gym_Text_BlaineDefeat::
-    .string "I have burned down to nothing!\n"
-    .string "Not even ashes remain!\p"
-    .string "You have earned the VOLCANOBADGE.$"
+    .string "Whoa! You short-circuited me!\p"
+    .string "That was a good fight! Take the\n"
+    .string "TOPAZ BADGE!$"
 
 CinnabarIsland_Gym_Text_FireBlastIsUltimateFireMove::
-    .string "FIRE BLAST is the ultimate fire\n"
-    .string "technique.\p"
-    .string "Don't waste it on WATER POKéMON.$"
+    .string "TM24 contains THUNDERBOLT.\p"
+    .string "The ultimate sparky move. It may\n"
+    .string "even paralyze the target!$"
 
 CinnabarIsland_Gym_Text_ExplainVolcanoBadge::
-    .string "Hah!\p"
-    .string "The VOLCANOBADGE heightens the\n"
-    .string "SPECIAL stats of your POKéMON.\p"
+    .string "The TOPAZ BADGE makes your\n"
+    .string "POKéMON obey up to Lv. 90.\p"
+    .string "It also lets you use WATERFALL,\n"
+    .string "if you carry the HM.\p"
     .string "Here, you can have this, too!$"
 
 CinnabarIsland_Gym_Text_ReceivedTM38FromBlaine::
-    .string "{PLAYER} received TM38\n"
-    .string "from BLAINE.$"
+    .string "{PLAYER} received TM24\n"
+    .string "from EDDIE.$"
 
 CinnabarIsland_Gym_Text_BlainePostBattle::
-    .string "TM38 contains FIRE BLAST.\n"
-    .string "Teach it to FIRE-type POKéMON.\p"
-    .string "VULPIX or CHARMELEON would be\n"
-    .string "ideal for that move.$"
+    .string "Hah! That was electric!\p"
+    .string "You are nearly at the top.\n"
+    .string "OPANIHRUM's LEADER is back, and\p"
+    .string "she is not one to bend easily.$"
 
 CinnabarIsland_Gym_Text_MakeSpaceForThis::
     .string "Make space for this, child!$"
@@ -86,18 +88,18 @@ CinnabarIsland_Gym_Text_RamonPostBattle::
     .string "I'd use that!$"
 
 CinnabarIsland_Gym_Text_DerekIntro::
-    .string "I know why BLAINE became a\n"
+    .string "I know why EDDIE became a\n"
     .string "TRAINER.$"
 
 CinnabarIsland_Gym_Text_DerekDefeat::
     .string "Ow!$"
 
 CinnabarIsland_Gym_Text_DerekPostBattle::
-    .string "Our LEADER, BLAINE, became lost\n"
+    .string "Our LEADER, EDDIE, became lost\n"
     .string "in the mountains but good.\p"
     .string "Night fell when a fiery bird\n"
     .string "POKéMON appeared.\p"
-    .string "Its light allowed BLAINE to find\n"
+    .string "Its light allowed EDDIE to find\n"
     .string "his way down safely.$"
 
 CinnabarIsland_Gym_Text_DustyIntro::
@@ -127,25 +129,25 @@ CinnabarIsland_Gym_Text_ZacPostBattle::
 CinnabarIsland_Gym_Text_GymGuyAdvice::
     .string "Yo!\n"
     .string "Champ in the making!\p"
-    .string "The hotheaded BLAINE is a FIRE\n"
+    .string "The hotheaded EDDIE is an ELECTRIC\n"
     .string "POKéMON pro.\p"
-    .string "Douse his spirits with water!\p"
+    .string "Ground-types shrug off his shocks!\p"
     .string "You'd better take some\n"
-    .string "BURN HEALS, too.$"
+    .string "PARALYZ HEALS, too.$"
 
 CinnabarIsland_Gym_Text_GymGuyPostVictory::
     .string "{PLAYER}!\n"
-    .string "You beat that firebrand!$"
+    .string "You beat that live wire!$"
 
 CinnabarIsland_Gym_Text_GymStatue::
     .string "CHRONDROLIA POKéMON GYM\n"
-    .string "LEADER: BLAINE\p"
+    .string "LEADER: EDDIE\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}$"
 
 CinnabarIsland_Gym_Text_GymStatuePlayerWon::
     .string "CHRONDROLIA POKéMON GYM\n"
-    .string "LEADER: BLAINE\p"
+    .string "LEADER: EDDIE\p"
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 
