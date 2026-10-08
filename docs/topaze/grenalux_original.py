@@ -13,8 +13,8 @@ W_, H_ = orig.w, orig.h
 
 # ------------------------------------------------------------------ palette 7 (16 couleurs)
 PAL = [(255, 0, 255),                    # 0 transparent
-       (189, 238, 213), (139, 213, 189), # 1 pelouse, 2 pelouse (tache)
-       (115, 205, 164), (65, 180, 139), (30, 120, 90),      # 3-5 verts
+       (115, 205, 164), (139, 222, 189), # 1 herbe, 2 herbe (tache)
+       (156, 230, 197), (44, 140, 92), (22, 90, 64),        # 3 reflet, 4-5 feuillage
        (240, 236, 228), (190, 184, 180), (48, 44, 66),      # 6 pierre claire, 7 pierre, 8 contour
        (214, 160, 96), (130, 82, 52), (232, 204, 120),      # 9 bois clair, 10 bois sombre, 11 chaume / sable
        (88, 152, 224), (44, 92, 168),                       # 12 bleu, 13 bleu fonce (toit, eau)
@@ -22,9 +22,9 @@ PAL = [(255, 0, 255),                    # 0 transparent
 def newimg(w, h, fill=1):
     im = Image.new('P', (w, h), fill); im.putpalette([c for p in PAL for c in p]); return im
 GRASS_PAT = []
-_g = orig.metatile_img(662).convert('RGB')
+_g = orig.metatile_img(1).convert('RGB')
 for y in range(16):
-    GRASS_PAT.append([1 if _g.getpixel((x, y)) == (189, 238, 213) else 2 for x in range(16)])
+    GRASS_PAT.append([1 if _g.getpixel((x, y)) == (115, 205, 164) else 2 for x in range(16)])
 def lawn(w, h):
     im = newimg(w, h); px = im.load()
     for y in range(h):
@@ -263,28 +263,21 @@ def sign_board(post=True):
 
 # ----- cobble (autotile par voisinage)
 def cobble_block(pathset, cx, cy):
-    """cx, cy : coord. de bloc ; pathset : ensemble des blocs 'chemin' (pour les bords)."""
-    im = newimg(16, 16, 6); d = ImageDraw.Draw(im)
-    # pavage regulier (periodique)
-    for row in range(3):
-        y0 = row * 5 + (1 if row else 0)
-        d.line([(0, row * 5 + 0), (15, row * 5 + 0)], fill=7)
-        off = 4 if row % 2 else 0
-        for x in range(off, 16, 8): d.line([(x, row * 5), (x, row * 5 + 4)], fill=7)
-        for x in range(off + 1, 16, 8): d.point((x + 2, row * 5 + 2), fill=1)
-    d.line([(0, 15), (15, 15)], fill=7)
+    """Chemin de terre battue (bords herbeux). pathset : blocs 'chemin'."""
+    im = newimg(16, 16, 11); px = im.load()
+    for y in range(16):
+        for x in range(16):
+            h = (x * 7 + y * 13 + (x * y) % 5) % 23
+            if h in (0, 9): px[x, y] = 9
+            elif h in (4, 15): px[x, y] = 3
     N = (cx, cy - 1) in pathset; S = (cx, cy + 1) in pathset; E = (cx + 1, cy) in pathset; Wn = (cx - 1, cy) in pathset
-    px = im.load()
-    def lip(x, y, depth):  # bord : herbe + ombre
-        px[x, y] = 3 if depth == 0 else 7 if depth == 1 else px[x, y]
     for i in range(16):
-        if not N:  px[i, 0] = 3; px[i, 1] = 7 if i % 2 else 7
-        if not S:  px[i, 15] = 3; px[i, 14] = 7
-        if not Wn: px[0, i] = 3; px[1, i] = 7
-        if not E:  px[15, i] = 3; px[14, i] = 7
-    # coins arrondis
-    for (cond, pts) in (((not N) and (not Wn), [(0, 0), (1, 0), (0, 1)]), ((not N) and (not E), [(15, 0), (14, 0), (15, 1)]),
-                        ((not S) and (not Wn), [(0, 15), (1, 15), (0, 14)]), ((not S) and (not E), [(15, 15), (14, 15), (15, 14)])):
+        if not N:  px[i, 0] = 4 if i % 3 else 1; px[i, 1] = 9
+        if not S:  px[i, 15] = 4 if i % 3 else 1; px[i, 14] = 9
+        if not Wn: px[0, i] = 4 if i % 3 else 1; px[1, i] = 9
+        if not E:  px[15, i] = 4 if i % 3 else 1; px[14, i] = 9
+    for (cond, pts) in (((not N) and (not Wn), [(0, 0), (1, 0), (0, 1), (1, 1)]), ((not N) and (not E), [(15, 0), (14, 0), (15, 1), (14, 1)]),
+                        ((not S) and (not Wn), [(0, 15), (1, 15), (0, 14), (1, 14)]), ((not S) and (not E), [(15, 15), (14, 15), (15, 14), (14, 14)])):
         if cond:
             for (x, y) in pts: px[x, y] = 1
     return im
@@ -320,7 +313,7 @@ def bridge_canvas(base):
 
 # ------------------------------------------------------------------ plan de la carte
 G = {}                   # (x,y) -> (metatile, collision)  collision = 1 -> infranchissable
-LAWN = 662
+LAWN = 1
 TOUCH = set()
 def put(x, y, m, col=0): G[(x, y)] = (m, col); TOUCH.add((x, y))
 for y in range(H_):
@@ -330,8 +323,9 @@ for y in range(H_):
 # zone interieure a repeindre : x 3..20, y 3..16
 for y in range(3, 17):
     for x in range(3, 21): put(x, y, LAWN)
-for y in range(3, 17):               # colonnes d'ombre laterales
-    put(2, y, 686); put(21, y, 663)
+for y in range(2, 17):               # colonnes laterales : meme herbe que le reste
+    put(2, y, 1); put(21, y, 1)
+for x in range(3, 21): put(x, 2, 1)
 
 PATH = set()
 for y in range(0, 9): PATH |= {(12, y), (13, y)}
@@ -414,6 +408,7 @@ put(14, 16, meta(fence('E')), 1)
 put(20, 16, meta(garden(2)), 0)
 # haies sud-ouest
 for x in range(3, 8): put(x, 16, meta(flowers(80 + x)), 0)
+for x in range(11, 21): put(x, 17, 1)
 # enseignes
 put(11, 7, 2, 1)        # panneau de ville (bloc d'origine)
 put(8, 7, 685, 1)       # boite aux lettres (maison du joueur)
