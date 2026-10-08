@@ -124,3 +124,31 @@ PalletTown_Text_RanchOakGoToLab::
     .string "would reach our doorstep.\p"
     .string "{PLAYER}, {RIVAL}, come to my LAB.\n"
     .string "You're each getting a partner.$"
+
+PalletTown_Text_AmbMiner::
+	.string "The vein under this hill is old.\n"
+	.string "Garnet grows like frost in the dark.\n"
+	.string "We cut only what the mine lets go.$"
+
+PalletTown_Text_AmbOldman::
+	.string "My grandfather carried the first\n"
+	.string "crystal up from the mine. They say the\n"
+	.string "monument still hums at night.$"
+
+PalletTown_Text_AmbGirl::
+	.string "The pond turns purple at dusk!\n"
+	.string "I think the garnet colors it.$"
+
+PalletTown_Text_AmbBoy::
+	.string "I found a tiny crystal by the pond.\n"
+	.string "It glows if you hold it up to the sun!$"
+
+PalletTown_Text_AmbScientist::
+	.string "The lab measures the aura of every\n"
+	.string "crystal in town. The readings keep\n"
+	.string "rising, and nobody knows why.$"
+
+PalletTown_Text_AmbLady::
+	.string "Garnet is the stone of this town.\n"
+	.string "Red roofs, red trees, red stone...\n"
+	.string "Even the grass blushes here.$"

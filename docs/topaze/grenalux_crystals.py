@@ -56,6 +56,53 @@ def small(var):
     if var == 0: prism(d, 8, 13, 4, 10)
     else: prism(d, 5, 13, 3, 7, -1); prism(d, 11, 13, 3, 9, 1)
     return im
+
+def lamp():
+    im = ground_bg(16, 16); d = ImageDraw.Draw(im)
+    shadow(d, 3, 12, 13, 15)
+    d.rectangle((7, 7, 8, 14), fill=12); d.rectangle((5, 13, 10, 14), fill=14)
+    d.polygon([(8, 0), (11, 3), (11, 7), (8, 9), (5, 7), (5, 3)], fill=7, outline=5)
+    d.polygon([(8, 1), (10, 3), (8, 5), (6, 3)], fill=8); d.point((7, 3), fill=10)
+    d.point((3, 4), fill=15); d.point((13, 5), fill=15); d.point((8, 11), fill=11)
+    return im
+def boulder(var):
+    w = h = 32
+    im = ground_bg(w, h); d = ImageDraw.Draw(im)
+    shadow(d, 2, 24, 31, 31)
+    d.ellipse((1, 5, 30, 29), fill=11, outline=14)
+    d.pieslice((3, 7, 28, 27), 200, 330, fill=13)
+    d.ellipse((6, 12, 27, 27), fill=11)
+    d.arc((2, 6, 29, 28), 150, 300, fill=13)
+    d.arc((4, 12, 29, 29), 20, 130, fill=12)
+    if var == 0: veins = [(9, 13), (12, 16), (10, 18), (21, 20)]
+    else: veins = [(20, 11), (22, 14), (18, 16), (9, 21)]
+    for (x, y) in veins:
+        d.polygon([(x, y - 3), (x + 2, y - 1), (x + 1, y + 2), (x - 1, y + 2), (x - 2, y - 1)], fill=7, outline=5)
+        d.point((x, y - 1), fill=9)
+    return im, 2, 2
+def rock():
+    im = ground_bg(16, 16); d = ImageDraw.Draw(im)
+    shadow(d, 1, 11, 15, 15)
+    d.ellipse((1, 4, 14, 14), fill=11, outline=14); d.arc((2, 5, 13, 13), 180, 300, fill=13)
+    d.point((9, 9), fill=8)
+    return im
+def mine():
+    w, h = 48, 48
+    im = ground_bg(w, h); d = ImageDraw.Draw(im)
+    d.polygon([(0, 47), (0, 24), (7, 12), (18, 5), (30, 5), (41, 12), (47, 24), (47, 47)], fill=11, outline=14)
+    d.polygon([(4, 24), (10, 14), (19, 8), (28, 8)], fill=13)
+    for (x, y) in ((8, 20), (13, 10), (36, 16), (40, 28), (6, 34), (42, 38)):
+        d.polygon([(x, y - 3), (x + 2, y - 1), (x + 1, y + 2), (x - 1, y + 2), (x - 2, y - 1)], fill=7, outline=5); d.point((x, y - 1), fill=9)
+    for y in (30, 38): d.line([(2, y), (14, y + 2)], fill=12); d.line([(34, y + 2), (45, y)], fill=12)
+    d.rectangle((13, 20, 34, 47), fill=12, outline=14)                 # cadre en bois sombre
+    d.rectangle((16, 24, 31, 47), fill=14)                              # ouverture
+    d.pieslice((16, 20, 31, 32), 180, 360, fill=14)
+    d.rectangle((13, 20, 34, 23), fill=6, outline=14)                   # linteau
+    d.line([(14, 21), (33, 21)], fill=7)
+    d.rectangle((13, 24, 15, 47), fill=6, outline=14); d.rectangle((32, 24, 34, 47), fill=6, outline=14)
+    d.rectangle((22, 14, 25, 19), fill=11); d.polygon([(23, 9), (26, 12), (23, 15), (20, 12)], fill=8, outline=5)   # cristal-enseigne
+    d.line([(17, 44), (30, 44)], fill=13); d.line([(17, 47), (30, 47)], fill=13)
+    return im, 3, 3
 # ---- registre
 mt = bytearray(open(D + 'metatiles.bin', 'rb').read()); att = bytearray(open(D + 'metatile_attributes.bin', 'rb').read())
 NMT = len(mt) // 16
@@ -75,6 +122,7 @@ def meta(block):
     return 640 + len(mt) // 16 - 1
 def slice_all(im, bw, bh): return {(i, j): meta(im.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))) for j in range(bh) for i in range(bw)}
 BIG = slice_all(*big()); MID = slice_all(*mid()); SM = [meta(small(0)), meta(small(1))]
+LAMP = meta(lamp()); BOUL = [slice_all(*boulder(0)), slice_all(*boulder(1))]; ROCK = meta(rock()); MINE = slice_all(*mine())
 assert NT + len(tiles) <= 384, NT + len(tiles)
 open(D + 'metatiles.bin', 'wb').write(mt); open(D + 'metatile_attributes.bin', 'wb').write(att)
 rows = (NT + len(tiles) + 15) // 16

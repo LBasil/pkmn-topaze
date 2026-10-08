@@ -97,15 +97,6 @@ PalletTown_EventScript_NotBeenToOneIslandYet::
 	end
 
 PalletTown_Movement_OakWalkToPlayersDoor::
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_left
-	walk_up
-	walk_up
-	walk_up
-	walk_up
 	walk_up
 	walk_left
 	walk_left
@@ -115,6 +106,15 @@ PalletTown_Movement_OakWalkToPlayersDoor::
 	walk_left
 	walk_left
 	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
 	walk_in_place_faster_left
 	step_end
 
@@ -122,20 +122,20 @@ PalletTown_Movement_OakExit::
 	walk_down
 	walk_down
 	walk_down
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
 	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	walk_down
 	step_end
 
@@ -143,6 +143,8 @@ PalletTown_Movement_OakWalkToLabFromHouse::
 	walk_down
 	walk_down
 	walk_down
+	walk_down
+	walk_right
 	walk_right
 	walk_right
 	walk_right
@@ -171,8 +173,6 @@ PalletTown_Movement_OakWalkToLabFromHouse::
 	walk_down
 	walk_down
 	walk_down
-	walk_down
-	walk_right
 	walk_right
 	walk_right
 	walk_right
@@ -186,6 +186,8 @@ PalletTown_Movement_PlayerWalkToLabFromHouse::
 	walk_down
 	walk_down
 	walk_down
+	walk_down
+	walk_right
 	walk_right
 	walk_right
 	walk_right
@@ -214,8 +216,6 @@ PalletTown_Movement_PlayerWalkToLabFromHouse::
 	walk_down
 	walk_down
 	walk_down
-	walk_down
-	walk_right
 	walk_right
 	walk_right
 	walk_right
@@ -305,7 +305,6 @@ PalletTown_Movement_RivalWalkToRanchLeft::
 	walk_down
 	walk_down
 	walk_down
-	walk_down
 	walk_right
 	walk_right
 	walk_right
@@ -319,7 +318,6 @@ PalletTown_Movement_RivalWalkToRanchLeft::
 	walk_right
 	walk_right
 	walk_right
-	walk_up
 	walk_up
 	walk_up
 	walk_right
@@ -335,7 +333,6 @@ PalletTown_Movement_RivalWalkToRanchRight::
 	walk_down
 	walk_down
 	walk_down
-	walk_down
 	walk_right
 	walk_right
 	walk_right
@@ -348,7 +345,6 @@ PalletTown_Movement_RivalWalkToRanchRight::
 	walk_right
 	walk_right
 	walk_right
-	walk_up
 	walk_up
 	walk_up
 	walk_right
@@ -365,7 +361,6 @@ PalletTown_Movement_PlayerWalkToRanchLeft::
 	walk_down
 	walk_down
 	walk_down
-	walk_down
 	walk_right
 	walk_right
 	walk_right
@@ -379,7 +374,6 @@ PalletTown_Movement_PlayerWalkToRanchLeft::
 	walk_right
 	walk_right
 	walk_right
-	walk_up
 	walk_up
 	walk_up
 	step_end
@@ -395,7 +389,6 @@ PalletTown_Movement_PlayerWalkToRanchRight::
 	walk_down
 	walk_down
 	walk_down
-	walk_down
 	walk_right
 	walk_right
 	walk_right
@@ -408,7 +401,6 @@ PalletTown_Movement_PlayerWalkToRanchRight::
 	walk_right
 	walk_right
 	walk_right
-	walk_up
 	walk_up
 	walk_up
 	step_end
@@ -615,28 +607,4 @@ PalletTown_EventScript_OnybrisGruntDefeated::
 
 PalletTown_EventScript_MuseumSign::
 	msgbox PalletTown_Text_MuseumSign, MSGBOX_SIGN
-	end
-
-PalletTown_EventScript_AmbMiner::
-	msgbox PalletTown_Text_AmbMiner, MSGBOX_NPC
-	end
-
-PalletTown_EventScript_AmbOldman::
-	msgbox PalletTown_Text_AmbOldman, MSGBOX_NPC
-	end
-
-PalletTown_EventScript_AmbGirl::
-	msgbox PalletTown_Text_AmbGirl, MSGBOX_NPC
-	end
-
-PalletTown_EventScript_AmbBoy::
-	msgbox PalletTown_Text_AmbBoy, MSGBOX_NPC
-	end
-
-PalletTown_EventScript_AmbScientist::
-	msgbox PalletTown_Text_AmbScientist, MSGBOX_NPC
-	end
-
-PalletTown_EventScript_AmbLady::
-	msgbox PalletTown_Text_AmbLady, MSGBOX_NPC
 	end
