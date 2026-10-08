@@ -45,7 +45,8 @@
 - [x] **Répétiteur d'attaques** dans tous les Centres Pokémon (infirmière, gratuit) : testé avec une ROM de debug (départ au Centre de Jadielle, Salamèche niv. 20) : question, choix du Pokémon, liste des attaques réapprenables. Astuce de test : voir `tools/topaze/emu/README.md` (ROM de debug, `TOPAZE_ROM`).
 - [x] Objets tenus des champions : combat contre le champion de Argenta/Pewter (KAY) : 1er Pokémon Goupix avec **Charbon** (lu en mémoire de combat).
 - [x] Coupe en jeu (Vermilion, badge 2, sans l'apprendre) : invite « Would you like to CUT it? », l'arbre disparaît.
-- [ ] Restent : mesure chiffrée du split physique/spécial et de la vitesse paralysée.
+- [x] Split par attaque mesuré : avec Attaque 300 / Atq. Spé. 5, **Coup-Glace** (Glace, forcée physique) met le Goupix KO d'un coup, alors que **Lance-Flammes** (spéciale) ne lui retire rien.
+- [ ] Seul reste non mesuré : la vitesse paralysée (changement d'une ligne, relu dans le code).
 
 ## Limites connues
 - Sprites des champions = ceux des chefs d'arène d'origine.
