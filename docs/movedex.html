@@ -1,0 +1,4 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Movedex – Pokémon Topaze</title><link rel="stylesheet" href="style.css"></head><body><main><h1>Movedex</h1><p class="mut">All moves with their type in Topaze. The physical/special split follows the Gen-3 rule (by type); Fairy is special. <b>Cut, Strength, Rock Smash and Flash</b> are now real attacks.</p><div id="t"></div></main>
+<script src="app.js"></script><script src="data/moves.js"></script><script>
+table("t",MOVES,[{h:"Move",get:x=>x.name},{h:"Type",get:x=>x.type,html:x=>tb(x.type)},{h:"Category",get:x=>x.cat},{h:"Power",get:x=>x.power,num:1,html:x=>x.power||"—"},{h:"Acc.",get:x=>x.acc,num:1,html:x=>x.acc||"—"},{h:"PP",get:x=>x.pp,num:1},{h:"Priority",get:x=>x.prio,num:1}],{filter:{label:"All types",values:Object.keys(COL),test:(x,f)=>x.type===f}});
+</script><script>nav('movedex')</script></body></html>

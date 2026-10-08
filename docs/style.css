@@ -1,0 +1,18 @@
+:root{--bg:#fbfaf7;--fg:#1d1d22;--mut:#6a6a75;--card:#fff;--line:#e4e1d8;--acc:#c8452d;--acc2:#9a2f1c}
+@media(prefers-color-scheme:dark){:root{--bg:#16161a;--fg:#ececf1;--mut:#a0a0ad;--card:#1f1f25;--line:#34343d;--acc:#ff7a5c;--acc2:#ffa58f}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
+header{border-bottom:1px solid var(--line);background:var(--card);position:sticky;top:0;z-index:5}
+nav{max-width:1100px;margin:auto;padding:10px 16px;display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
+nav b{color:var(--acc);margin-right:8px;font-size:18px}nav a{color:var(--fg);text-decoration:none;padding:4px 2px;border-bottom:2px solid transparent}
+nav a:hover,nav a.on{border-color:var(--acc);color:var(--acc)}
+main{max-width:1100px;margin:auto;padding:24px 16px 64px}h1{margin:.2em 0 .4em}h2{margin-top:1.8em;border-bottom:1px solid var(--line);padding-bottom:4px}
+p,li{max-width:75ch}a{color:var(--acc2)}code{background:var(--card);border:1px solid var(--line);padding:1px 5px;border-radius:4px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}input,select{font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--fg)}
+input[type=search]{min-width:240px}.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:6px 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{position:sticky;top:0;background:var(--card);cursor:pointer;color:var(--mut);font-weight:600}tr:hover td{background:rgba(200,69,45,.06)}td.n{text-align:right;font-variant-numeric:tabular-nums}
+.t{display:inline-block;padding:1px 8px;border-radius:10px;color:#fff;font-size:12px;font-weight:600;margin-right:3px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}.card{border:1px solid var(--line);border-radius:10px;padding:14px;background:var(--card)}
+.card h3{margin:.1em 0}.mut{color:var(--mut)}.team li{margin:.3em 0}details{margin:.3em 0}summary{cursor:pointer}
+.chart td,.chart th{padding:3px 5px;text-align:center;font-size:12px}.x2{background:#3a9d5d;color:#fff}.x05{background:#c25b4a;color:#fff}.x0{background:#444;color:#fff}
+.note{border-left:4px solid var(--acc);background:var(--card);padding:10px 14px;border-radius:0 8px 8px 0}

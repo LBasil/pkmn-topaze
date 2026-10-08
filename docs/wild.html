@@ -1,0 +1,4 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wild Encounters – Pokémon Topaze</title><link rel="stylesheet" href="style.css"></head><body><main><h1>Wild Encounters</h1><p class="mut">Where to find each Pokémon (Kanto + Sevii maps from the base game; levels already raised for Topaze).</p><div id="t"></div></main>
+<script src="app.js"></script><script src="data/wild.js"></script><script>
+table("t",WILD,[{h:"Pokémon",get:x=>x.species},{h:"Location",get:x=>x.map},{h:"Method",get:x=>x.how},{h:"Levels",get:x=>x.min,html:x=>x.min==x.max?x.min:x.min+"–"+x.max}],{max:600,filter:{label:"All methods",values:["Grass","Surf","Rock Smash","Fishing"],test:(x,f)=>x.how===f}});
+</script><script>nav('wild')</script></body></html>

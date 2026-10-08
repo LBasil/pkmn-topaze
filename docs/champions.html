@@ -1,0 +1,4 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gym Champions – Pokémon Topaze</title><link rel="stylesheet" href="style.css"></head><body><main><h1>Gym Champions</h1><p class="mut">The eight champions, in the order you meet them. Levels shown are the ones set in the game data (before any Nuzlocke rules of your own!).</p><div id="c"></div></main>
+<script src="app.js"></script><script src="data/champions.js"></script><script>
+document.getElementById("c").innerHTML=`<div class="cards">${CHAMPIONS.map(c=>`<div class="card"><h3>${c.n}. ${c.name}</h3><div class="mut">${c.city} · ${c.type.split(" / ").map(tb).join("")}</div><ul class="team">${c.team.map(m=>`<li><b>${m.species}</b> Lv.${m.lvl}<br><span class="mut">${m.moves.join(" · ")}</span></li>`).join("")}</ul></div>`).join("")}</div>`;
+</script><script>nav('champions')</script></body></html>

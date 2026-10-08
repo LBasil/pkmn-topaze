@@ -68,3 +68,7 @@ build-cmake-*/
 CMakeLists.txt
 compile_commands.json
 .porydaw/
+
+# Topaze: le site joueur (docs/) contient du JS versionné
+!docs/*.js
+!docs/data/*.js
