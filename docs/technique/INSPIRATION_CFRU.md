@@ -13,6 +13,7 @@ Remarque : un projet communautaire (`cawtds/pokefirered`) porte une partie de po
 | CS sans les apprendre | Scripts + `PartyHasMonWithSurf()` |
 | Multi Exp. intégré, texte rapide, course partout, CT infinies | Voir ARCHITECTURE.md |
 | Équipes de champions « sérieuses » (objets, IV élevés, 4–5 Pokémon, attaques perso) | `leaders_items.py` : objets tenus par chaque champion (objets de type, Baie Sitrus, Restes pour l'as) |
+| Brûlure 1/16 des PV, paralysie = vitesse ½ (règles Gen 7) | `battle_util.c` (ENDTURN_BURN), `battle_main.c` (vitesse) ; brûlure vérifiée en jeu (160 PV → −10) |
 | Attaques rééquilibrées | `balance_moves.py` |
 
 ## Faisable ensuite (par ordre de rapport qualité/risque)

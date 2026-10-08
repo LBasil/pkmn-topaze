@@ -3461,7 +3461,7 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
     if (holdEffect == HOLD_EFFECT_MACHO_BRACE)
         speedBattler1 /= 2;
     if (gBattleMons[battler1].status1 & STATUS1_PARALYSIS)
-        speedBattler1 /= 4;
+        speedBattler1 /= 2; // Topaze: Gen 7
     if (holdEffect == HOLD_EFFECT_QUICK_CLAW && gRandomTurnNumber < (0xFFFF * holdEffectParam) / 100)
         speedBattler1 = UINT_MAX;
     // check second battlerId's speed
@@ -3486,7 +3486,7 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
     if (holdEffect == HOLD_EFFECT_MACHO_BRACE)
         speedBattler2 /= 2;
     if (gBattleMons[battler2].status1 & STATUS1_PARALYSIS)
-        speedBattler2 /= 4;
+        speedBattler2 /= 2; // Topaze: Gen 7
     if (holdEffect == HOLD_EFFECT_QUICK_CLAW && gRandomTurnNumber < (0xFFFF * holdEffectParam) / 100)
         speedBattler2 = UINT_MAX;
     if (ignoreChosenMoves)
