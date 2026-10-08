@@ -64,3 +64,29 @@ Route22_Text_LeagueGateSign::
 	.string "POKéMON LEAGUE\n"
 	.string "Front Gate$"
 
+
+Route22_Text_StrangerIntro::
+    .string "...You came a long way, kid.\p"
+    .string "I used to lead people who treated\n"
+    .string "POKéMON like tools.\p"
+    .string "A child beat me once. I learned\n"
+    .string "nothing from it, for a long time.\p"
+    .string "I left behind a son who ran away\n"
+    .string "from me. I deserved that.$"
+
+Route22_Text_StrangerChallenge::
+    .string "I do not ask for forgiveness.\n"
+    .string "Only a fight worth remembering.\p"
+    .string "Show me what ten years of AURA\n"
+    .string "have made of your generation.$"
+
+Route22_Text_StrangerDefeat::
+    .string "...Hah. So that is how it feels.$"
+
+Route22_Text_StrangerPostBattle::
+    .string "Thank you.\p"
+    .string "If you want a last test, there is\n"
+    .string "a TRAINER waiting in the cave\l"
+    .string "where MEWTWO sleeps.\p"
+    .string "He has not said a word in years.\n"
+    .string "He does not need to.$"

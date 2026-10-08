@@ -232,3 +232,20 @@ Route22_Movement_LateRivalExit::
 Route22_EventScript_LeagueGateSign::
 	msgbox Route22_Text_LeagueGateSign, MSGBOX_SIGN
 	end
+
+@ Topaze postgame: the mysterious trainer (GIOVANNI, never named)
+Route22_EventScript_PostgameStranger::
+	lock
+	faceplayer
+	msgbox Route22_Text_StrangerIntro
+	msgbox Route22_Text_StrangerChallenge
+	trainerbattle_no_intro TRAINER_PLAYER_LEAF, Route22_Text_StrangerDefeat
+	msgbox Route22_Text_StrangerPostBattle
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_ROUTE22_STRANGER
+	setflag FLAG_HIDE_POSTGAME_STRANGER
+	clearflag FLAG_HIDE_POSTGAME_RED
+	fadescreen FADE_FROM_BLACK
+	release
+	end

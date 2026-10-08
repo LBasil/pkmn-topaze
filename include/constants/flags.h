@@ -1227,9 +1227,9 @@
 #define FLAG_GRENALUX_ONYBRIS_STRIKE                               0x4A9 // Topaze: set after the road grunt is beaten; museum & lab have been hit
 #define FLAG_HIDE_RANCH_SCENE                                      0x4AA // Topaze: father/OAK/rival inside the ranch during the opening
 #define FLAG_TOPAZE_POSTGAME            0x4AB // Topaze: set after ending 1 (postgame unlocked)
-#define FLAG_UNUSED_0x4AC               0x4AC // Unused Flag
-#define FLAG_UNUSED_0x4AD               0x4AD // Unused Flag
-#define FLAG_UNUSED_0x4AE               0x4AE // Unused Flag
+#define FLAG_HIDE_POSTGAME_STRANGER     0x4AC // Topaze postgame: mysterious trainer on Route 22
+#define FLAG_HIDE_POSTGAME_RED          0x4AD // Topaze postgame: RED in the cave
+#define FLAG_POSTGAME_DONE              0x4AE // Topaze postgame: cinematic seen
 #define FLAG_UNUSED_0x4AF               0x4AF // Unused Flag
 
 // Boss clear flags, 1200

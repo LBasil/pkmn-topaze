@@ -56,3 +56,20 @@ CeruleanCave_B1F_EventScript_RanFromMewtwo::
 	setvar VAR_0x8004, SPECIES_MEWTWO
 	goto EventScript_MonFlewAway
 	end
+
+@ Topaze postgame: RED, silent, final challenge
+CeruleanCave_B1F_EventScript_PostgameRed::
+	lock
+	faceplayer
+	msgbox CeruleanCave_B1F_Text_RedIntro
+	trainerbattle_no_intro TRAINER_PLAYER_RED, CeruleanCave_B1F_Text_RedDefeat
+	msgbox CeruleanCave_B1F_Text_RedAfter
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_CAVE_RED
+	setflag FLAG_HIDE_POSTGAME_RED
+	setflag FLAG_POSTGAME_DONE
+	msgbox CeruleanCave_B1F_Text_Epilogue
+	fadescreen FADE_FROM_BLACK
+	release
+	end

@@ -7251,8 +7251,70 @@ static const struct TrainerMonNoItemDefaultMoves sParty_HikerFranklin2[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_PkmnProfProfOak[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_PlayerBrendan[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_PlayerMay[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_PlayerRed[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_PlayerLeaf[] = {DUMMY_TRAINER_MON};
+static const struct TrainerMonNoItemDefaultMoves sParty_PlayerRed[] = {
+    {
+        .iv = 255,
+        .lvl = 78,
+        .species = SPECIES_PIKACHU,
+    },
+    {
+        .iv = 255,
+        .lvl = 76,
+        .species = SPECIES_LAPRAS,
+    },
+    {
+        .iv = 255,
+        .lvl = 76,
+        .species = SPECIES_SNORLAX,
+    },
+    {
+        .iv = 255,
+        .lvl = 80,
+        .species = SPECIES_VENUSAUR,
+    },
+    {
+        .iv = 255,
+        .lvl = 80,
+        .species = SPECIES_CHARIZARD,
+    },
+    {
+        .iv = 255,
+        .lvl = 82,
+        .species = SPECIES_BLASTOISE,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_PlayerLeaf[] = {
+    {
+        .iv = 255,
+        .lvl = 66,
+        .species = SPECIES_PERSIAN,
+    },
+    {
+        .iv = 255,
+        .lvl = 66,
+        .species = SPECIES_DUGTRIO,
+    },
+    {
+        .iv = 255,
+        .lvl = 68,
+        .species = SPECIES_NIDOKING,
+    },
+    {
+        .iv = 255,
+        .lvl = 68,
+        .species = SPECIES_NIDOQUEEN,
+    },
+    {
+        .iv = 255,
+        .lvl = 70,
+        .species = SPECIES_KANGASKHAN,
+    },
+    {
+        .iv = 255,
+        .lvl = 72,
+        .species = SPECIES_RHYDON,
+    },
+};
 
 static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt42[] = {
     {

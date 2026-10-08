@@ -40,6 +40,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
       "flag": "FLAG_HIDE_ROUTE_22_RIVAL"
+    },
+    {
+      "local_id": "LOCALID_ROUTE22_STRANGER",
+      "graphics_id": "OBJ_EVENT_GFX_GIOVANNI",
+      "x": 28,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route22_EventScript_PostgameStranger",
+      "flag": "FLAG_HIDE_POSTGAME_STRANGER"
     }
   ],
   "warp_events": [

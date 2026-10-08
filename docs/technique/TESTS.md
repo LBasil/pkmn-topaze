@@ -60,6 +60,8 @@
 
 - [x] **Trois fins** : choix de Jirachi dans la Salle d'Honneur (menu à 3 choix, `VAR_TOPAZE_ENDING`, `FLAG_TOPAZE_POSTGAME` pour la fin 1). Testé : fin 1 (menu, texte, enregistrement au Panthéon, sauvegarde). Fins 2 et 3 : même mécanisme, textes non vus en jeu ; la fin 2 ne retire pas encore réellement les Pokémon.
 
+- [x] **Postgame (après la fin 1)** : l'inconnu de la route 22 (Giovanni jamais nommé, `TRAINER_PLAYER_LEAF`, 6 Pokémon niv. 66-72), puis RED dans la grotte de Tourmalia (`TRAINER_PLAYER_RED`, niv. 76-82, texte muet), puis épilogue avec Silver. Testé : dialogues et début du combat contre l'inconnu. Non testé : RED et l'épilogue (même mécanisme).
+
 ## Limites connues
 - Sprites des champions = ceux des chefs d'arène d'origine.
 - Hepha utilise le slot de Giovanni (arène d’Opanihrum).
