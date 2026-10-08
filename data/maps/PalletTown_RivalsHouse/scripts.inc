@@ -2,9 +2,49 @@
 
 PalletTown_RivalsHouse_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_RivalsHouse_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, PalletTown_RivalsHouse_OnFrame
 	.byte 0
 
+PalletTown_RivalsHouse_OnFrame::
+	map_script_2 VAR_GRENALUX_OPENING, 1, PalletTown_RivalsHouse_EventScript_OpeningScene
+	.2byte 0
+
+@ Topaze: opening scene at the RANCH (father, OAK, rival), then everyone heads to the LAB
+PalletTown_RivalsHouse_EventScript_OpeningScene::
+	lockall
+	textcolor NPC_TEXT_COLOR_MALE
+	applymovement LOCALID_PLAYER, PalletTown_RivalsHouse_Movement_PlayerWalkIn
+	waitmovement 0
+	applymovement LOCALID_RANCH_RIVAL, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+	msgbox PalletTown_Text_RanchDadStolenTrackers
+	applymovement LOCALID_RANCH_OAK, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	msgbox PalletTown_Text_RanchOakGoToLab
+	closemessage
+	fadescreen FADE_TO_BLACK
+	setvar VAR_GRENALUX_OPENING, 2
+	setflag FLAG_HIDE_RANCH_SCENE
+	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1
+	clearflag FLAG_HIDE_OAK_IN_HIS_LAB
+	setvar VAR_MAP_SCENE_PALLET_TOWN_OAK, 1
+	setflag FLAG_HIDE_OAK_IN_PALLET_TOWN
+	setflag FLAG_DONT_TRANSITION_MUSIC
+	warp MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6, 12
+	waitstate
+	releaseall
+	end
+
+PalletTown_RivalsHouse_Movement_PlayerWalkIn::
+	walk_up
+	walk_up
+	walk_right
+	walk_in_place_faster_right
+	step_end
+
 PalletTown_RivalsHouse_OnTransition::
+	call_if_eq VAR_GRENALUX_OPENING, 1, PalletTown_RivalsHouse_EventScript_ShowOpeningNpcs
+	call_if_ne VAR_GRENALUX_OPENING, 1, PalletTown_RivalsHouse_EventScript_HideOpeningNpcs
 	call_if_lt VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 2, PalletTown_RivalsHouse_EventScript_MoveDaisyToTable
 	call_if_ge VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 2, PalletTown_RivalsHouse_EventScript_AlreadyReceivedTownMap
 	end
@@ -166,3 +206,11 @@ PalletTown_RivalsHouse_EventScript_Bookshelf::
 PalletTown_RivalsHouse_EventScript_Picture::
 	msgbox PalletTown_RivalsHouse_Text_LovelyAndSweetClefairy, MSGBOX_SIGN
 	end
+
+PalletTown_RivalsHouse_EventScript_ShowOpeningNpcs::
+	clearflag FLAG_HIDE_RANCH_SCENE
+	return
+
+PalletTown_RivalsHouse_EventScript_HideOpeningNpcs::
+	setflag FLAG_HIDE_RANCH_SCENE
+	return

@@ -41,7 +41,7 @@ Le dépôt est celui de pokefirered ; seuls les éléments modifiés pour Topaze
 ## Textes et narration
 | Élément | Fichier |
 |---|---|
-| Ouverture : Zéphyr arrête le joueur et le conduit au ranch | `PalletTown_EventScript_OakTrigger` (scripts.inc) réécrit ; objet `LOCALID_PALLET_RIVAL` (GFX Blue) caché par `FLAG_HIDE_PALLET_RIVAL` ; mouvements `walk_to_ranch` |
+| Ouverture : Zéphyr arrête le joueur et le conduit au ranch | `PalletTown_EventScript_OakTrigger` (scripts.inc) réécrit ; objet `LOCALID_PALLET_RIVAL` (GFX Blue) caché par `FLAG_HIDE_PALLET_RIVAL` ; mouvements `walk_to_ranch` ; scène intérieure : `PalletTown_RivalsHouse/scripts.inc` (`OpeningScene`, déclenchée par `VAR_GRENALUX_OPENING`=1) |
 | Première rencontre ONYBRIS (Grenalux) | Grunt `TRAINER_TEAM_ROCKET_GRUNT_22` (Rattata/Zubat niv. 4), objet `LOCALID_PALLET_ONYBRIS_GRUNT` dans `PalletTown/map.json`, caché par `FLAG_HIDE_GRENALUX_ONYBRIS_GRUNT` (levé après le combat du rival dans le labo, `PalletTown_ProfessorOaksLab`) ; scripts/textes dans `PalletTown/scripts.inc|text.inc` |
 | **Musée de Grenalux** (nouvelle carte) | `data/maps/PalletTown_Museum/` (intérieur = disposition du Musée d'Argenta, PNJ/textes propres), façade ajoutée dans `data/layouts/PalletTown/map.bin` à la place du jardin (copie des tuiles de la maison du joueur), warp 3 de `PalletTown/map.json` ; outils : `tools/topaze/maps/mapkit.py` |
 | Ville de départ Grenalux | `PalletTown` (`text.inc`), `region_map_entry_strings.h` |

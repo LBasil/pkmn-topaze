@@ -210,18 +210,9 @@ PalletTown_EventScript_OakTrigger::
 	closedoor 15, 7
 	waitdooranim
 	setflag FLAG_HIDE_PALLET_RIVAL
-	@ conversation inside the RANCH (black screen for now)
-	fadescreen FADE_TO_BLACK
-	delay 30
-	msgbox PalletTown_Text_RanchDadStolenTrackers
-	msgbox PalletTown_Text_RanchOakGoToLab
-	closemessage
-	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1
-	clearflag FLAG_HIDE_OAK_IN_HIS_LAB
-	setvar VAR_MAP_SCENE_PALLET_TOWN_OAK, 1
-	setflag FLAG_HIDE_OAK_IN_PALLET_TOWN
+	setvar VAR_GRENALUX_OPENING, 1
 	setflag FLAG_DONT_TRANSITION_MUSIC
-	warp MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6, 12
+	warp MAP_PALLET_TOWN_RIVALS_HOUSE, 4, 7
 	waitstate
 	releaseall
 	end

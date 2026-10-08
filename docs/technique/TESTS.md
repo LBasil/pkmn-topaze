@@ -54,7 +54,7 @@
 
 - [x] **Musée de Grenalux** : la porte de la façade mène à l'intérieur (carte neuve), le conservateur parle (GRENAT / aura), la sortie ramène devant la porte.
 
-- [x] **Ouverture selon le document de conception** : sans Pokémon, Zéphyr arrête le joueur à la sortie nord, l'emmène jusqu'au ranch (maison en haut à droite) ; scène en écran noir avec le père de Zéphyr et le Prof. Chêne (vol des Pokémon pisteurs par Onybris), puis arrivée au labo et choix du starter. (Scène du ranch encore en écran noir : l'intérieur sera mis en scène plus tard.)
+- [x] **Ouverture selon le document de conception** : sans Pokémon, Zéphyr arrête le joueur à la sortie nord, l'emmène jusqu'au ranch (maison en haut à droite) ; scène **dans l'intérieur du ranch** (père de Zéphyr, Prof. Chêne et Zéphyr présents ; vol des Pokémon pisteurs par Onybris), puis arrivée au labo et choix du starter. Variable `VAR_GRENALUX_OPENING` (1 = scène à jouer, 2 = faite), drapeau `FLAG_HIDE_RANCH_SCENE`.
 
 - [x] **Trois frappes d'Onybris (version « après coup »)** : ranch (raconté par le père de Zéphyr), musée (vitrine vide, conservateur et vieil homme changent de dialogue) et labo (assistants et ordinateur : fichiers sur les gemmes copiés), tous déclenchés par `FLAG_GRENALUX_ONYBRIS_STRIKE` posé quand le grunt de la route est battu. Testé : dialogues du musée. Reste à tester en jeu : dialogues du labo (même mécanisme).
 

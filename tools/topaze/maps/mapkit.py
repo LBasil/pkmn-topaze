@@ -9,7 +9,8 @@ def ts_dir(name):
     if name in TS: return os.path.join(ROOT, TS[name])
     # gTileset_PalletTown -> secondary/pallet_town
     import re
-    snake = re.sub(r'(?<!^)(?=[A-Z])', '_', name.replace('gTileset_', '')).lower()
+    snake = re.sub(r'(?<!^)(?=[A-Z0-9])', '_', name.replace('gTileset_', '')).lower()
+    snake = re.sub(r'_(\d)_(\d)', r'_\1\2', snake)
     for base in ('data/tilesets/secondary', 'data/tilesets/primary'):
         p = os.path.join(ROOT, base, snake)
         if os.path.isdir(p): return p
