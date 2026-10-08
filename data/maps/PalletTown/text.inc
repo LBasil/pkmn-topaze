@@ -70,18 +70,19 @@ PalletTown_Text_OakYouEnjoyingTraveling::
 
 PalletTown_Text_OnybrisGruntIntro::
     .string "Hold it, kid!\n"
-    .string "TEAM ONYBRIS watches this road now.\p"
-    .string "Ever since the AURA warped every\n"
-    .string "POKéMON's type, the boss has been\l"
-    .string "hunting for JIRACHI.\p"
-    .string "A new TRAINER with a fresh POKéMON?\n"
-    .string "You'll make a fine warm-up!$"
+    .string "TEAM ONYBRIS has business here.\p"
+    .string "POKé BALLS are chains.\n"
+    .string "We set POKéMON free, as equals!\p"
+    .string "That starter of yours is a prisoner\n"
+    .string "who doesn't know it yet.\p"
+    .string "Let's see how it feels about that!$"
 
 PalletTown_Text_OnybrisGruntDefeat::
-    .string "Tch... the AURA favors the strong,\n"
-    .string "and today that wasn't me.$"
+    .string "Tch... it fights for you by\n"
+    .string "choice? That's... not what the\l"
+    .string "boss told us.$"
 
 PalletTown_Text_OnybrisGruntPostBattle::
-    .string "Don't think this is over.\n"
-    .string "GRENALUX isn't safe anymore.\p"
-    .string "Watch your back, kid...$"
+    .string "Forget it. There are others who\n"
+    .string "won't ask nicely.\p"
+    .string "GRENALUX will see us again...$"
