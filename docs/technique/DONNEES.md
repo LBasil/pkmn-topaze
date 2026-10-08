@@ -6,10 +6,10 @@
 
 ## Attaques
 - **Coupe** : Plante, 60. **Force** : Roche. **Éclate-Roc** : puissance 60. **Flash** : `EFFECT_HIT`, 30, 100 %, Électrique. Les effets hors combat (couper un arbre, déplacer un rocher…) sont inchangés.
-- **Équilibrage (jalon 4)**, script `docs/topaze/balance_moves.py` (25 attaques) :
-  - Précision relevée sur les grosses attaques instables : Hydrocanon 80→85, Blizzard 70→80, Fatal-Foudre 70→80, Lance-Flammes… Déflagration 85→90, Plaquage-like Écrasement 75→85, Mégacoup 75→80, Coup-Croix 80→85, Poing Karaté… Poing Dynamik 50→60, Bombe Œuf 75→80, Sacrifice 80→85 ; piégeages (Danse-Flamme/Tourniquet/Tomberoche/Claquoir) 70-75→85.
-  - Attaques trop faibles : Fouet Lianes 35→45 (PP 10→25), Purédpois 20→30 (préc. 70→80), Léchouille 20→30, Coud'Boue 20→35 (PP 10→15), Larcin 40→60, Implore 40→60, Sabotage 20→50.
-  - **Cohérence des CS** : Coupe 60→65 (préc. 95→100), Vol 70→90 (attaque en 2 tours), Flash 30→40, Plongée 60→80 ; Surf 95, Force 80, Cascade 80 inchangées. Hiérarchie : Coupe < Éclate-Roc < Force = Cascade < Vol < Surf.
+- **Équilibrage (jalon 4)**, script `docs/topaze/balance_moves.py` (25 attaques ; noms anglais comme en jeu) :
+  - Précision relevée sur les grosses attaques instables : Hydro Pump 80→85, Blizzard 70→80, Thunder 70→80, Fire Blast 85→90, Slam 75→85, Mega Kick 75→80, Cross Chop 80→85, Dynamic Punch 50→60, Egg Bomb 75→80, Submission 80→85 ; attaques de piégeage Fire Spin, Whirlpool, Sand Tomb 70→85 et Clamp 75→85 (puissance 35→40).
+  - Attaques trop faibles : Vine Whip 35→45 (PP 10→25), Smog 20→30 (préc. 70→80), Lick 20→30, Mud-Slap 20→35 (PP 10→15), Thief 40→60, Covet 40→60, Knock Off 20→50.
+  - **Cohérence des CS** : Cut 60→65 (préc. 95→100), Fly 70→90 (attaque en 2 tours), Flash 30→40, Dive 60→80 ; Surf 95, Strength 80, Waterfall 80 inchangées. Hiérarchie : Cut < Rock Smash < Strength = Waterfall < Fly < Surf.
 - Apprentissage : **~130 attaques STAB** ajoutées par `docs/topaze/learnsets_stab.py`, par palier d'évolution (niv. 13/31, 20/38, 28/44 selon le stade). Limite : 20 entrées par apprentissage (le script la respecte). Format normalisé `LEVEL_UP_MOVE(1, …)`.
 
 ## Dresseurs
