@@ -2,6 +2,8 @@ EventScript_CutTree::
 	goto_if_questlog EventScript_ReleaseEnd
 	lockall
 	goto_if_unset FLAG_BADGE02_GET, EventScript_CantCutTree
+	checkitem ITEM_HM01
+	goto_if_eq VAR_RESULT, FALSE, EventScript_CantCutTree @ Topaze: il faut avoir la CS dans le sac
 	setvar VAR_RESULT, 0 @ Topaze: pas besoin de connaître la CS (Pokémon de tête)
 	setfieldeffectargument 0, VAR_RESULT
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
@@ -59,6 +61,8 @@ EventScript_RockSmash::
 	goto_if_questlog EventScript_ReleaseEnd
 	lockall
 	goto_if_unset FLAG_BADGE06_GET, EventScript_CantSmashRock
+	checkitem ITEM_HM06
+	goto_if_eq VAR_RESULT, FALSE, EventScript_CantSmashRock @ Topaze: il faut avoir la CS dans le sac
 	setvar VAR_RESULT, 0 @ Topaze: pas besoin de connaître la CS (Pokémon de tête)
 	setfieldeffectargument 0, VAR_RESULT
 	bufferpartymonnick STR_VAR_1, VAR_RESULT
@@ -118,6 +122,8 @@ EventScript_StrengthBoulder::
 	goto_if_questlog EventScript_ReleaseEnd
 	lockall
 	goto_if_unset FLAG_BADGE04_GET, EventScript_CantMoveBoulder
+	checkitem ITEM_HM04
+	goto_if_eq VAR_RESULT, FALSE, EventScript_CantMoveBoulder @ Topaze: il faut avoir la CS dans le sac
 	goto_if_set FLAG_SYS_USE_STRENGTH, EventScript_AlreadyUsedStrength
 	setvar VAR_RESULT, 0 @ Topaze: pas besoin de connaître la CS (Pokémon de tête)
 	setfieldeffectargument 0, VAR_RESULT

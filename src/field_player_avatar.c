@@ -1,4 +1,6 @@
 #include "global.h"
+#include "item.h"
+#include "constants/items.h"
 #include "gflib.h"
 #include "bike.h"
 #include "event_data.h"
@@ -1183,8 +1185,8 @@ u8 GetPlayerAvatarGenderByGraphicsId(u8 gfxId)
 
 bool8 PartyHasMonWithSurf(void)
 {
-    // Topaze: Surf n'a plus besoin d'être appris, seule l'insigne compte
-    if (!TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
+    // Topaze: Surf n'a plus besoin d'être appris : il faut la CS3 dans le sac (et l'insigne, vérifié ailleurs)
+    if (!TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && CheckBagHasItem(ITEM_HM03, 1))
         return TRUE;
     return FALSE;
 }

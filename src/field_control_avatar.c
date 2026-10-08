@@ -1,4 +1,6 @@
 #include "global.h"
+#include "item.h"
+#include "constants/items.h"
 #include "gflib.h"
 #include "bike.h"
 #include "coord_event_weather.h"
@@ -607,7 +609,7 @@ static const u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metati
 
     if (MetatileBehavior_IsWaterfall(metatileBehavior) == TRUE)
     {
-        if (FlagGet(FLAG_BADGE07_GET) == TRUE && IsPlayerSurfingNorth() == TRUE)
+        if (FlagGet(FLAG_BADGE07_GET) == TRUE && CheckBagHasItem(ITEM_HM07, 1) && IsPlayerSurfingNorth() == TRUE)
             return EventScript_Waterfall;
         else
             return EventScript_CantUseWaterfall;

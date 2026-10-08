@@ -48,6 +48,8 @@
 - [x] Split par attaque mesuré : avec Attaque 300 / Atq. Spé. 5, **Coup-Glace** (Glace, forcée physique) met le Goupix KO d'un coup, alors que **Lance-Flammes** (spéciale) ne lui retire rien.
 - [ ] Seul reste non mesuré : la vitesse paralysée (changement d'une ligne, relu dans le code).
 
+- [x] **CS dans le sac obligatoire** : sans CS01, l'arbre affiche seulement « This tree looks like it can be CUT down! » ; avec CS01 + badge, « CHARMANDER used CUT! ». Même contrôle pour Surf (CS03), Force (CS04), Éclate-Roc (CS06), Cascade (CS07).
+
 ## Limites connues
 - Sprites des champions = ceux des chefs d'arène d'origine.
 - Hepha utilise le slot de Giovanni (arène de Jadielle).
