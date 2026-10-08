@@ -1223,7 +1223,7 @@
 
 // Unused hidden item flags
 #define FLAG_HIDE_GRENALUX_ONYBRIS_GRUNT                           0x4A7 // Topaze: ONYBRIS grunt on the road out of GRENALUX
-#define FLAG_UNUSED_0x4A8               0x4A8 // Unused Flag
+#define FLAG_HIDE_PALLET_RIVAL                                     0x4A8 // Topaze: rival who stops the player at the town exit
 #define FLAG_UNUSED_0x4A9               0x4A9 // Unused Flag
 #define FLAG_UNUSED_0x4AA               0x4AA // Unused Flag
 #define FLAG_UNUSED_0x4AB               0x4AB // Unused Flag

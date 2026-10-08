@@ -179,11 +179,11 @@ PalletTown_EventScript_OakTriggerRight::
 	end
 
 PalletTown_EventScript_OakTrigger::
-	famechecker FAMECHECKER_OAK, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
+	@ Topaze: the rival stops the player and takes them to his family's RANCH, where OAK waits
 	textcolor NPC_TEXT_COLOR_MALE
 	delay 30
-	playbgm MUS_OAK, 0
-	message PalletTown_Text_OakDontGoOut
+	playbgm MUS_RIVAL_EXIT, 0
+	message PalletTown_Text_RivalDontGoOut
 	waitmessage
 	delay 85
 	closemessage
@@ -193,22 +193,29 @@ PalletTown_EventScript_OakTrigger::
 	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
 	waitmovement 0
 	delay 30
-	addobject LOCALID_PALLET_PROF_OAK
-	call_if_eq VAR_TEMP_1, 0, PalletTown_EventScript_OakEnterLeft
-	call_if_eq VAR_TEMP_1, 1, PalletTown_EventScript_OakEnterRight
+	addobject LOCALID_PALLET_RIVAL
+	call_if_eq VAR_TEMP_1, 0, PalletTown_EventScript_RivalEnterLeft
+	call_if_eq VAR_TEMP_1, 1, PalletTown_EventScript_RivalEnterRight
 	delay 30
-	msgbox PalletTown_Text_OakGrassUnsafeNeedMon
+	msgbox PalletTown_Text_RivalGrassUnsafeNeedMon
 	closemessage
 	delay 30
-	call_if_eq VAR_TEMP_1, 0, PalletTown_EventScript_OakLeadPlayerToLabLeft
-	call_if_eq VAR_TEMP_1, 1, PalletTown_EventScript_OakLeadPlayerToLabRight
-	opendoor 16, 13
+	call_if_eq VAR_TEMP_1, 0, PalletTown_EventScript_RivalLeadPlayerToRanchLeft
+	call_if_eq VAR_TEMP_1, 1, PalletTown_EventScript_RivalLeadPlayerToRanchRight
+	opendoor 15, 7
 	waitdooranim
-	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakEnterLab
-	applymovement LOCALID_PLAYER, PalletTown_Movement_PlayerEnterLab
+	applymovement LOCALID_PALLET_RIVAL, PalletTown_Movement_RivalEnterRanch
+	applymovement LOCALID_PLAYER, PalletTown_Movement_PlayerEnterRanch
 	waitmovement 0
-	closedoor 16, 13
+	closedoor 15, 7
 	waitdooranim
+	setflag FLAG_HIDE_PALLET_RIVAL
+	@ conversation inside the RANCH (black screen for now)
+	fadescreen FADE_TO_BLACK
+	delay 30
+	msgbox PalletTown_Text_RanchDadStolenTrackers
+	msgbox PalletTown_Text_RanchOakGoToLab
+	closemessage
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1
 	clearflag FLAG_HIDE_OAK_IN_HIS_LAB
 	setvar VAR_MAP_SCENE_PALLET_TOWN_OAK, 1
@@ -218,6 +225,75 @@ PalletTown_EventScript_OakTrigger::
 	waitstate
 	releaseall
 	end
+
+PalletTown_EventScript_RivalEnterLeft::
+	applymovement LOCALID_PALLET_RIVAL, PalletTown_Movement_OakEnterLeft
+	waitmovement 0
+	return
+
+PalletTown_EventScript_RivalEnterRight::
+	applymovement LOCALID_PALLET_RIVAL, PalletTown_Movement_OakEnterRight
+	waitmovement 0
+	return
+
+PalletTown_EventScript_RivalLeadPlayerToRanchLeft::
+	applymovement LOCALID_PALLET_RIVAL, PalletTown_Movement_RivalWalkToRanchLeft
+	applymovement LOCALID_PLAYER, PalletTown_Movement_PlayerWalkToRanchLeft
+	waitmovement 0
+	return
+
+PalletTown_EventScript_RivalLeadPlayerToRanchRight::
+	applymovement LOCALID_PALLET_RIVAL, PalletTown_Movement_RivalWalkToRanchRight
+	applymovement LOCALID_PLAYER, PalletTown_Movement_PlayerWalkToRanchRight
+	waitmovement 0
+	return
+
+	.macro walk_to_ranch
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	.endm
+
+PalletTown_Movement_RivalWalkToRanchLeft::
+	walk_down
+	walk_to_ranch
+	step_end
+
+PalletTown_Movement_RivalWalkToRanchRight::
+	walk_down
+	walk_left
+	walk_to_ranch
+	step_end
+
+PalletTown_Movement_PlayerWalkToRanchLeft::
+	walk_down
+	walk_down
+	walk_to_ranch
+	step_end
+
+PalletTown_Movement_PlayerWalkToRanchRight::
+	walk_down
+	walk_down
+	walk_left
+	walk_to_ranch
+	step_end
+
+PalletTown_Movement_RivalEnterRanch::
+	walk_up
+	set_invisible
+	step_end
+
+PalletTown_Movement_PlayerEnterRanch::
+	walk_up
+	set_invisible
+	step_end
 
 PalletTown_EventScript_OakEnterLeft::
 	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakEnterLeft

@@ -90,3 +90,36 @@ PalletTown_Text_OnybrisGruntPostBattle::
 PalletTown_Text_MuseumSign::
     .string "GRENALUX MUSEUM\n"
     .string "Home of the GRENAT gem.$"
+
+PalletTown_Text_RivalDontGoOut::
+    .string "{RIVAL}: Hey, {PLAYER}! Wait!\n"
+    .string "Don't go out there!$"
+
+PalletTown_Text_RivalGrassUnsafeNeedMon::
+    .string "{RIVAL}: The tall grass is full of\n"
+    .string "wild POKéMON, and you've got\l"
+    .string "nothing to fight with!\p"
+    .string "{PLAYER}: But I've waited all my life\n"
+    .string "to start my journey!\p"
+    .string "{RIVAL}: Then come to our RANCH.\n"
+    .string "My dad and PROF. OAK are there.\p"
+    .string "They'll know what to do.\n"
+    .string "Follow me!$"
+
+PalletTown_Text_RanchDadStolenTrackers::
+    .string "{RIVAL}'s DAD: So you're {PLAYER}.\n"
+    .string "{RIVAL} never stops talking about you.\p"
+    .string "Bad timing, I'm afraid. At dawn,\n"
+    .string "people in black took our tracker\l"
+    .string "POKéMON right out of the pens.\p"
+    .string "They called themselves TEAM ONYBRIS.$"
+
+PalletTown_Text_RanchOakGoToLab::
+    .string "OAK: Trackers were the best at\n"
+    .string "sensing the AURA. Someone is\l"
+    .string "searching for something.\p"
+    .string "Ten years ago the AURA changed every\n"
+    .string "POKéMON. I never thought the trouble\l"
+    .string "would reach our doorstep.\p"
+    .string "{PLAYER}, {RIVAL}, come to my LAB.\n"
+    .string "You're each getting a partner.$"

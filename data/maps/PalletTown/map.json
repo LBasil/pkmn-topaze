@@ -85,6 +85,21 @@
       "trainer_sight_or_berry_tree_id": "4",
       "script": "PalletTown_EventScript_OnybrisGrunt",
       "flag": "FLAG_HIDE_GRENALUX_ONYBRIS_GRUNT"
+    },
+    {
+      "local_id": "LOCALID_PALLET_RIVAL",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BLUE",
+      "x": 10,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "0x0",
+      "flag": "FLAG_HIDE_PALLET_RIVAL"
     }
   ],
   "warp_events": [

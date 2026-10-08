@@ -54,6 +54,8 @@
 
 - [x] **Musée de Grenalux** : la porte de la façade mène à l'intérieur (carte neuve), le conservateur parle (GRENAT / aura), la sortie ramène devant la porte.
 
+- [x] **Ouverture selon le document de conception** : sans Pokémon, Zéphyr arrête le joueur à la sortie nord, l'emmène jusqu'au ranch (maison en haut à droite) ; scène en écran noir avec le père de Zéphyr et le Prof. Chêne (vol des Pokémon pisteurs par Onybris), puis arrivée au labo et choix du starter. (Scène du ranch encore en écran noir : l'intérieur sera mis en scène plus tard.)
+
 ## Limites connues
 - Sprites des champions = ceux des chefs d'arène d'origine.
 - Hepha utilise le slot de Giovanni (arène de Jadielle).
