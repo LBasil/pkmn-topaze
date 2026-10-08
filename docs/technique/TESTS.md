@@ -64,6 +64,10 @@
 
 - [x] **Tournoi de la Ligue** (première salle = arène) : 3 matchs de poule (JASPER, CORALIE, BORIS), quart (ALMA), demi en **combat double** (RUBEN), finale (LORELEI), puis Conseil (Bruno, Agatha, Lance, Champion). `VAR_TOURNAMENT_ROUND`, sprite de l'adversaire variable, rechargement de la salle entre les manches. Testé : manche 1 (combat), manche 4 (double, intro, sprite). Non testé en jeu : enchaînement complet des 6 manches et la finale.
 
+## À REPRENDRE : noms et équipes (placeholders)
+Tout ce qui a été inventé par Claude est **provisoire** et sera repassé avec Basil : noms, équipes, niveaux, dialogues et sprites des personnages du tournoi de la Ligue (Jasper, Coralie, Boris, Alma, Ruben), de l'inconnu de la route 22 et de Red (équipe/niveaux), des dresseurs de la Ligue, des textes d'arène et des lignes de PNJ réécrites, des CT données par les champions, des noms de badges et des trois textes de fin.
+**Ne sont pas des placeholders** (viennent des notes de Basil) : les 12 villes, les 8 champions (Kay, Sylvestre, Hera, Grim, Achlys, Nox, Eddie, Hepha) et leurs types, l'intrigue Onybris/Jirachi, les trois fins (principe), le postgame Giovanni puis Red avec cinématique Silver, le format de la Ligue.
+
 ## Limites connues
 - Sprites des champions = ceux des chefs d'arène d'origine.
 - Hepha utilise le slot de Giovanni (arène d’Opanihrum).
