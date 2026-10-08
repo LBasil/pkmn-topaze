@@ -8,3 +8,5 @@ Prochain jalon : Jalon 1 — nouveaux types des 151 Pokémon (src/data/pokemon/b
 
 ## Équilibrage des stats (jalon 3)
 Retouches légères, à valider en jeu : Blastoise DEF 100→95 ; Machamp DEF 80→75 (Acier) ; Gyarados ATK 125→120, PV 95→90 (Eau/Dragon, peu de faiblesses) ; Dracaufeu DEF 78→83, DEF SPE 85→90 (Feu/Glace, très fragile).
+
+- `volcanic_pyropia.py` : ambiance volcanique de Pyropia (tuiles basalte/lave/roche/geyser ajoutées au tileset PewterCity, carte repeinte). Partagé avec la Route 3 (mêmes tuiles mais nouvelles tuiles non utilisées là-bas). À lancer une seule fois depuis un dépôt propre.

@@ -20,3 +20,5 @@ Commandes ajoutées : `keys B+DOWN N` (touches combinées), `writepb PTRADDR OFF
 
 ## ROM de debug
 Pour tester un endroit lointain : modifier temporairement `WarpToPlayersRoom()` (destination) et ajouter un `CreateMon` dans `NewGameInitData()` (`src/new_game.c`), compiler, copier la ROM sous un autre nom, **annuler la modification** et recompiler. Lancer ensuite avec `TOPAZE_ROM=chemin/debug.gba`. (Écrire la position dans la sauvegarde ne marche pas : la disposition de carte reste celle de l'ancienne carte.)
+
+**Piège de build** : `make` ne détecte pas toujours les changements de `data/layouts/*/map.bin` (objet `build/firered/data/maps.o` non reconstruit). Après avoir modifié une carte, supprimer `build/firered/data/maps.o` (et `build/firered/src/graphics.o` pour un tileset) avant de compiler, sinon les tests montrent l'ancienne carte.
