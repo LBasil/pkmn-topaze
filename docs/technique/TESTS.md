@@ -41,7 +41,7 @@
 - [x] Type Fée : Clefairy (FEE/SPECTRE) s'affiche avec la pastille rose « FAIRY » dans le résumé ; carte « Met in GRENALUX » correcte.
 - [x] Textes ONYBRIS : aucune ligne ne dépasse 36 caractères (max des textes d'origine : 40), pas de débordement attendu.
 - [x] Split physique/spécial : `MOVE_IS_PHYSICAL` est utilisé partout (dégâts, Hustle, suivi des dégâts) ; pas de test chiffré en jeu.
-- [ ] (reste) objets tenus des champions en combat réel, Coupe/Roche en jeu vitesse de texte, split physique/spécial, objets des champions, débordements de texte ONYBRIS, type Fée.
+- [ ] Restent : objets tenus des champions en combat réel, Coupe/Roche rejoués en jeu.
 
 ## Limites connues
 - Sprites des champions = ceux des chefs d'arène d'origine.
