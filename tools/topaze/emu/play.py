@@ -1,6 +1,6 @@
 import subprocess,sys,os
 from PIL import Image
-ROM='/home/claude/pkmn-topaze/pokefirered.gba'
+ROM=os.environ.get('TOPAZE_ROM','/home/claude/pkmn-topaze/pokefirered.gba')
 def run(lines,show=True):
     open('s.txt','w').write('\n'.join(lines)+'\n')
     r=subprocess.run(['./h',ROM,'s.txt'],capture_output=True,text=True)

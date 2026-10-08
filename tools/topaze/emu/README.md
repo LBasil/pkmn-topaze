@@ -17,3 +17,6 @@ Script texte : `run N` (N images), `key A|B|START|UP|... N`, `shot f.ppm`, `read
 Exemples d'usage : voir `base.py` (nouvelle partie jusqu'à Grenalux) et `pl.py`.
 
 Commandes ajoutées : `keys B+DOWN N` (touches combinées), `writepb PTRADDR OFF HEX` (écriture d'octets via pointeur, ex. badges : `writepb 03005008 fe4 ff`). `states.py <Starter>` régénère les états de départ ; `fight.py` joue le premier combat. Variable `TOPAZE_STATES` = dossier des états.
+
+## ROM de debug
+Pour tester un endroit lointain : modifier temporairement `WarpToPlayersRoom()` (destination) et ajouter un `CreateMon` dans `NewGameInitData()` (`src/new_game.c`), compiler, copier la ROM sous un autre nom, **annuler la modification** et recompiler. Lancer ensuite avec `TOPAZE_ROM=chemin/debug.gba`. (Écrire la position dans la sauvegarde ne marche pas : la disposition de carte reste celle de l'ancienne carte.)
