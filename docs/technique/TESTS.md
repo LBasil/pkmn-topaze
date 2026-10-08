@@ -35,7 +35,9 @@
 - [x] Intro, noms, dialogues Maman/Chen, choix du starter (Salamèche Feu/Glace), premier combat rival gagnable, efficacité des types (Mud-Slap super efficace).
 - [x] **CS sans les apprendre** : avec les badges, le prompt « Would you like to SURF? » apparaît sans Surf dans l'équipe, et le joueur navigue (Route 21 atteinte).
 - [x] Course (B) disponible dès le début et en intérieur (bug trouvé : les chaussures n'étaient données qu'à Argenta, corrigé dans `new_game.c`).
-- [ ] Coupe/Force/Flash sans les apprendre, Multi Exp global, vitesse de texte, split physique/spécial, objets des champions, débordements de texte ONYBRIS, type Fée.
+- [x] Combat sauvage (Roucool niv. 5, Griffe, gain d'EXP, montée de niveau), vitesse de texte par défaut = FAST, style de combat SHIFT, sauvegarde en jeu.
+- [x] Coupe/Roche/Force/Flash : même mécanisme que Surf (script `setvar VAR_RESULT, 0`), vérifié par lecture, non rejoué en jeu.
+- [ ] Multi Exp global (nécessite 2 Pokémon), vitesse de texte, split physique/spécial, objets des champions, débordements de texte ONYBRIS, type Fée.
 
 ## Limites connues
 - Sprites des champions = ceux des chefs d'arène d'origine.
