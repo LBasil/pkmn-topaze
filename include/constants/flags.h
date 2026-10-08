@@ -1226,7 +1226,7 @@
 #define FLAG_HIDE_PALLET_RIVAL                                     0x4A8 // Topaze: rival who stops the player at the town exit
 #define FLAG_GRENALUX_ONYBRIS_STRIKE                               0x4A9 // Topaze: set after the road grunt is beaten; museum & lab have been hit
 #define FLAG_HIDE_RANCH_SCENE                                      0x4AA // Topaze: father/OAK/rival inside the ranch during the opening
-#define FLAG_UNUSED_0x4AB               0x4AB // Unused Flag
+#define FLAG_TOPAZE_POSTGAME            0x4AB // Topaze: set after ending 1 (postgame unlocked)
 #define FLAG_UNUSED_0x4AC               0x4AC // Unused Flag
 #define FLAG_UNUSED_0x4AD               0x4AD // Unused Flag
 #define FLAG_UNUSED_0x4AE               0x4AE // Unused Flag

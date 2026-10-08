@@ -490,6 +490,16 @@ static const struct MenuAction sMultichoiceList_JoinOrLead[] = {
     { gOtherText_Exit }
 };
 
+// Topaze: choix final (voeu de Jirachi)
+static const u8 sText_WishLetGo[] = _("Let it go");
+static const u8 sText_WishNoBalls[] = _("No more BALLS");
+static const u8 sText_WishRuleAll[] = _("Rule them all");
+static const struct MenuAction sMultichoiceList_TopazeWish[] = {
+    { sText_WishLetGo },
+    { sText_WishNoBalls },
+    { sText_WishRuleAll }
+};
+
 static const struct MenuAction sMultichoiceList_TrainerTowerMode[] = {
     { gOtherText_Single },
     { gOtherText_Double },
@@ -568,6 +578,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
     [MULTICHOICE_62]                                         = MULTICHOICE(sMultichoiceList_62),
     [MULTICHOICE_JOIN_OR_LEAD]                               = MULTICHOICE(sMultichoiceList_JoinOrLead),
     [MULTICHOICE_TRAINER_TOWER_MODE]                         = MULTICHOICE(sMultichoiceList_TrainerTowerMode),
+    [MULTICHOICE_TOPAZE_WISH]                                = MULTICHOICE(sMultichoiceList_TopazeWish),
 };
 
 // From Cool to Berries goes unused

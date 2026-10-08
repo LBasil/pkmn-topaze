@@ -344,4 +344,6 @@
 #define NPC_TEXT_COLOR_NEUTRAL   3 // Black, for inanimate objects and messages from the game
 #define NPC_TEXT_COLOR_DEFAULT 255 // If an NPC is selected, use the color specified by GetColorFromTextColorTable, otherwise use Neutral.
 
+#define VAR_TOPAZE_ENDING VAR_0x402A // 0 = none, 1 = let Jirachi go, 2 = Onybris dream, 3 = opportunist dream
+
 #endif // GUARD_CONSTANTS_VARS_H

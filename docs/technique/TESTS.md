@@ -58,6 +58,8 @@
 
 - [x] **Trois frappes d'Onybris (version « après coup »)** : ranch (raconté par le père de Zéphyr), musée (vitrine vide, conservateur et vieil homme changent de dialogue) et labo (assistants et ordinateur : fichiers sur les gemmes copiés), tous déclenchés par `FLAG_GRENALUX_ONYBRIS_STRIKE` posé quand le grunt de la route est battu. Testé : dialogues du musée. Reste à tester en jeu : dialogues du labo (même mécanisme).
 
+- [x] **Trois fins** : choix de Jirachi dans la Salle d'Honneur (menu à 3 choix, `VAR_TOPAZE_ENDING`, `FLAG_TOPAZE_POSTGAME` pour la fin 1). Testé : fin 1 (menu, texte, enregistrement au Panthéon, sauvegarde). Fins 2 et 3 : même mécanisme, textes non vus en jeu ; la fin 2 ne retire pas encore réellement les Pokémon.
+
 ## Limites connues
 - Sprites des champions = ceux des chefs d'arène d'origine.
 - Hepha utilise le slot de Giovanni (arène d’Opanihrum).
