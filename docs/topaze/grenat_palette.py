@@ -14,7 +14,7 @@ def tint(r, g, b):
     elif 25 <= h < 60:                                # sable / paille -> terre rose cuivree
         h = 14 + (h - 40) * 0.2; s *= 0.75
     elif 180 < h <= 260:                              # eau -> violet nuit
-        h = 262 + (h - 215) * 0.2; s *= 0.55; l = l * 0.62
+        h = 262 + (h - 215) * 0.2; s *= 0.4; l = l * 0.5
     else:                                             # rouges / oranges (toits) -> grenat profond
         h = 350; s = min(1, s * 1.05); l = l * 0.78
     r, g, b = colorsys.hls_to_rgb(h / 360, max(0, min(1, l)), max(0, min(1, s)))

@@ -83,21 +83,22 @@ for i, t in enumerate(tiles):
     n = NT + i; ti = Image.new('P', (8, 8)); ti.putdata(list(t)); out.paste(ti, ((n % 16) * 8, (n // 16) * 8))
 out.save(D + 'tiles.png')
 open(D + 'palettes/07.pal', 'w').write('JASC-PAL\r\n0100\r\n16\r\n' + ''.join('%d %d %d\r\n' % c for c in PAL))
-# ---- carte
-W = lay.w
-g = list(lay.g)
-GR = 0x3000 | 1
-def setc(x, y, v): g[y * W + x] = v
-def clear(x, y, w, h):
-    for j in range(h):
-        for i in range(w): setc(x + i, y + j, GR)
-def place(sm, x, y, bw, bh):
-    for (i, j), m in sm.items(): setc(x + i, y + j, 0x400 | m)
-clear(9, 3, 2, 4); clear(14, 4, 2, 2); clear(9, 12, 2, 2); clear(10, 14, 2, 2)           # ancien arbres remplaces
-place(BIG, 9, 3, 3, 3)
-place(BIG, 9, 11, 3, 3)
-place(MID, 14, 4, 2, 2)
-for (x, y, v) in ((3, 9, 0), (11, 9, 1), (20, 8, 0), (15, 16, 1), (8, 16, 0), (4, 12, 1)):
-    if g[y * W + x] & 0xff == 0 or True: setc(x, y, 0x400 | SM[v])
-open('data/layouts/PalletTown/map.bin', 'wb').write(struct.pack('<%dH' % len(g), *g))
-print('tuiles', len(tiles), 'metatuiles', len(mt) // 16 - NMT)
+if __name__ == '__main__':
+    # ---- carte
+    W = lay.w
+    g = list(lay.g)
+    GR = 0x3000 | 1
+    def setc(x, y, v): g[y * W + x] = v
+    def clear(x, y, w, h):
+        for j in range(h):
+            for i in range(w): setc(x + i, y + j, GR)
+    def place(sm, x, y, bw, bh):
+        for (i, j), m in sm.items(): setc(x + i, y + j, 0x400 | m)
+    clear(9, 3, 2, 4); clear(14, 4, 2, 2); clear(9, 12, 2, 2); clear(10, 14, 2, 2)           # ancien arbres remplaces
+    place(BIG, 9, 3, 3, 3)
+    place(BIG, 9, 11, 3, 3)
+    place(MID, 14, 4, 2, 2)
+    for (x, y, v) in ((3, 9, 0), (11, 9, 1), (20, 8, 0), (15, 16, 1), (8, 16, 0), (4, 12, 1)):
+        if g[y * W + x] & 0xff == 0 or True: setc(x, y, 0x400 | SM[v])
+    open('data/layouts/PalletTown/map.bin', 'wb').write(struct.pack('<%dH' % len(g), *g))
+    print('tuiles', len(tiles), 'metatuiles', len(mt) // 16 - NMT)

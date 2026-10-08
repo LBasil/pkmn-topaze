@@ -259,9 +259,13 @@ run 4
 run 300
 key DOWN 40
 run 120
-key RIGHT 110
+readp 03005008 0 6
+shot a0.ppm
+key DOWN 30
 run 4
-key UP 110
+key RIGHT 222
+run 4
+key UP 174
 run 4
 run 60
 shot s0.ppm
@@ -281,12 +285,6 @@ readp 03005008 0 6
 run 60
 shot s5.ppm
 readp 03005008 0 6
-run 60
-shot s6.ppm
-readp 03005008 0 6
-run 60
-shot s7.ppm
-readp 03005008 0 6
 key A 4
 run 90
 key A 4
@@ -315,6 +313,10 @@ key A 4
 run 90
 key A 4
 run 90
-run 200
+key A 4
+run 90
+key A 4
+run 90
+run 300
 shot end.ppm
 readp 03005008 0 6
