@@ -184,10 +184,10 @@ const struct SpeciesInfo gSpeciesInfo[] =
     {
         .baseHP = 78,
         .baseAttack = 84,
-        .baseDefense = 78,
+        .baseDefense = 83,
         .baseSpeed = 100,
         .baseSpAttack = 109,
-        .baseSpDefense = 85,
+        .baseSpDefense = 90,
         .types = {TYPE_FIRE, TYPE_ICE},
         .catchRate = 45,
         .expYield = 209,
@@ -271,7 +271,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     {
         .baseHP = 79,
         .baseAttack = 83,
-        .baseDefense = 100,
+        .baseDefense = 95,
         .baseSpeed = 78,
         .baseSpAttack = 85,
         .baseSpDefense = 105,
@@ -1982,7 +1982,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     {
         .baseHP = 90,
         .baseAttack = 130,
-        .baseDefense = 80,
+        .baseDefense = 75,
         .baseSpeed = 55,
         .baseSpAttack = 65,
         .baseSpDefense = 85,
@@ -3778,8 +3778,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
     },
     [SPECIES_GYARADOS] =
     {
-        .baseHP = 95,
-        .baseAttack = 125,
+        .baseHP = 90,
+        .baseAttack = 120,
         .baseDefense = 79,
         .baseSpeed = 81,
         .baseSpAttack = 60,
