@@ -26,7 +26,7 @@ SilphCo_8F_Text_ParkerPostBattle::
     .string "BUILDING's maze?$"
 
 SilphCo_8F_Text_Grunt2Intro::
-    .string "I am one of the four ROCKET\n"
+    .string "I am one of the four ONYBRIS\n"
     .string "BROTHERS!$"
 
 SilphCo_8F_Text_Grunt2Defeat::

@@ -4,11 +4,11 @@ SilphCo_2F_Text_ConnorIntro::
 
 SilphCo_2F_Text_ConnorDefeat::
     .string "How did you know\n"
-    .string "I was a ROCKET?$"
+    .string "I was a ONYBRIS?$"
 
 SilphCo_2F_Text_ConnorPostBattle::
     .string "I work for both SILPH and TEAM\n"
-    .string "ROCKET.$"
+    .string "ONYBRIS.$"
 
 SilphCo_2F_Text_JerryIntro::
     .string "It's off-limits here!\n"

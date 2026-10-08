@@ -1068,7 +1068,7 @@ gFameCheckerFlavorTextOriginLocation_MrFuji5::
 	.string "CINNABAR ISLAND$"
 
 gFameCheckerFlavorTextOriginLocation_Giovanni0::
-	.string "ROCKET HIDEOUT$"
+	.string "ONYBRIS HIDEOUT$"
 
 gFameCheckerFlavorTextOriginLocation_Giovanni1::
 	.string "SILPH CO.$"
@@ -1083,7 +1083,7 @@ gFameCheckerFlavorTextOriginLocation_Giovanni4::
 	.string "VIRIDIAN GYM$"
 
 gFameCheckerFlavorTextOriginLocation_Giovanni5::
-	.string "ROCKET WAREHOUSE$"
+	.string "ONYBRIS WAREHOUSE$"
 
 gFameCheckerFlavorTextOriginObjectName_ProfOak0::
 	.string "SIGN$"

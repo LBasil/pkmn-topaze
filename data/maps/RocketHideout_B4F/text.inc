@@ -30,7 +30,7 @@ RocketHideout_B4F_Text_Grunt2Defeat::
 
 RocketHideout_B4F_Text_Grunt2PostBattle::
     .string "Do you have something against TEAM\n"
-    .string "ROCKET?$"
+    .string "ONYBRIS?$"
 
 RocketHideout_B4F_Text_Grunt3Intro::
     .string "How can you not see the beauty of\n"

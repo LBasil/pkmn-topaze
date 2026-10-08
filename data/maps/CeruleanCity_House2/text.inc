@@ -1,5 +1,5 @@
 CeruleanCity_House2_Text_RocketsStoleTMForDig::
-    .string "Those miserable ROCKETS!\p"
+    .string "Those miserable ONYBRIS!\p"
     .string "Look what they've done to my\n"
     .string "house!\p"
     .string "They stole a TM for teaching\n"

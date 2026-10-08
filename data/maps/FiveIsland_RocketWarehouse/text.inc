@@ -73,7 +73,7 @@ FiveIsland_RocketWarehouse_Text_Admin2Intro::
     .string "That's quite enough of you \n"
     .string "playing the hero, kid.\p"
     .string "Spreading lies about how TEAM\n"
-    .string "ROCKET has disbanded…\p"
+    .string "ONYBRIS has disbanded…\p"
     .string "It's such an obvious attempt to\n"
     .string "cause confusion in our ranks.\p"
     .string "Fortunately, we're not so ignorant\n"

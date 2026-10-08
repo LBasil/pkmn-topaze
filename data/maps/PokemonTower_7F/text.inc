@@ -29,7 +29,7 @@ PokemonTower_7F_Text_Grunt3Intro::
     .string "You're not saving anyone, kid!$"
 
 PokemonTower_7F_Text_Grunt3Defeat::
-    .string "Don't fight us ROCKETS!$"
+    .string "Don't fight us ONYBRIS!$"
 
 PokemonTower_7F_Text_Grunt3PostBattle::
     .string "You're not getting away with this!$"

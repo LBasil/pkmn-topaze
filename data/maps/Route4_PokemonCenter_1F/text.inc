@@ -8,7 +8,7 @@ Route4_PokemonCenter_1F_Text_TeamRocketAttacksCerulean::
     .string "TEAM ONYBRIS attacks CERULEAN\n"
     .string "citizens…\p"
     .string "Not a day goes by without TEAM\n"
-    .string "ROCKET being in the news.$"
+    .string "ONYBRIS being in the news.$"
 
 Route4_PokemonCenter_1F_Text_LaddieBuyMagikarpForJust500::
     .string "MAN: Hello there, laddie!\n"

@@ -1,5 +1,5 @@
 SilphCo_7F_Text_HaveMonForSavingUs::
-    .string "Oh! Hi! You're not a ROCKET!\n"
+    .string "Oh! Hi! You're not a ONYBRIS!\n"
     .string "You came to save us?\l"
     .string "Why, thank you!\p"
     .string "I want you to have this POKéMON\n"
@@ -80,7 +80,7 @@ SilphCo_7F_Text_JoshuaPostBattle::
     .string "skilled TRAINER!$"
 
 SilphCo_7F_Text_Grunt1Intro::
-    .string "I am one of the four ROCKET\n"
+    .string "I am one of the four ONYBRIS\n"
     .string "BROTHERS!$"
 
 SilphCo_7F_Text_Grunt1Defeat::
@@ -117,7 +117,7 @@ SilphCo_7F_Text_RivalIntro::
 SilphCo_7F_Text_RivalDefeat::
     .string "Oh, man!\n"
     .string "So, you are ready for BOSS\l"
-    .string "ROCKET!$"
+    .string "ONYBRIS!$"
 
 SilphCo_7F_Text_RivalVictory::
     .string "{RIVAL}“おまえなあ‥\p"

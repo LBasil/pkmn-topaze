@@ -1,5 +1,5 @@
 SilphCo_6F_Text_RocketsTookOverBuilding::
-    .string "The ROCKETS came and took over\n"
+    .string "The ONYBRIS came and took over\n"
     .string "the building!$"
 
 SilphCo_6F_Text_BetterGetBackToWork::
@@ -38,7 +38,7 @@ SilphCo_6F_Text_ComeWorkForSilphWhenYoureOlder::
     .string "get older.$"
 
 SilphCo_6F_Text_Grunt1Intro::
-    .string "I am one of the four ROCKET\n"
+    .string "I am one of the four ONYBRIS\n"
     .string "BROTHERS!$"
 
 SilphCo_6F_Text_Grunt1Defeat::

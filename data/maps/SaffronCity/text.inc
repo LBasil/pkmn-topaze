@@ -36,7 +36,7 @@ SaffronCity_Text_SafeToGoOutAgain::
 
 SaffronCity_Text_PeopleComingBackToSaffron::
     .string "People fled from here in droves\n"
-    .string "when those ROCKETS came.\p"
+    .string "when those ONYBRIS came.\p"
     .string "They should be flocking back to\n"
     .string "SAFFRON now.$"
 
@@ -50,7 +50,7 @@ SaffronCity_Text_Pidgeot::
     .string "PIDGEOT: Bi bibii!$"
 
 SaffronCity_Text_SawRocketBossEscaping::
-    .string "I saw the ROCKET BOSS escaping\n"
+    .string "I saw the ONYBRIS BOSS escaping\n"
     .string "SILPH's building.$"
 
 SaffronCity_Text_ImASecurityGuard::

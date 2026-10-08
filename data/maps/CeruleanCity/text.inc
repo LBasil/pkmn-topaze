@@ -105,7 +105,7 @@ CeruleanCity_Text_PeopleHereWereRobbed::
     .string "It's obvious that TEAM ONYBRIS is\n"
     .string "behind this most heinous crime!\p"
     .string "Even our POLICE FORCE has\n"
-    .string "trouble with the ROCKETS!$"
+    .string "trouble with the ONYBRIS!$"
 
 CeruleanCity_Text_SlowbroUseSonicboom::
     .string "Okay! SLOWBRO!\n"
