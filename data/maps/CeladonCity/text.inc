@@ -32,7 +32,7 @@ CeladonCity_Text_GetLostOrIllPunchYou::
     .string "Get lost, or I'll punch you.$"
 
 CeladonCity_Text_KeepOutOfTeamRocketsWay::
-    .string "Keep out of TEAM ROCKET's way!$"
+    .string "Keep out of TEAM ONYBRIS's way!$"
 
 CeladonCity_Text_ExplainXAccuracyDireHit::
     .string "TRAINER TIPS\p"

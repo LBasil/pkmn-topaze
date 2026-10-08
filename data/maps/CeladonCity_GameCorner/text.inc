@@ -30,7 +30,7 @@ CeladonCity_GameCorner_Text_HereAreYourCoins::
 CeladonCity_GameCorner_Text_RumoredTeamRocketRunsThisPlace::
     .string "Keep this quiet.\p"
     .string "It's rumored that this place is run\n"
-    .string "by TEAM ROCKET.$"
+    .string "by TEAM ONYBRIS.$"
 
 CeladonCity_GameCorner_Text_ThinkMachinesHaveDifferentOdds::
     .string "I think these machines have\n"
@@ -114,7 +114,7 @@ CeladonCity_GameCorner_Text_GruntDefeat::
     .string "Dang!$"
 
 CeladonCity_GameCorner_Text_GruntPostBattle::
-    .string "The TEAM ROCKET HIDEOUT might\n"
+    .string "The TEAM ONYBRIS HIDEOUT might\n"
     .string "be discovered!\p"
     .string "I better tell BOSS!$"
 

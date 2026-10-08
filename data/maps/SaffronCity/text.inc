@@ -4,14 +4,14 @@ SaffronCity_Text_WhatDoYouWantGetLost::
 
 SaffronCity_Text_BossTakeTownForTeamRocket::
     .string "BOSS said he'll take this town\n"
-    .string "in the name of TEAM ROCKET!$"
+    .string "in the name of TEAM ONYBRIS!$"
 
 SaffronCity_Text_DontGetDefiantOrIllHurtYou::
     .string "Don't get defiant!\n"
     .string "Or I'll have to hurt you!$"
 
 SaffronCity_Text_SaffronBelongsToTeamRocket::
-    .string "SAFFRON belongs to TEAM ROCKET!$"
+    .string "SAFFRON belongs to TEAM ONYBRIS!$"
 
 SaffronCity_Text_CriminalLifeMakesMeFeelAlive::
     .string "My life as a criminal makes me feel\n"
@@ -27,11 +27,11 @@ SaffronCity_Text_WeCanExploitMonsAroundWorld::
     .string "We'll get stinking rich, yeahah!$"
 
 SaffronCity_Text_YouBeatTeamRocket::
-    .string "You beat TEAM ROCKET all alone?\n"
+    .string "You beat TEAM ONYBRIS all alone?\n"
     .string "That's amazing!$"
 
 SaffronCity_Text_SafeToGoOutAgain::
-    .string "Yeah! TEAM ROCKET is gone!\n"
+    .string "Yeah! TEAM ONYBRIS is gone!\n"
     .string "It's safe to go out again!$"
 
 SaffronCity_Text_PeopleComingBackToSaffron::

@@ -42,12 +42,12 @@ SilphCo_2F_Text_Grunt2Defeat::
 
 SilphCo_2F_Text_Grunt2PostBattle::
     .string "SILPH CO. will be associated with\n"
-    .string "TEAM ROCKET!$"
+    .string "TEAM ONYBRIS!$"
 
 Text_ThunderWaveTeach::
     .string "Eeek!\n"
     .string "No! Stop! Help!\p"
-    .string "Oh, you're not with TEAM ROCKET.\n"
+    .string "Oh, you're not with TEAM ONYBRIS.\n"
     .string "I'm sorry, I thought…\p"
     .string "Will you forgive me if I teach\n"
     .string "you the THUNDER WAVE technique?$"

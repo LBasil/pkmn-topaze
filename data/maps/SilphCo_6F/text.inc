@@ -22,11 +22,11 @@ SilphCo_6F_Text_NeedsMeToLookAfterHim::
     .string "someone like me to look after him.$"
 
 SilphCo_6F_Text_RocketsTryingToConquerWorld::
-    .string "TEAM ROCKET is trying to conquer\n"
+    .string "TEAM ONYBRIS is trying to conquer\n"
     .string "the world with POKéMON.$"
 
 SilphCo_6F_Text_RocketsRanAwayBecauseOfYou::
-    .string "TEAM ROCKET ran away, and it's all\n"
+    .string "TEAM ONYBRIS ran away, and it's all\n"
     .string "because of you!$"
 
 SilphCo_6F_Text_TargetedSilphForOurMonProducts::
@@ -52,7 +52,7 @@ SilphCo_6F_Text_TaylorIntro::
     .string "That rotten PRESIDENT!\p"
     .string "Serves him right for shipping me\n"
     .string "off to the TIKSI BRANCH!\p"
-    .string "That's why TEAM ROCKET came after\n"
+    .string "That's why TEAM ONYBRIS came after\n"
     .string "us, I'm sure of it!$"
 
 SilphCo_6F_Text_TaylorDefeat::
@@ -63,7 +63,7 @@ SilphCo_6F_Text_TaylorPostBattle::
     .string "It's in Russian no-man's-land!$"
 
 SilphCo_6F_Text_Grunt2Intro::
-    .string "You dare betray TEAM ROCKET?$"
+    .string "You dare betray TEAM ONYBRIS?$"
 
 SilphCo_6F_Text_Grunt2Defeat::
     .string "You traitor!$"

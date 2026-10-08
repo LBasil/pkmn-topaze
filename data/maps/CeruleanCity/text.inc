@@ -65,7 +65,7 @@ CeruleanCity_Text_OkayIllReturnStolenTM::
 
 CeruleanCity_Text_RecoveredTM28FromGrunt::
     .string "{PLAYER} recovered TM28 from\n"
-    .string "the TEAM ROCKET GRUNT.$"
+    .string "the TEAM ONYBRIS GRUNT.$"
 
 CeruleanCity_Text_BetterGetMovingBye::
     .string "I better get moving!\n"
@@ -102,7 +102,7 @@ CeruleanCity_Text_PokemonEncyclopediaAmusing::
 
 CeruleanCity_Text_PeopleHereWereRobbed::
     .string "The people here were robbed.\p"
-    .string "It's obvious that TEAM ROCKET is\n"
+    .string "It's obvious that TEAM ONYBRIS is\n"
     .string "behind this most heinous crime!\p"
     .string "Even our POLICE FORCE has\n"
     .string "trouble with the ROCKETS!$"

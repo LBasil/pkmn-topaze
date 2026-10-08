@@ -1,7 +1,7 @@
 RocketHideout_B4F_Text_GiovanniIntro::
     .string "So! I must say, I am impressed you\n"
     .string "got here.\p"
-    .string "TEAM ROCKET captures POKéMON from\n"
+    .string "TEAM ONYBRIS captures POKéMON from\n"
     .string "around the world.\p"
     .string "They're important tools for keeping\n"
     .string "our criminal enterprise going.\p"

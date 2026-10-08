@@ -29,7 +29,7 @@ VictoryRoad_3F_Text_GeorgeDefeat::
 
 VictoryRoad_3F_Text_GeorgePostBattle::
     .string "So, it was you who beat GIOVANNI\n"
-    .string "of TEAM ROCKET?$"
+    .string "of TEAM ONYBRIS?$"
 
 VictoryRoad_3F_Text_AlexaIntro::
     .string "TRAINERS live to seek stronger\n"
