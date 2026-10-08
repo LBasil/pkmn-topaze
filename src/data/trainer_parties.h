@@ -3717,27 +3717,30 @@ static const struct TrainerMonItemDefaultMoves sParty_BlackBeltDaisuke[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_RivalOaksLabSquirtle[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_RivalOaksLabSquirtle[] = {
     {
         .iv = 0,
-        .lvl = 6,
+        .lvl = 5,
         .species = SPECIES_SQUIRTLE,
+        .moves = {MOVE_TACKLE, MOVE_TAIL_WHIP, MOVE_NONE, MOVE_NONE},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_RivalOaksLabBulbasaur[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_RivalOaksLabBulbasaur[] = {
     {
         .iv = 0,
-        .lvl = 6,
+        .lvl = 5,
         .species = SPECIES_BULBASAUR,
+        .moves = {MOVE_TACKLE, MOVE_GROWL, MOVE_NONE, MOVE_NONE},
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_RivalOaksLabCharmander[] = {
+static const struct TrainerMonNoItemCustomMoves sParty_RivalOaksLabCharmander[] = {
     {
         .iv = 0,
-        .lvl = 6,
+        .lvl = 5,
         .species = SPECIES_CHARMANDER,
+        .moves = {MOVE_SCRATCH, MOVE_GROWL, MOVE_NONE, MOVE_NONE},
     },
 };
 
