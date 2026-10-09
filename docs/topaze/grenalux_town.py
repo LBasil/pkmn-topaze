@@ -263,7 +263,7 @@ for x in range(0, W, 2): tree(x, H - 2)
 R = {}
 R['stable'] = chunk(PB, 30, 5, 2, 5, 4, 3, 2, 'ecurie', PBP)
 assert R['stable']
-place_sm(C.BARN, 22, 2, 5, 4, 'grange'); place_sm(C.SILO, 27, 1, 2, 4, 'silo')
+place_sm(C.BARN, 22, 2, 5, 4, 'grange'); place_sm(C.SILO, 27, 2, 2, 4, 'silo')
 R['barn'] = (24, 5)
 def pen(x0, y0, x1, y1, gaps, name):
     for x in range(x0, x1 + 1):
