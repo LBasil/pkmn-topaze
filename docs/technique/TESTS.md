@@ -122,3 +122,6 @@ Piste réaliste : faire d'abord le jeu jouable, puis ajouter un follower **limit
   - Non testés : PNJ (randonneur, mineur), panneaux, objets (Elixir, Antiparalysie), herbes hautes, traversée de la forêt (inchangée, verte), sorties vers Opanihrum/Pyropia dans les deux sens.
 
   - v2 : entrée sud de la forêt testée avec la forêt calcinée (transition d'intro « CINDER FOREST » vue ; image encore verte avant recoloration, corrigée ensuite, non revérifiée à l'écran). Banc `t_route2e.py`.
+
+### Forêt calcinée v2 (émulateur)
+  - ROM jetable : Grenalux nord redirigé vers la porte sud de la forêt. Bancs `t_forest_a.py`/`t_forest_b.py`. OK : arrivée à la porte sud, marche sur le sentier, cendres qui tombent, PNJ visible. Non testés : traversée complète (les dresseurs bloquent la marche), sortie nord, combats, objets, panneaux.
