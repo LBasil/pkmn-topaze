@@ -23,6 +23,11 @@
       "map": "MAP_ROUTE21_NORTH",
       "offset": 14,
       "direction": "down"
+    },
+    {
+      "map": "MAP_PALLET_TOWN_RANCH",
+      "offset": 0,
+      "direction": "right"
     }
   ],
   "object_events": [

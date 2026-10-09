@@ -260,63 +260,19 @@ run 300
 key DOWN 40
 run 120
 readp 03005008 0 6
-shot a0.ppm
 key DOWN 30
 run 4
-key RIGHT 222
+key RIGHT 510
 run 4
-key UP 174
+key UP 78
 run 4
-run 60
-shot s0.ppm
 readp 03005008 0 6
-run 60
-shot s1.ppm
+shot r0.ppm
+key RIGHT 126
+run 4
 readp 03005008 0 6
-run 60
-shot s2.ppm
+shot r1.ppm
+key RIGHT 126
+run 4
 readp 03005008 0 6
-run 60
-shot s3.ppm
-readp 03005008 0 6
-run 60
-shot s4.ppm
-readp 03005008 0 6
-run 60
-shot s5.ppm
-readp 03005008 0 6
-key A 4
-run 90
-key A 4
-run 90
-key A 4
-run 90
-key A 4
-run 90
-key A 4
-run 90
-key A 4
-run 90
-key A 4
-run 90
-key A 4
-run 90
-key A 4
-run 90
-key A 4
-run 90
-key A 4
-run 90
-key A 4
-run 90
-key A 4
-run 90
-key A 4
-run 90
-key A 4
-run 90
-key A 4
-run 90
-run 300
-shot end.ppm
-readp 03005008 0 6
+shot r2.ppm

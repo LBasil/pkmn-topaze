@@ -31,6 +31,7 @@ def put(x, y, v): G[(x, y)] = v
 def claim(x, y, w, h, name):
     for j in range(h):
         for i in range(w):
+            if OCC.get((x + i, y + j)) == 'enclos' and name in ('foin', 'abreuvoir'): continue     # objets poses dans un enclos
             assert (x + i, y + j) not in OCC, 'chevauchement %s avec %s en %s' % (name, OCC[(x + i, y + j)], (x + i, y + j))
             assert 1 <= x + i <= W - 2 and 0 <= y + j <= H - 3, (name, x + i, y + j)
             OCC[(x + i, y + j)] = name
@@ -76,7 +77,9 @@ PBP, LRP = (1, 11), (10, 12)
 # ---- cadre d'arbres
 for x in range(0, W, 2):
     if x != GATE_X: tree(x, 0)
-for y in range(2, H - 2, 2): tree(0, y); tree(W - 2, y)
+for y in range(2, H - 2, 2):
+    tree(0, y)
+    if y != 6: tree(W - 2, y)                  # ouverture vers le grand ranch (x=42..43, y=6..7)
 for x in range(0, W - 1, 2):
     if x not in (20, 22): tree(x, H - 2)
 for y in (H - 2, H - 1):
@@ -143,7 +146,7 @@ def rect(x0, y0, x1, y1):
             PATH.add((x, y))
 rect(GATE_X, 0, GATE_X + 1, 19)
 rect(7, 12, 40, 13)
-rect(7, 10, 8, 11); rect(35, 9, 36, 11); rect(30, 11, 31, 11)
+rect(7, 10, 8, 11); rect(35, 9, 36, 11); rect(30, 11, 31, 11); rect(39, 6, 43, 7)
 rect(16, 18, 29, 26)
 rect(7, 22, 8, 25); rect(7, 24, 15, 25)
 rect(34, 22, 35, 25); rect(30, 24, 35, 25); rect(36, 25, 41, 26)
@@ -166,6 +169,7 @@ def connect(start):
             if n not in prev and passable(n): prev[n] = c; q.append(n)
     raise AssertionError('porte isolee %s' % (start,))
 for k in ('hA', 'hC', 'hD', 'hE'): connect((D[k][0], D[k][1] + 1))
+connect((39, 8))                           # le chemin du grand ranch rejoint la grande rue
 connect((33, 31))                          # le potager s'ouvre a l'ouest (rangee 4 du bloc)
 connect((39, 25))
 def path_id(x, y):
@@ -217,8 +221,6 @@ NPC = {'slowpoke': (30, 6), 'nidoran': (31, 8), 'meowth': (29, 7), 'miner': (41,
 for k, c in NPC.items(): assert (c not in OCC or OCC[c] == 'enclos') and G[c] in (GRASS, FLOWER) or c in PATH, (k, c, hex(G[c]))
 json.dump(NPC, open('/tmp/grenalux_npc.json', 'w'))
 # ---- ecriture
-open(SD + 'metatiles.bin', 'wb').write(mt); open(SD + 'metatile_attributes.bin', 'wb').write(att)
-assert len(mt) // 16 <= 384, len(mt) // 16
 g = [G[(x, y)] for y in range(H) for x in range(W)]
 open('data/layouts/PalletTown/map.bin', 'wb').write(struct.pack('<%dH' % len(g), *g))
 open('data/layouts/PalletTown/border.bin', 'wb').write(struct.pack('<4H', 0x5d4, 0x5d5, 0x5dc, 0x5dd))
@@ -239,4 +241,78 @@ while q:
 for k, (x, y) in D.items(): assert (x, y + 1) in seen or k == 'garden', 'porte inatteignable ' + k
 for k, c in NPC.items(): assert c in seen, 'PNJ inatteignable ' + k
 assert (39, 25 + 1) in seen and (22, 0) in seen
+TOWN_NPC = NPC
 print('Grenalux v6', W, 'x', H, '| metatuiles secondaires', len(mt) // 16, '| tuiles', len(C.tiles))
+
+# ======================================================================================================
+# LE GRAND RANCH (32x24) : la suite du ranch de Zephyr, visible a l'est de la ville par l'ouverture du cadre
+# (connexion "droite" de Grenalux, decalage 0). Un domaine entier : ecurie, grange, trois enclos, bouveries, cristaux.
+# ======================================================================================================
+W, H = 32, 24
+G = {(x, y): GRASS for y in range(H) for x in range(W)}; OCC = {}; PATH = set()
+for x in range(0, W, 2): tree(x, 0)
+for y in range(2, H - 2, 2):
+    if y != 6: tree(0, y)
+    tree(W - 2, y)
+for x in range(0, W, 2): tree(x, H - 2)
+R = {}
+R['stable'] = chunk(PB, 30, 5, 2, 5, 4, 3, 2, 'ecurie', PBP)
+R['barn'] = chunk(PB, 30, 12, 4, 6, 5, 22, 1, 'grange')
+assert R['stable'] and R['barn']
+def pen(x0, y0, x1, y1, gaps, name):
+    for x in range(x0, x1 + 1):
+        for y in (y0, y1):
+            if (x, y) not in gaps: one(x, y, C.FENCE_H, name)
+    for y in range(y0 + 1, y1):
+        for x in (x0, x1):
+            if (x, y) not in gaps: one(x, y, C.FENCE_V, name)
+    claim(x0 + 1, y0 + 1, x1 - x0 - 1, y1 - y0 - 1, 'enclos')
+pen(10, 2, 19, 5, {(14, 5), (15, 5)}, 'cloture C')
+pen(3, 10, 12, 17, {(7, 10), (8, 10)}, 'cloture A')
+pen(16, 10, 27, 17, {(21, 10), (22, 10), (27, 13), (27, 14)}, 'cloture B')      # (27,13..14) : clôture coupée par Onybris
+place_sm(C.BIG, 5, 19, 3, 3, 'cristal SO'); place_sm(C.BIG, 22, 19, 3, 3, 'cristal SE')
+place_sm(C.BOUL[0], 9, 19, 2, 2, 'bloc'); place_sm(C.BOUL[1], 27, 19, 2, 2, 'bloc')
+for (x, y) in ((17, 20), (18, 20), (19, 20)): one(x, y, C.HAY, 'foin')
+for (x, y) in ((4, 11), (5, 11), (17, 11), (11, 3), (11, 4)): one(x, y, C.HAY, 'foin')
+for (x, y) in ((11, 16), (26, 16), (18, 3)): one(x, y, C.TROUGH, 'abreuvoir')
+for (x, y) in ((3, 8), (11, 8), (17, 8), (25, 8), (9, 5), (20, 5), (12, 19), (20, 19), (15, 21)): one(x, y, C.LAMP, 'lampe')
+for (x, y) in ((2, 9), (12, 20), (28, 16), (2, 18), (29, 9), (16, 19)): one(x, y, C.ROCK, 'rocher')
+rect(0, 6, 29, 7); rect(7, 8, 8, 9); rect(21, 8, 22, 9); rect(13, 8, 14, 21)
+connect((R['stable'][0], R['stable'][1] + 1)); connect((R['barn'][0], R['barn'][1] + 1))
+for (x, y) in PATH:
+    assert (x, y) not in OCC, ('chemin sur', OCC.get((x, y)), x, y)
+    put(x, y, walk(path_id(x, y)))
+rnd = random.Random(7733)
+for (cx, cy, n, s_) in ((28, 10, 4, 2), (29, 20, 3, 1.5), (2, 14, 3, 1.5), (3, 20, 2, 1.2), (29, 3, 3, 1.5), (16, 3, 0, 1)): grove(cx, cy, n, s_)
+for _ in range(14):
+    cx, cy = rnd.randint(3, W - 4), rnd.randint(3, H - 4)
+    for _ in range(rnd.randint(4, 8)):
+        x, y = cx + rnd.randint(-2, 2), cy + rnd.randint(-1, 1)
+        if 2 <= x <= W - 3 and 2 <= y <= H - 4 and G[(x, y)] == GRASS and (x, y) not in OCC and (x, y) not in PATH: put(x, y, FLOWER)
+RNPC = {'r_hand1': (9, 7), 'r_hand2': (14, 12), 'r_girl': (24, 7), 'r_slowpoke': (6, 13), 'r_psyduck': (10, 15), 'r_doduo': (19, 13),
+        'r_nidoranm': (24, 15), 'r_nidoranf': (18, 16), 'r_meowth': (13, 3), 'r_jigglypuff': (17, 4)}
+rb = {(x, y) for y in range(H) for x in range(W) if (G[(x, y)] & 0xc00) or ((G[(x, y)] >> 12) == 1)}
+seen = {(0, 6)}; q = collections.deque([(0, 6)])
+while q:
+    c = q.popleft()
+    for d in ((0, 1), (1, 0), (-1, 0), (0, -1)):
+        n = (c[0] + d[0], c[1] + d[1])
+        if 0 <= n[0] < W and 0 <= n[1] < H and n not in rb and n not in seen: seen.add(n); q.append(n)
+for k, c in RNPC.items(): assert c in seen and c not in rb, ('PNJ du ranch inatteignable', k, c)
+for k in ('stable', 'barn'): assert (R[k][0], R[k][1] + 1) in seen, k
+assert (1, 6) in seen and (1, 7) in seen
+json.dump(RNPC, open('/tmp/grenalux_ranch_npc.json', 'w'))
+g = [G[(x, y)] for y in range(H) for x in range(W)]
+import os
+os.makedirs('data/layouts/PalletTownRanch', exist_ok=True)
+open('data/layouts/PalletTownRanch/map.bin', 'wb').write(struct.pack('<%dH' % len(g), *g))
+open('data/layouts/PalletTownRanch/border.bin', 'wb').write(struct.pack('<4H', 0x5d4, 0x5d5, 0x5dc, 0x5dd))
+L = json.load(open('data/layouts/layouts.json'))
+L['layouts'] = [l for l in L['layouts'] if l.get('id') != 'LAYOUT_PALLET_TOWN_RANCH']
+L['layouts'].append({"id": "LAYOUT_PALLET_TOWN_RANCH", "name": "PalletTownRanch_Layout", "width": W, "height": H, "border_width": 2, "border_height": 2,
+    "primary_tileset": "gTileset_GeneralEmerald", "secondary_tileset": "gTileset_PetalburgEmerald",
+    "border_filepath": "data/layouts/PalletTownRanch/border.bin", "blockdata_filepath": "data/layouts/PalletTownRanch/map.bin"})
+json.dump(L, open('data/layouts/layouts.json', 'w'), indent=2); open('data/layouts/layouts.json', 'a').write('\n')
+open(SD + 'metatiles.bin', 'wb').write(mt); open(SD + 'metatile_attributes.bin', 'wb').write(att)
+assert len(mt) // 16 <= 384, len(mt) // 16
+print('Grand ranch', W, 'x', H, '| metatuiles secondaires', len(mt) // 16)

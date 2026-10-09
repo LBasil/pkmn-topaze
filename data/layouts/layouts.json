@@ -4398,6 +4398,18 @@
       "secondary_tileset": "gTileset_MtEmber",
       "border_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa/border.bin",
       "blockdata_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa/map.bin"
+    },
+    {
+      "id": "LAYOUT_PALLET_TOWN_RANCH",
+      "name": "PalletTownRanch_Layout",
+      "width": 32,
+      "height": 24,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GeneralEmerald",
+      "secondary_tileset": "gTileset_PetalburgEmerald",
+      "border_filepath": "data/layouts/PalletTownRanch/border.bin",
+      "blockdata_filepath": "data/layouts/PalletTownRanch/map.bin"
     }
   ]
 }
