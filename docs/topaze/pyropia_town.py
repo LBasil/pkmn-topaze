@@ -150,26 +150,24 @@ D = {}
 chunk(2, 2, 6, 8, 4, 2, 'lac ouest')
 lake(31, 3, 10, 5, 'lac est')
 D['gym'] = chunk(2, 11, 6, 5, 20, 3, 'arene')
-D['museumA'] = chunk(11, 12, 4, 4, 4, 13, 'musee aile A')
-D['museumB'] = chunk(15, 12, 4, 4, 8, 13, 'musee aile B')
-D['center'] = chunk(8, 3, 4, 4, 14, 13, 'centre pokemon')
-D['mart'] = chunk(14, 2, 4, 4, 36, 13, 'boutique')
+# musee : grande halle rouge de 10x4 a deux portes (comme l'original : deux entrees), assemblee avec les morceaux de maison
+LCOL, RCOL, WCOL, DCOL = [8, 16, 24, 32], [10, 18, 26, 34], [9, 17, 11, 19], [9, 17, 25, 33]
+MUSEUM_COLS = [LCOL, WCOL, WCOL, DCOL, WCOL, WCOL, DCOL, WCOL, WCOL, RCOL]
+def museum(dx, dy):
+    claim(dx, dy, 10, 4, 'musee'); doors = []
+    for i, col in enumerate(MUSEUM_COLS):
+        for j, m in enumerate(col):
+            put(dx + i, dy + j, remap(m))
+            if 0x60 <= beh(m) <= 0x6f: doors.append((dx + i, dy + j))
+    return doors
+dm = museum(3, 13); D['museumA'], D['museumB'] = [dm[0]], [dm[1]]
+D['center'] = chunk(8, 4, 4, 3, 16, 14, 'centre pokemon')
+D['mart'] = chunk(14, 3, 4, 3, 36, 14, 'boutique')
 D['house1'] = chunk(11, 12, 4, 4, 38, 29, 'maison 1')
 D['house2'] = chunk(15, 12, 4, 4, 12, 29, 'maison 2')
-D['hallE'] = chunk(11, 12, 4, 4, 28, 29, 'maison deco E')
-D['hallW'] = chunk(15, 12, 4, 4, 5, 29, 'maison deco O')
-D['hallA'] = chunk(15, 12, 4, 4, 5, 22, 'maison deco A')
-D['hallB'] = chunk(11, 12, 4, 4, 11, 23, 'maison deco B')
-D['hallC'] = chunk(11, 12, 4, 4, 30, 13, 'maison deco C')
-D['hallD'] = chunk(15, 12, 4, 4, 30, 17, 'maison deco D') if False else []
 print('portes', {k: v for k, v in D.items()})
-DECO = ('hallE', 'hallW', 'hallA', 'hallB', 'hallC')
-for k in DECO:                               # maisons decoratives : la porte devient une fenetre
-    x, y = D[k][0]
-    put(x, y - 1, remap(0x400 | 11)); put(x, y, remap(0x400 | 19)); D[k] = []
-D = {k: v for k, v in D.items() if k != 'hallD'}
-for k in list(D): assert D[k] or k in DECO, ('pas de porte', k)
-DOORS = {k: v[0] for k, v in D.items() if v}
+for k in list(D): assert D[k], ('pas de porte', k)
+DOORS = {k: v[0] for k, v in D.items()}
 json.dump(DOORS, open('/tmp/pyropia_doors.json', 'w'))
 # ---- chemins (autotile 280..298, largeur 2)
 PATH = set()
@@ -184,10 +182,9 @@ pr(42, 13, 43, 16)                      # descente est : sommet -> milieu
 pr(42, 10, 43, 10)
 pr(24, 25, W - 1, 26)                   # rue est (sortie est)
 pr(3, 33, 44, 34)                       # rue du sud
-pr(4, 17, 41, 18)                       # rue du milieu
+pr(4, 17, 43, 18)                       # rue du milieu
 pr(40, 19, 41, 22)                      # milieu -> bas (escalier est)
-for k in ('museumA', 'museumB', 'center'): pr(fr(k)[0], fr(k)[1], fr(k)[0] + 1, 18)
-pr(fr('mart')[0], fr('mart')[1], fr('mart')[0] + 1, 18)
+for k in ('museumA', 'museumB', 'center', 'mart'): pr(fr(k)[0], fr(k)[1], fr(k)[0] + 1, 18)
 pr(fr('gym')[0], fr('gym')[1], fr('gym')[0] + 1, 9)
 for k in ('house1', 'house2'): pr(fr(k)[0], fr(k)[1], fr(k)[0] + 1, 33)
 pr(10, 20, 11, 33) if False else None
@@ -216,7 +213,7 @@ PINE = [198, 22, 14]
 def pine(x, y): claim(x, y, 1, 1, 'pin'); put(x, y, remap(0x400 | PINE[(x * 3 + y) % 3]))
 SIGN = remap(0x400 | 3)
 def sign(x, y): claim(x, y, 1, 1, 'panneau'); put(x, y, SIGN)
-SIGNS = {'museum': (12, 16), 'police': (42, 27), 'gym': (19, 7), 'tips': (25, 35), 'city': (21, 35)}
+SIGNS = {'museum': (14, 16), 'police': (42, 27), 'gym': (19, 7), 'tips': (25, 35), 'city': (21, 35)}
 for k, c in SIGNS.items(): sign(*c)
 # ------------------------------------------------------------------ art procedural : vents de braise, braseros, cairn de flamme
 used_pals = {q >> 12 for e in SEC_ENT for q in e}
@@ -297,10 +294,31 @@ def stairs():
     d.line([(0, 0), (0, 15)], fill=5); d.line([(15, 0), (15, 15)], fill=5)
     return im
 STAIR = meta(stairs())
+def crater():
+    im = ground_bg(48, 48); d = ImageDraw.Draw(im)
+    d.ellipse((2, 39, 46, 47), fill=13)
+    d.ellipse((2, 4, 46, 44), fill=7, outline=5)                        # anneau de roche
+    d.ellipse((6, 8, 42, 40), fill=6, outline=5)
+    d.ellipse((9, 11, 39, 37), fill=9)
+    d.ellipse((12, 14, 36, 34), fill=10); d.ellipse((16, 18, 32, 30), fill=11); d.ellipse((20, 21, 28, 27), fill=12)
+    for (x, y) in ((4, 14), (6, 30), (42, 16), (40, 32), (14, 5), (30, 5), (22, 42)): d.ellipse((x - 2, y - 2, x + 2, y + 2), fill=8, outline=5)
+    for (x, y) in ((14, 20), (33, 26), (24, 33), (28, 17)): d.point((x, y), fill=12)
+    return im
+def cluster():
+    im = ground_bg(48, 48); d = ImageDraw.Draw(im)
+    d.ellipse((1, 38, 47, 47), fill=13)
+    for (x, h, w) in ((9, 26, 6), (19, 36, 7), (30, 30, 7), (39, 20, 5), (24, 20, 6), (14, 14, 5)):
+        base = 43 if h > 20 else 38
+        d.polygon([(x - w, base), (x, base - h), (x + w, base)], fill=14, outline=5); d.line([(x - w // 2, base - 2), (x, base - h + 3)], fill=8)
+        d.point((x + 1, base - h // 2), fill=15)
+    return im
+CRATER = slice_all(crater(), 3, 3); CLUSTER = slice_all(cluster(), 3, 3)
 
 for (x, y) in STAIRS: put(x, y, ('ARTRAW', STAIR, 0x3000))
-for (i, j), m in CAIRN.items():
-    claim(16 + i, 22 + j, 1, 1, 'cairn'); put(16 + i, 22 + j, ('ARTRAW', m, 0x400))
+def art3(x0, y0, sm, name):
+    for (i, j), m in sm.items(): claim(x0 + i, y0 + j, 1, 1, name); put(x0 + i, y0 + j, ('ARTRAW', m, 0x400))
+art3(16, 22, CAIRN, 'cairn')
+art3(5, 22, CRATER, 'cratere'); art3(10, 24, CRATER, 'cratere'); art3(28, 29, CLUSTER, 'obsidienne'); art3(30, 13, CRATER, 'cratere'); art3(5, 29, CLUSTER, 'obsidienne'); art3(28, 20, CRATER, 'cratere'); art3(33, 28, CRATER, 'cratere'); art3(17, 29, CLUSTER, 'obsidienne')
 def art1(x, y, m, name, blocked=True):
     claim(x, y, 1, 1, name); put(x, y, ('ARTRAW', m, 0x400 if blocked else 0x3000))
 for (x, y) in ((21, 5), (21, 8), (24, 13), (21, 13), (24, 16), (21, 16), (21, 22), (24, 22), (21, 28), (24, 28), (21, 31), (24, 31), (21, 36), (24, 36), (9, 19), (18, 17), (36, 18), (3, 20)):
@@ -319,7 +337,7 @@ for (x, y) in [(2, yy) for yy in range(2, 38)] + [(45, yy) for yy in range(2, 38
 grove(3, 3, 3, 10, 2); grove(26, 3, 29, 10, 3); grove(5, 12, 7, 12, 1); grove(26, 13, 29, 22, 5); grove(43, 13, 45, 22, 4); grove(3, 22, 10, 28, 5); grove(26, 24, 39, 32, 8)
 grove(14, 24, 20, 28, 4); grove(14, 36, 40, 36, 8)
 # ------------------------------------------------------------------ accessibilite / PNJ
-NPC = {'lass': (10, 19 - 1), 'fatman': (26, 28), 'bugcatcher': (30, 20), 'hidden': (34, 21)}
+NPC = {'lass': (10, 19 - 1), 'fatman': (26, 28), 'bugcatcher': (34, 21), 'hidden': (36, 21)}
 def raw_blocked(c):
     v = G[c]
     if isinstance(v, tuple): return bool(v[2] & 0xc00)
@@ -336,6 +354,16 @@ for k, c in NPC.items():
 for k, (x, y) in DOORS.items(): assert (x, y + 1) in seen, ('porte inaccessible', k, (x, y))
 for c in ((22, H - 1), (23, H - 1), (W - 1, 25), (W - 1, 26)): assert c in seen, c
 for k, c in SIGNS.items(): assert (c[0], c[1] + 1) in seen or (c[0], c[1] - 1) in seen or (c[0] - 1, c[1]) in seen or (c[0] + 1, c[1]) in seen, ('panneau inaccessible', k)
+# les chemins doivent former UN reseau : portes, sorties et escaliers atteints en ne marchant que sur chemin/escalier
+PN = PATH | set(STAIRS); cc = {(22, 34)}; qq = collections.deque([(22, 34)])
+while qq:
+    c = qq.popleft()
+    for d_ in ((0, 1), (1, 0), (-1, 0), (0, -1)):
+        n_ = (c[0] + d_[0], c[1] + d_[1])
+        if n_ in PN and n_ not in cc: cc.add(n_); qq.append(n_)
+for k, (x, y) in DOORS.items(): assert (x, y + 1) in cc, ('porte hors reseau de chemins', k)
+for c in ((22, H - 1), (23, H - 1), (W - 1, 25), (W - 1, 26)): assert c in cc, ('sortie hors reseau', c)
+assert not (PN - cc), ('chemins isoles', sorted(PN - cc)[:6])
 json.dump(NPC, open('/tmp/pyropia_npc.json', 'w')); json.dump({k: list(v) for k, v in SIGNS.items()}, open('/tmp/pyropia_signs.json', 'w'))
 
 # ------------------------------------------------------------------ ecriture des tilesets
