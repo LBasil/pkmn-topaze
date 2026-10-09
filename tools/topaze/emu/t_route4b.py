@@ -20,7 +20,7 @@ def nb(t):
         for dx in range(-r,r+1):
             for dy in range(-r,r+1):
                 c=(t[0]+dx,t[1]+dy)
-                if c not in P.B and 0<=c[0]<96 and 0<=c[1]<26: return c
-for tgt in map(nb, ((6, 12), (12, 12), (17, 15), (23, 17), (30, 16), (36, 11), (40, 11), (46, 11), (54, 16), (60, 15), (66, 11), (72, 11), (80, 14), (90, 16), (94, 15))):
+                if c not in P.B and 0<=c[0]<40 and 0<=c[1]<84: return c
+for tgt in map(nb, ((19, 78), (14, 72), (16, 66), (24, 64), (30, 64), (31, 58), (22, 54), (20, 53))):
     print(tgt, walk(tgt))
 print(sh(['shot r4_end.ppm']))

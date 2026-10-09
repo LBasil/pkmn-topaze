@@ -91,20 +91,20 @@ def variant(m, st, special=None):
     SEC_ENT.append(out); SEC_ATT.append(PATT32[m]); VAR[key] = 640 + len(SEC_ENT) - 1
     return VAR[key]
 # ------------------------------------------------------------------ carte
-W, H = 40, 84
+W, H = 96, 26
 GRASS_M, FLOWER_M, TALL_M = 1, 4, 13
 TREE = [[468, 469], [476, 477]]
 G = {}; OCC = {}; STG = {}
 rnd = random.Random(1010)
-def _tg(y): return max(0.0, min(1.0, (y - 30) / 34.0))
+def _tg(x): return max(0.0, min(1.0, (60 - x) / 36.0))
 def stage_at(x, y):
     if x <= 3 or x >= W - 4 or y <= 3 or y >= H - 4: return stage_smooth(x, y)
     n = 0.35 * math.sin(x * 0.55 + y * 0.21) + 0.25 * math.sin(y * 0.37 - x * 0.3) + 0.2 * math.sin(x * 0.23 + y * 0.6)
     j = ((x * 73856093) ^ (y * 19349663)) % 1000 / 1000.0 - 0.5
-    return max(0, min(2, int(round(2 * _tg(y) + n * 0.45 + j * 0.5))))
+    return max(0, min(2, int(round(2 * _tg(x) + n * 0.45 + j * 0.5))))
 def stage_smooth(x, y):
     n = 0.35 * math.sin(x * 0.55 + y * 0.21) + 0.25 * math.sin(y * 0.37 - x * 0.3) + 0.2 * math.sin(x * 0.23 + y * 0.6)
-    return max(0, min(2, int(round(2 * _tg(y) + n * 0.3))))
+    return max(0, min(2, int(round(2 * _tg(x) + n * 0.3))))
 def put(x, y, raw_flags, m, special=None, st=None):
     st = stage_at(x, y) if st is None else st
     G[(x, y)] = raw_flags | variant(m, st, special)
@@ -122,21 +122,20 @@ def tree(x, y):
     TREECELLS.update((x + i, y + j) for i in range(2) for j in range(2))
     for j in range(2):
         for i in range(2): put(x + i, y + j, 0x400, TREE[j][i], st=st)
-# ======================================================================== ROUTE 4 « le flanc de lune » (VERTICALE) : on monte de la cendre (sud, Route 3) vers le Mont Selenite ; au-dela, le versant lunaire (nord) mene a Azuria
+# ======================================================================== ROUTE 4 « le flanc de lune » : de la cendre (Route 3) au paysage lunaire (Mont Selenite), vers Azuria
 S_DOOR, N_DOOR = (-5, -5), (-5, -5)
-SOUTH_COLS = (18, 21); EAST_ROWS = (34, 37)
+WEST_ROWS = (10, 13); EAST_ROWS = (14, 17)
 for x in range(0, W - 2, 2):
-    tree(x, 0)
-    if not (SOUTH_COLS[0] <= x <= SOUTH_COLS[1]): tree(x, H - 2)
+    tree(x, 0); tree(x, H - 2)
 for y in range(2, H - 2, 2):
-    tree(0, y)
+    if not (WEST_ROWS[0] <= y <= WEST_ROWS[1]): tree(0, y)
     if not (EAST_ROWS[0] <= y <= EAST_ROWS[1]): tree(W - 2, y)
 PATH = set()
-HRIDGES = [(72, 11, 18), (28, 12, 21)]                    # (y haut, breche gauche, breche droite) : crêtes horizontales pleine largeur
-CENTER = (22, 61)                                        # Centre : cases (22..26, 61..63), porte en (24, 63)
-ARCH1, ARCH2 = (19, 49), (24, 16)                        # grottes : cases (x..x+2, y..y+2), porte en (x+1, y+2)
-WAYS = [[(19, 82), (18, 78), (15, 73), (13, 69), (16, 66), (20, 64), (30, 64), (32, 60), (30, 57), (24, 55), (20, 54)],
-        [(25, 20), (24, 23), (20, 26), (16, 29), (17, 32), (24, 33), (31, 33), (37, 34), (38, 35)]]
+RIDGES = [(12, 10, 14), (56, -1, -1), (80, 12, 17)]     # la 2e crete est un MUR PLEIN : on ne passe de l'ouest a l'est que par le Mont Selenite     # (x gauche, breche haut, breche bas)
+CENTER = (22, 14)                                        # Centre : cases (22..26, 14..16), porte en (24, 16)
+ARCH1, ARCH2 = (39, 7), (67, 7)                          # grottes : cases (x..x+2, 7..9), porte en (x+1, 9)
+WAYS = [[(1, 11), (5, 12), (9, 13), (12, 12), (16, 14), (19, 17), (28, 17), (31, 15), (34, 12), (36, 11), (45, 11), (50, 13)],
+      [(64, 12), (65, 11), (72, 11), (75, 12), (78, 14), (84, 15), (90, 16), (94, 15)]]
 def seg(a, b):
     (x0, y0), (x1, y1) = a, b
     n = max(abs(x1 - x0), abs(y1 - y0))
@@ -154,33 +153,34 @@ def wob(seed_, n=H):
         out.append(v)
     return out
 RIDGE = set(); GAPC = set(); BLOB = {}
-for k, (y0, g0, g1) in enumerate(HRIDGES):
-    wl, wr = wob(100 + k, W), wob(200 + k, W)
-    for x in range(2, W - 2):
-        if g0 <= x <= g1:
-            for y in range(y0 - 2, y0 + 5): GAPC.add((x, y))
+for k, (x0, g0, g1) in enumerate(RIDGES):
+    wl, wr = wob(100 + k), wob(200 + k)
+    for y in range(2, H - 2):
+        if g0 <= y <= g1:
+            for x in range(x0 - 3, x0 + 7): GAPC.add((x, y))
             continue
-        sh = int(round(2 * math.sin(x * 0.38 + k * 1.7)))
-        for y in range(y0 + sh + wl[x], y0 + sh + 3 + wr[x]): RIDGE.add((x, y)); BLOB[(x, y)] = (x, y0)
-# deux bandes de montagne pleine largeur ; chacune porte une grotte (face sud)
+        sh = int(round(2 * math.sin(y * 0.38 + k * 1.7)))
+        for x in range(x0 + sh + wl[y] - (2 if k == 1 else 0), x0 + sh + 3 + wr[y] + (2 if k == 1 else 0)): RIDGE.add((x, y)); BLOB[(x, y)] = (x0, y)
+# massifs : deux flancs de montagne au nord du chemin ; chacun porte une grotte
 MASSIF = set(); DOORS = set()
-def band(ytop, ybot, seed, arch, flat_top=False, peak=0):
-    wt, wb = wob(seed, W), wob(seed + 1, W)
-    for x in range(2, W - 2):
-        top = max(2, ytop + 2 * wt[x] - int(round(peak * max(0.0, 1 - ((x - (arch[0] + 1)) / 13.0) ** 2))))
-        bot = ybot + (wb[x] if abs(x - (arch[0] + 1)) > 3 else 0)
-        top = min(top, bot - 1)
-        for y in range(top, bot + 1): MASSIF.add((x, y)); BLOB[(x, y)] = (x, ytop)
+def massif(xa, xb, base, seed_, arch):
+    wl, wr, wb = wob(seed_), wob(seed_ + 1), wob(seed_ + 2)
+    for x in range(xa, xb + 1):
+        bot = base + (2 * wb[x - xa] if abs(x - (arch[0] + 1)) > 3 else 0)
+        for y in range(2, bot + 1):
+            lx = xa + (1 if y > base - 2 else 0) + wl[y]; rx = xb - (1 if y > base - 2 else 0) + wr[y]
+            if lx <= x <= rx: MASSIF.add((x, y)); BLOB[(x, y)] = (xa, y)
     for j in range(3):
-        for i in range(3): MASSIF.add((arch[0] + i, arch[1] + j)); BLOB[(arch[0] + i, arch[1] + j)] = (arch[0], arch[1])
+        for i in range(3): MASSIF.add((arch[0] + i, arch[1] + j)); BLOB[(arch[0] + i, arch[1] + j)] = (xa, arch[1] + j)
     DOORS.add((arch[0] + 1, arch[1] + 2))
-band(43, 51, 300, ARCH1, peak=7); band(17, 18, 310, ARCH2, peak=16)
+massif(30, 54, 8, 300, ARCH1); massif(61, 75, 8, 310, ARCH2)
 RIDGE |= MASSIF
+# la breche est pleine d'herbe haute : on ne dessine pas de chemin dessous, on ne laisse pas de roche
 PATH -= GAPC
 RIDGE -= GAPC
 PATH = {c for c in PATH if 0 <= c[0] < W and 0 <= c[1] < H and c not in RIDGE}
 def path_id(x, y):
-    N = (x, y - 1) in PATH or y == 0; S = (x, y + 1) in PATH or y == H - 1; Wn = (x - 1, y) in PATH; E = (x + 1, y) in PATH or x == W - 1
+    N = (x, y - 1) in PATH; S = (x, y + 1) in PATH; Wn = (x - 1, y) in PATH or x == 0; E = (x + 1, y) in PATH or x == W - 1
     if N and S and Wn and E: return 289
     if not N and not Wn and S and E: return 280
     if not N and not E and S and Wn: return 282
@@ -194,22 +194,23 @@ def path_id(x, y):
 for (x, y) in PATH: put(x, y, 0x3000, path_id(x, y)); OCC[(x, y)] = 'chemin'
 for c in RIDGE: OCC[c] = 'roche'
 for c in GAPC: OCC[c] = 'herbe'
+# le Centre : bloc 5x3
 claim(CENTER[0], CENTER[1], 5, 3, 'centre')
 DOORS.add((CENTER[0] + 2, CENTER[1] + 2))
 def dil(cells, r):
     return {(x + i, y + j) for (x, y) in cells for i in range(-r, r + 1) for j in range(-r, r + 1)}
 PATH_D1 = dil(PATH, 1)
-rnd = random.Random(4045)
-# ---- lacs : lac de lave (sud, cendre), mare lunaire (nord)
+rnd = random.Random(4044)
+# ---- lacs : un lac de lave (cendre), une mare lunaire (est)
 LAKE = set(); LAKE_ST = {}
 def lake_shape(cx, cy, rx, ry):
     return {(x, y) for y in range(int(cy - ry) - 1, int(cy + ry) + 2) for x in range(int(cx - rx) - 1, int(cx + rx) + 2)
             if ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 + 0.2 * math.sin(x * 1.7 + y * 2.3) <= 1}
 _busy = dil(PATH, 2) | dil(RIDGE, 1) | dil(GAPC, 1) | dil({(CENTER[0] + i, CENTER[1] + j) for i in range(5) for j in range(3)}, 2)
-for (ya, yb, st_) in ((58, 78, 2), (21, 38, 0)):
+for (xa, xb, st_) in ((4, 30, 2), (78, 92, 0)):
     _all = []
-    for cy in range(ya, yb):
-        for cx in range(4, W - 4):
+    for cy in range(5, H - 6):
+        for cx in range(xa, xb):
             cells = lake_shape(cx, cy, 2.6, 3.0)
             if len(cells) >= 18 and not any(c in _busy for c in cells) and all(2 <= c[0] < W - 2 and 2 <= c[1] < H - 3 for c in cells): _all.append((cx, cy, cells))
     print('lacs possibles', st_, len(_all)); assert _all, 'pas de place pour un lac'
@@ -217,10 +218,11 @@ for (ya, yb, st_) in ((58, 78, 2), (21, 38, 0)):
     for c in cells: LAKE_ST[c] = st_
 for c in LAKE: OCC[c] = 'lac'
 LAKE_Z = dil(LAKE, 1)
+# ---- ilots de roche (plateaux compacts) : relief dans les salles
 def free_cell(c, r=2):
     return 3 <= c[0] <= W - 4 and 3 <= c[1] <= H - 4 and c not in OCC and c not in GAPC and c not in LAKE_Z and not any((c[0] + i, c[1] + j) in PATH or (c[0] + i, c[1] + j) in RIDGE or (c[0] + i, c[1] + j) in GAPC for i in range(-r, r + 1) for j in range(-r, r + 1))
-for _ in range(120):
-    if len([1 for v in OCC.values() if v == 'ilot']) > 150: break
+for _ in range(80):
+    if len([1 for v in OCC.values() if v == 'ilot']) > 170: break
     c0 = (rnd.randint(4, W - 5), rnd.randint(4, H - 5))
     if not free_cell(c0): continue
     blob = {c0}; n_ = rnd.randint(6, 12)
@@ -234,15 +236,17 @@ for _ in range(120):
 def cands_in(xa, xb, ya=3, yb=H - 4, d=(2, 2), extra=()):
     ring = dil(PATH, d[1]) - dil(PATH, d[0] - 1)
     return sorted(c for c in ring if xa <= c[0] <= xb and ya <= c[1] <= yb and c not in OCC and c not in RIDGE and c not in GAPC and c not in LAKE_Z and c not in extra)
-SIGNS = {'mtmoon': rnd.choice(cands_in(12, 30, 56, 60)), 'route': rnd.choice(cands_in(8, 28, 74, 80))}
+SIGNS = {'mtmoon': rnd.choice(cands_in(36, 44, 13, 15)), 'route': rnd.choice(cands_in(4, 9, 3, H - 4))}
 OBJ = {}
+def clear_line(c, d, n):
+    return all(((c[0] + d[0] * k, c[1] + d[1] * k) not in OCC or (c[0] + d[0] * k, c[1] + d[1] * k) in PATH) and 1 <= c[0] + d[0] * k < W - 1 and 1 <= c[1] + d[1] * k < H - 1 for k in range(1, n + 1))
 DIRS = {'UP': (0, -1), 'DOWN': (0, 1), 'LEFT': (-1, 0), 'RIGHT': (1, 0)}
-TR = [('crissy', (20, 40))]
+TR = [('crissy', (62, 74))]
 FACE = {}; SIGHT = {}; LINE = set()
-for name, (ya, yb) in TR:
+for name, (xa, xb) in TR:
     cands = []
-    for y in range(ya, yb + 1):
-        for x in range(3, W - 3):
+    for y in range(3, H - 3):
+        for x in range(xa, xb + 1):
             c = (x, y)
             if c in OCC or c in PATH_D1 or c in LAKE_Z or c in GAPC or any(dil({c}, 2) & set(OBJ.values())): continue
             for dn, d in DIRS.items():
@@ -261,23 +265,24 @@ def place_npc(name, xa, xb, ya, yb, r=3):
     cs = sorted(c for c in dil(PATH, r) - PATH_D1 if xa <= c[0] <= xb and ya <= c[1] <= yb and c not in OCC and c not in RIDGE and c not in GAPC and c not in LAKE_Z and c not in LINE and c not in dil(SIGNS.values(), 1)
                 and not any(dil({c}, 1) & set(OBJ.values())))
     c = rnd.choice(cs); OBJ[name] = c; OCC[c] = 'pnj'
-place_npc('woman', 14, 34, 66, 70)         # a l'accueil du Centre
-place_npc('boy', 8, 30, 74, 80)            # pres de l'entree
-_PD = dil(PATH, 5)
-_dj = [(x, y) for y in range(22, 38) for x in range(3, W - 9) if all(((x + i, y) not in OCC and (x + i, y) not in PATH_D1 and (x + i, y) not in LAKE_Z and (x + i, y) not in GAPC) for i in range(-1, 5)) and (x + 1, y) not in LINE and (x + 2, y) not in LINE and (x + 1, y) in _PD]
+place_npc('woman', 15, 30, 19, 22)         # a l'accueil du Centre
+place_npc('boy', 3, 10, 14, 20)            # pres de l'entree
+# les deux maitres de dojo se font face dans une clairiere a l'est
+_dj = [(x, y) for y in range(4, H - 4) for x in range(82, 91) if all(((x + i, y) not in OCC and (x + i, y) not in PATH_D1 and (x + i, y) not in LAKE_Z and (x + i, y) not in GAPC) for i in range(-1, 5)) and (x + 1, y) not in LINE and (x + 2, y) not in LINE and min((abs(y - py) for (px, py) in PATH if px == x + 1), default=99) <= 5]
 _x, _y = rnd.choice(_dj)
 OBJ['mpunch'] = (_x, _y); OBJ['mkick'] = (_x + 3, _y); OCC[(_x, _y)] = 'pnj'; OCC[(_x + 3, _y)] = 'pnj'
 def hid_cell(xa, xb, ya=3, yb=H - 4):
     cs = [c for c in cands_in(xa, xb, ya, yb, (2, 3)) if c not in LINE and not any((c[0] + i, c[1] + j) in OCC and OCC[(c[0] + i, c[1] + j)] != 'chemin' for i in (-1, 0, 1) for j in (-1, 0, 1))]
     c = rnd.choice(cs); OCC[c] = 'item'; return c
-HID = {'great': hid_cell(2, W - 3, 53, 60), 'persim': hid_cell(2, W - 3, 74, 78), 'razz': hid_cell(2, W - 3, 20, 40)}
-OBJ['tm05'] = hid_cell(2, W - 3, 20, 40)
+HID = {'great': hid_cell(38, 50), 'persim': hid_cell(2, 10), 'razz': hid_cell(62, 80)}
+OBJ['tm05'] = hid_cell(78, 92)
 for k in ('great', 'persim', 'razz'): del OCC[HID[k]]
 del OCC[OBJ['tm05']]
 RES = dil(list(OBJ.values()) + list(SIGNS.values()) + list(HID.values()), 1) | LINE
 CORR = dil(PATH, 1) | LAKE_Z | LINE | dil(list(OBJ.values()) + list(SIGNS.values()) + list(HID.values()), 2)
 CORR -= RIDGE | GAPC
 PATCHZ = dil(PATH, 3)
+# ---- herbes hautes : quelques parcelles dans les salles, jamais sur le chemin
 TALL = []
 tries = 0
 while len(TALL) < 9 and tries < 20000:
@@ -286,16 +291,17 @@ while len(TALL) < 9 and tries < 20000:
     if any(c not in PATCHZ or c in OCC or c in RES or c in PATH_D1 or c in LAKE_Z for c in cells): continue
     TALL.append((x0, y0, x0 + w - 1, y0 + h - 1))
     for c in cells: OCC[c] = 'herbe'; put(c[0], c[1], 0x3000, TALL_M, st=1)
+# ---- arbres (reseau 2x2) : denses a l'ouest (cendre), de plus en plus rares vers la lune
 DEAD = []
-def tree_p(y): return max(0.10, min(0.6, 0.6 - (62 - y) * 0.012))
+def tree_p(x): return max(0.10, min(0.6, 0.6 - (x - 26) * 0.012))
 for (ox, oy) in ((0, 0), (1, 1), (1, 0), (0, 1)):
     for y in range(2 + oy, H - 3, 2):
         for x in range(2 + ox, W - 3, 2):
             cells = [(x + i, y + j) for i in range(2) for j in range(2)]
             if any(c in PATH_D1 or c in OCC or c in RES or c in LAKE_Z or c in RIDGE or c in GAPC for c in cells): continue
-            if rnd.random() < tree_p(y): tree(x, y); claim(x, y, 2, 2, 'arbre')
+            if rnd.random() < tree_p(x): tree(x, y); claim(x, y, 2, 2, 'arbre')
             else:
-                kind = rnd.choice(['dead', 'dead', 'boulder', 'thorns'] if y >= 52 else ['crater', 'crater', 'boulder', 'spire'])
+                kind = rnd.choice(['dead', 'dead', 'boulder', 'thorns'] if x < 40 else ['crater', 'crater', 'boulder', 'spire'])
                 DEAD.append((x, y, kind)); claim(x, y, 2, 2, kind)
 ASH = set()
 for y in range(2, H - 2):
@@ -304,6 +310,7 @@ for y in range(2, H - 2):
         if c in OCC or c in RES: continue
         n = math.sin(x * 0.45 + y * 0.3) + math.sin(y * 0.6 - x * 0.2) + math.sin(x * 0.17 + y * 0.5)
         if n > 0.5: put(x, y, 0x3000, GRASS_M, st=1); ASH.add(c)
+
 # ---- art : cristaux (prismes de grenat -> domes d'opale), pierre du degrade
 LG = E.load('general', 'petalburg')
 def grass_cols(st):
@@ -623,7 +630,7 @@ def arch_img(st):
     shape(d, 0, 4, 47, 3, 9); shape(d, 0, 43, 47, 3, 8)
     d.line([(0, 47), (11, 47)], fill=13); d.line([(36, 47), (47, 47)], fill=13)
     return im
-def art_st(x, y): return 2 if y >= 52 else 0
+def art_st(x, y): return 2 if x < 40 else 0
 for st in (0, 2):
     ART[('sm0', st)] = meta(small(st, 0), st); ART[('sm1', st)] = meta(small(st, 1), st)
     ART[('sign', st)] = meta(sign_art(st), st)
@@ -670,7 +677,7 @@ for y in range(2, H - 2):
         c = (x, y)
         if c in OCC or c in PATH_D or c in RES or c in LAKE_Z or c in ASH or c in ART_PLACE or (G[c] & 0xc00): continue
         if rnd.random() < 0.8:
-            nm = rnd.choice(['sm0', 'sm1', 'stump', 'sm0', 'sm1']) if y >= 52 else rnd.choice(['pit', 'sm0', 'sm1', 'pit', None, None])
+            nm = rnd.choice(['sm0', 'sm1', 'stump', 'sm0', 'sm1']) if x < 40 else rnd.choice(['pit', 'sm0', 'sm1', 'pit', None, None])
             if nm is None: continue
             claim(x, y, 1, 1, 'rocaille'); ART_PLACE[c] = ART[(nm, art_st(x, y))]
 OPEN = sorted(c for c in CORR if c not in OCC and c not in RES and c not in PATH_D and c not in LINE and c not in ASH and c not in LAKE_Z and 2 <= c[0] <= W - 3 and 2 <= c[1] <= H - 4)
@@ -683,7 +690,7 @@ def scatter(n, fn):
         if fn(c): k += 1
 def one(name):
     def f(c):
-        if near(c[0], c[1], 1) or c in ART_PLACE or c[1] < 52: return False
+        if near(c[0], c[1], 1) or c in ART_PLACE or c[0] >= 40: return False
         claim(c[0], c[1], 1, 1, name); ART_PLACE[c] = ART[(name_map[name], 2)]; return True
     return f
 name_map = {'vent': 'vent', 'souche': 'stump', 'cendre': 'ash'}
@@ -700,11 +707,11 @@ def flood(s0, extra=()):
             n_ = (c[0] + d_[0], c[1] + d_[1])
             if 0 <= n_[0] < W and 0 <= n_[1] < H and n_ not in seen_ and n_ not in extra and not blocked(n_): seen_.add(n_); q_.append(n_)
     return seen_
-START = (19, H - 1); EXIT = (W - 1, 35)
+START = (0, 11); EXIT = (W - 1, 15)
 seen = flood(START) | flood((ARCH2[0] + 1, ARCH2[1] + 2))
 assert EXIT not in flood(START), 'la sortie est atteignable sans passer par le Mont Selenite'
 assert (ARCH1[0] + 1, ARCH1[1] + 2) in flood(START) and (ARCH2[0] + 1, ARCH2[1] + 2) not in flood(START)
-for c in [EXIT] + [(x, H - 1) for x in range(SOUTH_COLS[0], SOUTH_COLS[1] + 1)] + [(W - 1, y) for y in range(EAST_ROWS[0], EAST_ROWS[1] + 1)] + list(OBJ.values()) + list(HID.values()) + sorted(DOORS): assert c in seen, ('inaccessible', c)
+for c in [EXIT] + [(0, y) for y in range(WEST_ROWS[0], WEST_ROWS[1] + 1)] + [(W - 1, y) for y in range(EAST_ROWS[0], EAST_ROWS[1] + 1)] + list(OBJ.values()) + list(HID.values()) + sorted(DOORS): assert c in seen, ('inaccessible', c)
 for (x0, y0, x1, y1) in TALL: assert (x0, y0) in seen, ('herbe inaccessible', x0, y0)
 for c in SIGNS.values(): assert any((c[0] + dx, c[1] + dy) in seen for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))), ('panneau inaccessible', c)
 assert (ARCH1[0] + 1, ARCH1[1] + 2) not in flood(START, extra=GAPC), 'la grotte est atteignable sans traverser la breche en herbe'
@@ -777,7 +784,7 @@ L = json.load(open('data/layouts/layouts.json'))
 for l in L['layouts']:
     if l.get('id') == 'LAYOUT_ROUTE4': l.update(width=W, height=H, primary_tileset='gTileset_GeneralMoon', secondary_tileset='gTileset_MoonRoad')
 json.dump(L, open('data/layouts/layouts.json', 'w'), indent=2); open('data/layouts/layouts.json', 'a').write('\n')
-json.dump({'w': W, 'h': H, 'obj': OBJ, 'hid': HID, 'signs': SIGNS, 'face': FACE, 'sight': SIGHT, 'tall': TALL, 'gap': sorted(GAPC), 'center': CENTER, 'arch1': ARCH1, 'arch2': ARCH2, 'doors': sorted(DOORS), 'south_cols': SOUTH_COLS, 'east_rows': EAST_ROWS}, open('/tmp/route4_info.json', 'w'))
+json.dump({'w': W, 'h': H, 'obj': OBJ, 'hid': HID, 'signs': SIGNS, 'face': FACE, 'sight': SIGHT, 'tall': TALL, 'gap': sorted(GAPC), 'center': CENTER, 'arch1': ARCH1, 'arch2': ARCH2, 'doors': sorted(DOORS)}, open('/tmp/route4_info.json', 'w'))
 blk = sorted([x, y] for (x, y) in ((x, y) for y in range(H) for x in range(W)) if blocked((x, y)))
 json.dump({'w': W, 'h': H, 'blocked': blk}, open('/tmp/route4_col.json', 'w'))
 print('route 4 : metatuiles', len(SEC_ENT), 'tuiles art', len(ART_T))

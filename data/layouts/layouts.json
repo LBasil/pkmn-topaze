@@ -909,8 +909,8 @@
     {
       "id": "LAYOUT_ROUTE4",
       "name": "Route4_Layout",
-      "width": 96,
-      "height": 26,
+      "width": 40,
+      "height": 84,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_GeneralMoon",

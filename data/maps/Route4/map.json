@@ -18,8 +18,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
-      "x": 22,
-      "y": 20,
+      "x": 25,
+      "y": 67,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -32,8 +32,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 70,
-      "y": 15,
+      "x": 33,
+      "y": 37,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
@@ -46,8 +46,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 90,
-      "y": 14,
+      "x": 19,
+      "y": 23,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -60,8 +60,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BOY",
-      "x": 9,
-      "y": 16,
+      "x": 23,
+      "y": 79,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 1,
@@ -74,8 +74,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
-      "x": 90,
-      "y": 12,
+      "x": 29,
+      "y": 36,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 1,
@@ -88,8 +88,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
-      "x": 93,
-      "y": 12,
+      "x": 32,
+      "y": 36,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
@@ -102,106 +102,106 @@
   ],
   "warp_events": [
     {
-      "x": 40,
-      "y": 9,
+      "x": 20,
+      "y": 51,
       "elevation": 0,
       "dest_map": "MAP_MT_MOON_1F",
       "dest_warp_id": "3"
     },
     {
-      "x": 68,
-      "y": 9,
+      "x": 25,
+      "y": 18,
       "elevation": 0,
       "dest_map": "MAP_MT_MOON_B1F",
       "dest_warp_id": "7"
     },
     {
       "x": 24,
-      "y": 16,
+      "y": 63,
       "elevation": 0,
       "dest_map": "MAP_ROUTE4_POKEMON_CENTER_1F",
       "dest_warp_id": "1"
     },
     {
-      "x": 0,
-      "y": 10,
+      "x": 18,
+      "y": 83,
       "elevation": 0,
       "dest_map": "MAP_ROUTE3",
       "dest_warp_id": "5"
     },
     {
-      "x": 0,
-      "y": 11,
+      "x": 19,
+      "y": 83,
       "elevation": 0,
       "dest_map": "MAP_ROUTE3",
       "dest_warp_id": "5"
     },
     {
-      "x": 0,
-      "y": 12,
+      "x": 20,
+      "y": 83,
       "elevation": 0,
       "dest_map": "MAP_ROUTE3",
       "dest_warp_id": "5"
     },
     {
-      "x": 0,
-      "y": 13,
+      "x": 21,
+      "y": 83,
       "elevation": 0,
       "dest_map": "MAP_ROUTE3",
       "dest_warp_id": "5"
     },
     {
-      "x": 0,
-      "y": 11,
+      "x": 19,
+      "y": 83,
       "elevation": 0,
       "dest_map": "MAP_ROUTE3",
       "dest_warp_id": "5"
     },
     {
-      "x": 0,
-      "y": 12,
+      "x": 18,
+      "y": 83,
       "elevation": 0,
       "dest_map": "MAP_ROUTE3",
       "dest_warp_id": "5"
     },
     {
-      "x": 0,
-      "y": 10,
+      "x": 20,
+      "y": 83,
       "elevation": 0,
       "dest_map": "MAP_ROUTE3",
       "dest_warp_id": "5"
     },
     {
-      "x": 0,
-      "y": 13,
+      "x": 21,
+      "y": 83,
       "elevation": 0,
       "dest_map": "MAP_ROUTE3",
       "dest_warp_id": "5"
     },
     {
-      "x": 95,
-      "y": 14,
+      "x": 39,
+      "y": 34,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY",
       "dest_warp_id": "15"
     },
     {
-      "x": 95,
-      "y": 15,
+      "x": 39,
+      "y": 35,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY",
       "dest_warp_id": "16"
     },
     {
-      "x": 95,
-      "y": 16,
+      "x": 39,
+      "y": 36,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY",
       "dest_warp_id": "16"
     },
     {
-      "x": 95,
-      "y": 17,
+      "x": 39,
+      "y": 37,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY",
       "dest_warp_id": "17"
@@ -211,24 +211,24 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 37,
-      "y": 15,
+      "x": 19,
+      "y": 57,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route4_EventScript_MtMoonSign"
     },
     {
       "type": "sign",
-      "x": 8,
-      "y": 10,
+      "x": 20,
+      "y": 76,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Route4_EventScript_RouteSign"
     },
     {
       "type": "hidden_item",
-      "x": 49,
-      "y": 10,
+      "x": 31,
+      "y": 54,
       "elevation": 3,
       "item": "ITEM_GREAT_BALL",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE4_GREAT_BALL",
@@ -237,8 +237,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 7,
-      "y": 10,
+      "x": 22,
+      "y": 77,
       "elevation": 3,
       "item": "ITEM_PERSIM_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE4_PERSIM_BERRY",
@@ -247,8 +247,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 66,
-      "y": 15,
+      "x": 35,
+      "y": 37,
       "elevation": 3,
       "item": "ITEM_RAZZ_BERRY",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE4_RAZZ_BERRY",
