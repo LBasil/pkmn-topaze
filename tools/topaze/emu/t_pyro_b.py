@@ -5,7 +5,7 @@ import json
 P.B = {tuple(c) for c in json.load(open('/tmp/pyropia_col.json'))['blocked']}
 NP = json.load(open('/tmp/pyropia_npc.json')); DR = json.load(open('/tmp/pyropia_doors.json'))
 P.B |= {tuple(c) for k, c in NP.items() if k != 'hidden'}
-P.B |= {(22, 39), (23, 39)} | {(47, 22), (47, 23)}
+P.B |= {(22, 39), (23, 39)} | {(47, 25), (47, 26)}
 start('py_0')
 sh(['key UP 18', 'run 20'])
 for k, (x, y) in DR.items():

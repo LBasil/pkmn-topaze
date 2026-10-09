@@ -97,14 +97,7 @@ def claim(x, y, w, h, name):
             assert 0 <= x + i <= W - 1 and 0 <= y + j <= H - 1, (name, x + i, y + j)
             assert (x + i, y + j) not in OCC, 'chevauchement %s avec %s en %s' % (name, OCC[(x + i, y + j)], (x + i, y + j))
             OCC[(x + i, y + j)] = name
-# ---- relief : 3 terrasses (sommet / milieu / bas) separees par des murs de roche decales, escaliers, cadre de falaises
-# portes : sud x=22..23 (y 38..39) ; est y=25..26 (x 46..47)
-FACE = 628
-def wallh(x0, x1, y, stairs=()):
-    """mur de soutenement de 2 cases : bandeau de roche (625) au-dessus, face (628) en dessous"""
-    for x in range(x0, x1 + 1):
-        if any(a <= x <= b for (a, b) in stairs): continue
-        claim(x, y - 1, 1, 2, 'mur'); put(x, y - 1, remap(0x400 | 625)); put(x, y, remap(0x400 | FACE))
+# ---- cadre de falaises : nord (625 plateau / 628 front), ouest 626, est 626 en miroir, sud plateau ; portes sud x=22..23, est y=22..23
 for x in range(W):
     put(x, 0, remap(0x400 | 625)); put(x, 1, remap(0x400 | 628))
     put(x, H - 1, remap(0x400 | 625)); put(x, H - 2, remap(0x400 | 625))
@@ -113,21 +106,15 @@ for y in range(2, H - 2):
     put(W - 2, y, remap(0x400 | 626, True)); put(W - 1, y, remap(0x400 | 626, True))
 for x in (22, 23):
     for y in (H - 2, H - 1): put(x, y, GRASS)
-for y in (25, 26):
+for y in (22, 23):
     for x in (W - 2, W - 1): put(x, y, GRASS)
 for (x, y) in list(G):
     if x in (0, 1, W - 2, W - 1) or y in (0, 1, H - 2, H - 1): OCC[(x, y)] = 'cadre'
-STAIRS = []                                    # cases d'escalier (marchables, dessinees)
-W1A = (2, 29, 11); W1B = (30, 45, 12); W2A = (2, 24, 20); W2B = (26, 45, 24)
-ST = {'W1A': [(22, 23)], 'W1B': [(42, 43)], 'W2A': [(22, 23)], 'W2B': [(40, 41)]}
-for nm, (x0, x1, y) in (('W1A', W1A), ('W1B', W1B), ('W2A', W2A), ('W2B', W2B)):
-    wallh(x0, x1, y, ST[nm])
-    for (a, b) in ST[nm]:
-        for x in range(a, b + 1):
-            for yy in (y - 1, y): claim(x, yy, 1, 1, 'escalier'); STAIRS.append((x, yy))
-for y in range(19, 25):                                  # joint vertical : le milieu-est domine le bas-ouest (mur miroir : face tournee vers l'ouest)
-    claim(25, y, 1, 1, 'mur'); put(25, y, remap(0x400 | 626, True))
-# ---- lacs de lave : ouest = bassin de Lavaridge (6x8) ; est = grand lac (rectangle bordé de roche)
+# ---- pins decoratifs (1 case, bloques) en bordure interieure
+PINE = [198, 22, 14]
+def pine(x, y): claim(x, y, 1, 1, 'pin'); put(x, y, remap(0x400 | PINE[(x * 3 + y) % 3]))
+
+# ---- batiments : morceaux de Lavaridge poses au coin (dx, dy)
 def chunk(x0, y0, cw, ch, dx, dy, name):
     claim(dx, dy, cw, ch, name); doors = []
     for j in range(ch):
@@ -135,70 +122,49 @@ def chunk(x0, y0, cw, ch, dx, dy, name):
             v = lv(x0 + i, y0 + j); put(dx + i, dy + j, remap(v))
             if 0x60 <= beh(v & 0x3ff) <= 0x6f: doors.append((dx + i, dy + j))
     return doors
-def lake(x0, y0, w, h, name):
-    claim(x0, y0, w, h, name)
-    for j in range(h):
-        for i in range(w):
-            top, bot, lef, rig = j == 0, j == h - 1, i == 0, i == w - 1
-            if top: m = 665 if lef else 669 if rig else (666, 667)[i % 2]
-            elif bot: m = 689 if lef else 693 if rig else (690, 691)[i % 2]
-            elif lef: m = 673
-            elif rig: m = 677
-            else: m = (675, 699, 675, 700, 797)[(i * 3 + j) % 5] if (i + j) % 4 == 0 else 675
-            put(x0 + i, y0 + j, remap(0x400 | m))
 D = {}
-chunk(2, 2, 6, 8, 4, 2, 'lac ouest')
-lake(31, 3, 10, 5, 'lac est')
-D['gym'] = chunk(2, 11, 6, 5, 20, 3, 'arene')
-D['museumA'] = chunk(11, 12, 4, 4, 4, 13, 'musee aile A')
-D['museumB'] = chunk(15, 12, 4, 4, 8, 13, 'musee aile B')
-D['center'] = chunk(8, 3, 4, 4, 14, 13, 'centre pokemon')
-D['mart'] = chunk(14, 2, 4, 4, 36, 13, 'boutique')
+D['pool'] = chunk(2, 2, 6, 8, 4, 3, 'lac de lave')
+D['gym'] = chunk(2, 11, 6, 5, 6, 14, 'arene')
+D['center'] = chunk(8, 3, 4, 4, 14, 5, 'centre pokemon')
+D['mart'] = chunk(14, 2, 4, 4, 36, 12, 'boutique')
+D['museumA'] = chunk(11, 12, 4, 4, 27, 5, 'musee aile A')
+D['museumB'] = chunk(15, 12, 4, 4, 31, 5, 'musee aile B')
 D['house1'] = chunk(11, 12, 4, 4, 38, 29, 'maison 1')
 D['house2'] = chunk(15, 12, 4, 4, 12, 29, 'maison 2')
 D['hallE'] = chunk(11, 12, 4, 4, 28, 29, 'maison deco E')
 D['hallW'] = chunk(15, 12, 4, 4, 5, 29, 'maison deco O')
-D['hallA'] = chunk(15, 12, 4, 4, 5, 22, 'maison deco A')
-D['hallB'] = chunk(11, 12, 4, 4, 11, 23, 'maison deco B')
-D['hallC'] = chunk(11, 12, 4, 4, 30, 13, 'maison deco C')
-D['hallD'] = chunk(15, 12, 4, 4, 30, 17, 'maison deco D') if False else []
-print('portes', {k: v for k, v in D.items()})
-DECO = ('hallE', 'hallW', 'hallA', 'hallB', 'hallC')
-for k in DECO:                               # maisons decoratives : la porte devient une fenetre
+D['hallN'] = chunk(11, 12, 4, 4, 38, 4, 'maison deco NE')
+# maisons purement decoratives : la porte devient un mur (pas de warp -> pas de porte qui ne s'ouvre pas)
+for k in ('hallE', 'hallW', 'hallN'):
     x, y = D[k][0]
     put(x, y - 1, remap(0x400 | 11)); put(x, y, remap(0x400 | 19)); D[k] = []
-D = {k: v for k, v in D.items() if k != 'hallD'}
-for k in list(D): assert D[k] or k in DECO, ('pas de porte', k)
+print('portes', {k: v for k, v in D.items() if k != 'pool'})
+for k in ('pool',): D.pop(k)
+DECO = ('hallE', 'hallW', 'hallN')
+for k in list(D):
+    assert D[k] or k in DECO, ('pas de porte', k)
 DOORS = {k: v[0] for k, v in D.items() if v}
+DECO_FRONT = {'hallE': (29, 32), 'hallW': (6, 32), 'hallN': (39, 7)}
 json.dump(DOORS, open('/tmp/pyropia_doors.json', 'w'))
-# ---- chemins (autotile 280..298, largeur 2)
+
+# ------------------------------------------------------------------ chemins (autotile du primaire 280..298), larges de 2 cases
 PATH = set()
 def pr(x0, y0, x1, y1):
     for y in range(y0, y1 + 1):
         for x in range(x0, x1 + 1): PATH.add((x, y))
-fr = lambda k: (DOORS[k][0], DOORS[k][1] + 1)
-pr(22, 8, 23, H - 1)                    # avenue (de l'arene a la sortie sud)
-pr(11, 8, 29, 9)                        # esplanade devant l'arene
-pr(24, 8, 45, 9)                        # promenade sous le grand lac
-pr(42, 13, 43, 16)                      # descente est : sommet -> milieu
-pr(42, 10, 43, 10)
-pr(24, 25, W - 1, 26)                   # rue est (sortie est)
+pr(22, 2, 23, H - 1)                    # avenue (sortie sud)
+pr(3, 22, W - 1, 23)                    # rue est-ouest (sortie est)
 pr(3, 33, 44, 34)                       # rue du sud
-pr(4, 17, 41, 18)                       # rue du milieu
-pr(40, 19, 41, 22)                      # milieu -> bas (escalier est)
-for k in ('museumA', 'museumB', 'center'): pr(fr(k)[0], fr(k)[1], fr(k)[0] + 1, 18)
-pr(fr('mart')[0], fr('mart')[1], fr('mart')[0] + 1, 18)
-pr(fr('gym')[0], fr('gym')[1], fr('gym')[0] + 1, 9)
+fr = lambda k: (DOORS[k][0], DOORS[k][1] + 1)
+pr(fr('gym')[0], fr('gym')[1], fr('gym')[0] + 1, 21)
+pr(fr('center')[0], fr('center')[1], fr('center')[0] + 1, 21)
+pr(23, 10, 41, 11)                      # rue du musee
+for k in ('museumA', 'museumB'): pr(fr(k)[0], fr(k)[1], fr(k)[0] + 1, 10)
+pr(fr('mart')[0], fr('mart')[1], fr('mart')[0] + 1, 21)
 for k in ('house1', 'house2'): pr(fr(k)[0], fr(k)[1], fr(k)[0] + 1, 33)
-pr(10, 20, 11, 33) if False else None
-pr(5, 27, 6, 28) if False else None
-# les cases de mur / escalier ne sont pas des chemins
-for c in list(PATH):
-    if OCC.get(c) in ('mur', 'escalier'): PATH.discard(c)
 for (x, y) in PATH: assert (x, y) not in OCC or OCC[(x, y)] in ('cadre',), ('chemin sur un decor', (x, y), OCC.get((x, y)))
 def path_id(x, y):
-    N = (x, y - 1) in PATH or (x, y - 1) in STAIRS or y == 0; S = (x, y + 1) in PATH or (x, y + 1) in STAIRS or y == H - 1
-    Wn = (x - 1, y) in PATH or x == 0; E_ = (x + 1, y) in PATH or x == W - 1
+    N = (x, y - 1) in PATH or y == 0; S = (x, y + 1) in PATH or y == H - 1; Wn = (x - 1, y) in PATH or x == 0; E_ = (x + 1, y) in PATH or x == W - 1
     if N and S and Wn and E_: return 289
     if not N and not Wn and S and E_: return 280
     if not N and not E_ and S and Wn: return 282
@@ -211,13 +177,8 @@ def path_id(x, y):
     return 289
 for (x, y) in PATH:
     put(x, y, 0x3000 | path_id(x, y)); OCC[(x, y)] = 'chemin'
-# ---- pins en bordure
-PINE = [198, 22, 14]
-def pine(x, y): claim(x, y, 1, 1, 'pin'); put(x, y, remap(0x400 | PINE[(x * 3 + y) % 3]))
-SIGN = remap(0x400 | 3)
-def sign(x, y): claim(x, y, 1, 1, 'panneau'); put(x, y, SIGN)
-SIGNS = {'museum': (12, 16), 'police': (42, 27), 'gym': (19, 7), 'tips': (25, 35), 'city': (21, 35)}
-for k, c in SIGNS.items(): sign(*c)
+# les 4 cases d'angle de croisement internes : on garde 289 (centre) ; bord de carte ouvert aux portes
+
 # ------------------------------------------------------------------ art procedural : vents de braise, braseros, cairn de flamme
 used_pals = {q >> 12 for e in SEC_ENT for q in e}
 FREE = [p for p in range(7, 13) if p not in used_pals]
@@ -290,41 +251,38 @@ def slice_all(im, bw, bh): return {(i, j): meta(im.crop((i * 16, j * 16, i * 16 
 CAIRN = slice_all(cairn(), 3, 3); VENT = [meta(vent(0)), meta(vent(1))]; BRAZ = meta(brazier()); SPIRE = [meta(spire(0)), meta(spire(1))]
 def art1(x, y, m, name, blocked=True):
     claim(x, y, 1, 1, name); put(x, y, ('ARTRAW', m, 0x400 if blocked else 0x3000))
-def stairs():
-    im = ground_bg(16, 16); d = ImageDraw.Draw(im)
-    for k, y in enumerate((0, 4, 8, 12)):
-        d.rectangle((0, y, 15, y + 2), fill=(8 if k % 2 else 7), outline=None); d.line([(0, y + 3), (15, y + 3)], fill=5)
-    d.line([(0, 0), (0, 15)], fill=5); d.line([(15, 0), (15, 15)], fill=5)
-    return im
-STAIR = meta(stairs())
-
-for (x, y) in STAIRS: put(x, y, ('ARTRAW', STAIR, 0x3000))
 for (i, j), m in CAIRN.items():
-    claim(16 + i, 22 + j, 1, 1, 'cairn'); put(16 + i, 22 + j, ('ARTRAW', m, 0x400))
-def art1(x, y, m, name, blocked=True):
-    claim(x, y, 1, 1, name); put(x, y, ('ARTRAW', m, 0x400 if blocked else 0x3000))
-for (x, y) in ((21, 5), (21, 8), (24, 13), (21, 13), (24, 16), (21, 16), (21, 22), (24, 22), (21, 28), (24, 28), (21, 31), (24, 31), (21, 36), (24, 36), (9, 19), (18, 17), (36, 18), (3, 20)):
+    claim(18 + i, 16 + j, 1, 1, 'cairn'); put(18 + i, 16 + j, ('ARTRAW', m, 0x400))
+for (x, y) in ((21, 4), (24, 4), (21, 8), (24, 8), (21, 14), (24, 14), (21, 19), (24, 19), (21, 26), (24, 26), (21, 30), (24, 30), (21, 36), (24, 36), (9, 21), (12, 21), (14, 24), (17, 24)):
     if (x, y) not in OCC: art1(x, y, BRAZ, 'brasero')
-for (x, y, v) in ((6, 12, 0), (12, 15, 1), (27, 14, 0), (34, 20, 1), (45, 20, 0), (28, 4, 1), (11, 5, 0), (30, 6, 1), (15, 24, 0), (28, 22, 1), (33, 28, 0), (35, 25 + 3, 1), (9, 36, 0), (17, 36, 1), (44, 36, 0), (3, 26, 1)):
-    if (x, y) not in OCC: art1(x, y, VENT[v], 'vent', blocked=False)
-for (x, y, v) in ((3, 12, 0), (3, 18, 1), (26, 12, 0), (44, 14, 1), (44, 22, 0), (26, 22, 1), (20, 14, 0), (14, 20, 1), (43, 36, 0), (3, 36, 1), (30, 36, 0), (11, 10, 1), (28, 3, 0)):
+for (x, y, v) in ((6, 24, 0), (11, 26, 1), (17, 27, 0), (33, 17, 1), (30, 25, 0), (35, 24, 1), (42, 22 - 5, 0), (26, 14, 1), (17, 14, 0), (3, 12, 1), (44, 13, 0), (34, 36, 1), (8, 36, 0), (15, 36, 1), (41, 24, 0)):
+    if not any((x + i, y + j) in OCC for i in (0,) for j in (0,)): art1(x, y, VENT[v], 'vent', blocked=False)
+for (x, y, v) in ((3, 18, 0), (3, 25, 1), (44, 17, 0), (43, 24, 1), (20, 25, 0), (26, 24, 1), (44, 36, 0), (3, 36, 1), (20, 36, 1), (30, 36, 0)):
     if (x, y) not in OCC: art1(x, y, SPIRE[v], 'obsidienne')
+# ---- pins en bordure
+for (x, y) in [(2, yy) for yy in range(2, 12)] + [(45, yy) for yy in range(2, 21)] + [(xx, 37) for xx in range(2, 12)] + [(xx, 37) for xx in range(38, 46)] + [(45, yy) for yy in range(25, 38)] + [(2, yy) for yy in range(24, 37)]:
+    if (x, y) not in OCC and (x, y) not in PATH: pine(x, y)
+# ---- bosquets de pins calcines (hasard repete) dans les coins libres
 def grove(x0, y0, x1, y1, n):
     k = 0; tries = 0
     while k < n and tries < 400:
         tries += 1; x = rnd.randint(x0, x1); y = rnd.randint(y0, y1)
         if all((x + i, y + j) not in OCC for i in (-1, 0, 1) for j in (-1, 0, 1)) and not any((x + i, y + j) in PATH for i in (-2, -1, 0, 1, 2) for j in (-2, -1, 0, 1, 2)): pine(x, y); k += 1
-for (x, y) in [(2, yy) for yy in range(2, 38)] + [(45, yy) for yy in range(2, 38)] + [(xx, 37) for xx in range(2, 46)]:
-    if (x, y) not in OCC and (x, y) not in PATH and rnd.random() < 0.7: pine(x, y)
-grove(3, 3, 3, 10, 2); grove(26, 3, 29, 10, 3); grove(5, 12, 7, 12, 1); grove(26, 13, 29, 22, 5); grove(43, 13, 45, 22, 4); grove(3, 22, 10, 28, 5); grove(26, 24, 39, 32, 8)
-grove(14, 24, 20, 28, 4); grove(14, 36, 40, 36, 8)
+grove(3, 24, 11, 28, 7); grove(16, 25, 21, 28, 4); grove(3, 12, 5, 21, 4); grove(40, 16, 44, 21, 6); grove(40, 24, 44, 28, 5)
+grove(14, 12, 21, 16, 4); grove(33, 24, 44, 27, 5); grove(24, 14, 34, 21, 5); grove(3, 35, 44, 36, 8); grove(24, 24, 27, 28, 3)
+# ---- panneaux
+SIGN = remap(0x400 | 3)
+def sign(x, y): claim(x, y, 1, 1, 'panneau'); put(x, y, SIGN)
+SIGNS = {'museum': (26, 9), 'police': (42, 24), 'gym': (7, 19), 'tips': (25, 35), 'city': (21, 35)}
+for k, c in SIGNS.items(): sign(*c)
+
 # ------------------------------------------------------------------ accessibilite / PNJ
-NPC = {'lass': (10, 19 - 1), 'fatman': (26, 28), 'bugcatcher': (30, 20), 'hidden': (34, 21)}
+NPC = {'lass': (13, 20), 'fatman': (26, 25), 'bugcatcher': (34, 19), 'hidden': (30, 20)}
 def raw_blocked(c):
     v = G[c]
-    if isinstance(v, tuple): return bool(v[2] & 0xc00)
+    if isinstance(v, tuple): return True
     return bool(v & 0xc00)
-seen = {(22, 34)}; q = collections.deque([(22, 34)])
+seen = {(22, 22)}; q = collections.deque([(22, 22)])
 while q:
     c = q.popleft()
     for d in ((0, 1), (1, 0), (-1, 0), (0, -1)):
@@ -334,7 +292,7 @@ for k, c in NPC.items():
     assert c not in OCC or OCC[c] in ('chemin',), ('PNJ sur un decor', k, c, OCC.get(c))
     assert c in seen, ('PNJ inaccessible', k, c)
 for k, (x, y) in DOORS.items(): assert (x, y + 1) in seen, ('porte inaccessible', k, (x, y))
-for c in ((22, H - 1), (23, H - 1), (W - 1, 25), (W - 1, 26)): assert c in seen, c
+for c in ((22, H - 1), (23, H - 1), (W - 1, 22), (W - 1, 23)): assert c in seen, c
 for k, c in SIGNS.items(): assert (c[0], c[1] + 1) in seen or (c[0], c[1] - 1) in seen or (c[0] - 1, c[1]) in seen or (c[0] + 1, c[1]) in seen, ('panneau inaccessible', k)
 json.dump(NPC, open('/tmp/pyropia_npc.json', 'w')); json.dump({k: list(v) for k, v in SIGNS.items()}, open('/tmp/pyropia_signs.json', 'w'))
 

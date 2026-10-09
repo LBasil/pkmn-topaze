@@ -18,7 +18,7 @@ d['warp_events'] = [warp(*DR['museumA'], 'MAP_PEWTER_CITY_MUSEUM_1F', 1), warp(*
                     warp(*DR['gym'], 'MAP_PEWTER_CITY_GYM', 1), warp(*DR['mart'], 'MAP_PEWTER_CITY_MART', 1), warp(*DR['house1'], 'MAP_PEWTER_CITY_HOUSE1', 1),
                     warp(*DR['center'], 'MAP_PEWTER_CITY_POKEMON_CENTER_1F', 1), warp(*DR['house2'], 'MAP_PEWTER_CITY_HOUSE2', 1),
                     warp(22, 39, 'MAP_ROUTE2', 15), warp(23, 39, 'MAP_ROUTE2', 16),
-                    warp(47, 25, 'MAP_ROUTE3', 0), warp(47, 26, 'MAP_ROUTE3', 1)]
+                    warp(47, 22, 'MAP_ROUTE3', 0), warp(47, 23, 'MAP_ROUTE3', 1)]
 d['connections'] = []
 d['coord_events'] = []
 # ---- panneaux (les 5 d'origine) + objet cache
