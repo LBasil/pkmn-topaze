@@ -14,4 +14,4 @@ path = [tuple(c) for c in info['path']]
 for y in (6, 13, 19):
     tgt = next(c for c in path if c[1] == y and tuple(c) not in P.B); print(tgt, goto(tgt, maxit=30))
 print(sh(['shot r2_north.ppm']))
-print('portail nord ->', goto((13, 26), maxit=30), sh(['key UP 40', 'run 120', 'shot r2_forestN.ppm']))
+print('portail nord ->', goto((13, 25), maxit=30), sh(['key DOWN 40', 'run 120', 'shot r2_forestN.ppm']))

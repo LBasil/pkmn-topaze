@@ -124,12 +124,12 @@ for y in range(2, H - 2, 2):
     tree(0, y); tree(W - 2, y)
 PATH = set()
 WALL_Y0, WALL_Y1 = 28, 33                         # falaise pleine largeur : la foret passe dessous
-HS, HN = (12, 28), (12, 20)                       # portails de pierre 3x3 (coin haut-gauche)
-DOOR_S, DOOR_N = (13, 33), (13, 25)
+HS = (12, 26)                       # portails de pierre 3x3 (coin haut-gauche)
+DOOR_S, DOOR_N = (13, 33), (13, 26)
 RIDGE_Y = [9, 16, 40, 47]
 GAPS = [(15, 20), (4, 9), (4, 9), (16, 21)]       # breches (nord -> sud)
 WAY_S = [(12, H - 3), (12, H - 5), (18, 50), (18, 44), (6, 43), (6, 37), (13, 36), (13, 34)]
-WAY_N = [(13, 26), (9, 26), (6, 20), (6, 13), (17, 12), (17, 6), (13, 3), (13, 1)]
+WAY_N = [(12, 25), (9, 25), (6, 20), (6, 13), (17, 12), (17, 6), (13, 3), (13, 1)]
 def seg(a, b):
     (x0, y0), (x1, y1) = a, b
     n = max(abs(x1 - x0), abs(y1 - y0))
@@ -139,6 +139,7 @@ def seg(a, b):
         PATH.add((int(round(x)) + 1, int(round(y)) + 1))
 for W_ in (WAY_S, WAY_N):
     for a_, b_ in zip(W_, W_[1:]): seg(a_, b_)
+PATH -= {(HS[0] + i, HS[1] + j) for i in range(3) for j in range(8)}
 PATH |= {(12, H - 1), (13, H - 1), (12, H - 2), (13, H - 2), (12, 0), (13, 0), (12, 1), (13, 1)}
 def path_id(x, y):
     N = (x, y - 1) in PATH or y == 0; S = (x, y + 1) in PATH or y == H - 1; Wn = (x - 1, y) in PATH; E = (x + 1, y) in PATH
@@ -157,11 +158,11 @@ for (x, y) in PATH:
 def dil(cells, r):
     return {(x + i, y + j) for (x, y) in cells for i in range(-r, r + 1) for j in range(-r, r + 1)}
 CLEAR = dil(PATH, 1)
-HS_CELLS_ = {(HS[0] + i, HS[1] + j) for i in range(3) for j in range(6)}
+HS_CELLS_ = {(HS[0] + i, HS[1] + j) for i in range(3) for j in range(8)}
 # ---- panneaux, PNJ, objets (cases reservees avant les falaises)
 SIGN_S, SIGN_N = (10, H - 4), (10, 5)
 NPC = {'hiker': (21, 52), 'miner': (18, 20), 'ether': (21, 43), 'heal': (21, 5)}
-RES = dil([SIGN_S, SIGN_N] + list(NPC.values()), 1) | dil({(HN[0] + i, HN[1] + j) for i in range(3) for j in range(6)}, 1) | dil(HS_CELLS_, 1)
+RES = dil([SIGN_S, SIGN_N] + list(NPC.values()), 1) | dil(HS_CELLS_, 1)
 for c in NPC.values(): OCC[c] = 'pnj'
 # ---- falaise pleine largeur (la foret passe dessous) ; les deux portails sont dedans / devant
 rnd = random.Random(2020)
@@ -171,7 +172,7 @@ def wob(seed_):
         v = max(-1, min(1, v + r.choice((-1, 0, 0, 1)))); out.append(v)
     return out
 WALL = set(); BLOB = {}; RIDGE = set()
-HS_CELLS = {(HS[0] + i, HS[1] + j) for i in range(3) for j in range(6)}
+HS_CELLS = {(HS[0] + i, HS[1] + j) for i in range(3) for j in range(8)}
 wt, wbm = wob(5), wob(9)
 for x in range(2, W - 2):
     top = WALL_Y0 + (1 if wt[x] > 0 else 0); bot = WALL_Y1 - (1 if wbm[x] < 0 else 0)
@@ -305,25 +306,34 @@ def vent_img(st):
     d.point((8, 7), fill=12)
     return im
 def tube_img(st):
-    im = ground_bg(48, 96, st); d = ImageDraw.Draw(im)
-    d.ellipse((0, 86, 47, 95), fill=13)
-    d.rectangle((4, 10, 43, 86), fill=7, outline=5)
-    d.rectangle((5, 11, 10, 85), fill=8); d.rectangle((38, 11, 42, 85), fill=6)
-    for y in range(22, 70, 12):
+    im = ground_bg(48, 128, st); d = ImageDraw.Draw(im)
+    d.ellipse((0, 118, 47, 127), fill=13)
+    d.rectangle((4, 16, 43, 118), fill=7, outline=5)
+    d.rectangle((5, 17, 10, 117), fill=8); d.rectangle((38, 17, 42, 117), fill=6)
+    for y in range(34, 100, 12):
         d.line([(5, y), (42, y)], fill=6); d.line([(5, y + 1), (42, y + 1)], fill=8)
         d.rectangle((3, y - 1, 44, y + 2), outline=5)
-    d.line([(23, 12), (23, 68)], fill=9)
-    d.ellipse((8, 0, 39, 20), fill=6, outline=5); d.ellipse((14, 4, 33, 15), fill=5)
-    d.ellipse((18, 6, 29, 12), fill=11); d.point((22, 8), fill=12); d.point((26, 9), fill=10)
-    d.rectangle((2, 68, 45, 88), fill=14, outline=5)
-    for y in range(71, 88, 5):
+    d.line([(23, 22), (23, 96)], fill=9)
+    d.ellipse((13, 56, 34, 74), fill=6, outline=5); d.ellipse((17, 60, 30, 70), fill=5)
+    d.ellipse((20, 62, 27, 68), fill=11); d.point((23, 64), fill=12); d.point((25, 66), fill=10)
+    d.rectangle((2, 0, 45, 20), fill=14, outline=5)
+    for y in range(4, 20, 5):
         d.line([(3, y), (44, y)], fill=13)
         for x in range(5 + (y % 2) * 4, 44, 8): d.line([(x, y), (x, y + 4)], fill=13)
-    d.line([(3, 69), (44, 69)], fill=15)
-    d.rectangle((18, 77, 29, 91), fill=5); d.ellipse((18, 72, 29, 82), fill=5)
-    d.rectangle((20, 79, 27, 91), fill=6); d.ellipse((20, 74, 27, 81), fill=6)
-    d.line([(21, 91), (26, 91)], fill=8)
-    for lx in (13, 34): d.rectangle((lx, 79, lx + 1, 82), fill=11); d.point((lx, 78), fill=12)
+    d.line([(3, 19), (44, 19)], fill=15)
+    d.rectangle((18, 4, 29, 15), fill=5); d.ellipse((18, 0, 29, 9), fill=5)
+    d.rectangle((20, 6, 27, 15), fill=6); d.ellipse((20, 2, 27, 9), fill=6)
+    d.line([(21, 15), (26, 15)], fill=8)
+    for lx in (13, 34): d.rectangle((lx, 5, lx + 1, 8), fill=11); d.point((lx, 4), fill=12)
+    d.rectangle((2, 100, 45, 120), fill=14, outline=5)
+    for y in range(103, 120, 5):
+        d.line([(3, y), (44, y)], fill=13)
+        for x in range(5 + (y % 2) * 4, 44, 8): d.line([(x, y), (x, y + 4)], fill=13)
+    d.line([(3, 101), (44, 101)], fill=15)
+    d.rectangle((18, 109, 29, 123), fill=5); d.ellipse((18, 104, 29, 114), fill=5)
+    d.rectangle((20, 111, 27, 123), fill=6); d.ellipse((20, 106, 27, 113), fill=6)
+    d.line([(21, 123), (26, 123)], fill=8)
+    for lx in (13, 34): d.rectangle((lx, 111, lx + 1, 114), fill=11); d.point((lx, 110), fill=12)
     return im
 def house_img(st):
     """portail de pierre 3x3 (la porte est la case basse centrale)."""
@@ -364,7 +374,7 @@ for st in range(3): ART[('sign', st)] = meta(sign_art(st), st)
 for st in range(3):
     ART[('vent', st)] = meta(vent_img(st), st); ART[('stump', st)] = meta(stump_img(st), st)
     pass
-b = tube_img(2); ART[('tube', 2)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), 2) for j in range(6) for i in range(3)}
+b = tube_img(2); ART[('tube', 2)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), 2) for j in range(8) for i in range(3)}
 def rock_img(mask, st, var):
     """case de falaise ; mask = bits N(1) E(2) S(4) O(8) : 1 si la voisine est aussi de la roche. Indices : 14 corps, 15 clair, 13 face sombre, 5 contour."""
     im = ground_bg(16, 16, st); d = ImageDraw.Draw(im)
@@ -412,12 +422,12 @@ art_big(*STONE)
 claim(*SIGN_S, 1, 1, 'panneau'); ART_PLACE[SIGN_S] = ART[('sign', 0)]
 claim(*SIGN_N, 1, 1, 'panneau'); ART_PLACE[SIGN_N] = ART[('sign', 2)]
 DOORS = {DOOR_S, DOOR_N}
-for (hx, hy), nm in ((HS, 'portail sud'), (HN, 'portail nord')):
-    for j in range(6):
+for (hx, hy), nm in ((HS, 'tuyau'),):
+    for j in range(8):
         for i in range(3):
             c = (hx + i, hy + j)
             if c in OCC and OCC[c] == 'roche': del OCC[c]
-    claim(hx, hy, 3, 6, nm)
+    claim(hx, hy, 3, 8, nm)
     for (i, j), k in ART[('tube', 2)].items(): ART_PLACE[(hx + i, hy + j)] = k
 for c in NPC.values(): assert c not in ART_PLACE, ('PNJ sur un decor', c)
 # ---- bosquets d'arbres
