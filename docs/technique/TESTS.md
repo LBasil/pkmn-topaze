@@ -120,3 +120,5 @@ Piste réaliste : faire d'abord le jeu jouable, puis ajouter un follower **limit
   - ROM jetables : Grenalux nord redirigé vers le sud (warps 2,3) puis vers le nord (warps 4,5) de la Route 2. Bancs : `t_route2a.py`/`t_route2b.py` (sud), `t_route2c.py`/`t_route2d.py` (nord).
   - OK : chemin sud jusqu'au portail et entrée dans l'entrée sud de la forêt ; chemin nord depuis Pyropia jusqu'au portail et entrée dans l'entrée nord ; falaise étanche (assertion de non-communication dans le script).
   - Non testés : PNJ (randonneur, mineur), panneaux, objets (Elixir, Antiparalysie), herbes hautes, traversée de la forêt (inchangée, verte), sorties vers Opanihrum/Pyropia dans les deux sens.
+
+  - v2 : entrée sud de la forêt testée avec la forêt calcinée (transition d'intro « CINDER FOREST » vue ; image encore verte avant recoloration, corrigée ensuite, non revérifiée à l'écran). Banc `t_route2e.py`.

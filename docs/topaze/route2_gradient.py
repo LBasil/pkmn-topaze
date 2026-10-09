@@ -50,7 +50,7 @@ def desat(c, f):
     h, l, s = colorsys.rgb_to_hls(*[x / 255 for x in c]); r, g, b = colorsys.hls_to_rgb(h, l, s * f)
     return int(r * 255 + .5), int(g * 255 + .5), int(b * 255 + .5)
 def stage_pal(i, t):
-    out = [c if k == 0 else (lerp(tint_garnet(*c), tint_opal(*c), t) if i == 5 else hlerp(tint_garnet(*c), tint_opal(*c), t)) for k, c in enumerate(ORIG[i])]
+    out = [c if k == 0 else lerp(tint_garnet(*c), tint_opal(*c), t) for k, c in enumerate(ORIG[i])]
     if i == 5: out = [out[0]] + [desat(c, 0.35 + 0.45 * t) for c in out[1:]]       # sable : pale au sud (avenue d'Opanihrum), terre brulee au nord
     return out
 SLOT = {0: {0: 0, 2: 2, 5: 5, 3: 12}, 1: {0: 1, 2: 3, 5: 4, 3: 12}, 2: {0: 7, 2: 8, 5: 9, 3: 12}}     # palette d'origine -> emplacement, par etage
@@ -91,12 +91,12 @@ G = {}; OCC = {}; STG = {}
 rnd = random.Random(1010)
 def stage_at(x, y):
     if x <= 3 or x >= W - 4 or y <= 3 or y >= H - 4: return stage_smooth(x, y)      # bordure d'arbres : meme etage que les arbres, sans grain
-    t = (H - 1 - y) / (H - 1)
+    t = max(0.0, min(1.0, (H - 1 - y) / 26.0))
     n = 0.35 * math.sin(x * 0.55 + y * 0.21) + 0.25 * math.sin(y * 0.37 - x * 0.3) + 0.2 * math.sin(x * 0.23 + y * 0.6)
     j = ((x * 73856093) ^ (y * 19349663)) % 1000 / 1000.0 - 0.5               # grain : fondu irregulier aux frontieres
     return max(0, min(2, int(round(2 * t + n * 0.45 + j * 0.5))))
 def stage_smooth(x, y):
-    t = (H - 1 - y) / (H - 1)
+    t = max(0.0, min(1.0, (H - 1 - y) / 26.0))
     n = 0.35 * math.sin(x * 0.55 + y * 0.21) + 0.25 * math.sin(y * 0.37 - x * 0.3) + 0.2 * math.sin(x * 0.23 + y * 0.6)
     return max(0, min(2, int(round(2 * t + n * 0.3))))
 def put(x, y, raw_flags, m, special=None, st=None):
@@ -235,7 +235,7 @@ GARNET = [(8, 10, 24), (22, 26, 52), (46, 54, 98), (92, 106, 168), (236, 242, 25
 OPAL = [(16, 6, 8), (46, 16, 16), (92, 34, 26), (156, 64, 34), (255, 224, 168), (255, 96, 32), (255, 172, 40), (255, 64, 84)]                # braise / obsidienne (arrivee)
 def art_pal(st):
     g = grass_cols(st); t = TS_[st]
-    cols = [hlerp(GARNET[i], OPAL[i], t) for i in range(8)]
+    cols = [lerp(GARNET[i], OPAL[i], t) for i in range(8)]
     sh = tuple(int(c * 0.55) for c in min(g, key=sum))
     return [(0, 0, 0)] + g + cols + [sh, lerp((70, 80, 106), (104, 64, 54), t), lerp((128, 140, 172), (178, 122, 98), t)], g
 for st in range(3):
@@ -323,6 +323,12 @@ def house_img(st):
     for lx in (14, 33): d.rectangle((lx, 31, lx + 1, 34), fill=11); d.point((lx, 30), fill=12)
     d.rectangle((21, 22, 26, 24), fill=8, outline=5); d.point((23, 23), fill=12)
     return im
+def stump_img(st):
+    im = ground_bg(16, 16, st); d = ImageDraw.Draw(im); d.ellipse((1, 10, 15, 15), fill=13)
+    d.polygon([(4, 14), (5, 5), (7, 3), (8, 6), (10, 2), (12, 5), (12, 14)], fill=6, outline=5)
+    d.line([(7, 6), (7, 12)], fill=10); d.line([(10, 5), (10, 9)], fill=11); d.point((8, 9), fill=12)
+    d.line([(5, 13), (11, 13)], fill=5)
+    return im
 ART = {}      # (nom, etage) -> indice(s) de metatuile d'art
 for st in range(3):
     ART[('sm0', st)] = meta(small(st, 0), st); ART[('sm1', st)] = meta(small(st, 1), st)
@@ -334,7 +340,7 @@ def sign_art(st):
     return im
 for st in range(3): ART[('sign', st)] = meta(sign_art(st), st)
 for st in range(3):
-    ART[('vent', st)] = meta(vent_img(st), st)
+    ART[('vent', st)] = meta(vent_img(st), st); ART[('stump', st)] = meta(stump_img(st), st)
     b = house_img(st); ART[('house', st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(3) for i in range(3)}
 def rock_img(mask, st, var):
     """case de falaise ; mask = bits N(1) E(2) S(4) O(8) : 1 si la voisine est aussi de la roche. Indices : 14 corps, 15 clair, 13 face sombre, 5 contour."""
@@ -374,7 +380,7 @@ for j in range(3):
 art_big(*STONE)
 for (x, y) in sorted(RIDGE):
     m = (((x, y - 1) in RIDGE) * 1) | (((x + 1, y) in RIDGE) * 2) | (((x, y + 1) in RIDGE) * 4) | (((x - 1, y) in RIDGE) * 8)
-    bx, by = BLOB[(x, y)]; ART_PLACE[(x, y)] = ROCK[(m, 1 if (x, y) in WALL else stage_smooth(bx, by), (x * 3 + y * 5) % 4 if m == 15 else (x + y) % 2)]                                  # la pierre du degrade, a l'est du chemin
+    bx, by = BLOB[(x, y)]; ART_PLACE[(x, y)] = ROCK[(m, 2 if (x, y) in WALL else stage_smooth(bx, by), (x * 3 + y * 5) % 4 if m == 15 else (x + y) % 2)]                                  # la pierre du degrade, a l'est du chemin
 # ---- panneaux, portails, pierre
 for c in NPC.values(): assert OCC[c] == 'pnj'
 for j in range(3):
@@ -389,7 +395,7 @@ for (hx, hy), nm in ((HS, 'portail sud'), (HN, 'portail nord')):
             c = (hx + i, hy + j)
             if c in OCC and OCC[c] == 'roche': del OCC[c]
     claim(hx, hy, 3, 3, nm)
-    for (i, j), k in ART[('house', 1)].items(): ART_PLACE[(hx + i, hy + j)] = k
+    for (i, j), k in ART[('house', 2)].items(): ART_PLACE[(hx + i, hy + j)] = k
 for c in NPC.values(): assert c not in ART_PLACE, ('PNJ sur un decor', c)
 # ---- bosquets d'arbres
 def near(x, y, r=1):
@@ -417,8 +423,15 @@ GR = lambda: [variant(GRASS_M, s) for s in range(3)]
 while placed < 30 and tries < 4000:
     tries += 1; x, y = rnd.randint(2, W - 3), rnd.randint(2, H - 4)
     if (x, y) not in OCC and (x, y) not in ART_PLACE and not near(x, y, 1) and (x, y) not in RES and G[(x, y)] & 0x3ff in GR():
-        st = stage_at(x, y); name = 'vent' if rnd.random() < (0.15 + 0.3 * st) else rnd.choice(('sm0', 'sm1'))
+        st = stage_at(x, y); r_ = rnd.random(); name = 'stump' if st > 0 and r_ < 0.18 * st else 'vent' if r_ < 0.15 + 0.3 * st else rnd.choice(('sm0', 'sm1'))
         art1(x, y, name); placed += 1
+# ---- foret brulee : souches calcinees de plus en plus nombreuses vers la falaise
+k_ = tries = 0
+while k_ < 34 and tries < 6000:
+    tries += 1; x, y = rnd.randint(2, W - 3), rnd.randint(16, 52)
+    if WALL_Y0 - 1 <= y <= WALL_Y1 + 1 or rnd.random() > 1 - abs(y - 30) / 22.0: continue
+    if (x, y) not in OCC and (x, y) not in ART_PLACE and not near(x, y, 1) and (x, y) not in RES and G[(x, y)] & 0x3ff in GR():
+        art1(x, y, 'stump'); k_ += 1
 for _ in range(34):
     cx, cy = rnd.randint(2, W - 3), rnd.randint(2, H - 4)
     for _ in range(rnd.randint(3, 7)):

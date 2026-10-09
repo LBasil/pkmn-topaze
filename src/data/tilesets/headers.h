@@ -856,3 +856,25 @@ const struct Tileset gTileset_DuskRoad =
     .metatileAttributes = gMetatileAttributes_DuskRoad,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralCinder =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralCinder,
+    .palettes = gTilesetPalettes_GeneralCinder,
+    .metatiles = gMetatiles_GeneralCinder,
+    .metatileAttributes = gMetatileAttributes_GeneralCinder,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_CinderForest =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CinderForest,
+    .palettes = gTilesetPalettes_CinderForest,
+    .metatiles = gMetatiles_CinderForest,
+    .metatileAttributes = gMetatileAttributes_CinderForest,
+    .callback = NULL,
+};

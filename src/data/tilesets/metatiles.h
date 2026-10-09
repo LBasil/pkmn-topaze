@@ -226,3 +226,9 @@ const u16 gMetatiles_GeneralDusk[] = INCBIN_U16("data/tilesets/primary/general_d
 const u32 gMetatileAttributes_GeneralDusk[] = INCBIN_U32("data/tilesets/primary/general_dusk/metatile_attributes.bin");
 const u16 gMetatiles_DuskRoad[] = INCBIN_U16("data/tilesets/secondary/dusk_road/metatiles.bin");
 const u32 gMetatileAttributes_DuskRoad[] = INCBIN_U32("data/tilesets/secondary/dusk_road/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralCinder[] = INCBIN_U16("data/tilesets/primary/general_cinder/metatiles.bin");
+const u32 gMetatileAttributes_GeneralCinder[] = INCBIN_U32("data/tilesets/primary/general_cinder/metatile_attributes.bin");
+
+const u16 gMetatiles_CinderForest[] = INCBIN_U16("data/tilesets/secondary/cinder_forest/metatiles.bin");
+const u32 gMetatileAttributes_CinderForest[] = INCBIN_U32("data/tilesets/secondary/cinder_forest/metatile_attributes.bin");

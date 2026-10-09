@@ -3,13 +3,13 @@ Route2_Text_RouteSign::
     .string "OPANIHRUM - PYROPIA$"
 
 Route2_Text_ForestSign::
-    .string "VIRIDIAN FOREST\n"
-    .string "The old wood runs under the cliff.$"
+    .string "CINDER FOREST\n"
+    .string "Nothing grows there anymore...$"
 
 Route2_Text_Hiker::
     .string "See how the dusk follows the road?\n"
     .string "Slate blue behind you, embers ahead.\p"
-    .string "The old wood under this cliff is the\n"
+    .string "The burnt wood under this cliff is the\n"
     .string "only way through. Mind the bugs!$"
 
 Route2_Text_Miner::
