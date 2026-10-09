@@ -4,7 +4,7 @@ Usage : python3 mapkit.py render <LAYOUT_ID> out.png [x0 y0 x1 y1]"""
 import json, struct, sys, os
 from PIL import Image
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
-TS = {'gTileset_General': 'data/tilesets/primary/general', 'gTileset_GeneralEmerald': 'data/tilesets/primary/general_emerald', 'gTileset_GeneralOpal': 'data/tilesets/primary/general_opal'}
+TS = {'gTileset_General': 'data/tilesets/primary/general', 'gTileset_GeneralEmerald': 'data/tilesets/primary/general_emerald', 'gTileset_GeneralOpal': 'data/tilesets/primary/general_opal', 'gTileset_GeneralGradient': 'data/tilesets/primary/general_gradient'}
 def ts_dir(name):
     if name in TS: return os.path.join(ROOT, TS[name])
     # gTileset_PalletTown -> secondary/pallet_town

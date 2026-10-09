@@ -790,3 +790,25 @@ const struct Tileset gTileset_RustboroOpal =
     .metatileAttributes = gMetatileAttributes_RustboroOpal,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralGradient =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralGradient,
+    .palettes = gTilesetPalettes_GeneralGradient,
+    .metatiles = gMetatiles_GeneralGradient,
+    .metatileAttributes = gMetatileAttributes_GeneralGradient,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GradientRoad =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_GradientRoad,
+    .palettes = gTilesetPalettes_GradientRoad,
+    .metatiles = gMetatiles_GradientRoad,
+    .metatileAttributes = gMetatileAttributes_GradientRoad,
+    .callback = NULL,
+};

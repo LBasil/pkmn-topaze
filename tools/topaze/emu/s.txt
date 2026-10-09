@@ -1,8 +1,11 @@
 run 2
 ls ./states/cur.ss
 run 2
-key DOWN 14
-run 4
+key UP 18
+run 20
+key DOWN 40
+run 100
+shot r1_back.ppm
 run 4
 readp 03005008 0 6
 ss ./states/cur.ss

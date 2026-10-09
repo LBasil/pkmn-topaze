@@ -211,3 +211,8 @@ const u16 gMetatiles_GeneralOpal[] = INCBIN_U16("data/tilesets/primary/general_o
 const u32 gMetatileAttributes_GeneralOpal[] = INCBIN_U32("data/tilesets/primary/general_opal/metatile_attributes.bin");
 const u16 gMetatiles_RustboroOpal[] = INCBIN_U16("data/tilesets/secondary/rustboro_opal/metatiles.bin");
 const u32 gMetatileAttributes_RustboroOpal[] = INCBIN_U32("data/tilesets/secondary/rustboro_opal/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralGradient[] = INCBIN_U16("data/tilesets/primary/general_gradient/metatiles.bin");
+const u32 gMetatileAttributes_GeneralGradient[] = INCBIN_U32("data/tilesets/primary/general_gradient/metatile_attributes.bin");
+const u16 gMetatiles_GradientRoad[] = INCBIN_U16("data/tilesets/secondary/gradient_road/metatiles.bin");
+const u32 gMetatileAttributes_GradientRoad[] = INCBIN_U32("data/tilesets/secondary/gradient_road/metatile_attributes.bin");

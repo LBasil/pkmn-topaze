@@ -16,11 +16,11 @@ Route1_Text_PutPotionAway::
     .string "the BAG's ITEMS POCKET.$"
 
 Route1_Text_CanJumpFromLedges::
-    .string "See those ledges along the road?\p"
-    .string "It's a bit scary, but you can jump\n"
-    .string "from them.\p"
-    .string "You can get back to GRENALUX\n"
-    .string "quicker that way.$"
+    .string "Notice how the grass changes color\n"
+    .string "as you walk this road?\p"
+    .string "Red near GRENALUX, black and teal\n"
+    .string "near OPANIHRUM.\p"
+    .string "Grown-ups say the crystals do it.$"
 
 Route1_Text_RouteSign::
     .string "ROUTE 1\n"

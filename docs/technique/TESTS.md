@@ -84,6 +84,10 @@
   - OK : Centre, Boutique (scène du colis d'Oak incluse), École, Maison (entrée/sortie) ; arène verrouillée (message + saut en arrière sur les deux cases) puis déverrouillée (les deux portes mènent à l'intérieur) ; vieil homme à la porte nord (barrage puis tutoriel) ; sorties nord/ouest/sud vers Route 2/22/1 et retours (tuiles propres, plus de brouillage) ; dialogues de 3 PNJ.
   - Non testés : PNJ errant « boy » (déplacements), arrivée en venant de la Route 1 sans ROM de test (même warps, vérifiés par les indices), combats d'arène (inchangés).
 
+### Route 1 du dégradé (émulateur)
+  - Banc : `tools/topaze/emu/t_route1a.py` (Grenalux -> Route 1) et `t_route1b.py` (`TOPAZE_COL=/tmp/route1_col.json`) : trajet complet suivant le chemin du sud au nord (herbes hautes évitées), entrée dans Opanihrum, retour par le warp. OK dans les deux sens ; le bord de carte est violet (neutre).
+  - Non testé : rencontres sauvages dans les herbes hautes, dialogue du garçon et du vendeur (textes seulement modifiés).
+
 ## À REPRENDRE : noms et équipes (placeholders)
 Tout ce qui a été inventé par Claude est **provisoire** et sera repassé avec Basil : noms, équipes, niveaux, dialogues et sprites des personnages du tournoi de la Ligue (Jasper, Coralie, Boris, Alma, Ruben), de l'inconnu de la route 22 et de Red (équipe/niveaux), des dresseurs de la Ligue, des textes d'arène et des lignes de PNJ réécrites, des CT données par les champions, des noms de badges et des trois textes de fin.
 **Ne sont pas des placeholders** (viennent des notes de Basil) : les 12 villes, les 8 champions (Kay, Sylvestre, Hera, Grim, Achlys, Nox, Eddie, Hepha) et leurs types, l'intrigue Onybris/Jirachi, les trois fins (principe), le postgame Giovanni puis Red avec cinématique Silver, le format de la Ligue.
