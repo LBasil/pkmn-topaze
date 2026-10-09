@@ -25,11 +25,6 @@
       "direction": "down"
     },
     {
-      "map": "MAP_ROUTE4",
-      "offset": 10,
-      "direction": "left"
-    },
-    {
       "map": "MAP_ROUTE9",
       "offset": 10,
       "direction": "right"
@@ -304,6 +299,27 @@
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_HOUSE5",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 0,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE4",
+      "dest_warp_id": "12"
+    },
+    {
+      "x": 0,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE4",
+      "dest_warp_id": "12"
+    },
+    {
+      "x": 0,
+      "y": 22,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE4",
+      "dest_warp_id": "13"
     }
   ],
   "coord_events": [

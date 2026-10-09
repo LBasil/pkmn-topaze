@@ -1701,3 +1701,45 @@ const u16 gTilesetPalettes_ScoriaRoad[][16] =
 	INCBIN_U16("data/tilesets/secondary/scoria_road/palettes/14.gbapal"),
 	INCBIN_U16("data/tilesets/secondary/scoria_road/palettes/15.gbapal"),
 };
+
+const u32 gTilesetTiles_GeneralMoon[] = INCBIN_U32("data/tilesets/primary/general_moon/tiles.4bpp.lz");
+const u16 gTilesetPalettes_GeneralMoon[][16] =
+{
+	INCBIN_U16("data/tilesets/primary/general_moon/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moon/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moon/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moon/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moon/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moon/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moon/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moon/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moon/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moon/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moon/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moon/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moon/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moon/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moon/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moon/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_MoonRoad[] = INCBIN_U32("data/tilesets/secondary/moon_road/tiles.4bpp.lz");
+const u16 gTilesetPalettes_MoonRoad[][16] =
+{
+	INCBIN_U16("data/tilesets/secondary/moon_road/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moon_road/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moon_road/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moon_road/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moon_road/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moon_road/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moon_road/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moon_road/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moon_road/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moon_road/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moon_road/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moon_road/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moon_road/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moon_road/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moon_road/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moon_road/palettes/15.gbapal"),
+};

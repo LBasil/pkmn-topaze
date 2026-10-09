@@ -900,3 +900,25 @@ const struct Tileset gTileset_ScoriaRoad =
     .metatileAttributes = gMetatileAttributes_ScoriaRoad,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralMoon =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralMoon,
+    .palettes = gTilesetPalettes_GeneralMoon,
+    .metatiles = gMetatiles_GeneralMoon,
+    .metatileAttributes = gMetatileAttributes_GeneralMoon,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_MoonRoad =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_MoonRoad,
+    .palettes = gTilesetPalettes_MoonRoad,
+    .metatiles = gMetatiles_MoonRoad,
+    .metatileAttributes = gMetatileAttributes_MoonRoad,
+    .callback = NULL,
+};

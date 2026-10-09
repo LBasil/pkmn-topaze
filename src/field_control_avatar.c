@@ -861,7 +861,7 @@ static bool8 IsTopazeStepWarpMap(void)
 {
     return gMapHeader.mapLayoutId == LAYOUT_PALLET_TOWN || gMapHeader.mapLayoutId == LAYOUT_ROUTE1 || gMapHeader.mapLayoutId == LAYOUT_ROUTE21_NORTH
         || gMapHeader.mapLayoutId == LAYOUT_VIRIDIAN_CITY || gMapHeader.mapLayoutId == LAYOUT_ROUTE2 || gMapHeader.mapLayoutId == LAYOUT_ROUTE22
-        || gMapHeader.mapLayoutId == LAYOUT_PEWTER_CITY || gMapHeader.mapLayoutId == LAYOUT_ROUTE3 || gMapHeader.mapLayoutId == LAYOUT_VIRIDIAN_FOREST || gMapHeader.mapLayoutId == LAYOUT_ROUTE4;
+        || gMapHeader.mapLayoutId == LAYOUT_PEWTER_CITY || gMapHeader.mapLayoutId == LAYOUT_ROUTE3 || gMapHeader.mapLayoutId == LAYOUT_VIRIDIAN_FOREST || gMapHeader.mapLayoutId == LAYOUT_ROUTE4 || gMapHeader.mapLayoutId == LAYOUT_CERULEAN_CITY;
 }
 
 static bool8 TryStartWarpEventScript(struct MapPosition *position, u16 metatileBehavior)

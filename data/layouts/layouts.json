@@ -909,12 +909,12 @@
     {
       "id": "LAYOUT_ROUTE4",
       "name": "Route4_Layout",
-      "width": 108,
-      "height": 20,
+      "width": 96,
+      "height": 26,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_CeruleanCity",
+      "primary_tileset": "gTileset_GeneralMoon",
+      "secondary_tileset": "gTileset_MoonRoad",
       "border_filepath": "data/layouts/Route4/border.bin",
       "blockdata_filepath": "data/layouts/Route4/map.bin"
     },
