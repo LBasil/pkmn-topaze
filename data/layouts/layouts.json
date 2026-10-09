@@ -1209,8 +1209,8 @@
     {
       "id": "LAYOUT_VIRIDIAN_FOREST",
       "name": "ViridianForest_Layout",
-      "width": 54,
-      "height": 57,
+      "width": 46,
+      "height": 48,
       "border_width": 3,
       "border_height": 2,
       "primary_tileset": "gTileset_GeneralCinder",
