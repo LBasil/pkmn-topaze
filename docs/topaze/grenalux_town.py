@@ -89,10 +89,9 @@ D['ranch'] = chunk(PB, 30, 5, 2, 5, 4, 34, 5, 'ranch')
 D['museum'] = chunk(PB, 30, 12, 4, 6, 5, 5, 17, 'musee')
 D['lab'] = chunk(LR, 20, 3, 12, 7, 5, 31, 17, 'labo')
 D['hA'] = chunk(PB, 30, 5, 2, 5, 4, 12, 6, 'maison A ardoise', PBP)
-D['hB'] = chunk(LR, 20, 2, 4, 5, 5, 28, 5, 'maison B ocre', LRP)
 D['hC'] = chunk(PB, 30, 5, 2, 5, 4, 12, 14, 'maison C', None)
 D['hD'] = chunk(PB, 30, 9, 16, 4, 4, 11, 27, 'maison D ardoise', PBP)
-D['hE'] = chunk(LR, 20, 2, 4, 5, 5, 3, 27, 'maison E', None)
+D['hE'] = chunk(LR, 20, 2, 4, 5, 5, 3, 27, 'maison E ocre', LRP)
 D['garden'] = chunk(PB, 30, 18, 20, 8, 7, 34, 27, 'maison jardin', None)
 for k, v in D.items(): assert v, 'porte introuvable ' + k
 assert D['player'] == (8, 9) and D['ranch'] == (36, 8) and D['museum'] == (8, 21) and D['lab'] == (35, 21), D
@@ -106,12 +105,21 @@ place_sm(C.BIG, 18, 8, 3, 3, 'cristal garde O'); place_sm(C.BIG, 25, 8, 3, 3, 'c
 place_sm(C.MINE, 38, 22, 3, 3, 'mine')
 for k, (x, y, v) in enumerate(((38, 14, 0), (40, 16, 1), (38, 18, 1), (40, 20, 0))): place_sm(C.BOUL[v], x, y, 2, 2, 'bloc%d' % k)
 def one(x, y, v, name): claim(x, y, 1, 1, name); put(x, y, 0x400 | v)
-for (x, y) in ((21, 3), (24, 3), (21, 7), (24, 7), (10, 11), (18, 11), (26, 11), (34, 11), (10, 14), (18, 14), (30, 14), (38, 14 - 1 + 1 - 1),
+for (x, y) in ((21, 3), (24, 3), (21, 7), (24, 7), (10, 11), (18, 11), (26, 11), (34, 11), (10, 14), (18, 14), (30, 14), (38, 11),
                (15, 19), (30, 19), (15, 25), (30, 25), (10, 31), (16, 26)):
     if (x, y) in OCC: continue
     one(x, y, C.LAMP, 'lampe')
 for (x, y) in ((38, 17), (41, 14), (41, 19), (38, 21), (41, 22), (37, 24), (41, 11), (41, 18)): one(x, y, C.ROCK, 'rocher')
-for (x, y) in ((10, 9), (33, 8), (36, 22), (11, 21), (21, 10), (10, 15)): one(x, y, 3, 'panneau')
+for (x, y) in ((10, 9), (37, 9), (36, 22), (11, 21), (21, 10), (10, 15)): one(x, y, 3, 'panneau')
+# ---- enclos du ranch : clotures x28..33, y3..10 (portail en x30..31), foin, abreuvoir, animaux
+for x in range(28, 34):
+    for y in (3, 10):
+        if y == 10 and x in (30, 31): continue
+        one(x, y, C.FENCE_H, 'cloture')
+for y in range(4, 10):
+    one(28, y, C.FENCE_V, 'cloture'); one(33, y, C.FENCE_V, 'cloture')
+one(29, 4, C.HAY, 'foin'); one(32, 4, C.HAY, 'foin'); one(32, 9, C.TROUGH, 'abreuvoir')
+claim(29, 5, 4, 4, 'enclos')
 for _x in range(20, 25):
     for _y in range(20, 25):
         if (_x, _y) not in OCC: claim(_x, _y, 1, 1, 'ilot')
@@ -135,12 +143,12 @@ def rect(x0, y0, x1, y1):
             PATH.add((x, y))
 rect(GATE_X, 0, GATE_X + 1, 19)
 rect(7, 12, 40, 13)
-rect(7, 10, 8, 11); rect(35, 9, 36, 11)
+rect(7, 10, 8, 11); rect(35, 9, 36, 11); rect(30, 11, 31, 11)
 rect(16, 18, 29, 26)
 rect(7, 22, 8, 25); rect(7, 24, 15, 25)
 rect(34, 22, 35, 25); rect(30, 24, 35, 25); rect(36, 25, 41, 26)
 rect(17, 27, 28, 28); rect(16, 27, 17, 33); rect(28, 27, 29, 33)
-for k in ('hA', 'hB', 'hC', 'hD', 'hE', 'garden'): pass
+for k in ('hA', 'hC', 'hD', 'hE', 'garden'): pass
 def passable(c):
     x, y = c
     return 2 <= x <= W - 3 and 1 <= y <= H - 4 and c not in OCC
@@ -157,7 +165,7 @@ def connect(start):
             n = (c[0] + d[0], c[1] + d[1])
             if n not in prev and passable(n): prev[n] = c; q.append(n)
     raise AssertionError('porte isolee %s' % (start,))
-for k in ('hA', 'hB', 'hC', 'hD', 'hE'): connect((D[k][0], D[k][1] + 1))
+for k in ('hA', 'hC', 'hD', 'hE'): connect((D[k][0], D[k][1] + 1))
 connect((33, 31))                          # le potager s'ouvre a l'ouest (rangee 4 du bloc)
 connect((39, 25))
 def path_id(x, y):
@@ -205,8 +213,8 @@ while placed < 14 and tries < 3000:
     if G[(x, y)] in (GRASS, FLOWER) and (x, y) not in OCC and (x, y) not in PATH and not near(x, y, 1):
         put(x, y, 0x400 | rnd.choice(C.SM)); claim(x, y, 1, 1, 'petit cristal'); placed += 1
 # ---- PNJ d'ambiance (cases reservees) ; coordonnees reprises par grenalux_events.py
-NPC = {'miner': (41, 26), 'oldman': (19, 22), 'girl': (17, 30), 'boy': (29, 31), 'scientist': (33, 23), 'lady': (36, 23)}
-for k, c in NPC.items(): assert c not in OCC and G[c] in (GRASS, FLOWER) or c in PATH, (k, c, hex(G[c]))
+NPC = {'slowpoke': (30, 6), 'nidoran': (31, 8), 'meowth': (29, 7), 'miner': (41, 26), 'oldman': (19, 22), 'girl': (17, 30), 'boy': (29, 31), 'scientist': (33, 23), 'lady': (36, 23)}
+for k, c in NPC.items(): assert (c not in OCC or OCC[c] == 'enclos') and G[c] in (GRASS, FLOWER) or c in PATH, (k, c, hex(G[c]))
 json.dump(NPC, open('/tmp/grenalux_npc.json', 'w'))
 # ---- ecriture
 open(SD + 'metatiles.bin', 'wb').write(mt); open(SD + 'metatile_attributes.bin', 'wb').write(att)

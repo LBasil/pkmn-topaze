@@ -152,3 +152,15 @@ PalletTown_Text_AmbLady::
 	.string "Garnet is the stone of this town.\n"
 	.string "Red roofs, red trees, red stone...\n"
 	.string "Even the grass blushes here.$"
+
+PalletTown_Text_AmbSlowpoke::
+	.string "SLOWPOKE: ...Yawn.\n"
+	.string "It has been staring at the hay for hours.$"
+
+PalletTown_Text_AmbNidoran::
+	.string "NIDORAN: Kyuu!\n"
+	.string "It nibbles the garnet-dusted grass.$"
+
+PalletTown_Text_AmbMeowth::
+	.string "MEOWTH: Nyaa!\n"
+	.string "It keeps the barn free of mice.$"

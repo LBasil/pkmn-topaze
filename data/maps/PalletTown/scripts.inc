@@ -640,3 +640,15 @@ PalletTown_EventScript_AmbScientist::
 PalletTown_EventScript_AmbLady::
 	msgbox PalletTown_Text_AmbLady, MSGBOX_NPC
 	end
+
+PalletTown_EventScript_AmbSlowpoke::
+	msgbox PalletTown_Text_AmbSlowpoke, MSGBOX_NPC
+	end
+
+PalletTown_EventScript_AmbNidoran::
+	msgbox PalletTown_Text_AmbNidoran, MSGBOX_NPC
+	end
+
+PalletTown_EventScript_AmbMeowth::
+	msgbox PalletTown_Text_AmbMeowth, MSGBOX_NPC
+	end

@@ -39,7 +39,7 @@ for c in d['coord_events']:
     if c['script'].endswith('OakTriggerLeft'): c['x'],c['y']=22,1
     elif c['script'].endswith('OakTriggerRight'): c['x'],c['y']=23,1
     elif c['script'].endswith('SignLadyTrigger'): c['x'],c['y']=23,2
-sg={'PalletTown_EventScript_OaksLabSign':(36,22),'PalletTown_EventScript_PlayersHouseSign':(10,9),'PalletTown_EventScript_RivalsHouseSign':(33,8),
+sg={'PalletTown_EventScript_OaksLabSign':(36,22),'PalletTown_EventScript_PlayersHouseSign':(10,9),'PalletTown_EventScript_RivalsHouseSign':(37,9),
  'PalletTown_EventScript_TownSign':(21,10),'PalletTown_EventScript_TrainerTips':(10,15),'PalletTown_EventScript_MuseumSign':(11,21)}
 for b in d['bg_events']: b['x'],b['y']=sg[b['script']]
 for c in d['connections']:
@@ -61,6 +61,12 @@ AMB = [('MINER', 'miner', 'OBJ_EVENT_GFX_WORKER_M', 'MOVEMENT_TYPE_FACE_LEFT',
         ['I found a tiny crystal by the pond.', 'It glows if you hold it up to the sun!']),
        ('SCIENTIST', 'scientist', 'OBJ_EVENT_GFX_SCIENTIST', 'MOVEMENT_TYPE_FACE_UP',
         ['The lab measures the aura of every', 'crystal in town. The readings keep', 'rising, and nobody knows why.']),
+       ('SLOWPOKE', 'slowpoke', 'OBJ_EVENT_GFX_SLOWPOKE', 'MOVEMENT_TYPE_WANDER_AROUND',
+        ['SLOWPOKE: ...Yawn.', 'It has been staring at the hay for hours.']),
+       ('NIDORAN', 'nidoran', 'OBJ_EVENT_GFX_NIDORAN_F', 'MOVEMENT_TYPE_WANDER_AROUND',
+        ['NIDORAN: Kyuu!', 'It nibbles the garnet-dusted grass.']),
+       ('MEOWTH', 'meowth', 'OBJ_EVENT_GFX_MEOWTH', 'MOVEMENT_TYPE_WANDER_AROUND',
+        ['MEOWTH: Nyaa!', 'It keeps the barn free of mice.']),
        ('LADY', 'lady', 'OBJ_EVENT_GFX_BEAUTY', 'MOVEMENT_TYPE_FACE_RIGHT',
         ['Garnet is the stone of this town.', 'Red roofs, red trees, red stone...', 'Even the grass blushes here.'])]
 txt = open('data/maps/PalletTown/text.inc').read(); scr = open('data/maps/PalletTown/scripts.inc').read()

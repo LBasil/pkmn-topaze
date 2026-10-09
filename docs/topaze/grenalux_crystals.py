@@ -103,6 +103,32 @@ def mine():
     d.rectangle((22, 14, 25, 19), fill=11); d.polygon([(23, 9), (26, 12), (23, 15), (20, 12)], fill=8, outline=5)   # cristal-enseigne
     d.line([(17, 44), (30, 44)], fill=13); d.line([(17, 47), (30, 47)], fill=13)
     return im, 3, 3
+
+def fence_h():
+    im = ground_bg(16, 16); d = ImageDraw.Draw(im)
+    shadow(d, 0, 12, 15, 15)
+    for y in (5, 9): d.rectangle((0, y, 15, y + 1), fill=13, outline=14); d.line([(0, y), (15, y)], fill=15)
+    for x in (0, 7, 14): d.rectangle((x, 2, x + 1, 13), fill=12, outline=14); d.point((x, 3), fill=13)
+    return im
+def fence_v():
+    im = ground_bg(16, 16); d = ImageDraw.Draw(im)
+    shadow(d, 4, 12, 12, 15)
+    d.rectangle((6, 0, 9, 15), fill=12, outline=14); d.line([(7, 0), (7, 15)], fill=13)
+    d.rectangle((3, 3, 12, 4), fill=13, outline=14); d.rectangle((3, 9, 12, 10), fill=13, outline=14)
+    return im
+def hay():
+    im = ground_bg(16, 16); d = ImageDraw.Draw(im)
+    shadow(d, 0, 11, 15, 15)
+    d.rectangle((1, 4, 14, 13), fill=8, outline=14)
+    for y in (6, 8, 10, 12): d.line([(2, y), (13, y)], fill=15)
+    d.line([(5, 4), (5, 13)], fill=12); d.line([(10, 4), (10, 13)], fill=12)
+    return im
+def trough():
+    im = ground_bg(16, 16); d = ImageDraw.Draw(im)
+    shadow(d, 0, 11, 15, 15)
+    d.rectangle((1, 6, 14, 12), fill=12, outline=14); d.rectangle((3, 7, 12, 9), fill=13); d.line([(4, 8), (7, 8)], fill=9)
+    d.line([(2, 13), (2, 14)], fill=14); d.line([(13, 13), (13, 14)], fill=14)
+    return im
 # ---- registre
 mt = bytearray(open(D + 'metatiles.bin', 'rb').read()); att = bytearray(open(D + 'metatile_attributes.bin', 'rb').read())
 NMT = len(mt) // 16
@@ -123,6 +149,7 @@ def meta(block):
 def slice_all(im, bw, bh): return {(i, j): meta(im.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))) for j in range(bh) for i in range(bw)}
 BIG = slice_all(*big()); MID = slice_all(*mid()); SM = [meta(small(0)), meta(small(1))]
 LAMP = meta(lamp()); BOUL = [slice_all(*boulder(0)), slice_all(*boulder(1))]; ROCK = meta(rock()); MINE = slice_all(*mine())
+FENCE_H = meta(fence_h()); FENCE_V = meta(fence_v()); HAY = meta(hay()); TROUGH = meta(trough())
 assert NT + len(tiles) <= 384, NT + len(tiles)
 open(D + 'metatiles.bin', 'wb').write(mt); open(D + 'metatile_attributes.bin', 'wb').write(att)
 rows = (NT + len(tiles) + 15) // 16
