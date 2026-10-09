@@ -218,6 +218,11 @@ for (x, y) in [(2, 2), (2, 4), (2, 6), (2, 8), (8, 2), (8, 4), (8, 6), (8, 8)] +
     cells = [(x + i, y + j) for i in range(2) for j in range(2)]
     if any(c in OCC or c in RES or c in PATH or not (1 <= c[0] < W - 1 and 1 <= c[1] < H - 2) for c in cells): continue
     tree(x, y); claim(x, y, 2, 2, 'arbre')
+# ---- trou a boucher : deux rochers a cote du rocher voisin
+for (x, y) in ((28, 12), (30, 12)):
+    cells = [(x + i, y + j) for i in range(2) for j in range(2)]
+    assert not any(c in OCC or c in RES or c in PATH for c in cells), ('trou deja pris', x, y)
+    DEAD.append((x, y, 'boulder')); claim(x, y, 2, 2, 'boulder')
 # ---- herbe cendree : zones de sol gris clair (c'etait une foret), hors arbres, chemin et objets
 ASH = set()
 for y in range(2, H - 2):
