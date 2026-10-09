@@ -157,6 +157,21 @@ def silo():
     d.pieslice((2, 2, 29, 26), 180, 360, fill=7, outline=14); d.pieslice((6, 4, 20, 18), 190, 330, fill=8)
     d.rectangle((13, 0, 18, 4), fill=6, outline=14); d.rectangle((12, 46, 19, 60), fill=14); d.rectangle((13, 48, 18, 60), fill=12)
     return im, 2, 4
+
+def soil():
+    im = ground_bg(16, 16); d = ImageDraw.Draw(im)
+    d.rectangle((0, 0, 15, 15), fill=12)
+    for y in (2, 7, 12): d.line([(0, y), (15, y)], fill=11); d.line([(0, y + 1), (15, y + 1)], fill=14)
+    for (x, y) in ((3, 4), (9, 5), (13, 10), (5, 11), (11, 14), (1, 8)): d.point((x, y), fill=13)
+    return im
+def bush(var):
+    cols = [15, 10, 13][var]
+    im = soil(); d = ImageDraw.Draw(im)
+    shadow(d, 2, 11, 14, 15)
+    d.ellipse((1, 3, 14, 14), fill=6, outline=14); d.ellipse((3, 4, 12, 10), fill=7)
+    d.arc((2, 4, 13, 13), 200, 300, fill=8)
+    for (x, y) in ((4, 6), (8, 5), (11, 8), (6, 9), (9, 10)): d.rectangle((x, y, x + 1, y + 1), fill=cols, outline=5 if var != 1 else 14)
+    return im
 # ---- registre
 mt = bytearray(open(D + 'metatiles.bin', 'rb').read()); att = bytearray(open(D + 'metatile_attributes.bin', 'rb').read())
 NMT = len(mt) // 16
@@ -175,9 +190,9 @@ def meta(block):
     mt.extend(struct.pack('<8H', *ents)); att.extend(struct.pack('<I', 0))
     return 640 + len(mt) // 16 - 1
 def slice_all(im, bw, bh): return {(i, j): meta(im.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))) for j in range(bh) for i in range(bw)}
-BIG = slice_all(*big()); MID = slice_all(*mid()); SM = [meta(small(0)), meta(small(1))]
+BIG = slice_all(*big()); MID = {}; SM = [meta(small(0)), meta(small(1))]
 LAMP = meta(lamp()); BOUL = [slice_all(*boulder(0)), slice_all(*boulder(1))]; ROCK = meta(rock()); MINE = slice_all(*mine())
-BARN = slice_all(*barn()); SILO = slice_all(*silo()); FENCE_H = meta(fence_h()); FENCE_V = meta(fence_v()); HAY = meta(hay()); TROUGH = meta(trough())
+SOIL = meta(soil()); BUSH = [meta(bush(0)), meta(bush(1)), meta(bush(2))]; BARN = slice_all(*barn()); SILO = slice_all(*silo()); FENCE_H = meta(fence_h()); FENCE_V = meta(fence_v()); HAY = meta(hay()); TROUGH = meta(trough())
 assert NT + len(tiles) <= 384, NT + len(tiles)
 open(D + 'metatiles.bin', 'wb').write(mt); open(D + 'metatile_attributes.bin', 'wb').write(att)
 rows = (NT + len(tiles) + 15) // 16

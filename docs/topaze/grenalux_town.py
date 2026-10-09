@@ -31,7 +31,7 @@ def put(x, y, v): G[(x, y)] = v
 def claim(x, y, w, h, name):
     for j in range(h):
         for i in range(w):
-            if OCC.get((x + i, y + j)) == 'enclos' and name in ('foin', 'abreuvoir'): continue     # objets poses dans un enclos
+            if OCC.get((x + i, y + j)) == 'enclos' and name in ('foin', 'abreuvoir', 'baie'): continue     # objets poses dans un enclos
             assert (x + i, y + j) not in OCC, 'chevauchement %s avec %s en %s' % (name, OCC[(x + i, y + j)], (x + i, y + j))
             assert 1 <= x + i <= W - 2 and 0 <= y + j <= H - 3, (name, x + i, y + j)
             OCC[(x + i, y + j)] = name
@@ -114,10 +114,20 @@ for (x, y) in ((21, 3), (24, 3), (21, 7), (24, 7), (10, 11), (18, 11), (26, 11),
     one(x, y, C.LAMP, 'lampe')
 for (x, y) in ((38, 17), (41, 14), (41, 19), (38, 21), (41, 22), (37, 24), (41, 11), (41, 18)): one(x, y, C.ROCK, 'rocher')
 for (x, y) in ((10, 9), (37, 9), (36, 22), (11, 21), (21, 10), (10, 15)): one(x, y, 3, 'panneau')
-# ---- reserve du ranch : grange a grain + silo (le vrai ranch est a l'est, derriere les arbres)
-place_sm(C.BARN, 27, 4, 5, 4, 'grange a grain'); place_sm(C.SILO, 32, 3, 2, 4, 'silo')
-for (x, y) in ((31, 8), (32, 8), (32, 9)): one(x, y, C.HAY, 'foin')
-one(33, 8, C.TROUGH, 'abreuvoir')
+# ---- jardin de baies du ranch (decoratif, baies non recoltables) a l'ouest du ranch
+def pen(x0, y0, x1, y1, gaps, name):
+    for x in range(x0, x1 + 1):
+        for y in (y0, y1):
+            if (x, y) not in gaps: one(x, y, C.FENCE_H, name)
+    for y in range(y0 + 1, y1):
+        for x in (x0, x1):
+            if (x, y) not in gaps: one(x, y, C.FENCE_V, name)
+    claim(x0 + 1, y0 + 1, x1 - x0 - 1, y1 - y0 - 1, 'enclos')
+pen(28, 3, 33, 9, {(30, 9), (31, 9)}, 'cloture jardin')
+for y in range(4, 9):
+    for x in range(29, 33): put(x, y, walk(C.SOIL))
+for k, x in enumerate(range(29, 33)):
+    one(x, 5, C.BUSH[(0, 1, 2, 0)[k]], 'baie'); one(x, 7, C.BUSH[(2, 0, 1, 2)[k]], 'baie')
 for _x in range(20, 25):
     for _y in range(20, 25):
         if (_x, _y) not in OCC: claim(_x, _y, 1, 1, 'ilot')
@@ -141,7 +151,7 @@ def rect(x0, y0, x1, y1):
             PATH.add((x, y))
 rect(GATE_X, 0, GATE_X + 1, 19)
 rect(7, 12, 40, 13)
-rect(7, 10, 8, 11); rect(35, 9, 36, 11); rect(29, 8, 30, 11); rect(39, 6, 43, 7)
+rect(7, 10, 8, 11); rect(35, 9, 36, 11); rect(30, 9, 31, 11); rect(39, 6, 43, 7)
 rect(16, 18, 29, 26)
 rect(7, 22, 8, 25); rect(7, 24, 15, 25)
 rect(34, 22, 35, 25); rect(30, 24, 35, 25); rect(36, 25, 41, 26)
@@ -212,8 +222,8 @@ while placed < 14 and tries < 3000:
     if G[(x, y)] in (GRASS, FLOWER) and (x, y) not in OCC and (x, y) not in PATH and not near(x, y, 1):
         put(x, y, 0x400 | rnd.choice(C.SM)); claim(x, y, 1, 1, 'petit cristal'); placed += 1
 # ---- PNJ d'ambiance (cases reservees) ; coordonnees reprises par grenalux_events.py
-NPC = {'granary': (28, 9), 'miner': (41, 26), 'oldman': (19, 22), 'girl': (17, 30), 'boy': (29, 31), 'scientist': (33, 23), 'lady': (36, 23)}
-for k, c in NPC.items(): assert (c not in OCC or OCC[c] == 'enclos') and G[c] in (GRASS, FLOWER) or c in PATH, (k, c, hex(G[c]))
+NPC = {'gardener': (31, 8), 'miner': (41, 26), 'oldman': (19, 22), 'girl': (17, 30), 'boy': (29, 31), 'scientist': (33, 23), 'lady': (36, 23)}
+for k, c in NPC.items(): assert (c not in OCC or OCC[c] == 'enclos') and G[c] in (GRASS, FLOWER, walk(C.SOIL)) or c in PATH, (k, c, hex(G[c]))
 json.dump(NPC, open('/tmp/grenalux_npc.json', 'w'))
 # ---- ecriture
 g = [G[(x, y)] for y in range(H) for x in range(W)]

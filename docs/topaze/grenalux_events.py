@@ -61,8 +61,8 @@ AMB = [('MINER', 'miner', 'OBJ_EVENT_GFX_WORKER_M', 'MOVEMENT_TYPE_FACE_LEFT',
         ['I found a tiny crystal by the pond.', 'It glows if you hold it up to the sun!']),
        ('SCIENTIST', 'scientist', 'OBJ_EVENT_GFX_SCIENTIST', 'MOVEMENT_TYPE_FACE_UP',
         ['The lab measures the aura of every', 'crystal in town. The readings keep', 'rising, and nobody knows why.']),
-       ('GRANARY', 'granary', 'OBJ_EVENT_GFX_WORKER_M', 'MOVEMENT_TYPE_FACE_UP',
-        ['This is the ranch feed store.', 'Hay and grain for every animal.', 'The pens are out east, past the trees.']),
+       ('GARDENER', 'gardener', 'OBJ_EVENT_GFX_WORKER_F', 'MOVEMENT_TYPE_FACE_DOWN',
+        ['These berries feed the ranch animals.', 'They are not for picking, sorry!', 'The pens are out east, past the trees.']),
        ('LADY', 'lady', 'OBJ_EVENT_GFX_BEAUTY', 'MOVEMENT_TYPE_FACE_RIGHT',
         ['Garnet is the stone of this town.', 'Red roofs, red trees, red stone...', 'Even the grass blushes here.'])]
 txt = open('data/maps/PalletTown/text.inc').read(); scr = open('data/maps/PalletTown/scripts.inc').read()

@@ -656,3 +656,7 @@ PalletTown_EventScript_AmbMeowth::
 PalletTown_EventScript_AmbGranary::
 	msgbox PalletTown_Text_AmbGranary, MSGBOX_NPC
 	end
+
+PalletTown_EventScript_AmbGardener::
+	msgbox PalletTown_Text_AmbGardener, MSGBOX_NPC
+	end

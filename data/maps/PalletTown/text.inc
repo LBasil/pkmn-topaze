@@ -169,3 +169,8 @@ PalletTown_Text_AmbGranary::
 	.string "This is the ranch feed store.\n"
 	.string "Hay and grain for every animal.\n"
 	.string "The pens are out east, past the trees.$"
+
+PalletTown_Text_AmbGardener::
+	.string "These berries feed the ranch animals.\n"
+	.string "They are not for picking, sorry!\n"
+	.string "The pens are out east, past the trees.$"
