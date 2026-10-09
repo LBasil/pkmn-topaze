@@ -221,3 +221,8 @@ const u16 gMetatiles_GeneralEmber[] = INCBIN_U16("data/tilesets/primary/general_
 const u32 gMetatileAttributes_GeneralEmber[] = INCBIN_U32("data/tilesets/primary/general_ember/metatile_attributes.bin");
 const u16 gMetatiles_LavaridgeEmber[] = INCBIN_U16("data/tilesets/secondary/lavaridge_ember/metatiles.bin");
 const u32 gMetatileAttributes_LavaridgeEmber[] = INCBIN_U32("data/tilesets/secondary/lavaridge_ember/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralDusk[] = INCBIN_U16("data/tilesets/primary/general_dusk/metatiles.bin");
+const u32 gMetatileAttributes_GeneralDusk[] = INCBIN_U32("data/tilesets/primary/general_dusk/metatile_attributes.bin");
+const u16 gMetatiles_DuskRoad[] = INCBIN_U16("data/tilesets/secondary/dusk_road/metatiles.bin");
+const u32 gMetatileAttributes_DuskRoad[] = INCBIN_U32("data/tilesets/secondary/dusk_road/metatile_attributes.bin");

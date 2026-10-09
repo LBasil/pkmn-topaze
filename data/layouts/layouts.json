@@ -885,12 +885,12 @@
     {
       "id": "LAYOUT_ROUTE2",
       "name": "Route2_Layout",
-      "width": 24,
-      "height": 80,
+      "width": 26,
+      "height": 56,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_ViridianCity",
+      "primary_tileset": "gTileset_GeneralDusk",
+      "secondary_tileset": "gTileset_DuskRoad",
       "border_filepath": "data/layouts/Route2/border.bin",
       "blockdata_filepath": "data/layouts/Route2/map.bin"
     },

@@ -834,3 +834,25 @@ const struct Tileset gTileset_LavaridgeEmber =
     .metatileAttributes = gMetatileAttributes_LavaridgeEmber,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralDusk =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralDusk,
+    .palettes = gTilesetPalettes_GeneralDusk,
+    .metatiles = gMetatiles_GeneralDusk,
+    .metatileAttributes = gMetatileAttributes_GeneralDusk,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_DuskRoad =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_DuskRoad,
+    .palettes = gTilesetPalettes_DuskRoad,
+    .metatiles = gMetatiles_DuskRoad,
+    .metatileAttributes = gMetatileAttributes_DuskRoad,
+    .callback = NULL,
+};

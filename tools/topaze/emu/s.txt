@@ -1,9 +1,9 @@
 run 2
 ls ./states/cur.ss
 run 2
-key DOWN 6
-run 10
-shot py_south_edge.ppm
+key UP 40
+run 120
+shot r2_forestN.ppm
 run 4
 readp 03005008 0 6
 ss ./states/cur.ss

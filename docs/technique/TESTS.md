@@ -115,3 +115,8 @@ Piste réaliste : faire d'abord le jeu jouable, puis ajouter un follower **limit
   - OK : Arène, Centre, Boutique, Musée (2 ailes), 2 maisons : entrée et sortie ; 3 PNJ parlent ; 5 panneaux lisibles ; sortie est ↔ Route 3 et sud ↔ Route 2 dans les deux sens. v3c : 4 maisons + musée (2 portes) entrent/sortent bien, 9 PNJ parlent. Piège de banc : `TOPAZE_COL` ne doit pas être défini pour `opening.py`/`t_pyro_a.py` (sinon l'émulateur ne démarre pas), et `TOPAZE_ROM`/`TOPAZE_COL` ne persistent pas d'un appel shell à l'autre. v3 : le planificateur monte et descend par les escaliers (murs infranchissables), tous les tests ci-dessus repassent.
   - Corrigé : les maisons décoratives avaient une porte sans warp (maintenant fenêtre).
   - Non testés : gagner l'arène de Kay (inchangée), objet caché, ambiance des Routes 2 et 3 (encore d'origine).
+
+### Route 2 v1 (émulateur)
+  - ROM jetables : Grenalux nord redirigé vers le sud (warps 2,3) puis vers le nord (warps 4,5) de la Route 2. Bancs : `t_route2a.py`/`t_route2b.py` (sud), `t_route2c.py`/`t_route2d.py` (nord).
+  - OK : chemin sud jusqu'au portail et entrée dans l'entrée sud de la forêt ; chemin nord depuis Pyropia jusqu'au portail et entrée dans l'entrée nord ; falaise étanche (assertion de non-communication dans le script).
+  - Non testés : PNJ (randonneur, mineur), panneaux, objets (Elixir, Antiparalysie), herbes hautes, traversée de la forêt (inchangée, verte), sorties vers Opanihrum/Pyropia dans les deux sens.
