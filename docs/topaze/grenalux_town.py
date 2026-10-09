@@ -114,15 +114,10 @@ for (x, y) in ((21, 3), (24, 3), (21, 7), (24, 7), (10, 11), (18, 11), (26, 11),
     one(x, y, C.LAMP, 'lampe')
 for (x, y) in ((38, 17), (41, 14), (41, 19), (38, 21), (41, 22), (37, 24), (41, 11), (41, 18)): one(x, y, C.ROCK, 'rocher')
 for (x, y) in ((10, 9), (37, 9), (36, 22), (11, 21), (21, 10), (10, 15)): one(x, y, 3, 'panneau')
-# ---- enclos du ranch : clotures x28..33, y3..10 (portail en x30..31), foin, abreuvoir, animaux
-for x in range(28, 34):
-    for y in (3, 10):
-        if y == 10 and x in (30, 31): continue
-        one(x, y, C.FENCE_H, 'cloture')
-for y in range(4, 10):
-    one(28, y, C.FENCE_V, 'cloture'); one(33, y, C.FENCE_V, 'cloture')
-one(29, 4, C.HAY, 'foin'); one(32, 4, C.HAY, 'foin'); one(32, 9, C.TROUGH, 'abreuvoir')
-claim(29, 5, 4, 4, 'enclos')
+# ---- reserve du ranch : grange a grain + silo (le vrai ranch est a l'est, derriere les arbres)
+place_sm(C.BARN, 27, 4, 5, 4, 'grange a grain'); place_sm(C.SILO, 32, 3, 2, 4, 'silo')
+for (x, y) in ((31, 8), (32, 8), (32, 9)): one(x, y, C.HAY, 'foin')
+one(33, 8, C.TROUGH, 'abreuvoir')
 for _x in range(20, 25):
     for _y in range(20, 25):
         if (_x, _y) not in OCC: claim(_x, _y, 1, 1, 'ilot')
@@ -146,7 +141,7 @@ def rect(x0, y0, x1, y1):
             PATH.add((x, y))
 rect(GATE_X, 0, GATE_X + 1, 19)
 rect(7, 12, 40, 13)
-rect(7, 10, 8, 11); rect(35, 9, 36, 11); rect(30, 11, 31, 11); rect(39, 6, 43, 7)
+rect(7, 10, 8, 11); rect(35, 9, 36, 11); rect(29, 8, 30, 11); rect(39, 6, 43, 7)
 rect(16, 18, 29, 26)
 rect(7, 22, 8, 25); rect(7, 24, 15, 25)
 rect(34, 22, 35, 25); rect(30, 24, 35, 25); rect(36, 25, 41, 26)
@@ -217,7 +212,7 @@ while placed < 14 and tries < 3000:
     if G[(x, y)] in (GRASS, FLOWER) and (x, y) not in OCC and (x, y) not in PATH and not near(x, y, 1):
         put(x, y, 0x400 | rnd.choice(C.SM)); claim(x, y, 1, 1, 'petit cristal'); placed += 1
 # ---- PNJ d'ambiance (cases reservees) ; coordonnees reprises par grenalux_events.py
-NPC = {'slowpoke': (30, 6), 'nidoran': (31, 8), 'meowth': (29, 7), 'miner': (41, 26), 'oldman': (19, 22), 'girl': (17, 30), 'boy': (29, 31), 'scientist': (33, 23), 'lady': (36, 23)}
+NPC = {'granary': (28, 9), 'miner': (41, 26), 'oldman': (19, 22), 'girl': (17, 30), 'boy': (29, 31), 'scientist': (33, 23), 'lady': (36, 23)}
 for k, c in NPC.items(): assert (c not in OCC or OCC[c] == 'enclos') and G[c] in (GRASS, FLOWER) or c in PATH, (k, c, hex(G[c]))
 json.dump(NPC, open('/tmp/grenalux_npc.json', 'w'))
 # ---- ecriture
@@ -257,8 +252,9 @@ for y in range(2, H - 2, 2):
 for x in range(0, W, 2): tree(x, H - 2)
 R = {}
 R['stable'] = chunk(PB, 30, 5, 2, 5, 4, 3, 2, 'ecurie', PBP)
-R['barn'] = chunk(PB, 30, 12, 4, 6, 5, 22, 1, 'grange')
-assert R['stable'] and R['barn']
+assert R['stable']
+place_sm(C.BARN, 22, 2, 5, 4, 'grange'); place_sm(C.SILO, 27, 1, 2, 4, 'silo')
+R['barn'] = (24, 5)
 def pen(x0, y0, x1, y1, gaps, name):
     for x in range(x0, x1 + 1):
         for y in (y0, y1):
@@ -269,7 +265,7 @@ def pen(x0, y0, x1, y1, gaps, name):
     claim(x0 + 1, y0 + 1, x1 - x0 - 1, y1 - y0 - 1, 'enclos')
 pen(10, 2, 19, 5, {(14, 5), (15, 5)}, 'cloture C')
 pen(3, 10, 12, 17, {(7, 10), (8, 10)}, 'cloture A')
-pen(16, 10, 27, 17, {(21, 10), (22, 10), (27, 13), (27, 14)}, 'cloture B')      # (27,13..14) : clôture coupée par Onybris
+pen(16, 10, 27, 17, {(21, 10), (22, 10)}, 'cloture B')      # (27,13..14) : coupee par Onybris apres l'attaque (map script)
 place_sm(C.BIG, 5, 19, 3, 3, 'cristal SO'); place_sm(C.BIG, 22, 19, 3, 3, 'cristal SE')
 place_sm(C.BOUL[0], 9, 19, 2, 2, 'bloc'); place_sm(C.BOUL[1], 27, 19, 2, 2, 'bloc')
 for (x, y) in ((17, 20), (18, 20), (19, 20)): one(x, y, C.HAY, 'foin')
@@ -283,14 +279,14 @@ for (x, y) in PATH:
     assert (x, y) not in OCC, ('chemin sur', OCC.get((x, y)), x, y)
     put(x, y, walk(path_id(x, y)))
 rnd = random.Random(7733)
-for (cx, cy, n, s_) in ((28, 10, 4, 2), (29, 20, 3, 1.5), (2, 14, 3, 1.5), (3, 20, 2, 1.2), (29, 3, 3, 1.5), (16, 3, 0, 1)): grove(cx, cy, n, s_)
+for (cx, cy, n, s_) in ((29, 20, 3, 1.5), (2, 14, 3, 1.5), (3, 20, 2, 1.2), (29, 3, 3, 1.5), (16, 3, 0, 1)): grove(cx, cy, n, s_)
 for _ in range(14):
     cx, cy = rnd.randint(3, W - 4), rnd.randint(3, H - 4)
     for _ in range(rnd.randint(4, 8)):
         x, y = cx + rnd.randint(-2, 2), cy + rnd.randint(-1, 1)
         if 2 <= x <= W - 3 and 2 <= y <= H - 4 and G[(x, y)] == GRASS and (x, y) not in OCC and (x, y) not in PATH: put(x, y, FLOWER)
 RNPC = {'r_hand1': (9, 7), 'r_hand2': (14, 12), 'r_girl': (24, 7), 'r_slowpoke': (6, 13), 'r_psyduck': (10, 15), 'r_doduo': (19, 13),
-        'r_nidoranm': (24, 15), 'r_nidoranf': (18, 16), 'r_meowth': (13, 3), 'r_jigglypuff': (17, 4)}
+        'r_nidoranm': (24, 15), 'r_nidoranf': (18, 16), 'r_meowth': (13, 3), 'r_jigglypuff': (17, 4), 'r_hand3': (28, 13)}
 rb = {(x, y) for y in range(H) for x in range(W) if (G[(x, y)] & 0xc00) or ((G[(x, y)] >> 12) == 1)}
 seen = {(0, 6)}; q = collections.deque([(0, 6)])
 while q:

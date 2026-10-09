@@ -129,6 +129,34 @@ def trough():
     d.rectangle((1, 6, 14, 12), fill=12, outline=14); d.rectangle((3, 7, 12, 9), fill=13); d.line([(4, 8), (7, 8)], fill=9)
     d.line([(2, 13), (2, 14)], fill=14); d.line([(13, 13), (13, 14)], fill=14)
     return im
+
+def barn():
+    w, h = 80, 64
+    im = ground_bg(w, h); d = ImageDraw.Draw(im)
+    shadow(d, 2, 52, 79, 63)
+    d.polygon([(0, 30), (8, 6), (22, 0), (58, 0), (72, 6), (79, 30)], fill=6, outline=14)          # toit en croupe
+    for y in range(5, 29, 5): d.line([(2 + (28 - y) // 4, y), (77 - (28 - y) // 4, y)], fill=7)
+    d.line([(24, 1), (56, 1)], fill=8); d.line([(9, 7), (22, 1)], fill=8)
+    d.rectangle((30, 8, 49, 22), fill=12, outline=14); d.rectangle((33, 11, 46, 19), fill=14); d.line([(40, 11), (40, 19)], fill=13)   # lucarne
+    d.rectangle((3, 30, 76, 33), fill=13, outline=14)                                                    # gouttiere
+    d.rectangle((5, 33, 74, 62), fill=12, outline=14)                                                    # murs en planches
+    for x in range(9, 74, 6): d.line([(x, 34), (x, 61)], fill=11)
+    d.rectangle((26, 37, 53, 62), fill=13, outline=14)                                                   # grande porte
+    d.rectangle((29, 40, 50, 62), fill=11, outline=14); d.line([(40, 40), (40, 62)], fill=14)
+    d.line([(29, 40), (39, 61)], fill=14); d.line([(39, 40), (29, 61)], fill=14); d.line([(41, 40), (50, 61)], fill=14); d.line([(50, 40), (41, 61)], fill=14)
+    for (x, y) in ((10, 40), (62, 40)): d.rectangle((x, y, x + 6, y + 6), fill=14); d.rectangle((x + 1, y + 1, x + 5, y + 5), fill=13)
+    d.polygon([(66, 52), (68, 49), (70, 52), (68, 55)], fill=8, outline=5)                             # cristal-enseigne
+    return im, 5, 4
+def silo():
+    w, h = 32, 64
+    im = ground_bg(w, h); d = ImageDraw.Draw(im)
+    shadow(d, 0, 54, 31, 63)
+    d.rectangle((3, 14, 28, 60), fill=11, outline=14)
+    d.rectangle((3, 14, 12, 60), fill=13); d.line([(13, 15), (13, 59)], fill=12)
+    for y in (22, 32, 42, 52): d.rectangle((3, y, 28, y + 2), fill=12, outline=14)
+    d.pieslice((2, 2, 29, 26), 180, 360, fill=7, outline=14); d.pieslice((6, 4, 20, 18), 190, 330, fill=8)
+    d.rectangle((13, 0, 18, 4), fill=6, outline=14); d.rectangle((12, 46, 19, 60), fill=14); d.rectangle((13, 48, 18, 60), fill=12)
+    return im, 2, 4
 # ---- registre
 mt = bytearray(open(D + 'metatiles.bin', 'rb').read()); att = bytearray(open(D + 'metatile_attributes.bin', 'rb').read())
 NMT = len(mt) // 16
@@ -149,7 +177,7 @@ def meta(block):
 def slice_all(im, bw, bh): return {(i, j): meta(im.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))) for j in range(bh) for i in range(bw)}
 BIG = slice_all(*big()); MID = slice_all(*mid()); SM = [meta(small(0)), meta(small(1))]
 LAMP = meta(lamp()); BOUL = [slice_all(*boulder(0)), slice_all(*boulder(1))]; ROCK = meta(rock()); MINE = slice_all(*mine())
-FENCE_H = meta(fence_h()); FENCE_V = meta(fence_v()); HAY = meta(hay()); TROUGH = meta(trough())
+BARN = slice_all(*barn()); SILO = slice_all(*silo()); FENCE_H = meta(fence_h()); FENCE_V = meta(fence_v()); HAY = meta(hay()); TROUGH = meta(trough())
 assert NT + len(tiles) <= 384, NT + len(tiles)
 open(D + 'metatiles.bin', 'wb').write(mt); open(D + 'metatile_attributes.bin', 'wb').write(att)
 rows = (NT + len(tiles) + 15) // 16

@@ -164,3 +164,8 @@ PalletTown_Text_AmbNidoran::
 PalletTown_Text_AmbMeowth::
 	.string "MEOWTH: Nyaa!\n"
 	.string "It keeps the barn free of mice.$"
+
+PalletTown_Text_AmbGranary::
+	.string "This is the ranch feed store.\n"
+	.string "Hay and grain for every animal.\n"
+	.string "The pens are out east, past the trees.$"

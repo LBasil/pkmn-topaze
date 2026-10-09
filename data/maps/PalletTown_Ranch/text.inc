@@ -26,6 +26,10 @@ PalletTown_Ranch_Text_Psyduck::
 	.string "PSYDUCK: Gwaa?\n"
 	.string "It looks like it has a headache.$"
 
+PalletTown_Ranch_Text_Hand3::
+	.string "The pens were shut tight last night.\n"
+	.string "Now look at this fence...$"
+
 PalletTown_Ranch_Text_Doduo::
 	.string "DODUO: Kwek! Kwek!\n"
 	.string "Its two heads argue about the hay.$"

@@ -1,5 +1,25 @@
 PalletTown_Ranch_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_Ranch_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, PalletTown_Ranch_OnLoad
 	.byte 0
+
+PalletTown_Ranch_OnTransition::
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_Ranch_ShowHand
+	setflag FLAG_HIDE_RANCH_CUT_HAND
+	end
+
+PalletTown_Ranch_ShowHand::
+	clearflag FLAG_HIDE_RANCH_CUT_HAND
+	end
+
+PalletTown_Ranch_OnLoad::
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_Ranch_CutFence
+	end
+
+PalletTown_Ranch_CutFence::
+	setmetatile 27, 13, 0x001, FALSE
+	setmetatile 27, 14, 0x001, FALSE
+	end
 
 PalletTown_Ranch_EventScript_Hand1::
 	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_Ranch_EventScript_Hand1Strike
@@ -29,6 +49,10 @@ PalletTown_Ranch_EventScript_Slowpoke::
 
 PalletTown_Ranch_EventScript_Psyduck::
 	msgbox PalletTown_Ranch_Text_Psyduck, MSGBOX_NPC
+	end
+
+PalletTown_Ranch_EventScript_Hand3::
+	msgbox PalletTown_Ranch_Text_Hand3, MSGBOX_NPC
 	end
 
 PalletTown_Ranch_EventScript_Doduo::

@@ -652,3 +652,7 @@ PalletTown_EventScript_AmbNidoran::
 PalletTown_EventScript_AmbMeowth::
 	msgbox PalletTown_Text_AmbMeowth, MSGBOX_NPC
 	end
+
+PalletTown_EventScript_AmbGranary::
+	msgbox PalletTown_Text_AmbGranary, MSGBOX_NPC
+	end

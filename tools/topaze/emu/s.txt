@@ -257,22 +257,22 @@ run 4
 key LEFT 78
 run 4
 run 300
+writepb 03005008 f75 02
 key DOWN 40
 run 120
-readp 03005008 0 6
 key DOWN 30
 run 4
 key RIGHT 510
 run 4
 key UP 78
 run 4
-readp 03005008 0 6
-shot r0.ppm
-key RIGHT 126
+key RIGHT 62
+run 4
+key UP 14
+run 4
+key RIGHT 350
+run 4
+key DOWN 94
 run 4
 readp 03005008 0 6
-shot r1.ppm
-key RIGHT 126
-run 4
-readp 03005008 0 6
-shot r2.ppm
+shot q0.ppm

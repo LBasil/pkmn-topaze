@@ -1230,7 +1230,7 @@
 #define FLAG_HIDE_POSTGAME_STRANGER     0x4AC // Topaze postgame: mysterious trainer on Route 22
 #define FLAG_HIDE_POSTGAME_RED          0x4AD // Topaze postgame: RED in the cave
 #define FLAG_POSTGAME_DONE              0x4AE // Topaze postgame: cinematic seen
-#define FLAG_UNUSED_0x4AF               0x4AF // Unused Flag
+#define FLAG_HIDE_RANCH_CUT_HAND        0x4AF // Topaze: ranch hand at the cut fence (hidden until ONYBRIS has struck)
 
 // Boss clear flags, 1200
 #define FLAG_DEFEATED_BROCK           0x4B0

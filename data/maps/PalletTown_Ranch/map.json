@@ -97,6 +97,21 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_PALLET_RANCH_HAND3",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_WORKER_M",
+      "x": 28,
+      "y": 13,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PalletTown_Ranch_EventScript_Hand3",
+      "flag": "FLAG_HIDE_RANCH_CUT_HAND"
+    },
+    {
       "local_id": "LOCALID_PALLET_RANCH_DODUO",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_DODUO",
@@ -109,7 +124,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PalletTown_Ranch_EventScript_Doduo",
-      "flag": "0"
+      "flag": "FLAG_GRENALUX_ONYBRIS_STRIKE"
     },
     {
       "local_id": "LOCALID_PALLET_RANCH_NIDORANM",
@@ -124,7 +139,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PalletTown_Ranch_EventScript_Nidoranm",
-      "flag": "0"
+      "flag": "FLAG_GRENALUX_ONYBRIS_STRIKE"
     },
     {
       "local_id": "LOCALID_PALLET_RANCH_NIDORANF",
@@ -139,7 +154,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PalletTown_Ranch_EventScript_Nidoranf",
-      "flag": "0"
+      "flag": "FLAG_GRENALUX_ONYBRIS_STRIKE"
     },
     {
       "local_id": "LOCALID_PALLET_RANCH_MEOWTH",

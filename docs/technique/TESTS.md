@@ -69,6 +69,8 @@
 
 - [x] **Grand ranch** (`t_ranch.py`) : de la grande rue, passage par l'ouverture est puis traversée vers la carte du ranch sans écran de chargement (carte 4/5), rendu correct (enclos, animaux, écurie). À confirmer : dialogues, clôture coupée, impossibilité de passer les clôtures.
 
+- [x] **Grand ranch avant/après attaque** (`t_ranch2.py`, flag posé en mémoire) : clôture ouverte, pisteurs disparus, ouvrier présent à la brèche ; avant : clôture intacte et animaux présents. Dialogues non lus en jeu.
+
 ## À REPRENDRE : noms et équipes (placeholders)
 Tout ce qui a été inventé par Claude est **provisoire** et sera repassé avec Basil : noms, équipes, niveaux, dialogues et sprites des personnages du tournoi de la Ligue (Jasper, Coralie, Boris, Alma, Ruben), de l'inconnu de la route 22 et de Red (équipe/niveaux), des dresseurs de la Ligue, des textes d'arène et des lignes de PNJ réécrites, des CT données par les champions, des noms de badges et des trois textes de fin.
 **Ne sont pas des placeholders** (viennent des notes de Basil) : les 12 villes, les 8 champions (Kay, Sylvestre, Hera, Grim, Achlys, Nox, Eddie, Hepha) et leurs types, l'intrigue Onybris/Jirachi, les trois fins (principe), le postgame Giovanni puis Red avec cinématique Silver, le format de la Ligue.
