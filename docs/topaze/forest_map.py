@@ -178,9 +178,10 @@ RES = dil(list(OBJ.values()) + list(HID.values()) + list(SIGNS.values()), 1)
 CORR = dil(PATH, 2)
 NOGO = {(x, y) for x in range(3, FX(12)) for y in range(FY(18), FY(28))}      # la diagonale gauche est fermee : que des arbres autour de l'arbre geant
 CORR -= (NOGO - PATH)
+CORR -= {c for c in CORR if c[0] >= W - 9 and c not in dil(PATH, 2)}
 for (x0, y0, x1, y1) in CLEARINGS: CORR |= {(x, y) for x in range(x0, x1 + 1) for y in range(y0, y1 + 1)}
 CR = P((20, 40))
-for i in range(4):
+for i in range(5):
     for j in range(4): OCC[(VOLC[0] + i, VOLC[1] + j)] = 'reserve-volcan'
 for i in range(3):
     for j in range(3): OCC[(CR[0] + i, CR[1] + j)] = 'reserve'
@@ -207,8 +208,8 @@ for y in range(2, H - 2, 2):
         cells = [(x + i, y + j) for i in range(2) for j in range(2)]
         if any(c in CORR or c in OCC or c in RES for c in cells): continue
         if rnd.random() < 0.05: continue
-        east = x >= 44
-        if rnd.random() < (0.25 if east else 0.55): tree(x, y); claim(x, y, 2, 2, 'arbre')
+        east = x >= W - 10
+        if rnd.random() < (0.7 if east else 0.55): tree(x, y); claim(x, y, 2, 2, 'arbre')
         else:
             kind = rnd.choice(['boulder', 'thorns', 'spire', 'spire', 'dead'] if east else ['dead', 'dead', 'boulder', 'thorns', 'spire'])
             DEAD.append((x, y, kind)); claim(x, y, 2, 2, kind)
@@ -475,18 +476,22 @@ def spire_img(st):
     d.ellipse((1, 24, 31, 31), fill=13)
     shape(d, st, 10, 28, 6, 22, -1); shape(d, st, 22, 29, 7, 26, 1); shape(d, st, 16, 30, 5, 13)
     return im
-def volcano_img(st):
-    im = ground_bg(64, 64, st); d = ImageDraw.Draw(im)
-    d.ellipse((0, 50, 63, 63), fill=13)
-    d.polygon([(2, 60), (20, 24), (26, 13), (38, 13), (44, 24), (62, 60)], fill=14, outline=5)
-    d.polygon([(34, 13), (38, 13), (44, 24), (62, 60), (38, 60)], fill=6)
-    d.line([(24, 15), (4, 58)], fill=15); d.line([(26, 16), (12, 46)], fill=15)
-    d.ellipse((23, 8, 41, 19), fill=6, outline=5); d.ellipse((26, 10, 38, 17), fill=10); d.ellipse((29, 11, 35, 15), fill=11)
-    for pts in (((31, 16), (28, 30), (24, 46), (23, 58)), ((35, 16), (38, 30), (44, 44), (50, 58)), ((32, 17), (33, 34), (33, 50))):
-        d.line(pts, fill=12, width=3); d.line(pts, fill=10, width=1)
-    d.ellipse((22, 0, 34, 8), fill=9); d.ellipse((30, 0, 44, 6), fill=8); d.ellipse((26, 3, 38, 10), fill=9)
-    for p in ((10, 54), (52, 54), (30, 58), (44, 40)): d.point(p, fill=11)
-    return im
+def lake_img(st):
+    im = ground_bg(96, 64, st); d = ImageDraw.Draw(im)
+    rim = [(6, 30), (3, 20), (10, 9), (22, 5), (34, 8), (46, 4), (60, 6), (74, 4), (86, 10), (92, 22), (88, 36), (92, 48), (80, 58), (64, 60), (50, 58), (36, 61), (20, 58), (8, 50)]
+    d.polygon([(x + 1, y + 3) for x, y in rim], fill=13)
+    d.polygon(rim, fill=14, outline=5)
+    lava = [(12, 28), (10, 21), (16, 14), (26, 11), (36, 14), (48, 10), (60, 12), (72, 10), (82, 15), (86, 24), (82, 34), (86, 44), (76, 52), (62, 54), (50, 52), (36, 55), (22, 52), (13, 45)]
+    d.polygon(lava, fill=6, outline=5)
+    inner = [(16, 28), (15, 22), (20, 18), (30, 16), (40, 19), (50, 15), (60, 17), (70, 15), (78, 19), (80, 26), (77, 35), (80, 42), (72, 48), (60, 49), (50, 47), (38, 50), (26, 47), (17, 42)]
+    d.polygon(inner, fill=12)
+    mid = [(24, 28), (28, 23), (38, 24), (48, 21), (58, 24), (68, 22), (73, 28), (70, 37), (62, 42), (50, 40), (38, 43), (28, 40)]
+    d.polygon(mid, fill=10)
+    for (x, y, w) in ((34, 30, 10), (52, 28, 12), (62, 34, 8), (42, 36, 7)): d.ellipse((x, y, x + w, y + 4), fill=11)
+    for p, q in (((20, 20), (30, 22)), ((46, 18), (58, 20)), ((24, 44), (40, 46)), ((60, 44), (72, 42))): d.line([p, q], fill=10)
+    for p in ((14, 16), (30, 10), (56, 8), (84, 18), (88, 42), (70, 56), (30, 58), (12, 40)): d.point(p, fill=15)
+    d.line([(12, 12), (24, 7)], fill=15); d.line([(60, 8), (78, 6)], fill=15)
+    return im.resize((80, 64), Image.NEAREST)
 for st in (2,):
     b = giant_img(st); ART[('giant', st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(4) for i in range(3)}
     for var in (0, 1):
@@ -496,7 +501,7 @@ for st in (2,):
     ART[('ash', st)] = meta(ash_img(st), st)
     for nm, fn in (('boulder', boulder_img), ('thorns', thorns_img), ('spire', spire_img)):
         b = fn(st); ART[(nm, st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(2) for i in range(2)}
-    b = volcano_img(st); ART[('volcano', st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(4) for i in range(4)}
+    b = lake_img(st); ART[('volcano', st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(4) for i in range(5)}
 # ---- placement
 DOORS = {S_DOOR, N_DOOR}
 for j in range(7):
@@ -517,9 +522,9 @@ for i in range(3):
     for j in range(3): del OCC[(CR[0] + i, CR[1] + j)]
 claim(CR[0], CR[1], 3, 3, 'cratere')
 for (i, j), k in ART[('crater', 2)].items(): ART_PLACE[(CR[0] + i, CR[1] + j)] = k
-for i in range(4):
+for i in range(5):
     for j in range(4): del OCC[(VOLC[0] + i, VOLC[1] + j)]
-claim(VOLC[0], VOLC[1], 4, 4, 'volcan')
+claim(VOLC[0], VOLC[1], 5, 4, 'lac de lave')
 for (i, j), k in ART[('volcano', 2)].items(): ART_PLACE[(VOLC[0] + i, VOLC[1] + j)] = k
 def near(x, y, r=1):
     for j in range(-r, r + 1):
@@ -542,27 +547,30 @@ def reach(extra):
     return seen_
 NOBAND = dil({(S_DOOR[0], S_DOOR[1] - 1), (5, 10)}, 2) | RES | LINE
 BAND_ALL = set(); BANDS = []
-_dist = {(S_DOOR[0], S_DOOR[1] - 1): 0}; _q = collections.deque([(S_DOOR[0], S_DOOR[1] - 1)])
-while _q:
-    c = _q.popleft()
-    for d_ in ((0, 1), (1, 0), (-1, 0), (0, -1)):
-        n_ = (c[0] + d_[0], c[1] + d_[1])
-        if 0 <= n_[0] < W and 0 <= n_[1] < H and n_ not in _dist and not walk_blocked(n_): _dist[n_] = _dist[c] + 1; _q.append(n_)
-_maxd = _dist[(5, 10)]
 _OBJC = set(OBJ.values()) | set(SIGNS.values()) | set(HID.values())
-_cand = []
-for d0 in range(8, _maxd - 8):
-    layer = {c for c, v in _dist.items() if d0 <= v <= d0 + 1}
-    if layer & (dil({(S_DOOR[0], S_DOOR[1] - 1), (5, 10)}, 3) | _OBJC | BAND_ALL) or any(not (1 <= c[0] < W - 1 and 1 <= c[1] < H - 1) for c in layer): continue
-    _cand.append((len(layer), d0, layer))
-_cand.sort(key=lambda t: t[0])
-_used = []; (lambda *a: None)('maxd', _maxd, 'cands', [(n,d) for n,d,_ in _cand[:12]], 'nolayer', sum(1 for d0 in range(8,_maxd-8)))
-for n_, d0, layer in _cand:
-    if n_ > 80 or len(BANDS) >= 5: break
-    if any(abs(d0 - u) < 7 for u in _used): continue
-    if (5, 10) in reach(layer | BAND_ALL): continue
-    BANDS.append(layer); BAND_ALL |= layer; _used.append(d0)
-_PD = dil(PATH, 1) | LINE | set(RES); _k = 0
+_BALLS = {v for k, v in OBJ.items() if k.startswith('ball')}
+_PD0 = dil(PATH, 1) | LINE | set(HID.values()) | _BALLS
+_OBJS = (set(OBJ.values()) - _BALLS) | set(SIGNS.values())
+_SD = (S_DOOR[0], S_DOOR[1] - 1)
+_cand = []; _DBG = []
+for kind in ('h',):
+    for a0 in range(10, (H if kind == 'h' else W) - 10):
+        if kind == 'h': cells = {(x, y) for y in (a0, a0 + 1) for x in range(1, W - 1) if not walk_blocked((x, y))}
+        else: cells = {(x, y) for x in (a0, a0 + 1) for y in range(1, H - 1) if not walk_blocked((x, y))}
+        cells -= _OBJS
+        if not cells or cells & dil({_SD, (5, 10)}, 3): continue
+        opening = cells & _PD0
+        if not 2 <= len(opening) <= 40: continue
+        if (5, 10) in reach(cells | _OBJS): continue
+        _cand.append((len(cells), kind, a0, cells))
+_cand.sort(key=lambda t: t[3] and len(t[3] & _PD0))
+_used = []
+for n_, kind, a0, cells in _cand:
+    if len(BANDS) >= 5: break
+    if any(k2 == kind and abs(a0 - u) < 6 for k2, u in _used) or cells & BAND_ALL: continue
+    if (5, 10) in reach(cells | BAND_ALL | _OBJS): continue
+    BANDS.append(cells); BAND_ALL |= cells; _used.append((kind, a0))
+_PD = _PD0; _k = 0
 _SAFE = _OBJC | dil({(S_DOOR[0], S_DOOR[1] - 1), (5, 10)}, 2)
 for cells in BANDS:
     for c in sorted(cells):
