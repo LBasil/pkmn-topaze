@@ -8,17 +8,25 @@ f = 'data/maps/PewterCity/map.json'; d = json.load(open(f))
 where = {'PewterCity_EventScript_Lass': 'lass', 'PewterCity_EventScript_FatMan': 'fatman', 'PewterCity_EventScript_BugCatcher': 'bugcatcher'}
 objs = []
 for o in d['object_events']:
-    if o['script'] == 'EventScript_CutTree': continue
+    if o['script'] == 'EventScript_CutTree' or o['script'].split('_')[-1] in ('Miner', 'Kid', 'Scientist', 'Guide', 'Grandma', 'Camper'): continue
     if o['script'] in where: o['x'], o['y'] = NPC[where[o['script']]]
     else: o['x'], o['y'] = 3, 3          # guides / assistant : gardes pour leurs LOCALID (scripts d'origine), caches par OnTransition ci-dessous
     objs.append(o)
+# PNJ d'ambiance (scripts/textes crees par pyropia_houses.py)
+AMB = [('miner', 'OBJ_EVENT_GFX_WORKER_M', 'MOVEMENT_TYPE_LOOK_AROUND', 'Miner'), ('kid', 'OBJ_EVENT_GFX_LITTLE_BOY', 'MOVEMENT_TYPE_WANDER_AROUND', 'Kid'),
+       ('scientist', 'OBJ_EVENT_GFX_SCIENTIST', 'MOVEMENT_TYPE_FACE_UP', 'Scientist'), ('guide', 'OBJ_EVENT_GFX_COOLTRAINER_F', 'MOVEMENT_TYPE_LOOK_AROUND', 'Guide'),
+       ('grandma', 'OBJ_EVENT_GFX_OLD_WOMAN', 'MOVEMENT_TYPE_FACE_DOWN', 'Grandma'), ('camper', 'OBJ_EVENT_GFX_CAMPER', 'MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT', 'Camper')]
+for (k, gfx, mv, sc) in AMB:
+    objs.append({"type": "object", "graphics_id": gfx, "x": NPC[k][0], "y": NPC[k][1], "elevation": 3, "movement_type": mv, "movement_range_x": 1, "movement_range_y": 1,
+                 "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0", "script": 'PewterCity_EventScript_' + sc, "flag": "0"})
 d['object_events'] = objs
 # ---- warps : 0,1 musee (2 ailes), 2 arene, 3 boutique, 4 maison, 5 centre, 6 maison 2 (ordre d'origine : les interieurs y renvoient), 7,8 sud, 9,10 est
 d['warp_events'] = [warp(*DR['museumA'], 'MAP_PEWTER_CITY_MUSEUM_1F', 1), warp(*DR['museumB'], 'MAP_PEWTER_CITY_MUSEUM_1F', 3),
                     warp(*DR['gym'], 'MAP_PEWTER_CITY_GYM', 1), warp(*DR['mart'], 'MAP_PEWTER_CITY_MART', 1), warp(*DR['house1'], 'MAP_PEWTER_CITY_HOUSE1', 1),
                     warp(*DR['center'], 'MAP_PEWTER_CITY_POKEMON_CENTER_1F', 1), warp(*DR['house2'], 'MAP_PEWTER_CITY_HOUSE2', 1),
                     warp(22, 39, 'MAP_ROUTE2', 15), warp(23, 39, 'MAP_ROUTE2', 16),
-                    warp(47, 25, 'MAP_ROUTE3', 0), warp(47, 26, 'MAP_ROUTE3', 1)]
+                    warp(47, 25, 'MAP_ROUTE3', 0), warp(47, 26, 'MAP_ROUTE3', 1),
+                    warp(*DR['house3'], 'MAP_PEWTER_CITY_HOUSE3', 1), warp(*DR['house4'], 'MAP_PEWTER_CITY_HOUSE4', 1)]      # 11, 12 : maisons ajoutees
 d['connections'] = []
 d['coord_events'] = []
 # ---- panneaux (les 5 d'origine) + objet cache

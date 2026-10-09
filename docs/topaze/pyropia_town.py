@@ -150,21 +150,16 @@ D = {}
 chunk(2, 2, 6, 8, 4, 2, 'lac ouest')
 lake(31, 3, 10, 5, 'lac est')
 D['gym'] = chunk(2, 11, 6, 5, 20, 3, 'arene')
-# musee : grande halle rouge de 10x4 a deux portes (comme l'original : deux entrees), assemblee avec les morceaux de maison
-LCOL, RCOL, WCOL, DCOL = [8, 16, 24, 32], [10, 18, 26, 34], [9, 17, 11, 19], [9, 17, 25, 33]
-MUSEUM_COLS = [LCOL, WCOL, WCOL, DCOL, WCOL, WCOL, DCOL, WCOL, WCOL, RCOL]
-def museum(dx, dy):
-    claim(dx, dy, 10, 4, 'musee'); doors = []
-    for i, col in enumerate(MUSEUM_COLS):
-        for j, m in enumerate(col):
-            put(dx + i, dy + j, remap(m))
-            if 0x60 <= beh(m) <= 0x6f: doors.append((dx + i, dy + j))
-    return doors
-dm = museum(3, 13); D['museumA'], D['museumB'] = [dm[0]], [dm[1]]
+# musee : facade dessinee (colonnade, fronton, 2 portes) 10x4, posee plus bas dans la partie art
+MUS = (3, 13)
+claim(MUS[0], MUS[1], 10, 4, 'musee')
+D['museumA'] = [(MUS[0] + 3, MUS[1] + 3)]; D['museumB'] = [(MUS[0] + 6, MUS[1] + 3)]
 D['center'] = chunk(8, 4, 4, 3, 16, 14, 'centre pokemon')
 D['mart'] = chunk(14, 3, 4, 3, 36, 14, 'boutique')
 D['house1'] = chunk(11, 12, 4, 4, 38, 29, 'maison 1')
 D['house2'] = chunk(15, 12, 4, 4, 12, 29, 'maison 2')
+D['house3'] = chunk(11, 12, 4, 4, 15, 3, 'maison 3 (pres de l arene)')
+D['house4'] = chunk(15, 12, 4, 4, 33, 29, 'maison 4')
 print('portes', {k: v for k, v in D.items()})
 for k in list(D): assert D[k], ('pas de porte', k)
 DOORS = {k: v[0] for k, v in D.items()}
@@ -186,7 +181,8 @@ pr(4, 17, 43, 18)                       # rue du milieu
 pr(40, 19, 41, 22)                      # milieu -> bas (escalier est)
 for k in ('museumA', 'museumB', 'center', 'mart'): pr(fr(k)[0], fr(k)[1], fr(k)[0] + 1, 18)
 pr(fr('gym')[0], fr('gym')[1], fr('gym')[0] + 1, 9)
-for k in ('house1', 'house2'): pr(fr(k)[0], fr(k)[1], fr(k)[0] + 1, 33)
+for k in ('house1', 'house2', 'house4'): pr(fr(k)[0], fr(k)[1], fr(k)[0] + 1, 33)
+pr(fr('house3')[0], fr('house3')[1], fr('house3')[0] + 1, 9)
 pr(10, 20, 11, 33) if False else None
 pr(5, 27, 6, 28) if False else None
 # les cases de mur / escalier ne sont pas des chemins
@@ -294,6 +290,35 @@ def stairs():
     d.line([(0, 0), (0, 15)], fill=5); d.line([(15, 0), (15, 15)], fill=5)
     return im
 STAIR = meta(stairs())
+FONT = {'M': ['X...X', 'XX.XX', 'X.X.X', 'X...X', 'X...X'], 'U': ['X...X'] * 4 + ['.XXX.'], 'S': ['.XXXX', 'X....', '.XXX.', '....X', 'XXXX.'], 'E': ['XXXX', 'X...', 'XXX.', 'X...', 'XXXX']}
+def museum_art():
+    im = ground_bg(160, 64); d = ImageDraw.Draw(im)
+    d.rectangle((4, 60, 155, 63), fill=7, outline=5); d.rectangle((8, 56, 151, 59), fill=8, outline=5)              # marches
+    d.rectangle((8, 24, 151, 55), fill=7, outline=5)                                                                   # mur
+    for x in range(12, 148, 8): d.line([(x, 26), (x, 54)], fill=6)                                                    # joints verticaux
+    d.rectangle((4, 16, 155, 24), fill=6, outline=5); d.line([(5, 17), (154, 17)], fill=8)                             # corniche
+    d.polygon([(36, 16), (80, 1), (124, 16)], fill=6, outline=5); d.polygon([(44, 15), (80, 4), (116, 15)], fill=14)  # fronton
+    txt = 'MUSEUM'; x0 = 80 - (len(txt) * 6 - 1) // 2
+    for k, ch in enumerate(txt):
+        rows = FONT[ch]
+        for j, row in enumerate(rows):
+            for i, c in enumerate(row):
+                if c == 'X': d.point((x0 + k * 6 + i, 8 + j), fill=12)
+    for cx in (24, 40, 80, 120, 136):                                                                                  # colonnes
+        d.rectangle((cx - 4, 24, cx + 4, 55), fill=8, outline=5); d.line([(cx + 2, 25), (cx + 2, 54)], fill=7)
+        d.rectangle((cx - 6, 22, cx + 6, 25), fill=8, outline=5); d.rectangle((cx - 6, 52, cx + 6, 55), fill=8, outline=5)
+    for (x0_, x1_) in ((48, 63), (96, 111)):                                                                           # portes
+        d.rectangle((x0_ - 1, 27, x1_ + 1, 63), fill=8, outline=5); d.rectangle((x0_ + 2, 31, x1_ - 2, 63), fill=5)
+        d.rectangle((x0_ + 3, 32, x1_ - 3, 40), fill=11); d.line([((x0_ + x1_) // 2, 32), ((x0_ + x1_) // 2, 63)], fill=6)
+        d.rectangle((x0_ + 3, 41, x1_ - 3, 63), fill=6); d.line([((x0_ + x1_) // 2, 41), ((x0_ + x1_) // 2, 63)], fill=5)
+    for (x0_, x1_) in ((28, 36), (124, 132)):                                                                          # fenetres
+        pass
+    d.rectangle((28, 34, 36, 48), fill=11, outline=5); d.line([(32, 34), (32, 48)], fill=5); d.line([(28, 41), (36, 41)], fill=5)
+    d.rectangle((124, 34, 132, 48), fill=11, outline=5); d.line([(128, 34), (128, 48)], fill=5); d.line([(124, 41), (132, 41)], fill=5)
+    d.rectangle((74, 30, 86, 50), fill=9, outline=5); d.ellipse((76, 34, 84, 42), fill=10, outline=5); d.ellipse((78, 36, 82, 40), fill=11)   # banniere de flamme
+    d.polygon([(74, 50), (80, 54), (86, 50)], fill=9, outline=5)
+    return im
+MUSEUM = slice_all(museum_art(), 10, 4)
 def crater():
     im = ground_bg(48, 48); d = ImageDraw.Draw(im)
     d.ellipse((2, 39, 46, 47), fill=13)
@@ -317,8 +342,10 @@ CRATER = slice_all(crater(), 3, 3); CLUSTER = slice_all(cluster(), 3, 3)
 for (x, y) in STAIRS: put(x, y, ('ARTRAW', STAIR, 0x3000))
 def art3(x0, y0, sm, name):
     for (i, j), m in sm.items(): claim(x0 + i, y0 + j, 1, 1, name); put(x0 + i, y0 + j, ('ARTRAW', m, 0x400))
+for (i, j), m in MUSEUM.items():
+    cell = (MUS[0] + i, MUS[1] + j); put(cell[0], cell[1], ('ARTRAW', m, 0x3000 if (i, j) in ((3, 3), (6, 3)) else 0x400))
 art3(16, 22, CAIRN, 'cairn')
-art3(5, 22, CRATER, 'cratere'); art3(10, 24, CRATER, 'cratere'); art3(28, 29, CLUSTER, 'obsidienne'); art3(30, 13, CRATER, 'cratere'); art3(5, 29, CLUSTER, 'obsidienne'); art3(28, 20, CRATER, 'cratere'); art3(33, 28, CRATER, 'cratere'); art3(17, 29, CLUSTER, 'obsidienne')
+art3(5, 22, CRATER, 'cratere'); art3(10, 24, CRATER, 'cratere'); art3(28, 29, CLUSTER, 'obsidienne'); art3(30, 13, CRATER, 'cratere'); art3(5, 29, CLUSTER, 'obsidienne'); art3(28, 20, CRATER, 'cratere'); art3(17, 29, CLUSTER, 'obsidienne')
 def art1(x, y, m, name, blocked=True):
     claim(x, y, 1, 1, name); put(x, y, ('ARTRAW', m, 0x400 if blocked else 0x3000))
 for (x, y) in ((21, 5), (21, 8), (24, 13), (21, 13), (24, 16), (21, 16), (21, 22), (24, 22), (21, 28), (24, 28), (21, 31), (24, 31), (21, 36), (24, 36), (9, 19), (18, 17), (36, 18), (3, 20)):
@@ -337,7 +364,11 @@ for (x, y) in [(2, yy) for yy in range(2, 38)] + [(45, yy) for yy in range(2, 38
 grove(3, 3, 3, 10, 2); grove(26, 3, 29, 10, 3); grove(5, 12, 7, 12, 1); grove(26, 13, 29, 22, 5); grove(43, 13, 45, 22, 4); grove(3, 22, 10, 28, 5); grove(26, 24, 39, 32, 8)
 grove(14, 24, 20, 28, 4); grove(14, 36, 40, 36, 8)
 # ------------------------------------------------------------------ accessibilite / PNJ
-NPC = {'lass': (10, 19 - 1), 'fatman': (26, 28), 'bugcatcher': (34, 21), 'hidden': (36, 21)}
+NPC = {'lass': (10, 18), 'fatman': (26, 29), 'bugcatcher': (34, 22), 'hidden': (36, 21), 'miner': (17, 9), 'kid': (19, 13), 'scientist': (36, 10), 'guide': (13, 18), 'grandma': (19, 26), 'camper': (30, 27)}
+for k, c in list(NPC.items()):                 # PNJ tombe sur un decor : on prend la case libre la plus proche
+    if c in OCC and OCC[c] != 'chemin':
+        cand = sorted(((abs(x - c[0]) + abs(y - c[1]), (x, y)) for x in range(3, W - 3) for y in range(3, H - 3) if (x, y) not in OCC), key=lambda t: t[0])
+        NPC[k] = cand[0][1]; print('PNJ', k, c, '->', NPC[k])
 def raw_blocked(c):
     v = G[c]
     if isinstance(v, tuple): return bool(v[2] & 0xc00)

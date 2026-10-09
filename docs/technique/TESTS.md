@@ -112,6 +112,6 @@ Piste réaliste : faire d'abord le jeu jouable, puis ajouter un follower **limit
 
 ### Pyropia v2 (émulateur)
   - ROM de test jetable : sortie nord de Grenalux redirigée vers le sud de Pyropia (patch temporaire de `PalletTown/map.json`, restauré ensuite). Banc : `tools/topaze/emu/t_pyro_a.py` (arrivée), `t_pyro_b.py` (portes), `t_pyro_c.py` (PNJ, panneaux, sorties) avec `TOPAZE_COL=/tmp/pyropia_col.json`.
-  - OK : Arène, Centre, Boutique, Musée (2 ailes), 2 maisons : entrée et sortie ; 3 PNJ parlent ; 5 panneaux lisibles ; sortie est ↔ Route 3 et sud ↔ Route 2 dans les deux sens. v3 : le planificateur monte et descend par les escaliers (murs infranchissables), tous les tests ci-dessus repassent.
+  - OK : Arène, Centre, Boutique, Musée (2 ailes), 2 maisons : entrée et sortie ; 3 PNJ parlent ; 5 panneaux lisibles ; sortie est ↔ Route 3 et sud ↔ Route 2 dans les deux sens. v3c : 4 maisons + musée (2 portes) entrent/sortent bien, 9 PNJ parlent. Piège de banc : `TOPAZE_COL` ne doit pas être défini pour `opening.py`/`t_pyro_a.py` (sinon l'émulateur ne démarre pas), et `TOPAZE_ROM`/`TOPAZE_COL` ne persistent pas d'un appel shell à l'autre. v3 : le planificateur monte et descend par les escaliers (murs infranchissables), tous les tests ci-dessus repassent.
   - Corrigé : les maisons décoratives avaient une porte sans warp (maintenant fenêtre).
   - Non testés : gagner l'arène de Kay (inchangée), objet caché, ambiance des Routes 2 et 3 (encore d'origine).

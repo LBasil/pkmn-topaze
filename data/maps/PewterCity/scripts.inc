@@ -845,3 +845,28 @@ PewterCity_Movement_AideExit3::
 PewterCity_Movement_WalkInPlaceLeft::
 	walk_in_place_left
 	step_end
+
+PewterCity_EventScript_Miner::
+	msgbox PewterCity_Text_Miner, MSGBOX_NPC
+	end
+
+PewterCity_EventScript_Kid::
+	msgbox PewterCity_Text_Kid, MSGBOX_NPC
+	end
+
+PewterCity_EventScript_Scientist::
+	msgbox PewterCity_Text_Scientist, MSGBOX_NPC
+	end
+
+PewterCity_EventScript_Guide::
+	msgbox PewterCity_Text_Guide, MSGBOX_NPC
+	end
+
+PewterCity_EventScript_Grandma::
+	msgbox PewterCity_Text_Grandma, MSGBOX_NPC
+	end
+
+PewterCity_EventScript_Camper::
+	msgbox PewterCity_Text_Camper, MSGBOX_NPC
+	end
+

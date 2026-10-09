@@ -4,9 +4,9 @@ from townlib import *
 import json
 P.B = {tuple(c) for c in json.load(open('/tmp/pyropia_col.json'))['blocked']}
 NP = json.load(open('/tmp/pyropia_npc.json')); SG = json.load(open('/tmp/pyropia_signs.json'))
-P.B |= {tuple(c) for k, c in NP.items() if k != 'hidden'} | {(22, 39), (23, 39), (47, 25), (47, 26)}
+P.B |= {tuple(c) for k, c in NP.items() if k != 'hidden'} | {(x, y) for (x, y) in [(16, 6), (34, 32)] if False} | {(22, 39), (23, 39), (47, 25), (47, 26)}
 start('py_0'); sh(['key UP 18', 'run 20'])
-for n, face in (('lass', 'DOWN'), ('fatman', 'UP'), ('bugcatcher', 'UP')):
+for n, face in [(k, 'UP') for k in NP if k != 'hidden']:
     x, y = NP[n]
     for tgt, f in (((x, y + 1), 'UP'), ((x, y - 1), 'DOWN'), ((x - 1, y), 'RIGHT'), ((x + 1, y), 'LEFT')):
         try: goto(tgt); break

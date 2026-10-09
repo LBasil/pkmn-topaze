@@ -151,3 +151,33 @@ PewterCity_Text_RunningShoesLetterFromMom::
     .string "you! Don't ever give up!\p"
     .string "From Mom$"
 
+
+PewterCity_Text_Miner::
+    .string "The crater lake never cools.\p"
+    .string "KAY says that's why the FIRE\n"
+    .string "POKéMON here are so strong.$"
+
+PewterCity_Text_Kid::
+    .string "The stairs are warm! Even in\n"
+    .string "winter!\p"
+    .string "I like to sit on them.$"
+
+PewterCity_Text_Scientist::
+    .string "I measure the lava every morning.\p"
+    .string "It's rising. A little. Don't tell\n"
+    .string "the MAYOR.$"
+
+PewterCity_Text_Guide::
+    .string "The MUSEUM has two entrances,\n"
+    .string "but only one exhibit worth seeing:\p"
+    .string "the fossils in the east wing.$"
+
+PewterCity_Text_Grandma::
+    .string "Careful near the CAIRN.\n"
+    .string "The flame there has never gone\n"
+    .string "out, not once.$"
+
+PewterCity_Text_Camper::
+    .string "I came to see the volcano.\p"
+    .string "Now I can't stop looking at the\n"
+    .string "lava lake. It's hypnotic.$"
