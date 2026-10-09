@@ -140,9 +140,9 @@ for y in range(2, H - 2, 2): tree(0, y); tree(W - 2, y)
 PATH = set()
 WAY = [P(c) for c in [(29, 49), (29, 44), (41, 42), (41, 36), (12, 35), (12, 28), (40, 27), (40, 19), (8, 17)]] + [(6, 12), (5, 10)]
 SPURS = [(P(a), P(b)) for a, b in [((12, 35), (12, 52)), ((40, 19), (43, 14)), ((30, 18), (30, 12)), ((12, 28), (9, 25))]]
-CLEARINGS = [PB(b) for b in [(2, 52, 14, 54), (38, 9, 45, 15), (24, 6, 36, 12), (14, 38, 28, 46)]]
+CLEARINGS = [PB(b) for b in [(11, 52, 18, 54), (38, 9, 45, 15), (24, 6, 36, 12), (14, 38, 28, 46)]]
 VOLC = (2, 34)
-LAKE = {(x, y) for x in range(2, 10) for y in range(34, 43) if ((x - 5.5) / 4.3) ** 2 + ((y - 38) / 4.9) ** 2 + 0.3 * math.sin(x * 1.7 + y * 2.3) <= 0.85}                                       # volcan (4x4), au nord-ouest de la clairiere sud-ouest
+LAKE = {(x, y) for x in range(2, 10) for y in range(34, 46) if ((x - 5.5) / 4.7) ** 2 + ((y - 39.5) / 7.2) ** 2 + 0.25 * math.sin(x * 1.7 + y * 2.3) <= 0.9 or (y >= 44 and x <= 9)}                                       # volcan (4x4), au nord-ouest de la clairiere sud-ouest
 GIANT = P((7, 21))                                      # grand arbre calcine (3x4) qui barre la diagonale gauche
 def seg(a, b):
     (x0, y0), (x1, y1) = a, b
@@ -171,8 +171,8 @@ for (x, y) in PATH:
 def dil(cells, r):
     return {(x + i, y + j) for (x, y) in cells for i in range(-r, r + 1) for j in range(-r, r + 1)}
 OBJ0 = {'youngster': (26, 47), 'boy': (33, 46), 'rick': (45, 38), 'doug': (17, 39), 'sammy': (22, 31), 'anthony': (30, 9), 'charlie': (20, 14),
-       'ball_pokeball': (5, 53), 'ball_antidote': (42, 11), 'ball_potion': (9, 53), 'ball_potion2': (27, 44)}
-HID0 = {'potion': (3, 53), 'antidote': (45, 11)}
+       'ball_pokeball': (14, 53), 'ball_antidote': (42, 11), 'ball_potion': (17, 53), 'ball_potion2': (27, 44)}
+HID0 = {'potion': (15, 52), 'antidote': (45, 11)}
 SIGNS0 = {'tips1': (32, 47), 'tips2': (43, 39), 'tips3': (24, 38), 'tips4': (15, 31), 'tips5': (30, 31), 'exit': (9, 13)}
 OBJ = {k: P(v) for k, v in OBJ0.items()}; HID = {k: P(v) for k, v in HID0.items()}; SIGNS = {k: P(v) for k, v in SIGNS0.items()}
 RES = dil(list(OBJ.values()) + list(HID.values()) + list(SIGNS.values()), 1)
