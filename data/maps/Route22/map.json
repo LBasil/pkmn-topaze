@@ -18,11 +18,6 @@
       "map": "MAP_ROUTE23",
       "offset": 0,
       "direction": "up"
-    },
-    {
-      "map": "MAP_VIRIDIAN_CITY",
-      "offset": -10,
-      "direction": "right"
     }
   ],
   "object_events": [
@@ -70,6 +65,34 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE22_NORTH_ENTRANCE",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 47,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": "10"
+    },
+    {
+      "x": 47,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": "10"
+    },
+    {
+      "x": 47,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": "11"
+    },
+    {
+      "x": 47,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": "11"
     }
   ],
   "coord_events": [

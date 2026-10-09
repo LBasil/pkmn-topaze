@@ -856,10 +856,11 @@ static bool8 TryArrowWarp(struct MapPosition *position, u16 metatileBehavior, u8
     return FALSE;
 }
 
-// Topaze: GRENALUX <-> Route 1 / Route 21 use plain step-on warps (no door tile), see docs/topaze/grenalux_events.py
+// Topaze: GRENALUX / OPANIHRUM <-> Routes 1, 2, 21, 22 use plain step-on warps (no door tile), see docs/topaze/grenalux_events.py
 static bool8 IsTopazeStepWarpMap(void)
 {
-    return gMapHeader.mapLayoutId == LAYOUT_PALLET_TOWN || gMapHeader.mapLayoutId == LAYOUT_ROUTE1 || gMapHeader.mapLayoutId == LAYOUT_ROUTE21_NORTH;
+    return gMapHeader.mapLayoutId == LAYOUT_PALLET_TOWN || gMapHeader.mapLayoutId == LAYOUT_ROUTE1 || gMapHeader.mapLayoutId == LAYOUT_ROUTE21_NORTH
+        || gMapHeader.mapLayoutId == LAYOUT_VIRIDIAN_CITY || gMapHeader.mapLayoutId == LAYOUT_ROUTE2 || gMapHeader.mapLayoutId == LAYOUT_ROUTE22;
 }
 
 static bool8 TryStartWarpEventScript(struct MapPosition *position, u16 metatileBehavior)

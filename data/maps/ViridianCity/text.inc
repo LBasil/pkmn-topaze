@@ -103,7 +103,7 @@ ViridianCity_Text_TooBusyForTeachyTV::
 
 ViridianCity_Text_CitySign::
     .string "OPANIHRUM \n"
-    .string "The City of the Black Opal$"
+    .string "City of the Black Opal$"
 
 ViridianCity_Text_CatchMonsForEasierBattles::
     .string "TRAINER TIPS\p"
@@ -120,7 +120,8 @@ ViridianCity_Text_MovesLimitedByPP::
     .string "POKéMON at a POKéMON CENTER.$"
 
 ViridianCity_Text_GymSign::
-    .string "OPANIHRUM POKéMON GYM$"
+    .string "OPANIHRUM POKéMON GYM\n"
+    .string "THE FOUNDRY - LEADER: HEPHA$"
 
 ViridianCity_Text_GymDoorsAreLocked::
     .string "OPANIHRUM GYM's doors are locked…$"

@@ -768,3 +768,25 @@ const struct Tileset gTileset_PetalburgEmerald =
     .metatileAttributes = gMetatileAttributes_PetalburgEmerald,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralOpal =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralOpal,
+    .palettes = gTilesetPalettes_GeneralOpal,
+    .metatiles = gMetatiles_GeneralOpal,
+    .metatileAttributes = gMetatileAttributes_GeneralOpal,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_RustboroOpal =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_RustboroOpal,
+    .palettes = gTilesetPalettes_RustboroOpal,
+    .metatiles = gMetatiles_RustboroOpal,
+    .metatileAttributes = gMetatileAttributes_RustboroOpal,
+    .callback = NULL,
+};

@@ -18,11 +18,6 @@
       "map": "MAP_PEWTER_CITY",
       "offset": -12,
       "direction": "up"
-    },
-    {
-      "map": "MAP_VIRIDIAN_CITY",
-      "offset": -12,
-      "direction": "down"
     }
   ],
   "object_events": [
@@ -109,14 +104,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route2_EventScript_ItemParalyzeHeal",
       "flag": "FLAG_HIDE_ROUTE2_PARALYZE_HEAL"
-    },
-    {
-      "type": "clone",
-      "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
-      "x": 6,
-      "y": 85,
-      "target_local_id": "LOCALID_VIRIDIAN_BORDER_TREE",
-      "target_map": "MAP_VIRIDIAN_CITY"
     }
   ],
   "warp_events": [
@@ -189,6 +176,41 @@
       "elevation": 3,
       "dest_map": "MAP_ROUTE2_VIRIDIAN_FOREST_SOUTH_ENTRANCE",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 7,
+      "y": 79,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 8,
+      "y": 79,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 9,
+      "y": 79,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 10,
+      "y": 79,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": "7"
+    },
+    {
+      "x": 11,
+      "y": 79,
+      "elevation": 0,
+      "dest_map": "MAP_VIRIDIAN_CITY",
+      "dest_warp_id": "7"
     }
   ],
   "coord_events": [],

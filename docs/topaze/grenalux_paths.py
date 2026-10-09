@@ -1,5 +1,6 @@
-import json, heapq
-d=json.load(open('/tmp/grenalux_col.json')); B={tuple(c) for c in d['blocked']}; W,H=d['w'],d['h']
+import json, heapq, os
+BIGMAP=bool(os.environ.get('TOPAZE_COL'))
+d=json.load(open(os.environ.get('TOPAZE_COL','/tmp/grenalux_col.json'))); B={tuple(c) for c in d['blocked']}; W,H=d['w'],d['h']
 DIRS={'up':(0,-1),'down':(0,1),'left':(-1,0),'right':(1,0)}
 def path(a,b):
     pq=[(0,a,None,[a])]; seen={}
@@ -10,7 +11,7 @@ def path(a,b):
         seen[(p,pd)]=1
         for n,(dx,dy) in DIRS.items():
             q=(p[0]+dx,p[1]+dy)
-            if not(2<=q[0]<=W-3 and 0<=q[1]<=H-3) : continue
+            if not((0<=q[0]<=W-1 and 0<=q[1]<=H-1) if BIGMAP else (2<=q[0]<=W-3 and 0<=q[1]<=H-3)) : continue
             if q in B and q!=b: continue
             heapq.heappush(pq,(c+1+(0.01 if pd and pd!=n else 0),q,n,tr+[q]))
 def moves(tr):

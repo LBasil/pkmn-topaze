@@ -1,26 +1,8 @@
 run 2
 ls ./states/cur.ss
 run 2
-key RIGHT 4
-run 14
-key A 4
-run 50
-shot s_old_0.ppm
-key A 4
-run 50
-shot s_old_1.ppm
-key B 4
-run 24
-key B 4
-run 24
-key B 4
-run 24
-key B 4
-run 24
-key B 4
-run 24
-key B 4
-run 24
+key DOWN 14
+run 4
 run 4
 readp 03005008 0 6
 ss ./states/cur.ss

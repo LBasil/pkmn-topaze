@@ -4,6 +4,8 @@ sys.path.insert(0, '/home/claude/pkmn-topaze/docs/topaze')
 import grenalux_paths as P
 from pl import *
 STATIC = {(10, 16), (22, 6), (22, 11), (19, 22), (33, 23), (36, 23), (41, 26), (31, 8)}
+if os.environ.get('TOPAZE_COL'):
+    STATIC = {tuple(c) for c in json.load(open('/tmp/opanihrum_npc.json')).values()} | {(18, 6), (20, 2), (8, 12), (9, 12)}
 P.B |= STATIC
 CUR = S + 'cur.ss'
 def sh(L):
