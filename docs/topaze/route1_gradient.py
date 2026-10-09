@@ -110,8 +110,10 @@ def claim(x, y, w, h, name):
             OCC[(x + i, y + j)] = name
 for y in range(H):
     for x in range(W): put(x, y, 0x3000, GRASS_M)
+TREECELLS = set()
 def tree(x, y):
     st = stage_smooth(x, y)
+    TREECELLS.update((x + i, y + j) for i in range(2) for j in range(2))
     for j in range(2):
         for i in range(2): put(x + i, y + j, 0x400, TREE[j][i], st=st)
 # ---- portes : sud (Grenalux) x=12..13 ; nord (Opanihrum) x=14..17
@@ -163,6 +165,7 @@ def dil(cells, r):
 CLEAR = dil(PATH, 1)
 SIGN = (10, H - 4); NPC = {'clerk': (16, H - 4), 'boy': (21, 12)}
 RES = dil([SIGN] + list(NPC.values()), 1)
+for c in NPC.values(): OCC[c] = 'pnj'
 RIDGE = set()
 def ridge_ok(c):
     x, y = c
@@ -196,6 +199,20 @@ for k, (ry, (g0, g1)) in enumerate(zip(RIDGE_Y, GAPS)):
         th = 3 + wb[x] + (0 if edge > 1 else -1)                         # les bouts s'amincissent vers la brèche
         for j in range(th): cells.add((x, ry - 1 + j + (wb[(x * 3) % W] if edge > 2 else 0)))
     cells = {c for c in cells if c not in OCC and c not in CLEAR}
+    for _ in range(2):                                                   # on rase les pointes / queues d'une case de large
+        cells = {c for c in cells if sum(((c[0] + a, c[1] + b) in cells) for a, b in ((1, 0), (-1, 0), (0, 1), (0, -1))) >= 2 or ((c[0] - 1, c[1]) in cells and (c[0] + 1, c[1]) in cells)}
+    seen_, keep = set(), set()                                           # composantes minuscules supprimees
+    for c0 in sorted(cells):
+        if c0 in seen_: continue
+        comp, st_ = {c0}, [c0]
+        while st_:
+            p = st_.pop()
+            for a, b in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                q = (p[0] + a, p[1] + b)
+                if q in cells and q not in comp: comp.add(q); st_.append(q)
+        seen_ |= comp
+        if len(comp) >= 4: keep |= comp
+    cells = keep
     cx = sum(c[0] for c in cells) / len(cells); cy = ry
     for c in cells: RIDGE.add(c); OCC[c] = 'roche'; BLOB[c] = (cx, cy)
 print('crêtes', len(RIDGE))
@@ -330,14 +347,13 @@ for (x, y) in sorted(RIDGE):
     bx, by = BLOB[(x, y)]; ART_PLACE[(x, y)] = ROCK[(m, stage_smooth(bx, by), (x * 3 + y * 5) % 4 if m == 15 else (x + y) % 2)]                                  # la pierre du degrade, a l'est du chemin
 # ---- panneau, PNJ
 claim(*SIGN, 1, 1, 'panneau'); ART_PLACE[SIGN] = ART[('sign', 0)]
-for c in NPC.values(): assert c not in OCC, ('PNJ sur un decor', c)
+for c in NPC.values(): assert OCC[c] == 'pnj' and c not in ART_PLACE, ('PNJ sur un decor', c)
 # ---- bosquets d'arbres (hors chemin, hors herbes, hors cases reservees ; marge de 1 case)
 def near(x, y, r=1):
     for j in range(-r, r + 1):
         for i in range(-r, r + 1):
             if (x + i, y + j) in OCC or (x + i, y + j) in ART_PLACE: return True
     return False
-for c in NPC.values(): OCC[c] = 'pnj'
 def free_tree(x, y): return 2 <= x <= W - 4 and 2 <= y <= H - 4 and all((x + i, y + j) not in OCC and not near(x + i, y + j, 1) for i in range(2) for j in range(2))
 def grove(cx, cy, n, spread):
     k = tries = 0
@@ -348,7 +364,7 @@ def grove(cx, cy, n, spread):
             for j in range(-2, 4):                                              # l'herbe autour prend l'etage de l'arbre : pas de bord de couleur
                 for i in range(-2, 4):
                     c = (x + i, y + j)
-                    if 0 <= c[0] < W and 0 <= c[1] < H and c not in OCC: put(c[0], c[1], 0x3000, GRASS_M, st=stage_smooth(x, y))
+                    if 0 <= c[0] < W and 0 <= c[1] < H and c not in OCC and c not in TREECELLS: put(c[0], c[1], 0x3000, GRASS_M, st=stage_smooth(x, y))
 for (cx, cy, n, s) in ((4, 50, 5, 2.2), (20, 48, 5, 2.4), (22, 40, 4, 2), (3, 40, 3, 1.5), (10, 38, 4, 2.2), (22, 29, 4, 2), (3, 25, 5, 2), (13, 26, 3, 1.4),
                        (5, 18, 4, 2), (22, 18, 3, 1.5), (3, 6, 5, 2), (6, 12, 2, 1.5), (20, 6, 4, 2), (12, 3, 3, 1.5), (24, 24, 2, 1.5), (12, 14, 2, 1.5)):
     grove(cx, cy, n, s)
