@@ -131,11 +131,11 @@ for y in range(2, H - 2, 2):
     if not (WEST_ROWS[0] <= y <= WEST_ROWS[1]): tree(0, y)
     if not (EAST_ROWS[0] <= y <= EAST_ROWS[1]): tree(W - 2, y)
 PATH = set()
-RIDGES = [(12, 10, 14), (56, 14, 18), (80, 12, 17)]     # (x gauche, breche haut, breche bas)
+RIDGES = [(12, 10, 14), (56, -1, -1), (80, 12, 17)]     # la 2e crete est un MUR PLEIN : on ne passe de l'ouest a l'est que par le Mont Selenite     # (x gauche, breche haut, breche bas)
 CENTER = (22, 14)                                        # Centre : cases (22..26, 14..16), porte en (24, 16)
 ARCH1, ARCH2 = (39, 7), (67, 7)                          # grottes : cases (x..x+2, 7..9), porte en (x+1, 9)
-WAY = [(1, 11), (5, 12), (9, 13), (12, 12), (16, 14), (19, 17), (28, 17), (31, 15), (34, 12), (36, 11), (45, 11), (50, 13), (54, 16), (60, 15),
-       (63, 12), (65, 11), (72, 11), (75, 12), (78, 14), (84, 15), (90, 16), (94, 15)]
+WAYS = [[(1, 11), (5, 12), (9, 13), (12, 12), (16, 14), (19, 17), (28, 17), (31, 15), (34, 12), (36, 11), (45, 11), (50, 13)],
+      [(64, 12), (65, 11), (72, 11), (75, 12), (78, 14), (84, 15), (90, 16), (94, 15)]]
 def seg(a, b):
     (x0, y0), (x1, y1) = a, b
     n = max(abs(x1 - x0), abs(y1 - y0))
@@ -143,7 +143,8 @@ def seg(a, b):
         t = k / max(1, n); x = x0 + (x1 - x0) * t; y = y0 + (y1 - y0) * t
         for i in (0, 1): PATH.add((int(round(x)) + i, int(round(y))))
         PATH.add((int(round(x)) + 1, int(round(y)) + 1))
-for a_, b_ in zip(WAY, WAY[1:]): seg(a_, b_)
+for WAY in WAYS:
+    for a_, b_ in zip(WAY, WAY[1:]): seg(a_, b_)
 for ax, ay in (ARCH1, ARCH2): PATH.add((ax + 1, ay + 3)); PATH.add((ax + 1, ay + 4)); PATH.add((ax + 2, ay + 3))
 def wob(seed_, n=H):
     r = random.Random(seed_); v = 0; out = []
@@ -159,7 +160,7 @@ for k, (x0, g0, g1) in enumerate(RIDGES):
             for x in range(x0 - 3, x0 + 7): GAPC.add((x, y))
             continue
         sh = int(round(2 * math.sin(y * 0.38 + k * 1.7)))
-        for x in range(x0 + sh + wl[y], x0 + sh + 3 + wr[y]): RIDGE.add((x, y)); BLOB[(x, y)] = (x0, y)
+        for x in range(x0 + sh + wl[y] - (2 if k == 1 else 0), x0 + sh + 3 + wr[y] + (2 if k == 1 else 0)): RIDGE.add((x, y)); BLOB[(x, y)] = (x0, y)
 # massifs : deux flancs de montagne au nord du chemin ; chacun porte une grotte
 MASSIF = set(); DOORS = set()
 def massif(xa, xb, base, seed_, arch):
@@ -273,7 +274,7 @@ OBJ['mpunch'] = (_x, _y); OBJ['mkick'] = (_x + 3, _y); OCC[(_x, _y)] = 'pnj'; OC
 def hid_cell(xa, xb, ya=3, yb=H - 4):
     cs = [c for c in cands_in(xa, xb, ya, yb, (2, 3)) if c not in LINE and not any((c[0] + i, c[1] + j) in OCC and OCC[(c[0] + i, c[1] + j)] != 'chemin' for i in (-1, 0, 1) for j in (-1, 0, 1))]
     c = rnd.choice(cs); OCC[c] = 'item'; return c
-HID = {'great': hid_cell(38, 62), 'persim': hid_cell(2, 10), 'razz': hid_cell(62, 80)}
+HID = {'great': hid_cell(38, 50), 'persim': hid_cell(2, 10), 'razz': hid_cell(62, 80)}
 OBJ['tm05'] = hid_cell(78, 92)
 for k in ('great', 'persim', 'razz'): del OCC[HID[k]]
 del OCC[OBJ['tm05']]
@@ -707,11 +708,13 @@ def flood(s0, extra=()):
             if 0 <= n_[0] < W and 0 <= n_[1] < H and n_ not in seen_ and n_ not in extra and not blocked(n_): seen_.add(n_); q_.append(n_)
     return seen_
 START = (0, 11); EXIT = (W - 1, 15)
-seen = flood(START)
+seen = flood(START) | flood((ARCH2[0] + 1, ARCH2[1] + 2))
+assert EXIT not in flood(START), 'la sortie est atteignable sans passer par le Mont Selenite'
+assert (ARCH1[0] + 1, ARCH1[1] + 2) in flood(START) and (ARCH2[0] + 1, ARCH2[1] + 2) not in flood(START)
 for c in [EXIT] + [(0, y) for y in range(WEST_ROWS[0], WEST_ROWS[1] + 1)] + [(W - 1, y) for y in range(EAST_ROWS[0], EAST_ROWS[1] + 1)] + list(OBJ.values()) + list(HID.values()) + sorted(DOORS): assert c in seen, ('inaccessible', c)
 for (x0, y0, x1, y1) in TALL: assert (x0, y0) in seen, ('herbe inaccessible', x0, y0)
 for c in SIGNS.values(): assert any((c[0] + dx, c[1] + dy) in seen for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))), ('panneau inaccessible', c)
-assert EXIT not in flood(START, extra=GAPC), 'la sortie est atteignable sans traverser les breches en herbe'
+assert (ARCH1[0] + 1, ARCH1[1] + 2) not in flood(START, extra=GAPC), 'la grotte est atteignable sans traverser la breche en herbe'
 for k in FACE:
     x, y = OBJ[k]; d_ = DIRS[FACE[k]]
     for j in range(1, SIGHT[k] + 1):
