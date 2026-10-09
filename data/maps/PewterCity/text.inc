@@ -88,12 +88,11 @@ PewterCity_Text_MuseumOfScience::
 
 PewterCity_Text_GymSign::
     .string "PYROPIA POKéMON GYM\n"
-    .string "LEADER: KAY\l"
-    .string "The Volcano Keeper!$"
+    .string "LEADER: KAY$"
 
 PewterCity_Text_CitySign::
     .string "PYROPIA\n"
-    .string "A Stone Gray City$"
+    .string "City at the Foot of the Volcano$"
 
 @ The below 3 JP texts are unused. Possibly a cut NPC meant to give the player the Berry Pouch
 PewterCity_Text_DefeatedBrockYouCanHaveTreasure::

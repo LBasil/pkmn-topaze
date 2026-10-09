@@ -1533,3 +1533,45 @@ const u16 gTilesetPalettes_GradientRoad[][16] =
 	INCBIN_U16("data/tilesets/secondary/gradient_road/palettes/14.gbapal"),
 	INCBIN_U16("data/tilesets/secondary/gradient_road/palettes/15.gbapal"),
 };
+
+const u32 gTilesetTiles_GeneralEmber[] = INCBIN_U32("data/tilesets/primary/general_ember/tiles.4bpp.lz");
+const u16 gTilesetPalettes_GeneralEmber[][16] =
+{
+	INCBIN_U16("data/tilesets/primary/general_ember/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_ember/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_ember/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_ember/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_ember/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_ember/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_ember/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_ember/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_ember/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_ember/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_ember/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_ember/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_ember/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_ember/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_ember/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_ember/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_LavaridgeEmber[] = INCBIN_U32("data/tilesets/secondary/lavaridge_ember/tiles.4bpp.lz");
+const u16 gTilesetPalettes_LavaridgeEmber[][16] =
+{
+	INCBIN_U16("data/tilesets/secondary/lavaridge_ember/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavaridge_ember/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavaridge_ember/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavaridge_ember/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavaridge_ember/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavaridge_ember/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavaridge_ember/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavaridge_ember/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavaridge_ember/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavaridge_ember/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavaridge_ember/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavaridge_ember/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavaridge_ember/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavaridge_ember/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavaridge_ember/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavaridge_ember/palettes/15.gbapal"),
+};

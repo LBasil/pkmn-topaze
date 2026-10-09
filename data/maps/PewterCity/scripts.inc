@@ -5,6 +5,10 @@ PewterCity_MapScripts::
 PewterCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_PEWTER_CITY
 	setvar VAR_MAP_SCENE_PEWTER_CITY_MUSEUM_1F, 0
+@ Pyropia: pas de guides scriptes (cf. docs/topaze/pyropia_events.py)
+	setflag FLAG_HIDE_PEWTER_CITY_GYM_GUIDE
+	setflag FLAG_HIDE_PEWTER_MUSEUM_GUIDE
+	setflag FLAG_HIDE_PEWTER_CITY_RUNNING_SHOES_GUY
 	end
 
 @ Impossible to speak to this NPC from a facing dir != DIR_EAST normally, so they arent checked

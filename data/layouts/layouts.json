@@ -769,8 +769,8 @@
       "height": 40,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_PewterCity",
+      "primary_tileset": "gTileset_GeneralEmber",
+      "secondary_tileset": "gTileset_LavaridgeEmber",
       "border_filepath": "data/layouts/PewterCity/border.bin",
       "blockdata_filepath": "data/layouts/PewterCity/map.bin"
     },

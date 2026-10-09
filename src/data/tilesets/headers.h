@@ -812,3 +812,25 @@ const struct Tileset gTileset_GradientRoad =
     .metatileAttributes = gMetatileAttributes_GradientRoad,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralEmber =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralEmber,
+    .palettes = gTilesetPalettes_GeneralEmber,
+    .metatiles = gMetatiles_GeneralEmber,
+    .metatileAttributes = gMetatileAttributes_GeneralEmber,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_LavaridgeEmber =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_LavaridgeEmber,
+    .palettes = gTilesetPalettes_LavaridgeEmber,
+    .metatiles = gMetatiles_LavaridgeEmber,
+    .metatileAttributes = gMetatileAttributes_LavaridgeEmber,
+    .callback = NULL,
+};

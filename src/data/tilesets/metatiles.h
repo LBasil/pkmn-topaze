@@ -216,3 +216,8 @@ const u16 gMetatiles_GeneralGradient[] = INCBIN_U16("data/tilesets/primary/gener
 const u32 gMetatileAttributes_GeneralGradient[] = INCBIN_U32("data/tilesets/primary/general_gradient/metatile_attributes.bin");
 const u16 gMetatiles_GradientRoad[] = INCBIN_U16("data/tilesets/secondary/gradient_road/metatiles.bin");
 const u32 gMetatileAttributes_GradientRoad[] = INCBIN_U32("data/tilesets/secondary/gradient_road/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralEmber[] = INCBIN_U16("data/tilesets/primary/general_ember/metatiles.bin");
+const u32 gMetatileAttributes_GeneralEmber[] = INCBIN_U32("data/tilesets/primary/general_ember/metatile_attributes.bin");
+const u16 gMetatiles_LavaridgeEmber[] = INCBIN_U16("data/tilesets/secondary/lavaridge_ember/metatiles.bin");
+const u32 gMetatileAttributes_LavaridgeEmber[] = INCBIN_U32("data/tilesets/secondary/lavaridge_ember/metatile_attributes.bin");

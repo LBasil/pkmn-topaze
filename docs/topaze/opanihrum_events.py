@@ -54,10 +54,10 @@ f = 'data/maps/ViridianCity/text.inc'; s = open(f).read()
 s = re.sub(r'(?s)ViridianCity_Text_CitySign::\n.*?\n\n', lambda m: 'ViridianCity_Text_CitySign::\n    .string "OPANIHRUM \\n"\n    .string "City of the Black Opal$"\n\n', s)
 s = re.sub(r'(?s)ViridianCity_Text_GymSign::\n.*?\n\n', lambda m: 'ViridianCity_Text_GymSign::\n    .string "OPANIHRUM POKéMON GYM\\n"\n    .string "THE FOUNDRY - LEADER: HEPHA$"\n\n', s)
 open(f, 'w').write(s)
-# ---- soin : le joueur reapparait devant la porte du CENTRE
-f = 'src/data/heal_locations.h'; s = open(f).read()
+# ---- soin : le joueur reapparait devant la porte du CENTRE (le .h est genere depuis le json et ignore par git : on edite le json)
+f = 'src/data/heal_locations.json'; s = open(f).read()
 cx, cy = DR['center'][0]
-s = re.sub(r'(\[HEAL_LOCATION_VIRIDIAN_CITY - 1\] = \{\n\s*\.mapGroup = MAP_GROUP\(MAP_VIRIDIAN_CITY\),\n\s*\.mapNum = MAP_NUM\(MAP_VIRIDIAN_CITY\),\n\s*\.x = )\d+(,\n\s*\.y = )\d+', lambda m: m.group(1) + str(cx) + m.group(2) + str(cy + 1), s)
+s = re.sub(r'("id": "HEAL_LOCATION_VIRIDIAN_CITY",\n\s*"map": "[A-Z_0-9]+",\n\s*"x": )\d+(,\n\s*"y": )\d+', lambda m: m.group(1) + str(cx) + m.group(2) + str(cy + 1), s)
 open(f, 'w').write(s)
 # ---- routes : warps a la place des connexions
 def patch_route(name, drop_dir, new_warps, extra=None):
