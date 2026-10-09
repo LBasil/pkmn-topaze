@@ -133,9 +133,10 @@ for x in list(range(0, 4, 2)) + [7] + list(range(8, W, 2)): tree(x, 0)
 for x in list(range(0, 27, 2)) + list(range(31, 52, 2)): tree(x, H - 2)
 for y in range(2, H - 2, 2): tree(0, y); tree(W - 2, y)
 PATH = set()
-WAY = [(29, 49), (29, 44), (40, 42), (40, 36), (12, 35), (12, 28), (38, 27), (38, 19), (8, 17), (6, 12), (5, 10)]
-SPURS = [((12, 35), (8, 40)), ((38, 19), (44, 14)), ((30, 18), (30, 12)), ((12, 28), (9, 25))]
-CLEARINGS = [(3, 41, 10, 48), (44, 9, 50, 15), (24, 6, 36, 12), (14, 38, 28, 46)]
+WAY = [(29, 49), (29, 44), (45, 42), (45, 36), (12, 35), (12, 28), (44, 27), (44, 19), (8, 17), (6, 12), (5, 10)]
+SPURS = [((12, 35), (9, 45)), ((44, 19), (47, 14)), ((30, 18), (30, 12)), ((12, 28), (9, 25))]
+CLEARINGS = [(3, 46, 10, 52), (43, 9, 50, 15), (24, 6, 36, 12), (14, 38, 28, 46)]
+VOLC = (3, 41)                                       # volcan (4x4), au nord-ouest de la clairiere sud-ouest
 GIANT = (7, 21)                                      # grand arbre calcine (3x4) qui barre la diagonale gauche
 def seg(a, b):
     (x0, y0), (x1, y1) = a, b
@@ -163,14 +164,18 @@ for (x, y) in PATH:
     if 0 <= x < W and 0 <= y < H: put(x, y, 0x3000, path_id(x, y)); OCC[(x, y)] = 'chemin'
 def dil(cells, r):
     return {(x + i, y + j) for (x, y) in cells for i in range(-r, r + 1) for j in range(-r, r + 1)}
-OBJ = {'youngster': (26, 47), 'boy': (33, 46), 'rick': (43, 38), 'doug': (17, 39), 'sammy': (22, 31), 'anthony': (30, 9), 'charlie': (20, 14),
-       'ball_pokeball': (5, 45), 'ball_antidote': (48, 11), 'ball_potion': (9, 46), 'ball_potion2': (27, 44)}
-HID = {'potion': (4, 42), 'antidote': (49, 14)}
-SIGNS = {'tips1': (32, 47), 'tips2': (38, 39), 'tips3': (24, 38), 'tips4': (15, 31), 'tips5': (30, 31), 'exit': (9, 13)}
+OBJ = {'youngster': (26, 47), 'boy': (33, 46), 'rick': (48, 38), 'doug': (17, 39), 'sammy': (22, 31), 'anthony': (30, 9), 'charlie': (20, 14),
+       'ball_pokeball': (5, 48), 'ball_antidote': (48, 11), 'ball_potion': (9, 49), 'ball_potion2': (27, 44)}
+HID = {'potion': (4, 51), 'antidote': (49, 14)}
+SIGNS = {'tips1': (32, 47), 'tips2': (43, 39), 'tips3': (24, 38), 'tips4': (15, 31), 'tips5': (30, 31), 'exit': (9, 13)}
 RES = dil(list(OBJ.values()) + list(HID.values()) + list(SIGNS.values()), 1)
 CORR = dil(PATH, 2)
+NOGO = {(x, y) for x in range(3, 12) for y in range(18, 28)}      # la diagonale gauche est fermee : que des arbres autour de l'arbre geant
+CORR -= (NOGO - PATH)
 for (x0, y0, x1, y1) in CLEARINGS: CORR |= {(x, y) for x in range(x0, x1 + 1) for y in range(y0, y1 + 1)}
 CR = (20, 40)
+for i in range(4):
+    for j in range(4): OCC[(VOLC[0] + i, VOLC[1] + j)] = 'reserve-volcan'
 for i in range(3):
     for j in range(3): OCC[(CR[0] + i, CR[1] + j)] = 'reserve'
 for i in range(3):
@@ -182,7 +187,7 @@ assert not bad_, ('cases deja prises', bad_, [(c, OCC[c]) for c in bad_])
 # ---- herbes hautes : dans les couloirs et les clairieres, jamais sur le chemin
 TALL = []
 tries = 0
-while len(TALL) < 30 and tries < 20000:
+while len(TALL) < 14 and tries < 20000:
     tries += 1; x0 = rnd.randint(3, W - 8); y0 = rnd.randint(4, H - 8); w, h = rnd.choice([(2, 4), (2, 5), (3, 3), (4, 2), (5, 2), (6, 2), (3, 4), (2, 3)])
     cells = [(x, y) for y in range(y0, y0 + h) for x in range(x0, x0 + w)]
     if any(c not in CORR or c in OCC or c in RES for c in cells): continue
@@ -196,8 +201,11 @@ for y in range(2, H - 2, 2):
         cells = [(x + i, y + j) for i in range(2) for j in range(2)]
         if any(c in CORR or c in OCC or c in RES for c in cells): continue
         if rnd.random() < 0.05: continue
-        if rnd.random() < 0.34: DEAD.append((x, y)); claim(x, y, 2, 2, 'arbre mort')
-        else: tree(x, y); claim(x, y, 2, 2, 'arbre')
+        east = x >= 44
+        if rnd.random() < (0.25 if east else 0.55): tree(x, y); claim(x, y, 2, 2, 'arbre')
+        else:
+            kind = rnd.choice(['boulder', 'thorns', 'spire', 'spire', 'dead'] if east else ['dead', 'dead', 'boulder', 'thorns', 'spire'])
+            DEAD.append((x, y, kind)); claim(x, y, 2, 2, kind)
 # ---- herbe cendree : zones de sol gris clair (c'etait une foret), hors arbres, chemin et objets
 ASH = set()
 for y in range(2, H - 2):
@@ -442,6 +450,37 @@ def giant_img(st):
     for p in ((6, 12), (40, 6), (4, 30), (45, 24), (22, 3), (8, 4)): d.point(p, fill=11)
     for p in ((15, 56), (33, 56), (19, 55)): d.point(p, fill=12)
     return im
+def boulder_img(st):
+    im = ground_bg(32, 32, st); d = ImageDraw.Draw(im)
+    d.ellipse((1, 22, 31, 31), fill=13)
+    d.polygon([(3, 27), (4, 13), (11, 5), (22, 4), (29, 12), (30, 27)], fill=14, outline=5)
+    d.polygon([(17, 27), (18, 10), (22, 5), (29, 12), (30, 27)], fill=6)
+    d.line([(6, 12), (12, 7), (20, 6)], fill=15); d.line([(10, 25), (14, 16), (21, 19)], fill=10); d.point((14, 17), fill=11); d.point((8, 20), fill=12)
+    return im
+def thorns_img(st):
+    im = ground_bg(32, 32, st); d = ImageDraw.Draw(im)
+    d.ellipse((2, 24, 30, 31), fill=13); d.ellipse((6, 21, 26, 29), fill=6, outline=5)
+    for k, (x, tx, ty) in enumerate(((8, 3, 6), (12, 9, 3), (16, 16, 1), (20, 24, 4), (24, 29, 9), (14, 5, 14), (19, 27, 15))):
+        d.line([(x, 24), (tx, ty)], fill=5, width=3); d.line([(x, 24), (tx, ty)], fill=6, width=1)
+        d.point((tx, ty), fill=11 if k % 2 else 10)
+    return im
+def spire_img(st):
+    im = ground_bg(32, 32, st); d = ImageDraw.Draw(im)
+    d.ellipse((1, 24, 31, 31), fill=13)
+    shape(d, st, 10, 28, 6, 22, -1); shape(d, st, 22, 29, 7, 26, 1); shape(d, st, 16, 30, 5, 13)
+    return im
+def volcano_img(st):
+    im = ground_bg(64, 64, st); d = ImageDraw.Draw(im)
+    d.ellipse((0, 50, 63, 63), fill=13)
+    d.polygon([(2, 60), (20, 24), (26, 13), (38, 13), (44, 24), (62, 60)], fill=14, outline=5)
+    d.polygon([(34, 13), (38, 13), (44, 24), (62, 60), (38, 60)], fill=6)
+    d.line([(24, 15), (4, 58)], fill=15); d.line([(26, 16), (12, 46)], fill=15)
+    d.ellipse((23, 8, 41, 19), fill=6, outline=5); d.ellipse((26, 10, 38, 17), fill=10); d.ellipse((29, 11, 35, 15), fill=11)
+    for pts in (((31, 16), (28, 30), (24, 46), (23, 58)), ((35, 16), (38, 30), (44, 44), (50, 58)), ((32, 17), (33, 34), (33, 50))):
+        d.line(pts, fill=12, width=3); d.line(pts, fill=10, width=1)
+    d.ellipse((22, 0, 34, 8), fill=9); d.ellipse((30, 0, 44, 6), fill=8); d.ellipse((26, 3, 38, 10), fill=9)
+    for p in ((10, 54), (52, 54), (30, 58), (44, 40)): d.point(p, fill=11)
+    return im
 for st in (2,):
     b = giant_img(st); ART[('giant', st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(4) for i in range(3)}
     for var in (0, 1):
@@ -449,6 +488,9 @@ for st in (2,):
     b = log_img(st); ART[('log', st)] = [meta(b.crop((0, 0, 16, 16)), st), meta(b.crop((16, 0, 32, 16)), st)]
     b = crater_img(st); ART[('crater', st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(3) for i in range(3)}
     ART[('ash', st)] = meta(ash_img(st), st)
+    for nm, fn in (('boulder', boulder_img), ('thorns', thorns_img), ('spire', spire_img)):
+        b = fn(st); ART[(nm, st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(2) for i in range(2)}
+    b = volcano_img(st); ART[('volcano', st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(4) for i in range(4)}
 # ---- placement
 DOORS = {S_DOOR, N_DOOR}
 for j in range(7):
@@ -462,13 +504,17 @@ for j in range(4):
         if c in OCC and OCC[c] not in ('chemin', 'reserve-geant'): raise AssertionError(('arbre geant', c, OCC[c]))
         OCC[c] = 'arbre geant'; ART_PLACE[c] = ART[('giant', 2)][(i, j)]
 for c in SIGNS.values(): claim(c[0], c[1], 1, 1, 'panneau'); ART_PLACE[c] = ART[('sign', 2)]
-for (x, y) in DEAD:
-    v = rnd.randrange(2)
-    for (i, j), k in ART[('dead', 2, v)].items(): ART_PLACE[(x + i, y + j)] = k
+for (x, y, kind) in DEAD:
+    arts = ART[('dead', 2, rnd.randrange(2))] if kind == 'dead' else ART[(kind, 2)]
+    for (i, j), k in arts.items(): ART_PLACE[(x + i, y + j)] = k
 for i in range(3):
     for j in range(3): del OCC[(CR[0] + i, CR[1] + j)]
 claim(CR[0], CR[1], 3, 3, 'cratere')
 for (i, j), k in ART[('crater', 2)].items(): ART_PLACE[(CR[0] + i, CR[1] + j)] = k
+for i in range(4):
+    for j in range(4): del OCC[(VOLC[0] + i, VOLC[1] + j)]
+claim(VOLC[0], VOLC[1], 4, 4, 'volcan')
+for (i, j), k in ART[('volcano', 2)].items(): ART_PLACE[(VOLC[0] + i, VOLC[1] + j)] = k
 def near(x, y, r=1):
     for j in range(-r, r + 1):
         for i in range(-r, r + 1):
@@ -477,6 +523,47 @@ def near(x, y, r=1):
 PATH_D = dil(PATH, 1)
 TRAINERS = {'rick': 3, 'doug': 4, 'sammy': 3, 'anthony': 4, 'charlie': 4}
 LINE = {(OBJ[k][0] + dx * d_, OBJ[k][1] + dy * d_) for k in TRAINERS for dx, dy in ((0, -1), (0, 1), (-1, 0), (1, 0)) for d_ in range(1, 6)}
+# ---- bandes d'herbe hautes OBLIGATOIRES : tranches qui coupent tout le couloir (on verifie que le joueur ne peut pas les contourner)
+def walk_blocked(c):
+    return (c in ART_PLACE and c not in DOORS) or bool(G[c] & 0xc00)
+def reach(extra):
+    s0 = (29, 49); seen_ = {s0}; q_ = collections.deque([s0])
+    while q_:
+        c = q_.popleft()
+        for d_ in ((0, 1), (1, 0), (-1, 0), (0, -1)):
+            n_ = (c[0] + d_[0], c[1] + d_[1])
+            if 0 <= n_[0] < W and 0 <= n_[1] < H and n_ not in seen_ and n_ not in extra and not walk_blocked(n_): seen_.add(n_); q_.append(n_)
+    return seen_
+NOBAND = dil({(29, 49), (5, 10)}, 2) | RES | LINE
+BAND_ALL = set(); BANDS = []
+_dist = {(29, 49): 0}; _q = collections.deque([(29, 49)])
+while _q:
+    c = _q.popleft()
+    for d_ in ((0, 1), (1, 0), (-1, 0), (0, -1)):
+        n_ = (c[0] + d_[0], c[1] + d_[1])
+        if 0 <= n_[0] < W and 0 <= n_[1] < H and n_ not in _dist and not walk_blocked(n_): _dist[n_] = _dist[c] + 1; _q.append(n_)
+_maxd = _dist[(5, 10)]
+_OBJC = set(OBJ.values()) | set(SIGNS.values()) | set(HID.values())
+_cand = []
+for d0 in range(8, _maxd - 8):
+    layer = {c for c, v in _dist.items() if d0 <= v <= d0 + 1}
+    if layer & (dil({(29, 49), (5, 10)}, 3) | _OBJC | BAND_ALL) or any(not (1 <= c[0] < W - 1 and 1 <= c[1] < H - 1) for c in layer): continue
+    _cand.append((len(layer), d0, layer))
+_cand.sort(key=lambda t: t[0])
+_used = []; (lambda *a: None)('maxd', _maxd, 'cands', [(n,d) for n,d,_ in _cand[:12]], 'nolayer', sum(1 for d0 in range(8,_maxd-8)))
+for n_, d0, layer in _cand:
+    if n_ > 70 or len(BANDS) >= 5: break
+    if any(abs(d0 - u) < 9 for u in _used): continue
+    if (5, 10) in reach(layer | BAND_ALL): continue
+    BANDS.append(layer); BAND_ALL |= layer; _used.append(d0)
+_PD = dil(PATH, 1) | LINE | set(RES); _k = 0
+for cells in BANDS:
+    for c in sorted(cells):
+        if c in _PD: OCC[c] = 'herbe'; put(c[0], c[1], 0x3000, TALL_M, st=1)
+        else:
+            _k += 1; OCC[c] = 'haie'; ART_PLACE[c] = ART[(('sm0', 'sm1', 'stump')[_k % 3], 2)]
+print('bandes obligatoires', len(BANDS), [len(b) for b in BANDS])
+assert len(BANDS) >= 4, 'pas assez de bandes obligatoires'
 DARK = variant(GRASS_M, 2)
 OPEN = sorted(c for c in CORR if c not in OCC and c not in RES and c not in PATH_D and c not in LINE and c not in ASH and 2 <= c[0] <= W - 3 and 2 <= c[1] <= H - 4)
 def scatter(n, fn):
