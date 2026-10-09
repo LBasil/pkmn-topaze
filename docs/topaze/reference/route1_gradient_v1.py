@@ -53,13 +53,12 @@ def stage_pal(i, t):
     out = [c if k == 0 else hlerp(tint_garnet(*c), tint_opal(*c), t) for k, c in enumerate(ORIG[i])]
     if i == 5: out = [out[0]] + [desat(c, 1 - 0.65 * t) for c in out[1:]]       # sable : la route reste pale vers le nord (comme l'avenue d'Opanihrum)
     return out
-SLOT = {0: {0: 0, 2: 2, 5: 5, 3: 12}, 1: {0: 1, 2: 3, 5: 4, 3: 12}, 2: {0: 7, 2: 8, 5: 9, 3: 12}}     # palette d'origine -> emplacement, par etage
-ART_SLOT = {0: 6, 1: 10, 2: 11}; ROCK_SLOT = 12
+SLOT = {0: {0: 0, 2: 2, 5: 5}, 1: {0: 1, 2: 3, 5: 4}, 2: {0: 7, 2: 8, 5: 9}}     # palette d'origine -> emplacement, par etage
+ART_SLOT = {0: 6, 1: 10, 2: 11}; SIGN_SLOT = 12
 PALS = {}                                        # emplacement -> palette
 for st in range(3):
-    for o, s in SLOT[st].items():
-        if o != 3: PALS[s] = stage_pal(o, TS_[st])
-PALS[ROCK_SLOT] = stage_pal(3, 0.5)          # roche : meme palette violet-gris sur toute la route
+    for o, s in SLOT[st].items(): PALS[s] = stage_pal(o, TS_[st])
+PALS[SIGN_SLOT] = stage_pal(1, 0.0)
 # ------------------------------------------------------------------ metatuiles : variantes par etage
 mt = open(EM + 'tilesets/primary/general/metatiles.bin', 'rb').read(); patt = open(EM + 'tilesets/primary/general/metatile_attributes.bin', 'rb').read()
 hdr = open('include/constants/metatile_behaviors.h').read()
@@ -75,17 +74,20 @@ def conv(v):
 PATT32 = [conv(struct.unpack('<H', patt[i * 2:i * 2 + 2])[0]) for i in range(len(patt) // 2)]
 SEC_ENT = []; SEC_ATT = []; VAR = {}
 def variant(m, st, special=None):
-    """numero de metatuile FireRed pour la metatuile primaire m a l'etage st (etage 0 : la primaire elle-meme si aucune palette ne change)."""
-    key = (m, st)
+    """numero de metatuile FireRed pour la metatuile primaire m a l'etage st (0 = primaire tel quel)."""
+    if st == 0 and special is None: return m
+    key = (m, st, special)
     if key in VAR: return VAR[key]
-    e = list(struct.unpack('<8H', mt[m * 16:m * 16 + 16]))
-    out = [(q & 0xfff) | (SLOT[st].get(q >> 12, q >> 12) << 12) for q in e]
-    if out == e: VAR[key] = m; return m
+    e = list(struct.unpack('<8H', mt[m * 16:m * 16 + 16])); out = []
+    for q in e:
+        p = q >> 12; mp = dict(SLOT[st]); 
+        if special == 'sign': mp[1] = SIGN_SLOT
+        out.append((q & 0xfff) | (mp.get(p, p) << 12))
     SEC_ENT.append(out); SEC_ATT.append(PATT32[m]); VAR[key] = 640 + len(SEC_ENT) - 1
     return VAR[key]
 # ------------------------------------------------------------------ carte
 W, H = 26, 54
-GRASS_M, FLOWER_M, TALL_M = 1, 4, 13
+GRASS_M, FLOWER_M, TALL_M, SIGN_M = 1, 4, 13, 3
 TREE = [[468, 469], [476, 477]]
 G = {}; OCC = {}; STG = {}
 rnd = random.Random(1010)
@@ -121,7 +123,7 @@ PATH = set()
 def seg(x0, y0, x1, y1):
     for y in range(min(y0, y1), max(y0, y1) + 1):
         for x in range(min(x0, x1), max(x0, x1) + 1): PATH.add((x, y))
-pts = [(12, H - 1), (12, 48), (6, 48), (6, 42), (14, 42), (14, 37), (8, 37), (8, 31), (16, 31), (16, 26), (10, 26), (10, 20), (18, 20), (18, 15), (8, 15), (8, 9), (14, 9), (14, 0)]
+pts = [(12, H - 1), (12, 44), (5, 44), (5, 30), (17, 30), (17, 18), (9, 18), (9, 8), (14, 8), (14, 0)]
 for (a, b) in zip(pts, pts[1:]):
     (x0, y0), (x1, y1) = a, b
     seg(x0, y0, x1, y1 + 1) if y0 == y1 else seg(x0, y0, x1 + 1, y1)
@@ -141,40 +143,12 @@ def path_id(x, y):
 for (x, y) in PATH:
     if 0 <= x < W and 0 <= y < H: put(x, y, 0x3000, path_id(x, y)); OCC[(x, y)] = 'chemin'
 # ---- herbes hautes (rencontres)
-# ---- collines (monticules de roche 2x2), murs de collines qui ne laissent que le chemin, corniches (saut vers le sud)
-MOUND = [[131, 132], [139, 140]]
-def mound(x, y):
-    claim(x, y, 2, 2, 'colline'); st = stage_at(x + 1, y + 1)
-    for j in range(2):
-        for i in range(2): G[(x + i, y + j)] = 0x400 | variant(MOUND[j][i], st)
-def free2(x, y): return all((x + i, y + j) not in OCC for i in range(2) for j in range(2))
-def wall(y):
-    for x in range(2, W - 3, 2):
-        if free2(x, y): mound(x, y)
-for y in (44, 33, 22, 16, 11): wall(y)
-LEDGES = []
-def ledge(x, y, n):
-    for i in range(n):
-        LEDGES.append((x + i, y))
-        claim(x + i, y, 1, 1, 'corniche'); G[(x + i, y)] = 0x3000 | variant(213 + (i % 2), stage_at(x + i, y))
-for (x, y, n) in ((2, 39, 5), (19, 36, 5), (2, 28, 4), (19, 28, 4), (14, 12, 5)):
-    if all((x + i, y) not in OCC for i in range(n)): ledge(x, y, n)
-    if free2(x - 2, y) and x >= 4: mound(x - 2, y)
-    if free2(x + n, y) and x + n <= W - 4: mound(x + n, y)
-# ---- herbes hautes (rencontres) : rectangles libres pres du chemin
-STONE = (19, 5)
-for j in range(3):
-    for i in range(3): OCC[(STONE[0] + i, STONE[1] + j)] = 'reserve'
-TALL = []
-tries = 0
-while len(TALL) < 10 and tries < 3000:
-    tries += 1; x0 = rnd.randint(2, W - 8); y0 = rnd.randint(3, H - 8); w = rnd.randint(3, 5); h = rnd.randint(3, 4)
-    cells = [(x, y) for y in range(y0, y0 + h) for x in range(x0, x0 + w)]
-    if x0 + w > W - 3 or y0 + h > H - 4 or any(c in OCC for c in cells): continue
-    if not any((x + dx, y + dy) in PATH for (x, y) in cells for dx in (-3, 3) for dy in (-3, 3)): continue
-    if any((x, y) in OCC for (x, y) in [(x0 - 1, y0 + k) for k in range(h)] + [(x0 + w, y0 + k) for k in range(h)]) and False: continue
-    TALL.append((x0, y0, x0 + w - 1, y0 + h - 1))
-    for c in cells: OCC[c] = 'herbe'; put(c[0], c[1], 0x3000, TALL_M)
+TALL = [(6, 47, 9, 50), (1, 33, 3, 38), (7, 33, 11, 36), (19, 33, 23, 37), (19, 22, 23, 26), (12, 20, 15, 25), (1, 12, 6, 16), (11, 11, 16, 15), (19, 9, 23, 13), (20, 3, 24, 6)]
+for (x0, y0, x1, y1) in TALL:
+    for y in range(y0, y1 + 1):
+        for x in range(x0, x1 + 1):
+            if (x, y) in OCC: continue
+            OCC[(x, y)] = 'herbe'; put(x, y, 0x3000, TALL_M)
 # ---- art : cristaux (prismes de grenat -> domes d'opale), pierre du degrade
 LG = E.load('general', 'petalburg')
 def grass_cols(st):
@@ -247,25 +221,16 @@ ART = {}      # (nom, etage) -> indice(s) de metatuile d'art
 for st in range(3):
     ART[('sm0', st)] = meta(small(st, 0), st); ART[('sm1', st)] = meta(small(st, 1), st)
     b = big(st); ART[('big', st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(3) for i in range(3)}
-def sign_art(st):
-    im = ground_bg(16, 16, st); d = ImageDraw.Draw(im); d.ellipse((2, 12, 14, 15), fill=13)
-    d.rectangle((7, 8, 8, 14), fill=6, outline=5); d.rectangle((2, 2, 13, 9), fill=8, outline=5)
-    for y in (4, 6): d.line([(4, y), (11, y)], fill=6)
-    return im
-for st in range(3): ART[('sign', st)] = meta(sign_art(st), st)
 ART_PLACE = {}
 def art1(x, y, name):
     claim(x, y, 1, 1, 'cristal'); ART_PLACE[(x, y)] = ART[(name, stage_at(x, y))]
 def art_big(x0, y0):
     st = stage_at(x0 + 1, y0 + 1); claim(x0, y0, 3, 3, 'pierre du degrade')
     for (i, j), k in ART[('big', st)].items(): ART_PLACE[(x0 + i, y0 + j)] = k
-for j in range(3):
-    for i in range(3): del OCC[(STONE[0] + i, STONE[1] + j)]
-art_big(*STONE)                                  # la pierre du degrade, a l'est du chemin
+art_big(20, 15)                                  # la pierre du degrade, a l'est du chemin
 # ---- panneau, PNJ
-SIGN = (11, 51); claim(*SIGN, 1, 1, 'panneau'); ART_PLACE[SIGN] = ART[('sign', 0)]
-NPC = {'clerk': (14, 50), 'boy': (18, 29)}
-for c in NPC.values(): assert c not in OCC, ('PNJ sur un decor', c)
+SIGN = (11, 49); claim(*SIGN, 1, 1, 'panneau'); put(SIGN[0], SIGN[1], 0x400, SIGN_M, special='sign')
+NPC = {'clerk': (14, 46), 'boy': (15, 28)}
 # ---- bosquets d'arbres (hors chemin, hors herbes, hors cases reservees ; marge de 1 case)
 def near(x, y, r=1):
     for j in range(-r, r + 1):
@@ -305,7 +270,7 @@ while q:
     for d in ((0, 1), (1, 0), (-1, 0), (0, -1)):
         n = (c[0] + d[0], c[1] + d[1])
         if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen and not blocked(n): seen.add(n); q.append(n)
-for c in [(x, 0) for x in N_GATE] + [(x, H - 1) for x in S_GATE] + list(NPC.values()) + [(SIGN[0] + 1, SIGN[1])]: assert c in seen, ('inaccessible', c)
+for c in [(x, 0) for x in N_GATE] + [(x, H - 1) for x in S_GATE] + list(NPC.values()) + [(SIGN[0], SIGN[1] + 1)]: assert c in seen, ('inaccessible', c)
 for (x0, y0, x1, y1) in TALL: assert (x0, y0) in seen or (x1, y1) in seen, ('herbe inaccessible', x0, y0)
 # ------------------------------------------------------------------ ecriture
 for _m in (468, 469, 476, 477): variant(_m, 1)      # bord de carte : arbres du mélange (violet), neutre entre les deux villes
@@ -370,7 +335,7 @@ L = json.load(open('data/layouts/layouts.json'))
 for l in L['layouts']:
     if l.get('id') == 'LAYOUT_ROUTE1': l.update(width=W, height=H, primary_tileset='gTileset_GeneralGradient', secondary_tileset='gTileset_GradientRoad')
 json.dump(L, open('data/layouts/layouts.json', 'w'), indent=2); open('data/layouts/layouts.json', 'a').write('\n')
-json.dump({'sign': SIGN, 'npc': NPC, 'w': W, 'h': H, 'tall': TALL, 'ledges': LEDGES}, open('/tmp/route1_info.json', 'w'))
+json.dump({'sign': SIGN, 'npc': NPC, 'w': W, 'h': H, 'tall': TALL}, open('/tmp/route1_info.json', 'w'))
 blk = sorted([x, y] for (x, y) in ((x, y) for y in range(H) for x in range(W)) if blocked((x, y)))
 json.dump({'w': W, 'h': H, 'blocked': blk}, open('/tmp/route1_col.json', 'w'))
 print('route 1 : metatuiles', len(SEC_ENT), 'tuiles art', len(ART_T))
