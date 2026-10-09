@@ -179,7 +179,7 @@ RES = dil(list(OBJ.values()) + list(HID.values()) + list(SIGNS.values()), 1)
 CORR = dil(PATH, 2)
 NOGO = {(x, y) for x in range(3, FX(12)) for y in range(FY(18), FY(28))}      # la diagonale gauche est fermee : que des arbres autour de l'arbre geant
 CORR -= (NOGO - PATH)
-CORR -= {c for c in CORR if c[0] >= 39 and c not in dil(PATH, 2)}
+CORR -= {c for c in CORR if c[0] >= 38 and c not in dil(PATH, 2)}
 for (x0, y0, x1, y1) in CLEARINGS: CORR |= {(x, y) for x in range(x0, x1 + 1) for y in range(y0, y1 + 1)}
 CR = P((20, 40))
 for c in LAKE: OCC[c] = 'reserve-volcan'
@@ -204,7 +204,7 @@ while len(TALL) < 14 and tries < 20000:
 # ---- foret : arbres sur un reseau 2x2 partout sauf couloirs/clairieres ; un tiers sont des squelettes calcines (art)
 DEAD = []
 for y in range(2, H - 2, 2):
-    for x in range(2, W - 4, 2):
+    for x in range(2, W - 2, 2):
         cells = [(x + i, y + j) for i in range(2) for j in range(2)]
         if any(c in CORR or c in OCC or c in RES for c in cells): continue
         if rnd.random() < (0.0 if x >= 37 else 0.05): continue
