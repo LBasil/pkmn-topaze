@@ -138,10 +138,11 @@ for x in list(range(0, 4, 2)) + [7] + list(range(8, W, 2)): tree(x, 0)
 for x in list(range(0, S_DOOR[0] - 2, 2)) + list(range(S_DOOR[0] + 2, W - 2, 2)): tree(x, H - 2)
 for y in range(2, H - 2, 2): tree(0, y); tree(W - 2, y)
 PATH = set()
-WAY = [P(c) for c in [(29, 49), (29, 44), (45, 42), (45, 36), (12, 35), (12, 28), (44, 27), (44, 19), (8, 17)]] + [(6, 12), (5, 10)]
-SPURS = [(P(a), P(b)) for a, b in [((12, 35), (9, 45)), ((44, 19), (47, 14)), ((30, 18), (30, 12)), ((12, 28), (9, 25))]]
-CLEARINGS = [PB(b) for b in [(3, 46, 10, 52), (43, 9, 50, 15), (24, 6, 36, 12), (14, 38, 28, 46)]]
-VOLC = P((3, 41))                                       # volcan (4x4), au nord-ouest de la clairiere sud-ouest
+WAY = [P(c) for c in [(29, 49), (29, 44), (41, 42), (41, 36), (12, 35), (12, 28), (40, 27), (40, 19), (8, 17)]] + [(6, 12), (5, 10)]
+SPURS = [(P(a), P(b)) for a, b in [((12, 35), (12, 52)), ((40, 19), (43, 14)), ((30, 18), (30, 12)), ((12, 28), (9, 25))]]
+CLEARINGS = [PB(b) for b in [(2, 52, 14, 54), (38, 9, 45, 15), (24, 6, 36, 12), (14, 38, 28, 46)]]
+VOLC = (2, 34)
+LAKE = {(x, y) for x in range(2, 10) for y in range(34, 43) if ((x - 5.5) / 4.3) ** 2 + ((y - 38) / 4.9) ** 2 + 0.3 * math.sin(x * 1.7 + y * 2.3) <= 0.85}                                       # volcan (4x4), au nord-ouest de la clairiere sud-ouest
 GIANT = P((7, 21))                                      # grand arbre calcine (3x4) qui barre la diagonale gauche
 def seg(a, b):
     (x0, y0), (x1, y1) = a, b
@@ -169,20 +170,19 @@ for (x, y) in PATH:
     if 0 <= x < W and 0 <= y < H: put(x, y, 0x3000, path_id(x, y)); OCC[(x, y)] = 'chemin'
 def dil(cells, r):
     return {(x + i, y + j) for (x, y) in cells for i in range(-r, r + 1) for j in range(-r, r + 1)}
-OBJ0 = {'youngster': (26, 47), 'boy': (33, 46), 'rick': (48, 38), 'doug': (17, 39), 'sammy': (22, 31), 'anthony': (30, 9), 'charlie': (20, 14),
-       'ball_pokeball': (5, 48), 'ball_antidote': (48, 11), 'ball_potion': (9, 49), 'ball_potion2': (27, 44)}
-HID0 = {'potion': (4, 51), 'antidote': (49, 14)}
+OBJ0 = {'youngster': (26, 47), 'boy': (33, 46), 'rick': (45, 38), 'doug': (17, 39), 'sammy': (22, 31), 'anthony': (30, 9), 'charlie': (20, 14),
+       'ball_pokeball': (5, 53), 'ball_antidote': (42, 11), 'ball_potion': (9, 53), 'ball_potion2': (27, 44)}
+HID0 = {'potion': (3, 53), 'antidote': (45, 11)}
 SIGNS0 = {'tips1': (32, 47), 'tips2': (43, 39), 'tips3': (24, 38), 'tips4': (15, 31), 'tips5': (30, 31), 'exit': (9, 13)}
 OBJ = {k: P(v) for k, v in OBJ0.items()}; HID = {k: P(v) for k, v in HID0.items()}; SIGNS = {k: P(v) for k, v in SIGNS0.items()}
 RES = dil(list(OBJ.values()) + list(HID.values()) + list(SIGNS.values()), 1)
 CORR = dil(PATH, 2)
 NOGO = {(x, y) for x in range(3, FX(12)) for y in range(FY(18), FY(28))}      # la diagonale gauche est fermee : que des arbres autour de l'arbre geant
 CORR -= (NOGO - PATH)
-CORR -= {c for c in CORR if c[0] >= W - 9 and c not in dil(PATH, 2)}
+CORR -= {c for c in CORR if c[0] >= 39 and c not in dil(PATH, 2)}
 for (x0, y0, x1, y1) in CLEARINGS: CORR |= {(x, y) for x in range(x0, x1 + 1) for y in range(y0, y1 + 1)}
 CR = P((20, 40))
-for i in range(5):
-    for j in range(4): OCC[(VOLC[0] + i, VOLC[1] + j)] = 'reserve-volcan'
+for c in LAKE: OCC[c] = 'reserve-volcan'
 for i in range(3):
     for j in range(3): OCC[(CR[0] + i, CR[1] + j)] = 'reserve'
 for i in range(3):
@@ -207,9 +207,9 @@ for y in range(2, H - 2, 2):
     for x in range(2, W - 4, 2):
         cells = [(x + i, y + j) for i in range(2) for j in range(2)]
         if any(c in CORR or c in OCC or c in RES for c in cells): continue
-        if rnd.random() < 0.05: continue
+        if rnd.random() < (0.0 if x >= 37 else 0.05): continue
         east = x >= W - 10
-        if rnd.random() < (0.7 if east else 0.55): tree(x, y); claim(x, y, 2, 2, 'arbre')
+        if rnd.random() < (0.9 if east else 0.55): tree(x, y); claim(x, y, 2, 2, 'arbre')
         else:
             kind = rnd.choice(['boulder', 'thorns', 'spire', 'spire', 'dead'] if east else ['dead', 'dead', 'boulder', 'thorns', 'spire'])
             DEAD.append((x, y, kind)); claim(x, y, 2, 2, kind)
@@ -476,22 +476,28 @@ def spire_img(st):
     d.ellipse((1, 24, 31, 31), fill=13)
     shape(d, st, 10, 28, 6, 22, -1); shape(d, st, 22, 29, 7, 26, 1); shape(d, st, 16, 30, 5, 13)
     return im
-def lake_img(st):
-    im = ground_bg(96, 64, st); d = ImageDraw.Draw(im)
-    rim = [(6, 30), (3, 20), (10, 9), (22, 5), (34, 8), (46, 4), (60, 6), (74, 4), (86, 10), (92, 22), (88, 36), (92, 48), (80, 58), (64, 60), (50, 58), (36, 61), (20, 58), (8, 50)]
-    d.polygon([(x + 1, y + 3) for x, y in rim], fill=13)
-    d.polygon(rim, fill=14, outline=5)
-    lava = [(12, 28), (10, 21), (16, 14), (26, 11), (36, 14), (48, 10), (60, 12), (72, 10), (82, 15), (86, 24), (82, 34), (86, 44), (76, 52), (62, 54), (50, 52), (36, 55), (22, 52), (13, 45)]
-    d.polygon(lava, fill=6, outline=5)
-    inner = [(16, 28), (15, 22), (20, 18), (30, 16), (40, 19), (50, 15), (60, 17), (70, 15), (78, 19), (80, 26), (77, 35), (80, 42), (72, 48), (60, 49), (50, 47), (38, 50), (26, 47), (17, 42)]
-    d.polygon(inner, fill=12)
-    mid = [(24, 28), (28, 23), (38, 24), (48, 21), (58, 24), (68, 22), (73, 28), (70, 37), (62, 42), (50, 40), (38, 43), (28, 40)]
-    d.polygon(mid, fill=10)
-    for (x, y, w) in ((34, 30, 10), (52, 28, 12), (62, 34, 8), (42, 36, 7)): d.ellipse((x, y, x + w, y + 4), fill=11)
-    for p, q in (((20, 20), (30, 22)), ((46, 18), (58, 20)), ((24, 44), (40, 46)), ((60, 44), (72, 42))): d.line([p, q], fill=10)
-    for p in ((14, 16), (30, 10), (56, 8), (84, 18), (88, 42), (70, 56), (30, 58), (12, 40)): d.point(p, fill=15)
-    d.line([(12, 12), (24, 7)], fill=15); d.line([(60, 8), (78, 6)], fill=15)
-    return im.resize((80, 64), Image.NEAREST)
+def lake_tile(x, y, st, var):
+    im = ground_bg(16, 16, st); d = ImageDraw.Draw(im)
+    n = (x, y - 1) in LAKE; so = (x, y + 1) in LAKE; w = (x - 1, y) in LAKE; e = (x + 1, y) in LAKE
+    x0, y0, x1, y1 = (0 if w else 0), (0 if n else 0), 15, 15
+    d.rectangle((0, 0, 15, 15), fill=14)
+    L = 3 if not w else 0; R = 12 if not e else 15; T = 3 if not n else 0; B = 12 if not so else 15
+    # rebord de roche : tout est roche, puis on creuse le bassin de lave
+    d.rectangle((L, T, R, B), fill=6)
+    ix0, iy0, ix1, iy1 = L + (1 if not w else 0), T + (1 if not n else 0), R - (1 if not e else 0), B - (1 if not so else 0)
+    d.rectangle((ix0, iy0, ix1, iy1), fill=12)
+    # coins rentrants : roche dans l'angle si les deux voisins existent mais pas la diagonale
+    for (dx, dy, cx, cy) in ((-1, -1, 0, 0), (1, -1, 12, 0), (-1, 1, 0, 12), (1, 1, 12, 12)):
+        if (x + dx, y) in LAKE and (x, y + dy) in LAKE and (x + dx, y + dy) not in LAKE: d.rectangle((cx, cy, cx + 3, cy + 3), fill=14); d.rectangle((cx + (0 if dx < 0 else 1), cy + (0 if dy < 0 else 1), cx + (2 if dx < 0 else 3), cy + (2 if dy < 0 else 3)), fill=6)
+    if var == 2: d.polygon([(ix0 + 3, iy0 + 4), (ix0 + 8, iy0 + 3), (ix0 + 10, iy0 + 7), (ix0 + 5, iy0 + 8)], fill=6); d.point((ix0 + 6, iy0 + 5), fill=10); d.point((ix1 - 3, iy1 - 3), fill=11)
+    elif var == 0: d.ellipse((ix0 + 2, iy0 + 3, ix0 + 7, iy0 + 6), fill=10); d.point((ix0 + 4, iy0 + 4), fill=11); d.ellipse((ix1 - 6, iy1 - 4, ix1 - 2, iy1 - 2), fill=10)
+    else: d.ellipse((ix1 - 7, iy0 + 2, ix1 - 2, iy0 + 5), fill=10); d.point((ix1 - 4, iy0 + 3), fill=11); d.ellipse((ix0 + 2, iy1 - 5, ix0 + 6, iy1 - 2), fill=10); d.point((ix0 + 4, iy1 - 4), fill=11)
+    # contour exterieur de la roche
+    for (cond, line) in ((not n, (0, 0, 15, 0)), (not so, (0, 15, 15, 15)), (not w, (0, 0, 0, 15)), (not e, (15, 0, 15, 15))):
+        if cond: d.line(line, fill=5)
+    # ombre cote sud / roche claire cote nord
+    if not n: d.line((1, 1, 14, 1), fill=15)
+    return im
 for st in (2,):
     b = giant_img(st); ART[('giant', st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(4) for i in range(3)}
     for var in (0, 1):
@@ -501,7 +507,7 @@ for st in (2,):
     ART[('ash', st)] = meta(ash_img(st), st)
     for nm, fn in (('boulder', boulder_img), ('thorns', thorns_img), ('spire', spire_img)):
         b = fn(st); ART[(nm, st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(2) for i in range(2)}
-    b = lake_img(st); ART[('volcano', st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(4) for i in range(5)}
+    ART[('volcano', st)] = {c: meta(lake_tile(c[0], c[1], st, (c[0] * 3 + c[1] * 5) % 3), st) for c in LAKE}
 # ---- placement
 DOORS = {S_DOOR, N_DOOR}
 for j in range(7):
@@ -522,10 +528,9 @@ for i in range(3):
     for j in range(3): del OCC[(CR[0] + i, CR[1] + j)]
 claim(CR[0], CR[1], 3, 3, 'cratere')
 for (i, j), k in ART[('crater', 2)].items(): ART_PLACE[(CR[0] + i, CR[1] + j)] = k
-for i in range(5):
-    for j in range(4): del OCC[(VOLC[0] + i, VOLC[1] + j)]
-claim(VOLC[0], VOLC[1], 5, 4, 'lac de lave')
-for (i, j), k in ART[('volcano', 2)].items(): ART_PLACE[(VOLC[0] + i, VOLC[1] + j)] = k
+for c in LAKE: del OCC[c]
+for c in LAKE: claim(c[0], c[1], 1, 1, 'lac de lave')
+for c, k in ART[('volcano', 2)].items(): ART_PLACE[c] = k
 def near(x, y, r=1):
     for j in range(-r, r + 1):
         for i in range(-r, r + 1):
