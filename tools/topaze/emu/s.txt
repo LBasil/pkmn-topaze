@@ -1,7 +1,9 @@
 run 2
 ls ./states/cur.ss
 run 2
-shot py_gym_front.ppm
+key DOWN 6
+run 10
+shot py_south_edge.ppm
 run 4
 readp 03005008 0 6
 ss ./states/cur.ss

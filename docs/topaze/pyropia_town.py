@@ -60,10 +60,10 @@ SEC_MAP = {}; SEC_ENT = []; SEC_ATT = []; CT = []
 def ctile(t):
     if t not in CT: CT.append(t)
     return 640 + CT.index(t)
-def remap(v, flip=False):
+def remap(v, flip=False, ground=False):
     m = v & 0x3ff
     if m < 512 and not flip: return v
-    key = (m, flip)
+    key = (m, flip, ground)
     if key not in SEC_MAP:
         if m < 512:                                        # miroir d'une metatuile primaire : copie dans le secondaire
             e = list(struct.unpack('<8H', open(EM + 'tilesets/primary/general/metatiles.bin', 'rb').read()[m * 16:m * 16 + 16]))
@@ -76,6 +76,7 @@ def remap(v, flip=False):
             t = q & 0x3ff
             nq = (q & ~0x3ff) | (ctile(t - 512) if t >= 512 else t)
             out.append(nq)
+        if ground: out[0:4] = [0x2002, 0x2003, 0x2003, 0x2002]            # fond d'herbe : la falaise derriere les toits du Centre / de la Boutique disparait
         if flip:
             for base in (0, 4):
                 out[base], out[base + 1] = out[base + 1] ^ 0x400, out[base] ^ 0x400
@@ -107,7 +108,7 @@ def wallh(x0, x1, y, stairs=()):
         claim(x, y - 1, 1, 2, 'mur'); put(x, y - 1, remap(0x400 | 625)); put(x, y, remap(0x400 | FACE))
 for x in range(W):
     put(x, 0, remap(0x400 | 625)); put(x, 1, remap(0x400 | 628))
-    put(x, H - 1, remap(0x400 | 625)); put(x, H - 2, remap(0x400 | 625))
+    put(x, H - 1, remap(0x400 | 625)); put(x, H - 2, remap(0x400 | 620))
 for y in range(2, H - 2):
     put(0, y, remap(0x400 | 626)); put(1, y, remap(0x400 | 626))
     put(W - 2, y, remap(0x400 | 626, True)); put(W - 1, y, remap(0x400 | 626, True))
@@ -128,11 +129,11 @@ for nm, (x0, x1, y) in (('W1A', W1A), ('W1B', W1B), ('W2A', W2A), ('W2B', W2B)):
 for y in range(19, 25):                                  # joint vertical : le milieu-est domine le bas-ouest (mur miroir : face tournee vers l'ouest)
     claim(25, y, 1, 1, 'mur'); put(25, y, remap(0x400 | 626, True))
 # ---- lacs de lave : ouest = bassin de Lavaridge (6x8) ; est = grand lac (rectangle bordé de roche)
-def chunk(x0, y0, cw, ch, dx, dy, name):
+def chunk(x0, y0, cw, ch, dx, dy, name, ground_row0=False):
     claim(dx, dy, cw, ch, name); doors = []
     for j in range(ch):
         for i in range(cw):
-            v = lv(x0 + i, y0 + j); put(dx + i, dy + j, remap(v))
+            v = lv(x0 + i, y0 + j); put(dx + i, dy + j, remap(v, ground=(ground_row0 and j == 0)))
             if 0x60 <= beh(v & 0x3ff) <= 0x6f: doors.append((dx + i, dy + j))
     return doors
 def lake(x0, y0, w, h, name):
@@ -145,17 +146,17 @@ def lake(x0, y0, w, h, name):
             elif lef: m = 673
             elif rig: m = 677
             else: m = (675, 699, 675, 700, 797)[(i * 3 + j) % 5] if (i + j) % 4 == 0 else 675
-            put(x0 + i, y0 + j, remap(0x400 | m))
+            put(x0 + i, y0 + j, remap(0x400 | m, ground=(top and (lef or rig))))
 D = {}
-chunk(2, 2, 6, 8, 4, 2, 'lac ouest')
+chunk(2, 2, 6, 8, 4, 2, 'lac ouest', True)
 lake(31, 3, 10, 5, 'lac est')
 D['gym'] = chunk(2, 11, 6, 5, 20, 3, 'arene')
 # musee : facade dessinee (colonnade, fronton, 2 portes) 10x4, posee plus bas dans la partie art
 MUS = (3, 13)
 claim(MUS[0], MUS[1], 10, 4, 'musee')
 D['museumA'] = [(MUS[0] + 3, MUS[1] + 3)]; D['museumB'] = [(MUS[0] + 6, MUS[1] + 3)]
-D['center'] = chunk(8, 4, 4, 3, 16, 14, 'centre pokemon')
-D['mart'] = chunk(14, 3, 4, 3, 36, 14, 'boutique')
+D['center'] = chunk(8, 3, 4, 4, 16, 13, 'centre pokemon', True)
+D['mart'] = chunk(14, 2, 4, 4, 36, 13, 'boutique', True)
 D['house1'] = chunk(11, 12, 4, 4, 38, 29, 'maison 1')
 D['house2'] = chunk(15, 12, 4, 4, 12, 29, 'maison 2')
 D['house3'] = chunk(11, 12, 4, 4, 15, 3, 'maison 3 (pres de l arene)')
@@ -360,7 +361,7 @@ def grove(x0, y0, x1, y1, n):
         tries += 1; x = rnd.randint(x0, x1); y = rnd.randint(y0, y1)
         if all((x + i, y + j) not in OCC for i in (-1, 0, 1) for j in (-1, 0, 1)) and not any((x + i, y + j) in PATH for i in (-2, -1, 0, 1, 2) for j in (-2, -1, 0, 1, 2)): pine(x, y); k += 1
 for (x, y) in [(2, yy) for yy in range(2, 38)] + [(45, yy) for yy in range(2, 38)] + [(xx, 37) for xx in range(2, 46)]:
-    if (x, y) not in OCC and (x, y) not in PATH and rnd.random() < 0.7: pine(x, y)
+    if (x, y) not in OCC and (x, y) not in PATH and rnd.random() < 1.0: pine(x, y)
 grove(3, 3, 3, 10, 2); grove(26, 3, 29, 10, 3); grove(5, 12, 7, 12, 1); grove(26, 13, 29, 22, 5); grove(43, 13, 45, 22, 4); grove(3, 22, 10, 28, 5); grove(26, 24, 39, 32, 8)
 grove(14, 24, 20, 28, 4); grove(14, 36, 40, 36, 8)
 # ------------------------------------------------------------------ accessibilite / PNJ
