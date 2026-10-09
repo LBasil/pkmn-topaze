@@ -90,7 +90,6 @@ TREE = [[468, 469], [476, 477]]
 G = {}; OCC = {}; STG = {}
 rnd = random.Random(1010)
 def stage_at(x, y):
-    if x <= 3 or x >= W - 4 or y <= 3 or y >= H - 4: return stage_smooth(x, y)      # bordure d'arbres : meme etage que les arbres, sans grain
     t = (H - 1 - y) / (H - 1)
     n = 0.35 * math.sin(x * 0.55 + y * 0.21) + 0.25 * math.sin(y * 0.37 - x * 0.3) + 0.2 * math.sin(x * 0.23 + y * 0.6)
     j = ((x * 73856093) ^ (y * 19349663)) % 1000 / 1000.0 - 0.5               # grain : fondu irregulier aux frontieres
@@ -111,7 +110,7 @@ def claim(x, y, w, h, name):
 for y in range(H):
     for x in range(W): put(x, y, 0x3000, GRASS_M)
 def tree(x, y):
-    st = stage_smooth(x, y)
+    st = stage_at(x, y)
     for j in range(2):
         for i in range(2): put(x + i, y + j, 0x400, TREE[j][i], st=st)
 # ---- portes : sud (Grenalux) x=12..13 ; nord (Opanihrum) x=14..17
@@ -343,12 +342,7 @@ def grove(cx, cy, n, spread):
     k = tries = 0
     while k < n and tries < 800:
         tries += 1; x = int(rnd.gauss(cx, spread)); y = int(rnd.gauss(cy, spread))
-        if free_tree(x, y):
-            tree(x, y); claim(x, y, 2, 2, 'arbre'); k += 1
-            for j in range(-2, 4):                                              # l'herbe autour prend l'etage de l'arbre : pas de bord de couleur
-                for i in range(-2, 4):
-                    c = (x + i, y + j)
-                    if 0 <= c[0] < W and 0 <= c[1] < H and c not in OCC: put(c[0], c[1], 0x3000, GRASS_M, st=stage_smooth(x, y))
+        if free_tree(x, y): tree(x, y); claim(x, y, 2, 2, 'arbre'); k += 1
 for (cx, cy, n, s) in ((4, 50, 5, 2.2), (20, 48, 5, 2.4), (22, 40, 4, 2), (3, 40, 3, 1.5), (10, 38, 4, 2.2), (22, 29, 4, 2), (3, 25, 5, 2), (13, 26, 3, 1.4),
                        (5, 18, 4, 2), (22, 18, 3, 1.5), (3, 6, 5, 2), (6, 12, 2, 1.5), (20, 6, 4, 2), (12, 3, 3, 1.5), (24, 24, 2, 1.5), (12, 14, 2, 1.5)):
     grove(cx, cy, n, s)
