@@ -213,6 +213,11 @@ for y in range(2, H - 2, 2):
         else:
             kind = rnd.choice(['boulder', 'thorns', 'spire', 'spire', 'dead'] if east else ['dead', 'dead', 'boulder', 'thorns', 'spire'])
             DEAD.append((x, y, kind)); claim(x, y, 2, 2, kind)
+# ---- arbres serres de part et d'autre des deux entrees (tuyaux) : pas de sol nu colle au tuyau
+for (x, y) in [(2, 2), (2, 4), (2, 6), (2, 8), (8, 2), (8, 4), (8, 6), (8, 8)] + [(S_DOOR[0] - 4, 40), (S_DOOR[0] - 4, 42), (S_DOOR[0] - 4, 44), (S_DOOR[0] - 2, 44), (S_DOOR[0] + 2, 44), (S_DOOR[0] + 2, 42)]:
+    cells = [(x + i, y + j) for i in range(2) for j in range(2)]
+    if any(c in OCC or c in RES or c in PATH or not (1 <= c[0] < W - 1 and 1 <= c[1] < H - 2) for c in cells): continue
+    tree(x, y); claim(x, y, 2, 2, 'arbre')
 # ---- herbe cendree : zones de sol gris clair (c'etait une foret), hors arbres, chemin et objets
 ASH = set()
 for y in range(2, H - 2):
