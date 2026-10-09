@@ -94,6 +94,10 @@ def stage_at(x, y):
     n = 0.35 * math.sin(x * 0.55 + y * 0.21) + 0.25 * math.sin(y * 0.37 - x * 0.3) + 0.2 * math.sin(x * 0.23 + y * 0.6)
     j = ((x * 73856093) ^ (y * 19349663)) % 1000 / 1000.0 - 0.5               # grain : fondu irregulier aux frontieres
     return max(0, min(2, int(round(2 * t + n * 0.45 + j * 0.5))))
+def stage_smooth(x, y):
+    t = (H - 1 - y) / (H - 1)
+    n = 0.35 * math.sin(x * 0.55 + y * 0.21) + 0.25 * math.sin(y * 0.37 - x * 0.3) + 0.2 * math.sin(x * 0.23 + y * 0.6)
+    return max(0, min(2, int(round(2 * t + n * 0.3))))
 def put(x, y, raw_flags, m, special=None, st=None):
     st = stage_at(x, y) if st is None else st
     G[(x, y)] = raw_flags | variant(m, st, special)
@@ -116,16 +120,18 @@ for x in range(0, W, 2):
     if x != 14 and x != 16: tree(x, 0)
 for y in range(2, H - 2, 2):
     tree(0, y); tree(W - 2, y)
-# ---- chemin sinueux (2 cases de large)
+# ---- chemin : meandre continu (2 cases de large au minimum), rejoint les portes sud (x 12..13) et nord (x 14..17)
 PATH = set()
-def seg(x0, y0, x1, y1):
-    for y in range(min(y0, y1), max(y0, y1) + 1):
-        for x in range(min(x0, x1), max(x0, x1) + 1): PATH.add((x, y))
-pts = [(12, H - 1), (12, 48), (6, 48), (6, 42), (14, 42), (14, 37), (8, 37), (8, 31), (16, 31), (16, 26), (10, 26), (10, 20), (18, 20), (18, 15), (8, 15), (8, 9), (14, 9), (14, 0)]
-for (a, b) in zip(pts, pts[1:]):
-    (x0, y0), (x1, y1) = a, b
-    seg(x0, y0, x1, y1 + 1) if y0 == y1 else seg(x0, y0, x1 + 1, y1)
-PATH |= {(13, H - 1), (13, H - 2), (15, 0), (15, 1), (16, 0), (16, 1), (17, 0), (17, 1)}
+def xc(y):
+    d = H - 1 - y
+    w = min(1.0, min(d, y) / 9.0)                                  # pres des portes le chemin va droit
+    base = 13 + 5.5 * math.sin(d / 6.5) + 1.8 * math.sin(d / 3.4 + 0.8)
+    return int(round(13 * (1 - w) + base * w)) if d > y else int(round(14 * (1 - w) + base * w))
+X = {y: max(4, min(W - 6, xc(y))) for y in range(H)}
+for y in range(H):
+    a = X[y]; b = X[min(H - 1, y + 1)]
+    for x in range(min(a, b), max(a, b) + 2): PATH.add((x, y))
+PATH |= {(12, H - 1), (13, H - 1), (12, H - 2), (13, H - 2), (14, 0), (15, 0), (16, 0), (17, 0), (14, 1), (15, 1), (16, 1), (17, 1)}
 def path_id(x, y):
     N = (x, y - 1) in PATH or y == 0; S = (x, y + 1) in PATH or y == H - 1; Wn = (x - 1, y) in PATH; E = (x + 1, y) in PATH
     if N and S and Wn and E: return 289
@@ -141,30 +147,50 @@ def path_id(x, y):
 for (x, y) in PATH:
     if 0 <= x < W and 0 <= y < H: put(x, y, 0x3000, path_id(x, y)); OCC[(x, y)] = 'chemin'
 # ---- herbes hautes (rencontres)
-# ---- collines (monticules de roche 2x2), murs de collines qui ne laissent que le chemin, corniches (saut vers le sud)
-MOUND = [[131, 132], [139, 140]]
-def mound(x, y):
-    claim(x, y, 2, 2, 'colline'); st = stage_at(x + 1, y + 1)
-    for j in range(2):
-        for i in range(2): G[(x + i, y + j)] = 0x400 | variant(MOUND[j][i], st)
-def free2(x, y): return all((x + i, y + j) not in OCC for i in range(2) for j in range(2))
-def wall(y):
-    for x in range(2, W - 3, 2):
-        if free2(x, y): mound(x, y)
-for y in (44, 33, 22, 16, 11): wall(y)
-LEDGES = []
-def ledge(x, y, n):
-    for i in range(n):
-        LEDGES.append((x + i, y))
-        claim(x + i, y, 1, 1, 'corniche'); G[(x + i, y)] = 0x3000 | variant(213 + (i % 2), stage_at(x + i, y))
-for (x, y, n) in ((2, 39, 5), (19, 36, 5), (2, 28, 4), (19, 28, 4), (14, 12, 5)):
-    if all((x + i, y) not in OCC for i in range(n)): ledge(x, y, n)
-    if free2(x - 2, y) and x >= 4: mound(x - 2, y)
-    if free2(x + n, y) and x + n <= W - 4: mound(x + n, y)
-# ---- herbes hautes (rencontres) : rectangles libres pres du chemin
-STONE = (19, 5)
+PATH_M = {(x + i, y + j) for (x, y) in PATH for i in (-2, -1, 0, 1, 2) for j in (-2, -1, 0, 1, 2)}
+STONE = next((x, y) for y in range(4, 16) for x in range(W - 7, 3, -1) if all((x + i, y + j) not in PATH_M for i in range(3) for j in range(3)))
 for j in range(3):
     for i in range(3): OCC[(STONE[0] + i, STONE[1] + j)] = 'reserve'
+# ---- falaises / crêtes de roche : amas irreguliers (marche aleatoire allongee) separes du chemin d'une case d'herbe
+def dil(cells, r):
+    return {(x + i, y + j) for (x, y) in cells for i in range(-r, r + 1) for j in range(-r, r + 1)}
+CLEAR = dil(PATH, 1)
+SIGN = (11, 51); NPC = {'clerk': (14, 50), 'boy': (max(x for (x, y) in PATH if y == 29) + 3, 29)}
+RES = dil([SIGN] + list(NPC.values()), 1)
+RIDGE = set()
+def ridge_ok(c):
+    x, y = c
+    return 2 <= x <= W - 3 and 3 <= y <= H - 5 and c not in OCC and c not in CLEAR and c not in RES and c not in RIDGE
+def grow(seed, n):
+    """amas compact : on prefere les cases voisines de plusieurs cases deja prises (bords arrondis, quelques bosses)."""
+    cells = {seed}
+    while len(cells) < n:
+        cand = {}
+        for (x, y) in cells:
+            for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                nb = (x + dx, y + dy)
+                if nb in cells or not ridge_ok(nb): continue
+                k = sum(((nb[0] + a, nb[1] + b) in cells) for a, b in ((1, 0), (-1, 0), (0, 1), (0, -1)))
+                cand[nb] = 0.6 + 1.6 * (k - 1) + (0.5 if dy == 0 else 0)          # un peu plus large que haut
+        if not cand: break
+        cs = sorted(cand); w = [max(0.05, cand[c]) for c in cs]
+        cells.add(rnd.choices(cs, w)[0])
+    return cells
+BLOB = {}; made = 0; tries = 0
+while made < 11 and tries < 800:
+    tries += 1
+    side = rnd.random()
+    sx = rnd.randint(3, 6) if side < 0.35 else (rnd.randint(W - 7, W - 4) if side < 0.7 else rnd.randint(3, W - 4))     # beaucoup d'amas s'adossent aux bords (falaises naturelles)
+    seed = (sx, 6 + made * 4 + rnd.randint(-1, 1))
+    if not ridge_ok(seed): continue
+    cells = grow(seed, rnd.randint(14, 34))
+    if len(cells) < 10: continue
+    cy = sum(c[1] for c in cells) / len(cells); cx = sum(c[0] for c in cells) / len(cells)
+    for c in cells: RIDGE.add(c); OCC[c] = 'roche'; BLOB[c] = (cx, cy)
+    made += 1
+print('amas de roche', made, 'cases', len(RIDGE))
+LEDGES = []
+# ---- herbes hautes (rencontres) : rectangles libres pres du chemin
 TALL = []
 tries = 0
 while len(TALL) < 10 and tries < 3000:
@@ -188,7 +214,7 @@ def art_pal(st):
     g = grass_cols(st); t = TS_[st]
     cols = [hlerp(GARNET[i], OPAL[i], t) for i in range(8)]
     sh = tuple(int(c * 0.55) for c in min(g, key=sum))
-    return [(0, 0, 0)] + g + cols + [sh, (150, 140, 160), (255, 196, 80)], g
+    return [(0, 0, 0)] + g + cols + [sh, hlerp((112, 84, 92), (74, 82, 104), t), hlerp((166, 134, 132), (130, 142, 170), t)], g
 for st in range(3):
     p, _ = art_pal(st); PALS[ART_SLOT[st]] = p
 # indices : 1-4 sol | 5 contour | 6 sombre | 7 corps | 8 clair | 9 reflet | 10,11,12 etincelles | 13 ombre
@@ -253,6 +279,33 @@ def sign_art(st):
     for y in (4, 6): d.line([(4, y), (11, y)], fill=6)
     return im
 for st in range(3): ART[('sign', st)] = meta(sign_art(st), st)
+def rock_img(mask, st, var):
+    """case de falaise ; mask = bits N(1) E(2) S(4) O(8) : 1 si la voisine est aussi de la roche. Indices : 14 corps, 15 clair, 13 face sombre, 5 contour."""
+    im = ground_bg(16, 16, st); d = ImageDraw.Draw(im)
+    N, E_, S_, W_ = bool(mask & 1), bool(mask & 2), bool(mask & 4), bool(mask & 8)
+    x0 = 0 if W_ else 1; x1 = 15 if E_ else 14; y0 = 0 if N else 1; y1 = 15 if S_ else 14
+    d.rounded_rectangle((x0, y0, x1, y1), radius=4, fill=14, corners=(not N and not W_, not N and not E_, not S_ and not E_, not S_ and not W_))
+    rr = random.Random(var * 31 + mask)
+    top_end = 8 if not S_ else 14
+    for _ in range(rr.randint(2, 3)):                                      # strates / fissures en diagonale
+        sx = rr.randint(x0 + 2, max(x0 + 3, x1 - 6)); sy = rr.randint(y0 + 2, max(y0 + 3, top_end - 2)); ln = rr.randint(3, 6)
+        d.line([(sx, sy), (sx + ln, sy + ln // 2)], fill=13); d.line([(sx, sy - 1), (sx + ln - 1, sy + ln // 2 - 1)], fill=15)
+    for _ in range(4): d.point((rr.randint(x0 + 2, max(x0 + 3, x1 - 2)), rr.randint(y0 + 1, top_end)), fill=rr.choice((13, 15)))
+    if not N:
+        d.line([(x0 + 2, y0 + 1), (x1 - 2, y0 + 1)], fill=15)                # arete eclairee
+    if not S_:                                                           # face de falaise
+        d.rectangle((x0 + 1, 9, x1 - 1, y1 - 1), fill=13)
+        for x in range(x0 + 3, x1 - 1, 3): d.line([(x, 10), (x, y1 - 2)], fill=14)
+        d.line([(x0 + 1, 9), (x1 - 1, 9)], fill=5)
+        d.line([(x0 + 3, y1), (x1 - 3, y1)], fill=5)
+    if not W_: d.line([(x0, y0 + 3), (x0, y1 - 3)], fill=5)
+    if not E_: d.line([(x1, y0 + 3), (x1, y1 - 3)], fill=5)
+    if not N: d.line([(x0 + 3, y0), (x1 - 3, y0)], fill=5)
+    return im
+ROCK = {}
+for st in range(3):
+    for mask in range(16):
+        for var in (range(4) if mask == 15 else range(2)): ROCK[(mask, st, var)] = meta(rock_img(mask, st, var), st)
 ART_PLACE = {}
 def art1(x, y, name):
     claim(x, y, 1, 1, 'cristal'); ART_PLACE[(x, y)] = ART[(name, stage_at(x, y))]
@@ -261,10 +314,12 @@ def art_big(x0, y0):
     for (i, j), k in ART[('big', st)].items(): ART_PLACE[(x0 + i, y0 + j)] = k
 for j in range(3):
     for i in range(3): del OCC[(STONE[0] + i, STONE[1] + j)]
-art_big(*STONE)                                  # la pierre du degrade, a l'est du chemin
+art_big(*STONE)
+for (x, y) in sorted(RIDGE):
+    m = (((x, y - 1) in RIDGE) * 1) | (((x + 1, y) in RIDGE) * 2) | (((x, y + 1) in RIDGE) * 4) | (((x - 1, y) in RIDGE) * 8)
+    bx, by = BLOB[(x, y)]; ART_PLACE[(x, y)] = ROCK[(m, stage_smooth(bx, by), (x * 3 + y * 5) % 4 if m == 15 else (x + y) % 2)]                                  # la pierre du degrade, a l'est du chemin
 # ---- panneau, PNJ
-SIGN = (11, 51); claim(*SIGN, 1, 1, 'panneau'); ART_PLACE[SIGN] = ART[('sign', 0)]
-NPC = {'clerk': (14, 50), 'boy': (18, 29)}
+claim(*SIGN, 1, 1, 'panneau'); ART_PLACE[SIGN] = ART[('sign', 0)]
 for c in NPC.values(): assert c not in OCC, ('PNJ sur un decor', c)
 # ---- bosquets d'arbres (hors chemin, hors herbes, hors cases reservees ; marge de 1 case)
 def near(x, y, r=1):
@@ -370,7 +425,7 @@ L = json.load(open('data/layouts/layouts.json'))
 for l in L['layouts']:
     if l.get('id') == 'LAYOUT_ROUTE1': l.update(width=W, height=H, primary_tileset='gTileset_GeneralGradient', secondary_tileset='gTileset_GradientRoad')
 json.dump(L, open('data/layouts/layouts.json', 'w'), indent=2); open('data/layouts/layouts.json', 'a').write('\n')
-json.dump({'sign': SIGN, 'npc': NPC, 'w': W, 'h': H, 'tall': TALL, 'ledges': LEDGES}, open('/tmp/route1_info.json', 'w'))
+json.dump({'sign': SIGN, 'npc': NPC, 'w': W, 'h': H, 'tall': TALL, 'ledges': LEDGES, 'path': sorted(PATH)}, open('/tmp/route1_info.json', 'w'))
 blk = sorted([x, y] for (x, y) in ((x, y) for y in range(H) for x in range(W)) if blocked((x, y)))
 json.dump({'w': W, 'h': H, 'blocked': blk}, open('/tmp/route1_col.json', 'w'))
 print('route 1 : metatuiles', len(SEC_ENT), 'tuiles art', len(ART_T))

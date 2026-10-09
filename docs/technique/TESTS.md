@@ -85,7 +85,7 @@
   - Non testés : PNJ errant « boy » (déplacements), arrivée en venant de la Route 1 sans ROM de test (même warps, vérifiés par les indices), combats d'arène (inchangés).
 
 ### Route 1 du dégradé (émulateur)
-  - Banc : `tools/topaze/emu/t_route1a.py` (Grenalux -> Route 1) et `t_route1b.py` (`TOPAZE_COL=/tmp/route1_col.json`) : trajet complet suivant le chemin du sud au nord (herbes hautes évitées), entrée dans Opanihrum, retour par le warp. OK dans les deux sens ; le bord de carte est violet (neutre).
+  - Banc : `tools/topaze/emu/t_route1a.py` (Grenalux -> Route 1) et `t_route1b.py` (`TOPAZE_COL=/tmp/route1_col.json`) : trajet complet suivant le chemin du sud au nord (herbes hautes évitées), entrée dans Opanihrum, retour par le warp. OK dans les deux sens ; le bord de carte est violet (neutre). v3 : la case d'arrivée (12,53) est une case-warp, le banc la quitte (UP) avant de planifier et la bloque ensuite, sinon le planificateur repasse dessus et retourne à Grenalux. Non testés : rencontres en herbe haute, dialogues du garçon et de la vendeuse.
   - Non testé : rencontres sauvages dans les herbes hautes, dialogue du garçon et du vendeur (textes seulement modifiés).
 
 ## À REPRENDRE : noms et équipes (placeholders)
