@@ -84,7 +84,7 @@ def variant(m, st, special=None):
     SEC_ENT.append(out); SEC_ATT.append(PATT32[m]); VAR[key] = 640 + len(SEC_ENT) - 1
     return VAR[key]
 # ------------------------------------------------------------------ carte
-W, H = 26, 54
+W, H = 26, 38
 GRASS_M, FLOWER_M, TALL_M = 1, 4, 13
 TREE = [[468, 469], [476, 477]]
 G = {}; OCC = {}; STG = {}
@@ -122,15 +122,20 @@ for y in range(2, H - 2, 2):
     tree(0, y); tree(W - 2, y)
 # ---- chemin : meandre continu (2 cases de large au minimum), rejoint les portes sud (x 12..13) et nord (x 14..17)
 PATH = set()
-def xc(y):
-    d = H - 1 - y
-    w = min(1.0, min(d, y) / 9.0)                                  # pres des portes le chemin va droit
-    base = 13 + 5.5 * math.sin(d / 6.5) + 1.8 * math.sin(d / 3.4 + 0.8)
-    return int(round(13 * (1 - w) + base * w)) if d > y else int(round(14 * (1 - w) + base * w))
-X = {y: max(4, min(W - 6, xc(y))) for y in range(H)}
-for y in range(H):
-    a = X[y]; b = X[min(H - 1, y + 1)]
-    for x in range(min(a, b), max(a, b) + 2): PATH.add((x, y))
+# serpentin : 4 crêtes de roche traversent presque toute la largeur, chacune avec une brèche (côtés alternés) -> il faut zigzaguer
+RIDGE_Y = [8, 15, 22, 29]
+GAPS = [(14, 19), (4, 9), (16, 22), (3, 8)]           # brèches du nord au sud
+WAY = [(12, H - 3), (12, H - 7)]
+for (ry, (g0, g1)) in reversed(list(zip(RIDGE_Y, GAPS))): WAY += [((g0 + g1) // 2, ry + 3), ((g0 + g1) // 2, ry - 3)]
+WAY += [(15, 3), (15, 1)]
+def seg(a, b):
+    (x0, y0), (x1, y1) = a, b
+    n = max(abs(x1 - x0), abs(y1 - y0))
+    for k in range(n + 1):
+        t = k / max(1, n); x = x0 + (x1 - x0) * t; y = y0 + (y1 - y0) * t
+        for i in (0, 1): PATH.add((int(round(x)) + i, int(round(y))))
+        PATH.add((int(round(x)) + 1, int(round(y)) + 1))
+for a_, b_ in zip(WAY, WAY[1:]): seg(a_, b_)
 PATH |= {(12, H - 1), (13, H - 1), (12, H - 2), (13, H - 2), (14, 0), (15, 0), (16, 0), (17, 0), (14, 1), (15, 1), (16, 1), (17, 1)}
 def path_id(x, y):
     N = (x, y - 1) in PATH or y == 0; S = (x, y + 1) in PATH or y == H - 1; Wn = (x - 1, y) in PATH; E = (x + 1, y) in PATH
@@ -155,7 +160,7 @@ for j in range(3):
 def dil(cells, r):
     return {(x + i, y + j) for (x, y) in cells for i in range(-r, r + 1) for j in range(-r, r + 1)}
 CLEAR = dil(PATH, 1)
-SIGN = (11, 51); NPC = {'clerk': (14, 50), 'boy': (max(x for (x, y) in PATH if y == 29) + 3, 29)}
+SIGN = (10, H - 4); NPC = {'clerk': (16, H - 4), 'boy': (21, 12)}
 RES = dil([SIGN] + list(NPC.values()), 1)
 RIDGE = set()
 def ridge_ok(c):
@@ -176,19 +181,23 @@ def grow(seed, n):
         cs = sorted(cand); w = [max(0.05, cand[c]) for c in cs]
         cells.add(rnd.choices(cs, w)[0])
     return cells
-BLOB = {}; made = 0; tries = 0
-while made < 11 and tries < 800:
-    tries += 1
-    side = rnd.random()
-    sx = rnd.randint(3, 6) if side < 0.35 else (rnd.randint(W - 7, W - 4) if side < 0.7 else rnd.randint(3, W - 4))     # beaucoup d'amas s'adossent aux bords (falaises naturelles)
-    seed = (sx, 6 + made * 4 + rnd.randint(-1, 1))
-    if not ridge_ok(seed): continue
-    cells = grow(seed, rnd.randint(14, 34))
-    if len(cells) < 10: continue
-    cy = sum(c[1] for c in cells) / len(cells); cx = sum(c[0] for c in cells) / len(cells)
+BLOB = {}
+def wob(seed_):
+    r = random.Random(seed_); v = 0; out = []
+    for x in range(W):
+        v = max(-1, min(1, v + r.choice((-1, 0, 0, 1)))); out.append(v)
+    return out
+for k, (ry, (g0, g1)) in enumerate(zip(RIDGE_Y, GAPS)):
+    wb = wob(77 + k); cells = set()
+    for x in range(2, W - 2):
+        if g0 <= x <= g1: continue
+        edge = min(abs(x - g0), abs(x - g1))
+        th = 3 + wb[x] + (0 if edge > 1 else -1)                         # les bouts s'amincissent vers la brèche
+        for j in range(th): cells.add((x, ry - 1 + j + (wb[(x * 3) % W] if edge > 2 else 0)))
+    cells = {c for c in cells if c not in OCC and c not in CLEAR}
+    cx = sum(c[0] for c in cells) / len(cells); cy = ry
     for c in cells: RIDGE.add(c); OCC[c] = 'roche'; BLOB[c] = (cx, cy)
-    made += 1
-print('amas de roche', made, 'cases', len(RIDGE))
+print('crêtes', len(RIDGE))
 LEDGES = []
 # ---- herbes hautes (rencontres) : rectangles libres pres du chemin
 TALL = []
