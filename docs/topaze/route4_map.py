@@ -133,7 +133,7 @@ for y in range(2, H - 2, 2):
     if not (EAST_ROWS[0] <= y <= EAST_ROWS[1]): tree(W - 2, y)
 PATH = set()
 HRIDGES = [(72, 11, 18), (28, 12, 21)]                    # (y haut, breche gauche, breche droite) : crêtes horizontales pleine largeur
-CENTER = (22, 61)                                        # Centre : cases (22..26, 61..63), porte en (24, 63)
+CENTER = (22, 60)                                        # Centre classique 5x4 (metatuiles d'origine) : cases (22..26, 60..63), porte en (24, 63)
 ARCH1, ARCH2 = (19, 49), (24, 16)                        # grottes : cases (x..x+2, y..y+2), porte en (x+1, y+2)
 WAYS = [[(19, 82), (18, 78), (15, 73), (13, 69), (16, 66), (20, 64), (30, 64), (32, 60), (30, 57), (24, 55), (20, 54)],
         [(25, 20), (24, 23), (20, 26), (16, 29), (17, 32), (24, 33), (31, 33), (37, 34), (38, 35)]]
@@ -194,8 +194,13 @@ def path_id(x, y):
 for (x, y) in PATH: put(x, y, 0x3000, path_id(x, y)); OCC[(x, y)] = 'chemin'
 for c in RIDGE: OCC[c] = 'roche'
 for c in GAPC: OCC[c] = 'herbe'
-claim(CENTER[0], CENTER[1], 5, 3, 'centre')
-DOORS.add((CENTER[0] + 2, CENTER[1] + 2))
+claim(CENTER[0], CENTER[1], 5, 4, 'centre')
+DOORS.add((CENTER[0] + 2, CENTER[1] + 3))
+CM = [[72, 73, 74, 75, 391], [80, 81, 82, 83, 399], [88, 89, 90, 91, 407], [96, 97, 98, 390, 415]]      # facade du Centre de la Route 4 d'origine (tuiles primaires : 0 tuile d'art)
+for _j, _row in enumerate(CM):
+    for _i, _m in enumerate(_row):
+        put(CENTER[0] + _i, CENTER[1] + _j, 0x3000 if (_i, _j) == (2, 3) else 0x400, _m, st=2)
+_v = variant(98, 2); SEC_ATT[_v - 640] &= ~0xff               # porte : comportement normal (pas d'animation de porte, warp a pas simple)
 def dil(cells, r):
     return {(x + i, y + j) for (x, y) in cells for i in range(-r, r + 1) for j in range(-r, r + 1)}
 PATH_D1 = dil(PATH, 1)
@@ -205,7 +210,7 @@ LAKE = set(); LAKE_ST = {}
 def lake_shape(cx, cy, rx, ry):
     return {(x, y) for y in range(int(cy - ry) - 1, int(cy + ry) + 2) for x in range(int(cx - rx) - 1, int(cx + rx) + 2)
             if ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 + 0.2 * math.sin(x * 1.7 + y * 2.3) <= 1}
-_busy = dil(PATH, 2) | dil(RIDGE, 1) | dil(GAPC, 1) | dil({(CENTER[0] + i, CENTER[1] + j) for i in range(5) for j in range(3)}, 2)
+_busy = dil(PATH, 2) | dil(RIDGE, 1) | dil(GAPC, 1) | dil({(CENTER[0] + i, CENTER[1] + j) for i in range(5) for j in range(4)}, 2)
 for (ya, yb, st_) in ((58, 78, 2), (21, 38, 0)):
     _all = []
     for cy in range(ya, yb):
@@ -633,7 +638,6 @@ for st in (2,):
     for var in (0, 1):
         b = dead_img(st, var); ART[('dead', st, var)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(2) for i in range(2)}
     b = thorns_img(st); ART[('thorns', st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(2) for i in range(2)}
-    b = center_img(st); ART[('center', st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(3) for i in range(5)}
 for st in (0,):
     b = spire_img(st); ART[('spire', st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(2) for i in range(2)}
     b = crater_small(st); ART[('crater', st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(2) for i in range(2)}
@@ -660,7 +664,6 @@ for (x, y) in sorted(RIDGE):
     ART_PLACE[(x, y)] = ROCK[(m, 1, (x * 3 + y * 5) % 2 if m == 15 else (x + y) % 2)]
 for (ax, ay) in (ARCH1, ARCH2):
     for (i, j), k in ART[('arch', 1)].items(): ART_PLACE[(ax + i, ay + j)] = k
-for (i, j), k in ART[('center', 2)].items(): ART_PLACE[(CENTER[0] + i, CENTER[1] + j)] = k
 # la breche : herbe haute sur toute la zone
 for c in GAPC: put(c[0], c[1], 0x3000, TALL_M, st=1)
 PATH_D = dil(PATH, 1)

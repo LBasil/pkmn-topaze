@@ -1,11 +1,11 @@
 run 2
 ls ./states/cur.ss
 run 2
-key RIGHT 20
-run 120
-key RIGHT 20
-run 120
-shot r4_cer.ppm
+key UP 40
+run 40
+key UP 40
+run 40
+shot r34_f.ppm
 run 4
 readp 03005008 0 6
 ss ./states/cur.ss
