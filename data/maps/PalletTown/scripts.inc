@@ -637,26 +637,26 @@ PalletTown_EventScript_AmbScientist::
 	msgbox PalletTown_Text_AmbScientist, MSGBOX_NPC
 	end
 
+PalletTown_EventScript_AmbGardener::
+	msgbox PalletTown_Text_AmbGardener, MSGBOX_NPC
+	end
+
 PalletTown_EventScript_AmbLady::
 	msgbox PalletTown_Text_AmbLady, MSGBOX_NPC
 	end
 
-PalletTown_EventScript_AmbSlowpoke::
-	msgbox PalletTown_Text_AmbSlowpoke, MSGBOX_NPC
+PalletTown_EventScript_SceneryMonument::
+	msgbox PalletTown_Text_SceneryMonument, MSGBOX_SIGN
 	end
 
-PalletTown_EventScript_AmbNidoran::
-	msgbox PalletTown_Text_AmbNidoran, MSGBOX_NPC
+PalletTown_EventScript_SceneryGuardian::
+	msgbox PalletTown_Text_SceneryGuardian, MSGBOX_SIGN
 	end
 
-PalletTown_EventScript_AmbMeowth::
-	msgbox PalletTown_Text_AmbMeowth, MSGBOX_NPC
+PalletTown_EventScript_SceneryMine::
+	msgbox PalletTown_Text_SceneryMine, MSGBOX_SIGN
 	end
 
-PalletTown_EventScript_AmbGranary::
-	msgbox PalletTown_Text_AmbGranary, MSGBOX_NPC
-	end
-
-PalletTown_EventScript_AmbGardener::
-	msgbox PalletTown_Text_AmbGardener, MSGBOX_NPC
+PalletTown_EventScript_SceneryBerries::
+	msgbox PalletTown_Text_SceneryBerries, MSGBOX_SIGN
 	end

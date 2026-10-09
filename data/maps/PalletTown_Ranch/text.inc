@@ -49,3 +49,7 @@ PalletTown_Ranch_Text_Meowth::
 PalletTown_Ranch_Text_Jigglypuff::
 	.string "JIGGLYPUFF: Jiggly...\n"
 	.string "It hums softly to the other animals.$"
+
+PalletTown_Ranch_Text_BarnDoor::
+	.string "The barn door is bolted shut.\n"
+	.string "Feed and tools are stored inside.$"

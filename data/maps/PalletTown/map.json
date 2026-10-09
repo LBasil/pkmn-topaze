@@ -15,16 +15,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE1",
-      "offset": 10,
-      "direction": "up"
-    },
-    {
-      "map": "MAP_ROUTE21_NORTH",
-      "offset": 14,
-      "direction": "down"
-    },
-    {
       "map": "MAP_PALLET_TOWN_RANCH",
       "offset": 0,
       "direction": "right"
@@ -240,6 +230,41 @@
       "elevation": 0,
       "dest_map": "MAP_PALLET_TOWN_MUSEUM",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 23,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE1",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 21,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE21_NORTH",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 22,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE21_NORTH",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 23,
+      "y": 35,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE21_NORTH",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [
@@ -319,6 +344,102 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PalletTown_EventScript_MuseumSign"
+    },
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 23,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PalletTown_EventScript_SceneryMonument"
+    },
+    {
+      "type": "sign",
+      "x": 19,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PalletTown_EventScript_SceneryGuardian"
+    },
+    {
+      "type": "sign",
+      "x": 26,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PalletTown_EventScript_SceneryGuardian"
+    },
+    {
+      "type": "sign",
+      "x": 39,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PalletTown_EventScript_SceneryMine"
+    },
+    {
+      "type": "sign",
+      "x": 29,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PalletTown_EventScript_SceneryBerries"
+    },
+    {
+      "type": "sign",
+      "x": 30,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PalletTown_EventScript_SceneryBerries"
+    },
+    {
+      "type": "sign",
+      "x": 31,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PalletTown_EventScript_SceneryBerries"
+    },
+    {
+      "type": "sign",
+      "x": 32,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PalletTown_EventScript_SceneryBerries"
+    },
+    {
+      "type": "sign",
+      "x": 29,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PalletTown_EventScript_SceneryBerries"
+    },
+    {
+      "type": "sign",
+      "x": 30,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PalletTown_EventScript_SceneryBerries"
+    },
+    {
+      "type": "sign",
+      "x": 31,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PalletTown_EventScript_SceneryBerries"
+    },
+    {
+      "type": "sign",
+      "x": 32,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PalletTown_EventScript_SceneryBerries"
     }
   ]
 }

@@ -71,6 +71,14 @@
 
 - [x] **Grand ranch avant/après attaque** (`t_ranch2.py`, flag posé en mémoire) : clôture ouverte, pisteurs disparus, ouvrier présent à la brèche ; avant : clôture intacte et animaux présents. Dialogues non lus en jeu.
 
+- [x] **Grenalux – validation complète (v6)** (banc `tools/topaze/emu/townlib.py`, `opening.py`, `t_town*.py` : trajets avec relecture de position) :
+  - 6 panneaux + panneau du ranch, sage-femme/panneau « Trainer Tips » (dame de la sortie nord), 8 PNJ d'ambiance (vieil homme, mineur, scientifique, dame, jardinière, ouvriers du ranch…), décors interactifs (monument, cristaux gardiens, mine, grange du ranch) : textes lus, aucun débordement de boîte (limite 36 caractères vérifiée par script) ; 3 textes trop longs corrigés (vieil homme, garçon, jardinière).
+  - 4 portes aller-retour (maison, ranch/Daisy, labo, musée) ; arrivée de Maman après KO (respawn (8,10) → maison), combat du grunt (déclenchement de la vue + combat), scène d'Oak après la Ligue (déclenchement et trajet).
+  - Ouverture complète rejouée de bout en bout : sortie de la maison → déclencheur du rival → ranch → labo → choix du starter → combat du rival → avenue.
+  - Avant/après l'attaque : musée (conservateur), labo (assistants), ranch (clôture, pisteurs, ouvrier).
+  - **Bug trouvé et corrigé** : les connexions Grenalux ↔ Route 1 / Route 21 étaient décalées (décalage non opposé côté route) **et** affichaient des tuiles brouillées (tilesets différents : Émeraude vs FR). Remplacées par des **warps** (nord : (22..23,0) ↔ Route 1 (12..13,39) ; sud/eau : (21..23,35) ↔ Route 21 N (7..9,0)) avec un test dans `src/field_control_avatar.c` (`IsTopazeStepWarpMap`) pour qu'un warp s'active en marchant sur une case ordinaire. Nord vérifié aller-retour ; **sud (surf) non testé** (pas de CS dans le banc).
+  - Non testés en jeu : textes des animaux du ranch et des enfants (PNJ errants, même script), combat du grunt jusqu'à la victoire (fin de la séquence « strike » vue seulement via le drapeau), Oak jusqu'à l'entrée du labo.
+
 ## À REPRENDRE : noms et équipes (placeholders)
 Tout ce qui a été inventé par Claude est **provisoire** et sera repassé avec Basil : noms, équipes, niveaux, dialogues et sprites des personnages du tournoi de la Ligue (Jasper, Coralie, Boris, Alma, Ruben), de l'inconnu de la route 22 et de Red (équipe/niveaux), des dresseurs de la Ligue, des textes d'arène et des lignes de PNJ réécrites, des CT données par les champions, des noms de badges et des trois textes de fin.
 **Ne sont pas des placeholders** (viennent des notes de Basil) : les 12 villes, les 8 champions (Kay, Sylvestre, Hera, Grim, Achlys, Nox, Eddie, Hepha) et leurs types, l'intrigue Onybris/Jirachi, les trois fins (principe), le postgame Giovanni puis Red avec cinématique Silver, le format de la Ligue.

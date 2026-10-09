@@ -74,3 +74,7 @@ PalletTown_Ranch_EventScript_Meowth::
 PalletTown_Ranch_EventScript_Jigglypuff::
 	msgbox PalletTown_Ranch_Text_Jigglypuff, MSGBOX_NPC
 	end
+
+PalletTown_Ranch_EventScript_BarnDoor::
+	msgbox PalletTown_Ranch_Text_BarnDoor, MSGBOX_SIGN
+	end

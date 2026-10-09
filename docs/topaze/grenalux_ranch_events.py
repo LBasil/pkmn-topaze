@@ -57,11 +57,14 @@ for key, gfx, mv, before, after in AMB:
 import os
 os.makedirs('data/maps/' + M, exist_ok=True)
 open('data/maps/%s/scripts.inc' % M, 'w').write(scr); open('data/maps/%s/text.inc' % M, 'w').write(txt.lstrip('\n'))
+scr += '\n%s_EventScript_BarnDoor::\n\tmsgbox %s_Text_BarnDoor, MSGBOX_SIGN\n\tend\n' % (M, M)
+txt += '\n%s_Text_BarnDoor::\n%s' % (M, strs(['The barn door is bolted shut.', 'Feed and tools are stored inside.']))
+open('data/maps/%s/scripts.inc' % M, 'w').write(scr); open('data/maps/%s/text.inc' % M, 'w').write(txt.lstrip('\n'))
 d = {"id": "MAP_PALLET_TOWN_RANCH", "name": M, "layout": "LAYOUT_PALLET_TOWN_RANCH", "music": "MUS_PALLET", "region_map_section": "MAPSEC_PALLET_TOWN",
      "requires_flash": False, "weather": "WEATHER_SUNNY", "map_type": "MAP_TYPE_TOWN", "allow_cycling": True, "allow_escaping": False,
      "allow_running": True, "show_map_name": False, "floor_number": 0, "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
      "connections": [{"map": "MAP_PALLET_TOWN", "offset": 0, "direction": "left"}],
-     "object_events": objs, "warp_events": [], "coord_events": [], "bg_events": []}
+     "object_events": objs, "warp_events": [], "coord_events": [], "bg_events": [{"type": "sign", "x": 24, "y": 5, "elevation": 0, "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY", "script": "%s_EventScript_BarnDoor" % M}]}
 json.dump(d, open('data/maps/%s/map.json' % M, 'w'), indent=2); open('data/maps/%s/map.json' % M, 'a').write('\n')
 # ville : connexion vers le ranch
 f = 'data/maps/PalletTown/map.json'; t = json.load(open(f))

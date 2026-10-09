@@ -1,4 +1,5 @@
 #include "global.h"
+#include "constants/layouts.h"
 #include "item.h"
 #include "constants/items.h"
 #include "gflib.h"
@@ -855,11 +856,17 @@ static bool8 TryArrowWarp(struct MapPosition *position, u16 metatileBehavior, u8
     return FALSE;
 }
 
+// Topaze: GRENALUX <-> Route 1 / Route 21 use plain step-on warps (no door tile), see docs/topaze/grenalux_events.py
+static bool8 IsTopazeStepWarpMap(void)
+{
+    return gMapHeader.mapLayoutId == LAYOUT_PALLET_TOWN || gMapHeader.mapLayoutId == LAYOUT_ROUTE1 || gMapHeader.mapLayoutId == LAYOUT_ROUTE21_NORTH;
+}
+
 static bool8 TryStartWarpEventScript(struct MapPosition *position, u16 metatileBehavior)
 {
     s8 warpEventId = GetWarpEventAtMapPosition(&gMapHeader, position);
 
-    if (warpEventId != -1 && IsWarpMetatileBehavior(metatileBehavior) == TRUE)
+    if (warpEventId != -1 && (IsWarpMetatileBehavior(metatileBehavior) == TRUE || IsTopazeStepWarpMap() == TRUE))
     {
         StoreInitialPlayerAvatarState();
         SetupWarp(&gMapHeader, warpEventId, position);

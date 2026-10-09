@@ -132,8 +132,8 @@ PalletTown_Text_AmbMiner::
 
 PalletTown_Text_AmbOldman::
 	.string "My grandfather carried the first\n"
-	.string "crystal up from the mine. They say the\n"
-	.string "monument still hums at night.$"
+	.string "crystal up from the mine. They say\n"
+	.string "the monument still hums at night.$"
 
 PalletTown_Text_AmbGirl::
 	.string "The pond turns purple at dusk!\n"
@@ -141,36 +141,35 @@ PalletTown_Text_AmbGirl::
 
 PalletTown_Text_AmbBoy::
 	.string "I found a tiny crystal by the pond.\n"
-	.string "It glows if you hold it up to the sun!$"
+	.string "It glows if you hold it to the sun!$"
 
 PalletTown_Text_AmbScientist::
 	.string "The lab measures the aura of every\n"
 	.string "crystal in town. The readings keep\n"
 	.string "rising, and nobody knows why.$"
 
+PalletTown_Text_AmbGardener::
+	.string "These berries are for ranch animals.\n"
+	.string "They are not for picking, sorry!\n"
+	.string "The pens are east, beyond the trees.$"
+
 PalletTown_Text_AmbLady::
 	.string "Garnet is the stone of this town.\n"
 	.string "Red roofs, red trees, red stone...\n"
 	.string "Even the grass blushes here.$"
 
-PalletTown_Text_AmbSlowpoke::
-	.string "SLOWPOKE: ...Yawn.\n"
-	.string "It has been staring at the hay for hours.$"
+PalletTown_Text_SceneryMonument::
+	.string "A giant garnet crystal.\n"
+	.string "It hums softly, as if alive.$"
 
-PalletTown_Text_AmbNidoran::
-	.string "NIDORAN: Kyuu!\n"
-	.string "It nibbles the garnet-dusted grass.$"
+PalletTown_Text_SceneryGuardian::
+	.string "A garnet crystal, tall as a house.\n"
+	.string "It watches over the road north.$"
 
-PalletTown_Text_AmbMeowth::
-	.string "MEOWTH: Nyaa!\n"
-	.string "It keeps the barn free of mice.$"
+PalletTown_Text_SceneryMine::
+	.string "The old mine, sealed for safety.\n"
+	.string "Something glints deep inside...$"
 
-PalletTown_Text_AmbGranary::
-	.string "This is the ranch feed store.\n"
-	.string "Hay and grain for every animal.\n"
-	.string "The pens are out east, past the trees.$"
-
-PalletTown_Text_AmbGardener::
-	.string "These berries feed the ranch animals.\n"
-	.string "They are not for picking, sorry!\n"
-	.string "The pens are out east, past the trees.$"
+PalletTown_Text_SceneryBerries::
+	.string "Berry bushes for the ranch animals.\n"
+	.string "They are not for picking!$"
