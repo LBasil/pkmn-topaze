@@ -15,11 +15,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE3",
-      "offset": -60,
-      "direction": "down"
-    },
-    {
       "map": "MAP_CERULEAN_CITY",
       "offset": -10,
       "direction": "right"
@@ -140,6 +135,62 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE4_POKEMON_CENTER_1F",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 8,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE3",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 9,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE3",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 10,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE3",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 11,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE3",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 12,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE3",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 13,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE3",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 14,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE3",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 15,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE3",
+      "dest_warp_id": "5"
     }
   ],
   "coord_events": [],

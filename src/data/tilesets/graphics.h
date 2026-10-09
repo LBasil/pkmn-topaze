@@ -1659,3 +1659,45 @@ const u16 gTilesetPalettes_CinderForest[][16] =
 	INCBIN_U16("data/tilesets/secondary/cinder_forest/palettes/14.gbapal"),
 	INCBIN_U16("data/tilesets/secondary/cinder_forest/palettes/15.gbapal"),
 };
+
+const u32 gTilesetTiles_GeneralScoria[] = INCBIN_U32("data/tilesets/primary/general_scoria/tiles.4bpp.lz");
+const u16 gTilesetPalettes_GeneralScoria[][16] =
+{
+	INCBIN_U16("data/tilesets/primary/general_scoria/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_scoria/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_scoria/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_scoria/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_scoria/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_scoria/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_scoria/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_scoria/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_scoria/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_scoria/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_scoria/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_scoria/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_scoria/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_scoria/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_scoria/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_scoria/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_ScoriaRoad[] = INCBIN_U32("data/tilesets/secondary/scoria_road/tiles.4bpp.lz");
+const u16 gTilesetPalettes_ScoriaRoad[][16] =
+{
+	INCBIN_U16("data/tilesets/secondary/scoria_road/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/scoria_road/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/scoria_road/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/scoria_road/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/scoria_road/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/scoria_road/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/scoria_road/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/scoria_road/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/scoria_road/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/scoria_road/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/scoria_road/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/scoria_road/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/scoria_road/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/scoria_road/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/scoria_road/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/scoria_road/palettes/15.gbapal"),
+};

@@ -897,12 +897,12 @@
     {
       "id": "LAYOUT_ROUTE3",
       "name": "Route3_Layout",
-      "width": 84,
-      "height": 20,
+      "width": 80,
+      "height": 24,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_PewterCity",
+      "primary_tileset": "gTileset_GeneralScoria",
+      "secondary_tileset": "gTileset_ScoriaRoad",
       "border_filepath": "data/layouts/Route3/border.bin",
       "blockdata_filepath": "data/layouts/Route3/map.bin"
     },

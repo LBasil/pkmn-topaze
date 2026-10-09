@@ -878,3 +878,25 @@ const struct Tileset gTileset_CinderForest =
     .metatileAttributes = gMetatileAttributes_CinderForest,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralScoria =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralScoria,
+    .palettes = gTilesetPalettes_GeneralScoria,
+    .metatiles = gMetatiles_GeneralScoria,
+    .metatileAttributes = gMetatileAttributes_GeneralScoria,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_ScoriaRoad =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_ScoriaRoad,
+    .palettes = gTilesetPalettes_ScoriaRoad,
+    .metatiles = gMetatiles_ScoriaRoad,
+    .metatileAttributes = gMetatileAttributes_ScoriaRoad,
+    .callback = NULL,
+};

@@ -232,3 +232,8 @@ const u32 gMetatileAttributes_GeneralCinder[] = INCBIN_U32("data/tilesets/primar
 
 const u16 gMetatiles_CinderForest[] = INCBIN_U16("data/tilesets/secondary/cinder_forest/metatiles.bin");
 const u32 gMetatileAttributes_CinderForest[] = INCBIN_U32("data/tilesets/secondary/cinder_forest/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralScoria[] = INCBIN_U16("data/tilesets/primary/general_scoria/metatiles.bin");
+const u32 gMetatileAttributes_GeneralScoria[] = INCBIN_U32("data/tilesets/primary/general_scoria/metatile_attributes.bin");
+const u16 gMetatiles_ScoriaRoad[] = INCBIN_U16("data/tilesets/secondary/scoria_road/metatiles.bin");
+const u32 gMetatileAttributes_ScoriaRoad[] = INCBIN_U32("data/tilesets/secondary/scoria_road/metatile_attributes.bin");
