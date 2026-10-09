@@ -62,7 +62,11 @@ PALS = {}                                        # emplacement -> palette
 for st in range(3):
     for o, s in SLOT[st].items():
         if o != 3: PALS[s] = stage_pal(o, TS_[st])
-# emplacement 12 = palette ROCHE d'origine (pal 1 : roche brune / bord de toit) teintee neutre ; emplacement 10 = palette 3 d'origine (porte, panneau du Centre) teintee braise
+PALS[ROCK_SLOT] = stage_pal(3, 0.5)
+def lighten(c):
+    h, l, s = colorsys.rgb_to_hls(*[x / 255 for x in c]); r, g, b = colorsys.hls_to_rgb(0.07, min(0.5, l * 1.18 + 0.02), min(0.1, s * 0.3 + 0.015))
+    return int(r * 255 + .5), int(g * 255 + .5), int(b * 255 + .5)
+PALS[ROCK_SLOT] = [PALS[ROCK_SLOT][0]] + [tuple(int(v * 0.7) for v in c) for c in PALS[ROCK_SLOT][1:]]          # roche : meme palette violet-gris sur toute la route
 # ------------------------------------------------------------------ metatuiles : variantes par etage
 mt = open(EM + 'tilesets/primary/general/metatiles.bin', 'rb').read(); patt = open(EM + 'tilesets/primary/general/metatile_attributes.bin', 'rb').read()
 hdr = open('include/constants/metatile_behaviors.h').read()
@@ -129,7 +133,7 @@ for y in range(2, H - 2, 2):
     if not (EAST_ROWS[0] <= y <= EAST_ROWS[1]): tree(W - 2, y)
 PATH = set()
 HRIDGES = [(72, 11, 18), (28, 12, 21)]                    # (y haut, breche gauche, breche droite) : crêtes horizontales pleine largeur
-CENTER = (22, 59)                                        # Centre classique 5x4 (metatuiles d'origine) : cases (22..26, 60..63), porte en (24, 63)
+CENTER = (22, 60)                                        # Centre classique 5x4 (metatuiles d'origine) : cases (22..26, 60..63), porte en (24, 63)
 ARCH1, ARCH2 = (19, 49), (24, 16)                        # grottes : cases (x..x+2, y..y+2), porte en (x+1, y+2)
 WAYS = [[(19, 82), (18, 78), (15, 73), (13, 69), (16, 66), (20, 64), (30, 64), (32, 60), (30, 57), (24, 55), (20, 54)],
         [(25, 20), (24, 23), (20, 26), (16, 29), (17, 32), (24, 33), (31, 33), (37, 34), (38, 35)]]
@@ -156,15 +160,8 @@ for k, (y0, g0, g1) in enumerate(HRIDGES):
         if g0 <= x <= g1:
             for y in range(y0 - 2, y0 + 5): GAPC.add((x, y))
             continue
-        sh = int(round(1.6 * math.sin(x * 0.22 + k * 1.7)))
-        for y in range(y0 + sh, y0 + sh + 3): RIDGE.add((x, y)); BLOB[(x, y)] = (x, y0)
-def _fat0(c, S):
-    return any(all(((c[0] + ox + i, c[1] + oy + j) in S) for i in (0, 1) for j in (0, 1)) for ox in (0, -1) for oy in (0, -1))
-_chh = True
-while _chh:
-    _chh = False
-    for c in sorted(RIDGE):
-        if not _fat0(c, RIDGE): RIDGE.discard(c); _chh = True
+        sh = int(round(2 * math.sin(x * 0.38 + k * 1.7)))
+        for y in range(y0 + sh + wl[x], y0 + sh + 3 + wr[x]): RIDGE.add((x, y)); BLOB[(x, y)] = (x, y0)
 # deux bandes de montagne pleine largeur ; chacune porte une grotte (face sud)
 MASSIF = set(); DOORS = set()
 def band(ytop, ybot, seed, arch, flat_top=False, peak=0):
@@ -197,8 +194,13 @@ def path_id(x, y):
 for (x, y) in PATH: put(x, y, 0x3000, path_id(x, y)); OCC[(x, y)] = 'chemin'
 for c in RIDGE: OCC[c] = 'roche'
 for c in GAPC: OCC[c] = 'herbe'
-claim(CENTER[0], CENTER[1], 5, 5, 'centre')
-DOORS.add((CENTER[0] + 2, CENTER[1] + 4))
+claim(CENTER[0], CENTER[1], 5, 4, 'centre')
+DOORS.add((CENTER[0] + 2, CENTER[1] + 3))
+CM = [[72, 73, 74, 75, 391], [80, 81, 82, 83, 399], [88, 89, 90, 91, 407], [96, 97, 98, 390, 415]]      # facade du Centre de la Route 4 d'origine (tuiles primaires : 0 tuile d'art)
+for _j, _row in enumerate(CM):
+    for _i, _m in enumerate(_row):
+        put(CENTER[0] + _i, CENTER[1] + _j, 0x3000 if (_i, _j) == (2, 3) else 0x400, _m, st=2)
+_v = variant(98, 2); SEC_ATT[_v - 640] &= ~0xff               # porte : comportement normal (pas d'animation de porte, warp a pas simple)
 def dil(cells, r):
     return {(x + i, y + j) for (x, y) in cells for i in range(-r, r + 1) for j in range(-r, r + 1)}
 PATH_D1 = dil(PATH, 1)
@@ -208,7 +210,7 @@ LAKE = set(); LAKE_ST = {}
 def lake_shape(cx, cy, rx, ry):
     return {(x, y) for y in range(int(cy - ry) - 1, int(cy + ry) + 2) for x in range(int(cx - rx) - 1, int(cx + rx) + 2)
             if ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 + 0.2 * math.sin(x * 1.7 + y * 2.3) <= 1}
-_busy = dil(PATH, 2) | dil(RIDGE, 1) | dil(GAPC, 1) | dil({(CENTER[0] + i, CENTER[1] + j) for i in range(5) for j in range(5)}, 2)
+_busy = dil(PATH, 2) | dil(RIDGE, 1) | dil(GAPC, 1) | dil({(CENTER[0] + i, CENTER[1] + j) for i in range(5) for j in range(4)}, 2)
 for (ya, yb, st_) in ((58, 78, 2), (21, 38, 0)):
     _all = []
     for cy in range(ya, yb):
@@ -223,13 +225,15 @@ LAKE_Z = dil(LAKE, 1)
 def free_cell(c, r=2):
     return 3 <= c[0] <= W - 4 and 3 <= c[1] <= H - 4 and c not in OCC and c not in GAPC and c not in LAKE_Z and not any((c[0] + i, c[1] + j) in PATH or (c[0] + i, c[1] + j) in RIDGE or (c[0] + i, c[1] + j) in GAPC for i in range(-r, r + 1) for j in range(-r, r + 1))
 for _ in range(120):
-    if len([1 for v in OCC.values() if v == 'ilot']) > 40: break
+    if len([1 for v in OCC.values() if v == 'ilot']) > 150: break
     c0 = (rnd.randint(4, W - 5), rnd.randint(4, H - 5))
     if not free_cell(c0): continue
-    bw, bh = rnd.choice(((2, 2), (3, 2), (2, 3), (3, 3), (4, 2), (4, 3)))
-    blob = {(c0[0] + i, c0[1] + j) for i in range(bw) for j in range(bh)}
-    if not all(free_cell(q) for q in blob): continue
-    if len(blob) < 4: continue
+    blob = {c0}; n_ = rnd.randint(6, 12)
+    for _t in range(80):
+        if len(blob) >= n_: break
+        p = rnd.choice(sorted(blob)); q = (p[0] + rnd.choice((-1, 0, 1)), p[1] + rnd.choice((-1, 0, 1)))
+        if q not in blob and free_cell(q) and sum(((q[0] + a, q[1] + b) in blob) for a, b in ((1, 0), (-1, 0), (0, 1), (0, -1))) >= 1: blob.add(q)
+    if len(blob) < 5: continue
     for c in blob: RIDGE.add(c); OCC[c] = 'ilot'; BLOB[c] = c0
 # ---- panneaux, PNJ, objets caches
 def cands_in(xa, xb, ya=3, yb=H - 4, d=(2, 2), extra=()):
@@ -297,7 +301,6 @@ for (ox, oy) in ((0, 0), (1, 1), (1, 0), (0, 1)):
             if rnd.random() < tree_p(y): tree(x, y); claim(x, y, 2, 2, 'arbre')
             else:
                 kind = rnd.choice(['dead', 'dead', 'boulder', 'thorns'] if y >= 52 else ['crater', 'crater', 'boulder', 'spire'])
-                if y < 52 and rnd.random() < 0.55: continue
                 DEAD.append((x, y, kind)); claim(x, y, 2, 2, kind)
 ASH = set()
 for y in range(2, H - 2):
@@ -320,7 +323,7 @@ def art_pal(st):
     cols = [lerp(GARNET[i], OPAL[i], t) for i in range(8)]
     sh = tuple(int(c * 0.55) for c in min(g, key=sum))
     return [(0, 0, 0)] + g + cols + [sh, lerp((74, 84, 116), (86, 70, 72), t), lerp((138, 150, 184), (146, 120, 116), t)], g
-for st in (0, 2):
+for st in (0, 1, 2):
     p, _ = art_pal(st); PALS[ART_SLOT[st]] = p
 # indices : 1-4 sol | 5 contour | 6 sombre | 7 corps | 8 clair | 9 reflet | 10,11,12 etincelles | 13 ombre
 def newimg(w, h, pal): im = Image.new('P', (w, h), 1); im.putpalette([c for p in pal for c in p]); return im
@@ -470,6 +473,10 @@ def rock_img(mask, st, var):
     if not E_: d.line([(x1, y0 + 3), (x1, y1 - 3)], fill=5)
     if not N: d.line([(x0 + 3, y0), (x1 - 3, y0)], fill=5)
     return im
+ROCK = {}
+for st in (1,):
+    for mask in range(16):
+        for var in range(2): ROCK[(mask, st, var)] = meta(rock_img(mask, st, var), st)
 ART_PLACE = {}
 def art1(x, y, name):
     claim(x, y, 1, 1, 'cristal'); ART_PLACE[(x, y)] = ART[(name, stage_at(x, y))]
@@ -635,6 +642,7 @@ for st in (0,):
     b = spire_img(st); ART[('spire', st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(2) for i in range(2)}
     b = crater_small(st); ART[('crater', st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(2) for i in range(2)}
     ART[('pit', st)] = meta(pit_img(st), st)
+b = arch_img(1); ART[('arch', 1)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), 1) for j in range(3) for i in range(3)}
 for c in LAKE: ART[('lake', c)] = meta(lake_tile(c[0], c[1], LAKE_ST[c], 0), LAKE_ST[c])
 
 # ---- placement
@@ -651,110 +659,11 @@ for (x, y, kind) in DEAD:
 for c in LAKE: del OCC[c]
 for c in LAKE: claim(c[0], c[1], 1, 1, 'lac')
 for c in LAKE: ART_PLACE[c] = ART[('lake', c)]
-MTN = {"11111111": 113, "11111011": 178, "11011011": 121, "11011001": 121, "11011101": 121, "11111101": 179, "10111011": 114, "11101101": 179, "11111001": 121, "11011111": 121, "10110011": 114, "11101100": 112, "10101001": 133, "11001101": 120, "10011011": 122, "11101001": 133, "10011001": 122, "10010001": 122, "10100000": 133, "10101000": 133, "10001001": 159, "11001100": 120, "10100100": 133, "10100010": 134, "00000000": 159, "11000000": 141, "01010001": 135, "00010000": 177, "01000000": 176, "01011000": 135, "10010000": 142, "01010000": 135, "00010001": 177, "11110011": 498, "01010011": 135, "01010101": 135, "00110100": 111, "11000001": 141, "10110111": 114, "11110111": 186, "01110111": 105, "01110110": 105, "00110110": 106, "00110010": 106, "01110010": 106, "01010010": 176, "01100110": 104, "01111110": 105, "11111110": 187}
-D8 = [(0, -1), (1, 0), (0, 1), (-1, 0), (1, -1), (1, 1), (-1, 1), (-1, -1)]
-def is_m(c): return c in RIDGE or c[0] < 2 or c[0] >= W - 2 or c[1] < 2 or c[1] >= H - 2
-def mtn_id(x, y):
-    sig = ''.join('1' if is_m((x + dx, y + dy)) else '0' for dx, dy in D8)
-    if sig == '11111111': return (113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 108, 108, 187)[((x * 73856093) ^ (y * 19349663)) % 25]
-    if sig in MTN: return MTN[sig]
-    return MTN[min(MTN, key=lambda k: sum((a_ != b_) * (4 if i_ < 4 else 1) for i_, (a_, b_) in enumerate(zip(k, sig))))]
-# ---- montagne et Centre : metatuiles d'ORIGINE de FireRed (le tileset primaire du hack est celui d'Emeraude : on recopie les images en tuiles d'art,
-#      couche haute transparente la ou l'original montre de l'herbe, couche basse = herbe du degrade). Roche : rampe ardoise (emplacement 10) ; Centre : couleurs d'origine (emplacement 12).
-sys.path.insert(0, 'tools/topaze/maps')
-import mapkit
-_FP = mapkit.Tileset('gTileset_General'); _FS = mapkit.Tileset('gTileset_CeruleanCity')
-def fr_img(m):
-    ts_m = _FP.metatiles if m < 640 else _FS.metatiles
-    e = struct.unpack('<8H', ts_m[(m if m < 640 else m - 640) * 16:][:16])
-    out = Image.new('RGBA', (16, 16), (0, 0, 0, 0)); op = out.load()
-    for layer in range(2):
-        for q in range(4):
-            v = e[layer * 4 + q]; tid, hf, vf, pn = v & 0x3ff, (v >> 10) & 1, (v >> 11) & 1, v >> 12
-            src = _FP if tid < 640 else _FS; t = tid if tid < 640 else tid - 640; tw = src.img.width // 8
-            tile = src.img.crop(((t % tw) * 8, (t // tw) * 8, (t % tw) * 8 + 8, (t // tw) * 8 + 8))
-            if hf: tile = tile.transpose(Image.FLIP_LEFT_RIGHT)
-            if vf: tile = tile.transpose(Image.FLIP_TOP_BOTTOM)
-            pl = (_FP if pn < 7 else _FS).pals[pn]; px = tile.load()
-            for yy in range(8):
-                for xx in range(8):
-                    c = px[xx, yy]
-                    if c: op[(q % 2) * 8 + xx, (q // 2) * 8 + yy] = pl[c] + (255,)
-    for y_ in range(16):
-        for x_ in range(16):
-            r_, g_, b_, a_ = op[x_, y_]
-            if a_:
-                h_, l_, s_ = colorsys.rgb_to_hls(r_ / 255, g_ / 255, b_ / 255)
-                if 70 <= h_ * 360 <= 190 and s_ > 0.22: op[x_, y_] = (0, 0, 0, 0)          # herbe d'origine -> transparent (la couche basse montre l'herbe du degrade)
-    return out
-LAY = []; LAY_KEY = {}; LPLACE = {}
-def grass_bottom(st):
-    e = struct.unpack('<8H', mt[GRASS_M * 16:GRASS_M * 16 + 16])
-    return [(q & 0xfff) | (SLOT[st].get(q >> 12, q >> 12) << 12) for q in e[:4]]
-def lay_meta(tiles4, slot, st, att=0):
-    key = (tuple(tiles4), slot, st, att)
-    if key not in LAY_KEY: LAY.append((grass_bottom(st), list(tiles4), slot, att)); LAY_KEY[key] = len(LAY) - 1
-    return LAY_KEY[key]
-def put_lay(x, y, raw, tiles4, slot):
-    G[(x, y)] = raw; LPLACE[(x, y)] = lay_meta(tiles4, slot, stage_at(x, y))
-def slice4(im):
-    px = im.load(); out = []
-    for q in range(4):
-        out.append(add_tile([px[(q % 2) * 8 + i, (q // 2) * 8 + j] for j in range(8) for i in range(8)]))
-    return out
-def lum(c): return (0.30 * c[0] + 0.59 * c[1] + 0.11 * c[2]) / 255.0
-# ilots : on ne garde que des blocs gras (chaque case dans un 2x2 plein) dont la signature existe dans la table d'origine
-def _fat(c):
-    for ox in (0, -1):
-        for oy in (0, -1):
-            if all(((c[0] + ox + i, c[1] + oy + j) in RIDGE) for i in (0, 1) for j in (0, 1)): return True
-    return False
-def _sig(c): return ''.join('1' if is_m((c[0] + dx, c[1] + dy)) else '0' for dx, dy in D8)
-_ch = True
-while _ch:
-    _ch = False
-    for c in sorted(k for k, v in OCC.items() if v == 'ilot'):
-        if c in RIDGE and not _fat(c):
-            RIDGE.discard(c); del OCC[c]; _ch = True
-print('ilots restants', sum(1 for v in OCC.values() if v == 'ilot'))
-MTN_IDS = sorted(set(MTN.values()) | {113, 108, 187, 169})
-_mimg = {m: fr_img(m) for m in MTN_IDS}
-_ls = [lum(p[:3]) for im in _mimg.values() for p in im.getdata() if p[3]]
-_lo, _hi = sorted(_ls)[len(_ls) // 50], sorted(_ls)[-len(_ls) // 50]
-RAMP = [lerp((12, 14, 32), (150, 158, 190), (k / 14.0) ** 1.1) for k in range(15)]
-PALS[10] = [(0, 0, 0)] + RAMP
-def mtn_tiles(m):
-    im = _mimg[m]; px = im.load(); o = Image.new('P', (16, 16), 0); op = o.load()
-    lo_, hi_ = _lo, _hi
-    if m == 169:
-        l_ = sorted(lum(q[:3]) for q in im.getdata() if q[3]); lo_, hi_ = l_[0], l_[-1] + 1e-6
-    for y_ in range(16):
-        for x_ in range(16):
-            p = px[x_, y_]
-            if p[3]: op[x_, y_] = 1 + max(0, min(14, int(round((lum(p[:3]) - lo_) / (hi_ - lo_) * 14))))
-    return slice4(o)
-MT_T = {m: mtn_tiles(m) for m in MTN_IDS}
-# Centre : 25 metatuiles, couleurs d'origine quantifiees sur 15 teintes
-CM = [[640, 641, 642, 643, 644], [72, 73, 74, 75, 391], [80, 81, 82, 83, 399], [88, 89, 90, 91, 407], [96, 97, 98, 390, 415]]
-_cimg = {m: fr_img(m) for r_ in CM for m in r_}
-_cp = [p[:3] for im in _cimg.values() for p in im.getdata() if p[3]]
-_qi = Image.new('RGB', (len(_cp), 1)); _qi.putdata(_cp); _qq = _qi.quantize(colors=15, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
-_qp = _qq.getpalette()[:45]; PALS[12] = [(0, 0, 0)] + [tuple(_qp[3 * k:3 * k + 3]) for k in range(15)]
-def nearest12(c): return 1 + min(range(15), key=lambda k: sum((PALS[12][k + 1][i] - c[i]) ** 2 for i in range(3)))
-CEN_T = {}
-for m, im in _cimg.items():
-    px = im.load(); o = Image.new('P', (16, 16), 0); op = o.load()
-    for y_ in range(16):
-        for x_ in range(16):
-            if px[x_, y_][3]: op[x_, y_] = nearest12(px[x_, y_][:3])
-    CEN_T[m] = slice4(o)
-for _j, _row in enumerate(CM):
-    for _i, _m in enumerate(_row):
-        _door = (_i, _j) == (2, 4)
-        put_lay(CENTER[0] + _i, CENTER[1] + _j, 0x3000 if _door else 0x400, CEN_T[_m], 12)
 for (x, y) in sorted(RIDGE):
-    if (x, y) in DOORS: put_lay(x, y, 0x3000, MT_T[169], 10); continue
-    put_lay(x, y, 0x400, MT_T[mtn_id(x, y)], 10)
+    m = (((x, y - 1) in RIDGE) * 1) | (((x + 1, y) in RIDGE) * 2) | (((x, y + 1) in RIDGE) * 4) | (((x - 1, y) in RIDGE) * 8)
+    ART_PLACE[(x, y)] = ROCK[(m, 1, (x * 3 + y * 5) % 2 if m == 15 else (x + y) % 2)]
+for (ax, ay) in (ARCH1, ARCH2):
+    for (i, j), k in ART[('arch', 1)].items(): ART_PLACE[(ax + i, ay + j)] = k
 # la breche : herbe haute sur toute la zone
 for c in GAPC: put(c[0], c[1], 0x3000, TALL_M, st=1)
 PATH_D = dil(PATH, 1)
@@ -763,7 +672,7 @@ for y in range(2, H - 2):
     for x in range(2, W - 2):
         c = (x, y)
         if c in OCC or c in PATH_D or c in RES or c in LAKE_Z or c in ASH or c in ART_PLACE or (G[c] & 0xc00): continue
-        if rnd.random() < (0.8 if y >= 52 else 0.4):
+        if rnd.random() < 0.8:
             nm = rnd.choice(['sm0', 'sm1', 'stump', 'sm0', 'sm1']) if y >= 52 else rnd.choice(['pit', 'sm0', 'sm1', 'pit', None, None])
             if nm is None: continue
             claim(x, y, 1, 1, 'rocaille'); ART_PLACE[c] = ART[(nm, art_st(x, y))]
@@ -816,10 +725,6 @@ ART_ID = {}
 for k, ents in enumerate(ART_E):
     SEC_ENT.append([(640 + t) | (slot << 12) for (_, t, slot) in ents] + [0, 0, 0, 0]); SEC_ATT.append(0)
     ART_ID[k] = 640 + len(SEC_ENT) - 1
-LAY_ID = {}
-for k, (bot, tops, slot, att) in enumerate(LAY):
-    SEC_ENT.append(bot + [(640 + t) | (slot << 12) for t in tops]); SEC_ATT.append(att); LAY_ID[k] = 640 + len(SEC_ENT) - 1
-for c, k in LPLACE.items(): G[c] |= LAY_ID[k]
 assert len(SEC_ENT) <= 384 and len(ART_T) <= 384, (len(SEC_ENT), len(ART_T))
 for c, k in ART_PLACE.items(): G[c] = (0x3000 if c in DOORS else 0x400) | ART_ID[k]
 rows = max(1, (len(ART_T) + 15) // 16)
