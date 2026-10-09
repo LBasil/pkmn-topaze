@@ -60,7 +60,11 @@ PALS = {}                                        # emplacement -> palette
 for st in range(3):
     for o, s in SLOT[st].items():
         if o != 3: PALS[s] = stage_pal(o, TS_[st])
-PALS[ROCK_SLOT] = stage_pal(3, 0.5)          # roche : meme palette violet-gris sur toute la route
+PALS[ROCK_SLOT] = stage_pal(3, 0.5)
+def lighten(c):
+    h, l, s = colorsys.rgb_to_hls(*[x / 255 for x in c]); r, g, b = colorsys.hls_to_rgb(0.07, min(0.5, l * 1.18 + 0.02), min(0.1, s * 0.3 + 0.015))
+    return int(r * 255 + .5), int(g * 255 + .5), int(b * 255 + .5)
+for _s in (1, 3, 4): PALS[_s] = [PALS[_s][0]] + [lighten(c) for c in PALS[_s][1:]]          # roche : meme palette violet-gris sur toute la route
 # ------------------------------------------------------------------ metatuiles : variantes par etage
 mt = open(EM + 'tilesets/primary/general/metatiles.bin', 'rb').read(); patt = open(EM + 'tilesets/primary/general/metatile_attributes.bin', 'rb').read()
 hdr = open('include/constants/metatile_behaviors.h').read()
@@ -85,7 +89,7 @@ def variant(m, st, special=None):
     SEC_ENT.append(out); SEC_ATT.append(PATT32[m]); VAR[key] = 640 + len(SEC_ENT) - 1
     return VAR[key]
 # ------------------------------------------------------------------ carte
-W, H = 54, 69
+W, H = 54, 57
 GRASS_M, FLOWER_M, TALL_M = 1, 4, 13
 TREE = [[468, 469], [476, 477]]
 G = {}; OCC = {}; STG = {}
@@ -120,16 +124,19 @@ def tree(x, y):
     for j in range(2):
         for i in range(2): put(x + i, y + j, 0x400, TREE[j][i], st=st)
 # ======================================================================== FORET CALCINEE : sentier tortueux (l'ancien coupe-feu), clairieres, cratere central
-S_DOOR, N_DOOR = (29, 62), (5, 9)
-BUILD = {(28 + i, 62 + j) for i in range(3) for j in range(7)} | {(4 + i, 3 + j) for i in range(3) for j in range(7)}
+S_DOOR, N_DOOR = (29, 50), (5, 9)
+S_ROWS = [0, 1, 2, 3, 4, 5, 2]                       # lignes du tuyau (art) pour y=50..56 : on voit la face nord avec la porte, puis le tuyau qui part hors carte
+N_ROWS = [2, 5, 2, 5, 3, 4, 2, 5, 6, 7]              # y=0..9 : le tuyau vient du haut de la carte, la porte est en bas (face sud)
+BUILD = {(28 + i, 50 + j) for i in range(3) for j in range(7)} | {(4 + i, j) for i in range(3) for j in range(10)}
 for c in BUILD: OCC[c] = 'tuyau'
-for x in range(0, W, 2): tree(x, 0)
+for x in list(range(0, 4, 2)) + [7] + list(range(8, W, 2)): tree(x, 0)
 for x in list(range(0, 27, 2)) + list(range(31, 52, 2)): tree(x, H - 2)
 for y in range(2, H - 2, 2): tree(0, y); tree(W - 2, y)
 PATH = set()
-WAY = [(29, 61), (29, 53), (44, 50), (44, 42), (12, 41), (12, 32), (42, 31), (42, 21), (8, 19), (6, 13), (5, 10)]
-SPURS = [((12, 41), (8, 47)), ((42, 21), (47, 15)), ((30, 20), (30, 13)), ((12, 32), (7, 28)), ((29, 57), (41, 58))]
-CLEARINGS = [(3, 46, 11, 54), (46, 10, 51, 17), (24, 7, 36, 13), (3, 24, 8, 29), (40, 55, 50, 61), (20, 34, 35, 39)]
+WAY = [(29, 49), (29, 44), (40, 42), (40, 36), (12, 35), (12, 28), (38, 27), (38, 19), (8, 17), (6, 12), (5, 10)]
+SPURS = [((12, 35), (8, 40)), ((38, 19), (44, 14)), ((30, 18), (30, 12)), ((12, 28), (9, 25))]
+CLEARINGS = [(3, 41, 10, 48), (44, 9, 50, 15), (24, 6, 36, 12), (14, 38, 28, 46)]
+GIANT = (7, 21)                                      # grand arbre calcine (3x4) qui barre la diagonale gauche
 def seg(a, b):
     (x0, y0), (x1, y1) = a, b
     n = max(abs(x1 - x0), abs(y1 - y0))
@@ -156,29 +163,32 @@ for (x, y) in PATH:
     if 0 <= x < W and 0 <= y < H: put(x, y, 0x3000, path_id(x, y)); OCC[(x, y)] = 'chemin'
 def dil(cells, r):
     return {(x + i, y + j) for (x, y) in cells for i in range(-r, r + 1) for j in range(-r, r + 1)}
-OBJ = {'youngster': (26, 57), 'boy': (47, 58), 'rick': (47, 46), 'doug': (28, 38), 'sammy': (16, 34), 'anthony': (30, 10), 'charlie': (20, 16),
-       'ball_pokeball': (5, 50), 'ball_antidote': (49, 13), 'ball_potion': (5, 27), 'ball_potion2': (48, 60)}
-HID = {'potion': (4, 25), 'antidote': (42, 56)}
-SIGNS = {'tips1': (31, 60), 'tips2': (43, 48), 'tips3': (22, 43), 'tips4': (14, 36), 'tips5': (36, 33), 'exit': (8, 13)}
+OBJ = {'youngster': (26, 47), 'boy': (33, 46), 'rick': (43, 38), 'doug': (17, 39), 'sammy': (22, 31), 'anthony': (30, 9), 'charlie': (20, 14),
+       'ball_pokeball': (5, 45), 'ball_antidote': (48, 11), 'ball_potion': (9, 46), 'ball_potion2': (27, 44)}
+HID = {'potion': (4, 42), 'antidote': (49, 14)}
+SIGNS = {'tips1': (32, 47), 'tips2': (38, 39), 'tips3': (24, 38), 'tips4': (15, 31), 'tips5': (30, 31), 'exit': (9, 13)}
 RES = dil(list(OBJ.values()) + list(HID.values()) + list(SIGNS.values()), 1)
 CORR = dil(PATH, 2)
 for (x0, y0, x1, y1) in CLEARINGS: CORR |= {(x, y) for x in range(x0, x1 + 1) for y in range(y0, y1 + 1)}
-CR = (23, 35)
+CR = (20, 40)
 for i in range(3):
     for j in range(3): OCC[(CR[0] + i, CR[1] + j)] = 'reserve'
+for i in range(3):
+    for j in range(4):
+        if (GIANT[0] + i, GIANT[1] + j) not in OCC: OCC[(GIANT[0] + i, GIANT[1] + j)] = 'reserve-geant'
 rnd = random.Random(3030)
 bad_ = [c for c in list(OBJ.values()) + list(HID.values()) + list(SIGNS.values()) if c in OCC]
 assert not bad_, ('cases deja prises', bad_, [(c, OCC[c]) for c in bad_])
 # ---- herbes hautes : dans les couloirs et les clairieres, jamais sur le chemin
 TALL = []
 tries = 0
-while len(TALL) < 14 and tries < 4000:
-    tries += 1; x0 = rnd.randint(3, W - 8); y0 = rnd.randint(3, H - 8); w = rnd.randint(2, 4); h = rnd.randint(3, 5)
+while len(TALL) < 30 and tries < 20000:
+    tries += 1; x0 = rnd.randint(3, W - 8); y0 = rnd.randint(4, H - 8); w, h = rnd.choice([(2, 4), (2, 5), (3, 3), (4, 2), (5, 2), (6, 2), (3, 4), (2, 3)])
     cells = [(x, y) for y in range(y0, y0 + h) for x in range(x0, x0 + w)]
     if any(c not in CORR or c in OCC or c in RES for c in cells): continue
     if any(c in dil(PATH, 0) for c in cells): continue
     TALL.append((x0, y0, x0 + w - 1, y0 + h - 1))
-    for c in cells: OCC[c] = 'herbe'; put(c[0], c[1], 0x3000, TALL_M)
+    for c in cells: OCC[c] = 'herbe'; put(c[0], c[1], 0x3000, TALL_M, st=1)
 # ---- foret : arbres sur un reseau 2x2 partout sauf couloirs/clairieres ; un tiers sont des squelettes calcines (art)
 DEAD = []
 for y in range(2, H - 2, 2):
@@ -188,6 +198,14 @@ for y in range(2, H - 2, 2):
         if rnd.random() < 0.05: continue
         if rnd.random() < 0.34: DEAD.append((x, y)); claim(x, y, 2, 2, 'arbre mort')
         else: tree(x, y); claim(x, y, 2, 2, 'arbre')
+# ---- herbe cendree : zones de sol gris clair (c'etait une foret), hors arbres, chemin et objets
+ASH = set()
+for y in range(2, H - 2):
+    for x in range(2, W - 2):
+        c = (x, y)
+        if c in OCC or c in RES: continue
+        n = math.sin(x * 0.45 + y * 0.3) + math.sin(y * 0.6 - x * 0.2) + math.sin(x * 0.17 + y * 0.5)
+        if n > 0.5: put(x, y, 0x3000, GRASS_M, st=1); ASH.add(c)
 RIDGE = set(); WALL = set(); BLOB = {}
 
 # ---- art : cristaux (prismes de grenat -> domes d'opale), pierre du degrade
@@ -413,7 +431,19 @@ def ash_img(st):
     d.ellipse((2, 10, 14, 15), fill=13); d.ellipse((1, 9, 14, 14), fill=7); d.ellipse((3, 8, 11, 12), fill=14)
     d.point((6, 10), fill=6); d.point((9, 11), fill=6)
     return im
+def giant_img(st):
+    im = ground_bg(48, 64, st); d = ImageDraw.Draw(im)
+    d.ellipse((2, 52, 46, 63), fill=13)
+    d.polygon([(4, 61), (13, 44), (15, 22), (33, 22), (35, 44), (44, 61), (30, 56), (18, 56)], fill=6, outline=5)
+    for p, q in (((18, 28), (4, 10)), ((30, 24), (44, 4)), ((14, 38), (1, 32)), ((34, 36), (47, 26)), ((24, 22), (24, 2)), ((4, 10), (1, 14)), ((44, 4), (47, 8)), ((4, 10), (7, 1))):
+        d.line([p, q], fill=5, width=6); d.line([p, q], fill=6, width=4)
+    d.line([(19, 26), (17, 54)], fill=7); d.line([(27, 28), (28, 52)], fill=10); d.line([(24, 24), (24, 30)], fill=10)
+    d.ellipse((20, 38, 28, 48), fill=5); d.ellipse((22, 40, 26, 46), fill=12); d.point((24, 43), fill=11)
+    for p in ((6, 12), (40, 6), (4, 30), (45, 24), (22, 3), (8, 4)): d.point(p, fill=11)
+    for p in ((15, 56), (33, 56), (19, 55)): d.point(p, fill=12)
+    return im
 for st in (2,):
+    b = giant_img(st); ART[('giant', st)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(4) for i in range(3)}
     for var in (0, 1):
         b = dead_img(st, var); ART[('dead', st, var)] = {(i, j): meta(b.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)), st) for j in range(2) for i in range(2)}
     b = log_img(st); ART[('log', st)] = [meta(b.crop((0, 0, 16, 16)), st), meta(b.crop((16, 0, 32, 16)), st)]
@@ -422,9 +452,15 @@ for st in (2,):
 # ---- placement
 DOORS = {S_DOOR, N_DOOR}
 for j in range(7):
+    for i in range(3): ART_PLACE[(28 + i, 50 + j)] = ART[('tube', 2)][(i, S_ROWS[j])]
+for j in range(10):
+    for i in range(3): ART_PLACE[(4 + i, j)] = ART[('tube', 2)][(i, N_ROWS[j])]
+# grand arbre calcine sur la diagonale gauche : il barre le chemin (les cases de chemin dessous sont remplacees)
+for j in range(4):
     for i in range(3):
-        ART_PLACE[(28 + i, 62 + j)] = ART[('tube', 2)][(i, j)]
-        ART_PLACE[(4 + i, 3 + j)] = ART[('tube', 2)][(i, j + 1)]
+        c = (GIANT[0] + i, GIANT[1] + j)
+        if c in OCC and OCC[c] not in ('chemin', 'reserve-geant'): raise AssertionError(('arbre geant', c, OCC[c]))
+        OCC[c] = 'arbre geant'; ART_PLACE[c] = ART[('giant', 2)][(i, j)]
 for c in SIGNS.values(): claim(c[0], c[1], 1, 1, 'panneau'); ART_PLACE[c] = ART[('sign', 2)]
 for (x, y) in DEAD:
     v = rnd.randrange(2)
@@ -439,9 +475,10 @@ def near(x, y, r=1):
             if (x + i, y + j) in OCC or (x + i, y + j) in ART_PLACE: return True
     return False
 PATH_D = dil(PATH, 1)
-TRAINERS = {'rick': 4, 'doug': 4, 'sammy': 3, 'anthony': 4, 'charlie': 4}
+TRAINERS = {'rick': 3, 'doug': 4, 'sammy': 3, 'anthony': 4, 'charlie': 4}
 LINE = {(OBJ[k][0] + dx * d_, OBJ[k][1] + dy * d_) for k in TRAINERS for dx, dy in ((0, -1), (0, 1), (-1, 0), (1, 0)) for d_ in range(1, 6)}
-OPEN = sorted(c for c in CORR if c not in OCC and c not in RES and c not in PATH_D and c not in LINE and 2 <= c[0] <= W - 3 and 2 <= c[1] <= H - 4)
+DARK = variant(GRASS_M, 2)
+OPEN = sorted(c for c in CORR if c not in OCC and c not in RES and c not in PATH_D and c not in LINE and c not in ASH and 2 <= c[0] <= W - 3 and 2 <= c[1] <= H - 4)
 def scatter(n, fn):
     k = tries = 0
     while k < n and tries < 3000:
@@ -453,17 +490,17 @@ def one(name):
         claim(c[0], c[1], 1, 1, name); ART_PLACE[c] = ART[(name_map[name], 2)]; return True
     return f
 name_map = {'vent': 'vent', 'souche': 'stump', 'cendre': 'ash', 'obsidienne0': 'sm0', 'obsidienne1': 'sm1'}
-for nm, n in (('vent', 16), ('souche', 22), ('cendre', 16), ('obsidienne0', 6), ('obsidienne1', 5)): scatter(n, one(nm))
+for nm, n in (('vent', 12), ('souche', 14), ('cendre', 10), ('obsidienne0', 5), ('obsidienne1', 4)): scatter(n, one(nm))
 def logf(c):
     a, b = c, (c[0] + 1, c[1])
     if b not in OPEN or near(a[0], a[1], 1) or near(b[0], b[1], 1): return False
     claim(a[0], a[1], 2, 1, 'tronc'); ART_PLACE[a] = ART[('log', 2)][0]; ART_PLACE[b] = ART[('log', 2)][1]; return True
-scatter(9, logf)
+scatter(7, logf)
 # ---- accessibilite
 ART_RAW_BLOCK = set(ART_PLACE) - DOORS
 def blocked(c):
     return c in ART_RAW_BLOCK or bool(G[c] & 0xc00)
-seen = {(29, 61)}; q = collections.deque([(29, 61)])
+seen = {(29, 49)}; q = collections.deque([(29, 49)])
 while q:
     c = q.popleft()
     for d in ((0, 1), (1, 0), (-1, 0), (0, -1)):
