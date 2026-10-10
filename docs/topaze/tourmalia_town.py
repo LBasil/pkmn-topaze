@@ -266,68 +266,54 @@ for x in (40, 41, 42):                      # goulet de l'est : en x=41 seule la
         if (x, y) not in ((40, 18), (40, 19), (41, 19), (42, 18), (42, 19)): OPEN.discard((x, y)); WAY.discard((x, y))
 for c in list(OPEN):
     if c in OCC: OPEN.discard(c)
-# ------------------------------------------------------------------ EAU : source au pied de la grotte -> ruisseau -> etang (le ruisseau passe sous le pont de corde)
-def seg_r(px, py, a, b):
-    ax, ay, ar = a; bx, by, br = b; dx, dy = bx - ax, by - ay
-    t = max(0, min(1, ((px - ax) * dx + (py - ay) * dy) / float(dx * dx + dy * dy or 1)))
-    return math.hypot(px - (ax + t * dx), py - (ay + t * dy)) - (ar + (br - ar) * t)
-# ---- INONDATION : la ville basse est sous l'eau (comme Azuria, eau a l'ouest et au nord) ; on se refugie dans les arbres : cabanes, pontons, ilots de terre ferme
-def _noise(x, y, sc, seed):
-    ix, iy = math.floor(x / sc), math.floor(y / sc); fx, fy = x / sc - ix, y / sc - iy
-    def h(a, b): return random.Random((a * 73856093) ^ (b * 19349663) ^ seed).random()
-    ux, uy = fx * fx * (3 - 2 * fx), fy * fy * (3 - 2 * fy)
-    return (h(ix, iy) * (1 - ux) + h(ix + 1, iy) * ux) * (1 - uy) + (h(ix, iy + 1) * (1 - ux) + h(ix + 1, iy + 1) * ux) * uy
-ISL_SPEC = [(24.5, 37.5, 3.7), (4, 10.5, 3.8), (40, 10, 3.6), (41.5, 32, 4.6), (26.5, 29, 2.4), (10, 7.5, 1.9), (29, 7.5, 1.9), (36, 7.5, 1.9), (5, 34, 2.0), (16, 34, 2.0)]
-BUILD = [c for c, n in OCC.items() if n in ('centre', 'boutique', 'arene')]
-MONO_C = [(22 + i, 18 + j) for i in range(3) for j in range(3)]
-def on_island(c):
-    nz = (_noise(c[0], c[1], 3, 2) - 0.5) * 1.6
-    if any(math.hypot(c[0] - cx, c[1] - cy) < r + nz for cx, cy, r in ISL_SPEC): return True
-    if min(math.hypot(c[0] - b[0], c[1] - b[1]) for b in BUILD) < 3.0 + nz: return True
-    if min(math.hypot(c[0] - b[0], c[1] - b[1]) for b in MONO_C) < 3.2 + nz: return True
-    return False
-PROT = {(22 + i, 18 + j) for i in range(3) for j in range(3)} | {(3 + i, 7 + j) for i in range(3) for j in range(3)} | {(41, 10), (41, 11)}      # monolithe, grotte, terrier (art pose plus tard)
-BLOCK0 = ({(22 + i, 18 + j) for i in range(3) for j in range(3)} | {(3 + i, 7 + j) for i in range(3) for j in range(3)}) - {(4, 9)}      # art bloquant
+# ------------------------------------------------------------------ EAU (v4, plan explicite et lisible) : la ville est une ile de terre ferme au milieu d'une crue ;
+# l'eau vient de l'ouest et du sud (hors carte), on circule sur de larges pontons de planches (2 cases), au nord on reste au sec dans la foret.
+def cells_blob(cx, cy, rx, ry, seed, amp=0.15):
+    r = random.Random(seed); ph = [r.uniform(0, 6.28) for _ in range(3)]; out = set()
+    for y in range(int(cy - ry) - 2, int(cy + ry) + 3):
+        for x in range(int(cx - rx) - 2, int(cx + rx) + 3):
+            a_ = math.atan2((y - cy) / ry, (x - cx) / rx)
+            k = 1 + amp * (math.sin(2 * a_ + ph[0]) + 0.6 * math.sin(3 * a_ + ph[1]) + 0.4 * math.sin(5 * a_ + ph[2])) / 2
+            if ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 <= k * k and 0 <= x < W and 0 <= y < H: out.add((x, y))
+    return out
+def ribbon(pts, half=1.05):
+    out = set()
+    for (x0, y0), (x1, y1) in zip(pts, pts[1:]):
+        n = int(max(abs(x1 - x0), abs(y1 - y0)) * 4) + 1
+        for k in range(n + 1):
+            cx, cy = x0 + (x1 - x0) * k / n, y0 + (y1 - y0) * k / n
+            for y in range(int(cy - half) - 1, int(cy + half) + 2):
+                for x in range(int(cx - half) - 1, int(cx + half) + 2):
+                    if math.hypot(x + 0.5 - (cx + 0.5), y + 0.5 - (cy + 0.5)) <= half + 1e-6 and 0 <= x < W and 0 <= y < H: out.add((x, y))
+    return out
+HUB = set()
+for spec in ((14, 16.5, 5.6, 4.6, 32), (24, 18, 7.2, 5.4, 11), (31, 16, 6.2, 5.2, 31), (35.5, 22.5, 5.6, 4.6, 33), (19, 17.5, 3.5, 3.2, 41), (29.5, 21, 4.6, 4.0, 42), (23, 13, 3.2, 2.6, 43)):
+    HUB |= cells_blob(*spec)
+ISL = cells_blob(4, 10.5, 3.6, 3.2, 14) | cells_blob(26.5, 29, 2.4, 1.7, 51) | cells_blob(24.5, 37.5, 3.8, 2.6, 52) | cells_blob(41.5, 32, 4.6, 3.6, 25)
+BOARD = ribbon([(0, 20.5), (5, 21), (9, 20.5), (12.5, 19.5)]) | ribbon([(4.5, 20), (4.5, 12)]) | ribbon([(24.5, 23), (24.5, 31.5)], 1.0)
+BOARD |= {(24, y) for y in range(32, 36)}                                                                           # goulet sud : une seule planche
+BOARD |= ribbon([(4.5, 34.5), (9, 35.5), (14, 34.5), (19.5, 34.5), (19.5, 27), (20.5, 21.5)], 1.05) | ribbon([(37, 25.5), (39, 28.5), (41, 31)])
+BOARD |= {(x, 19) for x in range(36, 46)} | {(40, 18), (42, 18)}                                                    # goulet est : une planche (policier)
+BOARD |= {(x, y) for x in range(0, 2) for y in range(19, 23)} | {(46, 18), (47, 18), (46, 19), (47, 19)}            # embarcaderes
+PROT = {(22 + i, 18 + j) for i in range(3) for j in range(3)} | {(3 + i, 7 + j) for i in range(3) for j in range(3)} | {(41, 10), (41, 11)}
+BLOCK0 = ({(22 + i, 18 + j) for i in range(3) for j in range(3)} | {(3 + i, 7 + j) for i in range(3) for j in range(3)}) - {(4, 9)}
 BLOCKART = set(BLOCK0)
-FLOOD0 = {c for c in OPEN if (c[1] >= 14 or c[0] < 10) and c not in OCC and c not in PROT and not on_island(c)}
-STREAM = [(6.8, 8.6, 1.3), (7.6, 11.5, 0.8), (8.6, 14, 0.8), (8.0, 16.5, 0.9), (9.8, 18.5, 0.8), (9.2, 21, 0.9), (7.6, 24, 0.8), (8.4, 26.5, 1.0), (10.6, 29, 0.9),
-          (10.2, 32, 0.9), (11.4, 34, 1.0), (11, 35.5, 1.2)]
-rw = random.Random(77)
-WATERC = set()
-for y in range(1, H - 1):
-    for x in range(1, W - 1):
-        d = min(seg_r(x, y, a, b) for a, b in zip(STREAM, STREAM[1:]))
-        if d <= rw.uniform(-0.1, 0.12): WATERC.add((x, y))
-for (cx, cy, rx, ry) in ((10, 37, 2.8, 1.7), (12.6, 36.6, 2.4, 1.5)):                # etang
-    for y in range(int(cy - ry) - 1, int(cy + ry) + 2):
-        for x in range(int(cx - rx) - 1, int(cx + rx) + 2):
-            if ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 <= 1 and 1 <= x < W - 1 and 1 <= y < H - 1: WATERC.add((x, y))
+HUB = {c for c in HUB if c not in OCC}
+DRY = HUB | ISL
+for c in HUB | (ISL - OCC.keys()): OPEN.add(c)
+REGION = {(x, y) for x in range(W) for y in range(12, H) if x <= 45 or (x, y) in BOARD}
+WATERC = {c for c in REGION if (c not in OCC or OCC[c] == 'pont') and c not in DRY and c not in PROT}
 ROPEC = {c for c in WATERC if OCC.get(c) == 'pont'}
-WATERC = {c for c in WATERC if c not in OCC or c in ROPEC}
-BRIDGEC = set()
-for (r0, r1) in ((19, 21), (33, 34)):
-    xs = [c[0] for c in WATERC if r0 <= c[1] <= r1 and c not in ROPEC]
-    for y in range(r0, r1 + 1):
-        for x in range(min(xs), max(xs) + 1):
-            if (x, y) not in OCC: BRIDGEC.add((x, y)); WATERC.add((x, y))
-WATERC = {c for c in WATERC if c in ROPEC or c in BRIDGEC or c not in WAY}      # un sentier ne finit pas dans l'eau (hors ponts)
-def lowland(c):
-    x, y = c
-    return 1 <= x <= W - 2 and 1 <= y <= H - 2 and y >= 21 + 6 * (_noise(x, y, 6, 61) - 0.5) and _noise(x, y, 3.2, 63) < 0.66     # le bas de la ville est noye (quelques touffes d'arbres restent)
-FLOOD1 = {(x, y) for x in range(W) for y in range(H) if (x, y) not in OPEN and (x, y) not in OCC and (x, y) not in PROT and lowland((x, y))}
-STREAMC = set(WATERC)
-BANK = {(x + a, y + b) for (x, y) in STREAMC for a in (-1, 0, 1) for b in (-1, 0, 1)} - STREAMC - FLOOD0
-BANK = {c for c in BANK if c not in OCC and 1 <= c[0] < W - 1 and 1 <= c[1] < H - 1}
-WATERONLY = (STREAMC | FLOOD0 | FLOOD1) - ROPEC - BRIDGEC
-for c in BANK: OPEN.add(c)
-# terminaux a relier a la terre ferme : portes, pieds d'echelles, grotte, terrier, niche, sorties
-REQ = [(x, y + 1) for k in ('center', 'mart', 'gym') for (x, y) in D[k]] + list(LADDER.values()) + [(4, 10), (40, 9), (40, 10), (40, 11), (26, 29), (27, 29), (24, 35)]
-REQ += [(0, y) for y in range(19, 23)] + [(47, 18), (47, 19)] + [(x, 39) for x in range(22, 26)] + [(x, 0) for x in range(22, 25)] + [(40, 18), (41, 19), (42, 19), (1, 20)]
-FORCED = {(24, 30), (25, 30), (24, 31), (25, 31), (24, 32), (24, 33), (24, 34), (24, 35)}                 # goulet sud (Spectrum / la fille / arbre)
-FORCED |= {(40, 18), (40, 19), (41, 19), (42, 19), (42, 18)}                                                 # goulet est (policier)
-FORCED |= {(x, y) for x in range(0, 2) for y in range(19, 23)} | {(46, 18), (47, 18), (46, 19), (47, 19)}    # embarcadere ouest / est
-REQ += [(24, 29), (46, 19), (41, 32)]
-FORBID = {(x, y) for x in range(W) for y in range(H) if (x >= 20 and y >= 30) or x >= 42}
+BRIDGEC = {c for c in BOARD if c not in DRY and c not in OCC and c not in PROT}
+WATERONLY = WATERC - ROPEC - BRIDGEC
+for c in WATERONLY | BRIDGEC: OPEN.discard(c)
+for c in BRIDGEC: WAY.add(c)
+BANK = set()
+WAT = WATERONLY | BRIDGEC | ROPEC
+for c in WATERONLY | BRIDGEC:
+    if c not in OCC: claim(c[0], c[1], 1, 1, 'eau')
+REQ = [(x, y + 1) for k in ('center', 'mart', 'gym') for (x, y) in D[k]] + list(LADDER.values()) + [(4, 10), (40, 9), (40, 10), (40, 11), (26, 29), (27, 29), (24, 35), (24, 29), (41, 32)]
+REQ += [(0, y) for y in range(19, 23)] + [(47, 18), (47, 19)] + [(x, 39) for x in range(22, 26)] + [(x, 0) for x in range(22, 25)] + [(40, 18), (41, 19)]
 def walkset(): return (OPEN | BANK | BRIDGEC) - WATERONLY - BLOCK0
 def reach(start, walk):
     sn = {start}; qq = collections.deque([start])
@@ -337,56 +323,8 @@ def reach(start, walk):
             n = (c[0] + d_[0], c[1] + d_[1])
             if n in walk and n not in sn: sn.add(n); qq.append(n)
     return sn
-import heapq
-def link(t, R, walk):
-    pq = [(0, t, [t])]; best = {}
-    while pq:
-        cst, c, tr = heapq.heappop(pq)
-        if c in R: return tr
-        if c in best and best[c] <= cst: continue
-        best[c] = cst
-        for d_ in ((0, 1), (1, 0), (-1, 0), (0, -1)):
-            n = (c[0] + d_[0], c[1] + d_[1])
-            if not (0 <= n[0] < W and 0 <= n[1] < H) or (n in FORBID and t not in FORBID and n not in R): continue
-            if n in walk or n in R: heapq.heappush(pq, (cst + 1, n, tr + [n]))
-            elif n in WATERONLY: heapq.heappush(pq, (cst + 2.5 + 8 * _noise(n[0], n[1], 3.0, 41) + rnd.random() * 0.6, n, tr + [n]))
-    return None
-for c in FORCED:
-    if c not in OCC and c not in PROT:
-        if c in WATERONLY: WATERONLY.discard(c)
-        BRIDGEC.add(c); WAY.add(c); OPEN.add(c)
-for it in range(30):
-    walk = walkset(); R = reach((23, 0), walk); todo = [t for t in REQ if t not in R]
-    if not todo: break
-    tr = link(todo[0], R, walk); assert tr, ('terminal non relie', todo[0])
-    for c in tr:
-        if c in WATERONLY: WATERONLY.discard(c); BRIDGEC.add(c); WAY.add(c); OPEN.add(c)
-walk = walkset(); R = reach((23, 0), walk)
-for c in list(OPEN):
-    if c not in R and c not in OCC and c not in PROT: OPEN.discard(c); WATERONLY.add(c)           # terre isolee : engloutie
-_seen = set()                                                                         # les micro-mares isolees (< 8 cases) sont asséchées
-for c0 in sorted(WATERONLY):
-    if c0 in _seen: continue
-    comp = {c0}; qq = collections.deque([c0])
-    while qq:
-        c = qq.popleft()
-        for d_ in ((0, 1), (1, 0), (-1, 0), (0, -1)):
-            n = (c[0] + d_[0], c[1] + d_[1])
-            if n in WATERONLY and n not in comp: comp.add(n); qq.append(n)
-    _seen |= comp
-    if len(comp) < 8 and not any(((c[0] + a_, c[1] + b_) in BRIDGEC or (c[0] + a_, c[1] + b_) in ROPEC) for c in comp for a_ in (-1, 0, 1) for b_ in (-1, 0, 1)):
-        WATERONLY -= comp
-WAT = WATERONLY | BRIDGEC | ROPEC
-# pontons : les cases de sentier proches de l'eau (a 2 cases) deviennent des planches
-PLANK = set(BRIDGEC)
-for c in OPEN:
-    pass
-PLANK -= ROPEC
-for c in PLANK: BRIDGEC.add(c)
-WAT |= PLANK
-for c in WATERONLY | BRIDGEC: OPEN.discard(c)
-for c in WATERONLY | BRIDGEC:
-    if c not in OCC: claim(c[0], c[1], 1, 1, 'eau')
+_R = reach((23, 0), walkset())
+assert all(t in _R for t in REQ), [t for t in REQ if t not in _R]
 WATER_ATT = conv(struct.unpack('<H', patt[0xd1 * 2:0xd1 * 2 + 2])[0])             # comportement eau, couche 'couvrante' (on peut surfer, le sprite passe au-dessus)
 import numpy as np
 from PIL import ImageFilter
@@ -573,9 +511,9 @@ NPC['grunt'] = (40, 10); NPC['gtop'] = (40, 9); NPC['gbottom'] = (40, 11)
 NPC['slowbro'] = (26, 29); NPC['lass'] = (27, 29); NPC['slowbro_block'] = (24, 31); NPC['lass_block'] = (25, 31)
 NPC['guard'] = (5, 10); NPC['cuttree'] = (24, 35); NPC['rival'] = (22, 0)
 for c in (NPC['guard'],): assert c in OPEN, c
-NPC['boy'] = pick((18, 21)); NPC['balding'] = pick((9, 21)); NPC['youngster'] = pick((35, 21)); NPC['woman'] = pick((7, 35))
+NPC['boy'] = pick((18, 21)); NPC['balding'] = pick((11, 20)); NPC['youngster'] = pick((35, 21)); NPC['woman'] = pick((21, 25), r=10)
 NPC['hidden'] = pick((16, 9), r=12)
-SIGNS = {'city': pick((3, 18), sign=True), 'gym': pick((33, 17), sign=True), 'bike': pick((7, 35), sign=True), 'tips': pick((21, 33), r=12, sign=True)}
+SIGNS = {'city': pick((11, 18), sign=True), 'gym': pick((33, 17), sign=True), 'bike': pick((14, 25), sign=True, r=10), 'tips': pick((21, 26), r=12, sign=True)}
 for k, c in SIGNS.items():
     claim(c[0], c[1], 1, 1, 'panneau: ' + k)
 for k in ('policeman', 'policeman_block', 'grunt', 'gtop', 'gbottom', 'slowbro', 'lass', 'slowbro_block', 'lass_block', 'cuttree', 'rival', 'guard'):

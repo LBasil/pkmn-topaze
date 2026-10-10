@@ -48,8 +48,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
-      "x": 20,
-      "y": 20,
+      "x": 18,
+      "y": 21,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 1,
@@ -63,7 +63,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
       "x": 10,
-      "y": 17,
+      "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -150,8 +150,8 @@
       "local_id": "LOCALID_CERULEAN_WOMAN",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
-      "x": 6,
-      "y": 35,
+      "x": 21,
+      "y": 23,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
@@ -418,8 +418,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 3,
-      "y": 14,
+      "x": 9,
+      "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CeruleanCity_EventScript_CitySign"
@@ -434,16 +434,16 @@
     },
     {
       "type": "sign",
-      "x": 5,
-      "y": 35,
+      "x": 19,
+      "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CeruleanCity_EventScript_BikeShopSign"
     },
     {
       "type": "sign",
-      "x": 9,
-      "y": 33,
+      "x": 21,
+      "y": 22,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CeruleanCity_EventScript_TrainerTips"
