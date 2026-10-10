@@ -290,7 +290,7 @@ for (cx, cy, rx, ry) in ((10, 37, 2.8, 1.7), (12.6, 36.6, 2.4, 1.5)):           
 ROPEC = {c for c in WATERC if OCC.get(c) == 'pont'}
 WATERC = {c for c in WATERC if c not in OCC or c in ROPEC}
 BRIDGEC = set()
-for (r0, r1) in ((20, 21),):
+for (r0, r1) in ((19, 20),):
     xs = [c[0] for c in WATERC if r0 <= c[1] <= r1 and c not in ROPEC]
     for y in range(r0, r1 + 1):
         for x in range(min(xs), max(xs) + 1):
@@ -405,7 +405,7 @@ for c in list(GROUND):
 # ------------------------------------------------------------------ placement de l'art
 MONO = monolith(); HOLE = hole(); GROT = grotto()
 rect(22, 18, 24, 20, False)
-art_block(MONO, 3, 3, 22, 18, 'monolithe', gid=289)
+art_block(MONO, 3, 3, 22, 18, 'monolithe')
 GROT_DOOR = (1, 1)                                     # grotte retiree (v6) : la porte de Cerulean Cave reste declaree mais hors d'atteinte
 art_block(HOLE, 1, 2, 41, 10, 'terrier'); HOLE_CELLS = [(41, 10), (41, 11)]
 for c in list(OPEN):
@@ -480,8 +480,10 @@ for k, c in SIGNS.items(): G[c] = remap(0x400 | 3)
 # ---- sentiers : sable d'Emeraude (autotuile, comme la Route 4 Est) ; prairies : fleurs
 PATHC = {c for c in WAY if c in OPEN and c not in OCC and c not in ARTPLACE and c not in WATERONLY and c not in BRIDGEC and not (G[c] & 0xc00)}
 # mise en forme du sable : l'autotuile d'Emeraude n'a ni piece de 1 case de large ni angle rentrant -> on epaissit / comble
+RING = {(x, y) for x in range(21, 26) for y in range(17, 22)} - {(x, y) for x in range(22, 25) for y in range(18, 21)}     # rond-point : pelouse autour du monolithe
+PATHC -= RING
 def _free(c):
-    return (c in OPEN and c not in OCC and c not in ARTPLACE and c not in WATERONLY and c not in BRIDGEC and not (G[c] & 0xc00) and c not in HOLE_CELLS and 0 <= c[0] < W and 0 <= c[1] < H)
+    return (c not in RING and c in OPEN and c not in OCC and c not in ARTPLACE and c not in WATERONLY and c not in BRIDGEC and not (G[c] & 0xc00) and c not in HOLE_CELLS and 0 <= c[0] < W and 0 <= c[1] < H)
 for _ in range(3):
     add = set()
     for (x, y) in PATHC:
