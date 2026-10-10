@@ -102,13 +102,13 @@ def trail(pts, wd, seed):
                     if dx * dx + dy * dy <= wd * wd + r.choice((0, 0, 1)) and 0 <= int(cx) + dx < W and 0 <= int(cy) + dy < H: OPEN.add((int(round(cx)) + dx, int(round(cy)) + dy))
                     if math.hypot(int(round(cx)) + dx - cx, int(round(cy)) + dy - cy) <= 1.0: WAY.add((int(round(cx)) + dx, int(round(cy)) + dy))
 # l'allee du Gardien (rival : voie droite x 22..24, y 0..9)
-rect(22, 0, 24, 13)
+rect(22, 0, 24, 15)
 # clairieres (prairie) et sentiers (sol pointille) : la ville est faite de petites clairieres reliees par des sentiers, dans une grande foret
-blob(24, 18, 6.8, 4.2, 11)                                  # place du monolithe
+blob(24, 18, 4.6, 3.0, 11, way=True)                                  # place du monolithe
 blob(30, 14, 5.4, 4.0, 31)                                  # parvis de l'arene
 blob(14, 16, 4.6, 4.0, 32)                                  # clairiere du Centre
 blob(35, 23, 4.6, 3.4, 33)                                  # clairiere de la boutique
-trail([(0, 20), (4, 21), (9, 20), (14, 19), (18, 19)], 1, 12)         # sortie ouest (Route 4)
+trail([(0, 20), (4, 21), (9, 20), (14, 19), (20, 19)], 1, 12)         # sortie ouest (Route 4)
 rect(0, 19, 2, 22)
 trail([(14, 9), (18, 8), (21, 9)], 1, 15)
 trail([(8, 8), (6, 12), (5, 16), (4, 20)], 1, 13)           # sentier de la berge ouest : pied de l'echelle de la cabane 1 -> entree ouest          # sous les cabanes (ouest)
@@ -119,7 +119,7 @@ trail([(30, 19), (36, 19), (42, 18), (47, 18)], 1, 18); rect(36, 18, 40, 19); re
 trail([(24, 22), (25, 28), (24, 33)], 1, 19); rect(24, 30, 25, 31); rect(24, 32, 24, 35)
 rect(22, 36, 25, 39); rect(22, 34, 26, 35)
 for c in [(22, 34), (23, 34), (25, 34), (26, 34), (22, 35), (23, 35), (25, 35), (26, 35)]: OPEN.discard(c)          # goulet de l'arbre a couper : 1 case en (24,35)
-trail([(30, 20), (30, 25), (33, 25)], 1, 20)
+trail([(28, 20), (30, 20), (30, 25), (33, 25)], 1, 20)
 
 trail([(2, 21), (1, 26), (1, 34)], 1, 31)                        # sentier de la berge ouest (cabane 5, clairiere sud-ouest)
 trail([(14, 20), (14, 25), (19, 27), (19, 33)], 1, 22); blob(10, 36, 9.5, 2.6, 23); trail([(19, 33), (18, 36), (14, 36)], 1, 26)       # sentier du sud-ouest + clairiere des cabanes basses
@@ -405,7 +405,7 @@ for c in list(GROUND):
 # ------------------------------------------------------------------ placement de l'art
 MONO = monolith(); HOLE = hole(); GROT = grotto()
 rect(22, 18, 24, 20, False)
-art_block(MONO, 3, 3, 22, 18, 'monolithe')
+art_block(MONO, 3, 3, 22, 18, 'monolithe', gid=289)
 GROT_DOOR = (1, 1)                                     # grotte retiree (v6) : la porte de Cerulean Cave reste declaree mais hors d'atteinte
 art_block(HOLE, 1, 2, 41, 10, 'terrier'); HOLE_CELLS = [(41, 10), (41, 11)]
 for c in list(OPEN):
@@ -479,6 +479,23 @@ for c, (t4, gid) in sorted(ARTPLACE.items()):
 for k, c in SIGNS.items(): G[c] = remap(0x400 | 3)
 # ---- sentiers : sable d'Emeraude (autotuile, comme la Route 4 Est) ; prairies : fleurs
 PATHC = {c for c in WAY if c in OPEN and c not in OCC and c not in ARTPLACE and c not in WATERONLY and c not in BRIDGEC and not (G[c] & 0xc00)}
+# mise en forme du sable : l'autotuile d'Emeraude n'a ni piece de 1 case de large ni angle rentrant -> on epaissit / comble
+def _free(c):
+    return (c in OPEN and c not in OCC and c not in ARTPLACE and c not in WATERONLY and c not in BRIDGEC and not (G[c] & 0xc00) and c not in HOLE_CELLS and 0 <= c[0] < W and 0 <= c[1] < H)
+for _ in range(3):
+    add = set()
+    for (x, y) in PATHC:
+        P_ = lambda c: c in PATHC or c in add
+        if not P_((x - 1, y)) and not P_((x + 1, y)):
+            for c in ((x + 1, y), (x - 1, y)):
+                if _free(c): add.add(c); break
+        if not P_((x, y - 1)) and not P_((x, y + 1)):
+            for c in ((x, y + 1), (x, y - 1)):
+                if _free(c): add.add(c); break
+        for (dx, dy) in ((-1, -1), (1, -1), (-1, 1), (1, 1)):
+            if P_((x + dx, y)) and P_((x, y + dy)) and not P_((x + dx, y + dy)) and _free((x + dx, y + dy)): add.add((x + dx, y + dy))
+    if not add: break
+    PATHC |= add
 def path_id(x, y):
     f = lambda c: (c in PATHC) or c[0] < 0 or c[0] >= W or c[1] < 0 or c[1] >= H or c in BRIDGEC or (c in OCC and not (G.get(c, 0) & 0xc00) and c not in OPEN)
     N = f((x, y - 1)); S = f((x, y + 1)); Wn = f((x - 1, y)); E_ = f((x + 1, y))
