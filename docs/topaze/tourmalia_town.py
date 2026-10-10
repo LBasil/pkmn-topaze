@@ -172,7 +172,7 @@ for y in range(H):
 # ------------------------------------------------------------------ art : cristaux de tourmaline (couche haute transparente sur le sol)
 ART_PAL = 7
 used = {q >> 12 for e in SEC_ENT for q in e}
-assert ART_PAL not in used, used
+assert ART_PAL not in used and 8 not in used, used
 PAL = [(0, 0, 0), (8, 24, 20), (18, 84, 60), (34, 140, 92), (100, 208, 140), (188, 246, 208), (250, 255, 250), (140, 30, 86), (222, 72, 138),
        (255, 146, 194), (255, 214, 232), (22, 60, 44), (92, 64, 40), (126, 130, 126), (70, 76, 74), (255, 232, 136)]
 # 1 contour | 2 vert profond | 3 vert | 4 vert clair | 5 menthe | 6 blanc | 7 rose fonce | 8 rose | 9 rose clair | 10 rose pale | 11 ombre | 12 terre | 13 pierre | 14 pierre sombre | 15 or
@@ -266,6 +266,120 @@ for x in (40, 41, 42):                      # goulet de l'est : en x=41 seule la
         if (x, y) not in ((40, 18), (40, 19), (41, 19), (42, 18), (42, 19)): OPEN.discard((x, y)); WAY.discard((x, y))
 for c in list(OPEN):
     if c in OCC: OPEN.discard(c)
+# ------------------------------------------------------------------ EAU : source au pied de la grotte -> ruisseau -> etang (le ruisseau passe sous le pont de corde)
+def seg_r(px, py, a, b):
+    ax, ay, ar = a; bx, by, br = b; dx, dy = bx - ax, by - ay
+    t = max(0, min(1, ((px - ax) * dx + (py - ay) * dy) / float(dx * dx + dy * dy or 1)))
+    return math.hypot(px - (ax + t * dx), py - (ay + t * dy)) - (ar + (br - ar) * t)
+STREAM = [(6.8, 8.6, 1.3), (7.6, 11.5, 0.8), (8.6, 14, 0.8), (8.0, 16.5, 0.9), (9.8, 18.5, 0.8), (9.2, 21, 0.9), (7.6, 24, 0.8), (8.4, 26.5, 1.0), (10.6, 29, 0.9),
+          (10.2, 32, 0.9), (11.4, 34, 1.0), (11, 35.5, 1.2)]
+rw = random.Random(77)
+WATERC = set()
+for y in range(1, H - 1):
+    for x in range(1, W - 1):
+        d = min(seg_r(x, y, a, b) for a, b in zip(STREAM, STREAM[1:]))
+        if d <= rw.uniform(-0.1, 0.12): WATERC.add((x, y))
+for (cx, cy, rx, ry) in ((10, 37, 2.8, 1.7), (12.6, 36.6, 2.4, 1.5)):                # etang
+    for y in range(int(cy - ry) - 1, int(cy + ry) + 2):
+        for x in range(int(cx - rx) - 1, int(cx + rx) + 2):
+            if ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 <= 1 and 1 <= x < W - 1 and 1 <= y < H - 1: WATERC.add((x, y))
+ROPEC = {c for c in WATERC if OCC.get(c) == 'pont'}
+WATERC = {c for c in WATERC if c not in OCC or c in ROPEC}
+BRIDGEC = set()
+for (r0, r1) in ((19, 21), (33, 34)):
+    xs = [c[0] for c in WATERC if r0 <= c[1] <= r1 and c not in ROPEC]
+    for y in range(r0, r1 + 1):
+        for x in range(min(xs), max(xs) + 1):
+            if (x, y) not in OCC: BRIDGEC.add((x, y)); WATERC.add((x, y))
+WATERC = {c for c in WATERC if c in ROPEC or c in BRIDGEC or c not in WAY}      # un sentier ne finit pas dans l'eau (hors ponts)
+WATERONLY = WATERC - ROPEC - BRIDGEC
+WAT = WATERC
+BANK = {(x + a, y + b) for (x, y) in WATERC for a in (-1, 0, 1) for b in (-1, 0, 1)} - WATERC
+BANK = {c for c in BANK if c not in OCC and 1 <= c[0] < W - 1 and 1 <= c[1] < H - 1}
+for c in WATERONLY | BRIDGEC: OPEN.discard(c)
+for c in BANK: OPEN.add(c)
+for c in WATERONLY | BRIDGEC: claim(c[0], c[1], 1, 1, 'eau')
+WATER_ATT = conv(struct.unpack('<H', patt[0xd1 * 2:0xd1 * 2 + 2])[0])             # comportement eau, couche 'couvrante' (on peut surfer, le sprite passe au-dessus)
+import numpy as np
+from PIL import ImageFilter
+WPAL_ID = 8
+_g = E.metatile(LD, GRASS).convert('RGB'); GR = tuple(int(np.asarray(_g)[:, :, k].mean()) for k in range(3))
+WPAL = [(0, 0, 0), (22, 78, 104), (44, 120, 190), (82, 162, 226), (130, 200, 246), (228, 246, 255),
+        tuple(int(v * 0.70) for v in GR), tuple(int(v * 0.84) for v in GR),
+        (70, 44, 24), (150, 104, 64), (206, 156, 96), (52, 36, 28), (30, 110, 70), (64, 164, 96), (255, 170, 200), (255, 232, 136)]
+def vnoise(gx, gy, sc, seed):
+    ix, iy = math.floor(gx / sc), math.floor(gy / sc); fx, fy = gx / sc - ix, gy / sc - iy
+    def h(a, b): return random.Random((a * 73856093) ^ (b * 19349663) ^ seed).random()
+    ux, uy = fx * fx * (3 - 2 * fx), fy * fy * (3 - 2 * fy)
+    return (h(ix, iy) * (1 - ux) + h(ix + 1, iy) * ux) * (1 - uy) + (h(ix, iy + 1) * (1 - ux) + h(ix + 1, iy + 1) * ux) * uy
+def water_img(c, ext):
+    """16x16 d'eau (palette 8), forme lissee et ondulee sur les 3x3 cases voisines ; `ext` = cases d'eau (ponts compris)"""
+    x, y = c
+    m = Image.new('L', (48, 48), 0); md = ImageDraw.Draw(m)
+    for dy in (-1, 0, 1):
+        for dx in (-1, 0, 1):
+            if (x + dx, y + dy) in ext: md.rectangle(((dx + 1) * 16, (dy + 1) * 16, (dx + 1) * 16 + 15, (dy + 1) * 16 + 15), fill=255)
+    # les bords de la carte du 3x3 etendent les voisins : on prolonge les cotes pour que le lissage ne rogne pas
+    A = np.asarray(m.filter(ImageFilter.GaussianBlur(3.2)), dtype=float)
+    im = newimg(16, 16); px = im.load()
+    inside = np.zeros((18, 18), bool)
+    for j in range(18):
+        for i in range(18):
+            gx, gy = x * 16 + i - 1, y * 16 + j - 1
+            inside[j, i] = A[16 + j - 1, 16 + i - 1] > 128 + (vnoise(gx, gy, 5, 5) - 0.5) * 56 + (vnoise(gx, gy, 2.2, 9) - 0.5) * 20
+    for j in range(16):
+        for i in range(16):
+            gx, gy = x * 16 + i, y * 16 + j
+            if inside[j + 1, i + 1]:
+                nb = [inside[j + 1 + b, i + 1 + a] for a, b in ((0, -1), (0, 1), (-1, 0), (1, 0))]
+                if not all(nb): px[i, j] = 1
+                else:
+                    near = [inside[j + 1 + b, i + 1 + a] for a, b in ((-1, -1), (1, -1), (-1, 1), (1, 1))]
+                    v = 3 if all(near) else 2
+                    r = vnoise(gx * 1.0, gy * 2.2, 3.5, 17)
+                    if v == 3 and r > 0.78: v = 4
+                    if v == 3 and r < 0.16: v = 2
+                    if v == 4 and vnoise(gx, gy, 1.5, 3) > 0.9: v = 5
+                    px[i, j] = v
+            else:
+                if any(inside[j + 1 + b, i + 1 + a] for a, b in ((0, -1), (0, 1), (-1, 0), (1, 0))): px[i, j] = 6
+                elif any(inside[j + 1 + b, i + 1 + a] for a, b in ((-1, -1), (1, -1), (-1, 1), (1, 1))): px[i, j] = 7
+    return im
+def lily(c):
+    im = None
+    return im
+def plank_img(c):
+    x, y = c
+    top = (x, y - 1) not in BRIDGEC; bot = (x, y + 1) not in BRIDGEC
+    im = newimg(16, 16); d = ImageDraw.Draw(im)
+    d.rectangle((0, 0, 15, 15), fill=9)
+    for k in range(0, 16, 4): d.line((k, 0, k, 15), fill=10); d.line((k + 3, 0, k + 3, 15), fill=11)
+    for (k, yy) in ((1, 5), (2, 11), (0, 2), (3, 9)): d.point(((k + 4 * ((x + yy) % 4)) % 16, yy), fill=8)
+    if top: d.rectangle((0, 0, 15, 3), fill=10); d.line((0, 0, 15, 0), fill=8); d.line((0, 3, 15, 3), fill=8); d.line((0, 1, 15, 2), fill=9)
+    if bot: d.rectangle((0, 12, 15, 15), fill=10); d.line((0, 12, 15, 12), fill=8); d.line((0, 15, 15, 15), fill=8); d.line((0, 13, 15, 14), fill=9)
+    return im
+GBOT = ents_of(GRASS)[:4]
+EMPTY_TOP = ents_of(GRASS)[4:]
+WCACHE = {}
+def water_cell(c):
+    x, y = c
+    key = tuple(((x + dx, y + dy) in WAT) for dy in (-1, 0, 1) for dx in (-1, 0, 1))
+    if key not in WCACHE:
+        t4 = slice_tiles(water_img(c, WAT)); SEC_ENT.append(list(GBOT) + [('B', t) for t in t4]); SEC_ATT.append(WATER_ATT)
+        WCACHE[key] = len(SEC_ENT) - 1
+    return 0x1000 | (640 + WCACHE[key])
+for c in sorted(WATERONLY): G[c] = water_cell(c)
+PCACHE = {}
+for c in sorted(BRIDGEC):
+    k = ((c[0], c[1] - 1) in BRIDGEC, (c[0], c[1] + 1) in BRIDGEC, c[0] % 4)
+    if k not in PCACHE:
+        t4 = slice_tiles(plank_img(c)); SEC_ENT.append([('B', t) for t in t4] + list(EMPTY_TOP)); SEC_ATT.append(0); PCACHE[k] = len(SEC_ENT) - 1
+    G[c] = 0x3000 | (640 + PCACHE[k])
+ALLW = {(i, j) for i in range(-2, 3) for j in range(-2, 3)}
+WIMG_FULL = slice_tiles(water_img((100, 100), {(100 + i, 100 + j) for i, j in ALLW}))
+for c in sorted(ROPEC):                                                                          # pont de corde au-dessus du ruisseau : fond = eau, haut = cordes
+    base = G[c]; i = (base & 0x3ff) - 640
+    SEC_ENT.append([('B', t) for t in WIMG_FULL] + list(SEC_ENT[i][4:])); SEC_ATT.append(SEC_ATT[i]); G[c] = (base & ~0x3ff) | (640 + len(SEC_ENT) - 1)
 # ------------------------------------------------------------------ sol + foret definitifs (apres goulets)
 for (x, y) in sorted(OPEN):
     if (x, y) in OCC: continue
@@ -359,7 +473,7 @@ for c, (t4, gid) in sorted(ARTPLACE.items()):
     G[c] = (0x3000 if walk else 0x400) | mid
 for k, c in SIGNS.items(): G[c] = remap(0x400 | 3)
 for c in HOLE_CELLS: GROUND[c] = 609
-def raw_blocked(c): return bool(G[c] & 0xc00)
+def raw_blocked(c): return bool(G[c] & 0xc00) or c in WATERONLY
 # ------------------------------------------------------------------ accessibilite
 seen = {(23, 0)}; q = collections.deque([(23, 0)])
 while q:
@@ -398,7 +512,7 @@ json.dump({'grot_door': GROT_DOOR, 'hole': HOLE_CELLS}, open('/tmp/tourmalia_mis
 NT = len(CT)
 assert NT + len(ART_T) <= 384, ('trop de tuiles', NT, len(ART_T))
 assert len(SEC_ENT) <= 384, len(SEC_ENT)
-SEC_ENT = [[((640 + NT + q[1]) | (ART_PAL << 12)) if isinstance(q, tuple) else q for q in e] for e in SEC_ENT]
+SEC_ENT = [[((640 + NT + q[1]) | ((ART_PAL if q[0] == 'A' else WPAL_ID) << 12)) if isinstance(q, tuple) else q for q in e] for e in SEC_ENT]
 src_png = Image.open(EM + 'tilesets/secondary/fortree/tiles.png')
 assert src_png.width == 128
 rows = (NT + len(ART_T) + 15) // 16
@@ -412,7 +526,7 @@ open(SEC + 'metatiles.bin', 'wb').write(b''.join(struct.pack('<8H', *e) for e in
 open(SEC + 'metatile_attributes.bin', 'wb').write(b''.join(struct.pack('<I', a) for a in SEC_ATT))
 for i in range(16):
     writepal(SEC + 'palettes/%02d.pal' % i, PALS_S[i]); writepal(PRI + 'palettes/%02d.pal' % i, PALS_P[i])
-writepal(SEC + 'palettes/%02d.pal' % ART_PAL, PAL)
+writepal(SEC + 'palettes/%02d.pal' % ART_PAL, PAL); writepal(SEC + 'palettes/%02d.pal' % WPAL_ID, WPAL)
 shutil.copy(EM + 'tilesets/primary/general/tiles.png', PRI + 'tiles.png')
 shutil.copy(EM + 'tilesets/primary/general/metatiles.bin', PRI + 'metatiles.bin')
 open(PRI + 'metatile_attributes.bin', 'wb').write(b''.join(struct.pack('<I', conv(struct.unpack('<H', patt[i * 2:i * 2 + 2])[0])) for i in range(len(patt) // 2)))
@@ -458,6 +572,6 @@ for l in L['layouts']:
     if l.get('id') == 'LAYOUT_CERULEAN_CITY':
         l.update(width=W, height=H, primary_tileset='gTileset_GeneralTourmaline', secondary_tileset='gTileset_FortreeTourmaline')
 json.dump(L, open('data/layouts/layouts.json', 'w'), indent=2); open('data/layouts/layouts.json', 'a').write('\n')
-blocked = {(x, y) for y in range(H) for x in range(W) if g[y * W + x] & 0xc00}
+blocked = {(x, y) for y in range(H) for x in range(W) if g[y * W + x] & 0xc00} | WATERONLY
 json.dump({'w': W, 'h': H, 'blocked': [list(c) for c in sorted(blocked)]}, open('/tmp/tourmalia_col.json', 'w'))
 print('tourmalia: tuiles', NT, '+', len(ART_T), 'art ; metatuiles', len(SEC_ENT), '; palette art', ART_PAL)
