@@ -76,13 +76,15 @@ GRASS = 1
 FLOORS = (609, 617)                       # sol pointille de Vergazon (entierement pointille)
 # ---- zones ouvertes (le reste = foret)
 OPEN = set(); WAY = set()
-def blob(cx, cy, rx, ry, seed, amp=0.18):
+def blob(cx, cy, rx, ry, seed, amp=0.18, way=False):
     r = random.Random(seed); ph = [r.uniform(0, 6.28) for _ in range(3)]
     for y in range(int(cy - ry) - 2, int(cy + ry) + 3):
         for x in range(int(cx - rx) - 2, int(cx + rx) + 3):
             a = math.atan2((y - cy) / ry, (x - cx) / rx)
             k = 1 + amp * (math.sin(2 * a + ph[0]) + 0.6 * math.sin(3 * a + ph[1]) + 0.4 * math.sin(5 * a + ph[2])) / 2
-            if ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 <= k * k and 1 <= x < W - 1 and 1 <= y < H - 1: OPEN.add((x, y))
+            if ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 <= k * k and 1 <= x < W - 1 and 1 <= y < H - 1:
+                OPEN.add((x, y))
+                if way: WAY.add((x, y))
 def rect(x0, y0, x1, y1, way=True):
     for y in range(y0, y1 + 1):
         for x in range(x0, x1 + 1):
@@ -97,7 +99,8 @@ def trail(pts, wd, seed):
             t = k / n; cx = x0 + (x1 - x0) * t; cy = y0 + (y1 - y0) * t
             for dy in range(-wd, wd + 1):
                 for dx in range(-wd, wd + 1):
-                    if dx * dx + dy * dy <= wd * wd + r.choice((0, 0, 1)) and 0 <= int(cx) + dx < W and 0 <= int(cy) + dy < H: OPEN.add((int(round(cx)) + dx, int(round(cy)) + dy)); WAY.add((int(round(cx)) + dx, int(round(cy)) + dy))
+                    if dx * dx + dy * dy <= wd * wd + r.choice((0, 0, 1)) and 0 <= int(cx) + dx < W and 0 <= int(cy) + dy < H: OPEN.add((int(round(cx)) + dx, int(round(cy)) + dy))
+                    if math.hypot(int(round(cx)) + dx - cx, int(round(cy)) + dy - cy) <= 1.0: WAY.add((int(round(cx)) + dx, int(round(cy)) + dy))
 # l'allee du Gardien (rival : voie droite x 22..24, y 0..9)
 rect(22, 0, 24, 13)
 # clairieres (prairie) et sentiers (sol pointille) : la ville est faite de petites clairieres reliees par des sentiers, dans une grande foret
@@ -147,17 +150,17 @@ bridge(13, 14, 4); bridge(32, 33, 4); bridge(8, 13, 31)
 LADDER = {'th1': (10, 7), 'th3': (29, 7), 'th4': (36, 7), 'th5': (5, 34), 'th6': (16, 34)}
 for k, c in LADDER.items(): OPEN.add(c); WAY.add(c)
 for k in ('center', 'mart', 'gym'):
-    for (x, y) in D[k]: OPEN.add((x, y + 1)); WAY.add((x, y + 1))
+    for (x, y) in D[k]:
+        for a in (-1, 0, 1):
+            for b in (1, 2):
+                if (x + a, y + b) not in OCC: OPEN.add((x + a, y + b)); WAY.add((x + a, y + b))
 OPEN -= set(OCC)
 json.dump({k: v for k, v in D.items()}, open('/tmp/tourmalia_doors.json', 'w'))
 # ---- cases ouvertes : sol (sentiers = pointille ; prairie = herbe unie avec des plaques pointillees)
 GROUND = {}
 for (x, y) in sorted(OPEN):
     if (x, y) in OCC: continue
-    if (x, y) in WAY: gid = rnd.choice(FLOORS) if rnd.random() < 0.9 else 600
-    else:
-        n_ = math.sin(x * 0.9 + y * 0.5) + math.sin(y * 1.1 - x * 0.3)
-        gid = (GRASS if n_ < 1.0 else rnd.choice(FLOORS)) if rnd.random() < 0.9 else 600 + rnd.choice((0, 1))
+    gid = GRASS
     GROUND[(x, y)] = gid; G[(x, y)] = remap(0x3000 | gid)
 # ---- foret : arbres de bordure (fond herbe) pres des zones ouvertes, grands arbres au coeur
 def is_open(c): return c in OPEN or (c in OCC and not (G[c] & 0xc00))
@@ -384,8 +387,7 @@ for c in sorted(ROPEC):                                                         
 for (x, y) in sorted(OPEN):
     if (x, y) in OCC: continue
     if (x, y) not in GROUND:
-        if (x, y) in WAY: gid = rnd.choice(FLOORS)
-        else: gid = GRASS
+        gid = GRASS
         GROUND[(x, y)] = gid; G[(x, y)] = remap(0x3000 | gid)
 for (x, y) in list(G):
     c = (x, y)
@@ -472,6 +474,29 @@ for c, (t4, gid) in sorted(ARTPLACE.items()):
     walk = (c == GROT_DOOR) or (c in HOLE_CELLS)
     G[c] = (0x3000 if walk else 0x400) | mid
 for k, c in SIGNS.items(): G[c] = remap(0x400 | 3)
+# ---- sentiers : sable d'Emeraude (autotuile, comme la Route 4 Est) ; prairies : fleurs
+PATHC = {c for c in WAY if c in OPEN and c not in OCC and c not in ARTPLACE and c not in WATERONLY and c not in BRIDGEC and not (G[c] & 0xc00)}
+def path_id(x, y):
+    f = lambda c: (c in PATHC) or c[0] < 0 or c[0] >= W or c[1] < 0 or c[1] >= H or c in BRIDGEC or (c in OCC and not (G.get(c, 0) & 0xc00) and c not in OPEN)
+    N = f((x, y - 1)); S = f((x, y + 1)); Wn = f((x - 1, y)); E_ = f((x + 1, y))
+    if N and S and Wn and E_: return 289
+    if not N and not Wn and S and E_: return 280
+    if not N and not E_ and S and Wn: return 282
+    if not S and not Wn and N and E_: return 296
+    if not S and not E_ and N and Wn: return 298
+    if not N and S and Wn and E_: return 281
+    if not S and N and Wn and E_: return 297
+    if not Wn and N and S and E_: return 288
+    if not E_ and N and S and Wn: return 290
+    return 289
+for (x, y) in PATHC:
+    if (x, y) in HOLE_CELLS: continue
+    G[(x, y)] = remap(0x3000 | path_id(x, y))
+for (x, y) in sorted(OPEN):
+    c = (x, y)
+    if c in PATHC or c in OCC or c in ARTPLACE or c in KEEP or c in WATERONLY or c in BRIDGEC or (G[c] & 0xc00): continue
+    if GROUND.get(c) == GRASS and rnd.random() < 0.10: G[c] = remap(0x3000 | 4)
+
 for c in HOLE_CELLS: GROUND[c] = 609
 def raw_blocked(c): return bool(G[c] & 0xc00) or c in WATERONLY
 # ------------------------------------------------------------------ accessibilite
