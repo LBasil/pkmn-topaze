@@ -295,7 +295,7 @@ for (r0, r1) in ((20, 21),):
     for y in range(r0, r1 + 1):
         for x in range(min(xs), max(xs) + 1):
             if (x, y) not in OCC: BRIDGEC.add((x, y)); WATERC.add((x, y))
-WATERC = {c for c in WATERC if c in ROPEC or c in BRIDGEC or c not in WAY}      # un sentier ne finit pas dans l'eau (hors ponts)
+for c in WATERC - ROPEC - BRIDGEC: WAY.discard(c)                           # l'eau l'emporte sur les sentiers : seul le pont traverse (pas de terre a cote du pont)
 WATERONLY = WATERC - ROPEC - BRIDGEC
 WAT = WATERC
 BANK = {(x + a, y + b) for (x, y) in WATERC for a in (-1, 0, 1) for b in (-1, 0, 1)} - WATERC
