@@ -1153,8 +1153,8 @@
       "height": 40,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_CeruleanCity",
+      "primary_tileset": "gTileset_GeneralPepite",
+      "secondary_tileset": "gTileset_CeruleanPepite",
       "border_filepath": "data/layouts/Route24/border.bin",
       "blockdata_filepath": "data/layouts/Route24/map.bin"
     },
@@ -1165,8 +1165,8 @@
       "height": 20,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_CeruleanCity",
+      "primary_tileset": "gTileset_GeneralPepite",
+      "secondary_tileset": "gTileset_CeruleanPepite",
       "border_filepath": "data/layouts/Route25/border.bin",
       "blockdata_filepath": "data/layouts/Route25/map.bin"
     },

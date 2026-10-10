@@ -966,3 +966,25 @@ const struct Tileset gTileset_MoonwoodRoad =
     .metatileAttributes = gMetatileAttributes_MoonwoodRoad,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralPepite =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralPepite,
+    .palettes = gTilesetPalettes_GeneralPepite,
+    .metatiles = gMetatiles_GeneralPepite,
+    .metatileAttributes = gMetatileAttributes_GeneralPepite,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_CeruleanPepite =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CeruleanPepite,
+    .palettes = gTilesetPalettes_CeruleanPepite,
+    .metatiles = gMetatiles_CeruleanPepite,
+    .metatileAttributes = gMetatileAttributes_CeruleanPepite,
+    .callback = NULL,
+};
