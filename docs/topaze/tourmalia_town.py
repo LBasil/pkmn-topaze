@@ -121,6 +121,7 @@ rect(22, 36, 25, 39); rect(22, 34, 26, 35)
 for c in [(22, 34), (23, 34), (25, 34), (26, 34), (22, 35), (23, 35), (25, 35), (26, 35)]: OPEN.discard(c)          # goulet de l'arbre a couper : 1 case en (24,35)
 trail([(28, 20), (30, 20), (30, 25), (33, 25)], 1, 20)
 
+rect(4, 18, 7, 21); rect(11, 18, 14, 21)                           # berges du grand pont (4 rangees)
 trail([(2, 21), (1, 26), (1, 34)], 1, 31)                        # sentier de la berge ouest (cabane 5, clairiere sud-ouest)
 trail([(14, 20), (14, 25), (19, 27), (19, 33)], 1, 22); blob(10, 36, 9.5, 2.6, 23); trail([(19, 33), (18, 36), (14, 36)], 1, 26)       # sentier du sud-ouest + clairiere des cabanes basses
 # ---- batiments (copie brute des morceaux de Vergazon)
@@ -290,7 +291,7 @@ for (cx, cy, rx, ry) in ((10, 37, 2.8, 1.7), (12.6, 36.6, 2.4, 1.5)):           
 ROPEC = {c for c in WATERC if OCC.get(c) == 'pont'}
 WATERC = {c for c in WATERC if c not in OCC or c in ROPEC}
 BRIDGEC = set()
-for (r0, r1) in ((19, 20),):
+for (r0, r1) in ((18, 21),):
     xs = [c[0] for c in WATERC if r0 <= c[1] <= r1 and c not in ROPEC]
     for y in range(r0, r1 + 1):
         for x in range(min(xs), max(xs) + 1):
