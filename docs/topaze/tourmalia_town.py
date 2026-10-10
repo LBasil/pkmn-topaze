@@ -117,10 +117,11 @@ blob(40, 10, 3.2, 3.2, 17)                                  # recoin du terrier
 rect(8, 7, 9, 7, False); rect(28, 7, 29, 7, False); rect(35, 7, 36, 7, False)  # pied des echelles
 trail([(30, 19), (36, 19), (42, 18), (47, 18)], 1, 18); rect(36, 18, 40, 19); rect(42, 18, 47, 19)   # sortie est (Route 9) ; goulet en x=41 (y=19 seul)
 trail([(24, 22), (25, 28), (24, 33)], 1, 19); rect(24, 30, 25, 31); rect(24, 32, 24, 35)
-rect(22, 36, 27, 39); rect(22, 34, 26, 35)
+rect(22, 36, 25, 39); rect(22, 34, 26, 35)
 for c in [(22, 34), (23, 34), (25, 34), (26, 34), (22, 35), (23, 35), (25, 35), (26, 35)]: OPEN.discard(c)          # goulet de l'arbre a couper : 1 case en (24,35)
-trail([(30, 22), (34, 25)], 1, 20)
-trail([(36, 26), (39, 29), (41, 31)], 1, 24); blob(41, 32, 4.2, 3.4, 25)      # bosquet de tourmaline (sud-est)
+trail([(30, 20), (30, 25), (33, 25)], 1, 20)
+
+trail([(2, 21), (1, 26), (1, 34)], 1, 31)                        # sentier de la berge ouest (cabane 5, clairiere sud-ouest)
 trail([(14, 20), (14, 25), (19, 27), (19, 33)], 1, 22); blob(10, 36, 9.5, 2.6, 23); trail([(19, 33), (18, 36), (14, 36)], 1, 26)       # sentier du sud-ouest + clairiere des cabanes basses
 # ---- batiments (copie brute des morceaux de Vergazon)
 def chunk(x0, y0, cw, ch, dx, dy, name):
@@ -274,7 +275,7 @@ def seg_r(px, py, a, b):
     ax, ay, ar = a; bx, by, br = b; dx, dy = bx - ax, by - ay
     t = max(0, min(1, ((px - ax) * dx + (py - ay) * dy) / float(dx * dx + dy * dy or 1)))
     return math.hypot(px - (ax + t * dx), py - (ay + t * dy)) - (ar + (br - ar) * t)
-STREAM = [(12.5, -1.0, 1.9), (12.5, 2.5, 1.8), (12.5, 6.0, 1.7), (11.6, 9.0, 1.5), (10.0, 12.0, 1.4), (9.0, 15.0, 1.5), (8.8, 18.0, 1.5), (9.0, 21.5, 1.5), (8.0, 24.5, 1.4), (8.8, 27.0, 1.6), (10.4, 29.5, 1.6),
+STREAM = [(12.5, -1.0, 1.9), (12.5, 2.5, 1.8), (12.5, 6.0, 1.7), (11.6, 9.0, 1.5), (10.0, 12.0, 1.4), (9.0, 15.0, 1.5), (9.0, 17.5, 1.5), (9.0, 21.5, 1.5), (9.0, 24.5, 1.5), (9.0, 27.0, 1.6), (10.4, 29.5, 1.6),
           (10.6, 32.0, 1.6), (11.4, 34.0, 1.7), (11, 35.5, 1.9)]
 rw = random.Random(77)
 WATERC = set()
@@ -289,7 +290,7 @@ for (cx, cy, rx, ry) in ((10, 37, 2.8, 1.7), (12.6, 36.6, 2.4, 1.5)):           
 ROPEC = {c for c in WATERC if OCC.get(c) == 'pont'}
 WATERC = {c for c in WATERC if c not in OCC or c in ROPEC}
 BRIDGEC = set()
-for (r0, r1) in ((20, 21), (33, 34)):
+for (r0, r1) in ((20, 21),):
     xs = [c[0] for c in WATERC if r0 <= c[1] <= r1 and c not in ROPEC]
     for y in range(r0, r1 + 1):
         for x in range(min(xs), max(xs) + 1):
