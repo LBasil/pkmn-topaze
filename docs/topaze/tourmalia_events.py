@@ -25,7 +25,7 @@ pos = {'LOCALID_CERULEAN_POLICEMAN': N['policeman'], 'LOCALID_CERULEAN_GRUNT': N
 gfx = {'OBJ_EVENT_GFX_LITTLE_BOY': 'boy', 'OBJ_EVENT_GFX_BALDING_MAN': 'balding', 'OBJ_EVENT_GFX_YOUNGSTER': 'youngster', 'OBJ_EVENT_GFX_CUT_TREE': 'cuttree'}
 objs = []
 for o in d['object_events']:
-    if o['type'] == 'clone': continue
+    if o['type'] == 'clone' or o.get('local_id') == 'LOCALID_CERULEAN_CAVE_GUARD': continue      # grotte retiree : plus de garde
     p = pos.get(o.get('local_id')) or N[gfx[o['graphics_id']]]
     o['x'], o['y'] = p; objs.append(o)
 d['object_events'] = objs

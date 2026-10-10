@@ -110,7 +110,6 @@ blob(14, 16, 4.6, 4.0, 32)                                  # clairiere du Centr
 blob(35, 23, 4.6, 3.4, 33)                                  # clairiere de la boutique
 trail([(0, 20), (4, 21), (9, 20), (14, 19), (18, 19)], 1, 12)         # sortie ouest (Route 4)
 rect(0, 19, 2, 22)
-trail([(4, 20), (3, 16), (4, 12)], 1, 13); blob(4, 10, 3.2, 3.0, 14)    # sentier + grotte
 trail([(10, 8), (14, 9), (18, 8), (21, 9)], 1, 15)          # sous les cabanes (ouest)
 trail([(25, 9), (29, 8), (34, 9), (41, 9)], 1, 16)          # sous les cabanes (est)
 blob(40, 10, 3.2, 3.2, 17)                                  # recoin du terrier
@@ -269,16 +268,16 @@ for x in (40, 41, 42):                      # goulet de l'est : en x=41 seule la
         if (x, y) not in ((40, 18), (40, 19), (41, 19), (42, 18), (42, 19)): OPEN.discard((x, y)); WAY.discard((x, y))
 for c in list(OPEN):
     if c in OCC: OPEN.discard(c)
-# ------------------------------------------------------------------ EAU : source au pied de la grotte -> ruisseau -> etang (le ruisseau passe sous le pont de corde)
+# ------------------------------------------------------------------ EAU : ruisseau venu du nord (sous le pont de corde des cabanes hautes) -> etang (le ruisseau passe sous le pont de corde)
 def seg_r(px, py, a, b):
     ax, ay, ar = a; bx, by, br = b; dx, dy = bx - ax, by - ay
     t = max(0, min(1, ((px - ax) * dx + (py - ay) * dy) / float(dx * dx + dy * dy or 1)))
     return math.hypot(px - (ax + t * dx), py - (ay + t * dy)) - (ar + (br - ar) * t)
-STREAM = [(6.8, 8.6, 1.3), (7.6, 11.5, 0.8), (8.6, 14, 0.8), (8.0, 16.5, 0.9), (9.8, 18.5, 0.8), (9.2, 21, 0.9), (7.6, 24, 0.8), (8.4, 26.5, 1.0), (10.6, 29, 0.9),
+STREAM = [(13.6, -1.0, 1.0), (13.6, 2.5, 0.9), (13.6, 5.5, 0.9), (12.0, 8.0, 0.9), (10.0, 11.0, 0.8), (8.6, 14, 0.8), (8.0, 16.5, 0.9), (9.8, 18.5, 0.8), (9.2, 21, 0.9), (7.6, 24, 0.8), (8.4, 26.5, 1.0), (10.6, 29, 0.9),
           (10.2, 32, 0.9), (11.4, 34, 1.0), (11, 35.5, 1.2)]
 rw = random.Random(77)
 WATERC = set()
-for y in range(1, H - 1):
+for y in range(0, H - 1):
     for x in range(1, W - 1):
         d = min(seg_r(x, y, a, b) for a, b in zip(STREAM, STREAM[1:]))
         if d <= rw.uniform(-0.1, 0.12): WATERC.add((x, y))
@@ -289,7 +288,7 @@ for (cx, cy, rx, ry) in ((10, 37, 2.8, 1.7), (12.6, 36.6, 2.4, 1.5)):           
 ROPEC = {c for c in WATERC if OCC.get(c) == 'pont'}
 WATERC = {c for c in WATERC if c not in OCC or c in ROPEC}
 BRIDGEC = set()
-for (r0, r1) in ((19, 21), (33, 34)):
+for (r0, r1) in ((8, 9), (19, 21), (33, 34)):
     xs = [c[0] for c in WATERC if r0 <= c[1] <= r1 and c not in ROPEC]
     for y in range(r0, r1 + 1):
         for x in range(min(xs), max(xs) + 1):
@@ -301,6 +300,9 @@ BANK = {(x + a, y + b) for (x, y) in WATERC for a in (-1, 0, 1) for b in (-1, 0,
 BANK = {c for c in BANK if c not in OCC and 1 <= c[0] < W - 1 and 1 <= c[1] < H - 1}
 for c in WATERONLY | BRIDGEC: OPEN.discard(c)
 for c in BANK: OPEN.add(c)
+for x in range(8, 14):                              # le pont de corde (altitude 4) ne se rejoint que par les echelles : pas de sol libre contre lui
+    for y in (30, 32):
+        if (x, y) not in WATERC and (x, y) not in OCC: OPEN.discard((x, y)); WAY.discard((x, y))
 for c in WATERONLY | BRIDGEC: claim(c[0], c[1], 1, 1, 'eau')
 WATER_ATT = conv(struct.unpack('<H', patt[0xd1 * 2:0xd1 * 2 + 2])[0])             # comportement eau, couche 'couvrante' (on peut surfer, le sprite passe au-dessus)
 import numpy as np
@@ -402,7 +404,7 @@ for c in list(GROUND):
 MONO = monolith(); HOLE = hole(); GROT = grotto()
 rect(22, 18, 24, 20, False)
 art_block(MONO, 3, 3, 22, 18, 'monolithe')
-art_block(GROT, 3, 3, 3, 7, 'grotte'); GROT_DOOR = (4, 9)
+GROT_DOOR = (1, 1)                                     # grotte retiree (v6) : la porte de Cerulean Cave reste declaree mais hors d'atteinte
 art_block(HOLE, 1, 2, 41, 10, 'terrier'); HOLE_CELLS = [(41, 10), (41, 11)]
 for c in list(OPEN):
     pass
@@ -459,14 +461,13 @@ NPC = {}
 NPC['policeman'] = (40, 18); NPC['policeman_block'] = (41, 19)
 NPC['grunt'] = (40, 10); NPC['gtop'] = (40, 9); NPC['gbottom'] = (40, 11)
 NPC['slowbro'] = (26, 29); NPC['lass'] = (27, 29); NPC['slowbro_block'] = (24, 31); NPC['lass_block'] = (25, 31)
-NPC['guard'] = (5, 10); NPC['cuttree'] = (24, 35); NPC['rival'] = (22, 0)
-for c in (NPC['guard'],): assert c in OPEN, c
+NPC['guard'] = (1, 2); NPC['cuttree'] = (24, 35); NPC['rival'] = (22, 0)
 NPC['boy'] = pick((18, 21)); NPC['balding'] = pick((9, 21)); NPC['youngster'] = pick((35, 21)); NPC['woman'] = pick((7, 35))
 NPC['hidden'] = pick((16, 9), r=12)
 SIGNS = {'city': pick((3, 18)), 'gym': pick((33, 17)), 'bike': pick((7, 35)), 'tips': pick((21, 33), r=12)}
 for k, c in SIGNS.items():
     claim(c[0], c[1], 1, 1, 'panneau: ' + k)
-for k in ('policeman', 'policeman_block', 'grunt', 'gtop', 'gbottom', 'slowbro', 'lass', 'slowbro_block', 'lass_block', 'cuttree', 'rival', 'guard'):
+for k in ('policeman', 'policeman_block', 'grunt', 'gtop', 'gbottom', 'slowbro', 'lass', 'slowbro_block', 'lass_block', 'cuttree', 'rival'):
     assert NPC[k] not in ARTPLACE, (k, NPC[k])
 # ------------------------------------------------------------------ resolution art -> metatuiles, valeurs brutes
 for c, (t4, gid) in sorted(ARTPLACE.items()):
@@ -508,8 +509,8 @@ while q:
         if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen and not raw_blocked(n): seen.add(n); q.append(n)
 for k, ds in D.items():
     for c in ds: assert c in seen, ('porte inaccessible', k, c)
-for name, c in (('grotte', GROT_DOOR), ('terrier1', HOLE_CELLS[0]), ('terrier2', HOLE_CELLS[1])): assert c in seen, (name, c)
-for k in ('policeman', 'policeman_block', 'grunt', 'gtop', 'gbottom', 'slowbro', 'lass', 'slowbro_block', 'lass_block', 'cuttree', 'rival', 'guard', 'boy', 'balding', 'youngster', 'woman', 'hidden'):
+for name, c in (('terrier1', HOLE_CELLS[0]), ('terrier2', HOLE_CELLS[1])): assert c in seen, (name, c)
+for k in ('policeman', 'policeman_block', 'grunt', 'gtop', 'gbottom', 'slowbro', 'lass', 'slowbro_block', 'lass_block', 'cuttree', 'rival', 'boy', 'balding', 'youngster', 'woman', 'hidden'):
     assert NPC[k] in seen, ('PNJ inaccessible', k, NPC[k])
 EXITS = {'west': [(0, y) for y in (19, 20, 21, 22)], 'north': [(x, 0) for x in (22, 23, 24)], 'east': [(47, 18), (47, 19)], 'south': [(x, H - 1) for x in (22, 23, 24, 25)]}
 for k, cs in EXITS.items():
