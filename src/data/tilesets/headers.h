@@ -944,3 +944,25 @@ const struct Tileset gTileset_FortreeTourmaline =
     .metatileAttributes = gMetatileAttributes_FortreeTourmaline,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralMoonwood =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralMoonwood,
+    .palettes = gTilesetPalettes_GeneralMoonwood,
+    .metatiles = gMetatiles_GeneralMoonwood,
+    .metatileAttributes = gMetatileAttributes_GeneralMoonwood,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_MoonwoodRoad =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_MoonwoodRoad,
+    .palettes = gTilesetPalettes_MoonwoodRoad,
+    .metatiles = gMetatiles_MoonwoodRoad,
+    .metatileAttributes = gMetatileAttributes_MoonwoodRoad,
+    .callback = NULL,
+};

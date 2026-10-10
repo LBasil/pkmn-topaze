@@ -4410,6 +4410,18 @@
       "secondary_tileset": "gTileset_PetalburgEmerald",
       "border_filepath": "data/layouts/PalletTownRanch/border.bin",
       "blockdata_filepath": "data/layouts/PalletTownRanch/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE4_EAST",
+      "name": "Route4East_Layout",
+      "width": 72,
+      "height": 30,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GeneralMoonwood",
+      "secondary_tileset": "gTileset_MoonwoodRoad",
+      "border_filepath": "data/layouts/Route4East/border.bin",
+      "blockdata_filepath": "data/layouts/Route4East/map.bin"
     }
   ]
 }

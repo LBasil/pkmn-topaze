@@ -247,3 +247,8 @@ const u16 gMetatiles_GeneralTourmaline[] = INCBIN_U16("data/tilesets/primary/gen
 const u32 gMetatileAttributes_GeneralTourmaline[] = INCBIN_U32("data/tilesets/primary/general_tourmaline/metatile_attributes.bin");
 const u16 gMetatiles_FortreeTourmaline[] = INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/metatiles.bin");
 const u32 gMetatileAttributes_FortreeTourmaline[] = INCBIN_U32("data/tilesets/secondary/fortree_tourmaline/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralMoonwood[] = INCBIN_U16("data/tilesets/primary/general_moonwood/metatiles.bin");
+const u32 gMetatileAttributes_GeneralMoonwood[] = INCBIN_U32("data/tilesets/primary/general_moonwood/metatile_attributes.bin");
+const u16 gMetatiles_MoonwoodRoad[] = INCBIN_U16("data/tilesets/secondary/moonwood_road/metatiles.bin");
+const u32 gMetatileAttributes_MoonwoodRoad[] = INCBIN_U32("data/tilesets/secondary/moonwood_road/metatile_attributes.bin");

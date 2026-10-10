@@ -1785,3 +1785,45 @@ const u16 gTilesetPalettes_FortreeTourmaline[][16] =
 	INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/palettes/14.gbapal"),
 	INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/palettes/15.gbapal"),
 };
+
+const u32 gTilesetTiles_GeneralMoonwood[] = INCBIN_U32("data/tilesets/primary/general_moonwood/tiles.4bpp.lz");
+const u16 gTilesetPalettes_GeneralMoonwood[][16] =
+{
+	INCBIN_U16("data/tilesets/primary/general_moonwood/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moonwood/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moonwood/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moonwood/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moonwood/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moonwood/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moonwood/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moonwood/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moonwood/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moonwood/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moonwood/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moonwood/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moonwood/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moonwood/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moonwood/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_moonwood/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_MoonwoodRoad[] = INCBIN_U32("data/tilesets/secondary/moonwood_road/tiles.4bpp.lz");
+const u16 gTilesetPalettes_MoonwoodRoad[][16] =
+{
+	INCBIN_U16("data/tilesets/secondary/moonwood_road/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moonwood_road/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moonwood_road/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moonwood_road/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moonwood_road/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moonwood_road/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moonwood_road/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moonwood_road/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moonwood_road/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moonwood_road/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moonwood_road/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moonwood_road/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moonwood_road/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moonwood_road/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moonwood_road/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/moonwood_road/palettes/15.gbapal"),
+};

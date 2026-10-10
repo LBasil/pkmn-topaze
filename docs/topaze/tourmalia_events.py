@@ -14,7 +14,7 @@ put(8, (0, 0), C + 'HOUSE1', 3)                                  # porte arriere
 put(9, M['hole'][0], C + 'HOUSE2', 3); put(10, M['hole'][1], C + 'HOUSE2', 3)
 put(11, (0, 1), C + 'BIKE_SHOP', 1)
 put(12, door('th6'), C + 'HOUSE4', 0); put(13, door('th2'), C + 'HOUSE5', 0)
-for i, y in enumerate(range(19, 23)): put(14 + i, (0, y), 'MAP_ROUTE4', 11 + i)
+for i, y in enumerate(range(19, 23)): put(14 + i, (0, y), 'MAP_ROUTE4_EAST', 4 + i)
 for i, x in enumerate((22, 23, 24)): put(18 + i, (x, 0), 'MAP_ROUTE24', i)
 for i, y in enumerate((18, 19)): put(21 + i, (47, y), 'MAP_ROUTE9', i)
 for i, x in enumerate(range(22, 26)): put(23 + i, (x, 39), 'MAP_ROUTE5', 4 + i)
@@ -44,10 +44,7 @@ for b in d['bg_events']:
     bg.append(b)
 d['bg_events'] = bg
 json.dump(d, open(f, 'w'), indent=2); open(f, 'a').write('\n')
-# retour : Route 4 (ids 14..17), Route 24 / 5 / 9 (plus de connexion Azuria)
-f = 'data/maps/Route4/map.json'; r = json.load(open(f))
-for w, i in zip(r['warp_events'][-4:], (14, 15, 16, 17)): w['dest_warp_id'] = str(i)
-json.dump(r, open(f, 'w'), indent=2); open(f, 'a').write('\n')
+# retour : Route 4 Est (route4e_events.py), Route 24 / 5 / 9 (plus de connexion Azuria)
 def edit(name, newwarps, keep=0):
     f = f'data/maps/{name}/map.json'; r = json.load(open(f))
     r['connections'] = [c for c in r['connections'] if c['map'] != 'MAP_CERULEAN_CITY']
