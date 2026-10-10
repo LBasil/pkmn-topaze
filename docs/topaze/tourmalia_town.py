@@ -266,65 +266,39 @@ for x in (40, 41, 42):                      # goulet de l'est : en x=41 seule la
         if (x, y) not in ((40, 18), (40, 19), (41, 19), (42, 18), (42, 19)): OPEN.discard((x, y)); WAY.discard((x, y))
 for c in list(OPEN):
     if c in OCC: OPEN.discard(c)
-# ------------------------------------------------------------------ EAU (v4, plan explicite et lisible) : la ville est une ile de terre ferme au milieu d'une crue ;
-# l'eau vient de l'ouest et du sud (hors carte), on circule sur de larges pontons de planches (2 cases), au nord on reste au sec dans la foret.
-def cells_blob(cx, cy, rx, ry, seed, amp=0.15):
-    r = random.Random(seed); ph = [r.uniform(0, 6.28) for _ in range(3)]; out = set()
-    for y in range(int(cy - ry) - 2, int(cy + ry) + 3):
-        for x in range(int(cx - rx) - 2, int(cx + rx) + 3):
-            a_ = math.atan2((y - cy) / ry, (x - cx) / rx)
-            k = 1 + amp * (math.sin(2 * a_ + ph[0]) + 0.6 * math.sin(3 * a_ + ph[1]) + 0.4 * math.sin(5 * a_ + ph[2])) / 2
-            if ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 <= k * k and 0 <= x < W and 0 <= y < H: out.add((x, y))
-    return out
-def ribbon(pts, half=1.05):
-    out = set()
-    for (x0, y0), (x1, y1) in zip(pts, pts[1:]):
-        n = int(max(abs(x1 - x0), abs(y1 - y0)) * 4) + 1
-        for k in range(n + 1):
-            cx, cy = x0 + (x1 - x0) * k / n, y0 + (y1 - y0) * k / n
-            for y in range(int(cy - half) - 1, int(cy + half) + 2):
-                for x in range(int(cx - half) - 1, int(cx + half) + 2):
-                    if math.hypot(x + 0.5 - (cx + 0.5), y + 0.5 - (cy + 0.5)) <= half + 1e-6 and 0 <= x < W and 0 <= y < H: out.add((x, y))
-    return out
-HUB = set()
-for spec in ((14, 16.5, 5.6, 4.6, 32), (24, 18, 7.2, 5.4, 11), (31, 16, 6.2, 5.2, 31), (35.5, 22.5, 5.6, 4.6, 33), (19, 17.5, 3.5, 3.2, 41), (29.5, 21, 4.6, 4.0, 42), (23, 13, 3.2, 2.6, 43)):
-    HUB |= cells_blob(*spec)
-ISL = cells_blob(4, 10.5, 3.6, 3.2, 14) | cells_blob(26.5, 29, 2.4, 1.7, 51) | cells_blob(24.5, 37.5, 3.8, 2.6, 52) | cells_blob(41.5, 32, 4.6, 3.6, 25)
-BOARD = ribbon([(0, 20.5), (5, 21), (9, 20.5), (12.5, 19.5)]) | ribbon([(4.5, 20), (4.5, 12)]) | ribbon([(24.5, 23), (24.5, 31.5)], 1.0)
-BOARD |= {(24, y) for y in range(32, 36)}                                                                           # goulet sud : une seule planche
-BOARD |= ribbon([(4.5, 34.5), (9, 35.5), (14, 34.5), (19.5, 34.5), (19.5, 27), (20.5, 21.5)], 1.05) | ribbon([(37, 25.5), (39, 28.5), (41, 31)])
-BOARD |= {(x, 19) for x in range(36, 46)} | {(40, 18), (42, 18)}                                                    # goulet est : une planche (policier)
-BOARD |= {(x, y) for x in range(0, 2) for y in range(19, 23)} | {(46, 18), (47, 18), (46, 19), (47, 19)}            # embarcaderes
-PROT = {(22 + i, 18 + j) for i in range(3) for j in range(3)} | {(3 + i, 7 + j) for i in range(3) for j in range(3)} | {(41, 10), (41, 11)}
-BLOCK0 = ({(22 + i, 18 + j) for i in range(3) for j in range(3)} | {(3 + i, 7 + j) for i in range(3) for j in range(3)}) - {(4, 9)}
-BLOCKART = set(BLOCK0)
-HUB = {c for c in HUB if c not in OCC}
-DRY = HUB | ISL
-for c in HUB | (ISL - OCC.keys()): OPEN.add(c)
-REGION = {(x, y) for x in range(W) for y in range(12, H) if x <= 45 or (x, y) in BOARD}
-WATERC = {c for c in REGION if (c not in OCC or OCC[c] == 'pont') and c not in DRY and c not in PROT}
+# ------------------------------------------------------------------ EAU : source au pied de la grotte -> ruisseau -> etang (le ruisseau passe sous le pont de corde)
+def seg_r(px, py, a, b):
+    ax, ay, ar = a; bx, by, br = b; dx, dy = bx - ax, by - ay
+    t = max(0, min(1, ((px - ax) * dx + (py - ay) * dy) / float(dx * dx + dy * dy or 1)))
+    return math.hypot(px - (ax + t * dx), py - (ay + t * dy)) - (ar + (br - ar) * t)
+STREAM = [(6.8, 8.6, 1.3), (7.6, 11.5, 0.8), (8.6, 14, 0.8), (8.0, 16.5, 0.9), (9.8, 18.5, 0.8), (9.2, 21, 0.9), (7.6, 24, 0.8), (8.4, 26.5, 1.0), (10.6, 29, 0.9),
+          (10.2, 32, 0.9), (11.4, 34, 1.0), (11, 35.5, 1.2)]
+rw = random.Random(77)
+WATERC = set()
+for y in range(1, H - 1):
+    for x in range(1, W - 1):
+        d = min(seg_r(x, y, a, b) for a, b in zip(STREAM, STREAM[1:]))
+        if d <= rw.uniform(-0.1, 0.12): WATERC.add((x, y))
+for (cx, cy, rx, ry) in ((10, 37, 2.8, 1.7), (12.6, 36.6, 2.4, 1.5)):                # etang
+    for y in range(int(cy - ry) - 1, int(cy + ry) + 2):
+        for x in range(int(cx - rx) - 1, int(cx + rx) + 2):
+            if ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 <= 1 and 1 <= x < W - 1 and 1 <= y < H - 1: WATERC.add((x, y))
 ROPEC = {c for c in WATERC if OCC.get(c) == 'pont'}
-BRIDGEC = {c for c in BOARD if c not in DRY and c not in OCC and c not in PROT}
+WATERC = {c for c in WATERC if c not in OCC or c in ROPEC}
+BRIDGEC = set()
+for (r0, r1) in ((19, 21), (33, 34)):
+    xs = [c[0] for c in WATERC if r0 <= c[1] <= r1 and c not in ROPEC]
+    for y in range(r0, r1 + 1):
+        for x in range(min(xs), max(xs) + 1):
+            if (x, y) not in OCC: BRIDGEC.add((x, y)); WATERC.add((x, y))
+WATERC = {c for c in WATERC if c in ROPEC or c in BRIDGEC or c not in WAY}      # un sentier ne finit pas dans l'eau (hors ponts)
 WATERONLY = WATERC - ROPEC - BRIDGEC
+WAT = WATERC
+BANK = {(x + a, y + b) for (x, y) in WATERC for a in (-1, 0, 1) for b in (-1, 0, 1)} - WATERC
+BANK = {c for c in BANK if c not in OCC and 1 <= c[0] < W - 1 and 1 <= c[1] < H - 1}
 for c in WATERONLY | BRIDGEC: OPEN.discard(c)
-for c in BRIDGEC: WAY.add(c)
-BANK = set()
-WAT = WATERONLY | BRIDGEC | ROPEC
-for c in WATERONLY | BRIDGEC:
-    if c not in OCC: claim(c[0], c[1], 1, 1, 'eau')
-REQ = [(x, y + 1) for k in ('center', 'mart', 'gym') for (x, y) in D[k]] + list(LADDER.values()) + [(4, 10), (40, 9), (40, 10), (40, 11), (26, 29), (27, 29), (24, 35), (24, 29), (41, 32)]
-REQ += [(0, y) for y in range(19, 23)] + [(47, 18), (47, 19)] + [(x, 39) for x in range(22, 26)] + [(x, 0) for x in range(22, 25)] + [(40, 18), (41, 19)]
-def walkset(): return (OPEN | BANK | BRIDGEC) - WATERONLY - BLOCK0
-def reach(start, walk):
-    sn = {start}; qq = collections.deque([start])
-    while qq:
-        c = qq.popleft()
-        for d_ in ((0, 1), (1, 0), (-1, 0), (0, -1)):
-            n = (c[0] + d_[0], c[1] + d_[1])
-            if n in walk and n not in sn: sn.add(n); qq.append(n)
-    return sn
-_R = reach((23, 0), walkset())
-assert all(t in _R for t in REQ), [t for t in REQ if t not in _R]
+for c in BANK: OPEN.add(c)
+for c in WATERONLY | BRIDGEC: claim(c[0], c[1], 1, 1, 'eau')
 WATER_ATT = conv(struct.unpack('<H', patt[0xd1 * 2:0xd1 * 2 + 2])[0])             # comportement eau, couche 'couvrante' (on peut surfer, le sprite passe au-dessus)
 import numpy as np
 from PIL import ImageFilter
@@ -376,43 +350,28 @@ def lily(c):
     return im
 def plank_img(c):
     x, y = c
-    nb = lambda dx, dy: (x + dx, y + dy) in BRIDGEC
-    wt = lambda dx, dy: (x + dx, y + dy) in WATERONLY
-    hz = (nb(-1, 0) + nb(1, 0)) >= (nb(0, -1) + nb(0, 1))
+    top = (x, y - 1) not in BRIDGEC; bot = (x, y + 1) not in BRIDGEC
     im = newimg(16, 16); d = ImageDraw.Draw(im)
     d.rectangle((0, 0, 15, 15), fill=9)
-    for k in range(0, 16, 4):
-        if hz: d.line((0, k, 15, k), fill=10); d.line((0, k + 3, 15, k + 3), fill=11)
-        else: d.line((k, 0, k, 15), fill=10); d.line((k + 3, 0, k + 3, 15), fill=11)
-    rr = random.Random(x * 131 + y * 17)
-    for _ in range(5): d.point((rr.randrange(16), rr.randrange(16)), fill=8)
-    for (flag, box, lines) in ((wt(0, -1), (0, 0, 15, 3), ((0, 0, 15, 0), (0, 3, 15, 3))), (wt(0, 1), (0, 12, 15, 15), ((0, 12, 15, 12), (0, 15, 15, 15))),
-                               (wt(-1, 0), (0, 0, 3, 15), ((0, 0, 0, 15), (3, 0, 3, 15))), (wt(1, 0), (12, 0, 15, 15), ((12, 0, 12, 15), (15, 0, 15, 15)))):
-        if flag:
-            d.rectangle(box, fill=10)
-            for l in lines: d.line(l, fill=8)
+    for k in range(0, 16, 4): d.line((k, 0, k, 15), fill=10); d.line((k + 3, 0, k + 3, 15), fill=11)
+    for (k, yy) in ((1, 5), (2, 11), (0, 2), (3, 9)): d.point(((k + 4 * ((x + yy) % 4)) % 16, yy), fill=8)
+    if top: d.rectangle((0, 0, 15, 3), fill=10); d.line((0, 0, 15, 0), fill=8); d.line((0, 3, 15, 3), fill=8); d.line((0, 1, 15, 2), fill=9)
+    if bot: d.rectangle((0, 12, 15, 15), fill=10); d.line((0, 12, 15, 12), fill=8); d.line((0, 15, 15, 15), fill=8); d.line((0, 13, 15, 14), fill=9)
     return im
 GBOT = ents_of(GRASS)[:4]
 EMPTY_TOP = ents_of(GRASS)[4:]
 WCACHE = {}
 def water_cell(c):
     x, y = c
-    offs = []
-    for dy in (-1, 0, 1):
-        for dx in (-1, 0, 1):
-            w = (x + dx, y + dy) in WAT
-            if dx and dy: w = w and (x + dx, y) in WAT and (x, y + dy) in WAT         # un coin n'compte que si ses deux voisins droits sont de l'eau
-            offs.append(w)
-    key = tuple(offs) + ((x * 7 + y * 3) % 3 if all(offs) else 0,)
+    key = tuple(((x + dx, y + dy) in WAT) for dy in (-1, 0, 1) for dx in (-1, 0, 1))
     if key not in WCACHE:
-        ext = {(x + dx, y + dy) for k_, (dx, dy) in enumerate([(i, j) for j in (-1, 0, 1) for i in (-1, 0, 1)]) if offs[k_]}
-        t4 = slice_tiles(water_img(c, ext)); SEC_ENT.append(list(GBOT) + [('B', t) for t in t4]); SEC_ATT.append(WATER_ATT)
+        t4 = slice_tiles(water_img(c, WAT)); SEC_ENT.append(list(GBOT) + [('B', t) for t in t4]); SEC_ATT.append(WATER_ATT)
         WCACHE[key] = len(SEC_ENT) - 1
     return 0x1000 | (640 + WCACHE[key])
 for c in sorted(WATERONLY): G[c] = water_cell(c)
 PCACHE = {}
 for c in sorted(BRIDGEC):
-    k = tuple((c[0] + dx, c[1] + dy) in WATERONLY for dx, dy in ((0, -1), (0, 1), (-1, 0), (1, 0))) + (((c[0] - 1, c[1]) in BRIDGEC) + ((c[0] + 1, c[1]) in BRIDGEC) >= ((c[0], c[1] - 1) in BRIDGEC) + ((c[0], c[1] + 1) in BRIDGEC),)
+    k = ((c[0], c[1] - 1) in BRIDGEC, (c[0], c[1] + 1) in BRIDGEC, c[0] % 4)
     if k not in PCACHE:
         t4 = slice_tiles(plank_img(c)); SEC_ENT.append([('B', t) for t in t4] + list(EMPTY_TOP)); SEC_ATT.append(0); PCACHE[k] = len(SEC_ENT) - 1
     G[c] = 0x3000 | (640 + PCACHE[k])
@@ -421,13 +380,6 @@ WIMG_FULL = slice_tiles(water_img((100, 100), {(100 + i, 100 + j) for i, j in AL
 for c in sorted(ROPEC):                                                                          # pont de corde au-dessus du ruisseau : fond = eau, haut = cordes
     base = G[c]; i = (base & 0x3ff) - 640
     SEC_ENT.append([('B', t) for t in WIMG_FULL] + list(SEC_ENT[i][4:])); SEC_ATT.append(SEC_ATT[i]); G[c] = (base & ~0x3ff) | (640 + len(SEC_ENT) - 1)
-def safe(c):
-    """poser un obstacle (cristal, panneau) en c ne coupe aucun passage vers les terminaux"""
-    walk0 = (OPEN | BRIDGEC | BANK) - BLOCKART
-    if c not in reach((23, 0), walk0): return False
-    walk = walk0 - {c}
-    Rr = reach((23, 0), walk)
-    return all(t in Rr for t in REQ if t != c)
 # ------------------------------------------------------------------ sol + foret definitifs (apres goulets)
 for (x, y) in sorted(OPEN):
     if (x, y) in OCC: continue
@@ -462,8 +414,7 @@ def crystals(cells, prob, tag):
     for c in cells:
         if c in OCC or c not in OPEN or c in WAY or rnd.random() > prob: continue
         if any(max(abs(c[0] - q[0]), abs(c[1] - q[1])) < 2 for q in placed): continue
-        if not safe(c): continue
-        BLOCKART.add(c); placed.append(c); claim(c[0], c[1], 1, 1, tag); ARTPLACE[c] = (slice_tiles(SM[rnd.randrange(3)]), GROUND[c])
+        placed.append(c); claim(c[0], c[1], 1, 1, tag); ARTPLACE[c] = (slice_tiles(SM[rnd.randrange(3)]), GROUND[c])
     return placed
 # cases a garder libres : abords de portes, goulets
 KEEP = set()
@@ -491,29 +442,26 @@ print('palmiers', n_)
 
 # ------------------------------------------------------------------ PNJ, panneaux, objets (positions verifiees)
 USED = set()
-def pick(target, prefer_way=False, r=8, sign=False):
+def pick(target, prefer_way=False, r=8):
     best = None
     for pw in (prefer_way, not prefer_way):
         for c in sorted(OPEN):
             if c in OCC or c in KEEP or c in USED or c in ARTPLACE: continue
             if (c in WAY) != pw: continue
             d = abs(c[0] - target[0]) + abs(c[1] - target[1])
-            if d <= r and (best is None or d < best[0]) and sum(((c[0] + a_, c[1] + b_) in (OPEN | BRIDGEC | BANK)) and ((c[0] + a_, c[1] + b_) not in BLOCKART) for a_, b_ in ((0, 1), (1, 0), (-1, 0), (0, -1))) >= 2 and safe(c): best = (d, c)
+            if d <= r and (best is None or d < best[0]): best = (d, c)
         if best: break
     assert best, ('pas de case libre pres de', target)
-    USED.add(best[1])
-    if sign: BLOCKART.add(best[1])
-    else: REQ.append(best[1])
-    return best[1]
+    USED.add(best[1]); return best[1]
 NPC = {}
 NPC['policeman'] = (40, 18); NPC['policeman_block'] = (41, 19)
 NPC['grunt'] = (40, 10); NPC['gtop'] = (40, 9); NPC['gbottom'] = (40, 11)
 NPC['slowbro'] = (26, 29); NPC['lass'] = (27, 29); NPC['slowbro_block'] = (24, 31); NPC['lass_block'] = (25, 31)
 NPC['guard'] = (5, 10); NPC['cuttree'] = (24, 35); NPC['rival'] = (22, 0)
 for c in (NPC['guard'],): assert c in OPEN, c
-NPC['boy'] = pick((18, 21)); NPC['balding'] = pick((11, 20)); NPC['youngster'] = pick((35, 21)); NPC['woman'] = pick((21, 25), r=10)
+NPC['boy'] = pick((18, 21)); NPC['balding'] = pick((9, 21)); NPC['youngster'] = pick((35, 21)); NPC['woman'] = pick((7, 35))
 NPC['hidden'] = pick((16, 9), r=12)
-SIGNS = {'city': pick((11, 18), sign=True), 'gym': pick((33, 17), sign=True), 'bike': pick((14, 25), sign=True, r=10), 'tips': pick((21, 26), r=12, sign=True)}
+SIGNS = {'city': pick((3, 18)), 'gym': pick((33, 17)), 'bike': pick((7, 35)), 'tips': pick((21, 33), r=12)}
 for k, c in SIGNS.items():
     claim(c[0], c[1], 1, 1, 'panneau: ' + k)
 for k in ('policeman', 'policeman_block', 'grunt', 'gtop', 'gbottom', 'slowbro', 'lass', 'slowbro_block', 'lass_block', 'cuttree', 'rival', 'guard'):

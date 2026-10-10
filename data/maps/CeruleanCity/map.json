@@ -5,7 +5,7 @@
   "music": "MUS_FUCHSIA",
   "region_map_section": "MAPSEC_CERULEAN_CITY",
   "requires_flash": false,
-  "weather": "WEATHER_RAIN",
+  "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_TOWN",
   "allow_cycling": true,
   "allow_escaping": false,
@@ -48,7 +48,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
-      "x": 18,
+      "x": 20,
       "y": 21,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
@@ -62,8 +62,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
-      "x": 10,
-      "y": 18,
+      "x": 9,
+      "y": 23,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -150,8 +150,8 @@
       "local_id": "LOCALID_CERULEAN_WOMAN",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
-      "x": 21,
-      "y": 23,
+      "x": 7,
+      "y": 35,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
@@ -418,7 +418,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 9,
+      "x": 7,
       "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -434,16 +434,16 @@
     },
     {
       "type": "sign",
-      "x": 19,
-      "y": 21,
+      "x": 6,
+      "y": 35,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CeruleanCity_EventScript_BikeShopSign"
     },
     {
       "type": "sign",
-      "x": 21,
-      "y": 22,
+      "x": 15,
+      "y": 34,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CeruleanCity_EventScript_TrainerTips"
