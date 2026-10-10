@@ -110,10 +110,11 @@ blob(14, 16, 4.6, 4.0, 32)                                  # clairiere du Centr
 blob(35, 23, 4.6, 3.4, 33)                                  # clairiere de la boutique
 trail([(0, 20), (4, 21), (9, 20), (14, 19), (18, 19)], 1, 12)         # sortie ouest (Route 4)
 rect(0, 19, 2, 22)
-trail([(10, 8), (14, 9), (18, 8), (21, 9)], 1, 15)          # sous les cabanes (ouest)
+trail([(14, 9), (18, 8), (21, 9)], 1, 15)
+trail([(8, 8), (6, 12), (5, 16), (4, 20)], 1, 13)           # sentier de la berge ouest : pied de l'echelle de la cabane 1 -> entree ouest          # sous les cabanes (ouest)
 trail([(25, 9), (29, 8), (34, 9), (41, 9)], 1, 16)          # sous les cabanes (est)
 blob(40, 10, 3.2, 3.2, 17)                                  # recoin du terrier
-rect(10, 7, 11, 7, False); rect(28, 7, 29, 7, False); rect(35, 7, 36, 7, False)  # pied des echelles
+rect(8, 7, 9, 7, False); rect(28, 7, 29, 7, False); rect(35, 7, 36, 7, False)  # pied des echelles
 trail([(30, 19), (36, 19), (42, 18), (47, 18)], 1, 18); rect(36, 18, 40, 19); rect(42, 18, 47, 19)   # sortie est (Route 9) ; goulet en x=41 (y=19 seul)
 trail([(24, 22), (25, 28), (24, 33)], 1, 19); rect(24, 30, 25, 31); rect(24, 32, 24, 35)
 rect(22, 36, 27, 39); rect(22, 34, 26, 35)
@@ -131,7 +132,7 @@ def chunk(x0, y0, cw, ch, dx, dy, name):
             put(dx + i, dy + j, remap(v)); OPEN.discard((dx + i, dy + j))
     return doors
 D = {}
-D['th1'] = chunk(8, 1, 5, 6, 8, 1, 'cabane 1')
+D['th1'] = chunk(8, 1, 5, 6, 6, 1, 'cabane 1')
 D['th2'] = chunk(15, 1, 5, 6, 15, 1, 'cabane 2')
 D['th3'] = chunk(23, 1, 5, 6, 27, 1, 'cabane 3')
 D['th4'] = chunk(30, 0, 5, 7, 34, 0, 'cabane 4')
@@ -144,9 +145,9 @@ print('portes detectees', D)
 # ponts de corde (rangee de plateforme = y 4 en haut, y 31 en bas)
 def bridge(x0, x1, y):
     for x in range(x0, x1 + 1): claim(x, y, 1, 1, 'pont'); put(x, y, remap(fr(13, 4)))
-bridge(13, 14, 4); bridge(32, 33, 4); bridge(8, 13, 31)
+bridge(11, 14, 4); bridge(32, 33, 4); bridge(8, 13, 31)
 # ---- zones sous les batiments : les pieds des echelles / portes doivent etre ouverts
-LADDER = {'th1': (10, 7), 'th3': (29, 7), 'th4': (36, 7), 'th5': (5, 34), 'th6': (16, 34)}
+LADDER = {'th1': (8, 7), 'th3': (29, 7), 'th4': (36, 7), 'th5': (5, 34), 'th6': (16, 34)}
 for k, c in LADDER.items(): OPEN.add(c); WAY.add(c)
 for k in ('center', 'mart', 'gym'):
     for (x, y) in D[k]:
@@ -273,8 +274,8 @@ def seg_r(px, py, a, b):
     ax, ay, ar = a; bx, by, br = b; dx, dy = bx - ax, by - ay
     t = max(0, min(1, ((px - ax) * dx + (py - ay) * dy) / float(dx * dx + dy * dy or 1)))
     return math.hypot(px - (ax + t * dx), py - (ay + t * dy)) - (ar + (br - ar) * t)
-STREAM = [(13.6, -1.0, 1.0), (13.6, 2.5, 0.9), (13.6, 5.5, 0.9), (12.0, 8.0, 0.9), (10.0, 11.0, 0.8), (8.6, 14, 0.8), (8.0, 16.5, 0.9), (9.8, 18.5, 0.8), (9.2, 21, 0.9), (7.6, 24, 0.8), (8.4, 26.5, 1.0), (10.6, 29, 0.9),
-          (10.2, 32, 0.9), (11.4, 34, 1.0), (11, 35.5, 1.2)]
+STREAM = [(12.5, -1.0, 1.9), (12.5, 2.5, 1.8), (12.5, 6.0, 1.7), (11.6, 9.0, 1.5), (10.0, 12.0, 1.4), (9.0, 15.0, 1.5), (8.8, 18.0, 1.5), (9.0, 21.5, 1.5), (8.0, 24.5, 1.4), (8.8, 27.0, 1.6), (10.4, 29.5, 1.6),
+          (10.6, 32.0, 1.6), (11.4, 34.0, 1.7), (11, 35.5, 1.9)]
 rw = random.Random(77)
 WATERC = set()
 for y in range(0, H - 1):
@@ -288,7 +289,7 @@ for (cx, cy, rx, ry) in ((10, 37, 2.8, 1.7), (12.6, 36.6, 2.4, 1.5)):           
 ROPEC = {c for c in WATERC if OCC.get(c) == 'pont'}
 WATERC = {c for c in WATERC if c not in OCC or c in ROPEC}
 BRIDGEC = set()
-for (r0, r1) in ((8, 9), (19, 21), (33, 34)):
+for (r0, r1) in ((20, 21), (33, 34)):
     xs = [c[0] for c in WATERC if r0 <= c[1] <= r1 and c not in ROPEC]
     for y in range(r0, r1 + 1):
         for x in range(min(xs), max(xs) + 1):
