@@ -19,7 +19,7 @@ for i, x in enumerate((22, 23, 24)): put(18 + i, (x, 0), 'MAP_ROUTE24', i)
 for i, y in enumerate((18, 19)): put(21 + i, (47, y), 'MAP_ROUTE9', i)
 for i, x in enumerate(range(22, 26)): put(23 + i, (x, 39), 'MAP_ROUTE5', 4 + i)
 f = 'data/maps/CeruleanCity/map.json'; d = json.load(open(f))
-d['warp_events'] = W; d['connections'] = []
+d['warp_events'] = W; d['connections'] = []; d['weather'] = 'WEATHER_RAIN'
 pos = {'LOCALID_CERULEAN_POLICEMAN': N['policeman'], 'LOCALID_CERULEAN_GRUNT': N['grunt'], 'LOCALID_CERULEAN_SLOWBRO': N['slowbro'],
        'LOCALID_CERULEAN_LASS': N['lass'], 'LOCALID_CERULEAN_RIVAL': N['rival'], 'LOCALID_CERULEAN_WOMAN': N['woman'], 'LOCALID_CERULEAN_CAVE_GUARD': N['guard']}
 gfx = {'OBJ_EVENT_GFX_LITTLE_BOY': 'boy', 'OBJ_EVENT_GFX_BALDING_MAN': 'balding', 'OBJ_EVENT_GFX_YOUNGSTER': 'youngster', 'OBJ_EVENT_GFX_CUT_TREE': 'cuttree'}
