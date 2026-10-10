@@ -15,11 +15,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_CERULEAN_CITY",
-      "offset": -12,
-      "direction": "down"
-    },
-    {
       "map": "MAP_ROUTE25",
       "offset": 0,
       "direction": "right"
@@ -140,7 +135,29 @@
       "flag": "FLAG_HIDE_ROUTE24_TM45"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 10,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_CERULEAN_CITY",
+      "dest_warp_id": "18"
+    },
+    {
+      "x": 11,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_CERULEAN_CITY",
+      "dest_warp_id": "19"
+    },
+    {
+      "x": 12,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_CERULEAN_CITY",
+      "dest_warp_id": "20"
+    }
+  ],
   "coord_events": [
     {
       "type": "trigger",

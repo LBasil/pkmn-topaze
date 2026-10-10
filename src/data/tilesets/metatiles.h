@@ -242,3 +242,8 @@ const u16 gMetatiles_GeneralMoon[] = INCBIN_U16("data/tilesets/primary/general_m
 const u32 gMetatileAttributes_GeneralMoon[] = INCBIN_U32("data/tilesets/primary/general_moon/metatile_attributes.bin");
 const u16 gMetatiles_MoonRoad[] = INCBIN_U16("data/tilesets/secondary/moon_road/metatiles.bin");
 const u32 gMetatileAttributes_MoonRoad[] = INCBIN_U32("data/tilesets/secondary/moon_road/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralTourmaline[] = INCBIN_U16("data/tilesets/primary/general_tourmaline/metatiles.bin");
+const u32 gMetatileAttributes_GeneralTourmaline[] = INCBIN_U32("data/tilesets/primary/general_tourmaline/metatile_attributes.bin");
+const u16 gMetatiles_FortreeTourmaline[] = INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/metatiles.bin");
+const u32 gMetatileAttributes_FortreeTourmaline[] = INCBIN_U32("data/tilesets/secondary/fortree_tourmaline/metatile_attributes.bin");

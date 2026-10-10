@@ -1743,3 +1743,45 @@ const u16 gTilesetPalettes_MoonRoad[][16] =
 	INCBIN_U16("data/tilesets/secondary/moon_road/palettes/14.gbapal"),
 	INCBIN_U16("data/tilesets/secondary/moon_road/palettes/15.gbapal"),
 };
+
+const u32 gTilesetTiles_GeneralTourmaline[] = INCBIN_U32("data/tilesets/primary/general_tourmaline/tiles.4bpp.lz");
+const u16 gTilesetPalettes_GeneralTourmaline[][16] =
+{
+	INCBIN_U16("data/tilesets/primary/general_tourmaline/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_tourmaline/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_tourmaline/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_tourmaline/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_tourmaline/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_tourmaline/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_tourmaline/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_tourmaline/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_tourmaline/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_tourmaline/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_tourmaline/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_tourmaline/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_tourmaline/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_tourmaline/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_tourmaline/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_tourmaline/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_FortreeTourmaline[] = INCBIN_U32("data/tilesets/secondary/fortree_tourmaline/tiles.4bpp.lz");
+const u16 gTilesetPalettes_FortreeTourmaline[][16] =
+{
+	INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fortree_tourmaline/palettes/15.gbapal"),
+};

@@ -7,7 +7,7 @@ a1, a2, ce = info['arch1'], info['arch2'], info['center']
 f = 'data/maps/Route4/map.json'; d = json.load(open(f))
 d['warp_events'] = ([warp(a1[0] + 1, a1[1] + 2, 'MAP_MT_MOON_1F', 3), warp(a2[0] + 1, a2[1] + 2, 'MAP_MT_MOON_B1F', 7), warp(ce[0] + 2, ce[1] + 4, 'MAP_ROUTE4_POKEMON_CENTER_1F', 1)]
                     + [warp(x, H - 1, 'MAP_ROUTE3', 5) for x in (18, 19, 20, 21)] + [warp(x, H - 1, 'MAP_ROUTE3', 5) for x in (19, 18, 20, 21)]
-                    + [warp(W - 1, y, 'MAP_CERULEAN_CITY', c) for y, c in zip(range(info['east_rows'][0], info['east_rows'][1] + 1), (15, 16, 16, 17))])
+                    + [warp(W - 1, y, 'MAP_CERULEAN_CITY', c) for y, c in zip(range(info['east_rows'][0], info['east_rows'][1] + 1), (14, 15, 16, 17))])
 d['connections'] = []
 d['weather'] = 'WEATHER_VOLCANIC_ASH'
 POS = {'Route4_EventScript_Woman': 'woman', 'Route4_EventScript_Crissy': 'crissy', 'Route4_EventScript_ItemTM05': 'tm05', 'Route4_EventScript_Boy': 'boy',

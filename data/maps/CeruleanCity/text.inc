@@ -160,9 +160,8 @@ CeruleanCity_Text_ThisIsCeruleanCave::
     .string "made a great achievement.$"
 
 CeruleanCity_Text_CitySign::
-    .string "TOURMALIA\n"
-    .string "A Mysterious, Blue Aura Surrounds\l"
-    .string "It$"
+    .string "TOURMALIA CITY\n"
+    .string "Where the forest grows crystal$"
 
 CeruleanCity_Text_TrainerTipsHeldItems::
     .string "TRAINER TIPS\p"
