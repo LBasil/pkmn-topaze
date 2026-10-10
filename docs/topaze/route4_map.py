@@ -178,6 +178,14 @@ def band(ytop, ybot, seed, arch, flat_top=False, peak=0):
         for i in range(3): MASSIF.add((arch[0] + i, arch[1] + j)); BLOB[(arch[0] + i, arch[1] + j)] = (arch[0], arch[1])
     DOORS.add((arch[0] + 1, arch[1] + 2))
 band(43, 51, 300, ARCH1, peak=7); band(17, 18, 310, ARCH2, peak=16)
+# flancs de la montagne : relient les deux massifs en ANNEAU (une seule montagne, le terrain du milieu est un cratere interieur) ; breche a l'est pour la sortie vers Azuria
+_wl, _wr = wob(400, H), wob(401, H)
+for y in range(14, 48):
+    if EAST_ROWS[0] - 2 <= y <= EAST_ROWS[1] + 2:
+        for x in range(2, 5 + _wl[y]): MASSIF.add((x, y)); BLOB[(x, y)] = (2, 30)
+        continue
+    for x in range(2, 5 + _wl[y]): MASSIF.add((x, y)); BLOB[(x, y)] = (2, 30)
+    for x in range(W - 5 - _wr[y], W - 2): MASSIF.add((x, y)); BLOB[(x, y)] = (W - 3, 30)
 RIDGE |= MASSIF
 PATH -= GAPC
 RIDGE -= GAPC
