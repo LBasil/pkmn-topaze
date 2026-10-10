@@ -128,11 +128,11 @@ for y in range(2, H - 2, 2):
     tree(0, y)
     if not (EAST_ROWS[0] <= y <= EAST_ROWS[1]): tree(W - 2, y)
 PATH = set()
-HRIDGES = [(72, 11, 18), (28, 12, 21)]                    # (y haut, breche gauche, breche droite) : crêtes horizontales pleine largeur
+HRIDGES = [(72, 11, 18), (28, 16, 24)]                    # (y haut, breche gauche, breche droite) : crêtes horizontales pleine largeur
 CENTER = (22, 59)                                        # Centre classique 5x4 (metatuiles d'origine) : cases (22..26, 60..63), porte en (24, 63)
 ARCH1, ARCH2 = (19, 49), (24, 16)                        # grottes : cases (x..x+2, y..y+2), porte en (x+1, y+2)
 WAYS = [[(19, 82), (18, 78), (15, 73), (13, 69), (16, 66), (20, 64), (30, 64), (32, 60), (30, 57), (24, 55), (20, 54)],
-        [(25, 20), (24, 23), (20, 26), (16, 29), (17, 32), (24, 33), (31, 33), (37, 34), (38, 35)]]
+        [(25, 20), (24, 23), (22, 26), (21, 29), (22, 32), (24, 33), (31, 33), (37, 34), (38, 35)]]
 def seg(a, b):
     (x0, y0), (x1, y1) = a, b
     n = max(abs(x1 - x0), abs(y1 - y0))
@@ -192,6 +192,18 @@ for y in range(3, 52):
     for x in range(2, 2 + wl_): MASSIF.add((x, y)); BLOB[(x, y)] = (2, 30)
     if not (EAST_ROWS[0] - 10 <= y <= EAST_ROWS[1] + 2):
         for x in range(W - 2 - wr_, W - 2): MASSIF.add((x, y)); BLOB[(x, y)] = (W - 3, 30)
+# le cratere se resserre : tout l'ouest et tout le coin est (rows 20-30) sont de la montagne ; ne reste qu'un couloir central + le passage est
+def _interp(pts, y):
+    for (y0, v0), (y1, v1) in zip(pts, pts[1:]):
+        if y0 <= y <= y1: return v0 + (v1 - v0) * (y - y0) / (y1 - y0)
+    return pts[-1][1]
+_LB = [(3, 14), (10, 13), (19, 15), (23, 11), (29, 13), (33, 19), (48, 20)]
+_RB = [(20, 31), (24, 27), (27, 24), (30, 25)]
+_wa = wob3(500)
+for y in range(3, 49):
+    for x in range(2, int(round(_interp(_LB, y))) + _wa[y]): MASSIF.add((x, y)); BLOB[(x, y)] = (2, 30)
+for y in range(20, 31):
+    for x in range(int(round(_interp(_RB, y))) + _wa[y], W - 2): MASSIF.add((x, y)); BLOB[(x, y)] = (W - 3, 30)
 RIDGE |= MASSIF
 PATH -= GAPC
 RIDGE -= GAPC
@@ -223,12 +235,13 @@ def lake_shape(cx, cy, rx, ry):
     return {(x, y) for y in range(int(cy - ry) - 1, int(cy + ry) + 2) for x in range(int(cx - rx) - 1, int(cx + rx) + 2)
             if ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 + 0.2 * math.sin(x * 1.7 + y * 2.3) <= 1}
 _busy = dil(PATH, 2) | dil(RIDGE, 1) | dil(GAPC, 1) | dil({(CENTER[0] + i, CENTER[1] + j) for i in range(5) for j in range(5)}, 2)
-for (ya, yb, st_) in ((58, 78, 2), (21, 38, 0)):
+for (ya, yb, st_) in ((58, 78, 2), (19, 36, 0)):
+    RX_, RY_ = (2.6, 3.0) if st_ == 2 else (1.9, 2.3)
     _all = []
     for cy in range(ya, yb):
         for cx in range(4, W - 4):
-            cells = lake_shape(cx, cy, 2.6, 3.0)
-            if len(cells) >= 18 and not any(c in _busy for c in cells) and all(2 <= c[0] < W - 2 and 2 <= c[1] < H - 3 for c in cells): _all.append((cx, cy, cells))
+            cells = lake_shape(cx, cy, RX_, RY_)
+            if len(cells) >= (18 if st_ == 2 else 10) and not any(c in _busy for c in cells) and all(2 <= c[0] < W - 2 and 2 <= c[1] < H - 3 for c in cells): _all.append((cx, cy, cells))
     print('lacs possibles', st_, len(_all)); assert _all, 'pas de place pour un lac'
     cx, cy, cells = rnd.choice(_all); LAKE |= cells
     for c in cells: LAKE_ST[c] = st_
