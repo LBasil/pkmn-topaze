@@ -204,6 +204,9 @@ for y in range(3, 49):
     for x in range(2, int(round(_interp(_LB, y))) + _wa[y]): MASSIF.add((x, y)); BLOB[(x, y)] = (2, 30)
 for y in range(20, 31):
     for x in range(int(round(_interp(_RB, y))) + _wa[y], W - 2): MASSIF.add((x, y)); BLOB[(x, y)] = (W - 3, 30)
+# zone inaccessible tout en haut : on remplit (principe : jamais de terrain decoratif inatteignable)
+for y in range(2, 16):
+    for x in range(2, W - 2): MASSIF.add((x, y)); BLOB[(x, y)] = (x, 8)
 RIDGE |= MASSIF
 PATH -= GAPC
 RIDGE -= GAPC
@@ -849,6 +852,8 @@ for k, (bot, tops, slot, att) in enumerate(LAY):
 for c, k in LPLACE.items(): G[c] |= LAY_ID[k]
 assert len(SEC_ENT) <= 384 and len(ART_T) <= 384, (len(SEC_ENT), len(ART_T))
 for c, k in ART_PLACE.items(): G[c] = (0x3000 if c in DOORS else 0x400) | ART_ID[k]
+for (x, y), v in {(38, 0): G[(36, 0)], (39, 0): G[(37, 0)], (38, 1): G[(36, 1)], (39, 1): G[(37, 1)]}.items(): G[(x, y)] = v   # coin haut-droit : bordure d'arbres complete
+
 rows = max(1, (len(ART_T) + 15) // 16)
 out = Image.new('P', (128, rows * 8), 0); out.putpalette([c for p in PALS[ART_SLOT[2]] for c in p])
 for i, t in enumerate(ART_T):
