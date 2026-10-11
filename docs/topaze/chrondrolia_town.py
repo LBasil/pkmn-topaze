@@ -534,7 +534,8 @@ SIGNS = {'city': pick((7, 5), r=6), 'lab1': pick((lx + 3, ly + 1), r=4), 'lab2':
 for k, c in SIGNS.items(): claim(c[0], c[1], 1, 1, 'panneau: ' + k)
 def pylon_at(x, y):
     cells = [(x, y), (x, y + 1)]
-    if any(c in OCC or c not in OPEN or c in WAY or c in KEEP or c in BEACH for c in cells): return False
+    if any(OCC.get((x + a, y + b), 'mur de quai') in ('maison', 'labo', 'arene', 'centre', 'boutique', 'centrale', 'pylone-monument') for a in (-1, 0, 1) for b in (-1, 0, 1, 2)): return False
+    if any(c in OCC or c not in OPEN or c in WAY or c in KEEP or c in BEACH or c in USED for c in cells): return False
     claim(x, y, 1, 2, 'pylone'); ARTPLACE[(x, y)] = (slice_tiles(PYL.crop((0, 0, 16, 16))), CONC); ARTPLACE[(x, y + 1)] = (slice_tiles(PYL.crop((0, 16, 16, 32))), CONC)
     OPEN.discard((x, y)); OPEN.discard((x, y + 1)); GROUND.pop((x, y), None); GROUND.pop((x, y + 1), None)
     return True
