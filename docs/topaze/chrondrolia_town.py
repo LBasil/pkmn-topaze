@@ -530,7 +530,7 @@ NPC = {}
 NPC['woman'] = pick((14, 12)); NPC['oldman'] = pick((6, 13))
 NPC['bill'] = (9, 2); NPC['gull'] = (12, 2)
 gx, gy = D['gym'][0]; lx, ly = D['lab'][0]
-SIGNS = {'city': pick((7, 5), r=6), 'lab': (lx - 1, ly + 1), 'gym': (gx + 2, gy + 1)}          # panneaux de part et d'autre des portes, pas des pick() qui derivent
+SIGNS = {'city': pick((7, 5), r=6), 'lab': (lx - 1, ly + 1), 'gym': (gx + 2, gy + 2)}          # panneaux de part et d'autre des portes, pas des pick() qui derivent
 for k in ('lab', 'gym'): assert SIGNS[k] in OPEN and SIGNS[k] not in OCC and SIGNS[k] not in ARTPLACE and SIGNS[k] not in USED, (k, SIGNS[k])
 for k, c in SIGNS.items(): claim(c[0], c[1], 1, 1, 'panneau: ' + k)
 def pylon_at(x, y):
