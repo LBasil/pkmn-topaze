@@ -115,3 +115,6 @@ Les masses de pins utilisent maintenant les vraies familles de tuiles FireRed : 
 
 ### Spinellia v4
 Lisieres de forets : premiere rangee d'une masse = tuiles de cime 0x0e/0x0f (sans bande sombre) ; pins isoles supprimes (une unite doit toucher >= 2 autres unites, bordure comprise) ; toit du Centre : rangee de bord de pierre retiree (chunk 4x4). Rendu `reference/spinellia_v4.png`.
+
+### Spinellia v5
+Voies redressees : route ouest droite (y18..19) alignee sur la sortie ouest (0,18..19 <-> Route 8 (71,10..11)) ; sortie sud (19..20,29 <-> Route 12) ; allee de la tour sur 3 cases centree sur la porte ; parvis de 3 cases devant chaque porte. Rendu `reference/spinellia_v5.png`.

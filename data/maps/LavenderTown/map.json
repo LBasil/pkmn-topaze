@@ -130,14 +130,14 @@
       "dest_warp_id": "8"
     },
     {
-      "x": 18,
+      "x": 19,
       "y": 29,
       "elevation": 0,
       "dest_map": "MAP_ROUTE12",
       "dest_warp_id": "4"
     },
     {
-      "x": 19,
+      "x": 20,
       "y": 29,
       "elevation": 0,
       "dest_map": "MAP_ROUTE12",
@@ -145,32 +145,25 @@
     },
     {
       "x": 0,
-      "y": 14,
+      "y": 18,
       "elevation": 0,
       "dest_map": "MAP_ROUTE8",
       "dest_warp_id": "2"
     },
     {
       "x": 0,
-      "y": 15,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_ROUTE8",
       "dest_warp_id": "3"
-    },
-    {
-      "x": 0,
-      "y": 16,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE8",
-      "dest_warp_id": "4"
     }
   ],
   "coord_events": [],
   "bg_events": [
     {
       "type": "sign",
-      "x": 10,
-      "y": 10,
+      "x": 9,
+      "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LavenderTown_EventScript_SilphScopeNotice"
@@ -193,8 +186,8 @@
     },
     {
       "type": "sign",
-      "x": 4,
-      "y": 14,
+      "x": 5,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LavenderTown_EventScript_VolunteerHouseSign"

@@ -63,8 +63,8 @@ DOOR = {'tower': (30, 8), 'center': (11, 7), 'vol': (7, 15), 'house1': (8, 24), 
 for k, (ox, oy, cw, ch, dx, dy) in BUILD.items(): chunk(ox, oy, cw, ch, dx, dy, k)
 for i in range(5): G[(15 + i, 21)] = ov(3 + i, 13)                  # maison 2 : meme rangee de toit que la maison 1 (supprime la frise de pierres flottante)
 # bordure : pins 2x2 (haut y0-1, bas y28-29, gauche x0-1, droite x38-39), avec 3 trouees pour les sorties
-EXITS = {'N': [(x, 0) for x in range(18, 22)], 'S': [(18, H - 1), (19, H - 1)], 'W': [(0, y) for y in (14, 15, 16)]}
-GAPS = {'N': [(x, y) for x in range(18, 22) for y in range(0, 2)], 'S': [(x, y) for x in range(18, 20) for y in range(H - 2, H)], 'W': [(x, y) for x in range(0, 2) for y in range(14, 18)]}
+EXITS = {'N': [(x, 0) for x in range(18, 22)], 'S': [(19, H - 1), (20, H - 1)], 'W': [(0, 18), (0, 19)]}
+GAPS = {'N': [(x, y) for x in range(18, 22) for y in range(0, 2)], 'S': [(x, y) for x in range(18, 22) for y in range(H - 2, H)], 'W': [(x, y) for x in range(0, 2) for y in range(18, 20)]}
 GAP = {c for g in GAPS.values() for c in g}
 PINE = (0x414, 0x415, 0x41c, 0x41d)
 PINES = set()
@@ -89,13 +89,14 @@ def road(pts):
             for c in ((x, y), (x + 1, y), (x, y + 1), (x + 1, y + 1)):
                 if c not in OCC and 0 <= c[0] <= W - 1 and 0 <= c[1] <= H - 1: WAY.add(c)
 road([(19, 0), (19, 18)]); road([(19, 18), (19, 28)])
-road([(0, 15), (19, 17)]); road([(19, 18), (37, 18)])
-road([(30, 9), (30, 18)])
+road([(0, 18), (19, 18)]); road([(19, 18), (37, 18)])
+road([(29, 9), (29, 17)]); road([(30, 9), (30, 17)])
 road([(11, 8), (11, 17)]); road([(7, 16), (7, 17)])
 road([(8, 25), (8, 26)]); road([(17, 25), (17, 26)]); road([(33, 25), (33, 26)])
 road([(8, 26), (34, 26)])
 for k, (x, y) in DOOR.items():
     for b in (1, 2): WAY.add((x, y + b))
+    for a in (-1, 1): WAY.add((x + a, y + 1))
 for c in (EXITS['N'] + EXITS['S'] + EXITS['W']): WAY.add(c)
 WAY -= {c for c in WAY if c in OCC}
 # ---- art
@@ -243,7 +244,7 @@ r_ = start_reach(); assert NEED <= r_, 'monument bloque un acces'
 FENCE = {}
 for x in range(22, 38):
     for y in (9, 17):
-        if x not in (30, 31): FENCE[(x, y)] = 'h'
+        if x not in (29, 30, 31): FENCE[(x, y)] = 'h'
 for y in range(10, 17):
     for x in (22, 37): FENCE[(x, y)] = 'v'
 for c in FENCE: assert c not in OCC and c not in WAY, ('cloture sur voie/batiment', c)

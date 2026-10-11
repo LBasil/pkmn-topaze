@@ -8,7 +8,7 @@ f = 'data/maps/LavenderTown/map.json'; d = json.load(open(f))
 ORDER = ['tower', 'center', 'vol', 'house1', 'house2', 'mart']          # ordre d'origine des warps (les interieurs y renvoient par index)
 orig = d['warp_events'][:6]
 W = [warp(D[k][0], D[k][1], o['dest_map'], o['dest_warp_id']) for k, o in zip(ORDER, orig)]
-NX = [18, 19, 20, 21]; SX = [18, 19]; WY = [14, 15, 16]
+NX = [18, 19, 20, 21]; SX = [19, 20]; WY = [18, 19]
 base = len(W)
 def side(name, town_cells, route_cells, first):
     f2 = f'data/maps/{name}/map.json'; r = json.load(open(f2))
@@ -18,7 +18,7 @@ def side(name, town_cells, route_cells, first):
     jdump(r, f2); return len(kp)
 n10 = side('Route10', None, [(8 + i, 79) for i in range(4)], base)
 n12 = side('Route12', None, [(11 + i, 0) for i in range(2)], base + 4)
-n8 = side('Route8', None, [(71, 9 + i) for i in range(3)], base + 6)
+n8 = side('Route8', None, [(71, 10 + i) for i in range(2)], base + 6)
 for i, x in enumerate(NX): W.append(warp(x, 0, 'MAP_ROUTE10', n10 + i))
 for i, x in enumerate(SX): W.append(warp(x, 29, 'MAP_ROUTE12', n12 + i))
 for i, y in enumerate(WY): W.append(warp(0, y, 'MAP_ROUTE8', n8 + i))
