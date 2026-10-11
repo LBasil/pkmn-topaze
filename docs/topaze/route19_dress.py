@@ -1,4 +1,4 @@
-# ROUTE 19 (ex-Parmanie sud) : route cotiere sous Amethiolite, couleurs amethyste (sable lilas, pelouses lilas), recifs de cristaux d'amethyste dans la mer. Derive de route20_dress.py. Idempotent : part de route21_src/r19_orig.bin.
+# ROUTE 19 (ex-Parmanie sud) : route cotiere sous Amethiolite, couleurs amethyste (sable lilas, pelouses lilas). V2 : la mer du sud a ete envahie par une eruption volcanique : l'eau est remplacee par de l'obsidienne (impassable, veines de lave, 2 cones fumants) ; seuls un chenal sinueux, des bassins et la baie ouest restent navigables (acces a la Route 20 / iles Ecume). Derive de route20_dress.py. Idempotent : part de route21_src/r19_orig.bin.
 # Lancer depuis la racine : python3 docs/topaze/route19_dress.py
 import struct, json, random, sys, os, shutil, math, colorsys, collections
 from PIL import Image, ImageDraw
@@ -17,7 +17,9 @@ def tint_amethyst(c):
     if 70 <= h <= 175: return rgb(274, min(1, l + 0.03), min(0.7, s * 0.6 + 0.05)) if l > 0.42 else rgb(258, min(1, l * 1.18), min(0.8, s * 0.9))
     if 180 <= h <= 235: return rgb(h + 8, l, s)
     return c
-ART_PAL = 9
+ART_PAL = 9; ART_PAL2 = 10
+PAL_V = [(0, 0, 0), (14, 6, 20), (36, 22, 46), (58, 40, 74), (88, 66, 110), (140, 120, 160), (214, 196, 230), (120, 16, 10), (214, 52, 16),
+         (255, 128, 24), (255, 204, 64), (255, 246, 190), (70, 64, 72), (110, 104, 114), (160, 154, 164), (24, 16, 30)]
 PAL_A = [(0, 0, 0), (30, 10, 52), (94, 44, 142), (142, 84, 202), (188, 132, 236), (228, 200, 252), (252, 242, 255), (46, 36, 112), (84, 72, 172),
          (132, 122, 222), (198, 192, 250), (40, 30, 66), (214, 64, 152), (176, 168, 192), (96, 88, 118), (255, 246, 200)]
 ART_SRC = '''
@@ -43,6 +45,49 @@ def small(var):
     else: prism(d, 8, 15, 8, 14); d.rectangle((2, 13, 4, 14), fill=13); d.rectangle((12, 12, 14, 14), fill=13); d.point((13, 11), fill=14)
     return im
 
+
+def obsidian(var):
+    """obsidienne tuilable (16x16) : facettes sombres, eclats ; var 4/5 = veine de lave horizontale, 6/7 = verticale"""
+    im = newimg(16, 16); d = ImageDraw.Draw(im); r = random.Random(var * 77 + 5)
+    d.rectangle((0, 0, 15, 15), fill=2)
+    for _ in range(6):
+        cx, cy = r.randrange(16), r.randrange(16); pts = [(cx + r.randint(-6, 6), cy + r.randint(-6, 6)) for _ in range(3)]; col = r.choice((3, 3, 4, 15, 15))
+        for ox in (-16, 0, 16):
+            for oy in (-16, 0, 16): d.polygon([(px + ox, py + oy) for px, py in pts], fill=col)
+    for _ in range(3):
+        x, y = r.randrange(16), r.randrange(16); d.point((x, y), fill=5)
+        if r.random() < .4: d.point((x, y), fill=6)
+    if var in (4, 5):
+        pts = [(0, 8), (3, 7), (6, 9), (9, 7), (12, 9), (15, 8)] if var == 4 else [(0, 8), (3, 9), (6, 7), (9, 9), (12, 7), (15, 8)]
+        for dy in (-1, 0, 1): d.line([(x, y + dy) for x, y in pts], fill=7 if dy else 8)
+        d.line(pts, fill=9)
+        for x, y in pts[1:-1:2]: d.point((x, y), fill=10)
+    if var in (6, 7):
+        pts = [(8, 0), (7, 3), (9, 6), (7, 9), (9, 12), (8, 15)] if var == 6 else [(8, 0), (9, 3), (7, 6), (9, 9), (7, 12), (8, 15)]
+        for dx in (-1, 1): d.line([(x + dx, y) for x, y in pts], fill=7)
+        d.line(pts, fill=8)
+        for x, y in pts[1:-1:2]: d.point((x, y), fill=9)
+    return im
+def cone(w, h):
+    """volcan fumant (w x h px) : cone d'obsidienne, cratere incandescent, coulees de lave, panache de cendres"""
+    im = newimg(w, h); d = ImageDraw.Draw(im); fx = lambda f: int(f * (w - 1)); fy = lambda f: int(f * (h - 1))
+    cx = w // 2
+    for (px, py, rr, col) in ((.42, .16, .13, 12), (.52, .1, .12, 13), (.62, .07, .1, 14), (.36, .22, .09, 13), (.7, .03, .08, 14)):
+        d.ellipse((fx(px) - int(rr * w), fy(py) - int(rr * h * .6), fx(px) + int(rr * w), fy(py) + int(rr * h * .6)), fill=col, outline=12)
+    d.polygon([(fx(.0), fy(.97)), (fx(.3), fy(.34)), (fx(.7), fy(.34)), (fx(1.), fy(.97))], fill=3, outline=1)
+    d.polygon([(fx(.04), fy(.93)), (fx(.33), fy(.37)), (cx, fy(.37)), (cx, fy(.95))], fill=4)
+    d.polygon([(cx, fy(.37)), (fx(.68), fy(.37)), (fx(.96), fy(.93)), (cx, fy(.95))], fill=2)
+    for k in range(4):
+        x0 = fx(.34 + .1 * k); d.line([(x0, fy(.4)), (x0 - int(w * (.1 + .02 * k)), fy(.92))], fill=15)
+    d.ellipse((fx(.28), fy(.28), fx(.72), fy(.44)), fill=7, outline=1); d.ellipse((fx(.33), fy(.3), fx(.67), fy(.41)), fill=8)
+    d.ellipse((fx(.4), fy(.32), fx(.6), fy(.39)), fill=9); d.ellipse((fx(.45), fy(.33), fx(.55), fy(.37)), fill=10)
+    for (a, b) in ((.5, .38), (.58, .66), (.46, .34)):
+        pts = [(fx(a), fy(.4)), (fx(a) + (fx(b) - fx(a)) // 2 + 1, fy(.55)), (fx(b), fy(.9))]
+        d.line(pts, fill=8, width=2); d.line(pts, fill=9)
+    d.ellipse((fx(.2), fy(.9), fx(.45), fy(.99)), fill=8); d.ellipse((fx(.25), fy(.92), fx(.4), fy(.97)), fill=9)
+    for (a, b) in ((.05, .96), (.88, .97), (.7, .99)): d.ellipse((fx(a), fy(b) - 2, fx(a) + 4, fy(b) + 1), fill=15, outline=1)
+    return im
+
 def pylon():
     """pylone a treillis ancre dans une dalle de beton (boulons), traverse a isolateurs et cables (16x32)"""
     im = newimg(16, 32); d = ImageDraw.Draw(im)
@@ -62,7 +107,7 @@ def pylon():
 def p_att(m, P, S): return (P[m] if m < 640 else S[m - 640])
 WATER_ATT_MASK = ~0x60000000
 def dress(half):
-    cfg = dict(lay='Route19', LID='LAYOUT_ROUTE19', orig='r19_orig.bin', np='data/tilesets/primary/general_route19/', ns='data/tilesets/secondary/fuchsia_route19/', cn='Route19', tint=tint_amethyst, pal=PAL_A, seed=1919, npyl=12, ncry=8)
+    cfg = dict(lay='Route19', LID='LAYOUT_ROUTE19', orig='r19_orig.bin', np='data/tilesets/primary/general_route19/', ns='data/tilesets/secondary/fuchsia_route19/', cn='Route19', tint=tint_amethyst, pal=PAL_A, seed=1919, npyl=7, ncry=2)
     NP, NS = cfg['np'], cfg['ns']
     for src, dst in ((FRP, NP), (FRS, NS)):
         shutil.rmtree(dst, ignore_errors=True); os.makedirs(dst + 'palettes')
@@ -83,6 +128,11 @@ def dress(half):
     def art_meta(tiles4, base_m):
         e = ents(base_m)[:4] + [('A', t) for t in tiles4]; a = att(base_m) & WATER_ATT_MASK
         NEWE.append(e); NEWA.append(a); return 640 + NMT + len(NEWE) - 1
+    def art_meta2(bot4, top4, pal2=True):
+        zero = add_tile([0] * 64)
+        e = [('B', t) for t in bot4] + [('B', t) for t in (top4 if top4 else [zero] * 4)]
+        if e in NEWE: return 640 + NMT + NEWE.index(e)
+        NEWE.append(e); NEWA.append(0); return 640 + NMT + len(NEWE) - 1
     G = list(struct.unpack('<%dH' % (W_ * H_), open(SRC + cfg['orig'], 'rb').read())); G0 = list(G)
     def xy(i): return (i % W_, i // W_)
     def blocked(v): return bool(v & 0xc00)
@@ -109,16 +159,74 @@ def dress(half):
     exec(ART_SRC, globals())
     PALX = cfg['pal']
     PY = pylon(); SMS = [small(0), small(1), small(2)]
+    OBS = {}
     ART = {}                                              # cellule -> (tuiles4, metatuile de base)
     def free(c, r=1):
         for a in range(-r, r + 1):
             for b in range(-r, r + 1):
                 n = (c[0] + a, c[1] + b)
-                if n in EV or n in ART: return False
+                if n in EV or n in ART or n in OBS: return False
         return True
     def plain_water(c): return 0 <= c[0] < W_ and 0 <= c[1] < H_ and M(c) == 299 and not blocked(G[c[1] * W_ + c[0]])
     placed = []
-    # pylones (Sud : lignes haute tension ; Nord : quelques pylones du meme reseau)
+
+    # ---- eruption : la mer du sud devient obsidienne
+    ROCKS = {272, 273, 280, 281, 459, 460, 467, 468, 473, 464, 472, 480, 482, 466}
+    def is_sea(c): return (M(c) == 299 and not blocked(G[c[1] * W_ + c[0]])) or M(c) in ROCKS
+    KEEP = set()
+    def stamp(cx, cy, r):
+        for yy in range(int(cy - r - 1), int(cy + r + 2)):
+            for xx in range(int(cx - r - 1), int(cx + r + 2)):
+                if 0 <= xx < W_ and 0 <= yy < H_ and (xx - cx) ** 2 + (yy - cy) ** 2 <= r * r: KEEP.add((xx, yy))
+    def channel(pts, r0):
+        for (a, b) in zip(pts, pts[1:]):
+            n = int(max(abs(b[0] - a[0]), abs(b[1] - a[1])) * 2) + 1
+            for k in range(n + 1):
+                t = k / n; stamp(a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, r0 + .5 * math.sin(k * 1.7 + a[0]))
+    for yy in range(13, 20):
+        for xx in range(7, 18): KEEP.add((xx, yy))                       # bassin devant la plage
+    for yy in range(42, 59):
+        for xx in range(0, 3): KEEP.add((xx, yy))                         # baie ouest (vers la Route 20)
+    channel([(12, 16), (12, 19), (16, 22), (13, 25), (8, 27), (12, 30), (18, 33), (14, 37), (9, 41), (10, 45), (6, 48), (2, 50)], 1.5)
+    CL = [(12, 16), (12, 19), (16, 22), (13, 25), (8, 27), (12, 30), (18, 33), (14, 37), (9, 41), (10, 45), (6, 48), (2, 50)]
+    for (px, py, pr) in ((12, 48, 3.0), (17, 26, 2.0), (5, 53, 2.2)):
+        stamp(px, py, pr); tg = min(CL, key=lambda k: abs(k[0] - px) + abs(k[1] - py)); channel([(px, py), tg], 1.0)
+    for c in sorted(EV):                                                       # evenements en mer : toujours accessibles
+        if c[1] >= 14 and is_sea(c) and c not in KEEP:
+            tgt = min(KEEP, key=lambda k: abs(k[0] - c[0]) + abs(k[1] - c[1])); channel([c, tgt], 1.0)
+    for c in sorted(EV):
+        if c[1] >= 14 and is_sea(c): stamp(c[0], c[1], 1.2)
+    cand = {(x, y) for y in range(14, H_) for x in range(W_) if is_sea((x, y)) and (x, y) not in KEEP and (x, y) not in EV}
+    # cones : 4x4 et 3x3 sur de l'obsidienne, loin du chenal
+    CONES = []
+    def near_keep(c): return any((c[0] + a, c[1] + b) in KEEP for a in (-1, 0, 1) for b in (-1, 0, 1))
+    for (cw, ch, prefer) in ((5, 5, (14, 33)), (4, 4, (5, 22)), (4, 4, (16, 52))):
+        best = None
+        for y0 in range(14, H_ - ch):
+            for x0 in range(W_ - cw):
+                cells = [(x0 + i, y0 + j) for j in range(ch) for i in range(cw)]
+                if all(c in cand and not near_keep(c) for c in cells) and all(not any(abs(c[0] - o[0]) < 7 and abs(c[1] - o[1]) < 7 for c in cells[:1]) for o in [k[:2] for k in CONES]):
+                    dd = abs(x0 - prefer[0]) + abs(y0 - prefer[1])
+                    if best is None or dd < best[0]: best = (dd, x0, y0)
+        assert best, 'pas de place pour le cone'
+        CONES.append((best[1], best[2], cw, ch))
+    rv = random.Random(1999)
+    VAR = {}
+    for c in sorted(cand):
+        v = rv.random(); VAR[c] = rv.randrange(4) if v < .8 else (4 + rv.randrange(4))
+    TILES_OBS = [obsidian(v) for v in range(8)]
+    for (x0, y0, cw, ch) in CONES:
+        cim = cone(cw * 16, ch * 16)
+        for j in range(ch):
+            for i in range(cw):
+                c = (x0 + i, y0 + j); VAR[c] = rv.randrange(4)
+                OBS[c] = (slice4(TILES_OBS[VAR[c]]), slice4(cim.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))))
+    for c in sorted(cand):
+        if c not in OBS: OBS[c] = (slice4(TILES_OBS[VAR[c]]), None)
+    for c, (b4, t4) in OBS.items():
+        mid = art_meta2(b4, t4); G[c[1] * W_ + c[0]] = (G[c[1] * W_ + c[0]] & 0xf000) | 0x400 | mid
+    print('obsidienne', len(OBS), 'cases ; eau conservee', len(KEEP))
+    # recifs d'amethyste dans le chenal (Sud : lignes haute tension ; Nord : quelques pylones du meme reseau)
     cands = [(x, y) for y in range(3, H_ - 3) for x in range(3, W_ - 3) if plain_water((x, y)) and plain_water((x, y + 1))]
     rnd.shuffle(cands); npy = 0
     def dist_block(c):
@@ -147,19 +255,19 @@ def dress(half):
     print(half, 'pylones', npy, 'cristaux', nc)
     for c, (t4, base) in ART.items():
         mid = art_meta(t4, base); G[c[1] * W_ + c[0]] = (G[c[1] * W_ + c[0]] & 0xf000) | 0xc00 & 0x400 | mid
-    R1 = reach(start); lost = {c for c in R0 if c not in R1 and c not in ART}
+    R1 = reach(start); lost = {c for c in R0 if c not in R1 and c not in ART and c not in OBS}
     assert not lost, ('cases perdues', sorted(lost)[:10])
     assert all(c in R1 for c in EV if c in R0), 'evenement inaccessible'
     # ---- ecriture
     assert NMT + len(NEWE) <= 384 and NTL + len(NEWT) <= 384, (NMT + len(NEWE), NTL + len(NEWT))
-    NEWE = [[((640 + 0 * 0 + NTL + q[1]) | (ART_PAL << 12)) if isinstance(q, tuple) else q for q in e] for e in NEWE]
+    NEWE = [[((640 + NTL + q[1]) | ((ART_PAL2 if q[0] == 'B' else ART_PAL) << 12)) if isinstance(q, tuple) else q for q in e] for e in NEWE]
     smt += b''.join(struct.pack('<8H', *e) for e in NEWE); satt += NEWA
     open(NS + 'metatiles.bin', 'wb').write(smt); open(NS + 'metatile_attributes.bin', 'wb').write(b''.join(struct.pack('<I', a) for a in satt))
     rows = (NTL + len(NEWT) + 15) // 16
     out = Image.new('P', (128, rows * 8), 0); out.putpalette(simg.getpalette()); out.paste(simg, (0, 0))
     for n, t in enumerate(NEWT):
         ti = Image.new('P', (8, 8)); ti.putdata(list(t)); out.paste(ti, (((NTL + n) % 16) * 8, ((NTL + n) // 16) * 8))
-    out.save(NS + 'tiles.png'); writepal(NS + 'palettes/%02d.pal' % ART_PAL, PALX)
+    out.save(NS + 'tiles.png'); writepal(NS + 'palettes/%02d.pal' % ART_PAL, PALX); writepal(NS + 'palettes/%02d.pal' % ART_PAL2, PAL_V)
     open('data/layouts/%s/map.bin' % cfg['lay'], 'wb').write(struct.pack('<%dH' % len(G), *G))
     return cfg, NP, NS
 def add(path, marker, text):

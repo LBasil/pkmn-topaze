@@ -90,3 +90,6 @@ Les champions occupent les emplacements des chefs d'arène d'origine : `Brock→
 
 ## Route 19 v1 (habillage amethyste)
 `docs/topaze/route19_dress.py` (derive de route20_dress.py, part de `route21_src/r19_orig.bin`) : tilesets propres `GeneralRoute19` / `FuchsiaRoute19` (copies de General + FuchsiaCity, eau animee conservee), sable -> lilas, pelouses -> lilas/indigo, recifs de cristaux d'amethyste sur l'eau (12) et sur le sable (3), accessibilite BFS verifiee, warps/evenements inchanges. Rendu : `reference/route19_v1.png`. A valider par Basil ; ensuite Routes 18 et 15.
+
+### Route 19 v2 : eruption volcanique (idee de Basil)
+Toute la mer du sud est remplacee par de l'obsidienne (metatuiles procedurales tuilables, palette 10, veines de lave, impassable) avec 3 volcans fumants (5x5, 4x4, 4x4). Restent navigables : bassin devant la plage, chenal sinueux, bassins et baie ouest (acces Route 20 / iles Ecume). Evenements (dresseurs nageurs, objets) gardes accessibles (BFS). Rendu `reference/route19_v2.png`. A etendre eventuellement a la Route 20 (a valider).
