@@ -988,3 +988,14 @@ const struct Tileset gTileset_CeruleanPepite =
     .metatileAttributes = gMetatileAttributes_CeruleanPepite,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_ViridianPepite =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_ViridianPepite,
+    .palettes = gTilesetPalettes_ViridianPepite,
+    .metatiles = gMetatiles_ViridianPepite,
+    .metatileAttributes = gMetatileAttributes_ViridianPepite,
+    .callback = NULL,
+};
