@@ -58,7 +58,7 @@ def chunk(ox, oy, cw, ch, dx, dy, name):
     claim(dx, dy, cw, ch, name)
     for j in range(ch):
         for i in range(cw): G[(dx + i, dy + j)] = ov(ox + i, oy + j)
-BUILD = {'tower': (15, 0, 7, 7, 27, 2), 'center': (4, 2, 4, 4, 9, 4), 'vol': (8, 8, 5, 4, 5, 12), 'house1': (3, 13, 5, 4, 6, 21), 'house2': (8, 13, 5, 4, 15, 21), 'mart': (18, 12, 4, 4, 31, 21)}
+BUILD = {'tower': (15, 0, 7, 7, 27, 2), 'center': (4, 2, 5, 4, 9, 4), 'vol': (8, 8, 5, 4, 5, 12), 'house1': (3, 13, 5, 4, 6, 21), 'house2': (8, 13, 5, 4, 15, 21), 'mart': (18, 12, 4, 4, 31, 21)}
 DOOR = {'tower': (30, 8), 'center': (11, 7), 'vol': (7, 15), 'house1': (8, 24), 'house2': (17, 24), 'mart': (33, 24)}
 for k, (ox, oy, cw, ch, dx, dy) in BUILD.items(): chunk(ox, oy, cw, ch, dx, dy, k)
 for i in range(5): G[(15 + i, 21)] = ov(3 + i, 13)                  # maison 2 : meme rangee de toit que la maison 1 (supprime la frise de pierres flottante)
@@ -100,6 +100,7 @@ for k, (x, y) in DOOR.items():                                      # parvis 3 d
         for a in (-1, 0, 1): WAY.add((x + a, y + b))
 for c in (EXITS['N'] + EXITS['S'] + EXITS['W']): WAY.add(c)
 for c in [(9, 8), (5, 16), (10, 16), (6, 25), (15, 25), (31, 25)]: WAY.discard(c)   # croix bleues de Basil
+WAY.add((7, 27))
 WAY -= {c for c in WAY if c in OCC}
 # ---- art
 def newimg(w, h): return Image.new('P', (w, h), 0)

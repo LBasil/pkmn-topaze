@@ -124,3 +124,6 @@ Parvis sur toute la facade de chaque batiment (sauf la tour) + fermeture morphol
 
 ### Spinellia v7
 Retour de Basil sur v6 : suppression des parvis pleine facade et de la fermeture morphologique ; parvis 3 de large x 2 de profondeur centres sur chaque porte (hors tour), cases marquees d'une croix retirees, pin ajoute a gauche (unite 2,8).
+
+### Spinellia v8
+Pokecentre complete (5 de large, colonne droite manquante), case de chemin ajoutee (7,27) devant la maison basse gauche.
