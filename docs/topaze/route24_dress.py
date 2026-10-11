@@ -177,7 +177,7 @@ for m in BRIDGE:
     base = (m - 640) * 16
     smt[base:base + 16] = struct.pack('<8H', *((WATER_BOT if m in WATER_UNDER else GRASS_BOT) + top))
 MAPS = [dict(name='Route24', W=24, H=40, src=SRC + 'map_orig.bin', start=(11, 38), seed=2405, ntree=20, nclus=3, clus_gap=7, xmax=99, plain={8, 9, 16, 17}, bg_ring=1, align=0),
-        dict(name='Route25', W=72, H=20, src=SRC + 'map25_orig.bin', start=(0, 8), seed=2507, ntree=22, nclus=5, clus_gap=7, xmax=61, plain={1, 8, 9, 16, 17}, bg_ring=0, align=3)]
+        dict(name='Route25', W=72, H=20, src=SRC + 'map25_orig.bin', start=(0, 8), seed=2507, ntree=48, nclus=7, clus_gap=6, xmax=61, plain={1, 8, 9, 16, 17}, bg_ring=0, align=0)]
 OUT = {}
 for CFG in MAPS:
     # ------------------------------------------------------------------ carte
@@ -261,6 +261,10 @@ for CFG in MAPS:
         # buissons epars d'origine (metatuile 5) -> herbe : l'habillage les remplace par des bosquets, des cristaux et des fleurs
         for c in sorted(G0):
             if G0[c] & 0x3ff == 5 and c[0] <= CFG['xmax']: setm(c, gm(*c))
+        # le sable de l'ouest (ancien chemin) a ete reconquis par l'herbe
+        for y in (7, 8, 9):
+            for x in range(0, 13):
+                if G0[(x, y)] & 0x3ff in (217, 209, 210, 218, 225, 226, 255): setm((x, y), gm(x, y))
         # herbe haute du bord ouest (2 x 8) : contour organique (encoches + quelques touffes au sud)
         rt = random.Random(2503)
         for y in (3, 4):
@@ -387,12 +391,17 @@ for CFG in MAPS:
             if any(max(abs(tx - x), abs(ty - y)) < 2 or ((abs(tx - x) == 0 or abs(ty - y) == 0) and max(abs(tx - x), abs(ty - y)) <= 2) for tx, ty in TREES if tx >= 43): continue
             if put_big(x, y, TREE_P if ra.random() < 0.5 else TREE_PF, 'tree'): TREES.append((x, y)) if False else None; ntz += 1
         print('arbres chaumiere', ntz)
-        def old(c): return c in G and 43 <= c[0] <= 61 and mid(c) in (PLAIN | {1}) and not blocked(c) and c not in RES and c not in CONV and c not in ARTP and c not in OVER
+        def old(c): return c in G and 0 <= c[0] <= 61 and mid(c) in (PLAIN | {1}) and not blocked(c) and c not in RES and c not in CONV and c not in ARTP and c not in OVER
         for c in sorted(G):
             if not old(c): continue
             r = ra.random()
-            if r < 0.62: setm(c, 13)
-            elif r < 0.76: setm(c, 4)
+            if c[0] >= 43:
+                if r < 0.62: setm(c, 13)
+                elif r < 0.76: setm(c, 4)
+            else:      # chemin des dresseurs : herbe haute en nappes (bruit), fleurs, jamais de bande propre
+                dn = dens(c[0] * 1.3 + 5, c[1] * 1.3 + 11)
+                if dn > 0.47 and r < 0.7: setm(c, 13)
+                elif r < 0.22: setm(c, 4)
         for c in sorted(G):
             if old(c) and ra.random() < 0.09 and reach_ok([c]) and not any((c[0] + a, c[1] + b) in ARTP for a in (-1, 0, 1) for b in (-1, 0, 1)):
                 ARTP[c] = (slice4(small(ra.randrange(3))), ART_PAL, mid(c)); SHARDS.append(c)
