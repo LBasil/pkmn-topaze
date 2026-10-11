@@ -1208,3 +1208,25 @@ const struct Tileset gTileset_LavenderSpinellia =
     .metatileAttributes = gMetatileAttributes_LavenderSpinellia,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralCeladopole =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralCeladopole,
+    .palettes = gTilesetPalettes_GeneralCeladopole,
+    .metatiles = gMetatiles_GeneralCeladopole,
+    .metatileAttributes = gMetatileAttributes_GeneralCeladopole,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_CeladonCeladopole =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CeladonCeladopole,
+    .palettes = gTilesetPalettes_CeladonCeladopole,
+    .metatiles = gMetatiles_CeladonCeladopole,
+    .metatileAttributes = gMetatileAttributes_CeladonCeladopole,
+    .callback = NULL,
+};

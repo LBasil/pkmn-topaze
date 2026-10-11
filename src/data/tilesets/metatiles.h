@@ -315,3 +315,9 @@ const u32 gMetatileAttributes_GeneralSpinellia[] = INCBIN_U32("data/tilesets/pri
 
 const u16 gMetatiles_LavenderSpinellia[] = INCBIN_U16("data/tilesets/secondary/lavender_spinellia/metatiles.bin");
 const u32 gMetatileAttributes_LavenderSpinellia[] = INCBIN_U32("data/tilesets/secondary/lavender_spinellia/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralCeladopole[] = INCBIN_U16("data/tilesets/primary/general_celadopole/metatiles.bin");
+const u32 gMetatileAttributes_GeneralCeladopole[] = INCBIN_U32("data/tilesets/primary/general_celadopole/metatile_attributes.bin");
+
+const u16 gMetatiles_CeladonCeladopole[] = INCBIN_U16("data/tilesets/secondary/celadon_celadopole/metatiles.bin");
+const u32 gMetatileAttributes_CeladonCeladopole[] = INCBIN_U32("data/tilesets/secondary/celadon_celadopole/metatile_attributes.bin");

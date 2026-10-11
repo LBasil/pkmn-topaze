@@ -15,26 +15,12 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_CELADON_CITY",
-      "offset": -10,
-      "direction": "left"
-    },
-    {
       "map": "MAP_SAFFRON_CITY_CONNECTION",
       "offset": -10,
       "direction": "right"
     }
   ],
-  "object_events": [
-    {
-      "type": "clone",
-      "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
-      "x": -8,
-      "y": 12,
-      "target_local_id": "LOCALID_CELADON_BORDER_TREE",
-      "target_map": "MAP_CELADON_CITY"
-    }
-  ],
+  "object_events": [],
   "warp_events": [
     {
       "x": 7,
@@ -49,6 +35,27 @@
       "elevation": 3,
       "dest_map": "MAP_ROUTE7_EAST_ENTRANCE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY",
+      "dest_warp_id": "16"
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY",
+      "dest_warp_id": "17"
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_CELADON_CITY",
+      "dest_warp_id": "18"
     }
   ],
   "coord_events": [],

@@ -45,7 +45,7 @@ CeladonCity_Text_ExplainXAccuracyDireHit::
 
 CeladonCity_Text_CitySign::
     .string "BOURG QUARTZ\n"
-    .string "The City of Rainbow Dreams$"
+    .string "The Amethyst Dream City$"
 
 CeladonCity_Text_GymSign::
     .string "BOURG QUARTZ POKéMON GYM\n"

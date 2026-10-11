@@ -817,8 +817,8 @@
       "height": 40,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_CeladonCity",
+      "primary_tileset": "gTileset_GeneralCeladopole",
+      "secondary_tileset": "gTileset_CeladonCeladopole",
       "border_filepath": "data/layouts/CeladonCity/border.bin",
       "blockdata_filepath": "data/layouts/CeladonCity/map.bin"
     },
