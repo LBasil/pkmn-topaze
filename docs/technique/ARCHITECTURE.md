@@ -98,3 +98,5 @@ Toute la mer du sud est remplacee par de l obsidienne (v4 : plus de volcan, obsi
 
 ## Route 18 v1 (habillage amethyste)
 `docs/topaze/route18_dress.py` (derive de route19_dress.py sans eruption) : tilesets `GeneralRoute18` / `CeladonRoute18`, sable/pelouses/arbres -> lilas/indigo, cristaux sur l'eau (8) et le chemin (2). Connexion Route 17 (tileset different) remplacee par 16 warps a pas simple Route18 y=0 <-> Route17 y=159 (`route18_events.py`, LAYOUT_ROUTE17 ajoute a IsTopazeStepWarpMap). Ordre : route18_dress -> route18_events. Rendu `reference/route18_v1.png`.
+
+### Route 18 v1 : VALIDEE par Basil le 11/10
