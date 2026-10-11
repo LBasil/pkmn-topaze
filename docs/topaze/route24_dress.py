@@ -1,9 +1,9 @@
 # ROUTE 24 « le pont des pepites » v2 (et Route 25, meme jeu de tuiles pour la continuite des couleurs) : habillage aux couleurs de Tourmalia.
 # Idempotent : part de la carte d'ORIGINE (docs/topaze/route24_src/map_orig.bin) et des tilesets FireRed (general / cerulean_city), recopies en
 # `general_pepite` / `cerulean_pepite`. Lancer depuis la racine : python3 docs/topaze/route24_dress.py
-#  - falaises recolorees en mauve (tourmaline) ; pont recolore en bois sombre (tuiles du pont reecrites, palette 8 partagee avec les arbres) ;
+#  - falaises recolorees en mauve (tourmaline) ; pont recolore en bois sombre, EAU animee dessous (fond d'eau + art du pont en calque transparent ; palette 8 partagee avec les arbres) ;
 #  - bande de terre a l'est du pont remplacee par de l'EAU (riviere qui rejoint le lac) ; plateaux nord en herbe ;
-#  - vegetation NATURELLE : arbres d'Emeraude 2x2 (sprite reconstruit entier : pic de la cime + tronc, plus de halo ni de rangs coupes), cristaux,
+#  - vegetation NATURELLE : arbres d'Emeraude 2x2 (sprite 2x3 reconstruit : corps + cime arrondie qui deborde sur la case du dessus, plus de halo ni de rangs coupes), cristaux,
 #    poses par bruit de densite (bosquets / clairieres, quinconce, pas d'alignement), toujours par sprites ENTIERS, jamais une demi-moitie ;
 #  - controle des sprites : planche reference/route24_sprites_qa.png + assertions (chaque quart rempli, pas de pixel isole, base atteinte).
 import struct, json, random, sys, os, shutil, math, colorsys, collections
@@ -65,16 +65,28 @@ def clean_specks(im, passes=2):
                 if n <= 1: kill.append((x, y))
         for c in kill: px[c] = (0, 0, 0, 0)
     return im
+TREE_OUT = (57, 82, 0, 255)
+DOME = [6, 9, 12, 14, 16, 18, 19, 20]          # largeurs des 8 rangs de la cime arrondie (du sommet vers le corps)
 def make_tree():
-    """Arbre d'Emeraude entier. Le 2x2 d'origine (468/469/476/477) est un arbre EMPILE : les 3 derniers rangs sont le pic de l'arbre suivant et le haut de la
-    cime est coupe. On remonte ces 3 rangs en tete (pic) et on retire l'aura turquoise (halo) + les pixels isoles."""
+    """Arbre d'Emeraude entier, 32x48 = 2 cases de large x 3 de haut (la cime deborde sur la case du dessus, comme dans Emeraude).
+    Le 2x2 d'origine (468/469/476/477) est un arbre EMPILE : haut de cime coupe, 3 derniers rangs = pic de l'arbre suivant, halo turquoise.
+    On garde le corps (rangs 0..28), on retire halo + pixels isoles, et on dessine un dome arrondi (texture echantillonnee sur le corps) au-dessus."""
     T = Image.open(SRC + 'tree_emerald_raw.png').convert('RGBA'); tp = T.load()
     for y in range(32):
         for x in range(32):
             if tp[x, y][3]:
                 h, l, s = hls(tp[x, y][:3])
                 if 140 <= h <= 170 and s > 0.3: tp[x, y] = (0, 0, 0, 0)
-    R = Image.new('RGBA', (32, 32), (0, 0, 0, 0)); R.paste(T.crop((0, 29, 32, 32)), (0, 0)); R.paste(T.crop((0, 0, 32, 29)), (0, 3))
+    body = T.crop((0, 0, 32, 29)); bp = body.load()
+    R = Image.new('RGBA', (32, 48), (0, 0, 0, 0)); R.paste(body, (0, 16)); rp = R.load(); top = 16 - len(DOME)
+    for r, w in enumerate(DOME):
+        x0 = 16 - w // 2; x1 = x0 + w - 1
+        for x in range(x0, x1 + 1):
+            c = bp[x, 1 + ((r * 3 + x // 2) % 9)]
+            rp[x, top + r] = c if c[3] else bp[16, 5]
+        rp[x0, top + r] = TREE_OUT; rp[x1, top + r] = TREE_OUT
+    for x in range(32):
+        if rp[x, top][3]: rp[x, top] = TREE_OUT
     return clean_specks(R)
 PAL_C = [(0, 0, 0), (8, 24, 20), (18, 84, 60), (34, 140, 92), (100, 208, 140), (188, 246, 208), (250, 255, 250), (140, 30, 86), (222, 72, 138),
          (255, 146, 194), (255, 214, 232), (22, 60, 44), (92, 64, 40), (126, 130, 126), (70, 76, 74), (255, 232, 136)]
@@ -110,56 +122,52 @@ assert len(TREE_COLS) <= 6, ('arbre : trop de teintes', len(TREE_COLS))
 # ------------------------------------------------------------------ PONT : bois sombre (tuiles reecrites en place, palette 8 idx 7..15)
 O = mapkit.Layout('LAYOUT_ROUTE24'); O.prim = mapkit.Tileset('gTileset_General'); O.sec = mapkit.Tileset('gTileset_CeruleanCity')
 BRIDGE = [709, 710, 733, 734, 711, 750, 717, 718, 741, 742, 751, 719]
-EAST_RAIL = (751, 719)          # rail est : la moitie droite devient de l'eau (animee, tuiles de l'eau d'origine)
+WATER_UNDER = (750, 717, 751, 719, 718, 741, 742)    # rails + tablier : de l'EAU (animee) sous le pont ; tetes de pont : herbe
+def is_green(c):
+    h, l, s = hls(c); return 95 <= h <= 175 and s > 0.2
 def wood(c):
     h, l, s = hls(c)
     if 35 <= h <= 65 and s > 0.3: return rgb(27, l * 0.58, 0.36)       # jaune -> noyer
     return c
+# le pont est redessine en 2 couches : fond (eau ou herbe d'origine) + art du pont (planches, rails) transparent la ou il y avait de l'herbe
 BR_IMG = {}; bc = collections.Counter()
 for m in BRIDGE:
     im = O.metatile_img(m).copy(); px = im.load()
     for y in range(16):
         for x in range(16):
-            if m in EAST_RAIL and x >= 8: continue
-            px[x, y] = wood(px[x, y][:3]) + (255,); bc[px[x, y][:3]] += 1
+            c = px[x, y][:3]
+            if is_green(c): px[x, y] = (0, 0, 0, 0)
+            else: px[x, y] = wood(c) + (255,); bc[px[x, y][:3]] += 1
     BR_IMG[m] = im
-bcols = dict(bc)
-def merge_to(cols, n, keep):
+def merge_to(cols, n, keep=None):
     cols = dict(cols)
     while len(cols) > n:
         ks = [k for k in cols if k != keep]
         best = min(((sum((a[i] - b[i]) ** 2 for i in range(3)) * (cols[a] * cols[b]) / (cols[a] + cols[b]), a, b) for ia, a in enumerate(ks) for b in ks[ia + 1:]))
         _, a, b = best; lo, hi = (a, b) if cols[a] < cols[b] else (b, a); cols[hi] += cols[lo]; del cols[lo]
     return list(cols)
-BR_COLS = merge_to(bcols, 9, GRASS_BG)
-assert GRASS_BG in BR_COLS
+BR_COLS = merge_to(dict(bc), 9)
 MIXP = [GRASS_BG] + TREE_COLS + [(0, 0, 0)] * (6 - len(TREE_COLS)) + BR_COLS + [BR_COLS[-1]] * (9 - len(BR_COLS))
 assert len(MIXP) == 16
 def idx_of(c, lo, hi): return min(range(lo, hi), key=lambda k: sum((MIXP[k][i] - c[i]) ** 2 for i in range(3)))
-TREE_P = newimg(32, 32); tq = TREE_P.load(); tpx = TREE_RGBA.load()
-for y in range(32):
+TREE_P = newimg(32, 48); tq = TREE_P.load(); tpx = TREE_RGBA.load()
+for y in range(48):
     for x in range(32):
         if tpx[x, y][3]: tq[x, y] = idx_of(tpx[x, y][:3], 1, 1 + len(TREE_COLS))
 TREE_PF = TREE_P.transpose(Image.FLIP_LEFT_RIGHT)
-def bridge_meta(m):
-    im = BR_IMG[m]; ent = []
-    for q in range(4):
-        if m in EAST_RAIL and q % 2 == 1:
-            ent.append(raw_water_ent[q]); continue
-        qi = newimg(8, 8); pq = qi.load()
-        for j in range(8):
-            for i in range(8): pq[i, j] = idx_of(im.getpixel(((q % 2) * 8 + i, (q // 2) * 8 + j))[:3], 7, 16)
-        ent.append(('t', qi))
-    return ent
-WATER_MID = 299
-raw_water_ent = raw_entries(WATER_MID)[:4]       # tuiles d'eau d'origine (animees) pour la moitie droite des rails est
+WATER_BOT = raw_entries(299)[:4]            # tuiles d'eau d'origine (animees)
+GRASS_BOT = raw_entries(8)[:4]
 for m in BRIDGE:
-    e = bridge_meta(m); final = []
+    im = BR_IMG[m]; top = []
     for q in range(4):
-        if isinstance(e[q], tuple): t = add_tile(list(e[q][1].getdata())); final.append((640 + NTL + t) | (MIX_PAL << 12))   # idx de tuile resolu apres coup (NTL fixe)
-        else: final.append(e[q])
+        qi = newimg(8, 8); pq = qi.load(); n = 0
+        for j in range(8):
+            for i in range(8):
+                px_ = im.getpixel(((q % 2) * 8 + i, (q // 2) * 8 + j))
+                if px_[3]: pq[i, j] = idx_of(px_[:3], 7, 16); n += 1
+        top.append((640 + NTL + add_tile(list(qi.getdata()))) | (MIX_PAL << 12) if n else 0)
     base = (m - 640) * 16
-    smt[base:base + 16] = struct.pack('<8H', *(final + [0, 0, 0, 0]))
+    smt[base:base + 16] = struct.pack('<8H', *((WATER_BOT if m in WATER_UNDER else GRASS_BOT) + top))
 # ------------------------------------------------------------------ carte
 W, H = 24, 40
 G = {(x, y): v for (x, y), v in zip(((x, y) for y in range(H) for x in range(W)), struct.unpack('<%dH' % (W * H), open(SRC + 'map_orig.bin', 'rb').read()))}
@@ -242,7 +250,7 @@ def vn(L, x, y):
     return (a * (1 - fx) + b * fx) * (1 - fy) + (c * (1 - fx) + d * fx) * fy
 def dens(x, y): return 0.62 * vn(LA, x / 4.5, y / 4.5) + 0.38 * vn(LB, x / 2.2 + 9, y / 2.2 + 4)
 PLAIN = {8, 9, 16, 17}
-def grass(c): return c in G and mid(c) in PLAIN and not blocked(c) and c not in RES and c not in CONV
+def grass(c): return c in G and mid(c) in PLAIN and not blocked(c) and c not in RES and c not in CONV and c not in OVER
 def edgeness(c):       # proximite d'une falaise / eau / haie : les arbres aiment les lisieres
     n = 0
     for a in range(-2, 3):
@@ -250,7 +258,7 @@ def edgeness(c):       # proximite d'une falaise / eau / haie : les arbres aimen
             k = (c[0] + a, c[1] + b)
             if k in G and k != c and (blocked(k) or mid(k) in (113, 114, 117, 112, 115, 343, 318)): n += 1
     return min(1.0, n / 9.0)
-ARTP = {}; TREES = []; CLUS = []; SHARDS = []
+ARTP = {}; OVER = {}; TREES = []; CLUS = []; SHARDS = []     # OVER : cimes qui debordent sur la case du dessus (calque haut, case praticable)
 def reach_ok(new):       # poser ces cases bloquees ne doit isoler aucune case d'origine encore praticable (verifie a chaque pose)
     seen = {START}; q = collections.deque([START]); nb = set(new)
     while q:
@@ -268,11 +276,17 @@ def free_ring(cells, r=1):
 def put_big(x, y, img, kind):
     cells = [(x + i, y + j) for j in range(2) for i in range(2)]
     if not all(grass(c) and c not in ARTP for c in cells): return False
+    tall = img.height == 48                      # arbre : la cime deborde sur la case du dessus (herbe libre exigee)
+    above = [(x + i, y - 1) for i in range(2)]
+    if tall and not all(c in G and mid(c) in (PLAIN | {1, 4, 217}) and not blocked(c) and c not in RES and c not in CONV and c not in ARTP and c not in OVER for c in above): return False
     ring = free_ring(cells)
     if sum(1 for c in ring if c in ARTP) > (3 if kind == 'tree' else 0) or sum(1 for c in ring if c in G and not blocked(c) and c not in ARTP) < 3 or not reach_ok(cells): return False
+    off = 16 if tall else 0
     for j in range(2):
         for i in range(2):
-            ARTP[(x + i, y + j)] = (slice4(img.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))), MIX_PAL if kind == 'tree' else ART_PAL, mid((x + i, y + j)))
+            ARTP[(x + i, y + j)] = (slice4(img.crop((i * 16, off + j * 16, i * 16 + 16, off + j * 16 + 16))), MIX_PAL if kind == 'tree' else ART_PAL, mid((x + i, y + j)))
+    if tall:
+        for i in range(2): OVER[above[i]] = (slice4(img.crop((i * 16, 0, i * 16 + 16, 16))), MIX_PAL)
     (TREES if kind == 'tree' else CLUS).append((x, y)); return True
 def put_small(c, var):
     if not grass(c) or c in ARTP or not reach_ok([c]): return False
@@ -318,7 +332,8 @@ for c in sorted(G):
     if grass(c) and c not in ARTP and rnd.random() < 0.07 and not any((c[0] + a, c[1] + b) in ARTP for a in (-1, 0, 1) for b in (-1, 0, 1)): put_small(c, rnd.randrange(3))
 for c in sorted(G):
     if grass(c) and c not in ARTP and dens(c[0] * 1.7 + 30, c[1] * 1.7 + 7) > 0.64 and rnd.random() < 0.75: setm(c, 4)
-# pose finale des metatuiles d'art (collision : tout bloque)
+# pose finale des metatuiles d'art (collision : tout bloque ; les cimes qui debordent restent praticables)
+for c, (t4, slot) in OVER.items(): G[c] = (G[c] & 0xfc00) | art_meta(t4, slot, bottom_of(mid(c)))
 for c, (t4, slot, m) in ARTP.items(): G[c] = (G0[c] & 0xf000) | 0x400 | art_meta(t4, slot, bottom_of(m))
 # ------------------------------------------------------------------ verifications
 R1 = flood(G, START)
@@ -330,10 +345,11 @@ print('arbres', len(TREES), 'amas', len(CLUS), 'eclats', len(SHARDS), '; atteign
 def qa_sprite(name, rgba, big=True):
     w, h = rgba.size; px = rgba.load(); ok = True; msgs = []
     if big:
-        for q, (qx, qy) in enumerate(((0, 0), (16, 0), (0, 16), (16, 16))):
-            n = sum(1 for j in range(16) for i in range(16) if px[qx + i, qy + j][3])
-            if n < 40: ok = False; msgs.append('quart %d presque vide (%d)' % (q, n))
-        top = sum(1 for x in range(w) for y in range(4) if px[x, y][3]); bot = sum(1 for x in range(w) for y in range(h - 4, h) if px[x, y][3])
+        for qy in range(0, h, 16):
+            for qx in range(0, w, 16):
+                n = sum(1 for j in range(16) for i in range(16) if px[qx + i, qy + j][3])
+                if n < 40: ok = False; msgs.append('case (%d,%d) presque vide (%d)' % (qx // 16, qy // 16, n))
+        bb = rgba.getbbox(); top = sum(1 for x in range(w) for y in range(bb[1], bb[1] + 4) if px[x, y][3]); bot = sum(1 for x in range(w) for y in range(bb[3] - 4, bb[3]) if px[x, y][3])
         if top == 0 or bot == 0: ok = False; msgs.append('haut ou bas vide')
         if bot > 0 and top > 0 and not (0.1 < top / float(bot) < 4): msgs.append('haut/bas desequilibres %d/%d' % (top, bot))
     iso = sum(1 for y in range(h) for x in range(w) if px[x, y][3] and sum(1 for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)) if 0 <= x + dx < w and 0 <= y + dy < h and px[x + dx, y + dy][3]) == 0)
@@ -348,7 +364,7 @@ def p_to_rgba(im, pal):
     return out
 SPR = [('arbre', TREE_RGBA, True), ('arbre_miroir', p_to_rgba(TREE_PF, MIXP), True), ('amas0', p_to_rgba(cluster(0), PAL_C), True), ('amas1', p_to_rgba(cluster(1), PAL_C), True)] + \
       [('eclat%d' % v, p_to_rgba(small(v), PAL_C), False) for v in range(3)]
-sheet = Image.new('RGBA', (len(SPR) * 200, 220), (115, 205, 164, 255))
+sheet = Image.new('RGBA', (len(SPR) * 200, 260), (115, 205, 164, 255))
 for i, (n, im, big) in enumerate(SPR):
     m = qa_sprite(n, im, big)
     if m: print('sprite', n, ':', '; '.join(m))
