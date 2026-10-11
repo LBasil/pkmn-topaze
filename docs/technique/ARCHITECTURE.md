@@ -109,3 +109,6 @@ Toute la mer du sud est remplacee par de l obsidienne (v4 : plus de volcan, obsi
 
 ### Spinellia v2 (correction des arbres)
 Les pins FR (unites 2x2 avec fond sombre tramé) ne sont plus poses isoles : uniquement la bordure et des bosquets rattaches a la bordure/entre eux (masses). Sommet de la tour fini par une corniche opaque + couronne (antenne, cristaux de spinelle) ; frise de pierres flottante au-dessus de la maison 2 supprimee ; plus de steles/cristaux. Rendu `reference/spinellia_v2.png`.
+
+### Spinellia v3 (pins FR corrects + toit)
+Les masses de pins utilisent maintenant les vraies familles de tuiles FireRed : haut 0x14/0x15, bas 0x1c/0x1d, **rangee de troncs** 0x24/0x25 sous la derniere ligne, et variantes de bord gauche/droit (0x16/0x1e/0x26 et 0x17/0x1f/0x27). Retuilage automatique apres placement (`spinellia_town.py`, section « pins FR »). Toit pyramidal d'ardoise + plateforme a creneaux + fleche de spinelle sur la tour (art procedural 7x2 au-dessus de la corniche). Rendu `reference/spinellia_v3.png`.

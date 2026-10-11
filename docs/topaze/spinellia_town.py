@@ -171,14 +171,20 @@ def parapet():
     for x in range(3, 109, 6): d.rectangle((x, 5, x + 3, 11), fill=7, outline=1); d.point((x + 1, 6), fill=5)
     return im
 def crown():
+    """toit de la tour (7x2 cases) : toit pyramidal d'ardoise a pans, plateforme a creneaux, fleche de spinelle"""
     im = newimg(112, 32); d = ImageDraw.Draw(im)
-    for x0 in (2, 98):
-        d.rectangle((x0, 20, x0 + 11, 31), fill=8, outline=1); d.line([(x0 + 1, 21), (x0 + 10, 21)], fill=6); d.rectangle((x0 + 8, 22, x0 + 10, 31), fill=7)
-        prism(d, x0 + 6, 20, 7, 14)
-    d.rectangle((44, 22, 67, 31), fill=7, outline=1); d.line([(45, 23), (66, 23)], fill=5); d.rectangle((60, 24, 66, 31), fill=9)
-    d.rectangle((54, 4, 57, 22), fill=4, outline=1); d.line([(55, 5), (55, 21)], fill=5)
-    for y in (12, 17): d.rectangle((49, y, 62, y + 1), fill=4, outline=1)
-    prism(d, 56, 8, 7, 10); d.point((55, 0), fill=14)
+    d.polygon([(1, 31), (20, 12), (91, 12), (110, 31)], fill=9, outline=1)
+    d.polygon([(3, 30), (21, 13), (56, 13), (56, 30)], fill=7)
+    d.polygon([(56, 13), (90, 13), (108, 30), (56, 30)], fill=4)
+    for y in range(16, 30, 4):
+        x0 = 1 + int((31 - y) * 19 / 19) if False else 0
+        d.line([(max(3, 21 - (y - 13) * 18 // 18 - 0), y), (min(108, 91 + (y - 13)), y)], fill=1)
+    d.line([(21, 13), (3, 30)], fill=5); d.line([(56, 13), (56, 30)], fill=1)
+    d.rectangle((24, 7, 87, 12), fill=8, outline=1); d.line([(25, 8), (86, 8)], fill=6)
+    for x in range(27, 86, 8): d.rectangle((x, 4, x + 3, 7), fill=8, outline=1)
+    d.rectangle((50, 1, 61, 7), fill=7, outline=1); d.line([(51, 2), (60, 2)], fill=5)
+    prism(d, 56, 3, 7, 9)
+    prism(d, 18, 12, 7, 12); prism(d, 94, 12, 7, 12)
     return im
 def crystal(var):
     im = newimg(16, 16); d = ImageDraw.Draw(im)
@@ -305,6 +311,27 @@ for _ in range(3):
 r = start_reach()
 assert NEED <= r, ('inaccessible', sorted(NEED - r))
 for c in sorted(free_cells() - r): print('poche restante', c)
+# ---- pins FR : variantes de bord (gauche/droite) et rangee de troncs sous les masses (tuiles 0x24..0x27)
+P = {c for c, n in OCC.items() if n == 'pin'}
+def is_pine(c): return c in P or not (0 <= c[0] < W and 0 <= c[1] < H)
+TRUNK = {}
+for (x, y) in sorted(P):
+    if y % 2 == 1 and not is_pine((x, y + 1)):
+        c = (x, y + 1)
+        if c in OCC or c in WAY or c in KEEP or c in TRUNK or BLK.get(c, ('', 0))[0] in ('sign', 'fence', 'big', 'parapet', 'crown'): continue
+        old = BLK.pop(c, None); OCC[c] = 'trunk'
+        if NEED <= start_reach(): TRUNK[c] = 1
+        else: OCC.pop(c)
+        if old and c not in TRUNK: BLK[c] = old
+for c in TRUNK: BLK.pop(c, None)
+P2 = P | set(TRUNK)
+for (x, y) in P2:
+    role = 'K' if (x, y) in TRUNK else ('T' if y % 2 == 0 else 'B')
+    left = (x % 2 == 0) and not ((x - 1, y) in P2 or not (0 <= x - 1 < W))
+    right = (x % 2 == 1) and not ((x + 1, y) in P2 or not (0 <= x + 1 < W))
+    base = {'T': (0x14, 0x15, 0x16, 0x17), 'B': (0x1c, 0x1d, 0x1e, 0x1f), 'K': (0x24, 0x25, 0x26, 0x27)}[role]
+    G[(x, y)] = 0x400 | (base[2] if left else base[3] if right else base[x % 2])
+print('troncs', len(TRUNK))
 # ---- ecriture des metatuiles
 PT = {}
 for c in sorted(WAY):
