@@ -286,3 +286,8 @@ const u32 gMetatileAttributes_GeneralRoute20[] = INCBIN_U32("data/tilesets/prima
 
 const u16 gMetatiles_CinnabarRoute20[] = INCBIN_U16("data/tilesets/secondary/cinnabar_route20/metatiles.bin");
 const u32 gMetatileAttributes_CinnabarRoute20[] = INCBIN_U32("data/tilesets/secondary/cinnabar_route20/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralAmethyst[] = INCBIN_U16("data/tilesets/primary/general_amethyst/metatiles.bin");
+const u32 gMetatileAttributes_GeneralAmethyst[] = INCBIN_U32("data/tilesets/primary/general_amethyst/metatile_attributes.bin");
+const u16 gMetatiles_SootopolisAmethyst[] = INCBIN_U16("data/tilesets/secondary/sootopolis_amethyst/metatiles.bin");
+const u32 gMetatileAttributes_SootopolisAmethyst[] = INCBIN_U32("data/tilesets/secondary/sootopolis_amethyst/metatile_attributes.bin");

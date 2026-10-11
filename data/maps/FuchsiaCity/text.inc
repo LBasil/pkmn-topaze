@@ -20,8 +20,8 @@ FuchsiaCity_Text_ItemBallInThere::
     .string "…Huh? That's a POKéMON?$"
 
 FuchsiaCity_Text_CitySign::
-    .string "AMETHIOLITE\n"
-    .string "Behold! It's Passion Pink!$"
+    .string "AMETHIOLITE CITY\n"
+    .string "The Amethyst Lake Town$"
 
 FuchsiaCity_Text_SafariZoneSign::
     .string "POKéMON PARADISE\n"

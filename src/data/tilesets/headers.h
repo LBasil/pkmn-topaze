@@ -1098,3 +1098,25 @@ const struct Tileset gTileset_CinnabarRoute20 =
     .metatileAttributes = gMetatileAttributes_CinnabarRoute20,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralAmethyst =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralAmethyst,
+    .palettes = gTilesetPalettes_GeneralAmethyst,
+    .metatiles = gMetatiles_GeneralAmethyst,
+    .metatileAttributes = gMetatileAttributes_GeneralAmethyst,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SootopolisAmethyst =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SootopolisAmethyst,
+    .palettes = gTilesetPalettes_SootopolisAmethyst,
+    .metatiles = gMetatiles_SootopolisAmethyst,
+    .metatileAttributes = gMetatileAttributes_SootopolisAmethyst,
+    .callback = NULL,
+};

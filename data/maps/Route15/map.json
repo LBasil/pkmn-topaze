@@ -15,11 +15,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_FUCHSIA_CITY",
-      "offset": -10,
-      "direction": "left"
-    },
-    {
       "map": "MAP_ROUTE14",
       "offset": -40,
       "direction": "right"
@@ -231,6 +226,27 @@
       "elevation": 3,
       "dest_map": "MAP_ROUTE15_WEST_ENTRANCE_1F",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_warp_id": "20"
+    },
+    {
+      "x": 0,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_warp_id": "21"
+    },
+    {
+      "x": 0,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_warp_id": "22"
     }
   ],
   "coord_events": [],

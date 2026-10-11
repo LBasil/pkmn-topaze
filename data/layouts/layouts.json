@@ -829,8 +829,8 @@
       "height": 40,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_FuchsiaCity",
+      "primary_tileset": "gTileset_GeneralAmethyst",
+      "secondary_tileset": "gTileset_SootopolisAmethyst",
       "border_filepath": "data/layouts/FuchsiaCity/border.bin",
       "blockdata_filepath": "data/layouts/FuchsiaCity/map.bin"
     },

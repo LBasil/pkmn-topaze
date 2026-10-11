@@ -2079,3 +2079,45 @@ const u16 gTilesetPalettes_CinnabarRoute20[][16] =
 	INCBIN_U16("data/tilesets/secondary/cinnabar_route20/palettes/14.gbapal"),
 	INCBIN_U16("data/tilesets/secondary/cinnabar_route20/palettes/15.gbapal"),
 };
+
+const u32 gTilesetTiles_GeneralAmethyst[] = INCBIN_U32("data/tilesets/primary/general_amethyst/tiles.4bpp.lz");
+const u16 gTilesetPalettes_GeneralAmethyst[][16] =
+{
+	INCBIN_U16("data/tilesets/primary/general_amethyst/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_amethyst/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_amethyst/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_amethyst/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_amethyst/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_amethyst/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_amethyst/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_amethyst/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_amethyst/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_amethyst/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_amethyst/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_amethyst/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_amethyst/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_amethyst/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_amethyst/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_amethyst/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_SootopolisAmethyst[] = INCBIN_U32("data/tilesets/secondary/sootopolis_amethyst/tiles.4bpp.lz");
+const u16 gTilesetPalettes_SootopolisAmethyst[][16] =
+{
+	INCBIN_U16("data/tilesets/secondary/sootopolis_amethyst/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sootopolis_amethyst/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sootopolis_amethyst/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sootopolis_amethyst/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sootopolis_amethyst/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sootopolis_amethyst/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sootopolis_amethyst/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sootopolis_amethyst/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sootopolis_amethyst/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sootopolis_amethyst/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sootopolis_amethyst/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sootopolis_amethyst/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sootopolis_amethyst/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sootopolis_amethyst/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sootopolis_amethyst/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sootopolis_amethyst/palettes/15.gbapal"),
+};

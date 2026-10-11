@@ -13,13 +13,7 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_FUCHSIA_CITY",
-      "offset": -12,
-      "direction": "up"
-    }
-  ],
+  "connections": [],
   "object_events": [
     {
       "type": "object",
@@ -191,6 +185,62 @@
     }
   ],
   "warp_events": [
+    {
+      "x": 8,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_warp_id": "9"
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_warp_id": "10"
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_warp_id": "11"
+    },
+    {
+      "x": 11,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_warp_id": "12"
+    },
+    {
+      "x": 12,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_warp_id": "13"
+    },
+    {
+      "x": 13,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_warp_id": "14"
+    },
+    {
+      "x": 14,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_warp_id": "15"
+    },
+    {
+      "x": 15,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_FUCHSIA_CITY",
+      "dest_warp_id": "16"
+    },
     {
       "x": 0,
       "y": 43,
