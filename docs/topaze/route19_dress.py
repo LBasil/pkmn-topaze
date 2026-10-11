@@ -171,7 +171,7 @@ def dress(half):
     placed = []
 
     # ---- eruption : la mer du sud devient obsidienne
-    ROCKS = {272, 273, 280, 281, 459, 460, 467, 468, 473, 464, 472, 480, 482, 466}
+    ROCKS = {272, 273, 280, 281, 459, 460, 467, 468, 473, 464, 472, 480, 482, 466, 291, 264, 265}
     def is_sea(c): return (M(c) == 299 and not blocked(G[c[1] * W_ + c[0]])) or M(c) in ROCKS
     KEEP = set()
     def stamp(cx, cy, r):
@@ -197,15 +197,15 @@ def dress(half):
     for c in sorted(EV):
         if c[1] >= 14 and is_sea(c): stamp(c[0], c[1], 1.2)
     for c in sorted(KEEP):                                                     # plus de rochers dans le chenal (confusion avec l'obsidienne)
-        if c[1] >= 14 and M(c) in ROCKS: G[c[1] * W_ + c[0]] = (G[c[1] * W_ + c[0]] & 0xf000) | 299
+        if c[1] >= 9 and M(c) in ROCKS: G[c[1] * W_ + c[0]] = (G[c[1] * W_ + c[0]] & 0xf000) | 299
     for y in range(9, 14):
         for x in range(W_):
             if M((x, y)) in ROCKS and (x, y) not in EV: G[y * W_ + x] = (G[y * W_ + x] & 0xf000) | 299
-    cand = {(x, y) for y in range(14, H_) for x in range(W_) if is_sea((x, y)) and (x, y) not in KEEP and (x, y) not in EV}
+    cand = {(x, y) for y in range(9, H_) for x in range(W_) if is_sea((x, y)) and (x, y) not in KEEP and (x, y) not in EV}
     # cones : 4x4 et 3x3 sur de l'obsidienne, loin du chenal
     CONES = []
     def near_keep(c): return any((c[0] + a, c[1] + b) in KEEP for a in (-1, 0, 1) for b in (-1, 0, 1))
-    for (cw, ch, prefer) in ((5, 5, (14, 33)),):
+    for (cw, ch, prefer) in ():
         best = None
         for y0 in range(14, H_ - ch):
             for x0 in range(W_ - cw):
