@@ -77,11 +77,16 @@ if 'Route19_UnusedHouse/text.inc' not in t:
 pos = {'OBJ_EVENT_GFX_WOMAN_2': N['woman'], 'OBJ_EVENT_GFX_OLD_MAN_1': N['oldman'], 'OBJ_EVENT_GFX_BILL': N['bill'], 'OBJ_EVENT_GFX_SEAGALLOP': N['gull']}
 for o in d['object_events']: o['x'], o['y'] = pos[o['graphics_id']]
 for cev in d['coord_events']: cev['x'], cev['y'] = D['gym'][0][0], D['gym'][0][1] + 1
-labs = iter([S['lab1'], S['lab2']])
+nl = 0; bg = []
 for b in d['bg_events']:
-    if b['type'] != 'sign': continue
-    s_ = b['script']
-    b['x'], b['y'] = S['city'] if 'IslandSign' in s_ else S['gym'] if 'GymSign' in s_ else next(labs)
+    if b['type'] == 'sign':
+        s_ = b['script']
+        if 'PokemonLabSign' in s_:
+            nl += 1
+            if nl > 1: continue                       # un seul panneau pour le labo
+        b['x'], b['y'] = S['city'] if 'IslandSign' in s_ else S['gym'] if 'GymSign' in s_ else S['lab']
+    bg.append(b)
+d['bg_events'] = bg
 jdump(d, f)
 # ---- textes, soin
 f = 'data/maps/CinnabarIsland/text.inc'; s = open(f).read()

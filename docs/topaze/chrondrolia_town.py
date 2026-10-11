@@ -189,7 +189,7 @@ for k, ds in D.items():
 PIER1 = []
 for x in (9, 10):
     PIER1 += [(x, y) for y in range(1, 6) if (x, y) in SEA]
-PIER2 = [(x, 11) for x in range(19, 28) if (x, 11) in SEA]
+PIER2 = [(x, y) for y in (11, 12) for x in range(19, 28) if (x, y) in SEA]            # ponton de 2 de large
 BRIDGEC = set(PIER1) | set(PIER2); PIER1_SET = set(PIER1)
 for c in BRIDGEC: claim(c[0], c[1], 1, 1, 'ponton')
 OPEN = {c for c in OPEN if c in LAND}
@@ -530,7 +530,8 @@ NPC = {}
 NPC['woman'] = pick((14, 12)); NPC['oldman'] = pick((6, 13))
 NPC['bill'] = (9, 2); NPC['gull'] = (12, 2)
 gx, gy = D['gym'][0]; lx, ly = D['lab'][0]
-SIGNS = {'city': pick((7, 5), r=6), 'lab1': pick((lx + 3, ly + 1), r=4), 'lab2': pick((lx - 3, ly + 1), r=4), 'gym': pick((gx - 3, gy + 1), r=4)}
+SIGNS = {'city': pick((7, 5), r=6), 'lab': (lx - 1, ly + 1), 'gym': (gx + 2, gy + 1)}          # panneaux de part et d'autre des portes, pas des pick() qui derivent
+for k in ('lab', 'gym'): assert SIGNS[k] in OPEN and SIGNS[k] not in OCC and SIGNS[k] not in ARTPLACE and SIGNS[k] not in USED, (k, SIGNS[k])
 for k, c in SIGNS.items(): claim(c[0], c[1], 1, 1, 'panneau: ' + k)
 def pylon_at(x, y):
     cells = [(x, y), (x, y + 1)]
