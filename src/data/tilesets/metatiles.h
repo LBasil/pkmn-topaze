@@ -309,3 +309,9 @@ const u32 gMetatileAttributes_GeneralRoute15[] = INCBIN_U32("data/tilesets/prima
 
 const u16 gMetatiles_FuchsiaRoute15[] = INCBIN_U16("data/tilesets/secondary/fuchsia_route15/metatiles.bin");
 const u32 gMetatileAttributes_FuchsiaRoute15[] = INCBIN_U32("data/tilesets/secondary/fuchsia_route15/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralSpinellia[] = INCBIN_U16("data/tilesets/primary/general_spinellia/metatiles.bin");
+const u32 gMetatileAttributes_GeneralSpinellia[] = INCBIN_U32("data/tilesets/primary/general_spinellia/metatile_attributes.bin");
+
+const u16 gMetatiles_LavenderSpinellia[] = INCBIN_U16("data/tilesets/secondary/lavender_spinellia/metatiles.bin");
+const u32 gMetatileAttributes_LavenderSpinellia[] = INCBIN_U32("data/tilesets/secondary/lavender_spinellia/metatile_attributes.bin");

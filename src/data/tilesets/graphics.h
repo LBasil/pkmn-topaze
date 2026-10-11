@@ -2247,3 +2247,45 @@ const u16 gTilesetPalettes_FuchsiaRoute15[][16] =
 	INCBIN_U16("data/tilesets/secondary/fuchsia_route15/palettes/14.gbapal"),
 	INCBIN_U16("data/tilesets/secondary/fuchsia_route15/palettes/15.gbapal"),
 };
+
+const u32 gTilesetTiles_GeneralSpinellia[] = INCBIN_U32("data/tilesets/primary/general_spinellia/tiles.4bpp.lz");
+const u16 gTilesetPalettes_GeneralSpinellia[][16] =
+{
+	INCBIN_U16("data/tilesets/primary/general_spinellia/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_spinellia/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_spinellia/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_spinellia/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_spinellia/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_spinellia/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_spinellia/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_spinellia/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_spinellia/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_spinellia/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_spinellia/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_spinellia/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_spinellia/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_spinellia/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_spinellia/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_spinellia/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_LavenderSpinellia[] = INCBIN_U32("data/tilesets/secondary/lavender_spinellia/tiles.4bpp.lz");
+const u16 gTilesetPalettes_LavenderSpinellia[][16] =
+{
+	INCBIN_U16("data/tilesets/secondary/lavender_spinellia/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavender_spinellia/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavender_spinellia/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavender_spinellia/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavender_spinellia/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavender_spinellia/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavender_spinellia/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavender_spinellia/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavender_spinellia/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavender_spinellia/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavender_spinellia/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavender_spinellia/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavender_spinellia/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavender_spinellia/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavender_spinellia/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/lavender_spinellia/palettes/15.gbapal"),
+};

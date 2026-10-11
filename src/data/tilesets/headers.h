@@ -1186,3 +1186,25 @@ const struct Tileset gTileset_FuchsiaRoute15 =
     .metatileAttributes = gMetatileAttributes_FuchsiaRoute15,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralSpinellia =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralSpinellia,
+    .palettes = gTilesetPalettes_GeneralSpinellia,
+    .metatiles = gMetatiles_GeneralSpinellia,
+    .metatileAttributes = gMetatileAttributes_GeneralSpinellia,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_LavenderSpinellia =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_LavenderSpinellia,
+    .palettes = gTilesetPalettes_LavenderSpinellia,
+    .metatiles = gMetatiles_LavenderSpinellia,
+    .metatileAttributes = gMetatileAttributes_LavenderSpinellia,
+    .callback = NULL,
+};

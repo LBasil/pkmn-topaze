@@ -15,11 +15,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_LAVENDER_TOWN",
-      "offset": 0,
-      "direction": "down"
-    },
-    {
       "map": "MAP_ROUTE9",
       "offset": 0,
       "direction": "left"
@@ -202,6 +197,34 @@
       "elevation": 3,
       "dest_map": "MAP_POWER_PLANT",
       "dest_warp_id": "3"
+    },
+    {
+      "x": 8,
+      "y": 79,
+      "elevation": 0,
+      "dest_map": "MAP_LAVENDER_TOWN",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 9,
+      "y": 79,
+      "elevation": 0,
+      "dest_map": "MAP_LAVENDER_TOWN",
+      "dest_warp_id": "7"
+    },
+    {
+      "x": 10,
+      "y": 79,
+      "elevation": 0,
+      "dest_map": "MAP_LAVENDER_TOWN",
+      "dest_warp_id": "8"
+    },
+    {
+      "x": 11,
+      "y": 79,
+      "elevation": 0,
+      "dest_map": "MAP_LAVENDER_TOWN",
+      "dest_warp_id": "9"
     }
   ],
   "coord_events": [],
