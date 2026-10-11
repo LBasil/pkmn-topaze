@@ -115,7 +115,7 @@ def hls_(c): h, l, s = colorsys.rgb_to_hls(c[0] / 255, c[1] / 255, c[2] / 255); 
 def rgb_(h, l, s): r, g, b = colorsys.hls_to_rgb((h % 360) / 360, max(0, min(1, l)), max(0, min(1, s))); return int(r * 255 + .5), int(g * 255 + .5), int(b * 255 + .5)
 def topaze(c):
     h, l, s = hls_(c)
-    if 270 <= h <= 345 and s > 0.15: return rgb_(42 + (h - 300) * 0.05, min(1, l * 1.02 + 0.02), min(0.95, s * 1.1))      # rose / violet -> or / ambre
+    if 270 <= h <= 345 and s > 0.15: return rgb_(354, l * 0.92, min(0.95, s * 1.15))      # rose / violet -> cramoisi (la ville a brule : les toits gardent le rouge de l'ile)
     if 190 <= h <= 255 and s < 0.40 and l > 0.45: return rgb_(46, min(1, l * 1.0 + 0.03), max(0.25, s * 0.9))              # paves bleutes -> creme
     if 75 <= h <= 165 and s > 0.2: return rgb_(h - 13, l, s)                                                          # verts -> verts dores (soleil d'or)
     return c
@@ -164,7 +164,7 @@ PIER1 = []
 for x in (19, 20):
     PIER1 += [(x, y) for y in range(2, 12) if (x, y) in SEA]
 PIER2 = [(x, 22) for x in range(28, 38) if (x, 22) in SEA]
-BRIDGEC = set(PIER1) | set(PIER2)
+BRIDGEC = set(PIER1) | set(PIER2); PIER1_SET = set(PIER1)
 for c in BRIDGEC: claim(c[0], c[1], 1, 1, 'ponton')
 OPEN = {c for c in OPEN if c in LAND}
 OPEN -= set(OCC); WAY &= OPEN
@@ -175,8 +175,8 @@ used = {q >> 12 for e in SEC_ENT for q in e}
 print('palettes utilisees par les decors', sorted(used))
 assert ART_PAL not in used and 9 not in used, used
 PAL = [(0, 0, 0), (52, 30, 0), (150, 88, 0), (226, 158, 14), (255, 208, 56), (255, 240, 150), (255, 252, 226), (20, 96, 190), (70, 186, 255),
-       (150, 230, 255), (226, 250, 255), (36, 36, 44), (92, 64, 40), (150, 150, 158), (84, 86, 98), (255, 248, 190)]
-# 1 contour | 2 ambre fonce | 3 ambre | 4 or | 5 or clair | 6 blanc chaud | 7 bleu electrique fonce | 8 bleu | 9 bleu clair | 10 bleu pale | 11 ombre | 12 terre | 13 acier | 14 acier sombre | 15 etincelle
+       (150, 230, 255), (226, 250, 255), (36, 36, 44), (196, 32, 24), (150, 150, 158), (84, 86, 98), (255, 248, 190)]
+# 1 contour | 2 ambre fonce | 3 ambre | 4 or | 5 or clair | 6 blanc chaud | 7 bleu electrique fonce | 8 bleu | 9 bleu clair | 10 bleu pale | 11 ombre | 12 braise cramoisie | 13 acier | 14 acier sombre | 15 etincelle
 def newimg(w, h): return Image.new('P', (w, h), 0)
 def prism(d, x, base, w, h):
     half = max(2, w // 2); top = base - h; sh = top + max(3, half + 1)
@@ -219,6 +219,26 @@ def tower():
     bolt(d, [(24, 6), (21, 3), (23, 1), (20, 0)]); bolt(d, [(26, 4), (29, 6), (28, 8)])
     for (x, y) in ((9, 14), (10, 15), (39, 12), (38, 11), (22, 2), (27, 3)): d.point((x, y), fill=6)
     return im
+
+def ash(var):
+    im = newimg(16, 16); d = ImageDraw.Draw(im); r = random.Random(500 + var)
+    for _ in range(26):
+        x, y = r.randint(1, 14), r.randint(1, 14); w_, h_ = r.randint(2, 5), r.randint(1, 3)
+        d.ellipse((x - w_ // 2, y - h_ // 2, x + w_ // 2, y + h_ // 2), fill=r.choice((11, 11, 14)))
+    for _ in range(9): d.point((r.randint(0, 15), r.randint(0, 15)), fill=r.choice((14, 13)))
+    x, y = r.randint(3, 11), r.randint(3, 11); d.line([(x, y), (x + r.randint(-3, 3), y + r.randint(1, 3))], fill=12)
+    d.point((x, y), fill=12); d.point((r.randint(2, 13), r.randint(2, 13)), fill=12)
+    return im
+def stump(var):
+    im = newimg(16, 16); d = ImageDraw.Draw(im)
+    shadow(d, 1, 11, 15, 16)
+    d.polygon([(4, 14), (5, 4), (7, 2), (9, 4), (11, 14)], fill=11, outline=1)
+    d.line([(6, 5), (6, 13)], fill=14); d.line([(9, 6), (9, 12)], fill=14)
+    if var: d.line([(9, 4), (13, 1)], fill=11); d.point((13, 1), fill=1)
+    else: d.line([(5, 6), (2, 3)], fill=11); d.point((2, 3), fill=1)
+    d.point((7, 9), fill=12); d.point((8, 5), fill=12); d.point((7, 12), fill=12)
+    return im
+ASH = [ash(i) for i in range(4)]; STUMP = [stump(0), stump(1)]
 def pylon():
     im = newimg(16, 32); d = ImageDraw.Draw(im)
     shadow(d, 0, 27, 16, 32)
@@ -316,6 +336,13 @@ def plank_img(c):
     x, y = c
     top = (x, y - 1) not in BRIDGEC; bot = (x, y + 1) not in BRIDGEC
     im = newimg(16, 16); d = ImageDraw.Draw(im)
+    if c in PIER1_SET:                                   # ponton vertical : planches en travers (horizontales), rails sur les cotes
+        d.rectangle((0, 0, 15, 15), fill=9)
+        for k in range(0, 16, 4): d.line((0, k, 15, k), fill=10); d.line((0, k + 3, 15, k + 3), fill=11)
+        lft = (x - 1, y) not in BRIDGEC; rgt = (x + 1, y) not in BRIDGEC
+        if lft: d.rectangle((0, 0, 2, 15), fill=10); d.line((0, 0, 0, 15), fill=8); d.line((2, 0, 2, 15), fill=8)
+        if rgt: d.rectangle((13, 0, 15, 15), fill=10); d.line((13, 0, 13, 15), fill=8); d.line((15, 0, 15, 15), fill=8)
+        return im
     d.rectangle((0, 0, 15, 15), fill=9)
     for k in range(0, 16, 4): d.line((k, 0, k, 15), fill=10); d.line((k + 3, 0, k + 3, 15), fill=11)
     for (k, yy) in ((1, 5), (2, 11), (0, 2), (3, 9)): d.point(((k + 4 * ((x + yy) % 4)) % 16, yy), fill=8)
@@ -335,16 +362,19 @@ def water_cell(c):
 for c in sorted(WATERONLY): G[c] = water_cell(c)
 PCACHE = {}
 for c in sorted(BRIDGEC):
-    k = ((c[0], c[1] - 1) in BRIDGEC, (c[0], c[1] + 1) in BRIDGEC, c[0] % 4)
+    k = ((c[0], c[1] - 1) in BRIDGEC, (c[0], c[1] + 1) in BRIDGEC, c[0] % 4, (c[0] - 1, c[1]) in BRIDGEC, (c[0] + 1, c[1]) in BRIDGEC, c in PIER1_SET)
     if k not in PCACHE:
         t4 = slice_tiles(plank_img(c)); SEC_ENT.append([('B', t) for t in t4] + list(EMPTY_TOP)); SEC_ATT.append(0); PCACHE[k] = len(SEC_ENT) - 1
     G[c] = 0x3000 | (640 + PCACHE[k])
 
 # ------------------------------------------------------------------ sol + foret definitifs
+BEACH = {(x, y) for (x, y) in LAND if (x, y) not in OCC and any((x + a, y + b) in SEA for a in range(-1, 2) for b in range(-1, 2)) and 1 <= x <= W - 2}
+OPEN |= BEACH
 GROUND = {}
 for (x, y) in sorted(OPEN):
     if (x, y) in OCC: continue
-    GROUND[(x, y)] = GRASS; G[(x, y)] = remap(0x3000 | GRASS)
+    gid = 289 if (x, y) in BEACH else GRASS
+    GROUND[(x, y)] = gid; G[(x, y)] = remap(0x3000 | gid)
 for (x, y) in list(G):
     c = (x, y)
     if c in OPEN or c in OCC or c in WATERONLY: continue
@@ -371,7 +401,7 @@ for c in sorted(OPEN):
 # pylones electriques (1x2) le long des rues
 def pylon_at(x, y):
     cells = [(x, y), (x, y + 1)]
-    if any(c in OCC or c not in OPEN or c in WAY or c in KEEP for c in cells): return False
+    if any(c in OCC or c not in OPEN or c in WAY or c in KEEP or c in BEACH for c in cells): return False
     claim(x, y, 1, 2, 'pylone'); ARTPLACE[(x, y)] = (slice_tiles(PYL.crop((0, 0, 16, 16))), GRASS); ARTPLACE[(x, y + 1)] = (slice_tiles(PYL.crop((0, 16, 16, 32))), GRASS)
     OPEN.discard((x, y)); OPEN.discard((x, y + 1)); GROUND.pop((x, y), None); GROUND.pop((x, y + 1), None)
     return True
@@ -382,11 +412,27 @@ print('pylones', npl)
 def crystals(cells, prob, tag):
     placed = []
     for c in cells:
-        if c in OCC or c not in OPEN or c in WAY or c in KEEP or rnd.random() > prob: continue
+        if c in OCC or c not in OPEN or c in WAY or c in KEEP or c in BEACH or rnd.random() > prob: continue
         if any(max(abs(c[0] - q[0]), abs(c[1] - q[1])) < 2 for q in placed): continue
         placed.append(c); claim(c[0], c[1], 1, 1, tag); ARTPLACE[c] = (slice_tiles(SM[rnd.randrange(3)]), GROUND[c])
     return placed
 crystals([c for c in sorted(OPEN) if c in GROUND], 0.035, 'topaze')
+
+# ------------------------------------------------------------------ l'ile a brule il y a dix ans : cendres, braises, souches calcinees (surtout autour du manoir)
+WALKART = set()
+rav = random.Random(404)
+for c in sorted(OPEN):
+    if c in OCC or c in ARTPLACE or c in WAY or c in KEEP or c in BEACH or c not in GROUND: continue
+    dm = math.hypot(c[0] - 6.5, c[1] - 11.0)
+    if rav.random() < (0.5 if dm < 6.5 else 0.30 if dm < 9.5 else 0.05):
+        ARTPLACE[c] = (slice_tiles(ASH[rav.randrange(4)]), GRASS); WALKART.add(c)
+ns = 0
+for c in sorted(OPEN):
+    if c in OCC or c in WAY or c in KEEP or c in BEACH or c not in GROUND: continue
+    dm = math.hypot(c[0] - 6.5, c[1] - 11.0)
+    if dm < 9.5 and rav.random() < 0.14 and not any(max(abs(c[0] - p[0]), abs(c[1] - p[1])) < 2 for p in ARTPLACE if p not in WALKART):
+        claim(c[0], c[1], 1, 1, 'souche'); ARTPLACE[c] = (slice_tiles(STUMP[rav.randrange(2)]), GRASS); WALKART.discard(c); ns += 1
+print('souches', ns, 'cendres', len(WALKART))
 
 # ------------------------------------------------------------------ PNJ, panneaux (positions verifiees)
 USED = set()
@@ -410,7 +456,7 @@ for k, c in SIGNS.items(): claim(c[0], c[1], 1, 1, 'panneau: ' + k)
 # ------------------------------------------------------------------ resolution art -> metatuiles, valeurs brutes
 for c, (t4, gid) in sorted(ARTPLACE.items()):
     mid = 640 + art_meta(t4, gid)
-    G[c] = 0x400 | mid
+    G[c] = (0x3000 if c in WALKART else 0x400) | mid
 for k, c in SIGNS.items(): G[c] = remap(0x400 | 3)
 # ---- sentiers : sable d'Emeraude (autotuile) ; ring de pelouse autour du pylone
 PATHC = {c for c in WAY if c in OPEN and c not in OCC and c not in ARTPLACE and not (G[c] & 0xc00)}
@@ -451,12 +497,12 @@ for (x, y) in PATHC:
 for (x, y) in sorted(OPEN):
     c = (x, y)
     if c in PATHC or c in OCC or c in ARTPLACE or c in KEEP or (G[c] & 0xc00): continue
-    if GROUND.get(c) == GRASS and rnd.random() < 0.10: G[c] = remap(0x3000 | 4)
+    if GROUND.get(c) == GRASS and c not in BEACH and rnd.random() < 0.10: G[c] = remap(0x3000 | 4)
 # manoir : dix ans d'abandon, la nature a repris la facade (herbe haute, buissons, fleurs)
 rv = random.Random(88)
 for (x, y) in sorted(OPEN):
     c = (x, y)
-    if not (1 <= x <= 11 and 5 <= y <= 14) or c in PATHC or c in OCC or c in ARTPLACE or c in KEEP or (G[c] & 0xc00): continue
+    if not (1 <= x <= 11 and 5 <= y <= 14) or c in BEACH or c in PATHC or c in OCC or c in ARTPLACE or c in KEEP or (G[c] & 0xc00): continue
     r_ = rv.random()
     if r_ < 0.50: G[c] = remap(0x3000 | 13)
     elif r_ < 0.62: G[c] = remap(0x400 | 5)

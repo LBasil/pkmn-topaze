@@ -53,7 +53,7 @@ for b in d['bg_events']:
 jdump(d, f)
 # ---- textes, soin
 f = 'data/maps/CinnabarIsland/text.inc'; s = open(f).read()
-s = re.sub(r'(CinnabarIsland_Text_IslandSign::\n).*?\$"', r'\1    .string "CHRONDROLIA\\n"\n    .string "The Yellow City of Topaz$"', s, count=1, flags=re.S)
+s = re.sub(r'(CinnabarIsland_Text_IslandSign::\n).*?\$"', r'\1    .string "CHRONDROLIA\\n"\n    .string "The Yellow City, born of the ashes$"', s, count=1, flags=re.S)
 open(f, 'w').write(s)
 f = 'src/data/heal_locations.h'; s = open(f).read()
 x, y = D['center'][0]
