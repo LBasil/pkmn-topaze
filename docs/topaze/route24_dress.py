@@ -198,7 +198,9 @@ for CFG in MAPS:
     for (ex, ey) in EVC:
         r_ = CFG['bg_ring'] if (ex, ey) in BGC else 1
         for a in range(-r_, r_ + 1):
-            for b in range(-r_, r_ + 1): RES.add((ex + a, ey + b))
+            for b in range(-r_, r_ + 1):
+                if CFG['name'] == 'Route25' and ex <= 43 and (a != 0 and b != 0): continue     # foret dense : croix seulement
+                RES.add((ex + a, ey + b))
     def flood(g, s0):
         seen = {s0}; q = collections.deque([s0])
         while q:
@@ -296,7 +298,8 @@ for CFG in MAPS:
         return (a * (1 - fx) + b * fx) * (1 - fy) + (c * (1 - fx) + d * fx) * fy
     def dens(x, y): return 0.62 * vn(LA, x / 4.5, y / 4.5) + 0.38 * vn(LB, x / 2.2 + 9, y / 2.2 + 4)
     PLAIN = CFG['plain']
-    def grass(c): return c in G and c[0] <= CFG['xmax'] and mid(c) in PLAIN and not blocked(c) and c not in RES and c not in CONV and c not in OVER
+    KEEPS = set()          # sentier a garder libre (foret dense)
+    def grass(c): return c in G and c[0] <= CFG['xmax'] and mid(c) in PLAIN and not blocked(c) and c not in RES and c not in CONV and c not in OVER and c not in KEEPS
     def edgeness(c):       # proximite d'une falaise / eau / haie : les arbres aiment les lisieres
         n = 0
         for a in range(-2, 3):
@@ -305,28 +308,30 @@ for CFG in MAPS:
                 if k in G and k != c and (blocked(k) or mid(k) in (113, 114, 117, 112, 115, 343, 318)): n += 1
         return min(1.0, n / 9.0)
     ARTP = {}; OVER = {}; TREES = []; CLUS = []; SHARDS = []     # OVER : cimes qui debordent sur la case du dessus (calque haut, case praticable)
-    def reach_ok(new):       # poser ces cases bloquees ne doit isoler aucune case d'origine encore praticable (verifie a chaque pose)
+    def reach_ok(new, relax=False):       # poser ces cases bloquees ne doit isoler aucune case d'origine encore praticable (verifie a chaque pose)
         seen = {START}; q = collections.deque([START]); nb = set(new)
         while q:
             c = q.popleft()
             for d in ((0, 1), (1, 0), (-1, 0), (0, -1)):
                 n = (c[0] + d[0], c[1] + d[1])
                 if n in G and n not in seen and not blocked(n) and n not in ARTP and n not in nb: seen.add(n); q.append(n)
-        return all(c in seen for c in R0 if c not in CONV and c not in ARTP and c not in nb)
+        return all(c in seen for c in (EVC if relax else R0) if c not in CONV and c not in ARTP and c not in nb and c in R0)
     def tile_ent(t4, slot): return [(640 + NTL + t) | (slot << 12) for t in t4]
     def art_meta(tiles4, slot, bottom):
         key = (tuple(tiles4), slot, tuple(bottom)); return new_meta(list(bottom) + tile_ent(tiles4, slot), 0, key)
     def free_ring(cells, r=1):
         xs = [c[0] for c in cells]; ys = [c[1] for c in cells]
         return {(x, y) for x in range(min(xs) - r, max(xs) + r + 1) for y in range(min(ys) - r, max(ys) + r + 1)} - set(cells)
-    def put_big(x, y, img, kind):
+    ABOVE_OK = {121, 122, 124, 125, 178, 113, 4, 13}
+    def put_big(x, y, img, kind, relax=False):
         cells = [(x + i, y + j) for j in range(2) for i in range(2)]
         if not all(grass(c) and c not in ARTP for c in cells): return False
         tall = img.height == 48                      # arbre : la cime deborde sur la case du dessus (herbe libre exigee)
         above = [(x + i, y - 1) for i in range(2)]
-        if tall and not all(c in G and mid(c) in (PLAIN | {1, 4, 217}) and not blocked(c) and c not in RES and c not in CONV and c not in ARTP and c not in OVER for c in above): return False
+        if tall and not all(c in G and (mid(c) in (PLAIN | {1, 4, 217}) and not blocked(c) or (relax and mid(c) in ABOVE_OK)) and c not in RES and c not in CONV and c not in ARTP and c not in OVER for c in above): return False
         ring = free_ring(cells)
-        if sum(1 for c in ring if c in ARTP) > (3 if kind == 'tree' else 0) or sum(1 for c in ring if c in G and not blocked(c) and c not in ARTP) < 3 or not reach_ok(cells): return False
+        if not relax and (sum(1 for c in ring if c in ARTP) > (3 if kind == 'tree' else 0) or sum(1 for c in ring if c in G and not blocked(c) and c not in ARTP) < 3): return False
+        if not reach_ok(cells, relax): return False
         off = 16 if tall else 0
         for j in range(2):
             for i in range(2):
@@ -338,6 +343,43 @@ for CFG in MAPS:
         if not grass(c) or c in ARTP or not reach_ok([c]): return False
         ARTP[c] = (slice4(small(var)), ART_PAL, mid(c)); SHARDS.append(c); return True
     rnd = random.Random(CFG['seed'])
+    if CFG['name'] == 'Route25':       # foret abandonnee : sentier sinueux libre, tout le reste envahi d'arbres
+        PLAIN.update({4, 13})
+        TRAIL = [(0, 8), (6, 7), (12, 6), (16, 5), (21, 6), (26, 5), (31, 6), (36, 5), (43, 5)]
+        for (x0, y0), (x1, y1) in zip(TRAIL, TRAIL[1:]):
+            for x in range(x0, x1 + 1):
+                yc = y0 + round((y1 - y0) * (x - x0) / max(1, x1 - x0))
+                for dy in (0, 1): KEEPS.add((x, yc + dy))
+        for (ex, ey) in EVC:
+            if ex > 43: continue
+            c = (ex, ey); step = 1 if ey < 6 else -1
+            while c not in KEEPS and 2 <= c[1] <= 9: KEEPS.add(c); c = (c[0], c[1] + step)
+            KEEPS.add((ex, ey))
+        0 and print('DBG', sum(1 for y in range(2,10) for x in range(43) if grass((x,y))), sum(1 for y in range(2,10) for x in range(43) if (x,y) in RES), sorted(set(mid((x,y)) for y in range(2,10) for x in range(43))))
+        rf = random.Random(2512); fc = [(x, y) for y in range(2, 10) for x in range(0, 43)]; rf.shuffle(fc); nf = 0
+        for _pass in range(4):
+            rf.shuffle(fc)
+            for (x, y) in fc:
+                if rf.random() < 0.05: continue
+                if put_big(x, y, TREE_P if rf.random() < 0.5 else TREE_PF, 'tree', relax=True): nf += 1
+        BUSH = set()
+        rb = random.Random(2513)
+        for (x, y) in sorted(fc):
+            c = (x, y)
+            if grass(c) and c not in ARTP and rb.random() < 0.4 + 0.6 * dens(x * 1.5, y * 1.5) and reach_ok([c], True):
+                BUSH.add(c); G[c] = (G0[c] & 0xf000) | 0x400 | 5
+        FR = collections.Counter()
+        for (x, y) in fc:
+            cs = [(x + i, y + j) for j in range(2) for i in range(2)]
+            if all(grass(c) and c not in ARTP for c in cs):
+                ab = [(x + i, y - 1) for i in range(2)]
+                FR['cand'] += 1
+                if not all(c in G and (mid(c) in (PLAIN | {1, 4, 217}) and not blocked(c) or mid(c) in ABOVE_OK) and c not in KEEPS and c not in RES and c not in CONV and c not in ARTP and c not in OVER for c in ab): FR['above'] += 1
+        for (x, y) in fc:
+            cs = [(x + i, y + j) for j in range(2) for i in range(2)]
+            if not all(c in G for c in cs): FR['out'] += 1
+            elif not all(grass(c) and c not in ARTP for c in cs): FR['notgrass'] += 1
+        print('foret', nf, 'sentier', len(KEEPS), dict(FR))
     # amas de cristaux : au pied des falaises / de l'eau, hors des cases d'arbre
     ccand = []
     for y in range(H - 1):
@@ -410,7 +452,7 @@ for CFG in MAPS:
     for c, (t4, slot, m) in ARTP.items(): G[c] = (G0[c] & 0xf000) | 0x400 | art_meta(t4, slot, bottom_of(m))
     # ------------------------------------------------------------------ verifications
     R1 = flood(G, START)
-    lost = {c for c in R0 if c not in R1 and c not in ARTP and c not in CONV}
+    lost = {c for c in (EVC if CFG['name'] == 'Route25' else R0) if c in R0 and c not in R1 and c not in ARTP and c not in CONV}
     assert not lost, ('cases devenues inatteignables', sorted(lost)[:10])
     for ev in EVC: assert ev not in ARTP and ev not in CONV, ('evenement recouvert', ev)
     print(CFG['name'], 'herbe', sum(1 for c in G if c in G and mid(c) in CFG['plain']), sum(1 for c in G if c in RES and mid(c) in CFG['plain']), 'cand', len(cand), dict(REJ), 'arbres', len(TREES), 'amas', len(CLUS), 'eclats', len(SHARDS), '; atteignable', len(R0), '->', len(R1))
