@@ -131,7 +131,8 @@ for y in range(H):
         if ((x - LCX) / LRX) ** 2 + ((y - LCY) / LRY) ** 2 <= k * k: LAKE.add((x, y))
 for c in LAKE: assert c not in OCC, ('lac sur un batiment', c)
 # ---- enclos (zoo du Gardien) : 4x4, haie d'arbres, 2x2 de pelouse ; un panneau devant
-PENS = {'voltorb': (16, 8), 'chansey': (28, 8), 'slowpoke': (3, 16), 'kangaskhan': (42, 17), 'fossil': (9, 18), 'lapras': (38, 18)}
+PENS = {'voltorb': (16, 8), 'chansey': (28, 8), 'fossil': (9, 18)}                     # 3 enclos ; chacun abrite 2 exposants (voir HOST)
+HOST = {'voltorb': 'voltorb', 'slowpoke': 'voltorb', 'chansey': 'chansey', 'kangaskhan': 'chansey', 'fossil': 'fossil', 'lapras': 'fossil'}
 for k, (px, py) in PENS.items(): claim(px, py, 4, 4, 'enclos ' + k)
 # ---- voies : avenue de la porte, anneau autour du lac, routes ouest/est/sud, liaisons aux portes
 RING = []
@@ -147,7 +148,7 @@ for k, ds in D.items():
         for b in (1, 2, 3): WAY.add((x, y + b)); OPEN.add((x, y + b))
 trail([(8, 13), (8, 14), (10, 15)], 0, 77); trail([(39, 14), (39, 15), (36, 16)], 0, 78)
 trail([(12, 7), (12, 10), (14, 13), (17, 14)], 0, 79); trail([(32, 7), (32, 10), (30, 12), (31, 14)], 0, 80)
-trail([(9, 27), (9, 29), (14, 29), (20, 26)], 0, 81); trail([(36, 26), (36, 28), (30, 28), (27, 26)], 0, 82)
+trail([(9, 27), (12, 27), (15, 25), (17, 23)], 0, 81); trail([(36, 26), (33, 26), (30, 25), (27, 24)], 0, 82)
 trail([(4, 5), (4, 12), (8, 14)], 0, 83); trail([(41, 7), (41, 10), (40, 13), (40, 15)], 0, 84)
 for y in range(1, H - 1):
     for x in range(1, W - 1):
@@ -465,7 +466,7 @@ for c, (t4, gid) in sorted(ARTPLACE.items()):
     G[c] = (0x3000 if c in WALKART else 0x400) | mid
 # ------------------------------------------------------------------ PNJ, panneaux, objet cache (positions verifiees)
 # ---- remplissage demande par Basil : rectangles a combler d'arbres (jamais au prix d'un acces : portes, sorties, panneaux des enclos restent atteignables)
-FILL = [(4, 1, 19, 2), (28, 1, 46, 2), (2, 9, 7, 11), (42, 7, 46, 12), (14, 26, 18, 30), (29, 26, 34, 30), (38, 16, 46, 30)]
+FILL = [(4, 1, 19, 2), (28, 1, 46, 2), (2, 9, 7, 11), (42, 7, 46, 12), (14, 26, 18, 30), (29, 26, 34, 30), (38, 16, 46, 30), (43, 2, 46, 7), (2, 15, 8, 21), (2, 28, 15, 30), (35, 27, 38, 30), (37, 26, 38, 26)]
 NEED = set()
 for k_, ds_ in D.items():
     for (x_, y_) in ds_: NEED.add((x_, y_ + 1)); NEED.add((x_, y_))
@@ -500,6 +501,21 @@ for (x0_, y0_, x1_, y1_) in FILL:
             if not conn_with(set()): G[c] = 0; G[c] = remap(0x3000 | GRASS)      # trou a laisser : on remet un sol (case non plantee)
             else: nf += 1
 print('arbres de remplissage', nf)
+# plus aucun trou : toute case libre inaccessible (hors enclos) devient un arbre
+for _ in range(2):
+    st = (24, H - 1); sn = {st}; qq = collections.deque([st])
+    while qq:
+        c = qq.popleft()
+        for d_ in ((0, 1), (1, 0), (-1, 0), (0, -1)):
+            n = (c[0] + d_[0], c[1] + d_[1])
+            if 0 <= n[0] < W and 0 <= n[1] < H and n not in sn and not (G[n] & 0xc00) and n not in LAKE: sn.add(n); qq.append(n)
+    npk = 0
+    for y in range(H):
+        for x in range(W):
+            c = (x, y)
+            if c in sn or c in LAKE or c in OCC or c in ARTPLACE or (G[c] & 0xc00) or c in PENCELLS: continue
+            G[c] = 0x400 | (640 + art_meta(slice_tiles(TREEIMG[rf.randrange(3)]), GRASS)); npk += 1
+    print('poches comblees', npk)
 def _reach0():
     st = (24, H - 1); sn = {st}; qq = collections.deque([st])
     while qq:
@@ -527,23 +543,40 @@ def pick(target, prefer_way=False, r=8):
             if still_connected(c): USED.add(c); BLK.add(c); return c
     raise AssertionError(('pas de case libre pres de', target))
 NPC = {}
-for k, (px, py) in PENS.items():
+for k, h in HOST.items():
+    px, py = PENS[h]
     inner = [(px + 1, py + 1), (px + 2, py + 1), (px + 1, py + 2), (px + 2, py + 2)]
-    NPC['pen_' + k] = inner[0]
+    NPC['pen_' + k] = inner[0] if k == h else inner[3]
 NPC['erik'] = pick((22, 9), True); NPC['youngster'] = pick((19, 12), True); NPC['littleboy'] = pick((9, 13), True)
 NPC['oldman'] = pick((36, 15), True); NPC['tutor'] = pick((12, 14), True); NPC['lass'] = pick((30, 13), True)
-NPC['tree1'] = pick((14, 4)); NPC['tree2'] = pick((36, 8)); NPC['tree3'] = pick((15, 26)); NPC['tree4'] = pick((42, 27))
+NPC['tree1'] = pick((14, 4)); NPC['tree2'] = pick((36, 8)); NPC['tree3'] = pick((16, 25), False, 10); NPC['tree4'] = pick((44, 14), False, 10)
 NPC['hidden'] = pick((13, 10), False, 12)
 SIGNS = {}
 gx, gy = D['gym'][0]
 SIGNS['city'] = pick((22, 8), True, 4); SIGNS['safarizone'] = pick((19, 7), True, 4); SIGNS['safarigame'] = pick((29, 7), True, 4)
-SIGNS['gym'] = (gx + 2, gy + 1); SIGNS['warden'] = pick((D['warden'][0][0] + 2, D['warden'][0][1] + 1), True, 3)
-for k, (px, py) in PENS.items(): SIGNS['pen_' + k] = pick((px + 1, py + 4), True, 3)
+SIGNS['gym'] = (gx - 2, gy + 1); SIGNS['warden'] = pick((D['warden'][0][0] + 2, D['warden'][0][1] + 1), True, 3)
+for k, h in HOST.items(): SIGNS['pen_' + k] = pick((PENS[h][0] + (1 if k == h else 3), PENS[h][1] + 4), True, 4)
 assert SIGNS['gym'] in OPEN and SIGNS['gym'] not in OCC and SIGNS['gym'] not in ARTPLACE, SIGNS['gym']
 USED.add(SIGNS['gym']); BLK.add(SIGNS['gym'])
 for k, c in SIGNS.items(): claim(c[0], c[1], 1, 1, 'panneau: ' + k); G[c] = remap(0x400 | 3)
 # ------------------------------------------------------------------ accessibilite (depart : couloir sud ; les autres sorties et toutes les portes doivent etre atteignables)
 def raw_blocked(c): return bool(G[c] & 0xc00) or c in LAKE
+# dernier passage : les poches creees par les panneaux / PNJ sont plantees aussi (aucun trou)
+_tn = [m_ for m_ in range(3)]
+for _ in range(3):
+    st = (24, H - 1); sn = {st}; qq = collections.deque([st])
+    while qq:
+        c = qq.popleft()
+        for d_ in ((0, 1), (1, 0), (-1, 0), (0, -1)):
+            n = (c[0] + d_[0], c[1] + d_[1])
+            if 0 <= n[0] < W and 0 <= n[1] < H and n not in sn and not (G[n] & 0xc00) and n not in LAKE: sn.add(n); qq.append(n)
+    npk = 0
+    for y in range(H):
+        for x in range(W):
+            c = (x, y)
+            if c in sn or c in LAKE or c in OCC or c in ARTPLACE or (G[c] & 0xc00) or c in PENCELLS or c in USED: continue
+            G[c] = 0x400 | (640 + art_meta(slice_tiles(TREEIMG[(x + y) % 3]), GRASS)); npk += 1
+    if not npk: break
 START = (24, H - 1)
 seen = {START}; q = collections.deque([START])
 while q:
