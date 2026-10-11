@@ -15,11 +15,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE15",
-      "offset": 40,
-      "direction": "left"
-    },
-    {
       "map": "MAP_ROUTE13",
       "offset": 0,
       "direction": "right"
@@ -238,7 +233,64 @@
       "flag": "0"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 0,
+      "y": 47,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE15",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 0,
+      "y": 48,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE15",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 0,
+      "y": 50,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE15",
+      "dest_warp_id": "7"
+    },
+    {
+      "x": 0,
+      "y": 51,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE15",
+      "dest_warp_id": "8"
+    },
+    {
+      "x": 0,
+      "y": 52,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE15",
+      "dest_warp_id": "9"
+    },
+    {
+      "x": 0,
+      "y": 53,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE15",
+      "dest_warp_id": "10"
+    },
+    {
+      "x": 0,
+      "y": 54,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE15",
+      "dest_warp_id": "11"
+    },
+    {
+      "x": 0,
+      "y": 56,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE15",
+      "dest_warp_id": "12"
+    }
+  ],
   "coord_events": [],
   "bg_events": [
     {
