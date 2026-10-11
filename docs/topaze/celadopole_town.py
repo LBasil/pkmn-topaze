@@ -1,7 +1,7 @@
 # CELADOPOLE (ex-Celadon / Celadon City, LAYOUT_CELADON_CITY 60x40) : la grande ville marchande de Kanto, 10 ans apres l'aura.
 # Les batiments qui ont un interieur (grand magasin, copropriete + jardin de toit, Centre, casino + salle des lots, arene, restaurant, maison, hotel)
 # sont recopies de la carte FireRed puis REPLACES dans une composition organique ; les ~13 batiments decoratifs sans porte disparaissent
-# (regle « chaque maison sert a quelque chose ») : la nature a repris leur place (forets d'arbres FR, cristaux d'amethyste, pelouse).
+# (regle « chaque maison sert a quelque chose ») : la nature a repris leur place (forets d'arbres FR, cristaux de quartz (blanc/rose, coeur d'amethyste), pelouse).
 # Couleurs = celles de la Route 18 (teinte amethyste identique). Tilesets propres (copies de General + CeladonCity, eau animee conservee).
 # Idempotent : part de route21_src/cel_orig.bin. Lancer depuis la racine : python3 docs/topaze/celadopole_town.py puis celadopole_events.py
 import struct, json, random, os, shutil, math, colorsys, collections
@@ -327,10 +327,10 @@ for (x, y) in P2:
 print('troncs', len(TRUNK))
 assert NEED | NEED_GATE <= reach(), 'acces perdu apres les troncs'
 # ------------------------------------------------------------------ art procedural
-PAL = [(0, 0, 0), (64, 44, 92), (214, 198, 236), (198, 180, 224), (170, 150, 200), (238, 228, 250), (118, 82, 168), (168, 127, 200), (209, 172, 237), (122, 108, 146),
+PAL = [(0, 0, 0), (64, 44, 92), (238, 224, 238), (222, 206, 230), (190, 170, 208), (252, 244, 252), (118, 82, 168), (168, 127, 200), (209, 172, 237), (122, 108, 146),
        (96, 70, 120), (150, 130, 180), (230, 220, 244), (186, 166, 214), (140, 120, 170), (80, 56, 110)]
-PAL_C = [(0, 0, 0), (30, 10, 52), (94, 44, 142), (142, 84, 202), (188, 132, 236), (228, 200, 252), (252, 242, 255), (46, 36, 112), (84, 72, 172),
-         (132, 122, 222), (198, 192, 250), (40, 30, 66), (214, 64, 152), (176, 168, 192), (96, 88, 118), (255, 246, 200)]
+PAL_C = [(0, 0, 0), (88, 56, 112), (214, 176, 206), (242, 218, 234), (255, 244, 250), (255, 255, 255), (196, 238, 252), (60, 44, 120), (96, 70, 176),
+         (150, 120, 226), (214, 200, 252), (60, 44, 84), (232, 120, 176), (190, 178, 204), (110, 100, 132), (255, 246, 200)]   # quartz laiteux / rose, coeur d'amethyste (7-10)
 def newimg(w, h): return Image.new('P', (w, h), 0)
 def prism(d, x, base, w, h):
     half = max(2, w // 2); top = base - h; sh = top + max(3, half + 1)
@@ -352,7 +352,7 @@ def small(var):
     else: prism(d, 8, 15, 8, 14); d.rectangle((2, 13, 4, 14), fill=13); d.rectangle((12, 12, 14, 14), fill=13); d.point((13, 11), fill=14)
     return im
 def formation():
-    """grande formation d'amethyste 2x2 (32x32) : socle de roche, geodes, 5 prismes"""
+    """grande formation de quartz (coeur d'amethyste) 2x2 (32x32) : socle de roche, geodes, 5 prismes"""
     im = newimg(32, 32); d = ImageDraw.Draw(im)
     d.ellipse((1, 24, 31, 32), fill=11)
     d.rectangle((3, 26, 28, 30), fill=14, outline=1); d.line([(4, 27), (27, 27)], fill=13); d.rectangle((4, 29, 27, 29), fill=11)

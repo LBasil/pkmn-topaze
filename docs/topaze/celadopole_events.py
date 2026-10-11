@@ -41,7 +41,7 @@ for b in d['bg_events']:
 for o in d['object_events']: o['elevation'] = 0
 jdump(d, f)
 f = 'data/maps/CeladonCity/text.inc'; s = open(f).read()
-s = s.replace('The City of Rainbow Dreams', 'The Amethyst Dream City'); open(f, 'w').write(s)
+s = s.replace('The City of Rainbow Dreams', 'The Crystal Quartz Town').replace('The Amethyst Dream City', 'The Crystal Quartz Town'); open(f, 'w').write(s)
 f = 'src/data/heal_locations.json'; h = json.load(open(f)); x, y = D['center'][0]
 for e in h['heal_locations']:
     if e['id'] == 'HEAL_LOCATION_CELADON_CITY': e['x'], e['y'] = x, y + 1
