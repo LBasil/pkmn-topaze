@@ -60,7 +60,8 @@ def ents_of(m):
     return list(SEC_ENT[(remap(0x3000 | m) & 0x3ff) - 640])
 
 # ------------------------------------------------------------------ plan
-W, H = 40, 36
+W, H = 24, 20                        # meme gabarit que l'ile d'origine (Cinnabar 24x20) : une ile ne s'etend pas
+TX, TY = 9, 12                       # pylone-monument 3x3
 G = {}; OCC = {}
 for y in range(H):
     for x in range(W): G[(x, y)] = 0
@@ -123,47 +124,43 @@ for P in (PALS_P, PALS_S):
     for i in range(16): P[i] = [P[i][0]] + [topaze(c) for c in P[i][1:]]
 
 
-# ---- terre et mer : mer au nord (arrivee de la Route 21 par ponton), baie a l'est (la Route 20), cote decoupee au sud ; foret sur les flancs
-def nshore(x): return 4.2 + 1.0 * math.sin(x * 0.31 + 0.6) + 0.8 * math.sin(x * 0.13 + 2.2)
-def sshore(x): return 27.4 + 1.8 * math.sin(x * 0.33 + 1.0) + 1.3 * math.sin(x * 0.11 + 4.0)
+# ---- terre et mer : mer au nord (arrivee de la Route 21 par ponton), baie a l'est (la Route 20), cote au sud ; un peu de foret dans les coins
+def nshore(x): return 2.7 + 0.5 * math.sin(x * 0.5 + 0.6)
+def sshore(x): return 17.6 + 0.5 * math.sin(x * 0.45 + 1.0)
 BAY = set()
-for y in range(12, H):
-    for x in range(26, W):
-        a = math.atan2((y - 22.0) / 7.2, (x - 38.5) / 8.4)
+for y in range(9, H):
+    for x in range(19, W):
+        a = math.atan2((y - 13.5) / 5.0, (x - 25.0) / 5.2)
         k = 1 + 0.10 * (math.sin(2 * a + 1.3) + 0.6 * math.sin(3 * a + 0.4)) / 2
-        if ((x - 38.5) / 8.4) ** 2 + ((y - 22.0) / 7.2) ** 2 <= k * k: BAY.add((x, y))
+        if ((x - 25.0) / 5.2) ** 2 + ((y - 13.5) / 5.0) ** 2 <= k * k: BAY.add((x, y))
 LAND = {(x, y) for y in range(H) for x in range(W) if nshore(x) <= y <= sshore(x) and (x, y) not in BAY}
 SEA = {(x, y) for y in range(H) for x in range(W)} - LAND
-# zones ouvertes
-blob(20, 14.5, 15.5, 7.2, 51, amp=0.10)
-blob(7, 11, 7.0, 5.0, 52, amp=0.12); blob(30, 11.5, 6.5, 5.0, 53, amp=0.12)
-rect(18, 5, 21, 9)
-for y in range(21, 30):
-    for x in range(3, 36):
-        if (x, y) in LAND and y <= sshore(x) - 0.8: OPEN.add((x, y))
+blob(12, 10.5, 10.3, 6.3, 51, amp=0.08)
+rect(8, 3, 10, 9)
 # ---- batiments (decors de Mauville : maison -> labo, salle de jeux -> manoir en ruine, arene, centre, boutique)
-D['mansion'] = chunk(5, 10, 7, 5, 3, 7, 'manoir')
-D['lab'] = chunk(18, 11, 4, 4, 12, 8, 'labo')
-D['gym'] = chunk(5, 1, 6, 5, 27, 7, 'arene')
-D['center'] = chunk(21, 2, 4, 4, 12, 16, 'centre')
-D['mart'] = chunk(22, 11, 4, 4, 26, 16, 'boutique')
+D['mansion'] = chunk(5, 10, 7, 5, 1, 4, 'manoir')
+D['lab'] = chunk(18, 11, 4, 4, 11, 4, 'labo')
+D['gym'] = chunk(5, 1, 6, 5, 16, 4, 'arene')
+D['center'] = chunk(21, 2, 4, 4, 3, 11, 'centre')
+D['mart'] = chunk(22, 11, 4, 4, 15, 11, 'boutique')
 for k, v in D.items(): print(k, v)
 for c in OCC: assert c in LAND, ('batiment hors terre', c, OCC[c])
-# ---- voies : avenue du ponton, place du pylone, rue des facades, promenade du rivage, acces aux portes
-trail([(19, 5), (19, 9), (20, 13), (20, 16)], 1, 61)
-blob(20, 19.5, 3.7, 3.4, 64, amp=0.08, way=True)
-trail([(2, 14), (7, 14), (12, 13), (17, 14), (23, 13), (28, 14), (31, 13)], 0, 62)
-trail([(3, 23), (9, 22), (15, 23), (21, 22), (27, 23), (31, 22)], 0, 63)
+# ---- voies : avenue du ponton, rue des facades, promenade du rivage, liaisons, place du pylone
+trail([(9, 3), (9, 8), (9, 10)], 0, 61)
+trail([(1, 10), (6, 10), (11, 9), (17, 10), (20, 10), (20, 11)], 0, 62)
+trail([(1, 16), (6, 16), (11, 16), (17, 16), (19, 16)], 0, 63)
+trail([(7, 10), (7, 13), (7, 16)], 0, 65); trail([(13, 10), (14, 13), (14, 16)], 0, 66)
+blob(TX + 1, TY + 1, 2.8, 2.8, 64, amp=0.05)
 for k, ds in D.items():
     for (x, y) in ds:
         for a in (0,):
-            for b in (1, 2):
+            for b in (1, 2, 3):
                 if (x + a, y + b) not in OCC and (x + a, y + b) in LAND: OPEN.add((x + a, y + b)); WAY.add((x + a, y + b))
 # pontons : nord (la Route 21 arrive par la mer), est (la Route 20)
 PIER1 = []
-for x in (19, 20):
-    PIER1 += [(x, y) for y in range(2, 12) if (x, y) in SEA]
-PIER2 = [(x, 22) for x in range(28, 38) if (x, 22) in SEA]
+for x in (9, 10):
+    PIER1 += [(x, y) for y in range(1, 6) if (x, y) in SEA]
+PIER2 = [(x, 11) for x in range(19, 23) if (x, 11) in SEA]
 BRIDGEC = set(PIER1) | set(PIER2); PIER1_SET = set(PIER1)
 for c in BRIDGEC: claim(c[0], c[1], 1, 1, 'ponton')
 OPEN = {c for c in OPEN if c in LAND}
@@ -384,8 +381,8 @@ for (x, y) in list(G):
 
 # ------------------------------------------------------------------ placement de l'art
 TOWER = tower(); PYL = pylon()
-rect(18, 17, 22, 21, False)
-art_block(TOWER, 3, 3, 19, 18, 'pylone-monument')
+rect(TX - 1, TY - 1, TX + 3, TY + 3, False)
+art_block(TOWER, 3, 3, TX, TY, 'pylone-monument')
 KEEP = set()
 for k, ds in D.items():
     for (x, y) in ds:
@@ -394,10 +391,7 @@ for k, ds in D.items():
 for c in list(BRIDGEC):
     for a in range(-1, 2):
         for b in range(-1, 2): KEEP.add((c[0] + a, c[1] + b))
-for x in range(17, 24):
-    for y in range(5, 17): KEEP.add((x, y))
-for c in sorted(OPEN):
-    if c[1] in (13, 22) and c in WAY: KEEP.add(c)
+for c in WAY: KEEP.add(c)
 # pylones electriques (1x2) le long des rues
 def pylon_at(x, y):
     cells = [(x, y), (x, y + 1)]
@@ -406,7 +400,7 @@ def pylon_at(x, y):
     OPEN.discard((x, y)); OPEN.discard((x, y + 1)); GROUND.pop((x, y), None); GROUND.pop((x, y + 1), None)
     return True
 npl = 0
-for (x, y) in ((16, 10), (24, 10), (9, 15), (24, 14), (33, 14), (7, 19), (17, 24), (23, 24), (31, 24), (12, 24), (5, 24), (35, 10), (3, 15)):
+for (x, y) in ((2, 12), (6, 12), (13, 12), (14, 14), (20, 6), (1, 7), (12, 3), (19, 14), (2, 15)):
     if pylon_at(x, y): npl += 1
 print('pylones', npl)
 def crystals(cells, prob, tag):
@@ -423,14 +417,14 @@ WALKART = set()
 rav = random.Random(404)
 for c in sorted(OPEN):
     if c in OCC or c in ARTPLACE or c in WAY or c in KEEP or c in BEACH or c not in GROUND: continue
-    dm = math.hypot(c[0] - 6.5, c[1] - 11.0)
-    if rav.random() < (0.5 if dm < 6.5 else 0.30 if dm < 9.5 else 0.05):
+    dm = math.hypot(c[0] - 4.5, c[1] - 8.0)
+    if rav.random() < (0.5 if dm < 4.5 else 0.25 if dm < 7 else 0.03):
         ARTPLACE[c] = (slice_tiles(ASH[rav.randrange(4)]), GRASS); WALKART.add(c)
 ns = 0
 for c in sorted(OPEN):
     if c in OCC or c in WAY or c in KEEP or c in BEACH or c not in GROUND: continue
-    dm = math.hypot(c[0] - 6.5, c[1] - 11.0)
-    if dm < 9.5 and rav.random() < 0.14 and not any(max(abs(c[0] - p[0]), abs(c[1] - p[1])) < 2 for p in ARTPLACE if p not in WALKART):
+    dm = math.hypot(c[0] - 4.5, c[1] - 8.0)
+    if dm < 7 and rav.random() < 0.14 and not any(max(abs(c[0] - p[0]), abs(c[1] - p[1])) < 2 for p in ARTPLACE if p not in WALKART):
         claim(c[0], c[1], 1, 1, 'souche'); ARTPLACE[c] = (slice_tiles(STUMP[rav.randrange(2)]), GRASS); WALKART.discard(c); ns += 1
 print('souches', ns, 'cendres', len(WALKART))
 
@@ -448,10 +442,10 @@ def pick(target, prefer_way=False, r=8):
     assert best, ('pas de case libre pres de', target)
     USED.add(best[1]); return best[1]
 NPC = {}
-NPC['woman'] = pick((15, 14)); NPC['oldman'] = pick((10, 13))
-NPC['bill'] = (19, PIER1[0][1] + 1) if False else (19, 3); NPC['gull'] = (21, 3)
+NPC['woman'] = pick((14, 12)); NPC['oldman'] = pick((6, 13))
+NPC['bill'] = (9, 2); NPC['gull'] = (12, 2)
 gx, gy = D['gym'][0]; lx, ly = D['lab'][0]
-SIGNS = {'city': pick((17, 8), r=6), 'lab1': pick((lx + 3, ly + 1), r=4), 'lab2': pick((lx - 3, ly + 1), r=4), 'gym': pick((gx + 3, gy + 1), r=4)}
+SIGNS = {'city': pick((7, 5), r=6), 'lab1': pick((lx + 3, ly + 1), r=4), 'lab2': pick((lx - 3, ly + 1), r=4), 'gym': pick((gx + 3, gy + 1), r=4)}
 for k, c in SIGNS.items(): claim(c[0], c[1], 1, 1, 'panneau: ' + k)
 # ------------------------------------------------------------------ resolution art -> metatuiles, valeurs brutes
 for c, (t4, gid) in sorted(ARTPLACE.items()):
@@ -460,7 +454,7 @@ for c, (t4, gid) in sorted(ARTPLACE.items()):
 for k, c in SIGNS.items(): G[c] = remap(0x400 | 3)
 # ---- sentiers : sable d'Emeraude (autotuile) ; ring de pelouse autour du pylone
 PATHC = {c for c in WAY if c in OPEN and c not in OCC and c not in ARTPLACE and not (G[c] & 0xc00)}
-RING = {(x, y) for x in range(18, 23) for y in range(17, 22)} - {(x, y) for x in range(19, 22) for y in range(18, 21)}
+RING = {(x, y) for x in range(TX - 1, TX + 4) for y in range(TY - 1, TY + 4)} - {(x, y) for x in range(TX, TX + 3) for y in range(TY, TY + 3)}
 PATHC -= RING
 def _free(c):
     return (c not in RING and c in OPEN and c not in OCC and c not in ARTPLACE and not (G[c] & 0xc00) and 0 <= c[0] < W and 0 <= c[1] < H)
@@ -502,7 +496,7 @@ for (x, y) in sorted(OPEN):
 rv = random.Random(88)
 for (x, y) in sorted(OPEN):
     c = (x, y)
-    if not (1 <= x <= 11 and 5 <= y <= 14) or c in BEACH or c in PATHC or c in OCC or c in ARTPLACE or c in KEEP or (G[c] & 0xc00): continue
+    if not (1 <= x <= 9 and 3 <= y <= 12) or c in BEACH or c in PATHC or c in OCC or c in ARTPLACE or c in KEEP or (G[c] & 0xc00): continue
     r_ = rv.random()
     if r_ < 0.50: G[c] = remap(0x3000 | 13)
     elif r_ < 0.62: G[c] = remap(0x400 | 5)

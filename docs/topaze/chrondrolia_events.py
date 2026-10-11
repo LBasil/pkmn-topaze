@@ -3,43 +3,36 @@
 import json, re, struct
 D = json.load(open('/tmp/chrondrolia_doors.json')); N = json.load(open('/tmp/chrondrolia_npc.json'))
 S = json.load(open('/tmp/chrondrolia_signs.json')); M = json.load(open('/tmp/chrondrolia_misc.json'))
-Wd, Ht = 40, 36
+Wd, Ht = 24, 20
 def warp(x, y, dest, wid, el=0): return {"x": x, "y": y, "elevation": el, "dest_map": dest, "dest_warp_id": str(wid)}
 def jdump(o, f): json.dump(o, open(f, 'w'), indent=2); open(f, 'a').write('\n')
 # ---- cases de mer au bord de la carte
 lay = {l.get('id'): l for l in json.load(open('data/layouts/layouts.json'))['layouts'] if l.get('id')}
 g = struct.unpack('<%dH' % (Wd * Ht), open('data/layouts/CinnabarIsland/map.bin', 'rb').read())
 def is_sea(x, y): return (g[y * Wd + x] >> 12) == 1 and (g[y * Wd + x] & 0xc00) == 0 and (x, y) not in {tuple(p) for p in M['pier1'] + M['pier2']}
-NORTH = [x for x in range(16, 24) if is_sea(x, 0)]
-EAST = [y for y in range(16, 30) if is_sea(Wd - 1, y)]
-assert len(NORTH) == 8 and len(EAST) >= 8, (NORTH, EAST)
-R21 = list(range(14, 24)); R20 = list(range(0, 20))
+R21W = list(range(0, 5)) + list(range(14, 24))              # Route 21 Sud : cases d'eau de la rangee du bas (meme largeur 24 : x identique)
+NORTH = [x for x in R21W if is_sea(x, 0)]
+EAST = [y for y in range(Ht) if is_sea(Wd - 1, y)]            # Route 20 : colonne x=0, meme hauteur 20 : y identique
+assert NORTH == R21W and len(EAST) >= 8, (NORTH, EAST)
 # ---- Chrondrolia
 W = [None] * 5
 W[0] = warp(*D['mansion'][0], 'MAP_POKEMON_MANSION_1F', 1); W[1] = warp(*D['gym'][0], 'MAP_CINNABAR_ISLAND_GYM', 1)
 W[2] = warp(*D['lab'][0], 'MAP_CINNABAR_ISLAND_POKEMON_LAB_ENTRANCE', 1); W[3] = warp(*D['center'][0], 'MAP_CINNABAR_ISLAND_POKEMON_CENTER_1F', 0)
 W[4] = warp(*D['mart'][0], 'MAP_CINNABAR_ISLAND_MART', 1)
-for k, x in enumerate(NORTH): W.append(warp(x, 0, 'MAP_ROUTE21_SOUTH', k))                     # ids 5..12 ; dest_warp_id fixe plus bas
-for k, y in enumerate(EAST): W.append(warp(Wd - 1, y, 'MAP_ROUTE20', 0))                         # ids 13.. (dest fixee plus bas)
-r21 = {x: min(max(x, 16), 23) - 16 for x in R21}                                                 # x de la Route 21 -> indice de la case d'arrivee nord
 f = 'data/maps/CinnabarIsland/map.json'; d = json.load(open(f))
-# Route 21 Sud : warps sur la rangee du bas (x 14..23), destination = case de mer nord de Chrondrolia
 r = json.load(open('data/maps/Route21_South/map.json'))
-base21 = len([w for w in r['warp_events'] if w['dest_map'] != 'MAP_CINNABAR_ISLAND'])
-r['warp_events'] = [w for w in r['warp_events'] if w['dest_map'] != 'MAP_CINNABAR_ISLAND'] + [warp(x, 49, 'MAP_CINNABAR_ISLAND', 5 + r21[x]) for x in R21]
+keep21 = [w for w in r['warp_events'] if w['dest_map'] != 'MAP_CINNABAR_ISLAND']; base21 = len(keep21)
+r['warp_events'] = keep21 + [warp(x, 49, 'MAP_CINNABAR_ISLAND', 5 + NORTH.index(x)) for x in NORTH]
 r['connections'] = [cn for cn in r['connections'] if cn['map'] != 'MAP_CINNABAR_ISLAND']
 jdump(r, 'data/maps/Route21_South/map.json')
-for k, x in enumerate(NORTH): W[5 + k]['dest_warp_id'] = str(base21 + (min(max(16 + k, 14), 23) - 14))
-# Route 20 : colonne de gauche (x=0)
+for x in NORTH: W.append(warp(x, 0, 'MAP_ROUTE21_SOUTH', base21 + NORTH.index(x)))
 r = json.load(open('data/maps/Route20/map.json'))
-base20 = len([w for w in r['warp_events'] if w['dest_map'] != 'MAP_CINNABAR_ISLAND'])
-ne = len(EAST)
-r20 = {y: round(y * (ne - 1) / 19) for y in R20}
-r['warp_events'] = [w for w in r['warp_events'] if w['dest_map'] != 'MAP_CINNABAR_ISLAND'] + [warp(0, y, 'MAP_CINNABAR_ISLAND', 13 + r20[y]) for y in R20]
+keep20 = [w for w in r['warp_events'] if w['dest_map'] != 'MAP_CINNABAR_ISLAND']; base20 = len(keep20)
+e0 = 5 + len(NORTH)
+r['warp_events'] = keep20 + [warp(0, y, 'MAP_CINNABAR_ISLAND', e0 + EAST.index(y)) for y in EAST]
 r['connections'] = [cn for cn in r['connections'] if cn['map'] != 'MAP_CINNABAR_ISLAND']
 jdump(r, 'data/maps/Route20/map.json')
-for k in range(ne):
-    ys = [y for y in R20 if r20[y] == k]; W[13 + k]['dest_warp_id'] = str(base20 + ys[len(ys) // 2])
+for y in EAST: W.append(warp(Wd - 1, y, 'MAP_ROUTE20', base20 + EAST.index(y)))
 d['warp_events'] = W; d['connections'] = []
 # ---- PNJ
 pos = {'OBJ_EVENT_GFX_WOMAN_2': N['woman'], 'OBJ_EVENT_GFX_OLD_MAN_1': N['oldman'], 'OBJ_EVENT_GFX_BILL': N['bill'], 'OBJ_EVENT_GFX_SEAGALLOP': N['gull']}
