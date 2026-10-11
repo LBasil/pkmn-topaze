@@ -94,22 +94,12 @@ road([(29, 9), (29, 17)]); road([(30, 9), (30, 17)])
 road([(11, 8), (11, 17)]); road([(7, 16), (7, 17)])
 road([(8, 25), (8, 26)]); road([(17, 25), (17, 26)]); road([(33, 25), (33, 26)])
 road([(8, 26), (34, 26)])
-for k, (x, y) in DOOR.items():
-    for b in (1, 2): WAY.add((x, y + b))
-    for a in (-1, 1): WAY.add((x + a, y + 1))
-for k, (ox, oy, cw, ch, dx, dy) in BUILD.items():                  # parvis sur toute la facade (sauf la tour : cloture du cimetiere)
-    if k != 'tower':
-        for x in range(dx, dx + cw): WAY.add((x, dy + ch))
+for k, (x, y) in DOOR.items():                                      # parvis 3 de large x 2 de profondeur centre sur la porte
+    if k == 'tower': continue
+    for b in (1, 2):
+        for a in (-1, 0, 1): WAY.add((x + a, y + b))
 for c in (EXITS['N'] + EXITS['S'] + EXITS['W']): WAY.add(c)
-for _ in range(3):                                                    # fermeture : plus de petites encoches de pelouse dans les voies
-    add_ = set()
-    for y in range(1, H - 1):
-        for x in range(1, W - 1):
-            c = (x, y)
-            if c in WAY or c in OCC: continue
-            nb = [(x - 1, y) in WAY, (x + 1, y) in WAY, (x, y - 1) in WAY, (x, y + 1) in WAY]
-            if (nb[0] and nb[1]) or (nb[2] and nb[3]) or sum(nb) >= 3: add_.add(c)
-    WAY |= add_
+for c in [(9, 8), (5, 16), (10, 16), (6, 25), (15, 25), (31, 25)]: WAY.discard(c)   # croix bleues de Basil
 WAY -= {c for c in WAY if c in OCC}
 # ---- art
 def newimg(w, h): return Image.new('P', (w, h), 0)
@@ -272,6 +262,7 @@ rnd.shuffle(cands)
 def pine_cells(x, y): return [(x + i, y + j) for i in (0, 1) for j in (0, 1)]
 PUNITS = {(x, y) for (x, y) in [(x, y) for y in range(0, H, 2) for x in range(0, W, 2)] if G[(x, y)] == PINE[0] and G[(x + 1, y + 1)] == PINE[3]}
 pcount = 0
+if not any(c in OCC or c in WAY for c in pine_cells(2, 8)): pine(2, 8); PUNITS.add((2, 8))   # rond vert de Basil
 for _ in range(4):                      # bosquets : les pins FR n'existent qu'en masse, rattaches a la bordure (leur fond sombre se fond dans la masse)
     order = [(x, y) for y in range(2, H - 3, 2) for x in range(2, W - 3, 2)]; rnd.shuffle(order)
     for (x, y) in order:

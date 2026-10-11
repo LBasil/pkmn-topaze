@@ -121,3 +121,6 @@ Voies redressees : route ouest droite (y18..19) alignee sur la sortie ouest (0,1
 
 ### Spinellia v6
 Parvis sur toute la facade de chaque batiment (sauf la tour) + fermeture morphologique des voies (plus d'encoches). Rendu `reference/spinellia_v6.png`.
+
+### Spinellia v7
+Retour de Basil sur v6 : suppression des parvis pleine facade et de la fermeture morphologique ; parvis 3 de large x 2 de profondeur centres sur chaque porte (hors tour), cases marquees d'une croix retirees, pin ajoute a gauche (unite 2,8).
