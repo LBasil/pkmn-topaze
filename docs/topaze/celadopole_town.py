@@ -15,19 +15,22 @@ def readpal(p):
 def writepal(p, cols): open(p, 'w').write('JASC-PAL\r\n0100\r\n16\r\n' + ''.join('%d %d %d\r\n' % tuple(c) for c in cols))
 def hls(c): h, l, s = colorsys.rgb_to_hls(c[0] / 255, c[1] / 255, c[2] / 255); return h * 360, l, s
 def rgb(h, l, s): r, g, b = colorsys.hls_to_rgb((h % 360) / 360, max(0, min(1, l)), max(0, min(1, s))); return int(r * 255 + .5), int(g * 255 + .5), int(b * 255 + .5)
-def tint_amethyst(c):
-    """identique a la Route 18 : jaunes/verts -> lilas, verts sombres -> indigo, bleus legerement decales ; rouges et gris inchanges"""
+def tint_snow(c):
+    """BOURG QUARTZ = ville de glace (arene de GRIM) : herbes/sable -> neige blanc-bleute, arbres -> pins givres bleu-ardoise, eau -> bleu glace ; rouges/gris inchanges"""
     h, l, s = hls(c)
     if s < 0.08: return c
-    if 28 <= h < 70 and s > 0.1: return rgb(284, min(1, l * 1.0 + 0.02), min(0.5, s * 0.6 + 0.05))
-    if 70 <= h <= 175: return rgb(274, min(1, l + 0.03), min(0.7, s * 0.6 + 0.05)) if l > 0.42 else rgb(258, min(1, l * 1.18), min(0.8, s * 0.9))
-    if 180 <= h <= 235: return rgb(h + 8, l, s)
+    if 28 <= h < 70 and s > 0.1: return rgb(208, min(0.96, l * 0.55 + 0.45), 0.28)
+    if 70 <= h <= 175:
+        if l > 0.5: return rgb(206, min(0.97, 0.80 + (l - 0.5) * 0.35), 0.45)
+        if l > 0.34: return rgb(204, 0.62 + (l - 0.34) * 0.9, 0.34)
+        return rgb(212, min(0.5, l * 1.35), 0.38)
+    if 180 <= h <= 235: return rgb(h - 4, min(0.92, l + 0.1), s * 0.8)
     return c
 for src, dst in ((SP, NP), (SS, NS)):
     shutil.rmtree(dst, ignore_errors=True); os.makedirs(dst + 'palettes')
     for f in ('metatiles.bin', 'metatile_attributes.bin', 'tiles.png'): shutil.copy(src + f, dst + f)
     for i in range(16):
-        pp = readpal(src + 'palettes/%02d.pal' % i); writepal(dst + 'palettes/%02d.pal' % i, [pp[0]] + [tint_amethyst(c) for c in pp[1:16]])
+        pp = readpal(src + 'palettes/%02d.pal' % i); writepal(dst + 'palettes/%02d.pal' % i, [pp[0]] + [tint_snow(c) for c in pp[1:16]])
 pmt = open(SP + 'metatiles.bin', 'rb').read()
 smt = bytearray(open(NS + 'metatiles.bin', 'rb').read()); satt = list(struct.unpack('<%dI' % (len(smt) // 16), open(NS + 'metatile_attributes.bin', 'rb').read()))
 NMT = len(smt) // 16; simg = Image.open(NS + 'tiles.png'); NTL = (simg.width // 8) * (simg.height // 8)
@@ -327,10 +330,10 @@ for (x, y) in P2:
 print('troncs', len(TRUNK))
 assert NEED | NEED_GATE <= reach(), 'acces perdu apres les troncs'
 # ------------------------------------------------------------------ art procedural
-PAL = [(0, 0, 0), (64, 44, 92), (238, 224, 238), (222, 206, 230), (190, 170, 208), (252, 244, 252), (118, 82, 168), (168, 127, 200), (209, 172, 237), (122, 108, 146),
-       (96, 70, 120), (150, 130, 180), (230, 220, 244), (186, 166, 214), (140, 120, 170), (80, 56, 110)]
-PAL_C = [(0, 0, 0), (88, 56, 112), (214, 176, 206), (242, 218, 234), (255, 244, 250), (255, 255, 255), (196, 238, 252), (60, 44, 120), (96, 70, 176),
-         (150, 120, 226), (214, 200, 252), (60, 44, 84), (232, 120, 176), (190, 178, 204), (110, 100, 132), (255, 246, 200)]   # quartz laiteux / rose, coeur d'amethyste (7-10)
+PAL = [(0, 0, 0), (52, 62, 96), (206, 216, 232), (188, 200, 222), (150, 166, 198), (240, 246, 255), (96, 112, 160), (140, 160, 196), (176, 196, 226), (110, 122, 150),
+       (80, 92, 126), (130, 146, 178), (226, 234, 248), (170, 184, 210), (120, 136, 168), (66, 78, 112)]
+PAL_C = [(0, 0, 0), (52, 70, 120), (150, 190, 232), (206, 230, 250), (240, 250, 255), (255, 255, 255), (176, 240, 255), (70, 50, 130), (112, 86, 190),
+         (168, 140, 232), (214, 204, 252), (70, 86, 124), (232, 120, 176), (170, 186, 214), (96, 110, 146), (255, 246, 200)]   # quartz-glace, coeur d'amethyste discret (7-10)
 def newimg(w, h): return Image.new('P', (w, h), 0)
 def prism(d, x, base, w, h):
     half = max(2, w // 2); top = base - h; sh = top + max(3, half + 1)
@@ -352,7 +355,7 @@ def small(var):
     else: prism(d, 8, 15, 8, 14); d.rectangle((2, 13, 4, 14), fill=13); d.rectangle((12, 12, 14, 14), fill=13); d.point((13, 11), fill=14)
     return im
 def formation():
-    """grande formation de quartz (coeur d'amethyste) 2x2 (32x32) : socle de roche, geodes, 5 prismes"""
+    """grande formation de quartz-glace 2x2 (32x32) : socle de roche, geodes, 5 prismes"""
     im = newimg(32, 32); d = ImageDraw.Draw(im)
     d.ellipse((1, 24, 31, 32), fill=11)
     d.rectangle((3, 26, 28, 30), fill=14, outline=1); d.line([(4, 27), (27, 27)], fill=13); d.rectangle((4, 29, 27, 29), fill=11)
