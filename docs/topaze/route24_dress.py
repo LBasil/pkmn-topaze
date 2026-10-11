@@ -28,6 +28,14 @@ def mauve(c):
     if s > 0.12 and (h < 50 or h > 330): return rgb(312, l, min(0.5, s * 0.8))
     return c
 p1 = readpal(NP + 'palettes/01.pal'); writepal(NP + 'palettes/01.pal', [p1[0]] + [mauve(c) for c in p1[1:15]] + [p1[15]])
+# chaumiere de Bill (palettes secondaires 9..12, utilisees seulement par la maison) : delabree par 10 ans d'abandon (ternie, grisee, mousse)
+def decay(c):
+    h, l, s = hls(c)
+    if s < 0.05 and l > 0.93: return (176, 172, 150)        # blanc -> crepi sale
+    if 70 < h < 170: return rgb(62, l * 0.62, s * 0.48)     # vert -> mousse olive
+    return rgb(h, l * 0.68, s * 0.3)                        # reste : ternes, fanes
+for i in (9, 10, 11, 12):
+    pp = readpal(NS + 'palettes/%02d.pal' % i); writepal(NS + 'palettes/%02d.pal' % i, [pp[0]] + [decay(c) for c in pp[1:15]] + [pp[15]])
 # ------------------------------------------------------------------ tilesets : etat de depart (le secondaire recoit l'art + le pont)
 smt = bytearray(open(NS + 'metatiles.bin', 'rb').read()); satt = bytearray(open(NS + 'metatile_attributes.bin', 'rb').read())
 NMT = len(smt) // 16; simg = Image.open(NS + 'tiles.png'); NTL = (simg.width // 8) * (simg.height // 8)
@@ -169,7 +177,7 @@ for m in BRIDGE:
     base = (m - 640) * 16
     smt[base:base + 16] = struct.pack('<8H', *((WATER_BOT if m in WATER_UNDER else GRASS_BOT) + top))
 MAPS = [dict(name='Route24', W=24, H=40, src=SRC + 'map_orig.bin', start=(11, 38), seed=2405, ntree=20, nclus=3, clus_gap=7, xmax=99, plain={8, 9, 16, 17}, bg_ring=1, align=0),
-        dict(name='Route25', W=72, H=20, src=SRC + 'map25_orig.bin', start=(0, 8), seed=2507, ntree=22, nclus=5, clus_gap=7, xmax=42, plain={1, 8, 9, 16, 17}, bg_ring=0, align=3)]
+        dict(name='Route25', W=72, H=20, src=SRC + 'map25_orig.bin', start=(0, 8), seed=2507, ntree=22, nclus=5, clus_gap=7, xmax=61, plain={1, 8, 9, 16, 17}, bg_ring=0, align=3)]
 OUT = {}
 for CFG in MAPS:
     # ------------------------------------------------------------------ carte
@@ -261,16 +269,17 @@ for CFG in MAPS:
         for x in range(2, 8):
             if G0[(x, 5)] & 0x3ff in (8, 9) and (x, 5) not in RES and rt.random() < 0.4: setm((x, 5), 13)
 
-        # --- 10 ans plus tard (l'aura qui a mute les types) : chaumiere de Bill vieillie
-        # bassin ouest asseche (meme sable que le jardin central), clotures percees, deux arbres tombes
-        for y in (9, 10, 11):
-            for x in range(43, 49):
-                src_x = 49 if x == 43 else (53 if x == 48 else 50)
-                G[(x, y)] = G0[(src_x, y)]
-        for (x, y) in ((45, 4), (46, 4), (57, 4), (58, 4)): setm((x, y), gm(x, y))
-        for tx in (45, 58):
-            for ty in (1, 2, 3):
-                for dx in (0, 1): setm((tx + dx, ty), gm(tx + dx, ty))
+        # --- 10 ans plus tard (l'aura qui a mute les types) : la chaumiere de Bill est abandonnee, la vegetation a tout repris
+        rv = random.Random(2511)
+        for y in range(5, 8):          # le chemin de gravier disparait sous l'herbe
+            for x in range(43, 62):
+                if G0[(x, y)] & 0x3ff in (354, 355, 356, 362, 363, 364, 370, 371, 372): setm((x, y), gm(x, y))
+        for y in (9, 10, 11):          # bassin ouest et jardin de sable : herbe (le bassin est comble)
+            for x in range(43, 54):
+                if G0[(x, y)] & 0x3ff in (421, 422, 423, 429, 430, 431, 437, 438, 439, 211, 212, 213, 219, 220, 221, 227, 228, 229, 307, 743) or True: setm((x, y), gm(x, y))
+        for x in range(43, 62):        # cloture a moitie effondree (haut) et trouee (bas)
+            if G0[(x, 4)] & 0x3ff == 231 and (x, 4) not in RES and rv.random() < 0.7: setm((x, 4), gm(x, 4))
+            if G0[(x, 12)] & 0x3ff == 307 and G0[(x, 13)] & 0x3ff == 743 and rv.random() < 0.4: setm((x, 12), gm(x, 12)); setm((x, 13), gm(x, 13))
 
     # ------------------------------------------------------------------ vegetation par bruit de densite
     def lattice(seed, n=64):
@@ -369,17 +378,23 @@ for CFG in MAPS:
         if grass(c) and c not in ARTP and rnd.random() < 0.07 and not any((c[0] + a, c[1] + b) in ARTP for a in (-1, 0, 1) for b in (-1, 0, 1)): put_small(c, rnd.randrange(3))
     for c in sorted(G):
         if grass(c) and c not in ARTP and dens(c[0] * 1.7 + 30, c[1] * 1.7 + 7) > 0.64 and rnd.random() < 0.75: setm(c, 4)
-    if CFG['name'] == 'Route25':       # la nature reprend la chaumiere : fleurs, herbe haute aux trouees, eclats de cristal
+    if CFG['name'] == 'Route25':       # chaumiere abandonnee : bosquets serres, herbe haute partout, fleurs, cristaux
         ra = random.Random(2510)
+        ZONE = [(x, y) for y in range(5, 14) for x in range(43, 62)]
+        ra.shuffle(ZONE); ntz = 0
+        for (x, y) in ZONE:
+            if ntz >= 11: break
+            if any(max(abs(tx - x), abs(ty - y)) < 2 or ((abs(tx - x) == 0 or abs(ty - y) == 0) and max(abs(tx - x), abs(ty - y)) <= 2) for tx, ty in TREES if tx >= 43): continue
+            if put_big(x, y, TREE_P if ra.random() < 0.5 else TREE_PF, 'tree'): TREES.append((x, y)) if False else None; ntz += 1
+        print('arbres chaumiere', ntz)
         def old(c): return c in G and 43 <= c[0] <= 61 and mid(c) in (PLAIN | {1}) and not blocked(c) and c not in RES and c not in CONV and c not in ARTP and c not in OVER
         for c in sorted(G):
             if not old(c): continue
-            near_gap = min(abs(c[0] - gx) + abs(c[1] - gy) for gx, gy in ((45, 4), (46, 4), (57, 4), (58, 4)))
             r = ra.random()
-            if near_gap <= 2 and c[1] <= 6 and r < 0.55: setm(c, 13)
-            elif r < 0.16: setm(c, 4)
-        for c in ((44, 7), (47, 6), (56, 7), (60, 6), (43, 8), (59, 8)):
-            if old(c) and reach_ok([c]) and not any((c[0] + a, c[1] + b) in ARTP for a in (-1, 0, 1) for b in (-1, 0, 1)):
+            if r < 0.62: setm(c, 13)
+            elif r < 0.76: setm(c, 4)
+        for c in sorted(G):
+            if old(c) and ra.random() < 0.09 and reach_ok([c]) and not any((c[0] + a, c[1] + b) in ARTP for a in (-1, 0, 1) for b in (-1, 0, 1)):
                 ARTP[c] = (slice4(small(ra.randrange(3))), ART_PAL, mid(c)); SHARDS.append(c)
     # pose finale des metatuiles d'art (collision : tout bloque ; les cimes qui debordent restent praticables)
     for c, (t4, slot) in OVER.items(): G[c] = (G[c] & 0xfc00) | art_meta(t4, slot, bottom_of(mid(c)))
