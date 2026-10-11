@@ -87,7 +87,7 @@ def ents_of(m):
     return list(SEC_ENT[(remap(0x3000 | m) & 0x3ff) - 640])
 
 # ------------------------------------------------------------------ plan
-W, H = 24, 20                        # meme gabarit que l'ile d'origine (Cinnabar 24x20) : une ile ne s'etend pas
+W, H = 28, 20                        # hauteur d'origine (Cinnabar 24x20) ; +4 colonnes a l'est pour la maison des habitants (demande de Basil)
 TX, TY = 9, 12                       # pylone-monument 3x3
 G = {}; OCC = {}
 for y in range(H):
@@ -158,9 +158,9 @@ def sshore(x): return 17.6 + 0.5 * math.sin(x * 0.45 + 1.0)
 BAY = set()
 for y in range(9, H):
     for x in range(19, W):
-        a = math.atan2((y - 13.5) / 5.0, (x - 25.0) / 5.2)
+        a = math.atan2((y - 13.5) / 5.0, (x - 29.0) / 5.2)
         k = 1 + 0.10 * (math.sin(2 * a + 1.3) + 0.6 * math.sin(3 * a + 0.4)) / 2
-        if ((x - 25.0) / 5.2) ** 2 + ((y - 13.5) / 5.0) ** 2 <= k * k: BAY.add((x, y))
+        if ((x - 29.0) / 5.2) ** 2 + ((y - 13.5) / 5.0) ** 2 <= k * k: BAY.add((x, y))
 LAND = {(x, y) for y in range(H) for x in range(W) if nshore(x) <= y <= sshore(x) and (x, y) not in BAY}
 SEA = {(x, y) for y in range(H) for x in range(W)} - LAND
 blob(12, 10.5, 10.3, 6.3, 51, amp=0.08)
@@ -171,11 +171,12 @@ D['lab'] = chunk(18, 11, 4, 4, 11, 4, 'labo')
 D['gym'] = chunk(5, 1, 6, 5, 16, 4, 'arene')
 D['center'] = chunk(21, 2, 4, 4, 3, 11, 'centre')
 D['mart'] = chunk(22, 11, 4, 4, 15, 11, 'boutique')
+D['house'] = chunk(31, 11, 4, 4, 23, 4, 'maison')
 for k, v in D.items(): print(k, v)
 for c in OCC: assert c in LAND, ('batiment hors terre', c, OCC[c])
 # ---- voies : avenue du ponton, rue des facades, promenade du rivage, liaisons, place du pylone
 trail([(9, 3), (9, 8), (9, 10)], 0, 61)
-trail([(1, 10), (6, 10), (11, 9), (17, 10), (20, 10), (20, 11)], 0, 62)
+trail([(1, 10), (6, 10), (11, 9), (17, 10), (24, 10), (24, 11)], 0, 62)
 trail([(1, 16), (6, 16), (11, 16), (17, 16), (19, 16)], 0, 63)
 trail([(7, 10), (7, 13), (7, 16)], 0, 65); trail([(13, 10), (14, 13), (14, 16)], 0, 66)
 blob(TX + 1, TY + 1, 2.8, 2.8, 64, amp=0.05)
@@ -188,7 +189,7 @@ for k, ds in D.items():
 PIER1 = []
 for x in (9, 10):
     PIER1 += [(x, y) for y in range(1, 6) if (x, y) in SEA]
-PIER2 = [(x, 11) for x in range(19, 23) if (x, 11) in SEA]
+PIER2 = [(x, 11) for x in range(19, 28) if (x, 11) in SEA]
 BRIDGEC = set(PIER1) | set(PIER2); PIER1_SET = set(PIER1)
 for c in BRIDGEC: claim(c[0], c[1], 1, 1, 'ponton')
 OPEN = {c for c in OPEN if c in LAND}
