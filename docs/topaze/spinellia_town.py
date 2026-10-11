@@ -58,7 +58,7 @@ def chunk(ox, oy, cw, ch, dx, dy, name):
     claim(dx, dy, cw, ch, name)
     for j in range(ch):
         for i in range(cw): G[(dx + i, dy + j)] = ov(ox + i, oy + j)
-BUILD = {'tower': (15, 0, 7, 7, 27, 2), 'center': (4, 1, 4, 5, 9, 3), 'vol': (8, 8, 5, 4, 5, 12), 'house1': (3, 13, 5, 4, 6, 21), 'house2': (8, 13, 5, 4, 15, 21), 'mart': (18, 12, 4, 4, 31, 21)}
+BUILD = {'tower': (15, 0, 7, 7, 27, 2), 'center': (4, 2, 4, 4, 9, 4), 'vol': (8, 8, 5, 4, 5, 12), 'house1': (3, 13, 5, 4, 6, 21), 'house2': (8, 13, 5, 4, 15, 21), 'mart': (18, 12, 4, 4, 31, 21)}
 DOOR = {'tower': (30, 8), 'center': (11, 7), 'vol': (7, 15), 'house1': (8, 24), 'house2': (17, 24), 'mart': (33, 24)}
 for k, (ox, oy, cw, ch, dx, dy) in BUILD.items(): chunk(ox, oy, cw, ch, dx, dy, k)
 for i in range(5): G[(15 + i, 21)] = ov(3 + i, 13)                  # maison 2 : meme rangee de toit que la maison 1 (supprime la frise de pierres flottante)
@@ -311,6 +311,16 @@ for _ in range(3):
 r = start_reach()
 assert NEED <= r, ('inaccessible', sorted(NEED - r))
 for c in sorted(free_cells() - r): print('poche restante', c)
+# ---- pas de pin isole : une unite interieure doit toucher au moins 2 autres unites (bordure comprise)
+changed = True
+while changed:
+    changed = False
+    for (x, y) in sorted(PUNITS):
+        if x in (0, W - 2) or y in (0, H - 2): continue
+        n = sum(1 for q in ((x - 2, y), (x + 2, y), (x, y - 2), (x, y + 2)) if q in PUNITS or not (0 <= q[0] < W and 0 <= q[1] < H))
+        if n < 2:
+            PUNITS.discard((x, y)); changed = True
+            for c in pine_cells(x, y): OCC.pop(c, None); G[c] = grass(*c)
 # ---- pins FR : variantes de bord (gauche/droite) et rangee de troncs sous les masses (tuiles 0x24..0x27)
 P = {c for c, n in OCC.items() if n == 'pin'}
 def is_pine(c): return c in P or not (0 <= c[0] < W and 0 <= c[1] < H)
@@ -330,6 +340,7 @@ for (x, y) in P2:
     left = (x % 2 == 0) and not ((x - 1, y) in P2 or not (0 <= x - 1 < W))
     right = (x % 2 == 1) and not ((x + 1, y) in P2 or not (0 <= x + 1 < W))
     base = {'T': (0x14, 0x15, 0x16, 0x17), 'B': (0x1c, 0x1d, 0x1e, 0x1f), 'K': (0x24, 0x25, 0x26, 0x27)}[role]
+    if role == 'T' and (x, y - 1) not in P2 and 0 <= y - 1: base = (0x0e, 0x0f, 0x0e, 0x0f)
     G[(x, y)] = 0x400 | (base[2] if left else base[3] if right else base[x % 2])
 print('troncs', len(TRUNK))
 # ---- ecriture des metatuiles

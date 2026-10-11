@@ -112,3 +112,6 @@ Les pins FR (unites 2x2 avec fond sombre tramé) ne sont plus poses isoles : uni
 
 ### Spinellia v3 (pins FR corrects + toit)
 Les masses de pins utilisent maintenant les vraies familles de tuiles FireRed : haut 0x14/0x15, bas 0x1c/0x1d, **rangee de troncs** 0x24/0x25 sous la derniere ligne, et variantes de bord gauche/droit (0x16/0x1e/0x26 et 0x17/0x1f/0x27). Retuilage automatique apres placement (`spinellia_town.py`, section « pins FR »). Toit pyramidal d'ardoise + plateforme a creneaux + fleche de spinelle sur la tour (art procedural 7x2 au-dessus de la corniche). Rendu `reference/spinellia_v3.png`.
+
+### Spinellia v4
+Lisieres de forets : premiere rangee d'une masse = tuiles de cime 0x0e/0x0f (sans bande sombre) ; pins isoles supprimes (une unite doit toucher >= 2 autres unites, bordure comprise) ; toit du Centre : rangee de bord de pierre retiree (chunk 4x4). Rendu `reference/spinellia_v4.png`.
