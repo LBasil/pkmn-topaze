@@ -76,7 +76,7 @@ for P in (PALS_P, PALS_S):
     for i in range(16): P[i] = [P[i][0]] + [amethyste(x) for x in P[i][1:]]
 
 # ------------------------------------------------------------------ plan (48 x 40, comme Parmanie d'origine : 3 sorties - sud Route 19, ouest Route 18, est Route 15)
-W, H = 48, 40
+W, H = 48, 32
 G = {}; OCC = {}
 for y in range(H):
     for x in range(W): G[(x, y)] = 0
@@ -99,8 +99,9 @@ def trail(pts, wd, seed):
                 for dx in range(-wd, wd + 1):
                     if dx * dx + dy * dy <= wd * wd + r.choice((0, 0, 1)) and 0 <= int(cx) + dx < W and 0 <= int(cy) + dy < H: OPEN.add((int(round(cx)) + dx, int(round(cy)) + dy))
                     if math.hypot(int(round(cx)) + dx - cx, int(round(cy)) + dy - cy) <= 1.0: WAY.add((int(round(cx)) + dx, int(round(cy)) + dy))
+RECTS = []
 def chunk(x0, y0, cw, ch, dx, dy, name):
-    claim(dx, dy, cw, ch, name); doors = []
+    claim(dx, dy, cw, ch, name); doors = []; RECTS.append((dx, dy, cw, ch))
     for j in range(ch):
         for i in range(cw):
             v = fr(x0 + i, y0 + j)
@@ -108,20 +109,20 @@ def chunk(x0, y0, cw, ch, dx, dy, name):
             put(dx + i, dy + j, remap_chunk(v))
     return doors
 D = {}
-DOME = (8, 2, 3, 5); FLAT = (44, 3, 3, 4)                      # maisons de Sootopolis : dôme (porte (9,6)) / plate (porte (45,6))
+DOME = (8, 3, 3, 4); FLAT = (44, 3, 3, 4)                      # maisons de Sootopolis : dôme (porte (9,6)) / plate (porte (45,6))
 D['safari'] = None
-D['warden'] = chunk(*DOME, 11, 2, 'maison du Gardien')
+D['warden'] = chunk(*DOME, 11, 3, 'maison du Gardien')
 D['office'] = chunk(*FLAT, 31, 3, 'bureau du Safari')
-D['house1'] = chunk(*FLAT, 3, 6, 'maison 1')
-D['house2'] = chunk(*DOME, 40, 2, 'maison 2')
-D['mart'] = chunk(16, 26, 4, 4, 7, 11, 'boutique')
-D['center'] = chunk(42, 28, 4, 4, 38, 11, 'centre')
-D['gym'] = chunk(28, 28, 6, 5, 6, 29, 'arene')
-D['house3'] = chunk(*DOME, 35, 30, 'maison 3')
-claim(20, 2, 8, 5, 'porte du Safari'); D['safari'] = [(24, 6)]
+D['house1'] = chunk(*FLAT, 3, 5, 'maison 1')
+D['house2'] = chunk(*DOME, 40, 3, 'maison 2')
+D['mart'] = chunk(16, 27, 4, 3, 7, 10, 'boutique')
+D['center'] = chunk(42, 28, 4, 4, 38, 10, 'centre')
+D['gym'] = chunk(28, 28, 6, 5, 6, 22, 'arene')
+D['house3'] = chunk(*DOME, 35, 22, 'maison 3')
+claim(20, 2, 8, 5, 'porte du Safari'); D['safari'] = [(24, 6), (23, 6)]
 for k, v in D.items(): print(k, v)
 # ---- lac au centre ; pelouse partout ailleurs
-LCX, LCY, LRX, LRY = 24.0, 22.0, 8.2, 5.4
+LCX, LCY, LRX, LRY = 24.0, 17.0, 8.2, 4.4
 LAKE = set()
 for y in range(H):
     for x in range(W):
@@ -130,7 +131,7 @@ for y in range(H):
         if ((x - LCX) / LRX) ** 2 + ((y - LCY) / LRY) ** 2 <= k * k: LAKE.add((x, y))
 for c in LAKE: assert c not in OCC, ('lac sur un batiment', c)
 # ---- enclos (zoo du Gardien) : 4x4, haie d'arbres, 2x2 de pelouse ; un panneau devant
-PENS = {'voltorb': (16, 8), 'chansey': (29, 9), 'slowpoke': (3, 22), 'kangaskhan': (43, 24), 'fossil': (9, 25), 'lapras': (38, 27)}
+PENS = {'voltorb': (16, 8), 'chansey': (28, 8), 'slowpoke': (3, 16), 'kangaskhan': (42, 17), 'fossil': (9, 18), 'lapras': (38, 18)}
 for k, (px, py) in PENS.items(): claim(px, py, 4, 4, 'enclos ' + k)
 # ---- voies : avenue de la porte, anneau autour du lac, routes ouest/est/sud, liaisons aux portes
 RING = []
@@ -138,23 +139,23 @@ for k in range(0, 49):
     a = 2 * math.pi * k / 48
     RING.append((int(round(LCX + (LRX + 3.0) * math.cos(a))), int(round(LCY + (LRY + 3.0) * math.sin(a)))))
 trail(RING, 0, 71)
-trail([(24, 7), (24, 12), (24, 14)], 0, 72)
-trail([(0, 19), (4, 19), (8, 20), (11, 19), (13, 21), (14, 22)], 0, 73); trail([(47, 21), (43, 21), (39, 22), (36, 21), (34, 22)], 0, 74)
-trail([(24, 31), (23, 34), (24, 36), (23, 39)], 0, 75)
+trail([(22, 7), (22, 9)], 0, 72)
+trail([(0, 14), (4, 14), (8, 15), (11, 14), (13, 16), (14, 17)], 0, 73); trail([(47, 14), (43, 14), (40, 15), (36, 14), (34, 16)], 0, 74)
+trail([(24, 24), (23, 26), (24, 28), (23, 31)], 0, 75)
 for k, ds in D.items():
     for (x, y) in ds:
         for b in (1, 2, 3): WAY.add((x, y + b)); OPEN.add((x, y + b))
-trail([(8, 15), (8, 17), (10, 19)], 0, 77); trail([(39, 15), (39, 17), (36, 20)], 0, 78)
-trail([(12, 7), (12, 10), (14, 14), (17, 17)], 0, 79); trail([(32, 7), (32, 10), (30, 14), (31, 17)], 0, 80)
-trail([(9, 34), (9, 36), (14, 36), (20, 33)], 0, 81); trail([(36, 35), (36, 37), (30, 37), (27, 34)], 0, 82)
-trail([(4, 10), (4, 14), (8, 19)], 0, 83); trail([(41, 7), (41, 10), (40, 14), (40, 19)], 0, 84)
+trail([(8, 13), (8, 14), (10, 15)], 0, 77); trail([(39, 14), (39, 15), (36, 16)], 0, 78)
+trail([(12, 7), (12, 10), (14, 13), (17, 14)], 0, 79); trail([(32, 7), (32, 10), (30, 12), (31, 14)], 0, 80)
+trail([(9, 27), (9, 29), (14, 29), (20, 26)], 0, 81); trail([(36, 26), (36, 28), (30, 28), (27, 26)], 0, 82)
+trail([(4, 9), (4, 12), (8, 14)], 0, 83); trail([(41, 7), (41, 10), (40, 13), (40, 15)], 0, 84)
 for y in range(1, H - 1):
     for x in range(1, W - 1):
         if (x, y) not in OCC and (x, y) not in LAKE: OPEN.add((x, y))
 for (x, y) in list(OPEN):
     if (x, y) in OCC or (x, y) in LAKE: OPEN.discard((x, y)); WAY.discard((x, y))
 # sorties : couloirs ouverts jusqu'au bord de la carte
-EXITS = {'S': [(x, y) for x in range(20, 28) for y in range(36, H)], 'W': [(x, y) for x in range(0, 4) for y in range(18, 21)], 'E': [(x, y) for x in range(44, W) for y in range(20, 23)]}
+EXITS = {'S': [(x, y) for x in range(20, 28) for y in range(28, H)], 'W': [(x, y) for x in range(0, 4) for y in range(13, 16)], 'E': [(x, y) for x in range(44, W) for y in range(13, 16)]}
 for ex in EXITS.values():
     for c in ex:
         if c not in OCC and c not in LAKE: OPEN.add(c)
@@ -169,6 +170,11 @@ for (x, y) in sorted(WAY):
     for c in ((x + 1, y), (x, y + 1)):
         if 1 <= c[0] < W - 1 and 1 <= c[1] < H - 1 and c not in OCC and c not in LAKE and not (c[1] > 35 and c[0] not in range(21, 27)): WAY.add(c); OPEN.add(c)
 # forecourt devant chaque porte
+# esplanade pavee autour de chaque batiment (les angles clairs des decors de Sootopolis se fondent dans le pave)
+for (rx_, ry_, rw_, rh_) in RECTS:
+    for y in range(ry_ - 1, ry_ + rh_ + 1):
+        for x in range(rx_ - 1, rx_ + rw_ + 1):
+            if 2 <= x < W - 2 and 1 <= y < H - 1 and (x, y) not in OCC and (x, y) not in LAKE: WAY.add((x, y)); OPEN.add((x, y))
 OPEN -= set(OCC); OPEN -= LAKE; WAY &= OPEN
 
 def newimg(w, h): return Image.new('P', (w, h), 0)
@@ -243,6 +249,7 @@ def small(var):
 # ------------------------------------------------------------------ sol : pelouse violette, pave clair sur les voies, haies d'arbres, murs de quai
 PAVE = (729, 729, 729, 729, 731, 732, 740)                       # pave creme de Sootopolis (variantes)
 TREE = (487, 468)                                                # arbres d'Emeraude (bloquants)
+TREES = set()
 GROUND = {}
 for (x, y) in sorted(OPEN):
     if (x, y) in WAY: G[(x, y)] = remap(0x3000 | rnd.choice(PAVE)); GROUND[(x, y)] = PAVE[0]
@@ -258,25 +265,25 @@ for y in range(H):
         c = (x, y)
         if c in OCC or c in LAKE or c in EXSET: continue
         edge = x < 2 or y < 1 or x >= W - 2 or y >= H - 1
-        if edge: G[c] = 0x400 | rnd.choice(TREE) ; OPEN.discard(c); WAY.discard(c); BEACH.discard(c); RAIL.discard(c)
+        if edge: TREES.add(c) ; OPEN.discard(c); WAY.discard(c); BEACH.discard(c); RAIL.discard(c)
 # les couloirs : 2 rangees d'arbres de chaque cote
 for ex_name, ex in EXITS.items():
     xs = [c[0] for c in ex]; ys = [c[1] for c in ex]
     if ex_name == 'S':
-        for y in range(34, H):
+        for y in range(26, H):
             for x in (19, 28):
-                if (x, y) not in OCC: G[(x, y)] = 0x400 | rnd.choice(TREE); OPEN.discard((x, y)); WAY.discard((x, y))
+                if (x, y) not in OCC: TREES.add((x, y)); OPEN.discard((x, y)); WAY.discard((x, y))
     else:
         for x in (range(0, 8) if ex_name == 'W' else range(40, W)):
-            for y in (17, 21) if ex_name == 'W' else (19, 23):
-                if (x, y) not in OCC and (x, y) not in LAKE: G[(x, y)] = 0x400 | rnd.choice(TREE); OPEN.discard((x, y)); WAY.discard((x, y))
+            for y in (12, 16):
+                if (x, y) not in OCC and (x, y) not in LAKE: TREES.add((x, y)); OPEN.discard((x, y)); WAY.discard((x, y))
 # ---- enclos : haie d'arbres, pelouse a l'interieur
 PENCELLS = {}
 for k, (px, py) in PENS.items():
     for j in range(4):
         for i in range(4):
             c = (px + i, py + j)
-            if i in (0, 3) or j in (0, 3): G[c] = 0x400 | rnd.choice(TREE)
+            if i in (0, 3) or j in (0, 3): TREES.add(c)
             else: G[c] = remap(0x3000 | GRASS); PENCELLS[c] = k
             OPEN.discard(c)
 # ------------------------------------------------------------------ art
@@ -304,7 +311,7 @@ def art_block(im, bw, bh, x0, y0, name, gid, claimed=False):
             if sum(1 for p in blk.getdata() if p) < 10: G[(x0 + i, y0 + j)] = 0x400 | remap(0x3000 | gid); OPEN.discard((x0 + i, y0 + j)); WAY.discard((x0 + i, y0 + j)); continue
             ARTPLACE[(x0 + i, y0 + j)] = (slice_tiles(blk), gid); OPEN.discard((x0 + i, y0 + j)); WAY.discard((x0 + i, y0 + j))
 art_block(gate(), 8, 5, 20, 2, 'porte du Safari', PAVE[0], claimed=True)
-WALKART.add((24, 6))
+WALKART.add((24, 6)); WALKART.add((23, 6))
 MONO = monolith()
 MX, MY = 23, 8
 for j in range(3):
@@ -319,13 +326,13 @@ for k, ds in D.items():
 for ex in EXITS.values(): KEEP |= set(ex)
 def near_way(c, r=1): return any((c[0] + a, c[1] + b) in WAY for a in range(-r, r + 1) for b in range(-r, r + 1))
 # ---- bosquets (groupes d'arbres) dans les coins de pelouse
-for (cx, cy, rx, ry, sd) in ((5, 14, 2.6, 3.4, 1), (43, 14, 2.4, 3.6, 2), (13, 31, 3.0, 2.2, 3), (44, 33, 2.6, 2.6, 4), (14, 12, 2.2, 1.8, 5), (35, 8, 2.0, 1.6, 6)):
+for (cx, cy, rx, ry, sd) in ((5, 11, 2.6, 2.2, 1), (43, 10, 2.0, 2.2, 2), (14, 27, 3.0, 2.2, 3), (44, 26, 2.6, 2.4, 4), (14, 6, 2.0, 1.6, 5), (36, 16, 1.5, 1.5, 6)):
     rr = random.Random(900 + sd)
     for y in range(int(cy - ry) - 1, int(cy + ry) + 2):
         for x in range(int(cx - rx) - 1, int(cx + rx) + 2):
             c = (x, y)
             if ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 > 1 or c not in OPEN or c in OCC or c in WAY or c in KEEP or c in BEACH or near_way(c) or rr.random() > 0.8: continue
-            G[c] = 0x400 | rr.choice(TREE); OPEN.discard(c)
+            TREES.add(c); OPEN.discard(c)
 # ---- cristaux d'amethyste (pelouse, loin des voies) et arbres isoles
 placed = []
 for c in sorted(OPEN, key=lambda c: rnd.random()):
@@ -335,7 +342,19 @@ for c in sorted(OPEN, key=lambda c: rnd.random()):
     if r_ < 0.05 and not any(max(abs(c[0] - q[0]), abs(c[1] - q[1])) < 3 for q in placed):
         placed.append(c); claim(c[0], c[1], 1, 1, 'cristal'); ARTPLACE[c] = (slice_tiles(SM[rnd.randrange(3)]), GRASS)
     elif r_ < 0.14 and not any((c[0] + a, c[1] + b) in OCC for a in (-1, 0, 1) for b in (-1, 0, 1)):
-        G[c] = 0x400 | rnd.choice(TREE)
+        TREES.add(c); OPEN.discard(c)
+def tree_img(var):
+    """arbre d'amethyste 1x1 (16x16) : houppier rond indigo, reflets lilas, petit tronc"""
+    im = newimg(16, 16); d = ImageDraw.Draw(im)
+    shadow(d, 2, 12, 15, 16)
+    d.rectangle((7, 10, 9, 14), fill=14, outline=1)
+    d.ellipse((0, 0, 15, 12), fill=8, outline=1)
+    d.ellipse((7, 4, 14, 11), fill=7)
+    d.ellipse((2, 1, 9, 7), fill=9)
+    for (x, y) in (((4, 2), (6, 3), (3, 5)), ((5, 2), (3, 4), (7, 5)), ((4, 3), (7, 2), (3, 6)))[var]: d.point((x, y), fill=10)
+    d.point((11, 7 + var), fill=12 if var == 1 else 3)
+    return im
+TREEIMG = [tree_img(0), tree_img(1), tree_img(2)]
 def wall_img(sides):
     """mur de quai en pierre lilas : bordure surelevee du cote du lac"""
     im = newimg(16, 16); d = ImageDraw.Draw(im)
@@ -363,6 +382,10 @@ for c in sorted(RAIL):
         diag = [(a, b) for a in (-1, 1) for b in (-1, 1) if (c[0] + a, c[1] + b) in LAKE]
         a, b = diag[0]; sides = (b == -1, b == 1, a == -1, a == 1)
     claim(c[0], c[1], 1, 1, 'mur de quai'); ARTPLACE[c] = (slice_tiles(wall_img(sides)), GROUND.get(c, GRASS))
+rt = random.Random(77)
+for c in sorted(TREES):
+    if c in ARTPLACE or c in OCC and OCC[c] != 'enclos' and False: continue
+    ARTPLACE[c] = (slice_tiles(TREEIMG[rt.randrange(3)]), GRASS); OPEN.discard(c); WAY.discard(c)
 
 # ------------------------------------------------------------------ eau : lac (procedural, statique ; eau animee = a faire)
 class Ext:
@@ -433,33 +456,47 @@ for c, (t4, gid) in sorted(ARTPLACE.items()):
     mid = 640 + art_meta(t4, gid)
     G[c] = (0x3000 if c in WALKART else 0x400) | mid
 # ------------------------------------------------------------------ PNJ, panneaux, objet cache (positions verifiees)
+def _reach0():
+    st = (24, H - 1); sn = {st}; qq = collections.deque([st])
+    while qq:
+        c = qq.popleft()
+        for d_ in ((0, 1), (1, 0), (-1, 0), (0, -1)):
+            n = (c[0] + d_[0], c[1] + d_[1])
+            if 0 <= n[0] < W and 0 <= n[1] < H and n not in sn and not (G[n] & 0xc00) and n not in LAKE: sn.add(n); qq.append(n)
+    return sn
+REACH0 = _reach0()
 USED = set()
-def free_cell(c): return c in OPEN and c not in OCC and c not in ARTPLACE and c not in USED and not (G[c] & 0xc00) and c not in KEEP
+def free_cell(c): return c in REACH0 and c in OPEN and c not in OCC and c not in ARTPLACE and c not in USED and not (G[c] & 0xc00) and c not in KEEP
+BLK = set()
+def still_connected(extra):
+    st = (24, H - 1); sn = {st}; qq = collections.deque([st]); bl = BLK | {extra}
+    while qq:
+        c = qq.popleft()
+        for d_ in ((0, 1), (1, 0), (-1, 0), (0, -1)):
+            n = (c[0] + d_[0], c[1] + d_[1])
+            if 0 <= n[0] < W and 0 <= n[1] < H and n not in sn and not (G[n] & 0xc00) and n not in LAKE and n not in bl: sn.add(n); qq.append(n)
+    return (REACH0 - bl) <= sn and all(any((c[0] + a_, c[1] + b_) in sn for a_, b_ in ((0, 1), (0, -1), (1, 0), (-1, 0))) for c in bl)
 def pick(target, prefer_way=False, r=8):
-    best = None
     for pw in (prefer_way, not prefer_way):
-        for c in sorted(OPEN):
-            if not free_cell(c) or (c in WAY) != pw: continue
-            d = abs(c[0] - target[0]) + abs(c[1] - target[1])
-            if d <= r and (best is None or d < best[0]): best = (d, c)
-        if best: break
-    assert best, ('pas de case libre pres de', target)
-    USED.add(best[1]); return best[1]
+        cands = sorted(((abs(c[0] - target[0]) + abs(c[1] - target[1]), c) for c in OPEN if free_cell(c) and (c in WAY) == pw and abs(c[0] - target[0]) + abs(c[1] - target[1]) <= r))
+        for d_, c in cands:
+            if still_connected(c): USED.add(c); BLK.add(c); return c
+    raise AssertionError(('pas de case libre pres de', target))
 NPC = {}
 for k, (px, py) in PENS.items():
     inner = [(px + 1, py + 1), (px + 2, py + 1), (px + 1, py + 2), (px + 2, py + 2)]
     NPC['pen_' + k] = inner[0]
-NPC['erik'] = pick((24, 16), True); NPC['youngster'] = pick((20, 11), True); NPC['littleboy'] = pick((9, 17), True)
-NPC['oldman'] = pick((38, 18), True); NPC['tutor'] = pick((12, 16), True); NPC['lass'] = pick((30, 13), True)
-NPC['tree1'] = pick((14, 3)); NPC['tree2'] = pick((34, 8)); NPC['tree3'] = pick((12, 30)); NPC['tree4'] = pick((40, 33))
-NPC['hidden'] = pick((13, 12), False, 12)
+NPC['erik'] = pick((22, 9), True); NPC['youngster'] = pick((19, 12), True); NPC['littleboy'] = pick((9, 13), True)
+NPC['oldman'] = pick((36, 15), True); NPC['tutor'] = pick((12, 14), True); NPC['lass'] = pick((30, 13), True)
+NPC['tree1'] = pick((14, 4)); NPC['tree2'] = pick((36, 8)); NPC['tree3'] = pick((15, 26)); NPC['tree4'] = pick((42, 27))
+NPC['hidden'] = pick((13, 10), False, 12)
 SIGNS = {}
 gx, gy = D['gym'][0]
 SIGNS['city'] = pick((22, 8), True, 4); SIGNS['safarizone'] = pick((19, 7), True, 4); SIGNS['safarigame'] = pick((29, 7), True, 4)
 SIGNS['gym'] = (gx + 2, gy + 1); SIGNS['warden'] = pick((D['warden'][0][0] + 2, D['warden'][0][1] + 1), True, 3)
 for k, (px, py) in PENS.items(): SIGNS['pen_' + k] = pick((px + 1, py + 4), True, 3)
 assert SIGNS['gym'] in OPEN and SIGNS['gym'] not in OCC and SIGNS['gym'] not in ARTPLACE, SIGNS['gym']
-USED.add(SIGNS['gym'])
+USED.add(SIGNS['gym']); BLK.add(SIGNS['gym'])
 for k, c in SIGNS.items(): claim(c[0], c[1], 1, 1, 'panneau: ' + k); G[c] = remap(0x400 | 3)
 # ------------------------------------------------------------------ accessibilite (depart : couloir sud ; les autres sorties et toutes les portes doivent etre atteignables)
 def raw_blocked(c): return bool(G[c] & 0xc00) or c in LAKE
@@ -470,6 +507,8 @@ while q:
     for d in ((0, 1), (1, 0), (-1, 0), (0, -1)):
         n = (c[0] + d[0], c[1] + d[1])
         if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen and not raw_blocked(n): seen.add(n); q.append(n)
+_un = sorted(c for c in OPEN if c not in seen and not raw_blocked(c))
+if _un: print('cases libres non atteintes :', len(_un), _un[:40])
 for k, ds in D.items():
     for c in ds: assert c in seen, ('porte inaccessible', k, c)
     x, y = ds[0]; assert (x, y + 1) in seen, ('approche de porte bloquee', k)
@@ -534,7 +573,7 @@ add('src/data/tilesets/headers.h', tmpl % (('GeneralAmethyst', 'FALSE') + ('Gene
 # ------------------------------------------------------------------ carte
 g = [G[(x, y)] for y in range(H) for x in range(W)]
 open('data/layouts/FuchsiaCity/map.bin', 'wb').write(struct.pack('<%dH' % len(g), *g))
-open('data/layouts/FuchsiaCity/border.bin', 'wb').write(struct.pack('<4H', *([0x400 | TREE[0]] * 4)))
+open('data/layouts/FuchsiaCity/border.bin', 'wb').write(struct.pack('<4H', *([0x400 | (640 + art_meta(slice_tiles(TREEIMG[0]), GRASS))] * 4)))
 Lj = json.load(open('data/layouts/layouts.json'))
 for l in Lj['layouts']:
     if l.get('id') == 'LAYOUT_FUCHSIA_CITY':

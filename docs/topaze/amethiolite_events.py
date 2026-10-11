@@ -13,9 +13,9 @@ OLD = [0, 1, 2, 3, 4, 5, 6, 7, 10]                  # ancien index -> nouvel ind
 W = []
 for k, oi in zip(ORDER, OLD):
     o = orig[oi]; W.append(warp(D[k][0][0], D[k][0][1], o['dest_map'], o['dest_warp_id']))
-SX = [x for x in range(20, 28)]; WY = [18, 19, 20]; EY = [20, 21, 22]
+SX = [x for x in range(20, 28)]; WY = [13, 14, 15]; EY = [13, 14, 15]; HB = 31          # sorties ouest / est : y de la ville ; Route 18 : y8..10, Route 15 : y10..12
 base = len(W)
-for i, x in enumerate(SX): W.append(warp(x, 39, 'MAP_ROUTE19', i))
+for i, x in enumerate(SX): W.append(warp(x, HB, 'MAP_ROUTE19', i))
 for i, y in enumerate(WY): W.append(warp(0, y, 'MAP_ROUTE18', None))
 for i, y in enumerate(EY): W.append(warp(47, y, 'MAP_ROUTE15', None))
 # Route 19 : liens vers la ville EN PREMIER (route20_events ajoute ensuite ceux de la Route 20)
@@ -24,15 +24,16 @@ keep = [w for w in r19['warp_events'] if w['dest_map'] != 'MAP_FUCHSIA_CITY']
 r19['warp_events'] = [warp(x - 12, 0, 'MAP_FUCHSIA_CITY', base + i) for i, x in enumerate(SX)] + keep
 r19['connections'] = [c for c in r19['connections'] if c['map'] != 'MAP_FUCHSIA_CITY']
 jdump(r19, 'data/maps/Route19/map.json')
-def side(name, ys_city, x_route, off, first_idx):
+def side(name, ys_city, x_route, ys_route, first_idx):
     f2 = f'data/maps/{name}/map.json'; r = json.load(open(f2))
     kp = [w for w in r['warp_events'] if w['dest_map'] != 'MAP_FUCHSIA_CITY']
-    r['warp_events'] = kp + [warp(x_route, y - off, 'MAP_FUCHSIA_CITY', first_idx + i) for i, y in enumerate(ys_city)]
+    r['warp_events'] = kp + [warp(x_route, ys_route[i], 'MAP_FUCHSIA_CITY', first_idx + i) for i, y in enumerate(ys_city)]
     r['connections'] = [c for c in r['connections'] if c['map'] != 'MAP_FUCHSIA_CITY']
     jdump(r, f2); return len(kp)
-k18 = side('Route18', WY, 59, 10, base + len(SX)); k15 = side('Route15', EY, 0, 10, base + len(SX) + len(WY))
+k18 = side('Route18', WY, 59, [8, 9, 10], base + len(SX)); k15 = side('Route15', EY, 0, [10, 11, 12], base + len(SX) + len(WY))
 for i in range(len(WY)): W[base + len(SX) + i]['dest_warp_id'] = str(k18 + i)
 for i in range(len(EY)): W[base + len(SX) + len(WY) + i]['dest_warp_id'] = str(k15 + i)
+W.append(warp(D['safari'][1][0], D['safari'][1][1], orig[0]['dest_map'], orig[0]['dest_warp_id']))          # l'arche du Safari fait 2 cases de large
 d['warp_events'] = W; d['connections'] = []
 # ---- PNJ, panneaux, objet cache
 POS = {'FAT_MAN': 'erik', 'SLOWPOKE': 'pen_slowpoke', 'VOLTORB': 'pen_voltorb', 'YOUNGSTER': 'youngster', 'CHANSEY': 'pen_chansey', 'LITTLE_BOY': 'littleboy', 'LAPRAS': 'pen_lapras',

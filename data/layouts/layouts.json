@@ -826,7 +826,7 @@
       "id": "LAYOUT_FUCHSIA_CITY",
       "name": "FuchsiaCity_Layout",
       "width": 48,
-      "height": 40,
+      "height": 32,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_GeneralAmethyst",
