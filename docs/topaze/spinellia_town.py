@@ -39,8 +39,8 @@ used = set()
 for v in set(x & 0x3ff for x in O):
     for e in ents(v): used.add(e >> 12)
 print('palettes utilisees', sorted(used))
-ART_PAL = 7
-assert ART_PAL not in used, used
+ART_PAL = 7; TREE_PAL = 8
+assert ART_PAL not in used and TREE_PAL not in used, used
 PAL = [(0, 0, 0), (20, 14, 32), (96, 92, 112), (126, 122, 142), (70, 66, 86), (156, 152, 170), (232, 228, 240), (110, 112, 128), (150, 152, 168),
        (78, 80, 96), (46, 60, 70), (40, 28, 52), (196, 24, 56), (240, 90, 120), (255, 170, 190), (120, 10, 40)]
 # ------------------------------------------------------------------ plan
@@ -61,6 +61,7 @@ def chunk(ox, oy, cw, ch, dx, dy, name):
 BUILD = {'tower': (15, 0, 7, 7, 27, 2), 'center': (4, 1, 4, 5, 9, 3), 'vol': (8, 8, 5, 4, 5, 12), 'house1': (3, 13, 5, 4, 6, 21), 'house2': (8, 13, 5, 4, 15, 21), 'mart': (18, 12, 4, 4, 31, 21)}
 DOOR = {'tower': (30, 8), 'center': (11, 7), 'vol': (7, 15), 'house1': (8, 24), 'house2': (17, 24), 'mart': (33, 24)}
 for k, (ox, oy, cw, ch, dx, dy) in BUILD.items(): chunk(ox, oy, cw, ch, dx, dy, k)
+for i in range(5): G[(15 + i, 21)] = ov(3 + i, 13)                  # maison 2 : meme rangee de toit que la maison 1 (supprime la frise de pierres flottante)
 # bordure : pins 2x2 (haut y0-1, bas y28-29, gauche x0-1, droite x38-39), avec 3 trouees pour les sorties
 EXITS = {'N': [(x, 0) for x in range(18, 22)], 'S': [(18, H - 1), (19, H - 1)], 'W': [(0, y) for y in (14, 15, 16)]}
 GAPS = {'N': [(x, y) for x in range(18, 22) for y in range(0, 2)], 'S': [(x, y) for x in range(18, 20) for y in range(H - 2, H)], 'W': [(x, y) for x in range(0, 2) for y in range(14, 18)]}
@@ -73,7 +74,7 @@ def pine(x, y):
         for i in (0, 1): G[(x + i, y + j)] = PINE[j * 2 + i]; OCC[(x + i, y + j)] = 'pin'
 for x in range(0, W, 2):
     for y in (0, H - 2):
-        if (x, y) not in GAP and (x + 1, y) not in GAP: pine(x, y)
+        if (x, y) not in GAP and (x + 1, y) not in GAP and not (y == 0 and 26 <= x <= 33): pine(x, y)
 for y in range(2, H - 2, 2):
     for x in (0, W - 2):
         if (x, y) not in GAP and (x, y + 1) not in GAP: pine(x, y)
@@ -150,6 +151,35 @@ def fence(kind):
         d.rectangle((6, 0, 9, 15), fill=7, outline=1); d.line([(7, 0), (7, 15)], fill=5); d.rectangle((8, 0, 9, 15), fill=4)
         for y in (3, 11): d.rectangle((5, y, 10, y + 2), fill=9, outline=1); d.point((7, y), fill=5)
     return im
+TP = [(0, 0, 0), (8, 36, 44), (30, 44, 52), (20, 60, 72), (34, 100, 116), (60, 150, 168), (110, 200, 214), (170, 236, 244)] + [(0, 0, 0)] * 8
+def tree_img(var):
+    """arbre 1x1 (16x16) : houppier conique sombre, reflets, tronc ; palette 8 = palette des pins FR (memes teintes)"""
+    o, d1, d2, m1, m2, l1, l2 = 1, 3, 2, 4, 5, 6, 7
+    im = newimg(16, 16); d = ImageDraw.Draw(im)
+    d.ellipse((2, 13, 15, 16), fill=d1)
+    d.rectangle((7, 11, 8, 14), fill=d2, outline=o)
+    for k, (y0, hw) in enumerate(((1, 3), (5, 5), (9, 7))):
+        d.polygon([(8 - hw, y0 + 5), (8, y0 - 1 if k == 0 else y0), (7 + hw, y0 + 5)], fill=m1, outline=o)
+        d.polygon([(8 - hw + 1, y0 + 4), (8, y0 + (0 if k == 0 else 1)), (8, y0 + 4)], fill=l1)
+        d.polygon([(8, y0 + 1), (7 + hw - 1, y0 + 4), (8, y0 + 4)], fill=m2 if var != 1 else d2)
+    for (x, y) in (((7, 3), (5, 8), (9, 10)), ((8, 2), (4, 9), (10, 11)), ((7, 4), (6, 9), (11, 10)))[var]: d.point((x, y), fill=l2)
+    return im
+def parapet():
+    im = newimg(112, 16); d = ImageDraw.Draw(im)
+    d.rectangle((0, 0, 111, 15), fill=8, outline=1); d.line([(1, 1), (110, 1)], fill=6); d.rectangle((1, 2, 110, 3), fill=8)
+    d.rectangle((1, 12, 110, 14), fill=9)
+    for x in range(3, 109, 6): d.rectangle((x, 5, x + 3, 11), fill=7, outline=1); d.point((x + 1, 6), fill=5)
+    return im
+def crown():
+    im = newimg(112, 32); d = ImageDraw.Draw(im)
+    for x0 in (2, 98):
+        d.rectangle((x0, 20, x0 + 11, 31), fill=8, outline=1); d.line([(x0 + 1, 21), (x0 + 10, 21)], fill=6); d.rectangle((x0 + 8, 22, x0 + 10, 31), fill=7)
+        prism(d, x0 + 6, 20, 7, 14)
+    d.rectangle((44, 22, 67, 31), fill=7, outline=1); d.line([(45, 23), (66, 23)], fill=5); d.rectangle((60, 24, 66, 31), fill=9)
+    d.rectangle((54, 4, 57, 22), fill=4, outline=1); d.line([(55, 5), (55, 21)], fill=5)
+    for y in (12, 17): d.rectangle((49, y, 62, y + 1), fill=4, outline=1)
+    prism(d, 56, 8, 7, 10); d.point((55, 0), fill=14)
+    return im
 def crystal(var):
     im = newimg(16, 16); d = ImageDraw.Draw(im)
     d.ellipse((1, 12, 15, 16), fill=11)
@@ -171,8 +201,8 @@ def add_tile(t):
     if t in NEWT: return NEWT.index(t)
     NEWT.append(t); return len(NEWT) - 1
 def slice4(im): return [add_tile(list(im.crop(((q % 2) * 8, (q // 2) * 8, (q % 2) * 8 + 8, (q // 2) * 8 + 8)).getdata())) for q in range(4)]
-def art_meta(tiles4, base_m, covered):
-    e = ents(base_m)[:4] + [('A', t) for t in tiles4]; a = (0x20000000 if covered else 0)
+def art_meta(tiles4, base_m, covered, pal=None):
+    e = ents(base_m)[:4] + [(('B' if pal == TREE_PAL else 'A'), t) for t in tiles4]; a = (0x20000000 if covered else 0)
     if e in NEWE and NEWA[NEWE.index(e)] == a: return 640 + NMT + NEWE.index(e)
     NEWE.append(e); NEWA.append(a); return 640 + NMT + len(NEWE) - 1
 # ---- bloquer des cases (steles, cristaux, pins) en gardant tout accessible
@@ -180,6 +210,7 @@ BLK = {}
 def free_cells():
     return {(x, y) for y in range(H) for x in range(W) if (x, y) not in OCC and (x, y) not in BLK}
 DOORS = {k: v for k, v in DOOR.items()}
+for i in range(7): BLK[(27 + i, 2)] = ('parapet', i)
 def start_reach(extra=frozenset()):
     seen = {(19, 0)}; q = collections.deque(seen)
     fc = free_cells() - set(extra)
@@ -219,24 +250,25 @@ def near_way(c, r=1): return any((c[0] + a, c[1] + b) in WAY for a in range(-r, 
 cands = [(x, y) for y in range(2, H - 2) for x in range(2, W - 2) if (x, y) not in OCC and (x, y) not in WAY and not (21 <= x <= 38 and 8 <= y <= 18) and not (34 <= x <= 37 and 2 <= y <= 9)]
 rnd.shuffle(cands)
 # pins : unites 2x2 alignees sur le damier pair, a distance des voies
-PU = [(x, y) for y in range(2, H - 3, 2) for x in range(2, W - 3, 2)]
-rnd.shuffle(PU)
+def pine_cells(x, y): return [(x + i, y + j) for i in (0, 1) for j in (0, 1)]
+PUNITS = {(x, y) for (x, y) in [(x, y) for y in range(0, H, 2) for x in range(0, W, 2)] if G[(x, y)] == PINE[0] and G[(x + 1, y + 1)] == PINE[3]}
 pcount = 0
-for (x, y) in PU:
-    cells = [(x + i, y + j) for i in (0, 1) for j in (0, 1)]
-    if any(c in OCC or c in BLK or c in KEEP or near_way(c) for c in cells): continue
-    # bosquet : seulement dans les zones larges (au moins 3 de distance d'un batiment)
-    if any((c[0] + a, c[1] + b) in OCC and OCC[(c[0] + a, c[1] + b)] not in ('pin',) for c in cells for a in (-1, 0, 1) for b in (-1, 0, 1)): continue
-    r = start_reach(set(cells))
-    if not NEED <= r: continue
-    if rnd.random() < 0.55: pine(x, y); pcount += 1
+for _ in range(4):                      # bosquets : les pins FR n'existent qu'en masse, rattaches a la bordure (leur fond sombre se fond dans la masse)
+    order = [(x, y) for y in range(2, H - 3, 2) for x in range(2, W - 3, 2)]; rnd.shuffle(order)
+    for (x, y) in order:
+        cells = pine_cells(x, y)
+        if any(c in OCC or c in BLK or c in KEEP or near_way(c) for c in cells): continue
+        if any((c[0] + a, c[1] + b) in OCC and OCC[(c[0] + a, c[1] + b)] != 'pin' for c in cells for a in (-1, 0, 1) for b in (-1, 0, 1)): continue
+        if not any(n in PUNITS for n in ((x - 2, y), (x + 2, y), (x, y - 2), (x, y + 2))): continue
+        if not NEED <= start_reach(set(cells)): continue
+        if rnd.random() < 0.45: pine(x, y); PUNITS.add((x, y)); pcount += 1
 print('pins interieurs', pcount)
 ncry = 0
 for c in cands:
     if c in OCC or c in BLK or near_way(c) or c in KEEP: continue
     rr = rnd.random()
-    if rr < 0.07 and not any(max(abs(c[0] - q[0]), abs(c[1] - q[1])) < 3 for q, v in BLK.items() if v[0] == 'cry') and can_block(c): BLK[c] = ('cry', rnd.randrange(3)); ncry += 1
-    elif rr < 0.17 and can_block(c): BLK[c] = ('stele', rnd.randrange(4))
+    if rr < 0.09 and not any(max(abs(c[0] - q[0]), abs(c[1] - q[1])) < 3 for q, v in BLK.items() if v[0] == 'cry') and can_block(c): BLK[c] = ('cry', rnd.randrange(3)); ncry += 1
+    elif rr < 0.27 and can_block(c): BLK[c] = ('stele', rnd.randrange(4))
 print('cristaux', ncry, 'steles', sum(1 for v in BLK.values() if v[0] == 'stele'))
 # ---- panneaux (metatuile 2, bloquant) et PNJ
 SIGN = {}
@@ -280,23 +312,29 @@ for c in sorted(WAY):
     if mask not in PT: PT[mask] = slice4(path_tile(mask))
     G[c] = 0x3000 | art_meta(PT[mask], G[c] & 0x3ff, True)
 ST = [slice4(stele(v)) for v in range(4)]; CR = [slice4(crystal(v)) for v in range(3)]
-MON = monument()
+MON = monument(); PARA = parapet(); CROWN = crown()
+for j in range(2):
+    for i in range(7):
+        if sum(1 for q in CROWN.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)).getdata() if q): BLK[(27 + i, j)] = ('crown', i, j)
 for c, val in BLK.items():
     if val[0] == 'big':
         i, j = val[1], val[2]; G[c] = 0x400 | art_meta(slice4(MON.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))), G[c] & 0x3ff, False)
+    elif val[0] == 'tree': G[c] = 0x400 | art_meta(slice4(tree_img(val[1])), G[c] & 0x3ff, False, TREE_PAL)
+    elif val[0] == 'parapet': G[c] = 0x400 | art_meta(slice4(PARA.crop((val[1] * 16, 0, val[1] * 16 + 16, 16))), G[c] & 0x3ff, False)
+    elif val[0] == 'crown': G[c] = 0x400 | art_meta(slice4(CROWN.crop((val[1] * 16, val[2] * 16, val[1] * 16 + 16, val[2] * 16 + 16))), G[c] & 0x3ff, False)
     elif val[0] == 'sign': G[c] = 0x400 | 2
     elif val[0] == 'fence': G[c] = 0x400 | art_meta(slice4(fence(val[1])), G[c] & 0x3ff, False)
     else: G[c] = 0x400 | art_meta(ST[val[1]] if val[0] == 'stele' else CR[val[1]], G[c] & 0x3ff, False)
 assert NMT + len(NEWE) <= 384 and NTL + len(NEWT) <= 384, (NMT + len(NEWE), NTL + len(NEWT))
 print('metatuiles', NMT + len(NEWE), 'tuiles', NTL + len(NEWT))
-NEWE = [[((640 + NTL + q[1]) | (ART_PAL << 12)) if isinstance(q, tuple) else q for q in e] for e in NEWE]
+NEWE = [[((640 + NTL + q[1]) | ((TREE_PAL if q[0] == 'B' else ART_PAL) << 12)) if isinstance(q, tuple) else q for q in e] for e in NEWE]
 smt += b''.join(struct.pack('<8H', *e) for e in NEWE); satt += NEWA
 open(NS + 'metatiles.bin', 'wb').write(smt); open(NS + 'metatile_attributes.bin', 'wb').write(b''.join(struct.pack('<I', a) for a in satt))
 rows = (NTL + len(NEWT) + 15) // 16
 out = Image.new('P', (128, rows * 8), 0); out.putpalette(simg.getpalette()); out.paste(simg, (0, 0))
 for n, t in enumerate(NEWT):
     ti = Image.new('P', (8, 8)); ti.putdata(list(t)); out.paste(ti, (((NTL + n) % 16) * 8, ((NTL + n) // 16) * 8))
-out.save(NS + 'tiles.png'); writepal(NS + 'palettes/%02d.pal' % ART_PAL, PAL)
+out.save(NS + 'tiles.png'); writepal(NS + 'palettes/%02d.pal' % ART_PAL, PAL); writepal(NS + 'palettes/%02d.pal' % TREE_PAL, TP)
 open('data/layouts/LavenderTown/map.bin', 'wb').write(struct.pack('<%dH' % (W * H), *[G[(x, y)] for y in range(H) for x in range(W)]))
 open('data/layouts/LavenderTown/border.bin', 'wb').write(struct.pack('<4H', *PINE))                 # bordure hors carte : foret de pins
 # ---- layouts.json + en-tetes C
