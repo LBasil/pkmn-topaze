@@ -127,3 +127,6 @@ Retour de Basil sur v6 : suppression des parvis pleine facade et de la fermeture
 
 ### Spinellia v8
 Pokecentre complete (5 de large, colonne droite manquante), case de chemin ajoutee (7,27) devant la maison basse gauche.
+
+### Spinellia v9
+Retour a v7 (decor identique) ; seule la 5e colonne du Pokecentre et la case de chemin (7,27) sont ajoutees apres le hasard.
