@@ -93,3 +93,5 @@ Les champions occupent les emplacements des chefs d'arène d'origine : `Brock→
 
 ### Route 19 v2 : eruption volcanique (idee de Basil)
 Toute la mer du sud est remplacee par de l obsidienne (v4 : plus de volcan, obsidienne remontee jusqu au pied des falaises de la plage, plus aucun rocher dans l eau) (metatuiles procedurales tuilables, palette 10, veines de lave, impassable) avec 3 volcans fumants (5x5, 4x4, 4x4). Restent navigables : bassin devant la plage, chenal sinueux, bassins et baie ouest (acces Route 20 / iles Ecume). Evenements (dresseurs nageurs, objets) gardes accessibles (BFS). Rendu `reference/route19_v2.png`. A etendre eventuellement a la Route 20 (a valider).
+
+### Route 19 v5 : VALIDEE par Basil le 11/10
