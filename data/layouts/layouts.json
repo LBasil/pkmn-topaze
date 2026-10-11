@@ -1129,7 +1129,7 @@
       "height": 24,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_GeneralPepite",
+      "primary_tileset": "gTileset_GeneralOpalroad",
       "secondary_tileset": "gTileset_ViridianPepite",
       "border_filepath": "data/layouts/Route22/border.bin",
       "blockdata_filepath": "data/layouts/Route22/map.bin"

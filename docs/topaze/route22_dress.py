@@ -7,7 +7,7 @@ sys.path.insert(0, 'tools/topaze/maps')
 import mapkit
 SRC = 'docs/topaze/route22_src/'
 FRP = 'data/tilesets/primary/general/'; FRS = 'data/tilesets/secondary/viridian_city/'
-NP = 'data/tilesets/primary/general_pepite/'; NS = 'data/tilesets/secondary/viridian_pepite/'
+NP = 'data/tilesets/primary/general_opalroad/'; NS = 'data/tilesets/secondary/viridian_pepite/'
 for src, dst in ((FRP, NP), (FRS, NS)):
     shutil.rmtree(dst, ignore_errors=True); os.makedirs(dst + 'palettes')
     for f in ('metatiles.bin', 'metatile_attributes.bin', 'tiles.png'): shutil.copy(src + f, dst + f)
@@ -18,19 +18,21 @@ def writepal(p, cols): open(p, 'w').write('JASC-PAL\r\n0100\r\n16\r\n' + ''.join
 def hls(c): h, l, s = colorsys.rgb_to_hls(c[0] / 255, c[1] / 255, c[2] / 255); return h * 360, l, s
 def rgb(h, l, s): r, g, b = colorsys.hls_to_rgb((h % 360) / 360, max(0, min(1, l)), max(0, min(1, s))); return int(r * 255 + .5), int(g * 255 + .5), int(b * 255 + .5)
 # ------------------------------------------------------------------ couleurs : falaises rosees -> mauve de tourmaline
-def mauve(c):
-    h, l, s = hls(c)
-    if s > 0.12 and (h < 50 or h > 330): return rgb(312, l, min(0.5, s * 0.8))
-    return c
-p1 = readpal(NP + 'palettes/01.pal'); writepal(NP + 'palettes/01.pal', [p1[0]] + [mauve(c) for c in p1[1:15]] + [p1[15]])
-# chaumiere de Bill (palettes secondaires 9..12, utilisees seulement par la maison) : delabree par 10 ans d'abandon (ternie, grisee, mousse)
+def tint_opal(c):      # meme teinte que la Route 1 -> Opanihrum : verts -> sarcelle sombre, le reste -> ardoise bleu-nuit ; rouges/violets vifs conserves
+    r, g, b = c; h, l, s = colorsys.rgb_to_hls(r / 255, g / 255, b / 255); h *= 360
+    if s < 0.10 and l > 0.93: return c
+    if s > 0.45 and (h >= 180 or h < 25): return c
+    if 78 <= h <= 175: h = 168 + (h - 120) * 0.12; s = min(1, s * 0.5); l = l * 0.8
+    else: h = 232; s = min(0.42, s * 0.55 + 0.10); l = min(1, l * 0.72)
+    return rgb(h, l, s)
+for i in range(6):     # palettes primaires 0..5 (sol, arbres, falaises, eau, ...) -> opale
+    pp = readpal(NP + 'palettes/%02d.pal' % i); writepal(NP + 'palettes/%02d.pal' % i, [pp[0]] + [tint_opal(c) for c in pp[1:16]])
 def decay(c):
     h, l, s = hls(c)
     if s < 0.05 and l > 0.93: return (176, 172, 150)        # blanc -> crepi sale
-    if 70 < h < 170: return rgb(62, l * 0.62, s * 0.48)     # vert -> mousse olive
-    return rgb(h, l * 0.68, s * 0.3)                        # reste : ternes, fanes
+    return rgb(h, l * 0.72, s * 0.6)                        # reste : ternes, fanes
 for i in (9, 12):      # portail de la Ligue (palettes secondaires 9 et 12, seulement le portail) : delabre par 10 ans d'abandon
-    pp = readpal(NS + 'palettes/%02d.pal' % i); writepal(NS + 'palettes/%02d.pal' % i, [pp[0]] + [decay(c) for c in pp[1:15]] + [pp[15]])
+    pp = readpal(NS + 'palettes/%02d.pal' % i); writepal(NS + 'palettes/%02d.pal' % i, [pp[0]] + [decay(tint_opal(c)) for c in pp[1:15]] + [pp[15]])
 # ------------------------------------------------------------------ tilesets : etat de depart (le secondaire recoit l'art + le pont)
 smt = bytearray(open(NS + 'metatiles.bin', 'rb').read()); satt = bytearray(open(NS + 'metatile_attributes.bin', 'rb').read())
 NMT = len(smt) // 16; simg = Image.open(NS + 'tiles.png'); NTL = (simg.width // 8) * (simg.height // 8)
@@ -91,8 +93,8 @@ def make_tree():
     for x in range(32):
         if rp[x, top][3]: rp[x, top] = TREE_OUT
     return clean_specks(R)
-PAL_C = [(0, 0, 0), (8, 24, 20), (18, 84, 60), (34, 140, 92), (100, 208, 140), (188, 246, 208), (250, 255, 250), (140, 30, 86), (222, 72, 138),
-         (255, 146, 194), (255, 214, 232), (22, 60, 44), (92, 64, 40), (126, 130, 126), (70, 76, 74), (255, 232, 136)]
+PAL_C = [(0, 0, 0), (6, 8, 20), (18, 22, 46), (36, 44, 86), (80, 96, 160), (150, 170, 230), (236, 242, 255), (120, 70, 200), (255, 104, 186),
+         (70, 240, 218), (236, 255, 250), (14, 22, 36), (40, 32, 50), (70, 76, 98), (40, 44, 66), (255, 232, 136)]
 def newimg(w, h): return Image.new('P', (w, h), 0)
 def prism(d, x, base, w, h):
     half = max(2, w // 2); top = base - h; sh = top + max(3, half + 1)
@@ -119,6 +121,10 @@ def cluster(var=0):     # 2x2 : grand amas de cristaux, TOUT le 32x32 occupe (ha
     else: prism(d, 6, 30, 7, 21); prism(d, 15, 31, 10, 29); prism(d, 26, 29, 7, 19); d.rectangle((26, 28, 30, 30), fill=13); d.point((28, 27), fill=14)
     return im
 TREE_RGBA = make_tree()
+_px = TREE_RGBA.load()
+for _y in range(TREE_RGBA.height):
+    for _x in range(TREE_RGBA.width):
+        if _px[_x, _y][3]: _px[_x, _y] = tint_opal(_px[_x, _y][:3]) + (255,)
 tcols = collections.Counter(p[:3] for p in TREE_RGBA.getdata() if p[3])
 TREE_COLS = [c for c, n in tcols.most_common()]
 assert len(TREE_COLS) <= 6, ('arbre : trop de teintes', len(TREE_COLS))
@@ -203,7 +209,7 @@ for CFG in MAPS:
             for d in ((0, 1), (1, 0), (-1, 0), (0, -1)):
                 n = (c[0] + d[0], c[1] + d[1])
                 if n in G and n not in seen and not blocked(n) and n not in ARTP and n not in nb: seen.add(n); q.append(n)
-        return all(c in seen for c in (EVC if relax else R0) if c not in CONV and c not in ARTP and c not in nb and c in R0)
+        return all(c in seen for c in (EVC if relax else R0) if c not in CONV and c not in ARTP and c not in nb and c in R0 and not blocked(c))
     def tile_ent(t4, slot): return [(640 + NTL + t) | (slot << 12) for t in t4]
     def art_meta(tiles4, slot, bottom):
         key = (tuple(tiles4), slot, tuple(bottom)); return new_meta(list(bottom) + tile_ent(tiles4, slot), 0, key)
@@ -219,7 +225,7 @@ for CFG in MAPS:
         if tall and not all(c in G and (mid(c) in (PLAIN | {1, 4, 217}) and not blocked(c) or (relax and mid(c) in ABOVE_OK)) and c not in RES and c not in CONV and c not in ARTP and c not in OVER for c in above): return False
         ring = free_ring(cells)
         if not relax and (sum(1 for c in ring if c in ARTP) > (3 if kind == 'tree' else 0) or sum(1 for c in ring if c in G and not blocked(c) and c not in ARTP) < 3): return False
-        if not reach_ok(cells, relax): return False
+        if not reach_ok(cells): return False
         off = 16 if tall else 0
         for j in range(2):
             for i in range(2):
@@ -270,12 +276,12 @@ for CFG in MAPS:
             rf.shuffle(fc)
             for (x, y) in fc:
                 if rf.random() < 0.05: continue
-                if sum(1 for tx, ty in TREES if ty == y and abs(tx - x) in (2, 3, 4)) >= 2 or sum(1 for tx, ty in TREES if tx == x and abs(ty - y) in (2, 3, 4)) >= 2: continue
+                if any(abs(ty - y) <= 1 and abs(tx - x) in (3, 4, 5) for tx, ty in TREES) or any(abs(tx - x) <= 1 and abs(ty - y) in (3, 4, 5) for tx, ty in TREES): continue
                 if put_big(x, y, TREE_P if rf.random() < 0.5 else TREE_PF, 'tree', relax=True): nf += 1
         BUSH = set(); rb = random.Random(2513)
         for (x, y) in sorted(fc):
             c = (x, y)
-            if grass(c) and c not in ARTP and rb.random() < 0.4 + 0.6 * dens(x * 1.5, y * 1.5) and reach_ok([c], True):
+            if grass(c) and c not in ARTP and rb.random() < 0.4 + 0.6 * dens(x * 1.5, y * 1.5) and reach_ok([c]):
                 BUSH.add(c); G[c] = (G0[c] & 0xf000) | 0x400 | 5
         print('foret', nf, 'sentier', len(KEEPS), 'buissons', len(BUSH))
     # arbres : meilleurs scores d'abord, quinconce (jamais alignes en ligne/colonne), bosquets la ou le bruit est fort
@@ -319,14 +325,15 @@ for CFG in MAPS:
             if dn > 0.47 and r < 0.72: setm(c, 13)
             elif r < 0.22: setm(c, 4)
         for c in sorted(G):
-            if old(c) and ra.random() < 0.06 and reach_ok([c], True) and not any((c[0] + a, c[1] + b) in ARTP for a in (-1, 0, 1) for b in (-1, 0, 1)):
+            if old(c) and ra.random() < 0.06 and reach_ok([c]) and not any((c[0] + a, c[1] + b) in ARTP for a in (-1, 0, 1) for b in (-1, 0, 1)):
                 ARTP[c] = (slice4(small(ra.randrange(3))), ART_PAL, mid(c)); SHARDS.append(c)
     # pose finale des metatuiles d'art (collision : tout bloque ; les cimes qui debordent restent praticables)
     for c, (t4, slot) in OVER.items(): G[c] = (G[c] & 0xfc00) | art_meta(t4, slot, bottom_of(mid(c)))
     for c, (t4, slot, m) in ARTP.items(): G[c] = (G0[c] & 0xf000) | 0x400 | art_meta(t4, slot, bottom_of(m))
     # ------------------------------------------------------------------ verifications
     R1 = flood(G, START)
-    lost = {c for c in EVC if c in R0 and c not in R1 and c not in ARTP and c not in CONV}
+    lost = {c for c in R0 if c not in R1 and c not in ARTP and c not in CONV and c not in BUSH}
+    if lost: print('LOST', sorted(lost)[:10], [(n, hex(G[n]), n in ARTP, n in R1, n in R0) for n in ((7,15),(7,17),(6,16),(8,16),(7,16))])
     assert not lost, ('cases devenues inatteignables', sorted(lost)[:10])
     for ev in EVC: assert ev not in ARTP and ev not in CONV, ('evenement recouvert', ev)
     print(CFG['name'], 'herbe', sum(1 for c in G if c in G and mid(c) in CFG['plain']), sum(1 for c in G if c in RES and mid(c) in CFG['plain']), 'cand', len(cand), dict(REJ), 'arbres', len(TREES), 'amas', len(CLUS), 'eclats', len(SHARDS), '; atteignable', len(R0), '->', len(R1))
@@ -376,13 +383,26 @@ for nm, (GG, WW, HH) in OUT.items():
     open('data/layouts/%s/map.bin' % nm, 'wb').write(struct.pack('<%dH' % len(g), *g))
 def add(path, text):
     s = open(path).read()
-    if 'ViridianPepite' not in s: open(path, 'a').write(text)
+    if 'GeneralOpalroad' not in s: open(path, 'a').write(text)
 pal = lambda d: ''.join('\tINCBIN_U16("%spalettes/%02d.gbapal"),\n' % (d, i) for i in range(16))
 add('src/data/tilesets/graphics.h',
+    '\nconst u32 gTilesetTiles_GeneralOpalroad[] = INCBIN_U32("%stiles.4bpp.lz");\nconst u16 gTilesetPalettes_GeneralOpalroad[][16] =\n{\n%s};\n' % (NP, pal(NP)) +
     '\nconst u32 gTilesetTiles_ViridianPepite[] = INCBIN_U32("%stiles.4bpp.lz");\nconst u16 gTilesetPalettes_ViridianPepite[][16] =\n{\n%s};\n' % (NS, pal(NS)))
 add('src/data/tilesets/metatiles.h',
+    '\nconst u16 gMetatiles_GeneralOpalroad[] = INCBIN_U16("%smetatiles.bin");\nconst u32 gMetatileAttributes_GeneralOpalroad[] = INCBIN_U32("%smetatile_attributes.bin");\n' % (NP, NP) +
     '\nconst u16 gMetatiles_ViridianPepite[] = INCBIN_U16("%smetatiles.bin");\nconst u32 gMetatileAttributes_ViridianPepite[] = INCBIN_U32("%smetatile_attributes.bin");\n' % (NS, NS))
 add('src/data/tilesets/headers.h', '''
+const struct Tileset gTileset_GeneralOpalroad =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralOpalroad,
+    .palettes = gTilesetPalettes_GeneralOpalroad,
+    .metatiles = gMetatiles_GeneralOpalroad,
+    .metatileAttributes = gMetatileAttributes_GeneralOpalroad,
+    .callback = InitTilesetAnim_General,
+};
+
 const struct Tileset gTileset_ViridianPepite =
 {
     .isCompressed = TRUE,
@@ -396,6 +416,6 @@ const struct Tileset gTileset_ViridianPepite =
 ''')
 L = json.load(open('data/layouts/layouts.json'))
 for l in L['layouts']:
-    if l.get('id') == 'LAYOUT_ROUTE22': l.update(primary_tileset='gTileset_GeneralPepite', secondary_tileset='gTileset_ViridianPepite')
+    if l.get('id') == 'LAYOUT_ROUTE22': l.update(primary_tileset='gTileset_GeneralOpalroad', secondary_tileset='gTileset_ViridianPepite')
 json.dump(L, open('data/layouts/layouts.json', 'w'), indent=2); open('data/layouts/layouts.json', 'a').write('\n')
 print('route 22 habillee : metatuiles', NMT + len(ENTS), 'tuiles', NTL + len(NEWT))

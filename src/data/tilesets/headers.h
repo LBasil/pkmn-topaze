@@ -989,6 +989,17 @@ const struct Tileset gTileset_CeruleanPepite =
     .callback = NULL,
 };
 
+const struct Tileset gTileset_GeneralOpalroad =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralOpalroad,
+    .palettes = gTilesetPalettes_GeneralOpalroad,
+    .metatiles = gMetatiles_GeneralOpalroad,
+    .metatileAttributes = gMetatileAttributes_GeneralOpalroad,
+    .callback = InitTilesetAnim_General,
+};
+
 const struct Tileset gTileset_ViridianPepite =
 {
     .isCompressed = TRUE,

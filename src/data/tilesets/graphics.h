@@ -1870,6 +1870,27 @@ const u16 gTilesetPalettes_CeruleanPepite[][16] =
 	INCBIN_U16("data/tilesets/secondary/cerulean_pepite/palettes/15.gbapal"),
 };
 
+const u32 gTilesetTiles_GeneralOpalroad[] = INCBIN_U32("data/tilesets/primary/general_opalroad/tiles.4bpp.lz");
+const u16 gTilesetPalettes_GeneralOpalroad[][16] =
+{
+	INCBIN_U16("data/tilesets/primary/general_opalroad/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_opalroad/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_opalroad/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_opalroad/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_opalroad/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_opalroad/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_opalroad/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_opalroad/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_opalroad/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_opalroad/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_opalroad/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_opalroad/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_opalroad/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_opalroad/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_opalroad/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_opalroad/palettes/15.gbapal"),
+};
+
 const u32 gTilesetTiles_ViridianPepite[] = INCBIN_U32("data/tilesets/secondary/viridian_pepite/tiles.4bpp.lz");
 const u16 gTilesetPalettes_ViridianPepite[][16] =
 {

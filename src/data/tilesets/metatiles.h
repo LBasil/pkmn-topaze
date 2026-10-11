@@ -258,5 +258,8 @@ const u32 gMetatileAttributes_GeneralPepite[] = INCBIN_U32("data/tilesets/primar
 const u16 gMetatiles_CeruleanPepite[] = INCBIN_U16("data/tilesets/secondary/cerulean_pepite/metatiles.bin");
 const u32 gMetatileAttributes_CeruleanPepite[] = INCBIN_U32("data/tilesets/secondary/cerulean_pepite/metatile_attributes.bin");
 
+const u16 gMetatiles_GeneralOpalroad[] = INCBIN_U16("data/tilesets/primary/general_opalroad/metatiles.bin");
+const u32 gMetatileAttributes_GeneralOpalroad[] = INCBIN_U32("data/tilesets/primary/general_opalroad/metatile_attributes.bin");
+
 const u16 gMetatiles_ViridianPepite[] = INCBIN_U16("data/tilesets/secondary/viridian_pepite/metatiles.bin");
 const u32 gMetatileAttributes_ViridianPepite[] = INCBIN_U32("data/tilesets/secondary/viridian_pepite/metatile_attributes.bin");
