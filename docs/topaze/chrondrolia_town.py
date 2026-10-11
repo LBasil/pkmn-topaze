@@ -117,7 +117,7 @@ def rgb_(h, l, s): r, g, b = colorsys.hls_to_rgb((h % 360) / 360, max(0, min(1, 
 def topaze(c):
     h, l, s = hls_(c)
     if 270 <= h <= 345 and s > 0.15: return rgb_(354, l * 0.92, min(0.95, s * 1.15))      # rose / violet -> cramoisi (la ville a brule : les toits gardent le rouge de l'ile)
-    if 190 <= h <= 255 and s < 0.40 and l > 0.45: return rgb_(46, min(1, l * 1.0 + 0.03), max(0.25, s * 0.9))              # paves bleutes -> creme
+    if 190 <= h <= 255 and s < 0.40 and l > 0.45: return rgb_(44, min(1, l * 0.97), s * 0.45)              # paves bleutes -> creme
     if 75 <= h <= 165 and s > 0.2: return rgb_(h - 13, l, s)                                                          # verts -> verts dores (soleil d'or)
     return c
 for P in (PALS_P, PALS_S):
@@ -365,24 +365,19 @@ for c in sorted(BRIDGEC):
     G[c] = 0x3000 | (640 + PCACHE[k])
 
 # ------------------------------------------------------------------ sol + foret definitifs
-BEACH = {(x, y) for (x, y) in LAND if (x, y) not in OCC and any((x + a, y + b) in SEA for a in range(-1, 2) for b in range(-1, 2)) and 1 <= x <= W - 2}
-OPEN |= BEACH
+CONC = 94                                                       # betons de Mauville (pave plein)
+BEACH = {(x, y) for (x, y) in LAND if (x, y) not in OCC and any((x + a, y + b) in SEA for a in range(-1, 2) for b in range(-1, 2)) and 0 <= x <= W - 1}
+LANDING = {(x + a, y + b) for (x, y) in BRIDGEC for a in range(-1, 2) for b in range(-1, 2)}
+RAIL = {c for c in BEACH if c not in LANDING}                   # garde-corps le long de la mer (sauf aux pontons)
+OPEN = {c for c in LAND if c not in OCC}                        # tout est betonne : plus de foret
 GROUND = {}
 for (x, y) in sorted(OPEN):
-    if (x, y) in OCC: continue
-    gid = 289 if (x, y) in BEACH else GRASS
-    GROUND[(x, y)] = gid; G[(x, y)] = remap(0x3000 | gid)
-for (x, y) in list(G):
-    c = (x, y)
-    if c in OPEN or c in OCC or c in WATERONLY: continue
-    edge = any(((x + a, y + b) in OPEN) for a in (-1, 0, 1) for b in (-1, 0, 1))
-    m = rnd.choice((14, 15)) if edge else rnd.choice((198, 199, 198, 199, 198))
-    G[c] = remap(0x400 | m)
+    GROUND[(x, y)] = CONC; G[(x, y)] = remap(0x3000 | CONC)
 
 # ------------------------------------------------------------------ placement de l'art
 TOWER = tower(); PYL = pylon()
 rect(TX - 1, TY - 1, TX + 3, TY + 3, False)
-art_block(TOWER, 3, 3, TX, TY, 'pylone-monument')
+art_block(TOWER, 3, 3, TX, TY, 'pylone-monument', CONC)
 KEEP = set()
 for k, ds in D.items():
     for (x, y) in ds:
@@ -391,18 +386,7 @@ for k, ds in D.items():
 for c in list(BRIDGEC):
     for a in range(-1, 2):
         for b in range(-1, 2): KEEP.add((c[0] + a, c[1] + b))
-for c in WAY: KEEP.add(c)
 # pylones electriques (1x2) le long des rues
-def pylon_at(x, y):
-    cells = [(x, y), (x, y + 1)]
-    if any(c in OCC or c not in OPEN or c in WAY or c in KEEP or c in BEACH for c in cells): return False
-    claim(x, y, 1, 2, 'pylone'); ARTPLACE[(x, y)] = (slice_tiles(PYL.crop((0, 0, 16, 16))), GRASS); ARTPLACE[(x, y + 1)] = (slice_tiles(PYL.crop((0, 16, 16, 32))), GRASS)
-    OPEN.discard((x, y)); OPEN.discard((x, y + 1)); GROUND.pop((x, y), None); GROUND.pop((x, y + 1), None)
-    return True
-npl = 0
-for (x, y) in ((2, 12), (6, 12), (13, 12), (14, 14), (20, 6), (1, 7), (12, 3), (19, 14), (2, 15)):
-    if pylon_at(x, y): npl += 1
-print('pylones', npl)
 def crystals(cells, prob, tag):
     placed = []
     for c in cells:
@@ -412,20 +396,32 @@ def crystals(cells, prob, tag):
     return placed
 crystals([c for c in sorted(OPEN) if c in GROUND], 0.035, 'topaze')
 
+def rail_img(h, v):
+    im = newimg(16, 16); d = ImageDraw.Draw(im)
+    shadow(d, 0, 12, 16, 16)
+    if h:
+        d.rectangle((0, 5, 15, 7), fill=13, outline=1); d.line([(0, 6), (15, 6)], fill=4)
+        d.rectangle((0, 10, 15, 11), fill=14, outline=1)
+    if v:
+        d.rectangle((6, 0, 8, 15), fill=13, outline=1); d.line([(7, 0), (7, 15)], fill=4)
+    for (x, y) in ((1, 4), (7, 4), (14, 4)) if h else ((7, 1), (7, 8), (7, 14)):
+        d.rectangle((x - 1, y - 1, x + 1, y + 9 if h else y + 1), fill=14, outline=1)
+    if not h and not v: d.rectangle((6, 3, 9, 12), fill=14, outline=1)
+    return im
+for c in sorted(RAIL):
+    hh = ((c[0] - 1, c[1]) in RAIL) or ((c[0] + 1, c[1]) in RAIL); vv = ((c[0], c[1] - 1) in RAIL) or ((c[0], c[1] + 1) in RAIL)
+    if hh and vv: hh, vv = (c[1] in (0, H - 1) or ((c[0], c[1] - 1) in SEA or (c[0], c[1] + 1) in SEA)), not ((c[0], c[1] - 1) in SEA or (c[0], c[1] + 1) in SEA)
+    claim(c[0], c[1], 1, 1, 'garde-corps'); ARTPLACE[c] = (slice_tiles(rail_img(hh, vv)), CONC)
+
 # ------------------------------------------------------------------ l'ile a brule il y a dix ans : cendres, braises, souches calcinees (surtout autour du manoir)
 WALKART = set()
 rav = random.Random(404)
 for c in sorted(OPEN):
-    if c in OCC or c in ARTPLACE or c in WAY or c in KEEP or c in BEACH or c not in GROUND: continue
+    if c in OCC or c in ARTPLACE or c in KEEP or c in BEACH or c not in GROUND: continue
     dm = math.hypot(c[0] - 4.5, c[1] - 8.0)
     if rav.random() < (0.5 if dm < 4.5 else 0.25 if dm < 7 else 0.03):
-        ARTPLACE[c] = (slice_tiles(ASH[rav.randrange(4)]), GRASS); WALKART.add(c)
+        ARTPLACE[c] = (slice_tiles(ASH[rav.randrange(4)]), CONC); WALKART.add(c)
 ns = 0
-for c in sorted(OPEN):
-    if c in OCC or c in WAY or c in KEEP or c in BEACH or c not in GROUND: continue
-    dm = math.hypot(c[0] - 4.5, c[1] - 8.0)
-    if dm < 7 and rav.random() < 0.14 and not any(max(abs(c[0] - p[0]), abs(c[1] - p[1])) < 2 for p in ARTPLACE if p not in WALKART):
-        claim(c[0], c[1], 1, 1, 'souche'); ARTPLACE[c] = (slice_tiles(STUMP[rav.randrange(2)]), GRASS); WALKART.discard(c); ns += 1
 print('souches', ns, 'cendres', len(WALKART))
 
 # ------------------------------------------------------------------ PNJ, panneaux (positions verifiees)
@@ -445,8 +441,22 @@ NPC = {}
 NPC['woman'] = pick((14, 12)); NPC['oldman'] = pick((6, 13))
 NPC['bill'] = (9, 2); NPC['gull'] = (12, 2)
 gx, gy = D['gym'][0]; lx, ly = D['lab'][0]
-SIGNS = {'city': pick((7, 5), r=6), 'lab1': pick((lx + 3, ly + 1), r=4), 'lab2': pick((lx - 3, ly + 1), r=4), 'gym': pick((gx + 3, gy + 1), r=4)}
+SIGNS = {'city': pick((7, 5), r=6), 'lab1': pick((lx + 3, ly + 1), r=4), 'lab2': pick((lx - 3, ly + 1), r=4), 'gym': pick((gx - 3, gy + 1), r=4)}
 for k, c in SIGNS.items(): claim(c[0], c[1], 1, 1, 'panneau: ' + k)
+def pylon_at(x, y):
+    cells = [(x, y), (x, y + 1)]
+    if any(c in OCC or c not in OPEN or c in WAY or c in KEEP or c in BEACH for c in cells): return False
+    claim(x, y, 1, 2, 'pylone'); ARTPLACE[(x, y)] = (slice_tiles(PYL.crop((0, 0, 16, 16))), CONC); ARTPLACE[(x, y + 1)] = (slice_tiles(PYL.crop((0, 16, 16, 32))), CONC)
+    OPEN.discard((x, y)); OPEN.discard((x, y + 1)); GROUND.pop((x, y), None); GROUND.pop((x, y + 1), None)
+    return True
+npl = 0
+PYS = []
+for (x, y) in sorted(OPEN, key=lambda c: (c[1] * 7 + c[0] * 3) % 11):
+    if npl >= 9: break
+    if any(max(abs(x - p[0]), abs(y - p[1])) < 5 for p in PYS): continue
+    if pylon_at(x, y): npl += 1; PYS.append((x, y))
+print('pylones', npl)
+
 # ------------------------------------------------------------------ resolution art -> metatuiles, valeurs brutes
 for c, (t4, gid) in sorted(ARTPLACE.items()):
     mid = 640 + art_meta(t4, gid)
@@ -455,7 +465,9 @@ for k, c in SIGNS.items(): G[c] = remap(0x400 | 3)
 # ---- sentiers : sable d'Emeraude (autotuile) ; ring de pelouse autour du pylone
 PATHC = {c for c in WAY if c in OPEN and c not in OCC and c not in ARTPLACE and not (G[c] & 0xc00)}
 RING = {(x, y) for x in range(TX - 1, TX + 4) for y in range(TY - 1, TY + 4)} - {(x, y) for x in range(TX, TX + 3) for y in range(TY, TY + 3)}
-PATHC -= RING
+PATHC = set()
+for c in RING:
+    if c in OPEN and c not in ARTPLACE: GROUND[c] = GRASS; G[c] = remap(0x3000 | GRASS)
 def _free(c):
     return (c not in RING and c in OPEN and c not in OCC and c not in ARTPLACE and not (G[c] & 0xc00) and 0 <= c[0] < W and 0 <= c[1] < H)
 for _ in range(3):

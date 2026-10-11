@@ -18,8 +18,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 14,
-      "y": 11,
+      "x": 13,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
       "movement_range_x": 1,
@@ -328,8 +328,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 7,
-      "y": 3,
+      "x": 8,
+      "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CinnabarIsland_EventScript_IslandSign"
@@ -344,7 +344,7 @@
     },
     {
       "type": "sign",
-      "x": 22,
+      "x": 16,
       "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -352,8 +352,8 @@
     },
     {
       "type": "sign",
-      "x": 7,
-      "y": 9,
+      "x": 9,
+      "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CinnabarIsland_EventScript_PokemonLabSign"
