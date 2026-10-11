@@ -119,7 +119,7 @@ D['mart'] = chunk(16, 27, 4, 3, 7, 10, 'boutique')
 D['center'] = chunk(42, 28, 4, 4, 38, 10, 'centre')
 D['gym'] = chunk(28, 28, 6, 5, 6, 22, 'arene')
 D['house3'] = chunk(*DOME, 35, 22, 'maison 3')
-claim(20, 2, 8, 5, 'porte du Safari'); D['safari'] = [(24, 6), (23, 6)]
+claim(20, 0, 8, 5, 'porte du Safari'); D['safari'] = [(24, 4), (23, 4)]
 for k, v in D.items(): print(k, v)
 # ---- lac au centre ; pelouse partout ailleurs
 LCX, LCY, LRX, LRY = 24.0, 17.0, 8.2, 4.4
@@ -139,7 +139,7 @@ for k in range(0, 49):
     a = 2 * math.pi * k / 48
     RING.append((int(round(LCX + (LRX + 3.0) * math.cos(a))), int(round(LCY + (LRY + 3.0) * math.sin(a)))))
 trail(RING, 0, 71)
-trail([(22, 7), (22, 9)], 0, 72)
+trail([(22, 5), (22, 9)], 0, 72)
 trail([(0, 14), (4, 14), (8, 15), (11, 14), (13, 16), (14, 17)], 0, 73); trail([(47, 14), (43, 14), (40, 15), (36, 14), (34, 16)], 0, 74)
 trail([(24, 24), (23, 26), (24, 28), (23, 31)], 0, 75)
 for k, ds in D.items():
@@ -310,10 +310,10 @@ def art_block(im, bw, bh, x0, y0, name, gid, claimed=False):
             blk = im.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))
             if sum(1 for p in blk.getdata() if p) < 10: G[(x0 + i, y0 + j)] = 0x400 | remap(0x3000 | gid); OPEN.discard((x0 + i, y0 + j)); WAY.discard((x0 + i, y0 + j)); continue
             ARTPLACE[(x0 + i, y0 + j)] = (slice_tiles(blk), gid); OPEN.discard((x0 + i, y0 + j)); WAY.discard((x0 + i, y0 + j))
-art_block(gate(), 8, 5, 20, 2, 'porte du Safari', PAVE[0], claimed=True)
-WALKART.add((24, 6)); WALKART.add((23, 6))
+art_block(gate(), 8, 5, 20, 0, 'porte du Safari', PAVE[0], claimed=True)
+WALKART.add((24, 4)); WALKART.add((23, 4))
 MONO = monolith()
-MX, MY = 23, 8
+MX, MY = 23, 7
 for j in range(3):
     for i in range(3): assert (MX + i, MY + j) not in OCC and (MX + i, MY + j) not in LAKE
 art_block(MONO, 3, 3, MX, MY, 'geode-monument', GROUND.get((MX, MY), 1))
@@ -332,6 +332,13 @@ for (cx, cy, rx, ry, sd) in ((5, 11, 2.6, 2.2, 1), (43, 10, 2.0, 2.2, 2), (14, 2
         for x in range(int(cx - rx) - 1, int(cx + rx) + 2):
             c = (x, y)
             if ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 > 1 or c not in OPEN or c in OCC or c in WAY or c in KEEP or c in BEACH or near_way(c) or rr.random() > 0.8: continue
+            TREES.add(c); OPEN.discard(c)
+for (cx, cy, rx, ry, sd) in ((4.5, 2.5, 4.2, 2.0, 11), (16.5, 28.5, 3.2, 3.0, 12), (33, 28, 3.6, 2.8, 13), (41, 29, 3.4, 2.6, 14), (44, 23, 2.2, 3.4, 15), (36, 22.5, 1.2, 1.2, 16)):
+    rr = random.Random(950 + sd)
+    for y in range(int(cy - ry) - 1, int(cy + ry) + 2):
+        for x in range(int(cx - rx) - 1, int(cx + rx) + 2):
+            c = (x, y)
+            if ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 > 1 or c not in OPEN or c in OCC or c in WAY or c in KEEP or c in BEACH or rr.random() > 0.88: continue
             TREES.add(c); OPEN.discard(c)
 # ---- cristaux d'amethyste (pelouse, loin des voies) et arbres isoles
 placed = []
