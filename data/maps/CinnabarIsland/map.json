@@ -77,7 +77,7 @@
   "warp_events": [
     {
       "x": 4,
-      "y": 7,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_POKEMON_MANSION_1F",
       "dest_warp_id": "1"

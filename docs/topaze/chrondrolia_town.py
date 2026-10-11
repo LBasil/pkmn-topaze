@@ -49,7 +49,7 @@ def greenish(q):
     for i in px:
         if i == 0: continue
         n += 1; h, l, s_ = hls_(pals[pal][i])
-        if 55 <= h <= 175 and s_ > 0.15: g += 1
+        if 72 <= h <= 175 and s_ > 0.15: g += 1
     return n and g / 64.0 > 0.2
 SEC_MAP = {}; SEC_ENT = []; SEC_ATT = []; CT = []
 def ctile(t):
@@ -166,7 +166,7 @@ SEA = {(x, y) for y in range(H) for x in range(W)} - LAND
 blob(12, 10.5, 10.3, 6.3, 51, amp=0.08)
 rect(8, 3, 10, 9)
 # ---- batiments (decors de Mauville : maison -> labo, salle de jeux -> manoir en ruine, arene, centre, boutique)
-D['mansion'] = chunk(5, 10, 7, 5, 1, 4, 'manoir')
+claim(1, 4, 7, 5, 'centrale'); D['mansion'] = [(4, 8)]            # le Manoir est devenu la centrale electrique de l'ile (warp 0 : interieur d'origine pour l'instant)
 D['lab'] = chunk(18, 11, 4, 4, 11, 4, 'labo')
 D['gym'] = chunk(5, 1, 6, 5, 16, 4, 'arene')
 D['center'] = chunk(21, 2, 4, 4, 3, 11, 'centre')
@@ -264,6 +264,48 @@ def stump(var):
     d.point((7, 9), fill=12); d.point((8, 5), fill=12); d.point((7, 12), fill=12)
     return im
 ASH = [ash(i) for i in range(4)]; STUMP = [stump(0), stump(1)]
+
+def powerplant():
+    """centrale electrique (7x5 cases = 112x80) : deux tours de refroidissement, passerelle de tuyaux, hall d'acier a lucarnes, grande porte a eclair, postes de transformation"""
+    im = newimg(112, 80); d = ImageDraw.Draw(im)
+    def half_at(y): t = (y - 2) / 60.0; return 9 + int(7 * (abs(t - 0.55) * 2) ** 2)
+    for cx in (16, 96):
+        for y in range(2, 63):
+            h_ = half_at(y)
+            d.line([(cx - h_, y), (cx + h_, y)], fill=13); d.point((cx - h_, y), fill=1); d.point((cx + h_, y), fill=1)
+            d.line([(cx + h_ - 6, y), (cx + h_ - 1, y)], fill=14); d.line([(cx - h_ + 2, y), (cx - h_ + 4, y)], fill=6)
+        for y in (14, 28, 42, 56):
+            h_ = half_at(y); d.line([(cx - h_, y), (cx + h_, y)], fill=14)
+        h_ = half_at(2); d.rectangle((cx - h_ - 1, 1, cx + h_ + 1, 3), fill=4, outline=1)
+        d.line([(cx - 4, 62), (cx - 4, 63)], fill=1)
+        for (dx, dy, r_) in ((-4, 1, 5), (3, 0, 4), (8, 2, 3)): d.ellipse((cx + dx - r_, dy - r_ + 3, cx + dx + r_, dy + r_ + 3), fill=6)
+    # passerelle de tuyaux entre les tours + montants
+    for (y0, col) in ((8, 13), (12, 14)): d.rectangle((30, y0, 82, y0 + 2), fill=col, outline=1)
+    for x in (36, 56, 76): d.rectangle((x, 8, x + 3, 25), fill=14, outline=1); d.line([(x + 1, 9), (x + 1, 24)], fill=13)
+    # hall : toit, lucarnes, facade
+    d.rectangle((28, 24, 84, 41), fill=13, outline=1); d.rectangle((28, 24, 84, 26), fill=4, outline=1)
+    for x in (34, 52, 70): d.rectangle((x, 29, x + 10, 37), fill=8, outline=1); d.line([(x + 1, 30), (x + 8, 30)], fill=10); d.line([(x + 1, 31), (x + 4, 31)], fill=9)
+    d.rectangle((26, 41, 86, 79), fill=14, outline=1)
+    for x in range(30, 84, 8): d.line([(x, 42), (x, 78)], fill=11)
+    for k, x in enumerate(range(31, 82, 10)):
+        d.rectangle((x, 46, x + 6, 54), fill=5 if k % 2 else 8, outline=1); d.line([(x + 1, 47), (x + 4, 47)], fill=6)
+    for x in range(26, 86, 8): d.rectangle((x, 58, x + 3, 60), fill=4); d.rectangle((x + 4, 58, x + 7, 60), fill=1)
+    d.rectangle((26, 58, 85, 60), outline=1)
+    d.rectangle((44, 47, 68, 57), fill=11, outline=1); d.rectangle((45, 48, 67, 49), fill=4)
+    d.line([(58, 49), (54, 53), (58, 53), (54, 56)], fill=15); d.line([(59, 49), (55, 53), (59, 53), (55, 56)], fill=15)
+    d.rectangle((45, 61, 66, 79), fill=4, outline=1); d.rectangle((48, 63, 63, 79), fill=1)
+    d.line([(49, 64), (49, 78)], fill=11); d.line([(62, 64), (62, 78)], fill=11); d.rectangle((51, 70, 60, 79), fill=11)
+    d.line([(52, 66), (59, 66)], fill=8)
+    # postes de transformation de chaque cote
+    for (x0, x1) in ((1, 25), (87, 111)):
+        d.rectangle((x0, 64, x1, 78), fill=14, outline=1); d.line([(x0 + 1, 65), (x1 - 1, 65)], fill=13)
+        for xx in range(x0 + 3, x1 - 4, 8):
+            d.rectangle((xx, 67, xx + 5, 75), fill=13, outline=1); d.line([(xx + 1, 68), (xx + 4, 68)], fill=6)
+            for yy in (69, 72): d.line([(xx + 1, yy), (xx + 4, yy)], fill=4)
+            d.rectangle((xx + 1, 63, xx + 2, 66), fill=4, outline=1); d.rectangle((xx + 3, 63, xx + 4, 66), fill=4, outline=1)
+    d.rectangle((0, 76, 111, 79), fill=13, outline=1); d.line([(1, 77), (110, 77)], fill=6)
+    shadow(d, 0, 78, 111, 79)
+    return im
 def pylon():
     """pylone a treillis ancre dans une dalle de beton (boulons), traverse a isolateurs et cables (16x32)"""
     im = newimg(16, 32); d = ImageDraw.Draw(im)
@@ -409,6 +451,13 @@ for (x, y) in sorted(OPEN):
 # ------------------------------------------------------------------ placement de l'art
 TOWER = tower(); PYL = pylon()
 rect(TX - 1, TY - 1, TX + 3, TY + 3, False)
+WALKART = set()
+PP = powerplant()
+for j in range(5):
+    for i in range(7):
+        blk = PP.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)); assert sum(1 for p in blk.getdata() if p) >= 12, ('case de centrale vide', i, j)
+        ARTPLACE[(1 + i, 4 + j)] = (slice_tiles(blk), CONC); OPEN.discard((1 + i, 4 + j))
+WALKART.add((4, 8))
 art_block(TOWER, 3, 3, TX, TY, 'pylone-monument', CONC)
 KEEP = set()
 for k, ds in D.items():
@@ -454,7 +503,6 @@ for c in sorted(RAIL):
     claim(c[0], c[1], 1, 1, 'mur de quai'); ARTPLACE[c] = (slice_tiles(wall_img(sides)), CONC)
 
 # ------------------------------------------------------------------ l'ile a brule il y a dix ans : cendres, braises, souches calcinees (surtout autour du manoir)
-WALKART = set()
 rav = random.Random(404)
 for c in sorted(OPEN):
     if c in OCC or c in ARTPLACE or c in KEEP or c in BEACH or c not in GROUND: continue
