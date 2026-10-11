@@ -168,182 +168,207 @@ for m in BRIDGE:
         top.append((640 + NTL + add_tile(list(qi.getdata()))) | (MIX_PAL << 12) if n else 0)
     base = (m - 640) * 16
     smt[base:base + 16] = struct.pack('<8H', *((WATER_BOT if m in WATER_UNDER else GRASS_BOT) + top))
-# ------------------------------------------------------------------ carte
-W, H = 24, 40
-G = {(x, y): v for (x, y), v in zip(((x, y) for y in range(H) for x in range(W)), struct.unpack('<%dH' % (W * H), open(SRC + 'map_orig.bin', 'rb').read()))}
-G0 = dict(G)
-def beh(m): return raw_attr(m) & 0x1ff
-WATER = {0x10, 0x11, 0x12, 0x15}
-def blocked(c, g=None):
-    v = (g or G)[c]; return bool(v & 0xc00) or beh(v & 0x3ff) in WATER
-obj = json.load(open('data/maps/Route24/map.json'))
-RES = set(); EVC = []
-for o in obj['object_events']: EVC.append((o['x'], o['y']))
-for w_ in obj['warp_events']: EVC.append((w_['x'], w_['y']))
-for b_ in obj['bg_events']: EVC.append((b_['x'], b_['y']))
-for c_ in obj['coord_events']: EVC.append((c_['x'], c_['y']))
-for (ex, ey) in EVC:
-    for a in range(-1, 2):
-        for b in range(-1, 2): RES.add((ex + a, ey + b))
-def flood(g, s0):
-    seen = {s0}; q = collections.deque([s0])
-    while q:
-        c = q.popleft()
-        for d in ((0, 1), (1, 0), (-1, 0), (0, -1)):
-            n = (c[0] + d[0], c[1] + d[1])
-            if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen and not blocked(n, g): seen.add(n); q.append(n)
-    return seen
-START = (11, 38)
-R0 = flood(G0, START)
-GRASSM = {1, 4, 8, 9, 16, 17}
-def mid(c): return G[c] & 0x3ff
-def gm(x, y): return 8 + (x % 2) + 8 * (y % 2)
-CONV = set()                         # cases volontairement converties (eau, etc.)
-def setm(c, m, flags=None):
-    G[c] = ((G0[c] & 0xf000) if flags is None else flags) | m
-# --- plateau ouest (3..12, 3..5) : herbe, un sentier de sable de 2 cases dans l'axe de la breche (7..8) ; entree item TR45 en (11,4) conservee
-for y in range(3, 6):
-    for x in range(4, 13):
-        if G0[(x, y)] & 0x3ff == 217: setm((x, y), 216 if x == 7 else 218 if x == 8 else gm(x, y))
-# --- plateau central (14..16, 3..5) : herbe ; rang 6 = sable avec lisiere d'herbe au nord (225 retourne verticalement)
-e225 = raw_entries(225)
-def vflip_meta(ent):
-    out = []
-    for l in (0, 1):
-        tl, tr, bl, br = ent[l * 4:l * 4 + 4]; out += [bl ^ 0x800, br ^ 0x800, tl ^ 0x800, tr ^ 0x800]
-    return out
-EDGE_N = new_meta(vflip_meta(e225), raw_attr(225), 'edgeN')
-for y in range(3, 6):
-    for x in range(14, 17):
-        if G0[(x, y)] & 0x3ff == 217: setm((x, y), gm(x, y))
-for x in range(14, 17):
-    if G0[(x, 6)] & 0x3ff == 217: setm((x, 6), EDGE_N)
-# --- EAU a l'est du pont : la bande de terre (x14..18) devient une riviere qui rejoint le lac ; poche d'herbe conservee au nord (y<=17)
-WFLAG = G0[(7, 20)] & 0xf000
-for y in range(18, 40):
-    for x in range(14, 19):
-        if y <= 26 and x >= 17: continue                      # falaise a l'est (y<=26)
-        m = 299
-        if y == 18: m = 292 if x == 16 else 291              # berge nord (liseré rocheux, angle arrondi cote falaise)
-        elif y <= 26 and x == 16: m = 300                    # berge est contre la falaise
-        setm((x, y), m, WFLAG); CONV.add((x, y))
-for y in range(19, 26): setm((17, y), 113, G0[(17, y)] & 0xfc00)      # falaise : tuile de roche pleine au bord de l'eau (pas de liseré d'herbe)
-setm((17, 26), 124, G0[(19, 26)] & 0xfc00); setm((18, 26), 124, G0[(19, 26)] & 0xfc00)                # le poteau de cloture devient de l'eau (berge est contre le pied de falaise)
-# --- berge ouest du pont : plus de rebord rocheux contre les rails (l'eau passe sous le pont, comme a l'est)
-for y in range(17, 40):
-    if G0[(8, y)] & 0x3ff in (300, 305, 299): setm((8, y), 299, WFLAG)
-# --- rails est du pont : tuile de rail avec eau a droite (751/719 deja reecrits ci-dessus)
-# --- herbe haute de la berge ouest : contour organique (encoches + quelques touffes) au lieu d'un rectangle
-rt = random.Random(2403)
-for y in range(19, 33):
-    for x in range(3, 6):
-        if G0[(x, y)] & 0x3ff == 13 and (x, y) not in RES:
-            edge = x in (3, 5) or y in (19, 32)
-            if edge and rt.random() < 0.34: setm((x, y), gm(x, y))
-for (x, y) in ((4, 18), (5, 18), (4, 17), (3, 33)):
-    if G0[(x, y)] & 0x3ff in GRASSM and (x, y) not in RES and 3 <= x <= 5 and y != 33: setm((x, y), 13)
-# ------------------------------------------------------------------ vegetation par bruit de densite
-def lattice(seed, n=64):
-    r = random.Random(seed); return [[r.random() for _ in range(n)] for _ in range(n)]
-LA, LB = lattice(51), lattice(52)
-def sm(t): return t * t * (3 - 2 * t)
-def vn(L, x, y):
-    x0, y0 = int(math.floor(x)), int(math.floor(y)); fx, fy = sm(x - x0), sm(y - y0)
-    a = L[y0 % 64][x0 % 64]; b = L[y0 % 64][(x0 + 1) % 64]; c = L[(y0 + 1) % 64][x0 % 64]; d = L[(y0 + 1) % 64][(x0 + 1) % 64]
-    return (a * (1 - fx) + b * fx) * (1 - fy) + (c * (1 - fx) + d * fx) * fy
-def dens(x, y): return 0.62 * vn(LA, x / 4.5, y / 4.5) + 0.38 * vn(LB, x / 2.2 + 9, y / 2.2 + 4)
-PLAIN = {8, 9, 16, 17}
-def grass(c): return c in G and mid(c) in PLAIN and not blocked(c) and c not in RES and c not in CONV and c not in OVER
-def edgeness(c):       # proximite d'une falaise / eau / haie : les arbres aiment les lisieres
-    n = 0
-    for a in range(-2, 3):
-        for b in range(-2, 3):
-            k = (c[0] + a, c[1] + b)
-            if k in G and k != c and (blocked(k) or mid(k) in (113, 114, 117, 112, 115, 343, 318)): n += 1
-    return min(1.0, n / 9.0)
-ARTP = {}; OVER = {}; TREES = []; CLUS = []; SHARDS = []     # OVER : cimes qui debordent sur la case du dessus (calque haut, case praticable)
-def reach_ok(new):       # poser ces cases bloquees ne doit isoler aucune case d'origine encore praticable (verifie a chaque pose)
-    seen = {START}; q = collections.deque([START]); nb = set(new)
-    while q:
-        c = q.popleft()
-        for d in ((0, 1), (1, 0), (-1, 0), (0, -1)):
-            n = (c[0] + d[0], c[1] + d[1])
-            if n in G and n not in seen and not blocked(n) and n not in ARTP and n not in nb: seen.add(n); q.append(n)
-    return all(c in seen for c in R0 if c not in CONV and c not in ARTP and c not in nb)
-def tile_ent(t4, slot): return [(640 + NTL + t) | (slot << 12) for t in t4]
-def art_meta(tiles4, slot, bottom):
-    key = (tuple(tiles4), slot, tuple(bottom)); return new_meta(list(bottom) + tile_ent(tiles4, slot), 0, key)
-def free_ring(cells, r=1):
-    xs = [c[0] for c in cells]; ys = [c[1] for c in cells]
-    return {(x, y) for x in range(min(xs) - r, max(xs) + r + 1) for y in range(min(ys) - r, max(ys) + r + 1)} - set(cells)
-def put_big(x, y, img, kind):
-    cells = [(x + i, y + j) for j in range(2) for i in range(2)]
-    if not all(grass(c) and c not in ARTP for c in cells): return False
-    tall = img.height == 48                      # arbre : la cime deborde sur la case du dessus (herbe libre exigee)
-    above = [(x + i, y - 1) for i in range(2)]
-    if tall and not all(c in G and mid(c) in (PLAIN | {1, 4, 217}) and not blocked(c) and c not in RES and c not in CONV and c not in ARTP and c not in OVER for c in above): return False
-    ring = free_ring(cells)
-    if sum(1 for c in ring if c in ARTP) > (3 if kind == 'tree' else 0) or sum(1 for c in ring if c in G and not blocked(c) and c not in ARTP) < 3 or not reach_ok(cells): return False
-    off = 16 if tall else 0
-    for j in range(2):
-        for i in range(2):
-            ARTP[(x + i, y + j)] = (slice4(img.crop((i * 16, off + j * 16, i * 16 + 16, off + j * 16 + 16))), MIX_PAL if kind == 'tree' else ART_PAL, mid((x + i, y + j)))
-    if tall:
-        for i in range(2): OVER[above[i]] = (slice4(img.crop((i * 16, 0, i * 16 + 16, 16))), MIX_PAL)
-    (TREES if kind == 'tree' else CLUS).append((x, y)); return True
-def put_small(c, var):
-    if not grass(c) or c in ARTP or not reach_ok([c]): return False
-    ARTP[c] = (slice4(small(var)), ART_PAL, mid(c)); SHARDS.append(c); return True
-rnd = random.Random(2405)
-# amas de cristaux : au pied des falaises / de l'eau, hors des cases d'arbre
-ccand = []
-for y in range(H - 1):
-    for x in range(W - 1):
-        cs = [(x + i, y + j) for j in range(2) for i in range(2)]
-        if all(grass(c) and c not in ARTP for c in cs):
-            ccand.append((0.7 * edgeness((x, y)) + 0.3 * rnd.random(), x, y))
-ccand.sort(reverse=True)
-for sc, x, y in ccand:
-    if len(CLUS) >= 3: break
-    if all(max(abs(cx - x), abs(cy - y)) >= 7 for cx, cy in CLUS) and True:
-        put_big(x, y, cluster(len(CLUS) % 2), 'crystal')
-# arbres : meilleurs scores d'abord, quinconce (jamais alignes en ligne/colonne), bosquets la ou le bruit est fort
-cand = []
-for y in range(H - 1):
-    for x in range(W - 1):
-        cs = [(x + i, y + j) for j in range(2) for i in range(2)]
-        if all(grass(c) for c in cs):
-            sc = dens(x + 1, y + 1) + 0.45 * edgeness((x, y)) + 0.1 * rnd.random()
-            cand.append((sc, x, y))
-cand.sort(reverse=True)
-def tree_ok(x, y):
-    for (tx, ty) in TREES:
-        dx, dy = abs(tx - x), abs(ty - y)
-        if max(dx, dy) < 2: return False
-        if (dx == 0 or dy == 0) and max(dx, dy) <= 3: return False          # pas d'alignement
-    return True
-NTREE = 20
-for sc, x, y in cand:
-    if len(TREES) >= NTREE or sc < 0.3: break
-    if tree_ok(x, y): put_big(x, y, TREE_P if rnd.random() < 0.5 else TREE_PF, 'tree')
-# colonies : quelques eclats autour des amas (1 a 3), plus de rares eclats isoles
-for (cx, cy) in CLUS:
-    spots = [(cx + a, cy + b) for a in range(-2, 4) for b in range(-2, 4) if (a, b) not in ((0, 0), (1, 0), (0, 1), (1, 1))]
-    rnd.shuffle(spots)
-    for c in spots[:rnd.randint(1, 3)]: put_small(c, rnd.randrange(3))
-for c in sorted(G):
-    if grass(c) and c not in ARTP and rnd.random() < 0.07 and not any((c[0] + a, c[1] + b) in ARTP for a in (-1, 0, 1) for b in (-1, 0, 1)): put_small(c, rnd.randrange(3))
-for c in sorted(G):
-    if grass(c) and c not in ARTP and dens(c[0] * 1.7 + 30, c[1] * 1.7 + 7) > 0.64 and rnd.random() < 0.75: setm(c, 4)
-# pose finale des metatuiles d'art (collision : tout bloque ; les cimes qui debordent restent praticables)
-for c, (t4, slot) in OVER.items(): G[c] = (G[c] & 0xfc00) | art_meta(t4, slot, bottom_of(mid(c)))
-for c, (t4, slot, m) in ARTP.items(): G[c] = (G0[c] & 0xf000) | 0x400 | art_meta(t4, slot, bottom_of(m))
-# ------------------------------------------------------------------ verifications
-R1 = flood(G, START)
-lost = {c for c in R0 if c not in R1 and c not in ARTP and c not in CONV}
-assert not lost, ('cases devenues inatteignables', sorted(lost)[:10])
-for ev in EVC: assert ev not in ARTP and ev not in CONV, ('evenement recouvert', ev)
-print('arbres', len(TREES), 'amas', len(CLUS), 'eclats', len(SHARDS), '; atteignable', len(R0), '->', len(R1))
+MAPS = [dict(name='Route24', W=24, H=40, src=SRC + 'map_orig.bin', start=(11, 38), seed=2405, ntree=20, nclus=3, clus_gap=7, xmax=99, plain={8, 9, 16, 17}, bg_ring=1, align=0),
+        dict(name='Route25', W=72, H=20, src=SRC + 'map25_orig.bin', start=(0, 8), seed=2507, ntree=22, nclus=5, clus_gap=7, xmax=42, plain={1, 8, 9, 16, 17}, bg_ring=0, align=3)]
+OUT = {}
+for CFG in MAPS:
+    # ------------------------------------------------------------------ carte
+    W, H = CFG['W'], CFG['H']
+    G = {(x, y): v for (x, y), v in zip(((x, y) for y in range(H) for x in range(W)), struct.unpack('<%dH' % (W * H), open(CFG['src'], 'rb').read()))}
+    G0 = dict(G)
+    def beh(m): return raw_attr(m) & 0x1ff
+    WATER = {0x10, 0x11, 0x12, 0x15}
+    def blocked(c, g=None):
+        v = (g or G)[c]; return bool(v & 0xc00) or beh(v & 0x3ff) in WATER
+    obj = json.load(open('data/maps/%s/map.json' % CFG['name']))
+    RES = set(); EVC = []
+    for o in obj['object_events']: EVC.append((o['x'], o['y']))
+    for w_ in obj['warp_events']: EVC.append((w_['x'], w_['y']))
+    BGC = {(b_['x'], b_['y']) for b_ in obj['bg_events']}
+    for b_ in obj['bg_events']: EVC.append((b_['x'], b_['y']))
+    for c_ in obj['coord_events']: EVC.append((c_['x'], c_['y']))
+    for (ex, ey) in EVC:
+        r_ = CFG['bg_ring'] if (ex, ey) in BGC else 1
+        for a in range(-r_, r_ + 1):
+            for b in range(-r_, r_ + 1): RES.add((ex + a, ey + b))
+    def flood(g, s0):
+        seen = {s0}; q = collections.deque([s0])
+        while q:
+            c = q.popleft()
+            for d in ((0, 1), (1, 0), (-1, 0), (0, -1)):
+                n = (c[0] + d[0], c[1] + d[1])
+                if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen and not blocked(n, g): seen.add(n); q.append(n)
+        return seen
+    START = CFG['start']
+    R0 = flood(G0, START)
+    GRASSM = {1, 4, 8, 9, 16, 17}
+    def mid(c): return G[c] & 0x3ff
+    def gm(x, y): return 8 + (x % 2) + 8 * (y % 2)
+    CONV = set()                         # cases volontairement converties (eau, etc.)
+    def setm(c, m, flags=None):
+        G[c] = ((G0[c] & 0xf000) if flags is None else flags) | m
+    if CFG['name'] == 'Route24':
+        # --- plateau ouest (3..12, 3..5) : herbe, un sentier de sable de 2 cases dans l'axe de la breche (7..8) ; entree item TR45 en (11,4) conservee
+        for y in range(3, 6):
+            for x in range(4, 13):
+                if G0[(x, y)] & 0x3ff == 217: setm((x, y), 216 if x == 7 else 218 if x == 8 else gm(x, y))
+        # --- plateau central (14..16, 3..5) : herbe ; rang 6 = sable avec lisiere d'herbe au nord (225 retourne verticalement)
+        e225 = raw_entries(225)
+        def vflip_meta(ent):
+            out = []
+            for l in (0, 1):
+                tl, tr, bl, br = ent[l * 4:l * 4 + 4]; out += [bl ^ 0x800, br ^ 0x800, tl ^ 0x800, tr ^ 0x800]
+            return out
+        EDGE_N = new_meta(vflip_meta(e225), raw_attr(225), 'edgeN')
+        for y in range(3, 6):
+            for x in range(14, 17):
+                if G0[(x, y)] & 0x3ff == 217: setm((x, y), gm(x, y))
+        for x in range(14, 17):
+            if G0[(x, 6)] & 0x3ff == 217: setm((x, 6), EDGE_N)
+        # --- EAU a l'est du pont : la bande de terre (x14..18) devient une riviere qui rejoint le lac ; poche d'herbe conservee au nord (y<=17)
+        WFLAG = G0[(7, 20)] & 0xf000
+        for y in range(18, 40):
+            for x in range(14, 19):
+                if y <= 26 and x >= 17: continue                      # falaise a l'est (y<=26)
+                m = 299
+                if y == 18: m = 292 if x == 16 else 291              # berge nord (liseré rocheux, angle arrondi cote falaise)
+                elif y <= 26 and x == 16: m = 300                    # berge est contre la falaise
+                setm((x, y), m, WFLAG); CONV.add((x, y))
+        for y in range(19, 26): setm((17, y), 113, G0[(17, y)] & 0xfc00)      # falaise : tuile de roche pleine au bord de l'eau (pas de liseré d'herbe)
+        setm((17, 26), 124, G0[(19, 26)] & 0xfc00); setm((18, 26), 124, G0[(19, 26)] & 0xfc00)                # le poteau de cloture devient de l'eau (berge est contre le pied de falaise)
+        # --- berge ouest du pont : plus de rebord rocheux contre les rails (l'eau passe sous le pont, comme a l'est)
+        for y in range(17, 40):
+            if G0[(8, y)] & 0x3ff in (300, 305, 299): setm((8, y), 299, WFLAG)
+        # --- rails est du pont : tuile de rail avec eau a droite (751/719 deja reecrits ci-dessus)
+        # --- herbe haute de la berge ouest : contour organique (encoches + quelques touffes) au lieu d'un rectangle
+        rt = random.Random(2403)
+        for y in range(19, 33):
+            for x in range(3, 6):
+                if G0[(x, y)] & 0x3ff == 13 and (x, y) not in RES:
+                    edge = x in (3, 5) or y in (19, 32)
+                    if edge and rt.random() < 0.34: setm((x, y), gm(x, y))
+        for (x, y) in ((4, 18), (5, 18), (4, 17), (3, 33)):
+            if G0[(x, y)] & 0x3ff in GRASSM and (x, y) not in RES and 3 <= x <= 5 and y != 33: setm((x, y), 13)
+    elif CFG['name'] == 'Route25':
+        # buissons epars d'origine (metatuile 5) -> herbe : l'habillage les remplace par des bosquets, des cristaux et des fleurs
+        for c in sorted(G0):
+            if G0[c] & 0x3ff == 5 and c[0] <= CFG['xmax']: setm(c, gm(*c))
+        # herbe haute du bord ouest (2 x 8) : contour organique (encoches + quelques touffes au sud)
+        rt = random.Random(2503)
+        for y in (3, 4):
+            for x in range(1, 9):
+                if G0[(x, y)] & 0x3ff == 13 and (x, y) not in RES and rt.random() < (0.45 if x in (1, 8) else 0.14): setm((x, y), gm(x, y))
+        for x in range(2, 8):
+            if G0[(x, 5)] & 0x3ff in (8, 9) and (x, 5) not in RES and rt.random() < 0.4: setm((x, 5), 13)
+
+    # ------------------------------------------------------------------ vegetation par bruit de densite
+    def lattice(seed, n=64):
+        r = random.Random(seed); return [[r.random() for _ in range(n)] for _ in range(n)]
+    LA, LB = lattice(51), lattice(52)
+    def sm(t): return t * t * (3 - 2 * t)
+    def vn(L, x, y):
+        x0, y0 = int(math.floor(x)), int(math.floor(y)); fx, fy = sm(x - x0), sm(y - y0)
+        a = L[y0 % 64][x0 % 64]; b = L[y0 % 64][(x0 + 1) % 64]; c = L[(y0 + 1) % 64][x0 % 64]; d = L[(y0 + 1) % 64][(x0 + 1) % 64]
+        return (a * (1 - fx) + b * fx) * (1 - fy) + (c * (1 - fx) + d * fx) * fy
+    def dens(x, y): return 0.62 * vn(LA, x / 4.5, y / 4.5) + 0.38 * vn(LB, x / 2.2 + 9, y / 2.2 + 4)
+    PLAIN = CFG['plain']
+    def grass(c): return c in G and c[0] <= CFG['xmax'] and mid(c) in PLAIN and not blocked(c) and c not in RES and c not in CONV and c not in OVER
+    def edgeness(c):       # proximite d'une falaise / eau / haie : les arbres aiment les lisieres
+        n = 0
+        for a in range(-2, 3):
+            for b in range(-2, 3):
+                k = (c[0] + a, c[1] + b)
+                if k in G and k != c and (blocked(k) or mid(k) in (113, 114, 117, 112, 115, 343, 318)): n += 1
+        return min(1.0, n / 9.0)
+    ARTP = {}; OVER = {}; TREES = []; CLUS = []; SHARDS = []     # OVER : cimes qui debordent sur la case du dessus (calque haut, case praticable)
+    def reach_ok(new):       # poser ces cases bloquees ne doit isoler aucune case d'origine encore praticable (verifie a chaque pose)
+        seen = {START}; q = collections.deque([START]); nb = set(new)
+        while q:
+            c = q.popleft()
+            for d in ((0, 1), (1, 0), (-1, 0), (0, -1)):
+                n = (c[0] + d[0], c[1] + d[1])
+                if n in G and n not in seen and not blocked(n) and n not in ARTP and n not in nb: seen.add(n); q.append(n)
+        return all(c in seen for c in R0 if c not in CONV and c not in ARTP and c not in nb)
+    def tile_ent(t4, slot): return [(640 + NTL + t) | (slot << 12) for t in t4]
+    def art_meta(tiles4, slot, bottom):
+        key = (tuple(tiles4), slot, tuple(bottom)); return new_meta(list(bottom) + tile_ent(tiles4, slot), 0, key)
+    def free_ring(cells, r=1):
+        xs = [c[0] for c in cells]; ys = [c[1] for c in cells]
+        return {(x, y) for x in range(min(xs) - r, max(xs) + r + 1) for y in range(min(ys) - r, max(ys) + r + 1)} - set(cells)
+    def put_big(x, y, img, kind):
+        cells = [(x + i, y + j) for j in range(2) for i in range(2)]
+        if not all(grass(c) and c not in ARTP for c in cells): return False
+        tall = img.height == 48                      # arbre : la cime deborde sur la case du dessus (herbe libre exigee)
+        above = [(x + i, y - 1) for i in range(2)]
+        if tall and not all(c in G and mid(c) in (PLAIN | {1, 4, 217}) and not blocked(c) and c not in RES and c not in CONV and c not in ARTP and c not in OVER for c in above): return False
+        ring = free_ring(cells)
+        if sum(1 for c in ring if c in ARTP) > (3 if kind == 'tree' else 0) or sum(1 for c in ring if c in G and not blocked(c) and c not in ARTP) < 3 or not reach_ok(cells): return False
+        off = 16 if tall else 0
+        for j in range(2):
+            for i in range(2):
+                ARTP[(x + i, y + j)] = (slice4(img.crop((i * 16, off + j * 16, i * 16 + 16, off + j * 16 + 16))), MIX_PAL if kind == 'tree' else ART_PAL, mid((x + i, y + j)))
+        if tall:
+            for i in range(2): OVER[above[i]] = (slice4(img.crop((i * 16, 0, i * 16 + 16, 16))), MIX_PAL)
+        (TREES if kind == 'tree' else CLUS).append((x, y)); return True
+    def put_small(c, var):
+        if not grass(c) or c in ARTP or not reach_ok([c]): return False
+        ARTP[c] = (slice4(small(var)), ART_PAL, mid(c)); SHARDS.append(c); return True
+    rnd = random.Random(CFG['seed'])
+    # amas de cristaux : au pied des falaises / de l'eau, hors des cases d'arbre
+    ccand = []
+    for y in range(H - 1):
+        for x in range(W - 1):
+            cs = [(x + i, y + j) for j in range(2) for i in range(2)]
+            if all(grass(c) and c not in ARTP for c in cs):
+                ccand.append((0.7 * edgeness((x, y)) + 0.3 * rnd.random(), x, y))
+    ccand.sort(reverse=True)
+    for sc, x, y in ccand:
+        if len(CLUS) >= CFG['nclus']: break
+        if all(max(abs(cx - x), abs(cy - y)) >= CFG['clus_gap'] for cx, cy in CLUS) and True:
+            put_big(x, y, cluster(len(CLUS) % 2), 'crystal')
+    # arbres : meilleurs scores d'abord, quinconce (jamais alignes en ligne/colonne), bosquets la ou le bruit est fort
+    cand = []
+    for y in range(H - 1):
+        for x in range(W - 1):
+            cs = [(x + i, y + j) for j in range(2) for i in range(2)]
+            if all(grass(c) for c in cs):
+                sc = dens(x + 1, y + 1) + 0.45 * edgeness((x, y)) + 0.1 * rnd.random()
+                cand.append((sc, x, y))
+    cand.sort(reverse=True)
+    def tree_ok(x, y):
+        for (tx, ty) in TREES:
+            dx, dy = abs(tx - x), abs(ty - y)
+            if max(dx, dy) < 2: return False
+            if (dx == 0 or dy == 0) and max(dx, dy) <= 3: return False          # pas d'alignement
+            al = CFG['align']
+            if al and ((dy <= 1 and dx <= al) or (dx <= 1 and dy <= al)): return False   # ni rangees ni files quasi alignees
+        return True
+    NTREE = CFG['ntree']; REJ = collections.Counter()
+    for sc, x, y in cand:
+        if len(TREES) >= NTREE or sc < 0.3: break
+        if tree_ok(x, y):
+            if not put_big(x, y, TREE_P if rnd.random() < 0.5 else TREE_PF, 'tree'): REJ['put_big'] += 1
+        else: REJ['tree_ok'] += 1
+    # colonies : quelques eclats autour des amas (1 a 3), plus de rares eclats isoles
+    for (cx, cy) in CLUS:
+        spots = [(cx + a, cy + b) for a in range(-2, 4) for b in range(-2, 4) if (a, b) not in ((0, 0), (1, 0), (0, 1), (1, 1))]
+        rnd.shuffle(spots)
+        for c in spots[:rnd.randint(1, 3)]: put_small(c, rnd.randrange(3))
+    for c in sorted(G):
+        if grass(c) and c not in ARTP and rnd.random() < 0.07 and not any((c[0] + a, c[1] + b) in ARTP for a in (-1, 0, 1) for b in (-1, 0, 1)): put_small(c, rnd.randrange(3))
+    for c in sorted(G):
+        if grass(c) and c not in ARTP and dens(c[0] * 1.7 + 30, c[1] * 1.7 + 7) > 0.64 and rnd.random() < 0.75: setm(c, 4)
+    # pose finale des metatuiles d'art (collision : tout bloque ; les cimes qui debordent restent praticables)
+    for c, (t4, slot) in OVER.items(): G[c] = (G[c] & 0xfc00) | art_meta(t4, slot, bottom_of(mid(c)))
+    for c, (t4, slot, m) in ARTP.items(): G[c] = (G0[c] & 0xf000) | 0x400 | art_meta(t4, slot, bottom_of(m))
+    # ------------------------------------------------------------------ verifications
+    R1 = flood(G, START)
+    lost = {c for c in R0 if c not in R1 and c not in ARTP and c not in CONV}
+    assert not lost, ('cases devenues inatteignables', sorted(lost)[:10])
+    for ev in EVC: assert ev not in ARTP and ev not in CONV, ('evenement recouvert', ev)
+    print(CFG['name'], 'herbe', sum(1 for c in G if c in G and mid(c) in CFG['plain']), sum(1 for c in G if c in RES and mid(c) in CFG['plain']), 'cand', len(cand), dict(REJ), 'arbres', len(TREES), 'amas', len(CLUS), 'eclats', len(SHARDS), '; atteignable', len(R0), '->', len(R1))
+    OUT[CFG['name']] = (dict(G), W, H)
+    json.dump({'w': W, 'h': H, 'blocked': sorted([x, y] for (x, y) in G if blocked((x, y)))}, open('/tmp/%s_col.json' % CFG['name'].lower(), 'w'))
 # ------------------------------------------------------------------ controle des sprites (planche + assertions)
 def qa_sprite(name, rgba, big=True):
     w, h = rgba.size; px = rgba.load(); ok = True; msgs = []
@@ -383,8 +408,9 @@ for n, t in enumerate(NEWT):
     ti = Image.new('P', (8, 8)); ti.putdata(list(t)); out.paste(ti, (((NTL + n) % 16) * 8, ((NTL + n) // 16) * 8))
 out.save(NS + 'tiles.png')
 writepal(NS + 'palettes/%02d.pal' % ART_PAL, PAL_C); writepal(NS + 'palettes/%02d.pal' % MIX_PAL, MIXP)
-g = [G[(x, y)] for y in range(H) for x in range(W)]
-open('data/layouts/Route24/map.bin', 'wb').write(struct.pack('<%dH' % len(g), *g))
+for nm, (GG, WW, HH) in OUT.items():
+    g = [GG[(x, y)] for y in range(HH) for x in range(WW)]
+    open('data/layouts/%s/map.bin' % nm, 'wb').write(struct.pack('<%dH' % len(g), *g))
 def add(path, text):
     s = open(path).read()
     if 'GeneralPepite' not in s: open(path, 'a').write(text)
@@ -422,5 +448,4 @@ L = json.load(open('data/layouts/layouts.json'))
 for l in L['layouts']:
     if l.get('id') in ('LAYOUT_ROUTE24', 'LAYOUT_ROUTE25'): l.update(primary_tileset='gTileset_GeneralPepite', secondary_tileset='gTileset_CeruleanPepite')
 json.dump(L, open('data/layouts/layouts.json', 'w'), indent=2); open('data/layouts/layouts.json', 'a').write('\n')
-json.dump({'w': W, 'h': H, 'blocked': sorted([x, y] for (x, y) in G if blocked((x, y)))}, open('/tmp/route24_col.json', 'w'))
 print('route 24 habillee : metatuiles', NMT + len(ENTS), 'tuiles', NTL + len(NEWT))
