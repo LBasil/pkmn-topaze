@@ -116,7 +116,7 @@ def hls_(c): h, l, s = colorsys.rgb_to_hls(c[0] / 255, c[1] / 255, c[2] / 255); 
 def rgb_(h, l, s): r, g, b = colorsys.hls_to_rgb((h % 360) / 360, max(0, min(1, l)), max(0, min(1, s))); return int(r * 255 + .5), int(g * 255 + .5), int(b * 255 + .5)
 def topaze(c):
     h, l, s = hls_(c)
-    if 270 <= h <= 345 and s > 0.15: return rgb_(354, l * 0.92, min(0.95, s * 1.15))      # rose / violet -> cramoisi (la ville a brule : les toits gardent le rouge de l'ile)
+    if 270 <= h <= 345 and s > 0.15: return rgb_(42 + (h - 300) * 0.05, min(1, l * 1.02 + 0.02), min(0.95, s * 1.1))      # rose / violet -> or / ambre
     if 190 <= h <= 255 and s < 0.40 and l > 0.45: return rgb_(44, min(1, l * 0.97), s * 0.45)              # paves bleutes -> creme
     if 75 <= h <= 165 and s > 0.2: return rgb_(h - 13, l, s)                                                          # verts -> verts dores (soleil d'or)
     return c
@@ -419,7 +419,7 @@ rav = random.Random(404)
 for c in sorted(OPEN):
     if c in OCC or c in ARTPLACE or c in KEEP or c in BEACH or c not in GROUND: continue
     dm = math.hypot(c[0] - 4.5, c[1] - 8.0)
-    if rav.random() < (0.5 if dm < 4.5 else 0.25 if dm < 7 else 0.03):
+    if False:
         ARTPLACE[c] = (slice_tiles(ASH[rav.randrange(4)]), CONC); WALKART.add(c)
 ns = 0
 print('souches', ns, 'cendres', len(WALKART))
