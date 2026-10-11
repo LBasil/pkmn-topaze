@@ -18,11 +18,6 @@
       "map": "MAP_ROUTE21_NORTH",
       "offset": 0,
       "direction": "up"
-    },
-    {
-      "map": "MAP_CINNABAR_ISLAND",
-      "offset": 0,
-      "direction": "down"
     }
   ],
   "object_events": [
@@ -97,7 +92,78 @@
       "flag": "0"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 14,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 15,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 16,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 17,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 18,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_warp_id": "7"
+    },
+    {
+      "x": 19,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_warp_id": "8"
+    },
+    {
+      "x": 20,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_warp_id": "9"
+    },
+    {
+      "x": 21,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_warp_id": "10"
+    },
+    {
+      "x": 22,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_warp_id": "11"
+    },
+    {
+      "x": 23,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_CINNABAR_ISLAND",
+      "dest_warp_id": "12"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }

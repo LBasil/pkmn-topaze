@@ -1911,3 +1911,45 @@ const u16 gTilesetPalettes_ViridianPepite[][16] =
 	INCBIN_U16("data/tilesets/secondary/viridian_pepite/palettes/14.gbapal"),
 	INCBIN_U16("data/tilesets/secondary/viridian_pepite/palettes/15.gbapal"),
 };
+
+const u32 gTilesetTiles_GeneralTopaze[] = INCBIN_U32("data/tilesets/primary/general_topaze/tiles.4bpp.lz");
+const u16 gTilesetPalettes_GeneralTopaze[][16] =
+{
+	INCBIN_U16("data/tilesets/primary/general_topaze/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_topaze/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_topaze/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_topaze/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_topaze/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_topaze/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_topaze/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_topaze/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_topaze/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_topaze/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_topaze/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_topaze/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_topaze/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_topaze/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_topaze/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_topaze/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_MauvilleTopaze[] = INCBIN_U32("data/tilesets/secondary/mauville_topaze/tiles.4bpp.lz");
+const u16 gTilesetPalettes_MauvilleTopaze[][16] =
+{
+	INCBIN_U16("data/tilesets/secondary/mauville_topaze/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mauville_topaze/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mauville_topaze/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mauville_topaze/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mauville_topaze/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mauville_topaze/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mauville_topaze/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mauville_topaze/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mauville_topaze/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mauville_topaze/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mauville_topaze/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mauville_topaze/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mauville_topaze/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mauville_topaze/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mauville_topaze/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/mauville_topaze/palettes/15.gbapal"),
+};

@@ -15,7 +15,7 @@ CinnabarIsland_Text_ScientistsExperimentInMansion::
 
 CinnabarIsland_Text_IslandSign::
     .string "CHRONDROLIA\n"
-    .string "The Fiery Town of Burning Desire$"
+    .string "The Yellow City of Topaz$"
 
 CinnabarIsland_Text_PokemonLab::
     .string "POKéMON LAB$"

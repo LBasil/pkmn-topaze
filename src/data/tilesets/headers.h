@@ -1010,3 +1010,25 @@ const struct Tileset gTileset_ViridianPepite =
     .metatileAttributes = gMetatileAttributes_ViridianPepite,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralTopaze =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralTopaze,
+    .palettes = gTilesetPalettes_GeneralTopaze,
+    .metatiles = gMetatiles_GeneralTopaze,
+    .metatileAttributes = gMetatileAttributes_GeneralTopaze,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_MauvilleTopaze =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_MauvilleTopaze,
+    .palettes = gTilesetPalettes_MauvilleTopaze,
+    .metatiles = gMetatiles_MauvilleTopaze,
+    .metatileAttributes = gMetatileAttributes_MauvilleTopaze,
+    .callback = NULL,
+};

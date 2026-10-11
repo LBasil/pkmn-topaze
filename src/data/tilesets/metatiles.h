@@ -263,3 +263,8 @@ const u32 gMetatileAttributes_GeneralOpalroad[] = INCBIN_U32("data/tilesets/prim
 
 const u16 gMetatiles_ViridianPepite[] = INCBIN_U16("data/tilesets/secondary/viridian_pepite/metatiles.bin");
 const u32 gMetatileAttributes_ViridianPepite[] = INCBIN_U32("data/tilesets/secondary/viridian_pepite/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralTopaze[] = INCBIN_U16("data/tilesets/primary/general_topaze/metatiles.bin");
+const u32 gMetatileAttributes_GeneralTopaze[] = INCBIN_U32("data/tilesets/primary/general_topaze/metatile_attributes.bin");
+const u16 gMetatiles_MauvilleTopaze[] = INCBIN_U16("data/tilesets/secondary/mauville_topaze/metatiles.bin");
+const u32 gMetatileAttributes_MauvilleTopaze[] = INCBIN_U32("data/tilesets/secondary/mauville_topaze/metatile_attributes.bin");
