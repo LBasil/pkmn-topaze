@@ -297,3 +297,9 @@ const u32 gMetatileAttributes_GeneralRoute19[] = INCBIN_U32("data/tilesets/prima
 
 const u16 gMetatiles_FuchsiaRoute19[] = INCBIN_U16("data/tilesets/secondary/fuchsia_route19/metatiles.bin");
 const u32 gMetatileAttributes_FuchsiaRoute19[] = INCBIN_U32("data/tilesets/secondary/fuchsia_route19/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralRoute18[] = INCBIN_U16("data/tilesets/primary/general_route18/metatiles.bin");
+const u32 gMetatileAttributes_GeneralRoute18[] = INCBIN_U32("data/tilesets/primary/general_route18/metatile_attributes.bin");
+
+const u16 gMetatiles_CeladonRoute18[] = INCBIN_U16("data/tilesets/secondary/celadon_route18/metatiles.bin");
+const u32 gMetatileAttributes_CeladonRoute18[] = INCBIN_U32("data/tilesets/secondary/celadon_route18/metatile_attributes.bin");

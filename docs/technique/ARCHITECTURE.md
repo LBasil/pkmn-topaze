@@ -95,3 +95,6 @@ Les champions occupent les emplacements des chefs d'arène d'origine : `Brock→
 Toute la mer du sud est remplacee par de l obsidienne (v4 : plus de volcan, obsidienne remontee jusqu au pied des falaises de la plage, plus aucun rocher dans l eau) (metatuiles procedurales tuilables, palette 10, veines de lave, impassable) avec 3 volcans fumants (5x5, 4x4, 4x4). Restent navigables : bassin devant la plage, chenal sinueux, bassins et baie ouest (acces Route 20 / iles Ecume). Evenements (dresseurs nageurs, objets) gardes accessibles (BFS). Rendu `reference/route19_v2.png`. A etendre eventuellement a la Route 20 (a valider).
 
 ### Route 19 v5 : VALIDEE par Basil le 11/10
+
+## Route 18 v1 (habillage amethyste)
+`docs/topaze/route18_dress.py` (derive de route19_dress.py sans eruption) : tilesets `GeneralRoute18` / `CeladonRoute18`, sable/pelouses/arbres -> lilas/indigo, cristaux sur l'eau (8) et le chemin (2). Connexion Route 17 (tileset different) remplacee par 16 warps a pas simple Route18 y=0 <-> Route17 y=159 (`route18_events.py`, LAYOUT_ROUTE17 ajoute a IsTopazeStepWarpMap). Ordre : route18_dress -> route18_events. Rendu `reference/route18_v1.png`.

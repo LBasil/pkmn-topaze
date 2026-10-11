@@ -1142,3 +1142,25 @@ const struct Tileset gTileset_FuchsiaRoute19 =
     .metatileAttributes = gMetatileAttributes_FuchsiaRoute19,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralRoute18 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralRoute18,
+    .palettes = gTilesetPalettes_GeneralRoute18,
+    .metatiles = gMetatiles_GeneralRoute18,
+    .metatileAttributes = gMetatileAttributes_GeneralRoute18,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_CeladonRoute18 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CeladonRoute18,
+    .palettes = gTilesetPalettes_CeladonRoute18,
+    .metatiles = gMetatiles_CeladonRoute18,
+    .metatileAttributes = gMetatileAttributes_CeladonRoute18,
+    .callback = NULL,
+};
