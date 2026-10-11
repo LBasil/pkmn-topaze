@@ -863,7 +863,7 @@ static bool8 IsTopazeStepWarpMap(void)
         || gMapHeader.mapLayoutId == LAYOUT_VIRIDIAN_CITY || gMapHeader.mapLayoutId == LAYOUT_ROUTE2 || gMapHeader.mapLayoutId == LAYOUT_ROUTE22
         || gMapHeader.mapLayoutId == LAYOUT_PEWTER_CITY || gMapHeader.mapLayoutId == LAYOUT_ROUTE3 || gMapHeader.mapLayoutId == LAYOUT_VIRIDIAN_FOREST || gMapHeader.mapLayoutId == LAYOUT_ROUTE4 || gMapHeader.mapLayoutId == LAYOUT_CERULEAN_CITY
         || gMapHeader.mapLayoutId == LAYOUT_ROUTE24 || gMapHeader.mapLayoutId == LAYOUT_ROUTE5 || gMapHeader.mapLayoutId == LAYOUT_ROUTE9 || gMapHeader.mapLayoutId == LAYOUT_ROUTE4_EAST
-        || gMapHeader.mapLayoutId == LAYOUT_CINNABAR_ISLAND || gMapHeader.mapLayoutId == LAYOUT_ROUTE21_SOUTH || gMapHeader.mapLayoutId == LAYOUT_ROUTE20;
+        || gMapHeader.mapLayoutId == LAYOUT_CINNABAR_ISLAND || gMapHeader.mapLayoutId == LAYOUT_ROUTE21_SOUTH || gMapHeader.mapLayoutId == LAYOUT_ROUTE20 || gMapHeader.mapLayoutId == LAYOUT_ROUTE19;
 }
 
 static bool8 TryStartWarpEventScript(struct MapPosition *position, u16 metatileBehavior)

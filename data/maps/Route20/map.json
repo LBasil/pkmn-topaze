@@ -13,13 +13,7 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_ROUTE19",
-      "offset": -40,
-      "direction": "right"
-    }
-  ],
+  "connections": [],
   "object_events": [
     {
       "type": "object",
@@ -190,6 +184,111 @@
       "elevation": 3,
       "dest_map": "MAP_SEAFOAM_ISLANDS_1F",
       "dest_warp_id": "4"
+    },
+    {
+      "x": 119,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE19",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 119,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE19",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 119,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE19",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 119,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE19",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 119,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE19",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 119,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE19",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 119,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE19",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 119,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE19",
+      "dest_warp_id": "7"
+    },
+    {
+      "x": 119,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE19",
+      "dest_warp_id": "8"
+    },
+    {
+      "x": 119,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE19",
+      "dest_warp_id": "9"
+    },
+    {
+      "x": 119,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE19",
+      "dest_warp_id": "10"
+    },
+    {
+      "x": 119,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE19",
+      "dest_warp_id": "11"
+    },
+    {
+      "x": 119,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE19",
+      "dest_warp_id": "12"
+    },
+    {
+      "x": 119,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE19",
+      "dest_warp_id": "13"
+    },
+    {
+      "x": 119,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE19",
+      "dest_warp_id": "14"
     },
     {
       "x": 0,

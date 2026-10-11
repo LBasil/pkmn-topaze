@@ -1105,8 +1105,8 @@
       "height": 20,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_CinnabarIsland",
+      "primary_tileset": "gTileset_GeneralRoute20",
+      "secondary_tileset": "gTileset_CinnabarRoute20",
       "border_filepath": "data/layouts/Route20/border.bin",
       "blockdata_filepath": "data/layouts/Route20/map.bin"
     },

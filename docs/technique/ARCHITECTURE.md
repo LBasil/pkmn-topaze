@@ -71,3 +71,8 @@ Les champions occupent les emplacements des chefs d'arène d'origine : `Brock→
 - `docs/topaze/route21_dress.py` : copie des tilesets par moitie (GeneralRoute21N/S + CinnabarRoute21N/S), teinte grenat/eau violette au Nord (voisin Grenalux), eau bleue et or topaze au Sud (voisin Chrondrolia), pylones sur l'eau, cristaux sur les bancs de sable, accessibilite verifiee (BFS). Eau animee conservee (callback General).
 - `docs/topaze/route21_events.py` : plus de connexion N<->S (tilesets differents) -> pas simples sur les cases d'eau communes. Ordre : route21_dress -> route21_events -> chrondrolia_events.
 - A FAIRE : test surf Route 21/20 <-> Chrondrolia en emulateur.
+
+### Route 20 (habillage v1, couleurs Chrondrolia)
+- `docs/topaze/route20_dress.py` (dérivé de route21_dress.py) : tilesets GeneralRoute20 / CinnabarRoute20 (eau animée conservée), sable -> béton gris-beige, 14 pylônes sur l'eau, 5 éclats de topaze sur les bancs de sable / îles Écume, BFS d'accès. Rendu `docs/topaze/reference/route20_v1.png`.
+- `docs/topaze/route20_events.py` : connexion Route 19 retirée -> pas simples (Route 20 x=119, y 3..17 <-> Route 19 x=0, y+40) ; `LAYOUT_ROUTE19` ajouté à `IsTopazeStepWarpMap()`. Ordre : route20_dress -> route20_events -> chrondrolia_events.
+- A FAIRE : habillage Route 19 / Fuchsia (aujourd'hui bleu d'origine), test surf.

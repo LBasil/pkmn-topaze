@@ -280,3 +280,9 @@ const u32 gMetatileAttributes_GeneralRoute21S[] = INCBIN_U32("data/tilesets/prim
 
 const u16 gMetatiles_CinnabarRoute21S[] = INCBIN_U16("data/tilesets/secondary/cinnabar_route21s/metatiles.bin");
 const u32 gMetatileAttributes_CinnabarRoute21S[] = INCBIN_U32("data/tilesets/secondary/cinnabar_route21s/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralRoute20[] = INCBIN_U16("data/tilesets/primary/general_route20/metatiles.bin");
+const u32 gMetatileAttributes_GeneralRoute20[] = INCBIN_U32("data/tilesets/primary/general_route20/metatile_attributes.bin");
+
+const u16 gMetatiles_CinnabarRoute20[] = INCBIN_U16("data/tilesets/secondary/cinnabar_route20/metatiles.bin");
+const u32 gMetatileAttributes_CinnabarRoute20[] = INCBIN_U32("data/tilesets/secondary/cinnabar_route20/metatile_attributes.bin");
