@@ -160,13 +160,25 @@ for CFG in MAPS:
             for b in range(-r_, r_ + 1):
                 if (a != 0 and b != 0): continue     # foret dense : croix seulement
                 RES.add((ex + a, ey + b))
+    LEDGE = {0x38: (1, 0), 0x39: (-1, 0), 0x3a: (0, -1), 0x3b: (0, 1)}
+    def nbrs(c, free, g=None):       # voisins atteignables, rebords a sens unique compris (on ne les franchit que dans leur sens, en retombant de l'autre cote)
+        gg = g or G
+        for d in ((0, 1), (1, 0), (-1, 0), (0, -1)):
+            n = (c[0] + d[0], c[1] + d[1])
+            if n not in gg: continue
+            bh = beh(gg[n] & 0x3ff)
+            if bh in LEDGE:
+                if LEDGE[bh] == d:
+                    l = (n[0] + d[0], n[1] + d[1])
+                    if l in gg and free(l): yield l
+                continue
+            if free(n): yield n
     def flood(g, s0):
         seen = {s0}; q = collections.deque([s0])
         while q:
             c = q.popleft()
-            for d in ((0, 1), (1, 0), (-1, 0), (0, -1)):
-                n = (c[0] + d[0], c[1] + d[1])
-                if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen and not blocked(n, g): seen.add(n); q.append(n)
+            for n in nbrs(c, lambda k: not blocked(k, g), g):
+                if n not in seen: seen.add(n); q.append(n)
         return seen
     START = CFG['start']
     R0 = flood(G0, START)
@@ -204,11 +216,11 @@ for CFG in MAPS:
     ARTP = {}; OVER = {}; TREES = []; CLUS = []; SHARDS = []     # OVER : cimes qui debordent sur la case du dessus (calque haut, case praticable)
     def reach_ok(new, relax=False):       # poser ces cases bloquees ne doit isoler aucune case d'origine encore praticable (verifie a chaque pose)
         seen = {START}; q = collections.deque([START]); nb = set(new)
+        fr = lambda k: not blocked(k) and k not in ARTP and k not in nb
         while q:
             c = q.popleft()
-            for d in ((0, 1), (1, 0), (-1, 0), (0, -1)):
-                n = (c[0] + d[0], c[1] + d[1])
-                if n in G and n not in seen and not blocked(n) and n not in ARTP and n not in nb: seen.add(n); q.append(n)
+            for n in nbrs(c, fr):
+                if n not in seen: seen.add(n); q.append(n)
         return all(c in seen for c in (EVC if relax else R0) if c not in CONV and c not in ARTP and c not in nb and c in R0 and not blocked(c))
     def tile_ent(t4, slot): return [(640 + NTL + t) | (slot << 12) for t in t4]
     def art_meta(tiles4, slot, bottom):
@@ -243,12 +255,15 @@ for CFG in MAPS:
         while pq:
             d_, c = heapq.heappop(pq)
             if d_ > dist.get(c, 1e9): continue
-            for dx, dy in ((0, 1), (1, 0), (-1, 0), (0, -1)):
-                n = (c[0] + dx, c[1] + dy)
-                if n in G and not blocked(n):
-                    nd = d_ + cost[n]
-                    if nd < dist.get(n, 1e9): dist[n] = nd; prev[n] = c; heapq.heappush(pq, (nd, n))
+            for n in nbrs(c, lambda k: not blocked(k)):
+                nd = d_ + cost[n]
+                if nd < dist.get(n, 1e9): dist[n] = nd; prev[n] = c; heapq.heappush(pq, (nd, n))
         tg = [c for c in EVC if c in dist]
+        for ev in EVC:      # evenements sur case bloquee (portes, panneau) : on garde libre la case d'approche
+            if ev not in dist:
+                for n in ((ev[0], ev[1] + 1), (ev[0] + 1, ev[1]), (ev[0] - 1, ev[1]), (ev[0], ev[1] - 1)):
+                    if n in dist: tg.append(n); break
+        GATE = [(8, 6), (9, 6)]
         rk = random.Random(2214); KEEPS.update(tg)
         for t in tg:
             c = t
@@ -258,6 +273,17 @@ for CFG in MAPS:
                     n = (c[0] + dx, c[1] + dy)
                     if n in G and not blocked(n) and rk.random() < 0.6: KEEPS.add(n)
                 c = prev[c]
+        for g_ in GATE:        # acces a la Ligue : large (3 cases) sur tout le trajet depuis l'arrivee, carrefour de l'entree de la cour compris
+            c = g_
+            while c in prev:
+                KEEPS.add(c)
+                for dx, dy in ((0, 1), (1, 0), (-1, 0), (0, -1)):
+                    n = (c[0] + dx, c[1] + dy)
+                    if n in G and not blocked(n) and n in R0: KEEPS.add(n)
+                c = prev[c]
+        for x in range(2, 8):
+            for y in range(10, 15):
+                if (x, y) in G and not blocked((x, y)): KEEPS.add((x, y))
     # amas de cristaux : au pied des falaises / de l'eau, hors des cases d'arbre
     ccand = []
     for y in range(H - 1):
@@ -333,6 +359,8 @@ for CFG in MAPS:
     # ------------------------------------------------------------------ verifications
     R1 = flood(G, START)
     lost = {c for c in R0 if c not in R1 and c not in ARTP and c not in CONV and c not in BUSH}
+    for ev in EVC: assert ev in R0 or any(n in R0 for n in ((ev[0] + 1, ev[1]), (ev[0] - 1, ev[1]), (ev[0], ev[1] + 1), (ev[0], ev[1] - 1))), ('evenement hors d origine', ev)
+    for ev in EVC: assert ev in R1 or any(n in R1 for n in ((ev[0] + 1, ev[1]), (ev[0] - 1, ev[1]), (ev[0], ev[1] + 1), (ev[0], ev[1] - 1))), ('evenement inaccessible', ev)
     if lost: print('LOST', sorted(lost)[:10], [(n, hex(G[n]), n in ARTP, n in R1, n in R0) for n in ((7,15),(7,17),(6,16),(8,16),(7,16))])
     assert not lost, ('cases devenues inatteignables', sorted(lost)[:10])
     for ev in EVC: assert ev not in ARTP and ev not in CONV, ('evenement recouvert', ev)
