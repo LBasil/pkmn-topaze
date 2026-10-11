@@ -113,7 +113,7 @@ DOME = (8, 3, 3, 4); FLAT = (44, 3, 3, 4)                      # maisons de Soot
 D['safari'] = None
 D['warden'] = chunk(*DOME, 11, 3, 'maison du Gardien')
 D['office'] = chunk(*FLAT, 31, 3, 'bureau du Safari')
-D['house1'] = chunk(*FLAT, 3, 5, 'maison 1')
+D['house1'] = chunk(*FLAT, 3, 1, 'maison 1')
 D['house2'] = chunk(*DOME, 40, 3, 'maison 2')
 D['mart'] = chunk(16, 27, 4, 3, 7, 10, 'boutique')
 D['center'] = chunk(42, 28, 4, 4, 38, 10, 'centre')
@@ -148,7 +148,7 @@ for k, ds in D.items():
 trail([(8, 13), (8, 14), (10, 15)], 0, 77); trail([(39, 14), (39, 15), (36, 16)], 0, 78)
 trail([(12, 7), (12, 10), (14, 13), (17, 14)], 0, 79); trail([(32, 7), (32, 10), (30, 12), (31, 14)], 0, 80)
 trail([(9, 27), (9, 29), (14, 29), (20, 26)], 0, 81); trail([(36, 26), (36, 28), (30, 28), (27, 26)], 0, 82)
-trail([(4, 9), (4, 12), (8, 14)], 0, 83); trail([(41, 7), (41, 10), (40, 13), (40, 15)], 0, 84)
+trail([(4, 5), (4, 12), (8, 14)], 0, 83); trail([(41, 7), (41, 10), (40, 13), (40, 15)], 0, 84)
 for y in range(1, H - 1):
     for x in range(1, W - 1):
         if (x, y) not in OCC and (x, y) not in LAKE: OPEN.add((x, y))
@@ -324,6 +324,7 @@ for k, ds in D.items():
         for a in range(-2, 3):
             for b in range(-1, 4): KEEP.add((x + a, y + b))
 for ex in EXITS.values(): KEEP |= set(ex)
+PENSIGN = {(px_ + i_, py_ + 4 + j_) for (px_, py_) in PENS.values() for i_ in range(4) for j_ in range(2)}; KEEP |= PENSIGN
 def near_way(c, r=1): return any((c[0] + a, c[1] + b) in WAY for a in range(-r, r + 1) for b in range(-r, r + 1))
 # ---- bosquets (groupes d'arbres) dans les coins de pelouse
 for (cx, cy, rx, ry, sd) in ((5, 11, 2.6, 2.2, 1), (43, 10, 2.0, 2.2, 2), (14, 27, 3.0, 2.2, 3), (44, 26, 2.6, 2.4, 4), (14, 6, 2.0, 1.6, 5), (36, 16, 1.5, 1.5, 6)):
@@ -463,6 +464,42 @@ for c, (t4, gid) in sorted(ARTPLACE.items()):
     mid = 640 + art_meta(t4, gid)
     G[c] = (0x3000 if c in WALKART else 0x400) | mid
 # ------------------------------------------------------------------ PNJ, panneaux, objet cache (positions verifiees)
+# ---- remplissage demande par Basil : rectangles a combler d'arbres (jamais au prix d'un acces : portes, sorties, panneaux des enclos restent atteignables)
+FILL = [(4, 1, 19, 2), (28, 1, 46, 2), (2, 9, 7, 11), (42, 7, 46, 12), (14, 26, 18, 30), (29, 26, 34, 30), (38, 16, 46, 30)]
+NEED = set()
+for k_, ds_ in D.items():
+    for (x_, y_) in ds_: NEED.add((x_, y_ + 1)); NEED.add((x_, y_))
+for ex_ in EXITS.values(): NEED |= set(ex_)
+for k_, (px_, py_) in PENS.items(): NEED |= {(px_ + 1, py_ + 4), (px_ + 2, py_ + 4)}
+NEED |= {(22, 9), (24, 5)}
+def conn_with(extra):
+    st = (24, H - 1); sn = {st}; qq = collections.deque([st])
+    while qq:
+        c = qq.popleft()
+        for d_ in ((0, 1), (1, 0), (-1, 0), (0, -1)):
+            n = (c[0] + d_[0], c[1] + d_[1])
+            if 0 <= n[0] < W and 0 <= n[1] < H and n not in sn and not (G[n] & 0xc00) and n not in LAKE and n not in extra: sn.add(n); qq.append(n)
+    return all(c in sn for c in NEED)
+def _bad():
+    st = (24, H - 1); sn = {st}; qq = collections.deque([st])
+    while qq:
+        c = qq.popleft()
+        for d_ in ((0, 1), (1, 0), (-1, 0), (0, -1)):
+            n = (c[0] + d_[0], c[1] + d_[1])
+            if 0 <= n[0] < W and 0 <= n[1] < H and n not in sn and not (G[n] & 0xc00) and n not in LAKE: sn.add(n); qq.append(n)
+    return sorted(c for c in NEED if c not in sn)
+print('NEED hors portee au depart :', _bad(), [(c, OCC.get(c), c in ARTPLACE, hex(G[c]), c in OPEN, c in TREES) for c in ((43, 21), (44, 21))])
+NEED -= set(_bad())
+rf = random.Random(31); nf = 0
+for (x0_, y0_, x1_, y1_) in FILL:
+    for y in range(y0_, y1_ + 1):
+        for x in range(x0_, x1_ + 1):
+            c = (x, y)
+            if c in OCC or c in LAKE or c in NEED or c in ARTPLACE or (G[c] & 0xc00) or c in PENCELLS: continue
+            G[c] = 0x400 | (640 + art_meta(slice_tiles(TREEIMG[rf.randrange(3)]), GRASS))
+            if not conn_with(set()): G[c] = 0; G[c] = remap(0x3000 | GRASS)      # trou a laisser : on remet un sol (case non plantee)
+            else: nf += 1
+print('arbres de remplissage', nf)
 def _reach0():
     st = (24, H - 1); sn = {st}; qq = collections.deque([st])
     while qq:
@@ -473,7 +510,7 @@ def _reach0():
     return sn
 REACH0 = _reach0()
 USED = set()
-def free_cell(c): return c in REACH0 and c in OPEN and c not in OCC and c not in ARTPLACE and c not in USED and not (G[c] & 0xc00) and c not in KEEP
+def free_cell(c): return c in REACH0 and c in OPEN and c not in OCC and c not in ARTPLACE and c not in USED and not (G[c] & 0xc00) and (c not in KEEP or c in PENSIGN)
 BLK = set()
 def still_connected(extra):
     st = (24, H - 1); sn = {st}; qq = collections.deque([st]); bl = BLK | {extra}

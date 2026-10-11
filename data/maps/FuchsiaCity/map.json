@@ -200,8 +200,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
-      "x": 41,
-      "y": 26,
+      "x": 37,
+      "y": 29,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -278,7 +278,7 @@
     },
     {
       "x": 4,
-      "y": 8,
+      "y": 4,
       "elevation": 0,
       "dest_map": "MAP_FUCHSIA_CITY_HOUSE1",
       "dest_warp_id": "1"
@@ -470,8 +470,8 @@
     },
     {
       "type": "sign",
-      "x": 41,
-      "y": 22,
+      "x": 44,
+      "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "FuchsiaCity_EventScript_KangaskhanSign"
@@ -486,8 +486,8 @@
     },
     {
       "type": "sign",
-      "x": 38,
-      "y": 22,
+      "x": 37,
+      "y": 21,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "FuchsiaCity_EventScript_LaprasSign"
