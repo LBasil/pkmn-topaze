@@ -229,6 +229,9 @@ for y in range(18, 40):
         setm((x, y), m, WFLAG); CONV.add((x, y))
 for y in range(19, 26): setm((17, y), 113, G0[(17, y)] & 0xfc00)      # falaise : tuile de roche pleine au bord de l'eau (pas de liseré d'herbe)
 setm((17, 26), 124, G0[(19, 26)] & 0xfc00); setm((18, 26), 124, G0[(19, 26)] & 0xfc00)                # le poteau de cloture devient de l'eau (berge est contre le pied de falaise)
+# --- berge ouest du pont : plus de rebord rocheux contre les rails (l'eau passe sous le pont, comme a l'est)
+for y in range(17, 40):
+    if G0[(8, y)] & 0x3ff in (300, 305, 299): setm((8, y), 299, WFLAG)
 # --- rails est du pont : tuile de rail avec eau a droite (751/719 deja reecrits ci-dessus)
 # --- herbe haute de la berge ouest : contour organique (encoches + quelques touffes) au lieu d'un rectangle
 rt = random.Random(2403)
