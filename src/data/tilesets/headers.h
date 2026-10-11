@@ -1120,3 +1120,25 @@ const struct Tileset gTileset_SootopolisAmethyst =
     .metatileAttributes = gMetatileAttributes_SootopolisAmethyst,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralRoute19 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralRoute19,
+    .palettes = gTilesetPalettes_GeneralRoute19,
+    .metatiles = gMetatiles_GeneralRoute19,
+    .metatileAttributes = gMetatileAttributes_GeneralRoute19,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_FuchsiaRoute19 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_FuchsiaRoute19,
+    .palettes = gTilesetPalettes_FuchsiaRoute19,
+    .metatiles = gMetatiles_FuchsiaRoute19,
+    .metatileAttributes = gMetatileAttributes_FuchsiaRoute19,
+    .callback = NULL,
+};

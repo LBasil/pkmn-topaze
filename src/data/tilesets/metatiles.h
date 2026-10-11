@@ -291,3 +291,9 @@ const u16 gMetatiles_GeneralAmethyst[] = INCBIN_U16("data/tilesets/primary/gener
 const u32 gMetatileAttributes_GeneralAmethyst[] = INCBIN_U32("data/tilesets/primary/general_amethyst/metatile_attributes.bin");
 const u16 gMetatiles_SootopolisAmethyst[] = INCBIN_U16("data/tilesets/secondary/sootopolis_amethyst/metatiles.bin");
 const u32 gMetatileAttributes_SootopolisAmethyst[] = INCBIN_U32("data/tilesets/secondary/sootopolis_amethyst/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralRoute19[] = INCBIN_U16("data/tilesets/primary/general_route19/metatiles.bin");
+const u32 gMetatileAttributes_GeneralRoute19[] = INCBIN_U32("data/tilesets/primary/general_route19/metatile_attributes.bin");
+
+const u16 gMetatiles_FuchsiaRoute19[] = INCBIN_U16("data/tilesets/secondary/fuchsia_route19/metatiles.bin");
+const u32 gMetatileAttributes_FuchsiaRoute19[] = INCBIN_U32("data/tilesets/secondary/fuchsia_route19/metatile_attributes.bin");
