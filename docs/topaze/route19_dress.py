@@ -196,11 +196,16 @@ def dress(half):
             tgt = min(KEEP, key=lambda k: abs(k[0] - c[0]) + abs(k[1] - c[1])); channel([c, tgt], 1.0)
     for c in sorted(EV):
         if c[1] >= 14 and is_sea(c): stamp(c[0], c[1], 1.2)
+    for c in sorted(KEEP):                                                     # plus de rochers dans le chenal (confusion avec l'obsidienne)
+        if c[1] >= 14 and M(c) in ROCKS: G[c[1] * W_ + c[0]] = (G[c[1] * W_ + c[0]] & 0xf000) | 299
+    for y in range(9, 14):
+        for x in range(W_):
+            if M((x, y)) in ROCKS and (x, y) not in EV: G[y * W_ + x] = (G[y * W_ + x] & 0xf000) | 299
     cand = {(x, y) for y in range(14, H_) for x in range(W_) if is_sea((x, y)) and (x, y) not in KEEP and (x, y) not in EV}
     # cones : 4x4 et 3x3 sur de l'obsidienne, loin du chenal
     CONES = []
     def near_keep(c): return any((c[0] + a, c[1] + b) in KEEP for a in (-1, 0, 1) for b in (-1, 0, 1))
-    for (cw, ch, prefer) in ((5, 5, (14, 33)), (4, 4, (5, 22)), (4, 4, (16, 52))):
+    for (cw, ch, prefer) in ((5, 5, (14, 33)),):
         best = None
         for y0 in range(14, H_ - ch):
             for x0 in range(W_ - cw):
