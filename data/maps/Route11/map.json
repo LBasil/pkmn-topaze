@@ -15,11 +15,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_VERMILION_CITY",
-      "offset": -10,
-      "direction": "left"
-    },
-    {
       "map": "MAP_ROUTE12",
       "offset": -60,
       "direction": "right"
@@ -230,6 +225,27 @@
       "elevation": 3,
       "dest_map": "MAP_ROUTE11_EAST_ENTRANCE_1F",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY",
+      "dest_warp_id": "13"
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY",
+      "dest_warp_id": "14"
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY",
+      "dest_warp_id": "15"
     }
   ],
   "coord_events": [],

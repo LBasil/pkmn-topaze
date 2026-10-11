@@ -321,3 +321,9 @@ const u32 gMetatileAttributes_GeneralCeladopole[] = INCBIN_U32("data/tilesets/pr
 
 const u16 gMetatiles_CeladonCeladopole[] = INCBIN_U16("data/tilesets/secondary/celadon_celadopole/metatiles.bin");
 const u32 gMetatileAttributes_CeladonCeladopole[] = INCBIN_U32("data/tilesets/secondary/celadon_celadopole/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralApatia[] = INCBIN_U16("data/tilesets/primary/general_apatia/metatiles.bin");
+const u32 gMetatileAttributes_GeneralApatia[] = INCBIN_U32("data/tilesets/primary/general_apatia/metatile_attributes.bin");
+
+const u16 gMetatiles_VermilionApatia[] = INCBIN_U16("data/tilesets/secondary/vermilion_apatia/metatiles.bin");
+const u32 gMetatileAttributes_VermilionApatia[] = INCBIN_U32("data/tilesets/secondary/vermilion_apatia/metatile_attributes.bin");

@@ -1230,3 +1230,25 @@ const struct Tileset gTileset_CeladonCeladopole =
     .metatileAttributes = gMetatileAttributes_CeladonCeladopole,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralApatia =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralApatia,
+    .palettes = gTilesetPalettes_GeneralApatia,
+    .metatiles = gMetatiles_GeneralApatia,
+    .metatileAttributes = gMetatileAttributes_GeneralApatia,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_VermilionApatia =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_VermilionApatia,
+    .palettes = gTilesetPalettes_VermilionApatia,
+    .metatiles = gMetatiles_VermilionApatia,
+    .metatileAttributes = gMetatileAttributes_VermilionApatia,
+    .callback = NULL,
+};

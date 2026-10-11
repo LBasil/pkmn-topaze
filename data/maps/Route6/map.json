@@ -18,11 +18,6 @@
       "map": "MAP_SAFFRON_CITY_CONNECTION",
       "offset": 0,
       "direction": "up"
-    },
-    {
-      "map": "MAP_VERMILION_CITY",
-      "offset": -12,
-      "direction": "down"
     }
   ],
   "object_events": [
@@ -132,6 +127,27 @@
       "elevation": 3,
       "dest_map": "MAP_ROUTE6_NORTH_ENTRANCE",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 10,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY",
+      "dest_warp_id": "10"
+    },
+    {
+      "x": 11,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY",
+      "dest_warp_id": "11"
+    },
+    {
+      "x": 12,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_VERMILION_CITY",
+      "dest_warp_id": "12"
     }
   ],
   "coord_events": [],
