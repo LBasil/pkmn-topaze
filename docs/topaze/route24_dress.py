@@ -261,6 +261,17 @@ for CFG in MAPS:
         for x in range(2, 8):
             if G0[(x, 5)] & 0x3ff in (8, 9) and (x, 5) not in RES and rt.random() < 0.4: setm((x, 5), 13)
 
+        # --- 10 ans plus tard (l'aura qui a mute les types) : chaumiere de Bill vieillie
+        # bassin ouest asseche (meme sable que le jardin central), clotures percees, deux arbres tombes
+        for y in (9, 10, 11):
+            for x in range(43, 49):
+                src_x = 49 if x == 43 else (53 if x == 48 else 50)
+                G[(x, y)] = G0[(src_x, y)]
+        for (x, y) in ((45, 4), (46, 4), (57, 4), (58, 4)): setm((x, y), gm(x, y))
+        for tx in (45, 58):
+            for ty in (1, 2, 3):
+                for dx in (0, 1): setm((tx + dx, ty), gm(tx + dx, ty))
+
     # ------------------------------------------------------------------ vegetation par bruit de densite
     def lattice(seed, n=64):
         r = random.Random(seed); return [[r.random() for _ in range(n)] for _ in range(n)]
@@ -358,6 +369,18 @@ for CFG in MAPS:
         if grass(c) and c not in ARTP and rnd.random() < 0.07 and not any((c[0] + a, c[1] + b) in ARTP for a in (-1, 0, 1) for b in (-1, 0, 1)): put_small(c, rnd.randrange(3))
     for c in sorted(G):
         if grass(c) and c not in ARTP and dens(c[0] * 1.7 + 30, c[1] * 1.7 + 7) > 0.64 and rnd.random() < 0.75: setm(c, 4)
+    if CFG['name'] == 'Route25':       # la nature reprend la chaumiere : fleurs, herbe haute aux trouees, eclats de cristal
+        ra = random.Random(2510)
+        def old(c): return c in G and 43 <= c[0] <= 61 and mid(c) in (PLAIN | {1}) and not blocked(c) and c not in RES and c not in CONV and c not in ARTP and c not in OVER
+        for c in sorted(G):
+            if not old(c): continue
+            near_gap = min(abs(c[0] - gx) + abs(c[1] - gy) for gx, gy in ((45, 4), (46, 4), (57, 4), (58, 4)))
+            r = ra.random()
+            if near_gap <= 2 and c[1] <= 6 and r < 0.55: setm(c, 13)
+            elif r < 0.16: setm(c, 4)
+        for c in ((44, 7), (47, 6), (56, 7), (60, 6), (43, 8), (59, 8)):
+            if old(c) and reach_ok([c]) and not any((c[0] + a, c[1] + b) in ARTP for a in (-1, 0, 1) for b in (-1, 0, 1)):
+                ARTP[c] = (slice4(small(ra.randrange(3))), ART_PAL, mid(c)); SHARDS.append(c)
     # pose finale des metatuiles d'art (collision : tout bloque ; les cimes qui debordent restent praticables)
     for c, (t4, slot) in OVER.items(): G[c] = (G[c] & 0xfc00) | art_meta(t4, slot, bottom_of(mid(c)))
     for c, (t4, slot, m) in ARTP.items(): G[c] = (G0[c] & 0xf000) | 0x400 | art_meta(t4, slot, bottom_of(m))
