@@ -118,3 +118,6 @@ Lisieres de forets : premiere rangee d'une masse = tuiles de cime 0x0e/0x0f (san
 
 ### Spinellia v5
 Voies redressees : route ouest droite (y18..19) alignee sur la sortie ouest (0,18..19 <-> Route 8 (71,10..11)) ; sortie sud (19..20,29 <-> Route 12) ; allee de la tour sur 3 cases centree sur la porte ; parvis de 3 cases devant chaque porte. Rendu `reference/spinellia_v5.png`.
+
+### Spinellia v6
+Parvis sur toute la facade de chaque batiment (sauf la tour) + fermeture morphologique des voies (plus d'encoches). Rendu `reference/spinellia_v6.png`.

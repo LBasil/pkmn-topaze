@@ -97,7 +97,19 @@ road([(8, 26), (34, 26)])
 for k, (x, y) in DOOR.items():
     for b in (1, 2): WAY.add((x, y + b))
     for a in (-1, 1): WAY.add((x + a, y + 1))
+for k, (ox, oy, cw, ch, dx, dy) in BUILD.items():                  # parvis sur toute la facade (sauf la tour : cloture du cimetiere)
+    if k != 'tower':
+        for x in range(dx, dx + cw): WAY.add((x, dy + ch))
 for c in (EXITS['N'] + EXITS['S'] + EXITS['W']): WAY.add(c)
+for _ in range(3):                                                    # fermeture : plus de petites encoches de pelouse dans les voies
+    add_ = set()
+    for y in range(1, H - 1):
+        for x in range(1, W - 1):
+            c = (x, y)
+            if c in WAY or c in OCC: continue
+            nb = [(x - 1, y) in WAY, (x + 1, y) in WAY, (x, y - 1) in WAY, (x, y + 1) in WAY]
+            if (nb[0] and nb[1]) or (nb[2] and nb[3]) or sum(nb) >= 3: add_.add(c)
+    WAY |= add_
 WAY -= {c for c in WAY if c in OCC}
 # ---- art
 def newimg(w, h): return Image.new('P', (w, h), 0)
