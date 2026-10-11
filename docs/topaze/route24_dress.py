@@ -1,11 +1,16 @@
-# ROUTE 24 « le pont des pepites » (et Route 25, meme jeu de tuiles pour la continuite des couleurs) : habillage aux couleurs de Tourmalia.
-# La carte d'origine (pont, riviere, lac, dresseurs) est conservee ; on copie les tilesets de FireRed (general / cerulean_city) en
-# `general_pepite` / `cerulean_pepite` : falaises recolorees en mauve (couleur de tourmaline), + art ajoute au secondaire (cristaux, grands arbres d'Emeraude),
-# + vegetation et cristaux poses sur les cases libres (parcours verifie par BFS). Lancer depuis la racine : python3 docs/topaze/route24_dress.py
+# ROUTE 24 « le pont des pepites » v2 (et Route 25, meme jeu de tuiles pour la continuite des couleurs) : habillage aux couleurs de Tourmalia.
+# Idempotent : part de la carte d'ORIGINE (docs/topaze/route24_src/map_orig.bin) et des tilesets FireRed (general / cerulean_city), recopies en
+# `general_pepite` / `cerulean_pepite`. Lancer depuis la racine : python3 docs/topaze/route24_dress.py
+#  - falaises recolorees en mauve (tourmaline) ; pont recolore en bois sombre (tuiles du pont reecrites, palette 8 partagee avec les arbres) ;
+#  - bande de terre a l'est du pont remplacee par de l'EAU (riviere qui rejoint le lac) ; plateaux nord en herbe ;
+#  - vegetation NATURELLE : arbres d'Emeraude 2x2 (sprite reconstruit entier : pic de la cime + tronc, plus de halo ni de rangs coupes), cristaux,
+#    poses par bruit de densite (bosquets / clairieres, quinconce, pas d'alignement), toujours par sprites ENTIERS, jamais une demi-moitie ;
+#  - controle des sprites : planche reference/route24_sprites_qa.png + assertions (chaque quart rempli, pas de pixel isole, base atteinte).
 import struct, json, random, sys, os, shutil, math, colorsys, collections
 from PIL import Image, ImageDraw
-sys.path.insert(0, 'docs/topaze')
-import emrender as E
+sys.path.insert(0, 'tools/topaze/maps')
+import mapkit
+SRC = 'docs/topaze/route24_src/'
 FRP = 'data/tilesets/primary/general/'; FRS = 'data/tilesets/secondary/cerulean_city/'
 NP = 'data/tilesets/primary/general_pepite/'; NS = 'data/tilesets/secondary/cerulean_pepite/'
 for src, dst in ((FRP, NP), (FRS, NS)):
@@ -15,17 +20,64 @@ for src, dst in ((FRP, NP), (FRS, NS)):
 def readpal(p):
     L = open(p).read().split(); n = int(L[2]); return [tuple(int(x) for x in L[3 + 3 * k:6 + 3 * k]) for k in range(n)]
 def writepal(p, cols): open(p, 'w').write('JASC-PAL\r\n0100\r\n16\r\n' + ''.join('%d %d %d\r\n' % tuple(c) for c in cols))
+def hls(c): h, l, s = colorsys.rgb_to_hls(c[0] / 255, c[1] / 255, c[2] / 255); return h * 360, l, s
+def rgb(h, l, s): r, g, b = colorsys.hls_to_rgb((h % 360) / 360, max(0, min(1, l)), max(0, min(1, s))); return int(r * 255 + .5), int(g * 255 + .5), int(b * 255 + .5)
 # ------------------------------------------------------------------ couleurs : falaises rosees -> mauve de tourmaline
 def mauve(c):
-    r, g, b = c; h, l, s = colorsys.rgb_to_hls(r / 255, g / 255, b / 255); h *= 360
-    if s > 0.12 and (h < 50 or h > 330):
-        r, g, b = colorsys.hls_to_rgb(312 / 360, l, min(0.5, s * 0.8)); return int(r * 255 + .5), int(g * 255 + .5), int(b * 255 + .5)
+    h, l, s = hls(c)
+    if s > 0.12 and (h < 50 or h > 330): return rgb(312, l, min(0.5, s * 0.8))
     return c
 p1 = readpal(NP + 'palettes/01.pal'); writepal(NP + 'palettes/01.pal', [p1[0]] + [mauve(c) for c in p1[1:15]] + [p1[15]])
-# ------------------------------------------------------------------ art
-ART_PAL, TREE_PAL = 7, 8
-PAL = [(0, 0, 0), (8, 24, 20), (18, 84, 60), (34, 140, 92), (100, 208, 140), (188, 246, 208), (250, 255, 250), (140, 30, 86), (222, 72, 138),
-       (255, 146, 194), (255, 214, 232), (22, 60, 44), (92, 64, 40), (126, 130, 126), (70, 76, 74), (255, 232, 136)]
+# ------------------------------------------------------------------ tilesets : etat de depart (le secondaire recoit l'art + le pont)
+smt = bytearray(open(NS + 'metatiles.bin', 'rb').read()); satt = bytearray(open(NS + 'metatile_attributes.bin', 'rb').read())
+NMT = len(smt) // 16; simg = Image.open(NS + 'tiles.png'); NTL = (simg.width // 8) * (simg.height // 8)
+pmt = open(NP + 'metatiles.bin', 'rb').read(); patt = open(NP + 'metatile_attributes.bin', 'rb').read()
+NEWT = []; ENTS = []; ENTATT = []
+def add_tile(t):
+    t = tuple(t)
+    if t in NEWT: return NEWT.index(t)
+    NEWT.append(t); return len(NEWT) - 1
+def slice4(im): return [add_tile([im.getpixel((((q % 2) * 8 + i), (q // 2) * 8 + j)) for j in range(8) for i in range(8)]) for q in range(4)]
+NEWM = {}
+def new_meta(entries, att=0, key=None):
+    if key is not None and key in NEWM: return NEWM[key]
+    ENTS.append(list(entries)); ENTATT.append(att); m = 640 + NMT + len(ENTS) - 1
+    if key is not None: NEWM[key] = m
+    return m
+def raw_entries(m):
+    if m >= 640 + NMT: return list(ENTS[m - 640 - NMT])
+    return list(struct.unpack('<8H', pmt[m * 16:m * 16 + 16] if m < 640 else bytes(smt[(m - 640) * 16:(m - 640) * 16 + 16])))
+def raw_attr(m):
+    if m >= 640 + NMT: return ENTATT[m - 640 - NMT]
+    return struct.unpack('<I', patt[m * 4:m * 4 + 4] if m < 640 else bytes(satt[(m - 640) * 4:(m - 640) * 4 + 4]))[0]
+def bottom_of(m): return raw_entries(m)[:4]
+ART_PAL, MIX_PAL = 7, 8      # 7 : cristaux ; 8 : arbres (idx 1..6) + pont (idx 7..15)
+# ------------------------------------------------------------------ SPRITES
+GRASS_BG = (115, 205, 164)
+def clean_specks(im, passes=2):
+    px = im.load(); w, h = im.size
+    for _ in range(passes):
+        kill = []
+        for y in range(h):
+            for x in range(w):
+                if px[x, y][3] == 0: continue
+                n = sum(1 for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)) if 0 <= x + dx < w and 0 <= y + dy < h and px[x + dx, y + dy][3])
+                if n <= 1: kill.append((x, y))
+        for c in kill: px[c] = (0, 0, 0, 0)
+    return im
+def make_tree():
+    """Arbre d'Emeraude entier. Le 2x2 d'origine (468/469/476/477) est un arbre EMPILE : les 3 derniers rangs sont le pic de l'arbre suivant et le haut de la
+    cime est coupe. On remonte ces 3 rangs en tete (pic) et on retire l'aura turquoise (halo) + les pixels isoles."""
+    T = Image.open(SRC + 'tree_emerald_raw.png').convert('RGBA'); tp = T.load()
+    for y in range(32):
+        for x in range(32):
+            if tp[x, y][3]:
+                h, l, s = hls(tp[x, y][:3])
+                if 140 <= h <= 170 and s > 0.3: tp[x, y] = (0, 0, 0, 0)
+    R = Image.new('RGBA', (32, 32), (0, 0, 0, 0)); R.paste(T.crop((0, 29, 32, 32)), (0, 0)); R.paste(T.crop((0, 0, 32, 29)), (0, 3))
+    return clean_specks(R)
+PAL_C = [(0, 0, 0), (8, 24, 20), (18, 84, 60), (34, 140, 92), (100, 208, 140), (188, 246, 208), (250, 255, 250), (140, 30, 86), (222, 72, 138),
+         (255, 146, 194), (255, 214, 232), (22, 60, 44), (92, 64, 40), (126, 130, 126), (70, 76, 74), (255, 232, 136)]
 def newimg(w, h): return Image.new('P', (w, h), 0)
 def prism(d, x, base, w, h):
     half = max(2, w // 2); top = base - h; sh = top + max(3, half + 1)
@@ -46,73 +98,85 @@ def small(var):
     elif var == 1: prism(d, 6, 15, 6, 11); prism(d, 12, 14, 5, 8); d.rectangle((1, 13, 3, 14), fill=13); d.point((2, 12), fill=14)
     else: prism(d, 8, 15, 8, 14); d.rectangle((2, 13, 4, 14), fill=13); d.rectangle((12, 12, 14, 14), fill=13); d.point((13, 11), fill=14)
     return im
-def cluster():       # 2x2 : grand amas de cristaux
-    im = newimg(32, 32); d = ImageDraw.Draw(im); shadow(d, 1, 25, 31, 32)
-    prism(d, 8, 29, 7, 17); prism(d, 24, 30, 8, 21); prism(d, 15, 31, 11, 28); d.rectangle((2, 27, 5, 29), fill=13)
+def cluster(var=0):     # 2x2 : grand amas de cristaux, TOUT le 32x32 occupe (haut ET bas ; plus de sprite « seulement en bas »)
+    im = newimg(32, 32); d = ImageDraw.Draw(im); shadow(d, 1, 26, 31, 32)
+    if var == 0: prism(d, 6, 29, 7, 20); prism(d, 26, 30, 8, 23); prism(d, 16, 31, 12, 29); d.rectangle((1, 28, 4, 30), fill=13); d.point((2, 27), fill=14)
+    else: prism(d, 6, 30, 7, 21); prism(d, 15, 31, 10, 29); prism(d, 26, 29, 7, 19); d.rectangle((26, 28, 30, 30), fill=13); d.point((28, 27), fill=14)
     return im
-# arbres d'Emeraude (468/469/476/477) en art transparent, palette propre (quantifiee sur 15 teintes)
-LG = E.load('general', 'petalburg')
-def rgba(m):
-    pt, st, pals, mp, ms = LG; e = mp[m * 8:m * 8 + 8]; im = Image.new('RGBA', (16, 16), (0, 0, 0, 0))
-    for layer in (0, 1):
-        for k in range(4):
-            v = e[layer * 4 + k]; im.alpha_composite(E.tile(pt, st, pals, v & 0x3ff, v >> 12, v & 0x400, v & 0x800), ((k % 2) * 8, (k // 2) * 8))
-    return im
-TREE = Image.new('RGBA', (32, 32), (0, 0, 0, 0))
-for k, m in enumerate((468, 469, 476, 477)): TREE.alpha_composite(rgba(m), ((k % 2) * 16, (k // 2) * 16))
-tp = TREE.load()
+TREE_RGBA = make_tree()
+tcols = collections.Counter(p[:3] for p in TREE_RGBA.getdata() if p[3])
+TREE_COLS = [c for c, n in tcols.most_common()]
+assert len(TREE_COLS) <= 6, ('arbre : trop de teintes', len(TREE_COLS))
+# ------------------------------------------------------------------ PONT : bois sombre (tuiles reecrites en place, palette 8 idx 7..15)
+O = mapkit.Layout('LAYOUT_ROUTE24'); O.prim = mapkit.Tileset('gTileset_General'); O.sec = mapkit.Tileset('gTileset_CeruleanCity')
+BRIDGE = [709, 710, 733, 734, 711, 750, 717, 718, 741, 742, 751, 719]
+EAST_RAIL = (751, 719)          # rail est : la moitie droite devient de l'eau (animee, tuiles de l'eau d'origine)
+def wood(c):
+    h, l, s = hls(c)
+    if 35 <= h <= 65 and s > 0.3: return rgb(27, l * 0.58, 0.36)       # jaune -> noyer
+    return c
+BR_IMG = {}; bc = collections.Counter()
+for m in BRIDGE:
+    im = O.metatile_img(m).copy(); px = im.load()
+    for y in range(16):
+        for x in range(16):
+            if m in EAST_RAIL and x >= 8: continue
+            px[x, y] = wood(px[x, y][:3]) + (255,); bc[px[x, y][:3]] += 1
+    BR_IMG[m] = im
+bcols = dict(bc)
+def merge_to(cols, n, keep):
+    cols = dict(cols)
+    while len(cols) > n:
+        ks = [k for k in cols if k != keep]
+        best = min(((sum((a[i] - b[i]) ** 2 for i in range(3)) * (cols[a] * cols[b]) / (cols[a] + cols[b]), a, b) for ia, a in enumerate(ks) for b in ks[ia + 1:]))
+        _, a, b = best; lo, hi = (a, b) if cols[a] < cols[b] else (b, a); cols[hi] += cols[lo]; del cols[lo]
+    return list(cols)
+BR_COLS = merge_to(bcols, 9, GRASS_BG)
+assert GRASS_BG in BR_COLS
+MIXP = [GRASS_BG] + TREE_COLS + [(0, 0, 0)] * (6 - len(TREE_COLS)) + BR_COLS + [BR_COLS[-1]] * (9 - len(BR_COLS))
+assert len(MIXP) == 16
+def idx_of(c, lo, hi): return min(range(lo, hi), key=lambda k: sum((MIXP[k][i] - c[i]) ** 2 for i in range(3)))
+TREE_P = newimg(32, 32); tq = TREE_P.load(); tpx = TREE_RGBA.load()
 for y in range(32):
     for x in range(32):
-        r, g, b, a = tp[x, y]
-        if a:
-            h, l, s = colorsys.rgb_to_hls(r / 255, g / 255, b / 255)
-            if 135 <= h * 360 <= 205 and s > 0.2 and l > 0.5: tp[x, y] = (0, 0, 0, 0)
-cols = [tp[x, y][:3] for y in range(32) for x in range(32) if tp[x, y][3]]
-qi = Image.new('RGB', (len(cols), 1)); qi.putdata(cols); qq = qi.quantize(colors=15, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE); qpal = (qq.getpalette() or [])[:45]; qpal = list(qpal) + [qpal[-3], qpal[-2], qpal[-1]] * ((45 - len(qpal)) // 3) if len(qpal) >= 3 else [0]*45
-TPAL = [(0, 0, 0)] + [tuple(qpal[3 * k:3 * k + 3]) for k in range(15)]
-def near_idx(c): return 1 + min(range(15), key=lambda k: sum((TPAL[k + 1][i] - c[i]) ** 2 for i in range(3)))
-TREE_P = newimg(32, 32); tq = TREE_P.load()
-for y in range(32):
-    for x in range(32):
-        if tp[x, y][3]: tq[x, y] = near_idx(tp[x, y][:3])
-# ------------------------------------------------------------------ tilesets : ajout au secondaire
-smt = bytearray(open(NS + 'metatiles.bin', 'rb').read()); satt = bytearray(open(NS + 'metatile_attributes.bin', 'rb').read())
-NMT = len(smt) // 16; simg = Image.open(NS + 'tiles.png'); NTL = (simg.width // 8) * (simg.height // 8)
-pmt = open(NP + 'metatiles.bin', 'rb').read(); patt = open(NP + 'metatile_attributes.bin', 'rb').read()
-NEWT = []
-def add_tile(t):
-    t = tuple(t)
-    if t in NEWT: return NEWT.index(t)
-    NEWT.append(t); return len(NEWT) - 1
-def slice4(im): return [add_tile([im.getpixel((((q % 2) * 8 + i), (q // 2) * 8 + j)) for j in range(8) for i in range(8)]) for q in range(4)]
-NEWM = {}; ENTS = []
-def art_meta(tiles4, slot, bottom):
-    key = (tuple(tiles4), slot, tuple(bottom))
-    if key not in NEWM: ENTS.append(list(bottom) + [(640 + NTL + t) | (slot << 12) for t in tiles4]); NEWM[key] = 640 + NMT + len(ENTS) - 1
-    return NEWM[key]
-def bottom_of(m):
-    e = struct.unpack('<8H', pmt[m * 16:m * 16 + 16]) if m < 640 else struct.unpack('<8H', bytes(smt[(m - 640) * 16:(m - 640) * 16 + 16]))
-    return e[:4]
+        if tpx[x, y][3]: tq[x, y] = idx_of(tpx[x, y][:3], 1, 1 + len(TREE_COLS))
+TREE_PF = TREE_P.transpose(Image.FLIP_LEFT_RIGHT)
+def bridge_meta(m):
+    im = BR_IMG[m]; ent = []
+    for q in range(4):
+        if m in EAST_RAIL and q % 2 == 1:
+            ent.append(raw_water_ent[q]); continue
+        qi = newimg(8, 8); pq = qi.load()
+        for j in range(8):
+            for i in range(8): pq[i, j] = idx_of(im.getpixel(((q % 2) * 8 + i, (q // 2) * 8 + j))[:3], 7, 16)
+        ent.append(('t', qi))
+    return ent
+WATER_MID = 299
+raw_water_ent = raw_entries(WATER_MID)[:4]       # tuiles d'eau d'origine (animees) pour la moitie droite des rails est
+for m in BRIDGE:
+    e = bridge_meta(m); final = []
+    for q in range(4):
+        if isinstance(e[q], tuple): t = add_tile(list(e[q][1].getdata())); final.append((640 + NTL + t) | (MIX_PAL << 12))   # idx de tuile resolu apres coup (NTL fixe)
+        else: final.append(e[q])
+    base = (m - 640) * 16
+    smt[base:base + 16] = struct.pack('<8H', *(final + [0, 0, 0, 0]))
 # ------------------------------------------------------------------ carte
 W, H = 24, 40
-mp_ = 'data/layouts/Route24/map.bin'
-G = {(x, y): v for (x, y), v in zip(((x, y) for y in range(H) for x in range(W)), struct.unpack('<%dH' % (W * H), open(mp_, 'rb').read()))}
+G = {(x, y): v for (x, y), v in zip(((x, y) for y in range(H) for x in range(W)), struct.unpack('<%dH' % (W * H), open(SRC + 'map_orig.bin', 'rb').read()))}
 G0 = dict(G)
-def beh(m):
-    a = struct.unpack('<I', (patt[m * 4:m * 4 + 4] if m < 640 else bytes(satt[(m - 640) * 4:(m - 640) * 4 + 4])))[0]; return a & 0x1ff
+def beh(m): return raw_attr(m) & 0x1ff
 WATER = {0x10, 0x11, 0x12, 0x15}
 def blocked(c, g=None):
     v = (g or G)[c]; return bool(v & 0xc00) or beh(v & 0x3ff) in WATER
 obj = json.load(open('data/maps/Route24/map.json'))
-RES = set()
-for o in obj['object_events']:
+RES = set(); EVC = []
+for o in obj['object_events']: EVC.append((o['x'], o['y']))
+for w_ in obj['warp_events']: EVC.append((w_['x'], w_['y']))
+for b_ in obj['bg_events']: EVC.append((b_['x'], b_['y']))
+for c_ in obj['coord_events']: EVC.append((c_['x'], c_['y']))
+for (ex, ey) in EVC:
     for a in range(-1, 2):
-        for b in range(-1, 2): RES.add((o['x'] + a, o['y'] + b))
-for w in obj['warp_events']:
-    for a in range(-1, 2):
-        for b in range(-1, 2): RES.add((w['x'] + a, w['y'] + b))
-for b_ in obj['bg_events']: RES.add((b_['x'], b_['y']))
-for c_ in obj['coord_events']: RES.add((c_['x'], c_['y']))
+        for b in range(-1, 2): RES.add((ex + a, ey + b))
 def flood(g, s0):
     seen = {s0}; q = collections.deque([s0])
     while q:
@@ -125,52 +189,173 @@ START = (11, 38)
 R0 = flood(G0, START)
 GRASSM = {1, 4, 8, 9, 16, 17}
 def mid(c): return G[c] & 0x3ff
-def grass(c): return mid(c) in GRASSM and not blocked(c) and c not in RES
-rnd = random.Random(2401)
-GRS = {8: (0, 0), 9: (1, 0), 16: (0, 1), 17: (1, 1)}
 def gm(x, y): return 8 + (x % 2) + 8 * (y % 2)
-# prairie sur le plateau nord (a la place du sable) : deux pans a l'ouest et a l'est de la 1ere moitie
-def meadow(x0, y0, x1, y1):
-    for y in range(y0, y1 + 1):
-        for x in range(x0, x1 + 1):
-            if mid((x, y)) == 217 and (x, y) not in RES: G[(x, y)] = (G[(x, y)] & 0xfc00) | gm(x, y)
-meadow(4, 3, 8, 5); meadow(14, 3, 16, 5); meadow(3, 7, 6, 8)
-for y in range(7, 9):
-    for x in range(15, 23): pass
-ARTP = {}                            # cellule -> (tuiles4, slot, metatuile de base, bloque)
-def put_tree(x, y):
-    cells = [(x + i, y + j) for j in range(2) for i in range(2)]
-    if not all(grass(c) for c in cells): return False
-    ring = {(x + i, y + j) for i in range(-1, 3) for j in range(-1, 3)} - set(cells)
-    if any(c in ARTP for c in ring) or sum(1 for c in ring if 0 <= c[0] < W and 0 <= c[1] < H and not blocked(c)) < 5: return False
-    t4s = {(i, j): slice4(TREE_P.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))) for j in range(2) for i in range(2)}
-    for (i, j), t4 in t4s.items(): ARTP[(x + i, y + j)] = (t4, TREE_PAL, mid((x + i, y + j)), True)
-    return True
-def put_small(c, var, walk=False):
-    if not grass(c) or c in ARTP: return False
-    ARTP[c] = (slice4(small(var)), ART_PAL, mid(c), True); return True
-def put_cluster(x, y):
+CONV = set()                         # cases volontairement converties (eau, etc.)
+def setm(c, m, flags=None):
+    G[c] = ((G0[c] & 0xf000) if flags is None else flags) | m
+# --- plateau ouest (3..12, 3..5) : herbe, un sentier de sable de 2 cases dans l'axe de la breche (7..8) ; entree item TR45 en (11,4) conservee
+for y in range(3, 6):
+    for x in range(4, 13):
+        if G0[(x, y)] & 0x3ff == 217: setm((x, y), 216 if x == 7 else 218 if x == 8 else gm(x, y))
+# --- plateau central (14..16, 3..5) : herbe ; rang 6 = sable avec lisiere d'herbe au nord (225 retourne verticalement)
+e225 = raw_entries(225)
+def vflip_meta(ent):
+    out = []
+    for l in (0, 1):
+        tl, tr, bl, br = ent[l * 4:l * 4 + 4]; out += [bl ^ 0x800, br ^ 0x800, tl ^ 0x800, tr ^ 0x800]
+    return out
+EDGE_N = new_meta(vflip_meta(e225), raw_attr(225), 'edgeN')
+for y in range(3, 6):
+    for x in range(14, 17):
+        if G0[(x, y)] & 0x3ff == 217: setm((x, y), gm(x, y))
+for x in range(14, 17):
+    if G0[(x, 6)] & 0x3ff == 217: setm((x, 6), EDGE_N)
+# --- EAU a l'est du pont : la bande de terre (x14..18) devient une riviere qui rejoint le lac ; poche d'herbe conservee au nord (y<=17)
+WFLAG = G0[(7, 20)] & 0xf000
+for y in range(18, 40):
+    for x in range(14, 19):
+        if y <= 26 and x >= 17: continue                      # falaise a l'est (y<=26)
+        m = 299
+        if y == 18: m = 292 if x == 16 else 291              # berge nord (liseré rocheux, angle arrondi cote falaise)
+        elif y <= 26 and x == 16: m = 300                    # berge est contre la falaise
+        setm((x, y), m, WFLAG); CONV.add((x, y))
+for y in range(19, 26): setm((17, y), 113, G0[(17, y)] & 0xfc00)      # falaise : tuile de roche pleine au bord de l'eau (pas de liseré d'herbe)
+setm((17, 26), 124, G0[(19, 26)] & 0xfc00); setm((18, 26), 124, G0[(19, 26)] & 0xfc00)                # le poteau de cloture devient de l'eau (berge est contre le pied de falaise)
+# --- rails est du pont : tuile de rail avec eau a droite (751/719 deja reecrits ci-dessus)
+# --- herbe haute de la berge ouest : contour organique (encoches + quelques touffes) au lieu d'un rectangle
+rt = random.Random(2403)
+for y in range(19, 33):
+    for x in range(3, 6):
+        if G0[(x, y)] & 0x3ff == 13 and (x, y) not in RES:
+            edge = x in (3, 5) or y in (19, 32)
+            if edge and rt.random() < 0.34: setm((x, y), gm(x, y))
+for (x, y) in ((4, 18), (5, 18), (4, 17), (3, 33)):
+    if G0[(x, y)] & 0x3ff in GRASSM and (x, y) not in RES and 3 <= x <= 5 and y != 33: setm((x, y), 13)
+# ------------------------------------------------------------------ vegetation par bruit de densite
+def lattice(seed, n=64):
+    r = random.Random(seed); return [[r.random() for _ in range(n)] for _ in range(n)]
+LA, LB = lattice(51), lattice(52)
+def sm(t): return t * t * (3 - 2 * t)
+def vn(L, x, y):
+    x0, y0 = int(math.floor(x)), int(math.floor(y)); fx, fy = sm(x - x0), sm(y - y0)
+    a = L[y0 % 64][x0 % 64]; b = L[y0 % 64][(x0 + 1) % 64]; c = L[(y0 + 1) % 64][x0 % 64]; d = L[(y0 + 1) % 64][(x0 + 1) % 64]
+    return (a * (1 - fx) + b * fx) * (1 - fy) + (c * (1 - fx) + d * fx) * fy
+def dens(x, y): return 0.62 * vn(LA, x / 4.5, y / 4.5) + 0.38 * vn(LB, x / 2.2 + 9, y / 2.2 + 4)
+PLAIN = {8, 9, 16, 17}
+def grass(c): return c in G and mid(c) in PLAIN and not blocked(c) and c not in RES and c not in CONV
+def edgeness(c):       # proximite d'une falaise / eau / haie : les arbres aiment les lisieres
+    n = 0
+    for a in range(-2, 3):
+        for b in range(-2, 3):
+            k = (c[0] + a, c[1] + b)
+            if k in G and k != c and (blocked(k) or mid(k) in (113, 114, 117, 112, 115, 343, 318)): n += 1
+    return min(1.0, n / 9.0)
+ARTP = {}; TREES = []; CLUS = []; SHARDS = []
+def reach_ok(new):       # poser ces cases bloquees ne doit isoler aucune case d'origine encore praticable (verifie a chaque pose)
+    seen = {START}; q = collections.deque([START]); nb = set(new)
+    while q:
+        c = q.popleft()
+        for d in ((0, 1), (1, 0), (-1, 0), (0, -1)):
+            n = (c[0] + d[0], c[1] + d[1])
+            if n in G and n not in seen and not blocked(n) and n not in ARTP and n not in nb: seen.add(n); q.append(n)
+    return all(c in seen for c in R0 if c not in CONV and c not in ARTP and c not in nb)
+def tile_ent(t4, slot): return [(640 + NTL + t) | (slot << 12) for t in t4]
+def art_meta(tiles4, slot, bottom):
+    key = (tuple(tiles4), slot, tuple(bottom)); return new_meta(list(bottom) + tile_ent(tiles4, slot), 0, key)
+def free_ring(cells, r=1):
+    xs = [c[0] for c in cells]; ys = [c[1] for c in cells]
+    return {(x, y) for x in range(min(xs) - r, max(xs) + r + 1) for y in range(min(ys) - r, max(ys) + r + 1)} - set(cells)
+def put_big(x, y, img, kind):
     cells = [(x + i, y + j) for j in range(2) for i in range(2)]
     if not all(grass(c) and c not in ARTP for c in cells): return False
-    im = cluster()
+    ring = free_ring(cells)
+    if sum(1 for c in ring if c in ARTP) > (3 if kind == 'tree' else 0) or sum(1 for c in ring if c in G and not blocked(c) and c not in ARTP) < 3 or not reach_ok(cells): return False
     for j in range(2):
-        for i in range(2): ARTP[(x + i, y + j)] = (slice4(im.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))), ART_PAL, mid((x + i, y + j)), True)
+        for i in range(2):
+            ARTP[(x + i, y + j)] = (slice4(img.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))), MIX_PAL if kind == 'tree' else ART_PAL, mid((x + i, y + j)))
+    (TREES if kind == 'tree' else CLUS).append((x, y)); return True
+def put_small(c, var):
+    if not grass(c) or c in ARTP or not reach_ok([c]): return False
+    ARTP[c] = (slice4(small(var)), ART_PAL, mid(c)); SHARDS.append(c); return True
+rnd = random.Random(2405)
+# amas de cristaux : au pied des falaises / de l'eau, hors des cases d'arbre
+ccand = []
+for y in range(H - 1):
+    for x in range(W - 1):
+        cs = [(x + i, y + j) for j in range(2) for i in range(2)]
+        if all(grass(c) and c not in ARTP for c in cs):
+            ccand.append((0.7 * edgeness((x, y)) + 0.3 * rnd.random(), x, y))
+ccand.sort(reverse=True)
+for sc, x, y in ccand:
+    if len(CLUS) >= 3: break
+    if all(max(abs(cx - x), abs(cy - y)) >= 7 for cx, cy in CLUS) and True:
+        put_big(x, y, cluster(len(CLUS) % 2), 'crystal')
+# arbres : meilleurs scores d'abord, quinconce (jamais alignes en ligne/colonne), bosquets la ou le bruit est fort
+cand = []
+for y in range(H - 1):
+    for x in range(W - 1):
+        cs = [(x + i, y + j) for j in range(2) for i in range(2)]
+        if all(grass(c) for c in cs):
+            sc = dens(x + 1, y + 1) + 0.45 * edgeness((x, y)) + 0.1 * rnd.random()
+            cand.append((sc, x, y))
+cand.sort(reverse=True)
+def tree_ok(x, y):
+    for (tx, ty) in TREES:
+        dx, dy = abs(tx - x), abs(ty - y)
+        if max(dx, dy) < 2: return False
+        if (dx == 0 or dy == 0) and max(dx, dy) <= 3: return False          # pas d'alignement
     return True
-# arbres : berge ouest (nord), plateau, bande est
-for (x, y) in ((3, 10), (8, 12), (4, 13), (14, 11), (14, 15), (14, 19), (14, 23), (15, 3), (3, 7)):
-    put_tree(x, y)
-for (x, y) in ((6, 10), (9, 14), (15, 13), (15, 17), (15, 21), (16, 4)): put_cluster(x, y)
-cand = [c for c in sorted(G) if grass(c) and c not in ARTP and (c[0] <= 9 or c[0] in (14, 15, 16))]
-for c in cand:
-    if rnd.random() < 0.10 and not any((c[0] + a, c[1] + b) in ARTP for a in (-1, 0, 1) for b in (-1, 0, 1)): put_small(c, rnd.randrange(3))
-# verification : tout ce qui etait atteignable (hors cases couvertes) le reste
-for c, (t4, slot, m, blk) in ARTP.items(): G[c] = (G0[c] & 0xf000) | (0x400 if blk else 0) | art_meta(t4, slot, bottom_of(m))
+NTREE = 20
+for sc, x, y in cand:
+    if len(TREES) >= NTREE or sc < 0.3: break
+    if tree_ok(x, y): put_big(x, y, TREE_P if rnd.random() < 0.5 else TREE_PF, 'tree')
+# colonies : quelques eclats autour des amas (1 a 3), plus de rares eclats isoles
+for (cx, cy) in CLUS:
+    spots = [(cx + a, cy + b) for a in range(-2, 4) for b in range(-2, 4) if (a, b) not in ((0, 0), (1, 0), (0, 1), (1, 1))]
+    rnd.shuffle(spots)
+    for c in spots[:rnd.randint(1, 3)]: put_small(c, rnd.randrange(3))
+for c in sorted(G):
+    if grass(c) and c not in ARTP and rnd.random() < 0.07 and not any((c[0] + a, c[1] + b) in ARTP for a in (-1, 0, 1) for b in (-1, 0, 1)): put_small(c, rnd.randrange(3))
+for c in sorted(G):
+    if grass(c) and c not in ARTP and dens(c[0] * 1.7 + 30, c[1] * 1.7 + 7) > 0.64 and rnd.random() < 0.75: setm(c, 4)
+# pose finale des metatuiles d'art (collision : tout bloque)
+for c, (t4, slot, m) in ARTP.items(): G[c] = (G0[c] & 0xf000) | 0x400 | art_meta(t4, slot, bottom_of(m))
+# ------------------------------------------------------------------ verifications
 R1 = flood(G, START)
-lost = {c for c in R0 if c not in R1 and c not in ARTP}
+lost = {c for c in R0 if c not in R1 and c not in ARTP and c not in CONV}
 assert not lost, ('cases devenues inatteignables', sorted(lost)[:10])
-print('arbres/cristaux poses :', len(ARTP), '; atteignable', len(R0), '->', len(R1))
+for ev in EVC: assert ev not in ARTP and ev not in CONV, ('evenement recouvert', ev)
+print('arbres', len(TREES), 'amas', len(CLUS), 'eclats', len(SHARDS), '; atteignable', len(R0), '->', len(R1))
+# ------------------------------------------------------------------ controle des sprites (planche + assertions)
+def qa_sprite(name, rgba, big=True):
+    w, h = rgba.size; px = rgba.load(); ok = True; msgs = []
+    if big:
+        for q, (qx, qy) in enumerate(((0, 0), (16, 0), (0, 16), (16, 16))):
+            n = sum(1 for j in range(16) for i in range(16) if px[qx + i, qy + j][3])
+            if n < 40: ok = False; msgs.append('quart %d presque vide (%d)' % (q, n))
+        top = sum(1 for x in range(w) for y in range(4) if px[x, y][3]); bot = sum(1 for x in range(w) for y in range(h - 4, h) if px[x, y][3])
+        if top == 0 or bot == 0: ok = False; msgs.append('haut ou bas vide')
+        if bot > 0 and top > 0 and not (0.1 < top / float(bot) < 4): msgs.append('haut/bas desequilibres %d/%d' % (top, bot))
+    iso = sum(1 for y in range(h) for x in range(w) if px[x, y][3] and sum(1 for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)) if 0 <= x + dx < w and 0 <= y + dy < h and px[x + dx, y + dy][3]) == 0)
+    if iso: ok = False; msgs.append('%d pixel(s) isole(s)' % iso)
+    assert ok, (name, msgs)
+    return msgs
+def p_to_rgba(im, pal):
+    out = Image.new('RGBA', im.size, (0, 0, 0, 0)); o = out.load(); p = im.load()
+    for y in range(im.height):
+        for x in range(im.width):
+            if p[x, y]: o[x, y] = pal[p[x, y]] + (255,)
+    return out
+SPR = [('arbre', TREE_RGBA, True), ('arbre_miroir', p_to_rgba(TREE_PF, MIXP), True), ('amas0', p_to_rgba(cluster(0), PAL_C), True), ('amas1', p_to_rgba(cluster(1), PAL_C), True)] + \
+      [('eclat%d' % v, p_to_rgba(small(v), PAL_C), False) for v in range(3)]
+sheet = Image.new('RGBA', (len(SPR) * 200, 220), (115, 205, 164, 255))
+for i, (n, im, big) in enumerate(SPR):
+    m = qa_sprite(n, im, big)
+    if m: print('sprite', n, ':', '; '.join(m))
+    sheet.alpha_composite(im.resize((im.width * 5, im.height * 5), 0), (i * 200 + 10, 10))
+sheet.save('docs/topaze/reference/route24_sprites_qa.png')
 # ------------------------------------------------------------------ ecriture
-smt += b''.join(struct.pack('<8H', *e) for e in ENTS); satt += b'\0\0\0\0' * len(ENTS)
+smt += b''.join(struct.pack('<8H', *e) for e in ENTS); satt += b''.join(struct.pack('<I', a) for a in ENTATT)
 assert NMT + len(ENTS) <= 384 and NTL + len(NEWT) <= 384, (NMT + len(ENTS), NTL + len(NEWT))
 open(NS + 'metatiles.bin', 'wb').write(smt); open(NS + 'metatile_attributes.bin', 'wb').write(satt)
 rows = (NTL + len(NEWT) + 15) // 16
@@ -178,7 +363,7 @@ out = Image.new('P', (128, rows * 8), 0); out.putpalette(simg.getpalette()); out
 for n, t in enumerate(NEWT):
     ti = Image.new('P', (8, 8)); ti.putdata(list(t)); out.paste(ti, (((NTL + n) % 16) * 8, ((NTL + n) // 16) * 8))
 out.save(NS + 'tiles.png')
-writepal(NS + 'palettes/%02d.pal' % ART_PAL, PAL); writepal(NS + 'palettes/%02d.pal' % TREE_PAL, TPAL)
+writepal(NS + 'palettes/%02d.pal' % ART_PAL, PAL_C); writepal(NS + 'palettes/%02d.pal' % MIX_PAL, MIXP)
 g = [G[(x, y)] for y in range(H) for x in range(W)]
 open('data/layouts/Route24/map.bin', 'wb').write(struct.pack('<%dH' % len(g), *g))
 def add(path, text):
