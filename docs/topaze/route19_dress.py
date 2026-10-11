@@ -185,23 +185,28 @@ def dress(half):
                 t = k / n; stamp(a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, r0 + .5 * math.sin(k * 1.7 + a[0]))
     for yy in range(13, 20):
         for xx in range(7, 18): KEEP.add((xx, yy))                       # bassin devant la plage
-    for yy in range(42, 59):
-        for xx in range(0, 3): KEEP.add((xx, yy))                         # baie ouest (vers la Route 20)
-    channel([(12, 16), (12, 19), (16, 22), (13, 25), (8, 27), (12, 30), (18, 33), (14, 37), (9, 41), (10, 45), (6, 48), (2, 50)], 1.5)
-    CL = [(12, 16), (12, 19), (16, 22), (13, 25), (8, 27), (12, 30), (18, 33), (14, 37), (9, 41), (10, 45), (6, 48), (2, 50)]
-    for (px, py, pr) in ((12, 48, 3.0), (17, 26, 2.0), (5, 53, 2.2)):
+    channel([(12, 16), (12, 19), (16, 22), (13, 25), (8, 27), (12, 30), (18, 33), (14, 37), (9, 41), (10, 45), (6, 48), (3, 50)], 1.5)
+    channel([(3, 50), (0, 50)], 2.6)                                     # embouchure ouest (vers la Route 20)
+    CL = [(12, 16), (12, 19), (16, 22), (13, 25), (8, 27), (12, 30), (18, 33), (14, 37), (9, 41), (10, 45), (6, 48), (3, 50)]
+    for (px, py, pr) in ((12, 48, 3.0), (17, 26, 2.0)):
         stamp(px, py, pr); tg = min(CL, key=lambda k: abs(k[0] - px) + abs(k[1] - py)); channel([(px, py), tg], 1.0)
-    for c in sorted(EV):                                                       # evenements en mer : toujours accessibles
+    WARPS = {(w['x'], w['y']) for w in mj['warp_events']}
+    for c in sorted(EV - WARPS):                                               # evenements en mer : toujours accessibles
         if c[1] >= 14 and is_sea(c) and c not in KEEP:
             tgt = min(KEEP, key=lambda k: abs(k[0] - c[0]) + abs(k[1] - c[1])); channel([c, tgt], 1.0)
-    for c in sorted(EV):
+    for c in sorted(EV - WARPS):
         if c[1] >= 14 and is_sea(c): stamp(c[0], c[1], 1.2)
     for c in sorted(KEEP):                                                     # plus de rochers dans le chenal (confusion avec l'obsidienne)
         if c[1] >= 9 and M(c) in ROCKS: G[c[1] * W_ + c[0]] = (G[c[1] * W_ + c[0]] & 0xf000) | 299
     for y in range(9, 14):
         for x in range(W_):
             if M((x, y)) in ROCKS and (x, y) not in EV: G[y * W_ + x] = (G[y * W_ + x] & 0xf000) | 299
-    cand = {(x, y) for y in range(9, H_) for x in range(W_) if is_sea((x, y)) and (x, y) not in KEEP and (x, y) not in EV}
+    cand = {(x, y) for y in range(9, H_) for x in range(W_) if is_sea((x, y)) and (x, y) not in KEEP and (x, y) not in (EV - WARPS)}
+    for _ in range(2):                                                         # pas de petit ilot d'obsidienne isole dans l'eau
+        for c in sorted(cand):
+            if sum(((n in cand) or (n not in KEEP and not is_sea(n) and blocked(G[n[1] * W_ + n[0]]))) for n in nbrs(c)) < 2:
+                cand.discard(c)
+                if M(c) in ROCKS: G[c[1] * W_ + c[0]] = (G[c[1] * W_ + c[0]] & 0xf000) | 299
     # cones : 4x4 et 3x3 sur de l'obsidienne, loin du chenal
     CONES = []
     def near_keep(c): return any((c[0] + a, c[1] + b) in KEEP for a in (-1, 0, 1) for b in (-1, 0, 1))
@@ -262,7 +267,8 @@ def dress(half):
         mid = art_meta(t4, base); G[c[1] * W_ + c[0]] = (G[c[1] * W_ + c[0]] & 0xf000) | 0xc00 & 0x400 | mid
     R1 = reach(start); lost = {c for c in R0 if c not in R1 and c not in ART and c not in OBS}
     assert not lost, ('cases perdues', sorted(lost)[:10])
-    assert all(c in R1 for c in EV if c in R0), 'evenement inaccessible'
+    assert all(c in R1 for c in EV if c in R0 and (c not in WARPS or c in KEEP)), 'evenement inaccessible'
+    assert sum(1 for c in WARPS if c in R1 and c[0] == 0) >= 5, 'embouchure trop etroite'
     # ---- ecriture
     assert NMT + len(NEWE) <= 384 and NTL + len(NEWT) <= 384, (NMT + len(NEWE), NTL + len(NEWT))
     NEWE = [[((640 + NTL + q[1]) | ((ART_PAL2 if q[0] == 'B' else ART_PAL) << 12)) if isinstance(q, tuple) else q for q in e] for e in NEWE]
