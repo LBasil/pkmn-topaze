@@ -268,3 +268,15 @@ const u16 gMetatiles_GeneralTopaze[] = INCBIN_U16("data/tilesets/primary/general
 const u32 gMetatileAttributes_GeneralTopaze[] = INCBIN_U32("data/tilesets/primary/general_topaze/metatile_attributes.bin");
 const u16 gMetatiles_MauvilleTopaze[] = INCBIN_U16("data/tilesets/secondary/mauville_topaze/metatiles.bin");
 const u32 gMetatileAttributes_MauvilleTopaze[] = INCBIN_U32("data/tilesets/secondary/mauville_topaze/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralRoute21N[] = INCBIN_U16("data/tilesets/primary/general_route21n/metatiles.bin");
+const u32 gMetatileAttributes_GeneralRoute21N[] = INCBIN_U32("data/tilesets/primary/general_route21n/metatile_attributes.bin");
+
+const u16 gMetatiles_CinnabarRoute21N[] = INCBIN_U16("data/tilesets/secondary/cinnabar_route21n/metatiles.bin");
+const u32 gMetatileAttributes_CinnabarRoute21N[] = INCBIN_U32("data/tilesets/secondary/cinnabar_route21n/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralRoute21S[] = INCBIN_U16("data/tilesets/primary/general_route21s/metatiles.bin");
+const u32 gMetatileAttributes_GeneralRoute21S[] = INCBIN_U32("data/tilesets/primary/general_route21s/metatile_attributes.bin");
+
+const u16 gMetatiles_CinnabarRoute21S[] = INCBIN_U16("data/tilesets/secondary/cinnabar_route21s/metatiles.bin");
+const u32 gMetatileAttributes_CinnabarRoute21S[] = INCBIN_U32("data/tilesets/secondary/cinnabar_route21s/metatile_attributes.bin");

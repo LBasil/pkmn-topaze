@@ -1032,3 +1032,47 @@ const struct Tileset gTileset_MauvilleTopaze =
     .metatileAttributes = gMetatileAttributes_MauvilleTopaze,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralRoute21N =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralRoute21N,
+    .palettes = gTilesetPalettes_GeneralRoute21N,
+    .metatiles = gMetatiles_GeneralRoute21N,
+    .metatileAttributes = gMetatileAttributes_GeneralRoute21N,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_CinnabarRoute21N =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CinnabarRoute21N,
+    .palettes = gTilesetPalettes_CinnabarRoute21N,
+    .metatiles = gMetatiles_CinnabarRoute21N,
+    .metatileAttributes = gMetatileAttributes_CinnabarRoute21N,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GeneralRoute21S =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralRoute21S,
+    .palettes = gTilesetPalettes_GeneralRoute21S,
+    .metatiles = gMetatiles_GeneralRoute21S,
+    .metatileAttributes = gMetatileAttributes_GeneralRoute21S,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_CinnabarRoute21S =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CinnabarRoute21S,
+    .palettes = gTilesetPalettes_CinnabarRoute21S,
+    .metatiles = gMetatiles_CinnabarRoute21S,
+    .metatileAttributes = gMetatileAttributes_CinnabarRoute21S,
+    .callback = NULL,
+};

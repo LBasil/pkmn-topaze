@@ -13,13 +13,7 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_ROUTE21_SOUTH",
-      "offset": 0,
-      "direction": "down"
-    }
-  ],
+  "connections": [],
   "object_events": [
     {
       "type": "object",
@@ -113,6 +107,118 @@
       "elevation": 0,
       "dest_map": "MAP_PALLET_TOWN",
       "dest_warp_id": "8"
+    },
+    {
+      "x": 2,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE21_SOUTH",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 3,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE21_SOUTH",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 6,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE21_SOUTH",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 7,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE21_SOUTH",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 8,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE21_SOUTH",
+      "dest_warp_id": "4"
+    },
+    {
+      "x": 9,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE21_SOUTH",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 10,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE21_SOUTH",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 11,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE21_SOUTH",
+      "dest_warp_id": "7"
+    },
+    {
+      "x": 12,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE21_SOUTH",
+      "dest_warp_id": "8"
+    },
+    {
+      "x": 13,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE21_SOUTH",
+      "dest_warp_id": "9"
+    },
+    {
+      "x": 14,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE21_SOUTH",
+      "dest_warp_id": "10"
+    },
+    {
+      "x": 15,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE21_SOUTH",
+      "dest_warp_id": "11"
+    },
+    {
+      "x": 16,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE21_SOUTH",
+      "dest_warp_id": "12"
+    },
+    {
+      "x": 17,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE21_SOUTH",
+      "dest_warp_id": "13"
+    },
+    {
+      "x": 20,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE21_SOUTH",
+      "dest_warp_id": "14"
+    },
+    {
+      "x": 21,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE21_SOUTH",
+      "dest_warp_id": "15"
     }
   ],
   "coord_events": [],

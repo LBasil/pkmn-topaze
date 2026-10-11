@@ -66,3 +66,8 @@ Le dépôt est celui de pokefirered ; seuls les éléments modifiés pour Topaze
 
 ## Slots réutilisés (important)
 Les champions occupent les emplacements des chefs d'arène d'origine : `Brock→Kay`, `Misty→Sylvestre`, `Lt. Surge→Hera`, `Erika→Grim`, `Koga→Achlys`, `Sabrina→Nox`, `Blaine→Eddie`, `Giovanni→Hepha`. Les **identifiants de code** (`TRAINER_LEADER_BROCK`, `sParty_LeaderBrock`…) n'ont pas été renommés : ne pas s'y fier pour le nom en jeu. Les sprites sont encore ceux d'origine.
+
+### Route 21 Nord / Sud (habillage)
+- `docs/topaze/route21_dress.py` : copie des tilesets par moitie (GeneralRoute21N/S + CinnabarRoute21N/S), teinte grenat/eau violette au Nord (voisin Grenalux), eau bleue et or topaze au Sud (voisin Chrondrolia), pylones sur l'eau, cristaux sur les bancs de sable, accessibilite verifiee (BFS). Eau animee conservee (callback General).
+- `docs/topaze/route21_events.py` : plus de connexion N<->S (tilesets differents) -> pas simples sur les cases d'eau communes. Ordre : route21_dress -> route21_events -> chrondrolia_events.
+- A FAIRE : test surf Route 21/20 <-> Chrondrolia en emulateur.

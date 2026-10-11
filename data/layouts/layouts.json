@@ -1117,8 +1117,8 @@
       "height": 50,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_PalletTown",
+      "primary_tileset": "gTileset_GeneralRoute21N",
+      "secondary_tileset": "gTileset_CinnabarRoute21N",
       "border_filepath": "data/layouts/Route21_North/border.bin",
       "blockdata_filepath": "data/layouts/Route21_North/map.bin"
     },
@@ -2426,8 +2426,8 @@
       "height": 50,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_CinnabarIsland",
+      "primary_tileset": "gTileset_GeneralRoute21S",
+      "secondary_tileset": "gTileset_CinnabarRoute21S",
       "border_filepath": "data/layouts/Route21_South/border.bin",
       "blockdata_filepath": "data/layouts/Route21_South/map.bin"
     },
