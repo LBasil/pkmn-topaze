@@ -39,6 +39,18 @@ def conv(v):
 def beh(m):
     a = patt[m * 2:m * 2 + 2] if m < 512 else satt[(m - 512) * 2:(m - 512) * 2 + 2]
     return struct.unpack('<H', a)[0] & 0xff
+
+_PT = Image.open(EM + 'tilesets/primary/general/tiles.png'); _ST = Image.open(EM + 'tilesets/secondary/mauville/tiles.png')
+def greenish(q):
+    t = q & 0x3ff; pal = (q >> 12) & 15
+    src, tt = (_PT, t) if t < 512 else (_ST, t - 512)
+    pals = PALS_P if t < 512 else PALS_S
+    tile = src.crop(((tt % 16) * 8, (tt // 16) * 8, (tt % 16) * 8 + 8, (tt // 16) * 8 + 8)); px = list(tile.getdata()); n = g = 0
+    for i in px:
+        if i == 0: continue
+        n += 1; h, l, s_ = hls_(pals[pal][i])
+        if 55 <= h <= 175 and s_ > 0.15: g += 1
+    return n and g / 64.0 > 0.2
 SEC_MAP = {}; SEC_ENT = []; SEC_ATT = []; CT = []
 def ctile(t):
     if t not in CT: CT.append(t)
@@ -51,9 +63,24 @@ def remap(v):
         for q in e:
             t = q & 0x3ff
             out.append((q & ~0x3ff) | (ctile(t - 512) if t >= 512 else t))
+        GB = struct.unpack('<8H', pmt[16:32])[:4]; CB = struct.unpack('<8H', pmt[94 * 16:94 * 16 + 16])[:4]   # sol d'herbe -> beton
+        for qd in range(4):
+            if out[qd] == GB[qd] or greenish(out[qd]): out[qd] = CB[qd]
         SEC_ENT.append(out); SEC_ATT.append(conv(struct.unpack('<H', satt[(m - 512) * 2:(m - 512) * 2 + 2])[0]))
         SEC_MAP[m] = 640 + len(SEC_ENT) - 1
     return (v & ~0x3ff) | SEC_MAP[m]
+PCOPY = {}
+def remap_chunk(v):
+    m = v & 0x3ff
+    if m >= 512 or m in (94, 1): return remap(v)
+    if m not in PCOPY:
+        e = list(struct.unpack('<8H', pmt[m * 16:m * 16 + 16])); CB = struct.unpack('<8H', pmt[94 * 16:94 * 16 + 16])[:4]
+        ch = False
+        for qd in range(4):
+            if greenish(e[qd]): e[qd] = CB[qd]; ch = True
+        if ch: SEC_ENT.append(e); SEC_ATT.append(conv(struct.unpack('<H', patt[m * 2:m * 2 + 2])[0])); PCOPY[m] = 640 + len(SEC_ENT) - 1
+        else: PCOPY[m] = None
+    return remap(v) if PCOPY[m] is None else (v & ~0x3ff) | PCOPY[m]
 def ents_of(m):
     """8 entrees (tuiles deja remappees) d'une metatuile d'Emeraude"""
     if m < 512: return list(struct.unpack('<8H', pmt[m * 16:m * 16 + 16]))
@@ -108,7 +135,8 @@ def chunk(x0, y0, cw, ch, dx, dy, name):
         for i in range(cw):
             v = fr(x0 + i, y0 + j)
             if 0x60 <= beh(v & 0x3ff) <= 0x6f: doors.append((dx + i, dy + j)); v &= ~0xc00
-            put(dx + i, dy + j, remap(v)); OPEN.discard((dx + i, dy + j))
+            if (v & 0x3ff) in (1, 4): v = (v & ~0x3ff) | 94
+            put(dx + i, dy + j, remap_chunk(v)); OPEN.discard((dx + i, dy + j))
     return doors
 D = {}
 # ---- palette « topaze » : toits roses -> or, paves gris-bleu -> creme chaud (le rouge du Centre et le bleu de la Boutique restent)
@@ -237,15 +265,19 @@ def stump(var):
     return im
 ASH = [ash(i) for i in range(4)]; STUMP = [stump(0), stump(1)]
 def pylon():
+    """pylone a treillis ancre dans une dalle de beton (boulons), traverse a isolateurs et cables (16x32)"""
     im = newimg(16, 32); d = ImageDraw.Draw(im)
-    shadow(d, 0, 27, 16, 32)
-    d.line([(3, 30), (7, 8)], fill=14); d.line([(12, 30), (8, 8)], fill=14); d.line([(4, 30), (7, 9)], fill=13); d.line([(11, 30), (8, 9)], fill=13)
-    for yy in (14, 20, 26): d.line([(7 - (yy - 8) // 5, yy), (8 + (yy - 8) // 5, yy)], fill=14)
-    d.line([(5, 18), (10, 14)], fill=13); d.line([(10, 18), (5, 22)], fill=13)
-    d.rectangle((0, 7, 15, 8), fill=14, outline=1)
-    for x in (1, 14): d.rectangle((x - 1, 4, x, 7), fill=4, outline=1)
-    d.rectangle((6, 4, 9, 7), fill=4, outline=1); d.point((7, 2), fill=15); d.point((8, 1), fill=6)
-    d.point((1, 5), fill=6); d.point((14, 5), fill=6)
+    d.rectangle((1, 25, 14, 31), fill=13, outline=1); d.line([(2, 26), (13, 26)], fill=6); d.rectangle((2, 29, 13, 30), fill=14)
+    for x in (3, 12): d.point((x, 27), fill=11)
+    d.polygon([(4, 26), (7, 5), (8, 5), (11, 26)], fill=None, outline=14)
+    d.line([(4, 26), (7, 5)], fill=14); d.line([(11, 26), (8, 5)], fill=14); d.line([(5, 26), (7, 7)], fill=13); d.line([(10, 26), (8, 7)], fill=13)
+    for yy in (10, 15, 20): d.line([(7 - (yy - 5) // 5 - 1, yy), (8 + (yy - 5) // 5 + 1, yy)], fill=14)
+    for (a, b, c_, e) in ((5, 22, 10, 17), (10, 22, 5, 17), (6, 16, 9, 11)): d.line([(a, b), (c_, e)], fill=13)
+    d.rectangle((0, 6, 15, 7), fill=14, outline=1)
+    for x in (1, 7, 14): d.rectangle((x - 1, 3, x, 6), fill=4, outline=1)
+    d.line([(0, 8), (0, 12)], fill=1); d.line([(15, 8), (15, 12)], fill=1)
+    d.point((7, 2), fill=15); d.point((1, 2), fill=6); d.point((14, 2), fill=6)
+    d.rectangle((6, 24, 9, 25), fill=4, outline=1)
     return im
 ART_T = []
 def add_tile(t):
@@ -396,22 +428,30 @@ def crystals(cells, prob, tag):
     return placed
 crystals([c for c in sorted(OPEN) if c in GROUND], 0.035, 'topaze')
 
-def rail_img(h, v):
+def wall_img(sides):
+    """mur de quai en beton : bordure surelevee du cote de la mer (clair dessus, face sombre, bande jaune/noire), bollards"""
     im = newimg(16, 16); d = ImageDraw.Draw(im)
-    shadow(d, 0, 12, 16, 16)
-    if h:
-        d.rectangle((0, 5, 15, 7), fill=13, outline=1); d.line([(0, 6), (15, 6)], fill=4)
-        d.rectangle((0, 10, 15, 11), fill=14, outline=1)
-    if v:
-        d.rectangle((6, 0, 8, 15), fill=13, outline=1); d.line([(7, 0), (7, 15)], fill=4)
-    for (x, y) in ((1, 4), (7, 4), (14, 4)) if h else ((7, 1), (7, 8), (7, 14)):
-        d.rectangle((x - 1, y - 1, x + 1, y + 9 if h else y + 1), fill=14, outline=1)
-    if not h and not v: d.rectangle((6, 3, 9, 12), fill=14, outline=1)
+    N, S_, Wd_, E_ = sides
+    if S_:
+        d.rectangle((0, 7, 15, 10), fill=13, outline=1); d.line([(1, 8), (14, 8)], fill=6)
+        d.rectangle((0, 11, 15, 15), fill=14, outline=1)
+        for k in range(0, 16, 4): d.line([(k, 12), (k, 14)], fill=11)
+        for k in range(0, 16, 4): d.rectangle((k, 9, k + 1, 9), fill=4); d.rectangle((k + 2, 9, k + 3, 9), fill=1)
+    if N:
+        d.rectangle((0, 0, 15, 3), fill=14, outline=1)
+        d.rectangle((0, 4, 15, 8), fill=13, outline=1); d.line([(1, 5), (14, 5)], fill=6)
+        for k in range(0, 16, 4): d.rectangle((k, 7, k + 1, 7), fill=4); d.rectangle((k + 2, 7, k + 3, 7), fill=1)
+    if Wd_:
+        d.rectangle((0, 0, 4, 15), fill=13, outline=1); d.line([(1, 1), (1, 14)], fill=6); d.rectangle((5, 0, 6, 15), fill=14)
+        for k in range(1, 16, 4): d.rectangle((3, k, 3, k + 1), fill=4)
+    if E_:
+        d.rectangle((11, 0, 15, 15), fill=13, outline=1); d.line([(12, 1), (12, 14)], fill=6); d.rectangle((9, 0, 10, 15), fill=14)
+        for k in range(1, 16, 4): d.rectangle((14, k, 14, k + 1), fill=4)
     return im
 for c in sorted(RAIL):
-    hh = ((c[0] - 1, c[1]) in RAIL) or ((c[0] + 1, c[1]) in RAIL); vv = ((c[0], c[1] - 1) in RAIL) or ((c[0], c[1] + 1) in RAIL)
-    if hh and vv: hh, vv = (c[1] in (0, H - 1) or ((c[0], c[1] - 1) in SEA or (c[0], c[1] + 1) in SEA)), not ((c[0], c[1] - 1) in SEA or (c[0], c[1] + 1) in SEA)
-    claim(c[0], c[1], 1, 1, 'garde-corps'); ARTPLACE[c] = (slice_tiles(rail_img(hh, vv)), CONC)
+    sides = tuple((c[0] + dx, c[1] + dy) in SEA for dx, dy in ((0, -1), (0, 1), (-1, 0), (1, 0)))
+    if not any(sides): sides = (False, True, False, False) if (c[0], c[1] + 1) in SEA or True else sides
+    claim(c[0], c[1], 1, 1, 'mur de quai'); ARTPLACE[c] = (slice_tiles(wall_img(sides)), CONC)
 
 # ------------------------------------------------------------------ l'ile a brule il y a dix ans : cendres, braises, souches calcinees (surtout autour du manoir)
 WALKART = set()
@@ -466,8 +506,6 @@ for k, c in SIGNS.items(): G[c] = remap(0x400 | 3)
 PATHC = {c for c in WAY if c in OPEN and c not in OCC and c not in ARTPLACE and not (G[c] & 0xc00)}
 RING = {(x, y) for x in range(TX - 1, TX + 4) for y in range(TY - 1, TY + 4)} - {(x, y) for x in range(TX, TX + 3) for y in range(TY, TY + 3)}
 PATHC = set()
-for c in RING:
-    if c in OPEN and c not in ARTPLACE: GROUND[c] = GRASS; G[c] = remap(0x3000 | GRASS)
 def _free(c):
     return (c not in RING and c in OPEN and c not in OCC and c not in ARTPLACE and not (G[c] & 0xc00) and 0 <= c[0] < W and 0 <= c[1] < H)
 for _ in range(3):
@@ -508,7 +546,7 @@ for (x, y) in sorted(OPEN):
 rv = random.Random(88)
 for (x, y) in sorted(OPEN):
     c = (x, y)
-    if not (1 <= x <= 9 and 3 <= y <= 12) or c in BEACH or c in PATHC or c in OCC or c in ARTPLACE or c in KEEP or (G[c] & 0xc00): continue
+    if True or c in BEACH or c in PATHC or c in OCC or c in ARTPLACE or c in KEEP or (G[c] & 0xc00): continue
     r_ = rv.random()
     if r_ < 0.50: G[c] = remap(0x3000 | 13)
     elif r_ < 0.62: G[c] = remap(0x400 | 5)
