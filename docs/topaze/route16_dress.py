@@ -172,10 +172,10 @@ def build(L, rnd):
         FOREST = {(x, y) for y in range(H) for x in range(W) if (x, y) not in PATH | BUF | MEAD and (x, y) not in SEA and DM[(x, y)] >= 2.6 + 1.3 * math.sin(y * 0.9 + x * 0.4)}
     else:
         orig = list(struct.unpack('<%dH' % (48 * 20), open(SRC + 'r16_orig.bin', 'rb').read()))
-        PATH = disc_path([(47, 13), (43, 13), (39, 12.4), (35, 13), (30, 13)], 1.25, W, H)
+        PATH = disc_path([(47, 13), (44, 13), (41.5, 10.5), (39, 8), (37, 9.5), (35.5, 12.5), (31, 12.5)], 1.3, W, H)
         PATH |= {(x, y) for x in range(29, 36) for y in (12, 13)}
-        PATH |= disc_path([(29, 13), (25, 12), (21, 11.5), (17, 10), (13, 8), (10.5, 6.6)], 1.3, W, H)
-        PATH |= disc_path([(22, 12), (18, 14.5), (14, 16.5), (10.5, 17.5), (9.5, 19)], 1.3, W, H)
+        PATH |= disc_path([(29, 12.5), (26.5, 14.5), (23.5, 16.2), (21, 14), (18.5, 11), (15.5, 9.2), (12.5, 8), (10.5, 6.6)], 1.3, W, H)
+        PATH |= disc_path([(21, 14), (16.5, 15.5), (12.5, 16.5), (10.2, 18), (9.5, 19)], 1.3, W, H)
         PATH |= {(x, y) for y in (17, 18, 19) for x in range(8, 12)} | {(x, 12) for x in (45, 46, 47)} | {(x, 14) for x in (45, 46, 47)}
         for y in (3, 4, 5):
             for x in range(9, 14): FIXED[(x, y)] = orig[y * 48 + x]
@@ -192,7 +192,7 @@ def build(L, rnd):
     # ---- bosquets isoles dans les prairies (arbres entiers 2x2, jamais contre le chemin)
     gr = []; blockd = PATH | BUF | set(FIXED) | set(SEA)
     DMP = distmap(PATH, W, H)
-    cands = [(x, y) for y in range(3, H - 4) for x in range(3, W - 4) if all((x + i, y + j) not in FOREST and (x + i, y + j) not in blockd and DMP[(x + i, y + j)] >= 3 for i in range(2) for j in range(2))]
+    cands = [(x, y) for y in range(4, H - 4, 2) for x in range(4, W - 4, 2) if all((x + i, y + j) not in FOREST and (x + i, y + j) not in blockd and DMP[(x + i, y + j)] >= 3 for i in range(2) for j in range(2))]
     rnd.shuffle(cands)
     for (x, y) in cands:
         if len(gr) >= (11 if L == 'Route16' else 16): break
@@ -211,9 +211,11 @@ def build(L, rnd):
         TREES.append((x, y))
     if L == 'Route16':
         for (x, y) in WALLU: put_tree(x, y)
-    for y in range(H - 1):
-        for x in range(W - 1):
-            if all(c in FOREST and c not in TREEO for c in ((x, y), (x + 1, y), (x, y + 1), (x + 1, y + 1))): put_tree(x, y)
+    nofor = PATH | BUF | set(FIXED) | set(SEA)
+    for uy in range(0, H, 2):                       # reseau de 2x2 aligne : masses d'arbres nettes, jamais de trou d'une case
+        for ux in range(0, W, 2):
+            cs = [(ux, uy), (ux + 1, uy), (ux, uy + 1), (ux + 1, uy + 1)]
+            if sum(c in FOREST for c in cs) >= 3 and not any(c in nofor or c in TREEO for c in cs): put_tree(ux, uy)
     assert WALL <= set(TREEO), 'mur de foret incomplet'
     for c, v in FIXED.items(): G[c] = (v & 0xfc00, v & 0x3ff)
     for c, v in SEA.items(): G[c] = (v & 0xfc00, v & 0x3ff)
@@ -382,6 +384,7 @@ for n, t in enumerate(NEWT):
     ti = Image.new('P', (8, 8)); ti.putdata(list(t)); tout.paste(ti, (((NTL + n) % 16) * 8, ((NTL + n) // 16) * 8))
 tout.save(NS + 'tiles.png')
 for L, G in res.items(): open('data/layouts/%s/map.bin' % L, 'wb').write(struct.pack('<%dH' % len(G), *G))
+open('data/layouts/Route16/border.bin', 'wb').write(struct.pack('<4H', 20, 21, 28, 29))      # hors carte : foret (et non plus la mer)
 print('metatuiles %d/384, tuiles %d/384' % (NMT + len(NEWE), NTL + len(NEWT)))
 
 # ---- enregistrement des tilesets
