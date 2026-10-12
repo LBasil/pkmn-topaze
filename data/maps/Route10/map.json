@@ -233,13 +233,6 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE9",
       "dest_warp_id": "3"
-    },
-    {
-      "x": 0,
-      "y": 10,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE9",
-      "dest_warp_id": "4"
     }
   ],
   "coord_events": [],

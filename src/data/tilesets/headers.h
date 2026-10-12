@@ -1406,3 +1406,25 @@ const struct Tileset gTileset_CeladonRoute13V2 =
     .metatileAttributes = gMetatileAttributes_CeladonRoute13V2,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralRoute9V2 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralRoute9V2,
+    .palettes = gTilesetPalettes_GeneralRoute9V2,
+    .metatiles = gMetatiles_GeneralRoute9V2,
+    .metatileAttributes = gMetatileAttributes_GeneralRoute9V2,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_CeladonRoute9V2 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CeladonRoute9V2,
+    .palettes = gTilesetPalettes_CeladonRoute9V2,
+    .metatiles = gMetatiles_CeladonRoute9V2,
+    .metatileAttributes = gMetatileAttributes_CeladonRoute9V2,
+    .callback = NULL,
+};
