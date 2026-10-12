@@ -76,6 +76,7 @@ def amethyste(c):
         if l > 0.42: return rgb_(270, 0.12 + 0.66 * l, min(0.85, s * 0.7 + 0.24))
         return rgb_(256, min(1, l * 1.1), min(0.9, s * 1.0 + 0.05))
     return c
+RAW_S7 = list(PALS_S[7])
 for P in (PALS_P, PALS_S):
     for i in range(16): P[i] = [P[i][0]] + [amethyste(x) for x in P[i][1:]]
 PALS_S[7] = [PALS_S[7][0]] + [rgb_(274, 0.74, 0.70) if min(x) >= 240 and max(x) - min(x) < 8 else x for x in PALS_S[7][1:]]       # v8c : le blanc pur du pave (arcs) devient lilac pale
@@ -828,6 +829,12 @@ if os.environ.get('AM_DUMP'):
             elif GROUND.get(c) == GRASS: r_ += ','
             else: r_ += '.'
         print('%2d  %s' % (y, r_))
+# ---- toit du Centre Pokemon : les rayures violettes (palette PRIMAIRE 1, ex-orange) passent au rose ; copies des metatuiles du Centre en palette 12 (le reste de la ville garde la palette 1)
+PAL12 = list(PALS_P[1]); PAL12[11] = (240, 150, 214)
+for c in [(38 + i, y) for y in (10, 11, 12) for i in range(4)] + [(38, 13), (39, 13), (40, 13), (41, 13)]:
+    m = G[c] & 0x3ff; ent = ents_of(m) if m < 512 else list(SEC_ENT[m - 640])
+    SEC_ENT.append([(q & 0xfff) | (12 << 12) if (q >> 12) == 1 else q for q in ent]); SEC_ATT.append(conv(struct.unpack('<H', patt[m * 2:m * 2 + 2])[0]) if m < 512 else SEC_ATT[m - 640])
+    G[c] = (G[c] & ~0x3ff) | (640 + len(SEC_ENT) - 1)
 # ---- audit du contour du cratere : aucune fuite (deux cases praticables de niveaux differents ne se touchent que par un escalier), aucun trou dans la falaise
 LEAK = []; HOLE = []
 for c in LV:
@@ -861,7 +868,7 @@ open(SEC + 'metatiles.bin', 'wb').write(b''.join(struct.pack('<8H', *e) for e in
 open(SEC + 'metatile_attributes.bin', 'wb').write(b''.join(struct.pack('<I', a) for a in SEC_ATT))
 for i in range(16):
     writepal(SEC + 'palettes/%02d.pal' % i, PALS_S[i]); writepal(PRI + 'palettes/%02d.pal' % i, PALS_P[i])
-writepal(SEC + 'palettes/%02d.pal' % ART_PAL, PAL); writepal(SEC + 'palettes/%02d.pal' % WPAL_ID, PAL9); writepal(SEC + 'palettes/10.pal', AA.AP); writepal(SEC + 'palettes/11.pal', PAL11)
+writepal(SEC + 'palettes/%02d.pal' % ART_PAL, PAL); writepal(SEC + 'palettes/%02d.pal' % WPAL_ID, PAL9); writepal(SEC + 'palettes/10.pal', AA.AP); writepal(SEC + 'palettes/11.pal', PAL11); writepal(SEC + 'palettes/12.pal', PAL12)
 _pim = Image.open(EM + 'tilesets/primary/general/tiles.png'); assert _pim.size == (128, 256)
 _pout = Image.new('P', (128, ((512 + len(PT) + 15) // 16) * 8), 0); _pout.putpalette(_pim.getpalette()); _pout.paste(_pim, (0, 0))
 for i, t in enumerate(PT):
