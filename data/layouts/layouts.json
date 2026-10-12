@@ -961,8 +961,8 @@
       "height": 20,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_LavenderTown",
+      "primary_tileset": "gTileset_GeneralSpinellia",
+      "secondary_tileset": "gTileset_LavenderSpinellia",
       "border_filepath": "data/layouts/Route8/border.bin",
       "blockdata_filepath": "data/layouts/Route8/map.bin"
     },
@@ -985,8 +985,8 @@
       "height": 80,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_LavenderTown",
+      "primary_tileset": "gTileset_GeneralSpinellia",
+      "secondary_tileset": "gTileset_LavenderSpinellia",
       "border_filepath": "data/layouts/Route10/border.bin",
       "blockdata_filepath": "data/layouts/Route10/map.bin"
     },
@@ -1009,8 +1009,8 @@
       "height": 120,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_LavenderTown",
+      "primary_tileset": "gTileset_GeneralSpinellia",
+      "secondary_tileset": "gTileset_LavenderSpinellia",
       "border_filepath": "data/layouts/Route12/border.bin",
       "blockdata_filepath": "data/layouts/Route12/map.bin"
     },

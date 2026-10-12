@@ -13,13 +13,7 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_ROUTE12",
-      "offset": -60,
-      "direction": "right"
-    }
-  ],
+  "connections": [],
   "object_events": [
     {
       "type": "object",
@@ -246,6 +240,27 @@
       "elevation": 0,
       "dest_map": "MAP_VERMILION_CITY",
       "dest_warp_id": "15"
+    },
+    {
+      "x": 71,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE12",
+      "dest_warp_id": "6"
+    },
+    {
+      "x": 71,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE12",
+      "dest_warp_id": "7"
+    },
+    {
+      "x": 71,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE12",
+      "dest_warp_id": "8"
     }
   ],
   "coord_events": [],

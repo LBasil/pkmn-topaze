@@ -155,6 +155,8 @@ def fence(kind):
         for y in (3, 11): d.rectangle((5, y, 10, y + 2), fill=9, outline=1); d.point((7, y), fill=5)
     return im
 TP = [(0, 0, 0), (8, 36, 44), (30, 44, 52), (20, 60, 72), (34, 100, 116), (60, 150, 168), (110, 200, 214), (170, 236, 244)] + [(0, 0, 0)] * 8
+_orig8 = readpal(SS + 'palettes/08.pal')
+TP[8:15] = [spinel(c) for c in _orig8[8:15]]      # v10b : les indices 8..14 de la palette 8 (planches des pontons de la Route 12, inutilises par la ville) gardent leurs couleurs d'origine, teintees comme le gravier
 def tree_img(var):
     """arbre 1x1 (16x16) : houppier conique sombre, reflets, tronc ; palette 8 = palette des pins FR (memes teintes)"""
     o, d1, d2, m1, m2, l1, l2 = 1, 3, 2, 4, 5, 6, 7
@@ -424,6 +426,12 @@ for c, val in BLK.items():
     elif val[0] == 'sign': G[c] = 0x400 | 2
     elif val[0] == 'fence': G[c] = 0x400 | art_meta(slice4(fence(val[1])), G[c] & 0x3ff, False)
     else: G[c] = 0x400 | art_meta(ST[val[1]] if val[0] == 'stele' else CR[val[1]], G[c] & 0x3ff, False)
+# v10b : metatuiles de decor (stele x4, cristal x3) pour chacune des 4 bases d'herbe (8, 9, 16, 17), exportees pour les routes voisines (spinellia_routes.py) ; ajoutees en FIN de liste : les ids existants ne bougent pas
+ART_IDS = {}
+for _b in (8, 9, 16, 17):
+    for _v in range(4): ART_IDS['stele_%d_%d' % (_v, _b)] = 0x400 | art_meta(ST[_v], _b, False)
+    for _v in range(3): ART_IDS['cry_%d_%d' % (_v, _b)] = 0x400 | art_meta(CR[_v], _b, False)
+json.dump(ART_IDS, open('docs/topaze/spinellia_art_ids.json', 'w'), indent=1)
 assert NMT + len(NEWE) <= 384 and NTL + len(NEWT) <= 384, (NMT + len(NEWE), NTL + len(NEWT))
 print('metatuiles', NMT + len(NEWE), 'tuiles', NTL + len(NEWT))
 NEWE = [[((640 + NTL + q[1]) | ((TREE_PAL if q[0] == 'B' else ART_PAL) << 12)) if isinstance(q, tuple) else q for q in e] for e in NEWE]
