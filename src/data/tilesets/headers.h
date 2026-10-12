@@ -1285,3 +1285,69 @@ const struct Tileset gTileset_CeruleanGymTree =
     .metatileAttributes = gMetatileAttributes_CeruleanGymTree,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralRoute5 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralRoute5,
+    .palettes = gTilesetPalettes_GeneralRoute5,
+    .metatiles = gMetatiles_GeneralRoute5,
+    .metatileAttributes = gMetatileAttributes_GeneralRoute5,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_CeruleanRoute5 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CeruleanRoute5,
+    .palettes = gTilesetPalettes_CeruleanRoute5,
+    .metatiles = gMetatiles_CeruleanRoute5,
+    .metatileAttributes = gMetatileAttributes_CeruleanRoute5,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GeneralRoute6 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralRoute6,
+    .palettes = gTilesetPalettes_GeneralRoute6,
+    .metatiles = gMetatiles_GeneralRoute6,
+    .metatileAttributes = gMetatileAttributes_GeneralRoute6,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_VermilionRoute6 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_VermilionRoute6,
+    .palettes = gTilesetPalettes_VermilionRoute6,
+    .metatiles = gMetatiles_VermilionRoute6,
+    .metatileAttributes = gMetatileAttributes_VermilionRoute6,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GeneralRoute7 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralRoute7,
+    .palettes = gTilesetPalettes_GeneralRoute7,
+    .metatiles = gMetatiles_GeneralRoute7,
+    .metatileAttributes = gMetatileAttributes_GeneralRoute7,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_CeladonRoute7 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CeladonRoute7,
+    .palettes = gTilesetPalettes_CeladonRoute7,
+    .metatiles = gMetatiles_CeladonRoute7,
+    .metatileAttributes = gMetatileAttributes_CeladonRoute7,
+    .callback = InitTilesetAnim_CeladonCity,
+};

@@ -925,8 +925,8 @@
       "height": 40,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_CeruleanCity",
+      "primary_tileset": "gTileset_GeneralRoute5",
+      "secondary_tileset": "gTileset_CeruleanRoute5",
       "border_filepath": "data/layouts/Route5/border.bin",
       "blockdata_filepath": "data/layouts/Route5/map.bin"
     },
@@ -937,8 +937,8 @@
       "height": 40,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_VermilionCity",
+      "primary_tileset": "gTileset_GeneralRoute6",
+      "secondary_tileset": "gTileset_VermilionRoute6",
       "border_filepath": "data/layouts/Route6/border.bin",
       "blockdata_filepath": "data/layouts/Route6/map.bin"
     },
@@ -949,8 +949,8 @@
       "height": 20,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_CeladonCity",
+      "primary_tileset": "gTileset_GeneralRoute7",
+      "secondary_tileset": "gTileset_CeladonRoute7",
       "border_filepath": "data/layouts/Route7/border.bin",
       "blockdata_filepath": "data/layouts/Route7/map.bin"
     },
