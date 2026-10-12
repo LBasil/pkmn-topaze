@@ -39,7 +39,7 @@ ident = lambda c: c
 # nom, couche, tileset secondaire d'origine, callback secondaire, teinte primaire par palette, teinte secondaire par palette
 CITY = {'LAYOUT_ROUTE6': ('gTileset_GeneralApatia', 'gTileset_VermilionApatia'), 'LAYOUT_ROUTE7': ('gTileset_GeneralCeladopole', 'gTileset_CeladonCeladopole')}
 ROUTES = [('Route5', 'LAYOUT_ROUTE5', 'route5', 'cerulean_pepite', 'CeruleanCity', 'Cerulean', 'NULL', {1: mauve}, {}),
-          ('Route6', 'LAYOUT_ROUTE6', None, None, None, None, None, None, None),
+          ('Route6', 'LAYOUT_ROUTE6', 'route6', 'vermilion_apatia', 'Vermilion', 'Vermilion', 'NULL', None, {}),
           ('Route7', 'LAYOUT_ROUTE7', None, None, None, None, None, None, None)]
 def add(path, marker, text):
     if marker not in open(path).read(): open(path, 'a').write(text)
@@ -61,7 +61,9 @@ def dress(name, lid, key, sdir, sprefix, scb, tp, ts):
     """Route 5 : copie des tilesets FireRed recolores (tilesets dedies)"""
     cn = 'Route' + key[-1]
     NP = P + 'primary/general_%s/' % key; NS = P + 'secondary/%s_%s/' % (sdir.split('_')[0], key)
-    for src, dst, spec in ((P + 'primary/general/', NP, tp), (P + 'secondary/%s/' % sdir, NS, ts)):
+    pairs = [(P + 'secondary/%s/' % sdir, NS, ts)]
+    if tp is not None: pairs.insert(0, (P + 'primary/general/', NP, tp))
+    for src, dst, spec in pairs:
         shutil.rmtree(dst, ignore_errors=True); os.makedirs(dst + 'palettes')
         for f in ('metatiles.bin', 'metatile_attributes.bin', 'tiles.png'): shutil.copy(src + f, dst + f)
         for i in range(16):
@@ -71,6 +73,13 @@ def dress(name, lid, key, sdir, sprefix, scb, tp, ts):
     if sdir == 'cerulean_pepite':     # tuiles de decor de la Route 24 (arbres, cristaux : palettes 7 et 8) ; palettes 9..12 (maison de Bill delabree) remises d'origine
         for i in range(9, 13): shutil.copy(P + 'secondary/cerulean_city/palettes/%02d.pal' % i, NS + 'palettes/%02d.pal' % i)
     G_, S_ = 'General' + cn, sprefix + cn
+    if tp is None:     # Route 6 : primaire = celui d'Apatia, seul le secondaire est une copie (murets et escaliers ajoutes par hematown_routes_decor.py)
+        add('src/data/tilesets/graphics.h', 'gTilesetTiles_%s[]' % S_,
+            '\nconst u32 gTilesetTiles_%s[] = INCBIN_U32("%stiles.4bpp.lz");\nconst u16 gTilesetPalettes_%s[][16] =\n{\n%s};\n' % (S_, NS, S_, pal(NS)))
+        add('src/data/tilesets/metatiles.h', 'gMetatiles_%s[]' % S_,
+            '\nconst u16 gMetatiles_%s[] = INCBIN_U16("%smetatiles.bin");\nconst u32 gMetatileAttributes_%s[] = INCBIN_U32("%smetatile_attributes.bin");\n' % (S_, NS, S_, NS))
+        add('src/data/tilesets/headers.h', 'gTileset_%s =' % S_, tm % (S_, 'TRUE', S_, S_, S_, S_, scb))
+        return 'gTileset_GeneralApatia', 'gTileset_' + S_
     add('src/data/tilesets/graphics.h', 'gTilesetTiles_%s[]' % G_,
         '\nconst u32 gTilesetTiles_%s[] = INCBIN_U32("%stiles.4bpp.lz");\nconst u16 gTilesetPalettes_%s[][16] =\n{\n%s};\n' % (G_, NP, G_, pal(NP)) +
         '\nconst u32 gTilesetTiles_%s[] = INCBIN_U32("%stiles.4bpp.lz");\nconst u16 gTilesetPalettes_%s[][16] =\n{\n%s};\n' % (S_, NS, S_, pal(NS)))

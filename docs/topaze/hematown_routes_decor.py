@@ -69,12 +69,14 @@ def harvest24():
     assert len(trees) >= 1 and len(clus) == 2, (len(trees), len(clus))
     return sorted(trees), sorted(clus), shard
 class Reg:                                  # nouvelles metatuiles du secondaire de la Route 5 : art de la Route 24 sur un fond d'herbe au choix
-    def __init__(s):
-        s.D = 'data/tilesets/secondary/cerulean_route5/'
-        for f in ('metatiles.bin', 'metatile_attributes.bin'): shutil.copy('data/tilesets/secondary/cerulean_pepite/' + f, s.D + f)
+    def __init__(s, D='data/tilesets/secondary/cerulean_route5/', src='cerulean_pepite', prim='general_route5'):
+        s.D = D
+        for f in ('metatiles.bin', 'metatile_attributes.bin', 'tiles.png'): shutil.copy('data/tilesets/secondary/%s/%s' % (src, f), s.D + f)
         s.mt = bytearray(open(s.D + 'metatiles.bin', 'rb').read()); s.att = bytearray(open(s.D + 'metatile_attributes.bin', 'rb').read())
-        s.pm = open('data/tilesets/primary/general_route5/metatiles.bin', 'rb').read(); s.cache = {}; s.n0 = len(s.mt) // 16
-        s.img = Image.open(s.D + 'tiles.png'); s.NTL = (s.img.width // 8) * (s.img.height // 8); s.NEWT = []
+        s.pm = open('data/tilesets/primary/%s/metatiles.bin' % prim, 'rb').read(); s.cache = {}; s.n0 = len(s.mt) // 16
+        s.img = Image.open(s.D + 'tiles.png'); s.NEWT = []
+        # premiere tuile libre = 1 + plus grand numero de tuile secondaire reference par les metatuiles (le PNG est arrondi a 16 colonnes de tuiles : sa taille ne dit pas ce qui est libre)
+        s.NTL = max(((e & 0x3ff) - 640 + 1) for k in range(len(s.mt) // 16) for e in struct.unpack('<8H', bytes(s.mt[k * 16:k * 16 + 16])) if (e & 0x3ff) >= 640)
     def tile(s, t):
         t = tuple(t)
         if t not in s.NEWT: s.NEWT.append(t)
@@ -266,7 +268,42 @@ def route5():
 # ------------------------------------------------------------------ Route 6 : cimetiere de dragon
 def route6():
     A = json.load(open('docs/topaze/apatia_art_ids.json'))
-    w, h, g, mj = load('Route6'); B = Board(w, h, g, mj); n = collections.Counter()
+    w, h, g, mj = load('Route6'); n = collections.Counter()
+    # montee vers la ville dragon (au sud) : un muret de pierre en travers du couloir (y 31) puis un escalier de 4 rangees (y 34..37) jusqu'au portail ;
+    # vu de dessus on ne voit pas la face nord d'un mur : on montre le chapeau de pierre et son ombre sur le palier du bas (au nord), et des marches dont chaque rangee commence par une ligne d'ombre
+    R = Reg('data/tilesets/secondary/vermilion_route6/', 'vermilion_apatia', 'general_apatia')
+    writepal(R.D + 'palettes/09.pal', [(0, 0, 0), (150, 96, 84), (186, 142, 118), (222, 184, 152), (238, 208, 178), (252, 234, 212), (200, 150, 120), (140, 100, 96)] + [(0, 0, 255)] * 8)
+    def wq(q, ah, var):
+        r = random.Random(1700 + q * 31 + ah * 7 + var); out = []
+        for j in range(8):
+            for i in range(8):
+                X, Y = (q % 2) * 8 + i, (q // 2) * 8 + j; de = X if q % 2 == 0 else 15 - X; c = 0
+                if Y == 0: c = 2 if (X + Y) % 2 == 0 else 0
+                elif Y in (1, 2, 3): c = 2
+                elif Y == 4: c = 1
+                elif Y == 5: c = 5
+                elif 6 <= Y <= 12:
+                    row = (Y - 6) // 3; joint = (X + (8 if row % 2 else 0)) % 16 == 0 or (Y - 6) % 3 == 2
+                    c = 3 if joint else (4 if r.random() > 0.12 else 3)
+                elif Y == 13: c = 6
+                elif Y == 14: c = 7
+                if not ah and de < 3 and c and (Y < 3 + (3 - de) or Y > 12 - (3 - de)): c = 0
+                out.append(c)
+        return out
+    def sq(q, ah, var):
+        return [(1 if (Y % 4) == 0 else (6 if Y % 4 == 1 else (4 if Y % 4 == 2 else 5))) for j in range(8) for i in range(8) for Y in [(q // 2) * 8 + j]]
+    ent9 = lambda t: (640 + R.NTL + R.tile(t)) | (9 << 12)
+    for x in range(7, 17):
+        if 10 <= x <= 12: continue
+        wl = (x - 1 < 7) or (10 <= x - 1 <= 12) ; wr = (x + 1 > 16) or (10 <= x + 1 <= 12)
+        ents = [ent9(wq(q, 0 if (wl if q % 2 == 0 else wr) else 1, 0)) for q in range(4)]
+        g[31 * w + x] = 0x3400 | R.meta(ents, 8 + (x & 1) + 8 * (1), 0x20000000)
+    for y in (31, 34, 35, 36, 37):
+        if y == 31:
+            for x in (10, 11, 12): g[y * w + x] = 0x3000 | R.meta([ent9(sq(q, 1, 0)) for q in range(4)], 8, 0x20000000)
+        else:
+            for x in (10, 11, 12): g[y * w + x] = 0x3000 | R.meta([ent9(sq(q, 1, 0)) for q in range(4)], 8, 0x20000000)
+    B = Board(w, h, g, mj)
     near = lambda c: any(max(abs(c[0] - p[0]), abs(c[1] - p[1])) <= 1 for p in B.imp)
     def one(kind, c, v=0):
         if not B.isgrass(c) or near(c): return
@@ -295,7 +332,7 @@ def route6():
     for c in cand:
         if n['cry'] >= 9: break
         if spaced(c, placed, 4): one('cry', c, rnd.randrange(3)); placed.append(c)
-    save('Route6', w, h, B.g); print('Route6 :', dict(n))
+    n_new = R.flush(); save('Route6', w, h, B.g); print('Route6 :', dict(n), '+%d metatuiles' % n_new)
 
 # ------------------------------------------------------------------ Route 7 : cristaux de quartz et bonhommes de neige
 def route7():

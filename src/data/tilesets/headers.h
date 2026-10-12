@@ -1307,3 +1307,14 @@ const struct Tileset gTileset_CeruleanRoute5 =
     .metatileAttributes = gMetatileAttributes_CeruleanRoute5,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_VermilionRoute6 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_VermilionRoute6,
+    .palettes = gTilesetPalettes_VermilionRoute6,
+    .metatiles = gMetatiles_VermilionRoute6,
+    .metatileAttributes = gMetatileAttributes_VermilionRoute6,
+    .callback = NULL,
+};
