@@ -164,6 +164,7 @@ SH = tuple(int(c * 0.55) for c in min(gcols, key=sum))
 PAL = [(0, 0, 0)] + gcols + [(8, 10, 24), (22, 26, 52), (46, 54, 98), (92, 106, 168), (236, 242, 255), (255, 104, 186), (70, 240, 218),
                               (186, 116, 255), SH, (150, 158, 182), (255, 196, 80)]
 # indices : 1-4 sol | 5 contour | 6 opale sombre | 7 opale | 8 clair | 9 blanc | 10 rose | 11 cyan | 12 violet | 13 ombre | 14 acier | 15 cuivre
+def art_nearest(c): return min(range(1, 16), key=lambda k: sum((PAL[k][i] - c[i]) ** 2 for i in range(3)))
 def newimg(w, h):
     im = Image.new('P', (w, h), 1); im.putpalette([c for p in PAL for c in p]); return im
 def ground_bg(w, h):
@@ -226,6 +227,20 @@ def slice_all(im, bw, bh): return {(i, j): meta(im.crop((i * 16, j * 16, i * 16 
 BIG = slice_all(*big()); SM = [meta(small(0)), meta(small(1))]; ANVIL = meta(anvil()); INGOTS = meta(ingots())
 
 # ------------------------------------------------------------------ decors : fontaine, monument, lampadaires, enseignes
+# v3 : grille verticale = la grille horizontale tournee de 90 degres (les tuiles d'origine portaient un liseré d'herbe/pave en feston)
+def fence_img(m): return E.metatile(LD, m).convert('RGB')
+def to_art(im):
+    out = newimg(16, 16); o = out.load(); q = im.load()
+    for y in range(16):
+        for x in range(16): o[x, y] = art_nearest(q[x, y])
+    return out
+FH_IM = fence_img(FH); FHB_IM = fence_img(FHB)
+FEN_L = meta(to_art(FH_IM.rotate(90))); FEN_R = meta(to_art(FH_IM.rotate(-90)))
+FEN_TC = meta(to_art(FH_IM)); FEN_BC = meta(to_art(FHB_IM))
+for y in range(3, 37):
+    put(39, y, ('ARTRAW', FEN_R, 0x400))
+    if y not in (22, 23): put(2, y, ('ARTRAW', FEN_L, 0x400))
+for x in (2, 39): put(x, 2, ('ARTRAW', FEN_TC, 0x400)); put(x, 37, ('ARTRAW', FEN_BC, 0x400))
 FOUNTAIN = chunk(27, 38, 3, 3, 16, 24, 'fontaine')
 def art_cells(sm, x0, y0, w, h, name):
     claim(x0, y0, w, h, name)
@@ -255,15 +270,12 @@ def patch(x0, y0, x1, y1, name):
     for y in range(y0, y1 + 1):
         for x in range(x0, x1 + 1):
             claim(x, y, 1, 1, name); put(x, y, GRASS)
+# v3 : plus de vert dans la ville (Basil) : parc et parterres deviennent du pave (cellules gardees reservees sous leur nom)
+def patch(x0, y0, x1, y1, name):
+    for y in range(y0, y1 + 1):
+        for x in range(x0, x1 + 1):
+            claim(x, y, 1, 1, name); put(x, y, COBBLE)
 patch(14, 3, 17, 10, 'parc'); patch(26, 10, 32, 11, 'parterre ecole'); patch(33, 10, 38, 11, 'parterre maison')
-patch(13, 34, 17, 34, 'parterre sud') if False else None
-for (x, y) in ((14, 3), (16, 3), (14, 8), (16, 8)):
-    for j in range(2):
-        for i in range(2): put(x + i, y + j, TREE_RAW[j][i])
-for y in (5, 6):
-    for x in range(14, 18): put(x, y, FLOWER if (x + y) % 2 == 0 else GRASS)
-for x in range(26, 39):
-    if x != 33: put(x, 11, FLOWER if x % 2 == 0 else GRASS)
 for (x, y) in ((4, 24), (5, 24), (6, 24), (7, 24)):
     pass
 
@@ -277,7 +289,6 @@ def ent_of(v):
     m = v & 0x3ff
     if m >= 640: return list(SEC_ENT[m - 640]), SEC_ATT[m - 640]
     return list(LD[3][m * 8:m * 8 + 8]), conv(struct.unpack('<H', patt[m * 2:m * 2 + 2])[0])
-def art_nearest(c): return min(range(1, 16), key=lambda k: sum((PAL[k][i] - c[i]) ** 2 for i in range(3)))
 def overlay(x0, y0, cw, ch, dx, dy, draw):
     base = Image.new('RGBA', (cw * 16, ch * 16))
     for j in range(ch):
@@ -300,6 +311,11 @@ def overlay(x0, y0, cw, ch, dx, dy, draw):
 def draw_foundry(d, base):
     OUT, DK, S1, S2, S3, BL = (15, 17, 27), (22, 24, 34), (74, 79, 113), (55, 58, 81), (44, 47, 62), (66, 76, 140)
     CU, WH, SM1, SM2 = (255, 196, 80), (255, 255, 255), (150, 158, 182), (92, 106, 168)
+    bp = base.convert('RGB').load()                    # v3 : filet d'herbe resté en haut des toits (y=0) -> couleur du toit dessous
+    for yy in range(0, 3):
+        for xx in range(base.size[0]):
+            c = bp[xx, yy]
+            if c[1] > c[0] + 12 and c[1] >= c[2]: d.point((xx, yy), fill=bp[xx, yy + 3] + (255,))
     def stack(x, y, w, h):                              # cheminee d'acier : fut + chapeau + bouche de braise
         d.rectangle((x, y, x + w - 1, y + h - 1), fill=S2, outline=OUT)
         d.rectangle((x + 1, y + 1, x + 2, y + h - 2), fill=BL); d.rectangle((x + w - 3, y + 1, x + w - 2, y + h - 2), fill=S3)
