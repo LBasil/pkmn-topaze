@@ -2,13 +2,15 @@
 # Les Routes 6 / 11 gardent leurs tilesets d'origine : plus de connexions de carte, pas simples (comme Celadopole / Spinellia).
 # Les 10 warps d'origine (ponton x3, 7 batiments) ne bougent pas : les batiments sont conserves a leur place.
 import json, struct
-N = json.load(open('/tmp/apatia_npc.json')); S = json.load(open('/tmp/apatia_signs.json')); M = json.load(open('/tmp/apatia_misc.json'))
+D = json.load(open('/tmp/apatia_doors.json')); N = json.load(open('/tmp/apatia_npc.json')); S = json.load(open('/tmp/apatia_signs.json')); M = json.load(open('/tmp/apatia_misc.json'))
 def warp(x, y, dest, wid, el=0): return {"x": x, "y": y, "elevation": el, "dest_map": dest, "dest_warp_id": str(wid)}
 def jdump(o, f): json.dump(o, open(f, 'w'), indent=2); open(f, 'a').write('\n')
 def grid(n, w, h): return struct.unpack('<%dH' % (w * h), open('data/layouts/%s/map.bin' % n, 'rb').read())
 f = 'data/maps/VermilionCity/map.json'; d = json.load(open(f))
 base = [w for w in d['warp_events'] if w['dest_map'] not in ('MAP_ROUTE6', 'MAP_ROUTE11')]
 assert len(base) == 10
+for w in base:
+    if w['dest_map'] == 'MAP_VERMILION_CITY_GYM': w['x'], w['y'] = D['gym'][0]          # l'arene est montee sur le plateau
 def side(name, cells, first):
     f2 = f'data/maps/{name}/map.json'; r = json.load(open(f2)); lay = {'Route6': (24, 40), 'Route11': (72, 20)}[name]; g = grid(name, *lay)
     for (x, y) in cells: assert (g[y * lay[0] + x] & 0xc00) == 0, (name, x, y)
@@ -29,7 +31,7 @@ for o in d['object_events']:
     k = (o.get('script') or '').replace('VermilionCity_EventScript_', '')
     if k in SC: o['x'], o['y'] = N[SC[k]]
     elif o.get('script') == 'EventScript_CutTree': o['x'], o['y'] = N['tree']
-SG = {'CitySign': 'city', 'HarborSign': 'harbor', 'SnorlaxNotice': 'notice'}
+SG = {'CitySign': 'city', 'HarborSign': 'harbor', 'SnorlaxNotice': 'notice', 'GymSign': 'gym'}
 for b in d['bg_events']:
     k = (b.get('script') or '').replace('VermilionCity_EventScript_', '')
     if b['type'] == 'sign' and k in SG: b['x'], b['y'] = S[SG[k]]; b['elevation'] = 0

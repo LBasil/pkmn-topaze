@@ -56,9 +56,9 @@ def beh(m):
 WATERB = {0x10, 0x11, 0x12, 0x15}
 GRASSID = {1, 8, 9, 16, 17}
 TREEID = {14, 15, 20, 21, 22, 23, 28, 29, 30, 31, 36, 37, 38, 39}
-DECOR = [(18, 3, 4, 4), (25, 3, 5, 4), (30, 6, 12, 1), (25, 0, 1, 3), (31, 17, 10, 1), (41, 6, 1, 10), (41, 16, 7, 2), (32, 8, 7, 7), (25, 9, 4, 4)]      # decor a supprimer : maison sans porte x2, cloture, haie, terrain vague
-BUILD = [(8, 3, 5, 4), (13, 3, 5, 4), (11, 14, 5, 5), (18, 14, 4, 4), (27, 14, 4, 4), (11, 21, 7, 5), (27, 21, 4, 5)]                      # batiments a interieur (conserves tels quels)
-DOORS = {'house1': [(9, 6)], 'center': [(15, 6)], 'fanclub': [(12, 17)], 'house2': [(19, 17)], 'mart': [(29, 17)], 'house3': [(28, 24)], 'gym': [(14, 25)], 'ship': [(22, 34), (23, 34), (24, 34)]}
+DECOR = [(18, 3, 4, 4), (25, 3, 5, 4), (30, 6, 12, 1), (25, 0, 1, 3), (31, 17, 10, 1), (41, 6, 1, 10), (41, 16, 7, 2), (32, 8, 7, 7), (25, 9, 4, 4), (10, 21, 9, 5)]      # decor a supprimer : maison sans porte x2, cloture, haie, terrain vague
+BUILD = [(8, 3, 5, 4), (13, 3, 5, 4), (11, 14, 5, 5), (18, 14, 4, 4), (27, 14, 4, 4), (27, 21, 4, 5)]                      # batiments a interieur (conserves tels quels)
+DOORS = {'house1': [(9, 6)], 'center': [(15, 6)], 'fanclub': [(12, 17)], 'house2': [(19, 17)], 'mart': [(29, 17)], 'house3': [(28, 24)], 'gym': [(40, 7)], 'ship': [(22, 34), (23, 34), (24, 34)]}
 def inrect(c, r): return r[0] <= c[0] < r[0] + r[2] and r[1] <= c[1] < r[1] + r[3]
 G = {}; OCC = {}; WALK = set(); M = set()
 for y in range(H):
@@ -75,7 +75,27 @@ def claim(x, y, w, h, name):
             c = (x + i, y + j); assert c in M and c not in OCC, ('chevauchement', name, c, OCC.get(c)); OCC[c] = name
 def grass(x, y): return 0x3000 | ((9 if y % 2 else 17) if x % 2 else (8 if y % 2 else 16))
 for c in M: G[c] = grass(*c)
+G[(8, 24)] = ov(8, 23); G[(9, 24)] = ov(9, 23)                      # ex-cloture de l'arene : la plage continue
+GYM_SRC = (11, 21, 7, 5); GYM_AT = (37, 3)                          # l'arene monte sur le PLATEAU (la Reine des Sommets) : copie du batiment d'origine
+claim(GYM_AT[0], GYM_AT[1], 7, 5, 'gym')
+for j in range(5):
+    for i in range(7):
+        v = ov(GYM_SRC[0] + i, GYM_SRC[1] + j); c = (GYM_AT[0] + i, GYM_AT[1] + j); G[c] = v
+        if not (v & 0xc00): WALK.add(c)
 DOOR = {k: [tuple(c) for c in v] for k, v in DOORS.items()}
+assert DOOR['gym'] == [(GYM_AT[0] + 3, GYM_AT[1] + 4)], DOOR['gym']
+# falaise : le plateau (x >= PX+1, y <= 12) domine la ville ; mur ouest en x = PX, face sud sur 2 rangees (13, 14) coupee par un escalier de 2 cases
+PX = 31; FACE = (12, 13, 14); STAIRS = (40, 41)
+CLIFF = {}
+for y in range(0, 12): CLIFF[(PX, y)] = ('wall', y % 3)
+for x in range(PX, W):
+    for k, y in enumerate(FACE):
+        CLIFF[(x, y)] = (('faceU', 'faceM', 'faceL')[k], (x * 7 + 3) % 3, x == PX)
+for k, x in enumerate(STAIRS):
+    CLIFF[(x, 12)] = ('stairU', k); CLIFF[(x, 13)] = ('stairM', k); CLIFF[(x, 14)] = ('stairL', k)
+for c, v in CLIFF.items():
+    assert c in M and c not in OCC, ('falaise', c, OCC.get(c)); OCC[c] = 'cliff'
+    if v[0].startswith('stair'): WALK.add(c)
 EXITS = {'N': [(22, 0), (23, 0), (24, 0)], 'E': [(W - 1, 18), (W - 1, 19), (W - 1, 20)]}
 START = (23, 0)
 for c in sum(EXITS.values(), []): assert c in M, c
@@ -111,12 +131,16 @@ ROADS = [
     ([(22.6, 7.4), (19, 7.3), (15, 7.2), (9.5, 7.2)], 0.9, (0, 0.25, 32)),                                                     # facade des maisons du nord (maison, Centre)
     ([(12, 18.6), (16, 18.3), (19, 18.5), (24, 19.2), (29, 18.5), (33, 19.3), (36, 19.4), (41, 19.1), (47, 19)], 0.92, (0, 0.8, 33)),   # grande rue est-ouest : Fan Club, maison, boutique, pont du port, sortie est
     ([(24, 19.5), (25, 22.5), (25.4, 24.6)], 0.9, (0.4, 0, 34)),                                                              # vers la maison du sud
-    ([(23.6, 11.6), (28, 11.3), (31, 11.1), (33.5, 11)], 0.9, (0, 0.5, 35)),                                                  # chemin de la carriere
+    ([(40.5, 11.6), (40.4, 10.2), (40.5, 8.4)], 0.95, (0.3, 0, 35)),                                                         # allee du plateau : escalier -> arene
+    ([(40.5, 15.8), (40.3, 17), (40.6, 18.8)], 0.9, (0.3, 0, 36)),                                                            # pied de l'escalier -> grande rue
+    ([(24, 11.5), (27, 11.2), (29.8, 12.2)], 0.9, (0, 0.4, 37)),                                                              # sente vers le mur du plateau
 ]
 for pts, r, wob in ROADS: road(pts, r, wob)
-LOT = {(x, y) for y in range(7, 16) for x in range(29, 41) if ((x - 36.5) / 3.0) ** 2 + ((y - 11) / 2.2) ** 2 <= 1 + 0.3 * (vnoise(x * .6, y * .6, 41) - .5)}   # carriere d'apatite (ex-terrain vague)
-for c in LOT:
-    if c in M and c not in OCC and ((c[0] - 35.5) / 2.7) ** 2 + ((c[1] - 11.2) / 1.8) ** 2 <= 1.1: WAY.add(c)
+LOT = {(x, y) for y in range(15, 18) for x in range(33, 37) if (x, y) in M}                                  # chantier au pied de la falaise (Machop et le vieil homme)
+for c in LOT: WAY.add(c)
+for y in range(9, 12):                                                                                          # parvis de l'arene sur le plateau (ellipse)
+    for x in range(33, 48):
+        if ((x - 40.5) / 7.2) ** 2 + ((y - 10.4) / 1.7) ** 2 <= 1 and (x, y) in M and (x, y) not in OCC: WAY.add((x, y))
 for k, ds in DOOR.items():                                          # parvis devant chaque porte
     for (x, y) in ds:
         for b in (1, 2):
@@ -127,17 +151,18 @@ for c in sum(EXITS.values(), []): WAY.add(c)
 WAY -= {c for c in WAY if c in OCC}
 print('voies', len(WAY), 'cases')
 BLK = {}; FLW = set()
+GATE = (40, 15); BLK[(41, 15)] = ('bush', 0); WAY.discard(GATE); WAY.discard((41, 15))      # arbre a couper + buisson : fermeture de l'escalier du plateau
 FIXSOLID = {c for c in OCC if OCC[c] == 'fix' and c not in WALK and beh(G[c] & 0x3ff) not in WATERB}
 UW, UH = W // 2, H // 2
 def ucells(ux, uy): return [(2 * ux + i, 2 * uy + j) for j in (0, 1) for i in (0, 1)]
-BIGS = [(19, 4), (38, 13), (32, 13), (44, 14)]                 # grandes formations d'apatite 2x2 (jardin de roche, carriere x2, lisiere est)
+BIGS = [(19, 4), (33, 9), (46, 9)]                 # grandes formations d'apatite 2x2 (jardin de roche, carriere x2, lisiere est)
 for (mx, my) in BIGS:
     for c in [(mx + i, my + j) for j in (0, 1) for i in (0, 1)]: WAY.discard(c)
 KEEP = set(WAY)
 for ds in DOOR.values():
     for (x, y) in ds: KEEP.add((x, y + 1))
 # ------------------------------------------------------------------ forets : unites 2x2 (familles de tuiles FR)
-GROVES = [(44.5, 16.4, 3.4, 1.0), (31, 14.5, 1.3, 1.1), (39.5, 6.8, 1.6, 1.2), (27, 8.5, 1.2, 1.3), (16.5, 12.5, 1.2, 1.0), (30, 24.0, 0.8, 1.0), (20, 12.5, 1.4, 1.2), (37.5, 18.2, 0.9, 0.5), (28.5, 13.8, 1.7, 1.2), (29.5, 8.2, 1.2, 1.1), (41.5, 12.5, 1.1, 1.3), (26, 16.2, 0.9, 0.6), (32, 16.2, 0.9, 0.5), (37.5, 9.5, 5.2, 4.6), (42, 14, 1.5, 1.2), (36.5, 15.2, 4.8, 2.6), (31, 12.5, 0.8, 1.6)]
+GROVES = [(31, 14.5, 1.3, 1.1), (27, 8.5, 1.2, 1.3), (16.5, 12.5, 1.2, 1.0), (30, 24.0, 0.8, 1.0), (20, 12.5, 1.4, 1.2), (28.5, 13.8, 1.7, 1.2), (29.5, 8.2, 1.2, 1.1), (26, 16.2, 0.9, 0.6), (34.2, 6.4, 3.6, 6.6), (46.2, 7.6, 3.4, 6.2)]
 TU = set()
 def trunk_ok(ux, uy):
     for i in (0, 1):
@@ -193,14 +218,14 @@ def reach(extra=frozenset(), start=START):
             if n in seen or blocked(n) or n in extra: continue
             seen.add(n); q.append(n)
     return seen
-GATE = (19, 24)                                                    # arbre a couper (d'origine) : seul passage vers le parvis de l'arene
-NEED = {(x, y + 1) for k, ds in DOOR.items() if k not in ('gym', 'ship') for (x, y) in ds} | {(x, 33) for (x, y) in DOOR['ship']} | set(EXITS['N']) | set(EXITS['E']) | {(36, 20)}
+NEED = {(x, y + 1) for k, ds in DOOR.items() if k != 'ship' for (x, y) in ds} | {(x, 33) for (x, y) in DOOR['ship']} | set(EXITS['N']) | set(EXITS['E']) | {(36, 20)}
 NEED_GATE = {GATE}
 r0 = reach()
 assert NEED <= r0, ('acces manquants', sorted(NEED - r0))
 assert GATE in r0, 'arbre a couper inaccessible'
-assert (14, 26) in reach(start=GATE), 'parvis de l arene inaccessible apres coupe'
-assert (14, 26) not in reach(extra={GATE}), 'parvis de l arene accessible sans couper'
+GYMF = (DOOR['gym'][0][0], DOOR['gym'][0][1] + 1)
+assert GYMF in reach(start=GATE), 'parvis de l arene inaccessible apres coupe'
+assert GYMF not in reach(extra={GATE}), 'parvis de l arene accessible sans couper'
 # ------------------------------------------------------------------ cristaux d'apatite, buissons, fleurs
 def can_block(c, extra=()):
     if c in OCC or c in BLK or c in KEEP or c in WAY: return False
@@ -212,6 +237,21 @@ for (mx, my) in BIGS:
     if all(c in M and c not in OCC and c not in BLK for c in cells) and NEED | NEED_GATE <= reach(set(cells)):
         for (i, j), c in zip(((0, 0), (1, 0), (0, 1), (1, 1)), cells): BLK[c] = ('big', i, j)
         print('formation', (mx, my))
+PROPS = [('skull', (36, 9)), ('rib', (44, 9)), ('rib', (45, 10)), ('pole', (39, 11)), ('pole', (42, 11)), ('sock', (34, 11)), ('sock', (46, 11))]
+for kind, (px_, py_) in PROPS:
+    cells = [(px_ + i, py_ + j) for j in (0, 1) for i in (0, 1)] if kind == 'skull' else [(px_, py_)]
+    if all(c in M and c not in OCC and c not in BLK for c in cells) and NEED | NEED_GATE <= reach(set(cells)):
+        WAY -= set(cells)
+        for c in cells: BLK[c] = ('skull', c[0] - px_, c[1] - py_) if kind == 'skull' else (kind, 0)
+    else: print('PROP refuse', kind, (px_, py_))
+rp = random.Random(1705); pc = [c for c in sorted(M) if c[0] > PX and c[1] <= 12 and c not in OCC and c not in WAY and c not in BLK and c not in KEEP]; rp.shuffle(pc); nfe = nta = 0
+for c in pc:
+    if nfe >= 6 and nta >= 7: break
+    if any(max(abs(c[0] - q[0]), abs(c[1] - q[1])) < 3 for q, v in BLK.items() if v[0] in ('feather', 'talon')): continue
+    if not can_block(c): continue
+    if nfe < 6 and (nfe <= nta): BLK[c] = ('feather', 0); nfe += 1
+    elif nta < 7: BLK[c] = ('talon', rp.randrange(2)); nta += 1
+print('accessoires', nfe, 'plumes', nta, 'serres')
 rc = random.Random(1701)
 cands = [(x, y) for y in range(1, H - 1) for x in range(1, W - 1) if (x, y) in M and (x, y) not in OCC and (x, y) not in WAY and (x, y) not in BLK and (x, y) not in KEEP]
 rc.shuffle(cands); ncry = 0; pins = PIN()
@@ -237,7 +277,7 @@ rf = random.Random(1703)
 fc = [c for c in cands if c not in BLK and c not in OCC and c not in WAY]
 rf.shuffle(fc); nf = 0; blds = {k for k, v in OCC.items() if v not in ('pin', 'trunk')}
 for c in fc:
-    if nf >= 30: break
+    if nf >= 22: break
     if near(c, WAY, 1) or near(c, blds, 1):
         FLW.add(c); nf += 1
         for d_ in rf.sample([(1, 0), (0, 1), (1, 1), (-1, 0)], rf.randrange(0, 3)):
@@ -246,11 +286,12 @@ for c in fc:
 print('fleurs', len(FLW))
 rr = reach()                                                         # poches libres inaccessibles : comblees de buissons (hors parvis de l'arene derriere l'arbre)
 FOREC = reach(start=GATE)
-PK = {(x, y) for y in range(H) for x in range(W) if (x, y) in M and not blocked((x, y))} - rr - FOREC
+PK = {(x, y) for y in range(H) for x in range(W) if (x, y) in M and (x, y) not in OCC and not blocked((x, y))} - rr - FOREC
 for (ux, uy) in sorted({(c[0] // 2, c[1] // 2) for c in PK}):                  # poches inaccessibles : d'abord des unites d'arbres entieres, puis des buissons
     if all(c in PK for c in ucells(ux, uy)):
         for c in ucells(ux, uy): OCC[c] = 'pin'; PK.discard(c)
         TU.add((ux, uy))
+print('POCHES', sorted(PK))
 for c in sorted(PK): BLK[c] = ('bush', 0)
 assert NEED <= reach()
 # ------------------------------------------------------------------ panneaux et PNJ
@@ -265,7 +306,7 @@ def place_sign(name, want):
         d_ = abs(x - want[0]) + abs(y - want[1])
         if best is None or d_ < best[0]: best = (d_, c)
     c = best[1]; BLK[c] = ('sign', 0); SIGN[name] = list(c)
-for nm, w_ in (('city', (26, 8)), ('harbor', (34, 18)), ('notice', (45, 18))): place_sign(nm, w_)
+for nm, w_ in (('city', (26, 8)), ('harbor', (34, 18)), ('notice', (45, 18)), ('gym', (38, 16))): place_sign(nm, w_)
 NPC = {}; OBJ_CELLS = {GATE}
 def place_npc(name, want, rowfree=0, region=None):
     r = reach(); best = None
@@ -277,8 +318,8 @@ def place_npc(name, want, rowfree=0, region=None):
         d_ = abs(c[0] - want[0]) + abs(c[1] - want[1])
         if best is None or d_ < best[0]: best = (d_, c)
     c = best[1]; NPC[name] = list(c); OBJ_CELLS.add(c)
-place_npc('woman', (21, 11)); place_npc('oldman1', (17, 9)); place_npc('oldman2', (36, 9)); place_npc('aide', (26, 7))
-place_npc('machop', (34, 12), region=LOT)
+place_npc('woman', (21, 11)); place_npc('oldman1', (17, 9)); place_npc('oldman2', (35, 16)); place_npc('aide', (26, 7))
+place_npc('machop', (34, 16), region=LOT)
 place_npc('sailor', (31, 30)); place_npc('ferry', (24, 33))
 NPC['tree'] = list(GATE)
 json.dump(NPC, open('/tmp/apatia_npc.json', 'w')); json.dump(SIGN, open('/tmp/apatia_signs.json', 'w'))
@@ -374,10 +415,105 @@ def path_tile(mask, var=0):
             for (a, b, c) in ((0, 0, 6), (0, -1, 7), (-1, 0, 7), (1, 0, 7), (0, -2, 8), (-1, 1, 7), (1, 1, 6)):
                 if 0 <= tx + a < 16 and 0 <= ty + b < 16: px[tx + a, ty + b] = c
     return im
+# ---- falaise de gres (palette 7 « pierre ») : face sud sur 2 rangees (haut clair, bas sombre), mur ouest, escalier
+def rock_px(im, x, y, kind, var):
+    px = im.load()
+    r = random.Random(900 + var * 13 + x * 3 + y * 101 + {'faceU': 0, 'faceM': 5, 'faceL': 7}[kind])
+    if kind == 'faceU': col = (5, 5, 12, 2, 2, 8, 8, 8, 13, 13, 13, 3, 3, 13, 3, 3)[y]
+    elif kind == 'faceM': col = (13, 3, 13, 11, 3, 13, 4, 11, 13, 3, 11, 4, 13, 11, 4, 11)[y]
+    else: col = (3, 13, 3, 13, 11, 4, 11, 4, 14, 14, 6, 14, 6, 10, 15, 15)[y]
+    if r.random() < .08: col = {2: 8, 8: 13, 13: 3, 3: 11, 11: 4, 4: 14, 14: 6, 6: 10, 10: 15, 5: 12, 12: 2, 15: 15}[col]
+    px[x, y] = col
+def cliff_tile(kind, var=0, left=False):
+    im = newimg(16, 16); px = im.load()
+    if kind == 'wall':                                                  # mur ouest du plateau : bande verticale sombre, le sol du plateau (transparent) a droite
+        for y in range(16):
+            for x in range(7):
+                px[x, y] = (15, 10, 14, 9, 6, 12, 5)[x] if not (var == 1 and y % 5 == 2 and x in (2, 3)) else 15
+        return im
+    for y in range(16):
+        for x in range(16): rock_px(im, x, y, kind, var)
+    cr = random.Random(77 + var * 5)                                    # fissures verticales (raccord haut/bas : memes colonnes)
+    for cx in sorted({cr.randrange(3, 14) for _ in range(2)}):
+        for y in range(16):
+            if kind == 'faceU' and y < 2: continue
+            px[cx, y] = 14 if kind != 'faceL' else 15
+            if y % 4 == 1 and cx + 1 < 16: px[cx + 1, y] = 6 if kind == 'faceU' else 10
+    for (x0, x1, y) in ((1, 6, 6), (8, 14, 9), (3, 8, 12)) if kind == 'faceU' else ((2, 7, 3), (9, 14, 6)) if kind == 'faceL' else ((4, 10, 5), (1, 5, 11), (10, 15, 12)):
+        for x in range(x0, x1): px[x, y] = 6 if kind != 'faceL' else 10                    # strates
+    if kind == 'faceL':
+        for x in range(16):
+            if (x + var) % 5 == 0: px[x, 13] = 2                                                  # gravats clairs au pied
+    if left:                                                           # extremite ouest : le mur du plateau continue
+        for y in range(16):
+            for x in range(7): px[x, y] = (15, 10, 14, 9, 6, 12, 5)[x]
+    return im
+def stair_tile(kind, k):
+    im = newimg(16, 16); px = im.load()
+    for y in range(16):
+        t = y % 4
+        for x in range(16):
+            px[x, y] = (5, 2, 3, 14)[t] if kind == 'stairU' or True else 3
+    for y in range(16):
+        for x in range(3):
+            px[x if k == 0 else 15 - x, y] = (15, 10, 14)[x]
+    if kind == 'stairL':
+        for x in range(16): px[x, 15] = 15 if not ((k == 0 and x < 3) or (k == 1 and x > 12)) else 15
+    return im
+def bone(d, pts, fill=2, out=1): d.polygon(pts, fill=fill, outline=out)
+def skull():
+    im = newimg(32, 32); d = ImageDraw.Draw(im)
+    d.ellipse((2, 25, 31, 32), fill=14)
+    bone(d, [(9, 26), (7, 16), (10, 9), (17, 6), (24, 8), (28, 13), (29, 20), (27, 26)], 2)
+    bone(d, [(1, 18), (4, 14), (11, 13), (11, 24), (3, 24), (1, 21)], 12)
+    d.polygon([(23, 8), (26, 4), (30, 2), (29, 6), (26, 11)], fill=12, outline=1)
+    d.line([(24, 14), (28, 20), (27, 25)], fill=4, width=2); d.line([(12, 24), (27, 25)], fill=4)
+    d.ellipse((13, 12, 19, 18), fill=15, outline=1); d.point((15, 13), fill=10)
+    d.point((3, 17), fill=15); d.point((4, 17), fill=15)
+    for x in (2, 4, 6, 8, 10): d.polygon([(x, 23), (x + 1, 23), (x, 26)], fill=5, outline=None)
+    d.line([(11, 24), (11, 13)], fill=4)
+    return im
+def rib(var=0):
+    im = newimg(16, 16); d = ImageDraw.Draw(im)
+    d.ellipse((1, 12, 15, 16), fill=14); d.ellipse((2, 11, 14, 15), fill=2, outline=1)
+    if var == 0: d.arc((2, 1, 13, 24), 180, 300, fill=1, width=4); d.arc((3, 1, 12, 23), 180, 300, fill=12, width=2)
+    else: d.arc((3, 1, 14, 24), 240, 360, fill=1, width=4); d.arc((4, 1, 13, 23), 240, 360, fill=12, width=2)
+    d.arc((4, 5, 12, 26), 195, 285, fill=1, width=3); d.arc((5, 5, 11, 25), 195, 285, fill=2, width=1)
+    return im
+def pole(kind):
+    im = newimg(16, 16); d = ImageDraw.Draw(im)
+    d.ellipse((1, 12, 11, 16), fill=11); d.rectangle((3, 12, 9, 14), fill=13, outline=1)
+    d.line([(6, 1), (6, 13)], fill=1, width=3); d.line([(6, 1), (6, 13)], fill=14, width=1)
+    if kind == 'pole':
+        d.polygon([(8, 2), (15, 4), (8, 9)], fill=12, outline=1); d.line([(9, 3), (13, 4)], fill=9)
+    else:
+        d.polygon([(8, 2), (15, 3), (15, 9), (8, 8)], fill=5, outline=1)
+        for x0 in (9, 13): d.rectangle((x0, 3, x0 + 1, 8), fill=12)
+    return im
+def feather():
+    im = newimg(16, 16); d = ImageDraw.Draw(im)
+    d.ellipse((3, 13, 13, 16), fill=11)
+    d.polygon([(8, 0), (12, 4), (13, 9), (8, 14), (4, 9), (3, 4)], fill=3, outline=1)
+    d.polygon([(8, 1), (8, 14), (4, 9), (3, 4)], fill=4)
+    d.line([(8, 1), (8, 15)], fill=9, width=1); d.point((10, 6), fill=6); d.point((6, 7), fill=5)
+    return im
+def talon(var):
+    im = newimg(16, 16); d = ImageDraw.Draw(im)
+    d.ellipse((1, 12, 15, 16), fill=11)
+    d.polygon([(3, 15), (4, 9), (7, 4), (12, 1), (13, 4), (9, 8), (10, 15)], fill=3, outline=1)
+    d.polygon([(5, 14), (5, 9), (8, 5), (11, 3), (9, 7), (8, 14)], fill=4)
+    d.polygon([(7, 8), (9, 5), (12, 3), (9, 9)], fill=9); d.point((12, 2), fill=6)
+    if var: im = im.transpose(Image.FLIP_LEFT_RIGHT)
+    return im
 def nonempty(im, box): return sum(1 for q in im.crop(box).getdata() if q)
 # controle « sprites entiers » : chaque quart rempli (haut ET bas), pas d'image vide
 for v in range(3):
     s_ = small(v); assert nonempty(s_, (0, 0, 16, 8)) >= 4 and nonempty(s_, (0, 8, 16, 16)) >= 20, ('cristal incomplet', v)
+def whole(im, name, lim=(4, 20)):
+    assert nonempty(im, (0, 0, im.width, im.height // 2)) >= lim[0] and nonempty(im, (0, im.height // 2, im.width, im.height)) >= lim[1], ('sprite incomplet', name)
+for nm_, im_ in (('rib0', rib(0)), ('rib1', rib(1)), ('pole', pole('pole')), ('sock', pole('sock')), ('feather', feather()), ('talon0', talon(0)), ('talon1', talon(1))): whole(im_, nm_)
+SK_ = skull()
+for (i, j) in ((0, 0), (1, 0), (0, 1), (1, 1)): assert nonempty(SK_, (i * 16, j * 16, i * 16 + 16, j * 16 + 16)) >= 20, ('crane incomplet', i, j)
 F_ = formation()
 for (i, j) in ((0, 0), (1, 0), (0, 1), (1, 1)): assert nonempty(F_, (i * 16, j * 16, i * 16 + 16, j * 16 + 16)) >= 24, ('formation incomplete', i, j)
 NEWT = []; NEWE = []; NEWA = []
@@ -406,6 +542,22 @@ for c in sorted(WAY):
     ncell[k] += 1
 SM = [slice4(small(v)) for v in range(3)]; FM = {}
 for (i, j) in ((0, 0), (1, 0), (0, 1), (1, 1)): FM[(i, j)] = slice4(F_.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)))
+CT_ = {}
+def ctile4(key, im):
+    if key not in CT_: CT_[key] = slice4(im)
+    return CT_[key]
+for c, v in CLIFF.items():
+    k = v[0]
+    if k == 'wall': G[c] = 0x400 | art_meta(ctile4(('wall', v[1]), cliff_tile('wall', v[1])), G[c] & 0x3ff, False)
+    elif k in ('faceU', 'faceM', 'faceL'): G[c] = 0x400 | art_meta(ctile4((k, v[1], v[2]), cliff_tile(k, v[1], v[2])), G[c] & 0x3ff, False)
+    else: G[c] = 0x3000 | art_meta(ctile4((k, v[1]), stair_tile(k, v[1])), G[c] & 0x3ff, True)
+SKM = {(i, j): slice4(SK_.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))) for i in (0, 1) for j in (0, 1)}
+for c, val in BLK.items():
+    if val[0] == 'skull': G[c] = 0x400 | art_meta(SKM[(val[1], val[2])], G[c] & 0x3ff, False, 'A')
+    elif val[0] == 'rib': G[c] = 0x400 | art_meta(ctile4(('rib', c[1] % 2), rib(c[1] % 2)), G[c] & 0x3ff, False, 'A')
+    elif val[0] in ('pole', 'sock'): G[c] = 0x400 | art_meta(ctile4((val[0], 0), pole(val[0])), G[c] & 0x3ff, False, 'B')
+    elif val[0] == 'feather': G[c] = 0x400 | art_meta(ctile4(('feather', 0), feather()), G[c] & 0x3ff, False, 'B')
+    elif val[0] == 'talon': G[c] = 0x400 | art_meta(ctile4(('talon', val[1]), talon(val[1])), G[c] & 0x3ff, False, 'B')
 for c, val in BLK.items():
     if val[0] == 'big': G[c] = 0x400 | art_meta(FM[(val[1], val[2])], G[c] & 0x3ff, False, 'B')
     elif val[0] == 'cry': G[c] = 0x400 | art_meta(SM[val[1]], G[c] & 0x3ff, False, 'B')

@@ -46,8 +46,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_2",
-      "x": 36,
-      "y": 9,
+      "x": 35,
+      "y": 16,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_LEFT",
       "movement_range_x": 1,
@@ -61,7 +61,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MACHOP",
       "x": 34,
-      "y": 12,
+      "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
@@ -103,8 +103,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
-      "x": 19,
-      "y": 24,
+      "x": 40,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -194,8 +194,8 @@
       "dest_warp_id": "1"
     },
     {
-      "x": 14,
-      "y": 25,
+      "x": 40,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_VERMILION_CITY_GYM",
       "dest_warp_id": "1"
@@ -284,8 +284,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 24,
-      "y": 8,
+      "x": 25,
+      "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "VermilionCity_EventScript_CitySign"
@@ -300,15 +300,15 @@
     },
     {
       "type": "sign",
-      "x": 10,
-      "y": 24,
+      "x": 37,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "VermilionCity_EventScript_GymSign"
     },
     {
       "type": "sign",
-      "x": 35,
+      "x": 33,
       "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -317,7 +317,7 @@
     {
       "type": "sign",
       "x": 45,
-      "y": 20,
+      "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "VermilionCity_EventScript_SnorlaxNotice"
