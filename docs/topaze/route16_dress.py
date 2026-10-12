@@ -364,7 +364,8 @@ def build(L, rnd):
         WALLU = [(x, y) for x in (30, 32) for y in list(range(0, 12, 2)) + [14, 16, 18]]
         WROWS[14] = (0, 28)                                                                                                   # falaise de la descente (2 cases), escalier au passage du chemin
         lake = blob(41.5, 4.4, 4.6, 2.9, 5, W, H); pond(lake, 'ice')
-        st16 = vstream(lambda y: 42.3 + 0.9 * math.sin(y / 2.3), 7, 19, W, H) - lake; pond(st16, 'water')
+        st16 = vstream(lambda y: 41.6 + 0.9 * math.sin(y / 2.3), 7, 19, W, H) | vstream(lambda y: 42.6 + 0.9 * math.sin(y / 2.3), 7, 19, W, H); st16 -= lake      # riviere de 3 a 4 cases, a moitie gelee (glace au nord, eau libre au sud)
+        pond({c for c in st16 if c[1] <= 10}, 'ice'); pond({c for c in st16 if c[1] > 10}, 'water')
         BRIDGES = {'S1': ('H', {c for c in st16 if c in PATH})}
         pond(blob(4.4, 10.0, 3.0, 2.2, 17, W, H), 'ice')                      # etang gele de l'ouest
         MEAD = {(x, y) for x in range(W) for y in range(H) if noise(x * 1.35 + 2, y * 1.35 + 9) > 0.45}
@@ -378,7 +379,9 @@ def build(L, rnd):
             xa, xb = min(xs), max(xs); yy = [c[1] for c in WSET if xa <= c[0] <= xb and abs(c[1] - ys[0]) <= 3]
             rect = {(x, y) for x in range(xa, xb + 1) for y in range(min(yy), max(yy) + 1)}
         else:
-            ya, yb = min(ys), max(ys); xx = [c[0] for c in WSET if ya <= c[1] <= yb and abs(c[0] - xs[0]) <= 3]
+            ya, yb = min(ys), max(ys)
+            if yb - ya > 2: m_ = sorted(ys)[len(ys) // 2]; ya, yb = m_ - 1, m_ + 1
+            xx = [c[0] for c in WSET if ya <= c[1] <= yb and abs(c[0] - xs[0]) <= 3]
             rect = {(x, y) for y in range(ya, yb + 1) for x in range(min(xx), max(xx) + 1)}
         for c in rect: BR.add(c); BRO[c] = o; WSET.add(c)
     PATH_SAND = PATH - WSET
