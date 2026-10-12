@@ -35,6 +35,15 @@ for src, dst, prim in ((SP, NP, True), (SS, NS, False)):
     for f in ('metatiles.bin', 'metatile_attributes.bin', 'tiles.png'): shutil.copy(src + f, dst + f)
     for i in range(16):
         pp = readpal(src + 'palettes/%02d.pal' % i); writepal(dst + 'palettes/%02d.pal' % i, [pp[0]] + [tint_shadow(c, i, prim) for c in pp[1:16]])
+# v6 : la grande Tour est trop coloree (verre cyan, toit violet, lueurs orange) -> couleurs ternies, seulement ses indices : palette secondaire 9 (exclusive a la Tour) et
+# indices 13/14 de la palette 8 (le toit ; les indices 7/8 de la palette 8 restent pour les portes violettes), apres la teinte « ombre » (le reste de la ville ne bouge pas)
+def mute_pal(i, spec):
+    f = NS + 'palettes/%02d.pal' % i; pp = readpal(f)
+    for k, (sk, lk) in spec.items():
+        h, l, s = hls(pp[k]); pp[k] = rgb(h, l * lk, s * sk)
+    writepal(f, pp)
+mute_pal(9, {3: (0.6, 0.92), 4: (0.6, 0.92), 8: (0.5, 0.9), 11: (0.35, 0.85), 12: (0.3, 0.8), 13: (0.3, 0.78), 14: (0.3, 0.8), 15: (0.35, 0.85)})
+mute_pal(8, {13: (0.3, 0.85), 14: (0.35, 0.85)})
 pmt = open(SP + 'metatiles.bin', 'rb').read()
 smt0 = open(SS + 'metatiles.bin', 'rb').read(); satt0 = list(struct.unpack('<%dI' % (len(smt0) // 16), open(SS + 'metatile_attributes.bin', 'rb').read()))
 NMT = len(smt0) // 16; simg = Image.open(SS + 'tiles.png'); NTL = (simg.width // 8) * (simg.height // 8)
