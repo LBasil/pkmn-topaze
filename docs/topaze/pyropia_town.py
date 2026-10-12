@@ -159,7 +159,7 @@ D['center'] = chunk(8, 3, 4, 4, 16, 13, 'centre pokemon', True)
 D['mart'] = chunk(14, 2, 4, 4, 36, 13, 'boutique', True)
 D['house1'] = chunk(11, 12, 4, 4, 38, 29, 'maison 1')
 D['house2'] = chunk(15, 12, 4, 4, 12, 29, 'maison 2')
-D['house3'] = chunk(11, 12, 4, 4, 15, 3, 'maison 3 (pres de l arene)')
+D['house3'] = chunk(11, 12, 4, 4, 11, 3, 'maison 3 (pres de l arene)')
 D['house4'] = chunk(15, 12, 4, 4, 33, 29, 'maison 4')
 print('portes', {k: v for k, v in D.items()})
 for k in list(D): assert D[k], ('pas de porte', k)
@@ -186,6 +186,24 @@ for k in ('house1', 'house2', 'house4'): pr(fr(k)[0], fr(k)[1], fr(k)[0] + 1, 33
 pr(fr('house3')[0], fr('house3')[1], fr('house3')[0] + 1, 9)
 pr(10, 20, 11, 33) if False else None
 pr(5, 27, 6, 28) if False else None
+# ---- v4 : l'arene est un ilot dans un lac de lave, une cascade de lave tombe de la falaise derriere elle, un pont de pierre devant
+import math
+ARENA = (20, 3, 6, 5)                                  # x, y, w, h (cases)
+BR = (DOORS['gym'][0], 8)                              # pont : cases (x..x+1, 8)
+def in_arena(px, py): return ARENA[0] * 16 <= px < (ARENA[0] + ARENA[2]) * 16 and ARENA[1] * 16 <= py < (ARENA[1] + ARENA[3]) * 16
+def in_bridge(px, py): return BR[0] * 16 <= px < (BR[0] + 2) * 16 and BR[1] * 16 <= py < (BR[1] + 1) * 16
+def hsh(a, b): return ((a * 73856093) ^ (b * 19349663) ^ 0x5bd1e995) & 0xffff
+def _off(k, seed, amp): return (hsh(k, seed) % (2 * amp + 1)) - amp          # decalage entier par bande de 4 px : les bords se dedupliquent en tuiles
+def lava_in(px, py):
+    xl = 272 + abs(_off(py // 8, 1, 3)); xr = 480 - abs(_off(py // 8, 2, 3)); yb = 141 + _off(px // 8, 3, 2)
+    return xl <= px < xr and 32 <= py < yb and not in_arena(px, py) and not in_bridge(px, py)
+POOL = set()
+for cy in range(2, 9):
+    for cx in range(16, 31):
+        n = sum(1 for j in range(16) for i in range(16) if lava_in(cx * 16 + i, cy * 16 + j))
+        if n >= 0.30 * 256 and not (ARENA[0] <= cx < ARENA[0] + ARENA[2] and ARENA[1] <= cy < ARENA[1] + ARENA[3]): POOL.add((cx, cy))
+for c in list(PATH):
+    if c in POOL: PATH.discard(c)
 # les cases de mur / escalier ne sont pas des chemins
 for c in list(PATH):
     if OCC.get(c) in ('mur', 'escalier'): PATH.discard(c)
@@ -204,13 +222,14 @@ def path_id(x, y):
     if not E_ and N and S and Wn: return 290
     return 289
 for (x, y) in PATH:
-    put(x, y, 0x3000 | path_id(x, y)); OCC[(x, y)] = 'chemin'
+    put(x, y, 0x3000 | (289 if (17 <= x <= 30 and 8 <= y <= 9) else path_id(x, y))); OCC[(x, y)] = 'chemin'
+for c in sorted(POOL): claim(c[0], c[1], 1, 1, 'lave')
 # ---- pins en bordure
 PINE = [198, 22, 14]
 def pine(x, y): claim(x, y, 1, 1, 'pin'); put(x, y, remap(0x400 | PINE[(x * 3 + y) % 3]))
 SIGN = remap(0x400 | 3)
 def sign(x, y): claim(x, y, 1, 1, 'panneau'); put(x, y, SIGN)
-SIGNS = {'museum': (14, 16), 'police': (42, 27), 'gym': (19, 7), 'tips': (25, 35), 'city': (21, 35)}
+SIGNS = {'museum': (14, 16), 'police': (42, 27), 'gym': (16, 7), 'tips': (25, 35), 'city': (21, 35)}
 for k, c in SIGNS.items(): sign(*c)
 # ------------------------------------------------------------------ art procedural : vents de braise, braseros, cairn de flamme
 used_pals = {q >> 12 for e in SEC_ENT for q in e}
@@ -370,6 +389,116 @@ for k, c in list(NPC.items()):                 # PNJ tombe sur un decor : on pre
     if c in OCC and OCC[c] != 'chemin':
         cand = sorted(((abs(x - c[0]) + abs(y - c[1]), (x, y)) for x in range(3, W - 3) for y in range(3, H - 3) if (x, y) not in OCC), key=lambda t: t[0])
         NPC[k] = cand[0][1]; print('PNJ', k, c, '->', NPC[k])
+
+# ------------------------------------------------------------------ v4 : peinture du lac de lave, de la cascade et du pont (recouvrement)
+# Meme technique que la fonderie d'Opanihrum : on rend les cases concernees, on peint dessus (palette ART_PAL), on decoupe en quarts de
+# tuile 8x8 qui deviennent des tuiles d'art (dedupliquees). Les cases du lac deviennent BLOQUANTES, le reste garde sa collision.
+INV = {v: k for k, v in SEC_MAP.items()}
+def cell_img(v):
+    if isinstance(v, tuple):                           # case d'art : 4 tuiles 8x8 en indices PAL
+        im = Image.new('RGB', (16, 16)); px_ = im.load()
+        for q, (_, t) in enumerate(ART_E[v[1][1]][:4]):
+            for n_, k_ in enumerate(ART_T[t]): px_[(q % 2) * 8 + n_ % 8, (q // 2) * 8 + n_ // 8] = PAL[k_]
+        return im
+    m = v & 0x3ff
+    if m >= 640:
+        m0, flip, _ = INV[m]
+        im = E.metatile(LD, m0).convert('RGB')
+        return im.transpose(Image.FLIP_LEFT_RIGHT) if flip else im
+    return E.metatile(LD, m).convert('RGB')
+def ent_of(v):
+    if isinstance(v, tuple): return list(ART_E[v[1][1]]) + [0, 0, 0, 0][:4 - (len(ART_E[v[1][1]]) - 4) if len(ART_E[v[1][1]]) < 8 else 0], 0
+    m = v & 0x3ff
+    if m >= 640: return list(SEC_ENT[m - 640]), SEC_ATT[m - 640]
+    return list(struct.unpack('<8H', open(EM + 'tilesets/primary/general/metatiles.bin', 'rb').read()[m * 16:m * 16 + 16])), conv(struct.unpack('<H', patt[m * 2:m * 2 + 2])[0])
+def art_nearest(c): return min(range(1, 16), key=lambda k: sum((PAL[k][i] - c[i]) ** 2 for i in range(3)))
+LAVA_T = []                                            # 6 variantes de lave 8x8 (periodiques : une tuile par variante)
+for k in range(6):
+    r_ = random.Random(900 + k); t_ = [[10] * 8 for _ in range(8)]
+    for _ in range(3):
+        x_, y_ = r_.randrange(8), r_.randrange(8)
+        for dx_ in range(r_.choice((2, 3))): t_[y_][(x_ + dx_) % 8] = 15
+    t_[r_.randrange(8)][r_.randrange(8)] = 11
+    if k % 3 == 0: t_[r_.randrange(8)][r_.randrange(8)] = 9
+    LAVA_T.append(t_)
+for k in range(2):                                     # variantes « croute » : zones plus sombres de la lave
+    r_ = random.Random(950 + k); t_ = [[(15 if r_.random() < 0.45 else 10) for _ in range(8)] for _ in range(8)]
+    for _ in range(3): t_[r_.randrange(8)][r_.randrange(8)] = 9
+    LAVA_T.append(t_)
+def lava_px(x, y):
+    h_ = hsh(x // 8, y // 8)
+    crust = math.sin(x * 0.045 + 1) + math.sin(y * 0.07 + 2) + math.sin((x + y) * 0.031) > 1.1
+    return LAVA_T[6 + h_ % 2 if crust else h_ % 6][y % 8][x % 8]
+FALL = ((336, 400), (320, 328), (408, 416))            # trois filets de cascade (x en pixels), de la crete (y=0) au lac (y=32)
+def fall_in(x, y):
+    if not (0 <= y < 32): return False
+    for (a, b) in FALL:
+        if a <= x < b: return True
+    return False
+def fall_px(x, y):
+    xs = x % 8; ys = y % 8
+    if xs in (1, 2) or (xs == 5 and ys < 4): return 11
+    if xs == 3 and ys in (2, 3): return 12
+    if xs in (0, 7): return 15
+    return 10
+RX0, RY0, RW, RH = 15, 0, 17, 10
+base = Image.new('RGB', (RW * 16, RH * 16))
+for cy in range(RH):
+    for cx in range(RW): base.paste(cell_img(G[(RX0 + cx, RY0 + cy)]), (cx * 16, cy * 16))
+img = base.copy(); ip = img.load(); PC = lambda k: PAL[k]
+def inside(x, y): return lava_in(x + RX0 * 16, y + RY0 * 16)
+for y in range(RH * 16):
+    for x in range(RW * 16):
+        X, Y = x + RX0 * 16, y + RY0 * 16
+        if in_arena(X, Y):
+            if base.getpixel((x, y)) in gcols: ip[x, y] = PC(lava_px(X, Y))      # cendre autour de l'edifice -> lave
+            continue
+        if in_bridge(X, Y): continue
+        if lava_in(X, Y):
+            edge = any(not lava_in(X + dx, Y + dy) and not in_arena(X + dx, Y + dy) and Y + dy >= 32 for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))
+            ip[x, y] = PC(15 if edge else lava_px(X, Y))
+        elif Y >= 32 and G[(X // 16, Y // 16)] == GRASS:   # liseré sombre puis lueur braise sur la cendre voisine
+            d_ = min([abs(dx) + abs(dy) for dx in range(-3, 4) for dy in range(-3, 4) if abs(dx) + abs(dy) <= 3 and lava_in(X + dx, Y + dy)] or [9])
+            if d_ == 1: ip[x, y] = PC(5)
+            elif d_ == 2 and (X + 2 * Y) % 4: ip[x, y] = PC(9)
+        if fall_in(X, Y): ip[x, y] = PC(fall_px(X, Y))
+for (a, b) in FALL:                                    # bords sombres de la cascade + ecume au pied
+    for y in range(0, 32):
+        for X in (a - 1, b):
+            ip[X - RX0 * 16, y - RY0 * 16] = PC(5)
+    for X in range(a - 1, b + 2):
+        for Y in (32, 33, 34):
+            if (X + Y * 3) % 3 != 0: ip[X - RX0 * 16, Y - RY0 * 16] = PC(12 if Y == 33 else 11)
+for y in range(RH * 16):                                # pont de pierre
+    for x in range(RW * 16):
+        X, Y = x + RX0 * 16, y + RY0 * 16
+        if not in_bridge(X, Y): continue
+        u, v = X - BR[0] * 16, Y - BR[1] * 16
+        c = 8
+        if v % 4 == 3: c = 7
+        elif v % 4 == 0: c = 8
+        if u in (0, 31) or v in (0,): c = 5
+        if u in (1, 2, 29, 30): c = 6 if u in (1, 30) else 8
+        if v == 15: c = 5
+        ip[x, y] = PC(c)
+OVLS = []                                              # (entrees, attribut)
+cnt_ov = 0
+for cy in range(RH):
+    for cx in range(RW):
+        gx, gy = RX0 + cx, RY0 + cy
+        box = (cx * 16, cy * 16, cx * 16 + 16, cy * 16 + 16)
+        if img.crop(box).tobytes() == base.crop(box).tobytes(): continue
+        cur = G[(gx, gy)]; ents, att = ent_of(cur); new = list(ents)
+        if isinstance(cur, tuple): cur = (cur[2],)[0]; flags_art = True
+        for q in range(4):
+            qb = (box[0] + (q % 2) * 8, box[1] + (q // 2) * 8, box[0] + (q % 2) * 8 + 8, box[1] + (q // 2) * 8 + 8)
+            if img.crop(qb).tobytes() == base.crop(qb).tobytes(): continue
+            a_ = img.crop(qb).load()
+            new[4 + q] = ('ART', add_tile([art_nearest(a_[xx, yy][:3]) for yy in range(8) for xx in range(8)]))
+            new[q] = ('ART', add_tile([art_nearest(a_[xx, yy][:3]) for yy in range(8) for xx in range(8)]))   # couche basse aussi (opaque)
+        OVLS.append((new, att)); cnt = 0
+        G[(gx, gy)] = ('OVL', len(OVLS) - 1, (cur & ~0x3ff) | (0x400 if (gx, gy) in POOL else 0) | (cur & 0xc00 if (gx, gy) not in POOL else 0)); cnt_ov += 1
+print('lac de lave : cases repeintes', cnt_ov, ', bloquees', len(POOL), ', tuiles art', len(ART_T))
 def raw_blocked(c):
     v = G[c]
     if isinstance(v, tuple): return bool(v[2] & 0xc00)
@@ -406,8 +535,14 @@ for k, ents in enumerate(ART_E):
     SEC_ENT.append([(640 + NT + t) | (ART_PAL << 12) for (_, t) in ents] + [0, 0, 0, 0]); SEC_ATT.append(0)
     art_ids[k] = 640 + len(SEC_ENT) - 1
 assert len(SEC_ENT) <= 384, len(SEC_ENT)
+OVL_ID = {}
+for k, (ents, att) in enumerate(OVLS):
+    SEC_ENT.append([((640 + NT + e[1]) | (ART_PAL << 12)) if isinstance(e, tuple) else e for e in ents]); SEC_ATT.append(att)
+    OVL_ID[k] = 640 + len(SEC_ENT) - 1
+assert len(SEC_ENT) <= 384, len(SEC_ENT)
 for k, v in list(G.items()):
     if isinstance(v, tuple):
+        if v[0] == 'OVL': G[k] = v[2] | OVL_ID[v[1]]; continue
         assert v[1][0] == 'ART_META'; G[k] = v[2] | art_ids[v[1][1]]
 src_png = Image.open(EM + 'tilesets/secondary/lavaridge/tiles.png')
 rows = (NT + len(ART_T) + 15) // 16
