@@ -437,13 +437,14 @@ def plane_front(x, y):
     b0 = (x // 8) * 8
     ym = max([_YMAX[xx] for xx in range(b0, b0 + 8) if xx in _YMAX] or [0]) // 4 * 4        # quantifie par bandes de 8 px (dedup)
     return y > ym - 20 + (4 if (x % 16) < 8 else 0)
+def TRK_HW(y):
+    t = max(0.0, (y - 96) / 47.0)                                           # fut massif qui s'evase en cloche vers le sol
+    return 40 + 30 * t ** 1.5
 def trunk_in(x, y):
     if y < 70 or y > 143: return False
-    hw = 37 + max(0, y - 116) * 0.5
-    return abs(x - CX) <= hw
+    return abs(x - CX) <= TRK_HW(y)
 LIMBS = [((CX - 24, 100), (CX - 66, 80), 8, 5), ((CX + 24, 100), (CX + 66, 80), 8, 5)]
-ROOTS = [((CX - 36, 128), (CX - 66, 141), 9, 3), ((CX + 36, 128), (CX + 66, 141), 9, 3), ((CX - 34, 118), (CX - 54, 134), 6, 3), ((CX + 34, 118), (CX + 54, 134), 6, 3),
-         ((CX - 22, 136), (CX - 38, 143), 6, 3), ((CX + 22, 136), (CX + 38, 143), 6, 3)]
+ROOTS = []
 def wood_in(x, y):
     if trunk_in(x, y): return True
     for (ax, ay), (bx, by), r0, r1 in LIMBS + ROOTS:
@@ -472,12 +473,12 @@ def tree_img():
             if not wood(x, y) or cano(x, y): continue
             edge = any(not (wood(x + dx, y + dy) or cano(x + dx, y + dy)) for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))
             if edge: px_[x, y] = 1; continue
-            hw = 37 + max(0, y - 116) * 0.5
+            hw = TRK_HW(y)
             d = (x - CX) / float(hw)
             lv = 9 if d < -0.75 else 10 if d < -0.2 else 9 if d < 0.25 else 8 if d < 0.65 else 7
             if (x % 8) in (2, 6) and (y // 8) % 3 != 1: lv = max(7, lv - 1)    # stries d ecorce
             if cano(x, y - 4) or cano(x, y - 3): lv = 7                         # a l'ombre du feuillage
-            elif cano(x, y - 10): lv = max(7, lv - 1)
+
             px_[x, y] = lv
     TOPT = [3, 4, 4, 5, 6]; FRT = [2, 2, 3, 3, 4]
     for y in range(H_):                                                    # 2) couronne : plan du dessus (clair, vu d'en haut) / plan de face (sombre) ; grain = frondes de la foret
@@ -505,6 +506,7 @@ def tree_img():
         for x in range(W_):
             if px_[x, y] == 0 and ((x - CX) / 104.0) ** 2 + ((y - 143) / 6.0) ** 2 <= 1 and (x + y) % 2 == 0: px_[x, y] = 13
     return im
+print('PRE-TREE tuiles art', len(ART_T))
 GTREE = tree_img()
 _bg = Image.new('RGB', GTREE.size, (110, 190, 160)); _m = Image.new('L', GTREE.size); _m.putdata([255 if v else 0 for v in GTREE.getdata()]); _bg.paste(GTREE.convert('RGB'), mask=_m); _bg.resize((GTREE.width * 4, GTREE.height * 4), Image.NEAREST).save('/tmp/gtree.png')
 def add_tile_f(t):
