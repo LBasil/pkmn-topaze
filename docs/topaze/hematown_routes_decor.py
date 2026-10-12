@@ -107,6 +107,7 @@ def route5():
         for k, (i, j) in enumerate(((0, 0), (1, 0), (0, 1), (1, 1))):
             c = (x + i, y + j); g[c[1] * w + c[0]] = 0x3400 | R.meta(sig[k], grassid(*c))
     def put_shard(c): g[c[1] * w + c[0]] = 0x3400 | R.meta(SH, grassid(*c))
+    WALLS = (6, 12, 18)                      # rangees des 3 murets de terrasse (voir plus bas)
     # 1) les deux bandes de sable (x 15..18, y 0..26 ; fermees, inaccessibles) -> bosquets
     imp = {(e['x'], e['y']) for k in ('warp_events', 'object_events', 'bg_events') for e in mj[k]}
     assert not any(15 <= x <= 18 or 29 <= x <= 32 for x, y in imp if y <= 26), 'un evenement se trouve dans une bande de sable'
@@ -118,6 +119,7 @@ def route5():
             if nt >= 8: break
             x, y = x0 + rnd.randrange(3), rnd.randrange(1, 25)
             foot = {(x + i, y + j) for i in (0, 1) for j in (-1, 0, 1)}
+            if any(c[1] in WALLS for c in foot): continue
             ring = {(a + dx, b + dy) for a, b in foot for dx in (-1, 0, 1) for dy in (0, 1)}
             if foot & occ or (ring & occ and rnd.random() < 0.8): continue
             put_tree(x, y, rnd.choice(TR)); occ |= foot; nt += 1
@@ -126,16 +128,16 @@ def route5():
             if nc >= 3: break
             x, y = x0 + rnd.randrange(3), rnd.randrange(0, 25)
             foot = {(x + i, y + j) for i in (0, 1) for j in (0, 1)}
-            if foot & occ: continue
+            if foot & occ or any(c[1] in WALLS for c in foot): continue
             put_cluster(x, y, rnd.choice(CL)); occ |= foot; nc += 1
-        free = [(x, y) for y in range(0, 27) for x in range(x0, x0 + 4) if (x, y) not in occ]; rnd.shuffle(free); ns = 0
+        free = [(x, y) for y in range(0, 27) for x in range(x0, x0 + 4) if (x, y) not in occ and y not in WALLS]; rnd.shuffle(free); ns = 0
         for c in free:
             if ns >= 5: break
             put_shard(c); occ.add(c); ns += 1
         for c in [c for c in free if c not in occ][:12]: g[c[1] * w + c[0]] = 0x3000 | 4          # fleurs
         print('bande x%d : %d arbres, %d amas, %d eclats' % (x0, nt, nc, ns))
     # 2) couloir central (x 20..27, y 0..27) : plus de rebords a sauter (rangees de 135), un chemin de terre SINUEUX de Azuria (22..25, 0) a la pension puis au sud, herbes hautes par bouquets
-    SANDPAL = [(115, 205, 164), (222, 197, 139), (238, 230, 139), (213, 189, 106), (189, 230, 164), (190, 160, 84), (238, 214, 160), (176, 150, 84)] + [(0, 0, 255)] * 8
+    SANDPAL = [(115, 205, 164), (222, 197, 139), (238, 230, 139), (213, 189, 106), (189, 230, 164), (190, 160, 84), (238, 214, 160), (176, 150, 84), (206, 176, 196), (156, 116, 146), (180, 140, 168), (142, 102, 130), (106, 72, 98), (74, 50, 72), (96, 170, 132), (0, 0, 255)]
     writepal(R.D + 'palettes/09.pal', SANDPAL)
     def dquarter(q, ah, av, dg, var):        # un quart (8x8) de terre : depend seulement des 2 voisines cardinales adjacentes et de la diagonale (autotuile a 5 cas par quart)
         r = random.Random(900 + q * 101 + var * 17 + (ah * 4 + av * 2 + dg) * 13); out = []
@@ -164,14 +166,17 @@ def route5():
         g[c[1] * w + c[0]] = 0x3000 | R.meta(ents, grassid(*c), 0x20000000)
     for y in range(0, 21):
         for x in range(20, 28): g[y * w + x] = 0x3000 | grassid(x, y)
-    for y in (4, 9, 14, 19):
-        for x in (19, 28): g[y * w + x] = g[(y - 1) * w + x]            # bouts de rebord -> barriere comme au-dessus
+    for y in range(0, 27):
+        for x in (19, 28): g[y * w + x] = 0x3000 | grassid(x, y)          # barrieres interieures supprimees : une seule grande prairie (reste les barrieres de bord, x 14 et 33)
+    for x in range(15, 33):
+        if g[34 * w + x] & 0x3ff == 231: g[34 * w + x] = 0x3000 | grassid(x, 34)         # barriere du bas supprimee
+    g[34 * w + 14] = g[33 * w + 14]; g[34 * w + 33] = g[33 * w + 33]
     for x in range(19, 29): g[27 * w + x] = 0x3000 | grassid(x, 27)       # rebord sud de la pension supprime
     for c in ((20, 23), (20, 24), (20, 25), (26, 23), (26, 24), (26, 25), (27, 23), (27, 24), (27, 25)): g[c[1] * w + c[0]] &= 0x3fff & ~0xc00         # liseres de pelouse praticables
     path = set()
     for x in range(22, 26): path.add((x, 0))
     for y in range(1, 20):
-        cx = 23.5 + 2.5 * math.sin(y / 3.1 + 0.4); x0 = int(math.floor(cx - 1.0)); wd = 2 if y in (8, 9, 16) else 3
+        cx = 23.5 + 3.0 * math.sin(y / 3.4 + 0.4); x0 = int(math.floor(cx - 1.0)); wd = 2 if y in (8, 9, 16) else 3
         for x in range(x0, x0 + wd): path.add((max(20, min(27, x)), y))
     for x in range(20, 25): path.add((x, 20))
     for y in range(20, 27): path.add((20, y))
@@ -181,8 +186,47 @@ def route5():
     for c in sorted(path):
         mk = tuple((c[0] + dx, c[1] + dy) in path or ((c[0] + dx, c[1] + dy)[1] < 0) for dx, dy in ((0, -1), (1, 0), (0, 1), (-1, 0), (1, -1), (1, 1), (-1, 1), (-1, -1)))
         put_dirt(c, mk, (c[0] * 7 + c[1] * 3) % 3)
+    # 3 murets de terrasse (la route « monte » vers Azuria : chaque muret = un palier plus haut au nord) ; un escalier de pierre au passage du chemin
+    def wquarter(q, ah, var):
+        r = random.Random(1300 + q * 31 + ah * 7 + var * 3); out = []
+        for j in range(8):
+            for i in range(8):
+                X, Y = (q % 2) * 8 + i, (q // 2) * 8 + j; dist_end = (X if q % 2 == 0 else 15 - X)
+                if Y < 3: c = 0
+                elif Y == 3: c = 8
+                elif Y == 4: c = 9
+                elif Y >= 14: c = 13 if Y == 14 else 14
+                else:
+                    c = 10 if (Y - 5) % 4 < 2 else 11
+                    if (X * 5 + var * 3) % 6 == 0 and r.random() < 0.8: c = 12
+                    elif r.random() < 0.12: c = 12
+                    elif r.random() < 0.08: c = 8
+                if not ah and dist_end < 3 and (Y < 3 + (3 - dist_end) or Y > 13 - (3 - dist_end)): c = 0 if Y < 14 else 14
+                out.append(c)
+        return out
+    def stquarter(q, ah, var):
+        out = []
+        for j in range(8):
+            for i in range(8):
+                X, Y = (q % 2) * 8 + i, (q // 2) * 8 + j; b = Y % 4
+                c = 8 if b == 0 else (10 if b == 1 else (11 if b == 2 else 12))
+                if b == 1 and (X * 3 + (Y // 4) * 5) % 7 == 0: c = 11
+                out.append(c)
+        return out
+    walls = {}
+    for yW in WALLS:
+        row = sorted(c for c in path if c[1] == yW)
+        for (x, y) in row:
+            ents = [(640 + R.NTL + R.tile(stquarter(q, 1, 0))) | (9 << 12) for q in range(4)]
+            g[y * w + x] = 0x3000 | R.meta(ents, grassid(x, y), 0x20000000)
+        for x in range(15, 33):
+            if (x, yW) in path: continue
+            wl = (x - 1, yW) not in path; wr = (x + 1, yW) not in path          # voisin mur (ou barriere de bord) ?
+            ents = [(640 + R.NTL + R.tile(wquarter(q, wl if q % 2 == 0 else wr, (x + yW) % 2))) | (9 << 12) for q in range(4)]
+            g[yW * w + x] = 0x3400 | R.meta(ents, grassid(x, yW), 0)
+            walls[(x, yW)] = 1
     # herbes hautes : bouquets de part et d'autre du chemin
-    tall = set(); free_c = [(x, y) for y in range(3, 21) for x in range(20, 28) if not near((x, y), 1)]
+    tall = set(); free_c = [(x, y) for y in range(3, 21) for x in range(19, 29) if not near((x, y), 1) and y not in WALLS]
     for _ in range(9):
         cx_, cy_ = rnd.choice(free_c); rad = rnd.choice((1.6, 2.0, 2.4))
         for (x, y) in free_c:
