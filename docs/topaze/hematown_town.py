@@ -262,23 +262,34 @@ for (ux, uy) in sorted(TU):
         TU.discard((ux, uy))
         for c in ucells(ux, uy): OCC.pop(c, None)
 BLDG = {c for c, n in OCC.items() if n not in ('pin', 'trunk')}
-# v3 : maisons et immeubles DECORATIFS d'origine de Safrania (recopies entiers, toit compris), semes partout -> ville peuplee comme l'original
-DECO = {'hs': (17, 10, 4, 5), 'hl': (22, 18, 4, 4), 'ap': (19, 25, 5, 6)}     # maison 4x5, maison basse 4x4, immeuble jaune 5x6 (coordonnees d'origine)
-REJ = collections.Counter(); rh = random.Random(1906); spots = [(x, y) for y in range(H) for x in range(W)]; rh.shuffle(spots); nh = 0; (lambda *a: None)('DBG', len(OCC), len(KEEP), len(BLK), len(WAY), len(BLDG), sum(1 for y in range(H) for x in range(W) if (x,y) not in OCC and (x,y) not in KEEP and (x,y) not in WAY and (x,y) not in BLK and not near_b((x,y)))); DECOC = set()
+# v3 : MAISONS ENTRABLES (maison d'origine a porte, 4x5, recopiee entiere) semees dans le coeur : chacune a sa porte (warp vers un interieur propre), un parvis et un chemin raccorde au reseau (BFS)
+HOUSE_SRC = (21, 10, 4, 5)       # maison de la Copycat (porte en (1, 4) de la maison)
+NHOUSES = 16
+rh = random.Random(1906); spots = [(x, y) for y in range(H) for x in range(W)]; rh.shuffle(spots); HOMES = []
 for (x, y) in spots:
-    k = rh.choices(['hs', 'hl', 'ap'], [50, 30, 20])[0]; ox, oy, cw, chh = DECO[k]
+    if len(HOMES) >= NHOUSES: break
+    ox, oy, cw, chh = HOUSE_SRC
+    if x < 2 or y < 1 or x + cw >= W - 1 or y + chh + 2 >= H - 1: continue
     cs = [(x + i, y + j) for j in range(chh) for i in range(cw)]
-    if x < 0 or y < 1 or x + cw >= W or y + chh >= H - 1: continue
-    if any(c in OCC or c in KEEP or c in BLK or c in PLAZA or c in WAY for c in cs): REJ['a'] += 1; continue
-    if any(((c[0] + a_, c[1] + b_) in KEEP) for c in ((x, y + chh), (x + cw - 1, y + chh)) for a_, b_ in ((0, 0),)): continue
+    front = [(x + i, y + chh + j) for i in range(cw) for j in (0, 1)]
+    if any(c in OCC or c in KEEP or c in BLK or c in PLAZA or c in WAY for c in cs): continue
+    if any(c in OCC or c in BLK or c in PLAZA for c in front): continue
     for c in cs: OCC[c] = 'deco'
+    dfront = (x + 1, y + chh)
+    NEED |= {dfront}
     if not NEED <= reach():
+        NEED.discard(dfront)
         for c in cs: OCC.pop(c)
         continue
     for j in range(chh):
         for i in range(cw): G[(x + i, y + j)] = ov(ox + i, oy + j) | 0x400
-    DECOC |= set(cs); nh += 1; BLDG |= set(cs)
-print('maisons decoratives', nh, dict(REJ))
+    n_ = len(HOMES); HOMES.append((x + 1, y + chh - 1)); DOOR['home%02d' % n_] = [(x + 1, y + chh - 1)]
+    for c in front: WAY.add(c)
+    branch((x + 1, y + chh + 2), 200 + n_)
+    WAY -= {c for c in WAY if c in OCC and c not in WALK}
+    KEEP |= WAY; BLDG |= set(cs)
+print('maisons entrables', len(HOMES))
+assert NEED <= reach()
 rd = random.Random(1905); dense = [(ux, uy) for uy in range(UH) for ux in range(UW)]; rd.shuffle(dense); nd = 0
 for (ux, uy) in dense:
     cs = ucells(ux, uy)

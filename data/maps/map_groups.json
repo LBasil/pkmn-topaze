@@ -423,7 +423,21 @@
     "SaffronCity_PokemonCenter_1F",
     "SaffronCity_PokemonCenter_2F",
     "SaffronCity_MrPsychicsHouse",
-    "SaffronCity_PokemonTrainerFanClub"
+    "SaffronCity_PokemonTrainerFanClub",
+    "SaffronCity_HomeA",
+    "SaffronCity_HomeB",
+    "SaffronCity_HomeC",
+    "SaffronCity_HomeD",
+    "SaffronCity_HomeE",
+    "SaffronCity_HomeF",
+    "SaffronCity_HomeG",
+    "SaffronCity_HomeH",
+    "SaffronCity_HomeI",
+    "SaffronCity_HomeJ",
+    "SaffronCity_HomeK",
+    "SaffronCity_HomeL",
+    "SaffronCity_HomeM",
+    "SaffronCity_HomeN"
   ],
   "gMapGroup_IndoorRoute2": [
     "Route2_ViridianForest_SouthEntrance",
