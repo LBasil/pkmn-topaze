@@ -19,7 +19,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
       "x": 22,
-      "y": 9,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -60,7 +60,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "x": 18,
+      "x": 19,
       "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
@@ -116,7 +116,7 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
-      "x": 36,
+      "x": 35,
       "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
@@ -187,7 +187,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUT_TREE",
       "x": 13,
-      "y": 24,
+      "y": 20,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -229,7 +229,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LASS",
       "x": 30,
-      "y": 12,
+      "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -421,7 +421,7 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 22,
+      "x": 23,
       "y": 8,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -430,7 +430,7 @@
     {
       "type": "sign",
       "x": 20,
-      "y": 9,
+      "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "FuchsiaCity_EventScript_SafariZoneSign"
@@ -453,7 +453,7 @@
     },
     {
       "type": "sign",
-      "x": 15,
+      "x": 17,
       "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -461,8 +461,8 @@
     },
     {
       "type": "sign",
-      "x": 20,
-      "y": 11,
+      "x": 18,
+      "y": 12,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "FuchsiaCity_EventScript_SlowpokeSign"
@@ -477,32 +477,32 @@
     },
     {
       "type": "sign",
-      "x": 31,
-      "y": 13,
+      "x": 30,
+      "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "FuchsiaCity_EventScript_KangaskhanSign"
     },
     {
       "type": "sign",
-      "x": 12,
-      "y": 22,
+      "x": 14,
+      "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "FuchsiaCity_EventScript_FossilMonSign"
     },
     {
       "type": "sign",
-      "x": 12,
-      "y": 23,
+      "x": 13,
+      "y": 19,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "FuchsiaCity_EventScript_LaprasSign"
     },
     {
       "type": "sign",
-      "x": 27,
-      "y": 9,
+      "x": 30,
+      "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "FuchsiaCity_EventScript_SafariGameSign"

@@ -104,21 +104,76 @@ def bench(back_top):
     d.point((3, 5 if not back_top else 9), fill=4); d.point((12, 5 if not back_top else 9), fill=4)
     return im
 
+# ---- v8 : relief (la ville est dans le creux d'une geode : falaises de roche violette, escaliers de cristal). Palette ART_PAL ; 7 indigo fonce | 8 indigo | 9 indigo clair | 10 lilas pale
+def cliff_front(e, w, var):
+    """face sud d'une terrasse (16x16, opaque) ; e/w = coin arrondi a l'est / a l'ouest"""
+    im = newimg(16, 16); d = ImageDraw.Draw(im)
+    d.rectangle((0, 0, 15, 15), fill=8)
+    d.line([(0, 0), (15, 0)], fill=10); d.line([(0, 1), (15, 1)], fill=9)                       # arete eclairee
+    d.line([(0, 6), (15, 6)], fill=7); d.line([(0, 11), (15, 11)], fill=7)                      # strates
+    for x in ((3, 11) if var == 0 else (6, 13)): d.line([(x, 2), (x, 5)], fill=7)
+    for x in ((7,) if var == 0 else (2, 10)): d.line([(x, 7), (x, 10)], fill=7)
+    for x in ((1, 9) if var == 0 else (5, 12)): d.line([(x, 12), (x, 13)], fill=7)
+    for (x, y) in (((2, 3), (10, 8), (5, 12)) if var == 0 else ((8, 3), (3, 8), (12, 12))): d.point((x, y), fill=9); d.point((x + 1, y), fill=9)
+    if var == 0: d.polygon([(11, 13), (12, 8), (14, 13)], fill=5, outline=1); d.line([(12, 10), (12, 12)], fill=12)                  # veine de cristal
+    else: d.polygon([(2, 13), (4, 9), (6, 13)], fill=4, outline=1); d.line([(4, 11), (4, 12)], fill=12)
+    d.rectangle((0, 14, 15, 15), fill=11); d.line([(0, 14), (15, 14)], fill=1)
+    if e: d.rectangle((13, 0, 15, 15), fill=7); d.line([(13, 1), (13, 14)], fill=9); d.line([(15, 0), (15, 15)], fill=1)
+    if w: d.rectangle((0, 0, 2, 15), fill=7); d.line([(2, 1), (2, 14)], fill=9); d.line([(0, 0), (0, 15)], fill=1)
+    return im
+def cliff_side(e, w):
+    """flanc d'une terrasse (16x16) : la roche occupe le cote du vide (transparent ailleurs : le sol reste visible)"""
+    im = newimg(16, 16); d = ImageDraw.Draw(im)
+    def face(x0, x1, lit_x):
+        d.rectangle((x0, 0, x1, 15), fill=8); d.line([(lit_x, 0), (lit_x, 15)], fill=10)
+        for y in (4, 9, 13): d.line([(x0, y), (x1, y)], fill=7)
+        d.line([(x0 if lit_x == x1 else x1, 0), (x0 if lit_x == x1 else x1, 15)], fill=1)
+        d.point((x0 + 2, 6), fill=9); d.point((x0 + 3, 11), fill=5)
+    if e: face(9, 15, 9)
+    if w: face(0, 6, 6)
+    return im
+def cliff_lip():
+    """rebord d'une terrasse dont le vide est AU NORD : bordure de pierre claire et cristaux"""
+    im = newimg(16, 16); d = ImageDraw.Draw(im)
+    d.rectangle((0, 3, 15, 8), fill=9, outline=1); d.line([(1, 4), (14, 4)], fill=10)
+    for x in range(0, 16, 4): d.line([(x, 6), (x, 7)], fill=8)
+    d.rectangle((0, 9, 15, 10), fill=7); d.line([(0, 11), (15, 11)], fill=11)
+    d.polygon([(3, 3), (4, 0), (5, 3)], fill=5, outline=1); d.polygon([(11, 3), (12, 1), (13, 3)], fill=12, outline=1)
+    return im
+def stair(kind):
+    """escalier de cristal (16x16, calque du bas : le joueur marche dessus). kind : SD/ND (descente vers le sud / le nord), ED/WD (est / ouest)"""
+    im = newimg(16, 16); d = ImageDraw.Draw(im)
+    cols = (10, 5, 9, 4, 8)
+    if kind in ('SD', 'ND'):
+        order = list(range(4)) if kind == 'SD' else list(range(3, -1, -1))
+        for k, b in enumerate(order):
+            y0 = k * 4; d.rectangle((0, y0, 15, y0 + 3), fill=(10, 9, 8, 7)[b]); d.line([(0, y0), (15, y0)], fill=(6, 10, 9, 8)[b])
+            d.line([(0, y0 + 3), (15, y0 + 3)], fill=1 if kind == 'SD' else 11)
+            d.point((3 + 4 * (k % 2), y0 + 1), fill=15)
+    else:
+        order = list(range(4)) if kind == 'ED' else list(range(3, -1, -1))
+        for k, b in enumerate(order):
+            x0 = k * 4; d.rectangle((x0, 0, x0 + 3, 15), fill=(10, 9, 8, 7)[b]); d.line([(x0, 0), (x0, 15)], fill=(6, 10, 9, 8)[b])
+            d.line([(x0 + 3, 0), (x0 + 3, 15)], fill=1 if kind == 'ED' else 11)
+            d.point((x0 + 1, 3 + 8 * (k % 2)), fill=15)
+    d.line([(0, 0), (0, 15)] if kind in ('SD', 'ND') else [(0, 0), (15, 0)], fill=11); d.line([(15, 0), (15, 15)] if kind in ('SD', 'ND') else [(0, 15), (15, 15)], fill=11)
+    return im
+
 if __name__ == '__main__':
     import sys
     im = full(); im.putpalette([c for p in AP for c in p] + [0] * (768 - 48))
     print('tuiles uniques moitie gauche :', uniq_tiles(left_half()), '| image complete :', uniq_tiles(im))
-    bg = Image.new('RGB', (128 + 16 * 5 + 40, 96), (186, 156, 228))
+    bg = Image.new('RGB', (128 + 16 * 18 + 40, 96), (186, 156, 228))
     rgba = im.convert('RGBA'); px = rgba.load(); src = im.load()
     for y in range(96):
         for x in range(128):
             if src[x, y] == 0: px[x, y] = (0, 0, 0, 0)
     bg.paste(rgba, (0, 0), rgba)
     PALT = [(0, 0, 0), (30, 10, 52), (94, 44, 142), (142, 84, 202), (188, 132, 236), (228, 200, 252), (252, 242, 255), (62, 30, 112), (104, 56, 170), (152, 100, 222), (214, 188, 252), (40, 30, 66), (214, 64, 152), (176, 168, 192), (96, 88, 118), (255, 246, 200)]
-    for n, f in enumerate((lamp(), planter(0), planter(1), bench(True), bench(False))):
+    for n, f in enumerate((lamp(), planter(0), planter(1), bench(True), bench(False), cliff_front(0, 0, 0), cliff_front(0, 0, 1), cliff_front(1, 0, 0), cliff_front(0, 1, 1), cliff_side(1, 0), cliff_side(0, 1), cliff_lip(), stair('SD'), stair('ND'), stair('ED'), stair('WD'))):
         f.putpalette([c for p in PALT for c in p] + [0] * (768 - 48)); r = f.convert('RGBA'); p2 = r.load(); s2 = f.load()
         for y in range(16):
             for x in range(16):
                 if s2[x, y] == 0: p2[x, y] = (0, 0, 0, 0)
-        bg.paste(r, (136 + n * 18, 4), r)
+        bg.paste(r, (136 + (n % 16) * 18 if n < 16 else 136, 4 + (n // 16) * 20), r)
     bg.resize((bg.width * 5, bg.height * 5), Image.NEAREST).save(sys.argv[1])
