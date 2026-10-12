@@ -207,7 +207,7 @@ def build(L, rnd):
     TREEO, TREES = {}, []
     def put_tree(x, y):
         cs = [(x, y), (x + 1, y), (x, y + 1), (x + 1, y + 1)]
-        for c, m in zip(cs, (20, 21, 28, 29)): G[c] = (0x400, m); TREEO[c] = (x, y)
+        for c, m in zip(cs, (28, 29, 20, 21)): G[c] = (0x400, m); TREEO[c] = (x, y)
         TREES.append((x, y))
     if L == 'Route16':
         for (x, y) in WALLU: put_tree(x, y)
@@ -384,7 +384,7 @@ for n, t in enumerate(NEWT):
     ti = Image.new('P', (8, 8)); ti.putdata(list(t)); tout.paste(ti, (((NTL + n) % 16) * 8, ((NTL + n) // 16) * 8))
 tout.save(NS + 'tiles.png')
 for L, G in res.items(): open('data/layouts/%s/map.bin' % L, 'wb').write(struct.pack('<%dH' % len(G), *G))
-open('data/layouts/Route16/border.bin', 'wb').write(struct.pack('<4H', 20, 21, 28, 29))      # hors carte : foret (et non plus la mer)
+open('data/layouts/Route16/border.bin', 'wb').write(struct.pack('<4H', 28, 29, 20, 21))      # hors carte : foret (et non plus la mer)
 print('metatuiles %d/384, tuiles %d/384' % (NMT + len(NEWE), NTL + len(NEWT)))
 
 # ---- enregistrement des tilesets
