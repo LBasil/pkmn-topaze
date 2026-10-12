@@ -193,10 +193,26 @@ BR = (DOORS['gym'][0], 8)                              # pont : cases (x..x+1, 8
 def in_arena(px, py): return ARENA[0] * 16 <= px < (ARENA[0] + ARENA[2]) * 16 and ARENA[1] * 16 <= py < (ARENA[1] + ARENA[3]) * 16
 def in_bridge(px, py): return BR[0] * 16 <= px < (BR[0] + 2) * 16 and BR[1] * 16 <= py < (BR[1] + 1) * 16
 def hsh(a, b): return ((a * 73856093) ^ (b * 19349663) ^ 0x5bd1e995) & 0xffff
-def _off(k, seed, amp): return (hsh(k, seed) % (2 * amp + 1)) - amp          # decalage entier par bande de 4 px : les bords se dedupliquent en tuiles
+OUTC = {(35, 10), (36, 10), (35, 11), (36, 11), (36, 12), (56, 8), (57, 8), (56, 9), (57, 9), (57, 10)}      # blocs de roche qui emergent de la lave
+def _lim(ny, k): return max(0, min(3, int(1.5 + 1.5 * math.sin(ny * 0.55 + k) + math.sin(ny * 1.3 + 2 * k))))
+def is_socle(nx, ny): return 6 <= ny <= 15 and (38 <= nx <= 39 or 52 <= nx <= 53)
+def Mnode(nx, ny):
+    """noeud de 8 px : lave ? Lac en fer a cheval (canal du fond + deux rivieres + douve devant + un affluent vers le lac est), arene = ilot, pont devant la porte"""
+    if 54 <= nx <= 61 and 10 <= ny <= 11: return 1                               # affluent : rejoint le grand lac de lave de l'est
+    if not (34 <= nx <= 59 and 4 <= ny <= 17): return 0
+    if 40 <= nx <= 51 and 6 <= ny <= 15: return 0
+    if is_socle(nx, ny): return 0                                                # socle de roche autour de l'arene
+    if not (34 + _lim(ny, 0) <= nx <= 59 - _lim(ny, 2)): return 0
+    if ny == 4 and math.sin(nx * 0.5) < -0.2: return 0                           # bord du haut irregulier
+    if ny >= 16 and math.cos((nx // 2) * 1.2) < -0.3: return 0                          # bord du bas irregulier
+    if ny >= 16 and BR[0] * 2 <= nx < BR[0] * 2 + 4: return 0
+    return 0 if (nx, ny) in OUTC else 1
+def is_rock(nx, ny): return is_socle(nx, ny) or (nx, ny) in OUTC
+def lava_f(px, py):
+    u = (px - 4) / 8.0; v = (py - 4) / 8.0; i = math.floor(u); j = math.floor(v); fa = u - i; fb = v - j
+    return (Mnode(i, j) * (1 - fa) * (1 - fb) + Mnode(i + 1, j) * fa * (1 - fb) + Mnode(i, j + 1) * (1 - fa) * fb + Mnode(i + 1, j + 1) * fa * fb)
 def lava_in(px, py):
-    xl = 272 + abs(_off(py // 8, 1, 3)); xr = 480 - abs(_off(py // 8, 2, 3)); yb = 141 + _off(px // 8, 3, 2)
-    return xl <= px < xr and 32 <= py < yb and not in_arena(px, py) and not in_bridge(px, py)
+    return 32 <= py < 144 and lava_f(px, py) >= 0.5 and not in_arena(px, py) and not in_bridge(px, py)
 POOL = set()
 for cy in range(2, 9):
     for cx in range(16, 31):
@@ -412,24 +428,44 @@ def ent_of(v):
     if m >= 640: return list(SEC_ENT[m - 640]), SEC_ATT[m - 640]
     return list(struct.unpack('<8H', open(EM + 'tilesets/primary/general/metatiles.bin', 'rb').read()[m * 16:m * 16 + 16])), conv(struct.unpack('<H', patt[m * 2:m * 2 + 2])[0])
 def art_nearest(c): return min(range(1, 16), key=lambda k: sum((PAL[k][i] - c[i]) ** 2 for i in range(3)))
-LAVA_T = []                                            # 6 variantes de lave 8x8 (periodiques : une tuile par variante)
+LAVA_T = []                                            # variantes de lave 8x8 (periodiques : une tuile par variante)
 for k in range(6):
-    r_ = random.Random(900 + k); t_ = [[10] * 8 for _ in range(8)]
+    r_ = random.Random(900 + k); t_ = [[15] * 8 for _ in range(8)]
     for _ in range(3):
         x_, y_ = r_.randrange(8), r_.randrange(8)
-        for dx_ in range(r_.choice((2, 3))): t_[y_][(x_ + dx_) % 8] = 15
+        for dx_ in range(r_.choice((2, 3, 4))): t_[y_][(x_ + dx_) % 8] = 10
     t_[r_.randrange(8)][r_.randrange(8)] = 11
     if k % 3 == 0: t_[r_.randrange(8)][r_.randrange(8)] = 9
     LAVA_T.append(t_)
 for k in range(2):                                     # variantes « croute » : zones plus sombres de la lave
-    r_ = random.Random(950 + k); t_ = [[(15 if r_.random() < 0.45 else 10) for _ in range(8)] for _ in range(8)]
-    for _ in range(3): t_[r_.randrange(8)][r_.randrange(8)] = 9
+    r_ = random.Random(950 + k); t_ = [[(9 if r_.random() < 0.5 else 15) for _ in range(8)] for _ in range(8)]
+    for _ in range(3): t_[r_.randrange(8)][r_.randrange(8)] = 10
     LAVA_T.append(t_)
+for k in range(1):                                     # variantes « scories » : cailloux sombres dans la lave
+    r_ = random.Random(970 + k); t_ = [[15] * 8 for _ in range(8)]
+    x_, y_ = r_.randrange(0, 3), r_.randrange(0, 3)
+    for dx_ in range(5):
+        for dy_ in range(5):
+            if (dx_, dy_) in ((0, 0), (4, 0), (0, 4), (4, 4)): continue
+            t_[y_ + dy_][x_ + dx_] = 5 if (dx_ in (0, 4) or dy_ in (0, 4)) else 7
+    t_[y_ + 1][x_ + 1] = 8; t_[y_ + 1][x_ + 2] = 8
+    for _ in range(2): t_[r_.randrange(8)][r_.randrange(8)] = 10
+    LAVA_T.append(t_)
+ROCK_T = []                                            # basalte fissure (socle de l'arene, rochers) : fond 6, grains 7/5, fissures de braise
+for k in range(3):
+    r_ = random.Random(990 + k); t_ = [[6] * 8 for _ in range(8)]
+    for _ in range(9): t_[r_.randrange(8)][r_.randrange(8)] = r_.choice((7, 7, 5))
+    x_, y_ = r_.randrange(8), r_.randrange(8)
+    for n_ in range(r_.choice((3, 4, 5))):
+        t_[(y_ + n_ // 2) % 8][(x_ + n_) % 8] = 15
+    t_[r_.randrange(8)][r_.randrange(8)] = 10
+    ROCK_T.append(t_)
 def lava_px(x, y):
     h_ = hsh(x // 8, y // 8)
+    if h_ % 7 == 0: return LAVA_T[8][y % 8][x % 8]
     crust = math.sin(x * 0.045 + 1) + math.sin(y * 0.07 + 2) + math.sin((x + y) * 0.031) > 1.1
     return LAVA_T[6 + h_ % 2 if crust else h_ % 6][y % 8][x % 8]
-FALL = ((336, 400), (320, 328), (408, 416))            # trois filets de cascade (x en pixels), de la crete (y=0) au lac (y=32)
+FALL = ((328, 408),)            # trois filets de cascade (x en pixels), de la crete (y=0) au lac (y=32)
 def fall_in(x, y):
     if not (0 <= y < 32): return False
     for (a, b) in FALL:
@@ -450,17 +486,15 @@ def inside(x, y): return lava_in(x + RX0 * 16, y + RY0 * 16)
 for y in range(RH * 16):
     for x in range(RW * 16):
         X, Y = x + RX0 * 16, y + RY0 * 16
-        if in_arena(X, Y):
-            if base.getpixel((x, y)) in gcols: ip[x, y] = PC(lava_px(X, Y))      # cendre autour de l'edifice -> lave
-            continue
-        if in_bridge(X, Y): continue
+        if in_arena(X, Y) or in_bridge(X, Y) or (X // 16, Y // 16) in PATH: continue
         if lava_in(X, Y):
-            edge = any(not lava_in(X + dx, Y + dy) and not in_arena(X + dx, Y + dy) and Y + dy >= 32 for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))
-            ip[x, y] = PC(15 if edge else lava_px(X, Y))
-        elif Y >= 32 and G[(X // 16, Y // 16)] == GRASS:   # liseré sombre puis lueur braise sur la cendre voisine
-            d_ = min([abs(dx) + abs(dy) for dx in range(-3, 4) for dy in range(-3, 4) if abs(dx) + abs(dy) <= 3 and lava_in(X + dx, Y + dy)] or [9])
+            edge = any(not lava_in(X + dx, Y + dy) and not in_arena(X + dx, Y + dy) and not in_bridge(X + dx, Y + dy) and Y + dy >= 32 for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))
+            ip[x, y] = PC(11 if edge else lava_px(X, Y))
+        elif Y >= 32 and (G[(X // 16, Y // 16)] == GRASS):   # liseré sombre, puis basalte fissuré (fissures de braise) sur la cendre voisine
+            d_ = min([abs(dx) + abs(dy) for dx in range(-2, 3) for dy in range(-2, 3) if abs(dx) + abs(dy) <= 2 and lava_in(X + dx, Y + dy)] or [9])
             if d_ == 1: ip[x, y] = PC(5)
-            elif d_ == 2 and (X + 2 * Y) % 4: ip[x, y] = PC(9)
+            elif is_rock(X // 8, Y // 8): ip[x, y] = PC(ROCK_T[hsh(X // 8, Y // 8) % 3][Y % 8][X % 8])
+            elif d_ == 2: ip[x, y] = PC(15 if ((X % 8) * 3 + (Y % 8) * 5) % 11 == 0 else 6)
         if fall_in(X, Y): ip[x, y] = PC(fall_px(X, Y))
 for (a, b) in FALL:                                    # bords sombres de la cascade + ecume au pied
     for y in range(0, 32):
@@ -481,6 +515,34 @@ for y in range(RH * 16):                                # pont de pierre
         if u in (1, 2, 29, 30): c = 6 if u in (1, 30) else 8
         if v == 15: c = 5
         ip[x, y] = PC(c)
+# ---- arene : basalte noir, fenetres en braise : on ne change QUE les palettes (copies des metatuiles avec une autre palette, 0 tuile)
+def tr_arena(c):
+    r, g, b = c
+    h, l, s_ = colorsys.rgb_to_hls(r / 255, g / 255, b / 255); h *= 360
+    if 180 <= h <= 270 and s_ > 0.7: h = 28 + 22 * l; s_ = 1.0; l = min(0.62, 0.30 + 0.5 * l)           # vitres -> braise
+    elif s_ > 0.45 and (h < 25 or h > 335): pass                                                          # texte rouge de l'enseigne
+    elif l > 0.9: h = 270; s_ = 0.10; l = 0.66                                                            # blancs -> pierre claire
+    else: h = 268; s_ = min(0.22, s_ * 0.4 + 0.06); l = 0.07 + 0.55 * l ** 1.25                           # toit, murs -> basalte
+    rr, gg, bb = colorsys.hls_to_rgb(h / 360, max(0, min(1, l)), max(0, min(1, s_)))
+    return int(rr * 255 + .5), int(gg * 255 + .5), int(bb * 255 + .5)
+AR_CELLS = [(x, y) for x in range(ARENA[0], ARENA[0] + ARENA[2]) for y in range(ARENA[1], ARENA[1] + ARENA[3])]
+AR_PALS = sorted({q >> 12 for c in AR_CELLS for q in ent_of(G[c])[0]})
+AR_SLOTS = [4, 6] + [p for p in FREE if p != ART_PAL]          # palettes 4 et 6 : inutilisees par la carte
+assert len(AR_PALS) <= len(AR_SLOTS), ('palettes arene', AR_PALS, AR_SLOTS)
+AR_MAP = dict(zip(AR_PALS, AR_SLOTS))
+AR_SRC = {pp: list(PALS_P[pp] if pp < 6 else PALS_S[pp]) for pp in AR_MAP}
+for pp, ns in AR_MAP.items():
+    cols = [(c if k == 0 else tr_arena(c)) for k, c in enumerate(AR_SRC[pp])]
+    if ns < 7: PALS_P[ns] = cols
+    if ns >= 6: PALS_S[ns] = cols
+AR_NEW = {}
+for c in AR_CELLS:
+    v = G[c]; ents, att = ent_of(v)
+    key = tuple(ents)
+    if key not in AR_NEW:
+        SEC_ENT.append([((q & 0xfff) | (AR_MAP[q >> 12] << 12)) for q in ents]); SEC_ATT.append(att); AR_NEW[key] = 640 + len(SEC_ENT) - 1
+    G[c] = (v & ~0x3ff) | AR_NEW[key]
+print('arene recoloree : palettes', AR_MAP, ', metatuiles', len(AR_NEW))
 OVLS = []                                              # (entrees, attribut)
 cnt_ov = 0
 for cy in range(RH):
