@@ -419,17 +419,27 @@ def seg_d(x, y, ax, ay, bx, by):
     return math.hypot(x - (ax + t * dx), y - (ay + t * dy))
 BIG = [(CX, 46, 40), (CX - 44, 56, 30), (CX + 44, 56, 30), (CX - 76, 62, 20), (CX + 76, 62, 20), (CX - 26, 30, 26), (CX + 26, 30, 26), (CX, 62, 26), (CX - 92, 70, 10), (CX + 92, 70, 10)]
 def in_big(x, y, shrink=0): return any((x - cx) ** 2 + (y - cy) ** 2 <= (r - shrink) ** 2 for cx, cy, r in BIG)
-CR = 11.0                                                                  # rayon d'une touffe ; reseau decale : periode (16, 32) -> tuiles qui se dedupliquent
-CLUMPS = [(16 * m + 8 * (k % 2) + 8, 10 + 16 * k) for k in range(8) for m in range(14) if in_big(16 * m + 8 * (k % 2) + 8, 10 + 16 * k, 6)]
-def clump_px(x, y):
-    """(touffe d'avant-plan, u, v) ; peintre : rangees du bas devant, gauche -> droite"""
-    best = None
-    for cx, cy in CLUMPS:
-        if (x - cx) ** 2 + (y - cy) ** 2 <= CR * CR: best = (cx, cy)
-    return best
+_tex = Image.open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'tree_leaf_tex.png')).convert('RGB')    # frondes de la foret d'Emeraude (16x16, 5 teintes) : meme grain que les arbres du decor
+_cols = sorted(set(_tex.getdata()), key=lambda c: c[0] * 3 + c[1] * 6 + c[2]); assert len(_cols) == 5
+TEX = [[_cols.index(_tex.getpixel((x, y))) for x in range(16)] for y in range(16)]     # 0 (sombre) .. 4 (clair)
+_YMAX = {}
+for _x in range(-2, GT_W * 16 + 2):
+    ys = [y for y in range(0, 100) if in_big(_x, y)]
+    if ys: _YMAX[_x] = max(ys)
+def crown_in(x, y):
+    if in_big(x, y): return True
+    for k in range(-2, GT_W * 16 // 12 + 2):                              # petites touffes pendantes sous la couronne
+        cx = 12 * k + 6
+        if cx in _YMAX and (x - cx) ** 2 + (y - (_YMAX[cx] - 1)) ** 2 <= 49 and _YMAX[cx] > 60: return True
+    return False
+def plane_front(x, y):
+    """plan de face (dessous de la couronne) : bande de 22 px au-dessus du bord bas, bord festonne"""
+    b0 = (x // 8) * 8
+    ym = max([_YMAX[xx] for xx in range(b0, b0 + 8) if xx in _YMAX] or [0]) // 4 * 4        # quantifie par bandes de 8 px (dedup)
+    return y > ym - 20 + (4 if (x % 16) < 8 else 0)
 def trunk_in(x, y):
     if y < 70 or y > 143: return False
-    hw = 30 + max(0, y - 112) * 0.55
+    hw = 37 + max(0, y - 116) * 0.5
     return abs(x - CX) <= hw
 LIMBS = [((CX - 24, 100), (CX - 66, 80), 8, 5), ((CX + 24, 100), (CX + 66, 80), 8, 5)]
 ROOTS = [((CX - 36, 128), (CX - 66, 141), 9, 3), ((CX + 36, 128), (CX + 66, 141), 9, 3), ((CX - 34, 118), (CX - 54, 134), 6, 3), ((CX + 34, 118), (CX + 54, 134), 6, 3),
@@ -450,37 +460,39 @@ def arch(px, py):
         if py >= cy: return x0 <= px < x1 and py < 144
         return (px - cx + 0.5) ** 2 + (py - cy + 0.5) ** 2 <= r * r
     return ins(8, CX - 8, CX + 8), ins(12, CX - 12, CX + 12)
-BLOOMS = [(CX - 52, 26), (CX + 8, 12), (CX + 40, 36), (CX - 72, 58), (CX + 66, 56), (CX - 22, 66), (CX + 22, 70)]
+BLOOMS = [(CX - 52, 26)]
 def tree_img():
     W_, H_ = GT_W * 16, GT_H * 16
     im = Image.new('P', (W_, H_), 0); im.putpalette([c for p in TP for c in p]); px_ = im.load()
-    CAN = [[clump_px(x, y) if (0 <= x < W_ and 0 <= y < H_) else None for x in range(-1, W_ + 1)] for y in range(-1, H_ + 1)]
-    def cano(x, y): return -1 <= x <= W_ and -1 <= y <= H_ and CAN[y + 1][x + 1] is not None
+    CAN = [[crown_in(x, y) if (0 <= x < W_ and 0 <= y < H_) else False for x in range(-1, W_ + 1)] for y in range(-1, H_ + 1)]
+    def cano(x, y): return -1 <= x <= W_ and -1 <= y <= H_ and CAN[y + 1][x + 1]
     def wood(x, y): return 0 <= x < W_ and 0 <= y < H_ and wood_in(x, y)
-    for y in range(H_):                                                    # 1) bois (derriere)
+    for y in range(H_):                                                    # 1) bois : fut cylindrique (reflet a gauche, ombre a droite)
         for x in range(W_):
             if not wood(x, y) or cano(x, y): continue
             edge = any(not (wood(x + dx, y + dy) or cano(x + dx, y + dy)) for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))
             if edge: px_[x, y] = 1; continue
-            lv = trk_lv(x)
-            if (x % 8) in (2, 5) and (y // 6) % 3 != 1: lv = max(7, lv - 1)    # stries d'ecorce
-            if cano(x, y - 4) or cano(x, y - 3): lv = 7       # a l'ombre du feuillage
-            elif cano(x, y - 11): lv = max(7, lv - 1)
+            hw = 37 + max(0, y - 116) * 0.5
+            d = (x - CX) / float(hw)
+            lv = 9 if d < -0.75 else 10 if d < -0.2 else 9 if d < 0.25 else 8 if d < 0.65 else 7
+            if (x % 8) in (2, 6) and (y // 8) % 3 != 1: lv = max(7, lv - 1)    # stries d ecorce
+            if cano(x, y - 4) or cano(x, y - 3): lv = 7                         # a l'ombre du feuillage
+            elif cano(x, y - 10): lv = max(7, lv - 1)
             px_[x, y] = lv
-    for y in range(H_):                                                    # 2) feuillage (devant) : touffes arrondies, reflet haut-gauche
+    TOPT = [3, 4, 4, 5, 6]; FRT = [2, 2, 3, 3, 4]
+    for y in range(H_):                                                    # 2) couronne : plan du dessus (clair, vu d'en haut) / plan de face (sombre) ; grain = frondes de la foret
         for x in range(W_):
-            c = CAN[y + 1][x + 1]
-            if c is None: continue
-            edge = any(not cano(x + dx, y + dy) for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))
-            if edge: px_[x, y] = 1; continue
-            u, v = x - c[0], y - c[1]; d = math.hypot(u, v)
-            band = 1 if (y // 8) < 3 else (-1 if (y // 8) >= 9 else 0)       # couronne : haut plus clair, dessous plus sombre
-            lv = 4 + band
-            if d > CR - 1.6 and u + v > 2: lv = 2 + (1 if band > 0 else 0)  # ourlet d'ombre (bas-droite seulement)
-            elif d > CR - 1.6 and u + v < -9: lv = 4 + band                   # haut-gauche : pas de contour, la touffe se fond
-            elif u + v < -7: lv = 5 + (1 if (u + v < -12 and band >= 0) else 0)
-            elif u + v > 9: lv = 3 + (band if band < 0 else 0)
-            px_[x, y] = max(2, min(6, lv))
+            if not cano(x, y): continue
+            if any(not cano(x + dx, y + dy) for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))): px_[x, y] = 1; continue
+            r = TEX[y % 16][x % 16]
+            if plane_front(x, y):
+                lv = FRT[r]
+                if not plane_front(x, y - 1): lv = 2                         # liseré sombre : arete entre les deux plans
+            else:
+                lv = TOPT[r]
+                if x >= CX + 48: lv = max(2, lv - 1)                         # cote droit dans l'ombre (lumiere a gauche)
+                elif x < CX - 70 and lv < 6: lv += 0
+            px_[x, y] = lv
     for y in range(H_):                                                    # 3) porte et cadre
         for x in range(W_):
             inner, outer = arch(x, y)
