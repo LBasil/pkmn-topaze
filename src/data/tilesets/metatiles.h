@@ -333,3 +333,6 @@ const u32 gMetatileAttributes_GeneralHematown[] = INCBIN_U32("data/tilesets/prim
 
 const u16 gMetatiles_SaffronHematown[] = INCBIN_U16("data/tilesets/secondary/saffron_hematown/metatiles.bin");
 const u32 gMetatileAttributes_SaffronHematown[] = INCBIN_U32("data/tilesets/secondary/saffron_hematown/metatile_attributes.bin");
+
+const u16 gMetatiles_CeruleanGymTree[] = INCBIN_U16("data/tilesets/secondary/cerulean_gym_tree/metatiles.bin");
+const u32 gMetatileAttributes_CeruleanGymTree[] = INCBIN_U32("data/tilesets/secondary/cerulean_gym_tree/metatile_attributes.bin");

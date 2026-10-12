@@ -1274,3 +1274,14 @@ const struct Tileset gTileset_SaffronHematown =
     .metatileAttributes = gMetatileAttributes_SaffronHematown,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_CeruleanGymTree =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_CeruleanGymTree,
+    .palettes = gTilesetPalettes_CeruleanGymTree,
+    .metatiles = gMetatiles_CeruleanGymTree,
+    .metatileAttributes = gMetatileAttributes_CeruleanGymTree,
+    .callback = NULL,
+};

@@ -142,7 +142,7 @@ D['th5'] = chunk(10, 11, 5, 6, 3, 28, 'cabane 5')
 D['th6'] = chunk(35, 11, 5, 6, 14, 28, 'cabane 6')
 D['center'] = chunk(4, 3, 4, 4, 12, 13, 'centre')
 D['mart'] = chunk(3, 11, 4, 4, 33, 20, 'boutique')
-D['gym'] = chunk(19, 7, 6, 5, 27, 12, 'arene')
+D['gym'] = [(30, 16)]                                     # v13 : l'arene est un ARBRE GEANT (art procedural, voir plus bas) ; seule la porte (warp) reste
 print('portes detectees', D)
 # ponts de corde (rangee de plateforme = y 4 en haut, y 31 en bas)
 def bridge(x0, x1, y):
@@ -399,11 +399,97 @@ for (x, y) in list(G):
     if c in OPEN or c in OCC: continue
     edge = any(((x + a, y + b) in OPEN) for a in (-1, 0, 1) for b in (-1, 0, 1))
     m = rnd.choice((587, 588, 14, 15)) if edge else rnd.choice((198, 199, 198, 199, 198))
+    if (x, y + 1) in OPEN or ((x, y + 1) in OCC and not (G.get((x, y + 1), 1) & 0xc00)): m = 595          # v13 : pied d'arbre (tronc) sur toute lisiere qui donne au sud sur une clairiere
     G[c] = remap(0x400 | m)
 for c in list(GROUND):
     if c not in OPEN: del GROUND[c]
 
 # ------------------------------------------------------------------ placement de l'art
+
+# ------------------------------------------------------------------ v13 : l'arene = ARBRE GEANT (176x128 px = 11x8 cases, x 25..35, y 9..16, porte en (30,16))
+# Forme sur une grille de noeuds de 8 px, rendue par champ bilineaire (comme le lac de lave de Pyropia) : les tuiles se dedupliquent.
+TREE_PAL = [p for p in (9, 10, 11, 12) if p not in used][0]
+TP = [(0, 0, 0), (12, 30, 18), (22, 72, 34), (38, 110, 46), (66, 152, 62), (112, 196, 82), (170, 232, 118), (48, 28, 22), (86, 54, 34), (126, 84, 54),
+      (172, 124, 84), (16, 10, 14), (255, 206, 120), (30, 84, 62), (222, 72, 138), (255, 188, 218)]
+# 1 contour | 2-6 feuillage (sombre -> clair) | 7-10 ecorce | 11 dedans | 12 lueur | 13 ombre | 14-15 fleurs de tourmaline
+GT_X0, GT_Y0, GT_W, GT_H = 25, 9, 11, 8
+LOBES = [(88, 38, 35), (52, 46, 26), (124, 46, 26), (27, 57, 19), (149, 57, 19), (67, 22, 22), (109, 22, 22), (88, 54, 29), (40, 36, 15), (136, 36, 15)]      # (cx, cy, r) en pixels
+def in_can(x, y): return any((x - cx) ** 2 + (y - cy) ** 2 <= r * r for cx, cy, r in LOBES)
+def seg_d(x, y, ax, ay, bx, by):
+    dx, dy = bx - ax, by - ay; t = max(0, min(1, ((x - ax) * dx + (y - ay) * dy) / float(dx * dx + dy * dy)))
+    return math.hypot(x - (ax + t * dx), y - (ay + t * dy))
+ROOTS = [((66, 112), (30, 126), 6.5, 2.5), ((110, 112), (146, 126), 6.5, 2.5), ((64, 104), (44, 118), 4.5, 2), ((112, 104), (132, 118), 4.5, 2), ((74, 118), (60, 127), 5, 2.5), ((102, 118), (116, 127), 5, 2.5)]
+def in_trk(x, y):
+    if y < 66 or y > 127: return False
+    hw = 22 + max(0, y - 100) * 0.55                                       # fut de 44 px, evase vers le pied
+    if abs(x - 88) <= hw: return True
+    for (ax, ay), (bx, by), r0, r1 in ROOTS:
+        dx, dy = bx - ax, by - ay; t = max(0, min(1, ((x - ax) * dx + (y - ay) * dy) / float(dx * dx + dy * dy)))
+        if seg_d(x, y, ax, ay, bx, by) <= r0 + (r1 - r0) * t: return True
+    return False
+_r8 = random.Random(1313)
+LN = [[_r8.random() for _ in range(8)] for _ in range(8)]; CN = [_r8.random() for _ in range(8)]
+def can_q(qx, qy):
+    """niveau (3..5) du quart 8x8 (qx, qy) : lumiere en haut a gauche de chaque lobe"""
+    cx_, cy_ = qx * 8 + 4, qy * 8 + 4
+    best = min(LOBES, key=lambda l: ((cx_ - l[0]) ** 2 + (cy_ - l[1]) ** 2) / (l[2] * l[2]))
+    d = -((cx_ - best[0]) * 0.7 + (cy_ - best[1]) * 0.7) / best[2]
+    return max(3, min(5, int(3.9 + 1.1 * d)))
+def trk_q(qx): return 10 - min(3, max(0, (qx * 8 + 4 - 66) // 12))      # gauche clair -> droite sombre
+def arch(px, py):
+    """porte : demi-cercle de 16 px (x 80..95) sur 28 px de haut, cadre de 4 px"""
+    cx, cy = 88, 108
+    def ins(r, x0, x1):
+        if py >= cy: return x0 <= px < x1 and py < 128
+        return (px - cx + 0.5) ** 2 + (py - cy + 0.5) ** 2 <= r * r
+    return ins(8, 80, 96), ins(12, 76, 100)
+def knot(px, py, cx, cy): return (px - cx) ** 2 + (py - cy) ** 2 <= 20
+BLOOMS = [(44, 24), (96, 14), (126, 26), (30, 60), (146, 58), (80, 62), (112, 64)]
+def tree_img():
+    W_, H_ = GT_W * 16, GT_H * 16
+    im = Image.new('P', (W_, H_), 0); im.putpalette([c for p in TP for c in p]); px_ = im.load()
+    def cano(x, y): return 0 <= x < W_ and 0 <= y < H_ and in_can(x, y)
+    def trk(x, y): return 0 <= x < W_ and 0 <= y < H_ and in_trk(x, y) and not in_can(x, y)
+    for y in range(H_):
+        for x in range(W_):
+            if cano(x, y):
+                edge = any(not cano(x + dx, y + dy) for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))
+                low = not cano(x, y + 3) and not cano(x, y + 2) and cano(x, y - 1)                 # bord inferieur : sous-bois sombre
+                lv = can_q(x // 8, y // 8) + (LN[y % 8][x % 8] - 0.5) * 1.8 - (0.9 if low else 0)
+                px_[x, y] = 1 if edge else max(2, min(6, int(lv + 0.5)))
+            elif trk(x, y):
+                edge = any(not (trk(x + dx, y + dy) or cano(x + dx, y + dy)) for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))
+                lv = trk_q(x // 8) - (0.8 if y > 112 and abs(x - 88) > 34 else 0) + (CN[x % 8] - 0.5) * 1.5 + (LN[y % 8][x % 8] - 0.5) * 0.4
+                px_[x, y] = 7 if edge else max(7, min(10, int(lv + 0.5)))
+    for y in range(H_):                                                    # porte, cadre, fenetres rondes
+        for x in range(W_):
+            inner, outer = arch(x, y)
+            if inner: px_[x, y] = 12 if y >= 124 else 11
+            elif outer and y >= 96: px_[x, y] = 10 if x < 88 else 8
+    for (bx, by) in BLOOMS:                                                # fleurs de tourmaline dans le feuillage
+        if cano(bx, by) and cano(bx + 2, by + 1) and px_[bx, by] > 1:
+            px_[bx, by] = 15; px_[bx + 1, by] = 14; px_[bx, by + 1] = 14; px_[bx + 2, by + 1] = 14
+    for y in range(H_ - 8, H_):                                            # ombre au pied
+        for x in range(W_):
+            if px_[x, y] == 0 and ((x - 88) / 92.0) ** 2 + ((y - 127) / 6.0) ** 2 <= 1 and (x + y) % 2 == 0: px_[x, y] = 13
+    return im
+GTREE = tree_img()
+_bg = Image.new('RGB', GTREE.size, (110, 190, 160)); _m = Image.new('L', GTREE.size); _m.putdata([255 if v else 0 for v in GTREE.getdata()]); _bg.paste(GTREE.convert('RGB'), mask=_m); _bg.resize((GTREE.width * 4, GTREE.height * 4), Image.NEAREST).save('/tmp/gtree.png')
+def art_meta_t(tiles4, gid):
+    key = (tuple(tiles4), gid, 'T')
+    if key not in ART_META:
+        base = ents_of(gid)[:4]
+        SEC_ENT.append(base + [('T', t) for t in tiles4]); SEC_ATT.append(0)
+        ART_META[key] = len(SEC_ENT) - 1
+    return ART_META[key]
+GT_CELLS = {}
+for j in range(GT_H):
+    for i in range(GT_W):
+        cim = GTREE.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))
+        if not any(cim.getdata()): continue
+        claim(GT_X0 + i, GT_Y0 + j, 1, 1, 'arbre geant'); OPEN.discard((GT_X0 + i, GT_Y0 + j))
+        GT_CELLS[(GT_X0 + i, GT_Y0 + j)] = (slice_tiles(cim), (198 if (i + j) % 2 else 199) if j <= 4 else GRASS)
+print('arbre geant : cases', len(GT_CELLS), ', tuiles art', len(ART_T))
 MONO = monolith(); HOLE = hole(); GROT = grotto()
 rect(22, 18, 24, 20, False)
 art_block(MONO, 3, 3, 22, 18, 'monolithe')
@@ -477,6 +563,9 @@ for c, (t4, gid) in sorted(ARTPLACE.items()):
     mid = 640 + art_meta(t4, gid)
     walk = (c == GROT_DOOR) or (c in HOLE_CELLS)
     G[c] = (0x3000 if walk else 0x400) | mid
+for c, (t4, gid) in sorted(GT_CELLS.items()):
+    mid = 640 + art_meta_t(t4, gid)
+    G[c] = (0x3000 if c == D['gym'][0] else 0x400) | mid
 for k, c in SIGNS.items(): G[c] = remap(0x400 | 3)
 # ---- sentiers : sable d'Emeraude (autotuile, comme la Route 4 Est) ; prairies : fleurs
 PATHC = {c for c in WAY if c in OPEN and c not in OCC and c not in ARTPLACE and c not in WATERONLY and c not in BRIDGEC and not (G[c] & 0xc00)}
@@ -560,7 +649,7 @@ json.dump({'grot_door': GROT_DOOR, 'hole': HOLE_CELLS}, open('/tmp/tourmalia_mis
 NT = len(CT)
 assert NT + len(ART_T) <= 384, ('trop de tuiles', NT, len(ART_T))
 assert len(SEC_ENT) <= 384, len(SEC_ENT)
-SEC_ENT = [[((640 + NT + q[1]) | ((ART_PAL if q[0] == 'A' else WPAL_ID) << 12)) if isinstance(q, tuple) else q for q in e] for e in SEC_ENT]
+SEC_ENT = [[((640 + NT + q[1]) | (({'A': ART_PAL, 'T': TREE_PAL}.get(q[0], WPAL_ID)) << 12)) if isinstance(q, tuple) else q for q in e] for e in SEC_ENT]
 src_png = Image.open(EM + 'tilesets/secondary/fortree/tiles.png')
 assert src_png.width == 128
 rows = (NT + len(ART_T) + 15) // 16
@@ -574,7 +663,7 @@ open(SEC + 'metatiles.bin', 'wb').write(b''.join(struct.pack('<8H', *e) for e in
 open(SEC + 'metatile_attributes.bin', 'wb').write(b''.join(struct.pack('<I', a) for a in SEC_ATT))
 for i in range(16):
     writepal(SEC + 'palettes/%02d.pal' % i, PALS_S[i]); writepal(PRI + 'palettes/%02d.pal' % i, PALS_P[i])
-writepal(SEC + 'palettes/%02d.pal' % ART_PAL, PAL); writepal(SEC + 'palettes/%02d.pal' % WPAL_ID, WPAL)
+writepal(SEC + 'palettes/%02d.pal' % ART_PAL, PAL); writepal(SEC + 'palettes/%02d.pal' % WPAL_ID, WPAL); writepal(SEC + 'palettes/%02d.pal' % TREE_PAL, TP)
 shutil.copy(EM + 'tilesets/primary/general/tiles.png', PRI + 'tiles.png')
 shutil.copy(EM + 'tilesets/primary/general/metatiles.bin', PRI + 'metatiles.bin')
 open(PRI + 'metatile_attributes.bin', 'wb').write(b''.join(struct.pack('<I', conv(struct.unpack('<H', patt[i * 2:i * 2 + 2])[0])) for i in range(len(patt) // 2)))
