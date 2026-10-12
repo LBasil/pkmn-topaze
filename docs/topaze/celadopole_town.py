@@ -329,11 +329,27 @@ for (x, y) in P2:
     G[(x, y)] = 0x400 | (base[2] if left else base[3] if right else base[x % 2])
 print('troncs', len(TRUNK))
 assert NEED | NEED_GATE <= reach(), 'acces perdu apres les troncs'
+# ------------------------------------------------------------------ v2 : retouches APRES tous les tirages (rien d'autre ne bouge)
+# 1) moins de fleurs rouges (demande de Basil, 12/10) : on n'en garde qu'environ 4 sur 10 (tirage separe)
+rx_ = random.Random(1605)
+for c in sorted(FLW):
+    if rx_.random() < 0.6: FLW.discard(c)
+print('fleurs gardees', len(FLW))
+# 2) gros bonhomme de neige 2x3 (collision, sprite entier) sur la place a l'est de la fontaine, le long de l'avenue
+SNOW_AT = (24, 21)
+SNOW_CELLS = [(SNOW_AT[0] + i, SNOW_AT[1] + j) for j in range(3) for i in range(2)]
+assert all(c not in OCC and c not in WAY and c not in KEEP and c not in BLK and c not in OBJ_CELLS for c in SNOW_CELLS), 'bonhomme de neige : emplacement pris'
+assert any((SNOW_AT[0] + i, SNOW_AT[1] + 3) in WAY for i in (0, 1)), 'bonhomme de neige : rien devant'
+assert NEED | NEED_GATE <= reach(set(SNOW_CELLS)), 'bonhomme de neige : acces perdu'
+for j in range(3):
+    for i in range(2): BLK[(SNOW_AT[0] + i, SNOW_AT[1] + j)] = ('snow', i, j)
+FLW -= set(SNOW_CELLS)
+assert NEED | NEED_GATE <= reach(), 'acces perdu apres le bonhomme de neige'
 # ------------------------------------------------------------------ art procedural
 PAL = [(0, 0, 0), (52, 62, 96), (206, 216, 232), (188, 200, 222), (150, 166, 198), (240, 246, 255), (96, 112, 160), (140, 160, 196), (176, 196, 226), (110, 122, 150),
        (80, 92, 126), (130, 146, 178), (226, 234, 248), (170, 184, 210), (120, 136, 168), (66, 78, 112)]
 PAL_C = [(0, 0, 0), (52, 70, 120), (150, 190, 232), (206, 230, 250), (240, 250, 255), (255, 255, 255), (176, 240, 255), (70, 50, 130), (112, 86, 190),
-         (168, 140, 232), (214, 204, 252), (70, 86, 124), (232, 120, 176), (170, 186, 214), (96, 110, 146), (255, 246, 200)]   # quartz-glace, coeur d'amethyste discret (7-10)
+         (168, 140, 232), (214, 204, 252), (70, 86, 124), (240, 140, 40), (170, 186, 214), (96, 110, 146), (214, 64, 72)]   # quartz-glace, coeur d'amethyste discret (7-10) ; 12 = carotte, 15 = echarpe du bonhomme de neige (v2)
 def newimg(w, h): return Image.new('P', (w, h), 0)
 def prism(d, x, base, w, h):
     half = max(2, w // 2); top = base - h; sh = top + max(3, half + 1)
@@ -361,6 +377,31 @@ def formation():
     d.rectangle((3, 26, 28, 30), fill=14, outline=1); d.line([(4, 27), (27, 27)], fill=13); d.rectangle((4, 29, 27, 29), fill=11)
     prism(d, 7, 27, 7, 12); prism(d, 25, 27, 6, 10); prism(d, 12, 28, 8, 17); prism(d, 20, 28, 8, 20); prism(d, 16, 29, 10, 26)
     for (x, y) in ((15, 8), (19, 13), (10, 18), (22, 17)): d.point((x, y), fill=6)
+    return im
+def snowman():
+    """gros bonhomme de neige 2x3 (32x48) : trois boules ombrees (lumiere en haut a gauche), chapeau haut-de-forme, nez carotte (12), echarpe rouge (15), bras-branches"""
+    im = newimg(32, 48); d = ImageDraw.Draw(im); px = im.load()
+    d.ellipse((2, 42, 30, 48), fill=11)                                      # ombre au sol
+    def sphere(cx, cy, r):
+        for y in range(int(cy - r - 1), int(cy + r + 2)):
+            for x in range(int(cx - r - 1), int(cx + r + 2)):
+                if not (0 <= x < 32 and 0 <= y < 48): continue
+                dx, dy = (x + .5 - cx) / r, (y + .5 - cy) / r; q = dx * dx + dy * dy
+                if q > 1: continue
+                if q > (1 - 1.15 / r) ** 2: px[x, y] = 1; continue          # contour
+                nz = math.sqrt(max(0, 1 - q)); lit = -0.55 * dx - 0.65 * dy + 0.6 * nz
+                px[x, y] = 5 if lit > 0.78 else 4 if lit > 0.42 else 3 if lit > 0.05 else 2
+    sphere(16, 36, 11.5); sphere(16, 24, 9); sphere(16, 13, 7.2)
+    for (x, y) in ((16, 25), (16, 29), (16, 33)): d.rectangle((x - 1, y, x, y + 1), fill=1)       # boutons de charbon
+    d.line([(8, 24), (4, 21), (1, 17)], fill=1); d.line([(3, 20), (1, 21)], fill=1); d.line([(2, 18), (4, 17)], fill=1)       # bras gauche + brindilles
+    d.line([(24, 24), (28, 21), (31, 18)], fill=1); d.line([(29, 20), (31, 21)], fill=1); d.line([(30, 19), (29, 17)], fill=1)  # bras droit
+    d.rectangle((9, 19, 23, 22), fill=15, outline=1); d.line([(10, 20), (22, 20)], fill=15); d.rectangle((20, 22, 23, 29), fill=15, outline=1)   # echarpe + pan
+    d.line([(21, 23), (21, 28)], fill=1)
+    for (x, y) in ((13, 11), (14, 11), (18, 11), (19, 11)): d.point((x, y), fill=1)                     # yeux
+    d.polygon([(16, 13), (23, 14), (16, 15)], fill=12, outline=1)                                       # nez carotte
+    for (x, y) in ((11, 16), (12, 17), (14, 18), (16, 18), (18, 18), (20, 17)): d.point((x, y), fill=1)  # sourire de cailloux
+    d.rectangle((11, 0, 21, 5), fill=1); d.line([(12, 1), (12, 4)], fill=14); d.rectangle((11, 4, 21, 4), fill=15)    # chapeau : calotte, reflet, ruban
+    d.rectangle((8, 5, 24, 7), fill=1); d.line([(9, 6), (23, 6)], fill=14)                                # bord
     return im
 def path_tile(mask, var=0):
     """pave de 16x16 : dalles en appareil decale ; mask = (N,E,S,W) True si la voisine est aussi un pave (ou un batiment) ; bord erode (la nature reprend) ;
@@ -403,6 +444,10 @@ for v in range(3):
     s_ = small(v); assert nonempty(s_, (0, 0, 16, 8)) >= 4 and nonempty(s_, (0, 8, 16, 16)) >= 20, ('cristal incomplet', v)
 F_ = formation()
 for (i, j) in ((0, 0), (1, 0), (0, 1), (1, 1)): assert nonempty(F_, (i * 16, j * 16, i * 16 + 16, j * 16 + 16)) >= 24, ('formation incomplete', i, j)
+SN_ = snowman()
+for j in range(3):
+    for i in range(2): assert nonempty(SN_, (i * 16, j * 16, i * 16 + 16, j * 16 + 16)) >= 60, ('bonhomme de neige incomplet', i, j)      # haut, milieu ET bas remplis
+assert nonempty(SN_, (0, 0, 32, 8)) >= 40 and nonempty(SN_, (0, 40, 32, 48)) >= 60, 'bonhomme de neige : chapeau ou base manquants'
 NEWT = []; NEWE = []; NEWA = []
 def add_tile(t):
     t = tuple(t)
@@ -429,9 +474,11 @@ for c in sorted(WAY):
     ncell[k] += 1
 SM = [slice4(small(v)) for v in range(3)]; FM = {}
 for (i, j) in ((0, 0), (1, 0), (0, 1), (1, 1)): FM[(i, j)] = slice4(F_.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)))
+SNM = {(i, j): slice4(SN_.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))) for j in range(3) for i in range(2)}
 for c, val in BLK.items():
     if val[0] == 'big': G[c] = 0x400 | art_meta(FM[(val[1], val[2])], G[c] & 0x3ff, False, 'B')
     elif val[0] == 'cry': G[c] = 0x400 | art_meta(SM[val[1]], G[c] & 0x3ff, False, 'B')
+    elif val[0] == 'snow': G[c] = 0x400 | art_meta(SNM[(val[1], val[2])], G[c] & 0x3ff, False, 'B')
     elif val[0] == 'bush': G[c] = 0x400 | 5
     elif val[0] == 'sign': G[c] = 0x400 | 2
 for c in FLW: G[c] = 0x3000 | 4
