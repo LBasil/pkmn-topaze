@@ -37,15 +37,16 @@ W.append(warp(D['safari'][1][0], D['safari'][1][1], orig[0]['dest_map'], orig[0]
 W.append(warp(D['gym'][1][0], D['gym'][1][1], orig[4]['dest_map'], orig[4]['dest_warp_id']))          # v7 : la porte de l'arene fait 2 cases de large (arche du monument)
 d['warp_events'] = W; d['connections'] = []
 # ---- PNJ, panneaux, objet cache
-POS = {'FAT_MAN': 'erik', 'SLOWPOKE': 'pen_slowpoke', 'VOLTORB': 'pen_voltorb', 'YOUNGSTER': 'youngster', 'CHANSEY': 'pen_chansey', 'LITTLE_BOY': 'littleboy', 'LAPRAS': 'pen_lapras',
-       'OLD_MAN_1': 'oldman', 'VAR_0': 'pen_fossil', 'KANGASKHAN': 'pen_kangaskhan', 'BUG_CATCHER': 'tutor', 'LASS': 'lass'}
+RM = {'SLOWPOKE', 'VOLTORB', 'CHANSEY', 'LAPRAS', 'VAR_0', 'KANGASKHAN'}                                  # v8c : enclos du zoo supprimes (animaux + panneaux)
+d['object_events'] = [o for o in d['object_events'] if o['graphics_id'].replace('OBJ_EVENT_GFX_', '') not in RM]
+d['bg_events'] = [b for b in d['bg_events'] if not (b['type'] == 'sign' and b['script'].split('_')[-1] in ('VoltorbSign', 'SlowpokeSign', 'ChanseySign', 'KangaskhanSign', 'FossilMonSign', 'LaprasSign'))]
+POS = {'FAT_MAN': 'erik', 'YOUNGSTER': 'youngster', 'LITTLE_BOY': 'littleboy', 'OLD_MAN_1': 'oldman', 'BUG_CATCHER': 'tutor', 'LASS': 'lass'}
 trees = iter(['tree1', 'tree2', 'tree3', 'tree4'])
 for o in d['object_events']:
     g = o['graphics_id'].replace('OBJ_EVENT_GFX_', '')
     key = next(trees) if g == 'CUT_TREE' else POS[g]
     o['x'], o['y'] = N[key]
-SG = {'CitySign': 'city', 'SafariZoneSign': 'safarizone', 'GymSign': 'gym', 'WardensHomeSign': 'warden', 'VoltorbSign': 'pen_voltorb', 'SlowpokeSign': 'pen_slowpoke', 'ChanseySign': 'pen_chansey',
-      'KangaskhanSign': 'pen_kangaskhan', 'FossilMonSign': 'pen_fossil', 'LaprasSign': 'pen_lapras', 'SafariGameSign': 'safarigame'}
+SG = {'CitySign': 'city', 'SafariZoneSign': 'safarizone', 'GymSign': 'gym', 'WardensHomeSign': 'warden', 'SafariGameSign': 'safarigame'}
 for b in d['bg_events']:
     if b['type'] == 'sign': b['x'], b['y'] = S[SG[b['script'].split('_')[-1]]]
     elif b['type'] == 'hidden_item': b['x'], b['y'] = N['hidden']

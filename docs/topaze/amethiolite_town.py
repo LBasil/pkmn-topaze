@@ -78,6 +78,7 @@ def amethyste(c):
     return c
 for P in (PALS_P, PALS_S):
     for i in range(16): P[i] = [P[i][0]] + [amethyste(x) for x in P[i][1:]]
+PALS_S[7] = [PALS_S[7][0]] + [rgb_(274, 0.74, 0.70) if min(x) >= 240 and max(x) - min(x) < 8 else x for x in PALS_S[7][1:]]       # v8c : le blanc pur du pave (arcs) devient lilac pale
 
 # ------------------------------------------------------------------ plan (48 x 40, comme Parmanie d'origine : 3 sorties - sud Route 19, ouest Route 18, est Route 15)
 W, H = 48, 32
@@ -137,8 +138,8 @@ for y in range(H):
 for c in LAKE: assert c not in OCC, ('plaza sur un batiment', c)
 PLAZA = LAKE; LAKE = set()                        # v8 : plus d'eau ; la plaza est praticable (relief : voir plus bas)
 # ---- enclos (zoo du Gardien) : 4x4, haie d'arbres, 2x2 de pelouse ; un panneau devant
-PENS = {'voltorb': (16, 8), 'chansey': (28, 8), 'fossil': (9, 18)}                     # 3 enclos ; chacun abrite 2 exposants (voir HOST)
-HOST = {'voltorb': 'voltorb', 'slowpoke': 'voltorb', 'chansey': 'chansey', 'kangaskhan': 'chansey', 'fossil': 'fossil', 'lapras': 'fossil'}
+PENS = {}                                  # v8c : enclos supprimes (retour Basil) ; ancien plan : {'voltorb': (16, 8), 'chansey': (28, 8), 'fossil': (9, 18)}                     # 3 enclos ; chacun abrite 2 exposants (voir HOST)
+HOST = {}
 for k, (px, py) in PENS.items(): claim(px, py, 4, 4, 'enclos ' + k)
 # ---- voies : avenue de la porte, anneau autour du lac, routes ouest/est/sud, liaisons aux portes
 RING = []
@@ -260,7 +261,7 @@ TREE = (487, 468)                                                # arbres d'Emer
 TREES = set()
 GROUND = {}
 for (x, y) in sorted(OPEN):
-    if (x, y) in WAY: G[(x, y)] = remap(0x3000 | rnd.choice(PAVE)); GROUND[(x, y)] = PAVE[0]
+    if (x, y) in WAY: rnd.choice(PAVE); G[(x, y)] = remap(0x3000 | PAVE[0]); GROUND[(x, y)] = PAVE[0]          # v8c : un seul pave (les variantes portaient des marques blanches/grises)
     else: G[(x, y)] = remap(0x3000 | GRASS); GROUND[(x, y)] = GRASS
 # ---- plaza (niveau 0) : meme pave, palette 9 = teinte plus profonde / rosee (aucune tuile en plus)
 _pm = remap(0x3000 | PAVE[0]) & 0x3ff; _pe = SEC_ENT[_pm - 640]; _pp = {q >> 12 for q in _pe[:4]}; assert len(_pp) == 1, _pp
@@ -278,7 +279,7 @@ def tinted(pid, pal=9):
         SEC_ENT.append([(q & 0xfff) | (pal << 12) for q in SEC_ENT[m - 640]]); SEC_ATT.append(SEC_ATT[m - 640]); TINT[(pid, pal)] = 640 + len(SEC_ENT) - 1
     return TINT[(pid, pal)]
 for c in sorted(PLAZA):
-    G[c] = 0x3000 | tinted(PAVE[(c[0] * 3 + c[1]) % len(PAVE)]); GROUND[c] = -(tinted(PAVE[0]) - 639)
+    G[c] = 0x3000 | tinted(PAVE[0]); GROUND[c] = -(tinted(PAVE[0]) - 639)
 SEA = LAKE
 BEACH = {(x, y) for (x, y) in OPEN if any((x + a, y + b) in LAKE for a in range(-1, 2) for b in range(-1, 2))}
 RAIL = {c for c in BEACH}
@@ -482,7 +483,7 @@ plaza_stairs('N', (24, 12)); plaza_stairs('S', (24, 21)); plaza_stairs('W', (16,
 # pave de la promenade (niveau 1) : teinte plus claire (palette 11)
 for c in sorted(LV):
     if LV[c] == 1 and c in WAY and GROUND.get(c) == PAVE[0] and G[c] & 0xc00 == 0 and c not in OCC:
-        G[c] = 0x3000 | tinted(PAVE[(c[0] * 5 + c[1] * 3) % len(PAVE)], 11); GROUND[c] = -(tinted(PAVE[0], 11) - 639)
+        G[c] = 0x3000 | tinted(PAVE[0], 11); GROUND[c] = -(tinted(PAVE[0], 11) - 639)
 # falaises, rebords
 CLIFF = {}
 for c in sorted(LV):
@@ -704,7 +705,7 @@ for c in [(AX + i, AY + j) for j in range(AH) for i in range(AW)]:
     assert c not in PENCELLS
 for c in [(x, y) for x in range(14, 20) for y in (28, 29) if (x, y) != SIGNS['gym']]:
     assert c not in OBJ0, c
-    G[c] = remap(0x3000 | rp.choice(PAVE)); GROUND[c] = PAVE[0]; OPEN.add(c); WAY.add(c)
+    rp.choice(PAVE); G[c] = remap(0x3000 | PAVE[0]); GROUND[c] = PAVE[0]; OPEN.add(c); WAY.add(c)
 ARENA_DOORS = [(AX + 3, AY + 5), (AX + 4, AY + 5)]
 im_a = AA.full(); GB = ents_of(PAVE[0])[:4]
 for j in range(AH):
@@ -723,7 +724,7 @@ assert 512 + len(PT) <= 640
 # ---- 3. objets deplaces : panneau de l'arene, arbre a couper
 assert D['gym'] == ARENA_DOORS and SIGNS['gym'] == (16, 28), (D['gym'], SIGNS['gym'])
 OBJ1 = {tuple(v) for v in NPC.values()} | {tuple(v) for v in SIGNS.values()}
-PROPS = {}
+PROPS = {}; FILLED = set()
 # ---- 3c. PNJ / panneaux devenus inaccessibles par le relief ou l'arene : on les rapproche de la case atteignable la plus proche
 def _adj_ok(c, reach): return any((c[0] + a_, c[1] + b_) in reach for a_, b_ in ((0, 1), (0, -1), (1, 0), (-1, 0)))
 def _fix(dic, key, is_sign):
@@ -743,7 +744,7 @@ for k_ in list(NPC):
 for k_ in list(SIGNS): _fix(SIGNS, k_, True)
 # ---- 3b. mobilier urbain (lampadaires-cristaux, jardinieres, bancs) : casse les grandes bandes de pave vides ; aucune case de passage n'est perdue
 IMG_PROP = {'lamp': AA.lamp(), 'plant0': AA.planter(0), 'plant1': AA.planter(1), 'benchS': AA.bench(False), 'benchN': AA.bench(True)}
-PROP_META = {k: 640 + art_meta(slice_tiles(v), PAVE[0]) for k, v in IMG_PROP.items()}
+PROP_T = {k: slice_tiles(v) for k, v in IMG_PROP.items()}
 PROPS = {}
 def objs_ok(reach): return all(_adj_ok(o, reach) for o in OBJ1 if o not in PENCELLS)
 def prop_ok(c):
@@ -755,7 +756,7 @@ def prop_ok(c):
 def put_prop(kind, target, r=3, exact=False):
     for dd, c in sorted((abs(c[0] - target[0]) + abs(c[1] - target[1]), c) for c in WAY if abs(c[0] - target[0]) + abs(c[1] - target[1]) <= (0 if exact else r)):
         if prop_ok(c) or (exact and c in WAY and c not in OBJ1 and c not in PROPS):
-            PROPS[c] = kind; G[c] = 0x400 | PROP_META[kind]; return c
+            PROPS[c] = kind; G[c] = 0x400 | (640 + art_meta(PROP_T[kind], GROUND.get(c, PAVE[0]))); return c
     print('mobilier : pas de place pres de', kind, target); return None
 for kind, tg, ex in (('lamp', (14, 28), True), ('lamp', (19, 28), True), ('plant0', (15, 28), True)):
     put_prop(kind, tg, exact=True)
@@ -780,8 +781,18 @@ for c in sorted(CLIFF):
         up = (c[0], c[1] - 1)
         if LV.get(up) == 2 and up in OPEN and put_crystal(up, rc.randrange(3)): nrim += 1
 print('cristaux :', len(CRY))
+# ---- enclos supprimes : les anciennes parcelles de pelouse redeviennent foret (pelouse loin des voies plantee d'arbres, lisiere irreguliere)
+rg = random.Random(4242); GF = set()
+for c in sorted(LV):
+    if LV[c] != 2 or GROUND.get(c) != GRASS or c in OCC or c in OBJ1 or c in PROPS or c in CRY or c in ARTPLACE or c in KEEP or raw_blocked(c) or c in USED: continue
+    if any((c[0] + a_, c[1] + b_) in WAY for a_ in (-1, 0, 1) for b_ in (-1, 0, 1)): continue
+    if rg.random() < 0.9:
+        base_ = strict_reach(OBJ1 | set(PROPS) | set(CRY) | GF)
+        if c in base_ and (base_ - {c}) <= strict_reach(OBJ1 | set(PROPS) | set(CRY) | GF | {c}) and objs_ok(strict_reach(OBJ1 | set(PROPS) | set(CRY) | GF | {c})):
+            tree_cell(c, rg.randrange(3)); GF.add(c)
+FILLED |= GF
+print('foret regagnee :', len(GF), 'arbres')
 # ---- 4. controles : tout est atteignable (PNJ et panneaux comptes comme obstacles), aucune poche, rien de perdu hors des zones remodelees
-FILLED = set()
 def pockets(ob):
     r_ = strict_reach(ob)
     return sorted(c for c in ((x, y) for y in range(H) for x in range(W)) if c not in r_ and not raw_blocked(c) and c not in PENCELLS and c not in ob)
@@ -817,6 +828,18 @@ if os.environ.get('AM_DUMP'):
             elif GROUND.get(c) == GRASS: r_ += ','
             else: r_ += '.'
         print('%2d  %s' % (y, r_))
+# ---- audit du contour du cratere : aucune fuite (deux cases praticables de niveaux differents ne se touchent que par un escalier), aucun trou dans la falaise
+LEAK = []; HOLE = []
+for c in LV:
+    for k, (a_, b_) in DIRS.items():
+        n_ = (c[0] + a_, c[1] + b_)
+        if n_ not in LV or LV[n_] >= LV[c]: continue
+        if not (G[c] & 0xc00) and not (G[n_] & 0xc00) and c not in STAIR: LEAK.append((c, n_))
+        if c not in CLIFF and c not in STAIR and (c in OCC and OCC[c] not in ('falaise', 'escalier') or True) and not (G[c] & 0xc00): HOLE.append((c, n_))
+print('contour : fuites', LEAK[:12], len(LEAK), '; trous', HOLE[:12], len(HOLE))
+HOLE2 = [c for c in LV if lows(c) and c not in CLIFF and c not in STAIR]
+print('contour : cases de rebord sans falaise :', [(c, OCC.get(c)) for c in HOLE2][:40], len(HOLE2))
+assert not LEAK, LEAK[:10]
 # ------------------------------------------------------------------ ecriture des tilesets
 used2 = {q >> 12 for e in SEC_ENT for q in e if not isinstance(q, tuple)}
 assert 8 not in used2, used2
