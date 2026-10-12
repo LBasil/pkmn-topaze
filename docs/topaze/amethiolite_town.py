@@ -69,6 +69,7 @@ def amethyste(c):
     """v7 (« vraiment amethyste ») : creme/olive des domes et du pave -> lilas MOYEN a violet profond (plus de pave quasi blanc) ; verts -> pelouse lilas / arbres indigo ; le rouge du Centre et le bleu de la Boutique restent"""
     h, l, s = hls_(c)
     if s < 0.02: return c
+    if (h < 28 or h > 335) and s > 0.25: return rgb_(316, l, min(0.9, s))       # v8 : toit du Centre Pokemon (rouge/saumon) -> rose toxique/magenta
     if 28 <= h <= 75: return rgb_(274, 0.10 + 0.60 * l, min(0.80, s * 1.5 + 0.30))
     if 75 < h <= 175:
         if s < 0.12: return rgb_(272, 0.14 + 0.62 * l, 0.28)
@@ -302,13 +303,13 @@ for ex_name, ex in EXITS.items():
             for y in (12, 16):
                 if (x, y) not in OCC and (x, y) not in LAKE: TREES.add((x, y)); OPEN.discard((x, y)); WAY.discard((x, y))
 # ---- enclos : haie d'arbres, pelouse a l'interieur
-PENCELLS = {}
+PENCELLS = {}; PENRING = {}; PENIN = {}
 for k, (px, py) in PENS.items():
     for j in range(4):
         for i in range(4):
             c = (px + i, py + j)
-            if i in (0, 3) or j in (0, 3): TREES.add(c)
-            else: G[c] = remap(0x3000 | GRASS); PENCELLS[c] = k
+            if i in (0, 3) or j in (0, 3): PENRING[c] = (k, i, j)           # v8 : cloture de pierre a poteaux de cristal (art), plus de haie d'arbres
+            else: G[c] = remap(0x3000 | GRASS); PENCELLS[c] = k; PENIN[c] = (k, i, j)
             OPEN.discard(c)
 # ------------------------------------------------------------------ art
 ART_T = []
@@ -492,10 +493,18 @@ for c in sorted(LV):
     elif 'E' in lw or 'W' in lw: img = AA.cliff_side('E' in lw, 'W' in lw)
     else: img = AA.cliff_lip()
     OCC[c] = 'falaise'; ARTPLACE[c] = (slice_tiles(img), GROUND.get(c, GRASS)); OPEN.discard(c); WAY.discard(c); CLIFF[c] = lw
-BOTART = {}
+BOTART = {}; SOLIDBOT = set()
 for c, kd in sorted(STAIR.items()):
     if c in OCC and OCC[c] not in ('cristal', 'mur de quai'): del STAIR[c]; continue
     OCC[c] = 'escalier'; ARTPLACE.pop(c, None); BOTART[c] = slice_tiles(AA.stair(kd)); WALKART.add(c)
+# ---- enclos du zoo : cloture (calque haut) + sol d'habitat (calque bas, solide : les animaux sont des PNJ)
+_fence = AA.pen_fence(); _floors = {k: AA.pen_floor(k) for k in PENS}
+for c, (k, i, j) in sorted(PENRING.items()):
+    piece = _fence.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))
+    if sum(1 for p_ in piece.getdata() if p_) < 4: G[c] = 0x400 | gmeta(GRASS); continue
+    ARTPLACE[c] = (slice_tiles(piece), GRASS)
+for c, (k, i, j) in sorted(PENIN.items()):
+    fl = _floors[k].crop(((i - 1) * 16, (j - 1) * 16, (i - 1) * 16 + 16, (j - 1) * 16 + 16)); BOTART[c] = slice_tiles(fl); SOLIDBOT.add(c)
 print('relief : niveaux', collections.Counter(LV.values()), '; falaises', len(CLIFF), '; marches', len(STAIR))
 rt = random.Random(77)
 for c in sorted(TREES):
@@ -509,7 +518,7 @@ for c, (t4, gid) in sorted(ARTPLACE.items()):
     mid = 640 + art_meta(t4, gid)
     G[c] = (0x3000 if c in WALKART else 0x400) | mid
 for c, t4 in sorted(BOTART.items()):                       # escaliers : dessin dans le calque du BAS (le joueur reste visible dessus)
-    SEC_ENT.append([('A', t) for t in t4] + list(EMPTY_TOP)); SEC_ATT.append(0); G[c] = 0x3000 | (640 + len(SEC_ENT) - 1)
+    SEC_ENT.append([('A', t) for t in t4] + list(EMPTY_TOP)); SEC_ATT.append(0); G[c] = (0x400 if c in SOLIDBOT else 0x3000) | (640 + len(SEC_ENT) - 1)
 # ------------------------------------------------------------------ PNJ, panneaux, objet cache (positions verifiees)
 # ---- remplissage demande par Basil : rectangles a combler d'arbres (jamais au prix d'un acces : portes, sorties, panneaux des enclos restent atteignables)
 FILL = [(4, 1, 19, 2), (28, 1, 46, 2), (2, 9, 7, 11), (42, 7, 46, 12), (14, 26, 18, 30), (29, 26, 34, 30), (38, 16, 46, 30), (43, 2, 46, 7), (2, 15, 8, 21), (2, 28, 15, 30), (35, 27, 38, 30), (37, 26, 38, 26)]

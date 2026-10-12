@@ -159,6 +159,43 @@ def stair(kind):
     d.line([(0, 0), (0, 15)] if kind in ('SD', 'ND') else [(0, 0), (15, 0)], fill=11); d.line([(15, 0), (15, 15)] if kind in ('SD', 'ND') else [(0, 15), (15, 15)], fill=11)
     return im
 
+# ---- v8 : enclos du zoo (4x4 cases = 64x64) : cloture de pierre a poteaux de cristal (calque haut, transparente) + sol d'habitat (calque bas, 32x32 au centre)
+def pen_fence():
+    im = newimg(64, 64); d = ImageDraw.Draw(im)
+    def post(x, y):                                                  # poteau : pilier de pierre + pointe de cristal ; (x, y) = bas du poteau
+        d.rectangle((x - 2, y - 9, x + 1, y), fill=13, outline=1); d.line([(x - 1, y - 8), (x - 1, y - 1)], fill=6)
+        d.polygon([(x - 2, y - 9), (x - 1, y - 13), (x, y - 13), (x + 1, y - 9)], fill=4, outline=1); d.point((x - 1, y - 11), fill=5)
+    def rail_h(x0, x1, y):
+        d.rectangle((x0, y - 6, x1, y - 5), fill=3); d.line([(x0, y - 6), (x1, y - 6)], fill=4); d.line([(x0, y - 3), (x1, y - 3)], fill=2); d.line([(x0, y - 2), (x1, y - 2)], fill=7)
+    def rail_v(x, y0, y1):
+        d.rectangle((x - 1, y0, x, y1), fill=3); d.line([(x - 1, y0), (x - 1, y1)], fill=4); d.line([(x + 1, y0), (x + 1, y1)], fill=11)
+    # cloture au centre de l'anneau de cases : haut y=14, bas y=60, cotes x=8 / x=56 ; porte au sud (passage x 27..37)
+    rail_h(8, 56, 14); rail_h(8, 26, 60); rail_h(38, 56, 60)
+    for x in (8, 24, 40, 56): post(x, 14)
+    for x in (8, 56): post(x, 60)
+    post(26, 60); post(38, 60)
+    for x in (8, 56): rail_v(x, 16, 58)
+    for x in (8, 56):
+        for y in (32, 46): post(x, y)
+    return im
+def pen_floor(theme):
+    im = newimg(32, 32); d = ImageDraw.Draw(im)
+    if theme == 'voltorb':                                           # dalles d'acier indigo, voyants roses
+        d.rectangle((0, 0, 31, 31), fill=8)
+        for k in (0, 16): d.line([(0, k), (31, k)], fill=7); d.line([(k, 0), (k, 31)], fill=7)
+        for (x, y) in ((4, 4), (20, 4), (4, 20), (20, 20)): d.point((x, y), fill=12); d.point((x + 6, y + 6), fill=15)
+        for k in (8, 24): d.line([(k, 1), (k, 14)], fill=9) if False else None
+    elif theme == 'chansey':                                         # prairie de lilas clair, bourgeons de cristal roses
+        d.rectangle((0, 0, 31, 31), fill=10)
+        for (x, y) in ((3, 3), (11, 8), (19, 3), (27, 9), (6, 17), (14, 21), (22, 15), (29, 24), (2, 28), (18, 27)): d.point((x, y), fill=5); d.point((x + 1, y), fill=5)
+        for (x, y) in ((8, 5), (24, 6), (4, 22), (20, 22), (13, 13)): d.polygon([(x, y), (x + 1, y - 2), (x + 2, y)], fill=12)
+    else:                                                            # fossile : roche grise, os blancs
+        d.rectangle((0, 0, 31, 31), fill=13)
+        for k in (0, 8, 16, 24): d.line([(0, k + 7), (31, k + 7)], fill=14)
+        d.arc((4, 6, 20, 22), 200, 340, fill=6); d.arc((6, 10, 22, 26), 200, 340, fill=6); d.line([(8, 24), (27, 12)], fill=6); d.ellipse((24, 9, 29, 14), outline=6)
+        for (x, y) in ((3, 3), (25, 24), (12, 28)): d.point((x, y), fill=14)
+    return im
+
 if __name__ == '__main__':
     import sys
     im = full(); im.putpalette([c for p in AP for c in p] + [0] * (768 - 48))
