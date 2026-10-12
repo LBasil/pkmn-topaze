@@ -645,6 +645,8 @@ for _b in (8, 9, 16, 17):
         ART_IDS['rib_%d_%d' % (_v, _b)] = art_meta(ctile4(('rib', _v), rib(_v)), _b, False, 'A')
         ART_IDS['talon_%d_%d' % (_v, _b)] = art_meta(ctile4(('talon', _v), talon(_v)), _b, False, 'B')
     ART_IDS['feather_%d' % _b] = art_meta(ctile4(('feather', 0), feather()), _b, False, 'B')
+    for (_i, _j) in SKM: ART_IDS['skull_%d_%d_%d' % (_i, _j, _b)] = art_meta(SKM[(_i, _j)], _b, False, 'A')
+    for _k in ('pole', 'sock'): ART_IDS['%s_%d' % (_k, _b)] = art_meta(ctile4((_k, 0), pole(_k)), _b, False, 'B')
 json.dump(ART_IDS, open('docs/topaze/apatia_art_ids.json', 'w'), indent=1)
 assert NMT + len(NEWE) <= 384 and NTL + len(NEWT) <= 384, (NMT + len(NEWE), NTL + len(NEWT))
 print('metatuiles', NMT + len(NEWE), '/384  tuiles', NTL + len(NEWT), '/384  variantes de pave', len(PT))

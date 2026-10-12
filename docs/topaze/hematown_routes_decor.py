@@ -1,6 +1,7 @@
 # ROUTES 5 / 6 / 7 (voisines de Hematown) v2 : DECOR (apres hematown_routes.py, apres apatia_town.py et celadopole_town.py qui exportent leurs ids de decor).
-#   Route 5 (Tourmalia)   : la foret d'arbres FR (grille reguliere de 2x2) est decoupee par des clairieres / baies irregulieres (herbe) ou se tient parfois un arbre isole decale de la grille.
-#   Route 6 (Apatia)     : nids de dragon, restes (cotes, plumes, griffes) et cristaux d'apatite sur l'herbe (decor d'Apatia, apatia_art_ids.json).
+#   Route 5 (Tourmalia)   : v3. Les deux bandes de sable (fermees par des barrieres, jamais atteintes) deviennent deux bosquets de tourmaline : pelouse, grands arbres ronds et amas de cristaux repris de la Route 24
+#                           (extraits de sa carte et re-poses sur n'importe quelle herbe), fleurs ; dans la foret, des amas de cristaux remplacent quelques arbres ; 2 arbres et quelques cristaux dans la zone de la pension.
+#   Route 6 (Apatia)     : v3. Cimetiere de dragon : squelette (crane + cotes) dans la prairie nord, nids d'oeufs, plumes, griffes, manches a air d'Apatia et cristaux d'apatite (apatia_art_ids.json).
 #   Route 7 (Bourg Quartz): cristaux de quartz-glace et bonhommes de neige (decor de la ville, celadopole_art_ids.json).
 # Jamais d'acces coupe (BFS sur les points importants : warps, PNJ, panneaux, bords de carte). Idempotent : part des cartes d'origine (route21_src/r5|r6|r7_orig.bin).
 # Lancer depuis la racine : PYTHONDONTWRITEBYTECODE=1 python3 docs/topaze/hematown_routes_decor.py
@@ -50,20 +51,136 @@ class Board:
         return out
 def spaced(c, pts, d): return all(max(abs(c[0] - q[0]), abs(c[1] - q[1])) >= d for q in pts)
 
-# ------------------------------------------------------------------ Route 6 : nids de dragon et restes
+# ------------------------------------------------------------------ extraction du decor de la Route 24 (arbres ronds, amas et eclats de tourmaline) -> metatuiles re-posables sur toute herbe
+def harvest24():
+    pm = open('data/tilesets/secondary/cerulean_pepite/metatiles.bin', 'rb').read()
+    ent = lambda m: struct.unpack('<8H', pm[(m - 640) * 16:(m - 640) * 16 + 16])
+    g24 = struct.unpack('<%dH' % (24 * 40), open('data/layouts/Route24/map.bin', 'rb').read()); idn = lambda x, y: g24[y * 24 + x] & 0x3ff
+    MID, BOT, OV = {792, 793, 796, 797, 800, 805, 806}, {794, 795, 798, 799, 801, 802, 803, 804}, set(range(775, 784))
+    trees = set(); clus = set()
+    for y in range(1, 39):
+        for x in range(23):
+            if idn(x, y) in MID and idn(x + 1, y) in MID and idn(x, y + 1) in BOT and idn(x + 1, y + 1) in BOT and idn(x, y - 1) in OV and idn(x + 1, y - 1) in OV:
+                trees.add(tuple(ent(idn(x + i, y + j))[4:8] for j in (-1, 0, 1) for i in (0, 1)))
+            for ids in ((784, 785, 786, 787), (788, 789, 790, 791)):
+                if (idn(x, y), idn(x + 1, y), idn(x, y + 1), idn(x + 1, y + 1)) == ids: clus.add(tuple(ent(m)[4:8] for m in ids))
+    shard = ent(807)[4:8]
+    assert len(trees) >= 1 and len(clus) == 2, (len(trees), len(clus))
+    return sorted(trees), sorted(clus), shard
+class Reg:                                  # nouvelles metatuiles du secondaire de la Route 5 : art de la Route 24 sur un fond d'herbe au choix
+    def __init__(s):
+        s.D = 'data/tilesets/secondary/cerulean_route5/'
+        for f in ('metatiles.bin', 'metatile_attributes.bin'): shutil.copy('data/tilesets/secondary/cerulean_pepite/' + f, s.D + f)
+        s.mt = bytearray(open(s.D + 'metatiles.bin', 'rb').read()); s.att = bytearray(open(s.D + 'metatile_attributes.bin', 'rb').read())
+        s.pm = open('data/tilesets/primary/general_route5/metatiles.bin', 'rb').read(); s.cache = {}; s.n0 = len(s.mt) // 16
+    def meta(s, top4, base):
+        e = struct.unpack('<4H', s.pm[base * 16:base * 16 + 8]) + tuple(top4)
+        if e not in s.cache:
+            s.cache[e] = 640 + len(s.mt) // 16; s.mt += struct.pack('<8H', *e); s.att += struct.pack('<I', 0)
+        return s.cache[e]
+    def flush(s):
+        assert len(s.mt) // 16 <= 384, len(s.mt) // 16
+        open(s.D + 'metatiles.bin', 'wb').write(s.mt); open(s.D + 'metatile_attributes.bin', 'wb').write(s.att)
+        return len(s.mt) // 16 - s.n0
+grassid = lambda x, y: 8 + (x & 1) + 8 * (y & 1)
+
+# ------------------------------------------------------------------ Route 5 : bosquets de tourmaline
+def route5():
+    w, h, g, mj = load('Route5'); rnd = random.Random(515)
+    TR, CL, SH = harvest24(); R = Reg()
+    def put_tree(x, y, sig):                # cime en (x..x+1, y-1) (case praticable), tronc en (x..x+1, y..y+1)
+        for k, (i, j) in enumerate(((0, -1), (1, -1), (0, 0), (1, 0), (0, 1), (1, 1))):
+            c = (x + i, y + j); g[c[1] * w + c[0]] = (0x3000 if j < 0 else 0x3400) | R.meta(sig[k], grassid(*c))
+    def put_cluster(x, y, sig):
+        for k, (i, j) in enumerate(((0, 0), (1, 0), (0, 1), (1, 1))):
+            c = (x + i, y + j); g[c[1] * w + c[0]] = 0x3400 | R.meta(sig[k], grassid(*c))
+    def put_shard(c): g[c[1] * w + c[0]] = 0x3400 | R.meta(SH, grassid(*c))
+    # 1) les deux bandes de sable (x 15..18, y 0..26 ; fermees, inaccessibles) -> bosquets
+    imp = {(e['x'], e['y']) for k in ('warp_events', 'object_events', 'bg_events') for e in mj[k]}
+    assert not any(15 <= x <= 18 or 29 <= x <= 32 for x, y in imp if y <= 26), 'un evenement se trouve dans une bande de sable'
+    for x0 in (15, 29):
+        for y in range(0, 27):
+            for x in range(x0, x0 + 4): g[y * w + x] = 0x3000 | grassid(x, y)
+        occ = set(); nt = 0
+        for _ in range(400):
+            if nt >= 8: break
+            x, y = x0 + rnd.randrange(3), rnd.randrange(1, 25)
+            foot = {(x + i, y + j) for i in (0, 1) for j in (-1, 0, 1)}
+            ring = {(a + dx, b + dy) for a, b in foot for dx in (-1, 0, 1) for dy in (0, 1)}
+            if foot & occ or (ring & occ and rnd.random() < 0.8): continue
+            put_tree(x, y, rnd.choice(TR)); occ |= foot; nt += 1
+        nc = 0
+        for _ in range(400):
+            if nc >= 3: break
+            x, y = x0 + rnd.randrange(3), rnd.randrange(0, 25)
+            foot = {(x + i, y + j) for i in (0, 1) for j in (0, 1)}
+            if foot & occ: continue
+            put_cluster(x, y, rnd.choice(CL)); occ |= foot; nc += 1
+        free = [(x, y) for y in range(0, 27) for x in range(x0, x0 + 4) if (x, y) not in occ]; rnd.shuffle(free); ns = 0
+        for c in free:
+            if ns >= 5: break
+            put_shard(c); occ.add(c); ns += 1
+        for c in [c for c in free if c not in occ][:12]: g[c[1] * w + c[0]] = 0x3000 | 4          # fleurs
+        print('bande x%d : %d arbres, %d amas, %d eclats' % (x0, nt, nc, ns))
+    # 2) dans la foret : quelques arbres FR remplaces par un amas de cristaux (meme gabarit 2x2, meme grille)
+    TOP, BOT = {20, 21, 22, 23}, {28, 29, 30, 31}
+    ident = lambda x, y: g[y * w + x] & 0x3ff
+    tree_at = lambda x, y: ident(x, y) in TOP and ident(x + 1, y) in TOP and ident(x, y + 1) in BOT and ident(x + 1, y + 1) in BOT and all(g[(y + j) * w + x + i] & 0xc00 for i in (0, 1) for j in (0, 1))
+    blocks = sorted((x, y) for y in range(3, 36, 2) for x in list(range(2, 13, 2)) + list(range(34, 45, 2)) if tree_at(x, y)); rnd.shuffle(blocks); chosen = []
+    for b in blocks:
+        if len(chosen) >= 14: break
+        if all(abs(b[0] - c[0]) > 6 or abs(b[1] - c[1]) > 6 for c in chosen): chosen.append(b)
+    for (x, y) in chosen: put_cluster(x, y, rnd.choice(CL))
+    # 3) zone de la pension (accessible) : 2 grands arbres, eclats et fleurs, sans jamais couper un acces
+    B = Board(w, h, g, mj); base = B.base; ntr = 0
+    spots = [(x, y) for y in range(28, 36) for x in range(14, 34) if all(B.free((x + i, y + j), 1) for i in (0, 1) for j in (-1, 0, 1))]; rnd.shuffle(spots); placed = []
+    for (x, y) in spots:
+        if ntr >= 3: break
+        if not spaced((x, y), placed, 6): continue
+        sig = rnd.choice(TR); cells = {}
+        for k, (i, j) in enumerate(((0, -1), (1, -1), (0, 0), (1, 0), (0, 1), (1, 1))): cells[(x + i, y + j)] = (0x0 if j < 0 else 0x400) | R.meta(sig[k], B.base_of((x + i, y + j)))
+        if B.put(cells): ntr += 1; placed.append((x, y))
+    cand = B.cands(); rnd.shuffle(cand); ns = 0
+    for c in cand:
+        if ns >= 5: break
+        if spaced(c, placed, 3) and B.put({c: 0x400 | R.meta(SH, B.base_of(c))}): ns += 1; placed.append(c)
+    for c in [c for c in cand if c not in B.blocked and spaced(c, placed, 2)][:10]: B.g[c[1] * w + c[0]] = 0x3000 | 4
+    n_new = R.flush(); save('Route5', w, h, B.g)
+    print('Route5 : %d amas dans la foret, %d grands arbres + %d eclats pres de la pension, +%d metatuiles (%d/384)' % (len(chosen), ntr, ns, n_new, R.n0 + n_new))
+
+# ------------------------------------------------------------------ Route 6 : cimetiere de dragon
 def route6():
     A = json.load(open('docs/topaze/apatia_art_ids.json'))
-    w, h, g, mj = load('Route6'); B = Board(w, h, g, mj); rnd = random.Random(606)
-    cand = B.cands(); rnd.shuffle(cand); placed = []; cnt = collections.Counter()
-    plan = [('nest', 4, 5), ('cry', 6, 4), ('rib', 3, 5), ('feather', 4, 4), ('talon', 4, 4)]
-    for kind, n, dist in plan:
-        for c in cand:
-            if cnt[kind] >= n: break
-            if not spaced(c, placed, 2): continue
-            b = B.base_of(c); key = {'nest': 'nest_%d', 'feather': 'feather_%d'}.get(kind)
-            key = key % b if key else '%s_%d_%d' % (kind, rnd.randrange(3 if kind == 'cry' else 2), b)
-            if B.put({c: 0x400 | A[key]}): cnt[kind] += 1; placed.append(c)
-    save('Route6', w, h, B.g); print('Route6 : %d candidats' % len(cand), dict(cnt))
+    w, h, g, mj = load('Route6'); B = Board(w, h, g, mj); n = collections.Counter()
+    near = lambda c: any(max(abs(c[0] - p[0]), abs(c[1] - p[1])) <= 1 for p in B.imp)
+    def one(kind, c, v=0):
+        if not B.isgrass(c) or near(c): return
+        b = B.base_of(c)
+        key = {'nest': 'nest_%d', 'feather': 'feather_%d', 'pole': 'pole_%d', 'sock': 'sock_%d'}.get(kind)
+        key = key % b if key else ('rib_%d_%d' % (c[1] % 2, b) if kind == 'rib' else '%s_%d_%d' % (kind, v, b))
+        if B.put({c: 0x400 | A[key]}): n[kind] += 1
+    def skull(x, y):
+        cells = {(x + i, y + j): 0x400 | A['skull_%d_%d_%d' % (i, j, B.base_of((x + i, y + j)))] for i in (0, 1) for j in (0, 1)}
+        if all(B.isgrass(c) and not near(c) for c in cells) and B.put(cells): n['skull'] += 1
+    # prairie nord : le squelette (crane a l'ouest, cage thoracique en zigzag), la queue au bout, de l'autre cote nids et plumes
+    skull(2, 9)
+    for c in ((5, 10), (6, 9), (7, 10), (8, 9), (11, 10), (12, 9), (13, 10), (14, 9)): one('rib', c)
+    for c, v in (((4, 8), 0), ((10, 8), 1), ((16, 10), 0), ((21, 8), 1)): one('talon', c, v)
+    for c in ((9, 10), (3, 8), (15, 8)): one('feather', c)
+    for c in ((19, 9), (17, 9)): one('nest', c)
+    one('pole', (6, 8)); one('pole', (13, 8)); one('sock', (20, 8)); one('sock', (2, 8))
+    # salles laterales du nord : cristaux d'apatite
+    for c, v in (((2, 5), 0), ((8, 6), 1), ((21, 5), 2), ((17, 6), 0), ((3, 6), 1)): one('cry', c, v)
+    # prairie sud-ouest : nid d'oeufs de dragon
+    for c in ((3, 28), (6, 27), (8, 29), (4, 29)): one('nest', c)
+    for c in ((5, 28), (7, 28)): one('feather', c)
+    one('cry', (2, 27), 2); one('talon', (9, 27), 1); one('rib', (2, 29))
+    # un peu partout sur l'herbe plate restante : cristaux et plumes isoles
+    rnd = random.Random(616); cand = [c for c in B.cands() if not near(c)]; rnd.shuffle(cand); placed = list(B.blocked)
+    for c in cand:
+        if n['cry'] >= 9: break
+        if spaced(c, placed, 4): one('cry', c, rnd.randrange(3)); placed.append(c)
+    save('Route6', w, h, B.g); print('Route6 :', dict(n))
 
 # ------------------------------------------------------------------ Route 7 : cristaux de quartz et bonhommes de neige
 def route7():
@@ -83,44 +200,5 @@ def route7():
         if spaced(c, placed, 3) and B.put({c: 0x400 | A['cry_%d_%d' % (rnd.randrange(3), B.base_of(c))]}): ncr += 1; placed.append(c)
     save('Route7', w, h, B.g); print('Route7 : %d bonhommes, %d cristaux' % (nsn, ncr))
 
-# ------------------------------------------------------------------ Route 5 : clairieres dans la foret
-def route5():
-    w, h, g, mj = load('Route5'); rnd = random.Random(505)
-    TOP, BOT = {20, 21, 22, 23}, {28, 29, 30, 31}
-    ident = lambda x, y: g[y * w + x] & 0x3ff
-    def tree_at(x, y): return ident(x, y) in TOP and ident(x + 1, y) in TOP and ident(x, y + 1) in BOT and ident(x + 1, y + 1) in BOT and all(g[(y + j) * w + x + i] & 0xc00 for i in (0, 1) for j in (0, 1))
-    blocks = {(x, y) for y in range(1, 38, 2) for x in list(range(0, 14, 2)) + list(range(34, 48, 2)) if tree_at(x, y)}
-    inner = {b for b in blocks if 2 <= b[0] <= 12 or 34 <= b[0] <= 44}
-    inner = {b for b in inner if 3 <= b[1] <= 35}
-    used = set(); clearings = []
-    seeds = sorted(inner); rnd.shuffle(seeds)
-    for s in seeds:
-        if len(clearings) >= 9: break
-        if any(abs(s[0] - u[0]) <= 8 and abs(s[1] - u[1]) <= 8 for u in used): continue
-        cl = {s}; want = rnd.choice((4, 5, 6, 7))
-        while len(cl) < want:
-            b = rnd.choice(sorted(cl)); d = rnd.choice(((2, 0), (-2, 0), (0, 2), (0, -2)))
-            nb = (b[0] + d[0], b[1] + d[1])
-            if nb in inner and nb not in cl: cl.add(nb)
-            elif rnd.random() < 0.2: break
-        clearings.append(cl); used |= cl
-    ntree = 0
-    for cl in clearings:
-        cells = set()
-        for (x, y) in cl:
-            for i in (0, 1):
-                for j in (0, 1): cells.add((x + i, y + j))
-        for (x, y) in cells: g[y * w + x] = 0x3000 | (8 + (x & 1) + 8 * (y & 1))
-        wins = [(x, y) for (x, y) in sorted(cells) if all((x + i, y + j) in cells for i in (0, 1) for j in (0, 1)) and (x & 1 or not y & 1)]
-        taken = set()
-        for _ in range(rnd.choice((1, 2, 2))):
-            wins = [(x, y) for (x, y) in wins if not any((x + i, y + j) in taken for i in (0, 1) for j in (0, 1))]
-            if not wins: break
-            x, y = rnd.choice(wins)
-            for (i, j, m) in ((0, 0, 20), (1, 0, 21), (0, 1, 28), (1, 1, 29)): g[(y + j) * w + x + i] = 0x400 | m; taken.add((x + i, y + j))
-            ntree += 1
-    save('Route5', w, h, g)
-    B = Board(w, h, g, mj); assert B.base == Board(w, h, list(struct.unpack('<%dH' % (w * h), open(SRC + 'r5_orig.bin', 'rb').read())), mj).base
-    print('Route5 : %d clairieres (%d blocs de 2x2 retires), %d arbres isoles' % (len(clearings), sum(len(c) for c in clearings), ntree))
 
 route5(); route6(); route7()

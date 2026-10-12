@@ -38,7 +38,7 @@ def mauve(c):
 ident = lambda c: c
 # nom, couche, tileset secondaire d'origine, callback secondaire, teinte primaire par palette, teinte secondaire par palette
 CITY = {'LAYOUT_ROUTE6': ('gTileset_GeneralApatia', 'gTileset_VermilionApatia'), 'LAYOUT_ROUTE7': ('gTileset_GeneralCeladopole', 'gTileset_CeladonCeladopole')}
-ROUTES = [('Route5', 'LAYOUT_ROUTE5', 'route5', 'cerulean_city', 'CeruleanCity', 'Cerulean', 'NULL', {1: mauve}, {}),
+ROUTES = [('Route5', 'LAYOUT_ROUTE5', 'route5', 'cerulean_pepite', 'CeruleanCity', 'Cerulean', 'NULL', {1: mauve}, {}),
           ('Route6', 'LAYOUT_ROUTE6', None, None, None, None, None, None, None),
           ('Route7', 'LAYOUT_ROUTE7', None, None, None, None, None, None, None)]
 def add(path, marker, text):
@@ -68,6 +68,8 @@ def dress(name, lid, key, sdir, sprefix, scb, tp, ts):
             pp = readpal(src + 'palettes/%02d.pal' % i)
             out = [pp[0]] + [spec[i](c) for c in pp[1:15]] + [pp[15]] if i in spec else pp
             writepal(dst + 'palettes/%02d.pal' % i, out)
+    if sdir == 'cerulean_pepite':     # tuiles de decor de la Route 24 (arbres, cristaux : palettes 7 et 8) ; palettes 9..12 (maison de Bill delabree) remises d'origine
+        for i in range(9, 13): shutil.copy(P + 'secondary/cerulean_city/palettes/%02d.pal' % i, NS + 'palettes/%02d.pal' % i)
     G_, S_ = 'General' + cn, sprefix + cn
     add('src/data/tilesets/graphics.h', 'gTilesetTiles_%s[]' % G_,
         '\nconst u32 gTilesetTiles_%s[] = INCBIN_U32("%stiles.4bpp.lz");\nconst u16 gTilesetPalettes_%s[][16] =\n{\n%s};\n' % (G_, NP, G_, pal(NP)) +
