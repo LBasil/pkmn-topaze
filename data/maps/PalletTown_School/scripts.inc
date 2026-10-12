@@ -1,0 +1,53 @@
+PalletTown_School_MapScripts::
+	.byte 0
+
+PalletTown_School_EventScript_Teacher::
+	lock
+	faceplayer
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_School_EventScript_TeacherStrike
+	msgbox PalletTown_School_Text_Teacher
+	closemessage
+	applymovement LOCALID_PALLET_SCHOOL_TEACHER, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
+PalletTown_School_EventScript_TeacherStrike::
+	msgbox PalletTown_School_Text_TeacherStrike
+	closemessage
+	applymovement LOCALID_PALLET_SCHOOL_TEACHER, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
+PalletTown_School_EventScript_Student::
+	lock
+	faceplayer
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_School_EventScript_StudentStrike
+	msgbox PalletTown_School_Text_Student
+	closemessage
+	applymovement LOCALID_PALLET_SCHOOL_STUDENT, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	release
+	end
+
+PalletTown_School_EventScript_StudentStrike::
+	msgbox PalletTown_School_Text_StudentStrike
+	closemessage
+	applymovement LOCALID_PALLET_SCHOOL_STUDENT, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	release
+	end
+
+PalletTown_School_EventScript_GarnetCase::
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_School_EventScript_GarnetCaseStrike
+	msgbox PalletTown_School_Text_GarnetCase, MSGBOX_SIGN
+	end
+
+PalletTown_School_EventScript_GarnetCaseStrike::
+	msgbox PalletTown_School_Text_GarnetCaseStrike, MSGBOX_SIGN
+	end
+
+PalletTown_School_EventScript_AuraCase::
+	msgbox PalletTown_School_Text_AuraCase, MSGBOX_SIGN
+	end

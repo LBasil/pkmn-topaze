@@ -72,10 +72,10 @@ t['connections'] = [c for c in t['connections'] if c['direction'] != 'right'] + 
 json.dump(t, open(f, 'w'), indent=2); open(f, 'a').write('\n')
 # groupe de cartes et inclusions
 f = 'data/maps/map_groups.json'; g = open(f).read()
-if '"PalletTown_Ranch"' not in g: g = g.replace('"PalletTown_Museum"\n', '"PalletTown_Museum",\n    "PalletTown_Ranch"\n', 1); open(f, 'w').write(g)
+if '"PalletTown_Ranch"' not in g: g = g.replace('"PalletTown_School"\n', '"PalletTown_School",\n    "PalletTown_Ranch"\n', 1); open(f, 'w').write(g)
 f = 'data/event_scripts.s'; e = open(f).read()
 if 'PalletTown_Ranch/scripts.inc' not in e:
-    e = e.replace('\t.include "data/maps/PalletTown_Museum/scripts.inc"\n', '\t.include "data/maps/PalletTown_Museum/scripts.inc"\n\t.include "data/maps/PalletTown_Ranch/scripts.inc"\n', 1)
-    e = e.replace('\t.include "data/maps/PalletTown_Museum/text.inc"\n', '\t.include "data/maps/PalletTown_Museum/text.inc"\n\t.include "data/maps/PalletTown_Ranch/text.inc"\n', 1)
+    e = e.replace('\t.include "data/maps/PalletTown_School/scripts.inc"\n', '\t.include "data/maps/PalletTown_School/scripts.inc"\n\t.include "data/maps/PalletTown_Ranch/scripts.inc"\n', 1)
+    e = e.replace('\t.include "data/maps/PalletTown_School/text.inc"\n', '\t.include "data/maps/PalletTown_School/text.inc"\n\t.include "data/maps/PalletTown_Ranch/text.inc"\n', 1)
     open(f, 'w').write(e)
 print('grand ranch : evenements ecrits')

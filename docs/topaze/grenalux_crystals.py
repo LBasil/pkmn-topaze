@@ -193,6 +193,82 @@ def slice_all(im, bw, bh): return {(i, j): meta(im.crop((i * 16, j * 16, i * 16 
 BIG = slice_all(*big()); MID = {}; SM = [meta(small(0)), meta(small(1))]
 LAMP = meta(lamp()); BOUL = [slice_all(*boulder(0)), slice_all(*boulder(1))]; ROCK = meta(rock()); MINE = slice_all(*mine())
 SOIL = meta(soil()); BUSH = [meta(bush(0)), meta(bush(1)), meta(bush(2))]; BARN = slice_all(*barn()); SILO = slice_all(*silo()); FENCE_H = meta(fence_h()); FENCE_V = meta(fence_v()); HAY = meta(hay()); TROUGH = meta(trough())
+
+# ---- ecole (facade de l'ancien musee, copie de l'arene de Petalburg) : on repeint l'enseigne (GYM -> SCHOOL) et on ajoute
+# un clocheton sur le toit. Meme emprise 6x5 et meme porte que l'arene. Methode : on dessine sur le rendu du chunk, puis
+# chaque quart de metatuile modifie devient une nouvelle tuile (couleurs ramenees a la palette d'origine du quart).
+_PBM = struct.unpack('<900H', open('../pokeemerald/data/layouts/PetalburgCity/map.bin', 'rb').read())
+def _remap(v):
+    m = v & 0x3ff
+    return (v & ~0x3ff) | (m + 128 if m >= 512 else m)
+GYM_SRC = [[_remap(_PBM[(4 + j) * 30 + 12 + i]) for i in range(6)] for j in range(5)]
+_PMT = open('data/tilesets/primary/general_emerald/metatiles.bin', 'rb').read()
+_PATT = open('data/tilesets/primary/general_emerald/metatile_attributes.bin', 'rb').read()
+FONT = {'S': ('111', '100', '111', '001', '111'), 'C': ('111', '100', '100', '100', '111'), 'H': ('101', '101', '111', '101', '101'),
+        'O': ('111', '101', '101', '101', '111'), 'L': ('100', '100', '100', '100', '111')}
+PTILES = []      # tuiles ajoutees au tileset PRINCIPAL (emplacements 512..639, libres : le secondaire est plein)
+def _flip_variants(t):
+    rows = [list(t[r * 8:(r + 1) * 8]) for r in range(8)]
+    hf = [r[::-1] for r in rows]; vf = rows[::-1]; hv = [r[::-1] for r in rows[::-1]]
+    return [(sum(rows, []), 0, 0), (sum(hf, []), 1, 0), (sum(vf, []), 0, 1), (sum(hv, []), 1, 1)]
+def padd_tile(px):
+    """renvoie (id de tuile, hflip, vflip) ; reutilise une tuile existante si elle est identique, meme retournee"""
+    px = list(px)
+    for k, pt in enumerate(PTILES):
+        for var, hf, vf in _flip_variants(pt):
+            if var == px: return 512 + k, hf, vf
+    PTILES.append(px); return 512 + len(PTILES) - 1, 0, 0
+def school():
+    base = Image.new('RGBA', (96, 80))
+    for j in range(5):
+        for i in range(6): base.paste(lay.metatile_img(GYM_SRC[j][i] & 0x3ff), (i * 16, j * 16))
+    img = base.copy(); d = ImageDraw.Draw(img)
+    WALL, DARK, DARK2, LIGHT, WHITE, RED, RED2, SALMON = (90, 76, 113), (55, 53, 58), (42, 39, 47), (131, 131, 139), (255, 255, 255), (170, 41, 62), (139, 57, 62), (200, 139, 119)
+    # enseigne : on efface l'embleme de l'arene, plaque claire + lettres rouges
+    d.rectangle((8, 54, 19, 63), fill=WALL)
+    d.rectangle((9, 56, 38, 62), fill=WHITE, outline=DARK)
+    for k, ch in enumerate('SCHOOL'):
+        for r, row in enumerate(FONT[ch]):
+            for c, bit in enumerate(row):
+                if bit == '1': d.point((12 + k * 4 + c, 57 + r), fill=RED)
+    # clocheton sur le toit : corps, ouverture, cloche, petit toit pointu
+    d.rectangle((40, 14, 56, 29), fill=WALL, outline=DARK2)
+    d.rectangle((44, 17, 52, 28), fill=DARK2)
+    d.ellipse((46, 18, 50, 24), fill=SALMON); d.rectangle((46, 22, 50, 24), fill=SALMON); d.point((48, 26), fill=SALMON)
+    d.polygon([(48, 4), (58, 14), (38, 14)], fill=RED2, outline=DARK2); d.line([(48, 6), (42, 13)], fill=RED)
+    d.point((48, 3), fill=DARK2)
+    out = {}
+    for j in range(5):
+        for i in range(6):
+            v = GYM_SRC[j][i]; m = v & 0x3ff
+            box = (i * 16, j * 16, i * 16 + 16, j * 16 + 16)
+            if img.crop(box).tobytes() == base.crop(box).tobytes(): out[(i, j)] = v; continue
+            ents = list(struct.unpack('<8H', _PMT[m * 16:m * 16 + 16] if m < 640 else bytes(mt[(m - 640) * 16:(m - 640) * 16 + 16])))
+            new = list(ents)
+            for q in range(4):
+                qb = (box[0] + (q % 2) * 8, box[1] + (q // 2) * 8, box[0] + (q % 2) * 8 + 8, box[1] + (q // 2) * 8 + 8)
+                if img.crop(qb).tobytes() == base.crop(qb).tobytes(): continue
+                e = ents[4 + q]; tid, hf, vf, pal = e & 0x3ff, (e >> 10) & 1, (e >> 11) & 1, e >> 12
+                srcimg = lay.prim.img if tid < 640 else lay.sec.img
+                t = tid if tid < 640 else tid - 640
+                tw = srcimg.width // 8
+                tile = srcimg.crop(((t % tw) * 8, (t // tw) * 8, (t % tw) * 8 + 8, (t // tw) * 8 + 8))
+                if hf: tile = tile.transpose(Image.FLIP_LEFT_RIGHT)
+                if vf: tile = tile.transpose(Image.FLIP_TOP_BOTTOM)
+                tp = tile.load(); P = (lay.prim.pals if pal < 7 else lay.sec.pals)[pal]
+                a, b = img.crop(qb).load(), base.crop(qb).load()
+                px = []
+                for yy in range(8):
+                    for xx in range(8):
+                        if a[xx, yy] == b[xx, yy]: px.append(tp[xx, yy]); continue
+                        r, g, bl = a[xx, yy][:3]
+                        px.append(min(range(1, 16), key=lambda k: (P[k][0] - r) ** 2 + (P[k][1] - g) ** 2 + (P[k][2] - bl) ** 2))
+                ti, hf2, vf2 = padd_tile(px); new[4 + q] = ti | (hf2 << 10) | (vf2 << 11) | (pal << 12)
+            a_ = bytes(_PATT[m * 4:m * 4 + 4]) if m < 640 else bytes(att[(m - 640) * 4:(m - 640) * 4 + 4])
+            mt.extend(struct.pack('<8H', *new)); att.extend(a_)
+            out[(i, j)] = (v & ~0x3ff) | (640 + len(mt) // 16 - 1)
+    return out
+SCHOOL = school()
 assert NT + len(tiles) <= 384, NT + len(tiles)
 open(D + 'metatiles.bin', 'wb').write(mt); open(D + 'metatile_attributes.bin', 'wb').write(att)
 rows = (NT + len(tiles) + 15) // 16
@@ -200,6 +276,14 @@ out = Image.new('P', (128, rows * 8), 0); out.putpalette(png.getpalette()); out.
 for i, t in enumerate(tiles):
     n = NT + i; ti = Image.new('P', (8, 8)); ti.putdata(list(t)); out.paste(ti, ((n % 16) * 8, (n // 16) * 8))
 out.save(D + 'tiles.png')
+if PTILES:
+    P0 = 'data/tilesets/primary/general_emerald/'
+    assert 512 + len(PTILES) <= 640, len(PTILES)
+    pim = Image.open(P0 + 'tiles.png'); base_img = pim.crop((0, 0, 128, 256))
+    pout = Image.new('P', (128, ((512 + len(PTILES) + 15) // 16) * 8), 0); pout.putpalette(pim.getpalette()); pout.paste(base_img, (0, 0))
+    for i, t in enumerate(PTILES):
+        n = 512 + i; ti = Image.new('P', (8, 8)); ti.putdata(list(t)); pout.paste(ti, ((n % 16) * 8, (n // 16) * 8))
+    pout.save(P0 + 'tiles.png')
 open(D + 'palettes/07.pal', 'w').write('JASC-PAL\r\n0100\r\n16\r\n' + ''.join('%d %d %d\r\n' % c for c in PAL))
 if __name__ == '__main__':
     # ---- carte

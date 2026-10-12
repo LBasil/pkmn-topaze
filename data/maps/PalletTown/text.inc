@@ -88,9 +88,9 @@ PalletTown_Text_OnybrisGruntPostBattle::
     .string "LAB's files on gems were copied at\l"
     .string "dawn.\p"
     .string "GRENALUX will see us again...$"
-PalletTown_Text_MuseumSign::
-    .string "GRENALUX MUSEUM\n"
-    .string "Home of the GRENAT gem.$"
+PalletTown_Text_SchoolSign::
+    .string "GRENALUX SCHOOL\n"
+    .string "Where every trainer begins.$"
 
 PalletTown_Text_RivalDontGoOut::
     .string "{RIVAL}: Hey, {PLAYER}! Wait!\n"

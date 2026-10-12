@@ -613,8 +613,8 @@ PalletTown_EventScript_OnybrisGruntDefeated::
 	releaseall
 	end
 
-PalletTown_EventScript_MuseumSign::
-	msgbox PalletTown_Text_MuseumSign, MSGBOX_SIGN
+PalletTown_EventScript_SchoolSign::
+	msgbox PalletTown_Text_SchoolSign, MSGBOX_SIGN
 	end
 
 PalletTown_EventScript_AmbMiner::

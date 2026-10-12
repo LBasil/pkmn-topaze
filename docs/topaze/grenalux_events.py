@@ -40,7 +40,7 @@ for c in d['coord_events']:
     elif c['script'].endswith('OakTriggerRight'): c['x'],c['y']=23,1
     elif c['script'].endswith('SignLadyTrigger'): c['x'],c['y']=23,2
 sg={'PalletTown_EventScript_OaksLabSign':(36,22),'PalletTown_EventScript_PlayersHouseSign':(10,9),'PalletTown_EventScript_RivalsHouseSign':(37,9),
- 'PalletTown_EventScript_TownSign':(21,10),'PalletTown_EventScript_TrainerTips':(10,15),'PalletTown_EventScript_MuseumSign':(11,21)}
+ 'PalletTown_EventScript_TownSign':(21,10),'PalletTown_EventScript_TrainerTips':(10,15),'PalletTown_EventScript_SchoolSign':(11,21)}
 for b in d['bg_events']:
     if b['script'] in sg: b['x'],b['y']=sg[b['script']]
 for c in d['connections']:

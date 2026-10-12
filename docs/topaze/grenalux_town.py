@@ -89,7 +89,14 @@ for y in (H - 2, H - 1):
 D = {}
 D['player'] = chunk(LR, 20, 2, 4, 5, 5, 5, 5, 'maison joueur')
 D['ranch'] = chunk(PB, 30, 5, 2, 5, 4, 34, 5, 'ranch')
-D['museum'] = chunk(PB, 30, 12, 4, 6, 5, 5, 17, 'musee')
+def chunk_school(dx, dy, name):
+    claim(dx, dy, 6, 5, name); door = None
+    for j in range(5):
+        for i in range(6):
+            v = C.SCHOOL[(i, j)]; put(dx + i, dy + j, v)
+            if int.from_bytes(mt_att(v & 0x3ff), 'little') & 0x1ff == 0x69: door = (dx + i, dy + j)
+    return door
+D['school'] = chunk_school(5, 17, 'ecole')      # ex-musee (arene de Petalburg repeinte en ecole)
 D['lab'] = chunk(LR, 20, 3, 12, 7, 5, 31, 17, 'labo')
 D['hA'] = chunk(PB, 30, 5, 2, 5, 4, 12, 6, 'maison A ardoise', PBP)
 D['hC'] = chunk(PB, 30, 5, 2, 5, 4, 12, 14, 'maison C', None)
@@ -97,7 +104,7 @@ D['hD'] = chunk(PB, 30, 9, 16, 4, 4, 11, 27, 'maison D ardoise', PBP)
 D['hE'] = chunk(LR, 20, 2, 4, 5, 5, 3, 27, 'maison E ocre', LRP)
 D['garden'] = chunk(PB, 30, 18, 20, 8, 7, 34, 27, 'maison jardin', None)
 for k, v in D.items(): assert v, 'porte introuvable ' + k
-assert D['player'] == (8, 9) and D['ranch'] == (36, 8) and D['museum'] == (8, 21) and D['lab'] == (35, 21), D
+assert D['player'] == (8, 9) and D['ranch'] == (36, 8) and D['school'] == (8, 21) and D['lab'] == (35, 21), D
 open('/tmp/grenalux_doors.json', 'w').write(json.dumps(D))
 # ---- decors a emprise
 def place_sm(sm, x0, y0, w, h, name):
