@@ -330,13 +330,29 @@ print('PNJ', NPC); print('panneaux', SIGN)
 P = {c for c, n in OCC.items() if n == 'pin'}
 def is_pine(c): return c in P or not (0 <= c[0] < W and 0 <= c[1] < H)
 TRUNK = {}
-for (x, y) in sorted(P):
-    if y % 2 == 1 and not is_pine((x, y + 1)):
+def ucell_set(x, y): return [(x // 2 * 2 + i, y // 2 * 2 + j) for j in range(2) for i in range(2)]
+changed = True
+while changed:                                                        # v3 : chaque pin a un BAS (tronc) ; le tronc prime sur buissons/fleurs ; sinon l'unite est retiree
+    changed = False
+    for (x, y) in sorted(P):
+        if y % 2 != 1 or is_pine((x, y + 1)) or (x, y + 1) in TRUNK: continue
         c = (x, y + 1)
-        if c in OCC or c in WAY or c in KEEP or c in BLK or c in FLW or c in TRUNK: continue
-        OCC[c] = 'trunk'
-        if NEED | NEED_GATE <= reach(): TRUNK[c] = 1
-        else: OCC.pop(c)
+        saved = (BLK.get(c), c in FLW)
+        if c in BLK and BLK[c][0] == 'bush' and c != (41, 15): del BLK[c]
+        FLW.discard(c)
+        ok = not (c in OCC or c in WAY or c in KEEP or c in BLK or c in TRUNK)
+        if ok:
+            OCC[c] = 'trunk'
+            if NEED | NEED_GATE <= reach(): TRUNK[c] = 1
+            else: OCC.pop(c); ok = False
+        if not ok:
+            if saved[0] is not None: BLK[c] = saved[0]
+            if saved[1]: FLW.add(c)
+            for q in ucell_set(x, y):
+                P.discard(q); OCC.pop(q, None)
+            changed = True; break
+for c in [c for c in TRUNK if (c[0], c[1] - 1) not in P]:               # troncs orphelins (unite retiree au-dessus)
+    del TRUNK[c]; OCC.pop(c, None)
 P2 = P | set(TRUNK)
 for (x, y) in P2:
     role = 'K' if (x, y) in TRUNK else ('T' if y % 2 == 0 else 'B')
