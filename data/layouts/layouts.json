@@ -997,8 +997,8 @@
       "height": 20,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_VermilionCity",
+      "primary_tileset": "gTileset_GeneralRoute11V2",
+      "secondary_tileset": "gTileset_CeladonRoute11V2",
       "border_filepath": "data/layouts/Route11/border.bin",
       "blockdata_filepath": "data/layouts/Route11/map.bin"
     },

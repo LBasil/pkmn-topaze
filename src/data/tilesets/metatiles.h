@@ -375,3 +375,9 @@ const u32 gMetatileAttributes_GeneralRoute9V2[] = INCBIN_U32("data/tilesets/prim
 
 const u16 gMetatiles_CeladonRoute9V2[] = INCBIN_U16("data/tilesets/secondary/celadon_route9v2/metatiles.bin");
 const u32 gMetatileAttributes_CeladonRoute9V2[] = INCBIN_U32("data/tilesets/secondary/celadon_route9v2/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralRoute11V2[] = INCBIN_U16("data/tilesets/primary/general_route11v2/metatiles.bin");
+const u32 gMetatileAttributes_GeneralRoute11V2[] = INCBIN_U32("data/tilesets/primary/general_route11v2/metatile_attributes.bin");
+
+const u16 gMetatiles_CeladonRoute11V2[] = INCBIN_U16("data/tilesets/secondary/celadon_route11v2/metatiles.bin");
+const u32 gMetatileAttributes_CeladonRoute11V2[] = INCBIN_U32("data/tilesets/secondary/celadon_route11v2/metatile_attributes.bin");
