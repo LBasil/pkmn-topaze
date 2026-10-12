@@ -181,7 +181,7 @@ pr(3, 33, 44, 34)                       # rue du sud
 pr(4, 17, 43, 18)                       # rue du milieu
 pr(40, 19, 41, 22)                      # milieu -> bas (escalier est)
 for k in ('museumA', 'museumB', 'center', 'mart'): pr(fr(k)[0], fr(k)[1], fr(k)[0] + 1, 18)
-pr(fr('gym')[0], fr('gym')[1], fr('gym')[0] + 1, 9)
+pr(fr('gym')[0] - 1, fr('gym')[1], fr('gym')[0], 9)
 for k in ('house1', 'house2', 'house4'): pr(fr(k)[0], fr(k)[1], fr(k)[0] + 1, 33)
 pr(fr('house3')[0], fr('house3')[1], fr('house3')[0] + 1, 9)
 pr(10, 20, 11, 33) if False else None
@@ -189,7 +189,7 @@ pr(5, 27, 6, 28) if False else None
 # ---- v4 : l'arene est un ilot dans un lac de lave, une cascade de lave tombe de la falaise derriere elle, un pont de pierre devant
 import math
 ARENA = (20, 3, 6, 5)                                  # x, y, w, h (cases)
-BR = (DOORS['gym'][0], 8)                              # pont : cases (x..x+1, 8)
+BR = (DOORS['gym'][0] - 1, 8)                          # pont : cases (x..x+1, 8), centre sur l'avenue (escalier 22..23)
 def in_arena(px, py): return ARENA[0] * 16 <= px < (ARENA[0] + ARENA[2]) * 16 and ARENA[1] * 16 <= py < (ARENA[1] + ARENA[3]) * 16
 def in_bridge(px, py): return BR[0] * 16 <= px < (BR[0] + 2) * 16 and BR[1] * 16 <= py < (BR[1] + 1) * 16
 def hsh(a, b): return ((a * 73856093) ^ (b * 19349663) ^ 0x5bd1e995) & 0xffff
@@ -204,7 +204,7 @@ def Mnode(nx, ny):
     if is_socle(nx, ny): return 0                                                # socle de roche autour de l'arene
     if not (34 + _lim(ny, 0) <= nx <= 59 - _lim(ny, 2)): return 0
     if ny == 4 and math.sin(nx * 0.5) < -0.2: return 0                           # bord du haut irregulier
-    if ny >= 16 and math.cos((nx // 2) * 1.2) < -0.3: return 0                          # bord du bas irregulier
+    if ny >= 16 and not (40 <= nx <= 53) and math.cos((nx // 2) * 1.2) < -0.3: return 0                          # bord du bas irregulier
     if ny >= 16 and BR[0] * 2 <= nx < BR[0] * 2 + 4: return 0
     return 0 if (nx, ny) in OUTC else 1
 def is_rock(nx, ny): return is_socle(nx, ny) or (nx, ny) in OUTC
@@ -428,21 +428,21 @@ def ent_of(v):
     if m >= 640: return list(SEC_ENT[m - 640]), SEC_ATT[m - 640]
     return list(struct.unpack('<8H', open(EM + 'tilesets/primary/general/metatiles.bin', 'rb').read()[m * 16:m * 16 + 16])), conv(struct.unpack('<H', patt[m * 2:m * 2 + 2])[0])
 def art_nearest(c): return min(range(1, 16), key=lambda k: sum((PAL[k][i] - c[i]) ** 2 for i in range(3)))
-LAVA_T = []                                            # variantes de lave 8x8 (periodiques : une tuile par variante)
+LAVA_T = []                                            # variantes de lave 8x8 (periodiques : une tuile par variante) : orange vif, veines rouges et points jaunes
 for k in range(6):
-    r_ = random.Random(900 + k); t_ = [[15] * 8 for _ in range(8)]
-    for _ in range(3):
+    r_ = random.Random(900 + k); t_ = [[10] * 8 for _ in range(8)]
+    for _ in range(2):
         x_, y_ = r_.randrange(8), r_.randrange(8)
-        for dx_ in range(r_.choice((2, 3, 4))): t_[y_][(x_ + dx_) % 8] = 10
-    t_[r_.randrange(8)][r_.randrange(8)] = 11
-    if k % 3 == 0: t_[r_.randrange(8)][r_.randrange(8)] = 9
+        for dx_ in range(r_.choice((2, 3))): t_[y_][(x_ + dx_) % 8] = 15
+    for _ in range(2): t_[r_.randrange(8)][r_.randrange(8)] = 11
+    if k % 3 == 0: t_[r_.randrange(8)][r_.randrange(8)] = 12
     LAVA_T.append(t_)
 for k in range(2):                                     # variantes « croute » : zones plus sombres de la lave
-    r_ = random.Random(950 + k); t_ = [[(9 if r_.random() < 0.5 else 15) for _ in range(8)] for _ in range(8)]
-    for _ in range(3): t_[r_.randrange(8)][r_.randrange(8)] = 10
+    r_ = random.Random(950 + k); t_ = [[(15 if r_.random() < 0.35 else 10) for _ in range(8)] for _ in range(8)]
+    for _ in range(3): t_[r_.randrange(8)][r_.randrange(8)] = 11
     LAVA_T.append(t_)
 for k in range(1):                                     # variantes « scories » : cailloux sombres dans la lave
-    r_ = random.Random(970 + k); t_ = [[15] * 8 for _ in range(8)]
+    r_ = random.Random(970 + k); t_ = [[10] * 8 for _ in range(8)]
     x_, y_ = r_.randrange(0, 3), r_.randrange(0, 3)
     for dx_ in range(5):
         for dy_ in range(5):
