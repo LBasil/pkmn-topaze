@@ -1,4 +1,4 @@
-# ROUTES 16 + 17 « du quartz a l'ametyste » : Route 16 (depart : Bourg Quartz, neige, a l'EST) puis Route 17 (voie cyclable, 160 cases, vers le SUD)
+# ROUTES 16 + 17 v2 : CARTES NOUVELLES (v1 = habillage de l'ancien trace, gardee dans la branche route16-v1-reference). « du quartz a l'ametyste » : Route 16 (depart : Bourg Quartz, neige, a l'EST) puis Route 17 (voie cyclable, 160 cases, vers le SUD)
 # jusqu'a la Route 18 (arrivee : Amethiolite, lilas). Une seule famille de tilesets (`general_route16` / `celadon_route16`) :
 #   - etage 0 = neige de Bourg Quartz (palettes primaires 0..6 de `general_celadopole`),
 #   - etage 1 = lilas d'amethyste (palettes de `general_route18` pour les palettes 0, 3, 5 d'origine, rangees dans les emplacements 7, 8, 9),
@@ -12,9 +12,7 @@ from PIL import Image, ImageDraw
 SRC = 'docs/topaze/route21_src/'
 GEN = 'data/tilesets/primary/general/'; SEC = 'data/tilesets/secondary/celadon_city/'
 NP = 'data/tilesets/primary/general_route16/'; NS = 'data/tilesets/secondary/celadon_route16/'
-DIMS = {'Route16': (48, 20), 'Route17': (24, 160)}
-for n, f in (('Route16', 'r16_orig.bin'), ('Route17', 'r17_orig.bin')):
-    if not os.path.exists(SRC + f): shutil.copy('data/layouts/%s/map.bin' % n, SRC + f)
+DIMS = {'Route16': (48, 20), 'Route17': (24, 80)}
 
 def readpal(p):
     L = open(p).read().split(); n = int(L[2]); return [tuple(int(x) for x in L[3 + 3 * k:6 + 3 * k]) for k in range(n)]
@@ -99,114 +97,235 @@ def art_meta(var, st, base):
 def noise(x, y): return 0.5 * math.sin(x * 0.35 + y * 0.11) + 0.3 * math.sin(y * 0.19 - x * 0.27 + 1.3) + 0.2 * math.sin(x * 0.13 + y * 0.43 + 2.1)
 def stage(L, x, y):
     W, H = DIMS[L]
-    s = (47 - x) / 47 * 0.44 if L == 'Route16' else 0.44 + 0.56 * y / (H - 1)
+    s = (47 - x) / 47 * 0.30 if L == 'Route16' else 0.30 + 0.70 * y / (H - 1)
     j = ((x * 73856093) ^ (y * 19349663)) % 1000 / 1000.0 - 0.5
     return 1 if s + 0.16 * noise(x, y) > 0.60 else 0
 
-GRASS = (8, 9, 16, 17, 830, 831, 838, 839, 835, 836, 837)
-def dress(L):
+
+# ================================================================== CARTES NOUVELLES
+SANDS_INNER = {'NW': 258, 'NE': 259, 'SW': 260, 'SE': 261}   # coin concave : l'herbe entre dans le coin indique
+def sand_id(p):
+    N, S, Wn, E = p(0, -1), p(0, 1), p(-1, 0), p(1, 0)
+    if N and S and Wn and E:
+        for k, (dx, dy) in (('NW', (-1, -1)), ('NE', (1, -1)), ('SW', (-1, 1)), ('SE', (1, 1))):
+            if not p(dx, dy): return SANDS_INNER[k]
+        return 220
+    if not N and not Wn: return 211
+    if not N and not E: return 213
+    if not S and not Wn: return 227
+    if not S and not E: return 229
+    if not N: return 212
+    if not S: return 228
+    if not Wn: return 219
+    if not E: return 221
+    return 220
+def disc_path(points, rad, W, H):
+    cells = set()
+    for (a, b) in zip(points, points[1:]):
+        n = int(max(abs(b[0] - a[0]), abs(b[1] - a[1])) * 3) + 1
+        for k in range(n + 1):
+            t = k / n; x = a[0] + (b[0] - a[0]) * t; y = a[1] + (b[1] - a[1]) * t
+            r = rad(x, y) if callable(rad) else rad
+            for i in range(int(x - r) - 1, int(x + r) + 2):
+                for j in range(int(y - r) - 1, int(y + r) + 2):
+                    if (i - x) ** 2 + (j - y) ** 2 <= r * r and 0 <= i < W and 0 <= j < H: cells.add((i, j))
+    return cells
+def dil(cells, r): return {(x + i, y + j) for (x, y) in cells for i in range(-r, r + 1) for j in range(-r, r + 1)}
+def ell(px, py, rx, ry, W, H): return {(x, y) for x in range(W) for y in range(H) if ((x - px) / rx) ** 2 + ((y - py) / ry) ** 2 <= 1}
+def distmap(src, W, H):
+    d = {c: 0 for c in src}; q = collections.deque(src)
+    while q:
+        c = q.popleft()
+        for a in (-1, 0, 1):
+            for b in (-1, 0, 1):
+                n = (c[0] + a, c[1] + b)
+                if 0 <= n[0] < W and 0 <= n[1] < H and n not in d: d[n] = d[c] + 1; q.append(n)
+    return d
+WATER_B = (0x10, 0x11, 0x12, 0x13, 0x15, 0x1b)
+GRASS_B = (8, 9, 16, 17)
+
+def build(L, rnd):
     W, H = DIMS[L]
-    G = list(struct.unpack('<%dH' % (W * H), open(SRC + ('r16_orig.bin' if L == 'Route16' else 'r17_orig.bin'), 'rb').read()))
-    mj = json.load(open('data/maps/%s/map.json' % L))
-    EV = {(o['x'], o['y']) for o in mj['object_events']} | {(w['x'], w['y']) for w in mj['warp_events']} | {(b['x'], b['y']) for b in mj['bg_events']}
-    ST = {(x, y): stage(L, x, y) for y in range(H) for x in range(W)}
-    blocked = lambda i: bool(G[i] & 0xc00)
-    def nb(c):
-        for d in ((0, 1), (1, 0), (-1, 0), (0, -1)):
-            n = (c[0] + d[0], c[1] + d[1])
-            if 0 <= n[0] < W and 0 <= n[1] < H: yield n
+    SEA, FIXED, WALL = {}, {}, set()
+    if L == 'Route17':
+        orig = list(struct.unpack('<%dH' % (24 * 160), open(SRC + 'r17_orig.bin', 'rb').read()))
+        def cx(y):
+            env = min(1.0, y / 7.0, (H - 1 - y) / 12.0)
+            return 9.5 + 2.5 * (y / (H - 1)) ** 1.5 + 5.4 * math.sin(y / 4.9) * env
+        PATH = disc_path([(cx(y), y) for y in range(H)], lambda x, y: 1.25 + 0.35 * math.sin(y * 0.7), W, H)
+        PATH |= {(x, y) for y in (0, 1) for x in range(8, 12)} | {(x, y) for y in (H - 2, H - 1) for x in range(8, 17)}
+        for y in range(H - 14, H):
+            for x in list(range(0, 8)) + list(range(17, 24)): SEA[(x, y)] = orig[(y + 80) * 24 + x]
+        MEAD = set()
+        for k, yc in enumerate((11, 25, 39, 53)): MEAD |= ell(cx(yc) + (7.0 if k % 2 == 0 else -7.0), yc, 5.2, 4.2, W, H)
+        BUF = dil(PATH, 1)
+        DM = distmap(PATH, W, H)
+        FOREST = {(x, y) for y in range(H) for x in range(W) if (x, y) not in PATH | BUF | MEAD and (x, y) not in SEA and DM[(x, y)] >= 2.6 + 1.3 * math.sin(y * 0.9 + x * 0.4)}
+    else:
+        orig = list(struct.unpack('<%dH' % (48 * 20), open(SRC + 'r16_orig.bin', 'rb').read()))
+        PATH = disc_path([(47, 13), (43, 13), (39, 12.4), (35, 13), (30, 13)], 1.25, W, H)
+        PATH |= {(x, 13) for x in range(29, 36)}
+        PATH |= disc_path([(29, 13), (25, 12), (21, 11.5), (17, 10), (13, 8), (10.5, 6.6)], 1.3, W, H)
+        PATH |= disc_path([(22, 12), (18, 14.5), (14, 16.5), (10.5, 17.5), (9.5, 19)], 1.3, W, H)
+        PATH |= {(x, y) for y in (17, 18, 19) for x in range(8, 12)} | {(x, 12) for x in (45, 46, 47)} | {(x, 14) for x in (45, 46, 47)}
+        for y in (3, 4, 5):
+            for x in range(9, 14): FIXED[(x, y)] = orig[y * 48 + x]
+        PATH -= set(FIXED)
+        WALL = {(x, y) for x in range(30, 34) for y in range(H) if y != 13}
+        BUF = dil(PATH, 1) | dil(set(FIXED), 1)
+        MEAD = ell(21, 5.5, 6, 2.5, W, H) | ell(37, 6.5, 4, 2, W, H) | ell(36, 16, 4, 1.4, W, H) | ell(11.5, 7, 6.5, 4.2, W, H) | ell(7, 14, 3.5, 3.5, W, H)
+        DM = distmap(PATH, W, H)
+        FOREST = {(x, y) for y in range(H) for x in range(W) if (y <= 2 or y >= 17 or x <= 2 or x >= 44) or ((x, y) not in MEAD and DM[(x, y)] >= 2.6 + 1.3 * math.sin(y * 0.9 + x * 0.4))}
+        FOREST |= WALL
+        FOREST -= PATH | (BUF - WALL) | set(FIXED)
+    FOREST -= set(SEA)
+    G = {(x, y): (0x3000, 8 + (x & 1) + 8 * (y & 1)) for y in range(H) for x in range(W)}
+    for c in PATH: G[c] = (0x3000, sand_id(lambda dx, dy, c=c: (c[0] + dx, c[1] + dy) in PATH or not (0 <= c[0] + dx < W and 0 <= c[1] + dy < H)))
+    TREEO, TREES = {}, []
+    for y in range(H - 1):
+        for x in range(W - 1):
+            if (x + y) % 2: continue
+            cs = [(x, y), (x + 1, y), (x, y + 1), (x + 1, y + 1)]
+            if all(c in FOREST and c not in TREEO for c in cs):
+                for c, m in zip(cs, (20, 21, 28, 29)): G[c] = (0x400, m); TREEO[c] = (x, y)
+                TREES.append((x, y))
+    for c in sorted(FOREST):
+        if c in TREEO: continue
+        if c in WALL or c[0] in (0, W - 1) or c[1] in (0, H - 1): G[c] = (0x400, 28 + (c[0] & 1)); TREEO[c] = c
+    for c, v in FIXED.items(): G[c] = (v & 0xfc00, v & 0x3ff)
+    for c, v in SEA.items(): G[c] = (v & 0xfc00, v & 0x3ff)
+    return dict(W=W, H=H, G=G, PATH=PATH, BUF=BUF, MEAD=MEAD, TREEO=TREEO, FIXED=FIXED, SEA=SEA, FOREST=FOREST)
+
+def decorate(L, B, rnd):
+    W, H, G, PATH, BUF = B['W'], B['H'], B['G'], B['PATH'], B['BUF']
+    nbs = lambda c: [(c[0] + a, c[1] + b) for a, b in ((0, 1), (1, 0), (-1, 0), (0, -1)) if 0 <= c[0] + a < W and 0 <= c[1] + b < H]
+    def blocked(c): return bool(G[c][0] & 0xc00) or (att(G[c][1]) & 0x1ff) in WATER_B
     def reach(start, extra=frozenset()):
         seen = {start}; q = collections.deque([start])
         while q:
             c = q.popleft()
-            for n in nb(c):
-                if n not in seen and not blocked(n[1] * W + n[0]) and n not in extra: seen.add(n); q.append(n)
+            for n in nbs(c):
+                if n not in seen and not blocked(n) and n not in extra: seen.add(n); q.append(n)
         return seen
-    start = (47, 13) if L == 'Route16' else (12, 0)
-    assert not blocked(start[1] * W + start[0]), start
+    start = (47, 13) if L == 'Route16' else (9, 0)
+    assert not blocked(start), start
     R0 = reach(start)
-    def plain(c): return 0 <= c[0] < W and 0 <= c[1] < H and (G[c[1] * W + c[0]] & 0x3ff) in GRASS and not blocked(c[1] * W + c[0])
-    def zone_ok(c, r):
-        return all(plain((c[0] + a, c[1] + b)) and (c[0] + a, c[1] + b) not in EV for a in range(-r, r + 1) for b in range(-r, r + 1))
-    rnd = random.Random(1616 if L == 'Route16' else 1717)
-    BASE = {}                                              # cellule -> metatuile de base (sans etage) a poser
-    ART = {}                                               # cellule -> (variante de cristal, base d'herbe)
-    TREES = []
-    # ---- bosquets : seeds espaces, 1..3 arbres 2x2 accoles, marge d'herbe tout autour
-    cells = [(x, y) for y in range(2, H - 3) for x in range(2, W - 3)]
-    rnd.shuffle(cells); seeds = []
-    SP = 7 if L == 'Route17' else 6
-    for c in cells:
-        if any(max(abs(c[0] - s[0]), abs(c[1] - s[1])) < SP for s in seeds): continue
-        # un arbre 2x2 : cases (x,y),(x+1,y),(x,y+1),(x+1,y+1) + 1 de marge
-        def tree_ok(o):
-            if any(max(abs(o[0] - t[0]), abs(o[1] - t[1])) < 2 for t in TREES if t != o) and False: return False
-            for a in range(-1, 3):
-                for b in range(-1, 3):
-                    n = (o[0] + a, o[1] + b)
-                    if n in EV or n in BASE: return False
-                    if 0 <= a < 2 and 0 <= b < 2:
-                        if not plain(n): return False
-                    elif not (0 <= n[0] < W and 0 <= n[1] < H) or blocked(n[1] * W + n[0]): return False
-            return True
-        if not tree_ok(c): continue
-        group = [c]
-        for off in rnd.sample([(2, 0), (-2, 0), (0, 2), (0, -2), (2, 2), (-2, 2), (2, -1), (-2, 1)], 8):
-            if len(group) >= rnd.choice((1, 2, 2, 3)): break
-            o = (c[0] + off[0], c[1] + off[1])
-            if o in group: continue
-            for g in group + [o]:
-                pass
-            if tree_ok(o) and all(not ((o[0] + a, o[1] + b) in BASE) for a in range(2) for b in range(2)):
-                # eviter le chevauchement avec les arbres du groupe
-                if all(abs(o[0] - g[0]) >= 2 or abs(o[1] - g[1]) >= 2 for g in group): group.append(o)
-        placed = []
-        for o in group:
-            cs = [(o[0] + a, o[1] + b) for b in range(2) for a in range(2)]
-            if any(n in BASE for n in cs): continue
-            for (n, m) in zip(cs, (20, 21, 28, 29)): BASE[n] = m
-            if reach(start, set(BASE)) >= (R0 - set(BASE)): placed.append(o); TREES.append(o)
-            else:
-                for n in cs: BASE.pop(n, None)
-        if placed: seeds.append(c)
-    # ---- cristaux : cases d'herbe isolees, loin des arbres (un cristal bloque sa case)
-    ncry = 0
-    free = [(x, y) for y in range(2, H - 2) for x in range(2, W - 2) if plain((x, y)) and (x, y) not in BASE and (x, y) not in EV
-            and all(n not in BASE and not blocked(n[1] * W + n[0]) for n in nb((x, y)))]
-    rnd.shuffle(free); lim = 18 if L == 'Route16' else 46
-    for c in free:
+    def plain(c): return c in G and G[c][0] == 0x3000 and G[c][1] in GRASS_B
+    # ---- herbes hautes dans les clairieres
+    TALL = [c for c in B['MEAD'] if plain(c) and c not in BUF and noise(c[0] * 1.7, c[1] * 1.3) > 0.12]
+    for c in TALL: G[c] = (0x3000, 13)
+    # ---- evenements : signes, dresseurs, objets caches
+    EV = {}
+    def near_path(c, dmin, dmax):
+        d = min(max(abs(c[0] - p[0]), abs(c[1] - p[1])) for p in B['PATH'] if abs(p[0] - c[0]) <= dmax and abs(p[1] - c[1]) <= dmax) if any(abs(p[0] - c[0]) <= dmax and abs(p[1] - c[1]) <= dmax for p in B['PATH']) else 99
+        return dmin <= d <= dmax
+    def pick(target, dmin=2, dmax=2, avoid=(), rad=99):
+        cand = [c for c in G if plain(c) and c not in EV.values() and 2 <= c[0] < W - 2 and 2 <= c[1] < H - 2 and near_path(c, dmin, dmax) and c in R0
+                and all(max(abs(c[0] - a[0]), abs(c[1] - a[1])) >= 4 for a in avoid) and max(abs(c[0] - target[0]), abs(c[1] - target[1])) <= rad]
+        if not cand: return None
+        return min(cand, key=lambda c: (c[0] - target[0]) ** 2 + (c[1] - target[1]) ** 2 + rnd.random())
+    return dict(R0=R0, reach=reach, blocked=blocked, plain=plain, pick=pick, EV=EV, start=start, nbs=nbs)
+
+def place_all(L, B, D, rnd):
+    W, H, G, PATH, BUF, MEAD = B['W'], B['H'], B['G'], B['PATH'], B['BUF'], B['MEAD']
+    R0, reach, blocked, plain, pick, EV, start = D['R0'], D['reach'], D['blocked'], D['plain'], D['pick'], D['EV'], D['start']
+    mj = json.load(open('data/maps/%s/map.json' % L))
+    def face(c):
+        p = min(PATH, key=lambda q: (q[0] - c[0]) ** 2 + (q[1] - c[1]) ** 2)
+        dx, dy = p[0] - c[0], p[1] - c[1]
+        return ('RIGHT' if dx > 0 else 'LEFT') if abs(dx) >= abs(dy) else ('DOWN' if dy > 0 else 'UP')
+    placed = []
+    trainers = [o for o in mj['object_events'] if o.get('trainer_type') == 'TRAINER_TYPE_NORMAL']
+    if L == 'Route16':
+        tg = [(41, 9), (38, 16), (27, 10), (25, 15), (19, 8), (15, 13), (12, 10), (11, 16)]
+    else:
+        ys = [8, 15, 22, 29, 36, 43, 50, 56, 61, 64]
+        tg = [(round(9.5 + 2.5 * (y / (H - 1)) ** 1.5 + 4.6 * math.sin(y / 5.6) * min(1, y / 7, (H - 1 - y) / 12)) + (3 if i % 2 else -3), y) for i, y in enumerate(ys)]
+    for o, t in zip(trainers, tg):
+        c = pick(t, 2, 2, avoid=placed, rad=8)
+        if c is None: c = pick(t, 2, 3, avoid=placed, rad=12)
+        assert c, ('dresseur', o['script'], t)
+        placed.append(c); EV[o['script']] = c
+        o['x'], o['y'] = c; o['movement_type'] = 'MOVEMENT_TYPE_FACE_' + face(c); o['movement_range_x'] = 0; o['movement_range_y'] = 0
+        o['trainer_sight_or_berry_tree_id'] = '2'
+    # ---- panneaux (tuile de panneau, bloquante)
+    keep_bg, signs = [], [b for b in mj['bg_events'] if b['type'] == 'sign']
+    if L == 'Route16':
+        want = {'Route16_EventScript_RouteSign': (7, 16)}
+    else:
+        want = {'Route17_EventScript_RouteSign': (11, 70), 'Route17_EventScript_TrainerTips1': (10, 18), 'Route17_EventScript_TrainerTips2': (12, 40)}
+    for b in signs:
+        if b['script'] not in want: continue
+        c = pick(want[b['script']], 2, 2, avoid=placed + list(EV.values()), rad=10)
+        assert c, b['script']
+        G[c] = (0x400, 2); EV[b['script']] = c; b['x'], b['y'] = c; keep_bg.append(b)
+    for b in mj['bg_events']:
+        if b['type'] == 'hidden_item':
+            if L == 'Route16': keep_bg.append(b); continue
+    if L == 'Route17':
+        meadc = sorted(c for c in MEAD if plain(c) and c in R0 and c not in B['BUF'] and 3 <= c[0] <= W - 4 and c[1] < H - 16)
+        hid = [b for b in mj['bg_events'] if b['type'] == 'hidden_item']
+        for i, b in enumerate(hid):
+            sel = [c for c in meadc if min([99] + [max(abs(c[0] - a[0]), abs(c[1] - a[1])) for a in placed]) >= 3]
+            c = sel[(i * 37 + 11) % len(sel)] if sel else meadc[0]
+            placed.append(c); b['x'], b['y'] = c; keep_bg.append(b)
+    mj['bg_events'] = keep_bg
+    # ---- cristaux
+    ART = {}
+    cand = [c for c in G if plain(c) and c in R0 and 2 <= c[0] < W - 2 and 2 <= c[1] < H - 2 and c not in PATH and c not in placed]
+    rnd.shuffle(cand); lim = 16 if L == 'Route16' else 60; ncry = 0
+    pts = placed + list(EV.values())
+    for c in cand:
         if ncry >= lim: break
-        if any(max(abs(c[0] - q[0]), abs(c[1] - q[1])) < (4 if L == 'Route17' else 3) for q in ART): continue
-        if any(max(abs(c[0] - t[0]), abs(c[1] - t[1])) < 3 for t in TREES): continue
-        if not (reach(start, set(BASE) | set(ART) | {c}) >= (R0 - set(BASE) - set(ART) - {c})): continue
-        ART[c] = (rnd.randrange(3), G[c[1] * W + c[0]] & 0x3ff); ncry += 1
-    # ---- ecriture de la carte
-    out = list(G)
-    for i in range(W * H):
-        c = (i % W, i // W); fl = G[i] & 0xfc00
-        if c in BASE:
-            tr = [t for t in TREES if t[0] <= c[0] <= t[0] + 1 and t[1] <= c[1] <= t[1] + 1][0]
-            st = ST[tr]; out[i] = 0x400 | variant(BASE[c], st)                    # tout l'arbre au meme etage
-        elif c in ART:
-            v, base = ART[c]; st = ST[c]; out[i] = (G[i] & 0xf000) | 0x400 | art_meta(v, st, base)
-        else:
-            m0 = G[i] & 0x3ff; wat = (att(m0) & 0x1ff) in (0x10, 0x11, 0x12, 0x13, 0x15, 0x1b)
-            out[i] = fl | variant(m0, 1 if wat else ST[c])
-    # verifications
-    G2 = out
-    blocked2 = lambda c: bool(G2[c[1] * W + c[0]] & 0xc00)
-    seen = {start}; q = collections.deque([start])
-    while q:
-        c = q.popleft()
-        for n in nb(c):
-            if n not in seen and not blocked2(n): seen.add(n); q.append(n)
-    lost = {c for c in R0 if c not in seen and c not in BASE and c not in ART}
-    assert not lost, ('cases perdues', sorted(lost)[:10])
-    assert all(c in seen for c in EV if c in R0), 'evenement inaccessible'
-    nb1 = sum(ST.values()); print(L, 'arbres', len(TREES), 'cristaux', ncry, 'cases lilas %d/%d' % (nb1, W * H))
+        d = min(max(abs(c[0] - p[0]), abs(c[1] - p[1])) for p in PATH if abs(p[0] - c[0]) <= 6 and abs(p[1] - c[1]) <= 6) if any(abs(p[0] - c[0]) <= 6 and abs(p[1] - c[1]) <= 6 for p in PATH) else 99
+        if d < 2 or d > 5: continue
+        if any(max(abs(c[0] - q[0]), abs(c[1] - q[1])) < 3 for q in list(ART) + pts): continue
+        ART[c] = (rnd.randrange(3), G[c][1])
+        G[c] = (0x400, G[c][1])
+        if not (reach(start, set(ART)) >= (R0 - set(ART) - {c for c in R0 if blocked(c)})): del ART[c]; G[c] = (0x3000, G[c][1]); continue
+        ncry += 1
+    return mj, ART, EV, placed
+
+def finalize(L, B, ART):
+    W, H, G, TREEO = B['W'], B['H'], B['G'], B['TREEO']
+    ST = {(x, y): stage(L, x, y) for y in range(H) for x in range(W)}
+    out = []
+    for y in range(H):
+        for x in range(W):
+            c = (x, y); fl, m = G[c]
+            if c in ART:
+                v, base = ART[c]; out.append((0x400) | art_meta(v, ST[c], base)); continue
+            wat = (att(m) & 0x1ff) in WATER_B
+            st = ST[TREEO[c]] if c in TREEO else (1 if wat else ST[c])
+            out.append(fl | variant(m, st))
     return out
 
-res = {L: dress(L) for L in DIMS}
+# ------------------------------------------------------------------ generation
+res, MJ = {}, {}
+for L in DIMS:
+    rnd = random.Random(1616 if L == 'Route16' else 1717)
+    B = build(L, rnd); D = decorate(L, B, rnd)
+    mj, ART, EV, placed = place_all(L, B, D, rnd)
+    # controle d'acces : tous les evenements et sorties atteignables, aucune case perdue
+    R1 = D['reach'](D['start'])
+    ends = [(9, 19), (10, 6)] if L == 'Route16' else [(9, 79), (12, 79), (16, 79)]
+    for e in ends: assert e in R1, ('sortie inaccessible', L, e)
+    for k, c in EV.items():
+        assert any(n in R1 for n in D['nbs'](c)) or c in R1, ('evenement inaccessible', L, k, c)
+    print(L, 'cases accessibles', len(R1), 'arbres', len(B['TREEO']), 'cristaux', len(ART), 'lilas', sum(stage(L, x, y) for y in range(B['H']) for x in range(B['W'])))
+    res[L] = finalize(L, B, ART); MJ[L] = mj
+# ---- evenements : Route 16 (portes : maison + Bourg Quartz seulement), Route 17 (jonction Route 18 recalee), Bourg Quartz (indices de warp)
+m16 = MJ['Route16']
+m16['object_events'] = [o for o in m16['object_events'] if o['graphics_id'] != 'OBJ_EVENT_GFX_CUT_TREE']
+m16['warp_events'] = [w for w in m16['warp_events'] if w['dest_map'] in ('MAP_ROUTE16_HOUSE', 'MAP_CELADON_CITY')]
+m16['bg_events'] = [b for b in m16['bg_events'] if b.get('script') != 'Route16_EventScript_CyclingRoadSign']
+m17 = MJ['Route17']
+for w in m17['warp_events']: w['y'] = DIMS['Route17'][1] - 1
+for L, mj in MJ.items(): json.dump(mj, open('data/maps/%s/map.json' % L, 'w'), indent=2); open('data/maps/%s/map.json' % L, 'a').write('\n')
+cj = json.load(open('data/maps/CeladonCity/map.json')); k = 1
+for w in sorted((w for w in cj['warp_events'] if w['dest_map'] == 'MAP_ROUTE16'), key=lambda w: w['y']): w['dest_warp_id'] = str(k); k += 1
+json.dump(cj, open('data/maps/CeladonCity/map.json', 'w'), indent=2); open('data/maps/CeladonCity/map.json', 'a').write('\n')
+
 # ---- ecriture des tilesets
 assert NMT + len(NEWE) <= 384 and NTL + len(NEWT) <= 384, (NMT + len(NEWE), NTL + len(NEWT))
 fin = [[((640 + NTL + q[1]) | (q[2] << 12)) if isinstance(q, tuple) else q for q in e] for e in NEWE]
@@ -249,5 +368,6 @@ add('src/data/tilesets/headers.h', 'GeneralRoute16',
 Lj = json.load(open('data/layouts/layouts.json'))
 for l in Lj['layouts']:
     if l.get('id') in ('LAYOUT_ROUTE16', 'LAYOUT_ROUTE17'): l.update(primary_tileset='gTileset_General%s' % cn, secondary_tileset='gTileset_Celadon%s' % cn)
+    if l.get('id') == 'LAYOUT_ROUTE17': l['height'] = DIMS['Route17'][1]
 json.dump(Lj, open('data/layouts/layouts.json', 'w'), indent=2); open('data/layouts/layouts.json', 'a').write('\n')
 print('routes 16 et 17 habillees')

@@ -312,21 +312,21 @@
       "y": 22,
       "elevation": 0,
       "dest_map": "MAP_ROUTE16",
-      "dest_warp_id": "5"
+      "dest_warp_id": "1"
     },
     {
       "x": 0,
       "y": 23,
       "elevation": 0,
       "dest_map": "MAP_ROUTE16",
-      "dest_warp_id": "6"
+      "dest_warp_id": "2"
     },
     {
       "x": 0,
       "y": 24,
       "elevation": 0,
       "dest_map": "MAP_ROUTE16",
-      "dest_warp_id": "7"
+      "dest_warp_id": "3"
     },
     {
       "x": 59,
