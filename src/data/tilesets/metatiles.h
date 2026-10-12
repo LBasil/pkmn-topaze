@@ -327,3 +327,9 @@ const u32 gMetatileAttributes_GeneralApatia[] = INCBIN_U32("data/tilesets/primar
 
 const u16 gMetatiles_VermilionApatia[] = INCBIN_U16("data/tilesets/secondary/vermilion_apatia/metatiles.bin");
 const u32 gMetatileAttributes_VermilionApatia[] = INCBIN_U32("data/tilesets/secondary/vermilion_apatia/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralHematown[] = INCBIN_U16("data/tilesets/primary/general_hematown/metatiles.bin");
+const u32 gMetatileAttributes_GeneralHematown[] = INCBIN_U32("data/tilesets/primary/general_hematown/metatile_attributes.bin");
+
+const u16 gMetatiles_SaffronHematown[] = INCBIN_U16("data/tilesets/secondary/saffron_hematown/metatiles.bin");
+const u32 gMetatileAttributes_SaffronHematown[] = INCBIN_U32("data/tilesets/secondary/saffron_hematown/metatile_attributes.bin");

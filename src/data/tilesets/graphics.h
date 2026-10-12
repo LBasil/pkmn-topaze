@@ -2373,3 +2373,45 @@ const u16 gTilesetPalettes_VermilionApatia[][16] =
 	INCBIN_U16("data/tilesets/secondary/vermilion_apatia/palettes/14.gbapal"),
 	INCBIN_U16("data/tilesets/secondary/vermilion_apatia/palettes/15.gbapal"),
 };
+
+const u32 gTilesetTiles_GeneralHematown[] = INCBIN_U32("data/tilesets/primary/general_hematown/tiles.4bpp.lz");
+const u16 gTilesetPalettes_GeneralHematown[][16] =
+{
+	INCBIN_U16("data/tilesets/primary/general_hematown/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_hematown/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_hematown/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_hematown/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_hematown/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_hematown/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_hematown/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_hematown/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_hematown/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_hematown/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_hematown/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_hematown/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_hematown/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_hematown/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_hematown/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_hematown/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_SaffronHematown[] = INCBIN_U32("data/tilesets/secondary/saffron_hematown/tiles.4bpp.lz");
+const u16 gTilesetPalettes_SaffronHematown[][16] =
+{
+	INCBIN_U16("data/tilesets/secondary/saffron_hematown/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/saffron_hematown/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/saffron_hematown/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/saffron_hematown/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/saffron_hematown/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/saffron_hematown/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/saffron_hematown/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/saffron_hematown/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/saffron_hematown/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/saffron_hematown/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/saffron_hematown/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/saffron_hematown/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/saffron_hematown/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/saffron_hematown/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/saffron_hematown/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/saffron_hematown/palettes/15.gbapal"),
+};

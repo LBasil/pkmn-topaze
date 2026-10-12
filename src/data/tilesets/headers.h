@@ -1252,3 +1252,25 @@ const struct Tileset gTileset_VermilionApatia =
     .metatileAttributes = gMetatileAttributes_VermilionApatia,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralHematown =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralHematown,
+    .palettes = gTilesetPalettes_GeneralHematown,
+    .metatiles = gMetatiles_GeneralHematown,
+    .metatileAttributes = gMetatileAttributes_GeneralHematown,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_SaffronHematown =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SaffronHematown,
+    .palettes = gTilesetPalettes_SaffronHematown,
+    .metatiles = gMetatiles_SaffronHematown,
+    .metatileAttributes = gMetatileAttributes_SaffronHematown,
+    .callback = NULL,
+};

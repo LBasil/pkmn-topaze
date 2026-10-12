@@ -32,8 +32,8 @@ for b in d['bg_events']:
 jdump(d, f)
 f = 'data/maps/LavenderTown/text.inc'; s = open(f).read()
 s = s.replace('The Noble Purple Town', 'The Spinel Tower Town'); open(f, 'w').write(s)
-f = 'src/data/heal_locations.h'; s = open(f).read(); x, y = D['center']
-s = re.sub(r'(HEAL_LOCATION_LAVENDER_TOWN - 1\] = \{.*?\.x = )\d+(,\s*\.y = )\d+', r'\g<1>%d\g<2>%d' % (x, y + 1), s, count=1, flags=re.S); open(f, 'w').write(s)
+f = "src/data/heal_locations.json"; s = open(f).read(); x, y = D["center"]
+s = re.sub(r'("id": "HEAL_LOCATION_LAVENDER_TOWN",\s*"map": "MAP_LAVENDER_TOWN",\s*"x": )\d+(,\s*"y": )\d+', r'\g<1>%d\g<2>%d' % (x, y + 1), s, count=1); open(f, 'w').write(s)
 f = 'src/field_control_avatar.c'; s = open(f).read()
 if 'LAYOUT_LAVENDER_TOWN' not in s:
     s = s.replace('|| gMapHeader.mapLayoutId == LAYOUT_ROUTE14;', '|| gMapHeader.mapLayoutId == LAYOUT_ROUTE14 || gMapHeader.mapLayoutId == LAYOUT_LAVENDER_TOWN || gMapHeader.mapLayoutId == LAYOUT_ROUTE10 || gMapHeader.mapLayoutId == LAYOUT_ROUTE12 || gMapHeader.mapLayoutId == LAYOUT_ROUTE8;', 1)

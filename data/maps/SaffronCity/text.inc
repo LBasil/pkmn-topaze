@@ -64,7 +64,7 @@ SaffronCity_Text_HesTakingASnooze::
 
 SaffronCity_Text_CitySign::
     .string "HEMATOWN\n"
-    .string "Shining, Golden Land of Commerce$"
+    .string "The City the Sun Forgot$"
 
 SaffronCity_Text_FightingDojo::
     .string "FIGHTING DOJO$"

@@ -2282,8 +2282,8 @@
       "height": 55,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_SaffronCity",
+      "primary_tileset": "gTileset_GeneralHematown",
+      "secondary_tileset": "gTileset_SaffronHematown",
       "border_filepath": "data/layouts/SaffronCity/border.bin",
       "blockdata_filepath": "data/layouts/SaffronCity/map.bin"
     },

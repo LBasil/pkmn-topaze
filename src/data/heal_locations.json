@@ -35,8 +35,8 @@
     {
       "id": "HEAL_LOCATION_LAVENDER_TOWN",
       "map": "MAP_LAVENDER_TOWN",
-      "x": 6,
-      "y": 6,
+      "x": 11,
+      "y": 8,
       "respawn_map": "MAP_LAVENDER_TOWN_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_LAVENDER_NURSE"
     },
@@ -83,8 +83,8 @@
     {
       "id": "HEAL_LOCATION_SAFFRON_CITY",
       "map": "MAP_SAFFRON_CITY",
-      "x": 24,
-      "y": 39,
+      "x": 22,
+      "y": 41,
       "respawn_map": "MAP_SAFFRON_CITY_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_SAFFRON_NURSE"
     },
