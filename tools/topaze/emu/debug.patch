@@ -1,0 +1,47 @@
+diff --git a/src/new_game.c b/src/new_game.c
+index 5dbd4da..6f8c334 100644
+--- a/src/new_game.c
++++ b/src/new_game.c
+@@ -79,8 +79,10 @@ static void ClearBattleTower(void)
+     CpuFill32(0, &gSaveBlock2Ptr->battleTower, sizeof(gSaveBlock2Ptr->battleTower));
+ }
+ 
++u8 gTopazeDbg[8];
+ static void WarpToPlayersRoom(void)
+ {
++    if (gTopazeDbg[0]) SetWarpDestination(gTopazeDbg[1], gTopazeDbg[2], -1, gTopazeDbg[3], gTopazeDbg[4]); else
+     SetWarpDestination(MAP_GROUP(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), MAP_NUM(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), -1, 6, 6);
+     WarpIntoMap();
+ }
+diff --git a/src/trainer_see.c b/src/trainer_see.c
+index a71113b..8a3f8f3 100644
+--- a/src/trainer_see.c
++++ b/src/trainer_see.c
+@@ -85,7 +85,10 @@ static const TrainerSeeFunc sTrainerSeeFuncList2[] = {
+     TrainerSeeFunc_EndJumpOutOfAsh
+ };
+ 
+-bool8 CheckForTrainersWantingBattle(void)
++extern u8 gTopazeDbg[8];
++static bool8 CheckForTrainersWantingBattle_Real(void);
++bool8 CheckForTrainersWantingBattle(void) { if (gTopazeDbg[5]) return FALSE; return CheckForTrainersWantingBattle_Real(); }
++static bool8 CheckForTrainersWantingBattle_Real(void)
+ {
+     u8 i;
+     if (QL_IsTrainerSightDisabled() == TRUE)
+diff --git a/src/wild_encounter.c b/src/wild_encounter.c
+index fa358c0..12801aa 100644
+--- a/src/wild_encounter.c
++++ b/src/wild_encounter.c
+@@ -352,7 +352,10 @@ static bool8 DoGlobalWildEncounterDiceRoll(void)
+     return TRUE;
+ }
+ 
+-bool8 StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetatileBehavior)
++extern u8 gTopazeDbg[8];
++static bool8 StandardWildEncounter_Real(u32 currMetatileAttrs, u16 previousMetatileBehavior);
++bool8 StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetatileBehavior) { if (gTopazeDbg[5]) return FALSE; return StandardWildEncounter_Real(currMetatileAttrs, previousMetatileBehavior); }
++static bool8 StandardWildEncounter_Real(u32 currMetatileAttrs, u16 previousMetatileBehavior)
+ {
+     u16 headerId;
+     struct Roamer * roamer;

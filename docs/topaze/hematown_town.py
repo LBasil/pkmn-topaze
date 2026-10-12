@@ -53,7 +53,7 @@ def ov(x, y): return O[y * OW + x]
 used = set()
 for v in set(x & 0x3ff for x in O):
     for e in ents(v): used.add(e >> 12)
-ART_PAL = 7; CRY_PAL = 13
+ART_PAL = 7; CRY_PAL = 4      # palette 13 jamais chargee par le moteur (NUM_PALS_TOTAL 13) : cristaux sur la palette primaire 4 (eau, inutilisee a Hematown)
 assert ART_PAL not in used and CRY_PAL not in used, used
 # ------------------------------------------------------------------ bruit (reproductible)
 def _h(ix, iy, seed): return random.Random((ix * 73856093) ^ (iy * 19349663) ^ (seed * 83492791)).random()
@@ -696,7 +696,7 @@ tiles_old = [simg.crop(((t % 16) * 8, (t // 16) * 8, (t % 16) * 8 + 8, (t // 16)
 for n, ti in enumerate(tiles_old): out.paste(ti, ((n % 16) * 8, (n // 16) * 8))
 for n, t in enumerate(NEWT):
     ti = Image.new('P', (8, 8)); ti.putdata(list(t)); out.paste(ti, (((len(used_t) + n) % 16) * 8, ((len(used_t) + n) // 16) * 8))
-out.save(NS + 'tiles.png'); writepal(NS + 'palettes/%02d.pal' % ART_PAL, PAL); writepal(NS + 'palettes/%02d.pal' % CRY_PAL, PAL_C)
+out.save(NS + 'tiles.png'); writepal(NS + 'palettes/%02d.pal' % ART_PAL, PAL); writepal((NP if CRY_PAL < 7 else NS) + 'palettes/%02d.pal' % CRY_PAL, PAL_C)
 open('data/layouts/SaffronCity/map.bin', 'wb').write(struct.pack('<%dH' % (W * H), *[G[(x, y)] for y in range(H) for x in range(W)]))
 def rm_id(v):
     i = v & 0x3ff
