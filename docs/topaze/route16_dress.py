@@ -373,7 +373,7 @@ def build(L, rnd):
         st16 = vstream(lambda y: 41.6 + 0.9 * math.sin(y / 2.3), 7, 19, W, H) | vstream(lambda y: 42.6 + 0.9 * math.sin(y / 2.3), 7, 19, W, H); st16 -= lake      # riviere de 3 a 4 cases, a moitie gelee (glace au nord, eau libre au sud)
         pond({c for c in st16 if c[1] <= 10}, 'ice'); pond({c for c in st16 if c[1] > 10}, 'water')
         BRIDGES = {'S1': ('H', {c for c in st16 if c in PATH})}
-        pond(blob(4.4, 10.0, 3.0, 2.2, 17, W, H), 'ice')                      # etang gele de l'ouest
+        pond(blob(5.6, 10.0, 3.0, 2.2, 17, W, H), 'ice')                      # etang gele de l'ouest
         MEAD = {(x, y) for x in range(W) for y in range(H) if noise(x * 1.35 + 2, y * 1.35 + 9) > 0.45}
         CLEAR = set()
         GATES = [(6, 17), (12, 17)]
@@ -426,8 +426,12 @@ def build(L, rnd):
     # sorties de la carte (les seules cases de bord praticables) ; tout le reste du bord est ferme par des arbres
     if L == 'Route16': EXIT = {(x, H - 1) for x in range(6, 24)} | {(W - 1, y) for y in range(12, 15)}
     else: EXIT = {(x, 0) for x in range(6, 16)} | {(x, H - 1) for x in range(W)}
-    RING = {(x, y) for y in range(H) for x in range(W) if (x <= 1 or x >= W - 2 or y <= 1 or y >= H - 2) and (x, y) not in EXIT and not any(abs(x - a) + abs(y - b) <= 1 for (a, b) in EXIT)}
-    FOREST |= RING - (nofor | set(SEA) | PATH_ALL | set(FIXED) | WSET | WALL | STAIR | CLEAR)
+    if L == 'Route16': OPENX = lambda x, y: (y >= H - 4 and 5 <= x <= 24) or (x >= W - 3 and 11 <= y <= 15)
+    else: OPENX = lambda x, y: (y <= 3 and 5 <= x <= 16) or y >= H - 4
+    # couronne : 2 cases a gauche/droite, 3 en haut/en bas (une colonne d'arbres FR fait au moins 3 rangees), sauf devant les sorties
+    RING = {(x, y) for y in range(H) for x in range(W) if (x <= 1 or x >= W - 2 or y <= 2 or y >= H - 3) and not OPENX(x, y)}
+    RINGF = RING - (set(SEA) | PATH_ALL | set(FIXED) | WSET | WALL | STAIR | CLEAR | FEAT)
+    FOREST |= RINGF
     # ---- bosquets isoles : blocs de 2 colonnes x 3 rangees (cime / pied-et-pointe / corps), debut sur une rangee PAIRE
     gr = []; blockd = PATH_ALL | BUF | set(FIXED) | set(SEA) | FEAT | dil(WSET, 1)
     cands = [(x, y) for y in range(4, H - 6, 2) for x in range(3, W - 3, 2) if all((x + i, y + j) not in FOREST and (x + i, y + j) not in blockd and DM[(x + i, y + j)] >= 3 for i in range(2) for j in range(3)) and (x, y) not in CLEAR]
@@ -454,7 +458,7 @@ def build(L, rnd):
     WALLC = set()
     for (x, y) in WALLU: WALLC |= {(x + i, y + j) for i in range(2) for j in range(2)}
     nofor2 = PATH_ALL | BUF | set(FIXED) | set(SEA) | FEAT | dil(WSET, 1) | CLEAR
-    avail = (FOREST - nofor2) | WALLC
+    avail = (FOREST - nofor2) | WALLC | RINGF
     def run_pairs(ux):
         y = 0
         while y < H:
