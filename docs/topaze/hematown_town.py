@@ -255,11 +255,35 @@ for (ux, uy) in TU:
 BLDG = {c for c, n in OCC.items() if n not in ('pin', 'trunk')}
 def near_b(c, r=1): return any((c[0] + a, c[1] + b) in BLDG for a in range(-r, r + 1) for b in range(-r, r + 1))
 PLAZA = {(x, y) for x in range(26, 41) for y in range(30, 40)}      # place devant la Tour + monument : reste ouverte
+# v3 : le coeur de la ville est libere des tours (bosquets/comblements) pour accueillir les maisons ; les tours ne gardent que la couronne exterieure
+for (ux, uy) in sorted(TU):
+    cx, cy = 2 * ux + 1, 2 * uy + 1
+    if ((cx - 33) / 24.5) ** 2 + ((cy - 27) / 20.5) ** 2 < 1.25:
+        TU.discard((ux, uy))
+        for c in ucells(ux, uy): OCC.pop(c, None)
+BLDG = {c for c, n in OCC.items() if n not in ('pin', 'trunk')}
+# v3 : maisons et immeubles DECORATIFS d'origine de Safrania (recopies entiers, toit compris), semes partout -> ville peuplee comme l'original
+DECO = {'hs': (17, 10, 4, 5), 'hl': (22, 18, 4, 4), 'ap': (19, 25, 5, 6)}     # maison 4x5, maison basse 4x4, immeuble jaune 5x6 (coordonnees d'origine)
+REJ = collections.Counter(); rh = random.Random(1906); spots = [(x, y) for y in range(H) for x in range(W)]; rh.shuffle(spots); nh = 0; (lambda *a: None)('DBG', len(OCC), len(KEEP), len(BLK), len(WAY), len(BLDG), sum(1 for y in range(H) for x in range(W) if (x,y) not in OCC and (x,y) not in KEEP and (x,y) not in WAY and (x,y) not in BLK and not near_b((x,y)))); DECOC = set()
+for (x, y) in spots:
+    k = rh.choices(['hs', 'hl', 'ap'], [50, 30, 20])[0]; ox, oy, cw, chh = DECO[k]
+    cs = [(x + i, y + j) for j in range(chh) for i in range(cw)]
+    if x < 0 or y < 1 or x + cw >= W or y + chh >= H - 1: continue
+    if any(c in OCC or c in KEEP or c in BLK or c in PLAZA or c in WAY for c in cs): REJ['a'] += 1; continue
+    if any(((c[0] + a_, c[1] + b_) in KEEP) for c in ((x, y + chh), (x + cw - 1, y + chh)) for a_, b_ in ((0, 0),)): continue
+    for c in cs: OCC[c] = 'deco'
+    if not NEED <= reach():
+        for c in cs: OCC.pop(c)
+        continue
+    for j in range(chh):
+        for i in range(cw): G[(x + i, y + j)] = ov(ox + i, oy + j) | 0x400
+    DECOC |= set(cs); nh += 1; BLDG |= set(cs)
+print('maisons decoratives', nh, dict(REJ))
 rd = random.Random(1905); dense = [(ux, uy) for uy in range(UH) for ux in range(UW)]; rd.shuffle(dense); nd = 0
 for (ux, uy) in dense:
     cs = ucells(ux, uy)
     if (ux, uy) in TU or any(c in OCC or c in KEEP or c in BLK or c in PLAZA or c in WAY or near_b(c) for c in cs): continue
-    if rd.random() < 0.12: continue            # quelques cours / ruelles
+    if rd.random() < 0.08: continue            # tours seulement dans les restes
     for c in cs: OCC[c] = 'pin'
     if NEED <= reach(): TU.add((ux, uy)); nd += 1
     else:
