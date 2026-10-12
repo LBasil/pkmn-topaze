@@ -1045,8 +1045,8 @@
       "height": 20,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_GeneralRoute15",
-      "secondary_tileset": "gTileset_FuchsiaRoute15",
+      "primary_tileset": "gTileset_GeneralRoute15V2",
+      "secondary_tileset": "gTileset_CeladonRoute15V2",
       "border_filepath": "data/layouts/Route15/border.bin",
       "blockdata_filepath": "data/layouts/Route15/map.bin"
     },
