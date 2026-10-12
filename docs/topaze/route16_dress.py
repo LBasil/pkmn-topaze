@@ -346,12 +346,12 @@ def build(L, rnd):
         for yw in (13, 31, 47, 61): WROWS[yw] = (0, W - 1)
         pond(blob(4.2, 6.4, 3.4, 2.8, 3, W, H), 'ice')                       # lac gele de la plaine
         pond(blob(19.3, 22.9, 3.0, 2.4, 11, W, H), 'water')                  # bassin source
-        pond(hstream(lambda x: 23.0 + 1.0 * math.sin(x / 3.0 + 0.6), 0, 17, W, H), 'water')     # ruisseau vers l'ouest, jusque sous les arbres
+        pond(hstream(lambda x: 23.0 + 1.0 * math.sin(x / 3.0 + 0.6), 4, 17, W, H), 'water')     # ruisseau vers l'ouest, jusque sous les arbres
         island = {(3, 39), (4, 39), (3, 40), (4, 40)}
         pb = blob(4.4, 40.0, 3.8, 2.9, 23, W, H) | island
         pond(pb, 'water'); HOLES |= island
         pond(blob(3.0, 57.2, 2.6, 2.1, 31, W, H), 'water')
-        BRIDGES = {'S1': ('V', {c for c in hstream(lambda x: 23.0 + 1.0 * math.sin(x / 3.0 + 0.6), 0, 17, W, H) if c in PATH})}
+        BRIDGES = {'S1': ('V', {c for c in hstream(lambda x: 23.0 + 1.0 * math.sin(x / 3.0 + 0.6), 4, 17, W, H) if c in PATH})}
         MEAD = {(x, y) for x in range(W) for y in range(H) if noise(x * 1.35 + 7, y * 1.35 + 3) > 0.34} | ell(19, 52, 5, 3.6, W, H)
         CLEAR = set()
         GATES = [(6, 1), (12, 1)]
@@ -370,7 +370,7 @@ def build(L, rnd):
         WALLU = [(x, y) for x in (30, 32) for y in list(range(0, 12, 2)) + [14, 16, 18]]
         WROWS[14] = (0, 29)                                                                                                   # falaise de la descente (2 cases), escalier au passage du chemin
         lake = blob(41.5, 4.4, 4.6, 2.9, 5, W, H); pond(lake, 'ice')
-        st16 = vstream(lambda y: 41.6 + 0.9 * math.sin(y / 2.3), 7, 19, W, H) | vstream(lambda y: 42.6 + 0.9 * math.sin(y / 2.3), 7, 19, W, H); st16 -= lake      # riviere de 3 a 4 cases, a moitie gelee (glace au nord, eau libre au sud)
+        st16 = vstream(lambda y: 41.6 + 0.9 * math.sin(y / 2.3), 7, 16, W, H) | vstream(lambda y: 42.6 + 0.9 * math.sin(y / 2.3), 7, 16, W, H); st16 -= lake      # riviere de 3 a 4 cases, a moitie gelee (glace au nord, eau libre au sud)
         pond({c for c in st16 if c[1] <= 10}, 'ice'); pond({c for c in st16 if c[1] > 10}, 'water')
         BRIDGES = {'S1': ('H', {c for c in st16 if c in PATH})}
         pond(blob(5.6, 10.0, 3.0, 2.2, 17, W, H), 'ice')                      # etang gele de l'ouest
