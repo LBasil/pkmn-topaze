@@ -937,8 +937,8 @@
       "height": 40,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_GeneralRoute6",
-      "secondary_tileset": "gTileset_VermilionRoute6",
+      "primary_tileset": "gTileset_GeneralApatia",
+      "secondary_tileset": "gTileset_VermilionApatia",
       "border_filepath": "data/layouts/Route6/border.bin",
       "blockdata_filepath": "data/layouts/Route6/map.bin"
     },
@@ -949,8 +949,8 @@
       "height": 20,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_GeneralRoute7",
-      "secondary_tileset": "gTileset_CeladonRoute7",
+      "primary_tileset": "gTileset_GeneralCeladopole",
+      "secondary_tileset": "gTileset_CeladonCeladopole",
       "border_filepath": "data/layouts/Route7/border.bin",
       "blockdata_filepath": "data/layouts/Route7/map.bin"
     },

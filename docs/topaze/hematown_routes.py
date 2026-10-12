@@ -1,7 +1,7 @@
 # ROUTES 5 / 6 / 7 (voisines de Hematown) : habillage v1 (recoloration, une ambiance par route selon la ville a l'autre bout).
 #   Route 5 (Tourmalia)  : falaises mauves (palette primaire 1, comme Route 24), verts FireRed conserves.
-#   Route 6 (Apatia)     : tint_sunset sur les 16 palettes (herbes or ambre, pins vert-bleu, mer indigo).
-#   Route 7 (Bourg Quartz): tint_snow sur les 16 palettes (neige blanc-bleute, pins givres).
+#   Route 6 (Apatia)     : tilesets d'Apatia (GeneralApatia / VermilionApatia : tint_sunset, memes numeros de metatuiles que Vermilion) ; decor dans hematown_routes_decor.py.
+#   Route 7 (Bourg Quartz): tilesets de Bourg Quartz (GeneralCeladopole / CeladonCeladopole : tint_snow) ; decor dans hematown_routes_decor.py.
 # Tilesets copies de general / cerulean_city / vermilion_city / celadon_city (memes numeros de metatuiles : les cartes restent valables telles quelles).
 # Les connexions vers MAP_SAFFRON_CITY_CONNECTION (bande dessinee avec d'autres tilesets) sont retirees des routes 5/6/7 (on y entre par les portes, des warps).
 # Idempotent. Lancer depuis la racine : PYTHONDONTWRITEBYTECODE=1 python3 docs/topaze/hematown_routes.py
@@ -37,9 +37,10 @@ def mauve(c):
     return c
 ident = lambda c: c
 # nom, couche, tileset secondaire d'origine, callback secondaire, teinte primaire par palette, teinte secondaire par palette
+CITY = {'LAYOUT_ROUTE6': ('gTileset_GeneralApatia', 'gTileset_VermilionApatia'), 'LAYOUT_ROUTE7': ('gTileset_GeneralCeladopole', 'gTileset_CeladonCeladopole')}
 ROUTES = [('Route5', 'LAYOUT_ROUTE5', 'route5', 'cerulean_city', 'CeruleanCity', 'Cerulean', 'NULL', {1: mauve}, {}),
-          ('Route6', 'LAYOUT_ROUTE6', 'route6', 'vermilion_city', 'VermilionCity', 'Vermilion', 'NULL', 'all:sunset', 'all:sunset'),
-          ('Route7', 'LAYOUT_ROUTE7', 'route7', 'celadon_city', 'CeladonCity', 'Celadon', 'InitTilesetAnim_CeladonCity', 'all:snow', 'all:snow')]
+          ('Route6', 'LAYOUT_ROUTE6', None, None, None, None, None, None, None),
+          ('Route7', 'LAYOUT_ROUTE7', None, None, None, None, None, None, None)]
 def add(path, marker, text):
     if marker not in open(path).read(): open(path, 'a').write(text)
 pal = lambda d: ''.join('\tINCBIN_U16("%spalettes/%02d.gbapal"),\n' % (d, i) for i in range(16))
@@ -56,7 +57,8 @@ const struct Tileset gTileset_%s =
 };
 '''
 Lj = json.load(open('data/layouts/layouts.json'))
-for name, lid, key, sdir, sname, sprefix, scb, tp, ts in ROUTES:
+def dress(name, lid, key, sdir, sprefix, scb, tp, ts):
+    """Route 5 : copie des tilesets FireRed recolores (tilesets dedies)"""
     cn = 'Route' + key[-1]
     NP = P + 'primary/general_%s/' % key; NS = P + 'secondary/%s_%s/' % (sdir.split('_')[0], key)
     for src, dst, spec in ((P + 'primary/general/', NP, tp), (P + 'secondary/%s/' % sdir, NS, ts)):
@@ -64,9 +66,7 @@ for name, lid, key, sdir, sname, sprefix, scb, tp, ts in ROUTES:
         for f in ('metatiles.bin', 'metatile_attributes.bin', 'tiles.png'): shutil.copy(src + f, dst + f)
         for i in range(16):
             pp = readpal(src + 'palettes/%02d.pal' % i)
-            if isinstance(spec, str): fn = tint_sunset if spec.endswith('sunset') else tint_snow; out = [pp[0]] + [fn(c) for c in pp[1:16]]
-            elif i in spec: out = [pp[0]] + [spec[i](c) for c in pp[1:15]] + [pp[15]]
-            else: out = pp
+            out = [pp[0]] + [spec[i](c) for c in pp[1:15]] + [pp[15]] if i in spec else pp
             writepal(dst + 'palettes/%02d.pal' % i, out)
     G_, S_ = 'General' + cn, sprefix + cn
     add('src/data/tilesets/graphics.h', 'gTilesetTiles_%s[]' % G_,
@@ -77,11 +77,14 @@ for name, lid, key, sdir, sname, sprefix, scb, tp, ts in ROUTES:
         '\nconst u16 gMetatiles_%s[] = INCBIN_U16("%smetatiles.bin");\nconst u32 gMetatileAttributes_%s[] = INCBIN_U32("%smetatile_attributes.bin");\n' % (S_, NS, S_, NS))
     add('src/data/tilesets/headers.h', 'gTileset_%s =' % G_,
         tm % (G_, 'FALSE', G_, G_, G_, G_, 'InitTilesetAnim_General') + tm % (S_, 'TRUE', S_, S_, S_, S_, scb))
+    return 'gTileset_' + G_, 'gTileset_' + S_
+Lj = json.load(open('data/layouts/layouts.json'))
+for name, lid, key, sdir, sname, sprefix, scb, tp, ts in ROUTES:
+    pt, st = dress(name, lid, key, sdir, sprefix, scb, tp, ts) if key else CITY[lid]
     for l in Lj['layouts']:
-        if l.get('id') == lid: l.update(primary_tileset='gTileset_' + G_, secondary_tileset='gTileset_' + S_)
+        if l.get('id') == lid: l.update(primary_tileset=pt, secondary_tileset=st)
     f = 'data/maps/%s/map.json' % name; m = json.load(open(f))
     m['connections'] = [c for c in (m.get('connections') or []) if c['map'] != 'MAP_SAFFRON_CITY_CONNECTION'] or None
-    if m['connections'] is None: m['connections'] = None
     json.dump(m, open(f, 'w'), indent=2); open(f, 'a').write('\n')
 json.dump(Lj, open('data/layouts/layouts.json', 'w'), indent=2); open('data/layouts/layouts.json', 'a').write('\n')
 print('routes 5/6/7 habillees')

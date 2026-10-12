@@ -516,6 +516,11 @@ for c, val in BLK.items():
     elif val[0] == 'bush': G[c] = 0x400 | 5
     elif val[0] == 'sign': G[c] = 0x400 | 2
 for c in FLW: G[c] = 0x3000 | 4
+ART_IDS = {}          # export pour les routes voisines (hematown_routes.py) : memes metatuiles de decor, par sol d'herbe (8, 9, 16, 17)
+for _b in (8, 9, 16, 17):
+    for _v in range(3): ART_IDS['cry_%d_%d' % (_v, _b)] = art_meta(SM[_v], _b, False, 'B')
+    for (_i, _j) in SNM: ART_IDS['snow_%d_%d_%d' % (_i, _j, _b)] = art_meta(SNM[(_i, _j)], _b, False, 'B')
+json.dump(ART_IDS, open('docs/topaze/celadopole_art_ids.json', 'w'), indent=1)
 assert NMT + len(NEWE) <= 384 and NTL + len(NEWT) <= 384, (NMT + len(NEWE), NTL + len(NEWT))
 print('metatuiles', NMT + len(NEWE), '/384  tuiles', NTL + len(NEWT), '/384  variantes de pave', len(PT))
 NEWE = [[((640 + NTL + q[1]) | (({'B': CRY_PAL, 'S': SNOW_PAL}.get(q[0], ART_PAL)) << 12)) if isinstance(q, tuple) else q for q in e] for e in NEWE]
