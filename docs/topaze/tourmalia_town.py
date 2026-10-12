@@ -409,42 +409,44 @@ for c in list(GROUND):
 # ------------------------------------------------------------------ v13 : l'arene = ARBRE GEANT (176x128 px = 11x8 cases, x 25..35, y 9..16, porte en (30,16))
 # Forme sur une grille de noeuds de 8 px, rendue par champ bilineaire (comme le lac de lave de Pyropia) : les tuiles se dedupliquent.
 TREE_PAL = [p for p in (9, 10, 11, 12) if p not in used][0]
-TP = [(0, 0, 0), (12, 30, 18), (22, 72, 34), (38, 110, 46), (66, 152, 62), (112, 196, 82), (170, 232, 118), (48, 28, 22), (86, 54, 34), (126, 84, 54),
-      (172, 124, 84), (16, 10, 14), (255, 206, 120), (30, 84, 62), (222, 72, 138), (255, 188, 218)]
-# 1 contour | 2-6 feuillage (sombre -> clair) | 7-10 ecorce | 11 dedans | 12 lueur | 13 ombre | 14-15 fleurs de tourmaline
-GT_X0, GT_Y0, GT_W, GT_H = 25, 9, 11, 8
-LOBES = [(88, 38, 35), (52, 46, 26), (124, 46, 26), (27, 57, 19), (149, 57, 19), (67, 22, 22), (109, 22, 22), (88, 54, 29), (40, 36, 15), (136, 36, 15)]      # (cx, cy, r) en pixels
+TP = [(0, 0, 0), (10, 28, 36), (18, 74, 78), (30, 124, 98), (60, 172, 120), (116, 218, 150), (190, 246, 190), (44, 26, 24), (88, 54, 36), (136, 90, 56),
+      (182, 132, 86), (16, 10, 14), (255, 206, 120), (30, 84, 62), (222, 72, 138), (255, 188, 218)]
+# 1 contour | 2-6 feuillage teal (sombre -> clair, plus clair/bleute que la foret pour se detacher) | 7-10 ecorce | 11 dedans | 12 lueur | 13 ombre | 14-15 fleurs de tourmaline
+GT_X0, GT_Y0, GT_W, GT_H = 24, 9, 13, 8
+CX = 104                                                                   # axe de l'arbre (porte en cellule 30)
+LOBES = [(CX, 40, 37), (CX - 42, 50, 27), (CX + 42, 50, 27), (CX - 70, 58, 19), (CX + 70, 58, 19), (CX - 24, 24, 24), (CX + 24, 24, 24), (CX, 54, 27),
+         (CX - 62, 34, 15), (CX + 62, 34, 15), (CX - 84, 66, 12), (CX + 84, 66, 12)]      # (cx, cy, r) en pixels
 def in_can(x, y): return any((x - cx) ** 2 + (y - cy) ** 2 <= r * r for cx, cy, r in LOBES)
 def seg_d(x, y, ax, ay, bx, by):
     dx, dy = bx - ax, by - ay; t = max(0, min(1, ((x - ax) * dx + (y - ay) * dy) / float(dx * dx + dy * dy)))
     return math.hypot(x - (ax + t * dx), y - (ay + t * dy))
-ROOTS = [((66, 112), (30, 126), 6.5, 2.5), ((110, 112), (146, 126), 6.5, 2.5), ((64, 104), (44, 118), 4.5, 2), ((112, 104), (132, 118), 4.5, 2), ((74, 118), (60, 127), 5, 2.5), ((102, 118), (116, 127), 5, 2.5)]
+ROOTS = [((CX - 34, 108), (CX - 76, 126), 9, 3), ((CX + 34, 108), (CX + 76, 126), 9, 3), ((CX - 30, 98), (CX - 56, 116), 6, 2.5), ((CX + 30, 98), (CX + 56, 116), 6, 2.5),
+         ((CX - 20, 118), (CX - 36, 127), 7, 3), ((CX + 20, 118), (CX + 36, 127), 7, 3)]
 def in_trk(x, y):
-    if y < 66 or y > 127: return False
-    hw = 22 + max(0, y - 100) * 0.55                                       # fut de 44 px, evase vers le pied
-    if abs(x - 88) <= hw: return True
+    if y < 76 or y > 127: return False
+    hw = 29 + max(0, y - 92) * 0.75                                        # fut massif de 58 px, tres evase au pied
+    if abs(x - CX) <= hw: return True
     for (ax, ay), (bx, by), r0, r1 in ROOTS:
         dx, dy = bx - ax, by - ay; t = max(0, min(1, ((x - ax) * dx + (y - ay) * dy) / float(dx * dx + dy * dy)))
         if seg_d(x, y, ax, ay, bx, by) <= r0 + (r1 - r0) * t: return True
     return False
-_r8 = random.Random(1313)
-LN = [[_r8.random() for _ in range(8)] for _ in range(8)]; CN = [_r8.random() for _ in range(8)]
 def can_q(qx, qy):
-    """niveau (3..5) du quart 8x8 (qx, qy) : lumiere en haut a gauche de chaque lobe"""
+    """niveau (3..4) du quart 8x8 : lumiere en haut a gauche de la masse"""
     cx_, cy_ = qx * 8 + 4, qy * 8 + 4
     best = min(LOBES, key=lambda l: ((cx_ - l[0]) ** 2 + (cy_ - l[1]) ** 2) / (l[2] * l[2]))
     d = -((cx_ - best[0]) * 0.7 + (cy_ - best[1]) * 0.7) / best[2]
-    return max(3, min(5, int(3.9 + 1.1 * d)))
-def trk_q(qx): return 10 - min(3, max(0, (qx * 8 + 4 - 66) // 12))      # gauche clair -> droite sombre
+    return 3 if d < 0.15 else 4
+def trk_lv(x):
+    d = (x - CX) / 60.0                                                    # gauche clair -> droite sombre
+    return 10 if d < -0.45 else 9 if d < 0.05 else 8
 def arch(px, py):
-    """porte : demi-cercle de 16 px (x 80..95) sur 28 px de haut, cadre de 4 px"""
-    cx, cy = 88, 108
+    """porte : arche de 16 px (x CX-8..CX+8) sur 40 px de haut, cadre de 4 px"""
+    cx, cy = CX, 98
     def ins(r, x0, x1):
         if py >= cy: return x0 <= px < x1 and py < 128
         return (px - cx + 0.5) ** 2 + (py - cy + 0.5) ** 2 <= r * r
-    return ins(8, 80, 96), ins(12, 76, 100)
-def knot(px, py, cx, cy): return (px - cx) ** 2 + (py - cy) ** 2 <= 20
-BLOOMS = [(44, 24), (96, 14), (126, 26), (30, 60), (146, 58), (80, 62), (112, 64)]
+    return ins(8, CX - 8, CX + 8), ins(12, CX - 12, CX + 12)
+BLOOMS = [(CX - 52, 26), (CX + 8, 12), (CX + 40, 30), (CX - 72, 56), (CX + 66, 54), (CX - 22, 58), (CX + 22, 60)]
 def tree_img():
     W_, H_ = GT_W * 16, GT_H * 16
     im = Image.new('P', (W_, H_), 0); im.putpalette([c for p in TP for c in p]); px_ = im.load()
@@ -454,24 +456,31 @@ def tree_img():
         for x in range(W_):
             if cano(x, y):
                 edge = any(not cano(x + dx, y + dy) for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))
-                low = not cano(x, y + 3) and not cano(x, y + 2) and cano(x, y - 1)                 # bord inferieur : sous-bois sombre
-                lv = can_q(x // 8, y // 8) + (LN[y % 8][x % 8] - 0.5) * 1.8 - (0.9 if low else 0)
-                px_[x, y] = 1 if edge else max(2, min(6, int(lv + 0.5)))
+                if edge: px_[x, y] = 1; continue
+                lv = can_q(x // 8, y // 8)
+                u = (x + ((y // 8) % 2) * 8) % 16 - 8; v = y % 8
+                if (v == 7 and abs(u) <= 3) or (v == 6 and 3 < abs(u) <= 5): lv = 2   # ourlet sombre en arc sous chaque touffe
+                elif (v == 1 and -4 <= u <= -1) or (v == 2 and -5 <= u <= 0) or (v == 3 and -5 <= u <= -3): lv += 1   # reflet arrondi en haut a gauche
+                elif not cano(x, y + 3) and not cano(x + 2, y + 1): lv = 2    # dessous de la couronne dans l'ombre
+                px_[x, y] = max(2, min(6, lv))
             elif trk(x, y):
                 edge = any(not (trk(x + dx, y + dy) or cano(x + dx, y + dy)) for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)))
-                lv = trk_q(x // 8) - (0.8 if y > 112 and abs(x - 88) > 34 else 0) + (CN[x % 8] - 0.5) * 1.5 + (LN[y % 8][x % 8] - 0.5) * 0.4
-                px_[x, y] = 7 if edge else max(7, min(10, int(lv + 0.5)))
-    for y in range(H_):                                                    # porte, cadre, fenetres rondes
+                if edge: px_[x, y] = 1; continue
+                lv = trk_lv(x)
+                if (x % 8) in (2, 5) and (y // 6) % 3 != 1: lv = max(7, lv - 1)    # stries d'ecorce verticales
+                if y < 82 and not cano(x, y - 4): lv = 7                   # ombre sous la couronne
+                px_[x, y] = lv
+    for y in range(H_):                                                    # porte, cadre
         for x in range(W_):
             inner, outer = arch(x, y)
             if inner: px_[x, y] = 12 if y >= 124 else 11
-            elif outer and y >= 96: px_[x, y] = 10 if x < 88 else 8
+            elif outer and y >= 84: px_[x, y] = 10 if x < CX else 8
     for (bx, by) in BLOOMS:                                                # fleurs de tourmaline dans le feuillage
         if cano(bx, by) and cano(bx + 2, by + 1) and px_[bx, by] > 1:
             px_[bx, by] = 15; px_[bx + 1, by] = 14; px_[bx, by + 1] = 14; px_[bx + 2, by + 1] = 14
     for y in range(H_ - 8, H_):                                            # ombre au pied
         for x in range(W_):
-            if px_[x, y] == 0 and ((x - 88) / 92.0) ** 2 + ((y - 127) / 6.0) ** 2 <= 1 and (x + y) % 2 == 0: px_[x, y] = 13
+            if px_[x, y] == 0 and ((x - CX) / 104.0) ** 2 + ((y - 127) / 6.0) ** 2 <= 1 and (x + y) % 2 == 0: px_[x, y] = 13
     return im
 GTREE = tree_img()
 _bg = Image.new('RGB', GTREE.size, (110, 190, 160)); _m = Image.new('L', GTREE.size); _m.putdata([255 if v else 0 for v in GTREE.getdata()]); _bg.paste(GTREE.convert('RGB'), mask=_m); _bg.resize((GTREE.width * 4, GTREE.height * 4), Image.NEAREST).save('/tmp/gtree.png')
