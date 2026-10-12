@@ -82,7 +82,16 @@ def small(var):
     else: prism(d, 8, 15, 8, 14); d.rectangle((2, 13, 4, 14), fill=13); d.rectangle((12, 12, 14, 14), fill=13); d.point((13, 11), fill=14)
     return im
 def slice4(im): return [add_tile(list(im.crop(((q % 2) * 8, (q // 2) * 8, (q % 2) * 8 + 8, (q // 2) * 8 + 8)).getdata())) for q in range(4)]
-SMT = [slice4(small(v)) for v in range(3)]
+def big(var):
+    im = newimg(32, 32); d = ImageDraw.Draw(im); d.ellipse((1, 24, 31, 32), fill=11)
+    if var == 0: prism(d, 9, 28, 8, 17); prism(d, 19, 30, 12, 27); prism(d, 27, 28, 7, 13)
+    elif var == 1: prism(d, 7, 29, 9, 19); prism(d, 17, 30, 10, 28); prism(d, 26, 29, 8, 15); d.rectangle((1, 26, 5, 28), fill=13); d.point((3, 25), fill=14)
+    else: prism(d, 12, 30, 12, 27); prism(d, 24, 29, 8, 17); prism(d, 4, 28, 5, 11)
+    return im
+SMT = {('s', v): slice4(small(v)) for v in range(3)}
+for v in range(3):
+    bi = big(v)
+    for q in range(4): SMT[('b', v, q)] = slice4(bi.crop(((q % 2) * 16, (q // 2) * 16, (q % 2) * 16 + 16, (q // 2) * 16 + 16)))
 ARTM = {}
 def art_meta(var, st, base):
     """case = fond d'herbe (variante d'etage) + cristal (calque haut) ; palette d'art selon l'etage."""
@@ -151,7 +160,7 @@ def build(L, rnd):
         orig = list(struct.unpack('<%dH' % (24 * 160), open(SRC + 'r17_orig.bin', 'rb').read()))
         def cx(y):
             env = min(1.0, y / 7.0, (H - 1 - y) / 12.0)
-            return 9.5 + 2.5 * (y / (H - 1)) ** 1.5 + 5.4 * math.sin(y / 4.9) * env
+            return 9.5 + 2.5 * (y / (H - 1)) ** 1.5 + 3.6 * math.sin(y / 2.7) * env
         PATH = disc_path([(cx(y), y) for y in range(H)], lambda x, y: 1.25 + 0.35 * math.sin(y * 0.7), W, H)
         PATH |= {(x, y) for y in (0, 1) for x in range(8, 12)} | {(x, y) for y in (H - 2, H - 1) for x in range(8, 17)}
         for y in range(H - 14, H):
@@ -164,14 +173,15 @@ def build(L, rnd):
     else:
         orig = list(struct.unpack('<%dH' % (48 * 20), open(SRC + 'r16_orig.bin', 'rb').read()))
         PATH = disc_path([(47, 13), (43, 13), (39, 12.4), (35, 13), (30, 13)], 1.25, W, H)
-        PATH |= {(x, 13) for x in range(29, 36)}
+        PATH |= {(x, y) for x in range(29, 36) for y in (12, 13)}
         PATH |= disc_path([(29, 13), (25, 12), (21, 11.5), (17, 10), (13, 8), (10.5, 6.6)], 1.3, W, H)
         PATH |= disc_path([(22, 12), (18, 14.5), (14, 16.5), (10.5, 17.5), (9.5, 19)], 1.3, W, H)
         PATH |= {(x, y) for y in (17, 18, 19) for x in range(8, 12)} | {(x, 12) for x in (45, 46, 47)} | {(x, 14) for x in (45, 46, 47)}
         for y in (3, 4, 5):
             for x in range(9, 14): FIXED[(x, y)] = orig[y * 48 + x]
         PATH -= set(FIXED)
-        WALL = {(x, y) for x in range(30, 34) for y in range(H) if y != 13}
+        WALLU = [(x, y) for x in (30, 32) for y in list(range(0, 12, 2)) + [14, 16, 18]]
+        WALL = {(x + i, y + j) for (x, y) in WALLU for i in range(2) for j in range(2)}
         BUF = dil(PATH, 1) | dil(set(FIXED), 1)
         MEAD = ell(21, 5.5, 6, 2.5, W, H) | ell(37, 6.5, 4, 2, W, H) | ell(36, 16, 4, 1.4, W, H) | ell(11.5, 7, 6.5, 4.2, W, H) | ell(7, 14, 3.5, 3.5, W, H)
         DM = distmap(PATH, W, H)
@@ -179,23 +189,37 @@ def build(L, rnd):
         FOREST |= WALL
         FOREST -= PATH | (BUF - WALL) | set(FIXED)
     FOREST -= set(SEA)
+    # ---- bosquets isoles dans les prairies (arbres entiers 2x2, jamais contre le chemin)
+    gr = []; blockd = PATH | BUF | set(FIXED) | set(SEA)
+    DMP = distmap(PATH, W, H)
+    cands = [(x, y) for y in range(3, H - 4) for x in range(3, W - 4) if all((x + i, y + j) not in FOREST and (x + i, y + j) not in blockd and DMP[(x + i, y + j)] >= 3 for i in range(2) for j in range(2))]
+    rnd.shuffle(cands)
+    for (x, y) in cands:
+        if len(gr) >= (11 if L == 'Route16' else 16): break
+        if any(max(abs(x - a), abs(y - b)) < 5 for (a, b) in gr): continue
+        gr.append((x, y)); FOREST |= {(x + i, y + j) for i in range(2) for j in range(2)}
+        if rnd.random() < 0.6:                                   # parfois un second arbre accole (paire)
+            for (dx, dy) in rnd.sample([(2, 0), (-2, 0), (0, 2), (0, -2)], 4):
+                cs2 = {(x + dx + i, y + dy + j) for i in range(2) for j in range(2)}
+                if all(c in G_ok(W, H) and c not in FOREST and c not in blockd and DMP[c] >= 3 for c in cs2): FOREST |= cs2; break
     G = {(x, y): (0x3000, 8 + (x & 1) + 8 * (y & 1)) for y in range(H) for x in range(W)}
     for c in PATH: G[c] = (0x3000, sand_id(lambda dx, dy, c=c: (c[0] + dx, c[1] + dy) in PATH or not (0 <= c[0] + dx < W and 0 <= c[1] + dy < H)))
     TREEO, TREES = {}, []
+    def put_tree(x, y):
+        cs = [(x, y), (x + 1, y), (x, y + 1), (x + 1, y + 1)]
+        for c, m in zip(cs, (20, 21, 28, 29)): G[c] = (0x400, m); TREEO[c] = (x, y)
+        TREES.append((x, y))
+    if L == 'Route16':
+        for (x, y) in WALLU: put_tree(x, y)
     for y in range(H - 1):
         for x in range(W - 1):
-            if (x + y) % 2: continue
-            cs = [(x, y), (x + 1, y), (x, y + 1), (x + 1, y + 1)]
-            if all(c in FOREST and c not in TREEO for c in cs):
-                for c, m in zip(cs, (20, 21, 28, 29)): G[c] = (0x400, m); TREEO[c] = (x, y)
-                TREES.append((x, y))
-    for c in sorted(FOREST):
-        if c in TREEO: continue
-        if c in WALL or c[0] in (0, W - 1) or c[1] in (0, H - 1): G[c] = (0x400, 28 + (c[0] & 1)); TREEO[c] = c
+            if all(c in FOREST and c not in TREEO for c in ((x, y), (x + 1, y), (x, y + 1), (x + 1, y + 1))): put_tree(x, y)
+    assert WALL <= set(TREEO), 'mur de foret incomplet'
     for c, v in FIXED.items(): G[c] = (v & 0xfc00, v & 0x3ff)
     for c, v in SEA.items(): G[c] = (v & 0xfc00, v & 0x3ff)
     return dict(W=W, H=H, G=G, PATH=PATH, BUF=BUF, MEAD=MEAD, TREEO=TREEO, FIXED=FIXED, SEA=SEA, FOREST=FOREST)
 
+def G_ok(W, H): return {(x, y) for x in range(2, W - 2) for y in range(2, H - 2)}
 def decorate(L, B, rnd):
     W, H, G, PATH, BUF = B['W'], B['H'], B['G'], B['PATH'], B['BUF']
     nbs = lambda c: [(c[0] + a, c[1] + b) for a, b in ((0, 1), (1, 0), (-1, 0), (0, -1)) if 0 <= c[0] + a < W and 0 <= c[1] + b < H]
@@ -272,7 +296,28 @@ def place_all(L, B, D, rnd):
     mj['bg_events'] = keep_bg
     # ---- cristaux
     ART = {}
-    cand = [c for c in G if plain(c) and c in R0 and 2 <= c[0] < W - 2 and 2 <= c[1] < H - 2 and c not in PATH and c not in placed]
+    if L == 'Route16':
+        ART[(31, 12)] = (('s', 1), G[(31, 12)][1]); G[(31, 12)] = (0x400, G[(31, 12)][1])
+    def dpath(c, lim=7):
+        ds = [max(abs(c[0] - p[0]), abs(c[1] - p[1])) for p in PATH if abs(p[0] - c[0]) <= lim and abs(p[1] - c[1]) <= lim]
+        return min(ds) if ds else 99
+    BIGO = []
+    nbig = 3 if L == 'Route16' else 10
+    bc = [(x, y) for y in range(3, H - 4) for x in range(3, W - 5) if all(plain((x + i, y + j)) and (x + i, y + j) in R0 and (x + i, y + j) not in placed for i in range(2) for j in range(2))]
+    rnd.shuffle(bc)
+    for (x, y) in bc:
+        if len(BIGO) >= nbig: break
+        cs = [(x + i, y + j) for j in range(2) for i in range(2)]
+        if not (2 <= min(dpath(c) for c in cs) and max(dpath(c) for c in cs) <= 6): continue
+        if any(max(abs(x - o[0]), abs(y - o[1])) < 5 for o in BIGO) or any(max(abs(x - q[0]), abs(y - q[1])) < 3 for q in list(ART) + placed): continue
+        sv = {c: G[c] for c in cs}
+        for c in cs: G[c] = (0x400, G[c][1])
+        if not (reach(start, set(ART) | set(cs)) >= (R0 - set(ART) - set(cs) - {c for c in R0 if blocked(c)})):
+            for c in cs: G[c] = sv[c]
+            continue
+        v = rnd.randrange(3); BIGO.append((x, y))
+        for q, c in enumerate(cs): ART[c] = (('b', v, q), sv[c][1])
+    cand = [c for c in G if plain(c) and c in R0 and 2 <= c[0] < W - 2 and 2 <= c[1] < H - 2 and c not in PATH and c not in placed and c not in ART]
     rnd.shuffle(cand); lim = 16 if L == 'Route16' else 60; ncry = 0
     pts = placed + list(EV.values())
     for c in cand:
@@ -280,7 +325,7 @@ def place_all(L, B, D, rnd):
         d = min(max(abs(c[0] - p[0]), abs(c[1] - p[1])) for p in PATH if abs(p[0] - c[0]) <= 6 and abs(p[1] - c[1]) <= 6) if any(abs(p[0] - c[0]) <= 6 and abs(p[1] - c[1]) <= 6 for p in PATH) else 99
         if d < 2 or d > 5: continue
         if any(max(abs(c[0] - q[0]), abs(c[1] - q[1])) < 3 for q in list(ART) + pts): continue
-        ART[c] = (rnd.randrange(3), G[c][1])
+        ART[c] = (('s', rnd.randrange(3)), G[c][1])
         G[c] = (0x400, G[c][1])
         if not (reach(start, set(ART)) >= (R0 - set(ART) - {c for c in R0 if blocked(c)})): del ART[c]; G[c] = (0x3000, G[c][1]); continue
         ncry += 1
