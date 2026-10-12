@@ -17,7 +17,8 @@ class Map:
         self.g = [[FLOOR] * w for _ in range(h)]
         self.used = [[False] * w for _ in range(h)]
         for x in range(w):
-            for y in range(3): self.g[y][x] = PP.get(min(x, 33) if x < 33 else 48, y)
+            self.g[0][x] = PP.get(5, 0)
+            for y in (1, 2): self.g[y][x] = PP.get(5, 0)
             self.g[h - 1][x] = PP.get(12, 39)
         for y in range(3, h - 1): self.g[y][0] = PP.get(0, 20); self.g[y][w - 1] = PP.get(48, 20)
         for x in range(w):
@@ -66,53 +67,48 @@ class Map:
         for _ in range(60):
             x, y = rnd.randint(2, self.w - 3), rnd.randint(4, self.h - 3)
             if not any(self.used[y + j][x + i] for j in (-1, 0, 1) for i in (-1, 0, 1)): self.rub(x, y)
-W, H = 34, 32
-def room(m, x, y, top, inner, door='W'):
-    """Salle close : mur haut = banc (top), mur bas = meme banc, flancs = colonnes de cabines, porte = trou de 3 cases au flanc."""
-    w = STAMPS[top][2]
-    m.stamp(top, x, y); m.stamp(top, x, y + inner + 3)
-    for yy in range(y + 3, y + 3 + inner, 3):
-        for side, xx in (('W', x), ('E', x + w - 2)):
-            if door == side and yy == y + 3: continue
-            m.stamp('CAB', xx, yy)
-def f1():
-    m = Map(W, H); m.stamp('ENTRY', 15, 29)
-    m.row(7, 'B9', 1, 'B9b', 1, 'B12')
-    room(m, 1, 12, 'B14', 6, 'E'); m.stamp('DOME', 5, 15); m.stamp('DOME', 9, 15)
-    m.stamp('BAR', 16, 13); m.row(18, 16, 'CAB')
-    m.row(22, 'L25')
-    m.row(26, 'B9', 1, 'B9b')
-    m.pad(30, 4); m.pad(30, 27)
+WALK = PP.get(1, 13)                       # passerelle (bande grise)
+def walk(m, y, x0, x1):
+    for x in range(x0, x1 + 1): m.g[y][x] = WALK
+def top_wall(m, *items):
+    """mur du haut : bancs poses des la rangee 1"""
+    m.row(1, *items)
+def door(m, x):
+    m.stamp('ENTRY', x, m.h - 3)
+def f1():                                   # HALLE DES TURBINES (carte principale)
+    m = Map(44, 34); top_wall(m, 'B14', 1, 'B12', 1, 'B14')
+    door(m, 8); door(m, 19); door(m, 31)    # portes : transformateurs / sortie / salle de commande
+    for x in (6, 19, 32): m.stamp('TURB', x, 8)
+    for y in (15, 16): walk(m, y, 2, 41)
+    m.stamp('BAR9', 2, 20); m.stamp('BAR9', 33, 20); m.stamp('BAR9', 2, 25); m.stamp('BAR9', 33, 25)
+    m.stamp('CONS', 14, 21); m.stamp('CONS', 24, 21)
+    m.stamp('DOME', 20, 24)
+    m.pad(11, 26)
     return m
-def f2():
-    m = Map(W, H)
-    m.row(6, 'B12', 1, 'B9b')
-    room(m, 1, 11, 'B12', 6, 'E'); m.stamp('CONS', 4, 14); m.stamp('CONS', 4, 17)
-    m.row(11, 15, 'B9b'); m.row(16, 15, 'B12')
-    m.row(23, 'L24'); m.row(27, 4, 'B12'); m.stamp('TURB', 27, 22)
-    m.pad(2, 4); m.pad(30, 4)
+def f2():                                   # SALLE DE COMMANDE
+    m = Map(26, 18); top_wall(m, 'B9', 1, 'B14')
+    door(m, 10)
+    m.stamp('CONS', 3, 5); m.stamp('CONS', 10, 5); m.stamp('CONS', 17, 5)
+    m.stamp('CONS', 3, 10); m.stamp('CONS', 18, 10); m.stamp('CAB', 11, 9)
     return m
-def f3():
-    m = Map(W, H)
-    m.stamp('BAR', 1, 6); m.stamp('BAR9', 22, 6)
-    m.row(11, 'B9b', 2, 'B14'); m.stamp('BAR9', 1, 15); m.stamp('BAR', 16, 15)
-    room(m, 4, 20, 'B14', 3, 'N'); m.stamp('DOME', 9, 23)
-    m.row(27, 'B12', 1, 'B9b')
-    m.pad(16, 3); m.pad(30, 24)
+def f3():                                   # PARC DES TRANSFORMATEURS
+    m = Map(36, 24); top_wall(m, 'B14', 1, 'B14')
+    door(m, 15)
+    m.stamp('BAR', 3, 6); m.stamp('BAR9', 24, 6); m.stamp('BAR', 3, 11); m.stamp('BAR9', 24, 11)
+    m.stamp('DOME', 30, 15); m.stamp('DOME', 3, 16)
     return m
-def f4():
-    m = Map(W, H)
-    m.row(6, 'B14', 1, 'B12'); m.row(11, 'B9', 1, 'B9b', 1, 'B12')
-    m.row(16, 'L24'); m.row(21, 'B9b')
-    room(m, 14, 21, 'B12', 3, 'W')
-    m.row(27, 'B9', 2, 'B12', 1, 'B9b') if False else None
-    m.pad(29, 24)
+def f4():                                   # GALERIE TECHNIQUE (cle secrete)
+    m = Map(34, 28); top_wall(m, 'B9', 1, 'B9b', 1, 'B12')
+    m.row(7, 'B14', 1, 'B12'); m.row(12, 'B9', 2, 'L24'); m.row(17, 'L24', 2, 'B9'); m.row(22, 'B9b', 2, 'B12')
+    m.pad(30, 4)
     return m
 FLOORS = {'1F': (f1, 1), '2F': (f2, 2), '3F': (f3, 3), 'B1F': (f4, 4)}
 def build_all():
     out = {}
     for n, (f, seed) in FLOORS.items():
-        m = f(); m.decorate(random.Random(seed * 77)); out[n] = m
+        m = f()
+        if n == 'B1F': m.decorate(random.Random(seed * 77), 150)
+        out[n] = m
     return out
 if __name__ == '__main__':
     for n, m in build_all().items():
