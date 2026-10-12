@@ -158,11 +158,14 @@ def ucells(ux, uy): return [(2 * ux + i, 2 * uy + j) for j in (0, 1) for i in (0
 BIGS = [(19, 4), (33, 9), (46, 9)]                 # grandes formations d'apatite 2x2 (jardin de roche, carriere x2, lisiere est)
 for (mx, my) in BIGS:
     for c in [(mx + i, my + j) for j in (0, 1) for i in (0, 1)]: WAY.discard(c)
+STAT = (32, 7)                                                                  # statue de la Reine des Sommets : 4x3 cases, sur le plateau cote ouest
+for c in [(STAT[0] + i, STAT[1] + j) for j in range(3) for i in range(4)]: WAY.discard(c)
+claim(STAT[0], STAT[1], 4, 3, 'statue')
 KEEP = set(WAY)
 for ds in DOOR.values():
     for (x, y) in ds: KEEP.add((x, y + 1))
 # ------------------------------------------------------------------ forets : unites 2x2 (familles de tuiles FR)
-GROVES = [(31, 14.5, 1.3, 1.1), (27, 8.5, 1.2, 1.3), (16.5, 12.5, 1.2, 1.0), (30, 24.0, 0.8, 1.0), (20, 12.5, 1.4, 1.2), (28.5, 13.8, 1.7, 1.2), (29.5, 8.2, 1.2, 1.1), (26, 16.2, 0.9, 0.6), (34.2, 6.4, 3.6, 6.6), (46.2, 7.6, 3.4, 6.2)]
+GROVES = [(31, 14.5, 1.3, 1.1), (27, 8.5, 1.2, 1.3), (16.5, 12.5, 1.2, 1.0), (30, 24.0, 0.8, 1.0), (20, 12.5, 1.4, 1.2), (28.5, 13.8, 1.7, 1.2), (29.5, 8.2, 1.2, 1.1), (26, 16.2, 0.9, 0.6), (34.2, 6.4, 3.6, 6.6), (46.2, 7.6, 3.4, 6.2), (40.5, 0.9, 6.8, 1.5)]
 TU = set()
 def trunk_ok(ux, uy):
     for i in (0, 1):
@@ -227,7 +230,9 @@ GYMF = (DOOR['gym'][0][0], DOOR['gym'][0][1] + 1)
 assert GYMF in reach(start=GATE), 'parvis de l arene inaccessible apres coupe'
 assert GYMF not in reach(extra={GATE}), 'parvis de l arene accessible sans couper'
 # ------------------------------------------------------------------ cristaux d'apatite, buissons, fleurs
+RES = {(x, 2) for x in range(33, 48)}                              # rangee des troncs derriere l'arene : rien d'autre ici
 def can_block(c, extra=()):
+    if c in RES: return False
     if c in OCC or c in BLK or c in KEEP or c in WAY: return False
     return NEED | NEED_GATE <= reach(set(extra) | {c})
 def near(c, S, r=1): return any((c[0] + a, c[1] + b) in S for a in range(-r, r + 1) for b in range(-r, r + 1))
@@ -252,6 +257,12 @@ for c in pc:
     if nfe < 6 and (nfe <= nta): BLK[c] = ('feather', 0); nfe += 1
     elif nta < 7: BLK[c] = ('talon', rp.randrange(2)); nta += 1
 print('accessoires', nfe, 'plumes', nta, 'serres')
+nn = 0
+for c in pc:                                                         # nids de dragon (oeufs d'apatite) : 3 sur le plateau
+    if nn >= 3: break
+    if c in BLK or c in OCC or any(max(abs(c[0] - q[0]), abs(c[1] - q[1])) < 4 for q, v in BLK.items() if v[0] == 'nest'): continue
+    if can_block(c): BLK[c] = ('nest', 0); nn += 1
+print('nids', nn)
 rc = random.Random(1701)
 cands = [(x, y) for y in range(1, H - 1) for x in range(1, W - 1) if (x, y) in M and (x, y) not in OCC and (x, y) not in WAY and (x, y) not in BLK and (x, y) not in KEEP]
 rc.shuffle(cands); ncry = 0; pins = PIN()
@@ -521,6 +532,42 @@ def talon(var):
     d.polygon([(7, 8), (9, 5), (12, 3), (9, 9)], fill=9); d.point((12, 2), fill=6)
     if var: im = im.transpose(Image.FLIP_LEFT_RIGHT)
     return im
+def nest():
+    im = newimg(16, 16); d = ImageDraw.Draw(im)
+    d.ellipse((1, 11, 15, 16), fill=14)
+    d.ellipse((1, 8, 15, 15), fill=4, outline=1)
+    for (x0, y0, x1, y1) in ((2, 11, 6, 11), (9, 12, 14, 12), (4, 14, 11, 14), (3, 9, 8, 9), (10, 9, 13, 10)): d.line([(x0, y0), (x1, y1)], fill=14)
+    d.ellipse((5, 3, 11, 12), fill=12, outline=1); d.point((7, 5), fill=5); d.point((6, 5), fill=5); d.point((9, 8), fill=15); d.point((7, 9), fill=15); d.point((8, 7), fill=4)
+    d.arc((1, 8, 15, 15), 0, 180, fill=1)
+    return im
+def statue():
+    """la Reine des Sommets : dragon de gres aux ailes deployees, perche sur un socle (64x48 = 4x3 cases)"""
+    im = newimg(64, 48); d = ImageDraw.Draw(im)
+    d.ellipse((4, 42, 62, 48), fill=14)                                                          # ombre au sol
+    d.polygon([(12, 47), (14, 40), (50, 40), (52, 47)], fill=14, outline=1)                       # socle
+    d.rectangle((14, 40, 50, 42), fill=2, outline=1); d.line([(15, 43), (49, 43)], fill=4)
+    d.line([(24, 43), (24, 46)], fill=7); d.line([(40, 43), (40, 46)], fill=7)
+    # queue
+    d.polygon([(16, 38), (8, 40), (3, 37), (1, 32), (5, 34), (10, 36), (17, 33)], fill=4, outline=1)
+    d.polygon([(1, 30), (4, 34), (0, 36)], fill=2, outline=1)
+    # ailes (arriere puis avant) : os + membrane festonnee
+    d.polygon([(30, 26), (22, 12), (14, 4), (10, 9), (6, 16), (10, 24), (15, 22), (19, 30), (26, 31)], fill=7, outline=1)
+    for (x0, y0, x1, y1) in ((30, 26, 14, 4), (30, 26, 10, 9), (28, 27, 7, 16), (27, 28, 11, 24)): d.line([(x0, y0), (x1, y1)], fill=14)
+    d.polygon([(33, 25), (30, 8), (36, 1), (42, 4), (46, 11), (42, 17), (40, 23)], fill=2, outline=1)
+    for (x0, y0, x1, y1) in ((34, 25, 36, 1), (36, 24, 42, 4), (38, 24, 46, 11), (38, 23, 42, 17)): d.line([(x0, y0), (x1, y1)], fill=4)
+    d.arc((34, 11, 42, 21), 20, 160, fill=14)
+    # corps, pattes, cou, tete
+    d.polygon([(22, 32), (26, 25), (36, 23), (44, 27), (46, 36), (44, 41), (24, 41), (21, 37)], fill=4, outline=1)
+    d.polygon([(23, 33), (26, 26), (32, 25), (30, 40), (24, 40)], fill=2)
+    d.polygon([(30, 36), (32, 41), (40, 41), (42, 36)], fill=14)
+    d.polygon([(26, 41), (26, 38), (30, 38), (31, 41)], fill=12, outline=1); d.polygon([(40, 41), (40, 37), (45, 37), (46, 41)], fill=12, outline=1)
+    d.polygon([(42, 28), (46, 22), (48, 14), (52, 9), (56, 10), (56, 15), (52, 19), (49, 26), (47, 33)], fill=4, outline=1)      # cou
+    d.polygon([(49, 14), (53, 9), (58, 8), (63, 11), (63, 14), (57, 16), (52, 17)], fill=2, outline=1)                          # tete
+    d.polygon([(52, 9), (49, 3), (53, 5), (55, 9)], fill=12, outline=1); d.polygon([(55, 8), (53, 2), (58, 5), (58, 8)], fill=12, outline=1)   # cornes
+    d.ellipse((55, 10, 58, 13), fill=15, outline=1); d.point((56, 11), fill=10)
+    d.line([(60, 14), (63, 14)], fill=1); d.point((62, 12), fill=15)
+    for x in range(48, 55, 2): d.point((x, 27 - (x - 48)), fill=14)                                # ecailles du cou
+    return im
 def nonempty(im, box): return sum(1 for q in im.crop(box).getdata() if q)
 # controle « sprites entiers » : chaque quart rempli (haut ET bas), pas d'image vide
 for v in range(3):
@@ -528,6 +575,10 @@ for v in range(3):
 def whole(im, name, lim=(4, 20)):
     assert nonempty(im, (0, 0, im.width, im.height // 2)) >= lim[0] and nonempty(im, (0, im.height // 2, im.width, im.height)) >= lim[1], ('sprite incomplet', name)
 for nm_, im_ in (('rib0', rib(0)), ('rib1', rib(1)), ('pole', pole('pole')), ('sock', pole('sock')), ('feather', feather()), ('talon0', talon(0)), ('talon1', talon(1))): whole(im_, nm_)
+ST_ = statue()
+for i in range(4):
+    for j in range(3): assert nonempty(ST_, (i * 16, j * 16, i * 16 + 16, j * 16 + 16)) >= 14, ('statue incomplete', i, j)
+whole(nest(), 'nest')
 SK_ = skull()
 for (i, j) in ((0, 0), (1, 0), (0, 1), (1, 1)): assert nonempty(SK_, (i * 16, j * 16, i * 16 + 16, j * 16 + 16)) >= 20, ('crane incomplet', i, j)
 F_ = formation()
@@ -568,6 +619,11 @@ for c, v in CLIFF.items():
     elif k in ('faceU', 'faceM', 'faceL'): G[c] = 0x400 | art_meta(ctile4((k, v[1], v[2]), cliff_tile(k, v[1], v[2])), G[c] & 0x3ff, False)
     else: G[c] = 0x3000 | art_meta(ctile4((k, v[1]), stair_tile(k, v[1])), G[c] & 0x3ff, True)
 SKM = {(i, j): slice4(SK_.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))) for i in (0, 1) for j in (0, 1)}
+STM = {(i, j): slice4(ST_.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))) for i in range(4) for j in range(3)}
+for i in range(4):
+    for j in range(3): c = (STAT[0] + i, STAT[1] + j); G[c] = 0x400 | art_meta(STM[(i, j)], G[c] & 0x3ff, False, 'A')
+for c, val in BLK.items():
+    if val[0] == 'nest': G[c] = 0x400 | art_meta(ctile4(('nest', 0), nest()), G[c] & 0x3ff, False, 'A')
 for c, val in BLK.items():
     if val[0] == 'skull': G[c] = 0x400 | art_meta(SKM[(val[1], val[2])], G[c] & 0x3ff, False, 'A')
     elif val[0] == 'rib': G[c] = 0x400 | art_meta(ctile4(('rib', c[1] % 2), rib(c[1] % 2)), G[c] & 0x3ff, False, 'A')
