@@ -345,3 +345,9 @@ const u32 gMetatileAttributes_CeruleanRoute5[] = INCBIN_U32("data/tilesets/secon
 
 const u16 gMetatiles_VermilionRoute6[] = INCBIN_U16("data/tilesets/secondary/vermilion_route6/metatiles.bin");
 const u32 gMetatileAttributes_VermilionRoute6[] = INCBIN_U32("data/tilesets/secondary/vermilion_route6/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralRoute16[] = INCBIN_U16("data/tilesets/primary/general_route16/metatiles.bin");
+const u32 gMetatileAttributes_GeneralRoute16[] = INCBIN_U32("data/tilesets/primary/general_route16/metatile_attributes.bin");
+
+const u16 gMetatiles_CeladonRoute16[] = INCBIN_U16("data/tilesets/secondary/celadon_route16/metatiles.bin");
+const u32 gMetatileAttributes_CeladonRoute16[] = INCBIN_U32("data/tilesets/secondary/celadon_route16/metatile_attributes.bin");
