@@ -315,6 +315,59 @@ for _ in range(3):
 r = start_reach()
 assert NEED <= r, ('inaccessible', sorted(NEED - r))
 for c in sorted(free_cells() - r): print('poche restante', c)
+# ---- v10 (Basil : « de-aere la ville ») : bosquets de pins agrandis depuis la bordure, petits groupes de steles et quelques cristaux de plus dans les vides.
+# Generateur aleatoire A PART (le decor des versions precedentes ne bouge pas) ; memes regles : jamais pres d'une voie, acces BFS, pins en masse rattachee a la bordure.
+rnd2 = random.Random(2026)
+def lawn(c): return c not in OCC and c not in BLK and c not in WAY
+n_before = sum(1 for y in range(H) for x in range(W) if lawn((x, y)))
+npin2 = 0
+for _ in range(6):
+    order = [(x, y) for y in range(2, H - 3, 2) for x in range(2, W - 3, 2)]; rnd2.shuffle(order)
+    for (x, y) in order:
+        cells = pine_cells(x, y)
+        if any(c in OCC or (c in BLK and BLK[c][0] != 'stele') or c in KEEP or near_way(c) for c in cells): continue          # une stele isolee peut etre remplacee
+        if any((c[0] + a, c[1] + b) in OCC and OCC[(c[0] + a, c[1] + b)] != 'pin' for c in cells for a in (-1, 0, 1) for b in (-1, 0, 1)): continue
+        if sum(1 for n in ((x - 2, y), (x + 2, y), (x, y - 2), (x, y + 2)) if n in PUNITS) < 1: continue
+        if not NEED <= start_reach(set(cells)): continue
+        if rnd2.random() < 0.85:
+            for c in cells: BLK.pop(c, None)
+            pine(x, y); PUNITS.add((x, y)); npin2 += 1
+WOODS = []
+# petits bois 4x4 cases (2x2 unites de pins : chaque unite touche 2 voisines, donc la masse tient) poses dans les plus grands vides (rangee de troncs ajoutee plus bas)
+nwood = 0
+def occupied(c): return c in OCC or c in BLK or c in WAY
+for _ in range(9):
+    best = None
+    for y in range(2, H - 5, 2):
+        for x in range(2, W - 5, 2):
+            cells = [(x + i, y + j) for i in range(4) for j in range(4)]
+            if any(c in OCC or (c in BLK and BLK[c][0] != 'stele') or c in KEEP or near_way(c) for c in cells): continue          # une stele isolee peut etre remplacee par le bois
+            if any((c[0] + a, c[1] + b) in OCC and OCC[(c[0] + a, c[1] + b)] != 'pin' for c in cells for a in (-1, 0, 1) for b in (-1, 0, 1)): continue
+            if (21 <= x + 4 and x <= 38 and 8 <= y + 4 and y <= 18): continue          # pas dans le cimetiere
+            if any(max(abs(x - bx), abs(y - by)) < 5 for (bx, by) in WOODS): continue
+            if not NEED <= start_reach(set(cells)): continue
+            room = sum(1 for a in range(-3, 8) for b in range(-3, 8) if 0 <= x + a < W and 0 <= y + b < H and not (occupied((x + a, y + b)) and BLK.get((x + a, y + b), ('',))[0] != 'stele'))
+            sc = room + rnd2.random() * 4
+            if best is None or sc > best[0]: best = (sc, x, y)
+    if best is None: break
+    _, x, y = best; WOODS.append((x, y))
+    for i in range(4):
+        for j in range(4): BLK.pop((x + i, y + j), None)
+    for (ux, uy) in ((x, y), (x + 2, y), (x, y + 2), (x + 2, y + 2)): pine(ux, uy); PUNITS.add((ux, uy))
+    nwood += 1
+nst2 = ncr2 = 0
+for _ in range(2):
+    order = [(x, y) for y in range(2, H - 2) for x in range(2, W - 2)]; rnd2.shuffle(order)
+    for c in order:
+        if c in OCC or c in BLK or c in KEEP or near_way(c) or not lawn(c): continue
+        if (21 <= c[0] <= 38 and 8 <= c[1] <= 18): continue          # cimetiere de la tour : inchange
+        near_st = sum(1 for a in (-2, -1, 0, 1, 2) for b in (-2, -1, 0, 1, 2) if BLK.get((c[0] + a, c[1] + b), ('',))[0] == 'stele')
+        near_cr = any(max(abs(c[0] - q[0]), abs(c[1] - q[1])) < 3 for q, v in BLK.items() if v[0] == 'cry')
+        rr = rnd2.random()
+        if rr < 0.04 and not near_cr and can_block(c): BLK[c] = ('cry', rnd2.randrange(3)); ncr2 += 1
+        elif rr < (0.34 if near_st else 0.07) and near_st < 4 and can_block(c): BLK[c] = ('stele', rnd2.randrange(4)); nst2 += 1
+n_after = sum(1 for y in range(H) for x in range(W) if lawn((x, y)))
+print('v10 : pins +%d, bois %d, steles +%d, cristaux +%d ; pelouse libre %d -> %d' % (npin2, nwood, nst2, ncr2, n_before, n_after))
 # ---- pas de pin isole : une unite interieure doit toucher au moins 2 autres unites (bordure comprise)
 changed = True
 while changed:
