@@ -317,7 +317,8 @@ def place_sign(name, want):
         d_ = abs(x - want[0]) + abs(y - want[1])
         if best is None or d_ < best[0]: best = (d_, c)
     c = best[1]; BLK[c] = ('sign', 0); SIGN[name] = list(c)
-for nm, w_ in (('city', (26, 8)), ('harbor', (34, 18)), ('notice', (45, 18)), ('gym', (38, 16))): place_sign(nm, w_)
+for nm, w_ in (('city', (26, 8)), ('notice', (45, 18)), ('gym', (38, 16))): place_sign(nm, w_)
+SIGN['harbor'] = [34, 18]                                           # panneau du port = celui d'origine (tuile fixe en (34,18)) : on n'en pose pas un second
 NPC = {}; OBJ_CELLS = {GATE}
 def place_npc(name, want, rowfree=0, region=None):
     r = reach(); best = None
