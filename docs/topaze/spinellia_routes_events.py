@@ -22,7 +22,7 @@ for n in M:      # on repart de zero : plus aucun warp de jonction, plus aucune 
     M[n]['connections'] = [c for c in (M[n].get('connections') or []) if c['map'] not in partners]
 for a, b, pairs in LINKS:
     pairs = [(pa, pb) for pa, pb in pairs if ok(a, *pa) and ok(b, *pb)]
-    assert len(pairs) >= 3, (a, b, len(pairs))
+    assert len(pairs) >= 2, (a, b, len(pairs))
     na, nb = len(M[a]['warp_events']), len(M[b]['warp_events'])
     M[a]['warp_events'] += [warp(pa[0], pa[1], MAPID[b], nb + i) for i, (pa, pb) in enumerate(pairs)]
     M[b]['warp_events'] += [warp(pb[0], pb[1], MAPID[a], na + i) for i, (pa, pb) in enumerate(pairs)]

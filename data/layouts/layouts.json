@@ -1021,8 +1021,8 @@
       "height": 20,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_LavenderTown",
+      "primary_tileset": "gTileset_GeneralRoute13V2",
+      "secondary_tileset": "gTileset_CeladonRoute13V2",
       "border_filepath": "data/layouts/Route13/border.bin",
       "blockdata_filepath": "data/layouts/Route13/map.bin"
     },
