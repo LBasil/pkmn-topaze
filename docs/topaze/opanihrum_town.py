@@ -20,9 +20,9 @@ def tint(r, g, b):
     if s < 0.10 and l > 0.93: return r, g, b                  # blancs purs conserves
     if s > 0.45 and (h >= 180 or h < 25): return r, g, b      # rouges / bleus vifs (toits du CENTRE et de la BOUTIQUE)
     if 78 <= h <= 175:                    # vegetation : vert-de-gris sombre
-        h = 168 + (h - 120) * 0.12; s = min(1, s * 0.5); l = l * 0.8
-    else:                                 # pierre / sable / gris : ardoise bleu-nuit
-        h = 232; s = min(0.42, s * 0.55 + 0.10); l = min(1, l * 0.72)
+        h = 168 + (h - 120) * 0.12; s = min(1, s * 0.5); l = l * 0.7
+    else:                                 # pierre / sable / gris : bleu-nuit presque noir (v2 : courbe en gamma, les clairs restent des reflets)
+        h = 232; s = min(0.36, s * 0.5 + 0.10); l = 0.04 + 0.5 * l ** 1.8
     r, g, b = colorsys.hls_to_rgb(h / 360, max(0, min(1, l)), max(0, min(1, s)))
     return int(r * 255 + .5), int(g * 255 + .5), int(b * 255 + .5)
 def readpal(p):
@@ -267,6 +267,68 @@ for x in range(26, 39):
 for (x, y) in ((4, 24), (5, 24), (6, 24), (7, 24)):
     pass
 
+# ------------------------------------------------------------------ fonderie (v2) : cheminees fumantes, fenetres de forge
+# On repeint le rendu de l'arene (grande halle de Rustboro) : trois cheminees avec fumee sur les toits, fenetres et hublots
+# embrases par la forge. Chaque quart de metatuile modifie devient une tuile d'art (palette ART_PAL, couleurs ramenees a la
+# palette par plus proche voisin). Les cases modifiees etaient deja bloquantes : le plan d'acces ne change pas.
+OVL_E = []
+def ent_of(v):
+    """entrees (8 valeurs, tuiles en numerotation FireRed) + attribut d'un metatile deja pose"""
+    m = v & 0x3ff
+    if m >= 640: return list(SEC_ENT[m - 640]), SEC_ATT[m - 640]
+    return list(LD[3][m * 8:m * 8 + 8]), conv(struct.unpack('<H', patt[m * 2:m * 2 + 2])[0])
+def art_nearest(c): return min(range(1, 16), key=lambda k: sum((PAL[k][i] - c[i]) ** 2 for i in range(3)))
+def overlay(x0, y0, cw, ch, dx, dy, draw):
+    base = Image.new('RGBA', (cw * 16, ch * 16))
+    for j in range(ch):
+        for i in range(cw): base.paste(E.metatile(LD, rb(x0 + i, y0 + j) & 0x3ff), (i * 16, j * 16))
+    img = base.copy(); draw(ImageDraw.Draw(img), base)
+    n = 0
+    for j in range(ch):
+        for i in range(cw):
+            box = (i * 16, j * 16, i * 16 + 16, j * 16 + 16)
+            if img.crop(box).tobytes() == base.crop(box).tobytes(): continue
+            cur = G[(dx + i, dy + j)]; assert not isinstance(cur, tuple) and (cur & 0xc00), ('case modifiee non bloquante', dx + i, dy + j)
+            ents, att = ent_of(cur); new = list(ents)
+            for q in range(4):
+                qb = (box[0] + (q % 2) * 8, box[1] + (q // 2) * 8, box[0] + (q % 2) * 8 + 8, box[1] + (q // 2) * 8 + 8)
+                if img.crop(qb).tobytes() == base.crop(qb).tobytes(): continue
+                a = img.crop(qb).load()
+                new[4 + q] = ('ART', add_tile([art_nearest(a[xx, yy][:3]) for yy in range(8) for xx in range(8)]))
+            OVL_E.append((new, att)); G[(dx + i, dy + j)] = ('OVL', len(OVL_E) - 1, cur & ~0x3ff); n += 1
+    return n
+def draw_foundry(d, base):
+    OUT, DK, S1, S2, S3, BL = (15, 17, 27), (22, 24, 34), (74, 79, 113), (55, 58, 81), (44, 47, 62), (66, 76, 140)
+    CU, WH, SM1, SM2 = (255, 196, 80), (255, 255, 255), (150, 158, 182), (92, 106, 168)
+    def stack(x, y, w, h):                              # cheminee d'acier : fut + chapeau + bouche de braise
+        d.rectangle((x, y, x + w - 1, y + h - 1), fill=S2, outline=OUT)
+        d.rectangle((x + 1, y + 1, x + 2, y + h - 2), fill=BL); d.rectangle((x + w - 3, y + 1, x + w - 2, y + h - 2), fill=S3)
+        for yy in range(y + 4, y + h - 1, 4): d.line([(x + 3, yy), (x + w - 4, yy)], fill=S3)
+        d.rectangle((x - 1, y - 4, x + w, y + 1), fill=S1, outline=OUT); d.line([(x, y - 3), (x + w - 1, y - 3)], fill=BL)
+        d.rectangle((x + 1, y - 2, x + w - 2, y), fill=OUT); d.line([(x + 2, y - 1), (x + w - 3, y - 1)], fill=CU)
+    def smoke(x, y):                                    # trois volutes qui montent en derivant vers la droite
+        for (dx_, dy_, r, c) in ((0, 0, 2, SM1), (4, -4, 3, SM1), (9, -7, 2, SM1)):
+            cx, cy = x + dx_, y + dy_
+            d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=c)
+            d.point((cx - 1, cy - 1), fill=WH)
+    for (x, y, w, h) in ((10, 17, 10, 11), (31, 17, 10, 11), (119, 17, 10, 11), (139, 17, 10, 11), (70, 17, 20, 14)):
+        stack(x, y, w, h); smoke(x + w // 2 - 1, y - 6)
+    # fenetres : composantes sombres entourees d'un cadre -> forge allumee (haut plein, bas tremblant)
+    px = base.convert('RGB').load(); W_, H_ = base.size; seen = set()
+    for y in range(38, 117):
+        for x in range(W_):
+            if (x, y) in seen or px[x, y] not in (OUT, DK): continue
+            comp = [(x, y)]; seen.add((x, y)); k = 0
+            while k < len(comp):
+                cx, cy = comp[k]; k += 1
+                for nx, ny in ((cx + 1, cy), (cx - 1, cy), (cx, cy + 1), (cx, cy - 1)):
+                    if 0 <= nx < W_ and 0 <= ny < H_ and (nx, ny) not in seen and px[nx, ny] in (OUT, DK): seen.add((nx, ny)); comp.append((nx, ny))
+            xs = [c[0] for c in comp]; ys = [c[1] for c in comp]
+            if not (8 <= len(comp) <= 70 and 3 <= max(xs) - min(xs) + 1 and max(xs) - min(xs) <= 7 and max(ys) - min(ys) <= 13 and (max(xs) < 50 or min(xs) > 110)): continue
+            for (cx, cy) in comp:
+                if cy - min(ys) < (max(ys) - min(ys) + 1) * 0.65 or (cx + cy) % 2 == 0: d.point((cx, cy), fill=CU)
+print('fonderie : cases repeintes', overlay(7, 7, 10, 9, 4, 3, draw_foundry))
+
 # ------------------------------------------------------------------ accessibilite / PNJ
 NPC = {'fatman': (14, 25), 'oldman': (11, 14), 'woman': (17, 12), 'youngster': (31, 21), 'boy': (26, 24), 'tutorial': (20, 6), 'potion': (15, 5)}
 BLOCK_RAW = lambda v: isinstance(v, tuple) or (v & 0xc00) or ((v >> 12) == 1)
@@ -297,9 +359,14 @@ art_ids = {}
 for k, ents in enumerate(ART_E):
     SEC_ENT.append([(640 + NT + t) | (ART_PAL << 12) for (_, t) in ents] + [0, 0, 0, 0]); SEC_ATT.append(0)
     art_ids[k] = 640 + len(SEC_ENT) - 1
+OVL_ID = {}
+for k, (ents, att) in enumerate(OVL_E):
+    SEC_ENT.append([((640 + NT + e[1]) | (ART_PAL << 12)) if isinstance(e, tuple) else e for e in ents]); SEC_ATT.append(att)
+    OVL_ID[k] = 640 + len(SEC_ENT) - 1
 assert len(SEC_ENT) <= 384, len(SEC_ENT)
 for k, v in list(G.items()):
     if isinstance(v, tuple):
+        if v[0] == 'OVL': G[k] = v[2] | OVL_ID[v[1]]; continue
         assert v[1][0] == 'ART_META'; G[k] = v[2] | art_ids[v[1][1]]
 # tiles.png secondaire
 src_png = Image.open(EM + 'tilesets/secondary/rustboro/tiles.png')
