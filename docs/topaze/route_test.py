@@ -53,6 +53,7 @@ def walk(e, nav, cells, shots, label):
             p0 = e.pos(); e.run(22, KEYS[pd]); e.run(10, 0); p1 = e.pos(); n += 1
             if p1 != p0: bad.append(('traverse', c, nb, p0, p1)); return bad, n   # le joueur a bouge : on arrete (position perdue)
         p = step(e, dd)
+        if i == 0 and p is not None and (p[2], p[3]) == c: p = step(e, dd)      # 1er pas : le joueur doit d'abord se tourner
         if i % 14 == 0: shots.append((e.pos(), e))
         if p is None or p[:2] != e.pos()[:2]: break
         if (p[2], p[3]) != d and e.pos()[:2] == p[:2] and p[:2] == mapid(nav.mj['id'][4:]): bad.append(('pas', c, d, p)); return bad, n

@@ -34,8 +34,7 @@ class Map:
         if x - margin < 1 or y - margin < 3 or x + w + margin > self.w - 1 or y + h + margin > self.h - 1: return False
         return not any(self.used[j][i] for j in range(y - margin, y + h + margin) for i in range(x - margin, x + w + margin))
     def pad(self, x, y):
-        for j in range(2):
-            for i in range(2): self.g[y + j][x + i] = PP.get(3, 37); self.used[y + j][x + i] = True
+        self.g[y][x] = PP.get(3, 37); self.used[y][x] = True       # plaque d'acces 1x1 (une seule case de warp)
         self.pads.append((x, y))
     def rub(self, x, y): self.g[y][x] = RUB; self.used[y][x] = True
     def row(self, y, *items):
@@ -75,39 +74,40 @@ def top_wall(m, *items):
     m.row(1, *items)
 def door(m, x):
     m.stamp('ENTRY', x, m.h - 3)
-def f1():                                   # HALLE DES TURBINES (carte principale)
-    m = Map(44, 34); top_wall(m, 'B14', 1, 'B12', 1, 'B14')
-    door(m, 8); door(m, 19); door(m, 31)    # portes : transformateurs / sortie / salle de commande
-    for x in (6, 19, 32): m.stamp('TURB', x, 8)
-    for y in (15, 16): walk(m, y, 2, 41)
-    m.stamp('BAR9', 2, 20); m.stamp('BAR9', 33, 20); m.stamp('BAR9', 2, 25); m.stamp('BAR9', 33, 25)
-    m.stamp('CONS', 14, 21); m.stamp('CONS', 24, 21)
-    m.stamp('DOME', 20, 24)
-    m.pad(11, 26)
+def f1():                                   # HALLE DES TURBINES (carte principale), 34x26
+    m = Map(34, 26); top_wall(m, 'B9', 1, 'B9b', 1, 'B12')
+    door(m, 3); door(m, 14); door(m, 26)    # portes : transformateurs / sortie / salle de commande
+    for x in (1, 8, 15, 22): m.stamp('TURB', x, 5)
+    m.stamp('CONS', 28, 5); m.stamp('CAB', 29, 10)
+    for y in (11, 12): walk(m, y, 1, 32)
+    m.stamp('BAR', 1, 14); m.stamp('BAR9', 19, 14); m.stamp('DOME', 30, 14)
+    m.stamp('BAR9', 1, 19); m.stamp('CAB', 11, 19); m.stamp('CAB', 20, 19)
+    m.pad(27, 20)
     return m
-def f2():                                   # SALLE DE COMMANDE
-    m = Map(26, 18); top_wall(m, 'B9', 1, 'B14')
+def f2():                                   # SALLE DE COMMANDE, 22x14
+    m = Map(22, 14); top_wall(m, 'B9', 1, 'B9b')
+    door(m, 9)
+    m.stamp('CONS', 2, 5); m.stamp('CONS', 8, 5); m.stamp('CONS', 14, 5)
+    m.stamp('CAB', 2, 9); m.stamp('CAB', 17, 9)
+    return m
+def f3():                                   # PARC DES TRANSFORMATEURS, 26x18
+    m = Map(26, 18); top_wall(m, 'B12', 1, 'B9b')
     door(m, 10)
-    m.stamp('CONS', 3, 5); m.stamp('CONS', 10, 5); m.stamp('CONS', 17, 5)
-    m.stamp('CONS', 3, 10); m.stamp('CONS', 18, 10); m.stamp('CAB', 11, 9)
+    m.stamp('BAR9', 1, 5); m.stamp('BAR9', 11, 5); m.stamp('CAB', 21, 5)
+    m.stamp('BAR9', 1, 9); m.stamp('BAR9', 11, 9); m.stamp('CAB', 21, 9)
+    m.stamp('DOME', 2, 13); m.stamp('DOME', 20, 13)
     return m
-def f3():                                   # PARC DES TRANSFORMATEURS
-    m = Map(36, 24); top_wall(m, 'B14', 1, 'B14')
-    door(m, 15)
-    m.stamp('BAR', 3, 6); m.stamp('BAR9', 24, 6); m.stamp('BAR', 3, 11); m.stamp('BAR9', 24, 11)
-    m.stamp('DOME', 30, 15); m.stamp('DOME', 3, 16)
-    return m
-def f4():                                   # GALERIE TECHNIQUE (cle secrete)
-    m = Map(34, 28); top_wall(m, 'B9', 1, 'B9b', 1, 'B12')
-    m.row(7, 'B14', 1, 'B12'); m.row(12, 'B9', 2, 'L24'); m.row(17, 'L24', 2, 'B9'); m.row(22, 'B9b', 2, 'B12')
-    m.pad(30, 4)
+def f4():                                   # GALERIE TECHNIQUE (cle secrete), 28x20
+    m = Map(28, 20); top_wall(m, 'B12', 1, 'B12')
+    m.row(6, 'B14', 2, 'B9'); m.row(10, 3, 'B12', 2, 'B9'); m.row(14, 'B9', 2, 'B12')
+    m.pad(23, 16)
     return m
 FLOORS = {'1F': (f1, 1), '2F': (f2, 2), '3F': (f3, 3), 'B1F': (f4, 4)}
 def build_all():
     out = {}
     for n, (f, seed) in FLOORS.items():
         m = f()
-        if n == 'B1F': m.decorate(random.Random(seed * 77), 150)
+        pass
         out[n] = m
     return out
 if __name__ == '__main__':

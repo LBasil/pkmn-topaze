@@ -29,7 +29,8 @@ PokemonMansion_1F_Text_BraydonPostBattle::
     .string "Try jumping off over there!$"
 
 PokemonMansion_1F_Text_MewGaveBirthToMewtwo::
-    .string "Diary: Feb. 6\n"
-    .string "MEW gave birth.\p"
-    .string "We named the newborn MEWTWO.$"
+    .string "Log: Feb. 6\n"
+    .string "Bank 3 is overloaded again.\p"
+    .string "The cable gallery below is sealed.\n"
+    .string "The key stays down there.$"
 

@@ -21,8 +21,9 @@ PokemonMansion_B1F_Text_IvanPostBattle::
     .string "It's conducive to my studies.$"
 
 PokemonMansion_B1F_Text_MewtwoIsFarTooPowerful::
-    .string "Diary: Sept. 1\n"
-    .string "MEWTWO is far too powerful.\p"
-    .string "We have failed to curb its vicious\n"
-    .string "tendencies…$"
+    .string "Log: Sept. 1\n"
+    .string "The current down here is far too\n"
+    .string "strong to contain.\p"
+    .string "We have failed to tame the gallery.\n"
+    .string "Leave the key where it lies…$"
 
