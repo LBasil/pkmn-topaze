@@ -423,6 +423,11 @@ def build(L, rnd):
         FOREST |= WALLC
         FOREST -= PATH_ALL | set(FIXED) | WSET | WALL | STAIR | CLEAR
     FOREST -= set(SEA)
+    # sorties de la carte (les seules cases de bord praticables) ; tout le reste du bord est ferme par des arbres
+    if L == 'Route16': EXIT = {(x, H - 1) for x in range(6, 24)} | {(W - 1, y) for y in range(12, 15)}
+    else: EXIT = {(x, 0) for x in range(6, 16)} | {(x, H - 1) for x in range(W)}
+    RING = {(x, y) for y in range(H) for x in range(W) if (x <= 1 or x >= W - 2 or y <= 1 or y >= H - 2) and (x, y) not in EXIT and not any(abs(x - a) + abs(y - b) <= 1 for (a, b) in EXIT)}
+    FOREST |= RING - (nofor | set(SEA) | PATH_ALL | set(FIXED) | WSET | WALL | STAIR | CLEAR)
     # ---- bosquets isoles : blocs de 2 colonnes x 3 rangees (cime / pied-et-pointe / corps), debut sur une rangee PAIRE
     gr = []; blockd = PATH_ALL | BUF | set(FIXED) | set(SEA) | FEAT | dil(WSET, 1)
     cands = [(x, y) for y in range(4, H - 6, 2) for x in range(3, W - 3, 2) if all((x + i, y + j) not in FOREST and (x + i, y + j) not in blockd and DM[(x + i, y + j)] >= 3 for i in range(2) for j in range(3)) and (x, y) not in CLEAR]
@@ -471,6 +476,11 @@ def build(L, rnd):
     for ux in range(0, W - 1, 2): run_pairs(ux)
     for ux in range(1, W - 1, 2): run_pairs(ux)
     for c, v in FIXED.items(): G[c] = (v & 0xfc00, v & 0x3ff)
+    # filet de securite : toute case de bord praticable qui n'est pas une sortie devient infranchissable (collision seule, aspect inchange)
+    for (x, y) in [(x, y) for y in range(H) for x in range(W) if x in (0, W - 1) or y in (0, H - 1)]:
+        c = (x, y)
+        if c in EXIT or c not in G: continue
+        if G[c][0] == 0x3000 and c not in WATER: G[c] = (0x400, G[c][1])
     for c, v in SEA.items(): G[c] = (v & 0xfc00, v & 0x3ff)
     return dict(W=W, H=H, G=G, SPEC=SPEC, PATH=PATH_ALL, BUF=BUF, MEAD=MEAD, TREEO=TREEO, FIXED=FIXED, SEA=SEA, FOREST=FOREST, WSET=WSET, BR=BR, WALL=WALL, STAIR=STAIR, GATES=GATES, CLEAR=CLEAR, PONDS=PONDS, FEAT=FEAT)
 
@@ -621,7 +631,7 @@ def finalize(L, B, ART):
                     out.append(0x400 | mk([wall_q(q, int(wl if q % 2 == 0 else wr), (x // 2) % 2, part, sp[1]) for q in range(4)], WALLP, st, fb, 0)); continue
             wat = (att(m) & 0x1ff) in WATER_B
             sto = ST[TREEO[c]] if c in TREEO else (1 if wat else st)
-            if fl == 0x3000 and m in GRASS_B and sto == 0 and c not in TREEO: out.append(0x3000 | snow_meta(snow_var(x, y))); continue
+            if fl in (0x3000, 0x400) and m in GRASS_B and sto == 0 and c not in TREEO: out.append(fl | snow_meta(snow_var(x, y))); continue
             if m in (14, 15, 30, 31):      # cime : calque haut d'origine sur le sol de l'etage (neige / lilas), pour que la pointe se detache du sol
                 kc = (m, sto, snow_var(x, y) if sto == 0 else -1)
                 if kc not in CAPM:
