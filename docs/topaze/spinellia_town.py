@@ -27,6 +27,11 @@ for src, dst in ((SP, NP), (SS, NS)):
     for f in ('metatiles.bin', 'metatile_attributes.bin', 'tiles.png'): shutil.copy(src + f, dst + f)
     for i in range(16):
         pp = readpal(src + 'palettes/%02d.pal' % i); writepal(dst + 'palettes/%02d.pal' % i, [pp[0]] + [spinel(c) for c in pp[1:16]])
+# v10c : falaises des routes voisines (palette primaire 1, indices 9..14, rose-brun) -> gris-violet ; la ville n'affiche pas ces couleurs (rendu identique a v10)
+_pp = readpal(NP + 'palettes/01.pal')
+for _i in range(9, 15):
+    _h, _l, _s = hls(_pp[_i]); _pp[_i] = rgb(262, _l, min(0.14, _s * 0.4))
+writepal(NP + 'palettes/01.pal', _pp)
 pmt = open(SP + 'metatiles.bin', 'rb').read()
 smt = bytearray(open(NS + 'metatiles.bin', 'rb').read()); satt = list(struct.unpack('<%dI' % (len(smt) // 16), open(NS + 'metatile_attributes.bin', 'rb').read()))
 patt = struct.unpack('<%dI' % (os.path.getsize(SP + 'metatile_attributes.bin') // 4), open(SP + 'metatile_attributes.bin', 'rb').read())
