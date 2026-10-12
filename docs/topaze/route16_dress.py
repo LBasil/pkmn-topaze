@@ -600,6 +600,10 @@ def place_all(L, B, D, rnd):
         ART[c] = (('s', rnd.randrange(3)), G[c][1]); G[c] = (0x400, G[c][1])
         if not (reach(start, set(ART)) >= (R0 - set(ART) - {c for c in R0 if blocked(c)})): del ART[c]; G[c] = (0x3000, G[c][1]); continue
         ncry += 1
+    # cases bloquees par le filet de bord mais sans obstacle visible : un cristal, pour que tout blocage se voie
+    for c in sorted(G):
+        if G[c][0] == 0x400 and c not in B['TREEO'] and c not in ART and G[c][1] in GRASS_B and c not in SPEC:
+            ART[c] = (('s', rnd.randrange(3)), G[c][1])
     return mj, ART, EV, placed
 
 def finalize(L, B, ART):
