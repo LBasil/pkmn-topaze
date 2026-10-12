@@ -16,20 +16,20 @@ def writepal(p, cols): open(p, 'w').write('JASC-PAL\r\n0100\r\n16\r\n' + ''.join
 def hls(c): h, l, s = colorsys.rgb_to_hls(c[0] / 255, c[1] / 255, c[2] / 255); return h * 360, l, s
 def rgb(h, l, s): r, g, b = colorsys.hls_to_rgb((h % 360) / 360, max(0, min(1, l)), max(0, min(1, s))); return int(r * 255 + .5), int(g * 255 + .5), int(b * 255 + .5)
 def tint_shadow(c, pi, prim):
-    """HEMATOWN = ville dans l'ombre (arene de NOX, Tenebre ; badge Hematite) : herbes/pins -> bleu-sarcelle de nuit, sable/pave/ocre -> gris-violet, roche (palette primaire 1) -> hematite gris-rouge sombre ;
-    verres, eau, Boutique bleue et Centre rouge conserves (assombris), gris legerement refroidis"""
+    """HEMATOWN v2 = ville de beton et d'asphalte, perpetuellement dans l'ombre (arene de NOX, Tenebres ; badge Hematite) : herbes -> asphalte presque noir,
+    sable/pave -> beton gris-bleu sombre, roche (palette primaire 1) -> hematite rouge sombre ; verres de la Tour conserves (assombris)"""
     h, l, s = hls(c)
     if s < 0.08:
         if l < 0.03: return c
-        return rgb(236, l * 0.84, 0.07 if l > 0.1 else 0.0)
-    if prim and pi == 1 and (h < 30 or h > 330): return rgb(350, l * 0.72, s * 0.5)
-    if 28 <= h < 70 and s > 0.1: return rgb(268, l * 0.70, min(0.26, s * 0.40))
+        return rgb(232, l * 0.72, 0.08 if l > 0.1 else 0.0)
+    if prim and pi == 1 and (h < 30 or h > 330): return rgb(350, l * 0.55, s * 0.55)
+    if 28 <= h < 70 and s > 0.1: return rgb(250, l * 0.56, min(0.16, s * 0.30))
     if 70 <= h <= 175:
-        if l > 0.44: return rgb(198, l * 0.62, min(0.40, s * 0.65))
-        return rgb(214, l * 0.80, min(0.50, s * 0.75))
-    if 180 <= h <= 250: return rgb(h, l * 0.86, s * 0.9)
-    if 250 < h <= 330: return rgb(h, l * 0.82, s * 0.7)
-    return rgb(h, l * 0.92, s * 0.95)
+        if l > 0.44: return rgb(236, l * 0.40, 0.14)
+        return rgb(240, l * 0.55, 0.16)
+    if 180 <= h <= 250: return rgb(h, l * 0.74, s * 0.9)
+    if 250 < h <= 330: return rgb(h, l * 0.72, s * 0.7)
+    return rgb(h, l * 0.78, s * 0.9)
 for src, dst, prim in ((SP, NP, True), (SS, NS, False)):
     shutil.rmtree(dst, ignore_errors=True); os.makedirs(dst + 'palettes')
     for f in ('metatiles.bin', 'metatile_attributes.bin', 'tiles.png'): shutil.copy(src + f, dst + f)
@@ -85,22 +85,7 @@ for k, (ox, oy, cw, ch) in list(CH.items()) + [(k, v) for k, v in GATES.items()]
     if k in DOOR_ORIG: DOOR[k] = [(dx + DOOR_ORIG[k][0] - ox, dy + DOOR_ORIG[k][1] - oy)]
 GATEAPP = {'N': [(34, 6), (35, 6)], 'S': [(34, 45), (35, 45)], 'W': [(9, 27)], 'E': [(57, 27)]}
 START = (34, 45)
-# ------------------------------------------------------------------ relief : falaises d'hematite (autotile de montagne FireRed, ids primaires 104..187) + massifs
-def east_x0(y): return 62 - int(2.9 * vnoise(y * .21, 1.9, 41))
-ROCK = set()
-for y in range(H):
-    if 24 <= y <= 29: continue
-    for x in range(east_x0(y), W): ROCK.add((x, y))
-def blob(cx, cy, rx, ry, seed, k=.55):
-    out = set()
-    for y in range(max(0, int(cy - ry - 2)), min(H, int(cy + ry + 3))):
-        for x in range(max(0, int(cx - rx - 2)), min(W, int(cx + rx + 3))):
-            if ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 < 0.78 + k * vnoise(x * .33, y * .33, seed): out.add((x, y))
-    return out
-MASSIFS = [(4.5, 5, 8.5, 6.5, 51), (3.5, 49.5, 7.5, 5.5, 52), (58, 49, 8.5, 5.5, 53), (57.5, 7, 6.5, 8, 54), (20, 1.5, 11, 3.2, 55)]
-for (cx, cy, rx, ry, sd) in MASSIFS: ROCK |= blob(cx, cy, rx, ry, sd)
-ROCK = {c for c in ROCK if c not in OCC}
-for c in ROCK: OCC[c] = 'rock'
+ROCK = set()      # v2 : plus de montagnes, la ville est fermee par des tours
 # ------------------------------------------------------------------ monument de l'eclipse (3x3, place de la Tour) et ruines (emplacements d'anciens batiments decoratifs)
 MON = (32, 34)
 claim(MON[0], MON[1], 3, 3, 'mon')
@@ -290,7 +275,7 @@ for c in cands:
     if not (near(c, WAY, 2) or near(c, pins, 1) or near(c, rocks, 1)): continue
     if can_block(c): BLK[c] = ('cry', rc.randrange(3)); ncry += 1
 print('cristaux', ncry)
-rl = random.Random(1802); lc = [c for c in cands if c not in BLK and near4_ok(c) ] if False else None
+rl = random.Random(1802)
 def near4(c, S): return any((c[0] + a, c[1] + b) in S for a, b in ((1, 0), (-1, 0), (0, 1), (0, -1)))
 lc = [c for c in cands if c not in BLK]; rl.shuffle(lc); nl = 0
 for c in lc:
@@ -371,30 +356,25 @@ place_npc('lass', (31, 40)); place_npc('crush', (48, 27))
 json.dump(NPC, open('/tmp/hematown_npc.json', 'w')); json.dump(SIGN, open('/tmp/hematown_signs.json', 'w'))
 json.dump({k: [list(c) for c in v] for k, v in DOOR.items()}, open('/tmp/hematown_doors.json', 'w'))
 print('PNJ', NPC); print('panneaux', SIGN)
-# ------------------------------------------------------------------ arbres FR : retuilage (haut/bas/tronc/bords), meme logique que Spinellia / Apatia (validee)
+# ------------------------------------------------------------------ TOURS (v2) : les unites 2x2 deviennent des gratte-ciel ; roles par cellule (toit / facade / pied), cotes G/D/M
 P = {c for c, n in OCC.items() if n == 'pin'}
 def is_pine(c): return c in P or not (0 <= c[0] < W and 0 <= c[1] < H)
-TRUNK = {}
+TRUNK = {}; P2 = set(P)
+TW = {}            # cellule -> (role, cote, variante de fenetres)
+def hh(x, y, k=0): return ((x * 73856093) ^ (y * 19349663) ^ (k * 83492791)) & 0xffff
 for (x, y) in sorted(P):
-    if y % 2 == 1 and not is_pine((x, y + 1)):
-        c = (x, y + 1)
-        if c in OCC or c in WAY or c in KEEP or c in BLK or c in FLW or c in TRUNK: continue
-        OCC[c] = 'trunk'
-        if NEED <= reach(): TRUNK[c] = 1
-        else: OCC.pop(c)
-P2 = P | set(TRUNK)
-for (x, y) in P2:
-    role = 'K' if (x, y) in TRUNK else ('T' if y % 2 == 0 else 'B')
-    left = (x % 2 == 0) and not ((x - 1, y) in P2 or not (0 <= x - 1 < W))
-    right = (x % 2 == 1) and not ((x + 1, y) in P2 or not (0 <= x + 1 < W))
-    base = {'T': (0x14, 0x15, 0x16, 0x17), 'B': (0x1c, 0x1d, 0x1e, 0x1f), 'K': (0x24, 0x25, 0x26, 0x27)}[role]
-    if role == 'T' and (x, y - 1) not in P2 and 0 <= y - 1: base = (0x0e, 0x0f, 0x0e, 0x0f)
-    G[(x, y)] = 0x400 | (base[2] if left else base[3] if right else base[x % 2])
-print('troncs', len(TRUNK))
-assert NEED <= reach(), 'acces perdu apres les troncs'
+    ux, uy = x // 2, y // 2
+    roof_unit = ((ux, uy - 1) not in TU) or hh(ux, uy, 3) % 100 < 9
+    role = ('roof' if roof_unit else 'fac') if y % 2 == 0 else ('foot' if (ux, uy + 1) not in TU else 'fac')
+    left = (x % 2 == 0) and not is_pine((x - 1, y)); right = (x % 2 == 1) and not is_pine((x + 1, y))
+    side = 'L' if left else 'R' if right else 'M'
+    k = hh(x, y, 7) % 20; var = 1 if k == 0 else 2 if k == 1 else 3 if k == 2 else 0
+    TW[(x, y)] = (role, side, var, hh(ux // 1, 0, 9) % 2)
+print('cellules de tours', len(TW))
+assert NEED <= reach(), 'acces perdu apres les tours'
 # ------------------------------------------------------------------ art procedural
-PAL = [(0, 0, 0), (22, 18, 34), (118, 110, 140), (100, 92, 122), (60, 54, 78), (146, 138, 168), (34, 86, 94), (52, 122, 122), (92, 164, 150), (78, 72, 98),
-       (48, 42, 64), (40, 36, 56), (164, 156, 186), (130, 122, 152), (70, 64, 90), (26, 22, 40)]
+PAL = [(0, 0, 0), (10, 8, 16), (112, 116, 136), (84, 88, 108), (56, 60, 78), (146, 150, 172), (86, 22, 38), (176, 40, 54), (248, 198, 106), (66, 70, 92),
+       (40, 42, 58), (30, 30, 44), (160, 164, 186), (100, 104, 126), (52, 56, 74), (20, 20, 32)]    # beton bleute ; 6-8 = rouille / rouge / fenetre allumee (ambre)
 PAL_C = [(0, 0, 0), (18, 10, 22), (96, 92, 112), (150, 148, 170), (205, 205, 225), (246, 246, 255), (196, 46, 52), (108, 20, 34), (150, 56, 44), (238, 88, 68),
          (255, 156, 100), (32, 26, 44), (176, 168, 190), (118, 110, 138), (74, 68, 94), (255, 226, 184)]    # hematite : acier sombre, veines et coeur rouges (6-10)
 def newimg(w, h): return Image.new('P', (w, h), 0)
@@ -525,6 +505,37 @@ def eclipse():
     d.arc((cx - 9, cy - 9, cx + 9, cy + 9), 200, 330, fill=11)
     prism(d, 8, 42, 7, 12); prism(d, 40, 42, 6, 10)
     return im
+def tower_tile(role, side, var, tone=0):
+    """tuile de gratte-ciel 16x16 (palette A) : toit (parapet clair + toiture + corniche), facade (2x2 fenetres, quelques-unes allumees), pied (corniche + rez-de-chaussee sombre a neon rouge)"""
+    im = newimg(16, 16); d = ImageDraw.Draw(im)
+    if role == 'roof':
+        d.rectangle((0, 0, 15, 15), fill=3)
+        d.rectangle((0, 0, 15, 0), fill=1); d.rectangle((0, 1, 15, 2), fill=12); d.line([(0, 3), (15, 3)], fill=13)
+        d.rectangle((0, 4, 15, 12), fill=3)
+        for (x0, x1, y0, y1) in ((2, 6, 5, 8), (9, 13, 8, 11)): d.rectangle((x0, y0, x1, y1), fill=4, outline=1); d.line([(x0 + 1, y0 + 1), (x1 - 1, y0 + 1)], fill=13)
+        if var % 2: d.rectangle((10, 4, 11, 6), fill=14); d.point((10, 3), fill=7)
+        d.line([(0, 13), (15, 13)], fill=12); d.rectangle((0, 14, 15, 15), fill=10); d.line([(0, 15), (15, 15)], fill=1)
+    else:
+        d.rectangle((0, 0, 15, 15), fill=(9, 14)[tone])
+        for x in range(0, 16, 4): d.line([(x, 0), (x, 15)], fill=(14, 10)[tone])
+        wins = [(2, 2), (10, 2), (2, 8), (10, 8)] if role == 'fac' else [(2, 2), (10, 2)]
+        lit = {0: (), 1: ((0, 8),), 2: ((3, 8),), 3: ((1, 7),)}[var]
+        for k, (wx, wy) in enumerate(wins):
+            d.rectangle((wx - 1, wy - 1, wx + 4, wy + 5), fill=10)
+            col = 15
+            for (kk, cc) in lit:
+                if kk == k: col = cc
+            d.rectangle((wx, wy, wx + 3, wy + 4), fill=col)
+            if col == 15: d.point((wx, wy), fill=11)
+        if role == 'foot':
+            d.rectangle((0, 9, 15, 10), fill=12); d.line([(0, 11), (15, 11)], fill=13)
+            d.rectangle((0, 12, 15, 15), fill=15); d.line([(0, 13), (15, 13)], fill=7); d.line([(0, 14), (15, 14)], fill=6)
+            if var == 1: d.rectangle((6, 12, 9, 15), fill=8)
+        else:
+            d.line([(0, 15), (15, 15)], fill=10)
+    if side == 'L': d.rectangle((0, 0, 1, 15), fill=1); d.line([(2, 1 if role == 'roof' else 0), (2, 15)], fill=5 if role == 'roof' else 13)
+    if side == 'R': d.rectangle((14, 0, 15, 15), fill=1); d.line([(13, 0), (13, 15)], fill=10)
+    return im
 def nonempty(im, box): return sum(1 for q in im.crop(box).getdata() if q)
 # controle « sprites entiers » : chaque quart rempli (haut ET bas), pas d'image vide
 for v in range(3):
@@ -535,6 +546,9 @@ for nm_, im_ in (('lamp', lamp()), ('wall0', wall(0)), ('wall1', wall(1)), ('pil
 def whole_grid(im, name, n, lim):
     for j in range(n):
         for i in range(n): assert nonempty(im, (i * 16, j * 16, i * 16 + 16, j * 16 + 16)) >= lim, (name, 'incomplet', i, j)
+for r_ in ('roof', 'fac', 'foot'):
+    for sd_ in 'LMR':
+        for v_ in range(4): assert nonempty(tower_tile(r_, sd_, v_), (0, 0, 16, 16)) == 256, ('tour incomplete', r_, sd_, v_)
 F_ = formation(); whole_grid(F_, 'formation', 2, 24)
 RU_ = ruin(); whole_grid(RU_, 'ruine', 2, 24)
 EC_ = eclipse(); whole_grid(EC_, 'eclipse', 3, 24)
@@ -583,16 +597,13 @@ for c, val in BLK.items():
     elif val[0] == 'bush': G[c] = 0x400 | 5
     elif val[0] == 'sign': G[c] = 0x400 | 2
 for c in FLW: G[c] = 0x3000 | 4
-# ---- falaises : autotile de montagne FireRed (signature des 8 voisins -> metatuile primaire 104..187)
-MTN = {"11111111": 113, "11111011": 178, "11011011": 121, "11011001": 121, "11011101": 121, "11111101": 179, "10111011": 114, "11101101": 179, "11111001": 121, "11011111": 121, "10110011": 114, "11101100": 112, "10101001": 133, "11001101": 120, "10011011": 122, "11101001": 133, "10011001": 122, "10010001": 122, "10100000": 133, "10101000": 133, "10001001": 159, "11001100": 120, "10100100": 133, "10100010": 134, "00000000": 159, "11000000": 141, "01010001": 135, "00010000": 177, "01000000": 176, "01011000": 135, "10010000": 142, "01010000": 135, "00010001": 177, "11110011": 498, "01010011": 135, "01010101": 135, "00110100": 111, "11000001": 141, "10110111": 114, "11110111": 186, "01110111": 105, "01110110": 105, "00110110": 106, "00110010": 106, "01110010": 106, "01010010": 176, "01100110": 104, "01111110": 105, "11111110": 187}
-D8 = [(0, -1), (1, 0), (0, 1), (-1, 0), (1, -1), (1, 1), (-1, 1), (-1, -1)]
-def is_m(c): return c in ROCK or not (0 <= c[0] < W and 0 <= c[1] < H)
-def mtn_id(x, y):
-    sig = ''.join('1' if is_m((x + dx, y + dy)) else '0' for dx, dy in D8)
-    if sig == '11111111': return (113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 113, 108, 108, 187)[((x * 73856093) ^ (y * 19349663)) % 25]
-    if sig in MTN: return MTN[sig]
-    return MTN[min(MTN, key=lambda k: sum((a_ != b_) * (4 if i_ < 4 else 1) for i_, (a_, b_) in enumerate(zip(k, sig))))]
-for (x, y) in ROCK: G[(x, y)] = 0x400 | mtn_id(x, y)
+# ---- tours (v2)
+TT = {}
+for c, (role, side, var, tone) in TW.items():
+    k = (role, side, var if role != 'roof' else var % 2, tone)
+    if k not in TT: TT[k] = slice4(tower_tile(*k))
+    G[c] = 0x400 | art_meta(TT[k], grass(c[0], c[1]) & 0x3ff, False, 'A')
+BORD = [0x400 | art_meta(slice4(tower_tile('fac', 'M', v, t)), 8, False, 'A') for v, t in ((0, 0), (1, 1), (0, 1), (0, 0))]
 # ------------------------------------------------------------------ compactage du tileset secondaire (seules les metatuiles/tuiles utilisees sont gardees) + ecriture
 sec_old = sorted({v & 0x3ff for v in G.values() if 640 <= (v & 0x3ff) < 640 + NMT})
 used_t = set()
@@ -628,7 +639,10 @@ for n, t in enumerate(NEWT):
     ti = Image.new('P', (8, 8)); ti.putdata(list(t)); out.paste(ti, (((len(used_t) + n) % 16) * 8, ((len(used_t) + n) // 16) * 8))
 out.save(NS + 'tiles.png'); writepal(NS + 'palettes/%02d.pal' % ART_PAL, PAL); writepal(NS + 'palettes/%02d.pal' % CRY_PAL, PAL_C)
 open('data/layouts/SaffronCity/map.bin', 'wb').write(struct.pack('<%dH' % (W * H), *[G[(x, y)] for y in range(H) for x in range(W)]))
-open('data/layouts/SaffronCity/border.bin', 'wb').write(struct.pack('<4H', 0x414, 0x415, 0x41c, 0x41d))      # bordure hors carte : foret de pins FR (phase haut = lignes paires)
+def rm_id(v):
+    i = v & 0x3ff
+    return (v & ~0x3ff) | (640 + len(sec_old) + (i - art0)) if i >= art0 else v
+open('data/layouts/SaffronCity/border.bin', 'wb').write(struct.pack('<4H', *[rm_id(v) for v in BORD]))      # bordure hors carte : facades de tours
 # ---- layouts.json + en-tetes C (idempotents)
 def add(path, marker, text):
     s = open(path).read()
