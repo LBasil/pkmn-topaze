@@ -234,8 +234,6 @@ def prune():
             n = sum(1 for q in ((ux - 1, uy), (ux + 1, uy), (ux, uy - 1), (ux, uy + 1)) if q in TU or not (0 <= q[0] < UW and 0 <= q[1] < UH))
             if n < 2: TU.discard((ux, uy)); ch = True
 prune(); void_fill(); prune()
-for (ux, uy) in TU:
-    for c in ucells(ux, uy): OCC[c] = 'pin'
 print('unites d arbres', len(TU))
 # ------------------------------------------------------------------ accessibilite
 def blocked(c): return (c in OCC and c not in WALK) or c in BLK or not (0 <= c[0] < W and 0 <= c[1] < H)
@@ -251,6 +249,23 @@ def reach(extra=frozenset(), start=START):
 NEED = {(x, y + 1) for ds in DOOR.values() for (x, y) in ds} | set(sum(GATEAPP.values(), []))
 r0 = reach()
 assert NEED <= r0, ('acces manquants', sorted(NEED - r0))
+for (ux, uy) in TU:
+    for c in ucells(ux, uy): OCC[c] = 'pin'
+# v2b : ville bondee -> blocs d'immeubles dans tous les interstices (marge autour des vrais batiments, des rues et des parvis ; acces BFS verifie)
+BLDG = {c for c, n in OCC.items() if n not in ('pin', 'trunk')}
+def near_b(c, r=1): return any((c[0] + a, c[1] + b) in BLDG for a in range(-r, r + 1) for b in range(-r, r + 1))
+PLAZA = {(x, y) for x in range(26, 41) for y in range(30, 40)}      # place devant la Tour + monument : reste ouverte
+rd = random.Random(1905); dense = [(ux, uy) for uy in range(UH) for ux in range(UW)]; rd.shuffle(dense); nd = 0
+for (ux, uy) in dense:
+    cs = ucells(ux, uy)
+    if (ux, uy) in TU or any(c in OCC or c in KEEP or c in BLK or c in PLAZA or c in WAY or near_b(c) for c in cs): continue
+    if rd.random() < 0.12: continue            # quelques cours / ruelles
+    for c in cs: OCC[c] = 'pin'
+    if NEED <= reach(): TU.add((ux, uy)); nd += 1
+    else:
+        for c in cs: OCC.pop(c)
+print('immeubles ajoutes', nd)
+
 # ------------------------------------------------------------------ cristaux d'hematite, formations, lampadaires, ruines, buissons, fleurs (tirages separes)
 def can_block(c, extra=()):
     if c in OCC or c in BLK or c in KEEP or c in WAY: return False
@@ -364,7 +379,7 @@ TW = {}            # cellule -> (role, cote, variante de fenetres)
 def hh(x, y, k=0): return ((x * 73856093) ^ (y * 19349663) ^ (k * 83492791)) & 0xffff
 for (x, y) in sorted(P):
     ux, uy = x // 2, y // 2
-    roof_unit = ((ux, uy - 1) not in TU) or hh(ux, uy, 3) % 100 < 9
+    roof_unit = ((ux, uy - 1) not in TU) or hh(ux, uy, 3) % 100 < 22
     role = ('roof' if roof_unit else 'fac') if y % 2 == 0 else ('foot' if (ux, uy + 1) not in TU else 'fac')
     left = (x % 2 == 0) and not is_pine((x - 1, y)); right = (x % 2 == 1) and not is_pine((x + 1, y))
     side = 'L' if left else 'R' if right else 'M'
