@@ -1,93 +1,123 @@
 #!/usr/bin/env python3
-"""Centrale electrique de Chrondrolia v2 : 4 etages (cartes PokemonMansion_1F/2F/3F/B1F reutilisees) construits
-avec le tileset PowerPlant (machines, turbines, barils, consoles) a partir de pochoirs de la carte PowerPlant d'origine.
-Etape 1 : geometrie + rendu.  Etape 2 (--events) : warps, objets, scripts."""
-import sys, json, os
+"""Centrale electrique de Chrondrolia v2 : 4 etages (cartes PokemonMansion_1F/2F/3F/B1F reutilisees) construits avec le
+tileset PowerPlant (machines, turbines, barils, consoles) a partir de pochoirs de la carte PowerPlant d'origine.
+Squelette de rangees + decor aleatoire (graine fixe) verifie par connexite (aucune poche close)."""
+import sys, random
 sys.path.insert(0, 'tools/topaze/maps')
-from mapkit import Layout, ROOT
+from mapkit import Layout
 PP = Layout('LAYOUT_POWER_PLANT')
-W, H = 49, 36
-FLOOR = PP.get(5, 5)            # sol
-DARK = PP.get(5, 0)             # bande sombre (hors jeu)
-STAMPS = {'BENCH9a': (1, 1, 9, 3), 'BENCH9b': (11, 1, 9, 3), 'BENCH12': (21, 1, 12, 3), 'BENCH14': (34, 1, 14, 3),
-          'LONG24': (20, 19, 25, 3), 'LONG25': (20, 28, 26, 3), 'DOME': (7, 8, 3, 4), 'TURB2': (27, 34, 5, 5),
-          'BARRELS': (24, 21, 17, 4), 'CONS': (26, 13, 5, 4), 'ENTRY': (3, 37, 5, 3), 'ROW9a': (1, 14, 9, 3), 'ROW9b': (11, 14, 9, 3), 'CAB': (21, 14, 2, 3)}
-class Map:
-    def __init__(self):
-        self.g = [[FLOOR] * W for _ in range(H)]
-        for x in range(W):                                     # haut : 3 rangees de la carte d'origine, bas : sa derniere
-            for y in range(3): self.g[y][x] = PP.get(x, y)
-            self.g[H - 1][x] = PP.get(12, 39)
-        for y in range(3, H - 1):
-            self.g[y][0] = PP.get(0, 20); self.g[y][W - 1] = PP.get(48, 20)
-        self.pads = []
-    def stamp(self, name, x, y, h=None):
-        sx, sy, w, hh = STAMPS[name]
-        for j in range(h or hh):
-            for i in range(w): self.g[y + j][x + i] = PP.get(sx + i, sy + j)
-    def pad(self, x, y):                                        # plateforme elevatrice 2x2 (tuiles du tapis d'entree)
-        for j in range(2):
-            for i in range(2): self.g[y + j][x + i] = PP.get(3, 37)
-        self.pads.append((x, y))
-    def blocked(self, x, y): return bool(self.g[y][x] & 0xc00)
+FLOOR = PP.get(5, 5)
 RUB = PP.get(5, 3)
-def rub(m, *pts):
-    for x, y in pts: m.g[y][x] = RUB
-def row(m, y, *segs):
-    for name, x in segs: m.stamp(name, x, y)
-def floor1():
-    m = Map()
-    row(m, 8, ('BENCH9a', 1), ('BENCH9b', 11), ('BENCH12', 21), ('BENCH14', 34))      # gaps x10, x20, x33
-    row(m, 14, ('ROW9a', 1), ('LONG24', 12))                                          # ouvert x10..11 et x38..47
-    m.stamp('CONS', 22, 3)
-    m.stamp('BARRELS', 14, 21); m.stamp('DOME', 6, 21); m.stamp('DOME', 38, 21)
-    row(m, 28, ('LONG25', 3), ('BENCH12', 35))
-    m.stamp('ENTRY', 22, 33)
-    m.stamp('CONS', 3, 4); m.stamp('CONS', 42, 4); m.stamp('DOME', 12, 3)
-    m.stamp('DOME', 43, 15); m.stamp('TURB2', 40, 30); m.stamp('DOME', 2, 31); m.stamp('CAB', 8, 18); m.stamp('CAB', 30, 18)
-    rub(m, (16, 6), (17, 6), (28, 5), (29, 5), (45, 19), (5, 20), (6, 20), (36, 26), (37, 26), (38, 27), (11, 26), (12, 26), (31, 32), (34, 32))
-    m.pad(33, 4); m.pad(2, 18)
+STAMPS = {'B9': (1, 1, 9, 3), 'B9b': (11, 1, 9, 3), 'B12': (21, 1, 12, 3), 'B14': (34, 1, 14, 3),
+          'L24': (20, 19, 25, 3), 'L25': (20, 28, 26, 3), 'DOME': (7, 8, 3, 4), 'TURB': (27, 34, 5, 5),
+          'BAR': (24, 21, 17, 4), 'BAR9': (24, 21, 9, 4), 'CONS': (26, 13, 5, 4), 'ENTRY': (3, 37, 5, 3), 'CAB': (21, 14, 2, 3)}
+class Map:
+    def __init__(self, w, h):
+        self.w, self.h = w, h
+        self.g = [[FLOOR] * w for _ in range(h)]
+        self.used = [[False] * w for _ in range(h)]
+        for x in range(w):
+            for y in range(3): self.g[y][x] = PP.get(min(x, 33) if x < 33 else 48, y)
+            self.g[h - 1][x] = PP.get(12, 39)
+        for y in range(3, h - 1): self.g[y][0] = PP.get(0, 20); self.g[y][w - 1] = PP.get(48, 20)
+        for x in range(w):
+            for y in (0, 1, 2, h - 1): self.used[y][x] = True
+        for y in range(h): self.used[y][0] = self.used[y][w - 1] = True
+        self.pads = []
+    def stamp(self, name, x, y):
+        sx, sy, w, h = STAMPS[name]
+        for j in range(h):
+            for i in range(w): self.g[y + j][x + i] = PP.get(sx + i, sy + j); self.used[y + j][x + i] = True
+    def fits(self, name, x, y, margin=1):
+        w, h = STAMPS[name][2:]
+        if x - margin < 1 or y - margin < 3 or x + w + margin > self.w - 1 or y + h + margin > self.h - 1: return False
+        return not any(self.used[j][i] for j in range(y - margin, y + h + margin) for i in range(x - margin, x + w + margin))
+    def pad(self, x, y):
+        for j in range(2):
+            for i in range(2): self.g[y + j][x + i] = PP.get(3, 37); self.used[y + j][x + i] = True
+        self.pads.append((x, y))
+    def rub(self, x, y): self.g[y][x] = RUB; self.used[y][x] = True
+    def row(self, y, *items):
+        x = 1
+        for it in items:
+            if isinstance(it, int): x += it
+            else:
+                if x + STAMPS[it][2] > self.w - 1: print('  (rangee y=%d : %s ignore)' % (y, it)); break
+                self.stamp(it, x, y); x += STAMPS[it][2]
+    def blocked(self, x, y): return bool(self.g[y][x] & 0xc00)
+    def reach(self, sx, sy):
+        seen = {(sx, sy)}; q = [(sx, sy)]
+        while q:
+            x, y = q.pop()
+            for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                a, b = x + dx, y + dy
+                if 0 <= a < self.w and 0 <= b < self.h and (a, b) not in seen and not self.blocked(a, b): seen.add((a, b)); q.append((a, b))
+        return seen
+    def decorate(self, rnd, n=900):
+        kinds = ['CAB', 'CAB', 'CAB', 'DOME', 'CONS', 'TURB']
+        for _ in range(n):
+            k = rnd.choice(kinds); w, h = STAMPS[k][2:]
+            x, y = rnd.randint(1, self.w - w - 1), rnd.randint(3, self.h - h - 1)
+            if self.fits(k, x, y, 1):
+                bak = [r[:] for r in self.g], [r[:] for r in self.used]
+                self.stamp(k, x, y)
+                free = [(i, j) for j in range(3, self.h - 1) for i in range(1, self.w - 1) if not self.blocked(i, j)]
+                if len(self.reach(*free[0])) != len(free): self.g, self.used = bak
+        for _ in range(60):
+            x, y = rnd.randint(2, self.w - 3), rnd.randint(4, self.h - 3)
+            if not any(self.used[y + j][x + i] for j in (-1, 0, 1) for i in (-1, 0, 1)): self.rub(x, y)
+W, H = 34, 32
+def room(m, x, y, top, inner, door='W'):
+    """Salle close : mur haut = banc (top), mur bas = meme banc, flancs = colonnes de cabines, porte = trou de 3 cases au flanc."""
+    w = STAMPS[top][2]
+    m.stamp(top, x, y); m.stamp(top, x, y + inner + 3)
+    for yy in range(y + 3, y + 3 + inner, 3):
+        for side, xx in (('W', x), ('E', x + w - 2)):
+            if door == side and yy == y + 3: continue
+            m.stamp('CAB', xx, yy)
+def f1():
+    m = Map(W, H); m.stamp('ENTRY', 15, 29)
+    m.row(7, 'B9', 1, 'B9b', 1, 'B12')
+    room(m, 1, 12, 'B14', 6, 'E'); m.stamp('DOME', 5, 15); m.stamp('DOME', 9, 15)
+    m.stamp('BAR', 16, 13); m.row(18, 16, 'CAB')
+    m.row(22, 'L25')
+    m.row(26, 'B9', 1, 'B9b')
+    m.pad(30, 4); m.pad(30, 27)
     return m
-def floor2():
-    m = Map()
-    row(m, 6, ('BENCH9a', 1), ('BENCH9b', 11), ('BENCH12', 21))                      # ouvert x33..47
-    row(m, 12, ('BENCH14', 34), ('LONG24', 8))                                         # ouvert x1..7 et x33
-    row(m, 18, ('BENCH12', 1), ('BENCH9b', 14), ('BENCH12', 26), ('BENCH9a', 39))
-    row(m, 25, ('LONG25', 20), ('ROW9a', 1))
-    m.stamp('CONS', 3, 29); m.stamp('TURB2', 38, 28); m.stamp('DOME', 12, 30)
-    m.stamp('CAB', 15, 3); m.stamp('CAB', 28, 3); m.stamp('CONS', 18, 8); m.stamp('DOME', 40, 8); m.stamp('CAB', 4, 9)
-    m.stamp('CAB', 30, 22); m.stamp('CAB', 6, 22); m.stamp('DOME', 17, 28); m.stamp('CAB', 27, 31); m.stamp('CAB', 33, 28)
-    rub(m, (10, 4), (11, 4), (36, 5), (37, 5), (24, 22), (25, 22), (2, 28), (3, 28), (46, 21), (23, 33), (24, 33), (45, 32))
-    m.pad(2, 4); m.pad(43, 3)
+def f2():
+    m = Map(W, H)
+    m.row(6, 'B12', 1, 'B9b')
+    room(m, 1, 11, 'B12', 6, 'E'); m.stamp('CONS', 4, 14); m.stamp('CONS', 4, 17)
+    m.row(11, 15, 'B9b'); m.row(16, 15, 'B12')
+    m.row(23, 'L24'); m.row(27, 4, 'B12'); m.stamp('TURB', 27, 22)
+    m.pad(2, 4); m.pad(30, 4)
     return m
-def floor3():
-    m = Map()
-    m.stamp('BARRELS', 4, 8); m.stamp('BARRELS', 28, 8); m.stamp('BARRELS', 10, 17); m.stamp('BARRELS', 30, 17)
-    m.stamp('DOME', 22, 12); m.stamp('DOME', 2, 13)
-    row(m, 24, ('LONG24', 1), ('BENCH12', 34))
-    row(m, 30, ('BENCH14', 8), ('BENCH9a', 30))
-    m.stamp('CONS', 41, 12)
-    m.stamp('CAB', 2, 4); m.stamp('CAB', 44, 4); m.stamp('CONS', 12, 4); m.stamp('CONS', 32, 4); m.stamp('DOME', 44, 17)
-    m.stamp('DOME', 22, 27); m.stamp('CAB', 4, 28); m.stamp('CAB', 42, 28); m.stamp('CONS', 22, 20)
-    rub(m, (20, 6), (21, 6), (26, 6), (8, 15), (9, 15), (38, 15), (39, 15), (30, 26), (31, 26), (6, 27), (14, 33), (15, 33), (33, 33))
-    m.pad(24, 4); m.pad(44, 32)
+def f3():
+    m = Map(W, H)
+    m.stamp('BAR', 1, 6); m.stamp('BAR9', 22, 6)
+    m.row(11, 'B9b', 2, 'B14'); m.stamp('BAR9', 1, 15); m.stamp('BAR', 16, 15)
+    room(m, 4, 20, 'B14', 3, 'N'); m.stamp('DOME', 9, 23)
+    m.row(27, 'B12', 1, 'B9b')
+    m.pad(16, 3); m.pad(30, 24)
     return m
-def floor4():
-    m = Map()
-    row(m, 5, ('BENCH14', 1), ('BENCH12', 17), ('BENCH9b', 31))
-    row(m, 11, ('BENCH12', 8), ('BENCH14', 22))
-    row(m, 17, ('ROW9a', 1), ('LONG24', 14))
-    row(m, 23, ('LONG25', 4), ('BENCH9a', 33))
-    row(m, 29, ('BENCH12', 14), ('BENCH14', 30))
-    m.stamp('TURB2', 40, 6); m.stamp('CONS', 3, 31)
-    m.stamp('CAB', 12, 7); m.stamp('CAB', 35, 9); m.stamp('DOME', 3, 12); m.stamp('DOME', 44, 12); m.stamp('CONS', 22, 12)
-    m.stamp('CAB', 10, 26); m.stamp('CAB', 28, 26); m.stamp('DOME', 3, 25); m.stamp('CAB', 40, 31); m.stamp('CONS', 24, 30)
-    rub(m, (9, 3), (10, 3), (30, 3), (31, 3), (8, 20), (9, 20), (36, 20), (46, 27), (47, 27), (20, 32), (21, 32), (12, 22))
-    m.pad(44, 24)
+def f4():
+    m = Map(W, H)
+    m.row(6, 'B14', 1, 'B12'); m.row(11, 'B9', 1, 'B9b', 1, 'B12')
+    m.row(16, 'L24'); m.row(21, 'B9b')
+    room(m, 14, 21, 'B12', 3, 'W')
+    m.row(27, 'B9', 2, 'B12', 1, 'B9b') if False else None
+    m.pad(29, 24)
     return m
-FLOORS = {'1F': floor1, '2F': floor2, '3F': floor3, 'B1F': floor4}
+FLOORS = {'1F': (f1, 1), '2F': (f2, 2), '3F': (f3, 3), 'B1F': (f4, 4)}
+def build_all():
+    out = {}
+    for n, (f, seed) in FLOORS.items():
+        m = f(); m.decorate(random.Random(seed * 77)); out[n] = m
+    return out
 if __name__ == '__main__':
-    for n, f in FLOORS.items():
-        m = f(); L = Layout('LAYOUT_POKEMON_MANSION_1F'); L.w, L.h = W, H; L.g = [v for r in m.g for v in r]
+    for n, m in build_all().items():
+        L = Layout('LAYOUT_POKEMON_MANSION_1F'); L.w, L.h = m.w, m.h; L.g = [v for r in m.g for v in r]
         L.prim = PP.prim; L.sec = PP.sec
         L.render().convert('RGB').save('/tmp/cp/c_%s.png' % n)
+        free = [(i, j) for j in range(3, m.h - 1) for i in range(1, m.w - 1) if not m.blocked(i, j)]
+        r = m.reach(*free[0]); print(n, 'libres', len(free), 'atteignables', len(r), 'pads', all((x, y) in r for x, y in m.pads))
