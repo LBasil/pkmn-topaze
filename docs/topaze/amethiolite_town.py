@@ -598,6 +598,24 @@ for k in ('tree1', 'tree2', 'tree3', 'tree4'): assert NPC[k] in seen or True
 print('portes, PNJ, sorties OK ; cases accessibles', len(seen))
 json.dump({k: v for k, v in D.items()}, open('/tmp/amethiolite_doors.json', 'w')); json.dump(NPC, open('/tmp/amethiolite_npc.json', 'w')); json.dump(SIGNS, open('/tmp/amethiolite_signs.json', 'w'))
 json.dump({'S': EXITS['S'], 'W': EXITS['W'], 'E': EXITS['E']}, open('/tmp/amethiolite_misc.json', 'w'))
+# ------------------------------------------------------------------ v6 : toit de la boutique (retour Basil 12/10 : « il manque un toit au shop Pokemon »)
+# le chunk d'Emeraude etait coupe une rangee trop bas : la rangee source y=26 porte le HAUT du toit (rayures + coins en biseau). On la rajoute APRES tous les
+# tirages et controles (rien d'autre ne bouge), sur la rangee y=9 au-dessus de la boutique (7..10, 10..12) : 4 cases de pave deviennent le haut du toit.
+MART_TOP = [(7 + i, 9) for i in range(4)]
+assert all(c not in OCC and c not in USED and c not in LAKE and c not in ARTPLACE for c in MART_TOP), 'toit de la boutique : emplacement pris'      # pave ou 1 arbre d'art (7,9), jamais un batiment/PNJ/panneau
+assert not any(tuple(v) in MART_TOP for v in list(NPC.values()) + list(SIGNS.values())), 'toit de la boutique : PNJ ou panneau dessus'
+for i, c in enumerate(MART_TOP): put(c[0], c[1], remap_chunk(fr(16 + i, 26)))
+assert all(G[c] & 0xc00 for c in MART_TOP), 'toit de la boutique : doit etre solide'
+seen2 = {START}; q = collections.deque([START])
+while q:
+    c = q.popleft()
+    for d in ((0, 1), (1, 0), (-1, 0), (0, -1)):
+        n = (c[0] + d[0], c[1] + d[1])
+        if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen2 and not raw_blocked(n): seen2.add(n); q.append(n)
+assert not ((seen - seen2) - set(MART_TOP)), ('toit de la boutique : acces perdu', sorted((seen - seen2) - set(MART_TOP))[:10])
+for k, ds in D.items():
+    for c in ds: assert c in seen2, ('porte inaccessible apres le toit', k, c)
+print('toit de la boutique pose :', MART_TOP)
 # ------------------------------------------------------------------ ecriture des tilesets
 used2 = {q >> 12 for e in SEC_ENT for q in e if not isinstance(q, tuple)}
 assert 8 not in used2 and 9 not in used2, used2
