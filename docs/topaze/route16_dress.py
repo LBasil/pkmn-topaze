@@ -346,7 +346,7 @@ def build(L, rnd):
         for yw in (13, 31, 47, 61): WROWS[yw] = (0, W - 1)
         pond(blob(4.2, 6.4, 3.4, 2.8, 3, W, H), 'ice')                       # lac gele de la plaine
         pond(blob(19.3, 22.9, 3.0, 2.4, 11, W, H), 'water')                  # bassin source
-        pond(hstream(lambda x: 23.0 + 1.0 * math.sin(x / 3.0 + 0.6), 9, 17, W, H), 'water')     # ruisseau vers l'ouest, jusque sous les arbres
+        pond(hstream(lambda x: 23.0 + 1.0 * math.sin(x / 3.0 + 0.6), 15, 17, W, H), 'water')     # ruisseau vers l'ouest, jusque sous les arbres
         island = {(3, 39), (4, 39), (3, 40), (4, 40)}
         pb = blob(4.4, 40.0, 3.8, 2.9, 23, W, H) | island
         pond(pb, 'water'); HOLES |= island
