@@ -31,7 +31,8 @@ for o in d['object_events']:
     k = (o.get('script') or '').replace('VermilionCity_EventScript_', '')
     if k in SC: o['x'], o['y'] = N[SC[k]]
     elif o.get('script') == 'EventScript_CutTree': o['x'], o['y'] = N['tree']
-SG = {'CitySign': 'city', 'HarborSign': 'harbor', 'SnorlaxNotice': 'notice', 'GymSign': 'gym'}
+SG = {'CitySign': 'city'}                                            # v6 : panneaux port/arene/avis retires (map.json)
+d['bg_events'] = [b for b in d['bg_events'] if (b.get('script') or '') not in ('VermilionCity_EventScript_HarborSign', 'VermilionCity_EventScript_GymSign', 'VermilionCity_EventScript_SnorlaxNotice')]
 for b in d['bg_events']:
     k = (b.get('script') or '').replace('VermilionCity_EventScript_', '')
     if b['type'] == 'sign' and k in SG: b['x'], b['y'] = S[SG[k]]; b['elevation'] = 0

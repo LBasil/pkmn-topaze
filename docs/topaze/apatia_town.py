@@ -317,8 +317,8 @@ def place_sign(name, want):
         d_ = abs(x - want[0]) + abs(y - want[1])
         if best is None or d_ < best[0]: best = (d_, c)
     c = best[1]; BLK[c] = ('sign', 0); SIGN[name] = list(c)
-for nm, w_ in (('city', (26, 8)), ('notice', (45, 18)), ('gym', (38, 16))): place_sign(nm, w_)
-SIGN['harbor'] = [34, 18]                                           # panneau du port = celui d'origine (tuile fixe en (34,18)) : on n'en pose pas un second
+place_sign('city', (26, 8))                                           # v6 : plus de panneaux port / arene / avis (demande de Basil)
+SIGN['harbor'] = [0, 0]; SIGN['notice'] = [0, 0]; SIGN['gym'] = [0, 0]   # parques hors carte (evenements retires a la main de map.json)
 NPC = {}; OBJ_CELLS = {GATE}
 def place_npc(name, want, rowfree=0, region=None):
     r = reach(); best = None
@@ -647,6 +647,7 @@ out = Image.new('P', (128, rows * 8), 0); out.putpalette(simg.getpalette()); out
 for n, t in enumerate(NEWT):
     ti = Image.new('P', (8, 8)); ti.putdata(list(t)); out.paste(ti, (((NTL + n) % 16) * 8, ((NTL + n) // 16) * 8))
 out.save(NS + 'tiles.png'); writepal(NS + 'palettes/%02d.pal' % ART_PAL, PAL); writepal(NS + 'palettes/%02d.pal' % CRY_PAL, PAL_C)
+G[(34, 18)] = 0x3000 | grass(34, 18)                                  # panneau d'origine du port retire : sol d'herbe
 open('data/layouts/VermilionCity/map.bin', 'wb').write(struct.pack('<%dH' % (W * H), *[G[(x, y)] for y in range(H) for x in range(W)]))
 open('data/layouts/VermilionCity/border.bin', 'wb').write(struct.pack('<4H', 0x414, 0x415, 0x41c, 0x41d))      # bordure hors carte : foret d'arbres FR (phase haut = lignes paires)
 # ---- layouts.json + en-tetes C (idempotents)
