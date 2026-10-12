@@ -41,6 +41,10 @@ for i in range(7): shutil.copy('data/tilesets/primary/general_celadopole/palette
 for i in (4, 6): shutil.copy('data/tilesets/primary/general_route18/palettes/%02d.pal' % i, NP + 'palettes/%02d.pal' % i)      # palettes 4 et 6 = eau (mer, rivages, etangs) : bleu profond de la Route 18 partout
 p0 = readpal(NP + 'palettes/00.pal'); p0[1], p0[2], p0[3], p0[12] = (247, 251, 255), (229, 240, 251), (186, 208, 230), (218, 232, 245)      # neige plus blanche (sol, cimes des arbres)
 writepal(NP + 'palettes/00.pal', p0)
+# cime des sapins (30/31) : le calque bas d'origine est un fond de feuillage ; on pose a la place le sol de neige (id 8) pour que la pointe se detache sur la neige
+_m = bytearray(open(NP + 'metatiles.bin', 'rb').read())
+for _id in (30, 31): _m[16 * _id:16 * _id + 8] = _m[16 * 8:16 * 8 + 8]
+open(NP + 'metatiles.bin', 'wb').write(_m)
 p5 = readpal(NP + 'palettes/05.pal'); p5[10], p5[11], p5[12] = (178, 192, 210), (170, 185, 204), (150, 168, 190)       # chemin de neige tassee : plus fonce que la neige (lisibilite)
 writepal(NP + 'palettes/05.pal', p5)
 for o, sl in SHIFT.items(): writepal(NS + 'palettes/%02d.pal' % sl, readpal('data/tilesets/primary/general_route18/palettes/%02d.pal' % o))
@@ -260,6 +264,8 @@ def snow_pat(var):
 def snow_tiles(var):
     g = snow_pat(var); return [add_tile([g[(q // 2) * 8 + j][(q % 2) * 8 + i] for j in range(8) for i in range(8)]) for q in range(4)]
 SNOWM = {}
+CAPM = {}
+PIMG = Image.open(NP + 'tiles.png')
 def snow_meta(var):
     """metatuile de sol : 4 quarts bas dessines (palette 0), calque haut vide ; comportement normal."""
     if var not in SNOWM: SNOWM[var] = new_meta([('T', t, 0) for t in snow_tiles(var)] + [0, 0, 0, 0], 0)
@@ -362,7 +368,7 @@ def build(L, rnd):
             for x in range(9, 14): FIXED[(x, y)] = rm(orig[y * 48 + x])
         PATH -= set(FIXED)
         WALLU = [(x, y) for x in (30, 32) for y in list(range(0, 12, 2)) + [14, 16, 18]]
-        WROWS[14] = (0, 28)                                                                                                   # falaise de la descente (2 cases), escalier au passage du chemin
+        WROWS[14] = (0, 29)                                                                                                   # falaise de la descente (2 cases), escalier au passage du chemin
         lake = blob(41.5, 4.4, 4.6, 2.9, 5, W, H); pond(lake, 'ice')
         st16 = vstream(lambda y: 41.6 + 0.9 * math.sin(y / 2.3), 7, 19, W, H) | vstream(lambda y: 42.6 + 0.9 * math.sin(y / 2.3), 7, 19, W, H); st16 -= lake      # riviere de 3 a 4 cases, a moitie gelee (glace au nord, eau libre au sud)
         pond({c for c in st16 if c[1] <= 10}, 'ice'); pond({c for c in st16 if c[1] > 10}, 'water')
@@ -451,13 +457,15 @@ def build(L, rnd):
                 a = y
                 while y < H and all(c in avail and c not in TREEO for c in ((ux, y), (ux + 1, y))): y += 1
                 b_ = y - 1
-                cap = True
-                start = a if (a == 0 or a % 2 == 0) else a + 1
-                end = b_ if (b_ == H - 1 or b_ % 2 == 1) else b_ - 1
-                # cime 30/31, puis 20/21 et 28/29 en alternance, base 36/37 sous un 28/29 (ou bord bas : 20/21 comme la bordure)
-                if end - start >= (3 if end != H - 1 else 1):
+                # colonne FR : pointe 14/15, corps 30/31, puis 20/21 + 28/29 en alternance, base 36/37 (ou, au bord bas de la carte, 20/21 : la bordure prolonge)
+                ln = b_ - a + 1
+                if ln % 2 == 0: ln -= 1
+                if ln >= 3:
+                    start = b_ - ln + 1 if b_ == H - 1 else a
+                    end = start + ln - 1
                     for yy in range(start, end + 1):
-                        ids = (30, 31) if yy == start else ((36, 37) if (yy == end and end != H - 1) else ((28, 29) if yy % 2 == 0 else (20, 21)))
+                        k = yy - start
+                        ids = (14, 15) if k == 0 else (30, 31) if k == 1 else (36, 37) if (yy == end and end != H - 1) else ((20, 21) if k % 2 == 0 else (28, 29))
                         for i in range(2): G[(ux + i, yy)] = (0x400, ids[i]); TREEO[(ux + i, yy)] = (ux, start)
             else: y += 1
     for ux in range(0, W - 1, 2): run_pairs(ux)
@@ -614,6 +622,25 @@ def finalize(L, B, ART):
             wat = (att(m) & 0x1ff) in WATER_B
             sto = ST[TREEO[c]] if c in TREEO else (1 if wat else st)
             if fl == 0x3000 and m in GRASS_B and sto == 0 and c not in TREEO: out.append(0x3000 | snow_meta(snow_var(x, y))); continue
+            if m in (14, 15, 30, 31):      # cime : calque haut d'origine sur le sol de l'etage (neige / lilas), pour que la pointe se detache du sol
+                kc = (m, sto, snow_var(x, y) if sto == 0 else -1)
+                if kc not in CAPM:
+                    gb = ents(snow_meta(kc[2]) if sto == 0 else variant(8, 1))[:4]
+                    ee = ents(m); CAPM[kc] = new_meta(gb + ee[4:], att(m))
+                out.append(fl | CAPM[kc]); continue
+            if m in (36, 37):      # base du tronc : le fond de feuillage (indices 13/14) devient transparent, le sol d'etage passe dessous
+                kc = (m, sto, snow_var(x, y) if sto == 0 else -1)
+                if kc not in CAPM:
+                    gb = ents(snow_meta(kc[2]) if sto == 0 else variant(8, 1))[:4]
+                    top = []
+                    for e in ents(m)[:4]:
+                        n = e & 0x3ff; px = [PIMG.getpixel(((n % 16) * 8 + i, (n // 16) * 8 + j)) for j in range(8) for i in range(8)]
+                        g = [px[r * 8:r * 8 + 8] for r in range(8)]
+                        if e & 0x400: g = [r[::-1] for r in g]
+                        if e & 0x800: g = g[::-1]
+                        top.append(('T', add_tile([0 if v in (13, 14) else v for r in g for v in r]), (e >> 12) if sto == 0 else SHIFT.get(e >> 12, e >> 12)))
+                    CAPM[kc] = new_meta(gb + top, att(m))
+                out.append(fl | CAPM[kc]); continue
             out.append(fl | variant(m, sto))
     return out
 # ------------------------------------------------------------------ generation
@@ -629,7 +656,7 @@ for L in DIMS:
     for k, c in EV.items():
         assert any(n in R1 for n in D['nbs'](c)) or c in R1, ('evenement inaccessible', L, k, c)
     # ---- audit des arbres : chaque colonne = (cime 30/31 | rien) puis 20/21, 28/29 en alternance, fin sur 28/29 ou bord bas ; moities gauche/droite appariees
-    TI = {28: 'b', 29: 'b', 20: 'k', 21: 'k', 30: 'c', 31: 'c', 36: 'e', 37: 'e'}
+    TI = {14: 'a', 15: 'a', 30: 'c', 31: 'c', 20: 'k', 21: 'k', 28: 'b', 29: 'b', 36: 'e', 37: 'e'}
     for y in range(B['H']):
         for x in range(B['W']):
             m = B['G'][(x, y)][1] if B['G'][(x, y)][0] == 0x400 else None
@@ -637,11 +664,13 @@ for L in DIMS:
             up = B['G'].get((x, y - 1), (0, None))[1] if B['G'].get((x, y - 1), (0,))[0] == 0x400 else None
             dn = B['G'].get((x, y + 1), (0, None))[1] if B['G'].get((x, y + 1), (0,))[0] == 0x400 else None
             tu, td = TI.get(up), TI.get(dn)
-            if TI[m] == 'c': ok = td == 'k' and tu is None
-            elif TI[m] == 'k': ok = tu in ('c', 'b') and (td == 'b' or y == B['H'] - 1)
-            elif TI[m] == 'e': ok = tu == 'b' and td is None
-            else: ok = tu == 'k' and td in ('k', 'e')
-            if m in (28, 30, 20, 36): ok = ok and B['G'].get((x + 1, y), (0, None))[1] == m + 1
+            t = TI[m]
+            if t == 'a': ok = tu is None and td == 'c'
+            elif t == 'c': ok = tu == 'a' and td in ('k', 'e')
+            elif t == 'k': ok = tu in ('c', 'b') and (td == 'b' or y == B['H'] - 1)
+            elif t == 'b': ok = tu == 'k' and td in ('k', 'e')
+            else: ok = tu in ('b', 'c') and td is None
+            if m in (14, 30, 20, 28, 36): ok = ok and B['G'].get((x + 1, y), (0, None))[1] == m + 1
             else: ok = ok and B['G'].get((x - 1, y), (0, None))[1] == m - 1
             assert ok, ('arbre incomplet', L, x, y, m, up, dn)
     print(L, 'cases accessibles', len(R1), 'arbres', len(B['TREEO']), 'cristaux', len(ART), 'lilas', sum(stage(L, x, y) for y in range(B['H']) for x in range(B['W'])))
