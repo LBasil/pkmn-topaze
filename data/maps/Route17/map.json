@@ -94,8 +94,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BIKER",
-      "x": 19,
-      "y": 43,
+      "x": 18,
+      "y": 44,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -305,7 +305,7 @@
     {
       "type": "hidden_item",
       "x": 18,
-      "y": 54,
+      "y": 53,
       "elevation": 3,
       "item": "ITEM_RARE_CANDY",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE17_RARE_CANDY",
@@ -314,7 +314,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 9,
+      "x": 8,
       "y": 40,
       "elevation": 3,
       "item": "ITEM_FULL_RESTORE",

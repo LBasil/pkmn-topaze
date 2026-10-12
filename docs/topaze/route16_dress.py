@@ -412,22 +412,22 @@ def build(L, rnd):
     else:
         WALLC = set()
         for (x, y) in WALLU: WALLC |= {(x + i, y + j) for i in range(2) for j in range(2)}
-        edge = lambda x, y: y <= 1 or y >= 18 or x <= 2 or x >= 44
+        edge = lambda x, y: y <= 2 or y >= 17 or x <= 2 or x >= 44
         FOREST = {(x, y) for y in range(H) for x in range(W) if (x, y) not in nofor and (edge(x, y) or ((x, y) not in MEAD and DM[(x, y)] >= 2 + ((x * 7 + y * 13) % 5 == 0)))}
         FOREST |= WALLC
         FOREST -= PATH_ALL | set(FIXED) | WSET | WALL | STAIR | CLEAR
     FOREST -= set(SEA)
-    # ---- bosquets isoles (arbres entiers 2x2, jamais contre le chemin)
+    # ---- bosquets isoles : blocs de 2 colonnes x 3 rangees (cime / pied-et-pointe / corps), debut sur une rangee PAIRE
     gr = []; blockd = PATH_ALL | BUF | set(FIXED) | set(SEA) | FEAT | dil(WSET, 1)
-    cands = [(x, y) for y in range(3, H - 3, 2) for x in range(3, W - 3, 2) if all((x + i, y + j) not in FOREST and (x + i, y + j) not in blockd and DM[(x + i, y + j)] >= 3 for i in range(2) for j in range(2)) and (x, y) not in CLEAR]
+    cands = [(x, y) for y in range(4, H - 6, 2) for x in range(3, W - 3, 2) if all((x + i, y + j) not in FOREST and (x + i, y + j) not in blockd and DM[(x + i, y + j)] >= 3 for i in range(2) for j in range(3)) and (x, y) not in CLEAR]
     rnd.shuffle(cands)
     for (x, y) in cands:
-        if len(gr) >= (26 if L == 'Route16' else 30): break
-        if any(max(abs(x - a), abs(y - b)) < 4 for (a, b) in gr): continue
-        gr.append((x, y)); FOREST |= {(x + i, y + j) for i in range(2) for j in range(2)}
-        for (dx, dy) in rnd.sample([(2, 0), (-2, 0), (0, 2), (0, -2), (2, 2), (-2, -2), (2, -2), (-2, 2)], 3):
-            cs2 = {(x + dx + i, y + dy + j) for i in range(2) for j in range(2)}
-            if rnd.random() < 0.55 and all(c in G_ok(W, H) and c not in FOREST and c not in blockd and DM[c] >= 3 for c in cs2): FOREST |= cs2
+        if len(gr) >= (22 if L == 'Route16' else 28): break
+        if any(max(abs(x - a), abs(y - b)) < 5 for (a, b) in gr): continue
+        gr.append((x, y)); FOREST |= {(x + i, y + j) for i in range(2) for j in range(3)}
+        for dx in rnd.sample([2, -2], 2):
+            cs2 = {(x + dx + i, y + j) for i in range(2) for j in range(3)}
+            if rnd.random() < 0.5 and all(c in G_ok(W, H) and c not in FOREST and c not in blockd and DM[c] >= 3 for c in cs2): FOREST |= cs2
     G = {(x, y): (0x3000, 8 + (x & 1) + 8 * (y & 1)) for y in range(H) for x in range(W)}
     for c in PATH_SAND: G[c] = (0x3000, sand_id(lambda dx, dy, c=c: (c[0] + dx, c[1] + dy) in PATH_ALL or not (0 <= c[0] + dx < W and 0 <= c[1] + dy < H)))
     SPEC = {}
@@ -436,19 +436,31 @@ def build(L, rnd):
     for c in BR: SPEC[c] = ('bridge', BRO[c]); G[c] = (0x3000, 8)
     for c in WALL: SPEC[c] = ('wall', int(c in ICE)); G[c] = (0x400, 8)
     for c in STAIR: SPEC[c] = ('stair',); G[c] = (0x3000, 8)
-    TREEO, TREES = {}, []
-    def put_tree(x, y):
-        cs = [(x, y), (x + 1, y), (x, y + 1), (x + 1, y + 1)]
-        for c, m in zip(cs, (28, 29, 20, 21)): G[c] = (0x400, m); TREEO[c] = (x, y)
-        TREES.append((x, y))
-    if L == 'Route16':
-        for (x, y) in WALLU: put_tree(x, y)
+    TREEO = {}
+    # ---- ARBRES (arbres FR, verifie sur la carte d'origine et les images) : une colonne d'arbres = CIME 30/31 (ou rien contre le bord haut), puis en alternance 20/21 (jupe + pointe de l'arbre suivant) et 28/29 (corps) ;
+    #      rangees PAIRES = 28/29, rangees IMPAIRES = 20/21 (meme phase que `border.bin` = 28,29,20,21) ; une colonne finit sur 28/29 (ou sur la rangee du bas de la carte, que la bordure prolonge).
+    #      Une pile 28 puis 20 (ancienne version) laissait des arbres sans haut (corps nu en haut de masse) ou sans bas (jupe et pointe seules en bas de masse).
+    WALLC = set()
+    for (x, y) in WALLU: WALLC |= {(x + i, y + j) for i in range(2) for j in range(2)}
     nofor2 = PATH_ALL | BUF | set(FIXED) | set(SEA) | FEAT | dil(WSET, 1) | CLEAR
-    for (ox, oy) in ((0, 0), (1, 0), (0, 1), (1, 1)):             # reseau aligne d'abord, puis reseaux decales pour combler les trous (arbres toujours entiers)
-        for uy in range(oy, H - 1, 2):
-            for ux in range(ox, W - 1, 2):
-                cs = [(ux, uy), (ux + 1, uy), (ux, uy + 1), (ux + 1, uy + 1)]
-                if sum(c in FOREST for c in cs) >= (3 if (ox, oy) == (0, 0) else 4) and not any(c in nofor2 or c in TREEO for c in cs): put_tree(ux, uy)
+    avail = (FOREST - nofor2) | WALLC
+    def run_pairs(ux):
+        y = 0
+        while y < H:
+            if (ux, y) in avail and (ux + 1, y) in avail and (ux, y) not in TREEO and (ux + 1, y) not in TREEO:
+                a = y
+                while y < H and all(c in avail and c not in TREEO for c in ((ux, y), (ux + 1, y))): y += 1
+                b_ = y - 1
+                cap = a != 0
+                start = a if (a == 0 or a % 2 == 0) else a + 1
+                end = b_ if (b_ == H - 1 or b_ % 2 == 0) else b_ - 1
+                if end - start >= (2 if (cap and end != H - 1) else (1 if cap else 0)):
+                    for yy in range(start, end + 1):
+                        ids = (30, 31) if (cap and yy == start) else ((28, 29) if yy % 2 == 0 else (20, 21))
+                        for i in range(2): G[(ux + i, yy)] = (0x400, ids[i]); TREEO[(ux + i, yy)] = (ux, start)
+            else: y += 1
+    for ux in range(0, W - 1, 2): run_pairs(ux)
+    for ux in range(1, W - 1, 2): run_pairs(ux)
     for c, v in FIXED.items(): G[c] = (v & 0xfc00, v & 0x3ff)
     for c, v in SEA.items(): G[c] = (v & 0xfc00, v & 0x3ff)
     return dict(W=W, H=H, G=G, SPEC=SPEC, PATH=PATH_ALL, BUF=BUF, MEAD=MEAD, TREEO=TREEO, FIXED=FIXED, SEA=SEA, FOREST=FOREST, WSET=WSET, BR=BR, WALL=WALL, STAIR=STAIR, GATES=GATES, CLEAR=CLEAR, PONDS=PONDS, FEAT=FEAT)
@@ -615,6 +627,21 @@ for L in DIMS:
     for e in ends: assert e in R1, ('sortie inaccessible', L, e)
     for k, c in EV.items():
         assert any(n in R1 for n in D['nbs'](c)) or c in R1, ('evenement inaccessible', L, k, c)
+    # ---- audit des arbres : chaque colonne = (cime 30/31 | rien) puis 20/21, 28/29 en alternance, fin sur 28/29 ou bord bas ; moities gauche/droite appariees
+    TI = {28: 'b', 29: 'b', 20: 'k', 21: 'k', 30: 'c', 31: 'c'}
+    for y in range(B['H']):
+        for x in range(B['W']):
+            m = B['G'][(x, y)][1] if B['G'][(x, y)][0] == 0x400 else None
+            if m not in TI: continue
+            up = B['G'].get((x, y - 1), (0, None))[1] if B['G'].get((x, y - 1), (0,))[0] == 0x400 else None
+            dn = B['G'].get((x, y + 1), (0, None))[1] if B['G'].get((x, y + 1), (0,))[0] == 0x400 else None
+            tu, td = TI.get(up), TI.get(dn)
+            if TI[m] == 'c': ok = td == 'k' and tu is None
+            elif TI[m] == 'k': ok = tu in ('c', 'b') and (td == 'b' or y == B['H'] - 1)
+            else: ok = (tu == 'k' or y == 0) and (td in ('k', None))
+            if m in (28, 30, 20): ok = ok and B['G'].get((x + 1, y), (0, None))[1] == m + 1
+            else: ok = ok and B['G'].get((x - 1, y), (0, None))[1] == m - 1
+            assert ok, ('arbre incomplet', L, x, y, m, up, dn)
     print(L, 'cases accessibles', len(R1), 'arbres', len(B['TREEO']), 'cristaux', len(ART), 'lilas', sum(stage(L, x, y) for y in range(B['H']) for x in range(B['W'])))
     res[L] = finalize(L, B, ART); MJ[L] = mj
 # ---- evenements : Route 16 (portes : maison + Bourg Quartz seulement), Route 17 (jonction Route 18 recalee), Bourg Quartz (indices de warp)
