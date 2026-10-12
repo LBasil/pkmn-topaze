@@ -451,7 +451,7 @@ def build(L, rnd):
                 a = y
                 while y < H and all(c in avail and c not in TREEO for c in ((ux, y), (ux + 1, y))): y += 1
                 b_ = y - 1
-                cap = a != 0
+                cap = True
                 start = a if (a == 0 or a % 2 == 0) else a + 1
                 end = b_ if (b_ == H - 1 or b_ % 2 == 0) else b_ - 1
                 if end - start >= (2 if (cap and end != H - 1) else (1 if cap else 0)):
