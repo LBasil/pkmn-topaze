@@ -13,13 +13,7 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_ROUTE14",
-      "offset": 0,
-      "direction": "left"
-    }
-  ],
+  "connections": [],
   "object_events": [
     {
       "type": "object",
@@ -232,6 +226,34 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE12",
       "dest_warp_id": "16"
+    },
+    {
+      "x": 0,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE14",
+      "dest_warp_id": "10"
+    },
+    {
+      "x": 0,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE14",
+      "dest_warp_id": "11"
+    },
+    {
+      "x": 0,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE14",
+      "dest_warp_id": "12"
+    },
+    {
+      "x": 0,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE14",
+      "dest_warp_id": "13"
     }
   ],
   "coord_events": [],
