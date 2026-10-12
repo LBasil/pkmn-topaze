@@ -453,10 +453,11 @@ def build(L, rnd):
                 b_ = y - 1
                 cap = True
                 start = a if (a == 0 or a % 2 == 0) else a + 1
-                end = b_ if (b_ == H - 1 or b_ % 2 == 0) else b_ - 1
-                if end - start >= (2 if (cap and end != H - 1) else (1 if cap else 0)):
+                end = b_ if (b_ == H - 1 or b_ % 2 == 1) else b_ - 1
+                # cime 30/31, puis 20/21 et 28/29 en alternance, base 36/37 sous un 28/29 (ou bord bas : 20/21 comme la bordure)
+                if end - start >= (3 if end != H - 1 else 1):
                     for yy in range(start, end + 1):
-                        ids = (30, 31) if (cap and yy == start) else ((28, 29) if yy % 2 == 0 else (20, 21))
+                        ids = (30, 31) if yy == start else ((36, 37) if (yy == end and end != H - 1) else ((28, 29) if yy % 2 == 0 else (20, 21)))
                         for i in range(2): G[(ux + i, yy)] = (0x400, ids[i]); TREEO[(ux + i, yy)] = (ux, start)
             else: y += 1
     for ux in range(0, W - 1, 2): run_pairs(ux)
@@ -628,7 +629,7 @@ for L in DIMS:
     for k, c in EV.items():
         assert any(n in R1 for n in D['nbs'](c)) or c in R1, ('evenement inaccessible', L, k, c)
     # ---- audit des arbres : chaque colonne = (cime 30/31 | rien) puis 20/21, 28/29 en alternance, fin sur 28/29 ou bord bas ; moities gauche/droite appariees
-    TI = {28: 'b', 29: 'b', 20: 'k', 21: 'k', 30: 'c', 31: 'c'}
+    TI = {28: 'b', 29: 'b', 20: 'k', 21: 'k', 30: 'c', 31: 'c', 36: 'e', 37: 'e'}
     for y in range(B['H']):
         for x in range(B['W']):
             m = B['G'][(x, y)][1] if B['G'][(x, y)][0] == 0x400 else None
@@ -638,8 +639,9 @@ for L in DIMS:
             tu, td = TI.get(up), TI.get(dn)
             if TI[m] == 'c': ok = td == 'k' and tu is None
             elif TI[m] == 'k': ok = tu in ('c', 'b') and (td == 'b' or y == B['H'] - 1)
-            else: ok = (tu == 'k' or y == 0) and (td in ('k', None))
-            if m in (28, 30, 20): ok = ok and B['G'].get((x + 1, y), (0, None))[1] == m + 1
+            elif TI[m] == 'e': ok = tu == 'b' and td is None
+            else: ok = tu == 'k' and td in ('k', 'e')
+            if m in (28, 30, 20, 36): ok = ok and B['G'].get((x + 1, y), (0, None))[1] == m + 1
             else: ok = ok and B['G'].get((x - 1, y), (0, None))[1] == m - 1
             assert ok, ('arbre incomplet', L, x, y, m, up, dn)
     print(L, 'cases accessibles', len(R1), 'arbres', len(B['TREEO']), 'cristaux', len(ART), 'lilas', sum(stage(L, x, y) for y in range(B['H']) for x in range(B['W'])))
