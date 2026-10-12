@@ -39,6 +39,8 @@ for src, dst in ((GEN, NP), (SEC, NS)):
     for i in range(16): shutil.copy(src + 'palettes/%02d.pal' % i, dst + 'palettes/%02d.pal' % i)
 for i in range(7): shutil.copy('data/tilesets/primary/general_celadopole/palettes/%02d.pal' % i, NP + 'palettes/%02d.pal' % i)
 for i in (4, 6): shutil.copy('data/tilesets/primary/general_route18/palettes/%02d.pal' % i, NP + 'palettes/%02d.pal' % i)      # palettes 4 et 6 = eau (mer, rivages, etangs) : bleu profond de la Route 18 partout
+p0 = readpal(NP + 'palettes/00.pal'); p0[1], p0[2], p0[3], p0[12] = (247, 251, 255), (229, 240, 251), (186, 208, 230), (218, 232, 245)      # neige plus blanche (sol, cimes des arbres)
+writepal(NP + 'palettes/00.pal', p0)
 p5 = readpal(NP + 'palettes/05.pal'); p5[10], p5[11], p5[12] = (178, 192, 210), (170, 185, 204), (150, 168, 190)       # chemin de neige tassee : plus fonce que la neige (lisibilite)
 writepal(NP + 'palettes/05.pal', p5)
 for o, sl in SHIFT.items(): writepal(NS + 'palettes/%02d.pal' % sl, readpal('data/tilesets/primary/general_route18/palettes/%02d.pal' % o))
@@ -60,9 +62,13 @@ satt = [satt0[o - 640] for o in KEEPM]
 simg = Image.new('P', (128, ((len(KEEPT) + 15) // 16) * 8), 0); simg.putpalette(simg0.getpalette())
 for old, new in RT.items(): simg.paste(simg0.crop(((old % tw0) * 8, (old // tw0) * 8, (old % tw0) * 8 + 8, (old // tw0) * 8 + 8)), ((new % 16) * 8, (new // 16) * 8))
 NMT = len(smt) // 16; NTL = len(KEEPT)
-def ents(m): return list(struct.unpack('<8H', pmt[m * 16:m * 16 + 16] if m < 640 else bytes(smt[(m - 640) * 16:(m - 640) * 16 + 16])))
-def att(m): return patt[m] if m < 640 else satt[m - 640]
 NEWE, NEWA, VAR, NEWT = [], [], {}, []
+def ents(m):
+    if m >= 640 + NMT: return list(NEWE[m - 640 - NMT])
+    return list(struct.unpack('<8H', pmt[m * 16:m * 16 + 16] if m < 640 else bytes(smt[(m - 640) * 16:(m - 640) * 16 + 16])))
+def att(m):
+    if m >= 640 + NMT: return NEWA[m - 640 - NMT]
+    return patt[m] if m < 640 else satt[m - 640]
 def new_meta(e, a):
     NEWE.append(e); NEWA.append(a); return 640 + NMT + len(NEWE) - 1
 def variant(m, st):
@@ -223,6 +229,49 @@ def mk(quarters, pal, st, base, layer=0):
         ARTM[key] = new_meta(bot + [('T', add_tile(t), pal) for t in quarters], (att(base) & ~0x60000000) | layer)
     return ARTM[key]
 
+# ------------------------------------------------------------------ sol de neige (palette 0 : 1 blanc, 2 bleu tres pale, 12 / 13 ombres de congere, 5 caillou) : 7 variantes 16x16 qui se raccordent en largeur
+def snow_pat(var):
+    r = random.Random(4400 + var * 37); g = [[1] * 16 for _ in range(16)]
+    spark = {0: (0.05, 0.015), 6: (0.06, 0.02), 4: (0.12, 0.04)}.get(var, (0.04, 0.012))
+    for y in range(16):
+        for x in range(16):
+            u = r.random()
+            if u < spark[0]: g[y][x] = 2
+            elif u < spark[0] + spark[1]: g[y][x] = 12
+    if var == 1:
+        for x in range(16):
+            y0 = 5 + int(round(1.6 * math.sin(2 * math.pi * x / 16)))
+            g[y0][x] = 1; g[y0 + 1][x] = 12; g[y0 + 2][x] = 2 if x % 3 else 12
+    elif var == 2:
+        for x in range(16):
+            y0 = 11 + int(round(1.2 * math.sin(2 * math.pi * x / 16 + 1.5)))
+            g[y0][x] = 1; g[y0 + 1][x] = 12; g[(y0 + 2) % 16][x] = 2
+        for x in range(3, 12):
+            y0 = 2 + int(round(0.9 * math.sin(2 * math.pi * x / 9)))
+            g[y0][x] = 12 if x % 2 else 2
+    elif var == 3:
+        for x in range(3, 13):
+            cr = 5 + int(round(((x - 8) / 5.0) ** 2 * 2.6))
+            g[cr][x] = 1; g[cr + 1][x] = 12; g[cr + 2][x] = 13 if 4 < x < 11 else 12; g[cr + 3][x] = 2
+    elif var == 5:
+        for (px, py) in ((4, 5), (11, 10)):
+            g[py][px] = 5; g[py][px + 1] = 5; g[py + 1][px] = 13; g[py + 1][px + 1] = 5; g[py - 1][px] = 1
+    return g
+def snow_tiles(var):
+    g = snow_pat(var); return [add_tile([g[(q // 2) * 8 + j][(q % 2) * 8 + i] for j in range(8) for i in range(8)]) for q in range(4)]
+SNOWM = {}
+def snow_meta(var):
+    """metatuile de sol : 4 quarts bas dessines (palette 0), calque haut vide ; comportement normal."""
+    if var not in SNOWM: SNOWM[var] = new_meta([('T', t, 0) for t in snow_tiles(var)] + [0, 0, 0, 0], 0)
+    return SNOWM[var]
+def snow_var(x, y):
+    n = noise(x * 0.9 + 3, y * 0.9 + 1); h = (x * 73856093 ^ y * 19349663) % 1000
+    if n > 0.42: return 1 if (x + y) % 2 else 2
+    if n < -0.50: return 3
+    if h < 45: return 5
+    if h < 200: return 4
+    return 0 if (x + y) % 2 else 6
+
 # ================================================================== CARTES v3
 SANDS_INNER = {'NW': 258, 'NE': 259, 'SW': 260, 'SE': 261}   # coin concave : l'herbe entre dans le coin indique
 def sand_id(p):
@@ -301,24 +350,25 @@ def build(L, rnd):
         CLEAR = set()
         GATES = [(6, 1), (12, 1)]
     else:
+        # COL ENNEIGE : Bourg Quartz est en haut ; plateau d'altitude (est -> ouest), gorge du Ronflex, puis descente par un escalier vers le palier du bas et la Route 17
         pts = [(47, 13), (45.5, 13), (44, 12.5), (42.5, 12), (41, 10.5), (39, 9.5), (37.2, 10.5), (36, 12), (35, 12.5)]
         PATH = disc_path(pts, 1.1, W, H) | {(x, y) for x in range(29, 36) for y in (12, 13)}
-        PATH |= disc_path([(29, 12.5), (27.5, 13.5), (25.5, 15), (23, 15.8), (21.2, 14.5), (19.5, 12.5), (17.5, 10.8), (15, 9.5), (12.5, 8.3), (10.5, 6.6)], 1.1, W, H)
-        PATH |= disc_path([(21.2, 14.5), (18.5, 16), (15, 17), (12, 17.8), (10, 18.5), (9.5, 19)], 1.0, W, H)
-        PATH |= disc_path([(22, 13.5), (22, 11), (22.2, 9.5), (22.2, 8), (22.3, 6.5), (22.3, 4.5)], 1.0, W, H)
+        PATH |= disc_path([(29, 12.5), (27, 12), (24.5, 11.3), (21.8, 11.8), (20.8, 12.6)], 1.1, W, H)
+        PATH |= disc_path([(21.5, 11.8), (18.5, 11), (15.5, 10.2), (13, 9.2), (11.5, 8), (10.6, 6.6)], 1.1, W, H)          # branche vers la maison (en haut)
+        PATH |= disc_path([(20.8, 12.6), (20.6, 13.5), (20.6, 15), (20.6, 16.4)], 1.0, W, H)                              # vers l'escalier de la descente
+        PATH |= disc_path([(20.6, 16.4), (18, 17.3), (15, 17.8), (12.5, 18.0), (10.5, 18.5), (9.5, 19)], 1.0, W, H)         # palier du bas
         PATH |= {(x, y) for y in (18, 19) for x in range(8, 12)} | {(x, 12) for x in (45, 46, 47)} | {(x, 14) for x in (45, 46, 47)}
         for y in (3, 4, 5):
             for x in range(9, 14): FIXED[(x, y)] = rm(orig[y * 48 + x])
         PATH -= set(FIXED)
         WALLU = [(x, y) for x in (30, 32) for y in list(range(0, 12, 2)) + [14, 16, 18]]
-        WROWS[8] = (17, 29)
+        WROWS[14] = (0, 28)                                                                                                   # falaise de la descente (2 cases), escalier au passage du chemin
         lake = blob(41.5, 4.4, 4.6, 2.9, 5, W, H); pond(lake, 'ice')
         st16 = vstream(lambda y: 42.3 + 0.9 * math.sin(y / 2.3), 7, 19, W, H) - lake; pond(st16, 'water')
         BRIDGES = {'S1': ('H', {c for c in st16 if c in PATH})}
-        pond(blob(25.5, 4.0, 2.7, 1.7, 9, W, H), 'ice')                      # bassin du jardin de cristaux
-        pond(blob(5.5, 12.0, 3.0, 2.2, 17, W, H), 'water')                   # etang de l'ouest
+        pond(blob(4.4, 10.0, 3.0, 2.2, 17, W, H), 'ice')                      # etang gele de l'ouest
         MEAD = {(x, y) for x in range(W) for y in range(H) if noise(x * 1.35 + 2, y * 1.35 + 9) > 0.45}
-        CLEAR = {(x, y) for x in range(17, 28) for y in range(2, 8)}
+        CLEAR = set()
         GATES = [(6, 17), (12, 17)]
     WSET = set(WATER) - HOLES
     BR = set(); BRO = {}
@@ -359,7 +409,7 @@ def build(L, rnd):
     else:
         WALLC = set()
         for (x, y) in WALLU: WALLC |= {(x + i, y + j) for i in range(2) for j in range(2)}
-        edge = lambda x, y: y <= 1 or y >= 17 or x <= 2 or x >= 44
+        edge = lambda x, y: y <= 1 or y >= 18 or x <= 2 or x >= 44
         FOREST = {(x, y) for y in range(H) for x in range(W) if (x, y) not in nofor and (edge(x, y) or ((x, y) not in MEAD and DM[(x, y)] >= 2 + ((x * 7 + y * 13) % 5 == 0)))}
         FOREST |= WALLC
         FOREST -= PATH_ALL | set(FIXED) | WSET | WALL | STAIR | CLEAR
@@ -439,7 +489,7 @@ def place_all(L, B, D, rnd):
     placed = []
     trainers = [o for o in mj['object_events'] if o.get('trainer_type') == 'TRAINER_TYPE_NORMAL']
     if L == 'Route16':
-        tg = [(43, 9), (38, 15), (26, 11), (24, 16), (18, 14), (14, 11), (11, 11), (10, 17)]
+        tg = [(43, 9), (38, 15), (26, 10), (18, 9), (14, 12), (24, 17), (15, 16), (11, 11)]
     else:
         tg = [(12, 8), (17, 12), (8, 19), (12, 28), (12, 36), (17, 43), (12, 49), (8, 56), (14, 61), (11, 65)]
     for o, t in zip(trainers, tg):
@@ -522,9 +572,9 @@ def finalize(L, B, ART):
     out = []
     for y in range(H):
         for x in range(W):
-            c = (x, y); fl, m = G[c]; st = ST[c]; base = 8 + (x & 1) + 8 * (y & 1); fb = 8
+            c = (x, y); fl, m = G[c]; st = ST[c]; base = 8 + (x & 1) + 8 * (y & 1); fb = snow_meta(0) if st == 0 else 8
             if c in ART:
-                v, b0 = ART[c]; out.append((0x400) | art_meta(v, st, b0)); continue
+                v, b0 = ART[c]; out.append((0x400) | art_meta(v, st, snow_meta(0 if (x + y) % 2 else 6) if st == 0 else b0)); continue
             if c in SPEC:
                 sp = SPEC[c]; f = lambda dx, dy: (x + dx, y + dy)
                 if sp[0] == 'pond':
@@ -547,6 +597,7 @@ def finalize(L, B, ART):
                     out.append(0x400 | mk([wall_q(q, int(wl if q % 2 == 0 else wr), (x // 2) % 2, part, sp[1]) for q in range(4)], WALLP, st, fb, 0)); continue
             wat = (att(m) & 0x1ff) in WATER_B
             sto = ST[TREEO[c]] if c in TREEO else (1 if wat else st)
+            if fl == 0x3000 and m in GRASS_B and sto == 0 and c not in TREEO: out.append(0x3000 | snow_meta(snow_var(x, y))); continue
             out.append(fl | variant(m, sto))
     return out
 # ------------------------------------------------------------------ generation
