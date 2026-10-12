@@ -186,3 +186,6 @@ Les 4 cartes `PokemonMansion_1F/2F/3F/B1F` sont réutilisées (ids conservés) m
 
 ## Arène d'Eddie (Chrondrolia) — intérieur recoloré
 `docs/topaze/gym_chrondrolia.py` : recoloration électrique du tileset `cinnabar_gym` (palettes 7, 8, 12) : murs et tuyaux verts → jaune topaze, sol brun → acier bleu-gris, violets → cyan électrique. Carte, quiz et événements inchangés (structure de l'arène d'origine conservée : salles à questions).
+
+## Arène d'Amethiolite — intérieur recoloré
+`docs/topaze/gym_amethiolite.py` : recoloration du tileset `fuchsia_gym` (palettes 7, 8, 12) : sol rose → lilas d'améthyste, or → argent-lilas, verts → violet profond. Carte et murs invisibles inchangés. Les autres intérieurs d'Amethiolite (bureau du Safari, maison du Gardien…) partagent le tileset `safari_zone_building` avec des cartes des îles Sevii : non recolorés pour l'instant.
