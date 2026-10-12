@@ -345,11 +345,30 @@ for j in range(3):
     for i in range(2): BLK[(SNOW_AT[0] + i, SNOW_AT[1] + j)] = ('snow', i, j)
 FLW -= set(SNOW_CELLS)
 assert NEED | NEED_GATE <= reach(), 'acces perdu apres le bonhomme de neige'
+# 3) v3 (demande de Basil, 12/10 : la clairiere de geode « ne sert a rien » vide) : la petite formation 2x2 (36,5) est remplacee par un GRAND cristal de geode 3x3
+#    (36..38, 4..6) juste au-dessus de l'Ether (36,7), et un 2e bonhomme de neige 2x3 (echarpe violette = amethyste, palette 6) garde le coin est (40..41, 4..6)
+for c in [c for c, v in BLK.items() if v[0] == 'big']: del BLK[c]
+GIANT_AT = (36, 4); SNOW2_AT = (40, 4)
+GIANT_CELLS = [(GIANT_AT[0] + i, GIANT_AT[1] + j) for j in range(3) for i in range(2 + 1)]
+SNOW2_CELLS = [(SNOW2_AT[0] + i, SNOW2_AT[1] + j) for j in range(3) for i in range(2)]
+assert all(c in GLADE and c not in OCC and c not in BLK and c not in OBJ_CELLS for c in GIANT_CELLS + SNOW2_CELLS), 'clairiere : emplacement pris'
+for j in range(3):
+    for i in range(3): BLK[(GIANT_AT[0] + i, GIANT_AT[1] + j)] = ('giant', i, j)
+    for i in range(2): BLK[(SNOW2_AT[0] + i, SNOW2_AT[1] + j)] = ('snow2', i, j)
+SMALLC = {(34, 4): 1, (32, 6): 0, (39, 9): 2}          # 3 petits cristaux en lisiere (memes tuiles que les autres : 0 tuile de plus)
+for c, var in SMALLC.items():
+    assert c in GLADE and c not in OCC and c not in BLK and c not in OBJ_CELLS, ('clairiere : cristal', c); BLK[c] = ('cry', var)
+FLW -= set(GIANT_CELLS) | set(SNOW2_CELLS) | set(SMALLC)
+rg = reach(start=GATE['glade'][0])
+assert tuple(NPC['ether']) in rg and all(c in rg for c in GLADE - set(GIANT_CELLS) - set(SNOW2_CELLS) - set(SMALLC) - {tuple(NPC['ether'])}), 'clairiere : zone inaccessible (Ether ou case libre)'
+assert NEED | NEED_GATE <= reach(), 'acces perdu apres la clairiere'
 # ------------------------------------------------------------------ art procedural
 PAL = [(0, 0, 0), (52, 62, 96), (206, 216, 232), (188, 200, 222), (150, 166, 198), (240, 246, 255), (96, 112, 160), (140, 160, 196), (176, 196, 226), (110, 122, 150),
        (80, 92, 126), (130, 146, 178), (226, 234, 248), (170, 184, 210), (120, 136, 168), (66, 78, 112)]
 PAL_C = [(0, 0, 0), (52, 70, 120), (150, 190, 232), (206, 230, 250), (240, 250, 255), (255, 255, 255), (176, 240, 255), (70, 50, 130), (112, 86, 190),
          (168, 140, 232), (214, 204, 252), (70, 86, 124), (240, 140, 40), (170, 186, 214), (96, 110, 146), (214, 64, 72)]   # quartz-glace, coeur d'amethyste discret (7-10) ; 12 = carotte, 15 = echarpe du bonhomme de neige (v2)
+SNOW_PAL = 6; assert SNOW_PAL not in used, used
+PAL_S = list(PAL_C); PAL_S[15] = (150, 96, 214)       # palette 6 (primaire, libre dans la carte d'origine) : meme bonhomme de neige, echarpe/ruban violet amethyste (v3, clairiere de geode)
 def newimg(w, h): return Image.new('P', (w, h), 0)
 def prism(d, x, base, w, h):
     half = max(2, w // 2); top = base - h; sh = top + max(3, half + 1)
@@ -377,6 +396,14 @@ def formation():
     d.rectangle((3, 26, 28, 30), fill=14, outline=1); d.line([(4, 27), (27, 27)], fill=13); d.rectangle((4, 29, 27, 29), fill=11)
     prism(d, 7, 27, 7, 12); prism(d, 25, 27, 6, 10); prism(d, 12, 28, 8, 17); prism(d, 20, 28, 8, 20); prism(d, 16, 29, 10, 26)
     for (x, y) in ((15, 8), (19, 13), (10, 18), (22, 17)): d.point((x, y), fill=6)
+    return im
+def giant_crystal():
+    """GRAND cristal de geode 3x3 (48x48) : socle de roche, 4 prismes (le central de 43 px, 18 de large), coeurs d'amethyste (meme dessin que les cristaux du reste de la ville, en plus grand)"""
+    im = newimg(48, 48); d = ImageDraw.Draw(im)
+    d.ellipse((0, 40, 47, 48), fill=11)
+    d.rectangle((3, 41, 44, 46), fill=14, outline=1); d.line([(4, 43), (43, 43)], fill=13); d.rectangle((4, 45, 43, 45), fill=11)
+    prism(d, 12, 43, 14, 36); prism(d, 36, 43, 14, 38); prism(d, 24, 44, 18, 43); prism(d, 31, 45, 8, 22)
+    for (x, y) in ((22, 9), (35, 18)): d.point((x, y), fill=6)                                   # 2 scintillements
     return im
 def snowman():
     """gros bonhomme de neige 2x3 (32x48) : trois boules ombrees (lumiere en haut a gauche), chapeau haut-de-forme, nez carotte (12), echarpe rouge (15), bras-branches"""
@@ -444,6 +471,9 @@ for v in range(3):
     s_ = small(v); assert nonempty(s_, (0, 0, 16, 8)) >= 4 and nonempty(s_, (0, 8, 16, 16)) >= 20, ('cristal incomplet', v)
 F_ = formation()
 for (i, j) in ((0, 0), (1, 0), (0, 1), (1, 1)): assert nonempty(F_, (i * 16, j * 16, i * 16 + 16, j * 16 + 16)) >= 24, ('formation incomplete', i, j)
+GC_ = giant_crystal()
+for j in range(3):
+    for i in range(3): assert nonempty(GC_, (i * 16, j * 16, i * 16 + 16, j * 16 + 16)) >= 40, ('grand cristal incomplet', i, j)       # aucune case bloquante ne doit etre invisible
 SN_ = snowman()
 for j in range(3):
     for i in range(2): assert nonempty(SN_, (i * 16, j * 16, i * 16 + 16, j * 16 + 16)) >= 60, ('bonhomme de neige incomplet', i, j)      # haut, milieu ET bas remplis
@@ -473,25 +503,29 @@ for c in sorted(WAY):
     G[c] = 0x3000 | art_meta(PT[k], G[c] & 0x3ff, True)
     ncell[k] += 1
 SM = [slice4(small(v)) for v in range(3)]; FM = {}
-for (i, j) in ((0, 0), (1, 0), (0, 1), (1, 1)): FM[(i, j)] = slice4(F_.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)))
+if any(v[0] == 'big' for v in BLK.values()):
+    for (i, j) in ((0, 0), (1, 0), (0, 1), (1, 1)): FM[(i, j)] = slice4(F_.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16)))
+GM = {(i, j): slice4(GC_.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))) for j in range(3) for i in range(3)}
 SNM = {(i, j): slice4(SN_.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))) for j in range(3) for i in range(2)}
 for c, val in BLK.items():
     if val[0] == 'big': G[c] = 0x400 | art_meta(FM[(val[1], val[2])], G[c] & 0x3ff, False, 'B')
     elif val[0] == 'cry': G[c] = 0x400 | art_meta(SM[val[1]], G[c] & 0x3ff, False, 'B')
     elif val[0] == 'snow': G[c] = 0x400 | art_meta(SNM[(val[1], val[2])], G[c] & 0x3ff, False, 'B')
+    elif val[0] == 'snow2': G[c] = 0x400 | art_meta(SNM[(val[1], val[2])], G[c] & 0x3ff, False, 'S')
+    elif val[0] == 'giant': G[c] = 0x400 | art_meta(GM[(val[1], val[2])], G[c] & 0x3ff, False, 'B')
     elif val[0] == 'bush': G[c] = 0x400 | 5
     elif val[0] == 'sign': G[c] = 0x400 | 2
 for c in FLW: G[c] = 0x3000 | 4
 assert NMT + len(NEWE) <= 384 and NTL + len(NEWT) <= 384, (NMT + len(NEWE), NTL + len(NEWT))
 print('metatuiles', NMT + len(NEWE), '/384  tuiles', NTL + len(NEWT), '/384  variantes de pave', len(PT))
-NEWE = [[((640 + NTL + q[1]) | ((CRY_PAL if q[0] == 'B' else ART_PAL) << 12)) if isinstance(q, tuple) else q for q in e] for e in NEWE]
+NEWE = [[((640 + NTL + q[1]) | (({'B': CRY_PAL, 'S': SNOW_PAL}.get(q[0], ART_PAL)) << 12)) if isinstance(q, tuple) else q for q in e] for e in NEWE]
 smt += b''.join(struct.pack('<8H', *e) for e in NEWE); satt += NEWA
 open(NS + 'metatiles.bin', 'wb').write(smt); open(NS + 'metatile_attributes.bin', 'wb').write(b''.join(struct.pack('<I', a) for a in satt))
 rows = (NTL + len(NEWT) + 15) // 16
 out = Image.new('P', (128, rows * 8), 0); out.putpalette(simg.getpalette()); out.paste(simg, (0, 0))
 for n, t in enumerate(NEWT):
     ti = Image.new('P', (8, 8)); ti.putdata(list(t)); out.paste(ti, (((NTL + n) % 16) * 8, ((NTL + n) // 16) * 8))
-out.save(NS + 'tiles.png'); writepal(NS + 'palettes/%02d.pal' % ART_PAL, PAL); writepal(NS + 'palettes/%02d.pal' % CRY_PAL, PAL_C)
+out.save(NS + 'tiles.png'); writepal(NS + 'palettes/%02d.pal' % ART_PAL, PAL); writepal(NS + 'palettes/%02d.pal' % CRY_PAL, PAL_C); writepal(NP + 'palettes/%02d.pal' % SNOW_PAL, PAL_S)         # palette 6 = palette du tileset PRIMAIRE (FRLG : 7 palettes primaires 0..6, secondaires 7..12)
 open('data/layouts/CeladonCity/map.bin', 'wb').write(struct.pack('<%dH' % (W * H), *[G[(x, y)] for y in range(H) for x in range(W)]))
 open('data/layouts/CeladonCity/border.bin', 'wb').write(struct.pack('<4H', 0x414, 0x415, 0x41c, 0x41d))      # bordure hors carte : foret d'arbres FR (phase haut = lignes paires)
 # ---- layouts.json + en-tetes C (idempotents)
