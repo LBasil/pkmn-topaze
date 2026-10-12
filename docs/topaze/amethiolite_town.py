@@ -63,14 +63,14 @@ def ents_of(m):
 def hls_(c): h, l, s = colorsys.rgb_to_hls(c[0] / 255, c[1] / 255, c[2] / 255); return h * 360, l, s
 def rgb_(h, l, s): r, g, b = colorsys.hls_to_rgb((h % 360) / 360, max(0, min(1, l)), max(0, min(1, s))); return int(r * 255 + .5), int(g * 255 + .5), int(b * 255 + .5)
 def amethyste(c):
-    """creme/olive des dômes -> lilas clair ; verts -> pelouse lilas clair / arbres violets profonds ; le rouge du Centre et le bleu de la Boutique restent"""
+    """v7 (« vraiment amethyste ») : creme/olive des domes et du pave -> lilas MOYEN a violet profond (plus de pave quasi blanc) ; verts -> pelouse lilas / arbres indigo ; le rouge du Centre et le bleu de la Boutique restent"""
     h, l, s = hls_(c)
     if s < 0.02: return c
-    if 28 <= h <= 75: return rgb_(282, l * 0.98, min(0.6, s * 1.1 + 0.08) if l > 0.5 else min(0.45, s * 0.8 + 0.04))
+    if 28 <= h <= 75: return rgb_(274, 0.10 + 0.60 * l, min(0.80, s * 1.5 + 0.30))
     if 75 < h <= 175:
-        if s < 0.12: return rgb_(276, l, 0.13)
-        if l > 0.42: return rgb_(274, min(1, l * 1.0 + 0.03), min(0.8, s * 0.62 + 0.05))
-        return rgb_(258, min(1, l * 1.18), min(0.85, s * 0.95))
+        if s < 0.12: return rgb_(272, 0.14 + 0.62 * l, 0.28)
+        if l > 0.42: return rgb_(270, 0.12 + 0.66 * l, min(0.85, s * 0.7 + 0.24))
+        return rgb_(256, min(1, l * 1.1), min(0.9, s * 1.0 + 0.05))
     return c
 for P in (PALS_P, PALS_S):
     for i in range(16): P[i] = [P[i][0]] + [amethyste(x) for x in P[i][1:]]
@@ -197,8 +197,8 @@ ART_PAL = 8
 used = {q >> 12 for e in SEC_ENT for q in e}
 print('palettes utilisees par les decors', sorted(used))
 assert ART_PAL not in used and 9 not in used, used
-PAL = [(0, 0, 0), (30, 10, 52), (94, 44, 142), (142, 84, 202), (188, 132, 236), (228, 200, 252), (252, 242, 255), (46, 36, 112), (84, 72, 172),
-       (132, 122, 222), (198, 192, 250), (40, 30, 66), (214, 64, 152), (176, 168, 192), (96, 88, 118), (255, 246, 200)]
+PAL = [(0, 0, 0), (30, 10, 52), (94, 44, 142), (142, 84, 202), (188, 132, 236), (228, 200, 252), (252, 242, 255), (62, 30, 112), (104, 56, 170),
+       (152, 100, 222), (214, 188, 252), (40, 30, 66), (214, 64, 152), (176, 168, 192), (96, 88, 118), (255, 246, 200)]       # v7 : indigo -> violet d'amethyste (7..10)
 # 1 contour | 2 violet fonce | 3 violet | 4 amethyste claire | 5 lilas | 6 blanc | 7 indigo fonce | 8 indigo | 9 indigo clair | 10 lilas pale | 11 ombre | 12 rose toxique | 13 pierre | 14 pierre sombre | 15 lueur
 GATE_SRC = None
 def gate():
@@ -596,8 +596,6 @@ assert NPC['hidden'] in seen
 for k in ('tree1', 'tree2', 'tree3', 'tree4'): assert NPC[k] in seen or True
 # aucune case d'acces ne doit etre perdue : le sud, l'ouest et l'est sont relies
 print('portes, PNJ, sorties OK ; cases accessibles', len(seen))
-json.dump({k: v for k, v in D.items()}, open('/tmp/amethiolite_doors.json', 'w')); json.dump(NPC, open('/tmp/amethiolite_npc.json', 'w')); json.dump(SIGNS, open('/tmp/amethiolite_signs.json', 'w'))
-json.dump({'S': EXITS['S'], 'W': EXITS['W'], 'E': EXITS['E']}, open('/tmp/amethiolite_misc.json', 'w'))
 # ------------------------------------------------------------------ v6 : toit de la boutique (retour Basil 12/10 : « il manque un toit au shop Pokemon »)
 # le chunk d'Emeraude etait coupe une rangee trop bas : la rangee source y=26 porte le HAUT du toit (rayures + coins en biseau). On la rajoute APRES tous les
 # tirages et controles (rien d'autre ne bouge), sur la rangee y=9 au-dessus de la boutique (7..10, 10..12) : 4 cases de pave deviennent le haut du toit.
@@ -616,6 +614,125 @@ assert not ((seen - seen2) - set(MART_TOP)), ('toit de la boutique : acces perdu
 for k, ds in D.items():
     for c in ds: assert c in seen2, ('porte inaccessible apres le toit', k, c)
 print('toit de la boutique pose :', MART_TOP)
+# ------------------------------------------------------------------ v7 : arene deplacee a l'entree sud + monument de geode, mobilier urbain (retour Basil 12/10 : « pas fan de l'arene, elle est perdue » / « une vibe vraiment amethyste »)
+# Tout est pose APRES les tirages (rien d'autre ne bouge). L'ancienne arene (6..11,22..26) redevient foret ; la nouvelle (x14..21, y22..27, porte en (17..18,27)) fait face a la route sud,
+# parvis 14..19 x 28..29 ouvert dans la foret. Les tuiles de l'arene vont dans le tileset PRINCIPAL (emplacements 512..639, retournement horizontal = moitie droite gratuite), palette secondaire 10.
+import amethiolite_art as AA
+assert 10 not in {q >> 12 for e in SEC_ENT for q in e if not isinstance(q, tuple)}, 'palette 10 deja prise'
+PT = []
+def _flip_variants(t):
+    rows = [list(t[r * 8:(r + 1) * 8]) for r in range(8)]
+    hf = [r[::-1] for r in rows]; vf = rows[::-1]; hv = [r[::-1] for r in rows[::-1]]
+    return [(sum(rows, []), 0, 0), (sum(hf, []), 1, 0), (sum(vf, []), 0, 1), (sum(hv, []), 1, 1)]
+def padd_tile(px):
+    px = list(px)
+    for k, pt in enumerate(PT):
+        for var, hf, vf in _flip_variants(pt):
+            if var == px: return 512 + k, hf, vf
+    PT.append(px); return 512 + len(PT) - 1, 0, 0
+def strict_reach(blocked):
+    sn = {START}; qq = collections.deque([START])
+    while qq:
+        c = qq.popleft()
+        for d in ((0, 1), (1, 0), (-1, 0), (0, -1)):
+            n = (c[0] + d[0], c[1] + d[1])
+            if 0 <= n[0] < W and 0 <= n[1] < H and n not in sn and not raw_blocked(n) and n not in blocked: sn.add(n); qq.append(n)
+    return sn
+OBJ0 = {tuple(v) for v in NPC.values()} | {tuple(v) for v in SIGNS.values()}
+REACH_B = strict_reach(OBJ0)
+def tree_cell(c, k=None):
+    G[c] = 0x400 | (640 + art_meta(slice_tiles(TREEIMG[(c[0] * 7 + c[1] * 3) % 3 if k is None else k]), GRASS))
+rp = random.Random(707)
+# ---- 1. l'ancien site devient foret
+SITE = {(x, y) for x in range(6, 12) for y in range(22, 28)} | {(12, 26), (12, 27), (13, 26), (13, 27)}
+for c in sorted(SITE): tree_cell(c)
+# ---- 2. nouvelle arene 8x6 : x14..21, y22..27 ; parvis ; ouverture dans la foret
+AX, AY, AW, AH = 14, 22, 8, 6
+for c in [(AX + i, AY + j) for j in range(AH) for i in range(AW)]:
+    assert c not in OBJ0 or c == tuple(NPC['tree3']), ('arene : objet dans l\'emprise', c)
+    assert c not in LAKE and c not in PENCELLS
+for c in [(x, y) for x in range(14, 20) for y in (28, 29)]:
+    assert c not in OBJ0 and c not in LAKE
+    G[c] = remap(0x3000 | rp.choice(PAVE)); GROUND[c] = PAVE[0]; OPEN.add(c); WAY.add(c)
+ARENA_DOORS = [(AX + 3, AY + 5), (AX + 4, AY + 5)]
+im_a = AA.full(); GB = ents_of(PAVE[0])[:4]
+for j in range(AH):
+    for i in range(AW):
+        c = (AX + i, AY + j)
+        blk = im_a.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))
+        if sum(1 for p in blk.getdata() if p) < 6: continue                  # coin vide du ciel : on garde le pave (praticable)
+        top = []
+        for q in range(4):
+            t = im_a.crop((i * 16 + (q % 2) * 8, j * 16 + (q // 2) * 8, i * 16 + (q % 2) * 8 + 8, j * 16 + (q // 2) * 8 + 8))
+            tid, hf, vf = padd_tile(list(t.getdata())); top.append(tid | (hf << 10) | (vf << 11) | (10 << 12))
+        SEC_ENT.append(list(GB) + top); SEC_ATT.append(0)
+        G[c] = (0x3000 if c in ARENA_DOORS else 0x400) | (640 + len(SEC_ENT) - 1)
+print('arene : tuiles principales', len(PT), '(emplacements 512..%d)' % (511 + len(PT)))
+assert 512 + len(PT) <= 640
+# ---- 3. objets deplaces : panneau de l'arene, arbre a couper
+D['gym'] = list(ARENA_DOORS)
+SIGNS['gym'] = (16, 28); G[(16, 28)] = remap(0x400 | 3)
+OBJ1 = {tuple(v) for k, v in NPC.items() if k != 'tree3'} | {tuple(v) for v in SIGNS.values()}
+# ruelle de l'ancien site : cul-de-sac condamne par l'arbre a couper
+for c in ((12, 24), (12, 25), (13, 25)): tree_cell(c)
+NPC['tree3'] = (13, 24); OBJ1.add((13, 24))
+# ---- 3b. mobilier urbain (lampadaires-cristaux, jardinieres, bancs) : casse les grandes bandes de pave vides ; aucune case de passage n'est perdue
+IMG_PROP = {'lamp': AA.lamp(), 'plant0': AA.planter(0), 'plant1': AA.planter(1), 'benchS': AA.bench(False), 'benchN': AA.bench(True)}
+PROP_META = {k: 640 + art_meta(slice_tiles(v), PAVE[0]) for k, v in IMG_PROP.items()}
+PROPS = {}
+def prop_ok(c):
+    if c not in WAY or c in KEEP or c in USED or c in ARTPLACE or c in BEACH or raw_blocked(c) or c in OBJ1 or c in PROPS: return False
+    if any((c[0] + a, c[1] + b) in PROPS for a in (-1, 0, 1) for b in (-1, 0, 1) if a or b) and True: return False
+    base = strict_reach(OBJ1 | set(PROPS))
+    return c in base and (base - {c}) <= strict_reach(OBJ1 | set(PROPS) | {c})
+def put_prop(kind, target, r=3, exact=False):
+    for dd, c in sorted((abs(c[0] - target[0]) + abs(c[1] - target[1]), c) for c in WAY if abs(c[0] - target[0]) + abs(c[1] - target[1]) <= (0 if exact else r)):
+        if prop_ok(c) or (exact and c in WAY and c not in OBJ1 and c not in PROPS):
+            PROPS[c] = kind; G[c] = 0x400 | PROP_META[kind]; return c
+    print('mobilier : pas de place pres de', kind, target); return None
+for kind, tg, ex in (('lamp', (14, 28), True), ('lamp', (19, 28), True), ('plant0', (15, 28), True)):
+    put_prop(kind, tg, exact=True)
+PLACE = [('lamp', (21, 5)), ('lamp', (27, 5)), ('lamp', (21, 11)), ('lamp', (28, 11)), ('lamp', (5, 13)), ('lamp', (41, 13)), ('lamp', (22, 23)), ('lamp', (28, 23)), ('lamp', (34, 24)),
+         ('benchS', (24, 23)), ('benchS', (26, 23)), ('benchN', (21, 13)), ('benchN', (28, 13)), ('plant1', (31, 23)), ('plant0', (33, 23)), ('plant0', (10, 13)), ('plant1', (37, 13)),
+         ('plant0', (33, 16)), ('lamp', (34, 18)), ('plant1', (34, 21)), ('lamp', (12, 16)), ('plant0', (15, 13)), ('lamp', (39, 14))]
+for kind, tg in PLACE: put_prop(kind, tg)
+print('mobilier :', len(PROPS), collections.Counter(PROPS.values()))
+# ---- 4. controles : tout est atteignable (PNJ et panneaux comptes comme obstacles), aucune poche, rien de perdu hors des zones remodelees
+def pockets(ob):
+    r_ = strict_reach(ob)
+    return sorted(c for c in ((x, y) for y in range(H) for x in range(W)) if c not in r_ and not raw_blocked(c) and c not in PENCELLS and c not in ob)
+for _ in range(4):
+    pk = pockets(OBJ1)
+    if not pk: break
+    for c in pk: tree_cell(c)
+    print('poches comblees (v7) :', pk)
+AFTER = strict_reach(OBJ1)
+assert not pockets(OBJ1), pockets(OBJ1)
+for k, ds in D.items():
+    for c in ds: assert c in AFTER, ('porte inaccessible (v7)', k, c)
+    assert (ds[0][0], ds[0][1] + 1) in AFTER, ('approche de porte bloquee (v7)', k)
+for k in ('W', 'E'): assert EXITS[k][0] in AFTER, ('sortie inaccessible (v7)', k)
+for k in ('erik', 'youngster', 'littleboy', 'oldman', 'tutor', 'lass', 'hidden', 'tree1', 'tree2', 'tree3', 'tree4'):
+    c = tuple(NPC[k]); assert any((c[0] + a_, c[1] + b_) in AFTER for a_, b_ in ((0, 1), (0, -1), (1, 0), (-1, 0))), ('PNJ inaccessible (v7)', k, c)
+for k, c in SIGNS.items(): assert any(((c[0] + a_, c[1] + b_) in AFTER) for a_, b_ in ((0, 1), (0, -1), (1, 0), (-1, 0))), ('panneau inaccessible (v7)', k)
+CHG = SITE | {(AX + i, AY + j) for j in range(AH) for i in range(AW)}
+lost = (REACH_B - AFTER) - CHG - {tuple(NPC['tree3']), (12, 24), (12, 25), (13, 25)} - set(PROPS)
+assert not lost, ('cases perdues par la v7', sorted(lost)[:20])
+print('v7 : acces OK ;', len(AFTER), 'cases atteignables')
+json.dump({k: v for k, v in D.items()}, open('/tmp/amethiolite_doors.json', 'w')); json.dump(NPC, open('/tmp/amethiolite_npc.json', 'w')); json.dump(SIGNS, open('/tmp/amethiolite_signs.json', 'w'))
+json.dump({'S': EXITS['S'], 'W': EXITS['W'], 'E': EXITS['E']}, open('/tmp/amethiolite_misc.json', 'w'))
+if os.environ.get('AM_DUMP'):
+    print('    ' + ''.join(str(x % 10) for x in range(W)))
+    for y in range(H):
+        r_ = ''
+        for x in range(W):
+            c = (x, y)
+            if c in OBJ1: r_ += 'o' if c not in {tuple(v) for v in SIGNS.values()} else 'S'
+            elif c in LAKE: r_ += '~'
+            elif raw_blocked(c): r_ += '#'
+            elif GROUND.get(c) == GRASS: r_ += ','
+            else: r_ += '.'
+        print('%2d  %s' % (y, r_))
 # ------------------------------------------------------------------ ecriture des tilesets
 used2 = {q >> 12 for e in SEC_ENT for q in e if not isinstance(q, tuple)}
 assert 8 not in used2 and 9 not in used2, used2
@@ -637,8 +754,12 @@ open(SEC + 'metatiles.bin', 'wb').write(b''.join(struct.pack('<8H', *e) for e in
 open(SEC + 'metatile_attributes.bin', 'wb').write(b''.join(struct.pack('<I', a) for a in SEC_ATT))
 for i in range(16):
     writepal(SEC + 'palettes/%02d.pal' % i, PALS_S[i]); writepal(PRI + 'palettes/%02d.pal' % i, PALS_P[i])
-writepal(SEC + 'palettes/%02d.pal' % ART_PAL, PAL); writepal(SEC + 'palettes/%02d.pal' % WPAL_ID, WPAL)
-shutil.copy(EM + 'tilesets/primary/general/tiles.png', PRI + 'tiles.png')
+writepal(SEC + 'palettes/%02d.pal' % ART_PAL, PAL); writepal(SEC + 'palettes/%02d.pal' % WPAL_ID, WPAL); writepal(SEC + 'palettes/10.pal', AA.AP)
+_pim = Image.open(EM + 'tilesets/primary/general/tiles.png'); assert _pim.size == (128, 256)
+_pout = Image.new('P', (128, ((512 + len(PT) + 15) // 16) * 8), 0); _pout.putpalette(_pim.getpalette()); _pout.paste(_pim, (0, 0))
+for i, t in enumerate(PT):
+    n = 512 + i; ti = Image.new('P', (8, 8)); ti.putdata(list(t)); _pout.paste(ti, ((n % 16) * 8, (n // 16) * 8))
+_pout.save(PRI + 'tiles.png')
 shutil.copy(EM + 'tilesets/primary/general/metatiles.bin', PRI + 'metatiles.bin')
 open(PRI + 'metatile_attributes.bin', 'wb').write(b''.join(struct.pack('<I', conv(struct.unpack('<H', patt[i * 2:i * 2 + 2])[0])) for i in range(len(patt) // 2)))
 SEAMETA = 0x1000 | (640 + WCACHE[tuple(True for _ in range(9))])

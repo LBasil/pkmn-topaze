@@ -34,6 +34,7 @@ k18 = side('Route18', WY, 59, [8, 9, 10], base + len(SX)); k15 = side('Route15',
 for i in range(len(WY)): W[base + len(SX) + i]['dest_warp_id'] = str(k18 + i)
 for i in range(len(EY)): W[base + len(SX) + len(WY) + i]['dest_warp_id'] = str(k15 + i)
 W.append(warp(D['safari'][1][0], D['safari'][1][1], orig[0]['dest_map'], orig[0]['dest_warp_id']))          # l'arche du Safari fait 2 cases de large
+W.append(warp(D['gym'][1][0], D['gym'][1][1], orig[4]['dest_map'], orig[4]['dest_warp_id']))          # v7 : la porte de l'arene fait 2 cases de large (arche du monument)
 d['warp_events'] = W; d['connections'] = []
 # ---- PNJ, panneaux, objet cache
 POS = {'FAT_MAN': 'erik', 'SLOWPOKE': 'pen_slowpoke', 'VOLTORB': 'pen_voltorb', 'YOUNGSTER': 'youngster', 'CHANSEY': 'pen_chansey', 'LITTLE_BOY': 'littleboy', 'LAPRAS': 'pen_lapras',
