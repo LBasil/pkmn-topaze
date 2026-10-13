@@ -64,8 +64,8 @@ Route13_Text_PerryDefeat::
     .string "The wind turned!$"
 
 Route13_Text_PerryPostBattle::
-    .string "I'm beat.\n"
-    .string "I guess I'll FLY home.$"
+    .string "The big sleeper on the pier is\n"
+    .string "older than this whole road.$"
 
 Route13_Text_LolaIntro::
     .string "Sure, I'll play with you, sweetie.$"
@@ -86,10 +86,8 @@ Route13_Text_SheilaDefeat::
     .string "It's over already?$"
 
 Route13_Text_SheilaPostBattle::
-    .string "I don't know anything about\n"
-    .string "POKéMON actually.\p"
-    .string "The ones I use… I picked them\n"
-    .string "for their looks!$"
+    .string "Men in black were asking about a\n"
+    .string "POKé FLUTE. Nobody here has one.$"
 
 Route13_Text_JaredIntro::
     .string "What're you lookin' at?$"

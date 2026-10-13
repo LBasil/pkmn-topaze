@@ -30,10 +30,8 @@ Route14_Text_BeckDefeat::
     .string "Aww, bummer!$"
 
 Route14_Text_BeckPostBattle::
-    .string "Try teaching POKéMON a move that's\n"
-    .string "the same type as it.\p"
-    .string "That apparently boosts the power\n"
-    .string "of the move.$"
+    .string "The old FISHER at the pier tells\n"
+    .string "tales of the sea glowing violet.$"
 
 Route14_Text_MarlonIntro::
     .string "Have you taught your bird POKéMON\n"
@@ -117,8 +115,8 @@ Route14_Text_MalikDefeat::
     .string "Blown away!$"
 
 Route14_Text_MalikPostBattle::
-    .string "You know who'd win, you and me\n"
-    .string "one-on-one!$"
+    .string "My bike skidded on a violet glow\n"
+    .string "the other night. Creepy.$"
 
 Route14_Text_RouteSign::
     .string "ROUTE 14\n"

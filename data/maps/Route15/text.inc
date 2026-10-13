@@ -32,8 +32,8 @@ Route15_Text_EdwinDefeat::
     .string "That's tragic!$"
 
 Route15_Text_EdwinPostBattle::
-    .string "Maybe I'm not cut out for battles.\n"
-    .string "I'm not the right type, I guess.$"
+    .string "Heading east? Be careful. The sea\n"
+    .string "by the pier glows at night.$"
 
 Route15_Text_ChesterIntro::
     .string "Hmm? My birds are shivering!\n"
@@ -69,9 +69,8 @@ Route15_Text_OliviaDefeat::
     .string "losing for me.$"
 
 Route15_Text_OliviaPostBattle::
-    .string "I love having my POKéMON greet me\n"
-    .string "when I get home.\p"
-    .string "It's so reassuring.$"
+    .string "A man in black bought every ROPE\n"
+    .string "in town yesterday. Weird, no?$"
 
 Route15_Text_ErnestIntro::
     .string "Hey, kid! C'mon!\n"
@@ -81,9 +80,8 @@ Route15_Text_ErnestDefeat::
     .string "Why not?$"
 
 Route15_Text_ErnestPostBattle::
-    .string "Life's too short.\n"
-    .string "It's cool to live as an outlaw.\l"
-    .string "TEAM ONYBRIS RULES!$"
+    .string "I saw a big ship at the ROUTE 12\n"
+    .string "pier. No flag, no name.$"
 
 Route15_Text_AlexIntro::
     .string "Fork over all your cash when you\n"
