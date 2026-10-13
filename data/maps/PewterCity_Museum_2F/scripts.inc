@@ -28,3 +28,16 @@ PewterCity_Museum_2F_EventScript_SpaceShuttle::
 PewterCity_Museum_2F_EventScript_MoonStone::
 	msgbox PewterCity_Museum_1F_Text_MeteoriteThatFellOnMtMoon, MSGBOX_SIGN
 	end
+
+PewterCity_Museum_2F_EventScript_Brock::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_BROCK, PewterCity_Museum_2F_EventScript_BrockAfterKay
+	msgbox PewterCity_Museum_2F_Text_BrockBeforeKay
+	release
+	end
+
+PewterCity_Museum_2F_EventScript_BrockAfterKay::
+	msgbox PewterCity_Museum_2F_Text_BrockAfterKay
+	release
+	end

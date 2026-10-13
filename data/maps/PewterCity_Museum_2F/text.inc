@@ -56,3 +56,26 @@ PewterCity_Museum_1F_Text_MeteoriteThatFellOnMtMoon::
     .string "is left behind: POKéMON were never\p"
     .string "meant to be owned. - TEAM ONYBRIS$"
 
+
+PewterCity_Museum_2F_Text_BrockBeforeKay::
+    .string "BROCK: I was GYM LEADER here until\n"
+    .string "the AURA changed everything.\p"
+    .string "KAY holds the GYM now. I look after\n"
+    .string "this MUSEUM instead.\p"
+    .string "Last night they took the PYROPE.\n"
+    .string "One of them beat me. Me!\p"
+    .string "...That pendant around your neck.\n"
+    .string "It hums like the PYROPE did.\p"
+    .string "Keep it close, kid.\p"
+    .string "Every town keeps a gem, and TEAM\n"
+    .string "ONYBRIS is collecting them.\p"
+    .string "The next one sleeps in TOURMALIA.\n"
+    .string "But first, go see KAY at the GYM.$"
+
+PewterCity_Museum_2F_Text_BrockAfterKay::
+    .string "BROCK: So you beat KAY. Good.\n"
+    .string "He always burned too bright.\p"
+    .string "I'll stay and watch the MUSEUM.\n"
+    .string "They may come back.\p"
+    .string "Go on to TOURMALIA, {PLAYER}.\n"
+    .string "The next gem sleeps there.$"
