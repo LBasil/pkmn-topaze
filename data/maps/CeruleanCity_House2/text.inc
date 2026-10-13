@@ -1,20 +1,16 @@
 CeruleanCity_House2_Text_RocketsStoleTMForDig::
-    .string "My DIGLETT dug a tunnel from the\n"
-    .string "back wall to the garden. Handy!\p"
-    .string "I don't need this TM anymore.\n"
-    .string "Here, it teaches DIG. Take it!$"
+    .string "I found this TM on a forest trail.\n"
+    .string "It teaches DIG.\p"
+    .string "My POKéMON can't use it. Take it,\n"
+    .string "you look like you'll need it!$"
 
 CeruleanCity_House2_Text_TeachDiglettDigWithoutTM::
-    .string "DIGLETT never needed a TM to DIG.\n"
-    .string "It just loves the dirt.$"
+    .string "The tree-houses sway a little in\n"
+    .string "the wind. You get used to it.$"
 
 CeruleanCity_House2_Text_TeamRocketTryingToDigIntoNoGood::
-    .string "Dad's DIGLETT made that tunnel.\n"
-    .string "Mind your step in the garden!$"
-
-CeruleanCity_House2_Text_TeamRocketLeftWayOut::
-    .string "A tunnel dug by DIGLETT.\n"
-    .string "It leads out to the garden.$"
+    .string "I love living up in the trees.\n"
+    .string "The forest sings at night.$"
 
 
 CeruleanCity_House2_Text_MakeRoomForTM28::

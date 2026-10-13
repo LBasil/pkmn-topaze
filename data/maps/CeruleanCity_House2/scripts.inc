@@ -26,7 +26,3 @@ CeruleanCity_House2_EventScript_HikerGotTM28::
 CeruleanCity_House2_EventScript_Lass::
 	msgbox CeruleanCity_House2_Text_TeamRocketTryingToDigIntoNoGood, MSGBOX_NPC
 	end
-
-CeruleanCity_House2_EventScript_WallHole::
-	msgbox CeruleanCity_House2_Text_TeamRocketLeftWayOut, MSGBOX_SIGN
-	end

@@ -31,21 +31,6 @@
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_CERULEAN_GRUNT",
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
-      "x": 40,
-      "y": 10,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "CeruleanCity_EventScript_Grunt",
-      "flag": "FLAG_HIDE_CERULEAN_ROCKET"
-    },
-    {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
       "x": 18,
@@ -76,7 +61,7 @@
     {
       "local_id": "LOCALID_CERULEAN_SLOWBRO",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_SLOWBRO",
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
       "x": 26,
       "y": 29,
       "elevation": 3,
@@ -85,22 +70,22 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "CeruleanCity_EventScript_Slowbro",
+      "script": "CeruleanCity_EventScript_SouthPolice",
       "flag": "0"
     },
     {
       "local_id": "LOCALID_CERULEAN_LASS",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
       "x": 27,
       "y": 29,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "CeruleanCity_EventScript_Lass",
+      "script": "CeruleanCity_EventScript_SouthPolice",
       "flag": "0"
     },
     {
@@ -242,18 +227,18 @@
       "dest_warp_id": "3"
     },
     {
-      "x": 41,
-      "y": 10,
+      "x": 0,
+      "y": 2,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_HOUSE2",
-      "dest_warp_id": "3"
+      "dest_warp_id": "1"
     },
     {
-      "x": 41,
-      "y": 11,
+      "x": 0,
+      "y": 3,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_HOUSE2",
-      "dest_warp_id": "3"
+      "dest_warp_id": "1"
     },
     {
       "x": 0,
@@ -395,24 +380,6 @@
       "var": "VAR_MAP_SCENE_CERULEAN_CITY_RIVAL",
       "var_value": "0",
       "script": "CeruleanCity_EventScript_RivalTriggerRight"
-    },
-    {
-      "type": "trigger",
-      "x": 40,
-      "y": 9,
-      "elevation": 3,
-      "var": "VAR_MAP_SCENE_CERULEAN_CITY_ROCKET",
-      "var_value": "0",
-      "script": "CeruleanCity_EventScript_GruntTriggerTop"
-    },
-    {
-      "type": "trigger",
-      "x": 40,
-      "y": 11,
-      "elevation": 3,
-      "var": "VAR_MAP_SCENE_CERULEAN_CITY_ROCKET",
-      "var_value": "0",
-      "script": "CeruleanCity_EventScript_GruntTriggerBottom"
     }
   ],
   "bg_events": [

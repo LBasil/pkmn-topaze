@@ -6,8 +6,6 @@ CeruleanCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_CERULEAN_CITY
 	call_if_unset FLAG_GOT_SS_TICKET, CeruleanCity_EventScript_BlockExits
 	call_if_set FLAG_BADGE02_GET, CeruleanCity_EventScript_NorthPoliceLeaves
-	setflag FLAG_HIDE_CERULEAN_ROCKET
-	setvar VAR_MAP_SCENE_CERULEAN_CITY_ROCKET, 1
 	end
 
 CeruleanCity_EventScript_NorthPoliceLeaves::
@@ -191,72 +189,10 @@ CeruleanCity_Movement_RivalExit::
 	walk_down
 	step_end
 
-CeruleanCity_EventScript_Grunt::
-	lock
-	faceplayer
-	goto_if_defeated TRAINER_TEAM_ROCKET_GRUNT_5, CeruleanCity_EventScript_GruntDefeated
-	message CeruleanCity_Text_GruntIntro
-	waitmessage
-	playbgm MUS_ENCOUNTER_ROCKET, 0
-	waitbuttonpress
-	trainerbattle_no_intro TRAINER_TEAM_ROCKET_GRUNT_5, CeruleanCity_Text_GruntDefeat
-	setvar VAR_MAP_SCENE_CERULEAN_CITY_ROCKET, 1
-	goto CeruleanCity_EventScript_GruntDefeated
-	end
-
-CeruleanCity_EventScript_GruntDefeated::
-	msgbox CeruleanCity_Text_OkayIllReturnStolenTM
-	checkitemspace ITEM_TM28
-	goto_if_eq VAR_RESULT, FALSE, CeruleanCity_EventScript_NoRoomForTM28
-	giveitem_msg CeruleanCity_Text_RecoveredTM28FromGrunt, ITEM_TM28
-	msgbox CeruleanCity_Text_BetterGetMovingBye
-	closemessage
-	fadescreen FADE_TO_BLACK
-	removeobject LOCALID_CERULEAN_GRUNT
-	fadescreen FADE_FROM_BLACK
-	setflag FLAG_GOT_TM28_FROM_ROCKET
-	release
-	end
-
-CeruleanCity_EventScript_NoRoomForTM28::
-	textcolor NPC_TEXT_COLOR_MALE
-	msgbox CeruleanCity_Text_MakeRoomForThisCantRun
-	release
-	end
-
-CeruleanCity_EventScript_GruntTriggerTop::
-	lockall
-	setvar VAR_TEMP_1, 0
-	applymovement LOCALID_CERULEAN_GRUNT, Common_Movement_WalkInPlaceFasterUp
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
-	goto CeruleanCity_EventScript_GruntTrigger
-	end
-
-CeruleanCity_EventScript_GruntTriggerBottom::
-	lockall
-	setvar VAR_TEMP_1, 1
-	applymovement LOCALID_CERULEAN_GRUNT, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
-	waitmovement 0
-	goto CeruleanCity_EventScript_GruntTrigger
-	end
-
-CeruleanCity_EventScript_GruntTrigger::
-	textcolor NPC_TEXT_COLOR_MALE
-	msgbox CeruleanCity_Text_GruntIntro
-	setvar VAR_LAST_TALKED, LOCALID_CERULEAN_GRUNT
-	trainerbattle_no_intro TRAINER_TEAM_ROCKET_GRUNT_5, CeruleanCity_Text_GruntDefeat
-	setvar VAR_MAP_SCENE_CERULEAN_CITY_ROCKET, 1
-	goto CeruleanCity_EventScript_GruntDefeated
-	end
-
 CeruleanCity_EventScript_Policeman::
 	lock
 	faceplayer
-	msgbox CeruleanCity_Text_EastPassClosed
+	msgbox CeruleanCity_Text_RoadsClosed
 	closemessage
 	applymovement LOCALID_CERULEAN_POLICEMAN, Common_Movement_FaceOriginalDirection
 	waitmovement 0
@@ -298,75 +234,18 @@ CeruleanCity_EventScript_Woman::
 	release
 	end
 
-CeruleanCity_EventScript_Lass::
+CeruleanCity_EventScript_SouthPolice::
 	lock
-	random 3
-	copyvar VAR_0x8008, VAR_RESULT
-	call_if_eq VAR_0x8008, 0, CeruleanCity_EventScript_SlowbroCommand1
-	call_if_eq VAR_0x8008, 1, CeruleanCity_EventScript_SlowbroCommand2
-	call_if_eq VAR_0x8008, 2, CeruleanCity_EventScript_SlowbroCommand3
-	waitmessage
-	delay 40
-	playse SE_PIN
-	applymovement LOCALID_CERULEAN_SLOWBRO, Common_Movement_QuestionMark
-	waitmovement 0
-	delay 30
-	call_if_eq VAR_0x8008, 0, CeruleanCity_EventScript_SlowbroFailed1
-	call_if_eq VAR_0x8008, 1, CeruleanCity_EventScript_SlowbroFailed2
-	call_if_eq VAR_0x8008, 2, CeruleanCity_EventScript_SlowbroFailed3
+	faceplayer
+	goto_if_set FLAG_GOT_SS_TICKET, CeruleanCity_EventScript_SouthPoliceOpen
+	msgbox CeruleanCity_Text_RoadsClosed
 	release
 	end
 
-CeruleanCity_EventScript_SlowbroCommand1::
-	message CeruleanCity_Text_SlowbroUseSonicboom
-	return
-
-CeruleanCity_EventScript_SlowbroCommand2::
-	message CeruleanCity_Text_SlowbroPunch
-	return
-
-CeruleanCity_EventScript_SlowbroCommand3::
-	message CeruleanCity_Text_SlowbroWithdraw
-	return
-
-CeruleanCity_EventScript_SlowbroFailed1::
-	msgbox CeruleanCity_Text_SlowbroPayAttention
-	return
-
-CeruleanCity_EventScript_SlowbroFailed2::
-	msgbox CeruleanCity_Text_NoYouBlewItAgain
-	return
-
-CeruleanCity_EventScript_SlowbroFailed3::
-	msgbox CeruleanCity_Text_HardToControlMonsObedience
-	return
-
-CeruleanCity_EventScript_Slowbro::
-	lock
-	random 4
-	copyvar VAR_0x8008, VAR_RESULT
-	call_if_eq VAR_0x8008, 0, CeruleanCity_EventScript_SlowbroText1
-	call_if_eq VAR_0x8008, 1, CeruleanCity_EventScript_SlowbroText2
-	call_if_eq VAR_0x8008, 2, CeruleanCity_EventScript_SlowbroText3
-	call_if_eq VAR_0x8008, 3, CeruleanCity_EventScript_SlowbroText4
+CeruleanCity_EventScript_SouthPoliceOpen::
+	msgbox CeruleanCity_Text_RoadsOpen
 	release
 	end
-
-CeruleanCity_EventScript_SlowbroText1::
-	msgbox CeruleanCity_Text_SlowbroTookSnooze
-	return
-
-CeruleanCity_EventScript_SlowbroText2::
-	msgbox CeruleanCity_Text_SlowbroLoafingAround
-	return
-
-CeruleanCity_EventScript_SlowbroText3::
-	msgbox CeruleanCity_Text_SlowbroTurnedAway
-	return
-
-CeruleanCity_EventScript_SlowbroText4::
-	msgbox CeruleanCity_Text_SlowbroIgnoredOrders
-	return
 
 CeruleanCity_EventScript_CitySign::
 	msgbox CeruleanCity_Text_CitySign, MSGBOX_SIGN

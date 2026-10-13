@@ -38,34 +38,6 @@ CeruleanCity_Text_RivalVictory::
     .string "なんたって！\n"
     .string "おれは　てんさい　だからよ！$"
 
-CeruleanCity_Text_GruntIntro::
-    .string "Hey! Stay out!\n"
-    .string "It's not your yard!\p"
-    .string "…Huh? Me?\n"
-    .string "The others left me behind!\p"
-    .string "I'm just an innocent bystander!\n"
-    .string "Don't you believe me?{PLAY_BGM}{MUS_ENCOUNTER_ROCKET}$"
-
-CeruleanCity_Text_GruntDefeat::
-    .string "GRUNT: Stop! I give up!\n"
-    .string "I'll leave quietly!$"
-
-CeruleanCity_Text_OkayIllReturnStolenTM::
-    .string "…Okay.\n"
-    .string "I'll return the TM I stole.$"
-
-CeruleanCity_Text_RecoveredTM28FromGrunt::
-    .string "{PLAYER} recovered TM28 from\n"
-    .string "the TEAM ONYBRIS GRUNT.$"
-
-CeruleanCity_Text_BetterGetMovingBye::
-    .string "I better get moving!\n"
-    .string "Bye!$"
-
-CeruleanCity_Text_MakeRoomForThisCantRun::
-    .string "Make room for this!\n"
-    .string "I can't run until I give it to you!$"
-
 CeruleanCity_Text_TrainerLifeIsToughIsntIt::
     .string "You're a TRAINER, too?\p"
     .string "Collecting, battling…\n"
@@ -80,57 +52,21 @@ CeruleanCity_Text_YouCanCutDownSmallTrees::
     .string "though.$"
 
 CeruleanCity_Text_IfSlowbroWasntThereCouldCutTree::
-    .string "If that SLOWBRO wasn't there, you\n"
-    .string "could CUT down the small tree.\p"
-    .string "That way, you could get to the\n"
-    .string "other side.\p"
-    .string "I think there's a way around it,\n"
-    .string "though.$"
+    .string "The police closed the south road\n"
+    .string "and the east pass.\p"
+    .string "Only the bridge north is open,\n"
+    .string "for strong TRAINERS.$"
 
 CeruleanCity_Text_PokemonEncyclopediaAmusing::
     .string "You're making an encyclopedia on\n"
     .string "POKéMON? That sounds amusing.$"
 
-CeruleanCity_Text_EastPassClosed::
-    .string "POLICEMAN: The east pass is shut.\n"
-    .string "Nobody goes through until this\p"
-    .string "TEAM ONYBRIS business is settled.\n"
-    .string "Sorry, move along.$"
-
-CeruleanCity_Text_SlowbroUseSonicboom::
-    .string "Okay! SLOWBRO!\n"
-    .string "Use SONICBOOM!$"
-
-CeruleanCity_Text_SlowbroPayAttention::
-    .string "Come on, SLOWBRO, pay attention!$"
-
-CeruleanCity_Text_SlowbroPunch::
-    .string "SLOWBRO, punch!$"
-
-CeruleanCity_Text_NoYouBlewItAgain::
-    .string "No!\n"
-    .string "You blew it again!$"
-
-CeruleanCity_Text_SlowbroWithdraw::
-    .string "SLOWBRO, WITHDRAW!$"
-
-CeruleanCity_Text_HardToControlMonsObedience::
-    .string "No! That's wrong!\n"
-    .string "It's so hard to control POKéMON!\p"
-    .string "Your POKéMON's obedience depends\n"
-    .string "on your abilities as a TRAINER.$"
-
-CeruleanCity_Text_SlowbroTookSnooze::
-    .string "SLOWBRO took a snooze…$"
-
-CeruleanCity_Text_SlowbroLoafingAround::
-    .string "SLOWBRO is loafing around…$"
-
-CeruleanCity_Text_SlowbroTurnedAway::
-    .string "SLOWBRO turned away…$"
-
-CeruleanCity_Text_SlowbroIgnoredOrders::
-    .string "SLOWBRO ignored orders…$"
+CeruleanCity_Text_RoadsClosed::
+    .string "POLICEMAN: TEAM ONYBRIS is loose.\n"
+    .string "We sealed every road out of town\p"
+    .string "except the one to PYROPIA. The\n"
+    .string "only way on is the north bridge,\p"
+    .string "and only for strong TRAINERS.$"
 
 CeruleanCity_Text_WantBrightRedBicycle::
     .string "I want a bright red bicycle.\p"
@@ -176,3 +112,7 @@ CeruleanCity_Text_NorthPolice::
     .string "Only TRAINERS proven strong enough\n"
     .string "may pass. Earn the GYM's BADGE\p"
     .string "from SYLVESTRE first.$"
+
+CeruleanCity_Text_RoadsOpen::
+    .string "POLICEMAN: The roads are open\n"
+    .string "again. Stay safe out there!$"
