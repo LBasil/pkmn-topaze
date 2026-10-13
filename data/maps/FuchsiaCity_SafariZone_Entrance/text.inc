@@ -71,3 +71,11 @@ FuchsiaCity_SafariZone_Entrance_Text_ExplainSafariZone::
 FuchsiaCity_SafariZone_Entrance_Text_SorryYoureARegularHere::
     .string "Sorry, you're a regular here!$"
 
+
+FuchsiaCity_SafariZone_Entrance_Text_Occupied::
+    .string "Sir! Miss! The SAFARI GAME is off.\n"
+    .string "ONYBRIS thugs took over the park!\p"
+    .string "We got everyone out. Go in for\n"
+    .string "free, with no ball or step limit.\p"
+    .string "Please, clear them out. And be\n"
+    .string "careful, they hit hard!$"

@@ -1,5 +1,12 @@
 SafariZone_West_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SafariZone_West_OnTransition
 	.byte 0
+
+SafariZone_West_OnTransition::
+	call_if_set FLAG_AMETHYST_STONE_GIVEN, SafariZone_West_EventScript_HideOnybris
+	call_if_unset FLAG_AMETHYST_RAID_STARTED, SafariZone_West_EventScript_HideOnybris
+	call_if_defeated TRAINER_MAGMA_ADMIN_COURTNEY, SafariZone_West_EventScript_HideSelene
+	end
 
 SafariZone_West_EventScript_RestHouseSign::
 	msgbox SafariZone_West_Text_RestHouse, MSGBOX_SIGN
@@ -16,3 +23,37 @@ SafariZone_West_EventScript_TrainerTips::
 SafariZone_West_EventScript_AreaSign::
 	msgbox SafariZone_West_Text_AreaSign, MSGBOX_SIGN
 	end
+
+SafariZone_West_EventScript_OnybrisGrunt1::
+	trainerbattle_single TRAINER_RS_BUG_CATCHER, SafariZone_West_Text_OnybrisGrunt1Intro, SafariZone_West_Text_OnybrisGrunt1Defeat
+	msgbox SafariZone_West_Text_OnybrisGrunt1Post, MSGBOX_AUTOCLOSE
+	end
+
+SafariZone_West_EventScript_OnybrisGrunt2::
+	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_21, SafariZone_West_Text_OnybrisGrunt2Intro, SafariZone_West_Text_OnybrisGrunt2Defeat
+	msgbox SafariZone_West_Text_OnybrisGrunt2Post, MSGBOX_AUTOCLOSE
+	end
+
+SafariZone_West_EventScript_OnybrisSelene::
+	trainerbattle_single TRAINER_MAGMA_ADMIN_COURTNEY, SafariZone_West_Text_SeleneIntro, SafariZone_West_Text_SeleneDefeat, SafariZone_West_EventScript_SeleneLeaves
+	msgbox SafariZone_West_Text_SelenePost, MSGBOX_AUTOCLOSE
+	end
+
+SafariZone_West_EventScript_SeleneLeaves::
+	msgbox SafariZone_West_Text_SelenePost
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_SAFARI_SELENE
+	delay 20
+	fadescreen FADE_FROM_BLACK
+	release
+	end
+
+SafariZone_West_EventScript_HideSelene::
+	setflag FLAG_TEMP_6
+	return
+
+SafariZone_West_EventScript_HideOnybris::
+	setflag FLAG_TEMP_5
+	setflag FLAG_TEMP_6
+	return

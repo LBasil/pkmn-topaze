@@ -1,5 +1,11 @@
 SafariZone_North_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SafariZone_North_OnTransition
 	.byte 0
+
+SafariZone_North_OnTransition::
+	call_if_set FLAG_AMETHYST_STONE_GIVEN, SafariZone_North_EventScript_HideOnybris
+	call_if_unset FLAG_AMETHYST_RAID_STARTED, SafariZone_North_EventScript_HideOnybris
+	end
 
 SafariZone_North_EventScript_RestHouseSign::
 	msgbox SafariZone_North_Text_RestHouse, MSGBOX_SIGN
@@ -20,3 +26,18 @@ SafariZone_North_EventScript_TrainerTips2::
 SafariZone_North_EventScript_TrainerTips3::
 	msgbox SafariZone_North_Text_WinFreeHMFindSecretHouse, MSGBOX_SIGN
 	end
+
+SafariZone_North_EventScript_OnybrisGrunt1::
+	trainerbattle_single TRAINER_RS_CAMPER, SafariZone_North_Text_OnybrisGrunt1Intro, SafariZone_North_Text_OnybrisGrunt1Defeat
+	msgbox SafariZone_North_Text_OnybrisGrunt1Post, MSGBOX_AUTOCLOSE
+	end
+
+SafariZone_North_EventScript_OnybrisGrunt2::
+	trainerbattle_single TRAINER_RS_YOUNGSTER, SafariZone_North_Text_OnybrisGrunt2Intro, SafariZone_North_Text_OnybrisGrunt2Defeat
+	msgbox SafariZone_North_Text_OnybrisGrunt2Post, MSGBOX_AUTOCLOSE
+	end
+
+SafariZone_North_EventScript_HideOnybris::
+	setflag FLAG_TEMP_5
+	setflag FLAG_TEMP_6
+	return

@@ -4,6 +4,8 @@ SafariZone_Center_MapScripts::
 
 SafariZone_Center_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_SAFARI_ZONE_CENTER
+	call_if_set FLAG_AMETHYST_STONE_GIVEN, SafariZone_Center_EventScript_HideOnybris
+	call_if_unset FLAG_AMETHYST_RAID_STARTED, SafariZone_Center_EventScript_HideOnybris
 	end
 
 SafariZone_Center_EventScript_RestHouseSign::
@@ -17,3 +19,18 @@ SafariZone_Center_EventScript_TrainerTips::
 SafariZone_Center_EventScript_AreaSign::
 	msgbox SafariZone_Center_Text_CenterArea, MSGBOX_SIGN
 	end
+
+SafariZone_Center_EventScript_OnybrisGrunt1::
+	trainerbattle_single TRAINER_AQUA_GRUNT_M, SafariZone_Center_Text_OnybrisGrunt1Intro, SafariZone_Center_Text_OnybrisGrunt1Defeat
+	msgbox SafariZone_Center_Text_OnybrisGrunt1Post, MSGBOX_AUTOCLOSE
+	end
+
+SafariZone_Center_EventScript_OnybrisGrunt2::
+	trainerbattle_single TRAINER_AQUA_GRUNT_F, SafariZone_Center_Text_OnybrisGrunt2Intro, SafariZone_Center_Text_OnybrisGrunt2Defeat
+	msgbox SafariZone_Center_Text_OnybrisGrunt2Post, MSGBOX_AUTOCLOSE
+	end
+
+SafariZone_Center_EventScript_HideOnybris::
+	setflag FLAG_TEMP_5
+	setflag FLAG_TEMP_6
+	return

@@ -98,6 +98,23 @@ FuchsiaCity_SafariZone_Entrance_EventScript_EntryTriggerLeft::
 	end
 
 FuchsiaCity_SafariZone_Entrance_EventScript_AskEnterSafariZone::
+	goto_if_unset FLAG_AMETHYST_RAID_STARTED, FuchsiaCity_SafariZone_Entrance_EventScript_AskEnterNormal
+	goto_if_set FLAG_AMETHYST_STONE_GIVEN, FuchsiaCity_SafariZone_Entrance_EventScript_AskEnterNormal
+	goto FuchsiaCity_SafariZone_Entrance_EventScript_OccupiedEntry
+	end
+
+FuchsiaCity_SafariZone_Entrance_EventScript_OccupiedEntry::
+	textcolor NPC_TEXT_COLOR_MALE
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_Occupied
+	closemessage
+	call_if_eq VAR_TEMP_2, 0, FuchsiaCity_SafariZone_Entrance_EventScript_EnterSafariZoneMid
+	call_if_eq VAR_TEMP_2, 1, FuchsiaCity_SafariZone_Entrance_EventScript_EnterSafariZoneRight
+	call_if_eq VAR_TEMP_2, 2, FuchsiaCity_SafariZone_Entrance_EventScript_EnterSafariZoneLeft
+	warp MAP_SAFARI_ZONE_CENTER, 255, 26, 30
+	waitstate
+	end
+
+FuchsiaCity_SafariZone_Entrance_EventScript_AskEnterNormal::
 	textcolor NPC_TEXT_COLOR_MALE
 	msgbox FuchsiaCity_SafariZone_Entrance_Text_WelcomeToSafariZone
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight

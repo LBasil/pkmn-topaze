@@ -52,8 +52,6 @@ FuchsiaCity_WardensHouse_EventScript_Grunt2::
 FuchsiaCity_WardensHouse_EventScript_Warden::
 	lock
 	faceplayer
-	goto_if_set FLAG_AMETHYST_STONE_GIVEN, FuchsiaCity_WardensHouse_EventScript_ExplainStrength
-	call_if_set FLAG_BADGE05_GET, FuchsiaCity_WardensHouse_EventScript_CheckStoneGift
 	goto_if_set FLAG_GOT_HM04, FuchsiaCity_WardensHouse_EventScript_ExplainStrength
 	goto_if_set FLAG_HIDE_SAFARI_ZONE_WEST_GOLD_TEETH, FuchsiaCity_WardensHouse_EventScript_GiveGoldTeeth
 	msgbox FuchsiaCity_WardensHouse_Text_HifFuffHefifoo, MSGBOX_YESNO
@@ -77,6 +75,11 @@ FuchsiaCity_WardensHouse_EventScript_GiveGoldTeeth::
 	setflag FLAG_GOT_HM04
 	removeitem ITEM_GOLD_TEETH
 	msgbox FuchsiaCity_WardensHouse_Text_RealStone
+	playfanfare MUS_OBTAIN_KEY_ITEM
+	message FuchsiaCity_WardensHouse_Text_ObtainedAmethiolite
+	waitfanfare
+	waitmessage
+	setflag FLAG_AMETHYST_STONE_GIVEN
 	release
 	end
 
@@ -109,12 +112,3 @@ FuchsiaCity_WardensHouse_EventScript_DisplaySign2::
 	msgbox FuchsiaCity_WardensHouse_Text_OldMonMerchandiseOnDisplay, MSGBOX_SIGN
 	end
 
-FuchsiaCity_WardensHouse_EventScript_CheckStoneGift::
-	goto_if_unset FLAG_GOT_HM04, EventScript_Return
-	msgbox FuchsiaCity_WardensHouse_Text_StoneGift
-	playfanfare MUS_OBTAIN_KEY_ITEM
-	message FuchsiaCity_WardensHouse_Text_ObtainedAmethiolite
-	waitfanfare
-	waitmessage
-	setflag FLAG_AMETHYST_STONE_GIVEN
-	return

@@ -19,3 +19,21 @@ SafariZone_North_Text_WinFreeHMFindSecretHouse::
     .string "Win a free HM for finding the\n"
     .string "SECRET HOUSE.$"
 
+
+SafariZone_North_Text_OnybrisGrunt1Intro::
+    .string "Stay out of our sight, kid!$"
+
+SafariZone_North_Text_OnybrisGrunt1Defeat::
+    .string "Spotted...$"
+
+SafariZone_North_Text_OnybrisGrunt1Post::
+    .string "SELENE wants the real stone.\nThe one on show was a fake!$"
+
+SafariZone_North_Text_OnybrisGrunt2Intro::
+    .string "You are the one who beat my pals?$"
+
+SafariZone_North_Text_OnybrisGrunt2Defeat::
+    .string "Impossible!$"
+
+SafariZone_North_Text_OnybrisGrunt2Post::
+    .string "The WARDEN's gold teeth are the\nkey. SELENE keeps them.$"

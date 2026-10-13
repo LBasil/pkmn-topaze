@@ -87,19 +87,13 @@ FuchsiaCity_WardensHouse_Text_EmptyCase::
     .string "Ho hoo hif feef!$"
 
 FuchsiaCity_WardensHouse_Text_RealStone::
-    .string "WARDEN: Now hear me, child!\p"
+    .string "WARDEN: Now I can speak! Thank\n"
+    .string "you, child. You beat those thugs!\p"
     .string "The thieves took a replica, a\n"
     .string "cheap amethyst I put on display.\p"
-    .string "The real AMETHIOLITE is hidden\n"
-    .string "where no thief would look.\p"
-    .string "Beat ACHLYS, the GYM LEADER, and I\n"
-    .string "will entrust it to you.$"
-
-FuchsiaCity_WardensHouse_Text_StoneGift::
-    .string "WARDEN: You beat ACHLYS! Then you\n"
-    .string "are the one I was waiting for.\p"
-    .string "Take the real AMETHIOLITE. Guard\n"
-    .string "it better than I did.$"
+    .string "The real AMETHIOLITE is safe with\n"
+    .string "me. Take it. You have earned it,\l"
+    .string "and you will guard it better.$"
 
 FuchsiaCity_WardensHouse_Text_ObtainedAmethiolite::
     .string "{PLAYER} got the AMETHIOLITE!$"

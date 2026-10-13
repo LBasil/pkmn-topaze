@@ -130,3 +130,28 @@ FuchsiaCity_Text_PoliceBadge::
     .string "keep watch. Only trainers who can\l"
     .string "prove themselves may pass.\p"
     .string "Beat the GYM LEADER first, kid.$"
+
+FuchsiaCity_Text_LooseMonVoltorb::
+    .string "VOLTORB: Zzzt!\p"
+    .string "It escaped from the zoo, and does\n"
+    .string "not seem to want to go back.$"
+
+FuchsiaCity_Text_LooseMonChansey::
+    .string "CHANSEY: Chansey! Chansey!\p"
+    .string "It escaped from the zoo, and does\n"
+    .string "not seem to want to go back.$"
+
+FuchsiaCity_Text_LooseMonSlowpoke::
+    .string "SLOWPOKE: ...Yawn?\p"
+    .string "It escaped from the zoo, and does\n"
+    .string "not seem to want to go back.$"
+
+FuchsiaCity_Text_LooseMonKangaskhan::
+    .string "KANGASKHAN: Garuu!\p"
+    .string "It escaped from the zoo, and does\n"
+    .string "not seem to want to go back.$"
+
+FuchsiaCity_Text_LooseMonPsyduck::
+    .string "PSYDUCK: Psy... duck?\p"
+    .string "It escaped from the zoo, and does\n"
+    .string "not seem to want to go back.$"

@@ -6,6 +6,8 @@ FuchsiaCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_FUCHSIA_CITY
 	call_if_set FLAG_AMETHYST_RAID_STARTED, FuchsiaCity_EventScript_HideStaffer
 	call_if_set FLAG_BADGE05_GET, FuchsiaCity_EventScript_HidePolice
+	call_if_unset FLAG_AMETHYST_RAID_STARTED, FuchsiaCity_EventScript_HideLooseMons
+	call_if_set FLAG_AMETHYST_STONE_GIVEN, FuchsiaCity_EventScript_HideLooseMons
 	call_if_set FLAG_GOT_DOME_FOSSIL, FuchsiaCity_EventScript_SetOmanyteGfx
 	call_if_unset FLAG_GOT_DOME_FOSSIL, FuchsiaCity_EventScript_SetKabutoGfx
 	end
@@ -179,5 +181,59 @@ FuchsiaCity_EventScript_Police::
 
 FuchsiaCity_EventScript_PoliceDone::
 	msgbox FuchsiaCity_Text_PoliceBadge
+	release
+	end
+
+FuchsiaCity_EventScript_HideLooseMons::
+	setflag FLAG_TEMP_8
+	return
+
+FuchsiaCity_EventScript_LooseMonVoltorb::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_VOLTORB, CRY_MODE_NORMAL
+	msgbox FuchsiaCity_Text_LooseMonVoltorb
+	waitmoncry
+	release
+	end
+
+FuchsiaCity_EventScript_LooseMonChansey::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_CHANSEY, CRY_MODE_NORMAL
+	msgbox FuchsiaCity_Text_LooseMonChansey
+	waitmoncry
+	release
+	end
+
+FuchsiaCity_EventScript_LooseMonSlowpoke::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_SLOWPOKE, CRY_MODE_NORMAL
+	msgbox FuchsiaCity_Text_LooseMonSlowpoke
+	waitmoncry
+	release
+	end
+
+FuchsiaCity_EventScript_LooseMonKangaskhan::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_KANGASKHAN, CRY_MODE_NORMAL
+	msgbox FuchsiaCity_Text_LooseMonKangaskhan
+	waitmoncry
+	release
+	end
+
+FuchsiaCity_EventScript_LooseMonPsyduck::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_PSYDUCK, CRY_MODE_NORMAL
+	msgbox FuchsiaCity_Text_LooseMonPsyduck
+	waitmoncry
 	release
 	end
