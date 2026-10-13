@@ -52,16 +52,14 @@ PokemonTower_7F_Text_MrFujiThankYouFollowMe::
 
 
 PokemonTower_7F_Text_MrFujiCrypt::
-    .string "MR. FUJI: ...You came up, past\n"
-    .string "the spirits? You calmed them?\p"
-    .string "I am the keeper of this crypt.\n"
-    .string "And I failed to defend it.\p"
-    .string "Men in black came for the SPINEL.\n"
-    .string "The dead rose against them, and\p"
-    .string "they fled without the stone.\n"
-    .string "Since then they have grown bolder.\p"
-    .string "Now the spirits are calm, and\n"
-    .string "the SPINEL is safe, but...$"
+    .string "MR. FUJI: Shh... Quietly, child.\n"
+    .string "I am calming the restless spirits.\p"
+    .string "Thieves came for the SPINEL, and\n"
+    .string "the dead rose against them. They\l"
+    .string "fled without the stone.\p"
+    .string "You eased the spirit below, thank\n"
+    .string "you. The SPINEL is safe on the\l"
+    .string "altar, up here at the top...$"
 
 PokemonTower_7F_Text_AdminThanks::
     .string "KRONOS: Well, well. Thank you,\n"
@@ -92,11 +90,10 @@ PokemonTower_7F_Text_FujiHeals::
     .string "blame yourself. Go, and be careful.$"
 
 PokemonTower_7F_Text_MrFujiAfter::
-    .string "MR. FUJI: I failed my duty. The\n"
-    .string "crypt is empty now.\p"
-    .string "Thank you for calming the spirits.\n"
-    .string "Please, go on.$"
+    .string "MR. FUJI: The SPINEL is gone, but\n"
+    .string "the spirits are calm. That matters.\p"
+    .string "Thank you, child. Please, go on.$"
 
 PokemonTower_7F_Text_StoneGlows::
     .string "A crystal glows faintly on the\n"
-    .string "altar: the SPINEL.$"
+    .string "altar at the top: the SPINEL.$"

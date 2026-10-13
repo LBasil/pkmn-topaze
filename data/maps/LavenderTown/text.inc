@@ -12,15 +12,15 @@ LavenderTown_Text_JustImaginingWhiteHand::
 
 LavenderTown_Text_TownKnownAsMonGraveSite::
     .string "Men in black tried to steal the\n"
-    .string "SPINEL from the TOWER crypt!\p"
+    .string "SPINEL at the top of the TOWER!\p"
     .string "The dead rose against them. Now\n"
     .string "the whole TOWER is haunted.$"
 
 LavenderTown_Text_GhostsAppearedInTower::
     .string "Ghosts walk the POKéMON TOWER\n"
-    .string "since the thieves' attempt.\p"
-    .string "MR. FUJI, the keeper, stayed\n"
-    .string "inside the crypt. He is so sad...$"
+    .string "since the thieves tried their luck.\p"
+    .string "MR. FUJI, the keeper, went up to\n"
+    .string "calm them. He is very brave.$"
 
 LavenderTown_Text_TownSign::
     .string "SPINELLIA\n"
@@ -30,7 +30,7 @@ LavenderTown_Text_PoliceClosed::
     .string "POLICEMAN: Thieves tried to take\n"
     .string "the SPINEL, and woke the dead.\p"
     .string "The town is sealed until the TOWER\n"
-    .string "is calm. Go and see MR. FUJI.$"
+    .string "is calm. MR. FUJI is at the top.$"
 
 LavenderTown_Text_PoliceOpen::
     .string "POLICEMAN: A powerful man in black\n"
