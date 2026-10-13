@@ -43,6 +43,8 @@ PokemonTower_7F_Text_MrFujiThankYouFollowMe::
     .string "CUBONE's mother.\p"
     .string "I think MAROWAK's spirit has\n"
     .string "finally left us.\p"
+    .string "The men in black took the SPINEL\n"
+    .string "from the crypt, and left me here.\p"
     .string "I must thank you for your kind\n"
     .string "concern.\p"
     .string "Follow me to my home, POKéMON\n"

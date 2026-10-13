@@ -6,6 +6,25 @@ LavenderTown_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_LAVENDER_TOWN
 	setvar VAR_MAP_SCENE_S_S_ANNE_2F_CORRIDOR, 1
 	setflag FLAG_HIDE_SS_ANNE_RIVAL
+	call_if_set FLAG_RESCUED_MR_FUJI, LavenderTown_EventScript_PoliceLeave
+	end
+
+LavenderTown_EventScript_PoliceLeave::
+	setflag FLAG_TEMP_13
+	setflag FLAG_TEMP_14
+	return
+
+LavenderTown_EventScript_Police::
+	lock
+	faceplayer
+	goto_if_set FLAG_RESCUED_MR_FUJI, LavenderTown_EventScript_PoliceOpen
+	msgbox LavenderTown_Text_PoliceClosed
+	release
+	end
+
+LavenderTown_EventScript_PoliceOpen::
+	msgbox LavenderTown_Text_PoliceOpen
+	release
 	end
 
 LavenderTown_EventScript_LittleGirl::

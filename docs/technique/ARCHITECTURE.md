@@ -261,5 +261,8 @@ Chemin du joueur après le ticket : Tourmalia → **Route 5** (pension, panneau 
 ## Route 11 (sentier des terriers) — passe scenario
 `docs/topaze/route11_trainers.py` (idempotent) : 10 dresseurs remontes (niv. 24-28, equipes Sol/Normal/Acier/Psy : Sabelette, Taupiqueur, Magneton, Alakazam-line, Onix...), 4 post-textes avec indice Onybris (hommes en noir passes par les terriers, sac lourd) et rappel du detour par le Tunnel Roche (Ronflex sur la Route 12). Sauvages R11 niv. 22-27 (Sabelette, Rapasdepic, Taupiqueur, Soporifik, Triopikeur rare) ; Grotte des Taupiqueurs B1F niv. 22-31. Les matchs retour (ids *_2..) ne sont PAS remontes (passe globale a faire). Carte et poste de garde inchanges (valides).
 
-## Routes 9 et 10 (col des pierres) — passe scenario
+## Routes 9 et 10 (col des pierres) — passe scenario — VALIDE (Tunnel Roche et centrale: interieurs plus tard)
 `docs/topaze/route9_10_trainers.py` (idempotent) : 15 dresseurs remontes (niv. 27-30 : Roche/Sol/Fee/Feu/Insecte), equipes a moves par defaut (les dresseurs a moves custom passent en NO_ITEM_DEFAULT_MOVES). Indices Onybris : hommes en noir vers le Tunnel Roche avec un sac lourd, sans lumiere. Sauvages R9 niv. 25-29, R10 niv. 27-30 (Voltorb/Magnemite pres de la centrale). Tunnel Roche : passage seul, non retouche. Matchs retour non remontes.
+
+## Spinellia (ex-Lavender) — passe scenario
+Le SPINELLE a deja ete vole dans la crypte de la Tour ; le gardien (MR. FUJI) a disparu. Policiers : ouest (1,18..19, FLAG_TEMP_13) et sud (19..20,28, FLAG_TEMP_14), masques en OnTransition si FLAG_RESCUED_MR_FUJI ; le retour nord vers la Route 10 reste libre. PNJ (ouvrier) = nouvelle du vol. Tour : fantome de Ossatueur (6F) et 3 sbires en 7F d'origine ; Fuji ajoute que les hommes en noir ont pris le spinelle. Interieur de la Tour et Silph Scope : a revoir plus tard (comme Tunnel Roche et centrale). Pas d'arene a Spinellia.
