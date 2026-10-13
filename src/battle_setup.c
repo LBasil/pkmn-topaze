@@ -228,7 +228,7 @@ static bool8 CheckSilphScopeInPokemonTower(u16 mapGroup, u16 mapNum)
       || mapNum == MAP_NUM(MAP_POKEMON_TOWER_5F)
       || mapNum == MAP_NUM(MAP_POKEMON_TOWER_6F)
       || mapNum == MAP_NUM(MAP_POKEMON_TOWER_7F))
-     && !(CheckBagHasItem(ITEM_SILPH_SCOPE, 1)))
+     && FALSE) // Topaze: no SILPH SCOPE, ghosts are always visible
         return TRUE;
     else
         return FALSE;

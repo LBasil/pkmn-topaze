@@ -7,8 +7,8 @@ PokemonTower_3F_Text_HopeDefeat::
     .string "I'm saved!$"
 
 PokemonTower_3F_Text_HopePostBattle::
-    .string "The ghosts can be identified by\n"
-    .string "the SILPH SCOPE.$"
+    .string "The ghosts are angry. They have\n"
+    .string "been since the thieves came.$"
 
 PokemonTower_3F_Text_CarlyIntro::
     .string "Kekeke…\n"

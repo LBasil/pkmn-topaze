@@ -39,9 +39,10 @@ LavenderTown_Text_PoliceOpen::
     .string "careful out there!$"
 
 LavenderTown_Text_SilphScopeNotice::
-    .string "New SILPH SCOPE!\n"
-    .string "Make the Invisible Plain to See!\p"
-    .string "SILPH CO.$"
+    .string "NOTICE!\n"
+    .string "The TOWER's spirits are restless.\p"
+    .string "Enter at your own risk.\n"
+    .string "SPINELLIA POLICE$"
 
 LavenderTown_Text_VolunteerPokemonHouse::
     .string "SPINELLIA VOLUNTEER\n"
