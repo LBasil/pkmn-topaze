@@ -30,49 +30,34 @@
       "flag": "FLAG_HIDE_TOWER_FUJI"
     },
     {
-      "local_id": "LOCALID_POKEMON_TOWER_GRUNT1",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
-      "x": 9,
-      "y": 10,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "PokemonTower_7F_EventScript_Grunt1",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "local_id": "LOCALID_POKEMON_TOWER_STONE",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 11,
+      "y": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "script": "PokemonTower_7F_EventScript_Stone",
       "flag": "FLAG_HIDE_TOWER_ROCKET_1"
     },
     {
-      "local_id": "LOCALID_POKEMON_TOWER_GRUNT2",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
-      "x": 13,
-      "y": 8,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "PokemonTower_7F_EventScript_Grunt2",
-      "flag": "FLAG_HIDE_TOWER_ROCKET_2"
-    },
-    {
-      "local_id": "LOCALID_POKEMON_TOWER_GRUNT3",
-      "type": "object",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "local_id": "LOCALID_POKEMON_TOWER_ADMIN",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
-      "x": 9,
-      "y": 6,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "PokemonTower_7F_EventScript_Grunt3",
-      "flag": "FLAG_HIDE_TOWER_ROCKET_3"
+      "x": 11,
+      "y": 13,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "script": "PokemonTower_7F_EventScript_Admin",
+      "flag": "FLAG_TEMP_5"
     }
   ],
   "warp_events": [
@@ -84,7 +69,53 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 7,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "PokemonTower_7F_EventScript_AdminScene"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 7,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "PokemonTower_7F_EventScript_AdminScene"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 7,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "PokemonTower_7F_EventScript_AdminScene"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 7,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "PokemonTower_7F_EventScript_AdminScene"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 7,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "PokemonTower_7F_EventScript_AdminScene"
+    }
+  ],
   "bg_events": [
     {
       "type": "hidden_item",
