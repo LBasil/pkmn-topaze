@@ -358,7 +358,7 @@ PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex::
 
 PalletTown_ProfessorOaksLab_Text_AideStrike1::
     .string "Someone got into the archive room\n"
-    .string "last night and copied every file\l"
+    .string "this morning and copied every file\l"
     .string "on gemstones.\p"
     .string "Nothing else was touched. That's\n"
     .string "what scares me.$"
@@ -371,7 +371,7 @@ PalletTown_ProfessorOaksLab_Text_AideStrike2::
     .string "they're after.$"
 
 PalletTown_ProfessorOaksLab_Text_ComputerStrike::
-    .string "ACCESS LOG: archive opened at 4:12.\n"
+    .string "ACCESS LOG: archive opened at 9:41.\n"
     .string "Files copied: GEMSTONES, AURA\l"
     .string "RECORDS, JIRACHI.$"
 
@@ -383,3 +383,13 @@ PalletTown_ProfessorOaksLab_Text_OakReturn2::
     .string "POKéMON away from people for good.\p"
     .string "Their leader fights the AURA with\n"
     .string "every step. Be careful, {PLAYER}.$"
+
+PalletTown_ProfessorOaksLab_Text_OakAfterRaid::
+    .string "OAK: {PLAYER}! {RIVAL}! Both of you\n"
+    .string "in one piece. Good.\p"
+    .string "They got into my LAB too. Nothing\n"
+    .string "was broken, but every file on gems,\l"
+    .string "AURA and JIRACHI was copied.\p"
+    .string "Whoever leads them is looking for\n"
+    .string "something, and I can't chase it\l"
+    .string "alone. That is why I need you two.$"

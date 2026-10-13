@@ -1,14 +1,41 @@
 diff --git a/src/new_game.c b/src/new_game.c
-index 5dbd4da..6f8c334 100644
+index 5dbd4da..f078220 100644
 --- a/src/new_game.c
 +++ b/src/new_game.c
-@@ -79,8 +79,10 @@ static void ClearBattleTower(void)
+@@ -1,4 +1,9 @@
+ #include "global.h"
++#include "script_pokemon_util.h"
++#include "constants/species.h"
++#include "constants/items.h"
++#include "constants/flags.h"
++#include "constants/vars.h"
+ #include "gflib.h"
+ #include "random.h"
+ #include "overworld.h"
+@@ -79,8 +84,27 @@ static void ClearBattleTower(void)
      CpuFill32(0, &gSaveBlock2Ptr->battleTower, sizeof(gSaveBlock2Ptr->battleTower));
  }
  
 +u8 gTopazeDbg[8];
  static void WarpToPlayersRoom(void)
  {
++    if (gTopazeDbg[0] && gTopazeDbg[6])
++    {
++        VarSet(VAR_GRENALUX_OPENING, gTopazeDbg[6] - 1);
++        if (gTopazeDbg[6] == 4)
++        {
++            VarSet(VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 5);
++            FlagClear(FLAG_HIDE_OAK_IN_HIS_LAB);
++            FlagClear(FLAG_HIDE_RIVAL_IN_LAB);
++        }
++        if (gTopazeDbg[7])
++        {
++            ScriptGiveMon(gTopazeDbg[7] == 1 ? SPECIES_BULBASAUR : (gTopazeDbg[7] == 2 ? SPECIES_SQUIRTLE : SPECIES_CHARMANDER), 5, ITEM_NONE, 0, 0, 0);
++            VarSet(VAR_STARTER_MON, gTopazeDbg[7] - 1);
++            FlagSet(FLAG_SYS_POKEMON_GET);
++            FlagSet(FLAG_GRENALUX_ONYBRIS_STRIKE);
++        }
++    }
 +    if (gTopazeDbg[0]) SetWarpDestination(gTopazeDbg[1], gTopazeDbg[2], -1, gTopazeDbg[3], gTopazeDbg[4]); else
      SetWarpDestination(MAP_GROUP(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), MAP_NUM(MAP_PALLET_TOWN_PLAYERS_HOUSE_2F), -1, 6, 6);
      WarpIntoMap();

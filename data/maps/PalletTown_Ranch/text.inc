@@ -1,5 +1,5 @@
 PalletTown_Ranch_Text_Hand1Strike::
-	.string "The east fence was cut last night.\n"
+	.string "The east fence was cut this morning.\n"
 	.string "On a ranch this big, no one saw.$"
 
 PalletTown_Ranch_Text_Hand1::
@@ -27,7 +27,7 @@ PalletTown_Ranch_Text_Psyduck::
 	.string "It looks like it has a headache.$"
 
 PalletTown_Ranch_Text_Hand3::
-	.string "The pens were shut tight last night.\n"
+	.string "The pens were shut tight this morning.\n"
 	.string "Now look at this fence...$"
 
 PalletTown_Ranch_Text_Doduo::
@@ -60,13 +60,12 @@ PalletTown_Ranch_Text_Hand1Reward::
 	.string "The boss kept this in the barn for\n"
 	.string "years. Please, take it.$"
 
-PalletTown_Ranch_Text_ReceivedGrenat::
-	.string "{PLAYER} received the GRENAT!$"
+PalletTown_Ranch_Text_ReceivedReward::
+	.string "{PLAYER} received a PP UP!$"
 
 PalletTown_Ranch_Text_Hand1Reward2::
-	.string "It was found in the old mine. It\n"
-	.string "hums when you hold it. I don't know\l"
-	.string "why, but it likes you.$"
+	.string "It's a placeholder reward until the\n"
+	.string "ranch gives you something better.$"
 
 PalletTown_Ranch_Text_Hand1Thanks::
 	.string "The animals are calm again.\n"

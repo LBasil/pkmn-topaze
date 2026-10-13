@@ -25,9 +25,9 @@ PalletTown_School_Text_AuraCase::
     .string "changed in a single night.$"
 
 PalletTown_School_Text_TeacherStrike::
-    .string "They came at dawn, all in black.\n"
-    .string "They took the GRENAT before I could\l"
-    .string "even reach the alarm.\p"
+    .string "They came while the town ran to the\n"
+    .string "RANCH, all in black. They took the\l"
+    .string "GRENAT before I could reach the alarm.\p"
     .string "They said it was for the POKéMON,\n"
     .string "for their freedom... What does a\l"
     .string "gem have to do with freedom?\p"
@@ -72,3 +72,32 @@ PalletTown_School_Text_TeacherCourseDone::
 
 PalletTown_School_Text_ReceivedTypeMemo::
     .string "{PLAYER} received the TYPE MEMO!$"
+
+PalletTown_School_Text_SceneTeacher1::
+    .string "TEACHER: {PLAYER}! Thank goodness you\n"
+    .string "are safe.\p"
+    .string "Your MOM called. A first partner, at\n"
+    .string "last. Good.\p"
+    .string "But look at that case... They emptied\n"
+    .string "it while the town ran to the RANCH.\l"
+    .string "The GRENAT is gone.\p"
+    .string "Still, nobody learns anything by\n"
+    .string "crying over a stone.$"
+
+PalletTown_School_Text_SceneTeacherPendant::
+    .string "TEACHER: ...That pendant around your\n"
+    .string "neck. May I?\p"
+    .string "...No. Forget it. It is none of my\n"
+    .string "business. Keep it close, {PLAYER}.$"
+
+PalletTown_School_Text_SceneRivalChallenge::
+    .string "{RIVAL}: There you are!\p"
+    .string "I took the other POKé BALL Gramps\n"
+    .string "had, and mine beats yours!\p"
+    .string "Let's see which of us is stronger.\n"
+    .string "Come on, I'll take you on!$"
+
+PalletTown_School_Text_SceneRivalAfter::
+    .string "{RIVAL}: Tch... lucky.\p"
+    .string "Gramps wants us at the LAB, doesn't\n"
+    .string "he? Race you there!$"

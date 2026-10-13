@@ -32,7 +32,7 @@ PalletTown_Ranch_EventScript_Hand1Reward::
 	lock
 	faceplayer
 	msgbox PalletTown_Ranch_Text_Hand1Reward
-	giveitem_msg PalletTown_Ranch_Text_ReceivedGrenat, ITEM_RUBY
+	giveitem_msg PalletTown_Ranch_Text_ReceivedReward, ITEM_PP_UP
 	setflag FLAG_GRENALUX_GEM_REWARD
 	msgbox PalletTown_Ranch_Text_Hand1Reward2
 	release

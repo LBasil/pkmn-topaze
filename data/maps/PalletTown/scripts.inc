@@ -7,8 +7,6 @@ PalletTown_MapScripts::
 
 PalletTown_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_PALLET_TOWN
-	@ Topaze: the ONYBRIS raid (ranch, school, lab) happened at dawn, before the game starts
-	setflag FLAG_GRENALUX_ONYBRIS_STRIKE
 	call_if_set FLAG_PALLET_LADY_NOT_BLOCKING_SIGN, PalletTown_EventScript_TryReadySignLady
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 0, PalletTown_EventScript_SetSignLadyPos
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 1, PalletTown_EventScript_SetSignLadyDone
@@ -237,6 +235,9 @@ PalletTown_EventScript_OakTriggerRight::
 	end
 
 PalletTown_EventScript_OakTrigger::
+	goto_if_eq VAR_GRENALUX_OPENING, 2, PalletTown_EventScript_ExitGate
+	goto_if_eq VAR_GRENALUX_OPENING, 3, PalletTown_EventScript_ExitGate
+	goto_if_ne VAR_GRENALUX_OPENING, 0, PalletTown_EventScript_ExitFree
 	@ Topaze: the rival stops the player and takes them to his family's RANCH, where OAK waits
 	textcolor NPC_TEXT_COLOR_MALE
 	delay 30
@@ -272,6 +273,22 @@ PalletTown_EventScript_OakTrigger::
 	setflag FLAG_DONT_TRANSITION_MUSIC
 	warp MAP_PALLET_TOWN_RIVALS_HOUSE, 4, 7
 	waitstate
+	releaseall
+	end
+
+PalletTown_EventScript_ExitGate::
+	msgbox PalletTown_Text_ExitGate
+	closemessage
+	applymovement LOCALID_PLAYER, PalletTown_Movement_ExitGateBack
+	waitmovement 0
+	releaseall
+	end
+
+PalletTown_Movement_ExitGateBack::
+	walk_down
+	step_end
+
+PalletTown_EventScript_ExitFree::
 	releaseall
 	end
 
@@ -537,7 +554,12 @@ PalletTown_Movement_SignLadyMoveOutOfWayLeft::
 	step_end
 
 PalletTown_EventScript_FatMan::
-	msgbox PalletTown_Text_FatMan, MSGBOX_NPC
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_EventScript_FatManStrike
+	msgbox PalletTown_Text_FatManA, MSGBOX_NPC
+	end
+
+PalletTown_EventScript_FatManStrike::
+	msgbox PalletTown_Text_FatManB, MSGBOX_NPC
 	end
 
 PalletTown_EventScript_OaksLabSign::
@@ -598,30 +620,18 @@ PalletTown_EventScript_SignLadyStartShowSign::
 	release
 	end
 
-@ Topaze: first ONYBRIS encounter, on the road out of GRENALUX (appears once the rival fight in the lab is over)
-PalletTown_EventScript_OnybrisGrunt::
-	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_22, PalletTown_Text_OnybrisGruntIntro, PalletTown_Text_OnybrisGruntDefeat, PalletTown_EventScript_OnybrisGruntDefeated
-	msgbox PalletTown_Text_OnybrisGruntPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-PalletTown_EventScript_OnybrisGruntDefeated::
-	msgbox PalletTown_Text_OnybrisGruntPostBattle
-	closemessage
-	fadescreen FADE_TO_BLACK
-	removeobject LOCALID_PALLET_ONYBRIS_GRUNT
-	setflag FLAG_HIDE_GRENALUX_ONYBRIS_GRUNT
-	setflag FLAG_GRENALUX_ONYBRIS_STRIKE
-	fadescreen FADE_FROM_BLACK
-	releaseall
-	end
-
 PalletTown_EventScript_SchoolSign::
 	msgbox PalletTown_Text_SchoolSign, MSGBOX_SIGN
 	end
 
 PalletTown_EventScript_AmbMiner::
 	goto_if_set FLAG_SYS_GAME_CLEAR, PalletTown_EventScript_AmbMinerPost
-	msgbox PalletTown_Text_AmbMiner, MSGBOX_NPC
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_EventScript_AmbMinerStrike
+	msgbox PalletTown_Text_AmbMinerA, MSGBOX_NPC
+	end
+
+PalletTown_EventScript_AmbMinerStrike::
+	msgbox PalletTown_Text_AmbMinerB, MSGBOX_NPC
 	end
 
 PalletTown_EventScript_AmbMinerPost::
@@ -629,27 +639,57 @@ PalletTown_EventScript_AmbMinerPost::
 	end
 
 PalletTown_EventScript_AmbOldman::
-	msgbox PalletTown_Text_AmbOldman, MSGBOX_NPC
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_EventScript_AmbOldmanStrike
+	msgbox PalletTown_Text_AmbOldmanA, MSGBOX_NPC
+	end
+
+PalletTown_EventScript_AmbOldmanStrike::
+	msgbox PalletTown_Text_AmbOldmanB, MSGBOX_NPC
 	end
 
 PalletTown_EventScript_AmbGirl::
-	msgbox PalletTown_Text_AmbGirl, MSGBOX_NPC
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_EventScript_AmbGirlStrike
+	msgbox PalletTown_Text_AmbGirlA, MSGBOX_NPC
+	end
+
+PalletTown_EventScript_AmbGirlStrike::
+	msgbox PalletTown_Text_AmbGirlB, MSGBOX_NPC
 	end
 
 PalletTown_EventScript_AmbBoy::
-	msgbox PalletTown_Text_AmbBoy, MSGBOX_NPC
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_EventScript_AmbBoyStrike
+	msgbox PalletTown_Text_AmbBoyA, MSGBOX_NPC
+	end
+
+PalletTown_EventScript_AmbBoyStrike::
+	msgbox PalletTown_Text_AmbBoyB, MSGBOX_NPC
 	end
 
 PalletTown_EventScript_AmbScientist::
-	msgbox PalletTown_Text_AmbScientist, MSGBOX_NPC
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_EventScript_AmbScientistStrike
+	msgbox PalletTown_Text_AmbScientistA, MSGBOX_NPC
+	end
+
+PalletTown_EventScript_AmbScientistStrike::
+	msgbox PalletTown_Text_AmbScientistB, MSGBOX_NPC
 	end
 
 PalletTown_EventScript_AmbGardener::
-	msgbox PalletTown_Text_AmbGardener, MSGBOX_NPC
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_EventScript_AmbGardenerStrike
+	msgbox PalletTown_Text_AmbGardenerA, MSGBOX_NPC
+	end
+
+PalletTown_EventScript_AmbGardenerStrike::
+	msgbox PalletTown_Text_AmbGardenerB, MSGBOX_NPC
 	end
 
 PalletTown_EventScript_AmbLady::
-	msgbox PalletTown_Text_AmbLady, MSGBOX_NPC
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_EventScript_AmbLadyStrike
+	msgbox PalletTown_Text_AmbLadyA, MSGBOX_NPC
+	end
+
+PalletTown_EventScript_AmbLadyStrike::
+	msgbox PalletTown_Text_AmbLadyB, MSGBOX_NPC
 	end
 
 PalletTown_EventScript_SceneryMonument::

@@ -494,6 +494,16 @@ static const struct MenuAction sMultichoiceList_JoinOrLead[] = {
 static const u8 sText_WishLetGo[] = _("Let it go");
 static const u8 sText_WishNoBalls[] = _("No more BALLS");
 static const u8 sText_WishRuleAll[] = _("Rule them all");
+// Topaze: choix du partenaire en urgence (ordre = PLAYER_STARTER_NUM)
+static const u8 sText_StarterBulbasaur[] = _("BULBASAUR");
+static const u8 sText_StarterSquirtle[] = _("SQUIRTLE");
+static const u8 sText_StarterCharmander[] = _("CHARMANDER");
+static const struct MenuAction sMultichoiceList_TopazeStarter[] = {
+    { sText_StarterBulbasaur },
+    { sText_StarterSquirtle },
+    { sText_StarterCharmander }
+};
+
 static const struct MenuAction sMultichoiceList_TopazeWish[] = {
     { sText_WishLetGo },
     { sText_WishNoBalls },
@@ -579,6 +589,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
     [MULTICHOICE_JOIN_OR_LEAD]                               = MULTICHOICE(sMultichoiceList_JoinOrLead),
     [MULTICHOICE_TRAINER_TOWER_MODE]                         = MULTICHOICE(sMultichoiceList_TrainerTowerMode),
     [MULTICHOICE_TOPAZE_WISH]                                = MULTICHOICE(sMultichoiceList_TopazeWish),
+    [MULTICHOICE_TOPAZE_STARTER]                             = MULTICHOICE(sMultichoiceList_TopazeStarter),
 };
 
 // From Cool to Berries goes unused

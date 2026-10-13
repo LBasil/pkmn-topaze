@@ -4532,12 +4532,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt21[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt22[] = {
     {
         .iv = 0,
-        .lvl = 4,
+        .lvl = 3,
         .species = SPECIES_RATTATA,
     },
     {
         .iv = 0,
-        .lvl = 4,
+        .lvl = 3,
         .species = SPECIES_ZUBAT,
     },
 };

@@ -4,11 +4,9 @@ PalletTown_PlayersHouse_1F_Text_AllBoysLeaveOakLookingForYou::
     .string "It said so on TV.\p"
     .string "But don't go out in your slippers!\n"
     .string "Put on your sports shoes first.\p"
-    .string "Oh, and the whole town is talking\n"
-    .string "about a raid at dawn. The RANCH, the\l"
-    .string "SCHOOL, even the LAB. People in black.\p"
-    .string "Ask around before you go anywhere,\n"
-    .string "dear.$"
+    .string "Oh, and PROF. OAK is at the RANCH\n"
+    .string "next door with {RIVAL}'s dad. He was\l"
+    .string "looking for you.$"
 
 PalletTown_PlayersHouse_1F_Text_AllGirlsLeaveOakLookingForYou::
     .string "MOM: …Right.\n"
@@ -16,11 +14,9 @@ PalletTown_PlayersHouse_1F_Text_AllGirlsLeaveOakLookingForYou::
     .string "It said so on TV.\p"
     .string "But don't go out in your slippers!\n"
     .string "Put on your sports shoes first.\p"
-    .string "Oh, and the whole town is talking\n"
-    .string "about a raid at dawn. The RANCH, the\l"
-    .string "SCHOOL, even the LAB. People in black.\p"
-    .string "Ask around before you go anywhere,\n"
-    .string "dear.$"
+    .string "Oh, and PROF. OAK is at the RANCH\n"
+    .string "next door with {RIVAL}'s dad. He was\l"
+    .string "looking for you.$"
 
 PalletTown_PlayersHouse_1F_Text_YouShouldTakeQuickRest::
     .string "MOM: {PLAYER}!\n"

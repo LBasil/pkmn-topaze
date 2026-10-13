@@ -68,26 +68,12 @@ PalletTown_Text_OakYouEnjoyingTraveling::
     .string "Hohoho.$"
 
 
-PalletTown_Text_OnybrisGruntIntro::
-    .string "Hold it, kid!\n"
-    .string "TEAM ONYBRIS has business here.\p"
-    .string "POKé BALLS are chains.\n"
-    .string "We set POKéMON free, as equals!\p"
-    .string "That starter of yours is a prisoner\n"
-    .string "who doesn't know it yet.\p"
-    .string "Let's see how it feels about that!$"
 
 PalletTown_Text_OnybrisGruntDefeat::
     .string "Tch... it fights for you by\n"
     .string "choice? That's... not what the\l"
     .string "boss told us.$"
 
-PalletTown_Text_OnybrisGruntPostBattle::
-    .string "Forget it. You're too late anyway.\p"
-    .string "The GRENAT and the LAB's gem files\n"
-    .string "left GRENALUX before sunrise.\p"
-    .string "We only stayed to watch the road.\n"
-    .string "GRENALUX will see us again...$"
 PalletTown_Text_SchoolSign::
     .string "GRENALUX SCHOOL\n"
     .string "Where every trainer begins.$"
@@ -107,23 +93,7 @@ PalletTown_Text_RivalGrassUnsafeNeedMon::
     .string "They'll know what to do.\n"
     .string "Follow me!$"
 
-PalletTown_Text_RanchDadStolenTrackers::
-    .string "{RIVAL}'s DAD: So you're {PLAYER}.\n"
-    .string "{RIVAL} never stops talking about you.\p"
-    .string "Bad timing, I'm afraid. At dawn,\n"
-    .string "people in black took our tracker\l"
-    .string "POKéMON right out of the pens.\p"
-    .string "They called themselves TEAM ONYBRIS.$"
 
-PalletTown_Text_RanchOakGoToLab::
-    .string "OAK: Trackers were the best at\n"
-    .string "sensing the AURA. Someone is\l"
-    .string "searching for something.\p"
-    .string "Ten years ago the AURA changed every\n"
-    .string "POKéMON. I never thought the trouble\l"
-    .string "would reach our doorstep.\p"
-    .string "{PLAYER}, {RIVAL}, come to my LAB.\n"
-    .string "You're each getting a partner.$"
 
 
 
@@ -148,8 +118,12 @@ PalletTown_Text_SceneryBerries::
 	.string "Berry bushes for the ranch animals.\n"
 	.string "They are not for picking!$"
 
+PalletTown_Text_AmbMinerA::
+	.string "The vein under this hill is old.\n"
+	.string "Garnet grows like frost in the dark.\p"
+	.string "We cut only what the mine lets go.$"
 
-PalletTown_Text_AmbMiner::
+PalletTown_Text_AmbMinerB::
 	.string "They took the GRENAT from the school.\n"
 	.string "The mine is sealed, but I can feel\l"
 	.string "the vein humming under my boots.\p"
@@ -162,50 +136,171 @@ PalletTown_Text_AmbMinerD::
 	.string "The vein hums for you now. Mind the\n"
 	.string "dark down there.$"
 
+PalletTown_Text_AmbOldmanA::
+	.string "My grandfather carried the first\n"
+	.string "crystal up from the mine. They say\l"
+	.string "the monument hums at night.\p"
+	.string "Lately, it hums louder.$"
 
-PalletTown_Text_AmbOldman::
+PalletTown_Text_AmbOldmanB::
 	.string "Every town keeps a stone of its own,\n"
 	.string "they say. Garnet is ours.\p"
 	.string "Take the stones, and a town forgets\n"
 	.string "its own name.$"
 
+PalletTown_Text_AmbGirlA::
+	.string "The pond turns purple at dusk!\n"
+	.string "My teacher says it is the garnet.\p"
+	.string "She has a real GRENAT at school!$"
 
-PalletTown_Text_AmbGirl::
+PalletTown_Text_AmbGirlB::
 	.string "The school's GRENAT is gone!\n"
 	.string "The pond looks sad today.\p"
 	.string "Don't let them take the monument!$"
 
+PalletTown_Text_AmbBoyA::
+	.string "Some POKéMON got new types when the\n"
+	.string "AURA changed. Even FAIRY is new!\p"
+	.string "Teacher knows everything about it.\n"
+	.string "Go to the school and ask!$"
 
-PalletTown_Text_AmbBoy::
+PalletTown_Text_AmbBoyB::
 	.string "No school today, because of the\n"
 	.string "robbery. But teacher still gives the\l"
 	.string "TYPE MEMO to trainers who ask.$"
 
+PalletTown_Text_AmbScientistA::
+	.string "The lab measures the aura of every\n"
+	.string "crystal in town. The readings jumped\l"
+	.string "this morning.\p"
+	.string "As if something answered from far\n"
+	.string "away.$"
 
-PalletTown_Text_AmbScientist::
+PalletTown_Text_AmbScientistB::
 	.string "The robbers copied our gem files!\n"
 	.string "Now they know where every gem sleeps.\p"
 	.string "Someone must warn the other towns,\n"
 	.string "{PLAYER}!$"
 
+PalletTown_Text_AmbGardenerA::
+	.string "These berries are for ranch animals.\n"
+	.string "Not for picking, sorry!\p"
+	.string "The pens are east, beyond the trees.$"
 
-PalletTown_Text_AmbGardener::
+PalletTown_Text_AmbGardenerB::
 	.string "The ranch lost its tracker POKéMON.\n"
 	.string "The berries just sit there now.\p"
 	.string "Whoever took them will have to feed\n"
 	.string "them. I hope they know how.$"
 
+PalletTown_Text_AmbLadyA::
+	.string "Garnet is the stone of this town.\n"
+	.string "Red roofs, red trees, red stone.\p"
+	.string "The sea road south needs SURF. Come\n"
+	.string "back when you can ride the waves.$"
 
-PalletTown_Text_AmbLady::
+PalletTown_Text_AmbLadyB::
 	.string "Red roofs, red trees, red stone...\n"
 	.string "And now an empty case at school.\p"
 	.string "Tired, {PLAYER}? Go home and let\n"
 	.string "MOM tend to your POKéMON.$"
 
+PalletTown_Text_FatManA::
+	.string "Technology is incredible!\n"
+	.string "You can now store and recall items\l"
+	.string "and POKéMON as data via PC.$"
 
-PalletTown_Text_FatMan::
+PalletTown_Text_FatManB::
 	.string "Did you hear? Robbers hit the school\n"
 	.string "and the LAB! They even copied files\l"
 	.string "from the PC network.\p"
 	.string "Don't leave anything precious in the\n"
 	.string "PC today.$"
+
+PalletTown_Text_ExitGate::
+    .string "{PLAYER}: Not yet. MOM said to see\n"
+    .string "the SCHOOL first, and PROF. OAK is\l"
+    .string "waiting at the LAB.$"
+
+PalletTown_Text_RanchDadHello::
+    .string "{RIVAL}'s DAD: So you're {PLAYER}.\n"
+    .string "{RIVAL} never stops talking about you.$"
+
+PalletTown_Text_RanchOakIntro::
+    .string "OAK: Good, we're all here.\p"
+    .string "Ten years ago the AURA changed every\n"
+    .string "POKéMON. Lately my trackers have been\l"
+    .string "restless, as if they felt something.\p"
+    .string "That is why I brought three POKé\n"
+    .string "BALLS with me today. {PLAYER}, {RIVAL},\l"
+    .string "you have both waited long enough, and--$"
+
+PalletTown_Text_RanchTrackersHowl::
+    .string "...Do you hear that?\n"
+    .string "The trackers are howling.$"
+
+PalletTown_Text_RanchGruntEnter::
+    .string "Nobody move!\n"
+    .string "TEAM ONYBRIS is freeing the POKéMON\l"
+    .string "of this ranch!\p"
+    .string "My friends are at the SCHOOL and the\n"
+    .string "LAB right now. Today, we take it all!$"
+
+PalletTown_Text_RanchDadFlees::
+    .string "{RIVAL}'s DAD: My pens! Stay here!$"
+
+PalletTown_Text_RanchOakPanic::
+    .string "OAK: Oh no, oh no, oh no!\n"
+    .string "What do we do?!\p"
+    .string "There is no time to be polite!\n"
+    .string "{PLAYER}, take one of these, quick!$"
+
+PalletTown_Text_RanchOakChoose::
+    .string "OAK: Which one?\n"
+    .string "Hurry, hurry!$"
+
+PalletTown_Text_RanchRivalTakes::
+    .string "{RIVAL}: Then I'll take the one that\n"
+    .string "beats yours! Gramps, give it here!$"
+
+PalletTown_Text_RanchGruntChallenge::
+    .string "Hah! A kid with a brand new partner?\p"
+    .string "Let's see if it fights for you, or\n"
+    .string "just obeys!$"
+
+PalletTown_Text_RanchGruntRetreat::
+    .string "Forget it. We got what we came for.\p"
+    .string "The trackers are already on the road.\n"
+    .string "GRENALUX will see us again...$"
+
+PalletTown_Text_RanchOakAfter::
+    .string "OAK: ...Well! That was a real battle,\n"
+    .string "{PLAYER}. Your partner trusts you.\p"
+    .string "I must see what they did to my LAB.\n"
+    .string "Stay safe, both of you!$"
+
+PalletTown_Text_RanchMom1::
+    .string "MOM: {PLAYER}!!\n"
+    .string "Are you hurt? The whole town heard\l"
+    .string "the alarm!\p"
+    .string "...Is that a POKéMON? Your first one?\n"
+    .string "Oh, look at you. You look so proud.\p"
+    .string "Listen, the SCHOOL was broken into\n"
+    .string "too. Your teacher is waiting for you.\p"
+    .string "If you're going to travel with that\n"
+    .string "little one, you should learn what has\l"
+    .string "changed first.\p"
+    .string "And take this with you. It has been in\n"
+    .string "our family a long time.$"
+
+PalletTown_Text_ReceivedPendant::
+    .string "{PLAYER} received the PENDANT!$"
+
+PalletTown_Text_RanchMom2::
+    .string "MOM: Keep it close, and don't lose it.\p"
+    .string "Come home whenever you need a rest.\n"
+    .string "I'll be waiting.$"
+
+PalletTown_Text_OnybrisGruntVictory::
+    .string "Hah! Too easy.\n"
+    .string "But we don't need you anyway.$"

@@ -1,16 +1,92 @@
 PalletTown_School_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_School_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, PalletTown_School_OnFrame
 	.byte 0
+
+PalletTown_School_OnTransition::
+	setflag FLAG_HIDE_SCHOOL_RIVAL
+	end
+
+PalletTown_School_OnFrame::
+	map_script_2 VAR_GRENALUX_OPENING, 2, PalletTown_School_EventScript_Scene
+	.2byte 0
+
+@ Topaze: after the ranch, MOM sends the player to the SCHOOL: the empty case, the TYPE MEMO, then the rival's challenge
+PalletTown_School_EventScript_Scene::
+	lockall
+	textcolor NPC_TEXT_COLOR_FEMALE
+	msgbox PalletTown_School_Text_SceneTeacher1
+	closemessage
+	msgbox PalletTown_School_Text_TeacherCourse
+	giveitem_msg PalletTown_School_Text_ReceivedTypeMemo, ITEM_POWDER_JAR
+	setflag FLAG_GRENALUX_TYPE_COURSE
+	msgbox PalletTown_School_Text_SceneTeacherPendant
+	closemessage
+	textcolor NPC_TEXT_COLOR_MALE
+	clearflag FLAG_HIDE_SCHOOL_RIVAL
+	addobject LOCALID_PALLET_SCHOOL_RIVAL
+	playse SE_EXIT
+	applymovement LOCALID_PALLET_SCHOOL_RIVAL, PalletTown_School_Movement_RivalEnters
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+	playbgm MUS_ENCOUNTER_RIVAL, 0
+	msgbox PalletTown_School_Text_SceneRivalChallenge
+	closemessage
+	goto_if_eq VAR_STARTER_MON, 0, PalletTown_School_EventScript_BattleCharmander
+	goto_if_eq VAR_STARTER_MON, 1, PalletTown_School_EventScript_BattleBulbasaur
+	goto PalletTown_School_EventScript_BattleSquirtle
+	end
+
+PalletTown_School_EventScript_BattleCharmander::
+	trainerbattle_earlyrival TRAINER_RIVAL_OAKS_LAB_CHARMANDER, RIVAL_BATTLE_HEAL_AFTER, PalletTown_ProfessorOaksLab_Text_RivalDefeat, Text_RivalVictory
+	goto PalletTown_School_EventScript_AfterBattle
+	end
+
+PalletTown_School_EventScript_BattleBulbasaur::
+	trainerbattle_earlyrival TRAINER_RIVAL_OAKS_LAB_BULBASAUR, RIVAL_BATTLE_HEAL_AFTER, PalletTown_ProfessorOaksLab_Text_RivalDefeat, Text_RivalVictory
+	goto PalletTown_School_EventScript_AfterBattle
+	end
+
+PalletTown_School_EventScript_BattleSquirtle::
+	trainerbattle_earlyrival TRAINER_RIVAL_OAKS_LAB_SQUIRTLE, RIVAL_BATTLE_HEAL_AFTER, PalletTown_ProfessorOaksLab_Text_RivalDefeat, Text_RivalVictory
+	goto PalletTown_School_EventScript_AfterBattle
+	end
+
+PalletTown_School_EventScript_AfterBattle::
+	special HealPlayerParty
+	msgbox PalletTown_School_Text_SceneRivalAfter
+	closemessage
+	playbgm MUS_RIVAL_EXIT, 0
+	applymovement LOCALID_PALLET_SCHOOL_RIVAL, PalletTown_School_Movement_RivalLeaves
+	waitmovement 0
+	removeobject LOCALID_PALLET_SCHOOL_RIVAL
+	setflag FLAG_HIDE_SCHOOL_RIVAL
+	playse SE_EXIT
+	fadedefaultbgm
+	setflag FLAG_BEAT_RIVAL_IN_OAKS_LAB
+	clearflag FLAG_HIDE_OAK_IN_HIS_LAB
+	clearflag FLAG_HIDE_RIVAL_IN_LAB
+	setvar VAR_GRENALUX_OPENING, 3
+	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 5
+	releaseall
+	end
+
+PalletTown_School_Movement_RivalEnters::
+	walk_up
+	walk_up
+	walk_in_place_faster_right
+	step_end
+
+PalletTown_School_Movement_RivalLeaves::
+	walk_down
+	walk_down
+	step_end
 
 PalletTown_School_EventScript_Teacher::
 	lock
 	faceplayer
 	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_School_EventScript_TeacherStrike
 	msgbox PalletTown_School_Text_Teacher
-	goto_if_set FLAG_GRENALUX_TYPE_COURSE, PalletTown_School_EventScript_TeacherDone
-	msgbox PalletTown_School_Text_TeacherCourse
-	giveitem_msg PalletTown_School_Text_ReceivedTypeMemo, ITEM_POWDER_JAR
-	setflag FLAG_GRENALUX_TYPE_COURSE
-	msgbox PalletTown_School_Text_TeacherCourseEnd
 	closemessage
 	applymovement LOCALID_PALLET_SCHOOL_TEACHER, Common_Movement_FaceOriginalDirection
 	waitmovement 0

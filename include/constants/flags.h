@@ -1253,9 +1253,9 @@
 #define FLAG_GRENALUX_GEM_REWARD         0x4BF // Topaze: ranch worker gave the true GRENAT
 #define FLAG_GRENALUX_OAK_RETURN2        0x4C0 // Topaze: OAK's talk after badge 4
 #define FLAG_GRENALUX_MOM_BADGE_INFO     0x4C1 // Topaze: spare
-#define FLAG_0x4C2               0x4C2
-#define FLAG_0x4C3               0x4C3
-#define FLAG_0x4C4               0x4C4
+#define FLAG_HIDE_RANCH_GRUNT            0x4C2 // Topaze: ONYBRIS grunt in the ranch house opening scene
+#define FLAG_HIDE_RANCH_MOM              0x4C3 // Topaze: MOM in the ranch house opening scene
+#define FLAG_HIDE_SCHOOL_RIVAL           0x4C4 // Topaze: rival in the school scene
 #define FLAG_0x4C5               0x4C5
 #define FLAG_0x4C6               0x4C6
 #define FLAG_0x4C7               0x4C7
