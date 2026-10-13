@@ -15,22 +15,71 @@ Route24_EventScript_RocketTriggerLeft::
 	goto Route24_EventScript_RocketTrigger
 	end
 
-Route24_EventScript_RocketTriggerRight::
+Route24_EventScript_RocketTriggerMid::
 	lockall
 	setvar VAR_TEMP_1, 1
 	goto Route24_EventScript_RocketTrigger
 	end
 
+Route24_EventScript_RocketTriggerRight::
+	lockall
+	setvar VAR_TEMP_1, 2
+	goto Route24_EventScript_RocketTrigger
+	end
+
 Route24_EventScript_RocketTrigger::
 	textcolor NPC_TEXT_COLOR_MALE
-	call_if_eq VAR_TEMP_1, 0, Route24_EventScript_RocketApproachPlayer
-	call_if_eq VAR_TEMP_1, 1, Route24_EventScript_RocketMotionToPlayer
-	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	call_if_eq VAR_TEMP_1, 0, Route24_EventScript_RocketWalkLeft
+	call_if_eq VAR_TEMP_1, 1, Route24_EventScript_RocketWalkMid
+	call_if_eq VAR_TEMP_1, 2, Route24_EventScript_RocketWalkRight
 	msgbox Route24_Text_JustEarnedFabulousPrize
 	call Route24_EventScript_BattleRocket
 	releaseall
 	end
+
+Route24_EventScript_RocketWalkLeft::
+	applymovement LOCALID_ROUTE24_ROCKET, Route24_Movement_RocketWalkLeft
+	waitmovement 0
+	return
+
+Route24_EventScript_RocketWalkMid::
+	applymovement LOCALID_ROUTE24_ROCKET, Route24_Movement_RocketWalkMid
+	waitmovement 0
+	return
+
+Route24_EventScript_RocketWalkRight::
+	applymovement LOCALID_ROUTE24_ROCKET, Route24_Movement_RocketWalkRight
+	waitmovement 0
+	return
+
+Route24_Movement_RocketWalkLeft::
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_left
+	walk_in_place_faster_down
+	step_end
+
+Route24_Movement_RocketWalkMid::
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+Route24_Movement_RocketWalkRight::
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_right
+	walk_in_place_faster_down
+	step_end
 
 Route24_EventScript_BattleRocket::
 	message Route24_Text_JoinTeamRocket
@@ -62,18 +111,4 @@ Route24_EventScript_NoRoomForNugget::
 	msgbox Route24_Text_YouDontHaveAnyRoom
 	release
 	end
-
-Route24_EventScript_RocketApproachPlayer::
-	applymovement LOCALID_ROUTE24_ROCKET, Route24_Movement_RocketApproachPlayer
-	waitmovement 0
-	return
-
-Route24_EventScript_RocketMotionToPlayer::
-	applymovement LOCALID_ROUTE24_ROCKET, Common_Movement_WalkInPlaceFasterLeft
-	waitmovement 0
-	return
-
-Route24_Movement_RocketApproachPlayer::
-	walk_left
-	step_end
 
