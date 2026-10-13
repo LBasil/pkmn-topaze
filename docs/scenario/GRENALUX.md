@@ -2,14 +2,14 @@
 *Généré par `docs/scenario/gen_grenalux.py` à partir des textes du jeu : ce document est toujours à jour avec le code. Les textes sont des placeholders anglais ; seule la structure est figée.*
 
 ## 0. Principe : l’attaque se vit en direct
-Rien n’est volé avant le début du jeu. Grenalux est d’abord **paisible** (état A) ; l’attaque d’Zircon se déroule sous les yeux du joueur, au ranch du rival, puis le village bascule dans l’état « après » (B) : clôture du ranch coupée, animaux disparus, vitrine de l’école vide, labo fouillé. Le drapeau `FLAG_GRENALUX_ZIRCON_STRIKE` est posé à la fin de la scène du ranch ; tous les PNJ de la ville ont un texte A et un texte B.
+Rien n’est volé avant le début du jeu. Grenalux est d’abord **paisible** (état A) ; l’attaque d’Onybris se déroule sous les yeux du joueur, au ranch du rival, puis le village bascule dans l’état « après » (B) : clôture du ranch coupée, animaux disparus, vitrine de l’école vide, labo fouillé. Le drapeau `FLAG_GRENALUX_ONYBRIS_STRIKE` est posé à la fin de la scène du ranch ; tous les PNJ de la ville ont un texte A et un texte B.
 
 `VAR_GRENALUX_OPENING` pilote la séquence : 0 = début ; 1 = scène du ranch en cours ; 2 = école à faire ; 3 = labo à faire ; 4 = séquence terminée (la ville est libre, la sortie nord n’est plus bloquée).
 
 ## 1. Chronologie du joueur
 1. **Début** : discours de Chêne d’origine → chambre (2F) → rez-de-chaussée. Maman : « Chêne est au ranch d’à côté avec le père du rival, il te cherchait. » Ville **paisible** : les PNJ parlent de la vie du village.
 2. **Sortie nord** : le rival arrête le joueur et l’emmène au ranch (maison du rival).
-3. **Ranch (scène)** : le père et Chêne accueillent le joueur → les trackers hurlent → un sbire d’Zircon entre : « Nous libérons les POKéMON du ranch ; mes amis sont à l’école et au labo ». Le père court aux enclos. Chêne panique et tend trois POKé BALLS : **le joueur choisit son partenaire en urgence** (menu BULBASAUR / SQUIRTLE / CHARMANDER, confirmation, surnom). Le rival prend celui qui bat le sien. **Combat contre le sbire** (didacticiel de combat de Chêne ; si le joueur perd, la scène continue). Le sbire fuit, Chêne part vérifier son labo. **Maman arrive** en courant, inquiète, puis attendrie par le POKéMON, et lui remet un **PENDENTIF** (sans dire ce que c’est), en lui conseillant d’aller à l’école.
+3. **Ranch (scène)** : le père et Chêne accueillent le joueur → les trackers hurlent → un sbire d’Onybris entre : « Nous libérons les POKéMON du ranch ; mes amis sont à l’école et au labo ». Le père court aux enclos. Chêne panique et tend trois POKé BALLS : **le joueur choisit son partenaire en urgence** (menu BULBASAUR / SQUIRTLE / CHARMANDER, confirmation, surnom). Le rival prend celui qui bat le sien. **Combat contre le sbire** (didacticiel de combat de Chêne ; si le joueur perd, la scène continue). Le sbire fuit, Chêne part vérifier son labo. **Maman arrive** en courant, inquiète, puis attendrie par le POKéMON, et lui remet un **PENDENTIF** (sans dire ce que c’est), en lui conseillant d’aller à l’école.
 4. **Ville (état B)** : la sortie nord est bloquée (« d’abord l’école, Chêne attend au labo »).
 5. **École (scène)** : vitrine vide, la professeure donne le cours sur les types et le **TYPE MEMO**, regarde le pendentif sans rien dire ; le rival surgit et **défie le joueur avec le partenaire opposé** (combat, pas de whiteout).
 6. **Labo (scène)** : Chêne annonce que ses fichiers ont été copiés, remet le **POKÉDEX** et 5 POKé BALLS ; le rival part. La ville est libre.
@@ -308,10 +308,10 @@ Après la scène du ranch : soin gratuit, puis :
 > ...Do you hear that?
 > The trackers are howling.
 
-**Sbire d’Zircon (entre par la porte)**
+**Sbire d’Onybris (entre par la porte)**
 
 > Nobody move!
-> TEAM ZIRCON is freeing the POKéMON
+> TEAM ONYBRIS is freeing the POKéMON
 > of this ranch!
 > — — —
 > My friends are at the SCHOOL and the
@@ -532,7 +532,7 @@ Autres états de Daisy (carte du monde, toilettage après la Ligue) : textes d�
 
 > The glass case is empty. A note is
 > left behind: POKéMON were never
-> meant to be owned. - TEAM ZIRCON
+> meant to be owned. - TEAM ONYBRIS
 
 **Tableau de l’aura** (4-5,1) — *toujours*
 
@@ -589,7 +589,7 @@ Puis, d’origine : demande, POKÉDEX, 5 POKé BALLS, explications, rêve de Ch�
 > town you visit keeps a gem, and that
 > someone is collecting them.
 > — — —
-> TEAM ZIRCON believes they can tear
+> TEAM ONYBRIS believes they can tear
 > POKéMON away from people for good.
 > — — —
 > Their leader fights the AURA with
@@ -648,7 +648,7 @@ Animaux (Slowpoke, Psyduck, Meowth, Jigglypuff, Doduo, Nidoran) : cris et phrase
 
 
 ## 8. Reste à faire sur Grenalux
-- Quête du ranch **terminée sur la Route 1** : après l’attaque, DODUO + 2 NIDORAN errent sur la route (x11–17, y25–27) ; il faut parler **aux trois** (`FLAG_ROUTE1_TALKED_DODUO/NIDORANM/NIDORANF`) pour les renvoyer au ranch (`FLAG_ZIRCON_ANIMALS_FOUND`), ils réapparaissent dans les enclos, l’ouvrier près de la clôture donne 1 POTION + 5 POKé BALLS (`FLAG_GRENALUX_GEM_REWARD`).
+- Quête du ranch **terminée sur la Route 1** : après l’attaque, DODUO + 2 NIDORAN errent sur la route (x11–17, y25–27) ; il faut parler **aux trois** (`FLAG_ROUTE1_TALKED_DODUO/NIDORANM/NIDORANF`) pour les renvoyer au ranch (`FLAG_ONYBRIS_ANIMALS_FOUND`), ils réapparaissent dans les enclos, l’ouvrier près de la clôture donne 1 POTION + 5 POKé BALLS (`FLAG_GRENALUX_GEM_REWARD`).
 - Route 1 : aucun dresseur ; PNJ = vendeur (Potion), garçon (herbe qui change de couleur), panneau ; herbe : Pidgey / Rattata niv. 3–7, Spearow rare niv. 6–7.
 - Faire réapparaître Doduo et les deux Nidoran dans les enclos quand la quête est rendue.
 - Mine : seule la grille scellée existe ; son ouverture après la Ligue demande un intérieur (à décider).

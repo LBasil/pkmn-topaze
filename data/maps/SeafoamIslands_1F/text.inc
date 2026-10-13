@@ -10,7 +10,7 @@ SeafoamIslands_1F_Text_SilverMeet::
     .string "Not bad. For a beginner.$"
 
 SeafoamIslands_1F_Text_GoldPlan::
-    .string "GOLD: This volcano is ZIRCON base\n"
+    .string "GOLD: This volcano is ONYBRIS base\n"
     .string "number four. The boss went down\p"
     .string "with the stone. We follow him\n"
     .string "all the way to the bottom.\p"

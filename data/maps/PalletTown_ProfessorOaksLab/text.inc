@@ -379,7 +379,7 @@ PalletTown_ProfessorOaksLab_Text_OakReturn2::
     .string "OAK: Four BADGES! I hear that each\n"
     .string "town you visit keeps a gem, and that\l"
     .string "someone is collecting them.\p"
-    .string "TEAM ZIRCON believes they can tear\n"
+    .string "TEAM ONYBRIS believes they can tear\n"
     .string "POKéMON away from people for good.\p"
     .string "Their leader fights the AURA with\n"
     .string "every step. Be careful, {PLAYER}.$"

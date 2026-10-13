@@ -352,6 +352,7 @@ PalletTown_Ranch_Movement_MomRunsIn::
 	step_end
 
 PalletTown_Ranch_EventScript_ShowOpeningNpcs::
+	setobjectxyperm LOCALID_PALLET_RANCH_HAND1, 6, 9
 	clearflag FLAG_HIDE_RANCH_SCENE
 	setflag FLAG_HIDE_RANCH_GRUNT
 	setflag FLAG_HIDE_RANCH_GRUNT2
@@ -359,6 +360,7 @@ PalletTown_Ranch_EventScript_ShowOpeningNpcs::
 	return
 
 PalletTown_Ranch_EventScript_HideOpeningNpcs::
+	setobjectxyperm LOCALID_PALLET_RANCH_HAND1, 9, 7
 	setflag FLAG_HIDE_RANCH_SCENE
 	setflag FLAG_HIDE_RANCH_GRUNT
 	setflag FLAG_HIDE_RANCH_GRUNT2

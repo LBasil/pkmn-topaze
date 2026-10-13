@@ -12,7 +12,7 @@ PokemonTower_7F_Text_Grunt2Intro::
     .string "This old guy marched right up to\n"
     .string "our HIDEOUT.\p"
     .string "Then, he starts ranting about how\n"
-    .string "TEAM ZIRCON's abusing POKéMON.\p"
+    .string "TEAM ONYBRIS's abusing POKéMON.\p"
     .string "So, we're just talking it over as\n"
     .string "adults.$"
 
@@ -29,7 +29,7 @@ PokemonTower_7F_Text_Grunt3Intro::
     .string "You're not saving anyone, kid!$"
 
 PokemonTower_7F_Text_Grunt3Defeat::
-    .string "Don't fight us ZIRCON!$"
+    .string "Don't fight us ONYBRIS!$"
 
 PokemonTower_7F_Text_Grunt3PostBattle::
     .string "You're not getting away with this!$"
@@ -79,7 +79,7 @@ PokemonTower_7F_Text_AdminBeatsYou::
 
 PokemonTower_7F_Text_MrFujiAdmin::
     .string "MR. FUJI: That was KRONOS, one of\n"
-    .string "the ADMINS of TEAM ZIRCON.\p"
+    .string "the ADMINS of TEAM ONYBRIS.\p"
     .string "They say he stands next to the\n"
     .string "boss himself. And he took it.$"
 

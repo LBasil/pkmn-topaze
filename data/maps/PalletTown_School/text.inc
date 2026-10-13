@@ -43,7 +43,7 @@ PalletTown_School_Text_StudentStrike::
 PalletTown_School_Text_GarnetCaseStrike::
     .string "The glass case is empty. A note is\n"
     .string "left behind: POKéMON were never\l"
-    .string "meant to be owned. - TEAM ZIRCON$"
+    .string "meant to be owned. - TEAM ONYBRIS$"
 
 PalletTown_School_Text_TeacherCourse::
     .string "Since you are here, a short lesson.\p"

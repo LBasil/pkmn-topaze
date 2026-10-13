@@ -241,7 +241,7 @@ PalletTown_Text_RanchTrackersHowl::
 
 PalletTown_Text_RanchGruntEnter::
     .string "Nobody move!\n"
-    .string "TEAM ZIRCON is freeing the POKéMON\l"
+    .string "TEAM ONYBRIS is freeing the POKéMON\l"
     .string "of this ranch!\p"
     .string "My friends are at the SCHOOL and the\n"
     .string "LAB right now. Today, we take it all!$"

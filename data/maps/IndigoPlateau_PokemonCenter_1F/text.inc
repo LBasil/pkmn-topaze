@@ -74,7 +74,7 @@ IndigoPlateau_PokemonCenter_1F_Text_MistyBefore::
     .string "The winner of this tournament\p"
     .string "gets to meet JIRACHI. A wish for\n"
     .string "whoever stands at the top.\p"
-    .string "ZIRCON would not miss that.\n"
+    .string "ONYBRIS would not miss that.\n"
     .string "Watch your back out there!$"
 
 IndigoPlateau_PokemonCenter_1F_Text_MistyAfter::

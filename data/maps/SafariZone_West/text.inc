@@ -35,7 +35,7 @@ SafariZone_West_Text_OnybrisGrunt2Defeat::
     .string "The boss will be furious.$"
 
 SafariZone_West_Text_OnybrisGrunt2Post::
-    .string "ZIRCON never loses...\nusually.$"
+    .string "ONYBRIS never loses...\nusually.$"
 
 SafariZone_West_Text_SeleneIntro::
     .string "SELENE: So the little hero arrives.\pWe opened the cages to free the\nPOKéMON. They are happier now.\pBut the old WARDEN fooled us.\nThe stone on display was a fake!\pWe kept his gold teeth, so he\ncannot tell anyone where it is.\pEnough talk. Step back, child!$"
@@ -44,4 +44,4 @@ SafariZone_West_Text_SeleneDefeat::
     .string "How can a child do this?!$"
 
 SafariZone_West_Text_SelenePost::
-    .string "SELENE: Fine. Take the old man's\nteeth. They are useless to us.\pThe more you guard the stones,\nthe harder ZIRCON hunts them.\pWe will free the POKéMON. All of\nthem. Farewell, child!$"
+    .string "SELENE: Fine. Take the old man's\nteeth. They are useless to us.\pThe more you guard the stones,\nthe harder ONYBRIS hunts them.\pWe will free the POKéMON. All of\nthem. Farewell, child!$"

@@ -15,6 +15,10 @@ PalletTown_School_OnFrame::
 PalletTown_School_EventScript_Scene::
 	lockall
 	textcolor NPC_TEXT_COLOR_FEMALE
+	applymovement LOCALID_PLAYER, PalletTown_School_Movement_PlayerWalksToTeacher
+	waitmovement 0
+	applymovement LOCALID_PALLET_SCHOOL_TEACHER, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
 	msgbox PalletTown_School_Text_SceneTeacher1
 	closemessage
 	msgbox PalletTown_School_Text_TeacherCourse
@@ -27,6 +31,7 @@ PalletTown_School_EventScript_Scene::
 	addobject LOCALID_PALLET_SCHOOL_RIVAL
 	playse SE_EXIT
 	applymovement LOCALID_PALLET_SCHOOL_RIVAL, PalletTown_School_Movement_RivalEnters
+	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	playbgm MUS_ENCOUNTER_RIVAL, 0
@@ -71,7 +76,21 @@ PalletTown_School_EventScript_AfterBattle::
 	releaseall
 	end
 
+PalletTown_School_Movement_PlayerWalksToTeacher::
+	walk_up
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	walk_in_place_faster_up
+	step_end
+
 PalletTown_School_Movement_RivalEnters::
+	walk_up
+	walk_right
+	walk_right
+	walk_up
 	walk_up
 	walk_up
 	walk_in_place_faster_right
@@ -79,6 +98,10 @@ PalletTown_School_Movement_RivalEnters::
 
 PalletTown_School_Movement_RivalLeaves::
 	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_left
 	walk_down
 	step_end
 

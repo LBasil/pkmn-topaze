@@ -66,7 +66,7 @@ FuchsiaCity_WardensHouse_Text_OldMonMerchandiseOnDisplay::
 
 FuchsiaCity_WardensHouse_Text_RaidIntro::
     .string "Back off, kid! The AMETHIOLITE is\n"
-    .string "ZIRCON property now!$"
+    .string "ONYBRIS property now!$"
 
 FuchsiaCity_WardensHouse_Text_Grunt1Defeat::
     .string "Argh! The boss will hear of this!$"

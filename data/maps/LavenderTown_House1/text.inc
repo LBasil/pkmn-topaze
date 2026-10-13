@@ -2,11 +2,11 @@ LavenderTown_House1_Text_Cubone::
     .string "CUBONE: Kyarugoo!$"
 
 LavenderTown_House1_Text_RocketsKilledCubonesMother::
-    .string "Those horrible ZIRCON!\n"
+    .string "Those horrible ONYBRIS!\n"
     .string "They deserve no mercy!\p"
     .string "That poor CUBONE's mother…\p"
     .string "It was killed trying to escape from\n"
-    .string "TEAM ZIRCON.$"
+    .string "TEAM ONYBRIS.$"
 
 LavenderTown_House1_Text_GhostOfPokemonTowerIsGone::
     .string "The ghost of POKéMON TOWER is\n"

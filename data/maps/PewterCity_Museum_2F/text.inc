@@ -54,7 +54,7 @@ PewterCity_Museum_1F_Text_SpaceShuttle::
 PewterCity_Museum_1F_Text_MeteoriteThatFellOnMtMoon::
     .string "The display case is empty. A note\n"
     .string "is left behind: POKéMON were never\p"
-    .string "meant to be owned. - TEAM ZIRCON$"
+    .string "meant to be owned. - TEAM ONYBRIS$"
 
 
 PewterCity_Museum_2F_Text_BrockBeforeKay::
@@ -68,7 +68,7 @@ PewterCity_Museum_2F_Text_BrockBeforeKay::
     .string "It hums like the PYROPE did.\p"
     .string "Keep it close, kid.\p"
     .string "Every town keeps a gem, and TEAM\n"
-    .string "ZIRCON is collecting them.\p"
+    .string "ONYBRIS is collecting them.\p"
     .string "The next one sleeps in TOURMALIA.\n"
     .string "But first, go see KAY at the GYM.$"
 

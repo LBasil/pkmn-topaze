@@ -4,11 +4,11 @@ SilphCo_2F_Text_ConnorIntro::
 
 SilphCo_2F_Text_ConnorDefeat::
     .string "How did you know\n"
-    .string "I was a ZIRCON?$"
+    .string "I was a ONYBRIS?$"
 
 SilphCo_2F_Text_ConnorPostBattle::
     .string "I work for both HEMATEK and TEAM\n"
-    .string "ZIRCON.$"
+    .string "ONYBRIS.$"
 
 SilphCo_2F_Text_JerryIntro::
     .string "It's off-limits here!\n"
@@ -42,12 +42,12 @@ SilphCo_2F_Text_Grunt2Defeat::
 
 SilphCo_2F_Text_Grunt2PostBattle::
     .string "HEMATEK CO. will be associated with\n"
-    .string "TEAM ZIRCON!$"
+    .string "TEAM ONYBRIS!$"
 
 Text_ThunderWaveTeach::
     .string "Eeek!\n"
     .string "No! Stop! Help!\p"
-    .string "Oh, you're not with TEAM ZIRCON.\n"
+    .string "Oh, you're not with TEAM ONYBRIS.\n"
     .string "I'm sorry, I thought…\p"
     .string "Will you forgive me if I teach\n"
     .string "you the THUNDER WAVE technique?$"

@@ -2,7 +2,7 @@ CeruleanCity_Text_RivalIntro::
     .string "{RIVAL}: Hold it, {PLAYER}!\p"
     .string "The police closed the bridge to\n"
     .string "anyone who isn't strong enough.\p"
-    .string "The ZIRCON thieves went that way.\n"
+    .string "The ONYBRIS thieves went that way.\n"
     .string "I won't have you slow me down.\p"
     .string "Show me you can handle it!$"
 
@@ -13,7 +13,7 @@ CeruleanCity_Text_RivalDefeat::
 
 CeruleanCity_Text_RivalPostBattle::
     .string "{RIVAL}: Hmph. Not bad.\p"
-    .string "The ZIRCON took the TOURMALINE\n"
+    .string "The ONYBRIS took the TOURMALINE\n"
     .string "and crossed the bridge north.\p"
     .string "I'm going after them. Keep up if\n"
     .string "you can. Smell ya!$"
@@ -62,7 +62,7 @@ CeruleanCity_Text_PokemonEncyclopediaAmusing::
     .string "POKéMON? That sounds amusing.$"
 
 CeruleanCity_Text_RoadsClosed::
-    .string "POLICEMAN: TEAM ZIRCON is loose.\n"
+    .string "POLICEMAN: TEAM ONYBRIS is loose.\n"
     .string "We sealed every road out of town\p"
     .string "except the one to PYROPIA. The\n"
     .string "only way on is the north bridge,\p"
@@ -108,7 +108,7 @@ CeruleanCity_Text_GymSign::
 
 CeruleanCity_Text_NorthPolice::
     .string "POLICEMAN: Halt! The bridge is\n"
-    .string "closed. TEAM ZIRCON went that way.\p"
+    .string "closed. TEAM ONYBRIS went that way.\p"
     .string "Only TRAINERS proven strong enough\n"
     .string "may pass. Earn the GYM's BADGE\p"
     .string "from SYLVESTRE first.$"

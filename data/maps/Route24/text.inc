@@ -2,12 +2,12 @@ Route24_Text_JustEarnedFabulousPrize::
     .string "Hold it right there!\p"
     .string "So you beat the bridge TRAINERS.\n"
     .string "Not bad, kid.\p"
-    .string "I'm with TEAM ZIRCON. My job is\n"
+    .string "I'm with TEAM ONYBRIS. My job is\n"
     .string "to make sure nobody follows us!$"
 
 Route24_Text_ReceivedNuggetFromMysteryTrainer::
     .string "{PLAYER} received a NUGGET\n"
-    .string "from the TEAM ZIRCON GRUNT!$"
+    .string "from the TEAM ONYBRIS GRUNT!$"
 
 Route24_Text_YouDontHaveAnyRoom::
     .string "Make room in your bag first!\n"
@@ -15,7 +15,7 @@ Route24_Text_YouDontHaveAnyRoom::
 
 Route24_Text_JoinTeamRocket::
     .string "Hah! You'd make a fine recruit.\n"
-    .string "How about joining TEAM ZIRCON?\p"
+    .string "How about joining TEAM ONYBRIS?\p"
     .string "No? Then we do this the hard way!$"
 
 Route24_Text_RocketDefeat::

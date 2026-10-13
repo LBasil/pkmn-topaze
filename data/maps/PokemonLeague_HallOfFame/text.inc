@@ -34,7 +34,7 @@ PokemonLeague_HallOfFame_Text_EndingLetGo::
     .string "JIRACHI hums, light as a feather,\n"
     .string "and rises into the sky.\p"
     .string "Far away, the AURA settles. TEAM\n"
-    .string "ZIRCON falls silent.\p"
+    .string "ONYBRIS falls silent.\p"
     .string "Your journey is not over.\n"
     .string "The road goes on.$"
 

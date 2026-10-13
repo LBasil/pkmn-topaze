@@ -79,7 +79,7 @@ PewterCity_Text_TrainerTipsEarningEXP::
 PewterCity_Text_CallPoliceIfInfoOnThieves::
     .string "NOTICE!\p"
     .string "The PYROPE gem was stolen from the\n"
-    .string "MUSEUM by TEAM ZIRCON.\p"
+    .string "MUSEUM by TEAM ONYBRIS.\p"
     .string "Please call the PYROPIA POLICE if\n"
     .string "you have any information.$"
 

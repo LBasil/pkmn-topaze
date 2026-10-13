@@ -17,7 +17,7 @@ SilphCo_3F_Text_GruntPostBattle::
     .string "a CARD KEY!$"
 
 SilphCo_3F_Text_JoseIntro::
-    .string "I support TEAM ZIRCON more than\n"
+    .string "I support TEAM ONYBRIS more than\n"
     .string "I support HEMATEK CO.!$"
 
 SilphCo_3F_Text_JoseDefeat::
@@ -25,7 +25,7 @@ SilphCo_3F_Text_JoseDefeat::
 
 SilphCo_3F_Text_JosePostBattle::
     .string "Humph…\p"
-    .string "TEAM ZIRCON said that if I helped\n"
+    .string "TEAM ONYBRIS said that if I helped\n"
     .string "them, they'd let me study POKéMON.$"
 
 SilphCo_3F_Text_FloorSign::
