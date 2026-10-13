@@ -273,12 +273,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_YoungsterBen2[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherRick[] = {
     {
         .iv = 0,
-        .lvl = 7,
-        .species = SPECIES_WEEDLE,
+        .lvl = 6,
+        .species = SPECIES_RATTATA,
     },
     {
         .iv = 0,
-        .lvl = 7,
+        .lvl = 6,
         .species = SPECIES_CATERPIE,
     },
 };
@@ -286,25 +286,30 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherRick[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherDoug[] = {
     {
         .iv = 0,
-        .lvl = 8,
+        .lvl = 6,
         .species = SPECIES_WEEDLE,
     },
     {
         .iv = 0,
-        .lvl = 8,
-        .species = SPECIES_KAKUNA,
+        .lvl = 6,
+        .species = SPECIES_WEEDLE,
     },
     {
         .iv = 0,
-        .lvl = 8,
-        .species = SPECIES_WEEDLE,
+        .lvl = 6,
+        .species = SPECIES_PIDGEY,
     },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherSammy[] = {
     {
         .iv = 0,
-        .lvl = 10,
+        .lvl = 8,
+        .species = SPECIES_PARAS,
+    },
+    {
+        .iv = 0,
+        .lvl = 8,
         .species = SPECIES_WEEDLE,
     },
 };
@@ -7523,13 +7528,18 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Biker2[] = {DUMMY_TRAINE
 static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherAnthony[] = {
     {
         .iv = 0,
-        .lvl = 8,
+        .lvl = 7,
         .species = SPECIES_CATERPIE,
     },
     {
         .iv = 0,
-        .lvl = 9,
-        .species = SPECIES_CATERPIE,
+        .lvl = 7,
+        .species = SPECIES_METAPOD,
+    },
+    {
+        .iv = 0,
+        .lvl = 7,
+        .species = SPECIES_RATTATA,
     },
 };
 
@@ -7537,17 +7547,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherCharlie[] = {
     {
         .iv = 0,
         .lvl = 8,
-        .species = SPECIES_METAPOD,
-    },
-    {
-        .iv = 0,
-        .lvl = 8,
         .species = SPECIES_CATERPIE,
     },
     {
         .iv = 0,
         .lvl = 8,
         .species = SPECIES_METAPOD,
+    },
+    {
+        .iv = 0,
+        .lvl = 8,
+        .species = SPECIES_KAKUNA,
     },
 };
 
