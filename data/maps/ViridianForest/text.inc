@@ -1,8 +1,8 @@
 ViridianForest_Text_FriendsItchingToBattle::
-    .string "I came here with some friends to\n"
-    .string "catch us some BUG POKéMON!\p"
-    .string "They're all itching to get into\n"
-    .string "some POKéMON battles!$"
+    .string "The forest burned years ago, but\n"
+    .string "the BUG POKéMON came back first!\p"
+    .string "My friends and I came to catch\n"
+    .string "some. They're itching to battle!$"
 
 ViridianForest_Text_RickIntro::
     .string "Hey! You have POKéMON!\n"
