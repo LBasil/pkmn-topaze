@@ -30,3 +30,9 @@ Tout est jouable ; ce qui suit est provisoire. Pour chaque ligne : ce qui est en
 
 ## Autres (déjà listés dans PARCOURS.md / TESTS.md)
 Sprites provisoires de MAJOR BOB, KRONOS/VESPER, HERA, Brice/Flora/N, Gold/Silver ; noms et équipes inventés (TESTS.md « À REPRENDRE »).
+
+## Décisions de Basil (13/10, soir)
+- Sprites : **dernière priorité**.
+- Textes : pas encore décidés.
+- Nom du boss : Claude propose des noms tirés de pierres (liste dans la conversation) ; Basil choisit.
+- Île 7 : la scène **Silver / Red / Giovanni** est voulue comme épreuve finale (Giovanni et Red existent déjà en post-game : route 22 et grotte de Tourmalia ; Silver à ajouter).
