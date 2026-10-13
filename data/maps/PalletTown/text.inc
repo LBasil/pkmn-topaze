@@ -84,9 +84,9 @@ PalletTown_Text_OnybrisGruntDefeat::
 
 PalletTown_Text_OnybrisGruntPostBattle::
     .string "Forget it. You're too late anyway.\p"
-    .string "The GRENAT is in our hands, and the\n"
-    .string "LAB's files on gems were copied while\l"
-    .string "you were busy at the RANCH.\p"
+    .string "The GRENAT and the LAB's gem files\n"
+    .string "left GRENALUX before sunrise.\p"
+    .string "We only stayed to watch the road.\n"
     .string "GRENALUX will see us again...$"
 PalletTown_Text_SchoolSign::
     .string "GRENALUX SCHOOL\n"
@@ -148,13 +148,8 @@ PalletTown_Text_SceneryBerries::
 	.string "Berry bushes for the ranch animals.\n"
 	.string "They are not for picking!$"
 
-PalletTown_Text_AmbMinerA::
-	.string "The ranch alarm woke the whole hill\n"
-	.string "at dawn. Folks in black, they say.\p"
-	.string "The mine is sealed, so it wasn't\n"
-	.string "for ore they came.$"
 
-PalletTown_Text_AmbMinerB::
+PalletTown_Text_AmbMiner::
 	.string "They took the GRENAT from the school.\n"
 	.string "The mine is sealed, but I can feel\l"
 	.string "the vein humming under my boots.\p"
@@ -167,84 +162,48 @@ PalletTown_Text_AmbMinerD::
 	.string "The vein hums for you now. Mind the\n"
 	.string "dark down there.$"
 
-PalletTown_Text_AmbOldmanA::
-	.string "My grandfather carried the first\n"
-	.string "crystal up from the mine. They say\l"
-	.string "the monument hums at night.\p"
-	.string "Lately, it hums louder.$"
 
-PalletTown_Text_AmbOldmanB::
+PalletTown_Text_AmbOldman::
 	.string "Every town keeps a stone of its own,\n"
 	.string "they say. Garnet is ours.\p"
 	.string "Take the stones, and a town forgets\n"
 	.string "its own name.$"
 
-PalletTown_Text_AmbGirlA::
-	.string "The pond turns purple at dusk!\n"
-	.string "My teacher says it is the garnet.\p"
-	.string "She has a real GRENAT at school!$"
 
-PalletTown_Text_AmbGirlB::
+PalletTown_Text_AmbGirl::
 	.string "The school's GRENAT is gone!\n"
 	.string "The pond looks sad today.\p"
 	.string "Don't let them take the monument!$"
 
-PalletTown_Text_AmbBoyA::
-	.string "Some POKéMON got new types when the\n"
-	.string "AURA changed. Even FAIRY is new!\p"
-	.string "Teacher gives a TYPE MEMO to every\n"
-	.string "new trainer. Go and ask her!$"
 
-PalletTown_Text_AmbBoyB::
+PalletTown_Text_AmbBoy::
 	.string "No school today, because of the\n"
 	.string "robbery. But teacher still gives the\l"
 	.string "TYPE MEMO to trainers who ask.$"
 
-PalletTown_Text_AmbScientistA::
-	.string "The lab measures the aura of every\n"
-	.string "crystal in town. The readings jumped\l"
-	.string "this morning.\p"
-	.string "As if something answered from far\n"
-	.string "away.$"
 
-PalletTown_Text_AmbScientistB::
+PalletTown_Text_AmbScientist::
 	.string "The robbers copied our gem files!\n"
 	.string "Now they know where every gem sleeps.\p"
 	.string "Someone must warn the other towns,\n"
 	.string "{PLAYER}!$"
 
-PalletTown_Text_AmbGardenerA::
-	.string "These berries are for ranch animals.\n"
-	.string "Not for picking, sorry!\p"
-	.string "The pens are east, beyond the trees.$"
 
-PalletTown_Text_AmbGardenerB::
+PalletTown_Text_AmbGardener::
 	.string "The ranch lost its tracker POKéMON.\n"
 	.string "The berries just sit there now.\p"
 	.string "Whoever took them will have to feed\n"
 	.string "them. I hope they know how.$"
 
-PalletTown_Text_AmbLadyA::
-	.string "Garnet is the stone of this town.\n"
-	.string "Red roofs, red trees, red stone.\p"
-	.string "The sea road south needs SURF. Come\n"
-	.string "back when you can ride the waves.$"
 
-PalletTown_Text_AmbLadyB::
+PalletTown_Text_AmbLady::
 	.string "Red roofs, red trees, red stone...\n"
 	.string "And now an empty case at school.\p"
 	.string "Tired, {PLAYER}? Go home and let\n"
 	.string "MOM tend to your POKéMON.$"
 
-PalletTown_Text_FatManA::
-	.string "Technology is incredible!\n"
-	.string "You can now store and recall items\l"
-	.string "and POKéMON as data via PC.\p"
-	.string "The PC network was down at dawn.\n"
-	.string "Funny, just when the ranch alarm\l"
-	.string "went off.$"
 
-PalletTown_Text_FatManB::
+PalletTown_Text_FatMan::
 	.string "Did you hear? Robbers hit the school\n"
 	.string "and the LAB! They even copied files\l"
 	.string "from the PC network.\p"

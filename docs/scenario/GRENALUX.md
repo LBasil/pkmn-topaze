@@ -1,31 +1,31 @@
 # Grenalux — script détaillé (parcours du joueur)
 *Généré par `docs/scenario/gen_grenalux.py` à partir des textes du jeu : ce document est toujours à jour avec le code. Les textes sont des placeholders anglais ; seule la structure est figée.*
 
-## 0. États du monde (ce qui change les dialogues)
-| État | Déclencheur | Ce qui change |
-|---|---|---|
-| **A — Avant** | nouvelle partie | Le ranch a été visité à l’aube : les trackers sont volés. Le GRENAT de l’école est encore là. |
-| **B — Ouverture** | le joueur sort au nord (cases 22/23,1) | Le rival l’arrête, le conduit au ranch (père + Chêne), puis tous vont au labo. |
-| **C — Labo** | `VAR_GRENALUX_OPENING`=2 | Choix du partenaire, combat du rival, Chêne explique. |
-| **D — Le coup** | combat contre le sbire d’Onybris (22,6) gagné → `FLAG_GRENALUX_ONYBRIS_STRIKE` | Le GRENAT de l’école et les fichiers du labo ont été volés pendant que tout le monde était au ranch. Tous les PNJ passent en texte « après ». La clôture du ranch est coupée, Doduo et les deux Nidoran ont disparu. |
-| **E — Arènes** | `FLAG_BADGE01..08_GET` | Maman rappelle l’objectif à chaque badge ; Chêne parle après l’arène 4. |
-| **F — Après la Ligue** | `FLAG_SYS_GAME_CLEAR` | La mine peut s’ouvrir (porte non construite : voir « Reste à faire »). |
+## 0. Principe : un seul raid, à l’aube
+Avant que le jeu commence, TEAM ONYBRIS a frappé **trois lieux d’un coup, à l’aube** : le ranch (trackers volés, clôture coupée), l’école (le GRENAT) et le labo (fichiers sur les gemmes copiés à 4h12). Toute la ville le sait dès la première minute : il n’y a donc **pas** de « avant / après » dans les dialogues de Grenalux. Le drapeau `FLAG_GRENALUX_ONYBRIS_STRIKE` est posé au premier chargement de la ville.
 
-Objets clés liés à Grenalux : **TYPE MEMO** (école, état C/D), **GRENAT** (ranch, quand `FLAG_ONYBRIS_ANIMALS_FOUND`, posé à Bourg Quartz).
+| Moment | Ce qui change |
+|---|---|
+| Début de partie | Tout le raid est déjà fait : école et ranch en désordre, PNJ au courant. |
+| Après le combat du rival au labo | Le sbire d’Onybris apparaît sur la route (22,6) : il surveille la sortie. |
+| Après chaque arène | Rien ne change à Grenalux (maman soigne seulement). Chêne a un passage après l’arène 4. |
+| Après la Ligue (`FLAG_SYS_GAME_CLEAR`) | Mineur et scène finale de Chêne ; la mine pourra s’ouvrir (intérieur à construire). |
+
+Objets liés à Grenalux : **TYPE MEMO** (professeure) et **GRENAT** (ouvrier du ranch, quand `FLAG_ONYBRIS_ANIMALS_FOUND`, posé à Bourg Quartz).
 
 ## 1. Chronologie du joueur
-1. **Début** : discours de Chêne d’origine (nom, genre) → le joueur se réveille dans sa chambre (2F de la maison, `PalletTown_PlayersHouse_2F`).
-2. **Chambre** : PC, console, panneau d’aide (textes d’origine). Escalier (10,2) → rez-de-chaussée.
-3. **Rez-de-chaussée** : Maman (8,4) parle la première fois (texte « premier passage » ci-dessous), la télé (6,1) se lit seulement de face.
-4. **Dehors** : 8 PNJ d’ambiance + panneaux de lieux + école + labo + maison du rival.
-5. **Sortie nord** : le rival (cases 22,1 / 23,1) → ranch → scène du père et de Chêne → labo.
-6. **Labo** : choix du partenaire, combat du rival.
-7. **Sortie du labo** : sbire d’Onybris sur la route (22,6) → combat → état D.
-8. **Route 1** : le joueur peut partir. Maman soigne et rappelle l’objectif à chaque retour.
+1. **Début** : discours de Chêne d’origine (nom, genre) → le joueur se réveille dans sa chambre (2F).
+2. **Chambre** : PC, console, panneau d’aide (textes d’origine). Escalier → rez-de-chaussée.
+3. **Rez-de-chaussée** : maman annonce le raid de l’aube et conseille d’interroger les gens. La télé se lit de face.
+4. **Dehors** : PNJ et panneaux commentent le raid ; école (vitrine vide, TYPE MEMO) ; labo ; maison du rival.
+5. **Sortie nord** : le rival l’arrête → ranch (père + Chêne) → labo.
+6. **Labo** : choix du partenaire, combat du rival, Chêne explique.
+7. **Sortie du labo** : sbire d’Onybris (22,6) → combat → route 1.
+8. **Retours** : maman soigne gratuitement (sans parler des badges).
 
 ## 2. Maison du joueur
 
-**Maman** (8,4 rez-de-chaussée) — *premier passage (avant le combat du rival), garçon*
+**Maman** (8,4 rez-de-chaussée) — *premier passage, garçon*
 
 > MOM: …Right.
 > All boys leave home someday.
@@ -34,11 +34,12 @@ Objets clés liés à Grenalux : **TYPE MEMO** (école, état C/D), **GRENAT** (
 > But don't go out in your slippers!
 > Put on your sports shoes first.
 > — — —
-> Oh, and something happened at the
-> RANCH this morning. People in black.
+> Oh, and the whole town is talking
+> about a raid at dawn. The RANCH, the
+> SCHOOL, even the LAB. People in black.
 > — — —
-> Ask around town before you go
-> anywhere, dear.
+> Ask around before you go anywhere,
+> dear.
 
 **Maman** (8,4) — *premier passage, fille*
 
@@ -49,67 +50,25 @@ Objets clés liés à Grenalux : **TYPE MEMO** (école, état C/D), **GRENAT** (
 > But don't go out in your slippers!
 > Put on your sports shoes first.
 > — — —
-> Oh, and something happened at the
-> RANCH this morning. People in black.
+> Oh, and the whole town is talking
+> about a raid at dawn. The RANCH, the
+> SCHOOL, even the LAB. People in black.
 > — — —
-> Ask around town before you go
-> anywhere, dear.
+> Ask around before you go anywhere,
+> dear.
 
-Après le combat du rival : soin gratuit (`EventScript_OutOfCenterPartyHeal`), puis :
+Après le combat du rival : soin gratuit, puis :
 
 **Maman** (8,4) — *soin*
 
 > MOM: {PLAYER}!
 > You should take a quick rest.
 
-**Maman — rappel** (8,4) — *0 badge(s)*
+**Maman** (8,4) — *après le soin*
 
-> MOM: Those people in black stole our
-> ranch's trackers. Ask around the next
-> towns; someone must have seen them.
-
-**Maman — rappel** (8,4) — *1 badge(s)*
-
-> MOM: One BADGE already! The people in
-> black were seen heading east. Keep
-> your POKéMON close.
-
-**Maman — rappel** (8,4) — *2 badge(s)*
-
-> MOM: Two BADGES. Every town keeps a gem,
-> {PLAYER}. Make sure TEAM ONYBRIS
-> doesn't take them all.
-
-**Maman — rappel** (8,4) — *3 badge(s)*
-
-> MOM: Three BADGES! I saw TEAM ONYBRIS on
-> the news. They talk about freedom,
-> but they only take.
-
-**Maman — rappel** (8,4) — *4 badge(s)*
-
-> MOM: Four BADGES. PROF. OAK wants to see
-> you. He sounded worried on the phone.
-
-**Maman — rappel** (8,4) — *5 badge(s)*
-
-> MOM: Five BADGES. You look taller every
-> time you come home. Eat something!
-
-**Maman — rappel** (8,4) — *6 badge(s)*
-
-> MOM: Six BADGES. Whatever they are after,
-> you're closer to it than they are.
-
-**Maman — rappel** (8,4) — *7 badge(s)*
-
-> MOM: Seven BADGES... One more, and then
-> the LEAGUE. I'll keep your room warm.
-
-**Maman — rappel** (8,4) — *8 badge(s)*
-
-> MOM: All eight BADGES! Go to the LEAGUE.
-> I'll be watching it on TV.
+> MOM: Oh, good! You and your
+> POKéMON are looking great.
+> Take care now!
 
 **Panneaux** : télé (6,1), PC/console/panneau de la chambre : textes d’origine.
 
@@ -159,17 +118,9 @@ Après le combat du rival : soin gratuit (`EventScript_OutOfCenterPartyHeal`), p
 > Berry bushes for the ranch animals.
 > They are not for picking!
 
-### PNJ — avant / après le coup d’Onybris / après la Ligue
+### PNJ
 
 #### Mineur (41,26)
-
-> The ranch alarm woke the whole hill
-> at dawn. Folks in black, they say.
-> — — —
-> The mine is sealed, so it wasn't
-> for ore they came.
-
-**Après le coup :**
 
 > They took the GRENAT from the school.
 > The mine is sealed, but I can feel
@@ -188,14 +139,6 @@ Après le combat du rival : soin gratuit (`EventScript_OutOfCenterPartyHeal`), p
 
 #### Vieil homme (19,22)
 
-> My grandfather carried the first
-> crystal up from the mine. They say
-> the monument hums at night.
-> — — —
-> Lately, it hums louder.
-
-**Après le coup :**
-
 > Every town keeps a stone of its own,
 > they say. Garnet is ours.
 > — — —
@@ -204,13 +147,6 @@ Après le combat du rival : soin gratuit (`EventScript_OutOfCenterPartyHeal`), p
 
 #### Fillette (17,30 (se promène))
 
-> The pond turns purple at dusk!
-> My teacher says it is the garnet.
-> — — —
-> She has a real GRENAT at school!
-
-**Après le coup :**
-
 > The school's GRENAT is gone!
 > The pond looks sad today.
 > — — —
@@ -218,28 +154,11 @@ Après le combat du rival : soin gratuit (`EventScript_OutOfCenterPartyHeal`), p
 
 #### Garçon (29,31 (se promène))
 
-> Some POKéMON got new types when the
-> AURA changed. Even FAIRY is new!
-> — — —
-> Teacher gives a TYPE MEMO to every
-> new trainer. Go and ask her!
-
-**Après le coup :**
-
 > No school today, because of the
 > robbery. But teacher still gives the
 > TYPE MEMO to trainers who ask.
 
 #### Scientifique (33,23)
-
-> The lab measures the aura of every
-> crystal in town. The readings jumped
-> this morning.
-> — — —
-> As if something answered from far
-> away.
-
-**Après le coup :**
 
 > The robbers copied our gem files!
 > Now they know where every gem sleeps.
@@ -249,13 +168,6 @@ Après le combat du rival : soin gratuit (`EventScript_OutOfCenterPartyHeal`), p
 
 #### Jardinière (31,8)
 
-> These berries are for ranch animals.
-> Not for picking, sorry!
-> — — —
-> The pens are east, beyond the trees.
-
-**Après le coup :**
-
 > The ranch lost its tracker POKéMON.
 > The berries just sit there now.
 > — — —
@@ -264,14 +176,6 @@ Après le combat du rival : soin gratuit (`EventScript_OutOfCenterPartyHeal`), p
 
 #### Dame (36,23)
 
-> Garnet is the stone of this town.
-> Red roofs, red trees, red stone.
-> — — —
-> The sea road south needs SURF. Come
-> back when you can ride the waves.
-
-**Après le coup :**
-
 > Red roofs, red trees, red stone...
 > And now an empty case at school.
 > — — —
@@ -279,16 +183,6 @@ Après le combat du rival : soin gratuit (`EventScript_OutOfCenterPartyHeal`), p
 > MOM tend to your POKéMON.
 
 #### Homme (PC) (19,19 (se promène))
-
-> Technology is incredible!
-> You can now store and recall items
-> and POKéMON as data via PC.
-> — — —
-> The PC network was down at dawn.
-> Funny, just when the ranch alarm
-> went off.
-
-**Après le coup :**
 
 > Did you hear? Robbers hit the school
 > and the LAB! They even copied files
@@ -346,13 +240,13 @@ Après le combat du rival : soin gratuit (`EventScript_OutOfCenterPartyHeal`), p
 
 > Forget it. You're too late anyway.
 > — — —
-> The GRENAT is in our hands, and the
-> LAB's files on gems were copied while
-> you were busy at the RANCH.
+> The GRENAT and the LAB's gem files
+> left GRENALUX before sunrise.
 > — — —
+> We only stayed to watch the road.
 > GRENALUX will see us again...
 
-Effets : le sbire disparaît, `FLAG_GRENALUX_ONYBRIS_STRIKE` est posé (état D).
+Effet : le sbire disparaît (il ne révèle plus le vol : il dit seulement que tout est déjà loin).
 
 
 ## 4. Le ranch du rival (maison, `PalletTown_RivalsHouse`) — scène d’ouverture
@@ -383,7 +277,7 @@ Effets : le sbire disparaît, `FLAG_GRENALUX_ONYBRIS_STRIKE` est posé (état D)
 
 Fondu → labo (6,12).
 
-**Daisy** (10,6) — *après le coup (après le combat du rival)*
+**Daisy** (10,6) — *toujours (après le combat du rival)*
 
 > DAISY: Dad is mending the fence,
 > and Grandpa is not himself.
@@ -396,48 +290,14 @@ Autres états de Daisy (carte du monde, toilettage après la Ligue) : textes d�
 
 ## 5. L’école (`PalletTown_School`)
 
-**Professeure** (6,2) — *avant le coup, 1re visite*
-
-> Welcome to the GRENALUX SCHOOL!
-> — — —
-> Our pride is the GRENAT in the science
-> case, a gem that hums when a POKéMON's
-> AURA is near.
-> — — —
-> Legend says the GRENAT is tied to
-> JIRACHI's wish. Ten years ago, the
-> AURA changed every POKéMON's type...
-> — — —
-> Funny how nobody knows why.
-
-**Professeure** () — *suite : cours*
-
-> Since you are here, a short lesson.
-> — — —
-> Ten years ago the AURA changed the
-> types of many POKéMON. FIRE ones may
-> now be ICE, and WATER ones STEEL.
-> — — —
-> A new type also appeared: FAIRY.
-> It beats DRAGON, FIGHTING and DARK,
-> but POISON and STEEL beat it.
-> — — —
-> Never trust a POKéMON's old type.
-> Check it in the SUMMARY first!
-
-**Professeure** () — *fin du cours*
-
-> I wrote it all down for you.
-> Read it whenever you doubt.
-
 **Professeure** () — *visites suivantes*
 
 > Remember: check a POKéMON's type in
 > the SUMMARY. The old ones lie.
 
-**Professeure** () — *après le coup*
+**Professeure** () — *1re visite*
 
-> They came this morning, all in black.
+> They came at dawn, all in black.
 > They took the GRENAT before I could
 > even reach the alarm.
 > — — —
@@ -447,7 +307,7 @@ Autres états de Daisy (carte du monde, toilettage après la Ligue) : textes d�
 > — — —
 > There is no class today.
 
-**Professeure** () — *après le coup, si pas de mémo*
+**Professeure** () — *puis : remise du mémo*
 
 > Still, a teacher teaches. Types changed
 > ten years ago, and FAIRY now beats
@@ -455,15 +315,7 @@ Autres états de Daisy (carte du monde, toilettage après la Ligue) : textes d�
 > — — —
 > I wrote it down for you.
 
-**Élève** (4,5) — *avant*
-
-> My grandpa says FIRE POKéMON were
-> only FIRE once. Now look at them...
-> — — —
-> He says the world turned upside down,
-> and all he did was grow old.
-
-**Élève** () — *après*
+**Élève** () — *toujours*
 
 > Grandpa says thieves used to hide
 > their faces. These ones were proud
@@ -472,13 +324,7 @@ Autres états de Daisy (carte du monde, toilettage après la Ligue) : textes d�
 > We got the day off, but nobody feels
 > like playing.
 
-**Vitrine du GRENAT** (8-9,2) — *avant*
-
-> A glass case on the science shelf.
-> It holds the GRENAT, a deep red gem
-> that glows when POKéMON gather near.
-
-**Vitrine** () — *après*
+**Vitrine du GRENAT** (8-9,2) — *toujours*
 
 > The glass case is empty. A note is
 > left behind: POKéMON were never
@@ -492,9 +338,9 @@ Autres états de Daisy (carte du monde, toilettage après la Ligue) : textes d�
 
 
 ## 6. Le laboratoire (`PalletTown_ProfessorOaksLab`)
-Choix du partenaire et combat du rival : scènes d’origine (adaptées au rival de Topaze). Après le coup :
+Choix du partenaire et combat du rival : scènes d’origine (adaptées au rival de Topaze). Dès le début :
 
-**Assistant 1** (3,11) — *après le coup*
+**Assistant 1** (3,11) — *toujours*
 
 > Someone got into the archive room
 > last night and copied every file
@@ -503,7 +349,7 @@ Choix du partenaire et combat du rival : scènes d’origine (adaptées au rival
 > Nothing else was touched. That's
 > what scares me.
 
-**Assistant 2** (11,10) — *après le coup*
+**Assistant 2** (11,10) — *toujours*
 
 > The PROF. says the GRENAT in the
 > museum and the files here are two
@@ -512,7 +358,7 @@ Choix du partenaire et combat du rival : scènes d’origine (adaptées au rival
 > Whoever hit both knows exactly what
 > they're after.
 
-**Ordinateur** (2-3,1) — *après le coup*
+**Ordinateur** (2-3,1) — *toujours*
 
 > ACCESS LOG: archive opened at 4:12.
 > Files copied: GEMSTONES, AURA
@@ -535,23 +381,12 @@ Chêne : retour 1 = scène du colis (Pokédex), retour final = scène du Pokéde
 
 ## 7. Le ranch (`PalletTown_Ranch`, zone extérieure)
 
-**Ouvrier 1** (9,7) — *avant*
-
-> This ranch runs from the town wall
-> to the far fences. It takes ten of
-> us to look after it all.
-
-**Ouvrier 1** (9,7) — *après le coup*
+**Ouvrier 1** (9,7) — *toujours*
 
 > The east fence was cut last night.
 > On a ranch this big, no one saw.
 
-**Ouvrier 2** (14,12) — *avant*
-
-> The east pasture is so far out, we
-> only check it twice a day.
-
-**Ouvrier 2** (14,12) — *après le coup*
+**Ouvrier 2** (14,12) — *toujours*
 
 > They took the tracker POKéMON from
 > the pens. The fence was cut open.
@@ -575,12 +410,12 @@ Chêne : retour 1 = scène du colis (Pokédex), retour final = scène du Pokéde
 > The animals are calm again.
 > Thank you for everything.
 
-**Ouvrier 3** (28,13 (apparaît après le coup, clôture coupée)) — *après le coup*
+**Ouvrier 3** (28,13 (clôture coupée)) — *toujours*
 
 > The pens were shut tight last night.
 > Now look at this fence...
 
-Animaux (Slowpoke, Psyduck, Meowth, Jigglypuff, Doduo, Nidoran) : cris et phrases d’ambiance ; Doduo et les deux Nidoran disparaissent après le coup.
+Animaux (Slowpoke, Psyduck, Meowth, Jigglypuff, Doduo, Nidoran) : cris et phrases d’ambiance ; Doduo et les deux Nidoran ont été volés à l’aube (absents).
 
 
 ## 8. Reste à faire sur Grenalux

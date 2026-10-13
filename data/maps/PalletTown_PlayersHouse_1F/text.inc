@@ -4,10 +4,11 @@ PalletTown_PlayersHouse_1F_Text_AllBoysLeaveOakLookingForYou::
     .string "It said so on TV.\p"
     .string "But don't go out in your slippers!\n"
     .string "Put on your sports shoes first.\p"
-    .string "Oh, and something happened at the\n"
-    .string "RANCH this morning. People in black.\p"
-    .string "Ask around town before you go\n"
-    .string "anywhere, dear.$"
+    .string "Oh, and the whole town is talking\n"
+    .string "about a raid at dawn. The RANCH, the\l"
+    .string "SCHOOL, even the LAB. People in black.\p"
+    .string "Ask around before you go anywhere,\n"
+    .string "dear.$"
 
 PalletTown_PlayersHouse_1F_Text_AllGirlsLeaveOakLookingForYou::
     .string "MOM: …Right.\n"
@@ -15,10 +16,11 @@ PalletTown_PlayersHouse_1F_Text_AllGirlsLeaveOakLookingForYou::
     .string "It said so on TV.\p"
     .string "But don't go out in your slippers!\n"
     .string "Put on your sports shoes first.\p"
-    .string "Oh, and something happened at the\n"
-    .string "RANCH this morning. People in black.\p"
-    .string "Ask around town before you go\n"
-    .string "anywhere, dear.$"
+    .string "Oh, and the whole town is talking\n"
+    .string "about a raid at dawn. The RANCH, the\l"
+    .string "SCHOOL, even the LAB. People in black.\p"
+    .string "Ask around before you go anywhere,\n"
+    .string "dear.$"
 
 PalletTown_PlayersHouse_1F_Text_YouShouldTakeQuickRest::
     .string "MOM: {PLAYER}!\n"
@@ -45,42 +47,3 @@ PalletTown_PlayersHouse_1F_Text_OopsWrongSide::
     .string "Oops, wrong side…$"
 
 
-PalletTown_PlayersHouse_1F_Text_MomB0::
-    .string "MOM: Those people in black stole our\n"
-    .string "ranch's trackers. Ask around the next\n"
-    .string "towns; someone must have seen them.$"
-
-PalletTown_PlayersHouse_1F_Text_MomB1::
-    .string "MOM: One BADGE already! The people in\n"
-    .string "black were seen heading east. Keep\n"
-    .string "your POKéMON close.$"
-
-PalletTown_PlayersHouse_1F_Text_MomB2::
-    .string "MOM: Two BADGES. Every town keeps a gem,\n"
-    .string "{PLAYER}. Make sure TEAM ONYBRIS\n"
-    .string "doesn't take them all.$"
-
-PalletTown_PlayersHouse_1F_Text_MomB3::
-    .string "MOM: Three BADGES! I saw TEAM ONYBRIS on\n"
-    .string "the news. They talk about freedom,\n"
-    .string "but they only take.$"
-
-PalletTown_PlayersHouse_1F_Text_MomB4::
-    .string "MOM: Four BADGES. PROF. OAK wants to see\n"
-    .string "you. He sounded worried on the phone.$"
-
-PalletTown_PlayersHouse_1F_Text_MomB5::
-    .string "MOM: Five BADGES. You look taller every\n"
-    .string "time you come home. Eat something!$"
-
-PalletTown_PlayersHouse_1F_Text_MomB6::
-    .string "MOM: Six BADGES. Whatever they are after,\n"
-    .string "you're closer to it than they are.$"
-
-PalletTown_PlayersHouse_1F_Text_MomB7::
-    .string "MOM: Seven BADGES... One more, and then\n"
-    .string "the LEAGUE. I'll keep your room warm.$"
-
-PalletTown_PlayersHouse_1F_Text_MomB8::
-    .string "MOM: All eight BADGES! Go to the LEAGUE.\n"
-    .string "I'll be watching it on TV.$"
