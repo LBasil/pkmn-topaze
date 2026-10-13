@@ -91,11 +91,11 @@ CeruleanCity_Text_PokemonEncyclopediaAmusing::
     .string "You're making an encyclopedia on\n"
     .string "POKéMON? That sounds amusing.$"
 
-CeruleanCity_Text_PeopleHereWereRobbed::
-    .string "The ONYBRIS broke into a house\n"
-    .string "through a tunnel, then took the\p"
-    .string "TOURMALINE from the great tree.\n"
-    .string "Our POLICE can't keep up!$"
+CeruleanCity_Text_EastPassClosed::
+    .string "POLICEMAN: The east pass is shut.\n"
+    .string "Nobody goes through until this\p"
+    .string "TEAM ONYBRIS business is settled.\n"
+    .string "Sorry, move along.$"
 
 CeruleanCity_Text_SlowbroUseSonicboom::
     .string "Okay! SLOWBRO!\n"

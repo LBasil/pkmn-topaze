@@ -6,6 +6,8 @@ CeruleanCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_CERULEAN_CITY
 	call_if_unset FLAG_GOT_SS_TICKET, CeruleanCity_EventScript_BlockExits
 	call_if_set FLAG_BADGE02_GET, CeruleanCity_EventScript_NorthPoliceLeaves
+	setflag FLAG_HIDE_CERULEAN_ROCKET
+	setvar VAR_MAP_SCENE_CERULEAN_CITY_ROCKET, 1
 	end
 
 CeruleanCity_EventScript_NorthPoliceLeaves::
@@ -254,7 +256,7 @@ CeruleanCity_EventScript_GruntTrigger::
 CeruleanCity_EventScript_Policeman::
 	lock
 	faceplayer
-	msgbox CeruleanCity_Text_PeopleHereWereRobbed
+	msgbox CeruleanCity_Text_EastPassClosed
 	closemessage
 	applymovement LOCALID_CERULEAN_POLICEMAN, Common_Movement_FaceOriginalDirection
 	waitmovement 0

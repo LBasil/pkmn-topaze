@@ -6,6 +6,15 @@ CeruleanCity_House2_EventScript_Hiker::
 	faceplayer
 	goto_if_set FLAG_GOT_TM28_FROM_ROCKET, CeruleanCity_House2_EventScript_HikerGotTM28
 	msgbox CeruleanCity_House2_Text_RocketsStoleTMForDig
+	checkitemspace ITEM_TM28
+	goto_if_eq VAR_RESULT, FALSE, CeruleanCity_House2_EventScript_NoRoomForTM28
+	giveitem ITEM_TM28
+	setflag FLAG_GOT_TM28_FROM_ROCKET
+	release
+	end
+
+CeruleanCity_House2_EventScript_NoRoomForTM28::
+	msgbox CeruleanCity_House2_Text_MakeRoomForTM28
 	release
 	end
 

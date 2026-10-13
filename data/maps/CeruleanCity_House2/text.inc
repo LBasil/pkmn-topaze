@@ -1,22 +1,22 @@
 CeruleanCity_House2_Text_RocketsStoleTMForDig::
-    .string "Those miserable ONYBRIS!\p"
-    .string "Look what they've done to my\n"
-    .string "house!\p"
-    .string "They stole a TM for teaching\n"
-    .string "POKéMON how to DIG holes!\p"
-    .string "I was going to use it on a\n"
-    .string "MANKEY or a SANDSHREW…\p"
-    .string "That cost me a bundle, it did!$"
+    .string "My DIGLETT dug a tunnel from the\n"
+    .string "back wall to the garden. Handy!\p"
+    .string "I don't need this TM anymore.\n"
+    .string "Here, it teaches DIG. Take it!$"
 
 CeruleanCity_House2_Text_TeachDiglettDigWithoutTM::
-    .string "I figure what's lost is lost.\p"
-    .string "I decided to teach DIGLETT how to\n"
-    .string "DIG without a TM.$"
+    .string "DIGLETT never needed a TM to DIG.\n"
+    .string "It just loves the dirt.$"
 
 CeruleanCity_House2_Text_TeamRocketTryingToDigIntoNoGood::
-    .string "TEAM ONYBRIS must be trying to DIG\n"
-    .string "their way into no good!$"
+    .string "Dad's DIGLETT made that tunnel.\n"
+    .string "Mind your step in the garden!$"
 
 CeruleanCity_House2_Text_TeamRocketLeftWayOut::
-    .string "TEAM ONYBRIS left a way out!$"
+    .string "A tunnel dug by DIGLETT.\n"
+    .string "It leads out to the garden.$"
 
+
+CeruleanCity_House2_Text_MakeRoomForTM28::
+    .string "Your bag is full. Make room\n"
+    .string "and come back for the TM.$"
