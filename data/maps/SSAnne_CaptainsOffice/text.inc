@@ -12,15 +12,17 @@ SSAnne_CaptainsOffice_Text_RubbedCaptainsBack::
 SSAnne_CaptainsOffice_Text_ThankYouHaveHMForCut::
     .string "CAPTAIN: Whew! Thank you!\n"
     .string "I'm feeling much better now.\p"
-    .string "Men in black burst in last night\n"
-    .string "and stole the ship's chart of\l"
-    .string "the SEVII ISLANDS.\p"
-    .string "A speedboat picked them up and\n"
-    .string "sped off toward the islands.\p"
-    .string "I can't chase them like this...\n"
-    .string "Take this HIDDEN MACHINE!\p"
-    .string "Teach CUT to your POKéMON, and\n"
-    .string "you can chop down small trees!$"
+    .string "Those men in black wanted the\n"
+    .string "APATITE HERA lent me for the gala.\p"
+    .string "I hid it in my safe, and you\n"
+    .string "arrived just in time! Splendid!\p"
+    .string "They'll flee by speedboat to the\n"
+    .string "SEVII ISLANDS, I bet.\p"
+    .string "Here, a HIDDEN MACHINE as thanks.\n"
+    .string "Teach CUT to your POKéMON, and\l"
+    .string "chop down small trees!\p"
+    .string "I'll return the APATITE to HERA\n"
+    .string "myself. Go and challenge her!$"
 
 SSAnne_CaptainsOffice_Text_ObtainedHM01FromCaptain::
     .string "{PLAYER} obtained HM01\n"
@@ -52,3 +54,15 @@ SSAnne_CaptainsOffice_Text_HowToConquerSeasickness::
     .string "How to Conquer Seasickness…\n"
     .string "The CAPTAIN's reading this!$"
 
+
+SSAnne_CaptainsOffice_Text_GruntIntro::
+    .string "Hand over the APATITE, old man!\n"
+    .string "Oh... a kid? Get lost!$"
+
+SSAnne_CaptainsOffice_Text_GruntDefeat::
+    .string "Impossible! TEAM ONYBRIS never\n"
+    .string "loses to kids!$"
+
+SSAnne_CaptainsOffice_Text_GruntPostBattle::
+    .string "Tch! The others got away with the\n"
+    .string "chart. Our boss will hear of this!$"

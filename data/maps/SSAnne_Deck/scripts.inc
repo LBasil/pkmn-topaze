@@ -18,7 +18,6 @@ SSAnne_Deck_EventScript_Edmond::
 	msgbox SSAnne_Deck_Text_EdmondPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-SSAnne_Deck_EventScript_Trevor::
-	trainerbattle_single TRAINER_SAILOR_TREVOR, SSAnne_Deck_Text_TrevorIntro, SSAnne_Deck_Text_TrevorDefeat
-	msgbox SSAnne_Deck_Text_TrevorPostBattle, MSGBOX_AUTOCLOSE
+SSAnne_Deck_EventScript_SailorTrevor::
+	msgbox SSAnne_Deck_Text_TrevorPostBattle, MSGBOX_NPC
 	end

@@ -45,3 +45,8 @@ SSAnne_CaptainsOffice_EventScript_TrashCan::
 SSAnne_CaptainsOffice_EventScript_Book::
 	msgbox SSAnne_CaptainsOffice_Text_HowToConquerSeasickness, MSGBOX_SIGN
 	end
+
+SSAnne_CaptainsOffice_EventScript_Grunt::
+	trainerbattle_single TRAINER_SAILOR_TREVOR, SSAnne_CaptainsOffice_Text_GruntIntro, SSAnne_CaptainsOffice_Text_GruntDefeat
+	msgbox SSAnne_CaptainsOffice_Text_GruntPostBattle, MSGBOX_AUTOCLOSE
+	end

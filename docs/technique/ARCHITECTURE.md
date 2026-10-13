@@ -249,9 +249,10 @@ Carte et événements inchangés (route abandonnée, chaumière de Bill). **Nive
 ## Routes 5 et 6 + chemin souterrain : scénario (à valider par Basil)
 Chemin du joueur après le ticket : Tourmalia → **Route 5** (pension, panneau du chemin souterrain) → **Chemin souterrain** (entrée nord, tunnel, entrée sud : cartes d'origine, textes inchangés) → **Route 6** → Apatia. Les gardes d'Hematown (thé) restent verrouillés : Hematown n'est pas sur ce chemin. Route 5 : aucun dresseur ; sauvages Miaouss/Roucool/Mystherbe/Chétiflor/Mimitoss/Férosinge niv. 20-23 (forêt de Tourmalia qui monte). Route 6 (brume, nids, Apatia) : oiseaux et terrain venteux (Piafabec, Roucool, Doduo, Miaouss, Férosinge niv. 22-26, eau douce Psykokwak 20-30) ; dresseurs niv. 22-25 : Keigo Aspicot-Chenipan-Mimitoss 22 ; Ricky Férosinge/Piafabec 24 ; Nancy Miaouss 24/Pikachu 25 ; Elijah Papilusion 25 ; Isabelle Roucoups 24/Piafabec 24/Doduo 24 ; Jeff Piafabec 24/Rattatac 25 (dit avoir vu des hommes en noir porter un sac lourd dans le tunnel à l'aube). Non testé en émulateur.
 
-## Apatia (ex-Vermilion) et S.S. ANNE
-- Etat : le vol d'APATITE a deja eu lieu (PNJ Woman/OldMan1, texte post-combat de HERA : voleurs en fuite vers le port, puis BOURG QUARTZ).
-- Sortie est (route 11) : 3 policiers a (46,18..20), flag FLAG_TEMP_13, masques en OnTransition si FLAG_GOT_HM01 (CS Coupe donnee par le capitaine).
-- Ticket S.S. ANNE : donne dans la maison de la cote (Route 25, scene Misty). Verification du ticket inchangee.
-- S.S. ANNE 2F : rival (TERRY) L24/22/24/26, texte : il suit les hommes en noir. Capitaine : les voleurs ont vole la carte des iles Sevii et fui en hors-bord (lie a "Gone to the islands" de Bill).
-- Images : les maps interieures du bateau ne sont pas rendues par mapkit (tileset SSAnne manquant).
+## Apatia (ex-Vermilion) et S.S. ANNE (version "on arrive a temps")
+- Le vol d'APATITE n'a PAS eu lieu : HERA a prete la gemme au capitaine pour le gala du S.S. ANNE ; Onybris vise le bateau (PNJ Apatia l'annoncent).
+- Arene gatee : tant que FLAG_GOT_HM01 n'est pas pose, HERA envoie le joueur au port (VermilionCity_Gym_EventScript_WaitForShip). Apres, post-combat : le capitaine l'a appelee.
+- Bureau du capitaine : grunt (TRAINER_SAILOR_TREVOR recycle, Ekans 24/Zubat 25, vue 2 en (3,5)) ; le capitaine avait cache la gemme dans son coffre, donne CUT et ramene lui-meme la gemme a HERA. Trevor du pont devient un marin PNJ.
+- Sortie est d'Apatia : 3 policiers (46,18..20, FLAG_TEMP_13) masques si FLAG_GOT_HM01.
+- Rival TERRY (couloir 2F) L24/22/24/26 : il suit les hommes en noir et envoie le joueur au capitaine. Les voleurs fuient en hors-bord vers les Sevii (lien avec le mot de Bill).
+- Ordre : ticket (cottage R25) -> bateau (rival, grunt, CUT) -> arene HERA -> sortie est ouverte.

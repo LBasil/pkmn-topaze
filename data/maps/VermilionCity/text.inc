@@ -1,20 +1,21 @@
 VermilionCity_Text_GrimerMultipliesInSludge::
-    .string "Did you hear? The APATITE was\n"
-    .string "stolen from the GYM's vault last\p"
-    .string "night. People in black, they say.\n"
-    .string "HERA is furious!$"
+    .string "HERA lent her APATITE to the\n"
+    .string "S.S. ANNE for the cruise's gala.\p"
+    .string "Between us, I hope nothing happens\n"
+    .string "to it. Folks in black were seen\l"
+    .string "near the harbor!$"
 
 VermilionCity_Text_DidYouSeeSSAnneInHarbor::
     .string "The S.S. ANNE is moored in the\n"
-    .string "harbor. Odd, though...\p"
-    .string "Men in black went aboard before\n"
-    .string "dawn. Nobody saw them come back.$"
+    .string "harbor. HERA's APATITE is aboard!\p"
+    .string "Strange men in black went on board\n"
+    .string "before dawn. I smell trouble.$"
 
 VermilionCity_Text_EastBlocked::
     .string "Sorry, the east road is closed.\p"
-    .string "Thieves are on the loose. Until\n"
-    .string "the culprits are caught, nobody\l"
-    .string "leaves APATIA by this road.$"
+    .string "Thieves are lurking around the\n"
+    .string "harbor. Until things are settled,\l"
+    .string "nobody leaves APATIA this way.$"
 
 VermilionCity_Text_SSAnneHasDepartedForYear::
     .string "So, the S.S. ANNE has departed?\p"

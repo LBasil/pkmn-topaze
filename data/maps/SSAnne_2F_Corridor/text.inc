@@ -27,11 +27,9 @@ SSAnne_2F_Corridor_Text_RivalVictory::
 
 SSAnne_2F_Corridor_Text_RivalPostBattle::
     .string "{RIVAL}: The crew says the thieves\n"
-    .string "stormed the CAPTAIN's office.\p"
-    .string "But the CAPTAIN is just a seasick\n"
-    .string "old man. He's no help to me!\p"
-    .string "You should still go see him. He\n"
-    .string "knows how to use CUT.\p"
-    .string "I'm checking the lower decks.\n"
-    .string "Smell ya!$"
+    .string "went for the CAPTAIN's office.\p"
+    .string "The CAPTAIN is a seasick old man,\n"
+    .string "but he has the APATITE!\p"
+    .string "Hurry there, you can use CUT too\n"
+    .string "if you help him. Smell ya!$"
 

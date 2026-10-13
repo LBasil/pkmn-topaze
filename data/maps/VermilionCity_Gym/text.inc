@@ -10,11 +10,11 @@ VermilionCity_Gym_Text_LtSurgeIntro::
     .string "you've got!$"
 
 VermilionCity_Gym_Text_LtSurgePostBattle::
-    .string "The thieves who took my APATITE\n"
-    .string "fled toward the harbor. Check the\p"
-    .string "S.S. ANNE. Then keep climbing, kid.\n"
-    .string "BOURG QUARTZ is next, and it's very\p"
-    .string "cold there. Dress warmly.$"
+    .string "The CAPTAIN called me: you saved\n"
+    .string "my APATITE from those thieves.\p"
+    .string "Take my badge as thanks. Now keep\n"
+    .string "climbing, kid. BOURG QUARTZ is\l"
+    .string "next, and it's very cold there.$"
 
 VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis::
     .string "The APATITE BADGE lets your\n"
@@ -136,3 +136,9 @@ VermilionCity_Gym_Text_OnlyTrashLocksWereReset::
     .string "Hey!\n"
     .string "The electric locks were reset!$"
 
+
+VermilionCity_Gym_Text_WaitForShip::
+    .string "My APATITE is aboard the S.S. ANNE\n"
+    .string "for the gala. Thieves lurk near.\p"
+    .string "Go to the harbor and protect it.\n"
+    .string "Then come back, and we shall fight!$"
