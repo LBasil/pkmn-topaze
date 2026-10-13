@@ -17,12 +17,14 @@ ViridianCity_Gym_Text_GiovanniDefeat::
     .string "BADGE.$"
 
 ViridianCity_Gym_Text_GiovanniPostBattle::
-    .string "All eight stones are in your\n"
-    .string "hands, or soon will be.\p"
+    .string "My furnaces forged the gate of\n"
+    .string "the VICTORY ROAD, long ago.\p"
+    .string "Strange men in black went in\n"
+    .string "there. They did not ask my leave.\p"
     .string "Remember what the opal teaches:\n"
-    .string "the darker it is, the more colors\p"
+    .string "the darker it is, the more colors\l"
     .string "it hides.\p"
-    .string "The LEAGUE awaits.$"
+    .string "Go. Take what is yours.$"
 
 ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis::
     .string "The OPAL BADGE makes every\n"
@@ -45,109 +47,130 @@ ViridianCity_Gym_Text_YouDoNotHaveSpace::
     .string "You do not have space for this!$"
 
 ViridianCity_Gym_Text_YujiIntro::
-    .string "Heh!\n"
-    .string "You must be running out of steam\l"
-    .string "by now!$"
+    .string "Hot metal does not wait for you!$"
+
 
 ViridianCity_Gym_Text_YujiDefeat::
-    .string "I ran out of gas!$"
+    .string "Quenched…$"
+
 
 ViridianCity_Gym_Text_YujiPostBattle::
-    .string "You'll need power to keep up with\n"
-    .string "our GYM LEADER.$"
+    .string "HEPHA tempers every one of us\n"
+    .string "in the opal furnace.$"
+
 
 ViridianCity_Gym_Text_AtsushiIntro::
-    .string "Rrrroar!\n"
-    .string "I'm working myself into a rage!$"
+    .string "I hammer ore for a living.\n"
+    .string "You are next on the anvil!$"
+
 
 ViridianCity_Gym_Text_AtsushiDefeat::
-    .string "Wargh!$"
+    .string "My hammer slipped!$"
+
 
 ViridianCity_Gym_Text_AtsushiPostBattle::
-    .string "I'm still not worthy!$"
+    .string "The black opal glows when HEPHA\n"
+    .string "is angry. Do not make her angry.$"
+
 
 ViridianCity_Gym_Text_JasonIntro::
-    .string "POKéMON and I, we make wonderful\n"
-    .string "music together!$"
+    .string "Clang, clang! My POKéMON and I\n"
+    .string "make the best forge music!$"
+
 
 ViridianCity_Gym_Text_JasonDefeat::
-    .string "You are in perfect harmony!$"
+    .string "Out of tune…$"
+
 
 ViridianCity_Gym_Text_JasonPostBattle::
-    .string "Do you know the identity of our\n"
-    .string "GYM LEADER?$"
+    .string "Wonder who taught HEPHA to\n"
+    .string "smith? Not me. Not anyone.$"
+
 
 ViridianCity_Gym_Text_KiyoIntro::
-    .string "Karate is the ultimate form of\n"
-    .string "martial arts!$"
+    .string "Steel is patient. So am I.$"
+
 
 ViridianCity_Gym_Text_KiyoDefeat::
-    .string "Aiyah!$"
+    .string "I bent…$"
+
 
 ViridianCity_Gym_Text_KiyoPostBattle::
-    .string "If my POKéMON were as good at\n"
-    .string "karate as I…$"
+    .string "Patience, kid. You'll need it\n"
+    .string "against HEPHA.$"
+
 
 ViridianCity_Gym_Text_WarrenIntro::
-    .string "The truly talented win with style.$"
+    .string "Only the best alloy makes it\n"
+    .string "through this door.$"
+
 
 ViridianCity_Gym_Text_WarrenDefeat::
-    .string "I lost my grip!$"
+    .string "Cracked under pressure!$"
+
 
 ViridianCity_Gym_Text_WarrenPostBattle::
-    .string "The LEADER will scold me for\n"
-    .string "losing this way…$"
+    .string "HEPHA will melt me down for\n"
+    .string "this loss…$"
+
 
 ViridianCity_Gym_Text_TakashiIntro::
-    .string "I'm the KARATE KING!\n"
-    .string "Your fate rests with me!$"
+    .string "I guard the furnace! No one\n"
+    .string "passes my magnets!$"
+
 
 ViridianCity_Gym_Text_TakashiDefeat::
-    .string "Ayah!$"
+    .string "My magnets failed!$"
+
 
 ViridianCity_Gym_Text_TakashiPostBattle::
-    .string "The POKéMON LEAGUE?\n"
-    .string "You? Don't get cocky!$"
+    .string "Eight badges and the LEAGUE.\n"
+    .string "Then the VICTORY ROAD.$"
+
 
 ViridianCity_Gym_Text_ColeIntro::
-    .string "Your POKéMON will cower at the\n"
-    .string "crack of my whip!$"
+    .string "Wings of steel cut through\n"
+    .string "anything. Even you.$"
+
 
 ViridianCity_Gym_Text_ColeDefeat::
-    .string "Yowch!\n"
-    .string "Whiplash!$"
+    .string "Dulled!$"
+
 
 ViridianCity_Gym_Text_ColePostBattle::
-    .string "Wait!\n"
-    .string "I was just careless!$"
+    .string "Not all steel is for show.\n"
+    .string "Some is for the war ahead.$"
+
 
 ViridianCity_Gym_Text_SamuelIntro::
-    .string "OPANIHRUM GYM was closed for a\n"
-    .string "long time.\p"
-    .string "But now, our LEADER is back!$"
+    .string "OPANIHRUM's FOUNDRY forged the\n"
+    .string "LEAGUE's gate. Impressed?$"
+
 
 ViridianCity_Gym_Text_SamuelDefeat::
-    .string "I was beaten?$"
+    .string "Too much heat…$"
+
 
 ViridianCity_Gym_Text_SamuelPostBattle::
-    .string "You can go on to the POKéMON\n"
-    .string "LEAGUE only by defeating our GYM\l"
-    .string "LEADER!$"
+    .string "Beyond the gate is the VICTORY\n"
+    .string "ROAD. Strange men went in.$"
+
 
 ViridianCity_Gym_Text_GymGuyAdvice::
-    .string "Yo!\n"
-    .string "Champ in the making!\p"
-    .string "Even I don't know the OPANIHRUM\n"
-    .string "LEADER's identity.\p"
-    .string "But one thing's certain.\n"
-    .string "This will be the toughest of all\l"
-    .string "the GYM LEADERS.\p"
-    .string "Also, I heard that the TRAINERS\n"
-    .string "here like GROUND-type POKéMON.$"
+    .string "Yo! Champ in the making!\p"
+    .string "This is the FOUNDRY, the last\n"
+    .string "GYM before the LEAGUE.\p"
+    .string "Every TRAINER here uses STEEL-\n"
+    .string "types. Bring FIRE or GROUND.\p"
+    .string "And watch the spinner tiles.\n"
+    .string "They send you straight to the\n"
+    .string "furnace!$"
+
 
 ViridianCity_Gym_Text_GymGuyPostVictory::
-    .string "Blow me away! HEPHA was the\n"
-    .string "GYM LEADER of OPANIHRUM?$"
+    .string "Eight badges! Go to the VICTORY\n"
+    .string "ROAD. But mind the men in black.$"
+
 
 ViridianCity_Gym_Text_GymStatue::
     .string "OPANIHRUM POKéMON GYM\n"
