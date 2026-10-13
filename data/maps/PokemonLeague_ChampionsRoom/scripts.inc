@@ -30,7 +30,8 @@ PokemonLeague_ChampionsRoom_EventScript_EnterRoom::
 	applymovement LOCALID_PLAYER, PokemonLeague_ChampionsRoom_Movement_PlayerEnter
 	waitmovement 0
 	delay 20
-	goto_if_defeated TRAINER_LEAGUE_BOSS, PokemonLeague_ChampionsRoom_EventScript_AfterBoss
+	goto_if_defeated TRAINER_LEAGUE_BOSS_2, PokemonLeague_ChampionsRoom_EventScript_AfterBoss
+	goto_if_defeated TRAINER_LEAGUE_BOSS, PokemonLeague_ChampionsRoom_EventScript_LegendsPart
 	goto_if_defeated TRAINER_LEAGUE_CHEN, PokemonLeague_ChampionsRoom_EventScript_BossPart
 	msgbox PokemonLeague_ChampionsRoom_Text_OakIntro
 	setflag FLAG_TEMP_3
@@ -51,6 +52,12 @@ PokemonLeague_ChampionsRoom_EventScript_BossPart::
 	msgbox PokemonLeague_ChampionsRoom_Text_BossIntro
 	closemessage
 	trainerbattle_no_intro TRAINER_LEAGUE_BOSS, PokemonLeague_ChampionsRoom_Text_BossDefeat
+PokemonLeague_ChampionsRoom_EventScript_LegendsFight::
+	msgbox PokemonLeague_ChampionsRoom_Text_BossLegends
+	closemessage
+	special ShakeScreen
+	delay 30
+	trainerbattle_no_intro TRAINER_LEAGUE_BOSS_2, PokemonLeague_ChampionsRoom_Text_BossDefeat2
 	msgbox PokemonLeague_ChampionsRoom_Text_BossPost
 	closemessage
 	applymovement LOCALID_CHAMPIONS_ROOM_PROF_OAK, PokemonLeague_ChampionsRoom_Movement_BossExit
@@ -70,6 +77,14 @@ PokemonLeague_ChampionsRoom_EventScript_AfterBoss::
 	warp MAP_POKEMON_LEAGUE_HALL_OF_FAME, 5, 12
 	waitstate
 	releaseall
+	end
+
+PokemonLeague_ChampionsRoom_EventScript_LegendsPart::
+	playbgm MUS_ENCOUNTER_ROCKET, 0
+	addobject LOCALID_CHAMPIONS_ROOM_PROF_OAK
+	applymovement LOCALID_CHAMPIONS_ROOM_PROF_OAK, PokemonLeague_ChampionsRoom_Movement_BossEnter
+	waitmovement 0
+	goto PokemonLeague_ChampionsRoom_EventScript_LegendsFight
 	end
 
 PokemonLeague_ChampionsRoom_Movement_PlayerEnter::

@@ -7,7 +7,7 @@ import os
 for f in os.listdir('/tmp/gx/out'):
     if f.startswith('Z_'): os.remove('/tmp/gx/out/'+f)
 n=0; i=0; calm=0
-while n<900:
+while n<2000:
     if t.idle():
         calm+=1
         if calm>=3: break
@@ -15,7 +15,7 @@ while n<900:
     calm=0
     k='DOWN' if (t.inbattle() and (i:=i+1)%9==0) else 'A'
     t.press(k,4,30); n+=1
-    if n%6==0: t.shot('Z_%03d'%n)
+    if n%10==0: t.shot('Z_%03d'%n)
 print('n',n,t.where(), t.getvar('VAR_TOPAZE_ENDING'))
 for tr,name in ((752,'chen'),(753,'boss')):
     print(name, t.getflag(0x500+tr) if False else '')

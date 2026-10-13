@@ -11868,3 +11868,26 @@ static const struct TrainerMonNoItemDefaultMoves sParty_LeagueBoss[] = {
     },
 };
 
+static const struct TrainerMonNoItemDefaultMoves sParty_LeagueBoss2[] = {
+    {
+        .iv = 200,
+        .lvl = 68,
+        .species = SPECIES_ARTICUNO,
+    },
+    {
+        .iv = 200,
+        .lvl = 68,
+        .species = SPECIES_ZAPDOS,
+    },
+    {
+        .iv = 200,
+        .lvl = 68,
+        .species = SPECIES_MOLTRES,
+    },
+    {
+        .iv = 200,
+        .lvl = 72,
+        .species = SPECIES_MEWTWO,
+    },
+};
+

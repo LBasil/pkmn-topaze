@@ -94,3 +94,6 @@ Eddie battu -> blackout, le maire (taupe) dit avoir utilisé le joueur pour la c
   2. **Plus de Poké Balls** : le vœu du boss, exaucé par le joueur (fin « monde calme »).
   3. **Tous les légendaires à soi** : le miroir sombre du boss (Mewtwo, oiseaux, Mew, Celebi dans le PC).
 - Le boss dit au joueur qu'il garde ses Pokémon en Balls : le choix 2 est celui qui lui donne raison.
+- **Le boss a deux combats** : (1) son équipe ; (2) les légendaires qu'il a capturés, **Artikodin, Électhor, Sulfura + Mewtwo** (`TRAINER_LEAGUE_BOSS_2`, 755 dresseurs au total). Entre les deux : « chaque légendaire pris dérègle un peu plus l'horloge du monde » (secousse d'écran).
+- **Idée à développer (Basil)** : le temps se dérègle au fur et à mesure qu'il capture des légendaires (indices à poser sur le parcours : horloges, jour/nuit, PNJ décalés). Son nom viendra plus tard.
+- **Retours (V1)** : Brice, Flora et Misty sont au Centre Pokémon du Plateau Indigo (dialogues avant/après le titre de Champion). N et Gold sont dans le tournoi ; Red/Giovanni/Silver en post-game ; Bill (disparu) reste à traiter avec les îles Sevii.

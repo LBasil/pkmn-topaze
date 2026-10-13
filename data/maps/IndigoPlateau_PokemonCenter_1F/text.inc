@@ -41,3 +41,43 @@ IndigoPlateau_PokemonCenter_1F_Text_LancesCousinGymLeaderFarAway::
     .string "a cousin who's a GYM LEADER\l"
     .string "somewhere far away.$"
 
+IndigoPlateau_PokemonCenter_1F_Text_BriceBefore::
+    .string "BRICE: Hey, {PLAYER}. Still standing,\n"
+    .string "as you can see.\p"
+    .string "At HEMATEK the boss beat all three\n"
+    .string "of us with one POKéMON each.\p"
+    .string "I will not fight again. I will\n"
+    .string "cheer from the stands.\p"
+    .string "Win this tournament for us!$"
+
+IndigoPlateau_PokemonCenter_1F_Text_BriceAfter::
+    .string "BRICE: CHAMPION! Hah, I knew it.\p"
+    .string "Whatever that man wanted, he did\n"
+    .string "not get it. Not from you.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_FloraBefore::
+    .string "FLORA: {PLAYER}! You came all the way\n"
+    .string "to the PLATEAU.\p"
+    .string "My POKéMON are healed, and so is\n"
+    .string "my pride. Mostly.\p"
+    .string "The boss will come for the prize,\n"
+    .string "I am sure of it. Be careful.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_FloraAfter::
+    .string "FLORA: You did it, CHAMPION.\p"
+    .string "I saw the end from the stands.\n"
+    .string "Be proud of that wish, whichever\lone you make.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_MistyBefore::
+    .string "MISTY: Oh, it is you!\p"
+    .string "I heard whispers in the stands.\n"
+    .string "The winner of this tournament\p"
+    .string "gets to meet JIRACHI. A wish for\n"
+    .string "whoever stands at the top.\p"
+    .string "ONYBRIS would not miss that.\n"
+    .string "Watch your back out there!$"
+
+IndigoPlateau_PokemonCenter_1F_Text_MistyAfter::
+    .string "MISTY: CHAMPION! I am so proud.\p"
+    .string "Come see me at the CERULEAN\n"
+    .string "cottage when you have a moment.$"

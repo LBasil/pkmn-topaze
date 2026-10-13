@@ -68,3 +68,42 @@ IndigoPlateau_PokemonCenter_1F_EventScript_Nurse::
 	call EventScript_PkmnCenterNurse
 	release
 	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_Brice::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_CHAMP, IndigoPlateau_PokemonCenter_1F_EventScript_BriceAfter
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_BriceBefore
+	release
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_BriceAfter::
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_BriceAfter
+	release
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_Flora::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_CHAMP, IndigoPlateau_PokemonCenter_1F_EventScript_FloraAfter
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_FloraBefore
+	release
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_FloraAfter::
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_FloraAfter
+	release
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_Misty::
+	lock
+	faceplayer
+	goto_if_set FLAG_DEFEATED_CHAMP, IndigoPlateau_PokemonCenter_1F_EventScript_MistyAfter
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_MistyBefore
+	release
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_MistyAfter::
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_MistyAfter
+	release
+	end

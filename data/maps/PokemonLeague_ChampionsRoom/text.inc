@@ -32,6 +32,19 @@ PokemonLeague_ChampionsRoom_Text_BossDefeat::
     .string "Impossible...\n"
     .string "You... and that pendant...$"
 
+PokemonLeague_ChampionsRoom_Text_BossLegends::
+    .string "???: Enough.\p"
+    .string "I did not want to use them yet.\p"
+    .string "The three birds. And the one\n"
+    .string "who watches over them all.\p"
+    .string "Every one I took bent the\n"
+    .string "world's clocks a little more.\n"
+    .string "Do you feel the time shaking?\p"
+    .string "Come, MEWTWO!$"
+
+PokemonLeague_ChampionsRoom_Text_BossDefeat2::
+    .string "Even them... Even now...$"
+
 PokemonLeague_ChampionsRoom_Text_BossPost::
     .string "???: You fight for them, yet you\n"
     .string "keep them in BALLS.\p"
