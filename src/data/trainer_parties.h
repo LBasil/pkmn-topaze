@@ -318,17 +318,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherColton[] = {
     {
         .iv = 0,
         .lvl = 11,
-        .species = SPECIES_CATERPIE,
+        .species = SPECIES_GEODUDE,
     },
     {
         .iv = 0,
         .lvl = 11,
-        .species = SPECIES_WEEDLE,
+        .species = SPECIES_DIGLETT,
     },
     {
         .iv = 0,
         .lvl = 11,
-        .species = SPECIES_CATERPIE,
+        .species = SPECIES_MACHOP,
     },
 };
 
@@ -336,22 +336,22 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherGreg[] = {
     {
         .iv = 0,
         .lvl = 10,
-        .species = SPECIES_WEEDLE,
+        .species = SPECIES_SANDSHREW,
     },
     {
         .iv = 0,
         .lvl = 10,
-        .species = SPECIES_KAKUNA,
+        .species = SPECIES_GEODUDE,
     },
     {
         .iv = 0,
         .lvl = 10,
-        .species = SPECIES_CATERPIE,
+        .species = SPECIES_CUBONE,
     },
     {
         .iv = 0,
         .lvl = 10,
-        .species = SPECIES_METAPOD,
+        .species = SPECIES_DIGLETT,
     },
 };
 
@@ -359,12 +359,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherJames[] = {
     {
         .iv = 0,
         .lvl = 12,
-        .species = SPECIES_CATERPIE,
+        .species = SPECIES_CUBONE,
     },
     {
         .iv = 0,
         .lvl = 12,
-        .species = SPECIES_METAPOD,
+        .species = SPECIES_GEODUDE,
     },
 };
 
@@ -10658,17 +10658,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherColton2[] = {
     {
         .iv = 20,
         .lvl = 21,
-        .species = SPECIES_METAPOD,
+        .species = SPECIES_GRAVELER,
     },
     {
         .iv = 20,
         .lvl = 21,
-        .species = SPECIES_WEEDLE,
+        .species = SPECIES_DIGLETT,
     },
     {
         .iv = 20,
         .lvl = 21,
-        .species = SPECIES_METAPOD,
+        .species = SPECIES_MACHOP,
     },
 };
 
@@ -10676,17 +10676,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherColton3[] = {
     {
         .iv = 60,
         .lvl = 30,
-        .species = SPECIES_BUTTERFREE,
+        .species = SPECIES_GRAVELER,
     },
     {
         .iv = 60,
         .lvl = 30,
-        .species = SPECIES_KAKUNA,
+        .species = SPECIES_DUGTRIO,
     },
     {
         .iv = 60,
         .lvl = 30,
-        .species = SPECIES_BUTTERFREE,
+        .species = SPECIES_MACHOKE,
     },
 };
 
@@ -10694,17 +10694,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherColton4[] = {
     {
         .iv = 120,
         .lvl = 57,
-        .species = SPECIES_BUTTERFREE,
+        .species = SPECIES_GOLEM,
     },
     {
         .iv = 120,
         .lvl = 60,
-        .species = SPECIES_BEEDRILL,
+        .species = SPECIES_DUGTRIO,
     },
     {
         .iv = 120,
         .lvl = 57,
-        .species = SPECIES_BUTTERFREE,
+        .species = SPECIES_MACHAMP,
     },
 };
 

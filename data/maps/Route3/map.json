@@ -44,7 +44,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
       "x": 75,
       "y": 12,
       "elevation": 3,
@@ -72,7 +72,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
       "x": 39,
       "y": 18,
       "elevation": 3,
@@ -114,7 +114,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
       "x": 20,
       "y": 10,
       "elevation": 3,
