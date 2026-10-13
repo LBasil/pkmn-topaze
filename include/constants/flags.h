@@ -1258,9 +1258,9 @@
 #define FLAG_HIDE_SCHOOL_RIVAL           0x4C4 // Topaze: rival in the school scene
 #define FLAG_HIDE_ROUTE1_ANIMALS         0x4C5 // Topaze: strayed ranch animals on ROUTE 1 (shown after the attack until found)
 #define FLAG_HIDE_RANCH_ANIMALS          0x4C6 // Topaze: ranch DODUO/NIDORAN (hidden between the attack and their return)
-#define FLAG_0x4C7               0x4C7
-#define FLAG_0x4C8               0x4C8
-#define FLAG_0x4C9               0x4C9
+#define FLAG_ROUTE1_TALKED_DODUO         0x4C7 // Topaze: ranch mini-quest, calmed DODUO on ROUTE 1
+#define FLAG_ROUTE1_TALKED_NIDORANM      0x4C8 // Topaze: calmed NIDORAN male
+#define FLAG_ROUTE1_TALKED_NIDORANF      0x4C9 // Topaze: calmed NIDORAN female
 #define FLAG_0x4CA               0x4CA
 #define FLAG_0x4CB               0x4CB
 #define FLAG_0x4CC               0x4CC

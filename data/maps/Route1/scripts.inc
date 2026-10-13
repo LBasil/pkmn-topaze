@@ -53,7 +53,8 @@ Route1_EventScript_Doduo::
 	playmoncry SPECIES_DODUO, CRY_MODE_NORMAL
 	msgbox Route1_Text_Doduo
 	waitmoncry
-	goto Route1_EventScript_AnimalsHome
+	setflag FLAG_ROUTE1_TALKED_DODUO
+	goto Route1_EventScript_AnimalCheck
 	end
 
 Route1_EventScript_Nidoranm::
@@ -63,7 +64,8 @@ Route1_EventScript_Nidoranm::
 	playmoncry SPECIES_NIDORAN_M, CRY_MODE_NORMAL
 	msgbox Route1_Text_Nidoranm
 	waitmoncry
-	goto Route1_EventScript_AnimalsHome
+	setflag FLAG_ROUTE1_TALKED_NIDORANM
+	goto Route1_EventScript_AnimalCheck
 	end
 
 Route1_EventScript_Nidoranf::
@@ -73,7 +75,20 @@ Route1_EventScript_Nidoranf::
 	playmoncry SPECIES_NIDORAN_F, CRY_MODE_NORMAL
 	msgbox Route1_Text_Nidoranf
 	waitmoncry
+	setflag FLAG_ROUTE1_TALKED_NIDORANF
+	goto Route1_EventScript_AnimalCheck
+	end
+
+Route1_EventScript_AnimalCheck::
+	goto_if_unset FLAG_ROUTE1_TALKED_DODUO, Route1_EventScript_AnimalMore
+	goto_if_unset FLAG_ROUTE1_TALKED_NIDORANM, Route1_EventScript_AnimalMore
+	goto_if_unset FLAG_ROUTE1_TALKED_NIDORANF, Route1_EventScript_AnimalMore
 	goto Route1_EventScript_AnimalsHome
+	end
+
+Route1_EventScript_AnimalMore::
+	msgbox Route1_Text_AnimalMore
+	release
 	end
 
 @ The three ranch animals gather and head home together.

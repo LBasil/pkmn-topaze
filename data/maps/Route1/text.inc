@@ -41,7 +41,12 @@ Route1_Text_Nidoranf::
     .string "It runs to the others, relieved.$"
 
 Route1_Text_AnimalsHome::
+    .string "That was the last one!\n"
     .string "The three strays huddle together,\n"
     .string "then trot off toward GRENALUX.\p"
     .string "They know the way home.\n"
     .string "The RANCH hands will be glad.$"
+
+Route1_Text_AnimalMore::
+    .string "It calms down, but keeps looking\n"
+    .string "around. The others must be close.$"

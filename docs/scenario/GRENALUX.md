@@ -648,7 +648,7 @@ Animaux (Slowpoke, Psyduck, Meowth, Jigglypuff, Doduo, Nidoran) : cris et phrase
 
 
 ## 8. Reste à faire sur Grenalux
-- Quête du ranch **terminée sur la Route 1** : après l’attaque, DODUO + 2 NIDORAN errent sur la route (x11–17, y25–27) ; leur parler (n’importe lequel) les renvoie au ranch (`FLAG_ONYBRIS_ANIMALS_FOUND`), ils réapparaissent dans les enclos, l’ouvrier près de la clôture donne 1 POTION + 5 POKé BALLS (`FLAG_GRENALUX_GEM_REWARD`).
+- Quête du ranch **terminée sur la Route 1** : après l’attaque, DODUO + 2 NIDORAN errent sur la route (x11–17, y25–27) ; il faut parler **aux trois** (`FLAG_ROUTE1_TALKED_DODUO/NIDORANM/NIDORANF`) pour les renvoyer au ranch (`FLAG_ONYBRIS_ANIMALS_FOUND`), ils réapparaissent dans les enclos, l’ouvrier près de la clôture donne 1 POTION + 5 POKé BALLS (`FLAG_GRENALUX_GEM_REWARD`).
 - Route 1 : aucun dresseur ; PNJ = vendeur (Potion), garçon (herbe qui change de couleur), panneau ; herbe : Pidgey / Rattata niv. 3–7, Spearow rare niv. 6–7.
 - Faire réapparaître Doduo et les deux Nidoran dans les enclos quand la quête est rendue.
 - Mine : seule la grille scellée existe ; son ouverture après la Ligue demande un intérieur (à décider).
