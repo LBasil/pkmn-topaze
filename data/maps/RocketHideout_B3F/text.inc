@@ -7,9 +7,9 @@ RocketHideout_B3F_Text_Grunt1Defeat::
     .string "Taken down!$"
 
 RocketHideout_B3F_Text_Grunt1PostBattle::
-    .string "SILPH SCOPE?\n"
-    .string "Oh, that machine the BOSS stole.\p"
-    .string "It's here somewhere.$"
+    .string "The LIFT KEY? ROCKET lost it years\n"
+    .string "ago. We found it in a drawer.\p"
+    .string "A guard downstairs keeps it.$"
 
 RocketHideout_B3F_Text_Grunt2Intro::
     .string "We got word from upstairs that you\n"

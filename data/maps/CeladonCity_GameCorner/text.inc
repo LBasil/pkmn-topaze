@@ -114,9 +114,9 @@ CeladonCity_GameCorner_Text_GruntDefeat::
     .string "Dang!$"
 
 CeladonCity_GameCorner_Text_GruntPostBattle::
-    .string "The TEAM ONYBRIS HIDEOUT might\n"
-    .string "be discovered!\p"
-    .string "I better tell BOSS!$"
+    .string "The old ROCKET HIDEOUT is ours now.\n"
+    .string "If you find it, the BOSS will...\p"
+    .string "I better tell VESPER!$"
 
 CeladonCity_GameCorner_Text_SwitchBehindPosterPushIt::
     .string "Hey!\p"

@@ -4,8 +4,13 @@ CeladonCity_Text_GotMyKoffingInCinnabar::
     .string "poison when it's angry.$"
 
 CeladonCity_Text_GymIsGreatFullOfWomen::
-    .string "Heheh! This GYM is great!\n"
-    .string "It's full of women!$"
+    .string "Heheh! Kids today think the GAME\n"
+    .string "CORNER was always a casino.\p"
+    .string "Ten years ago it was the HIDEOUT of\n"
+    .string "TEAM ROCKET. Everybody knew, nobody\l"
+    .string "dared say it.\p"
+    .string "Then ROCKET fell apart... and the\n"
+    .string "ONYBRIS crowd moved right in.$"
 
 CeladonCity_Text_GameCornerIsBadForCitysImage::
     .string "BOURG QUARTZ takes pride in its efforts\n"
@@ -105,10 +110,19 @@ Text_SoftboiledTaught::
     .string "I wish you the best of luck!$"
 
 CeladonCity_Text_SomeoneStoleSilphScope::
-    .string "Oh, what am I to do…\p"
-    .string "Someone stole our SILPH SCOPE.\p"
-    .string "The thief came running this way,\n"
-    .string "I'm sure of it.\p"
-    .string "But I lost sight of him!\n"
-    .string "Where'd he go?$"
+    .string "Oh, what am I to do...\p"
+    .string "My late husband used to run that\n"
+    .string "GAME CORNER, long ago.\p"
+    .string "TEAM ROCKET paid him to keep quiet\n"
+    .string "about the basement. Now ONYBRIS\l"
+    .string "pays the same price.\p"
+    .string "Same masks, new name. Awful.$"
 
+
+CeladonCity_Text_WestBlocked::
+    .string "Sorry, nobody leaves BOURG QUARTZ\n"
+    .string "by the west road for now.\p"
+    .string "ONYBRIS thugs are swarming the old\n"
+    .string "ROCKET base under the GAME CORNER.\p"
+    .string "Clear it out, and we will open\n"
+    .string "the road.$"

@@ -3473,13 +3473,13 @@ const struct Trainer gTrainers[] = {
         .party = NO_ITEM_DEFAULT_MOVES(sParty_ScientistIvan),
     },
     [TRAINER_BOSS_GIOVANNI] = {
-        .trainerClass = TRAINER_CLASS_BOSS,
+        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_LEADER_GIOVANNI,
-        .trainerName = _("GIOVANNI"),
+        .trainerPic = TRAINER_PIC_ROCKET_GRUNT_F,
+        .trainerName = _("VESPER"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_BossGiovanni),
     },
     [TRAINER_BOSS_GIOVANNI_2] = {

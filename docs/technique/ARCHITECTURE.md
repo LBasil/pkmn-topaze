@@ -270,3 +270,10 @@ Chemin du joueur après le ticket : Tourmalia → **Route 5** (pension, panneau 
 - Silph Scope plus necessaire : `StartMarowakBattle` demasque toujours Ossatueur (src/battle_setup.c).
 - Tour 7F : les 3 sbires sont retires ; pierre = objet (11,3) (flag FLAG_HIDE_TOWER_ROCKET_1). Declencheurs (9..13,7) -> `PokemonTower_7F_EventScript_AdminScene` : Fuji explique, l'ADMIN KRONOS (placeholder, sprite ROCKET_M) arrive (FLAG_TEMP_5, addobject), remercie le joueur d'avoir calme les morts, l'ecrase SANS combat (flash blanc, equipe soignee apres), prend la pierre (removeobject) et repart ; Fuji : "l'un des ADMINS, juste sous le boss". Pose FLAG_RESCUED_MR_FUJI. Teste en emulateur (scene complete).
 - Interieur de la Tour : a revoir plus tard (comme Tunnel Roche et centrale).
+
+## Bourg Quartz (ex-Celadon) — repaire = ancien repaire ROCKET repris par Onybris
+- Lore : le sous-sol du GAME CORNER etait la base de TEAM ROCKET (il y a 10 ans). ROCKET s'est effondree, Onybris s'y est installee. Textes reecrits : vieil homme de la ville (histoire), dame (mari ex-gerant paye pour se taire), grunts B1F-B3F (anciens plans, vieille cle, "le vieux QG"), grunt du Game Corner.
+- LIFT KEY : description "ancienne cle d'ascenseur du repaire ROCKET".
+- B4F : Giovanni remplace par VESPER (id TRAINER_BOSS_GIOVANNI recycle : classe TEAM_ROCKET, pic ROCKET_GRUNT_F, Arbok 30/Nosferalto 30/Smogogo 31/Ectoplasma 33). Apres le combat elle mentionne l'ancien chef disparu il y a 10 ans (cameo Giovanni a venir plus tard). L'objet ex-SILPH SCOPE donne un MAX REVIVE ("vieux registre ROCKET signe G").
+- Route 16 (sortie ouest) : 4 policiers (1,22..25, FLAG_TEMP_11 car 13/14 pris par les arbres), masques par FLAG_HIDE_CELADON_ROCKETS (pose apres Vesper). Entree est (depuis Route 7) libre. Non teste en emulateur.
+- A faire : arene de GRIM / badge 4, pierre QUARTZ (evenement), Silph Scope encore cite nulle part.

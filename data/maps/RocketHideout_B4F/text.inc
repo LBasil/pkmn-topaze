@@ -1,25 +1,20 @@
 RocketHideout_B4F_Text_GiovanniIntro::
-    .string "So! I must say, I am impressed you\n"
-    .string "got here.\p"
-    .string "TEAM ONYBRIS captures POKéMON from\n"
-    .string "around the world.\p"
-    .string "They're important tools for keeping\n"
-    .string "our criminal enterprise going.\p"
-    .string "I am the leader, GIOVANNI!\p"
-    .string "For your insolence, you will feel a\n"
-    .string "world of pain!$"
+    .string "VESPER: So you are the brat who\n"
+    .string "keeps wrecking my plans.\p"
+    .string "This old ROCKET base suits TEAM\n"
+    .string "ONYBRIS. Dark, deep, forgotten.\p"
+    .string "Perfect for hiding what we take\n"
+    .string "from this town. Now, scram!$"
 
 RocketHideout_B4F_Text_GiovanniDefeat::
-    .string "WHAT!\n"
-    .string "This can't be!$"
+    .string "Impossible...!$"
 
 RocketHideout_B4F_Text_GiovanniPostBattle::
-    .string "I see that you raise POKéMON with\n"
-    .string "utmost care.\p"
-    .string "A child like you would never\n"
-    .string "understand what I hope to achieve.\p"
-    .string "I shall step aside this time!\p"
-    .string "I hope we meet again…$"
+    .string "VESPER: Hmph. Take your trophy.\p"
+    .string "Know this: the boss of this base\n"
+    .string "before us vanished ten years ago.\p"
+    .string "Whoever he was, ONYBRIS is greater.\n"
+    .string "Until next time, child!$"
 
 RocketHideout_B4F_Text_Grunt2Intro::
     .string "I know you!\n"
@@ -54,3 +49,9 @@ RocketHideout_B4F_Text_Grunt1PostBattle::
     .string "Oh, no!\n"
     .string "I dropped the LIFT KEY!$"
 
+
+RocketHideout_B4F_Text_FoundRocketLedger::
+    .string "{PLAYER} found an old ROCKET ledger.\p"
+    .string "The last page is signed G.\n"
+    .string "A gold-trimmed MAX REVIVE was\l"
+    .string "hidden inside!$"

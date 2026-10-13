@@ -54,4 +54,5 @@ Courbe de niveaux : R3 10–16 → Kay 15–20 → R4/4E 13–16 → Sylvestre 1
 ## 6. Suite décidée (13/10, après l'audit)
 - De Spinellia on prend la Route 8, puis le CHEMIN SOUTERRAIN (entrée est de la Route 8 → Route 7) jusqu'à BOURG QUARTZ (Céladon). Hematown reste hors chemin : le garde de la porte ouest de la Route 8 est assoiffé (thé de la vieille dame du manoir de Bourg Quartz, mécanique d'origine), la ville est « fermée par le conseil à cause des voleurs ».
 - Indices posés sur la Route 8 : les hommes en noir sont passés par le chemin souterrain vers la ville froide (Bourg Quartz).
-- Prochain chantier : Bourg Quartz = base d'Onybris (GAME CORNER façade + repaire dessous), arène de GRIM (Glace), pierre = QUARTZ.
+- Bourg Quartz : le repaire sous le GAME CORNER est l'ANCIEN REPAIRE ROCKET repris par Onybris (histoire racontée par les PNJ). Boss du repaire = VESPER (B4F). La sortie ouest (Route 16) est bloquée par la police tant que Vesper n'est pas battue.
+- Restant : arène de GRIM (Glace, badge 4), pierre = QUARTZ, cameo Giovanni plus tard.

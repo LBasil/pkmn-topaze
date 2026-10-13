@@ -18,7 +18,6 @@ RocketHideout_B4F_EventScript_CountGruntDefeated::
 RocketHideout_B4F_EventScript_Giovanni::
 	lock
 	faceplayer
-	famechecker FAMECHECKER_GIOVANNI, 0
 	message RocketHideout_B4F_Text_GiovanniIntro
 	waitmessage
 	playbgm MUS_ENCOUNTER_ROCKET, 0
@@ -31,7 +30,6 @@ RocketHideout_B4F_EventScript_Giovanni::
 	addobject LOCALID_SILPH_SCOPE
 	clearflag FLAG_HIDE_SILPH_SCOPE
 	setflag FLAG_HIDE_CELADON_ROCKETS
-	famechecker FAMECHECKER_GIOVANNI, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	fadescreen FADE_FROM_BLACK
 	release
 	end
@@ -40,7 +38,8 @@ RocketHideout_B4F_EventScript_SilphScope::
 	lock
 	faceplayer
 	removeobject LOCALID_SILPH_SCOPE
-	giveitem ITEM_SILPH_SCOPE
+	msgbox RocketHideout_B4F_Text_FoundRocketLedger
+	giveitem ITEM_MAX_REVIVE
 	goto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull
 	release
 	end

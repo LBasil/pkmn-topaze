@@ -4180,21 +4180,10 @@ static const struct TrainerMonNoItemDefaultMoves sParty_ScientistIvan[] = {
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_BossGiovanni[] = {
-    {
-        .iv = 250,
-        .lvl = 28,
-        .species = SPECIES_ONIX,
-    },
-    {
-        .iv = 250,
-        .lvl = 27,
-        .species = SPECIES_RHYHORN,
-    },
-    {
-        .iv = 250,
-        .lvl = 32,
-        .species = SPECIES_KANGASKHAN,
-    },
+    { .iv = 100, .lvl = 30, .species = SPECIES_ARBOK },
+    { .iv = 100, .lvl = 30, .species = SPECIES_GOLBAT },
+    { .iv = 100, .lvl = 31, .species = SPECIES_WEEZING },
+    { .iv = 100, .lvl = 33, .species = SPECIES_GENGAR },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_BossGiovanni2[] = {

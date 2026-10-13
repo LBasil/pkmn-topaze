@@ -4,6 +4,18 @@ CeladonCity_MapScripts::
 
 CeladonCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_CELADON_CITY
+	goto_if_set FLAG_HIDE_CELADON_ROCKETS, CeladonCity_EventScript_WestPoliceLeave
+	end
+
+CeladonCity_EventScript_WestPoliceLeave::
+	setflag FLAG_TEMP_11
+	end
+
+CeladonCity_EventScript_WestPolice::
+	lock
+	faceplayer
+	msgbox CeladonCity_Text_WestBlocked
+	release
 	end
 
 CeladonCity_EventScript_LittleGirl::
