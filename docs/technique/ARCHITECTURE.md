@@ -359,3 +359,6 @@ Générateur : `docs/topaze/mine_build.py` (non rejouable). Cartes `GrenaluxMine
 
 ## Conseil des Anciens (post-game)
 Généré par `league_elders.py` puis `league_elders2.py` (non rejouables). `VAR_ELDERS_ROUND` (0x402C, 0-19, 20 = fini). 4 rematchs vanilla Kanto (`TRAINER_ELITE_FOUR_*_2`) + 16 `TRAINER_ELDER_*` : 9 nouveaux (ids 755-763) + 7 champions Kanto qui réutilisent les ids des chefs Hoenn inutilisés (NUM_TRAINERS 764/768). Mécanisme identique au tournoi, dans `PokemonLeague_LoreleisRoom` (`ElderMatch`, `SetElderGfx`).
+
+## Échos du Temps, île 1 (post-game)
+`docs/topaze/sevii_echo1.py` (non rejouable). `VAR_ECHO_STAGE` (0x402D) : 0 rien, 1 compas (ITEM_VS_SEEKER, placeholder) donné par Bill, 2 Raikou résolu, 3 Chikorita donné par Celio. Flags : `FLAG_HIDE_ECHO_BEAST` (0x0C0), `FLAG_ECHO_BEAST_DONE` (0x0C1). Centre de l'île 1 : en post-game, Bill/Celio sont visibles et la scène vanilla est sautée (`PostgameSetup`). Raikou (objet statique, revient s'il a fui) sur la Kindle Road (12,120).

@@ -129,3 +129,6 @@ Piste réaliste : faire d'abord le jeu jouable, puis ajouter un follower **limit
 
 ## Conseil des Anciens (post-game)
 - `bench/elders_test.py` : 20 combats enchaînés dans la 1re salle de la Ligue (FLAG_TOPAZE_POSTGAME, VAR_ELDERS_ROUND 0→20), récompense (Master Ball placeholder) au 20e. OK en émulateur.
+
+## Écho 1 (post-game, île 1)
+- `bench/echo1_bill_test.py` (Bill : compas, VAR_ECHO_STAGE 0→1), `echo1_raikou_test.py` (Raikou niv. 45 sur la Kindle Road (12,120), stage 1→2), `echo1_celio_test.py` (Celio donne Germignon, stage 2→3). OK en émulateur. Note : le banc ne peut pas démarrer à y>127 (octet signé) ; le test de la scène vanilla 'MeetCelio' est contourné en posant VAR_MAP_SCENE=7.

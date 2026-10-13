@@ -26,9 +26,21 @@ OneIsland_PokemonCenter_1F_EventScript_SetNetworkMachineOn::
 
 OneIsland_PokemonCenter_1F_OnTransition::
 	setrespawn HEAL_LOCATION_ONE_ISLAND
+	goto_if_set FLAG_TOPAZE_POSTGAME, OneIsland_PokemonCenter_1F_EventScript_PostgameSetup
 	call_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 6, OneIsland_PokemonCenter_1F_EventScript_SetCelioQuestDone
 	call_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 0, OneIsland_PokemonCenter_1F_EventScript_SetBillCelioFirstMeetingPos
 	call_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 2, OneIsland_PokemonCenter_1F_EventScript_SetBillCelioReadyToLeavePos
+	end
+
+@ Topaze: post-game, Bill and Celio wait here (Echoes). Skip the vanilla first-meeting scene.
+OneIsland_PokemonCenter_1F_EventScript_PostgameSetup::
+	clearflag FLAG_HIDE_ONE_ISLAND_POKECENTER_BILL
+	clearflag FLAG_HIDE_ONE_ISLAND_POKECENTER_CELIO
+	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 7
+	setobjectxyperm LOCALID_ONE_ISLAND_POKEMON_CENTER_BILL, 14, 6
+	setobjectmovementtype LOCALID_ONE_ISLAND_POKEMON_CENTER_BILL, MOVEMENT_TYPE_FACE_DOWN
+	setobjectxyperm LOCALID_CELIO, 15, 6
+	setobjectmovementtype LOCALID_CELIO, MOVEMENT_TYPE_FACE_DOWN
 	end
 
 OneIsland_PokemonCenter_1F_EventScript_SetCelioQuestDone::
@@ -183,6 +195,7 @@ OneIsland_PokemonCenter_1F_EventScript_Nurse::
 
 OneIsland_PokemonCenter_1F_EventScript_Bill::
 	lock
+	goto_if_set FLAG_TOPAZE_POSTGAME, OneIsland_PokemonCenter_1F_EventScript_EchoBill
 	goto_if_set FLAG_SEVII_DETOUR_FINISHED, OneIsland_PokemonCenter_1F_EventScript_BillGoTakeStroll
 	msgbox OneIsland_PokemonCenter_1F_Text_HmmHowAboutLikeThis
 	release
@@ -198,6 +211,7 @@ OneIsland_PokemonCenter_1F_EventScript_BillGoTakeStroll::
 OneIsland_PokemonCenter_1F_EventScript_Celio::
 	lock
 	faceplayer
+	goto_if_set FLAG_TOPAZE_POSTGAME, OneIsland_PokemonCenter_1F_EventScript_EchoCelio
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 7, OneIsland_PokemonCenter_1F_EventScript_CelioGiveBillFact
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 6, OneIsland_PokemonCenter_1F_EventScript_CelioJustGivenSapphire
 	goto_if_set FLAG_RECOVERED_SAPPHIRE, OneIsland_PokemonCenter_1F_EventScript_GiveCelioSapphire
@@ -561,3 +575,88 @@ OneIsland_PokemonCenter_1F_Movement_BillExit::
 	walk_left
 	walk_down
 	step_end
+
+@ Topaze: Echoes of Time, island 1
+OneIsland_PokemonCenter_1F_EventScript_EchoBill::
+	applymovement LOCALID_ONE_ISLAND_POKEMON_CENTER_BILL, Common_Movement_FacePlayer
+	waitmovement 0
+	goto_if_ge VAR_ECHO_STAGE, 1, OneIsland_PokemonCenter_1F_EventScript_EchoBillAfter
+	msgbox OneIsland_PokemonCenter_1F_Text_EchoBillIntro
+	giveitem_msg OneIsland_PokemonCenter_1F_Text_EchoReceivedCompass, ITEM_VS_SEEKER, 1, MUS_OBTAIN_KEY_ITEM
+	msgbox OneIsland_PokemonCenter_1F_Text_EchoBillCompass
+	setvar VAR_ECHO_STAGE, 1
+	clearflag FLAG_HIDE_ECHO_BEAST
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoBillAfter::
+	msgbox OneIsland_PokemonCenter_1F_Text_EchoBillAfter
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoCelio::
+	goto_if_ge VAR_ECHO_STAGE, 3, OneIsland_PokemonCenter_1F_EventScript_EchoCelioDone
+	goto_if_eq VAR_ECHO_STAGE, 2, OneIsland_PokemonCenter_1F_EventScript_EchoCelioGift
+	goto_if_eq VAR_ECHO_STAGE, 1, OneIsland_PokemonCenter_1F_EventScript_EchoCelioWait
+	msgbox OneIsland_PokemonCenter_1F_Text_EchoCelioHello
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoCelioWait::
+	msgbox OneIsland_PokemonCenter_1F_Text_EchoCelioWait
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoCelioGift::
+	msgbox OneIsland_PokemonCenter_1F_Text_EchoCelioGift
+	setvar VAR_TEMP_1, SPECIES_CHIKORITA
+	givemon SPECIES_CHIKORITA, 30
+	goto_if_eq VAR_RESULT, 0, OneIsland_PokemonCenter_1F_EventScript_EchoGiftParty
+	goto_if_eq VAR_RESULT, 1, OneIsland_PokemonCenter_1F_EventScript_EchoGiftPC
+	goto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoGiftParty::
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playfanfare MUS_LEVEL_UP
+	message OneIsland_PokemonCenter_1F_Text_EchoGotChikorita
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_CHIKORITA
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, OneIsland_PokemonCenter_1F_EventScript_EchoGiftEnd
+	call EventScript_GetGiftMonPartySlot
+	call EventScript_ChangePokemonNickname
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoGiftEnd
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoGiftPC::
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playfanfare MUS_LEVEL_UP
+	message OneIsland_PokemonCenter_1F_Text_EchoGotChikorita
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_CHIKORITA
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, OneIsland_PokemonCenter_1F_EventScript_EchoGiftToPC
+	call EventScript_NameReceivedBoxMon
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoGiftToPC
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoGiftToPC::
+	call EventScript_TransferredToPC
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoGiftEnd
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoGiftEnd::
+	textcolor NPC_TEXT_COLOR_MALE
+	setvar VAR_ECHO_STAGE, 3
+	msgbox OneIsland_PokemonCenter_1F_Text_EchoCelioNext
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoCelioDone::
+	msgbox OneIsland_PokemonCenter_1F_Text_EchoCelioNext
+	release
+	end

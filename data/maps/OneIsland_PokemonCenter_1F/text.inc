@@ -355,3 +355,49 @@ OneIsland_PokemonCenter_1F_Text_MachineLinkedWithKantoAndHoenn::
 OneIsland_PokemonCenter_1F_Text_ObtainedTriPass::
     .string "Obtained the TRI-PASS!$"
 
+OneIsland_PokemonCenter_1F_Text_EchoBillIntro::
+    .string "BILL: Hey, CHAMPION! I knew\n"
+    .string "you would find me.\p"
+    .string "Since the LEAGUE, time has been\n"
+    .string "acting up all over KANTO.\p"
+    .string "Clocks run backward. Old POKéMON\n"
+    .string "show up where they should not.\p"
+    .string "I call them ECHOES: pieces of\n"
+    .string "other lands and other times.\p"
+    .string "They wash up on these islands.\p"
+    .string "CELIO and I built a device to\n"
+    .string "find them. Take it.$"
+
+OneIsland_PokemonCenter_1F_Text_EchoReceivedCompass::
+    .string "{PLAYER} received the TIME COMPASS!$"
+
+OneIsland_PokemonCenter_1F_Text_EchoBillCompass::
+    .string "BILL: It points at the nearest\n"
+    .string "ECHO.\p"
+    .string "The first one is on KINDLE ROAD.\n"
+    .string "A beast of lightning runs there.\p"
+    .string "Calm it down, then see CELIO.$"
+
+OneIsland_PokemonCenter_1F_Text_EchoBillAfter::
+    .string "BILL: Every ECHO you close makes\n"
+    .string "the world a little steadier.$"
+
+OneIsland_PokemonCenter_1F_Text_EchoCelioHello::
+    .string "CELIO: Welcome back, CHAMPION.\p"
+    .string "BILL will explain everything.$"
+
+OneIsland_PokemonCenter_1F_Text_EchoCelioWait::
+    .string "CELIO: The first ECHO is on\n"
+    .string "KINDLE ROAD. Be careful.$"
+
+OneIsland_PokemonCenter_1F_Text_EchoCelioGift::
+    .string "CELIO: You closed the ECHO!\p"
+    .string "A POKéMON came through it.\n"
+    .string "It chose to follow you.$"
+
+OneIsland_PokemonCenter_1F_Text_EchoGotChikorita::
+    .string "{PLAYER} received CHIKORITA!$"
+
+OneIsland_PokemonCenter_1F_Text_EchoCelioNext::
+    .string "CELIO: The next ECHO is further\n"
+    .string "along the islands. Soon.$"

@@ -207,8 +207,8 @@
 #define FLAG_MINE_ITEM_2         0x0BD
 #define FLAG_HIDE_MINE_MEW       0x0BE
 #define FLAG_HIDE_MEW_TRUCK      0x0BF
-#define FLAG_0x0C0               0x0C0
-#define FLAG_0x0C1               0x0C1
+#define FLAG_HIDE_ECHO_BEAST     0x0C0 // Topaze: Echo 1 beast (Raikou) on Kindle Road
+#define FLAG_ECHO_BEAST_DONE     0x0C1
 #define FLAG_0x0C2               0x0C2
 #define FLAG_0x0C3               0x0C3
 #define FLAG_0x0C4               0x0C4
