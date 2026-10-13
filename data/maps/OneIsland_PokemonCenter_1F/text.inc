@@ -401,3 +401,28 @@ OneIsland_PokemonCenter_1F_Text_EchoGotChikorita::
 OneIsland_PokemonCenter_1F_Text_EchoCelioNext::
     .string "CELIO: The next ECHO is further\n"
     .string "along the islands. Soon.$"
+
+OneIsland_PokemonCenter_1F_Text_EchoBillEcho2::
+    .string "BILL: CELIO's guess was right:\n"
+    .string "the ECHOES are linked.\p"
+    .string "The second one is on CAPE BRINK,\n"
+    .string "on TWO ISLAND.\p"
+    .string "A beast of flames guards it.\n"
+    .string "Calm it down, then come back.$"
+
+OneIsland_PokemonCenter_1F_Text_EchoBillWait2::
+    .string "BILL: CAPE BRINK, on TWO ISLAND.\n"
+    .string "Watch out for the heat.$"
+
+OneIsland_PokemonCenter_1F_Text_EchoBillGift2::
+    .string "BILL: The ECHO is closed! The\n"
+    .string "compass went quiet.\p"
+    .string "This POKéMON came through it.\n"
+    .string "Take care of it, CHAMPION.$"
+
+OneIsland_PokemonCenter_1F_Text_EchoGotCyndaquil::
+    .string "{PLAYER} received CYNDAQUIL!$"
+
+OneIsland_PokemonCenter_1F_Text_EchoBillNext2::
+    .string "BILL: Two ECHOES closed. The\n"
+    .string "third one is near THREE ISLAND.$"

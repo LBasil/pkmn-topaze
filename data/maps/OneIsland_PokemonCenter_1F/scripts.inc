@@ -580,6 +580,9 @@ OneIsland_PokemonCenter_1F_Movement_BillExit::
 OneIsland_PokemonCenter_1F_EventScript_EchoBill::
 	applymovement LOCALID_ONE_ISLAND_POKEMON_CENTER_BILL, Common_Movement_FacePlayer
 	waitmovement 0
+	goto_if_eq VAR_ECHO_STAGE, 5, OneIsland_PokemonCenter_1F_EventScript_EchoBillGift2
+	goto_if_eq VAR_ECHO_STAGE, 4, OneIsland_PokemonCenter_1F_EventScript_EchoBillWait2
+	goto_if_eq VAR_ECHO_STAGE, 3, OneIsland_PokemonCenter_1F_EventScript_EchoBillEcho2
 	goto_if_ge VAR_ECHO_STAGE, 1, OneIsland_PokemonCenter_1F_EventScript_EchoBillAfter
 	msgbox OneIsland_PokemonCenter_1F_Text_EchoBillIntro
 	giveitem_msg OneIsland_PokemonCenter_1F_Text_EchoReceivedCompass, ITEM_VS_SEEKER, 1, MUS_OBTAIN_KEY_ITEM
@@ -658,5 +661,66 @@ OneIsland_PokemonCenter_1F_EventScript_EchoGiftEnd::
 
 OneIsland_PokemonCenter_1F_EventScript_EchoCelioDone::
 	msgbox OneIsland_PokemonCenter_1F_Text_EchoCelioNext
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoBillEcho2::
+	msgbox OneIsland_PokemonCenter_1F_Text_EchoBillEcho2
+	setvar VAR_ECHO_STAGE, 4
+	clearflag FLAG_HIDE_ECHO_BEAST2
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoBillWait2::
+	msgbox OneIsland_PokemonCenter_1F_Text_EchoBillWait2
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoBillGift2::
+	msgbox OneIsland_PokemonCenter_1F_Text_EchoBillGift2
+	setvar VAR_TEMP_1, SPECIES_CYNDAQUIL
+	givemon SPECIES_CYNDAQUIL, 30
+	goto_if_eq VAR_RESULT, 0, OneIsland_PokemonCenter_1F_EventScript_EchoGift2Party
+	goto_if_eq VAR_RESULT, 1, OneIsland_PokemonCenter_1F_EventScript_EchoGift2PC
+	goto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoGift2Party::
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playfanfare MUS_LEVEL_UP
+	message OneIsland_PokemonCenter_1F_Text_EchoGotCyndaquil
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_CYNDAQUIL
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, OneIsland_PokemonCenter_1F_EventScript_EchoGift2End
+	call EventScript_GetGiftMonPartySlot
+	call EventScript_ChangePokemonNickname
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoGift2End
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoGift2PC::
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playfanfare MUS_LEVEL_UP
+	message OneIsland_PokemonCenter_1F_Text_EchoGotCyndaquil
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_CYNDAQUIL
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, OneIsland_PokemonCenter_1F_EventScript_EchoGift2ToPC
+	call EventScript_NameReceivedBoxMon
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoGift2ToPC
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoGift2ToPC::
+	call EventScript_TransferredToPC
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoGift2End
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoGift2End::
+	textcolor NPC_TEXT_COLOR_MALE
+	setvar VAR_ECHO_STAGE, 6
+	msgbox OneIsland_PokemonCenter_1F_Text_EchoBillNext2
 	release
 	end

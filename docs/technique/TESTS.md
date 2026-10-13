@@ -132,3 +132,6 @@ Piste réaliste : faire d'abord le jeu jouable, puis ajouter un follower **limit
 
 ## Écho 1 (post-game, île 1)
 - `bench/echo1_bill_test.py` (Bill : compas, VAR_ECHO_STAGE 0→1), `echo1_raikou_test.py` (Raikou niv. 45 sur la Kindle Road (12,120), stage 1→2), `echo1_celio_test.py` (Celio donne Germignon, stage 2→3). OK en émulateur. Note : le banc ne peut pas démarrer à y>127 (octet signé) ; le test de la scène vanilla 'MeetCelio' est contourné en posant VAR_MAP_SCENE=7.
+
+## Écho 2 (post-game, île 2)
+- `bench/echo2_bill_test.py <étape>` (3→4 annonce, 5→6 cadeau Héricendre/Cyndaquil) et `echo2_entei_test.py` (Entei niv. 48 au Cap Brink (12,29), 4→5). OK en émulateur.
