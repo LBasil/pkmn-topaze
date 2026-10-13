@@ -96,7 +96,7 @@ Eddie battu -> blackout, le maire (taupe) dit avoir utilisé le joueur pour la c
 - Le boss dit au joueur qu'il garde ses Pokémon en Balls : le choix 2 est celui qui lui donne raison.
 - **Le boss a deux combats** : (1) son équipe ; (2) les légendaires qu'il a capturés, **Artikodin, Électhor, Sulfura + Mewtwo** (`TRAINER_LEAGUE_BOSS_2`, 755 dresseurs au total). Entre les deux : « chaque légendaire pris dérègle un peu plus l'horloge du monde » (secousse d'écran).
 - **Idée à développer (Basil)** : le temps se dérègle au fur et à mesure qu'il capture des légendaires (indices à poser sur le parcours : horloges, jour/nuit, PNJ décalés). Son nom viendra plus tard.
-- **Retours (V1)** : Brice, Flora et Misty sont au Centre Pokémon du Plateau Indigo (dialogues avant/après le titre de Champion). N et Gold sont dans le tournoi ; Red/Giovanni/Silver en post-game ; Bill (disparu) reste à traiter avec les îles Sevii.
+- **Retours (V1)** : Brice, Flora et Misty sont au Centre Pokémon du Plateau Indigo (dialogues avant/après le titre de Champion). N et Gold sont dans le tournoi ; Red/Giovanni/Silver en post-game ; Bill (disparu) retrouvé sur l'île 1 (squelette Sevii ci-dessous).
 
 ## Légendaires et Quartz (13/10)
 - **Les oiseaux sont les captifs du boss** : Électhor (centrale) et Moltres (volcan) ne sont PAS croisables avant la Ligue (`FLAG_TOPAZE_POSTGAME` requis pour les afficher). Après la fin 1 (boss battu), ils retournent dans leur lieu d'origine, capturables. Artikodin : seulement aperçu aux jumelles de la Route 15 ouest (pas de rencontre).
@@ -106,3 +106,14 @@ Eddie battu -> blackout, le maire (taupe) dit avoir utilisé le joueur pour la c
 
 ## Conseil des Anciens (post-game)
 Après la fin 1, la 1re salle de la Ligue accueille 20 vétérans à la suite : les champions de Kanto (Brock, Misty, Surge, Erika, Sabrina, Blaine, Giovanni), puis Lorelei, Bruno, Agatha, Lance, Will, Koga, Karen, Sidney, Phoebe, Glacia, Drake, Steven, Wallace. Récompense : Master Ball (placeholder).
+
+## Îles Sevii (post-game) : squelette V1 — un rôle par île
+Les 7 îles vanilla existent déjà dans la ROM. Décision V1 : on ne réécrit pas, on leur donne un rôle clair (texte en anglais, placeholders), à brancher après la Ligue (`FLAG_TOPAZE_POSTGAME`).
+- **Île 1 (Kindle)** : Bill, disparu de Kanto, y est retrouvé ; il explique qu'il suit les anomalies du temps (indices du boss : horloges, jour/nuit décalés).
+- **Île 2 (Cap Brink)** : entraînement, un Ancien du Conseil y donne un conseil (rôle mentor).
+- **Île 3 (Bond Bridge)** : vestiges de la Team du boss, indice sur les oiseaux légendaires capturés.
+- **Île 4 (Icefall)** : retour de Lorelei (sa maison), lien avec Articuno.
+- **Île 5 (Lost Cave / Memorial)** : mémoire des Pokémon libérés, lien avec la fin 2.
+- **Île 6 (Ruin Valley)** : rencontre Mew / ruines de l'Aura, lien avec la mine de Grenalux.
+- **Île 7 (Sevault)** : épreuve finale optionnelle (Red ou Silver selon avancement).
+À faire : écrire les scripts de chaque rôle une fois la v1 globale validée ; vérifier que chaque Pokémon reste obtenable.
