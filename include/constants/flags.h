@@ -195,8 +195,8 @@
 #define FLAG_HEMATEK_N_GONE      0x0B1
 #define FLAG_CHRONDROLIA_RAID_STARTED 0x0B2
 #define FLAG_CHRONDROLIA_RAID_DONE    0x0B3
-#define FLAG_0x0B4               0x0B4
-#define FLAG_0x0B5               0x0B5
+#define FLAG_SEAFOAM_ALLIES_MET  0x0B4
+#define FLAG_SEAFOAM_BOSS_DONE   0x0B5
 #define FLAG_0x0B6               0x0B6
 #define FLAG_0x0B7               0x0B7
 #define FLAG_0x0B8               0x0B8

@@ -1,2 +1,30 @@
 SeafoamIslands_B2F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SeafoamIslands_B2F_OnTransition
 	.byte 0
+
+SeafoamIslands_B2F_OnTransition::
+	call SeafoamIslands_B2F_EventScript_HideOnybris
+	end
+
+SeafoamIslands_B2F_EventScript_HideOnybris::
+	goto_if_unset FLAG_SEAFOAM_ALLIES_MET, SeafoamIslands_B2F_EventScript_HideBeaten
+	goto_if_set FLAG_SEAFOAM_BOSS_DONE, SeafoamIslands_B2F_EventScript_HideBeaten
+	return
+
+SeafoamIslands_B2F_EventScript_HideBeaten::
+	setflag FLAG_TEMP_6
+	return
+
+SeafoamIslands_B2F_EventScript_Onybris3::
+	trainerbattle_single TRAINER_RS_GENTLEMAN, SeafoamIslands_B2F_Text_Onybris3Intro, SeafoamIslands_B2F_Text_Onybris3Defeat
+	msgbox SeafoamIslands_B2F_Text_Onybris3Post, MSGBOX_AUTOCLOSE
+	end
+
+SeafoamIslands_B2F_EventScript_Onybris4::
+	trainerbattle_single TRAINER_RS_BEAUTY, SeafoamIslands_B2F_Text_Onybris4Intro, SeafoamIslands_B2F_Text_Onybris4Defeat
+	msgbox SeafoamIslands_B2F_Text_Onybris4Post, MSGBOX_AUTOCLOSE
+	end
+
+SeafoamIslands_B2F_EventScript_BeatenGrunt::
+	msgbox SeafoamIslands_B2F_Text_BeatenGrunt, MSGBOX_NPC
+	end

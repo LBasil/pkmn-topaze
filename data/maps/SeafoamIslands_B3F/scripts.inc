@@ -6,6 +6,7 @@ SeafoamIslands_B3F_MapScripts::
 	.byte 0
 
 SeafoamIslands_B3F_OnTransition::
+	call SeafoamIslands_B3F_EventScript_HideOnybris
 	call_if_unset FLAG_STOPPED_SEAFOAM_B3F_CURRENT, SeafoamIslands_B3F_EventScript_CheckStoppedCurrent
 	call_if_set FLAG_STOPPED_SEAFOAM_B3F_CURRENT, SeafoamIslands_B3F_EventScript_SetNoCurrentLayout
 	end
@@ -93,3 +94,26 @@ SeafoamIslands_B3F_Movement_RideCurrentClose::
 	walk_fast_down
 	walk_fast_down
 	step_end
+
+SeafoamIslands_B3F_EventScript_HideOnybris::
+	goto_if_unset FLAG_SEAFOAM_ALLIES_MET, SeafoamIslands_B3F_EventScript_HideBeaten
+	goto_if_set FLAG_SEAFOAM_BOSS_DONE, SeafoamIslands_B3F_EventScript_HideBeaten
+	return
+
+SeafoamIslands_B3F_EventScript_HideBeaten::
+	setflag FLAG_TEMP_6
+	return
+
+SeafoamIslands_B3F_EventScript_Onybris5::
+	trainerbattle_single TRAINER_RS_YOUNGSTER, SeafoamIslands_B3F_Text_Onybris5Intro, SeafoamIslands_B3F_Text_Onybris5Defeat
+	msgbox SeafoamIslands_B3F_Text_Onybris5Post, MSGBOX_AUTOCLOSE
+	end
+
+SeafoamIslands_B3F_EventScript_Onybris6::
+	trainerbattle_single TRAINER_RS_LADY, SeafoamIslands_B3F_Text_Onybris6Intro, SeafoamIslands_B3F_Text_Onybris6Defeat
+	msgbox SeafoamIslands_B3F_Text_Onybris6Post, MSGBOX_AUTOCLOSE
+	end
+
+SeafoamIslands_B3F_EventScript_BeatenGrunt::
+	msgbox SeafoamIslands_B3F_Text_BeatenGrunt, MSGBOX_NPC
+	end

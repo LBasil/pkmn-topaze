@@ -67,3 +67,10 @@ Joueur : Hematown -> Grenalux -> SURF sud (Route 21) -> Chrondrolia. Route 19 / 
 ## Chrondrolia — événement (badge 7)
 Eddie battu -> blackout, le maire (taupe) dit avoir utilisé le joueur pour la clé secrète, la centrale est occupée ; SELENE (2e combat) garde le TOPAZ au 3F ; le joueur GAGNE la pierre (TOPAZ). Selene : l'éruption de la mer = leur oeuvre, le MAITRE est dans le volcan SEAFOAM. La mer (Route 19/20) et les grottes SEAFOAM s'ouvrent -> prochain QG (n°4, Gold + Silver).
 
+
+## Volcan ÉCUME (Seafoam) — QG n°4 (V1)
+- Cave convertie en volcan : palettes basalte + eau remplacée par de la LAVE (tileset primaire GeneralSeafoam), faune sauvage feu/roche (Slugma, Magcargo, Geodude, Graveler, Torkoal + chauves-souris), niveaux +6.
+- Accessible après le raid de Chrondrolia (mer rouverte). 1F : GOLD + SILVER (provisoires : sprites Brendan/Bleu) rencontrent le joueur à l'une des deux entrées (« on passe devant, tu nettoies derrière »).
+- B1F–B3F : 2 sbires par étage + sbire battu qui raconte le passage de Gold/Silver (crescendo : ils ouvrent la voie).
+- B4F : Gold et Silver KO (battus par le grand patron en 1 Pokémon chacun), KRONOS combat le joueur (Arbok 47, Weezing 47, Nidoking 48, Crobat 48, Alakazam 50), indice : la pierre part vers le DERNIER QG près de la Ligue (Red). Moltres remplace Artikodin (combat optionnel, N55).
+- Flags : 0x0B4 FLAG_SEAFOAM_ALLIES_MET, 0x0B5 FLAG_SEAFOAM_BOSS_DONE. Script : docs/topaze/seafoam_volcano.py + seafoam_lava.py + seafoam_scenario.py.

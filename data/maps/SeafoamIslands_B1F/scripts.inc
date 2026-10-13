@@ -1,2 +1,26 @@
 SeafoamIslands_B1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SeafoamIslands_B1F_OnTransition
 	.byte 0
+
+SeafoamIslands_B1F_OnTransition::
+	call SeafoamIslands_B1F_EventScript_HideOnybris
+	end
+
+SeafoamIslands_B1F_EventScript_HideOnybris::
+	goto_if_unset FLAG_SEAFOAM_ALLIES_MET, SeafoamIslands_B1F_EventScript_HideBeaten
+	goto_if_set FLAG_SEAFOAM_BOSS_DONE, SeafoamIslands_B1F_EventScript_HideBeaten
+	return
+
+SeafoamIslands_B1F_EventScript_HideBeaten::
+	setflag FLAG_TEMP_6
+	return
+
+SeafoamIslands_B1F_EventScript_Onybris1::
+	trainerbattle_single TRAINER_RS_TUBER_M, SeafoamIslands_B1F_Text_Onybris1Intro, SeafoamIslands_B1F_Text_Onybris1Defeat
+	msgbox SeafoamIslands_B1F_Text_Onybris1Post, MSGBOX_AUTOCLOSE
+	end
+
+SeafoamIslands_B1F_EventScript_Onybris2::
+	trainerbattle_single TRAINER_RS_TUBER_F, SeafoamIslands_B1F_Text_Onybris2Intro, SeafoamIslands_B1F_Text_Onybris2Defeat
+	msgbox SeafoamIslands_B1F_Text_Onybris2Post, MSGBOX_AUTOCLOSE
+	end

@@ -19,6 +19,7 @@ SeafoamIslands_B4F_EventScript_TryRemoveArticuno::
 	return
 
 SeafoamIslands_B4F_OnTransition::
+	call SeafoamIslands_B4F_EventScript_CheckOnybris
 	call_if_unset FLAG_FOUGHT_ARTICUNO, SeafoamIslands_B4F_EventScript_ShowArticuno
 	call_if_unset FLAG_STOPPED_SEAFOAM_B4F_CURRENT, SeafoamIslands_B4F_EventScript_CheckStoppedCurrent
 	call_if_set FLAG_STOPPED_SEAFOAM_B4F_CURRENT, SeafoamIslands_B4F_EventScript_SetNoCurrentLayout
@@ -67,6 +68,7 @@ SeafoamIslands_B4F_EventScript_WarpInOnCurrent::
 SeafoamIslands_B4F_OnFrame::
 	map_script_2 VAR_MAP_SCENE_SEAFOAM_ISLANDS_B4F, 1, SeafoamIslands_B4F_EventScript_EnterOnCurrent
 	map_script_2 VAR_TEMP_1, 1, SeafoamIslands_B4F_EventScript_EnterByFalling
+	map_script_2 VAR_TEMP_3, 1, SeafoamIslands_B4F_EventScript_KronosScene
 	.2byte 0
 
 @ The current the player is forced in on from B3F
@@ -156,9 +158,9 @@ SeafoamIslands_B4F_EventScript_Articuno::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_ARTICUNO, 50
+	setwildbattle SPECIES_MOLTRES, 55
 	waitse
-	playmoncry SPECIES_ARTICUNO, CRY_MODE_ENCOUNTER
+	playmoncry SPECIES_MOLTRES, CRY_MODE_ENCOUNTER
 	message Text_Gyaoo
 	waitmessage
 	waitmoncry
@@ -183,7 +185,7 @@ SeafoamIslands_B4F_EventScript_DefeatedArticuno::
 	end
 
 SeafoamIslands_B4F_EventScript_RanFromArticuno::
-	setvar VAR_0x8004, SPECIES_ARTICUNO
+	setvar VAR_0x8004, SPECIES_MOLTRES
 	goto EventScript_MonFlewAway
 	end
 
@@ -193,4 +195,59 @@ SeafoamIslands_B4F_EventScript_BoulderHintSign::
 
 SeafoamIslands_B4F_EventScript_FastCurrentSign::
 	msgbox SeafoamIslands_B4F_Text_DangerFastCurrent, MSGBOX_SIGN
+	end
+
+SeafoamIslands_B4F_EventScript_AllyStub::
+	end
+
+SeafoamIslands_B4F_EventScript_CheckOnybris::
+	goto_if_set FLAG_SEAFOAM_BOSS_DONE, SeafoamIslands_B4F_EventScript_OnybrisDone
+	goto_if_unset FLAG_SEAFOAM_ALLIES_MET, SeafoamIslands_B4F_EventScript_OnybrisDone
+	setvar VAR_TEMP_3, 1
+	return
+
+SeafoamIslands_B4F_EventScript_OnybrisDone::
+	setflag FLAG_TEMP_1
+	goto_if_unset FLAG_SEAFOAM_BOSS_DONE, SeafoamIslands_B4F_EventScript_OnybrisHideAll
+	return
+
+SeafoamIslands_B4F_EventScript_OnybrisHideAll::
+	setflag FLAG_TEMP_2
+	setflag FLAG_TEMP_3
+	return
+
+SeafoamIslands_B4F_EventScript_KronosScene::
+	lockall
+	msgbox SeafoamIslands_B4F_Text_FloorScene
+	msgbox SeafoamIslands_B4F_Text_KronosIntro
+	closemessage
+	setvar VAR_LAST_TALKED, LOCALID_SEAFOAM_KRONOS
+	trainerbattle_no_intro TRAINER_AQUA_ADMIN_MATT, SeafoamIslands_B4F_Text_KronosDefeat
+	msgbox SeafoamIslands_B4F_Text_KronosPost
+	closemessage
+	playse SE_THUNDER
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 3
+	setvar VAR_0x8006, 8
+	setvar VAR_0x8007, 4
+	special ShakeScreen
+	waitstate
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_SEAFOAM_KRONOS
+	delay 20
+	fadescreen FADE_FROM_BLACK
+	msgbox SeafoamIslands_B4F_Text_GoldAfterScene
+	msgbox SeafoamIslands_B4F_Text_SilverAfterScene
+	closemessage
+	setflag FLAG_SEAFOAM_BOSS_DONE
+	setvar VAR_TEMP_3, 0
+	releaseall
+	end
+
+SeafoamIslands_B4F_EventScript_GoldBeaten::
+	msgbox SeafoamIslands_B4F_Text_GoldBeaten, MSGBOX_NPC
+	end
+
+SeafoamIslands_B4F_EventScript_SilverBeaten::
+	msgbox SeafoamIslands_B4F_Text_SilverBeaten, MSGBOX_NPC
 	end

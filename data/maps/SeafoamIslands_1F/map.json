@@ -56,6 +56,66 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SeafoamIslands_1F_EventScript_ItemIceHeal",
       "flag": "FLAG_HIDE_SEAFOAM_ISLANDS_1F_ICE_HEAL"
+    },
+    {
+      "local_id": "LOCALID_SEAFOAM_GOLD_W",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_RS_BRENDAN",
+      "x": 5,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SeafoamIslands_1F_EventScript_AllyStub",
+      "flag": "FLAG_TEMP_1"
+    },
+    {
+      "local_id": "LOCALID_SEAFOAM_SILVER_W",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BLUE",
+      "x": 7,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SeafoamIslands_1F_EventScript_AllyStub",
+      "flag": "FLAG_TEMP_2"
+    },
+    {
+      "local_id": "LOCALID_SEAFOAM_GOLD_E",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_RS_BRENDAN",
+      "x": 31,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SeafoamIslands_1F_EventScript_AllyStub",
+      "flag": "FLAG_TEMP_3"
+    },
+    {
+      "local_id": "LOCALID_SEAFOAM_SILVER_E",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BLUE",
+      "x": 33,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SeafoamIslands_1F_EventScript_AllyStub",
+      "flag": "FLAG_TEMP_4"
     }
   ],
   "warp_events": [
@@ -109,6 +169,61 @@
       "dest_warp_id": "10"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 19,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "SeafoamIslands_1F_EventScript_AlliesWest"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 19,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "SeafoamIslands_1F_EventScript_AlliesWest"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 19,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "SeafoamIslands_1F_EventScript_AlliesWest"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 19,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "SeafoamIslands_1F_EventScript_AlliesEast"
+    },
+    {
+      "type": "trigger",
+      "x": 32,
+      "y": 19,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "SeafoamIslands_1F_EventScript_AlliesEast"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 19,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "SeafoamIslands_1F_EventScript_AlliesEast"
+    }
+  ],
   "bg_events": []
 }
