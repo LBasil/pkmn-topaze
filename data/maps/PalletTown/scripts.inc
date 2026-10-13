@@ -535,7 +535,12 @@ PalletTown_Movement_SignLadyMoveOutOfWayLeft::
 	step_end
 
 PalletTown_EventScript_FatMan::
-	msgbox PalletTown_Text_CanStoreItemsAndMonsInPC, MSGBOX_NPC
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_EventScript_FatManStrike
+	msgbox PalletTown_Text_FatManA, MSGBOX_NPC
+	end
+
+PalletTown_EventScript_FatManStrike::
+	msgbox PalletTown_Text_FatManB, MSGBOX_NPC
 	end
 
 PalletTown_EventScript_OaksLabSign::
@@ -618,31 +623,71 @@ PalletTown_EventScript_SchoolSign::
 	end
 
 PalletTown_EventScript_AmbMiner::
-	msgbox PalletTown_Text_AmbMiner, MSGBOX_NPC
+	goto_if_set FLAG_SYS_GAME_CLEAR, PalletTown_EventScript_AmbMinerPost
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_EventScript_AmbMinerStrike
+	msgbox PalletTown_Text_AmbMinerA, MSGBOX_NPC
+	end
+
+PalletTown_EventScript_AmbMinerStrike::
+	msgbox PalletTown_Text_AmbMinerB, MSGBOX_NPC
+	end
+
+PalletTown_EventScript_AmbMinerPost::
+	msgbox PalletTown_Text_AmbMinerD, MSGBOX_NPC
 	end
 
 PalletTown_EventScript_AmbOldman::
-	msgbox PalletTown_Text_AmbOldman, MSGBOX_NPC
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_EventScript_AmbOldmanStrike
+	msgbox PalletTown_Text_AmbOldmanA, MSGBOX_NPC
+	end
+
+PalletTown_EventScript_AmbOldmanStrike::
+	msgbox PalletTown_Text_AmbOldmanB, MSGBOX_NPC
 	end
 
 PalletTown_EventScript_AmbGirl::
-	msgbox PalletTown_Text_AmbGirl, MSGBOX_NPC
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_EventScript_AmbGirlStrike
+	msgbox PalletTown_Text_AmbGirlA, MSGBOX_NPC
+	end
+
+PalletTown_EventScript_AmbGirlStrike::
+	msgbox PalletTown_Text_AmbGirlB, MSGBOX_NPC
 	end
 
 PalletTown_EventScript_AmbBoy::
-	msgbox PalletTown_Text_AmbBoy, MSGBOX_NPC
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_EventScript_AmbBoyStrike
+	msgbox PalletTown_Text_AmbBoyA, MSGBOX_NPC
+	end
+
+PalletTown_EventScript_AmbBoyStrike::
+	msgbox PalletTown_Text_AmbBoyB, MSGBOX_NPC
 	end
 
 PalletTown_EventScript_AmbScientist::
-	msgbox PalletTown_Text_AmbScientist, MSGBOX_NPC
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_EventScript_AmbScientistStrike
+	msgbox PalletTown_Text_AmbScientistA, MSGBOX_NPC
+	end
+
+PalletTown_EventScript_AmbScientistStrike::
+	msgbox PalletTown_Text_AmbScientistB, MSGBOX_NPC
 	end
 
 PalletTown_EventScript_AmbGardener::
-	msgbox PalletTown_Text_AmbGardener, MSGBOX_NPC
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_EventScript_AmbGardenerStrike
+	msgbox PalletTown_Text_AmbGardenerA, MSGBOX_NPC
+	end
+
+PalletTown_EventScript_AmbGardenerStrike::
+	msgbox PalletTown_Text_AmbGardenerB, MSGBOX_NPC
 	end
 
 PalletTown_EventScript_AmbLady::
-	msgbox PalletTown_Text_AmbLady, MSGBOX_NPC
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_EventScript_AmbLadyStrike
+	msgbox PalletTown_Text_AmbLadyA, MSGBOX_NPC
+	end
+
+PalletTown_EventScript_AmbLadyStrike::
+	msgbox PalletTown_Text_AmbLadyB, MSGBOX_NPC
 	end
 
 PalletTown_EventScript_SceneryMonument::

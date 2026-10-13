@@ -4,8 +4,10 @@ PalletTown_PlayersHouse_1F_Text_AllBoysLeaveOakLookingForYou::
     .string "It said so on TV.\p"
     .string "But don't go out in your slippers!\n"
     .string "Put on your sports shoes first.\p"
-    .string "Oh, yes. PROF. OAK, next door, was\n"
-    .string "looking for you.$"
+    .string "Oh, and something happened at the\n"
+    .string "RANCH this morning. People in black.\p"
+    .string "Ask around town before you go\n"
+    .string "anywhere, dear.$"
 
 PalletTown_PlayersHouse_1F_Text_AllGirlsLeaveOakLookingForYou::
     .string "MOM: …Right.\n"
@@ -13,8 +15,10 @@ PalletTown_PlayersHouse_1F_Text_AllGirlsLeaveOakLookingForYou::
     .string "It said so on TV.\p"
     .string "But don't go out in your slippers!\n"
     .string "Put on your sports shoes first.\p"
-    .string "Oh, yes. PROF. OAK, next door, was\n"
-    .string "looking for you.$"
+    .string "Oh, and something happened at the\n"
+    .string "RANCH this morning. People in black.\p"
+    .string "Ask around town before you go\n"
+    .string "anywhere, dear.$"
 
 PalletTown_PlayersHouse_1F_Text_YouShouldTakeQuickRest::
     .string "MOM: {PLAYER}!\n"

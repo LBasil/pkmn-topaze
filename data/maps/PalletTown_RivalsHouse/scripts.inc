@@ -75,7 +75,13 @@ PalletTown_RivalsHouse_EventScript_Daisy::
 	end
 
 PalletTown_RivalsHouse_EventScript_HeardBattledRival::
+	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_RivalsHouse_EventScript_DaisyStrike
 	msgbox PalletTown_RivalsHouse_Text_HeardYouBattledRival
+	release
+	end
+
+PalletTown_RivalsHouse_EventScript_DaisyStrike::
+	msgbox PalletTown_RivalsHouse_Text_DaisyStrike
 	release
 	end
 

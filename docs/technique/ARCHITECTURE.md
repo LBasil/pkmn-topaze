@@ -198,3 +198,6 @@ Les 4 cartes `PokemonMansion_1F/2F/3F/B1F` sont réutilisées (ids conservés) m
 - Ouvrier du ranch (Hand1) : quand `FLAG_ONYBRIS_ANIMALS_FOUND` est posé, remet le **GRENAT** (ancien `ITEM_RUBY`, objet clé dont l'importance sera révélée plus tard). Le drapeau n'est pas encore posé : à brancher avec Bourg Quartz.
 - Chêne : 2e retour après l'arène 4 (`PalletTown_ProfessorOaksLab_Text_OakReturn2`). 1er retour = scène du colis d'origine ; scène finale = scène Pokédex national d'origine.
 - PNJ d'ambiance : 7 textes d'indice réécrits (mine fermée jusqu'à la Ligue, une pierre par ville, mémo de types, Surf pour la mer au sud).
+
+### Script détaillé de Grenalux
+`docs/scenario/GRENALUX.md` (généré par `docs/scenario/gen_grenalux.py`, textes extraits du code) décrit chaque PNJ et panneau par état du monde (avant / après le coup d'Onybris / après la Ligue). PNJ d'ambiance : `PalletTown_EventScript_Amb*` (variantes `...Strike` et `...Post`). Bug corrigé : les sorties de l'école de Grenalux menaient à Jadielle (`MAP_VIRIDIAN_CITY`) ; elles mènent maintenant à `MAP_PALLET_TOWN` warp 3. Le vol du GRENAT et des fichiers du labo a lieu « pendant que tout le monde était au ranch » (et non à l'aube, réservée au vol des trackers).

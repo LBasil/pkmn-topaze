@@ -124,3 +124,9 @@ PalletTown_RivalsHouse_Text_LovelyAndSweetClefairy::
     .string "“The lovely and sweet\n"
     .string "CLEFAIRY”$"
 
+
+PalletTown_RivalsHouse_Text_DaisyStrike::
+	.string "DAISY: Dad is mending the fence,\n"
+	.string "and Grandpa is not himself.\p"
+	.string "Please be careful out there,\n"
+	.string "{PLAYER}. And take care of {RIVAL}.$"

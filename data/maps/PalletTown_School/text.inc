@@ -25,7 +25,7 @@ PalletTown_School_Text_AuraCase::
     .string "changed in a single night.$"
 
 PalletTown_School_Text_TeacherStrike::
-    .string "They came at dawn, all in black.\n"
+    .string "They came this morning, all in black.\n"
     .string "They took the GRENAT before I could\l"
     .string "even reach the alarm.\p"
     .string "They said it was for the POKéMON,\n"
