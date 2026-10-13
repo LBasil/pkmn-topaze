@@ -305,3 +305,6 @@ Chemin du joueur après le ticket : Tourmalia → **Route 5** (pension, panneau 
 - Parc Safari : tant que l'occupation dure (STARTED sans STONE_GIVEN), l'entree est gratuite et SANS mode Safari (pas de balles/pas, combats normaux) : l'employe explique. Apres la pierre, retour au jeu Safari d'origine.
 - `docs/topaze/safari_onybris.py` (idempotent) : 8 sbires (ids RS inutilises recycles + GRUNT_21, niv. 30-33, classe TEAM ONYBRIS) : Centre 2, Est 2, Nord 2, Ouest 2 (sight 3-4) + cadre SELENE (id MAGMA_ADMIN_COURTNEY, pic Admin F, Hypno 35/Muk 35/Venomoth 36/Tentacruel 37) a l'Ouest (29,16) pres des DENTS EN OR. Selene explique la fausse pierre, rend les dents et part. Tous masques (FLAG_TEMP_5/6) apres STONE_GIVEN.
 - Boucle : barrage -> sbires du parc -> Selene -> dents -> Gardien : HM04 + AMETHIOLITE -> police levee au badge 5 (arene d'ACHLYS toujours a retoucher). Non teste en emulateur.
+
+### Amethiolite — arene d'ACHLYS (Poison)
+Deja thematisee (textes Poison, Hematown annonce). Seul ajustement : Kayden Hypno 43 -> 39 (plafond cote dresseurs 38-39 ; Achlys 38-41, apres Selene 35-37 au Safari). Non teste en emulateur.

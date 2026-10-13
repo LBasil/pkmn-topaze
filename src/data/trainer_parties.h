@@ -3368,7 +3368,7 @@ static const struct TrainerMonNoItemCustomMoves sParty_JugglerEdward[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_JugglerKayden[] = {
     {
         .iv = 0,
-        .lvl = 43,
+        .lvl = 39,
         .species = SPECIES_HYPNO,
     },
 };
