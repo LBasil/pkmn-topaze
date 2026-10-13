@@ -31,8 +31,9 @@ SSAnne_CaptainsOffice_Text_ObtainedHM01FromCaptain::
 SSAnne_CaptainsOffice_Text_ExplainCut::
     .string "Using CUT, you can chop down\n"
     .string "small trees.\p"
-    .string "Why not try it with the trees\n"
-    .string "around APATIA?$"
+    .string "A small tree blocks the pass east\n"
+    .string "of TOURMALIA. That way leads to\l"
+    .string "ROCK TUNNEL and SPINELLIA.$"
 
 SSAnne_CaptainsOffice_Text_SSAnneWillSetSailSoon::
     .string "CAPTAIN: …Whew!\p"

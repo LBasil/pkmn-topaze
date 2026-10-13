@@ -80,7 +80,7 @@ Route11_Text_YasuDefeat::
     .string "My POKéMON need to be stronger!$"
 
 Route11_Text_YasuPostBattle::
-    .string "The huge sleeper on ROUTE 12 will\nnot budge. Take the long way\pround, through ROCK TUNNEL.$"
+    .string "The huge sleeper on ROUTE 12 will\nnot budge. Go back to TOURMALIA,\pthen east through ROCK TUNNEL.$"
 
 Route11_Text_BernieIntro::
     .string "Watch out for live wires!$"

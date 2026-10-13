@@ -13,8 +13,9 @@ VermilionCity_Gym_Text_LtSurgePostBattle::
     .string "The CAPTAIN called me: you saved\n"
     .string "my APATITE from those thieves.\p"
     .string "Take my badge as thanks. Now keep\n"
-    .string "climbing, kid. BOURG QUARTZ is\l"
-    .string "next, and it's very cold there.$"
+    .string "climbing, kid. Cut the tree east\n"
+    .string "of TOURMALIA: ROCK TUNNEL leads\l"
+    .string "to SPINELLIA.$"
 
 VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis::
     .string "The APATITE BADGE lets your\n"
