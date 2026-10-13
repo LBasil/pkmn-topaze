@@ -11530,123 +11530,341 @@ static const struct TrainerMonNoItemDefaultMoves sParty_CueBallPaxton[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaguePool1[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_LeagueSeko[] = {
     {
         .iv = 200,
-        .lvl = 46,
-        .species = SPECIES_HITMONLEE,
+        .lvl = 50,
+        .species = SPECIES_SWELLOW,
     },
     {
         .iv = 200,
-        .lvl = 46,
-        .species = SPECIES_PRIMEAPE,
+        .lvl = 50,
+        .species = SPECIES_LINOONE,
     },
     {
         .iv = 200,
-        .lvl = 47,
-        .species = SPECIES_MACHAMP,
+        .lvl = 51,
+        .species = SPECIES_VIGOROTH,
     },
     {
         .iv = 200,
-        .lvl = 48,
-        .species = SPECIES_POLIWRATH,
+        .lvl = 51,
+        .species = SPECIES_DELCATTY,
+    },
+    {
+        .iv = 200,
+        .lvl = 52,
+        .species = SPECIES_SCEPTILE,
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaguePool2[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_LeagueMay[] = {
     {
         .iv = 200,
-        .lvl = 47,
-        .species = SPECIES_STARMIE,
+        .lvl = 51,
+        .species = SPECIES_ROSELIA,
     },
     {
         .iv = 200,
-        .lvl = 47,
+        .lvl = 51,
+        .species = SPECIES_MANECTRIC,
+    },
+    {
+        .iv = 200,
+        .lvl = 52,
+        .species = SPECIES_ALTARIA,
+    },
+    {
+        .iv = 200,
+        .lvl = 52,
+        .species = SPECIES_WAILORD,
+    },
+    {
+        .iv = 200,
+        .lvl = 53,
+        .species = SPECIES_BLAZIKEN,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeagueBrendan[] = {
+    {
+        .iv = 200,
+        .lvl = 52,
+        .species = SPECIES_ABSOL,
+    },
+    {
+        .iv = 200,
+        .lvl = 52,
+        .species = SPECIES_EXPLOUD,
+    },
+    {
+        .iv = 200,
+        .lvl = 53,
+        .species = SPECIES_FLYGON,
+    },
+    {
+        .iv = 200,
+        .lvl = 53,
+        .species = SPECIES_GARDEVOIR,
+    },
+    {
+        .iv = 200,
+        .lvl = 54,
+        .species = SPECIES_SWAMPERT,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeagueGold[] = {
+    {
+        .iv = 200,
+        .lvl = 53,
+        .species = SPECIES_UMBREON,
+    },
+    {
+        .iv = 200,
+        .lvl = 53,
+        .species = SPECIES_ESPEON,
+    },
+    {
+        .iv = 200,
+        .lvl = 54,
+        .species = SPECIES_AMPHAROS,
+    },
+    {
+        .iv = 200,
+        .lvl = 54,
+        .species = SPECIES_STEELIX,
+    },
+    {
+        .iv = 200,
+        .lvl = 55,
+        .species = SPECIES_TYPHLOSION,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeagueCrystal[] = {
+    {
+        .iv = 200,
+        .lvl = 54,
+        .species = SPECIES_TOGETIC,
+    },
+    {
+        .iv = 200,
+        .lvl = 54,
+        .species = SPECIES_XATU,
+    },
+    {
+        .iv = 200,
+        .lvl = 55,
+        .species = SPECIES_AZUMARILL,
+    },
+    {
+        .iv = 200,
+        .lvl = 55,
+        .species = SPECIES_QUAGSIRE,
+    },
+    {
+        .iv = 200,
+        .lvl = 56,
+        .species = SPECIES_MEGANIUM,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeagueLeaf[] = {
+    {
+        .iv = 200,
+        .lvl = 55,
+        .species = SPECIES_CLEFABLE,
+    },
+    {
+        .iv = 200,
+        .lvl = 55,
         .species = SPECIES_VAPOREON,
     },
     {
         .iv = 200,
-        .lvl = 47,
-        .species = SPECIES_SEAKING,
+        .lvl = 56,
+        .species = SPECIES_DUGTRIO,
     },
     {
         .iv = 200,
-        .lvl = 48,
-        .species = SPECIES_KINGLER,
-    },
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaguePool3[] = {
-    {
-        .iv = 200,
-        .lvl = 48,
-        .species = SPECIES_ELECTRODE,
-    },
-    {
-        .iv = 200,
-        .lvl = 48,
-        .species = SPECIES_MAGNETON,
-    },
-    {
-        .iv = 200,
-        .lvl = 49,
-        .species = SPECIES_RAICHU,
-    },
-    {
-        .iv = 200,
-        .lvl = 49,
-        .species = SPECIES_ELECTABUZZ,
-    },
-};
-
-static const struct TrainerMonNoItemDefaultMoves sParty_LeagueQuarter[] = {
-    {
-        .iv = 200,
-        .lvl = 50,
+        .lvl = 56,
         .species = SPECIES_ALAKAZAM,
     },
     {
         .iv = 200,
-        .lvl = 49,
-        .species = SPECIES_HYPNO,
+        .lvl = 57,
+        .species = SPECIES_SNORLAX,
     },
     {
         .iv = 200,
-        .lvl = 49,
-        .species = SPECIES_MR_MIME,
-    },
-    {
-        .iv = 200,
-        .lvl = 50,
-        .species = SPECIES_SLOWBRO,
-    },
-    {
-        .iv = 200,
-        .lvl = 50,
-        .species = SPECIES_EXEGGUTOR,
+        .lvl = 58,
+        .species = SPECIES_VENUSAUR,
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeagueSemi[] = {
+static const struct TrainerMonNoItemDefaultMoves sParty_LeagueZephyr[] = {
     {
         .iv = 200,
-        .lvl = 51,
+        .lvl = 56,
+        .species = SPECIES_JOLTEON,
+    },
+    {
+        .iv = 200,
+        .lvl = 56,
+        .species = SPECIES_GENGAR,
+    },
+    {
+        .iv = 200,
+        .lvl = 57,
+        .species = SPECIES_MACHAMP,
+    },
+    {
+        .iv = 200,
+        .lvl = 57,
+        .species = SPECIES_EXEGGUTOR,
+    },
+    {
+        .iv = 200,
+        .lvl = 58,
+        .species = SPECIES_BLASTOISE,
+    },
+    {
+        .iv = 200,
+        .lvl = 59,
+        .species = SPECIES_CHARIZARD,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeagueBlue[] = {
+    {
+        .iv = 200,
+        .lvl = 58,
+        .species = SPECIES_PIDGEOT,
+    },
+    {
+        .iv = 200,
+        .lvl = 58,
+        .species = SPECIES_ALAKAZAM,
+    },
+    {
+        .iv = 200,
+        .lvl = 59,
+        .species = SPECIES_RHYDON,
+    },
+    {
+        .iv = 200,
+        .lvl = 59,
         .species = SPECIES_GYARADOS,
     },
     {
         .iv = 200,
-        .lvl = 51,
-        .species = SPECIES_DRAGONAIR,
-    },
-    {
-        .iv = 200,
-        .lvl = 52,
+        .lvl = 60,
         .species = SPECIES_ARCANINE,
     },
     {
         .iv = 200,
-        .lvl = 52,
-        .species = SPECIES_AERODACTYL,
+        .lvl = 61,
+        .species = SPECIES_EXEGGUTOR,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeagueN[] = {
+    {
+        .iv = 200,
+        .lvl = 59,
+        .species = SPECIES_ALTARIA,
+    },
+    {
+        .iv = 200,
+        .lvl = 59,
+        .species = SPECIES_BANETTE,
+    },
+    {
+        .iv = 200,
+        .lvl = 60,
+        .species = SPECIES_WALREIN,
+    },
+    {
+        .iv = 200,
+        .lvl = 60,
+        .species = SPECIES_LUDICOLO,
+    },
+    {
+        .iv = 200,
+        .lvl = 61,
+        .species = SPECIES_MILOTIC,
+    },
+    {
+        .iv = 200,
+        .lvl = 62,
+        .species = SPECIES_ABSOL,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeagueChen[] = {
+    {
+        .iv = 200,
+        .lvl = 61,
+        .species = SPECIES_TAUROS,
+    },
+    {
+        .iv = 200,
+        .lvl = 61,
+        .species = SPECIES_EXEGGUTOR,
+    },
+    {
+        .iv = 200,
+        .lvl = 62,
+        .species = SPECIES_GYARADOS,
+    },
+    {
+        .iv = 200,
+        .lvl = 62,
+        .species = SPECIES_ARCANINE,
+    },
+    {
+        .iv = 200,
+        .lvl = 63,
+        .species = SPECIES_SNORLAX,
+    },
+    {
+        .iv = 200,
+        .lvl = 64,
+        .species = SPECIES_DRAGONITE,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_LeagueBoss[] = {
+    {
+        .iv = 200,
+        .lvl = 64,
+        .species = SPECIES_CROBAT,
+    },
+    {
+        .iv = 200,
+        .lvl = 64,
+        .species = SPECIES_HOUNDOOM,
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_GENGAR,
+    },
+    {
+        .iv = 200,
+        .lvl = 65,
+        .species = SPECIES_TYRANITAR,
+    },
+    {
+        .iv = 200,
+        .lvl = 66,
+        .species = SPECIES_SALAMENCE,
+    },
+    {
+        .iv = 200,
+        .lvl = 67,
+        .species = SPECIES_METAGROSS,
     },
 };
 

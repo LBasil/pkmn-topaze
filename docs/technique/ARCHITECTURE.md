@@ -343,3 +343,13 @@ Le twist QUARTZ (duel de Vesper) intervient en FIN de jeu : posseder (ou non) le
 
 ## Repaire sous la Route Victoire (portes ouvertes)
 `docs/topaze/lair_layouts.py` copie les salles de la Ligue (Lance, Champion, Lorelei) puis écrit dans `map.bin` l'état **ouvert** de la porte 1F (6,4)-(6,5) et de l'entrée 3F (5..7, 11..12) : les scripts d'ouverture/fermeture de la Ligue n'existent pas ici. Vesper 1F en (6,7) vue 4 ; Takashi (Fonderie) vue 1 : voir TEST_PASSE_13_10.md (règle : pas de dresseur qui bouche un couloir d'1 case).
+
+
+## Ligue (tournoi de 11 combats)
+| Sujet | Où |
+|---|---|
+| 11 dresseurs `TRAINER_LEAGUE_*` (743-753, `NUM_TRAINERS` 754), équipes niv. 50-67 | `docs/topaze/league_build.py` → `include/constants/opponents.h`, `src/data/trainers.h`, `src/data/trainer_parties.h` |
+| Arène (1re salle) : 9 matchs, sprite adverse par `VAR_TOURNAMENT_ROUND` (0-8), soin + rechargement de la salle entre matchs, porte ouverte à la fin | `docs/topaze/league_arena.py` → `PokemonLeague_LoreleisRoom/scripts.inc` + `text.inc` |
+| Salle du Champion : OAK, puis irruption du boss (objet 2 = sprite provisoire), reprise possible après défaite | `docs/topaze/league_champ.py` → `PokemonLeague_ChampionsRoom` ; warps Lorelei(6,2)→Champion, Champion(6,19)→Lorelei |
+| Salles Bruno/Agatha/Lance | conservées dans le code mais hors trajet |
+Les trois scripts `league_*.py` ne sont pas rejouables (ils remplacent des blocs déjà transformés) ; ils servent de trace.

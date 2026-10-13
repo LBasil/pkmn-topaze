@@ -31,6 +31,11 @@ s = s.replace(marker, add + marker, 1)
 s = s.replace('u8 gTopazeDbg[8];', 'u8 gTopazeDbg[8];\nu16 gTopazeFlags[24];\nu16 gTopazeVars[16];\nu8 gTopazeGod;', 1)
 s = s.replace('#include "script_pokemon_util.h"', '#include "script_pokemon_util.h"\n#include "pokemon.h"\n#include "constants/moves.h"', 1)
 open(p, 'w').write(s)
+s2 = open('src/battle_script_commands.c').read()
+old2 = 'static void Cmd_ppreduce(void)\n{\n    s32 ppToDeduct = 1;\n'
+assert old2 in s2
+s2 = s2.replace(old2, 'extern u8 gTopazeGod;\n' + old2 + '    if (gTopazeGod && GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER) { gBattlescriptCurrInstr++; return; }\n', 1)
+open('src/battle_script_commands.c','w').write(s2)
 p = 'src/battle_script_commands.c'; s = open(p).read()
 old_tc = 'static void Cmd_typecalc(void)\n{\n    s32 i = 0;\n    u8 moveType;\n\n'
 assert old_tc in s
