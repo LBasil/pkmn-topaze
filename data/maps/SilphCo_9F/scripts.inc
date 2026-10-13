@@ -1,5 +1,6 @@
 SilphCo_9F_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, SilphCo_9F_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, SilphCo_9F_OnTransition
 	.byte 0
 
 SilphCo_9F_OnLoad::
@@ -39,3 +40,31 @@ SilphCo_9F_EventScript_Grunt2::
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_38, SilphCo_9F_Text_Grunt2Intro, SilphCo_9F_Text_Grunt2Defeat
 	msgbox SilphCo_9F_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
 	end
+
+SilphCo_9F_OnTransition::
+	goto_if_unset FLAG_HEMATEK_ALLIES_IN, SilphCo_9F_EventScript_HideAlly
+	goto_if_set FLAG_HEMATEK_BOSS_DONE, SilphCo_9F_EventScript_HideAlly
+	goto_if_set FLAG_HEMATEK_N_GONE, SilphCo_9F_EventScript_HideAlly
+	end
+
+SilphCo_9F_EventScript_HideAlly::
+	setflag FLAG_TEMP_1
+	end
+
+SilphCo_9F_EventScript_Ally::
+	lock
+	faceplayer
+	msgbox SilphCo_9F_Text_Ally
+	closemessage
+	applymovement LOCALID_SILPH_CO_9F_N, SilphCo_9F_Movement_AllyLeaves
+	waitmovement 0
+	removeobject LOCALID_SILPH_CO_9F_N
+	setflag FLAG_HEMATEK_N_GONE
+	release
+	end
+
+SilphCo_9F_Movement_AllyLeaves::
+	walk_right
+	walk_up
+	walk_up
+	step_end

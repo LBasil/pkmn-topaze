@@ -99,6 +99,51 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SaffronCity_PokemonCenter_1F_EventScript_PokemonJournalSabrina",
       "flag": "FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS"
+    },
+    {
+      "local_id": "LOCALID_HEMATOWN_PC_BRICE",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BRUNO",
+      "x": 12,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SaffronCity_PokemonCenter_1F_EventScript_AllyBrice",
+      "flag": "FLAG_TEMP_1"
+    },
+    {
+      "local_id": "LOCALID_HEMATOWN_PC_FLORA",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ERIKA",
+      "x": 13,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SaffronCity_PokemonCenter_1F_EventScript_AllyFlora",
+      "flag": "FLAG_TEMP_2"
+    },
+    {
+      "local_id": "LOCALID_HEMATOWN_PC_N",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_LANCE",
+      "x": 14,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SaffronCity_PokemonCenter_1F_EventScript_AllyN",
+      "flag": "FLAG_TEMP_3"
     }
   ],
   "warp_events": [

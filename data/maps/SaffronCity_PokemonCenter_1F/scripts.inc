@@ -5,6 +5,25 @@ SaffronCity_PokemonCenter_1F_MapScripts::
 
 SaffronCity_PokemonCenter_1F_OnTransition::
 	setrespawn HEAL_LOCATION_SAFFRON_CITY
+	call_if_unset FLAG_HEMATEK_BOSS_DONE, SaffronCity_PokemonCenter_1F_EventScript_HideAllies
+	end
+
+SaffronCity_PokemonCenter_1F_EventScript_HideAllies::
+	setflag FLAG_TEMP_1
+	setflag FLAG_TEMP_2
+	setflag FLAG_TEMP_3
+	return
+
+SaffronCity_PokemonCenter_1F_EventScript_AllyBrice::
+	msgbox SaffronCity_PokemonCenter_1F_Text_Brice, MSGBOX_NPC
+	end
+
+SaffronCity_PokemonCenter_1F_EventScript_AllyFlora::
+	msgbox SaffronCity_PokemonCenter_1F_Text_Flora, MSGBOX_NPC
+	end
+
+SaffronCity_PokemonCenter_1F_EventScript_AllyN::
+	msgbox SaffronCity_PokemonCenter_1F_Text_N, MSGBOX_NPC
 	end
 
 SaffronCity_PokemonCenter_1F_EventScript_Nurse::

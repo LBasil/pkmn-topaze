@@ -113,3 +113,34 @@ SaffronCity_Text_HowCanClubNotRecognizeLance::
     .string "He's cool, and yet passionate!\l"
     .string "He's the greatest, LANCE!$"
 
+SaffronCity_Text_AlliesMeet1::
+    .string "N: …Wait. Do not go in, child.\p"
+    .string "That pendant. It hums like the\n"
+    .string "stones. So it is true.$"
+
+SaffronCity_Text_AlliesMeet2::
+    .string "BRICE: I'm BRICE. I walked this\n"
+    .string "region long before ONYBRIS.\p"
+    .string "Their MASTER is in this tower.\n"
+    .string "He came for the HEMATITE himself.$"
+
+SaffronCity_Text_AlliesMeet3::
+    .string "FLORA: We are going up to face\n"
+    .string "him. Every trainer that can still\p"
+    .string "stand has to try.\p"
+    .string "You are not strong enough yet,\n"
+    .string "little one. Not for him.$"
+
+SaffronCity_Text_AlliesMeet4::
+    .string "N: Follow us if you must.\n"
+    .string "Stay one floor behind.\p"
+    .string "And {PLAYER}… if we do not come\n"
+    .string "down, remember what you saw.$"
+
+SaffronCity_Text_GuardScared::
+    .string "I didn't see anything!\n"
+    .string "Those three… I'm not paid enough!$"
+
+SaffronCity_Text_GuardGone::
+    .string "The MASTER is gone. Half of us\n"
+    .string "ran. I think I'll quit too.$"

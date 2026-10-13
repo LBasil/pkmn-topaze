@@ -50,7 +50,7 @@
 #define FLAG_AMETHYST_STONE_GIVEN 0x024
 #define FLAG_PIER_LORE_DONE      0x025
 #define FLAG_PIER_KRONOS_DONE    0x026
-#define FLAG_HEMATITE_GIVEN      0x027
+#define FLAG_HEMATITE_STOLEN     0x027
 
 // Hide/show flags
 #define FLAG_HIDE_BULBASAUR_BALL                           0x028
@@ -132,8 +132,8 @@
 #define FLAG_HIDE_TWO_ISLAND_GAME_CORNER_BIKER             0x074
 #define FLAG_HIDE_TWO_ISLAND_GAME_CORNER_LOSTELLE          0x075
 #define FLAG_HIDE_LOSTELLE_IN_HER_HOME                     0x076
-#define FLAG_0x077                                         0x077
-#define FLAG_0x078                                         0x078
+#define FLAG_HEMATEK_ALLIES_IN                             0x077
+#define FLAG_HEMATEK_BOSS_DONE                             0x078
 #define FLAG_HIDE_THREE_ISLAND_BIKERS                      0x079
 #define FLAG_HIDE_LOSTELLE_IN_BERRY_FOREST                 0x07A
 #define FLAG_HIDE_TWO_ISLAND_WOMAN                         0x07B
@@ -190,9 +190,9 @@
 #define FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS 0x0AE
 
 // Unused?
-#define FLAG_0x0AF               0x0AF
-#define FLAG_0x0B0               0x0B0
-#define FLAG_0x0B1               0x0B1
+#define FLAG_HEMATEK_BRICE_GONE  0x0AF
+#define FLAG_HEMATEK_FLORA_GONE  0x0B0
+#define FLAG_HEMATEK_N_GONE      0x0B1
 #define FLAG_0x0B2               0x0B2
 #define FLAG_0x0B3               0x0B3
 #define FLAG_0x0B4               0x0B4

@@ -226,6 +226,51 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SaffronCity_EventScript_CrushGirl",
       "flag": "FLAG_HIDE_POSTGAME_GOSSIPERS"
+    },
+    {
+      "local_id": "LOCALID_HEMATOWN_BRICE",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BRUNO",
+      "x": 33,
+      "y": 37,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SaffronCity_EventScript_AllyStub",
+      "flag": "FLAG_TEMP_1"
+    },
+    {
+      "local_id": "LOCALID_HEMATOWN_FLORA",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ERIKA",
+      "x": 32,
+      "y": 37,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SaffronCity_EventScript_AllyStub",
+      "flag": "FLAG_TEMP_2"
+    },
+    {
+      "local_id": "LOCALID_HEMATOWN_N",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_LANCE",
+      "x": 35,
+      "y": 37,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SaffronCity_EventScript_AllyStub",
+      "flag": "FLAG_TEMP_3"
     }
   ],
   "warp_events": [
@@ -433,7 +478,17 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 32,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "SaffronCity_EventScript_AlliesMeet"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

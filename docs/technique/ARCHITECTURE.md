@@ -319,7 +319,11 @@ Le twist QUARTZ (duel de Vesper) intervient en FIN de jeu : posseder (ou non) le
 - Ronflex (Route 12 mi-ponton) : se reveille a la Pokeflute (butin de Vesper) ; le joueur arrive par le sud (Route 13) et atteint le pecheur AVANT le Ronflex.
 - Prochain : habiller les Routes 15/14/13 (indices, Onybris), puis HEMATOWN (the de Bourg Quartz). Non teste en emulateur.
 
-## Hematown (ex-Saffron) — étape 1
-- Silph Co. renommé HEMATEK (textes Saffron/SilphCo_*).
-- SilphCo_11F : le "Giovanni" est KRONOS (admin), vrai combat TRAINER_BOSS_GIOVANNI_2 (Weezing 40, Arbok 41, Alakazam 42, Nidoking 43). Il annonce que l'HEMATITE n'est pas au coffre, puis part (FLAG_HIDE_SILPH_ROCKETS via removeobject).
-- SaffronCity_Gym : Nox refuse de combattre tant que FLAG_HIDE_SILPH_ROCKETS n'est pas set (SabrinaBusy). Après badge + TM46, StoneGift donne l'HEMATITE (FLAG_HEMATITE_GIVEN 0x027, pierre = flag seul).
+## Hematown (ex-Saffron) — étape 2 : le QG des "10 dernières portes" (avant-avant-dernier QG)
+- Tour HEMATEK (ex-Silph) : étages normaux. Téléporteurs, portes à carte et ascenseur retirés (docs/topaze/hematek_normal_floors.py : warps non-adjacents supprimés + indices remappés, pads remplacés par du sol). Murs ouverts en 7F (6-7,7) et 11F (13-14,19) pour relier salle du rival et salon du 11F (docs/topaze/hematek_connect.py). Vérifié : tous les warps réciproques, chemin 1F->11F à pied.
+- Scène devant la tour : coord event SaffronCity (33,32) -> BRICE, FLORA, N (gfx provisoires BRUNO/ERIKA/LANCE) arrivent, parlent, entrent (FLAG_HEMATEK_ALLIES_IN 0x077). Le garde de la porte change de texte.
+- Étages 3F/6F/9F : un allié par étage (BRICE, FLORA, N), crescendo ; il parle puis monte l'escalier (FLAG_HEMATEK_{BRICE,FLORA,N}_GONE 0x0AF-0x0B1 ; objets cachés par OnTransition si pas ALLIES_IN, si BOSS_DONE ou GONE).
+- 11F : secousse + bruit sourd, combat KRONOS (TRAINER_BOSS_GIOVANNI_2), double secousse, fondu noir, les trois alliés apparaissent battus, ombre noire devant les fenêtres (le boss reste invisible), dialogues, FLAG_HEMATEK_BOSS_DONE (0x078) + FLAG_HEMATITE_STOLEN (0x027, la pierre est volée). Le Président donne toujours la MASTER BALL.
+- Centre Pokémon : après BOSS_DONE, les trois alliés sont dans l'alcôve (12-14,3) avec des indices (dix pierres, "deux voyageurs près du volcan" = Gold/Silver plus tard).
+- Arène : Nox refuse tant que BOSS_DONE n'est pas set ; plus de pierre donnée ; texte de fin : direction le sud/la mer (Chrondrolia).
+- Script de génération : docs/topaze/hematown_boss.py (idempotent par marqueur).

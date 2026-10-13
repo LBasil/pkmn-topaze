@@ -32,3 +32,10 @@ SilphCo_3F_Text_FloorSign::
     .string "HEMATEK CO. HEAD OFFICE\n"
     .string "3F$"
 
+SilphCo_3F_Text_Ally::
+    .string "BRICE: Careful. The goons on this\n"
+    .string "floor are small fry.\p"
+    .string "The ones above are real fighters.\n"
+    .string "I will hold the stairs for you.\p"
+    .string "FLORA is ahead of us, N higher\n"
+    .string "still. Do not rush, kid.$"

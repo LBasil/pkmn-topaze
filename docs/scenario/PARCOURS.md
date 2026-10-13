@@ -58,5 +58,5 @@ Courbe de niveaux : R3 10–16 → Kay 15–20 → R4/4E 13–16 → Sylvestre 1
 - Après Vesper : duel HAUT/BAS au casino (meilleur des 3, une seule chance) pour la pierre QUARTZ : gagné = le joueur l'a, perdu = Onybris l'a (FLAG_QUARTZ_STONE_WON). Twist à prévoir selon la branche.
 - Restant : arène de GRIM (Glace, badge 4), pierre = QUARTZ, cameo Giovanni plus tard.
 
-## Hematown
-Hematek Tower : battre Kronos (11F) -> Nox accepte le duel -> badge Hematite + TM46 + pierre HEMATITE.
+## Hematown — QG n°3 sur 5 (avant-avant-dernier)
+Ville occupée par ONYBRIS, tour HEMATEK = quartier général. BRICE, FLORA et N (premiers "forts" du jeu) montent affronter le MASTER, un étage chacun (3F, 6F, 9F), le joueur reste un étage derrière. Le joueur bat KRONOS au 11F ; derrière la porte, le boss écrase les trois alliés avec un seul Pokémon et part avec l'HEMATITE (volée sous nos yeux, pas de cadeau de Nox). Le boss reste invisible (ombre noire), il a regardé le joueur. Plus tard : volcan Écume = QG n°4 (Gold + Silver), dernier QG avant la Ligue (Red). Nox donne badge + CT46 après la défaite d'ONYBRIS dans la tour.

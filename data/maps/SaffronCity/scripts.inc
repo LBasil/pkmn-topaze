@@ -4,6 +4,9 @@ SaffronCity_MapScripts::
 
 SaffronCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_SAFFRON_CITY
+	setflag FLAG_TEMP_1
+	setflag FLAG_TEMP_2
+	setflag FLAG_TEMP_3
 	call_if_unset FLAG_RESCUED_MR_FUJI, SaffronCity_EventScript_MoveDoorGuardGrunt
 	end
 
@@ -39,12 +42,114 @@ SaffronCity_EventScript_RocketGrunt7::
 	msgbox SaffronCity_Text_WeCanExploitMonsAroundWorld, MSGBOX_NPC
 	end
 
+SaffronCity_EventScript_AllyStub::
+	end
+
+SaffronCity_EventScript_AlliesMeet::
+	lockall
+	setvar VAR_TEMP_1, 1
+	goto_if_set FLAG_HEMATEK_ALLIES_IN, SaffronCity_EventScript_AlliesMeetEnd
+	playse SE_PIN
+	applymovement LOCALID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	clearflag FLAG_TEMP_1
+	clearflag FLAG_TEMP_2
+	clearflag FLAG_TEMP_3
+	addobject LOCALID_HEMATOWN_BRICE
+	addobject LOCALID_HEMATOWN_FLORA
+	addobject LOCALID_HEMATOWN_N
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterDown
+	applymovement LOCALID_HEMATOWN_BRICE, SaffronCity_Movement_BriceComes
+	applymovement LOCALID_HEMATOWN_FLORA, SaffronCity_Movement_FloraComes
+	applymovement LOCALID_HEMATOWN_N, SaffronCity_Movement_NComes
+	waitmovement 0
+	msgbox SaffronCity_Text_AlliesMeet1
+	msgbox SaffronCity_Text_AlliesMeet2
+	msgbox SaffronCity_Text_AlliesMeet3
+	msgbox SaffronCity_Text_AlliesMeet4
+	closemessage
+	applymovement LOCALID_PLAYER, SaffronCity_Movement_PlayerAside
+	waitmovement 0
+	applymovement LOCALID_HEMATOWN_BRICE, SaffronCity_Movement_BriceEnters
+	waitmovement 0
+	removeobject LOCALID_HEMATOWN_BRICE
+	applymovement LOCALID_HEMATOWN_FLORA, SaffronCity_Movement_FloraEnters
+	waitmovement 0
+	removeobject LOCALID_HEMATOWN_FLORA
+	applymovement LOCALID_HEMATOWN_N, SaffronCity_Movement_NEnters
+	waitmovement 0
+	removeobject LOCALID_HEMATOWN_N
+	setflag FLAG_HEMATEK_ALLIES_IN
+	releaseall
+	end
+
+SaffronCity_EventScript_AlliesMeetEnd::
+	releaseall
+	end
+
+SaffronCity_Movement_BriceComes::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+SaffronCity_Movement_FloraComes::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+SaffronCity_Movement_NComes::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+SaffronCity_Movement_PlayerAside::
+	walk_left
+	step_end
+
+SaffronCity_Movement_BriceEnters::
+	walk_up
+	walk_up
+	step_end
+
+SaffronCity_Movement_FloraEnters::
+	walk_right
+	walk_up
+	walk_up
+	step_end
+
+SaffronCity_Movement_NEnters::
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	step_end
+
 SaffronCity_EventScript_DoorGuardGrunt::
 	lock
+	goto_if_set FLAG_HEMATEK_BOSS_DONE, SaffronCity_EventScript_DoorGuardGone
+	goto_if_set FLAG_HEMATEK_ALLIES_IN, SaffronCity_EventScript_DoorGuardScared
 	goto_if_set FLAG_RESCUED_MR_FUJI, SaffronCity_EventScript_DoorGuardAsleep
 	applymovement LOCALID_SAFFRON_DOOR_GUARD_GRUNT, Common_Movement_FacePlayer
 	waitmovement 0
 	msgbox SaffronCity_Text_ImASecurityGuard
+	release
+	end
+
+SaffronCity_EventScript_DoorGuardScared::
+	msgbox SaffronCity_Text_GuardScared
+	release
+	end
+
+SaffronCity_EventScript_DoorGuardGone::
+	msgbox SaffronCity_Text_GuardGone
 	release
 	end
 

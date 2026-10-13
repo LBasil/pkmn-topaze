@@ -44,23 +44,22 @@ SilphCo_11F_Text_ThanksForRescuingUs::
 SilphCo_11F_Text_GiovanniIntro::
     .string "KRONOS: You again, child.\n"
     .string "I warned you once.\p"
-    .string "The PRESIDENT and I are talking\n"
-    .string "business. The HEMATITE is not in\p"
-    .string "the vault. The old fool hid it.\p"
-    .string "Stay out of this, or learn what\n"
-    .string "ONYBRIS does to meddlers!$"
+    .string "BRICE, FLORA, N… the old heroes\n"
+    .string "of KANTO went in to face the\p"
+    .string "MASTER. They will not come out\n"
+    .string "standing.\p"
+    .string "Run home. Or pay for staying!$"
 
 SilphCo_11F_Text_GiovanniDefeat::
     .string "Hmph…\n"
     .string "You are stronger than you look.$"
 
 SilphCo_11F_Text_GiovanniPostBattle::
-    .string "KRONOS: No matter.\p"
-    .string "The HEMATITE is still in this\n"
-    .string "town. I will find it.\p"
-    .string "It is no defeat if the stone ends\n"
-    .string "up in my hands anyway.\p"
-    .string "Remember my name, {PLAYER}.$"
+    .string "KRONOS: Good. Strong enough to\n"
+    .string "watch. Not strong enough to\p"
+    .string "stand against him.\p"
+    .string "Listen. That sound is the end of\n"
+    .string "the old heroes.$"
 
 SilphCo_11F_Text_Grunt2Intro::
     .string "Stop right there!\n"
@@ -92,3 +91,41 @@ SilphCo_11F_Text_FloorSign::
     .string "HEMATEK CO. HEAD OFFICE\n"
     .string "11F$"
 
+SilphCo_11F_Text_MuffledCrash::
+    .string "A crash shakes the floor.\n"
+    .string "It came from behind the doors!$"
+
+SilphCo_11F_Text_ShadowPasses::
+    .string "…The lights flicker. A black shape\n"
+    .string "glides past the windows.\p"
+    .string "Then it is gone. Only silence.$"
+
+SilphCo_11F_Text_BossBrice::
+    .string "BRICE: …Not even a scratch on him.\n"
+    .string "One POKéMON. He only used one.\p"
+    .string "He took the HEMATITE and walked\n"
+    .string "out like we were furniture.$"
+
+SilphCo_11F_Text_BossFlora::
+    .string "FLORA: He knew you were here,\n"
+    .string "{PLAYER}. He looked right at you.\p"
+    .string "He said you would find him.\n"
+    .string "When you are ready.$"
+
+SilphCo_11F_Text_BossN::
+    .string "N: I heard his POKéMON. They are\n"
+    .string "not afraid. They are empty.\p"
+    .string "Get stronger, {PLAYER}. We could\n"
+    .string "not stop him. Maybe you can.$"
+
+SilphCo_11F_Text_AfterBrice::
+    .string "BRICE: Go. We will live. Barely.\n"
+    .string "Check on NOX in the gym.$"
+
+SilphCo_11F_Text_AfterFlora::
+    .string "FLORA: I am fine, really.\n"
+    .string "Look after yourself first.$"
+
+SilphCo_11F_Text_AfterN::
+    .string "N: Do not look so grim. We are\n"
+    .string "alive. That is a first victory.$"

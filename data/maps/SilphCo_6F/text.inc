@@ -76,3 +76,9 @@ SilphCo_6F_Text_FloorSign::
     .string "HEMATEK CO. HEAD OFFICE\n"
     .string "6F$"
 
+SilphCo_6F_Text_Ally::
+    .string "FLORA: Oh. You came after all.\p"
+    .string "These POKéMON are not evil.\n"
+    .string "They were just told to be.\p"
+    .string "Please be gentle with them.\n"
+    .string "I must go. He does not wait.$"

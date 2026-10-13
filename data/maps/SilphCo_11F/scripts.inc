@@ -1,9 +1,27 @@
 SilphCo_11F_MapScripts::
 	map_script MAP_SCRIPT_ON_LOAD, SilphCo_11F_OnLoad
+	map_script MAP_SCRIPT_ON_TRANSITION, SilphCo_11F_OnTransition
 	.byte 0
 
+SilphCo_11F_OnTransition::
+	setflag FLAG_TEMP_1
+	setflag FLAG_TEMP_2
+	setflag FLAG_TEMP_3
+	end
+
+SilphCo_11F_EventScript_AllyBrice::
+	msgbox SilphCo_11F_Text_AfterBrice, MSGBOX_NPC
+	end
+
+SilphCo_11F_EventScript_AllyFlora::
+	msgbox SilphCo_11F_Text_AfterFlora, MSGBOX_NPC
+	end
+
+SilphCo_11F_EventScript_AllyN::
+	msgbox SilphCo_11F_Text_AfterN, MSGBOX_NPC
+	end
+
 SilphCo_11F_OnLoad::
-	call_if_unset FLAG_SILPH_11F_DOOR, EventScript_Close11FDoor
 	end
 
 SilphCo_11F_EventScript_President::
@@ -57,6 +75,14 @@ SilphCo_11F_EventScript_GiovanniTriggerRight::
 
 SilphCo_11F_EventScript_BattleGiovanni::
 	textcolor NPC_TEXT_COLOR_MALE
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 2
+	setvar VAR_0x8006, 6
+	setvar VAR_0x8007, 3
+	playse SE_M_EXPLOSION
+	special ShakeScreen
+	waitstate
+	msgbox SilphCo_11F_Text_MuffledCrash
 	applymovement LOCALID_SILPH_CO_GIOVANNI, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	delay 25
@@ -68,12 +94,35 @@ SilphCo_11F_EventScript_BattleGiovanni::
 	trainerbattle_no_intro TRAINER_BOSS_GIOVANNI_2, SilphCo_11F_Text_GiovanniDefeat
 	msgbox SilphCo_11F_Text_GiovanniPostBattle
 	closemessage
+	setvar VAR_0x8004, 1
+	setvar VAR_0x8005, 3
+	setvar VAR_0x8006, 8
+	setvar VAR_0x8007, 4
+	playse SE_THUNDER
+	special ShakeScreen
+	waitstate
+	playse SE_M_EXPLOSION
+	special ShakeScreen
+	waitstate
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_SILPH_CO_GIOVANNI
 	removeobject LOCALID_SILPH_CO_11F_GRUNT1
 	removeobject LOCALID_SILPH_CO_11F_GRUNT2
+	clearflag FLAG_TEMP_1
+	clearflag FLAG_TEMP_2
+	clearflag FLAG_TEMP_3
+	addobject LOCALID_SILPH_CO_11F_BRICE
+	addobject LOCALID_SILPH_CO_11F_FLORA
+	addobject LOCALID_SILPH_CO_11F_N
 	fadescreen FADE_FROM_BLACK
+	msgbox SilphCo_11F_Text_ShadowPasses
+	msgbox SilphCo_11F_Text_BossBrice
+	msgbox SilphCo_11F_Text_BossFlora
+	msgbox SilphCo_11F_Text_BossN
+	closemessage
 	setvar VAR_MAP_SCENE_SILPH_CO_11F, 1
+	setflag FLAG_HEMATEK_BOSS_DONE
+	setflag FLAG_HEMATITE_STOLEN
 	setflag FLAG_HIDE_SAFFRON_ROCKETS
 	clearflag FLAG_HIDE_SAFFRON_CIVILIANS
 	releaseall

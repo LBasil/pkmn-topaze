@@ -45,3 +45,10 @@ SilphCo_9F_Text_FloorSign::
     .string "HEMATEK CO. HEAD OFFICE\n"
     .string "9F$"
 
+SilphCo_9F_Text_Ally::
+    .string "N: I can hear their POKéMON.\n"
+    .string "They are afraid of him.\p"
+    .string "Not of us. Of HIM.\p"
+    .string "Stay here a moment, {PLAYER}.\n"
+    .string "Some doors should be opened by\p"
+    .string "those who can survive behind them.$"

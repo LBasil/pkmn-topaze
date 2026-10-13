@@ -18,3 +18,20 @@ SaffronCity_PokemonCenter_1F_Text_TeamRocketTookOff::
     .string "We can go out safely again!\l"
     .string "That's great!$"
 
+SaffronCity_PokemonCenter_1F_Text_Brice::
+    .string "BRICE: The nurse says we'll walk\n"
+    .string "again by tomorrow.\p"
+    .string "I'm going back to the mountains.\n"
+    .string "Maybe there I'll think of a plan.$"
+
+SaffronCity_PokemonCenter_1F_Text_Flora::
+    .string "FLORA: He wants all ten stones.\n"
+    .string "That is what the MASTER said.\p"
+    .string "You carry more of them than he\n"
+    .string "does. Keep them close.$"
+
+SaffronCity_PokemonCenter_1F_Text_N::
+    .string "N: They say two travelers are\n"
+    .string "already near the volcano.\p"
+    .string "Old friends of the road. Meet\n"
+    .string "them. Learn from them.$"

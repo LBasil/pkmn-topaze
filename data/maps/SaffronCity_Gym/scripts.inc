@@ -4,7 +4,7 @@ SaffronCity_Gym_MapScripts::
 SaffronCity_Gym_EventScript_Sabrina::
 	famechecker FAMECHECKER_SABRINA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	goto_if_set FLAG_DEFEATED_SABRINA, SaffronCity_Gym_EventScript_SabrinaFight
-	goto_if_unset FLAG_HIDE_SILPH_ROCKETS, SaffronCity_Gym_EventScript_SabrinaBusy
+	goto_if_unset FLAG_HEMATEK_BOSS_DONE, SaffronCity_Gym_EventScript_SabrinaBusy
 	goto SaffronCity_Gym_EventScript_SabrinaFight
 	end
 
@@ -18,7 +18,6 @@ SaffronCity_Gym_EventScript_SabrinaBusy::
 SaffronCity_Gym_EventScript_SabrinaFight::
 	trainerbattle_single TRAINER_LEADER_SABRINA, SaffronCity_Gym_Text_SabrinaIntro, SaffronCity_Gym_Text_SabrinaDefeat, SaffronCity_Gym_EventScript_DefeatedSabrina, NO_MUSIC
 	goto_if_unset FLAG_GOT_TM04_FROM_SABRINA, SaffronCity_Gym_EventScript_GiveTM04
-	goto_if_unset FLAG_HEMATITE_GIVEN, SaffronCity_Gym_EventScript_StoneGift
 	msgbox SaffronCity_Gym_Text_ExplainTM04
 	release
 	end
@@ -45,11 +44,6 @@ SaffronCity_Gym_EventScript_GiveTM04::
 
 SaffronCity_Gym_EventScript_StoneGift::
 	msgbox SaffronCity_Gym_Text_StoneGift
-	playfanfare MUS_OBTAIN_KEY_ITEM
-	message SaffronCity_Gym_Text_ObtainedHematite
-	waitmessage
-	waitfanfare
-	setflag FLAG_HEMATITE_GIVEN
 	release
 	end
 
