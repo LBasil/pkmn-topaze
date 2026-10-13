@@ -12384,3 +12384,36 @@ static const struct TrainerMonNoItemDefaultMoves sParty_ElderWallace[] = {
     },
 };
 
+static const struct TrainerMonNoItemDefaultMoves sParty_EchoSilver[] = {
+    {
+        .iv = 220,
+        .lvl = 68,
+        .species = SPECIES_SNEASEL,
+    },
+    {
+        .iv = 220,
+        .lvl = 68,
+        .species = SPECIES_CROBAT,
+    },
+    {
+        .iv = 220,
+        .lvl = 69,
+        .species = SPECIES_GENGAR,
+    },
+    {
+        .iv = 220,
+        .lvl = 69,
+        .species = SPECIES_ALAKAZAM,
+    },
+    {
+        .iv = 220,
+        .lvl = 70,
+        .species = SPECIES_MAGNETON,
+    },
+    {
+        .iv = 220,
+        .lvl = 72,
+        .species = SPECIES_FERALIGATR,
+    },
+};
+

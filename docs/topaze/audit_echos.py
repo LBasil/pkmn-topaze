@@ -6,7 +6,7 @@ for f in glob.glob('data/maps/*/scripts.inc'):
     for m in re.finditer(r'setvar VAR_ECHO_STAGE, (\d+)', open(f).read()): sets.setdefault(int(m.group(1)), set()).add(f.split('/')[2])
     for m in re.finditer(r'(?:goto_if_\w+|call_if_\w+) VAR_ECHO_STAGE, (\d+)', open(f).read()): uses.setdefault(int(m.group(1)), set()).add(f.split('/')[2])
 ok = True
-for n in range(0, 22):
+for n in range(0, 23):
     s, u = sets.get(n), uses.get(n)
     flag = '' if (n == 0 or s) and (u or n == 21 or n in (1,)) else '  <-- '
     if n > 0 and not s: ok = False; flag = '  <-- jamais pose'

@@ -128,3 +128,79 @@ SevenIsland_SevaultCanyon_Text_BrunoTrainedWithBrawly::
     .string "Even BRUNO…\n"
     .string "He trained with a fellow by the\l"
     .string "name of BRAWLY before.$"
+
+SevenIsland_SevaultCanyon_Text_SceneSilver1::
+    .string "SILVER: ...You came. All the way\n"
+    .string "to the edge of time.\p"
+    .string "The ECHO showed me something.\n"
+    .string "A boy in a dark room, waiting\l"
+    .string "for a man who never came back.$"
+
+SevenIsland_SevaultCanyon_Text_SceneGiovanni1::
+    .string "...I saw it too, SILVER.\p"
+    .string "I left because I was afraid of\n"
+    .string "what I would turn you into.$"
+
+SevenIsland_SevaultCanyon_Text_SceneSilver2::
+    .string "SILVER: Afraid?! You left me alone!\p"
+    .string "I became strong so you would\n"
+    .string "look at me. Just once.$"
+
+SevenIsland_SevaultCanyon_Text_SceneGiovanni2::
+    .string "I looked.\p"
+    .string "Every single day, from far away.\p"
+    .string "I am proud of you, son.\n"
+    .string "I never knew how to say it.$"
+
+SevenIsland_SevaultCanyon_Text_SceneSilver3::
+    .string "SILVER: ...\p"
+    .string "Then do not say it.\n"
+    .string "Show me. Let me earn it.$"
+
+SevenIsland_SevaultCanyon_Text_SceneSilver4::
+    .string "SILVER: {PLAYER}. Fight me.\p"
+    .string "If I cannot face the one who\n"
+    .string "beat the LEAGUE, I cannot stand\l"
+    .string "before my father.$"
+
+SevenIsland_SevaultCanyon_Text_SceneSilverDefeat::
+    .string "I lost. But for the first time...\n"
+    .string "I do not mind.$"
+
+SevenIsland_SevaultCanyon_Text_SceneSilver5::
+    .string "SILVER: Thank you. I will walk\n"
+    .string "beside him now. Not behind.$"
+
+SevenIsland_SevaultCanyon_Text_SceneGiovanni3::
+    .string "GIOVANNI: CHAMPION. Let me see\n"
+    .string "what my son measured himself\l"
+    .string "against.$"
+
+SevenIsland_SevaultCanyon_Text_SceneGiovanniDefeat::
+    .string "Hm. The earth bows to you.$"
+
+SevenIsland_SevaultCanyon_Text_SceneGiovanni4::
+    .string "GIOVANNI: ...So that is what it\n"
+    .string "looks like. A trainer worth\l"
+    .string "following.$"
+
+SevenIsland_SevaultCanyon_Text_SceneGiovanni5::
+    .string "GIOVANNI: And you, RED. Still\n"
+    .string "standing there in silence.\p"
+    .string "We never settled it, you and I.$"
+
+SevenIsland_SevaultCanyon_Text_SceneRed1::
+    .string "...$"
+
+SevenIsland_SevaultCanyon_Text_SceneGiovanni6::
+    .string "GIOVANNI: Not today. Today I walk\n"
+    .string "home with my son.$"
+
+SevenIsland_SevaultCanyon_Text_SceneSilver6::
+    .string "SILVER: ...Come on. Father.$"
+
+SevenIsland_SevaultCanyon_Text_SceneRed2::
+    .string "RED: ...\p"
+    .string "(He tips his cap to you and\n"
+    .string "smiles for the very first time.)$"
+

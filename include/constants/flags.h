@@ -233,7 +233,7 @@
 #define FLAG_DONE_ECHO_LATIOS     0x0D7
 #define FLAG_HIDE_ECHO_JIRACHI    0x0D8
 #define FLAG_DONE_ECHO_JIRACHI    0x0D9
-#define FLAG_0x0DA               0x0DA
+#define FLAG_HIDE_ECHO_SCENE     0x0DA // Topaze: Silver/Giovanni/Red scene objects
 #define FLAG_0x0DB               0x0DB
 #define FLAG_0x0DC               0x0DC
 #define FLAG_0x0DD               0x0DD

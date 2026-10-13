@@ -26,7 +26,7 @@ Tout est jouable ; ce qui suit est provisoire. Pour chaque ligne : ce qui est en
 | Starters (6) | niveau 30, donnés par Celio / Bill / Lorelei | choix des donneurs ; niveau |
 | Niveaux des légendaires | Bêtes 45-50, Regis 52-56, Celebi 60, Hoenn 60-70, Jirachi 50 | ajuster à la courbe |
 | Tables sauvages Sevii | espèces de Johto/Hoenn, niveaux vanilla | ajuster niveaux et biomes |
-| Épreuve finale (Red/Silver à l'île 7) | non faite (légendaires seulement) | à décider |
+| Scène Silver/Giovanni/Red (île 7) | faite (textes provisoires, Silver sprite Bleu) | à réécrire avec Basil (émotion père-fils) |
 
 ## Autres (déjà listés dans PARCOURS.md / TESTS.md)
 Sprites provisoires de MAJOR BOB, KRONOS/VESPER, HERA, Brice/Flora/N, Gold/Silver ; noms et équipes inventés (TESTS.md « À REPRENDRE »).

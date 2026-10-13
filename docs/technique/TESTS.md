@@ -150,3 +150,6 @@ Piste réaliste : faire d'abord le jeu jouable, puis ajouter un follower **limit
 
 ## Chaîne des Échos (statique)
 - `docs/topaze/audit_echos.py` : vérifie que chaque étape de `VAR_ECHO_STAGE` (1-21) est posée puis lue par un script. Résultat : CHAINE OK (Bill/Celio/Lorelei alternent 0→21 sans trou). Le parcours complet en un seul run émulateur n'est pas faisable (surf entre îles) : chaque étape est testée isolément (`bench/echo*_test.py`).
+
+## Scène de l'île 7 : Silver / Giovanni / Red
+- `bench/echo8_scene_test.py` : déclencheur (17,8) au stage 21, dialogues, combat SILVER (nouveau, 6 Pokémon 68-72) puis GIOVANNI (`TRAINER_PLAYER_LEAF`), départ, Red salue seul, stage 22. OK en émulateur (le test passe les combats en mode dieu). Les légendaires de Sevault n'apparaissent maintenant qu'au stage 22 (`echo7_sevault_test.py` : utiliser l'étape 22 pour Kyogre etc.).

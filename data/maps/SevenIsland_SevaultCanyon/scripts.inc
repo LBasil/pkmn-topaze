@@ -8,6 +8,7 @@ SevenIsland_SevaultCanyon_EventScript_RouteSign::
 
 @ Topaze: Echo 7 finale: keeper of time + gathered legends (static, stay if fled)
 SevenIsland_SevaultCanyon_OnTransition::
+	setflag FLAG_HIDE_ECHO_SCENE
 	setflag FLAG_HIDE_ECHO_CELEBI
 	call_if_unset FLAG_DONE_ECHO_CELEBI, SevenIsland_SevaultCanyon_EventScript_MaybeCelebi
 	setflag FLAG_HIDE_ECHO_KYOGRE
@@ -65,7 +66,7 @@ SevenIsland_SevaultCanyon_EventScript_RanFromCelebi::
 	end
 
 SevenIsland_SevaultCanyon_EventScript_MaybeKyogre::
-	goto_if_ne VAR_ECHO_STAGE, 21, EventScript_Return
+	goto_if_ne VAR_ECHO_STAGE, 22, EventScript_Return
 	clearflag FLAG_HIDE_ECHO_KYOGRE
 	return
 
@@ -103,7 +104,7 @@ SevenIsland_SevaultCanyon_EventScript_RanFromKyogre::
 	end
 
 SevenIsland_SevaultCanyon_EventScript_MaybeGroudon::
-	goto_if_ne VAR_ECHO_STAGE, 21, EventScript_Return
+	goto_if_ne VAR_ECHO_STAGE, 22, EventScript_Return
 	clearflag FLAG_HIDE_ECHO_GROUDON
 	return
 
@@ -141,7 +142,7 @@ SevenIsland_SevaultCanyon_EventScript_RanFromGroudon::
 	end
 
 SevenIsland_SevaultCanyon_EventScript_MaybeRayquaza::
-	goto_if_ne VAR_ECHO_STAGE, 21, EventScript_Return
+	goto_if_ne VAR_ECHO_STAGE, 22, EventScript_Return
 	clearflag FLAG_HIDE_ECHO_RAYQUAZA
 	return
 
@@ -179,7 +180,7 @@ SevenIsland_SevaultCanyon_EventScript_RanFromRayquaza::
 	end
 
 SevenIsland_SevaultCanyon_EventScript_MaybeLatias::
-	goto_if_ne VAR_ECHO_STAGE, 21, EventScript_Return
+	goto_if_ne VAR_ECHO_STAGE, 22, EventScript_Return
 	clearflag FLAG_HIDE_ECHO_LATIAS
 	return
 
@@ -217,7 +218,7 @@ SevenIsland_SevaultCanyon_EventScript_RanFromLatias::
 	end
 
 SevenIsland_SevaultCanyon_EventScript_MaybeLatios::
-	goto_if_ne VAR_ECHO_STAGE, 21, EventScript_Return
+	goto_if_ne VAR_ECHO_STAGE, 22, EventScript_Return
 	clearflag FLAG_HIDE_ECHO_LATIOS
 	return
 
@@ -255,7 +256,7 @@ SevenIsland_SevaultCanyon_EventScript_RanFromLatios::
 	end
 
 SevenIsland_SevaultCanyon_EventScript_MaybeJirachi::
-	goto_if_ne VAR_ECHO_STAGE, 21, EventScript_Return
+	goto_if_ne VAR_ECHO_STAGE, 22, EventScript_Return
 	clearflag FLAG_HIDE_ECHO_JIRACHI
 	return
 
@@ -291,3 +292,80 @@ SevenIsland_SevaultCanyon_EventScript_RanFromJirachi::
 	setvar VAR_0x8004, SPECIES_JIRACHI
 	goto EventScript_MonFlewAway
 	end
+
+@ Topaze: SILVER / GIOVANNI / RED scene (father, son, great rivals)
+SevenIsland_SevaultCanyon_EventScript_EchoScene::
+	lockall
+	clearflag FLAG_HIDE_ECHO_SCENE
+	addobject LOCALID_ECHO_SILVER
+	addobject LOCALID_ECHO_GIOVANNI
+	addobject LOCALID_ECHO_RED
+	applymovement LOCALID_PLAYER, SevenIsland_SevaultCanyon_Movement_PlayerToScene
+	waitmovement 0
+	textcolor NPC_TEXT_COLOR_MALE
+	applymovement LOCALID_ECHO_SILVER, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox SevenIsland_SevaultCanyon_Text_SceneSilver1
+	applymovement LOCALID_ECHO_SILVER, SevenIsland_SevaultCanyon_Movement_FaceLeft
+	waitmovement 0
+	msgbox SevenIsland_SevaultCanyon_Text_SceneGiovanni1
+	msgbox SevenIsland_SevaultCanyon_Text_SceneSilver2
+	msgbox SevenIsland_SevaultCanyon_Text_SceneGiovanni2
+	msgbox SevenIsland_SevaultCanyon_Text_SceneSilver3
+	applymovement LOCALID_ECHO_SILVER, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox SevenIsland_SevaultCanyon_Text_SceneSilver4
+	trainerbattle_no_intro TRAINER_ECHO_SILVER, SevenIsland_SevaultCanyon_Text_SceneSilverDefeat
+	msgbox SevenIsland_SevaultCanyon_Text_SceneSilver5
+	applymovement LOCALID_ECHO_SILVER, SevenIsland_SevaultCanyon_Movement_SilverStepAside
+	applymovement LOCALID_ECHO_GIOVANNI, SevenIsland_SevaultCanyon_Movement_GiovanniStepUp
+	waitmovement 0
+	applymovement LOCALID_ECHO_GIOVANNI, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox SevenIsland_SevaultCanyon_Text_SceneGiovanni3
+	trainerbattle_no_intro TRAINER_PLAYER_LEAF, SevenIsland_SevaultCanyon_Text_SceneGiovanniDefeat
+	msgbox SevenIsland_SevaultCanyon_Text_SceneGiovanni4
+	applymovement LOCALID_ECHO_RED, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	msgbox SevenIsland_SevaultCanyon_Text_SceneGiovanni5
+	msgbox SevenIsland_SevaultCanyon_Text_SceneRed1
+	msgbox SevenIsland_SevaultCanyon_Text_SceneGiovanni6
+	msgbox SevenIsland_SevaultCanyon_Text_SceneSilver6
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_ECHO_SILVER
+	removeobject LOCALID_ECHO_GIOVANNI
+	setflag FLAG_HIDE_ECHO_SCENE
+	special HealPlayerParty
+	fadescreen FADE_FROM_BLACK
+	msgbox SevenIsland_SevaultCanyon_Text_SceneRed2
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_ECHO_RED
+	fadescreen FADE_FROM_BLACK
+	setvar VAR_ECHO_STAGE, 22
+	releaseall
+	end
+
+SevenIsland_SevaultCanyon_Movement_PlayerToScene::
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	step_end
+
+SevenIsland_SevaultCanyon_Movement_FaceLeft::
+	face_left
+	step_end
+
+SevenIsland_SevaultCanyon_Movement_SilverStepAside::
+	walk_up
+	face_down
+	step_end
+
+SevenIsland_SevaultCanyon_Movement_GiovanniStepUp::
+	walk_right
+	walk_right
+	step_end
