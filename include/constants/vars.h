@@ -213,6 +213,7 @@
 #define VAR_0x409E                 0x409E
 #define VAR_0x409F                 0x409F
 #define VAR_0x40A0                 0x40A0
+#define VAR_ROUTE25_MISTY          VAR_0x40A0 // Topaze: 0 = Misty waits at cottage, 1 = team-up agreed, 2 = cottage scene done
 #define VAR_0x40A1                 0x40A1
 #define VAR_0x40A2                 0x40A2
 #define VAR_0x40A3                 0x40A3

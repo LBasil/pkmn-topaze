@@ -1,108 +1,48 @@
-Route25_SeaCottage_Text_ImBillHelpMeOutPal::
-    .string "Hiya! I'm a POKéMON…\n"
-    .string "…No I'm not!\p"
-    .string "Call me BILL!\n"
-    .string "I'm a true-blue POKéMANIAC!\p"
-    .string "Hey!\n"
-    .string "What's with that skeptical look?\p"
-    .string "I'm not joshing you, pal.\p"
-    .string "I screwed up an experiment and got\n"
-    .string "combined with a POKéMON!\p"
-    .string "So, how about it?\n"
-    .string "Help me out here!$"
+Route25_SeaCottage_Text_MistyWhisper::
+    .string "MISTY: Careful. I can hear them\n"
+    .string "breathing behind those machines.$"
 
-Route25_SeaCottage_Text_ImBillHelpMeOutLady::
-    .string "Hiya! I'm a POKéMON…\n"
-    .string "…No I'm not!\p"
-    .string "Call me BILL!\n"
-    .string "I'm a true-blue POKéMANIAC!\p"
-    .string "Hey!\n"
-    .string "What's with that skeptical look?\p"
-    .string "I'm not joshing you, lady.\p"
-    .string "I screwed up an experiment and got\n"
-    .string "combined with a POKéMON!\p"
-    .string "So, how about it?\n"
-    .string "Help me out here!$"
+Route25_SeaCottage_Text_GruntsAppear::
+    .string "GRUNT: Tch! How did you find us?\p"
+    .string "GRUNT: The boss said nobody would\n"
+    .string "look in this dump!$"
 
-Route25_SeaCottage_Text_RunCellSeparationOnPC::
-    .string "Wait till I get inside the\n"
-    .string "TELEPORTER.\p"
-    .string "When I do, go to my PC and run\n"
-    .string "the Cell Separation System.$"
+Route25_SeaCottage_Text_MistySplit::
+    .string "MISTY: I'll take the one on the\n"
+    .string "right. You take the left!$"
 
-Route25_SeaCottage_Text_NoPleaseChief::
-    .string "No!?\n"
-    .string "Now don't be so cold!\p"
-    .string "Come on, you gotta help a guy in\n"
-    .string "deep, deep trouble!\p"
-    .string "What do you say, chief?\n"
-    .string "Please?\l"
-    .string "Okay?\l"
-    .string "All right!$"
+Route25_SeaCottage_Text_MistyBattle::
+    .string "MISTY: STARMIE, go!\n"
+    .string "Hit him with WATER GUN!$"
 
-Route25_SeaCottage_Text_NoPleaseBeautiful::
-    .string "No!?\n"
-    .string "Now don't be so cold!\p"
-    .string "Come on, you gotta help a guy in\n"
-    .string "deep, deep trouble!\p"
-    .string "What do you say, beautiful?\n"
-    .string "Please?\l"
-    .string "Okay?\l"
-    .string "All right!$"
+Route25_SeaCottage_Text_GruntBDown::
+    .string "GRUNT: Gaah! Washed out!\n"
+    .string "I'm not staying for this!$"
 
-Route25_SeaCottage_Text_ThanksBudTakeThis::
-    .string "BILL: Yeehah!\n"
-    .string "Thanks, bud! I owe you one!\p"
-    .string "So, did you come to see my\n"
-    .string "POKéMON collection?\p"
-    .string "You didn't?\n"
-    .string "That's a bummer.\p"
-    .string "I've got to thank you…\n"
-    .string "Oh, here, maybe this'll do.$"
+Route25_SeaCottage_Text_GruntAIntro::
+    .string "GRUNT: You think you can beat me\n"
+    .string "on your own, kid?$"
 
-Route25_SeaCottage_Text_ThanksLadyTakeThis::
-    .string "BILL: Yeehah!\n"
-    .string "Thanks, lady! I owe you one!\p"
-    .string "So, did you come to see my\n"
-    .string "POKéMON collection?\p"
-    .string "You didn't?\n"
-    .string "That's a bummer.\p"
-    .string "I've got to thank you…\n"
-    .string "Oh, here, maybe this'll do.$"
+Route25_SeaCottage_Text_GruntADefeat::
+    .string "No way! I lost!$"
 
-Route25_SeaCottage_Text_ReceivedSSTicketFromBill::
-    .string "{PLAYER} received an S.S. TICKET\n"
-    .string "from BILL.$"
+Route25_SeaCottage_Text_GruntADrops::
+    .string "GRUNT: Argh! Take this stupid\n"
+    .string "pass! The boss wanted it for the\p"
+    .string "ship, but I'm done with this job!$"
 
-Route25_SeaCottage_Text_YouveGotTooMuchStuff::
-    .string "You've got too much stuff!$"
+Route25_SeaCottage_Text_FoundSSTicket::
+    .string "{PLAYER} got an S.S. TICKET\n"
+    .string "from the TEAM ONYBRIS GRUNT!$"
 
-Route25_SeaCottage_Text_SSAnnePartyYouGoInstead::
-    .string "That cruise ship S.S. ANNE is in\n"
-    .string "APATIA. Lots of TRAINERS aboard.\p"
-    .string "They invited me to their party, but\n"
-    .string "I can't stand fancy do's.\p"
-    .string "Some creeps in black asked about\n"
-    .string "its schedule yesterday. Fishy.\p"
-    .string "Why don't you go instead of me?\n"
-    .string "Keep your eyes open, okay?$"
+Route25_SeaCottage_Text_MistyFarewell::
+    .string "MISTY: Nice work. You have guts.\p"
+    .string "You really do remind me of a\n"
+    .string "friend of mine. He would have\p"
+    .string "charged in just the same.\p"
+    .string "The S.S. ANNE docks at APATIA.\n"
+    .string "I'll see you around. Good luck!$"
 
-Route25_SeaCottage_Text_CheckOutRareMonsOnPC::
-    .string "BILL: Feel like checking out some\n"
-    .string "of my rare POKéMON on my PC?\p"
-    .string "Go on, check out my PC.$"
-
-Route25_SeaCottage_Text_TeleporterIsDisplayed::
-    .string "TELEPORTER is displayed on the PC\n"
-    .string "monitor.$"
-
-Route25_SeaCottage_Text_InitiatedTeleportersCellSeparator::
-    .string "{PLAYER} initiated the TELEPORTER's\n"
-    .string "Cell Separator.$"
-
-Route25_SeaCottage_Text_BillsFavoriteMonList::
-    .string "BILL's favorite POKéMON list!$"
-
-Route25_SeaCottage_Text_SeeWhichMon::
-    .string "Which POKéMON do you want to see?$"
-
+Route25_SeaCottage_Text_AbandonedPC::
+    .string "The screen is dead. A note says:\n"
+    .string "Gone to the islands. - BILL$"

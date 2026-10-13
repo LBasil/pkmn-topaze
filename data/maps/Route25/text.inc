@@ -105,15 +105,28 @@ Route25_Text_WaynePostBattle::
 
 Route25_Text_SeaCottageSign::
     .string "SEA COTTAGE\n"
-    .string "BILL lives here!$"
+    .string "BILL's old lab. Empty now.$"
+
+
+Route25_Text_MistyMeet::
+    .string "MISTY: Stop right there!\p"
+    .string "…Oh. You're not one of them.\p"
+    .string "I'm MISTY. I've tracked some\n"
+    .string "black-suited creeps all day.\p"
+    .string "Two of them slipped into that old\n"
+    .string "cottage. BILL left months ago, so\p"
+    .string "nobody should be inside.\p"
+    .string "You're after them too, aren't you?\n"
+    .string "You have the same look as a friend\p"
+    .string "of mine. Stubborn, never backs off.\p"
+    .string "Fine. Let's go in together.\n"
+    .string "I'll go first. Follow me!$"
+
+Route25_Text_MistyIdle::
+    .string "MISTY: Quiet. They're in there.$"
 
 Route25_Text_MistyHighHopesAboutThisPlace::
-    .string "This cape is a famous date spot.\p"
-    .string "SYLVESTRE, the GYM LEADER, has high\n"
-    .string "hopes about this place.$"
-
-Route25_Text_AreYouHereAlone::
-    .string "Hello, are you here alone?\p"
-    .string "If you're out at TOURMALIA's cape…\n"
-    .string "Well, it should be as a couple.$"
-
+    .string "MISTY: I followed some creeps\n"
+    .string "to this cape. It's a lovely spot,\p"
+    .string "even with the old cottage so\n"
+    .string "empty and quiet.$"
