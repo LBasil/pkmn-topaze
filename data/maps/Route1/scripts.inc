@@ -103,3 +103,7 @@ Route1_EventScript_AnimalsHome::
 	msgbox Route1_Text_AnimalsHome
 	release
 	end
+
+Route1_EventScript_Walker::
+	msgbox Route1_Text_Walker, MSGBOX_NPC
+	end

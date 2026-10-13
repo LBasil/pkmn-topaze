@@ -50,3 +50,11 @@ Route1_Text_AnimalsHome::
 Route1_Text_AnimalMore::
     .string "It calms down, but keeps looking\n"
     .string "around. The others must be close.$"
+
+Route1_Text_Walker::
+    .string "Wild POKéMON hide in the tall grass.\n"
+    .string "Since the AURA, they are not what\l"
+    .string "they used to be.\p"
+    .string "That little PIDGEY? Part DARK now.\n"
+    .string "Check your TYPE MEMO before you\l"
+    .string "fight anything.$"
