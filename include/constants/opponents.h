@@ -29,9 +29,9 @@
 #define TRAINER_RS_GENTLEMAN                      24
 #define TRAINER_ELITE_FOUR_SIDNEY                 25
 #define TRAINER_ELITE_FOUR_PHOEBE                 26
-#define TRAINER_LEADER_ROXANNE                    27
-#define TRAINER_LEADER_BRAWLY                     28
-#define TRAINER_LEADER_TATE_LIZA                  29
+#define TRAINER_ELDER_BROCK                    27
+#define TRAINER_ELDER_MISTY                     28
+#define TRAINER_ELDER_SURGE                  29
 #define TRAINER_SCHOOL_KID_M                      30
 #define TRAINER_SCHOOL_KID_F                      31
 #define TRAINER_SR_AND_JR                         32
@@ -84,10 +84,10 @@
 #define TRAINER_AQUA_ADMIN_SHELLY                 79
 #define TRAINER_MAGMA_ADMIN_TABITHA               80
 #define TRAINER_MAGMA_ADMIN_COURTNEY              81
-#define TRAINER_LEADER_WATTSON                    82
-#define TRAINER_LEADER_FLANNERY                   83
-#define TRAINER_LEADER_NORMAN                     84
-#define TRAINER_LEADER_WINONA                     85
+#define TRAINER_ELDER_ERIKA                    82
+#define TRAINER_ELDER_SABRINA                   83
+#define TRAINER_ELDER_BLAINE                     84
+#define TRAINER_ELDER_GIOVANNI                     85
 #define TRAINER_LEADER_WALLACE                    86
 #define TRAINER_ELITE_FOUR_GLACIA                 87
 #define TRAINER_ELITE_FOUR_DRAKE                  88

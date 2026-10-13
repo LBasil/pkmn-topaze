@@ -54,30 +54,44 @@ PokemonLeague_LoreleisRoom_EventScript_GfxDone::
 
 @ Topaze: post-game Council of Elders, opponent sprite per round
 PokemonLeague_LoreleisRoom_EventScript_SetElderGfx::
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LORELEI
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_BROCK
 	goto_if_eq VAR_ELDERS_ROUND, 0, PokemonLeague_LoreleisRoom_EventScript_GfxDone
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_BRUNO
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_MISTY
 	goto_if_eq VAR_ELDERS_ROUND, 1, PokemonLeague_LoreleisRoom_EventScript_GfxDone
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_AGATHA
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LT_SURGE
 	goto_if_eq VAR_ELDERS_ROUND, 2, PokemonLeague_LoreleisRoom_EventScript_GfxDone
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LANCE
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_ERIKA
 	goto_if_eq VAR_ELDERS_ROUND, 3, PokemonLeague_LoreleisRoom_EventScript_GfxDone
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_GENTLEMAN
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_SABRINA
 	goto_if_eq VAR_ELDERS_ROUND, 4, PokemonLeague_LoreleisRoom_EventScript_GfxDone
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_KOGA
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_BLAINE
 	goto_if_eq VAR_ELDERS_ROUND, 5, PokemonLeague_LoreleisRoom_EventScript_GfxDone
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_BEAUTY
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_GIOVANNI
 	goto_if_eq VAR_ELDERS_ROUND, 6, PokemonLeague_LoreleisRoom_EventScript_GfxDone
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_BLACK_BELT
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LORELEI
 	goto_if_eq VAR_ELDERS_ROUND, 7, PokemonLeague_LoreleisRoom_EventScript_GfxDone
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_BEAUTY
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_BRUNO
 	goto_if_eq VAR_ELDERS_ROUND, 8, PokemonLeague_LoreleisRoom_EventScript_GfxDone
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_COOLTRAINER_F
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_AGATHA
 	goto_if_eq VAR_ELDERS_ROUND, 9, PokemonLeague_LoreleisRoom_EventScript_GfxDone
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_SAILOR
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_LANCE
 	goto_if_eq VAR_ELDERS_ROUND, 10, PokemonLeague_LoreleisRoom_EventScript_GfxDone
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_GENTLEMAN
 	goto_if_eq VAR_ELDERS_ROUND, 11, PokemonLeague_LoreleisRoom_EventScript_GfxDone
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_KOGA
+	goto_if_eq VAR_ELDERS_ROUND, 12, PokemonLeague_LoreleisRoom_EventScript_GfxDone
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_BEAUTY
+	goto_if_eq VAR_ELDERS_ROUND, 13, PokemonLeague_LoreleisRoom_EventScript_GfxDone
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_BLACK_BELT
+	goto_if_eq VAR_ELDERS_ROUND, 14, PokemonLeague_LoreleisRoom_EventScript_GfxDone
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_BEAUTY
+	goto_if_eq VAR_ELDERS_ROUND, 15, PokemonLeague_LoreleisRoom_EventScript_GfxDone
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_COOLTRAINER_F
+	goto_if_eq VAR_ELDERS_ROUND, 16, PokemonLeague_LoreleisRoom_EventScript_GfxDone
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_SAILOR
+	goto_if_eq VAR_ELDERS_ROUND, 17, PokemonLeague_LoreleisRoom_EventScript_GfxDone
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_GENTLEMAN
+	goto_if_eq VAR_ELDERS_ROUND, 18, PokemonLeague_LoreleisRoom_EventScript_GfxDone
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_GENTLEMAN
 	goto PokemonLeague_LoreleisRoom_EventScript_GfxDone
 
@@ -244,7 +258,7 @@ PokemonLeague_LoreleisRoom_EventScript_TournamentWon::
 
 @ Topaze: Council of Elders (post-game)
 PokemonLeague_LoreleisRoom_EventScript_ElderMatch::
-	goto_if_ge VAR_ELDERS_ROUND, 13, PokemonLeague_LoreleisRoom_EventScript_ElderDone
+	goto_if_ge VAR_ELDERS_ROUND, 20, PokemonLeague_LoreleisRoom_EventScript_ElderDone
 	switch VAR_ELDERS_ROUND
 	case 0, PokemonLeague_LoreleisRoom_EventScript_Elder0
 	case 1, PokemonLeague_LoreleisRoom_EventScript_Elder1
@@ -259,97 +273,153 @@ PokemonLeague_LoreleisRoom_EventScript_ElderMatch::
 	case 10, PokemonLeague_LoreleisRoom_EventScript_Elder10
 	case 11, PokemonLeague_LoreleisRoom_EventScript_Elder11
 	case 12, PokemonLeague_LoreleisRoom_EventScript_Elder12
+	case 13, PokemonLeague_LoreleisRoom_EventScript_Elder13
+	case 14, PokemonLeague_LoreleisRoom_EventScript_Elder14
+	case 15, PokemonLeague_LoreleisRoom_EventScript_Elder15
+	case 16, PokemonLeague_LoreleisRoom_EventScript_Elder16
+	case 17, PokemonLeague_LoreleisRoom_EventScript_Elder17
+	case 18, PokemonLeague_LoreleisRoom_EventScript_Elder18
+	case 19, PokemonLeague_LoreleisRoom_EventScript_Elder19
 	release
 	end
 
 PokemonLeague_LoreleisRoom_EventScript_Elder0::
 	msgbox PokemonLeague_LoreleisRoom_Text_Elder0Intro
-	trainerbattle_no_intro TRAINER_ELITE_FOUR_LORELEI_2, PokemonLeague_LoreleisRoom_Text_Elder0Defeat
+	trainerbattle_no_intro TRAINER_ELDER_BROCK, PokemonLeague_LoreleisRoom_Text_Elder0Defeat
 	setvar VAR_ELDERS_ROUND, 1
 	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
 	end
 
 PokemonLeague_LoreleisRoom_EventScript_Elder1::
 	msgbox PokemonLeague_LoreleisRoom_Text_Elder1Intro
-	trainerbattle_no_intro TRAINER_ELITE_FOUR_BRUNO_2, PokemonLeague_LoreleisRoom_Text_Elder1Defeat
+	trainerbattle_no_intro TRAINER_ELDER_MISTY, PokemonLeague_LoreleisRoom_Text_Elder1Defeat
 	setvar VAR_ELDERS_ROUND, 2
 	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
 	end
 
 PokemonLeague_LoreleisRoom_EventScript_Elder2::
 	msgbox PokemonLeague_LoreleisRoom_Text_Elder2Intro
-	trainerbattle_no_intro TRAINER_ELITE_FOUR_AGATHA_2, PokemonLeague_LoreleisRoom_Text_Elder2Defeat
+	trainerbattle_no_intro TRAINER_ELDER_SURGE, PokemonLeague_LoreleisRoom_Text_Elder2Defeat
 	setvar VAR_ELDERS_ROUND, 3
 	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
 	end
 
 PokemonLeague_LoreleisRoom_EventScript_Elder3::
 	msgbox PokemonLeague_LoreleisRoom_Text_Elder3Intro
-	trainerbattle_no_intro TRAINER_ELITE_FOUR_LANCE_2, PokemonLeague_LoreleisRoom_Text_Elder3Defeat
+	trainerbattle_no_intro TRAINER_ELDER_ERIKA, PokemonLeague_LoreleisRoom_Text_Elder3Defeat
 	setvar VAR_ELDERS_ROUND, 4
 	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
 	end
 
 PokemonLeague_LoreleisRoom_EventScript_Elder4::
 	msgbox PokemonLeague_LoreleisRoom_Text_Elder4Intro
-	trainerbattle_no_intro TRAINER_ELDER_WILL, PokemonLeague_LoreleisRoom_Text_Elder4Defeat
+	trainerbattle_no_intro TRAINER_ELDER_SABRINA, PokemonLeague_LoreleisRoom_Text_Elder4Defeat
 	setvar VAR_ELDERS_ROUND, 5
 	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
 	end
 
 PokemonLeague_LoreleisRoom_EventScript_Elder5::
 	msgbox PokemonLeague_LoreleisRoom_Text_Elder5Intro
-	trainerbattle_no_intro TRAINER_ELDER_KOGA, PokemonLeague_LoreleisRoom_Text_Elder5Defeat
+	trainerbattle_no_intro TRAINER_ELDER_BLAINE, PokemonLeague_LoreleisRoom_Text_Elder5Defeat
 	setvar VAR_ELDERS_ROUND, 6
 	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
 	end
 
 PokemonLeague_LoreleisRoom_EventScript_Elder6::
 	msgbox PokemonLeague_LoreleisRoom_Text_Elder6Intro
-	trainerbattle_no_intro TRAINER_ELDER_KAREN, PokemonLeague_LoreleisRoom_Text_Elder6Defeat
+	trainerbattle_no_intro TRAINER_ELDER_GIOVANNI, PokemonLeague_LoreleisRoom_Text_Elder6Defeat
 	setvar VAR_ELDERS_ROUND, 7
 	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
 	end
 
 PokemonLeague_LoreleisRoom_EventScript_Elder7::
 	msgbox PokemonLeague_LoreleisRoom_Text_Elder7Intro
-	trainerbattle_no_intro TRAINER_ELDER_SIDNEY, PokemonLeague_LoreleisRoom_Text_Elder7Defeat
+	trainerbattle_no_intro TRAINER_ELITE_FOUR_LORELEI_2, PokemonLeague_LoreleisRoom_Text_Elder7Defeat
 	setvar VAR_ELDERS_ROUND, 8
 	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
 	end
 
 PokemonLeague_LoreleisRoom_EventScript_Elder8::
 	msgbox PokemonLeague_LoreleisRoom_Text_Elder8Intro
-	trainerbattle_no_intro TRAINER_ELDER_PHOEBE, PokemonLeague_LoreleisRoom_Text_Elder8Defeat
+	trainerbattle_no_intro TRAINER_ELITE_FOUR_BRUNO_2, PokemonLeague_LoreleisRoom_Text_Elder8Defeat
 	setvar VAR_ELDERS_ROUND, 9
 	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
 	end
 
 PokemonLeague_LoreleisRoom_EventScript_Elder9::
 	msgbox PokemonLeague_LoreleisRoom_Text_Elder9Intro
-	trainerbattle_no_intro TRAINER_ELDER_GLACIA, PokemonLeague_LoreleisRoom_Text_Elder9Defeat
+	trainerbattle_no_intro TRAINER_ELITE_FOUR_AGATHA_2, PokemonLeague_LoreleisRoom_Text_Elder9Defeat
 	setvar VAR_ELDERS_ROUND, 10
 	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
 	end
 
 PokemonLeague_LoreleisRoom_EventScript_Elder10::
 	msgbox PokemonLeague_LoreleisRoom_Text_Elder10Intro
-	trainerbattle_no_intro TRAINER_ELDER_DRAKE, PokemonLeague_LoreleisRoom_Text_Elder10Defeat
+	trainerbattle_no_intro TRAINER_ELITE_FOUR_LANCE_2, PokemonLeague_LoreleisRoom_Text_Elder10Defeat
 	setvar VAR_ELDERS_ROUND, 11
 	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
 	end
 
 PokemonLeague_LoreleisRoom_EventScript_Elder11::
 	msgbox PokemonLeague_LoreleisRoom_Text_Elder11Intro
-	trainerbattle_no_intro TRAINER_ELDER_STEVEN, PokemonLeague_LoreleisRoom_Text_Elder11Defeat
+	trainerbattle_no_intro TRAINER_ELDER_WILL, PokemonLeague_LoreleisRoom_Text_Elder11Defeat
 	setvar VAR_ELDERS_ROUND, 12
 	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
 	end
 
 PokemonLeague_LoreleisRoom_EventScript_Elder12::
 	msgbox PokemonLeague_LoreleisRoom_Text_Elder12Intro
-	trainerbattle_no_intro TRAINER_ELDER_WALLACE, PokemonLeague_LoreleisRoom_Text_Elder12Defeat
+	trainerbattle_no_intro TRAINER_ELDER_KOGA, PokemonLeague_LoreleisRoom_Text_Elder12Defeat
 	setvar VAR_ELDERS_ROUND, 13
+	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_Elder13::
+	msgbox PokemonLeague_LoreleisRoom_Text_Elder13Intro
+	trainerbattle_no_intro TRAINER_ELDER_KAREN, PokemonLeague_LoreleisRoom_Text_Elder13Defeat
+	setvar VAR_ELDERS_ROUND, 14
+	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_Elder14::
+	msgbox PokemonLeague_LoreleisRoom_Text_Elder14Intro
+	trainerbattle_no_intro TRAINER_ELDER_SIDNEY, PokemonLeague_LoreleisRoom_Text_Elder14Defeat
+	setvar VAR_ELDERS_ROUND, 15
+	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_Elder15::
+	msgbox PokemonLeague_LoreleisRoom_Text_Elder15Intro
+	trainerbattle_no_intro TRAINER_ELDER_PHOEBE, PokemonLeague_LoreleisRoom_Text_Elder15Defeat
+	setvar VAR_ELDERS_ROUND, 16
+	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_Elder16::
+	msgbox PokemonLeague_LoreleisRoom_Text_Elder16Intro
+	trainerbattle_no_intro TRAINER_ELDER_GLACIA, PokemonLeague_LoreleisRoom_Text_Elder16Defeat
+	setvar VAR_ELDERS_ROUND, 17
+	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_Elder17::
+	msgbox PokemonLeague_LoreleisRoom_Text_Elder17Intro
+	trainerbattle_no_intro TRAINER_ELDER_DRAKE, PokemonLeague_LoreleisRoom_Text_Elder17Defeat
+	setvar VAR_ELDERS_ROUND, 18
+	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_Elder18::
+	msgbox PokemonLeague_LoreleisRoom_Text_Elder18Intro
+	trainerbattle_no_intro TRAINER_ELDER_STEVEN, PokemonLeague_LoreleisRoom_Text_Elder18Defeat
+	setvar VAR_ELDERS_ROUND, 19
+	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_Elder19::
+	msgbox PokemonLeague_LoreleisRoom_Text_Elder19Intro
+	trainerbattle_no_intro TRAINER_ELDER_WALLACE, PokemonLeague_LoreleisRoom_Text_Elder19Defeat
+	setvar VAR_ELDERS_ROUND, 20
 	goto PokemonLeague_LoreleisRoom_EventScript_ElderReward
 	end
 

@@ -105,4 +105,4 @@ Eddie battu -> blackout, le maire (taupe) dit avoir utilisé le joueur pour la c
 - **Mine de Grenalux (V1 faite)** : ouverte en post-game (fin 1), 3 étages ; au fond, vision : l'Aura est née d'une créature très ancienne réveillée dans la veine il y a 10 ans (le cri de peur de Mew) ; le pendentif est la première pierre et a « choisi » le joueur. Mew apparaît puis s'enfuit vers Apatia, où il se cache sous un camion au port (capturable). Texte = placeholder à valider.
 
 ## Conseil des Anciens (post-game)
-Après la fin 1, la 1re salle de la Ligue accueille 13 vétérans à la suite : Lorelei, Bruno, Agatha, Lance, Will, Koga, Karen, Sidney, Phoebe, Glacia, Drake, Steven, Wallace. Récompense : Master Ball (placeholder).
+Après la fin 1, la 1re salle de la Ligue accueille 20 vétérans à la suite : les champions de Kanto (Brock, Misty, Surge, Erika, Sabrina, Blaine, Giovanni), puis Lorelei, Bruno, Agatha, Lance, Will, Koga, Karen, Sidney, Phoebe, Glacia, Drake, Steven, Wallace. Récompense : Master Ball (placeholder).
