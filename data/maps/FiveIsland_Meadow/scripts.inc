@@ -1,4 +1,5 @@
 FiveIsland_Meadow_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, FiveIsland_Meadow_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, FiveIsland_Meadow_OnLoad
 	.byte 0
 
@@ -48,4 +49,47 @@ FiveIsland_Meadow_EventScript_Rocket2::
 FiveIsland_Meadow_EventScript_Rocket3::
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_51, FiveIsland_Meadow_Text_Rocket3Intro, FiveIsland_Meadow_Text_Rocket3Defeat
 	msgbox FiveIsland_Meadow_Text_Rocket3PostBattle, MSGBOX_AUTOCLOSE
+	end
+
+@ Topaze: Echo 5 beast (static, stays if fled)
+FiveIsland_Meadow_OnTransition::
+	setflag FLAG_HIDE_ECHO_BEAST5
+	goto_if_set FLAG_ECHO_BEAST5_DONE, EventScript_Return
+	goto_if_ne VAR_ECHO_STAGE, 13, EventScript_Return
+	clearflag FLAG_HIDE_ECHO_BEAST5
+	end
+
+FiveIsland_Meadow_EventScript_Registeel::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	setwildbattle SPECIES_REGISTEEL, 54
+	waitse
+	playmoncry SPECIES_REGISTEEL, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, FiveIsland_Meadow_EventScript_DefeatedRegisteel
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, FiveIsland_Meadow_EventScript_RanFromRegisteel
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, FiveIsland_Meadow_EventScript_RanFromRegisteel
+	setflag FLAG_ECHO_BEAST5_DONE
+	setflag FLAG_HIDE_ECHO_BEAST5
+	setvar VAR_ECHO_STAGE, 14
+	release
+	end
+
+FiveIsland_Meadow_EventScript_DefeatedRegisteel::
+	setflag FLAG_ECHO_BEAST5_DONE
+	setvar VAR_ECHO_STAGE, 14
+	goto EventScript_RemoveStaticMon
+	end
+
+FiveIsland_Meadow_EventScript_RanFromRegisteel::
+	setvar VAR_0x8004, SPECIES_REGISTEEL
+	goto EventScript_MonFlewAway
 	end

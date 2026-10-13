@@ -451,3 +451,47 @@ OneIsland_PokemonCenter_1F_Text_EchoGotTotodile::
 OneIsland_PokemonCenter_1F_Text_EchoCelioNext3::
     .string "CELIO: Three ECHOES closed.\n"
     .string "The fourth is on FOUR ISLAND.$"
+
+OneIsland_PokemonCenter_1F_Text_Echo5Announce::
+    .string "BILL: The fifth ECHO is on FIVE\n"
+    .string "ISLAND, in the MEADOW.\p"
+    .string "A statue of steel stands there.\n"
+    .string "Please, calm it down.$"
+
+OneIsland_PokemonCenter_1F_Text_Echo5Wait::
+    .string "BILL: The MEADOW, on FIVE ISLAND.\n"
+    .string "Steel does not bend easily.$"
+
+OneIsland_PokemonCenter_1F_Text_Echo5Gift::
+    .string "BILL: The ECHO is closed!\p"
+    .string "A little POKéMON came through.\n"
+    .string "It will warm your journey.$"
+
+OneIsland_PokemonCenter_1F_Text_Echo5Next::
+    .string "BILL: Five ECHOES closed. Ask\n"
+    .string "CELIO about the next one.$"
+
+OneIsland_PokemonCenter_1F_Text_EchoGotTorchic::
+    .string "{PLAYER} received TORCHIC!$"
+
+OneIsland_PokemonCenter_1F_Text_Echo6Announce::
+    .string "CELIO: The sixth ECHO is in\n"
+    .string "RUIN VALLEY, on SIX ISLAND.\p"
+    .string "A statue of stone guards it.\n"
+    .string "It has waited a long time.$"
+
+OneIsland_PokemonCenter_1F_Text_Echo6Wait::
+    .string "CELIO: RUIN VALLEY, SIX ISLAND.\n"
+    .string "Mind the old ruins.$"
+
+OneIsland_PokemonCenter_1F_Text_Echo6Gift::
+    .string "CELIO: The ECHO is closed!\p"
+    .string "This POKéMON came with the\n"
+    .string "tide. Take good care of it.$"
+
+OneIsland_PokemonCenter_1F_Text_Echo6Next::
+    .string "CELIO: Six ECHOES closed. Only\n"
+    .string "one remains.$"
+
+OneIsland_PokemonCenter_1F_Text_EchoGotMudkip::
+    .string "{PLAYER} received MUDKIP!$"

@@ -583,6 +583,9 @@ OneIsland_PokemonCenter_1F_EventScript_EchoBill::
 	goto_if_eq VAR_ECHO_STAGE, 5, OneIsland_PokemonCenter_1F_EventScript_EchoBillGift2
 	goto_if_eq VAR_ECHO_STAGE, 4, OneIsland_PokemonCenter_1F_EventScript_EchoBillWait2
 	goto_if_eq VAR_ECHO_STAGE, 3, OneIsland_PokemonCenter_1F_EventScript_EchoBillEcho2
+	goto_if_eq VAR_ECHO_STAGE, 14, OneIsland_PokemonCenter_1F_EventScript_Echo5Gift
+	goto_if_eq VAR_ECHO_STAGE, 13, OneIsland_PokemonCenter_1F_EventScript_Echo5Wait
+	goto_if_eq VAR_ECHO_STAGE, 12, OneIsland_PokemonCenter_1F_EventScript_Echo5Announce
 	goto_if_ge VAR_ECHO_STAGE, 1, OneIsland_PokemonCenter_1F_EventScript_EchoBillAfter
 	msgbox OneIsland_PokemonCenter_1F_Text_EchoBillIntro
 	giveitem_msg OneIsland_PokemonCenter_1F_Text_EchoReceivedCompass, ITEM_VS_SEEKER, 1, MUS_OBTAIN_KEY_ITEM
@@ -601,6 +604,9 @@ OneIsland_PokemonCenter_1F_EventScript_EchoCelio::
 	goto_if_eq VAR_ECHO_STAGE, 8, OneIsland_PokemonCenter_1F_EventScript_EchoCelioGift3
 	goto_if_eq VAR_ECHO_STAGE, 7, OneIsland_PokemonCenter_1F_EventScript_EchoCelioWait3
 	goto_if_eq VAR_ECHO_STAGE, 6, OneIsland_PokemonCenter_1F_EventScript_EchoCelioEcho3
+	goto_if_eq VAR_ECHO_STAGE, 17, OneIsland_PokemonCenter_1F_EventScript_Echo6Gift
+	goto_if_eq VAR_ECHO_STAGE, 16, OneIsland_PokemonCenter_1F_EventScript_Echo6Wait
+	goto_if_eq VAR_ECHO_STAGE, 15, OneIsland_PokemonCenter_1F_EventScript_Echo6Announce
 	goto_if_ge VAR_ECHO_STAGE, 3, OneIsland_PokemonCenter_1F_EventScript_EchoCelioDone
 	goto_if_eq VAR_ECHO_STAGE, 2, OneIsland_PokemonCenter_1F_EventScript_EchoCelioGift
 	goto_if_eq VAR_ECHO_STAGE, 1, OneIsland_PokemonCenter_1F_EventScript_EchoCelioWait
@@ -786,5 +792,129 @@ OneIsland_PokemonCenter_1F_EventScript_EchoGift3End::
 	textcolor NPC_TEXT_COLOR_MALE
 	setvar VAR_ECHO_STAGE, 9
 	msgbox OneIsland_PokemonCenter_1F_Text_EchoCelioNext3
+	release
+	end
+
+@ Topaze: Echo 5
+OneIsland_PokemonCenter_1F_EventScript_Echo5Announce::
+	msgbox OneIsland_PokemonCenter_1F_Text_Echo5Announce
+	setvar VAR_ECHO_STAGE, 13
+	clearflag FLAG_HIDE_ECHO_BEAST5
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_Echo5Wait::
+	msgbox OneIsland_PokemonCenter_1F_Text_Echo5Wait
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_Echo5Gift::
+	msgbox OneIsland_PokemonCenter_1F_Text_Echo5Gift
+	setvar VAR_TEMP_1, SPECIES_TORCHIC
+	givemon SPECIES_TORCHIC, 30
+	goto_if_eq VAR_RESULT, 0, OneIsland_PokemonCenter_1F_EventScript_EchoGift5Party
+	goto_if_eq VAR_RESULT, 1, OneIsland_PokemonCenter_1F_EventScript_EchoGift5PC
+	goto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoGift5Party::
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playfanfare MUS_LEVEL_UP
+	message OneIsland_PokemonCenter_1F_Text_EchoGotTorchic
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_TORCHIC
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, OneIsland_PokemonCenter_1F_EventScript_EchoGift5End
+	call EventScript_GetGiftMonPartySlot
+	call EventScript_ChangePokemonNickname
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoGift5End
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoGift5PC::
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playfanfare MUS_LEVEL_UP
+	message OneIsland_PokemonCenter_1F_Text_EchoGotTorchic
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_TORCHIC
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, OneIsland_PokemonCenter_1F_EventScript_EchoGift5ToPC
+	call EventScript_NameReceivedBoxMon
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoGift5ToPC
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoGift5ToPC::
+	call EventScript_TransferredToPC
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoGift5End
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoGift5End::
+	textcolor NPC_TEXT_COLOR_MALE
+	setvar VAR_ECHO_STAGE, 15
+	msgbox OneIsland_PokemonCenter_1F_Text_Echo5Next
+	release
+	end
+
+@ Topaze: Echo 6
+OneIsland_PokemonCenter_1F_EventScript_Echo6Announce::
+	msgbox OneIsland_PokemonCenter_1F_Text_Echo6Announce
+	setvar VAR_ECHO_STAGE, 16
+	clearflag FLAG_HIDE_ECHO_BEAST6
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_Echo6Wait::
+	msgbox OneIsland_PokemonCenter_1F_Text_Echo6Wait
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_Echo6Gift::
+	msgbox OneIsland_PokemonCenter_1F_Text_Echo6Gift
+	setvar VAR_TEMP_1, SPECIES_MUDKIP
+	givemon SPECIES_MUDKIP, 30
+	goto_if_eq VAR_RESULT, 0, OneIsland_PokemonCenter_1F_EventScript_EchoGift6Party
+	goto_if_eq VAR_RESULT, 1, OneIsland_PokemonCenter_1F_EventScript_EchoGift6PC
+	goto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoGift6Party::
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playfanfare MUS_LEVEL_UP
+	message OneIsland_PokemonCenter_1F_Text_EchoGotMudkip
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_MUDKIP
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, OneIsland_PokemonCenter_1F_EventScript_EchoGift6End
+	call EventScript_GetGiftMonPartySlot
+	call EventScript_ChangePokemonNickname
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoGift6End
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoGift6PC::
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playfanfare MUS_LEVEL_UP
+	message OneIsland_PokemonCenter_1F_Text_EchoGotMudkip
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_MUDKIP
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, OneIsland_PokemonCenter_1F_EventScript_EchoGift6ToPC
+	call EventScript_NameReceivedBoxMon
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoGift6ToPC
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoGift6ToPC::
+	call EventScript_TransferredToPC
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoGift6End
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoGift6End::
+	textcolor NPC_TEXT_COLOR_MALE
+	setvar VAR_ECHO_STAGE, 18
+	msgbox OneIsland_PokemonCenter_1F_Text_Echo6Next
 	release
 	end

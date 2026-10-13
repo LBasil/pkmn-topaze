@@ -141,3 +141,6 @@ Piste réaliste : faire d'abord le jeu jouable, puis ajouter un follower **limit
 
 ## Écho 4 (post-game, île 4)
 - `bench/echo4_lorelei_test.py <étape>` (9→10 annonce, 11→12 cadeau Arcko/Treecko) et `echo4_regice_test.py` (Regice niv. 52 dans Icefall Cave Back (12,15), 10→11 ; sprite provisoire = rocher). OK en émulateur. Les Rockets/Lorelei de la scène vanilla sont cachés en post-game.
+
+## Échos 5 et 6 (post-game, îles 5 et 6)
+- `bench/echo56_giver_test.py <étape> <bill|celio>` (12→13, 14→15 Bill ; 15→16, 17→18 Celio) et `echo56_beast_test.py <map> <x> <y> <étape> <hold> <5|6>` : Registeel niv. 54 au Meadow (6,32), Regirock niv. 56 à Ruin Valley (14,23) (sprites provisoires = rocher). OK en émulateur.

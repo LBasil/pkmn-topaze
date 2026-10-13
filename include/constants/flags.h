@@ -215,10 +215,10 @@
 #define FLAG_ECHO_BEAST3_DONE    0x0C5
 #define FLAG_HIDE_ECHO_BEAST4    0x0C6 // Topaze: Echo 4 (Regice) in Icefall Cave Back
 #define FLAG_ECHO_BEAST4_DONE    0x0C7
-#define FLAG_0x0C8               0x0C8
-#define FLAG_0x0C9               0x0C9
-#define FLAG_0x0CA               0x0CA
-#define FLAG_0x0CB               0x0CB
+#define FLAG_HIDE_ECHO_BEAST5     0x0C8 // Topaze: Echo 5 (Registeel)
+#define FLAG_ECHO_BEAST5_DONE     0x0C9
+#define FLAG_HIDE_ECHO_BEAST6     0x0CA // Topaze: Echo 6 (Regirock)
+#define FLAG_ECHO_BEAST6_DONE     0x0CB
 #define FLAG_0x0CC               0x0CC
 #define FLAG_0x0CD               0x0CD
 #define FLAG_0x0CE               0x0CE

@@ -1,4 +1,5 @@
 SixIsland_RuinValley_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SixIsland_RuinValley_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, SixIsland_RuinValley_OnLoad
 	.byte 0
 
@@ -40,4 +41,47 @@ SixIsland_RuinValley_EventScript_DottedHoleDoorOpen::
 SixIsland_RuinValley_EventScript_IgnoreDottedHoleDoor::
 	msgbox SixIsland_RuinValley_Text_LeftDoorAlone
 	releaseall
+	end
+
+@ Topaze: Echo 6 beast (static, stays if fled)
+SixIsland_RuinValley_OnTransition::
+	setflag FLAG_HIDE_ECHO_BEAST6
+	goto_if_set FLAG_ECHO_BEAST6_DONE, EventScript_Return
+	goto_if_ne VAR_ECHO_STAGE, 16, EventScript_Return
+	clearflag FLAG_HIDE_ECHO_BEAST6
+	end
+
+SixIsland_RuinValley_EventScript_Regirock::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	setwildbattle SPECIES_REGIROCK, 56
+	waitse
+	playmoncry SPECIES_REGIROCK, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SixIsland_RuinValley_EventScript_DefeatedRegirock
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SixIsland_RuinValley_EventScript_RanFromRegirock
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SixIsland_RuinValley_EventScript_RanFromRegirock
+	setflag FLAG_ECHO_BEAST6_DONE
+	setflag FLAG_HIDE_ECHO_BEAST6
+	setvar VAR_ECHO_STAGE, 17
+	release
+	end
+
+SixIsland_RuinValley_EventScript_DefeatedRegirock::
+	setflag FLAG_ECHO_BEAST6_DONE
+	setvar VAR_ECHO_STAGE, 17
+	goto EventScript_RemoveStaticMon
+	end
+
+SixIsland_RuinValley_EventScript_RanFromRegirock::
+	setvar VAR_0x8004, SPECIES_REGIROCK
+	goto EventScript_MonFlewAway
 	end
