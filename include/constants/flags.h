@@ -1225,7 +1225,7 @@
 #define FLAG_HIDE_GRENALUX_ONYBRIS_GRUNT                           0x4A7 // Topaze: ONYBRIS grunt on the road out of GRENALUX
 #define FLAG_HIDE_PALLET_RIVAL                                     0x4A8 // Topaze: rival who stops the player at the town exit
 #define FLAG_GRENALUX_ONYBRIS_STRIKE                               0x4A9 // Topaze: set after the road grunt is beaten; museum & lab have been hit
-#define FLAG_HIDE_RANCH_SCENE                                      0x4AA // Topaze: father/OAK/rival inside the ranch during the opening
+#define FLAG_HIDE_RANCH_SCENE                                      0x4AA // Topaze: father/OAK/rival at the ranch during the opening
 #define FLAG_TOPAZE_POSTGAME            0x4AB // Topaze: set after ending 1 (postgame unlocked)
 #define FLAG_HIDE_POSTGAME_STRANGER     0x4AC // Topaze postgame: mysterious trainer on Route 22
 #define FLAG_HIDE_POSTGAME_RED          0x4AD // Topaze postgame: RED in the cave
@@ -1262,7 +1262,7 @@
 #define FLAG_ROUTE1_TALKED_NIDORANM      0x4C8 // Topaze: calmed NIDORAN male
 #define FLAG_ROUTE1_TALKED_NIDORANF      0x4C9 // Topaze: calmed NIDORAN female
 #define FLAG_VIRIDIAN_TUTORIAL_DONE      0x4CA // Topaze: OPANIHRUM old man's catch demo done (TEACHY TV given)
-#define FLAG_0x4CB               0x4CB
+#define FLAG_HIDE_RANCH_GRUNT2           0x4CB // Topaze: second ONYBRIS grunt (fights the rival) in the ranch opening scene
 #define FLAG_0x4CC               0x4CC
 #define FLAG_0x4CD               0x4CD
 #define FLAG_0x4CE               0x4CE

@@ -264,9 +264,22 @@ PalletTown_Text_RanchRivalTakes::
     .string "beats yours! Gramps, give it here!$"
 
 PalletTown_Text_RanchGruntChallenge::
-    .string "Hah! A kid with a brand new partner?\p"
+    .string "GRUNT: Hah! A kid with a brand new\n"
+    .string "partner?\p"
     .string "Let's see if it fights for you, or\n"
     .string "just obeys!$"
+
+PalletTown_Text_RanchRivalChallenge::
+    .string "{RIVAL}: {PLAYER}, you take the big one.\n"
+    .string "The other one is mine!$"
+
+PalletTown_Text_RanchGrunt2Taunt::
+    .string "A kid with a borrowed POKéMON?\n"
+    .string "This will take two seconds!$"
+
+PalletTown_Text_RanchRivalWin::
+    .string "{RIVAL}: Mine ran off after one hit!\p...Yours too? Not bad, {PLAYER}.\n"
+    .string "But next time I win first!$"
 
 PalletTown_Text_RanchGruntRetreat::
     .string "Forget it. We got what we came for.\p"

@@ -7,7 +7,7 @@ Il y a 10 ans une Aura a muté les types. Aujourd'hui la TEAM ZIRCON vole une pi
 ## 2. Les 5 événements de pierre
 | # | Ville | Pierre | Ce qui se passe | Rôle du joueur |
 |---|---|---|---|---|
-| 1 | Grenalux | GRENAT | attaque EN DIRECT (ranch, école, labo) | combat un sbire, reçoit le PENDENTIF |
+| 1 | Grenalux | GRENAT | attaque EN DIRECT (ranch, école, labo) | au ranch : combat un sbire (le rival bat l’autre), reçoit le PENDENTIF |
 | 2 | Pyropia | PYROPE | volé avant l'arrivée (musée) ; BROCK conservateur | enquête |
 | 3 | Tourmalia | TOURMALINE | volée avant l'arrivée ; ville bouclée par la police | badge 2, le rival remplace la police |
 | 4 | Apatia | APATITE | **sauvée** : prêtée au capitaine du S.S. ANNE, le joueur arrive à temps (VESPER battue/fuit) | première victoire sur Zircon |

@@ -153,3 +153,8 @@ Piste réaliste : faire d'abord le jeu jouable, puis ajouter un follower **limit
 
 ## Scène de l'île 7 : Silver / Giovanni / Red
 - `bench/echo8_scene_test.py` : déclencheur (17,8) au stage 21, dialogues, combat SILVER (nouveau, 6 Pokémon 68-72) puis GIOVANNI (`TRAINER_PLAYER_LEAF`), départ, Red salue seul, stage 22. OK en émulateur (le test passe les combats en mode dieu). Les légendaires de Sevault n'apparaissent maintenant qu'au stage 22 (`echo7_sevault_test.py` : utiliser l'étape 22 pour Kyogre etc.).
+
+## Grenalux — scène d'ouverture au ranch (test téléphone)
+- Émulateur : escorte du rival (sortie nord) → ranch → père/OAK/rival → 2 sbires → choix du starter → combat sbire 1 → maman + pendentif → `VAR_GRENALUX_OPENING`=2, joueur libre en (11,6). OK.
+- Entrée en marchant seul vers l'est (OPENING=0) : même scène. OK.
+- Raccord de sol ranch↔Grenalux vérifié visuellement (chemin continu).

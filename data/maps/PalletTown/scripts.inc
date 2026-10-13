@@ -261,17 +261,11 @@ PalletTown_EventScript_OakTrigger::
 	delay 30
 	call_if_eq VAR_TEMP_1, 0, PalletTown_EventScript_RivalLeadPlayerToRanchLeft
 	call_if_eq VAR_TEMP_1, 1, PalletTown_EventScript_RivalLeadPlayerToRanchRight
-	opendoor 36, 8
-	waitdooranim
-	applymovement LOCALID_PALLET_RIVAL, PalletTown_Movement_RivalEnterRanch
-	applymovement LOCALID_PLAYER, PalletTown_Movement_PlayerEnterRanch
-	waitmovement 0
-	closedoor 36, 8
-	waitdooranim
+	removeobject LOCALID_PALLET_RIVAL
 	setflag FLAG_HIDE_PALLET_RIVAL
 	setvar VAR_GRENALUX_OPENING, 1
 	setflag FLAG_DONT_TRANSITION_MUSIC
-	warp MAP_PALLET_TOWN_RIVALS_HOUSE, 4, 7
+	warp MAP_PALLET_TOWN_RANCH, 0, 7
 	waitstate
 	releaseall
 	end
@@ -315,16 +309,6 @@ PalletTown_EventScript_RivalLeadPlayerToRanchRight::
 	return
 
 PalletTown_Movement_RivalWalkToRanchLeft::
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
 	walk_right
 	walk_right
 	walk_right
@@ -337,22 +321,6 @@ PalletTown_Movement_RivalWalkToRanchLeft::
 	walk_right
 	walk_right
 	walk_right
-	walk_right
-	walk_up
-	walk_up
-	walk_up
-	walk_right
-	step_end
-
-PalletTown_Movement_RivalWalkToRanchRight::
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
 	walk_down
 	walk_down
 	walk_right
@@ -360,87 +328,98 @@ PalletTown_Movement_RivalWalkToRanchRight::
 	walk_right
 	walk_right
 	walk_right
+	walk_down
+	walk_down
+	walk_down
 	walk_right
 	walk_right
 	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_up
-	walk_up
-	walk_up
 	walk_right
 	step_end
 
 PalletTown_Movement_PlayerWalkToRanchLeft::
 	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	walk_down
 	walk_down
 	walk_down
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+PalletTown_Movement_RivalWalkToRanchRight::
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	walk_down
 	walk_down
 	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
 	walk_right
 	walk_right
 	walk_right
 	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_up
-	walk_up
-	walk_up
 	step_end
 
 PalletTown_Movement_PlayerWalkToRanchRight::
 	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
 	walk_down
 	walk_down
 	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
 	walk_right
 	walk_right
 	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_up
-	walk_up
-	walk_up
-	step_end
-
-PalletTown_Movement_RivalEnterRanch::
-	walk_up
-	set_invisible
-	step_end
-
-PalletTown_Movement_PlayerEnterRanch::
-	walk_right
-	walk_up
-	set_invisible
 	step_end
 
 PalletTown_Movement_OakEnterLeft::
