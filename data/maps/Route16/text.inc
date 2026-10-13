@@ -6,7 +6,9 @@ Route16_Text_LaoDefeat::
 
 Route16_Text_LaoPostBattle::
     .string "We like just hanging here.\n"
-    .string "What's it to you?$"
+    .string "Men in black came through, too.\p"
+    .string "They paid us to look away.\n"
+    .string "We took the money. So what?$"
 
 Route16_Text_KojiIntro::
     .string "Nice BIKE!\n"
@@ -16,7 +18,9 @@ Route16_Text_KojiDefeat::
     .string "Knockout!$"
 
 Route16_Text_KojiPostBattle::
-    .string "Forget it, who needs your BIKE!$"
+    .string "Forget it, who needs your BIKE!\p"
+    .string "The men in black rode down the\n"
+    .string "CYCLING ROAD. Fast. Not our gang.$"
 
 Route16_Text_LukeIntro::
     .string "Come out and play, little mouse!$"

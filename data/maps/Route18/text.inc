@@ -27,8 +27,9 @@ Route18_Text_JacobDefeat::
     .string "Darn!$"
 
 Route18_Text_JacobPostBattle::
-    .string "This is my fave area for catching\n"
-    .string "POKéMON.$"
+    .string "Men in black flew past toward\n"
+    .string "AMETHIOLITE. Birds can tell.\p"
+    .string "My SPEAROW screamed at them.$"
 
 Route18_Text_RouteSign::
     .string "ROUTE 18\n"

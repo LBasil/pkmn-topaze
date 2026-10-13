@@ -286,3 +286,9 @@ Chemin du joueur après le ticket : Tourmalia → **Route 5** (pension, panneau 
 
 ### Bourg Quartz — arene de GRIM (Glace/Eau)
 `docs/topaze/celadon_gym.py` (idempotent) : 7 dresseurs Glace/Eau niv. 25-29 (Nora [ex-Kay, renommee pour ne pas doubler avec Kay de Pyropia], Bridget, Tina, Tamia, Lori, Lisa, Mary : Otaria, Kokiyas, Hypotrempe, Stari, Ramoloss, Lippoutou), textes retheme (froid, indice Game Corner). GRIM : Dewgong 31, Cloyster 32, Jynx 33, Onix 33, Lapras 35. Badge 4 = QUARTZ BADGE, CT13 Laser Glace. Arene ouverte a tout moment (pas de blocage). Non teste en emulateur.
+
+### Routes 16 / 17 / 18 (Bourg Quartz -> Amethiolite) — passe scenario
+- Le POKE FLUTE n'etait plus obtenable (Fuji ne donne plus rien, `FLAG_HIDE_POKEHOUSE_FUJI` reste cache) : il est maintenant le butin de VESPER au B4F (objet ex-Silph Scope, "vole a M. FUJI", pose FLAG_GOT_POKE_FLUTE). Remplace le MAX REVIVE. Le Ronflex de la Route 16 (niv. 30) devient donc franchissable APRES le repaire ; celui de la Route 12 aussi (raccourci tardif vers Amethiolite par les Routes 13-15, acceptable).
+- Route 16 : dresseurs (cue balls/motards niv. 31-37) conserves ; Lao et Koji laissent un indice (hommes en noir payes pour regarder ailleurs / descendus par la Cycling Road). Garde de l'entree nord : rappel velo (boutique de Tourmalia + bon du Fan Club d'Apatia).
+- Route 17 (Cycling Road, 10 motards 28-37) : Corey et Jamal laissent des indices (voleurs passes a l'aube, le Gardien d'Amethiolite). Route 18 (oiseleurs 29-38) : Jacob mentionne les hommes en noir vers Amethiolite.
+- Non teste en emulateur.

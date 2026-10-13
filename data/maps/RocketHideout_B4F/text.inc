@@ -54,6 +54,9 @@ RocketHideout_B4F_Text_Grunt1PostBattle::
 
 RocketHideout_B4F_Text_FoundRocketLedger::
     .string "{PLAYER} found an old ROCKET ledger.\p"
-    .string "The last page is signed G.\n"
-    .string "A gold-trimmed MAX REVIVE was\l"
-    .string "hidden inside!$"
+    .string "Inside was a battered case: the\n"
+    .string "POKé FLUTE, stolen from MR. FUJI!$"
+
+RocketHideout_B4F_Text_ReceivedPokeFlute::
+    .string "{PLAYER} received the POKé FLUTE.\p"
+    .string "It wakes sleeping POKéMON.$"

@@ -70,7 +70,9 @@ Route17_Text_JamalDefeat::
     .string "Good workout!$"
 
 Route17_Text_JamalPostBattle::
-    .string "I'm sure I lost weight there!$"
+    .string "I'm sure I lost weight there!\p"
+    .string "Ask AMETHIOLITE's WARDEN if you\n"
+    .string "want weird news. He sees all.$"
 
 Route17_Text_CoreyIntro::
     .string "Be a rebel!$"
@@ -79,7 +81,9 @@ Route17_Text_CoreyDefeat::
     .string "Aaaargh!$"
 
 Route17_Text_CoreyPostBattle::
-    .string "Be ready to fight for your beliefs!$"
+    .string "Be ready to fight for your beliefs!\p"
+    .string "The thieves in black? They went\n"
+    .string "past at dawn, in a big hurry.$"
 
 Route17_Text_JaxonIntro::
     .string "Nice BIKE!\n"

@@ -39,8 +39,8 @@ RocketHideout_B4F_EventScript_SilphScope::
 	faceplayer
 	removeobject LOCALID_SILPH_SCOPE
 	msgbox RocketHideout_B4F_Text_FoundRocketLedger
-	giveitem ITEM_MAX_REVIVE
-	goto_if_eq VAR_RESULT, FALSE, EventScript_BagIsFull
+	setflag FLAG_GOT_POKE_FLUTE
+	giveitem_msg RocketHideout_B4F_Text_ReceivedPokeFlute, ITEM_POKE_FLUTE, 1, MUS_OBTAIN_KEY_ITEM
 	release
 	end
 
