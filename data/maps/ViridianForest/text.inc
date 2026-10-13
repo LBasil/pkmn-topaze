@@ -1,33 +1,32 @@
 ViridianForest_Text_FriendsItchingToBattle::
-    .string "The forest burned years ago, but\n"
-    .string "the BUG POKéMON came back first!\p"
-    .string "My friends and I came to catch\n"
-    .string "some. They're itching to battle!$"
+    .string "The trees burned long ago, but the\n"
+    .string "ground here is still warm.\p"
+    .string "POKéMON that love ash and ember live\n"
+    .string "here now. My friends are itching to\l"
+    .string "battle!$"
 
 ViridianForest_Text_RickIntro::
-    .string "Hey! You have POKéMON!\n"
-    .string "Come on!\l"
-    .string "Let's battle 'em!$"
+    .string "Camping on warm ground is the best!\n"
+    .string "Hey, you! Battle me!$"
 
 ViridianForest_Text_RickDefeat::
-    .string "No!\nCATERPIE can't hack it!$"
+    .string "No!\nMy VULPIX cooled off!$"
 
 ViridianForest_Text_RickPostBattle::
-    .string "Ssh! You'll scare the bugs away.\n"
+    .string "Ssh! You will wake the embers.\n"
     .string "Another time, okay?$"
 
 ViridianForest_Text_DougIntro::
-    .string "Yo!\n"
-    .string "You can't jam out if you're a\l"
-    .string "POKéMON TRAINER!$"
+    .string "Rocks, ash and tunnels!\n"
+    .string "This forest is a hiker's dream!$"
 
 ViridianForest_Text_DougDefeat::
     .string "Huh?\n"
-    .string "I ran out of POKéMON!$"
+    .string "My rock-solid team crumbled!$"
 
 ViridianForest_Text_DougPostBattle::
-    .string "That totally stinks! I'm going to\n"
-    .string "catch some stronger ones!$"
+    .string "Mind the lava pool to the west.\n"
+    .string "I almost lost a boot there.$"
 
 ViridianForest_Text_SammyIntro::
     .string "Hey, wait up!\n"
@@ -55,15 +54,16 @@ ViridianForest_Text_AnthonyPostBattle::
     .string "I lost some of my allowance…$"
 
 ViridianForest_Text_CharlieIntro::
-    .string "Did you know that POKéMON evolve?$"
+    .string "Did you know the ground here is\n"
+    .string "still hot under the ash?$"
 
 ViridianForest_Text_CharlieDefeat::
     .string "Oh!\n"
     .string "I lost!$"
 
 ViridianForest_Text_CharliePostBattle::
-    .string "BUG POKéMON evolve quickly.\n"
-    .string "They're a lot of fun!$"
+    .string "The AURA changed every POKéMON,\n"
+    .string "but the embers stayed the same.$"
 
 ViridianForest_Text_RanOutOfPokeBalls::
     .string "I was throwing POKé BALLS to\n"
