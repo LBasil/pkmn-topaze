@@ -117,3 +117,10 @@ Les 7 îles vanilla existent déjà dans la ROM. Décision V1 : on ne réécrit 
 - **Île 6 (Ruin Valley)** : rencontre Mew / ruines de l'Aura, lien avec la mine de Grenalux.
 - **Île 7 (Sevault)** : épreuve finale optionnelle (Red ou Silver selon avancement).
 À faire : écrire les scripts de chaque rôle une fois la v1 globale validée ; vérifier que chaque Pokémon reste obtenable.
+
+## Post-game : « Les Échos du Temps » (histoire V1, remplace le squelette des rôles ci-dessus par une trame)
+**Pitch.** La Ligue finie, le boss a perdu mais le temps ne s'est pas remis d'aplomb : chaque légendaire qu'il avait capturé tenait une « ancre ». Des **Échos** (fragments d'autres régions et d'autres époques) échouent sur les îles Sevii et y déposent des Pokémon qui n'ont rien à faire à Kanto : Johto, Hoenn.
+**Fil rouge.** Bill (parti « aux îles », mot sur son PC) et Célio construisent la **Boussole du Temps** pour localiser les Échos. Chaque île a un Écho et un gardien ; le Champion les referme un à un. Les Pokémon de Johto/Hoenn y sont sauvages (tables Sevii, `docs/topaze/sevii_wild.py`).
+**Gardiens (légendaires obtenables).** Île 1-2-3 : les trois Bêtes (Raikou, Entei, Suicune), en fuite d'île en île (errants) ; Île 5-6 : Celebi apparaît quand 3 Échos sont fermés et révèle ce que le Souhait de Jirachi a vraiment déréglé (lien Mew / Aura de la mine) ; Ruines de Tanoby : les trois Regis ; Sevault : épreuve finale (Red ou Silver selon l'avancement).
+**Starters Johto/Hoenn.** Cadeaux scénarisés après chaque Écho fermé (6 starters à répartir entre Célio, Bill et deux Anciens du Conseil).
+**Statut V1.** Fait : tables sauvages (24 espèces manquantes restantes, voir `OBTENABLES.md`). À écrire : scripts Bill/Célio, Boussole, gardiens, cadeaux starters, errants, Celebi.
