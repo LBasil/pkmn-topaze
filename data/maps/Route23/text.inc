@@ -11,9 +11,10 @@ Route23_Text_RedSilent::
     .string "RED: ……$"
 
 Route23_Text_RedEnters::
-    .string "He looks at you for a long moment,\n"
-    .string "tips his cap, and walks into the\n"
-    .string "VICTORY ROAD alone.$"
+    .string "Something black glints in his hand:\n"
+    .string "the BLACK OPAL of OPANIHRUM.\p"
+    .string "He tips his cap and walks into\n"
+    .string "the VICTORY ROAD alone.$"
 
 Route23_Text_RedEndA::
     .string "RED waits at the end of the road.\n"
@@ -22,7 +23,9 @@ Route23_Text_RedEndA::
 Route23_Text_RedEndB::
     .string "High above the PLATEAU a black\n"
     .string "shape rises and fades into the\n"
-    .string "clouds. The MASTER is gone.$"
+    .string "clouds. The MASTER is gone.\p"
+    .string "The BLACK OPAL is no longer in\n"
+    .string "RED's hand. It left with him.$"
 
 Route23_Text_RedEndC::
     .string "He did not win. Nobody could.\n"

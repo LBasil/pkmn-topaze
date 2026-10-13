@@ -19,12 +19,15 @@ ViridianCity_Gym_Text_GiovanniDefeat::
 ViridianCity_Gym_Text_GiovanniPostBattle::
     .string "My furnaces forged the gate of\n"
     .string "the VICTORY ROAD, long ago.\p"
+    .string "A boy in a red cap came before\n"
+    .string "you. He said nothing. He only\p"
+    .string "pointed at the BLACK OPAL in the\n"
+    .string "square. I understood.\p"
+    .string "The opal is the key of that gate.\n"
+    .string "He took it into the cave himself.\p"
     .string "Strange men in black went in\n"
-    .string "there. They did not ask my leave.\p"
-    .string "Remember what the opal teaches:\n"
-    .string "the darker it is, the more colors\l"
-    .string "it hides.\p"
-    .string "Go. Take what is yours.$"
+    .string "there too. Hurry, before they\n"
+    .string "reach him.$"
 
 ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis::
     .string "The OPAL BADGE makes every\n"
