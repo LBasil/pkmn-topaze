@@ -200,18 +200,34 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_VR_VESPER",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_F",
       "x": 46,
-      "y": 14,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VictoryRoad_2F_EventScript_Stub",
+      "flag": "FLAG_TEMP_1"
+    },
+    {
+      "local_id": "LOCALID_VR_RED_2F",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_RED_NORMAL",
+      "x": 48,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "5",
-      "script": "VictoryRoad_2F_EventScript_Vesper",
-      "flag": "0"
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VictoryRoad_2F_EventScript_RedTalk",
+      "flag": "FLAG_TEMP_2"
     }
   ],
   "warp_events": [
@@ -297,6 +313,42 @@
       "var": "VAR_MAP_SCENE_VICTORY_ROAD_2F_BOULDER2",
       "var_value": "99",
       "script": "VictoryRoad_2F_EventScript_FloorSwitch2"
+    },
+    {
+      "type": "trigger",
+      "x": 47,
+      "y": 12,
+      "elevation": 3,
+      "var": "VAR_TEMP_6",
+      "var_value": "0",
+      "script": "VictoryRoad_2F_EventScript_FinalScene"
+    },
+    {
+      "type": "trigger",
+      "x": 48,
+      "y": 11,
+      "elevation": 3,
+      "var": "VAR_TEMP_6",
+      "var_value": "0",
+      "script": "VictoryRoad_2F_EventScript_FinalScene"
+    },
+    {
+      "type": "trigger",
+      "x": 49,
+      "y": 12,
+      "elevation": 3,
+      "var": "VAR_TEMP_6",
+      "var_value": "0",
+      "script": "VictoryRoad_2F_EventScript_FinalScene"
+    },
+    {
+      "type": "trigger",
+      "x": 47,
+      "y": 14,
+      "elevation": 3,
+      "var": "VAR_TEMP_6",
+      "var_value": "0",
+      "script": "VictoryRoad_2F_EventScript_FinalScene"
     }
   ],
   "bg_events": []

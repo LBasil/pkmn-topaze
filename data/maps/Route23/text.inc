@@ -15,20 +15,3 @@ Route23_Text_RedEnters::
     .string "the BLACK OPAL of OPANIHRUM.\p"
     .string "He tips his cap and walks into\n"
     .string "the VICTORY ROAD alone.$"
-
-Route23_Text_RedEndA::
-    .string "RED waits at the end of the road.\n"
-    .string "His cap is torn. His hands shake.$"
-
-Route23_Text_RedEndB::
-    .string "High above the PLATEAU a black\n"
-    .string "shape rises and fades into the\n"
-    .string "clouds. The MASTER is gone.\p"
-    .string "The BLACK OPAL is no longer in\n"
-    .string "RED's hand. It left with him.$"
-
-Route23_Text_RedEndC::
-    .string "He did not win. Nobody could.\n"
-    .string "But he nods to you, once.\p"
-    .string "Then he picks up his cap and walks\n"
-    .string "on toward the POKéMON LEAGUE.$"

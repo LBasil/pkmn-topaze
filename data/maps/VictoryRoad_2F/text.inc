@@ -53,20 +53,45 @@ VictoryRoad_2F_Text_GregoryPostBattle::
 VictoryRoad_2F_Text_Gyaoo::
     .string "ギヤーオ！$"
 
+VictoryRoad_2F_Text_ShapeA::
+    .string "The exit chamber is freezing.\n"
+    .string "RED kneels, the BLACK OPAL held\p"
+    .string "out in both hands. Above him\n"
+    .string "stands a shape made of darkness.$"
+
+VictoryRoad_2F_Text_ShapeB::
+    .string "It reaches out. The BLACK OPAL\n"
+    .string "goes dark in RED's palms, then\p"
+    .string "dissolves into the shape. The ten\n"
+    .string "stones are one now.\p"
+    .string "The shape turns its head toward\n"
+    .string "you. Then the cave goes black.$"
+
 VictoryRoad_2F_Text_VesperIntro::
     .string "VESPER: Third time, child.\n"
-    .string "I almost admire your stubbornness.\p"
-    .string "The MASTER left through this very\n"
-    .string "door, and the red-capped one is\p"
-    .string "already outside, licking his\n"
-    .string "wounds. You will not follow!$"
+    .string "The MASTER has what he came for.\p"
+    .string "I stay to see that you do not\n"
+    .string "follow him. Even now.$"
 
 VictoryRoad_2F_Text_VesperDefeat::
     .string "…Again. Again you break the\n"
     .string "pattern.$"
 
 VictoryRoad_2F_Text_VesperPost::
-    .string "VESPER: Go, then. The LEAGUE needs\n"
-    .string "a witness. Not a hero.\p"
-    .string "The stones are almost all gathered.\n"
-    .string "What comes next is not for us.$"
+    .string "VESPER: Go, then. The stones are\n"
+    .string "gathered. What comes next is not\p"
+    .string "for us. The LEAGUE needs a\n"
+    .string "witness, not a hero.$"
+
+VictoryRoad_2F_Text_RedAfter::
+    .string "RED lowers his head. He did not\n"
+    .string "win. Nobody could.\p"
+    .string "He looks at you, and nods once.$"
+
+VictoryRoad_2F_Text_RedSilent::
+    .string "RED: ……$"
+
+VictoryRoad_2F_Text_RedHeals::
+    .string "RED takes out a thermos and lets\n"
+    .string "your POKéMON drink. They feel\n"
+    .string "fine again.$"
