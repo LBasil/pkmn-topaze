@@ -8,10 +8,10 @@ CinnabarIsland_Text_BlaineLivedHereSinceBeforeLab::
     .string "before the LAB was built.$"
 
 CinnabarIsland_Text_ScientistsExperimentInMansion::
-    .string "Scientists conduct experiments \n"
-    .string "in the burned-out building.\p"
-    .string "You know, the one they call the\n"
-    .string "POKéMON MANSION.$"
+    .string "That big building is the PLANT.\p"
+    .string "They say it was a burned mansion\n"
+    .string "long ago. Now it runs on heat.\p"
+    .string "Volcano heat. Free power, forever.$"
 
 CinnabarIsland_Text_IslandSign::
     .string "CHRONDROLIA\n"
@@ -73,3 +73,34 @@ CinnabarIsland_Text_IfYouHaveTriPassYouCanGoAgain::
     .string "APATIA PORT.\p"
     .string "All right, thanks for your company!$"
 
+CinnabarIsland_Text_PlantWorker::
+    .string "WORKER: Ever wonder why the PLANT\n"
+    .string "stands on this island?\p"
+    .string "The SEAFOAM volcano sleeps right\n"
+    .string "under the sea. All that heat boils\p"
+    .string "our water into steam. The steam\n"
+    .string "spins the turbines. Free power!\p"
+    .string "Half the lights in KANTO come\n"
+    .string "from this rock.$"
+
+CinnabarIsland_Text_Mayor::
+    .string "MAYOR: Welcome to CHRONDROLIA!\p"
+    .string "Thieves? Stones? We heard the\n"
+    .string "rumors. None of it came here.\p"
+    .string "There is no precious stone on this\n"
+    .string "island. The TOPAZ is only a name.\p"
+    .string "Relax, trainer. Visit the GYM,\n"
+    .string "enjoy the lights.$"
+
+CinnabarIsland_Text_Scientist::
+    .string "SCIENTIST: Ten years ago the AURA\n"
+    .string "changed every POKéMON's type.\p"
+    .string "Not our grid. Not our island.\n"
+    .string "The volcano keeps it stable.\p"
+    .string "Everything is safe here. Really.$"
+
+CinnabarIsland_Text_LittleGirl::
+    .string "Grandma says the stone of this\n"
+    .string "town is only a fairy tale.\p"
+    .string "But the big pylon hums at night.\n"
+    .string "I like it!$"

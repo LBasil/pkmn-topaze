@@ -382,7 +382,161 @@
       "dest_warp_id": "33"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 119,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route20_EventScript_SeaClosed"
+    },
+    {
+      "type": "trigger",
+      "x": 119,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route20_EventScript_SeaClosed"
+    },
+    {
+      "type": "trigger",
+      "x": 119,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route20_EventScript_SeaClosed"
+    },
+    {
+      "type": "trigger",
+      "x": 119,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route20_EventScript_SeaClosed"
+    },
+    {
+      "type": "trigger",
+      "x": 119,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route20_EventScript_SeaClosed"
+    },
+    {
+      "type": "trigger",
+      "x": 119,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route20_EventScript_SeaClosed"
+    },
+    {
+      "type": "trigger",
+      "x": 119,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route20_EventScript_SeaClosed"
+    },
+    {
+      "type": "trigger",
+      "x": 119,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route20_EventScript_SeaClosed"
+    },
+    {
+      "type": "trigger",
+      "x": 119,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route20_EventScript_SeaClosed"
+    },
+    {
+      "type": "trigger",
+      "x": 119,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route20_EventScript_SeaClosed"
+    },
+    {
+      "type": "trigger",
+      "x": 119,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route20_EventScript_SeaClosed"
+    },
+    {
+      "type": "trigger",
+      "x": 119,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route20_EventScript_SeaClosed"
+    },
+    {
+      "type": "trigger",
+      "x": 119,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route20_EventScript_SeaClosed"
+    },
+    {
+      "type": "trigger",
+      "x": 119,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route20_EventScript_SeaClosed"
+    },
+    {
+      "type": "trigger",
+      "x": 119,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route20_EventScript_SeaClosed"
+    },
+    {
+      "type": "trigger",
+      "x": 60,
+      "y": 8,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route20_EventScript_CaveClosed"
+    },
+    {
+      "type": "trigger",
+      "x": 72,
+      "y": 14,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Route20_EventScript_CaveClosed"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

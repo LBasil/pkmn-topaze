@@ -327,3 +327,10 @@ Le twist QUARTZ (duel de Vesper) intervient en FIN de jeu : posseder (ou non) le
 - Centre Pokémon : après BOSS_DONE, les trois alliés sont dans l'alcôve (12-14,3) avec des indices (dix pierres, "deux voyageurs près du volcan" = Gold/Silver plus tard).
 - Arène : Nox refuse tant que BOSS_DONE n'est pas set ; plus de pierre donnée ; texte de fin : direction le sud/la mer (Chrondrolia).
 - Script de génération : docs/topaze/hematown_boss.py (idempotent par marqueur).
+
+## Route vers Chrondrolia — fermeture du volcan + arrivée calme
+- Après Hematown, Nox envoie le joueur à GRENALUX puis en SURF par la Route 21 (Surf vient du Safari d'Amethiolite). La Route 19 est fermée : 8 policiers en (20..27,30) à Amethiolite (FuchsiaCity_EventScript_PoliceSouth, flag TEMP_9, jamais masqués ; texte "volcano erupted"), garde-côtes côté Route 20 (17 déclencheurs : x=119 y=3..17 + grottes SEAFOAM (60,8) et (72,14) ; ils passent avant les warps, qui restent en place ; le joueur est repoussé d'une case). BUG CORRIGÉ au passage : les 6 policiers du sud étaient en (22..27,27) et barraient aussi la porte de l'arène de Fuchsia (accessible seulement par le sud) -> arène inaccessible ; déplacés en y=30, BFS : arène accessible, Route 19 fermée, Route 15 (est) ouverte seulement après le badge.
+- Chrondrolia, arrivée calme : 4 PNJ (ouvrier de la centrale, maire, scientifique, fillette) + vieil homme réécrit : la centrale est là grâce à la chaleur du volcan SEAFOAM sous la mer (vapeur qui fait tourner les turbines) ; "tout est safe", "pas de pierre ici, le TOPAZ n'est qu'un nom" (FAUSSE assurance, twist à écrire plus tard ; l'ingénieur de la maison dit déjà que le TOPAZ "bourdonne plus fort").
+- Script : docs/topaze/chrondrolia_arrival.py.
+- NOTE POUR PLUS TARD (Basil) : Artikodin a déménagé près de l'ex-Celadopole (Bourg Quartz), Électhor est toujours dans sa centrale (Chrondrolia), Sulfura est dans le volcan (SEAFOAM).
+

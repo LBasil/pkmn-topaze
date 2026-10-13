@@ -155,3 +155,10 @@ FuchsiaCity_Text_LooseMonPsyduck::
     .string "PSYDUCK: Psy... duck?\p"
     .string "It escaped from the zoo, and does\n"
     .string "not seem to want to go back.$"
+
+FuchsiaCity_Text_PoliceVolcano::
+    .string "The sea road south is closed.\p"
+    .string "The SEAFOAM volcano erupted and\n"
+    .string "the water is molten rock.\p"
+    .string "Looking for CHRONDROLIA? Go back\n"
+    .string "to GRENALUX and SURF south.$"

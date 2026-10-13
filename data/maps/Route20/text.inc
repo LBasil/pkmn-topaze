@@ -118,3 +118,14 @@ Route20_Text_MistyTrainsHere::
     .string "are common sights in these parts.\p"
     .string "They say that SYLVESTRE of the\n"
     .string "TOURMALIA GYM trains here.$"
+
+Route20_Text_SeaClosed::
+    .string "COAST GUARD: Turn back!\p"
+    .string "The SEAFOAM volcano erupted. The\n"
+    .string "sea ahead is lava and steam.\p"
+    .string "Nobody passes. Not even POKéMON.$"
+
+Route20_Text_CaveClosed::
+    .string "A wall of heat and steam blasts\n"
+    .string "out of the cave!\p"
+    .string "The way in is far too hot.$"

@@ -60,3 +60,7 @@ Courbe de niveaux : R3 10–16 → Kay 15–20 → R4/4E 13–16 → Sylvestre 1
 
 ## Hematown — QG n°3 sur 5 (avant-avant-dernier)
 Ville occupée par ONYBRIS, tour HEMATEK = quartier général. BRICE, FLORA et N (premiers "forts" du jeu) montent affronter le MASTER, un étage chacun (3F, 6F, 9F), le joueur reste un étage derrière. Le joueur bat KRONOS au 11F ; derrière la porte, le boss écrase les trois alliés avec un seul Pokémon et part avec l'HEMATITE (volée sous nos yeux, pas de cadeau de Nox). Le boss reste invisible (ombre noire), il a regardé le joueur. Plus tard : volcan Écume = QG n°4 (Gold + Silver), dernier QG avant la Ligue (Red). Nox donne badge + CT46 après la défaite d'ONYBRIS dans la tour.
+
+## Chrondrolia (étape 7) — arrivée
+Joueur : Hematown -> Grenalux -> SURF sud (Route 21) -> Chrondrolia. Route 19 / volcan SEAFOAM fermés (éruption). Ville paisible, aucun policier ni Onybris visible ; les habitants jurent que la pierre n'est pas là. Centrale expliquée par la chaleur du volcan. Notes : Artikodin près de Bourg Quartz, Électhor dans la centrale, Sulfura dans le volcan (légendaires, plus tard).
+

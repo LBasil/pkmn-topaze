@@ -336,6 +336,22 @@ CinnabarIsland_EventScript_OldMan::
 	msgbox CinnabarIsland_Text_ScientistsExperimentInMansion, MSGBOX_NPC
 	end
 
+CinnabarIsland_EventScript_PlantWorker::
+	msgbox CinnabarIsland_Text_PlantWorker, MSGBOX_NPC
+	end
+
+CinnabarIsland_EventScript_Mayor::
+	msgbox CinnabarIsland_Text_Mayor, MSGBOX_NPC
+	end
+
+CinnabarIsland_EventScript_Scientist::
+	msgbox CinnabarIsland_Text_Scientist, MSGBOX_NPC
+	end
+
+CinnabarIsland_EventScript_LittleGirl::
+	msgbox CinnabarIsland_Text_LittleGirl, MSGBOX_NPC
+	end
+
 CinnabarIsland_EventScript_IslandSign::
 	msgbox CinnabarIsland_Text_IslandSign, MSGBOX_SIGN
 	end

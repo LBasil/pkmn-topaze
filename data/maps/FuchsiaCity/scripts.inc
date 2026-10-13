@@ -179,6 +179,19 @@ FuchsiaCity_EventScript_Police::
 	release
 	end
 
+FuchsiaCity_EventScript_PoliceSouth::
+	lock
+	faceplayer
+	goto_if_unset FLAG_AMETHYST_RAID_DONE, FuchsiaCity_EventScript_PoliceSouthRaid
+	msgbox FuchsiaCity_Text_PoliceVolcano
+	release
+	end
+
+FuchsiaCity_EventScript_PoliceSouthRaid::
+	msgbox FuchsiaCity_Text_PoliceRaid
+	release
+	end
+
 FuchsiaCity_EventScript_PoliceDone::
 	msgbox FuchsiaCity_Text_PoliceBadge
 	release

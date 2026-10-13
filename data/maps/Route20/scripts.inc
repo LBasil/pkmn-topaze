@@ -30,3 +30,29 @@ Route20_EventScript_ResetSeafoamBouldersForB4F::
 Route20_EventScript_SeafoamIslandsSign::
 	msgbox Route20_Text_SeafoamIslands, MSGBOX_SIGN
 	end
+
+Route20_EventScript_SeaClosed::
+	lockall
+	msgbox Route20_Text_SeaClosed
+	closemessage
+	applymovement LOCALID_PLAYER, Route20_Movement_StepLeft
+	waitmovement 0
+	releaseall
+	end
+
+Route20_EventScript_CaveClosed::
+	lockall
+	msgbox Route20_Text_CaveClosed
+	closemessage
+	applymovement LOCALID_PLAYER, Route20_Movement_StepDown
+	waitmovement 0
+	releaseall
+	end
+
+Route20_Movement_StepLeft::
+	walk_left
+	step_end
+
+Route20_Movement_StepDown::
+	walk_down
+	step_end
