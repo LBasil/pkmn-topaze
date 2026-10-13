@@ -1,5 +1,20 @@
 VictoryRoadLair_2F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, VictoryRoadLair_2F_OnTransition
 	.byte 0
+
+VictoryRoadLair_2F_OnTransition::
+	goto_if_unset FLAG_VR_BOSS_DONE, VictoryRoadLair_2F_EventScript_StonesStay
+	setflag FLAG_TEMP_1
+	setflag FLAG_TEMP_2
+	setflag FLAG_TEMP_3
+	setflag FLAG_TEMP_4
+	setflag FLAG_TEMP_5
+	setflag FLAG_TEMP_6
+	setflag FLAG_TEMP_7
+	end
+
+VictoryRoadLair_2F_EventScript_StonesStay::
+	end
 
 VictoryRoadLair_2F_EventScript_Selene::
 	trainerbattle_single TRAINER_RS_AROMA_LADY, VictoryRoadLair_2F_Text_SeleneIntro, VictoryRoadLair_2F_Text_SeleneDefeat

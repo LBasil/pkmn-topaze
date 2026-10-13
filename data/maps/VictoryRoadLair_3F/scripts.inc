@@ -38,6 +38,8 @@ VictoryRoadLair_3F_EventScript_FinalScene::
 	playse SE_THUNDER
 	special ShakeScreen
 	waitstate
+	playmoncry SPECIES_MEWTWO, CRY_MODE_ENCOUNTER
+	waitmoncry
 	msgbox VictoryRoadLair_3F_Text_ShapeB
 	closemessage
 	fadescreen FADE_TO_BLACK
