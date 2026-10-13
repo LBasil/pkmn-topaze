@@ -32,7 +32,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_F",
       "x": 3,
       "y": 5,
       "elevation": 3,
@@ -41,8 +41,9 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "SSAnne_CaptainsOffice_EventScript_Grunt",
-      "flag": "0"
+      "script": "SSAnne_CaptainsOffice_EventScript_Vesper",
+      "flag": "FLAG_TEMP_5",
+      "local_id": "LOCALID_SS_ANNE_VESPER"
     }
   ],
   "warp_events": [

@@ -55,14 +55,21 @@ SSAnne_CaptainsOffice_Text_HowToConquerSeasickness::
     .string "The CAPTAIN's reading this!$"
 
 
-SSAnne_CaptainsOffice_Text_GruntIntro::
-    .string "Hand over the APATITE, old man!\n"
-    .string "Oh... a kid? Get lost!$"
+SSAnne_CaptainsOffice_Text_VesperIntro::
+    .string "VESPER: The APATITE belongs to\n"
+    .string "TEAM ONYBRIS now, old man.\p"
+    .string "A child? HERA and her friend are\n"
+    .string "busy outside, so you will do.\p"
+    .string "I am VESPER, one of the boss's\n"
+    .string "chosen. Do not disappoint me!$"
 
-SSAnne_CaptainsOffice_Text_GruntDefeat::
-    .string "Impossible! TEAM ONYBRIS never\n"
-    .string "loses to kids!$"
+SSAnne_CaptainsOffice_Text_VesperDefeat::
+    .string "Impossible... I lost to a mere\n"
+    .string "child?$"
 
-SSAnne_CaptainsOffice_Text_GruntPostBattle::
-    .string "Tch! The others got away with the\n"
-    .string "chart. Our boss will hear of this!$"
+SSAnne_CaptainsOffice_Text_VesperPostBattle::
+    .string "VESPER: The boss was right to\n"
+    .string "watch you. We have the chart of\l"
+    .string "the SEVII ISLANDS anyway.\p"
+    .string "Next time, the gems are ours.\n"
+    .string "Farewell!$"

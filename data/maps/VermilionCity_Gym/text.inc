@@ -137,8 +137,9 @@ VermilionCity_Gym_Text_OnlyTrashLocksWereReset::
     .string "The electric locks were reset!$"
 
 
-VermilionCity_Gym_Text_WaitForShip::
-    .string "My APATITE is aboard the S.S. ANNE\n"
-    .string "for the gala. Thieves lurk near.\p"
-    .string "Go to the harbor and protect it.\n"
-    .string "Then come back, and we shall fight!$"
+VermilionCity_Gym_Text_GymClosed::
+    .string "Sorry, champ. The GYM is closed.\p"
+    .string "HERA and MAJOR BOB went to the\n"
+    .string "S.S. ANNE to guard her APATITE.\p"
+    .string "Thieves in black are after it!\n"
+    .string "Go to the harbor and help them!$"

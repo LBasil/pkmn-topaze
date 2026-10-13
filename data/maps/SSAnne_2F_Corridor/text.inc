@@ -33,3 +33,16 @@ SSAnne_2F_Corridor_Text_RivalPostBattle::
     .string "Hurry there, you can use CUT too\n"
     .string "if you help him. Smell ya!$"
 
+
+SSAnne_2F_Corridor_Text_Hera::
+    .string "HERA: Stay behind us, kid!\p"
+    .string "The strongest of those thieves are\n"
+    .string "ours. We keep them busy here.\p"
+    .string "Go on to the CAPTAIN's office.\n"
+    .string "Mind the one waiting inside!$"
+
+SSAnne_2F_Corridor_Text_MajorBob::
+    .string "MAJOR BOB: Hah! Not one gets past\n"
+    .string "me and HERA, trainee.\p"
+    .string "Small fry slip by, so the rest is\n"
+    .string "up to you. Move out, at the double!$"

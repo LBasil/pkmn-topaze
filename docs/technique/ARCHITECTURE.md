@@ -250,9 +250,10 @@ Carte et événements inchangés (route abandonnée, chaumière de Bill). **Nive
 Chemin du joueur après le ticket : Tourmalia → **Route 5** (pension, panneau du chemin souterrain) → **Chemin souterrain** (entrée nord, tunnel, entrée sud : cartes d'origine, textes inchangés) → **Route 6** → Apatia. Les gardes d'Hematown (thé) restent verrouillés : Hematown n'est pas sur ce chemin. Route 5 : aucun dresseur ; sauvages Miaouss/Roucool/Mystherbe/Chétiflor/Mimitoss/Férosinge niv. 20-23 (forêt de Tourmalia qui monte). Route 6 (brume, nids, Apatia) : oiseaux et terrain venteux (Piafabec, Roucool, Doduo, Miaouss, Férosinge niv. 22-26, eau douce Psykokwak 20-30) ; dresseurs niv. 22-25 : Keigo Aspicot-Chenipan-Mimitoss 22 ; Ricky Férosinge/Piafabec 24 ; Nancy Miaouss 24/Pikachu 25 ; Elijah Papilusion 25 ; Isabelle Roucoups 24/Piafabec 24/Doduo 24 ; Jeff Piafabec 24/Rattatac 25 (dit avoir vu des hommes en noir porter un sac lourd dans le tunnel à l'aube). Non testé en émulateur.
 
 ## Apatia (ex-Vermilion) et S.S. ANNE (version "on arrive a temps")
-- Le vol d'APATITE n'a PAS eu lieu : HERA a prete la gemme au capitaine pour le gala du S.S. ANNE ; Onybris vise le bateau (PNJ Apatia l'annoncent).
-- Arene gatee : tant que FLAG_GOT_HM01 n'est pas pose, HERA envoie le joueur au port (VermilionCity_Gym_EventScript_WaitForShip). Apres, post-combat : le capitaine l'a appelee.
-- Bureau du capitaine : grunt (TRAINER_SAILOR_TREVOR recycle, Ekans 24/Zubat 25, vue 2 en (3,5)) ; le capitaine avait cache la gemme dans son coffre, donne CUT et ramene lui-meme la gemme a HERA. Trevor du pont devient un marin PNJ.
+- Le vol d'APATITE n'a PAS eu lieu : HERA a prete la gemme au capitaine pour le gala ; Onybris vise le bateau.
+- Arene FERMEE avant FLAG_GOT_HM01 : HERA masquee (FLAG_TEMP_11 pose en OnTransition), le guide explique qu'elle et MAJOR BOB gardent le bateau. Apres CUT elle revient.
+- 2F du bateau : HERA (20,12) et MAJOR BOB (21,12, sprite BLACK_BELT provisoire) retiennent les plus forts d'Onybris, ce qui justifie que le joueur passe jusqu'au capitaine ; ils partent (TEMP_11/12) apres CUT.
+- Bureau du capitaine : VESPER (executive Onybris, TRAINER_SAILOR_TREVOR recycle, pic ROCKET_GRUNT_F, Arbok 26/Golbat 26/Haunter 27, vue 2 en (3,5)) ; apres defaite elle s'enfuit (removeobject, masquee ensuite par goto_if_defeated en OnTransition). Capitaine : gemme dans son coffre, donne CUT, rend la gemme a HERA. Le Trevor du pont est un marin PNJ.
 - Sortie est d'Apatia : 3 policiers (46,18..20, FLAG_TEMP_13) masques si FLAG_GOT_HM01.
-- Rival TERRY (couloir 2F) L24/22/24/26 : il suit les hommes en noir et envoie le joueur au capitaine. Les voleurs fuient en hors-bord vers les Sevii (lien avec le mot de Bill).
-- Ordre : ticket (cottage R25) -> bateau (rival, grunt, CUT) -> arene HERA -> sortie est ouverte.
+- Rival TERRY (couloir 2F) L24/22/24/26.
+- Ordre : ticket (cottage R25) -> bateau (rival, Vesper, CUT) -> arene HERA -> sortie est ouverte.

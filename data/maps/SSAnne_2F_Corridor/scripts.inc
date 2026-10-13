@@ -1,5 +1,23 @@
 SSAnne_2F_Corridor_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SSAnne_2F_Corridor_OnTransition
 	.byte 0
+
+SSAnne_2F_Corridor_OnTransition::
+	call_if_set FLAG_GOT_HM01, SSAnne_2F_Corridor_EventScript_HeroesLeave
+	end
+
+SSAnne_2F_Corridor_EventScript_HeroesLeave::
+	setflag FLAG_TEMP_11
+	setflag FLAG_TEMP_12
+	return
+
+SSAnne_2F_Corridor_EventScript_Hera::
+	msgbox SSAnne_2F_Corridor_Text_Hera, MSGBOX_NPC
+	end
+
+SSAnne_2F_Corridor_EventScript_MajorBob::
+	msgbox SSAnne_2F_Corridor_Text_MajorBob, MSGBOX_NPC
+	end
 
 SSAnne_2F_Corridor_EventScript_RivalTriggerLeft::
 	lockall

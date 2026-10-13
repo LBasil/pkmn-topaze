@@ -1,5 +1,14 @@
 SSAnne_CaptainsOffice_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SSAnne_CaptainsOffice_OnTransition
 	.byte 0
+
+SSAnne_CaptainsOffice_OnTransition::
+	goto_if_defeated TRAINER_SAILOR_TREVOR, SSAnne_CaptainsOffice_EventScript_VesperGone
+	end
+
+SSAnne_CaptainsOffice_EventScript_VesperGone::
+	setflag FLAG_TEMP_5
+	end
 
 SSAnne_CaptainsOffice_EventScript_Captain::
 	lock
@@ -46,7 +55,16 @@ SSAnne_CaptainsOffice_EventScript_Book::
 	msgbox SSAnne_CaptainsOffice_Text_HowToConquerSeasickness, MSGBOX_SIGN
 	end
 
-SSAnne_CaptainsOffice_EventScript_Grunt::
-	trainerbattle_single TRAINER_SAILOR_TREVOR, SSAnne_CaptainsOffice_Text_GruntIntro, SSAnne_CaptainsOffice_Text_GruntDefeat
-	msgbox SSAnne_CaptainsOffice_Text_GruntPostBattle, MSGBOX_AUTOCLOSE
+SSAnne_CaptainsOffice_EventScript_Vesper::
+	trainerbattle_single TRAINER_SAILOR_TREVOR, SSAnne_CaptainsOffice_Text_VesperIntro, SSAnne_CaptainsOffice_Text_VesperDefeat, SSAnne_CaptainsOffice_EventScript_VesperFlees
+	msgbox SSAnne_CaptainsOffice_Text_VesperPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+SSAnne_CaptainsOffice_EventScript_VesperFlees::
+	msgbox SSAnne_CaptainsOffice_Text_VesperPostBattle
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_SS_ANNE_VESPER
+	fadescreen FADE_FROM_BLACK
+	release
 	end
