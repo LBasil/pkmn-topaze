@@ -45,10 +45,7 @@ Route10_Text_HeidiDefeat::
     .string "After all my training!$"
 
 Route10_Text_HeidiPostBattle::
-    .string "I noticed some POKéMANIACS\n"
-    .string "prowling around.\p"
-    .string "Can you imagine? Them?\n"
-    .string "Up here in the mountains?$"
+    .string "Men in black walked into ROCK\nTUNNEL with a heavy sack.\pThey did not even use a light.\nWho does that?$"
 
 Route10_Text_TrentIntro::
     .string "Ah!\n"
@@ -69,10 +66,7 @@ Route10_Text_CarolDefeat::
     .string "I wasn't up for it.$"
 
 Route10_Text_CarolPostBattle::
-    .string "The POKéMON here in the mountains\n"
-    .string "are so chunky…\p"
-    .string "I wish there were pink POKéMON\n"
-    .string "with a floral pattern!$"
+    .string "The POKéMON here are so chunky...\pThe strange men in black were\nthin as rails. Odd, no?$"
 
 Route10_Text_RockTunnelDetourToLavender::
     .string "ROCK TUNNEL\n"

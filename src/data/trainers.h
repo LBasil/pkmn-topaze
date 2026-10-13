@@ -1850,7 +1850,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_HikerAlan),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_HikerAlan),
     },
     [TRAINER_HIKER_BRICE] = {
         .trainerClass = TRAINER_CLASS_HIKER,
@@ -1870,7 +1870,7 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_HikerClark),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_HikerClark),
     },
     [TRAINER_HIKER_TRENT] = {
         .trainerClass = TRAINER_CLASS_HIKER,

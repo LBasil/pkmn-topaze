@@ -6,10 +6,7 @@ Route9_Text_AliciaDefeat::
     .string "You deceived me…$"
 
 Route9_Text_AliciaPostBattle::
-    .string "The tunnel coming up is pitch-black\n"
-    .string "inside.\p"
-    .string "You'll need FLASH to get through\n"
-    .string "there.$"
+    .string "Men in black went by at dawn.\nThey hurried toward ROCK TUNNEL.$"
 
 Route9_Text_ChrisIntro::
     .string "Who's that walking there with those\n"
@@ -19,7 +16,7 @@ Route9_Text_ChrisDefeat::
     .string "Out like a light!$"
 
 Route9_Text_ChrisPostBattle::
-    .string "Keep walking!$"
+    .string "Their bags clinked like stones.\nI did not dare ask what was in.$"
 
 Route9_Text_DrewIntro::
     .string "I'm taking the ROCK TUNNEL to\n"
