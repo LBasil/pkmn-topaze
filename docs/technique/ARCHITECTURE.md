@@ -308,3 +308,6 @@ Chemin du joueur après le ticket : Tourmalia → **Route 5** (pension, panneau 
 
 ### Amethiolite — arene d'ACHLYS (Poison)
 Deja thematisee (textes Poison, Hematown annonce). Seul ajustement : Kayden Hypno 43 -> 39 (plafond cote dresseurs 38-39 ; Achlys 38-41, apres Selene 35-37 au Safari). Non teste en emulateur.
+
+### Decision Basil (13/10) : les pierres sur soi
+Le twist QUARTZ (duel de Vesper) intervient en FIN de jeu : posseder (ou non) le QUARTZ ne change rien avant. Pour le dessein d'Onybris, il suffit que le joueur ait les pierres sur lui : elles seront toutes reunies au final. Donc aucune consequence immediate des branches QUARTZ/AMETHIOLITE avant la fin.
