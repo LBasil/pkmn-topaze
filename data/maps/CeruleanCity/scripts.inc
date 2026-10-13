@@ -5,7 +5,32 @@ CeruleanCity_MapScripts::
 CeruleanCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_CERULEAN_CITY
 	call_if_unset FLAG_GOT_SS_TICKET, CeruleanCity_EventScript_BlockExits
+	call_if_set FLAG_BADGE02_GET, CeruleanCity_EventScript_NorthPoliceLeaves
 	end
+
+CeruleanCity_EventScript_NorthPoliceLeaves::
+	setflag FLAG_TEMP_14
+	return
+
+CeruleanCity_EventScript_NorthPolice::
+	lock
+	faceplayer
+	msgbox CeruleanCity_Text_NorthPolice
+	applymovement LOCALID_CERULEAN_POLICE_N, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
+CeruleanCity_EventScript_NorthBlocked::
+	msgbox CeruleanCity_Text_NorthPolice
+	applymovement LOCALID_PLAYER, CeruleanCity_Movement_PlayerBackOff
+	waitmovement 0
+	releaseall
+	end
+
+CeruleanCity_Movement_PlayerBackOff::
+	walk_down
+	step_end
 
 CeruleanCity_EventScript_BlockExits::
 	setobjectxyperm LOCALID_CERULEAN_POLICEMAN, 41, 19
@@ -15,12 +40,14 @@ CeruleanCity_EventScript_BlockExits::
 
 CeruleanCity_EventScript_RivalTriggerLeft::
 	lockall
+	goto_if_unset FLAG_BADGE02_GET, CeruleanCity_EventScript_NorthBlocked
 	setvar VAR_TEMP_1, 0
 	goto CeruleanCity_EventScript_Rival
 	end
 
 CeruleanCity_EventScript_RivalTriggerMid::
 	lockall
+	goto_if_unset FLAG_BADGE02_GET, CeruleanCity_EventScript_NorthBlocked
 	setvar VAR_TEMP_1, 1
 	setobjectxyperm LOCALID_CERULEAN_RIVAL, 23, 0
 	goto CeruleanCity_EventScript_Rival
@@ -28,6 +55,7 @@ CeruleanCity_EventScript_RivalTriggerMid::
 
 CeruleanCity_EventScript_RivalTriggerRight::
 	lockall
+	goto_if_unset FLAG_BADGE02_GET, CeruleanCity_EventScript_NorthBlocked
 	setvar VAR_TEMP_1, 2
 	setobjectxyperm LOCALID_CERULEAN_RIVAL, 24, 0
 	goto CeruleanCity_EventScript_Rival

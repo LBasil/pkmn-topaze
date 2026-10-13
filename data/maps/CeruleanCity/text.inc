@@ -1,11 +1,10 @@
 CeruleanCity_Text_RivalIntro::
-    .string "{RIVAL}: Yo! {PLAYER}!\p"
-    .string "You're still struggling along back\n"
-    .string "here?\p"
-    .string "I'm doing great! I caught a bunch\n"
-    .string "of strong and smart POKéMON!\p"
-    .string "Here, let me see what you caught,\n"
-    .string "{PLAYER}!$"
+    .string "{RIVAL}: Hold it, {PLAYER}!\p"
+    .string "The police closed the bridge to\n"
+    .string "anyone who isn't strong enough.\p"
+    .string "The ONYBRIS thieves went that way.\n"
+    .string "I won't have you slow me down.\p"
+    .string "Show me you can handle it!$"
 
 CeruleanCity_Text_RivalDefeat::
     .string "Hey!\n"
@@ -13,14 +12,11 @@ CeruleanCity_Text_RivalDefeat::
     .string "You won already!$"
 
 CeruleanCity_Text_RivalPostBattle::
-    .string "{RIVAL}: The thieves came through\n"
-    .string "here last night. They tore the\p"
-    .string "TOURMALINE out of the big tree's\n"
-    .string "heart. The whole town is shaking.\p"
-    .string "A villager saw them head north,\n"
-    .string "over the bridge.\p"
-    .string "I'm going after them. Don't slow\n"
-    .string "me down. Smell ya!$"
+    .string "{RIVAL}: Hmph. Not bad.\p"
+    .string "The ONYBRIS took the TOURMALINE\n"
+    .string "and crossed the bridge north.\p"
+    .string "I'm going after them. Keep up if\n"
+    .string "you can. Smell ya!$"
 
 CeruleanCity_Text_OhRightLittlePresentAsFavor::
     .string "Oh, yeah, right.\p"
@@ -173,3 +169,10 @@ CeruleanCity_Text_GymSign::
     .string "LEADER: SYLVESTRE\l"
     .string "The Warden of the Forest!$"
 
+
+CeruleanCity_Text_NorthPolice::
+    .string "POLICEMAN: Halt! The bridge is\n"
+    .string "closed. TEAM ONYBRIS went that way.\p"
+    .string "Only TRAINERS proven strong enough\n"
+    .string "may pass. Earn the GYM's BADGE\p"
+    .string "from SYLVESTRE first.$"
