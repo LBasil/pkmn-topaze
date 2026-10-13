@@ -50,3 +50,8 @@ Courbe de niveaux : R3 10–16 → Kay 15–20 → R4/4E 13–16 → Sylvestre 1
 6. **Sprites provisoires** : MAJOR BOB (ceinture noire), KRONOS/VESPER (sprites de sbire), HERA (ancien sprite de Surge), doublons Brock/Kay/Misty/Sylvestre.
 7. **Tests émulateur** : seuls Grenalux, la chaumière de la Route 25 et la scène du 7F de la Tour ont été joués ; le reste est compilé, non joué.
 8. Fin de projet : vérifier que **tous les Pokémon sont obtenables**.
+
+## 6. Suite décidée (13/10, après l'audit)
+- De Spinellia on prend la Route 8, puis le CHEMIN SOUTERRAIN (entrée est de la Route 8 → Route 7) jusqu'à BOURG QUARTZ (Céladon). Hematown reste hors chemin : le garde de la porte ouest de la Route 8 est assoiffé (thé de la vieille dame du manoir de Bourg Quartz, mécanique d'origine), la ville est « fermée par le conseil à cause des voleurs ».
+- Indices posés sur la Route 8 : les hommes en noir sont passés par le chemin souterrain vers la ville froide (Bourg Quartz).
+- Prochain chantier : Bourg Quartz = base d'Onybris (GAME CORNER façade + repaire dessous), arène de GRIM (Glace), pierre = QUARTZ.

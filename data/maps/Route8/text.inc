@@ -7,7 +7,10 @@ Route8_Text_AidanDefeat::
     .string "Meltdown!$"
 
 Route8_Text_AidanPostBattle::
-    .string "I am better at school than this!$"
+    .string "The big city west of here is\n"
+    .string "shut. Thieves on the loose!\p"
+    .string "The guard says he is thirsty.\n"
+    .string "Maybe someone has a drink for him.$"
 
 Route8_Text_StanIntro::
     .string "All right!\n"
@@ -18,7 +21,10 @@ Route8_Text_StanDefeat::
     .string "Came up short!$"
 
 Route8_Text_StanPostBattle::
-    .string "Things didn't work today.$"
+    .string "Men in black went by, heading\n"
+    .string "for the UNDERGROUND PATH.\p"
+    .string "They were walking toward the cold\n"
+    .string "city, BOURG QUARTZ.$"
 
 Route8_Text_GlennIntro::
     .string "You should be informed.\n"

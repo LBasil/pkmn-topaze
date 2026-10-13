@@ -1,7 +1,9 @@
 Route8_WestEntrance_Text_ThirstyOnGuardDuty::
-    .string "I'm on guard duty.\n"
-    .string "Gee, I'm thirsty, though!\p"
-    .string "Oh, wait there, the road's closed.$"
+    .string "I'm on guard duty. Gee, I'm so\n"
+    .string "thirsty!\p"
+    .string "HEMATOWN is shut by order of the\n"
+    .string "council. Thieves are about.\p"
+    .string "Take the UNDERGROUND PATH instead.$"
 
 Route8_WestEntrance_Text_ThatTeaLooksTasty::
     .string "Oh, that TEA…\n"
