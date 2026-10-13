@@ -147,3 +147,6 @@ Piste réaliste : faire d'abord le jeu jouable, puis ajouter un follower **limit
 
 ## Écho 7 (finale, île 7)
 - `bench/echo7_sevault_test.py <étape> <up> <left> <ESPÈCE>` : Celebi (stage 19→20) et Latias (stage 21) au sommet de Sevault Canyon ; Bill 18→19 et 20→21 via `echo56_giver_test.py`. OK en émulateur ; sprites provisoires = rocher sauf Celebi.
+
+## Chaîne des Échos (statique)
+- `docs/topaze/audit_echos.py` : vérifie que chaque étape de `VAR_ECHO_STAGE` (1-21) est posée puis lue par un script. Résultat : CHAINE OK (Bill/Celio/Lorelei alternent 0→21 sans trou). Le parcours complet en un seul run émulateur n'est pas faisable (surf entre îles) : chaque étape est testée isolément (`bench/echo*_test.py`).
