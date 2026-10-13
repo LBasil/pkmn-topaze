@@ -22,9 +22,10 @@ Text_SeismicTossTaught::
     .string "Keep it up.$"
 
 PewterCity_Museum_1F_Text_WhatsSpecialAboutMoonStone::
-    .string "MOON STONE, huh?\p"
-    .string "What's so special about it?\n"
-    .string "Looks like an ordinary rock to me.$"
+    .string "That case held the PYROPE.\n"
+    .string "Deep red, warm to the touch.\p"
+    .string "Gone in one night, and not a\n"
+    .string "single alarm went off.$"
 
 PewterCity_Museum_1F_Text_BoughtColorTVForMoonLanding::
     .string "July 20, 1969!\p"
@@ -34,8 +35,10 @@ PewterCity_Museum_1F_Text_BoughtColorTVForMoonLanding::
     .string "could watch that news.$"
 
 PewterCity_Museum_1F_Text_RunningSpaceExhibitThisMonth::
-    .string "This month, we're running a space\n"
-    .string "exhibit.$"
+    .string "The PYROPE hummed whenever a\n"
+    .string "POKéMON's AURA came near.\p"
+    .string "The thieves left only a note.\n"
+    .string "We called the police at dawn.$"
 
 PewterCity_Museum_1F_Text_AskedDaddyToCatchPikachu::
     .string "I want a PIKACHU!\n"
@@ -49,6 +52,7 @@ PewterCity_Museum_1F_Text_SpaceShuttle::
     .string "Space Shuttle$"
 
 PewterCity_Museum_1F_Text_MeteoriteThatFellOnMtMoon::
-    .string "A meteorite that fell on MT. MOON.\n"
-    .string "It is thought to be a MOON STONE.$"
+    .string "The display case is empty. A note\n"
+    .string "is left behind: POKéMON were never\p"
+    .string "meant to be owned. - TEAM ONYBRIS$"
 

@@ -70,8 +70,9 @@ PewterCity_Museum_1F_Text_DontHaveSpaceForThis::
     .string "You don't have space for this.$"
 
 PewterCity_Museum_1F_Text_WeHaveTwoFossilsOnExhibit::
-    .string "We have two fossils of rare,\n"
-    .string "prehistoric POKéMON on exhibit.$"
+    .string "The thieves walked right past our\n"
+    .string "fossils. They wanted only the\p"
+    .string "PYROPE.$"
 
 PewterCity_Museum_1F_Text_BeautifulPieceOfAmber::
     .string "There is a beautiful piece of\n"

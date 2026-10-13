@@ -43,10 +43,12 @@ PewterCity_Gym_Text_ExplainTM39::
     .string "a POKéMON that can really use it.$"
 
 PewterCity_Gym_Text_BrockPostBattle::
-    .string "Someone broke into the GRENALUX\n"
-    .string "MUSEUM and took the GRENAT gem, I\p"
-    .string "heard. TEAM ONYBRIS, they call\n"
-    .string "themselves.\p"
+    .string "Last night TEAM ONYBRIS broke into\n"
+    .string "the MUSEUM and took the PYROPE, our\p"
+    .string "town's garnet. I heard they hit\n"
+    .string "GRENALUX the same way.\p"
+    .string "They left by the east road with a\n"
+    .string "full night's head start.\p"
     .string "They say POKé BALLS are chains.\n"
     .string "Maybe so. But a chain you choose\p"
     .string "and a chain someone forces on you\n"
@@ -59,13 +61,12 @@ PewterCity_Gym_Text_DontHaveRoomForThis::
 
 PewterCity_Gym_Text_LiamIntro::
     .string "Stop right there, kid!\p"
-    .string "You are ten thousand light-years\n"
-    .string "from facing KAY!$"
+    .string "You'll melt long before you\n"
+    .string "ever reach KAY!$"
 
 PewterCity_Gym_Text_LiamDefeat::
     .string "Darn!\p"
-    .string "Light-years isn't time…\n"
-    .string "It measures distance!$"
+    .string "My fire went out too soon...$"
 
 PewterCity_Gym_Text_LiamPostBattle::
     .string "You're pretty hot. ...But not as\n"

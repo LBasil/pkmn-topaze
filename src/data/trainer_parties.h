@@ -864,14 +864,14 @@ static const struct TrainerMonNoItemCustomMoves sParty_CamperLiam[] = {
     {
         .iv = 0,
         .lvl = 11,
-        .species = SPECIES_GEODUDE,
-        .moves = {MOVE_TACKLE, MOVE_DEFENSE_CURL, MOVE_NONE, MOVE_NONE},
+        .species = SPECIES_SLUGMA,
+        .moves = {MOVE_EMBER, MOVE_SMOG, MOVE_NONE, MOVE_NONE},
     },
     {
         .iv = 0,
         .lvl = 12,
-        .species = SPECIES_SANDSHREW,
-        .moves = {MOVE_SCRATCH, MOVE_DEFENSE_CURL, MOVE_SAND_ATTACK, MOVE_NONE},
+        .species = SPECIES_NUMEL,
+        .moves = {MOVE_EMBER, MOVE_TACKLE, MOVE_GROWL, MOVE_NONE},
     },
 };
 

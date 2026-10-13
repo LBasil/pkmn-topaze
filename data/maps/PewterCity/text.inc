@@ -78,8 +78,8 @@ PewterCity_Text_TrainerTipsEarningEXP::
 
 PewterCity_Text_CallPoliceIfInfoOnThieves::
     .string "NOTICE!\p"
-    .string "Thieves have been stealing POKéMON\n"
-    .string "fossils from MT. MOON.\p"
+    .string "The PYROPE gem was stolen from the\n"
+    .string "MUSEUM by TEAM ONYBRIS.\p"
     .string "Please call the PYROPIA POLICE if\n"
     .string "you have any information.$"
 
@@ -168,9 +168,10 @@ PewterCity_Text_Scientist::
     .string "the MAYOR.$"
 
 PewterCity_Text_Guide::
-    .string "The MUSEUM has two entrances,\n"
-    .string "but only one exhibit worth seeing:\p"
-    .string "the fossils in the east wing.$"
+    .string "They got into the MUSEUM last\n"
+    .string "night, and no one heard a thing.\p"
+    .string "KAY's POKéMON were up on the\n"
+    .string "volcano. Bad timing for us.$"
 
 PewterCity_Text_Grandma::
     .string "Careful near the CAIRN.\n"
