@@ -72,3 +72,6 @@ compile_commands.json
 # Topaze: le site joueur (docs/) contient du JS versionné
 !docs/*.js
 !docs/data/*.js
+
+__pycache__/
+*.pyc
