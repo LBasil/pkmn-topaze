@@ -249,7 +249,7 @@ Carte et événements inchangés (route abandonnée, chaumière de Bill). **Nive
 ## Routes 5 et 6 + chemin souterrain : scénario (à valider par Basil)
 Chemin du joueur après le ticket : Tourmalia → **Route 5** (pension, panneau du chemin souterrain) → **Chemin souterrain** (entrée nord, tunnel, entrée sud : cartes d'origine, textes inchangés) → **Route 6** → Apatia. Les gardes d'Hematown (thé) restent verrouillés : Hematown n'est pas sur ce chemin. Route 5 : aucun dresseur ; sauvages Miaouss/Roucool/Mystherbe/Chétiflor/Mimitoss/Férosinge niv. 20-23 (forêt de Tourmalia qui monte). Route 6 (brume, nids, Apatia) : oiseaux et terrain venteux (Piafabec, Roucool, Doduo, Miaouss, Férosinge niv. 22-26, eau douce Psykokwak 20-30) ; dresseurs niv. 22-25 : Keigo Aspicot-Chenipan-Mimitoss 22 ; Ricky Férosinge/Piafabec 24 ; Nancy Miaouss 24/Pikachu 25 ; Elijah Papilusion 25 ; Isabelle Roucoups 24/Piafabec 24/Doduo 24 ; Jeff Piafabec 24/Rattatac 25 (dit avoir vu des hommes en noir porter un sac lourd dans le tunnel à l'aube). Non testé en émulateur.
 
-## Apatia (ex-Vermilion) et S.S. ANNE (version "on arrive a temps")
+## Apatia (ex-Vermilion) et S.S. ANNE (version "on arrive a temps") — VALIDE
 - Le vol d'APATITE n'a PAS eu lieu : HERA a prete la gemme au capitaine pour le gala ; Onybris vise le bateau.
 - Arene FERMEE avant FLAG_GOT_HM01 : HERA masquee (FLAG_TEMP_11 pose en OnTransition), le guide explique qu'elle et MAJOR BOB gardent le bateau. Apres CUT elle revient.
 - 2F du bateau : HERA (20,12) et MAJOR BOB (21,12, sprite BLACK_BELT provisoire) retiennent les plus forts d'Onybris, ce qui justifie que le joueur passe jusqu'au capitaine ; ils partent (TEMP_11/12) apres CUT.
@@ -257,3 +257,6 @@ Chemin du joueur après le ticket : Tourmalia → **Route 5** (pension, panneau 
 - Sortie est d'Apatia : 3 policiers (46,18..20, FLAG_TEMP_13) masques si FLAG_GOT_HM01.
 - Rival TERRY (couloir 2F) L24/22/24/26.
 - Ordre : ticket (cottage R25) -> bateau (rival, Vesper, CUT) -> arene HERA -> sortie est ouverte.
+
+## Route 11 (sentier des terriers) — passe scenario
+`docs/topaze/route11_trainers.py` (idempotent) : 10 dresseurs remontes (niv. 24-28, equipes Sol/Normal/Acier/Psy : Sabelette, Taupiqueur, Magneton, Alakazam-line, Onix...), 4 post-textes avec indice Onybris (hommes en noir passes par les terriers, sac lourd) et rappel du detour par le Tunnel Roche (Ronflex sur la Route 12). Sauvages R11 niv. 22-27 (Sabelette, Rapasdepic, Taupiqueur, Soporifik, Triopikeur rare) ; Grotte des Taupiqueurs B1F niv. 22-31. Les matchs retour (ids *_2..) ne sont PAS remontes (passe globale a faire). Carte et poste de garde inchanges (valides).

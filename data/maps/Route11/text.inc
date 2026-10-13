@@ -28,8 +28,7 @@ Route11_Text_EddieDefeat::
     .string "That's not right!$"
 
 Route11_Text_EddiePostBattle::
-    .string "I did my best.\n"
-    .string "I have no regrets.$"
+    .string "I dig burrows with my POKéMON.\nMen in black asked me for the\pquickest way underground. Weird.$"
 
 Route11_Text_BraxtonIntro::
     .string "Careful!\n"
@@ -70,7 +69,7 @@ Route11_Text_DarianDefeat::
     .string "I saw this coming…$"
 
 Route11_Text_DarianPostBattle::
-    .string "I was unlucky, as always.$"
+    .string "The men in black pushed past me.\nThey carried a heavy sack.$"
 
 Route11_Text_YasuIntro::
     .string "I'm the best in my class.\n"
@@ -81,10 +80,7 @@ Route11_Text_YasuDefeat::
     .string "My POKéMON need to be stronger!$"
 
 Route11_Text_YasuPostBattle::
-    .string "There's a fat POKéMON that comes\n"
-    .string "down from the mountains.\p"
-    .string "I bet it'd be strong if you can\n"
-    .string "catch it.$"
+    .string "The huge sleeper on ROUTE 12 will\nnot budge. Take the long way\pround, through ROCK TUNNEL.$"
 
 Route11_Text_BernieIntro::
     .string "Watch out for live wires!$"
@@ -105,8 +101,7 @@ Route11_Text_DaveDefeat::
     .string "Thank you, and good-bye!$"
 
 Route11_Text_DavePostBattle::
-    .string "Tch…\n"
-    .string "I better go find stronger ones!$"
+    .string "Tch...\nMen in black dug through the\pDIGLETT burrows and scared them.\nThe tunnel is a mess.$"
 
 Route11_Text_DiglettsCave::
     .string "DIGLETT'S CAVE$"
