@@ -50,7 +50,7 @@
 #define FLAG_AMETHYST_STONE_GIVEN 0x024
 #define FLAG_PIER_LORE_DONE      0x025
 #define FLAG_PIER_KRONOS_DONE    0x026
-#define FLAG_0x027               0x027
+#define FLAG_HEMATITE_GIVEN      0x027
 
 // Hide/show flags
 #define FLAG_HIDE_BULBASAUR_BALL                           0x028

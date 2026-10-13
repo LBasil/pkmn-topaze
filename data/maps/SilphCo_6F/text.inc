@@ -30,11 +30,11 @@ SilphCo_6F_Text_RocketsRanAwayBecauseOfYou::
     .string "because of you!$"
 
 SilphCo_6F_Text_TargetedSilphForOurMonProducts::
-    .string "They must have targeted SILPH for\n"
+    .string "They must have targeted HEMATEK for\n"
     .string "our POKéMON products.$"
 
 SilphCo_6F_Text_ComeWorkForSilphWhenYoureOlder::
-    .string "Come work for SILPH when you\n"
+    .string "Come work for HEMATEK when you\n"
     .string "get older.$"
 
 SilphCo_6F_Text_Grunt1Intro::
@@ -73,6 +73,6 @@ SilphCo_6F_Text_Grunt2PostBattle::
     .string "betray us bad guys!$"
 
 SilphCo_6F_Text_FloorSign::
-    .string "SILPH CO. HEAD OFFICE\n"
+    .string "HEMATEK CO. HEAD OFFICE\n"
     .string "6F$"
 

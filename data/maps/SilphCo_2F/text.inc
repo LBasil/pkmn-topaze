@@ -1,13 +1,13 @@
 SilphCo_2F_Text_ConnorIntro::
     .string "Help!\n"
-    .string "I'm a SILPH employee.$"
+    .string "I'm a HEMATEK employee.$"
 
 SilphCo_2F_Text_ConnorDefeat::
     .string "How did you know\n"
     .string "I was a ONYBRIS?$"
 
 SilphCo_2F_Text_ConnorPostBattle::
-    .string "I work for both SILPH and TEAM\n"
+    .string "I work for both HEMATEK and TEAM\n"
     .string "ONYBRIS.$"
 
 SilphCo_2F_Text_JerryIntro::
@@ -41,7 +41,7 @@ SilphCo_2F_Text_Grunt2Defeat::
     .string "I goofed!$"
 
 SilphCo_2F_Text_Grunt2PostBattle::
-    .string "SILPH CO. will be associated with\n"
+    .string "HEMATEK CO. will be associated with\n"
     .string "TEAM ONYBRIS!$"
 
 Text_ThunderWaveTeach::
@@ -69,6 +69,6 @@ Text_ThunderWaveTaught::
     .string "won't work on some POKéMON.$"
 
 SilphCo_2F_Text_FloorSign::
-    .string "SILPH CO. HEAD OFFICE\n"
+    .string "HEMATEK CO. HEAD OFFICE\n"
     .string "2F$"
 

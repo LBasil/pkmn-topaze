@@ -4310,26 +4310,10 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BossGiovanni[] = {
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_BossGiovanni2[] = {
-    {
-        .iv = 250,
-        .lvl = 41,
-        .species = SPECIES_NIDORINO,
-    },
-    {
-        .iv = 250,
-        .lvl = 39,
-        .species = SPECIES_KANGASKHAN,
-    },
-    {
-        .iv = 250,
-        .lvl = 41,
-        .species = SPECIES_RHYHORN,
-    },
-    {
-        .iv = 250,
-        .lvl = 46,
-        .species = SPECIES_NIDOQUEEN,
-    },
+    { .iv = 100, .lvl = 40, .species = SPECIES_WEEZING },
+    { .iv = 100, .lvl = 41, .species = SPECIES_ARBOK },
+    { .iv = 100, .lvl = 42, .species = SPECIES_ALAKAZAM },
+    { .iv = 100, .lvl = 43, .species = SPECIES_NIDOKING },
 };
 
 static const struct TrainerMonItemCustomMoves sParty_LeaderGiovanni[] = {

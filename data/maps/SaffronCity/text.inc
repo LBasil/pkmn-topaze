@@ -22,7 +22,7 @@ SaffronCity_Text_WatchWhereYoureWalking::
     .string "Watch where you're walking!$"
 
 SaffronCity_Text_WeCanExploitMonsAroundWorld::
-    .string "With SILPH under control, we can\n"
+    .string "With HEMATEK under control, we can\n"
     .string "exploit POKéMON around the world!\p"
     .string "We'll get stinking rich, yeahah!$"
 
@@ -42,7 +42,7 @@ SaffronCity_Text_PeopleComingBackToSaffron::
 
 SaffronCity_Text_FlewHereOnPidgeot::
     .string "I flew here on my PIDGEOT when\n"
-    .string "I read about SILPH.\p"
+    .string "I read about HEMATEK.\p"
     .string "It's already over?\n"
     .string "I missed the media action…$"
 
@@ -51,7 +51,7 @@ SaffronCity_Text_Pidgeot::
 
 SaffronCity_Text_SawRocketBossEscaping::
     .string "I saw the ONYBRIS BOSS escaping\n"
-    .string "SILPH's building.$"
+    .string "HEMATEK's building.$"
 
 SaffronCity_Text_ImASecurityGuard::
     .string "I'm a security guard.\p"
@@ -90,13 +90,13 @@ SaffronCity_Text_GreatBallImprovedCatchRate::
     .string "POKéMON.$"
 
 SaffronCity_Text_SilphCoSign::
-    .string "SILPH CO. OFFICE BUILDING$"
+    .string "HEMATEK CO. OFFICE BUILDING$"
 
 SaffronCity_Text_MrPsychicsHouse::
     .string "MR. PSYCHIC'S HOUSE$"
 
 SaffronCity_Text_SilphsLatestProduct::
-    .string "SILPH's latest product!\n"
+    .string "HEMATEK's latest product!\n"
     .string "Release to be determined…$"
 
 SaffronCity_Text_TrainerFanClubSign::

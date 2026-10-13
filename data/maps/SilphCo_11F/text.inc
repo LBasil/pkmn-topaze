@@ -1,6 +1,6 @@
 SilphCo_11F_Text_ThanksForSavingMeDearBoy::
     .string "PRESIDENT: Oh, dear boy!\n"
-    .string "Thank you for saving SILPH.\p"
+    .string "Thank you for saving HEMATEK.\p"
     .string "I will never forget you saved us in\n"
     .string "our moment of peril.\p"
     .string "I have to thank you in some way.\p"
@@ -10,7 +10,7 @@ SilphCo_11F_Text_ThanksForSavingMeDearBoy::
 
 SilphCo_11F_Text_ThanksForSavingMeDearGirl::
     .string "PRESIDENT: Oh, dear girl!\n"
-    .string "Thank you for saving SILPH.\p"
+    .string "Thank you for saving HEMATEK.\p"
     .string "I will never forget you saved us in\n"
     .string "our moment of peril.\p"
     .string "I have to thank you in some way.\p"
@@ -42,25 +42,25 @@ SilphCo_11F_Text_ThanksForRescuingUs::
     .string "are indebted to you.$"
 
 SilphCo_11F_Text_GiovanniIntro::
-    .string "Ah, {PLAYER}!\n"
-    .string "So we meet again!\p"
-    .string "The PRESIDENT and I are discussing\n"
-    .string "a vital business proposition.\p"
-    .string "Keep your nose out of grown-up\n"
-    .string "matters…\p"
-    .string "Or, experience a world of pain!$"
+    .string "KRONOS: You again, child.\n"
+    .string "I warned you once.\p"
+    .string "The PRESIDENT and I are talking\n"
+    .string "business. The HEMATITE is not in\p"
+    .string "the vault. The old fool hid it.\p"
+    .string "Stay out of this, or learn what\n"
+    .string "ONYBRIS does to meddlers!$"
 
 SilphCo_11F_Text_GiovanniDefeat::
-    .string "Arrgh!!\n"
-    .string "I lost again!?$"
+    .string "Hmph…\n"
+    .string "You are stronger than you look.$"
 
 SilphCo_11F_Text_GiovanniPostBattle::
-    .string "Blast it all!\n"
-    .string "You ruined our plans for SILPH!\p"
-    .string "But, TEAM ONYBRIS will never fall!\p"
-    .string "{PLAYER}! Never forget that all\n"
-    .string "POKéMON exist for TEAM ONYBRIS!\p"
-    .string "I must go, but I shall return!$"
+    .string "KRONOS: No matter.\p"
+    .string "The HEMATITE is still in this\n"
+    .string "town. I will find it.\p"
+    .string "It is no defeat if the stone ends\n"
+    .string "up in my hands anyway.\p"
+    .string "Remember my name, {PLAYER}.$"
 
 SilphCo_11F_Text_Grunt2Intro::
     .string "Stop right there!\n"
@@ -89,6 +89,6 @@ SilphCo_11F_Text_MonitorHasMonsOnIt::
     .string "The monitor has POKéMON on it!$"
 
 SilphCo_11F_Text_FloorSign::
-    .string "SILPH CO. HEAD OFFICE\n"
+    .string "HEMATEK CO. HEAD OFFICE\n"
     .string "11F$"
 

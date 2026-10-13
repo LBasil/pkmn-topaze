@@ -156,3 +156,20 @@ SaffronCity_Gym_Text_GymStatuePlayerWon::
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 
+
+SaffronCity_Gym_Text_SabrinaBusy::
+    .string "NOX: Not now, child.\p"
+    .string "The tower of HEMATEK is full of\n"
+    .string "thieves. Clear it first.\p"
+    .string "Then come back and we will talk.$"
+
+SaffronCity_Gym_Text_StoneGift::
+    .string "NOX: One more thing.\p"
+    .string "The HEMATITE was never in the\n"
+    .string "vault. I kept it in the dark,\p"
+    .string "where nobody looks.\p"
+    .string "Take it before KRONOS learns\n"
+    .string "where it really is.$"
+
+SaffronCity_Gym_Text_ObtainedHematite::
+    .string "{PLAYER} obtained the HEMATITE!$"

@@ -318,3 +318,8 @@ Le twist QUARTZ (duel de Vesper) intervient en FIN de jeu : posseder (ou non) le
 - Scene KRONOS (declencheurs (8..20,82) de la Route 12, `FLAG_PIER_KRONOS_DONE` = 0x026) : apres le lore, en remontant le ponton, KRONOS apparait (addobject, FLAG_TEMP_5 cache en OnTransition), dit "dix pierres, dix portes ; quand la derniere s'ouvre le monde est libre", encourage le joueur a continuer ("tu fais mon travail mieux que mes admins"), annonce que la prochaine pierre dort a HEMATOWN et le defie d'y arriver avant lui, puis repart. Pas de combat.
 - Ronflex (Route 12 mi-ponton) : se reveille a la Pokeflute (butin de Vesper) ; le joueur arrive par le sud (Route 13) et atteint le pecheur AVANT le Ronflex.
 - Prochain : habiller les Routes 15/14/13 (indices, Onybris), puis HEMATOWN (the de Bourg Quartz). Non teste en emulateur.
+
+## Hematown (ex-Saffron) — étape 1
+- Silph Co. renommé HEMATEK (textes Saffron/SilphCo_*).
+- SilphCo_11F : le "Giovanni" est KRONOS (admin), vrai combat TRAINER_BOSS_GIOVANNI_2 (Weezing 40, Arbok 41, Alakazam 42, Nidoking 43). Il annonce que l'HEMATITE n'est pas au coffre, puis part (FLAG_HIDE_SILPH_ROCKETS via removeobject).
+- SaffronCity_Gym : Nox refuse de combattre tant que FLAG_HIDE_SILPH_ROCKETS n'est pas set (SabrinaBusy). Après badge + TM46, StoneGift donne l'HEMATITE (FLAG_HEMATITE_GIVEN 0x027, pierre = flag seul).
