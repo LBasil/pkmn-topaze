@@ -1,0 +1,10 @@
+import sys,os; sys.path.insert(0,'/tmp/gx')
+from tz import *
+os.chdir('/home/claude/pkmn-topaze')
+t=T('VermilionCity',12,18,nocombat=True,pre=['FLAG_MEW_FLED'])
+t.e.run(60,0); t.sync(); t.shot('A_0')
+print('walk',t.walk_to((17,18)),t.where())
+t.face('DOWN'); t.press('A',4,30); t.shot('A_1')
+n=t.scene(maxn=200); print('scene',n,t.where(),'fought',t.getflag('FLAG_FOUGHT_MEW_TRUCK')); t.shot('A_2')
+t2=T('VermilionCity',12,18,nocombat=True)
+t2.e.run(60,0); t2.shot('A_nomew')

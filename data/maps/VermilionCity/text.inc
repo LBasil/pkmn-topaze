@@ -139,3 +139,8 @@ VermilionCity_Text_Route2AideHasPackageForYou::
     .string "If you're in the ROUTE 2 area,\n"
     .string "please look for him.$"
 
+VermilionCity_Text_TruckDriver::
+    .string "DRIVER: Don't mind the truck!\n"
+    .string "I just park here.\p"
+    .string "...Why does it keep shaking?\n"
+    .string "Is something under there?$"

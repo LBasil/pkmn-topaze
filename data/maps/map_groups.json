@@ -316,7 +316,10 @@
     "PalletTown_RivalsHouse",
     "PalletTown_ProfessorOaksLab",
     "PalletTown_School",
-    "PalletTown_Ranch"
+    "PalletTown_Ranch",
+    "GrenaluxMine_1F",
+    "GrenaluxMine_2F",
+    "GrenaluxMine_3F"
   ],
   "gMapGroup_IndoorViridian": [
     "ViridianCity_House",

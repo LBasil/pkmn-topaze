@@ -24,6 +24,51 @@ VermilionCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_VERMILION_CITY
 	call_if_set FLAG_TALKED_TO_OAKS_AIDE_IN_VERMILION, VermilionCity_EventScript_HideOaksAide
 	call_if_set FLAG_GOT_HM01, VermilionCity_EventScript_EastPoliceLeave
+	setflag FLAG_HIDE_MEW_TRUCK
+	call_if_set FLAG_MEW_FLED, VermilionCity_EventScript_MaybeShowMew
+	end
+
+@ Topaze: MEW hides under the delivery truck once it fled the Grenalux mine
+VermilionCity_EventScript_MaybeShowMew::
+	goto_if_set FLAG_FOUGHT_MEW_TRUCK, EventScript_Return
+	clearflag FLAG_HIDE_MEW_TRUCK
+	return
+
+VermilionCity_EventScript_TruckDriver::
+	msgbox VermilionCity_Text_TruckDriver, MSGBOX_NPC
+	end
+
+VermilionCity_EventScript_MewTruck::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	setwildbattle SPECIES_MEW, 50
+	waitse
+	playmoncry SPECIES_MEW, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, VermilionCity_EventScript_DefeatedMew
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, VermilionCity_EventScript_RanFromMew
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, VermilionCity_EventScript_RanFromMew
+	setflag FLAG_FOUGHT_MEW_TRUCK
+	setflag FLAG_HIDE_MEW_TRUCK
+	release
+	end
+
+VermilionCity_EventScript_DefeatedMew::
+	setflag FLAG_FOUGHT_MEW_TRUCK
+	goto EventScript_RemoveStaticMon
+	end
+
+VermilionCity_EventScript_RanFromMew::
+	setvar VAR_0x8004, SPECIES_MEW
+	goto EventScript_MonFlewAway
 	end
 
 VermilionCity_EventScript_EastPoliceLeave::

@@ -353,3 +353,6 @@ Le twist QUARTZ (duel de Vesper) intervient en FIN de jeu : posseder (ou non) le
 | Salle du Champion : OAK, puis irruption du boss (objet 2 = sprite provisoire), reprise possible après défaite | `docs/topaze/league_champ.py` → `PokemonLeague_ChampionsRoom` ; warps Lorelei(6,2)→Champion, Champion(6,19)→Lorelei |
 | Salles Bruno/Agatha/Lance | conservées dans le code mais hors trajet |
 Les trois scripts `league_*.py` ne sont pas rejouables (ils remplacent des blocs déjà transformés) ; ils servent de trace.
+
+## Mine de Grenalux (post-game)
+Générateur : `docs/topaze/mine_build.py` (non rejouable). Cartes `GrenaluxMine_1F/2F/3F` (layouts copiés de MtMoon 1F/B1F/B2F, objets retirés) dans `gMapGroup_IndoorPallet`. Entrée : warp 9 + coord event `PalletTown_EventScript_MineGate` en (39,24) (case rendue franchissable dans `data/layouts/PalletTown/map.bin`). Scène : `GrenaluxMine_3F_EventScript_Truth` (déclencheur (14,11)). Flags : `FLAG_MEW_FLED` 0x0BA, `FLAG_FOUGHT_MEW_TRUCK` 0x0BB, `FLAG_MINE_ITEM_1/2` 0x0BC/0x0BD, `FLAG_HIDE_MINE_MEW` 0x0BE, `FLAG_HIDE_MEW_TRUCK` 0x0BF. Apatia : `VermilionCity_EventScript_MewTruck` / `TruckDriver`. Banc de test : `bench/mine_*.py`, `mew_truck_test.py`.

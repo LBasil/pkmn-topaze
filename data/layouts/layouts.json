@@ -4458,6 +4458,42 @@
       "secondary_tileset": "gTileset_PokemonLeagueLair",
       "border_filepath": "data/layouts/VictoryRoadLair_3F/border.bin",
       "blockdata_filepath": "data/layouts/VictoryRoadLair_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRENALUX_MINE_1F",
+      "name": "GrenaluxMine_1F_Layout",
+      "width": 48,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/GrenaluxMine_1F/border.bin",
+      "blockdata_filepath": "data/layouts/GrenaluxMine_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRENALUX_MINE_2F",
+      "name": "GrenaluxMine_2F_Layout",
+      "width": 49,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/GrenaluxMine_2F/border.bin",
+      "blockdata_filepath": "data/layouts/GrenaluxMine_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_GRENALUX_MINE_3F",
+      "name": "GrenaluxMine_3F_Layout",
+      "width": 48,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/GrenaluxMine_3F/border.bin",
+      "blockdata_filepath": "data/layouts/GrenaluxMine_3F/map.bin"
     }
   ]
 }

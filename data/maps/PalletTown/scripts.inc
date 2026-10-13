@@ -701,9 +701,35 @@ PalletTown_EventScript_SceneryGuardian::
 	end
 
 PalletTown_EventScript_SceneryMine::
+	goto_if_set FLAG_TOPAZE_POSTGAME, PalletTown_EventScript_SceneryMineOpen
 	msgbox PalletTown_Text_SceneryMine, MSGBOX_SIGN
+	end
+
+PalletTown_EventScript_SceneryMineOpen::
+	msgbox PalletTown_Text_SceneryMineOpen, MSGBOX_SIGN
+	end
+
+@ Topaze: the mine opens in the postgame (ending 1)
+PalletTown_EventScript_MineGate::
+	lockall
+	goto_if_set FLAG_TOPAZE_POSTGAME, PalletTown_EventScript_MineEnter
+	msgbox PalletTown_Text_SceneryMine
+	closemessage
+	applymovement LOCALID_PLAYER, PalletTown_Movement_MineBack
+	waitmovement 0
+	releaseall
+	end
+
+PalletTown_EventScript_MineEnter::
+	warp MAP_GRENALUX_MINE_1F, 18, 37
+	waitstate
+	releaseall
 	end
 
 PalletTown_EventScript_SceneryBerries::
 	msgbox PalletTown_Text_SceneryBerries, MSGBOX_SIGN
 	end
+
+PalletTown_Movement_MineBack::
+	walk_down
+	step_end

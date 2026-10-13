@@ -250,6 +250,13 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE21_NORTH",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 39,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_GRENALUX_MINE_1F",
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [
@@ -279,6 +286,15 @@
       "var": "VAR_TEMP_2",
       "var_value": "1",
       "script": "PalletTown_EventScript_SignLadyTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 39,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "PalletTown_EventScript_MineGate"
     }
   ],
   "bg_events": [

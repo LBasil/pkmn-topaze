@@ -304,3 +304,7 @@ PalletTown_Text_RanchMom2::
 PalletTown_Text_OnybrisGruntVictory::
     .string "Hah! Too easy.\n"
     .string "But we don't need you anyway.$"
+
+PalletTown_Text_SceneryMineOpen::
+    .string "The old mine gate stands open.\n"
+    .string "The garnet hums inside.$"
