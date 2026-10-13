@@ -165,24 +165,10 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 29,
-      "y": 5,
-      "elevation": 3,
-      "dest_map": "MAP_SILPH_CO_2F",
-      "dest_warp_id": "4"
-    },
-    {
       "x": 26,
       "y": 2,
       "elevation": 3,
       "dest_map": "MAP_SILPH_CO_5F",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 2,
-      "y": 6,
-      "elevation": 3,
-      "dest_map": "MAP_SILPH_CO_4F",
       "dest_warp_id": "1"
     },
     {
