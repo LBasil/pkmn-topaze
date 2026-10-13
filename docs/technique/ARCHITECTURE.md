@@ -340,3 +340,6 @@ Le twist QUARTZ (duel de Vesper) intervient en FIN de jeu : posseder (ou non) le
 - Après DONE : Route 20 OnTransition met VAR_TEMP_1=1 (désactive les 17 déclencheurs de garde-côtes, les warps vers Route 19 et SEAFOAM fonctionnent) ; policiers du sud d'Amethiolite masqués (TEMP_9) ; PNJ de la ville ont un second texte.
 - Script : docs/topaze/chrondrolia_raid.py. Non joué en émulateur.
 
+
+## Repaire sous la Route Victoire (portes ouvertes)
+`docs/topaze/lair_layouts.py` copie les salles de la Ligue (Lance, Champion, Lorelei) puis écrit dans `map.bin` l'état **ouvert** de la porte 1F (6,4)-(6,5) et de l'entrée 3F (5..7, 11..12) : les scripts d'ouverture/fermeture de la Ligue n'existent pas ici. Vesper 1F en (6,7) vue 4 ; Takashi (Fonderie) vue 1 : voir TEST_PASSE_13_10.md (règle : pas de dresseur qui bouche un couloir d'1 case).

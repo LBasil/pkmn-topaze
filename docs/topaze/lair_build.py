@@ -64,7 +64,7 @@ GM,GF='OBJ_EVENT_GFX_ROCKET_M','OBJ_EVENT_GFX_ROCKET_F'
 P='VictoryRoadLair_1F'
 objs1=[trainer(GM,4,19,'RIGHT',4,P+'_EventScript_Grunt1'),trainer(GF,9,20,'UP',4,P+'_EventScript_Grunt2'),trainer(GM,13,18,'LEFT',4,P+'_EventScript_Grunt3'),
        trainer(GM,18,17,'DOWN',3,P+'_EventScript_Grunt4'),trainer(GF,22,11,'LEFT',4,P+'_EventScript_Grunt5'),
-       trainer(GF,6,9,'DOWN',5,P+'_EventScript_Vesper'),
+       trainer(GF,6,7,'DOWN',4,P+'_EventScript_Vesper'),
        npc('OBJ_EVENT_GFX_ITEM_BALL',25,10,P+'_EventScript_ItemMaxRevive','FLAG_LAIR_ITEM_1'),
        npc('OBJ_EVENT_GFX_ITEM_BALL',2,7,P+'_EventScript_ItemRareCandy','FLAG_LAIR_ITEM_2')]
 w1=[(14,21,'MAP_VICTORY_ROAD_2F',9),(15,21,'MAP_VICTORY_ROAD_2F',9),(6,5,M2.join(['MAP_','']).replace('MAP_VictoryRoadLair_2F','MAP_VICTORY_ROAD_LAIR_2F'),0)]
