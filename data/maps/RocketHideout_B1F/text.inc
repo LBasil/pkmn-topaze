@@ -11,7 +11,7 @@ RocketHideout_B1F_Text_Grunt1PostBattle::
     .string "just took it over. Respect it!$"
 
 RocketHideout_B1F_Text_Grunt2Intro::
-    .string "You broke into TEAM ONYBRIS's\n"
+    .string "You broke into TEAM ZIRCON's\n"
     .string "new base? What nerve!$"
 
 RocketHideout_B1F_Text_Grunt2Defeat::

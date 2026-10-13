@@ -30,7 +30,7 @@ ViridianCity_Text_ExplainCaterpieWeedle::
 ViridianCity_Text_GrandpaHasntHadCoffeeYet::
     .string "Oh, Grandpa!\n"
     .string "Don't be so mean!\p"
-    .string "I'm so sorry. Since the TEAM ONYBRIS\n"
+    .string "I'm so sorry. Since the TEAM ZIRCON\n"
     .string "news, he doesn't trust strangers.$"
 
 ViridianCity_Text_GoShoppingInPewterOccasionally::

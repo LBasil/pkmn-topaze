@@ -2,7 +2,7 @@
 *3 badges, 5 événements de pierre. Dernière vérification : barrages par BFS, courbe de niveaux, mots d'origine résiduels, texte par zone.*
 
 ## 1. Le pitch (rappel)
-Il y a 10 ans une Aura a muté les types. Aujourd'hui la TEAM ONYBRIS vole une pierre par ville et veut « libérer » les Pokémon des humains. Le joueur (et son PENDENTIF, qui est le vrai GRENAT) suit leurs traces ; Onybris a presque toujours une longueur d'avance, mais monte en puissance : sbires → cadre (VESPER) → admin (KRONOS) → le boss, jamais vu.
+Il y a 10 ans une Aura a muté les types. Aujourd'hui la TEAM ZIRCON vole une pierre par ville et veut « libérer » les Pokémon des humains. Le joueur (et son PENDENTIF, qui est le vrai GRENAT) suit leurs traces ; Zircon a presque toujours une longueur d'avance, mais monte en puissance : sbires → cadre (VESPER) → admin (KRONOS) → le boss, jamais vu.
 
 ## 2. Les 5 événements de pierre
 | # | Ville | Pierre | Ce qui se passe | Rôle du joueur |
@@ -10,9 +10,9 @@ Il y a 10 ans une Aura a muté les types. Aujourd'hui la TEAM ONYBRIS vole une p
 | 1 | Grenalux | GRENAT | attaque EN DIRECT (ranch, école, labo) | combat un sbire, reçoit le PENDENTIF |
 | 2 | Pyropia | PYROPE | volé avant l'arrivée (musée) ; BROCK conservateur | enquête |
 | 3 | Tourmalia | TOURMALINE | volée avant l'arrivée ; ville bouclée par la police | badge 2, le rival remplace la police |
-| 4 | Apatia | APATITE | **sauvée** : prêtée au capitaine du S.S. ANNE, le joueur arrive à temps (VESPER battue/fuit) | première victoire sur Onybris |
+| 4 | Apatia | APATITE | **sauvée** : prêtée au capitaine du S.S. ANNE, le joueur arrive à temps (VESPER battue/fuit) | première victoire sur Zircon |
 | 5 | Spinellia | SPINELLE | tentative RATÉE (les morts se lèvent, Ossatueur au 6F), puis l'admin KRONOS arrive après que le joueur a apaisé l'esprit, écrase le joueur SANS combat et part avec | échec scénarisé |
-Cohérence : les 2 échecs d'Onybris (Apatia + tentative de Spinellia) justifient la phrase de FUJI « ils sont devenus plus agressifs » et l'arrivée de l'admin.
+Cohérence : les 2 échecs d'Zircon (Apatia + tentative de Spinellia) justifient la phrase de FUJI « ils sont devenus plus agressifs » et l'arrivée de l'admin.
 
 ## 3. Parcours dans l'ordre (état du monde, verrous, personnages, niveaux)
 | Étape | Verrou / barrage | Personnages | Dresseurs (niv. max) | Sauvages | Statut |
@@ -30,8 +30,8 @@ Cohérence : les 2 échecs d'Onybris (Apatia + tentative de Spinellia) justifien
 | Route 5 / chemin souterrain / Route 6 | passage | — | 0 / 6 (25) | 20–26 | validé |
 | Apatia | arène FERMÉE et sortie est bloquée (5 policiers) jusqu'à la CS COUPE ; port = ticket | HERA (Dragon/Vol 25–31), MAJOR BOB | — | — | validé |
 | S.S. ANNE | — | rival TERRY (24–26), VESPER (cadre), capitaine (CUT), HERA + MAJOR BOB (2F) | marins d'origine (non revus) | — | validé |
-| Route 11 | joignable seulement après COUPE ; Ronflex sur la Route 12 | indices Onybris | 10 (28) | 22–27 | à valider ; grotte des Taupiqueurs mise de côté |
-| Route 9 / 10 | arbre à couper à l'est de Tourmalia | indices Onybris | 9 (29) / 6 (29) | 25–30 | validé ; Tunnel Roche + centrale : intérieurs plus tard |
+| Route 11 | joignable seulement après COUPE ; Ronflex sur la Route 12 | indices Zircon | 10 (28) | 22–27 | à valider ; grotte des Taupiqueurs mise de côté |
+| Route 9 / 10 | arbre à couper à l'est de Tourmalia | indices Zircon | 9 (29) / 6 (29) | 25–30 | validé ; Tunnel Roche + centrale : intérieurs plus tard |
 | Spinellia | ouest + sud fermés (police) jusqu'à la scène de FUJI/KRONOS ; retour nord libre | FUJI, KRONOS | Tour : canaux d'origine | — | à valider |
 
 Courbe de niveaux : R3 10–16 → Kay 15–20 → R4/4E 13–16 → Sylvestre 19–23 → R24/25 19–24 → R5/6 20–26 → Hera 25–31 → R9/10/11 25–30. Cohérente.
@@ -39,7 +39,7 @@ Courbe de niveaux : R3 10–16 → Kay 15–20 → R4/4E 13–16 → Sylvestre 1
 ## 4. Vérifications faites
 - **Barrages (BFS sur la collision + objets)** : Apatia est, Spinellia ouest et sud, Tourmalia sud/est/ouest. Deux fuites trouvées et CORRIGÉES : Apatia est (cases (47,17) et (47,21) contournaient les 3 policiers → 5 policiers) et Spinellia sud (cases (18,28) et (21,28) → 4 policiers). Tourmalia nord est fermé par déclencheurs de coordonnées (pas par collision).
 - **Mots d'origine résiduels** (ROCKET, Bourg Palette, Jadielle, Argenta, Azuria, Carmin, Lavanville, SILPH) : tous nettoyés sur le parcours ; le SILPH SCOPE n'est plus requis (fantôme du 6F et sauvages de la Tour toujours visibles) et ses mentions sont retirées.
-- **Classe d'entraîneur** TEAM_ROCKET s'affiche « TEAM ONYBRIS » ; le nom du rival est remplacé par celui choisi par le joueur.
+- **Classe d'entraîneur** TEAM_ROCKET s'affiche « TEAM ZIRCON » ; le nom du rival est remplacé par celui choisi par le joueur.
 
 ## 5. Points ouverts (par priorité)
 1. ~~Routes 7/8/12~~ FAIT : R8 sauvages 24–29, R7 25–30, R12 25–31, deux dresseurs bas remontés.
@@ -54,15 +54,15 @@ Courbe de niveaux : R3 10–16 → Kay 15–20 → R4/4E 13–16 → Sylvestre 1
 ## 6. Suite décidée (13/10, après l'audit)
 - De Spinellia on prend la Route 8, puis le CHEMIN SOUTERRAIN (entrée est de la Route 8 → Route 7) jusqu'à BOURG QUARTZ (Céladon). Hematown reste hors chemin : le garde de la porte ouest de la Route 8 est assoiffé (thé de la vieille dame du manoir de Bourg Quartz, mécanique d'origine), la ville est « fermée par le conseil à cause des voleurs ».
 - Indices posés sur la Route 8 : les hommes en noir sont passés par le chemin souterrain vers la ville froide (Bourg Quartz).
-- Bourg Quartz : le repaire sous le GAME CORNER est l'ANCIEN REPAIRE ROCKET repris par Onybris (histoire racontée par les PNJ). Boss du repaire = VESPER (B4F). La sortie ouest (Route 16) est bloquée par la police tant que Vesper n'est pas battue.
-- Après Vesper : duel HAUT/BAS au casino (meilleur des 3, une seule chance) pour la pierre QUARTZ : gagné = le joueur l'a, perdu = Onybris l'a (FLAG_QUARTZ_STONE_WON). Twist à prévoir selon la branche.
+- Bourg Quartz : le repaire sous le GAME CORNER est l'ANCIEN REPAIRE ROCKET repris par Zircon (histoire racontée par les PNJ). Boss du repaire = VESPER (B4F). La sortie ouest (Route 16) est bloquée par la police tant que Vesper n'est pas battue.
+- Après Vesper : duel HAUT/BAS au casino (meilleur des 3, une seule chance) pour la pierre QUARTZ : gagné = le joueur l'a, perdu = Zircon l'a (FLAG_QUARTZ_STONE_WON). Twist à prévoir selon la branche.
 - Restant : arène de GRIM (Glace, badge 4), pierre = QUARTZ, cameo Giovanni plus tard.
 
 ## Hematown — QG n°3 sur 5 (avant-avant-dernier)
-Ville occupée par ONYBRIS, tour HEMATEK = quartier général. BRICE, FLORA et N (premiers "forts" du jeu) montent affronter le MASTER, un étage chacun (3F, 6F, 9F), le joueur reste un étage derrière. Le joueur bat KRONOS au 11F ; derrière la porte, le boss écrase les trois alliés avec un seul Pokémon et part avec l'HEMATITE (volée sous nos yeux, pas de cadeau de Nox). Le boss reste invisible (ombre noire), il a regardé le joueur. Plus tard : volcan Écume = QG n°4 (Gold + Silver), dernier QG avant la Ligue (Red). Nox donne badge + CT46 après la défaite d'ONYBRIS dans la tour.
+Ville occupée par ZIRCON, tour HEMATEK = quartier général. BRICE, FLORA et N (premiers "forts" du jeu) montent affronter le MASTER, un étage chacun (3F, 6F, 9F), le joueur reste un étage derrière. Le joueur bat KRONOS au 11F ; derrière la porte, le boss écrase les trois alliés avec un seul Pokémon et part avec l'HEMATITE (volée sous nos yeux, pas de cadeau de Nox). Le boss reste invisible (ombre noire), il a regardé le joueur. Plus tard : volcan Écume = QG n°4 (Gold + Silver), dernier QG avant la Ligue (Red). Nox donne badge + CT46 après la défaite d'ZIRCON dans la tour.
 
 ## Chrondrolia (étape 7) — arrivée
-Joueur : Hematown -> Grenalux -> SURF sud (Route 21) -> Chrondrolia. Route 19 / volcan SEAFOAM fermés (éruption). Ville paisible, aucun policier ni Onybris visible ; les habitants jurent que la pierre n'est pas là. Centrale expliquée par la chaleur du volcan. Notes : Artikodin près de Bourg Quartz, Électhor dans la centrale, Sulfura dans le volcan (légendaires, plus tard).
+Joueur : Hematown -> Grenalux -> SURF sud (Route 21) -> Chrondrolia. Route 19 / volcan SEAFOAM fermés (éruption). Ville paisible, aucun policier ni Zircon visible ; les habitants jurent que la pierre n'est pas là. Centrale expliquée par la chaleur du volcan. Notes : Artikodin près de Bourg Quartz, Électhor dans la centrale, Sulfura dans le volcan (légendaires, plus tard).
 
 ## Chrondrolia — événement (badge 7)
 Eddie battu -> blackout, le maire (taupe) dit avoir utilisé le joueur pour la clé secrète, la centrale est occupée ; SELENE (2e combat) garde le TOPAZ au 3F ; le joueur GAGNE la pierre (TOPAZ). Selene : l'éruption de la mer = leur oeuvre, le MAITRE est dans le volcan SEAFOAM. La mer (Route 19/20) et les grottes SEAFOAM s'ouvrent -> prochain QG (n°4, Gold + Silver).
@@ -78,8 +78,8 @@ Eddie battu -> blackout, le maire (taupe) dit avoir utilisé le joueur pour la c
 ## Retour à Opanihrum : la FONDERIE (badge 8) puis ROUTE VICTOIRE = QG n°5 (V1)
 - **Fonderie** (arène d'Hepha, Acier) : intérieur recoloré (sol acier sombre, flèches de spin en braise), Hepha (pic Winona, sprite Crush Girl, provisoires) : Magneton 52, Forretress 53, Skarmory 54, Scizor 55, Steelix 56, Aggron 58 ; 8 forgerons Acier (43–49) ; CT47 Aile d'acier ; Hepha dit que ses fourneaux ont forgé la porte de la Route Victoire et que des hommes en noir y sont entrés. Script : gym_opanihrum.py + gym_opanihrum_trainers.py.
 - **Route 23** : gardes de badges d'origine (8e = badge d'Hepha). Au pied de la grotte (déclencheurs y=32, x2..8) RED, muet, regarde la grotte, salue et y entre seul (FLAG_VR_RED_MET 0x0B6).
-- **Route Victoire 1F/2F** : anciens dresseurs devenus sbires Onybris (niv. 50–53) ; 3F : challengers d'origine inchangés (niveaux à revoir) ; VESPER (3e duel : Arbok 54, Gengar 54, Crobat 55, Muk 55, Hypno 56) garde la sortie est de la 2F.
-- **LE REPÈRE d'Onybris (3 salles sous la Route Victoire, QG n°5)** : échelle cachée au mur nord de la grande salle NE de la 2F (30,1). Tileset de la Ligue recoloré en obsidienne (sol noir-violet, parois cramoisi, emblèmes en braise). Les sorties de la grotte (est de la 2F) sont fermées par une brume noire tant que le finale n'a pas eu lieu.
+- **Route Victoire 1F/2F** : anciens dresseurs devenus sbires Zircon (niv. 50–53) ; 3F : challengers d'origine inchangés (niveaux à revoir) ; VESPER (3e duel : Arbok 54, Gengar 54, Crobat 55, Muk 55, Hypno 56) garde la sortie est de la 2F.
+- **LE REPÈRE d'Zircon (3 salles sous la Route Victoire, QG n°5)** : échelle cachée au mur nord de la grande salle NE de la 2F (30,1). Tileset de la Ligue recoloré en obsidienne (sol noir-violet, parois cramoisi, emblèmes en braise). Les sorties de la grotte (est de la 2F) sont fermées par une brume noire tant que le finale n'a pas eu lieu.
   - **Salle des gardes** (1F du repaire) : hall à statues (4 sbires), alcôve au trésor (sbire + Rappel Max), chambre du commandement où VESPER (3e duel) garde la porte ; Bonbon Rare caché.
   - **Salle des Pierres** (2F du repaire) : dix piédestaux en cercle autour de l'emblème. 7 pierres volées y reposent (Grenat, Pyrope, Tourmaline, Spinelle, Quartz, Amethiolite, Hématite) ; 3 piédestaux vides : APATITE, TOPAZE et OPALE (l'opale est portée par Red). SELENE (3e duel) garde la porte du trône.
   - **Salle du trône** (3F du repaire) : finale : Red à genoux avec l'opale, un cri PSYCHIQUE (Mewtwo, jamais montré) arrache l'opale des mains de Red, le TOPAZE du sac du joueur et appelle l'APATITE à distance ; les sept pierres de la Salle des Pierres s'envolent (les piédestaux se vident), puis noir ; Red, abîmé, soigne le joueur (FLAG_VR_BOSS_DONE 0x0B7). Les dix pierres sont désormais aux mains du patron (psychique : twist Mewtwo à confirmer à la Ligue).
@@ -88,7 +88,7 @@ Eddie battu -> blackout, le maire (taupe) dit avoir utilisé le joueur pour la c
 
 ## Ligue, boss et trois fins (13/10, validé par Basil)
 - Ligue = tournoi de 11 combats (voir claude/ligue-tournoi.md) ; le boss s'incruste après Chen pour prendre le vœu de Jirachi.
-- **Vœu du boss : libérer tous les Pokémon des humains, plus jamais de Poké Balls.** Il ne le dit qu'à la Ligue ; avant, Onybris « libère » seulement les Pokémon des zones.
+- **Vœu du boss : libérer tous les Pokémon des humains, plus jamais de Poké Balls.** Il ne le dit qu'à la Ligue ; avant, Zircon « libère » seulement les Pokémon des zones.
 - Les 3 fins sont trois réponses à la même question que pose le boss :
   1. **Laisser partir Jirachi** : le boss est battu, l'Aura se calme, le jeu continue (post-game, `FLAG_TOPAZE_POSTGAME`).
   2. **Plus de Poké Balls** : le vœu du boss, exaucé par le joueur (fin « monde calme »).

@@ -58,7 +58,7 @@ SSAnne_CaptainsOffice_Text_HowToConquerSeasickness::
 
 SSAnne_CaptainsOffice_Text_VesperIntro::
     .string "VESPER: The APATITE belongs to\n"
-    .string "TEAM ONYBRIS now, old man.\p"
+    .string "TEAM ZIRCON now, old man.\p"
     .string "A child? HERA and her friend are\n"
     .string "busy outside, so you will do.\p"
     .string "I am VESPER, one of the boss's\n"

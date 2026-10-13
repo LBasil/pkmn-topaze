@@ -112,7 +112,7 @@ CinnabarIsland_Text_LightsOut::
 CinnabarIsland_Text_MayorReveal1::
     .string "MAYOR: A fine badge, trainer. And\n"
     .string "the SECRET KEY. Well done.\p"
-    .string "ONYBRIS needed one honest hand to\n"
+    .string "ZIRCON needed one honest hand to\n"
     .string "open the old vault under the PLANT.$"
 
 CinnabarIsland_Text_MayorReveal2::
@@ -129,7 +129,7 @@ CinnabarIsland_Text_MayorReveal3::
 
 CinnabarIsland_Text_PlantWorkerDone::
     .string "WORKER: Those 'workers' were\n"
-    .string "ONYBRIS for weeks!\p"
+    .string "ZIRCON for weeks!\p"
     .string "The grid is ours again. And the\n"
     .string "lights are back on. Thanks, kid!$"
 

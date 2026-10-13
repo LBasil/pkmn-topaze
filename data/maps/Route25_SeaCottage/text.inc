@@ -33,7 +33,7 @@ Route25_SeaCottage_Text_GruntADrops::
 
 Route25_SeaCottage_Text_FoundSSTicket::
     .string "{PLAYER} got an S.S. TICKET\n"
-    .string "from the TEAM ONYBRIS GRUNT!$"
+    .string "from the TEAM ZIRCON GRUNT!$"
 
 Route25_SeaCottage_Text_MistyFarewell::
     .string "MISTY: Nice work. You have guts.\p"

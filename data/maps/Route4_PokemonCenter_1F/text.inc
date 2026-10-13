@@ -5,10 +5,10 @@ Route4_PokemonCenter_1F_Text_CanHaveSixMonsWithYou::
     .string "can have six POKéMON with you.$"
 
 Route4_PokemonCenter_1F_Text_TeamRocketAttacksCerulean::
-    .string "TEAM ONYBRIS attacks TOURMALIA\n"
+    .string "TEAM ZIRCON attacks TOURMALIA\n"
     .string "citizens…\p"
     .string "Not a day goes by without TEAM\n"
-    .string "ONYBRIS being in the news.$"
+    .string "ZIRCON being in the news.$"
 
 Route4_PokemonCenter_1F_Text_LaddieBuyMagikarpForJust500::
     .string "MAN: Hello there, laddie!\n"

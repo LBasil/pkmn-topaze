@@ -15,7 +15,7 @@ CeladonCity_Gym_Text_ErikaDefeat::
 
 CeladonCity_Gym_Text_ErikaPostBattle::
     .string "The cold keeps old memories\n"
-    .string "fresh. ONYBRIS... I have heard\p"
+    .string "fresh. ZIRCON... I have heard\p"
     .string "what they ask of the world.\p"
     .string "I understand the dream. I do not\n"
     .string "forgive the way.\p"

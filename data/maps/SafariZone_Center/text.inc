@@ -11,7 +11,7 @@ SafariZone_Center_Text_CenterArea::
 
 
 SafariZone_Center_Text_OnybrisGrunt1Intro::
-    .string "Free park, free POKéMON!\nGet lost, this is ONYBRIS ground!$"
+    .string "Free park, free POKéMON!\nGet lost, this is ZIRCON ground!$"
 
 SafariZone_Center_Text_OnybrisGrunt1Defeat::
     .string "Free to lose, huh...$"

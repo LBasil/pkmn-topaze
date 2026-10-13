@@ -12,7 +12,7 @@ SafariZone_East_Text_AreaSign::
 
 
 SafariZone_East_Text_OnybrisGrunt1Intro::
-    .string "This park is under ONYBRIS control!$"
+    .string "This park is under ZIRCON control!$"
 
 SafariZone_East_Text_OnybrisGrunt1Defeat::
     .string "Argh!$"

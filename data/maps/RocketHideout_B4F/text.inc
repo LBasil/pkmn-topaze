@@ -2,7 +2,7 @@ RocketHideout_B4F_Text_GiovanniIntro::
     .string "VESPER: So you are the brat who\n"
     .string "keeps wrecking my plans.\p"
     .string "This old ROCKET base suits TEAM\n"
-    .string "ONYBRIS. Dark, deep, forgotten.\p"
+    .string "ZIRCON. Dark, deep, forgotten.\p"
     .string "Perfect for hiding what we take\n"
     .string "from this town. Now, scram!$"
 
@@ -27,7 +27,7 @@ RocketHideout_B4F_Text_Grunt2Defeat::
 
 RocketHideout_B4F_Text_Grunt2PostBattle::
     .string "Do you have something against TEAM\n"
-    .string "ONYBRIS?$"
+    .string "ZIRCON?$"
 
 RocketHideout_B4F_Text_Grunt3Intro::
     .string "How can you not see the beauty of\n"

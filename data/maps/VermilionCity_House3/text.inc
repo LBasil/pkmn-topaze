@@ -9,7 +9,7 @@ VermilionCity_House3_Text_DearPippiLetter::
     .string "Dear PIPPI,\n"
     .string "I hope to see you soon.\p"
     .string "I heard HEMATOWN has problems with\n"
-    .string "TEAM ONYBRIS.\p"
+    .string "TEAM ZIRCON.\p"
     .string "APATIA appears to be safe.$"
 
 VermilionCity_House3_Text_SendMyPidgeyToUnionRoom::

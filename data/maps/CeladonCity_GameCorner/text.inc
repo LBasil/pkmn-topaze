@@ -4,7 +4,7 @@ CeladonCity_GameCorner_Text_CanExchangeCoinsNextDoor::
     .string "fabulous prizes next door.$"
 
 CeladonCity_GameCorner_Text_WelcomeBuySomeCoins::
-    .string "Welcome to ONYBRIS GAME CORNER!\p"
+    .string "Welcome to ZIRCON GAME CORNER!\p"
     .string "Do you need some game COINS?\n"
     .string "Would you like to buy some?$"
 
@@ -30,7 +30,7 @@ CeladonCity_GameCorner_Text_HereAreYourCoins::
 CeladonCity_GameCorner_Text_RumoredTeamRocketRunsThisPlace::
     .string "Keep this quiet.\p"
     .string "It's rumored that this place is run\n"
-    .string "by TEAM ONYBRIS.$"
+    .string "by TEAM ZIRCON.$"
 
 CeladonCity_GameCorner_Text_ThinkMachinesHaveDifferentOdds::
     .string "I think these machines have\n"
@@ -174,7 +174,7 @@ CeladonCity_GameCorner_Text_VesperRoundLost::
 CeladonCity_GameCorner_Text_VesperDuelWon::
     .string "VESPER: ...Impossible. Twice?\p"
     .string "Tch. A deal is a deal, even for\n"
-    .string "ONYBRIS. Take your precious stone.\p"
+    .string "ZIRCON. Take your precious stone.\p"
     .string "Enjoy it. The boss will not be\n"
     .string "pleased, and I will not be kind.$"
 

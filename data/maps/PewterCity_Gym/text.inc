@@ -43,7 +43,7 @@ PewterCity_Gym_Text_ExplainTM39::
     .string "a POKéMON that can really use it.$"
 
 PewterCity_Gym_Text_BrockPostBattle::
-    .string "Last night TEAM ONYBRIS broke into\n"
+    .string "Last night TEAM ZIRCON broke into\n"
     .string "the MUSEUM and took the PYROPE, our\p"
     .string "town's garnet. I heard they hit\n"
     .string "GRENALUX the same way.\p"

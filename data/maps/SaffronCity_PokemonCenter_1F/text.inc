@@ -5,16 +5,16 @@ SaffronCity_PokemonCenter_1F_Text_GrowthRatesDifferBySpecies::
 SaffronCity_PokemonCenter_1F_Text_SilphCoVictimOfFame::
     .string "SILPH CO. is widely known to all.\p"
     .string "It's a victim of its own fame - it\n"
-    .string "attracted TEAM ONYBRIS.$"
+    .string "attracted TEAM ZIRCON.$"
 
 SaffronCity_PokemonCenter_1F_Text_GreatIfEliteFourCameBeatRockets::
     .string "Sigh…\n"
     .string "Wouldn't this be great?\p"
     .string "If the ELITE FOUR came and\n"
-    .string "stomped TEAM ONYBRIS?$"
+    .string "stomped TEAM ZIRCON?$"
 
 SaffronCity_PokemonCenter_1F_Text_TeamRocketTookOff::
-    .string "TEAM ONYBRIS took off!\n"
+    .string "TEAM ZIRCON took off!\n"
     .string "We can go out safely again!\l"
     .string "That's great!$"
 

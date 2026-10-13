@@ -5,7 +5,7 @@ Tout est jouable ; ce qui suit est provisoire. Pour chaque ligne : ce qui est en
 ## Ligue, boss, fins
 | Élément | En place | Proposition |
 |---|---|---|
-| Nom du boss | « ONYBRIS » (sprite Maxie) | Basil donne le nom plus tard |
+| Nom du boss | « ZIRCON » (décidé par Basil ; sprite Maxie) | Basil donne le nom plus tard |
 | Sprite du boss à l'irruption | Giovanni | sprite dédié |
 | Récompense du Conseil des Anciens | Master Ball | objet unique (ex. un titre/objet clé) |
 | Équipes/dialogues des 11 combats du tournoi et des 20 Anciens | inventés par Claude, niveaux 50-71 | passe d'équilibrage avec Basil |

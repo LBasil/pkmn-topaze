@@ -4,14 +4,14 @@ SaffronCity_Text_WhatDoYouWantGetLost::
 
 SaffronCity_Text_BossTakeTownForTeamRocket::
     .string "BOSS said he'll take this town\n"
-    .string "in the name of TEAM ONYBRIS!$"
+    .string "in the name of TEAM ZIRCON!$"
 
 SaffronCity_Text_DontGetDefiantOrIllHurtYou::
     .string "Don't get defiant!\n"
     .string "Or I'll have to hurt you!$"
 
 SaffronCity_Text_SaffronBelongsToTeamRocket::
-    .string "HEMATOWN belongs to TEAM ONYBRIS!$"
+    .string "HEMATOWN belongs to TEAM ZIRCON!$"
 
 SaffronCity_Text_CriminalLifeMakesMeFeelAlive::
     .string "My life as a criminal makes me feel\n"
@@ -27,16 +27,16 @@ SaffronCity_Text_WeCanExploitMonsAroundWorld::
     .string "We'll get stinking rich, yeahah!$"
 
 SaffronCity_Text_YouBeatTeamRocket::
-    .string "You beat TEAM ONYBRIS all alone?\n"
+    .string "You beat TEAM ZIRCON all alone?\n"
     .string "That's amazing!$"
 
 SaffronCity_Text_SafeToGoOutAgain::
-    .string "Yeah! TEAM ONYBRIS is gone!\n"
+    .string "Yeah! TEAM ZIRCON is gone!\n"
     .string "It's safe to go out again!$"
 
 SaffronCity_Text_PeopleComingBackToSaffron::
     .string "People fled from here in droves\n"
-    .string "when those ONYBRIS came.\p"
+    .string "when those ZIRCON came.\p"
     .string "They should be flocking back to\n"
     .string "HEMATOWN now.$"
 
@@ -50,7 +50,7 @@ SaffronCity_Text_Pidgeot::
     .string "PIDGEOT: Bi bibii!$"
 
 SaffronCity_Text_SawRocketBossEscaping::
-    .string "I saw the ONYBRIS BOSS escaping\n"
+    .string "I saw the ZIRCON BOSS escaping\n"
     .string "HEMATEK's building.$"
 
 SaffronCity_Text_ImASecurityGuard::
@@ -120,7 +120,7 @@ SaffronCity_Text_AlliesMeet1::
 
 SaffronCity_Text_AlliesMeet2::
     .string "BRICE: I'm BRICE. I walked this\n"
-    .string "region long before ONYBRIS.\p"
+    .string "region long before ZIRCON.\p"
     .string "Their MASTER is in this tower.\n"
     .string "He came for the HEMATITE himself.$"
 

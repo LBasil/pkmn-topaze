@@ -10,7 +10,7 @@ CeladonCity_Text_GymIsGreatFullOfWomen::
     .string "TEAM ROCKET. Everybody knew, nobody\l"
     .string "dared say it.\p"
     .string "Then ROCKET fell apart... and the\n"
-    .string "ONYBRIS crowd moved right in.$"
+    .string "ZIRCON crowd moved right in.$"
 
 CeladonCity_Text_GameCornerIsBadForCitysImage::
     .string "BOURG QUARTZ takes pride in its efforts\n"
@@ -37,7 +37,7 @@ CeladonCity_Text_GetLostOrIllPunchYou::
     .string "Get lost, or I'll punch you.$"
 
 CeladonCity_Text_KeepOutOfTeamRocketsWay::
-    .string "Keep out of TEAM ONYBRIS's way!$"
+    .string "Keep out of TEAM ZIRCON's way!$"
 
 CeladonCity_Text_ExplainXAccuracyDireHit::
     .string "TRAINER TIPS\p"
@@ -77,7 +77,7 @@ CeladonCity_Text_PrizeExchangeSign::
     .string "PRIZE EXCHANGE$"
 
 CeladonCity_Text_GameCornerSign::
-    .string "ONYBRIS GAME CORNER\n"
+    .string "ZIRCON GAME CORNER\n"
     .string "The playground for grown-ups!$"
 
 CeladonCity_Text_ScaldedTongueOnTea::
@@ -114,7 +114,7 @@ CeladonCity_Text_SomeoneStoleSilphScope::
     .string "My late husband used to run that\n"
     .string "GAME CORNER, long ago.\p"
     .string "TEAM ROCKET paid him to keep quiet\n"
-    .string "about the basement. Now ONYBRIS\l"
+    .string "about the basement. Now ZIRCON\l"
     .string "pays the same price.\p"
     .string "Same masks, new name. Awful.$"
 
@@ -122,7 +122,7 @@ CeladonCity_Text_SomeoneStoleSilphScope::
 CeladonCity_Text_WestBlocked::
     .string "Sorry, nobody leaves BOURG QUARTZ\n"
     .string "by the west road for now.\p"
-    .string "ONYBRIS thugs are swarming the old\n"
+    .string "ZIRCON thugs are swarming the old\n"
     .string "ROCKET base under the GAME CORNER.\p"
     .string "Clear it out, and we will open\n"
     .string "the road.$"
