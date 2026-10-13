@@ -79,13 +79,13 @@ Route25_SeaCottage_Text_YouveGotTooMuchStuff::
 
 Route25_SeaCottage_Text_SSAnnePartyYouGoInstead::
     .string "That cruise ship S.S. ANNE is in\n"
-    .string "APATIA.\p"
-    .string "I hear there are lots of TRAINERS\n"
-    .string "on board, too.\p"
+    .string "APATIA. Lots of TRAINERS aboard.\p"
     .string "They invited me to their party, but\n"
     .string "I can't stand fancy do's.\p"
+    .string "Some creeps in black asked about\n"
+    .string "its schedule yesterday. Fishy.\p"
     .string "Why don't you go instead of me?\n"
-    .string "Go on and have a good time.$"
+    .string "Keep your eyes open, okay?$"
 
 Route25_SeaCottage_Text_CheckOutRareMonsOnPC::
     .string "BILL: Feel like checking out some\n"

@@ -6,10 +6,10 @@ Route25_Text_JoeyDefeat::
     .string "You're decent.$"
 
 Route25_Text_JoeyPostBattle::
-    .string "All POKéMON have weaknesses.\n"
-    .string "Even the strongest ones.\p"
-    .string "That's why it's best to raise\n"
-    .string "POKéMON of different types.$"
+    .string "People in black ran past here at\n"
+    .string "dawn, heading for the cape.\p"
+    .string "They looked like they were in a\n"
+    .string "hurry. Weird, right?$"
 
 Route25_Text_DanIntro::
     .string "Dad took me to a great party on\n"
@@ -101,7 +101,7 @@ Route25_Text_WayneDefeat::
 
 Route25_Text_WaynePostBattle::
     .string "The trail below is a shortcut to\n"
-    .string "TOURMALIA.$"
+    .string "TOURMALIA, if you know the way.$"
 
 Route25_Text_SeaCottageSign::
     .string "SEA COTTAGE\n"
