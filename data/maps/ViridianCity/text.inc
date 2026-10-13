@@ -21,10 +21,11 @@ ViridianCity_Text_OhOkayThen::
     .string "Oh, okay then!$"
 
 ViridianCity_Text_ExplainCaterpieWeedle::
-    .string "CATERPIE has no poison,\n"
-    .string "but WEEDLE does.\p"
-    .string "Watch that your POKéMON aren't\n"
-    .string "stabbed by WEEDLE's POISON STING.$"
+    .string "They look alike, but since the\n"
+    .string "AURA they are not the same.\p"
+    .string "CATERPIE has a PSYCHIC side.\n"
+    .string "WEEDLE has an ELECTRIC one.\p"
+    .string "Mind WEEDLE's sting. It shocks!$"
 
 ViridianCity_Text_GrandpaHasntHadCoffeeYet::
     .string "Oh, Grandpa!\n"
@@ -36,7 +37,7 @@ ViridianCity_Text_GoShoppingInPewterOccasionally::
     .string "I go shopping in PYROPIA\n"
     .string "occasionally.\p"
     .string "I have to take the winding trail in\n"
-    .string "OPANIHRUM FOREST when I go.$"
+    .string "CINDER FOREST when I go.$"
 
 ViridianCity_Text_ThisIsPrivateProperty::
     .string "I absolutely forbid you from\n"

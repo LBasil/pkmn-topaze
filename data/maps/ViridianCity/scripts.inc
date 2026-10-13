@@ -27,6 +27,7 @@ ViridianCity_EventScript_SetOldManBlockingRoad::
 	return
 
 ViridianCity_EventScript_TryUnlockGym::
+	goto_if_unset FLAG_BADGE01_GET, EventScript_Return
 	goto_if_unset FLAG_BADGE02_GET, EventScript_Return
 	goto_if_unset FLAG_BADGE03_GET, EventScript_Return
 	goto_if_unset FLAG_BADGE04_GET, EventScript_Return
