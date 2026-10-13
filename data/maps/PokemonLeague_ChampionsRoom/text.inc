@@ -17,12 +17,14 @@ PokemonLeague_ChampionsRoom_Text_OakPostBattle::
 
 PokemonLeague_ChampionsRoom_Text_BossIntro::
     .string "???: So this is the new CHAMPION.\p"
-    .string "How touching. Do you know what\n"
-    .string "waits in the HALL OF FAME?\p"
-    .string "JIRACHI. A wish for the one who\n"
-    .string "stands at the top.\p"
-    .string "I did not come to be a CHAMPION.\n"
-    .string "I came for that wish.\p"
+    .string "Do you know what waits in the\n"
+    .string "HALL OF FAME? JIRACHI.\p"
+    .string "One wish, for whoever stands at\n"
+    .string "the top.\p"
+    .string "I did not come to be a CHAMPION.\p"
+    .string "I will wish every POKéMON free\n"
+    .string "of humans. No more BALLS.\n"
+    .string "Never again.\p"
     .string "Step aside, child. Or be\n"
     .string "crushed!$"
 
@@ -31,9 +33,12 @@ PokemonLeague_ChampionsRoom_Text_BossDefeat::
     .string "You... and that pendant...$"
 
 PokemonLeague_ChampionsRoom_Text_BossPost::
-    .string "???: This is not over.\p"
-    .string "The wish will be mine, one day.\n"
-    .string "Remember that.$"
+    .string "???: You fight for them, yet you\n"
+    .string "keep them in BALLS.\p"
+    .string "Think about that when JIRACHI\n"
+    .string "asks you.\p"
+    .string "The wish is yours now.\n"
+    .string "Choose well.$"
 
 PokemonLeague_ChampionsRoom_Text_OakCongratulations::
     .string "OAK: {PLAYER}, you were\n"

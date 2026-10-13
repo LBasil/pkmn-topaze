@@ -85,3 +85,12 @@ Eddie battu -> blackout, le maire (taupe) dit avoir utilisé le joueur pour la c
   - **Salle du trône** (3F du repaire) : finale : Red à genoux avec l'opale, un cri PSYCHIQUE (Mewtwo, jamais montré) arrache l'opale des mains de Red, le TOPAZE du sac du joueur et appelle l'APATITE à distance ; les sept pierres de la Salle des Pierres s'envolent (les piédestaux se vident), puis noir ; Red, abîmé, soigne le joueur (FLAG_VR_BOSS_DONE 0x0B7). Les dix pierres sont désormais aux mains du patron (psychique : twist Mewtwo à confirmer à la Ligue).
   - Scripts : lair_tileset.py, lair_layouts.py, lair_build.py (+ victory_road.py). Les salles sont des copies des salles de la Ligue (Lance, Champion, Lorelei), à redessiner plus tard si besoin.
 - Décision de fond à valider : le patron n'est toujours pas vu ; Red perd lui aussi ; l'OPALE NOIRE (10e pierre, clé de la porte de la Route Victoire) est prise par RED sur la place d'Opanihrum avant le joueur (Hepha le raconte) ; Red l'emporte dans la grotte et le patron la lui prend (elle n'est plus dans sa main à la sortie).
+
+## Ligue, boss et trois fins (13/10, validé par Basil)
+- Ligue = tournoi de 11 combats (voir claude/ligue-tournoi.md) ; le boss s'incruste après Chen pour prendre le vœu de Jirachi.
+- **Vœu du boss : libérer tous les Pokémon des humains, plus jamais de Poké Balls.** Il ne le dit qu'à la Ligue ; avant, Onybris « libère » seulement les Pokémon des zones.
+- Les 3 fins sont trois réponses à la même question que pose le boss :
+  1. **Laisser partir Jirachi** : le boss est battu, l'Aura se calme, le jeu continue (post-game, `FLAG_TOPAZE_POSTGAME`).
+  2. **Plus de Poké Balls** : le vœu du boss, exaucé par le joueur (fin « monde calme »).
+  3. **Tous les légendaires à soi** : le miroir sombre du boss (Mewtwo, oiseaux, Mew, Celebi dans le PC).
+- Le boss dit au joueur qu'il garde ses Pokémon en Balls : le choix 2 est celui qui lui donne raison.
