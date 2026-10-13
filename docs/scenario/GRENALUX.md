@@ -629,10 +629,10 @@ Chêne : retour 1 = livraison du colis d’Opanihrum (le Pokédex est déjà don
 > The boss kept this in the barn for
 > years. Please, take it.
 
-**Ouvrier 1** () — *récompense (provisoire : un PP UP)*
+**Ouvrier 1** () — *récompense : 1 POTION + 5 POKé BALLS*
 
-> It's a placeholder reward until the
-> ranch gives you something better.
+> The boss says it is the least we can
+> do. Take care of them out there.
 
 **Ouvrier 1** () — *après*
 
@@ -648,7 +648,7 @@ Animaux (Slowpoke, Psyduck, Meowth, Jigglypuff, Doduo, Nidoran) : cris et phrase
 
 
 ## 8. Reste à faire sur Grenalux
-- Poser `FLAG_ONYBRIS_ANIMALS_FOUND` au QG d’Onybris de Bourg Quartz (étape 6) : la quête du ranch est alors terminable. Récompense actuelle = PP UP (provisoire).
+- Poser `FLAG_ONYBRIS_ANIMALS_FOUND` au QG d’Onybris de Bourg Quartz (étape 6) : la quête du ranch est alors terminable. Récompense : 1 POTION + 5 POKé BALLS.
 - Faire réapparaître Doduo et les deux Nidoran dans les enclos quand la quête est rendue.
 - Mine : seule la grille scellée existe ; son ouverture après la Ligue demande un intérieur (à décider).
 - Le PENDENTIF (ancien `ITEM_RUBY`) est le « vrai » GRENAT, mais son importance n’est révélée que plus tard : à décider avec la quête des gemmes.

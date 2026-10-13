@@ -96,13 +96,13 @@ for who,w,a,b in [('Ouvrier 1','9,7','Hand1','Hand1Strike'),('Ouvrier 2','14,12'
     A(row('PalletTown_Ranch',who,w,'état A',f'PalletTown_Ranch_Text_{a}'))
     A(row('PalletTown_Ranch',who,w,'état B',f'PalletTown_Ranch_Text_{b}'))
 A(row('PalletTown_Ranch','Ouvrier 1','9,7','Doduo + 2 Nidoran retrouvés','PalletTown_Ranch_Text_Hand1Reward'))
-A(row('PalletTown_Ranch','Ouvrier 1','','récompense (provisoire : un PP UP)','PalletTown_Ranch_Text_Hand1Reward2'))
+A(row('PalletTown_Ranch','Ouvrier 1','','récompense : 1 POTION + 5 POKé BALLS','PalletTown_Ranch_Text_Hand1Reward2'))
 A(row('PalletTown_Ranch','Ouvrier 1','','après','PalletTown_Ranch_Text_Hand1Thanks'))
 A(row('PalletTown_Ranch','Ouvrier 3','28,13 (clôture coupée)','état B','PalletTown_Ranch_Text_Hand3'))
 A('Animaux (Slowpoke, Psyduck, Meowth, Jigglypuff, Doduo, Nidoran) : cris et phrases d’ambiance ; Doduo et les deux Nidoran disparaissent à l’état B (volés pendant l’attaque).\n')
 A('''
 ## 8. Reste à faire sur Grenalux
-- Poser `FLAG_ONYBRIS_ANIMALS_FOUND` au QG d’Onybris de Bourg Quartz (étape 6) : la quête du ranch est alors terminable. Récompense actuelle = PP UP (provisoire).
+- Poser `FLAG_ONYBRIS_ANIMALS_FOUND` au QG d’Onybris de Bourg Quartz (étape 6) : la quête du ranch est alors terminable. Récompense : 1 POTION + 5 POKé BALLS.
 - Faire réapparaître Doduo et les deux Nidoran dans les enclos quand la quête est rendue.
 - Mine : seule la grille scellée existe ; son ouverture après la Ligue demande un intérieur (à décider).
 - Le PENDENTIF (ancien `ITEM_RUBY`) est le « vrai » GRENAT, mais son importance n’est révélée que plus tard : à décider avec la quête des gemmes.

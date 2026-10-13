@@ -60,12 +60,15 @@ PalletTown_Ranch_Text_Hand1Reward::
 	.string "The boss kept this in the barn for\n"
 	.string "years. Please, take it.$"
 
-PalletTown_Ranch_Text_ReceivedReward::
-	.string "{PLAYER} received a PP UP!$"
+PalletTown_Ranch_Text_ReceivedPotion::
+	.string "{PLAYER} received a POTION!$"
+
+PalletTown_Ranch_Text_ReceivedBalls::
+	.string "{PLAYER} received five POKé BALLS!$"
 
 PalletTown_Ranch_Text_Hand1Reward2::
-	.string "It's a placeholder reward until the\n"
-	.string "ranch gives you something better.$"
+	.string "The boss says it is the least we can\n"
+	.string "do. Take care of them out there.$"
 
 PalletTown_Ranch_Text_Hand1Thanks::
 	.string "The animals are calm again.\n"
