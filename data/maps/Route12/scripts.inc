@@ -1,6 +1,46 @@
 Route12_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route12_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, Route12_OnResume
 	.byte 0
+
+Route12_OnTransition::
+	setflag FLAG_TEMP_5
+	end
+
+Route12_EventScript_PierKronosTalk::
+	end
+
+Route12_EventScript_PierKronosScene::
+	lockall
+	goto_if_unset FLAG_PIER_LORE_DONE, Route12_EventScript_PierKronosSkip
+	goto_if_set FLAG_PIER_KRONOS_DONE, Route12_EventScript_PierKronosSkip
+	clearflag FLAG_TEMP_5
+	addobject LOCALID_PIER_KRONOS
+	playse SE_PIN
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	msgbox Route12_Text_PierKronos1
+	closemessage
+	msgbox Route12_Text_PierKronos2
+	closemessage
+	applymovement LOCALID_PIER_KRONOS, Route12_Movement_KronosLeaves
+	waitmovement 0
+	removeobject LOCALID_PIER_KRONOS
+	setflag FLAG_PIER_KRONOS_DONE
+	releaseall
+	end
+
+Route12_EventScript_PierKronosSkip::
+	releaseall
+	end
+
+Route12_Movement_KronosLeaves::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
 
 Route12_OnResume::
 	call_if_set FLAG_SYS_SPECIAL_WILD_BATTLE, Route12_EventScript_TryRemoveSnorlax

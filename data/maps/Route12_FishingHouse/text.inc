@@ -87,3 +87,27 @@ Route12_FishingHouse_Text_BlankChartOfSomeSort::
     .string "It has spaces for writing in\n"
     .string "records of some kind.$"
 
+
+Route12_FishingHouse_Text_Lore::
+    .string "Hm? You carry a stone. I can feel\n"
+    .string "it, the way fish feel a storm.\p"
+    .string "Sit, child. Ten years ago, one\n"
+    .string "night, the sea off this pier\l"
+    .string "glowed violet.\p"
+    .string "Every POKéMON in the water leapt\n"
+    .string "at once. By dawn their TYPES had\l"
+    .string "changed. That was the AURA.\p"
+    .string "The big sleeper out on the pier\n"
+    .string "saw it all, and has not woken\l"
+    .string "since. I think it is waiting.\p"
+    .string "The stones are older than the\n"
+    .string "AURA. They were made to hold it.\p"
+    .string "Take this, for listening to an\n"
+    .string "old man.$"
+
+Route12_FishingHouse_Text_ReceivedPPUp::
+    .string "{PLAYER} received a PP UP.$"
+
+Route12_FishingHouse_Text_LoreEnd::
+    .string "If a man in black asks, I told you\n"
+    .string "nothing. Shall we talk fishing?$"

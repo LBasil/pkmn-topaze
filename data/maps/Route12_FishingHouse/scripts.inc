@@ -4,6 +4,19 @@ Route12_FishingHouse_MapScripts::
 Route12_FishingHouse_EventScript_FishingGuruBrother::
 	lock
 	faceplayer
+	goto_if_unset FLAG_AMETHYST_STONE_GIVEN, Route12_FishingHouse_EventScript_GuruNormal
+	goto_if_unset FLAG_PIER_LORE_DONE, Route12_FishingHouse_EventScript_GuruLore
+	goto Route12_FishingHouse_EventScript_GuruNormal
+
+Route12_FishingHouse_EventScript_GuruLore::
+	msgbox Route12_FishingHouse_Text_Lore
+	giveitem_msg Route12_FishingHouse_Text_ReceivedPPUp, ITEM_PP_UP
+	setflag FLAG_PIER_LORE_DONE
+	msgbox Route12_FishingHouse_Text_LoreEnd
+	release
+	end
+
+Route12_FishingHouse_EventScript_GuruNormal::
 	goto_if_set FLAG_GOT_SUPER_ROD, Route12_FishingHouse_EventScript_CheckMagikarpRecord
 	msgbox Route12_FishingHouse_Text_DoYouLikeToFish, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, Route12_FishingHouse_EventScript_GiveSuperRod

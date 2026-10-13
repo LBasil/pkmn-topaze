@@ -48,8 +48,8 @@
 #define FLAG_AMETHYST_RAID_STARTED 0x022
 #define FLAG_AMETHYST_RAID_DONE  0x023
 #define FLAG_AMETHYST_STONE_GIVEN 0x024
-#define FLAG_0x025               0x025
-#define FLAG_0x026               0x026
+#define FLAG_PIER_LORE_DONE      0x025
+#define FLAG_PIER_KRONOS_DONE    0x026
 #define FLAG_0x027               0x027
 
 // Hide/show flags

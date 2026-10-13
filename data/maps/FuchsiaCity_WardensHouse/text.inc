@@ -91,9 +91,11 @@ FuchsiaCity_WardensHouse_Text_RealStone::
     .string "you, child. You beat those thugs!\p"
     .string "The thieves took a replica, a\n"
     .string "cheap amethyst I put on display.\p"
-    .string "The real AMETHIOLITE is safe with\n"
-    .string "me. Take it. You have earned it,\l"
-    .string "and you will guard it better.$"
+    .string "The real AMETHIOLITE is yours now.\n"
+    .string "Guard it better than I did.\p"
+    .string "And go east when the road reopens.\n"
+    .string "The old FISHER on the ROUTE 12\l"
+    .string "PIER knows where the AURA began.$"
 
 FuchsiaCity_WardensHouse_Text_ObtainedAmethiolite::
     .string "{PLAYER} got the AMETHIOLITE!$"

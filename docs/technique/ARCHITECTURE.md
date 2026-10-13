@@ -311,3 +311,10 @@ Deja thematisee (textes Poison, Hematown annonce). Seul ajustement : Kayden Hypn
 
 ### Decision Basil (13/10) : les pierres sur soi
 Le twist QUARTZ (duel de Vesper) intervient en FIN de jeu : posseder (ou non) le QUARTZ ne change rien avant. Pour le dessein d'Onybris, il suffit que le joueur ait les pierres sur lui : elles seront toutes reunies au final. Donc aucune consequence immediate des branches QUARTZ/AMETHIOLITE avant la fin.
+
+## Zone est (Routes 15/14/13 + ponton de la Route 12) — moteur d'histoire : "le ponton, source de l'Aura" (choix Basil)
+- Accroche : le Gardien d'Amethiolite (apres les dents/la pierre) envoie le joueur voir le vieux PECHEUR du ponton de la Route 12. Les dresseurs du sud du ponton (Luca, Justin, Andrew) laissent des indices (mer qui brille violet la nuit, Ronflex endormi depuis 10 ans, poissons qui brillent).
+- Pecheur (maison (12,86), vieux "Fishing Guru") : une fois la pierre AMETHIOLITE obtenue, `Route12_FishingHouse_EventScript_GuruLore` raconte : il y a 10 ans la mer a brille violet au ponton, les types ont change (l'AURA), le Ronflex a tout vu et dort depuis ("il attend") ; les pierres sont plus vieilles que l'Aura, faites pour la contenir. Cadeau PP UP. `FLAG_PIER_LORE_DONE` = 0x025. Super Rod d'origine conserve.
+- Scene KRONOS (declencheurs (8..20,82) de la Route 12, `FLAG_PIER_KRONOS_DONE` = 0x026) : apres le lore, en remontant le ponton, KRONOS apparait (addobject, FLAG_TEMP_5 cache en OnTransition), dit "dix pierres, dix portes ; quand la derniere s'ouvre le monde est libre", encourage le joueur a continuer ("tu fais mon travail mieux que mes admins"), annonce que la prochaine pierre dort a HEMATOWN et le defie d'y arriver avant lui, puis repart. Pas de combat.
+- Ronflex (Route 12 mi-ponton) : se reveille a la Pokeflute (butin de Vesper) ; le joueur arrive par le sud (Route 13) et atteint le pecheur AVANT le Ronflex.
+- Prochain : habiller les Routes 15/14/13 (indices, Onybris), puis HEMATOWN (the de Bourg Quartz). Non teste en emulateur.

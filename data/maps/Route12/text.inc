@@ -50,7 +50,8 @@ Route12_Text_JustinDefeat::
 Route12_Text_JustinPostBattle::
     .string "I could have made my POKéMON\n"
     .string "evolve with a MOON STONE.\p"
-    .string "I would have won then, I bet.$"
+    .string "The big SNORLAX out there has slept\n"
+    .string "on the pier for ten years.$"
 
 Route12_Text_LucaIntro::
     .string "Electricity is my specialty.\p"
@@ -62,7 +63,9 @@ Route12_Text_LucaDefeat::
 
 Route12_Text_LucaPostBattle::
     .string "Water conducts electricity, so you\n"
-    .string "should zap sea POKéMON.$"
+    .string "should zap sea POKéMON.\p"
+    .string "Strange. The sea glows violet at\n"
+    .string "night, near the old FISHER's house.$"
 
 Route12_Text_HankIntro::
     .string "The FISHING FOOL versus POKéMON\n"
@@ -100,7 +103,9 @@ Route12_Text_AndrewDefeat::
 Route12_Text_AndrewPostBattle::
     .string "What, MAGIKARP?\p"
     .string "I catch them all the time, sure.\n"
-    .string "But, boy are they wimpy.$"
+    .string "But the fish here feel... strange.\p"
+    .string "They glow, sometimes. Ask the\n"
+    .string "FISHER by the pier.$"
 
 Route12_Text_RouteSign::
     .string "ROUTE 12 \n"
@@ -142,3 +147,23 @@ Route12_Text_GiaNotEnoughMons::
     .string "GIA: I can't bear to battle\n"
     .string "without my JES!\p"
     .string "Don't you have one more POKéMON?$"
+
+Route12_Text_PierKronos1::
+    .string "KRONOS: Well. The child who plays\n"
+    .string "with stones. You went to the old\l"
+    .string "fisher, did you not?\p"
+    .string "Good. Then you know what the AURA\n"
+    .string "is, and what we mean to do.\p"
+    .string "Ten stones. Ten gates. When the\n"
+    .string "last one opens, the world is set\l"
+    .string "free, POKéMON and all.$"
+
+Route12_Text_PierKronos2::
+    .string "KRONOS: Keep collecting them,\n"
+    .string "child. You do my work better than\l"
+    .string "any of my ADMINS.\p"
+    .string "The next stone sleeps in HEMATOWN,\n"
+    .string "behind its thirsty gates. Hurry,\l"
+    .string "or I will take it before you.\p"
+    .string "Do not follow me. This pier is\n"
+    .string "mine tonight. Farewell!$"
