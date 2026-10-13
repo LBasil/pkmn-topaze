@@ -25161,6 +25161,144 @@
             ],
             "encounter_rate": 7
           }
+        },
+        {
+          "map": "MAP_ROUTE4_EAST",
+          "base_label": "sRoute4East_FireRed",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 14,
+                "max_level": 14,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 14,
+                "max_level": 14,
+                "species": "SPECIES_PARAS"
+              },
+              {
+                "min_level": 13,
+                "max_level": 13,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_VENONAT"
+              },
+              {
+                "min_level": 14,
+                "max_level": 14,
+                "species": "SPECIES_BELLSPROUT"
+              },
+              {
+                "min_level": 14,
+                "max_level": 14,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 14,
+                "max_level": 14,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_MANKEY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 16,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 16,
+                "max_level": 16,
+                "species": "SPECIES_VENONAT"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 16,
+                "max_level": 16,
+                "species": "SPECIES_CLEFAIRY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROUTE4_EAST",
+          "base_label": "sRoute4East_LeafGreen",
+          "land_mons": {
+            "encounter_rate": 21,
+            "mons": [
+              {
+                "min_level": 14,
+                "max_level": 14,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 14,
+                "max_level": 14,
+                "species": "SPECIES_PARAS"
+              },
+              {
+                "min_level": 13,
+                "max_level": 13,
+                "species": "SPECIES_GEODUDE"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_VENONAT"
+              },
+              {
+                "min_level": 14,
+                "max_level": 14,
+                "species": "SPECIES_BELLSPROUT"
+              },
+              {
+                "min_level": 14,
+                "max_level": 14,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 14,
+                "max_level": 14,
+                "species": "SPECIES_CLEFAIRY"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_MANKEY"
+              },
+              {
+                "min_level": 16,
+                "max_level": 16,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 16,
+                "max_level": 16,
+                "species": "SPECIES_VENONAT"
+              },
+              {
+                "min_level": 15,
+                "max_level": 15,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 16,
+                "max_level": 16,
+                "species": "SPECIES_CLEFAIRY"
+              }
+            ]
+          }
         }
       ]
     }
