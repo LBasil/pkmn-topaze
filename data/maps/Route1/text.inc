@@ -26,3 +26,22 @@ Route1_Text_RouteSign::
     .string "ROUTE 1\n"
     .string "GRENALUX - OPANIHRUM$"
 
+
+Route1_Text_Doduo::
+    .string "DODUO: Kwek! Kwek!\n"
+    .string "It is shaking. Its collar says\l"
+    .string "GRENALUX RANCH.$"
+
+Route1_Text_Nidoranm::
+    .string "NIDORAN: Gyuu!\n"
+    .string "It hid in the grass all night.$"
+
+Route1_Text_Nidoranf::
+    .string "NIDORAN: Kyuu!\n"
+    .string "It runs to the others, relieved.$"
+
+Route1_Text_AnimalsHome::
+    .string "The three strays huddle together,\n"
+    .string "then trot off toward GRENALUX.\p"
+    .string "They know the way home.\n"
+    .string "The RANCH hands will be glad.$"

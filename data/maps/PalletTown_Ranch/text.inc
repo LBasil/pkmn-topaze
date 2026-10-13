@@ -55,10 +55,10 @@ PalletTown_Ranch_Text_BarnDoor::
 	.string "Feed and tools are stored inside.$"
 
 PalletTown_Ranch_Text_Hand1Reward::
-	.string "You found DODUO and both NIDORAN?\n"
-	.string "They are back in the pens, safe!\p"
-	.string "The boss kept this in the barn for\n"
-	.string "years. Please, take it.$"
+	.string "DODUO and both NIDORAN just trotted\n"
+	.string "back into the pens, safe!\p"
+	.string "The boss says you found them on the\n"
+	.string "road. Please, take these.$"
 
 PalletTown_Ranch_Text_ReceivedPotion::
 	.string "{PLAYER} received a POTION!$"

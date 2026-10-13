@@ -4,11 +4,19 @@ PalletTown_Ranch_MapScripts::
 	.byte 0
 
 PalletTown_Ranch_OnTransition::
-	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_Ranch_ShowHand
+	setflag FLAG_HIDE_RANCH_ANIMALS
+	goto_if_unset FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_Ranch_Peaceful
+	goto_if_set FLAG_ONYBRIS_ANIMALS_FOUND, PalletTown_Ranch_ShowAnimals
+	clearflag FLAG_HIDE_RANCH_CUT_HAND
+	end
+
+PalletTown_Ranch_Peaceful::
+	clearflag FLAG_HIDE_RANCH_ANIMALS
 	setflag FLAG_HIDE_RANCH_CUT_HAND
 	end
 
-PalletTown_Ranch_ShowHand::
+PalletTown_Ranch_ShowAnimals::
+	clearflag FLAG_HIDE_RANCH_ANIMALS
 	clearflag FLAG_HIDE_RANCH_CUT_HAND
 	end
 

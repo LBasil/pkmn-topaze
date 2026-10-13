@@ -124,7 +124,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PalletTown_Ranch_EventScript_Doduo",
-      "flag": "FLAG_GRENALUX_ONYBRIS_STRIKE"
+      "flag": "FLAG_HIDE_RANCH_ANIMALS"
     },
     {
       "local_id": "LOCALID_PALLET_RANCH_NIDORANM",
@@ -139,7 +139,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PalletTown_Ranch_EventScript_Nidoranm",
-      "flag": "FLAG_GRENALUX_ONYBRIS_STRIKE"
+      "flag": "FLAG_HIDE_RANCH_ANIMALS"
     },
     {
       "local_id": "LOCALID_PALLET_RANCH_NIDORANF",
@@ -154,7 +154,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "PalletTown_Ranch_EventScript_Nidoranf",
-      "flag": "FLAG_GRENALUX_ONYBRIS_STRIKE"
+      "flag": "FLAG_HIDE_RANCH_ANIMALS"
     },
     {
       "local_id": "LOCALID_PALLET_RANCH_MEOWTH",

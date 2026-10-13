@@ -42,6 +42,51 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route1_EventScript_Boy",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_ROUTE1_DODUO",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_DODUO",
+      "x": 14,
+      "y": 27,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route1_EventScript_Doduo",
+      "flag": "FLAG_HIDE_ROUTE1_ANIMALS"
+    },
+    {
+      "local_id": "LOCALID_ROUTE1_NIDORANM",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_NIDORAN_M",
+      "x": 17,
+      "y": 25,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route1_EventScript_Nidoranm",
+      "flag": "FLAG_HIDE_ROUTE1_ANIMALS"
+    },
+    {
+      "local_id": "LOCALID_ROUTE1_NIDORANF",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_NIDORAN_F",
+      "x": 11,
+      "y": 26,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route1_EventScript_Nidoranf",
+      "flag": "FLAG_HIDE_ROUTE1_ANIMALS"
     }
   ],
   "warp_events": [

@@ -1249,15 +1249,15 @@
 
 // Unused?
 #define FLAG_GRENALUX_TYPE_COURSE        0x4BD // Topaze: got the TYPE MEMO from the GRENALUX teacher
-#define FLAG_ONYBRIS_ANIMALS_FOUND       0x4BE // Topaze: DODUO + 2 NIDORAN recovered at the ONYBRIS HQ (set in BOURG QUARTZ)
+#define FLAG_ONYBRIS_ANIMALS_FOUND       0x4BE // Topaze: DODUO + 2 NIDORAN found back on ROUTE 1 (they go home)
 #define FLAG_GRENALUX_GEM_REWARD         0x4BF // Topaze: ranch worker gave the true GRENAT
 #define FLAG_GRENALUX_OAK_RETURN2        0x4C0 // Topaze: OAK's talk after badge 4
 #define FLAG_GRENALUX_MOM_BADGE_INFO     0x4C1 // Topaze: spare
 #define FLAG_HIDE_RANCH_GRUNT            0x4C2 // Topaze: ONYBRIS grunt in the ranch house opening scene
 #define FLAG_HIDE_RANCH_MOM              0x4C3 // Topaze: MOM in the ranch house opening scene
 #define FLAG_HIDE_SCHOOL_RIVAL           0x4C4 // Topaze: rival in the school scene
-#define FLAG_0x4C5               0x4C5
-#define FLAG_0x4C6               0x4C6
+#define FLAG_HIDE_ROUTE1_ANIMALS         0x4C5 // Topaze: strayed ranch animals on ROUTE 1 (shown after the attack until found)
+#define FLAG_HIDE_RANCH_ANIMALS          0x4C6 // Topaze: ranch DODUO/NIDORAN (hidden between the attack and their return)
 #define FLAG_0x4C7               0x4C7
 #define FLAG_0x4C8               0x4C8
 #define FLAG_0x4C9               0x4C9

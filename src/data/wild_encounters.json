@@ -8261,33 +8261,23 @@
             "encounter_rate": 21,
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PIDGEY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_RATTATA"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PIDGEY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_RATTATA"
-              },
-              {
-                "min_level": 4,
+                "min_level": 3,
                 "max_level": 4,
                 "species": "SPECIES_PIDGEY"
               },
               {
-                "min_level": 4,
+                "min_level": 3,
                 "max_level": 4,
+                "species": "SPECIES_RATTATA"
+              },
+              {
+                "min_level": 4,
+                "max_level": 5,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 4,
+                "max_level": 5,
                 "species": "SPECIES_RATTATA"
               },
               {
@@ -8298,6 +8288,16 @@
               {
                 "min_level": 5,
                 "max_level": 5,
+                "species": "SPECIES_RATTATA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 6,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 5,
+                "max_level": 6,
                 "species": "SPECIES_RATTATA"
               },
               {
@@ -8311,14 +8311,14 @@
                 "species": "SPECIES_RATTATA"
               },
               {
-                "min_level": 7,
+                "min_level": 6,
                 "max_level": 7,
-                "species": "SPECIES_PIDGEY"
+                "species": "SPECIES_SPEAROW"
               },
               {
                 "min_level": 6,
-                "max_level": 6,
-                "species": "SPECIES_RATTATA"
+                "max_level": 7,
+                "species": "SPECIES_SPEAROW"
               }
             ]
           }
@@ -20803,33 +20803,23 @@
           "land_mons": {
             "mons": [
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PIDGEY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_RATTATA"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_PIDGEY"
-              },
-              {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_RATTATA"
-              },
-              {
-                "min_level": 4,
+                "min_level": 3,
                 "max_level": 4,
                 "species": "SPECIES_PIDGEY"
               },
               {
-                "min_level": 4,
+                "min_level": 3,
                 "max_level": 4,
+                "species": "SPECIES_RATTATA"
+              },
+              {
+                "min_level": 4,
+                "max_level": 5,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 4,
+                "max_level": 5,
                 "species": "SPECIES_RATTATA"
               },
               {
@@ -20840,6 +20830,16 @@
               {
                 "min_level": 5,
                 "max_level": 5,
+                "species": "SPECIES_RATTATA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 6,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 5,
+                "max_level": 6,
                 "species": "SPECIES_RATTATA"
               },
               {
@@ -20853,14 +20853,14 @@
                 "species": "SPECIES_RATTATA"
               },
               {
-                "min_level": 7,
+                "min_level": 6,
                 "max_level": 7,
-                "species": "SPECIES_PIDGEY"
+                "species": "SPECIES_SPEAROW"
               },
               {
                 "min_level": 6,
-                "max_level": 6,
-                "species": "SPECIES_RATTATA"
+                "max_level": 7,
+                "species": "SPECIES_SPEAROW"
               }
             ],
             "encounter_rate": 21
