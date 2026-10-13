@@ -5937,22 +5937,22 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GentlemanWalter[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_RivalSsAnneSquirtle[] = {
     {
         .iv = 50,
-        .lvl = 21,
+        .lvl = 24,
         .species = SPECIES_PIDGEOTTO,
     },
     {
         .iv = 50,
-        .lvl = 18,
+        .lvl = 22,
         .species = SPECIES_RATICATE,
     },
     {
         .iv = 50,
-        .lvl = 20,
+        .lvl = 24,
         .species = SPECIES_KADABRA,
     },
     {
         .iv = 100,
-        .lvl = 22,
+        .lvl = 26,
         .species = SPECIES_WARTORTLE,
     },
 };
@@ -5960,22 +5960,22 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RivalSsAnneSquirtle[] = 
 static const struct TrainerMonNoItemDefaultMoves sParty_RivalSsAnneBulbasaur[] = {
     {
         .iv = 50,
-        .lvl = 21,
+        .lvl = 24,
         .species = SPECIES_PIDGEOTTO,
     },
     {
         .iv = 50,
-        .lvl = 18,
+        .lvl = 22,
         .species = SPECIES_RATICATE,
     },
     {
         .iv = 50,
-        .lvl = 20,
+        .lvl = 24,
         .species = SPECIES_KADABRA,
     },
     {
         .iv = 100,
-        .lvl = 22,
+        .lvl = 26,
         .species = SPECIES_IVYSAUR,
     },
 };
@@ -5983,22 +5983,22 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RivalSsAnneBulbasaur[] =
 static const struct TrainerMonNoItemDefaultMoves sParty_RivalSsAnneCharmander[] = {
     {
         .iv = 50,
-        .lvl = 21,
+        .lvl = 24,
         .species = SPECIES_PIDGEOTTO,
     },
     {
         .iv = 50,
-        .lvl = 18,
+        .lvl = 22,
         .species = SPECIES_RATICATE,
     },
     {
         .iv = 50,
-        .lvl = 20,
+        .lvl = 24,
         .species = SPECIES_KADABRA,
     },
     {
         .iv = 100,
-        .lvl = 22,
+        .lvl = 26,
         .species = SPECIES_CHARMELEON,
     },
 };

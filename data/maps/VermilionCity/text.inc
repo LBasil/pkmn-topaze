@@ -1,11 +1,20 @@
 VermilionCity_Text_GrimerMultipliesInSludge::
-    .string "We're careful about pollution here.\p"
-    .string "We've heard GRIMER multiplies in\n"
-    .string "toxic sludge.$"
+    .string "Did you hear? The APATITE was\n"
+    .string "stolen from the GYM's vault last\p"
+    .string "night. People in black, they say.\n"
+    .string "HERA is furious!$"
 
 VermilionCity_Text_DidYouSeeSSAnneInHarbor::
-    .string "Did you see the S.S. ANNE moored\n"
-    .string "in the harbor?$"
+    .string "The S.S. ANNE is moored in the\n"
+    .string "harbor. Odd, though...\p"
+    .string "Men in black went aboard before\n"
+    .string "dawn. Nobody saw them come back.$"
+
+VermilionCity_Text_EastBlocked::
+    .string "Sorry, the east road is closed.\p"
+    .string "Thieves are on the loose. Until\n"
+    .string "the culprits are caught, nobody\l"
+    .string "leaves APATIA by this road.$"
 
 VermilionCity_Text_SSAnneHasDepartedForYear::
     .string "So, the S.S. ANNE has departed?\p"

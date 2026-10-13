@@ -5,15 +5,14 @@ SSAnne_2F_Corridor_Text_ThisShipIsLuxuryLiner::
     .string "invited TRAINERS.$"
 
 SSAnne_2F_Corridor_Text_RivalIntro::
-    .string "{RIVAL}: Bonjour!\n"
-    .string "{PLAYER}!\p"
-    .string "Imagine seeing you here!\n"
-    .string "{PLAYER}, were you really invited?\p"
-    .string "So how's your POKéDEX coming?\p"
-    .string "I already caught 40 kinds, pal.\n"
-    .string "Different kinds are everywhere.\p"
-    .string "Crawl around in grassy areas, and\n"
-    .string "look hard for them.$"
+    .string "{RIVAL}: {PLAYER}! You too?\p"
+    .string "I followed those guys in black\n"
+    .string "all the way from TOURMALIA.\p"
+    .string "They came aboard, and then...\n"
+    .string "poof. Gone. This ship's a maze.\p"
+    .string "Since you're here, let's see if\n"
+    .string "you're strong enough to catch\l"
+    .string "them. Show me your POKéMON!$"
 
 SSAnne_2F_Corridor_Text_RivalDefeat::
     .string "Humph!\p"
@@ -27,11 +26,12 @@ SSAnne_2F_Corridor_Text_RivalVictory::
     .string "きたえた　ほうが　いいぜ！$"
 
 SSAnne_2F_Corridor_Text_RivalPostBattle::
-    .string "{RIVAL}: I heard there was a CUT\n"
-    .string "master on board.\p"
-    .string "But he was just a seasick old man!\p"
-    .string "CUT itself is really useful.\n"
-    .string "Yup, it'll be handy.\p"
-    .string "You should go see him, too.\n"
+    .string "{RIVAL}: The crew says the thieves\n"
+    .string "stormed the CAPTAIN's office.\p"
+    .string "But the CAPTAIN is just a seasick\n"
+    .string "old man. He's no help to me!\p"
+    .string "You should still go see him. He\n"
+    .string "knows how to use CUT.\p"
+    .string "I'm checking the lower decks.\n"
     .string "Smell ya!$"
 

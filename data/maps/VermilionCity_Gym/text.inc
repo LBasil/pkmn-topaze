@@ -10,12 +10,11 @@ VermilionCity_Gym_Text_LtSurgeIntro::
     .string "you've got!$"
 
 VermilionCity_Gym_Text_LtSurgePostBattle::
-    .string "The mountain says what the sea\n"
-    .string "doesn't: those with the strongest\p"
-    .string "will stay in the air.\p"
-    .string "Keep climbing, kid. BOURG QUARTZ\n"
-    .string "is next, and it's very cold\p"
-    .string "there. Dress warmly.$"
+    .string "The thieves who took my APATITE\n"
+    .string "fled toward the harbor. Check the\p"
+    .string "S.S. ANNE. Then keep climbing, kid.\n"
+    .string "BOURG QUARTZ is next, and it's very\p"
+    .string "cold there. Dress warmly.$"
 
 VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis::
     .string "The APATITE BADGE lets your\n"
