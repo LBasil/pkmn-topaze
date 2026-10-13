@@ -1316,7 +1316,7 @@ const struct Trainer gTrainers[] = {
         .trainerClass = TRAINER_CLASS_LASS,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_FEMALE | F_TRAINER_FEMALE,
         .trainerPic = TRAINER_PIC_LASS,
-        .trainerName = _("KAY"),
+        .trainerName = _("NORA"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
@@ -4020,7 +4020,7 @@ const struct Trainer gTrainers[] = {
         .items = {ITEM_SUPER_POTION},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .party = NO_ITEM_CUSTOM_MOVES(sParty_CooltrainerMary),
+        .party = NO_ITEM_DEFAULT_MOVES(sParty_CooltrainerMary),
     },
     [TRAINER_COOLTRAINER_CAROLINE] = {
         .trainerClass = TRAINER_CLASS_COOLTRAINER,

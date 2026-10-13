@@ -283,3 +283,6 @@ Chemin du joueur après le ticket : Tourmalia → **Route 5** (pension, panneau 
 - GAME CORNER : objet Vesper (8,5) (`LOCALID_GAME_CORNER_VESPER`, FLAG_TEMP_5), visible seulement si FLAG_HIDE_CELADON_ROCKETS et pas FLAG_QUARTZ_DUEL_DONE (OnTransition). Jeu = 3 appels HAUT/BAS (OUI/NON), tirage `random 2`, au meilleur des 3, un seul essai.
 - Victoire : FLAG_QUARTZ_STONE_WON + FLAG_QUARTZ_DUEL_DONE, fanfare "got the QUARTZ" (l'objet pierre n'existe pas encore : suivi par flag). Defaite : seulement FLAG_QUARTZ_DUEL_DONE, Vesper garde la pierre. Flags 0x020/0x021 renommes dans include/constants/flags.h.
 - Twist ulterieur : les deux branches doivent etre gerees (STONE_WON = joueur a la pierre ; sinon Onybris l'a). Non teste en emulateur.
+
+### Bourg Quartz — arene de GRIM (Glace/Eau)
+`docs/topaze/celadon_gym.py` (idempotent) : 7 dresseurs Glace/Eau niv. 25-29 (Nora [ex-Kay, renommee pour ne pas doubler avec Kay de Pyropia], Bridget, Tina, Tamia, Lori, Lisa, Mary : Otaria, Kokiyas, Hypotrempe, Stari, Ramoloss, Lippoutou), textes retheme (froid, indice Game Corner). GRIM : Dewgong 31, Cloyster 32, Jynx 33, Onix 33, Lapras 35. Badge 4 = QUARTZ BADGE, CT13 Laser Glace. Arene ouverte a tout moment (pas de blocage). Non teste en emulateur.

@@ -42,72 +42,53 @@ CeladonCity_Gym_Text_ShouldMakeRoomForThis::
     .string "You should make room for this.$"
 
 CeladonCity_Gym_Text_KayIntro::
-    .string "I should tell you about this GYM.\p"
-    .string "Only real ladies are allowed in\n"
-    .string "here!$"
+    .string "Welcome to the QUARTZ GYM.\nIt is cold in here. Deal with it!$"
 
 CeladonCity_Gym_Text_KayDefeat::
-    .string "You're too rough!$"
+    .string "Brr... You melted me!$"
 
 CeladonCity_Gym_Text_KayPostBattle::
-    .string "Bleaah!\n"
-    .string "I hope GRIM wipes you out!$"
+    .string "GRIM never raises her voice.\nThat is what scares me.$"
 
 CeladonCity_Gym_Text_BridgetIntro::
-    .string "Oh, welcome.\n"
-    .string "I was getting bored.$"
+    .string "Oh, welcome.\nMy POKéMON love the cold.$"
 
 CeladonCity_Gym_Text_BridgetDefeat::
-    .string "My makeup!$"
+    .string "My ice has cracked!$"
 
 CeladonCity_Gym_Text_BridgetPostBattle::
-    .string "GRASS-type POKéMON are tough\n"
-    .string "against the WATER type.\p"
-    .string "They also have an edge on ROCK-\n"
-    .string "and GROUND-type POKéMON.$"
+    .string "ICE-type POKéMON are weak to FIRE\nand FIGHTING moves.\pBut they hit GRASS and DRAGON\nvery hard.$"
 
 CeladonCity_Gym_Text_TinaIntro::
-    .string "…Weren't you peeking in here\n"
-    .string "earlier?$"
+    .string "...Weren't you peeking in the\nGAME CORNER earlier?$"
 
 CeladonCity_Gym_Text_TinaDefeat::
     .string "You're an eye-opener!$"
 
 CeladonCity_Gym_Text_TinaPostBattle::
-    .string "Oh, you were looking at GRIM…\n"
-    .string "You weren't looking at me…$"
+    .string "Men in black have a table down\nthere. Even GRIM heard them.$"
 
 CeladonCity_Gym_Text_TamiaIntro::
-    .string "Look, look!\n"
-    .string "See my POKéMON!\p"
-    .string "I like the GRASS type.\n"
-    .string "I like how they're easy to raise.$"
+    .string "Look, look!\nMy POKéMON never feel the cold.$"
 
 CeladonCity_Gym_Text_TamiaDefeat::
     .string "No!$"
 
 CeladonCity_Gym_Text_TamiaPostBattle::
-    .string "We only use GRASS-type POKéMON at\n"
-    .string "our GYM.\p"
-    .string "Why? We also use them for making\n"
-    .string "flower arrangements!$"
+    .string "Our GYM freezes the whole floor.\pThat is why we all wear boots\nand thick scarves.$"
 
 CeladonCity_Gym_Text_LisaIntro::
-    .string "Oh, hey!\p"
-    .string "We don't like BUG- or FIRE-type\n"
-    .string "POKéMON in here!$"
+    .string "Oh, hey!\nWe do not let FIRE-types in here!$"
 
 CeladonCity_Gym_Text_LisaDefeat::
     .string "Oh!\n"
     .string "You!$"
 
 CeladonCity_Gym_Text_LisaPostBattle::
-    .string "Our LEADER GRIM might be quiet,\n"
-    .string "but she's famous around here.$"
+    .string "Our LEADER GRIM might be quiet,\nbut she is famous around here.$"
 
 CeladonCity_Gym_Text_LoriIntro::
-    .string "Pleased to meet you.\n"
-    .string "My hobby is POKéMON training.$"
+    .string "Pleased to meet you.\nMy hobby is training in the snow.$"
 
 CeladonCity_Gym_Text_LoriDefeat::
     .string "Oh!\n"
@@ -119,17 +100,14 @@ CeladonCity_Gym_Text_LoriPostBattle::
     .string "especially if I have to battle.$"
 
 CeladonCity_Gym_Text_MaryIntro::
-    .string "Welcome to BOURG QUARTZ GYM!\p"
-    .string "You'd better not underestimate\n"
-    .string "the nice ladies here.$"
+    .string "Welcome to BOURG QUARTZ GYM!\pYou will need more than a coat to\nbeat us.$"
 
 CeladonCity_Gym_Text_MaryDefeat::
     .string "Oh!\n"
     .string "Beaten!$"
 
 CeladonCity_Gym_Text_MaryPostBattle::
-    .string "I didn't bring my best POKéMON.\n"
-    .string "Wait until next time!$"
+    .string "I did not bring my best POKéMON.\nThe lake keeps them company.$"
 
 CeladonCity_Gym_Text_GymStatue::
     .string "BOURG QUARTZ POKéMON GYM\n"
