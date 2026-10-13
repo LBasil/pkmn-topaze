@@ -970,7 +970,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerDiana[] = {
     {
         .iv = 0,
         .lvl = 21,
-        .species = SPECIES_GOLDEEN,
+        .species = SPECIES_BELLSPROUT,
     },
 };
 
@@ -2281,13 +2281,13 @@ static const struct TrainerMonNoItemDefaultMoves sParty_FishermanAndrew[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_SwimmerMaleLuis[] = {
     {
         .iv = 0,
-        .lvl = 18,
-        .species = SPECIES_HORSEA,
+        .lvl = 17,
+        .species = SPECIES_WEEDLE,
     },
     {
         .iv = 0,
         .lvl = 18,
-        .species = SPECIES_SHELLDER,
+        .species = SPECIES_VENONAT,
     },
 };
 

@@ -13,19 +13,14 @@ CeruleanCity_Text_RivalDefeat::
     .string "You won already!$"
 
 CeruleanCity_Text_RivalPostBattle::
-    .string "{RIVAL}: Hey, guess what?\p"
-    .string "I went to BILL's and got him to\n"
-    .string "show me his rare POKéMON.\p"
-    .string "That added a lot of pages to my\n"
-    .string "POKéDEX!\p"
-    .string "After all, BILL's world famous as a\n"
-    .string "POKéMANIAC.\p"
-    .string "He invented the POKéMON Storage\n"
-    .string "System on PC, too.\p"
-    .string "Since you're using his system,\n"
-    .string "you should go thank him.\p"
-    .string "Well, I better get rolling!\n"
-    .string "Smell ya later!$"
+    .string "{RIVAL}: The thieves came through\n"
+    .string "here last night. They tore the\p"
+    .string "TOURMALINE out of the big tree's\n"
+    .string "heart. The whole town is shaking.\p"
+    .string "A villager saw them head north,\n"
+    .string "over the bridge.\p"
+    .string "I'm going after them. Don't slow\n"
+    .string "me down. Smell ya!$"
 
 CeruleanCity_Text_OhRightLittlePresentAsFavor::
     .string "Oh, yeah, right.\p"
@@ -50,9 +45,9 @@ CeruleanCity_Text_RivalVictory::
 CeruleanCity_Text_GruntIntro::
     .string "Hey! Stay out!\n"
     .string "It's not your yard!\p"
-    .string "…Huh?\n"
-    .string "Me?\p"
-    .string "I'm an innocent bystander!\n"
+    .string "…Huh? Me?\n"
+    .string "The others left me behind!\p"
+    .string "I'm just an innocent bystander!\n"
     .string "Don't you believe me?{PLAY_BGM}{MUS_ENCOUNTER_ROCKET}$"
 
 CeruleanCity_Text_GruntDefeat::
@@ -101,11 +96,10 @@ CeruleanCity_Text_PokemonEncyclopediaAmusing::
     .string "POKéMON? That sounds amusing.$"
 
 CeruleanCity_Text_PeopleHereWereRobbed::
-    .string "The people here were robbed.\p"
-    .string "It's obvious that TEAM ONYBRIS is\n"
-    .string "behind this most heinous crime!\p"
-    .string "Even our POLICE FORCE has\n"
-    .string "trouble with the ONYBRIS!$"
+    .string "The ONYBRIS broke into a house\n"
+    .string "through a tunnel, then took the\p"
+    .string "TOURMALINE from the great tree.\n"
+    .string "Our POLICE can't keep up!$"
 
 CeruleanCity_Text_SlowbroUseSonicboom::
     .string "Okay! SLOWBRO!\n"

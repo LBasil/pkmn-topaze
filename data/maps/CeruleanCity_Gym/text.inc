@@ -37,7 +37,11 @@ CeruleanCity_Gym_Text_BetterMakeRoomForThis::
 CeruleanCity_Gym_Text_MistyDefeat::
     .string "Well. That was a clean cut.\p"
     .string "Fine. Take the TOURMALINE BADGE,\n"
-    .string "you earned it.$"
+    .string "you earned it.\p"
+    .string "The thieves took our TOURMALINE\n"
+    .string "from this tree's heart.\p"
+    .string "They went north, over the bridge.\n"
+    .string "Stop them before the next gem falls.$"
 
 CeruleanCity_Gym_Text_DianaIntro::
     .string "What? You?\n"
@@ -52,7 +56,7 @@ CeruleanCity_Gym_Text_DianaPostBattle::
     .string "to see how good you really are.$"
 
 CeruleanCity_Gym_Text_LuisIntro::
-    .string "Splash!\p"
+    .string "Bzzz!\p"
     .string "I'm first up!\n"
     .string "Let's do it!$"
 
@@ -60,8 +64,7 @@ CeruleanCity_Gym_Text_LuisDefeat::
     .string "That can't be!$"
 
 CeruleanCity_Gym_Text_LuisPostBattle::
-    .string "SYLVESTRE is a TRAINER who's going to\n"
-    .string "keep improving.\p"
+    .string "SYLVESTRE keeps this tree alive.\n"
     .string "He won't lose to someone like you!$"
 
 CeruleanCity_Gym_Text_GymGuyAdvice::
