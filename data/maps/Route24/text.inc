@@ -1,39 +1,33 @@
 Route24_Text_JustEarnedFabulousPrize::
-    .string "Congratulations! You beat our\n"
-    .string "five contest TRAINERS!\p"
-    .string "You just earned a fabulous prize!$"
+    .string "Hold it right there!\p"
+    .string "So you beat the bridge TRAINERS.\n"
+    .string "Not bad, kid.\p"
+    .string "I'm with TEAM ONYBRIS. My job is\n"
+    .string "to make sure nobody follows us!$"
 
 Route24_Text_ReceivedNuggetFromMysteryTrainer::
     .string "{PLAYER} received a NUGGET\n"
-    .string "from the mystery TRAINER!$"
+    .string "from the TEAM ONYBRIS GRUNT!$"
 
 Route24_Text_YouDontHaveAnyRoom::
-    .string "You don't have any room!$"
+    .string "Make room in your bag first!\n"
+    .string "I'm not leaving until you take it.$"
 
 Route24_Text_JoinTeamRocket::
-    .string "By the way, how would you like to\n"
-    .string "join TEAM ONYBRIS?\p"
-    .string "We're a group of professional\n"
-    .string "criminals specializing in POKéMON!\p"
-    .string "Want to join?\p"
-    .string "Are you sure?\p"
-    .string "Come on, join us!\p"
-    .string "I'm telling you to join!\p"
-    .string "…Okay, you need convincing!\p"
-    .string "I'll make you an offer you can't\n"
-    .string "refuse!$"
+    .string "Hah! You'd make a fine recruit.\n"
+    .string "How about joining TEAM ONYBRIS?\p"
+    .string "No? Then we do this the hard way!$"
 
 Route24_Text_RocketDefeat::
     .string "Arrgh!\n"
     .string "You are good!$"
 
 Route24_Text_YoudBecomeTopRocketLeader::
-    .string "With your ability, you'd become\n"
-    .string "a top leader in TEAM ONYBRIS.\p"
-    .string "Too bad. The others are long gone\n"
-    .string "with the TOURMALINE. I only had to\p"
-    .string "keep you busy. Good luck catching\n"
-    .string "up!$"
+    .string "Tch! You beat me.\p"
+    .string "The others are long gone with the\n"
+    .string "TOURMALINE. I only had to keep you\p"
+    .string "busy. Take this NUGGET, it's all I\n"
+    .string "have on me. Now leave me alone!$"
 
 Route24_Text_ShaneIntro::
     .string "I saw you beat them from the\n"
@@ -104,3 +98,7 @@ Route24_Text_CalePostBattle::
     .string "A boy in a hurry ran right past\n"
     .string "us. He wouldn't even battle!\p"
     .string "He bolted north over the bridge.$"
+
+Route24_Text_ImOutOfHere::
+    .string "I'm out of here!\n"
+    .string "Don't follow me!$"
