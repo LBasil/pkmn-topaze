@@ -72,7 +72,7 @@ w1=[(14,21,'MAP_VICTORY_ROAD_2F',9),(15,21,'MAP_VICTORY_ROAD_2F',9),(6,5,M2.join
 STONES=[('GRENAT',4,5,True),('PYROPE',6,5,True),('TOURMALINE',8,5,True),('APATITE',3,7,False),('SPINELLE',9,7,True),('TOPAZ',3,9,False),
         ('QUARTZ',9,9,True),('AMETHIOLITE',4,11,True),('HEMATITE',6,11,True),('OPAL',8,11,False)]
 P2='VictoryRoadLair_2F'
-objs2=[trainer(GF,7,3,'LEFT',3,P2+'_EventScript_Selene')]; bgs2=[]
+objs2=[trainer(GF,7,3,'LEFT',1,P2+'_EventScript_Selene')]; bgs2=[]
 for nm,x,y,here in STONES:
     if here: objs2.append(npc('OBJ_EVENT_GFX_METEORITE',x,y,f'{P2}_EventScript_Stone{nm.title()}'))
     else: bgs2.append(sign(x,y,f'{P2}_EventScript_Pedestal{nm.title()}'))

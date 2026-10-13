@@ -22,7 +22,15 @@ Hematown (arrivée des alliés, 3F, 11F : Kronos + ombre du boss), Chrondrolia (
 ## Leçon de conception (à appliquer partout)
 Un dresseur qui voit le joueur **s'arrête sur la case voisine et y reste**. Ne jamais mettre un dresseur dont la ligne de vue traverse un couloir d'1 case (sans contournement) : l'approche le bouche. Vérifier avec `spin_bfs` + case d'arrêt du dresseur.
 
+## Deuxième passe (même jour) : Spinellia → Bourg Quartz → Amethiolite
+Joué : Tour de Spinellia 1F→7F (escaliers, 6F sans Silph Scope), Route 8 de bout en bout, chemin souterrain, Route 7, Bourg Quartz (Salle de jeux : grunt, affiche, repaire B1F→B4F avec flèches, grunts de la porte, Vesper, `FLAG_HIDE_CELADON_ROCKETS`, duel de Vesper pour le QUARTZ), Amethiolite (scène d'arrivée, raid de la maison du Gardien), Parc Safari (statique : tout atteignable, maison secrète comprise).
+- **B** Repaire 2F (Selene en (7,3), vue 3) : si le joueur passe en (5,3), elle vient en (6,3) et bouche l'accès à l'échelle (6,2). Vue réduite à 1.
+- **Audit automatique** `docs/topaze/audit_couloirs.py` : toutes les cartes, plus aucun dresseur qui coupe un warp en s'arrêtant à côté du joueur (0 résultat).
+- **Vanille, non bloquant** : entrée ouest du chemin souterrain, seule la case centrale (6,8) déclenche le warp (flèche) ; (5,8) et (7,8) ne font rien (identique à pret/pokefirered).
+- **Vanille** : l'arène de Bourg Quartz (Grim) exige COUPE (3 arbres) ; sans arbres le chef est atteignable. Non jouée jusqu'au badge faute de COUPE dans le banc.
+- **Non joué** : ascenseur du repaire (Clé Lift, vanille), grunt à la Clé, Parc Safari en jeu, zoo libéré (scènes d'objets), Route 16/Ronflex (Flûte Poké donnée par l'objet de la B4F).
+
 ## Reste à tester (même méthode)
-Spinellia (portes), Routes 8 / souterrain, Bourg Quartz (Vesper/Grim), Amethiolite (zoo, Safari), Route Victoire en jeu (boulons/interrupteurs), puis audit systématique « dresseur dans un couloir d'1 case » sur toutes les cartes.
+Arène de Grim et d'Amethiolite (Kayden) avec COUPE, Safari en jeu, Route Victoire en jeu (boulons/interrupteurs), puis les parties plus anciennes (Routes 1-6, Tourmalia, Apatia/S.S. Anne : seules Grenalux et la chaumière ont été jouées).
 
 Captures : `docs/technique/captures/` (`lair1-vesper-corridor.png`, `lair1-vesper-bloque.png`, `fonderie-hepha.png`).
