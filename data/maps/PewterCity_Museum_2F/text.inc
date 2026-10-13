@@ -74,7 +74,7 @@ PewterCity_Museum_2F_Text_BrockBeforeKay::
 
 PewterCity_Museum_2F_Text_BrockAfterKay::
     .string "BROCK: So you beat KAY. Good.\n"
-    .string "He always burned too bright.\p"
+    .string "She always burned too bright.\p"
     .string "I'll stay and watch the MUSEUM.\n"
     .string "They may come back.\p"
     .string "Go on to TOURMALIA, {PLAYER}.\n"
