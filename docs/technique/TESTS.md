@@ -135,3 +135,6 @@ Piste réaliste : faire d'abord le jeu jouable, puis ajouter un follower **limit
 
 ## Écho 2 (post-game, île 2)
 - `bench/echo2_bill_test.py <étape>` (3→4 annonce, 5→6 cadeau Héricendre/Cyndaquil) et `echo2_entei_test.py` (Entei niv. 48 au Cap Brink (12,29), 4→5). OK en émulateur.
+
+## Écho 3 (post-game, île 3)
+- `bench/echo3_celio_test.py <étape>` (6→7 annonce, 8→9 cadeau Kaiminus/Totodile) et `echo3_suicune_test.py` (Suicune niv. 50 au Bond Bridge (30,10), 7→8). OK en émulateur.

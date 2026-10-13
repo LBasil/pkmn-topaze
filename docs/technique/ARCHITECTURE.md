@@ -364,3 +364,5 @@ Généré par `league_elders.py` puis `league_elders2.py` (non rejouables). `VAR
 `docs/topaze/sevii_echo1.py` (non rejouable). `VAR_ECHO_STAGE` (0x402D) : 0 rien, 1 compas (ITEM_VS_SEEKER, placeholder) donné par Bill, 2 Raikou résolu, 3 Chikorita donné par Celio. Flags : `FLAG_HIDE_ECHO_BEAST` (0x0C0), `FLAG_ECHO_BEAST_DONE` (0x0C1). Centre de l'île 1 : en post-game, Bill/Celio sont visibles et la scène vanilla est sautée (`PostgameSetup`). Raikou (objet statique, revient s'il a fui) sur la Kindle Road (12,120).
 
 **Écho 2** (`docs/topaze/sevii_echo2.py`, non rejouable) : `VAR_ECHO_STAGE` 3→4 (Bill annonce, révèle Entei) →5 (Entei résolu, Cap Brink (12,29)) →6 (Bill donne Cyndaquil). Flags `FLAG_HIDE_ECHO_BEAST2` (0x0C2), `FLAG_ECHO_BEAST2_DONE` (0x0C3).
+
+**Écho 3** (`docs/topaze/sevii_echo3.py`, non rejouable) : `VAR_ECHO_STAGE` 6→7 (Celio annonce) →8 (Suicune résolu, Bond Bridge (30,10)) →9 (Celio donne Totodile). Flags `FLAG_HIDE_ECHO_BEAST3` (0x0C4), `FLAG_ECHO_BEAST3_DONE` (0x0C5). Prochain : Écho 4 sur l'île 4 (stage 9).

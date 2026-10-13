@@ -211,8 +211,8 @@
 #define FLAG_ECHO_BEAST_DONE     0x0C1
 #define FLAG_HIDE_ECHO_BEAST2    0x0C2 // Topaze: Echo 2 beast (Entei) on Cape Brink
 #define FLAG_ECHO_BEAST2_DONE    0x0C3
-#define FLAG_0x0C4               0x0C4
-#define FLAG_0x0C5               0x0C5
+#define FLAG_HIDE_ECHO_BEAST3    0x0C4 // Topaze: Echo 3 beast (Suicune) on Bond Bridge
+#define FLAG_ECHO_BEAST3_DONE    0x0C5
 #define FLAG_0x0C6               0x0C6
 #define FLAG_0x0C7               0x0C7
 #define FLAG_0x0C8               0x0C8

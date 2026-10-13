@@ -426,3 +426,28 @@ OneIsland_PokemonCenter_1F_Text_EchoGotCyndaquil::
 OneIsland_PokemonCenter_1F_Text_EchoBillNext2::
     .string "BILL: Two ECHOES closed. The\n"
     .string "third one is near THREE ISLAND.$"
+
+OneIsland_PokemonCenter_1F_Text_EchoCelioEcho3::
+    .string "CELIO: BILL's compass is\n"
+    .string "ringing again!\p"
+    .string "The third ECHO is on the BOND\n"
+    .string "BRIDGE, near THREE ISLAND.\p"
+    .string "A beast of water and wind runs\n"
+    .string "there. Please be careful.$"
+
+OneIsland_PokemonCenter_1F_Text_EchoCelioWait3::
+    .string "CELIO: BOND BRIDGE, THREE\n"
+    .string "ISLAND. The beast moves fast.$"
+
+OneIsland_PokemonCenter_1F_Text_EchoCelioGift3::
+    .string "CELIO: The ECHO is closed!\n"
+    .string "The air feels clear again.\p"
+    .string "Another POKéMON came through.\n"
+    .string "It wants to travel with you.$"
+
+OneIsland_PokemonCenter_1F_Text_EchoGotTotodile::
+    .string "{PLAYER} received TOTODILE!$"
+
+OneIsland_PokemonCenter_1F_Text_EchoCelioNext3::
+    .string "CELIO: Three ECHOES closed.\n"
+    .string "The fourth is on FOUR ISLAND.$"
