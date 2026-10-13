@@ -334,3 +334,9 @@ Le twist QUARTZ (duel de Vesper) intervient en FIN de jeu : posseder (ou non) le
 - Script : docs/topaze/chrondrolia_arrival.py.
 - NOTE POUR PLUS TARD (Basil) : Artikodin a déménagé près de l'ex-Celadopole (Bourg Quartz), Électhor est toujours dans sa centrale (Chrondrolia), Sulfura est dans le volcan (SEAFOAM).
 
+## Chrondrolia — raid de la centrale (étape 1, V1)
+- Déclencheur : retour en ville avec FLAG_BADGE07_GET (badge d'Eddie) et pas FLAG_CHRONDROLIA_RAID_STARTED (0x0B2) -> VAR_TEMP_2=1 en OnTransition, ON_FRAME `CinnabarIsland_EventScript_BlackoutScene` : explosion + fondu noir "toutes les lumières meurent", le MAIRE (objet existant, flag TEMP_5, LOCALID_CHRONDROLIA_MAYOR) se révèle taupe d'ONYBRIS ("vous avez rapporté la clé secrète"), annonce que SELENE tient déjà la centrale, disparaît.
+- Centrale (PokemonMansion_1F/2F/3F, objets masqués par TEMP_4/5/6 sauf raid en cours) : 4 sbires (RS_PSYCHIC_M/F, RS_HIKER, RS_LASS recyclés, niv. 42-44), SELENE II (TRAINER_AQUA_ADMIN_SHELLY, Hypno 45, Muk 46, Venomoth 46, Tentacruel 47, Gengar 48, IV 60) au bout de la 3F en (23,6), piédestal TOPAZ en (23,3) (objet ITEM_BALL provisoire) -> FLAG_CHRONDROLIA_RAID_DONE (0x0B3). Selene avoue que l'éruption de la mer est leur oeuvre et que le MAITRE attend dans le volcan SEAFOAM.
+- Après DONE : Route 20 OnTransition met VAR_TEMP_1=1 (désactive les 17 déclencheurs de garde-côtes, les warps vers Route 19 et SEAFOAM fonctionnent) ; policiers du sud d'Amethiolite masqués (TEMP_9) ; PNJ de la ville ont un second texte.
+- Script : docs/topaze/chrondrolia_raid.py. Non joué en émulateur.
+

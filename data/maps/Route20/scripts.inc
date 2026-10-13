@@ -3,6 +3,7 @@ Route20_MapScripts::
 	.byte 0
 
 Route20_OnTransition::
+	call_if_set FLAG_CHRONDROLIA_RAID_DONE, Route20_EventScript_SeaOpen
 	call_if_unset FLAG_STOPPED_SEAFOAM_B3F_CURRENT, Route20_EventScript_ResetSeafoamBouldersForB3F
 	call_if_unset FLAG_STOPPED_SEAFOAM_B4F_CURRENT, Route20_EventScript_ResetSeafoamBouldersForB4F
 	end
@@ -56,3 +57,7 @@ Route20_Movement_StepLeft::
 Route20_Movement_StepDown::
 	walk_down
 	step_end
+
+Route20_EventScript_SeaOpen::
+	setvar VAR_TEMP_1, 1
+	return

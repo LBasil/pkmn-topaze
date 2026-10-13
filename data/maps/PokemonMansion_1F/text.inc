@@ -22,3 +22,22 @@ PokemonMansion_1F_Text_JohnsonPostBattle::
     .string "but I feel spooked.\p"
     .string "I ought to go soon.$"
 
+PokemonMansion_1F_Text_Onybris1Intro::
+    .string "The PLANT is ours now, kid!$"
+
+PokemonMansion_1F_Text_Onybris1Defeat::
+    .string "Zzzapped…$"
+
+PokemonMansion_1F_Text_Onybris1Post::
+    .string "SELENE is at the transformers.\n"
+    .string "Go and get crushed!$"
+
+PokemonMansion_1F_Text_Onybris2Intro::
+    .string "No visitors in the turbine hall!$"
+
+PokemonMansion_1F_Text_Onybris2Defeat::
+    .string "Overloaded…$"
+
+PokemonMansion_1F_Text_Onybris2Post::
+    .string "The MAYOR opened every door for\n"
+    .string "us. Smart man.$"

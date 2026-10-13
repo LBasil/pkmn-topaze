@@ -104,3 +104,41 @@ CinnabarIsland_Text_LittleGirl::
     .string "town is only a fairy tale.\p"
     .string "But the big pylon hums at night.\n"
     .string "I like it!$"
+
+CinnabarIsland_Text_LightsOut::
+    .string "Every light in CHRONDROLIA just\n"
+    .string "died at once.$"
+
+CinnabarIsland_Text_MayorReveal1::
+    .string "MAYOR: A fine badge, trainer. And\n"
+    .string "the SECRET KEY. Well done.\p"
+    .string "ONYBRIS needed one honest hand to\n"
+    .string "open the old vault under the PLANT.$"
+
+CinnabarIsland_Text_MayorReveal2::
+    .string "The TOPAZ sleeps in the transformer\n"
+    .string "park. Its heat feeds the volcano.\p"
+    .string "SELENE is already there. And the\n"
+    .string "PLANT is ours. All of it.$"
+
+CinnabarIsland_Text_MayorReveal3::
+    .string "Do not take it personally. The\n"
+    .string "MASTER pays far better than the\p"
+    .string "council. Now, excuse me. I have a\n"
+    .string "lot of lights to switch on… later.$"
+
+CinnabarIsland_Text_PlantWorkerDone::
+    .string "WORKER: Those 'workers' were\n"
+    .string "ONYBRIS for weeks!\p"
+    .string "The grid is ours again. And the\n"
+    .string "lights are back on. Thanks, kid!$"
+
+CinnabarIsland_Text_ScientistDone::
+    .string "SCIENTIST: The cadre said the\n"
+    .string "eruption was their doing.\p"
+    .string "The coast guard lifted the sea\n"
+    .string "road ban. Be careful out there.$"
+
+CinnabarIsland_Text_LittleGirlDone::
+    .string "The pylon hums happy again!\n"
+    .string "Thank you!$"

@@ -6,6 +6,7 @@ FuchsiaCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_FUCHSIA_CITY
 	call_if_set FLAG_AMETHYST_RAID_STARTED, FuchsiaCity_EventScript_HideStaffer
 	call_if_set FLAG_BADGE05_GET, FuchsiaCity_EventScript_HidePolice
+	call_if_set FLAG_CHRONDROLIA_RAID_DONE, FuchsiaCity_EventScript_HideSouthPolice
 	call_if_unset FLAG_AMETHYST_RAID_STARTED, FuchsiaCity_EventScript_HideLooseMons
 	call_if_set FLAG_AMETHYST_STONE_GIVEN, FuchsiaCity_EventScript_HideLooseMons
 	call_if_set FLAG_GOT_DOME_FOSSIL, FuchsiaCity_EventScript_SetOmanyteGfx
@@ -144,6 +145,10 @@ FuchsiaCity_EventScript_OmanyteSign::
 
 FuchsiaCity_EventScript_HideStaffer::
 	setflag FLAG_TEMP_6
+	return
+
+FuchsiaCity_EventScript_HideSouthPolice::
+	setflag FLAG_TEMP_9
 	return
 
 FuchsiaCity_EventScript_HidePolice::

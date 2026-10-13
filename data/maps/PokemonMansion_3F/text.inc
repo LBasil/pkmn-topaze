@@ -34,3 +34,35 @@ PokemonMansion_1F_Text_MewGaveBirthToMewtwo::
     .string "The cable gallery below is sealed.\n"
     .string "The key stays down there.$"
 
+PokemonMansion_3F_Text_Onybris4Intro::
+    .string "Last stop, kid! Hold it there!$"
+
+PokemonMansion_3F_Text_Onybris4Defeat::
+    .string "I should have gone fishing…$"
+
+PokemonMansion_3F_Text_Onybris4Post::
+    .string "The TOPAZ is on the pedestal.\n"
+    .string "SELENE guards it. Good luck.$"
+
+PokemonMansion_3F_Text_SeleneIntro::
+    .string "SELENE: You again. Third time now.\p"
+    .string "The MASTER wants this TOPAZ. Its\n"
+    .string "heat will wake the SEAFOAM volcano.\p"
+    .string "Stand aside, or burn with it!$"
+
+PokemonMansion_3F_Text_SeleneDefeat::
+    .string "SELENE: Tch… Stubborn brat.$"
+
+PokemonMansion_3F_Text_SelenePost::
+    .string "SELENE: Keep your pretty rock.\p"
+    .string "The eruption on the sea road? Our\n"
+    .string "doing. The sea is a wall for you.\p"
+    .string "The MASTER waits inside the\n"
+    .string "volcano. Come, if you dare.$"
+
+PokemonMansion_3F_Text_TopazPedestal::
+    .string "A golden crystal hums on the\n"
+    .string "pedestal. The real TOPAZ!$"
+
+PokemonMansion_3F_Text_ObtainedTopaz::
+    .string "{PLAYER} obtained the TOPAZ!$"

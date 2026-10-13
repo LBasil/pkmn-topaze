@@ -1,5 +1,10 @@
 PokemonMansion_3F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PokemonMansion_3F_OnTransition
 	.byte 0
+
+PokemonMansion_3F_OnTransition::
+	call PokemonMansion_3F_EventScript_CheckOnybris
+	end
 
 PokemonMansion_3F_EventScript_DiaryFeb6th::
 	msgbox PokemonMansion_1F_Text_MewGaveBirthToMewtwo, MSGBOX_SIGN
@@ -13,4 +18,51 @@ PokemonMansion_3F_EventScript_Simon::
 PokemonMansion_3F_EventScript_Braydon::
 	trainerbattle_single TRAINER_SCIENTIST_BRAYDON, PokemonMansion_1F_Text_BraydonIntro, PokemonMansion_1F_Text_BraydonDefeat
 	msgbox PokemonMansion_1F_Text_BraydonPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PokemonMansion_3F_EventScript_CheckOnybris::
+	call_if_defeated TRAINER_AQUA_ADMIN_SHELLY, PokemonMansion_3F_EventScript_HideSelene
+	goto_if_unset FLAG_CHRONDROLIA_RAID_STARTED, PokemonMansion_3F_EventScript_HideOnybris
+	goto_if_set FLAG_CHRONDROLIA_RAID_DONE, PokemonMansion_3F_EventScript_HideOnybris
+	return
+
+PokemonMansion_3F_EventScript_HideOnybris::
+	setflag FLAG_TEMP_4
+	setflag FLAG_TEMP_5
+	setflag FLAG_TEMP_6
+	return
+
+PokemonMansion_3F_EventScript_Onybris4::
+	trainerbattle_single TRAINER_RS_LASS, PokemonMansion_3F_Text_Onybris4Intro, PokemonMansion_3F_Text_Onybris4Defeat
+	msgbox PokemonMansion_3F_Text_Onybris4Post, MSGBOX_AUTOCLOSE
+	end
+
+PokemonMansion_3F_EventScript_HideSelene::
+	setflag FLAG_TEMP_5
+	return
+
+PokemonMansion_3F_EventScript_OnybrisSelene::
+	trainerbattle_single TRAINER_AQUA_ADMIN_SHELLY, PokemonMansion_3F_Text_SeleneIntro, PokemonMansion_3F_Text_SeleneDefeat, PokemonMansion_3F_EventScript_SeleneLeaves
+	end
+
+PokemonMansion_3F_EventScript_SeleneLeaves::
+	msgbox PokemonMansion_3F_Text_SelenePost
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_PLANT_SELENE
+	delay 20
+	fadescreen FADE_FROM_BLACK
+	release
+	end
+
+PokemonMansion_3F_EventScript_Topaz::
+	lockall
+	msgbox PokemonMansion_3F_Text_TopazPedestal
+	playfanfare MUS_OBTAIN_KEY_ITEM
+	message PokemonMansion_3F_Text_ObtainedTopaz
+	waitmessage
+	waitfanfare
+	removeobject LOCALID_PLANT_TOPAZ
+	setflag FLAG_CHRONDROLIA_RAID_DONE
+	releaseall
 	end

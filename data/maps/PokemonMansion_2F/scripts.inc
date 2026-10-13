@@ -1,5 +1,10 @@
 PokemonMansion_2F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PokemonMansion_2F_OnTransition
 	.byte 0
+
+PokemonMansion_2F_OnTransition::
+	call PokemonMansion_2F_EventScript_CheckOnybris
+	end
 
 PokemonMansion_2F_EventScript_DiaryJuly5th::
 	msgbox PokemonMansion_1F_Text_NewMonDiscoveredInGuyanaJungle, MSGBOX_SIGN
@@ -12,4 +17,20 @@ PokemonMansion_2F_EventScript_DiaryJuly10th::
 PokemonMansion_2F_EventScript_Arnie::
 	trainerbattle_single TRAINER_BURGLAR_ARNIE, PokemonMansion_1F_Text_ArnieIntro, PokemonMansion_1F_Text_ArnieDefeat
 	msgbox PokemonMansion_1F_Text_ArniePostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PokemonMansion_2F_EventScript_CheckOnybris::
+	goto_if_unset FLAG_CHRONDROLIA_RAID_STARTED, PokemonMansion_2F_EventScript_HideOnybris
+	goto_if_set FLAG_CHRONDROLIA_RAID_DONE, PokemonMansion_2F_EventScript_HideOnybris
+	return
+
+PokemonMansion_2F_EventScript_HideOnybris::
+	setflag FLAG_TEMP_4
+	setflag FLAG_TEMP_5
+	setflag FLAG_TEMP_6
+	return
+
+PokemonMansion_2F_EventScript_Onybris3::
+	trainerbattle_single TRAINER_RS_HIKER, PokemonMansion_2F_Text_Onybris3Intro, PokemonMansion_2F_Text_Onybris3Defeat
+	msgbox PokemonMansion_2F_Text_Onybris3Post, MSGBOX_AUTOCLOSE
 	end

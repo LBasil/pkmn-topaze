@@ -32,3 +32,12 @@ PokemonMansion_1F_Text_ChristenedDiscoveredMonMew::
     .string "Something underground answers\n"
     .string "whenever we cut the power…$"
 
+PokemonMansion_2F_Text_Onybris3Intro::
+    .string "The control room is off limits!$"
+
+PokemonMansion_2F_Text_Onybris3Defeat::
+    .string "Short circuit!$"
+
+PokemonMansion_2F_Text_Onybris3Post::
+    .string "We cut the lights. You fetched the\n"
+    .string "key. Thanks for that!$"

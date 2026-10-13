@@ -6,6 +6,8 @@ CinnabarIsland_MapScripts::
 CinnabarIsland_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_CINNABAR_ISLAND
 	call CinnabarIsland_EventScript_CheckUnlockGym
+	call_if_set FLAG_CHRONDROLIA_RAID_STARTED, CinnabarIsland_EventScript_HideMayor
+	call_if_set FLAG_BADGE07_GET, CinnabarIsland_EventScript_CheckBlackout
 	call_if_eq VAR_MAP_SCENE_CINNABAR_ISLAND, 1, CinnabarIsland_EventScript_ReadyObjectsSailToOneIsland
 	call_if_eq VAR_MAP_SCENE_CINNABAR_ISLAND, 3, CinnabarIsland_EventScript_ReadyObjectsReturnFromSeviiIslands
 	call_if_eq VAR_MAP_SCENE_CINNABAR_ISLAND_2, 1, CinnabarIsland_EventScript_ReadyObjectsSailToOneIslandFromPokeCenter
@@ -46,6 +48,7 @@ CinnabarIsland_EventScript_UnlockGym::
 	return
 
 CinnabarIsland_OnFrame::
+	map_script_2 VAR_TEMP_2, 1, CinnabarIsland_EventScript_BlackoutScene
 	map_script_2 VAR_MAP_SCENE_CINNABAR_ISLAND_2, 1, CinnabarIsland_EventScript_ExitPokeCenterForOneIsland
 	map_script_2 VAR_MAP_SCENE_CINNABAR_ISLAND, 1, CinnabarIsland_EventScript_BillScene
 	map_script_2 VAR_MAP_SCENE_CINNABAR_ISLAND, 3, CinnabarIsland_EventScript_ReturnFromSeviiIslands
@@ -336,7 +339,49 @@ CinnabarIsland_EventScript_OldMan::
 	msgbox CinnabarIsland_Text_ScientistsExperimentInMansion, MSGBOX_NPC
 	end
 
+CinnabarIsland_EventScript_HideMayor::
+	setflag FLAG_TEMP_5
+	return
+
+CinnabarIsland_EventScript_CheckBlackout::
+	goto_if_set FLAG_CHRONDROLIA_RAID_STARTED, CinnabarIsland_EventScript_CheckBlackoutEnd
+	setvar VAR_TEMP_2, 1
+CinnabarIsland_EventScript_CheckBlackoutEnd::
+	return
+
+CinnabarIsland_Movement_MayorComes::
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+CinnabarIsland_EventScript_BlackoutScene::
+	lockall
+	setvar VAR_TEMP_2, 2
+	playse SE_M_EXPLOSION
+	fadescreen FADE_TO_BLACK
+	delay 40
+	msgbox CinnabarIsland_Text_LightsOut
+	fadescreen FADE_FROM_BLACK
+	applymovement LOCALID_CHRONDROLIA_MAYOR, CinnabarIsland_Movement_MayorComes
+	waitmovement 0
+	applymovement LOCALID_CHRONDROLIA_MAYOR, Common_Movement_FaceRight
+	waitmovement 0
+	msgbox CinnabarIsland_Text_MayorReveal1
+	msgbox CinnabarIsland_Text_MayorReveal2
+	msgbox CinnabarIsland_Text_MayorReveal3
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_CHRONDROLIA_MAYOR
+	delay 20
+	fadescreen FADE_FROM_BLACK
+	setflag FLAG_CHRONDROLIA_RAID_STARTED
+	releaseall
+	end
+
 CinnabarIsland_EventScript_PlantWorker::
+	goto_if_set FLAG_CHRONDROLIA_RAID_DONE, CinnabarIsland_EventScript_PlantWorkerDone
 	msgbox CinnabarIsland_Text_PlantWorker, MSGBOX_NPC
 	end
 
@@ -345,10 +390,12 @@ CinnabarIsland_EventScript_Mayor::
 	end
 
 CinnabarIsland_EventScript_Scientist::
+	goto_if_set FLAG_CHRONDROLIA_RAID_DONE, CinnabarIsland_EventScript_ScientistDone
 	msgbox CinnabarIsland_Text_Scientist, MSGBOX_NPC
 	end
 
 CinnabarIsland_EventScript_LittleGirl::
+	goto_if_set FLAG_CHRONDROLIA_RAID_DONE, CinnabarIsland_EventScript_LittleGirlDone
 	msgbox CinnabarIsland_Text_LittleGirl, MSGBOX_NPC
 	end
 
@@ -365,4 +412,16 @@ CinnabarIsland_EventScript_GymSign::
 	famechecker FAMECHECKER_BLAINE, 0
 	msgbox CinnabarIsland_Text_GymSign
 	releaseall
+	end
+
+CinnabarIsland_EventScript_PlantWorkerDone::
+	msgbox CinnabarIsland_Text_PlantWorkerDone, MSGBOX_NPC
+	end
+
+CinnabarIsland_EventScript_ScientistDone::
+	msgbox CinnabarIsland_Text_ScientistDone, MSGBOX_NPC
+	end
+
+CinnabarIsland_EventScript_LittleGirlDone::
+	msgbox CinnabarIsland_Text_LittleGirlDone, MSGBOX_NPC
 	end

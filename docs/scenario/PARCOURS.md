@@ -64,3 +64,6 @@ Ville occupée par ONYBRIS, tour HEMATEK = quartier général. BRICE, FLORA et N
 ## Chrondrolia (étape 7) — arrivée
 Joueur : Hematown -> Grenalux -> SURF sud (Route 21) -> Chrondrolia. Route 19 / volcan SEAFOAM fermés (éruption). Ville paisible, aucun policier ni Onybris visible ; les habitants jurent que la pierre n'est pas là. Centrale expliquée par la chaleur du volcan. Notes : Artikodin près de Bourg Quartz, Électhor dans la centrale, Sulfura dans le volcan (légendaires, plus tard).
 
+## Chrondrolia — événement (badge 7)
+Eddie battu -> blackout, le maire (taupe) dit avoir utilisé le joueur pour la clé secrète, la centrale est occupée ; SELENE (2e combat) garde le TOPAZ au 3F ; le joueur GAGNE la pierre (TOPAZ). Selene : l'éruption de la mer = leur oeuvre, le MAITRE est dans le volcan SEAFOAM. La mer (Route 19/20) et les grottes SEAFOAM s'ouvrent -> prochain QG (n°4, Gold + Silver).
+
