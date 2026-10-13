@@ -13,7 +13,7 @@ Rien n’est volé avant le début du jeu. Grenalux est d’abord **paisible** (
 4. **Ville (état B)** : la sortie nord est bloquée (« d’abord l’école, Chêne attend au labo »).
 5. **École (scène)** : vitrine vide, la professeure donne le cours sur les types et le **TYPE MEMO**, regarde le pendentif sans rien dire ; le rival surgit et **défie le joueur avec le partenaire opposé** (combat, pas de whiteout).
 6. **Labo (scène)** : Chêne annonce que ses fichiers ont été copiés, remet le **POKÉDEX** et 5 POKé BALLS ; le rival part. La ville est libre.
-7. **Plus tard** : le colis d’Opanihrum est livré à Chêne (plus de Pokédex à ce moment-là, uniquement la livraison). Maman soigne gratuitement quand on rentre.
+7. **Plus tard** : maman soigne gratuitement quand on rentre. (Le colis de Chêne à Opanihrum a été supprimé.)
 
 ## 2. Maison du joueur
 
@@ -595,7 +595,7 @@ Puis, d’origine : demande, POKÉDEX, 5 POKé BALLS, explications, rêve de Ch�
 > Their leader fights the AURA with
 > every step. Be careful, {PLAYER}.
 
-Chêne : retour 1 = livraison du colis d’Opanihrum (le Pokédex est déjà donné), retour final = scène du Pokédex national d’origine après la Ligue.
+Chêne : plus de colis (supprimé) ; retour final = scène du Pokédex national d’origine après la Ligue.
 
 
 ## 7. Le ranch (`PalletTown_Ranch`, zone extérieure)

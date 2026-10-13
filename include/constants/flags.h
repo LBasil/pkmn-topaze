@@ -1261,7 +1261,7 @@
 #define FLAG_ROUTE1_TALKED_DODUO         0x4C7 // Topaze: ranch mini-quest, calmed DODUO on ROUTE 1
 #define FLAG_ROUTE1_TALKED_NIDORANM      0x4C8 // Topaze: calmed NIDORAN male
 #define FLAG_ROUTE1_TALKED_NIDORANF      0x4C9 // Topaze: calmed NIDORAN female
-#define FLAG_0x4CA               0x4CA
+#define FLAG_VIRIDIAN_TUTORIAL_DONE      0x4CA // Topaze: OPANIHRUM old man's catch demo done (TEACHY TV given)
 #define FLAG_0x4CB               0x4CB
 #define FLAG_0x4CC               0x4CC
 #define FLAG_0x4CD               0x4CD

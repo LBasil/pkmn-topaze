@@ -3,8 +3,8 @@
 
 ## Chronologie du joueur
 1. **Arrivée** par la Route 1 (sud). Ville ordinaire : aucune scène à l’arrivée.
-2. **Boutique** : à la première entrée, le vendeur reconnaît le joueur (« Tu viens de Grenalux ? ») et lui confie le **COLIS de CHÊNE** (objet clé). Le colis n’affecte plus le Pokédex (déjà donné) : seule la livraison compte.
-3. **Vieil homme au barrage** (porte nord, Route 2) : tant que le colis n’est pas livré, il bloque la route (« propriété privée »). Livraison à Chêne (Grenalux, labo) → il a pris son café, fait la **démonstration de capture** et donne la **TEACHY TV**.
+2. **Boutique** : services d’origine (POKé BALL, POTION, ANTIDOTE, PARALYZE HEAL). Plus de colis de Chêne (supprimé le 13/10).
+3. **Vieil homme** (18,6) : plus de barrage ni de déclencheur automatique. En lui parlant : « Je te montre comment capturer ? » **OUI/NON** ; OUI = démonstration de capture puis **TEACHY TV** (`FLAG_VIRIDIAN_TUTORIAL_DONE`) ; NON = « reviens quand tu veux ».
 4. **Arène (la Fonderie, Hepha, Acier)** : portes verrouillées tant que les badges 1 à 7 ne sont pas tous obtenus ; message + saut en arrière.
 5. Centre Pokémon et boutique : services d’origine (boutique : POKé BALL, POTION, ANTIDOTE, PARALYZE HEAL).
 
@@ -26,6 +26,18 @@
 > OPANIHRUM GYM's LEADER returned!
 
 **PNJ VAR_0 (18,6)** — `ViridianCity_EventScript_TutorialOldMan`
+
+> Well, now, I've had my coffee!
+> Hm? You're working on a POKéDEX?
+> — — —
+> Whenever you catch a POKéMON, the
+> POKéDEX updates its data.
+> — — —
+> Shall I show you how to catch
+> one?
+
+> Suit yourself.
+> Come back whenever you like.
 
 > Well, now, I've had my coffee, and
 > that's what I need to get going!
@@ -54,11 +66,6 @@
 > At first, focus on weakening the
 > POKéMON before trying to catch it.
 
-> I absolutely forbid you from
-> going through here!
-> — — —
-> This is private property!
-
 **PNJ WOMAN_3 (17,12)** — `ViridianCity_EventScript_Woman`
 
 > I go shopping in PYROPIA
@@ -66,12 +73,6 @@
 > — — —
 > I have to take the winding trail in
 > CINDER FOREST when I go.
-
-> Oh, Grandpa!
-> Don't be so mean!
-> — — —
-> I'm so sorry. Since the TEAM ONYBRIS
-> news, he doesn't trust strangers.
 
 **PNJ YOUNGSTER (31,21)** — `ViridianCity_EventScript_Youngster`
 
@@ -138,8 +139,7 @@
 
 **PNJ CLERK (2,3)** — `ViridianCity_Mart_EventScript_Clerk`
 
-> Okay, thanks! Please say hi to
-> PROF. OAK for me, too.
+> *(texte d’origine FireRed ou service)*
 
 **PNJ YOUNGSTER (6,2)** — `ViridianCity_Mart_EventScript_Youngster`
 

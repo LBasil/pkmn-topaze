@@ -36,7 +36,7 @@ Rien n’est volé avant le début du jeu. Grenalux est d’abord **paisible** (
 4. **Ville (état B)** : la sortie nord est bloquée (« d’abord l’école, Chêne attend au labo »).
 5. **École (scène)** : vitrine vide, la professeure donne le cours sur les types et le **TYPE MEMO**, regarde le pendentif sans rien dire ; le rival surgit et **défie le joueur avec le partenaire opposé** (combat, pas de whiteout).
 6. **Labo (scène)** : Chêne annonce que ses fichiers ont été copiés, remet le **POKÉDEX** et 5 POKé BALLS ; le rival part. La ville est libre.
-7. **Plus tard** : le colis d’Opanihrum est livré à Chêne (plus de Pokédex à ce moment-là, uniquement la livraison). Maman soigne gratuitement quand on rentre.
+7. **Plus tard** : maman soigne gratuitement quand on rentre. (Le colis de Chêne à Opanihrum a été supprimé.)
 
 ## 2. Maison du joueur
 ''')
@@ -90,7 +90,7 @@ A(row('PalletTown_ProfessorOaksLab','Assistant 1','3,11','état B','PalletTown_P
 A(row('PalletTown_ProfessorOaksLab','Assistant 2','11,10','état B','PalletTown_ProfessorOaksLab_Text_AideStrike2'))
 A(row('PalletTown_ProfessorOaksLab','Ordinateur','2-3,1','état B','PalletTown_ProfessorOaksLab_Text_ComputerStrike'))
 A(row('PalletTown_ProfessorOaksLab','Chêne','6,3','après 4 badges (une fois)','PalletTown_ProfessorOaksLab_Text_OakReturn2'))
-A('Chêne : retour 1 = livraison du colis d’Opanihrum (le Pokédex est déjà donné), retour final = scène du Pokédex national d’origine après la Ligue.\n')
+A('Chêne : plus de colis (supprimé) ; retour final = scène du Pokédex national d’origine après la Ligue.\n')
 A('\n## 7. Le ranch (`PalletTown_Ranch`, zone extérieure)\n')
 for who,w,a,b in [('Ouvrier 1','9,7','Hand1','Hand1Strike'),('Ouvrier 2','14,12','Hand2','Hand2Strike')]:
     A(row('PalletTown_Ranch',who,w,'état A',f'PalletTown_Ranch_Text_{a}'))

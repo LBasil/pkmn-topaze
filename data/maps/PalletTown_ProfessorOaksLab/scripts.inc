@@ -583,7 +583,6 @@ PalletTown_ProfessorOaksLab_EventScript_ProfOakMain::
 	goto_if_set FLAG_SYS_GAME_CLEAR, PalletTown_ProfessorOaksLab_EventScript_TryStartNationalDexScene
 	goto_if_eq VAR_MAP_SCENE_CERULEAN_CITY_RIVAL, 1, PalletTown_ProfessorOaksLab_EventScript_RatePokedex
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6, PalletTown_ProfessorOaksLab_EventScript_RatePokedexOrTryGiveBalls
-	goto_if_ge VAR_MAP_SCENE_VIRIDIAN_CITY_MART, 1, PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 4, PalletTown_ProfessorOaksLab_EventScript_OakBattleMonForItToGrow
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_ProfessorOaksLab_EventScript_OakCanReachNextTownWithMon
 	msgbox PalletTown_ProfessorOaksLab_Text_OakWhichOneWillYouChoose
@@ -602,25 +601,6 @@ PalletTown_ProfessorOaksLab_EventScript_OakCanReachNextTownWithMon::
 
 PalletTown_ProfessorOaksLab_EventScript_OakBattleMonForItToGrow::
 	msgbox PalletTown_ProfessorOaksLab_Text_OakBattleMonForItToGrow
-	release
-	end
-
-@ Topaze: the POKéDEX is now given right after the school (PokedexIntroScene); the parcel only needs delivering
-PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene::
-	msgbox PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMe
-	textcolor NPC_TEXT_COLOR_NEUTRAL
-	playfanfare MUS_OBTAIN_TMHM
-	message PalletTown_ProfessorOaksLab_Text_DeliveredOaksParcel
-	waitmessage
-	waitfanfare
-	call EventScript_RestorePrevTextColor
-	removeitem ITEM_OAKS_PARCEL
-	msgbox PalletTown_ProfessorOaksLab_Text_OakCustomBallIOrdered
-	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6
-	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_MART, 2
-	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 1
-	setvar VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 1
-	setvar VAR_MAP_SCENE_ROUTE22, 1
 	release
 	end
 
@@ -663,7 +643,9 @@ PalletTown_ProfessorOaksLab_EventScript_PokedexIntroScene::
 	fadedefaultbgm
 	setvar VAR_GRENALUX_OPENING, 4
 	setvar VAR_MAP_SCENE_PALLET_TOWN_OAK, 1
-	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 4
+	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6
+	setvar VAR_MAP_SCENE_PALLET_TOWN_RIVALS_HOUSE, 1
+	setvar VAR_MAP_SCENE_ROUTE22, 1
 	releaseall
 	end
 

@@ -44,22 +44,20 @@ ViridianCity_Text_ThisIsPrivateProperty::
     .string "going through here!\p"
     .string "This is private property!$"
 
+ViridianCity_Text_OfferCatchDemo::
+    .string "Well, now, I've had my coffee!\n"
+    .string "Hm? You're working on a POKéDEX?\p"
+    .string "Whenever you catch a POKéMON, the\n"
+    .string "POKéDEX updates its data.\p"
+    .string "Shall I show you how to catch\n"
+    .string "one?$"
+
+ViridianCity_Text_DemoAnytime::
+    .string "Suit yourself.\n"
+    .string "Come back whenever you like.$"
+
 ViridianCity_Text_ShowYouHowToCatchMons::
-    .string "Well, now, I've had my coffee, and\n"
-    .string "that's what I need to get going!\p"
-    .string "Hm?\n"
-    .string "What is that red box you have?\p"
-    .string "Ah, so you're working on your\n"
-    .string "POKéDEX.\p"
-    .string "Then let me give you a word of\n"
-    .string "advice.\p"
-    .string "Whenever you catch a POKéMON,\n"
-    .string "the POKéDEX automatically updates\l"
-    .string "its data.\p"
-    .string "…You don't know how to catch\n"
-    .string "a POKéMON?\p"
-    .string "I suppose I had better show you\n"
-    .string "then!$"
+    .string "Watch closely, then!$"
 
 ViridianCity_Text_ThatWasEducationalTakeThis::
     .string "There! Now tell me, that was\n"
