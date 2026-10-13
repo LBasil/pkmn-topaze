@@ -16,7 +16,7 @@ RocketHideout_B4F_Text_GiovanniPostBattle::
     .string "Let us settle it like adults: at my\n"
     .string "table in the GAME CORNER, upstairs.\p"
     .string "Win, and you keep it. Lose, and it\n"
-    .string "is mine. Come, if you have the guts!$"
+    .string "is mine. Come, if you dare!$"
 
 RocketHideout_B4F_Text_Grunt2Intro::
     .string "I know you!\n"

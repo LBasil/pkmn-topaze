@@ -292,3 +292,10 @@ Chemin du joueur après le ticket : Tourmalia → **Route 5** (pension, panneau 
 - Route 16 : dresseurs (cue balls/motards niv. 31-37) conserves ; Lao et Koji laissent un indice (hommes en noir payes pour regarder ailleurs / descendus par la Cycling Road). Garde de l'entree nord : rappel velo (boutique de Tourmalia + bon du Fan Club d'Apatia).
 - Route 17 (Cycling Road, 10 motards 28-37) : Corey et Jamal laissent des indices (voleurs passes a l'aube, le Gardien d'Amethiolite). Route 18 (oiseleurs 29-38) : Jacob mentionne les hommes en noir vers Amethiolite.
 - Non teste en emulateur.
+
+## Amethiolite (ex-Fuchsia) — evenement de la 6e pierre (valide par Basil : "zoo libere + embuscade", twist QUARTZ garde pour plus tard)
+- Idee : Onybris ouvre les enclos du zoo (diversion, fidele a leur ideologie "liberer les Pokemon") et cambriole la MAISON DU GARDIEN, ou la pierre est exposee. Le Gardien avait mis une REPLIQUE (amethyste banale) en vitrine : les voleurs repartent avec un faux, la vraie pierre est cachee.
+- Arrivee (ouest, (1,13..15), FLAG_AMETHYST_RAID_STARTED = 0x022) : un employe du Safari (obj (3,13), FLAG_TEMP_6) donne l'alerte. Maison du Gardien : declencheurs (5..7,8) -> `RaidScene` : 2 sbires (GRUNT_19 : Smogo-Nosferapti-Rattatac ~31, GRUNT_20 : Nosferalto-Smogogo 32, FLAG_TEMP_5) battus ; le chef est parti par l'arriere ; FLAG_AMETHYST_RAID_DONE = 0x023.
+- Le Gardien reste inintelligible (dentier perdu, mecanique d'origine) : le joueur doit rapporter les DENTS EN OR du Parc Safari -> HM04 (Force) + il revele que la vraie pierre est cachee et qu'il la confiera apres la victoire sur ACHLYS (badge 5, `FLAG_AMETHYST_STONE_GIVEN` = 0x024, objet-pierre en flag pour l'instant).
+- Barrages : 3 policiers est (46,13..15) + 6 sud (22..27,27), FLAG_TEMP_7, masques si FLAG_BADGE05_GET ; BFS depuis l'ouest : seule la Route 18 est atteignable (verifie).
+- A faire : arene d'ACHLYS (dresseurs/textes Poison, ex-Koga), PNJ de la ville (textes d'origine), zoo (enclos) / Parc Safari (faune et niveaux). Non teste en emulateur.

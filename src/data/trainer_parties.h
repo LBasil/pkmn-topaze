@@ -4548,32 +4548,32 @@ static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt18[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt19[] = {
     {
-        .iv = 0,
-        .lvl = 28,
+        .iv = 40,
+        .lvl = 31,
+        .species = SPECIES_KOFFING,
+    },
+    {
+        .iv = 40,
+        .lvl = 31,
         .species = SPECIES_ZUBAT,
     },
     {
-        .iv = 0,
-        .lvl = 28,
-        .species = SPECIES_ZUBAT,
-    },
-    {
-        .iv = 0,
-        .lvl = 28,
-        .species = SPECIES_GOLBAT,
+        .iv = 40,
+        .lvl = 32,
+        .species = SPECIES_RATICATE,
     },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt20[] = {
     {
-        .iv = 0,
-        .lvl = 29,
-        .species = SPECIES_KOFFING,
+        .iv = 40,
+        .lvl = 32,
+        .species = SPECIES_GOLBAT,
     },
     {
-        .iv = 0,
-        .lvl = 29,
-        .species = SPECIES_DROWZEE,
+        .iv = 40,
+        .lvl = 32,
+        .species = SPECIES_WEEZING,
     },
 };
 

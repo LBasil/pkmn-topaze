@@ -1,9 +1,59 @@
 FuchsiaCity_WardensHouse_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, FuchsiaCity_WardensHouse_OnTransition
 	.byte 0
+
+FuchsiaCity_WardensHouse_OnTransition::
+	goto_if_set FLAG_AMETHYST_RAID_DONE, FuchsiaCity_WardensHouse_EventScript_HideGrunts
+	end
+
+FuchsiaCity_WardensHouse_EventScript_HideGrunts::
+	setflag FLAG_TEMP_5
+	end
+
+FuchsiaCity_WardensHouse_EventScript_RaidScene::
+	lockall
+	goto_if_set FLAG_AMETHYST_RAID_DONE, FuchsiaCity_WardensHouse_EventScript_RaidSceneDone
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	msgbox FuchsiaCity_WardensHouse_Text_RaidIntro
+	closemessage
+	trainerbattle_no_intro TRAINER_TEAM_ROCKET_GRUNT_19, FuchsiaCity_WardensHouse_Text_Grunt1Defeat
+	trainerbattle_no_intro TRAINER_TEAM_ROCKET_GRUNT_20, FuchsiaCity_WardensHouse_Text_Grunt2Defeat
+	msgbox FuchsiaCity_WardensHouse_Text_RaidAfter
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_AMETHYST_GRUNT1
+	removeobject LOCALID_AMETHYST_GRUNT2
+	delay 20
+	fadescreen FADE_FROM_BLACK
+	msgbox FuchsiaCity_WardensHouse_Text_EmptyCase
+	setflag FLAG_AMETHYST_RAID_DONE
+	releaseall
+	end
+
+FuchsiaCity_WardensHouse_EventScript_RaidSceneDone::
+	releaseall
+	end
+
+FuchsiaCity_WardensHouse_EventScript_Grunt1::
+	lock
+	faceplayer
+	msgbox FuchsiaCity_WardensHouse_Text_RaidIntro
+	release
+	end
+
+FuchsiaCity_WardensHouse_EventScript_Grunt2::
+	lock
+	faceplayer
+	msgbox FuchsiaCity_WardensHouse_Text_RaidIntro
+	release
+	end
 
 FuchsiaCity_WardensHouse_EventScript_Warden::
 	lock
 	faceplayer
+	goto_if_set FLAG_AMETHYST_STONE_GIVEN, FuchsiaCity_WardensHouse_EventScript_ExplainStrength
+	call_if_set FLAG_BADGE05_GET, FuchsiaCity_WardensHouse_EventScript_CheckStoneGift
 	goto_if_set FLAG_GOT_HM04, FuchsiaCity_WardensHouse_EventScript_ExplainStrength
 	goto_if_set FLAG_HIDE_SAFARI_ZONE_WEST_GOLD_TEETH, FuchsiaCity_WardensHouse_EventScript_GiveGoldTeeth
 	msgbox FuchsiaCity_WardensHouse_Text_HifFuffHefifoo, MSGBOX_YESNO
@@ -26,6 +76,7 @@ FuchsiaCity_WardensHouse_EventScript_GiveGoldTeeth::
 	giveitem_msg FuchsiaCity_WardensHouse_Text_ReceivedHM04FromWarden, ITEM_HM04
 	setflag FLAG_GOT_HM04
 	removeitem ITEM_GOLD_TEETH
+	msgbox FuchsiaCity_WardensHouse_Text_RealStone
 	release
 	end
 
@@ -57,3 +108,13 @@ FuchsiaCity_WardensHouse_EventScript_DisplaySign1::
 FuchsiaCity_WardensHouse_EventScript_DisplaySign2::
 	msgbox FuchsiaCity_WardensHouse_Text_OldMonMerchandiseOnDisplay, MSGBOX_SIGN
 	end
+
+FuchsiaCity_WardensHouse_EventScript_CheckStoneGift::
+	goto_if_unset FLAG_GOT_HM04, EventScript_Return
+	msgbox FuchsiaCity_WardensHouse_Text_StoneGift
+	playfanfare MUS_OBTAIN_KEY_ITEM
+	message FuchsiaCity_WardensHouse_Text_ObtainedAmethiolite
+	waitfanfare
+	waitmessage
+	setflag FLAG_AMETHYST_STONE_GIVEN
+	return

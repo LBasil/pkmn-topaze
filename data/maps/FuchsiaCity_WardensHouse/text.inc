@@ -63,3 +63,43 @@ FuchsiaCity_WardensHouse_Text_OldMonMerchandiseOnDisplay::
     .string "Old POKéMON merchandise is on\n"
     .string "display.$"
 
+
+FuchsiaCity_WardensHouse_Text_RaidIntro::
+    .string "Back off, kid! The AMETHIOLITE is\n"
+    .string "ONYBRIS property now!$"
+
+FuchsiaCity_WardensHouse_Text_Grunt1Defeat::
+    .string "Argh! The boss will hear of this!$"
+
+FuchsiaCity_WardensHouse_Text_Grunt2Defeat::
+    .string "No way! We had the stone!$"
+
+FuchsiaCity_WardensHouse_Text_RaidAfter::
+    .string "Their leader already took the case\n"
+    .string "and bolted out the back.\p"
+    .string "The two thugs follow, laughing.\n"
+    .string "They cannot be caught now.$"
+
+FuchsiaCity_WardensHouse_Text_EmptyCase::
+    .string "The display case is open... but\n"
+    .string "the WARDEN is only chuckling.\p"
+    .string "WARDEN: Hif fuff hee hee hee!\n"
+    .string "Ho hoo hif feef!$"
+
+FuchsiaCity_WardensHouse_Text_RealStone::
+    .string "WARDEN: Now hear me, child!\p"
+    .string "The thieves took a replica, a\n"
+    .string "cheap amethyst I put on display.\p"
+    .string "The real AMETHIOLITE is hidden\n"
+    .string "where no thief would look.\p"
+    .string "Beat ACHLYS, the GYM LEADER, and I\n"
+    .string "will entrust it to you.$"
+
+FuchsiaCity_WardensHouse_Text_StoneGift::
+    .string "WARDEN: You beat ACHLYS! Then you\n"
+    .string "are the one I was waiting for.\p"
+    .string "Take the real AMETHIOLITE. Guard\n"
+    .string "it better than I did.$"
+
+FuchsiaCity_WardensHouse_Text_ObtainedAmethiolite::
+    .string "{PLAYER} got the AMETHIOLITE!$"

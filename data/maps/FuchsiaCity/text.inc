@@ -110,3 +110,23 @@ FuchsiaCity_Text_MyFatherIsGymLeader::
     .string "I'm training to use POISON POKéMON\n"
     .string "as well as my father.$"
 
+
+FuchsiaCity_Text_StafferAlarm::
+    .string "Help! Men in black burst into the\n"
+    .string "zoo and threw open every cage!\p"
+    .string "POKéMON are running loose, and\n"
+    .string "they went for the WARDEN's HOUSE!\p"
+    .string "His AMETHIOLITE is on display\n"
+    .string "there. Please, stop them!$"
+
+FuchsiaCity_Text_PoliceRaid::
+    .string "Sorry, the town is sealed until the\n"
+    .string "zoo POKéMON are rounded up.\p"
+    .string "Thieves are on the loose. Nobody\n"
+    .string "goes in or out this way.$"
+
+FuchsiaCity_Text_PoliceBadge::
+    .string "The thieves slipped away, so we\n"
+    .string "keep watch. Only trainers who can\l"
+    .string "prove themselves may pass.\p"
+    .string "Beat the GYM LEADER first, kid.$"

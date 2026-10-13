@@ -4,6 +4,8 @@ FuchsiaCity_MapScripts::
 
 FuchsiaCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_FUCHSIA_CITY
+	call_if_set FLAG_AMETHYST_RAID_STARTED, FuchsiaCity_EventScript_HideStaffer
+	call_if_set FLAG_BADGE05_GET, FuchsiaCity_EventScript_HidePolice
 	call_if_set FLAG_GOT_DOME_FOSSIL, FuchsiaCity_EventScript_SetOmanyteGfx
 	call_if_unset FLAG_GOT_DOME_FOSSIL, FuchsiaCity_EventScript_SetKabutoGfx
 	end
@@ -136,4 +138,46 @@ FuchsiaCity_EventScript_OmanyteSign::
 	msgbox FuchsiaCity_Text_OmanyteSign
 	hidemonpic
 	releaseall
+	end
+
+FuchsiaCity_EventScript_HideStaffer::
+	setflag FLAG_TEMP_6
+	return
+
+FuchsiaCity_EventScript_HidePolice::
+	setflag FLAG_TEMP_7
+	return
+
+FuchsiaCity_EventScript_ArrivalScene::
+	lockall
+	goto_if_set FLAG_AMETHYST_RAID_STARTED, FuchsiaCity_EventScript_ArrivalDone
+	applymovement LOCALID_AMETHYST_STAFFER, Common_Movement_WalkInPlaceFasterLeft
+	waitmovement 0
+	playse SE_PIN
+	applymovement LOCALID_AMETHYST_STAFFER, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox FuchsiaCity_Text_StafferAlarm
+	setflag FLAG_AMETHYST_RAID_STARTED
+	releaseall
+	end
+
+FuchsiaCity_EventScript_ArrivalDone::
+	releaseall
+	end
+
+FuchsiaCity_EventScript_Staffer::
+	msgbox FuchsiaCity_Text_StafferAlarm, MSGBOX_NPC
+	end
+
+FuchsiaCity_EventScript_Police::
+	lock
+	faceplayer
+	goto_if_set FLAG_AMETHYST_RAID_DONE, FuchsiaCity_EventScript_PoliceDone
+	msgbox FuchsiaCity_Text_PoliceRaid
+	release
+	end
+
+FuchsiaCity_EventScript_PoliceDone::
+	msgbox FuchsiaCity_Text_PoliceBadge
+	release
 	end
