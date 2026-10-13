@@ -27,3 +27,31 @@ FourIsland_LoreleisHouse_Text_WillDoWhatICanHereAndNow::
 FourIsland_LoreleisHouse_Text_StuffedMonDollsGalore::
     .string "Stuffed POKéMON dolls galore!$"
 
+FourIsland_LoreleisHouse_Text_EchoLoreleiHello::
+    .string "LORELEI: The ice has been\n"
+    .string "strange lately, CHAMPION.$"
+
+FourIsland_LoreleisHouse_Text_EchoLoreleiEcho::
+    .string "LORELEI: Two beasts of the old\n"
+    .string "legends passed through here.\p"
+    .string "Now the fourth ECHO is sealed in\n"
+    .string "the deepest ICEFALL CAVE.\p"
+    .string "A statue of ice walks there.\n"
+    .string "Please, calm it down.$"
+
+FourIsland_LoreleisHouse_Text_EchoLoreleiWait::
+    .string "LORELEI: The ECHO is in the back\n"
+    .string "of ICEFALL CAVE. Stay warm.$"
+
+FourIsland_LoreleisHouse_Text_EchoLoreleiGift::
+    .string "LORELEI: The cold has lifted.\n"
+    .string "Thank you.\p"
+    .string "A little POKéMON came with the\n"
+    .string "ECHO. It is yours now.$"
+
+FourIsland_LoreleisHouse_Text_EchoGotTreecko::
+    .string "{PLAYER} received TREECKO!$"
+
+FourIsland_LoreleisHouse_Text_EchoLoreleiNext4::
+    .string "LORELEI: Four ECHOES closed.\n"
+    .string "Ask BILL about the next one.$"

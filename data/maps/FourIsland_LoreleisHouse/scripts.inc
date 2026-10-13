@@ -3,12 +3,19 @@ FourIsland_LoreleisHouse_MapScripts::
 	.byte 0
 
 FourIsland_LoreleisHouse_OnTransition::
+	goto_if_set FLAG_TOPAZE_POSTGAME, FourIsland_LoreleisHouse_EventScript_PostgameLorelei
+	special UpdateLoreleiDollCollection
+	end
+
+FourIsland_LoreleisHouse_EventScript_PostgameLorelei::
+	clearflag FLAG_HIDE_LORELEI_IN_HER_HOUSE
 	special UpdateLoreleiDollCollection
 	end
 
 FourIsland_LoreleisHouse_EventScript_Lorelei::
 	lock
 	faceplayer
+	goto_if_set FLAG_TOPAZE_POSTGAME, FourIsland_LoreleisHouse_EventScript_EchoLorelei
 	goto_if_set FLAG_TALKED_TO_LORELEI_AFTER_WAREHOUSE, FourIsland_LoreleisHouse_EventScript_Lorelei3
 	goto_if_set FLAG_DEFEATED_ROCKETS_IN_WAREHOUSE, FourIsland_LoreleisHouse_EventScript_Lorelei2
 	msgbox FourIsland_LoreleisHouse_Text_IfAnythingWereToHappenToIsland
@@ -29,5 +36,81 @@ FourIsland_LoreleisHouse_EventScript_Lorelei3::
 FourIsland_LoreleisHouse_EventScript_Doll::
 	lock
 	msgbox FourIsland_LoreleisHouse_Text_StuffedMonDollsGalore
+	release
+	end
+
+@ Topaze: Echoes of Time, island 4
+FourIsland_LoreleisHouse_EventScript_EchoLorelei::
+	goto_if_ge VAR_ECHO_STAGE, 12, FourIsland_LoreleisHouse_EventScript_EchoLoreleiAfter
+	goto_if_eq VAR_ECHO_STAGE, 11, FourIsland_LoreleisHouse_EventScript_EchoLoreleiGift
+	goto_if_eq VAR_ECHO_STAGE, 10, FourIsland_LoreleisHouse_EventScript_EchoLoreleiWait
+	goto_if_eq VAR_ECHO_STAGE, 9, FourIsland_LoreleisHouse_EventScript_EchoLoreleiEcho
+	msgbox FourIsland_LoreleisHouse_Text_EchoLoreleiHello
+	release
+	end
+
+FourIsland_LoreleisHouse_EventScript_EchoLoreleiEcho::
+	msgbox FourIsland_LoreleisHouse_Text_EchoLoreleiEcho
+	setvar VAR_ECHO_STAGE, 10
+	clearflag FLAG_HIDE_ECHO_BEAST4
+	release
+	end
+
+FourIsland_LoreleisHouse_EventScript_EchoLoreleiWait::
+	msgbox FourIsland_LoreleisHouse_Text_EchoLoreleiWait
+	release
+	end
+
+FourIsland_LoreleisHouse_EventScript_EchoLoreleiAfter::
+	msgbox FourIsland_LoreleisHouse_Text_EchoLoreleiNext4
+	release
+	end
+
+FourIsland_LoreleisHouse_EventScript_EchoLoreleiGift::
+	msgbox FourIsland_LoreleisHouse_Text_EchoLoreleiGift
+	setvar VAR_TEMP_1, SPECIES_TREECKO
+	givemon SPECIES_TREECKO, 30
+	goto_if_eq VAR_RESULT, 0, FourIsland_LoreleisHouse_EventScript_EchoGift4Party
+	goto_if_eq VAR_RESULT, 1, FourIsland_LoreleisHouse_EventScript_EchoGift4PC
+	goto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon
+	release
+	end
+
+FourIsland_LoreleisHouse_EventScript_EchoGift4Party::
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playfanfare MUS_LEVEL_UP
+	message FourIsland_LoreleisHouse_Text_EchoGotTreecko
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_TREECKO
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FourIsland_LoreleisHouse_EventScript_EchoGift4End
+	call EventScript_GetGiftMonPartySlot
+	call EventScript_ChangePokemonNickname
+	goto FourIsland_LoreleisHouse_EventScript_EchoGift4End
+	end
+
+FourIsland_LoreleisHouse_EventScript_EchoGift4PC::
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playfanfare MUS_LEVEL_UP
+	message FourIsland_LoreleisHouse_Text_EchoGotTreecko
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_TREECKO
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FourIsland_LoreleisHouse_EventScript_EchoGift4ToPC
+	call EventScript_NameReceivedBoxMon
+	goto FourIsland_LoreleisHouse_EventScript_EchoGift4ToPC
+	end
+
+FourIsland_LoreleisHouse_EventScript_EchoGift4ToPC::
+	call EventScript_TransferredToPC
+	goto FourIsland_LoreleisHouse_EventScript_EchoGift4End
+	end
+
+FourIsland_LoreleisHouse_EventScript_EchoGift4End::
+	textcolor NPC_TEXT_COLOR_MALE
+	setvar VAR_ECHO_STAGE, 12
+	msgbox FourIsland_LoreleisHouse_Text_EchoLoreleiNext4
 	release
 	end

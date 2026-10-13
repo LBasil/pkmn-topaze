@@ -213,8 +213,8 @@
 #define FLAG_ECHO_BEAST2_DONE    0x0C3
 #define FLAG_HIDE_ECHO_BEAST3    0x0C4 // Topaze: Echo 3 beast (Suicune) on Bond Bridge
 #define FLAG_ECHO_BEAST3_DONE    0x0C5
-#define FLAG_0x0C6               0x0C6
-#define FLAG_0x0C7               0x0C7
+#define FLAG_HIDE_ECHO_BEAST4    0x0C6 // Topaze: Echo 4 (Regice) in Icefall Cave Back
+#define FLAG_ECHO_BEAST4_DONE    0x0C7
 #define FLAG_0x0C8               0x0C8
 #define FLAG_0x0C9               0x0C9
 #define FLAG_0x0CA               0x0CA

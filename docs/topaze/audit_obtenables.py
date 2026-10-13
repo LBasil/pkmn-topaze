@@ -6,7 +6,7 @@ os.chdir(os.path.join(os.path.dirname(__file__), '..', '..'))
 sp = {}  # nom -> id
 for m in re.finditer(r'#define SPECIES_(\w+)\s+(\d+)', open('include/constants/species.h').read()):
     n, i = m.group(1), int(m.group(2))
-    if 1 <= i <= 386 and not n.startswith('OLD_UNOWN'): sp[n] = i
+    if 1 <= i <= 411 and not n.startswith('OLD_UNOWN') and not n.endswith('_EGG') and n != 'UNOWN_B' and not n.startswith('UNOWN_'): sp[n] = i
 src = {}
 def add(n, why):
     if n in sp: src.setdefault(n, set()).add(why)

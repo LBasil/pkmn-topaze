@@ -366,3 +366,5 @@ Généré par `league_elders.py` puis `league_elders2.py` (non rejouables). `VAR
 **Écho 2** (`docs/topaze/sevii_echo2.py`, non rejouable) : `VAR_ECHO_STAGE` 3→4 (Bill annonce, révèle Entei) →5 (Entei résolu, Cap Brink (12,29)) →6 (Bill donne Cyndaquil). Flags `FLAG_HIDE_ECHO_BEAST2` (0x0C2), `FLAG_ECHO_BEAST2_DONE` (0x0C3).
 
 **Écho 3** (`docs/topaze/sevii_echo3.py`, non rejouable) : `VAR_ECHO_STAGE` 6→7 (Celio annonce) →8 (Suicune résolu, Bond Bridge (30,10)) →9 (Celio donne Totodile). Flags `FLAG_HIDE_ECHO_BEAST3` (0x0C4), `FLAG_ECHO_BEAST3_DONE` (0x0C5). Prochain : Écho 4 sur l'île 4 (stage 9).
+
+**Écho 4** (`docs/topaze/sevii_echo4.py` + 1 ajout manuel, non rejouable) : `VAR_ECHO_STAGE` 9→10 (Lorelei, dans sa maison, annonce) →11 (Regice résolu, Icefall Cave Back (12,15), sprite = rocher faute de sprite Regi) →12 (Lorelei donne Treecko). Flags `FLAG_HIDE_ECHO_BEAST4` (0x0C6), `FLAG_ECHO_BEAST4_DONE` (0x0C7). Lorelei réapparaît dans sa maison en post-game. Audit des obtenables corrigé : il inclut maintenant les espèces d'id 387-411 (Regis, Latis, Kyogre, Groudon, Rayquaza, Jirachi, Ralts, Bagon, Beldum, fossiles…) : 350/386.

@@ -3,6 +3,7 @@ FourIsland_IcefallCave_Back_MapScripts::
 	.byte 0
 
 FourIsland_IcefallCave_Back_OnTransition::
+	call FourIsland_IcefallCave_Back_EventScript_EchoSetup
 	call_if_eq VAR_MAP_SCENE_ICEFALL_CAVE_BACK, 1, FourIsland_IcefallCave_Back_EventScript_HideLorelei
 	end
 
@@ -189,3 +190,54 @@ FourIsland_IcefallCave_Back_Movement_LoreleiWalkToPlayer::
 FourIsland_IcefallCave_Back_EventScript_Lorelei::
 	msgbox FourIsland_IcefallCave_Back_Text_ThankYouThisIsAwful, MSGBOX_NPC
 	end
+
+@ Topaze: Echo 4 (static, stays if fled)
+FourIsland_IcefallCave_Back_EventScript_EchoSetup::
+	setflag FLAG_HIDE_ECHO_BEAST4
+	call_if_set FLAG_TOPAZE_POSTGAME, FourIsland_IcefallCave_Back_EventScript_EchoClearRockets
+	goto_if_set FLAG_ECHO_BEAST4_DONE, EventScript_Return
+	goto_if_ne VAR_ECHO_STAGE, 10, EventScript_Return
+	clearflag FLAG_HIDE_ECHO_BEAST4
+	return
+
+FourIsland_IcefallCave_Back_EventScript_Regice::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	setwildbattle SPECIES_REGICE, 52
+	waitse
+	playmoncry SPECIES_REGICE, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, FourIsland_IcefallCave_Back_EventScript_DefeatedRegice
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, FourIsland_IcefallCave_Back_EventScript_RanFromRegice
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, FourIsland_IcefallCave_Back_EventScript_RanFromRegice
+	setflag FLAG_ECHO_BEAST4_DONE
+	setflag FLAG_HIDE_ECHO_BEAST4
+	setvar VAR_ECHO_STAGE, 11
+	release
+	end
+
+FourIsland_IcefallCave_Back_EventScript_DefeatedRegice::
+	setflag FLAG_ECHO_BEAST4_DONE
+	setvar VAR_ECHO_STAGE, 11
+	goto EventScript_RemoveStaticMon
+	end
+
+FourIsland_IcefallCave_Back_EventScript_RanFromRegice::
+	setvar VAR_0x8004, SPECIES_REGICE
+	goto EventScript_MonFlewAway
+	end
+
+@ Topaze: post-game, the vanilla Rocket scene is over (they left); nobody blocks the way to the Echo
+FourIsland_IcefallCave_Back_EventScript_EchoClearRockets::
+	setflag FLAG_HIDE_ICEFALL_CAVE_ROCKETS
+	setflag FLAG_HIDE_ICEFALL_CAVE_LORELEI
+	setvar VAR_MAP_SCENE_ICEFALL_CAVE_BACK, 2
+	return

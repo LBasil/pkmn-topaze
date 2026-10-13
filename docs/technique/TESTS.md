@@ -138,3 +138,6 @@ Piste réaliste : faire d'abord le jeu jouable, puis ajouter un follower **limit
 
 ## Écho 3 (post-game, île 3)
 - `bench/echo3_celio_test.py <étape>` (6→7 annonce, 8→9 cadeau Kaiminus/Totodile) et `echo3_suicune_test.py` (Suicune niv. 50 au Bond Bridge (30,10), 7→8). OK en émulateur.
+
+## Écho 4 (post-game, île 4)
+- `bench/echo4_lorelei_test.py <étape>` (9→10 annonce, 11→12 cadeau Arcko/Treecko) et `echo4_regice_test.py` (Regice niv. 52 dans Icefall Cave Back (12,15), 10→11 ; sprite provisoire = rocher). OK en émulateur. Les Rockets/Lorelei de la scène vanilla sont cachés en post-game.
