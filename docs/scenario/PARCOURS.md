@@ -42,8 +42,8 @@ Courbe de niveaux : R3 10–16 → Kay 15–20 → R4/4E 13–16 → Sylvestre 1
 - **Classe d'entraîneur** TEAM_ROCKET s'affiche « TEAM ONYBRIS » ; le nom du rival est remplacé par celui choisi par le joueur.
 
 ## 5. Points ouverts (par priorité)
-1. **Pas encore normalisés** : Routes 7 / 8 / 12 (niveaux d'origine mélangés : R8 sauvages 18–23 mais dresseurs jusqu'à 29 ; R12 jusqu'à 33).
-2. **Tables d'eau et de pêche** : plages d'origine 5–40 sur toutes les routes d'eau (Tentacool partout) → passe globale.
+1. ~~Routes 7/8/12~~ FAIT : R8 sauvages 24–29, R7 25–30, R12 25–31, deux dresseurs bas remontés.
+2. ~~Eau et pêche~~ FAIT : plages remises à l'échelle de chaque zone (espèces à revoir au cas par cas).
 3. **Matchs retour** des routes 9/10/11 et des anciennes routes non remontés ; dresseurs des arènes (Apatia, Tourmalia) non revus.
 4. **Intérieurs différés** : Tour Spinelle (canaux au niveau d'origine ≈ 20 vs routes 28), Tunnel Roche, centrale ; grotte des Taupiqueurs (au choix de Basil).
 5. **Personnages importants** pas encore placés : Giovanni, Red, Gold, Silver, Brice (randonneur ordinaire pour l'instant), Flora, N ; MISTY ne revient pas après la Route 25 ; Bill (disparu) à traiter plus tard.
