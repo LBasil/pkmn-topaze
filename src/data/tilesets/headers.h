@@ -1461,3 +1461,14 @@ const struct Tileset gTileset_GeneralSeafoam =
     .metatileAttributes = gMetatileAttributes_GeneralSeafoam,
     .callback = InitTilesetAnim_General,
 };
+
+const struct Tileset gTileset_PokemonLeagueLair =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PokemonLeagueLair,
+    .palettes = gTilesetPalettes_PokemonLeagueLair,
+    .metatiles = gMetatiles_PokemonLeagueLair,
+    .metatileAttributes = gMetatileAttributes_PokemonLeagueLair,
+    .callback = NULL,
+};

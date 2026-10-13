@@ -384,3 +384,6 @@ const u32 gMetatileAttributes_CeladonRoute11V2[] = INCBIN_U32("data/tilesets/sec
 
 const u16 gMetatiles_GeneralSeafoam[] = INCBIN_U16("data/tilesets/primary/general_seafoam/metatiles.bin");
 const u32 gMetatileAttributes_GeneralSeafoam[] = INCBIN_U32("data/tilesets/primary/general_seafoam/metatile_attributes.bin");
+
+const u16 gMetatiles_PokemonLeagueLair[] = INCBIN_U16("data/tilesets/secondary/pokemon_league_lair/metatiles.bin");
+const u32 gMetatileAttributes_PokemonLeagueLair[] = INCBIN_U32("data/tilesets/secondary/pokemon_league_lair/metatile_attributes.bin");

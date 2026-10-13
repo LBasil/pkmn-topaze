@@ -56,8 +56,55 @@ static const struct TrainerMonNoItemDefaultMoves sParty_AquaGruntF[] = {
         .species = SPECIES_GOLBAT,
     },
 };
-static const struct TrainerMonNoItemDefaultMoves sParty_RSAromaLady[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_RSRuinManiac[] = {DUMMY_TRAINER_MON};
+static const struct TrainerMonNoItemDefaultMoves sParty_RSAromaLady[] = {
+    {
+        .iv = 60,
+        .lvl = 56,
+        .species = SPECIES_HYPNO,
+    },
+    {
+        .iv = 60,
+        .lvl = 56,
+        .species = SPECIES_MUK,
+    },
+    {
+        .iv = 60,
+        .lvl = 56,
+        .species = SPECIES_VENOMOTH,
+    },
+    {
+        .iv = 60,
+        .lvl = 57,
+        .species = SPECIES_TENTACRUEL,
+    },
+    {
+        .iv = 60,
+        .lvl = 58,
+        .species = SPECIES_GENGAR,
+    },
+    {
+        .iv = 60,
+        .lvl = 58,
+        .species = SPECIES_ALAKAZAM,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_RSRuinManiac[] = {
+    {
+        .iv = 30,
+        .lvl = 54,
+        .species = SPECIES_HYPNO,
+    },
+    {
+        .iv = 30,
+        .lvl = 54,
+        .species = SPECIES_RAPIDASH,
+    },
+    {
+        .iv = 30,
+        .lvl = 54,
+        .species = SPECIES_NIDOKING,
+    },
+};
 static const struct TrainerMonNoItemDefaultMoves sParty_Interviewer[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_RSTuberF[] = {
     {
@@ -93,8 +140,40 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RSTuberM[] = {
         .species = SPECIES_MAGMAR,
     },
 };
-static const struct TrainerMonNoItemDefaultMoves sParty_RSCooltrainerM[] = {DUMMY_TRAINER_MON_IV};
-static const struct TrainerMonNoItemDefaultMoves sParty_RSCooltrainerF[] = {DUMMY_TRAINER_MON_IV};
+static const struct TrainerMonNoItemDefaultMoves sParty_RSCooltrainerM[] = {
+    {
+        .iv = 30,
+        .lvl = 53,
+        .species = SPECIES_WEEZING,
+    },
+    {
+        .iv = 30,
+        .lvl = 54,
+        .species = SPECIES_CROBAT,
+    },
+    {
+        .iv = 30,
+        .lvl = 54,
+        .species = SPECIES_ALAKAZAM,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_RSCooltrainerF[] = {
+    {
+        .iv = 30,
+        .lvl = 53,
+        .species = SPECIES_GENGAR,
+    },
+    {
+        .iv = 30,
+        .lvl = 54,
+        .species = SPECIES_TENTACRUEL,
+    },
+    {
+        .iv = 30,
+        .lvl = 54,
+        .species = SPECIES_ARBOK,
+    },
+};
 static const struct TrainerMonNoItemDefaultMoves sParty_HexManiac[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_RSLady[] = {
     {
@@ -131,9 +210,41 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RSBeauty[] = {
     },
 };
 static const struct TrainerMonNoItemDefaultMoves sParty_RichBoy[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_RSPokemaniac[] = {DUMMY_TRAINER_MON};
+static const struct TrainerMonNoItemDefaultMoves sParty_RSPokemaniac[] = {
+    {
+        .iv = 30,
+        .lvl = 54,
+        .species = SPECIES_VENOMOTH,
+    },
+    {
+        .iv = 30,
+        .lvl = 54,
+        .species = SPECIES_ARCANINE,
+    },
+    {
+        .iv = 30,
+        .lvl = 54,
+        .species = SPECIES_ELECTABUZZ,
+    },
+};
 static const struct TrainerMonNoItemDefaultMoves sParty_RSSwimmerM[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_RSBlackBelt[] = {DUMMY_TRAINER_MON_IV};
+static const struct TrainerMonNoItemDefaultMoves sParty_RSBlackBelt[] = {
+    {
+        .iv = 30,
+        .lvl = 54,
+        .species = SPECIES_MACHAMP,
+    },
+    {
+        .iv = 30,
+        .lvl = 54,
+        .species = SPECIES_MUK,
+    },
+    {
+        .iv = 30,
+        .lvl = 54,
+        .species = SPECIES_MAGMAR,
+    },
+};
 static const struct TrainerMonNoItemDefaultMoves sParty_Guitarist[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_Kindler[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_RSCamper[] = {

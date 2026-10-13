@@ -1,0 +1,40 @@
+VictoryRoadLair_1F_MapScripts::
+	.byte 0
+
+VictoryRoadLair_1F_EventScript_Grunt1::
+	trainerbattle_single TRAINER_RS_COOLTRAINER_M, VictoryRoadLair_1F_Text_Grunt1Intro, VictoryRoadLair_1F_Text_Grunt1Defeat
+	msgbox VictoryRoadLair_1F_Text_Grunt1Post, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoadLair_1F_EventScript_Grunt2::
+	trainerbattle_single TRAINER_RS_COOLTRAINER_F, VictoryRoadLair_1F_Text_Grunt2Intro, VictoryRoadLair_1F_Text_Grunt2Defeat
+	msgbox VictoryRoadLair_1F_Text_Grunt2Post, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoadLair_1F_EventScript_Grunt3::
+	trainerbattle_single TRAINER_RS_BLACK_BELT, VictoryRoadLair_1F_Text_Grunt3Intro, VictoryRoadLair_1F_Text_Grunt3Defeat
+	msgbox VictoryRoadLair_1F_Text_Grunt3Post, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoadLair_1F_EventScript_Grunt4::
+	trainerbattle_single TRAINER_RS_RUIN_MANIAC, VictoryRoadLair_1F_Text_Grunt4Intro, VictoryRoadLair_1F_Text_Grunt4Defeat
+	msgbox VictoryRoadLair_1F_Text_Grunt4Post, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoadLair_1F_EventScript_Grunt5::
+	trainerbattle_single TRAINER_RS_POKEMANIAC, VictoryRoadLair_1F_Text_Grunt5Intro, VictoryRoadLair_1F_Text_Grunt5Defeat
+	msgbox VictoryRoadLair_1F_Text_Grunt5Post, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoadLair_1F_EventScript_Vesper::
+	trainerbattle_single TRAINER_MAGMA_ADMIN_TABITHA, VictoryRoadLair_1F_Text_VesperIntro, VictoryRoadLair_1F_Text_VesperDefeat
+	msgbox VictoryRoadLair_1F_Text_VesperPost, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoadLair_1F_EventScript_ItemMaxRevive::
+	finditem ITEM_MAX_REVIVE
+	end
+
+VictoryRoadLair_1F_EventScript_ItemRareCandy::
+	finditem ITEM_RARE_CANDY
+	end

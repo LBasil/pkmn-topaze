@@ -78,70 +78,33 @@ VictoryRoad_2F_EventScript_Vincent::
 	end
 
 VictoryRoad_2F_OnTransition::
-	goto_if_set FLAG_VR_BOSS_DONE, VictoryRoad_2F_EventScript_FinalDone
-	goto_if_unset FLAG_VR_RED_MET, VictoryRoad_2F_EventScript_NoRed
+	goto_if_set FLAG_VR_BOSS_DONE, VictoryRoad_2F_EventScript_ExitOpen
 	end
 
-VictoryRoad_2F_EventScript_FinalDone::
+VictoryRoad_2F_EventScript_ExitOpen::
 	setvar VAR_TEMP_6, 1
-	setflag FLAG_TEMP_1
 	end
 
-VictoryRoad_2F_EventScript_NoRed::
-	setvar VAR_TEMP_6, 1
-	setflag FLAG_TEMP_1
-	setflag FLAG_TEMP_2
-	end
-
-VictoryRoad_2F_EventScript_Stub::
-	end
-
-VictoryRoad_2F_EventScript_RedTalk::
-	lock
-	faceplayer
-	goto_if_set FLAG_VR_BOSS_DONE, VictoryRoad_2F_EventScript_RedHeal
-	msgbox VictoryRoad_2F_Text_RedSilent
-	release
-	end
-
-VictoryRoad_2F_EventScript_RedHeal::
-	msgbox VictoryRoad_2F_Text_RedHeals
-	special HealPlayerParty
-	playfanfare MUS_HEAL
-	waitfanfare
-	msgbox VictoryRoad_2F_Text_RedSilent
-	release
-	end
-
-VictoryRoad_2F_EventScript_FinalScene::
+VictoryRoad_2F_EventScript_ExitBlockedN::
 	lockall
-	msgbox VictoryRoad_2F_Text_ShapeA
-	closemessage
-	setvar VAR_0x8004, 1
-	setvar VAR_0x8005, 3
-	setvar VAR_0x8006, 8
-	setvar VAR_0x8007, 4
-	playse SE_THUNDER
-	special ShakeScreen
-	waitstate
-	msgbox VictoryRoad_2F_Text_ShapeB
-	closemessage
-	fadescreen FADE_TO_BLACK
-	delay 40
-	fadescreen FADE_FROM_BLACK
-	msgbox VictoryRoad_2F_Text_VesperIntro
-	closemessage
-	setvar VAR_LAST_TALKED, LOCALID_VR_VESPER
-	trainerbattle_no_intro TRAINER_MAGMA_ADMIN_TABITHA, VictoryRoad_2F_Text_VesperDefeat
-	msgbox VictoryRoad_2F_Text_VesperPost
-	closemessage
-	fadescreen FADE_TO_BLACK
-	removeobject LOCALID_VR_VESPER
-	delay 20
-	fadescreen FADE_FROM_BLACK
-	msgbox VictoryRoad_2F_Text_RedAfter
-	closemessage
-	setflag FLAG_VR_BOSS_DONE
-	setvar VAR_TEMP_6, 1
+	msgbox VictoryRoad_2F_Text_ExitBlocked
+	applymovement LOCALID_PLAYER, VictoryRoad_2F_Movement_PushUp
+	waitmovement 0
 	releaseall
 	end
+
+VictoryRoad_2F_EventScript_ExitBlockedS::
+	lockall
+	msgbox VictoryRoad_2F_Text_ExitBlocked
+	applymovement LOCALID_PLAYER, VictoryRoad_2F_Movement_PushDown
+	waitmovement 0
+	releaseall
+	end
+
+VictoryRoad_2F_Movement_PushUp::
+	walk_up
+	step_end
+
+VictoryRoad_2F_Movement_PushDown::
+	walk_down
+	step_end

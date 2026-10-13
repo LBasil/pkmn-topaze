@@ -4422,6 +4422,42 @@
       "secondary_tileset": "gTileset_MoonwoodRoad",
       "border_filepath": "data/layouts/Route4East/border.bin",
       "blockdata_filepath": "data/layouts/Route4East/map.bin"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_LAIR_1F",
+      "name": "VictoryRoadLair_1F_Layout",
+      "width": 28,
+      "height": 24,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonLeagueLair",
+      "border_filepath": "data/layouts/VictoryRoadLair_1F/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoadLair_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_LAIR_2F",
+      "name": "VictoryRoadLair_2F_Layout",
+      "width": 13,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonLeagueLair",
+      "border_filepath": "data/layouts/VictoryRoadLair_2F/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoadLair_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_VICTORY_ROAD_LAIR_3F",
+      "name": "VictoryRoadLair_3F_Layout",
+      "width": 13,
+      "height": 13,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonLeagueLair",
+      "border_filepath": "data/layouts/VictoryRoadLair_3F/border.bin",
+      "blockdata_filepath": "data/layouts/VictoryRoadLair_3F/map.bin"
     }
   ]
 }

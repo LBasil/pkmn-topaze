@@ -199,8 +199,8 @@
 #define FLAG_SEAFOAM_BOSS_DONE   0x0B5
 #define FLAG_VR_RED_MET          0x0B6
 #define FLAG_VR_BOSS_DONE        0x0B7
-#define FLAG_0x0B8               0x0B8
-#define FLAG_0x0B9               0x0B9
+#define FLAG_LAIR_ITEM_1         0x0B8
+#define FLAG_LAIR_ITEM_2         0x0B9
 #define FLAG_0x0BA               0x0BA
 #define FLAG_0x0BB               0x0BB
 #define FLAG_0x0BC               0x0BC
