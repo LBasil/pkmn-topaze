@@ -179,14 +179,14 @@
       "y": 39,
       "elevation": 0,
       "dest_map": "MAP_ROUTE1",
-      "dest_warp_id": "3"
+      "dest_warp_id": "1"
     },
     {
       "x": 21,
       "y": 39,
       "elevation": 0,
       "dest_map": "MAP_ROUTE1",
-      "dest_warp_id": "4"
+      "dest_warp_id": "2"
     },
     {
       "x": 0,

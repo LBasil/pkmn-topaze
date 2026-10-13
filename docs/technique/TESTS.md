@@ -157,4 +157,4 @@ Piste réaliste : faire d'abord le jeu jouable, puis ajouter un follower **limit
 ## Grenalux — scène d'ouverture au ranch (test téléphone)
 - Émulateur : escorte du rival (sortie nord) → ranch → père/OAK/rival → 2 sbires → choix du starter → combat sbire 1 → maman + pendentif → `VAR_GRENALUX_OPENING`=2, joueur libre en (11,6). OK.
 - Entrée en marchant seul vers l'est (OPENING=0) : même scène. OK.
-- Raccord de sol ranch↔Grenalux vérifié visuellement (chemin continu).
+- Raccord de sol ranch↔Grenalux vérifié visuellement (chemin continu).- Sortie nord de Grenalux ↔ Route 1 : traversée dans les deux sens image par image, raccord continu (pas de corruption, le dégradé de la Route 1 s'affiche correctement après le passage). OK.

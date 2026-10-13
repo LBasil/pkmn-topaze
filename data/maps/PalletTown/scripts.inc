@@ -24,12 +24,12 @@ PalletTown_EventScript_SetSignLadyDone::
 
 PalletTown_EventScript_SetSignLadyPos::
 	goto_if_set FLAG_PALLET_LADY_NOT_BLOCKING_SIGN, PalletTown_EventScript_MoveSignLadyToRouteEntrance
-	setobjectxyperm LOCALID_PALLET_SIGN_LADY, 10, 16
+	setobjectxyperm LOCALID_PALLET_SIGN_LADY, 10, 20
 	setobjectmovementtype LOCALID_PALLET_SIGN_LADY, MOVEMENT_TYPE_FACE_UP
 	return
 
 PalletTown_EventScript_MoveSignLadyToRouteEntrance::
-	setobjectxyperm LOCALID_PALLET_SIGN_LADY, 22, 2
+	setobjectxyperm LOCALID_PALLET_SIGN_LADY, 22, 6
 	setobjectmovementtype LOCALID_PALLET_SIGN_LADY, MOVEMENT_TYPE_FACE_DOWN
 	setvar SIGN_LADY_READY, TRUE
 	return
@@ -42,7 +42,7 @@ PalletTown_OnFrame::
 PalletTown_EventScript_OakRatingScene::
 	lockall
 	textcolor NPC_TEXT_COLOR_MALE
-	setobjectxyperm LOCALID_PALLET_PROF_OAK, 22, 15
+	setobjectxyperm LOCALID_PALLET_PROF_OAK, 22, 19
 	setobjectmovementtype LOCALID_PALLET_PROF_OAK, MOVEMENT_TYPE_FACE_LEFT
 	addobject LOCALID_PALLET_PROF_OAK
 	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakWalkToPlayersDoor
@@ -62,12 +62,12 @@ PalletTown_EventScript_OakRatingScene::
 	applymovement LOCALID_PLAYER, PalletTown_Movement_PlayerWalkToLabFromHouse
 	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakWalkToLabFromHouse
 	waitmovement 0
-	opendoor 35, 21
+	opendoor 35, 25
 	waitdooranim
 	applymovement LOCALID_PALLET_PROF_OAK, PalletTown_Movement_OakEnterLab
 	applymovement LOCALID_PLAYER, PalletTown_Movement_PlayerEnterLab
 	waitmovement 0
-	closedoor 35, 21
+	closedoor 35, 25
 	waitdooranim
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 7
 	setvar VAR_MAP_SCENE_PALLET_TOWN_OAK, 3

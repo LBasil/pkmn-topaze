@@ -749,9 +749,12 @@ bool8 SetDiveWarpDive(u16 x, u16 y)
 
 // Map loaders
 
+extern bool8 gCameraRedrawAll;
+
 void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
 {
     int paletteIndex;
+    const struct Tileset *oldPrimary = gMapHeader.mapLayout ? gMapHeader.mapLayout->primaryTileset : NULL;
 
     SetWarpDestination(mapGroup, mapNum, -1, -1, -1);
     Overworld_TryMapConnectionMusicTransition();
@@ -770,11 +773,24 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
     RunOnTransitionMapScript();
     TryRegenerateRenewableHiddenItems();
     InitMap();
-    CopySecondaryTilesetToVramUsingHeap(gMapHeader.mapLayout);
-    LoadSecondaryTilesetPalette(gMapHeader.mapLayout);
-    for (paletteIndex = 7; paletteIndex < 13; paletteIndex++)
-        ApplyWeatherGammaShiftToPal(paletteIndex);
-    InitSecondaryTilesetAnimation();
+    if (gMapHeader.mapLayout->primaryTileset != oldPrimary)
+    {
+        // Topaze: connected maps may use different primary tilesets (e.g. GRENALUX <-> ROUTE 1): reload everything
+        CopyMapTilesetsToVram(gMapHeader.mapLayout);
+        LoadMapTilesetPalettes(gMapHeader.mapLayout);
+        for (paletteIndex = 0; paletteIndex < 13; paletteIndex++)
+            ApplyWeatherGammaShiftToPal(paletteIndex);
+        InitTilesetAnimations();
+        gCameraRedrawAll = TRUE;
+    }
+    else
+    {
+        CopySecondaryTilesetToVramUsingHeap(gMapHeader.mapLayout);
+        LoadSecondaryTilesetPalette(gMapHeader.mapLayout);
+        for (paletteIndex = 7; paletteIndex < 13; paletteIndex++)
+            ApplyWeatherGammaShiftToPal(paletteIndex);
+        InitSecondaryTilesetAnimation();
+    }
     UpdateLocationHistoryForRoamer();
     RoamerMove();
     QL_ResetDefeatedWildMonRecord();

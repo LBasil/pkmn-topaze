@@ -5,6 +5,7 @@
 #include "new_menu_helpers.h"
 #include "quest_log.h"
 #include "fieldmap.h"
+#include "field_camera.h"
 
 struct ConnectionFlags
 {
@@ -653,6 +654,8 @@ static void SetPositionFromConnection(const struct MapConnection *connection, in
     }
 }
 
+bool8 gCameraRedrawAll; // Topaze: set when a connection crossing swapped the primary tileset
+
 bool8 CameraMove(s32 x, s32 y)
 {
     s32 direction;
@@ -679,6 +682,11 @@ bool8 CameraMove(s32 x, s32 y)
         gSaveBlock1Ptr->pos.x += x;
         gSaveBlock1Ptr->pos.y += y;
         MoveMapViewToBackup(direction);
+        if (gCameraRedrawAll)
+        {
+            gCameraRedrawAll = FALSE;
+            DrawWholeMapView();
+        }
     }
     return gCamera.active;
 }

@@ -13,7 +13,13 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [],
+  "connections": [
+    {
+      "map": "MAP_PALLET_TOWN",
+      "offset": -10,
+      "direction": "down"
+    }
+  ],
   "object_events": [
     {
       "type": "object",
@@ -104,20 +110,6 @@
     }
   ],
   "warp_events": [
-    {
-      "x": 12,
-      "y": 37,
-      "elevation": 0,
-      "dest_map": "MAP_PALLET_TOWN",
-      "dest_warp_id": "4"
-    },
-    {
-      "x": 13,
-      "y": 37,
-      "elevation": 0,
-      "dest_map": "MAP_PALLET_TOWN",
-      "dest_warp_id": "5"
-    },
     {
       "x": 14,
       "y": 0,
