@@ -9,7 +9,87 @@ Route23_OnTransition::
 	setvar VAR_MAP_SCENE_VICTORY_ROAD_2F_BOULDER1, 0
 	setvar VAR_MAP_SCENE_VICTORY_ROAD_2F_BOULDER2, 0
 	setvar VAR_MAP_SCENE_VICTORY_ROAD_3F, 0
+	setflag FLAG_TEMP_1
+	setflag FLAG_TEMP_2
+	goto_if_set FLAG_VR_RED_MET, Route23_EventScript_RedCaveDone
+	goto Route23_EventScript_RedEndNotYet
 	end
+
+Route23_EventScript_RedCaveDone::
+	setvar VAR_TEMP_4, 1
+	goto_if_set FLAG_VR_BOSS_DONE, Route23_EventScript_RedEndDone
+	goto Route23_EventScript_RedEndNotYet
+	end
+
+Route23_EventScript_RedEndDone::
+	setvar VAR_TEMP_5, 1
+	end
+
+Route23_EventScript_RedEndNotYet::
+	end
+
+Route23_EventScript_RedStub::
+	end
+
+Route23_EventScript_RedAtCave::
+	lockall
+	clearflag FLAG_TEMP_1
+	addobject LOCALID_VR_RED_CAVE
+	playse SE_PIN
+	delay 20
+	applymovement LOCALID_VR_RED_CAVE, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	msgbox Route23_Text_RedStares
+	msgbox Route23_Text_RedSilent
+	msgbox Route23_Text_RedEnters
+	closemessage
+	applymovement LOCALID_VR_RED_CAVE, Route23_Movement_RedIn
+	waitmovement 0
+	removeobject LOCALID_VR_RED_CAVE
+	setflag FLAG_VR_RED_MET
+	setvar VAR_TEMP_4, 1
+	releaseall
+	end
+
+Route23_Movement_RedIn::
+	walk_up
+	step_end
+
+Route23_EventScript_RedAtEnd::
+	lockall
+	goto_if_unset FLAG_VR_RED_MET, Route23_EventScript_RedAtEndSkip
+	clearflag FLAG_TEMP_2
+	addobject LOCALID_VR_RED_END
+	delay 20
+	msgbox Route23_Text_RedEndA
+	msgbox Route23_Text_RedEndB
+	msgbox Route23_Text_RedSilent
+	msgbox Route23_Text_RedEndC
+	closemessage
+	applymovement LOCALID_VR_RED_END, Route23_Movement_RedWalkNorth
+	waitmovement 0
+	removeobject LOCALID_VR_RED_END
+	setflag FLAG_VR_BOSS_DONE
+	setvar VAR_TEMP_5, 1
+	releaseall
+	end
+
+Route23_EventScript_RedAtEndSkip::
+	setvar VAR_TEMP_5, 1
+	releaseall
+	end
+
+Route23_Movement_RedWalkNorth::
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	step_end
 
 Route23_EventScript_CascadeBadgeGuard::
 	lock

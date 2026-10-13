@@ -1,58 +1,72 @@
 VictoryRoad_2F_Text_DawsonIntro::
-    .string "If you can get through here,\n"
-    .string "you can go meet the ELITE FOUR.$"
+    .string "We took the whole cave. Even the\n"
+    .string "trainers ran away.$"
 
 VictoryRoad_2F_Text_DawsonDefeat::
-    .string "No!\n"
-    .string "Unbelievable!$"
+    .string "Lights out…$"
 
 VictoryRoad_2F_Text_DawsonPostBattle::
-    .string "I can beat you when it comes to\n"
-    .string "knowledge about POKéMON!$"
+    .string "Strongest in KANTO, they say.\n"
+    .string "He did not even draw a weapon.$"
 
 VictoryRoad_2F_Text_DaisukeIntro::
-    .string "This here is VICTORY ROAD.\n"
-    .string "It's the final test for TRAINERS!$"
+    .string "Fists or POKéMON, I do not mind!$"
 
 VictoryRoad_2F_Text_DaisukeDefeat::
-    .string "Atcho!$"
+    .string "Knocked flat!$"
 
 VictoryRoad_2F_Text_DaisukePostBattle::
-    .string "If you get stuck, try moving some\n"
-    .string "boulders around.$"
+    .string "The last base is ours. Not for\n"
+    .string "long, it seems.$"
 
 VictoryRoad_2F_Text_NelsonIntro::
-    .string "Ah, so you wish to challenge the\n"
-    .string "ELITE FOUR?$"
+    .string "Hehe! Watch my POKéMON dance!$"
 
 VictoryRoad_2F_Text_NelsonDefeat::
-    .string "You got me!$"
+    .string "Show is over…$"
 
 VictoryRoad_2F_Text_NelsonPostBattle::
-    .string "{RIVAL} also came through here.$"
+    .string "Everyone on the exit side fears\n"
+    .string "VESPER. Be careful.$"
 
 VictoryRoad_2F_Text_VincentIntro::
-    .string "Come on!\n"
-    .string "I'll whip you!$"
+    .string "Lost? Then follow my POKéMON!$"
 
 VictoryRoad_2F_Text_VincentDefeat::
-    .string "I got whipped!$"
+    .string "I lost my way…$"
 
 VictoryRoad_2F_Text_VincentPostBattle::
-    .string "You earned the right to be on\n"
-    .string "VICTORY ROAD…$"
+    .string "The way out is east. VESPER\n"
+    .string "waits there.$"
 
 VictoryRoad_2F_Text_GregoryIntro::
-    .string "Is VICTORY ROAD too tough?$"
+    .string "Welcome to the back door!$"
 
 VictoryRoad_2F_Text_GregoryDefeat::
-    .string "Well done!$"
+    .string "Doors slam…$"
 
 VictoryRoad_2F_Text_GregoryPostBattle::
-    .string "Many TRAINERS give up their\n"
-    .string "challenge here and go home.$"
+    .string "The MASTER used this cave as his\n"
+    .string "stage. We only guard it.$"
 
 @ Unused, old text for Moltres
 VictoryRoad_2F_Text_Gyaoo::
     .string "ギヤーオ！$"
 
+VictoryRoad_2F_Text_VesperIntro::
+    .string "VESPER: Third time, child.\n"
+    .string "I almost admire your stubbornness.\p"
+    .string "The MASTER left through this very\n"
+    .string "door, and the red-capped one is\p"
+    .string "already outside, licking his\n"
+    .string "wounds. You will not follow!$"
+
+VictoryRoad_2F_Text_VesperDefeat::
+    .string "…Again. Again you break the\n"
+    .string "pattern.$"
+
+VictoryRoad_2F_Text_VesperPost::
+    .string "VESPER: Go, then. The LEAGUE needs\n"
+    .string "a witness. Not a hero.\p"
+    .string "The stones are almost all gathered.\n"
+    .string "What comes next is not for us.$"

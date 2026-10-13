@@ -197,8 +197,8 @@
 #define FLAG_CHRONDROLIA_RAID_DONE    0x0B3
 #define FLAG_SEAFOAM_ALLIES_MET  0x0B4
 #define FLAG_SEAFOAM_BOSS_DONE   0x0B5
-#define FLAG_0x0B6               0x0B6
-#define FLAG_0x0B7               0x0B7
+#define FLAG_VR_RED_MET          0x0B6
+#define FLAG_VR_BOSS_DONE        0x0B7
 #define FLAG_0x0B8               0x0B8
 #define FLAG_0x0B9               0x0B9
 #define FLAG_0x0BA               0x0BA

@@ -75,3 +75,8 @@ VictoryRoad_2F_EventScript_Vincent::
 	trainerbattle_single TRAINER_TAMER_VINCENT, VictoryRoad_2F_Text_VincentIntro, VictoryRoad_2F_Text_VincentDefeat
 	msgbox VictoryRoad_2F_Text_VincentPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+VictoryRoad_2F_EventScript_Vesper::
+	trainerbattle_single TRAINER_MAGMA_ADMIN_TABITHA, VictoryRoad_2F_Text_VesperIntro, VictoryRoad_2F_Text_VesperDefeat
+	msgbox VictoryRoad_2F_Text_VesperPost, MSGBOX_AUTOCLOSE
+	end

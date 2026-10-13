@@ -74,3 +74,10 @@ Eddie battu -> blackout, le maire (taupe) dit avoir utilisé le joueur pour la c
 - B1F–B3F : 2 sbires par étage + sbire battu qui raconte le passage de Gold/Silver (crescendo : ils ouvrent la voie).
 - B4F : Gold et Silver KO (battus par le grand patron en 1 Pokémon chacun), KRONOS combat le joueur (Arbok 47, Weezing 47, Nidoking 48, Crobat 48, Alakazam 50), indice : la pierre part vers le DERNIER QG près de la Ligue (Red). Moltres remplace Artikodin (combat optionnel, N55).
 - Flags : 0x0B4 FLAG_SEAFOAM_ALLIES_MET, 0x0B5 FLAG_SEAFOAM_BOSS_DONE. Script : docs/topaze/seafoam_volcano.py + seafoam_lava.py + seafoam_scenario.py.
+
+## Retour à Opanihrum : la FONDERIE (badge 8) puis ROUTE VICTOIRE = QG n°5 (V1)
+- **Fonderie** (arène d'Hepha, Acier) : intérieur recoloré (sol acier sombre, flèches de spin en braise), Hepha (pic Winona, sprite Crush Girl, provisoires) : Magneton 52, Forretress 53, Skarmory 54, Scizor 55, Steelix 56, Aggron 58 ; 8 forgerons Acier (43–49) ; CT47 Aile d'acier ; Hepha dit que ses fourneaux ont forgé la porte de la Route Victoire et que des hommes en noir y sont entrés. Script : gym_opanihrum.py + gym_opanihrum_trainers.py.
+- **Route 23** : gardes de badges d'origine (8e = badge d'Hepha). Au pied de la grotte (déclencheurs y=32, x2..8) RED, muet, regarde la grotte, salue et y entre seul (FLAG_VR_RED_MET 0x0B6).
+- **Route Victoire 1F/2F** : anciens dresseurs devenus sbires Onybris (niv. 50–53) ; 3F : challengers d'origine inchangés (niveaux à revoir) ; VESPER (3e duel : Arbok 54, Gengar 54, Crobat 55, Muk 55, Hypno 56) garde la sortie est de la 2F.
+- **Sortie (Route 23 nord, déclencheurs y=22, x19..21)** : RED, abîmé, attend ; l'ombre noire du patron s'envole au-dessus du Plateau ; Red marche vers la Ligue (FLAG_VR_BOSS_DONE 0x0B7). Script : victory_road.py.
+- Décision de fond à valider : le patron n'est toujours pas vu ; Red perd lui aussi ; la pierre OPALE NOIRE d'Opanihrum n'est pas touchée.
