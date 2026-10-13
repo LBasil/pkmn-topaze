@@ -126,3 +126,6 @@ Piste réaliste : faire d'abord le jeu jouable, puis ajouter un follower **limit
 ### Forêt calcinée v2 (émulateur)
   - ROM jetable : Grenalux nord redirigé vers la porte sud de la forêt. Bancs `t_forest_a.py`/`t_forest_b.py`. OK : arrivée à la porte sud, marche sur le sentier, cendres qui tombent, PNJ visible. Non testés : traversée complète (les dresseurs bloquent la marche), sortie nord, combats, objets, panneaux.
 - [x] **Mine de Grenalux (post-game, fin 1)** : 3 étages (copies des layouts de Mt Moon, groupe `gMapGroup_IndoorPallet` : un groupe ne doit pas dépasser 127 cartes), entrée en (39,24) de Grenalux (porte à coord event : scellée avant `FLAG_TOPAZE_POSTGAME`). 3F : scène de la vérité sur l'Aura (placeholder, à valider), Mew apparaît puis fuit (`FLAG_MEW_FLED`). **Apatia** : le chauffeur et Mew « sous le camion » apparaissent à (16..17,19) une fois Mew parti ; Mew capturable (niv. 50, `FLAG_FOUGHT_MEW_TRUCK`). Testé en émulateur : porte scellée/ouverte, trajet 1F→2F→3F, scène complète, apparition + combat de Mew à Apatia, Mew absent avant la fuite. Pas de sprite de camion (placeholder), pas de faune sauvage dans la mine.
+
+## Conseil des Anciens (post-game)
+- `bench/elders_test.py` : 13 combats enchaînés dans la 1re salle de la Ligue (FLAG_TOPAZE_POSTGAME, VAR_ELDERS_ROUND 0→13), récompense (Master Ball placeholder) au 13e. OK en émulateur.

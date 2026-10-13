@@ -11891,3 +11891,265 @@ static const struct TrainerMonNoItemDefaultMoves sParty_LeagueBoss2[] = {
     },
 };
 
+static const struct TrainerMonNoItemDefaultMoves sParty_ElderWill[] = {
+    {
+        .iv = 220,
+        .lvl = 66,
+        .species = SPECIES_XATU,
+    },
+    {
+        .iv = 220,
+        .lvl = 66,
+        .species = SPECIES_JYNX,
+    },
+    {
+        .iv = 220,
+        .lvl = 67,
+        .species = SPECIES_EXEGGUTOR,
+    },
+    {
+        .iv = 220,
+        .lvl = 67,
+        .species = SPECIES_SLOWBRO,
+    },
+    {
+        .iv = 220,
+        .lvl = 69,
+        .species = SPECIES_ALAKAZAM,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ElderKoga[] = {
+    {
+        .iv = 220,
+        .lvl = 66,
+        .species = SPECIES_ARIADOS,
+    },
+    {
+        .iv = 220,
+        .lvl = 66,
+        .species = SPECIES_VENOMOTH,
+    },
+    {
+        .iv = 220,
+        .lvl = 67,
+        .species = SPECIES_FORRETRESS,
+    },
+    {
+        .iv = 220,
+        .lvl = 67,
+        .species = SPECIES_MUK,
+    },
+    {
+        .iv = 220,
+        .lvl = 68,
+        .species = SPECIES_CROBAT,
+    },
+    {
+        .iv = 220,
+        .lvl = 69,
+        .species = SPECIES_WEEZING,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ElderKaren[] = {
+    {
+        .iv = 220,
+        .lvl = 67,
+        .species = SPECIES_UMBREON,
+    },
+    {
+        .iv = 220,
+        .lvl = 67,
+        .species = SPECIES_VILEPLUME,
+    },
+    {
+        .iv = 220,
+        .lvl = 68,
+        .species = SPECIES_GENGAR,
+    },
+    {
+        .iv = 220,
+        .lvl = 67,
+        .species = SPECIES_MURKROW,
+    },
+    {
+        .iv = 220,
+        .lvl = 69,
+        .species = SPECIES_HOUNDOOM,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ElderSidney[] = {
+    {
+        .iv = 220,
+        .lvl = 66,
+        .species = SPECIES_MIGHTYENA,
+    },
+    {
+        .iv = 220,
+        .lvl = 66,
+        .species = SPECIES_CACTURNE,
+    },
+    {
+        .iv = 220,
+        .lvl = 67,
+        .species = SPECIES_SHIFTRY,
+    },
+    {
+        .iv = 220,
+        .lvl = 67,
+        .species = SPECIES_SHARPEDO,
+    },
+    {
+        .iv = 220,
+        .lvl = 69,
+        .species = SPECIES_ABSOL,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ElderPhoebe[] = {
+    {
+        .iv = 220,
+        .lvl = 66,
+        .species = SPECIES_DUSCLOPS,
+    },
+    {
+        .iv = 220,
+        .lvl = 66,
+        .species = SPECIES_BANETTE,
+    },
+    {
+        .iv = 220,
+        .lvl = 67,
+        .species = SPECIES_SABLEYE,
+    },
+    {
+        .iv = 220,
+        .lvl = 67,
+        .species = SPECIES_BANETTE,
+    },
+    {
+        .iv = 220,
+        .lvl = 69,
+        .species = SPECIES_DUSCLOPS,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ElderGlacia[] = {
+    {
+        .iv = 220,
+        .lvl = 66,
+        .species = SPECIES_GLALIE,
+    },
+    {
+        .iv = 220,
+        .lvl = 66,
+        .species = SPECIES_SEALEO,
+    },
+    {
+        .iv = 220,
+        .lvl = 67,
+        .species = SPECIES_WALREIN,
+    },
+    {
+        .iv = 220,
+        .lvl = 67,
+        .species = SPECIES_GLALIE,
+    },
+    {
+        .iv = 220,
+        .lvl = 69,
+        .species = SPECIES_WALREIN,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ElderDrake[] = {
+    {
+        .iv = 220,
+        .lvl = 66,
+        .species = SPECIES_ALTARIA,
+    },
+    {
+        .iv = 220,
+        .lvl = 67,
+        .species = SPECIES_FLYGON,
+    },
+    {
+        .iv = 220,
+        .lvl = 67,
+        .species = SPECIES_KINGDRA,
+    },
+    {
+        .iv = 220,
+        .lvl = 69,
+        .species = SPECIES_SALAMENCE,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ElderSteven[] = {
+    {
+        .iv = 220,
+        .lvl = 67,
+        .species = SPECIES_SKARMORY,
+    },
+    {
+        .iv = 220,
+        .lvl = 67,
+        .species = SPECIES_CLAYDOL,
+    },
+    {
+        .iv = 220,
+        .lvl = 68,
+        .species = SPECIES_AGGRON,
+    },
+    {
+        .iv = 220,
+        .lvl = 68,
+        .species = SPECIES_CRADILY,
+    },
+    {
+        .iv = 220,
+        .lvl = 68,
+        .species = SPECIES_ARMALDO,
+    },
+    {
+        .iv = 220,
+        .lvl = 70,
+        .species = SPECIES_METAGROSS,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_ElderWallace[] = {
+    {
+        .iv = 220,
+        .lvl = 68,
+        .species = SPECIES_WAILORD,
+    },
+    {
+        .iv = 220,
+        .lvl = 68,
+        .species = SPECIES_TENTACRUEL,
+    },
+    {
+        .iv = 220,
+        .lvl = 69,
+        .species = SPECIES_LUDICOLO,
+    },
+    {
+        .iv = 220,
+        .lvl = 69,
+        .species = SPECIES_WHISCASH,
+    },
+    {
+        .iv = 220,
+        .lvl = 69,
+        .species = SPECIES_GYARADOS,
+    },
+    {
+        .iv = 220,
+        .lvl = 71,
+        .species = SPECIES_MILOTIC,
+    },
+};
+

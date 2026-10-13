@@ -128,3 +128,134 @@ PokemonLeague_LoreleisRoom_Text_TournamentWon::
     .string "POKéMON LEAGUE tournament!\p"
     .string "Now, the CHAMPION is waiting\n"
     .string "beyond the door.$"
+
+PokemonLeague_LoreleisRoom_Text_Elder0Intro::
+    .string "COUNCIL OF ELDERS, 1 OF 13.\p"
+    .string "LORELEI: The ice has not melted\n"
+    .string "since you last came.\p"
+    .string "Show me the CHAMPION's strength!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+
+PokemonLeague_LoreleisRoom_Text_Elder0Defeat::
+    .string "Still cold as ever...\nYou win.$"
+
+PokemonLeague_LoreleisRoom_Text_Elder1Intro::
+    .string "COUNCIL OF ELDERS, 2 OF 13.\p"
+    .string "BRUNO: Hoo! The CHAMPION returns!\p"
+    .string "Let us see whose will is stronger!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+
+PokemonLeague_LoreleisRoom_Text_Elder1Defeat::
+    .string "Hah! My training was not enough!$"
+
+PokemonLeague_LoreleisRoom_Text_Elder2Intro::
+    .string "COUNCIL OF ELDERS, 3 OF 13.\p"
+    .string "AGATHA: Hee hee! Look at you, a\n"
+    .string "CHAMPION.\p"
+    .string "I have buried better TRAINERS!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+
+PokemonLeague_LoreleisRoom_Text_Elder2Defeat::
+    .string "Oh, you old rascal.\nYou win again.$"
+
+PokemonLeague_LoreleisRoom_Text_Elder3Intro::
+    .string "COUNCIL OF ELDERS, 4 OF 13.\p"
+    .string "LANCE: The dragons knew you would\n"
+    .string "come back.\p"
+    .string "Let me see how far you have grown.{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+
+PokemonLeague_LoreleisRoom_Text_Elder3Defeat::
+    .string "Magnificent. Truly.$"
+
+PokemonLeague_LoreleisRoom_Text_Elder4Intro::
+    .string "COUNCIL OF ELDERS, 5 OF 13.\p"
+    .string "WILL: I saw your victory in dreams.\p"
+    .string "Let me see if the dream was true.{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+
+PokemonLeague_LoreleisRoom_Text_Elder4Defeat::
+    .string "The dream was true...$"
+
+PokemonLeague_LoreleisRoom_Text_Elder5Intro::
+    .string "COUNCIL OF ELDERS, 6 OF 13.\p"
+    .string "KOGA: A ninja never loses twice.\p"
+    .string "Yet I will gladly lose to a\n"
+    .string "worthy foe.{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+
+PokemonLeague_LoreleisRoom_Text_Elder5Defeat::
+    .string "Hmm. Admirable technique.$"
+
+PokemonLeague_LoreleisRoom_Text_Elder6Intro::
+    .string "COUNCIL OF ELDERS, 7 OF 13.\p"
+    .string "KAREN: Strong POKéMON, weak\n"
+    .string "POKéMON... I do not care.\p"
+    .string "Only the bond matters.{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+
+PokemonLeague_LoreleisRoom_Text_Elder6Defeat::
+    .string "Your bond is real. Good.$"
+
+PokemonLeague_LoreleisRoom_Text_Elder7Intro::
+    .string "COUNCIL OF ELDERS, 8 OF 13.\p"
+    .string "SIDNEY: Ahahaha! A CHAMPION!\p"
+    .string "I came all this way for a good\n"
+    .string "fight. Do not disappoint me!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+
+PokemonLeague_LoreleisRoom_Text_Elder7Defeat::
+    .string "Ahaha! That was worth the trip!$"
+
+PokemonLeague_LoreleisRoom_Text_Elder8Intro::
+    .string "COUNCIL OF ELDERS, 9 OF 13.\p"
+    .string "PHOEBE: The spirits whisper your\n"
+    .string "name, CHAMPION.\p"
+    .string "Let us listen together.{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+
+PokemonLeague_LoreleisRoom_Text_Elder8Defeat::
+    .string "The spirits are pleased.$"
+
+PokemonLeague_LoreleisRoom_Text_Elder9Intro::
+    .string "COUNCIL OF ELDERS, 10 OF 13.\p"
+    .string "GLACIA: I have waited a long time\n"
+    .string "for a fight that burns.\p"
+    .string "Melt me, if you can.{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+
+PokemonLeague_LoreleisRoom_Text_Elder9Defeat::
+    .string "Finally... a fight that burns.$"
+
+PokemonLeague_LoreleisRoom_Text_Elder10Intro::
+    .string "COUNCIL OF ELDERS, 11 OF 13.\p"
+    .string "DRAKE: A true TRAINER treats\n"
+    .string "POKéMON as equals.\p"
+    .string "Show me that you do!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+
+PokemonLeague_LoreleisRoom_Text_Elder10Defeat::
+    .string "Well fought, TRAINER.$"
+
+PokemonLeague_LoreleisRoom_Text_Elder11Intro::
+    .string "COUNCIL OF ELDERS, 12 OF 13.\p"
+    .string "STEVEN: I collect stones. And I\n"
+    .string "collect strong TRAINERS.\p"
+    .string "You belong in both collections.{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+
+PokemonLeague_LoreleisRoom_Text_Elder11Defeat::
+    .string "A battle to remember!$"
+
+PokemonLeague_LoreleisRoom_Text_Elder12Intro::
+    .string "COUNCIL OF ELDERS, 13 OF 13.\p"
+    .string "WALLACE: Beauty and strength, both.\p"
+    .string "The last of the old guard\n"
+    .string "stands before you.{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+
+PokemonLeague_LoreleisRoom_Text_Elder12Defeat::
+    .string "Splendid! You are a true MASTER.$"
+
+PokemonLeague_LoreleisRoom_Text_NextElder::
+    .string "Well fought!\p"
+    .string "The next veteran steps forward.\n"
+    .string "Recover your strength.$"
+
+PokemonLeague_LoreleisRoom_Text_ElderReward::
+    .string "All thirteen veterans bow to you.\p"
+    .string "You are the greatest of all\n"
+    .string "the CHAMPIONS!\p"
+    .string "Take this, as proof of their\n"
+    .string "respect.$"
+
+PokemonLeague_LoreleisRoom_Text_ElderDone::
+    .string "The old guard has nothing more\n"
+    .string "to teach you, CHAMPION.$"

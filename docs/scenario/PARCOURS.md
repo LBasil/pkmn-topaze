@@ -103,3 +103,6 @@ Eddie battu -> blackout, le maire (taupe) dit avoir utilisé le joueur pour la c
 - **Twist Quartz (V1)** : le boss réagit au duel du casino. Gagné : « tu m'as pris QUARTZ… un coup de chance » ; perdu : « merci de l'avoir perdu ». Aucun autre effet : les pierres du joueur sont de toute façon arrachées au repaire.
 - **Souhait de Basil (à placer)** : croiser dans le scénario tous les anciens Champions, membres du Conseil des 4 et Maîtres (gen 1-3). Les salles Bruno/Agatha/Lance sont libres (hors trajet) : candidates pour un « Conseil des Anciens » en post-game.
 - **Mine de Grenalux (V1 faite)** : ouverte en post-game (fin 1), 3 étages ; au fond, vision : l'Aura est née d'une créature très ancienne réveillée dans la veine il y a 10 ans (le cri de peur de Mew) ; le pendentif est la première pierre et a « choisi » le joueur. Mew apparaît puis s'enfuit vers Apatia, où il se cache sous un camion au port (capturable). Texte = placeholder à valider.
+
+## Conseil des Anciens (post-game)
+Après la fin 1, la 1re salle de la Ligue accueille 13 vétérans à la suite : Lorelei, Bruno, Agatha, Lance, Will, Koga, Karen, Sidney, Phoebe, Glacia, Drake, Steven, Wallace. Récompense : Master Ball (placeholder).

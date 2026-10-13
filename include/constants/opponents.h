@@ -759,11 +759,21 @@
 #define TRAINER_LEAGUE_BOSS                   753
 #define TRAINER_LEAGUE_BOSS_2                 754
 
+#define TRAINER_ELDER_WILL                   755
+#define TRAINER_ELDER_KOGA                   756
+#define TRAINER_ELDER_KAREN                  757
+#define TRAINER_ELDER_SIDNEY                 758
+#define TRAINER_ELDER_PHOEBE                 759
+#define TRAINER_ELDER_GLACIA                 760
+#define TRAINER_ELDER_DRAKE                  761
+#define TRAINER_ELDER_STEVEN                 762
+#define TRAINER_ELDER_WALLACE                763
+
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is 
 //       only space for 25 additional trainers before trainer flag space overflows.
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define NUM_TRAINERS                             755
+#define NUM_TRAINERS                             764
 #define MAX_TRAINERS_COUNT                       768
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H
