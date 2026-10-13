@@ -22,7 +22,8 @@ Route6_Text_NancyPostBattle::
     .string "Whisper…$"
 
 Route6_Text_KeigoIntro::
-    .string "There aren't many bugs out here.$"
+    .string "There aren't many bugs out here.\n"
+    .string "The wind is too strong.$"
 
 Route6_Text_KeigoDefeat::
     .string "No!\n"
@@ -41,8 +42,10 @@ Route6_Text_JeffDefeat::
     .string "I couldn't beat your challenge…$"
 
 Route6_Text_JeffPostBattle::
-    .string "I should bring more POKéMON with\n"
-    .string "me. I'll feel safer that way.$"
+    .string "Men in black carried a heavy bag\n"
+    .string "through the tunnel at dawn.\p"
+    .string "I hid until they were gone. I\n"
+    .string "should bring more POKéMON.$"
 
 Route6_Text_IsabelleIntro::
     .string "Me?\n"

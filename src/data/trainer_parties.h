@@ -425,25 +425,25 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherCale[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherKeigo[] = {
     {
         .iv = 0,
-        .lvl = 18,
+        .lvl = 22,
+        .species = SPECIES_VENONAT,
+    },
+    {
+        .iv = 0,
+        .lvl = 22,
         .species = SPECIES_WEEDLE,
     },
     {
         .iv = 0,
-        .lvl = 18,
+        .lvl = 22,
         .species = SPECIES_CATERPIE,
-    },
-    {
-        .iv = 0,
-        .lvl = 18,
-        .species = SPECIES_WEEDLE,
     },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherElijah[] = {
     {
         .iv = 0,
-        .lvl = 22,
+        .lvl = 25,
         .species = SPECIES_BUTTERFREE,
     },
 };
@@ -904,20 +904,25 @@ static const struct TrainerMonNoItemDefaultMoves sParty_CamperEthan[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_CamperRicky[] = {
     {
         .iv = 0,
-        .lvl = 22,
-        .species = SPECIES_SQUIRTLE,
+        .lvl = 24,
+        .species = SPECIES_MANKEY,
+    },
+    {
+        .iv = 0,
+        .lvl = 24,
+        .species = SPECIES_SPEAROW,
     },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_CamperJeff[] = {
     {
         .iv = 0,
-        .lvl = 18,
+        .lvl = 24,
         .species = SPECIES_SPEAROW,
     },
     {
         .iv = 0,
-        .lvl = 18,
+        .lvl = 25,
         .species = SPECIES_RATICATE,
     },
 };
@@ -982,12 +987,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerDiana[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerNancy[] = {
     {
         .iv = 0,
-        .lvl = 18,
-        .species = SPECIES_RATTATA,
+        .lvl = 24,
+        .species = SPECIES_MEOWTH,
     },
     {
         .iv = 0,
-        .lvl = 18,
+        .lvl = 25,
         .species = SPECIES_PIKACHU,
     },
 };
@@ -995,18 +1000,18 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerNancy[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_PicnickerIsabelle[] = {
     {
         .iv = 0,
-        .lvl = 18,
-        .species = SPECIES_PIDGEY,
+        .lvl = 24,
+        .species = SPECIES_PIDGEOTTO,
     },
     {
         .iv = 0,
-        .lvl = 18,
-        .species = SPECIES_PIDGEY,
+        .lvl = 24,
+        .species = SPECIES_SPEAROW,
     },
     {
         .iv = 0,
-        .lvl = 18,
-        .species = SPECIES_PIDGEY,
+        .lvl = 24,
+        .species = SPECIES_DODUO,
     },
 };
 
