@@ -5,7 +5,7 @@ Tout est jouable ; ce qui suit est provisoire. Pour chaque ligne : ce qui est en
 ## Ligue, boss, fins
 | Élément | En place | Proposition |
 |---|---|---|
-| Nom du boss | « ZIRCON » (décidé par Basil ; sprite Maxie) | Basil donne le nom plus tard |
+| Nom du boss | ZIRCON (choisi par Basil ; identifiants de code ONYBRIS conservés) | fait |
 | Sprite du boss à l'irruption | Giovanni | sprite dédié |
 | Récompense du Conseil des Anciens | Master Ball | objet unique (ex. un titre/objet clé) |
 | Équipes/dialogues des 11 combats du tournoi et des 20 Anciens | inventés par Claude, niveaux 50-71 | passe d'équilibrage avec Basil |
@@ -34,5 +34,5 @@ Sprites provisoires de MAJOR BOB, KRONOS/VESPER, HERA, Brice/Flora/N, Gold/Silve
 ## Décisions de Basil (13/10, soir)
 - Sprites : **dernière priorité**.
 - Textes : pas encore décidés.
-- Nom du boss : Claude propose des noms tirés de pierres (liste dans la conversation) ; Basil choisit.
+- Nom du boss : **ZIRCON** (choisi par Basil).
 - Île 7 : la scène **Silver / Red / Giovanni** est voulue comme épreuve finale (Giovanni et Red existent déjà en post-game : route 22 et grotte de Tourmalia ; Silver à ajouter).
