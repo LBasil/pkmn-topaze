@@ -53,3 +53,21 @@ PalletTown_Ranch_Text_Jigglypuff::
 PalletTown_Ranch_Text_BarnDoor::
 	.string "The barn door is bolted shut.\n"
 	.string "Feed and tools are stored inside.$"
+
+PalletTown_Ranch_Text_Hand1Reward::
+	.string "You found DODUO and both NIDORAN?\n"
+	.string "They are back in the pens, safe!\p"
+	.string "The boss kept this in the barn for\n"
+	.string "years. Please, take it.$"
+
+PalletTown_Ranch_Text_ReceivedGrenat::
+	.string "{PLAYER} received the GRENAT!$"
+
+PalletTown_Ranch_Text_Hand1Reward2::
+	.string "It was found in the old mine. It\n"
+	.string "hums when you hold it. I don't know\l"
+	.string "why, but it likes you.$"
+
+PalletTown_Ranch_Text_Hand1Thanks::
+	.string "The animals are calm again.\n"
+	.string "Thank you for everything.$"

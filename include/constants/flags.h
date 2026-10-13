@@ -1248,11 +1248,11 @@
 #define FLAG_DEFEATED_CHAMP           0x4BC
 
 // Unused?
-#define FLAG_0x4BD               0x4BD
-#define FLAG_0x4BE               0x4BE
-#define FLAG_0x4BF               0x4BF
-#define FLAG_0x4C0               0x4C0
-#define FLAG_0x4C1               0x4C1
+#define FLAG_GRENALUX_TYPE_COURSE        0x4BD // Topaze: got the TYPE MEMO from the GRENALUX teacher
+#define FLAG_ONYBRIS_ANIMALS_FOUND       0x4BE // Topaze: DODUO + 2 NIDORAN recovered at the ONYBRIS HQ (set in BOURG QUARTZ)
+#define FLAG_GRENALUX_GEM_REWARD         0x4BF // Topaze: ranch worker gave the true GRENAT
+#define FLAG_GRENALUX_OAK_RETURN2        0x4C0 // Topaze: OAK's talk after badge 4
+#define FLAG_GRENALUX_MOM_BADGE_INFO     0x4C1 // Topaze: spare
 #define FLAG_0x4C2               0x4C2
 #define FLAG_0x4C3               0x4C3
 #define FLAG_0x4C4               0x4C4

@@ -22,8 +22,24 @@ PalletTown_Ranch_CutFence::
 	end
 
 PalletTown_Ranch_EventScript_Hand1::
+	goto_if_set FLAG_GRENALUX_GEM_REWARD, PalletTown_Ranch_EventScript_Hand1Thanks
+	goto_if_set FLAG_ONYBRIS_ANIMALS_FOUND, PalletTown_Ranch_EventScript_Hand1Reward
 	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_Ranch_EventScript_Hand1Strike
 	msgbox PalletTown_Ranch_Text_Hand1, MSGBOX_NPC
+	end
+
+PalletTown_Ranch_EventScript_Hand1Reward::
+	lock
+	faceplayer
+	msgbox PalletTown_Ranch_Text_Hand1Reward
+	giveitem_msg PalletTown_Ranch_Text_ReceivedGrenat, ITEM_RUBY
+	setflag FLAG_GRENALUX_GEM_REWARD
+	msgbox PalletTown_Ranch_Text_Hand1Reward2
+	release
+	end
+
+PalletTown_Ranch_EventScript_Hand1Thanks::
+	msgbox PalletTown_Ranch_Text_Hand1Thanks, MSGBOX_NPC
 	end
 
 PalletTown_Ranch_EventScript_Hand1Strike::

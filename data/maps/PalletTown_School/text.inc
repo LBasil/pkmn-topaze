@@ -44,3 +44,31 @@ PalletTown_School_Text_GarnetCaseStrike::
     .string "The glass case is empty. A note is\n"
     .string "left behind: POKéMON were never\l"
     .string "meant to be owned. - TEAM ONYBRIS$"
+
+PalletTown_School_Text_TeacherCourse::
+    .string "Since you are here, a short lesson.\p"
+    .string "Ten years ago the AURA changed the\n"
+    .string "types of many POKéMON. FIRE ones may\l"
+    .string "now be ICE, and WATER ones STEEL.\p"
+    .string "A new type also appeared: FAIRY.\n"
+    .string "It beats DRAGON, FIGHTING and DARK,\l"
+    .string "but POISON and STEEL beat it.\p"
+    .string "Never trust a POKéMON's old type.\n"
+    .string "Check it in the SUMMARY first!$"
+
+PalletTown_School_Text_TeacherCourseEnd::
+    .string "I wrote it all down for you.\n"
+    .string "Read it whenever you doubt.$"
+
+PalletTown_School_Text_TeacherCourseShort::
+    .string "Still, a teacher teaches. Types changed\n"
+    .string "ten years ago, and FAIRY now beats\l"
+    .string "DRAGON, FIGHTING and DARK.\p"
+    .string "I wrote it down for you.$"
+
+PalletTown_School_Text_TeacherCourseDone::
+    .string "Remember: check a POKéMON's type in\n"
+    .string "the SUMMARY. The old ones lie.$"
+
+PalletTown_School_Text_ReceivedTypeMemo::
+    .string "{PLAYER} received the TYPE MEMO!$"

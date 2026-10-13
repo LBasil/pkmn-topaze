@@ -374,3 +374,12 @@ PalletTown_ProfessorOaksLab_Text_ComputerStrike::
     .string "ACCESS LOG: archive opened at 4:12.\n"
     .string "Files copied: GEMSTONES, AURA\l"
     .string "RECORDS, JIRACHI.$"
+
+PalletTown_ProfessorOaksLab_Text_OakReturn2::
+    .string "OAK: Four BADGES! I hear that each\n"
+    .string "town you visit keeps a gem, and that\l"
+    .string "someone is collecting them.\p"
+    .string "TEAM ONYBRIS believes they can tear\n"
+    .string "POKéMON away from people for good.\p"
+    .string "Their leader fights the AURA with\n"
+    .string "every step. Be careful, {PLAYER}.$"

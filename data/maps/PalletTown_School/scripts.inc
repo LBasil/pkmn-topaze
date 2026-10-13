@@ -6,6 +6,19 @@ PalletTown_School_EventScript_Teacher::
 	faceplayer
 	goto_if_set FLAG_GRENALUX_ONYBRIS_STRIKE, PalletTown_School_EventScript_TeacherStrike
 	msgbox PalletTown_School_Text_Teacher
+	goto_if_set FLAG_GRENALUX_TYPE_COURSE, PalletTown_School_EventScript_TeacherDone
+	msgbox PalletTown_School_Text_TeacherCourse
+	giveitem_msg PalletTown_School_Text_ReceivedTypeMemo, ITEM_POWDER_JAR
+	setflag FLAG_GRENALUX_TYPE_COURSE
+	msgbox PalletTown_School_Text_TeacherCourseEnd
+	closemessage
+	applymovement LOCALID_PALLET_SCHOOL_TEACHER, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
+PalletTown_School_EventScript_TeacherDone::
+	msgbox PalletTown_School_Text_TeacherCourseDone
 	closemessage
 	applymovement LOCALID_PALLET_SCHOOL_TEACHER, Common_Movement_FaceOriginalDirection
 	waitmovement 0
@@ -14,6 +27,11 @@ PalletTown_School_EventScript_Teacher::
 
 PalletTown_School_EventScript_TeacherStrike::
 	msgbox PalletTown_School_Text_TeacherStrike
+	goto_if_set FLAG_GRENALUX_TYPE_COURSE, PalletTown_School_EventScript_TeacherStrikeEnd
+	msgbox PalletTown_School_Text_TeacherCourseShort
+	giveitem_msg PalletTown_School_Text_ReceivedTypeMemo, ITEM_POWDER_JAR
+	setflag FLAG_GRENALUX_TYPE_COURSE
+PalletTown_School_EventScript_TeacherStrikeEnd::
 	closemessage
 	applymovement LOCALID_PALLET_SCHOOL_TEACHER, Common_Movement_FaceOriginalDirection
 	waitmovement 0

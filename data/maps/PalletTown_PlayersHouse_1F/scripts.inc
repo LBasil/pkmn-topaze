@@ -27,6 +27,60 @@ PalletTown_PlayersHouse_1F_EventScript_MomHeal::
 	closemessage
 	call EventScript_OutOfCenterPartyHeal
 	msgbox PalletTown_PlayersHouse_1F_Text_LookingGreatTakeCare
+	goto_if_set FLAG_BADGE08_GET, PalletTown_PlayersHouse_1F_EventScript_MomB8
+	goto_if_set FLAG_BADGE07_GET, PalletTown_PlayersHouse_1F_EventScript_MomB7
+	goto_if_set FLAG_BADGE06_GET, PalletTown_PlayersHouse_1F_EventScript_MomB6
+	goto_if_set FLAG_BADGE05_GET, PalletTown_PlayersHouse_1F_EventScript_MomB5
+	goto_if_set FLAG_BADGE04_GET, PalletTown_PlayersHouse_1F_EventScript_MomB4
+	goto_if_set FLAG_BADGE03_GET, PalletTown_PlayersHouse_1F_EventScript_MomB3
+	goto_if_set FLAG_BADGE02_GET, PalletTown_PlayersHouse_1F_EventScript_MomB2
+	goto_if_set FLAG_BADGE01_GET, PalletTown_PlayersHouse_1F_EventScript_MomB1
+	msgbox PalletTown_PlayersHouse_1F_Text_MomB0
+	release
+	end
+
+PalletTown_PlayersHouse_1F_EventScript_MomB0::
+	msgbox PalletTown_PlayersHouse_1F_Text_MomB0
+	release
+	end
+
+PalletTown_PlayersHouse_1F_EventScript_MomB1::
+	msgbox PalletTown_PlayersHouse_1F_Text_MomB1
+	release
+	end
+
+PalletTown_PlayersHouse_1F_EventScript_MomB2::
+	msgbox PalletTown_PlayersHouse_1F_Text_MomB2
+	release
+	end
+
+PalletTown_PlayersHouse_1F_EventScript_MomB3::
+	msgbox PalletTown_PlayersHouse_1F_Text_MomB3
+	release
+	end
+
+PalletTown_PlayersHouse_1F_EventScript_MomB4::
+	msgbox PalletTown_PlayersHouse_1F_Text_MomB4
+	release
+	end
+
+PalletTown_PlayersHouse_1F_EventScript_MomB5::
+	msgbox PalletTown_PlayersHouse_1F_Text_MomB5
+	release
+	end
+
+PalletTown_PlayersHouse_1F_EventScript_MomB6::
+	msgbox PalletTown_PlayersHouse_1F_Text_MomB6
+	release
+	end
+
+PalletTown_PlayersHouse_1F_EventScript_MomB7::
+	msgbox PalletTown_PlayersHouse_1F_Text_MomB7
+	release
+	end
+
+PalletTown_PlayersHouse_1F_EventScript_MomB8::
+	msgbox PalletTown_PlayersHouse_1F_Text_MomB8
 	release
 	end
 

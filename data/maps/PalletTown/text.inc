@@ -126,32 +126,34 @@ PalletTown_Text_RanchOakGoToLab::
     .string "You're each getting a partner.$"
 
 PalletTown_Text_AmbMiner::
-	.string "The vein under this hill is old.\n"
-	.string "Garnet grows like frost in the dark.\n"
-	.string "We cut only what the mine lets go.$"
+	.string "The mine has been sealed since the\n"
+	.string "big change. The LEAGUE alone can\n"
+	.string "decide when it opens again.$"
 
 PalletTown_Text_AmbOldman::
-	.string "My grandfather carried the first\n"
-	.string "crystal up from the mine. They say\n"
-	.string "the monument still hums at night.$"
+	.string "Every town keeps a stone of its own.\n"
+	.string "Garnet is ours. Lose it, and the\n"
+	.string "hill forgets its name.$"
 
 PalletTown_Text_AmbGirl::
 	.string "The pond turns purple at dusk!\n"
-	.string "I think the garnet colors it.$"
+	.string "My mom says that is the garnet.\n"
+	.string "She also says: heal at home!$"
 
 PalletTown_Text_AmbBoy::
-	.string "I found a tiny crystal by the pond.\n"
-	.string "It glows if you hold it to the sun!$"
+	.string "Some POKéMON got different types\n"
+	.string "ten years ago. Check yours at the\n"
+	.string "school, teacher has notes!$"
 
 PalletTown_Text_AmbScientist::
 	.string "The lab measures the aura of every\n"
 	.string "crystal in town. The readings keep\n"
-	.string "rising, and nobody knows why.$"
+	.string "rising since the ONYBRIS arrived.$"
 
 PalletTown_Text_AmbGardener::
-	.string "These berries are for ranch animals.\n"
-	.string "They are not for picking, sorry!\n"
-	.string "The pens are east, beyond the trees.$"
+	.string "The sea south of here needs a\n"
+	.string "POKéMON that can SURF. Ask the\n"
+	.string "badges, not the berries.$"
 
 PalletTown_Text_AmbLady::
 	.string "Garnet is the stone of this town.\n"

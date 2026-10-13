@@ -189,3 +189,12 @@ Les 4 cartes `PokemonMansion_1F/2F/3F/B1F` sont réutilisées (ids conservés) m
 
 ## Arène d'Amethiolite — intérieur recoloré
 `docs/topaze/gym_amethiolite.py` : recoloration du tileset `fuchsia_gym` (palettes 7, 8, 12) : sol rose → lilas d'améthyste, or → argent-lilas, verts → violet profond. Carte et murs invisibles inchangés. Les autres intérieurs d'Amethiolite (bureau du Safari, maison du Gardien…) partagent le tileset `safari_zone_building` avec des cartes des îles Sevii : non recolorés pour l'instant.
+
+
+## Grenalux : PNJ et événements (parcours du joueur)
+- Drapeaux (`flags.h`, bloc 0x4BD..0x4C1) : `FLAG_GRENALUX_TYPE_COURSE` (mémo reçu), `FLAG_ONYBRIS_ANIMALS_FOUND` (à poser au QG d'Onybris, Bourg Quartz : Doduo + 2 Nidoran récupérés), `FLAG_GRENALUX_GEM_REWARD`, `FLAG_GRENALUX_OAK_RETURN2`.
+- Maman (`PalletTown_PlayersHouse_1F`) : soin gratuit puis rappel d'objectif selon le nombre d'arènes (`FLAG_BADGE01..08_GET`).
+- Professeur de l'école : cours sur les types changés et le type Fée, remet le **TYPE MEMO** (objet clé = ancien `ITEM_POWDER_JAR`, sans effet, description = résumé). Aussi donné après le cambriolage (`FLAG_GRENALUX_ONYBRIS_STRIKE`).
+- Ouvrier du ranch (Hand1) : quand `FLAG_ONYBRIS_ANIMALS_FOUND` est posé, remet le **GRENAT** (ancien `ITEM_RUBY`, objet clé dont l'importance sera révélée plus tard). Le drapeau n'est pas encore posé : à brancher avec Bourg Quartz.
+- Chêne : 2e retour après l'arène 4 (`PalletTown_ProfessorOaksLab_Text_OakReturn2`). 1er retour = scène du colis d'origine ; scène finale = scène Pokédex national d'origine.
+- PNJ d'ambiance : 7 textes d'indice réécrits (mine fermée jusqu'à la Ligue, une pierre par ville, mémo de types, Surf pour la mer au sud).
