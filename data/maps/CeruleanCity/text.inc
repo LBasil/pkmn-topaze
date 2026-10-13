@@ -44,12 +44,12 @@ CeruleanCity_Text_TrainerLifeIsToughIsntIt::
     .string "It's a tough life, isn't it?$"
 
 CeruleanCity_Text_YouCanCutDownSmallTrees::
-    .string "Did you know that you can CUT down\n"
+    .string "Did you know you can CUT down\n"
     .string "small trees?\p"
-    .string "Even that small tree in front of\n"
-    .string "the shop can be CUT down.\p"
-    .string "I think there's a way around it,\n"
-    .string "though.$"
+    .string "That tree in the east pass could\n"
+    .string "be cleared with CUT.\p"
+    .string "I hear the captain of the S.S.\n"
+    .string "ANNE owns the HM.$"
 
 CeruleanCity_Text_IfSlowbroWasntThereCouldCutTree::
     .string "The police closed the south road\n"
@@ -114,5 +114,11 @@ CeruleanCity_Text_NorthPolice::
     .string "from SYLVESTRE first.$"
 
 CeruleanCity_Text_RoadsOpen::
-    .string "POLICEMAN: The roads are open\n"
+    .string "POLICEMAN: The south road is open\n"
     .string "again. Stay safe out there!$"
+
+CeruleanCity_Text_EastTree::
+    .string "POLICEMAN: The roads are open\n"
+    .string "again. Head south to APATIA.\p"
+    .string "The east pass is blocked by a\n"
+    .string "small tree. You'll need CUT.$"

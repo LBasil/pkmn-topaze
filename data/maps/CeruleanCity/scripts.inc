@@ -33,7 +33,6 @@ CeruleanCity_Movement_PlayerBackOff::
 	step_end
 
 CeruleanCity_EventScript_BlockExits::
-	setobjectxyperm LOCALID_CERULEAN_POLICEMAN, 41, 19
 	setobjectxyperm LOCALID_CERULEAN_SLOWBRO, 24, 31
 	setobjectxyperm LOCALID_CERULEAN_LASS, 25, 31
 	return
@@ -192,7 +191,16 @@ CeruleanCity_Movement_RivalExit::
 CeruleanCity_EventScript_Policeman::
 	lock
 	faceplayer
+	goto_if_set FLAG_GOT_SS_TICKET, CeruleanCity_EventScript_PolicemanOpen
 	msgbox CeruleanCity_Text_RoadsClosed
+	closemessage
+	applymovement LOCALID_CERULEAN_POLICEMAN, Common_Movement_FaceOriginalDirection
+	waitmovement 0
+	release
+	end
+
+CeruleanCity_EventScript_PolicemanOpen::
+	msgbox CeruleanCity_Text_EastTree
 	closemessage
 	applymovement LOCALID_CERULEAN_POLICEMAN, Common_Movement_FaceOriginalDirection
 	waitmovement 0
