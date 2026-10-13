@@ -381,3 +381,6 @@ const u32 gMetatileAttributes_GeneralRoute11V2[] = INCBIN_U32("data/tilesets/pri
 
 const u16 gMetatiles_CeladonRoute11V2[] = INCBIN_U16("data/tilesets/secondary/celadon_route11v2/metatiles.bin");
 const u32 gMetatileAttributes_CeladonRoute11V2[] = INCBIN_U32("data/tilesets/secondary/celadon_route11v2/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralSeafoam[] = INCBIN_U16("data/tilesets/primary/general_seafoam/metatiles.bin");
+const u32 gMetatileAttributes_GeneralSeafoam[] = INCBIN_U32("data/tilesets/primary/general_seafoam/metatile_attributes.bin");

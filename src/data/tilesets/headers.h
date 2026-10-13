@@ -1450,3 +1450,14 @@ const struct Tileset gTileset_CeladonRoute11V2 =
     .metatileAttributes = gMetatileAttributes_CeladonRoute11V2,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralSeafoam =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralSeafoam,
+    .palettes = gTilesetPalettes_GeneralSeafoam,
+    .metatiles = gMetatiles_GeneralSeafoam,
+    .metatileAttributes = gMetatileAttributes_GeneralSeafoam,
+    .callback = InitTilesetAnim_General,
+};

@@ -2751,3 +2751,24 @@ const u16 gTilesetPalettes_CeladonRoute11V2[][16] =
 	INCBIN_U16("data/tilesets/secondary/celadon_route11v2/palettes/14.gbapal"),
 	INCBIN_U16("data/tilesets/secondary/celadon_route11v2/palettes/15.gbapal"),
 };
+
+const u32 gTilesetTiles_GeneralSeafoam[] = INCBIN_U32("data/tilesets/primary/general_seafoam/tiles.4bpp.lz");
+const u16 gTilesetPalettes_GeneralSeafoam[][16] =
+{
+	INCBIN_U16("data/tilesets/primary/general_seafoam/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_seafoam/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_seafoam/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_seafoam/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_seafoam/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_seafoam/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_seafoam/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_seafoam/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_seafoam/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_seafoam/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_seafoam/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_seafoam/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_seafoam/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_seafoam/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_seafoam/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_seafoam/palettes/15.gbapal"),
+};

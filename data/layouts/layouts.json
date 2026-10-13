@@ -1681,7 +1681,7 @@
       "height": 24,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_GeneralSeafoam",
       "secondary_tileset": "gTileset_SeafoamIslands",
       "border_filepath": "data/layouts/SeafoamIslands_1F/border.bin",
       "blockdata_filepath": "data/layouts/SeafoamIslands_1F/map.bin"
@@ -1693,7 +1693,7 @@
       "height": 23,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_GeneralSeafoam",
       "secondary_tileset": "gTileset_SeafoamIslands",
       "border_filepath": "data/layouts/SeafoamIslands_B1F/border.bin",
       "blockdata_filepath": "data/layouts/SeafoamIslands_B1F/map.bin"
@@ -1705,7 +1705,7 @@
       "height": 24,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_GeneralSeafoam",
       "secondary_tileset": "gTileset_SeafoamIslands",
       "border_filepath": "data/layouts/SeafoamIslands_B2F/border.bin",
       "blockdata_filepath": "data/layouts/SeafoamIslands_B2F/map.bin"
@@ -1717,7 +1717,7 @@
       "height": 24,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_GeneralSeafoam",
       "secondary_tileset": "gTileset_SeafoamIslands",
       "border_filepath": "data/layouts/SeafoamIslands_B3F/border.bin",
       "blockdata_filepath": "data/layouts/SeafoamIslands_B3F/map.bin"
@@ -1729,7 +1729,7 @@
       "height": 24,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_GeneralSeafoam",
       "secondary_tileset": "gTileset_SeafoamIslands",
       "border_filepath": "data/layouts/SeafoamIslands_B4F/border.bin",
       "blockdata_filepath": "data/layouts/SeafoamIslands_B4F/map.bin"
@@ -3134,7 +3134,7 @@
       "height": 24,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_GeneralSeafoam",
       "secondary_tileset": "gTileset_SeafoamIslands",
       "border_filepath": "data/layouts/SeafoamIslands_B3F_CurrentStopped/border.bin",
       "blockdata_filepath": "data/layouts/SeafoamIslands_B3F_CurrentStopped/map.bin"
@@ -3146,7 +3146,7 @@
       "height": 24,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_GeneralSeafoam",
       "secondary_tileset": "gTileset_SeafoamIslands",
       "border_filepath": "data/layouts/SeafoamIslands_B4F_CurrentStopped/border.bin",
       "blockdata_filepath": "data/layouts/SeafoamIslands_B4F_CurrentStopped/map.bin"
