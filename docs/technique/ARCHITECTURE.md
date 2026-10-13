@@ -219,7 +219,7 @@ Ancien chef de l'arène de Pyropia jusqu'à la mutation de l'Aura (il y a 10 ans
 
 **Route 4, début de jeu (13/10, cohérence lunaire, à valider par Basil)** : sauvages (herbe, taux 21) : les 3 emplacements Rattata deviennent **Racaillou 13 (20 %)**, **Paras 12 (10 %)** et **Mélofée 12 (5 %, clin d'œil « Mélofée vient de la Lune »)** ; Piafabec, Férosinge et Abo (FR) / Sabelette (LG) inchangés. Mare : plus de Tentacool/Hippocampe/Krabby (faune marine, pas de mer ici) → **Poissirène 5/10/20 + Poissoroy 30/35** (surf), pêche : Hippocampe/Krabby → Poissirène (Magikarp, Gyarados 15, Psykokwak 25 / Ramoloss 25 inchangés). **Crissy** (`sParty_LassCrissy`) : Paras niv. 35/35 + Parasect 35 (pic de niveau absurde sur cette route) → **3 Paras niv. 12/13/14**. Textes : le Garçon à l'insigne (PYROPE) parle de Kay au féminin ; texte de BROCK au musée corrigé (« She always burned too bright »). Compilé, non testé en émulateur. **Route 4 Est : toujours sans dresseurs, objets ni Pokémon sauvages.**
 
-## Route 4 Est : le sentier de tourmaline (à valider par Basil)
+## Route 4 Est : le sentier de tourmaline (VALIDÉE par Basil le 13/10)
 - 5 dresseurs générés par `docs/topaze/route4e_trainers.py` (idempotent, ids recyclés) : Marco randonneur (Racaillou/Machoc 13), Tessa pique-niqueuse (Paras 13/Mélofée 14), Leo campeur (Mimitoss 15 + Férosinge 15), Nina fillette (Mystherbe 15/Chétiflor 16), Rio chasseur d'insectes (Chenipan Psy/Aspicot Élec/Mimitoss 14-15). Positions par BFS, à 3 cases du chemin, regard vers lui.
 - Sauvages (FR=LG, taux 21) : Mystherbe, Paras, Racaillou, Mimitoss, Chétiflor, Roucool, Mélofée, Férosinge, Noeunoeuf.
 - Textes : mousse et cristaux vers Tourmalia. Objets et objets cachés : à faire (nouveaux flags).
