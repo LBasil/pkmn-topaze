@@ -1,6 +1,293 @@
 SevenIsland_SevaultCanyon_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SevenIsland_SevaultCanyon_OnTransition
 	.byte 0
 
 SevenIsland_SevaultCanyon_EventScript_RouteSign::
 	msgbox SevenIsland_SevaultCanyon_Text_RouteSign, MSGBOX_SIGN
+	end
+
+@ Topaze: Echo 7 finale: keeper of time + gathered legends (static, stay if fled)
+SevenIsland_SevaultCanyon_OnTransition::
+	setflag FLAG_HIDE_ECHO_CELEBI
+	call_if_unset FLAG_DONE_ECHO_CELEBI, SevenIsland_SevaultCanyon_EventScript_MaybeCelebi
+	setflag FLAG_HIDE_ECHO_KYOGRE
+	call_if_unset FLAG_DONE_ECHO_KYOGRE, SevenIsland_SevaultCanyon_EventScript_MaybeKyogre
+	setflag FLAG_HIDE_ECHO_GROUDON
+	call_if_unset FLAG_DONE_ECHO_GROUDON, SevenIsland_SevaultCanyon_EventScript_MaybeGroudon
+	setflag FLAG_HIDE_ECHO_RAYQUAZA
+	call_if_unset FLAG_DONE_ECHO_RAYQUAZA, SevenIsland_SevaultCanyon_EventScript_MaybeRayquaza
+	setflag FLAG_HIDE_ECHO_LATIAS
+	call_if_unset FLAG_DONE_ECHO_LATIAS, SevenIsland_SevaultCanyon_EventScript_MaybeLatias
+	setflag FLAG_HIDE_ECHO_LATIOS
+	call_if_unset FLAG_DONE_ECHO_LATIOS, SevenIsland_SevaultCanyon_EventScript_MaybeLatios
+	setflag FLAG_HIDE_ECHO_JIRACHI
+	call_if_unset FLAG_DONE_ECHO_JIRACHI, SevenIsland_SevaultCanyon_EventScript_MaybeJirachi
+	end
+
+SevenIsland_SevaultCanyon_EventScript_MaybeCelebi::
+	goto_if_ne VAR_ECHO_STAGE, 19, EventScript_Return
+	clearflag FLAG_HIDE_ECHO_CELEBI
+	return
+
+SevenIsland_SevaultCanyon_EventScript_Celebi::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	setwildbattle SPECIES_CELEBI, 60
+	waitse
+	playmoncry SPECIES_CELEBI, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SevenIsland_SevaultCanyon_EventScript_DefeatedCelebi
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SevenIsland_SevaultCanyon_EventScript_RanFromCelebi
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SevenIsland_SevaultCanyon_EventScript_RanFromCelebi
+	setflag FLAG_DONE_ECHO_CELEBI
+	setflag FLAG_HIDE_ECHO_CELEBI
+	setvar VAR_ECHO_STAGE, 20
+	release
+	end
+
+SevenIsland_SevaultCanyon_EventScript_DefeatedCelebi::
+	setflag FLAG_DONE_ECHO_CELEBI
+	setvar VAR_ECHO_STAGE, 20
+	goto EventScript_RemoveStaticMon
+	end
+
+SevenIsland_SevaultCanyon_EventScript_RanFromCelebi::
+	setvar VAR_0x8004, SPECIES_CELEBI
+	goto EventScript_MonFlewAway
+	end
+
+SevenIsland_SevaultCanyon_EventScript_MaybeKyogre::
+	goto_if_ne VAR_ECHO_STAGE, 21, EventScript_Return
+	clearflag FLAG_HIDE_ECHO_KYOGRE
+	return
+
+SevenIsland_SevaultCanyon_EventScript_Kyogre::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	setwildbattle SPECIES_KYOGRE, 70
+	waitse
+	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SevenIsland_SevaultCanyon_EventScript_DefeatedKyogre
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SevenIsland_SevaultCanyon_EventScript_RanFromKyogre
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SevenIsland_SevaultCanyon_EventScript_RanFromKyogre
+	setflag FLAG_DONE_ECHO_KYOGRE
+	setflag FLAG_HIDE_ECHO_KYOGRE
+	release
+	end
+
+SevenIsland_SevaultCanyon_EventScript_DefeatedKyogre::
+	setflag FLAG_DONE_ECHO_KYOGRE
+	goto EventScript_RemoveStaticMon
+	end
+
+SevenIsland_SevaultCanyon_EventScript_RanFromKyogre::
+	setvar VAR_0x8004, SPECIES_KYOGRE
+	goto EventScript_MonFlewAway
+	end
+
+SevenIsland_SevaultCanyon_EventScript_MaybeGroudon::
+	goto_if_ne VAR_ECHO_STAGE, 21, EventScript_Return
+	clearflag FLAG_HIDE_ECHO_GROUDON
+	return
+
+SevenIsland_SevaultCanyon_EventScript_Groudon::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	setwildbattle SPECIES_GROUDON, 70
+	waitse
+	playmoncry SPECIES_GROUDON, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SevenIsland_SevaultCanyon_EventScript_DefeatedGroudon
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SevenIsland_SevaultCanyon_EventScript_RanFromGroudon
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SevenIsland_SevaultCanyon_EventScript_RanFromGroudon
+	setflag FLAG_DONE_ECHO_GROUDON
+	setflag FLAG_HIDE_ECHO_GROUDON
+	release
+	end
+
+SevenIsland_SevaultCanyon_EventScript_DefeatedGroudon::
+	setflag FLAG_DONE_ECHO_GROUDON
+	goto EventScript_RemoveStaticMon
+	end
+
+SevenIsland_SevaultCanyon_EventScript_RanFromGroudon::
+	setvar VAR_0x8004, SPECIES_GROUDON
+	goto EventScript_MonFlewAway
+	end
+
+SevenIsland_SevaultCanyon_EventScript_MaybeRayquaza::
+	goto_if_ne VAR_ECHO_STAGE, 21, EventScript_Return
+	clearflag FLAG_HIDE_ECHO_RAYQUAZA
+	return
+
+SevenIsland_SevaultCanyon_EventScript_Rayquaza::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	setwildbattle SPECIES_RAYQUAZA, 70
+	waitse
+	playmoncry SPECIES_RAYQUAZA, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SevenIsland_SevaultCanyon_EventScript_DefeatedRayquaza
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SevenIsland_SevaultCanyon_EventScript_RanFromRayquaza
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SevenIsland_SevaultCanyon_EventScript_RanFromRayquaza
+	setflag FLAG_DONE_ECHO_RAYQUAZA
+	setflag FLAG_HIDE_ECHO_RAYQUAZA
+	release
+	end
+
+SevenIsland_SevaultCanyon_EventScript_DefeatedRayquaza::
+	setflag FLAG_DONE_ECHO_RAYQUAZA
+	goto EventScript_RemoveStaticMon
+	end
+
+SevenIsland_SevaultCanyon_EventScript_RanFromRayquaza::
+	setvar VAR_0x8004, SPECIES_RAYQUAZA
+	goto EventScript_MonFlewAway
+	end
+
+SevenIsland_SevaultCanyon_EventScript_MaybeLatias::
+	goto_if_ne VAR_ECHO_STAGE, 21, EventScript_Return
+	clearflag FLAG_HIDE_ECHO_LATIAS
+	return
+
+SevenIsland_SevaultCanyon_EventScript_Latias::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	setwildbattle SPECIES_LATIAS, 60
+	waitse
+	playmoncry SPECIES_LATIAS, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SevenIsland_SevaultCanyon_EventScript_DefeatedLatias
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SevenIsland_SevaultCanyon_EventScript_RanFromLatias
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SevenIsland_SevaultCanyon_EventScript_RanFromLatias
+	setflag FLAG_DONE_ECHO_LATIAS
+	setflag FLAG_HIDE_ECHO_LATIAS
+	release
+	end
+
+SevenIsland_SevaultCanyon_EventScript_DefeatedLatias::
+	setflag FLAG_DONE_ECHO_LATIAS
+	goto EventScript_RemoveStaticMon
+	end
+
+SevenIsland_SevaultCanyon_EventScript_RanFromLatias::
+	setvar VAR_0x8004, SPECIES_LATIAS
+	goto EventScript_MonFlewAway
+	end
+
+SevenIsland_SevaultCanyon_EventScript_MaybeLatios::
+	goto_if_ne VAR_ECHO_STAGE, 21, EventScript_Return
+	clearflag FLAG_HIDE_ECHO_LATIOS
+	return
+
+SevenIsland_SevaultCanyon_EventScript_Latios::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	setwildbattle SPECIES_LATIOS, 60
+	waitse
+	playmoncry SPECIES_LATIOS, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SevenIsland_SevaultCanyon_EventScript_DefeatedLatios
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SevenIsland_SevaultCanyon_EventScript_RanFromLatios
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SevenIsland_SevaultCanyon_EventScript_RanFromLatios
+	setflag FLAG_DONE_ECHO_LATIOS
+	setflag FLAG_HIDE_ECHO_LATIOS
+	release
+	end
+
+SevenIsland_SevaultCanyon_EventScript_DefeatedLatios::
+	setflag FLAG_DONE_ECHO_LATIOS
+	goto EventScript_RemoveStaticMon
+	end
+
+SevenIsland_SevaultCanyon_EventScript_RanFromLatios::
+	setvar VAR_0x8004, SPECIES_LATIOS
+	goto EventScript_MonFlewAway
+	end
+
+SevenIsland_SevaultCanyon_EventScript_MaybeJirachi::
+	goto_if_ne VAR_ECHO_STAGE, 21, EventScript_Return
+	clearflag FLAG_HIDE_ECHO_JIRACHI
+	return
+
+SevenIsland_SevaultCanyon_EventScript_Jirachi::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	setwildbattle SPECIES_JIRACHI, 50
+	waitse
+	playmoncry SPECIES_JIRACHI, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SevenIsland_SevaultCanyon_EventScript_DefeatedJirachi
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SevenIsland_SevaultCanyon_EventScript_RanFromJirachi
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SevenIsland_SevaultCanyon_EventScript_RanFromJirachi
+	setflag FLAG_DONE_ECHO_JIRACHI
+	setflag FLAG_HIDE_ECHO_JIRACHI
+	release
+	end
+
+SevenIsland_SevaultCanyon_EventScript_DefeatedJirachi::
+	setflag FLAG_DONE_ECHO_JIRACHI
+	goto EventScript_RemoveStaticMon
+	end
+
+SevenIsland_SevaultCanyon_EventScript_RanFromJirachi::
+	setvar VAR_0x8004, SPECIES_JIRACHI
+	goto EventScript_MonFlewAway
 	end

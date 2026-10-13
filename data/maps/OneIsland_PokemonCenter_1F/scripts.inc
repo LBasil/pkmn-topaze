@@ -586,6 +586,9 @@ OneIsland_PokemonCenter_1F_EventScript_EchoBill::
 	goto_if_eq VAR_ECHO_STAGE, 14, OneIsland_PokemonCenter_1F_EventScript_Echo5Gift
 	goto_if_eq VAR_ECHO_STAGE, 13, OneIsland_PokemonCenter_1F_EventScript_Echo5Wait
 	goto_if_eq VAR_ECHO_STAGE, 12, OneIsland_PokemonCenter_1F_EventScript_Echo5Announce
+	goto_if_eq VAR_ECHO_STAGE, 20, OneIsland_PokemonCenter_1F_EventScript_Echo7Epilogue
+	goto_if_eq VAR_ECHO_STAGE, 19, OneIsland_PokemonCenter_1F_EventScript_Echo7Wait
+	goto_if_eq VAR_ECHO_STAGE, 18, OneIsland_PokemonCenter_1F_EventScript_Echo7Announce
 	goto_if_ge VAR_ECHO_STAGE, 1, OneIsland_PokemonCenter_1F_EventScript_EchoBillAfter
 	msgbox OneIsland_PokemonCenter_1F_Text_EchoBillIntro
 	giveitem_msg OneIsland_PokemonCenter_1F_Text_EchoReceivedCompass, ITEM_VS_SEEKER, 1, MUS_OBTAIN_KEY_ITEM
@@ -916,5 +919,23 @@ OneIsland_PokemonCenter_1F_EventScript_EchoGift6End::
 	textcolor NPC_TEXT_COLOR_MALE
 	setvar VAR_ECHO_STAGE, 18
 	msgbox OneIsland_PokemonCenter_1F_Text_Echo6Next
+	release
+	end
+
+@ Topaze: Echo 7 (finale)
+OneIsland_PokemonCenter_1F_EventScript_Echo7Announce::
+	msgbox OneIsland_PokemonCenter_1F_Text_Echo7Announce
+	setvar VAR_ECHO_STAGE, 19
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_Echo7Wait::
+	msgbox OneIsland_PokemonCenter_1F_Text_Echo7Wait
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_Echo7Epilogue::
+	msgbox OneIsland_PokemonCenter_1F_Text_Echo7Epilogue
+	setvar VAR_ECHO_STAGE, 21
 	release
 	end

@@ -26,6 +26,7 @@ for f in glob.glob('src/**/*.[ch]', recursive=True):
         for m in re.finditer(r'\.(?:species|requestedSpecies)\s*=\s*SPECIES_(\w+)', t): add(m.group(1), 'trade')
 for f in ['data/maps/PalletTown_ProfessorOaksLab/scripts.inc']:
     for m in re.finditer(r'setvar PLAYER_STARTER_SPECIES, SPECIES_(\w+)', open(f).read()): add(m.group(1), 'starter')
+add('PORYGON', 'prize:Celadon')  # lot de la salle de jeux (variable, non detecte)
 # evolutions
 ev = open('src/data/pokemon/evolution.h').read() if os.path.exists('src/data/pokemon/evolution.h') else ''
 edges = []

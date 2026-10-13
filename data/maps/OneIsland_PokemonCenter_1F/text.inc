@@ -495,3 +495,25 @@ OneIsland_PokemonCenter_1F_Text_Echo6Next::
 
 OneIsland_PokemonCenter_1F_Text_EchoGotMudkip::
     .string "{PLAYER} received MUDKIP!$"
+
+OneIsland_PokemonCenter_1F_Text_Echo7Announce::
+    .string "BILL: The compass is going wild.\p"
+    .string "The last ECHO is on SEVEN ISLAND,\n"
+    .string "in SEVAULT CANYON.\p"
+    .string "It is not a beast this time.\n"
+    .string "It is the keeper of time itself.\p"
+    .string "Go, CHAMPION. We will be here.$"
+
+OneIsland_PokemonCenter_1F_Text_Echo7Wait::
+    .string "BILL: SEVAULT CANYON, SEVEN\n"
+    .string "ISLAND. The keeper of time.$"
+
+OneIsland_PokemonCenter_1F_Text_Echo7Epilogue::
+    .string "BILL: The clocks are ticking\n"
+    .string "right again!\p"
+    .string "The keeper told you what the wish\n"
+    .string "really did: it cracked time open.\p"
+    .string "Now the old legends of land, sea\n"
+    .string "and sky have gathered at the top\l"
+    .string "of SEVAULT CANYON.\p"
+    .string "They wait for a TRAINER like you.$"

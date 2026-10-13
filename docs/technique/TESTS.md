@@ -144,3 +144,6 @@ Piste réaliste : faire d'abord le jeu jouable, puis ajouter un follower **limit
 
 ## Échos 5 et 6 (post-game, îles 5 et 6)
 - `bench/echo56_giver_test.py <étape> <bill|celio>` (12→13, 14→15 Bill ; 15→16, 17→18 Celio) et `echo56_beast_test.py <map> <x> <y> <étape> <hold> <5|6>` : Registeel niv. 54 au Meadow (6,32), Regirock niv. 56 à Ruin Valley (14,23) (sprites provisoires = rocher). OK en émulateur.
+
+## Écho 7 (finale, île 7)
+- `bench/echo7_sevault_test.py <étape> <up> <left> <ESPÈCE>` : Celebi (stage 19→20) et Latias (stage 21) au sommet de Sevault Canyon ; Bill 18→19 et 20→21 via `echo56_giver_test.py`. OK en émulateur ; sprites provisoires = rocher sauf Celebi.
