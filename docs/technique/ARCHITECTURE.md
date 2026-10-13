@@ -277,3 +277,9 @@ Chemin du joueur après le ticket : Tourmalia → **Route 5** (pension, panneau 
 - B4F : Giovanni remplace par VESPER (id TRAINER_BOSS_GIOVANNI recycle : classe TEAM_ROCKET, pic ROCKET_GRUNT_F, Arbok 30/Nosferalto 30/Smogogo 31/Ectoplasma 33). Apres le combat elle mentionne l'ancien chef disparu il y a 10 ans (cameo Giovanni a venir plus tard). L'objet ex-SILPH SCOPE donne un MAX REVIVE ("vieux registre ROCKET signe G").
 - Route 16 (sortie ouest) : 4 policiers (1,22..25, FLAG_TEMP_11 car 13/14 pris par les arbres), masques par FLAG_HIDE_CELADON_ROCKETS (pose apres Vesper). Entree est (depuis Route 7) libre. Non teste en emulateur.
 - A faire : arene de GRIM / badge 4, pierre QUARTZ (evenement), Silph Scope encore cite nulle part.
+
+### Bourg Quartz — duel au casino pour la pierre QUARTZ (voulu par Basil)
+- Apres le combat B4F, Vesper dit avoir le QUARTZ en poche et defie le joueur a sa table du GAME CORNER. Elle disparait de B4F (removeobject).
+- GAME CORNER : objet Vesper (8,5) (`LOCALID_GAME_CORNER_VESPER`, FLAG_TEMP_5), visible seulement si FLAG_HIDE_CELADON_ROCKETS et pas FLAG_QUARTZ_DUEL_DONE (OnTransition). Jeu = 3 appels HAUT/BAS (OUI/NON), tirage `random 2`, au meilleur des 3, un seul essai.
+- Victoire : FLAG_QUARTZ_STONE_WON + FLAG_QUARTZ_DUEL_DONE, fanfare "got the QUARTZ" (l'objet pierre n'existe pas encore : suivi par flag). Defaite : seulement FLAG_QUARTZ_DUEL_DONE, Vesper garde la pierre. Flags 0x020/0x021 renommes dans include/constants/flags.h.
+- Twist ulterieur : les deux branches doivent etre gerees (STONE_WON = joueur a la pierre ; sinon Onybris l'a). Non teste en emulateur.

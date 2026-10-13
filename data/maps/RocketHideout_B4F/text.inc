@@ -10,11 +10,13 @@ RocketHideout_B4F_Text_GiovanniDefeat::
     .string "Impossible...!$"
 
 RocketHideout_B4F_Text_GiovanniPostBattle::
-    .string "VESPER: Hmph. Take your trophy.\p"
-    .string "Know this: the boss of this base\n"
-    .string "before us vanished ten years ago.\p"
-    .string "Whoever he was, ONYBRIS is greater.\n"
-    .string "Until next time, child!$"
+    .string "VESPER: Hmph. You beat me...\n"
+    .string "in a fight. Fights are for fools.\p"
+    .string "I have the QUARTZ in my pocket.\p"
+    .string "Let us settle it like adults: at my\n"
+    .string "table in the GAME CORNER, upstairs.\p"
+    .string "Win, and you keep it. Lose, and it\n"
+    .string "is mine. Come, if you have the guts!$"
 
 RocketHideout_B4F_Text_Grunt2Intro::
     .string "I know you!\n"

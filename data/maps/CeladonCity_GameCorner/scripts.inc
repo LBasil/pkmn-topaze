@@ -1,6 +1,70 @@
 CeladonCity_GameCorner_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, CeladonCity_GameCorner_OnTransition
 	map_script MAP_SCRIPT_ON_LOAD, CeladonCity_GameCorner_OnLoad
 	.byte 0
+
+CeladonCity_GameCorner_OnTransition::
+	goto_if_unset FLAG_HIDE_CELADON_ROCKETS, CeladonCity_GameCorner_EventScript_HideVesper
+	goto_if_set FLAG_QUARTZ_DUEL_DONE, CeladonCity_GameCorner_EventScript_HideVesper
+	end
+
+CeladonCity_GameCorner_EventScript_HideVesper::
+	setflag FLAG_TEMP_5
+	end
+
+CeladonCity_GameCorner_EventScript_VesperDuel::
+	lock
+	faceplayer
+	msgbox CeladonCity_GameCorner_Text_VesperDuelIntro, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CeladonCity_GameCorner_EventScript_VesperDuelRefuse
+	setvar VAR_TEMP_2, 0
+	setvar VAR_TEMP_3, 0
+	goto CeladonCity_GameCorner_EventScript_VesperRound
+
+CeladonCity_GameCorner_EventScript_VesperDuelRefuse::
+	msgbox CeladonCity_GameCorner_Text_VesperDuelRefuse
+	release
+	end
+
+CeladonCity_GameCorner_EventScript_VesperRound::
+	msgbox CeladonCity_GameCorner_Text_VesperCallIt, MSGBOX_YESNO
+	copyvar VAR_TEMP_4, VAR_RESULT
+	random 2
+	goto_if_eq VAR_RESULT, VAR_TEMP_4, CeladonCity_GameCorner_EventScript_VesperRoundWon
+	addvar VAR_TEMP_3, 1
+	msgbox CeladonCity_GameCorner_Text_VesperRoundLost
+	goto_if_eq VAR_TEMP_3, 2, CeladonCity_GameCorner_EventScript_VesperDuelLost
+	goto CeladonCity_GameCorner_EventScript_VesperRound
+
+CeladonCity_GameCorner_EventScript_VesperRoundWon::
+	addvar VAR_TEMP_2, 1
+	msgbox CeladonCity_GameCorner_Text_VesperRoundWon
+	goto_if_eq VAR_TEMP_2, 2, CeladonCity_GameCorner_EventScript_VesperDuelWon
+	goto CeladonCity_GameCorner_EventScript_VesperRound
+
+CeladonCity_GameCorner_EventScript_VesperDuelWon::
+	msgbox CeladonCity_GameCorner_Text_VesperDuelWon
+	setflag FLAG_QUARTZ_STONE_WON
+	setflag FLAG_QUARTZ_DUEL_DONE
+	playfanfare MUS_OBTAIN_KEY_ITEM
+	message CeladonCity_GameCorner_Text_ObtainedQuartz
+	waitfanfare
+	waitmessage
+	goto CeladonCity_GameCorner_EventScript_VesperLeaves
+
+CeladonCity_GameCorner_EventScript_VesperDuelLost::
+	msgbox CeladonCity_GameCorner_Text_VesperDuelLost
+	setflag FLAG_QUARTZ_DUEL_DONE
+	goto CeladonCity_GameCorner_EventScript_VesperLeaves
+
+CeladonCity_GameCorner_EventScript_VesperLeaves::
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_GAME_CORNER_VESPER
+	delay 20
+	fadescreen FADE_FROM_BLACK
+	release
+	end
 
 CeladonCity_GameCorner_OnLoad::
 	call_if_unset FLAG_OPENED_ROCKET_HIDEOUT, CeladonCity_GameCorner_EventScript_HideRocketHideout

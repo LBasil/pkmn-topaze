@@ -146,3 +146,43 @@ CeladonCity_GameCorner_Text_SomeonesKeys::
     .string "Someone's keys!\n"
     .string "They'll be back.$"
 
+
+CeladonCity_GameCorner_Text_VesperDuelIntro::
+    .string "VESPER: Back already? Fine.\p"
+    .string "Three calls, HIGH or LOW, on the\n"
+    .string "house deck. Best of three.\p"
+    .string "Win, and the QUARTZ is yours. Lose,\n"
+    .string "and it is mine. I never lose here.\p"
+    .string "Do you accept?$"
+
+CeladonCity_GameCorner_Text_VesperDuelRefuse::
+    .string "VESPER: Ha! Scared of a card game?\n"
+    .string "My table is waiting, coward.$"
+
+CeladonCity_GameCorner_Text_VesperCallIt::
+    .string "VESPER: Call it, child.\p"
+    .string "YES for HIGH, NO for LOW.$"
+
+CeladonCity_GameCorner_Text_VesperRoundWon::
+    .string "The card is flipped... You called\n"
+    .string "it right!$"
+
+CeladonCity_GameCorner_Text_VesperRoundLost::
+    .string "The card is flipped... Wrong call!\n"
+    .string "VESPER smirks.$"
+
+CeladonCity_GameCorner_Text_VesperDuelWon::
+    .string "VESPER: ...Impossible. Twice?\p"
+    .string "Tch. A deal is a deal, even for\n"
+    .string "ONYBRIS. Take your precious stone.\p"
+    .string "Enjoy it. The boss will not be\n"
+    .string "pleased, and I will not be kind.$"
+
+CeladonCity_GameCorner_Text_ObtainedQuartz::
+    .string "{PLAYER} got the QUARTZ!$"
+
+CeladonCity_GameCorner_Text_VesperDuelLost::
+    .string "VESPER: Haha! Told you, child.\n"
+    .string "The house always wins.\p"
+    .string "The QUARTZ is mine. Come and take\n"
+    .string "it back if you dare. Bye now!$"
