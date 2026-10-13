@@ -38,7 +38,7 @@ Courbe de niveaux : R3 10–16 → Kay 15–20 → R4/4E 13–16 → Sylvestre 1
 
 ## 4. Vérifications faites
 - **Barrages (BFS sur la collision + objets)** : Apatia est, Spinellia ouest et sud, Tourmalia sud/est/ouest. Deux fuites trouvées et CORRIGÉES : Apatia est (cases (47,17) et (47,21) contournaient les 3 policiers → 5 policiers) et Spinellia sud (cases (18,28) et (21,28) → 4 policiers). Tourmalia nord est fermé par déclencheurs de coordonnées (pas par collision).
-- **Mots d'origine résiduels** (ROCKET, Palette, Jadeite…, SILPH) : tous nettoyés sur le parcours ; le SILPH SCOPE n'est plus requis (fantôme du 6F et sauvages de la Tour toujours visibles) et ses mentions sont retirées.
+- **Mots d'origine résiduels** (ROCKET, Bourg Palette, Jadielle, Argenta, Azuria, Carmin, Lavanville, SILPH) : tous nettoyés sur le parcours ; le SILPH SCOPE n'est plus requis (fantôme du 6F et sauvages de la Tour toujours visibles) et ses mentions sont retirées.
 - **Classe d'entraîneur** TEAM_ROCKET s'affiche « TEAM ONYBRIS » ; le nom du rival est remplacé par celui choisi par le joueur.
 
 ## 5. Points ouverts (par priorité)
