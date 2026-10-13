@@ -97,3 +97,9 @@ Eddie battu -> blackout, le maire (taupe) dit avoir utilisé le joueur pour la c
 - **Le boss a deux combats** : (1) son équipe ; (2) les légendaires qu'il a capturés, **Artikodin, Électhor, Sulfura + Mewtwo** (`TRAINER_LEAGUE_BOSS_2`, 755 dresseurs au total). Entre les deux : « chaque légendaire pris dérègle un peu plus l'horloge du monde » (secousse d'écran).
 - **Idée à développer (Basil)** : le temps se dérègle au fur et à mesure qu'il capture des légendaires (indices à poser sur le parcours : horloges, jour/nuit, PNJ décalés). Son nom viendra plus tard.
 - **Retours (V1)** : Brice, Flora et Misty sont au Centre Pokémon du Plateau Indigo (dialogues avant/après le titre de Champion). N et Gold sont dans le tournoi ; Red/Giovanni/Silver en post-game ; Bill (disparu) reste à traiter avec les îles Sevii.
+
+## Légendaires et Quartz (13/10)
+- **Les oiseaux sont les captifs du boss** : Électhor (centrale) et Moltres (volcan) ne sont PAS croisables avant la Ligue (`FLAG_TOPAZE_POSTGAME` requis pour les afficher). Après la fin 1 (boss battu), ils retournent dans leur lieu d'origine, capturables. Artikodin : seulement aperçu aux jumelles de la Route 15 ouest (pas de rencontre).
+- **Twist Quartz (V1)** : le boss réagit au duel du casino. Gagné : « tu m'as pris QUARTZ… un coup de chance » ; perdu : « merci de l'avoir perdu ». Aucun autre effet : les pierres du joueur sont de toute façon arrachées au repaire.
+- **Souhait de Basil (à placer)** : croiser dans le scénario tous les anciens Champions, membres du Conseil des 4 et Maîtres (gen 1-3). Les salles Bruno/Agatha/Lance sont libres (hors trajet) : candidates pour un « Conseil des Anciens » en post-game.
+- **Mine de Grenalux** : elle s'ouvre après la Ligue (post-game fin 1). Intérieur à décider.

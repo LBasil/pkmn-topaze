@@ -20,7 +20,9 @@ PowerPlant_OnTransition::
 	call_if_unset FLAG_FOUGHT_POWER_PLANT_ELECTRODE_2, PowerPlant_EventScript_ShowElectrode2
 	end
 
+@ Topaze: ZAPDOS is the boss's captive until the League ; it returns to the wild in the postgame
 PowerPlant_EventScript_ShowZapdos::
+	goto_if_unset FLAG_TOPAZE_POSTGAME, EventScript_Return
 	clearflag FLAG_HIDE_ZAPDOS
 	return
 

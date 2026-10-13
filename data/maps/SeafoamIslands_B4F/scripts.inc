@@ -40,7 +40,9 @@ SeafoamIslands_B4F_EventScript_SetNoCurrentLayout::
 	setmaplayoutindex LAYOUT_SEAFOAM_ISLANDS_B4F_CURRENT_STOPPED
 	return
 
+@ Topaze: MOLTRES is the boss's captive until the League ; it returns to the wild in the postgame
 SeafoamIslands_B4F_EventScript_ShowArticuno::
+	goto_if_unset FLAG_TOPAZE_POSTGAME, EventScript_Return
 	clearflag FLAG_HIDE_ARTICUNO
 	return
 

@@ -32,6 +32,17 @@ PokemonLeague_ChampionsRoom_Text_BossDefeat::
     .string "Impossible...\n"
     .string "You... and that pendant...$"
 
+PokemonLeague_ChampionsRoom_Text_BossQuartzWon::
+    .string "???: You even kept QUARTZ out of\n"
+    .string "my hands, at that casino.\p"
+    .string "A lucky streak. It ends here.$"
+
+PokemonLeague_ChampionsRoom_Text_BossQuartzLost::
+    .string "???: And QUARTZ. Thank you for\n"
+    .string "losing it to my people at that\l"
+    .string "casino.\p"
+    .string "A gift I did not even ask for.$"
+
 PokemonLeague_ChampionsRoom_Text_BossLegends::
     .string "???: Enough.\p"
     .string "I did not want to use them yet.\p"
