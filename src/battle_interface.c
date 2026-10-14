@@ -144,8 +144,8 @@ static const struct SpriteTemplate sHealthboxSafariSpriteTemplate =
 };
 
 static const struct OamData sOamData_Healthbar = {
-    .shape = SPRITE_SHAPE(32x8),
-    .size = SPRITE_SIZE(32x8),
+    .shape = SPRITE_SHAPE(32x16),
+    .size = SPRITE_SIZE(32x16),
     .priority = 1
 };
 
@@ -1484,26 +1484,28 @@ static const u8 sText_HealthboxNickname[] = _("{HIGHLIGHT 02}");
 
 // Topaze QOL : types de l'adversaire sous sa barre de vie, une fois l'espece deja vue avant ce combat.
 #define TAG_TOPAZE_TYPEBOX 0xD6A0
+#define TAG_TOPAZE_TYPEBOX_PAL 0xD6C0
 static const u8 sTopazeTypeAbbr[][4] = {
     _("NOR"), _("FGT"), _("FLY"), _("PSN"), _("GRD"), _("RCK"), _("BUG"), _("GHO"), _("STL"),
     _("???"), _("FIR"), _("WTR"), _("GRS"), _("ELE"), _("PSY"), _("ICE"), _("DRG"), _("DRK"),
 };
 static const struct OamData sOamData_TopazeTypeBox = {
-    .shape = SPRITE_SHAPE(32x8),
-    .size = SPRITE_SIZE(32x8),
+    .shape = SPRITE_SHAPE(32x16),
+    .size = SPRITE_SIZE(32x16),
     .priority = 1
 };
 static void SpriteCB_TopazeTypeBox(struct Sprite *sprite);
 static const struct SpriteTemplate sSpriteTemplate_TopazeTypeBox = {
     .tileTag = TAG_TOPAZE_TYPEBOX,
-    .paletteTag = TAG_HEALTHBOX_PAL,
+    .paletteTag = TAG_TOPAZE_TYPEBOX_PAL,
     .oam = &sOamData_TopazeTypeBox,
     .anims = gDummySpriteAnimTable,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCB_TopazeTypeBox
 };
 #define TOPAZE_TYPEBOX_SHIFT 4
-static EWRAM_DATA u32 sTopazeTypeBoxBuf[32] = {0};
+static EWRAM_DATA u32 sTopazeTypeBoxBuf[64] = {0};
+static const struct SpritePalette sTopazeTypePalette = { gMenuInfoElements2_Pal, TAG_TOPAZE_TYPEBOX_PAL };
 static EWRAM_DATA u8 sTopazeTypeBoxIds[MAX_BATTLERS_COUNT][2] = {0};
 static const struct WindowTemplate sTopazeTypeBoxWindow = {
     .bg = 0, .tilemapLeft = 0, .tilemapTop = 0, .width = 4, .height = 2, .paletteNum = 0, .baseBlock = 0
@@ -1559,21 +1561,13 @@ static void TopazeUpdateTypeBoxes(u8 battler, u16 species)
         if (i == 1 && types[1] == types[0])
             break;
         win = AddWindow(&sTopazeTypeBoxWindow);
-        FillWindowPixelBuffer(win, PIXEL_FILL(2));
-        StringCopy(buf, sTopazeTypeAbbr[types[i]]);
-        AddTextPrinterParameterized4(win, FONT_SMALL, 5, 0, 0, 0, color, -1, buf);
-        {
-            const u32 *src = (const u32 *)GetWindowAttribute(win, WINDOW_TILE_DATA);
-            u8 t, r;
-            for (t = 0; t < 4; t++)
-                for (r = 0; r < 8; r++)
-                {
-                    u8 sr = r + TOPAZE_TYPEBOX_SHIFT;
-                    sTopazeTypeBoxBuf[t * 8 + r] = sr < 8 ? src[t * 8 + sr] : src[(t + 4) * 8 + sr - 8];
-                }
-        }
+        FillWindowPixelBuffer(win, PIXEL_FILL(0));
+        BlitMenuInfoIcon(win, types[i] + 1, 0, 2);
+        memcpy(sTopazeTypeBoxBuf, (const u32 *)GetWindowAttribute(win, WINDOW_TILE_DATA), 8 * TILE_SIZE_4BPP);
         sheet.data = sTopazeTypeBoxBuf;
-        sheet.size = 4 * TILE_SIZE_4BPP;
+        sheet.size = 8 * TILE_SIZE_4BPP;
+        if (IndexOfSpritePaletteTag(TAG_TOPAZE_TYPEBOX_PAL) == 0xFF)
+            LoadSpritePalette(&sTopazeTypePalette);
         sheet.tag = TAG_TOPAZE_TYPEBOX + battler * 2 + i;
         FreeSpriteTilesByTag(sheet.tag);
         LoadSpriteSheet(&sheet);
