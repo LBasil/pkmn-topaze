@@ -391,3 +391,6 @@ Généré par `league_elders.py` puis `league_elders2.py` (non rejouables). `VAR
 Plus aucun vert : les palettes teal/vertes (gradient_road 08/11, general_opal 02, rustboro_opal 08) sont tournees en teinte vers le bleu-violet; la palette primaire 6 (arbres/herbe de la bande de raccord) est copiee depuis ces memes palettes. PalletTown (25,38-39) : demi-arbres orphelins corriges.
 Route1 lignes 2-3 : bande de foret (arbres 0x200-0x203) au lieu d'une bande vide; Viridian (6,35) : tuile de porte en double retiree.
 Route1: ligne 4 (buissons 0x29b bloquants) et ligne 40 (buissons 0x00d) remplies, ouverture nord x14-17 (lignes 0-4).
+
+### Franges de haut d'arbre (docs/topaze/tufts.py)
+Un arbre = 2x2 metatiles; le metatile "pied" porte dans sa couche haute les touffes (tuiles 0xcc/0xcd) qui forment le haut de l'arbre suivant. Un arbre sans pied au-dessus avait donc un haut tronque. `tufts.py ROUTE1|VIRIDIAN` pose au-dessus de chaque haut d'arbre isole un metatile "sol + touffes" (nouveaux metatiles primaires 521-524 dans general_gradient ET general_opal, secondaires ajoutes dans gradient_road / rustboro_opal). Route1 : lignes 4-5 et 39-40 = vraies rangees d'arbres (plus de buissons).
