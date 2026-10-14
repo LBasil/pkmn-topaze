@@ -750,7 +750,7 @@ bool8 SetDiveWarpDive(u16 x, u16 y)
 // Map loaders
 
 extern bool8 gCameraRedrawAll;
-extern void ProcessDma3Requests(void);
+extern bool8 gTopazeGfxFreeze;
 
 void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
 {
@@ -758,6 +758,11 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
     const struct Tileset *oldPrimary = gMapHeader.mapLayout ? gMapHeader.mapLayout->primaryTileset : NULL;
     const struct Tileset *oldSecondary = gMapHeader.mapLayout ? gMapHeader.mapLayout->secondaryTileset : NULL;
 
+    {
+        const struct MapHeader *dstHeader = Overworld_GetMapHeaderByGroupAndId(mapGroup, mapNum);
+        if (oldPrimary && (dstHeader->mapLayout->primaryTileset != oldPrimary || dstHeader->mapLayout->secondaryTileset != oldSecondary))
+            gTopazeGfxFreeze = TRUE; // keep the old picture on screen until the new one is fully ready
+    }
     SetWarpDestination(mapGroup, mapNum, -1, -1, -1);
     Overworld_TryMapConnectionMusicTransition();
     ApplyCurrentWarp();
@@ -794,13 +799,6 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
         InitSecondaryTilesetAnimation();
         if (gMapHeader.mapLayout->secondaryTileset != oldSecondary)
             gCameraRedrawAll = TRUE;
-    }
-    if (gCameraRedrawAll)
-    {
-        // Topaze: flush the queued tileset copies now so the new tiles and the redrawn tilemap show up on the same frame
-        ProcessDma3Requests();
-        ProcessDma3Requests();
-        ProcessDma3Requests();
     }
     UpdateLocationHistoryForRoamer();
     RoamerMove();

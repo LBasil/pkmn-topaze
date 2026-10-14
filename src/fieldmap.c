@@ -709,6 +709,9 @@ static void SetPositionFromConnection(const struct MapConnection *connection, in
     }
 }
 
+extern bool8 gTopazeGfxFreeze;
+extern void TopazeFlushDma3Requests(void);
+extern void TransferTilesetAnimsBuffer(void);
 bool8 gCameraRedrawAll; // Topaze: set when a connection crossing swapped the primary tileset
 
 bool8 CameraMove(s32 x, s32 y)
@@ -744,6 +747,18 @@ bool8 CameraMove(s32 x, s32 y)
         }
         else
             MoveMapViewToBackup(direction);
+        if (gTopazeGfxFreeze)
+        {
+            // Topaze: push tiles, tilemap and palettes to the screen in one go, inside a single vblank
+            VBlankIntrWait();
+            REG_DISPCNT |= DISPCNT_FORCED_BLANK;
+            DoScheduledBgTilemapCopiesToVram();
+            TopazeFlushDma3Requests();
+            TransferPlttBuffer();
+            TransferTilesetAnimsBuffer();
+            REG_DISPCNT &= ~DISPCNT_FORCED_BLANK;
+            gTopazeGfxFreeze = FALSE;
+        }
     }
     return gCamera.active;
 }

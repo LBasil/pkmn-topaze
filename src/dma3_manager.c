@@ -13,6 +13,7 @@ static struct {
 
 static volatile bool8 gDma3ManagerLocked;
 static u8 gDma3RequestCursor;
+static bool8 sTopazeNoLimits;
 
 void ClearDma3Requests(void)
 {
@@ -45,9 +46,9 @@ void ProcessDma3Requests(void)
     {
         bytesTransferred += gDma3Requests[gDma3RequestCursor].size;
 
-        if (bytesTransferred > 40 * 1024)
+        if (!sTopazeNoLimits && bytesTransferred > 40 * 1024)
             return; // don't transfer more than 40 KiB
-        if (*(u8 *)REG_ADDR_VCOUNT > 224)
+        if (!sTopazeNoLimits && *(u8 *)REG_ADDR_VCOUNT > 224)
             return; // we're about to leave vblank, stop
 
         switch (gDma3Requests[gDma3RequestCursor].mode)
@@ -85,6 +86,14 @@ void ProcessDma3Requests(void)
         if (gDma3RequestCursor >= MAX_DMA_REQUESTS) // loop back to the first DMA request
             gDma3RequestCursor = 0;
     }
+}
+
+// Topaze: process every pending request right now, regardless of vblank/size limits
+void TopazeFlushDma3Requests(void)
+{
+    sTopazeNoLimits = TRUE;
+    ProcessDma3Requests();
+    sTopazeNoLimits = FALSE;
 }
 
 s16 RequestDma3Copy(const void *src, void *dest, u16 size, u8 mode)

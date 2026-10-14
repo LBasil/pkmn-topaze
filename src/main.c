@@ -398,6 +398,9 @@ void SetSerialCallback(IntrCallback callback)
 extern void CopyBufferedValuesToGpuRegs(void);
 extern void ProcessDma3Requests(void);
 
+// Topaze: while set, VBlank does not touch the screen (used by connection crossings that swap tilesets)
+bool8 gTopazeGfxFreeze;
+
 static void VBlankIntr(void)
 {
     if (gWirelessCommType)
@@ -408,13 +411,19 @@ static void VBlankIntr(void)
     if (gMain.vblankCounter1)
         (*gMain.vblankCounter1)++;
 
-    if (gMain.vblankCallback)
-        gMain.vblankCallback();
+    if (!gTopazeGfxFreeze)
+    {
+        if (gMain.vblankCallback)
+            gMain.vblankCallback();
+    }
 
     gMain.vblankCounter2++;
 
-    CopyBufferedValuesToGpuRegs();
-    ProcessDma3Requests();
+    if (!gTopazeGfxFreeze)
+    {
+        CopyBufferedValuesToGpuRegs();
+        ProcessDma3Requests();
+    }
 
     gPcmDmaCounter = gSoundInfo.pcmDmaCounter;
 
