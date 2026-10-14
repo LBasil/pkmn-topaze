@@ -1,6 +1,7 @@
 #include "global.h"
 #include "gflib.h"
 #include "link.h"
+#include "topaze_options.h"
 #include "link_rfu.h"
 #include "load_save.h"
 #include "m4a.h"
@@ -200,6 +201,18 @@ void AgbMain()
         {
             gLinkTransferringData = FALSE;
             UpdateLinkAndCallCallbacks();
+
+            // Topaze: game speed option (x1..x4) = run the game logic several times per frame
+            if (gSaveBlock2Ptr != NULL && TOPAZE_OPT_SPEED() != 0 && !gReceivedRemoteLinkPlayers)
+            {
+                u8 extra;
+
+                for (extra = 0; extra < TOPAZE_OPT_SPEED(); extra++)
+                {
+                    ReadKeys();
+                    UpdateLinkAndCallCallbacks();
+                }
+            }
 
             if (Overworld_RecvKeysFromLinkIsRunning() == 1)
             {

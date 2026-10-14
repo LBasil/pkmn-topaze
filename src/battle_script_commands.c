@@ -1,4 +1,5 @@
 #include "global.h"
+#include "topaze_options.h"
 #include "gflib.h"
 #include "item.h"
 #include "util.h"
@@ -5103,9 +5104,13 @@ static void Cmd_handlelearnnewmove(void)
     const u8 *learnedMovePtr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
     const u8 *nothingToLearnPtr = T1_READ_PTR(gBattlescriptCurrInstr + 5);
 
-    u16 learnMove = MonTryLearningNewMove(&gPlayerParty[gBattleStruct->expGetterMonId], gBattlescriptCurrInstr[9]);
+    u16 learnMove;
+
+    gTopazeLearnFrom = gTopazeBattleLvFrom;
+    learnMove = MonTryLearningNewMove(&gPlayerParty[gBattleStruct->expGetterMonId], gBattlescriptCurrInstr[9]);
     while (learnMove == MON_ALREADY_KNOWS_MOVE)
         learnMove = MonTryLearningNewMove(&gPlayerParty[gBattleStruct->expGetterMonId], FALSE);
+    gTopazeLearnFrom = 0;
 
     if (learnMove == MOVE_NONE)
     {

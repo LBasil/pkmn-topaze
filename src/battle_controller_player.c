@@ -1,4 +1,5 @@
 #include "global.h"
+#include "topaze_options.h"
 #include "gflib.h"
 #include "data.h"
 #include "item.h"
@@ -1026,6 +1027,32 @@ void CompleteOnInactiveTextPrinter(void)
 #define tExpTask_frames     data[10]
 // TODO: document other used fields
 
+u8 gTopazeBattleLvFrom;
+
+// Topaze: with the "stacked level-ups" option, all the gained exp is applied at once (several levels in one go)
+static void TopazeApplyLevelUpExp(struct Pokemon *mon, u8 level, u32 currExp, u32 nextLvlExp, s32 *gainedExp)
+{
+    gTopazeBattleLvFrom = 0;
+    if (TOPAZE_OPT_STACKLV())
+    {
+        u32 total = currExp + *gainedExp;
+        u32 cap = gExperienceTables[gSpeciesInfo[GetMonData(mon, MON_DATA_SPECIES)].growthRate][MAX_LEVEL];
+
+        if (total > cap)
+            total = cap;
+        gTopazeBattleLvFrom = level;
+        SetMonData(mon, MON_DATA_EXP, &total);
+        CalculateMonStats(mon);
+        *gainedExp = 0;
+    }
+    else
+    {
+        SetMonData(mon, MON_DATA_EXP, &nextLvlExp);
+        CalculateMonStats(mon);
+        *gainedExp -= nextLvlExp - currExp;
+    }
+}
+
 static void Task_GiveExpToMon(u8 taskId)
 {
     u32 monId = (u8)(gTasks[taskId].tExpTask_monId);
@@ -1044,9 +1071,10 @@ static void Task_GiveExpToMon(u8 taskId)
         {
             u8 savedActiveBattler;
 
-            SetMonData(mon, MON_DATA_EXP, &nextLvlExp);
-            CalculateMonStats(mon);
-            gainedExp -= nextLvlExp - currExp;
+            s32 topazeGained = gainedExp;
+
+            TopazeApplyLevelUpExp(mon, level, currExp, nextLvlExp, &topazeGained);
+            gainedExp = topazeGained;
             savedActiveBattler = gActiveBattler;
             gActiveBattler = battlerId;
             BtlController_EmitTwoReturnValues(1, RET_VALUE_LEVELED_UP, gainedExp);
@@ -1121,9 +1149,10 @@ static void Task_GiveExpWithExpBar(u8 taskId)
             {
                 u8 savedActiveBattler;
 
-                SetMonData(&gPlayerParty[monId], MON_DATA_EXP, &expOnNextLvl);
-                CalculateMonStats(&gPlayerParty[monId]);
-                gainedExp -= expOnNextLvl - currExp;
+                s32 topazeGained = gainedExp;
+
+                TopazeApplyLevelUpExp(&gPlayerParty[monId], level, currExp, expOnNextLvl, &topazeGained);
+                gainedExp = topazeGained;
                 savedActiveBattler = gActiveBattler;
                 gActiveBattler = battlerId;
                 BtlController_EmitTwoReturnValues(1, RET_VALUE_LEVELED_UP, gainedExp);

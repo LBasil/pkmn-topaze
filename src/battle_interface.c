@@ -1,4 +1,5 @@
 #include "global.h"
+#include "topaze_options.h"
 #include "gflib.h"
 #include "battle_anim.h"
 #include "battle_interface.h"
@@ -1959,15 +1960,20 @@ void UpdateHealthboxAttribute(u8 healthboxSpriteId, struct Pokemon *mon, u8 elem
 s32 MoveBattleBar(u8 battlerId, u8 healthboxSpriteId, u8 whichBar, u8 unused)
 {
     s32 currentBarValue;
+    s32 topazeLoops;
 
     if (whichBar == HEALTH_BAR)
     {
-        currentBarValue = CalcNewBarValue(gBattleSpritesDataPtr->battleBars[battlerId].maxValue,
-                                          gBattleSpritesDataPtr->battleBars[battlerId].oldValue,
-                                          gBattleSpritesDataPtr->battleBars[battlerId].receivedValue,
-                                          &gBattleSpritesDataPtr->battleBars[battlerId].currValue,
-                                          B_HEALTHBAR_NUM_TILES,
-                                          1);
+        topazeLoops = TOPAZE_OPT_HPBAR() == 0 ? 1 : (TOPAZE_OPT_HPBAR() == 1 ? 4 : 1000);
+        do
+        {
+            currentBarValue = CalcNewBarValue(gBattleSpritesDataPtr->battleBars[battlerId].maxValue,
+                                              gBattleSpritesDataPtr->battleBars[battlerId].oldValue,
+                                              gBattleSpritesDataPtr->battleBars[battlerId].receivedValue,
+                                              &gBattleSpritesDataPtr->battleBars[battlerId].currValue,
+                                              B_HEALTHBAR_NUM_TILES,
+                                              1);
+        } while (currentBarValue != -1 && --topazeLoops > 0);
     }
     else // exp bar
     {
@@ -1980,12 +1986,16 @@ s32 MoveBattleBar(u8 battlerId, u8 healthboxSpriteId, u8 whichBar, u8 unused)
             increment = 1;
         increment = abs(gBattleSpritesDataPtr->battleBars[battlerId].receivedValue / increment);
 
-        currentBarValue = CalcNewBarValue(gBattleSpritesDataPtr->battleBars[battlerId].maxValue,
-                                          gBattleSpritesDataPtr->battleBars[battlerId].oldValue,
-                                          gBattleSpritesDataPtr->battleBars[battlerId].receivedValue,
-                                          &gBattleSpritesDataPtr->battleBars[battlerId].currValue,
-                                          B_EXPBAR_NUM_TILES,
-                                          increment);
+        topazeLoops = TOPAZE_OPT_EXPBAR() == 0 ? 1 : (TOPAZE_OPT_EXPBAR() == 1 ? 4 : 1000);
+        do
+        {
+            currentBarValue = CalcNewBarValue(gBattleSpritesDataPtr->battleBars[battlerId].maxValue,
+                                              gBattleSpritesDataPtr->battleBars[battlerId].oldValue,
+                                              gBattleSpritesDataPtr->battleBars[battlerId].receivedValue,
+                                              &gBattleSpritesDataPtr->battleBars[battlerId].currValue,
+                                              B_EXPBAR_NUM_TILES,
+                                              increment);
+        } while (currentBarValue != -1 && --topazeLoops > 0);
     }
 
     if (whichBar == EXP_BAR || (whichBar == HEALTH_BAR && !gBattleSpritesDataPtr->battlerData[battlerId].hpNumbersNoBars))

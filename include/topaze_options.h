@@ -1,0 +1,15 @@
+#ifndef GUARD_TOPAZE_OPTIONS_H
+#define GUARD_TOPAZE_OPTIONS_H
+
+// Topaze quality-of-life options, packed in gSaveBlock2Ptr->optionsTopaze (0 = vanilla behaviour)
+#define TOPAZE_OPT_HPBAR()   (gSaveBlock2Ptr->optionsTopaze & 3)         // 0 normal, 1 fast, 2 instant
+#define TOPAZE_OPT_EXPBAR()  ((gSaveBlock2Ptr->optionsTopaze >> 2) & 3)  // 0 normal, 1 fast, 2 instant
+#define TOPAZE_OPT_STACKLV() ((gSaveBlock2Ptr->optionsTopaze >> 4) & 1)  // 0 one level at a time, 1 stacked
+#define TOPAZE_OPT_SPEED()   ((gSaveBlock2Ptr->optionsTopaze >> 5) & 3)  // 0..3 = x1..x4
+
+#define TOPAZE_OPT_SET(shift, mask, v) (gSaveBlock2Ptr->optionsTopaze = (gSaveBlock2Ptr->optionsTopaze & ~((mask) << (shift))) | (((v) & (mask)) << (shift)))
+
+extern u8 gTopazeBattleLvFrom;
+extern u8 gTopazeLearnFrom;
+
+#endif

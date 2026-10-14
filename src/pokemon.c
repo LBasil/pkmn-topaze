@@ -1,6 +1,7 @@
 #define IS_POKEMON_C
 
 #include "global.h"
+#include "topaze_options.h"
 #include "gflib.h"
 #include "random.h"
 #include "text.h"
@@ -2285,6 +2286,17 @@ static void GiveBoxMonInitialMoveset(struct BoxPokemon *boxMon)
     }
 }
 
+u8 gTopazeLearnFrom; // Topaze: when non zero, learn the moves of every level in ]gTopazeLearnFrom, level] (stacked level-ups)
+
+static bool8 TopazeLearnsetEntryMatches(u16 entry, u8 level)
+{
+    u8 entryLevel = (entry & LEVEL_UP_MOVE_LV) >> 9;
+
+    if (gTopazeLearnFrom == 0)
+        return entryLevel == level;
+    return entryLevel > gTopazeLearnFrom && entryLevel <= level;
+}
+
 u16 MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove)
 {
     u32 retVal = MOVE_NONE;
@@ -2299,7 +2311,7 @@ u16 MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove)
     {
         sLearningMoveTableID = 0;
 
-        while ((gLevelUpLearnsets[species][sLearningMoveTableID] & LEVEL_UP_MOVE_LV) != (level << 9))
+        while (!TopazeLearnsetEntryMatches(gLevelUpLearnsets[species][sLearningMoveTableID], level))
         {
             sLearningMoveTableID++;
             if (gLevelUpLearnsets[species][sLearningMoveTableID] == LEVEL_UP_END)
@@ -2307,7 +2319,7 @@ u16 MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove)
         }
     }
 
-    if ((gLevelUpLearnsets[species][sLearningMoveTableID] & LEVEL_UP_MOVE_LV) == (level << 9))
+    if (TopazeLearnsetEntryMatches(gLevelUpLearnsets[species][sLearningMoveTableID], level))
     {
         gMoveToLearn = (gLevelUpLearnsets[species][sLearningMoveTableID] & LEVEL_UP_MOVE_ID);
         sLearningMoveTableID++;

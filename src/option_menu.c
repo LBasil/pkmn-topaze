@@ -1,4 +1,5 @@
 #include "global.h"
+#include "topaze_options.h"
 #include "gflib.h"
 #include "scanline_effect.h"
 #include "text_window_graphics.h"
@@ -23,6 +24,10 @@ enum
     MENUITEM_SOUND,
     MENUITEM_BUTTONMODE,
     MENUITEM_FRAMETYPE,
+    MENUITEM_HPBAR,
+    MENUITEM_EXPBAR,
+    MENUITEM_LEVELUPS,
+    MENUITEM_GAMESPEED,
     MENUITEM_CANCEL,
     MENUITEM_COUNT
 };
@@ -132,7 +137,7 @@ static const struct BgTemplate sOptionMenuBgTemplates[] =
 };
 
 static const u16 sOptionMenuPalette[] = INCBIN_U16("graphics/misc/option_menu.gbapal");
-static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {3, 2, 2, 2, 3, 10, 0};
+static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {3, 2, 2, 2, 3, 10, 3, 3, 2, 4, 0};
 
 static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
 {
@@ -142,6 +147,10 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
     [MENUITEM_SOUND]       = gText_Sound,
     [MENUITEM_BUTTONMODE]  = gText_ButtonMode,
     [MENUITEM_FRAMETYPE]   = gText_Frame,
+    [MENUITEM_HPBAR]       = gText_HpBarSpeed,
+    [MENUITEM_EXPBAR]      = gText_ExpBarSpeed,
+    [MENUITEM_LEVELUPS]    = gText_LevelUps,
+    [MENUITEM_GAMESPEED]   = gText_GameSpeed,
     [MENUITEM_CANCEL]      = gText_OptionMenuCancel,
 };
 
@@ -176,6 +185,13 @@ static const u8 *const sButtonTypeOptions[] =
 	gText_ButtonTypeLR,
 	gText_ButtonTypeLEqualsA
 };
+
+static const u8 *const sBarSpeedOptions[] = { gText_BarNormal, gText_BarFast, gText_BarInstant };
+static const u8 *const sLevelUpsOptions[] = { gText_LevelUpsOneByOne, gText_LevelUpsStacked };
+static const u8 *const sGameSpeedOptions[] = { gText_SpeedX1, gText_SpeedX2, gText_SpeedX3, gText_SpeedX4 };
+
+#define VISIBLE_ITEMS 7
+static u8 sOptionMenuTop; // index of the first visible item (the list scrolls)
 
 static const u8 sOptionMenuPickSwitchCancelTextColor[] = {TEXT_DYNAMIC_COLOR_6, TEXT_COLOR_WHITE, TEXT_COLOR_DARK_GRAY};
 static const u8 sOptionMenuTextColor[] = {TEXT_COLOR_TRANSPARENT, TEXT_COLOR_LIGHT_RED, TEXT_COLOR_RED};
@@ -222,6 +238,11 @@ void CB2_OptionsMenuFromStartMenu(void)
     sOptionMenuPtr->option[MENUITEM_SOUND] = gSaveBlock2Ptr->optionsSound;
     sOptionMenuPtr->option[MENUITEM_BUTTONMODE] = gSaveBlock2Ptr->optionsButtonMode;
     sOptionMenuPtr->option[MENUITEM_FRAMETYPE] = gSaveBlock2Ptr->optionsWindowFrameType;
+    sOptionMenuPtr->option[MENUITEM_HPBAR] = TOPAZE_OPT_HPBAR();
+    sOptionMenuPtr->option[MENUITEM_EXPBAR] = TOPAZE_OPT_EXPBAR();
+    sOptionMenuPtr->option[MENUITEM_LEVELUPS] = TOPAZE_OPT_STACKLV();
+    sOptionMenuPtr->option[MENUITEM_GAMESPEED] = TOPAZE_OPT_SPEED();
+    sOptionMenuTop = 0;
     
     for (i = 0; i < MENUITEM_COUNT - 1; i++)
     {
@@ -401,6 +422,15 @@ static void Task_OptionMenu(u8 taskId)
         case 4:
             BufferOptionMenuString(sOptionMenuPtr->cursorPos);
             break;
+        case 5:
+            {
+                u8 i;
+                LoadOptionMenuItemNames();
+                for (i = 0; i < MENUITEM_COUNT; i++)
+                    BufferOptionMenuString(i);
+                UpdateSettingSelectionDisplay(sOptionMenuPtr->cursorPos);
+            }
+            break;
         }
         break;
     case 3:
@@ -416,6 +446,18 @@ static void Task_OptionMenu(u8 taskId)
         CloseAndSaveOptionMenu(taskId);
         break;
     }
+}
+
+// Topaze: the list has more items than rows; scroll it and ask for a full redraw (5) when needed
+static u8 ScrollOptionMenuToCursor(void)
+{
+    u8 oldTop = sOptionMenuTop;
+
+    if (sOptionMenuPtr->cursorPos < sOptionMenuTop)
+        sOptionMenuTop = sOptionMenuPtr->cursorPos;
+    else if (sOptionMenuPtr->cursorPos >= sOptionMenuTop + VISIBLE_ITEMS)
+        sOptionMenuTop = sOptionMenuPtr->cursorPos - VISIBLE_ITEMS + 1;
+    return sOptionMenuTop != oldTop ? 5 : 3;
 }
 
 static u8 OptionMenu_ProcessInput(void)
@@ -453,7 +495,7 @@ static u8 OptionMenu_ProcessInput(void)
             sOptionMenuPtr->cursorPos = MENUITEM_CANCEL;
         else
             sOptionMenuPtr->cursorPos = sOptionMenuPtr->cursorPos - 1;
-        return 3;        
+        return ScrollOptionMenuToCursor();
     }
     else if (JOY_REPT(DPAD_DOWN))
     {
@@ -461,7 +503,7 @@ static u8 OptionMenu_ProcessInput(void)
             sOptionMenuPtr->cursorPos = MENUITEM_TEXTSPEED;
         else
             sOptionMenuPtr->cursorPos = sOptionMenuPtr->cursorPos + 1;
-        return 3;
+        return ScrollOptionMenuToCursor();
     }
     else if (JOY_NEW(B_BUTTON) || JOY_NEW(A_BUTTON))
     {
@@ -481,8 +523,10 @@ static void BufferOptionMenuString(u8 selection)
     u8 x, y;
     
     memcpy(dst, sOptionMenuTextColor, 3);
+    if (selection < sOptionMenuTop || selection >= sOptionMenuTop + VISIBLE_ITEMS)
+        return;
     x = 0x82;
-    y = ((GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT) - 1) * selection) + 2;
+    y = ((GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT) - 1) * (selection - sOptionMenuTop)) + 2;
     FillWindowPixelRect(1, 1, x, y, 0x46, GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT));
 
     switch (selection)
@@ -508,6 +552,16 @@ static void BufferOptionMenuString(u8 selection)
         StringAppendN(str, buf, 3);
         AddTextPrinterParameterized3(1, FONT_NORMAL, x, y, dst, -1, str);
         break;
+    case MENUITEM_HPBAR:
+    case MENUITEM_EXPBAR:
+        AddTextPrinterParameterized3(1, FONT_NORMAL, x, y, dst, -1, sBarSpeedOptions[sOptionMenuPtr->option[selection]]);
+        break;
+    case MENUITEM_LEVELUPS:
+        AddTextPrinterParameterized3(1, FONT_NORMAL, x, y, dst, -1, sLevelUpsOptions[sOptionMenuPtr->option[selection]]);
+        break;
+    case MENUITEM_GAMESPEED:
+        AddTextPrinterParameterized3(1, FONT_NORMAL, x, y, dst, -1, sGameSpeedOptions[sOptionMenuPtr->option[selection]]);
+        break;
     default:
         break;
     }
@@ -527,6 +581,10 @@ static void CloseAndSaveOptionMenu(u8 taskId)
     gSaveBlock2Ptr->optionsSound = sOptionMenuPtr->option[MENUITEM_SOUND];
     gSaveBlock2Ptr->optionsButtonMode = sOptionMenuPtr->option[MENUITEM_BUTTONMODE];
     gSaveBlock2Ptr->optionsWindowFrameType = sOptionMenuPtr->option[MENUITEM_FRAMETYPE];
+    TOPAZE_OPT_SET(0, 3, sOptionMenuPtr->option[MENUITEM_HPBAR]);
+    TOPAZE_OPT_SET(2, 3, sOptionMenuPtr->option[MENUITEM_EXPBAR]);
+    TOPAZE_OPT_SET(4, 1, sOptionMenuPtr->option[MENUITEM_LEVELUPS]);
+    TOPAZE_OPT_SET(5, 3, sOptionMenuPtr->option[MENUITEM_GAMESPEED]);
     SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
     FREE_AND_SET_NULL(sOptionMenuPtr);
     DestroyTask(taskId);
@@ -569,9 +627,10 @@ static void LoadOptionMenuItemNames(void)
     u8 i;
     
     FillWindowPixelBuffer(1, PIXEL_FILL(1));
-    for (i = 0; i < MENUITEM_COUNT; i++)
+    for (i = sOptionMenuTop; i < MENUITEM_COUNT && i < sOptionMenuTop + VISIBLE_ITEMS; i++)
     {
-        AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, sOptionMenuItemsNames[i], 8, (u8)((i * (GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT))) + 2) - i, TEXT_SKIP_DRAW, NULL);    
+        u8 row = i - sOptionMenuTop;
+        AddTextPrinterParameterized(WIN_OPTIONS, FONT_NORMAL, sOptionMenuItemsNames[i], 8, (u8)((row * (GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT))) + 2) - row, TEXT_SKIP_DRAW, NULL);
     }
 }
 
@@ -580,7 +639,7 @@ static void UpdateSettingSelectionDisplay(u16 selection)
     u16 maxLetterHeight, y;
     
     maxLetterHeight = GetFontAttribute(FONT_NORMAL, FONTATTR_MAX_LETTER_HEIGHT);
-    y = selection * (maxLetterHeight - 1) + 0x3A;
+    y = (selection - sOptionMenuTop) * (maxLetterHeight - 1) + 0x3A;
     SetGpuReg(REG_OFFSET_WIN0V, WIN_RANGE(y, y + maxLetterHeight));
     SetGpuReg(REG_OFFSET_WIN0H, WIN_RANGE(0x10, 0xE0));
 }
