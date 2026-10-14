@@ -133,6 +133,7 @@ static void InitBackupMapLayoutData(const u16 *map, u16 width, u16 height)
 // Topaze: when the two maps of a connection use different tilesets, the neighbour strip would be
 // drawn with the wrong tiles. Replicate the current map's own edge metatiles instead (hard cut, same passability).
 static s32 sFogW, sFogH;
+static const struct MapLayout *sFogLayout;
 static bool8 sFogActive;
 
 static bool8 TopazeIsFogPair(u16 a, u16 b)
@@ -166,6 +167,7 @@ static void InitBackupMapLayoutConnections(struct MapHeader *mapHeader)
             struct MapHeader const *cMap = GetMapHeaderFromConnection(connection);
             u32 offset = connection->offset;
             sFogActive = cMap && TopazeIsFogPair(mapHeader->mapLayoutId, cMap->mapLayoutId);
+            sFogLayout = mapHeader->mapLayout;
             sFogW = mapHeader->mapLayout->width;
             sFogH = mapHeader->mapLayout->height;
             switch (connection->direction)
@@ -201,19 +203,32 @@ static void FillConnection(s32 x, s32 y, const struct MapHeader *connectedMapHea
 
     if (sFogActive)
     {
+        // Topaze: neighbour strip of a different tileset -> the map's own border look (same as off-map),
+        // keeping the collision/elevation of the nearest edge cell so the crossing stays possible.
         for (i = 0; i < height; i++)
         {
             s32 j;
             s32 cy = y + i;
-            dest = &VMap.map[VMap.Xsize * (y + i) + x];
-            if (cy < MAP_OFFSET) cy = MAP_OFFSET;
-            if (cy > MAP_OFFSET + sFogH - 1) cy = MAP_OFFSET + sFogH - 1;
+            s32 ey = cy;
+
+            if (ey < MAP_OFFSET) ey = MAP_OFFSET;
+            if (ey > MAP_OFFSET + sFogH - 1) ey = MAP_OFFSET + sFogH - 1;
+            dest = &VMap.map[VMap.Xsize * cy + x];
             for (j = 0; j < width; j++)
             {
                 s32 cx = x + j;
-                if (cx < MAP_OFFSET) cx = MAP_OFFSET;
-                if (cx > MAP_OFFSET + sFogW - 1) cx = MAP_OFFSET + sFogW - 1;
-                dest[j] = VMap.map[VMap.Xsize * cy + cx];
+                s32 ex = cx;
+                u16 border;
+
+                if (ex < MAP_OFFSET) ex = MAP_OFFSET;
+                if (ex > MAP_OFFSET + sFogW - 1) ex = MAP_OFFSET + sFogW - 1;
+                {
+                    s32 bx = (cx - MAP_OFFSET + 8 * sFogLayout->borderWidth) % sFogLayout->borderWidth;
+                    s32 by = (cy - MAP_OFFSET + 8 * sFogLayout->borderHeight) % sFogLayout->borderHeight;
+
+                    border = sFogLayout->border[bx + by * sFogLayout->borderWidth] & MAPGRID_METATILE_ID_MASK;
+                }
+                dest[j] = border | (VMap.map[VMap.Xsize * ey + ex] & ~MAPGRID_METATILE_ID_MASK);
             }
         }
         return;
