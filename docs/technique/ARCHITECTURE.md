@@ -414,5 +414,5 @@ Viridian +4 lignes en haut (bande de foret en metatiles primaires, ouverture x20
 - `src/option_menu.c` : 11 lignes, 7 visibles (`sOptionMenuTop`, `ScrollOptionMenuToCursor`, redraw complet = retour 5 de `OptionMenu_ProcessInput`).
 - Barres : `MoveBattleBar` (battle_interface.c) boucle `CalcNewBarValue` 1 / 4 / 1000 fois par frame.
 - Niveaux cumules : `TopazeApplyLevelUpExp` (battle_controller_player.c) applique toute l'XP d'un coup (plafond niv. 100), un seul "grew to LV. N" ; `gTopazeBattleLvFrom` -> `gTopazeLearnFrom` fait apprendre dans `MonTryLearningNewMove` (pokemon.c) les capacites de tous les niveaux sautes.
-- Vitesse de jeu : `AgbMain` (main.c) rejoue ReadKeys + callbacks N fois par frame (hors liaison) ; la musique garde son tempo.
+- Vitesse de jeu : `AgbMain` (main.c) rejoue ReadKeys + callbacks N fois par frame (hors liaison, seulement carte + combat et JAMAIS pendant un fondu de palette : sinon l'ecran de resume en oubliant une capacite gelait le jeu) ; la musique garde son tempo.
 - Piege test : ajouter des variables statiques decale les adresses IWRAM ; `/tmp/gx/tz.py` les lit dans `dbg2.map`. `mkdbg2.py` fait `git checkout` de battle_script_commands.c/new_game.c : committer avant. `EXPHACK=1` = test d'XP geante.

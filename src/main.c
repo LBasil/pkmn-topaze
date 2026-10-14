@@ -208,11 +208,11 @@ void AgbMain()
             {
                 u8 extra;
 
-                // Only in the overworld and in battle: menu/screen initialisation code (summary screen,
-                // party menu, bag...) expects one call per VBlank and freezes otherwise.
+                // Only in the overworld and in battle, and never during a palette fade: screen transitions
+                // (summary screen, party menu, bag...) expect one call per VBlank and freeze otherwise.
                 for (extra = 0; extra < TOPAZE_OPT_SPEED(); extra++)
                 {
-                    if (!TopazeIsFieldCallback() && gMain.callback2 != BattleMainCB2)
+                    if (gPaletteFade.active || (!TopazeIsFieldCallback() && gMain.callback2 != BattleMainCB2))
                         break;
                     ReadKeys();
                     UpdateLinkAndCallCallbacks();
