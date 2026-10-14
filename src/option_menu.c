@@ -45,6 +45,7 @@ struct OptionMenu
 };
 
 static EWRAM_DATA struct OptionMenu *sOptionMenuPtr = NULL;
+static EWRAM_DATA bool8 sOptionMenuFromScript = FALSE; // Topaze: opened by a script (new game), resume the script on exit
 
 //Function Declarataions
 static void CB2_InitOptionMenu(void);
@@ -193,6 +194,15 @@ static void VBlankCB_OptionMenu(void)
     LoadOam();
     ProcessSpriteCopyRequests();
     TransferPlttBuffer();
+}
+
+void CB2_OptionsMenuFromStartMenu(void);
+
+void OpenOptionsFromScript(void)
+{
+    sOptionMenuFromScript = TRUE;
+    gMain.savedCallback = CB2_ReturnToField;
+    SetMainCallback2(CB2_OptionsMenuFromStartMenu);
 }
 
 void CB2_OptionsMenuFromStartMenu(void)
@@ -507,7 +517,8 @@ static void BufferOptionMenuString(u8 selection)
 
 static void CloseAndSaveOptionMenu(u8 taskId)
 {
-    gFieldCallback = FieldCB_DefaultWarpExit;
+    gFieldCallback = sOptionMenuFromScript ? FieldCB_ContinueScript : FieldCB_DefaultWarpExit;
+    sOptionMenuFromScript = FALSE;
     SetMainCallback2(gMain.savedCallback);
     FreeAllWindowBuffers();
     gSaveBlock2Ptr->optionsTextSpeed = sOptionMenuPtr->option[MENUITEM_TEXTSPEED];

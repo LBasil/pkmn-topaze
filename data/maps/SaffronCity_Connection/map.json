@@ -36,7 +36,64 @@
     }
   ],
   "object_events": [],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 36,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_GENERIC_HOUSE_C",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 12,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_GENERIC_HOUSE_D",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 17,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_GENERIC_HOUSE_A",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 30,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_GENERIC_HOUSE_B",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 37,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_GENERIC_HOUSE_C",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 23,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_GENERIC_HOUSE_D",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 14,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_GENERIC_HOUSE_A",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 33,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_GENERIC_HOUSE_B",
+      "dest_warp_id": "1"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }

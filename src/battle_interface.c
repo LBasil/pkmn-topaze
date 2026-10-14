@@ -1481,6 +1481,114 @@ static void SpriteCB_PartySummaryBall_OnSwitchout(struct Sprite *sprite)
 
 static const u8 sText_HealthboxNickname[] = _("{HIGHLIGHT 02}");
 
+// Topaze QOL : types de l'adversaire sous sa barre de vie, une fois l'espece deja vue avant ce combat.
+#define TAG_TOPAZE_TYPEBOX 0xD6A0
+static const u8 sTopazeTypeAbbr[][4] = {
+    _("NOR"), _("FGT"), _("FLY"), _("PSN"), _("GRD"), _("RCK"), _("BUG"), _("GHO"), _("STL"),
+    _("???"), _("FIR"), _("WTR"), _("GRS"), _("ELE"), _("PSY"), _("ICE"), _("DRG"), _("DRK"),
+};
+static const struct OamData sOamData_TopazeTypeBox = {
+    .shape = SPRITE_SHAPE(32x8),
+    .size = SPRITE_SIZE(32x8),
+    .priority = 1
+};
+static void SpriteCB_TopazeTypeBox(struct Sprite *sprite);
+static const struct SpriteTemplate sSpriteTemplate_TopazeTypeBox = {
+    .tileTag = TAG_TOPAZE_TYPEBOX,
+    .paletteTag = TAG_HEALTHBOX_PAL,
+    .oam = &sOamData_TopazeTypeBox,
+    .anims = gDummySpriteAnimTable,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCB_TopazeTypeBox
+};
+#define TOPAZE_TYPEBOX_SHIFT 4
+static EWRAM_DATA u32 sTopazeTypeBoxBuf[32] = {0};
+static EWRAM_DATA u8 sTopazeTypeBoxIds[MAX_BATTLERS_COUNT][2] = {0};
+static const struct WindowTemplate sTopazeTypeBoxWindow = {
+    .bg = 0, .tilemapLeft = 0, .tilemapTop = 0, .width = 4, .height = 2, .paletteNum = 0, .baseBlock = 0
+};
+
+static void TopazeDestroyTypeBox(u8 battler, u8 idx)
+{
+    u8 id = sTopazeTypeBoxIds[battler][idx];
+    struct Sprite *sprite = &gSprites[id];
+
+    if (id != 0 && sprite->inUse && sprite->callback == SpriteCB_TopazeTypeBox && sprite->data[0] == battler && sprite->data[1] == idx)
+    {
+        DestroySprite(sprite);
+        FreeSpriteTilesByTag(TAG_TOPAZE_TYPEBOX + battler * 2 + idx);
+    }
+    sTopazeTypeBoxIds[battler][idx] = 0;
+}
+
+static void SpriteCB_TopazeTypeBox(struct Sprite *sprite)
+{
+    struct Sprite *hb = &gSprites[gHealthboxSpriteIds[sprite->data[0]]];
+
+    if (!hb->inUse)
+    {
+        u8 battler = sprite->data[0], idx = sprite->data[1];
+        DestroySprite(sprite);
+        FreeSpriteTilesByTag(TAG_TOPAZE_TYPEBOX + battler * 2 + idx);
+        sTopazeTypeBoxIds[battler][idx] = 0;
+        return;
+    }
+    sprite->x = hb->x + hb->x2 + (sprite->data[1] ? 17 : -17);
+    sprite->y = hb->y + hb->y2 + 21;
+    sprite->invisible = hb->invisible;
+}
+
+static void TopazeUpdateTypeBoxes(u8 battler, u16 species)
+{
+    u8 i, types[2];
+    types[0] = gSpeciesInfo[species].types[0];
+    types[1] = gSpeciesInfo[species].types[1];
+
+    for (i = 0; i < 2; i++)
+        TopazeDestroyTypeBox(battler, i);
+    if (!gTopazeSeenBefore[battler] || (gBattleTypeFlags & (BATTLE_TYPE_SAFARI | BATTLE_TYPE_GHOST | BATTLE_TYPE_POKEDUDE | BATTLE_TYPE_OLD_MAN_TUTORIAL)))
+        return;
+    for (i = 0; i < 2; i++)
+    {
+        u16 win;
+        struct SpriteSheet sheet;
+        u8 id, buf[8];
+        u8 color[3] = {2, 1, 3};
+
+        if (i == 1 && types[1] == types[0])
+            break;
+        win = AddWindow(&sTopazeTypeBoxWindow);
+        FillWindowPixelBuffer(win, PIXEL_FILL(2));
+        StringCopy(buf, sTopazeTypeAbbr[types[i]]);
+        AddTextPrinterParameterized4(win, FONT_SMALL, 5, 0, 0, 0, color, -1, buf);
+        {
+            const u32 *src = (const u32 *)GetWindowAttribute(win, WINDOW_TILE_DATA);
+            u8 t, r;
+            for (t = 0; t < 4; t++)
+                for (r = 0; r < 8; r++)
+                {
+                    u8 sr = r + TOPAZE_TYPEBOX_SHIFT;
+                    sTopazeTypeBoxBuf[t * 8 + r] = sr < 8 ? src[t * 8 + sr] : src[(t + 4) * 8 + sr - 8];
+                }
+        }
+        sheet.data = sTopazeTypeBoxBuf;
+        sheet.size = 4 * TILE_SIZE_4BPP;
+        sheet.tag = TAG_TOPAZE_TYPEBOX + battler * 2 + i;
+        FreeSpriteTilesByTag(sheet.tag);
+        LoadSpriteSheet(&sheet);
+        RemoveWindow(win);
+        {
+            struct SpriteTemplate tmpl = sSpriteTemplate_TopazeTypeBox;
+            tmpl.tileTag = sheet.tag;
+            id = CreateSprite(&tmpl, 0, 0, 0);
+        }
+        gSprites[id].data[0] = battler;
+        gSprites[id].data[1] = i;
+        sTopazeTypeBoxIds[battler][i] = id;
+        SpriteCB_TopazeTypeBox(&gSprites[id]);
+    }
+}
+
 void UpdateNickInHealthbox(u8 healthboxSpriteId, struct Pokemon *mon)
 {
     u8 nickname[POKEMON_NAME_LENGTH + 1];
@@ -1546,6 +1654,8 @@ void UpdateNickInHealthbox(u8 healthboxSpriteId, struct Pokemon *mon)
         TextIntoHealthboxObject((void *)(OBJ_VRAM0 + 0x20 + spriteTileNum), windowTileData, 7);
 
     RemoveWindowOnHealthbox(windowId);
+    if (GetBattlerSide(gSprites[healthboxSpriteId].sBattlerId) == B_SIDE_OPPONENT)
+        TopazeUpdateTypeBoxes(gSprites[healthboxSpriteId].sBattlerId, species);
 }
 
 void TryAddPokeballIconToHealthbox(u8 healthboxSpriteId, bool8 noStatus)
@@ -2237,4 +2347,12 @@ static void SafariTextIntoHealthboxObject(void *dest, u8 *windowTileData, u32 wi
 {
     CpuCopy32(windowTileData, dest, windowWidth * TILE_SIZE_4BPP);
     CpuCopy32(windowTileData + 256, dest + 256, windowWidth * TILE_SIZE_4BPP);
+}
+
+void TopazeRefreshTypeBoxes(u8 battler)
+{
+    struct Sprite *hb = &gSprites[gHealthboxSpriteIds[battler]];
+
+    if (GetBattlerSide(battler) == B_SIDE_OPPONENT && hb->inUse && hb->sBattlerId == battler)
+        TopazeUpdateTypeBoxes(battler, gBattleMons[battler].species);
 }

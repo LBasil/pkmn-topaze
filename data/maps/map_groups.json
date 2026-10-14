@@ -319,7 +319,11 @@
     "PalletTown_Ranch",
     "GrenaluxMine_1F",
     "GrenaluxMine_2F",
-    "GrenaluxMine_3F"
+    "GrenaluxMine_3F",
+    "GenericHouse_A",
+    "GenericHouse_B",
+    "GenericHouse_C",
+    "GenericHouse_D"
   ],
   "gMapGroup_IndoorViridian": [
     "ViridianCity_House",

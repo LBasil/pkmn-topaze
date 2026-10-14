@@ -41,6 +41,10 @@ struct MultiBattlePokemonTx
 #define TYPE_FORESIGHT  0xFE
 #define TYPE_ENDTABLE   0xFF
 
+extern u8 gTopazeSeenBefore[];
+void TopazeSetSeen(u8 battler);
+void TopazeRefreshTypeBoxes(u8 battler);
+
 // defines for the 'DoBounceEffect' function
 #define BOUNCE_MON          0x0
 #define BOUNCE_HEALTHBOX    0x1

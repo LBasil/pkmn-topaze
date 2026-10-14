@@ -303,6 +303,20 @@ static const union AffineAnimCmd *const sAffineAnims_Unused[] =
 
 static const s8 sPlayerThrowXTranslation[] = { -32, -16, -16, -32, -32, 0, 0, 0 };
 
+// Topaze QOL : memorise si l'espece etait deja vue AVANT ce combat (types / efficacite affiches seulement dans ce cas).
+EWRAM_DATA u8 gTopazeSeenBefore[MAX_BATTLERS_COUNT] = {0};
+
+void TopazeSetSeen(u8 battler)
+{
+    u16 dex = SpeciesToNationalPokedexNum(gBattleMons[battler].species);
+
+    if (GetBattlerSide(battler) == B_SIDE_OPPONENT)
+        gTopazeSeenBefore[battler] = GetSetPokedexFlag(dex, FLAG_GET_SEEN);
+    HandleSetPokedexFlag(dex, FLAG_SET_SEEN, gBattleMons[battler].personality);
+    if (GetBattlerSide(battler) == B_SIDE_OPPONENT)
+        TopazeRefreshTypeBoxes(battler);
+}
+
 // format: attacking type, defending type, damage multiplier
 // the multiplier is a (decimal) fixed-point number:
 // 20 is ×2.0 TYPE_MUL_SUPER_EFFECTIVE
@@ -2228,6 +2242,8 @@ static void BattleStartClearSetData(void)
     u32 j;
     u8 *dataPtr;
 
+    for (i = 0; i < MAX_BATTLERS_COUNT; i++)
+        gTopazeSeenBefore[i] = 0;
     TurnValuesCleanUp(FALSE);
     SpecialStatusesClear();
 
@@ -2622,7 +2638,7 @@ static void BattleIntroDrawTrainersOrMonsSprites(void)
                                     | BATTLE_TYPE_OLD_MAN_TUTORIAL
                                     | BATTLE_TYPE_LEGENDARY)))
             {
-                HandleSetPokedexFlag(SpeciesToNationalPokedexNum(gBattleMons[gActiveBattler].species), FLAG_SET_SEEN, gBattleMons[gActiveBattler].personality);
+                TopazeSetSeen(gActiveBattler);
             }
         }
         else
@@ -2632,7 +2648,7 @@ static void BattleIntroDrawTrainersOrMonsSprites(void)
                 if (gBattleTypeFlags & (BATTLE_TYPE_GHOST | BATTLE_TYPE_GHOST_UNVEILED))
                 {
                     if (!IS_BATTLE_TYPE_GHOST_WITHOUT_SCOPE(gBattleTypeFlags))
-                        HandleSetPokedexFlag(SpeciesToNationalPokedexNum(gBattleMons[gActiveBattler].species), FLAG_SET_SEEN, gBattleMons[gActiveBattler].personality);
+                        TopazeSetSeen(gActiveBattler);
                 }
                 else if (!(gBattleTypeFlags & (BATTLE_TYPE_EREADER_TRAINER
                                             | BATTLE_TYPE_POKEDUDE
@@ -2641,7 +2657,7 @@ static void BattleIntroDrawTrainersOrMonsSprites(void)
                                             | BATTLE_TYPE_OLD_MAN_TUTORIAL
                                             | BATTLE_TYPE_LEGENDARY)))
                 {
-                    HandleSetPokedexFlag(SpeciesToNationalPokedexNum(gBattleMons[gActiveBattler].species), FLAG_SET_SEEN, gBattleMons[gActiveBattler].personality);
+                    TopazeSetSeen(gActiveBattler);
                 }
                 BtlController_EmitLoadMonSprite(0);
                 MarkBattlerForControllerExec(gActiveBattler);
@@ -2796,7 +2812,7 @@ static void BattleIntroRecordMonsToDex(void)
                                    | BATTLE_TYPE_GHOST
                                    | BATTLE_TYPE_OLD_MAN_TUTORIAL
                                    | BATTLE_TYPE_LEGENDARY)))
-                HandleSetPokedexFlag(SpeciesToNationalPokedexNum(gBattleMons[gActiveBattler].species), FLAG_SET_SEEN, gBattleMons[gActiveBattler].personality);
+                TopazeSetSeen(gActiveBattler);
         gBattleMainFunc = BattleIntroPrintPlayerSendsOut;
     }
 }

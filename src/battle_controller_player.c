@@ -12,6 +12,7 @@
 #include "task.h"
 #include "util.h"
 #include "battle.h"
+#include "pokedex.h"
 #include "battle_anim.h"
 #include "battle_controllers.h"
 #include "battle_interface.h"
@@ -1405,12 +1406,71 @@ static void MoveSelectionDisplayPpNumber(void)
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_PP_REMAINING);
 }
 
+// Topaze QOL : efficacite de l'attaque, affichee seulement si l'espece adverse a deja ete vue.
+extern const u8 gTypeEffectiveness[];
+static const u8 sText_Eff0[] = _("0x/");
+static const u8 sText_Eff025[] = _(".25x/");
+static const u8 sText_Eff05[] = _(".5x/");
+static const u8 sText_Eff2[] = _("2x/");
+static const u8 sText_Eff4[] = _("4x/");
+
+static s16 TopazeEffectOnBattler(u8 battler, u8 moveType)
+{
+    u16 m = 100;
+    u8 t1 = gBattleMons[battler].type1, t2 = gBattleMons[battler].type2;
+    const u8 *e;
+
+    if (!gTopazeSeenBefore[battler])
+        return -1;
+    for (e = gTypeEffectiveness; e[0] != TYPE_ENDTABLE && e[0] != TYPE_FORESIGHT; e += 3)
+    {
+        if (e[0] != moveType)
+            continue;
+        if (e[1] == t1)
+            m = m * e[2] / 10;
+        if (e[1] == t2 && t2 != t1)
+            m = m * e[2] / 10;
+    }
+    return m;
+}
+
+static const u8 *TopazeEffectText(u16 move)
+{
+    s16 r = -1, r2;
+    u8 b = GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT);
+
+    if (gBattleMoves[move].power == 0)
+        return NULL;
+    if (gBattleMons[b].hp != 0)
+        r = TopazeEffectOnBattler(b, gBattleMoves[move].type);
+    if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
+    {
+        u8 b2 = GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT);
+        if (gBattleMons[b2].hp != 0)
+        {
+            r2 = TopazeEffectOnBattler(b2, gBattleMoves[move].type);
+            if (gBattleMons[b].hp == 0)
+                r = r2;
+            else if (r != r2)
+                return NULL;
+        }
+    }
+    if (r < 0 || r == 100)
+        return NULL;
+    if (r == 0) return sText_Eff0;
+    if (r <= 25) return sText_Eff025;
+    if (r < 100) return sText_Eff05;
+    if (r >= 400) return sText_Eff4;
+    return sText_Eff2;
+}
+
 static void MoveSelectionDisplayMoveType(void)
 {
     u8 *txtPtr;
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleBufferA[gActiveBattler][4]);
+    const u8 *eff = TopazeEffectText(moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]);
 
-    txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveInterfaceType);
+    txtPtr = StringCopy(gDisplayedStringBattle, eff != NULL ? eff : gText_MoveInterfaceType);
     *txtPtr++ = EXT_CTRL_CODE_BEGIN;
     *txtPtr++ = 6;
     *txtPtr++ = 1;

@@ -1,6 +1,7 @@
 PalletTown_PlayersHouse_2F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_PlayersHouse_2F_OnTransition
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PalletTown_PlayersHouse_2F_OnWarp
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, PalletTown_PlayersHouse_2F_OnFrame
 	.byte 0
 
 PalletTown_PlayersHouse_2F_OnTransition::
@@ -14,6 +15,21 @@ PalletTown_PlayersHouse_2F_EventScript_SetRespawn::
 PalletTown_PlayersHouse_2F_OnWarp::
 	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PLAYERS_HOUSE_2F, 0, PalletTown_PlayersHouse_2F_FirstWarpIn
 	.2byte 0
+
+PalletTown_PlayersHouse_2F_OnFrame::
+	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PLAYERS_HOUSE_2F, 1, PalletTown_PlayersHouse_2F_EventScript_OptionsPrompt
+	.2byte 0
+
+@ Topaze QOL: the OPTIONS screen opens once at the very start of a new game
+PalletTown_PlayersHouse_2F_EventScript_OptionsPrompt::
+	lockall
+	msgbox PalletTown_PlayersHouse_2F_Text_SetupOptions
+	closemessage
+	special OpenOptionsFromScript
+	waitstate
+	setvar VAR_MAP_SCENE_PALLET_TOWN_PLAYERS_HOUSE_2F, 2
+	releaseall
+	end
 
 PalletTown_PlayersHouse_2F_FirstWarpIn::
 	turnobject LOCALID_PLAYER, DIR_NORTH

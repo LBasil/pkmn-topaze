@@ -158,3 +158,8 @@ Piste réaliste : faire d'abord le jeu jouable, puis ajouter un follower **limit
 - Émulateur : escorte du rival (sortie nord) → ranch → père/OAK/rival → 2 sbires → choix du starter → combat sbire 1 → maman + pendentif → `VAR_GRENALUX_OPENING`=2, joueur libre en (11,6). OK.
 - Entrée en marchant seul vers l'est (OPENING=0) : même scène. OK.
 - Raccord de sol ranch↔Grenalux vérifié visuellement (chemin continu).- Sortie nord de Grenalux ↔ Route 1 : traversée dans les deux sens image par image, raccord continu (pas de corruption, le dégradé de la Route 1 s'affiche correctement après le passage). OK.
+
+## QOL v1 (14/10)
+- Options : prompt puis écran Options au démarrage dans la chambre, retour au script, déplacement libre ensuite. OK.
+- Maison générique : porte Bourg Palette (14,13) → intérieur → sortie par le paillasson, retour devant la même porte. OK.
+- Combat Route 1 (ROM debug) : 1re rencontre sans boîtes de type, 2e rencontre de la même espèce avec boîtes DRK/FLY et `0x/` affiché. OK.
