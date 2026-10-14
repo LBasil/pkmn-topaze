@@ -381,3 +381,8 @@ Généré par `league_elders.py` puis `league_elders2.py` (non rejouables). `VAR
 - **Efficacité** : dans le menu des attaques, le préfixe « TYPE/ » devient `2x/`, `4x/`, `.5x/`, `.25x/` ou `0x/` (attaque offensive seulement, espèce vue ; en double : seulement si les deux cibles donnent le même résultat). Calcul sur `gTypeEffectiveness`.
 - **Maisons génériques** : `GenericHouse_A..D` (MAP_DYNAMIC) servent 19+ portes de Bourg Palette/Jadielle/Ranch/Safrania ; les portes pointent sur le warp 1 (paillasson, x=4). `audit_doors.py` liste les portes sans warp. Les PNJ « statiques » passent en WANDER (`npc_wander.py`).
 - Les ROM de debug : les tableaux ajoutés en IWRAM décalent les adresses codées en dur du banc (/tmp/gx) → utiliser `EWRAM_DATA`.
+
+## Route 1 ↔ Jadeville (connexion fluide) + herbes teintées
+- `docs/topaze/viridian_connection.py` : Route 1 reçoit 5 lignes en haut (tout +5 en y), Jadeville ses lignes 35-39 en forêt ; plus de warps. Les bandes vues à travers la connexion n'utilisent que des métatuiles PRIMAIRES : nouveaux métatuiles primaires 512-516 (arbres 2x2 + herbe) ajoutés à `general_gradient` et `general_opal`, avec la palette primaire 6 (bleu-vert de Gradient / palette d'arbres d'Opal) pour garder la couleur de la zone.
+- `TopazeTintGrassSprite` (field_effect_helpers.c) : le sprite d'herbe haute prend les couleurs (par rang de luminosité) de la palette du sol de la case → plus d'herbe verte dans les zones rouge/violette/bleue.
+- École : le rival entre/sort par la colonne x=3 (il traversait les bancs), son objet démarre sur le paillasson (4,7).

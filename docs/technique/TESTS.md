@@ -163,3 +163,4 @@ Piste réaliste : faire d'abord le jeu jouable, puis ajouter un follower **limit
 - Options : prompt puis écran Options au démarrage dans la chambre, retour au script, déplacement libre ensuite. OK.
 - Maison générique : porte Bourg Palette (14,13) → intérieur → sortie par le paillasson, retour devant la même porte. OK.
 - Combat Route 1 (ROM debug) : 1re rencontre sans boîtes de type, 2e rencontre de la même espèce avec boîtes DRK/FLY et `0x/` affiché. OK.
+- 14/10 : Route1 (14,5)→Jadeville (20,39) et retour sans warp, couleurs OK ; herbe haute teintée ; scène de l'école rejouée (rival contourne les bancs).

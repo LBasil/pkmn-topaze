@@ -259,6 +259,55 @@ void UpdateShadowFieldEffect(struct Sprite *sprite)
     }
 }
 
+// Topaze : les herbes (sprites) reprennent la teinte du sol de la zone (rouge / violet / bleu-vert) au lieu du vert fixe.
+static u16 TopazeLuma(u16 c)
+{
+    return (c & 0x1F) * 3 + ((c >> 5) & 0x1F) * 6 + ((c >> 10) & 0x1F);
+}
+
+static void TopazeTintGrassSprite(struct Sprite *sprite, s16 x, s16 y)
+{
+    u16 id = MapGridGetMetatileIdAt(x, y);
+    const u16 *entries;
+    u8 bgPal, i, j;
+    u16 src[16], bg[16], base;
+
+    if (id < 640)
+        entries = gMapHeader.mapLayout->primaryTileset->metatiles + id * 8;
+    else
+        entries = gMapHeader.mapLayout->secondaryTileset->metatiles + (id - 640) * 8;
+    bgPal = entries[0] >> 12;
+    base = 256 + sprite->oam.paletteNum * 16;
+    for (i = 0; i < 16; i++)
+    {
+        src[i] = gPlttBufferUnfaded[base + i];
+        bg[i] = gPlttBufferUnfaded[bgPal * 16 + i];
+    }
+    for (i = 1; i < 16; i++)
+    {
+        u8 rank = 0, n = 0;
+        u16 target;
+        // a sprite colour of rank r (among the 15) -> BG colour of the same rank
+        for (j = 1; j < 16; j++)
+            if (TopazeLuma(src[j]) < TopazeLuma(src[i]) || (TopazeLuma(src[j]) == TopazeLuma(src[i]) && j < i))
+                rank++;
+        target = 0;
+        for (j = 1; j < 16; j++)
+        {
+            u8 k, r2 = 0;
+            for (k = 1; k < 16; k++)
+                if (TopazeLuma(bg[k]) < TopazeLuma(bg[j]) || (TopazeLuma(bg[k]) == TopazeLuma(bg[j]) && k < j))
+                    r2++;
+            if (r2 == rank) { target = bg[j]; n = 1; break; }
+        }
+        if (n)
+        {
+            gPlttBufferUnfaded[base + i] = target;
+            gPlttBufferFaded[base + i] = target;
+        }
+    }
+}
+
 u32 FldEff_TallGrass(void)
 {
     s16 x;
@@ -281,6 +330,7 @@ u32 FldEff_TallGrass(void)
         sprite->data[3] = gFieldEffectArguments[4];
         sprite->data[4] = gFieldEffectArguments[5];
         sprite->data[5] = gFieldEffectArguments[6];
+        TopazeTintGrassSprite(sprite, gFieldEffectArguments[0], gFieldEffectArguments[1]);
         if (gFieldEffectArguments[7])
         {
             SeekSpriteAnim(sprite, 4);

@@ -88,20 +88,22 @@ PalletTown_School_Movement_PlayerWalksToTeacher::
 
 PalletTown_School_Movement_RivalEnters::
 	walk_up
+	walk_left
+	walk_up
+	walk_up
+	walk_up
 	walk_right
 	walk_right
-	walk_up
-	walk_up
-	walk_up
 	walk_in_place_faster_right
 	step_end
 
 PalletTown_School_Movement_RivalLeaves::
-	walk_down
-	walk_down
-	walk_down
 	walk_left
 	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_right
 	walk_down
 	step_end
 
