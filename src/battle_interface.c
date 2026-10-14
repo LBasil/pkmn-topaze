@@ -1486,8 +1486,12 @@ static const u8 sText_HealthboxNickname[] = _("{HIGHLIGHT 02}");
 #define TAG_TOPAZE_TYPEBOX 0xD6A0
 #define TAG_TOPAZE_TYPEBOX_PAL 0xD6C0
 static const u8 sTopazeTypeAbbr[][4] = {
-    _("NOR"), _("FGT"), _("FLY"), _("PSN"), _("GRD"), _("RCK"), _("BUG"), _("GHO"), _("STL"),
-    _("???"), _("FIR"), _("WTR"), _("GRS"), _("ELE"), _("PSY"), _("ICE"), _("DRG"), _("DRK"),
+    _("NOR"), _("FIG"), _("FLY"), _("PSN"), _("GRD"), _("RCK"), _("BUG"), _("GHO"), _("STL"),
+    _("???"), _("FIR"), _("WAT"), _("GRS"), _("ELE"), _("PSY"), _("ICE"), _("DRA"), _("DRK"), _("FAI"),
+};
+// palette index (pokemon_types.gbapal) of the badge colour of each type
+static const u8 sTopazeTypeColor[] = {
+    9, 1, 6, 8, 4, 11, 5, 13, 10, 14, 2, 7, 5, 3, 12, 6, 8, 14, 12,
 };
 static const struct OamData sOamData_TopazeTypeBox = {
     .shape = SPRITE_SHAPE(32x16),
@@ -1555,14 +1559,19 @@ static void TopazeUpdateTypeBoxes(u8 battler, u16 species)
     {
         u16 win;
         struct SpriteSheet sheet;
-        u8 id, buf[8];
-        u8 color[3] = {2, 1, 3};
+        u8 id, buf[8], body;
+        u8 color[3] = {0, 15, 14};
 
         if (i == 1 && types[1] == types[0])
             break;
         win = AddWindow(&sTopazeTypeBoxWindow);
+        body = sTopazeTypeColor[types[i]];
         FillWindowPixelBuffer(win, PIXEL_FILL(0));
-        BlitMenuInfoIcon(win, types[i] + 1, 0, 2);
+        FillWindowPixelRect(win, 14, 1, 1, 22, 12);   // outline (rounded corners)
+        FillWindowPixelRect(win, 14, 0, 2, 24, 10);
+        FillWindowPixelRect(win, body, 1, 2, 22, 10);
+        StringCopy(buf, sTopazeTypeAbbr[types[i]]);
+        AddTextPrinterParameterized4(win, FONT_SMALL, 5, 0, 0, 0, color, -1, buf);
         memcpy(sTopazeTypeBoxBuf, (const u32 *)GetWindowAttribute(win, WINDOW_TILE_DATA), 8 * TILE_SIZE_4BPP);
         sheet.data = sTopazeTypeBoxBuf;
         sheet.size = 8 * TILE_SIZE_4BPP;
