@@ -15,7 +15,7 @@ ViridianForest_EventScript_ItemAntidote::
 	end
 
 ViridianForest_EventScript_ItemPotion::
-	finditem ITEM_POTION
+	finditem ITEM_POKE_BALL
 	end
 
 MtMoon_1F_EventScript_ItemParalyzeHeal::
@@ -411,7 +411,7 @@ ThreeIsland_EventScript_ItemZinc::
 	end
 
 ViridianForest_EventScript_ItemPotion2::
-	finditem ITEM_POTION
+	finditem ITEM_POKE_BALL
 	end
 
 MtMoon_B2F_EventScript_ItemRevive::
