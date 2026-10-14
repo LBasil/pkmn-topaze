@@ -308,7 +308,8 @@
     "SevenIsland_SevaultCanyon_Entrance",
     "SevenIsland_SevaultCanyon",
     "SevenIsland_TanobyRuins",
-    "Route4East"
+    "Route4East",
+    "ViridianCity_WestLane"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",
@@ -587,6 +588,7 @@
   "connections_include_order": [
     "PalletTown",
     "ViridianCity",
+    "ViridianCity_WestLane",
     "PewterCity",
     "CeruleanCity",
     "LavenderTown",

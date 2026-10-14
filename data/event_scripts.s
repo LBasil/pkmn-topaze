@@ -328,6 +328,7 @@ gStdScriptsEnd::
 	.include "data/maps/Route21_North/scripts.inc"
 	.include "data/maps/Route21_South/scripts.inc"
 	.include "data/maps/Route22/scripts.inc"
+	.include "data/maps/ViridianCity_WestLane/scripts.inc"
 	.include "data/maps/Route23/scripts.inc"
 	.include "data/maps/Route24/scripts.inc"
 	.include "data/maps/Route25/scripts.inc"

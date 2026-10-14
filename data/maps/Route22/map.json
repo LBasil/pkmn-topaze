@@ -20,8 +20,8 @@
       "direction": "up"
     },
     {
-      "map": "MAP_VIRIDIAN_CITY",
-      "offset": -19,
+      "map": "MAP_VIRIDIAN_CITY_WEST_LANE",
+      "offset": 1,
       "direction": "right"
     }
   ],

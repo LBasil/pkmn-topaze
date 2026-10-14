@@ -4494,6 +4494,18 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/GrenaluxMine_3F/border.bin",
       "blockdata_filepath": "data/layouts/GrenaluxMine_3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_VIRIDIAN_CITY_WEST_LANE",
+      "name": "ViridianCityWestLane_Layout",
+      "width": 16,
+      "height": 14,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GeneralOpal",
+      "secondary_tileset": "gTileset_RustboroOpal",
+      "border_filepath": "data/layouts/ViridianCityWestLane/border.bin",
+      "blockdata_filepath": "data/layouts/ViridianCityWestLane/map.bin"
     }
   ]
 }

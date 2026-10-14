@@ -203,8 +203,13 @@ static void FillConnection(s32 x, s32 y, const struct MapHeader *connectedMapHea
 
     if (sFogActive)
     {
-        // Topaze: neighbour strip of a different tileset -> the map's own border look (same as off-map),
-        // keeping the collision/elevation of the nearest edge cell so the crossing stays possible.
+        // Topaze: neighbour strip of a different tileset -> cannot draw the neighbour's tiles.
+        // A cell is walkable only if the nearest edge cell of this map AND the real neighbour cell are both
+        // walkable; walkable cells repeat the edge metatile (a road keeps looking like a road), the others
+        // show the map's own border look and block, so what you see always matches where you can go.
+        s32 nW = connectedMapHeader->mapLayout->width;
+        s32 nH = connectedMapHeader->mapLayout->height;
+
         for (i = 0; i < height; i++)
         {
             s32 j;
@@ -218,17 +223,32 @@ static void FillConnection(s32 x, s32 y, const struct MapHeader *connectedMapHea
             {
                 s32 cx = x + j;
                 s32 ex = cx;
-                u16 border;
+                u16 edge;
+                bool8 open;
 
                 if (ex < MAP_OFFSET) ex = MAP_OFFSET;
                 if (ex > MAP_OFFSET + sFogW - 1) ex = MAP_OFFSET + sFogW - 1;
+                edge = VMap.map[VMap.Xsize * ey + ex];
+                open = ((edge & MAPGRID_COLLISION_MASK) == 0);
+                if (open)
+                {
+                    s32 nx = x2 + j;
+                    s32 ny = y2 + i;
+
+                    if (nx < 0 || ny < 0 || nx >= nW || ny >= nH
+                     || (connectedMapHeader->mapLayout->map[nW * ny + nx] & MAPGRID_COLLISION_MASK) != 0)
+                        open = FALSE;
+                }
+                if (open)
+                    dest[j] = edge;
+                else
                 {
                     s32 bx = (cx - MAP_OFFSET + 8 * sFogLayout->borderWidth) % sFogLayout->borderWidth;
                     s32 by = (cy - MAP_OFFSET + 8 * sFogLayout->borderHeight) % sFogLayout->borderHeight;
+                    u16 border = sFogLayout->border[bx + by * sFogLayout->borderWidth] & MAPGRID_METATILE_ID_MASK;
 
-                    border = sFogLayout->border[bx + by * sFogLayout->borderWidth] & MAPGRID_METATILE_ID_MASK;
+                    dest[j] = border | MAPGRID_COLLISION_MASK | (edge & MAPGRID_ELEVATION_MASK);
                 }
-                dest[j] = border | (VMap.map[VMap.Xsize * ey + ex] & ~MAPGRID_METATILE_ID_MASK);
             }
         }
         return;
