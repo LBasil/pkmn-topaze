@@ -10,6 +10,9 @@ CFG = {
  'ROUTE1': dict(layout='LAYOUT_ROUTE1', bin='data/layouts/Route1/map.bin', W=26,
     prim='data/tilesets/primary/general_gradient', sec='data/tilesets/secondary/gradient_road', other_prims=['data/tilesets/primary/general_opal'],
     grounds={0x001,0x204,0x280,0x281}),
+ 'PALLET': dict(layout='LAYOUT_PALLET_TOWN', bin='data/layouts/PalletTown/map.bin', W=44,
+    prim='data/tilesets/primary/general_emerald', sec='data/tilesets/secondary/petalburg_emerald', other_prims=[],
+    grounds={0x001}, pad_to=523, pre=[(1,0xcc,0x2000,'L',523),(1,0xcd,0x2000,'R',524)]),
  'VIRIDIAN': dict(layout='LAYOUT_VIRIDIAN_CITY', bin='data/layouts/ViridianCity/map.bin', W=42,
     prim='data/tilesets/primary/general_opal', sec='data/tilesets/secondary/rustboro_opal', other_prims=[],
     grounds={0x280}),
@@ -23,6 +26,10 @@ def main(key):
     raw=lambda x,y: struct.unpack_from('<H',d,(y*W+x)*2)[0]
     tsets={c['prim']:load(c['prim']),c['sec']:load(c['sec'])}
     for o in c['other_prims']: tsets[o]=load(o)
+    for dd in (c['prim'],):
+        m,a=tsets[dd]
+        while len(m)//16<c.get('pad_to',0): m+=bytes(16); a+=bytes(4)
+        tsets[dd]=(m,a)
     reg={}   # (ground,pal,side) -> metatile id
     def get_tuft(ground,tile,pal,side):
         k=(ground,tile,pal,side)
@@ -47,6 +54,8 @@ def main(key):
             if newid is not None and nid!=newid: raise SystemExit('index primaires desynchronises')
             newid=nid
         reg[k]=newid; return newid
+    for (gr,t,pl,sd,want) in c.get('pre',[]):
+        assert get_tuft(gr,t,pl,sd)==want, 'ids primaires non alignes'
     n=0
     for y in range(1,H):
         for x in range(W):
