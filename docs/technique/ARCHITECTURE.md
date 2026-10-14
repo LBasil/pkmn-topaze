@@ -390,3 +390,4 @@ Généré par `league_elders.py` puis `league_elders2.py` (non rejouables). `VAR
 ### Palette Route 1 / Viridian (rouge -> violet -> bleu nuit)
 Plus aucun vert : les palettes teal/vertes (gradient_road 08/11, general_opal 02, rustboro_opal 08) sont tournees en teinte vers le bleu-violet; la palette primaire 6 (arbres/herbe de la bande de raccord) est copiee depuis ces memes palettes. PalletTown (25,38-39) : demi-arbres orphelins corriges.
 Route1 lignes 2-3 : bande de foret (arbres 0x200-0x203) au lieu d'une bande vide; Viridian (6,35) : tuile de porte en double retiree.
+Route1: ligne 4 (buissons 0x29b bloquants) et ligne 40 (buissons 0x00d) remplies, ouverture nord x14-17 (lignes 0-4).
