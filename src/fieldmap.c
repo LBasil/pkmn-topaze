@@ -736,12 +736,14 @@ bool8 CameraMove(s32 x, s32 y)
         gCamera.y = old_y - gSaveBlock1Ptr->pos.y;
         gSaveBlock1Ptr->pos.x += x;
         gSaveBlock1Ptr->pos.y += y;
-        MoveMapViewToBackup(direction);
         if (gCameraRedrawAll)
         {
+            // Topaze: the saved view holds metatile ids of the old tilesets; do not paste it over the new map
             gCameraRedrawAll = FALSE;
             DrawWholeMapView();
         }
+        else
+            MoveMapViewToBackup(direction);
     }
     return gCamera.active;
 }

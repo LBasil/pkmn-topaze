@@ -755,6 +755,7 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
 {
     int paletteIndex;
     const struct Tileset *oldPrimary = gMapHeader.mapLayout ? gMapHeader.mapLayout->primaryTileset : NULL;
+    const struct Tileset *oldSecondary = gMapHeader.mapLayout ? gMapHeader.mapLayout->secondaryTileset : NULL;
 
     SetWarpDestination(mapGroup, mapNum, -1, -1, -1);
     Overworld_TryMapConnectionMusicTransition();
@@ -790,6 +791,8 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
         for (paletteIndex = 7; paletteIndex < 13; paletteIndex++)
             ApplyWeatherGammaShiftToPal(paletteIndex);
         InitSecondaryTilesetAnimation();
+        if (gMapHeader.mapLayout->secondaryTileset != oldSecondary)
+            gCameraRedrawAll = TRUE;
     }
     UpdateLocationHistoryForRoamer();
     RoamerMove();
