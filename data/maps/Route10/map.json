@@ -13,7 +13,18 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [],
+  "connections": [
+    {
+      "map": "MAP_LAVENDER_TOWN",
+      "offset": -10,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE9",
+      "offset": 0,
+      "direction": "left"
+    }
+  ],
   "object_events": [
     {
       "type": "object",
@@ -190,48 +201,6 @@
       "y": 37,
       "elevation": 3,
       "dest_map": "MAP_POWER_PLANT",
-      "dest_warp_id": "3"
-    },
-    {
-      "x": 8,
-      "y": 79,
-      "elevation": 0,
-      "dest_map": "MAP_LAVENDER_TOWN",
-      "dest_warp_id": "6"
-    },
-    {
-      "x": 9,
-      "y": 79,
-      "elevation": 0,
-      "dest_map": "MAP_LAVENDER_TOWN",
-      "dest_warp_id": "7"
-    },
-    {
-      "x": 10,
-      "y": 79,
-      "elevation": 0,
-      "dest_map": "MAP_LAVENDER_TOWN",
-      "dest_warp_id": "8"
-    },
-    {
-      "x": 11,
-      "y": 79,
-      "elevation": 0,
-      "dest_map": "MAP_LAVENDER_TOWN",
-      "dest_warp_id": "9"
-    },
-    {
-      "x": 0,
-      "y": 8,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE9",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 0,
-      "y": 9,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE9",
       "dest_warp_id": "3"
     }
   ],

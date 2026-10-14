@@ -13,7 +13,23 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [],
+  "connections": [
+    {
+      "map": "MAP_ROUTE19",
+      "offset": 12,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE18",
+      "offset": 5,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE15",
+      "offset": 3,
+      "direction": "right"
+    }
+  ],
   "object_events": [
     {
       "type": "object",
@@ -441,104 +457,6 @@
       "elevation": 0,
       "dest_map": "MAP_FUCHSIA_CITY_HOUSE3",
       "dest_warp_id": "0"
-    },
-    {
-      "x": 20,
-      "y": 31,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 21,
-      "y": 31,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "1"
-    },
-    {
-      "x": 22,
-      "y": 31,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 23,
-      "y": 31,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "3"
-    },
-    {
-      "x": 24,
-      "y": 31,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "4"
-    },
-    {
-      "x": 25,
-      "y": 31,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "5"
-    },
-    {
-      "x": 26,
-      "y": 31,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "6"
-    },
-    {
-      "x": 27,
-      "y": 31,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "7"
-    },
-    {
-      "x": 0,
-      "y": 13,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE18",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 0,
-      "y": 14,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE18",
-      "dest_warp_id": "3"
-    },
-    {
-      "x": 0,
-      "y": 15,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE18",
-      "dest_warp_id": "4"
-    },
-    {
-      "x": 47,
-      "y": 13,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE15",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 47,
-      "y": 14,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE15",
-      "dest_warp_id": "3"
-    },
-    {
-      "x": 47,
-      "y": 15,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE15",
-      "dest_warp_id": "4"
     },
     {
       "x": 23,

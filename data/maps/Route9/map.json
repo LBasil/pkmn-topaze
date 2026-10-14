@@ -13,7 +13,18 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [],
+  "connections": [
+    {
+      "map": "MAP_ROUTE10",
+      "offset": 0,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_CERULEAN_CITY",
+      "offset": -10,
+      "direction": "left"
+    }
+  ],
   "object_events": [
     {
       "type": "object",
@@ -170,36 +181,7 @@
       "flag": "FLAG_HIDE_ROUTE9_BURN_HEAL"
     }
   ],
-  "warp_events": [
-    {
-      "x": 0,
-      "y": 8,
-      "elevation": 0,
-      "dest_map": "MAP_CERULEAN_CITY",
-      "dest_warp_id": "21"
-    },
-    {
-      "x": 0,
-      "y": 9,
-      "elevation": 0,
-      "dest_map": "MAP_CERULEAN_CITY",
-      "dest_warp_id": "22"
-    },
-    {
-      "x": 71,
-      "y": 8,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE10",
-      "dest_warp_id": "9"
-    },
-    {
-      "x": 71,
-      "y": 9,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE10",
-      "dest_warp_id": "10"
-    }
-  ],
+  "warp_events": [],
   "coord_events": [],
   "bg_events": [
     {

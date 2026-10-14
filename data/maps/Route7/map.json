@@ -13,7 +13,13 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": [
+    {
+      "map": "MAP_CELADON_CITY",
+      "offset": -10,
+      "direction": "left"
+    }
+  ],
   "object_events": [],
   "warp_events": [
     {
@@ -29,27 +35,6 @@
       "elevation": 3,
       "dest_map": "MAP_ROUTE7_EAST_ENTRANCE",
       "dest_warp_id": "0"
-    },
-    {
-      "x": 0,
-      "y": 2,
-      "elevation": 0,
-      "dest_map": "MAP_CELADON_CITY",
-      "dest_warp_id": "16"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "elevation": 0,
-      "dest_map": "MAP_CELADON_CITY",
-      "dest_warp_id": "17"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "elevation": 0,
-      "dest_map": "MAP_CELADON_CITY",
-      "dest_warp_id": "18"
     }
   ],
   "coord_events": [],

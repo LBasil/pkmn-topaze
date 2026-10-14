@@ -18,6 +18,11 @@
       "map": "MAP_VIRIDIAN_CITY",
       "offset": -8,
       "direction": "down"
+    },
+    {
+      "map": "MAP_PEWTER_CITY",
+      "offset": -10,
+      "direction": "up"
     }
   ],
   "object_events": [
@@ -92,20 +97,6 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE2_VIRIDIAN_FOREST_SOUTH_ENTRANCE",
       "dest_warp_id": "1"
-    },
-    {
-      "x": 12,
-      "y": 0,
-      "elevation": 0,
-      "dest_map": "MAP_PEWTER_CITY",
-      "dest_warp_id": "7"
-    },
-    {
-      "x": 13,
-      "y": 0,
-      "elevation": 0,
-      "dest_map": "MAP_PEWTER_CITY",
-      "dest_warp_id": "8"
     }
   ],
   "coord_events": [],

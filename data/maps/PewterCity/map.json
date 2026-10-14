@@ -13,7 +13,18 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [],
+  "connections": [
+    {
+      "map": "MAP_ROUTE2",
+      "offset": 10,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE3",
+      "offset": 14,
+      "direction": "right"
+    }
+  ],
   "object_events": [
     {
       "type": "object",
@@ -235,34 +246,6 @@
       "y": 32,
       "elevation": 0,
       "dest_map": "MAP_PEWTER_CITY_HOUSE2",
-      "dest_warp_id": "1"
-    },
-    {
-      "x": 22,
-      "y": 39,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE2",
-      "dest_warp_id": "4"
-    },
-    {
-      "x": 23,
-      "y": 39,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE2",
-      "dest_warp_id": "5"
-    },
-    {
-      "x": 47,
-      "y": 25,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE3",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 47,
-      "y": 26,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE3",
       "dest_warp_id": "1"
     },
     {

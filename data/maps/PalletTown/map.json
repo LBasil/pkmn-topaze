@@ -23,6 +23,11 @@
       "map": "MAP_ROUTE1",
       "offset": 10,
       "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE21_NORTH",
+      "offset": 14,
+      "direction": "down"
     }
   ],
   "object_events": [
@@ -220,27 +225,6 @@
       "elevation": 0,
       "dest_map": "MAP_PALLET_TOWN_SCHOOL",
       "dest_warp_id": "1"
-    },
-    {
-      "x": 21,
-      "y": 39,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE21_NORTH",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 22,
-      "y": 39,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE21_NORTH",
-      "dest_warp_id": "1"
-    },
-    {
-      "x": 23,
-      "y": 39,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE21_NORTH",
-      "dest_warp_id": "2"
     },
     {
       "x": 39,

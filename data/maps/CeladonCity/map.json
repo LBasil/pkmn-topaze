@@ -13,7 +13,18 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [],
+  "connections": [
+    {
+      "map": "MAP_ROUTE16",
+      "offset": 10,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE7",
+      "offset": 10,
+      "direction": "right"
+    }
+  ],
   "object_events": [
     {
       "type": "object",
@@ -362,48 +373,6 @@
       "elevation": 0,
       "dest_map": "MAP_CELADON_CITY_CONDOMINIUMS_1F",
       "dest_warp_id": "5"
-    },
-    {
-      "x": 0,
-      "y": 22,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE16",
-      "dest_warp_id": "1"
-    },
-    {
-      "x": 0,
-      "y": 23,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE16",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 0,
-      "y": 24,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE16",
-      "dest_warp_id": "3"
-    },
-    {
-      "x": 59,
-      "y": 12,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE7",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 59,
-      "y": 13,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE7",
-      "dest_warp_id": "3"
-    },
-    {
-      "x": 59,
-      "y": 14,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE7",
-      "dest_warp_id": "4"
     }
   ],
   "coord_events": [],

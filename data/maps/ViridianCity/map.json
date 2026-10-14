@@ -23,6 +23,11 @@
       "map": "MAP_ROUTE2",
       "offset": 8,
       "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE22",
+      "offset": 19,
+      "direction": "left"
     }
   ],
   "object_events": [
@@ -170,20 +175,6 @@
       "elevation": 0,
       "dest_map": "MAP_VIRIDIAN_CITY_GYM",
       "dest_warp_id": "1"
-    },
-    {
-      "x": 0,
-      "y": 26,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE22",
-      "dest_warp_id": "3"
-    },
-    {
-      "x": 0,
-      "y": 27,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE22",
-      "dest_warp_id": "4"
     },
     {
       "x": 35,

@@ -1,4 +1,5 @@
 #include "global.h"
+#include "constants/layouts.h"
 #include "gflib.h"
 #include "overworld.h"
 #include "script.h"
@@ -127,6 +128,22 @@ static void InitBackupMapLayoutData(const u16 *map, u16 width, u16 height)
     }
 }
 
+#include "topaze_fog_pairs.h"
+
+// Topaze: when the two maps of a connection use different tilesets, the neighbour strip would be
+// drawn with the wrong tiles. Replicate the current map's own edge metatiles instead (hard cut, same passability).
+static s32 sFogW, sFogH;
+static bool8 sFogActive;
+
+static bool8 TopazeIsFogPair(u16 a, u16 b)
+{
+    u32 i;
+    for (i = 0; sTopazeFogPairs[i][0] != 0xFFFF; i++)
+        if (sTopazeFogPairs[i][0] == a && sTopazeFogPairs[i][1] == b)
+            return TRUE;
+    return FALSE;
+}
+
 static void InitBackupMapLayoutConnections(struct MapHeader *mapHeader)
 {
     s32 count;
@@ -148,6 +165,9 @@ static void InitBackupMapLayoutConnections(struct MapHeader *mapHeader)
         {
             struct MapHeader const *cMap = GetMapHeaderFromConnection(connection);
             u32 offset = connection->offset;
+            sFogActive = cMap && TopazeIsFogPair(mapHeader->mapLayoutId, cMap->mapLayoutId);
+            sFogW = mapHeader->mapLayout->width;
+            sFogH = mapHeader->mapLayout->height;
             switch (connection->direction)
             {
             case CONNECTION_SOUTH:
@@ -167,6 +187,7 @@ static void InitBackupMapLayoutConnections(struct MapHeader *mapHeader)
                 gMapConnectionFlags.east = TRUE;
                 break;
             }
+            sFogActive = FALSE;
         }
     }
 }
@@ -178,6 +199,25 @@ static void FillConnection(s32 x, s32 y, const struct MapHeader *connectedMapHea
     u16 *dest;
     s32 mapWidth;
 
+    if (sFogActive)
+    {
+        for (i = 0; i < height; i++)
+        {
+            s32 j;
+            s32 cy = y + i;
+            dest = &VMap.map[VMap.Xsize * (y + i) + x];
+            if (cy < MAP_OFFSET) cy = MAP_OFFSET;
+            if (cy > MAP_OFFSET + sFogH - 1) cy = MAP_OFFSET + sFogH - 1;
+            for (j = 0; j < width; j++)
+            {
+                s32 cx = x + j;
+                if (cx < MAP_OFFSET) cx = MAP_OFFSET;
+                if (cx > MAP_OFFSET + sFogW - 1) cx = MAP_OFFSET + sFogW - 1;
+                dest[j] = VMap.map[VMap.Xsize * cy + cx];
+            }
+        }
+        return;
+    }
     mapWidth = connectedMapHeader->mapLayout->width;
     src = &connectedMapHeader->mapLayout->map[mapWidth * y2 + x2];
     dest = &VMap.map[VMap.Xsize * y + x];

@@ -13,7 +13,18 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [],
+  "connections": [
+    {
+      "map": "MAP_ROUTE19",
+      "offset": -40,
+      "direction": "right"
+    },
+    {
+      "map": "MAP_CINNABAR_ISLAND",
+      "offset": 0,
+      "direction": "left"
+    }
+  ],
   "object_events": [
     {
       "type": "object",
@@ -186,200 +197,18 @@
       "dest_warp_id": "4"
     },
     {
-      "x": 119,
-      "y": 3,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "8"
-    },
-    {
-      "x": 119,
-      "y": 4,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "9"
-    },
-    {
-      "x": 119,
-      "y": 5,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "10"
-    },
-    {
-      "x": 119,
-      "y": 6,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "11"
-    },
-    {
-      "x": 119,
-      "y": 7,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "12"
-    },
-    {
-      "x": 119,
-      "y": 8,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "13"
-    },
-    {
-      "x": 119,
-      "y": 9,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "14"
-    },
-    {
-      "x": 119,
-      "y": 10,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "15"
-    },
-    {
-      "x": 119,
-      "y": 11,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "16"
-    },
-    {
-      "x": 119,
-      "y": 12,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "17"
-    },
-    {
-      "x": 119,
-      "y": 13,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "18"
-    },
-    {
-      "x": 119,
-      "y": 14,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "19"
-    },
-    {
-      "x": 119,
-      "y": 15,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "20"
-    },
-    {
-      "x": 119,
-      "y": 16,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "21"
-    },
-    {
-      "x": 119,
-      "y": 17,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE19",
-      "dest_warp_id": "22"
-    },
-    {
       "x": 0,
       "y": 0,
       "elevation": 0,
       "dest_map": "MAP_CINNABAR_ISLAND",
-      "dest_warp_id": "21"
-    },
-    {
-      "x": 0,
-      "y": 1,
-      "elevation": 0,
-      "dest_map": "MAP_CINNABAR_ISLAND",
-      "dest_warp_id": "22"
-    },
-    {
-      "x": 0,
-      "y": 2,
-      "elevation": 0,
-      "dest_map": "MAP_CINNABAR_ISLAND",
-      "dest_warp_id": "23"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "elevation": 0,
-      "dest_map": "MAP_CINNABAR_ISLAND",
-      "dest_warp_id": "24"
-    },
-    {
-      "x": 0,
-      "y": 9,
-      "elevation": 0,
-      "dest_map": "MAP_CINNABAR_ISLAND",
-      "dest_warp_id": "25"
-    },
-    {
-      "x": 0,
-      "y": 10,
-      "elevation": 0,
-      "dest_map": "MAP_CINNABAR_ISLAND",
-      "dest_warp_id": "26"
-    },
-    {
-      "x": 0,
-      "y": 13,
-      "elevation": 0,
-      "dest_map": "MAP_CINNABAR_ISLAND",
-      "dest_warp_id": "27"
-    },
-    {
-      "x": 0,
-      "y": 14,
-      "elevation": 0,
-      "dest_map": "MAP_CINNABAR_ISLAND",
-      "dest_warp_id": "28"
-    },
-    {
-      "x": 0,
-      "y": 15,
-      "elevation": 0,
-      "dest_map": "MAP_CINNABAR_ISLAND",
-      "dest_warp_id": "29"
-    },
-    {
-      "x": 0,
-      "y": 16,
-      "elevation": 0,
-      "dest_map": "MAP_CINNABAR_ISLAND",
-      "dest_warp_id": "30"
-    },
-    {
-      "x": 0,
-      "y": 17,
-      "elevation": 0,
-      "dest_map": "MAP_CINNABAR_ISLAND",
-      "dest_warp_id": "31"
-    },
-    {
-      "x": 0,
-      "y": 18,
-      "elevation": 0,
-      "dest_map": "MAP_CINNABAR_ISLAND",
-      "dest_warp_id": "32"
+      "dest_warp_id": "6"
     },
     {
       "x": 0,
       "y": 19,
       "elevation": 0,
       "dest_map": "MAP_CINNABAR_ISLAND",
-      "dest_warp_id": "33"
+      "dest_warp_id": "7"
     }
   ],
   "coord_events": [

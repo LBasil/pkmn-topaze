@@ -13,7 +13,18 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [],
+  "connections": [
+    {
+      "map": "MAP_FUCHSIA_CITY",
+      "offset": -3,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_ROUTE14",
+      "offset": -44,
+      "direction": "right"
+    }
+  ],
   "object_events": [
     {
       "type": "object",
@@ -212,97 +223,6 @@
       "elevation": 3,
       "dest_map": "MAP_ROUTE15_WEST_ENTRANCE_1F",
       "dest_warp_id": "2"
-    },
-    {
-      "x": 0,
-      "y": 10,
-      "elevation": 0,
-      "dest_map": "MAP_FUCHSIA_CITY",
-      "dest_warp_id": "20"
-    },
-    {
-      "x": 0,
-      "y": 11,
-      "elevation": 0,
-      "dest_map": "MAP_FUCHSIA_CITY",
-      "dest_warp_id": "21"
-    },
-    {
-      "x": 0,
-      "y": 12,
-      "elevation": 0,
-      "dest_map": "MAP_FUCHSIA_CITY",
-      "dest_warp_id": "22"
-    },
-    {
-      "x": 71,
-      "y": 7,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE14",
-      "dest_warp_id": "4"
-    },
-    {
-      "x": 71,
-      "y": 8,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE14",
-      "dest_warp_id": "5"
-    },
-    {
-      "x": 71,
-      "y": 9,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE14",
-      "dest_warp_id": "6"
-    },
-    {
-      "x": 71,
-      "y": 10,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE14",
-      "dest_warp_id": "7"
-    },
-    {
-      "x": 71,
-      "y": 11,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE14",
-      "dest_warp_id": "8"
-    },
-    {
-      "x": 71,
-      "y": 12,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE14",
-      "dest_warp_id": "9"
-    },
-    {
-      "x": 71,
-      "y": 13,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE14",
-      "dest_warp_id": "10"
-    },
-    {
-      "x": 71,
-      "y": 14,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE14",
-      "dest_warp_id": "11"
-    },
-    {
-      "x": 71,
-      "y": 15,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE14",
-      "dest_warp_id": "12"
-    },
-    {
-      "x": 71,
-      "y": 16,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE14",
-      "dest_warp_id": "13"
     }
   ],
   "coord_events": [],

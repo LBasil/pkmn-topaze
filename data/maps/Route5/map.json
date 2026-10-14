@@ -13,7 +13,13 @@
   "show_map_name": true,
   "floor_number": 0,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": [
+    {
+      "map": "MAP_CERULEAN_CITY",
+      "offset": 0,
+      "direction": "up"
+    }
+  ],
   "object_events": [],
   "warp_events": [
     {
@@ -43,34 +49,6 @@
       "elevation": 3,
       "dest_map": "MAP_ROUTE5_SOUTH_ENTRANCE",
       "dest_warp_id": "1"
-    },
-    {
-      "x": 22,
-      "y": 0,
-      "elevation": 0,
-      "dest_map": "MAP_CERULEAN_CITY",
-      "dest_warp_id": "23"
-    },
-    {
-      "x": 23,
-      "y": 0,
-      "elevation": 0,
-      "dest_map": "MAP_CERULEAN_CITY",
-      "dest_warp_id": "24"
-    },
-    {
-      "x": 24,
-      "y": 0,
-      "elevation": 0,
-      "dest_map": "MAP_CERULEAN_CITY",
-      "dest_warp_id": "25"
-    },
-    {
-      "x": 25,
-      "y": 0,
-      "elevation": 0,
-      "dest_map": "MAP_CERULEAN_CITY",
-      "dest_warp_id": "26"
     }
   ],
   "coord_events": [],
