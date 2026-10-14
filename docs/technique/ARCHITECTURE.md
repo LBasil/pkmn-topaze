@@ -386,3 +386,6 @@ Généré par `league_elders.py` puis `league_elders2.py` (non rejouables). `VAR
 - `docs/topaze/viridian_connection.py` : Route 1 reçoit 5 lignes en haut (tout +5 en y), Jadeville ses lignes 35-39 en forêt ; plus de warps. Les bandes vues à travers la connexion n'utilisent que des métatuiles PRIMAIRES : nouveaux métatuiles primaires 512-516 (arbres 2x2 + herbe) ajoutés à `general_gradient` et `general_opal`, avec la palette primaire 6 (bleu-vert de Gradient / palette d'arbres d'Opal) pour garder la couleur de la zone.
 - `TopazeTintGrassSprite` (field_effect_helpers.c) : le sprite d'herbe haute prend les couleurs (par rang de luminosité) de la palette du sol de la case → plus d'herbe verte dans les zones rouge/violette/bleue.
 - École : le rival entre/sort par la colonne x=3 (il traversait les bancs), son objet démarre sur le paillasson (4,7).
+
+### Palette Route 1 / Viridian (rouge -> violet -> bleu nuit)
+Plus aucun vert : les palettes teal/vertes (gradient_road 08/11, general_opal 02, rustboro_opal 08) sont tournees en teinte vers le bleu-violet; la palette primaire 6 (arbres/herbe de la bande de raccord) est copiee depuis ces memes palettes. PalletTown (25,38-39) : demi-arbres orphelins corriges.
