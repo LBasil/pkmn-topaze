@@ -2,6 +2,7 @@
 #include "gflib.h"
 #include "link.h"
 #include "topaze_options.h"
+#include "battle_main.h"
 #include "link_rfu.h"
 #include "load_save.h"
 #include "m4a.h"
@@ -207,8 +208,12 @@ void AgbMain()
             {
                 u8 extra;
 
+                // Only in the overworld and in battle: menu/screen initialisation code (summary screen,
+                // party menu, bag...) expects one call per VBlank and freezes otherwise.
                 for (extra = 0; extra < TOPAZE_OPT_SPEED(); extra++)
                 {
+                    if (!TopazeIsFieldCallback() && gMain.callback2 != BattleMainCB2)
+                        break;
                     ReadKeys();
                     UpdateLinkAndCallCallbacks();
                 }

@@ -1488,6 +1488,11 @@ static void OverworldBasic(void)
 }
 
 // This CB2 is used when starting
+bool8 TopazeIsFieldCallback(void)
+{
+    return gMain.callback2 == CB2_Overworld || gMain.callback2 == CB2_OverworldBasic;
+}
+
 void CB2_OverworldBasic(void)
 {
     OverworldBasic();
