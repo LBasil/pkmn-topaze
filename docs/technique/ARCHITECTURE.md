@@ -408,3 +408,11 @@ Viridian +4 lignes en haut (bande de foret en metatiles primaires, ouverture x20
 - Non convertis (pas de retour symetrique) : Route3 D<->Pewter G, Route3 D -> Route4, Route13 -> Route14 (couvert par la connexion), coins Cinnabar/Route20. Cartes orphelines (Route16 gate, Diglett Nord) : dest_warp_id ramenes a 0 pour rester valides.
 - Les adresses IWRAM changent quand on ajoute des variables statiques : `/tmp/gx/tz.py` lit maintenant les symboles dans `dbg2.map`.
 - Test : `/tmp/gx/cross.py` teleporte au bord de chaque connexion terrestre et traverse (toutes OK ; routes maritimes non testees car il faut Surf).
+
+## Options de confort (menu OPTION, liste defilante)
+- Stockage : `gSaveBlock2Ptr->optionsTopaze` (u16 a l'offset 0x16, ancien padding, defaut 0 = comportement vanilla) ; macros dans `include/topaze_options.h` : HP BAR (bits 0-1 : normal/fast/instant), EXP BAR (bits 2-3), LEVEL-UPS (bit 4 : un par un / cumules), GAME SPEED (bits 5-6 : x1..x4).
+- `src/option_menu.c` : 11 lignes, 7 visibles (`sOptionMenuTop`, `ScrollOptionMenuToCursor`, redraw complet = retour 5 de `OptionMenu_ProcessInput`).
+- Barres : `MoveBattleBar` (battle_interface.c) boucle `CalcNewBarValue` 1 / 4 / 1000 fois par frame.
+- Niveaux cumules : `TopazeApplyLevelUpExp` (battle_controller_player.c) applique toute l'XP d'un coup (plafond niv. 100), un seul "grew to LV. N" ; `gTopazeBattleLvFrom` -> `gTopazeLearnFrom` fait apprendre dans `MonTryLearningNewMove` (pokemon.c) les capacites de tous les niveaux sautes.
+- Vitesse de jeu : `AgbMain` (main.c) rejoue ReadKeys + callbacks N fois par frame (hors liaison) ; la musique garde son tempo.
+- Piege test : ajouter des variables statiques decale les adresses IWRAM ; `/tmp/gx/tz.py` les lit dans `dbg2.map`. `mkdbg2.py` fait `git checkout` de battle_script_commands.c/new_game.c : committer avant. `EXPHACK=1` = test d'XP geante.
