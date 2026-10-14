@@ -1536,8 +1536,8 @@ static void SpriteCB_TopazeTypeBox(struct Sprite *sprite)
         sTopazeTypeBoxIds[battler][idx] = 0;
         return;
     }
-    sprite->x = hb->x + hb->x2 + (sprite->data[1] ? 17 : -17);
-    sprite->y = hb->y + hb->y2 + 21;
+    sprite->x = hb->x + hb->x2 + 84;
+    sprite->y = hb->y + hb->y2 + (sprite->data[1] ? 9 : -5);
     sprite->invisible = hb->invisible;
 }
 

@@ -306,12 +306,25 @@ static const s8 sPlayerThrowXTranslation[] = { -32, -16, -16, -32, -32, 0, 0, 0 
 // Topaze QOL : memorise si l'espece etait deja vue AVANT ce combat (types / efficacite affiches seulement dans ce cas).
 EWRAM_DATA u8 gTopazeSeenBefore[MAX_BATTLERS_COUNT] = {0};
 
+// Topaze: snapshot of the Pokedex "seen" flags taken when the battle starts, so that meeting a species
+// during this very battle never counts as "already seen" (TopazeSetSeen can run several times per battler).
+static u8 sTopazeDexSeenSnapshot[DEX_FLAGS_NO];
+
+bool8 TopazeSpeciesSeenBefore(u16 species)
+{
+    u16 dex = SpeciesToNationalPokedexNum(species);
+
+    if (dex == 0 || dex > DEX_FLAGS_NO * 8)
+        return FALSE;
+    return (sTopazeDexSeenSnapshot[(dex - 1) / 8] >> ((dex - 1) % 8)) & 1;
+}
+
 void TopazeSetSeen(u8 battler)
 {
     u16 dex = SpeciesToNationalPokedexNum(gBattleMons[battler].species);
 
     if (GetBattlerSide(battler) == B_SIDE_OPPONENT)
-        gTopazeSeenBefore[battler] = GetSetPokedexFlag(dex, FLAG_GET_SEEN);
+        gTopazeSeenBefore[battler] = TopazeSpeciesSeenBefore(gBattleMons[battler].species);
     HandleSetPokedexFlag(dex, FLAG_SET_SEEN, gBattleMons[battler].personality);
     if (GetBattlerSide(battler) == B_SIDE_OPPONENT)
         TopazeRefreshTypeBoxes(battler);
@@ -2244,6 +2257,7 @@ static void BattleStartClearSetData(void)
 
     for (i = 0; i < MAX_BATTLERS_COUNT; i++)
         gTopazeSeenBefore[i] = 0;
+    memcpy(sTopazeDexSeenSnapshot, gSaveBlock2Ptr->pokedex.seen, DEX_FLAGS_NO);
     TurnValuesCleanUp(FALSE);
     SpecialStatusesClear();
 

@@ -43,6 +43,7 @@ struct MultiBattlePokemonTx
 
 extern u8 gTopazeSeenBefore[];
 void TopazeSetSeen(u8 battler);
+bool8 TopazeSpeciesSeenBefore(u16 species);
 void TopazeRefreshTypeBoxes(u8 battler);
 
 // defines for the 'DoBounceEffect' function
