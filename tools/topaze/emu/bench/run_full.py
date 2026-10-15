@@ -310,6 +310,11 @@ class Auto(T):
             if 'CutTree' not in o['script'] or (o['x'], o['y']) not in s.live_objs(): continue
             if s.talk_obj((o['x'], o['y']), 6): n += 1
         return n
+    def quiz_signs(s, cells, n=30):
+        """Arene a quiz : se place devant chaque case-panneau (BG event) et repond (A = OUI) ; une mauvaise reponse declenche le dresseur."""
+        for c in cells:
+            if not s.approach(c): log('QUIZ inaccessible', c); continue
+            s._facing = (0, -1); s.face('UP'); s.mash(n); s.scene(900)
     def report(s, *items):
         out = []
         for i in items:
@@ -501,7 +506,18 @@ def stage_chron_in(t):
     assert t.go('CinnabarIsland', banned=('Route19', 'Route20', 'FuchsiaCity')), 'Chrondrolia inaccessible (Surf ?)'
     t.report('FLAG_CHRONDROLIA_RAID_STARTED')
 
-STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4), ('ameth', stage_ameth), ('gym5', stage_gym5), ('hema_in', stage_hema_in), ('hema_tower', stage_hema_tower), ('gym6', stage_gym6), ('chron_in', stage_chron_in)]
+def stage_chron_key(t):
+    assert t.go('CinnabarIsland', banned=('Route19', 'Route20', 'FuchsiaCity')), 'Chrondrolia inaccessible'
+    assert t.go('PokemonMansion_B1F', banned=('Route19', 'Route20')), 'manoir B1F inaccessible'
+    t.talk_script('SecretKey', 8); t.report('FLAG_HIDE_POKEMON_MANSION_B1F_SECRET_KEY')
+
+def stage_gym7(t):
+    assert t.go('CinnabarIsland_Gym'), 'arene 7 inaccessible'
+    t.quiz_signs([(22, 10), (15, 2), (13, 10), (13, 17), (1, 18), (1, 10)])
+    t.report(*['FLAG_CINNABAR_GYM_QUIZ_%d' % i for i in range(1, 7)])
+    badge_gym(t, 'CinnabarIsland_Gym', 'Blaine', 'FLAG_BADGE07_GET')
+
+STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4), ('ameth', stage_ameth), ('gym5', stage_gym5), ('hema_in', stage_hema_in), ('hema_tower', stage_hema_tower), ('gym6', stage_gym6), ('chron_in', stage_chron_in), ('chron_key', stage_chron_key), ('gym7', stage_gym7)]
 
 if __name__ == '__main__':
     # usage : run_full.py all | run_full.py <etape> [<etape> ...]   (une etape isolee repart de la sauvegarde de la precedente)

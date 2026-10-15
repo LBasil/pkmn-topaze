@@ -122,10 +122,13 @@ class T:
         """Si le pas `d` entre dans l'eau depuis la terre : lance SURF (face a l'eau, A, OUI). True si on est maintenant sur l'eau."""
         dx, dy = {'UP': (0, -1), 'DOWN': (0, 1), 'LEFT': (-1, 0), 'RIGHT': (1, 0)}[d]; n = (cur[0] + dx, cur[1] + dy)
         if s.surfing() or (nav.attr(*n) & 0x1ff) not in R.WATER or (nav.attr(*cur) & 0x1ff) in R.WATER: return False
-        for _ in range(3):
-            s.e.run(2, KEYS[d]); s.e.run(10, 0); s.press('A', 4, 40); s.press('A', 4, 40)
-            for _ in range(6): s.e.run(30, 0)
+        s.e.run(2, KEYS[d]); s.e.run(10, 0)
+        for _ in range(10):      # A jusqu'a la question (texte lent), puis A = OUI
+            s.press('A', 4, 50)
             if s.surfing(): break
+        for _ in range(8):
+            if s.surfing() and s.idle(): break
+            s.e.run(30, 0)
         s.e.run(20, 0); return s.surfing()
     def walk_to(s, goal, name=None, tries=200):
         """Marche vers goal (BFS qui connait les cases-flèches, objets lus en direct) ; True / False / 'warped'."""
