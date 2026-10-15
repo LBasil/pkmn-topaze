@@ -6310,9 +6310,9 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderSabrina[] = {
     {
         .iv = 90,
         .lvl = 43,
-        .species = SPECIES_HAUNTER,
-        .heldItem = ITEM_SPELL_TAG,
-        .moves = {MOVE_SHADOW_BALL, MOVE_CRUNCH, MOVE_HYPNOSIS, MOVE_DREAM_EATER},
+        .species = SPECIES_HYPNO,
+        .heldItem = ITEM_BLACK_GLASSES,
+        .moves = {MOVE_CRUNCH, MOVE_PSYCHIC, MOVE_HYPNOSIS, MOVE_DREAM_EATER},
     },
     {
         .iv = 90,
