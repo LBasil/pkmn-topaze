@@ -27,6 +27,7 @@
   #status { color:var(--dim); margin-left:auto; }
   .warn { color:#ff8a65; } .hint { color:var(--dim); font-size:12px; margin:4px 0; }
   .grp button { margin-right:2px; }
+  kbd { background:#3a3f4b; border-radius:3px; padding:0 4px; font-size:11px; color:var(--dim); }
 </style>
 </head>
 <body>
@@ -36,9 +37,11 @@
   <span class="grp">
     Zoom <select id="zoom"><option>1</option><option selected>2</option><option>3</option><option>4</option></select>
   </span>
-  <label><input type="checkbox" id="cCol" checked> collisions</label>
-  <label><input type="checkbox" id="cEv" checked> événements</label>
-  <label><input type="checkbox" id="cGrid"> grille</label>
+  <span class="grp" title="Afficher / masquer (raccourcis : C, E, G)">Afficher :
+    <label><input type="checkbox" id="cCol"> collisions <kbd>C</kbd></label>
+    <label><input type="checkbox" id="cEv" checked> événements <kbd>E</kbd></label>
+    <label><input type="checkbox" id="cGrid"> grille <kbd>G</kbd></label>
+  </span>
   <button id="undo">↶ Annuler</button><button id="redo">↷ Rétablir</button>
   <button id="save" class="save">Enregistrer (Ctrl+S)</button>
   <span id="status"></span>
@@ -146,7 +149,7 @@ const cv=$('#map'), ctx=cv.getContext('2d');
 function redraw(){
   if(!M) return; const z=Z(); cv.width=M.w*T*z; cv.height=M.h*T*z; ctx.imageSmoothingEnabled=false; ctx.scale(z,z);
   for(let y=0;y<M.h;y++)for(let x=0;x<M.w;x++){ const id=blocks[y*M.w+x]&0x3ff; ctx.drawImage(sheet,(id%32)*T,Math.floor(id/32)*T,T,T,x*T,y*T,T,T); }
-  if($('#cCol').checked) for(let y=0;y<M.h;y++)for(let x=0;x<M.w;x++){ const c=(blocks[y*M.w+x]>>10)&3;
+  if($('#cCol').checked||tool==='col') for(let y=0;y<M.h;y++)for(let x=0;x<M.w;x++){ const c=(blocks[y*M.w+x]>>10)&3;
     if(c){ ctx.fillStyle='rgba(255,40,40,.38)'; ctx.fillRect(x*T,y*T,T,T); ctx.strokeStyle='rgba(255,255,255,.55)'; ctx.beginPath(); ctx.moveTo(x*T+3,y*T+3); ctx.lineTo(x*T+T-3,y*T+T-3); ctx.moveTo(x*T+T-3,y*T+3); ctx.lineTo(x*T+3,y*T+T-3); ctx.stroke(); } }
   if($('#cGrid').checked){ ctx.strokeStyle='rgba(255,255,255,.18)'; ctx.lineWidth=1/z; ctx.beginPath(); for(let x=0;x<=M.w;x++){ctx.moveTo(x*T,0);ctx.lineTo(x*T,M.h*T);} for(let y=0;y<=M.h;y++){ctx.moveTo(0,y*T);ctx.lineTo(M.w*T,y*T);} ctx.stroke(); }
   if($('#cEv').checked) drawEvents();
@@ -195,7 +198,13 @@ cv.onmousemove=e=>{ const p=tc(e); hover=inMap(p)?p:null; $('#status').textConte
   redraw(); };
 window.addEventListener('mouseup',()=>{ painting=false; dragEv=null; });
 cv.oncontextmenu=e=>e.preventDefault(); cv.onmouseleave=()=>{hover=null;redraw();};
-for(const id of ['#zoom','#cCol','#cEv','#cGrid']) $(id).onchange=redraw;
+// affichages : mémorisés d'une session à l'autre, raccourcis C / E / G (collisions toujours visibles avec l'outil « Collision »)
+const DISP=['#cCol','#cEv','#cGrid'];
+try{ const d=JSON.parse(localStorage.getItem('topaze_display')||'null'); if(d) DISP.forEach((id,i)=>{ if(typeof d[i]==='boolean') $(id).checked=d[i]; }); }catch(e){}
+function saveDisp(){ try{ localStorage.setItem('topaze_display',JSON.stringify(DISP.map(id=>$(id).checked))); }catch(e){} }
+for(const id of ['#zoom',...DISP]) $(id).onchange=()=>{ saveDisp(); redraw(); };
+window.addEventListener('keydown',e=>{ if(e.ctrlKey||e.metaKey||e.altKey||['INPUT','SELECT','TEXTAREA'].includes(document.activeElement.tagName)) return;
+  const k={c:'#cCol',e:'#cEv',g:'#cGrid'}[e.key.toLowerCase()]; if(k){ $(k).checked=!$(k).checked; saveDisp(); redraw(); } });
 
 function addEvent(t,p){
   let e, kind;

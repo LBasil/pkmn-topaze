@@ -9,7 +9,7 @@ Le serveur lit et écrit directement `data/maps/<Carte>/map.json` et `data/layou
 
 ## Fonctions de la v1
 - Liste des cartes (filtre), palette de métatuiles avec les vrais graphismes (tampons rectangulaires par glisser), pinceau, remplissage, pipette (clic droit), annuler/rétablir (Ctrl+Z / Ctrl+Y), Ctrl+S.
-- Collisions et altitudes visibles (case rouge = bloquant) et éditables ; les tuiles peintes reçoivent la collision/altitude choisies à gauche (défaut 0 / 3).
+- Collisions et altitudes (case rouge = bloquant) : masquées par défaut, case « collisions » ou touche C ; toujours visibles avec l'outil Collision ; les tuiles peintes reçoivent la collision/altitude choisies à gauche (défaut 0 / 3).
 - Événements : PNJ (avec leur sprite), panneaux, warps, déclencheurs — création, déplacement par glisser, édition de tous les champs avec auto-complétion (graphics, mouvements, flags, vars, cartes), suppression. Portée de vue des dresseurs.
 - Avertissements : warp vers une carte inconnue, événement hors carte, graphics_id inconnu, layout partagé entre plusieurs cartes.
 
