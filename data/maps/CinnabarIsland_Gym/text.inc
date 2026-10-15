@@ -40,17 +40,17 @@ CinnabarIsland_Gym_Text_MakeSpaceForThis::
     .string "Make space for this, child!$"
 
 CinnabarIsland_Gym_Text_ErikIntro::
-    .string "Do you know how hot POKéMON fire\n"
-    .string "breath can get?$"
+    .string "Do you know how many volts a\n"
+    .string "PIKACHU can discharge?$"
 
 CinnabarIsland_Gym_Text_ErikDefeat::
     .string "Yow!\n"
-    .string "Hot, hot, hot!$"
+    .string "What a shock!$"
 
 CinnabarIsland_Gym_Text_ErikPostBattle::
-    .string "Fire, or to be more precise,\n"
-    .string "combustion…\p"
-    .string "…Oxygen in the air…\n"
+    .string "Electricity, or to be more precise,\n"
+    .string "static discharge…\p"
+    .string "…Electrons in the air…\n"
     .string "Blah, blah, blah, blah…$"
 
 CinnabarIsland_Gym_Text_QuinnIntro::
@@ -77,11 +77,11 @@ CinnabarIsland_Gym_Text_AveryPostBattle::
     .string "for you to understand.$"
 
 CinnabarIsland_Gym_Text_RamonIntro::
-    .string "I like using FIRE-type POKéMON.\n"
+    .string "I like using ELECTRIC-type POKéMON.\n"
     .string "I just do.$"
 
 CinnabarIsland_Gym_Text_RamonDefeat::
-    .string "Too hot to handle!$"
+    .string "Too hot to handle! Zzzt!$"
 
 CinnabarIsland_Gym_Text_RamonPostBattle::
     .string "I wish there were a thief POKéMON.\n"
@@ -97,8 +97,8 @@ CinnabarIsland_Gym_Text_DerekDefeat::
 CinnabarIsland_Gym_Text_DerekPostBattle::
     .string "Our LEADER, EDDIE, became lost\n"
     .string "in the mountains but good.\p"
-    .string "Night fell when a fiery bird\n"
-    .string "POKéMON appeared.\p"
+    .string "Night fell when a bird of lightning\n"
+    .string "appeared.\p"
     .string "Its light allowed EDDIE to find\n"
     .string "his way down safely.$"
 
@@ -108,23 +108,23 @@ CinnabarIsland_Gym_Text_DustyIntro::
 
 CinnabarIsland_Gym_Text_DustyDefeat::
     .string "Yowza!\n"
-    .string "Too hot!$"
+    .string "Too much current!$"
 
 CinnabarIsland_Gym_Text_DustyPostBattle::
-    .string "PONYTA, NINETALES…\n"
-    .string "Those are popular FIRE POKéMON.$"
+    .string "PIKACHU, MAGNETON…\n"
+    .string "Those are popular ELECTRIC POKéMON.$"
 
 CinnabarIsland_Gym_Text_ZacIntro::
-    .string "Fire is weak against H2O.$"
+    .string "Electric is weak against GROUND.$"
 
 CinnabarIsland_Gym_Text_ZacDefeat::
     .string "Oh!\n"
-    .string "Snuffed out!$"
+    .string "Grounded!$"
 
 CinnabarIsland_Gym_Text_ZacPostBattle::
-    .string "Water beats fire, of course.\p"
-    .string "But fire melts ice, so the FIRE\n"
-    .string "type beats ICE-type POKéMON.$"
+    .string "Ground beats electric, of course.\p"
+    .string "But electric zaps water, so the\n"
+    .string "ELECTRIC type beats WATER POKéMON.$"
 
 CinnabarIsland_Gym_Text_GymGuyAdvice::
     .string "Yo!\n"

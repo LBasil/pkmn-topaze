@@ -501,3 +501,9 @@ Nouveaux objets (slots libres 226/227, anciens `ITEM_0E2/0E3`) : `ITEM_LINK_CABL
 ## Résumé : marqueurs de nature (15-10)
 - Page Skills : un « + » (stat boostée) ou « - » (stat réduite) s'affiche à gauche de la valeur (`TopazePrintNatureMark`, src/pokemon_summary_screen.c ; `TopazeNatureStatMod` dans src/pokemon.c lit `sNatureStatTable`). Pas de couleur : la palette de la page n'a pas de rouge/bleu libres sans abîmer le décor.
 - Combat contre Héra testé à l'émulateur (5 Pokémon niv. 24-29, courbe 22 → 29 → 35 vers Sylvestre/Érika, aucun plantage). Oiseaux légendaires vérifiés : cachés avant la Ligue, visibles et rencontrables après (Électhor, Moltres, Artikodin).
+
+## Revue Ligue, Anciens et dresseurs (15-10)
+- **Lorelei (Anciens, `sParty_EliteFourLorelei2`)** : niveaux 31/32/33/35 hérités d'une équipe de champion → 65/65/66/67/69 ; la version 1 revient à 54/53/54/56/56. Bruno, Agatha, Lance et les 9 Anciens Johto/Hoenn (66-72) : cohérents, rien à changer ; Ligue-tournoi (50-67) : cohérente avec les nouveaux types.
+- **Arène de Héra (Apatia)** : Dwayne = Poissirène 22 + Rondoudou 24 ; Tucker = Mélofée 25 + Minidraco 26 ; Baily garde ses Électriques (il construit les verrous électriques de l'arène).
+- **Arène d'Eddie (Chrondrolia, Électrik)** : les 7 dresseurs étaient encore de Feu (reliquat de Blaine) → équipes Électriques (Pikachu/Raichu/Électrode/Magnéton/Élektek) et textes des dresseurs réécrits (électricité au lieu de feu).
+- Dresseurs ordinaires : ~100 mentions des 18 familles retypées le 15/10 (Rockets, scientifiques, Sylphe, Manoir, Route Victoire…) : cohérentes avec leurs classes, rien modifié. Seul point à surveiller : Taupiqueur Sol/Acier niv. 6-8 chez deux randonneurs de la Forêt de Jade (résiste à Normal/Insecte/Vol), jugé acceptable.
