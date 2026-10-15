@@ -2068,8 +2068,36 @@ bool8 BufferTMHMMoveName(void)
 void RunMassageCooldownStepCounter(void)
 {
     u16 count = VarGet(VAR_MASSAGE_COOLDOWN_STEP_COUNTER);
-    if (count < 500)
+    if (count < 300)
         VarSet(VAR_MASSAGE_COOLDOWN_STEP_COUNTER, count + 1);
+    count = VarGet(VAR_PETTING_COOLDOWN_STEP_COUNTER);
+    if (count < 300)
+        VarSet(VAR_PETTING_COOLDOWN_STEP_COUNTER, count + 1);
+}
+
+// Topaze: NPC friendship services. Whole-party petting, shared 300-step cooldown.
+bool8 TopazePettingReady(void)
+{
+    return VarGet(VAR_PETTING_COOLDOWN_STEP_COUNTER) >= 300;
+}
+
+void TopazePetParty(void)
+{
+    u8 i;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG) != SPECIES_NONE
+         && GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG) != SPECIES_EGG)
+        {
+            AdjustFriendship(&gPlayerParty[i], FRIENDSHIP_EVENT_MASSAGE);
+        }
+    }
+    VarSet(VAR_PETTING_COOLDOWN_STEP_COUNTER, 0);
+}
+
+void TopazeMassageOne(void)
+{
+    AdjustFriendship(&gPlayerParty[gSpecialVar_0x8004], FRIENDSHIP_EVENT_MASSAGE);
 }
 
 void DaisyMassageServices(void)

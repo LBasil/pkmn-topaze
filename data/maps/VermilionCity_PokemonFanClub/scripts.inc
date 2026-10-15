@@ -37,6 +37,21 @@ VermilionCity_PokemonFanClub_EventScript_NoRoomForBikeVoucher::
 VermilionCity_PokemonFanClub_EventScript_WorkerF::
 	lock
 	faceplayer
+	specialvar VAR_RESULT, TopazePettingReady
+	goto_if_eq VAR_RESULT, FALSE, VermilionCity_PokemonFanClub_EventScript_WorkerFNotReady
+	msgbox VermilionCity_PokemonFanClub_Text_PetOffer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, VermilionCity_PokemonFanClub_EventScript_WorkerFNotReady
+	closemessage
+	fadescreen FADE_TO_BLACK
+	playfanfare MUS_HEAL
+	waitfanfare
+	special TopazePetParty
+	fadescreen FADE_FROM_BLACK
+	msgbox VermilionCity_PokemonFanClub_Text_PetDone
+	release
+	end
+
+VermilionCity_PokemonFanClub_EventScript_WorkerFNotReady::
 	goto_if_set FLAG_SYS_GAME_CLEAR, VermilionCity_PokemonFanClub_EventScript_WorkerFGameClear
 	msgbox VermilionCity_PokemonFanClub_Text_ChairmanVeryVocalAboutPokemon
 	release

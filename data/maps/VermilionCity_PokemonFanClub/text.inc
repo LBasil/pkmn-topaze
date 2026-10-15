@@ -94,3 +94,12 @@ VermilionCity_PokemonFanClub_Text_ChairmanReallyAdoresHisMons::
     .string "POKéMON.\p"
     .string "But the person who is most liked by\n"
     .string "POKéMON is DAISY, I think.$"
+
+VermilionCity_PokemonFanClub_Text_PetOffer::
+    .string "We love POKéMON here!\p"
+    .string "Would you like us to pet and brush\n"
+    .string "your whole team? It's free!$"
+
+VermilionCity_PokemonFanClub_Text_PetDone::
+    .string "Your POKéMON look so happy!\n"
+    .string "Come back after a good walk!$"

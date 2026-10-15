@@ -693,7 +693,7 @@ static void UpdateHappinessStepCounter(void)
     int i;
 
     (*ptr)++;
-    (*ptr) %= 128;
+    (*ptr) %= 32; // Topaze: friendship every 32 steps (was 128)
     if (*ptr == 0)
     {
         struct Pokemon *mon = gPlayerParty;

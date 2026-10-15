@@ -3908,6 +3908,22 @@ static void FreeResetData_ReturnToOvOrDoEvolutions(void)
 {
     if (!gPaletteFade.active)
     {
+        if (gBattleOutcome == B_OUTCOME_WON && !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_BATTLE_TOWER | BATTLE_TYPE_TRAINER_TOWER | BATTLE_TYPE_SAFARI)))
+        {
+            // Topaze: winning a battle makes the whole team a little fonder of you (x2 against trainers)
+            u8 i, n = (gBattleTypeFlags & BATTLE_TYPE_TRAINER) ? 2 : 1;
+
+            for (i = 0; i < PARTY_SIZE; i++)
+            {
+                if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES) != SPECIES_NONE && GetMonData(&gPlayerParty[i], MON_DATA_HP) != 0)
+                {
+                    u8 k;
+
+                    for (k = 0; k < n; k++)
+                        AdjustFriendship(&gPlayerParty[i], FRIENDSHIP_EVENT_BATTLE_WIN);
+                }
+            }
+        }
         ResetSpriteData();
         if (gLeveledUpInBattle == 0 || gBattleOutcome != B_OUTCOME_WON)
             gBattleMainFunc = ReturnFromBattleToOverworld;

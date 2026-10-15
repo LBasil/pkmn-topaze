@@ -507,3 +507,10 @@ Nouveaux objets (slots libres 226/227, anciens `ITEM_0E2/0E3`) : `ITEM_LINK_CABL
 - **Arène de Héra (Apatia)** : Dwayne = Poissirène 22 + Rondoudou 24 ; Tucker = Mélofée 25 + Minidraco 26 ; Baily garde ses Électriques (il construit les verrous électriques de l'arène).
 - **Arène d'Eddie (Chrondrolia, Électrik)** : les 7 dresseurs étaient encore de Feu (reliquat de Blaine) → équipes Électriques (Pikachu/Raichu/Électrode/Magnéton/Élektek) et textes des dresseurs réécrits (électricité au lieu de feu).
 - Dresseurs ordinaires : ~100 mentions des 18 familles retypées le 15/10 (Rockets, scientifiques, Sylphe, Manoir, Route Victoire…) : cohérentes avec leurs classes, rien modifié. Seul point à surveiller : Taupiqueur Sol/Acier niv. 6-8 chez deux randonneurs de la Forêt de Jade (résiste à Normal/Insecte/Vol), jugé acceptable.
+
+
+## Bonheur (friendship) — gains faciles + PNJ
+
+- `sFriendshipEventDeltas` (src/pokemon.c) : niveau +6/+4/+3, marche +2/+2/+1 (plus de jet 50 %), massage +12, nouvel evenement `FRIENDSHIP_EVENT_BATTLE_WIN` (+2/+1/+1, x2 en combat de dresseur) applique a toute l'equipe vivante a la fin d'un combat gagne (`FreeResetData_ReturnToOvOrDoEvolutions`, src/battle_main.c).
+- Marche : `UpdateHappinessStepCounter` toutes les 32 pas (au lieu de 128).
+- PNJ : Daisy (Bourg Palette, cooldown 300 pas, 1 Pokemon), Hotel de Celadopole (spa payant 300 P, 1 Pokemon, `TopazeMassageOne`), Fan Club de Carmin sur Mer (gratuit, toute l'equipe, `TopazePetParty`, cooldown partage 300 pas via `VAR_PETTING_COOLDOWN_STEP_COUNTER` = VAR_0x402A, incremente dans `RunMassageCooldownStepCounter`).

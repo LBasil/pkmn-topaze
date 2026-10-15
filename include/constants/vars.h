@@ -88,6 +88,7 @@
 #define VAR_0x4029                         0x4029
 #define VAR_GRENALUX_OPENING               VAR_0x4029 // Topaze: 1 = ranch scene pending, 2 = done
 #define VAR_0x402A                         0x402A
+#define VAR_PETTING_COOLDOWN_STEP_COUNTER VAR_0x402A // Topaze: steps since last NPC party petting (cap 300)
 #define VAR_0x402B                         0x402B
 #define VAR_0x402C                         0x402C
 #define VAR_0x402D                         0x402D

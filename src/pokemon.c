@@ -1618,16 +1618,17 @@ static const u8 sStatsToRaise[] =
 // 0-99, 100-199, 200+
 static const s8 sFriendshipEventDeltas[][3] = 
 {
-    [FRIENDSHIP_EVENT_GROW_LEVEL]           = { 5,  3,  2 },
+    [FRIENDSHIP_EVENT_GROW_LEVEL]           = { 6,  4,  3 },
     [FRIENDSHIP_EVENT_VITAMIN]              = { 5,  3,  2 },
     [FRIENDSHIP_EVENT_BATTLE_ITEM]          = { 1,  1,  0 },
     [FRIENDSHIP_EVENT_LEAGUE_BATTLE]        = { 3,  2,  1 },
     [FRIENDSHIP_EVENT_LEARN_TMHM]           = { 1,  1,  0 },
-    [FRIENDSHIP_EVENT_WALKING]              = { 1,  1,  1 },
-    [FRIENDSHIP_EVENT_MASSAGE]              = { 3,  3,  3 },
+    [FRIENDSHIP_EVENT_WALKING]              = { 2,  2,  1 },
+    [FRIENDSHIP_EVENT_MASSAGE]              = { 12, 12, 12 },
     [FRIENDSHIP_EVENT_FAINT_SMALL]          = {-1, -1, -1 },
     [FRIENDSHIP_EVENT_FAINT_OUTSIDE_BATTLE] = {-5, -5, -10 },
     [FRIENDSHIP_EVENT_FAINT_LARGE]          = {-5, -5, -10 },
+    [FRIENDSHIP_EVENT_BATTLE_WIN]           = { 2,  1,  1 },
 };
 
 #define HM_MOVES_END 0xFFFF
@@ -5505,12 +5506,7 @@ void AdjustFriendship(struct Pokemon *mon, u8 event)
         if (friendship >= 200)
             friendshipLevel++;
 
-        if (event == FRIENDSHIP_EVENT_WALKING)
-        {
-            // 50% chance every 128 steps
-            if (Random() & 1)
-                return;
-        }
+        // Topaze: walking friendship is no longer a 50% roll (and comes every 32 steps, see field_control_avatar.c)
         if (event == FRIENDSHIP_EVENT_LEAGUE_BATTLE)
         {
             // Only if it's a trainer battle with league progression significance

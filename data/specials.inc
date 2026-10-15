@@ -417,6 +417,9 @@ gSpecials::
 	def_special ShowPokemonJumpRecords
 	def_special BufferTMHMMoveName
 	def_special DaisyMassageServices
+	def_special TopazePettingReady
+	def_special TopazePetParty
+	def_special TopazeMassageOne
 	def_special HelpSystem_Disable
 	def_special HelpSystem_Enable
 	def_special SetPostgameFlags
