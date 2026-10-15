@@ -11,3 +11,10 @@ Adresses utiles (ROM de debug) : gMain 0x030030f0 (callback2 +4, inBattle +0x439
 - `harness.c` : `desiredVideoDimensions` remplacé par `baseVideoSize` (mGBA récent). Compiler vers `/tmp/gx/harness` (voir `../README.md`).
 - Nouveaux scénarios : `volcan_scene_test.py` (B4F : Kronos, la pierre était déjà partie), `lair_finale_scene_test.py` (le pendentif attire l'ombre vers Red), `league_rival_name_test.py` (rival renommé affiché dans le combat de Ligue).
 
+
+## Autopilote `run_full.py` (15/10) : une vraie partie, du début aux crédits
+`python3 run_full.py [etape ...]` (cwd = racine du dépôt, `PYTHONDONTWRITEBYTECODE=1`, copier `run_full.py tz.py spin.py` dans /tmp/gx). Boot sur la chambre (ROM `/tmp/gx/dbg2.gba`, mode dieu), puis enchaîne les étapes `STAGES` (ranch, école, labo, quête Route 1, Opanihrum, arènes 1-8, cottage, S.S. Anne, tour, Bourg Quartz, Amethiolite, Hematown, Chrondrolia + raid, volcan Écume, repaire de la Route Victoire…). Chaque étape part de l'état sauvegardé de la précédente (`/tmp/gx/st/<etape>.ss`) : `python3 run_full.py gym8` reprend après `seafoam`.
+- Graphe statique carte/composante accessible + warps ; `go(carte)` marche jusqu'à la carte voulue (portes, flèches, téléporteurs internes, Surf, arbres à couper, rochers Force non gérés), lit la grille VIVANTE (RAM) à chaque carte, laisse jouer les scènes et les combats (`scene()`), et sauvegarde `hopfail_*` / `noroute_*` quand un passage échoue (à rejouer avec `Auto.resume`).
+- Règles moteur modélisées : altitude (0 et 15 libres), corniches, case-flèche + arrêt 0x58, portes à tapis, ligne de vue des dresseurs, Surf (embarquement libre, **débarquement seulement sur altitude 3** = `CanStopSurfing`), arènes à quiz (`quiz_signs`), ferry (`sail`).
+- Piège : les objets hors de portée de la caméra ne sont pas dans `live_objs()` ; `plan_objs()` ajoute les objets immobiles du JSON, sinon le plan change selon la position et le joueur oscille (arène de la Fonderie).
+- Ne jamais lancer `pkill -f run_full` dans la même commande shell (le motif tue le shell) ; lancer avec `setsid nohup … &` et lire `run.out` (sortie bufferisée : `python3 -u`).

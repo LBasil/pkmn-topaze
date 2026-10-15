@@ -29,7 +29,10 @@ class Nav:
     def step_ok(self, c, n):
         """Regle d'altitude du moteur : on ne passe pas d'un niveau a un autre (sauf 0 et 15, qui relient tout)."""
         ea = self.g[c[1] * self.w + c[0]] >> 12; eb = self.g[n[1] * self.w + n[0]] >> 12
-        if SURF and ((self.attr(*c) & 0x1ff) in WATER or (self.attr(*n) & 0x1ff) in WATER): return True      # rive <-> eau : le moteur gere l'embarquement
+        wc = (self.attr(*c) & 0x1ff) in WATER; wn = (self.attr(*n) & 0x1ff) in WATER
+        if SURF and wn: return True      # embarquement et navigation : le script de Surf pose le joueur sur l'eau sans test d'altitude
+        # debarquement (eau -> terre) : CanStopSurfing du moteur = altitude 3 exactement ; sinon collision normale (ex. volcan Ecume B4F : lac a 1, terre a 4 = pas de sortie)
+        if SURF and wc and eb == 3: return True
         return ea in (0, 15) or eb in (0, 15) or ea == eb
     def path(self, a, b):
         prev = {a: None}; q = collections.deque([a])

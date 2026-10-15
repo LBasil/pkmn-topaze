@@ -110,6 +110,9 @@ class T:
             if o[0] & 1 and not (o[2] & 1) and not (o[1] >> 5) & 1:   # actif, pas le joueur, visible
                 x, y = struct.unpack_from('<hh', o, 0x10); out.add((x - 7, y - 7))
         return out
+    def plan_objs(s):
+        """Objets pris en compte par le planificateur (par defaut : les objets vivants)."""
+        return s.live_objs()
     def settle(s):
         last = None
         for _ in range(40):
@@ -135,7 +138,7 @@ class T:
         from spin import spin_bfs
         nav = R.Nav(name or s.sync()); s.live_grid(nav); stuck = 0
         for _ in range(tries):
-            nav.objs = s.live_objs()
+            nav.objs = s.plan_objs()
             p = s.pos(); cur = (p[2], p[3])
             if cur == goal: return True
             dirs = spin_bfs(nav, cur, goal)

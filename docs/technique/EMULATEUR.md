@@ -19,3 +19,6 @@ Outils dans `tools/topaze/emu/` (harnais C `harness.c` sur libmgba, pilote Pytho
 
 ## Scénarios scriptés (13/10)
 Bibliothèque `tz.py` (classe `T` : boot via la ROM de debug avec équipe forte, drapeaux/variables préchargés via `gTopazeFlags` / `gTopazeVars` / `gTopazeGod`, marche BFS avec dresseurs, `spin_bfs` pour les cases-flèches) : non versionnée pour l'instant ; résultats dans TEST_PASSE_13_10.md. Piège : `pos()` reste figée pendant un combat ; la boîte de dialogue d'un dresseur déjà battu se rouvre si on matraque A à côté de lui.
+
+## Autopilote de partie complète (15/10)
+`tools/topaze/emu/bench/run_full.py` joue une vraie partie en émulateur (mode dieu, ROM de debug `mkdbg2.py`) : graphe carte/composantes + warps, marche BFS (altitude, corniches, flèches, téléporteurs, Surf), scènes, combats, quiz d'arène. Détails et pièges : `tools/topaze/emu/bench/README.md`. Résultats : `docs/technique/RUN_COMPLET_15_10.md`.

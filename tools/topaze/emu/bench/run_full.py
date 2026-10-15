@@ -125,6 +125,14 @@ class Auto(T):
         t = cls.__new__(cls); t.e = Emu(rom); t.shots = []
         r = t.e.cmd('ls %s/%s.ss' % (ST, name)); assert r == 'ok', 'etat introuvable ' + name
         t.e.run(10, 0); t.sync(); return t
+    def plan_objs(s):
+        """Objets vivants + objets immobiles de la carte hors de portee de la camera (sinon le plan change selon la position : oscillations)."""
+        live = s.live_objs(); out = set(live)
+        for o in mj(s.sync())['object_events']:
+            if 'FACE' not in o['movement_type'] and 'NONE' not in o['movement_type'] and 'LOOK' not in o['movement_type']: continue
+            if o['flag'] not in ('0', 0) and s.getflag(o['flag']): continue
+            out.add((o['x'], o['y']))
+        return out
     def nav(s, name=None):
         """Nav de la carte courante avec la grille VIVANTE (RAM) et les objets vivants."""
         n = R.Nav(name or s.sync()); s.live_grid(n); return n
@@ -548,7 +556,16 @@ def stage_seafoam(t):
     t.report('FLAG_SEAFOAM_BOSS_DONE')
     assert t.getflag('FLAG_SEAFOAM_BOSS_DONE'), 'Kronos (volcan B4F) non battu'
 
-STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4), ('ameth', stage_ameth), ('gym5', stage_gym5), ('hema_in', stage_hema_in), ('hema_tower', stage_hema_tower), ('gym6', stage_gym6), ('chron_in', stage_chron_in), ('chron_key', stage_chron_key), ('gym7', stage_gym7), ('chron_raid', stage_chron_raid), ('seafoam', stage_seafoam)]
+def stage_gym8(t): badge_gym(t, 'ViridianCity_Gym', 'Giovanni', 'FLAG_BADGE08_GET')
+
+def stage_victory(t):
+    assert t.go('VictoryRoadLair_3F'), 'repaire (3F) inaccessible'
+    t.report('FLAG_VR_RED_MET', 'FLAG_VR_BOSS_DONE'); t.scene(maxn=900, shot='lair3')
+    if not t.getflag('FLAG_VR_BOSS_DONE'): t.hold('UP', 40); t.scene(maxn=1200, shot='lair3b')
+    t.report('FLAG_VR_BOSS_DONE')
+    assert t.getflag('FLAG_VR_BOSS_DONE'), 'scene finale du repaire non jouee'
+
+STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4), ('ameth', stage_ameth), ('gym5', stage_gym5), ('hema_in', stage_hema_in), ('hema_tower', stage_hema_tower), ('gym6', stage_gym6), ('chron_in', stage_chron_in), ('chron_key', stage_chron_key), ('gym7', stage_gym7), ('chron_raid', stage_chron_raid), ('seafoam', stage_seafoam), ('gym8', stage_gym8), ('victory', stage_victory)]
 
 if __name__ == '__main__':
     # usage : run_full.py all | run_full.py <etape> [<etape> ...]   (une etape isolee repart de la sauvegarde de la precedente)
