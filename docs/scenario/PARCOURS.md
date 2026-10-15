@@ -134,3 +134,7 @@ Les 7 îles vanilla existent déjà dans la ROM. Décision V1 : on ne réécrit 
 - **Fins 2 et 3** : à traiter tout à la fin de la finalisation de la trame principale.
 - **Temps déréglé = météo extrême permanente** dans le jeu principal (neige continue, éclairs, pluie, chaleur…). C'est ce qui a attiré les légendaires et explique le désordre du post-game. À poser sur les routes (champ `weather` des map.json) quand on le décidera.
 - **Rival** : nom par défaut ZEPHYR, renommable par le joueur. « TERRY » n'est que le nom interne vanilla de `src/data/trainers.h` (remplacé en jeu par le nom du rival) ; il n'existe pas dans le jeu.
+- **Volcan Écume (15/10, fait et joué en émulateur)** : le joueur, Gold et Silver gagnent (Gold/Silver ne sont plus écrasés ; Kronos est battu), mais le patron avait déjà pris la pierre avant leur arrivée : l'île n'était qu'un rideau pour leur faire perdre du temps (« Time is the one thing nobody gets back »). Le dernier QG reste annoncé près de la Ligue.
+- **Repaire de la Route Victoire (15/10, fait et joué)** : le pendentif du joueur s'illumine, « les pierres s'appellent entre elles » : sans le savoir, le joueur mène l'ombre du patron jusqu'à Red, qui perd l'Opale à cause de lui. Red ne l'accuse pas (regard sur le pendentif, hochement lent).
+- **Rival renommé (15/10)** : `TRAINER_LEAGUE_ZEPHYR` utilise désormais le nom choisi par le joueur (combat et quest log), comme les autres combats de rival.
+

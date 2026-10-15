@@ -12,7 +12,7 @@ int main(int argc, char** argv) {
     static struct mLogger lg = { .log = nolog }; mLogSetDefaultLogger(&lg);
     struct mCore* core = mCoreFind(argv[1]);
     core->init(core); mCoreInitConfig(core, NULL);
-    unsigned w, h; core->desiredVideoDimensions(core, &w, &h);
+    unsigned w, h; core->baseVideoSize(core, &w, &h);
     uint32_t* buf = malloc(w * h * 4); core->setVideoBuffer(core, buf, w);
     mCoreLoadFile(core, argv[1]); core->reset(core);
     uint32_t pa[16], pv[16]; int np = 0; char line[512];

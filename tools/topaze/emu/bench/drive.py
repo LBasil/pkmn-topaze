@@ -13,11 +13,11 @@ class Emu:
         self.cmd('shot /tmp/gx/_s.ppm'); im = Image.open('/tmp/gx/_s.ppm'); im.save(f)
     def u32(self, a): return struct.unpack('<I', self.peek(a, 4))[0]
     def pos(self):
-        sb = self.u32(0x03005008)
+        sb = self.u32(0x03005048)
         if not (0x02000000 <= sb < 0x02040000): return None
         x, y = struct.unpack('<hh', self.peek(sb, 4)); g, n = struct.unpack('<bb', self.peek(sb + 4, 2)); return (g, n, x, y)
     def start(self, g, n, x, y):
-        a = 0x03007480
+        a = 0x030074d0
         for i, v in enumerate((1, g, n, x, y)): self.cmd('pin %x %x' % (a + i, v))
         # titre -> nouvelle partie : appuyer sur A / START par salves jusqu'a avoir une position
         for i in range(600):
@@ -28,7 +28,7 @@ class Emu:
         return self.pos()
 
 def goto(e, g, n, x, y, maxi=700):
-    a = 0x03007480
+    a = 0x030074d0
     for i, v in enumerate((1, g, n, x, y)): e.cmd('pin %x %x' % (a + i, v))
     for i in range(maxi):
         e.run(15, KEYS['A'] if (i // 2) % 2 == 0 else KEYS['START'])
