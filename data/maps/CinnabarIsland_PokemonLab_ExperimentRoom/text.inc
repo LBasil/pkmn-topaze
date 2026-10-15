@@ -75,3 +75,21 @@ CinnabarIsland_PokemonLab_ExperimentRoom_Text_YouComeAgain::
     .string "Aiyah!\n"
     .string "You come again!$"
 
+
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_GarettQuestAsk::
+    .string "I research the limits of POKéMON.\pShow me a POKéMON at level 60\nor higher and I'll give you a\lPP MAX.$"
+
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_GarettQuestOk::
+    .string "Remarkable power!\nTake this PP MAX.$"
+
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_GarettQuestGot::
+    .string "{PLAYER} received a PP MAX!$"
+
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_GarettQuestNo::
+    .string "None of your POKéMON has reached\nlevel 60 yet.$"
+
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_GarettQuestDone::
+    .string "Keep pushing the limits!$"
+
+CinnabarIsland_PokemonLab_ExperimentRoom_Text_QuestNoRoom::
+    .string "Your BAG is full. Make some\nroom first!$"
