@@ -199,9 +199,12 @@ class T:
             if s.inbattle() and _BTF and s.e.u32(_BTF) & 0x80:      # combat du Parc Safari (BALL/APPAT/CAILLOU/FUITE) : on fuit
                 s.press('DOWN', 4, 10); s.press('RIGHT', 4, 10); s.press('A', 4, 30); n += 1; continue
             if s.inbattle() and n % 60 == 59:       # attaque « entravee » (Entrave) ou menu bloque : on change de capacite (B, FIGHT, droite, A)
-                for k in ('B', 'A', 'RIGHT', 'A'): s.press(k, 4, 40)
+                mv = ('RIGHT', 'DOWN', 'LEFT', 'UP')[(n // 60) % 4]
+                for k in ('B', 'B', 'B', 'UP', 'LEFT', 'A', mv, 'A'): s.press(k, 4, 40)      # retour au menu d'actions (curseur sur COMBAT), puis autre capacite
+            if s.inbattle() and hasattr(s, 'heal_battle'): s.heal_battle()
             s.press('A' if s.inbattle() else key, 4, 30); n += 1
             if shot and n % 25 == 0: s.shot('%s_%03d' % (shot, n))
+            if n == 150 and hasattr(s, 'save'): s.save('scenelong_%s' % s.sync())      # scene anormalement longue : etat conserve pour diagnostic
         return n
     def finish_battle(s, maxn=400):
         """A en rafale tant qu'un combat est en cours, puis B pour fermer les textes de fin."""
@@ -212,6 +215,7 @@ class T:
     def walk_fight(s, goal, rounds=14, name=None, abat=130):
         """Marche vers goal ; si interrompu (dresseur, scène), joue la scène jusqu'au retour du contrôle puis reprend."""
         for r in range(rounds):
+            if hasattr(s, 'heal'): s.heal()
             if not s.idle(): s.scene(key='B' if False else 'A', shot=name)
             res = s.walk_to(goal)
             if res is True or res == 'warped': return res

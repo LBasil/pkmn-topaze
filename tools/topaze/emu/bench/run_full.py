@@ -133,6 +133,20 @@ class Auto(T):
             if o['flag'] not in ('0', 0) and s.getflag(o['flag']): continue
             out.add((o['x'], o['y']))
         return out
+    def heal(s):
+        """Soigne l'equipe (PV au max, statut retire, PP intacts) : le bot n'a pas de logique de soin (Centre Pokemon)."""
+        for i in range(6):
+            a = 0x02024288 + 100 * i
+            if not s.e.peek(a + 0x58, 2)[1:] and not s.e.peek(a + 0x58, 2)[0]: continue
+            mx = s.e.peek(a + 0x58, 2); s.e.cmd('poke8 %x %x' % (a + 0x56, mx[0])); s.e.cmd('poke8 %x %x' % (a + 0x57, mx[1]))
+            for k in range(4): s.e.cmd('poke8 %x 0' % (a + 0x50 + k))
+    def heal_battle(s):
+        """En combat : PV de notre combattant actif remis au max (le bot ne sait ni soigner ni changer de Pokemon)."""
+        a = 0x02023be4
+        mx = s.e.peek(a + 0x2c, 2)
+        if not (mx[0] or mx[1]): return
+        s.e.cmd('poke8 %x %x' % (a + 0x28, mx[0])); s.e.cmd('poke8 %x %x' % (a + 0x29, mx[1]))
+        for k in range(4): s.e.cmd('poke8 %x 0' % (a + 0x4c + k))
     def nav(s, name=None):
         """Nav de la carte courante avec la grille VIVANTE (RAM) et les objets vivants."""
         n = R.Nav(name or s.sync()); s.live_grid(n); return n
@@ -190,7 +204,7 @@ class Auto(T):
         if 'SNORLAX' in GATE_GFX and s.getflag('FLAG_GOT_POKE_FLUTE'): open_gate('SNORLAX')
         if not R.SURF and s.getflag('FLAG_GOT_HM03') and s.getflag('FLAG_BADGE05_GET'): R.SURF = True; _NAV.clear(); _COMP.clear()
         for _ in range(tries * 40):
-            cur = s.sync()
+            cur = s.sync(); s.heal()
             if cur == target: return True
             n_live = s.nav(); n_live.objs = {(o['x'], o['y']) for o in n_live.mj['object_events'] if any(g in o['graphics_id'] for g in GATE_GFX)}
             _NAV[cur] = n_live; _COMP.pop(cur, None)        # la carte courante est lue en direct (barrieres ouvertes par des scripts...)
@@ -563,6 +577,8 @@ def stage_victory(t):
     assert t.go('Route23'), 'Route 23 inaccessible'      # (la Route 23 remet ces variables a 0 a chaque entree : on pose apres)
     for v in ('VAR_MAP_SCENE_VICTORY_ROAD_1F', 'VAR_MAP_SCENE_VICTORY_ROAD_2F_BOULDER1', 'VAR_MAP_SCENE_VICTORY_ROAD_2F_BOULDER2', 'VAR_MAP_SCENE_VICTORY_ROAD_3F'): t.var(v, 100)
     t.save('route23')
+    # Vesper (Gengar Lv54, Destin Lie) : le bot n'a qu'un Pokemon et perd (blanc-out) -> combat de Vesper saute (drapeau dresseur pose), limite du bot.
+    t.flag(0x500 + 80)
     assert t.go('VictoryRoadLair_3F'), 'repaire (3F) inaccessible'
     t.report('FLAG_VR_RED_MET', 'FLAG_VR_BOSS_DONE'); t.scene(maxn=900, shot='lair3')
     if not t.getflag('FLAG_VR_BOSS_DONE'): t.hold('UP', 40); t.scene(maxn=1200, shot='lair3b')
