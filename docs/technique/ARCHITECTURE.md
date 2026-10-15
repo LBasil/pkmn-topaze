@@ -522,3 +522,7 @@ Le partage d'XP d'equipe est actif par defaut. L'objet EXP. SHARE (donne dans `N
 ## Echanges PNJ supprimes + especes ex-echange en nature
 
 Les 9 PNJ d'echange (Route 11/2/18, Souterrain, Azuria, Carmin, Cramois'Ile x3) ont ete retires de leur map.json (les scripts `*_EventScript_*Trade*` restent dans les .inc, inutilises). Especes redistribuees dans `wild_encounters.json` (slot 7, 5 %, FR+LG) : Farfetch'd Route 12 (lv28), Lickitung Route 11 (lv25), M. Mime Route 25 (lv22), Lippouti/Jynx Mt Selenite/Ile Écume 1F (lv37). Audit : seuls Lugia, Ho-Oh et Deoxys restent sans source.
+
+## Quetes secondaires (objets d'evolution)
+
+Les maisons d'echange vidées accueillent 4 PNJ de quete (flags recycles des anciens echanges) : Carmin Maison 2 (Elyssa, Pokemon de tete bonheur >= 200 → MOON STONE), Souterrain Nord (Saige, 40 especes capturees → SUN STONE), Route 18 Est 2F (Haden, 80 → PRISM SCALE), Azuria Maison 3 (Dontae, Pokemon niveau >= 45 → LINK CABLE, special `TopazePartyMaxLevel`). Textes `*_Text_Quest*`. Testé : Dontae.
