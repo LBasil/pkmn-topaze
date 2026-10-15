@@ -29,7 +29,7 @@ Cohérence : les 2 échecs d'Onybris (Apatia + tentative de Spinellia) justifien
 | Route 25 + chaumière | — | MISTY (équipe scénarisée), 2 sbires, ticket | 9 (24) | 18–22 | validé, testé émulateur |
 | Route 5 / chemin souterrain / Route 6 | passage | — | 0 / 6 (25) | 20–26 | validé |
 | Apatia | arène FERMÉE et sortie est bloquée (5 policiers) jusqu'à la CS COUPE ; port = ticket | HERA (Dragon/Vol 25–31), MAJOR BOB | — | — | validé |
-| S.S. ANNE | — | rival TERRY (24–26), VESPER (cadre), capitaine (CUT), HERA + MAJOR BOB (2F) | marins d'origine (non revus) | — | validé |
+| S.S. ANNE | — | rival ZEPHYR par défaut, renommable (24–26), VESPER (cadre), capitaine (CUT), HERA + MAJOR BOB (2F) | marins d'origine (non revus) | — | validé |
 | Route 11 | joignable seulement après COUPE ; Ronflex sur la Route 12 | indices Onybris | 10 (28) | 22–27 | à valider ; grotte des Taupiqueurs mise de côté |
 | Route 9 / 10 | arbre à couper à l'est de Tourmalia | indices Onybris | 9 (29) / 6 (29) | 25–30 | validé ; Tunnel Roche + centrale : intérieurs plus tard |
 | Spinellia | ouest + sud fermés (police) jusqu'à la scène de FUJI/KRONOS ; retour nord libre | FUJI, KRONOS | Tour : canaux d'origine | — | à valider |
@@ -124,3 +124,13 @@ Les 7 îles vanilla existent déjà dans la ROM. Décision V1 : on ne réécrit 
 **Gardiens (légendaires obtenables).** Île 1-2-3 : les trois Bêtes (Raikou, Entei, Suicune), en fuite d'île en île (errants) ; Île 5-6 : Celebi apparaît quand 3 Échos sont fermés et révèle ce que le Souhait de Jirachi a vraiment déréglé (lien Mew / Aura de la mine) ; Ruines de Tanoby : les trois Regis ; Sevault : épreuve finale (Red ou Silver selon l'avancement).
 **Starters Johto/Hoenn.** Cadeaux scénarisés après chaque Écho fermé (6 starters à répartir entre Célio, Bill et deux Anciens du Conseil).
 **Statut V1.** Fait : tables sauvages (voir `OBTENABLES.md`) ; Échos 1-7 faits (Bêtes, Regis, Celebi, légendaires de Hoenn + 6 starters) ; reste à tester l'enchaînement complet et remplacer les placeholders. À écrire : scripts Bill/Célio, Boussole, gardiens, cadeaux starters, errants, Celebi.
+
+## Décisions de Basil (15/10, relecture d'ensemble)
+- **Boss** : son but se ressent par ses équipes tout au long du jeu ; il le redit à la fin pour le côté dramatique. Il apparaît tard parce qu'il n'a pas besoin d'écraser un joueur de bas niveau. Rien à changer.
+- **Les alliés écrasés** servent à montrer que le joueur n'est pas prêt face au boss : voulu. Risque de répétition (Hematown, volcan, Route Victoire) reconnu, à varier si une idée se présente.
+- **Twist Quartz** : faire croire que le duel a un impact alors que le joueur amène, sans le vouloir, le quartz au bon endroit. Voulu, pas de changement.
+- **Mythiques** (Mew, Mewtwo, Celebi, Jirachi) : aucun souci, on garde.
+- **Post-game** : la v2 se fera quand la trame principale sera presque définitive. Ce qui manque en v1 (grand final Red/Silver, texte de la mine, Sevii à écrire, test de l'enchaînement) est donc reporté.
+- **Fins 2 et 3** : à traiter tout à la fin de la finalisation de la trame principale.
+- **Temps déréglé = météo extrême permanente** dans le jeu principal (neige continue, éclairs, pluie, chaleur…). C'est ce qui a attiré les légendaires et explique le désordre du post-game. À poser sur les routes (champ `weather` des map.json) quand on le décidera.
+- **Rival** : nom par défaut ZEPHYR, renommable par le joueur. « TERRY » n'est que le nom interne vanilla de `src/data/trainers.h` (remplacé en jeu par le nom du rival) ; il n'existe pas dans le jeu.

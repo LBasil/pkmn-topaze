@@ -255,7 +255,7 @@ Chemin du joueur après le ticket : Tourmalia → **Route 5** (pension, panneau 
 - 2F du bateau : HERA (20,12) et MAJOR BOB (21,12, sprite BLACK_BELT provisoire) retiennent les plus forts d'Onybris, ce qui justifie que le joueur passe jusqu'au capitaine ; ils partent (TEMP_11/12) apres CUT.
 - Bureau du capitaine : VESPER (executive Onybris, TRAINER_SAILOR_TREVOR recycle, pic ROCKET_GRUNT_F, Arbok 26/Golbat 26/Haunter 27, vue 2 en (3,5)) ; apres defaite elle s'enfuit (removeobject, masquee ensuite par goto_if_defeated en OnTransition). Capitaine : gemme dans son coffre, donne CUT, rend la gemme a HERA. Le Trevor du pont est un marin PNJ.
 - Sortie est d'Apatia : 3 policiers (46,18..20, FLAG_TEMP_13) masques si FLAG_GOT_HM01.
-- Rival TERRY (couloir 2F) L24/22/24/26.
+- Rival (nom interne TERRY, affiché ZEPHYR ou le nom choisi ; couloir 2F) L24/22/24/26.
 - Ordre : ticket (cottage R25) -> bateau (rival, Vesper, CUT) -> arene HERA -> sortie est ouverte.
 
 ## Route 11 (sentier des terriers) — passe scenario
