@@ -1,4 +1,5 @@
 #include "global.h"
+#include "topaze_options.h"
 #include "gflib.h"
 #include "battle.h"
 #include "berry_pouch.h"
@@ -545,6 +546,14 @@ static void Task_InitTeachyTvFromField(u8 taskId)
         InitTeachyTvController(0, CB2_ReturnToField);
         DestroyTask(taskId);
     }
+}
+
+void FieldUseFunc_ExpShare(u8 taskId)
+{
+    // Topaze: toggles the built-in team-wide EXP sharing
+    TOPAZE_OPT_SET(14, 1, !TOPAZE_OPT_EXPSHARE_OFF());
+    DisplayItemMessageInCurrentContext(taskId, gTasks[taskId].data[3], FONT_NORMAL,
+        TOPAZE_OPT_EXPSHARE_OFF() ? gText_ExpShareOff : gText_ExpShareOn);
 }
 
 void FieldUseFunc_Repel(u8 taskId)

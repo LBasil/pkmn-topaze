@@ -1,4 +1,6 @@
 #include "global.h"
+#include "topaze_options.h"
+#include "constants/items.h"
 #include "gflib.h"
 #include "random.h"
 #include "overworld.h"
@@ -138,6 +140,7 @@ void NewGameInitData(void)
     ClearRoamerData();
     gSaveBlock1Ptr->registeredItem = 0;
     ClearBag();
+    AddBagItem(ITEM_EXP_SHARE, 1); // Topaze: toggle for the built-in EXP share
     NewGameInitPCItems();
     ClearEnigmaBerries();
     InitEasyChatPhrases();

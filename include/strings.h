@@ -176,6 +176,8 @@ extern const u8 gText_UsedVar2WildRepelled[];
 extern const u8 gText_BoxFull[];
 extern const u8 gText_PowderQty[];
 extern const u8 gText_TypeMemo[];
+extern const u8 gText_ExpShareOn[];
+extern const u8 gText_ExpShareOff[];
 extern const u8 gText_PlayedPokeFluteCatchy[];
 extern const u8 gText_PlayedPokeFlute[];
 extern const u8 gText_PokeFluteAwakenedMon[];

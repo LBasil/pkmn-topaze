@@ -3160,8 +3160,9 @@ static void Cmd_getexp(void)
                 else
                     holdEffect = ItemId_GetHoldEffect(item);
 
-                // Topaze: Multi Exp. intégré, tous les Pokémon vivants partagent l'expérience
-                viaExpShare++;
+                // Topaze: Multi Exp. intégré, tous les Pokémon vivants partagent l'expérience (désactivable via l'objet)
+                if (!TOPAZE_OPT_EXPSHARE_OFF())
+                    viaExpShare++;
             }
 
             calculatedExp = gSpeciesInfo[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7;
@@ -3199,7 +3200,7 @@ static void Cmd_getexp(void)
             else
                 holdEffect = ItemId_GetHoldEffect(item);
 
-            if (FALSE && !(gBattleStruct->sentInPokes & 1)) // Topaze: Multi Exp. intégré
+            if (TOPAZE_OPT_EXPSHARE_OFF() && !(gBattleStruct->sentInPokes & 1)) // Topaze: Multi Exp. intégré
             {
                 *(&gBattleStruct->sentInPokes) >>= 1;
                 gBattleScripting.getexpState = 5;

@@ -15,6 +15,8 @@
 
 #define TOPAZE_OPT_HARD() ((gSaveBlock2Ptr->optionsTopaze >> 13) & 1) // 0 normal, 1 hard (trainers +3 levels, smart AI)
 
+#define TOPAZE_OPT_EXPSHARE_OFF() ((gSaveBlock2Ptr->optionsTopaze >> 14) & 1) // 0 built-in EXP share on (default), 1 off (toggled with the EXP. SHARE item)
+
 #define TOPAZE_OPT_SET(shift, mask, v) (gSaveBlock2Ptr->optionsTopaze = (gSaveBlock2Ptr->optionsTopaze & ~((mask) << (shift))) | (((v) & (mask)) << (shift)))
 
 struct Pokemon;
