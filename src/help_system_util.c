@@ -1,4 +1,5 @@
 #include "global.h"
+#include "topaze_options.h"
 #include "gflib.h"
 #include "decompress.h"
 #include "m4a.h"
@@ -49,6 +50,8 @@ u8 RunHelpSystemCallback(void)
             return 0;
         if (JOY_NEW(R_BUTTON) && gHelpSystemToggleWithRButtonDisabled == TRUE)
             return 0;
+        if (JOY_NEW(L_BUTTON) && gMain.inBattle && TopazeQuickBallReady())
+            return 0; // Topaze: L throws the first BALL in battle
         if (JOY_NEW(L_BUTTON | R_BUTTON))
         {
             if (!HelpSystem_IsSinglePlayer() || !gHelpSystemEnabled)

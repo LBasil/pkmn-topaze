@@ -16,6 +16,7 @@
 struct Pokemon;
 u8 TopazeGetLevelCap(void);
 u16 TopazeInstantHeal(void);
+bool8 TopazeQuickBallReady(void);
 u32 TopazeClampExp(struct Pokemon *mon, u32 exp);
 extern u8 gTopazeBattleLvFrom;
 extern u8 gTopazeLearnFrom;

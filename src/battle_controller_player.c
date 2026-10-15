@@ -3093,3 +3093,10 @@ static void PreviewDeterminativeMoveTargets(void)
         BeginNormalPaletteFade(bitMask, 8, startY, 0, RGB_WHITE);
     }
 }
+
+// Topaze: true while the action menu (FIGHT/BAG/POKéMON/RUN) waits for input and the quick BALL throw is allowed.
+// Lets the HELP system ignore L so the key reaches HandleInputChooseAction.
+bool8 TopazeQuickBallReady(void)
+{
+    return gBattlerControllerFuncs[gActiveBattler] == HandleInputChooseAction && TopazeQuickBallItem() != ITEM_NONE;
+}
