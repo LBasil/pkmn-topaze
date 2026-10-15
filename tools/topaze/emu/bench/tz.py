@@ -183,10 +183,10 @@ class T:
             if s.pos()[:2] != p0[:2]: s.mapname = dest; return True
         return False
 
-    def inbattle(s): return bool(s.e.peek(0x03003130 + 0x439, 1)[0] & 1)
+    def inbattle(s): return bool(s.e.peek(0x03003130 + 0x439, 1)[0] & 3)      # bit1 = gMain.inBattle (bit0 = oamLoadDisabled)
     def idle(s):
         e = s.e
-        return e.u32(0x03003130 + 4) == _CB2 and not (e.peek(0x03003130 + 0x439, 1)[0] & 1) and e.peek(0x03000f9c, 1)[0] == 0
+        return e.u32(0x03003130 + 4) == _CB2 and not (e.peek(0x03003130 + 0x439, 1)[0] & 3) and e.peek(0x03000f9c, 1)[0] == 0
     def scene(s, maxn=600, key='A', shot=None):
         """Fait avancer une scène/un combat (A en combat, `key` sinon) jusqu'à ce que le jeu soit redevenu libre ; renvoie le nb d'appuis."""
         n = 0; calm = 0
@@ -198,6 +198,8 @@ class T:
             calm = 0
             if s.inbattle() and _BTF and s.e.u32(_BTF) & 0x80:      # combat du Parc Safari (BALL/APPAT/CAILLOU/FUITE) : on fuit
                 s.press('DOWN', 4, 10); s.press('RIGHT', 4, 10); s.press('A', 4, 30); n += 1; continue
+            if s.inbattle() and n % 60 == 59:       # attaque « entravee » (Entrave) ou menu bloque : on change de capacite (B, FIGHT, droite, A)
+                for k in ('B', 'A', 'RIGHT', 'A'): s.press(k, 4, 40)
             s.press('A' if s.inbattle() else key, 4, 30); n += 1
             if shot and n % 25 == 0: s.shot('%s_%03d' % (shot, n))
         return n

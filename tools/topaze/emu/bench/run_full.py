@@ -559,6 +559,10 @@ def stage_seafoam(t):
 def stage_gym8(t): badge_gym(t, 'ViridianCity_Gym', 'Giovanni', 'FLAG_BADGE08_GET')
 
 def stage_victory(t):
+    # Les enigmes de Force (rochers sur interrupteurs) sont celles de la vanille (cartes inchangees) : non rejouees, on pose leurs variables a 100.
+    assert t.go('Route23'), 'Route 23 inaccessible'      # (la Route 23 remet ces variables a 0 a chaque entree : on pose apres)
+    for v in ('VAR_MAP_SCENE_VICTORY_ROAD_1F', 'VAR_MAP_SCENE_VICTORY_ROAD_2F_BOULDER1', 'VAR_MAP_SCENE_VICTORY_ROAD_2F_BOULDER2', 'VAR_MAP_SCENE_VICTORY_ROAD_3F'): t.var(v, 100)
+    t.save('route23')
     assert t.go('VictoryRoadLair_3F'), 'repaire (3F) inaccessible'
     t.report('FLAG_VR_RED_MET', 'FLAG_VR_BOSS_DONE'); t.scene(maxn=900, shot='lair3')
     if not t.getflag('FLAG_VR_BOSS_DONE'): t.hold('UP', 40); t.scene(maxn=1200, shot='lair3b')
