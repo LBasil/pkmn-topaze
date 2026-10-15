@@ -181,7 +181,7 @@ class Auto(T):
             n_live = s.nav(); n_live.objs = {(o['x'], o['y']) for o in n_live.mj['object_events'] if any(g in o['graphics_id'] for g in GATE_GFX)}
             _NAV[cur] = n_live; _COMP.pop(cur, None)        # la carte courante est lue en direct (barrieres ouvertes par des scripts...)
             p = s.pos(); rt = route(cur, (p[2], p[3]), target, banned)
-            if not rt: log('BLOCK pas de route', cur, (p[2], p[3]), '->', target); return False
+            if not rt: log('BLOCK pas de route', cur, (p[2], p[3]), '->', target); s.save('noroute_' + cur); return False
             e = rt[0]
             if not s.hop(e):
                 if tried[(cur, e[3])] < 5:
@@ -231,6 +231,13 @@ class Auto(T):
             for o in objs:
                 if s.talk_obj(o, 8) and all(s.getflag(f) for f in flags): return True
         return all(s.getflag(f) for f in flags)
+    def cut_trees(s):
+        """Coupe (parle a) tous les arbres de la carte courante atteignables ; renvoie le nombre de passages tentes."""
+        n = 0
+        for o in mj(s.sync())['object_events']:
+            if 'CutTree' not in o['script'] or (o['x'], o['y']) not in s.live_objs(): continue
+            if s.talk_obj((o['x'], o['y']), 6): n += 1
+        return n
     def report(s, *items):
         out = []
         for i in items:
@@ -274,6 +281,7 @@ def stage_opanihrum(t):
 def badge_gym(t, gymmap, leader_pat, badge, n=40):
     assert t.go(gymmap), gymmap + ' inaccessible'
     for _ in range(6):
+        t.cut_trees()
         t.talk_script(leader_pat, n, 'gym_' + gymmap)
         if t.getflag(badge): break
     t.report(badge)
@@ -337,7 +345,50 @@ def stage_tower(t):
     if not t.getflag('FLAG_RESCUED_MR_FUJI'): t.talk_obj((11, 4), 10)
     t.report('FLAG_RESCUED_MR_FUJI')
 
-STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower)]
+BAN = ('SaffronCity', 'Hematown')
+
+def lift(t, target):
+    """Ascenseur du repaire (on est dans RocketHideout_Elevator) : target 0=B1F 1=B2F 2=B4F, puis sortie par le tapis."""
+    assert t.approach((0, 2)); t.press('A', 4, 60)
+    cur = {3: 0, 2: 1, 0: 2}.get(t.getvar('VAR_ELEVATOR_FLOOR'), 0)
+    for _ in range(abs(target - cur)): t.press('DOWN' if target > cur else 'UP')
+    t.press('A'); t.scene(300)
+    t.walk_fight((2, 4), 6); t.hold('DOWN', 24); t.hold('DOWN', 24); t.e.run(80, 0)
+
+def stage_quartz(t):
+    assert t.go('CeladonCity_GameCorner', banned=BAN), 'Game Corner inaccessible'
+    for _ in range(3):
+        if t.getflag('FLAG_OPENED_ROCKET_HIDEOUT'): break
+        if t.live_objs() and (11, 2) in t.live_objs(): t.talk_obj((11, 2), 10)
+        if t.approach((11, 1)): t.mash(6); t.scene(300)
+    t.report('FLAG_OPENED_ROCKET_HIDEOUT')
+    assert t.getflag('FLAG_OPENED_ROCKET_HIDEOUT'), 'poster du Game Corner sans effet'
+    assert t.go('RocketHideout_B4F', banned=BAN), 'repaire B4F inaccessible'
+    for _ in range(3):   # cle de l'ascenseur : grunt1 puis la balle
+        t.talk_script('Grunt1', 20, 'grunt1')
+        t.talk_script('LiftKey', 8)
+        if t.getflag('FLAG_CAN_USE_ROCKET_HIDEOUT_LIFT'): break
+    assert t.getflag('FLAG_CAN_USE_ROCKET_HIDEOUT_LIFT'), 'cle de l ascenseur introuvable'
+    assert t.go('RocketHideout_Elevator', banned=BAN), 'ascenseur inaccessible'
+    lift(t, 2)
+    t.report('FLAG_CAN_USE_ROCKET_HIDEOUT_LIFT'); log('apres ascenseur', t.sync(), t.pos())
+    for g in ('Grunt2', 'Grunt3'): t.talk_script(g, 20, g)   # les deux gardes de la porte (levent la barriere)
+    for _ in range(4):
+        t.talk_script('Giovanni', 40, 'vesper')
+        if t.getflag('FLAG_HIDE_CELADON_ROCKETS'): break
+    t.report('FLAG_HIDE_CELADON_ROCKETS')
+    t.talk_script('SilphScope', 8); t.report('FLAG_GOT_POKE_FLUTE')
+    assert t.go('RocketHideout_Elevator', banned=BAN), 'ascenseur (retour) inaccessible'
+    lift(t, 0); t.talk_script('Grunt5', 20, 'grunt5')   # garde de la barriere de B1F
+    assert t.go('CeladonCity_GameCorner', banned=BAN), 'retour Game Corner impossible'
+    for _ in range(3):
+        t.talk_script('VesperDuel', 40, 'duel')
+        if t.getflag('FLAG_QUARTZ_DUEL_DONE'): break
+    t.report('FLAG_QUARTZ_DUEL_DONE', 'FLAG_QUARTZ_STONE_WON')
+
+def stage_gym4(t): badge_gym(t, 'CeladonCity_Gym', 'Erika', 'FLAG_BADGE04_GET')
+
+STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4)]
 
 if __name__ == '__main__':
     # usage : run_full.py all | run_full.py <etape> [<etape> ...]   (une etape isolee repart de la sauvegarde de la precedente)
