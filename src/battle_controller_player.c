@@ -92,6 +92,8 @@ static void MoveSelectionDisplayMoveNames(void);
 static void HandleMoveSwitching(void);
 static void WaitForMonSelection(void);
 static void CompleteWhenChoseItem(void);
+static u16 TopazeQuickBallItem(void);
+static bool8 sTopazeQuickBall;
 static void Task_LaunchLvlUpAnim(u8 taskId);
 static void Task_PrepareToGiveExpWithExpBar(u8 taskId);
 static void DestroyExpTaskAndCompleteOnInactiveTextPrinter(u8 taskId);
@@ -284,6 +286,14 @@ static void HandleInputChooseAction(void)
             gActionSelectionCursor[gActiveBattler] ^= 2;
             ActionSelectionCreateCursorAt(gActionSelectionCursor[gActiveBattler], 0);
         }
+    }
+    else if (JOY_NEW(gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_L_EQUALS_A ? R_BUTTON : L_BUTTON) && TopazeQuickBallItem() != ITEM_NONE)
+    {
+        // Topaze: L (R when the OPTION button mode is L=A) throws the first BALL of the bag (wild battles only)
+        PlaySE(SE_SELECT);
+        sTopazeQuickBall = TRUE;
+        BtlController_EmitTwoReturnValues(1, B_ACTION_USE_ITEM, 0);
+        PlayerBufferExecCompleted();
     }
     else if (JOY_NEW(B_BUTTON))
     {
@@ -2542,10 +2552,40 @@ void InitMoveSelectionsVarsAndStrings(void)
     MoveSelectionDisplayMoveType();
 }
 
+// Topaze: first BALL of the bag, or ITEM_NONE when the quick throw is not allowed here.
+static u16 TopazeQuickBallItem(void)
+{
+    struct ItemSlot *slot = &gBagPockets[POCKET_POKE_BALLS - 1].itemSlots[0];
+
+    if (gBattleTypeFlags & (BATTLE_TYPE_TRAINER | BATTLE_TYPE_LINK | BATTLE_TYPE_SAFARI | BATTLE_TYPE_POKEDUDE
+                            | BATTLE_TYPE_OLD_MAN_TUTORIAL | BATTLE_TYPE_BATTLE_TOWER | BATTLE_TYPE_EREADER_TRAINER
+                            | BATTLE_TYPE_TRAINER_TOWER | BATTLE_TYPE_GHOST | BATTLE_TYPE_FIRST_BATTLE))
+        return ITEM_NONE;
+    if (slot->itemId == ITEM_NONE || GetBagItemQuantity(&slot->quantity) == 0)
+        return ITEM_NONE;
+    if (IsPlayerPartyAndPokemonStorageFull())
+        return ITEM_NONE;
+    return slot->itemId;
+}
+
 static void PlayerHandleChooseItem(void)
 {
     s32 i;
 
+    if (sTopazeQuickBall)
+    {
+        u16 ball = TopazeQuickBallItem();
+
+        sTopazeQuickBall = FALSE;
+        if (ball != ITEM_NONE)
+        {
+            RemoveBagItem(ball, 1);
+            gSpecialVar_ItemId = ball;
+            gBattlerInMenuId = gActiveBattler;
+            gBattlerControllerFuncs[gActiveBattler] = CompleteWhenChoseItem;
+            return;
+        }
+    }
     BeginNormalPaletteFade(PALETTES_ALL, 0, 0, 0x10, RGB_BLACK);
     gBattlerControllerFuncs[gActiveBattler] = OpenBagAndChooseItem;
     gBattlerInMenuId = gActiveBattler;
