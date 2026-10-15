@@ -68,8 +68,8 @@ champs = []
 for i, (nm, city, ty, slot) in enumerate(leaders, 1):
     arr = re.search(r'sParty_Leader%s\[\] = \{(.*?)\n\};' % slot, tp, re.S).group(1)
     team = []
-    for lvl, sp, it, mv in re.findall(r'\.lvl = (\d+),\s*\.species = SPECIES_(\w+),(?:\s*\.heldItem = ITEM_(\w+),)?\s*\.moves = \{([^}]*)\}', arr):
-        team.append(dict(species=sname[sp].title(), lvl=int(lvl), item=pretty(it) if it else '', moves=[mnames.get(x.strip()[5:], x.strip()[5:]) for x in mv.split(',') if x.strip() and x.strip() != 'MOVE_NONE']))
+    for lvl, sp, it, mv in re.findall(r'\.lvl = (\d+),\s*\.species = SPECIES_(\w+),(?:\s*\.heldItem = ITEM_(\w+),)?(?:\s*\.moves = \{([^}]*)\})?', arr):  # moves absent = default moves (ex. Hepha)
+        team.append(dict(species=sname.get(sp, sp.replace('_',' ')).title(), lvl=int(lvl), item=pretty(it) if it else '', moves=[mnames.get(x.strip()[5:], x.strip()[5:]) for x in mv.split(',') if x.strip() and x.strip() != 'MOVE_NONE']))
     champs.append(dict(n=i, name=nm, city=city, type=ty, team=team))
 
 # --- rencontres sauvages ---
