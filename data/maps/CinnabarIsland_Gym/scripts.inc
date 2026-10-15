@@ -58,8 +58,9 @@ CinnabarIsland_Gym_EventScript_DefeatedBlaine::
 	setflag FLAG_DEFEATED_BLAINE
 	setflag FLAG_BADGE07_GET
 	setrespawn HEAL_LOCATION_CINNABAR_ISLAND
-	setvar VAR_MAP_SCENE_CINNABAR_ISLAND, 1
-	clearflag FLAG_HIDE_CINNABAR_BILL
+	@ Topaze : plus de voyage force de Bill vers les iles Sevii (detour vanilla obligatoire : le joueur restait
+	@ coince a Une-Ile/Deux-Iles en plein raid de Chrondrolia). Bill reste « disparu » ; Sevii = post-game.
+	setvar VAR_MAP_SCENE_CINNABAR_ISLAND, 4
 	set_gym_trainers 7
 	goto CinnabarIsland_Gym_EventScript_GiveTM38
 	end

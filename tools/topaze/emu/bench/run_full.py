@@ -315,6 +315,12 @@ class Auto(T):
         for c in cells:
             if not s.approach(c): log('QUIZ inaccessible', c); continue
             s._facing = (0, -1); s.face('UP'); s.mash(n); s.scene(900)
+    def sail(s, downs):
+        """Parle au marin du port courant et choisit la destination (nombre de DOWN dans le menu)."""
+        pos = s.find_obj('Sailor'); assert pos and s.approach(pos), 'marin inaccessible'
+        s.press('A', 4, 120)
+        for _ in range(downs): s.press('DOWN', 4, 20)
+        s.press('A', 4, 60); s.scene(900)
     def report(s, *items):
         out = []
         for i in items:
@@ -517,7 +523,21 @@ def stage_gym7(t):
     t.report(*['FLAG_CINNABAR_GYM_QUIZ_%d' % i for i in range(1, 7)])
     badge_gym(t, 'CinnabarIsland_Gym', 'Blaine', 'FLAG_BADGE07_GET')
 
-STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4), ('ameth', stage_ameth), ('gym5', stage_gym5), ('hema_in', stage_hema_in), ('hema_tower', stage_hema_tower), ('gym6', stage_gym6), ('chron_in', stage_chron_in), ('chron_key', stage_chron_key), ('gym7', stage_gym7)]
+def stage_chron_raid(t):
+    assert t.go('CinnabarIsland'), 'sortie arene 7'
+    for k in range(4):      # panne de courant + revelation du maire
+        t.scene(maxn=900, shot='chron_scene%d' % k); t.report('FLAG_CHRONDROLIA_RAID_STARTED', 'VAR_TEMP_2')
+        if t.st()[0] == 'CinnabarIsland' and t.getflag('FLAG_CHRONDROLIA_RAID_STARTED'): break
+        if t.st()[0] == 'CinnabarIsland' and k >= 3: t.go('CinnabarIsland', banned=('Route19', 'Route20', 'FuchsiaCity'))
+    if not t.getflag('FLAG_CHRONDROLIA_RAID_STARTED'):
+        t.go('CinnabarIsland', banned=('Route19', 'Route20', 'FuchsiaCity')); t.scene(maxn=900)
+    assert t.getflag('FLAG_CHRONDROLIA_RAID_STARTED'), 'panne de courant / maire : scene non declenchee'
+    assert t.go('PokemonMansion_3F', banned=('Route19', 'Route20', 'FuchsiaCity')), 'manoir 3F inaccessible'
+    t.talk_script('OnybrisSelene', 40, 'selene'); t.talk_script('EventScript_Topaz', 30, 'topaz')
+    t.report('FLAG_CHRONDROLIA_RAID_DONE')
+    assert t.getflag('FLAG_CHRONDROLIA_RAID_DONE'), 'topaze non obtenu'
+
+STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4), ('ameth', stage_ameth), ('gym5', stage_gym5), ('hema_in', stage_hema_in), ('hema_tower', stage_hema_tower), ('gym6', stage_gym6), ('chron_in', stage_chron_in), ('chron_key', stage_chron_key), ('gym7', stage_gym7), ('chron_raid', stage_chron_raid)]
 
 if __name__ == '__main__':
     # usage : run_full.py all | run_full.py <etape> [<etape> ...]   (une etape isolee repart de la sauvegarde de la precedente)
