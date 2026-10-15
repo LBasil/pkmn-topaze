@@ -543,3 +543,9 @@ TODO (note Basil 15/10) : ajouter d'autres quetes secondaires de ce type (pierre
 
 - Postgame (`FLAG_TOPAZE_POSTGAME`), le marin du ferry de Carmin (`VermilionCity_EventScript_FerrySailor`) donne une fois MYSTIC TICKET + AURORA TICKET (flag `FLAG_TOPAZE_GOT_TICKETS` = FLAG_0x0DC) et active `FLAG_ENABLE_SHIP_NAVEL_ROCK/BIRTH_ISLAND` : Lugia/Ho-Oh (Rocher Nombril) et Deoxys (Ile Naissance) deviennent accessibles. Teste : remise des billets.
 - Pokedex, page AREA : quand aucune zone sauvage, `GetTopazeObtainHint` (src/pokedex_screen.c) affiche BREEDING (bebes), FOSSIL, EVOLUTION (a une pre-evolution), sinon GIFT OR EVENT. Teste sur Tortank (EVOLUTION).
+
+## Audits du 15/10 (fond)
+
+- Flags : aucun flag lu sans jamais etre ecrit (hors macros de portes Sylphe) ; PNJ caches par defaut : cas restants = vanilla ou voulus. Warps : seuls Route2_House / Route2_East_Building ont des warp ids hors limites, mais ces maps sont inaccessibles (entrees supprimees de la Route 2).
+- Textes : `tools/topaze/lint/spell.py` (pyspellchecker) ne signale que des onomatopees vanilla ; references a des noms de villes/champions d'origine : seuls les anciens champions (Brock, Misty, Surge, Erika, Sabrina, Blaine, Koga) restent, cameos coherents (Ligue, musee, fan clubs).
+- Niveaux : courbe des champions 16/22/29/35/40/45/50/55 reguliere ; Route Victoire 3F corrigee (+6, niv. 52-56) car plus basse que la 1F/2F. Les objets d'evolution (Soleil/Lune/Link Cable/Ecaille Prisme) sont couverts par boutique + quetes : plus de placement necessaire.
