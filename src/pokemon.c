@@ -5038,6 +5038,12 @@ const u8 *Battle_PrintStatBoosterEffectMessage(u16 itemId)
     return gDisplayedStringBattle;
 }
 
+// Topaze: nature modifier of a stat (STAT_ATK..STAT_SPDEF) : +1 boosted, -1 lowered, 0 neutral
+s8 TopazeNatureStatMod(u8 nature, u8 statIndex)
+{
+    return sNatureStatTable[nature][statIndex - 1];
+}
+
 u8 GetNature(struct Pokemon *mon)
 {
     return GetMonData(mon, MON_DATA_PERSONALITY, NULL) % NUM_NATURES;

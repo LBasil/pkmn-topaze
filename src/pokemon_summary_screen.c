@@ -2552,6 +2552,18 @@ static void PrintInfoPage(void)
     }
 }
 
+// Topaze: nature marker next to a stat value ("+" boosted, "-" lowered, nothing if neutral)
+static void TopazePrintNatureMark(u8 stat, u8 y)
+{
+    static const u8 sPlus[] = {CHAR_PLUS, EOS};
+    static const u8 sMinus[] = {CHAR_HYPHEN, EOS};
+    s8 mod = TopazeNatureStatMod(GetNature(&sMonSummaryScreen->currentMon), stat);
+
+    if (mod == 0)
+        return;
+    AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 44, y, sLevelNickTextColors[0], TEXT_SKIP_DRAW, mod > 0 ? sPlus : sMinus);
+}
+
 static void PrintSkillsPage(void)
 {
     if (sTopazeStatDetail)
@@ -2568,6 +2580,11 @@ static void PrintSkillsPage(void)
     AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 50 + sMonSkillsPrinterXpos->speStr, 74, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_SPE]);
     AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 15 + sMonSkillsPrinterXpos->expStr, 87, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.expPointsStrBuf);
     AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 15 + sMonSkillsPrinterXpos->toNextLevel, 100, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.expToNextLevelStrBuf);
+    TopazePrintNatureMark(STAT_ATK, 22);
+    TopazePrintNatureMark(STAT_DEF, 35);
+    TopazePrintNatureMark(STAT_SPATK, 48);
+    TopazePrintNatureMark(STAT_SPDEF, 61);
+    TopazePrintNatureMark(STAT_SPEED, 74);
 }
 
 #define GetMoveNamePrinterYpos(x) ((x) * 28 + 5)

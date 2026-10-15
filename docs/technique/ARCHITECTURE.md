@@ -497,3 +497,7 @@ Nouveaux objets (slots libres 226/227, anciens `ITEM_0E2/0E3`) : `ITEM_LINK_CABL
 - PNJ femme et garçon : dialogue différent après la Ligue (légende de l'oiseau bleu / indice de la clairière).
 - Seafoam B4F : l'oiseau est supprimé (objet gardé mais flag `FLAG_HIDE_SEAFOAM_B4F_BIRD` = FLAG_0x0DB, toujours caché ; scripts d'apparition retirés).
 - **Correctif** : `EventScript_ResetAllMapFlags` (data/event_scripts.s) cache maintenant par défaut Artikodin, Électhor et Moltres ; ils étaient visibles dès le début de partie malgré le lore « captifs du boss ». `MtEmber_Summit_EventScript_ShowMoltres` exige désormais `FLAG_TOPAZE_POSTGAME` comme Électhor.
+
+## Résumé : marqueurs de nature (15-10)
+- Page Skills : un « + » (stat boostée) ou « - » (stat réduite) s'affiche à gauche de la valeur (`TopazePrintNatureMark`, src/pokemon_summary_screen.c ; `TopazeNatureStatMod` dans src/pokemon.c lit `sNatureStatTable`). Pas de couleur : la palette de la page n'a pas de rouge/bleu libres sans abîmer le décor.
+- Combat contre Héra testé à l'émulateur (5 Pokémon niv. 24-29, courbe 22 → 29 → 35 vers Sylvestre/Érika, aucun plantage). Oiseaux légendaires vérifiés : cachés avant la Ligue, visibles et rencontrables après (Électhor, Moltres, Artikodin).
