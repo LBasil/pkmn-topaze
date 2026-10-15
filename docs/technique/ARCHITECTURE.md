@@ -538,3 +538,8 @@ TODO (note Basil 15/10) : ajouter d'autres quetes secondaires de ce type (pierre
 
 - Labo (salon + salle d'experience), PNJ de quete (flags des anciens echanges) : Clifton (20 especes → RARE CANDY), Norma (bonheur >= 200 → PP UP), Garett (niveau 60 → PP MAX). Garett teste.
 - IA HARD : l'IA vanilla change deja de Pokemon sur mauvais matchup ; en HARD les probabilites passent de 1/2 a 1/1 (aucun effet) et de 1/3 a 1/2 (peu efficace) dans `ShouldSwitch` (src/battle_ai_switch_items.c). Non teste en combat.
+
+## Billets Mystic/Aurora + indices Pokedex
+
+- Postgame (`FLAG_TOPAZE_POSTGAME`), le marin du ferry de Carmin (`VermilionCity_EventScript_FerrySailor`) donne une fois MYSTIC TICKET + AURORA TICKET (flag `FLAG_TOPAZE_GOT_TICKETS` = FLAG_0x0DC) et active `FLAG_ENABLE_SHIP_NAVEL_ROCK/BIRTH_ISLAND` : Lugia/Ho-Oh (Rocher Nombril) et Deoxys (Ile Naissance) deviennent accessibles. Teste : remise des billets.
+- Pokedex, page AREA : quand aucune zone sauvage, `GetTopazeObtainHint` (src/pokedex_screen.c) affiche BREEDING (bebes), FOSSIL, EVOLUTION (a une pre-evolution), sinon GIFT OR EVENT. Teste sur Tortank (EVOLUTION).
