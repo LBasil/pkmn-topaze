@@ -63,7 +63,7 @@ tlist = [t for t in TYPES if t != '???']
 
 # --- champions ---
 tp = rd('src/data/trainer_parties.h')
-leaders = [('Kay','Pyropia','Fire','Brock'),('Sylvestre','Tourmalia','Bug / Grass','Misty'),('Hera','Apatia','Dragon / Flying','LtSurge'),('Grim','Bourg Quartz','Ice','Erika'),('Achlys','Amethiolite','Poison','Koga'),('Nox','Hematown','Dark','Sabrina'),('Eddie','Chrondrolia','Electric','Blaine'),('Hepha','Opanihrum','Steel','Giovanni')]
+leaders = [('Kay','Pyropia','Fire','Brock'),('Sylvestre','Tourmalia','Bug / Grass','Misty'),('Hera','Apatia','Dragon / Fairy','LtSurge'),('Grim','Bourg Quartz','Ice','Erika'),('Achlys','Amethiolite','Poison','Koga'),('Nox','Hematown','Dark','Sabrina'),('Eddie','Chrondrolia','Electric','Blaine'),('Hepha','Opanihrum','Steel','Giovanni')]
 champs = []
 for i, (nm, city, ty, slot) in enumerate(leaders, 1):
     arr = re.search(r'sParty_Leader%s\[\] = \{(.*?)\n\};' % slot, tp, re.S).group(1)

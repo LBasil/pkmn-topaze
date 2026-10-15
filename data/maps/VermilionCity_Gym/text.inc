@@ -1,10 +1,10 @@
 VermilionCity_Gym_Text_LtSurgeIntro::
     .string "I am HERA, LEADER of APATIA GYM,\n"
     .string "up here where the air is thin.\p"
-    .string "Only those who can stand the cold\n"
-    .string "and the wind reach this high. My\p"
-    .string "DRAGON and FLYING POKéMON were\n"
-    .string "born for it.\p"
+    .string "They say a FAIRY QUEEN once ruled\n"
+    .string "these peaks, and that dragons\p"
+    .string "bowed to her. My DRAGON and FAIRY\n"
+    .string "POKéMON keep the tale alive.\p"
     .string "Show me you can handle the\n"
     .string "altitude. Hit me with everything\p"
     .string "you've got!$"
@@ -88,13 +88,13 @@ VermilionCity_Gym_Text_DwaynePostBattle::
 
 VermilionCity_Gym_Text_GymGuyAdvice::
     .string "Yo, champ!\p"
-    .string "HERA uses DRAGON and FLYING\n"
-    .string "POKéMON. Cold hurts her a lot:\p"
-    .string "ICE is super effective on both\n"
-    .string "types.\p"
-    .string "ROCK and FAIRY hurt too. ELECTRIC\n"
-    .string "works on the FLYING ones, but\p"
-    .string "DRAGONS shrug it off.$"
+    .string "HERA uses DRAGON and FAIRY\n"
+    .string "POKéMON. ICE hurts her DRAGONS,\p"
+    .string "and POISON or STEEL hurt her\n"
+    .string "FAIRIES.\p"
+    .string "But DRAGON moves do nothing to\n"
+    .string "FAIRY POKéMON, and FAIRY moves\p"
+    .string "beat DRAGONS.$"
 
 VermilionCity_Gym_Text_GymGuyPostVictory::
     .string "Whew!\n"

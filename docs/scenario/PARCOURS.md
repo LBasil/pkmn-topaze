@@ -28,7 +28,7 @@ Cohérence : les 2 échecs d'Onybris (Apatia + tentative de Spinellia) justifien
 | Route 24 | impasse (pont) | sbire à la PÉPITE | 6 (22) | 17–21 | validé |
 | Route 25 + chaumière | — | MISTY (équipe scénarisée), 2 sbires, ticket | 9 (24) | 18–22 | validé, testé émulateur |
 | Route 5 / chemin souterrain / Route 6 | passage | — | 0 / 6 (25) | 20–26 | validé |
-| Apatia | arène FERMÉE et sortie est bloquée (5 policiers) jusqu'à la CS COUPE ; port = ticket | HERA (Dragon/Vol 25–31), MAJOR BOB | — | — | validé |
+| Apatia | arène FERMÉE et sortie est bloquée (5 policiers) jusqu'à la CS COUPE ; port = ticket | HERA (Dragon/Fée 24–29), MAJOR BOB | — | — | validé |
 | S.S. ANNE | — | rival ZEPHYR par défaut, renommable (24–26), VESPER (cadre), capitaine (CUT), HERA + MAJOR BOB (2F) | marins d'origine (non revus) | — | validé |
 | Route 11 | joignable seulement après COUPE ; Ronflex sur la Route 12 | indices Onybris | 10 (28) | 22–27 | à valider ; grotte des Taupiqueurs mise de côté |
 | Route 9 / 10 | arbre à couper à l'est de Tourmalia | indices Onybris | 9 (29) / 6 (29) | 25–30 | validé ; Tunnel Roche + centrale : intérieurs plus tard |
