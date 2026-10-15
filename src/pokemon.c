@@ -5156,6 +5156,10 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
              && gEvolutionTable[species][i].param == evolutionItem)
             {
                 targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                // Topaze: cross-generation evolutions (Steelix, Kingdra...) stay locked until the National Pokedex,
+                // so the item is not wasted ("It won't have any effect").
+                if (!IsNationalPokedexEnabled() && targetSpecies > KANTO_SPECIES_END)
+                    targetSpecies = SPECIES_NONE;
                 break;
             }
         }
