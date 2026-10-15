@@ -585,7 +585,29 @@ def stage_victory(t):
     t.report('FLAG_VR_BOSS_DONE')
     assert t.getflag('FLAG_VR_BOSS_DONE'), 'scene finale du repaire non jouee'
 
-STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4), ('ameth', stage_ameth), ('gym5', stage_gym5), ('hema_in', stage_hema_in), ('hema_tower', stage_hema_tower), ('gym6', stage_gym6), ('chron_in', stage_chron_in), ('chron_key', stage_chron_key), ('gym7', stage_gym7), ('chron_raid', stage_chron_raid), ('seafoam', stage_seafoam), ('gym8', stage_gym8), ('victory', stage_victory)]
+def stage_league(t):
+    assert t.go('IndigoPlateau_Exterior'), 'Plateau Indigo inaccessible'
+    t.save('indigo')
+    assert t.go('IndigoPlateau_PokemonCenter_1F'), 'Centre du Plateau inaccessible'
+    # La case d'arrivee de la salle de Lorelei est une porte (collision) : le planificateur statique n'y voit pas de composante, on franchit a la main ; la scene d'entree avance le joueur.
+    for _ in range(40):          # la gardienne (5,3) erre et peut se tenir devant la porte : on attend qu'elle se pousse
+        if t.walk_fight((4, 2), 2) is True: break
+        t.e.run(90, 0)
+    assert t.pos()[2:] == (4, 2), 'porte de la Ligue inaccessible'
+    t.hold('UP', 20); t.e.run(80, 0); t.scene(maxn=400)
+    assert t.sync() == 'PokemonLeague_LoreleisRoom', 'entree de la Ligue sans effet : ' + t.sync()
+    t.save('league_in')
+    last = -1
+    for r in range(14):
+        rd = t.getvar('VAR_TOURNAMENT_ROUND'); log('  tournoi : tour', rd, t.sync(), t.pos()[2:])
+        if t.sync() != 'PokemonLeague_LoreleisRoom': break
+        t.scene(maxn=300); t.walk_fight((6, 6), 10); t.face('UP'); t.press('A', 4, 30)
+        t.scene(maxn=900, shot='league%d' % r); t.e.run(120, 0); t.scene(maxn=120)
+        if t.getvar('VAR_TOURNAMENT_ROUND') == rd and t.sync() == 'PokemonLeague_LoreleisRoom' and rd == last: log('BLOCK tournoi fige au tour', rd); t.save('leaguestuck'); break
+        last = rd
+    log('FIN ligue', t.sync(), t.pos()[2:], 'ending', t.getvar('VAR_TOPAZE_ENDING'), 'round', t.getvar('VAR_TOURNAMENT_ROUND'))
+
+STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4), ('ameth', stage_ameth), ('gym5', stage_gym5), ('hema_in', stage_hema_in), ('hema_tower', stage_hema_tower), ('gym6', stage_gym6), ('chron_in', stage_chron_in), ('chron_key', stage_chron_key), ('gym7', stage_gym7), ('chron_raid', stage_chron_raid), ('seafoam', stage_seafoam), ('gym8', stage_gym8), ('victory', stage_victory), ('league', stage_league)]
 
 if __name__ == '__main__':
     # usage : run_full.py all | run_full.py <etape> [<etape> ...]   (une etape isolee repart de la sauvegarde de la precedente)
