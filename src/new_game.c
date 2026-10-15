@@ -150,6 +150,7 @@ void NewGameInitData(void)
     RunScriptImmediately(EventScript_ResetAllMapFlags);
     StringCopy(gSaveBlock1Ptr->rivalName, rivalName);
     ResetTrainerTowerResults();
+    EnableNationalPokedex(); // Topaze: National POKeDEX from the start
 }
 
 static void ResetMiniGamesResults(void)

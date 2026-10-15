@@ -1733,6 +1733,7 @@ void CB2_ContinueSavedGame(void)
     UnlockPlayerFieldControls();
     gFieldCallback2 = NULL;
     gExitStairsMovementDisabled = TRUE;
+    EnableNationalPokedex(); // Topaze: also for older saves
     if (UseContinueGameWarp() == TRUE)
     {
         ClearContinueGameWarpStatus();
