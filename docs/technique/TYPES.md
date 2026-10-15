@@ -4,6 +4,7 @@
 Appliqués par script (`apply_types.py`, 66 espèces modifiées) dans `species_info.h`. Référence lisible : la page **Pokédex** du site joueur (`docs/pokedex.html`, générée depuis le code) et `docs/topaze/types_v0_raw.md` (première proposition brute).
 
 Règles de cohérence retenues : Dracolosse Dragon/Vol, Léviator et Hypocéan Eau/Dragon, Ptéra Roche/Dragon, Nosferapti/Nosferalto Poison/Ténèbre, famille de Fantominus Spectre/Ténèbre, Miaouss/Persian Ténèbre, Krabboss Eau/Combat, Kangourex Normal/Combat, Ossatueur Sol/Spectre, Canarticho Combat/Vol.
+Retypages complémentaires (15-10) : Triopikeur/Taupiqueur Sol/Acier, Aéromite Insecte/Fée, Soporifik/Hypnomade Psy/Ténèbre, Voltorbe/Électrode Électrik/Feu, Smogo/Smogogo Poison/Spectre, Poissirène/Poissoroy Eau/Fée, Excelangue Normal/Spectre, Leveinard Normal/Fée, Saquedeneu Plante/Eau, Scarabrute Insecte/Combat, Tauros Normal/Sol, Porygon Normal/Électrik. Kicklee/Tygnon restent Combat pur (choix de Basil). Attaques de STAB ajoutées aux lots (Metal Claw, Iron Tail, Hyper Voice, Covet, Faint Attack, Crunch, Ember, Flamethrower, Water Gun, Bubble Beam, Water Pulse).
 Starters : Bulbizarre Plante/Sol, Salamèche Feu/Glace, Carapuce Eau/Acier.
 
 ## Le type Fée (index 18)
