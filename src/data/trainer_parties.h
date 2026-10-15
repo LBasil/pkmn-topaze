@@ -6113,9 +6113,9 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderMisty[] = {
     {
         .iv = 50,
         .lvl = 19,
-        .species = SPECIES_PARASECT,
+        .species = SPECIES_TANGELA,
         .heldItem = ITEM_MIRACLE_SEED,
-        .moves = {MOVE_SPORE, MOVE_SLASH, MOVE_LEECH_LIFE, MOVE_STUN_SPORE},
+        .moves = {MOVE_MEGA_DRAIN, MOVE_SLEEP_POWDER, MOVE_STUN_SPORE, MOVE_VINE_WHIP},
     },
     {
         .iv = 50,
