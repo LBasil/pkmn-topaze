@@ -25,6 +25,10 @@ class Nav:
     def blocked(self, x, y):
         if not (0 <= x < self.w and 0 <= y < self.h): return True
         return (x, y) in self.objs or bool((self.g[y * self.w + x] >> 10) & 3) or (self.attr(x, y) & 0x1ff) in WATER
+    def step_ok(self, c, n):
+        """Regle d'altitude du moteur : on ne passe pas d'un niveau a un autre (sauf 0 et 15, qui relient tout)."""
+        ea = self.g[c[1] * self.w + c[0]] >> 12; eb = self.g[n[1] * self.w + n[0]] >> 12
+        return ea in (0, 15) or eb in (0, 15) or ea == eb
     def path(self, a, b):
         prev = {a: None}; q = collections.deque([a])
         while q:
@@ -32,7 +36,7 @@ class Nav:
             if c == b: break
             for d, (dx, dy) in (('UP', (0, -1)), ('DOWN', (0, 1)), ('LEFT', (-1, 0)), ('RIGHT', (1, 0))):
                 n = (c[0] + dx, c[1] + dy)
-                if n in prev or self.blocked(*n) or (n in self.warps and n != b): continue
+                if n in prev or self.blocked(*n) or (n in self.warps and n != b) or not self.step_ok(c, n): continue
                 prev[n] = (c, d); q.append(n)
         if b not in prev: return None
         out = []; c = b

@@ -13,6 +13,7 @@ def _sym(name, elf='/tmp/gx/dbg2.elf'):
         if len(a) == 3 and a[2] == name: return int(a[0], 16)
 _BMD = _sym('gBackupMapData') or 0x02031e00
 _CB2 = (_sym('CB2_Overworld') or 0x08057094) | 1   # lu dans dbg2.elf : l'adresse change a chaque build
+_BTF = _sym('gBattleTypeFlags')
 _defs = {}
 def _load(path):
     for l in open(path):
@@ -177,6 +178,8 @@ class T:
                 if calm >= 3: return n
                 s.e.run(20, 0); continue
             calm = 0
+            if s.inbattle() and _BTF and s.e.u32(_BTF) & 0x80:      # combat du Parc Safari (BALL/APPAT/CAILLOU/FUITE) : on fuit
+                s.press('DOWN', 4, 10); s.press('RIGHT', 4, 10); s.press('A', 4, 30); n += 1; continue
             s.press('A' if s.inbattle() else key, 4, 30); n += 1
             if shot and n % 25 == 0: s.shot('%s_%03d' % (shot, n))
         return n

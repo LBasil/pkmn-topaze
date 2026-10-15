@@ -6,7 +6,17 @@ FuchsiaCity_SafariZone_Entrance_OnFrame::
 	map_script_2 VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 1, FuchsiaCity_SafariZone_Entrance_EventScript_ExitWarpIn
 	map_script_2 VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 2, FuchsiaCity_SafariZone_Entrance_EventScript_ExitEarly
 	map_script_2 VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 3, FuchsiaCity_SafariZone_Entrance_EventScript_ExitWalkIn
+	map_script_2 VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 4, FuchsiaCity_SafariZone_Entrance_EventScript_ExitOccupied
 	.2byte 0
+
+@ Parc occupe par Onybris (pas de partie de Safari) : on ressort sans passer par les declencheurs d'entree
+FuchsiaCity_SafariZone_Entrance_EventScript_ExitOccupied::
+	lockall
+	applymovement LOCALID_PLAYER, FuchsiaCity_SafariZone_Entrance_Movement_Exit
+	waitmovement 0
+	setvar VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 0
+	releaseall
+	end
 
 @ When player runs out of balls mid-battle
 FuchsiaCity_SafariZone_Entrance_EventScript_ExitWalkIn::
@@ -110,6 +120,7 @@ FuchsiaCity_SafariZone_Entrance_EventScript_OccupiedEntry::
 	call_if_eq VAR_TEMP_2, 0, FuchsiaCity_SafariZone_Entrance_EventScript_EnterSafariZoneMid
 	call_if_eq VAR_TEMP_2, 1, FuchsiaCity_SafariZone_Entrance_EventScript_EnterSafariZoneRight
 	call_if_eq VAR_TEMP_2, 2, FuchsiaCity_SafariZone_Entrance_EventScript_EnterSafariZoneLeft
+	setvar VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 4
 	warp MAP_SAFARI_ZONE_CENTER, 255, 26, 30
 	waitstate
 	end

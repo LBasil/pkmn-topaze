@@ -2,6 +2,7 @@ import sys; sys.path.insert(0,'/tmp/gx')
 from tz import *
 import collections
 SP={0x54:(1,0),0x55:(-1,0),0x56:(0,-1),0x57:(0,1)}
+JP={0x38:(1,0),0x39:(-1,0),0x3a:(0,-1),0x3b:(0,1)}   # cases de saut (corniches) : on ne les franchit que dans leur sens, en sautant 2 cases
 D4=[('UP',(0,-1)),('DOWN',(0,1)),('LEFT',(-1,0)),('RIGHT',(1,0))]
 def spin_bfs(nav,a,b,extra_block=()):
     beh=lambda c: nav.attr(*c)&0x1ff
@@ -25,7 +26,11 @@ def spin_bfs(nav,a,b,extra_block=()):
         if c==b: break
         for d,(dx,dy) in D4:
             n=(c[0]+dx,c[1]+dy)
-            if bl(n) or (n in nav.warps and n!=b): continue
+            if bl(n) or (n in nav.warps and n!=b) or not nav.step_ok(c,n): continue
+            if beh(n) in JP:
+                if JP[beh(n)] != (dx, dy): continue
+                n=(n[0]+dx,n[1]+dy)
+                if bl(n): continue
             n2=land(n)
             if n2 in prev: continue
             prev[n2]=(c,d); q.append(n2)

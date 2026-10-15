@@ -47,7 +47,7 @@ def comps(name):
                 c = q.popleft()
                 for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0)):
                     m = (c[0] + dx, c[1] + dy)
-                    if m in lab or not (0 <= m[0] < nav.w and 0 <= m[1] < nav.h) or nav.blocked(*m) or m in nav.warps: continue
+                    if m in lab or not (0 <= m[0] < nav.w and 0 <= m[1] < nav.h) or nav.blocked(*m) or m in nav.warps or not nav.step_ok(c, m): continue
                     lab[m] = k; q.append(m)
             k += 1
     _COMP[name] = lab; return lab
@@ -209,9 +209,15 @@ class Auto(T):
             if path and (best is None or len(path) < best[0]): best = (len(path), c, d)
         if not best: return False
         if s.walk_fight(best[1], rounds) not in (True,): return False
-        s.face(best[2]); return True
+        s.face(best[2]); s._facing = {'UP': (0, -1), 'DOWN': (0, 1), 'LEFT': (-1, 0), 'RIGHT': (1, 0)}[best[2]]; return True
     def talk_obj(s, pos, n=14, shot=None):
-        if not s.approach(pos): return False
+        pos = tuple(pos)
+        for _ in range(5):       # un PNJ qui se promene a pu bouger : on verifie qu'il est bien en face avant de parler
+            if not s.approach(pos): return False
+            p = s.pos(); fx, fy = s._facing; front = (p[2] + fx, p[3] + fy)
+            if front in s.live_objs() or front == pos and not s.live_objs(): break
+            near = [o for o in s.live_objs() if abs(o[0] - pos[0]) + abs(o[1] - pos[1]) <= 3]
+            if near: pos = min(near, key=lambda o: abs(o[0] - pos[0]) + abs(o[1] - pos[1]))
         s.mash(n, shot); s.scene(900); return True
     def find_obj(s, script_pat):
         """Position (carte JSON) de l'objet dont le script contient script_pat sur la carte courante."""
@@ -219,6 +225,8 @@ class Auto(T):
             if script_pat in o['script']: return (o['x'], o['y'])
     def talk_script(s, script_pat, n=14, shot=None):
         pos = s.find_obj(script_pat); assert pos, 'objet introuvable ' + script_pat
+        near = [o for o in s.live_objs() if abs(o[0] - pos[0]) + abs(o[1] - pos[1]) <= 4]    # PNJ qui se deplace : position reelle
+        if near: pos = min(near, key=lambda o: abs(o[0] - pos[0]) + abs(o[1] - pos[1]))
         return s.talk_obj(pos, n, shot)
     def talk_wanderers(s, flags, area, rounds=8):
         """Parle aux objets mobiles de la zone `area` (x0,y0,x1,y1) jusqu'a ce que tous les `flags` soient poses."""
@@ -388,7 +396,28 @@ def stage_quartz(t):
 
 def stage_gym4(t): badge_gym(t, 'CeladonCity_Gym', 'Erika', 'FLAG_BADGE04_GET')
 
-STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4)]
+def stage_ameth(t):
+    assert t.go('FuchsiaCity_WardensHouse', banned=BAN), 'maison du gardien inaccessible'
+    if not t.getflag('FLAG_AMETHYST_RAID_DONE'):
+        t.walk_fight((6, 8), 6); t.scene(900, shot='raid')
+    t.report('FLAG_AMETHYST_RAID_STARTED', 'FLAG_AMETHYST_RAID_DONE')
+    assert t.getflag('FLAG_AMETHYST_RAID_DONE'), 'raid de la maison du gardien non declenche'
+    assert t.go('SafariZone_West', banned=BAN), 'Parc Safari ouest inaccessible'
+    for _ in range(4):
+        t.talk_script('OnybrisSelene', 40, 'selene')
+        t.talk_script('ItemGoldTeeth', 8)
+        if t.getflag('FLAG_HIDE_SAFARI_ZONE_WEST_GOLD_TEETH'): break
+    t.report('FLAG_HIDE_SAFARI_ZONE_WEST_GOLD_TEETH')
+    assert t.go('SafariZone_SecretHouse', banned=BAN), 'maison secrete du Safari inaccessible'
+    t.talk_script('Attendant', 12); t.report('FLAG_GOT_HM03')
+    if t.getvar('VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE') == 0:      # ROM sans le correctif de sortie du Parc occupe : on le simule
+        t.var('VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE', 1)
+    assert t.go('FuchsiaCity_WardensHouse', banned=BAN), 'retour chez le gardien impossible'
+    t.talk_script('Warden', 30, 'warden'); t.report('FLAG_GOT_HM04', 'FLAG_AMETHYST_STONE_GIVEN')
+
+def stage_gym5(t): badge_gym(t, 'FuchsiaCity_Gym', 'Koga', 'FLAG_BADGE05_GET')
+
+STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4), ('ameth', stage_ameth), ('gym5', stage_gym5)]
 
 if __name__ == '__main__':
     # usage : run_full.py all | run_full.py <etape> [<etape> ...]   (une etape isolee repart de la sauvegarde de la precedente)
