@@ -67,7 +67,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route1_EventScript_Doduo",
-      "flag": "FLAG_HIDE_ROUTE1_ANIMALS"
+      "flag": "FLAG_HIDE_ROUTE1_DODUO"
     },
     {
       "local_id": "LOCALID_ROUTE1_NIDORANM",
@@ -82,7 +82,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route1_EventScript_Nidoranm",
-      "flag": "FLAG_HIDE_ROUTE1_ANIMALS"
+      "flag": "FLAG_HIDE_ROUTE1_NIDORANM"
     },
     {
       "local_id": "LOCALID_ROUTE1_NIDORANF",
@@ -97,7 +97,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route1_EventScript_Nidoranf",
-      "flag": "FLAG_HIDE_ROUTE1_ANIMALS"
+      "flag": "FLAG_HIDE_ROUTE1_NIDORANF"
     },
     {
       "type": "object",

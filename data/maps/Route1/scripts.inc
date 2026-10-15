@@ -5,11 +5,32 @@ Route1_MapScripts::
 Route1_OnTransition::
 	goto_if_unset FLAG_GRENALUX_ONYBRIS_STRIKE, Route1_HideAnimals
 	goto_if_set FLAG_ONYBRIS_ANIMALS_FOUND, Route1_HideAnimals
-	clearflag FLAG_HIDE_ROUTE1_ANIMALS
+	clearflag FLAG_HIDE_ROUTE1_DODUO
+	clearflag FLAG_HIDE_ROUTE1_NIDORANM
+	clearflag FLAG_HIDE_ROUTE1_NIDORANF
+	goto_if_set FLAG_ROUTE1_TALKED_DODUO, Route1_HideDoduo
+Route1_OnTransition_Nm::
+	goto_if_set FLAG_ROUTE1_TALKED_NIDORANM, Route1_HideNidoranm
+Route1_OnTransition_Nf::
+	goto_if_set FLAG_ROUTE1_TALKED_NIDORANF, Route1_HideNidoranf
+	end
+
+Route1_HideDoduo::
+	setflag FLAG_HIDE_ROUTE1_DODUO
+	goto Route1_OnTransition_Nm
+
+Route1_HideNidoranm::
+	setflag FLAG_HIDE_ROUTE1_NIDORANM
+	goto Route1_OnTransition_Nf
+
+Route1_HideNidoranf::
+	setflag FLAG_HIDE_ROUTE1_NIDORANF
 	end
 
 Route1_HideAnimals::
-	setflag FLAG_HIDE_ROUTE1_ANIMALS
+	setflag FLAG_HIDE_ROUTE1_DODUO
+	setflag FLAG_HIDE_ROUTE1_NIDORANM
+	setflag FLAG_HIDE_ROUTE1_NIDORANF
 	end
 
 
@@ -54,6 +75,11 @@ Route1_EventScript_Doduo::
 	msgbox Route1_Text_Doduo
 	waitmoncry
 	setflag FLAG_ROUTE1_TALKED_DODUO
+	msgbox Route1_Text_AnimalLeaves
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_ROUTE1_DODUO
+	setflag FLAG_HIDE_ROUTE1_DODUO
+	fadescreen FADE_FROM_BLACK
 	goto Route1_EventScript_AnimalCheck
 	end
 
@@ -65,6 +91,11 @@ Route1_EventScript_Nidoranm::
 	msgbox Route1_Text_Nidoranm
 	waitmoncry
 	setflag FLAG_ROUTE1_TALKED_NIDORANM
+	msgbox Route1_Text_AnimalLeaves
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_ROUTE1_NIDORANM
+	setflag FLAG_HIDE_ROUTE1_NIDORANM
+	fadescreen FADE_FROM_BLACK
 	goto Route1_EventScript_AnimalCheck
 	end
 
@@ -76,6 +107,11 @@ Route1_EventScript_Nidoranf::
 	msgbox Route1_Text_Nidoranf
 	waitmoncry
 	setflag FLAG_ROUTE1_TALKED_NIDORANF
+	msgbox Route1_Text_AnimalLeaves
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_ROUTE1_NIDORANF
+	setflag FLAG_HIDE_ROUTE1_NIDORANF
+	fadescreen FADE_FROM_BLACK
 	goto Route1_EventScript_AnimalCheck
 	end
 
@@ -91,15 +127,9 @@ Route1_EventScript_AnimalMore::
 	release
 	end
 
-@ The three ranch animals gather and head home together.
+@ The last stray went home: the quest is done.
 Route1_EventScript_AnimalsHome::
-	fadescreen FADE_TO_BLACK
-	removeobject LOCALID_ROUTE1_DODUO
-	removeobject LOCALID_ROUTE1_NIDORANM
-	removeobject LOCALID_ROUTE1_NIDORANF
-	setflag FLAG_HIDE_ROUTE1_ANIMALS
 	setflag FLAG_ONYBRIS_ANIMALS_FOUND
-	fadescreen FADE_FROM_BLACK
 	msgbox Route1_Text_AnimalsHome
 	release
 	end

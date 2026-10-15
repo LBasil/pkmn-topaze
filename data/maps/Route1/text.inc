@@ -40,16 +40,18 @@ Route1_Text_Nidoranf::
     .string "NIDORAN: Kyuu!\n"
     .string "It runs to the others, relieved.$"
 
+Route1_Text_AnimalLeaves::
+    .string "It calms down, then trots off\n"
+    .string "toward GRENALUX, tail high.$"
+
 Route1_Text_AnimalsHome::
     .string "That was the last one!\n"
-    .string "The three strays huddle together,\n"
-    .string "then trot off toward GRENALUX.\p"
-    .string "They know the way home.\n"
+    .string "All three strays are safe at home.\p"
     .string "The RANCH hands will be glad.$"
 
 Route1_Text_AnimalMore::
-    .string "It calms down, but keeps looking\n"
-    .string "around. The others must be close.$"
+    .string "Some of the others are still\n"
+    .string "out here. Keep looking.$"
 
 Route1_Text_Walker::
     .string "Wild POKéMON hide in the tall grass.\n"

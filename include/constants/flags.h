@@ -1263,9 +1263,9 @@
 #define FLAG_ROUTE1_TALKED_NIDORANF      0x4C9 // Topaze: calmed NIDORAN female
 #define FLAG_VIRIDIAN_TUTORIAL_DONE      0x4CA // Topaze: OPANIHRUM old man's catch demo done (TEACHY TV given)
 #define FLAG_HIDE_RANCH_GRUNT2           0x4CB // Topaze: second ONYBRIS grunt (fights the rival) in the ranch opening scene
-#define FLAG_0x4CC               0x4CC
-#define FLAG_0x4CD               0x4CD
-#define FLAG_0x4CE               0x4CE
+#define FLAG_HIDE_ROUTE1_DODUO   0x4CC // Topaze: ROUTE 1 stray DODUO hidden (before the attack, or once it went home)
+#define FLAG_HIDE_ROUTE1_NIDORANM 0x4CD // Topaze: same for the male NIDORAN
+#define FLAG_HIDE_ROUTE1_NIDORANF 0x4CE // Topaze: same for the female NIDORAN
 #define FLAG_0x4CF               0x4CF
 #define FLAG_0x4D0               0x4D0
 #define FLAG_0x4D1               0x4D1
