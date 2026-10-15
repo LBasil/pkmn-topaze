@@ -445,3 +445,6 @@ Option OPTION → LEVEL CAP : OFF / LIGHT / MEDIUM / HARD (`optionsTopaze` bits 
 
 ## Route 1 : les animaux du ranch partent un par un (15/10)
 Chaque animal (Doduo, Nidoran M/F) a son propre drapeau de masquage (`FLAG_HIDE_ROUTE1_DODUO/NIDORANM/NIDORANF` = 0x4CC–0x4CE) ; une fois calmé il repart vers Grenalux (fondu + `removeobject`), les autres restent. Le dernier déclenche `FLAG_ONYBRIS_ANIMALS_FOUND` et le message de fin. `Route1_OnTransition` réaffiche seulement ceux pas encore parlés. Testé à l'émulateur (Doduo part, les 2 Nidoran restent).
+
+## TYPE MEMO (15/10)
+L'objet donné par la professeure (`ITEM_POWDER_JAR`, objet clé) est désormais le TYPE MEMO : nom/description dans `src/data/items.json`, et `FieldUseFunc_PowderJar` (`src/item_use.c`) affiche `gText_TypeMemo` (`src/strings.c`) : une page par type (« hits » = super efficace, « Weak to » = faiblesses, d'après la table réelle `docs/data/types.js`, Fée comprise) + immunités. Icône encore celle de la jarre (sprites en dernier). La machine à baies n'est pas utilisée dans Topaze. Si la table des types change, régénérer le texte.
