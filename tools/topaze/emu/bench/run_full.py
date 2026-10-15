@@ -28,7 +28,7 @@ def mname(dm):
     return tz._NAMES[dm.replace('MAP_', '').replace('_', '').lower()]
 # --- graphe des composantes (carte, zone atteignable) : warps + connexions ---------------------------------------
 _NAV = {}; _COMP = {}
-GATE_GFX = ('PUSHABLE_BOULDER', 'BREAKABLE_ROCK', 'STRENGTH', 'ROCK_SMASH')
+GATE_GFX = ('SNORLAX', 'PUSHABLE_BOULDER', 'BREAKABLE_ROCK', 'STRENGTH', 'ROCK_SMASH')
 def nav_of(name):
     if name not in _NAV:
         n = R.Nav(name)
@@ -59,6 +59,11 @@ def comp_of(name, cell):
         m = (cell[0] + dx, cell[1] + dy)
         if m in lab: return lab[m]
     return None
+def comps_of(name, cell):
+    """toutes les composantes touchees par une case (une case de warp peut en relier plusieurs)."""
+    lab = comps(name)
+    if cell in lab: return {lab[cell]}
+    return {lab[m] for m in ((cell[0], cell[1] + 1), (cell[0], cell[1] - 1), (cell[0] + 1, cell[1]), (cell[0] - 1, cell[1])) if m in lab}
 def exits(name, comp):
     """sorties d'une composante : ('warp', dest, idx, case) / ('conn', dest, conn, case_depart, case_arrivee)."""
     nav = nav_of(name); lab = comps(name); out = []
@@ -66,7 +71,7 @@ def exits(name, comp):
         d = w['dest_map']
         if d in ('MAP_DYNAMIC', 'DYNAMIC'): continue
         c = (w['x'], w['y'])
-        if comp_of(name, c) != comp: continue
+        if comp not in comps_of(name, c): continue
         try: dn = mname(d)
         except KeyError: continue
         dw = nav_of(dn).mj['warp_events']; di = int(w['dest_warp_id']) if str(w['dest_warp_id']).isdigit() else -1
@@ -88,19 +93,19 @@ def exits(name, comp):
     return out
 def route(src_map, src_cell, dst, banned=()):
     """Chemin le plus court de composante en composante jusqu'a la carte dst : liste de sorties (voir exits)."""
-    c0 = comp_of(src_map, src_cell)
-    if c0 is None: return None
-    start = (src_map, c0); prev = {start: None}; q = collections.deque([start]); end = None
+    c0s = comps_of(src_map, src_cell)
+    if not c0s: return None
+    prev = {}; q = collections.deque(); end = None
+    for c0 in sorted(c0s): prev[(src_map, c0)] = None; q.append((src_map, c0))
     while q:
         n = q.popleft()
         if n[0] == dst: end = n; break
         for e in exits(n[0], n[1]):
-            if (n[0], e[1], e[3]) in banned: continue
-            arr = e[4]; nc = comp_of(e[1], arr)
-            if nc is None: continue
-            nn = (e[1], nc)
-            if nn in prev: continue
-            prev[nn] = (n, e); q.append(nn)
+            if (n[0], e[1], e[3]) in banned or e[1] in banned: continue
+            for nc in comps_of(e[1], e[4]):
+                nn = (e[1], nc)
+                if nn in prev: continue
+                prev[nn] = (n, e); q.append(nn)
     if end is None: return None
     out = []; c = end
     while prev[c]: pn, e = prev[c]; out.append(e); c = pn
@@ -173,6 +178,8 @@ class Auto(T):
         for _ in range(tries * 8):
             cur = s.sync()
             if cur == target: return True
+            n_live = s.nav(); n_live.objs = {(o['x'], o['y']) for o in n_live.mj['object_events'] if any(g in o['graphics_id'] for g in GATE_GFX)}
+            _NAV[cur] = n_live; _COMP.pop(cur, None)        # la carte courante est lue en direct (barrieres ouvertes par des scripts...)
             p = s.pos(); rt = route(cur, (p[2], p[3]), target, banned)
             if not rt: log('BLOCK pas de route', cur, (p[2], p[3]), '->', target); return False
             e = rt[0]
@@ -324,7 +331,13 @@ def stage_gym3(t):
     trash_puzzle(t)
     badge_gym(t, 'VermilionCity_Gym', 'LtSurge', 'FLAG_BADGE03_GET')
 
-STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3)]
+def stage_tower(t):
+    assert t.go('PokemonTower_7F', banned=('SaffronCity', 'Hematown')), 'Tour Spinelle 7F inaccessible'
+    t.walk_fight((11, 8), 10); t.walk_fight((11, 6), 10); t.scene(maxn=900, shot='tower')
+    if not t.getflag('FLAG_RESCUED_MR_FUJI'): t.talk_obj((11, 4), 10)
+    t.report('FLAG_RESCUED_MR_FUJI')
+
+STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower)]
 
 if __name__ == '__main__':
     # usage : run_full.py all | run_full.py <etape> [<etape> ...]   (une etape isolee repart de la sauvegarde de la precedente)
