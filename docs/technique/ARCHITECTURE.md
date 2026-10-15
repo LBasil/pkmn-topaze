@@ -514,3 +514,7 @@ Nouveaux objets (slots libres 226/227, anciens `ITEM_0E2/0E3`) : `ITEM_LINK_CABL
 - `sFriendshipEventDeltas` (src/pokemon.c) : niveau +6/+4/+3, marche +2/+2/+1 (plus de jet 50 %), massage +12, nouvel evenement `FRIENDSHIP_EVENT_BATTLE_WIN` (+2/+1/+1, x2 en combat de dresseur) applique a toute l'equipe vivante a la fin d'un combat gagne (`FreeResetData_ReturnToOvOrDoEvolutions`, src/battle_main.c).
 - Marche : `UpdateHappinessStepCounter` toutes les 32 pas (au lieu de 128).
 - PNJ : Daisy (Bourg Palette, cooldown 300 pas, 1 Pokemon), Hotel de Celadopole (spa payant 300 P, 1 Pokemon, `TopazeMassageOne`), Fan Club de Carmin sur Mer (gratuit, toute l'equipe, `TopazePetParty`, cooldown partage 300 pas via `VAR_PETTING_COOLDOWN_STEP_COUNTER` = VAR_0x402A, incremente dans `RunMassageCooldownStepCounter`).
+
+## EXP. SHARE = interrupteur du Multi Exp integre
+
+Le partage d'XP d'equipe est actif par defaut. L'objet EXP. SHARE (donne dans `NewGameInitData`) s'utilise depuis le sac (`FieldUseFunc_ExpShare`, src/item_use.c) et bascule le bit 14 de `optionsTopaze` (`TOPAZE_OPT_EXPSHARE_OFF`). Quand coupe, Cmd_getexp (src/battle_script_commands.c) ne compte plus personne dans `viaExpShare` et saute les Pokemon qui n'ont pas combattu. Parties existantes : l'objet n'est pas ajoute retroactivement.
