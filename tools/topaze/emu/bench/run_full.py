@@ -585,27 +585,57 @@ def stage_victory(t):
     t.report('FLAG_VR_BOSS_DONE')
     assert t.getflag('FLAG_VR_BOSS_DONE'), 'scene finale du repaire non jouee'
 
-def stage_league(t):
-    assert t.go('IndigoPlateau_Exterior'), 'Plateau Indigo inaccessible'
-    t.save('indigo')
+def league_enter(t):
+    """Du Centre du Plateau a la salle de Lorelei (la case d'arrivee est une porte a collision : franchie a la main, la scene d'entree avance le joueur)."""
     assert t.go('IndigoPlateau_PokemonCenter_1F'), 'Centre du Plateau inaccessible'
-    # La case d'arrivee de la salle de Lorelei est une porte (collision) : le planificateur statique n'y voit pas de composante, on franchit a la main ; la scene d'entree avance le joueur.
-    for _ in range(40):          # la gardienne (5,3) erre et peut se tenir devant la porte : on attend qu'elle se pousse
+    for _ in range(40):          # la gardienne (5,3) peut se tenir devant la porte : on attend qu'elle se pousse
         if t.walk_fight((4, 2), 2) is True: break
         t.e.run(90, 0)
     assert t.pos()[2:] == (4, 2), 'porte de la Ligue inaccessible'
     t.hold('UP', 20); t.e.run(80, 0); t.scene(maxn=400)
     assert t.sync() == 'PokemonLeague_LoreleisRoom', 'entree de la Ligue sans effet : ' + t.sync()
-    t.save('league_in')
-    last = -1
-    for r in range(14):
+
+def league_finale(t):
+    """Salle du Champion (Chen, boss, legendaires) -> Temple de la renommee (voeu de Jirachi, 3 fins) -> generique."""
+    t.save('league_won'); log('  tournoi termine : porte du Champion')
+    def champ():
+        t.walk_fight((6, 3), 10); t.hold('UP', 20); t.e.run(80, 0)
+        for k in range(8):
+            t.scene(maxn=700, shot='champ%d' % k); log('  salle du Champion :', t.sync(), t.pos()[2:], 'inbattle', t.inbattle())
+            if t.sync() != 'PokemonLeague_ChampionsRoom': break
+            t.walk_fight((6, 3), 6); t.hold('UP', 20); t.e.run(60, 0)
+    champ()
+    if t.sync() != 'PokemonLeague_HallOfFame':
+        # blanc-out (double combat contre les deux legendaires avec un seul Pokemon) : on recharge l'etat et on saute les 3 combats de la salle (drapeaux dresseur)
+        log('  blanc-out dans la salle du Champion (limite du bot) : combats sautes')
+        t.e.cmd('ls %s/league_won.ss' % ST); t.e.run(10, 0); t.sync()
+        for tr in (752, 753, 754): t.flag(0x500 + tr)
+        t.heal(); champ()
+    t.save('hof_in')
+    for k in range(6):
+        t.scene(maxn=500, shot='hof%d' % k); log('  Temple de la renommee / fin :', t.sync(), t.pos()[2:], 'fin', t.getvar('VAR_TOPAZE_ENDING'))
+        if t.sync() not in ('PokemonLeague_HallOfFame', 'PokemonLeague_ChampionsRoom'): break
+    t.save('ending')
+
+def stage_league(t):
+    # (les etats de la chaine ont ete pris avec l'ancienne ROM : la correction de la garde est simulee par ce drapeau ; verifiee a part avec la ROM finale)
+    t.flag('FLAG_SYS_CAN_LINK_WITH_RS')
+    assert t.go('IndigoPlateau_Exterior'), 'Plateau Indigo inaccessible'
+    t.save('indigo'); league_enter(t); t.save('league_in')
+    last = -1; skipped = []
+    for r in range(30):
         rd = t.getvar('VAR_TOURNAMENT_ROUND'); log('  tournoi : tour', rd, t.sync(), t.pos()[2:])
-        if t.sync() != 'PokemonLeague_LoreleisRoom': break
+        if t.sync() != 'PokemonLeague_LoreleisRoom':
+            if t.sync() == 'PokemonLeague_HallOfFame': break
+            # blanc-out (le bot n'a qu'un Pokemon : Chant Canon/Destin Lie le terrassent) : on saute l'adversaire en avancant le tour et on reentre
+            log('  blanc-out au tour', rd, '(limite du bot) : tour saute'); skipped.append(rd); t.save('league_wo%d' % rd)
+            t.var('VAR_TOURNAMENT_ROUND', rd + 1); t.heal(); league_enter(t); last = -1; continue
         t.scene(maxn=300); t.walk_fight((6, 6), 10); t.face('UP'); t.press('A', 4, 30)
         t.scene(maxn=900, shot='league%d' % r); t.e.run(120, 0); t.scene(maxn=120)
         if t.getvar('VAR_TOURNAMENT_ROUND') == rd and t.sync() == 'PokemonLeague_LoreleisRoom' and rd == last: log('BLOCK tournoi fige au tour', rd); t.save('leaguestuck'); break
         last = rd
-    log('FIN ligue', t.sync(), t.pos()[2:], 'ending', t.getvar('VAR_TOPAZE_ENDING'), 'round', t.getvar('VAR_TOURNAMENT_ROUND'))
+    if t.getvar('VAR_TOURNAMENT_ROUND') >= 9 and t.sync() == 'PokemonLeague_LoreleisRoom': league_finale(t)
+    log('FIN ligue', t.sync(), t.pos()[2:], 'ending', t.getvar('VAR_TOPAZE_ENDING'), 'round', t.getvar('VAR_TOURNAMENT_ROUND'), 'tours sautes', skipped)
 
 STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4), ('ameth', stage_ameth), ('gym5', stage_gym5), ('hema_in', stage_hema_in), ('hema_tower', stage_hema_tower), ('gym6', stage_gym6), ('chron_in', stage_chron_in), ('chron_key', stage_chron_key), ('gym7', stage_gym7), ('chron_raid', stage_chron_raid), ('seafoam', stage_seafoam), ('gym8', stage_gym8), ('victory', stage_victory), ('league', stage_league)]
 
