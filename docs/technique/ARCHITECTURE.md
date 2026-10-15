@@ -427,3 +427,6 @@ Viridian +4 lignes en haut (bande de foret en metatiles primaires, ouverture x20
 
 ## Éditeur de cartes (14/10, v1)
 Outil local `tools/topaze/editor/` (voir son README) : `python3 tools/topaze/editor/server.py` puis http://localhost:8765. Édite `map.bin` (métatuiles, collisions, altitudes) et les événements de `map.json` (PNJ, panneaux, warps, déclencheurs). Réutilise `mapkit.py` pour le rendu. Pas de nouvelle carte, de texte ni de script dans la v1.
+
+## Vitesse du texte « INSTANT » (15/10)
+`OPTIONS_TEXT_SPEED_INSTANT` = 3 (champ `optionsTextSpeed`, 3 bits). Délai = 1 comme FAST, mais `RunTextPrinters` (src/text_printer.c) redessine toute la page en une image tant que `RenderFont` renvoie `RENDER_PRINT` (s'arrête sur les attentes de touche/défilement). Tables d'indexation étendues : text.c, braille_text.c, berry_crush.c, new_menu_helpers.c. Testé à l'émulateur (dialogue de la mère : page complète dès la 2e image, flèche ▼ OK).

@@ -1,6 +1,7 @@
 #include "global.h"
 #include "window.h"
 #include "text.h"
+#include "constants/global.h"
 
 static EWRAM_DATA struct TextPrinter sTempTextPrinter = {0};
 static EWRAM_DATA struct TextPrinter sTextPrinters[NUM_TEXT_PRINTERS] = {0};
@@ -121,6 +122,13 @@ void RunTextPrinters(void)
         if (sTextPrinters[i].active)
         {
             u16 renderCmd = RenderFont(&sTextPrinters[i]);
+            // Topaze: INSTANT text speed draws every character of the page in one frame
+            if (gSaveBlock2Ptr->optionsTextSpeed == OPTIONS_TEXT_SPEED_INSTANT)
+            {
+                u16 guard;
+                for (guard = 0; renderCmd == RENDER_PRINT && guard < 400; guard++)
+                    renderCmd = RenderFont(&sTextPrinters[i]);
+            }
             switch (renderCmd)
             {
             case RENDER_PRINT:
