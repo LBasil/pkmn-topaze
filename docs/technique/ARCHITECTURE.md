@@ -467,3 +467,11 @@ PEAU MÉTAL (Onix→Steelix, Insécateur→Cizayox), ÉCAILLE DRACO (Hypocéan�
 
 ## LINK CABLE, PRISM SCALE, Évoli et Barpau (15/10)
 Nouveaux objets (slots libres 226/227, anciens `ITEM_0E2/0E3`) : `ITEM_LINK_CABLE` (évolution « comme par échange » : Kadabra→Alakazam, Machoke→Machamp, Graveler→Golem, Haunter→Gengar) et `ITEM_PRISM_SCALE` (Feebas→Milotic). Icônes provisoires (UP-GRADE et DEEPSEASCALE, `item_icon_table.h`), à remplacer par les sprites de Basil. Même mécanisme que les objets d'évolution (`EVO_ITEM`, `sItemEffect_TradeEvoItem`, `IS_POKEMON_ITEM` élargi jusqu'à `ITEM_PRISM_SCALE`). Évoli : **PIERRE SOLEIL → Mentali, PIERRE LUNE → Noctali** (les évolutions jour/nuit étaient désactivées dans FRLG). `evolution.h` : plus aucune évolution `EVO_TRADE`, `EVO_BEAUTY` ni `EVO_FRIENDSHIP_DAY/NIGHT`. Testé en émulateur (Kadabra + LINK CABLE). **Reste à décider** : où le joueur obtient LINK CABLE, PRISM SCALE, PIERRE SOLEIL et PIERRE LUNE (boutique, PNJ, cadeau).
+
+## Résumé Pokémon : IV / EV / bonheur (15-10)
+- Page Skills du résumé (`src/pokemon_summary_screen.c`) : **SELECT** bascule `sTopazeStatDetail`.
+  - Panneau droit : chaque ligne (PV, ATK, DEF, SP.ATK, SP.DEF, SPEED) affiche `IV/EV`.
+  - Panneau bas : `FRIENDSHIP` (bonheur 0-255) et `TOTAL EV` (max 510) remplacent EXP / NEXT LV.
+  - Titre de page « IV / EV » ; barre de contrôles `PAGE + SELECT IV/EV` (strings.c).
+- Le mode reste actif en changeant de Pokémon (haut/bas) pour comparer l'équipe ; il est remis à zéro au changement de page et à l'ouverture du résumé.
+- Après réimpression il faut `CopyWindowToVram` sur les fenêtres (sinon l'écran ne bouge pas).

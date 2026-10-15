@@ -59,6 +59,7 @@ static void Task_HandleInput_SelectMove(u8 id);
 static void PokeSum_CopyNewBgTilemapBeforePageFlip_2(void);
 static void PokeSum_CopyNewBgTilemapBeforePageFlip(void);
 static void PokeSum_DrawPageProgressTiles(void);
+static bool8 sTopazeStatDetail; // SELECT on Skills page: show IV/EV, friendship, total EV
 static void PokeSum_PrintRightPaneText(void);
 static void PokeSum_PrintBottomPaneText(void);
 static void PokeSum_PrintAbilityDataOrMoveTypes(void);
@@ -975,6 +976,7 @@ static const u16 * const sHpBarPals[] =
 
 void ShowPokemonSummaryScreen(struct Pokemon * party, u8 cursorPos, u8 lastIdx, MainCallback savedCallback, u8 mode)
 {
+    sTopazeStatDetail = FALSE;
     sMonSummaryScreen = AllocZeroed(sizeof(struct PokemonSummaryScreenData));
     sMonSkillsPrinterXpos = AllocZeroed(sizeof(struct Struct203B144));
 
@@ -1192,6 +1194,21 @@ static void Task_InputHandler_Info(u8 taskId)
                 }
                 return;
             }
+            else if (JOY_NEW(SELECT_BUTTON) && sMonSummaryScreen->curPageIndex == PSS_PAGE_SKILLS && !sMonSummaryScreen->isEgg)
+            {
+                PlaySE(SE_SELECT);
+                sTopazeStatDetail ^= 1;
+                PokeSum_PrintRightPaneText();
+                PokeSum_PrintBottomPaneText();
+                PokeSum_PrintAbilityDataOrMoveTypes();
+                CopyWindowToVram(sMonSummaryScreen->windowIds[POKESUM_WIN_PAGE_NAME], 2);
+                CopyWindowToVram(sMonSummaryScreen->windowIds[POKESUM_WIN_CONTROLS], 2);
+                CopyWindowToVram(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], 2);
+                CopyWindowToVram(sMonSummaryScreen->windowIds[POKESUM_WIN_TRAINER_MEMO], 2);
+                CopyWindowToVram(sMonSummaryScreen->windowIds[5], 2);
+                CopyWindowToVram(sMonSummaryScreen->windowIds[6], 2);
+                return;
+            }
             else if (JOY_NEW(B_BUTTON))
             {
                 sMonSummaryScreen->state3270 = PSS_STATE3270_ATEXIT_FADEOUT;
@@ -1199,6 +1216,7 @@ static void Task_InputHandler_Info(u8 taskId)
         }
         break;
     case PSS_STATE3270_FLIPPAGES:
+        sTopazeStatDetail = FALSE;
         if (sMonSummaryScreen->curPageIndex != PSS_PAGE_MOVES_INFO)
         {
             CreateTask(Task_PokeSum_FlipPages, 0);
@@ -2401,6 +2419,44 @@ static void PokeSum_FinishSetup(void)
     SetMainCallback2(CB2_RunPokemonSummaryScreen);
 }
 
+
+static void TopazePrintIvEv(u8 x, u8 y, u8 ivId, u8 evId)
+{
+    u8 *ptr = gStringVar1;
+    u16 iv = GetMonData(&sMonSummaryScreen->currentMon, ivId);
+    u16 ev = GetMonData(&sMonSummaryScreen->currentMon, evId);
+
+    ptr = ConvertIntToDecimalStringN(ptr, iv, STR_CONV_MODE_LEFT_ALIGN, 2);
+    *ptr++ = CHAR_SLASH;
+    ConvertIntToDecimalStringN(ptr, ev, STR_CONV_MODE_LEFT_ALIGN, 3);
+    AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, x + 36 - StringLength(gStringVar1) * 6, y, sLevelNickTextColors[0], TEXT_SKIP_DRAW, gStringVar1);
+}
+
+static void TopazePrintNumberRight(u8 y, u16 value)
+{
+    ConvertIntToDecimalStringN(gStringVar1, value, STR_CONV_MODE_LEFT_ALIGN, 3);
+    AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 15 + 63 - StringLength(gStringVar1) * 6, y, sLevelNickTextColors[0], TEXT_SKIP_DRAW, gStringVar1);
+}
+
+static void PrintSkillsPageDetail(void)
+{
+    u16 totalEv = GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_HP_EV)
+                + GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_ATK_EV)
+                + GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_DEF_EV)
+                + GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPEED_EV)
+                + GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPATK_EV)
+                + GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_SPDEF_EV);
+
+    TopazePrintIvEv(41, 4, MON_DATA_HP_IV, MON_DATA_HP_EV);
+    TopazePrintIvEv(41, 22, MON_DATA_ATK_IV, MON_DATA_ATK_EV);
+    TopazePrintIvEv(41, 35, MON_DATA_DEF_IV, MON_DATA_DEF_EV);
+    TopazePrintIvEv(41, 48, MON_DATA_SPATK_IV, MON_DATA_SPATK_EV);
+    TopazePrintIvEv(41, 61, MON_DATA_SPDEF_IV, MON_DATA_SPDEF_EV);
+    TopazePrintIvEv(41, 74, MON_DATA_SPEED_IV, MON_DATA_SPEED_EV);
+    TopazePrintNumberRight(87, GetMonData(&sMonSummaryScreen->currentMon, MON_DATA_FRIENDSHIP));
+    TopazePrintNumberRight(100, totalEv);
+}
+
 static void PokeSum_PrintPageName(const u8 * str)
 {
     FillWindowPixelBuffer(sMonSummaryScreen->windowIds[POKESUM_WIN_PAGE_NAME], 0);
@@ -2498,6 +2554,12 @@ static void PrintInfoPage(void)
 
 static void PrintSkillsPage(void)
 {
+    if (sTopazeStatDetail)
+    {
+        PrintSkillsPageDetail();
+        return;
+    }
+
     AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 14 + sMonSkillsPrinterXpos->curHpStr, 4, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.curHpStrBuf);
     AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 50 + sMonSkillsPrinterXpos->atkStr, 22, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_ATK]);
     AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_RIGHT_PANE], FONT_NORMAL, 50 + sMonSkillsPrinterXpos->defStr, 35, sLevelNickTextColors[0], TEXT_SKIP_DRAW, sMonSummaryScreen->summary.statValueStrBufs[PSS_STAT_DEF]);
@@ -2844,12 +2906,12 @@ static void PokeSum_PrintExpPoints_NextLv(void)
     AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_TRAINER_MEMO], FONT_NORMAL,
                                  26, 7,
                                  sLevelNickTextColors[0], TEXT_SKIP_DRAW,
-                                 gText_PokeSum_ExpPoints);
+                                 sTopazeStatDetail ? gText_PokeSum_Friendship : gText_PokeSum_ExpPoints);
 
     AddTextPrinterParameterized3(sMonSummaryScreen->windowIds[POKESUM_WIN_TRAINER_MEMO], FONT_NORMAL,
                                  26, 20,
                                  sLevelNickTextColors[0], TEXT_SKIP_DRAW,
-                                 gText_PokeSum_NextLv);
+                                 sTopazeStatDetail ? gText_PokeSum_TotalEv : gText_PokeSum_NextLv);
 }
 
 static void PokeSum_PrintSelectedMoveStats(void)
@@ -2940,8 +3002,8 @@ static void PokeSum_PrintPageHeaderText(u8 curPageIndex)
         PrintMonLevelNickOnWindow2(gText_PokeSum_NoData);
         break;
     case PSS_PAGE_SKILLS:
-        PokeSum_PrintPageName(gText_PokeSum_PageName_PokemonSkills);
-        PokeSum_PrintControlsString(gText_PokeSum_Controls_Page);
+        PokeSum_PrintPageName(sTopazeStatDetail ? gText_PokeSum_PageName_IvEv : gText_PokeSum_PageName_PokemonSkills);
+        PokeSum_PrintControlsString(gText_PokeSum_Controls_PageIvEv);
         PrintMonLevelNickOnWindow2(gText_PokeSum_NoData);
         break;
     case PSS_PAGE_MOVES:
