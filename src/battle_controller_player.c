@@ -3098,5 +3098,13 @@ static void PreviewDeterminativeMoveTargets(void)
 // Lets the HELP system ignore L so the key reaches HandleInputChooseAction.
 bool8 TopazeQuickBallReady(void)
 {
-    return gBattlerControllerFuncs[gActiveBattler] == HandleInputChooseAction && TopazeQuickBallItem() != ITEM_NONE;
+    u8 i;
+
+    // gActiveBattler is not meaningful outside the controller loop, so look at every battler
+    for (i = 0; i < gBattlersCount; i++)
+    {
+        if (gBattlerControllerFuncs[i] == HandleInputChooseAction)
+            return TopazeQuickBallItem() != ITEM_NONE;
+    }
+    return FALSE;
 }
