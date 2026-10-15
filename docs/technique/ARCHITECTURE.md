@@ -442,3 +442,6 @@ Dernier Pokémon de chaque champion (±6 par arène, équipe 3-4 niveaux en dess
 
 ## Level cap (15/10)
 Option OPTION → LEVEL CAP : OFF / LIGHT / MEDIUM / HARD (`optionsTopaze` bits 7-8, `TOPAZE_OPT_LVCAP()`). `src/topaze_levelcap.c` : plafond = niveau du dernier Pokémon du prochain champion selon le nombre de badges {16,22,29,35,40,45,50,55,71} + marge (HARD +0, MEDIUM +4, LIGHT +8), levé après la Ligue (`FLAG_SYS_GAME_CLEAR`). Appliqué : XP de combat (`Cmd_getexp` : 0 XP au plafond, gain tronqué pour ne pas le dépasser) et Super Bonbon (`pokemon.c`, 2 endroits). Les Pokémon au-dessus du plafond ne sont pas rabaissés. Testé à l'émulateur (HARD : aucun gain d'XP pour un niveau 90, menu OFF/LIGHT/MEDIUM). ⚠ `mkdbg2.py` fait `git checkout src/battle_script_commands.c` : committer avant de le lancer.
+
+## Route 1 : les animaux du ranch partent un par un (15/10)
+Chaque animal (Doduo, Nidoran M/F) a son propre drapeau de masquage (`FLAG_HIDE_ROUTE1_DODUO/NIDORANM/NIDORANF` = 0x4CC–0x4CE) ; une fois calmé il repart vers Grenalux (fondu + `removeobject`), les autres restent. Le dernier déclenche `FLAG_ONYBRIS_ANIMALS_FOUND` et le message de fin. `Route1_OnTransition` réaffiche seulement ceux pas encore parlés. Testé à l'émulateur (Doduo part, les 2 Nidoran restent).
