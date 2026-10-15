@@ -7,6 +7,7 @@ from drive import *
 import mapkit
 ROOT = '.'
 WATER = (0x10, 0x11, 0x12, 0x13, 0x15, 0x1b)
+SURF = False     # vrai : l'eau est praticable (le joueur a la CS3 et l'insigne) ; utilise par l'autopilote tools/topaze/emu/bench/run_full.py
 def mapid(name):
     for l in open('include/constants/map_groups.h'):
         m = re.match(r'#define MAP_%s\s+\((\d+)\s*\|\s*\((\d+)\s*<<\s*8\)' % name, l)
@@ -24,10 +25,11 @@ class Nav:
     def attr(self, x, y): m = self.g[y * self.w + x] & 0x3ff; return self.pa[m] if m < 640 else self.sa[m - 640]
     def blocked(self, x, y):
         if not (0 <= x < self.w and 0 <= y < self.h): return True
-        return (x, y) in self.objs or bool((self.g[y * self.w + x] >> 10) & 3) or (self.attr(x, y) & 0x1ff) in WATER
+        return (x, y) in self.objs or bool((self.g[y * self.w + x] >> 10) & 3) or (not SURF and (self.attr(x, y) & 0x1ff) in WATER)
     def step_ok(self, c, n):
         """Regle d'altitude du moteur : on ne passe pas d'un niveau a un autre (sauf 0 et 15, qui relient tout)."""
         ea = self.g[c[1] * self.w + c[0]] >> 12; eb = self.g[n[1] * self.w + n[0]] >> 12
+        if SURF and ((self.attr(*c) & 0x1ff) in WATER or (self.attr(*n) & 0x1ff) in WATER): return True      # rive <-> eau : le moteur gere l'embarquement
         return ea in (0, 15) or eb in (0, 15) or ea == eb
     def path(self, a, b):
         prev = {a: None}; q = collections.deque([a])

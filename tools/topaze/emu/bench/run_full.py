@@ -180,12 +180,14 @@ class Auto(T):
         """Va jusqu'a la carte `target` par le graphe de composantes. Renvoie True si arrive."""
         banned = set(banned); tried = collections.Counter()
         if 'SNORLAX' in GATE_GFX and s.getflag('FLAG_GOT_POKE_FLUTE'): open_gate('SNORLAX')
-        for _ in range(tries * 8):
+        if not R.SURF and s.getflag('FLAG_GOT_HM03') and s.getflag('FLAG_BADGE05_GET'): R.SURF = True; _NAV.clear(); _COMP.clear()
+        for _ in range(tries * 40):
             cur = s.sync()
             if cur == target: return True
             n_live = s.nav(); n_live.objs = {(o['x'], o['y']) for o in n_live.mj['object_events'] if any(g in o['graphics_id'] for g in GATE_GFX)}
             _NAV[cur] = n_live; _COMP.pop(cur, None)        # la carte courante est lue en direct (barrieres ouvertes par des scripts...)
             p = s.pos(); rt = route(cur, (p[2], p[3]), target, banned)
+            if not rt and s.tele_exit(): continue
             if not rt: log('BLOCK pas de route', cur, (p[2], p[3]), '->', target); s.save('noroute_' + cur); return False
             e = rt[0]
             if not s.hop(e):
@@ -194,7 +196,7 @@ class Auto(T):
                     if not s.idle(): s.scene(maxn=600)          # une scene a pu se declencher en route : on la laisse finir puis on reessaie
                     if s.clear_blocker(e[3]) or s.sync() != cur or tried[(cur, e[3])] <= 2: continue
                 log('BLOCK hop echoue', cur, e[:2], e[3], s.pos()); banned.add((cur, e[1], e[3]))
-                s.shot('block_%s_%s' % (cur, e[1]))
+                s.shot('block_%s_%s' % (cur, e[1])); s.save('hopfail_' + cur)
             else: log('  ', cur, '->', s.sync(), s.pos()[2:])
         return s.sync() == target
     def pause_to_free(s, maxn=300, shot=None):
@@ -219,14 +221,30 @@ class Auto(T):
                 if nav.blocked(*n) or not nav.step_ok(c, n): continue
                 if n in ws:
                     t = tele(n)
-                    if t is None: continue
-                    n = t
+                    if t is None and n != goal: continue
+                    if t is not None: n = t
                 if n in prev: continue
                 prev[n] = (c, d); q.append(n)
         if goal not in prev: return None
         out = []; c = goal
         while prev[c]: out.append(prev[c][1]); c = prev[c][0]
         return out[::-1]
+    def tele_exit(s):
+        """Sort de la carte courante par une de ses sorties en passant par les teleporteurs internes. True si la carte a change."""
+        m0 = s.pos()[:2]; nav = s.nav(); me = nav.mj['id']; p = s.pos(); cur = (p[2], p[3]); cands = []
+        for w in nav.mj['warp_events']:
+            if w['dest_map'] == me or w['dest_map'] in ('MAP_DYNAMIC', 'DYNAMIC'): continue
+            pl = s.tele_plan(cur, (w['x'], w['y']))
+            if pl is not None: cands.append((len(pl), (w['x'], w['y'])))
+        for _, c in sorted(cands)[:4]:
+            p = s.pos(); cur = (p[2], p[3])
+            if s.tele_plan(cur, c) is None: continue
+            s.walk_tele(c); s.e.run(60, 0)
+            for d in ('DOWN', 'LEFT', 'RIGHT', 'UP'):      # case de sortie atteinte : on pousse vers le bord pour franchir la porte
+                if s.pos()[:2] != m0: return True
+                s.hold(d, 16); s.e.run(60, 0)
+            if s.pos()[:2] != m0: return True
+        return False
     def walk_tele(s, goal, tries=300):
         """Marche pas a pas vers goal en utilisant les teleporteurs internes (arene d'Hematown) ; replanifie a chaque pas."""
         for _ in range(tries):
@@ -479,7 +497,11 @@ def stage_hema_tower(t):
 
 def stage_gym6(t): badge_gym(t, 'SaffronCity_Gym', 'Sabrina', 'FLAG_BADGE06_GET')
 
-STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4), ('ameth', stage_ameth), ('gym5', stage_gym5), ('hema_in', stage_hema_in), ('hema_tower', stage_hema_tower), ('gym6', stage_gym6)]
+def stage_chron_in(t):
+    assert t.go('CinnabarIsland', banned=('Route19', 'Route20', 'FuchsiaCity')), 'Chrondrolia inaccessible (Surf ?)'
+    t.report('FLAG_CHRONDROLIA_RAID_STARTED')
+
+STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4), ('ameth', stage_ameth), ('gym5', stage_gym5), ('hema_in', stage_hema_in), ('hema_tower', stage_hema_tower), ('gym6', stage_gym6), ('chron_in', stage_chron_in)]
 
 if __name__ == '__main__':
     # usage : run_full.py all | run_full.py <etape> [<etape> ...]   (une etape isolee repart de la sauvegarde de la precedente)

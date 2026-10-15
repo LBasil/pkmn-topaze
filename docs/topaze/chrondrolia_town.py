@@ -30,6 +30,7 @@ OKB = {int(m, 16) for m in re.findall(r'#define MB_\w+\s+(0x[0-9A-Fa-f]+)', hdr)
 WATER = {0x10, 0x11, 0x12, 0x15}
 def conv(v):
     b, layer = v & 0xff, v >> 12
+    if b == 0x16: b = 0x15      # flaque d'Emerald utilisee comme eau (mer de Chrondrolia) : doit etre SURFABLE
     if b not in OKB: b = 0
     a = b | (layer << 29)
     if b == 0x02: a |= 0x1000200

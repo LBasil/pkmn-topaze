@@ -14,6 +14,7 @@ def _sym(name, elf='/tmp/gx/dbg2.elf'):
 _BMD = _sym('gBackupMapData') or 0x02031e00
 _CB2 = (_sym('CB2_Overworld') or 0x08057094) | 1   # lu dans dbg2.elf : l'adresse change a chaque build
 _BTF = _sym('gBattleTypeFlags')
+_PAV = _sym('gPlayerAvatar')
 _defs = {}
 def _load(path):
     for l in open(path):
@@ -116,6 +117,16 @@ class T:
             if p == last: return p
             last = p
         return last
+    def surfing(s): return bool(_PAV and s.e.peek(_PAV, 1)[0] & 0x08)      # PLAYER_AVATAR_FLAG_SURFING
+    def embark(s, nav, cur, d):
+        """Si le pas `d` entre dans l'eau depuis la terre : lance SURF (face a l'eau, A, OUI). True si on est maintenant sur l'eau."""
+        dx, dy = {'UP': (0, -1), 'DOWN': (0, 1), 'LEFT': (-1, 0), 'RIGHT': (1, 0)}[d]; n = (cur[0] + dx, cur[1] + dy)
+        if s.surfing() or (nav.attr(*n) & 0x1ff) not in R.WATER or (nav.attr(*cur) & 0x1ff) in R.WATER: return False
+        for _ in range(3):
+            s.e.run(2, KEYS[d]); s.e.run(10, 0); s.press('A', 4, 40); s.press('A', 4, 40)
+            for _ in range(6): s.e.run(30, 0)
+            if s.surfing(): break
+        s.e.run(20, 0); return s.surfing()
     def walk_to(s, goal, name=None, tries=200):
         """Marche vers goal (BFS qui connait les cases-flèches, objets lus en direct) ; True / False / 'warped'."""
         from spin import spin_bfs
@@ -126,6 +137,7 @@ class T:
             if cur == goal: return True
             dirs = spin_bfs(nav, cur, goal)
             if not dirs: s.why = ('nopath', cur, sorted(nav.objs)); return False
+            if R.SURF and s.embark(nav, cur, dirs[0]): continue
             q = step(s.e, dirs[0])
             if q is None or q[:2] != p[:2]: return 'warped'
             q = s.settle()

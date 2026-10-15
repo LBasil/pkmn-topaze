@@ -25,6 +25,7 @@ def conv_attr(path, sec):
     for i in range(len(raw) // 2):
         v = struct.unpack('<H', raw[i * 2:i * 2 + 2])[0]
         b, layer = v & 0xff, v >> 12
+        if b == 0x16: b = 0x15      # flaque d'Emerald utilisee comme eau (mares de Grenalux) : doit etre SURFABLE (comportement ocean + terrain eau)
         if b not in OK: b = 0
         a = b | (layer << 29)
         if b == 0x02: a |= 0x1000200
