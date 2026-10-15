@@ -430,3 +430,6 @@ Outil local `tools/topaze/editor/` (voir son README) : `python3 tools/topaze/edi
 
 ## Vitesse du texte « INSTANT » (15/10)
 `OPTIONS_TEXT_SPEED_INSTANT` = 3 (champ `optionsTextSpeed`, 3 bits). Délai = 1 comme FAST, mais `RunTextPrinters` (src/text_printer.c) redessine toute la page en une image tant que `RenderFont` renvoie `RENDER_PRINT` (s'arrête sur les attentes de touche/défilement). Tables d'indexation étendues : text.c, braille_text.c, berry_crush.c, new_menu_helpers.c. Testé à l'émulateur (dialogue de la mère : page complète dès la 2e image, flèche ▼ OK).
+
+## Guide des touches supprimé (15/10)
+Au nouveau jeu, les 3 pages bleues « Controls » (L/R, croix…) de src/oak_speech.c sont sautées : après le chargement, `Task_ControlsGuide_Skip` nettoie la page 1 et enchaîne sur l'intro Pikachu (pages bleues « In the world which you are about to enter… », conservées). Testé à l'émulateur (titre → intro → Oak).

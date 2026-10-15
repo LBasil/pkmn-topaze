@@ -52,6 +52,7 @@ static void ControlsGuide_LoadPage1(void);
 static void Task_ControlsGuide_HandleInput(u8);
 static void Task_ControlsGuide_ChangePage(u8);
 static void Task_ControlsGuide_Clear(u8);
+static void Task_ControlsGuide_Skip(u8);
 
 static void Task_PikachuIntro_LoadPage1(u8);
 static void Task_PikachuIntro_HandleInput(u8);
@@ -780,13 +781,12 @@ static void Task_NewGameScene(u8 taskId)
         BlendPalettes(PALETTES_ALL, 16, RGB_BLACK);
         break;
     case 10:
-        BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
+        // Topaze: the controls guide (blue screens) is skipped; go straight to the Pikachu intro
         SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_MODE_0 | DISPCNT_OBJ_1D_MAP | DISPCNT_OBJ_ON);
         ShowBg(0);
         ShowBg(1);
         SetVBlankCallback(VBlankCB_NewGameScene);
-        PlayBGM(MUS_NEW_GAME_INSTRUCT);
-        gTasks[taskId].func = Task_ControlsGuide_HandleInput;
+        gTasks[taskId].func = Task_ControlsGuide_Skip;
         gMain.state = 0;
         return;
     }
@@ -903,6 +903,22 @@ static void Task_ControlsGuide_ChangePage(u8 taskId)
 }
 
 #undef tDelta
+
+static void Task_ControlsGuide_Skip(u8 taskId)
+{
+    FillWindowPixelBuffer(sOakSpeechResources->windowIds[0], PIXEL_FILL(0));
+    ClearWindowTilemap(sOakSpeechResources->windowIds[0]);
+    CopyWindowToVram(sOakSpeechResources->windowIds[0], COPYWIN_FULL);
+    RemoveWindow(sOakSpeechResources->windowIds[0]);
+    sOakSpeechResources->windowIds[0] = 0;
+    FillBgTilemapBufferRect_Palette0(1, 0, 0, 2, 30, 18);
+    CopyBgTilemapBufferToVram(1);
+    DestroyTextCursorSprite(gTasks[taskId].tTextCursorSpriteId);
+    sOakSpeechResources->windowIds[0] = RGB_BLACK;
+    LoadPalette(sOakSpeechResources->windowIds, BG_PLTT_ID(0), PLTT_SIZEOF(1));
+    gTasks[taskId].tTimer = 1;
+    gTasks[taskId].func = Task_PikachuIntro_LoadPage1;
+}
 
 static void Task_ControlsGuide_Clear(u8 taskId)
 {
