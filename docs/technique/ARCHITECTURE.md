@@ -436,3 +436,6 @@ Au nouveau jeu, les 3 pages bleues « Controls » (L/R, croix…) de src/oak_spe
 
 ## Champions : Gen 1 uniquement (15/10)
 Les 8 champions n'utilisent que des espèces #1-151 (les autres générations sont réservées aux Îles Sevii). Hepha (`sParty_LeaderGiovanni`) refait : Magnéton 52, Arbok 53, Mackogneur 55, Grolem 56, Tortank 58 (tous Acier, objets et attaques personnalisés). Le site (`build_site.py`) lit maintenant aussi les équipes à attaques par défaut.
+
+## Courbe des champions (15/10, décidée avec Basil)
+Dernier Pokémon de chaque champion (±6 par arène, équipe 3-4 niveaux en dessous) : Kay 16 (12-16), Sylvestre 22 (18-22), Hera 29 (24-29), Grim 35 (31-35), Achlys 40 (37-40), Nox 45 (41-45), Eddie 50 (46-50), Hepha 55 (50-55). Calvin et Robin (Route 3) abaissés de 16 à 14 pour rester sous Kay. Non pris en compte à ce stade : combats scénarisés (rival, Misty, Vesper, S.S. Anne) et matchs retour.
