@@ -537,7 +537,18 @@ def stage_chron_raid(t):
     t.report('FLAG_CHRONDROLIA_RAID_DONE')
     assert t.getflag('FLAG_CHRONDROLIA_RAID_DONE'), 'topaze non obtenu'
 
-STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4), ('ameth', stage_ameth), ('gym5', stage_gym5), ('hema_in', stage_hema_in), ('hema_tower', stage_hema_tower), ('gym6', stage_gym6), ('chron_in', stage_chron_in), ('chron_key', stage_chron_key), ('gym7', stage_gym7), ('chron_raid', stage_chron_raid)]
+def stage_seafoam(t):
+    assert t.go('SeafoamIslands_1F'), 'volcan 1F inaccessible'
+    if not t.getflag('FLAG_SEAFOAM_ALLIES_MET'): x = t.pos()[2]; t.walk_fight((x, 19), 8, 'sf1w')     # declencheur de la scene (y=19)
+    t.scene(maxn=900, shot='sf1'); t.report('FLAG_SEAFOAM_ALLIES_MET')
+    assert t.getflag('FLAG_SEAFOAM_ALLIES_MET'), 'Gold/Silver : scene des allies non declenchee'
+    assert t.go('SeafoamIslands_B4F'), 'volcan B4F inaccessible'
+    t.scene(maxn=900, shot='sf4'); t.report('FLAG_SEAFOAM_BOSS_DONE')
+    if not t.getflag('FLAG_SEAFOAM_BOSS_DONE'): t.talk_script('Kronos', 40, 'sf4k')
+    t.report('FLAG_SEAFOAM_BOSS_DONE')
+    assert t.getflag('FLAG_SEAFOAM_BOSS_DONE'), 'Kronos (volcan B4F) non battu'
+
+STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4), ('ameth', stage_ameth), ('gym5', stage_gym5), ('hema_in', stage_hema_in), ('hema_tower', stage_hema_tower), ('gym6', stage_gym6), ('chron_in', stage_chron_in), ('chron_key', stage_chron_key), ('gym7', stage_gym7), ('chron_raid', stage_chron_raid), ('seafoam', stage_seafoam)]
 
 if __name__ == '__main__':
     # usage : run_full.py all | run_full.py <etape> [<etape> ...]   (une etape isolee repart de la sauvegarde de la precedente)
