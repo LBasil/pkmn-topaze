@@ -237,6 +237,7 @@
 #define FLAG_0x0DB               0x0DB
 #define FLAG_HIDE_SEAFOAM_B4F_BIRD FLAG_0x0DB // Topaze: the old Seafoam bird is gone (Articuno now sleeps near Celadon) ; always hidden
 #define FLAG_0x0DC               0x0DC
+#define FLAG_TOPAZE_GOT_TICKETS FLAG_0x0DC // Topaze: MYSTIC/AURORA TICKET given by the Vermilion ferry sailor (postgame)
 #define FLAG_0x0DD               0x0DD
 #define FLAG_0x0DE               0x0DE
 #define FLAG_0x0DF               0x0DF

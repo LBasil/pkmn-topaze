@@ -144,3 +144,26 @@ VermilionCity_Text_TruckDriver::
     .string "I just park here.\p"
     .string "...Why does it keep shaking?\n"
     .string "Is something under there?$"
+
+VermilionCity_Text_FerryTicketsIntro::
+    .string "The champion! Word travels fast\n"
+    .string "on the docks.\p"
+    .string "Two old tickets turned up in the\n"
+    .string "lost-and-found, one for a rock in\l"
+    .string "the sea and one for an island that\l"
+    .string "no chart shows.\p"
+    .string "They are yours. Please take them.$"
+
+VermilionCity_Text_ReceivedMysticTicket::
+    .string "{PLAYER} received a MYSTIC TICKET!$"
+
+VermilionCity_Text_ReceivedAuroraTicket::
+    .string "{PLAYER} received an AURORA TICKET!$"
+
+VermilionCity_Text_FerryTicketsOutro::
+    .string "Ask the ferry about them.\n"
+    .string "Be careful out there!$"
+
+VermilionCity_Text_FerryTicketsNoRoom::
+    .string "Your BAG is full. Make some room\n"
+    .string "first and talk to me again!$"

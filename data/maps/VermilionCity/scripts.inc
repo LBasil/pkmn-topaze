@@ -106,8 +106,25 @@ VermilionCity_EventScript_OldMan1SSAnneLeft::
 VermilionCity_EventScript_FerrySailor::
 	lock
 	faceplayer
+	goto_if_unset FLAG_TOPAZE_POSTGAME, VermilionCity_EventScript_FerrySailorNoTickets
+	goto_if_set FLAG_TOPAZE_GOT_TICKETS, VermilionCity_EventScript_FerrySailorNoTickets
+	msgbox VermilionCity_Text_FerryTicketsIntro
+	checkitemspace ITEM_MYSTIC_TICKET
+	goto_if_eq VAR_RESULT, FALSE, VermilionCity_EventScript_FerryTicketsNoRoom
+	giveitem_msg VermilionCity_Text_ReceivedMysticTicket, ITEM_MYSTIC_TICKET, 1, MUS_OBTAIN_KEY_ITEM
+	giveitem_msg VermilionCity_Text_ReceivedAuroraTicket, ITEM_AURORA_TICKET, 1, MUS_OBTAIN_KEY_ITEM
+	setflag FLAG_ENABLE_SHIP_NAVEL_ROCK
+	setflag FLAG_ENABLE_SHIP_BIRTH_ISLAND
+	setflag FLAG_TOPAZE_GOT_TICKETS
+	msgbox VermilionCity_Text_FerryTicketsOutro
+VermilionCity_EventScript_FerrySailorNoTickets::
 	goto_if_eq VAR_MAP_SCENE_VERMILION_CITY, 3, VermilionCity_EventScript_CheckSeagallopPresent
 	msgbox VermilionCity_Text_WelcomeToTheSSAnne
+	release
+	end
+
+VermilionCity_EventScript_FerryTicketsNoRoom::
+	msgbox VermilionCity_Text_FerryTicketsNoRoom
 	release
 	end
 
