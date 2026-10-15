@@ -1468,6 +1468,7 @@ extern const u8 gPCText_Summary[];
 extern const u8 gPCText_Release[];
 extern const u8 gPCText_Mark[];
 extern const u8 gPCText_Jump[];
+extern const u8 gPCText_Sort[];
 extern const u8 gPCText_Wallpaper[];
 extern const u8 gPCText_Name[];
 extern const u8 gPCText_Take[];

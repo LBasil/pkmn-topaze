@@ -64,6 +64,7 @@ enum
     MENU_TEXT_POKECENTER,
     MENU_TEXT_MACHINE,
     MENU_TEXT_SIMPLE,
+    MENU_TEXT_SORT,
 };
 
 // Return IDs for input handlers

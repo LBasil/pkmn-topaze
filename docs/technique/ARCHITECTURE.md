@@ -480,3 +480,9 @@ Nouveaux objets (slots libres 226/227, anciens `ITEM_0E2/0E3`) : `ITEM_LINK_CABL
 - `optionsTopaze` bits 10-12 (`TOPAZE_OPT_SHINY()`) : 0 = 1/8192 (vanilla), 1 = 1/2048, 2 = 1/1024, 3 = 1/512 (maximum voulu, pas de « jamais » ni « toujours »). Menu OPTION, ligne « SHINY RATE ».
 - Appliqué dans `CreateBoxMon` (src/pokemon.c) pour les Pokémon à OT joueur et personnalité aléatoire : on tire le shiny puis on recalcule la moitié haute de la personnalité (la moitié basse, donc nature/genre/talent, est conservée).
 - Limite : les rencontres à personnalité imposée (Synchro, Unown, genre forcé, certains cadeaux) ne sont pas concernées ; les dresseurs restent jamais shiny.
+
+## Repousse relancé, boutique d'évolution, tri du PC, audit capturables (15-10)
+- **Relance du Repousse** : quand l'effet se termine (`EventScript_RepelWoreOff`, data/scripts/repel.inc), `TopazeRepelNext` (src/topaze_levelcap.c) cherche dans le sac le dernier type utilisé (`VAR_LAST_REPEL_ITEM` = VAR_0x403F), sinon Repousse/Super/Max ; si trouvé, question OUI/NON et `TopazeRepelUse` consomme l'objet.
+- **Céladopole, étage 4 (boutique)** : vend maintenant SUN STONE, MOON STONE, LINK CABLE, PRISM SCALE (2100 ₽ chacun ; le prix de la Pierre Lune est passé de 0 à 2100). Emplacements « dans le jeu » (objets au sol) : encore à placer.
+- **Tri du PC** : menu du titre de boîte → `SORT` (src/pokemon_storage_system_tasks.c, `TopazeSortCurrentBox`) : tri par n° Pokédex national puis niveau décroissant, vides et œufs à la fin ; refusé si un Pokémon est en main. Les 30 icônes sont recréées.
+- **Audit capturables** (script ad hoc, 15/10) : 377/386 espèces obtenables (sauvage, cadeaux/événements, évolutions, élevage). Reste : Farfetch'd, M. Mime, Lickitung, Jynx via échanges PNJ vanilla ; Smoochum par élevage ; **Artikodin** : le script de Seafoam B4F (Îles Écume) donnait Moltres par erreur → corrigé en Artikodin niv. 55, visible seulement après la Ligue (`FLAG_TOPAZE_POSTGAME`).

@@ -3,6 +3,10 @@
 #include "event_data.h"
 #include "constants/flags.h"
 #include "topaze_options.h"
+#include "item.h"
+#include "string_util.h"
+#include "constants/items.h"
+#include "constants/vars.h"
 
 // Topaze: optional level cap (OPTION menu: OFF / LIGHT / MEDIUM / HARD).
 // Base cap = level of the next gym leader's ace, by number of badges; LIGHT/MEDIUM add a margin.
@@ -45,4 +49,36 @@ u32 TopazeClampExp(struct Pokemon *mon, u32 exp)
 u16 TopazeInstantHeal(void)
 {
     return TOPAZE_OPT_INSTANTHEAL();
+}
+
+// Topaze: when a REPEL wears off, offer to use another one (last type used first).
+// TopazeRepelNext: returns the item id to offer (0 = none) and puts its name in STR_VAR_1.
+u16 TopazeRepelNext(void)
+{
+    u16 list[4];
+    u8 i;
+
+    list[0] = VarGet(VAR_LAST_REPEL_ITEM);
+    list[1] = ITEM_REPEL;
+    list[2] = ITEM_SUPER_REPEL;
+    list[3] = ITEM_MAX_REPEL;
+    for (i = 0; i < 4; i++)
+    {
+        if (list[i] != ITEM_NONE && CheckBagHasItem(list[i], 1))
+        {
+            CopyItemName(list[i], gStringVar1);
+            gSpecialVar_0x8004 = list[i];
+            return list[i];
+        }
+    }
+    return ITEM_NONE;
+}
+
+void TopazeRepelUse(void)
+{
+    u16 item = gSpecialVar_0x8004;
+
+    RemoveBagItem(item, 1);
+    VarSet(VAR_REPEL_STEP_COUNT, ItemId_GetHoldEffectParam(item));
+    VarSet(VAR_LAST_REPEL_ITEM, item);
 }

@@ -13,6 +13,8 @@
 #include "naming_screen.h"
 #include "new_menu_helpers.h"
 #include "pc_screen_effect.h"
+#include "pokemon.h"
+#include "pokedex.h"
 #include "pokemon_icon.h"
 #include "pokemon_storage_system_internal.h"
 #include "pokemon_summary_screen.h"
@@ -58,6 +60,7 @@ static void Task_PrintCantStoreMail(u8 taskId);
 static void Task_HandleBoxOptions(u8 taskId);
 static void Task_HandleWallpapers(u8 taskId);
 static void Task_JumpBox(u8 taskId);
+static void TopazeSortCurrentBox(void);
 static void Task_NameBox(u8 taskId);
 static void Task_ShowMonSummary(u8 taskId);
 static void Task_GiveItemFromBag(u8 taskId);
@@ -1748,8 +1751,63 @@ static void Task_HandleBoxOptions(u8 taskId)
             ClearBottomWindow();
             SetPokeStorageTask(Task_JumpBox);
             break;
+        case MENU_TEXT_SORT:
+            // Topaze: sort the current box by National Dex number (then by level, high first)
+            if (IsMonBeingMoved())
+            {
+                PlaySE(SE_FAILURE);
+            }
+            else
+            {
+                PlaySE(SE_SELECT);
+                TopazeSortCurrentBox();
+            }
+            AnimateBoxScrollArrows(TRUE);
+            ClearBottomWindow();
+            SetPokeStorageTask(Task_PokeStorageMain);
+            break;
         }
         break;
+    }
+}
+
+static u32 TopazeBoxSortKey(struct BoxPokemon *mon)
+{
+    u16 species = GetBoxMonData(mon, MON_DATA_SPECIES_OR_EGG);
+
+    if (species == SPECIES_NONE)
+        return 0xFFFFFFFF;
+    if (species == SPECIES_EGG)
+        return 0xFFFFFFFE;
+    return ((u32)SpeciesToNationalPokedexNum(species) << 8) | (255 - GetLevelFromBoxMonExp(mon));
+}
+
+// Selection sort in place (one temporary BoxPokemon), then rebuild the 30 box icons.
+static void TopazeSortCurrentBox(void)
+{
+    u8 box = StorageGetCurrentBox();
+    u8 i, j, best;
+    struct BoxPokemon tmp;
+
+    for (i = 0; i < IN_BOX_COUNT - 1; i++)
+    {
+        best = i;
+        for (j = i + 1; j < IN_BOX_COUNT; j++)
+        {
+            if (TopazeBoxSortKey(GetBoxedMonPtr(box, j)) < TopazeBoxSortKey(GetBoxedMonPtr(box, best)))
+                best = j;
+        }
+        if (best != i)
+        {
+            tmp = *GetBoxedMonPtr(box, i);
+            *GetBoxedMonPtr(box, i) = *GetBoxedMonPtr(box, best);
+            *GetBoxedMonPtr(box, best) = tmp;
+        }
+    }
+    for (i = 0; i < IN_BOX_COUNT; i++)
+    {
+        DestroyBoxMonIconAtPosition(i);
+        CreateBoxMonIconAtPos(i);
     }
 }
 

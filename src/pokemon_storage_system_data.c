@@ -1740,6 +1740,7 @@ static void AddBoxMenu(void)
     SetMenuText(MENU_TEXT_JUMP);
     SetMenuText(MENU_TEXT_WALLPAPER);
     SetMenuText(MENU_TEXT_NAME);
+    SetMenuText(MENU_TEXT_SORT);
     SetMenuText(MENU_TEXT_CANCEL);
 }
 
@@ -2037,6 +2038,7 @@ static const u8 *const sMenuTexts[] = {
     [MENU_TEXT_JUMP]       = gPCText_Jump,
     [MENU_TEXT_WALLPAPER]  = gPCText_Wallpaper,
     [MENU_TEXT_NAME]       = gPCText_Name,
+    [MENU_TEXT_SORT]       = gPCText_Sort,
     [MENU_TEXT_TAKE]       = gPCText_Take,
     [MENU_TEXT_GIVE]       = gPCText_Give,
     [MENU_TEXT_GIVE2]      = gPCText_Give,

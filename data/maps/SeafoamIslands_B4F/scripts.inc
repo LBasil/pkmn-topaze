@@ -40,7 +40,7 @@ SeafoamIslands_B4F_EventScript_SetNoCurrentLayout::
 	setmaplayoutindex LAYOUT_SEAFOAM_ISLANDS_B4F_CURRENT_STOPPED
 	return
 
-@ Topaze: MOLTRES is the boss's captive until the League ; it returns to the wild in the postgame
+@ Topaze: ARTICUNO only appears in the postgame (after the League), level 55
 SeafoamIslands_B4F_EventScript_ShowArticuno::
 	goto_if_unset FLAG_TOPAZE_POSTGAME, EventScript_Return
 	clearflag FLAG_HIDE_ARTICUNO
@@ -160,9 +160,9 @@ SeafoamIslands_B4F_EventScript_Articuno::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_MOLTRES, 55
+	setwildbattle SPECIES_ARTICUNO, 55
 	waitse
-	playmoncry SPECIES_MOLTRES, CRY_MODE_ENCOUNTER
+	playmoncry SPECIES_ARTICUNO, CRY_MODE_ENCOUNTER
 	message Text_Gyaoo
 	waitmessage
 	waitmoncry
@@ -187,7 +187,7 @@ SeafoamIslands_B4F_EventScript_DefeatedArticuno::
 	end
 
 SeafoamIslands_B4F_EventScript_RanFromArticuno::
-	setvar VAR_0x8004, SPECIES_MOLTRES
+	setvar VAR_0x8004, SPECIES_ARTICUNO
 	goto EventScript_MonFlewAway
 	end
 

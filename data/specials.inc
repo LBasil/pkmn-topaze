@@ -454,4 +454,6 @@ gSpecials::
 	def_special LoopWingFlapSound
 	def_special CreateEnemyEventMon
 	def_special TopazeInstantHeal
+	def_special TopazeRepelNext
+	def_special TopazeRepelUse
 gSpecialsEnd::
