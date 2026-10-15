@@ -439,3 +439,6 @@ Les 8 champions n'utilisent que des espèces #1-151 (les autres générations so
 
 ## Courbe des champions (15/10, décidée avec Basil)
 Dernier Pokémon de chaque champion (±6 par arène, équipe 3-4 niveaux en dessous) : Kay 16 (12-16), Sylvestre 22 (18-22), Hera 29 (24-29), Grim 35 (31-35), Achlys 40 (37-40), Nox 45 (41-45), Eddie 50 (46-50), Hepha 55 (50-55). Calvin et Robin (Route 3) abaissés de 16 à 14 pour rester sous Kay. Non pris en compte à ce stade : combats scénarisés (rival, Misty, Vesper, S.S. Anne) et matchs retour.
+
+## Level cap (15/10)
+Option OPTION → LEVEL CAP : OFF / LIGHT / MEDIUM / HARD (`optionsTopaze` bits 7-8, `TOPAZE_OPT_LVCAP()`). `src/topaze_levelcap.c` : plafond = niveau du dernier Pokémon du prochain champion selon le nombre de badges {16,22,29,35,40,45,50,55,71} + marge (HARD +0, MEDIUM +4, LIGHT +8), levé après la Ligue (`FLAG_SYS_GAME_CLEAR`). Appliqué : XP de combat (`Cmd_getexp` : 0 XP au plafond, gain tronqué pour ne pas le dépasser) et Super Bonbon (`pokemon.c`, 2 endroits). Les Pokémon au-dessus du plafond ne sont pas rabaissés. Testé à l'émulateur (HARD : aucun gain d'XP pour un niveau 90, menu OFF/LIGHT/MEDIUM). ⚠ `mkdbg2.py` fait `git checkout src/battle_script_commands.c` : committer avant de le lancer.
