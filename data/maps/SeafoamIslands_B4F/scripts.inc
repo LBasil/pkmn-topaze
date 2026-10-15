@@ -20,7 +20,6 @@ SeafoamIslands_B4F_EventScript_TryRemoveArticuno::
 
 SeafoamIslands_B4F_OnTransition::
 	call SeafoamIslands_B4F_EventScript_CheckOnybris
-	call_if_unset FLAG_FOUGHT_ARTICUNO, SeafoamIslands_B4F_EventScript_ShowArticuno
 	call_if_unset FLAG_STOPPED_SEAFOAM_B4F_CURRENT, SeafoamIslands_B4F_EventScript_CheckStoppedCurrent
 	call_if_set FLAG_STOPPED_SEAFOAM_B4F_CURRENT, SeafoamIslands_B4F_EventScript_SetNoCurrentLayout
 	end
@@ -38,12 +37,6 @@ SeafoamIslands_B4F_EventScript_StoppedCurrent::
 
 SeafoamIslands_B4F_EventScript_SetNoCurrentLayout::
 	setmaplayoutindex LAYOUT_SEAFOAM_ISLANDS_B4F_CURRENT_STOPPED
-	return
-
-@ Topaze: ARTICUNO only appears in the postgame (after the League), level 55
-SeafoamIslands_B4F_EventScript_ShowArticuno::
-	goto_if_unset FLAG_TOPAZE_POSTGAME, EventScript_Return
-	clearflag FLAG_HIDE_ARTICUNO
 	return
 
 SeafoamIslands_B4F_OnLoad::

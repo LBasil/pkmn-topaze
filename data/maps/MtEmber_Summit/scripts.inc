@@ -18,6 +18,7 @@ MtEmber_Summit_OnTransition::
 	end
 
 MtEmber_Summit_EventScript_ShowMoltres::
+	goto_if_unset FLAG_TOPAZE_POSTGAME, EventScript_Return
 	clearflag FLAG_HIDE_MOLTRES
 	return
 

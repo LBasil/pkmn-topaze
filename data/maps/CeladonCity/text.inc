@@ -126,3 +126,16 @@ CeladonCity_Text_WestBlocked::
     .string "ROCKET base under the GAME CORNER.\p"
     .string "Clear it out, and we will open\n"
     .string "the road.$"
+
+CeladonCity_Text_WhySnowHere::
+    .string "It has snowed in QUARTZ TOWN every\n"
+    .string "winter since before I was born.\p"
+    .string "The old folks say a great blue bird\n"
+    .string "once crossed the sky over the town.\p"
+    .string "Where it rests, the cold never leaves.$"
+
+CeladonCity_Text_GeodeClearing::
+    .string "Did you know? There's a clearing north\n"
+    .string "of the fountain, hidden behind a tree.\p"
+    .string "The crystals there are freezing cold.\n"
+    .string "Something is sleeping in it, I swear!$"

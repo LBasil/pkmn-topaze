@@ -235,6 +235,7 @@
 #define FLAG_DONE_ECHO_JIRACHI    0x0D9
 #define FLAG_HIDE_ECHO_SCENE     0x0DA // Topaze: Silver/Giovanni/Red scene objects
 #define FLAG_0x0DB               0x0DB
+#define FLAG_HIDE_SEAFOAM_B4F_BIRD FLAG_0x0DB // Topaze: the old Seafoam bird is gone (Articuno now sleeps near Celadon) ; always hidden
 #define FLAG_0x0DC               0x0DC
 #define FLAG_0x0DD               0x0DD
 #define FLAG_0x0DE               0x0DE

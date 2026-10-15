@@ -1075,6 +1075,10 @@ Text_MoveCanOnlyBeLearnedOnce::
 	.string "once. Is that okay?$"
 
 EventScript_ResetAllMapFlags::
+	setflag FLAG_HIDE_SEAFOAM_B4F_BIRD
+	setflag FLAG_HIDE_ARTICUNO
+	setflag FLAG_HIDE_ZAPDOS
+	setflag FLAG_HIDE_MOLTRES
 	setflag FLAG_HIDE_OAK_IN_HIS_LAB
 	setflag FLAG_HIDE_OAK_IN_PALLET_TOWN
 	setflag FLAG_HIDE_GRENALUX_ONYBRIS_GRUNT
