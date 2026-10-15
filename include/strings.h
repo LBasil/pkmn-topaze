@@ -1036,6 +1036,10 @@ extern const u8 gText_CancelPreviousData[];
 extern const u8 gText_Area[];
 extern const u8 gText_Size[];
 extern const u8 gText_AreaUnknown[];
+extern const u8 gText_HintBreeding[];
+extern const u8 gText_HintFossil[];
+extern const u8 gText_HintEvolution[];
+extern const u8 gText_HintGiftEvent[];
 
 // daycare
 extern const u8 gText_Lv[];

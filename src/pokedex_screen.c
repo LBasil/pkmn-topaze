@@ -2980,6 +2980,32 @@ u8 RemoveDexPageWindows(void)
     return 0;
 }
 
+extern const struct Evolution gEvolutionTable[][EVOS_PER_MON];
+
+// Topaze: text shown instead of "AREA UNKNOWN" for species that have no wild location
+static const u8 *GetTopazeObtainHint(u16 species)
+{
+    u16 i, k;
+
+    switch (species)
+    {
+    case SPECIES_PICHU: case SPECIES_CLEFFA: case SPECIES_IGGLYBUFF: case SPECIES_AZURILL:
+    case SPECIES_WYNAUT: case SPECIES_ELEKID: case SPECIES_MAGBY: case SPECIES_SMOOCHUM:
+        return gText_HintBreeding;
+    case SPECIES_KABUTO: case SPECIES_OMANYTE: case SPECIES_AERODACTYL:
+        return gText_HintFossil;
+    }
+    for (i = 1; i < NUM_SPECIES; i++)
+    {
+        for (k = 0; k < EVOS_PER_MON; k++)
+        {
+            if (gEvolutionTable[i][k].targetSpecies == species)
+                return gText_HintEvolution;
+        }
+    }
+    return gText_HintGiftEvent;
+}
+
 u8 DexScreen_DrawMonAreaPage(void)
 {
     int i;
@@ -3132,8 +3158,9 @@ u8 DexScreen_DrawMonAreaPage(void)
         // No markers, display "Area Unknown"
         BlitBitmapRectToWindow(sPokedexScreenData->windowIds[0], (void *)sBlitTiles_WideEllipse, 0, 0, 88, 16, 4, 28, 88, 16);
         {
-            s32 strWidth = GetStringWidth(FONT_SMALL, gText_AreaUnknown, 0);
-            DexScreen_AddTextPrinterParameterized(sPokedexScreenData->windowIds[0], FONT_SMALL, gText_AreaUnknown, (96 - strWidth) / 2, 29, 0);
+            const u8 *hint = GetTopazeObtainHint(species);
+            s32 strWidth = GetStringWidth(FONT_SMALL, hint, 0);
+            DexScreen_AddTextPrinterParameterized(sPokedexScreenData->windowIds[0], FONT_SMALL, hint, (96 - strWidth) / 2, 29, 0);
         }
     }
     CopyWindowToVram(sPokedexScreenData->windowIds[0], COPYWIN_GFX);
