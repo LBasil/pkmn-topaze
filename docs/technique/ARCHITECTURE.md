@@ -526,3 +526,5 @@ Les 9 PNJ d'echange (Route 11/2/18, Souterrain, Azuria, Carmin, Cramois'Ile x3) 
 ## Quetes secondaires (objets d'evolution)
 
 Les maisons d'echange vidées accueillent 4 PNJ de quete (flags recycles des anciens echanges) : Carmin Maison 2 (Elyssa, Pokemon de tete bonheur >= 200 → MOON STONE), Souterrain Nord (Saige, 40 especes capturees → SUN STONE), Route 18 Est 2F (Haden, 80 → PRISM SCALE), Azuria Maison 3 (Dontae, Pokemon niveau >= 45 → LINK CABLE, special `TopazePartyMaxLevel`). Textes `*_Text_Quest*`. Testé : Dontae.
+
+TODO (note Basil 15/10) : ajouter d'autres quetes secondaires de ce type (pierres Feu/Eau/Foudre/Plante, objets rares, maisons videes de Cramois'Ile, Fan Club de Safrania).
