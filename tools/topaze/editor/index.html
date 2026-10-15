@@ -53,7 +53,7 @@
     <div id="mapinfo" class="hint"></div>
     <h3>Métatuiles <span id="selinfo" class="hint"></span></h3>
     <div id="palwrap"><canvas id="pal" width="512" height="512"></canvas></div>
-    <div class="hint">Clic = choisir · glisser = choisir un bloc (tampon). Clic droit sur la carte = pipette.</div>
+    <div class="hint">Clic = choisir · glisser = choisir un bloc (tampon). Clic droit sur la carte = pipette. « Copier zone » : glisse un rectangle sur la carte pour le recopier ailleurs.</div>
     <h3>Collision / altitude</h3>
     <label class="f"><span>Collision peinte</span><select id="colv"><option value="0">0 – libre</option><option value="1">1 – bloquant</option><option value="2">2</option><option value="3">3</option></select></label>
     <label class="f"><span>Altitude peinte</span><select id="elev"></select></label>
@@ -77,7 +77,7 @@ let sheet = new Image(), sprites = {};
 let tool = 'paint', stamp = {w:1,h:1,ids:[0]}, sel = null /* {kind,idx} */, hover = null;
 let undoSt = [], redoSt = [];
 const KINDS = {object:'object_events', warp:'warp_events', trigger:'coord_events', sign:'bg_events'};
-const TOOLS = [['paint','Pinceau'],['fill','Remplir'],['col','Collision'],['select','Sélection'],['npc','+ PNJ'],['sign','+ Panneau'],['warp','+ Warp'],['trigger','+ Déclencheur'],['del','Suppr. événement']];
+const TOOLS = [['paint','Pinceau'],['fill','Remplir'],['col','Collision'],['copy','Copier zone'],['select','Sélection'],['npc','+ PNJ'],['sign','+ Panneau'],['warp','+ Warp'],['trigger','+ Déclencheur'],['del','Suppr. événement']];
 const COLORS = {object:'#ffd54f', warp:'#69f0ae', trigger:'#ff8a80', sign:'#82b1ff'};
 
 for (let i=0;i<16;i++) $('#elev').add(new Option(i, i)); $('#elev').value = 3;
@@ -134,7 +134,7 @@ function drawPalette(){
   pctx.clearRect(0,0,512,512); pctx.drawImage(sheet,0,0);
   pctx.strokeStyle='#f2b84b'; pctx.lineWidth=2;
   if (stamp.w*stamp.h>=1 && stamp.x0!==undefined) pctx.strokeRect(stamp.x0*T+1,stamp.y0*T+1,stamp.w*T-2,stamp.h*T-2);
-  $('#selinfo').textContent = stamp.w*stamp.h===1 ? '#'+stamp.ids[0] : stamp.w+'×'+stamp.h;
+  $('#selinfo').textContent = stamp.raw&&stamp.w*stamp.h>1 ? 'copie '+stamp.w+'×'+stamp.h : (stamp.w*stamp.h===1 ? '#'+stamp.ids[0] : stamp.w+'×'+stamp.h);
 }
 pal.onmousedown=e=>{ const p=pp(e); palDrag=p; setStamp(p,p); };
 pal.onmousemove=e=>{ if(palDrag) setStamp(palDrag,pp(e)); };
@@ -155,6 +155,8 @@ function redraw(){
   if($('#cEv').checked) drawEvents();
   if(hover && ['paint'].includes(tool)){ ctx.globalAlpha=.6; for(let j=0;j<stamp.h;j++)for(let i=0;i<stamp.w;i++){ const id=stamp.ids[j*stamp.w+i]; const x=hover.x+i,y=hover.y+j; if(x<M.w&&y<M.h) ctx.drawImage(sheet,(id%32)*T,Math.floor(id/32)*T,T,T,x*T,y*T,T,T);} ctx.globalAlpha=1; }
   else if(hover){ ctx.strokeStyle='#fff'; ctx.lineWidth=1.5/z; ctx.strokeRect(hover.x*T+.5,hover.y*T+.5,T-1,T-1); }
+  if(copyRect){ const r=copyRect,x0=Math.min(r.x0,r.x1),y0=Math.min(r.y0,r.y1),w=Math.abs(r.x0-r.x1)+1,h=Math.abs(r.y0-r.y1)+1;
+    ctx.fillStyle='rgba(255,255,255,.18)'; ctx.fillRect(x0*T,y0*T,w*T,h*T); ctx.strokeStyle='#fff'; ctx.lineWidth=2/z; ctx.setLineDash([4/z,3/z]); ctx.strokeRect(x0*T,y0*T,w*T,h*T); ctx.setLineDash([]); }
   ctx.setTransform(1,0,0,1,0,0);
 }
 function drawEvents(){
@@ -174,17 +176,20 @@ function evAt(p){ for(const kind of ['object','warp','trigger','sign']){ const a
 
 let painting=false;
 const blk=id=>(id&0x3ff)|(+$('#colv').value<<10)|(+$('#elev').value<<12);
+const stampBlock=i=>stamp.raw?stamp.raw[i]:blk(stamp.ids[i]);
+let copyRect=null, copying=false;
 function paintAt(p){
   if(tool==='paint'){ for(let j=0;j<stamp.h;j++)for(let i=0;i<stamp.w;i++){ const x=p.x+i,y=p.y+j; if(x>=M.w||y>=M.h) continue; const k=y*M.w+x;
-      blocks[k]=blk(stamp.ids[j*stamp.w+i]); } }
+      blocks[k]=stampBlock(j*stamp.w+i); } }
   else if(tool==='col'){ const k=p.y*M.w+p.x; blocks[k]=(blocks[k]&0x3ff)|(+$('#colv').value<<10)|(+$('#elev').value<<12); }
 }
-function fill(p){ const k0=p.y*M.w+p.x, tgt=blocks[k0]&0x3ff, rep=stamp.ids[0]&0x3ff; if(tgt===rep) return; const st=[p];
-  while(st.length){ const q=st.pop(); if(!inMap(q)) continue; const k=q.y*M.w+q.x; if((blocks[k]&0x3ff)!==tgt) continue; blocks[k]=blk(rep); st.push({x:q.x+1,y:q.y},{x:q.x-1,y:q.y},{x:q.x,y:q.y+1},{x:q.x,y:q.y-1}); } }
+function fill(p){ const k0=p.y*M.w+p.x, tgt=blocks[k0]&0x3ff, rep=stamp.ids[0]&0x3ff; if(tgt===rep&&!stamp.raw) return; const st=[p];
+  while(st.length){ const q=st.pop(); if(!inMap(q)) continue; const k=q.y*M.w+q.x; if((blocks[k]&0x3ff)!==tgt) continue; blocks[k]=stampBlock(0); st.push({x:q.x+1,y:q.y},{x:q.x-1,y:q.y},{x:q.x,y:q.y+1},{x:q.x,y:q.y-1}); } }
 
 cv.onmousedown=async e=>{
   const p=tc(e); if(!inMap(p)) return;
-  if(e.button===2){ const id=blocks[p.y*M.w+p.x]&0x3ff; stamp={w:1,h:1,ids:[id],x0:id%32,y0:Math.floor(id/32)}; drawPalette(); return; }
+  if(e.button===2){ const id=blocks[p.y*M.w+p.x]&0x3ff; stamp={w:1,h:1,ids:[id],raw:[blocks[p.y*M.w+p.x]],x0:id%32,y0:Math.floor(id/32)}; drawPalette(); return; }
+  if(tool==='copy'){ copying=true; copyRect={x0:p.x,y0:p.y,x1:p.x,y1:p.y}; redraw(); return; }
   if(tool==='paint'||tool==='col'){ snapshot(); painting=true; paintAt(p); markDirty(); redraw(); }
   else if(tool==='fill'){ snapshot(); fill(p); markDirty(); redraw(); }
   else if(tool==='select'){ sel=evAt(p); inspect(); redraw(); if(sel) dragEv={...sel, moved:false}; }
@@ -193,10 +198,14 @@ cv.onmousedown=async e=>{
 };
 let dragEv=null;
 cv.onmousemove=e=>{ const p=tc(e); hover=inMap(p)?p:null; $('#status').textContent=hover?`(${p.x}, ${p.y})  bloc #${blocks[p.y*M.w+p.x]&0x3ff}  col ${(blocks[p.y*M.w+p.x]>>10)&3}  alt ${blocks[p.y*M.w+p.x]>>12}`:'';
+  if(copying&&hover){ copyRect.x1=p.x; copyRect.y1=p.y; }
   if(painting&&hover){ paintAt(p); markDirty(); }
   if(dragEv&&hover){ const ev=M.map[KINDS[dragEv.kind]][dragEv.idx]; if(ev.x!==p.x||ev.y!==p.y){ if(!dragEv.moved){snapshot();dragEv.moved=true;} ev.x=p.x; ev.y=p.y; markDirty(); inspect(); } }
   redraw(); };
-window.addEventListener('mouseup',()=>{ painting=false; dragEv=null; });
+window.addEventListener('mouseup',()=>{ painting=false; dragEv=null;
+  if(copying){ copying=false; const r=copyRect; copyRect=null; if(r){ const x0=Math.min(r.x0,r.x1),y0=Math.min(r.y0,r.y1),w=Math.abs(r.x0-r.x1)+1,h=Math.abs(r.y0-r.y1)+1,ids=[],raw=[];
+      for(let j=0;j<h;j++)for(let i=0;i<w;i++){ const b=blocks[(y0+j)*M.w+x0+i]; raw.push(b); ids.push(b&0x3ff); }
+      stamp={w,h,ids,raw}; drawPalette(); setTool('paint'); status('Zone copiée ('+w+'×'+h+') : clique sur la carte pour la coller'); } redraw(); } });
 cv.oncontextmenu=e=>e.preventDefault(); cv.onmouseleave=()=>{hover=null;redraw();};
 // affichages : mémorisés d'une session à l'autre, raccourcis C / E / G (collisions toujours visibles avec l'outil « Collision »)
 const DISP=['#cCol','#cEv','#cGrid'];
@@ -246,7 +255,7 @@ async function save(){
     markDirty(false); status('Enregistré. '+r.reminder); }catch(e){ status('ERREUR : '+e.message,true); alert('Échec : '+e.message); }
 }
 $('#save').onclick=save;
-window.addEventListener('keydown',e=>{ if((e.ctrlKey||e.metaKey)&&e.key==='s'){ e.preventDefault(); save(); } if((e.ctrlKey||e.metaKey)&&e.key==='z'){ e.preventDefault(); $('#undo').click(); } if((e.ctrlKey||e.metaKey)&&e.key==='y'){ e.preventDefault(); $('#redo').click(); }
+window.addEventListener('keydown',e=>{ if((e.ctrlKey||e.metaKey)&&e.key==='s'){ e.preventDefault(); save(); } if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='z'){ e.preventDefault(); $(e.shiftKey?'#redo':'#undo').click(); } if((e.ctrlKey||e.metaKey)&&e.key==='y'){ e.preventDefault(); $('#redo').click(); }
   if(e.key==='Delete'&&sel&&document.activeElement.tagName!=='INPUT'){ snapshot(); M.map[KINDS[sel.kind]].splice(sel.idx,1); sel=null; markDirty(); inspect(); redraw(); } });
 window.addEventListener('beforeunload',e=>{ if(dirty){ e.preventDefault(); e.returnValue=''; } });
 init().catch(e=>status('ERREUR : '+e.message,true));
