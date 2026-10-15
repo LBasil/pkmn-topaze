@@ -4,33 +4,49 @@ UndergroundPath_NorthEntrance_MapScripts::
 UndergroundPath_NorthEntrance_EventScript_Saige::
 	lock
 	faceplayer
-	setvar VAR_0x8008, INGAME_TRADE_NIDORAN
-	call EventScript_GetInGameTradeSpeciesInfo
-	goto_if_set FLAG_DID_MS_NIDO_TRADE, UndergroundPath_NorthEntrance_EventScript_AlreadyTraded
-	msgbox Trade_Text_DoYouHaveMonWantToTradeForMon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, UndergroundPath_NorthEntrance_EventScript_DeclineTrade
-	call EventScript_ChooseMonForInGameTrade
-	goto_if_ge VAR_0x8004, PARTY_SIZE, UndergroundPath_NorthEntrance_EventScript_DeclineTrade
-	call EventScript_GetInGameTradeSpecies
-	goto_if_ne VAR_RESULT, VAR_0x8009, UndergroundPath_NorthEntrance_EventScript_NotRequestedMon
-	call EventScript_DoInGameTrade
-	msgbox Trade_Text_ThanksYoureAPal
+	goto_if_set FLAG_DID_MS_NIDO_TRADE, UndergroundPath_NorthEntrance_EventScript_Saige_Done
+	msgbox UndergroundPath_NorthEntrance_Text_QuestAsk
+	setvar VAR_0x8004, 1
+	specialvar VAR_RESULT, GetPokedexCount
+	buffernumberstring STR_VAR_1, VAR_0x8006
+	goto_if_lt VAR_0x8006, 40, UndergroundPath_NorthEntrance_EventScript_Saige_No
+	checkitemspace ITEM_SUN_STONE
+	goto_if_eq VAR_RESULT, FALSE, UndergroundPath_NorthEntrance_EventScript_Saige_NoRoom
+	msgbox UndergroundPath_NorthEntrance_Text_QuestOk
+	giveitem_msg UndergroundPath_NorthEntrance_Text_QuestGot, ITEM_SUN_STONE
 	setflag FLAG_DID_MS_NIDO_TRADE
 	release
 	end
 
-UndergroundPath_NorthEntrance_EventScript_DeclineTrade::
-	msgbox Trade_Text_ThatsTooBad
+UndergroundPath_NorthEntrance_EventScript_Saige_No::
+	msgbox UndergroundPath_NorthEntrance_Text_QuestNo
 	release
 	end
 
-UndergroundPath_NorthEntrance_EventScript_NotRequestedMon::
-	bufferspeciesname STR_VAR_1, VAR_0x8009
-	msgbox Trade_Text_ThisIsNoMon
+UndergroundPath_NorthEntrance_EventScript_Saige_NoRoom::
+	msgbox UndergroundPath_NorthEntrance_Text_QuestNoRoom
 	release
 	end
 
-UndergroundPath_NorthEntrance_EventScript_AlreadyTraded::
-	msgbox Trade_Text_HowIsMyOldMon
+UndergroundPath_NorthEntrance_EventScript_Saige_Done::
+	msgbox UndergroundPath_NorthEntrance_Text_QuestDone
 	release
 	end
+
+UndergroundPath_NorthEntrance_Text_QuestAsk::
+    .string "I collect POKéMON data, and I\nlove people who do too!\pCatch 40 kinds of POKéMON and I\nwill give you something warm.$"
+
+UndergroundPath_NorthEntrance_Text_QuestOk::
+    .string "Wow, you caught {STR_VAR_1} kinds!\pHere, a SUN STONE for you!$"
+
+UndergroundPath_NorthEntrance_Text_QuestGot::
+    .string "{PLAYER} received a SUN STONE!$"
+
+UndergroundPath_NorthEntrance_Text_QuestNo::
+    .string "You've caught only {STR_VAR_1} kinds.\nKeep going until you reach 40!$"
+
+UndergroundPath_NorthEntrance_Text_QuestNoRoom::
+    .string "Your BAG is full. Make some\nroom first!$"
+
+UndergroundPath_NorthEntrance_Text_QuestDone::
+    .string "Do you use the SUN STONE\nwell?$"

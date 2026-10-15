@@ -4,33 +4,29 @@ VermilionCity_House2_MapScripts::
 VermilionCity_House2_EventScript_Elyssa::
 	lock
 	faceplayer
-	setvar VAR_0x8008, INGAME_TRADE_FARFETCHD
-	call EventScript_GetInGameTradeSpeciesInfo
-	goto_if_set FLAG_DID_CH_DING_TRADE, VermilionCity_House2_EventScript_AlreadyTraded
-	msgbox VermilionCity_House2_Text_DoYouHaveMonWantToTradeForMyMon, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, VermilionCity_House2_EventScript_DeclineTrade
-	call EventScript_ChooseMonForInGameTrade
-	goto_if_ge VAR_0x8004, PARTY_SIZE, VermilionCity_House2_EventScript_DeclineTrade
-	call EventScript_GetInGameTradeSpecies
-	goto_if_ne VAR_RESULT, VAR_0x8009, VermilionCity_House2_EventScript_NotRequestedMon
-	call EventScript_DoInGameTrade
-	msgbox VermilionCity_House2_Text_ThankYou
+	goto_if_set FLAG_DID_CH_DING_TRADE, VermilionCity_House2_EventScript_Elyssa_Done
+	msgbox VermilionCity_House2_Text_QuestAsk
+	specialvar VAR_RESULT, GetLeadMonFriendship
+	goto_if_lt VAR_RESULT, 5, VermilionCity_House2_EventScript_Elyssa_No
+	checkitemspace ITEM_MOON_STONE
+	goto_if_eq VAR_RESULT, FALSE, VermilionCity_House2_EventScript_Elyssa_NoRoom
+	msgbox VermilionCity_House2_Text_QuestOk
+	giveitem_msg VermilionCity_House2_Text_QuestGot, ITEM_MOON_STONE
 	setflag FLAG_DID_CH_DING_TRADE
 	release
 	end
 
-VermilionCity_House2_EventScript_DeclineTrade::
-	msgbox VermilionCity_House2_Text_ThatsTooBad
+VermilionCity_House2_EventScript_Elyssa_No::
+	msgbox VermilionCity_House2_Text_QuestNo
 	release
 	end
 
-VermilionCity_House2_EventScript_NotRequestedMon::
-	bufferspeciesname STR_VAR_1, VAR_0x8009
-	msgbox VermilionCity_House2_Text_ThisIsNoMon
+VermilionCity_House2_EventScript_Elyssa_NoRoom::
+	msgbox VermilionCity_House2_Text_QuestNoRoom
 	release
 	end
 
-VermilionCity_House2_EventScript_AlreadyTraded::
-	msgbox VermilionCity_House2_Text_HowIsMyOldMon
+VermilionCity_House2_EventScript_Elyssa_Done::
+	msgbox VermilionCity_House2_Text_QuestDone
 	release
 	end

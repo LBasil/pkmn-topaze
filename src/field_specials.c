@@ -2095,6 +2095,20 @@ void TopazePetParty(void)
     VarSet(VAR_PETTING_COOLDOWN_STEP_COUNTER, 0);
 }
 
+u16 TopazePartyMaxLevel(void)
+{
+    u8 i;
+    u16 best = 0;
+    for (i = 0; i < PARTY_SIZE; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG) != SPECIES_NONE
+         && GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG) != SPECIES_EGG
+         && GetMonData(&gPlayerParty[i], MON_DATA_LEVEL) > best)
+            best = GetMonData(&gPlayerParty[i], MON_DATA_LEVEL);
+    }
+    return best;
+}
+
 void TopazeMassageOne(void)
 {
     AdjustFriendship(&gPlayerParty[gSpecialVar_0x8004], FRIENDSHIP_EVENT_MASSAGE);
