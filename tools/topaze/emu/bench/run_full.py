@@ -29,6 +29,10 @@ def mname(dm):
 # --- graphe des composantes (carte, zone atteignable) : warps + connexions ---------------------------------------
 _NAV = {}; _COMP = {}
 GATE_GFX = ('SNORLAX', 'PUSHABLE_BOULDER', 'BREAKABLE_ROCK', 'STRENGTH', 'ROCK_SMASH')
+def open_gate(g):
+    """Retire un type d'obstacle du graphe statique (ex. apres la Flute : Ronflex se reveille) et vide les caches."""
+    global GATE_GFX
+    GATE_GFX = tuple(x for x in GATE_GFX if x != g); _NAV.clear(); _COMP.clear()
 def nav_of(name):
     if name not in _NAV:
         n = R.Nav(name)
@@ -175,6 +179,7 @@ class Auto(T):
     def go(s, target, banned=(), tries=4):
         """Va jusqu'a la carte `target` par le graphe de composantes. Renvoie True si arrive."""
         banned = set(banned); tried = collections.Counter()
+        if 'SNORLAX' in GATE_GFX and s.getflag('FLAG_GOT_POKE_FLUTE'): open_gate('SNORLAX')
         for _ in range(tries * 8):
             cur = s.sync()
             if cur == target: return True
@@ -198,6 +203,40 @@ class Auto(T):
         """Va sur `tile` (case voisine du PNJ), se tourne vers `face`, parle, laisse la scene se terminer."""
         r = s.walk_fight(tile, 10)
         s.face(face); s.mash(n, shot); return s.scene(120)
+    def tele_plan(s, start, goal):
+        """Chemin (liste de directions) dans la carte courante en comptant les teleporteurs internes (warps vers la meme carte)."""
+        nav = s.nav(); s.live_grid(nav); nav.objs = s.live_objs(); me = nav.mj['id']; ws = nav.warps; evs = nav.mj['warp_events']
+        def tele(c):
+            w = ws.get(c)
+            if w and w['dest_map'] == me and str(w['dest_warp_id']).isdigit():
+                d = evs[int(w['dest_warp_id'])]; return (d['x'], d['y'])
+        prev = {start: None}; q = collections.deque([start])
+        while q:
+            c = q.popleft()
+            if c == goal: break
+            for d, (dx, dy) in (('UP', (0, -1)), ('DOWN', (0, 1)), ('LEFT', (-1, 0)), ('RIGHT', (1, 0))):
+                n = (c[0] + dx, c[1] + dy)
+                if nav.blocked(*n) or not nav.step_ok(c, n): continue
+                if n in ws:
+                    t = tele(n)
+                    if t is None: continue
+                    n = t
+                if n in prev: continue
+                prev[n] = (c, d); q.append(n)
+        if goal not in prev: return None
+        out = []; c = goal
+        while prev[c]: out.append(prev[c][1]); c = prev[c][0]
+        return out[::-1]
+    def walk_tele(s, goal, tries=300):
+        """Marche pas a pas vers goal en utilisant les teleporteurs internes (arene d'Hematown) ; replanifie a chaque pas."""
+        for _ in range(tries):
+            if not s.idle(): s.scene(maxn=300)
+            p = s.pos(); cur = (p[2], p[3])
+            if cur == goal: return True
+            plan = s.tele_plan(cur, goal)
+            if not plan: return False
+            s.hold(plan[0], 16); s.e.run(24, 0)
+        p = s.pos(); return (p[2], p[3]) == goal
     def approach(s, pos, rounds=10):
         """Se place sur une case voisine accessible de `pos` (objet) et se tourne vers lui. True si en place."""
         name = s.sync(); nav = s.nav(); nav.objs = s.live_objs() - {tuple(pos)}
@@ -207,7 +246,14 @@ class Auto(T):
             if nav.blocked(*c) or c in nav.warps: continue
             path = nav.path(cur, c) if c != cur else [c]
             if path and (best is None or len(path) < best[0]): best = (len(path), c, d)
-        if not best: return False
+        if not best:     # pas de chemin a pied : teleporteurs internes ?
+            for d, (dx, dy) in (('DOWN', (0, -1)), ('UP', (0, 1)), ('RIGHT', (-1, 0)), ('LEFT', (1, 0))):
+                c = (pos[0] + dx, pos[1] + dy)
+                if nav.blocked(*c) or c in nav.warps: continue
+                pl = s.tele_plan(cur, c) if c != cur else []
+                if pl is not None and (best is None or len(pl) < best[0]): best = (len(pl), c, d)
+            if not best or not s.walk_tele(best[1]): return False
+            s.face(best[2]); s._facing = {'UP': (0, -1), 'DOWN': (0, 1), 'LEFT': (-1, 0), 'RIGHT': (1, 0)}[best[2]]; return True
         if s.walk_fight(best[1], rounds) not in (True,): return False
         s.face(best[2]); s._facing = {'UP': (0, -1), 'DOWN': (0, 1), 'LEFT': (-1, 0), 'RIGHT': (1, 0)}[best[2]]; return True
     def talk_obj(s, pos, n=14, shot=None):
@@ -417,7 +463,23 @@ def stage_ameth(t):
 
 def stage_gym5(t): badge_gym(t, 'FuchsiaCity_Gym', 'Koga', 'FLAG_BADGE05_GET')
 
-STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4), ('ameth', stage_ameth), ('gym5', stage_gym5)]
+def stage_hema_in(t):
+    assert t.go('CeladonCity_Condominiums_1F', banned=BAN), 'manoir de Bourg Quartz inaccessible'
+    t.talk_script('TeaWoman', 14); t.report('FLAG_GOT_TEA')
+    assert t.getflag('FLAG_GOT_TEA'), 'the non obtenu'
+    assert t.go('SaffronCity'), 'Hematown inaccessible (garde de la Route 8 ?)'
+    t.report('FLAG_HEMATEK_ALLIES_IN')
+
+def stage_hema_tower(t):
+    assert t.go('SilphCo_11F'), 'tour Hematek 11F inaccessible'
+    t.report('FLAG_HEMATEK_ALLIES_IN', 'FLAG_HEMATEK_BRICE_GONE', 'FLAG_HEMATEK_FLORA_GONE', 'FLAG_HEMATEK_N_GONE')
+    t.walk_fight((6, 16), 8); t.walk_fight((6, 15), 8); t.scene(900, shot='hematek11')
+    t.report('FLAG_HEMATEK_BOSS_DONE', 'FLAG_HEMATITE_STOLEN')
+    assert t.getflag('FLAG_HEMATEK_BOSS_DONE'), 'scene du boss Hematek non declenchee'
+
+def stage_gym6(t): badge_gym(t, 'SaffronCity_Gym', 'Sabrina', 'FLAG_BADGE06_GET')
+
+STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4), ('ameth', stage_ameth), ('gym5', stage_gym5), ('hema_in', stage_hema_in), ('hema_tower', stage_hema_tower), ('gym6', stage_gym6)]
 
 if __name__ == '__main__':
     # usage : run_full.py all | run_full.py <etape> [<etape> ...]   (une etape isolee repart de la sauvegarde de la precedente)
