@@ -140,7 +140,7 @@ static const struct BgTemplate sOptionMenuBgTemplates[] =
 };
 
 static const u16 sOptionMenuPalette[] = INCBIN_U16("graphics/misc/option_menu.gbapal");
-static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {4, 2, 2, 2, 3, 10, 3, 3, 2, 4, 4, 2, 8, 0};
+static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {4, 2, 2, 2, 3, 10, 3, 3, 2, 4, 4, 2, 4, 0};
 
 static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
 {
@@ -168,7 +168,7 @@ static const u8 *const sTextSpeedOptions[] =
     gText_TextSpeedInstant
 };
 
-static const u8 *const sShinyOptions[] = { gText_Shiny8192, gText_ShinyOff, gText_Shiny2048, gText_Shiny512, gText_Shiny128, gText_Shiny32, gText_Shiny8, gText_ShinyAlways };
+static const u8 *const sShinyOptions[] = { gText_Shiny8192, gText_Shiny2048, gText_Shiny1024, gText_Shiny512 };
 static const u8 *const sPkmnCenterOptions[] = { gText_BarNormal, gText_BarInstant };
 static const u8 *const sLevelCapOptions[] = { gText_LvCapOff, gText_LvCapLight, gText_LvCapMedium, gText_LvCapHard };
 

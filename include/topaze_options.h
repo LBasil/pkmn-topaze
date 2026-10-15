@@ -11,7 +11,7 @@
 
 #define TOPAZE_OPT_INSTANTHEAL() ((gSaveBlock2Ptr->optionsTopaze >> 9) & 1) // 0 normal POKéMON CENTER animation, 1 instant heal
 
-#define TOPAZE_OPT_SHINY() ((gSaveBlock2Ptr->optionsTopaze >> 10) & 7) // 0 vanilla 1/8192, 1 off, 2 1/2048, 3 1/512, 4 1/128, 5 1/32, 6 1/8, 7 always
+#define TOPAZE_OPT_SHINY() ((gSaveBlock2Ptr->optionsTopaze >> 10) & 7) // 0 vanilla 1/8192, 1 = 1/2048, 2 = 1/1024, 3 = 1/512 (max)
 
 #define TOPAZE_OPT_SET(shift, mask, v) (gSaveBlock2Ptr->optionsTopaze = (gSaveBlock2Ptr->optionsTopaze & ~((mask) << (shift))) | (((v) & (mask)) << (shift)))
 
