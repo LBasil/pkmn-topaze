@@ -14,6 +14,13 @@ def ts_dir(name):
     for base in ('data/tilesets/secondary', 'data/tilesets/primary'):
         p = os.path.join(ROOT, base, snake)
         if os.path.isdir(p): return p
+    # repli : comparaison sans underscores ni casse (ex. gTileset_SSAnne -> secondary/ss_anne)
+    norm = name.replace('gTileset_', '').replace('_', '').lower()
+    for base in ('data/tilesets/secondary', 'data/tilesets/primary'):
+        d = os.path.join(ROOT, base)
+        if os.path.isdir(d):
+            for sub in os.listdir(d):
+                if sub.replace('_', '').lower() == norm: return os.path.join(d, sub)
     raise KeyError(name)
 def layouts():
     return {l['id']: l for l in json.load(open(os.path.join(ROOT, 'data/layouts/layouts.json')))['layouts'] if 'id' in l}

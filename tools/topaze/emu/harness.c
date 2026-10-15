@@ -3,6 +3,8 @@
 #include <mgba/core/config.h>
 #include <mgba-util/vfs.h>
 #include <mgba/gba/core.h>
+#include <mgba/core/serialize.h>
+#include <fcntl.h>
 #include <mgba/core/log.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -27,6 +29,10 @@ int main(int argc, char** argv) {
         else if (!strcmp(cmd, "peek")) { sscanf(line, "peek %x %u", &a, &b); for (unsigned i = 0; i < b; i++) printf("%02x", core->busRead8(core, a + i)); puts(""); }
         else if (!strcmp(cmd, "shot")) { sscanf(line, "shot %255s", f); FILE* o = fopen(f, "wb"); fprintf(o, "P6\n%u %u\n255\n", w, h);
             for (unsigned i = 0; i < w * h; i++) { uint32_t p = buf[i]; fputc(p & 0xff, o); fputc((p >> 8) & 0xff, o); fputc((p >> 16) & 0xff, o); } fclose(o); puts("ok"); }
+        else if (!strcmp(cmd, "ss")) { sscanf(line, "ss %255s", f); struct VFile* vf = VFileOpen(f, O_CREAT | O_TRUNC | O_RDWR);
+            int ok = vf ? mCoreSaveStateNamed(core, vf, SAVESTATE_SAVEDATA | SAVESTATE_RTC) : 0; if (vf) vf->close(vf); puts(ok ? "ok" : "fail"); }
+        else if (!strcmp(cmd, "ls")) { sscanf(line, "ls %255s", f); struct VFile* vf = VFileOpen(f, O_RDONLY);
+            int ok = vf ? mCoreLoadStateNamed(core, vf, SAVESTATE_SAVEDATA | SAVESTATE_RTC) : 0; if (vf) vf->close(vf); puts(ok ? "ok" : "fail"); }
         else if (!strcmp(cmd, "quit")) break;
         fflush(stdout);
     }

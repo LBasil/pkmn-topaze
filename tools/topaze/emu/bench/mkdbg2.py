@@ -3,7 +3,7 @@
 import subprocess, re, os, shutil
 os.chdir('/home/claude/pkmn-topaze')
 sh = lambda c: subprocess.run(c, shell=True, check=True, capture_output=True, text=True)
-sh('git checkout src/new_game.c src/trainer_see.c src/wild_encounter.c src/battle_script_commands.c')
+sh('git checkout src/new_game.c src/trainer_see.c src/wild_encounter.c src/battle_script_commands.c src/battle_main.c')
 sh('git apply tools/topaze/emu/debug.patch')
 p = 'src/new_game.c'; s = open(p).read()
 marker = "    if (gTopazeDbg[0]) SetWarpDestination"
@@ -45,10 +45,19 @@ assert old in s
 s = s.replace(old, old + '    if (gTopazeGod) { if (GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER) { if (gBattleMoveDamage > 0) gBattleMoveDamage = 9999; } else gBattleMoveDamage = 1; }\n', 1)
 assert 'gTopazeGod && GetBattlerSide' in s
 open(p, 'w').write(s)
+# mode dieu : les attaques de STATUT du joueur sont remplacees par METEORES (touche toujours, tue en un coup) ; sinon un partenaire dont
+# la 1re attaque est un statut (ex. Vampigraine) ne finit jamais un combat pilote par A.
+p = 'src/battle_main.c'; s = open(p).read()
+old = '    gBattlescriptCurrInstr = gBattleScriptsForMoveEffects[gBattleMoves[gCurrentMove].effect];\n    gCurrentActionFuncId = B_ACTION_EXEC_SCRIPT;\n}\n\nstatic void HandleAction_Switch(void)'
+assert old in s
+new = '    if (gTopazeGod && GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER && gBattleMoves[gCurrentMove].power == 0 && gCurrentMove != MOVE_NONE)\n    {\n        gCurrentMove = MOVE_SWIFT;\n        gBattlerTarget = GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT);\n    }\n'
+s = s.replace(old, new + old, 1)
+s = s.replace('#include "constants/moves.h"', '#include "constants/moves.h"\nextern u8 gTopazeGod;', 1)
+open(p, 'w').write(s)
 r = subprocess.run('make -j8 firered 2>&1 | tail -4', shell=True, capture_output=True, text=True); print(r.stdout)
 assert 'Error' not in r.stdout, 'BUILD FAIL'
 shutil.copy('pokefirered.gba', '/tmp/gx/dbg2.gba'); shutil.copy('pokefirered.map', '/tmp/gx/dbg2.map'); shutil.copy('pokefirered.elf', '/tmp/gx/dbg2.elf')
-sh('git checkout src/new_game.c src/trainer_see.c src/wild_encounter.c src/battle_script_commands.c')
+sh('git checkout src/new_game.c src/trainer_see.c src/wild_encounter.c src/battle_script_commands.c src/battle_main.c')
 print(sh('git status --short').stdout)
 m = open('/tmp/gx/dbg2.map').read()
 for n in ('gTopazeVars', 'gTopazeFlags', 'gTopazeDbg', 'gTopazeGod'):

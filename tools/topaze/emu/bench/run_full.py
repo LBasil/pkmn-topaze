@@ -1,0 +1,338 @@
+#!/usr/bin/env python3
+"""Autopilote de la RUN COMPLETE (nouvelle partie -> generique) en emulateur (mGBA headless).
+
+Prerequis : /tmp/gx (harness avec commandes ss/ls, drive.py, tz.py, spin.py, dbg2.gba via mkdbg2.py).
+ROM de debug utilisee SANS teleport utile : on demarre dans la chambre du joueur (nouvelle partie), mode DIEU actif (le joueur
+ne perd jamais, tue en un coup), mais combats et scenes normaux. Aucun drapeau n'est pre-positionne : les verrous doivent se lever
+naturellement. Chaque etape sauvegarde un etat (/tmp/gx/st/<etape>.ss) pour pouvoir reprendre : `run_full.py <etape>` repart de la
+sauvegarde de l'etape precedente.
+
+Navigation : graphe des cartes (warps + connexions), BFS statique ; les obstacles dynamiques (dresseurs, policiers) sont geres
+par walk_fight / scene. Tout blocage est journalise dans /tmp/gx/run.log (`BLOCK ...`).
+"""
+import sys, os, json, collections, time
+sys.path.insert(0, '/tmp/gx')
+from tz import *
+import tz
+
+ST = '/tmp/gx/st'; os.makedirs(ST, exist_ok=True); os.makedirs('/tmp/gx/out', exist_ok=True)
+LOG = open('/tmp/gx/run.log', 'a')
+def log(*a):
+    s = ' '.join(str(x) for x in a); print(s, flush=True); LOG.write(s + '\n'); LOG.flush()
+
+_MJ = {}
+def mj(name):
+    if name not in _MJ: _MJ[name] = json.load(open('data/maps/%s/map.json' % name))
+    return _MJ[name]
+def mname(dm):
+    return tz._NAMES[dm.replace('MAP_', '').replace('_', '').lower()]
+# --- graphe des composantes (carte, zone atteignable) : warps + connexions ---------------------------------------
+_NAV = {}; _COMP = {}
+GATE_GFX = ('PUSHABLE_BOULDER', 'BREAKABLE_ROCK', 'STRENGTH', 'ROCK_SMASH')
+def nav_of(name):
+    if name not in _NAV:
+        n = R.Nav(name)
+        n.objs = {(o['x'], o['y']) for o in n.mj['object_events'] if any(g in o['graphics_id'] for g in GATE_GFX)}
+        _NAV[name] = n
+    return _NAV[name]
+def comps(name):
+    """etiquette de composante de chaque case marchable (les cases de warp ne se traversent pas)."""
+    if name in _COMP: return _COMP[name]
+    nav = nav_of(name); lab = {}; k = 0
+    for y in range(nav.h):
+        for x in range(nav.w):
+            if (x, y) in lab or nav.blocked(x, y) or (x, y) in nav.warps: continue
+            q = collections.deque([(x, y)]); lab[(x, y)] = k
+            while q:
+                c = q.popleft()
+                for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0)):
+                    m = (c[0] + dx, c[1] + dy)
+                    if m in lab or not (0 <= m[0] < nav.w and 0 <= m[1] < nav.h) or nav.blocked(*m) or m in nav.warps: continue
+                    lab[m] = k; q.append(m)
+            k += 1
+    _COMP[name] = lab; return lab
+def comp_of(name, cell):
+    """composante d'une case (case de warp/porte : composante d'un voisin libre)."""
+    lab = comps(name)
+    if cell in lab: return lab[cell]
+    for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0)):
+        m = (cell[0] + dx, cell[1] + dy)
+        if m in lab: return lab[m]
+    return None
+def exits(name, comp):
+    """sorties d'une composante : ('warp', dest, idx, case) / ('conn', dest, conn, case_depart, case_arrivee)."""
+    nav = nav_of(name); lab = comps(name); out = []
+    for i, w in enumerate(nav.mj['warp_events']):
+        d = w['dest_map']
+        if d in ('MAP_DYNAMIC', 'DYNAMIC'): continue
+        c = (w['x'], w['y'])
+        if comp_of(name, c) != comp: continue
+        try: dn = mname(d)
+        except KeyError: continue
+        dw = nav_of(dn).mj['warp_events']; di = int(w['dest_warp_id']) if str(w['dest_warp_id']).isdigit() else -1
+        if not (0 <= di < len(dw)): continue
+        out.append(('warp', dn, i, c, (dw[di]['x'], dw[di]['y'])))
+    for cn in nav.mj.get('connections') or []:
+        d = cn['direction']
+        if d not in ('up', 'down', 'left', 'right'): continue
+        try: dn = mname(cn['map'])
+        except KeyError: continue
+        dnav = nav_of(dn); off = cn['offset']
+        if d == 'up': cells = [((x, 0), (x - off, dnav.h - 1)) for x in range(nav.w)]
+        elif d == 'down': cells = [((x, nav.h - 1), (x - off, 0)) for x in range(nav.w)]
+        elif d == 'left': cells = [((0, y), (dnav.w - 1, y - off)) for y in range(nav.h)]
+        else: cells = [((nav.w - 1, y), (0, y - off)) for y in range(nav.h)]
+        for a, b in cells:
+            if lab.get(a) == comp and 0 <= b[0] < dnav.w and 0 <= b[1] < dnav.h and not dnav.blocked(*b):
+                out.append(('conn', dn, cn, a, b)); break
+    return out
+def route(src_map, src_cell, dst, banned=()):
+    """Chemin le plus court de composante en composante jusqu'a la carte dst : liste de sorties (voir exits)."""
+    c0 = comp_of(src_map, src_cell)
+    if c0 is None: return None
+    start = (src_map, c0); prev = {start: None}; q = collections.deque([start]); end = None
+    while q:
+        n = q.popleft()
+        if n[0] == dst: end = n; break
+        for e in exits(n[0], n[1]):
+            if (n[0], e[1], e[3]) in banned: continue
+            arr = e[4]; nc = comp_of(e[1], arr)
+            if nc is None: continue
+            nn = (e[1], nc)
+            if nn in prev: continue
+            prev[nn] = (n, e); q.append(nn)
+    if end is None: return None
+    out = []; c = end
+    while prev[c]: pn, e = prev[c]; out.append(e); c = pn
+    return out[::-1]
+
+class Auto(T):
+    @classmethod
+    def boot(cls, mapname='PalletTown_PlayersHouse_2F', x=6, y=6):
+        t = cls(mapname, x, y, party=False, nocombat=False, god=True)
+        t.e.cmd('unpin'); return t
+    @classmethod
+    def resume(cls, name, rom='/tmp/gx/dbg2.gba'):
+        t = cls.__new__(cls); t.e = Emu(rom); t.shots = []
+        r = t.e.cmd('ls %s/%s.ss' % (ST, name)); assert r == 'ok', 'etat introuvable ' + name
+        t.e.run(10, 0); t.sync(); return t
+    def nav(s, name=None):
+        """Nav de la carte courante avec la grille VIVANTE (RAM) et les objets vivants."""
+        n = R.Nav(name or s.sync()); s.live_grid(n); return n
+    def save(s, name):
+        r = s.e.cmd('ss %s/%s.ss' % (ST, name)); log('SAVE', name, r, s.pos(), s.sync())
+    def st(s):
+        return (s.sync(), s.pos()[2:])
+    # --- passage de connexion (bord de carte)
+    def edge_cross(s, c, goal):
+        """Traverse la connexion c en partant de la case de bord `goal` (accessible)."""
+        d = c['direction']; name = s.sync(); nav = s.nav(); p = s.pos(); cur = (p[2], p[3])
+        key = {'up': 'UP', 'down': 'DOWN', 'left': 'LEFT', 'right': 'RIGHT'}[d]
+        nav.objs = s.live_objs()
+        cells = [goal]
+        # cases voisines du meme bord au cas ou la premiere est occupee
+        for k in (1, -1, 2, -2):
+            g2 = (goal[0] + (k if d in ('up', 'down') else 0), goal[1] + (k if d in ('left', 'right') else 0))
+            if 0 <= g2[0] < nav.w and 0 <= g2[1] < nav.h and not nav.blocked(*g2): cells.append(g2)
+        for g in cells:
+            if cur != g and not nav.path(cur, g): continue
+            s.walk_fight(g, 10)
+            if s.pos()[:2] != p[:2]: return True
+            s.e.run(24, KEYS[key]); s.e.run(40, 0)
+            if s.pos()[:2] != p[:2]: return True
+            p = s.pos(); cur = (p[2], p[3])
+        return False
+    def hop(s, e):
+        """Franchit la sortie e (voir exits). True si la carte a change."""
+        k, dest = e[0], e[1]; cur = s.sync(); m0 = s.pos()[:2]; nav = s.nav()
+        if k == 'warp':
+            nav.objs = s.live_objs(); w = nav.mj['warp_events'][e[2]]; s._warp_try(nav, w, 12, None)
+        else:
+            s.edge_cross(e[2], e[3])
+        return s.pos()[:2] != m0
+    def clear_blocker(s, goal):
+        """Si un objet vivant (PNJ, dresseur) barre le chemin vers `goal`, va lui parler (combat/dialogue). True si une action a eu lieu."""
+        nav = s.nav(); live = s.live_objs(); p = s.pos(); cur = (p[2], p[3])
+        nav.objs = set(); path = nav.path(cur, goal)
+        if not path:     # but bloque (porte a collision) : on vise une case voisine accessible
+            for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0)):
+                a = (goal[0] + dx, goal[1] + dy)
+                if not nav.blocked(*a):
+                    path = nav.path(cur, a)
+                    if path: break
+        if not path: return False
+        for c in path:
+            if c in live:
+                log('  deblocage : objet en', c, 'sur le chemin', cur, '->', goal)
+                s.save('blocker_%s' % s.sync())
+                return s.talk_obj(c, 30)
+        return False
+    def go(s, target, banned=(), tries=4):
+        """Va jusqu'a la carte `target` par le graphe de composantes. Renvoie True si arrive."""
+        banned = set(banned); tried = collections.Counter()
+        for _ in range(tries * 8):
+            cur = s.sync()
+            if cur == target: return True
+            p = s.pos(); rt = route(cur, (p[2], p[3]), target, banned)
+            if not rt: log('BLOCK pas de route', cur, (p[2], p[3]), '->', target); return False
+            e = rt[0]
+            if not s.hop(e):
+                if tried[(cur, e[3])] < 5:
+                    tried[(cur, e[3])] += 1
+                    if not s.idle(): s.scene(maxn=600)          # une scene a pu se declencher en route : on la laisse finir puis on reessaie
+                    if s.clear_blocker(e[3]) or s.sync() != cur or tried[(cur, e[3])] <= 2: continue
+                log('BLOCK hop echoue', cur, e[:2], e[3], s.pos()); banned.add((cur, e[1], e[3]))
+                s.shot('block_%s_%s' % (cur, e[1]))
+            else: log('  ', cur, '->', s.sync(), s.pos()[2:])
+        return s.sync() == target
+    def pause_to_free(s, maxn=300, shot=None):
+        return s.scene(maxn=maxn, shot=shot)
+    def talk_at(s, tile, face, n=14, shot=None):
+        """Va sur `tile` (case voisine du PNJ), se tourne vers `face`, parle, laisse la scene se terminer."""
+        r = s.walk_fight(tile, 10)
+        s.face(face); s.mash(n, shot); return s.scene(120)
+    def approach(s, pos, rounds=10):
+        """Se place sur une case voisine accessible de `pos` (objet) et se tourne vers lui. True si en place."""
+        name = s.sync(); nav = s.nav(); nav.objs = s.live_objs() - {tuple(pos)}
+        p = s.pos(); cur = (p[2], p[3]); best = None
+        for d, (dx, dy) in (('DOWN', (0, -1)), ('UP', (0, 1)), ('RIGHT', (-1, 0)), ('LEFT', (1, 0))):   # d = direction a viser depuis la case
+            c = (pos[0] + dx, pos[1] + dy)
+            if nav.blocked(*c) or c in nav.warps: continue
+            path = nav.path(cur, c) if c != cur else [c]
+            if path and (best is None or len(path) < best[0]): best = (len(path), c, d)
+        if not best: return False
+        if s.walk_fight(best[1], rounds) not in (True,): return False
+        s.face(best[2]); return True
+    def talk_obj(s, pos, n=14, shot=None):
+        if not s.approach(pos): return False
+        s.mash(n, shot); s.scene(900); return True
+    def find_obj(s, script_pat):
+        """Position (carte JSON) de l'objet dont le script contient script_pat sur la carte courante."""
+        for o in mj(s.sync())['object_events']:
+            if script_pat in o['script']: return (o['x'], o['y'])
+    def talk_script(s, script_pat, n=14, shot=None):
+        pos = s.find_obj(script_pat); assert pos, 'objet introuvable ' + script_pat
+        return s.talk_obj(pos, n, shot)
+    def talk_wanderers(s, flags, area, rounds=8):
+        """Parle aux objets mobiles de la zone `area` (x0,y0,x1,y1) jusqu'a ce que tous les `flags` soient poses."""
+        x0, y0, x1, y1 = area
+        for _ in range(rounds):
+            if all(s.getflag(f) for f in flags): return True
+            objs = sorted(o for o in s.live_objs() if x0 <= o[0] <= x1 and y0 <= o[1] <= y1)
+            p = s.pos()
+            objs.sort(key=lambda o: abs(o[0] - p[2]) + abs(o[1] - p[3]))
+            for o in objs:
+                if s.talk_obj(o, 8) and all(s.getflag(f) for f in flags): return True
+        return all(s.getflag(f) for f in flags)
+    def report(s, *items):
+        out = []
+        for i in items:
+            if i.startswith('VAR_'): out.append('%s=%s' % (i, s.getvar(i)))
+            else: out.append('%s=%s' % (i, s.getflag(i)))
+        log('STATE', s.st(), ' '.join(out))
+
+# ----------------------------------------------------------------------------------------------------------------
+def stage_opening_ranch(t):
+    """Chambre -> rez-de-chaussee -> Grenalux -> sortie nord : scene du rival, du ranch, choix du partenaire, combat, pendentif."""
+    assert t.go('PalletTown'), 'sortie maison'
+    r = t.walk_fight((22, 3), 8, 'op_ranch')
+    t.scene(maxn=400)
+    t.report('FLAG_GRENALUX_ONYBRIS_STRIKE', 'VAR_GRENALUX_OPENING')
+    assert t.getflag('FLAG_GRENALUX_ONYBRIS_STRIKE'), 'attaque non declenchee'
+
+def stage_school(t):
+    assert t.go('PalletTown_School'), 'ecole inaccessible'
+    t.scene(maxn=500, shot='sch'); t.report('VAR_GRENALUX_OPENING')
+    assert t.getvar('VAR_GRENALUX_OPENING') == 3, 'ecole : VAR_GRENALUX_OPENING != 3'
+
+def stage_lab(t):
+    assert t.go('PalletTown_ProfessorOaksLab'), 'labo inaccessible'
+    t.scene(maxn=500, shot='lab'); t.report('VAR_GRENALUX_OPENING', 'FLAG_SYS_POKEDEX_GET')
+    assert t.getvar('VAR_GRENALUX_OPENING') == 4, 'labo : OPENING != 4'
+
+def stage_route1_quest(t):
+    assert t.go('Route1'), 'Route 1 inaccessible'
+    fl = ['FLAG_ROUTE1_TALKED_DODUO', 'FLAG_ROUTE1_TALKED_NIDORANM', 'FLAG_ROUTE1_TALKED_NIDORANF']
+    ok = t.talk_wanderers(fl, (5, 20, 22, 40), rounds=12)
+    t.report(*fl, 'FLAG_ONYBRIS_ANIMALS_FOUND')
+    assert ok, 'quete du ranch : animaux non tous trouves'
+    assert t.go('PalletTown_Ranch'), 'ranch inaccessible'
+    t.talk_script('Hand1', 20); t.report('FLAG_ONYBRIS_ANIMALS_FOUND', 'FLAG_GRENALUX_GEM_REWARD')
+    assert t.getflag('FLAG_GRENALUX_GEM_REWARD'), 'recompense du ranch non donnee'
+
+def stage_opanihrum(t):
+    assert t.go('ViridianCity'), 'Opanihrum inaccessible'
+    t.talk_script('TutorialOldMan', 30, 'opan'); t.report('FLAG_VIRIDIAN_TUTORIAL_DONE')
+
+def badge_gym(t, gymmap, leader_pat, badge, n=40):
+    assert t.go(gymmap), gymmap + ' inaccessible'
+    for _ in range(6):
+        t.talk_script(leader_pat, n, 'gym_' + gymmap)
+        if t.getflag(badge): break
+    t.report(badge)
+    assert t.getflag(badge), 'badge non obtenu ' + badge
+
+def stage_gym1(t): badge_gym(t, 'PewterCity_Gym', 'Brock', 'FLAG_BADGE01_GET')
+
+def stage_gym2(t): badge_gym(t, 'CeruleanCity_Gym', 'Misty', 'FLAG_BADGE02_GET')
+
+def stage_cottage(t):
+    assert t.go('Route25_SeaCottage'), 'chaumiere inaccessible'
+    t.scene(maxn=900, shot='cottage'); t.report('FLAG_GOT_SS_TICKET')
+    assert t.getflag('FLAG_GOT_SS_TICKET'), 'ticket non obtenu'
+
+def stage_ssanne(t):
+    assert t.go('SSAnne_CaptainsOffice'), 'bureau du capitaine inaccessible'
+    t.scene(maxn=900, shot='ssanne'); t.report('FLAG_GOT_HM01')
+    for _ in range(4):
+        if t.getflag('FLAG_GOT_HM01'): break
+        t.talk_script('Captain', 30, 'ssanne_cap')
+    t.report('FLAG_GOT_HM01')
+    assert t.getflag('FLAG_GOT_HM01'), 'CUT non obtenue'
+
+def trash_puzzle(t, maxtry=80):
+    """Arene d'Apatia : puzzle des poubelles (2 interrupteurs, le 2e voisin du 1er)."""
+    cans = {}
+    for b in mj('VermilionCity_Gym')['bg_events']:
+        if 'TrashCan' in b['script']: cans[int(b['script'].split('TrashCan')[1])] = (b['x'], b['y'])
+    def nbrs(k):
+        r, c = divmod(k - 1, 5); out = []
+        if c > 0: out.append(k - 1)
+        if c < 4: out.append(k + 1)
+        if r > 0: out.append(k - 5)
+        if r < 2: out.append(k + 5)
+        return out
+    def poke(k):
+        ok = t.approach(cans[k])
+        if ok: t.press('A', 4, 40); t.scene(120)      # un seul A : d'autres A rouvriraient la poubelle (et reinitialiseraient les verrous)
+        log('  can', k, cans[k], 'ok' if ok else 'ECHEC', t.pos()[2:], 'T1=', t.getflag('FLAG_TEMP_1'))
+    first = None; todo = list(range(1, 16)); i = 0
+    for _ in range(maxtry):
+        if t.getflag('FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES'): break
+        if first is None:
+            k = todo[i % 15]; i += 1; poke(k)
+            if t.getflag('FLAG_TEMP_1'): first = k; cand = nbrs(k)
+        else:
+            if not cand: first = None; continue
+            k = cand.pop(0); poke(k)
+            if not t.getflag('FLAG_TEMP_1') and not t.getflag('FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES'): first = None
+    t.report('FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES')
+    assert t.getflag('FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES'), 'puzzle des poubelles non resolu'
+
+def stage_gym3(t):
+    assert t.go('VermilionCity_Gym'), 'arene d Apatia inaccessible'
+    trash_puzzle(t)
+    badge_gym(t, 'VermilionCity_Gym', 'LtSurge', 'FLAG_BADGE03_GET')
+
+STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3)]
+
+if __name__ == '__main__':
+    # usage : run_full.py all | run_full.py <etape> [<etape> ...]   (une etape isolee repart de la sauvegarde de la precedente)
+    names = [n for n, _ in STAGES]; want = sys.argv[1:] or ['all']
+    seq = names if want == ['all'] else want
+    t = None
+    for nm in seq:
+        i = names.index(nm)
+        if t is None: t = Auto.boot() if i == 0 else Auto.resume(names[i - 1])
+        log('=== STAGE', nm, time.strftime('%H:%M:%S'))
+        STAGES[i][1](t); t.save(nm)

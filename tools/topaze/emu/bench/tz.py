@@ -6,6 +6,13 @@ from drive import Emu, KEYS, step
 import route_test as R
 
 FLB, VRB, SB = 0xEE0, 0x1000, 0x03005048
+def _sym(name, elf='/tmp/gx/dbg2.elf'):
+    import subprocess
+    for l in subprocess.run(['arm-none-eabi-nm', elf], capture_output=True, text=True).stdout.splitlines():
+        a = l.split()
+        if len(a) == 3 and a[2] == name: return int(a[0], 16)
+_BMD = _sym('gBackupMapData') or 0x02031e00
+_CB2 = (_sym('CB2_Overworld') or 0x08057094) | 1   # lu dans dbg2.elf : l'adresse change a chaque build
 _defs = {}
 def _load(path):
     for l in open(path):
@@ -85,6 +92,15 @@ class T:
             s.press('A', 4, gap)
             if name and i % every == every - 1: out.append(s.shot('%s_%02d' % (name, i // every)))
         return out
+    def live_grid(s, nav):
+        """Remplace la grille statique de `nav` par la carte VIVANTE (RAM) : portes/barrieres ouvertes par des scripts, etc."""
+        import struct as _st
+        stride = nav.w + 15; g = []
+        for y in range(nav.h):
+            row = s.e.peek(_BMD + ((y + 7) * stride + 7) * 2, nav.w * 2)
+            g.extend(_st.unpack('<%dH' % nav.w, row))
+        if all((v & 0x3ff) < 640 + len(nav.sa) for v in g): nav.g = tuple(g)   # sinon (carte en cours de chargement) : grille statique
+        return nav
     def live_objs(s):
         b = s.e.peek(0x02036e3c, 0x24 * 16); out = set()
         for i in range(16):
@@ -102,7 +118,7 @@ class T:
     def walk_to(s, goal, name=None, tries=200):
         """Marche vers goal (BFS qui connait les cases-flèches, objets lus en direct) ; True / False / 'warped'."""
         from spin import spin_bfs
-        nav = R.Nav(name or s.mapname); stuck = 0
+        nav = R.Nav(name or s.sync()); s.live_grid(nav); stuck = 0
         for _ in range(tries):
             nav.objs = s.live_objs()
             p = s.pos(); cur = (p[2], p[3])
@@ -151,7 +167,7 @@ class T:
     def inbattle(s): return bool(s.e.peek(0x03003130 + 0x439, 1)[0] & 1)
     def idle(s):
         e = s.e
-        return e.u32(0x03003130 + 4) == 0x08057095 and not (e.peek(0x03003130 + 0x439, 1)[0] & 1) and e.peek(0x03000f9c, 1)[0] == 0
+        return e.u32(0x03003130 + 4) == _CB2 and not (e.peek(0x03003130 + 0x439, 1)[0] & 1) and e.peek(0x03000f9c, 1)[0] == 0
     def scene(s, maxn=600, key='A', shot=None):
         """Fait avancer une scène/un combat (A en combat, `key` sinon) jusqu'à ce que le jeu soit redevenu libre ; renvoie le nb d'appuis."""
         n = 0; calm = 0
@@ -242,10 +258,18 @@ def _warp_try(s, nav, w, rounds, name):
     else: r = s.walk_fight(goal, rounds, name)
     if s.pos()[:2] == p0[:2]:
         b = nav.attr(*goal) & 0x1ff
-        order = {0x6c: ('RIGHT',), 0x6d: ('LEFT',), 0x6e: ('RIGHT',), 0x6f: ('LEFT',)}.get(b, ()) + ('UP', 'DOWN', 'LEFT', 'RIGHT')
+        order = {0x6c: ('RIGHT',), 0x6d: ('LEFT',), 0x6e: ('RIGHT',), 0x6f: ('LEFT',),
+                 0x62: ('RIGHT',), 0x63: ('LEFT',), 0x64: ('UP',), 0x65: ('DOWN',)}.get(b, ())
+        if goal[1] == nav.h - 1: order += ('DOWN',)
+        if goal[1] == 0: order += ('UP',)
+        if goal[0] == 0: order += ('LEFT',)
+        if goal[0] == nav.w - 1: order += ('RIGHT',)
+        order += ('DOWN', 'UP', 'LEFT', 'RIGHT')
         for d in order:
+            if s.pos()[:2] != p0[:2]: break
             s.e.run(14, KEYS[d]); s.e.run(70, 0)
             if s.pos()[:2] != p0[:2]: break
+            if (s.pos()[2], s.pos()[3]) != goal: s.walk_to(goal)   # la touche nous a decale : on revient sur la case de warp
     s.e.run(40, 0)
 
     return r
