@@ -233,7 +233,8 @@ PalletTown_Text_RanchOakIntro::
     .string "restless, as if they felt something.\p"
     .string "That is why I brought three POKé\n"
     .string "BALLS with me today. {PLAYER}, {RIVAL},\l"
-    .string "you have both waited long enough, and--$"
+    .string "you have both waited long\n"
+    .string "enough, and--$"
 
 PalletTown_Text_RanchTrackersHowl::
     .string "...Do you hear that?\n"

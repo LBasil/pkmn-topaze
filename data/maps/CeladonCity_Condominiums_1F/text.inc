@@ -22,7 +22,8 @@ CeladonCity_Condominiums_1F_Text_DaisyComesToBuyTea::
     .string "chance, from GRENALUX?\p"
     .string "A girl from GRENALUX, DAISY,\n"
     .string "she enjoys TEA every day.\p"
-    .string "She visits the BOURG QUARTZ DEPT. STORE\n"
+    .string "She visits the BOURG QUARTZ\n"
+    .string "DEPT. STORE\n"
     .string "to buy some TEA.$"
 
 CeladonCity_Condominiums_1F_Text_Clefairy::

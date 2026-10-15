@@ -61,9 +61,9 @@ PalletTown_School_Text_TeacherCourseEnd::
     .string "Read it whenever you doubt.$"
 
 PalletTown_School_Text_TeacherCourseShort::
-    .string "Still, a teacher teaches. Types changed\n"
-    .string "ten years ago, and FAIRY now beats\l"
-    .string "DRAGON, FIGHTING and DARK.\p"
+    .string "Still, a teacher teaches. Types\n"
+    .string "changed ten years ago, and FAIRY\l"
+    .string "now beats DRAGON, FIGHTING and DARK.\p"
     .string "I wrote it down for you.$"
 
 PalletTown_School_Text_TeacherCourseDone::

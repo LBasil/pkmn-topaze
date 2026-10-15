@@ -13,8 +13,8 @@ CeladonCity_Text_GymIsGreatFullOfWomen::
     .string "ONYBRIS crowd moved right in.$"
 
 CeladonCity_Text_GameCornerIsBadForCitysImage::
-    .string "BOURG QUARTZ takes pride in its efforts\n"
-    .string "to keep the city beautiful.\p"
+    .string "BOURG QUARTZ takes pride in its\n"
+    .string "efforts to keep the city beautiful.\p"
     .string "That's why the new GAME CORNER is\n"
     .string "bad for our city's image.$"
 
