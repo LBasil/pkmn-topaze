@@ -4664,38 +4664,44 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BossGiovanni2[] = {
     { .iv = 100, .lvl = 43, .species = SPECIES_NIDOKING },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderGiovanni[] = {
+static const struct TrainerMonItemCustomMoves sParty_LeaderGiovanni[] = { // Topaze: Hepha, Gen 1 species only
     {
-        .iv = 60,
+        .iv = 90,
         .lvl = 52,
         .species = SPECIES_MAGNETON,
+        .heldItem = ITEM_MAGNET,
+        .moves = {MOVE_THUNDERBOLT, MOVE_TRI_ATTACK, MOVE_SWIFT, MOVE_THUNDER_WAVE},
     },
     {
-        .iv = 60,
+        .iv = 90,
         .lvl = 53,
-        .species = SPECIES_FORRETRESS,
+        .species = SPECIES_ARBOK,
+        .heldItem = ITEM_SITRUS_BERRY,
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_IRON_TAIL, MOVE_CRUNCH, MOVE_SCREECH},
     },
     {
-        .iv = 60,
-        .lvl = 54,
-        .species = SPECIES_SKARMORY,
-    },
-    {
-        .iv = 60,
+        .iv = 90,
         .lvl = 55,
-        .species = SPECIES_SCIZOR,
+        .species = SPECIES_MACHAMP,
+        .heldItem = ITEM_BLACK_BELT,
+        .moves = {MOVE_CROSS_CHOP, MOVE_IRON_TAIL, MOVE_ROCK_SLIDE, MOVE_BRICK_BREAK},
     },
     {
-        .iv = 60,
+        .iv = 90,
         .lvl = 56,
-        .species = SPECIES_STEELIX,
+        .species = SPECIES_GOLEM,
+        .heldItem = ITEM_METAL_COAT,
+        .moves = {MOVE_EARTHQUAKE, MOVE_FLAMETHROWER, MOVE_ROCK_SLIDE, MOVE_IRON_TAIL},
     },
     {
-        .iv = 60,
+        .iv = 90,
         .lvl = 58,
-        .species = SPECIES_AGGRON,
+        .species = SPECIES_BLASTOISE,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_IRON_TAIL, MOVE_HYDRO_PUMP},
     },
 };
+
 
 static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt[] = {
     {

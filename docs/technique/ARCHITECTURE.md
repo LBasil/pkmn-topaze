@@ -433,3 +433,6 @@ Outil local `tools/topaze/editor/` (voir son README) : `python3 tools/topaze/edi
 
 ## Guide des touches supprimé (15/10)
 Au nouveau jeu, les 3 pages bleues « Controls » (L/R, croix…) de src/oak_speech.c sont sautées : après le chargement, `Task_ControlsGuide_Skip` nettoie la page 1 et enchaîne sur l'intro Pikachu (pages bleues « In the world which you are about to enter… », conservées). Testé à l'émulateur (titre → intro → Oak).
+
+## Champions : Gen 1 uniquement (15/10)
+Les 8 champions n'utilisent que des espèces #1-151 (les autres générations sont réservées aux Îles Sevii). Hepha (`sParty_LeaderGiovanni`) refait : Magnéton 52, Arbok 53, Mackogneur 55, Grolem 56, Tortank 58 (tous Acier, objets et attaques personnalisés). Le site (`build_site.py`) lit maintenant aussi les équipes à attaques par défaut.
