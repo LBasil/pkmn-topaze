@@ -518,3 +518,7 @@ Nouveaux objets (slots libres 226/227, anciens `ITEM_0E2/0E3`) : `ITEM_LINK_CABL
 ## EXP. SHARE = interrupteur du Multi Exp integre
 
 Le partage d'XP d'equipe est actif par defaut. L'objet EXP. SHARE (donne dans `NewGameInitData`) s'utilise depuis le sac (`FieldUseFunc_ExpShare`, src/item_use.c) et bascule le bit 14 de `optionsTopaze` (`TOPAZE_OPT_EXPSHARE_OFF`). Quand coupe, Cmd_getexp (src/battle_script_commands.c) ne compte plus personne dans `viaExpShare` et saute les Pokemon qui n'ont pas combattu. Parties existantes : l'objet n'est pas ajoute retroactivement.
+
+## Echanges PNJ supprimes + especes ex-echange en nature
+
+Les 9 PNJ d'echange (Route 11/2/18, Souterrain, Azuria, Carmin, Cramois'Ile x3) ont ete retires de leur map.json (les scripts `*_EventScript_*Trade*` restent dans les .inc, inutilises). Especes redistribuees dans `wild_encounters.json` (slot 7, 5 %, FR+LG) : Farfetch'd Route 12 (lv28), Lickitung Route 11 (lv25), M. Mime Route 25 (lv22), Lippouti/Jynx Mt Selenite/Ile Écume 1F (lv37). Audit : seuls Lugia, Ho-Oh et Deoxys restent sans source.

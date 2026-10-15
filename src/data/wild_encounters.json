@@ -2771,7 +2771,7 @@
               {
                 "min_level": 37,
                 "max_level": 37,
-                "species": "SPECIES_GOLBAT"
+                "species": "SPECIES_JYNX"
               },
               {
                 "min_level": 42,
@@ -9243,7 +9243,7 @@
               {
                 "min_level": 25,
                 "max_level": 25,
-                "species": "SPECIES_SPEAROW"
+                "species": "SPECIES_LICKITUNG"
               },
               {
                 "min_level": 24,
@@ -9395,9 +9395,9 @@
                 "species": "SPECIES_ODDISH"
               },
               {
-                "min_level": 29,
-                "max_level": 29,
-                "species": "SPECIES_PIDGEY"
+                "min_level": 28,
+                "max_level": 28,
+                "species": "SPECIES_FARFETCHD"
               },
               {
                 "min_level": 26,
@@ -10998,7 +10998,7 @@
               {
                 "min_level": 22,
                 "max_level": 22,
-                "species": "SPECIES_VENONAT"
+                "species": "SPECIES_MR_MIME"
               },
               {
                 "min_level": 19,
@@ -15313,7 +15313,7 @@
               {
                 "min_level": 37,
                 "max_level": 37,
-                "species": "SPECIES_GOLBAT"
+                "species": "SPECIES_JYNX"
               },
               {
                 "min_level": 42,
@@ -21785,7 +21785,7 @@
               {
                 "min_level": 25,
                 "max_level": 25,
-                "species": "SPECIES_SPEAROW"
+                "species": "SPECIES_LICKITUNG"
               },
               {
                 "min_level": 24,
@@ -21937,9 +21937,9 @@
                 "species": "SPECIES_BELLSPROUT"
               },
               {
-                "min_level": 29,
-                "max_level": 29,
-                "species": "SPECIES_PIDGEY"
+                "min_level": 28,
+                "max_level": 28,
+                "species": "SPECIES_FARFETCHD"
               },
               {
                 "min_level": 26,
@@ -23540,7 +23540,7 @@
               {
                 "min_level": 22,
                 "max_level": 22,
-                "species": "SPECIES_VENONAT"
+                "species": "SPECIES_MR_MIME"
               },
               {
                 "min_level": 19,
