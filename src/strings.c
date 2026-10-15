@@ -200,6 +200,8 @@ const u8 gText_UsedVar2WildLured[] = _("{PLAYER} used the\n{STR_VAR_2}.\pWild PO
 const u8 gText_UsedVar2WildRepelled[] = _("{PLAYER} used the\n{STR_VAR_2}.\pWild POKéMON will be repelled.{PAUSE_UNTIL_PRESS}");
 const u8 gText_BoxFull[] = _("The BOX is full.{PAUSE_UNTIL_PRESS}");
 const u8 gText_PowderQty[] = _("POWDER QTY: {STR_VAR_1}{PAUSE_UNTIL_PRESS}");
+// Topaze: TYPE MEMO (ex POWDER JAR) - type chart cheat sheet
+const u8 gText_TypeMemo[] = _("TYPE MEMO: what each type\nhits hard, and what it fears.\pTypes are shown by their first\nthree letters. FAI = FAIRY.\pNORMAL hits: nothing hard\nWeak to: FIG\pFIGHTING hits: NOR ROC STE ICE DAR\nWeak to: FLY PSY FAI\pFLYING hits: FIG BUG GRA\nWeak to: ROC ELE ICE\pPOISON hits: GRA FAI\nWeak to: GRO PSY\pGROUND hits: POI ROC STE FIR ELE\nWeak to: WAT GRA ICE\pROCK hits: FLY BUG FIR ICE\nWeak to: FIG GRO STE WAT GRA\pBUG hits: GRA PSY DAR\nWeak to: FLY ROC FIR\pGHOST hits: GHO PSY\nWeak to: GHO DAR\pSTEEL hits: ROC ICE FAI\nWeak to: FIG GRO FIR\pFIRE hits: BUG STE GRA ICE\nWeak to: GRO ROC WAT\pWATER hits: GRO ROC FIR\nWeak to: GRA ELE\pGRASS hits: GRO ROC WAT\nWeak to: FLY POI BUG FIR ICE\pELECTRIC hits: FLY WAT\nWeak to: GRO\pPSYCHIC hits: FIG POI\nWeak to: BUG GHO DAR\pICE hits: FLY GRO GRA DRA\nWeak to: FIG ROC STE FIR\pDRAGON hits: DRA\nWeak to: ICE DRA FAI\pDARK hits: GHO PSY\nWeak to: FIG BUG FAI\pFAIRY hits: FIG DRA DAR\nWeak to: POI STE\pNo effect: NOR>GHO  FIG>GHO\nGHO>NOR  GRO>FLY  ELE>GRO\pNo effect: PSY>DAR  POI>STE\nDRA>FAI{PAUSE_UNTIL_PRESS}");
 const u8 gOtherText_Powder[] = _("POWDER");
 const u8 gText_PlayedPokeFluteCatchy[] = _("Played the POKé FLUTE.\pNow, that's a catchy tune!{PAUSE_UNTIL_PRESS}");
 const u8 gText_PlayedPokeFlute[] = _("Played the POKé FLUTE.");
@@ -861,7 +863,7 @@ const u8 gText_PokemonTrades[] = _("POKéMON TRADES");
 const u8 gText_UnionRoomTradesBattles[] = _("UNION TRADES & BATTLES");
 const u8 gText_BerryCrushes[] = _("BERRY CRUSH");
 const u8 gText_WaitingTrainerFinishReading[] = _("Waiting for the other TRAINER to\nfinish reading your TRAINER CARD.");
-const u8 gText_Option[] = _("OPTION  (build 15-10 15h)");
+const u8 gText_Option[] = _("OPTION  (build 15-10 16h)");
 const u8 gText_TextSpeed[] = _("TEXT SPEED");
 const u8 gText_BattleScene[] = _("BATTLE SCENE");
 const u8 gText_BattleStyle[] = _("BATTLE STYLE");

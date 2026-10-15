@@ -6011,12 +6011,12 @@
       "secondaryId": 0
     },
     {
-      "english": "POWDER JAR",
+      "english": "TYPE MEMO",
       "itemId": "ITEM_POWDER_JAR",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "A jar for storing BERRY POWDER\\nmade using a BERRY CRUSHER.",
+      "description_english": "The teacher's notes on type\\nmatchups. Check them any time.",
       "importance": 1,
       "registrability": 1,
       "pocket": "POCKET_KEY_ITEMS",

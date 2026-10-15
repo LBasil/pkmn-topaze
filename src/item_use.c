@@ -347,8 +347,8 @@ void FieldUseFunc_CoinCase(u8 taskId)
 
 void FieldUseFunc_PowderJar(u8 taskId)
 {
-    ConvertIntToDecimalStringN(gStringVar1, GetBerryPowder(), STR_CONV_MODE_LEFT_ALIGN, 5);
-    StringExpandPlaceholders(gStringVar4, gText_PowderQty);
+    // Topaze: the POWDER JAR slot is now the TYPE MEMO (type chart cheat sheet)
+    StringExpandPlaceholders(gStringVar4, gText_TypeMemo);
     ItemUse_SetQuestLogEvent(QL_EVENT_USED_ITEM, NULL, gSpecialVar_ItemId, 0xFFFF);
     if (gTasks[taskId].data[3] == 0)
         DisplayItemMessageInBag(taskId, FONT_NORMAL, gStringVar4, Task_ReturnToBagFromContextMenu);
