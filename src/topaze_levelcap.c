@@ -40,3 +40,9 @@ u32 TopazeClampExp(struct Pokemon *mon, u32 exp)
         return 0;
     return exp > limit - curr ? limit - curr : exp;
 }
+
+// Topaze: OPTION POKéMON CENTER = INSTANT skips the healing animation (VAR_RESULT = TRUE when on).
+u16 TopazeInstantHeal(void)
+{
+    return TOPAZE_OPT_INSTANTHEAL();
+}

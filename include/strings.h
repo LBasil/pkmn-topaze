@@ -929,6 +929,7 @@ extern const u8 gText_ExpBarSpeed[];
 extern const u8 gText_LevelUps[];
 extern const u8 gText_GameSpeed[];
 extern const u8 gText_LevelCap[];
+extern const u8 gText_PkmnCenterHeal[];
 extern const u8 gText_LvCapOff[];
 extern const u8 gText_LvCapLight[];
 extern const u8 gText_LvCapMedium[];

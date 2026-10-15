@@ -11,6 +11,8 @@ EventScript_PkmnCenterNurse::
 
 EventScript_PkmnCenterNurse_HealPkmn::
 	incrementgamestat GAME_STAT_USED_POKECENTER
+	specialvar VAR_RESULT, TopazeInstantHeal
+	goto_if_eq VAR_RESULT, TRUE, EventScript_PkmnCenterNurse_InstantHeal
 	message Text_TakeYourPkmnForFewSeconds
 	waitmessage
 	call EventScript_PkmnCenterNurse_TakeAndHealPkmn
@@ -18,13 +20,27 @@ EventScript_PkmnCenterNurse_HealPkmn::
 	goto EventScript_PkmnCenterNurse_CheckTrainerTowerAndUnionRoom
 	end
 
+@ Topaze: OPTION POKéMON CENTER = INSTANT, no machine animation, no waiting
+EventScript_PkmnCenterNurse_InstantHeal::
+	special HealPlayerParty
+	playse SE_USE_ITEM
+	special SetUsedPkmnCenterQuestLogEvent
+	goto EventScript_PkmnCenterNurse_CheckTrainerTowerAndUnionRoom
+	end
+
 EventScript_PkmnCenterNurse_TakeAndHealPkmn::
+	specialvar VAR_RESULT, TopazeInstantHeal
+	goto_if_eq VAR_RESULT, TRUE, EventScript_PkmnCenterNurse_TakeAndHealPkmn_Instant
 	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	dofieldeffect FLDEFF_POKECENTER_HEAL
 	waitfieldeffect FLDEFF_POKECENTER_HEAL
 	applymovement VAR_LAST_TALKED, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
+	special HealPlayerParty
+	return
+
+EventScript_PkmnCenterNurse_TakeAndHealPkmn_Instant::
 	special HealPlayerParty
 	return
 
