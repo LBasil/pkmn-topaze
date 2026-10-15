@@ -5324,6 +5324,8 @@ u8 GetItemEffectType(u16 item)
 
     if (!IS_POKEMON_ITEM(item))
         return ITEM_EFFECT_NONE;
+    if (item != ITEM_ENIGMA_BERRY && gItemEffectTable[item - ITEM_POTION] == NULL)
+        return ITEM_EFFECT_NONE; // Topaze: range widened to the trade-evolution items
     // Read the item's effect properties.
     if (item == ITEM_ENIGMA_BERRY)
         itemEffect = gSaveBlock1Ptr->enigmaBerry.itemEffect;
