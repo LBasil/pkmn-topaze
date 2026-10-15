@@ -13,6 +13,8 @@
 
 #define TOPAZE_OPT_SHINY() ((gSaveBlock2Ptr->optionsTopaze >> 10) & 7) // 0 vanilla 1/8192, 1 = 1/2048, 2 = 1/1024, 3 = 1/512 (max)
 
+#define TOPAZE_OPT_HARD() ((gSaveBlock2Ptr->optionsTopaze >> 13) & 1) // 0 normal, 1 hard (trainers +3 levels, smart AI)
+
 #define TOPAZE_OPT_SET(shift, mask, v) (gSaveBlock2Ptr->optionsTopaze = (gSaveBlock2Ptr->optionsTopaze & ~((mask) << (shift))) | (((v) & (mask)) << (shift)))
 
 struct Pokemon;

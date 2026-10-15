@@ -1,4 +1,5 @@
 #include "global.h"
+#include "topaze_options.h"
 #include "battle.h"
 #include "battle_anim.h"
 #include "util.h"
@@ -358,6 +359,8 @@ void BattleAI_SetupAIData(void)
         return;
     }
     AI_THINKING_STRUCT->aiFlags = gTrainers[gTrainerBattleOpponent_A].aiFlags;
+    if (TOPAZE_OPT_HARD())
+        AI_THINKING_STRUCT->aiFlags |= (AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY);
 }
 
 u8 BattleAI_ChooseMoveOrAction(void)

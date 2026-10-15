@@ -486,3 +486,8 @@ Nouveaux objets (slots libres 226/227, anciens `ITEM_0E2/0E3`) : `ITEM_LINK_CABL
 - **Céladopole, étage 4 (boutique)** : vend maintenant SUN STONE, MOON STONE, LINK CABLE, PRISM SCALE (2100 ₽ chacun ; le prix de la Pierre Lune est passé de 0 à 2100). Emplacements « dans le jeu » (objets au sol) : encore à placer.
 - **Tri du PC** : menu du titre de boîte → `SORT` (src/pokemon_storage_system_tasks.c, `TopazeSortCurrentBox`) : tri par n° Pokédex national puis niveau décroissant, vides et œufs à la fin ; refusé si un Pokémon est en main. Les 30 icônes sont recréées.
 - **Audit capturables** (script ad hoc, 15/10) : 377/386 espèces obtenables (sauvage, cadeaux/événements, évolutions, élevage). Reste : Farfetch'd, M. Mime, Lickitung, Jynx via échanges PNJ vanilla ; Smoochum par élevage ; **Artikodin** : le script de Seafoam B4F (Îles Écume) donnait Moltres par erreur → corrigé en Artikodin niv. 55, visible seulement après la Ligue (`FLAG_TOPAZE_POSTGAME`).
+
+## Option DIFFICULTY (15-10)
+- Menu OPTION, ligne « DIFFICULTY » : NORMAL / HARD, modifiable à tout moment (bit 13 de `optionsTopaze`, `TOPAZE_OPT_HARD()`).
+- HARD : **tous les dresseurs** (champions et Ligue compris) ont **+3 niveaux** (plafonné à 100, macro `TOPAZE_TRAINER_LV` dans `CreateNPCTrainerParty`, src/battle_main.c) et l'IA est toujours « intelligente » (`CHECK_BAD_MOVE | TRY_TO_FAINT | CHECK_VIABILITY` ajoutés dans `battle_ai_script_commands.c`).
+- Vérifié à l'émulateur : dresseur Route 3 niv. 14 → 17 en HARD. Les Pokémon sauvages, l'EXP et le plafond de niveau ne changent pas.

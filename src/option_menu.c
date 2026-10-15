@@ -31,6 +31,7 @@ enum
     MENUITEM_LEVELCAP,
     MENUITEM_PKMNCENTER,
     MENUITEM_SHINY,
+    MENUITEM_DIFFICULTY,
     MENUITEM_CANCEL,
     MENUITEM_COUNT
 };
@@ -140,7 +141,7 @@ static const struct BgTemplate sOptionMenuBgTemplates[] =
 };
 
 static const u16 sOptionMenuPalette[] = INCBIN_U16("graphics/misc/option_menu.gbapal");
-static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {4, 2, 2, 2, 3, 10, 3, 3, 2, 4, 4, 2, 4, 0};
+static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {4, 2, 2, 2, 3, 10, 3, 3, 2, 4, 4, 2, 4, 2, 0};
 
 static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
 {
@@ -157,6 +158,7 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
     [MENUITEM_LEVELCAP]    = gText_LevelCap,
     [MENUITEM_PKMNCENTER]  = gText_PkmnCenterHeal,
     [MENUITEM_SHINY]       = gText_ShinyRate,
+    [MENUITEM_DIFFICULTY]  = gText_Difficulty,
     [MENUITEM_CANCEL]      = gText_OptionMenuCancel,
 };
 
@@ -168,6 +170,7 @@ static const u8 *const sTextSpeedOptions[] =
     gText_TextSpeedInstant
 };
 
+static const u8 *const sDifficultyOptions[] = { gText_DifficultyNormal, gText_DifficultyHard };
 static const u8 *const sShinyOptions[] = { gText_Shiny8192, gText_Shiny2048, gText_Shiny1024, gText_Shiny512 };
 static const u8 *const sPkmnCenterOptions[] = { gText_BarNormal, gText_BarInstant };
 static const u8 *const sLevelCapOptions[] = { gText_LvCapOff, gText_LvCapLight, gText_LvCapMedium, gText_LvCapHard };
@@ -256,6 +259,7 @@ void CB2_OptionsMenuFromStartMenu(void)
     sOptionMenuPtr->option[MENUITEM_LEVELCAP] = TOPAZE_OPT_LVCAP();
     sOptionMenuPtr->option[MENUITEM_PKMNCENTER] = TOPAZE_OPT_INSTANTHEAL();
     sOptionMenuPtr->option[MENUITEM_SHINY] = TOPAZE_OPT_SHINY();
+    sOptionMenuPtr->option[MENUITEM_DIFFICULTY] = TOPAZE_OPT_HARD();
     sOptionMenuTop = 0;
     
     for (i = 0; i < MENUITEM_COUNT - 1; i++)
@@ -585,6 +589,9 @@ static void BufferOptionMenuString(u8 selection)
     case MENUITEM_SHINY:
         AddTextPrinterParameterized3(1, FONT_NORMAL, x, y, dst, -1, sShinyOptions[sOptionMenuPtr->option[selection]]);
         break;
+    case MENUITEM_DIFFICULTY:
+        AddTextPrinterParameterized3(1, FONT_NORMAL, x, y, dst, -1, sDifficultyOptions[sOptionMenuPtr->option[selection]]);
+        break;
     default:
         break;
     }
@@ -605,6 +612,7 @@ static void CloseAndSaveOptionMenu(u8 taskId)
     gSaveBlock2Ptr->optionsButtonMode = sOptionMenuPtr->option[MENUITEM_BUTTONMODE];
     gSaveBlock2Ptr->optionsWindowFrameType = sOptionMenuPtr->option[MENUITEM_FRAMETYPE];
     TOPAZE_OPT_SET(10, 7, sOptionMenuPtr->option[MENUITEM_SHINY]);
+    TOPAZE_OPT_SET(13, 1, sOptionMenuPtr->option[MENUITEM_DIFFICULTY]);
     TOPAZE_OPT_SET(0, 3, sOptionMenuPtr->option[MENUITEM_HPBAR]);
     TOPAZE_OPT_SET(2, 3, sOptionMenuPtr->option[MENUITEM_EXPBAR]);
     TOPAZE_OPT_SET(4, 1, sOptionMenuPtr->option[MENUITEM_LEVELUPS]);
