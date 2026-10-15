@@ -9,6 +9,7 @@
 #include "constants/items.h"
 #include "constants/moves.h"
 #include "constants/pokemon.h"
+#include "topaze_options.h"
 
 static bool8 HasSuperEffectiveMoveAgainstOpponents(bool8 noRng);
 static bool8 FindMonWithFlagsAndSuperEffective(u8 flags, u8 moduloPercent);
@@ -349,8 +350,9 @@ static bool8 ShouldSwitch(void)
     if (HasSuperEffectiveMoveAgainstOpponents(FALSE)
      || AreStatsRaised())
         return FALSE;
-    if (FindMonWithFlagsAndSuperEffective(MOVE_RESULT_DOESNT_AFFECT_FOE, 2)
-     || FindMonWithFlagsAndSuperEffective(MOVE_RESULT_NOT_VERY_EFFECTIVE, 3))
+    // Topaze: in HARD mode trainers switch out of bad matchups far more reliably
+    if (FindMonWithFlagsAndSuperEffective(MOVE_RESULT_DOESNT_AFFECT_FOE, TOPAZE_OPT_HARD() ? 1 : 2)
+     || FindMonWithFlagsAndSuperEffective(MOVE_RESULT_NOT_VERY_EFFECTIVE, TOPAZE_OPT_HARD() ? 2 : 3))
         return TRUE;
     return FALSE;
 }

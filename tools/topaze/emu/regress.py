@@ -14,7 +14,7 @@ def test(name):
 
 SMOKE = ['PalletTown','Route1','Route2','ViridianCity','Route3','Route4','CeruladonCity' if False else 'CeruleanCity','VermilionCity','CeladonCity',
          'SaffronCity','FuchsiaCity','CinnabarIsland','Route11','Route12','Route18','Route25','CeladonCity_Hotel','VermilionCity_PokemonFanClub',
-         'PalletTown_RivalsHouse','VermilionCity_House2','CeruleanCity_House3','Route18_EastEntrance_2F','UndergroundPath_NorthEntrance']
+         'PalletTown_RivalsHouse','VermilionCity_House2','CeruleanCity_House3','Route18_EastEntrance_2F','UndergroundPath_NorthEntrance','CinnabarIsland_PokemonLab_Lounge','CinnabarIsland_PokemonLab_ExperimentRoom']
 for m in SMOKE:
     def mk(m):
         @test('smoke ' + m)
@@ -38,6 +38,12 @@ def _():
     assert t.getvar('VAR_PETTING_COOLDOWN_STEP_COUNTER') >= 300
     t.press('A', 4, 60); t.mash(14, every=6, gap=40); t.press('A', 4, 60); t.mash(12, every=6, gap=40)
     assert t.getvar('VAR_PETTING_COOLDOWN_STEP_COUNTER') < 300, 'compteur non reinitialise'
+
+@test('quete Garett (niveau >= 60 -> PP MAX)')
+def _():
+    t = T('CinnabarIsland_PokemonLab_ExperimentRoom', 11, 9, nocombat=True, god=True)
+    t.press('UP', 1, 20); t.press('A', 4, 60); t.mash(16, every=6, gap=40)
+    print('   Garett flag =', t.getflag('FLAG_DID_SEELOR_TRADE'))
 
 bad = [r for r in R_ if not r[1]]
 for n, ok, msg in R_: print(('OK   ' if ok else 'FAIL ') + n + ('' if ok else '  -> ' + msg))

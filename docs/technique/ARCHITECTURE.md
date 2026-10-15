@@ -533,3 +533,8 @@ TODO (note Basil 15/10) : ajouter d'autres quetes secondaires de ce type (pierre
 
 - `tools/topaze/lint/textlint.py` : relecture statique des textes de `data/maps` (chaine sans `$`, ligne > 38 car., mot repete, espace avant ponctuation). A lancer avant chaque envoi ; 0 erreur attendue.
 - `tools/topaze/emu/regress.py` : non-regression emulateur (23 cartes en smoke + quete Dontae + Fan Club). Prerequis `/tmp/gx` (harness + `mkdbg2.py`), ~4 min. Resultat du 15/10 : 25/25. Penser a refaire un `make` normal ensuite (le debug laisse la ROM de debug).
+
+## Quetes du labo de Cramois'Ile + IA HARD
+
+- Labo (salon + salle d'experience), PNJ de quete (flags des anciens echanges) : Clifton (20 especes → RARE CANDY), Norma (bonheur >= 200 → PP UP), Garett (niveau 60 → PP MAX). Garett teste.
+- IA HARD : l'IA vanilla change deja de Pokemon sur mauvais matchup ; en HARD les probabilites passent de 1/2 a 1/1 (aucun effet) et de 1/3 a 1/2 (peu efficace) dans `ShouldSwitch` (src/battle_ai_switch_items.c). Non teste en combat.
