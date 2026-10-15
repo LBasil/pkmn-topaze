@@ -1,0 +1,42 @@
+#include "global.h"
+#include "pokemon.h"
+#include "event_data.h"
+#include "constants/flags.h"
+#include "topaze_options.h"
+
+// Topaze: optional level cap (OPTION menu: OFF / LIGHT / MEDIUM / HARD).
+// Base cap = level of the next gym leader's ace, by number of badges; LIGHT/MEDIUM add a margin.
+// Once the game is cleared (Hall of Fame) the cap is lifted.
+static const u8 sBaseCapByBadges[9] = {16, 22, 29, 35, 40, 45, 50, 55, 71};
+static const u8 sCapMargin[4] = {0, 8, 4, 0}; // index = mode (0 OFF unused, 1 LIGHT, 2 MEDIUM, 3 HARD)
+
+u8 TopazeGetLevelCap(void)
+{
+    u8 mode = TOPAZE_OPT_LVCAP();
+    u8 i, badges = 0;
+    u16 cap;
+
+    if (mode == 0 || FlagGet(FLAG_SYS_GAME_CLEAR))
+        return MAX_LEVEL;
+    for (i = 0; i < 8; i++)
+        if (FlagGet(FLAG_BADGE01_GET + i))
+            badges++;
+    cap = sBaseCapByBadges[badges] + sCapMargin[mode];
+    return cap > MAX_LEVEL ? MAX_LEVEL : cap;
+}
+
+// Largest amount of exp the mon may still receive without exceeding the cap (0 if already at/above it).
+u32 TopazeClampExp(struct Pokemon *mon, u32 exp)
+{
+    u8 cap = TopazeGetLevelCap();
+    u16 species = GetMonData(mon, MON_DATA_SPECIES);
+    u32 curr = GetMonData(mon, MON_DATA_EXP);
+    u32 limit;
+
+    if (cap >= MAX_LEVEL)
+        return exp;
+    limit = gExperienceTables[gSpeciesInfo[species].growthRate][cap + 1] - 1;
+    if (curr >= limit)
+        return 0;
+    return exp > limit - curr ? limit - curr : exp;
+}

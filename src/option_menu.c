@@ -28,6 +28,7 @@ enum
     MENUITEM_EXPBAR,
     MENUITEM_LEVELUPS,
     MENUITEM_GAMESPEED,
+    MENUITEM_LEVELCAP,
     MENUITEM_CANCEL,
     MENUITEM_COUNT
 };
@@ -137,7 +138,7 @@ static const struct BgTemplate sOptionMenuBgTemplates[] =
 };
 
 static const u16 sOptionMenuPalette[] = INCBIN_U16("graphics/misc/option_menu.gbapal");
-static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {4, 2, 2, 2, 3, 10, 3, 3, 2, 4, 0};
+static const u16 sOptionMenuItemCounts[MENUITEM_COUNT] = {4, 2, 2, 2, 3, 10, 3, 3, 2, 4, 4, 0};
 
 static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
 {
@@ -151,6 +152,7 @@ static const u8 *const sOptionMenuItemsNames[MENUITEM_COUNT] =
     [MENUITEM_EXPBAR]      = gText_ExpBarSpeed,
     [MENUITEM_LEVELUPS]    = gText_LevelUps,
     [MENUITEM_GAMESPEED]   = gText_GameSpeed,
+    [MENUITEM_LEVELCAP]    = gText_LevelCap,
     [MENUITEM_CANCEL]      = gText_OptionMenuCancel,
 };
 
@@ -161,6 +163,8 @@ static const u8 *const sTextSpeedOptions[] =
     gText_TextSpeedFast,
     gText_TextSpeedInstant
 };
+
+static const u8 *const sLevelCapOptions[] = { gText_LvCapOff, gText_LvCapLight, gText_LvCapMedium, gText_LvCapHard };
 
 static const u8 *const sBattleSceneOptions[] =
 {
@@ -243,6 +247,7 @@ void CB2_OptionsMenuFromStartMenu(void)
     sOptionMenuPtr->option[MENUITEM_EXPBAR] = TOPAZE_OPT_EXPBAR();
     sOptionMenuPtr->option[MENUITEM_LEVELUPS] = TOPAZE_OPT_STACKLV();
     sOptionMenuPtr->option[MENUITEM_GAMESPEED] = TOPAZE_OPT_SPEED();
+    sOptionMenuPtr->option[MENUITEM_LEVELCAP] = TOPAZE_OPT_LVCAP();
     sOptionMenuTop = 0;
     
     for (i = 0; i < MENUITEM_COUNT - 1; i++)
@@ -563,6 +568,9 @@ static void BufferOptionMenuString(u8 selection)
     case MENUITEM_GAMESPEED:
         AddTextPrinterParameterized3(1, FONT_NORMAL, x, y, dst, -1, sGameSpeedOptions[sOptionMenuPtr->option[selection]]);
         break;
+    case MENUITEM_LEVELCAP:
+        AddTextPrinterParameterized3(1, FONT_NORMAL, x, y, dst, -1, sLevelCapOptions[sOptionMenuPtr->option[selection]]);
+        break;
     default:
         break;
     }
@@ -586,6 +594,7 @@ static void CloseAndSaveOptionMenu(u8 taskId)
     TOPAZE_OPT_SET(2, 3, sOptionMenuPtr->option[MENUITEM_EXPBAR]);
     TOPAZE_OPT_SET(4, 1, sOptionMenuPtr->option[MENUITEM_LEVELUPS]);
     TOPAZE_OPT_SET(5, 3, sOptionMenuPtr->option[MENUITEM_GAMESPEED]);
+    TOPAZE_OPT_SET(7, 3, sOptionMenuPtr->option[MENUITEM_LEVELCAP]);
     SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
     FREE_AND_SET_NULL(sOptionMenuPtr);
     DestroyTask(taskId);

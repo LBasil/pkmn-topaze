@@ -7,8 +7,13 @@
 #define TOPAZE_OPT_STACKLV() ((gSaveBlock2Ptr->optionsTopaze >> 4) & 1)  // 0 one level at a time, 1 stacked
 #define TOPAZE_OPT_SPEED()   ((gSaveBlock2Ptr->optionsTopaze >> 5) & 3)  // 0..3 = x1..x4
 
+#define TOPAZE_OPT_LVCAP()   ((gSaveBlock2Ptr->optionsTopaze >> 7) & 3)  // 0 off, 1 light, 2 medium, 3 hard
+
 #define TOPAZE_OPT_SET(shift, mask, v) (gSaveBlock2Ptr->optionsTopaze = (gSaveBlock2Ptr->optionsTopaze & ~((mask) << (shift))) | (((v) & (mask)) << (shift)))
 
+struct Pokemon;
+u8 TopazeGetLevelCap(void);
+u32 TopazeClampExp(struct Pokemon *mon, u32 exp);
 extern u8 gTopazeBattleLvFrom;
 extern u8 gTopazeLearnFrom;
 
