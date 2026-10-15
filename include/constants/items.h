@@ -234,6 +234,8 @@
 #define ITEM_METAL_POWDER 223
 #define ITEM_THICK_CLUB 224
 #define ITEM_STICK 225
+#define ITEM_LINK_CABLE 226   // Topaze: trade-evolution item
+#define ITEM_PRISM_SCALE 227  // Topaze: Feebas evolution item
 #define ITEM_0E2 226
 #define ITEM_0E3 227
 #define ITEM_0E4 228
@@ -459,7 +461,7 @@
 #define SUPER_ROD 2
 
 // Check if the item is one that can be used on a Pokemon.
-// Topaze: also covers KING'S ROCK..UP-GRADE (trade-evolution items usable on a POKéMON, NULL table entries do nothing)
-#define IS_POKEMON_ITEM(item) (((item) >= ITEM_POTION && (item) <= MAX_BERRY_INDEX) || ((item) >= ITEM_KINGS_ROCK && (item) <= ITEM_UP_GRADE))
+// Topaze: also covers KING'S ROCK..PRISM SCALE (trade-evolution items usable on a POKéMON, NULL table entries do nothing)
+#define IS_POKEMON_ITEM(item) (((item) >= ITEM_POTION && (item) <= MAX_BERRY_INDEX) || ((item) >= ITEM_KINGS_ROCK && (item) <= ITEM_PRISM_SCALE))
 
 #endif  // GUARD_CONSTANTS_ITEMS_H
