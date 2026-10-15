@@ -28,47 +28,50 @@ SeafoamIslands_B4F_Text_DangerFastCurrent::
     .string "Fast current!$"
 
 SeafoamIslands_B4F_Text_FloorScene::
-    .string "The air is scorching. Two figures\n"
-    .string "lie on the basalt, unmoving.\p"
-    .string "GOLD and SILVER! Their POKéMON\n"
-    .string "are fainted. A shadow stands over\n"
-    .string "them… no, it has already left.$"
+    .string "The air is scorching. GOLD and\n"
+    .string "SILVER stand back to back on the\p"
+    .string "basalt, panting. Around them lie\n"
+    .string "fainted grunts. KRONOS waits, calm.$"
 
 SeafoamIslands_B4F_Text_KronosIntro::
-    .string "KRONOS: Late again, child.\n"
-    .string "The MASTER was here. Briefly.\p"
-    .string "Those two charged him head on.\n"
-    .string "They lasted one move each.\p"
-    .string "He took the stone and left. I\n"
-    .string "stayed to teach you manners.$"
+    .string "KRONOS: Ah, the last piece. Do\n"
+    .string "come in. We were just waiting.\p"
+    .string "These two have held me here all\n"
+    .string "afternoon. A fine show, truly.\p"
+    .string "Now you, child. Show me what you\n"
+    .string "carry in that bag.$"
 
 SeafoamIslands_B4F_Text_KronosDefeat::
-    .string "…Impossible.\n"
-    .string "The fire did not even slow you.$"
+    .string "…Well fought. Truly.\n"
+    .string "But I never needed to win.$"
 
 SeafoamIslands_B4F_Text_KronosPost::
-    .string "KRONOS: Enough. The stone is on\n"
-    .string "its way to the LAST BASE.\p"
-    .string "Where the road ends and the\n"
-    .string "LEAGUE begins. Come if you dare.\p"
-    .string "The master waits for the one who\n"
-    .string "can burn brighter than lava.$"
+    .string "KRONOS: Look around. Nothing but\n"
+    .string "ash and me. The MASTER took the\p"
+    .string "stone before you ever set foot on\n"
+    .string "this island.\p"
+    .string "This place was a curtain. You and\n"
+    .string "your friends spent a day on it.\p"
+    .string "Time is the one thing nobody gets\n"
+    .string "back. The LAST BASE awaits,\p"
+    .string "where the road ends and the\n"
+    .string "LEAGUE begins.$"
 
 SeafoamIslands_B4F_Text_GoldAfterScene::
-    .string "GOLD: ugh… Is he gone? I could\n"
-    .string "not even see his hand move.\p"
-    .string "One POKéMON, {PLAYER}. And it did\n"
-    .string "not even look at us.$"
+    .string "GOLD: We won, and it was all for\n"
+    .string "nothing. A whole day, gone!\p"
+    .string "…Okay. Great fight, {PLAYER}.\n"
+    .string "Still stings, though.$"
 
 SeafoamIslands_B4F_Text_SilverAfterScene::
-    .string "SILVER: …Don't gloat. Your turn\n"
-    .string "is coming. Get stronger.\p"
+    .string "SILVER: He stalled us on purpose.\n"
+    .string "I hate that it worked.\p"
     .string "The last base is near the LEAGUE.\n"
     .string "We will get there. Before you.$"
 
 SeafoamIslands_B4F_Text_GoldBeaten::
-    .string "GOLD: Heal up and keep going.\n"
-    .string "I will catch up. Eventually.$"
+    .string "GOLD: Go on, I'll catch my breath.\n"
+    .string "See you at the LEAGUE!$"
 
 SeafoamIslands_B4F_Text_SilverBeaten::
     .string "SILVER: Do not look at me like\n"

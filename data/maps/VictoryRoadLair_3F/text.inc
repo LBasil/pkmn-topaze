@@ -9,12 +9,20 @@ VictoryRoadLair_3F_Text_RedHeals::
 VictoryRoadLair_3F_Text_ShapeA::
     .string "The THRONE ROOM is freezing. RED\n"
     .string "kneels at its center, the BLACK\p"
-    .string "OPAL in both hands. Above him\n"
-    .string "stands a pale shape of shadow.$"
+    .string "OPAL in both hands. Nothing moves.\n"
+    .string "Then your PENDANT turns warm.\p"
+    .string "Warmer. Hotter. A red glow spills\n"
+    .string "over the floor, across the room…\p"
+    .string "Above RED, a pale shape of shadow\n"
+    .string "turns toward the light you carry.$"
 
 VictoryRoadLair_3F_Text_ShapeB::
     .string "A cry rings inside your head, not\n"
     .string "in the air. A PSYCHIC cry.\p"
+    .string "The PENDANT answers, shining like\n"
+    .string "a lantern. Stones call to stones.\p"
+    .string "Without knowing it, you led the\n"
+    .string "shape straight to RED.\p"
     .string "RED's hands open on their own.\n"
     .string "The BLACK OPAL floats away.\p"
     .string "Your bag shudders. The TOPAZ\n"
@@ -33,5 +41,6 @@ VictoryRoadLair_3F_Text_ShapeC::
 VictoryRoadLair_3F_Text_RedAfter::
     .string "RED lowers his head. He did not\n"
     .string "win. Nobody could.\p"
-    .string "He looks at you, and nods once.$"
+    .string "He looks at your PENDANT, then at\n"
+    .string "you. No anger. Only a slow nod.$"
 

@@ -227,13 +227,6 @@ SeafoamIslands_B4F_EventScript_KronosScene::
 	trainerbattle_no_intro TRAINER_AQUA_ADMIN_MATT, SeafoamIslands_B4F_Text_KronosDefeat
 	msgbox SeafoamIslands_B4F_Text_KronosPost
 	closemessage
-	playse SE_THUNDER
-	setvar VAR_0x8004, 1
-	setvar VAR_0x8005, 3
-	setvar VAR_0x8006, 8
-	setvar VAR_0x8007, 4
-	special ShakeScreen
-	waitstate
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_SEAFOAM_KRONOS
 	delay 20
