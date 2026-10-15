@@ -1802,6 +1802,25 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
               | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
     }
 
+    if (otIdType == OT_ID_PLAYER_ID && !hasFixedPersonality && TOPAZE_OPT_SHINY() != 0)
+    {
+        static const u16 sShinyOdds[8] = {0, 0, 2048, 512, 128, 32, 8, 1};
+        u8 opt = TOPAZE_OPT_SHINY();
+
+        if (opt == 1)
+        {
+            if (GET_SHINY_VALUE(value, personality) < SHINY_ODDS)
+                personality ^= 0x80000000;
+        }
+        else if (Random() % sShinyOdds[opt] == 0)
+        {
+            u32 lo = personality & 0xFFFF;
+            u32 hi = (lo ^ (value & 0xFFFF) ^ (value >> 16) ^ (Random() & 7)) & 0xFFFF;
+            personality = (hi << 16) | lo;
+        }
+        SetBoxMonData(boxMon, MON_DATA_PERSONALITY, &personality);
+    }
+
     SetBoxMonData(boxMon, MON_DATA_OT_ID, &value);
 
     checksum = CalculateBoxMonChecksum(boxMon);

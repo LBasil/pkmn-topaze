@@ -475,3 +475,8 @@ Nouveaux objets (slots libres 226/227, anciens `ITEM_0E2/0E3`) : `ITEM_LINK_CABL
   - Titre de page « IV / EV » ; barre de contrôles `PAGE + SELECT IV/EV` (strings.c).
 - Le mode reste actif en changeant de Pokémon (haut/bas) pour comparer l'équipe ; il est remis à zéro au changement de page et à l'ouverture du résumé.
 - Après réimpression il faut `CopyWindowToVram` sur les fenêtres (sinon l'écran ne bouge pas).
+
+## Option taux de shiny (15-10)
+- `optionsTopaze` bits 10-12 (`TOPAZE_OPT_SHINY()`) : 0 = 1/8192 (vanilla), 1 = jamais, 2..6 = 1/2048, 1/512, 1/128, 1/32, 1/8, 7 = toujours. Menu OPTION, ligne « SHINY RATE ».
+- Appliqué dans `CreateBoxMon` (src/pokemon.c) pour les Pokémon à OT joueur et personnalité aléatoire : on tire le shiny puis on recalcule la moitié haute de la personnalité (la moitié basse, donc nature/genre/talent, est conservée).
+- Limite : les rencontres à personnalité imposée (Synchro, Unown, genre forcé, certains cadeaux) ne sont pas concernées ; les dresseurs restent jamais shiny.
