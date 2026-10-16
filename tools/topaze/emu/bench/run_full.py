@@ -785,7 +785,7 @@ def stage_ending1(t):
         # LIMITE DU HARNAIS : le « CONTINUER » recharge une sauvegarde plus ancienne (la sauvegarde du Temple de la renommee n'est pas conservee par l'emulateur ; le jeu, lui,
         # l'ecrit comme en vanille) : on repose donc a la main ce que le Temple a pose (voeu 1, fin de jeu, bavards post-game).
         t.var('VAR_MAP_SCENE_INDIGO_PLATEAU_EXTERIOR', 0); t.var('VAR_TOPAZE_ENDING', 1)
-        for f in ('FLAG_TOPAZE_POSTGAME', 'FLAG_SYS_GAME_CLEAR'): t.flag(f)
+        for f in ('FLAG_TOPAZE_POSTGAME', 'FLAG_TOPAZE_COUNCIL', 'FLAG_SYS_GAME_CLEAR'): t.flag(f)
         for f in ('FLAG_HIDE_POSTGAME_STRANGER', 'FLAG_HIDE_POSTGAME_GOSSIPERS'): t.flag(f, False)
         log('  fin 1 : generique passe, reprise sur', t.sync(), t.pos()[2:], 'fin', t.getvar('VAR_TOPAZE_ENDING'), 'postgame', t.getflag('FLAG_TOPAZE_POSTGAME'))
         assert t.sync() == 'IndigoPlateau_Exterior' and t.getvar('VAR_TOPAZE_ENDING') == 1 and t.getflag('FLAG_TOPAZE_POSTGAME'), 'fin 1 non atteinte'
