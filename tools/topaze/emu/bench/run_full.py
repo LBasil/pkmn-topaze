@@ -908,6 +908,7 @@ def stage_pg_sevii(t):
 ISLES = ['Vermilion', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven']
 def cur_isle(t):
     n = t.sync()
+    if n.startswith('MtEmber'): return 1      # Mt Braise n'a pas le prefixe OneIsland
     for i, k in enumerate(ISLES):
         if n.startswith(k + 'Island'): return i
 

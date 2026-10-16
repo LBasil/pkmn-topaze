@@ -590,3 +590,10 @@ Détails et limites : `docs/technique/RUN_COMPLET_15_10.md`. **Plateau Indigo** 
 - Fin 2 « Le Refuge » : les hooks « plus de sauvage » de `wild_encounter.c` / `field_player_avatar.c` exemptent la Zone Safari (`GetSafariZoneFlag()`). Le guichet du Safari offre une fois les six partenaires Johto/Hoenn (`FLAG_TOPAZE_REFUGE_GIFT` = 0x0DE).
 - Fin 3 « Les Huit Rebelles » : Flora (Centre de Plateau Indigo) fait enchainer les 8 chefs (Brock, Misty, Surge, Erika, Koga, Sabrina, Blaine, Giovanni) avec `VAR_TOPAZE_BOOST` (0x4034, +28 niveaux, applique dans `TOPAZE_TRAINER_LV` de `battle_main.c`) ; `VAR_REBELS_ROUND` (0x4041) 0-8 ; 2 Super Bonbons par victoire, Master Ball + 4 PP Max a la fin.
 - Non teste a l'emulateur (etats de sauvegarde caduques) : compile OK, a verifier a la main.
+
+## Grosse passe du 16/10 soir (build 22h30)
+- Rejeu complet du bot (`run_full.py all` puis `pg_echoes`) : OK de Grenalux a la fin des Echos (tournoi 9/9, Conseil 20/20, mine, oiseaux, Sulfura, 6 Echos). Deux defauts du bot corriges : drapeau du Conseil au rejeu de la fin 1, `cur_isle` ne reconnaissait pas le Mont Braise.
+- Amis de Basil = dresseurs (Foret de Jade, Mont Selenite, Tunnel Roche) via `trainerName` ; Basil en randonneur au Tunnel Roche.
+- 10 quetes d'objets (flags 0x0E0-0x0EB : Jadielle, Argenta x3, Azuria, Carmin, Parmanie, Cramois'Ile, Route 2 ...), modele `checkitem` / `removeitem` / `giveitem`, flag `FLAG_QUEST_*`.
+- Visites post-Conseil (toutes fins, cadeau different selon `VAR_TOPAZE_ENDING`) : Misty (chaumiere R25, objet deja la, script `MistyPost`), Brock (fossile, musee 2F), Kay, Surge, Erika, Koga, Sabrina, Blaine dans leur arene (`call_if_set FLAG_TOPAZE_COUNCIL` apres le `goto_if_unset` TM, flags 0x0F0-0x0F5). Teste a l'emulateur : Misty, Brock, ask de la quete Jadielle.
+- Indices du boss ajoutes (Vesper, Kronos).
