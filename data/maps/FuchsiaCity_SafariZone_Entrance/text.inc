@@ -81,12 +81,12 @@ FuchsiaCity_SafariZone_Entrance_Text_Occupied::
     .string "careful, they hit hard!$"
 
 FuchsiaCity_SafariZone_Entrance_Text_RefugeGift::
-	.string "Since the Poké Balls vanished, the wild\n"
-	.string "Pokémon have gone from the world.\l"
-	.string "Only this Park still shelters them.\p"
+	.string "Since the POKé BALLS vanished, the\n"
+	.string "wild POKéMON left the world.\l"
+	.string "Only this PARK still shelters them.\p"
 	.string "The Warden asked me to give you these\n"
 	.string "six partners. Take good care of them.$"
 
 FuchsiaCity_SafariZone_Entrance_Text_RefugeGift2::
-	.string "The Safari Zone is now the last refuge.\n"
+	.string "The SAFARI ZONE is the last refuge.\n"
 	.string "Come in whenever you wish.$"

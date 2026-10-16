@@ -53,7 +53,9 @@ SeafoamIslands_B4F_Text_KronosPost::
     .string "This place was a curtain. You and\n"
     .string "your friends spent a day on it.\p"
     .string "Time is the one thing nobody gets\n"
-    .string "back. The LAST BASE awaits,\p"
+    .string "back. The MASTER only needs one\l"
+    .string "more thing: a thousand-year star.\p"
+    .string "The LAST BASE awaits,\p"
     .string "where the road ends and the\n"
     .string "LEAGUE begins.$"
 

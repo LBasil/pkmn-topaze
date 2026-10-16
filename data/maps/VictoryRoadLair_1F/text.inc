@@ -65,4 +65,8 @@ VictoryRoadLair_1F_Text_VesperDefeat::
 VictoryRoadLair_1F_Text_VesperPost::
     .string "VESPER: The red-capped one is in\n"
     .string "the HALL of STONES, then beyond.\p"
+    .string "The MASTER says every POKé BALL is\n"
+    .string "a cage, and he wants them gone.\p"
+    .string "What he seeks answers wishes. One\n"
+    .string "wish, spoken by the right voice.\p"
     .string "Go. SELENE keeps the door.$"
