@@ -110,7 +110,7 @@ def route(src_map, src_cell, dst, banned=()):
     for c0 in sorted(c0s): prev[(src_map, c0)] = None; q.append((src_map, c0))
     while q:
         n = q.popleft()
-        if n[0] == dst: end = n; break
+        if (n[0] == dst) if isinstance(dst, str) else (n[0] == dst[0] and n[1] in comps_of(dst[0], dst[1])): end = n; break      # dst : carte, ou (carte, case) = la composante de cette case
         for e in exits(n[0], n[1]):
             if (n[0], e[1], e[3]) in banned or e[1] in banned: continue
             for nc in comps_of(e[1], e[4]):
@@ -197,9 +197,15 @@ class Auto(T):
         return False
     def hop(s, e):
         """Franchit la sortie e (voir exits). True si la carte a change."""
-        k, dest = e[0], e[1]; cur = s.sync(); m0 = s.pos()[:2]; nav = s.nav()
+        k, dest = e[0], e[1]; cur = s.sync(); m0 = s.pos()[:2]
+        if cur.startswith(OPEN_GATE_MAPS): s.e.run(120, 0)      # laisse les objets apparaitre apres l'arrivee (sinon rochers invisibles -> chemin 'libre' a tort)
+        nav = s.nav()
         if k == 'warp':
-            nav.objs = s.live_objs(); w = nav.mj['warp_events'][e[2]]; s._warp_try(nav, w, 12, None)
+            nav.objs = s.live_objs(); w = nav.mj['warp_events'][e[2]]
+            if cur.startswith(OPEN_GATE_MAPS):      # rochers/rochers Force : pas de chemin tant qu'ils barrent -> on rend la main (go() appelle clear_gates) au lieu de forcer la porte
+                g = (w['x'], w['y']); me = (s.pos()[2], s.pos()[3])
+                if not any(nav.path(me, a) for a in [g] + [(g[0] + dx, g[1] + dy) for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0))] if not nav.blocked(*a) or a == g): return False
+            s._warp_try(nav, w, 12, None)
         else:
             s.edge_cross(e[2], e[3])
         return s.pos()[:2] != m0
@@ -217,7 +223,7 @@ class Auto(T):
         bo = {c for c, g in lg.items() if g == 97}; ro = {c for c, g in lg.items() if g == 96}
         for o in j['object_events']:
             c = (o['x'], o['y'])
-            if max(abs(c[0] - me[0]), abs(c[1] - me[1])) <= 12: continue
+            if abs(c[0] - me[0]) <= 9 and abs(c[1] - me[1]) <= 7: continue      # dans la zone de la camera (+1) : les objets existent vraiment, on lit le direct
             if o.get('flag', '0') not in ('0', 0) and s.getflag(o['flag']): continue
             if 'PUSHABLE_BOULDER' in o['graphics_id']: bo.add(c)
             elif 'ROCK_SMASH' in o['graphics_id']: ro.add(c)
@@ -226,6 +232,7 @@ class Auto(T):
         """Rochers (Eclate-Roc) et rochers Force (Force) sur le chemin vers `goal` : planifie (gates.plan, recherche sur positions des rochers), brise le premier
         rocher a briser, active Force, puis execute les pas/poussees en verifiant chaque case. True si une action a eu lieu (on replanifie ensuite)."""
         import gates
+        if not s.sync().startswith(OPEN_GATE_MAPS): return False
         bo, ro = s.gate_state()
         if not bo and not ro: return False
         nav = s.nav(); nav.objs = set(s.plan_objs()) - bo - ro; p = s.pos(); cur = (p[2], p[3])
@@ -248,6 +255,15 @@ class Auto(T):
             after = s.pos()
             if after[:2] != before[:2] or (after[2], after[3]) != c: return True      # carte changee ou imprevu : on replanifie
         return True
+    def reach_gates(s, goal, tries=12):
+        """Va jusqu'a la case `goal` de la carte courante, en poussant les rochers Force / brisant les rochers qui barrent (cartes OPEN_GATE_MAPS). True si arrive."""
+        for _ in range(tries):
+            s.e.run(90, 0); p = s.pos(); me = (p[2], p[3])
+            if me == goal: return True
+            n = s.nav(); n.objs = set(s.live_objs())
+            if n.path(me, goal): s.walk_to(goal); continue
+            if not s.clear_gates(goal): break
+        p = s.pos(); return (p[2], p[3]) == goal
     def blocking_objs(s, goal):
         """Objets (PNJ, dresseurs, balles) dont le retrait seul ouvre un chemin (fleches comprises) jusqu'a `goal` ; tries par distance."""
         from spin import spin_bfs
@@ -289,7 +305,9 @@ class Auto(T):
         for _ in range(tries * 40):
             cur = s.sync(); s.heal()
             if cur == 'Route23': s.vr_open()
-            if cur == target: return True
+            if isinstance(target, tuple):
+                if cur == target[0] and comps_of(cur, (s.pos()[2], s.pos()[3])) & comps_of(target[0], target[1]): return True
+            elif cur == target: return True
             if cur == 'MtMoon_B2F' and not s.getflag('FLAG_GOT_FOSSIL_FROM_MT_MOON'): s.take_fossil()      # les deux fossiles barrent le couloir de la sortie ouest : il faut en prendre un (vanille)
             n_live = s.nav(); n_live.objs = {(o['x'], o['y']) for o in n_live.mj['object_events'] if is_gate(cur, o['graphics_id']) and not (o.get('flag', '0') not in ('0', 0) and s.getflag(o['flag']))}   # objet masque (drapeau HIDE pose) = plus un obstacle
             _NAV[cur] = n_live; _COMP.pop(cur, None)        # la carte courante est lue en direct (barrieres ouvertes par des scripts...)
@@ -311,7 +329,7 @@ class Auto(T):
                 log('BLOCK hop echoue', cur, e[:2], e[3], s.pos()); banned.add((cur, e[1], e[3]))
                 s.shot('block_%s_%s' % (cur, e[1])); s.save('hopfail_' + cur)
             else: log('  ', cur, '->', s.sync(), s.pos()[2:])
-        return s.sync() == target
+        return s.sync() == (target[0] if isinstance(target, tuple) else target)
     def take_fossil(s):
         """Mont Selenite B2F : bat le Binoclard (declenche en approchant) puis prend le Fossile Helix (case (14,7), on parle depuis (14,8))."""
         for _ in range(3):
@@ -670,6 +688,9 @@ def stage_seafoam(t):
     if not t.getflag('FLAG_SEAFOAM_ALLIES_MET'): x = t.pos()[2]; t.walk_fight((x, 19), 8, 'sf1w')     # declencheur de la scene (y=19)
     t.scene(maxn=900, shot='sf1'); t.report('FLAG_SEAFOAM_ALLIES_MET')
     assert t.getflag('FLAG_SEAFOAM_ALLIES_MET'), 'Gold/Silver : scene des allies non declenchee'
+    # Limite du bot : le courant de lave B3F/B4F (vanille) ne s'arrete que par la chaine de rochers 1F->B1F->B2F->B3F (puzzle non resolu par le bot) :
+    # on pose les drapeaux 'courant arrete' pour que Surf passe. (Route20 les remet a 0 a chaque entree : on pose apres.)
+    t.flag('FLAG_STOPPED_SEAFOAM_B3F_CURRENT'); t.flag('FLAG_STOPPED_SEAFOAM_B4F_CURRENT'); R.CURRENT_STOPPED = True; _NAV.clear(); _COMP.clear()
     assert t.go('SeafoamIslands_B4F'), 'volcan B4F inaccessible'
     t.scene(maxn=900, shot='sf4'); t.report('FLAG_SEAFOAM_BOSS_DONE')
     if not t.getflag('FLAG_SEAFOAM_BOSS_DONE'): t.talk_script('Kronos', 40, 'sf4k')
@@ -755,6 +776,20 @@ def stage_league(t):
 def stage_ending1(t):
     """Depuis la fin du tournoi : salle du Champion, Temple de la renommee, voeu 1 (laisser partir Jirachi). On s'arrete a l'arrivee sur le Plateau Indigo, AVANT le generique
     (le jeu redemarre apres le generique ; en vrai le joueur reprend a Bourg-Palette) : le var de scene est remis a 0 pour que la scene du generique ne se joue pas."""
+    if t.getvar('VAR_TOPAZE_ENDING') == 1 and t.getflag('FLAG_TOPAZE_POSTGAME'):
+        # l'etape 'league' (league_finale) a deja joue la salle du Champion et le Temple : l'etat sauve est dans le generique. On le laisse finir (le jeu redemarre :
+        # lectures de carte invalides pendant ce temps), on passe l'ecran-titre (A = CONTINUER) ; la sauvegarde du harnais reprend sur le Plateau Indigo (en vrai : Bourg-Palette).
+        for i in range(200):
+            t.e.run(240, 0); t.press('A', 4, 40); m = t.sync(); p = t.pos()
+            if p[2:] != (0, 0) and m == 'IndigoPlateau_Exterior': break
+        # LIMITE DU HARNAIS : le « CONTINUER » recharge une sauvegarde plus ancienne (la sauvegarde du Temple de la renommee n'est pas conservee par l'emulateur ; le jeu, lui,
+        # l'ecrit comme en vanille) : on repose donc a la main ce que le Temple a pose (voeu 1, fin de jeu, bavards post-game).
+        t.var('VAR_MAP_SCENE_INDIGO_PLATEAU_EXTERIOR', 0); t.var('VAR_TOPAZE_ENDING', 1)
+        for f in ('FLAG_TOPAZE_POSTGAME', 'FLAG_SYS_GAME_CLEAR'): t.flag(f)
+        for f in ('FLAG_HIDE_POSTGAME_STRANGER', 'FLAG_HIDE_POSTGAME_GOSSIPERS'): t.flag(f, False)
+        log('  fin 1 : generique passe, reprise sur', t.sync(), t.pos()[2:], 'fin', t.getvar('VAR_TOPAZE_ENDING'), 'postgame', t.getflag('FLAG_TOPAZE_POSTGAME'))
+        assert t.sync() == 'IndigoPlateau_Exterior' and t.getvar('VAR_TOPAZE_ENDING') == 1 and t.getflag('FLAG_TOPAZE_POSTGAME'), 'fin 1 non atteinte'
+        t.e.run(120, 0); return
     t.walk_fight((6, 3), 10); t.hold('UP', 20); t.e.run(80, 0)
     for i in range(400):
         t.scene(maxn=12)
@@ -801,7 +836,11 @@ def stage_pg_indigo(t):
 def legend_fight(t, pat, flags=(), n=14):
     """Parle a un legendaire statique (script contenant `pat`), joue le combat, soigne ; renvoie l'etat des drapeaux."""
     t.e.run(90, 0); t.scene(maxn=200)
-    ok = t.talk_script(pat, n); t.scene(maxn=900); t.heal()
+    ok = t.talk_script(pat, n); t.scene(maxn=900)
+    for _ in range(6):      # combat long (legendaire a beaucoup de PV) : on le finit avant de continuer
+        if not t.inbattle(): break
+        t.finish_battle(maxn=900); t.scene(maxn=300)
+    t.heal()
     log('  legendaire', pat, 'parle', ok, [(f, t.getflag(f)) for f in flags], t.sync(), t.pos()[2:])
     return ok
 
@@ -815,6 +854,25 @@ def stage_pg_mine(t):
     t.save('pg_mine_done')
     assert t.go('VermilionCity'), 'Apatia inaccessible'
     legend_fight(t, 'MewTruck', ('FLAG_FOUGHT_MEW_TRUCK',))
+
+def give_hms(t):
+    """LIMITE DU BOT : CS04 (Force) et CS06 (Eclate-Roc) mises directement dans le sac (la CS04 vient du gardien du Parc Safari, la CS06 de la source chaude de l'Ile 1 : non rejoues)."""
+    sb = t.e.u32(0x03005048); sb2 = t.e.u32(0x0300504c); key = t.e.u32(sb2 + 0xF20) & 0xffff; slot = sb + 0x464
+    for it in (342, 344):
+        for i in range(58):
+            a = slot + 4 * i; cur = struct.unpack('<H', t.e.peek(a, 2))[0]
+            if cur == it: break
+            if cur == 0:
+                for k, b in enumerate(struct.pack('<HH', it, 1 ^ key)): t.e.cmd('poke8 %x %x' % (a + k, b))
+                break
+    for f in ('FLAG_GOT_HM04', 'FLAG_GOT_HM06'): t.flag(f)
+
+def stage_pg_sulfura(t):
+    """Post-game : Sulfura (sommet du Mont Brasier) : Force (rochers a pousser) et Eclate-Roc, planifies par gates.py / Auto.clear_gates."""
+    R.SURF = True; R.NOWALK = (19,); t.buff(); give_hms(t)
+    go_isle(t, 1, 'OneIsland'); assert t.go('MtEmber_Summit'), 'sommet du Mont Brasier inaccessible (rochers)'
+    t.e.run(90, 0); assert t.reach_gates((9, 7)), 'Sulfura inaccessible (rochers Force du sommet)'
+    legend_fight(t, 'Moltres', ('FLAG_FOUGHT_MOLTRES', 'FLAG_HIDE_MOLTRES')); t.report('FLAG_FOUGHT_MOLTRES')
 
 def stage_pg_birds(t):
     """Post-game 3/5 : Artikodin (clairiere de Bourg Quartz) et Electhor (centrale) reapparaissent."""
@@ -881,7 +939,7 @@ def icefall_climb(t):
     """Grotte Glacon : la CS07 (Cascade) est sur une balle de la 1F ; il faut ensuite remonter la cascade de l'entree pour atteindre le fond."""
     if cur_isle(t) != 4: sail_to(t, 4)
     if t.getflag('FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_1F_HM07'): return
-    assert t.go('FourIsland_IcefallCave_1F'), 'grotte 1F inaccessible'
+    assert t.go(('FourIsland_IcefallCave_1F', (13, 16))), 'salle de la CS07 inaccessible'      # la balle est dans une salle fermee a l'ouest : on y arrive par la B1F
     t.e.run(90, 0); log('  CS07 prise :', t.talk_script('ItemHM07', 12), t.getflag('FLAG_HIDE_FOUR_ISLAND_ICEFALL_CAVE_1F_HM07'))
     assert t.go('FourIsland_IcefallCave_Entrance'), 'entree inaccessible'
     t.e.run(90, 0); r = t.walk_to((17, 21)); log('  pied de la cascade :', r, t.pos()[2:])
@@ -928,9 +986,9 @@ def stage_pg_echoes(t):
             log('ECHO bloque au stade', t.getvar('VAR_ECHO_STAGE')); break
         if t.getvar('VAR_ECHO_STAGE') >= 23: break
 
-STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4), ('ameth', stage_ameth), ('gym5', stage_gym5), ('hema_in', stage_hema_in), ('hema_tower', stage_hema_tower), ('gym6', stage_gym6), ('chron_in', stage_chron_in), ('chron_key', stage_chron_key), ('gym7', stage_gym7), ('chron_raid', stage_chron_raid), ('seafoam', stage_seafoam), ('gym8', stage_gym8), ('victory', stage_victory), ('league', stage_league), ('ending1', stage_ending1), ('pg_pallet', stage_pg_pallet), ('pg_indigo', stage_pg_indigo), ('pg_mine', stage_pg_mine), ('pg_birds', stage_pg_birds), ('pg_ferry', stage_pg_ferry), ('pg_sevii', stage_pg_sevii), ('pg_echoes', stage_pg_echoes)]
+STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4), ('ameth', stage_ameth), ('gym5', stage_gym5), ('hema_in', stage_hema_in), ('hema_tower', stage_hema_tower), ('gym6', stage_gym6), ('chron_in', stage_chron_in), ('chron_key', stage_chron_key), ('gym7', stage_gym7), ('chron_raid', stage_chron_raid), ('seafoam', stage_seafoam), ('gym8', stage_gym8), ('victory', stage_victory), ('league', stage_league), ('ending1', stage_ending1), ('pg_pallet', stage_pg_pallet), ('pg_indigo', stage_pg_indigo), ('pg_mine', stage_pg_mine), ('pg_birds', stage_pg_birds), ('pg_ferry', stage_pg_ferry), ('pg_sevii', stage_pg_sevii), ('pg_sulfura', stage_pg_sulfura), ('pg_echoes', stage_pg_echoes)]
 
-RESUME = {'ending1': 'league_won', 'pg_pallet': 'ending1', 'pg_mine': 'pg_pallet', 'pg_ferry': 'pg_birds'}
+RESUME = {'ending1': 'league', 'pg_pallet': 'ending1', 'pg_mine': 'pg_pallet', 'pg_ferry': 'pg_birds'}
 
 if __name__ == '__main__':
     # usage : run_full.py all | run_full.py <etape> [<etape> ...]   (une etape isolee repart de la sauvegarde de la precedente)

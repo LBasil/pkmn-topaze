@@ -15,9 +15,12 @@ def mapid(name):
     raise KeyError(name)
 def snake_const(n): return re.sub(r'(?<!^)(?=[A-Z0-9])', '_', n).upper().replace('_1_F', '_1F').replace('_2_F', '_2F')
 NOWALK = ()     # comportements de case jamais franchissables (ex. (19,) = cascade sans CS07)
+CURRENT_STOPPED = False
 class Nav:
     def __init__(self, name):
-        self.name = name; self.mj = json.load(open('data/maps/%s/map.json' % name)); L = mapkit.layouts()[self.mj['layout']]
+        self.name = name; self.mj = json.load(open('data/maps/%s/map.json' % name)); lid = self.mj['layout']
+        if CURRENT_STOPPED and name in ('SeafoamIslands_B3F', 'SeafoamIslands_B4F'): lid += '_CURRENT_STOPPED'      # disposition apres arret du courant de lave (vanille : setmaplayoutindex)
+        L = mapkit.layouts()[lid]
         self.w, self.h = L['width'], L['height']; self.g = struct.unpack('<%dH' % (self.w * self.h), open(L['blockdata_filepath'], 'rb').read())
         rd = lambda ts: struct.unpack('<%dI' % (os.path.getsize(mapkit.ts_dir(ts) + '/metatile_attributes.bin') // 4), open(mapkit.ts_dir(ts) + '/metatile_attributes.bin', 'rb').read())
         self.pa, self.sa = rd(L['primary_tileset']), rd(L['secondary_tileset'])
@@ -31,7 +34,7 @@ class Nav:
         """Regle d'altitude du moteur : on ne passe pas d'un niveau a un autre (sauf 0 et 15, qui relient tout)."""
         ea = self.g[c[1] * self.w + c[0]] >> 12; eb = self.g[n[1] * self.w + n[0]] >> 12
         wc = (self.attr(*c) & 0x1ff) in WATER; wn = (self.attr(*n) & 0x1ff) in WATER
-        if SURF and wn: return True      # embarquement et navigation : le script de Surf pose le joueur sur l'eau sans test d'altitude
+        if SURF and wn: return wc or ea == 3      # navigation sur l'eau ; embarquement (terre -> eau) : IsPlayerFacingSurfableFishableWater exige que le joueur soit a l'altitude 3 (comme CanStopSurfing)
         # debarquement (eau -> terre) : CanStopSurfing du moteur = altitude 3 exactement ; sinon collision normale (ex. volcan Ecume B4F : lac a 1, terre a 4 = pas de sortie)
         if SURF and wc and eb == 3: return True
         return ea in (0, 15) or eb in (0, 15) or ea == eb
