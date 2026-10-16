@@ -182,3 +182,37 @@ PewterCity_Text_Camper::
     .string "I came to see the volcano.\p"
     .string "Now I can't stop looking at the\n"
     .string "lava lake. It's hypnotic.$"
+
+PewterCity_Text_RefAsk::
+    .string "CLEO: A DRATINI came down from the\n"
+    .string "mountain, sick and scared. I need\n"
+    .string "three FULL HEALS to cure it.$"
+
+PewterCity_Text_RefOffer::
+    .string "CLEO: You have them! May I take\n"
+    .string "3 of them for the post?$"
+
+PewterCity_Text_RefNo::
+    .string "CLEO: I understand. It is a lot to\n"
+    .string "ask. The offer stands.$"
+
+PewterCity_Text_RefGives::
+    .string "CLEO: You saved the day. The post\n"
+    .string "has a gift for you: DRATINI!$"
+
+PewterCity_Text_RefAfter::
+    .string "CLEO: Take good care of it. The\n"
+    .string "next REFUGE post is waiting.$"
+
+PewterCity_Text_RefEarly::
+    .string "CLEO: Not yet. Finish the earlier\n"
+    .string "posts first. The KEEPER at the\n"
+    .string "SAFARI ZONE knows the order.$"
+
+PewterCity_Text_RefDone::
+    .string "CLEO: Thank you again. The REFUGE\n"
+    .string "is safer because of you.$"
+
+PewterCity_Text_RefIdle::
+    .string "CLEO: I watch over the animals here.\n"
+    .string "The world is quieter now.$"

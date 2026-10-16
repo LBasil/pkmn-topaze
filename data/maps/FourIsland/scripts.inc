@@ -195,3 +195,51 @@ FourIsland_EventScript_LordIdle::
 	msgbox FourIsland_Text_LordIdle
 	release
 	end
+
+@ Topaze, fin 2 « Le Refuge » : poste 13/16 (MAYA) — livraison d'objets, recompense : Feebas
+FourIsland_EventScript_Refuge::
+	lock
+	faceplayer
+	goto_if_ne VAR_TOPAZE_ENDING, 2, FourIsland_EventScript_RefugeIdle
+	goto_if_gt VAR_REFUGE_STAGE, 12, FourIsland_EventScript_RefugeDone
+	goto_if_lt VAR_REFUGE_STAGE, 12, FourIsland_EventScript_RefugeEarly
+	checkitem ITEM_ICE_HEAL, 3
+	goto_if_eq VAR_RESULT, TRUE, FourIsland_EventScript_RefugeOffer
+	msgbox FourIsland_Text_RefAsk
+	release
+	end
+
+FourIsland_EventScript_RefugeOffer::
+	msgbox FourIsland_Text_RefOffer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FourIsland_EventScript_RefugeRefuse
+	removeitem ITEM_ICE_HEAL, 3
+	goto FourIsland_EventScript_RefugeReward
+	end
+
+FourIsland_EventScript_RefugeRefuse::
+	msgbox FourIsland_Text_RefNo
+	release
+	end
+
+FourIsland_EventScript_RefugeReward::
+	msgbox FourIsland_Text_RefGives
+	givemon SPECIES_FEEBAS, 0
+	addvar VAR_REFUGE_STAGE, 1
+	msgbox FourIsland_Text_RefAfter
+	release
+	end
+
+FourIsland_EventScript_RefugeEarly::
+	msgbox FourIsland_Text_RefEarly
+	release
+	end
+
+FourIsland_EventScript_RefugeDone::
+	msgbox FourIsland_Text_RefDone
+	release
+	end
+
+FourIsland_EventScript_RefugeIdle::
+	msgbox FourIsland_Text_RefIdle
+	release
+	end

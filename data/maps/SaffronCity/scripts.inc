@@ -227,3 +227,43 @@ SaffronCity_EventScript_SilphProductSign::
 SaffronCity_EventScript_TrainerFanClubSign::
 	msgbox SaffronCity_Text_TrainerFanClubSign, MSGBOX_SIGN
 	end
+
+@ Topaze, fin 2 « Le Refuge » : poste 8/16 (HUGO) — duel contre 2 chasseurs, recompense : Snorlax
+SaffronCity_EventScript_Refuge::
+	lock
+	faceplayer
+	goto_if_ne VAR_TOPAZE_ENDING, 2, SaffronCity_EventScript_RefugeIdle
+	goto_if_gt VAR_REFUGE_STAGE, 7, SaffronCity_EventScript_RefugeDone
+	goto_if_lt VAR_REFUGE_STAGE, 7, SaffronCity_EventScript_RefugeEarly
+	msgbox SaffronCity_Text_RefAsk
+	setvar VAR_TOPAZE_BOOST, 18
+	trainerbattle_no_intro TRAINER_GENTLEMAN_NORTON, SaffronCity_Text_RefHunter1
+	setvar VAR_TOPAZE_BOOST, 36
+	trainerbattle_no_intro TRAINER_JUGGLER_SHAWN, SaffronCity_Text_RefHunter2
+	setvar VAR_TOPAZE_BOOST, 0
+	special HealPlayerParty
+	goto SaffronCity_EventScript_RefugeReward
+	end
+
+SaffronCity_EventScript_RefugeReward::
+	msgbox SaffronCity_Text_RefGives
+	givemon SPECIES_SNORLAX, 0
+	addvar VAR_REFUGE_STAGE, 1
+	msgbox SaffronCity_Text_RefAfter
+	release
+	end
+
+SaffronCity_EventScript_RefugeEarly::
+	msgbox SaffronCity_Text_RefEarly
+	release
+	end
+
+SaffronCity_EventScript_RefugeDone::
+	msgbox SaffronCity_Text_RefDone
+	release
+	end
+
+SaffronCity_EventScript_RefugeIdle::
+	msgbox SaffronCity_Text_RefIdle
+	release
+	end

@@ -52,3 +52,37 @@ LavenderTown_Text_PokemonTowerSign::
     .string "POKéMON TOWER\n"
     .string "Becalm the Spirits of POKéMON$"
 
+
+LavenderTown_Text_RefAsk::
+    .string "FINN: The old tower is full of lost\n"
+    .string "POKéMON. Hunters know it, and they\n"
+    .string "come at dusk with lanterns.$"
+
+LavenderTown_Text_RefHunter1::
+    .string "HUNTER: Rare ones fetch a fortune!\n"
+    .string "Stay out of this, child!$"
+
+LavenderTown_Text_RefHunter2::
+    .string "HUNTER: You beat my partner? Fine,\n"
+    .string "I am not afraid of a ranger!$"
+
+LavenderTown_Text_RefGives::
+    .string "FINN: You saved the day. The post\n"
+    .string "has a gift for you: PORYGON!$"
+
+LavenderTown_Text_RefAfter::
+    .string "FINN: Take good care of it. The\n"
+    .string "next REFUGE post is waiting.$"
+
+LavenderTown_Text_RefEarly::
+    .string "FINN: Not yet. Finish the earlier\n"
+    .string "posts first. The KEEPER at the\n"
+    .string "SAFARI ZONE knows the order.$"
+
+LavenderTown_Text_RefDone::
+    .string "FINN: Thank you again. The REFUGE\n"
+    .string "is safer because of you.$"
+
+LavenderTown_Text_RefIdle::
+    .string "FINN: I watch over the animals here.\n"
+    .string "The world is quieter now.$"

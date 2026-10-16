@@ -125,3 +125,37 @@ ViridianCity_Text_GymSign::
 ViridianCity_Text_GymDoorsAreLocked::
     .string "OPANIHRUM GYM's doors are locked…$"
 
+
+ViridianCity_Text_RefAsk::
+    .string "BRUN: Hunters came last night, looking\n"
+    .string "for rare POKéMON to sell. They\n"
+    .string "want them back in cages.\pI cannot fight them alone.$"
+
+ViridianCity_Text_RefHunter1::
+    .string "HUNTER: Rare ones fetch a fortune!\n"
+    .string "Stay out of this, child!$"
+
+ViridianCity_Text_RefHunter2::
+    .string "HUNTER: You beat my partner? Fine,\n"
+    .string "I am not afraid of a ranger!$"
+
+ViridianCity_Text_RefGives::
+    .string "BRUN: You saved the day. The post\n"
+    .string "has a gift for you: LARVITAR!$"
+
+ViridianCity_Text_RefAfter::
+    .string "BRUN: Take good care of it. The\n"
+    .string "next REFUGE post is waiting.$"
+
+ViridianCity_Text_RefEarly::
+    .string "BRUN: Not yet. Finish the earlier\n"
+    .string "posts first. The KEEPER at the\n"
+    .string "SAFARI ZONE knows the order.$"
+
+ViridianCity_Text_RefDone::
+    .string "BRUN: Thank you again. The REFUGE\n"
+    .string "is safer because of you.$"
+
+ViridianCity_Text_RefIdle::
+    .string "BRUN: I watch over the animals here.\n"
+    .string "The world is quieter now.$"

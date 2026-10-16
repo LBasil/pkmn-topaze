@@ -252,6 +252,7 @@ FuchsiaCity_SafariZone_Entrance_EventScript_RefugeGift::
 @ Topaze, fin 2 : le gardien du Refuge recompense les paliers de Pokedex (pris) et tient le marche du Refuge
 FuchsiaCity_SafariZone_Entrance_EventScript_RefugeKeeper::
 	msgbox FuchsiaCity_SafariZone_Entrance_Text_KeeperHello
+	call FuchsiaCity_SafariZone_Entrance_EventScript_RefugeChain
 	setvar VAR_0x8004, 1
 	specialvar VAR_RESULT, GetPokedexCount
 	buffernumberstring STR_VAR_1, VAR_0x8006
@@ -331,3 +332,129 @@ FuchsiaCity_SafariZone_Entrance_RefugeMarket::
 	.2byte ITEM_NONE
 	release
 	end
+
+@ Topaze, fin 2 : la chaine du Refuge — 16 postes (voir tools/topaze/gen/ending2.py) puis 3 grands defis chez le gardien
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeChain::
+	switch VAR_REFUGE_STAGE
+	case 0, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint0
+	case 1, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint1
+	case 2, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint2
+	case 3, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint3
+	case 4, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint4
+	case 5, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint5
+	case 6, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint6
+	case 7, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint7
+	case 8, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint8
+	case 9, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint9
+	case 10, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint10
+	case 11, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint11
+	case 12, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint12
+	case 13, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint13
+	case 14, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint14
+	case 15, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint15
+	case 16, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeKing
+	case 17, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHoOh
+	case 18, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeDeoxys
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint0::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeHint0
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint1::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeHint1
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint2::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeHint2
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint3::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeHint3
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint4::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeHint4
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint5::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeHint5
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint6::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeHint6
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint7::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeHint7
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint8::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeHint8
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint9::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeHint9
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint10::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeHint10
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint11::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeHint11
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint12::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeHint12
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint13::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeHint13
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint14::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeHint14
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHint15::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeHint15
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeKing::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeKing1
+	setvar VAR_TOPAZE_BOOST, 16
+	trainerbattle_no_intro TRAINER_ECHO_GIOVANNI, FuchsiaCity_SafariZone_Entrance_Text_RefugeKing2
+	setvar VAR_TOPAZE_BOOST, 0
+	special HealPlayerParty
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeKing3
+	givemon SPECIES_LUGIA, 0
+	setvar VAR_REFUGE_STAGE, 17
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeKing4
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHoOh::
+	setvar VAR_0x8004, 1
+	specialvar VAR_RESULT, GetPokedexCount
+	goto_if_lt VAR_0x8006, 200, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHoOhNo
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeHoOh1
+	givemon SPECIES_HO_OH, 0
+	setvar VAR_REFUGE_STAGE, 18
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeHoOhNo::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeHoOhNo
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeDeoxys::
+	setvar VAR_0x8004, 1
+	specialvar VAR_RESULT, GetPokedexCount
+	goto_if_lt VAR_0x8006, 300, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeDeoxysNo
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeDeoxys1
+	givemon SPECIES_DEOXYS, 0
+	setvar VAR_REFUGE_STAGE, 19
+	return
+
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeDeoxysNo::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeDeoxysNo
+	return

@@ -179,3 +179,43 @@ ViridianCity_EventScript_DoTutorialBattle::
 	giveitem ITEM_TEACHY_TV
 	msgbox ViridianCity_Text_WatchThatToLearnBasics
 	return
+
+@ Topaze, fin 2 « Le Refuge » : poste 2/16 (BRUN) — duel contre 2 chasseurs, recompense : Larvitar
+ViridianCity_EventScript_Refuge::
+	lock
+	faceplayer
+	goto_if_ne VAR_TOPAZE_ENDING, 2, ViridianCity_EventScript_RefugeIdle
+	goto_if_gt VAR_REFUGE_STAGE, 1, ViridianCity_EventScript_RefugeDone
+	goto_if_lt VAR_REFUGE_STAGE, 1, ViridianCity_EventScript_RefugeEarly
+	msgbox ViridianCity_Text_RefAsk
+	setvar VAR_TOPAZE_BOOST, 46
+	trainerbattle_no_intro TRAINER_GENTLEMAN_THOMAS, ViridianCity_Text_RefHunter1
+	setvar VAR_TOPAZE_BOOST, 36
+	trainerbattle_no_intro TRAINER_JUGGLER_DALTON, ViridianCity_Text_RefHunter2
+	setvar VAR_TOPAZE_BOOST, 0
+	special HealPlayerParty
+	goto ViridianCity_EventScript_RefugeReward
+	end
+
+ViridianCity_EventScript_RefugeReward::
+	msgbox ViridianCity_Text_RefGives
+	givemon SPECIES_LARVITAR, 0
+	addvar VAR_REFUGE_STAGE, 1
+	msgbox ViridianCity_Text_RefAfter
+	release
+	end
+
+ViridianCity_EventScript_RefugeEarly::
+	msgbox ViridianCity_Text_RefEarly
+	release
+	end
+
+ViridianCity_EventScript_RefugeDone::
+	msgbox ViridianCity_Text_RefDone
+	release
+	end
+
+ViridianCity_EventScript_RefugeIdle::
+	msgbox ViridianCity_Text_RefIdle
+	release
+	end

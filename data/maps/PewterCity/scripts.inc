@@ -870,3 +870,51 @@ PewterCity_EventScript_Camper::
 	msgbox PewterCity_Text_Camper, MSGBOX_NPC
 	end
 
+
+@ Topaze, fin 2 « Le Refuge » : poste 3/16 (CLEO) — livraison d'objets, recompense : Dratini
+PewterCity_EventScript_Refuge::
+	lock
+	faceplayer
+	goto_if_ne VAR_TOPAZE_ENDING, 2, PewterCity_EventScript_RefugeIdle
+	goto_if_gt VAR_REFUGE_STAGE, 2, PewterCity_EventScript_RefugeDone
+	goto_if_lt VAR_REFUGE_STAGE, 2, PewterCity_EventScript_RefugeEarly
+	checkitem ITEM_FULL_HEAL, 3
+	goto_if_eq VAR_RESULT, TRUE, PewterCity_EventScript_RefugeOffer
+	msgbox PewterCity_Text_RefAsk
+	release
+	end
+
+PewterCity_EventScript_RefugeOffer::
+	msgbox PewterCity_Text_RefOffer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PewterCity_EventScript_RefugeRefuse
+	removeitem ITEM_FULL_HEAL, 3
+	goto PewterCity_EventScript_RefugeReward
+	end
+
+PewterCity_EventScript_RefugeRefuse::
+	msgbox PewterCity_Text_RefNo
+	release
+	end
+
+PewterCity_EventScript_RefugeReward::
+	msgbox PewterCity_Text_RefGives
+	givemon SPECIES_DRATINI, 0
+	addvar VAR_REFUGE_STAGE, 1
+	msgbox PewterCity_Text_RefAfter
+	release
+	end
+
+PewterCity_EventScript_RefugeEarly::
+	msgbox PewterCity_Text_RefEarly
+	release
+	end
+
+PewterCity_EventScript_RefugeDone::
+	msgbox PewterCity_Text_RefDone
+	release
+	end
+
+PewterCity_EventScript_RefugeIdle::
+	msgbox PewterCity_Text_RefIdle
+	release
+	end

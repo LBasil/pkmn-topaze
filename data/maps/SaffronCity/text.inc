@@ -144,3 +144,37 @@ SaffronCity_Text_GuardScared::
 SaffronCity_Text_GuardGone::
     .string "The MASTER is gone. Half of us\n"
     .string "ran. I think I'll quit too.$"
+
+SaffronCity_Text_RefAsk::
+    .string "HUGO: A big sleeper blocks the road\n"
+    .string "and the hunters want it. They came\l"
+    .string "with ropes and a truck.$"
+
+SaffronCity_Text_RefHunter1::
+    .string "HUNTER: Rare ones fetch a fortune!\n"
+    .string "Stay out of this, child!$"
+
+SaffronCity_Text_RefHunter2::
+    .string "HUNTER: You beat my partner? Fine,\n"
+    .string "I am not afraid of a ranger!$"
+
+SaffronCity_Text_RefGives::
+    .string "HUGO: You saved the day. The post\n"
+    .string "has a gift for you: SNORLAX!$"
+
+SaffronCity_Text_RefAfter::
+    .string "HUGO: Take good care of it. The\n"
+    .string "next REFUGE post is waiting.$"
+
+SaffronCity_Text_RefEarly::
+    .string "HUGO: Not yet. Finish the earlier\n"
+    .string "posts first. The KEEPER at the\n"
+    .string "SAFARI ZONE knows the order.$"
+
+SaffronCity_Text_RefDone::
+    .string "HUGO: Thank you again. The REFUGE\n"
+    .string "is safer because of you.$"
+
+SaffronCity_Text_RefIdle::
+    .string "HUGO: I watch over the animals here.\n"
+    .string "The world is quieter now.$"

@@ -51,3 +51,43 @@ FiveIsland_EventScript_LordIdle::
 	msgbox FiveIsland_Text_LordIdle
 	release
 	end
+
+@ Topaze, fin 2 « Le Refuge » : poste 14/16 (NOEL) — duel contre 2 chasseurs, recompense : Tauros
+FiveIsland_EventScript_Refuge::
+	lock
+	faceplayer
+	goto_if_ne VAR_TOPAZE_ENDING, 2, FiveIsland_EventScript_RefugeIdle
+	goto_if_gt VAR_REFUGE_STAGE, 13, FiveIsland_EventScript_RefugeDone
+	goto_if_lt VAR_REFUGE_STAGE, 13, FiveIsland_EventScript_RefugeEarly
+	msgbox FiveIsland_Text_RefAsk
+	setvar VAR_TOPAZE_BOOST, 59
+	trainerbattle_no_intro TRAINER_GENTLEMAN_LAMAR, FiveIsland_Text_RefHunter1
+	setvar VAR_TOPAZE_BOOST, 41
+	trainerbattle_no_intro TRAINER_JUGGLER_KAYDEN, FiveIsland_Text_RefHunter2
+	setvar VAR_TOPAZE_BOOST, 0
+	special HealPlayerParty
+	goto FiveIsland_EventScript_RefugeReward
+	end
+
+FiveIsland_EventScript_RefugeReward::
+	msgbox FiveIsland_Text_RefGives
+	givemon SPECIES_TAUROS, 0
+	addvar VAR_REFUGE_STAGE, 1
+	msgbox FiveIsland_Text_RefAfter
+	release
+	end
+
+FiveIsland_EventScript_RefugeEarly::
+	msgbox FiveIsland_Text_RefEarly
+	release
+	end
+
+FiveIsland_EventScript_RefugeDone::
+	msgbox FiveIsland_Text_RefDone
+	release
+	end
+
+FiveIsland_EventScript_RefugeIdle::
+	msgbox FiveIsland_Text_RefIdle
+	release
+	end

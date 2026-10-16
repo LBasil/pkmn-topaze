@@ -40,3 +40,37 @@ FiveIsland_Text_LordDone::
 FiveIsland_Text_LordIdle::
     .string "PHOEBE: The islands are quiet. I look\n"
     .string "after them, as I always have.$"
+
+FiveIsland_Text_RefAsk::
+    .string "NOEL: The herd is spooked. Hunters\n"
+    .string "burn the meadow to drive them into\l"
+    .string "their nets.$"
+
+FiveIsland_Text_RefHunter1::
+    .string "HUNTER: Rare ones fetch a fortune!\n"
+    .string "Stay out of this, child!$"
+
+FiveIsland_Text_RefHunter2::
+    .string "HUNTER: You beat my partner? Fine,\n"
+    .string "I am not afraid of a ranger!$"
+
+FiveIsland_Text_RefGives::
+    .string "NOEL: You saved the day. The post\n"
+    .string "has a gift for you: TAUROS!$"
+
+FiveIsland_Text_RefAfter::
+    .string "NOEL: Take good care of it. The\n"
+    .string "next REFUGE post is waiting.$"
+
+FiveIsland_Text_RefEarly::
+    .string "NOEL: Not yet. Finish the earlier\n"
+    .string "posts first. The KEEPER at the\n"
+    .string "SAFARI ZONE knows the order.$"
+
+FiveIsland_Text_RefDone::
+    .string "NOEL: Thank you again. The REFUGE\n"
+    .string "is safer because of you.$"
+
+FiveIsland_Text_RefIdle::
+    .string "NOEL: I watch over the animals here.\n"
+    .string "The world is quieter now.$"

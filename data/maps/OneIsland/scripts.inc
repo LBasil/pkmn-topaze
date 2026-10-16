@@ -138,3 +138,43 @@ OneIsland_EventScript_LordIdle::
 	msgbox OneIsland_Text_LordIdle
 	release
 	end
+
+@ Topaze, fin 2 « Le Refuge » : poste 10/16 (JONAH) — duel contre 2 chasseurs, recompense : Kangaskhan
+OneIsland_EventScript_Refuge::
+	lock
+	faceplayer
+	goto_if_ne VAR_TOPAZE_ENDING, 2, OneIsland_EventScript_RefugeIdle
+	goto_if_gt VAR_REFUGE_STAGE, 9, OneIsland_EventScript_RefugeDone
+	goto_if_lt VAR_REFUGE_STAGE, 9, OneIsland_EventScript_RefugeEarly
+	msgbox OneIsland_Text_RefAsk
+	setvar VAR_TOPAZE_BOOST, 55
+	trainerbattle_no_intro TRAINER_GENTLEMAN_WALTER, OneIsland_Text_RefHunter1
+	setvar VAR_TOPAZE_BOOST, 23
+	trainerbattle_no_intro TRAINER_JUGGLER_GREGORY, OneIsland_Text_RefHunter2
+	setvar VAR_TOPAZE_BOOST, 0
+	special HealPlayerParty
+	goto OneIsland_EventScript_RefugeReward
+	end
+
+OneIsland_EventScript_RefugeReward::
+	msgbox OneIsland_Text_RefGives
+	givemon SPECIES_KANGASKHAN, 0
+	addvar VAR_REFUGE_STAGE, 1
+	msgbox OneIsland_Text_RefAfter
+	release
+	end
+
+OneIsland_EventScript_RefugeEarly::
+	msgbox OneIsland_Text_RefEarly
+	release
+	end
+
+OneIsland_EventScript_RefugeDone::
+	msgbox OneIsland_Text_RefDone
+	release
+	end
+
+OneIsland_EventScript_RefugeIdle::
+	msgbox OneIsland_Text_RefIdle
+	release
+	end

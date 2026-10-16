@@ -84,3 +84,37 @@ OneIsland_Text_LordDone::
 OneIsland_Text_LordIdle::
     .string "WILL: The islands are quiet. I look\n"
     .string "after them, as I always have.$"
+
+OneIsland_Text_RefAsk::
+    .string "JONAH: Poachers took a baby from its\n"
+    .string "mother on the shore. Bring them\n"
+    .string "to justice, please.$"
+
+OneIsland_Text_RefHunter1::
+    .string "HUNTER: Rare ones fetch a fortune!\n"
+    .string "Stay out of this, child!$"
+
+OneIsland_Text_RefHunter2::
+    .string "HUNTER: You beat my partner? Fine,\n"
+    .string "I am not afraid of a ranger!$"
+
+OneIsland_Text_RefGives::
+    .string "JONAH: You saved the day. The post\n"
+    .string "has a gift for you: KANGASKHAN!$"
+
+OneIsland_Text_RefAfter::
+    .string "JONAH: Take good care of it. The\n"
+    .string "next REFUGE post is waiting.$"
+
+OneIsland_Text_RefEarly::
+    .string "JONAH: Not yet. Finish the earlier\n"
+    .string "posts first. The KEEPER at the\n"
+    .string "SAFARI ZONE knows the order.$"
+
+OneIsland_Text_RefDone::
+    .string "JONAH: Thank you again. The REFUGE\n"
+    .string "is safer because of you.$"
+
+OneIsland_Text_RefIdle::
+    .string "JONAH: I watch over the animals here.\n"
+    .string "The world is quieter now.$"

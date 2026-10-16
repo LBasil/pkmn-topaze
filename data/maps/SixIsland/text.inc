@@ -36,3 +36,37 @@ SixIsland_Text_LordDone::
 SixIsland_Text_LordIdle::
     .string "DRAKE: The islands are quiet. I look\n"
     .string "after them, as I always have.$"
+
+SixIsland_Text_RefAsk::
+    .string "OLGA: A PINSIR was caught in a trap\n"
+    .string "and it is badly hurt. Two FULL\l"
+    .string "RESTORES, please.$"
+
+SixIsland_Text_RefOffer::
+    .string "OLGA: You have them! May I take\n"
+    .string "2 of them for the post?$"
+
+SixIsland_Text_RefNo::
+    .string "OLGA: I understand. It is a lot to\n"
+    .string "ask. The offer stands.$"
+
+SixIsland_Text_RefGives::
+    .string "OLGA: You saved the day. The post\n"
+    .string "has a gift for you: PINSIR!$"
+
+SixIsland_Text_RefAfter::
+    .string "OLGA: Take good care of it. The\n"
+    .string "next REFUGE post is waiting.$"
+
+SixIsland_Text_RefEarly::
+    .string "OLGA: Not yet. Finish the earlier\n"
+    .string "posts first. The KEEPER at the\n"
+    .string "SAFARI ZONE knows the order.$"
+
+SixIsland_Text_RefDone::
+    .string "OLGA: Thank you again. The REFUGE\n"
+    .string "is safer because of you.$"
+
+SixIsland_Text_RefIdle::
+    .string "OLGA: I watch over the animals here.\n"
+    .string "The world is quieter now.$"

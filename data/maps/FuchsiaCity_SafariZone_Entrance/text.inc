@@ -117,3 +117,101 @@ FuchsiaCity_SafariZone_Entrance_Text_KeeperShopAsk::
 
 FuchsiaCity_SafariZone_Entrance_Text_KeeperBye::
     .string "KEEPER: Come back any time.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeHint0::
+    .string "KEEPER: Post 1 of 16 awaits in\n"
+    .string "GRENALUX. Talk to the ranger there.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeHint1::
+    .string "KEEPER: Post 2 of 16 awaits in\n"
+    .string "OPANIHRUM. Talk to the ranger there.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeHint2::
+    .string "KEEPER: Post 3 of 16 awaits in\n"
+    .string "PYROPIA. Talk to the ranger there.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeHint3::
+    .string "KEEPER: Post 4 of 16 awaits in\n"
+    .string "TOURMALIA. Talk to the ranger there.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeHint4::
+    .string "KEEPER: Post 5 of 16 awaits in\n"
+    .string "APATIA. Talk to the ranger there.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeHint5::
+    .string "KEEPER: Post 6 of 16 awaits in\n"
+    .string "SPINELLIA. Talk to the ranger there.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeHint6::
+    .string "KEEPER: Post 7 of 16 awaits in BOURG\n"
+    .string "QUARTZ. Talk to the ranger there.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeHint7::
+    .string "KEEPER: Post 8 of 16 awaits in\n"
+    .string "HEMATOWN. Talk to the ranger there.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeHint8::
+    .string "KEEPER: Post 9 of 16 awaits in\n"
+    .string "CHRONDROLIA. Talk to the ranger there.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeHint9::
+    .string "KEEPER: Post 10 of 16 awaits in\n"
+    .string "ONE ISLAND. Talk to the ranger there.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeHint10::
+    .string "KEEPER: Post 11 of 16 awaits in\n"
+    .string "TWO ISLAND. Talk to the ranger there.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeHint11::
+    .string "KEEPER: Post 12 of 16 awaits in\n"
+    .string "THREE ISLAND. Talk to the ranger\l"
+    .string "there.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeHint12::
+    .string "KEEPER: Post 13 of 16 awaits in\n"
+    .string "FOUR ISLAND. Talk to the ranger there.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeHint13::
+    .string "KEEPER: Post 14 of 16 awaits in\n"
+    .string "FIVE ISLAND. Talk to the ranger there.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeHint14::
+    .string "KEEPER: Post 15 of 16 awaits in\n"
+    .string "SIX ISLAND. Talk to the ranger there.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeHint15::
+    .string "KEEPER: Post 16 of 16 awaits in\n"
+    .string "SEVEN ISLAND. Talk to the ranger\l"
+    .string "there.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeKing1::
+    .string "KEEPER: The hunters sent their chief.\n"
+    .string "He waits at the gate of the REFUGE.\pHe says POKé BALLS must come back.\n"
+    .string "Stop him, WARDEN!$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeKing2::
+    .string "CHIEF: The cages... will rust...$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeKing3::
+    .string "KEEPER: The REFUGE is safe. The\n"
+    .string "legend of the sea answers your call.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeKing4::
+    .string "KEEPER: Come back with 200 species\n"
+    .string "registered. The rainbow awaits.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeHoOh1::
+    .string "KEEPER: 200 species! The rainbow\n"
+    .string "bird honors the REFUGE.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeHoOhNo::
+    .string "KEEPER: The rainbow bird waits. Come\n"
+    .string "back with 200 species registered.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeDeoxys1::
+    .string "KEEPER: 300 species! A visitor from\n"
+    .string "the stars asks to be your friend.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_RefugeDeoxysNo::
+    .string "KEEPER: One more guest is coming from\n"
+    .string "the stars. Register 300 species.$"

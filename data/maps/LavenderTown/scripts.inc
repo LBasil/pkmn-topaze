@@ -64,3 +64,43 @@ LavenderTown_EventScript_VolunteerHouseSign::
 LavenderTown_EventScript_PokemonTowerSign::
 	msgbox LavenderTown_Text_PokemonTowerSign, MSGBOX_SIGN
 	end
+
+@ Topaze, fin 2 « Le Refuge » : poste 6/16 (FINN) — duel contre 2 chasseurs, recompense : Porygon
+LavenderTown_EventScript_Refuge::
+	lock
+	faceplayer
+	goto_if_ne VAR_TOPAZE_ENDING, 2, LavenderTown_EventScript_RefugeIdle
+	goto_if_gt VAR_REFUGE_STAGE, 5, LavenderTown_EventScript_RefugeDone
+	goto_if_lt VAR_REFUGE_STAGE, 5, LavenderTown_EventScript_RefugeEarly
+	msgbox LavenderTown_Text_RefAsk
+	setvar VAR_TOPAZE_BOOST, 44
+	trainerbattle_no_intro TRAINER_GENTLEMAN_TUCKER, LavenderTown_Text_RefHunter1
+	setvar VAR_TOPAZE_BOOST, 37
+	trainerbattle_no_intro TRAINER_JUGGLER_KIRK, LavenderTown_Text_RefHunter2
+	setvar VAR_TOPAZE_BOOST, 0
+	special HealPlayerParty
+	goto LavenderTown_EventScript_RefugeReward
+	end
+
+LavenderTown_EventScript_RefugeReward::
+	msgbox LavenderTown_Text_RefGives
+	givemon SPECIES_PORYGON, 0
+	addvar VAR_REFUGE_STAGE, 1
+	msgbox LavenderTown_Text_RefAfter
+	release
+	end
+
+LavenderTown_EventScript_RefugeEarly::
+	msgbox LavenderTown_Text_RefEarly
+	release
+	end
+
+LavenderTown_EventScript_RefugeDone::
+	msgbox LavenderTown_Text_RefDone
+	release
+	end
+
+LavenderTown_EventScript_RefugeIdle::
+	msgbox LavenderTown_Text_RefIdle
+	release
+	end

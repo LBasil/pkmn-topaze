@@ -185,3 +185,51 @@ CeladonCity_EventScript_PrizeExchangeSign::
 CeladonCity_EventScript_GameCornerSign::
 	msgbox CeladonCity_Text_GameCornerSign, MSGBOX_SIGN
 	end
+
+@ Topaze, fin 2 « Le Refuge » : poste 7/16 (GWEN) — livraison d'objets, recompense : Lapras
+CeladonCity_EventScript_Refuge::
+	lock
+	faceplayer
+	goto_if_ne VAR_TOPAZE_ENDING, 2, CeladonCity_EventScript_RefugeIdle
+	goto_if_gt VAR_REFUGE_STAGE, 6, CeladonCity_EventScript_RefugeDone
+	goto_if_lt VAR_REFUGE_STAGE, 6, CeladonCity_EventScript_RefugeEarly
+	checkitem ITEM_LEMONADE, 3
+	goto_if_eq VAR_RESULT, TRUE, CeladonCity_EventScript_RefugeOffer
+	msgbox CeladonCity_Text_RefAsk
+	release
+	end
+
+CeladonCity_EventScript_RefugeOffer::
+	msgbox CeladonCity_Text_RefOffer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CeladonCity_EventScript_RefugeRefuse
+	removeitem ITEM_LEMONADE, 3
+	goto CeladonCity_EventScript_RefugeReward
+	end
+
+CeladonCity_EventScript_RefugeRefuse::
+	msgbox CeladonCity_Text_RefNo
+	release
+	end
+
+CeladonCity_EventScript_RefugeReward::
+	msgbox CeladonCity_Text_RefGives
+	givemon SPECIES_LAPRAS, 0
+	addvar VAR_REFUGE_STAGE, 1
+	msgbox CeladonCity_Text_RefAfter
+	release
+	end
+
+CeladonCity_EventScript_RefugeEarly::
+	msgbox CeladonCity_Text_RefEarly
+	release
+	end
+
+CeladonCity_EventScript_RefugeDone::
+	msgbox CeladonCity_Text_RefDone
+	release
+	end
+
+CeladonCity_EventScript_RefugeIdle::
+	msgbox CeladonCity_Text_RefIdle
+	release
+	end

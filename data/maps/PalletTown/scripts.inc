@@ -712,3 +712,51 @@ PalletTown_EventScript_SceneryBerries::
 PalletTown_Movement_MineBack::
 	walk_down
 	step_end
+
+@ Topaze, fin 2 « Le Refuge » : poste 1/16 (AYA) — livraison d'objets, recompense : Eevee
+PalletTown_EventScript_Refuge::
+	lock
+	faceplayer
+	goto_if_ne VAR_TOPAZE_ENDING, 2, PalletTown_EventScript_RefugeIdle
+	goto_if_gt VAR_REFUGE_STAGE, 0, PalletTown_EventScript_RefugeDone
+	goto_if_lt VAR_REFUGE_STAGE, 0, PalletTown_EventScript_RefugeEarly
+	checkitem ITEM_POTION, 5
+	goto_if_eq VAR_RESULT, TRUE, PalletTown_EventScript_RefugeOffer
+	msgbox PalletTown_Text_RefAsk
+	release
+	end
+
+PalletTown_EventScript_RefugeOffer::
+	msgbox PalletTown_Text_RefOffer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PalletTown_EventScript_RefugeRefuse
+	removeitem ITEM_POTION, 5
+	goto PalletTown_EventScript_RefugeReward
+	end
+
+PalletTown_EventScript_RefugeRefuse::
+	msgbox PalletTown_Text_RefNo
+	release
+	end
+
+PalletTown_EventScript_RefugeReward::
+	msgbox PalletTown_Text_RefGives
+	givemon SPECIES_EEVEE, 0
+	addvar VAR_REFUGE_STAGE, 1
+	msgbox PalletTown_Text_RefAfter
+	release
+	end
+
+PalletTown_EventScript_RefugeEarly::
+	msgbox PalletTown_Text_RefEarly
+	release
+	end
+
+PalletTown_EventScript_RefugeDone::
+	msgbox PalletTown_Text_RefDone
+	release
+	end
+
+PalletTown_EventScript_RefugeIdle::
+	msgbox PalletTown_Text_RefIdle
+	release
+	end

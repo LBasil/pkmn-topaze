@@ -139,3 +139,37 @@ CeladonCity_Text_GeodeClearing::
     .string "of the fountain, hidden behind a tree.\p"
     .string "The crystals there are freezing cold.\n"
     .string "Something is sleeping in it, I swear!$"
+
+CeladonCity_Text_RefAsk::
+    .string "GWEN: My LAPRAS hasn't spoken in days.\n"
+    .string "She misses the sea. Three\n"
+    .string "LEMONADES might cheer her up.$"
+
+CeladonCity_Text_RefOffer::
+    .string "GWEN: You have them! May I take\n"
+    .string "3 of them for the post?$"
+
+CeladonCity_Text_RefNo::
+    .string "GWEN: I understand. It is a lot to\n"
+    .string "ask. The offer stands.$"
+
+CeladonCity_Text_RefGives::
+    .string "GWEN: You saved the day. The post\n"
+    .string "has a gift for you: LAPRAS!$"
+
+CeladonCity_Text_RefAfter::
+    .string "GWEN: Take good care of it. The\n"
+    .string "next REFUGE post is waiting.$"
+
+CeladonCity_Text_RefEarly::
+    .string "GWEN: Not yet. Finish the earlier\n"
+    .string "posts first. The KEEPER at the\n"
+    .string "SAFARI ZONE knows the order.$"
+
+CeladonCity_Text_RefDone::
+    .string "GWEN: Thank you again. The REFUGE\n"
+    .string "is safer because of you.$"
+
+CeladonCity_Text_RefIdle::
+    .string "GWEN: I watch over the animals here.\n"
+    .string "The world is quieter now.$"

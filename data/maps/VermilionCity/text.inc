@@ -167,3 +167,37 @@ VermilionCity_Text_FerryTicketsOutro::
 VermilionCity_Text_FerryTicketsNoRoom::
     .string "Your BAG is full. Make some room\n"
     .string "first and talk to me again!$"
+
+VermilionCity_Text_RefAsk::
+    .string "ELISE: A BELDUM was found half-buried\n"
+    .string "after the storm. It barely moves.\pTwo REVIVES, please. It deserves a\n"
+    .string "chance.$"
+
+VermilionCity_Text_RefOffer::
+    .string "ELISE: You have them! May I take\n"
+    .string "2 of them for the post?$"
+
+VermilionCity_Text_RefNo::
+    .string "ELISE: I understand. It is a lot to\n"
+    .string "ask. The offer stands.$"
+
+VermilionCity_Text_RefGives::
+    .string "ELISE: You saved the day. The post\n"
+    .string "has a gift for you: BELDUM!$"
+
+VermilionCity_Text_RefAfter::
+    .string "ELISE: Take good care of it. The\n"
+    .string "next REFUGE post is waiting.$"
+
+VermilionCity_Text_RefEarly::
+    .string "ELISE: Not yet. Finish the earlier\n"
+    .string "posts first. The KEEPER at the\n"
+    .string "SAFARI ZONE knows the order.$"
+
+VermilionCity_Text_RefDone::
+    .string "ELISE: Thank you again. The REFUGE\n"
+    .string "is safer because of you.$"
+
+VermilionCity_Text_RefIdle::
+    .string "ELISE: I watch over the animals here.\n"
+    .string "The world is quieter now.$"

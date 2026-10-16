@@ -62,3 +62,38 @@ SevenIsland_Text_LordDone::
 SevenIsland_Text_LordIdle::
     .string "WALLACE: The islands are quiet. I look\n"
     .string "after them, as I always have.$"
+
+SevenIsland_Text_RefAsk::
+    .string "PAXTON: This is the last post. The\n"
+    .string "hunters' leader is somewhere near.\l"
+    .string "Beat his two henchmen and he will\n"
+    .string "show up.$"
+
+SevenIsland_Text_RefHunter1::
+    .string "HUNTER: Rare ones fetch a fortune!\n"
+    .string "Stay out of this, child!$"
+
+SevenIsland_Text_RefHunter2::
+    .string "HUNTER: You beat my partner? Fine,\n"
+    .string "I am not afraid of a ranger!$"
+
+SevenIsland_Text_RefGives::
+    .string "PAXTON: You saved the day. The post\n"
+    .string "has a gift for you: SKARMORY!$"
+
+SevenIsland_Text_RefAfter::
+    .string "PAXTON: Take good care of it. The\n"
+    .string "next REFUGE post is waiting.$"
+
+SevenIsland_Text_RefEarly::
+    .string "PAXTON: Not yet. Finish the earlier\n"
+    .string "posts first. The KEEPER at the\n"
+    .string "SAFARI ZONE knows the order.$"
+
+SevenIsland_Text_RefDone::
+    .string "PAXTON: Thank you again. The REFUGE\n"
+    .string "is safer because of you.$"
+
+SevenIsland_Text_RefIdle::
+    .string "PAXTON: I watch over the animals here.\n"
+    .string "The world is quieter now.$"

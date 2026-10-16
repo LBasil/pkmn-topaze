@@ -418,3 +418,43 @@ ThreeIsland_EventScript_LordIdle::
 	msgbox ThreeIsland_Text_LordIdle
 	release
 	end
+
+@ Topaze, fin 2 « Le Refuge » : poste 12/16 (LEON) — duel contre 2 chasseurs, recompense : Absol
+ThreeIsland_EventScript_Refuge::
+	lock
+	faceplayer
+	goto_if_ne VAR_TOPAZE_ENDING, 2, ThreeIsland_EventScript_RefugeIdle
+	goto_if_gt VAR_REFUGE_STAGE, 11, ThreeIsland_EventScript_RefugeDone
+	goto_if_lt VAR_REFUGE_STAGE, 11, ThreeIsland_EventScript_RefugeEarly
+	msgbox ThreeIsland_Text_RefAsk
+	setvar VAR_TOPAZE_BOOST, 50
+	trainerbattle_no_intro TRAINER_GENTLEMAN_BROOKS, ThreeIsland_Text_RefHunter1
+	setvar VAR_TOPAZE_BOOST, 24
+	trainerbattle_no_intro TRAINER_JUGGLER_EDWARD, ThreeIsland_Text_RefHunter2
+	setvar VAR_TOPAZE_BOOST, 0
+	special HealPlayerParty
+	goto ThreeIsland_EventScript_RefugeReward
+	end
+
+ThreeIsland_EventScript_RefugeReward::
+	msgbox ThreeIsland_Text_RefGives
+	givemon SPECIES_ABSOL, 0
+	addvar VAR_REFUGE_STAGE, 1
+	msgbox ThreeIsland_Text_RefAfter
+	release
+	end
+
+ThreeIsland_EventScript_RefugeEarly::
+	msgbox ThreeIsland_Text_RefEarly
+	release
+	end
+
+ThreeIsland_EventScript_RefugeDone::
+	msgbox ThreeIsland_Text_RefDone
+	release
+	end
+
+ThreeIsland_EventScript_RefugeIdle::
+	msgbox ThreeIsland_Text_RefIdle
+	release
+	end

@@ -80,3 +80,37 @@ FourIsland_Text_LordDone::
 FourIsland_Text_LordIdle::
     .string "GLACIA: The islands are quiet. I look\n"
     .string "after them, as I always have.$"
+
+FourIsland_Text_RefAsk::
+    .string "MAYA: A strange fish lives in a cold\n"
+    .string "pond. It is ill and nobody can\n"
+    .string "see it. Three ICE HEALS, please.$"
+
+FourIsland_Text_RefOffer::
+    .string "MAYA: You have them! May I take\n"
+    .string "3 of them for the post?$"
+
+FourIsland_Text_RefNo::
+    .string "MAYA: I understand. It is a lot to\n"
+    .string "ask. The offer stands.$"
+
+FourIsland_Text_RefGives::
+    .string "MAYA: You saved the day. The post\n"
+    .string "has a gift for you: FEEBAS!$"
+
+FourIsland_Text_RefAfter::
+    .string "MAYA: Take good care of it. The\n"
+    .string "next REFUGE post is waiting.$"
+
+FourIsland_Text_RefEarly::
+    .string "MAYA: Not yet. Finish the earlier\n"
+    .string "posts first. The KEEPER at the\n"
+    .string "SAFARI ZONE knows the order.$"
+
+FourIsland_Text_RefDone::
+    .string "MAYA: Thank you again. The REFUGE\n"
+    .string "is safer because of you.$"
+
+FourIsland_Text_RefIdle::
+    .string "MAYA: I watch over the animals here.\n"
+    .string "The world is quieter now.$"

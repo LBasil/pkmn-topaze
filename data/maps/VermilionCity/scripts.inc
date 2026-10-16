@@ -344,3 +344,51 @@ VermilionCity_EventScript_GymSign::
 VermilionCity_EventScript_HarborSign::
 	msgbox VermilionCity_Text_VermilionHarbor, MSGBOX_SIGN
 	end
+
+@ Topaze, fin 2 « Le Refuge » : poste 5/16 (ELISE) — livraison d'objets, recompense : Beldum
+VermilionCity_EventScript_Refuge::
+	lock
+	faceplayer
+	goto_if_ne VAR_TOPAZE_ENDING, 2, VermilionCity_EventScript_RefugeIdle
+	goto_if_gt VAR_REFUGE_STAGE, 4, VermilionCity_EventScript_RefugeDone
+	goto_if_lt VAR_REFUGE_STAGE, 4, VermilionCity_EventScript_RefugeEarly
+	checkitem ITEM_REVIVE, 2
+	goto_if_eq VAR_RESULT, TRUE, VermilionCity_EventScript_RefugeOffer
+	msgbox VermilionCity_Text_RefAsk
+	release
+	end
+
+VermilionCity_EventScript_RefugeOffer::
+	msgbox VermilionCity_Text_RefOffer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, VermilionCity_EventScript_RefugeRefuse
+	removeitem ITEM_REVIVE, 2
+	goto VermilionCity_EventScript_RefugeReward
+	end
+
+VermilionCity_EventScript_RefugeRefuse::
+	msgbox VermilionCity_Text_RefNo
+	release
+	end
+
+VermilionCity_EventScript_RefugeReward::
+	msgbox VermilionCity_Text_RefGives
+	givemon SPECIES_BELDUM, 0
+	addvar VAR_REFUGE_STAGE, 1
+	msgbox VermilionCity_Text_RefAfter
+	release
+	end
+
+VermilionCity_EventScript_RefugeEarly::
+	msgbox VermilionCity_Text_RefEarly
+	release
+	end
+
+VermilionCity_EventScript_RefugeDone::
+	msgbox VermilionCity_Text_RefDone
+	release
+	end
+
+VermilionCity_EventScript_RefugeIdle::
+	msgbox VermilionCity_Text_RefIdle
+	release
+	end

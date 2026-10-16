@@ -142,3 +142,37 @@ CinnabarIsland_Text_ScientistDone::
 CinnabarIsland_Text_LittleGirlDone::
     .string "The pylon hums happy again!\n"
     .string "Thank you!$"
+
+CinnabarIsland_Text_RefAsk::
+    .string "IRIS: The old lab revived a creature\n"
+    .string "from the amber. It needs two MAX\n"
+    .string "POTIONS to get through the week.$"
+
+CinnabarIsland_Text_RefOffer::
+    .string "IRIS: You have them! May I take\n"
+    .string "2 of them for the post?$"
+
+CinnabarIsland_Text_RefNo::
+    .string "IRIS: I understand. It is a lot to\n"
+    .string "ask. The offer stands.$"
+
+CinnabarIsland_Text_RefGives::
+    .string "IRIS: You saved the day. The post\n"
+    .string "has a gift for you: AERODACTYL!$"
+
+CinnabarIsland_Text_RefAfter::
+    .string "IRIS: Take good care of it. The\n"
+    .string "next REFUGE post is waiting.$"
+
+CinnabarIsland_Text_RefEarly::
+    .string "IRIS: Not yet. Finish the earlier\n"
+    .string "posts first. The KEEPER at the\n"
+    .string "SAFARI ZONE knows the order.$"
+
+CinnabarIsland_Text_RefDone::
+    .string "IRIS: Thank you again. The REFUGE\n"
+    .string "is safer because of you.$"
+
+CinnabarIsland_Text_RefIdle::
+    .string "IRIS: I watch over the animals here.\n"
+    .string "The world is quieter now.$"

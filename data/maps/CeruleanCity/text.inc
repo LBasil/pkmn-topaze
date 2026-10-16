@@ -122,3 +122,37 @@ CeruleanCity_Text_EastTree::
     .string "again. Head south to APATIA.\p"
     .string "The east pass is blocked by a\n"
     .string "small tree. You'll need CUT.$"
+
+CeruleanCity_Text_RefAsk::
+    .string "DANTE: The river is quiet. Too quiet.\n"
+    .string "Hunters set traps near the bridge\n"
+    .string "and I saw them with nets.$"
+
+CeruleanCity_Text_RefHunter1::
+    .string "HUNTER: Rare ones fetch a fortune!\n"
+    .string "Stay out of this, child!$"
+
+CeruleanCity_Text_RefHunter2::
+    .string "HUNTER: You beat my partner? Fine,\n"
+    .string "I am not afraid of a ranger!$"
+
+CeruleanCity_Text_RefGives::
+    .string "DANTE: You saved the day. The post\n"
+    .string "has a gift for you: BAGON!$"
+
+CeruleanCity_Text_RefAfter::
+    .string "DANTE: Take good care of it. The\n"
+    .string "next REFUGE post is waiting.$"
+
+CeruleanCity_Text_RefEarly::
+    .string "DANTE: Not yet. Finish the earlier\n"
+    .string "posts first. The KEEPER at the\n"
+    .string "SAFARI ZONE knows the order.$"
+
+CeruleanCity_Text_RefDone::
+    .string "DANTE: Thank you again. The REFUGE\n"
+    .string "is safer because of you.$"
+
+CeruleanCity_Text_RefIdle::
+    .string "DANTE: I watch over the animals here.\n"
+    .string "The world is quieter now.$"

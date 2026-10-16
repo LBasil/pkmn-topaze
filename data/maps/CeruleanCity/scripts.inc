@@ -273,3 +273,43 @@ CeruleanCity_EventScript_GymSign::
 	msgbox CeruleanCity_Text_GymSign
 	releaseall
 	end
+
+@ Topaze, fin 2 « Le Refuge » : poste 4/16 (DANTE) — duel contre 2 chasseurs, recompense : Bagon
+CeruleanCity_EventScript_Refuge::
+	lock
+	faceplayer
+	goto_if_ne VAR_TOPAZE_ENDING, 2, CeruleanCity_EventScript_RefugeIdle
+	goto_if_gt VAR_REFUGE_STAGE, 3, CeruleanCity_EventScript_RefugeDone
+	goto_if_lt VAR_REFUGE_STAGE, 3, CeruleanCity_EventScript_RefugeEarly
+	msgbox CeruleanCity_Text_RefAsk
+	setvar VAR_TOPAZE_BOOST, 47
+	trainerbattle_no_intro TRAINER_GENTLEMAN_ARTHUR, CeruleanCity_Text_RefHunter1
+	setvar VAR_TOPAZE_BOOST, 18
+	trainerbattle_no_intro TRAINER_JUGGLER_NELSON, CeruleanCity_Text_RefHunter2
+	setvar VAR_TOPAZE_BOOST, 0
+	special HealPlayerParty
+	goto CeruleanCity_EventScript_RefugeReward
+	end
+
+CeruleanCity_EventScript_RefugeReward::
+	msgbox CeruleanCity_Text_RefGives
+	givemon SPECIES_BAGON, 0
+	addvar VAR_REFUGE_STAGE, 1
+	msgbox CeruleanCity_Text_RefAfter
+	release
+	end
+
+CeruleanCity_EventScript_RefugeEarly::
+	msgbox CeruleanCity_Text_RefEarly
+	release
+	end
+
+CeruleanCity_EventScript_RefugeDone::
+	msgbox CeruleanCity_Text_RefDone
+	release
+	end
+
+CeruleanCity_EventScript_RefugeIdle::
+	msgbox CeruleanCity_Text_RefIdle
+	release
+	end

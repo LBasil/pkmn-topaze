@@ -425,3 +425,51 @@ CinnabarIsland_EventScript_ScientistDone::
 CinnabarIsland_EventScript_LittleGirlDone::
 	msgbox CinnabarIsland_Text_LittleGirlDone, MSGBOX_NPC
 	end
+
+@ Topaze, fin 2 « Le Refuge » : poste 9/16 (IRIS) — livraison d'objets, recompense : Aerodactyl
+CinnabarIsland_EventScript_Refuge::
+	lock
+	faceplayer
+	goto_if_ne VAR_TOPAZE_ENDING, 2, CinnabarIsland_EventScript_RefugeIdle
+	goto_if_gt VAR_REFUGE_STAGE, 8, CinnabarIsland_EventScript_RefugeDone
+	goto_if_lt VAR_REFUGE_STAGE, 8, CinnabarIsland_EventScript_RefugeEarly
+	checkitem ITEM_MAX_POTION, 2
+	goto_if_eq VAR_RESULT, TRUE, CinnabarIsland_EventScript_RefugeOffer
+	msgbox CinnabarIsland_Text_RefAsk
+	release
+	end
+
+CinnabarIsland_EventScript_RefugeOffer::
+	msgbox CinnabarIsland_Text_RefOffer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CinnabarIsland_EventScript_RefugeRefuse
+	removeitem ITEM_MAX_POTION, 2
+	goto CinnabarIsland_EventScript_RefugeReward
+	end
+
+CinnabarIsland_EventScript_RefugeRefuse::
+	msgbox CinnabarIsland_Text_RefNo
+	release
+	end
+
+CinnabarIsland_EventScript_RefugeReward::
+	msgbox CinnabarIsland_Text_RefGives
+	givemon SPECIES_AERODACTYL, 0
+	addvar VAR_REFUGE_STAGE, 1
+	msgbox CinnabarIsland_Text_RefAfter
+	release
+	end
+
+CinnabarIsland_EventScript_RefugeEarly::
+	msgbox CinnabarIsland_Text_RefEarly
+	release
+	end
+
+CinnabarIsland_EventScript_RefugeDone::
+	msgbox CinnabarIsland_Text_RefDone
+	release
+	end
+
+CinnabarIsland_EventScript_RefugeIdle::
+	msgbox CinnabarIsland_Text_RefIdle
+	release
+	end

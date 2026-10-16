@@ -108,3 +108,37 @@ TwoIsland_Text_LordDone::
 TwoIsland_Text_LordIdle::
     .string "KAREN: The islands are quiet. I look\n"
     .string "after them, as I always have.$"
+
+TwoIsland_Text_RefAsk::
+    .string "KIRA: The forest beetles are hurt by\n"
+    .string "drought. Three HYPER POTIONS will\n"
+    .string "keep the elders alive.$"
+
+TwoIsland_Text_RefOffer::
+    .string "KIRA: You have them! May I take\n"
+    .string "3 of them for the post?$"
+
+TwoIsland_Text_RefNo::
+    .string "KIRA: I understand. It is a lot to\n"
+    .string "ask. The offer stands.$"
+
+TwoIsland_Text_RefGives::
+    .string "KIRA: You saved the day. The post\n"
+    .string "has a gift for you: HERACROSS!$"
+
+TwoIsland_Text_RefAfter::
+    .string "KIRA: Take good care of it. The\n"
+    .string "next REFUGE post is waiting.$"
+
+TwoIsland_Text_RefEarly::
+    .string "KIRA: Not yet. Finish the earlier\n"
+    .string "posts first. The KEEPER at the\n"
+    .string "SAFARI ZONE knows the order.$"
+
+TwoIsland_Text_RefDone::
+    .string "KIRA: Thank you again. The REFUGE\n"
+    .string "is safer because of you.$"
+
+TwoIsland_Text_RefIdle::
+    .string "KIRA: I watch over the animals here.\n"
+    .string "The world is quieter now.$"

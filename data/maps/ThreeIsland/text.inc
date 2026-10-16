@@ -191,3 +191,37 @@ ThreeIsland_Text_LordDone::
 ThreeIsland_Text_LordIdle::
     .string "SIDNEY: The islands are quiet. I look\n"
     .string "after them, as I always have.$"
+
+ThreeIsland_Text_RefAsk::
+    .string "LEON: An ABSOL warned me of danger for\n"
+    .string "weeks. Now I know why: hunters\n"
+    .string "are on the island.$"
+
+ThreeIsland_Text_RefHunter1::
+    .string "HUNTER: Rare ones fetch a fortune!\n"
+    .string "Stay out of this, child!$"
+
+ThreeIsland_Text_RefHunter2::
+    .string "HUNTER: You beat my partner? Fine,\n"
+    .string "I am not afraid of a ranger!$"
+
+ThreeIsland_Text_RefGives::
+    .string "LEON: You saved the day. The post\n"
+    .string "has a gift for you: ABSOL!$"
+
+ThreeIsland_Text_RefAfter::
+    .string "LEON: Take good care of it. The\n"
+    .string "next REFUGE post is waiting.$"
+
+ThreeIsland_Text_RefEarly::
+    .string "LEON: Not yet. Finish the earlier\n"
+    .string "posts first. The KEEPER at the\n"
+    .string "SAFARI ZONE knows the order.$"
+
+ThreeIsland_Text_RefDone::
+    .string "LEON: Thank you again. The REFUGE\n"
+    .string "is safer because of you.$"
+
+ThreeIsland_Text_RefIdle::
+    .string "LEON: I watch over the animals here.\n"
+    .string "The world is quieter now.$"

@@ -51,3 +51,43 @@ SevenIsland_EventScript_LordIdle::
 	msgbox SevenIsland_Text_LordIdle
 	release
 	end
+
+@ Topaze, fin 2 « Le Refuge » : poste 16/16 (PAXTON) — duel contre 2 chasseurs, recompense : Skarmory
+SevenIsland_EventScript_Refuge::
+	lock
+	faceplayer
+	goto_if_ne VAR_TOPAZE_ENDING, 2, SevenIsland_EventScript_RefugeIdle
+	goto_if_gt VAR_REFUGE_STAGE, 15, SevenIsland_EventScript_RefugeDone
+	goto_if_lt VAR_REFUGE_STAGE, 15, SevenIsland_EventScript_RefugeEarly
+	msgbox SevenIsland_Text_RefAsk
+	setvar VAR_TOPAZE_BOOST, 25
+	trainerbattle_no_intro TRAINER_GENTLEMAN_CLIFFORD, SevenIsland_Text_RefHunter1
+	setvar VAR_TOPAZE_BOOST, 44
+	trainerbattle_no_intro TRAINER_JUGGLER_NATE, SevenIsland_Text_RefHunter2
+	setvar VAR_TOPAZE_BOOST, 0
+	special HealPlayerParty
+	goto SevenIsland_EventScript_RefugeReward
+	end
+
+SevenIsland_EventScript_RefugeReward::
+	msgbox SevenIsland_Text_RefGives
+	givemon SPECIES_SKARMORY, 0
+	addvar VAR_REFUGE_STAGE, 1
+	msgbox SevenIsland_Text_RefAfter
+	release
+	end
+
+SevenIsland_EventScript_RefugeEarly::
+	msgbox SevenIsland_Text_RefEarly
+	release
+	end
+
+SevenIsland_EventScript_RefugeDone::
+	msgbox SevenIsland_Text_RefDone
+	release
+	end
+
+SevenIsland_EventScript_RefugeIdle::
+	msgbox SevenIsland_Text_RefIdle
+	release
+	end
