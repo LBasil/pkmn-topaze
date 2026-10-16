@@ -18,8 +18,14 @@ PokemonLeague_LoreleisRoom_OnLoad::
 
 PokemonLeague_LoreleisRoom_EventScript_CloseEntry::
 	@ Topaze : en post-game (Conseil des Anciens, facultatif) l'entree reste ouverte, sinon le joueur est enferme dans la salle
-	goto_if_set FLAG_TOPAZE_POSTGAME, EventScript_Return
+	goto_if_set FLAG_TOPAZE_POSTGAME, PokemonLeague_LoreleisRoom_EventScript_OpenEntry
 	call PokemonLeague_EventScript_CloseEntry
+	return
+
+@ La mise en page d'origine pose la collision sur toute l'entree (le joueur n'y marche que par script) : on la retire sur la colonne du milieu.
+PokemonLeague_LoreleisRoom_EventScript_OpenEntry::
+	setmetatile 6, 11, 0x29B, 0
+	setmetatile 6, 12, 0x2A3, 0
 	return
 
 PokemonLeague_LoreleisRoom_EventScript_SetDoorOpen::
@@ -122,6 +128,8 @@ PokemonLeague_LoreleisRoom_EventScript_EnterRoomOpen::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkUp5
 	waitmovement 0
 	setflag FLAG_TEMP_2
+	call PokemonLeague_LoreleisRoom_EventScript_OpenEntry
+	special DrawWholeMapView
 	setvar VAR_MAP_SCENE_POKEMON_LEAGUE, 1
 	releaseall
 	end
