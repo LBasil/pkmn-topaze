@@ -21,3 +21,11 @@ Adresses utiles (ROM de debug) : gMain 0x030030f0 (callback2 +4, inBattle +0x439
 - Soins : `heal()` (équipe, entre les pas) et `heal_battle()` (combattant actif, à chaque appui en combat) ; le bot n'a qu'un Pokémon, donc Destin Lié / Chant Canon le tuent quand même (limite connue ; Vesper sauté par drapeau, tournoi rejoué).
 - Menu de combat : la variation de `scene()` revient au menu d'actions (B,B,B,HAUT,GAUCHE,A) avant de changer de capacité ; sinon le curseur reste sur SAC et la boucle ouvre le Sac sans fin. Les scènes de plus de 150 appuis sauvegardent `scenelong_<carte>.ss`.
 - La case d'arrivée de la salle de Lorelei est une porte à collision : le graphe statique n'y trouve pas de composante, `league_enter()` franchit la porte à la main.
+
+## Post-game (16/10)
+Étapes : `pg_pallet`, `pg_indigo` (Anciens, `buff()`), `pg_mine`, `pg_birds`, `pg_ferry`, `pg_sevii`, `pg_echoes` (`echo_step()` selon `VAR_ECHO_STAGE`, `sail_to()` pour le ferry). Les états sont reprenables : `python3 resume_echo.py echo_12` (voir `RUN_POSTGAME_16_10.md`).
+- La ROM de test doit être celle des correctifs ; sinon le ferry et Trois-Îles sont simulés par poke dans `stage_pg_ferry` / `go_isle`.
+- `Auto(map,x,y,party=True,pre=(drapeaux),prevars={...})` : **`party=True` obligatoire** pour que les drapeaux/variables de préréglage soient appliqués (sinon ils sont ignorés en silence).
+- Les objets hors caméra ne sont pas instanciés : approcher d'abord, puis agir (`cut_trees`, `smash_rocks`).
+- Un légendaire masqué par `FLAG_HIDE_*` n'apparaît qu'au rechargement de la carte (OnTransition) : sortir puis rentrer.
+
