@@ -241,8 +241,8 @@
 #define FLAG_TOPAZE_COUNCIL      0x0DD // Topaze: Council of Elders open (all endings)
 #define FLAG_TOPAZE_REFUGE_GIFT  0x0DE // Topaze: ending 2, Refuge gift received
 #define FLAG_0x0DF               0x0DF
-#define FLAG_0x0E0               0x0E0
-#define FLAG_0x0E1               0x0E1
+#define FLAG_QUEST_VIRIDIAN_POTIONS 0x0E0 // Topaze: side quest, potions for the girl in the Viridian house
+#define FLAG_QUEST_PEWTER_ANTIDOTE 0x0E1 // Topaze: side quest, antidotes for the man in Pewter house 1
 #define FLAG_0x0E2               0x0E2
 #define FLAG_0x0E3               0x0E3
 #define FLAG_0x0E4               0x0E4

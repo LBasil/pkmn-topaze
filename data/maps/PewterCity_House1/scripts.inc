@@ -2,7 +2,33 @@ PewterCity_House1_MapScripts::
 	.byte 0
 
 PewterCity_House1_EventScript_BaldingMan::
-	msgbox PewterCity_House1_Text_TradeMonsAreFinicky, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_QUEST_PEWTER_ANTIDOTE, PewterCity_House1_EventScript_ManDone
+	checkitem ITEM_ANTIDOTE, 2
+	goto_if_eq VAR_RESULT, TRUE, PewterCity_House1_EventScript_ManOffer
+	msgbox PewterCity_House1_Text_ManAsk
+	release
+	end
+
+PewterCity_House1_EventScript_ManOffer::
+	msgbox PewterCity_House1_Text_ManOffer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PewterCity_House1_EventScript_ManRefuse
+	removeitem ITEM_ANTIDOTE, 2
+	setflag FLAG_QUEST_PEWTER_ANTIDOTE
+	msgbox PewterCity_House1_Text_ManGives
+	giveitem ITEM_NUGGET
+	release
+	end
+
+PewterCity_House1_EventScript_ManRefuse::
+	msgbox PewterCity_House1_Text_ManSad
+	release
+	end
+
+PewterCity_House1_EventScript_ManDone::
+	msgbox PewterCity_House1_Text_TradeMonsAreFinicky
+	release
 	end
 
 PewterCity_House1_EventScript_LittleBoy::

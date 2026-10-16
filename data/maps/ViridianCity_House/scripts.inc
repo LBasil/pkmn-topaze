@@ -6,7 +6,33 @@ ViridianCity_House_EventScript_BaldingMan::
 	end
 
 ViridianCity_House_EventScript_LittleGirl::
-	msgbox ViridianCity_House_Text_MyDaddyLovesMonsToo, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_QUEST_VIRIDIAN_POTIONS, ViridianCity_House_EventScript_GirlThanks
+	checkitem ITEM_POTION, 3
+	goto_if_eq VAR_RESULT, TRUE, ViridianCity_House_EventScript_GirlOffer
+	msgbox ViridianCity_House_Text_GirlAsk
+	release
+	end
+
+ViridianCity_House_EventScript_GirlOffer::
+	msgbox ViridianCity_House_Text_GirlOffer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, ViridianCity_House_EventScript_GirlRefuse
+	removeitem ITEM_POTION, 3
+	setflag FLAG_QUEST_VIRIDIAN_POTIONS
+	msgbox ViridianCity_House_Text_GirlGives
+	giveitem ITEM_RARE_CANDY
+	release
+	end
+
+ViridianCity_House_EventScript_GirlRefuse::
+	msgbox ViridianCity_House_Text_GirlSad
+	release
+	end
+
+ViridianCity_House_EventScript_GirlThanks::
+	msgbox ViridianCity_House_Text_MyDaddyLovesMonsToo
+	release
 	end
 
 ViridianCity_House_EventScript_Speary::

@@ -12,8 +12,10 @@ RockTunnel_1F_Text_LennyPostBattle::
     .string "squeeze on you!$"
 
 RockTunnel_1F_Text_OliverIntro::
-    .string "Hmm.\n"
-    .string "Maybe I'm lost in here…$"
+    .string "Hmm. The map says I should be\n"
+    .string "out by now. I run this project!\p"
+    .string "Fine, a battle then. Maybe the\n"
+    .string "exit is behind you.$"
 
 RockTunnel_1F_Text_OliverDefeat::
     .string "Ease up!\n"
@@ -22,7 +24,9 @@ RockTunnel_1F_Text_OliverDefeat::
 
 RockTunnel_1F_Text_OliverPostBattle::
     .string "That sleeping POKéMON on ROUTE 12\n"
-    .string "forced me to take this detour.$"
+    .string "forced me to take this detour.\p"
+    .string "Tell the team the schedule is\n"
+    .string "fine. Mostly.$"
 
 RockTunnel_1F_Text_LucasIntro::
     .string "Outsiders like you need to show me\n"
