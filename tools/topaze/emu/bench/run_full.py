@@ -225,6 +225,7 @@ class Auto(T):
             cur = s.sync(); s.heal()
             if cur == 'Route23': s.vr_open()
             if cur == target: return True
+            if cur == 'MtMoon_B2F' and not s.getflag('FLAG_GOT_FOSSIL_FROM_MT_MOON'): s.take_fossil()      # les deux fossiles barrent le couloir de la sortie ouest : il faut en prendre un (vanille)
             n_live = s.nav(); n_live.objs = {(o['x'], o['y']) for o in n_live.mj['object_events'] if any(g in o['graphics_id'] for g in GATE_GFX) and not (o.get('flag', '0') not in ('0', 0) and s.getflag(o['flag']))}   # objet masque (drapeau HIDE pose) = plus un obstacle
             _NAV[cur] = n_live; _COMP.pop(cur, None)        # la carte courante est lue en direct (barrieres ouvertes par des scripts...)
             p = s.pos(); rt = route(cur, (p[2], p[3]), target, banned)
@@ -240,6 +241,12 @@ class Auto(T):
                 s.shot('block_%s_%s' % (cur, e[1])); s.save('hopfail_' + cur)
             else: log('  ', cur, '->', s.sync(), s.pos()[2:])
         return s.sync() == target
+    def take_fossil(s):
+        """Mont Selenite B2F : bat le Binoclard (declenche en approchant) puis prend le Fossile Helix (case (14,7), on parle depuis (14,8))."""
+        for _ in range(3):
+            s.talk_at((14, 8), 'UP', 24)
+            if s.getflag('FLAG_GOT_FOSSIL_FROM_MT_MOON'): log('  fossile pris'); return True
+        log('BLOCK fossile non pris', s.pos()); s.save('nofossil'); return False
     def pause_to_free(s, maxn=300, shot=None):
         return s.scene(maxn=maxn, shot=shot)
     def talk_at(s, tile, face, n=14, shot=None):

@@ -6,7 +6,10 @@ SeafoamIslands_B1F_Text_Onybris1Defeat::
 
 SeafoamIslands_B1F_Text_Onybris1Post::
     .string "BASE NUMBER FOUR is ours. Deeper\n"
-    .string "down, the big shots are waiting.$"
+    .string "down, the big shots are waiting.\p"
+    .string "The boss does not love stones for\n"
+    .string "their shine. Only for what they\l"
+    .string "do when they are all together.$"
 
 SeafoamIslands_B1F_Text_Onybris2Intro::
     .string "This is a restricted lava field!$"

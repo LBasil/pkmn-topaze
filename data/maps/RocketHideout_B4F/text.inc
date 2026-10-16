@@ -12,7 +12,9 @@ RocketHideout_B4F_Text_GiovanniDefeat::
 RocketHideout_B4F_Text_GiovanniPostBattle::
     .string "VESPER: Hmph. You beat me...\n"
     .string "in a fight. Fights are for fools.\p"
-    .string "I have the QUARTZ in my pocket.\p"
+    .string "I have the QUARTZ in my pocket.\n"
+    .string "The boss wants ten stones. Ten!\p"
+    .string "Do not ask me why. I only collect.\p"
     .string "Let us settle it like adults: at my\n"
     .string "table in the GAME CORNER, upstairs.\p"
     .string "Win, and you keep it. Lose, and it\n"

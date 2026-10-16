@@ -40,4 +40,6 @@ PokemonMansion_2F_Text_Onybris3Defeat::
 
 PokemonMansion_2F_Text_Onybris3Post::
     .string "We cut the lights. You fetched the\n"
-    .string "key. Thanks for that!$"
+    .string "key. Thanks for that!\p"
+    .string "The boss says the stones are only\n"
+    .string "a lock. Every theft is a key.$"

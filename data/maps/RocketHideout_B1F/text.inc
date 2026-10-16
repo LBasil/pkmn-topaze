@@ -8,7 +8,9 @@ RocketHideout_B1F_Text_Grunt1Defeat::
 
 RocketHideout_B1F_Text_Grunt1PostBattle::
     .string "This was TEAM ROCKET's base. We\n"
-    .string "just took it over. Respect it!$"
+    .string "just took it over. Respect it!\p"
+    .string "Our boss never calls. Orders just\n"
+    .string "appear in our heads. Creepy, huh?$"
 
 RocketHideout_B1F_Text_Grunt2Intro::
     .string "You broke into TEAM ONYBRIS's\n"

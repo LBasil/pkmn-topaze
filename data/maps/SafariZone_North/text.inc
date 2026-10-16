@@ -36,4 +36,6 @@ SafariZone_North_Text_OnybrisGrunt2Defeat::
     .string "Impossible!$"
 
 SafariZone_North_Text_OnybrisGrunt2Post::
-    .string "The WARDEN's gold teeth are the\nkey. SELENE keeps them.$"
+    .string "The WARDEN's gold teeth are the\nkey. SELENE keeps them.\p"
+    .string "Once the stones are together, the\n"
+    .string "world will… never mind. Forget it!$"

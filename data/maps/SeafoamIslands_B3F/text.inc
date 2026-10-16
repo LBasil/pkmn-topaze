@@ -7,7 +7,9 @@ SeafoamIslands_B3F_Text_Onybris5Defeat::
 
 SeafoamIslands_B3F_Text_Onybris5Post::
     .string "KRONOS is on the lowest floor.\n"
-    .string "He is in a bad mood.$"
+    .string "He is in a bad mood.\p"
+    .string "He says we are almost done.\n"
+    .string "Only the last stones are missing.$"
 
 SeafoamIslands_B3F_Text_Onybris6Intro::
     .string "You made it this far? Impressive!\n"
