@@ -33,10 +33,14 @@ def open_gate(g):
     """Retire un type d'obstacle du graphe statique (ex. apres la Flute : Ronflex se reveille) et vide les caches."""
     global GATE_GFX
     GATE_GFX = tuple(x for x in GATE_GFX if x != g); _NAV.clear(); _COMP.clear()
+OPEN_GATE_MAPS = ('MtEmber',)       # cartes ou les rochers (Eclate-Roc) et rochers Force sont geres par Auto.clear_gates : le graphe statique les ignore
+def is_gate(name, gfx):
+    if name.startswith(OPEN_GATE_MAPS) and ('ROCK_SMASH' in gfx or 'PUSHABLE_BOULDER' in gfx): return False
+    return any(g in gfx for g in GATE_GFX)
 def nav_of(name):
     if name not in _NAV:
         n = R.Nav(name)
-        n.objs = {(o['x'], o['y']) for o in n.mj['object_events'] if any(g in o['graphics_id'] for g in GATE_GFX)}
+        n.objs = {(o['x'], o['y']) for o in n.mj['object_events'] if is_gate(name, o['graphics_id'])}
         _NAV[name] = n
     return _NAV[name]
 def comps(name):
@@ -199,8 +203,68 @@ class Auto(T):
         else:
             s.edge_cross(e[2], e[3])
         return s.pos()[:2] != m0
+    def live_gfx(s):
+        """{case: graphicsId} des objets vivants (hors joueur)."""
+        b = s.e.peek(0x02036e3c, 0x24 * 16); out = {}
+        for i in range(16):
+            o = b[i * 0x24:(i + 1) * 0x24]
+            if o[0] & 1 and not (o[2] & 1) and not (o[1] >> 5) & 1:
+                x, y = struct.unpack_from('<hh', o, 0x10); out[(x - 7, y - 7)] = o[5]
+        return out
+    def gate_state(s):
+        """(rochers Force, rochers a briser) de la carte courante : positions reelles pres du joueur, positions du JSON plus loin."""
+        j = mj(s.sync()); lg = s.live_gfx(); p = s.pos(); me = (p[2], p[3])
+        bo = {c for c, g in lg.items() if g == 97}; ro = {c for c, g in lg.items() if g == 96}
+        for o in j['object_events']:
+            c = (o['x'], o['y'])
+            if max(abs(c[0] - me[0]), abs(c[1] - me[1])) <= 12: continue
+            if o.get('flag', '0') not in ('0', 0) and s.getflag(o['flag']): continue
+            if 'PUSHABLE_BOULDER' in o['graphics_id']: bo.add(c)
+            elif 'ROCK_SMASH' in o['graphics_id']: ro.add(c)
+        return bo, ro
+    def clear_gates(s, goal):
+        """Rochers (Eclate-Roc) et rochers Force (Force) sur le chemin vers `goal` : planifie (gates.plan, recherche sur positions des rochers), brise le premier
+        rocher a briser, active Force, puis execute les pas/poussees en verifiant chaque case. True si une action a eu lieu (on replanifie ensuite)."""
+        import gates
+        bo, ro = s.gate_state()
+        if not bo and not ro: return False
+        nav = s.nav(); nav.objs = set(s.plan_objs()) - bo - ro; p = s.pos(); cur = (p[2], p[3])
+        tgts = [goal] if not nav.blocked(*goal) else [(goal[0] + dx, goal[1] + dy) for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0)) if not nav.blocked(goal[0] + dx, goal[1] + dy)]
+        res = None
+        for g in tgts:
+            res = gates.plan(nav, cur, g, bo, ro) or gates.plan(nav, cur, g, bo, ro, allow_rocks=True)
+            if res: break
+        if not res: return False
+        steps, smash = res
+        log('  obstacles a CS : %d pas, %d poussees, rochers a briser %s' % (len(steps), sum(1 for a in steps if a[0] == 'push'), smash))
+        if smash: return s.talk_obj(smash[0], 14)
+        pushes = [a for a in steps if a[0] == 'push']
+        if pushes and not s.getflag('FLAG_SYS_USE_STRENGTH'):
+            s.talk_obj(pushes[0][2], 14)
+            if not s.getflag('FLAG_SYS_USE_STRENGTH'): log('BLOCK Force non activee'); return False
+        for kind, d, c in steps:
+            before = s.pos(); tz.step(s.e, d); s.settle()
+            if not s.idle(): s.scene(maxn=300)
+            after = s.pos()
+            if after[:2] != before[:2] or (after[2], after[3]) != c: return True      # carte changee ou imprevu : on replanifie
+        return True
+    def blocking_objs(s, goal):
+        """Objets (PNJ, dresseurs, balles) dont le retrait seul ouvre un chemin (fleches comprises) jusqu'a `goal` ; tries par distance."""
+        from spin import spin_bfs
+        nav = s.nav(); base = set(s.plan_objs()); p = s.pos(); cur = (p[2], p[3])
+        tgts = [goal] if not nav.blocked(*goal) else [(goal[0] + dx, goal[1] + dy) for dx, dy in ((0, 1), (0, -1), (1, 0), (-1, 0)) if not nav.blocked(goal[0] + dx, goal[1] + dy)]
+        nav.objs = base
+        if any(spin_bfs(nav, cur, g) for g in tgts): return []
+        out = []
+        for o in base:
+            nav.objs = base - {o}
+            if any(spin_bfs(nav, cur, g) for g in tgts): out.append(o)
+        return sorted(out, key=lambda o: abs(o[0] - cur[0]) + abs(o[1] - cur[1]))
     def clear_blocker(s, goal):
         """Si un objet vivant (PNJ, dresseur) barre le chemin vers `goal`, va lui parler (combat/dialogue). True si une action a eu lieu."""
+        for o in s.blocking_objs(goal)[:1]:          # objet seul qui barre un couloir (balle au sol, dresseur hors camera...) : on lui parle
+            log('  deblocage (retrait seul) : objet en', o, 'vers', goal); s.save('blocker_%s' % s.sync())
+            if s.talk_obj(o, 30): return True
         nav = s.nav(); live = s.live_objs(); p = s.pos(); cur = (p[2], p[3])
         nav.objs = set(); path = nav.path(cur, goal)
         if not path:     # but bloque (porte a collision) : on vise une case voisine accessible
@@ -219,6 +283,7 @@ class Auto(T):
     def go(s, target, banned=(), tries=4):
         """Va jusqu'a la carte `target` par le graphe de composantes. Renvoie True si arrive."""
         banned = set(banned); tried = collections.Counter()
+        cut_done = set(); gate_tries = collections.Counter()
         if 'SNORLAX' in GATE_GFX and s.getflag('FLAG_GOT_POKE_FLUTE'): open_gate('SNORLAX')
         if not R.SURF and s.getflag('FLAG_GOT_HM03') and s.getflag('FLAG_BADGE05_GET'): R.SURF = True; _NAV.clear(); _COMP.clear()
         for _ in range(tries * 40):
@@ -226,13 +291,19 @@ class Auto(T):
             if cur == 'Route23': s.vr_open()
             if cur == target: return True
             if cur == 'MtMoon_B2F' and not s.getflag('FLAG_GOT_FOSSIL_FROM_MT_MOON'): s.take_fossil()      # les deux fossiles barrent le couloir de la sortie ouest : il faut en prendre un (vanille)
-            n_live = s.nav(); n_live.objs = {(o['x'], o['y']) for o in n_live.mj['object_events'] if any(g in o['graphics_id'] for g in GATE_GFX) and not (o.get('flag', '0') not in ('0', 0) and s.getflag(o['flag']))}   # objet masque (drapeau HIDE pose) = plus un obstacle
+            n_live = s.nav(); n_live.objs = {(o['x'], o['y']) for o in n_live.mj['object_events'] if is_gate(cur, o['graphics_id']) and not (o.get('flag', '0') not in ('0', 0) and s.getflag(o['flag']))}   # objet masque (drapeau HIDE pose) = plus un obstacle
             _NAV[cur] = n_live; _COMP.pop(cur, None)        # la carte courante est lue en direct (barrieres ouvertes par des scripts...)
             p = s.pos(); rt = route(cur, (p[2], p[3]), target, banned)
             if not rt and s.tele_exit(): continue
             if not rt: log('BLOCK pas de route', cur, (p[2], p[3]), '->', target); s.save('noroute_' + cur); return False
             e = rt[0]
             if not s.hop(e):
+                if gate_tries[(cur, e[3])] < 8:
+                    gate_tries[(cur, e[3])] += 1
+                    if s.clear_gates(e[3]): continue
+                if s.getflag('FLAG_GOT_HM01') and cur not in cut_done:      # un arbre a couper barre peut-etre le chemin : on les coupe tous (une fois par carte)
+                    cut_done.add(cur)
+                    if s.cut_trees(): log('  arbres coupes sur', cur); continue
                 if tried[(cur, e[3])] < 5:
                     tried[(cur, e[3])] += 1
                     if not s.idle(): s.scene(maxn=600)          # une scene a pu se declencher en route : on la laisse finir puis on reessaie
@@ -498,7 +569,8 @@ def stage_quartz(t):
     assert t.go('CeladonCity_GameCorner', banned=BAN), 'Game Corner inaccessible'
     for _ in range(3):
         if t.getflag('FLAG_OPENED_ROCKET_HIDEOUT'): break
-        if t.live_objs() and (11, 2) in t.live_objs(): t.talk_obj((11, 2), 10)
+        gr = [o for o in mj('CeladonCity_GameCorner')['object_events'] if (o['x'], o['y']) == (11, 2) and not (o.get('flag', '0') not in ('0', 0) and t.getflag(o['flag']))]
+        if gr: t.talk_obj((11, 2), 10)      # le sbire devant l'affiche (hors camera au depart : on ne se fie pas a live_objs)
         if t.approach((11, 1)): t.mash(6); t.scene(300)
     t.report('FLAG_OPENED_ROCKET_HIDEOUT')
     assert t.getflag('FLAG_OPENED_ROCKET_HIDEOUT'), 'poster du Game Corner sans effet'

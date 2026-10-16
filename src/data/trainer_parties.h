@@ -5960,7 +5960,7 @@ static const struct TrainerMonItemCustomMoves sParty_EliteFourLorelei[] = {
 static const struct TrainerMonItemCustomMoves sParty_EliteFourBruno[] = {
     {
         .iv = 250,
-        .lvl = 33,
+        .lvl = 53,
         .species = SPECIES_ONIX,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_TOMB, MOVE_IRON_TAIL, MOVE_ROAR},
@@ -5981,7 +5981,7 @@ static const struct TrainerMonItemCustomMoves sParty_EliteFourBruno[] = {
     },
     {
         .iv = 250,
-        .lvl = 33,
+        .lvl = 54,
         .species = SPECIES_ONIX,
         .heldItem = ITEM_NONE,
         .moves = {MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_IRON_TAIL, MOVE_SAND_TOMB},
@@ -6115,7 +6115,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderMisty[] = {
         .lvl = 19,
         .species = SPECIES_TANGELA,
         .heldItem = ITEM_MIRACLE_SEED,
-        .moves = {MOVE_MEGA_DRAIN, MOVE_SLEEP_POWDER, MOVE_STUN_SPORE, MOVE_VINE_WHIP},
+        .moves = {MOVE_MEGA_DRAIN, MOVE_BIND, MOVE_STUN_SPORE, MOVE_VINE_WHIP},
     },
     {
         .iv = 50,
