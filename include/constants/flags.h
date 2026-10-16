@@ -249,10 +249,10 @@
 #define FLAG_QUEST_CINNABAR_REPEL 0x0E5 // Topaze: side quest (CinnabarIsland_Mart)
 #define FLAG_QUEST_MISTY_VISIT   0x0E6 // Topaze: post-game, Misty cottage gift received
 #define FLAG_QUEST_BROCK_FOSSIL  0x0E7 // Topaze: post-game, Brock museum fossil gift
-#define FLAG_0x0E8               0x0E8
-#define FLAG_0x0E9               0x0E9
-#define FLAG_0x0EA               0x0EA
-#define FLAG_0x0EB               0x0EB
+#define FLAG_QUEST_PEWTER_BURN 0x0E8 // Topaze: side quest (PewterCity_House2)
+#define FLAG_QUEST_PEWTER_AWAKEN 0x0E9 // Topaze: side quest (PewterCity_House2)
+#define FLAG_QUEST_PEWTER_REVIVE 0x0EA // Topaze: side quest (PewterCity_House3)
+#define FLAG_QUEST_ROUTE2_ETHER 0x0EB // Topaze: side quest (Route2_House)
 #define FLAG_0x0EC               0x0EC
 #define FLAG_0x0ED               0x0ED
 #define FLAG_0x0EE               0x0EE
