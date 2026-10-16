@@ -7,6 +7,10 @@ Route25_SeaCottage_OnTransition::
 	setflag FLAG_TEMP_4
 	setflag FLAG_TEMP_5
 	setflag FLAG_TEMP_6
+	goto_if_unset FLAG_TOPAZE_COUNCIL, Route25_SeaCottage_OnTransitionEnd
+	goto_if_ne VAR_ROUTE25_MISTY, 2, Route25_SeaCottage_OnTransitionEnd
+	clearflag FLAG_TEMP_4
+Route25_SeaCottage_OnTransitionEnd::
 	end
 
 Route25_SeaCottage_OnFrame::
@@ -14,6 +18,47 @@ Route25_SeaCottage_OnFrame::
 	.2byte 0
 
 Route25_SeaCottage_EventScript_Nobody::
+	end
+
+@ Topaze, post-game : MISTY revient a la chaumiere, un mot et un cadeau selon la fin choisie
+Route25_SeaCottage_EventScript_MistyPost::
+	lock
+	faceplayer
+	textcolor NPC_TEXT_COLOR_FEMALE
+	goto_if_set FLAG_QUEST_MISTY_VISIT, Route25_SeaCottage_EventScript_MistyBye
+	switch VAR_TOPAZE_ENDING
+	case 1, Route25_SeaCottage_EventScript_MistyEnd1
+	case 2, Route25_SeaCottage_EventScript_MistyEnd2
+	case 3, Route25_SeaCottage_EventScript_MistyEnd3
+	release
+	end
+
+Route25_SeaCottage_EventScript_MistyEnd1::
+	msgbox Route25_SeaCottage_Text_MistyEnd1
+	giveitem ITEM_WATER_STONE
+	goto Route25_SeaCottage_EventScript_MistyDone
+	end
+
+Route25_SeaCottage_EventScript_MistyEnd2::
+	msgbox Route25_SeaCottage_Text_MistyEnd2
+	giveitem ITEM_FULL_RESTORE, 5
+	goto Route25_SeaCottage_EventScript_MistyDone
+	end
+
+Route25_SeaCottage_EventScript_MistyEnd3::
+	msgbox Route25_SeaCottage_Text_MistyEnd3
+	giveitem ITEM_MAX_ELIXIR, 5
+	goto Route25_SeaCottage_EventScript_MistyDone
+	end
+
+Route25_SeaCottage_EventScript_MistyDone::
+	setflag FLAG_QUEST_MISTY_VISIT
+	release
+	end
+
+Route25_SeaCottage_EventScript_MistyBye::
+	msgbox Route25_SeaCottage_Text_MistyBye
+	release
 	end
 
 Route25_SeaCottage_EventScript_Ambush::

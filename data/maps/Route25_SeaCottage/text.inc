@@ -46,3 +46,28 @@ Route25_SeaCottage_Text_MistyFarewell::
 Route25_SeaCottage_Text_AbandonedPC::
     .string "The screen is dead. A note says:\n"
     .string "Gone to the islands. - BILL$"
+
+Route25_SeaCottage_Text_MistyEnd1::
+    .string "MISTY: I watched the sky go quiet\n"
+    .string "on the day you let JIRACHI go.\p"
+    .string "A wish is lighter when it is\n"
+    .string "given away. Take this, it's from\l"
+    .string "the cold water where I grew up.$"
+
+Route25_SeaCottage_Text_MistyEnd2::
+    .string "MISTY: No more POKé BALLS. My\n"
+    .string "WATER POKéMON laugh about it.\p"
+    .string "Nobody is a trophy now. Good.\n"
+    .string "Keep these ready, you will need\l"
+    .string "them for the Park.$"
+
+Route25_SeaCottage_Text_MistyEnd3::
+    .string "MISTY: You hold the six legends.\n"
+    .string "I do not know whether to cheer.\p"
+    .string "Power asks for care. Take these\n"
+    .string "and use them for your friends,\l"
+    .string "not for yourself.$"
+
+Route25_SeaCottage_Text_MistyBye::
+    .string "MISTY: The tide always comes back.\n"
+    .string "So do I. Take care, {PLAYER}.$"

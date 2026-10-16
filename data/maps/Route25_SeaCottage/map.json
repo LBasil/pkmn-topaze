@@ -27,7 +27,7 @@
       "x": 7,
       "y": 8,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "script": "Route25_SeaCottage_EventScript_Nobody",
+      "script": "Route25_SeaCottage_EventScript_MistyPost",
       "flag": "FLAG_TEMP_4"
     },
     {

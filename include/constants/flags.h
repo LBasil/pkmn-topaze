@@ -247,7 +247,7 @@
 #define FLAG_QUEST_VERMILION_PARA 0x0E3 // Topaze: side quest (VermilionCity_House3)
 #define FLAG_QUEST_FUCHSIA_SUPER 0x0E4 // Topaze: side quest (FuchsiaCity_House1)
 #define FLAG_QUEST_CINNABAR_REPEL 0x0E5 // Topaze: side quest (CinnabarIsland_Mart)
-#define FLAG_0x0E6               0x0E6
+#define FLAG_QUEST_MISTY_VISIT   0x0E6 // Topaze: post-game, Misty cottage gift received
 #define FLAG_0x0E7               0x0E7
 #define FLAG_0x0E8               0x0E8
 #define FLAG_0x0E9               0x0E9
