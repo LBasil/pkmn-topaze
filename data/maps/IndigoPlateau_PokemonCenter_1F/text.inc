@@ -81,3 +81,37 @@ IndigoPlateau_PokemonCenter_1F_Text_MistyAfter::
     .string "MISTY: CHAMPION! I am so proud.\p"
     .string "Come see me at the CERULEAN\n"
     .string "cottage when you have a moment.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_RebelsIntro::
+    .string "FLORA: You hold the six legends now.\n"
+    .string "Eight GYM LEADERS refuse to bow.\p"
+    .string "They call themselves the REBELS and\n"
+    .string "they have trained hard since.\p"
+    .string "Will you face them? I will heal your\n"
+    .string "team before each duel.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_RebelsContinue::
+    .string "FLORA: The next REBEL is waiting.\n"
+    .string "Shall we?$"
+
+IndigoPlateau_PokemonCenter_1F_Text_RebelsNo::
+    .string "FLORA: Take your time. They will\n"
+    .string "wait. Rebels are patient.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_RebelDefeat::
+    .string "REBEL: Hmph. Even so, we kneel...\n"
+    .string "to nobody. We just lost.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_RebelsWon::
+    .string "FLORA: One REBEL down. Take these\n"
+    .string "RARE CANDIES. Come back when ready.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_RebelsFinal::
+    .string "FLORA: All eight have fallen, and\n"
+    .string "none of them hates you for it.\p"
+    .string "Rule wisely, CHAMPION. This is a\n"
+    .string "gift from the whole League.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_RebelsDone::
+    .string "FLORA: The REBELS keep their gyms\n"
+    .string "and their pride. Peace holds.$"

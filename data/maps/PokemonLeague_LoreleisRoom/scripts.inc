@@ -18,7 +18,7 @@ PokemonLeague_LoreleisRoom_OnLoad::
 
 PokemonLeague_LoreleisRoom_EventScript_CloseEntry::
 	@ Topaze : en post-game (Conseil des Anciens, facultatif) l'entree reste ouverte, sinon le joueur est enferme dans la salle
-	goto_if_set FLAG_TOPAZE_POSTGAME, PokemonLeague_LoreleisRoom_EventScript_OpenEntry
+	goto_if_set FLAG_TOPAZE_COUNCIL, PokemonLeague_LoreleisRoom_EventScript_OpenEntry
 	call PokemonLeague_EventScript_CloseEntry
 	return
 
@@ -26,7 +26,7 @@ PokemonLeague_LoreleisRoom_EventScript_CloseEntry::
 @ Post-game : la case d'entree n'a pas de comportement de warp -> on sort par declencheur (sinon l'entree ouverte ne mene nulle part)
 PokemonLeague_LoreleisRoom_EventScript_ExitRoom::
 	lockall
-	goto_if_unset FLAG_TOPAZE_POSTGAME, PokemonLeague_LoreleisRoom_EventScript_ExitRoomEnd
+	goto_if_unset FLAG_TOPAZE_COUNCIL, PokemonLeague_LoreleisRoom_EventScript_ExitRoomEnd
 	warp MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F, 4, 2
 	waitstate
 PokemonLeague_LoreleisRoom_EventScript_ExitRoomEnd::
@@ -49,7 +49,7 @@ PokemonLeague_LoreleisRoom_OnTransition::
 
 @ Topaze: the first hall is the tournament arena (9 matches, VAR_TOURNAMENT_ROUND 0-8)
 PokemonLeague_LoreleisRoom_EventScript_SetOpponentGfx::
-	goto_if_set FLAG_TOPAZE_POSTGAME, PokemonLeague_LoreleisRoom_EventScript_SetElderGfx
+	goto_if_set FLAG_TOPAZE_COUNCIL, PokemonLeague_LoreleisRoom_EventScript_SetElderGfx
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_SCIENTIST
 	goto_if_eq VAR_TOURNAMENT_ROUND, 0, PokemonLeague_LoreleisRoom_EventScript_GfxDone
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_RS_MAY
@@ -127,7 +127,7 @@ PokemonLeague_LoreleisRoom_OnFrame::
 
 PokemonLeague_LoreleisRoom_EventScript_EnterRoom::
 	lockall
-	goto_if_set FLAG_TOPAZE_POSTGAME, PokemonLeague_LoreleisRoom_EventScript_EnterRoomOpen
+	goto_if_set FLAG_TOPAZE_COUNCIL, PokemonLeague_LoreleisRoom_EventScript_EnterRoomOpen
 	call PokemonLeague_EventScript_EnterRoom
 	setvar VAR_MAP_SCENE_POKEMON_LEAGUE, 1
 	releaseall
@@ -147,7 +147,7 @@ PokemonLeague_LoreleisRoom_EventScript_EnterRoomOpen::
 PokemonLeague_LoreleisRoom_EventScript_Lorelei::
 	lock
 	faceplayer
-	goto_if_set FLAG_TOPAZE_POSTGAME, PokemonLeague_LoreleisRoom_EventScript_ElderMatch
+	goto_if_set FLAG_TOPAZE_COUNCIL, PokemonLeague_LoreleisRoom_EventScript_ElderMatch
 	famechecker FAMECHECKER_LORELEI, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	goto_if_set FLAG_DEFEATED_LORELEI, PokemonLeague_LoreleisRoom_EventScript_PostBattle
 	goto_if_lt VAR_TOURNAMENT_ROUND, 9, PokemonLeague_LoreleisRoom_EventScript_TournamentMatch

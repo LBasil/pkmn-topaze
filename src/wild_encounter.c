@@ -1,6 +1,7 @@
 #include "global.h"
 #include "random.h"
 #include "wild_encounter.h"
+#include "safari_zone.h"
 #include "event_data.h"
 #include "fieldmap.h"
 #include "random.h"
@@ -359,7 +360,7 @@ bool8 StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetatileBehavior)
 
     if (sWildEncountersDisabled == TRUE)
         return FALSE;
-    if (VarGet(VAR_TOPAZE_ENDING) == 2)      // Topaze, fin 2 (« plus de Poke Balls ») : le monde sauvage est silencieux
+    if (VarGet(VAR_TOPAZE_ENDING) == 2 && !GetSafariZoneFlag())      // Topaze, fin 2 (« plus de Poke Balls ») : le monde sauvage est silencieux
         return FALSE;
 
     headerId = GetCurrentMapWildMonHeaderId();
@@ -448,7 +449,7 @@ bool8 StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetatileBehavior)
 void RockSmashWildEncounter(void)
 {
     u16 headerIdx = GetCurrentMapWildMonHeaderId();
-    if (VarGet(VAR_TOPAZE_ENDING) == 2)
+    if (VarGet(VAR_TOPAZE_ENDING) == 2 && !GetSafariZoneFlag())
         gSpecialVar_Result = FALSE;
     else if (headerIdx == HEADER_NONE)
         gSpecialVar_Result = FALSE;
@@ -470,7 +471,7 @@ bool8 SweetScentWildEncounter(void)
     s16 x, y;
     u16 headerId;
 
-    if (VarGet(VAR_TOPAZE_ENDING) == 2)
+    if (VarGet(VAR_TOPAZE_ENDING) == 2 && !GetSafariZoneFlag())
         return FALSE;
 
     PlayerGetDestCoords(&x, &y);

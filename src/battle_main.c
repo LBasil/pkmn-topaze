@@ -67,7 +67,8 @@ static void HandleEndTurn_FinishBattle(void);
 static void CB2_InitBattleInternal(void);
 static void CB2_PreInitMultiBattle(void);
 static void CB2_HandleStartMultiBattle(void);
-#define TOPAZE_TRAINER_LV(l) ((TOPAZE_OPT_HARD() && (l) <= 97) ? (l) + 3 : (TOPAZE_OPT_HARD() ? 100 : (l)))
+#define TOPAZE_TRAINER_LV_RAW(l) ((TOPAZE_OPT_HARD() && (l) <= 97) ? (l) + 3 : (TOPAZE_OPT_HARD() ? 100 : (l)))
+#define TOPAZE_TRAINER_LV(l) (TOPAZE_TRAINER_LV_RAW(l) + VarGet(VAR_TOPAZE_BOOST) > 100 ? 100 : TOPAZE_TRAINER_LV_RAW(l) + VarGet(VAR_TOPAZE_BOOST))
 static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum);
 static void CB2_HandleStartBattle(void);
 static void TryCorrectShedinjaLanguage(struct Pokemon *mon);

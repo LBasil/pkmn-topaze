@@ -71,6 +71,7 @@ PokemonLeague_HallOfFame_EventScript_JirachiWish::
 
 PokemonLeague_HallOfFame_EventScript_WishLetGo::
 	setvar VAR_TOPAZE_ENDING, 1
+	setflag FLAG_TOPAZE_COUNCIL
 	setflag FLAG_TOPAZE_POSTGAME
 	clearflag FLAG_HIDE_POSTGAME_STRANGER
 	msgbox PokemonLeague_HallOfFame_Text_EndingLetGo
@@ -79,12 +80,14 @@ PokemonLeague_HallOfFame_EventScript_WishLetGo::
 
 PokemonLeague_HallOfFame_EventScript_WishNoBalls::
 	setvar VAR_TOPAZE_ENDING, 2
+	setflag FLAG_TOPAZE_COUNCIL
 	msgbox PokemonLeague_HallOfFame_Text_EndingNoBalls
 	closemessage
 	return
 
 PokemonLeague_HallOfFame_EventScript_WishRuleAll::
 	setvar VAR_TOPAZE_ENDING, 3
+	setflag FLAG_TOPAZE_COUNCIL
 	msgbox PokemonLeague_HallOfFame_Text_EndingRuleAll
 	closemessage
 	@ Topaze, fin 3 : le texte dit vrai, les six legendaires arrivent vraiment (niveau 0 = niveau du meilleur Pokemon ; vers le PC si l'equipe est pleine)

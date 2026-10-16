@@ -1,4 +1,5 @@
 #include "global.h"
+#include "safari_zone.h"
 #include "item.h"
 #include "constants/items.h"
 #include "gflib.h"
@@ -1720,7 +1721,7 @@ static bool8 Fishing3(struct Task *task)
     if (task->tFrameCounter >= 60)
     {
         task->tStep++;
-        if (VarGet(VAR_TOPAZE_ENDING) == 2)      // Topaze, fin 2 : plus aucun Pokemon sauvage ne mord
+        if (VarGet(VAR_TOPAZE_ENDING) == 2 && !GetSafariZoneFlag())      // Topaze, fin 2 : plus aucun Pokemon sauvage ne mord
             task->tStep = FISHING_NO_BITE;
     }
     return FALSE;

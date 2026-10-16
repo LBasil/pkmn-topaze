@@ -348,6 +348,8 @@
 #define NPC_TEXT_COLOR_DEFAULT 255 // If an NPC is selected, use the color specified by GetColorFromTextColorTable, otherwise use Neutral.
 
 #define VAR_TOPAZE_ENDING VAR_0x402E // 0 = none, 1 = let Jirachi go, 2 = Onybris dream, 3 = opportunist dream
+#define VAR_TOPAZE_BOOST VAR_0x4034 // Topaze: +levels added to every trainer party (0 = off), used by the ending-3 gauntlet
+#define VAR_REBELS_ROUND VAR_0x4041 // Topaze: ending-3 gauntlet, 0-7 (8 = done)
 #define VAR_ELDERS_ROUND VAR_0x402C // post-game Council of Elders, 0-12 (13 = done)
 #define VAR_ECHO_STAGE VAR_0x402D // post-game Echoes: 0 none, 1 compass, 2 beast done, 3 gift given
 #define VAR_TOURNAMENT_ROUND VAR_0x402B // 0-2 pool, 3 quarter, 4 semi (double), 5 final

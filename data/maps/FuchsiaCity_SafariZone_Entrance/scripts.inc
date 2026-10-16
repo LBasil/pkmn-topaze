@@ -127,6 +127,7 @@ FuchsiaCity_SafariZone_Entrance_EventScript_OccupiedEntry::
 
 FuchsiaCity_SafariZone_Entrance_EventScript_AskEnterNormal::
 	textcolor NPC_TEXT_COLOR_MALE
+	call_if_eq VAR_TOPAZE_ENDING, 2, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeGift
 	msgbox FuchsiaCity_SafariZone_Entrance_Text_WelcomeToSafariZone
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
@@ -232,3 +233,17 @@ FuchsiaCity_SafariZone_Entrance_EventScript_ExplainSafariZone::
 	msgbox FuchsiaCity_SafariZone_Entrance_Text_ExplainSafariZone
 	release
 	end
+
+@ Topaze, fin 2 : le Parc est le dernier refuge des Pokemon sauvages ; le guichetier offre les six partenaires de Johto et Hoenn
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeGift::
+	goto_if_set FLAG_TOPAZE_REFUGE_GIFT, EventScript_Return
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeGift
+	givemon SPECIES_MEGANIUM, 0
+	givemon SPECIES_TYPHLOSION, 0
+	givemon SPECIES_FERALIGATR, 0
+	givemon SPECIES_SCEPTILE, 0
+	givemon SPECIES_BLAZIKEN, 0
+	givemon SPECIES_SWAMPERT, 0
+	setflag FLAG_TOPAZE_REFUGE_GIFT
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeGift2
+	return
