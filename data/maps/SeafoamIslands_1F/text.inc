@@ -15,7 +15,11 @@ SeafoamIslands_1F_Text_GoldPlan::
     .string "with the stone. We follow him\n"
     .string "all the way to the bottom.\p"
     .string "BRICE and FLORA fell to him.\n"
-    .string "We will not.$"
+    .string "We will not.\p"
+    .string "Deeper down the lava flows like\n"
+    .string "water, since the AURA twisted the\p"
+    .string "world. Any water POKéMON can cool\n"
+    .string "it into a crust. Just SURF over.$"
 
 SeafoamIslands_1F_Text_SilverPlan::
     .string "SILVER: Stay behind us, {PLAYER}.\n"

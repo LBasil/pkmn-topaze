@@ -6,6 +6,7 @@ SeafoamIslands_B3F_MapScripts::
 	.byte 0
 
 SeafoamIslands_B3F_OnTransition::
+	setflag FLAG_TEMP_10 @ Topaze: Surf sur la lave (texte dedie, data/scripts/surf.inc)
 	call SeafoamIslands_B3F_EventScript_HideOnybris
 	call_if_unset FLAG_STOPPED_SEAFOAM_B3F_CURRENT, SeafoamIslands_B3F_EventScript_CheckStoppedCurrent
 	call_if_set FLAG_STOPPED_SEAFOAM_B3F_CURRENT, SeafoamIslands_B3F_EventScript_SetNoCurrentLayout
