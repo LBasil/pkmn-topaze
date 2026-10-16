@@ -23,6 +23,16 @@ PokemonLeague_LoreleisRoom_EventScript_CloseEntry::
 	return
 
 @ La mise en page d'origine pose la collision sur toute l'entree (le joueur n'y marche que par script) : on la retire sur la colonne du milieu.
+@ Post-game : la case d'entree n'a pas de comportement de warp -> on sort par declencheur (sinon l'entree ouverte ne mene nulle part)
+PokemonLeague_LoreleisRoom_EventScript_ExitRoom::
+	lockall
+	goto_if_unset FLAG_TOPAZE_POSTGAME, PokemonLeague_LoreleisRoom_EventScript_ExitRoomEnd
+	warp MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F, 4, 2
+	waitstate
+PokemonLeague_LoreleisRoom_EventScript_ExitRoomEnd::
+	releaseall
+	end
+
 PokemonLeague_LoreleisRoom_EventScript_OpenEntry::
 	setmetatile 6, 11, 0x29B, 0
 	setmetatile 6, 12, 0x2A3, 0
