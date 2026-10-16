@@ -87,4 +87,11 @@ PokemonLeague_HallOfFame_EventScript_WishRuleAll::
 	setvar VAR_TOPAZE_ENDING, 3
 	msgbox PokemonLeague_HallOfFame_Text_EndingRuleAll
 	closemessage
+	@ Topaze, fin 3 : le texte dit vrai, les six legendaires arrivent vraiment (niveau 0 = niveau du meilleur Pokemon ; vers le PC si l'equipe est pleine)
+	givemon SPECIES_MEWTWO, 0
+	givemon SPECIES_ARTICUNO, 0
+	givemon SPECIES_ZAPDOS, 0
+	givemon SPECIES_MOLTRES, 0
+	givemon SPECIES_MEW, 0
+	givemon SPECIES_CELEBI, 0
 	return

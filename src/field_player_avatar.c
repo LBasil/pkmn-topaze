@@ -1718,7 +1718,11 @@ static bool8 Fishing3(struct Task *task)
     // Wait one second
     task->tFrameCounter++;
     if (task->tFrameCounter >= 60)
+    {
         task->tStep++;
+        if (VarGet(VAR_TOPAZE_ENDING) == 2)      // Topaze, fin 2 : plus aucun Pokemon sauvage ne mord
+            task->tStep = FISHING_NO_BITE;
+    }
     return FALSE;
 }
 
