@@ -93,10 +93,12 @@ IndigoPlateau_PokemonCenter_1F_EventScript_FloraAfter::
 	release
 	end
 
-@ Topaze, fin 3 : « Les Huit Rebelles », les huit chefs d'arene reviennent, niveaux +28, une recompense a chaque victoire
+@ Topaze, fin 3 : « Les Huit Rebelles » puis la Cour (Conseil de la Ligue) puis les Maitres ; 15 duels, niveaux gonfles par VAR_TOPAZE_BOOST ; marche du Trone des le tour 8
 IndigoPlateau_PokemonCenter_1F_EventScript_Rebels::
-	goto_if_eq VAR_REBELS_ROUND, 8, IndigoPlateau_PokemonCenter_1F_EventScript_RebelsDone
+	goto_if_eq VAR_REBELS_ROUND, 15, IndigoPlateau_PokemonCenter_1F_EventScript_RebelsDone
 	goto_if_eq VAR_REBELS_ROUND, 0, IndigoPlateau_PokemonCenter_1F_EventScript_RebelsIntro
+	goto_if_eq VAR_REBELS_ROUND, 8, IndigoPlateau_PokemonCenter_1F_EventScript_RebelsCourt
+	goto_if_eq VAR_REBELS_ROUND, 12, IndigoPlateau_PokemonCenter_1F_EventScript_RebelsMasters
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_RebelsContinue, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, IndigoPlateau_PokemonCenter_1F_EventScript_RebelsNo
 	goto IndigoPlateau_PokemonCenter_1F_EventScript_RebelsNext
@@ -108,19 +110,65 @@ IndigoPlateau_PokemonCenter_1F_EventScript_RebelsIntro::
 	goto IndigoPlateau_PokemonCenter_1F_EventScript_RebelsNext
 	end
 
+IndigoPlateau_PokemonCenter_1F_EventScript_RebelsCourt::
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_RebelsCourt, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, IndigoPlateau_PokemonCenter_1F_EventScript_RebelsNo
+	goto IndigoPlateau_PokemonCenter_1F_EventScript_RebelsNext
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_RebelsMasters::
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_RebelsMasters, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, IndigoPlateau_PokemonCenter_1F_EventScript_RebelsNo
+	goto IndigoPlateau_PokemonCenter_1F_EventScript_RebelsNext
+	end
+
 IndigoPlateau_PokemonCenter_1F_EventScript_RebelsNo::
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_RebelsNo
+	goto_if_lt VAR_REBELS_ROUND, 8, IndigoPlateau_PokemonCenter_1F_EventScript_RebelsLeave
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_MarketAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, IndigoPlateau_PokemonCenter_1F_EventScript_RebelsLeave
+	message Text_MayIHelpYou
+	waitmessage
+	pokemart IndigoPlateau_PokemonCenter_1F_ThroneMarket
+	msgbox Text_PleaseComeAgain
+	release
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_RebelsLeave::
 	release
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_RebelsDone::
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_RebelsDone
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_MarketAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, IndigoPlateau_PokemonCenter_1F_EventScript_RebelsLeave
+	message Text_MayIHelpYou
+	waitmessage
+	pokemart IndigoPlateau_PokemonCenter_1F_ThroneMarket
+	msgbox Text_PleaseComeAgain
+	release
+	end
+
+	.align 2
+IndigoPlateau_PokemonCenter_1F_ThroneMarket::
+	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_PP_MAX
+	.2byte ITEM_PP_UP
+	.2byte ITEM_FULL_RESTORE
+	.2byte ITEM_MAX_REVIVE
+	.2byte ITEM_MAX_ELIXIR
+	.2byte ITEM_HP_UP
+	.2byte ITEM_PROTEIN
+	.2byte ITEM_IRON
+	.2byte ITEM_CALCIUM
+	.2byte ITEM_ZINC
+	.2byte ITEM_CARBOS
+	.2byte ITEM_NONE
 	release
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_RebelsNext::
 	special HealPlayerParty
-	setvar VAR_TOPAZE_BOOST, 28
 	switch VAR_REBELS_ROUND
 	case 0, IndigoPlateau_PokemonCenter_1F_EventScript_Rebel0
 	case 1, IndigoPlateau_PokemonCenter_1F_EventScript_Rebel1
@@ -130,47 +178,104 @@ IndigoPlateau_PokemonCenter_1F_EventScript_RebelsNext::
 	case 5, IndigoPlateau_PokemonCenter_1F_EventScript_Rebel5
 	case 6, IndigoPlateau_PokemonCenter_1F_EventScript_Rebel6
 	case 7, IndigoPlateau_PokemonCenter_1F_EventScript_Rebel7
+	case 8, IndigoPlateau_PokemonCenter_1F_EventScript_Rebel8
+	case 9, IndigoPlateau_PokemonCenter_1F_EventScript_Rebel9
+	case 10, IndigoPlateau_PokemonCenter_1F_EventScript_Rebel10
+	case 11, IndigoPlateau_PokemonCenter_1F_EventScript_Rebel11
+	case 12, IndigoPlateau_PokemonCenter_1F_EventScript_Rebel12
+	case 13, IndigoPlateau_PokemonCenter_1F_EventScript_Rebel13
+	case 14, IndigoPlateau_PokemonCenter_1F_EventScript_Rebel14
 	setvar VAR_TOPAZE_BOOST, 0
 	release
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_Rebel0::
+	setvar VAR_TOPAZE_BOOST, 36
 	trainerbattle_no_intro TRAINER_LEADER_BROCK, IndigoPlateau_PokemonCenter_1F_Text_RebelDefeat
 	goto IndigoPlateau_PokemonCenter_1F_EventScript_RebelWon
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_Rebel1::
+	setvar VAR_TOPAZE_BOOST, 36
 	trainerbattle_no_intro TRAINER_LEADER_MISTY, IndigoPlateau_PokemonCenter_1F_Text_RebelDefeat
 	goto IndigoPlateau_PokemonCenter_1F_EventScript_RebelWon
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_Rebel2::
+	setvar VAR_TOPAZE_BOOST, 36
 	trainerbattle_no_intro TRAINER_LEADER_LT_SURGE, IndigoPlateau_PokemonCenter_1F_Text_RebelDefeat
 	goto IndigoPlateau_PokemonCenter_1F_EventScript_RebelWon
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_Rebel3::
+	setvar VAR_TOPAZE_BOOST, 36
 	trainerbattle_no_intro TRAINER_LEADER_ERIKA, IndigoPlateau_PokemonCenter_1F_Text_RebelDefeat
 	goto IndigoPlateau_PokemonCenter_1F_EventScript_RebelWon
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_Rebel4::
+	setvar VAR_TOPAZE_BOOST, 36
 	trainerbattle_no_intro TRAINER_LEADER_KOGA, IndigoPlateau_PokemonCenter_1F_Text_RebelDefeat
 	goto IndigoPlateau_PokemonCenter_1F_EventScript_RebelWon
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_Rebel5::
+	setvar VAR_TOPAZE_BOOST, 36
 	trainerbattle_no_intro TRAINER_LEADER_SABRINA, IndigoPlateau_PokemonCenter_1F_Text_RebelDefeat
 	goto IndigoPlateau_PokemonCenter_1F_EventScript_RebelWon
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_Rebel6::
+	setvar VAR_TOPAZE_BOOST, 36
 	trainerbattle_no_intro TRAINER_LEADER_BLAINE, IndigoPlateau_PokemonCenter_1F_Text_RebelDefeat
 	goto IndigoPlateau_PokemonCenter_1F_EventScript_RebelWon
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_Rebel7::
+	setvar VAR_TOPAZE_BOOST, 36
 	trainerbattle_no_intro TRAINER_LEADER_GIOVANNI, IndigoPlateau_PokemonCenter_1F_Text_RebelDefeat
+	goto IndigoPlateau_PokemonCenter_1F_EventScript_RebelWon
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_Rebel8::
+	setvar VAR_TOPAZE_BOOST, 14
+	trainerbattle_no_intro TRAINER_ELITE_FOUR_LORELEI_2, IndigoPlateau_PokemonCenter_1F_Text_RebelDefeat
+	goto IndigoPlateau_PokemonCenter_1F_EventScript_RebelWon
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_Rebel9::
+	setvar VAR_TOPAZE_BOOST, 14
+	trainerbattle_no_intro TRAINER_ELITE_FOUR_BRUNO_2, IndigoPlateau_PokemonCenter_1F_Text_RebelDefeat
+	goto IndigoPlateau_PokemonCenter_1F_EventScript_RebelWon
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_Rebel10::
+	setvar VAR_TOPAZE_BOOST, 14
+	trainerbattle_no_intro TRAINER_ELITE_FOUR_AGATHA_2, IndigoPlateau_PokemonCenter_1F_Text_RebelDefeat
+	goto IndigoPlateau_PokemonCenter_1F_EventScript_RebelWon
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_Rebel11::
+	setvar VAR_TOPAZE_BOOST, 14
+	trainerbattle_no_intro TRAINER_ELITE_FOUR_LANCE_2, IndigoPlateau_PokemonCenter_1F_Text_RebelDefeat
+	goto IndigoPlateau_PokemonCenter_1F_EventScript_RebelWon
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_Rebel12::
+	setvar VAR_TOPAZE_BOOST, 26
+	trainerbattle_no_intro TRAINER_LEAGUE_GOLD, IndigoPlateau_PokemonCenter_1F_Text_RebelDefeat
+	goto IndigoPlateau_PokemonCenter_1F_EventScript_RebelWon
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_Rebel13::
+	setvar VAR_TOPAZE_BOOST, 12
+	trainerbattle_no_intro TRAINER_ECHO_SILVER, IndigoPlateau_PokemonCenter_1F_Text_RebelDefeat
+	goto IndigoPlateau_PokemonCenter_1F_EventScript_RebelWon
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_Rebel14::
+	setvar VAR_TOPAZE_BOOST, 12
+	trainerbattle_no_intro TRAINER_ECHO_GIOVANNI, IndigoPlateau_PokemonCenter_1F_Text_RebelDefeat
 	goto IndigoPlateau_PokemonCenter_1F_EventScript_RebelWon
 	end
 
@@ -178,16 +283,33 @@ IndigoPlateau_PokemonCenter_1F_EventScript_RebelWon::
 	setvar VAR_TOPAZE_BOOST, 0
 	addvar VAR_REBELS_ROUND, 1
 	special HealPlayerParty
+	goto_if_eq VAR_REBELS_ROUND, 15, IndigoPlateau_PokemonCenter_1F_EventScript_RebelsFinal
+	goto_if_eq VAR_REBELS_ROUND, 8, IndigoPlateau_PokemonCenter_1F_EventScript_RebelsStage1
+	goto_if_eq VAR_REBELS_ROUND, 12, IndigoPlateau_PokemonCenter_1F_EventScript_RebelsStage2
 	giveitem ITEM_RARE_CANDY, 2
-	goto_if_eq VAR_REBELS_ROUND, 8, IndigoPlateau_PokemonCenter_1F_EventScript_RebelsFinal
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_RebelsWon
 	release
 	end
 
+IndigoPlateau_PokemonCenter_1F_EventScript_RebelsStage1::
+	giveitem ITEM_RARE_CANDY, 3
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_RebelsStage1
+	giveitem ITEM_PP_MAX, 4
+	release
+	end
+
+IndigoPlateau_PokemonCenter_1F_EventScript_RebelsStage2::
+	giveitem ITEM_RARE_CANDY, 3
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_RebelsStage2
+	giveitem ITEM_MAX_ELIXIR, 5
+	release
+	end
+
 IndigoPlateau_PokemonCenter_1F_EventScript_RebelsFinal::
+	giveitem ITEM_RARE_CANDY, 5
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_RebelsFinal
 	giveitem ITEM_MASTER_BALL
-	giveitem ITEM_PP_MAX, 4
+	giveitem ITEM_PP_MAX, 6
 	release
 	end
 

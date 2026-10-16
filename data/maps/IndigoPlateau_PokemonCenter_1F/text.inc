@@ -107,11 +107,41 @@ IndigoPlateau_PokemonCenter_1F_Text_RebelsWon::
     .string "RARE CANDIES. Come back when ready.$"
 
 IndigoPlateau_PokemonCenter_1F_Text_RebelsFinal::
-    .string "FLORA: All eight have fallen, and\n"
-    .string "none of them hates you for it.\p"
+    .string "FLORA: Eight REBELS, four of the\n"
+    .string "old LEAGUE, and the three MASTERS.\p"
+    .string "Fifteen duels, and none of them\n"
+    .string "hates you for it.\p"
     .string "Rule wisely, CHAMPION. This is a\n"
-    .string "gift from the whole League.$"
+    .string "gift from the whole LEAGUE.$"
 
 IndigoPlateau_PokemonCenter_1F_Text_RebelsDone::
     .string "FLORA: The REBELS keep their gyms\n"
-    .string "and their pride. Peace holds.$"
+    .string "and their pride. Peace holds.\p"
+    .string "The THRONE MARKET is open to you,\n"
+    .string "CHAMPION of all.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_RebelsStage1::
+    .string "FLORA: The eight REBELS are down.\n"
+    .string "Take these. You earned them.\p"
+    .string "The THRONE MARKET opens for you.\n"
+    .string "Ask me when you wish to shop.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_RebelsCourt::
+    .string "FLORA: The old LEAGUE wants to test\n"
+    .string "the one who rules the six legends.\p"
+    .string "LORELEI, BRUNO, AGATHA and LANCE.\n"
+    .string "Ready?$"
+
+IndigoPlateau_PokemonCenter_1F_Text_RebelsStage2::
+    .string "FLORA: The four of the LEAGUE have\n"
+    .string "bowed. One step left.\p"
+    .string "The three MASTERS are waiting.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_RebelsMasters::
+    .string "FLORA: GOLD, SILVER and GIOVANNI.\n"
+    .string "They trained for this day.\p"
+    .string "Shall I call them?$"
+
+IndigoPlateau_PokemonCenter_1F_Text_MarketAsk::
+    .string "FLORA: Do you wish to visit the\n"
+    .string "THRONE MARKET?$"
