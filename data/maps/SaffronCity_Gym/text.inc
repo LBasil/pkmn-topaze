@@ -172,3 +172,15 @@ SaffronCity_Gym_Text_StoneGift::
     .string "along ROUTE 21. A city of lightning\p"
     .string "waits there. The old road by\n"
     .string "FUCHSIA is molten rock now.$"
+
+SaffronCity_Gym_Text_SabrinaVisit1::
+    .string "SABRINA: I saw the wish in my dreams.\n"
+    .string "You chose well. Take this.$"
+
+SaffronCity_Gym_Text_SabrinaVisit2::
+    .string "SABRINA: A silent world. I like it.\n"
+    .string "Take these, you earned them.$"
+
+SaffronCity_Gym_Text_SabrinaVisit3::
+    .string "SABRINA: I foresaw the six. Control\n"
+    .string "them or they will control you.$"

@@ -113,3 +113,15 @@ PewterCity_Gym_Text_GymStatuePlayerWon::
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 
+
+PewterCity_Gym_Text_BrockVisit1::
+    .string "KAY: Let go of JIRACHI? Rock-solid\n"
+    .string "decision. Take this as thanks.$"
+
+PewterCity_Gym_Text_BrockVisit2::
+    .string "KAY: No more POKé BALLS. My ROCK\n"
+    .string "POKéMON sleep easier. Take these.$"
+
+PewterCity_Gym_Text_BrockVisit3::
+    .string "KAY: Six legends in your hands. Be a\n"
+    .string "rock for them, not a crown.$"

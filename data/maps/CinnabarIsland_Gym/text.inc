@@ -190,3 +190,15 @@ CinnabarIsland_Gym_Text_SorryBadCall::
     .string "Sorry!\n"
     .string "Bad call!$"
 
+
+CinnabarIsland_Gym_Text_BlaineVisit1::
+    .string "BLAINE: Hah! You let the star go, kid.\n"
+    .string "Burn bright! Take this.$"
+
+CinnabarIsland_Gym_Text_BlaineVisit2::
+    .string "BLAINE: No more BALLS? Fine by me.\n"
+    .string "Take these, you're warmed up.$"
+
+CinnabarIsland_Gym_Text_BlaineVisit3::
+    .string "BLAINE: Six legends! Hah! Show them\n"
+    .string "the fire that built you. Take this.$"

@@ -121,3 +121,15 @@ CeladonCity_Gym_Text_GymStatuePlayerWon::
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 
+
+CeladonCity_Gym_Text_ErikaVisit1::
+    .string "ERIKA: You let the star go, like a\n"
+    .string "petal on the wind. Please, take this.$"
+
+CeladonCity_Gym_Text_ErikaVisit2::
+    .string "ERIKA: The wild have gone quiet. I\n"
+    .string "will tend the gardens for them.$"
+
+CeladonCity_Gym_Text_ErikaVisit3::
+    .string "ERIKA: So much power in one trainer.\n"
+    .string "May it bloom gently. Take this.$"

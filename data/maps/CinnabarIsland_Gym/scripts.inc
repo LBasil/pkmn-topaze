@@ -49,6 +49,7 @@ CinnabarIsland_Gym_EventScript_Blaine::
 	famechecker FAMECHECKER_BLAINE, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	trainerbattle_single TRAINER_LEADER_BLAINE, CinnabarIsland_Gym_Text_BlaineIntro, CinnabarIsland_Gym_Text_BlaineDefeat, CinnabarIsland_Gym_EventScript_DefeatedBlaine, NO_MUSIC
 	goto_if_unset FLAG_GOT_TM38_FROM_BLAINE, CinnabarIsland_Gym_EventScript_GiveTM38
+	call_if_set FLAG_TOPAZE_COUNCIL, CinnabarIsland_Gym_EventScript_BlaineVisit
 	msgbox CinnabarIsland_Gym_Text_BlainePostBattle
 	release
 	end
@@ -708,4 +709,31 @@ CinnabarIsland_Gym_EventScript_OpenDoor6::
 	setmetatile  5, 10, METATILE_CinnabarGym_Floor_ShadeFull, 0
 	setmetatile  6, 10, METATILE_CinnabarGym_Floor, 0
 	setmetatile  7, 10, METATILE_CinnabarGym_Floor_ShadeDiagonal, 0
+	return
+
+@ Topaze, post-game : le chef revient sur le Conseil et offre un cadeau selon la fin
+CinnabarIsland_Gym_EventScript_BlaineVisit::
+	goto_if_set FLAG_QUEST_LEADER_BLAINE, EventScript_Return
+	switch VAR_TOPAZE_ENDING
+	case 1, CinnabarIsland_Gym_EventScript_BlaineVisit1
+	case 2, CinnabarIsland_Gym_EventScript_BlaineVisit2
+	case 3, CinnabarIsland_Gym_EventScript_BlaineVisit3
+	return
+
+CinnabarIsland_Gym_EventScript_BlaineVisit1::
+	msgbox CinnabarIsland_Gym_Text_BlaineVisit1
+	giveitem ITEM_CHARCOAL, 1
+	setflag FLAG_QUEST_LEADER_BLAINE
+	return
+
+CinnabarIsland_Gym_EventScript_BlaineVisit2::
+	msgbox CinnabarIsland_Gym_Text_BlaineVisit2
+	giveitem ITEM_FULL_RESTORE, 3
+	setflag FLAG_QUEST_LEADER_BLAINE
+	return
+
+CinnabarIsland_Gym_EventScript_BlaineVisit3::
+	msgbox CinnabarIsland_Gym_Text_BlaineVisit3
+	giveitem ITEM_RARE_CANDY, 3
+	setflag FLAG_QUEST_LEADER_BLAINE
 	return

@@ -18,6 +18,7 @@ SaffronCity_Gym_EventScript_SabrinaBusy::
 SaffronCity_Gym_EventScript_SabrinaFight::
 	trainerbattle_single TRAINER_LEADER_SABRINA, SaffronCity_Gym_Text_SabrinaIntro, SaffronCity_Gym_Text_SabrinaDefeat, SaffronCity_Gym_EventScript_DefeatedSabrina, NO_MUSIC
 	goto_if_unset FLAG_GOT_TM04_FROM_SABRINA, SaffronCity_Gym_EventScript_GiveTM04
+	call_if_set FLAG_TOPAZE_COUNCIL, SaffronCity_Gym_EventScript_SabrinaVisit
 	msgbox SaffronCity_Gym_Text_ExplainTM04
 	release
 	end
@@ -112,3 +113,30 @@ SaffronCity_Gym_EventScript_GymStatuePostVictory::
 	msgbox SaffronCity_Gym_Text_GymStatuePlayerWon
 	releaseall
 	end
+
+@ Topaze, post-game : le chef revient sur le Conseil et offre un cadeau selon la fin
+SaffronCity_Gym_EventScript_SabrinaVisit::
+	goto_if_set FLAG_QUEST_LEADER_SABRINA, EventScript_Return
+	switch VAR_TOPAZE_ENDING
+	case 1, SaffronCity_Gym_EventScript_SabrinaVisit1
+	case 2, SaffronCity_Gym_EventScript_SabrinaVisit2
+	case 3, SaffronCity_Gym_EventScript_SabrinaVisit3
+	return
+
+SaffronCity_Gym_EventScript_SabrinaVisit1::
+	msgbox SaffronCity_Gym_Text_SabrinaVisit1
+	giveitem ITEM_TWISTED_SPOON, 1
+	setflag FLAG_QUEST_LEADER_SABRINA
+	return
+
+SaffronCity_Gym_EventScript_SabrinaVisit2::
+	msgbox SaffronCity_Gym_Text_SabrinaVisit2
+	giveitem ITEM_FULL_RESTORE, 3
+	setflag FLAG_QUEST_LEADER_SABRINA
+	return
+
+SaffronCity_Gym_EventScript_SabrinaVisit3::
+	msgbox SaffronCity_Gym_Text_SabrinaVisit3
+	giveitem ITEM_RARE_CANDY, 3
+	setflag FLAG_QUEST_LEADER_SABRINA
+	return

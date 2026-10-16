@@ -257,12 +257,12 @@
 #define FLAG_0x0ED               0x0ED
 #define FLAG_0x0EE               0x0EE
 #define FLAG_0x0EF               0x0EF
-#define FLAG_0x0F0               0x0F0
-#define FLAG_0x0F1               0x0F1
-#define FLAG_0x0F2               0x0F2
-#define FLAG_0x0F3               0x0F3
-#define FLAG_0x0F4               0x0F4
-#define FLAG_0x0F5               0x0F5
+#define FLAG_QUEST_LEADER_BROCK 0x0F0 // Topaze: post-game leader gift (PewterCity_Gym)
+#define FLAG_QUEST_LEADER_LTSURGE 0x0F1 // Topaze: post-game leader gift (VermilionCity_Gym)
+#define FLAG_QUEST_LEADER_ERIKA 0x0F2 // Topaze: post-game leader gift (CeladonCity_Gym)
+#define FLAG_QUEST_LEADER_KOGA 0x0F3 // Topaze: post-game leader gift (FuchsiaCity_Gym)
+#define FLAG_QUEST_LEADER_SABRINA 0x0F4 // Topaze: post-game leader gift (SaffronCity_Gym)
+#define FLAG_QUEST_LEADER_BLAINE 0x0F5 // Topaze: post-game leader gift (CinnabarIsland_Gym)
 #define FLAG_0x0F6               0x0F6
 #define FLAG_0x0F7               0x0F7
 #define FLAG_0x0F8               0x0F8

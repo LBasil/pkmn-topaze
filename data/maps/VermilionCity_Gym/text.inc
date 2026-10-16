@@ -144,3 +144,15 @@ VermilionCity_Gym_Text_GymClosed::
     .string "S.S. ANNE to guard her APATITE.\p"
     .string "Thieves in black are after it!\n"
     .string "Go to the harbor and help them!$"
+
+VermilionCity_Gym_Text_LtSurgeVisit1::
+    .string "SURGE: A wish let go. You've got guts,\n"
+    .string "kid. Take this spark.$"
+
+VermilionCity_Gym_Text_LtSurgeVisit2::
+    .string "SURGE: No balls, no cages. A real\n"
+    .string "soldier needs rest. Take these.$"
+
+VermilionCity_Gym_Text_LtSurgeVisit3::
+    .string "SURGE: The six legends? Hah! Don't let\n"
+    .string "them fry your head. Use this.$"

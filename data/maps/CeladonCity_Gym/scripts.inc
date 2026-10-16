@@ -5,6 +5,7 @@ CeladonCity_Gym_EventScript_Erika::
 	famechecker FAMECHECKER_ERIKA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	trainerbattle_single TRAINER_LEADER_ERIKA, CeladonCity_Gym_Text_ErikaIntro, CeladonCity_Gym_Text_ErikaDefeat, CeladonCity_Gym_EventScript_DefeatedErika, NO_MUSIC
 	goto_if_unset FLAG_GOT_TM19_FROM_ERIKA, CeladonCity_Gym_EventScript_GiveTM19
+	call_if_set FLAG_TOPAZE_COUNCIL, CeladonCity_Gym_EventScript_ErikaVisit
 	famechecker FAMECHECKER_ERIKA, 4
 	msgbox CeladonCity_Gym_Text_ErikaPostBattle
 	release
@@ -82,3 +83,30 @@ CeladonCity_Gym_EventScript_GymStatuePostVictory::
 	msgbox CeladonCity_Gym_Text_GymStatuePlayerWon
 	releaseall
 	end
+
+@ Topaze, post-game : le chef revient sur le Conseil et offre un cadeau selon la fin
+CeladonCity_Gym_EventScript_ErikaVisit::
+	goto_if_set FLAG_QUEST_LEADER_ERIKA, EventScript_Return
+	switch VAR_TOPAZE_ENDING
+	case 1, CeladonCity_Gym_EventScript_ErikaVisit1
+	case 2, CeladonCity_Gym_EventScript_ErikaVisit2
+	case 3, CeladonCity_Gym_EventScript_ErikaVisit3
+	return
+
+CeladonCity_Gym_EventScript_ErikaVisit1::
+	msgbox CeladonCity_Gym_Text_ErikaVisit1
+	giveitem ITEM_MIRACLE_SEED, 1
+	setflag FLAG_QUEST_LEADER_ERIKA
+	return
+
+CeladonCity_Gym_EventScript_ErikaVisit2::
+	msgbox CeladonCity_Gym_Text_ErikaVisit2
+	giveitem ITEM_FULL_RESTORE, 3
+	setflag FLAG_QUEST_LEADER_ERIKA
+	return
+
+CeladonCity_Gym_EventScript_ErikaVisit3::
+	msgbox CeladonCity_Gym_Text_ErikaVisit3
+	giveitem ITEM_RARE_CANDY, 3
+	setflag FLAG_QUEST_LEADER_ERIKA
+	return

@@ -5,6 +5,7 @@ FuchsiaCity_Gym_EventScript_Koga::
 	famechecker FAMECHECKER_KOGA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	trainerbattle_single TRAINER_LEADER_KOGA, FuchsiaCity_Gym_Text_KogaIntro, FuchsiaCity_Gym_Text_KogaDefeat, FuchsiaCity_Gym_EventScript_DefeatedKoga, NO_MUSIC
 	goto_if_unset FLAG_GOT_TM06_FROM_KOGA, FuchsiaCity_Gym_EventScript_GiveTM06
+	call_if_set FLAG_TOPAZE_COUNCIL, FuchsiaCity_Gym_EventScript_KogaVisit
 	msgbox FuchsiaCity_Gym_Text_KogaPostBattle
 	release
 	end
@@ -88,3 +89,30 @@ FuchsiaCity_Gym_EventScript_GymStatuePostVictory::
 	msgbox FuchsiaCity_Gym_Text_GymStatuePlayerWon
 	releaseall
 	end
+
+@ Topaze, post-game : le chef revient sur le Conseil et offre un cadeau selon la fin
+FuchsiaCity_Gym_EventScript_KogaVisit::
+	goto_if_set FLAG_QUEST_LEADER_KOGA, EventScript_Return
+	switch VAR_TOPAZE_ENDING
+	case 1, FuchsiaCity_Gym_EventScript_KogaVisit1
+	case 2, FuchsiaCity_Gym_EventScript_KogaVisit2
+	case 3, FuchsiaCity_Gym_EventScript_KogaVisit3
+	return
+
+FuchsiaCity_Gym_EventScript_KogaVisit1::
+	msgbox FuchsiaCity_Gym_Text_KogaVisit1
+	giveitem ITEM_POISON_BARB, 1
+	setflag FLAG_QUEST_LEADER_KOGA
+	return
+
+FuchsiaCity_Gym_EventScript_KogaVisit2::
+	msgbox FuchsiaCity_Gym_Text_KogaVisit2
+	giveitem ITEM_FULL_RESTORE, 3
+	setflag FLAG_QUEST_LEADER_KOGA
+	return
+
+FuchsiaCity_Gym_EventScript_KogaVisit3::
+	msgbox FuchsiaCity_Gym_Text_KogaVisit3
+	giveitem ITEM_RARE_CANDY, 3
+	setflag FLAG_QUEST_LEADER_KOGA
+	return

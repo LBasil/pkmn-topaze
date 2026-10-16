@@ -212,6 +212,7 @@ VermilionCity_Gym_EventScript_LtSurge::
 	famechecker FAMECHECKER_LTSURGE, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	trainerbattle_single TRAINER_LEADER_LT_SURGE, VermilionCity_Gym_Text_LtSurgeIntro, VermilionCity_Gym_Text_LtSurgeDefeat, VermilionCity_Gym_EventScript_DefeatedLtSurge, NO_MUSIC
 	goto_if_unset FLAG_GOT_TM34_FROM_SURGE, VermilionCity_Gym_EventScript_GiveTM34
+	call_if_set FLAG_TOPAZE_COUNCIL, VermilionCity_Gym_EventScript_LtSurgeVisit
 	msgbox VermilionCity_Gym_Text_LtSurgePostBattle
 	release
 	end
@@ -297,3 +298,30 @@ VermilionCity_Gym_EventScript_GymStatuePostVictory::
 	msgbox VermilionCity_Gym_Text_GymStatuePlayerWon
 	releaseall
 	end
+
+@ Topaze, post-game : le chef revient sur le Conseil et offre un cadeau selon la fin
+VermilionCity_Gym_EventScript_LtSurgeVisit::
+	goto_if_set FLAG_QUEST_LEADER_LTSURGE, EventScript_Return
+	switch VAR_TOPAZE_ENDING
+	case 1, VermilionCity_Gym_EventScript_LtSurgeVisit1
+	case 2, VermilionCity_Gym_EventScript_LtSurgeVisit2
+	case 3, VermilionCity_Gym_EventScript_LtSurgeVisit3
+	return
+
+VermilionCity_Gym_EventScript_LtSurgeVisit1::
+	msgbox VermilionCity_Gym_Text_LtSurgeVisit1
+	giveitem ITEM_MAGNET, 1
+	setflag FLAG_QUEST_LEADER_LTSURGE
+	return
+
+VermilionCity_Gym_EventScript_LtSurgeVisit2::
+	msgbox VermilionCity_Gym_Text_LtSurgeVisit2
+	giveitem ITEM_FULL_RESTORE, 3
+	setflag FLAG_QUEST_LEADER_LTSURGE
+	return
+
+VermilionCity_Gym_EventScript_LtSurgeVisit3::
+	msgbox VermilionCity_Gym_Text_LtSurgeVisit3
+	giveitem ITEM_RARE_CANDY, 3
+	setflag FLAG_QUEST_LEADER_LTSURGE
+	return

@@ -153,3 +153,15 @@ FuchsiaCity_Gym_Text_GymStatuePlayerWon::
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 
+
+FuchsiaCity_Gym_Text_KogaVisit1::
+    .string "KOGA: You let the wish fly. A ninja\n"
+    .string "understands. Take this.$"
+
+FuchsiaCity_Gym_Text_KogaVisit2::
+    .string "KOGA: No balls. Even a ninja can rest.\n"
+    .string "Take these potions.$"
+
+FuchsiaCity_Gym_Text_KogaVisit3::
+    .string "KOGA: Six legends. A ninja would have\n"
+    .string "hidden them. Use these wisely.$"
