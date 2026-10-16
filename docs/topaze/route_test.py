@@ -14,6 +14,7 @@ def mapid(name):
         if m: return int(m.group(2)), int(m.group(1))
     raise KeyError(name)
 def snake_const(n): return re.sub(r'(?<!^)(?=[A-Z0-9])', '_', n).upper().replace('_1_F', '_1F').replace('_2_F', '_2F')
+NOWALK = ()     # comportements de case jamais franchissables (ex. (19,) = cascade sans CS07)
 class Nav:
     def __init__(self, name):
         self.name = name; self.mj = json.load(open('data/maps/%s/map.json' % name)); L = mapkit.layouts()[self.mj['layout']]
@@ -25,7 +26,7 @@ class Nav:
     def attr(self, x, y): m = self.g[y * self.w + x] & 0x3ff; return self.pa[m] if m < 640 else self.sa[m - 640]
     def blocked(self, x, y):
         if not (0 <= x < self.w and 0 <= y < self.h): return True
-        return (x, y) in self.objs or bool((self.g[y * self.w + x] >> 10) & 3) or (not SURF and (self.attr(x, y) & 0x1ff) in WATER)
+        return (x, y) in self.objs or bool((self.g[y * self.w + x] >> 10) & 3) or (not SURF and (self.attr(x, y) & 0x1ff) in WATER) or (self.attr(x, y) & 0x1ff) in NOWALK
     def step_ok(self, c, n):
         """Regle d'altitude du moteur : on ne passe pas d'un niveau a un autre (sauf 0 et 15, qui relient tout)."""
         ea = self.g[c[1] * self.w + c[0]] >> 12; eb = self.g[n[1] * self.w + n[0]] >> 12

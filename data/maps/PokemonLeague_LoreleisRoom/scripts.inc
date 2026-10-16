@@ -17,6 +17,8 @@ PokemonLeague_LoreleisRoom_OnLoad::
 	end
 
 PokemonLeague_LoreleisRoom_EventScript_CloseEntry::
+	@ Topaze : en post-game (Conseil des Anciens, facultatif) l'entree reste ouverte, sinon le joueur est enferme dans la salle
+	goto_if_set FLAG_TOPAZE_POSTGAME, EventScript_Return
 	call PokemonLeague_EventScript_CloseEntry
 	return
 
@@ -109,7 +111,17 @@ PokemonLeague_LoreleisRoom_OnFrame::
 
 PokemonLeague_LoreleisRoom_EventScript_EnterRoom::
 	lockall
+	goto_if_set FLAG_TOPAZE_POSTGAME, PokemonLeague_LoreleisRoom_EventScript_EnterRoomOpen
 	call PokemonLeague_EventScript_EnterRoom
+	setvar VAR_MAP_SCENE_POKEMON_LEAGUE, 1
+	releaseall
+	end
+
+@ Topaze: post-game, the entry does not close behind the player (the Council of Elders is optional)
+PokemonLeague_LoreleisRoom_EventScript_EnterRoomOpen::
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp5
+	waitmovement 0
+	setflag FLAG_TEMP_2
 	setvar VAR_MAP_SCENE_POKEMON_LEAGUE, 1
 	releaseall
 	end
