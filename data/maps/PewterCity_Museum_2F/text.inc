@@ -79,3 +79,15 @@ PewterCity_Museum_2F_Text_BrockAfterKay::
     .string "They may come back.\p"
     .string "Go on to TOURMALIA, {PLAYER}.\n"
     .string "The next gem sleeps there.$"
+
+PewterCity_Museum_2F_Text_BrockFossil::
+    .string "BROCK: CHAMPION! The whole museum\n"
+    .string "heard the news.\p"
+    .string "A piece of the past should live\n"
+    .string "again. This one was stored in the\l"
+    .string "vault. It is yours.$"
+
+PewterCity_Museum_2F_Text_BrockFossilAfter::
+    .string "BROCK: Have it revived at the\n"
+    .string "lab on CINNABAR. Bring it back to\l"
+    .string "the world, as it should be.$"

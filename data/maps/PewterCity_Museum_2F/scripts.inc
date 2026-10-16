@@ -38,6 +38,38 @@ PewterCity_Museum_2F_EventScript_Brock::
 	end
 
 PewterCity_Museum_2F_EventScript_BrockAfterKay::
+	goto_if_set FLAG_QUEST_BROCK_FOSSIL, PewterCity_Museum_2F_EventScript_BrockPlain
+	goto_if_unset FLAG_TOPAZE_COUNCIL, PewterCity_Museum_2F_EventScript_BrockPlain
+	msgbox PewterCity_Museum_2F_Text_BrockFossil
+	switch VAR_TOPAZE_ENDING
+	case 1, PewterCity_Museum_2F_EventScript_BrockHelix
+	case 2, PewterCity_Museum_2F_EventScript_BrockDome
+	case 3, PewterCity_Museum_2F_EventScript_BrockAmber
+	goto PewterCity_Museum_2F_EventScript_BrockPlain
+	end
+
+PewterCity_Museum_2F_EventScript_BrockHelix::
+	giveitem ITEM_HELIX_FOSSIL
+	goto PewterCity_Museum_2F_EventScript_BrockFossilDone
+	end
+
+PewterCity_Museum_2F_EventScript_BrockDome::
+	giveitem ITEM_DOME_FOSSIL
+	goto PewterCity_Museum_2F_EventScript_BrockFossilDone
+	end
+
+PewterCity_Museum_2F_EventScript_BrockAmber::
+	giveitem ITEM_OLD_AMBER
+	goto PewterCity_Museum_2F_EventScript_BrockFossilDone
+	end
+
+PewterCity_Museum_2F_EventScript_BrockFossilDone::
+	setflag FLAG_QUEST_BROCK_FOSSIL
+	msgbox PewterCity_Museum_2F_Text_BrockFossilAfter
+	release
+	end
+
+PewterCity_Museum_2F_EventScript_BrockPlain::
 	msgbox PewterCity_Museum_2F_Text_BrockAfterKay
 	release
 	end

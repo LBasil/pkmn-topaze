@@ -248,7 +248,7 @@
 #define FLAG_QUEST_FUCHSIA_SUPER 0x0E4 // Topaze: side quest (FuchsiaCity_House1)
 #define FLAG_QUEST_CINNABAR_REPEL 0x0E5 // Topaze: side quest (CinnabarIsland_Mart)
 #define FLAG_QUEST_MISTY_VISIT   0x0E6 // Topaze: post-game, Misty cottage gift received
-#define FLAG_0x0E7               0x0E7
+#define FLAG_QUEST_BROCK_FOSSIL  0x0E7 // Topaze: post-game, Brock museum fossil gift
 #define FLAG_0x0E8               0x0E8
 #define FLAG_0x0E9               0x0E9
 #define FLAG_0x0EA               0x0EA
