@@ -26,7 +26,7 @@ ThreeIsland_BondBridge_EventScript_Suicune::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_SUICUNE, 50
+	setwildbattle SPECIES_SUICUNE, 0
 	waitse
 	playmoncry SPECIES_SUICUNE, CRY_MODE_ENCOUNTER
 	delay 40
@@ -42,13 +42,16 @@ ThreeIsland_BondBridge_EventScript_Suicune::
 	setflag FLAG_ECHO_BEAST3_DONE
 	setflag FLAG_HIDE_ECHO_BEAST3
 	setvar VAR_ECHO_STAGE, 8
-	release
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone3
 	end
 
 ThreeIsland_BondBridge_EventScript_DefeatedSuicune::
 	setflag FLAG_ECHO_BEAST3_DONE
 	setvar VAR_ECHO_STAGE, 8
-	goto EventScript_RemoveStaticMon
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone3
 	end
 
 ThreeIsland_BondBridge_EventScript_RanFromSuicune::

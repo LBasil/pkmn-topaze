@@ -205,7 +205,7 @@ FourIsland_IcefallCave_Back_EventScript_Regice::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_REGICE, 52
+	setwildbattle SPECIES_REGICE, 0
 	waitse
 	playmoncry SPECIES_REGICE, CRY_MODE_ENCOUNTER
 	delay 40

@@ -68,8 +68,8 @@ FourIsland_LoreleisHouse_EventScript_EchoLoreleiAfter::
 
 FourIsland_LoreleisHouse_EventScript_EchoLoreleiGift::
 	msgbox FourIsland_LoreleisHouse_Text_EchoLoreleiGift
-	setvar VAR_TEMP_1, SPECIES_TREECKO
-	givemon SPECIES_TREECKO, 30
+	setvar VAR_TEMP_1, SPECIES_SCEPTILE
+	givemon SPECIES_SCEPTILE, 0
 	goto_if_eq VAR_RESULT, 0, FourIsland_LoreleisHouse_EventScript_EchoGift4Party
 	goto_if_eq VAR_RESULT, 1, FourIsland_LoreleisHouse_EventScript_EchoGift4PC
 	goto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon
@@ -79,10 +79,10 @@ FourIsland_LoreleisHouse_EventScript_EchoLoreleiGift::
 FourIsland_LoreleisHouse_EventScript_EchoGift4Party::
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	playfanfare MUS_LEVEL_UP
-	message FourIsland_LoreleisHouse_Text_EchoGotTreecko
+	message FourIsland_LoreleisHouse_Text_EchoGotSceptile
 	waitmessage
 	waitfanfare
-	bufferspeciesname STR_VAR_1, SPECIES_TREECKO
+	bufferspeciesname STR_VAR_1, SPECIES_SCEPTILE
 	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, FourIsland_LoreleisHouse_EventScript_EchoGift4End
 	call EventScript_GetGiftMonPartySlot
@@ -93,10 +93,10 @@ FourIsland_LoreleisHouse_EventScript_EchoGift4Party::
 FourIsland_LoreleisHouse_EventScript_EchoGift4PC::
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	playfanfare MUS_LEVEL_UP
-	message FourIsland_LoreleisHouse_Text_EchoGotTreecko
+	message FourIsland_LoreleisHouse_Text_EchoGotSceptile
 	waitmessage
 	waitfanfare
-	bufferspeciesname STR_VAR_1, SPECIES_TREECKO
+	bufferspeciesname STR_VAR_1, SPECIES_SCEPTILE
 	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, FourIsland_LoreleisHouse_EventScript_EchoGift4ToPC
 	call EventScript_NameReceivedBoxMon
@@ -111,6 +111,6 @@ FourIsland_LoreleisHouse_EventScript_EchoGift4ToPC::
 FourIsland_LoreleisHouse_EventScript_EchoGift4End::
 	textcolor NPC_TEXT_COLOR_MALE
 	setvar VAR_ECHO_STAGE, 12
-	msgbox FourIsland_LoreleisHouse_Text_EchoLoreleiNext4
-	release
+	msgbox OneIsland_PokemonCenter_1F_Text_EchoPhoneRing
+	goto OneIsland_PokemonCenter_1F_EventScript_Echo5Announce
 	end

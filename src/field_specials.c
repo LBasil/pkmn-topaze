@@ -2109,6 +2109,15 @@ u16 TopazePartyMaxLevel(void)
     return best;
 }
 
+// Level used by scripts that pass 0 (givemon / setwildbattle): the party's top level, kept in [50, 100].
+u8 TopazeScaledLevel(void)
+{
+    u16 l = TopazePartyMaxLevel();
+    if (l < 50) l = 50;
+    if (l > 100) l = 100;
+    return l;
+}
+
 void TopazeMassageOne(void)
 {
     AdjustFriendship(&gPlayerParty[gSpecialVar_0x8004], FRIENDSHIP_EVENT_MASSAGE);

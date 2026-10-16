@@ -395,8 +395,8 @@ OneIsland_PokemonCenter_1F_Text_EchoCelioGift::
     .string "A POKéMON came through it.\n"
     .string "It chose to follow you.$"
 
-OneIsland_PokemonCenter_1F_Text_EchoGotChikorita::
-    .string "{PLAYER} received CHIKORITA!$"
+OneIsland_PokemonCenter_1F_Text_EchoGotMeganium::
+    .string "{PLAYER} received MEGANIUM!$"
 
 OneIsland_PokemonCenter_1F_Text_EchoCelioNext::
     .string "CELIO: The next ECHO is further\n"
@@ -408,7 +408,7 @@ OneIsland_PokemonCenter_1F_Text_EchoBillEcho2::
     .string "The second one is on CAPE BRINK,\n"
     .string "on TWO ISLAND.\p"
     .string "A beast of flames guards it.\n"
-    .string "Calm it down, then come back.$"
+    .string "Calm it down. I will call you.$"
 
 OneIsland_PokemonCenter_1F_Text_EchoBillWait2::
     .string "BILL: CAPE BRINK, on TWO ISLAND.\n"
@@ -420,8 +420,8 @@ OneIsland_PokemonCenter_1F_Text_EchoBillGift2::
     .string "This POKéMON came through it.\n"
     .string "Take care of it, CHAMPION.$"
 
-OneIsland_PokemonCenter_1F_Text_EchoGotCyndaquil::
-    .string "{PLAYER} received CYNDAQUIL!$"
+OneIsland_PokemonCenter_1F_Text_EchoGotTyphlosion::
+    .string "{PLAYER} received TYPHLOSION!$"
 
 OneIsland_PokemonCenter_1F_Text_EchoBillNext2::
     .string "BILL: Two ECHOES closed. The\n"
@@ -445,8 +445,8 @@ OneIsland_PokemonCenter_1F_Text_EchoCelioGift3::
     .string "Another POKéMON came through.\n"
     .string "It wants to travel with you.$"
 
-OneIsland_PokemonCenter_1F_Text_EchoGotTotodile::
-    .string "{PLAYER} received TOTODILE!$"
+OneIsland_PokemonCenter_1F_Text_EchoGotFeraligatr::
+    .string "{PLAYER} received FERALIGATR!$"
 
 OneIsland_PokemonCenter_1F_Text_EchoCelioNext3::
     .string "CELIO: Three ECHOES closed.\n"
@@ -471,8 +471,8 @@ OneIsland_PokemonCenter_1F_Text_Echo5Next::
     .string "BILL: Five ECHOES closed. Ask\n"
     .string "CELIO about the next one.$"
 
-OneIsland_PokemonCenter_1F_Text_EchoGotTorchic::
-    .string "{PLAYER} received TORCHIC!$"
+OneIsland_PokemonCenter_1F_Text_EchoGotBlaziken::
+    .string "{PLAYER} received BLAZIKEN!$"
 
 OneIsland_PokemonCenter_1F_Text_Echo6Announce::
     .string "CELIO: The sixth ECHO is in\n"
@@ -493,8 +493,8 @@ OneIsland_PokemonCenter_1F_Text_Echo6Next::
     .string "CELIO: Six ECHOES closed. Only\n"
     .string "one remains.$"
 
-OneIsland_PokemonCenter_1F_Text_EchoGotMudkip::
-    .string "{PLAYER} received MUDKIP!$"
+OneIsland_PokemonCenter_1F_Text_EchoGotSwampert::
+    .string "{PLAYER} received SWAMPERT!$"
 
 OneIsland_PokemonCenter_1F_Text_Echo7Announce::
     .string "BILL: The compass is going wild.\p"
@@ -517,3 +517,7 @@ OneIsland_PokemonCenter_1F_Text_Echo7Epilogue::
     .string "and sky have gathered at the top\l"
     .string "of SEVAULT CANYON.\p"
     .string "They wait for a TRAINER like you.$"
+
+OneIsland_PokemonCenter_1F_Text_EchoPhoneRing::
+    .string "The COMPASS buzzes in your bag.\n"
+    .string "Someone is calling through it!$"

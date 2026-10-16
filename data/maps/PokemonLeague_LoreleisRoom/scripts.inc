@@ -338,7 +338,7 @@ PokemonLeague_LoreleisRoom_EventScript_Elder3::
 	msgbox PokemonLeague_LoreleisRoom_Text_Elder3Intro
 	trainerbattle_no_intro TRAINER_ELDER_ERIKA, PokemonLeague_LoreleisRoom_Text_Elder3Defeat
 	setvar VAR_ELDERS_ROUND, 4
-	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
+	goto PokemonLeague_LoreleisRoom_EventScript_Interlude1
 	end
 
 PokemonLeague_LoreleisRoom_EventScript_Elder4::
@@ -366,7 +366,7 @@ PokemonLeague_LoreleisRoom_EventScript_Elder7::
 	msgbox PokemonLeague_LoreleisRoom_Text_Elder7Intro
 	trainerbattle_no_intro TRAINER_ELITE_FOUR_LORELEI_2, PokemonLeague_LoreleisRoom_Text_Elder7Defeat
 	setvar VAR_ELDERS_ROUND, 8
-	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
+	goto PokemonLeague_LoreleisRoom_EventScript_Interlude2
 	end
 
 PokemonLeague_LoreleisRoom_EventScript_Elder8::
@@ -394,7 +394,7 @@ PokemonLeague_LoreleisRoom_EventScript_Elder11::
 	msgbox PokemonLeague_LoreleisRoom_Text_Elder11Intro
 	trainerbattle_no_intro TRAINER_ELDER_WILL, PokemonLeague_LoreleisRoom_Text_Elder11Defeat
 	setvar VAR_ELDERS_ROUND, 12
-	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
+	goto PokemonLeague_LoreleisRoom_EventScript_Interlude3
 	end
 
 PokemonLeague_LoreleisRoom_EventScript_Elder12::
@@ -422,7 +422,7 @@ PokemonLeague_LoreleisRoom_EventScript_Elder15::
 	msgbox PokemonLeague_LoreleisRoom_Text_Elder15Intro
 	trainerbattle_no_intro TRAINER_ELDER_PHOEBE, PokemonLeague_LoreleisRoom_Text_Elder15Defeat
 	setvar VAR_ELDERS_ROUND, 16
-	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
+	goto PokemonLeague_LoreleisRoom_EventScript_Interlude4
 	end
 
 PokemonLeague_LoreleisRoom_EventScript_Elder16::
@@ -473,3 +473,32 @@ PokemonLeague_LoreleisRoom_EventScript_ElderDone::
 	msgbox PokemonLeague_LoreleisRoom_Text_ElderDone
 	release
 	end
+
+PokemonLeague_LoreleisRoom_EventScript_Interlude1::
+	special HealPlayerParty
+	msgbox PokemonLeague_LoreleisRoom_Text_Interlude1
+	giveitem ITEM_RARE_CANDY, 3
+	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_Interlude2::
+	special HealPlayerParty
+	msgbox PokemonLeague_LoreleisRoom_Text_Interlude2
+	giveitem ITEM_PP_MAX, 2
+	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_Interlude3::
+	special HealPlayerParty
+	msgbox PokemonLeague_LoreleisRoom_Text_Interlude3
+	giveitem ITEM_RARE_CANDY, 3
+	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_Interlude4::
+	special HealPlayerParty
+	msgbox PokemonLeague_LoreleisRoom_Text_Interlude4
+	giveitem ITEM_PP_MAX, 2
+	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
+	end
+

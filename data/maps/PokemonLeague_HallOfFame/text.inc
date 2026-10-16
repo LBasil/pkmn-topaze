@@ -47,6 +47,9 @@ PokemonLeague_HallOfFame_Text_EndingNoBalls::
     .string "and walk back into the wild.\p"
     .string "No more captures. No more battles.\n"
     .string "A quiet world.\p"
+    .string "Somewhere, the ECHOES OF TIME stay\n"
+    .string "silent. Another wish might have\l"
+    .string "woken them.\p"
     .string "THE END.$"
 
 PokemonLeague_HallOfFame_Text_EndingRuleAll::
@@ -57,4 +60,7 @@ PokemonLeague_HallOfFame_Text_EndingRuleAll::
     .string "The weather, the seas, the mountains\n"
     .string "obey your word now.\p"
     .string "Was this the right wish?\p"
+    .string "Somewhere, the ECHOES OF TIME stay\n"
+    .string "silent. Another wish might have\l"
+    .string "woken them.\p"
     .string "THE END.$"

@@ -24,7 +24,7 @@ CeladonCity_EventScript_Articuno::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_ARTICUNO, 55
+	setwildbattle SPECIES_ARTICUNO, 0
 	waitse
 	playmoncry SPECIES_ARTICUNO, CRY_MODE_ENCOUNTER
 	message Text_Gyaoo

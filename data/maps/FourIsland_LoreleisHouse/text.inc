@@ -49,8 +49,8 @@ FourIsland_LoreleisHouse_Text_EchoLoreleiGift::
     .string "A little POKéMON came with the\n"
     .string "ECHO. It is yours now.$"
 
-FourIsland_LoreleisHouse_Text_EchoGotTreecko::
-    .string "{PLAYER} received TREECKO!$"
+FourIsland_LoreleisHouse_Text_EchoGotSceptile::
+    .string "{PLAYER} received SCEPTILE!$"
 
 FourIsland_LoreleisHouse_Text_EchoLoreleiNext4::
     .string "LORELEI: Four ECHOES closed.\n"

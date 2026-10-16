@@ -43,7 +43,7 @@ VermilionCity_EventScript_MewTruck::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_MEW, 50
+	setwildbattle SPECIES_MEW, 0
 	waitse
 	playmoncry SPECIES_MEW, CRY_MODE_ENCOUNTER
 	delay 40

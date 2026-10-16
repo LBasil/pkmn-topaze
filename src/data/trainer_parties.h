@@ -7815,6 +7815,39 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PlayerLeaf[] = {
     },
 };
 
+static const struct TrainerMonNoItemDefaultMoves sParty_EchoGiovanni[] = {
+    {
+        .iv = 255,
+        .lvl = 66,
+        .species = SPECIES_PERSIAN,
+    },
+    {
+        .iv = 255,
+        .lvl = 66,
+        .species = SPECIES_DUGTRIO,
+    },
+    {
+        .iv = 255,
+        .lvl = 68,
+        .species = SPECIES_NIDOKING,
+    },
+    {
+        .iv = 255,
+        .lvl = 68,
+        .species = SPECIES_NIDOQUEEN,
+    },
+    {
+        .iv = 255,
+        .lvl = 70,
+        .species = SPECIES_KANGASKHAN,
+    },
+    {
+        .iv = 255,
+        .lvl = 72,
+        .species = SPECIES_RHYDON,
+    },
+};
+
 static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt42[] = {
     {
         .iv = 0,

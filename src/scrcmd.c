@@ -1747,6 +1747,8 @@ bool8 ScrCmd_givemon(struct ScriptContext * ctx)
         svc_SetStarter(species);
 #endif
     level = ScriptReadByte(ctx);
+    if (level == 0)
+        level = TopazeScaledLevel(); // Topaze: level 0 = player's party top level
     item = VarGet(ScriptReadHalfword(ctx));
     unkParam1 = ScriptReadWord(ctx);
     unkParam2 = ScriptReadWord(ctx);
@@ -1938,6 +1940,8 @@ bool8 ScrCmd_setwildbattle(struct ScriptContext * ctx)
     u8 level = ScriptReadByte(ctx);
     u16 item = ScriptReadHalfword(ctx);
 
+    if (level == 0)
+        level = TopazeScaledLevel(); // Topaze: level 0 = player's party top level
     CreateScriptedWildMon(species, level, item);
     return FALSE;
 }

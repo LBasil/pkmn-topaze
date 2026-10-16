@@ -311,6 +311,10 @@ PokemonLeague_LoreleisRoom_Text_NextElder::
     .string "Recover your strength.$"
 
 PokemonLeague_LoreleisRoom_Text_ElderReward::
+    .string "STEVEN: Some stones are older than\n"
+    .string "any LEAGUE. Your pendant is one.\p"
+    .string "Listen to it. It chose you for a\n"
+    .string "reason.\p"
     .string "All 20 veterans bow to you.\p"
     .string "You are the greatest of all\n"
     .string "the CHAMPIONS!\p"
@@ -320,3 +324,53 @@ PokemonLeague_LoreleisRoom_Text_ElderReward::
 PokemonLeague_LoreleisRoom_Text_ElderDone::
     .string "The old guard has nothing more\n"
     .string "to teach you, CHAMPION.$"
+
+PokemonLeague_LoreleisRoom_Text_Interlude1::
+    .string "BROCK: Four of us have fallen.\n"
+    .string "The others watch from the hall.\p"
+    .string "MISTY: Do you know why we\n"
+    .string "gathered? Years ago the AURA first\l"
+    .string "twisted the TYPES of POKéMON.\p"
+    .string "ERIKA: The GYMS noticed first.\n"
+    .string "The LEAGUE called it a rumor.\p"
+    .string "SURGE: Rumors do not wake a whole\n"
+    .string "region. Something is calling.\p"
+    .string "Take these, CHAMPION. You will need\n"
+    .string "them more than we do.$"
+
+PokemonLeague_LoreleisRoom_Text_Interlude2::
+    .string "LORELEI: Four more. Let me tell you\n"
+    .string "what I felt in the ICEFALL CAVE.\p"
+    .string "The sea there remembers an echo.\n"
+    .string "A living memory of a POKéMON.\p"
+    .string "SABRINA: I have seen them too.\n"
+    .string "Seven echoes, scattered across the\l"
+    .string "SEVII ISLANDS.\p"
+    .string "BLAINE: Three beasts, three golems,\n"
+    .string "and one that travels through time.\p"
+    .string "GIOVANNI: Ask BILL on ONE ISLAND.\n"
+    .string "He has been listening for years.\p"
+    .string "Here. A gift from the old guard.$"
+
+PokemonLeague_LoreleisRoom_Text_Interlude3::
+    .string "LANCE: A dragon's trust is earned,\n"
+    .string "never commanded. The boss forgot.\p"
+    .string "AGATHA: He does not crave power for\n"
+    .string "its own sake. He wants to be heard.\p"
+    .string "BRUNO: And he believes the strong\n"
+    .string "must speak for the weak.\p"
+    .string "WILL: I read the old books. The AURA\n"
+    .string "is not a weapon. It is a cry.\p"
+    .string "Whatever you wished for, CHAMPION,\n"
+    .string "you already proved him wrong.$"
+
+PokemonLeague_LoreleisRoom_Text_Interlude4::
+    .string "KOGA: His followers have nothing.\n"
+    .string "That is why they follow.\p"
+    .string "KAREN: Darkness is not evil. But a\n"
+    .string "heart that hides from it is lost.\p"
+    .string "SIDNEY: Ha! Fifteen fights, and\n"
+    .string "this one is still smiling!\p"
+    .string "PHOEBE: Four left. The sea is calm,\n"
+    .string "but something stirs far away.\p"
+    .string "Keep going. We will wait.$"

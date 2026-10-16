@@ -18,7 +18,7 @@ TwoIsland_CapeBrink_EventScript_Entei::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_ENTEI, 48
+	setwildbattle SPECIES_ENTEI, 0
 	waitse
 	playmoncry SPECIES_ENTEI, CRY_MODE_ENCOUNTER
 	delay 40
@@ -34,13 +34,16 @@ TwoIsland_CapeBrink_EventScript_Entei::
 	setflag FLAG_ECHO_BEAST2_DONE
 	setflag FLAG_HIDE_ECHO_BEAST2
 	setvar VAR_ECHO_STAGE, 5
-	release
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone2
 	end
 
 TwoIsland_CapeBrink_EventScript_DefeatedEntei::
 	setflag FLAG_ECHO_BEAST2_DONE
 	setvar VAR_ECHO_STAGE, 5
-	goto EventScript_RemoveStaticMon
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone2
 	end
 
 TwoIsland_CapeBrink_EventScript_RanFromEntei::

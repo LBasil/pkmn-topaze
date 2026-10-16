@@ -56,7 +56,7 @@ SixIsland_RuinValley_EventScript_Regirock::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_REGIROCK, 56
+	setwildbattle SPECIES_REGIROCK, 0
 	waitse
 	playmoncry SPECIES_REGIROCK, CRY_MODE_ENCOUNTER
 	delay 40
@@ -72,13 +72,16 @@ SixIsland_RuinValley_EventScript_Regirock::
 	setflag FLAG_ECHO_BEAST6_DONE
 	setflag FLAG_HIDE_ECHO_BEAST6
 	setvar VAR_ECHO_STAGE, 17
-	release
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone6
 	end
 
 SixIsland_RuinValley_EventScript_DefeatedRegirock::
 	setflag FLAG_ECHO_BEAST6_DONE
 	setvar VAR_ECHO_STAGE, 17
-	goto EventScript_RemoveStaticMon
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone6
 	end
 
 SixIsland_RuinValley_EventScript_RanFromRegirock::

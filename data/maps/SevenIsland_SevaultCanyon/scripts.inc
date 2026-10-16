@@ -35,7 +35,7 @@ SevenIsland_SevaultCanyon_EventScript_Celebi::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_CELEBI, 60
+	setwildbattle SPECIES_CELEBI, 0
 	waitse
 	playmoncry SPECIES_CELEBI, CRY_MODE_ENCOUNTER
 	delay 40
@@ -51,13 +51,16 @@ SevenIsland_SevaultCanyon_EventScript_Celebi::
 	setflag FLAG_DONE_ECHO_CELEBI
 	setflag FLAG_HIDE_ECHO_CELEBI
 	setvar VAR_ECHO_STAGE, 20
-	release
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone7
 	end
 
 SevenIsland_SevaultCanyon_EventScript_DefeatedCelebi::
 	setflag FLAG_DONE_ECHO_CELEBI
 	setvar VAR_ECHO_STAGE, 20
-	goto EventScript_RemoveStaticMon
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone7
 	end
 
 SevenIsland_SevaultCanyon_EventScript_RanFromCelebi::
@@ -75,7 +78,7 @@ SevenIsland_SevaultCanyon_EventScript_Kyogre::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_KYOGRE, 70
+	setwildbattle SPECIES_KYOGRE, 0
 	waitse
 	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
 	delay 40
@@ -113,7 +116,7 @@ SevenIsland_SevaultCanyon_EventScript_Groudon::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_GROUDON, 70
+	setwildbattle SPECIES_GROUDON, 0
 	waitse
 	playmoncry SPECIES_GROUDON, CRY_MODE_ENCOUNTER
 	delay 40
@@ -151,7 +154,7 @@ SevenIsland_SevaultCanyon_EventScript_Rayquaza::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_RAYQUAZA, 70
+	setwildbattle SPECIES_RAYQUAZA, 0
 	waitse
 	playmoncry SPECIES_RAYQUAZA, CRY_MODE_ENCOUNTER
 	delay 40
@@ -189,7 +192,7 @@ SevenIsland_SevaultCanyon_EventScript_Latias::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_LATIAS, 60
+	setwildbattle SPECIES_LATIAS, 0
 	waitse
 	playmoncry SPECIES_LATIAS, CRY_MODE_ENCOUNTER
 	delay 40
@@ -227,7 +230,7 @@ SevenIsland_SevaultCanyon_EventScript_Latios::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_LATIOS, 60
+	setwildbattle SPECIES_LATIOS, 0
 	waitse
 	playmoncry SPECIES_LATIOS, CRY_MODE_ENCOUNTER
 	delay 40
@@ -265,7 +268,7 @@ SevenIsland_SevaultCanyon_EventScript_Jirachi::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_JIRACHI, 50
+	setwildbattle SPECIES_JIRACHI, 0
 	waitse
 	playmoncry SPECIES_JIRACHI, CRY_MODE_ENCOUNTER
 	delay 40
@@ -323,7 +326,7 @@ SevenIsland_SevaultCanyon_EventScript_EchoScene::
 	applymovement LOCALID_ECHO_GIOVANNI, Common_Movement_FacePlayer
 	waitmovement 0
 	msgbox SevenIsland_SevaultCanyon_Text_SceneGiovanni3
-	trainerbattle_no_intro TRAINER_PLAYER_LEAF, SevenIsland_SevaultCanyon_Text_SceneGiovanniDefeat
+	trainerbattle_no_intro TRAINER_ECHO_GIOVANNI, SevenIsland_SevaultCanyon_Text_SceneGiovanniDefeat
 	msgbox SevenIsland_SevaultCanyon_Text_SceneGiovanni4
 	applymovement LOCALID_ECHO_RED, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0

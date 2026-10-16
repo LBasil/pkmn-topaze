@@ -64,7 +64,7 @@ FiveIsland_Meadow_EventScript_Registeel::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_REGISTEEL, 54
+	setwildbattle SPECIES_REGISTEEL, 0
 	waitse
 	playmoncry SPECIES_REGISTEEL, CRY_MODE_ENCOUNTER
 	delay 40
@@ -80,13 +80,16 @@ FiveIsland_Meadow_EventScript_Registeel::
 	setflag FLAG_ECHO_BEAST5_DONE
 	setflag FLAG_HIDE_ECHO_BEAST5
 	setvar VAR_ECHO_STAGE, 14
-	release
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone5
 	end
 
 FiveIsland_Meadow_EventScript_DefeatedRegisteel::
 	setflag FLAG_ECHO_BEAST5_DONE
 	setvar VAR_ECHO_STAGE, 14
-	goto EventScript_RemoveStaticMon
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone5
 	end
 
 FiveIsland_Meadow_EventScript_RanFromRegisteel::

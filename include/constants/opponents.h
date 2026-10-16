@@ -769,12 +769,13 @@
 #define TRAINER_ELDER_STEVEN                 762
 #define TRAINER_ELDER_WALLACE                763
 #define TRAINER_ECHO_SILVER                  764
+#define TRAINER_ECHO_GIOVANNI               765
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is 
 //       only space for 25 additional trainers before trainer flag space overflows.
 //       MAX_TRAINERS_COUNT can be increased but will take up additional saveblock space
 
-#define NUM_TRAINERS                             765
+#define NUM_TRAINERS                             766
 #define MAX_TRAINERS_COUNT                       768
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

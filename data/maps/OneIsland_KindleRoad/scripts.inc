@@ -26,7 +26,7 @@ OneIsland_KindleRoad_EventScript_Raikou::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
-	setwildbattle SPECIES_RAIKOU, 45
+	setwildbattle SPECIES_RAIKOU, 0
 	waitse
 	playmoncry SPECIES_RAIKOU, CRY_MODE_ENCOUNTER
 	delay 40
@@ -42,13 +42,16 @@ OneIsland_KindleRoad_EventScript_Raikou::
 	setflag FLAG_ECHO_BEAST_DONE
 	setflag FLAG_HIDE_ECHO_BEAST
 	setvar VAR_ECHO_STAGE, 2
-	release
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone1
 	end
 
 OneIsland_KindleRoad_EventScript_DefeatedRaikou::
 	setflag FLAG_ECHO_BEAST_DONE
 	setvar VAR_ECHO_STAGE, 2
-	goto EventScript_RemoveStaticMon
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone1
 	end
 
 OneIsland_KindleRoad_EventScript_RanFromRaikou::
