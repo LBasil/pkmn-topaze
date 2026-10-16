@@ -36,3 +36,6 @@ Suite de `RUN_COMPLET_15_10.md`. Même autopilote (`tools/topaze/emu/bench/run_f
 - `plan_objs()` tolère les objets « clone » sans `movement_type`.
 - `cut_trees()` ne dépend plus des objets vivants (les arbres hors caméra ne sont pas instanciés) ; `smash_rocks()` ajouté.
 - `sail_to(t, île)` : menu du Seagallop (page 1 « Autres »), `echo_step()` : pilote des Échos par `VAR_ECHO_STAGE`.
+
+## Suite (16/10, retours appliqués)
+Le flux des Échos a changé : cadeaux et annonces passent par le compas (voir ARCHITECTURE.md). Tests isolés sur ROM de debug : Raikou 1 -> 4, Entei 4 -> 7, Suicune 7 -> 9, Lorelei 11 -> 13, Registeel 13 -> 16, Regirock 16 -> 19, Celebi 19 -> 21, scène de Sevault 21 -> 22, Conseil des Anciens 3 -> 5 (interlude passé). `echo_step` du bot (stades ECHO_PC) n'est plus parcouru qu'au stade 0 ; l'enchaînement complet de bout en bout n'a pas été rejoué (le bot bute sur le retour Kindle Road -> port quand on part de ce point).

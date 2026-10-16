@@ -58,6 +58,8 @@ SilphCo_11F_Text_GiovanniPostBattle::
     .string "KRONOS: Good. Strong enough to\n"
     .string "watch. Not strong enough to\p"
     .string "stand against him.\p"
+    .string "He asked me once why you keep your\n"
+    .string "partners inside BALLS. Think on it.\p"
     .string "Listen. That sound is the end of\n"
     .string "the old heroes.$"
 
