@@ -125,3 +125,16 @@ PewterCity_Gym_Text_BrockVisit2::
 PewterCity_Gym_Text_BrockVisit3::
     .string "KAY: Six legends in your hands. Be a\n"
     .string "rock for them, not a crown.$"
+
+PewterCity_Gym_Text_BrockRebel1::
+    .string "KAY: The Council is over, but my rocks\n"
+    .string "never stopped training, CHAMPION.\pYou hold the six legends. Let me see\n"
+    .string "if a mountain can hold you!$"
+
+PewterCity_Gym_Text_BrockRebel2::
+    .string "Cracked...\n"
+    .string "but not broken.$"
+
+PewterCity_Gym_Text_BrockRebel3::
+    .string "KAY: The REBELS are not your enemies.\n"
+    .string "We only wanted to be asked.\pTake this. Go on, the others wait.$"

@@ -123,13 +123,27 @@ CeladonCity_Gym_Text_GymStatuePlayerWon::
 
 
 CeladonCity_Gym_Text_ErikaVisit1::
-    .string "ERIKA: You let the star go, like a\n"
+    .string "GRIM: You let the star go, like a\n"
     .string "petal on the wind. Please, take this.$"
 
 CeladonCity_Gym_Text_ErikaVisit2::
-    .string "ERIKA: The wild have gone quiet. I\n"
+    .string "GRIM: The wild have gone quiet. I\n"
     .string "will tend the gardens for them.$"
 
 CeladonCity_Gym_Text_ErikaVisit3::
-    .string "ERIKA: So much power in one trainer.\n"
+    .string "GRIM: So much power in one trainer.\n"
     .string "May it bloom gently. Take this.$"
+
+CeladonCity_Gym_Text_ErikaRebel1::
+    .string "GRIM: Ice keeps what it holds,\n"
+    .string "CHAMPION. Can you hold six legends\l"
+    .string "without freezing the world around\n"
+    .string "you?$"
+
+CeladonCity_Gym_Text_ErikaRebel2::
+    .string "Thawed...\n"
+    .string "I see now.$"
+
+CeladonCity_Gym_Text_ErikaRebel3::
+    .string "GRIM: Hold them gently. Ice cracks\n"
+    .string "when squeezed. Take this.$"

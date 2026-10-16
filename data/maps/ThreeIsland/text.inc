@@ -165,3 +165,29 @@ ThreeIsland_Text_WhenDodouEvolvesGoingToPlayGame::
 ThreeIsland_Text_Doduo::
     .string "DODUO: Gigiih!$"
 
+
+ThreeIsland_Text_Lord1::
+    .string "SIDNEY: Hah! I traveled the whole\n"
+    .string "world to find someone worth\l"
+    .string "fighting. Looks like the world came\n"
+    .string "to me!$"
+
+ThreeIsland_Text_Lord2::
+    .string "Awesome! I'm glad I waited!$"
+
+ThreeIsland_Text_Lord3::
+    .string "SIDNEY: Keep that fire. And try not\n"
+    .string "to get bored at the top. Take this.$"
+
+ThreeIsland_Text_LordEarly::
+    .string "SIDNEY: Not yet. The old LEAGUE\n"
+    .string "and the MASTERS must fall first.\n"
+    .string "FLORA will tell you the way.$"
+
+ThreeIsland_Text_LordDone::
+    .string "SIDNEY: A ruler worthy of the six.\n"
+    .string "I will remember this day.$"
+
+ThreeIsland_Text_LordIdle::
+    .string "SIDNEY: The islands are quiet. I look\n"
+    .string "after them, as I always have.$"

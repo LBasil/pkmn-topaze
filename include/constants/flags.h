@@ -273,21 +273,21 @@
 #define FLAG_0x0FD               0x0FD
 #define FLAG_0x0FE               0x0FE
 #define FLAG_0x0FF               0x0FF
-#define FLAG_0x100               0x100
-#define FLAG_0x101               0x101
-#define FLAG_0x102               0x102
-#define FLAG_0x103               0x103
-#define FLAG_0x104               0x104
-#define FLAG_0x105               0x105
-#define FLAG_0x106               0x106
-#define FLAG_0x107               0x107
-#define FLAG_0x108               0x108
-#define FLAG_0x109               0x109
-#define FLAG_0x10A               0x10A
-#define FLAG_0x10B               0x10B
-#define FLAG_0x10C               0x10C
-#define FLAG_0x10D               0x10D
-#define FLAG_0x10E               0x10E
+#define FLAG_REBEL_KAY 0x100 // Topaze: ending 3 conquest
+#define FLAG_REBEL_SYLVESTRE 0x101 // Topaze: ending 3 conquest
+#define FLAG_REBEL_HERA 0x102 // Topaze: ending 3 conquest
+#define FLAG_REBEL_GRIM 0x103 // Topaze: ending 3 conquest
+#define FLAG_REBEL_ACHLYS 0x104 // Topaze: ending 3 conquest
+#define FLAG_REBEL_NOX 0x105 // Topaze: ending 3 conquest
+#define FLAG_REBEL_EDDIE 0x106 // Topaze: ending 3 conquest
+#define FLAG_LORD_ONE 0x107 // Topaze: ending 3 conquest
+#define FLAG_LORD_TWO 0x108 // Topaze: ending 3 conquest
+#define FLAG_LORD_THREE 0x109 // Topaze: ending 3 conquest
+#define FLAG_LORD_FOUR 0x10A // Topaze: ending 3 conquest
+#define FLAG_LORD_FIVE 0x10B // Topaze: ending 3 conquest
+#define FLAG_LORD_SIX 0x10C // Topaze: ending 3 conquest
+#define FLAG_LORD_SEVEN 0x10D // Topaze: ending 3 conquest
+#define FLAG_QUEST_LEADER_SYLVESTRE 0x10E // Topaze: post-game leader gift (CeruleanCity_Gym)
 #define FLAG_0x10F               0x10F
 #define FLAG_0x110               0x110
 #define FLAG_0x111               0x111

@@ -733,7 +733,14 @@ CinnabarIsland_Gym_EventScript_BlaineVisit2::
 	return
 
 CinnabarIsland_Gym_EventScript_BlaineVisit3::
-	msgbox CinnabarIsland_Gym_Text_BlaineVisit3
-	giveitem ITEM_RARE_CANDY, 3
-	setflag FLAG_QUEST_LEADER_BLAINE
+	goto_if_set FLAG_REBEL_EDDIE, EventScript_Return
+	msgbox CinnabarIsland_Gym_Text_BlaineRebel1
+	setvar VAR_TOPAZE_BOOST, 32
+	trainerbattle_no_intro TRAINER_LEADER_BLAINE, CinnabarIsland_Gym_Text_BlaineRebel2
+	setvar VAR_TOPAZE_BOOST, 0
+	special HealPlayerParty
+	setflag FLAG_REBEL_EDDIE
+	msgbox CinnabarIsland_Gym_Text_BlaineRebel3
+	giveitem ITEM_RARE_CANDY, 5
+	giveitem ITEM_PP_MAX, 2
 	return

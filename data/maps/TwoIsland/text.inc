@@ -84,3 +84,27 @@ TwoIsland_Text_HaveYouTriedJumpingGame::
     .string "Did you know that?\n"
     .string "Boing!$"
 
+
+TwoIsland_Text_Lord1::
+    .string "KAREN: Strong people, weak people... I\n"
+    .string "care only about the Pokémon who\lfollow you. Do they love you?$"
+
+TwoIsland_Text_Lord2::
+    .string "They do. I can see it.$"
+
+TwoIsland_Text_Lord3::
+    .string "KAREN: Then you may rule, as long as\n"
+    .string "they keep following. Take this.$"
+
+TwoIsland_Text_LordEarly::
+    .string "KAREN: Not yet. The old LEAGUE\n"
+    .string "and the MASTERS must fall first.\n"
+    .string "FLORA will tell you the way.$"
+
+TwoIsland_Text_LordDone::
+    .string "KAREN: A ruler worthy of the six.\n"
+    .string "I will remember this day.$"
+
+TwoIsland_Text_LordIdle::
+    .string "KAREN: The islands are quiet. I look\n"
+    .string "after them, as I always have.$"

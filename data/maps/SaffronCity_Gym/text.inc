@@ -174,13 +174,27 @@ SaffronCity_Gym_Text_StoneGift::
     .string "FUCHSIA is molten rock now.$"
 
 SaffronCity_Gym_Text_SabrinaVisit1::
-    .string "SABRINA: I saw the wish in my dreams.\n"
+    .string "NOX: I saw the wish in my dreams.\n"
     .string "You chose well. Take this.$"
 
 SaffronCity_Gym_Text_SabrinaVisit2::
-    .string "SABRINA: A silent world. I like it.\n"
+    .string "NOX: A silent world. I like it.\n"
     .string "Take these, you earned them.$"
 
 SaffronCity_Gym_Text_SabrinaVisit3::
-    .string "SABRINA: I foresaw the six. Control\n"
+    .string "NOX: I foresaw the six. Control\n"
     .string "them or they will control you.$"
+
+SaffronCity_Gym_Text_SabrinaRebel1::
+    .string "NOX: I saw you in a dream: a crown\n"
+    .string "with six gems. I did not see how it\l"
+    .string "ends.\p"
+    .string "Let us find out together.$"
+
+SaffronCity_Gym_Text_SabrinaRebel2::
+    .string "The dream breaks.\n"
+    .string "The morning is yours.$"
+
+SaffronCity_Gym_Text_SabrinaRebel3::
+    .string "NOX: Dreams can lie. I do not think\n"
+    .string "yours does. Take this.$"

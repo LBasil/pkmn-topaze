@@ -112,7 +112,14 @@ FuchsiaCity_Gym_EventScript_KogaVisit2::
 	return
 
 FuchsiaCity_Gym_EventScript_KogaVisit3::
-	msgbox FuchsiaCity_Gym_Text_KogaVisit3
-	giveitem ITEM_RARE_CANDY, 3
-	setflag FLAG_QUEST_LEADER_KOGA
+	goto_if_set FLAG_REBEL_ACHLYS, EventScript_Return
+	msgbox FuchsiaCity_Gym_Text_KogaRebel1
+	setvar VAR_TOPAZE_BOOST, 38
+	trainerbattle_no_intro TRAINER_LEADER_KOGA, FuchsiaCity_Gym_Text_KogaRebel2
+	setvar VAR_TOPAZE_BOOST, 0
+	special HealPlayerParty
+	setflag FLAG_REBEL_ACHLYS
+	msgbox FuchsiaCity_Gym_Text_KogaRebel3
+	giveitem ITEM_RARE_CANDY, 5
+	giveitem ITEM_PP_MAX, 2
 	return

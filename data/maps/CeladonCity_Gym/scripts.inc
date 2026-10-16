@@ -106,7 +106,14 @@ CeladonCity_Gym_EventScript_ErikaVisit2::
 	return
 
 CeladonCity_Gym_EventScript_ErikaVisit3::
-	msgbox CeladonCity_Gym_Text_ErikaVisit3
-	giveitem ITEM_RARE_CANDY, 3
-	setflag FLAG_QUEST_LEADER_ERIKA
+	goto_if_set FLAG_REBEL_GRIM, EventScript_Return
+	msgbox CeladonCity_Gym_Text_ErikaRebel1
+	setvar VAR_TOPAZE_BOOST, 41
+	trainerbattle_no_intro TRAINER_LEADER_ERIKA, CeladonCity_Gym_Text_ErikaRebel2
+	setvar VAR_TOPAZE_BOOST, 0
+	special HealPlayerParty
+	setflag FLAG_REBEL_GRIM
+	msgbox CeladonCity_Gym_Text_ErikaRebel3
+	giveitem ITEM_RARE_CANDY, 5
+	giveitem ITEM_PP_MAX, 2
 	return

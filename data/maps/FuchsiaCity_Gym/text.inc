@@ -155,13 +155,26 @@ FuchsiaCity_Gym_Text_GymStatuePlayerWon::
 
 
 FuchsiaCity_Gym_Text_KogaVisit1::
-    .string "KOGA: You let the wish fly. A ninja\n"
+    .string "ACHLYS: You let the wish fly. A ninja\n"
     .string "understands. Take this.$"
 
 FuchsiaCity_Gym_Text_KogaVisit2::
-    .string "KOGA: No balls. Even a ninja can rest.\n"
-    .string "Take these potions.$"
+    .string "ACHLYS: No balls. Even a ninja can\n"
+    .string "rest. Take these potions.$"
 
 FuchsiaCity_Gym_Text_KogaVisit3::
-    .string "KOGA: Six legends. A ninja would have\n"
-    .string "hidden them. Use these wisely.$"
+    .string "ACHLYS: Six legends. A ninja would\n"
+    .string "have hidden them. Use these wisely.$"
+
+FuchsiaCity_Gym_Text_KogaRebel1::
+    .string "ACHLYS: My poison once served the\n"
+    .string "shadows. Now I serve the question:\l"
+    .string "should one trainer rule it all?$"
+
+FuchsiaCity_Gym_Text_KogaRebel2::
+    .string "A cure...\n"
+    .string "you found it.$"
+
+FuchsiaCity_Gym_Text_KogaRebel3::
+    .string "ACHLYS: The answer is not yes or no.\n"
+    .string "It is how. Take this antidote.$"

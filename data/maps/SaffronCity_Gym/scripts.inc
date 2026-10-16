@@ -136,7 +136,14 @@ SaffronCity_Gym_EventScript_SabrinaVisit2::
 	return
 
 SaffronCity_Gym_EventScript_SabrinaVisit3::
-	msgbox SaffronCity_Gym_Text_SabrinaVisit3
-	giveitem ITEM_RARE_CANDY, 3
-	setflag FLAG_QUEST_LEADER_SABRINA
+	goto_if_set FLAG_REBEL_NOX, EventScript_Return
+	msgbox SaffronCity_Gym_Text_SabrinaRebel1
+	setvar VAR_TOPAZE_BOOST, 35
+	trainerbattle_no_intro TRAINER_LEADER_SABRINA, SaffronCity_Gym_Text_SabrinaRebel2
+	setvar VAR_TOPAZE_BOOST, 0
+	special HealPlayerParty
+	setflag FLAG_REBEL_NOX
+	msgbox SaffronCity_Gym_Text_SabrinaRebel3
+	giveitem ITEM_RARE_CANDY, 5
+	giveitem ITEM_PP_MAX, 2
 	return

@@ -161,3 +161,37 @@ FourIsland_EventScript_IslandSign::
 FourIsland_EventScript_LoreleisHouseSign::
 	msgbox FourIsland_Text_LoreleisHouse, MSGBOX_SIGN
 	end
+
+@ Topaze, fin 3 : Seigneur de l'ile (duel avec niveaux gonfles par VAR_TOPAZE_BOOST), apres les Maitres de la Ligue (VAR_REBELS_ROUND >= 8)
+FourIsland_EventScript_Lord::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SYS_GAME_CLEAR, EventScript_ReleaseEnd
+	goto_if_ne VAR_TOPAZE_ENDING, 3, FourIsland_EventScript_LordIdle
+	goto_if_set FLAG_LORD_FOUR, FourIsland_EventScript_LordDone
+	goto_if_lt VAR_REBELS_ROUND, 8, FourIsland_EventScript_LordEarly
+	msgbox FourIsland_Text_Lord1
+	setvar VAR_TOPAZE_BOOST, 15
+	trainerbattle_no_intro TRAINER_ELDER_GLACIA, FourIsland_Text_Lord2
+	setvar VAR_TOPAZE_BOOST, 0
+	special HealPlayerParty
+	setflag FLAG_LORD_FOUR
+	msgbox FourIsland_Text_Lord3
+	giveitem ITEM_RARE_CANDY, 4
+	release
+	end
+
+FourIsland_EventScript_LordEarly::
+	msgbox FourIsland_Text_LordEarly
+	release
+	end
+
+FourIsland_EventScript_LordDone::
+	msgbox FourIsland_Text_LordDone
+	release
+	end
+
+FourIsland_EventScript_LordIdle::
+	msgbox FourIsland_Text_LordIdle
+	release
+	end

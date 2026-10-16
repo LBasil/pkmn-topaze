@@ -83,11 +83,10 @@ IndigoPlateau_PokemonCenter_1F_Text_MistyAfter::
     .string "cottage when you have a moment.$"
 
 IndigoPlateau_PokemonCenter_1F_Text_RebelsIntro::
-    .string "FLORA: You hold the six legends now.\n"
-    .string "Eight GYM LEADERS refuse to bow.\p"
-    .string "They call themselves the REBELS and\n"
-    .string "they have trained hard since.\p"
-    .string "Will you face them? I will heal your\n"
+    .string "FLORA: The seven REBEL LEADERS have\n"
+    .string "fallen. Now their master, HEPHA,\l"
+    .string "has come down from the old GYM.\p"
+    .string "Face him here. I will heal your\n"
     .string "team before each duel.$"
 
 IndigoPlateau_PokemonCenter_1F_Text_RebelsContinue::
@@ -121,27 +120,46 @@ IndigoPlateau_PokemonCenter_1F_Text_RebelsDone::
     .string "CHAMPION of all.$"
 
 IndigoPlateau_PokemonCenter_1F_Text_RebelsStage1::
-    .string "FLORA: The eight REBELS are down.\n"
-    .string "Take these. You earned them.\p"
-    .string "The THRONE MARKET opens for you.\n"
-    .string "Ask me when you wish to shop.$"
+    .string "FLORA: HEPHA kneels at last. Take\n"
+    .string "these. The THRONE MARKET is open.\p"
+    .string "Ask me when you wish to shop.\n"
+    .string "Now, the old LEAGUE awaits.$"
 
 IndigoPlateau_PokemonCenter_1F_Text_RebelsCourt::
     .string "FLORA: The old LEAGUE wants to test\n"
-    .string "the one who rules the six legends.\p"
-    .string "LORELEI, BRUNO, AGATHA and LANCE.\n"
-    .string "Ready?$"
+    .string "the one who rules the six legends.$"
 
 IndigoPlateau_PokemonCenter_1F_Text_RebelsStage2::
     .string "FLORA: The four of the LEAGUE have\n"
-    .string "bowed. One step left.\p"
-    .string "The three MASTERS are waiting.$"
+    .string "bowed. One step left: GOLD,\l"
+    .string "SILVER and GIOVANNI wait.$"
 
 IndigoPlateau_PokemonCenter_1F_Text_RebelsMasters::
     .string "FLORA: GOLD, SILVER and GIOVANNI.\n"
-    .string "They trained for this day.\p"
-    .string "Shall I call them?$"
+    .string "They trained for this day.$"
 
 IndigoPlateau_PokemonCenter_1F_Text_MarketAsk::
     .string "FLORA: Do you wish to visit the\n"
     .string "THRONE MARKET?$"
+
+IndigoPlateau_PokemonCenter_1F_Text_RebelsGyms::
+    .string "FLORA: Seven REBEL LEADERS wait in\n"
+    .string "their own GYMS across the land,\l"
+    .string "the same seven who tested you.\p"
+    .string "Beat all seven, then come back.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_RebelsLords::
+    .string "FLORA: Seven LORDS now guard the\n"
+    .string "SEVII ISLANDS, one on each. Beat\l"
+    .string "them all, then STEVEN will come.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_RebelsSteven::
+    .string "FLORA: Seven LORDS have bowed.\n"
+    .string "STEVEN, the last of the old\l"
+    .string "CHAMPIONS, asks for a duel.\p"
+    .string "Shall I call him?$"
+
+IndigoPlateau_PokemonCenter_1F_Text_RebelsStage3::
+    .string "FLORA: The three MASTERS have\n"
+    .string "fallen. Now the LORDS of the\l"
+    .string "SEVII ISLANDS ask for a duel.$"

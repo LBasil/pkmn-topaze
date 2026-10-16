@@ -215,3 +215,37 @@ TwoIsland_EventScript_JoyfulGameCornerSign::
 TwoIsland_EventScript_FastCurrentSign::
 	msgbox TwoIsland_Text_DangerFastCurrent, MSGBOX_SIGN
 	end
+
+@ Topaze, fin 3 : Seigneur de l'ile (duel avec niveaux gonfles par VAR_TOPAZE_BOOST), apres les Maitres de la Ligue (VAR_REBELS_ROUND >= 8)
+TwoIsland_EventScript_Lord::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SYS_GAME_CLEAR, EventScript_ReleaseEnd
+	goto_if_ne VAR_TOPAZE_ENDING, 3, TwoIsland_EventScript_LordIdle
+	goto_if_set FLAG_LORD_TWO, TwoIsland_EventScript_LordDone
+	goto_if_lt VAR_REBELS_ROUND, 8, TwoIsland_EventScript_LordEarly
+	msgbox TwoIsland_Text_Lord1
+	setvar VAR_TOPAZE_BOOST, 17
+	trainerbattle_no_intro TRAINER_ELDER_KAREN, TwoIsland_Text_Lord2
+	setvar VAR_TOPAZE_BOOST, 0
+	special HealPlayerParty
+	setflag FLAG_LORD_TWO
+	msgbox TwoIsland_Text_Lord3
+	giveitem ITEM_RARE_CANDY, 4
+	release
+	end
+
+TwoIsland_EventScript_LordEarly::
+	msgbox TwoIsland_Text_LordEarly
+	release
+	end
+
+TwoIsland_EventScript_LordDone::
+	msgbox TwoIsland_Text_LordDone
+	release
+	end
+
+TwoIsland_EventScript_LordIdle::
+	msgbox TwoIsland_Text_LordIdle
+	release
+	end

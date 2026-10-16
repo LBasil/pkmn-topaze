@@ -321,7 +321,14 @@ VermilionCity_Gym_EventScript_LtSurgeVisit2::
 	return
 
 VermilionCity_Gym_EventScript_LtSurgeVisit3::
-	msgbox VermilionCity_Gym_Text_LtSurgeVisit3
-	giveitem ITEM_RARE_CANDY, 3
-	setflag FLAG_QUEST_LEADER_LTSURGE
+	goto_if_set FLAG_REBEL_HERA, EventScript_Return
+	msgbox VermilionCity_Gym_Text_LtSurgeRebel1
+	setvar VAR_TOPAZE_BOOST, 45
+	trainerbattle_no_intro TRAINER_LEADER_LT_SURGE, VermilionCity_Gym_Text_LtSurgeRebel2
+	setvar VAR_TOPAZE_BOOST, 0
+	special HealPlayerParty
+	setflag FLAG_REBEL_HERA
+	msgbox VermilionCity_Gym_Text_LtSurgeRebel3
+	giveitem ITEM_RARE_CANDY, 5
+	giveitem ITEM_PP_MAX, 2
 	return

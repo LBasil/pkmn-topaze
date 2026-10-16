@@ -104,7 +104,14 @@ PewterCity_Gym_EventScript_BrockVisit2::
 	return
 
 PewterCity_Gym_EventScript_BrockVisit3::
-	msgbox PewterCity_Gym_Text_BrockVisit3
-	giveitem ITEM_RARE_CANDY, 3
-	setflag FLAG_QUEST_LEADER_BROCK
+	goto_if_set FLAG_REBEL_KAY, EventScript_Return
+	msgbox PewterCity_Gym_Text_BrockRebel1
+	setvar VAR_TOPAZE_BOOST, 54
+	trainerbattle_no_intro TRAINER_LEADER_BROCK, PewterCity_Gym_Text_BrockRebel2
+	setvar VAR_TOPAZE_BOOST, 0
+	special HealPlayerParty
+	setflag FLAG_REBEL_KAY
+	msgbox PewterCity_Gym_Text_BrockRebel3
+	giveitem ITEM_RARE_CANDY, 5
+	giveitem ITEM_PP_MAX, 2
 	return

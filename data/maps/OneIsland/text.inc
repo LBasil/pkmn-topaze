@@ -60,3 +60,27 @@ OneIsland_Text_IsntWarmClimateHereGreat::
     .string "Hi, sight-seeing, are you?\n"
     .string "Isn't the warm climate here great?$"
 
+
+OneIsland_Text_Lord1::
+    .string "WILL: I read your thoughts before you\n"
+    .string "speak, CHAMPION. You hold six\llegends and fear your own power.\pLet me test that fear!$"
+
+OneIsland_Text_Lord2::
+    .string "I saw the wrong future.$"
+
+OneIsland_Text_Lord3::
+    .string "WILL: The mind is a door, not a wall.\n"
+    .string "Keep yours open. Take this.$"
+
+OneIsland_Text_LordEarly::
+    .string "WILL: Not yet. The old LEAGUE\n"
+    .string "and the MASTERS must fall first.\n"
+    .string "FLORA will tell you the way.$"
+
+OneIsland_Text_LordDone::
+    .string "WILL: A ruler worthy of the six.\n"
+    .string "I will remember this day.$"
+
+OneIsland_Text_LordIdle::
+    .string "WILL: The islands are quiet. I look\n"
+    .string "after them, as I always have.$"

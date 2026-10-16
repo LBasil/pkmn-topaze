@@ -54,3 +54,29 @@ FourIsland_Text_MadeSlushieUsingIcefallCaveIce::
 FourIsland_Text_LoreleisHouse::
     .string "LORELEI'S HOUSE$"
 
+
+FourIsland_Text_Lord1::
+    .string "GLACIA: Frozen cities, frozen\n"
+    .string "kings... it happened before. I will\l"
+    .string "see how your crown holds against\n"
+    .string "ice!$"
+
+FourIsland_Text_Lord2::
+    .string "Warm. You are warm.$"
+
+FourIsland_Text_Lord3::
+    .string "GLACIA: A ruler who can still feel\n"
+    .string "the cold is a good ruler. Take this.$"
+
+FourIsland_Text_LordEarly::
+    .string "GLACIA: Not yet. The old LEAGUE\n"
+    .string "and the MASTERS must fall first.\n"
+    .string "FLORA will tell you the way.$"
+
+FourIsland_Text_LordDone::
+    .string "GLACIA: A ruler worthy of the six.\n"
+    .string "I will remember this day.$"
+
+FourIsland_Text_LordIdle::
+    .string "GLACIA: The islands are quiet. I look\n"
+    .string "after them, as I always have.$"

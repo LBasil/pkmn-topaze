@@ -146,13 +146,27 @@ VermilionCity_Gym_Text_GymClosed::
     .string "Go to the harbor and help them!$"
 
 VermilionCity_Gym_Text_LtSurgeVisit1::
-    .string "SURGE: A wish let go. You've got guts,\n"
+    .string "HERA: A wish let go. You've got guts,\n"
     .string "kid. Take this spark.$"
 
 VermilionCity_Gym_Text_LtSurgeVisit2::
-    .string "SURGE: No balls, no cages. A real\n"
+    .string "HERA: No balls, no cages. A real\n"
     .string "soldier needs rest. Take these.$"
 
 VermilionCity_Gym_Text_LtSurgeVisit3::
-    .string "SURGE: The six legends? Hah! Don't let\n"
+    .string "HERA: The six legends? Hah! Don't let\n"
     .string "them fry your head. Use this.$"
+
+VermilionCity_Gym_Text_LtSurgeRebel1::
+    .string "HERA: I fly where the wind says. And\n"
+    .string "the wind says you rule everything\l"
+    .string "now.\p"
+    .string "I will test that wind myself!$"
+
+VermilionCity_Gym_Text_LtSurgeRebel2::
+    .string "Grounded...\n"
+    .string "the sky respects you.$"
+
+VermilionCity_Gym_Text_LtSurgeRebel3::
+    .string "HERA: The sky is wide enough for\n"
+    .string "the two of us. Take this and soar.$"

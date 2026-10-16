@@ -36,3 +36,29 @@ SevenIsland_Text_IslandVirtuallyUntouched::
     .string "It could be a little difficult to\n"
     .string "hike around because of that.$"
 
+
+SevenIsland_Text_Lord1::
+    .string "WALLACE: Beauty and strength should\n"
+    .string "rule together. Shall we see if your\l"
+    .string "crown is as beautiful as it is\n"
+    .string "heavy?$"
+
+SevenIsland_Text_Lord2::
+    .string "Splendid. Truly splendid.$"
+
+SevenIsland_Text_Lord3::
+    .string "WALLACE: You are the finest ruler I\n"
+    .string "have seen. Take this, with my thanks.$"
+
+SevenIsland_Text_LordEarly::
+    .string "WALLACE: Not yet. The old LEAGUE\n"
+    .string "and the MASTERS must fall first.\n"
+    .string "FLORA will tell you the way.$"
+
+SevenIsland_Text_LordDone::
+    .string "WALLACE: A ruler worthy of the six.\n"
+    .string "I will remember this day.$"
+
+SevenIsland_Text_LordIdle::
+    .string "WALLACE: The islands are quiet. I look\n"
+    .string "after them, as I always have.$"

@@ -192,13 +192,26 @@ CinnabarIsland_Gym_Text_SorryBadCall::
 
 
 CinnabarIsland_Gym_Text_BlaineVisit1::
-    .string "BLAINE: Hah! You let the star go, kid.\n"
+    .string "EDDIE: Hah! You let the star go, kid.\n"
     .string "Burn bright! Take this.$"
 
 CinnabarIsland_Gym_Text_BlaineVisit2::
-    .string "BLAINE: No more BALLS? Fine by me.\n"
+    .string "EDDIE: No more BALLS? Fine by me.\n"
     .string "Take these, you're warmed up.$"
 
 CinnabarIsland_Gym_Text_BlaineVisit3::
-    .string "BLAINE: Six legends! Hah! Show them\n"
+    .string "EDDIE: Six legends! Hah! Show them\n"
     .string "the fire that built you. Take this.$"
+
+CinnabarIsland_Gym_Text_BlaineRebel1::
+    .string "EDDIE: Hot-blooded or cold-hearted,\n"
+    .string "you took the throne. Let me taste\l"
+    .string "the fire of your six legends!$"
+
+CinnabarIsland_Gym_Text_BlaineRebel2::
+    .string "Burnt to ash...\n"
+    .string "but I am smiling.$"
+
+CinnabarIsland_Gym_Text_BlaineRebel3::
+    .string "EDDIE: Hah! That's the spirit. The\n"
+    .string "flame is yours to guard. Take this.$"

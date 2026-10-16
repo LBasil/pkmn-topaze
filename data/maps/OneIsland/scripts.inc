@@ -104,3 +104,37 @@ OneIsland_EventScript_IslandSign::
 OneIsland_EventScript_PokemonNetCenterSign::
 	msgbox OneIsland_Text_PokemonNetCenterSign, MSGBOX_SIGN
 	end
+
+@ Topaze, fin 3 : Seigneur de l'ile (duel avec niveaux gonfles par VAR_TOPAZE_BOOST), apres les Maitres de la Ligue (VAR_REBELS_ROUND >= 8)
+OneIsland_EventScript_Lord::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SYS_GAME_CLEAR, EventScript_ReleaseEnd
+	goto_if_ne VAR_TOPAZE_ENDING, 3, OneIsland_EventScript_LordIdle
+	goto_if_set FLAG_LORD_ONE, OneIsland_EventScript_LordDone
+	goto_if_lt VAR_REBELS_ROUND, 8, OneIsland_EventScript_LordEarly
+	msgbox OneIsland_Text_Lord1
+	setvar VAR_TOPAZE_BOOST, 17
+	trainerbattle_no_intro TRAINER_ELDER_WILL, OneIsland_Text_Lord2
+	setvar VAR_TOPAZE_BOOST, 0
+	special HealPlayerParty
+	setflag FLAG_LORD_ONE
+	msgbox OneIsland_Text_Lord3
+	giveitem ITEM_RARE_CANDY, 4
+	release
+	end
+
+OneIsland_EventScript_LordEarly::
+	msgbox OneIsland_Text_LordEarly
+	release
+	end
+
+OneIsland_EventScript_LordDone::
+	msgbox OneIsland_Text_LordDone
+	release
+	end
+
+OneIsland_EventScript_LordIdle::
+	msgbox OneIsland_Text_LordIdle
+	release
+	end

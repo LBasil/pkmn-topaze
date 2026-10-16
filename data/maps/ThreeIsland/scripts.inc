@@ -384,3 +384,37 @@ ThreeIsland_EventScript_IslandSign::
 ThreeIsland_EventScript_Biker6::
 	msgbox ThreeIsland_Text_IslandBelongsToUs, MSGBOX_NPC
 	end
+
+@ Topaze, fin 3 : Seigneur de l'ile (duel avec niveaux gonfles par VAR_TOPAZE_BOOST), apres les Maitres de la Ligue (VAR_REBELS_ROUND >= 8)
+ThreeIsland_EventScript_Lord::
+	lock
+	faceplayer
+	goto_if_unset FLAG_SYS_GAME_CLEAR, EventScript_ReleaseEnd
+	goto_if_ne VAR_TOPAZE_ENDING, 3, ThreeIsland_EventScript_LordIdle
+	goto_if_set FLAG_LORD_THREE, ThreeIsland_EventScript_LordDone
+	goto_if_lt VAR_REBELS_ROUND, 8, ThreeIsland_EventScript_LordEarly
+	msgbox ThreeIsland_Text_Lord1
+	setvar VAR_TOPAZE_BOOST, 16
+	trainerbattle_no_intro TRAINER_ELDER_SIDNEY, ThreeIsland_Text_Lord2
+	setvar VAR_TOPAZE_BOOST, 0
+	special HealPlayerParty
+	setflag FLAG_LORD_THREE
+	msgbox ThreeIsland_Text_Lord3
+	giveitem ITEM_PP_MAX, 4
+	release
+	end
+
+ThreeIsland_EventScript_LordEarly::
+	msgbox ThreeIsland_Text_LordEarly
+	release
+	end
+
+ThreeIsland_EventScript_LordDone::
+	msgbox ThreeIsland_Text_LordDone
+	release
+	end
+
+ThreeIsland_EventScript_LordIdle::
+	msgbox ThreeIsland_Text_LordIdle
+	release
+	end

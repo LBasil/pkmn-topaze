@@ -94,3 +94,25 @@ CeruleanCity_Gym_Text_GymStatuePlayerWon::
     .string "WINNING TRAINERS:\n"
     .string "{RIVAL}, {PLAYER}$"
 
+
+CeruleanCity_Gym_Text_MistyRebel1::
+    .string "SYLVESTRE: Bugs and leaves take\n"
+    .string "years to grow back. We have grown,\l"
+    .string "CHAMPION.\p"
+    .string "Show me why they should follow you!$"
+
+CeruleanCity_Gym_Text_MistyRebel2::
+    .string "Pressed like a flower\n"
+    .string "in a book...$"
+
+CeruleanCity_Gym_Text_MistyRebel3::
+    .string "SYLVESTRE: I said we would bow to\n"
+    .string "no one. I did not say we would not\llisten. Take this.$"
+
+CeruleanCity_Gym_Text_MistyVisit1::
+    .string "SYLVESTRE: You let the star go.\n"
+    .string "Like a seed on the wind. Take this.$"
+
+CeruleanCity_Gym_Text_MistyVisit2::
+    .string "SYLVESTRE: A silent forest at last.\n"
+    .string "Take these, you earned them.$"
