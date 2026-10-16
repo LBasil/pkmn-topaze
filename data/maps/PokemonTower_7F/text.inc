@@ -75,7 +75,7 @@ PokemonTower_7F_Text_AdminBeatsYou::
     .string "KRONOS: Hmph. Not even worth a\n"
     .string "battle. Remember my name, child.\p"
     .string "The boss says a POKé BALL is only\n"
-    .string "a cage with a pretty colour.\p"
+    .string "a cage with a pretty color.\p"
     .string "I am only one of the boss's\n"
     .string "ADMINS. Farewell!$"
 

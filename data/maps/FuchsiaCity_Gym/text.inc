@@ -63,7 +63,7 @@ FuchsiaCity_Gym_Text_KaydenPostBattle::
 
 FuchsiaCity_Gym_Text_KirkIntro::
     .string "I was a magician once upon a time.\p"
-    .string "But I dreamt of becoming a ninja,\n"
+    .string "But I dreamed of becoming a ninja,\n"
     .string "so I joined this GYM.$"
 
 FuchsiaCity_Gym_Text_KirkDefeat::
