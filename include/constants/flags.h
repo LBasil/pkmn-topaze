@@ -263,11 +263,11 @@
 #define FLAG_QUEST_LEADER_KOGA 0x0F3 // Topaze: post-game leader gift (FuchsiaCity_Gym)
 #define FLAG_QUEST_LEADER_SABRINA 0x0F4 // Topaze: post-game leader gift (SaffronCity_Gym)
 #define FLAG_QUEST_LEADER_BLAINE 0x0F5 // Topaze: post-game leader gift (CinnabarIsland_Gym)
-#define FLAG_0x0F6               0x0F6
-#define FLAG_0x0F7               0x0F7
-#define FLAG_0x0F8               0x0F8
-#define FLAG_0x0F9               0x0F9
-#define FLAG_0x0FA               0x0FA
+#define FLAG_QUEST_REFUGE_DEX1 0x0F6 // Topaze: ending 2, Refuge Pokedex milestone reward
+#define FLAG_QUEST_REFUGE_DEX2 0x0F7 // Topaze: ending 2, Refuge Pokedex milestone reward
+#define FLAG_QUEST_REFUGE_DEX3 0x0F8 // Topaze: ending 2, Refuge Pokedex milestone reward
+#define FLAG_QUEST_REFUGE_DEX4 0x0F9 // Topaze: ending 2, Refuge Pokedex milestone reward
+#define FLAG_QUEST_REFUGE_DEX5 0x0FA // Topaze: ending 2, Refuge Pokedex milestone reward
 #define FLAG_0x0FB               0x0FB
 #define FLAG_0x0FC               0x0FC
 #define FLAG_0x0FD               0x0FD

@@ -2,6 +2,7 @@
 #include "random.h"
 #include "wild_encounter.h"
 #include "safari_zone.h"
+#include "field_specials.h"
 #include "event_data.h"
 #include "fieldmap.h"
 #include "random.h"
@@ -224,10 +225,23 @@ static bool8 UnlockedTanobyOrAreNotInTanoby(void)
     return FALSE;
 }
 
+// Topaze, fin 2 (« Le Refuge ») : la Zone Safari accueille des especes rares, a un niveau proche de celui du joueur
+static const u16 sRefugeRoster[] = {
+    SPECIES_LARVITAR, SPECIES_DRATINI, SPECIES_BAGON, SPECIES_BELDUM, SPECIES_EEVEE, SPECIES_PORYGON, SPECIES_LAPRAS,
+    SPECIES_SNORLAX, SPECIES_AERODACTYL, SPECIES_KANGASKHAN, SPECIES_HERACROSS, SPECIES_ABSOL, SPECIES_FEEBAS, SPECIES_CHANSEY,
+    SPECIES_TAUROS, SPECIES_PINSIR, SPECIES_SCYTHER, SPECIES_SKARMORY, SPECIES_MILTANK, SPECIES_DITTO, SPECIES_TOGEPI, SPECIES_SMEARGLE
+};
+
 static void GenerateWildMon(u16 species, u8 level, u8 slot)
 {
     u32 personality;
     s8 chamber;
+    if (species != SPECIES_UNOWN && VarGet(VAR_TOPAZE_ENDING) == 2 && GetSafariZoneFlag() && Random() % 3 == 0)
+    {
+        u8 top = TopazeScaledLevel();
+        species = sRefugeRoster[Random() % ARRAY_COUNT(sRefugeRoster)];
+        level = (top > 24) ? top - (Random() % 5) : 20;
+    }
     ZeroEnemyPartyMons();
     if (species != SPECIES_UNOWN)
     {

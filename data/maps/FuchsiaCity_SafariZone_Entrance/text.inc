@@ -90,3 +90,30 @@ FuchsiaCity_SafariZone_Entrance_Text_RefugeGift::
 FuchsiaCity_SafariZone_Entrance_Text_RefugeGift2::
 	.string "The SAFARI ZONE is the last refuge.\n"
 	.string "Come in whenever you wish.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_KeeperHello::
+    .string "KEEPER: Welcome to the REFUGE.\n"
+    .string "Since the BALLS vanished, rare\l"
+    .string "POKéMON hide in the park.\p"
+    .string "I keep a record of every species\n"
+    .string "you have befriended.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_KeeperCount::
+    .string "KEEPER: Let me see... You have\n"
+    .string "caught {STR_VAR_1} different species.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_KeeperThanks::
+    .string "KEEPER: A wonderful record! The\n"
+    .string "REFUGE thanks you.$"
+
+FuchsiaCity_SafariZone_Entrance_Text_KeeperNone::
+    .string "KEEPER: Nothing new this time.\n"
+    .string "Milestones: 100, 150, 200, 250 and\l"
+    .string "300 species. Keep exploring!$"
+
+FuchsiaCity_SafariZone_Entrance_Text_KeeperShopAsk::
+    .string "KEEPER: Would you like to see the\n"
+    .string "REFUGE MARKET?$"
+
+FuchsiaCity_SafariZone_Entrance_Text_KeeperBye::
+    .string "KEEPER: Come back any time.$"

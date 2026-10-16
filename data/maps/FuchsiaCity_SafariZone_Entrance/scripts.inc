@@ -223,6 +223,7 @@ FuchsiaCity_SafariZone_Entrance_Movement_EnterSafariZoneLeft::
 FuchsiaCity_SafariZone_Entrance_EventScript_InfoAttendant::
 	lock
 	faceplayer
+	goto_if_eq VAR_TOPAZE_ENDING, 2, FuchsiaCity_SafariZone_Entrance_EventScript_RefugeKeeper
 	msgbox FuchsiaCity_SafariZone_Entrance_Text_FirstTimeAtSafariZone, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, FuchsiaCity_SafariZone_Entrance_EventScript_ExplainSafariZone
 	msgbox FuchsiaCity_SafariZone_Entrance_Text_SorryYoureARegularHere
@@ -247,3 +248,86 @@ FuchsiaCity_SafariZone_Entrance_EventScript_RefugeGift::
 	setflag FLAG_TOPAZE_REFUGE_GIFT
 	msgbox FuchsiaCity_SafariZone_Entrance_Text_RefugeGift2
 	return
+
+@ Topaze, fin 2 : le gardien du Refuge recompense les paliers de Pokedex (pris) et tient le marche du Refuge
+FuchsiaCity_SafariZone_Entrance_EventScript_RefugeKeeper::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_KeeperHello
+	setvar VAR_0x8004, 1
+	specialvar VAR_RESULT, GetPokedexCount
+	buffernumberstring STR_VAR_1, VAR_0x8006
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_KeeperCount
+	setvar VAR_0x8009, 0
+	goto_if_set FLAG_QUEST_REFUGE_DEX1, FuchsiaCity_SafariZone_Entrance_EventScript_KeeperSkip0
+	goto_if_lt VAR_0x8006, 100, FuchsiaCity_SafariZone_Entrance_EventScript_KeeperSkip0
+	giveitem ITEM_RARE_CANDY, 5
+	setflag FLAG_QUEST_REFUGE_DEX1
+	setvar VAR_0x8009, 1
+FuchsiaCity_SafariZone_Entrance_EventScript_KeeperSkip0::
+	goto_if_set FLAG_QUEST_REFUGE_DEX2, FuchsiaCity_SafariZone_Entrance_EventScript_KeeperSkip1
+	goto_if_lt VAR_0x8006, 150, FuchsiaCity_SafariZone_Entrance_EventScript_KeeperSkip1
+	giveitem ITEM_PP_MAX, 5
+	setflag FLAG_QUEST_REFUGE_DEX2
+	setvar VAR_0x8009, 1
+FuchsiaCity_SafariZone_Entrance_EventScript_KeeperSkip1::
+	goto_if_set FLAG_QUEST_REFUGE_DEX3, FuchsiaCity_SafariZone_Entrance_EventScript_KeeperSkip2
+	goto_if_lt VAR_0x8006, 200, FuchsiaCity_SafariZone_Entrance_EventScript_KeeperSkip2
+	giveitem ITEM_MAX_REVIVE, 5
+	setflag FLAG_QUEST_REFUGE_DEX3
+	setvar VAR_0x8009, 1
+FuchsiaCity_SafariZone_Entrance_EventScript_KeeperSkip2::
+	goto_if_set FLAG_QUEST_REFUGE_DEX4, FuchsiaCity_SafariZone_Entrance_EventScript_KeeperSkip3
+	goto_if_lt VAR_0x8006, 250, FuchsiaCity_SafariZone_Entrance_EventScript_KeeperSkip3
+	giveitem ITEM_MASTER_BALL, 1
+	setflag FLAG_QUEST_REFUGE_DEX4
+	setvar VAR_0x8009, 1
+FuchsiaCity_SafariZone_Entrance_EventScript_KeeperSkip3::
+	goto_if_set FLAG_QUEST_REFUGE_DEX5, FuchsiaCity_SafariZone_Entrance_EventScript_KeeperSkip4
+	goto_if_lt VAR_0x8006, 300, FuchsiaCity_SafariZone_Entrance_EventScript_KeeperSkip4
+	giveitem ITEM_LUCKY_EGG, 1
+	setflag FLAG_QUEST_REFUGE_DEX5
+	setvar VAR_0x8009, 1
+FuchsiaCity_SafariZone_Entrance_EventScript_KeeperSkip4::
+	goto_if_eq VAR_0x8009, 1, FuchsiaCity_SafariZone_Entrance_EventScript_KeeperThanks
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_KeeperNone
+	goto FuchsiaCity_SafariZone_Entrance_EventScript_KeeperShop
+	end
+
+FuchsiaCity_SafariZone_Entrance_EventScript_KeeperThanks::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_KeeperThanks
+	goto FuchsiaCity_SafariZone_Entrance_EventScript_KeeperShop
+	end
+
+FuchsiaCity_SafariZone_Entrance_EventScript_KeeperShop::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_KeeperShopAsk, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_SafariZone_Entrance_EventScript_KeeperBye
+	message Text_MayIHelpYou
+	waitmessage
+	pokemart FuchsiaCity_SafariZone_Entrance_RefugeMarket
+	msgbox Text_PleaseComeAgain
+	release
+	end
+
+FuchsiaCity_SafariZone_Entrance_EventScript_KeeperBye::
+	msgbox FuchsiaCity_SafariZone_Entrance_Text_KeeperBye
+	release
+	end
+
+	.align 2
+FuchsiaCity_SafariZone_Entrance_RefugeMarket::
+	.2byte ITEM_FIRE_STONE
+	.2byte ITEM_WATER_STONE
+	.2byte ITEM_THUNDER_STONE
+	.2byte ITEM_LEAF_STONE
+	.2byte ITEM_MOON_STONE
+	.2byte ITEM_SUN_STONE
+	.2byte ITEM_METAL_COAT
+	.2byte ITEM_DRAGON_SCALE
+	.2byte ITEM_UP_GRADE
+	.2byte ITEM_KINGS_ROCK
+	.2byte ITEM_DEEP_SEA_TOOTH
+	.2byte ITEM_DEEP_SEA_SCALE
+	.2byte ITEM_SOOTHE_BELL
+	.2byte ITEM_EXP_SHARE
+	.2byte ITEM_NONE
+	release
+	end
