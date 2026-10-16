@@ -6,7 +6,33 @@ CinnabarIsland_Mart_EventScript_Woman::
 	end
 
 CinnabarIsland_Mart_EventScript_Scientist::
-	msgbox CinnabarIsland_Mart_Text_ExtraItemsNeverHurt, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_QUEST_CINNABAR_REPEL, CinnabarIsland_Mart_EventScript_ScientistDone
+	checkitem ITEM_REPEL, 3
+	goto_if_eq VAR_RESULT, TRUE, CinnabarIsland_Mart_EventScript_ScientistOffer
+	msgbox CinnabarIsland_Mart_Text_ScientistAsk
+	release
+	end
+
+CinnabarIsland_Mart_EventScript_ScientistOffer::
+	msgbox CinnabarIsland_Mart_Text_ScientistOffer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CinnabarIsland_Mart_EventScript_ScientistRefuse
+	removeitem ITEM_REPEL, 3
+	setflag FLAG_QUEST_CINNABAR_REPEL
+	msgbox CinnabarIsland_Mart_Text_ScientistGives
+	giveitem ITEM_CALCIUM
+	release
+	end
+
+CinnabarIsland_Mart_EventScript_ScientistRefuse::
+	msgbox CinnabarIsland_Mart_Text_ScientistNo
+	release
+	end
+
+CinnabarIsland_Mart_EventScript_ScientistDone::
+	msgbox CinnabarIsland_Mart_Text_ExtraItemsNeverHurt
+	release
 	end
 
 CinnabarIsland_Mart_EventScript_Clerk::

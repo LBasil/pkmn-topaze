@@ -2,7 +2,33 @@ CeruleanCity_House3_MapScripts::
 	.byte 0
 
 CeruleanCity_House3_EventScript_OldWoman::
-	msgbox CeruleanCity_House3_Text_PleaseTradeWithMyHusband, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_QUEST_CERULEAN_WATER, CeruleanCity_House3_EventScript_OldWomanDone
+	checkitem ITEM_FRESH_WATER, 2
+	goto_if_eq VAR_RESULT, TRUE, CeruleanCity_House3_EventScript_OldWomanOffer
+	msgbox CeruleanCity_House3_Text_OldWomanAsk
+	release
+	end
+
+CeruleanCity_House3_EventScript_OldWomanOffer::
+	msgbox CeruleanCity_House3_Text_OldWomanOffer, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, CeruleanCity_House3_EventScript_OldWomanRefuse
+	removeitem ITEM_FRESH_WATER, 2
+	setflag FLAG_QUEST_CERULEAN_WATER
+	msgbox CeruleanCity_House3_Text_OldWomanGives
+	giveitem ITEM_PP_UP
+	release
+	end
+
+CeruleanCity_House3_EventScript_OldWomanRefuse::
+	msgbox CeruleanCity_House3_Text_OldWomanNo
+	release
+	end
+
+CeruleanCity_House3_EventScript_OldWomanDone::
+	msgbox CeruleanCity_House3_Text_PleaseTradeWithMyHusband
+	release
 	end
 
 CeruleanCity_House3_EventScript_Dontae::

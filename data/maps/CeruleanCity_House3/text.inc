@@ -22,3 +22,21 @@ CeruleanCity_House3_Text_QuestNoRoom::
 
 CeruleanCity_House3_Text_QuestDone::
     .string "Does the LINK CABLE work well?$"
+
+CeruleanCity_House3_Text_OldWomanAsk::
+    .string "My husband is thirsty from all that\n"
+    .string "trading. Our well went dry.\pTwo bottles of FRESH WATER would\n"
+    .string "save his day, dear.$"
+
+CeruleanCity_House3_Text_OldWomanOffer::
+    .string "Is that FRESH WATER? Could you\n"
+    .string "spare two for my husband?$"
+
+CeruleanCity_House3_Text_OldWomanGives::
+    .string "Oh, bless you! He drinks like a\n"
+    .string "fish now.\pTake this, it was a gift to him\n"
+    .string "from a trainer long ago.$"
+
+CeruleanCity_House3_Text_OldWomanNo::
+    .string "Of course, of course. He will\n"
+    .string "manage.$"

@@ -18,3 +18,19 @@ VermilionCity_House3_Text_SendMyPidgeyToUnionRoom::
     .string "I send my PIDGEY to a UNION ROOM\n"
     .string "to exchange MAIL for me.$"
 
+
+VermilionCity_House3_Text_BoyAsk::
+    .string "My PIDGEY can't fly to SAFFRON,\n"
+    .string "its wing is numb. It was shocked\lat the GYM!\pI need two PARALYZE HEALS.$"
+
+VermilionCity_House3_Text_BoyOffer::
+    .string "You have PARALYZE HEALS! Please,\n"
+    .string "can I have two for PIDGEY?$"
+
+VermilionCity_House3_Text_BoyGives::
+    .string "Yes! PIDGEY flapped! It can fly\n"
+    .string "again!\pMy brother brought this from the\n"
+    .string "POWER PLANT. You take it!$"
+
+VermilionCity_House3_Text_BoyNo::
+    .string "Aw... PIDGEY will walk, then.$"

@@ -243,10 +243,10 @@
 #define FLAG_0x0DF               0x0DF
 #define FLAG_QUEST_VIRIDIAN_POTIONS 0x0E0 // Topaze: side quest, potions for the girl in the Viridian house
 #define FLAG_QUEST_PEWTER_ANTIDOTE 0x0E1 // Topaze: side quest, antidotes for the man in Pewter house 1
-#define FLAG_0x0E2               0x0E2
-#define FLAG_0x0E3               0x0E3
-#define FLAG_0x0E4               0x0E4
-#define FLAG_0x0E5               0x0E5
+#define FLAG_QUEST_CERULEAN_WATER 0x0E2 // Topaze: side quest (CeruleanCity_House3)
+#define FLAG_QUEST_VERMILION_PARA 0x0E3 // Topaze: side quest (VermilionCity_House3)
+#define FLAG_QUEST_FUCHSIA_SUPER 0x0E4 // Topaze: side quest (FuchsiaCity_House1)
+#define FLAG_QUEST_CINNABAR_REPEL 0x0E5 // Topaze: side quest (CinnabarIsland_Mart)
 #define FLAG_0x0E6               0x0E6
 #define FLAG_0x0E7               0x0E7
 #define FLAG_0x0E8               0x0E8
