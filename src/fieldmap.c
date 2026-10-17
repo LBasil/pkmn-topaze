@@ -757,6 +757,100 @@ static void SetPositionFromConnection(const struct MapConnection *connection, in
 extern bool8 gTopazeGfxFreeze;
 extern void TopazeFlushDma3Requests(void);
 extern void TransferTilesetAnimsBuffer(void);
+
+// ---- Topaze: palette ramps at map junctions (generated data: docs/topaze/ramp_gen.py) ----
+#include "topaze_ramps.h"
+#include "field_weather.h"
+static EWRAM_DATA u16 sRampBase[13 * 16] = {0};   // palettes as loaded from the tilesets (before any ramp)
+static EWRAM_DATA u16 sRampKey = 0xFFFF;
+
+static const struct TopazeRamp *TopazeFindRamp(u16 layoutId)
+{
+    u32 i;
+    for (i = 0; sTopazeRamps[i].layoutId != 0xFFFF; i++)
+        if (sTopazeRamps[i].layoutId == layoutId)
+            return &sTopazeRamps[i];
+    return NULL;
+}
+
+static u8 TopazeRampStep(const struct TopazeRampEnd *e)
+{
+    s32 d;
+    s32 w = gMapHeader.mapLayout->width, h = gMapHeader.mapLayout->height;
+    s32 x = gSaveBlock1Ptr->pos.x, y = gSaveBlock1Ptr->pos.y;
+
+    switch (e->dir)
+    {
+    case 0: d = y; break;
+    case 1: d = h - 1 - y; break;
+    case 2: d = x; break;
+    default: d = w - 1 - x; break;
+    }
+    if (d < 0) d = 0;
+    if (d >= TOPAZE_RAMP_ZONE) return 0;
+    return ((TOPAZE_RAMP_ZONE - d) * 16) / TOPAZE_RAMP_ZONE;
+}
+
+void TopazeRampApply(bool8 force)
+{
+    const struct TopazeRamp *r = gMapHeader.mapLayout ? TopazeFindRamp(gMapHeader.mapLayoutId) : NULL;
+    u8 q[3] = {0, 0, 0};
+    u16 key = 0;
+    u32 i, k;
+
+    if (r != NULL)
+    {
+        for (i = 0; i < r->n; i++)
+        {
+            q[i] = TopazeRampStep(&r->e[i]);
+            key = key * 17 + q[i];
+        }
+        key += 1 + r->layoutId * 7;
+    }
+    if (!force && key == sRampKey)
+        return;
+    sRampKey = key;
+    if (r == NULL && !force)
+        return;
+    for (i = 0; i < 13 * 16; i++)
+    {
+        s32 c[3], o[3];
+        u16 base = sRampBase[i];
+
+        if ((i & 15) == 0 || r == NULL)
+        {
+            // colour 0 of each palette is transparent: leave it alone
+            gPlttBufferUnfaded[i] = base;
+            continue;
+        }
+        o[0] = base & 31; o[1] = (base >> 5) & 31; o[2] = (base >> 10) & 31;
+        c[0] = o[0]; c[1] = o[1]; c[2] = o[2];
+        for (k = 0; k < r->n; k++)
+        {
+            u32 ch;
+            if (q[k] == 0) continue;
+            for (ch = 0; ch < 3; ch++)
+            {
+                s32 v = ((o[ch] * r->e[k].gain[ch]) >> 8) + r->e[k].bias[ch];
+                if (v < 0) v = 0;
+                if (v > 31) v = 31;
+                c[ch] += ((v - o[ch]) * q[k]) / 16;
+            }
+        }
+        for (k = 0; k < 3; k++)
+        {
+            if (c[k] < 0) c[k] = 0;
+            if (c[k] > 31) c[k] = 31;
+        }
+        gPlttBufferUnfaded[i] = c[0] | (c[1] << 5) | (c[2] << 10);
+    }
+    for (i = 0; i < 13; i++)
+    {
+        CpuCopy16(&gPlttBufferUnfaded[i * 16], &gPlttBufferFaded[i * 16], 32);
+        ApplyWeatherGammaShiftToPal(i);
+    }
+}
+
 bool8 gCameraRedrawAll; // Topaze: set when a connection crossing swapped the primary tileset
 
 bool8 CameraMove(s32 x, s32 y)
@@ -770,6 +864,7 @@ bool8 CameraMove(s32 x, s32 y)
     {
         gSaveBlock1Ptr->pos.x += x;
         gSaveBlock1Ptr->pos.y += y;
+        TopazeRampApply(FALSE);
     }
     else
     {
@@ -784,6 +879,7 @@ bool8 CameraMove(s32 x, s32 y)
         gCamera.y = old_y - gSaveBlock1Ptr->pos.y;
         gSaveBlock1Ptr->pos.x += x;
         gSaveBlock1Ptr->pos.y += y;
+        TopazeRampApply(TRUE);
         if (gCameraRedrawAll)
         {
             // Topaze: the saved view holds metatile ids of the old tilesets; do not paste it over the new map
@@ -1050,11 +1146,14 @@ void CopySecondaryTilesetToVramUsingHeap(const struct MapLayout *mapLayout)
 static void LoadPrimaryTilesetPalette(const struct MapLayout *mapLayout)
 {
     LoadTilesetPalette(mapLayout->primaryTileset, BG_PLTT_ID(0), NUM_PALS_IN_PRIMARY * PLTT_SIZE_4BPP);
+    CpuCopy16(&gPlttBufferUnfaded[0], &sRampBase[0], NUM_PALS_IN_PRIMARY * 32);
 }
 
 void LoadSecondaryTilesetPalette(const struct MapLayout *mapLayout)
 {
     LoadTilesetPalette(mapLayout->secondaryTileset, BG_PLTT_ID(NUM_PALS_IN_PRIMARY), (NUM_PALS_TOTAL - NUM_PALS_IN_PRIMARY) * PLTT_SIZE_4BPP);
+    CpuCopy16(&gPlttBufferUnfaded[NUM_PALS_IN_PRIMARY * 16], &sRampBase[NUM_PALS_IN_PRIMARY * 16], (NUM_PALS_TOTAL - NUM_PALS_IN_PRIMARY) * 32);
+    TopazeRampApply(TRUE);
 }
 
 void CopyMapTilesetsToVram(struct MapLayout const *mapLayout)
