@@ -831,6 +831,9 @@ static s32 TopazeEdgeDist(u8 dir)
     s32 w = gMapHeader.mapLayout->width, h = gMapHeader.mapLayout->height;
     s32 x = gSaveBlock1Ptr->pos.x, y = gSaveBlock1Ptr->pos.y;
 
+    s32 conDir = (dir == 0) ? CONNECTION_NORTH : (dir == 1) ? CONNECTION_SOUTH : (dir == 2) ? CONNECTION_WEST : CONNECTION_EAST;
+    s32 i, excess = 0;
+
     switch (dir)
     {
     case 0: d = y; break;
@@ -839,7 +842,27 @@ static s32 TopazeEdgeDist(u8 dir)
     default: d = w - 1 - x; break;
     }
     if (d < 0) d = 0;
-    return d;
+    // along the edge: only the stretch that really touches the neighbour counts (outside it the neighbour is not on screen)
+    if (gMapHeader.connections)
+    {
+        for (i = 0; i < gMapHeader.connections->count; i++)
+        {
+            const struct MapConnection *c = &gMapHeader.connections->connections[i];
+
+            if (c->direction == conDir)
+            {
+                const struct MapHeader *n = GetMapHeaderFromConnection(c);
+                s32 p = (dir < 2) ? x : y;
+                s32 lo = c->offset;
+                s32 hi = c->offset + ((dir < 2) ? n->mapLayout->width : n->mapLayout->height) - 1;
+
+                if (p < lo) excess = lo - p;
+                else if (p > hi) excess = p - hi;
+                break;
+            }
+        }
+    }
+    return d + excess;
 }
 
 static u8 TopazeRampStep(const struct TopazeRampEnd *e)
