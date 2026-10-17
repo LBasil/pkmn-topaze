@@ -90,21 +90,21 @@
     {
       "x": 4,
       "y": 20,
-      "elevation": 3,
+      "elevation": 0,
       "dest_map": "MAP_VERMILION_CITY",
       "dest_warp_id": "9"
     },
     {
       "x": 5,
       "y": 20,
-      "elevation": 3,
+      "elevation": 0,
       "dest_map": "MAP_VERMILION_CITY",
       "dest_warp_id": "9"
     },
     {
       "x": 5,
       "y": 20,
-      "elevation": 3,
+      "elevation": 0,
       "dest_map": "MAP_VERMILION_CITY",
       "dest_warp_id": "9"
     }

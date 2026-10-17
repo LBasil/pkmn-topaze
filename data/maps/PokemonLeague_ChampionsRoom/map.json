@@ -50,14 +50,14 @@
     {
       "x": 6,
       "y": 19,
-      "elevation": 3,
+      "elevation": 0,
       "dest_map": "MAP_POKEMON_LEAGUE_LORELEIS_ROOM",
       "dest_warp_id": "1"
     },
     {
       "x": 6,
       "y": 2,
-      "elevation": 3,
+      "elevation": 0,
       "dest_map": "MAP_POKEMON_LEAGUE_HALL_OF_FAME",
       "dest_warp_id": "0"
     }

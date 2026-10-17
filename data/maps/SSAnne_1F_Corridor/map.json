@@ -62,7 +62,7 @@
     {
       "x": 19,
       "y": 1,
-      "elevation": 3,
+      "elevation": 0,
       "dest_map": "MAP_SSANNE_EXTERIOR",
       "dest_warp_id": "2"
     },

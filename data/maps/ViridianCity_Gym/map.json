@@ -161,21 +161,21 @@
     {
       "x": 5,
       "y": 27,
-      "elevation": 3,
+      "elevation": 0,
       "dest_map": "MAP_VIRIDIAN_CITY",
       "dest_warp_id": "2"
     },
     {
       "x": 6,
       "y": 27,
-      "elevation": 3,
+      "elevation": 0,
       "dest_map": "MAP_VIRIDIAN_CITY",
       "dest_warp_id": "2"
     },
     {
       "x": 6,
       "y": 27,
-      "elevation": 3,
+      "elevation": 0,
       "dest_map": "MAP_VIRIDIAN_CITY",
       "dest_warp_id": "2"
     }
@@ -202,7 +202,7 @@
       "type": "hidden_item",
       "x": 1,
       "y": 4,
-      "elevation": 3,
+      "elevation": 0,
       "item": "ITEM_MACHO_BRACE",
       "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_CITY_GYM_MACHO_BRACE",
       "quantity": 1,
