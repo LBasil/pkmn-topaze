@@ -160,6 +160,37 @@ static bool8 TopazeIsFogPair(u16 a, u16 b)
     return FALSE;
 }
 
+static void TopazeFillFogStrip(s32 dir, const struct TopazeFogStrip *st, const struct MapHeader *cMap, s32 offset)
+{
+    s32 cw = cMap->mapLayout->width, ch = cMap->mapLayout->height;
+    s32 cx, cy, cx0 = 0, cx1 = VMap.Xsize, cy0 = 0, cy1 = VMap.Ysize;
+
+    switch (dir)
+    {
+    case CONNECTION_WEST: cx1 = MAP_OFFSET; break;
+    case CONNECTION_EAST: cx0 = sFogW + MAP_OFFSET; break;
+    case CONNECTION_NORTH: cy1 = MAP_OFFSET; break;
+    case CONNECTION_SOUTH: cy0 = sFogH + MAP_OFFSET; break;
+    }
+    for (cy = cy0; cy < cy1; cy++)
+        for (cx = cx0; cx < cx1; cx++)
+        {
+            s32 bx, by, sx, sy;
+
+            switch (dir)
+            {
+            case CONNECTION_WEST: bx = cw - MAP_OFFSET + cx; by = cy - MAP_OFFSET - offset; break;
+            case CONNECTION_EAST: bx = cx - sFogW - MAP_OFFSET; by = cy - MAP_OFFSET - offset; break;
+            case CONNECTION_NORTH: bx = cx - MAP_OFFSET - offset; by = ch - MAP_OFFSET + cy; break;
+            default: bx = cx - MAP_OFFSET - offset; by = cy - sFogH - MAP_OFFSET; break;
+            }
+            sx = bx - st->x0;
+            sy = by - st->y0;
+            if (sx >= 0 && sy >= 0 && sx < st->w && sy < st->h)
+                VMap.map[VMap.Xsize * cy + cx] = st->data[sy * st->w + sx];
+        }
+}
+
 static void InitBackupMapLayoutConnections(struct MapHeader *mapHeader)
 {
     s32 count;
@@ -186,6 +217,20 @@ static void InitBackupMapLayoutConnections(struct MapHeader *mapHeader)
             sFogLayoutA = mapHeader->mapLayoutId;
             sFogW = mapHeader->mapLayout->width;
             sFogH = mapHeader->mapLayout->height;
+            if (sFogActive && cMap && TopazeFindFogStrip(mapHeader->mapLayoutId, cMap->mapLayoutId) != NULL)
+            {
+                // Topaze: the strip covers the whole margin of this side (neighbour cells AND the neighbour's own border)
+                TopazeFillFogStrip(connection->direction, TopazeFindFogStrip(mapHeader->mapLayoutId, cMap->mapLayoutId), cMap, offset);
+                switch (connection->direction)
+                {
+                case CONNECTION_SOUTH: gMapConnectionFlags.south = TRUE; break;
+                case CONNECTION_NORTH: gMapConnectionFlags.north = TRUE; break;
+                case CONNECTION_WEST: gMapConnectionFlags.west = TRUE; break;
+                case CONNECTION_EAST: gMapConnectionFlags.east = TRUE; break;
+                }
+                sFogActive = FALSE;
+                continue;
+            }
             switch (connection->direction)
             {
             case CONNECTION_SOUTH:
@@ -893,10 +938,21 @@ void TopazeRampApply(bool8 force)
     if (r != NULL)
     {
         for (i = 0; i < r->n; i++)
-        {
             q[i] = TopazeRampStep(&r->e[i]);
-            key = key * 17 + q[i];
+        // an end that is fully ramped (strip of that neighbour on screen) hides the others: the neighbour's strip is drawn with that end only
+        if (r->n > 1)
+        {
+            u8 q0[3] = {q[0], q[1], q[2]};
+            for (i = 0; i < r->n; i++)
+            {
+                u32 mx = 0;
+                for (k = 0; k < r->n; k++)
+                    if (k != i && q0[k] > mx) mx = q0[k];
+                q[i] = (q0[i] * (16 - mx)) / 16;
+            }
         }
+        for (i = 0; i < r->n; i++)
+            key = key * 17 + q[i];
         key += 1 + r->layoutId * 7;
     }
     key = key * 128 + (sel + 1);

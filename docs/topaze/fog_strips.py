@@ -79,11 +79,25 @@ def translate(LA,LB,vB,cache):
     cache[mid]=(best,blocked)
     return cache[mid]
 NBV=6      # profondeur verticale : l'ecran montre 5 rangees au-dela du bord
-def rect(Bw,Bh,dr):
-    if dr=='down': return (0,0,Bw,NBV)
-    if dr=='up': return (0,Bh-NBV,Bw,NBV)
-    if dr=='left': return (Bw-NB,0,NB,Bh)
-    return (0,0,NB,Bh)
+def rect(Bw,Bh,dr,Aw,Ah,off):
+    """zone du voisin B (coordonnees de B) vue depuis A : bande de profondeur 8 (6 en vertical) sur TOUTE la marge de A (+-7 cases),
+    y compris les cases hors de B (-> bordure de B, comme B la dessinerait une fois le raccord franchi)"""
+    if dr=='down': return (-7-off,0,Aw+14,NBV)
+    if dr=='up': return (-7-off,Bh-NBV,Aw+14,NBV)
+    if dr=='left': return (Bw-NB,-7-off,NB,Ah+14)
+    return (0,-7-off,NB,Ah+14)
+_BRD={}
+def cv(LB,x,y):
+    """valeur de la case (x,y) de B ; hors carte = bloc de bordure de B (impassable)"""
+    if 0<=x<LB.w and 0<=y<LB.h: return LB.get(x,y)
+    k=id(LB)
+    if k not in _BRD:
+        try:
+            b=open(os.path.join(R,LB.l['border_filepath']),'rb').read()
+            _BRD[k]=(LB.l.get('border_width',2),LB.l.get('border_height',2),struct.unpack('<%dH'%(len(b)//2),b))
+        except Exception: _BRD[k]=(1,1,(0,))
+    bw,bh,vals=_BRD[k]
+    return (vals[(x%bw)+(y%bh)*bw]&0x3ff)|0xC00
 
 conns=connections()
 _L=mapkit.layouts();_have={(a,dr,b) for a,dr,b,_ in conns}
@@ -217,8 +231,8 @@ for (la,dr),lst in groups.items():
     pals={}
     for (k,a,dr_,b,off) in lst:
         lb=MAPS[b]['layout']; LB=layout(lb); CB=ctx(lb,FT.RAMPS.get(lb,{}).get(FT.DIRN[OPP[dr]]))
-        x0,y0,w,h=rect(LB.w,LB.h,dr)
-        cnt=collections.Counter(LB.get(x,y)&0x3ff for y in range(y0,y0+h) for x in range(x0,x0+w))
+        x0,y0,w,h=rect(LB.w,LB.h,dr,LA.w,LA.h,off)
+        cnt=collections.Counter(cv(LB,x,y)&0x3ff for y in range(y0,y0+h) for x in range(x0,x0+w))
         j=dict(k=k,a=a,b=b,LB=LB,CB=CB,rect=(x0,y0,w,h),cnt=cnt,T={m:CB.render(m) for m in cnt},ments={})
         for m,c in cnt.items():
             ts=LB.prim if m<640 else LB.sec; i=m if m<640 else m-640
@@ -407,7 +421,7 @@ for g in GR:
         x0,y0,w,h=j['rect']; mm=j['mm']; data=[]; tot=0.0;nn=0
         for y in range(y0,y0+h):
             for x in range(x0,x0+w):
-                v=LB.get(x,y); nid,blk,_,e=mm[v&0x3ff]
+                v=cv(LB,x,y); nid,blk,_,e=mm[v&0x3ff]
                 coll=(v>>10)&3
                 if blk: coll=1
                 data.append(nid|(coll<<10)|((v>>12)<<12))
@@ -421,7 +435,7 @@ for g in GR:
         if DEBUG:
             im1=Image.new('RGB',(w*16,h*16));im2=Image.new('RGB',(w*16,h*16))
             for i,v in enumerate(data):
-                xx,yy=i%w,i//w; mid0=LB.get(x0+xx,y0+yy)&0x3ff
+                xx,yy=i%w,i//w; mid0=cv(LB,x0+xx,y0+yy)&0x3ff
                 im1.paste(Image.fromarray(np.clip(j['T'][mid0],0,255).astype(np.uint8),'RGB'),(xx*16,yy*16))
                 im2.paste(Image.fromarray(np.clip(mm[mid0][2],0,255).astype(np.uint8),'RGB'),(xx*16,yy*16))
             dbg.append((k,a,b,im1,im2))
