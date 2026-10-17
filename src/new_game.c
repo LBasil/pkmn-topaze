@@ -61,7 +61,12 @@ static void InitPlayerTrainerId(void)
 
 static void SetDefaultOptions(void)
 {
-    gSaveBlock2Ptr->optionsTextSpeed = OPTIONS_TEXT_SPEED_FAST;
+    gSaveBlock2Ptr->optionsTextSpeed = OPTIONS_TEXT_SPEED_INSTANT;
+    gSaveBlock2Ptr->optionsTopaze = 0;
+    TOPAZE_OPT_SET(0, 3, 2);  // HP bar: instant
+    TOPAZE_OPT_SET(2, 3, 2);  // EXP bar: instant
+    TOPAZE_OPT_SET(4, 1, 1);  // level-ups: stacked
+    TOPAZE_OPT_SET(9, 1, 1);  // POKéMON CENTER: instant heal
     gSaveBlock2Ptr->optionsWindowFrameType = 0;
     gSaveBlock2Ptr->optionsSound = OPTIONS_SOUND_MONO;
     gSaveBlock2Ptr->optionsBattleStyle = OPTIONS_BATTLE_STYLE_SHIFT;
