@@ -604,3 +604,10 @@ Generateurs (a ne lancer qu'une fois) : `tools/topaze/gen/ending3.py`, `ending2.
 - **Fin 2 « Le Refuge »** (`VAR_REFUGE_STAGE` = `VAR_0x402F`, 0-19) : 16 postes de gardes (PNJ fixes `*_EventScript_Refuge`) dans les 9 villes de Kanto + 7 iles, alternance livraison d'objets / duel contre 2 chasseurs (Gentleman + Jongleur boostes) avec un Pokemon rare en recompense ; puis chez le gardien du Safari : chef des chasseurs -> Lugia ; 200 especes -> Ho-Oh ; 300 especes -> Deoxys. S'ajoutent les especes rares du Safari, les paliers de Pokedex et le marche du Refuge.
 - Tests emulateur : `tools/topaze/emu/bench/ending3_*_test.py`, `ending2_ranger_test.py`, `postgame_misty_test.py`.
 - NON jouees : les 8 etapes restantes de chaque chaine (seulement quelques etapes testees isolement), la quete des Lords de bout en bout, les 3 defis finaux de la fin 2.
+
+## Équilibrage des post-game (17/10)
+- **Îles Sevii + Echoes ouverts aux 3 fins** : le ferry de Vermilion, Three Island (motards), Bill/Célio, la maison de Lorelei et la grotte Glacon testent `FLAG_TOPAZE_COUNCIL` (posé au Temple pour toutes les fins) au lieu de `FLAG_TOPAZE_POSTGAME` (fin 1 seule). Les captures d'Echoes passent par `setwildbattle` : elles marchent aussi en fin 2.
+- **Propre à la fin 1** (toujours sous `FLAG_TOPAZE_POSTGAME`) : Mew (mine + camion), oiseaux légendaires, Sulfura, Mt Brasier, retour à Bourg-Palette.
+- **Propre à la fin 2** : Refuge (16 postes, Lugia / Ho-Oh / Deoxys).
+- **Propre à la fin 3** : Reconquête (7 arènes, hub Flora, 7 Seigneurs, Steven) puis les 3 Titans (Groudon : Mt Brasier, Chemin de Rubis 1F ; Kyogre : Écume B4F ; Rayquaza : Plateau Indigo), générés par `tools/topaze/gen/ending3_titans.py`, visibles seulement si fin 3 et `VAR_REBELS_ROUND == 9`. Sprites provisoires (Ho-Oh, Lugia, Deoxys N). Flags 0x0EC-0x0EE (HIDE), 0x0EF/0x0FB/0x0FC (FOUGHT).
+- Test : `tools/topaze/emu/bench/ending3_titan_test.py`. Bot de chaîne : `chain_ends.py` (incomplet : la navigation hors campagne bloque, voir log).
