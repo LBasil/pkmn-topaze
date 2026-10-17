@@ -84,6 +84,16 @@ def rect(Bw,Bh,dr):
     return (0,0,NB,Bh)
 out=[];tab=[];dbg=[]
 conns=connections()
+# connexions reelles dont les tilesets different et qui ne sont pas dans la liste des paires brouillees (sinon tuiles brouillees)
+_L=mapkit.layouts();_have={(a,dr,b) for a,dr,b,_ in conns}
+for a,d in MAPS.items():
+    for c in d.get('connections') or []:
+        b=ID2NAME.get(c['map'])
+        if not b or c['direction'] not in OPP or (a,c['direction'],b) in _have: continue
+        la,lb=_L[d['layout']],_L[MAPS[b]['layout']]
+        if (la['primary_tileset'],la['secondary_tileset'])==(lb['primary_tileset'],lb['secondary_tileset']): continue
+        if {a,b}=={'PalletTown','Route1'}: continue     # raccord valide par Basil (tuiles identiques)
+        conns.append((a,c['direction'],b,c['offset']))
 for k,(a,dr,b,off) in enumerate(conns):
     LA=layout(MAPS[a]['layout']);LB=layout(MAPS[b]['layout'])
     x0,y0,w,h=rect(LB.w,LB.h,dr)

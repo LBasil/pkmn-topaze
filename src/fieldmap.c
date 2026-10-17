@@ -178,7 +178,7 @@ static void InitBackupMapLayoutConnections(struct MapHeader *mapHeader)
         {
             struct MapHeader const *cMap = GetMapHeaderFromConnection(connection);
             u32 offset = connection->offset;
-            sFogActive = cMap && TopazeIsFogPair(mapHeader->mapLayoutId, cMap->mapLayoutId);
+            sFogActive = cMap && (TopazeIsFogPair(mapHeader->mapLayoutId, cMap->mapLayoutId) || TopazeFindFogStrip(mapHeader->mapLayoutId, cMap->mapLayoutId) != NULL);
             sFogLayout = mapHeader->mapLayout;
             sFogLayoutA = mapHeader->mapLayoutId;
             sFogW = mapHeader->mapLayout->width;
