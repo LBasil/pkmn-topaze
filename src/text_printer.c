@@ -121,14 +121,26 @@ void RunTextPrinters(void)
     {
         if (sTextPrinters[i].active)
         {
-            u16 renderCmd = RenderFont(&sTextPrinters[i]);
+            u16 renderCmd;
             // Topaze: INSTANT text speed draws every character of the page in one frame
             if (gSaveBlock2Ptr->optionsTextSpeed == OPTIONS_TEXT_SPEED_INSTANT)
             {
+                bool8 printed = FALSE;
                 u16 guard;
+                sTextPrinters[i].delayCounter = 0;
+                renderCmd = RenderFont(&sTextPrinters[i]);
                 for (guard = 0; renderCmd == RENDER_PRINT && guard < 400; guard++)
+                {
+                    printed = TRUE;
+                    sTextPrinters[i].delayCounter = 0;
                     renderCmd = RenderFont(&sTextPrinters[i]);
+                }
+                // the page is complete (RENDER_UPDATE / RENDER_FINISH): copy what was drawn, otherwise the window stays half-filled
+                if (printed && renderCmd != RENDER_PRINT)
+                    CopyWindowToVram(sTextPrinters[i].printerTemplate.windowId, COPYWIN_GFX);
             }
+            else
+                renderCmd = RenderFont(&sTextPrinters[i]);
             switch (renderCmd)
             {
             case RENDER_PRINT:
