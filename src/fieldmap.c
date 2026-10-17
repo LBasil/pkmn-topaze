@@ -788,7 +788,8 @@ static u8 TopazeRampStep(const struct TopazeRampEnd *e)
     }
     if (d < 0) d = 0;
     if (d >= TOPAZE_RAMP_ZONE) return 0;
-    return ((TOPAZE_RAMP_ZONE - d) * 16) / TOPAZE_RAMP_ZONE;
+    if (d <= 7) return 16;      // the neighbour strip (<= 7 cells deep on screen) is drawn with the fully ramped colours
+    return ((TOPAZE_RAMP_ZONE - d) * 16) / (TOPAZE_RAMP_ZONE - 7);
 }
 
 void TopazeRampApply(bool8 force)
