@@ -898,6 +898,20 @@ static u32 TopazeFogMetaAttr(u16 id, bool8 *found)
     return sFogMetaAttr[sFogMetaIdx[id - 640]];
 }
 
+bool8 TopazeHasFog(u16 lid)
+{
+    const struct TopazeFogTiles *t;
+    const struct TopazeFogMetas *m;
+
+    for (t = sTopazeFogTiles; t->layoutId != 0xFFFF; t++)
+        if (t->layoutId == lid)
+            return TRUE;
+    for (m = sTopazeFogMetas; m->layoutId != 0xFFFF; m++)
+        if (m->layoutId == lid)
+            return TRUE;
+    return FALSE;
+}
+
 void TopazeLoadFogData(void)
 {
     u32 i;

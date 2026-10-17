@@ -771,16 +771,21 @@ bool8 SetDiveWarpDive(u16 x, u16 y)
 
 extern bool8 gCameraRedrawAll;
 extern bool8 gTopazeGfxFreeze;
+extern bool8 TopazeHasFog(u16 lid);
 
 void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
 {
     int paletteIndex;
     const struct Tileset *oldPrimary = gMapHeader.mapLayout ? gMapHeader.mapLayout->primaryTileset : NULL;
     const struct Tileset *oldSecondary = gMapHeader.mapLayout ? gMapHeader.mapLayout->secondaryTileset : NULL;
+    u16 oldLayoutId = gMapHeader.mapLayoutId;
+    bool8 fogReload = FALSE;
 
     {
         const struct MapHeader *dstHeader = Overworld_GetMapHeaderByGroupAndId(mapGroup, mapNum);
-        if (oldPrimary && (dstHeader->mapLayout->primaryTileset != oldPrimary || dstHeader->mapLayout->secondaryTileset != oldSecondary))
+        // same tilesets but a layout that carries (or carried) runtime overlay tiles: VRAM must be rebuilt
+        fogReload = (oldPrimary && dstHeader->mapLayoutId != oldLayoutId && (TopazeHasFog(oldLayoutId) || TopazeHasFog(dstHeader->mapLayoutId)));
+        if (oldPrimary && (fogReload || dstHeader->mapLayout->primaryTileset != oldPrimary || dstHeader->mapLayout->secondaryTileset != oldSecondary))
             gTopazeGfxFreeze = TRUE; // keep the old picture on screen until the new one is fully ready
     }
     SetWarpDestination(mapGroup, mapNum, -1, -1, -1);
@@ -800,7 +805,7 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
     RunOnTransitionMapScript();
     TryRegenerateRenewableHiddenItems();
     InitMap();
-    if (gMapHeader.mapLayout->primaryTileset != oldPrimary)
+    if (fogReload || gMapHeader.mapLayout->primaryTileset != oldPrimary)
     {
         // Topaze: connected maps may use different primary tilesets (e.g. GRENALUX <-> ROUTE 1): reload everything
         CopyMapTilesetsToVram(gMapHeader.mapLayout);
