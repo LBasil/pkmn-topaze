@@ -139,6 +139,8 @@ static void Cmd_typecalc2(void);
 static void Cmd_returnatktoball(void);
 static void Cmd_getswitchedmondata(void);
 static void Cmd_switchindataupdate(void);
+extern u8 gTopazeSeenBefore[];
+
 static void Cmd_switchinanim(void);
 static void Cmd_jumpifcantswitch(void);
 static void Cmd_openpartyscreen(void);
@@ -4526,7 +4528,10 @@ static void Cmd_switchinanim(void)
                                  | BATTLE_TYPE_POKEDUDE
                                  | BATTLE_TYPE_EREADER_TRAINER
                                  | BATTLE_TYPE_GHOST)))
+    {
+        gTopazeSeenBefore[gActiveBattler] = TopazeSpeciesSeenBefore(gBattleMons[gActiveBattler].species); // Topaze: type boxes only for species seen before this battle
         HandleSetPokedexFlag(SpeciesToNationalPokedexNum(gBattleMons[gActiveBattler].species), FLAG_SET_SEEN, gBattleMons[gActiveBattler].personality);
+    }
 
     gAbsentBattlerFlags &= ~(gBitTable[gActiveBattler]);
 
