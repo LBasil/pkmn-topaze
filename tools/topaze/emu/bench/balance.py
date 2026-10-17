@@ -16,7 +16,12 @@ import partykit as pk
 
 ROM = '/tmp/gx/dbg3.gba'
 BM = 0x02023be4; BM_SZ = 0x58; CTRL = 0x03005020; OUT = 0x02023e8a; MOVE_CUR = 0x02023ffc; ACT_CUR = 0x02023ff8; REQ = 0x03007530
-H_ACTION = 0x0802e834; H_MOVE = 0x0802ee60; H_TARGET = 0x0802eac4
+def _sym(n):  # adresses des gestionnaires lues dans l'ELF de la ROM de test (elles changent a chaque build)
+    import subprocess
+    for l in subprocess.run(['arm-none-eabi-nm', ROM.replace('.gba', '.elf')], capture_output=True, text=True).stdout.splitlines():
+        a = l.split()
+        if len(a) == 3 and a[2] == n and a[1] in 'tT' and 'HandleInput' in n and not (n == 'HandleInputChooseAction' and int(a[0], 16) > 0x08100000): return int(a[0], 16)
+H_ACTION = _sym('HandleInputChooseAction'); H_MOVE = _sym('HandleInputChooseMove'); H_TARGET = _sym('HandleInputChooseTarget')
 PHYS = {'TYPE_NORMAL', 'TYPE_FIGHTING', 'TYPE_FLYING', 'TYPE_POISON', 'TYPE_GROUND', 'TYPE_ROCK', 'TYPE_BUG', 'TYPE_GHOST', 'TYPE_STEEL'}
 
 def trainer_ids():
