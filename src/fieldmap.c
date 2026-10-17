@@ -129,12 +129,24 @@ static void InitBackupMapLayoutData(const u16 *map, u16 width, u16 height)
 }
 
 #include "topaze_fog_pairs.h"
+#include "topaze_fog_strips.h"
 
 // Topaze: when the two maps of a connection use different tilesets, the neighbour strip would be
 // drawn with the wrong tiles. Replicate the current map's own edge metatiles instead (hard cut, same passability).
 static s32 sFogW, sFogH;
 static const struct MapLayout *sFogLayout;
 static bool8 sFogActive;
+static u16 sFogLayoutA;
+
+// Topaze: strip of the neighbour (real shape and collision, drawn with this map's own metatiles), see docs/topaze/fog_strips.py
+static const struct TopazeFogStrip *TopazeFindFogStrip(u16 a, u16 b)
+{
+    u32 i;
+    for (i = 0; sTopazeFogStrips[i].layoutA != 0xFFFF; i++)
+        if (sTopazeFogStrips[i].layoutA == a && sTopazeFogStrips[i].layoutB == b)
+            return &sTopazeFogStrips[i];
+    return NULL;
+}
 
 static bool8 TopazeIsFogPair(u16 a, u16 b)
 {
@@ -168,6 +180,7 @@ static void InitBackupMapLayoutConnections(struct MapHeader *mapHeader)
             u32 offset = connection->offset;
             sFogActive = cMap && TopazeIsFogPair(mapHeader->mapLayoutId, cMap->mapLayoutId);
             sFogLayout = mapHeader->mapLayout;
+            sFogLayoutA = mapHeader->mapLayoutId;
             sFogW = mapHeader->mapLayout->width;
             sFogH = mapHeader->mapLayout->height;
             switch (connection->direction)
@@ -209,6 +222,7 @@ static void FillConnection(s32 x, s32 y, const struct MapHeader *connectedMapHea
         // show the map's own border look and block, so what you see always matches where you can go.
         s32 nW = connectedMapHeader->mapLayout->width;
         s32 nH = connectedMapHeader->mapLayout->height;
+        const struct TopazeFogStrip *strip = TopazeFindFogStrip(sFogLayoutA, connectedMapHeader->mapLayoutId);
 
         for (i = 0; i < height; i++)
         {
@@ -228,6 +242,17 @@ static void FillConnection(s32 x, s32 y, const struct MapHeader *connectedMapHea
 
                 if (ex < MAP_OFFSET) ex = MAP_OFFSET;
                 if (ex > MAP_OFFSET + sFogW - 1) ex = MAP_OFFSET + sFogW - 1;
+                if (strip)
+                {
+                    s32 sx = x2 + j - strip->x0;
+                    s32 sy = y2 + i - strip->y0;
+
+                    if (sx >= 0 && sy >= 0 && sx < strip->w && sy < strip->h)
+                    {
+                        dest[j] = strip->data[sy * strip->w + sx];
+                        continue;
+                    }
+                }
                 edge = VMap.map[VMap.Xsize * ey + ex];
                 open = ((edge & MAPGRID_COLLISION_MASK) == 0);
                 if (open)
