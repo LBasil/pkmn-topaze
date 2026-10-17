@@ -2518,7 +2518,11 @@ static void PlayerHandleChooseAction(void)
     for (i = 0; i < 4; ++i)
         ActionSelectionDestroyCursorAt(i);
     ActionSelectionCreateCursorAt(gActionSelectionCursor[gActiveBattler], 0);
-    BattleStringExpandPlaceholdersToDisplayedString(gText_WhatWillPkmnDo);
+    // Topaze: when a BALL can be thrown with L (R in L=A mode), the prompt shows the hint
+    if (TopazeQuickBallItem() != ITEM_NONE)
+        BattleStringExpandPlaceholdersToDisplayedString(gSaveBlock2Ptr->optionsButtonMode == OPTIONS_BUTTON_MODE_L_EQUALS_A ? gText_TopazeBallHintR : gText_TopazeBallHintL);
+    else
+        BattleStringExpandPlaceholdersToDisplayedString(gText_WhatWillPkmnDo);
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_ACTION_PROMPT);
 }
 

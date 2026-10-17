@@ -113,6 +113,19 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "VermilionCity_PokemonCenter_1F_EventScript_PokemonJournalLtSurge",
       "flag": "FLAG_HIDE_FAME_CHECKER_LT_SURGE_JOURNAL"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST",
+      "x": 5,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "EventScript_MoveCoach",
+      "flag": "0"
     }
   ],
   "warp_events": [

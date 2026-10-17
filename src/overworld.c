@@ -129,6 +129,26 @@ static u8 CountBadgesForOverworldWhiteOutLossCalculation(void);
 static void Overworld_ResetStateAfterWhitingOut(void);
 static void Overworld_SetWhiteoutRespawnPoint(void);
 static u8 GetAdjustedInitialTransitionFlags(struct InitialPlayerAvatarState *playerStruct, u16 metatileBehavior, u8 mapType);
+// Topaze: plain-tile warp arrivals that must not face south (the engine default)
+static const struct { u16 group; u16 num; s16 x; s16 y; u8 dir; } sTopazeArrivalFacing[] = {
+    { MAP_GROUP(MAP_VIRIDIAN_FOREST), MAP_NUM(MAP_VIRIDIAN_FOREST), 25, 41, DIR_NORTH },
+};
+
+static bool8 TopazeArrivalFacing(u8 *dir)
+{
+    u32 i;
+    for (i = 0; i < ARRAY_COUNT(sTopazeArrivalFacing); i++)
+    {
+        if (gSaveBlock1Ptr->location.mapGroup == sTopazeArrivalFacing[i].group && gSaveBlock1Ptr->location.mapNum == sTopazeArrivalFacing[i].num
+         && gSaveBlock1Ptr->pos.x == sTopazeArrivalFacing[i].x && gSaveBlock1Ptr->pos.y == sTopazeArrivalFacing[i].y)
+        {
+            *dir = sTopazeArrivalFacing[i].dir;
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
 static u8 GetAdjustedInitialDirection(struct InitialPlayerAvatarState *playerStruct, u8 transitionFlags, u16 metatileBehavior, u8 mapType);
 static u16 GetCenterScreenMetatileBehavior(void);
 static void SetDefaultFlashLevel(void);
@@ -960,7 +980,12 @@ static u8 GetAdjustedInitialDirection(struct InitialPlayerAvatarState *playerStr
     else if (playerStruct->hasDirectionSet)
         return playerStruct->direction;
     else
+    {
+        u8 dir;
+        if (TopazeArrivalFacing(&dir))
+            return dir;
         return DIR_SOUTH;
+    }
 }
 
 static u16 GetCenterScreenMetatileBehavior(void)

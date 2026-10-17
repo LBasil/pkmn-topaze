@@ -4,20 +4,21 @@ Route22_MapScripts::
 Route22_EventScript_EarlyRivalTriggerTop::
 	lockall
 	setvar VAR_TEMP_1, 0
+	setobjectxyperm LOCALID_ROUTE22_RIVAL, 29, 5
 	goto Route22_EventScript_EarlyRival
 	end
 
 Route22_EventScript_EarlyRivalTriggerMid::
 	lockall
 	setvar VAR_TEMP_1, 1
-	setobjectxyperm LOCALID_ROUTE22_RIVAL, 25, 5
+	setobjectxyperm LOCALID_ROUTE22_RIVAL, 29, 5
 	goto Route22_EventScript_EarlyRival
 	end
 
 Route22_EventScript_EarlyRivalTriggerBottom::
 	lockall
 	setvar VAR_TEMP_1, 2
-	setobjectxyperm LOCALID_ROUTE22_RIVAL, 25, 5
+	setobjectxyperm LOCALID_ROUTE22_RIVAL, 30, 5
 	goto Route22_EventScript_EarlyRival
 	end
 
@@ -49,7 +50,18 @@ Route22_EventScript_EarlyRival::
 Route22_EventScript_EarlyRivalApproach::
 	applymovement LOCALID_ROUTE22_RIVAL, Route22_Movement_RivalApproach
 	waitmovement 0
+	call_if_eq VAR_TEMP_1, 0, Route22_EventScript_RivalStepUp
 	return
+
+Route22_EventScript_RivalStepUp::
+	applymovement LOCALID_ROUTE22_RIVAL, Route22_Movement_RivalStepUp
+	waitmovement 0
+	return
+
+Route22_Movement_RivalStepUp::
+	walk_up
+	walk_in_place_faster_right
+	step_end
 
 Route22_EventScript_EarlyRivalApproachBottom::
 	applymovement LOCALID_ROUTE22_RIVAL, Route22_Movement_RivalApproachBottom
@@ -70,9 +82,19 @@ Route22_EventScript_EarlyRivalCharmander::
 	return
 
 Route22_EventScript_EarlyRivalExit::
+	call_if_eq VAR_TEMP_1, 0, Route22_EventScript_RivalStepDown
 	applymovement LOCALID_ROUTE22_RIVAL, Route22_Movement_EarlyRivalExit
 	waitmovement 0
 	return
+
+Route22_EventScript_RivalStepDown::
+	applymovement LOCALID_ROUTE22_RIVAL, Route22_Movement_RivalStepDown
+	waitmovement 0
+	return
+
+Route22_Movement_RivalStepDown::
+	walk_down
+	step_end
 
 Route22_EventScript_EarlyRivalExitBottom::
 	applymovement LOCALID_ROUTE22_RIVAL, Route22_Movement_EarlyRivalExitBottom
@@ -90,50 +112,25 @@ Route22_Movement_UnusedRivalExit:: @ 8
 	step_end
 
 Route22_Movement_EarlyRivalExit::
-	walk_down
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+	walk_left
+	walk_left
+	walk_left
 	step_end
 
 Route22_Movement_EarlyRivalExitBottom::
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	step_end
 
 Route22_Movement_RivalApproach::
 	walk_right
 	walk_right
 	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
 	step_end
 
 Route22_Movement_RivalApproachBottom::
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
 	walk_right
 	walk_right
 	walk_right
@@ -155,20 +152,21 @@ Route22_Movement_PlayerFaceRival::
 Route22_EventScript_LateRivalTriggerTop::
 	lockall
 	setvar VAR_TEMP_1, 0
+	setobjectxyperm LOCALID_ROUTE22_RIVAL, 29, 5
 	goto Route22_EventScript_LateRival
 	end
 
 Route22_EventScript_LateRivalTriggerMid::
 	lockall
 	setvar VAR_TEMP_1, 1
-	setobjectxyperm LOCALID_ROUTE22_RIVAL, 25, 5
+	setobjectxyperm LOCALID_ROUTE22_RIVAL, 29, 5
 	goto Route22_EventScript_LateRival
 	end
 
 Route22_EventScript_LateRivalTriggerBottom::
 	lockall
 	setvar VAR_TEMP_1, 2
-	setobjectxyperm LOCALID_ROUTE22_RIVAL, 25, 5
+	setobjectxyperm LOCALID_ROUTE22_RIVAL, 30, 5
 	goto Route22_EventScript_LateRival
 	end
 
@@ -188,6 +186,8 @@ Route22_EventScript_LateRival::
 	closemessage
 	delay 10
 	playbgm MUS_RIVAL_EXIT, 0
+	call_if_eq VAR_TEMP_1, 0, Route22_EventScript_RivalStepDown
+	call_if_eq VAR_TEMP_1, 2, Route22_EventScript_LateRivalExtraLeft
 	applymovement LOCALID_ROUTE22_RIVAL, Route22_Movement_LateRivalExit
 	waitmovement 0
 	fadedefaultbgm
@@ -199,6 +199,7 @@ Route22_EventScript_LateRival::
 Route22_EventScript_LateRivalApproach::
 	applymovement LOCALID_ROUTE22_RIVAL, Route22_Movement_RivalApproach
 	waitmovement 0
+	call_if_eq VAR_TEMP_1, 0, Route22_EventScript_RivalStepUp
 	return
 
 Route22_EventScript_LateRivalApproachBottom::
@@ -220,10 +221,6 @@ Route22_EventScript_LateRivalCharmander::
 	return
 
 Route22_Movement_LateRivalExit::
-	walk_left
-	walk_left
-	walk_left
-	walk_left
 	walk_left
 	walk_left
 	walk_left
@@ -249,3 +246,12 @@ Route22_EventScript_PostgameStranger::
 	fadescreen FADE_FROM_BLACK
 	release
 	end
+
+Route22_EventScript_LateRivalExtraLeft::
+	applymovement LOCALID_ROUTE22_RIVAL, Route22_Movement_OneLeft
+	waitmovement 0
+	return
+
+Route22_Movement_OneLeft::
+	walk_left
+	step_end

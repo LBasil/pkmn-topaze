@@ -58,7 +58,6 @@ EventScript_PkmnCenterNurse_ReturnPkmn::
 	waitmessage
 	applymovement VAR_LAST_TALKED, Movement_Bow
 	waitmovement 0
-	call EventScript_PkmnCenterNurse_Relearner
 	msgbox Text_WeHopeToSeeYouAgain
 	return
 
@@ -70,16 +69,31 @@ EventScript_PkmnCenterNurse_PlayerWaitingInUnionRoom::
 	waitmessage
 	applymovement VAR_LAST_TALKED, Movement_Bow
 	waitmovement 0
-	call EventScript_PkmnCenterNurse_Relearner
 	msgbox Text_WeHopeToSeeYouAgain
 	return
 
 EventScript_PkmnCenterNurse_Goodbye::
-	call EventScript_PkmnCenterNurse_Relearner
 	msgbox Text_WeHopeToSeeYouAgain
 	return
 
-@ Topaze: move relearner built into every POKéMON CENTER (free)
+@ Topaze: the MOVE COACH (second NPC of every POKéMON CENTER) helps POKéMON remember forgotten moves (free)
+EventScript_MoveCoach::
+	lock
+	faceplayer
+	msgbox Text_MoveCoachHello
+	call EventScript_PkmnCenterNurse_Relearner
+	msgbox Text_MoveCoachBye
+	release
+	end
+
+Text_MoveCoachHello::
+	.string "MOVE COACH: I teach POKéMON to\n"
+	.string "remember what they have forgotten.$"
+
+Text_MoveCoachBye::
+	.string "MOVE COACH: Come back any time.$"
+
+@ Topaze: move relearner (free)
 EventScript_PkmnCenterNurse_Relearner::
 	msgbox Text_PkmnCenterRelearnAsk, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_PkmnCenterNurse_RelearnerEnd
@@ -115,8 +129,8 @@ EventScript_PkmnCenterNurse_RelearnerEnd::
 	return
 
 Text_PkmnCenterRelearnAsk::
-	.string "Would you also like me to help a\n"
-	.string "POKéMON remember a forgotten move?$"
+	.string "Shall I help a POKéMON remember\n"
+	.string "a forgotten move?$"
 
 Text_PkmnCenterRelearnWhich::
 	.string "Which POKéMON needs a refresher?$"

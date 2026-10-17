@@ -50,8 +50,8 @@ u8 RunHelpSystemCallback(void)
             return 0;
         if (JOY_NEW(R_BUTTON) && gHelpSystemToggleWithRButtonDisabled == TRUE)
             return 0;
-        if (JOY_NEW(L_BUTTON) && gMain.inBattle && TopazeQuickBallReady())
-            return 0; // Topaze: L throws the first BALL in battle
+        if (JOY_NEW(L_BUTTON | R_BUTTON) && gMain.inBattle)
+            return 0; // Topaze: no help menu in battle (L / R throws the first BALL when possible)
         if (JOY_NEW(L_BUTTON | R_BUTTON))
         {
             if (!HelpSystem_IsSinglePlayer() || !gHelpSystemEnabled)
