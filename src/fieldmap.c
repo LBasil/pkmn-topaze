@@ -1077,9 +1077,15 @@ bool8 CameraMove(s32 x, s32 y)
         TopazeRampApply(TRUE);
         if (gCameraRedrawAll)
         {
-            // Topaze: the saved view holds metatile ids of the old tilesets; do not paste it over the new map
+            // Topaze: the saved view holds metatile ids of the old tilesets; do not paste it over the new map.
+            // The caller (CameraUpdate) still shifts the tilemap ring and draws the new slice for this step,
+            // so the whole view must be drawn from the position BEFORE the step (else one column is off).
             gCameraRedrawAll = FALSE;
+            gSaveBlock1Ptr->pos.x -= x;
+            gSaveBlock1Ptr->pos.y -= y;
             DrawWholeMapView();
+            gSaveBlock1Ptr->pos.x += x;
+            gSaveBlock1Ptr->pos.y += y;
         }
         else
             MoveMapViewToBackup(direction);
