@@ -809,8 +809,8 @@ static u8 TopazeRampStep(const struct TopazeRampEnd *e)
 // ---- Topaze: per-map overlays for the neighbour strips (generated: docs/topaze/fog_strips.py) ----
 // tiles: written into VRAM slots no tile of this map uses; metatiles: definitions replaced at unused ids; palettes: free banks.
 static EWRAM_DATA u8 sFogMetaIdx[384] = {0};
-static const u16 *sFogMetaEnts;
-static const u32 *sFogMetaAttr;
+static EWRAM_DATA const u16 *sFogMetaEnts = NULL;
+static EWRAM_DATA const u32 *sFogMetaAttr = NULL;
 static EWRAM_DATA bool8 sFogMetaOn = FALSE;
 static EWRAM_DATA bool8 sFogPalWas = FALSE;
 
