@@ -18,6 +18,8 @@ from junction_lib import *
 BASE=R+'docs/topaze/fogbase/'
 DIRN={'up':0,'down':1,'left':2,'right':3}
 LAYER_MASK=0x60000000
+PLACE_MIN=40          # erreur moyenne/pixel au-dela de laquelle une palette voisine merite une banque libre
+REUSE_TOL=60          # ecart d'erreur tolere pour reutiliser une tuile deja creee
 GAIN_MIN=150           # gain d'erreur (moyenne/pixel, somme RVB) mini pour creer une tuile plutot que reutiliser une existante
 MAXSEC=384
 
@@ -103,26 +105,47 @@ def restore_base(tsname):
     for f in ('tiles.png','metatiles.bin','metatile_attributes.bin'):
         if not os.path.exists(b+f): shutil.copy(os.path.join(d,f),b+f)
         else: shutil.copy(b+f,os.path.join(d,f))
-def write_tileset(ts,new_tiles,new_metas,new_attrs):
-    """ajoute tuiles (liste de (8,8) uint8), metatuiles (liste de 8 u16) et attributs au tileset secondaire ts"""
-    d=ts.d; b=BASE+os.path.basename(d)+'/'
-    img=Image.open(b+'tiles.png'); w,h=img.size; n0=(h//8)*(w//8)
-    tot=n0+len(new_tiles); rows=(tot+15)//16
-    out=Image.new('P',(w,rows*8),0); out.putpalette(img.getpalette()); out.paste(img,(0,0))
-    px=np.array(out,dtype=np.uint8)
-    for i,t in enumerate(new_tiles):
-        k=n0+i; ty,tx=k//16,k%16; px[ty*8:ty*8+8,tx*8:tx*8+8]=t
-    out2=Image.fromarray(px,'P'); out2.putpalette(img.getpalette()); out2.save(d+'/tiles.png')
-    mt=open(b+'metatiles.bin','rb').read()+b''.join(struct.pack('<8H',*m) for m in new_metas)
-    open(d+'/metatiles.bin','wb').write(mt)
-    at=open(b+'metatile_attributes.bin','rb').read()+b''.join(struct.pack('<I',a) for a in new_attrs)
-    open(d+'/metatile_attributes.bin','wb').write(at)
 
-# ---------------------------------------------------------------- pool de tuiles existantes
-def build_pool(C):
-    """toutes les (tuile, flips, palette) existantes de la carte -> rendu RGB (8*8*3)"""
-    ids=[];rend=[]
-    ntiles=[(t,C.tile(t)) for t in range(0,640)]+[(640+k,C.stile[k]) for k in range(len(C.stile))]
+def write_tileset(ts,metas):
+    """metas : dict emplacement (0..383) -> (8 entrees u16, attribut u32) ; ecrase ou ajoute des metatuiles (le png n'est plus modifie :
+    les tuiles neuves sont chargees a l'execution dans des cases de VRAM libres, voir TopazeLoadFogTiles dans src/fieldmap.c)"""
+    d=ts.d; b=BASE+os.path.basename(d)+'/'
+    mt=bytearray(open(b+'metatiles.bin','rb').read()); at=bytearray(open(b+'metatile_attributes.bin','rb').read())
+    top=max([len(mt)//16]+[k+1 for k in metas])
+    mt+=bytes(16*top-len(mt)); at+=bytes(4*top-len(at))
+    for k,(ents,attr) in metas.items():
+        mt[k*16:k*16+16]=struct.pack('<8H',*ents); at[k*4:k*4+4]=struct.pack('<I',attr)
+    open(d+'/metatiles.bin','wb').write(bytes(mt)); open(d+'/metatile_attributes.bin','wb').write(bytes(at))
+
+ANIM_SEC={'gTileset_CeladonCity':range(104,112),'gTileset_SilphCo':range(336,344),'gTileset_MtEmber':range(256,264),'gTileset_VermilionGym':range(240,247),'gTileset_CeladonGym':range(99,103)}
+def free_sec_tiles(ts,name):
+    """numeros de tuiles du tileset secondaire non referencees par ses metatuiles (reutilisables) + place a la fin"""
+    n0=(ts.img.height//8)*(ts.img.width//8)
+    ref=set()
+    for i in range(len(ts.metatiles)//16):
+        for e in struct.unpack('<8H',ts.metatiles[i*16:i*16+16]):
+            t=e&0x3ff
+            if t>=640: ref.add(t-640)
+    for r in ANIM_SEC.get(name,[]): ref.add(r)
+    free=[k for k in range(n0) if k not in ref]+list(range(n0,MAXSEC))
+    return free,n0
+
+# ---------------------------------------------------------------- banques
+def banks_used(C,mids):
+    used=set(); L=C.L
+    for m in mids:
+        ts=L.prim if m<640 else L.sec; i=m if m<640 else m-640
+        if i*16+16>len(ts.metatiles): continue
+        for e in struct.unpack('<8H',ts.metatiles[i*16:i*16+16]):
+            t=C.tile(e&0x3ff)
+            if t is not None and t.any(): used.add(e>>12)
+    return used
+
+# ---------------------------------------------------------------- pool de tuiles existantes (avec transparence)
+PEN=4000.0
+def build_pool(C,eff,excl=()):
+    ids=[];rend=[];msk=[]
+    ntiles=[(t,C.tile(t)) for t in range(0,640) if t not in excl]+[(640+k,C.stile[k]) for k in range(len(C.stile)) if (640+k) not in excl]
     for tid,t in ntiles:
         if t is None: continue
         for hf in (0,1):
@@ -130,24 +153,103 @@ def build_pool(C):
                 tt=t
                 if hf: tt=tt[:,::-1]
                 if vf: tt=tt[::-1,:]
+                m=(tt!=0).reshape(-1)
                 for b in range(13):
-                    rend.append(C.pals[b][tt].astype(np.float32).reshape(-1)); ids.append((tid,hf,vf,b))
-    return ids,np.array(rend,dtype=np.float32)
-def best_existing(pool,targets):
-    ids,P=pool; P2=(P*P).sum(1)
-    T=targets.reshape(len(targets),-1).astype(np.float32); T2=(T*T).sum(1)
+                    rend.append(eff[b][tt].astype(np.float32).reshape(64,3)); ids.append((tid,hf,vf,b)); msk.append(m)
+    return ids,np.array(rend,dtype=np.float32),np.array(msk,dtype=np.float32)
+def best_existing(pool,targets,tmasks):
+    """targets (m,64,3), tmasks (m,64) bool -> liste (erreur/64, (tid,hf,vf,bank))"""
+    ids,P,Pm=pool; n=len(ids)
+    P2=(P*P).sum(2)                    # (n,64)
+    Pf=P.reshape(n,-1)
     res=[]
-    for i0 in range(0,len(T),64):
-        D=T2[i0:i0+64,None]+P2[None,:]-2*T[i0:i0+64]@P.T
+    for i0 in range(0,len(targets),48):
+        T=targets[i0:i0+48].astype(np.float32); W=tmasks[i0:i0+48].astype(np.float32)
+        t1=W@P2.T
+        t2=(W[:,:,None]*T).reshape(len(T),-1)@Pf.T
+        t3=(W*(T*T).sum(2)).sum(1)
+        ham=W@(1-Pm).T+(1-W)@Pm.T
+        D=t1-2*t2+t3[:,None]+PEN*ham
         j=D.argmin(1)
         for k,jj in enumerate(j): res.append((max(0.0,float(D[k,jj]))/64.0,ids[jj]))
     return res
-def quantize(C,block):
-    """block (8,8,3) -> (err/pixel, bank, idx(8,8)) meilleure palette parmi 13, indices 1..15"""
-    px=block.reshape(-1,3).astype(np.float32); best=None
+def quantize(eff,target,tmask):
+    """target (8,8,3), tmask (8,8) bool -> (err/64, bank, idx (8,8) avec 0 pour les pixels transparents)"""
+    px=target.reshape(-1,3).astype(np.float32); m=tmask.reshape(-1); best=None
     for b in range(13):
-        pal=C.pals[b][1:16].astype(np.float32)
+        pal=eff[b][1:16].astype(np.float32)
         D=((px[:,None,:]-pal[None,:,:])**2).sum(2)
-        j=D.argmin(1); e=float(D[np.arange(64),j].sum())/64.0
-        if best is None or e<best[0]: best=(e,b,(j+1).astype(np.uint8).reshape(8,8))
+        j=D.argmin(1); e=float((D[np.arange(64),j]*m).sum())/64.0
+        if best is None or e<best[0]: best=(e,b,np.where(m,j+1,0).astype(np.uint8).reshape(8,8))
     return best
+def flips(idx):
+    for hf in (0,1):
+        for vf in (0,1):
+            t=idx
+            if hf: t=t[:,::-1]
+            if vf: t=t[::-1,:]
+            yield hf,vf,t
+
+# ---------------------------------------------------------------- fusion de palettes (banques libres)
+def _cluster(cols,wts,k):
+    """k-means pondere (couleurs (n,3), poids (n,)) -> centres (<=k,3), cout"""
+    cols=np.asarray(cols,float); wts=np.asarray(wts,float); n=len(cols)
+    if n<=k: return cols.copy(),0.0
+    # init : couleur la plus lourde, puis la plus eloignee (ponderee)
+    cen=[cols[int(wts.argmax())]]
+    while len(cen)<k:
+        d=np.min([((cols-c)**2).sum(1) for c in cen],axis=0)*np.sqrt(wts+1)
+        cen.append(cols[int(d.argmax())])
+    cen=np.array(cen)
+    for _ in range(12):
+        D=((cols[:,None,:]-cen[None,:,:])**2).sum(2); a=D.argmin(1)
+        for i in range(k):
+            m=a==i
+            if m.any(): cen[i]=(cols[m]*wts[m,None]).sum(0)/wts[m].sum()
+    D=((cols[:,None,:]-cen[None,:,:])**2).sum(2); a=D.argmin(1)
+    return cen,float((D[np.arange(n),a]*wts).sum())
+def merge_palettes(sets,nbanks):
+    """sets : liste de (couleurs (n,3), poids (n,)) -> liste de <=nbanks tableaux (15,3) uint8 (multiples de 8)"""
+    cur=[]
+    for cols,w in sets:
+        cen,c=_cluster(cols,w,15); cur.append([np.asarray(cols,float),np.asarray(w,float),c])
+    def merged(a,b):
+        cols=np.vstack([a[0],b[0]]); w=np.concatenate([a[1],b[1]])
+        # fusion des couleurs quasi identiques (<= 1 pas de 5 bits par canal)
+        keep=[];kw=[]
+        for c,ww in zip(cols,w):
+            for i,k in enumerate(keep):
+                if ((c-k)**2).sum()<=192:
+                    kw[i]+=ww; break
+            else: keep.append(c.copy()); kw.append(ww)
+        cen,cost=_cluster(keep,kw,15)
+        return [np.array(keep),np.array(kw),0.0],cen,cost
+    while len(cur)>nbanks:
+        best=None
+        for i in range(len(cur)):
+            for j in range(i+1,len(cur)):
+                m,cen,cost=merged(cur[i],cur[j]); inc=cost-cur[i][2]-cur[j][2]
+                if best is None or inc<best[0]: best=(inc,i,j,m,cost)
+        inc,i,j,m,cost=best; m[2]=cost
+        cur=[c for k,c in enumerate(cur) if k not in(i,j)]+[m]
+    out=[]
+    for cols,w,c in cur:
+        cen,_=_cluster(cols,w,15)
+        cen=np.clip(np.round(cen/8.0)*8,0,248).astype(np.uint8)
+        while len(cen)<15: cen=np.vstack([cen,cen[-1:]])
+        out.append(cen)
+    return out
+
+def pool_from_tiles(eff,tiles):
+    """tiles : liste (numero, idx (8,8)) -> pool au format de build_pool (ids=(numero,hf,vf,bank))"""
+    arr=[];ids=[]
+    for n,t in tiles:
+        for hf,vf,tt in flips(t): arr.append(tt); ids.append((n,hf,vf))
+    A=np.array(arr,dtype=np.uint8)
+    E=np.array([eff[b] for b in range(13)],dtype=np.float32)       # (13,16,3)
+    R=E[:,A,:]                                                       # (13,m,8,8,3)
+    m=len(arr)
+    P=R.transpose(1,0,2,3,4).reshape(m*13,64,3)
+    Pm=np.repeat((A!=0).reshape(m,64).astype(np.float32),13,axis=0)
+    pid=[(i[0],i[1],i[2],b) for i in ids for b in range(13)]
+    return pid,P,Pm

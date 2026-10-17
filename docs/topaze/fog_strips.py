@@ -5,7 +5,7 @@ Pour chaque connexion dont les tilesets different (include/topaze_fog_pairs.h), 
 la collision/elevation reelle, et on prend la metatuile de la carte courante qui ressemble le plus (distance d'image)
 parmi celles de meme comportement. Ecrit include/topaze_fog_strips.h (utilise par FillConnection, src/fieldmap.c).
 Idempotent. Usage : python3 docs/topaze/fog_strips.py [--debug]"""
-import sys,os,struct,collections
+import sys,os,struct,collections,re
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 import numpy as np
 from junction_lib import *
@@ -78,9 +78,10 @@ def translate(LA,LB,vB,cache):
     # collision identique a celle de la carte voisine (on marche reellement dessus apres le passage)
     cache[mid]=(best,blocked)
     return cache[mid]
+NBV=6      # profondeur verticale : l'ecran montre 5 rangees au-dela du bord
 def rect(Bw,Bh,dr):
-    if dr=='down': return (0,0,Bw,NB)
-    if dr=='up': return (0,Bh-NB,Bw,NB)
+    if dr=='down': return (0,0,Bw,NBV)
+    if dr=='up': return (0,Bh-NBV,Bw,NBV)
     if dr=='left': return (Bw-NB,0,NB,Bh)
     return (0,0,NB,Bh)
 
@@ -94,167 +95,374 @@ for a,d in MAPS.items():
         if (la['primary_tileset'],la['secondary_tileset'])==(lb['primary_tileset'],lb['secondary_tileset']): continue
         if {a,b}=={'PalletTown','Route1'}: continue     # raccord valide par Basil (tuiles identiques)
         conns.append((a,c['direction'],b,c['offset']))
-# 1) on repart toujours des fichiers d'origine des tilesets secondaires concernes
-for a,dr,b,off in conns:
-    for n in (a,b): FT.restore_base(_L[MAPS[n]['layout']]['secondary_tileset'])
 _CTX={}
 def ctx(lid,end):
     k=(lid,end and (tuple(end[0]),tuple(end[1])))
     if k not in _CTX: _CTX[k]=FT.LayoutCtx(layout(lid),end)
     return _CTX[k]
-class TSS:
-    def __init__(s,name):
-        s.name=name; ts=mapkit.Tileset(name); s.ts=ts
-        s.n0=(ts.img.height//8)*(ts.img.width//8); s.m0=len(ts.metatiles)//16
-        s.tiles=[];s.tkey={};s.metas=[];s.attrs=[];s.mkey={}
-    def free_tiles(s): return FT.MAXSEC-s.n0-len(s.tiles)
-    def free_metas(s): return FT.MAXSEC-s.m0-len(s.metas)
-    def find_tile(s,idx):
-        for hf in (0,1):
-            for vf in (0,1):
-                t=idx
-                if hf: t=t[:,::-1]
-                if vf: t=t[::-1,:]
-                k=t.tobytes()
-                if k in s.tkey: return s.tkey[k],hf,vf     # tuile T avec flips tels que flip(T)=idx... (voir add_tile)
+# metatuiles que des scripts peuvent poser (setmetatile) : leurs banques ne sont jamais 'libres'
+_ML={}
+for m in re.finditer(r'#define (METATILE_\w+)\s+(0x[0-9A-Fa-f]+|\d+)',open(R+'include/constants/metatile_labels.h').read()): _ML[m.group(1)]=int(m.group(2),0)
+def script_mids(lid):
+    out=set()
+    for n in LAY2MAP.get(lid,[]):
+        f=R+'data/maps/%s/scripts.inc'%n
+        if os.path.exists(f):
+            for lab in re.findall(r'METATILE_\w+',open(f).read()):
+                if lab in _ML: out.add(_ML[lab])
+    return out
+def layout_mids(lid):
+    L=layout(lid); out={v&0x3ff for v in L.g}
+    try:
+        b=open(os.path.join(R,L.l['border_filepath']) if 'border_filepath' in L.l else os.devnull,'rb').read()
+        out|={v&0x3ff for v in struct.unpack('<%dH'%(len(b)//2),b)}
+    except Exception: pass
+    return out|script_mids(lid)
+# constantes METATILE_* citees dans le code/les scripts : jamais 'libres'
+_CONST=set()
+for root,_,fs in os.walk(R):
+    if '/.git' in root or '/build' in root or '/tools' in root: continue
+    for f in fs:
+        if f.endswith(('.c','.h','.inc','.s','.json')) and f!='metatile_labels.h':
+            try: t=open(os.path.join(root,f),errors='ignore').read()
+            except Exception: continue
+            if 'METATILE_' in t:
+                for lab in re.findall(r'METATILE_\w+',t):
+                    if lab in _ML: _CONST.add(_ML[lab])
+_PF={}
+def primary_free(CA):
+    """numeros de tuiles du tileset primaire qu'aucune carte utilisant ce primaire ne reference (hors animations 416..511)"""
+    name=CA.L.l['primary_tileset']
+    if name in _PF: return _PF[name]
+    ref=set(); sec_used=collections.defaultdict(set)
+    for lid,l in _L.items():
+        if l.get('primary_tileset')==name and 'blockdata_filepath' in l:
+            try: sec_used[l['secondary_tileset']]|=layout_mids(lid)
+            except Exception: pass
+    for m in _CONST:
+        for sname in list(sec_used): sec_used[sname].add(m)
+    for sname,mids in sec_used.items():
+        st=mapkit.Tileset(sname)
+        for m in mids:
+            t=CA.L.prim if m<640 else st; i=m if m<640 else m-640
+            if i*16+16>len(t.metatiles): continue
+            for e in struct.unpack('<8H',t.metatiles[i*16:i*16+16]):
+                if (e&0x3ff)<640: ref.add(e&0x3ff)
+    _PF[name]=[t for t in range(1,640) if t not in ref and not (416<=t<512)]
+    return _PF[name]
+class LSS:
+    """une carte (layout) : cases de tuiles libres de la VRAM secondaire (640..1023) pour les tuiles neuves chargees a l'execution"""
+    def __init__(s,lid,CA):
+        mids=layout_mids(lid)|_CONST; ref=set()
+        for m in mids:
+            ts=CA.L.prim if m<640 else CA.L.sec; i=m if m<640 else m-640
+            if i*16+16>len(ts.metatiles): continue
+            for e in struct.unpack('<8H',ts.metatiles[i*16:i*16+16]):
+                if (e&0x3ff)>=640: ref.add(e&0x3ff)
+        for r in FT.ANIM_SEC.get(CA.L.l['secondary_tileset'],[]): ref.add(640+r)
+        fr=sorted(set(primary_free(CA))|{t for t in range(640,1024) if t not in ref}); s.free0=set(fr)
+        runs=[];cur=[]
+        for t in fr:
+            if cur and t==cur[-1]+1: cur.append(t)
+            else:
+                if cur: runs.append(cur)
+                cur=[t]
+        if cur: runs.append(cur)
+        runs.sort(key=lambda r:-len(r))      # on remplit d'abord les plus longs blocs : moins de copies DMA a l'execution
+        s.free=[t for r in runs for t in r]
+        s.data={};s.tkey={}
+        s.mfree0=[m for m in range(640,1024) if m not in mids]     # metatuiles non utilisees par cette carte : leurs definitions sont remplacees a l'execution
+        s.mfree=list(s.mfree0); s.metas={};s.mkey={}
+    def alloc(s,ents,attr):
+        if not s.mfree: return None
+        k=s.mfree.pop(0); s.metas[k]=(ents,attr); return k
+    def find_new(s,idx):
+        for hf,vf,t in FT.flips(idx):
+            k=t.tobytes()
+            if k in s.tkey: return s.tkey[k],hf,vf
         return None
-    def add_tile(s,idx):
-        f=s.find_tile(idx)
+    def add_new(s,idx):
+        f=s.find_new(idx)
         if f: return f
-        n=s.n0+len(s.tiles); s.tiles.append(idx.copy()); s.tkey[idx.tobytes()]=n
+        if not s.free: return None
+        n=s.free.pop(0); s.data[n]=idx.copy(); s.tkey[idx.tobytes()]=n
         return n,0,0
-TS={}
-def tss(name):
-    if name not in TS: TS[name]=TSS(name)
-    return TS[name]
-jobs=[]
+LS={}
+def lss(lid,CA):
+    if lid not in LS: LS[lid]=LSS(lid,CA)
+    return LS[lid]
+_EXT={}
+def exist_tiles(CA,excl=()):
+    """tuiles existantes de la carte A par contenu d'indices -> (id,hf,vf)"""
+    k=id(CA)
+    if k not in _EXT:
+        d={}
+        for tid in [t for t in range(640) if t not in excl]+[640+i for i in range(len(CA.stile)) if (640+i) not in excl]:
+            t=CA.tile(tid)
+            if t is None: continue
+            for hf,vf,tt in FT.flips(t):
+                d.setdefault(tt.tobytes(),(tid,hf,vf))
+        _EXT[k]=d
+    return _EXT[k]
+# 2) groupes (carte A, direction) : memes banques libres, memes palettes placees
+groups=collections.OrderedDict()
 for k,(a,dr,b,off) in enumerate(conns):
-    la,lb=MAPS[a]['layout'],MAPS[b]['layout']
-    LA=layout(la);LB=layout(lb)
-    CA=ctx(la,FT.RAMPS.get(la,{}).get(FT.DIRN[dr])); CB=ctx(lb,FT.RAMPS.get(lb,{}).get(FT.DIRN[OPP[dr]]))
-    x0,y0,w,h=rect(LB.w,LB.h,dr)
-    cnt=collections.Counter(LB.get(x,y)&0x3ff for y in range(y0,y0+h) for x in range(x0,x0+w))
-    j=dict(k=k,a=a,b=b,dr=dr,la=la,lb=lb,LA=LA,LB=LB,CA=CA,CB=CB,rect=(x0,y0,w,h),cnt=cnt,S=tss(_L[la]['secondary_tileset']))
-    mids=sorted(cnt)
-    T={m:CB.render(m) for m in mids}
-    blocks={}   # cle -> bloc (8,8,3)
-    mblk={}
-    for m in mids:
-        ks=[]
-        for q in range(4):
-            y,x=(q//2)*8,(q%2)*8
-            bl=T[m][y:y+8,x:x+8]; key=bl.astype(np.uint8).tobytes()
-            blocks[key]=bl; ks.append(key)
-        mblk[m]=ks
-    keys=list(blocks)
-    pool=FT.build_pool(CA)
-    ex=FT.best_existing(pool,np.array([blocks[k_] for k_ in keys]))
-    res={}
-    for k_,(ee,ent) in zip(keys,ex):
-        ef,bank,idx=FT.quantize(CA,blocks[k_])
-        res[k_]=dict(ee=ee,ent=ent,ef=ef,bank=bank,idx=idx,choice=('E',ent),err=ee)
-    j.update(T=T,mblk=mblk,res=res,pool=pool)
-    jobs.append(j)
-    print('analyse %d/%d %s->%s'%(k+1,len(conns),a,b),flush=True)
-# 2) tuiles neuves : par gain decroissant dans la limite de la place du tileset
+    groups.setdefault((MAPS[a]['layout'],dr),[]).append((k,a,dr,b,off))
+GR=[]
+for (la,dr),lst in groups.items():
+    LA=layout(la); CA=ctx(la,FT.RAMPS.get(la,{}).get(FT.DIRN[dr]))
+    used=FT.banks_used(CA,layout_mids(la)); F=sorted(set(range(13))-used)
+    g=dict(la=la,dr=dr,LA=LA,CA=CA,F=F,LS=lss(la,CA),jobs=[])
+    ents={}      # cle -> dict(idx,pal,w,nz)
+    pals={}
+    for (k,a,dr_,b,off) in lst:
+        lb=MAPS[b]['layout']; LB=layout(lb); CB=ctx(lb,FT.RAMPS.get(lb,{}).get(FT.DIRN[OPP[dr]]))
+        x0,y0,w,h=rect(LB.w,LB.h,dr)
+        cnt=collections.Counter(LB.get(x,y)&0x3ff for y in range(y0,y0+h) for x in range(x0,x0+w))
+        j=dict(k=k,a=a,b=b,LB=LB,CB=CB,rect=(x0,y0,w,h),cnt=cnt,T={m:CB.render(m) for m in cnt},ments={})
+        for m,c in cnt.items():
+            ts=LB.prim if m<640 else LB.sec; i=m if m<640 else m-640
+            raw=struct.unpack('<8H',ts.metatiles[i*16:i*16+16]); lst2=[]
+            for e in raw:
+                tid,hf,vf,pb=e&0x3ff,(e>>10)&1,(e>>11)&1,e>>12
+                t=CB.tile(tid)
+                if t is None or not t.any(): lst2.append(None); continue
+                t2=t
+                if hf: t2=t2[:,::-1]
+                if vf: t2=t2[::-1,:]
+                pal=CB.pals[pb]; pk=pal[1:16].astype(np.uint8).tobytes()
+                key=(t2.tobytes(),pk)
+                if key not in ents: ents[key]=dict(idx=t2.copy(),pal=pal,pk=pk,w=0,nz=(t2!=0))
+                ents[key]['w']+=c; lst2.append(key)
+                pals.setdefault(pk,pal)
+            j['ments'][m]=lst2
+        g['jobs'].append(j)
+    g['ents']=ents; g['pals']=pals
+    GR.append(g)
+print('%d groupes, %d connexions'%(len(GR),len(conns)),flush=True)
+def entry_img(pal,idx): return pal[idx].astype(np.float32)
+for gi,g in enumerate(GR):
+    CA=g['CA'];ents=g['ents'];F=g['F']
+    base_eff={b:CA.pals[b] for b in range(13)}
+    keys=list(ents)
+    T=np.array([entry_img(ents[k]['pal'],ents[k]['idx']) for k in keys],np.float32).reshape(len(keys),64,3) if keys else np.zeros((0,64,3),np.float32)
+    M=np.array([ents[k]['nz'].reshape(-1) for k in keys],bool) if keys else np.zeros((0,64),bool)
+    def evaluate(eff):
+        pool=FT.build_pool(CA,eff,g['LS'].free0); ex=FT.best_existing(pool,T,M)
+        out=[]
+        for k,(ee,ent) in zip(keys,ex):
+            ef,bank,idx=FT.quantize(eff,T[len(out)].reshape(8,8,3),ents[k]['nz'])
+            out.append((ee,ent,ef,bank,idx))
+        return out
+    r0=evaluate(base_eff) if keys else []
+    # palettes a placer dans les banques libres : on ne place que celles que les banques existantes rendent mal,
+    # puis on fusionne les palettes proches (couleurs communes) jusqu'a tenir dans les banques libres
+    ben=collections.Counter(); tot=collections.Counter()
+    for k,(ee,ent,ef,bank,idx) in zip(keys,r0):
+        e=ents[k]; npx=e['nz'].sum()/64.0
+        ben[e['pk']]+=e['w']*min(ee,ef)*npx; tot[e['pk']]+=e['w']*npx
+    bad=[pk for pk in ben if ben[pk]/max(tot[pk],1e-9)>FT.PLACE_MIN]
+    sets=[]
+    for pk in bad:
+        pal=np.frombuffer(pk,np.uint8).reshape(15,3).astype(float); cnt=np.zeros(15)
+        for k in keys:
+            e=ents[k]
+            if e['pk']==pk:
+                for i in range(15): cnt[i]+=e['w']*(e['idx']==i+1).sum()
+        sets.append((pal,cnt+1e-3))
+    eff=dict(base_eff); placed={}
+    if sets and F:
+        banks=FT.merge_palettes(sets,len(F))
+        for bank,cols in zip(F,banks):
+            p=np.vstack([CA.pals[bank][0:1],cols]); eff[bank]=p; placed[bank]=cols.astype(np.uint8).tobytes()
+    g['placed']=placed; g['eff']=eff
+    r1=evaluate(eff) if keys else []
+    for k,(ee,ent,ef,bank,idx) in zip(keys,r1):
+        e=ents[k]; e.update(ee=ee,ent=ent,ef=ef,fbank=bank,fidx=idx,code=('E',ent),err=ee)
+    print('groupe %d/%d %s %s : %d entrees, %d a placer, banques libres %s, placees %s'%(gi+1,len(GR),g['la'],g['dr'],len(keys),len(sets),F,sorted(placed)),flush=True)
+# 3) tuiles neuves par ordre de gain
 cands=[]
-for j in jobs:
-    use=collections.Counter()
-    for m,c in j['cnt'].items():
-        for k_ in j['mblk'][m]: use[k_]+=c
-    for k_,r in j['res'].items():
-        g=r['ee']-r['ef']
-        if g>FT.GAIN_MIN: cands.append((g*use[k_],id(j),k_,j))
+for gi,g in enumerate(GR):
+    for k,e in g['ents'].items():
+        gain=e['ee']-e['ef']
+        if gain>FT.GAIN_MIN: cands.append((gain*e['w']*max(1,e['nz'].sum())/64.0,gi,k))
 cands.sort(key=lambda t:-t[0])
-for g,_,k_,j in cands:
-    r=j['res'][k_]; S=j['S']
-    f=S.find_tile(r['idx'])
-    if f is None:
-        if S.free_tiles()<=0: continue
-        f=S.add_tile(r['idx'])
+nfail=0;FAILS={}
+for gain,gi,k in cands:
+    g=GR[gi]; e=g['ents'][k]; S=g['LS']
+    idx=e['fidx']; bank=e['fbank']
+    ex=exist_tiles(g['CA'],S.free0).get(idx.tobytes())
+    if ex is not None:
+        e['code']=('E',(ex[0],ex[1],ex[2],bank)); e['err']=e['ef']; continue
+    f=S.find_new(idx)
+    if f is None and S.data:
+        # une tuile deja creee (pour une autre entree) qui convient presque aussi bien ?
+        pool=FT.pool_from_tiles(g['eff'],list(S.data.items()))
+        T=(e['pal'][e['idx']].astype(np.float32)).reshape(1,64,3)
+        ee2,ent2=FT.best_existing(pool,T,e['nz'].reshape(1,64))[0]
+        if ee2<=e['ef']+FT.REUSE_TOL:
+            e['code']=('F',(ent2[0],ent2[1],ent2[2],ent2[3])); e['err']=ee2; continue
+    f=S.add_new(idx)
+    if f is None: nfail+=1; FAILS[g['la']+' '+g['dr']]=FAILS.get(g['la']+' '+g['dr'],0)+1; continue
     n,hf,vf=f
-    # find_tile renvoie (T,hf,vf) avec flip(idx)=T : l'entree utilise donc les memes flips
-    r['choice']=('F',(640+n,hf,vf,r['bank'])); r['err']=r['ef']
-# 3) metatuiles
-def entry(e): return (e[0]&0x3ff)|(e[1]<<10)|(e[2]<<11)|(e[3]<<12)
-def piece(C,ch,r):
-    kind,(tid,hf,vf,bank)=ch
-    if kind=='F': t=r['idx']
-    else: t=C.tile(tid)
-    if kind=='F' and (hf or vf):
-        pass
-    t2=t
-    if kind=='E':
-        if hf: t2=t2[:,::-1]
-        if vf: t2=t2[::-1,:]
-    return C.pals[bank][t2].astype(np.float32)
-out=[];tab=[];dbg=[];stat=[]
-for j in jobs:
-    CA,CB,S,LA,LB=j['CA'],j['CB'],j['S'],j['LA'],j['LB']
-    x0,y0,w,h=j['rect']; mm={}   # mid voisin -> (mid nouveau, bloque, image)
+    e['code']=('F',(n,hf,vf,bank)); e['err']=e['ef']
+print('tuiles neuves : %d candidates, %d sans place'%(len(cands),nfail),flush=True)
+for k_,v_ in sorted(FAILS.items(),key=lambda t:-t[1]): print('   sans place:',k_,v_,'(cases libres de la carte: %d)'%len(LS[k_.split()[0]].free0))
+# 4) metatuiles
+def entry(c): return (c[0]&0x3ff)|(c[1]<<10)|(c[2]<<11)|(c[3]<<12)
+def tile_of(CA,S,tid):
+    if tid in S.data: return S.data[tid]
+    return CA.tile(tid)
+def render_ents(CA,S,eff,ents):
+    im=np.zeros((16,16,3),np.float32)
+    for layer in range(2):
+        for q in range(4):
+            e=ents[layer*4+q]; tid,hf,vf,pal=e&0x3ff,(e>>10)&1,(e>>11)&1,e>>12
+            t=tile_of(CA,S,tid)
+            if t is None: continue
+            if hf: t=t[:,::-1]
+            if vf: t=t[::-1,:]
+            rgb=eff.get(pal,eff[0])[t].astype(np.float32)
+            m=(t!=0)[:,:,None] if layer==1 else np.ones((8,8,1),bool)
+            y0,x0=(q//2)*8,(q%2)*8
+            im[y0:y0+8,x0:x0+8]=np.where(m,rgb,im[y0:y0+8,x0:x0+8])
+    return im
+stat=[];out=[];tab=[];dbg=[]
+sid=0;strip_pal=[]
+PLAN={}
+for g in GR:
+    CA,S,eff,LA=g['CA'],g['LS'],g['eff'],g['LA']
     used=[m for m in sorted(set(used_ids(LA))) if CA.valid(m)]
     exr={}
-    def exrender(m):
-        if m not in exr: exr[m]=CA.render(m)
+    def exrender(m,CA=CA,S=S,eff=eff,LA=LA,exr=exr):
+        if m not in exr:
+            ts=LA.prim if m<640 else LA.sec; i=m if m<640 else m-640
+            exr[m]=render_ents(CA,S,eff,struct.unpack('<8H',ts.metatiles[i*16:i*16+16]))
         return exr[m]
-    for m in sorted(j['cnt'],key=lambda m:-j['cnt'][m]):
-        T=j['T'][m]; attrB=CB.attr(m)&~FT.LAYER_MASK
-        chs=[j['res'][k_] for k_ in j['mblk'][m]]
-        comp=np.zeros((16,16,3),np.float32)
-        for q,r in enumerate(chs):
-            y,x=(q//2)*8,(q%2)*8; comp[y:y+8,x:x+8]=piece(CA,r['choice'],r)
-        Ec=float(((comp-T)**2).sum(2).mean())
-        # metatuile existante equivalente (memes attributs) ?
-        bm=None;Em=1e18
-        for c in used:
-            if (CA.attr(c)&~FT.LAYER_MASK)!=attrB: continue
-            e=float(((exrender(c)-T)**2).sum(2).mean())
-            if e<Em: Em=e;bm=c
-        if bm is not None and Em<=Ec+60:
-            mm[m]=(bm,False,exrender(bm),Em); continue
-        ents=tuple(entry(r['choice'][1]) for r in chs)+(0,0,0,0)
-        key=(ents,attrB)
-        if key in S.mkey: mm[m]=(S.mkey[key],False,comp,Ec); continue
-        if S.free_metas()>0 and Ec<(Em if bm is not None else 1e18):
-            nid=640+S.m0+len(S.metas); S.metas.append(list(ents)); S.attrs.append(attrB); S.mkey[key]=nid
-            mm[m]=(nid,False,comp,Ec); continue
-        if bm is not None:
-            mm[m]=(bm,False,exrender(bm),Em); continue
-        # repli : metatuile la plus ressemblante de comportement compatible (ancienne methode)
-        best,blk=translate(LA,LB,m|0,{})
-        mm[m]=(best,blk,exrender(best) if CA.valid(best) else comp,float('nan'))
-    j['mm']=mm
-for S in TS.values():
-    FT.write_tileset(S.ts,S.tiles,S.metas,S.attrs)
-    print('%-28s +%3d tuiles (%d/384)  +%3d metatuiles (%d/384)'%(S.name,len(S.tiles),S.n0+len(S.tiles),len(S.metas),S.m0+len(S.metas)))
-for j in jobs:
-    k,a,b,LA,LB=j['k'],j['a'],j['b'],j['LA'],j['LB']
-    x0,y0,w,h=j['rect']; mm=j['mm']; data=[]; tot=0.0;nn=0
-    for y in range(y0,y0+h):
-        for x in range(x0,x0+w):
-            v=LB.get(x,y); nid,blk,_,e=mm[v&0x3ff]
-            coll=(v>>10)&3
-            if blk: coll=1
-            data.append(nid|(coll<<10)|((v>>12)<<12))
-            if e==e: tot+=e; nn+=1
-    j['mean']=tot/max(1,nn)
-    nm='sFogStrip%d'%k
-    out.append('static const u16 %s[] = {%s};\n'%(nm,','.join(str(d) for d in data)))
-    tab.append('    {%s, %s, %d, %d, %d, %d, %s},\n'%(MAPS[a]['layout'],MAPS[b]['layout'],x0,y0,w,h,nm))
-    stat.append((j['mean'],a,j['dr'],b,sum(1 for m in mm.values() if m[0]>=640+j['S'].m0),sum(1 for m in mm.values() if m[1] or m[3]!=m[3])))
-    if DEBUG:
-        im1=Image.new('RGB',(w*16,h*16));im2=Image.new('RGB',(w*16,h*16))
-        for i,v in enumerate(data):
-            xx,yy=i%w,i//w
-            im1.paste(j['CB'].L.metatile_img(LB.get(x0+xx,y0+yy)&0x3ff).convert('RGB'),(xx*16,yy*16))
-            mid0=LB.get(x0+xx,y0+yy)&0x3ff
-            im2.paste(Image.fromarray(np.clip(mm[mid0][2],0,255).astype(np.uint8),'RGB'),(xx*16,yy*16))
-        dbg.append((k,a,b,im1,im2))
-hdr='// genere par docs/topaze/fog_strips.py : bande (8 cases) de la carte voisine (vraie forme, requantifiee dans les palettes de la carte courante)\nstruct TopazeFogStrip { u16 layoutA; u16 layoutB; s16 x0; s16 y0; s16 w; s16 h; const u16 *data; };\n'
-open(R+'include/topaze_fog_strips.h','w').write(hdr+''.join(out)+'static const struct TopazeFogStrip sTopazeFogStrips[] = {\n'+''.join(tab)+'    {0xFFFF, 0xFFFF, 0, 0, 0, 0, NULL},\n};\n')
+    for j in g['jobs']:
+        CB=j['CB']; j['mm']={}
+        for m in sorted(j['cnt'],key=lambda m:-j['cnt'][m]):
+            T=j['T'][m]; attrB=CB.attr(m)
+            ents=tuple(0 if key is None else entry(g['ents'][key]['code'][1]) for key in j['ments'][m])
+            comp=render_ents(CA,S,eff,ents)
+            Ec=float(((comp-T)**2).sum(2).mean())
+            bm=None;Em=1e18
+            for c in used:
+                if (CA.attr(c)&~FT.LAYER_MASK)!=(attrB&~FT.LAYER_MASK): continue
+                e_=float(((exrender(c)-T)**2).sum(2).mean())
+                if e_<Em: Em=e_;bm=c
+            PLAN.setdefault(g['la'],[]).append(dict(g=g,j=j,m=m,ents=ents,attr=attrB,comp=comp,Ec=Ec,bm=bm,Em=Em,bimg=exrender(bm) if bm is not None else None,cnt=j['cnt'][m]))
+def allocate(S,lid,tol):
+    S.mfree=list(S.mfree0); S.metas={}; S.mkey={}; fails=0
+    for it in sorted(PLAN[lid],key=lambda it:-it['cnt']):
+        g,j,m=it['g'],it['j'],it['m']; mm=j['mm']
+        if it['bm'] is not None and it['Em']<=it['Ec']+tol: mm[m]=(it['bm'],False,it['bimg'],it['Em']); continue
+        key=(it['ents'],it['attr'])
+        if key in S.mkey: mm[m]=(S.mkey[key],False,it['comp'],it['Ec']); continue
+        nid=S.alloc(list(it['ents']),it['attr'])
+        if nid is not None: S.mkey[key]=nid; mm[m]=(nid,False,it['comp'],it['Ec']); continue
+        fails+=1
+        if it['bm'] is not None: mm[m]=(it['bm'],False,it['bimg'],it['Em']); continue
+        best,blk=translate(g['LA'],j['LB'],m,{})
+        mm[m]=(best,blk,it['comp'],float('nan'))
+    return fails
+for lid,S in LS.items():
+    if lid not in PLAN: continue
+    for tol in (40,120,250,500,1000):
+        f=allocate(S,lid,tol)
+        if f==0: break
+    if f or tol>40: print('%-34s tolerance %d, %d echecs'%(lid,tol,f))
+tile_arrays={}
+for lid,Lx in LS.items():
+    ids=sorted(Lx.data)
+    if not ids: continue
+    # blocs de numeros consecutifs -> une copie DMA chacun
+    runs=[];st=ids[0];n=1
+    for a_,b_ in zip(ids,ids[1:]):
+        if b_==a_+1: n+=1
+        else: runs.append((st,n)); st=b_; n=1
+    runs.append((st,n))
+    words=[]
+    for t in ids:
+        px=Lx.data[t]; 
+        for y in range(8):
+            w=0
+            for x in range(8): w|=int(px[y,x])<<(4*x)
+            words.append(w)
+    tile_arrays[lid]=(runs,words)
+pal_arrays=[]
+for g in GR:
+    # palettes placees de ce groupe (bank, 15 couleurs BGR555)
+    pl=sorted(g['placed'].items()); name='sFogPal%d'%len(pal_arrays)
+    cols=[]
+    for bank,pk in pl:
+        p=np.frombuffer(pk,dtype=np.uint8).reshape(15,3)
+        cols+=[(int(r)>>3)|((int(gg)>>3)<<5)|((int(bb)>>3)<<10) for r,gg,bb in p]
+    g['palname']=name; g['npal']=len(pl)
+    if pl:
+        pal_arrays.append('static const u8 %sB[] = {%s};\nstatic const u16 %sC[] = {%s};\n'%(name,','.join(str(b) for b,_ in pl),name,','.join(str(c) for c in cols)))
+    else: pal_arrays.append('')
+    for j in g['jobs']:
+        k,a,b,LB=j['k'],j['a'],j['b'],j['LB']
+        x0,y0,w,h=j['rect']; mm=j['mm']; data=[]; tot=0.0;nn=0
+        for y in range(y0,y0+h):
+            for x in range(x0,x0+w):
+                v=LB.get(x,y); nid,blk,_,e=mm[v&0x3ff]
+                coll=(v>>10)&3
+                if blk: coll=1
+                data.append(nid|(coll<<10)|((v>>12)<<12))
+                if e==e: tot+=e; nn+=1
+        j['mean']=tot/max(1,nn); j['data']=data
+        nm='sFogStrip%d'%k
+        out.append('static const u16 %s[] = {%s};\n'%(nm,','.join(str(d) for d in data)))
+        pn=('%sB, %sC'%(name,name)) if pl else 'NULL, NULL'
+        tab.append((k,'    {%s, %s, %d, %d, %d, %d, %s, %d, %d, %s},\n'%(MAPS[a]['layout'],MAPS[b]['layout'],x0,y0,w,h,nm,FT.DIRN[g['dr']],len(pl),pn)))
+        stat.append((j['mean'],a,g['dr'],b,len(pl),len(g['F']),sum(1 for m in mm.values() if m[1] or m[3]!=m[3])))
+        if DEBUG:
+            im1=Image.new('RGB',(w*16,h*16));im2=Image.new('RGB',(w*16,h*16))
+            for i,v in enumerate(data):
+                xx,yy=i%w,i//w; mid0=LB.get(x0+xx,y0+yy)&0x3ff
+                im1.paste(Image.fromarray(np.clip(j['T'][mid0],0,255).astype(np.uint8),'RGB'),(xx*16,yy*16))
+                im2.paste(Image.fromarray(np.clip(mm[mid0][2],0,255).astype(np.uint8),'RGB'),(xx*16,yy*16))
+            dbg.append((k,a,b,im1,im2))
+tab.sort()
+hdr='// genere par docs/topaze/fog_strips.py : bande (8 cases) de la carte voisine (vraie forme) dessinee avec les tuiles/palettes de la carte courante\nstruct TopazeFogStrip { u16 layoutA; u16 layoutB; s16 x0; s16 y0; s16 w; s16 h; const u16 *data; u8 dir; u8 nPal; const u8 *palBank; const u16 *palCol; };\nstruct TopazeFogTileRun { u16 first; u16 count; u16 offset; };\nstruct TopazeFogTiles { u16 layoutId; u8 nRuns; const struct TopazeFogTileRun *runs; const u32 *data; };\nstruct TopazeFogMetas { u16 layoutId; u16 n; const u16 *ids; const u16 *ents; const u32 *attrs; };\n'
+tl=[];tt=[]
+for lid,(runs,words) in sorted(tile_arrays.items()):
+    nm=lid.lower()
+    off=0;rr=[]
+    for st,n in runs: rr.append('{%d,%d,%d}'%(st,n,off)); off+=n*8
+    tl.append('static const struct TopazeFogTileRun sFogRuns_%s[] = {%s};\nstatic const u32 sFogTileData_%s[] = {%s};\n'%(nm,','.join(rr),nm,','.join('0x%08X'%w for w in words)))
+    tt.append('    {%s, %d, sFogRuns_%s, sFogTileData_%s},\n'%(lid,len(runs),nm,nm))
+tilestab='static const struct TopazeFogTiles sTopazeFogTiles[] = {\n'+''.join(tt)+'    {0xFFFF, 0, NULL, NULL},\n};\n'
+ml=[];mt=[]
+for lid,Lx in sorted(LS.items()):
+    if not Lx.metas: continue
+    ks=sorted(Lx.metas); nm=lid.lower()
+    ml.append('static const u16 sFogMetaIds_%s[] = {%s};\nstatic const u16 sFogMetaEnts_%s[] = {%s};\nstatic const u32 sFogMetaAttr_%s[] = {%s};\n'%(nm,','.join(str(k) for k in ks),nm,','.join(str(x) for k in ks for x in Lx.metas[k][0]),nm,','.join('0x%08X'%Lx.metas[k][1] for k in ks)))
+    mt.append('    {%s, %d, sFogMetaIds_%s, sFogMetaEnts_%s, sFogMetaAttr_%s},\n'%(lid,len(ks),nm,nm,nm))
+metastab='static const struct TopazeFogMetas sTopazeFogMetas[] = {\n'+''.join(mt)+'    {0xFFFF, 0, NULL, NULL, NULL},\n};\n'
+open(R+'include/topaze_fog_strips.h','w').write(hdr+''.join(tl)+tilestab+''.join(ml)+metastab+''.join(pal_arrays)+''.join(out)+'static const struct TopazeFogStrip sTopazeFogStrips[] = {\n'+''.join(t[1] for t in tab)+'    {0xFFFF, 0xFFFF, 0, 0, 0, 0, NULL, 0, 0, NULL, NULL},\n};\n')
 print(len(conns),'bandes')
-for s_ in sorted(stat,reverse=True): print('err moy %7.1f  %-26s %-5s %-26s neuves %2d repli %2d'%s_)
+for s_ in sorted(stat,reverse=True): print('err moy %7.1f  %-26s %-5s %-26s pal %d/%d repli %d'%s_)
 if DEBUG:
     os.makedirs('/tmp/fogdbg',exist_ok=True)
     for k,a,b,i1,i2 in dbg:
         W=max(i1.width,i2.width); M=Image.new('RGB',(W,i1.height+i2.height+4),(255,0,255)); M.paste(i1,(0,0)); M.paste(i2,(0,i1.height+4)); M.save('/tmp/fogdbg/%02d_%s_%s.png'%(k,a,b))
+if os.environ.get('DBGJOB'):
+    k=int(os.environ['DBGJOB'])
+    for g in GR:
+        for j in g['jobs']:
+            if j['k']==k:
+                rows=sorted(((v[3],m,j['cnt'][m],v[0]) for m,v in j['mm'].items() if v[3]==v[3]),reverse=True)[:12]
+                for r in rows: print('mid %4d cnt %3d -> %4d err %.0f'%(r[1],r[2],r[3],r[0]))
+                for r in rows[:4]:
+                    m=r[1]; print('--- mid',m,'attr',hex(j['CB'].attr(m)))
+                    ents_=tuple(0 if key is None else entry(g['ents'][key]['code'][1]) for key in j['ments'][m])
+                    comp_=render_ents(g['CA'],g['LS'],g['eff'],ents_)
+                    print('ents',[hex(x) for x in ents_],'Ec',float(((comp_-j['T'][m])**2).sum(2).mean()))
+                    for q in range(4):
+                        y0,x0=(q//2)*8,(q%2)*8
+                        print(' quad',q,float(((comp_-j['T'][m])[y0:y0+8,x0:x0+8]**2).sum(2).mean()))
+                    for q,key in enumerate(j['ments'][m]):
+                        if key: e=g['ents'][key]; print(q,e['code'],'ee',round(e['ee']),'ef',round(e['ef']),'nz',e['nz'].sum(),'w',e['w'],'err',round(e['err']))

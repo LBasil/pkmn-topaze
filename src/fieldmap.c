@@ -130,6 +130,9 @@ static void InitBackupMapLayoutData(const u16 *map, u16 width, u16 height)
 
 #include "topaze_fog_pairs.h"
 #include "topaze_fog_strips.h"
+static u32 TopazeFogMetaAttr(u16 id, bool8 *found);
+void TopazeLoadFogData(void);
+const u16 *TopazeFogMetatile(u16 id);
 
 // Topaze: when the two maps of a connection use different tilesets, the neighbour strip would be
 // drawn with the wrong tiles. Replicate the current map's own edge metatiles instead (hard cut, same passability).
@@ -533,7 +536,11 @@ void MapGridSetMetatileImpassabilityAt(s32 x, s32 y, bool32 impassable)
 static u32 GetAttributeByMetatileIdAndMapLayout(const struct MapLayout *mapLayout, u16 metatile, u8 attributeType)
 {
     const u32 * attributes;
+    bool8 fogFound;
+    u32 fogAttr = TopazeFogMetaAttr(metatile, &fogFound);
 
+    if (fogFound && mapLayout == gMapHeader.mapLayout)
+        return ExtractMetatileAttribute(fogAttr, attributeType);
     if (metatile < NUM_METATILES_IN_PRIMARY)
     {
         attributes = mapLayout->primaryTileset->metatileAttributes;
@@ -762,7 +769,7 @@ extern void TransferTilesetAnimsBuffer(void);
 #include "topaze_ramps.h"
 #include "field_weather.h"
 static EWRAM_DATA u16 sRampBase[13 * 16] = {0};   // palettes as loaded from the tilesets (before any ramp)
-static EWRAM_DATA u16 sRampKey = 0xFFFF;
+static EWRAM_DATA u32 sRampKey = 0xFFFFFFFF;
 
 static const struct TopazeRamp *TopazeFindRamp(u16 layoutId)
 {
@@ -773,13 +780,13 @@ static const struct TopazeRamp *TopazeFindRamp(u16 layoutId)
     return NULL;
 }
 
-static u8 TopazeRampStep(const struct TopazeRampEnd *e)
+static s32 TopazeEdgeDist(u8 dir)
 {
     s32 d;
     s32 w = gMapHeader.mapLayout->width, h = gMapHeader.mapLayout->height;
     s32 x = gSaveBlock1Ptr->pos.x, y = gSaveBlock1Ptr->pos.y;
 
-    switch (e->dir)
+    switch (dir)
     {
     case 0: d = y; break;
     case 1: d = h - 1 - y; break;
@@ -787,16 +794,100 @@ static u8 TopazeRampStep(const struct TopazeRampEnd *e)
     default: d = w - 1 - x; break;
     }
     if (d < 0) d = 0;
+    return d;
+}
+
+static u8 TopazeRampStep(const struct TopazeRampEnd *e)
+{
+    s32 d = TopazeEdgeDist(e->dir);
+
     if (d >= TOPAZE_RAMP_ZONE) return 0;
     if (d <= 7) return 16;      // the neighbour strip (<= 7 cells deep on screen) is drawn with the fully ramped colours
     return ((TOPAZE_RAMP_ZONE - d) * 16) / (TOPAZE_RAMP_ZONE - 7);
 }
 
+// ---- Topaze: per-map overlays for the neighbour strips (generated: docs/topaze/fog_strips.py) ----
+// tiles: written into VRAM slots no tile of this map uses; metatiles: definitions replaced at unused ids; palettes: free banks.
+static EWRAM_DATA u8 sFogMetaIdx[384] = {0};
+static const u16 *sFogMetaEnts;
+static const u32 *sFogMetaAttr;
+static EWRAM_DATA bool8 sFogMetaOn = FALSE;
+static EWRAM_DATA bool8 sFogPalWas = FALSE;
+
+const u16 *TopazeFogMetatile(u16 id)
+{
+    if (!sFogMetaOn || id < 640 || id >= 1024 || sFogMetaIdx[id - 640] == 0xFF)
+        return NULL;
+    return sFogMetaEnts + sFogMetaIdx[id - 640] * 8;
+}
+
+static u32 TopazeFogMetaAttr(u16 id, bool8 *found)
+{
+    *found = FALSE;
+    if (!sFogMetaOn || id < 640 || id >= 1024 || sFogMetaIdx[id - 640] == 0xFF)
+        return 0;
+    *found = TRUE;
+    return sFogMetaAttr[sFogMetaIdx[id - 640]];
+}
+
+void TopazeLoadFogData(void)
+{
+    u32 i;
+    u16 lid = gMapHeader.mapLayoutId;
+    const struct TopazeFogTiles *t;
+    const struct TopazeFogMetas *m;
+
+    sFogMetaOn = FALSE;
+    for (m = sTopazeFogMetas; m->layoutId != 0xFFFF; m++)
+    {
+        if (m->layoutId != lid)
+            continue;
+        for (i = 0; i < 384; i++)
+            sFogMetaIdx[i] = 0xFF;
+        for (i = 0; i < m->n; i++)
+            sFogMetaIdx[m->ids[i] - 640] = i;
+        sFogMetaEnts = m->ents;
+        sFogMetaAttr = m->attrs;
+        sFogMetaOn = TRUE;
+        break;
+    }
+    for (t = sTopazeFogTiles; t->layoutId != 0xFFFF; t++)
+    {
+        if (t->layoutId != lid)
+            continue;
+        for (i = 0; i < t->nRuns; i++)
+            LoadBgTiles(2, t->data + t->runs[i].offset, t->runs[i].count * 32, t->runs[i].first);
+        break;
+    }
+}
+
+static s32 TopazeFogSelect(void)
+{
+    s32 i, best = -1, bestD = 9;
+
+    if (!gMapHeader.mapLayout)
+        return -1;
+    for (i = 0; sTopazeFogStrips[i].layoutA != 0xFFFF; i++)
+    {
+        s32 d;
+        if (sTopazeFogStrips[i].layoutA != gMapHeader.mapLayoutId || sTopazeFogStrips[i].nPal == 0)
+            continue;
+        d = TopazeEdgeDist(sTopazeFogStrips[i].dir);
+        if (d <= bestD)
+        {
+            bestD = d;
+            best = i;
+        }
+    }
+    return best;
+}
+
 void TopazeRampApply(bool8 force)
 {
     const struct TopazeRamp *r = gMapHeader.mapLayout ? TopazeFindRamp(gMapHeader.mapLayoutId) : NULL;
+    s32 sel = TopazeFogSelect();
     u8 q[3] = {0, 0, 0};
-    u16 key = 0;
+    u32 key = 0;
     u32 i, k;
 
     if (r != NULL)
@@ -808,11 +899,13 @@ void TopazeRampApply(bool8 force)
         }
         key += 1 + r->layoutId * 7;
     }
+    key = key * 128 + (sel + 1);
     if (!force && key == sRampKey)
         return;
     sRampKey = key;
-    if (r == NULL && !force)
+    if (r == NULL && sel < 0 && !sFogPalWas && !force)
         return;
+    sFogPalWas = (sel >= 0);
     for (i = 0; i < 13 * 16; i++)
     {
         s32 c[3], o[3];
@@ -844,6 +937,14 @@ void TopazeRampApply(bool8 force)
             if (c[k] > 31) c[k] = 31;
         }
         gPlttBufferUnfaded[i] = c[0] | (c[1] << 5) | (c[2] << 10);
+    }
+    if (sel >= 0)
+    {
+        // free palette banks (not used by any tile of this map) receive the colours of the neighbour strip
+        const struct TopazeFogStrip *st = &sTopazeFogStrips[sel];
+        for (i = 0; i < st->nPal; i++)
+            for (k = 0; k < 15; k++)
+                gPlttBufferUnfaded[st->palBank[i] * 16 + 1 + k] = st->palCol[i * 15 + k];
     }
     for (i = 0; i < 13; i++)
     {
@@ -1137,11 +1238,13 @@ void CopyPrimaryTilesetToVram(const struct MapLayout *mapLayout)
 void CopySecondaryTilesetToVram(const struct MapLayout *mapLayout)
 {
     CopyTilesetToVram(mapLayout->secondaryTileset, NUM_TILES_TOTAL - NUM_TILES_IN_PRIMARY, NUM_TILES_IN_PRIMARY);
+    TopazeLoadFogData();
 }
 
 void CopySecondaryTilesetToVramUsingHeap(const struct MapLayout *mapLayout)
 {
     CopyTilesetToVramUsingHeap(mapLayout->secondaryTileset, NUM_TILES_TOTAL - NUM_TILES_IN_PRIMARY, NUM_TILES_IN_PRIMARY);
+    TopazeLoadFogData();
 }
 
 static void LoadPrimaryTilesetPalette(const struct MapLayout *mapLayout)
@@ -1163,6 +1266,7 @@ void CopyMapTilesetsToVram(struct MapLayout const *mapLayout)
     {
         CopyTilesetToVramUsingHeap(mapLayout->primaryTileset, NUM_TILES_IN_PRIMARY, 0);
         CopyTilesetToVramUsingHeap(mapLayout->secondaryTileset, NUM_TILES_TOTAL - NUM_TILES_IN_PRIMARY, NUM_TILES_IN_PRIMARY);
+        TopazeLoadFogData();
     }
 }
 

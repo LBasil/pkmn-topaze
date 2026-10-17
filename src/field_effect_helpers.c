@@ -260,6 +260,7 @@ void UpdateShadowFieldEffect(struct Sprite *sprite)
 }
 
 // Topaze : les herbes (sprites) reprennent la teinte du sol de la zone (rouge / violet / bleu-vert) au lieu du vert fixe.
+extern const u16 *TopazeFogMetatile(u16 id);
 static u16 TopazeLuma(u16 c)
 {
     return (c & 0x1F) * 3 + ((c >> 5) & 0x1F) * 6 + ((c >> 10) & 0x1F);
@@ -272,7 +273,10 @@ static void TopazeTintGrassSprite(struct Sprite *sprite, s16 x, s16 y)
     u8 bgPal, i, j;
     u16 src[16], bg[16], base;
 
-    if (id < 640)
+    entries = TopazeFogMetatile(id);
+    if (entries != NULL)
+        ;
+    else if (id < 640)
         entries = gMapHeader.mapLayout->primaryTileset->metatiles + id * 8;
     else
         entries = gMapHeader.mapLayout->secondaryTileset->metatiles + (id - 640) * 8;

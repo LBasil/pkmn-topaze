@@ -222,13 +222,23 @@ void DrawDoorMetatileAt(int x, int y, const u16 *tiles)
     }
 }
 
+extern const u16 *TopazeFogMetatile(u16 id);
+
 static void DrawMetatileAt(const struct MapLayout *mapLayout, u16 offset, int x, int y)
 {
     u16 metatileId = MapGridGetMetatileIdAt(x, y);
     const u16 *metatiles;
+    const u16 *fogEntries;
 
     if (metatileId > NUM_METATILES_TOTAL)
         metatileId = 0;
+    fogEntries = TopazeFogMetatile(metatileId);
+    if (fogEntries != NULL)
+    {
+        // Topaze: junction strip metatile defined per map (docs/topaze/fog_strips.py)
+        DrawMetatile(MapGridGetMetatileLayerTypeAt(x, y), fogEntries, offset);
+        return;
+    }
     if (metatileId < NUM_METATILES_IN_PRIMARY)
         metatiles = mapLayout->primaryTileset->metatiles;
     else
