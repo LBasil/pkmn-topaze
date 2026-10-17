@@ -859,7 +859,7 @@ static bool8 TryArrowWarp(struct MapPosition *position, u16 metatileBehavior, u8
 // Topaze: GRENALUX / OPANIHRUM / PYROPIA <-> Routes 1, 2, 3, 21, 22 use plain step-on warps (no door tile), see docs/topaze/grenalux_events.py
 static bool8 IsTopazeStepWarpMap(void)
 {
-    return gMapHeader.mapLayoutId == LAYOUT_PALLET_TOWN || gMapHeader.mapLayoutId == LAYOUT_ROUTE1 || gMapHeader.mapLayoutId == LAYOUT_ROUTE21_NORTH
+    return gMapHeader.mapLayoutId == LAYOUT_GYM_EM_MOSSDEEP || gMapHeader.mapLayoutId == LAYOUT_PALLET_TOWN || gMapHeader.mapLayoutId == LAYOUT_ROUTE1 || gMapHeader.mapLayoutId == LAYOUT_ROUTE21_NORTH
         || gMapHeader.mapLayoutId == LAYOUT_VIRIDIAN_CITY || gMapHeader.mapLayoutId == LAYOUT_ROUTE2 || gMapHeader.mapLayoutId == LAYOUT_ROUTE22
         || gMapHeader.mapLayoutId == LAYOUT_PEWTER_CITY || gMapHeader.mapLayoutId == LAYOUT_ROUTE3 || gMapHeader.mapLayoutId == LAYOUT_VIRIDIAN_FOREST || gMapHeader.mapLayoutId == LAYOUT_ROUTE4 || gMapHeader.mapLayoutId == LAYOUT_CERULEAN_CITY
         || gMapHeader.mapLayoutId == LAYOUT_ROUTE24 || gMapHeader.mapLayoutId == LAYOUT_ROUTE5 || gMapHeader.mapLayoutId == LAYOUT_ROUTE9 || gMapHeader.mapLayoutId == LAYOUT_ROUTE4_EAST

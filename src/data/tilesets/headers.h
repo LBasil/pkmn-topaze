@@ -1472,3 +1472,157 @@ const struct Tileset gTileset_PokemonLeagueLair =
     .metatileAttributes = gMetatileAttributes_PokemonLeagueLair,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GymLavaridgePri =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GymLavaridgePri,
+    .palettes = gTilesetPalettes_GymLavaridgePri,
+    .metatiles = gMetatiles_GymLavaridgePri,
+    .metatileAttributes = gMetatileAttributes_GymLavaridgePri,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GymLavaridgeSec =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_GymLavaridgeSec,
+    .palettes = gTilesetPalettes_GymLavaridgeSec,
+    .metatiles = gMetatiles_GymLavaridgeSec,
+    .metatileAttributes = gMetatileAttributes_GymLavaridgeSec,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GymFortreePri =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GymFortreePri,
+    .palettes = gTilesetPalettes_GymFortreePri,
+    .metatiles = gMetatiles_GymFortreePri,
+    .metatileAttributes = gMetatileAttributes_GymFortreePri,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GymFortreeSec =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_GymFortreeSec,
+    .palettes = gTilesetPalettes_GymFortreeSec,
+    .metatiles = gMetatiles_GymFortreeSec,
+    .metatileAttributes = gMetatileAttributes_GymFortreeSec,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GymSootopolisPri =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GymSootopolisPri,
+    .palettes = gTilesetPalettes_GymSootopolisPri,
+    .metatiles = gMetatiles_GymSootopolisPri,
+    .metatileAttributes = gMetatileAttributes_GymSootopolisPri,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GymSootopolisSec =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_GymSootopolisSec,
+    .palettes = gTilesetPalettes_GymSootopolisSec,
+    .metatiles = gMetatiles_GymSootopolisSec,
+    .metatileAttributes = gMetatileAttributes_GymSootopolisSec,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GymDewfordPri =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GymDewfordPri,
+    .palettes = gTilesetPalettes_GymDewfordPri,
+    .metatiles = gMetatiles_GymDewfordPri,
+    .metatileAttributes = gMetatileAttributes_GymDewfordPri,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GymDewfordSec =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_GymDewfordSec,
+    .palettes = gTilesetPalettes_GymDewfordSec,
+    .metatiles = gMetatiles_GymDewfordSec,
+    .metatileAttributes = gMetatileAttributes_GymDewfordSec,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GymMossdeepPri =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GymMossdeepPri,
+    .palettes = gTilesetPalettes_GymMossdeepPri,
+    .metatiles = gMetatiles_GymMossdeepPri,
+    .metatileAttributes = gMetatileAttributes_GymMossdeepPri,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GymMossdeepSec =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_GymMossdeepSec,
+    .palettes = gTilesetPalettes_GymMossdeepSec,
+    .metatiles = gMetatiles_GymMossdeepSec,
+    .metatileAttributes = gMetatileAttributes_GymMossdeepSec,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GymMauvillePri =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GymMauvillePri,
+    .palettes = gTilesetPalettes_GymMauvillePri,
+    .metatiles = gMetatiles_GymMauvillePri,
+    .metatileAttributes = gMetatileAttributes_GymMauvillePri,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GymMauvilleSec =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_GymMauvilleSec,
+    .palettes = gTilesetPalettes_GymMauvilleSec,
+    .metatiles = gMetatiles_GymMauvilleSec,
+    .metatileAttributes = gMetatileAttributes_GymMauvilleSec,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GymRustboroPri =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GymRustboroPri,
+    .palettes = gTilesetPalettes_GymRustboroPri,
+    .metatiles = gMetatiles_GymRustboroPri,
+    .metatileAttributes = gMetatileAttributes_GymRustboroPri,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GymRustboroSec =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_GymRustboroSec,
+    .palettes = gTilesetPalettes_GymRustboroSec,
+    .metatiles = gMetatiles_GymRustboroSec,
+    .metatileAttributes = gMetatileAttributes_GymRustboroSec,
+    .callback = NULL,
+};

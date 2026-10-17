@@ -4506,6 +4506,90 @@
       "secondary_tileset": "gTileset_RustboroOpal",
       "border_filepath": "data/layouts/ViridianCityWestLane/border.bin",
       "blockdata_filepath": "data/layouts/ViridianCityWestLane/map.bin"
+    },
+    {
+      "id": "LAYOUT_GYM_EM_LAVARIDGE",
+      "name": "GymEmLavaridge_Layout",
+      "width": 17,
+      "height": 19,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GymLavaridgePri",
+      "secondary_tileset": "gTileset_GymLavaridgeSec",
+      "border_filepath": "data/layouts/GymEmLavaridge/border.bin",
+      "blockdata_filepath": "data/layouts/GymEmLavaridge/map.bin"
+    },
+    {
+      "id": "LAYOUT_GYM_EM_FORTREE",
+      "name": "GymEmFortree_Layout",
+      "width": 20,
+      "height": 25,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GymFortreePri",
+      "secondary_tileset": "gTileset_GymFortreeSec",
+      "border_filepath": "data/layouts/GymEmFortree/border.bin",
+      "blockdata_filepath": "data/layouts/GymEmFortree/map.bin"
+    },
+    {
+      "id": "LAYOUT_GYM_EM_SOOTOPOLIS",
+      "name": "GymEmSootopolis_Layout",
+      "width": 17,
+      "height": 26,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GymSootopolisPri",
+      "secondary_tileset": "gTileset_GymSootopolisSec",
+      "border_filepath": "data/layouts/GymEmSootopolis/border.bin",
+      "blockdata_filepath": "data/layouts/GymEmSootopolis/map.bin"
+    },
+    {
+      "id": "LAYOUT_GYM_EM_DEWFORD",
+      "name": "GymEmDewford_Layout",
+      "width": 18,
+      "height": 28,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GymDewfordPri",
+      "secondary_tileset": "gTileset_GymDewfordSec",
+      "border_filepath": "data/layouts/GymEmDewford/border.bin",
+      "blockdata_filepath": "data/layouts/GymEmDewford/map.bin"
+    },
+    {
+      "id": "LAYOUT_GYM_EM_MOSSDEEP",
+      "name": "GymEmMossdeep_Layout",
+      "width": 26,
+      "height": 36,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GymMossdeepPri",
+      "secondary_tileset": "gTileset_GymMossdeepSec",
+      "border_filepath": "data/layouts/GymEmMossdeep/border.bin",
+      "blockdata_filepath": "data/layouts/GymEmMossdeep/map.bin"
+    },
+    {
+      "id": "LAYOUT_GYM_EM_MAUVILLE",
+      "name": "GymEmMauville_Layout",
+      "width": 10,
+      "height": 21,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GymMauvillePri",
+      "secondary_tileset": "gTileset_GymMauvilleSec",
+      "border_filepath": "data/layouts/GymEmMauville/border.bin",
+      "blockdata_filepath": "data/layouts/GymEmMauville/map.bin"
+    },
+    {
+      "id": "LAYOUT_GYM_EM_RUSTBORO",
+      "name": "GymEmRustboro_Layout",
+      "width": 11,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GymRustboroPri",
+      "secondary_tileset": "gTileset_GymRustboroSec",
+      "border_filepath": "data/layouts/GymEmRustboro/border.bin",
+      "blockdata_filepath": "data/layouts/GymEmRustboro/map.bin"
     }
   ]
 }

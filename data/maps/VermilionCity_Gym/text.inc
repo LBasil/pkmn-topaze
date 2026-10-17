@@ -53,13 +53,13 @@ VermilionCity_Gym_Text_TuckerDefeat::
     .string "You're very good!$"
 
 VermilionCity_Gym_Text_TuckerPostBattle::
-    .string "It's not easy opening that door.\p"
-    .string "HERA was always famous for\n"
-    .string "her cautious nature up in the cold.$"
+    .string "Winds howl through this place.\p"
+    .string "HERA says a trainer who can't\n"
+    .string "stay calm in a storm can't fly.$"
 
 VermilionCity_Gym_Text_BailyIntro::
     .string "I'm a lightweight, but I'm good\n"
-    .string "with electricity!\p"
+    .string "at riding the wind!\p"
     .string "That's why I joined this GYM.$"
 
 VermilionCity_Gym_Text_BailyDefeat::
@@ -67,8 +67,8 @@ VermilionCity_Gym_Text_BailyDefeat::
 
 VermilionCity_Gym_Text_BailyPostBattle::
     .string "Okay, I'll talk!\p"
-    .string "HERA said she hid door\n"
-    .string "switches inside something.$"
+    .string "HERA trains in the thinnest air\n"
+    .string "above the harbor, at sunset.$"
 
 VermilionCity_Gym_Text_DwayneIntro::
     .string "This is no place for kids!\n"
@@ -79,12 +79,10 @@ VermilionCity_Gym_Text_DwayneDefeat::
     .string "Surprised me!$"
 
 VermilionCity_Gym_Text_DwaynePostBattle::
-    .string "HERA installed the traps in\n"
-    .string "the GYM herself.\p"
-    .string "She set up double locks everywhere.\n"
-    .string "Let me give you a hint.\p"
-    .string "When you open the first lock, the\n"
-    .string "second lock is right next to it.$"
+    .string "HERA built this GYM like a\n"
+    .string "sky temple.\p"
+    .string "Everyone here learned to fight\n"
+    .string "with the wind at their back.$"
 
 VermilionCity_Gym_Text_GymGuyAdvice::
     .string "Yo, champ!\p"
@@ -98,7 +96,7 @@ VermilionCity_Gym_Text_GymGuyAdvice::
 
 VermilionCity_Gym_Text_GymGuyPostVictory::
     .string "Whew!\n"
-    .string "That match was electric!$"
+    .string "That match was windswept!$"
 
 VermilionCity_Gym_Text_GymStatue::
     .string "APATIA POKéMON GYM\n"

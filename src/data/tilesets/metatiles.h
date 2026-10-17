@@ -387,3 +387,38 @@ const u32 gMetatileAttributes_GeneralSeafoam[] = INCBIN_U32("data/tilesets/prima
 
 const u16 gMetatiles_PokemonLeagueLair[] = INCBIN_U16("data/tilesets/secondary/pokemon_league_lair/metatiles.bin");
 const u32 gMetatileAttributes_PokemonLeagueLair[] = INCBIN_U32("data/tilesets/secondary/pokemon_league_lair/metatile_attributes.bin");
+
+const u16 gMetatiles_GymLavaridgePri[] = INCBIN_U16("data/tilesets/primary/gym_lavaridge_pri/metatiles.bin");
+const u32 gMetatileAttributes_GymLavaridgePri[] = INCBIN_U32("data/tilesets/primary/gym_lavaridge_pri/metatile_attributes.bin");
+const u16 gMetatiles_GymLavaridgeSec[] = INCBIN_U16("data/tilesets/secondary/gym_lavaridge_sec/metatiles.bin");
+const u32 gMetatileAttributes_GymLavaridgeSec[] = INCBIN_U32("data/tilesets/secondary/gym_lavaridge_sec/metatile_attributes.bin");
+
+const u16 gMetatiles_GymFortreePri[] = INCBIN_U16("data/tilesets/primary/gym_fortree_pri/metatiles.bin");
+const u32 gMetatileAttributes_GymFortreePri[] = INCBIN_U32("data/tilesets/primary/gym_fortree_pri/metatile_attributes.bin");
+const u16 gMetatiles_GymFortreeSec[] = INCBIN_U16("data/tilesets/secondary/gym_fortree_sec/metatiles.bin");
+const u32 gMetatileAttributes_GymFortreeSec[] = INCBIN_U32("data/tilesets/secondary/gym_fortree_sec/metatile_attributes.bin");
+
+const u16 gMetatiles_GymSootopolisPri[] = INCBIN_U16("data/tilesets/primary/gym_sootopolis_pri/metatiles.bin");
+const u32 gMetatileAttributes_GymSootopolisPri[] = INCBIN_U32("data/tilesets/primary/gym_sootopolis_pri/metatile_attributes.bin");
+const u16 gMetatiles_GymSootopolisSec[] = INCBIN_U16("data/tilesets/secondary/gym_sootopolis_sec/metatiles.bin");
+const u32 gMetatileAttributes_GymSootopolisSec[] = INCBIN_U32("data/tilesets/secondary/gym_sootopolis_sec/metatile_attributes.bin");
+
+const u16 gMetatiles_GymDewfordPri[] = INCBIN_U16("data/tilesets/primary/gym_dewford_pri/metatiles.bin");
+const u32 gMetatileAttributes_GymDewfordPri[] = INCBIN_U32("data/tilesets/primary/gym_dewford_pri/metatile_attributes.bin");
+const u16 gMetatiles_GymDewfordSec[] = INCBIN_U16("data/tilesets/secondary/gym_dewford_sec/metatiles.bin");
+const u32 gMetatileAttributes_GymDewfordSec[] = INCBIN_U32("data/tilesets/secondary/gym_dewford_sec/metatile_attributes.bin");
+
+const u16 gMetatiles_GymMossdeepPri[] = INCBIN_U16("data/tilesets/primary/gym_mossdeep_pri/metatiles.bin");
+const u32 gMetatileAttributes_GymMossdeepPri[] = INCBIN_U32("data/tilesets/primary/gym_mossdeep_pri/metatile_attributes.bin");
+const u16 gMetatiles_GymMossdeepSec[] = INCBIN_U16("data/tilesets/secondary/gym_mossdeep_sec/metatiles.bin");
+const u32 gMetatileAttributes_GymMossdeepSec[] = INCBIN_U32("data/tilesets/secondary/gym_mossdeep_sec/metatile_attributes.bin");
+
+const u16 gMetatiles_GymMauvillePri[] = INCBIN_U16("data/tilesets/primary/gym_mauville_pri/metatiles.bin");
+const u32 gMetatileAttributes_GymMauvillePri[] = INCBIN_U32("data/tilesets/primary/gym_mauville_pri/metatile_attributes.bin");
+const u16 gMetatiles_GymMauvilleSec[] = INCBIN_U16("data/tilesets/secondary/gym_mauville_sec/metatiles.bin");
+const u32 gMetatileAttributes_GymMauvilleSec[] = INCBIN_U32("data/tilesets/secondary/gym_mauville_sec/metatile_attributes.bin");
+
+const u16 gMetatiles_GymRustboroPri[] = INCBIN_U16("data/tilesets/primary/gym_rustboro_pri/metatiles.bin");
+const u32 gMetatileAttributes_GymRustboroPri[] = INCBIN_U32("data/tilesets/primary/gym_rustboro_pri/metatile_attributes.bin");
+const u16 gMetatiles_GymRustboroSec[] = INCBIN_U16("data/tilesets/secondary/gym_rustboro_sec/metatiles.bin");
+const u32 gMetatileAttributes_GymRustboroSec[] = INCBIN_U32("data/tilesets/secondary/gym_rustboro_sec/metatile_attributes.bin");

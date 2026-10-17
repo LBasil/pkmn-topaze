@@ -4,45 +4,18 @@
 .equ TRASH_CAN_ID,       VAR_0x8008
 
 VermilionCity_Gym_MapScripts::
-	map_script MAP_SCRIPT_ON_LOAD, VermilionCity_Gym_OnLoad
 	map_script MAP_SCRIPT_ON_TRANSITION, VermilionCity_Gym_OnTransition
 	.byte 0
 
-VermilionCity_Gym_OnLoad::
-	call_if_set FOUND_FIRST_SWITCH, VermilionCity_Gym_EventScript_SetOneBeamOff
-	call_if_set FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES, VermilionCity_Gym_EventScript_SetBeamsOff
+VermilionCity_Gym_OnTransition::
+	call_if_unset FLAG_GOT_HM01, VermilionCity_Gym_EventScript_HeraAway
 	end
 
 VermilionCity_Gym_EventScript_SetOneBeamOff::
-	setmetatile 3, 6, METATILE_VermilionGym_Beam_Node_TopLeft_HalfOn, 1
-	setmetatile 4, 6, METATILE_VermilionGym_Beam_Node_TopLeft_Edge_HalfOn, 1
-	setmetatile 5, 6, METATILE_VermilionGym_Beam_MidTop_HalfOn, 1
-	setmetatile 6, 6, METATILE_VermilionGym_Beam_Node_TopRight_Edge_HalfOn, 1
-	setmetatile 7, 6, METATILE_VermilionGym_Beam_Node_TopRight_HalfOn, 1
-	setmetatile 3, 7, METATILE_VermilionGym_Beam_Node_BottomLeft_HalfOn, 1
-	setmetatile 4, 7, METATILE_VermilionGym_Beam_Node_BottomLeft_Edge_HalfOn, 1
-	setmetatile 5, 7, METATILE_VermilionGym_Beam_MidBottom_HalfOn, 1
-	setmetatile 6, 7, METATILE_VermilionGym_Beam_Node_BottomRight_Edge_HalfOn, 1
-	setmetatile 7, 7, METATILE_VermilionGym_Beam_Node_BottomRight_HalfOn, 1
 	return
 
 VermilionCity_Gym_EventScript_SetBeamsOff::
-	setmetatile 3, 6, METATILE_VermilionGym_Beam_Node_TopLeft_Off, 1
-	setmetatile 4, 6, METATILE_VermilionGym_Beam_Node_TopLeft_Edge_Off, 0
-	setmetatile 5, 6, METATILE_VermilionGym_Floor, 0
-	setmetatile 6, 6, METATILE_VermilionGym_Beam_Node_TopRight_Edge_Off, 0
-	setmetatile 7, 6, METATILE_VermilionGym_Beam_Node_TopRight_Off, 1
-	setmetatile 3, 7, METATILE_VermilionGym_Beam_Node_BottomLeft_Off, 1
-	setmetatile 4, 7, METATILE_VermilionGym_Beam_Node_BottomLeft_Edge_Off, 0
-	setmetatile 5, 7, METATILE_VermilionGym_Floor, 0
-	setmetatile 6, 7, METATILE_VermilionGym_Beam_Node_BottomRight_Edge_Off, 0
-	setmetatile 7, 7, METATILE_VermilionGym_Beam_Node_BottomRight_Off, 1
 	return
-
-VermilionCity_Gym_OnTransition::
-	call_if_unset FLAG_GOT_HM01, VermilionCity_Gym_EventScript_HeraAway
-	call VermilionCity_Gym_EventScript_InitTrashCans
-	end
 
 VermilionCity_Gym_EventScript_HeraAway::
 	setflag FLAG_TEMP_11
