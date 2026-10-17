@@ -4,6 +4,7 @@ IndigoPlateau_Exterior_MapScripts::
 	.byte 0
 
 IndigoPlateau_Exterior_OnTransition::
+	call IndigoPlateau_Exterior_EventScript_TitanSetup
 	setworldmapflag FLAG_WORLD_MAP_INDIGO_PLATEAU_EXTERIOR
 	call_if_eq VAR_MAP_SCENE_INDIGO_PLATEAU_EXTERIOR, 1, IndigoPlateau_Exterior_EventScript_PlayCreditsMusic
 	end
@@ -184,3 +185,51 @@ IndigoPlateau_Exterior_Movement_OakLeave::
 IndigoPlateau_Exterior_Movement_OakExitBuilding::
 	walk_down
 	step_end
+
+IndigoPlateau_Exterior_EventScript_TitanSetup::
+	setflag FLAG_HIDE_TITAN_RAYQUAZA
+	goto_if_set FLAG_FOUGHT_TITAN_RAYQUAZA, EventScript_Return
+	goto_if_ne VAR_TOPAZE_ENDING, 3, EventScript_Return
+	goto_if_ne VAR_REBELS_ROUND, 9, EventScript_Return
+	clearflag FLAG_HIDE_TITAN_RAYQUAZA
+	return
+
+IndigoPlateau_Exterior_EventScript_Titan::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	msgbox IndigoPlateau_Exterior_Text_TitanIntro
+	setwildbattle SPECIES_RAYQUAZA, 0
+	waitse
+	playmoncry SPECIES_RAYQUAZA, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, IndigoPlateau_Exterior_EventScript_TitanWon
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, IndigoPlateau_Exterior_EventScript_TitanRan
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, IndigoPlateau_Exterior_EventScript_TitanRan
+	setflag FLAG_FOUGHT_TITAN_RAYQUAZA
+	setflag FLAG_HIDE_TITAN_RAYQUAZA
+	release
+	end
+
+IndigoPlateau_Exterior_EventScript_TitanWon::
+	setflag FLAG_FOUGHT_TITAN_RAYQUAZA
+	goto EventScript_RemoveStaticMon
+	end
+
+IndigoPlateau_Exterior_EventScript_TitanRan::
+	setvar VAR_0x8004, SPECIES_RAYQUAZA
+	goto EventScript_MonFlewAway
+	end
+
+IndigoPlateau_Exterior_Text_TitanIntro::
+	.string "A presence older than the legends\n"
+	.string "rises before you...\p"
+	.string "It has waited for a ruler worthy\n"
+	.string "of the throne. Show it yours!$"

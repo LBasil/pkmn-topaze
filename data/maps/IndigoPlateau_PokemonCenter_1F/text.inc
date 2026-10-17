@@ -117,7 +117,12 @@ IndigoPlateau_PokemonCenter_1F_Text_RebelsDone::
     .string "FLORA: The REBELS keep their gyms\n"
     .string "and their pride. Peace holds.\p"
     .string "The THRONE MARKET is open to you,\n"
-    .string "CHAMPION of all.$"
+    .string "CHAMPION of all.\p"
+    .string "One more thing. Three TITANS woke\n"
+    .string "when the throne was settled: one\l"
+    .string "in the RUBY PATH under MT. EMBER,\l"
+    .string "one in the SEAFOAM depths, one on\l"
+    .string "the PLATEAU itself. Go meet them.$"
 
 IndigoPlateau_PokemonCenter_1F_Text_RebelsStage1::
     .string "FLORA: HEPHA kneels at last. Take\n"

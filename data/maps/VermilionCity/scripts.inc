@@ -106,7 +106,7 @@ VermilionCity_EventScript_OldMan1SSAnneLeft::
 VermilionCity_EventScript_FerrySailor::
 	lock
 	faceplayer
-	goto_if_unset FLAG_TOPAZE_POSTGAME, VermilionCity_EventScript_FerrySailorNoTickets
+	goto_if_unset FLAG_TOPAZE_COUNCIL, VermilionCity_EventScript_FerrySailorNoTickets
 	@ Topaze : le Rainbow Pass vanilla n'existe pas ; sans ca le ferry (var One Island < 5) reste "parti".
 	call_if_lt VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 5, VermilionCity_EventScript_OpenSeviiFerry
 	goto_if_set FLAG_TOPAZE_GOT_TICKETS, VermilionCity_EventScript_FerrySailorNoTickets

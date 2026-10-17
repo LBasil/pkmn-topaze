@@ -253,10 +253,10 @@
 #define FLAG_QUEST_PEWTER_AWAKEN 0x0E9 // Topaze: side quest (PewterCity_House2)
 #define FLAG_QUEST_PEWTER_REVIVE 0x0EA // Topaze: side quest (PewterCity_House3)
 #define FLAG_QUEST_ROUTE2_ETHER 0x0EB // Topaze: side quest (Route2_House)
-#define FLAG_0x0EC               0x0EC
-#define FLAG_0x0ED               0x0ED
-#define FLAG_0x0EE               0x0EE
-#define FLAG_0x0EF               0x0EF
+#define FLAG_HIDE_TITAN_GROUDON 0x0EC // Topaze: fin 3, Titans
+#define FLAG_HIDE_TITAN_KYOGRE 0x0ED // Topaze: fin 3, Titans
+#define FLAG_HIDE_TITAN_RAYQUAZA 0x0EE // Topaze: fin 3, Titans
+#define FLAG_FOUGHT_TITAN_GROUDON 0x0EF // Topaze: fin 3, Titans
 #define FLAG_QUEST_LEADER_BROCK 0x0F0 // Topaze: post-game leader gift (PewterCity_Gym)
 #define FLAG_QUEST_LEADER_LTSURGE 0x0F1 // Topaze: post-game leader gift (VermilionCity_Gym)
 #define FLAG_QUEST_LEADER_ERIKA 0x0F2 // Topaze: post-game leader gift (CeladonCity_Gym)
@@ -268,8 +268,8 @@
 #define FLAG_QUEST_REFUGE_DEX3 0x0F8 // Topaze: ending 2, Refuge Pokedex milestone reward
 #define FLAG_QUEST_REFUGE_DEX4 0x0F9 // Topaze: ending 2, Refuge Pokedex milestone reward
 #define FLAG_QUEST_REFUGE_DEX5 0x0FA // Topaze: ending 2, Refuge Pokedex milestone reward
-#define FLAG_0x0FB               0x0FB
-#define FLAG_0x0FC               0x0FC
+#define FLAG_FOUGHT_TITAN_KYOGRE 0x0FB // Topaze: fin 3, Titans
+#define FLAG_FOUGHT_TITAN_RAYQUAZA 0x0FC // Topaze: fin 3, Titans
 #define FLAG_0x0FD               0x0FD
 #define FLAG_0x0FE               0x0FE
 #define FLAG_0x0FF               0x0FF

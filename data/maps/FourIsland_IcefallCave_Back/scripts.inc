@@ -194,7 +194,7 @@ FourIsland_IcefallCave_Back_EventScript_Lorelei::
 @ Topaze: Echo 4 (static, stays if fled)
 FourIsland_IcefallCave_Back_EventScript_EchoSetup::
 	setflag FLAG_HIDE_ECHO_BEAST4
-	call_if_set FLAG_TOPAZE_POSTGAME, FourIsland_IcefallCave_Back_EventScript_EchoClearRockets
+	call_if_set FLAG_TOPAZE_COUNCIL, FourIsland_IcefallCave_Back_EventScript_EchoClearRockets
 	goto_if_set FLAG_ECHO_BEAST4_DONE, EventScript_Return
 	goto_if_ne VAR_ECHO_STAGE, 10, EventScript_Return
 	clearflag FLAG_HIDE_ECHO_BEAST4

@@ -19,6 +19,7 @@ SeafoamIslands_B4F_EventScript_TryRemoveArticuno::
 	return
 
 SeafoamIslands_B4F_OnTransition::
+	call SeafoamIslands_B4F_EventScript_TitanSetup
 	setflag FLAG_TEMP_10 @ Topaze: Surf sur la lave (texte dedie, data/scripts/surf.inc)
 	call SeafoamIslands_B4F_EventScript_CheckOnybris
 	call_if_unset FLAG_STOPPED_SEAFOAM_B4F_CURRENT, SeafoamIslands_B4F_EventScript_CheckStoppedCurrent
@@ -240,3 +241,51 @@ SeafoamIslands_B4F_EventScript_GoldBeaten::
 SeafoamIslands_B4F_EventScript_SilverBeaten::
 	msgbox SeafoamIslands_B4F_Text_SilverBeaten, MSGBOX_NPC
 	end
+
+SeafoamIslands_B4F_EventScript_TitanSetup::
+	setflag FLAG_HIDE_TITAN_KYOGRE
+	goto_if_set FLAG_FOUGHT_TITAN_KYOGRE, EventScript_Return
+	goto_if_ne VAR_TOPAZE_ENDING, 3, EventScript_Return
+	goto_if_ne VAR_REBELS_ROUND, 9, EventScript_Return
+	clearflag FLAG_HIDE_TITAN_KYOGRE
+	return
+
+SeafoamIslands_B4F_EventScript_Titan::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	msgbox SeafoamIslands_B4F_Text_TitanIntro
+	setwildbattle SPECIES_KYOGRE, 0
+	waitse
+	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SeafoamIslands_B4F_EventScript_TitanWon
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SeafoamIslands_B4F_EventScript_TitanRan
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SeafoamIslands_B4F_EventScript_TitanRan
+	setflag FLAG_FOUGHT_TITAN_KYOGRE
+	setflag FLAG_HIDE_TITAN_KYOGRE
+	release
+	end
+
+SeafoamIslands_B4F_EventScript_TitanWon::
+	setflag FLAG_FOUGHT_TITAN_KYOGRE
+	goto EventScript_RemoveStaticMon
+	end
+
+SeafoamIslands_B4F_EventScript_TitanRan::
+	setvar VAR_0x8004, SPECIES_KYOGRE
+	goto EventScript_MonFlewAway
+	end
+
+SeafoamIslands_B4F_Text_TitanIntro::
+	.string "A presence older than the legends\n"
+	.string "rises before you...\p"
+	.string "It has waited for a ruler worthy\n"
+	.string "of the throne. Show it yours!$"

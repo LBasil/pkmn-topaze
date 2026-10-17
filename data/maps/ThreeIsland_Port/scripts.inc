@@ -5,7 +5,7 @@ ThreeIsland_Port_MapScripts::
 ThreeIsland_Port_OnTransition::
 	clearflag FLAG_SYS_PC_STORAGE_DISABLED
 	setflag FLAG_SEVII_DETOUR_FINISHED
-	goto_if_set FLAG_TOPAZE_POSTGAME, ThreeIsland_Port_EventScript_PostgameBikersGone
+	goto_if_set FLAG_TOPAZE_COUNCIL, ThreeIsland_Port_EventScript_PostgameBikersGone
 	end
 
 @ Topaze : la route de Bond Bridge (Echo 3) ne doit pas dependre de la quete vanilla des motards (Joyful Game Corner / Lostelle).
