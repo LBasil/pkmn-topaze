@@ -236,4 +236,15 @@ extern const u8 *const gBattlescriptsForRunningByItem[];
 extern const u8 *const gBattlescriptsForUsingItem[];
 extern const u8 *const gBattlescriptsForSafariActions[];
 
+extern const u8 BattleScript_TopazeAbilHurt[];
+extern const u8 BattleScript_TopazeHailActivates[];
+extern const u8 BattleScript_TopazeSlowStartActivates[];
+extern const u8 BattleScript_TopazeSlowStartEnds[];
+extern const u8 BattleScript_TopazeBadDreams[];
+extern const u8 BattleScript_TopazeMotorDrive[];
+extern const u8 BattleScript_TopazeMotorDrive_PPLoss[];
+extern const u8 BattleScript_TopazeAngerPoint[];
+extern const u8 BattleScript_TopazeAftermath[];
+extern const u8 BattleScript_TopazeSteadfast[];
+
 #endif // GUARD_BATTLE_SCRIPTS_H

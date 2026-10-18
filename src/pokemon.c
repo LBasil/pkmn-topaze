@@ -2409,6 +2409,19 @@ static void DeleteFirstMoveAndGiveMoveToBoxMon(struct BoxPokemon *boxMon, u16 mo
     (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_EREADER_TRAINER)) && FlagGet(flag) && GetBattlerSide(battler) == B_SIDE_PLAYER)
 
 
+static bool8 TopazeIsPunchMove(u32 move)
+{
+    switch (move)
+    {
+    case MOVE_COMET_PUNCH: case MOVE_MEGA_PUNCH: case MOVE_FIRE_PUNCH: case MOVE_ICE_PUNCH:
+    case MOVE_THUNDER_PUNCH: case MOVE_DIZZY_PUNCH: case MOVE_MACH_PUNCH: case MOVE_DYNAMIC_PUNCH:
+    case MOVE_FOCUS_PUNCH: case MOVE_SHADOW_PUNCH: case MOVE_DRAIN_PUNCH: case MOVE_SUCKER_PUNCH:
+    case MOVE_BULLET_PUNCH:
+        return TRUE;
+    }
+    return FALSE;
+}
+
 s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *defender, u32 move, u16 sideStatus, u16 powerOverride, u8 typeOverride, u8 battlerIdAtk, u8 battlerIdDef)
 {
     u32 i;
@@ -2421,6 +2434,25 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     u8 defenderHoldEffectParam;
     u8 attackerHoldEffect;
     u8 attackerHoldEffectParam;
+    s8 unawareSaved[4];
+    bool8 unawareAtk = (defender->ability == ABILITY_UNAWARE);
+    bool8 unawareDef = (attacker->ability == ABILITY_UNAWARE);
+
+    // Topaze: Unaware ignores the opponent's offensive/defensive stat changes
+    if (unawareAtk)
+    {
+        unawareSaved[0] = attacker->statStages[STAT_ATK];
+        unawareSaved[1] = attacker->statStages[STAT_SPATK];
+        attacker->statStages[STAT_ATK] = DEFAULT_STAT_STAGE;
+        attacker->statStages[STAT_SPATK] = DEFAULT_STAT_STAGE;
+    }
+    if (unawareDef)
+    {
+        unawareSaved[2] = defender->statStages[STAT_DEF];
+        unawareSaved[3] = defender->statStages[STAT_SPDEF];
+        defender->statStages[STAT_DEF] = DEFAULT_STAT_STAGE;
+        defender->statStages[STAT_SPDEF] = DEFAULT_STAT_STAGE;
+    }
 
     if (!powerOverride)
         gBattleMovePower = gBattleMoves[move].power;
@@ -2431,6 +2463,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         type = gBattleMoves[move].type;
     else
         type = typeOverride & DYNAMIC_TYPE_MASK;
+    if (attacker->ability == ABILITY_NORMALIZE && type != TYPE_MYSTERY)
+        type = TYPE_NORMAL;
 
     attack = attacker->attack;
     defense = defender->defense;
@@ -2528,6 +2562,33 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (type == TYPE_BUG && attacker->ability == ABILITY_SWARM && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
+
+    // Topaze: Gen 4 abilities
+    if (attacker->ability == ABILITY_TECHNICIAN && gBattleMovePower <= 60)
+        gBattleMovePower = (150 * gBattleMovePower) / 100;
+    if (attacker->ability == ABILITY_IRON_FIST && TopazeIsPunchMove(move))
+        gBattleMovePower = (120 * gBattleMovePower) / 100;
+    if (attacker->ability == ABILITY_RECKLESS
+     && (gBattleMoves[move].effect == EFFECT_RECOIL || gBattleMoves[move].effect == EFFECT_DOUBLE_EDGE
+      || gBattleMoves[move].effect == EFFECT_RECOIL_IF_MISS))
+        gBattleMovePower = (120 * gBattleMovePower) / 100;
+    if (defender->ability == ABILITY_HEATPROOF && type == TYPE_FIRE)
+        gBattleMovePower /= 2;
+    if (defender->ability == ABILITY_DRY_SKIN && type == TYPE_FIRE)
+        gBattleMovePower = (125 * gBattleMovePower) / 100;
+    if (attacker->ability == ABILITY_SOLAR_POWER && WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_SUN)
+     && !MOVE_IS_PHYSICAL(move, type))
+        spAttack = (150 * spAttack) / 100;
+    if (attacker->ability == ABILITY_SLOW_START && gDisableStructs[battlerIdAtk].slowStartTimer != 0)
+        attack /= 2;
+    if (attacker->ability == ABILITY_DOWNLOAD)
+    {
+        // Adapts to the foe's weaker defence (applied as a 1.5x boost)
+        if (defender->defense < defender->spDefense)
+            attack = (150 * attack) / 100;
+        else
+            spAttack = (150 * spAttack) / 100;
+    }
 
     // Self-destruct / Explosion cut defense in half
     if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
@@ -2670,6 +2731,17 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         // Flash fire triggered
         if ((gBattleResources->flags->flags[battlerIdAtk] & RESOURCE_FLAG_FLASH_FIRE) && type == TYPE_FIRE)
             damage = (15 * damage) / 10;
+    }
+
+    if (unawareAtk)
+    {
+        attacker->statStages[STAT_ATK] = unawareSaved[0];
+        attacker->statStages[STAT_SPATK] = unawareSaved[1];
+    }
+    if (unawareDef)
+    {
+        defender->statStages[STAT_DEF] = unawareSaved[2];
+        defender->statStages[STAT_SPDEF] = unawareSaved[3];
     }
 
     return damage + 2;

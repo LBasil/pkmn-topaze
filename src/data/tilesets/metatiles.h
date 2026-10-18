@@ -422,3 +422,5 @@ const u16 gMetatiles_GymRustboroPri[] = INCBIN_U16("data/tilesets/primary/gym_ru
 const u32 gMetatileAttributes_GymRustboroPri[] = INCBIN_U32("data/tilesets/primary/gym_rustboro_pri/metatile_attributes.bin");
 const u16 gMetatiles_GymRustboroSec[] = INCBIN_U16("data/tilesets/secondary/gym_rustboro_sec/metatiles.bin");
 const u32 gMetatileAttributes_GymRustboroSec[] = INCBIN_U32("data/tilesets/secondary/gym_rustboro_sec/metatile_attributes.bin");
+const u16 gMetatiles_MtMoon[] = INCBIN_U16("data/tilesets/secondary/mt_moon/metatiles.bin");
+const u32 gMetatileAttributes_MtMoon[] = INCBIN_U32("data/tilesets/secondary/mt_moon/metatile_attributes.bin");

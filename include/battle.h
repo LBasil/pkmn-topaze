@@ -168,7 +168,8 @@ struct DisableStruct
     /*0x18*/ u8 unk18_a_2 : 2;
     /*0x18*/ u8 mimickedMoves : 4;
     /*0x19*/ u8 rechargeTimer;
-    /*0x1A*/ u8 unk1A[2];
+    /*0x1A*/ u8 slowStartTimer;
+    /*0x1B*/ u8 unburdenActive;
 };
 
 extern struct DisableStruct gDisableStructs[MAX_BATTLERS_COUNT];
@@ -470,6 +471,8 @@ extern struct BattleStruct *gBattleStruct;
         typeArg = gBattleStruct->dynamicMoveType & DYNAMIC_TYPE_MASK; \
     else                                                              \
         typeArg = gBattleMoves[move].type;                            \
+    if (gBattleMons[gBattlerAttacker].ability == ABILITY_NORMALIZE && typeArg != TYPE_MYSTERY) \
+        typeArg = TYPE_NORMAL;                                        \
 }
 
 #define IS_TYPE_PHYSICAL(moveType)(moveType < TYPE_MYSTERY)

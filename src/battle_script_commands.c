@@ -994,6 +994,8 @@ static bool8 AccuracyCalcHelper(u16 move)
     gHitMarker &= ~HITMARKER_IGNORE_UNDERWATER;
 
     if ((WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_RAIN) && gBattleMoves[move].effect == EFFECT_THUNDER)
+     || gBattleMons[gBattlerAttacker].ability == ABILITY_NO_GUARD
+     || gBattleMons[gBattlerTarget].ability == ABILITY_NO_GUARD
      || (gBattleMoves[move].effect == EFFECT_ALWAYS_HIT || gBattleMoves[move].effect == EFFECT_VITAL_THROW))
     {
         JumpIfMoveFailed(7, move);
@@ -1056,6 +1058,12 @@ static void Cmd_accuracycheck(void)
             buff = acc + DEFAULT_STAT_STAGE - gBattleMons[gBattlerTarget].statStages[STAT_EVASION];
         }
 
+        // Topaze: Unaware ignores the opponent's accuracy/evasion changes
+        if (gBattleMons[gBattlerAttacker].ability == ABILITY_UNAWARE)
+            buff = gBattleMons[gBattlerAttacker].statStages[STAT_ACC];
+        else if (gBattleMons[gBattlerTarget].ability == ABILITY_UNAWARE)
+            buff = DEFAULT_STAT_STAGE + DEFAULT_STAT_STAGE - gBattleMons[gBattlerTarget].statStages[STAT_EVASION];
+
         if (buff < MIN_STAT_STAGE)
             buff = MIN_STAT_STAGE;
         if (buff > MAX_STAT_STAGE)
@@ -1075,6 +1083,10 @@ static void Cmd_accuracycheck(void)
             calc = (calc * 80) / 100; // 1.2 sand veil loss
         if (gBattleMons[gBattlerAttacker].ability == ABILITY_HUSTLE && MOVE_IS_PHYSICAL(move, type))
             calc = (calc * 80) / 100; // 1.2 hustle loss
+        if (WEATHER_HAS_EFFECT && gBattleMons[gBattlerTarget].ability == ABILITY_SNOW_CLOAK && gBattleWeather & B_WEATHER_HAIL)
+            calc = (calc * 80) / 100;
+        if (gBattleMons[gBattlerTarget].ability == ABILITY_TANGLED_FEET && gBattleMons[gBattlerTarget].status2 & STATUS2_CONFUSION)
+            calc = (calc * 50) / 100;
 
         if (gBattleMons[gBattlerTarget].item == ITEM_ENIGMA_BERRY)
         {
@@ -1190,6 +1202,7 @@ static void Cmd_critcalc(void)
                 + (gBattleMoves[gCurrentMove].effect == EFFECT_BLAZE_KICK)
                 + (gBattleMoves[gCurrentMove].effect == EFFECT_POISON_TAIL)
                 + (holdEffect == HOLD_EFFECT_SCOPE_LENS)
+                + (gBattleMons[gBattlerAttacker].ability == ABILITY_SUPER_LUCK)
                 + 2 * (holdEffect == HOLD_EFFECT_LUCKY_PUNCH && gBattleMons[gBattlerAttacker].species == SPECIES_CHANSEY)
                 + 2 * (holdEffect == HOLD_EFFECT_STICK && gBattleMons[gBattlerAttacker].species == SPECIES_FARFETCHD);
 
@@ -1216,6 +1229,8 @@ static void Cmd_damagecalc(void)
                                             sideStatus, gDynamicBasePower,
                                             gBattleStruct->dynamicMoveType, gBattlerAttacker, gBattlerTarget);
     gBattleMoveDamage = gBattleMoveDamage * gCritMultiplier * gBattleScripting.dmgMultiplier;
+    if (gCritMultiplier == 2 && gBattleMons[gBattlerAttacker].ability == ABILITY_SNIPER)
+        gBattleMoveDamage = gBattleMoveDamage * 3 / 2;
 
     if (gStatuses3[gBattlerAttacker] & STATUS3_CHARGED_UP && gBattleMoves[gCurrentMove].type == TYPE_ELECTRIC)
         gBattleMoveDamage *= 2;
@@ -1290,7 +1305,7 @@ static void Cmd_typecalc(void)
     // check stab
     if (IS_BATTLER_OF_TYPE(gBattlerAttacker, moveType))
     {
-        gBattleMoveDamage = gBattleMoveDamage * 15;
+        gBattleMoveDamage = gBattleMoveDamage * (gBattleMons[gBattlerAttacker].ability == ABILITY_ADAPTABILITY ? 20 : 15);
         gBattleMoveDamage = gBattleMoveDamage / 10;
     }
 
@@ -1316,6 +1331,13 @@ static void Cmd_typecalc(void)
             }
             else if (TYPE_EFFECT_ATK_TYPE(i) == moveType)
             {
+                // Topaze: Scrappy lets NORMAL/FIGHTING hit GHOST
+                if (gBattleMons[gBattlerAttacker].ability == ABILITY_SCRAPPY && TYPE_EFFECT_DEF_TYPE(i) == TYPE_GHOST
+                    && TYPE_EFFECT_MULTIPLIER(i) == TYPE_MUL_NO_EFFECT)
+                {
+                    i += 3;
+                    continue;
+                }
                 // check type1
                 if (TYPE_EFFECT_DEF_TYPE(i) == gBattleMons[gBattlerTarget].type1)
                     ModulateDmgByType(TYPE_EFFECT_MULTIPLIER(i));
@@ -1326,6 +1348,16 @@ static void Cmd_typecalc(void)
             }
             i += 3;
         }
+    }
+
+    // Topaze: damage-modifying abilities that depend on type effectiveness
+    if (gBattleMoves[gCurrentMove].power != 0 && !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT))
+    {
+        if ((gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE)
+         && (gBattleMons[gBattlerTarget].ability == ABILITY_SOLID_ROCK || gBattleMons[gBattlerTarget].ability == ABILITY_FILTER))
+            gBattleMoveDamage = gBattleMoveDamage * 3 / 4;
+        if ((gMoveResultFlags & MOVE_RESULT_NOT_VERY_EFFECTIVE) && gBattleMons[gBattlerAttacker].ability == ABILITY_TINTED_LENS)
+            gBattleMoveDamage *= 2;
     }
 
     if (gBattleMons[gBattlerTarget].ability == ABILITY_WONDER_GUARD && AttacksThisTurn(gBattlerAttacker, gCurrentMove) == 2
@@ -2135,6 +2167,21 @@ void SetMoveEffect(bool8 primary, u8 certain)
     if (gBattleMons[gEffectBattler].ability == ABILITY_SHIELD_DUST && !(gHitMarker & HITMARKER_STATUS_ABILITY_EFFECT)
         && !primary && gBattleCommunication[MOVE_EFFECT_BYTE] <= 9)
         INCREMENT_RETURN
+
+    // Topaze: Leaf Guard blocks major status in the sun
+    if (gBattleMons[gEffectBattler].ability == ABILITY_LEAF_GUARD && WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_SUN)
+        && !affectsUser && gBattleCommunication[MOVE_EFFECT_BYTE] >= MOVE_EFFECT_SLEEP
+        && gBattleCommunication[MOVE_EFFECT_BYTE] <= MOVE_EFFECT_TOXIC)
+    {
+        if (primary == TRUE || certain == MOVE_EFFECT_CERTAIN)
+        {
+            BattleScriptPush(gBattlescriptCurrInstr + 1);
+            gBattlescriptCurrInstr = BattleScript_PSNPrevention;
+            gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_STATUS_HAD_NO_EFFECT;
+            return;
+        }
+        INCREMENT_RETURN
+    }
 
     if (gSideStatuses[GET_BATTLER_SIDE(gEffectBattler)] & SIDE_STATUS_SAFEGUARD && !(gHitMarker & HITMARKER_STATUS_ABILITY_EFFECT)
         && !primary && gBattleCommunication[MOVE_EFFECT_BYTE] <= 7)
@@ -3377,7 +3424,8 @@ static void Cmd_getexp(void)
         {
             // not sure why gf clears the item and ability here
             gBattleMons[gBattlerFainted].item = ITEM_NONE;
-            gBattleMons[gBattlerFainted].ability = ABILITY_NONE;
+            if (gBattleMons[gBattlerFainted].ability != ABILITY_AFTERMATH)
+                gBattleMons[gBattlerFainted].ability = ABILITY_NONE;
             gBattlescriptCurrInstr += 2;
         }
         break;
@@ -6769,9 +6817,11 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
         else // try to decrease
         {
             statValue = -GET_STAT_BUFF_VALUE(statValue);
+            if (gBattleMons[gActiveBattler].ability == ABILITY_SIMPLE)
+                statValue *= 2;
             gBattleTextBuff2[0] = B_BUFF_PLACEHOLDER_BEGIN;
             index = 1;
-            if (statValue == -2)
+            if (statValue <= -2)
             {
                 gBattleTextBuff2[1] = B_BUFF_STRING;
                 gBattleTextBuff2[2] = STRINGID_STATHARSHLY;
@@ -6792,9 +6842,11 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
     else // stat increase
     {
         statValue = GET_STAT_BUFF_VALUE(statValue);
+        if (gBattleMons[gActiveBattler].ability == ABILITY_SIMPLE)
+            statValue *= 2;
         gBattleTextBuff2[0] = B_BUFF_PLACEHOLDER_BEGIN;
         index = 1;
-        if (statValue == 2)
+        if (statValue >= 2)
         {
             gBattleTextBuff2[1] = B_BUFF_STRING;
             gBattleTextBuff2[2] = STRINGID_STATSHARPLY;
@@ -6871,6 +6923,10 @@ static void Cmd_setmultihitcounter(void)
     if (gBattlescriptCurrInstr[1])
     {
         gMultiHitCounter = gBattlescriptCurrInstr[1];
+    }
+    else if (gBattleMons[gBattlerAttacker].ability == ABILITY_SKILL_LINK)
+    {
+        gMultiHitCounter = 5;
     }
     else
     {
@@ -7245,6 +7301,7 @@ static void Cmd_weatherdamage(void)
                 && gBattleMons[gBattlerAttacker].type2 != TYPE_STEEL
                 && gBattleMons[gBattlerAttacker].type2 != TYPE_GROUND
                 && gBattleMons[gBattlerAttacker].ability != ABILITY_SAND_VEIL
+                && gBattleMons[gBattlerAttacker].ability != ABILITY_MAGIC_GUARD
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERGROUND)
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERWATER))
             {
@@ -7260,6 +7317,9 @@ static void Cmd_weatherdamage(void)
         if (gBattleWeather & B_WEATHER_HAIL)
         {
             if (!IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_ICE)
+                && gBattleMons[gBattlerAttacker].ability != ABILITY_MAGIC_GUARD
+                && gBattleMons[gBattlerAttacker].ability != ABILITY_ICE_BODY
+                && gBattleMons[gBattlerAttacker].ability != ABILITY_SNOW_CLOAK
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERGROUND)
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERWATER))
             {

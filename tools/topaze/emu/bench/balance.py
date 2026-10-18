@@ -9,19 +9,27 @@ apprises), combat joue au tour par tour : on choisit l'attaque au meilleur degat
 au premier Pokemon vivant, aucun objet. Rapport : victoire/defaite, tours, Pokemon restants, PV restants.
 """
 import sys, os, re, struct
-sys.path.insert(0, '/tmp/gx'); sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); sys.path.insert(0, '/tmp/gx')
 os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..', '..'))
 from tz import T, KEYS
 import partykit as pk
 
 ROM = '/tmp/gx/dbg3.gba'
-BM = 0x02023be4; BM_SZ = 0x58; CTRL = 0x03005020; OUT = 0x02023e8a; MOVE_CUR = 0x02023ffc; ACT_CUR = 0x02023ff8; REQ = 0x03007530
-def _sym(n):  # adresses des gestionnaires lues dans l'ELF de la ROM de test (elles changent a chaque build)
-    import subprocess
-    for l in subprocess.run(['arm-none-eabi-nm', ROM.replace('.gba', '.elf')], capture_output=True, text=True).stdout.splitlines():
-        a = l.split()
-        if len(a) == 3 and a[2] == n and a[1] in 'tT' and 'HandleInput' in n and not (n == 'HandleInputChooseAction' and int(a[0], 16) > 0x08100000): return int(a[0], 16)
-H_ACTION = _sym('HandleInputChooseAction'); H_MOVE = _sym('HandleInputChooseMove'); H_TARGET = _sym('HandleInputChooseTarget')
+import subprocess
+def _syms(elf=ROM[:-4] + '.elf'):
+    """Adresses des symboles lues dans l'ELF (elles changent a chaque recompilation)."""
+    out = subprocess.run(['arm-none-eabi-nm', elf], capture_output=True, text=True).stdout
+    d = {}
+    for ln in out.splitlines():
+        a, _, n = ln.split()[:3] if len(ln.split()) >= 3 else (0, 0, 0)
+        if n: d.setdefault(n, []).append(int(a, 16))
+    return d
+_S = _syms()
+BM = _S['gBattleMons'][0]; BM_SZ = 0x58; CTRL = _S['gBattlerControllerFuncs'][0]; OUT = _S['gBattleOutcome'][0]
+MOVE_CUR = _S['gMoveSelectionCursor'][0]; ACT_CUR = _S['gActionSelectionCursor'][0]; REQ = _S['gTopazeBattleReq'][0]
+_pc = [a for a in _S['HandleInputChooseAction'] if a < 0x08040000]
+H_ACTION = _pc[0]; H_MOVE = _S['HandleInputChooseMove'][0]; H_TARGET = [a for a in _S['HandleInputChooseTarget'] if a < 0x08040000][0]
+H_PARTY = [a for a in _S['WaitForMonSelection'] if a < 0x08040000][0]
 PHYS = {'TYPE_NORMAL', 'TYPE_FIGHTING', 'TYPE_FLYING', 'TYPE_POISON', 'TYPE_GROUND', 'TYPE_ROCK', 'TYPE_BUG', 'TYPE_GHOST', 'TYPE_STEEL'}
 
 def trainer_ids():
@@ -91,7 +99,7 @@ def run_battle(t, trainer, maxturns=150, log=None):
         elif f in (H_TARGET,): e.run(4, KEYS['A']); e.run(30, 0)
         else:
             m0 = mon(e, 0)
-            if f == 0x8030b7c:      # menu des Pokemon apres un K.O. : on se place sur le premier Pokemon vivant et on l'envoie
+            if f == H_PARTY:      # menu des Pokemon apres un K.O. : on se place sur le premier Pokemon vivant et on l'envoie
                 e.run(60, 0)
                 hp = [struct.unpack('<H', e.peek(0x02024288 + 100 * k + 0x56, 2))[0] for k in range(6)]
                 tgt = next((k for k in range(6) if hp[k] > 0 and k < e.peek(0x0202402d, 1)[0]), None)

@@ -287,6 +287,13 @@ static const u8 sText_PkmnsXPreventsYLoss[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}
 static const u8 sText_PkmnsXInfatuatedY[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\ninfatuated {B_ATK_NAME_WITH_PREFIX}!");
 static const u8 sText_PkmnsXMadeYIneffective[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\nmade {B_CURRENT_MOVE} ineffective!");
 static const u8 sText_PkmnsXCuredYProblem[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\ncured its {B_BUFF1} problem!");
+static const u8 sText_TopazeAbilHurt[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} was hurt\nby its {B_SCR_ACTIVE_ABILITY}!");
+static const u8 sText_TopazeHailStart[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nmade it hail!");
+static const u8 sText_TopazeSlowStart[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} can't get\nit going!");
+static const u8 sText_TopazeSlowStartEnd[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} finally got\nits act together!");
+static const u8 sText_TopazeAngerPoint[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nmaxed its ATTACK!");
+static const u8 sText_TopazeAftermath[] = _("{B_ATK_NAME_WITH_PREFIX} was hurt\nby the AFTERMATH!");
+static const u8 sText_TopazeBadDreams[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} is tormented\nby bad dreams!");
 static const u8 sText_ItSuckedLiquidOoze[] = _("It sucked up the\nLIQUID OOZE!");
 static const u8 sText_PkmnTransformed[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} transformed!");
 static const u8 sText_PkmnsXTookAttack[] = _("{B_DEF_NAME_WITH_PREFIX}'s {B_DEF_ABILITY}\ntook the attack!");
@@ -888,7 +895,14 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_TRAINER1MON1COMEBACK - BATTLESTRINGS_TABLE_START]          = sText_Trainer1RecallPkmn1,
     [STRINGID_TRAINER1WINTEXT - BATTLESTRINGS_TABLE_START]               = sText_Trainer1WinText,
     [STRINGID_TRAINER1MON2COMEBACK - BATTLESTRINGS_TABLE_START]          = sText_Trainer1RecallPkmn2,
-    [STRINGID_TRAINER1MON1AND2COMEBACK - BATTLESTRINGS_TABLE_START]      = sText_Trainer1RecallBoth
+    [STRINGID_TRAINER1MON1AND2COMEBACK - BATTLESTRINGS_TABLE_START]      = sText_Trainer1RecallBoth,
+    [STRINGID_TOPAZEABILHURT - BATTLESTRINGS_TABLE_START]                = sText_TopazeAbilHurt,
+    [STRINGID_TOPAZEHAILSTART - BATTLESTRINGS_TABLE_START]               = sText_TopazeHailStart,
+    [STRINGID_TOPAZESLOWSTART - BATTLESTRINGS_TABLE_START]               = sText_TopazeSlowStart,
+    [STRINGID_TOPAZESLOWSTARTEND - BATTLESTRINGS_TABLE_START]            = sText_TopazeSlowStartEnd,
+    [STRINGID_TOPAZEANGERPOINT - BATTLESTRINGS_TABLE_START]              = sText_TopazeAngerPoint,
+    [STRINGID_TOPAZEAFTERMATH - BATTLESTRINGS_TABLE_START]               = sText_TopazeAftermath,
+    [STRINGID_TOPAZEBADDREAMS - BATTLESTRINGS_TABLE_START]               = sText_TopazeBadDreams
 };
 
 const u16 gMissStringIds[] =

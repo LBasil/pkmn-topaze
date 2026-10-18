@@ -2273,6 +2273,7 @@ static void BattleStartClearSetData(void)
             dataPtr[j] = 0;
 
         gDisableStructs[i].isFirstTurn = 2;
+        gDisableStructs[i].slowStartTimer = 5;
         sUnusedBattlersArray[i] = 0;
         gLastMoves[i] = MOVE_NONE;
         gLastLandedMoves[i] = MOVE_NONE;
@@ -2441,6 +2442,7 @@ void SwitchInClearSetData(void)
 
     gMoveResultFlags = 0;
     gDisableStructs[gActiveBattler].isFirstTurn = 2;
+    gDisableStructs[gActiveBattler].slowStartTimer = 5;
     gLastMoves[gActiveBattler] = MOVE_NONE;
     gLastLandedMoves[gActiveBattler] = MOVE_NONE;
     gLastHitByType[gActiveBattler] = 0;
@@ -2526,6 +2528,7 @@ void FaintClearSetData(void)
     gProtectStructs[gActiveBattler].notFirstStrike = FALSE;
 
     gDisableStructs[gActiveBattler].isFirstTurn = 2;
+    gDisableStructs[gActiveBattler].slowStartTimer = 5;
 
     gLastMoves[gActiveBattler] = MOVE_NONE;
     gLastLandedMoves[gActiveBattler] = MOVE_NONE;
@@ -3444,6 +3447,32 @@ void SwapTurnOrder(u8 id1, u8 id2)
     SWAP(gBattlerByTurnOrder[id1], gBattlerByTurnOrder[id2], temp);
 }
 
+// Topaze: Gen 4 speed-related abilities
+static u32 TopazeAbilitySpeed(u8 battler, u32 speed)
+{
+    struct BattlePokemon *mon = &gBattleMons[battler];
+
+    switch (mon->ability)
+    {
+    case ABILITY_QUICK_FEET:
+        if (mon->status1 & STATUS1_ANY)
+            speed = (mon->status1 & STATUS1_PARALYSIS) ? speed * 3 : (speed * 3) / 2;
+        break;
+    case ABILITY_SLOW_START:
+        if (gDisableStructs[battler].slowStartTimer != 0)
+            speed /= 2;
+        break;
+    case ABILITY_UNBURDEN:
+        if (gDisableStructs[battler].unburdenActive == 1 && mon->item == ITEM_NONE)
+            speed *= 2;
+        break;
+    case ABILITY_STALL:
+        speed = 0;
+        break;
+    }
+    return speed;
+}
+
 u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
 {
     u8 strikesFirst = 0;
@@ -3495,6 +3524,7 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         speedBattler1 /= 2;
     if (gBattleMons[battler1].status1 & STATUS1_PARALYSIS)
         speedBattler1 /= 2; // Topaze: Gen 7
+    speedBattler1 = TopazeAbilitySpeed(battler1, speedBattler1);
     if (holdEffect == HOLD_EFFECT_QUICK_CLAW && gRandomTurnNumber < (0xFFFF * holdEffectParam) / 100)
         speedBattler1 = UINT_MAX;
     // check second battlerId's speed
@@ -3520,6 +3550,7 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         speedBattler2 /= 2;
     if (gBattleMons[battler2].status1 & STATUS1_PARALYSIS)
         speedBattler2 /= 2; // Topaze: Gen 7
+    speedBattler2 = TopazeAbilitySpeed(battler2, speedBattler2);
     if (holdEffect == HOLD_EFFECT_QUICK_CLAW && gRandomTurnNumber < (0xFFFF * holdEffectParam) / 100)
         speedBattler2 = UINT_MAX;
     if (ignoreChosenMoves)

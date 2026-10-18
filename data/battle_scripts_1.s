@@ -4380,3 +4380,67 @@ BattleScript_ActionSelectionItemsCantBeUsed::
 BattleScript_FlushMessageBox::
 	printstring STRINGID_EMPTYSTRING3
 	return
+
+@ ---- Topaze: Gen 4 abilities ----
+BattleScript_TopazeAbilHurt::
+	printstring STRINGID_TOPAZEABILHURT
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_DoTurnDmg
+
+BattleScript_TopazeBadDreams::
+	printstring STRINGID_TOPAZEBADDREAMS
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_DoTurnDmg
+
+BattleScript_TopazeHailActivates::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_TOPAZEHAILSTART
+	waitstate
+	playanimation BS_BATTLER_0, B_ANIM_HAIL_CONTINUES
+	call BattleScript_WeatherFormChanges
+	end3
+
+BattleScript_TopazeSlowStartActivates::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_TOPAZESLOWSTART
+	waitmessage B_WAIT_TIME_LONG
+	end3
+
+BattleScript_TopazeSlowStartEnds::
+	printstring STRINGID_TOPAZESLOWSTARTEND
+	waitmessage B_WAIT_TIME_LONG
+	end3
+
+BattleScript_TopazeMotorDrive_PPLoss::
+	ppreduce
+BattleScript_TopazeMotorDrive::
+	attackstring
+	pause B_WAIT_TIME_SHORT
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_PKMNRAISEDSPEED
+	waitmessage B_WAIT_TIME_LONG
+	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
+	goto BattleScript_MoveEnd
+
+BattleScript_TopazeAngerPoint::
+	playanimation BS_TARGET, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_TOPAZEANGERPOINT
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_TopazeAftermath::
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_PASSIVE_DAMAGE
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	printstring STRINGID_TOPAZEAFTERMATH
+	waitmessage B_WAIT_TIME_LONG
+	tryfaintmon BS_ATTACKER
+	return
+
+BattleScript_TopazeSteadfast::
+	printstring STRINGID_PKMNFLINCHED
+	waitmessage B_WAIT_TIME_LONG
+	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_PKMNRAISEDSPEED
+	waitmessage B_WAIT_TIME_LONG
+	goto BattleScript_MoveEnd

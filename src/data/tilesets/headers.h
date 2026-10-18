@@ -1626,3 +1626,14 @@ const struct Tileset gTileset_GymRustboroSec =
     .metatileAttributes = gMetatileAttributes_GymRustboroSec,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_MtMoon =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_MtMoon,
+    .palettes = gTilesetPalettes_MtMoon,
+    .metatiles = gMetatiles_MtMoon,
+    .metatileAttributes = gMetatileAttributes_MtMoon,
+    .callback = NULL,
+};
