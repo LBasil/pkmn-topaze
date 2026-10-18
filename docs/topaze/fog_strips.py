@@ -132,6 +132,17 @@ def layout_mids(lid):
         out|={v&0x3ff for v in struct.unpack('<%dH'%(len(b)//2),b)}
     except Exception: pass
     return out|script_mids(lid)
+def view_mids(lid):
+    """metatuiles visibles depuis une carte : les siennes + celles des voisines de MEMES tilesets (leur bande est dessinee telle quelle,
+    donc leurs metatuiles/tuiles/banques ne doivent pas etre ecrasees par les superpositions de cette carte)"""
+    out=set(layout_mids(lid)); la=_L[lid]; key=(la['primary_tileset'],la['secondary_tileset'])
+    for n in LAY2MAP.get(lid,[]):
+        for c in MAPS[n].get('connections') or []:
+            b=ID2NAME.get(c['map'])
+            if not b: continue
+            lb=_L[MAPS[b]['layout']]
+            if (lb['primary_tileset'],lb['secondary_tileset'])==key: out|=layout_mids(MAPS[b]['layout'])
+    return out
 # constantes METATILE_* citees dans le code/les scripts : jamais 'libres'
 _CONST=set()
 for root,_,fs in os.walk(R):
@@ -167,7 +178,7 @@ def primary_free(CA):
 class LSS:
     """une carte (layout) : cases de tuiles libres de la VRAM secondaire (640..1023) pour les tuiles neuves chargees a l'execution"""
     def __init__(s,lid,CA):
-        mids=layout_mids(lid)|_CONST; ref=set()
+        mids=view_mids(lid)|_CONST; ref=set()
         for m in mids:
             ts=CA.L.prim if m<640 else CA.L.sec; i=m if m<640 else m-640
             if i*16+16>len(ts.metatiles): continue
@@ -225,7 +236,7 @@ for k,(a,dr,b,off) in enumerate(conns):
 GR=[]
 for (la,dr),lst in groups.items():
     LA=layout(la); CA=ctx(la,FT.RAMPS.get(la,{}).get(FT.DIRN[dr]))
-    used=FT.banks_used(CA,layout_mids(la)); F=sorted(set(range(13))-used)
+    used=FT.banks_used(CA,view_mids(la)); F=sorted(set(range(13))-used)
     g=dict(la=la,dr=dr,LA=LA,CA=CA,F=F,LS=lss(la,CA),jobs=[])
     ents={}      # cle -> dict(idx,pal,w,nz)
     pals={}
