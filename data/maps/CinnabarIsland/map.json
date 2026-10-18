@@ -197,20 +197,6 @@
       "elevation": 0,
       "dest_map": "MAP_ROUTE19_UNUSED_HOUSE",
       "dest_warp_id": "0"
-    },
-    {
-      "x": 27,
-      "y": 0,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE20",
-      "dest_warp_id": "2"
-    },
-    {
-      "x": 27,
-      "y": 19,
-      "elevation": 0,
-      "dest_map": "MAP_ROUTE20",
-      "dest_warp_id": "3"
     }
   ],
   "coord_events": [

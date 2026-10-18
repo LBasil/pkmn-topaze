@@ -86,3 +86,7 @@ PewterCity_Museum_1F_Text_KabutopsFossil::
     .string "KABUTOPS Fossil\n"
     .string "A primitive and rare POKéMON.$"
 
+
+PewterCity_Museum_1F_Text_AdmissionFree::
+    .string "Admission is free for everyone\n"
+    .string "today. Please enjoy the MUSEUM!$"

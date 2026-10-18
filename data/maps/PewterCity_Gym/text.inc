@@ -33,14 +33,15 @@ PewterCity_Gym_Text_TakeThisWithYou::
     .string "Take this with you.$"
 
 PewterCity_Gym_Text_ReceivedTM39FromBrock::
-    .string "{PLAYER} received TM35\n"
+    .string "{PLAYER} received TM39\n"
     .string "from KAY.$"
 
 PewterCity_Gym_Text_ExplainTM39::
-    .string "TM35 contains FLAMETHROWER.\p"
-    .string "A reliable stream of fire that\n"
-    .string "may burn the target. Keep it for\p"
-    .string "a POKéMON that can really use it.$"
+    .string "TM39 contains ROCK TOMB.\p"
+    .string "A volley of rocks that also\n"
+    .string "lowers the target's SPEED.\p"
+    .string "Teach it to a POKéMON that\n"
+    .string "can really use it.$"
 
 PewterCity_Gym_Text_BrockPostBattle::
     .string "Last night TEAM ONYBRIS broke into\n"

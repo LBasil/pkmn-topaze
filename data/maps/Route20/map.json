@@ -195,20 +195,6 @@
       "elevation": 3,
       "dest_map": "MAP_SEAFOAM_ISLANDS_1F",
       "dest_warp_id": "4"
-    },
-    {
-      "x": 0,
-      "y": 0,
-      "elevation": 0,
-      "dest_map": "MAP_CINNABAR_ISLAND",
-      "dest_warp_id": "6"
-    },
-    {
-      "x": 0,
-      "y": 19,
-      "elevation": 0,
-      "dest_map": "MAP_CINNABAR_ISLAND",
-      "dest_warp_id": "7"
     }
   ],
   "coord_events": [

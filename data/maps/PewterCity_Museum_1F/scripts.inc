@@ -57,31 +57,9 @@ PewterCity_Museum_1F_EventScript_EntranceTriggerRight::
 
 PewterCity_Museum_1F_EventScript_EntranceTrigger::
 	textcolor NPC_TEXT_COLOR_MALE
-	showmoneybox 0, 0
-	msgbox PewterCity_Museum_1F_Text_Its50YForChildsTicket, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, PewterCity_Museum_1F_EventScript_TryPayForTicket
-	msgbox PewterCity_Museum_1F_Text_ComeAgain
+	msgbox PewterCity_Museum_1F_Text_AdmissionFree
 	closemessage
-	hidemoneybox
-	applymovement LOCALID_PLAYER, PewterCity_Museum_1F_Movement_ForcePlayerExit
-	waitmovement 0
-	releaseall
-	end
-
-PewterCity_Museum_1F_EventScript_TryPayForTicket::
-	checkmoney 50
-	goto_if_eq VAR_RESULT, FALSE, PewterCity_Museum_1F_EventScript_NotEnoughMoney
-	closemessage
-	call_if_eq VAR_TEMP_1, 0, PewterCity_Museum_1F_EventScript_PlayerApproachCounterLeft
-	call_if_eq VAR_TEMP_1, 1, PewterCity_Museum_1F_EventScript_PlayerApproachCounterMid
-	call_if_eq VAR_TEMP_1, 2, PewterCity_Museum_1F_EventScript_PlayerApproachCounterRight
-	playse SE_SHOP
-	removemoney 50
-	updatemoneybox
-	waitse
-	msgbox PewterCity_Museum_1F_Text_Right50YThankYou
 	setvar VAR_MAP_SCENE_PEWTER_CITY_MUSEUM_1F, 1
-	hidemoneybox
 	releaseall
 	end
 
