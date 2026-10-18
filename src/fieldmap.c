@@ -825,6 +825,8 @@ static const struct TopazeRamp *TopazeFindRamp(u16 layoutId)
     return NULL;
 }
 
+static s32 sTopazeEdgeDepth, sTopazeEdgeExcess; // parts of the last TopazeEdgeDist result
+
 static s32 TopazeEdgeDist(u8 dir)
 {
     s32 d;
@@ -862,6 +864,8 @@ static s32 TopazeEdgeDist(u8 dir)
             }
         }
     }
+    sTopazeEdgeDepth = d;
+    sTopazeEdgeExcess = excess;
     return d + excess;
 }
 
@@ -945,7 +949,7 @@ void TopazeLoadFogData(void)
 
 static s32 TopazeFogSelect(void)
 {
-    s32 i, best = -1, bestD = 9;
+    s32 i, best = -1, bestD = 99;
 
     if (!gMapHeader.mapLayout)
         return -1;
@@ -955,6 +959,9 @@ static s32 TopazeFogSelect(void)
         if (sTopazeFogStrips[i].layoutA != gMapHeader.mapLayoutId || sTopazeFogStrips[i].nPal == 0)
             continue;
         d = TopazeEdgeDist(sTopazeFogStrips[i].dir);
+        // the strip is on screen as soon as its depth AND the distance along the edge are within the view (7 cells), not only when their sum is small
+        if (sTopazeEdgeDepth > 7 || sTopazeEdgeExcess > 7)
+            continue;
         if (d <= bestD)
         {
             bestD = d;
