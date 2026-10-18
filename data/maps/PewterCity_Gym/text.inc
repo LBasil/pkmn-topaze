@@ -37,9 +37,9 @@ PewterCity_Gym_Text_ReceivedTM39FromBrock::
     .string "from KAY.$"
 
 PewterCity_Gym_Text_ExplainTM39::
-    .string "TM39 contains ROCK TOMB.\p"
-    .string "A volley of rocks that also\n"
-    .string "lowers the target's SPEED.\p"
+    .string "TM39 contains FLAME CHARGE.\p"
+    .string "Ramming the foe wrapped in\n"
+    .string "flames. Light but reliable.\p"
     .string "Teach it to a POKéMON that\n"
     .string "can really use it.$"
 
