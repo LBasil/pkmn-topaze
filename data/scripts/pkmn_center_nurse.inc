@@ -80,11 +80,41 @@ EventScript_PkmnCenterNurse_Goodbye::
 EventScript_MoveCoach::
 	lock
 	faceplayer
+	call EventScript_MoveCoach_GivePokeRadar
 	msgbox Text_MoveCoachHello
 	call EventScript_PkmnCenterNurse_Relearner
 	msgbox Text_MoveCoachBye
 	release
 	end
+
+@ Topaze: the POKE RADAR (the Route 2 aide's building no longer has a door): first MOVE COACH visit
+EventScript_MoveCoach_GivePokeRadar::
+	checkitem ITEM_10B
+	goto_if_eq VAR_RESULT, TRUE, EventScript_MoveCoach_RadarDone
+	checkitemspace ITEM_10B
+	goto_if_eq VAR_RESULT, FALSE, EventScript_MoveCoach_RadarDone
+	msgbox Text_MoveCoachRadarIntro
+	giveitem_msg Text_MoveCoachReceivedRadar, ITEM_10B
+	msgbox Text_MoveCoachRadarExplain
+EventScript_MoveCoach_RadarDone::
+	return
+
+Text_MoveCoachRadarIntro::
+	.string "MOVE COACH: A trainer! Take this\n"
+	.string "prototype I built for tracking\l"
+	.string "POKéMON.$"
+
+Text_MoveCoachReceivedRadar::
+	.string "{PLAYER} received a POKé RADAR!$"
+
+Text_MoveCoachRadarExplain::
+	.string "Open it from the START menu and\n"
+	.string "pick a POKéMON you have seen here.\n"
+	.string "Walk up to the rustling grass, but\n"
+	.string "don't run or it will flee!\p"
+	.string "Beat or catch the same species in\n"
+	.string "a row to chain it: shinies get\n"
+	.string "much more likely!$"
 
 Text_MoveCoachHello::
 	.string "MOVE COACH: I teach moves POKéMON\n"
