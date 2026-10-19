@@ -287,7 +287,6 @@ Text_LooksLikeNothingHere::
 	.string "Looks like there's nothing here…$"
 
 EventScript_PokeRadar::
-	lockall
 	special TopazeRadarEncounter
 	switch VAR_RESULT
 	case 0, EventScript_PokeRadarNoGrass
