@@ -644,3 +644,8 @@ Generateurs (a ne lancer qu'une fois) : `tools/topaze/gen/ending3.py`, `ending2.
 - **Banc** : `tz.py scene()` remet le curseur sur COMBAT au debut d'un combat (les DOWN de la marche le deplacaient : blocage deterministe apres tout changement de tirage aleatoire).
 - **Non reproduits / a preciser par Basil** : texte absent a la prise d'un objet ; toit du Centre de Bourg Quartz ; collisions Route 24 (collision = decor partout) ; arbre/collision d'arene ; transition Route 9/10 ; policiers du sud.
 - **Pas faits (decor a redessiner, direction artistique)** : Tour Spinellia, Route 8, Tunnel Roche, musee et son arbre.
+
+### Vague 3 (19/10 soir, fin)
+- Attaques : `docs/topaze/add_moves3.py` (ids 536-616, MOVES_COUNT 617, 81 attaques Gen 4-9, noms <=12 car.), distribuées par `movepool_fix3.py` (cap 24, audit propre).
+- Talents : `add_abilities3.py` (ids 169-173 : PUNK ROCK, STEELY SPRT, DEFEATIST, TRIAGE, BEAST BOOST), hooks dans `topaze_abilities.c` (TopazePowerPct, TopazeMovePriority) et `battle_util.c` (Beast Boost). Attribués par `assign_abilities3.py` (Exploud, Aron, Miltank, chiens légendaires...). Defeatist n'est attribué à personne (talent à malus).
+- Bench d'équilibrage : Brock perd à niveau égal (équipe bench lvl 16), gagne à +2. Baseline e7784ef non comparable (bench y renvoie 0 tour) : pas de régression prouvée.
