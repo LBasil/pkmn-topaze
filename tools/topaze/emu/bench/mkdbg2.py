@@ -12,6 +12,7 @@ XM = ''.join('        SetMonMoveSlot(&gPlayerParty[0], MOVE_%s, %d);\n' % (m, i)
 add = '''    if (gTopazeDbg[0] && gTopazeDbg[7] == 9)
     {
         u8 i;
+        u16 k;
         ScriptGiveMon(SPECIES_MEWTWO, 90, ITEM_NONE, 0, 0, 0);
         SetMonMoveSlot(&gPlayerParty[0], MOVE_PSYCHIC, 0);
         SetMonMoveSlot(&gPlayerParty[0], MOVE_RECOVER, 1);
@@ -21,8 +22,8 @@ add = '''    if (gTopazeDbg[0] && gTopazeDbg[7] == 9)
         ScriptGiveMon(SPECIES_ALAKAZAM, 80, ITEM_NONE, 0, 0, 0);
         ScriptGiveMon(SPECIES_BLASTOISE, 80, ITEM_NONE, 0, 0, 0);
         AddBagItem(ITEM_10B, 1);
-        for (i = 1; i <= 386; i++)
-            GetSetPokedexFlag(i, FLAG_SET_SEEN);
+        for (k = 1; k <= 386; k++)
+            GetSetPokedexFlag(k, FLAG_SET_SEEN);
         gSaveBlock1Ptr->registeredItem = ITEM_10B;
         FlagSet(FLAG_SYS_POKEMON_GET);
         FlagSet(FLAG_SYS_POKEDEX_GET);
