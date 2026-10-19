@@ -656,7 +656,7 @@ Generateurs (a ne lancer qu'une fois) : `tools/topaze/gen/ending3.py`, `ending2.
 - Pas fait : arbres (non précisés), décor architectural des intérieurs (palettes seulement).
 
 ### Pokéradar façon DexNav (19/10, soir)
-- Entrée « RADAR » dans le menu START (si le joueur a l'objet) ; l'objet du sac lance le même script `EventScript_PokeRadar` (data/scripts/field_moves.inc).
+- Obtention : le MOVE COACH des Centres le donne à la première visite (le bâtiment de l'assistant de la Route 2 n'a plus de porte dans Topaze). Entrée « RADAR » dans le menu START (si le joueur a l'objet) ; l'objet du sac lance le même script `EventScript_PokeRadar` (data/scripts/field_moves.inc).
 - `TopazeRadarBuildList` (src/wild_encounter.c) : espèces VUES de la table d'herbe de la carte (rares d'abord, 8 max) dans un multichoice dynamique `MULTICHOICE_TOPAZE_RADAR` (script_menu.c, `gTopazeRadarMenu`/`gTopazeRadarCount`).
 - `TopazeRadarStart` : choisit une case d'herbe haute libre à 3-5 cases, y fait apparaître l'objet `OBJ_EVENT_GFX_TOPAZE_BLIP` (graphics/object_events/pics/misc/radar_blip.png, palette radar_blip.pal, local id 0xF1).
 - `TopazeRadarStep` (appelé dans `TryStartStepBasedScript`, field_control_avatar.c) : contact (distance <= 1) → `EventScript_TopazeRadarContact` → `TopazeRadarBattle` ; course/vélo à <= 4 cases → fuite ; expire après 70 pas ou changement de carte.
