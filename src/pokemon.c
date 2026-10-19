@@ -2286,12 +2286,12 @@ static void GiveBoxMonInitialMoveset(struct BoxPokemon *boxMon)
 
     for (i = 0; gLevelUpLearnsets[species][i] != LEVEL_UP_END; i++)
     {
-        u16 moveLevel;
+        u32 moveLevel;
         u16 move;
 
         moveLevel = (gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_LV);
 
-        if (moveLevel > (level << 9))
+        if (moveLevel > ((u32)level << 16))
             break;
 
         move = (gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_ID);
@@ -2303,9 +2303,9 @@ static void GiveBoxMonInitialMoveset(struct BoxPokemon *boxMon)
 
 u8 gTopazeLearnFrom; // Topaze: when non zero, learn the moves of every level in ]gTopazeLearnFrom, level] (stacked level-ups)
 
-static bool8 TopazeLearnsetEntryMatches(u16 entry, u8 level)
+static bool8 TopazeLearnsetEntryMatches(u32 entry, u8 level)
 {
-    u8 entryLevel = (entry & LEVEL_UP_MOVE_LV) >> 9;
+    u8 entryLevel = (entry & LEVEL_UP_MOVE_LV) >> 16;
 
     if (gTopazeLearnFrom == 0)
         return entryLevel == level;
@@ -5857,14 +5857,14 @@ u8 GetMoveRelearnerMoves(struct Pokemon *mon, u16 *moves)
 
     for (i = 0; i < MAX_LEVEL_UP_MOVES; i++)
     {
-        u16 moveLevel;
+        u32 moveLevel;
 
         if (gLevelUpLearnsets[species][i] == LEVEL_UP_END)
             break;
 
         moveLevel = gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_LV;
 
-        if (moveLevel <= (level << 9))
+        if (moveLevel <= ((u32)level << 16))
         {
             for (j = 0; j < MAX_MON_MOVES && learnedMoves[j] != (gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_ID); j++)
                 ;
@@ -5931,14 +5931,14 @@ u8 GetNumberOfRelearnableMoves(struct Pokemon *mon)
 
     for (i = 0; i < MAX_LEVEL_UP_MOVES; i++)
     {
-        u16 moveLevel;
+        u32 moveLevel;
 
         if (gLevelUpLearnsets[species][i] == LEVEL_UP_END)
             break;
 
         moveLevel = gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_LV;
 
-        if (moveLevel <= (level << 9))
+        if (moveLevel <= ((u32)level << 16))
         {
             for (j = 0; j < MAX_MON_MOVES && learnedMoves[j] != (gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_ID); j++)
                 ;

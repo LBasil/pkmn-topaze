@@ -87,6 +87,7 @@ static void Cmd_seteffectprimary(void);
 static void Cmd_seteffectsecondary(void);
 static void Cmd_clearstatusfromeffect(void);
 static void Cmd_tryfaintmon(void);
+static u8 sTopazeHazardsDone[MAX_BATTLERS_COUNT]; // bit 0 = Stealth Rock done, bit 1 = Toxic Spikes done (this switch-in)
 static void Cmd_dofaintanimation(void);
 static void Cmd_cleareffectsonfaint(void);
 static void Cmd_jumpifstatus(void);
@@ -2758,6 +2759,10 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 BattleScriptPush(gBattlescriptCurrInstr + 1);
                 gBattlescriptCurrInstr = BattleScript_AtkDefDown;
                 break;
+            case MOVE_EFFECT_DEF_SPDEF_DOWN: // Topaze: Close Combat
+                BattleScriptPush(gBattlescriptCurrInstr + 1);
+                gBattlescriptCurrInstr = BattleScript_DefSpDefDown;
+                break;
             case MOVE_EFFECT_RECOIL_33: // Double Edge
                 gBattleMoveDamage = gHpDealt / 3;
                 if (gBattleMoveDamage == 0)
@@ -2892,6 +2897,7 @@ static void Cmd_tryfaintmon(void)
             BattleScriptPop();
             gBattlescriptCurrInstr = BS_ptr;
             gSideStatuses[GetBattlerSide(gActiveBattler)] &= ~SIDE_STATUS_SPIKES_DAMAGED;
+            sTopazeHazardsDone[gActiveBattler] = 0;
         }
         else
         {
@@ -5014,6 +5020,71 @@ static void Cmd_switchhandleorder(void)
     gBattlescriptCurrInstr += 3;
 }
 
+
+static u16 TopazeRockDamage(u8 battler)
+{
+    const u8 *t = gTypeEffectiveness;
+    u32 mul = 10;
+    u8 i, t1 = gBattleMons[battler].type1, t2 = gBattleMons[battler].type2;
+    u32 dmg;
+
+    for (i = 0; t[i] != 0xFF && t[i] != 0xFE; i += 3)
+    {
+        if (t[i] == TYPE_ROCK && (t[i + 1] == t1 || (t[i + 1] == t2 && t2 != t1)))
+            mul = mul * t[i + 2] / 10;
+    }
+    dmg = gBattleMons[battler].maxHP * mul / 80;
+    if (dmg == 0)
+        dmg = 1;
+    return dmg;
+}
+
+// Topaze: Stealth Rock / Toxic Spikes on switch-in. Returns TRUE when a battle script was started
+// (the script returns to this same command, which then goes on with the next hazard).
+static bool8 TopazeSwitchInHazards(void)
+{
+    u8 side = GetBattlerSide(gActiveBattler);
+    u8 layers = (gSideTimers[side].fieldB >> 1) & 3;
+    bool8 grounded = !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_FLYING) && gBattleMons[gActiveBattler].ability != ABILITY_LEVITATE;
+
+    if (!(sTopazeHazardsDone[gActiveBattler] & 1) && (gSideTimers[side].fieldB & 1))
+    {
+        sTopazeHazardsDone[gActiveBattler] |= 1;
+        gBattleMoveDamage = TopazeRockDamage(gActiveBattler);
+        gBattleCommunication[MULTISTRING_CHOOSER] = 1;
+        gBattleScripting.battler = gActiveBattler;
+        BattleScriptPushCursor();
+        if (gBattlescriptCurrInstr[1] == BS_TARGET)
+            gBattlescriptCurrInstr = BattleScript_SpikesOnTarget;
+        else if (gBattlescriptCurrInstr[1] == BS_ATTACKER)
+            gBattlescriptCurrInstr = BattleScript_SpikesOnAttacker;
+        else
+            gBattlescriptCurrInstr = BattleScript_SpikesOnFaintedBattler;
+        return TRUE;
+    }
+    if (!(sTopazeHazardsDone[gActiveBattler] & 2) && layers != 0 && grounded)
+    {
+        sTopazeHazardsDone[gActiveBattler] |= 2;
+        if (IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_POISON))
+        {
+            gSideTimers[side].fieldB &= 1;
+            gBattleScripting.battler = gActiveBattler;
+            BattleScriptPushCursor();
+            gBattlescriptCurrInstr = BattleScript_TopazeHazardAbsorbed;
+            return TRUE;
+        }
+        if (!IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_STEEL) && gBattleMons[gActiveBattler].status1 == 0)
+        {
+            gBattlerAttacker = gActiveBattler;
+            gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_AFFECTS_USER | (layers >= 2 ? MOVE_EFFECT_TOXIC : MOVE_EFFECT_POISON);
+            BattleScriptPushCursor();
+            gBattlescriptCurrInstr = BattleScript_ApplySecondaryEffect;
+            return TRUE;
+        }
+    }
+    return FALSE;
+}
+
 static void Cmd_switchineffects(void)
 {
     s32 i;
@@ -5024,6 +5095,10 @@ static void Cmd_switchineffects(void)
     gHitMarker &= ~HITMARKER_FAINTED(gActiveBattler);
     gSpecialStatuses[gActiveBattler].faintedHasReplacement = FALSE;
 
+    if (TopazeSwitchInHazards())
+        return;
+
+    gBattleCommunication[MULTISTRING_CHOOSER] = 0;
     if (!(gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SPIKES_DAMAGED)
         && (gSideStatuses[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SPIKES)
         && !IS_BATTLER_OF_TYPE(gActiveBattler, TYPE_FLYING)
@@ -5066,6 +5141,7 @@ static void Cmd_switchineffects(void)
             && !ItemBattleEffects(ITEMEFFECT_ON_SWITCH_IN, gActiveBattler, FALSE))
         {
             gSideStatuses[GetBattlerSide(gActiveBattler)] &= ~SIDE_STATUS_SPIKES_DAMAGED;
+            sTopazeHazardsDone[gActiveBattler] = 0;
 
             for (i = 0; i < gBattlersCount; i++)
             {
@@ -8183,6 +8259,38 @@ static void Cmd_trysetspikes(void)
 {
     u8 targetSide = GetBattlerSide(gBattlerAttacker) ^ BIT_SIDE;
 
+    // Topaze: Stealth Rock (fieldB bit 0) and Toxic Spikes (fieldB bits 1-2, 0-2 layers)
+    if (gBattleMoves[gCurrentMove].effect == EFFECT_STEALTH_ROCK)
+    {
+        if (gSideTimers[targetSide].fieldB & 1)
+        {
+            gSpecialStatuses[gBattlerAttacker].ppNotAffectedByPressure = 1;
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+        }
+        else
+        {
+            gSideTimers[targetSide].fieldB |= 1;
+            gBattlescriptCurrInstr += 5;
+        }
+        return;
+    }
+    if (gBattleMoves[gCurrentMove].effect == EFFECT_TOXIC_SPIKES)
+    {
+        u8 layers = (gSideTimers[targetSide].fieldB >> 1) & 3;
+
+        if (layers >= 2)
+        {
+            gSpecialStatuses[gBattlerAttacker].ppNotAffectedByPressure = 1;
+            gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+        }
+        else
+        {
+            gSideTimers[targetSide].fieldB = (gSideTimers[targetSide].fieldB & 1) | ((layers + 1) << 1);
+            gBattlescriptCurrInstr += 5;
+        }
+        return;
+    }
+
     if (gSideTimers[targetSide].spikesAmount == 3)
     {
         gSpecialStatuses[gBattlerAttacker].ppNotAffectedByPressure = 1;
@@ -8527,6 +8635,18 @@ static void Cmd_rapidspinfree(void)
         gStatuses3[gBattlerAttacker] &= ~STATUS3_LEECHSEED_BATTLER;
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_LeechSeedFree;
+    }
+    else if (gSideTimers[GetBattlerSide(gBattlerAttacker)].fieldB & 1)
+    {
+        gSideTimers[GetBattlerSide(gBattlerAttacker)].fieldB &= ~1;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_TopazeRockFree;
+    }
+    else if (gSideTimers[GetBattlerSide(gBattlerAttacker)].fieldB & 6)
+    {
+        gSideTimers[GetBattlerSide(gBattlerAttacker)].fieldB &= ~6;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_TopazeToxicSpikesFree;
     }
     else if (gSideStatuses[GetBattlerSide(gBattlerAttacker)] & SIDE_STATUS_SPIKES)
     {

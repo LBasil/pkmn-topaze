@@ -293,6 +293,12 @@ static const u8 sText_TopazeSlowStart[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} can
 static const u8 sText_TopazeSlowStartEnd[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} finally got\nits act together!");
 static const u8 sText_TopazeAngerPoint[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nmaxed its ATTACK!");
 static const u8 sText_TopazeAftermath[] = _("{B_ATK_NAME_WITH_PREFIX} was hurt\nby the AFTERMATH!");
+static const u8 sText_TopazeRockSet[] = _("Pointed stones float in the air\naround the foe's team!");
+static const u8 sText_TopazeRockHurt[] = _("Pointed stones dug into\n{B_SCR_ACTIVE_NAME_WITH_PREFIX}!");
+static const u8 sText_TopazeRockFree[] = _("{B_ATK_NAME_WITH_PREFIX} blew away\nthe pointed stones!");
+static const u8 sText_TopazeTSpikesSet[] = _("Poison spikes were scattered\non the ground around the foe!");
+static const u8 sText_TopazeTSpikesGone[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} absorbed\nthe TOXIC SPIKES!");
+static const u8 sText_TopazeTSpikesFree[] = _("{B_ATK_NAME_WITH_PREFIX} blew away\nthe TOXIC SPIKES!");
 static const u8 sText_TopazeBadDreams[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} is tormented\nby bad dreams!");
 static const u8 sText_ItSuckedLiquidOoze[] = _("It sucked up the\nLIQUID OOZE!");
 static const u8 sText_PkmnTransformed[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} transformed!");
@@ -902,8 +908,16 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_TOPAZESLOWSTARTEND - BATTLESTRINGS_TABLE_START]            = sText_TopazeSlowStartEnd,
     [STRINGID_TOPAZEANGERPOINT - BATTLESTRINGS_TABLE_START]              = sText_TopazeAngerPoint,
     [STRINGID_TOPAZEAFTERMATH - BATTLESTRINGS_TABLE_START]               = sText_TopazeAftermath,
-    [STRINGID_TOPAZEBADDREAMS - BATTLESTRINGS_TABLE_START]               = sText_TopazeBadDreams
+    [STRINGID_TOPAZEBADDREAMS - BATTLESTRINGS_TABLE_START]               = sText_TopazeBadDreams,
+    [STRINGID_TOPAZEROCKSET - BATTLESTRINGS_TABLE_START]                 = sText_TopazeRockSet,
+    [STRINGID_TOPAZEROCKHURT - BATTLESTRINGS_TABLE_START]                = sText_TopazeRockHurt,
+    [STRINGID_TOPAZEROCKFREE - BATTLESTRINGS_TABLE_START]                = sText_TopazeRockFree,
+    [STRINGID_TOPAZETSPIKESSET - BATTLESTRINGS_TABLE_START]              = sText_TopazeTSpikesSet,
+    [STRINGID_TOPAZETSPIKESGONE - BATTLESTRINGS_TABLE_START]             = sText_TopazeTSpikesGone,
+    [STRINGID_TOPAZETSPIKESFREE - BATTLESTRINGS_TABLE_START]             = sText_TopazeTSpikesFree
 };
+
+const u16 gTopazeHazardStringIds[] = { STRINGID_PKMNHURTBYSPIKES, STRINGID_TOPAZEROCKHURT };
 
 const u16 gMissStringIds[] =
 {
