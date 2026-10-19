@@ -7,6 +7,8 @@ sh('git checkout src/new_game.c src/trainer_see.c src/wild_encounter.c src/battl
 sh('git apply tools/topaze/emu/debug.patch')
 p = 'src/new_game.c'; s = open(p).read()
 marker = "    if (gTopazeDbg[0]) SetWarpDestination"
+MV = [m for m in os.environ.get('MOVES', '').split(',') if m]
+XM = ''.join('        SetMonMoveSlot(&gPlayerParty[0], MOVE_%s, %d);\n' % (m, i) for i, m in enumerate(MV[:4]))
 add = '''    if (gTopazeDbg[0] && gTopazeDbg[7] == 9)
     {
         u8 i;
