@@ -13,7 +13,7 @@ add = '''    if (gTopazeDbg[0] && gTopazeDbg[7] == 9)
         ScriptGiveMon(SPECIES_MEWTWO, 90, ITEM_NONE, 0, 0, 0);
         SetMonMoveSlot(&gPlayerParty[0], MOVE_PSYCHIC, 0);
         SetMonMoveSlot(&gPlayerParty[0], MOVE_RECOVER, 1);
-        ScriptGiveMon(SPECIES_SNORLAX, 80, ITEM_NONE, 0, 0, 0);
+@@XM@@        ScriptGiveMon(SPECIES_SNORLAX, 80, ITEM_NONE, 0, 0, 0);
         ScriptGiveMon(SPECIES_DRAGONITE, 80, ITEM_NONE, 0, 0, 0);
         ScriptGiveMon(SPECIES_GENGAR, 80, ITEM_NONE, 0, 0, 0);
         ScriptGiveMon(SPECIES_ALAKAZAM, 80, ITEM_NONE, 0, 0, 0);
@@ -29,6 +29,7 @@ add = '''    if (gTopazeDbg[0] && gTopazeDbg[7] == 9)
     }
 '''
 assert marker in s
+add = add.replace('@@XM@@', XM)
 s = s.replace(marker, add + marker, 1)
 s = s.replace('u8 gTopazeDbg[8];', 'u8 gTopazeDbg[8];\nu16 gTopazeFlags[24];\nu16 gTopazeVars[16];\nu8 gTopazeGod;', 1)
 s = s.replace('#include "script_pokemon_util.h"', '#include "script_pokemon_util.h"\n#include "pokemon.h"\n#include "constants/moves.h"', 1)
