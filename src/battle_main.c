@@ -34,6 +34,7 @@
 #include "trig.h"
 #include "vs_seeker.h"
 #include "util.h"
+#include "topaze_abilities.h"
 #include "constants/abilities.h"
 #include "constants/battle_move_effects.h"
 #include "constants/battle_setup.h"
@@ -3469,6 +3470,14 @@ static u32 TopazeAbilitySpeed(u8 battler, u32 speed)
     case ABILITY_STALL:
         speed = 0;
         break;
+    case ABILITY_SAND_RUSH:
+        if (WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_SANDSTORM))
+            speed *= 2;
+        break;
+    case ABILITY_SLUSH_RUSH:
+        if (WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_HAIL))
+            speed *= 2;
+        break;
     }
     return speed;
 }
@@ -3579,11 +3588,11 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
         else
             moveBattler2 = MOVE_NONE;
     }
-    // both move priorities are different than 0
-    if (gBattleMoves[moveBattler1].priority != 0 || gBattleMoves[moveBattler2].priority != 0)
+    // both move priorities are different than 0 (Topaze: abilities such as Prankster/Gale Wings change them)
+    if (TopazeMovePriority(battler1, moveBattler1) != 0 || TopazeMovePriority(battler2, moveBattler2) != 0)
     {
         // both priorities are the same
-        if (gBattleMoves[moveBattler1].priority == gBattleMoves[moveBattler2].priority)
+        if (TopazeMovePriority(battler1, moveBattler1) == TopazeMovePriority(battler2, moveBattler2))
         {
             if (speedBattler1 == speedBattler2 && Random() & 1)
                 strikesFirst = 2; // same speeds, same priorities
@@ -3591,7 +3600,7 @@ u8 GetWhoStrikesFirst(u8 battler1, u8 battler2, bool8 ignoreChosenMoves)
                 strikesFirst = 1; // battler2 has more speed
             // else battler1 has more speed
         }
-        else if (gBattleMoves[moveBattler1].priority < gBattleMoves[moveBattler2].priority)
+        else if (TopazeMovePriority(battler1, moveBattler1) < TopazeMovePriority(battler2, moveBattler2))
             strikesFirst = 1; // battler2's move has greater priority
         // else battler1's move has greater priority
     }

@@ -234,6 +234,8 @@ extern const u8 *const gStatNamesTable2[];
 
 extern const u16 gMissStringIds[];
 extern const u16 gTopazeHazardStringIds[];
+extern const u16 gTopazeAbilStatStringIds[];
+extern const u16 gTopazeMoodyStringIds[];
 extern const u16 gTrappingMoves[];
 
 extern const u8 gText_Sleep[];

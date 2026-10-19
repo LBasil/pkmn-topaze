@@ -248,6 +248,14 @@ extern const u8 BattleScript_TopazeBadDreams[];
 extern const u8 BattleScript_TopazeMotorDrive[];
 extern const u8 BattleScript_TopazeMotorDrive_PPLoss[];
 extern const u8 BattleScript_TopazeAngerPoint[];
+extern const u8 BattleScript_TopazeStatAbil[];
+extern const u8 BattleScript_TopazeStatAbilEntry[];
+extern const u8 BattleScript_TopazeStatAbsorb[];
+extern const u8 BattleScript_TopazeStatAbsorb_PPLoss[];
+extern const u8 BattleScript_TopazeWeakArmor[];
+extern const u8 BattleScript_TopazeMummy[];
+extern const u8 BattleScript_TopazeProtean[];
+extern const u8 BattleScript_TopazeMoody[];
 extern const u8 BattleScript_TopazeAftermath[];
 extern const u8 BattleScript_TopazeSteadfast[];
 

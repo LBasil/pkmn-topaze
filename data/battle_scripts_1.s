@@ -280,6 +280,7 @@ BattleScript_HitFromAtkAnimation::
 	tryfaintmon BS_TARGET
 BattleScript_MoveEnd::
 	moveendall
+	topazehook 0
 	end
 
 BattleScript_MakeMoveMissed::
@@ -4013,6 +4014,7 @@ BattleScript_IntimidateFail::
 	goto BattleScript_IntimidateActivationAnimLoop
 
 BattleScript_IntimidateEnd::
+	topazehook 0
 	return
 
 BattleScript_IntimidateAbilityFail::
@@ -4723,3 +4725,45 @@ BattleScript_TopazeToxicSpikesFree::
 	printstring STRINGID_TOPAZETSPIKESFREE
 	waitmessage B_WAIT_TIME_LONG
 	return
+
+@ ---- Topaze: talents Gen 5+ ----
+BattleScript_TopazeStatAbil::
+	playanimation BS_SCRIPTING, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printfromtable gTopazeAbilStatStringIds
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_TopazeStatAbilEntry::
+	pause B_WAIT_TIME_SHORT
+	call BattleScript_TopazeStatAbil
+	end3
+
+BattleScript_TopazeStatAbsorb_PPLoss::
+	ppreduce
+BattleScript_TopazeStatAbsorb::
+	attackstring
+	pause B_WAIT_TIME_SHORT
+	call BattleScript_TopazeStatAbil
+	orbyte gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE
+	goto BattleScript_MoveEnd
+
+BattleScript_TopazeWeakArmor::
+	call BattleScript_TopazeStatAbil
+	topazehook 1
+	return
+
+BattleScript_TopazeMummy::
+	printstring STRINGID_TOPAZEMUMMY
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_TopazeProtean::
+	printstring STRINGID_TOPAZEPROTEAN
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_TopazeMoody::
+	playanimation BS_SCRIPTING, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printfromtable gTopazeMoodyStringIds
+	waitmessage B_WAIT_TIME_LONG
+	end3

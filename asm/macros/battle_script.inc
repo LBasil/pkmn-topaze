@@ -1359,6 +1359,11 @@
 	jumpifhalfword CMP_NOT_EQUAL, gCurrentMove, \move, \jumpptr
 	.endm
 
+	.macro topazehook kind:req
+	.byte 0xf8
+	.byte \kind
+	.endm
+
 	.macro jumpifstatus3 battler:req, status:req, jumpptr:req
 	jumpifstatus3condition \battler, \status, 0x0, \jumpptr
 	.endm

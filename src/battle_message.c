@@ -299,6 +299,13 @@ static const u8 sText_TopazeRockFree[] = _("{B_ATK_NAME_WITH_PREFIX} blew away\n
 static const u8 sText_TopazeTSpikesSet[] = _("Poison spikes were scattered\non the ground around the foe!");
 static const u8 sText_TopazeTSpikesGone[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} absorbed\nthe TOXIC SPIKES!");
 static const u8 sText_TopazeTSpikesFree[] = _("{B_ATK_NAME_WITH_PREFIX} blew away\nthe TOXIC SPIKES!");
+static const u8 sText_TopazeAbilUp[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nraised its {B_BUFF1}!");
+static const u8 sText_TopazeAbilUp2[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nsharply raised its {B_BUFF1}!");
+static const u8 sText_TopazeAbilDown[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_BUFF1}\nfell due to an ability!");
+static const u8 sText_TopazeMummy[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s ability\nbecame MUMMY!");
+static const u8 sText_TopazeProtean[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s {B_SCR_ACTIVE_ABILITY}\nchanged its type to {B_BUFF1}!");
+static const u8 sText_TopazeMoody0[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s MOODY sharply\nraised {B_BUFF1}, cut {B_BUFF2}!");
+static const u8 sText_TopazeMoody1[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}'s MOODY sharply\nraised its {B_BUFF1}!");
 static const u8 sText_TopazeBadDreams[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} is tormented\nby bad dreams!");
 static const u8 sText_ItSuckedLiquidOoze[] = _("It sucked up the\nLIQUID OOZE!");
 static const u8 sText_PkmnTransformed[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX} transformed!");
@@ -914,8 +921,18 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_TOPAZEROCKFREE - BATTLESTRINGS_TABLE_START]                = sText_TopazeRockFree,
     [STRINGID_TOPAZETSPIKESSET - BATTLESTRINGS_TABLE_START]              = sText_TopazeTSpikesSet,
     [STRINGID_TOPAZETSPIKESGONE - BATTLESTRINGS_TABLE_START]             = sText_TopazeTSpikesGone,
-    [STRINGID_TOPAZETSPIKESFREE - BATTLESTRINGS_TABLE_START]             = sText_TopazeTSpikesFree
+    [STRINGID_TOPAZETSPIKESFREE - BATTLESTRINGS_TABLE_START]             = sText_TopazeTSpikesFree,
+    [STRINGID_TOPAZEABILUP - BATTLESTRINGS_TABLE_START]                  = sText_TopazeAbilUp,
+    [STRINGID_TOPAZEABILUP2 - BATTLESTRINGS_TABLE_START]                 = sText_TopazeAbilUp2,
+    [STRINGID_TOPAZEABILDOWN - BATTLESTRINGS_TABLE_START]                = sText_TopazeAbilDown,
+    [STRINGID_TOPAZEMUMMY - BATTLESTRINGS_TABLE_START]                   = sText_TopazeMummy,
+    [STRINGID_TOPAZEPROTEAN - BATTLESTRINGS_TABLE_START]                 = sText_TopazeProtean,
+    [STRINGID_TOPAZEMOODY0 - BATTLESTRINGS_TABLE_START]                  = sText_TopazeMoody0,
+    [STRINGID_TOPAZEMOODY1 - BATTLESTRINGS_TABLE_START]                  = sText_TopazeMoody1
 };
+
+const u16 gTopazeAbilStatStringIds[] = { STRINGID_TOPAZEABILUP, STRINGID_TOPAZEABILUP2, STRINGID_TOPAZEABILDOWN };
+const u16 gTopazeMoodyStringIds[] = { STRINGID_TOPAZEMOODY0, STRINGID_TOPAZEMOODY1 };
 
 const u16 gTopazeHazardStringIds[] = { STRINGID_PKMNHURTBYSPIKES, STRINGID_TOPAZEROCKHURT };
 

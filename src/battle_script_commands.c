@@ -34,6 +34,7 @@
 #include "constants/hold_effects.h"
 #include "constants/songs.h"
 #include "constants/moves.h"
+#include "topaze_abilities.h"
 #include "constants/abilities.h"
 #include "constants/pokemon.h"
 #include "constants/maps.h"
@@ -87,7 +88,9 @@ static void Cmd_seteffectprimary(void);
 static void Cmd_seteffectsecondary(void);
 static void Cmd_clearstatusfromeffect(void);
 static void Cmd_tryfaintmon(void);
-static u8 sTopazeHazardsDone[MAX_BATTLERS_COUNT]; // bit 0 = Stealth Rock done, bit 1 = Toxic Spikes done (this switch-in)
+static u8 sTopazeHazardsDone[MAX_BATTLERS_COUNT]; // bit 0 = Stealth Rock done, bit 1 = Toxic Spikes done, bit 2 = Protean/Libero done (this switch-in)
+static u8 sTopazeStatDropPending[MAX_BATTLERS_COUNT]; // 1 = lowered by a foe (Defiant), 2 = Competitive
+static void Cmd_topazehook(void);
 static void Cmd_dofaintanimation(void);
 static void Cmd_cleareffectsonfaint(void);
 static void Cmd_jumpifstatus(void);
@@ -563,6 +566,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     Cmd_removeattackerstatus1,                   //0xF5
     Cmd_finishaction,                            //0xF6
     Cmd_finishturn,                              //0xF7
+    Cmd_topazehook,                              //0xF8
 };
 
 struct StatFractions
@@ -873,6 +877,35 @@ static void Cmd_attackcanceler(void)
         gProtectStructs[gBattlerTarget].bounceMove = FALSE;
         BattleScriptPushCursor();
         gBattlescriptCurrInstr = BattleScript_MagicCoatBounce;
+        return;
+    }
+    // Topaze: Magic Bounce reflects status moves like Magic Coat (without PP drain)
+    if (gBattleMons[gBattlerTarget].ability == ABILITY_MAGIC_BOUNCE
+     && GetBattlerSide(gBattlerAttacker) != GetBattlerSide(gBattlerTarget)
+     && gBattleMons[gBattlerTarget].hp != 0
+     && (gBattleMoves[gCurrentMove].flags & FLAG_MAGIC_COAT_AFFECTED)
+     && !(gHitMarker & HITMARKER_NO_PPDEDUCT))
+    {
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_MagicCoatBounce;
+        return;
+    }
+    // Topaze: Protean / Libero change the user's type to the move's type (once per switch-in)
+    if ((gBattleMons[gBattlerAttacker].ability == ABILITY_PROTEAN || gBattleMons[gBattlerAttacker].ability == ABILITY_LIBERO)
+     && !(sTopazeHazardsDone[gBattlerAttacker] & 4)
+     && gCurrentMove != MOVE_STRUGGLE
+     && gBattleMoves[gCurrentMove].type != TYPE_MYSTERY
+     && !IS_BATTLER_OF_TYPE(gBattlerAttacker, gBattleMoves[gCurrentMove].type)
+     && gBattleMons[gBattlerAttacker].type1 != gBattleMoves[gCurrentMove].type)
+    {
+        u8 pType = gBattleMoves[gCurrentMove].type;
+
+        sTopazeHazardsDone[gBattlerAttacker] |= 4;
+        SET_BATTLER_TYPE(gBattlerAttacker, pType);
+        PREPARE_TYPE_BUFFER(gBattleTextBuff1, pType);
+        gBattleScripting.battler = gBattlerAttacker;
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_TopazeProtean;
         return;
     }
 
@@ -1355,7 +1388,7 @@ static void Cmd_typecalc(void)
     if (gBattleMoves[gCurrentMove].power != 0 && !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT))
     {
         if ((gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE)
-         && (gBattleMons[gBattlerTarget].ability == ABILITY_SOLID_ROCK || gBattleMons[gBattlerTarget].ability == ABILITY_FILTER))
+         && (gBattleMons[gBattlerTarget].ability == ABILITY_SOLID_ROCK || gBattleMons[gBattlerTarget].ability == ABILITY_FILTER || gBattleMons[gBattlerTarget].ability == ABILITY_PRISM_ARMOR))
             gBattleMoveDamage = gBattleMoveDamage * 3 / 4;
         if ((gMoveResultFlags & MOVE_RESULT_NOT_VERY_EFFECTIVE) && gBattleMons[gBattlerAttacker].ability == ABILITY_TINTED_LENS)
             gBattleMoveDamage *= 2;
@@ -2830,6 +2863,17 @@ static void Cmd_seteffectwithchance(void)
 {
     u32 percentChance;
 
+    // Topaze: Sheer Force removes the added effects of the move
+    if (gBattleMons[gBattlerAttacker].ability == ABILITY_SHEER_FORCE
+     && !(gBattleCommunication[MOVE_EFFECT_BYTE] & MOVE_EFFECT_CERTAIN)
+     && TopazeSheerForceApplies(gCurrentMove))
+    {
+        gBattleCommunication[MOVE_EFFECT_BYTE] = 0;
+        gBattleScripting.multihitMoveEffect = 0;
+        gBattlescriptCurrInstr++;
+        return;
+    }
+
     if (gBattleMons[gBattlerAttacker].ability == ABILITY_SERENE_GRACE)
         percentChance = gBattleMoves[gCurrentMove].secondaryEffectChance * 2;
     else
@@ -4196,6 +4240,8 @@ static void Cmd_moveend(void)
         case MOVEEND_SYNCHRONIZE_ATTACKER: // attacker synchronize
             if (AbilityBattleEffects(ABILITYEFFECT_ATK_SYNCHRONIZE, gBattlerAttacker, 0, 0, 0))
                 effect = TRUE;
+            else if (TopazeAttackerAbilityHook())
+                effect = TRUE;
             gBattleScripting.moveendState++;
             break;
         case MOVEEND_CHOICE_MOVE: // update choice band move
@@ -5142,6 +5188,7 @@ static void Cmd_switchineffects(void)
         {
             gSideStatuses[GetBattlerSide(gActiveBattler)] &= ~SIDE_STATUS_SPIKES_DAMAGED;
             sTopazeHazardsDone[gActiveBattler] = 0;
+            sTopazeStatDropPending[gActiveBattler] = 0;
 
             for (i = 0; i < gBattlersCount; i++)
             {
@@ -6811,6 +6858,10 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
 
     PREPARE_STAT_BUFFER(gBattleTextBuff1, statId)
 
+    // Topaze: Contrary reverses every stat change
+    if (gBattleMons[gActiveBattler].ability == ABILITY_CONTRARY)
+        statValue = (statValue <= -1) ? (s8)(GET_STAT_BUFF_VALUE(statValue)) : (s8)(-GET_STAT_BUFF_VALUE(statValue));
+
     if (statValue <= -1) // Stat decrease.
     {
         if (gSideTimers[GET_BATTLER_SIDE(gActiveBattler)].mistTimer
@@ -6839,7 +6890,8 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
             return STAT_CHANGE_DIDNT_WORK;
         }
         else if ((gBattleMons[gActiveBattler].ability == ABILITY_CLEAR_BODY
-                  || gBattleMons[gActiveBattler].ability == ABILITY_WHITE_SMOKE)
+                  || gBattleMons[gActiveBattler].ability == ABILITY_WHITE_SMOKE
+                  || gBattleMons[gActiveBattler].ability == ABILITY_FULL_METAL_BODY)
                  && !certain && gCurrentMove != MOVE_CURSE)
         {
             if (flags == STAT_CHANGE_ALLOW_PTR)
@@ -6857,6 +6909,19 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
                     RecordAbilityBattle(gActiveBattler, gLastUsedAbility);
                     gSpecialStatuses[gActiveBattler].statLowered = 1;
                 }
+            }
+            return STAT_CHANGE_DIDNT_WORK;
+        }
+        else if (gBattleMons[gActiveBattler].ability == ABILITY_BIG_PECKS
+                 && !certain && statId == STAT_DEF)
+        {
+            if (flags == STAT_CHANGE_ALLOW_PTR)
+            {
+                BattleScriptPush(BS_ptr);
+                gBattleScripting.battler = gActiveBattler;
+                gBattlescriptCurrInstr = BattleScript_AbilityNoSpecificStatLoss;
+                gLastUsedAbility = gBattleMons[gActiveBattler].ability;
+                RecordAbilityBattle(gActiveBattler, gLastUsedAbility);
             }
             return STAT_CHANGE_DIDNT_WORK;
         }
@@ -6912,7 +6977,18 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
             if (gBattleMons[gActiveBattler].statStages[statId] == MIN_STAT_STAGE)
                 gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_STAT_WONT_DECREASE;
             else
+            {
                 gBattleCommunication[MULTISTRING_CHOOSER] = (gBattlerTarget == gActiveBattler); // B_MSG_ATTACKER_STAT_FELL or B_MSG_DEFENDER_STAT_FELL
+                // Topaze: Defiant / Competitive trigger when a foe lowers a stat
+                if (gActiveBattler != gBattlerAttacker
+                 && GetBattlerSide(gActiveBattler) != GetBattlerSide(gBattlerAttacker))
+                {
+                    if (gBattleMons[gActiveBattler].ability == ABILITY_DEFIANT)
+                        sTopazeStatDropPending[gActiveBattler] = 1;
+                    else if (gBattleMons[gActiveBattler].ability == ABILITY_COMPETITIVE)
+                        sTopazeStatDropPending[gActiveBattler] = 2;
+                }
+            }
         }
     }
     else // stat increase
@@ -7377,6 +7453,9 @@ static void Cmd_weatherdamage(void)
                 && gBattleMons[gBattlerAttacker].type2 != TYPE_STEEL
                 && gBattleMons[gBattlerAttacker].type2 != TYPE_GROUND
                 && gBattleMons[gBattlerAttacker].ability != ABILITY_SAND_VEIL
+                && gBattleMons[gBattlerAttacker].ability != ABILITY_OVERCOAT
+                && gBattleMons[gBattlerAttacker].ability != ABILITY_SAND_FORCE
+                && gBattleMons[gBattlerAttacker].ability != ABILITY_SAND_RUSH
                 && gBattleMons[gBattlerAttacker].ability != ABILITY_MAGIC_GUARD
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERGROUND)
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERWATER))
@@ -7395,6 +7474,8 @@ static void Cmd_weatherdamage(void)
             if (!IS_BATTLER_OF_TYPE(gBattlerAttacker, TYPE_ICE)
                 && gBattleMons[gBattlerAttacker].ability != ABILITY_MAGIC_GUARD
                 && gBattleMons[gBattlerAttacker].ability != ABILITY_ICE_BODY
+                && gBattleMons[gBattlerAttacker].ability != ABILITY_OVERCOAT
+                && gBattleMons[gBattlerAttacker].ability != ABILITY_SLUSH_RUSH
                 && gBattleMons[gBattlerAttacker].ability != ABILITY_SNOW_CLOAK
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERGROUND)
                 && !(gStatuses3[gBattlerAttacker] & STATUS3_UNDERWATER))
@@ -9392,6 +9473,21 @@ static void Cmd_switchoutabilities(void)
 
     switch (gBattleMons[gActiveBattler].ability)
     {
+    case ABILITY_REGENERATOR:
+        if (gBattleMons[gActiveBattler].hp != 0 && gBattleMons[gActiveBattler].hp < gBattleMons[gActiveBattler].maxHP)
+        {
+            u32 newHp = gBattleMons[gActiveBattler].hp + gBattleMons[gActiveBattler].maxHP / 3;
+
+            if (newHp > gBattleMons[gActiveBattler].maxHP)
+                newHp = gBattleMons[gActiveBattler].maxHP;
+            gBattleMons[gActiveBattler].hp = newHp;
+            BtlController_EmitSetMonData(BUFFER_A, REQUEST_HP_BATTLE,
+                                         gBitTable[*(gBattleStruct->battlerPartyIndexes + gActiveBattler)],
+                                         sizeof(gBattleMons[gActiveBattler].hp),
+                                         &gBattleMons[gActiveBattler].hp);
+            MarkBattlerForControllerExec(gActiveBattler);
+        }
+        break;
     case ABILITY_NATURAL_CURE:
         gBattleMons[gActiveBattler].status1 = 0;
         BtlController_EmitSetMonData(BUFFER_A, REQUEST_STATUS_BATTLE,
@@ -10069,6 +10165,41 @@ static void Cmd_removeattackerstatus1(void)
 static void Cmd_finishaction(void)
 {
     gCurrentActionFuncId = B_ACTION_FINISHED;
+}
+
+// Topaze: hook for the Gen 5+ abilities from battle scripts.
+// 0 = run pending Defiant/Competitive boosts, 1 = run the queued ability stat change.
+// Each pending effect pushes the cursor on this very instruction, so it is run again after the script returns.
+static void Cmd_topazehook(void)
+{
+    u8 kind = gBattlescriptCurrInstr[1];
+    s32 i;
+
+    if (kind == 0)
+    {
+        for (i = 0; i < gBattlersCount; i++)
+        {
+            u8 pending = sTopazeStatDropPending[i];
+
+            if (pending == 0)
+                continue;
+            sTopazeStatDropPending[i] = 0;
+            if (gBattleMons[i].hp == 0)
+                continue;
+            if (TopazePrepareStatAbility(i, pending == 1 ? STAT_ATK : STAT_SPATK, 2))
+            {
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_TopazeStatAbil;
+                return;
+            }
+        }
+    }
+    else if (kind == 1)
+    {
+        if (TopazeRunQueuedStatAbility())
+            return;
+    }
+    gBattlescriptCurrInstr += 2;
 }
 
 static void Cmd_finishturn(void)

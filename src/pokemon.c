@@ -29,6 +29,7 @@
 #include "constants/item_effects.h"
 #include "constants/hoenn_cries.h"
 #include "constants/pokemon.h"
+#include "topaze_abilities.h"
 #include "constants/abilities.h"
 #include "constants/moves.h"
 #include "constants/songs.h"
@@ -2427,7 +2428,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     u32 i;
     s32 damage = 0;
     s32 damageHelper;
-    u8 type;
+    u8 type, baseType;
     u16 attack, defense;
     u16 spAttack, spDefense;
     u8 defenderHoldEffect;
@@ -2463,8 +2464,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         type = gBattleMoves[move].type;
     else
         type = typeOverride & DYNAMIC_TYPE_MASK;
-    if (attacker->ability == ABILITY_NORMALIZE && type != TYPE_MYSTERY)
-        type = TYPE_NORMAL;
+    baseType = type;
+    type = TopazeAdjustMoveType(attacker->ability, type);
 
     attack = attacker->attack;
     defense = defender->defense;
@@ -2589,6 +2590,17 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         else
             spAttack = (150 * spAttack) / 100;
     }
+
+    // Topaze: Gen 5-9 abilities
+    gBattleMovePower = (gBattleMovePower * TopazePowerPct(attacker, defender, move, type, baseType, battlerIdAtk, battlerIdDef)) / 100;
+    if (attacker->ability == ABILITY_TOXIC_BOOST && (attacker->status1 & (STATUS1_POISON | STATUS1_TOXIC_POISON)))
+        attack = (150 * attack) / 100;
+    if (attacker->ability == ABILITY_FLARE_BOOST && (attacker->status1 & STATUS1_BURN))
+        spAttack = (150 * spAttack) / 100;
+    if (defender->ability == ABILITY_FUR_COAT)
+        defense *= 2;
+    if (defender->ability == ABILITY_ICE_SCALES)
+        spDefense *= 2;
 
     // Self-destruct / Explosion cut defense in half
     if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)

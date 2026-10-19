@@ -20,6 +20,7 @@
 #include "constants/moves.h"
 #include "constants/items.h"
 #include "constants/weather.h"
+#include "topaze_abilities.h"
 #include "constants/abilities.h"
 #include "constants/pokemon.h"
 #include "constants/hold_effects.h"
@@ -1658,6 +1659,234 @@ u8 CastformDataTypeChange(u8 battler)
     return formChange;
 }
 
+// ---- Topaze: stat changes triggered by Gen 5+ abilities (Moxie, Stamina, Storm Drain...)
+// Applies the change right away and prepares the text/animation; the script pointer is chosen by the caller.
+bool8 TopazePrepareStatAbility(u8 battler, u8 stat, s8 delta)
+{
+    s8 *st = &gBattleMons[battler].statStages[stat];
+    u8 base;
+
+    if (delta > 0 && *st >= MAX_STAT_STAGE)
+        return FALSE;
+    if (delta < 0 && *st <= MIN_STAT_STAGE)
+        return FALSE;
+    *st += delta;
+    if (*st > MAX_STAT_STAGE)
+        *st = MAX_STAT_STAGE;
+    if (*st < MIN_STAT_STAGE)
+        *st = MIN_STAT_STAGE;
+    gBattleScripting.battler = battler;
+    PREPARE_STAT_BUFFER(gBattleTextBuff1, stat);
+    if (delta >= 2)
+        base = STAT_ANIM_PLUS2;
+    else if (delta > 0)
+        base = STAT_ANIM_PLUS1;
+    else if (delta <= -2)
+        base = STAT_ANIM_MINUS2;
+    else
+        base = STAT_ANIM_MINUS1;
+    gBattleScripting.animArg1 = stat + base - 1;
+    gBattleScripting.animArg2 = 0;
+    gBattleCommunication[MULTISTRING_CHOOSER] = (delta >= 2) ? 1 : ((delta > 0) ? 0 : 2);
+    return TRUE;
+}
+
+// One queued ability stat change (Weak Armor raises SPEED right after lowering DEFENSE)
+static u8 sTopazeQueuedBattler; // battler + 1, 0 = nothing queued
+static u8 sTopazeQueuedStat;
+static s8 sTopazeQueuedDelta;
+
+void TopazeQueueStatAbility(u8 battler, u8 stat, s8 delta)
+{
+    sTopazeQueuedBattler = battler + 1;
+    sTopazeQueuedStat = stat;
+    sTopazeQueuedDelta = delta;
+}
+
+bool8 TopazeRunQueuedStatAbility(void)
+{
+    u8 battler = sTopazeQueuedBattler - 1;
+
+    if (sTopazeQueuedBattler == 0)
+        return FALSE;
+    sTopazeQueuedBattler = 0;
+    if (gBattleMons[battler].hp == 0 || !TopazePrepareStatAbility(battler, sTopazeQueuedStat, sTopazeQueuedDelta))
+        return FALSE;
+    BattleScriptPushCursor();
+    gBattlescriptCurrInstr = BattleScript_TopazeStatAbil;
+    return TRUE;
+}
+
+static u8 TopazeAbsorbStat(u8 battler, u8 stat, s8 delta)
+{
+    bool8 first = gProtectStructs[gBattlerAttacker].notFirstStrike;
+
+    if (TopazePrepareStatAbility(battler, stat, delta))
+        gBattlescriptCurrInstr = first ? BattleScript_TopazeStatAbsorb : BattleScript_TopazeStatAbsorb_PPLoss;
+    else
+        gBattlescriptCurrInstr = first ? BattleScript_MonMadeMoveUseless : BattleScript_MonMadeMoveUseless_PPLoss;
+    return 2;
+}
+
+// Abilities of the damaged battler that react to a hit (Iron Barbs, Gooey, Stamina, Weak Armor, Mummy...)
+static bool8 TopazeOnDamageAbility(u8 battler, u16 move, u8 moveType)
+{
+    u8 attacker = gBattlerAttacker;
+    bool8 hit = !(gMoveResultFlags & MOVE_RESULT_NO_EFFECT) && TARGET_TURN_DAMAGED && gBattleMons[battler].hp != 0;
+    bool8 contact = (gBattleMoves[move].flags & FLAG_MAKES_CONTACT) != 0;
+    bool8 atkAlive = gBattleMons[attacker].hp != 0 && !gProtectStructs[attacker].confusionSelfDmg && attacker != battler;
+    u8 stat = 0;
+    s8 delta = 0;
+
+    if (!hit || gBattleMoves[move].power == 0)
+        return FALSE;
+    switch (gBattleMons[battler].ability)
+    {
+    case ABILITY_IRON_BARBS:
+        if (atkAlive && contact)
+        {
+            gBattleMoveDamage = gBattleMons[attacker].maxHP / 8;
+            if (gBattleMoveDamage == 0)
+                gBattleMoveDamage = 1;
+            BattleScriptPushCursor();
+            gBattlescriptCurrInstr = BattleScript_RoughSkinActivates;
+            return TRUE;
+        }
+        return FALSE;
+    case ABILITY_GOOEY:
+        if (atkAlive && contact && TopazePrepareStatAbility(attacker, STAT_SPEED, -1))
+        {
+            BattleScriptPushCursor();
+            gBattlescriptCurrInstr = BattleScript_TopazeStatAbil;
+            return TRUE;
+        }
+        return FALSE;
+    case ABILITY_MUMMY:
+        if (atkAlive && contact && gBattleMons[attacker].ability != ABILITY_MUMMY)
+        {
+            gBattleMons[attacker].ability = ABILITY_MUMMY;
+            gBattleScripting.battler = attacker;
+            BattleScriptPushCursor();
+            gBattlescriptCurrInstr = BattleScript_TopazeMummy;
+            return TRUE;
+        }
+        return FALSE;
+    case ABILITY_STAMINA:
+        stat = STAT_DEF; delta = 1;
+        break;
+    case ABILITY_WATER_COMPACTION:
+        if (moveType == TYPE_WATER) { stat = STAT_DEF; delta = 2; }
+        break;
+    case ABILITY_JUSTIFIED:
+        if (moveType == TYPE_DARK) { stat = STAT_ATK; delta = 1; }
+        break;
+    case ABILITY_RATTLED:
+        if (moveType == TYPE_BUG || moveType == TYPE_GHOST || moveType == TYPE_DARK) { stat = STAT_SPEED; delta = 1; }
+        break;
+    case ABILITY_STEAM_ENGINE:
+        if (moveType == TYPE_FIRE || moveType == TYPE_WATER) { stat = STAT_SPEED; delta = 2; }
+        break;
+    case ABILITY_WEAK_ARMOR:
+        if (MOVE_IS_PHYSICAL(move, moveType))
+        {
+            // DEF -1 now, SPEED +2 right after (queued, see Cmd_topazehook)
+            if (TopazePrepareStatAbility(battler, STAT_DEF, -1))
+            {
+                TopazeQueueStatAbility(battler, STAT_SPEED, 2);
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_TopazeWeakArmor;
+                return TRUE;
+            }
+            stat = STAT_SPEED; delta = 2;
+        }
+        break;
+    }
+    if (delta != 0 && TopazePrepareStatAbility(battler, stat, delta))
+    {
+        BattleScriptPushCursor();
+        gBattlescriptCurrInstr = BattleScript_TopazeStatAbil;
+        return TRUE;
+    }
+    return FALSE;
+}
+
+// Abilities of the attacker that react to its own move (Poison Touch, Moxie)
+bool8 TopazeAttackerAbilityHook(void)
+{
+    u8 atk = gBattlerAttacker;
+    u8 tgt = gBattlerTarget;
+
+    if (atk == tgt || gBattleMons[atk].hp == 0 || (gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+     || gBattleMoves[gCurrentMove].power == 0 || !TARGET_TURN_DAMAGED)
+        return FALSE;
+    switch (gBattleMons[atk].ability)
+    {
+    case ABILITY_POISON_TOUCH:
+        if ((gBattleMoves[gCurrentMove].flags & FLAG_MAKES_CONTACT)
+         && gBattleMons[tgt].hp != 0 && gBattleMons[tgt].status1 == 0
+         && !(gBattleMons[tgt].status2 & STATUS2_SUBSTITUTE)
+         && (Random() % 10) < 3)
+        {
+            gBattleCommunication[MOVE_EFFECT_BYTE] = MOVE_EFFECT_POISON;
+            BattleScriptPushCursor();
+            gBattlescriptCurrInstr = BattleScript_ApplySecondaryEffect;
+            gHitMarker |= HITMARKER_STATUS_ABILITY_EFFECT;
+            return TRUE;
+        }
+        break;
+    case ABILITY_MOXIE:
+        if (gBattleMons[tgt].hp == 0 && TopazePrepareStatAbility(atk, STAT_ATK, 1))
+        {
+            BattleScriptPushCursor();
+            gBattlescriptCurrInstr = BattleScript_TopazeStatAbil;
+            return TRUE;
+        }
+        break;
+    }
+    return FALSE;
+}
+
+// Moody: +2 in a random stat, -1 in another one, at the end of each turn
+static u8 TopazeMoody(u8 battler)
+{
+    u8 up, down, tries;
+    struct BattlePokemon *mon = &gBattleMons[battler];
+
+    for (tries = 0; tries < 20; tries++)
+    {
+        up = 1 + (Random() % 7);
+        if (mon->statStages[up] < MAX_STAT_STAGE)
+            break;
+    }
+    if (tries == 20)
+        return 0;
+    for (tries = 0; tries < 20; tries++)
+    {
+        down = 1 + (Random() % 7);
+        if (down != up && mon->statStages[down] > MIN_STAT_STAGE)
+            break;
+    }
+    mon->statStages[up] += 2;
+    if (mon->statStages[up] > MAX_STAT_STAGE)
+        mon->statStages[up] = MAX_STAT_STAGE;
+    PREPARE_STAT_BUFFER(gBattleTextBuff1, up);
+    if (tries < 20)
+    {
+        mon->statStages[down]--;
+        PREPARE_STAT_BUFFER(gBattleTextBuff2, down);
+        gBattleCommunication[MULTISTRING_CHOOSER] = 0;
+    }
+    else
+    {
+        gBattleCommunication[MULTISTRING_CHOOSER] = 1; // nothing to lower
+    }
+    gBattleScripting.battler = battler;
+    gBattleScripting.animArg1 = up + STAT_ANIM_PLUS2 - 1;
+    gBattleScripting.animArg2 = 0;
+    BattleScriptPushCursorAndCallback(BattleScript_TopazeMoody);
+    return 1;
+}
+
 // Topaze: shared end-of-turn handling for HP/status abilities of Gen 4.
 static u8 TopazeEndTurnAbility(u8 battler)
 {
@@ -1884,6 +2113,16 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     effect++;
                 }
                 break;
+            case ABILITY_INTREPID_SWORD:
+            case ABILITY_DAUNTLESS_SHIELD:
+                if (!(gSpecialStatuses[battler].traced)
+                 && TopazePrepareStatAbility(battler, gLastUsedAbility == ABILITY_INTREPID_SWORD ? STAT_ATK : STAT_DEF, 1))
+                {
+                    gSpecialStatuses[battler].traced = 1; // only once per switch-in
+                    BattleScriptPushCursorAndCallback(BattleScript_TopazeStatAbilEntry);
+                    effect++;
+                }
+                break;
             case ABILITY_INTIMIDATE:
                 if (!(gSpecialStatuses[battler].intimidatedMon))
                 {
@@ -2015,6 +2254,10 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         }
                     }
                     break;
+                case ABILITY_MOODY:
+                    if (gDisableStructs[battler].isFirstTurn != 2)
+                        effect = TopazeMoody(battler);
+                    break;
                 case ABILITY_UNBURDEN:
                     if (gBattleMons[battler].item != ITEM_NONE && gDisableStructs[battler].unburdenActive == 0)
                         gDisableStructs[battler].unburdenActive = 2;
@@ -2084,6 +2327,29 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         effect = 1;
                     }
                     break;
+                case ABILITY_STORM_DRAIN:
+                    if (moveType == TYPE_WATER && gBattleMoves[move].power != 0)
+                        effect = TopazeAbsorbStat(battler, STAT_SPATK, 1);
+                    break;
+                case ABILITY_SAP_SIPPER:
+                    if (moveType == TYPE_GRASS && gBattleMoves[move].power != 0)
+                        effect = TopazeAbsorbStat(battler, STAT_ATK, 1);
+                    break;
+                case ABILITY_WELL_BAKED_BODY:
+                    if (moveType == TYPE_FIRE && gBattleMoves[move].power != 0)
+                        effect = TopazeAbsorbStat(battler, STAT_DEF, 2);
+                    break;
+                case ABILITY_EARTH_EATER:
+                    if (moveType == TYPE_GROUND && gBattleMoves[move].power != 0)
+                    {
+                        if (gProtectStructs[gBattlerAttacker].notFirstStrike)
+                            gBattlescriptCurrInstr = BattleScript_MoveHPDrain;
+                        else
+                            gBattlescriptCurrInstr = BattleScript_MoveHPDrain_PPLoss;
+
+                        effect = 1;
+                    }
+                    break;
                 case ABILITY_FLASH_FIRE:
                     if (moveType == TYPE_FIRE && !(gBattleMons[battler].status1 & STATUS1_FREEZE))
                     {
@@ -2131,6 +2397,11 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
             }
             break;
         case ABILITYEFFECT_ON_DAMAGE: // Think contact abilities.
+            if (TopazeOnDamageAbility(battler, move, moveType))
+            {
+                effect++;
+                break;
+            }
             switch (gLastUsedAbility)
             {
             case ABILITY_COLOR_CHANGE:

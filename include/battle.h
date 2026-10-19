@@ -465,14 +465,15 @@ extern struct BattleStruct *gBattleStruct;
 #define F_DYNAMIC_TYPE_2 (1 << 7)
 #define DYNAMIC_TYPE_MASK (F_DYNAMIC_TYPE_1 - 1)
 
+u8 TopazeAdjustMoveType(u8 ability, u8 type);
+
 #define GET_MOVE_TYPE(move, typeArg)                                  \
 {                                                                     \
     if (gBattleStruct->dynamicMoveType)                               \
         typeArg = gBattleStruct->dynamicMoveType & DYNAMIC_TYPE_MASK; \
     else                                                              \
         typeArg = gBattleMoves[move].type;                            \
-    if (gBattleMons[gBattlerAttacker].ability == ABILITY_NORMALIZE && typeArg != TYPE_MYSTERY) \
-        typeArg = TYPE_NORMAL;                                        \
+    typeArg = TopazeAdjustMoveType(gBattleMons[gBattlerAttacker].ability, typeArg); \
 }
 
 #define IS_TYPE_PHYSICAL(moveType)(moveType < TYPE_MYSTERY)

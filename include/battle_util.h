@@ -49,6 +49,12 @@
 #define WEATHER_HAS_EFFECT ((!AbilityBattleEffects(ABILITYEFFECT_CHECK_ON_FIELD, 0, ABILITY_CLOUD_NINE, 0, 0) && !AbilityBattleEffects(ABILITYEFFECT_CHECK_ON_FIELD, 0, ABILITY_AIR_LOCK, 0, 0)))
 #define WEATHER_HAS_EFFECT2 ((!AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, ABILITY_CLOUD_NINE, 0, 0) && !AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, ABILITY_AIR_LOCK, 0, 0)))
 
+// Topaze: Gen 5+ abilities
+bool8 TopazePrepareStatAbility(u8 battler, u8 stat, s8 delta);
+void TopazeQueueStatAbility(u8 battler, u8 stat, s8 delta);
+bool8 TopazeRunQueuedStatAbility(void);
+bool8 TopazeAttackerAbilityHook(void);
+
 #define BS_GET_TARGET                   0
 #define BS_GET_ATTACKER                 1
 #define BS_GET_EFFECT_BANK              2
