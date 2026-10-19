@@ -34,3 +34,6 @@ PokemonTower_3F_Text_PatriciaPostBattle::
     .string "The others above…\n"
     .string "They must have been possessed.$"
 
+
+PokemonTower_3F_Text_MonCubone::
+    .string "CUBONE: Kyarugoo...\nIt keeps vigil over a grave.$"

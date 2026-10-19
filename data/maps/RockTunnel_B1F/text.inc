@@ -93,3 +93,6 @@ RockTunnel_B1F_Text_WinstonPostBattle::
     .string "I'm an artist, not a fighter.\n"
     .string "I'll go home to draw.$"
 
+
+RockTunnel_B1F_Text_MonSlowpoke::
+    .string "SLOWPOKE: ...Yawn.\nIt dozes in the cool air.$"

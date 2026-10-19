@@ -31,3 +31,6 @@ PokemonTower_4F_Text_JodyPostBattle::
     .string "May the departed POKéMON rest in\n"
     .string "peace…$"
 
+
+PokemonTower_4F_Text_MonClefairy::
+    .string "CLEFAIRY: Pippi!\nIt hums softly near the crystals.$"

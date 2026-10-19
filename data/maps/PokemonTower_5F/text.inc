@@ -49,3 +49,6 @@ PokemonTower_5F_Text_PurifiedZoneMonsFullyHealed::
     .string "{PLAYER}'s POKéMON were fully\n"
     .string "healed.$"
 
+
+PokemonTower_5F_Text_MonJigglypuff::
+    .string "JIGGLYPUFF: Purin...\nIt sings a lullaby for the spirits.$"

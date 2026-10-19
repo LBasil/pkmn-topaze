@@ -40,3 +40,13 @@ PokemonTower_5F_EventScript_Janae::
 	trainerbattle_single TRAINER_CHANNELER_JANAE, PokemonTower_5F_Text_JanaeIntro, PokemonTower_5F_Text_JanaeDefeat
 	msgbox PokemonTower_5F_Text_JanaePostBattle, MSGBOX_AUTOCLOSE
 	end
+
+PokemonTower_5F_EventScript_MonJigglypuff::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_JIGGLYPUFF, CRY_MODE_NORMAL
+	msgbox PokemonTower_5F_Text_MonJigglypuff
+	waitmoncry
+	release
+	end

@@ -15,3 +15,13 @@ PokemonTower_4F_EventScript_Jody::
 	trainerbattle_single TRAINER_CHANNELER_JODY, PokemonTower_4F_Text_JodyIntro, PokemonTower_4F_Text_JodyDefeat
 	msgbox PokemonTower_4F_Text_JodyPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+PokemonTower_4F_EventScript_MonClefairy::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_CLEFAIRY, CRY_MODE_NORMAL
+	msgbox PokemonTower_4F_Text_MonClefairy
+	waitmoncry
+	release
+	end

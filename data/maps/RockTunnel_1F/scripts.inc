@@ -44,3 +44,23 @@ RockTunnel_1F_EventScript_Dana::
 	trainerbattle_single TRAINER_PICNICKER_DANA, RockTunnel_1F_Text_DanaIntro, RockTunnel_1F_Text_DanaDefeat
 	msgbox RockTunnel_1F_Text_DanaPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+RockTunnel_1F_EventScript_MonMachop::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_MACHOP, CRY_MODE_NORMAL
+	msgbox RockTunnel_1F_Text_MonMachop
+	waitmoncry
+	release
+	end
+
+RockTunnel_1F_EventScript_MonNidorino::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_NIDORINO, CRY_MODE_NORMAL
+	msgbox RockTunnel_1F_Text_MonNidorino
+	waitmoncry
+	release
+	end

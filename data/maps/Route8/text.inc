@@ -166,3 +166,9 @@ Route8_Text_JarenDefeat::
 Route8_Text_JarenPostBattle::
     .string "Don't think you're all special and\n"
     .string "all just because of this.$"
+
+Route8_Text_MonSpearow::
+    .string "SPEAROW: Kerr!\nIt pecks at the crystals.$"
+
+Route8_Text_MonMeowth::
+    .string "MEOWTH: Nyaa!\nIt is chasing something shiny.$"

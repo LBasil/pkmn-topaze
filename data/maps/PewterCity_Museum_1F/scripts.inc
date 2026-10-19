@@ -165,3 +165,13 @@ PewterCity_Museum_1F_EventScript_KabutopsFossil::
 	special CloseMuseumFossilPic
 	releaseall
 	end
+
+PewterCity_Museum_1F_EventScript_MonKabuto::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_KABUTO, CRY_MODE_NORMAL
+	msgbox PewterCity_Museum_1F_Text_MonKabuto
+	waitmoncry
+	release
+	end

@@ -73,3 +73,13 @@ PewterCity_Museum_2F_EventScript_BrockPlain::
 	msgbox PewterCity_Museum_2F_Text_BrockAfterKay
 	release
 	end
+
+PewterCity_Museum_2F_EventScript_MonSlowpoke::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_SLOWPOKE, CRY_MODE_NORMAL
+	msgbox PewterCity_Museum_2F_Text_MonSlowpoke
+	waitmoncry
+	release
+	end

@@ -15,3 +15,13 @@ PokemonTower_3F_EventScript_Hope::
 	trainerbattle_single TRAINER_CHANNELER_HOPE, PokemonTower_3F_Text_HopeIntro, PokemonTower_3F_Text_HopeDefeat
 	msgbox PokemonTower_3F_Text_HopePostBattle, MSGBOX_AUTOCLOSE
 	end
+
+PokemonTower_3F_EventScript_MonCubone::
+	lock
+	faceplayer
+	waitse
+	playmoncry SPECIES_CUBONE, CRY_MODE_NORMAL
+	msgbox PokemonTower_3F_Text_MonCubone
+	waitmoncry
+	release
+	end

@@ -85,3 +85,9 @@ RockTunnel_1F_Text_RouteSign::
     .string "ROCK TUNNEL\n"
     .string "TOURMALIA - SPINELLIA$"
 
+
+RockTunnel_1F_Text_MonMachop::
+    .string "MACHOP: Gooh!\nIt is pushing a boulder around.$"
+
+RockTunnel_1F_Text_MonNidorino::
+    .string "NIDORINO: Gyuu!\nIt sniffs around for ore.$"
