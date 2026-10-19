@@ -189,8 +189,11 @@ class T:
         return e.u32(0x03003130 + 4) == _CB2 and not (e.peek(0x03003130 + 0x439, 1)[0] & 3) and e.peek(0x03000f9c, 1)[0] == 0
     def scene(s, maxn=600, key='A', shot=None):
         """Fait avancer une scène/un combat (A en combat, `key` sinon) jusqu'à ce que le jeu soit redevenu libre ; renvoie le nb d'appuis."""
-        n = 0; calm = 0
+        n = 0; calm = 0; reset = False
         while n < maxn:
+            if s.inbattle() and not reset:
+                reset = True; s.press('UP', 4, 20); s.press('LEFT', 4, 20)      # curseur du menu d'actions sur COMBAT (les DOWN de la marche peuvent l'avoir deplace)
+            if not s.inbattle(): reset = False
             if s.idle():
                 calm += 1
                 if calm >= 3: return n
