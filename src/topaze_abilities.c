@@ -30,6 +30,18 @@ static const u16 sSliceMoves[] =
     MOVE_KOWTOW_CLEAVE, MOVE_BEHEMOTH_BLADE, MOVE_AIR_CUTTER, MOVE_RAZOR_SHELL, MOVE_NONE
 };
 
+static const u16 sSoundMoves[] =
+{
+    MOVE_HYPER_VOICE, MOVE_SCREECH, MOVE_ROAR, MOVE_SING, MOVE_SUPERSONIC, MOVE_SNORE, MOVE_UPROAR, MOVE_METAL_SOUND,
+    MOVE_GRASS_WHISTLE, MOVE_PERISH_SONG, MOVE_BUG_BUZZ, MOVE_ECHOED_VOICE, MOVE_BOOMBURST, MOVE_ALLURING_VOICE, MOVE_NONE
+};
+
+static const u16 sHealMoves[] =
+{
+    MOVE_RECOVER, MOVE_SOFT_BOILED, MOVE_MILK_DRINK, MOVE_SYNTHESIS, MOVE_MOONLIGHT, MOVE_MORNING_SUN, MOVE_REST, MOVE_ROOST,
+    MOVE_SLACK_OFF, MOVE_HEAL_PULSE, MOVE_LIFE_DEW, MOVE_SHORE_UP, MOVE_DRAIN_PUNCH, MOVE_GIGA_DRAIN, MOVE_ABSORB, MOVE_MEGA_DRAIN, MOVE_NONE
+};
+
 static bool8 InMoveList(const u16 *list, u16 move)
 {
     u32 i;
@@ -124,6 +136,18 @@ u16 TopazePowerPct(struct BattlePokemon *atk, struct BattlePokemon *def, u16 mov
         if (type == TYPE_STEEL)
             pct = 150;
         break;
+    case ABILITY_PUNK_ROCK:
+        if (InMoveList(sSoundMoves, move))
+            pct = 130;
+        break;
+    case ABILITY_STEELY_SPIRIT:
+        if (type == TYPE_STEEL)
+            pct = 150;
+        break;
+    case ABILITY_DEFEATIST:
+        if (atk->hp <= atk->maxHP / 2)
+            pct = 50;
+        break;
     case ABILITY_TRANSISTOR:
         if (type == TYPE_ELECTRIC)
             pct = 150;
@@ -187,6 +211,10 @@ s8 TopazeMovePriority(u8 battler, u16 move)
     case ABILITY_PRANKSTER:
         if (gBattleMoves[move].power == 0)
             priority++;
+        break;
+    case ABILITY_TRIAGE:
+        if (InMoveList(sHealMoves, move))
+            priority += 3;
         break;
     case ABILITY_GALE_WINGS:
         if (gBattleMoves[move].type == TYPE_FLYING && gBattleMons[battler].hp == gBattleMons[battler].maxHP)

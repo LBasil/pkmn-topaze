@@ -1834,6 +1834,23 @@ bool8 TopazeAttackerAbilityHook(void)
             return TRUE;
         }
         break;
+    case ABILITY_BEAST_BOOST:
+        if (gBattleMons[tgt].hp == 0)
+        {
+            u8 best = STAT_ATK;
+            u16 bv = gBattleMons[atk].attack;
+            if (gBattleMons[atk].defense > bv) { best = STAT_DEF; bv = gBattleMons[atk].defense; }
+            if (gBattleMons[atk].spAttack > bv) { best = STAT_SPATK; bv = gBattleMons[atk].spAttack; }
+            if (gBattleMons[atk].spDefense > bv) { best = STAT_SPDEF; bv = gBattleMons[atk].spDefense; }
+            if (gBattleMons[atk].speed > bv) { best = STAT_SPEED; }
+            if (TopazePrepareStatAbility(atk, best, 1))
+            {
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_TopazeStatAbil;
+                return TRUE;
+            }
+        }
+        break;
     case ABILITY_MOXIE:
         if (gBattleMons[tgt].hp == 0 && TopazePrepareStatAbility(atk, STAT_ATK, 1))
         {
