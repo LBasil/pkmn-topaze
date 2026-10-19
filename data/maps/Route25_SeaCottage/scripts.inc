@@ -94,6 +94,9 @@ Route25_SeaCottage_EventScript_Ambush::
 	removeobject LOCALID_COTTAGE_GRUNT_B
 	fadescreen FADE_FROM_BLACK
 	setvar VAR_LAST_TALKED, LOCALID_COTTAGE_GRUNT_A
+	@ Topaze: the grunt walks up to the player (no more duel from across the room)
+	applymovement LOCALID_COTTAGE_GRUNT_A, Route25_SeaCottage_Movement_GruntAApproach
+	waitmovement 0
 	msgbox Route25_SeaCottage_Text_GruntAIntro
 	trainerbattle_no_intro TRAINER_TEAM_ROCKET_GRUNT_5, Route25_SeaCottage_Text_GruntADefeat
 	msgbox Route25_SeaCottage_Text_GruntADrops
@@ -116,6 +119,17 @@ Route25_SeaCottage_EventScript_Ambush::
 	setvar VAR_ROUTE25_MISTY, 2
 	releaseall
 	end
+
+Route25_SeaCottage_Movement_GruntAApproach::
+	walk_down
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	face_down
+	step_end
 
 Route25_SeaCottage_Movement_MistyToGruntB::
 	walk_up
