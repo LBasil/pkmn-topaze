@@ -885,6 +885,12 @@ static u8 GetEggMoves(struct Pokemon *pokemon, u16 *eggMoves)
     return numEggMoves;
 }
 
+// Topaze: the Move Coach also teaches egg moves
+u8 TopazeGetEggMovesForSpecies(struct Pokemon *mon, u16 *eggMoves)
+{
+    return GetEggMoves(mon, eggMoves);
+}
+
 static void BuildEggMoveset(struct Pokemon *egg, struct BoxPokemon *father, struct BoxPokemon *mother)
 {
     u16 numSharedParentMoves;

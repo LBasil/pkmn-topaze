@@ -2629,7 +2629,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_GIGA_DRAIN] =
     {
         .effect = EFFECT_ABSORB,
-        .power = 60,
+        .power = 40, // Topaze: nerf (feedback 19-10, was 60)
         .type = TYPE_GRASS,
         .accuracy = 100,
         .pp = 5,
@@ -4384,7 +4384,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_DRAGON_CLAW] =
     {
         .effect = EFFECT_HIT,
-        .power = 80,
+        .power = 60, // Topaze: nerf (feedback 19-10, was 80)
         .type = TYPE_DRAGON,
         .accuracy = 100,
         .pp = 15,

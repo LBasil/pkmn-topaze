@@ -1931,6 +1931,20 @@ static bool8 CanLearnTutorMove(u16 species, u8 tutor)
     }
 }
 
+// Topaze: the Move Coach also teaches the regular tutor moves
+u8 TopazeGetTutorMovesForSpecies(u16 species, u16 *moves)
+{
+    u8 n = 0, tutor;
+    for (tutor = 0; tutor < TUTOR_MOVE_COUNT; tutor++)
+    {
+        if (tutor == TUTOR_MOVE_FRENZY_PLANT || tutor == TUTOR_MOVE_BLAST_BURN || tutor == TUTOR_MOVE_HYDRO_CANNON)
+            continue;
+        if (CanLearnTutorMove(species, tutor))
+            moves[n++] = GetTutorMove(tutor);
+    }
+    return n;
+}
+
 // Tutorial battle messages
 
 static void Task_FirstBattleEnterParty_WaitFadeIn(u8 taskId)

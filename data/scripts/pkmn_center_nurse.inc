@@ -87,8 +87,8 @@ EventScript_MoveCoach::
 	end
 
 Text_MoveCoachHello::
-	.string "MOVE COACH: I teach POKéMON to\n"
-	.string "remember what they have forgotten.$"
+	.string "MOVE COACH: I teach moves POKéMON\n"
+	.string "forgot, egg moves and tutor moves.$"
 
 Text_MoveCoachBye::
 	.string "MOVE COACH: Come back any time.$"

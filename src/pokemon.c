@@ -5842,6 +5842,8 @@ u32 CanMonLearnTMHM(struct Pokemon *mon, u8 tm)
     }
 }
 
+extern u8 TopazeGetEggMovesForSpecies(struct Pokemon *mon, u16 *eggMoves);
+extern u8 TopazeGetTutorMovesForSpecies(u16 species, u16 *moves);
 u8 GetMoveRelearnerMoves(struct Pokemon *mon, u16 *moves)
 {
     u16 learnedMoves[MAX_MON_MOVES];
@@ -5875,6 +5877,26 @@ u8 GetMoveRelearnerMoves(struct Pokemon *mon, u16 *moves)
                 if (k == numMoves)
                     moves[numMoves++] = gLevelUpLearnsets[species][i] & LEVEL_UP_MOVE_ID;
             }
+        }
+    }
+
+    // Topaze: egg moves and tutor moves are also offered by the Move Coach
+    {
+        u16 extra[16 + 40];
+        u8 nExtra = TopazeGetEggMovesForSpecies(mon, extra);
+        nExtra += TopazeGetTutorMovesForSpecies(species, extra + nExtra);
+        for (i = 0; i < nExtra && numMoves < 58; i++)
+        {
+            if (extra[i] == MOVE_NONE)
+                continue;
+            for (j = 0; j < MAX_MON_MOVES && learnedMoves[j] != extra[i]; j++)
+                ;
+            if (j != MAX_MON_MOVES)
+                continue;
+            for (k = 0; k < numMoves && moves[k] != extra[i]; k++)
+                ;
+            if (k == numMoves)
+                moves[numMoves++] = extra[i];
         }
     }
 
