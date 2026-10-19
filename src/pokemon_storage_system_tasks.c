@@ -1752,7 +1752,7 @@ static void Task_HandleBoxOptions(u8 taskId)
             SetPokeStorageTask(Task_JumpBox);
             break;
         case MENU_TEXT_SORT:
-            // Topaze: sort the current box by National Dex number (then by level, high first)
+            // Topaze: sort ALL boxes by National Dex number (then by level, high first)
             if (IsMonBeingMoved())
             {
                 PlaySE(SE_FAILURE);
@@ -1782,28 +1782,37 @@ static u32 TopazeBoxSortKey(struct BoxPokemon *mon)
     return ((u32)SpeciesToNationalPokedexNum(species) << 8) | (255 - GetLevelFromBoxMonExp(mon));
 }
 
-// Selection sort in place (one temporary BoxPokemon), then rebuild the 30 box icons.
+// Topaze: sorts ALL the boxes together (one flat list of 14x30 slots, by National Dex number then level),
+// so that e.g. the first mon of box 3 can end up in box 1. Keys are precomputed (selection sort on integers).
 static void TopazeSortCurrentBox(void)
 {
-    u8 box = StorageGetCurrentBox();
-    u8 i, j, best;
+    u32 *keys = Alloc(420 * sizeof(u32));
+    u16 i, j, best;
+    u32 k;
     struct BoxPokemon tmp;
 
-    for (i = 0; i < IN_BOX_COUNT - 1; i++)
+    if (keys == NULL)
+        return;
+
+    for (i = 0; i < 420; i++)
+        keys[i] = TopazeBoxSortKey(GetBoxedMonPtr(i / IN_BOX_COUNT, i % IN_BOX_COUNT));
+    for (i = 0; i < 419; i++)
     {
         best = i;
-        for (j = i + 1; j < IN_BOX_COUNT; j++)
+        for (j = i + 1; j < 420; j++)
         {
-            if (TopazeBoxSortKey(GetBoxedMonPtr(box, j)) < TopazeBoxSortKey(GetBoxedMonPtr(box, best)))
+            if (keys[j] < keys[best])
                 best = j;
         }
         if (best != i)
         {
-            tmp = *GetBoxedMonPtr(box, i);
-            *GetBoxedMonPtr(box, i) = *GetBoxedMonPtr(box, best);
-            *GetBoxedMonPtr(box, best) = tmp;
+            tmp = *GetBoxedMonPtr(i / IN_BOX_COUNT, i % IN_BOX_COUNT);
+            *GetBoxedMonPtr(i / IN_BOX_COUNT, i % IN_BOX_COUNT) = *GetBoxedMonPtr(best / IN_BOX_COUNT, best % IN_BOX_COUNT);
+            *GetBoxedMonPtr(best / IN_BOX_COUNT, best % IN_BOX_COUNT) = tmp;
+            k = keys[i]; keys[i] = keys[best]; keys[best] = k;
         }
     }
+    Free(keys);
     for (i = 0; i < IN_BOX_COUNT; i++)
     {
         DestroyBoxMonIconAtPosition(i);

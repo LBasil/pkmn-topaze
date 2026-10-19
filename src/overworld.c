@@ -1012,6 +1012,9 @@ static void SetDefaultFlashLevel(void)
 {
     if (!gMapHeader.cave)
         gSaveBlock1Ptr->flashLevel = 0;
+    else if ((gSaveBlock1Ptr->location.mapNum | (gSaveBlock1Ptr->location.mapGroup << 8)) == MAP_ROCK_TUNNEL_1F
+          || (gSaveBlock1Ptr->location.mapNum | (gSaveBlock1Ptr->location.mapGroup << 8)) == MAP_ROCK_TUNNEL_B1F)
+        gSaveBlock1Ptr->flashLevel = 0; // Topaze: Rock Tunnel is always lit (automatic Flash)
     else if (FlagGet(FLAG_SYS_FLASH_ACTIVE))
         gSaveBlock1Ptr->flashLevel = 0;
     else
