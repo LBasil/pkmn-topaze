@@ -268,6 +268,10 @@ VermilionCity_EventScript_ExitedTicketCheck::
 	end
 
 VermilionCity_EventScript_CheckTicket::
+	@ Topaze: the ticket is checked only once (FLAG_SHOWN_SS_TICKET); the ferry scene (3) is unchanged
+	goto_if_eq VAR_MAP_SCENE_VERMILION_CITY, 3, VermilionCity_EventScript_CheckTicketMain
+	goto_if_set FLAG_SHOWN_SS_TICKET, VermilionCity_EventScript_TicketAlreadyChecked
+VermilionCity_EventScript_CheckTicketMain::
 	textcolor NPC_TEXT_COLOR_MALE
 	applymovement LOCALID_VERMILION_FERRY_SAILOR, Common_Movement_WalkInPlaceFasterLeft
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
@@ -276,6 +280,12 @@ VermilionCity_EventScript_CheckTicket::
 	msgbox VermilionCity_Text_DoYouHaveATicket
 	goto_if_unset FLAG_GOT_SS_TICKET, VermilionCity_EventScript_DontHaveSSTicket
 	msgbox VermilionCity_Text_FlashedSSTicket
+	setflag FLAG_SHOWN_SS_TICKET
+	setvar VAR_VERMILION_CITY_TICKET_CHECK_TRIGGER, 1
+	releaseall
+	end
+
+VermilionCity_EventScript_TicketAlreadyChecked::
 	setvar VAR_VERMILION_CITY_TICKET_CHECK_TRIGGER, 1
 	releaseall
 	end

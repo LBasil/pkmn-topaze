@@ -270,7 +270,7 @@ static void TopazeTintGrassSprite(struct Sprite *sprite, s16 x, s16 y)
 {
     u16 id = MapGridGetMetatileIdAt(x, y);
     const u16 *entries;
-    u8 bgPal, i, j;
+    u8 bgPal, i, j, n, used[15];
     u16 src[16], bg[16], base;
 
     entries = TopazeFogMetatile(id);
@@ -287,28 +287,40 @@ static void TopazeTintGrassSprite(struct Sprite *sprite, s16 x, s16 y)
         src[i] = gPlttBufferUnfaded[base + i];
         bg[i] = gPlttBufferUnfaded[bgPal * 16 + i];
     }
+    // only the BG colours the ground tiles really use (bottom layer): the rest of the row may be red/pink/etc.
+    {
+        u16 mask = 0;
+        u8 q, b;
+        for (q = 0; q < 4; q++)
+        {
+            const u8 *px = (const u8 *)(BG_VRAM + (entries[q] & 0x3FF) * 32);
+            for (b = 0; b < 32; b++)
+                mask |= (1 << (px[b] & 0xF)) | (1 << (px[b] >> 4));
+        }
+        mask &= ~1;
+        n = 0;
+        for (i = 1; i < 16; i++)
+            if (mask & (1 << i))
+                used[n++] = i;
+        if (n == 0)
+            return;
+        // sort used indices by luma
+        for (i = 1; i < n; i++)
+            for (j = i; j > 0 && TopazeLuma(bg[used[j]]) < TopazeLuma(bg[used[j - 1]]); j--)
+            {
+                u8 t = used[j]; used[j] = used[j - 1]; used[j - 1] = t;
+            }
+    }
     for (i = 1; i < 16; i++)
     {
-        u8 rank = 0, n = 0;
+        u8 rank = 0;
         u16 target;
-        // a sprite colour of rank r (among the 15) -> BG colour of the same rank
         for (j = 1; j < 16; j++)
             if (TopazeLuma(src[j]) < TopazeLuma(src[i]) || (TopazeLuma(src[j]) == TopazeLuma(src[i]) && j < i))
                 rank++;
-        target = 0;
-        for (j = 1; j < 16; j++)
-        {
-            u8 k, r2 = 0;
-            for (k = 1; k < 16; k++)
-                if (TopazeLuma(bg[k]) < TopazeLuma(bg[j]) || (TopazeLuma(bg[k]) == TopazeLuma(bg[j]) && k < j))
-                    r2++;
-            if (r2 == rank) { target = bg[j]; n = 1; break; }
-        }
-        if (n)
-        {
-            gPlttBufferUnfaded[base + i] = target;
-            gPlttBufferFaded[base + i] = target;
-        }
+        target = bg[used[(rank * n) / 15]];
+        gPlttBufferUnfaded[base + i] = target;
+        gPlttBufferFaded[base + i] = target;
     }
 }
 

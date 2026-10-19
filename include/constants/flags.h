@@ -1525,6 +1525,43 @@
 #define FLAG_0x8FE                                                  (SYS_FLAGS + 0xFE)
 #define FLAG_0x8FF                                                  (SYS_FLAGS + 0xFF)
 
+// Topaze: one permanent flag per cut tree (a tree cut once stays cut for good)
+#define FLAG_CUT_TREE_01 0x4CF
+#define FLAG_CUT_TREE_02 0x4D0
+#define FLAG_CUT_TREE_03 0x4D1
+#define FLAG_CUT_TREE_04 0x4D2
+#define FLAG_CUT_TREE_05 0x4D3
+#define FLAG_CUT_TREE_06 0x4D4
+#define FLAG_CUT_TREE_07 0x4D5
+#define FLAG_CUT_TREE_08 0x4D6
+#define FLAG_CUT_TREE_09 0x4D7
+#define FLAG_CUT_TREE_10 0x4D8
+#define FLAG_CUT_TREE_11 0x4D9
+#define FLAG_CUT_TREE_12 0x4DA
+#define FLAG_CUT_TREE_13 0x4DB
+#define FLAG_CUT_TREE_14 0x4DC
+#define FLAG_CUT_TREE_15 0x4DD
+#define FLAG_CUT_TREE_16 0x4DE
+#define FLAG_CUT_TREE_17 0x4DF
+#define FLAG_CUT_TREE_18 0x4E0
+#define FLAG_CUT_TREE_19 0x4E1
+#define FLAG_CUT_TREE_20 0x4E2
+#define FLAG_CUT_TREE_21 0x4E3
+#define FLAG_CUT_TREE_22 0x4E4
+#define FLAG_CUT_TREE_23 0x4E5
+#define FLAG_CUT_TREE_24 0x4E6
+#define FLAG_CUT_TREE_25 0x4E7
+#define FLAG_CUT_TREE_26 0x4E8
+#define FLAG_CUT_TREE_27 0x4E9
+#define FLAG_CUT_TREE_28 0x4EA
+#define FLAG_CUT_TREE_29 0x4EB
+#define FLAG_CUT_TREE_30 0x4EC
+#define FLAG_CUT_TREE_31 0x4ED
+#define FLAG_CUT_TREE_32 0x4EE
+#define FLAG_CUT_TREE_33 0x4EF
+
+#define FLAG_SHOWN_SS_TICKET 0x4F0 // Topaze: the S.S. TICKET was already shown at the Apatia pier (checked only once)
+
 #define FLAGS_COUNT (FLAG_0x8FF + 1)
 
 // Special Flags (Stored in EWRAM (sSpecialFlags, not in the SaveBlock)
