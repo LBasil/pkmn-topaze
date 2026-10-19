@@ -46,3 +46,15 @@ SSAnne_2F_Corridor_Text_MajorBob::
     .string "me and HERA, trainee.\p"
     .string "Small fry slip by, so the rest is\n"
     .string "up to you. Move out, at the double!$"
+
+SSAnne_2F_Corridor_Text_GruntA::
+    .string "GRUNT: Out of my way, kid!\n"
+    .string "Those two won't let us reach the\l"
+    .string "CAPTAIN's office!$"
+
+SSAnne_2F_Corridor_Text_GruntB::
+    .string "GRUNT: Tch! That MAJOR BOB is a\n"
+    .string "wall, and his MACHOKE is worse.$"
+
+SSAnne_2F_Corridor_Text_BobMachoke::
+    .string "MACHOKE: Gwoh! Goh!$"

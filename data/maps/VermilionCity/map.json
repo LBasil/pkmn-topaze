@@ -199,7 +199,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_POLICEMAN",
       "x": 47,
-      "y": 21,
+      "y": 20,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,

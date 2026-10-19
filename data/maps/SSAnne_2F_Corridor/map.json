@@ -71,6 +71,48 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SSAnne_2F_Corridor_EventScript_MajorBob",
       "flag": "FLAG_TEMP_12"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
+      "x": 23,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SSAnne_2F_Corridor_EventScript_GruntA",
+      "flag": "FLAG_TEMP_11"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
+      "x": 23,
+      "y": 13,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SSAnne_2F_Corridor_EventScript_GruntB",
+      "flag": "FLAG_TEMP_11"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_MACHOKE",
+      "x": 21,
+      "y": 13,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "SSAnne_2F_Corridor_EventScript_BobMachoke",
+      "flag": "FLAG_TEMP_11"
     }
   ],
   "warp_events": [

@@ -16,8 +16,8 @@ SSAnne_CaptainsOffice_Text_ThankYouHaveHMForCut::
     .string "APATITE HERA lent me for the gala.\p"
     .string "I hid it in my safe, and you\n"
     .string "arrived just in time! Splendid!\p"
-    .string "They'll flee by speedboat to the\n"
-    .string "SEVII ISLANDS, I bet.\p"
+    .string "They'll flee by speedboat, far\n"
+    .string "across the sea, I bet.\p"
     .string "Here, a HIDDEN MACHINE as thanks.\n"
     .string "Teach CUT to your POKéMON, and\l"
     .string "chop down small trees!\p"
@@ -70,7 +70,7 @@ SSAnne_CaptainsOffice_Text_VesperDefeat::
 
 SSAnne_CaptainsOffice_Text_VesperPostBattle::
     .string "VESPER: The boss was right to\n"
-    .string "watch you. We have the chart of\l"
-    .string "the SEVII ISLANDS anyway.\p"
+    .string "watch you. We have the sea chart\l"
+    .string "anyway.\p"
     .string "Next time, the gems are ours.\n"
     .string "Farewell!$"

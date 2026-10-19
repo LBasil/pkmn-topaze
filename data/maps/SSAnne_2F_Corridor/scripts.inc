@@ -19,6 +19,23 @@ SSAnne_2F_Corridor_EventScript_MajorBob::
 	msgbox SSAnne_2F_Corridor_Text_MajorBob, MSGBOX_NPC
 	end
 
+SSAnne_2F_Corridor_EventScript_GruntA::
+	msgbox SSAnne_2F_Corridor_Text_GruntA, MSGBOX_NPC
+	end
+
+SSAnne_2F_Corridor_EventScript_GruntB::
+	msgbox SSAnne_2F_Corridor_Text_GruntB, MSGBOX_NPC
+	end
+
+SSAnne_2F_Corridor_EventScript_BobMachoke::
+	lock
+	faceplayer
+	playmoncry SPECIES_MACHOKE, CRY_MODE_NORMAL
+	msgbox SSAnne_2F_Corridor_Text_BobMachoke
+	waitmoncry
+	release
+	end
+
 SSAnne_2F_Corridor_EventScript_RivalTriggerLeft::
 	lockall
 	setvar VAR_TEMP_1, 0

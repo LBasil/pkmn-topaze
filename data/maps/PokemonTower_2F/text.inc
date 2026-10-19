@@ -20,14 +20,12 @@ PokemonTower_2F_Text_RivalVictory::
     .string "もっと　ちゃんと　そだてて　やれよ$"
 
 PokemonTower_2F_Text_RivalPostBattle::
-    .string "How's your POKéDEX coming?\n"
-    .string "I just caught a CUBONE!\p"
-    .string "I can't find the bigger MAROWAK.\n"
-    .string "Where could they be?\p"
-    .string "I bet there aren't any left!\p"
-    .string "Well, I better get going.\n"
-    .string "I've got a lot to accomplish,\l"
-    .string "unlike you.\p"
+    .string "{RIVAL}: I lost them!\p"
+    .string "I tracked those guys in black to\n"
+    .string "this tower, and then... nothing.\p"
+    .string "Not a trace. They could be anywhere,\n"
+    .string "so watch your back up there.\p"
+    .string "I'm going to search the town again.\n"
     .string "Smell ya later!$"
 
 PokemonTower_2F_Text_SilphScopeCouldUnmaskGhosts::
