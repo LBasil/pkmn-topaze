@@ -461,3 +461,4 @@ gSpecials::
 	def_special TopazeRepelNext
 	def_special TopazeRepelUse
 gSpecialsEnd::
+	def_special TopazeRadarEncounter

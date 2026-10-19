@@ -35,6 +35,10 @@ struct WildEncounterData
 
 static EWRAM_DATA struct WildEncounterData sWildEncounterData = {};
 static EWRAM_DATA bool8 sWildEncountersDisabled = FALSE;
+// Topaze: POKE RADAR (zero-initialised on purpose). Cooldown in steps, chain of identical species.
+static u8 sRadarCooldown;
+static u8 sRadarChain;
+static u16 sRadarSpecies;
 
 static bool8 UnlockedTanobyOrAreNotInTanoby(void);
 static u32 GenerateUnownPersonalityByLetter(u8 letter);
@@ -605,6 +609,9 @@ bool8 UpdateRepelCounter(void)
     if (gQuestLogState == QL_STATE_PLAYBACK)
         return FALSE;
 
+    if (sRadarCooldown != 0)
+        sRadarCooldown--;
+
     steps = VarGet(VAR_REPEL_STEP_COUNT);
 
     if (steps != 0)
@@ -803,4 +810,72 @@ static void AddToWildEncounterRateBuff(u8 encounterRate)
         sWildEncounterData.encounterRateBuff += encounterRate;
     else
         sWildEncounterData.encounterRateBuff = 0;
+}
+
+// Topaze: POKE RADAR. VAR_RESULT: 0 = not in tall grass, 1 = battery recharging, 2 = battle started.
+void TopazeRadarEncounter(void)
+{
+    s16 x, y;
+    u16 headerId;
+    const struct WildPokemonInfo * info;
+    u8 slot, slot2, i;
+    u16 species;
+    u8 level;
+
+    gSpecialVar_Result = 0;
+    PlayerGetDestCoords(&x, &y);
+    headerId = GetCurrentMapWildMonHeaderId();
+    if (headerId == HEADER_NONE || MapGridGetMetatileAttributeAt(x, y, METATILE_ATTRIBUTE_ENCOUNTER_TYPE) != TILE_ENCOUNTER_LAND)
+        return;
+    info = gWildMonHeaders[headerId].landMonsInfo;
+    if (info == NULL)
+        return;
+    if (sRadarCooldown != 0)
+    {
+        gSpecialVar_Result = 1;
+        return;
+    }
+    // favour the rarer slots: roll twice and keep the rarer one
+    slot = ChooseWildMonIndex_Land();
+    slot2 = ChooseWildMonIndex_Land();
+    if (slot2 > slot)
+        slot = slot2;
+    // continue the chain half of the time when the species is still on the table
+    if (sRadarSpecies != SPECIES_NONE && (Random() & 1))
+    {
+        for (i = 0; i < LAND_WILD_COUNT; i++)
+        {
+            if (info->wildPokemon[i].species == sRadarSpecies)
+            {
+                slot = i;
+                break;
+            }
+        }
+    }
+    species = info->wildPokemon[slot].species;
+    level = ChooseWildMonLevel(&info->wildPokemon[slot]);
+    if (species == sRadarSpecies)
+    {
+        if (sRadarChain < 40)
+            sRadarChain++;
+    }
+    else
+    {
+        sRadarChain = 0;
+        sRadarSpecies = species;
+    }
+    GenerateWildMon(species, level, slot);
+    if (species != SPECIES_UNOWN && Random() % (8192 - 190 * sRadarChain) == 0)
+    {
+        // shiny: build a personality whose shiny value is < 8
+        u32 otId = gSaveBlock2Ptr->playerTrainerId[0] | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
+                 | (gSaveBlock2Ptr->playerTrainerId[2] << 16) | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
+        u32 lo = Random() & 0xFFFF;
+        u32 hi = (lo ^ (otId & 0xFFFF) ^ (otId >> 16) ^ (Random() & 7)) & 0xFFFF;
+        ZeroEnemyPartyMons();
+        CreateMon(&gEnemyParty[0], species, level, USE_RANDOM_IVS, TRUE, (hi << 16) | lo, FALSE, 0);
+    }
+    sRadarCooldown = 25;
+    gSpecialVar_Result = 2;
+    StartWildBattle();
 }

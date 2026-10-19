@@ -27,6 +27,7 @@
 #include "quest_log.h"
 #include "region_map.h"
 #include "script.h"
+#include "event_scripts.h"
 #include "strings.h"
 #include "task.h"
 #include "teachy_tv.h"
@@ -332,6 +333,18 @@ void ItemUseOutOfBattle_Itemfinder(u8 taskId)
 {
     IncrementGameStat(GAME_STAT_USED_ITEMFINDER);
     sItemUseOnFieldCB = ItemUseOnFieldCB_Itemfinder;
+    SetUpItemUseOnFieldCallback(taskId);
+}
+
+static void ItemUseOnFieldCB_PokeRadar(u8 taskId)
+{
+    ScriptContext_SetupScript(EventScript_PokeRadar);
+    DestroyTask(taskId);
+}
+
+void FieldUseFunc_PokeRadar(u8 taskId)
+{
+    sItemUseOnFieldCB = ItemUseOnFieldCB_PokeRadar;
     SetUpItemUseOnFieldCallback(taskId);
 }
 

@@ -21,11 +21,23 @@ Route2_EastBuilding_EventScript_Aide::
 	giveitem_msg Route2_EastBuilding_Text_ReceivedHM05FromAide, ITEM_HM05
 	setflag FLAG_GOT_HM05
 	msgbox Route2_EastBuilding_Text_ExplainHM05
-	release
+	goto Route2_EastBuilding_EventScript_GivePokeRadar
 	end
 
 Route2_EastBuilding_EventScript_AlreadyGotHM05::
 	msgbox Route2_EastBuilding_Text_ExplainHM05
+	goto Route2_EastBuilding_EventScript_GivePokeRadar
+	end
+
+Route2_EastBuilding_EventScript_GivePokeRadar::
+	checkitem ITEM_10B
+	goto_if_eq VAR_RESULT, TRUE, Route2_EastBuilding_EventScript_RadarDone
+	checkitemspace ITEM_10B
+	goto_if_eq VAR_RESULT, FALSE, Aide_EventScript_NoRoomForItem
+	msgbox Route2_EastBuilding_Text_RadarIntro
+	giveitem_msg Route2_EastBuilding_Text_ReceivedRadar, ITEM_10B
+	msgbox Route2_EastBuilding_Text_RadarExplain
+Route2_EastBuilding_EventScript_RadarDone::
 	release
 	end
 
@@ -37,3 +49,17 @@ Route2_EastBuilding_EventScript_GetAideRequestInfo::
 Route2_EastBuilding_EventScript_Rocker::
 	msgbox Route2_EastBuilding_Text_CanGetThroughRockTunnel, MSGBOX_NPC
 	end
+
+Route2_EastBuilding_Text_RadarIntro:
+	.string "Oh, and take this too! A prototype\n"
+	.string "I built for tracking POKéMON.$"
+
+Route2_EastBuilding_Text_ReceivedRadar:
+	.string "{PLAYER} received a POKé RADAR!$"
+
+Route2_EastBuilding_Text_RadarExplain:
+	.string "Use it in tall grass: it flushes out\n"
+	.string "rarer POKéMON. Keep meeting the same\n"
+	.string "species to chain it and a shiny\n"
+	.string "becomes far more likely!\n"
+	.string "It needs about 25 steps to recharge.$"

@@ -285,3 +285,31 @@ EventScript_FailSweetScent::
 
 Text_LooksLikeNothingHere::
 	.string "Looks like there's nothing here…$"
+
+EventScript_PokeRadar::
+	lockall
+	special TopazeRadarEncounter
+	switch VAR_RESULT
+	case 0, EventScript_PokeRadarNoGrass
+	case 1, EventScript_PokeRadarRecharging
+	waitstate
+	releaseall
+	end
+
+EventScript_PokeRadarNoGrass::
+	msgbox Text_PokeRadarNoGrass, MSGBOX_SIGN
+	releaseall
+	end
+
+EventScript_PokeRadarRecharging::
+	msgbox Text_PokeRadarRecharging, MSGBOX_SIGN
+	releaseall
+	end
+
+Text_PokeRadarNoGrass::
+	.string "The POKé RADAR only works\n"
+	.string "when you stand in tall grass.$"
+
+Text_PokeRadarRecharging::
+	.string "The POKé RADAR is recharging.\n"
+	.string "Walk a few more steps.$"
