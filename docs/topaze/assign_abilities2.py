@@ -1,0 +1,126 @@
+#!/usr/bin/env python3
+"""Attribue les talents Gen 5-9 aux especes Gen 1-3 (habiletes cachees canoniques + quelques libertes).
+Usage : python3 docs/topaze/assign_abilities2.py <depot>. Idempotent. Format : ESPECE: (slot1 ou None, slot2 ou None)."""
+import re, sys
+repo = sys.argv[1]
+P = repo + '/src/data/pokemon/species_info.h'
+def fam(names, a, b): return {n: (a, b) for n in names.split()}
+M = {}
+for g in [
+ fam('BULBASAUR IVYSAUR VENUSAUR', None, 'CHLOROPHYLL'),
+ fam('CHARMANDER CHARMELEON CHARIZARD', None, 'SOLAR_POWER'),
+ fam('SQUIRTLE WARTORTLE', None, 'RAIN_DISH'), fam('BLASTOISE', None, 'MEGA_LAUNCHER'),
+ fam('CHIKORITA BAYLEEF MEGANIUM', None, 'LEAF_GUARD'),
+ fam('CYNDAQUIL QUILAVA TYPHLOSION', None, 'FLASH_FIRE'),
+ fam('TOTODILE CROCONAW FERALIGATR', None, 'SHEER_FORCE'),
+ fam('TREECKO GROVYLE SCEPTILE', None, 'UNBURDEN'),
+ fam('TORCHIC COMBUSKEN BLAZIKEN', None, 'SPEED_BOOST'),
+ fam('MUDKIP MARSHTOMP SWAMPERT', None, 'DAMP'),
+ fam('PIDGEY PIDGEOTTO', None, 'BIG_PECKS'), fam('PIDGEOT', None, 'AERILATE'),
+ fam('SPEAROW', None, 'SNIPER'), fam('FEAROW', None, 'GALE_WINGS'),
+ fam('PIKACHU RAICHU PICHU', None, 'LIGHTNING_ROD'),
+ fam('SANDSHREW SANDSLASH', None, 'SAND_RUSH'),
+ fam('NIDORAN_F NIDORINA NIDOQUEEN NIDORAN_M NIDORINO NIDOKING', None, 'SHEER_FORCE'),
+ fam('JIGGLYPUFF WIGGLYTUFF', None, 'COMPETITIVE'),
+ fam('DIGLETT DUGTRIO', 'ARENA_TRAP', 'SAND_FORCE'),
+ fam('GOLDUCK', None, 'SWIFT_SWIM'),
+ fam('PRIMEAPE', None, 'DEFIANT'),
+ fam('GROWLITHE ARCANINE', None, 'JUSTIFIED'),
+ fam('POLIWAG POLIWHIRL POLIWRATH', None, 'SWIFT_SWIM'),
+ fam('SLOWPOKE SLOWBRO SLOWKING', 'OBLIVIOUS', 'REGENERATOR'),
+ fam('FARFETCHD', None, 'INTREPID_SWORD'),
+ fam('GRIMER MUK', 'STENCH', 'POISON_TOUCH'),
+ fam('ONIX', None, 'WEAK_ARMOR'), fam('STEELIX', 'STURDY', 'SHEER_FORCE'),
+ fam('KRABBY KINGLER', None, 'SHEER_FORCE'),
+ fam('ELECTRODE', None, 'GALVANIZE'),
+ fam('RHYHORN RHYDON', None, 'ROCKY_PAYLOAD'),
+ fam('TANGELA', None, 'REGENERATOR'),
+ fam('STARYU STARMIE', 'NATURAL_CURE', 'ANALYTIC'),
+ fam('JYNX', None, 'DRY_SKIN'),
+ fam('ELEKID ELECTABUZZ', None, 'TRANSISTOR'),
+ fam('MAGMAR MAGBY', None, 'FLARE_BOOST'),
+ fam('PINSIR', None, 'SHARPNESS'),
+ fam('TAUROS', None, 'SHEER_FORCE'),
+ fam('MAGIKARP', None, 'RATTLED'), fam('GYARADOS', None, 'MOXIE'),
+ fam('LAPRAS', None, 'WATER_BUBBLE'),
+ fam('JOLTEON', None, 'QUICK_FEET'), fam('FLAREON', None, 'GUTS'),
+ fam('ESPEON', None, 'MAGIC_BOUNCE'), fam('UMBREON', None, 'INNER_FOCUS'),
+ fam('OMANYTE OMASTAR KABUTO', None, 'WEAK_ARMOR'), fam('KABUTOPS', None, 'SHARPNESS'),
+ fam('ARTICUNO', None, 'SNOW_CLOAK'), fam('ZAPDOS', None, 'STATIC'), fam('MOLTRES', None, 'FLAME_BODY'),
+ fam('DRATINI DRAGONAIR', None, 'MARVEL_SCALE'), fam('DRAGONITE', None, 'MULTISCALE'),
+ fam('SENTRET FURRET', None, 'FUR_COAT'),
+ fam('HOOTHOOT NOCTOWL', None, 'TINTED_LENS'),
+ fam('LEDYBA', None, 'RATTLED'), fam('LEDIAN', None, 'IRON_FIST'),
+ fam('CHINCHOU LANTURN', None, 'WATER_ABSORB'),
+ fam('MAREEP FLAAFFY', None, 'FLUFFY'),
+ fam('NATU XATU', None, 'MAGIC_BOUNCE'),
+ fam('POLITOED', None, 'DRIZZLE'),
+ fam('HOPPIP SKIPLOOM JUMPLUFF', None, 'LEAF_GUARD'),
+ fam('MURKROW', None, 'PRANKSTER'),
+ fam('GIRAFARIG', None, 'SAP_SIPPER'),
+ fam('PINECO FORRETRESS', None, 'OVERCOAT'),
+ fam('GRANBULL', None, 'QUICK_FEET'),
+ fam('SHUCKLE', None, 'CONTRARY'),
+ fam('SNEASEL', None, 'TOUGH_CLAWS'),
+ fam('CORSOLA', None, 'REGENERATOR'),
+ fam('REMORAID', None, 'SNIPER'), fam('OCTILLERY', None, 'MOODY'),
+ fam('PHANPY DONPHAN', 'STURDY', 'EARTH_EATER'),
+ fam('STANTLER MILTANK', None, 'SAP_SIPPER'),
+ fam('SMEARGLE', None, 'LIBERO'),
+ fam('RAIKOU ENTEI SUICUNE', None, 'INNER_FOCUS'),
+ fam('LUGIA', None, 'MULTISCALE'), fam('HO_OH', None, 'REGENERATOR'),
+ fam('POOCHYENA', None, 'QUICK_FEET'), fam('MIGHTYENA', None, 'MOXIE'),
+ fam('LINOONE', None, 'QUICK_FEET'),
+ fam('TAILLOW SWELLOW', None, 'SCRAPPY'),
+ fam('WINGULL', None, 'HYDRATION'), fam('PELIPPER', None, 'DRIZZLE'),
+ fam('KECLEON', None, 'PROTEAN'),
+ fam('TORKOAL', 'DROUGHT', 'STEAM_ENGINE'),
+ fam('BARBOACH WHISCASH', None, 'HYDRATION'),
+ fam('LUVDISC', None, 'HYDRATION'),
+ fam('CRAWDAUNT CORPHISH', None, 'ADAPTABILITY'),
+ fam('FEEBAS', None, 'ADAPTABILITY'), fam('MILOTIC', None, 'COMPETITIVE'),
+ fam('CARVANHA SHARPEDO', None, 'SPEED_BOOST'),
+ fam('TRAPINCH', None, 'SHEER_FORCE'), fam('VIBRAVA FLYGON', 'LEVITATE', 'DRAGONS_MAW'),
+ fam('CACNEA CACTURNE', None, 'IRON_BARBS'),
+ fam('PLUSLE', None, 'LIGHTNING_ROD'), fam('MINUN', None, 'VOLT_ABSORB'),
+ fam('MAWILE', 'INTIMIDATE', 'SHEER_FORCE'),
+ fam('SWABLU ALTARIA', None, 'CLOUD_NINE'),
+ fam('TROPIUS', None, 'SOLAR_POWER'),
+ fam('WHISMUR LOUDRED', None, 'RATTLED'), fam('EXPLOUD', None, 'SCRAPPY'),
+ fam('CLAMPERL', None, 'WATER_COMPACTION'),
+ fam('GOREBYSS', None, 'HYDRATION'), fam('HUNTAIL', None, 'WATER_VEIL'),
+ fam('ABSOL', None, 'JUSTIFIED'),
+ fam('BANETTE', None, 'MUMMY'),
+ fam('ZANGOOSE', None, 'TOXIC_BOOST'),
+ fam('VOLBEAT', None, 'PRANKSTER'), fam('ILLUMISE', None, 'TINTED_LENS'),
+ fam('LILEEP CRADILY', None, 'STORM_DRAIN'),
+ fam('ARMALDO ANORITH', None, 'SWIFT_SWIM'),
+ fam('BAGON SHELGON', None, 'SHEER_FORCE'), fam('SALAMENCE', None, 'MOXIE'),
+ fam('BELDUM METANG METAGROSS', None, 'FULL_METAL_BODY'),
+ fam('REGISTEEL', None, 'DAUNTLESS_SHIELD'),
+ fam('SABLEYE', None, 'PRANKSTER'),
+ fam('GARDEVOIR', None, 'PIXILATE'),
+ fam('GLALIE', None, 'REFRIGERATE'),
+ fam('MAGCARGO SLUGMA', None, 'WELL_BAKED_BODY'),
+ fam('SWALOT GULPIN', None, 'GOOEY'),
+ fam('DUNSPARCE', None, 'STAMINA'),
+ fam('PILOSWINE SWINUB', None, 'SLUSH_RUSH'),
+ fam('DEWGONG', None, 'ICE_SCALES'),
+ fam('ARON LAIRON AGGRON', 'STURDY', 'STEELWORKER'),
+ fam('LUNATONE SOLROCK', None, 'PRISM_ARMOR'),
+ fam('HOUNDOUR HOUNDOOM', 'STRONG_JAW', 'FLASH_FIRE'),
+]:
+    M.update(g)
+s = open(P).read()
+miss = []
+changed = 0
+for n, (a, b) in M.items():
+    pat = re.compile(r'(\[SPECIES_%s\] =\s*\{.*?\.abilities = \{)(ABILITY_[A-Z_0-9]+), (ABILITY_[A-Z_0-9]+)(\})' % n, re.S)
+    m = pat.search(s)
+    if not m: miss.append(n); continue
+    a1 = 'ABILITY_' + a if a else m.group(2)
+    a2 = 'ABILITY_' + b if b else m.group(3)
+    if (a1, a2) != (m.group(2), m.group(3)): changed += 1
+    s = s[:m.start()] + m.group(1) + '%s, %s' % (a1, a2) + m.group(4) + s[m.end():]
+open(P, 'w').write(s)
+print('modifies', changed, 'manquants', miss)

@@ -14,13 +14,13 @@ def load(repo):
     sp = {}
     for n, b in re.findall(r'\[SPECIES_(\w+)\]\s*=\s*\{(.*?)\n    \},', R('src/data/pokemon/species_info.h'), re.S):
         t = re.findall(r'\.types = \{TYPE_(\w+), TYPE_(\w+)\}', b)
-        if not t: continue
+        if not t or n == 'NONE': continue
         v = lambda k: int(re.search(r'\.%s = (\d+)' % k, b).group(1))
         sp[n] = dict(types=list(dict.fromkeys(t[0])), hp=v('baseHP'), atk=v('baseAttack'), df=v('baseDefense'), spa=v('baseSpAttack'), spd=v('baseSpDefense'), spe=v('baseSpeed'))
         sp[n]['bst'] = sum(sp[n][k] for k in ('hp','atk','df','spa','spd','spe'))
     # evolutions
     pre = {}; nxt = {}
-    for a, rest in re.findall(r'\[SPECIES_(\w+)\]\s*=\s*\{(.*?)\},?\n', R('src/data/pokemon/evolution.h')):
+    for a, rest in re.findall(r'\[SPECIES_(\w+)\]\s*=\s*\{(\{.*?\})\},?\n', R('src/data/pokemon/evolution.h'), re.S):
         for b in re.findall(r'SPECIES_(\w+)\}', rest): pre[b] = a; nxt.setdefault(a, []).append(b)
     for n in sp:
         d = 0; x = n
@@ -29,7 +29,7 @@ def load(repo):
     ptr = dict(re.findall(r'\[SPECIES_(\w+)\] = (\w+),', R('src/data/pokemon/level_up_learnset_pointers.h')))
     L = R('src/data/pokemon/level_up_learnsets.h')
     lv = {}
-    for var, body in re.findall(r'static const u16 (\w+)\[\] = \{\n(.*?)LEVEL_UP_END', L, re.S):
+    for var, body in re.findall(r'static const u(?:16|32) (\w+)\[\] = \{\n(.*?)LEVEL_UP_END', L, re.S):
         lv[var] = [(int(a), m) for a, m in re.findall(r'LEVEL_UP_MOVE\((\d+), MOVE_(\w+)\)', body)]
     # CT/CS
     tm = [m for m in re.findall(r'MOVE_(\w+),', R('src/data/party_menu.h').split('sTMHMMoves[] =')[1].split('};')[0])]

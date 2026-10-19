@@ -113,7 +113,7 @@ for n in list(added):
 # ---------- ecriture (tri par niveau, stable)
 for var, e in ents.items():
     e.sort(key=lambda x: x[0])
-    m = re.search(r'(static const u16 %s\[\] = \{\n)(.*?)(    LEVEL_UP_END)' % var, L, re.S)
+    m = re.search(r'(static const u(?:16|32) %s\[\] = \{\n)(.*?)(    LEVEL_UP_END)' % var, L, re.S)
     if not m: continue
     body = ''.join('    LEVEL_UP_MOVE(%d, MOVE_%s),\n' % (l, mm) for l, mm in e)
     L = L[:m.start(2)] + body + L[m.end(2):]
