@@ -306,11 +306,17 @@
 #define FLAG_0x11E               0x11E
 #define FLAG_0x11F               0x11F
 #define FLAG_0x120               0x120
+#define FLAG_HIDE_DIGLETTS_CAVE_NUGGET FLAG_0x120 // Topaze: Diglett's Cave item
 #define FLAG_0x121               0x121
+#define FLAG_HIDE_DIGLETTS_CAVE_PP_UP FLAG_0x121 // Topaze: Diglett's Cave item
 #define FLAG_0x122               0x122
+#define FLAG_HIDE_DIGLETTS_CAVE_MAX_REVIVE FLAG_0x122 // Topaze: Diglett's Cave item
 #define FLAG_0x123               0x123
+#define FLAG_HIDE_DIGLETTS_CAVE_MAX_ETHER FLAG_0x123 // Topaze: Diglett's Cave item
 #define FLAG_0x124               0x124
+#define FLAG_HIDE_DIGLETTS_CAVE_ELIXIR FLAG_0x124 // Topaze: Diglett's Cave item
 #define FLAG_0x125               0x125
+#define FLAG_HIDE_DIGLETTS_CAVE_ULTRA_BALL FLAG_0x125 // Topaze: Diglett's Cave item
 #define FLAG_0x126               0x126
 #define FLAG_0x127               0x127
 #define FLAG_0x128               0x128
