@@ -143,12 +143,16 @@ struct LearnMoveGfxResources
     u8 selectedMoveSlot;
     u8 unk_262;
     u8 listMenuTaskId;
+    u8 padAlign[3]; // Topaze: keeps the tilemap buffer 4-byte aligned (arrays enlarged to 60 entries)
     u8 bg1TilemapBuffer[BG_SCREEN_SIZE]; // 264
     u8 textColor[3]; // A64
     u8 selectedIndex;
     u16 listMenuScrollPos;
     u16 listMenuScrollRow;
 };
+
+// compile error if the tilemap buffer is not 4-byte aligned (DMA copies it as words)
+static char sLearnMoveAlignCheck[(offsetof(struct LearnMoveGfxResources, bg1TilemapBuffer) % 4 == 0) ? 1 : -1];
 
 static EWRAM_DATA struct LearnMoveGfxResources * sMoveRelearner = NULL;
 
