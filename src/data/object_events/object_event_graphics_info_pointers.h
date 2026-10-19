@@ -104,6 +104,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GymSign;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sign;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TrainerTips;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Clipboard;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TopazeBlip;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Meteorite;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_LaprasDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Seagallop;
@@ -304,5 +305,6 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_DEOXYS_D]                 = &gObjectEventGraphicsInfo_DeoxysD,
     [OBJ_EVENT_GFX_DEOXYS_A]                 = &gObjectEventGraphicsInfo_DeoxysA,
     [OBJ_EVENT_GFX_DEOXYS_N]                 = &gObjectEventGraphicsInfo_DeoxysN,
+    [OBJ_EVENT_GFX_TOPAZE_BLIP]              = &gObjectEventGraphicsInfo_TopazeBlip,
     [OBJ_EVENT_GFX_SS_ANNE]                  = &gObjectEventGraphicsInfo_SSAnne,
 };

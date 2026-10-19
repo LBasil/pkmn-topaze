@@ -460,5 +460,7 @@ gSpecials::
 	def_special TopazeInstantHeal
 	def_special TopazeRepelNext
 	def_special TopazeRepelUse
-	def_special TopazeRadarEncounter
+	def_special TopazeRadarBuildList
+	def_special TopazeRadarStart
+	def_special TopazeRadarBattle
 gSpecialsEnd::

@@ -24,6 +24,8 @@
 #include "event_object_movement.h"
 #include "event_object_lock.h"
 #include "script.h"
+#include "item.h"
+#include "constants/items.h"
 #include "quest_log.h"
 #include "new_game.h"
 #include "event_scripts.h"
@@ -49,6 +51,7 @@ enum StartMenuOption
     STARTMENU_EXIT,
     STARTMENU_RETIRE,
     STARTMENU_PLAYER2,
+    STARTMENU_RADAR,
     MAX_STARTMENU_ITEMS
 };
 
@@ -86,6 +89,7 @@ static bool8 StartMenuPlayerCallback(void);
 static bool8 StartMenuSaveCallback(void);
 static bool8 StartMenuOptionCallback(void);
 static bool8 StartMenuExitCallback(void);
+static bool8 StartMenuRadarCallback(void);
 static bool8 StartMenuSafariZoneRetireCallback(void);
 static bool8 StartMenuLinkPlayerCallback(void);
 static bool8 StartCB_Save1(void);
@@ -122,7 +126,8 @@ static const struct MenuAction sStartMenuActionTable[] = {
     [STARTMENU_OPTION]  = { gText_MenuOption,  {.u8_void = StartMenuOptionCallback} },
     [STARTMENU_EXIT]    = { gText_MenuExit,    {.u8_void = StartMenuExitCallback} },
     [STARTMENU_RETIRE]  = { gText_MenuRetire,  {.u8_void = StartMenuSafariZoneRetireCallback} },
-    [STARTMENU_PLAYER2] = { gText_MenuPlayer,  {.u8_void = StartMenuLinkPlayerCallback} }
+    [STARTMENU_PLAYER2] = { gText_MenuPlayer,  {.u8_void = StartMenuLinkPlayerCallback} },
+    [STARTMENU_RADAR]   = { gText_MenuRadar,   {.u8_void = StartMenuRadarCallback} }
 };
 
 static const struct WindowTemplate sSafariZoneStatsWindowTemplate = {
@@ -144,7 +149,8 @@ static const u8 *const sStartMenuDescPointers[] = {
     gStartMenuDesc_Option,
     gStartMenuDesc_Exit,
     gStartMenuDesc_Retire,
-    gStartMenuDesc_Player
+    gStartMenuDesc_Player,
+    gStartMenuDesc_Radar
 };
 
 static const struct BgTemplate sBGTemplates_AfterLinkSaveMessage[] = {
@@ -217,6 +223,8 @@ static void SetUpStartMenu_NormalField(void)
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
         AppendToStartMenuItems(STARTMENU_POKEMON);
     AppendToStartMenuItems(STARTMENU_BAG);
+    if (CheckBagHasItem(ITEM_10B, 1))
+        AppendToStartMenuItems(STARTMENU_RADAR);
     AppendToStartMenuItems(STARTMENU_PLAYER);
     AppendToStartMenuItems(STARTMENU_SAVE);
     AppendToStartMenuItems(STARTMENU_OPTION);
@@ -540,6 +548,15 @@ static bool8 StartMenuExitCallback(void)
     DestroySafariZoneStatsWindow();
     DestroyHelpMessageWindow_();
     CloseStartMenu();
+    return TRUE;
+}
+
+static bool8 StartMenuRadarCallback(void)
+{
+    DestroySafariZoneStatsWindow();
+    DestroyHelpMessageWindow_();
+    CloseStartMenu();
+    ScriptContext_SetupScript(EventScript_PokeRadar);
     return TRUE;
 }
 

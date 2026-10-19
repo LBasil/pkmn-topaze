@@ -287,11 +287,21 @@ Text_LooksLikeNothingHere::
 	.string "Looks like there's nothing here…$"
 
 EventScript_PokeRadar::
-	special TopazeRadarEncounter
-	switch VAR_RESULT
-	case 0, EventScript_PokeRadarNoGrass
-	case 1, EventScript_PokeRadarRecharging
-	waitstate
+	special TopazeRadarBuildList
+	goto_if_eq VAR_RESULT, 0, EventScript_PokeRadarNoMons
+	multichoice 1, 1, MULTICHOICE_TOPAZE_RADAR, FALSE
+	goto_if_eq VAR_RESULT, SCR_MENU_CANCEL, EventScript_PokeRadarEnd
+	copyvar VAR_0x8004, VAR_RESULT
+	special TopazeRadarStart
+	goto_if_eq VAR_RESULT, 0, EventScript_PokeRadarNoGrass
+	goto_if_eq VAR_RESULT, 2, EventScript_PokeRadarNotNow
+	msgbox Text_PokeRadarFound, MSGBOX_SIGN
+EventScript_PokeRadarEnd::
+	releaseall
+	end
+
+EventScript_PokeRadarNoMons::
+	msgbox Text_PokeRadarNoMons, MSGBOX_SIGN
 	releaseall
 	end
 
@@ -300,15 +310,38 @@ EventScript_PokeRadarNoGrass::
 	releaseall
 	end
 
-EventScript_PokeRadarRecharging::
-	msgbox Text_PokeRadarRecharging, MSGBOX_SIGN
+EventScript_PokeRadarNotNow::
+	msgbox Text_PokeRadarNotNow, MSGBOX_SIGN
 	releaseall
 	end
 
-Text_PokeRadarNoGrass::
-	.string "The POKé RADAR only works\n"
-	.string "when you stand in tall grass.$"
+EventScript_TopazeRadarContact::
+	special TopazeRadarBattle
+	waitstate
+	releaseall
+	end
 
-Text_PokeRadarRecharging::
-	.string "The POKé RADAR is recharging.\n"
-	.string "Walk a few more steps.$"
+EventScript_TopazeRadarFled::
+	msgbox Text_PokeRadarFled, MSGBOX_SIGN
+	releaseall
+	end
+
+Text_PokeRadarNoMons::
+	.string "No POKéMON you have seen live in\n"
+	.string "the tall grass around here.$"
+
+Text_PokeRadarNoGrass::
+	.string "There is no tall grass nearby\n"
+	.string "to search.$"
+
+Text_PokeRadarNotNow::
+	.string "You can't use the POKé RADAR\n"
+	.string "while riding or surfing.$"
+
+Text_PokeRadarFound::
+	.string "The grass is rustling nearby!\n"
+	.string "Walk up to it slowly, on foot.$"
+
+Text_PokeRadarFled::
+	.string "The wild {STR_VAR_1} noticed you\n"
+	.string "and ran away!$"

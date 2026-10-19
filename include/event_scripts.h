@@ -1172,6 +1172,8 @@ extern const u8 EventScript_PC[];
 
 extern const u8 EventScript_RepelWoreOff[];
 extern const u8 EventScript_PokeRadar[];
+extern const u8 EventScript_TopazeRadarContact[];
+extern const u8 EventScript_TopazeRadarFled[];
 
 // battle_message
 extern const u8 Text_MonSentToBoxInSomeonesPC[];

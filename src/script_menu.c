@@ -504,6 +504,9 @@ static const struct MenuAction sMultichoiceList_TopazeStarter[] = {
     { sText_StarterCharmander }
 };
 
+extern struct MenuAction gTopazeRadarMenu[];
+extern u8 gTopazeRadarCount;
+
 static const struct MenuAction sMultichoiceList_TopazeWish[] = {
     { sText_WishLetGo },
     { sText_WishNoBalls },
@@ -590,6 +593,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
     [MULTICHOICE_TRAINER_TOWER_MODE]                         = MULTICHOICE(sMultichoiceList_TrainerTowerMode),
     [MULTICHOICE_TOPAZE_WISH]                                = MULTICHOICE(sMultichoiceList_TopazeWish),
     [MULTICHOICE_TOPAZE_STARTER]                             = MULTICHOICE(sMultichoiceList_TopazeStarter),
+    [MULTICHOICE_TOPAZE_RADAR]                               = { gTopazeRadarMenu, 8 },
 };
 
 // From Cool to Berries goes unused
@@ -747,6 +751,8 @@ static void DrawVerticalMultichoiceMenu(u8 left, u8 top, u8 mcId, u8 ignoreBpres
     {
         ignoreBpress &= 1;
         count = sMultichoiceLists[mcId].count;
+        if (mcId == MULTICHOICE_TOPAZE_RADAR)
+            count = gTopazeRadarCount;
         list = sMultichoiceLists[mcId].list;
         strWidth = 0;
         for (i = 0; i < count; i++)

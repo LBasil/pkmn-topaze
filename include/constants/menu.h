@@ -72,6 +72,7 @@
 
 #define MULTICHOICE_TOPAZE_WISH                                65
 #define MULTICHOICE_TOPAZE_STARTER                             66
+#define MULTICHOICE_TOPAZE_RADAR                               67
 #define MULTICHOICE_NONE                                      255
 
 #define LISTMENU_BADGES                    0

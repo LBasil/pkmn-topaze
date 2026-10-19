@@ -16,6 +16,15 @@
 #include "link.h"
 #include "quest_log.h"
 #include "constants/maps.h"
+#include "constants/event_objects.h"
+#include "constants/event_object_movement.h"
+#include "event_object_movement.h"
+#include "pokedex.h"
+#include "pokemon.h"
+#include "menu.h"
+#include "string_util.h"
+#include "battle.h"
+#include "data.h"
 #include "constants/abilities.h"
 #include "constants/items.h"
 
@@ -35,10 +44,18 @@ struct WildEncounterData
 
 static EWRAM_DATA struct WildEncounterData sWildEncounterData = {};
 static EWRAM_DATA bool8 sWildEncountersDisabled = FALSE;
-// Topaze: POKE RADAR (zero-initialised on purpose). Cooldown in steps, chain of identical species.
-static u8 sRadarCooldown;
+// Topaze: POKE RADAR (zero-initialised on purpose).
 static u8 sRadarChain;
 static u16 sRadarSpecies;
+static u16 sRadarTarget;
+static u16 sRadarBattleSpecies;
+static s16 sRadarX;
+static s16 sRadarY;
+static u8 sRadarSteps;
+static u8 sRadarMapNum;
+static u8 sRadarMapGroup;
+static bool8 sRadarActive;
+static bool8 sRadarPending;
 
 static bool8 UnlockedTanobyOrAreNotInTanoby(void);
 static u32 GenerateUnownPersonalityByLetter(u8 letter);
@@ -609,9 +626,6 @@ bool8 UpdateRepelCounter(void)
     if (gQuestLogState == QL_STATE_PLAYBACK)
         return FALSE;
 
-    if (sRadarCooldown != 0)
-        sRadarCooldown--;
-
     steps = VarGet(VAR_REPEL_STEP_COUNT);
 
     if (steps != 0)
@@ -812,60 +826,198 @@ static void AddToWildEncounterRateBuff(u8 encounterRate)
         sWildEncounterData.encounterRateBuff = 0;
 }
 
-// Topaze: POKE RADAR. VAR_RESULT: 0 = not in tall grass, 1 = battery recharging, 2 = battle started.
-void TopazeRadarEncounter(void)
-{
-    s16 x, y;
-    u16 headerId;
-    const struct WildPokemonInfo * info;
-    u8 slot, slot2, i;
-    u16 species;
-    u8 level;
+// Topaze: POKE RADAR (DexNav-like). The player picks a SEEN species of the current area, a rustling spot appears in nearby tall grass,
+// and the player must walk up to it (running or riding makes it flee). Chains of the same species raise the shiny odds.
+#define RADAR_BLIP_LOCALID 0xF1
+#define RADAR_MAX_STEPS    70
+struct MenuAction gTopazeRadarMenu[8];
+u8 gTopazeRadarCount;
+static u8 sRadarNames[8][12];
+static u16 sRadarList[8];
 
-    gSpecialVar_Result = 0;
-    PlayerGetDestCoords(&x, &y);
-    headerId = GetCurrentMapWildMonHeaderId();
-    if (headerId == HEADER_NONE || MapGridGetMetatileAttributeAt(x, y, METATILE_ATTRIBUTE_ENCOUNTER_TYPE) != TILE_ENCOUNTER_LAND)
+static void TopazeRadarRemoveBlip(void)
+{
+    if (sRadarActive)
+        RemoveObjectEventByLocalIdAndMap(RADAR_BLIP_LOCALID, sRadarMapNum, sRadarMapGroup);
+    sRadarActive = FALSE;
+}
+
+static void TopazeRadarSettleLastBattle(void)
+{
+    if (!sRadarPending)
         return;
-    info = gWildMonHeaders[headerId].landMonsInfo;
+    sRadarPending = FALSE;
+    if (gBattleOutcome == B_OUTCOME_WON || gBattleOutcome == B_OUTCOME_CAUGHT)
+    {
+        if (sRadarBattleSpecies == sRadarSpecies)
+        {
+            if (sRadarChain < 40)
+                sRadarChain++;
+        }
+        else
+        {
+            sRadarSpecies = sRadarBattleSpecies;
+            sRadarChain = 1;
+        }
+    }
+    else
+    {
+        sRadarChain = 0;
+        sRadarSpecies = SPECIES_NONE;
+    }
+}
+
+static const struct WildPokemonInfo *TopazeRadarGetInfo(void)
+{
+    u16 headerId = GetCurrentMapWildMonHeaderId();
+
+    if (headerId == HEADER_NONE)
+        return NULL;
+    return gWildMonHeaders[headerId].landMonsInfo;
+}
+
+// VAR_RESULT = number of species that can be searched (0 = none)
+void TopazeRadarBuildList(void)
+{
+    const struct WildPokemonInfo *info = TopazeRadarGetInfo();
+    s8 slot;
+    u8 i, n = 0;
+    u16 species;
+
+    TopazeRadarSettleLastBattle();
+    gTopazeRadarCount = 0;
+    gSpecialVar_Result = 0;
     if (info == NULL)
         return;
-    if (sRadarCooldown != 0)
+    for (slot = LAND_WILD_COUNT - 1; slot >= 0 && n < 8; slot--)
     {
+        species = info->wildPokemon[slot].species;
+        if (species == SPECIES_NONE || species == SPECIES_UNOWN)
+            continue;
+        if (!GetSetPokedexFlag(SpeciesToNationalPokedexNum(species), FLAG_GET_SEEN))
+            continue;
+        for (i = 0; i < n; i++)
+            if (sRadarList[i] == species)
+                break;
+        if (i < n)
+            continue;
+        sRadarList[n] = species;
+        StringCopyN(sRadarNames[n], gSpeciesNames[species], 11);
+        sRadarNames[n][11] = EOS;
+        gTopazeRadarMenu[n].text = sRadarNames[n];
+        n++;
+    }
+    gTopazeRadarCount = n;
+    gSpecialVar_Result = n;
+}
+
+// VAR_0x8004 = chosen index. VAR_RESULT: 0 = no tall grass nearby, 1 = a rustling spot appeared, 2 = cannot use it now.
+void TopazeRadarStart(void)
+{
+    s16 px, py, x, y;
+    u8 tries;
+    u8 elevation;
+
+    gSpecialVar_Result = 0;
+    if (gSpecialVar_0x8004 >= gTopazeRadarCount)
+        return;
+    if (gPlayerAvatar.flags & (PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE | PLAYER_AVATAR_FLAG_SURFING))
+    {
+        gSpecialVar_Result = 2;
+        return;
+    }
+    TopazeRadarRemoveBlip();
+    PlayerGetDestCoords(&px, &py);
+    elevation = PlayerGetElevation();
+    for (tries = 0; tries < 80; tries++)
+    {
+        s16 dx = (s16)(Random() % 11) - 5;
+        s16 dy = (s16)(Random() % 9) - 4;
+        s16 dist = (dx < 0 ? -dx : dx) > (dy < 0 ? -dy : dy) ? (dx < 0 ? -dx : dx) : (dy < 0 ? -dy : dy);
+
+        if (dist < 3)
+            continue;
+        x = px + dx;
+        y = py + dy;
+        if (MapGridGetMetatileAttributeAt(x, y, METATILE_ATTRIBUTE_ENCOUNTER_TYPE) != TILE_ENCOUNTER_LAND)
+            continue;
+        if (MapGridGetCollisionAt(x, y) || GetObjectEventIdByXY(x, y) != OBJECT_EVENTS_COUNT)
+            continue;
+        sRadarX = x;
+        sRadarY = y;
+        sRadarTarget = sRadarList[gSpecialVar_0x8004];
+        sRadarSteps = 0;
+        sRadarMapNum = gSaveBlock1Ptr->location.mapNum;
+        sRadarMapGroup = gSaveBlock1Ptr->location.mapGroup;
+        SpawnSpecialObjectEventParameterized(OBJ_EVENT_GFX_TOPAZE_BLIP, MOVEMENT_TYPE_NONE, RADAR_BLIP_LOCALID, x, y, elevation);
+        sRadarActive = TRUE;
         gSpecialVar_Result = 1;
         return;
     }
-    // favour the rarer slots: roll twice and keep the rarer one
-    slot = ChooseWildMonIndex_Land();
-    slot2 = ChooseWildMonIndex_Land();
-    if (slot2 > slot)
-        slot = slot2;
-    // continue the chain half of the time when the species is still on the table
-    if (sRadarSpecies != SPECIES_NONE && (Random() & 1))
+}
+
+// Called after every step of the player. Returns TRUE if a script was started.
+bool8 TopazeRadarStep(void)
+{
+    s16 px, py, dx, dy, dist;
+
+    TopazeRadarSettleLastBattle();
+    if (!sRadarActive)
+        return FALSE;
+    if (gSaveBlock1Ptr->location.mapNum != sRadarMapNum || gSaveBlock1Ptr->location.mapGroup != sRadarMapGroup)
+    {
+        sRadarActive = FALSE;
+        return FALSE;
+    }
+    PlayerGetDestCoords(&px, &py);
+    dx = px - sRadarX;
+    dy = py - sRadarY;
+    if (dx < 0)
+        dx = -dx;
+    if (dy < 0)
+        dy = -dy;
+    dist = dx > dy ? dx : dy;
+    sRadarSteps++;
+    if (dist <= 4 && (gPlayerAvatar.flags & (PLAYER_AVATAR_FLAG_DASH | PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE)))
+    {
+        TopazeRadarRemoveBlip();
+        StringCopy(gStringVar1, gSpeciesNames[sRadarTarget]);
+        ScriptContext_SetupScript(EventScript_TopazeRadarFled);
+        return TRUE;
+    }
+    if (dist <= 1)
+    {
+        TopazeRadarRemoveBlip();
+        ScriptContext_SetupScript(EventScript_TopazeRadarContact);
+        return TRUE;
+    }
+    if (sRadarSteps >= RADAR_MAX_STEPS)
+        TopazeRadarRemoveBlip();
+    return FALSE;
+}
+
+void TopazeRadarBattle(void)
+{
+    const struct WildPokemonInfo *info = TopazeRadarGetInfo();
+    u8 slot = 0, i, level;
+    u16 species = sRadarTarget;
+
+    if (info != NULL)
     {
         for (i = 0; i < LAND_WILD_COUNT; i++)
         {
-            if (info->wildPokemon[i].species == sRadarSpecies)
+            if (info->wildPokemon[i].species == species)
             {
                 slot = i;
                 break;
             }
         }
-    }
-    species = info->wildPokemon[slot].species;
-    level = ChooseWildMonLevel(&info->wildPokemon[slot]);
-    if (species == sRadarSpecies)
-    {
-        if (sRadarChain < 40)
-            sRadarChain++;
+        level = ChooseWildMonLevel(&info->wildPokemon[slot]);
     }
     else
-    {
-        sRadarChain = 0;
-        sRadarSpecies = species;
-    }
+        level = 5;
     GenerateWildMon(species, level, slot);
-    if (species != SPECIES_UNOWN && Random() % (8192 - 190 * sRadarChain) == 0)
+    if (species != SPECIES_UNOWN && Random() % (8192 - 190 * (species == sRadarSpecies ? sRadarChain : 0)) == 0)
     {
         // shiny: build a personality whose shiny value is < 8
         u32 otId = gSaveBlock2Ptr->playerTrainerId[0] | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
@@ -875,7 +1027,7 @@ void TopazeRadarEncounter(void)
         ZeroEnemyPartyMons();
         CreateMon(&gEnemyParty[0], species, level, USE_RANDOM_IVS, TRUE, (hi << 16) | lo, FALSE, 0);
     }
-    sRadarCooldown = 25;
-    gSpecialVar_Result = 2;
+    sRadarBattleSpecies = species;
+    sRadarPending = TRUE;
     StartWildBattle();
 }

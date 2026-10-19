@@ -1201,6 +1201,10 @@ static const struct SpriteFrameImage sPicTable_WoodenSign[] = {
     overworld_frame(gObjectEventPic_WoodenSign, 2, 2, 0),
 };
 
+static const struct SpriteFrameImage sPicTable_TopazeBlip[] = {
+    overworld_frame(gObjectEventPic_TopazeBlip, 2, 2, 0),
+};
+
 static const struct SpriteFrameImage sPicTable_Clipboard[] = {
     overworld_frame(gObjectEventPic_Clipboard, 2, 2, 0),
 };
