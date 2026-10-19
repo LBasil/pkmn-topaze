@@ -81,6 +81,9 @@ BattleScript_SafariNoIncGameStat::
 	setbyte gBattleCommunication, 0
 	displaydexinfo
 BattleScript_CaughtPokemonSkipNewDex::
+	@ Topaze: capturing gives experience (before the new mon joins the party, so it does not share it)
+	setbyte sGIVEEXP_STATE, 0
+	getexp BS_TARGET
 	printstring STRINGID_GIVENICKNAMECAPTURED
 	waitstate
 	setbyte gBattleCommunication, 0

@@ -12,6 +12,7 @@ def sky(h, s, v, i, ci):
     return h, s, v
 def edits(L):
     replace_ids(L, {672: 650, 673: 650, 680: 650, 681: 650, 712: 650, 720: 650}, collision=0)   # faisceaux -> sol libre
+    replace_ids(L, {645: 650}, collision=0)   # eclairs au sol -> sol uni (arene Vol/Dragon, pas electrique)
 if __name__ == '__main__':
     edit_layout('mauville', edits)
     recolor('mauville', sky)

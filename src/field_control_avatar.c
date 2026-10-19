@@ -714,6 +714,9 @@ static bool8 UpdatePoisonStepCounter(void)
 {
     u16 *ptr;
 
+    // Topaze: poison no longer hurts in the overworld (only in battle)
+    return FALSE;
+
     if (gMapHeader.mapType != MAP_TYPE_SECRET_BASE)
     {
         ptr = GetVarPointer(VAR_POISON_STEP_COUNTER);

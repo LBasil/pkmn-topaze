@@ -20,6 +20,7 @@ def conv_attr(path):
         v = struct.unpack('<H', raw[i * 2:i * 2 + 2])[0]
         b, layer = v & 0xff, v >> 12
         if b not in OK: b = 0
+        if 0x44 <= b <= 0x47: b = 0   # Emerald: pas une glissade (en FireRed 0x44-0x47 = SLIDE_*, bloque la passerelle de Sootopolis)
         a = b | (layer << 29)
         if b == 0x02: a |= 0x1000200
         elif b in WATER: a |= 0x22000400

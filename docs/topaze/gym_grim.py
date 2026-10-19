@@ -13,5 +13,5 @@ if __name__ == '__main__':
     L = load('LAYOUT_GYM_EM_SOOTOPOLIS'); L.render().convert('RGB').save('/tmp/grim_gym.png')
     apply_gym('CeladonCity_Gym', 'LAYOUT_GYM_EM_SOOTOPOLIS',
         objs={0: (4, 9, 'FACE_RIGHT', 3), 1: (13, 8, 'FACE_LEFT', 3), 2: (6, 6, 'FACE_DOWN', 2), 3: (11, 7, 'FACE_DOWN', 2),
-              4: (5, 12, 'FACE_RIGHT', 3), 5: (11, 14, 'FACE_LEFT', 3), 6: (8, 2, 'FACE_DOWN'), 7: (7, 22, 'FACE_RIGHT', 3)},
+              4: (5, 12, 'FACE_RIGHT', 3), 5: (11, 14, 'FACE_LEFT', 3), 6: (8, 2, 'FACE_DOWN'), 7: (6, 23, 'FACE_RIGHT', 3)},
         warps=[(8, 25), (9, 25), (9, 25)], bg=[(6, 24), (10, 24)], drop_objects=(8, 9, 10))
