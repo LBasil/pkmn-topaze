@@ -654,3 +654,11 @@ Generateurs (a ne lancer qu'une fois) : `tools/topaze/gen/ending3.py`, `ending2.
 - `docs/topaze/interiors_palette.py` : remappage par luminance des palettes de `pokemon_tower` (rambardes roses → cobalt), `rock_tunnel` (sol olive → gris-violet, roches → sarcelle de Spinellia) et `museum` (basalte + vitrines de braise, comme Pyropia). Palettes d'origine sauvegardées dans `docs/topaze/reference/pal_orig/` (le script est idempotent).
 - `docs/topaze/interiors_pokemon.py` : Pokémon visibles (Cubone 3F, Clefairy 4F, Jigglypuff 5F de la Tour ; Machop et Nidorino au Tunnel Roche 1F, Slowpoke en B1F ; Kabuto au musée 1F, Slowpoke 2F ; Spearow et Meowth Route 8). Cases choisies sans couper aucun chemin (BFS), cri + texte court.
 - Pas fait : arbres (non précisés), décor architectural des intérieurs (palettes seulement).
+
+### Pokéradar façon DexNav (19/10, soir)
+- Entrée « RADAR » dans le menu START (si le joueur a l'objet) ; l'objet du sac lance le même script `EventScript_PokeRadar` (data/scripts/field_moves.inc).
+- `TopazeRadarBuildList` (src/wild_encounter.c) : espèces VUES de la table d'herbe de la carte (rares d'abord, 8 max) dans un multichoice dynamique `MULTICHOICE_TOPAZE_RADAR` (script_menu.c, `gTopazeRadarMenu`/`gTopazeRadarCount`).
+- `TopazeRadarStart` : choisit une case d'herbe haute libre à 3-5 cases, y fait apparaître l'objet `OBJ_EVENT_GFX_TOPAZE_BLIP` (graphics/object_events/pics/misc/radar_blip.png, palette radar_blip.pal, local id 0xF1).
+- `TopazeRadarStep` (appelé dans `TryStartStepBasedScript`, field_control_avatar.c) : contact (distance <= 1) → `EventScript_TopazeRadarContact` → `TopazeRadarBattle` ; course/vélo à <= 4 cases → fuite ; expire après 70 pas ou changement de carte.
+- Chaîne : mise à jour au retour de combat (`gBattleOutcome` gagné/capturé = +1 si même espèce, sinon 1 ; fuite/défaite = 0). Shiny : 1/(8192 - 190 x chaîne).
+- Bench : mkdbg2 marque désormais tout le Pokédex comme vu.

@@ -58,8 +58,10 @@ Route2_EastBuilding_Text_ReceivedRadar:
 	.string "{PLAYER} received a POKé RADAR!$"
 
 Route2_EastBuilding_Text_RadarExplain:
-	.string "Use it in tall grass: it flushes out\n"
-	.string "rarer POKéMON. Keep meeting the same\n"
-	.string "species to chain it and a shiny\n"
-	.string "becomes far more likely!\n"
-	.string "It needs about 25 steps to recharge.$"
+	.string "Open it from the START menu and\n"
+	.string "pick a POKéMON you have seen here.\n"
+	.string "Walk up to the rustling grass, but\n"
+	.string "don't run or it will flee!\p"
+	.string "Beat or catch the same species in\n"
+	.string "a row to chain it: shinies get\n"
+	.string "much more likely!$"
