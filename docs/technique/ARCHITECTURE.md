@@ -649,3 +649,8 @@ Generateurs (a ne lancer qu'une fois) : `tools/topaze/gen/ending3.py`, `ending2.
 - Attaques : `docs/topaze/add_moves3.py` (ids 536-616, MOVES_COUNT 617, 81 attaques Gen 4-9, noms <=12 car.), distribuées par `movepool_fix3.py` (cap 24, audit propre).
 - Talents : `add_abilities3.py` (ids 169-173 : PUNK ROCK, STEELY SPRT, DEFEATIST, TRIAGE, BEAST BOOST), hooks dans `topaze_abilities.c` (TopazePowerPct, TopazeMovePriority) et `battle_util.c` (Beast Boost). Attribués par `assign_abilities3.py` (Exploud, Aron, Miltank, chiens légendaires...). Defeatist n'est attribué à personne (talent à malus).
 - Bench d'équilibrage : Brock perd à niveau égal (équipe bench lvl 16), gagne à +2. Baseline e7784ef non comparable (bench y renvoie 0 tour) : pas de régression prouvée.
+
+### Intérieurs à l'ambiance de la ville voisine (19/10, soir)
+- `docs/topaze/interiors_palette.py` : remappage par luminance des palettes de `pokemon_tower` (rambardes roses → cobalt), `rock_tunnel` (sol olive → gris-violet, roches → sarcelle de Spinellia) et `museum` (basalte + vitrines de braise, comme Pyropia). Palettes d'origine sauvegardées dans `docs/topaze/reference/pal_orig/` (le script est idempotent).
+- `docs/topaze/interiors_pokemon.py` : Pokémon visibles (Cubone 3F, Clefairy 4F, Jigglypuff 5F de la Tour ; Machop et Nidorino au Tunnel Roche 1F, Slowpoke en B1F ; Kabuto au musée 1F, Slowpoke 2F ; Spearow et Meowth Route 8). Cases choisies sans couper aucun chemin (BFS), cri + texte court.
+- Pas fait : arbres (non précisés), décor architectural des intérieurs (palettes seulement).
