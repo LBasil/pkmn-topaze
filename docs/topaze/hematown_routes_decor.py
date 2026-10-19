@@ -352,11 +352,18 @@ def route6():
         if key not in R.cache: R.cache[key] = 640 + len(R.mt) // 16; R.mt += struct.pack('<8H', *e2); R.att += struct.pack('<I', att)
         B.g[c[1] * w + c[0]] = (B.g[c[1] * w + c[0]] & 0xfc00) | R.cache[key]; return True
     nm = 0
+    import math
+    def cloud(x, y):                           # bancs de nuages : champ lisse (0..1) -> nappes lisibles au lieu d'un voile uniforme
+        v = math.sin(x / 2.7 + 1.3) + math.sin(y / 1.8 + 0.4) + 0.8 * math.sin((x + y) / 3.6) + 0.6 * math.sin((x - 2 * y) / 2.1)
+        return max(0.0, min(1.0, (v + 2.0) / 4.0))
     for y in range(18, 40):
-        lvl = min(5, 1 + (y - 18) // 4); lvl = max(1, lvl)          # 1..5 : la brume s'epaissit vers la ville
+        base = min(5, 1 + (y - 18) // 4)                              # 1..5 : la brume s'epaissit vers la ville
         for x in range(w):
             if 2 <= x <= 14 and 23 <= y <= 26: continue          # pas de brume sur le lac
-            if mist((x, y), lvl): nm += 1
+            f = cloud(x, y)
+            lvl = int(round(base * (0.2 + 1.5 * f * f)))
+            lvl = min(5, lvl)
+            if lvl >= 1 and mist((x, y), lvl): nm += 1
     n_new = R.flush(); save('Route6', w, h, B.g); print('Route6 :', dict(n), '%d cases de brume, +%d metatuiles, %d tuiles' % (nm, n_new, R.NTL + len(R.NEWT)))
 
 # ------------------------------------------------------------------ Route 7 : cristaux de quartz et bonhommes de neige
