@@ -24,6 +24,7 @@ add = '''    if (gTopazeDbg[0] && gTopazeDbg[7] == 9)
         AddBagItem(ITEM_10B, 1);
         AddBagItem(ITEM_MASTER_BALL, 20);
         AddBagItem(ITEM_RARE_CANDY, 50);
+        AddBagItem(ITEM_HM03, 1);
         for (k = 1; k <= 386; k++)
             GetSetPokedexFlag(k, FLAG_SET_SEEN);
         gSaveBlock1Ptr->registeredItem = ITEM_10B;
