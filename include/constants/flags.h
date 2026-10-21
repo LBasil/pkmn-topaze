@@ -273,6 +273,7 @@
 #define FLAG_0x0FD               0x0FD
 #define FLAG_SAFARI_OCC_WARNED   FLAG_0x0FD // Topaze: Safari entrance warned once about the ONYBRIS occupation
 #define FLAG_0x0FE               0x0FE
+#define FLAG_GOT_POKE_RADAR      FLAG_0x0FE // Topaze: radar given once (coach / Route 2 aide)
 #define FLAG_0x0FF               0x0FF
 #define FLAG_REBEL_KAY 0x100 // Topaze: ending 3 conquest
 #define FLAG_REBEL_SYLVESTRE 0x101 // Topaze: ending 3 conquest

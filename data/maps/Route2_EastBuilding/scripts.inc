@@ -30,12 +30,14 @@ Route2_EastBuilding_EventScript_AlreadyGotHM05::
 	end
 
 Route2_EastBuilding_EventScript_GivePokeRadar::
+	goto_if_set FLAG_GOT_POKE_RADAR, Route2_EastBuilding_EventScript_RadarDone
 	checkitem ITEM_10B
 	goto_if_eq VAR_RESULT, TRUE, Route2_EastBuilding_EventScript_RadarDone
 	checkitemspace ITEM_10B
 	goto_if_eq VAR_RESULT, FALSE, Aide_EventScript_NoRoomForItem
 	msgbox Route2_EastBuilding_Text_RadarIntro
 	giveitem_msg Route2_EastBuilding_Text_ReceivedRadar, ITEM_10B
+	setflag FLAG_GOT_POKE_RADAR
 	msgbox Route2_EastBuilding_Text_RadarExplain
 Route2_EastBuilding_EventScript_RadarDone::
 	release

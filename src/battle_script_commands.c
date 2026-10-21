@@ -3332,6 +3332,18 @@ static void Cmd_getexp(void)
                     gBattleMoveDamage += gExpShareExp; // Topaze: Multi Exp. intégré
                     if (holdEffect == HOLD_EFFECT_LUCKY_EGG)
                         gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
+                    {   // Topaze: rattrapage d'XP (retour Basil 21/10) : x2 si 8+ niveaux sous le meilleur, x3 si 16+
+                        u8 best = 0, lv = GetMonData(&gPlayerParty[gBattleStruct->expGetterMonId], MON_DATA_LEVEL);
+                        u8 q;
+                        for (q = 0; q < PARTY_SIZE; q++)
+                            if (GetMonData(&gPlayerParty[q], MON_DATA_SPECIES) != SPECIES_NONE && !GetMonData(&gPlayerParty[q], MON_DATA_IS_EGG)
+                             && GetMonData(&gPlayerParty[q], MON_DATA_LEVEL) > best)
+                                best = GetMonData(&gPlayerParty[q], MON_DATA_LEVEL);
+                        if (best >= lv + 16)
+                            gBattleMoveDamage *= 3;
+                        else if (best >= lv + 8)
+                            gBattleMoveDamage *= 2;
+                    }
                     if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
                         gBattleMoveDamage = (gBattleMoveDamage * 150) / 100;
                     if (IsTradedMon(&gPlayerParty[gBattleStruct->expGetterMonId])

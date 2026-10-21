@@ -89,12 +89,14 @@ EventScript_MoveCoach::
 
 @ Topaze: the POKE RADAR (the Route 2 aide's building no longer has a door): first MOVE COACH visit
 EventScript_MoveCoach_GivePokeRadar::
+	goto_if_set FLAG_GOT_POKE_RADAR, EventScript_MoveCoach_RadarDone
 	checkitem ITEM_10B
 	goto_if_eq VAR_RESULT, TRUE, EventScript_MoveCoach_RadarDone
 	checkitemspace ITEM_10B
 	goto_if_eq VAR_RESULT, FALSE, EventScript_MoveCoach_RadarDone
 	msgbox Text_MoveCoachRadarIntro
 	giveitem_msg Text_MoveCoachReceivedRadar, ITEM_10B
+	setflag FLAG_GOT_POKE_RADAR
 	msgbox Text_MoveCoachRadarExplain
 EventScript_MoveCoach_RadarDone::
 	return
