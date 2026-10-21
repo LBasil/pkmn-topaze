@@ -3001,8 +3001,14 @@ static void Task_FldEffUseSurf(u8 taskId)
     sUseSurfEffectFuncs[gTasks[taskId].data[0]](&gTasks[taskId]);
 }
 
+static u16 sSurfSavedWin[4];
+
 static void UseSurfEffect_1(struct Task *task)
 {
+    sSurfSavedWin[0] = GetGpuReg(REG_OFFSET_WIN0H);
+    sSurfSavedWin[1] = GetGpuReg(REG_OFFSET_WIN0V);
+    sSurfSavedWin[2] = GetGpuReg(REG_OFFSET_WININ);
+    sSurfSavedWin[3] = GetGpuReg(REG_OFFSET_WINOUT);
     ForceCloseMapNamePopup();
     LockPlayerFieldControls();
     FreezeObjectEvents();
@@ -3060,6 +3066,12 @@ static void UseSurfEffect_5(struct Task *task)
     objectEvent = &gObjectEvents[gPlayerAvatar.objectEventId];
     if (ObjectEventClearHeldMovementIfFinished(objectEvent))
     {
+        SetGpuReg(REG_OFFSET_WIN0H, sSurfSavedWin[0]);
+        SetGpuReg(REG_OFFSET_WIN0V, sSurfSavedWin[1]);
+        SetGpuReg(REG_OFFSET_WININ, sSurfSavedWin[2]);
+        SetGpuReg(REG_OFFSET_WINOUT, sSurfSavedWin[3]);
+        SetGpuReg(REG_OFFSET_BG0HOFS, 0);
+        SetGpuReg(REG_OFFSET_BG0VOFS, 0);
         gPlayerAvatar.preventStep = FALSE;
         gPlayerAvatar.flags &= ~PLAYER_AVATAR_FLAG_CONTROLLABLE;
         ObjectEventSetHeldMovement(objectEvent, GetFaceDirectionMovementAction(objectEvent->movementDirection));
