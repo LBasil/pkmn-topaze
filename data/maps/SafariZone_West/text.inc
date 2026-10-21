@@ -44,4 +44,4 @@ SafariZone_West_Text_SeleneDefeat::
     .string "How can a child do this?!$"
 
 SafariZone_West_Text_SelenePost::
-    .string "SELENE: Fine. Take the old man's\nteeth. They are useless to us.\pThe more you guard the stones,\nthe harder ONYBRIS hunts them.\pWe will free the POKéMON. All of\nthem. Farewell, child!$"
+    .string "SELENE: Fine. I dropped the old\nman's teeth over there. Take them.\pThe more you guard the stones,\nthe harder ONYBRIS hunts them.\pWe will free the POKéMON. All of\nthem. Farewell, child!$"

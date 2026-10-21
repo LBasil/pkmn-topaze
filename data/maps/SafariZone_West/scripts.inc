@@ -5,8 +5,21 @@ SafariZone_West_MapScripts::
 SafariZone_West_OnTransition::
 	call_if_set FLAG_AMETHYST_STONE_GIVEN, SafariZone_West_EventScript_HideOnybris
 	call_if_unset FLAG_AMETHYST_RAID_STARTED, SafariZone_West_EventScript_HideOnybris
+	call_if_defeated TRAINER_MAGMA_ADMIN_COURTNEY, SafariZone_West_EventScript_HideOnybris
 	call_if_defeated TRAINER_MAGMA_ADMIN_COURTNEY, SafariZone_West_EventScript_HideSelene
+	call SafariZone_West_EventScript_CheckTeethBall
 	end
+
+@ Topaze: SELENE holds the WARDEN's teeth: the ball only appears once she is beaten
+SafariZone_West_EventScript_CheckTeethBall::
+	goto_if_set FLAG_AMETHYST_STONE_GIVEN, EventScript_Return
+	goto_if_unset FLAG_AMETHYST_RAID_STARTED, EventScript_Return
+	goto_if_defeated TRAINER_MAGMA_ADMIN_COURTNEY, EventScript_Return
+	goto_if_set FLAG_GOT_HM04, EventScript_Return
+	checkitem ITEM_GOLD_TEETH
+	goto_if_eq VAR_RESULT, TRUE, EventScript_Return
+	setflag FLAG_HIDE_SAFARI_ZONE_WEST_GOLD_TEETH
+	return
 
 SafariZone_West_EventScript_RestHouseSign::
 	msgbox SafariZone_West_Text_RestHouse, MSGBOX_SIGN
@@ -44,6 +57,14 @@ SafariZone_West_EventScript_SeleneLeaves::
 	closemessage
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_SAFARI_SELENE
+	removeobject 5
+	removeobject 6
+	goto_if_set FLAG_GOT_HM04, SafariZone_West_EventScript_SeleneLeavesEnd
+	checkitem ITEM_GOLD_TEETH
+	goto_if_eq VAR_RESULT, TRUE, SafariZone_West_EventScript_SeleneLeavesEnd
+	clearflag FLAG_HIDE_SAFARI_ZONE_WEST_GOLD_TEETH
+	addobject 1
+SafariZone_West_EventScript_SeleneLeavesEnd::
 	delay 20
 	fadescreen FADE_FROM_BLACK
 	release

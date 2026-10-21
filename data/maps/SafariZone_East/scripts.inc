@@ -5,6 +5,7 @@ SafariZone_East_MapScripts::
 SafariZone_East_OnTransition::
 	call_if_set FLAG_AMETHYST_STONE_GIVEN, SafariZone_East_EventScript_HideOnybris
 	call_if_unset FLAG_AMETHYST_RAID_STARTED, SafariZone_East_EventScript_HideOnybris
+	call_if_defeated TRAINER_MAGMA_ADMIN_COURTNEY, SafariZone_East_EventScript_HideOnybris
 	end
 
 SafariZone_East_EventScript_RestHouseSign::

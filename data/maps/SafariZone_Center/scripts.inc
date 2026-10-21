@@ -6,6 +6,7 @@ SafariZone_Center_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_SAFARI_ZONE_CENTER
 	call_if_set FLAG_AMETHYST_STONE_GIVEN, SafariZone_Center_EventScript_HideOnybris
 	call_if_unset FLAG_AMETHYST_RAID_STARTED, SafariZone_Center_EventScript_HideOnybris
+	call_if_defeated TRAINER_MAGMA_ADMIN_COURTNEY, SafariZone_Center_EventScript_HideOnybris
 	end
 
 SafariZone_Center_EventScript_RestHouseSign::

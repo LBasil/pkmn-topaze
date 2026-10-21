@@ -12,6 +12,7 @@ FuchsiaCity_SafariZone_Entrance_OnFrame::
 @ Parc occupe par Onybris (pas de partie de Safari) : on ressort sans passer par les declencheurs d'entree
 FuchsiaCity_SafariZone_Entrance_EventScript_ExitOccupied::
 	lockall
+	setvar VAR_TEMP_1, 1
 	applymovement LOCALID_PLAYER, FuchsiaCity_SafariZone_Entrance_Movement_Exit
 	waitmovement 0
 	setvar VAR_MAP_SCENE_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE, 0
@@ -21,6 +22,7 @@ FuchsiaCity_SafariZone_Entrance_EventScript_ExitOccupied::
 @ When player runs out of balls mid-battle
 FuchsiaCity_SafariZone_Entrance_EventScript_ExitWalkIn::
 	lockall
+	setvar VAR_TEMP_1, 1
 	textcolor NPC_TEXT_COLOR_MALE
 	applymovement LOCALID_PLAYER, FuchsiaCity_SafariZone_Entrance_Movement_ApproachCounter
 	waitmovement 0
@@ -36,6 +38,7 @@ FuchsiaCity_SafariZone_Entrance_EventScript_ExitWalkIn::
 @ When player runs of out balls after catching a pokemon, or runs out of steps
 FuchsiaCity_SafariZone_Entrance_EventScript_ExitWarpIn::
 	lockall
+	setvar VAR_TEMP_1, 1
 	textcolor NPC_TEXT_COLOR_MALE
 	msgbox FuchsiaCity_SafariZone_Entrance_Text_CatchFairShareComeAgain
 	closemessage
@@ -49,6 +52,7 @@ FuchsiaCity_SafariZone_Entrance_EventScript_ExitWarpIn::
 @ When player re-enters the entrance building with balls/steps remaining
 FuchsiaCity_SafariZone_Entrance_EventScript_ExitEarly::
 	lockall
+	setvar VAR_TEMP_1, 1
 	textcolor NPC_TEXT_COLOR_MALE
 	msgbox FuchsiaCity_SafariZone_Entrance_Text_GoingToLeaveSafariZoneEarly, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, FuchsiaCity_SafariZone_Entrance_EventScript_ReturnToSafariZone
@@ -110,13 +114,17 @@ FuchsiaCity_SafariZone_Entrance_EventScript_EntryTriggerLeft::
 FuchsiaCity_SafariZone_Entrance_EventScript_AskEnterSafariZone::
 	goto_if_unset FLAG_AMETHYST_RAID_STARTED, FuchsiaCity_SafariZone_Entrance_EventScript_AskEnterNormal
 	goto_if_set FLAG_AMETHYST_STONE_GIVEN, FuchsiaCity_SafariZone_Entrance_EventScript_AskEnterNormal
+	goto_if_defeated TRAINER_MAGMA_ADMIN_COURTNEY, FuchsiaCity_SafariZone_Entrance_EventScript_AskEnterNormal
 	goto FuchsiaCity_SafariZone_Entrance_EventScript_OccupiedEntry
 	end
 
 FuchsiaCity_SafariZone_Entrance_EventScript_OccupiedEntry::
 	textcolor NPC_TEXT_COLOR_MALE
+	goto_if_set FLAG_SAFARI_OCC_WARNED, FuchsiaCity_SafariZone_Entrance_EventScript_OccupiedGo
 	msgbox FuchsiaCity_SafariZone_Entrance_Text_Occupied
+	setflag FLAG_SAFARI_OCC_WARNED
 	closemessage
+FuchsiaCity_SafariZone_Entrance_EventScript_OccupiedGo::
 	call_if_eq VAR_TEMP_2, 0, FuchsiaCity_SafariZone_Entrance_EventScript_EnterSafariZoneMid
 	call_if_eq VAR_TEMP_2, 1, FuchsiaCity_SafariZone_Entrance_EventScript_EnterSafariZoneRight
 	call_if_eq VAR_TEMP_2, 2, FuchsiaCity_SafariZone_Entrance_EventScript_EnterSafariZoneLeft

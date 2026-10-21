@@ -271,6 +271,7 @@
 #define FLAG_FOUGHT_TITAN_KYOGRE 0x0FB // Topaze: fin 3, Titans
 #define FLAG_FOUGHT_TITAN_RAYQUAZA 0x0FC // Topaze: fin 3, Titans
 #define FLAG_0x0FD               0x0FD
+#define FLAG_SAFARI_OCC_WARNED   FLAG_0x0FD // Topaze: Safari entrance warned once about the ONYBRIS occupation
 #define FLAG_0x0FE               0x0FE
 #define FLAG_0x0FF               0x0FF
 #define FLAG_REBEL_KAY 0x100 // Topaze: ending 3 conquest

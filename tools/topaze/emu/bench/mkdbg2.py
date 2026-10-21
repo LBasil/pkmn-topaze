@@ -22,6 +22,8 @@ add = '''    if (gTopazeDbg[0] && gTopazeDbg[7] == 9)
         ScriptGiveMon(SPECIES_ALAKAZAM, 80, ITEM_NONE, 0, 0, 0);
         ScriptGiveMon(SPECIES_BLASTOISE, 80, ITEM_NONE, 0, 0, 0);
         AddBagItem(ITEM_10B, 1);
+        AddBagItem(ITEM_MASTER_BALL, 20);
+        AddBagItem(ITEM_RARE_CANDY, 50);
         for (k = 1; k <= 386; k++)
             GetSetPokedexFlag(k, FLAG_SET_SEEN);
         gSaveBlock1Ptr->registeredItem = ITEM_10B;
