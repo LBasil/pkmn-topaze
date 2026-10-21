@@ -40,7 +40,7 @@ CinnabarIsland_EventScript_ReadyObjectsReturnFromSeviiIslands::
 	return
 
 CinnabarIsland_EventScript_CheckUnlockGym::
-	goto_if_set FLAG_HIDE_POKEMON_MANSION_B1F_SECRET_KEY, CinnabarIsland_EventScript_UnlockGym
+	goto CinnabarIsland_EventScript_UnlockGym @ Topaze: arène toujours ouverte (plus de clé secrète)
 	return
 
 CinnabarIsland_EventScript_UnlockGym::
