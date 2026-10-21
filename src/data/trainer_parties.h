@@ -6179,14 +6179,14 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderErika[] = {
         .lvl = 31,
         .species = SPECIES_DEWGONG,
         .heldItem = ITEM_NEVER_MELT_ICE,
-        .moves = {MOVE_AURORA_BEAM, MOVE_SURF, MOVE_ICE_BEAM, MOVE_HEADBUTT},
+        .moves = {MOVE_AURORA_BEAM, MOVE_SURF, MOVE_ICY_WIND, MOVE_HEADBUTT},
     },
     {
         .iv = 70,
         .lvl = 32,
         .species = SPECIES_CLOYSTER,
         .heldItem = ITEM_SITRUS_BERRY,
-        .moves = {MOVE_ICE_BEAM, MOVE_SURF, MOVE_SUPERSONIC, MOVE_CLAMP},
+        .moves = {MOVE_ICICLE_SPEAR, MOVE_SURF, MOVE_SUPERSONIC, MOVE_CLAMP},
     },
     {
         .iv = 70,
@@ -6200,7 +6200,7 @@ static const struct TrainerMonItemCustomMoves sParty_LeaderErika[] = {
         .lvl = 33,
         .species = SPECIES_ONIX,
         .heldItem = ITEM_HARD_STONE,
-        .moves = {MOVE_ROCK_SLIDE, MOVE_ICE_BEAM, MOVE_EARTHQUAKE, MOVE_IRON_TAIL},
+        .moves = {MOVE_ROCK_SLIDE, MOVE_ICE_SHARD, MOVE_EARTHQUAKE, MOVE_IRON_TAIL},
     },
     {
         .iv = 70,
