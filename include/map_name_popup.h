@@ -3,6 +3,7 @@
 
 #include "global.h"
 
+void ForceCloseMapNamePopup(void);
 void ShowMapNamePopup(bool32 palIntoFadedBuffer);
 void DismissMapNamePopup(void);
 

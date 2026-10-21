@@ -139,6 +139,24 @@ void DismissMapNamePopup(void)
     }
 }
 
+void ForceCloseMapNamePopup(void)
+{
+    u8 taskId = FindTaskIdByFunc(Task_MapNamePopup);
+    s16 *data;
+    if (taskId == TASK_NONE)
+        return;
+    data = gTasks[taskId].data;
+    if (tWindowExists)
+    {
+        rbox_fill_rectangle(tWindowId);
+        CopyWindowToVram(tWindowId, COPYWIN_MAP);
+        RemoveWindow(tWindowId);
+    }
+    DestroyTask(taskId);
+    ChangeBgY(0, 0, 0);
+    SetGpuReg(REG_OFFSET_BG0VOFS, 0);
+}
+
 bool32 IsMapNamePopupTaskActive(void)
 {
     return FindTaskIdByFunc(Task_MapNamePopup) != TASK_NONE ? TRUE : FALSE;

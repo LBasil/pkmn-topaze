@@ -6,6 +6,7 @@
 #include "field_camera.h"
 #include "field_control_avatar.h"
 #include "field_effect.h"
+#include "map_name_popup.h"
 #include "field_effect_helpers.h"
 #include "field_effect_scripts.h"
 #include "field_fadetransition.h"
@@ -2996,6 +2997,7 @@ static void Task_FldEffUseSurf(u8 taskId)
 
 static void UseSurfEffect_1(struct Task *task)
 {
+    ForceCloseMapNamePopup();
     LockPlayerFieldControls();
     FreezeObjectEvents();
     gPlayerAvatar.preventStep = TRUE;
