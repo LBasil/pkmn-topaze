@@ -2713,6 +2713,12 @@ static void ShowMonEffect_Outdoors_7(struct Task *task)
 {
     IntrCallback callback;
     LoadWordFromTwoHalfwords((u16 *)&task->data[13], (u32 *)&callback);
+    // Topaze: appliquer les registres fenetre finaux ici, au cas ou aucun VBlank
+    // ne soit passe entre _6 et _7 (emulateurs en avance rapide) -> menu Start clippe.
+    SetGpuReg(REG_OFFSET_WIN0H, task->data[1]);
+    SetGpuReg(REG_OFFSET_WIN0V, task->data[2]);
+    SetGpuReg(REG_OFFSET_WININ, task->data[3]);
+    SetGpuReg(REG_OFFSET_WINOUT, task->data[4]);
     SetVBlankCallback(callback);
     ChangeBgX(0, 0, 0);
     ChangeBgY(0, 0, 0);
