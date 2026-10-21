@@ -9,6 +9,7 @@ EventScript_UseSurf::
 	goto_if_eq VAR_RESULT, NO, EventScript_UseSurfRelease
 	msgbox Text_UsedSurf
 	dofieldeffect FLDEFF_USE_SURF
+	goto EventScript_UseSurfRelease
 EventScript_UseSurfLava::
 	msgbox Text_WantToSurfLava, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_UseSurfRelease
