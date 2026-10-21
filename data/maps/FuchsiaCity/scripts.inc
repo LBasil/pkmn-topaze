@@ -4,6 +4,10 @@ FuchsiaCity_MapScripts::
 
 FuchsiaCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_FUCHSIA_CITY
+	setflag FLAG_CUT_TREE_06 @ retour Basil 21/10 : arbres a couper inutiles retires
+	setflag FLAG_CUT_TREE_07
+	setflag FLAG_CUT_TREE_08
+	setflag FLAG_CUT_TREE_09
 	call_if_set FLAG_AMETHYST_RAID_STARTED, FuchsiaCity_EventScript_HideStaffer
 	call_if_set FLAG_BADGE05_GET, FuchsiaCity_EventScript_HidePolice
 	call_if_set FLAG_CHRONDROLIA_RAID_DONE, FuchsiaCity_EventScript_HideSouthPolice
