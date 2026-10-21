@@ -12,6 +12,8 @@
 #include "fieldmap.h"
 #include "field_control_avatar.h"
 #include "field_fadetransition.h"
+#include "field_effect.h"
+#include "constants/field_effects.h"
 #include "field_player_avatar.h"
 #include "field_poison.h"
 #include "field_specials.h"
@@ -284,7 +286,7 @@ int ProcessPlayerFieldInput(struct FieldInput *input)
         }
     }
 
-    if (input->pressedStartButton)
+    if (input->pressedStartButton && !FieldEffectActiveListContains(FLDEFF_USE_SURF) && !gPlayerAvatar.preventStep)
     {
         gFieldInputRecord.pressedStartButton = TRUE;
         FlagSet(FLAG_OPENED_START_MENU);
