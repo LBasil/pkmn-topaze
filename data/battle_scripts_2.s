@@ -75,15 +75,16 @@ BattleScript_SuccessBallThrow::
 	incrementgamestat GAME_STAT_POKEMON_CAPTURES
 BattleScript_SafariNoIncGameStat::
 	printstring STRINGID_GOTCHAPKMNCAUGHT
+	waitmessage B_WAIT_TIME_LONG
+	@ Topaze: capturing gives experience (before the POKéDEX page, which wipes the battle VRAM; before the new mon joins the party)
+	setbyte sGIVEEXP_STATE, 0
+	getexp BS_TARGET
 	trysetcaughtmondexflags BattleScript_CaughtPokemonSkipNewDex
 	printstring STRINGID_PKMNDATAADDEDTODEX
 	waitstate
 	setbyte gBattleCommunication, 0
 	displaydexinfo
 BattleScript_CaughtPokemonSkipNewDex::
-	@ Topaze: capturing gives experience (before the new mon joins the party, so it does not share it)
-	setbyte sGIVEEXP_STATE, 0
-	getexp BS_TARGET
 	printstring STRINGID_GIVENICKNAMECAPTURED
 	waitstate
 	setbyte gBattleCommunication, 0
