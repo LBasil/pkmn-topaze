@@ -158,6 +158,15 @@ Route12_Text_PierKronos1::
     .string "last one opens, the world is set\l"
     .string "free, POKéMON and all.$"
 
+Route12_Text_PierKronos1b::
+    .string "KRONOS: Well. The child who plays\n"
+    .string "with stones. You did not even ask\l"
+    .string "the old fisher about the AURA?\p"
+    .string "No matter. Know this: ten stones,\n"
+    .string "ten gates. When the last one opens,\l"
+    .string "the world is set free, POKéMON\l"
+    .string "and all.$"
+
 Route12_Text_PierKronos2::
     .string "KRONOS: Keep collecting them,\n"
     .string "child. You do my work better than\l"

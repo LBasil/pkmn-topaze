@@ -12,14 +12,19 @@ Route12_EventScript_PierKronosTalk::
 
 Route12_EventScript_PierKronosScene::
 	lockall
-	goto_if_unset FLAG_PIER_LORE_DONE, Route12_EventScript_PierKronosSkip
+	goto_if_unset FLAG_AMETHYST_STONE_GIVEN, Route12_EventScript_PierKronosSkip
 	goto_if_set FLAG_PIER_KRONOS_DONE, Route12_EventScript_PierKronosSkip
 	clearflag FLAG_TEMP_5
 	addobject LOCALID_PIER_KRONOS
 	playse SE_PIN
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
+	goto_if_set FLAG_PIER_LORE_DONE, Route12_EventScript_PierKronosKnows
+	msgbox Route12_Text_PierKronos1b
+	goto Route12_EventScript_PierKronosNext
+Route12_EventScript_PierKronosKnows::
 	msgbox Route12_Text_PierKronos1
+Route12_EventScript_PierKronosNext::
 	closemessage
 	msgbox Route12_Text_PierKronos2
 	closemessage
@@ -59,7 +64,7 @@ Route12_EventScript_Snorlax::
 	msgbox Text_WantToUsePokeFlute, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route12_EventScript_DontUsePokeFlute
 	call EventScript_AwakenSnorlax
-	setwildbattle SPECIES_SNORLAX, 30
+	setwildbattle SPECIES_SNORLAX, 38
 	waitse
 	playmoncry SPECIES_SNORLAX, CRY_MODE_ENCOUNTER
 	delay 40

@@ -3109,3 +3109,45 @@ const u16 gTilesetPalettes_MtMoon[][16] =
 	INCBIN_U16("data/tilesets/secondary/mt_moon/palettes/14.gbapal"),
 	INCBIN_U16("data/tilesets/secondary/mt_moon/palettes/15.gbapal"),
 };
+
+const u32 gTilesetTiles_SilphCoHematek[] = INCBIN_U32("data/tilesets/secondary/silph_co_hematek/tiles.4bpp.lz");
+const u16 gTilesetPalettes_SilphCoHematek[][16] =
+{
+	INCBIN_U16("data/tilesets/secondary/silph_co_hematek/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_hematek/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_hematek/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_hematek/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_hematek/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_hematek/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_hematek/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_hematek/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_hematek/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_hematek/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_hematek/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_hematek/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_hematek/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_hematek/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_hematek/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_hematek/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_SilphCoQuartz[] = INCBIN_U32("data/tilesets/secondary/silph_co_quartz/tiles.4bpp.lz");
+const u16 gTilesetPalettes_SilphCoQuartz[][16] =
+{
+	INCBIN_U16("data/tilesets/secondary/silph_co_quartz/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_quartz/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_quartz/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_quartz/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_quartz/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_quartz/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_quartz/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_quartz/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_quartz/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_quartz/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_quartz/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_quartz/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_quartz/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_quartz/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_quartz/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/silph_co_quartz/palettes/15.gbapal"),
+};

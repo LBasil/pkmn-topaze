@@ -1346,7 +1346,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
+      "secondary_tileset": "gTileset_SilphCoQuartz",
       "border_filepath": "data/layouts/RocketHideout_B1F/border.bin",
       "blockdata_filepath": "data/layouts/RocketHideout_B1F/map.bin"
     },
@@ -1358,7 +1358,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
+      "secondary_tileset": "gTileset_SilphCoQuartz",
       "border_filepath": "data/layouts/RocketHideout_B2F/border.bin",
       "blockdata_filepath": "data/layouts/RocketHideout_B2F/map.bin"
     },
@@ -1370,7 +1370,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
+      "secondary_tileset": "gTileset_SilphCoQuartz",
       "border_filepath": "data/layouts/RocketHideout_B3F/border.bin",
       "blockdata_filepath": "data/layouts/RocketHideout_B3F/map.bin"
     },
@@ -1382,7 +1382,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
+      "secondary_tileset": "gTileset_SilphCoQuartz",
       "border_filepath": "data/layouts/RocketHideout_B4F/border.bin",
       "blockdata_filepath": "data/layouts/RocketHideout_B4F/map.bin"
     },
@@ -1394,7 +1394,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
+      "secondary_tileset": "gTileset_SilphCoHematek",
       "border_filepath": "data/layouts/SilphCo_1F/border.bin",
       "blockdata_filepath": "data/layouts/SilphCo_1F/map.bin"
     },
@@ -1406,7 +1406,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
+      "secondary_tileset": "gTileset_SilphCoHematek",
       "border_filepath": "data/layouts/SilphCo_2F/border.bin",
       "blockdata_filepath": "data/layouts/SilphCo_2F/map.bin"
     },
@@ -1418,7 +1418,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
+      "secondary_tileset": "gTileset_SilphCoHematek",
       "border_filepath": "data/layouts/SilphCo_3F/border.bin",
       "blockdata_filepath": "data/layouts/SilphCo_3F/map.bin"
     },
@@ -1430,7 +1430,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
+      "secondary_tileset": "gTileset_SilphCoHematek",
       "border_filepath": "data/layouts/SilphCo_4F/border.bin",
       "blockdata_filepath": "data/layouts/SilphCo_4F/map.bin"
     },
@@ -1442,7 +1442,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
+      "secondary_tileset": "gTileset_SilphCoHematek",
       "border_filepath": "data/layouts/SilphCo_5F/border.bin",
       "blockdata_filepath": "data/layouts/SilphCo_5F/map.bin"
     },
@@ -1454,7 +1454,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
+      "secondary_tileset": "gTileset_SilphCoHematek",
       "border_filepath": "data/layouts/SilphCo_6F/border.bin",
       "blockdata_filepath": "data/layouts/SilphCo_6F/map.bin"
     },
@@ -1466,7 +1466,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
+      "secondary_tileset": "gTileset_SilphCoHematek",
       "border_filepath": "data/layouts/SilphCo_7F/border.bin",
       "blockdata_filepath": "data/layouts/SilphCo_7F/map.bin"
     },
@@ -1478,7 +1478,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
+      "secondary_tileset": "gTileset_SilphCoHematek",
       "border_filepath": "data/layouts/SilphCo_8F/border.bin",
       "blockdata_filepath": "data/layouts/SilphCo_8F/map.bin"
     },
@@ -1490,7 +1490,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
+      "secondary_tileset": "gTileset_SilphCoHematek",
       "border_filepath": "data/layouts/SilphCo_9F/border.bin",
       "blockdata_filepath": "data/layouts/SilphCo_9F/map.bin"
     },
@@ -1502,7 +1502,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
+      "secondary_tileset": "gTileset_SilphCoHematek",
       "border_filepath": "data/layouts/SilphCo_10F/border.bin",
       "blockdata_filepath": "data/layouts/SilphCo_10F/map.bin"
     },
@@ -1514,7 +1514,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
+      "secondary_tileset": "gTileset_SilphCoHematek",
       "border_filepath": "data/layouts/SilphCo_11F/border.bin",
       "blockdata_filepath": "data/layouts/SilphCo_11F/map.bin"
     },
@@ -2499,7 +2499,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
+      "secondary_tileset": "gTileset_SilphCoQuartz",
       "border_filepath": "data/layouts/RocketHideout_Elevator/border.bin",
       "blockdata_filepath": "data/layouts/RocketHideout_Elevator/map.bin"
     },
@@ -2547,7 +2547,7 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SilphCo",
+      "secondary_tileset": "gTileset_SilphCoHematek",
       "border_filepath": "data/layouts/SilphCo_Elevator/border.bin",
       "blockdata_filepath": "data/layouts/SilphCo_Elevator/map.bin"
     },

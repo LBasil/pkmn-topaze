@@ -1637,3 +1637,25 @@ const struct Tileset gTileset_MtMoon =
     .metatileAttributes = gMetatileAttributes_MtMoon,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_SilphCoHematek =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SilphCoHematek,
+    .palettes = gTilesetPalettes_SilphCoHematek,
+    .metatiles = gMetatiles_SilphCoHematek,
+    .metatileAttributes = gMetatileAttributes_SilphCoHematek,
+    .callback = InitTilesetAnim_SilphCo,
+};
+
+const struct Tileset gTileset_SilphCoQuartz =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SilphCoQuartz,
+    .palettes = gTilesetPalettes_SilphCoQuartz,
+    .metatiles = gMetatiles_SilphCoQuartz,
+    .metatileAttributes = gMetatileAttributes_SilphCoQuartz,
+    .callback = InitTilesetAnim_SilphCo,
+};
