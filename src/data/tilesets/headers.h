@@ -1681,3 +1681,25 @@ const struct Tileset gTileset_FuchsiaSafari =
     .metatileAttributes = gMetatileAttributes_FuchsiaSafari,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GymNoxPri =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GymNoxPri,
+    .palettes = gTilesetPalettes_GymNoxPri,
+    .metatiles = gMetatiles_GymNoxPri,
+    .metatileAttributes = gMetatileAttributes_GymNoxPri,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GymNoxSec =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_GymNoxSec,
+    .palettes = gTilesetPalettes_GymNoxSec,
+    .metatiles = gMetatiles_GymNoxSec,
+    .metatileAttributes = gMetatileAttributes_GymNoxSec,
+    .callback = NULL,
+};

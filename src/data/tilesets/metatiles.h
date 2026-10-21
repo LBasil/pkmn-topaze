@@ -436,3 +436,9 @@ const u32 gMetatileAttributes_GeneralSafari[] = INCBIN_U32("data/tilesets/primar
 
 const u16 gMetatiles_FuchsiaSafari[] = INCBIN_U16("data/tilesets/secondary/fuchsia_safari/metatiles.bin");
 const u32 gMetatileAttributes_FuchsiaSafari[] = INCBIN_U32("data/tilesets/secondary/fuchsia_safari/metatile_attributes.bin");
+
+const u16 gMetatiles_GymNoxPri[] = INCBIN_U16("data/tilesets/primary/gym_nox_pri/metatiles.bin");
+const u32 gMetatileAttributes_GymNoxPri[] = INCBIN_U32("data/tilesets/primary/gym_nox_pri/metatile_attributes.bin");
+
+const u16 gMetatiles_GymNoxSec[] = INCBIN_U16("data/tilesets/secondary/gym_nox_sec/metatiles.bin");
+const u32 gMetatileAttributes_GymNoxSec[] = INCBIN_U32("data/tilesets/secondary/gym_nox_sec/metatile_attributes.bin");

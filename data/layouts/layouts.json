@@ -4590,6 +4590,18 @@
       "secondary_tileset": "gTileset_GymRustboroSec",
       "border_filepath": "data/layouts/GymEmRustboro/border.bin",
       "blockdata_filepath": "data/layouts/GymEmRustboro/map.bin"
+    },
+    {
+      "id": "LAYOUT_GYM_NOX",
+      "name": "GymNox_Layout",
+      "width": 11,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GymNoxPri",
+      "secondary_tileset": "gTileset_GymNoxSec",
+      "border_filepath": "data/layouts/GymNox/border.bin",
+      "blockdata_filepath": "data/layouts/GymNox/map.bin"
     }
   ]
 }
