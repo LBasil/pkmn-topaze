@@ -671,3 +671,8 @@ Generateurs (a ne lancer qu'une fois) : `tools/topaze/gen/ending3.py`, `ending2.
 - **Décors** : `docs/topaze/silph_recolor.py` (tour Hematek rouge sombre/ardoise `gTileset_SilphCoHematek` ; repaire Bourg Quartz bleu glace `gTileset_SilphCoQuartz`) ; `docs/topaze/safari_aged.py` (Safari fané : `gTileset_GeneralSafari` + `gTileset_FuchsiaSafari`).
 - **Safari** : dents au sol seulement après Selene (grunts retirés), message d'occupation une fois (`FLAG_SAFARI_OCC_WARNED`), sortie sans ré-entrée forcée (`VAR_TEMP_1`).
 - **Amethiolite** : arbres à couper cachés (flags 06-09 posés à l'arrivée), 3 panneaux retirés, porte arrière de la maison 2 supprimée ; dojo : les deux Kicklee/Tygnon ; route 13 : 2 panneaux retirés ; route 12 : la scène de Kronos se déclenche dès la pierre d'Amethiolite donnée (texte alternatif si le vieux pêcheur n'a pas parlé).
+
+## Retours Basil du 21/10 soir (build 21-10 19h45)
+- Surf: `waitfieldeffect FLDEFF_USE_SURF` avant `releaseall` (plus de relâche anticipée des contrôles).
+- Scène Hematek 11F: ombre, puis apparition visible de Brice/Flora/N avec texte explicatif.
+- Radar: cadeau unique (FLAG_GOT_POKE_RADAR); exp de rattrapage x2/x3 (Cmd_getexp); Route 21 variée; eaux plus fortes.
