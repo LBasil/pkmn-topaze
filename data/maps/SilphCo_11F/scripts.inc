@@ -111,11 +111,16 @@ SilphCo_11F_EventScript_BattleGiovanni::
 	clearflag FLAG_TEMP_1
 	clearflag FLAG_TEMP_2
 	clearflag FLAG_TEMP_3
+	fadescreen FADE_FROM_BLACK
+	msgbox SilphCo_11F_Text_ShadowPasses
+	closemessage
 	addobject LOCALID_SILPH_CO_11F_BRICE
 	addobject LOCALID_SILPH_CO_11F_FLORA
 	addobject LOCALID_SILPH_CO_11F_N
-	fadescreen FADE_FROM_BLACK
-	msgbox SilphCo_11F_Text_ShadowPasses
+	playse SE_DOOR
+	delay 30
+	msgbox SilphCo_11F_Text_HeroesStagger
+	closemessage
 	msgbox SilphCo_11F_Text_BossBrice
 	msgbox SilphCo_11F_Text_BossFlora
 	msgbox SilphCo_11F_Text_BossN

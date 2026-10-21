@@ -102,6 +102,12 @@ SilphCo_11F_Text_ShadowPasses::
     .string "glides past the windows.\p"
     .string "Then it is gone. Only silence.$"
 
+SilphCo_11F_Text_HeroesStagger::
+    .string "Three figures stagger out of the\n"
+    .string "ruined office: BRICE, FLORA and N,\p"
+    .string "the heroes of KANTO.\n"
+    .string "Their leader… was just beaten.$"
+
 SilphCo_11F_Text_BossBrice::
     .string "BRICE: …Not even a scratch on him.\n"
     .string "One POKéMON. He only used one.\p"
