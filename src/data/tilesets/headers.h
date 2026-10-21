@@ -1659,3 +1659,25 @@ const struct Tileset gTileset_SilphCoQuartz =
     .metatileAttributes = gMetatileAttributes_SilphCoQuartz,
     .callback = InitTilesetAnim_SilphCo,
 };
+
+const struct Tileset gTileset_GeneralSafari =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralSafari,
+    .palettes = gTilesetPalettes_GeneralSafari,
+    .metatiles = gMetatiles_GeneralSafari,
+    .metatileAttributes = gMetatileAttributes_GeneralSafari,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_FuchsiaSafari =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_FuchsiaSafari,
+    .palettes = gTilesetPalettes_FuchsiaSafari,
+    .metatiles = gMetatiles_FuchsiaSafari,
+    .metatileAttributes = gMetatileAttributes_FuchsiaSafari,
+    .callback = NULL,
+};

@@ -1573,8 +1573,8 @@
       "height": 36,
       "border_width": 3,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_FuchsiaCity",
+      "primary_tileset": "gTileset_GeneralSafari",
+      "secondary_tileset": "gTileset_FuchsiaSafari",
       "border_filepath": "data/layouts/SafariZone_Center/border.bin",
       "blockdata_filepath": "data/layouts/SafariZone_Center/map.bin"
     },
@@ -1585,8 +1585,8 @@
       "height": 35,
       "border_width": 3,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_FuchsiaCity",
+      "primary_tileset": "gTileset_GeneralSafari",
+      "secondary_tileset": "gTileset_FuchsiaSafari",
       "border_filepath": "data/layouts/SafariZone_East/border.bin",
       "blockdata_filepath": "data/layouts/SafariZone_East/map.bin"
     },
@@ -1597,8 +1597,8 @@
       "height": 40,
       "border_width": 3,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_FuchsiaCity",
+      "primary_tileset": "gTileset_GeneralSafari",
+      "secondary_tileset": "gTileset_FuchsiaSafari",
       "border_filepath": "data/layouts/SafariZone_North/border.bin",
       "blockdata_filepath": "data/layouts/SafariZone_North/map.bin"
     },
@@ -1609,8 +1609,8 @@
       "height": 36,
       "border_width": 3,
       "border_height": 2,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_FuchsiaCity",
+      "primary_tileset": "gTileset_GeneralSafari",
+      "secondary_tileset": "gTileset_FuchsiaSafari",
       "border_filepath": "data/layouts/SafariZone_West/border.bin",
       "blockdata_filepath": "data/layouts/SafariZone_West/map.bin"
     },

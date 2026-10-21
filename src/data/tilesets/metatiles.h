@@ -430,3 +430,9 @@ const u32 gMetatileAttributes_SilphCoHematek[] = INCBIN_U32("data/tilesets/secon
 
 const u16 gMetatiles_SilphCoQuartz[] = INCBIN_U16("data/tilesets/secondary/silph_co_quartz/metatiles.bin");
 const u32 gMetatileAttributes_SilphCoQuartz[] = INCBIN_U32("data/tilesets/secondary/silph_co_quartz/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralSafari[] = INCBIN_U16("data/tilesets/primary/general_safari/metatiles.bin");
+const u32 gMetatileAttributes_GeneralSafari[] = INCBIN_U32("data/tilesets/primary/general_safari/metatile_attributes.bin");
+
+const u16 gMetatiles_FuchsiaSafari[] = INCBIN_U16("data/tilesets/secondary/fuchsia_safari/metatiles.bin");
+const u32 gMetatileAttributes_FuchsiaSafari[] = INCBIN_U32("data/tilesets/secondary/fuchsia_safari/metatile_attributes.bin");

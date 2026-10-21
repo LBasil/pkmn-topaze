@@ -3151,3 +3151,45 @@ const u16 gTilesetPalettes_SilphCoQuartz[][16] =
 	INCBIN_U16("data/tilesets/secondary/silph_co_quartz/palettes/14.gbapal"),
 	INCBIN_U16("data/tilesets/secondary/silph_co_quartz/palettes/15.gbapal"),
 };
+
+const u32 gTilesetTiles_GeneralSafari[] = INCBIN_U32("data/tilesets/primary/general_safari/tiles.4bpp.lz");
+const u16 gTilesetPalettes_GeneralSafari[][16] =
+{
+	INCBIN_U16("data/tilesets/primary/general_safari/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_safari/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_safari/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_safari/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_safari/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_safari/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_safari/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_safari/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_safari/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_safari/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_safari/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_safari/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_safari/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_safari/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_safari/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_safari/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_FuchsiaSafari[] = INCBIN_U32("data/tilesets/secondary/fuchsia_safari/tiles.4bpp.lz");
+const u16 gTilesetPalettes_FuchsiaSafari[][16] =
+{
+	INCBIN_U16("data/tilesets/secondary/fuchsia_safari/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fuchsia_safari/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fuchsia_safari/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fuchsia_safari/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fuchsia_safari/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fuchsia_safari/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fuchsia_safari/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fuchsia_safari/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fuchsia_safari/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fuchsia_safari/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fuchsia_safari/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fuchsia_safari/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fuchsia_safari/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fuchsia_safari/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fuchsia_safari/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/fuchsia_safari/palettes/15.gbapal"),
+};
