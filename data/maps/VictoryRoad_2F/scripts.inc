@@ -4,8 +4,8 @@ VictoryRoad_2F_MapScripts::
 	.byte 0
 
 VictoryRoad_2F_OnLoad::
-	call_if_ne VAR_MAP_SCENE_VICTORY_ROAD_2F_BOULDER1, 100, VictoryRoad_2F_EventScript_SetRockBarrier1
-	call_if_ne VAR_MAP_SCENE_VICTORY_ROAD_2F_BOULDER2, 100, VictoryRoad_2F_EventScript_SetRockBarrier2
+	@ Topaze: les rochers sont déjà tombés sur les interrupteurs (passage ouvert)
+	@ Topaze: les rochers sont déjà tombés sur les interrupteurs (passage ouvert)
 	end
 
 VictoryRoad_2F_EventScript_SetRockBarrier1::

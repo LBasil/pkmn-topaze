@@ -4,7 +4,7 @@ VictoryRoad_1F_MapScripts::
 	.byte 0
 
 VictoryRoad_1F_OnLoad::
-	call_if_ne VAR_MAP_SCENE_VICTORY_ROAD_1F, 100, VictoryRoad_1F_EventScript_SetRockBarrier
+	@ Topaze: les rochers sont déjà tombés sur les interrupteurs (passage ouvert)
 	end
 
 VictoryRoad_1F_EventScript_SetRockBarrier::
@@ -35,7 +35,13 @@ VictoryRoad_1F_EventScript_FloorSwitchAlreadyPressed::
 
 VictoryRoad_1F_EventScript_Naomi::
 	trainerbattle_single TRAINER_COOLTRAINER_NAOMI, VictoryRoad_1F_Text_NaomiIntro, VictoryRoad_1F_Text_NaomiDefeat
-	msgbox VictoryRoad_1F_Text_NaomiPostBattle, MSGBOX_AUTOCLOSE
+	msgbox VictoryRoad_1F_Text_NaomiHeal
+	fadescreen FADE_TO_BLACK
+	playfanfare MUS_HEAL
+	waitfanfare
+	special HealPlayerParty
+	fadescreen FADE_FROM_BLACK
+	msgbox VictoryRoad_1F_Text_NaomiHealed, MSGBOX_AUTOCLOSE
 	end
 
 VictoryRoad_1F_EventScript_Rolando::

@@ -57,6 +57,24 @@ PokemonMansion_3F_EventScript_SeleneLeaves::
 
 PokemonMansion_3F_EventScript_Topaz::
 	lockall
+	goto_if_not_defeated TRAINER_AQUA_ADMIN_SHELLY, PokemonMansion_3F_EventScript_SeleneStops
+	goto PokemonMansion_3F_EventScript_TopazTake
+
+PokemonMansion_3F_EventScript_SeleneStops::
+	msgbox PokemonMansion_3F_Text_SeleneStops
+	closemessage
+	setvar VAR_LAST_TALKED, LOCALID_PLANT_SELENE
+	trainerbattle_no_intro TRAINER_AQUA_ADMIN_SHELLY, PokemonMansion_3F_Text_SeleneDefeat
+	msgbox PokemonMansion_3F_Text_SelenePost
+	closemessage
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_PLANT_SELENE
+	delay 20
+	fadescreen FADE_FROM_BLACK
+	releaseall
+	end
+
+PokemonMansion_3F_EventScript_TopazTake::
 	msgbox PokemonMansion_3F_Text_TopazPedestal
 	playfanfare MUS_OBTAIN_KEY_ITEM
 	message PokemonMansion_3F_Text_ObtainedTopaz

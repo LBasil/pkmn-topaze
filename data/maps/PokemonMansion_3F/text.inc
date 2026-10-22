@@ -66,3 +66,7 @@ PokemonMansion_3F_Text_TopazPedestal::
 
 PokemonMansion_3F_Text_ObtainedTopaz::
     .string "{PLAYER} obtained the TOPAZ!$"
+
+PokemonMansion_3F_Text_SeleneStops::
+    .string "SELENE: Hands off the pedestal!\n"
+    .string "You do not walk past ME, brat!$"

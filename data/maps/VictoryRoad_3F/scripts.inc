@@ -3,7 +3,7 @@ VictoryRoad_3F_MapScripts::
 	.byte 0
 
 VictoryRoad_3F_OnLoad::
-	call_if_ne VAR_MAP_SCENE_VICTORY_ROAD_3F, 100, VictoryRoad_3F_EventScript_SetRockBarrier
+	@ Topaze: les rochers sont déjà tombés sur les interrupteurs (passage ouvert)
 	end
 
 VictoryRoad_3F_EventScript_SetRockBarrier::

@@ -1,0 +1,20 @@
+# Lieux et systèmes encore à refaire (liste de Basil, 22/10)
+
+## Corrigé le 22/10 (build du soir)
+- Centrale (Manoir 3F) : Selene bloque la pierre ; toucher le piédestal sans l'avoir battue la déclenche.
+- Volcan B4F : Kronos/Gold/Silver déplacés d'une case (ils se tenaient dans la lave) ; texte de Kronos ne dit plus que le boss a la pierre (le joueur a le TOPAZ).
+- Route Victoire 1F/2F/3F : plus de barrières de rochers (rochers « déjà tombés sur les interrupteurs »).
+- Route Victoire 1F : Naomi devient une INFIRMIÈRE : combat, puis elle soigne à chaque discussion.
+- Arène de Chrondrolia : plus de clé secrète.
+
+## À refaire (non fait)
+1. **Chrondrolia entière** (« Cramois'Île ») : intérieur de la centrale = ancien Manoir (recolorer/reconcevoir), scène du maire, rythme.
+2. **Volcan Écume** : un seul rocher poussé sur 3 étages mène directement au boss (arrivée trop tôt) -> verrouiller / redessiner le parcours B1F-B4F.
+3. **Eau / lave** : transitions bizarres au Manoir (Pokémon Mansion) et à Cramois'Île : une partie inondée de lave (obsidienne), l'autre inchangée -> homogénéiser.
+4. **Route 23** : à refaire entièrement (contrôle des badges de la Ligue).
+5. **Route Victoire** : refonte complète (+ infirmières à d'autres endroits possibles).
+6. **POKéRADAR** : le refaire comme sur la capture de Basil (menu au choix : herbe / eau / etc., avec l'image du Pokémon).
+7. Bourg Quartz : repaire seulement recoloré.
+8. PNJ inutiles / mal placés routes 14, 15, haut de la route 13.
+9. Îles Sevii, Bill, grotte Azurée à déplacer, Ligue/Plateau, intérieurs de la Tour Pokémon, Route 5 et 9, Tunnel Roche, Tour Spinelle (niveaux).
+10. Sprites provisoires (Brice, Flora, N, Gold, Silver, Red, Kronos, Vesper, Selene, Hepha...).

@@ -47,11 +47,11 @@ SeafoamIslands_B4F_Text_KronosDefeat::
 
 SeafoamIslands_B4F_Text_KronosPost::
     .string "KRONOS: Look around. Nothing but\n"
-    .string "ash and me. The MASTER took the\p"
-    .string "stone before you ever set foot on\n"
-    .string "this island.\p"
-    .string "This place was a curtain. You and\n"
-    .string "your friends spent a day on it.\p"
+    .string "ash and me. SELENE failed, yes.\p"
+    .string "But the TOPAZ in your bag was only\n"
+    .string "the spark. The MASTER already took\p"
+    .string "what he needed from this volcano.\n"
+    .string "This place was a curtain.\p"
     .string "Time is the one thing nobody gets\n"
     .string "back. The MASTER only needs one\l"
     .string "more thing: a thousand-year star.\p"
