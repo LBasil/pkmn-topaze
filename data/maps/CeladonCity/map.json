@@ -319,7 +319,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "CeladonCity_Guard0",
-      "flag": "FLAG_HIDE_ARTICUNO"
+      "flag": "FLAG_0x14C"
     },
     {
       "type": "object",
@@ -333,7 +333,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "CeladonCity_Guard1",
-      "flag": "FLAG_HIDE_ARTICUNO"
+      "flag": "FLAG_0x14D"
     },
     {
       "type": "object",
@@ -347,7 +347,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "CeladonCity_Guard2",
-      "flag": "FLAG_HIDE_ARTICUNO"
+      "flag": "FLAG_0x14E"
     },
     {
       "type": "object",
@@ -361,7 +361,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "CeladonCity_Guard3",
-      "flag": "FLAG_HIDE_ARTICUNO"
+      "flag": "FLAG_0x14F"
     }
   ],
   "warp_events": [

@@ -27,7 +27,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "TwoIsland_CapeBrink_EmberDen_EventScript_T0",
-      "flag": "0"
+      "flag": "FLAG_0x13B"
     },
     {
       "type": "object",
@@ -41,7 +41,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "TwoIsland_CapeBrink_EmberDen_EventScript_T1",
-      "flag": "0"
+      "flag": "FLAG_0x13C"
     },
     {
       "type": "object",
@@ -55,7 +55,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "TwoIsland_CapeBrink_EmberDen_EventScript_T2",
-      "flag": "0"
+      "flag": "FLAG_0x13D"
     },
     {
       "type": "object",
@@ -69,7 +69,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "TwoIsland_CapeBrink_EmberDen_EventScript_T3",
-      "flag": "0"
+      "flag": "FLAG_0x13E"
     },
     {
       "type": "object",
@@ -83,7 +83,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "TwoIsland_CapeBrink_EmberDen_EventScript_T4",
-      "flag": "0"
+      "flag": "FLAG_0x13F"
     },
     {
       "local_id": "LOCALID_DEN_BEAST",

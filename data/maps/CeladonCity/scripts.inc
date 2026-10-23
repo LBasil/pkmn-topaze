@@ -56,6 +56,25 @@ CeladonCity_EventScript_RanFromArticuno::
 	end
 
 CeladonCity_OnTransition::
+	setflag FLAG_0x14C
+	setflag FLAG_0x14D
+	setflag FLAG_0x14E
+	setflag FLAG_0x14F
+	goto_if_set FLAG_FOUGHT_ARTICUNO, CeladonCity_Guards_Done
+	goto_if_unset FLAG_TOPAZE_POSTGAME, CeladonCity_Guards_Done
+	goto_if_defeated TRAINER_EXPERT_M, CeladonCity_Guards_Skip0
+	clearflag FLAG_0x14C
+CeladonCity_Guards_Skip0:
+	goto_if_defeated TRAINER_EXPERT_F, CeladonCity_Guards_Skip1
+	clearflag FLAG_0x14D
+CeladonCity_Guards_Skip1:
+	goto_if_defeated TRAINER_DRAGON_TAMER, CeladonCity_Guards_Skip2
+	clearflag FLAG_0x14E
+CeladonCity_Guards_Skip2:
+	goto_if_defeated TRAINER_NINJA_BOY, CeladonCity_Guards_Skip3
+	clearflag FLAG_0x14F
+CeladonCity_Guards_Skip3:
+CeladonCity_Guards_Done:
 	setworldmapflag FLAG_WORLD_MAP_CELADON_CITY
 	call_if_unset FLAG_FOUGHT_ARTICUNO, CeladonCity_EventScript_ShowArticuno
 	goto_if_set FLAG_HIDE_CELADON_ROCKETS, CeladonCity_EventScript_WestPoliceLeave
@@ -235,21 +254,53 @@ CeladonCity_EventScript_RefugeIdle::
 	end
 
 CeladonCity_Guard0::
-	trainerbattle_single TRAINER_EXPERT_M, CeladonCity_Text_Guard0Intro, CeladonCity_Text_Guard0Defeat
+	trainerbattle_single TRAINER_EXPERT_M, CeladonCity_Text_Guard0Intro, CeladonCity_Text_Guard0Defeat, CeladonCity_Guard0_Vanish
 	msgbox CeladonCity_Text_Guard0Post, MSGBOX_AUTOCLOSE
 	end
 
+CeladonCity_Guard0_Vanish::
+	msgbox CeladonCity_Text_Guard0Post, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_0x14C
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
 CeladonCity_Guard1::
-	trainerbattle_single TRAINER_EXPERT_F, CeladonCity_Text_Guard1Intro, CeladonCity_Text_Guard1Defeat
+	trainerbattle_single TRAINER_EXPERT_F, CeladonCity_Text_Guard1Intro, CeladonCity_Text_Guard1Defeat, CeladonCity_Guard1_Vanish
 	msgbox CeladonCity_Text_Guard1Post, MSGBOX_AUTOCLOSE
 	end
 
+CeladonCity_Guard1_Vanish::
+	msgbox CeladonCity_Text_Guard1Post, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_0x14D
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
 CeladonCity_Guard2::
-	trainerbattle_single TRAINER_DRAGON_TAMER, CeladonCity_Text_Guard2Intro, CeladonCity_Text_Guard2Defeat
+	trainerbattle_single TRAINER_DRAGON_TAMER, CeladonCity_Text_Guard2Intro, CeladonCity_Text_Guard2Defeat, CeladonCity_Guard2_Vanish
 	msgbox CeladonCity_Text_Guard2Post, MSGBOX_AUTOCLOSE
 	end
 
+CeladonCity_Guard2_Vanish::
+	msgbox CeladonCity_Text_Guard2Post, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_0x14E
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
 CeladonCity_Guard3::
-	trainerbattle_single TRAINER_NINJA_BOY, CeladonCity_Text_Guard3Intro, CeladonCity_Text_Guard3Defeat
+	trainerbattle_single TRAINER_NINJA_BOY, CeladonCity_Text_Guard3Intro, CeladonCity_Text_Guard3Defeat, CeladonCity_Guard3_Vanish
 	msgbox CeladonCity_Text_Guard3Post, MSGBOX_AUTOCLOSE
+	end
+
+CeladonCity_Guard3_Vanish::
+	msgbox CeladonCity_Text_Guard3Post, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_0x14F
+	removeobject VAR_LAST_TALKED
+	releaseall
 	end

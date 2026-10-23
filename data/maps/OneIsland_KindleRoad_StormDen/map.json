@@ -27,7 +27,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "OneIsland_KindleRoad_StormDen_EventScript_Acolyte1",
-      "flag": "0"
+      "flag": "FLAG_0x136"
     },
     {
       "type": "object",
@@ -41,7 +41,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "OneIsland_KindleRoad_StormDen_EventScript_Acolyte2",
-      "flag": "0"
+      "flag": "FLAG_0x137"
     },
     {
       "type": "object",
@@ -55,7 +55,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "OneIsland_KindleRoad_StormDen_EventScript_Acolyte3",
-      "flag": "0"
+      "flag": "FLAG_0x138"
     },
     {
       "type": "object",
@@ -69,7 +69,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "OneIsland_KindleRoad_StormDen_EventScript_Acolyte4",
-      "flag": "0"
+      "flag": "FLAG_0x139"
     },
     {
       "type": "object",
@@ -83,7 +83,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "OneIsland_KindleRoad_StormDen_EventScript_Oracle",
-      "flag": "0"
+      "flag": "FLAG_0x13A"
     },
     {
       "local_id": "LOCALID_STORM_DEN_RAIKOU",

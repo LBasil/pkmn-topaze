@@ -14,6 +14,25 @@ MtEmber_Summit_EventScript_TryRemoveMoltres::
 	return
 
 MtEmber_Summit_OnTransition::
+	setflag FLAG_0x148
+	setflag FLAG_0x149
+	setflag FLAG_0x14A
+	setflag FLAG_0x14B
+	goto_if_set FLAG_FOUGHT_MOLTRES, MtEmber_Summit_Guards_Done
+	goto_if_unset FLAG_TOPAZE_POSTGAME, MtEmber_Summit_Guards_Done
+	goto_if_defeated TRAINER_CHANNELER_5, MtEmber_Summit_Guards_Skip0
+	clearflag FLAG_0x148
+MtEmber_Summit_Guards_Skip0:
+	goto_if_defeated TRAINER_CHANNELER_6, MtEmber_Summit_Guards_Skip1
+	clearflag FLAG_0x149
+MtEmber_Summit_Guards_Skip1:
+	goto_if_defeated TRAINER_CHANNELER_7, MtEmber_Summit_Guards_Skip2
+	clearflag FLAG_0x14A
+MtEmber_Summit_Guards_Skip2:
+	goto_if_defeated TRAINER_CHANNELER_8, MtEmber_Summit_Guards_Skip3
+	clearflag FLAG_0x14B
+MtEmber_Summit_Guards_Skip3:
+MtEmber_Summit_Guards_Done:
 	call_if_unset FLAG_FOUGHT_MOLTRES, MtEmber_Summit_EventScript_ShowMoltres
 	end
 
@@ -59,21 +78,53 @@ MtEmber_Summit_EventScript_RanFromMoltres::
 	end
 
 MtEmber_Summit_Guard0::
-	trainerbattle_single TRAINER_CHANNELER_5, MtEmber_Summit_Text_Guard0Intro, MtEmber_Summit_Text_Guard0Defeat
+	trainerbattle_single TRAINER_CHANNELER_5, MtEmber_Summit_Text_Guard0Intro, MtEmber_Summit_Text_Guard0Defeat, MtEmber_Summit_Guard0_Vanish
 	msgbox MtEmber_Summit_Text_Guard0Post, MSGBOX_AUTOCLOSE
 	end
 
+MtEmber_Summit_Guard0_Vanish::
+	msgbox MtEmber_Summit_Text_Guard0Post, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_0x148
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
 MtEmber_Summit_Guard1::
-	trainerbattle_single TRAINER_CHANNELER_6, MtEmber_Summit_Text_Guard1Intro, MtEmber_Summit_Text_Guard1Defeat
+	trainerbattle_single TRAINER_CHANNELER_6, MtEmber_Summit_Text_Guard1Intro, MtEmber_Summit_Text_Guard1Defeat, MtEmber_Summit_Guard1_Vanish
 	msgbox MtEmber_Summit_Text_Guard1Post, MSGBOX_AUTOCLOSE
 	end
 
+MtEmber_Summit_Guard1_Vanish::
+	msgbox MtEmber_Summit_Text_Guard1Post, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_0x149
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
 MtEmber_Summit_Guard2::
-	trainerbattle_single TRAINER_CHANNELER_7, MtEmber_Summit_Text_Guard2Intro, MtEmber_Summit_Text_Guard2Defeat
+	trainerbattle_single TRAINER_CHANNELER_7, MtEmber_Summit_Text_Guard2Intro, MtEmber_Summit_Text_Guard2Defeat, MtEmber_Summit_Guard2_Vanish
 	msgbox MtEmber_Summit_Text_Guard2Post, MSGBOX_AUTOCLOSE
 	end
 
+MtEmber_Summit_Guard2_Vanish::
+	msgbox MtEmber_Summit_Text_Guard2Post, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_0x14A
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
 MtEmber_Summit_Guard3::
-	trainerbattle_single TRAINER_CHANNELER_8, MtEmber_Summit_Text_Guard3Intro, MtEmber_Summit_Text_Guard3Defeat
+	trainerbattle_single TRAINER_CHANNELER_8, MtEmber_Summit_Text_Guard3Intro, MtEmber_Summit_Text_Guard3Defeat, MtEmber_Summit_Guard3_Vanish
 	msgbox MtEmber_Summit_Text_Guard3Post, MSGBOX_AUTOCLOSE
+	end
+
+MtEmber_Summit_Guard3_Vanish::
+	msgbox MtEmber_Summit_Text_Guard3Post, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_0x14B
+	removeobject VAR_LAST_TALKED
+	releaseall
 	end

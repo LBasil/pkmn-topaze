@@ -14,6 +14,25 @@ PowerPlant_EventScript_TryRemoveStaticMon::
 	return
 
 PowerPlant_OnTransition::
+	setflag FLAG_0x144
+	setflag FLAG_0x145
+	setflag FLAG_0x146
+	setflag FLAG_0x147
+	goto_if_set FLAG_FOUGHT_ZAPDOS, PowerPlant_Guards_Done
+	goto_if_unset FLAG_TOPAZE_POSTGAME, PowerPlant_Guards_Done
+	goto_if_defeated TRAINER_CHANNELER_1, PowerPlant_Guards_Skip0
+	clearflag FLAG_0x144
+PowerPlant_Guards_Skip0:
+	goto_if_defeated TRAINER_CHANNELER_2, PowerPlant_Guards_Skip1
+	clearflag FLAG_0x145
+PowerPlant_Guards_Skip1:
+	goto_if_defeated TRAINER_CHANNELER_3, PowerPlant_Guards_Skip2
+	clearflag FLAG_0x146
+PowerPlant_Guards_Skip2:
+	goto_if_defeated TRAINER_CHANNELER_4, PowerPlant_Guards_Skip3
+	clearflag FLAG_0x147
+PowerPlant_Guards_Skip3:
+PowerPlant_Guards_Done:
 	setworldmapflag FLAG_WORLD_MAP_POWER_PLANT
 	call_if_unset FLAG_FOUGHT_ZAPDOS, PowerPlant_EventScript_ShowZapdos
 	call_if_unset FLAG_FOUGHT_POWER_PLANT_ELECTRODE_1, PowerPlant_EventScript_ShowElectrode1
@@ -123,21 +142,53 @@ PowerPlant_EventScript_FoughtElectrode2::
 	end
 
 PowerPlant_Guard0::
-	trainerbattle_single TRAINER_CHANNELER_1, PowerPlant_Text_Guard0Intro, PowerPlant_Text_Guard0Defeat
+	trainerbattle_single TRAINER_CHANNELER_1, PowerPlant_Text_Guard0Intro, PowerPlant_Text_Guard0Defeat, PowerPlant_Guard0_Vanish
 	msgbox PowerPlant_Text_Guard0Post, MSGBOX_AUTOCLOSE
 	end
 
+PowerPlant_Guard0_Vanish::
+	msgbox PowerPlant_Text_Guard0Post, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_0x144
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
 PowerPlant_Guard1::
-	trainerbattle_single TRAINER_CHANNELER_2, PowerPlant_Text_Guard1Intro, PowerPlant_Text_Guard1Defeat
+	trainerbattle_single TRAINER_CHANNELER_2, PowerPlant_Text_Guard1Intro, PowerPlant_Text_Guard1Defeat, PowerPlant_Guard1_Vanish
 	msgbox PowerPlant_Text_Guard1Post, MSGBOX_AUTOCLOSE
 	end
 
+PowerPlant_Guard1_Vanish::
+	msgbox PowerPlant_Text_Guard1Post, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_0x145
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
 PowerPlant_Guard2::
-	trainerbattle_single TRAINER_CHANNELER_3, PowerPlant_Text_Guard2Intro, PowerPlant_Text_Guard2Defeat
+	trainerbattle_single TRAINER_CHANNELER_3, PowerPlant_Text_Guard2Intro, PowerPlant_Text_Guard2Defeat, PowerPlant_Guard2_Vanish
 	msgbox PowerPlant_Text_Guard2Post, MSGBOX_AUTOCLOSE
 	end
 
+PowerPlant_Guard2_Vanish::
+	msgbox PowerPlant_Text_Guard2Post, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_0x146
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
 PowerPlant_Guard3::
-	trainerbattle_single TRAINER_CHANNELER_4, PowerPlant_Text_Guard3Intro, PowerPlant_Text_Guard3Defeat
+	trainerbattle_single TRAINER_CHANNELER_4, PowerPlant_Text_Guard3Intro, PowerPlant_Text_Guard3Defeat, PowerPlant_Guard3_Vanish
 	msgbox PowerPlant_Text_Guard3Post, MSGBOX_AUTOCLOSE
+	end
+
+PowerPlant_Guard3_Vanish::
+	msgbox PowerPlant_Text_Guard3Post, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_0x147
+	removeobject VAR_LAST_TALKED
+	releaseall
 	end
