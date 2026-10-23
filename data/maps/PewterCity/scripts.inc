@@ -940,18 +940,19 @@ PewterCity_EventScript_CellWitnessDone::
 
 PewterCity_Text_CellWitness::
 	.string "Do not stare at that house. Two"
-	.string "strangers in black moved in last week.\p"
-	.string "The shutters stay shut, day and night."
+	.string "strangers in black moved in last"
+	.string "week.\p"
+	.string "The shutters stay shut all day."
 	.string "Crates go in. Nothing comes out.\p"
-	.string "The police call it a private matter."
+	.string "Police call it a private matter."
 	.string "I call it the start of something.$"
 
 PewterCity_Text_CellWitnessHalf::
 	.string "You went in? Then you saw it too.\p"
-	.string "There is something in that house worth"
+	.string "That house holds something worth"
 	.string "reading. Look near the back wall.$"
 
 PewterCity_Text_CellWitnessDone::
 	.string "The shutters are open again.\p"
 	.string "You know, those crates were labeled"
-	.string "BRANCH FOUR. Four. Think about that.$"
+	.string "BRANCH FOUR. Think about that.$"

@@ -310,9 +310,13 @@
 #define FLAG_0x117               0x117
 #define FLAG_TOPAZE_CELL_PEWTER  FLAG_0x117 // quete annexe Pyropia: cellule Onybris nettoyee, memo lu
 #define FLAG_0x118               0x118
+#define FLAG_TOPAZE_CELL_CERULEAN FLAG_0x118 // quete annexe Tourmalia
 #define FLAG_0x119               0x119
+#define FLAG_TOPAZE_CELL_VERMILION FLAG_0x119 // quete annexe Apatia
 #define FLAG_0x11A               0x11A
+#define FLAG_TOPAZE_CELL_LAVENDER FLAG_0x11A // quete annexe Spinellia
 #define FLAG_0x11B               0x11B
+#define FLAG_TOPAZE_CELL_FUCHSIA FLAG_0x11B // quete annexe Parmanie
 #define FLAG_0x11C               0x11C
 #define FLAG_0x11D               0x11D
 #define FLAG_0x11E               0x11E

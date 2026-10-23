@@ -313,3 +313,37 @@ CeruleanCity_EventScript_RefugeIdle::
 	msgbox CeruleanCity_Text_RefIdle
 	release
 	end
+
+CeruleanCity_EventScript_CellWitness::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_CELL_CERULEAN, CeruleanCity_EventScript_CellWitnessDone
+	goto_if_defeated TRAINER_RICH_BOY, CeruleanCity_EventScript_CellWitnessHalf
+	msgbox CeruleanCity_Text_CellWitness, MSGBOX_DEFAULT
+	release
+	end
+
+CeruleanCity_EventScript_CellWitnessHalf::
+	msgbox CeruleanCity_Text_CellWitnessHalf, MSGBOX_DEFAULT
+	release
+	end
+
+CeruleanCity_EventScript_CellWitnessDone::
+	msgbox CeruleanCity_Text_CellWitnessDone, MSGBOX_DEFAULT
+	release
+	end
+
+CeruleanCity_Text_CellWitness::
+	.string "The police watch the north road all"
+	.string "day. Nobody watches that house.\p"
+	.string "Its lights burn at night and a new"
+	.string "lock appears on the door each week.$"
+
+CeruleanCity_Text_CellWitnessHalf::
+	.string "You went in? Then look at the wall"
+	.string "behind them. They write it down.$"
+
+CeruleanCity_Text_CellWitnessDone::
+	.string "The lights are normal again.\p"
+	.string "A pity. They paid for every lock"
+	.string "in cash. Who has that much cash?$"

@@ -104,3 +104,37 @@ LavenderTown_EventScript_RefugeIdle::
 	msgbox LavenderTown_Text_RefIdle
 	release
 	end
+
+LavenderTown_EventScript_CellWitness::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_CELL_LAVENDER, LavenderTown_EventScript_CellWitnessDone
+	goto_if_defeated TRAINER_SCHOOL_KID_M, LavenderTown_EventScript_CellWitnessHalf
+	msgbox LavenderTown_Text_CellWitness, MSGBOX_DEFAULT
+	release
+	end
+
+LavenderTown_EventScript_CellWitnessHalf::
+	msgbox LavenderTown_Text_CellWitnessHalf, MSGBOX_DEFAULT
+	release
+	end
+
+LavenderTown_EventScript_CellWitnessDone::
+	msgbox LavenderTown_Text_CellWitnessDone, MSGBOX_DEFAULT
+	release
+	end
+
+LavenderTown_Text_CellWitness::
+	.string "The tower bell rang by itself last"
+	.string "night. Nobody climbed it.\p"
+	.string "Since then, that house keeps its"
+	.string "curtains shut, even at noon.$"
+
+LavenderTown_Text_CellWitnessHalf::
+	.string "You went in? Then you saw the set."
+	.string "Look behind the crates.$"
+
+LavenderTown_Text_CellWitnessDone::
+	.string "The bell is quiet again.\p"
+	.string "I think the dead are relieved. Or"
+	.string "they are listening to someone else.$"

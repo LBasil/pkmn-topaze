@@ -12503,4 +12503,123 @@ static const struct TrainerMonNoItemDefaultMoves sParty_EchoSilver[] = {
         .species = SPECIES_FERALIGATR,
     },
 };
-
+static const struct TrainerMonNoItemDefaultMoves sParty_Cell_Guitarist[] = {
+    {
+        .iv = 30,
+        .lvl = 14,
+        .species = SPECIES_EKANS,
+    },
+    {
+        .iv = 30,
+        .lvl = 14,
+        .species = SPECIES_ZUBAT,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_Cell_Kindler[] = {
+    {
+        .iv = 30,
+        .lvl = 15,
+        .species = SPECIES_KOFFING,
+    },
+    {
+        .iv = 30,
+        .lvl = 15,
+        .species = SPECIES_GRIMER,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_Cell_RichBoy[] = {
+    {
+        .iv = 30,
+        .lvl = 20,
+        .species = SPECIES_GRIMER,
+    },
+    {
+        .iv = 30,
+        .lvl = 20,
+        .species = SPECIES_ZUBAT,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_Cell_HexManiac[] = {
+    {
+        .iv = 30,
+        .lvl = 21,
+        .species = SPECIES_KOFFING,
+    },
+    {
+        .iv = 30,
+        .lvl = 21,
+        .species = SPECIES_EKANS,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_Cell_BugManiac[] = {
+    {
+        .iv = 30,
+        .lvl = 26,
+        .species = SPECIES_ARBOK,
+    },
+    {
+        .iv = 30,
+        .lvl = 26,
+        .species = SPECIES_GOLBAT,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_Cell_Interviewer[] = {
+    {
+        .iv = 30,
+        .lvl = 27,
+        .species = SPECIES_KOFFING,
+    },
+    {
+        .iv = 30,
+        .lvl = 27,
+        .species = SPECIES_MUK,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_Cell_SchoolKidM[] = {
+    {
+        .iv = 30,
+        .lvl = 29,
+        .species = SPECIES_HAUNTER,
+    },
+    {
+        .iv = 30,
+        .lvl = 29,
+        .species = SPECIES_GOLBAT,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_Cell_SchoolKidF[] = {
+    {
+        .iv = 30,
+        .lvl = 30,
+        .species = SPECIES_WEEZING,
+    },
+    {
+        .iv = 30,
+        .lvl = 30,
+        .species = SPECIES_ARBOK,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_Cell_PokefanM[] = {
+    {
+        .iv = 30,
+        .lvl = 35,
+        .species = SPECIES_ARBOK,
+    },
+    {
+        .iv = 30,
+        .lvl = 35,
+        .species = SPECIES_WEEZING,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_Cell_PokefanF[] = {
+    {
+        .iv = 30,
+        .lvl = 36,
+        .species = SPECIES_CROBAT,
+    },
+    {
+        .iv = 30,
+        .lvl = 36,
+        .species = SPECIES_MUK,
+    },
+};

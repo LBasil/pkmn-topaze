@@ -95,7 +95,7 @@ PewterCity_House3_Text_CellMemo::
 	.string "POKé BALLS, forty uniforms.\p"
 	.string "Next pickup: after the school job."
 	.string "Report to V.\p"
-	.string "Under it, a black ring with a red dot."
+	.string "Under it, a black ring, a red dot."
 	.string "Under the note, 2 RARE CANDY.$"
 
 PewterCity_House3_Text_CellMemoLocked::

@@ -418,3 +418,37 @@ VermilionCity_EventScript_FerryHint::
 	msgbox VermilionCity_Text_FerryHint
 	releaseall
 	end
+
+VermilionCity_EventScript_CellWitness::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_CELL_VERMILION, VermilionCity_EventScript_CellWitnessDone
+	goto_if_defeated TRAINER_BUG_MANIAC, VermilionCity_EventScript_CellWitnessHalf
+	msgbox VermilionCity_Text_CellWitness, MSGBOX_DEFAULT
+	release
+	end
+
+VermilionCity_EventScript_CellWitnessHalf::
+	msgbox VermilionCity_Text_CellWitnessHalf, MSGBOX_DEFAULT
+	release
+	end
+
+VermilionCity_EventScript_CellWitnessDone::
+	msgbox VermilionCity_Text_CellWitnessDone, MSGBOX_DEFAULT
+	release
+	end
+
+VermilionCity_Text_CellWitness::
+	.string "The harbor is busy, so nobody asks"
+	.string "who rents that house.\p"
+	.string "But dockers talk. Crates arrive at"
+	.string "night and ship out before dawn.$"
+
+VermilionCity_Text_CellWitnessHalf::
+	.string "You got in. Good. The back wall"
+	.string "is where they keep their count.$"
+
+VermilionCity_Text_CellWitnessDone::
+	.string "The night ships stopped.\p"
+	.string "Funny. The captain looks relieved"
+	.string "and worried at once.$"

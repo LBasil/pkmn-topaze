@@ -259,3 +259,37 @@ FuchsiaCity_EventScript_LooseMonPsyduck::
 	waitmoncry
 	release
 	end
+
+FuchsiaCity_EventScript_CellWitness::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_CELL_FUCHSIA, FuchsiaCity_EventScript_CellWitnessDone
+	goto_if_defeated TRAINER_POKEFAN_M, FuchsiaCity_EventScript_CellWitnessHalf
+	msgbox FuchsiaCity_Text_CellWitness, MSGBOX_DEFAULT
+	release
+	end
+
+FuchsiaCity_EventScript_CellWitnessHalf::
+	msgbox FuchsiaCity_Text_CellWitnessHalf, MSGBOX_DEFAULT
+	release
+	end
+
+FuchsiaCity_EventScript_CellWitnessDone::
+	msgbox FuchsiaCity_Text_CellWitnessDone, MSGBOX_DEFAULT
+	release
+	end
+
+FuchsiaCity_Text_CellWitness::
+	.string "Strange. The keeper of that house"
+	.string "left town without a word.\p"
+	.string "Now black coats walk in and out as"
+	.string "if they owned the street.$"
+
+FuchsiaCity_Text_CellWitnessHalf::
+	.string "You went in? Then read what they"
+	.string "left on the north wall.$"
+
+FuchsiaCity_Text_CellWitnessDone::
+	.string "The street feels like ours again.\p"
+	.string "Though I count them everywhere now."
+	.string "In every town. Do you notice too?$"
