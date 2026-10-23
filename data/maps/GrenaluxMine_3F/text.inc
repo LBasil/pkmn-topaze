@@ -1,3 +1,23 @@
+GrenaluxMine_3F_Text_Enter::
+    .string "It is silent here. No pickaxes,\n"
+    .string "no lamps, no wind.\p"
+    .string "The PENDANT is warm against\n"
+    .string "your chest, as if it knew this\l"
+    .string "place.$"
+
+GrenaluxMine_3F_Text_Whisper::
+    .string "…{PLAYER}…\p"
+    .string "A voice, thin as dust, drifts out\n"
+    .string "of the rock. It does not come\l"
+    .string "from any direction.\p"
+    .string "…remember…$"
+
+GrenaluxMine_3F_Text_Glow::
+    .string "The garnet veins in the wall flare\n"
+    .string "one after another, like stars\l"
+    .string "being lit by a hand you cannot see.\p"
+    .string "Whatever sleeps ahead is awake.$"
+
 GrenaluxMine_3F_Text_PendantGlows::
     .string "Your PENDANT glows warm and\n"
     .string "bright.\p"

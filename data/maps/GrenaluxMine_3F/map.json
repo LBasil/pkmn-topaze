@@ -71,8 +71,8 @@
       "x": 5,
       "y": 10,
       "elevation": 0,
-      "dest_map": "MAP_GRENALUX_MINE_2F",
-      "dest_warp_id": "6"
+      "dest_map": "MAP_PALLET_TOWN",
+      "dest_warp_id": "4"
     }
   ],
   "coord_events": [
@@ -84,6 +84,24 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "GrenaluxMine_3F_EventScript_Truth"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 6,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "GrenaluxMine_3F_EventScript_Whisper"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 8,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "GrenaluxMine_3F_EventScript_Glow"
     }
   ],
   "bg_events": []

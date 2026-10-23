@@ -1,6 +1,44 @@
 GrenaluxMine_3F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, GrenaluxMine_3F_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, GrenaluxMine_3F_OnFrame
 	.byte 0
+
+GrenaluxMine_3F_OnFrame::
+	map_script_2 VAR_TEMP_3, 0, GrenaluxMine_3F_EventScript_Enter
+	.2byte 0
+
+@ Topaze: la mine est maintenant courte et muette : trois moments (entree, murmure, lueur) avant la verite
+GrenaluxMine_3F_EventScript_Enter::
+	lockall
+	setvar VAR_TEMP_3, 1
+	goto_if_set FLAG_MEW_FLED, EventScript_ReleaseEnd
+	msgbox GrenaluxMine_3F_Text_Enter
+	closemessage
+	releaseall
+	end
+
+GrenaluxMine_3F_EventScript_Whisper::
+	lockall
+	setvar VAR_TEMP_1, 1
+	goto_if_set FLAG_MEW_FLED, EventScript_ReleaseEnd
+	playse SE_PIN
+	special ShakeScreen
+	msgbox GrenaluxMine_3F_Text_Whisper
+	closemessage
+	releaseall
+	end
+
+GrenaluxMine_3F_EventScript_Glow::
+	lockall
+	setvar VAR_TEMP_2, 1
+	goto_if_set FLAG_MEW_FLED, EventScript_ReleaseEnd
+	fadescreen FADE_TO_WHITE
+	delay 20
+	fadescreen FADE_FROM_WHITE
+	msgbox GrenaluxMine_3F_Text_Glow
+	closemessage
+	releaseall
+	end
 
 GrenaluxMine_3F_OnTransition::
 	setflag FLAG_HIDE_MINE_MEW
