@@ -4717,48 +4717,41 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BossGiovanni2[] = {
     { .iv = 100, .lvl = 43, .species = SPECIES_NIDOKING },
 };
 
-static const struct TrainerMonItemCustomMoves sParty_LeaderGiovanni[] = { // Topaze: Hepha, equipe Acier
-    {
-        .iv = 90,
-        .lvl = 52,
-        .species = SPECIES_MAGNETON,
-        .heldItem = ITEM_MAGNET,
-        .moves = {MOVE_THUNDERBOLT, MOVE_FLASH_CANNON, MOVE_TRI_ATTACK, MOVE_THUNDER_WAVE},
-    },
-    {
-        .iv = 90,
-        .lvl = 53,
-        .species = SPECIES_FORRETRESS,
-        .heldItem = ITEM_LEFTOVERS,
-        .moves = {MOVE_GYRO_BALL, MOVE_EXPLOSION, MOVE_SPIKES, MOVE_EARTHQUAKE},
-    },
-    {
-        .iv = 90,
-        .lvl = 54,
-        .species = SPECIES_SKARMORY,
-        .heldItem = ITEM_SHARP_BEAK,
-        .moves = {MOVE_STEEL_WING, MOVE_DRILL_PECK, MOVE_SWORDS_DANCE, MOVE_TOXIC},
-    },
+static const struct TrainerMonItemCustomMoves sParty_LeaderGiovanni[] = { // Topaze: Hepha, Gen 1 species only
     {
         .iv = 90,
         .lvl = 55,
-        .species = SPECIES_SCIZOR,
-        .heldItem = ITEM_SILVER_POWDER,
-        .moves = {MOVE_BULLET_PUNCH, MOVE_X_SCISSOR, MOVE_SWORDS_DANCE, MOVE_FALSE_SWIPE},
+        .species = SPECIES_MAGNETON,
+        .heldItem = ITEM_MAGNET,
+        .moves = {MOVE_THUNDERBOLT, MOVE_TRI_ATTACK, MOVE_SWIFT, MOVE_THUNDER_WAVE},
     },
     {
         .iv = 90,
         .lvl = 56,
-        .species = SPECIES_STEELIX,
-        .heldItem = ITEM_HARD_STONE,
-        .moves = {MOVE_IRON_TAIL, MOVE_EARTHQUAKE, MOVE_STONE_EDGE, MOVE_CRUNCH},
+        .species = SPECIES_ARBOK,
+        .heldItem = ITEM_SITRUS_BERRY,
+        .moves = {MOVE_SLUDGE_BOMB, MOVE_IRON_TAIL, MOVE_CRUNCH, MOVE_SCREECH},
+    },
+    {
+        .iv = 90,
+        .lvl = 57,
+        .species = SPECIES_MACHAMP,
+        .heldItem = ITEM_BLACK_BELT,
+        .moves = {MOVE_CROSS_CHOP, MOVE_IRON_TAIL, MOVE_ROCK_SLIDE, MOVE_BRICK_BREAK},
     },
     {
         .iv = 90,
         .lvl = 58,
-        .species = SPECIES_AGGRON,
+        .species = SPECIES_GOLEM,
+        .heldItem = ITEM_METAL_COAT,
+        .moves = {MOVE_EARTHQUAKE, MOVE_FLAMETHROWER, MOVE_ROCK_SLIDE, MOVE_IRON_TAIL},
+    },
+    {
+        .iv = 90,
+        .lvl = 60,
+        .species = SPECIES_BLASTOISE,
         .heldItem = ITEM_LEFTOVERS,
-        .moves = {MOVE_IRON_HEAD, MOVE_EARTHQUAKE, MOVE_STONE_EDGE, MOVE_ROCK_SLIDE},
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_IRON_TAIL, MOVE_HYDRO_PUMP},
     },
 };
 
