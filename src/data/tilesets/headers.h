@@ -1703,3 +1703,69 @@ const struct Tileset gTileset_GymNoxSec =
     .metatileAttributes = gMetatileAttributes_GymNoxSec,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralEcho123 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralEcho123,
+    .palettes = gTilesetPalettes_GeneralEcho123,
+    .metatiles = gMetatiles_GeneralEcho123,
+    .metatileAttributes = gMetatileAttributes_GeneralEcho123,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_SeviiEcho123 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiEcho123,
+    .palettes = gTilesetPalettes_SeviiEcho123,
+    .metatiles = gMetatiles_SeviiEcho123,
+    .metatileAttributes = gMetatileAttributes_SeviiEcho123,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GeneralEcho45 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralEcho45,
+    .palettes = gTilesetPalettes_GeneralEcho45,
+    .metatiles = gMetatiles_GeneralEcho45,
+    .metatileAttributes = gMetatileAttributes_GeneralEcho45,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_SeviiEcho45 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiEcho45,
+    .palettes = gTilesetPalettes_SeviiEcho45,
+    .metatiles = gMetatiles_SeviiEcho45,
+    .metatileAttributes = gMetatileAttributes_SeviiEcho45,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GeneralEcho67 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralEcho67,
+    .palettes = gTilesetPalettes_GeneralEcho67,
+    .metatiles = gMetatiles_GeneralEcho67,
+    .metatileAttributes = gMetatileAttributes_GeneralEcho67,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_SeviiEcho67 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiEcho67,
+    .palettes = gTilesetPalettes_SeviiEcho67,
+    .metatiles = gMetatiles_SeviiEcho67,
+    .metatileAttributes = gMetatileAttributes_SeviiEcho67,
+    .callback = NULL,
+};

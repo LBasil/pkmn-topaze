@@ -442,3 +442,21 @@ const u32 gMetatileAttributes_GymNoxPri[] = INCBIN_U32("data/tilesets/primary/gy
 
 const u16 gMetatiles_GymNoxSec[] = INCBIN_U16("data/tilesets/secondary/gym_nox_sec/metatiles.bin");
 const u32 gMetatileAttributes_GymNoxSec[] = INCBIN_U32("data/tilesets/secondary/gym_nox_sec/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralEcho123[] = INCBIN_U16("data/tilesets/primary/general_echo123/metatiles.bin");
+const u32 gMetatileAttributes_GeneralEcho123[] = INCBIN_U32("data/tilesets/primary/general_echo123/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiEcho123[] = INCBIN_U16("data/tilesets/secondary/sevii_echo123/metatiles.bin");
+const u32 gMetatileAttributes_SeviiEcho123[] = INCBIN_U32("data/tilesets/secondary/sevii_echo123/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralEcho45[] = INCBIN_U16("data/tilesets/primary/general_echo45/metatiles.bin");
+const u32 gMetatileAttributes_GeneralEcho45[] = INCBIN_U32("data/tilesets/primary/general_echo45/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiEcho45[] = INCBIN_U16("data/tilesets/secondary/sevii_echo45/metatiles.bin");
+const u32 gMetatileAttributes_SeviiEcho45[] = INCBIN_U32("data/tilesets/secondary/sevii_echo45/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralEcho67[] = INCBIN_U16("data/tilesets/primary/general_echo67/metatiles.bin");
+const u32 gMetatileAttributes_GeneralEcho67[] = INCBIN_U32("data/tilesets/primary/general_echo67/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiEcho67[] = INCBIN_U16("data/tilesets/secondary/sevii_echo67/metatiles.bin");
+const u32 gMetatileAttributes_SeviiEcho67[] = INCBIN_U32("data/tilesets/secondary/sevii_echo67/metatile_attributes.bin");
