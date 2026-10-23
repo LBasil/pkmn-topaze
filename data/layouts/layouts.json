@@ -4582,8 +4582,8 @@
     {
       "id": "LAYOUT_GYM_EM_RUSTBORO",
       "name": "GymEmRustboro_Layout",
-      "width": 11,
-      "height": 20,
+      "width": 17,
+      "height": 22,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_GymRustboroPri",
