@@ -320,6 +320,8 @@
 #define FLAG_0x11C               0x11C
 #define FLAG_TOPAZE_LAIR_ENTERED FLAG_0x11C // premiere arrivee dans le repaire de la Route Victoire (scene d'entree)
 #define FLAG_0x11D               0x11D
+#define FLAG_TOPAZE_LEDGER_CELADON FLAG_0x11D // livre de comptes du repaire de Bourg Quartz (branche 3)
+#define FLAG_TOPAZE_VAULT_ENTERED FLAG_0x11E // premiere entree dans le repaire de Bourg Quartz
 #define FLAG_0x11E               0x11E
 #define FLAG_0x11F               0x11F
 #define FLAG_0x120               0x120

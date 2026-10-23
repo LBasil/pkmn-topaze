@@ -61,3 +61,15 @@ RocketHideout_B1F_EventScript_RemoveBarrier::
 	setmetatile 20, 21, METATILE_SilphCo_HideoutFloor_ShadeFull, 0
 	setmetatile 21, 21, METATILE_SilphCo_HideoutFloor, 0
 	return
+
+@ Topaze: scene d'entree du repaire de Bourg Quartz (premiere fois)
+RocketHideout_B1F_EventScript_Entry::
+	lockall
+	setvar VAR_TEMP_0, 1
+	goto_if_set FLAG_TOPAZE_VAULT_ENTERED, RocketHideout_B1F_EventScript_EntryEnd
+	setflag FLAG_TOPAZE_VAULT_ENTERED
+	msgbox RocketHideout_B1F_Text_Entry1
+	msgbox RocketHideout_B1F_Text_Entry2
+RocketHideout_B1F_EventScript_EntryEnd::
+	releaseall
+	end

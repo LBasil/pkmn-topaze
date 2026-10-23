@@ -10,3 +10,17 @@ RocketHideout_B3F_EventScript_Grunt2::
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_15, RocketHideout_B3F_Text_Grunt2Intro, RocketHideout_B3F_Text_Grunt2Defeat
 	msgbox RocketHideout_B3F_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
 	end
+
+RocketHideout_B3F_EventScript_Ledger::
+	lockall
+	goto_if_set FLAG_TOPAZE_LEDGER_CELADON, RocketHideout_B3F_EventScript_LedgerDone
+	msgbox RocketHideout_B3F_Text_Ledger, MSGBOX_DEFAULT
+	giveitem ITEM_PP_MAX, 1
+	setflag FLAG_TOPAZE_LEDGER_CELADON
+	releaseall
+	end
+
+RocketHideout_B3F_EventScript_LedgerDone::
+	msgbox RocketHideout_B3F_Text_LedgerDone, MSGBOX_DEFAULT
+	releaseall
+	end

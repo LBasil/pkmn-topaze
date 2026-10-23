@@ -119,3 +119,6 @@ Avant : on parcourait les 3 étages et on était bloqué pile à la sortie. Main
 - Scène d'entrée au repaire (première fois, flag 0x11C `FLAG_TOPAZE_LAIR_ENTERED`) : haut-parleur « laissez-le entrer, le maître veut qu'il voie tout ».
 - Le boss battu, les entrées du repaire ramènent à la 1F (échelle (18,1)), l'éboulis a disparu : on continue 2F, 3F puis la sortie, qui n'est plus bloquée (mur de brume et échelle de la 2F supprimés).
 - Testé en émulateur : blocage, échelle, scène d'entrée, éboulis levé après `VR_BOSS_DONE`.
+
+## Repaire de Bourg Quartz (23/10)
+`docs/topaze/celadon_hideout_redo.py` : histoire Onybris cohérente (plus de « ancien QG Rocket », « Mt Moon »…). Le repaire = **branche n°3 du réseau, la branche de l'argent** (le casino blanchit le butin). Textes de tous les sbires et de Vesper réécrits ; scène d'entrée à la B1F (flag 0x11E) ; **livre de comptes** à la B3F en (8,8) : « BRANCH 3 of 7 », donne 1 PP Max une fois (flag 0x11D) ; l'indice mène vers la clé de l'ascenseur. Disposition des 4 étages (labyrinthe à flèches, ascenseur à clé) inchangée : elle fonctionne et reste lisible. Le plan reste à redessiner si Basil le souhaite.

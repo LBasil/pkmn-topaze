@@ -1,8 +1,9 @@
 RocketHideout_B4F_Text_GiovanniIntro::
     .string "VESPER: So you are the brat who\n"
     .string "keeps wrecking my plans.\p"
-    .string "This old ROCKET base suits TEAM\n"
-    .string "ONYBRIS. Dark, deep, forgotten.\p"
+    .string "This vault suits TEAM ONYBRIS.\n"
+    .string "Dark, deep, and nobody asks where\l"
+    .string "the money comes from.\p"
     .string "Perfect for hiding what we take\n"
     .string "from this town. Now, scram!$"
 
@@ -22,7 +23,7 @@ RocketHideout_B4F_Text_GiovanniPostBattle::
 
 RocketHideout_B4F_Text_Grunt2Intro::
     .string "I know you!\n"
-    .string "You ruined our plans at MT. MOON!$"
+    .string "You have been all over our network!$"
 
 RocketHideout_B4F_Text_Grunt2Defeat::
     .string "Burned again!$"
@@ -33,7 +34,7 @@ RocketHideout_B4F_Text_Grunt2PostBattle::
 
 RocketHideout_B4F_Text_Grunt3Intro::
     .string "How can you not see the beauty of\n"
-    .string "our evil?$"
+    .string "our business?$"
 
 RocketHideout_B4F_Text_Grunt3Defeat::
     .string "Ayaya!$"
@@ -53,12 +54,13 @@ RocketHideout_B4F_Text_Grunt1PostBattle::
     .string "Oh, no!\n"
     .string "I dropped the LIFT KEY!$"
 
-
 RocketHideout_B4F_Text_FoundRocketLedger::
-    .string "{PLAYER} found an old ROCKET ledger.\p"
-    .string "Inside was a battered case: the\n"
-    .string "POKé FLUTE, stolen from MR. FUJI!$"
+    .string "{PLAYER} searched VESPER's desk.\p"
+    .string "Under a stack of vouchers lay a\n"
+    .string "battered case: the POKé FLUTE,\l"
+    .string "stolen from MR. FUJI!$"
 
 RocketHideout_B4F_Text_ReceivedPokeFlute::
     .string "{PLAYER} received the POKé FLUTE.\p"
     .string "It wakes sleeping POKéMON.$"
+
