@@ -83,3 +83,6 @@ Principe (demande de Basil : « pas juste entrer – badge – partir ») : chaq
 - **Fait (23/10)** : Tourmalia (Cerulean House3, branche 2, signé K, 20-21, PP Plus ; flag 0x118), Apatia (Vermilion House2, branche 6, 26-27, 3 Rappels ; 0x119), Lavanville (House2, branche 5, 29-30, 2 Élixirs ; 0x11A), Parmanie (House3, branche 1, 35-36, 2 PP Plus ; 0x11B). Mémos signés V / K / S, numérotés 1 à 7 : le joueur comprend que le réseau compte sept branches.
 - À décliner : Bourg Quartz, Hematown, Chrondrolia, Sevii (via le compas). Flags libres à partir de 0x11C.
 - Correctif : lignes de texte > 35 caractères dans la quête de Pyropia (version envoyée à 10h40) raccourcies.
+
+## Routes 13-15 (23/10, main game)
+Basil : « tout sauf trop de dresseurs » (mal placés, hors thème). Fait : 6 motards deviennent des **sbires Onybris** (Jared R13 ; Gerald, Malik, Isaac R14 ; Ernest, Alex R15) : classe TEAM_ROCKET, sprite sbire, nom GRUNT, textes réécrits (« we are not a gang, we are a union », « the boss pays better than the gym ever did »…). Script idempotent `docs/topaze/routes_onybris.py`. Les Pokémon (poison/électrik de motard) restent. Non fait : repositionnement fin des dresseurs (pas de cas précis identifié), Manoir/Cramois'Île lave-eau (rendu normal en carte ; attend une capture de Basil pour cibler l'endroit exact).
