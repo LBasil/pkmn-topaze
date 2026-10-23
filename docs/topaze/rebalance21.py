@@ -38,8 +38,9 @@ def W(names,d):
 W('Route12 Route13 Route14 Route15',5)
 W('Route16 Route17 Route18 Route19 Route20 Route21_North Route21_South FuchsiaCity SafariZone_Center SafariZone_East SafariZone_West SafariZone_North',8)
 W('SeafoamIslands_1F SeafoamIslands_B1F SeafoamIslands_B2F SeafoamIslands_B3F SeafoamIslands_B4F CinnabarIsland PokemonMansion_1F PokemonMansion_2F PokemonMansion_3F PokemonMansion_B1F',6)
-W('PokemonTower_3F PokemonTower_4F PokemonTower_5F PokemonTower_6F PokemonTower_7F',5)
-W('RockTunnel_1F RockTunnel_B1F',8)
+W('PokemonTower_3F PokemonTower_4F PokemonTower_5F PokemonTower_6F PokemonTower_7F',11)
+W('RockTunnel_1F RockTunnel_B1F',18)
+W('Route22',38)
 NOEVO=('Leader','EliteFour','Champion')
 
 S_=''.join(open(f).read() for f in glob.glob('data/scripts/*.inc')+glob.glob('data/maps/*/scripts.inc'))
