@@ -37,3 +37,4 @@ Corrigé : Mew placé près du camion (Apatia) ; Bill à la sortie d'Une-Île a 
 
 ## Guides de port Sevii (23/10)
 Chaque port (îles 1 à 7) a un PNJ guide en (6,4) : présente l'île (2 paragraphes) puis, si `VAR_ECHO_STAGE >= 1`, lit la TIME COMPASS (`EventScript_EchoCompass`). Reste : décor par île, textes des villes, panneaux, journal de quête.
+- Sevii 23/10 : panneaux d'île (7) et PNJ d'ambiance (Une-Île, Six-Îles, Sept-Îles) réécrits sur le thème « le temps se dérègle ».
