@@ -121,3 +121,23 @@ PowerPlant_EventScript_FoughtElectrode2::
 	setflag FLAG_FOUGHT_POWER_PLANT_ELECTRODE_2
 	goto EventScript_RemoveStaticMon
 	end
+
+PowerPlant_Guard0::
+	trainerbattle_single TRAINER_CHANNELER_1, PowerPlant_Text_Guard0Intro, PowerPlant_Text_Guard0Defeat
+	msgbox PowerPlant_Text_Guard0Post, MSGBOX_AUTOCLOSE
+	end
+
+PowerPlant_Guard1::
+	trainerbattle_single TRAINER_CHANNELER_2, PowerPlant_Text_Guard1Intro, PowerPlant_Text_Guard1Defeat
+	msgbox PowerPlant_Text_Guard1Post, MSGBOX_AUTOCLOSE
+	end
+
+PowerPlant_Guard2::
+	trainerbattle_single TRAINER_CHANNELER_3, PowerPlant_Text_Guard2Intro, PowerPlant_Text_Guard2Defeat
+	msgbox PowerPlant_Text_Guard2Post, MSGBOX_AUTOCLOSE
+	end
+
+PowerPlant_Guard3::
+	trainerbattle_single TRAINER_CHANNELER_4, PowerPlant_Text_Guard3Intro, PowerPlant_Text_Guard3Defeat
+	msgbox PowerPlant_Text_Guard3Post, MSGBOX_AUTOCLOSE
+	end

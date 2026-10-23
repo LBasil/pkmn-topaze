@@ -233,3 +233,23 @@ CeladonCity_EventScript_RefugeIdle::
 	msgbox CeladonCity_Text_RefIdle
 	release
 	end
+
+CeladonCity_Guard0::
+	trainerbattle_single TRAINER_EXPERT_M, CeladonCity_Text_Guard0Intro, CeladonCity_Text_Guard0Defeat
+	msgbox CeladonCity_Text_Guard0Post, MSGBOX_AUTOCLOSE
+	end
+
+CeladonCity_Guard1::
+	trainerbattle_single TRAINER_EXPERT_F, CeladonCity_Text_Guard1Intro, CeladonCity_Text_Guard1Defeat
+	msgbox CeladonCity_Text_Guard1Post, MSGBOX_AUTOCLOSE
+	end
+
+CeladonCity_Guard2::
+	trainerbattle_single TRAINER_DRAGON_TAMER, CeladonCity_Text_Guard2Intro, CeladonCity_Text_Guard2Defeat
+	msgbox CeladonCity_Text_Guard2Post, MSGBOX_AUTOCLOSE
+	end
+
+CeladonCity_Guard3::
+	trainerbattle_single TRAINER_NINJA_BOY, CeladonCity_Text_Guard3Intro, CeladonCity_Text_Guard3Defeat
+	msgbox CeladonCity_Text_Guard3Post, MSGBOX_AUTOCLOSE
+	end

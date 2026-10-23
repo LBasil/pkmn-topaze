@@ -12922,3 +12922,279 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Cell_PokefanF[] = {
         .species = SPECIES_SHARPEDO,
     },
 };
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Guard_CHANNELER_1[] = {
+    {
+        .iv = 40,
+        .lvl = 62,
+        .species = SPECIES_RAICHU,
+    },
+    {
+        .iv = 40,
+        .lvl = 62,
+        .species = SPECIES_ELECTABUZZ,
+    },
+    {
+        .iv = 40,
+        .lvl = 63,
+        .species = SPECIES_MAGNETON,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Guard_CHANNELER_2[] = {
+    {
+        .iv = 40,
+        .lvl = 63,
+        .species = SPECIES_ELECTRODE,
+    },
+    {
+        .iv = 40,
+        .lvl = 63,
+        .species = SPECIES_JOLTEON,
+    },
+    {
+        .iv = 40,
+        .lvl = 64,
+        .species = SPECIES_MANECTRIC,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Guard_CHANNELER_3[] = {
+    {
+        .iv = 40,
+        .lvl = 64,
+        .species = SPECIES_MAGNETON,
+    },
+    {
+        .iv = 40,
+        .lvl = 64,
+        .species = SPECIES_ELECTABUZZ,
+    },
+    {
+        .iv = 40,
+        .lvl = 65,
+        .species = SPECIES_RAICHU,
+    },
+    {
+        .iv = 40,
+        .lvl = 65,
+        .species = SPECIES_MANECTRIC,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Guard_CHANNELER_4[] = {
+    {
+        .iv = 60,
+        .lvl = 66,
+        .species = SPECIES_JOLTEON,
+    },
+    {
+        .iv = 60,
+        .lvl = 66,
+        .species = SPECIES_ELECTRODE,
+    },
+    {
+        .iv = 60,
+        .lvl = 66,
+        .species = SPECIES_MAGNETON,
+    },
+    {
+        .iv = 60,
+        .lvl = 67,
+        .species = SPECIES_RAICHU,
+    },
+    {
+        .iv = 60,
+        .lvl = 67,
+        .species = SPECIES_MANECTRIC,
+    },
+    {
+        .iv = 60,
+        .lvl = 68,
+        .species = SPECIES_ELECTABUZZ,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Guard_CHANNELER_5[] = {
+    {
+        .iv = 40,
+        .lvl = 62,
+        .species = SPECIES_ARCANINE,
+    },
+    {
+        .iv = 40,
+        .lvl = 62,
+        .species = SPECIES_MAGMAR,
+    },
+    {
+        .iv = 40,
+        .lvl = 63,
+        .species = SPECIES_RAPIDASH,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Guard_CHANNELER_6[] = {
+    {
+        .iv = 40,
+        .lvl = 63,
+        .species = SPECIES_FLAREON,
+    },
+    {
+        .iv = 40,
+        .lvl = 63,
+        .species = SPECIES_HOUNDOOM,
+    },
+    {
+        .iv = 40,
+        .lvl = 64,
+        .species = SPECIES_CAMERUPT,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Guard_CHANNELER_7[] = {
+    {
+        .iv = 40,
+        .lvl = 64,
+        .species = SPECIES_MAGCARGO,
+    },
+    {
+        .iv = 40,
+        .lvl = 64,
+        .species = SPECIES_TYPHLOSION,
+    },
+    {
+        .iv = 40,
+        .lvl = 65,
+        .species = SPECIES_ARCANINE,
+    },
+    {
+        .iv = 40,
+        .lvl = 65,
+        .species = SPECIES_CHARIZARD,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Guard_CHANNELER_8[] = {
+    {
+        .iv = 60,
+        .lvl = 66,
+        .species = SPECIES_CHARIZARD,
+    },
+    {
+        .iv = 60,
+        .lvl = 66,
+        .species = SPECIES_ARCANINE,
+    },
+    {
+        .iv = 60,
+        .lvl = 66,
+        .species = SPECIES_MAGCARGO,
+    },
+    {
+        .iv = 60,
+        .lvl = 67,
+        .species = SPECIES_TYPHLOSION,
+    },
+    {
+        .iv = 60,
+        .lvl = 67,
+        .species = SPECIES_CAMERUPT,
+    },
+    {
+        .iv = 60,
+        .lvl = 68,
+        .species = SPECIES_RAPIDASH,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Guard_EXPERT_M[] = {
+    {
+        .iv = 40,
+        .lvl = 62,
+        .species = SPECIES_LAPRAS,
+    },
+    {
+        .iv = 40,
+        .lvl = 62,
+        .species = SPECIES_JYNX,
+    },
+    {
+        .iv = 40,
+        .lvl = 63,
+        .species = SPECIES_CLOYSTER,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Guard_EXPERT_F[] = {
+    {
+        .iv = 40,
+        .lvl = 63,
+        .species = SPECIES_DEWGONG,
+    },
+    {
+        .iv = 40,
+        .lvl = 63,
+        .species = SPECIES_GLALIE,
+    },
+    {
+        .iv = 40,
+        .lvl = 64,
+        .species = SPECIES_WALREIN,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Guard_DRAGON_TAMER[] = {
+    {
+        .iv = 40,
+        .lvl = 64,
+        .species = SPECIES_SNEASEL,
+    },
+    {
+        .iv = 40,
+        .lvl = 64,
+        .species = SPECIES_PILOSWINE,
+    },
+    {
+        .iv = 40,
+        .lvl = 65,
+        .species = SPECIES_LAPRAS,
+    },
+    {
+        .iv = 40,
+        .lvl = 65,
+        .species = SPECIES_JYNX,
+    },
+};
+
+static const struct TrainerMonNoItemDefaultMoves sParty_Guard_NINJA_BOY[] = {
+    {
+        .iv = 60,
+        .lvl = 66,
+        .species = SPECIES_WALREIN,
+    },
+    {
+        .iv = 60,
+        .lvl = 66,
+        .species = SPECIES_LAPRAS,
+    },
+    {
+        .iv = 60,
+        .lvl = 66,
+        .species = SPECIES_CLOYSTER,
+    },
+    {
+        .iv = 60,
+        .lvl = 67,
+        .species = SPECIES_GLALIE,
+    },
+    {
+        .iv = 60,
+        .lvl = 67,
+        .species = SPECIES_JYNX,
+    },
+    {
+        .iv = 60,
+        .lvl = 68,
+        .species = SPECIES_DEWGONG,
+    },
+};

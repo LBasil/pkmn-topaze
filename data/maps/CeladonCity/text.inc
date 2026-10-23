@@ -173,3 +173,43 @@ CeladonCity_Text_RefDone::
 CeladonCity_Text_RefIdle::
     .string "GWEN: I watch over the animals here.\n"
     .string "The world is quieter now.$"
+
+CeladonCity_Text_Guard0Intro::
+    .string "This clearing is closed to\n"
+    .string "outsiders.$"
+
+CeladonCity_Text_Guard0Defeat::
+    .string "Thawed...$"
+
+CeladonCity_Text_Guard0Post::
+    .string "The ORACLE does not like noise.$"
+
+CeladonCity_Text_Guard1Intro::
+    .string "The cold bird chose this place.$"
+
+CeladonCity_Text_Guard1Defeat::
+    .string "Melted...$"
+
+CeladonCity_Text_Guard1Post::
+    .string "Quiet, now. Walk softly.$"
+
+CeladonCity_Text_Guard2Intro::
+    .string "You trampled our snow.$"
+
+CeladonCity_Text_Guard2Defeat::
+    .string "Cracked...$"
+
+CeladonCity_Text_Guard2Post::
+    .string "The ORACLE is just ahead.$"
+
+CeladonCity_Text_Guard3Intro::
+    .string "I am the ORACLE of the FROST.\n"
+    .string "The bird sleeps under my watch.\p"
+    .string "Prove that your cold is worth\n"
+    .string "more than my fear.$"
+
+CeladonCity_Text_Guard3Defeat::
+    .string "...Then the frost has chosen you.$"
+
+CeladonCity_Text_Guard3Post::
+    .string "Go. Tread lightly.$"

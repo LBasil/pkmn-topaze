@@ -156,3 +156,8 @@ Les trois chiens légendaires ne traînent plus dehors : chacun vit dans une gro
 - Piège technique : un groupe de cartes ne peut pas dépasser 127 cartes (mapNum est signé et 127 est réservé) ; Dungeons est plein, les repaires 2 et 3 sont dans SpecialArea.
 - Sprite de Raikou : recoloration d'Entei avec palette dédiée (provisoire).
 
+
+## Légendaires gardés : oiseaux (23/10)
+`legend_guards.py` : Zapdos (Centrale, porte ouest), Moltres (sommet du Mt Brasier) et Articuno (clairière de Bourg Quartz) sont gardés par 3 acolytes + 1 Oracle chacun (Channelers de 62 à 68 ; thèmes foudre, flamme, givre). Ils n'existent que tant que la bête est là (même flag HIDE) et ne bloquent jamais le chemin (accessibilité vérifiée par BFS). Trainers recyclés parmi les slots inutilisés (CHANNELER_1…).
+Non touchés volontairement : Mew (camion de Carmin et Mine de Grenalux : scènes d'histoire), Mewtwo (Grotte Azurée, déjà longue et sur l'eau), Titans (histoire), Lugia/Ho-Oh (récompenses conditionnées).
+À vérifier : Regice (Écho 4), Registeel (Écho 5, 3 dresseurs), Regirock (Écho 6, 5 dresseurs), les 7 Échos du Canyon Sevault (8 dresseurs, chemin de 32 cases).

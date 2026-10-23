@@ -57,3 +57,23 @@ MtEmber_Summit_EventScript_RanFromMoltres::
 	setvar VAR_0x8004, SPECIES_MOLTRES
 	goto EventScript_MonFlewAway
 	end
+
+MtEmber_Summit_Guard0::
+	trainerbattle_single TRAINER_CHANNELER_5, MtEmber_Summit_Text_Guard0Intro, MtEmber_Summit_Text_Guard0Defeat
+	msgbox MtEmber_Summit_Text_Guard0Post, MSGBOX_AUTOCLOSE
+	end
+
+MtEmber_Summit_Guard1::
+	trainerbattle_single TRAINER_CHANNELER_6, MtEmber_Summit_Text_Guard1Intro, MtEmber_Summit_Text_Guard1Defeat
+	msgbox MtEmber_Summit_Text_Guard1Post, MSGBOX_AUTOCLOSE
+	end
+
+MtEmber_Summit_Guard2::
+	trainerbattle_single TRAINER_CHANNELER_7, MtEmber_Summit_Text_Guard2Intro, MtEmber_Summit_Text_Guard2Defeat
+	msgbox MtEmber_Summit_Text_Guard2Post, MSGBOX_AUTOCLOSE
+	end
+
+MtEmber_Summit_Guard3::
+	trainerbattle_single TRAINER_CHANNELER_8, MtEmber_Summit_Text_Guard3Intro, MtEmber_Summit_Text_Guard3Defeat
+	msgbox MtEmber_Summit_Text_Guard3Post, MSGBOX_AUTOCLOSE
+	end
