@@ -46,7 +46,7 @@ OneIsland_Text_HavePCLinkageWithHoenn::
 
 OneIsland_Text_IslandSign::
     .string "ONE ISLAND\n"
-    .string "Friends Gather at Knot Island$"
+    .string "The first stop. Embers never die.$"
 
 OneIsland_Text_PokemonNetCenterSign::
     .string "Expanding the POKéMON World!\n"
@@ -57,8 +57,10 @@ OneIsland_Text_ReturnToCinnabar::
     .string "グレンタウンに　もどりますか？$"
 
 OneIsland_Text_IsntWarmClimateHereGreat::
-    .string "Hi, sight-seeing, are you?\n"
-    .string "Isn't the warm climate here great?$"
+    .string "Sight-seeing? Nice time for it.\p"
+    .string "The sun here sets a little late\n"
+    .string "these days. The clocks at the port\l"
+    .string "don't agree with each other.$"
 
 
 OneIsland_Text_Lord1::

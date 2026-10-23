@@ -1,6 +1,6 @@
 FiveIsland_Text_IslandSign::
     .string "FIVE ISLAND\n"
-    .string "Chrono Island: Where Time Goes$"
+    .string "Voices of those who stayed$"
 
 FiveIsland_Text_WeirdBuildingInMeadow::
     .string "Oh, this stinks. I wanted to play in\n"

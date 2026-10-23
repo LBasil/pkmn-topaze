@@ -1,6 +1,6 @@
 SixIsland_Text_IslandSign::
     .string "SIX ISLAND\n"
-    .string "Fortune Island of Aged Wisdom$"
+    .string "The oldest stones, the oldest echo$"
 
 SixIsland_Text_ThatWayToWaterPathRuinValley::
     .string "Keep going this way and you'll get\n"
@@ -9,8 +9,11 @@ SixIsland_Text_ThatWayToWaterPathRuinValley::
     .string "the RUIN VALLEY.$"
 
 SixIsland_Text_SkyAtNightIsFantastic::
-    .string "When you're this far away from the\n"
-    .string "city, the sky at night is fantastic.$"
+    .string "The sky at night is fantastic\n"
+    .string "out here.\p"
+    .string "Lately the stars move too fast.\n"
+    .string "I counted them twice, and they\l"
+    .string "did not match.$"
 
 
 SixIsland_Text_Lord1::

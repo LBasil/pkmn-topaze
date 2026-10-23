@@ -19,22 +19,21 @@ Text_SwordsDanceTaught::
 
 SevenIsland_Text_IslandSign::
     .string "SEVEN ISLAND\n"
-    .string "Quest Island of Infinity$"
+    .string "The last echo waits at the end$"
 
 SevenIsland_Text_IslandsMadeInSevenDays::
-    .string "These islands are called the SEVII\n"
-    .string "ISLANDS because there are seven.\p"
-    .string "…Or at least that's what the young\n"
-    .string "people believe.\p"
-    .string "The truth is, these islands are so\n"
-    .string "named because they are said to\l"
-    .string "have been made in seven days.$"
+    .string "They say these islands were made\n"
+    .string "in seven days.\p"
+    .string "Now people whisper that something\n"
+    .string "is unmaking the days, one by one.\p"
+    .string "Funny. I always thought time was\n"
+    .string "the one thing nobody could steal.$"
 
 SevenIsland_Text_IslandVirtuallyUntouched::
-    .string "This island has been left virtually\n"
-    .string "untouched in its natural state.\p"
-    .string "It could be a little difficult to\n"
-    .string "hike around because of that.$"
+    .string "This island is almost untouched.\n"
+    .string "Hiking is hard, but the old stones\l"
+    .string "in the canyon keep their secrets\l"
+    .string "better than any vault.$"
 
 
 SevenIsland_Text_Lord1::

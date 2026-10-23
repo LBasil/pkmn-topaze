@@ -1,6 +1,6 @@
 ThreeIsland_Text_IslandSign::
     .string "THREE ISLAND\n"
-    .string "Kin Island of Family Bonding$"
+    .string "Bridges, berries and old scars$"
 
 ThreeIsland_Text_IslandBelongsToUs::
     .string "Hyahoo!\p"

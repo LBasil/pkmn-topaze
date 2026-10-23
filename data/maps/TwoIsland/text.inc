@@ -1,6 +1,6 @@
 TwoIsland_Text_IslandSign::
     .string "TWO ISLAND\n"
-    .string "Boon Island for Two$"
+    .string "Cliffs where the old guard walks$"
 
 TwoIsland_Text_JoyfulGameCornerSign::
     .string "Skip & Chomp!\n"
