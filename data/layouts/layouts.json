@@ -1342,7 +1342,7 @@
       "id": "LAYOUT_ROCKET_HIDEOUT_B1F",
       "name": "RocketHideout_B1F_Layout",
       "width": 28,
-      "height": 34,
+      "height": 30,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",

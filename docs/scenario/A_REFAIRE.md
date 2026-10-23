@@ -14,7 +14,7 @@
 4. **Route 23** : à refaire entièrement (contrôle des badges de la Ligue).
 5. **Route Victoire** : refonte complète (+ infirmières à d'autres endroits possibles).
 6. **POKéRADAR** : le refaire comme sur la capture de Basil (menu au choix : herbe / eau / etc., avec l'image du Pokémon).
-7. Bourg Quartz : repaire seulement recoloré.
+7. Bourg Quartz : repaire redessiné (fait le 23/10, voir section dédiée).
 8. PNJ inutiles / mal placés routes 14, 15, haut de la route 13.
 9. Îles Sevii, Bill, grotte Azurée à déplacer, Ligue/Plateau, intérieurs de la Tour Pokémon, Route 5 et 9, Tunnel Roche, Tour Spinelle (niveaux).
 10. Sprites provisoires (Brice, Flora, N, Gold, Silver, Red, Kronos, Vesper, Selene, Hepha...).
@@ -121,4 +121,11 @@ Avant : on parcourait les 3 étages et on était bloqué pile à la sortie. Main
 - Testé en émulateur : blocage, échelle, scène d'entrée, éboulis levé après `VR_BOSS_DONE`.
 
 ## Repaire de Bourg Quartz (23/10)
-`docs/topaze/celadon_hideout_redo.py` : histoire Onybris cohérente (plus de « ancien QG Rocket », « Mt Moon »…). Le repaire = **branche n°3 du réseau, la branche de l'argent** (le casino blanchit le butin). Textes de tous les sbires et de Vesper réécrits ; scène d'entrée à la B1F (flag 0x11E) ; **livre de comptes** à la B3F en (8,8) : « BRANCH 3 of 7 », donne 1 PP Max une fois (flag 0x11D) ; l'indice mène vers la clé de l'ascenseur. Disposition des 4 étages (labyrinthe à flèches, ascenseur à clé) inchangée : elle fonctionne et reste lisible. Le plan reste à redessiner si Basil le souhaite.
+`docs/topaze/celadon_hideout_redo.py` : histoire Onybris cohérente (plus de « ancien QG Rocket », « Mt Moon »…). Le repaire = **branche n°3 du réseau, la branche de l'argent** (le casino blanchit le butin). Textes de tous les sbires et de Vesper réécrits ; scène d'entrée à la B1F (flag 0x11E) ; **livre de comptes** à la B3F en (8,8) : « BRANCH 3 of 7 », donne 1 PP Max une fois (flag 0x11D) ; l'indice mène vers la clé de l'ascenseur. Disposition des 4 étages (labyrinthe à flèches, ascenseur à clé) inchangée : elle fonctionne et reste lisible. 
+
+### Passe 2 : plans redessinés, « abandonné par Rocket, repris par Onybris »
+`docs/topaze/hq_build.py` (+ `hq_lib.py`, `hq_floors.py`, entrées d'origine dans `hideout_orig/`) régénère tout, idempotent.
+- **Deux couches visuelles** : l'ancienne base Rocket = palettes poussiéreuses beige/gris (variantes des métatuiles sur des ids inutilisés du tileset + palettes 8/9/11, aucune constante `METATILE_SilphCo_*` déplacée) ; les zones reprises par Onybris = bleu glacé d'origine. Seul le chemin accueil → couloir → sécurité/ascenseur est « refait » : on voit la reprise avancer pièce par pièce.
+- **B1F neuve** (28x30) : accueil bleu (escalier du casino en (12,2)), couloir, dortoir Rocket (deux escaliers vers la B2F, gardé par une barrière que lève le sbire en (7,13)), réserve, bureau de sécurité bleu avec l'ascenseur. **B4F neuve** (24x26) : remise à clé, grand hall rouille, barrière + deux gardes (à interpeller) menant au bureau bleu de Vesper, sas bleu de l'ascenseur. **B2F/B3F** : labyrinthes à flèches conservés, rouille ; ailes reprises en bleu (le livre de comptes passe dans le bureau bleu de la B3F, en (15,7)).
+- **Lore Rocket rétabli** dans les textes (emblème rouge sous la peinture, « Rocket est parti, Onybris s'est installé, une salle bleue à la fois », labyrinthe/pièges laissés par Rocket, clé de l'ascenseur de Rocket perdue) ; Game Corner : façade de l'ancien gang, tampon Rocket derrière l'affiche.
+- Testé en émulateur : tous les escaliers (B1F↔B2F×2, B2F↔B3F, B3F↔B4F, casino), barrière B1F, clé, deux gardes B4F → barrière levée → bureau de Vesper, ascenseur.

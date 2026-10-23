@@ -12,41 +12,41 @@ def body(label, text):      # text avec \n et \p deja ecrits : decoupe en lignes
     return label + '::\n' + '\n'.join('    .string "%s%s"' % (p, '$' if i == len(parts) - 1 else '') for i, p in enumerate(parts)) + '\n\n'
 T = {
 'B1F': [
- ('Grunt1Intro', r"Who sent you down here? The\nGAME CORNER is upstairs, kid.\p"),
+ ('Grunt1Intro', r"Hold it. ROCKET left this lift to\nrot. ONYBRIS keeps it running."),
  ('Grunt1Defeat', r"Oww!\nBeaten!"),
- ('Grunt1PostBattle', r"Upstairs they play for coins. Down\nhere we count what the coins hide.\pOur boss never calls. Orders just\nappear in our heads. Creepy, huh?"),
- ('Grunt2Intro', r"A customer in the vault? Management\ndoes not allow that."),
+ ('Grunt1PostBattle', r"ROCKET vanished years ago and left\nthe whole base behind.\pONYBRIS moved in, scrubbed three\nrooms blue, and called it a bank.\pOur boss never calls. Orders just\nappear in our heads. Creepy, huh?"),
+ ('Grunt2Intro', r"A customer in the new reception?\nManagement does not allow that."),
  ('Grunt2Defeat', r"Boom!"),
- ('Grunt2PostBattle', r"This branch pays for the whole\nnetwork. Touch it and you answer\lto VESPER."),
+ ('Grunt2PostBattle', r"ONYBRIS paid for the paint. The\nrest of the floor is still ROCKET's\lold mess. Watch your step.\pThis branch pays for the whole\nnetwork. Touch it and you answer\lto VESPER."),
  ('Grunt3Intro', r"Intruder alert!"),
  ('Grunt3Defeat', r"I can't do it!"),
- ('Grunt3PostBattle', r"The old smugglers left tons of\njunk down here. We sell what we\lfind. Cash goes up the elevator."),
+ ('Grunt3PostBattle', r"ROCKET left crates of junk down\nhere. We sell whatever we find.\pRusty, dusty... but the cash\nspends just the same."),
  ('Grunt4Intro', r"Why did you come here?"),
  ('Grunt4Defeat', r"This won't do!"),
- ('Grunt4PostBattle', r"Okay, I'll talk...\nTake the elevator to see VESPER.\pBut the LIFT KEY went missing.\nAsk the guards on the lower floors."),
- ('Grunt5Intro', r"Are you lost, you little mouse?"),
+ ('Grunt4PostBattle', r"Okay, I'll talk...\nThese were ROCKET's bunks. Nobody\lcleaned them. Nobody dares.\pTake the elevator to see VESPER.\nBut the LIFT KEY went missing.\lAsk the guards on the lower floors."),
+ ('Grunt5Intro', r"Are you lost, you little mouse?\nThe old bunks are off limits!"),
  ('Grunt5Defeat', r"Why…?"),
  ('Grunt5PostBattle', r"Uh-oh, that ruckus somehow opened\nthe door!"),
- ('Entry1', r"The air smells of coins and cold\nstone. Under the casino, the floor\lis one big vault.\p"),
- ('Entry2', r"Crates are stacked in neat rows.\nSomebody counts everything that\lcomes down here."),
+ ('Entry1', r"Fresh blue paint, new lights, a new\ndesk. But under the paint, a faded\lred R still shows through.\p"),
+ ('Entry2', r"ROCKET abandoned this base long\nago. Now somebody has taken it\lback, one blue room at a time."),
 ],
 'B2F': [
- ('GruntIntro', r"The old tunnels still work. We use\nevery corridor to move the stones\land the coins!"),
+ ('GruntIntro', r"ROCKET's old maze still works.\nThey fled, but the traps stayed!"),
  ('GruntDefeat', r"I surrender!"),
- ('GruntPostBattle', r"Four floors under the casino.\pThe more the town plays, the more\nwe launder. Think you can reach\lVESPER?"),
+ ('GruntPostBattle', r"ONYBRIS never fixed the arrows.\nCheaper to let intruders get lost.\pThe more the town plays upstairs,\nthe more we launder. Think you can\lreach VESPER?"),
 ],
 'B3F': [
  ('Grunt1Intro', r"Stop meddling in TEAM ONYBRIS's\naffairs or else!"),
  ('Grunt1Defeat', r"Oof!\nTaken down!"),
- ('Grunt1PostBattle', r"The LIFT KEY? One of the guards\nbelow keeps it on him.\pRead the ledger on the wall if you\nwant to know what you are up\lagainst."),
+ ('Grunt1PostBattle', r"The LIFT KEY? One of the guards\nbelow keeps it on him.\pRead the ledger in the office if\nyou want to know what you are up\lagainst."),
  ('Grunt2Intro', r"We got word from upstairs that you\nwere coming!"),
  ('Grunt2Defeat', r"What?\nI lost? No!"),
  ('Grunt2PostBattle', r"Go ahead and go!\pBut you can't run the elevator\nwithout the LIFT KEY."),
- ('Ledger', r"A ledger lies open on the wall\nshelf.\p“BRANCH 3 of 7: the money branch.\nCasino takings: sorted, counted,\lsent up to V.”\p“Branch 1 buys, branch 2 steals.\nBranch 4 hides. We pay for all.”\p“Quartz is in V.'s pocket. The\nboss wants ten stones, not one.”\pYou keep one page: a cash voucher."),
+ ('Ledger', r"A ledger lies open on the new desk.\p“BRANCH 3 of 7: the money branch.\nCasino takings: sorted, counted,\lsent up to V.”\p“Old ROCKET base: 4 rooms cleaned,\nthe rest is junk. Do not bother.”\p“Quartz is in V.'s pocket. The\nboss wants ten stones, not one.”\pYou keep one page: a cash voucher."),
  ('LedgerDone', r"Only dull numbers and a stamp:\n“BRANCH 3 of 7”."),
 ],
 'B4F': [
- ('GiovanniIntro', r"VESPER: So you are the brat who\nkeeps wrecking my plans.\pThis vault suits TEAM ONYBRIS.\nDark, deep, and nobody asks where\lthe money comes from.\pPerfect for hiding what we take\nfrom this town. Now, scram!"),
+ ('GiovanniIntro', r"VESPER: So you are the brat who\nkeeps wrecking my plans.\pROCKET left this base to rot. I\nonly took what was worth taking:\lthe vault, and this office.\pNow, scram!"),
  ('GiovanniDefeat', r"Impossible...!"),
  ('GiovanniPostBattle', r"VESPER: Hmph. You beat me...\nin a fight. Fights are for fools.\pI have the QUARTZ in my pocket.\nThe boss wants ten stones. Ten!\pDo not ask me why. I only collect.\pLet us settle it like adults: at my\ntable in the GAME CORNER, upstairs.\pWin, and you keep it. Lose, and it\nis mine. Come, if you dare!"),
  ('Grunt2Intro', r"I know you!\nYou have been all over our network!"),
@@ -55,7 +55,7 @@ T = {
  ('Grunt3Intro', r"How can you not see the beauty of\nour business?"),
  ('Grunt3Defeat', r"Ayaya!"),
  ('Grunt3PostBattle', r"BOSS!\nI'm sorry I failed you!"),
- ('Grunt1Intro', r"The elevator doesn't work?\nWho has the LIFT KEY?"),
+ ('Grunt1Intro', r"The elevator doesn't work?\nROCKET's old key has vanished!"),
  ('Grunt1Defeat', r"No!"),
  ('Grunt1PostBattle', r"Oh, no!\nI dropped the LIFT KEY!"),
  ('FoundRocketLedger', r"{PLAYER} searched VESPER's desk.\pUnder a stack of vouchers lay a\nbattered case: the POKé FLUTE,\lstolen from MR. FUJI!"),
@@ -96,7 +96,7 @@ open(R % 'B1F' + 'scripts.inc', 'w').write(s)
 # ---- B3F : livre de comptes
 m = json.load(open(R % 'B3F' + 'map.json'))
 if not any(b.get('script') == 'RocketHideout_B3F_EventScript_Ledger' for b in m['bg_events']):
-    m['bg_events'].append({'type': 'sign', 'x': 8, 'y': 8, 'elevation': 0, 'player_facing_dir': 'BG_EVENT_PLAYER_FACING_ANY', 'script': 'RocketHideout_B3F_EventScript_Ledger'})
+    m['bg_events'].append({'type': 'sign', 'x': 15, 'y': 7, 'elevation': 0, 'player_facing_dir': 'BG_EVENT_PLAYER_FACING_ANY', 'script': 'RocketHideout_B3F_EventScript_Ledger'})
 json.dump(m, open(R % 'B3F' + 'map.json', 'w'), indent=2); open(R % 'B3F' + 'map.json', 'a').write('\n')
 s = open(R % 'B3F' + 'scripts.inc').read()
 if 'Ledger::' not in s:

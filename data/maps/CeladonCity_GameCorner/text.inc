@@ -29,8 +29,10 @@ CeladonCity_GameCorner_Text_HereAreYourCoins::
 
 CeladonCity_GameCorner_Text_RumoredTeamRocketRunsThisPlace::
     .string "Keep this quiet.\p"
-    .string "It's rumored that this place is run\n"
-    .string "by TEAM ONYBRIS.$"
+    .string "This place was the old ROCKET\n"
+    .string "gang's front. They ran away...\p"
+    .string "Now it's rumored TEAM ONYBRIS\n"
+    .string "runs it.$"
 
 CeladonCity_GameCorner_Text_ThinkMachinesHaveDifferentOdds::
     .string "I think these machines have\n"
@@ -120,7 +122,8 @@ CeladonCity_GameCorner_Text_GruntPostBattle::
 
 CeladonCity_GameCorner_Text_SwitchBehindPosterPushIt::
     .string "Hey!\p"
-    .string "A switch behind the poster!?\n"
+    .string "A faded ROCKET stamp is hidden\n"
+    .string "behind the poster. And a switch!?\l"
     .string "Let's push it!$"
 
 CeladonCity_GameCorner_Text_CoinCaseIsRequired::

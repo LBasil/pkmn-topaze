@@ -1,11 +1,10 @@
 RocketHideout_B4F_Text_GiovanniIntro::
     .string "VESPER: So you are the brat who\n"
     .string "keeps wrecking my plans.\p"
-    .string "This vault suits TEAM ONYBRIS.\n"
-    .string "Dark, deep, and nobody asks where\l"
-    .string "the money comes from.\p"
-    .string "Perfect for hiding what we take\n"
-    .string "from this town. Now, scram!$"
+    .string "ROCKET left this base to rot. I\n"
+    .string "only took what was worth taking:\l"
+    .string "the vault, and this office.\p"
+    .string "Now, scram!$"
 
 RocketHideout_B4F_Text_GiovanniDefeat::
     .string "Impossible...!$"
@@ -45,7 +44,7 @@ RocketHideout_B4F_Text_Grunt3PostBattle::
 
 RocketHideout_B4F_Text_Grunt1Intro::
     .string "The elevator doesn't work?\n"
-    .string "Who has the LIFT KEY?$"
+    .string "ROCKET's old key has vanished!$"
 
 RocketHideout_B4F_Text_Grunt1Defeat::
     .string "No!$"

@@ -45,21 +45,21 @@ RocketHideout_B1F_EventScript_DefeatedGrunt5::
 	end
 
 RocketHideout_B1F_EventScript_SetBarrier::
-	setmetatile 20, 19, METATILE_SilphCo_HideoutBarrier_TopLeft_Floor, 1
-	setmetatile 21, 19, METATILE_SilphCo_HideoutBarrier_TopRight_Floor, 1
-	setmetatile 20, 20, METATILE_SilphCo_HideoutBarrier_BottomLeft, 1
-	setmetatile 21, 20, METATILE_SilphCo_HideoutBarrier_BottomRight, 1
-	setmetatile 20, 21, METATILE_SilphCo_HideoutFloor_ShadeFull, 0
-	setmetatile 21, 21, METATILE_SilphCo_HideoutFloor_ShadeFull, 0
+	setmetatile 4, 14, METATILE_SilphCo_HideoutBarrier_TopLeft_Floor, 1
+	setmetatile 5, 14, METATILE_SilphCo_HideoutBarrier_TopRight_Floor, 1
+	setmetatile 4, 15, METATILE_SilphCo_HideoutBarrier_BottomLeft, 1
+	setmetatile 5, 15, METATILE_SilphCo_HideoutBarrier_BottomRight, 1
+	setmetatile 4, 16, METATILE_SilphCo_HideoutFloor_ShadeFull, 0
+	setmetatile 5, 16, METATILE_SilphCo_HideoutFloor_ShadeFull, 0
 	return
 
 RocketHideout_B1F_EventScript_RemoveBarrier::
-	setmetatile 20, 19, METATILE_SilphCo_HideoutFloor_ShadeFull, 0
-	setmetatile 21, 19, METATILE_SilphCo_HideoutFloor, 0
-	setmetatile 20, 20, METATILE_SilphCo_HideoutFloor_ShadeFull, 0
-	setmetatile 21, 20, METATILE_SilphCo_HideoutFloor, 0
-	setmetatile 20, 21, METATILE_SilphCo_HideoutFloor_ShadeFull, 0
-	setmetatile 21, 21, METATILE_SilphCo_HideoutFloor, 0
+	setmetatile 4, 14, METATILE_SilphCo_HideoutFloor_ShadeFull, 0
+	setmetatile 5, 14, METATILE_SilphCo_HideoutFloor, 0
+	setmetatile 4, 15, METATILE_SilphCo_HideoutFloor_ShadeFull, 0
+	setmetatile 5, 15, METATILE_SilphCo_HideoutFloor, 0
+	setmetatile 4, 16, METATILE_SilphCo_HideoutFloor_ShadeFull, 0
+	setmetatile 5, 16, METATILE_SilphCo_HideoutFloor, 0
 	return
 
 @ Topaze: scene d'entree du repaire de Bourg Quartz (premiere fois)

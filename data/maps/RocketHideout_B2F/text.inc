@@ -1,14 +1,14 @@
 RocketHideout_B2F_Text_GruntIntro::
-    .string "The old tunnels still work. We use\n"
-    .string "every corridor to move the stones\l"
-    .string "and the coins!$"
+    .string "ROCKET's old maze still works.\n"
+    .string "They fled, but the traps stayed!$"
 
 RocketHideout_B2F_Text_GruntDefeat::
     .string "I surrender!$"
 
 RocketHideout_B2F_Text_GruntPostBattle::
-    .string "Four floors under the casino.\p"
-    .string "The more the town plays, the more\n"
-    .string "we launder. Think you can reach\l"
-    .string "VESPER?$"
+    .string "ONYBRIS never fixed the arrows.\n"
+    .string "Cheaper to let intruders get lost.\p"
+    .string "The more the town plays upstairs,\n"
+    .string "the more we launder. Think you can\l"
+    .string "reach VESPER?$"
 
