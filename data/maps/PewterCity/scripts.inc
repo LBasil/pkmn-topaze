@@ -918,3 +918,40 @@ PewterCity_EventScript_RefugeIdle::
 	msgbox PewterCity_Text_RefIdle
 	release
 	end
+
+PewterCity_EventScript_CellWitness::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_CELL_PEWTER, PewterCity_EventScript_CellWitnessDone
+	goto_if_defeated TRAINER_GUITARIST, PewterCity_EventScript_CellWitnessHalf
+	msgbox PewterCity_Text_CellWitness, MSGBOX_DEFAULT
+	release
+	end
+
+PewterCity_EventScript_CellWitnessHalf::
+	msgbox PewterCity_Text_CellWitnessHalf, MSGBOX_DEFAULT
+	release
+	end
+
+PewterCity_EventScript_CellWitnessDone::
+	msgbox PewterCity_Text_CellWitnessDone, MSGBOX_DEFAULT
+	release
+	end
+
+PewterCity_Text_CellWitness::
+	.string "Do not stare at that house. Two"
+	.string "strangers in black moved in last week.\p"
+	.string "The shutters stay shut, day and night."
+	.string "Crates go in. Nothing comes out.\p"
+	.string "The police call it a private matter."
+	.string "I call it the start of something.$"
+
+PewterCity_Text_CellWitnessHalf::
+	.string "You went in? Then you saw it too.\p"
+	.string "There is something in that house worth"
+	.string "reading. Look near the back wall.$"
+
+PewterCity_Text_CellWitnessDone::
+	.string "The shutters are open again.\p"
+	.string "You know, those crates were labeled"
+	.string "BRANCH FOUR. Four. Think about that.$"

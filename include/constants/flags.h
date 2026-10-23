@@ -308,6 +308,7 @@
 #define FLAG_0x116               0x116
 #define FLAG_TOPAZE_HIDE_PLATEAU_GRUNTS FLAG_0x116 // sbires silencieux sur le Plateau (apres le repaire, avant le Champion)
 #define FLAG_0x117               0x117
+#define FLAG_TOPAZE_CELL_PEWTER  FLAG_0x117 // quete annexe Pyropia: cellule Onybris nettoyee, memo lu
 #define FLAG_0x118               0x118
 #define FLAG_0x119               0x119
 #define FLAG_0x11A               0x11A

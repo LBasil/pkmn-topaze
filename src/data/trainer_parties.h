@@ -271,8 +271,30 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RSBlackBelt[] = {
         .species = SPECIES_MAGMAR,
     },
 };
-static const struct TrainerMonNoItemDefaultMoves sParty_Guitarist[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_Kindler[] = {DUMMY_TRAINER_MON};
+static const struct TrainerMonNoItemDefaultMoves sParty_Guitarist[] = {
+    {
+        .iv = 30,
+        .lvl = 14,
+        .species = SPECIES_EKANS,
+    },
+    {
+        .iv = 30,
+        .lvl = 14,
+        .species = SPECIES_ZUBAT,
+    },
+};
+static const struct TrainerMonNoItemDefaultMoves sParty_Kindler[] = {
+    {
+        .iv = 30,
+        .lvl = 15,
+        .species = SPECIES_KOFFING,
+    },
+    {
+        .iv = 30,
+        .lvl = 15,
+        .species = SPECIES_GRIMER,
+    },
+};
 static const struct TrainerMonNoItemDefaultMoves sParty_RSCamper[] = {
     {
         .iv = 30,
