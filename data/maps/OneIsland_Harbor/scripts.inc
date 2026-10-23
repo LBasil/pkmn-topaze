@@ -40,3 +40,31 @@ OneIsland_Harbor_EventScript_Sailor::
 	setvar VAR_0x8004, SEAGALLOP_ONE_ISLAND
 	goto EventScript_ChooseDestFromOneIsland
 	end
+
+@ Topaze: guide du port (post-game) : presente l'ile puis lit la boussole des Echos
+OneIsland_Harbor_EventScript_Guide::
+	lock
+	faceplayer
+	msgbox OneIsland_Harbor_Text_Guide
+	goto_if_eq VAR_ECHO_STAGE, 0, OneIsland_Harbor_EventScript_GuideEnd
+	msgbox OneIsland_Harbor_Text_GuideCompass
+	closemessage
+	goto EventScript_EchoCompass
+	end
+
+OneIsland_Harbor_EventScript_GuideEnd::
+	release
+	end
+
+OneIsland_Harbor_Text_Guide::
+	.string "Welcome to KINDLE ISLAND, the first\n"
+	.string "stop of the SEVII ISLANDS.\l"
+	.string "MT. EMBER keeps the island warm,\l"
+	.string "and the PC here is a good base.\p"
+	.string "You can sail to any island you\n"
+	.string "like, in any order. Don't worry:\l"
+	.string "I'll point you to the next ECHO.$"
+
+OneIsland_Harbor_Text_GuideCompass::
+	.string "Let me check the TIME COMPASS\n"
+	.string "with you…$"
