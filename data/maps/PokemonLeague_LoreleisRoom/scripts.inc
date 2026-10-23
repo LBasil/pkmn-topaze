@@ -132,18 +132,10 @@ PokemonLeague_LoreleisRoom_EventScript_BossRetry::
 	goto_if_unset FLAG_TOPAZE_BOSS_RETRY, PokemonLeague_LoreleisRoom_EventScript_BossRetryNo
 	goto_if_defeated TRAINER_LEAGUE_BOSS_2, PokemonLeague_LoreleisRoom_EventScript_BossRetryNo
 	lockall
-	textcolor NPC_TEXT_COLOR_NEUTRAL
-	msgbox PokemonLeague_LoreleisRoom_Text_BossRetry, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, PokemonLeague_LoreleisRoom_EventScript_BossRetryDecline
-	closemessage
 	special HealPlayerParty
 	setvar VAR_TEMP_1, 0
 	warp MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM, 6, 19
 	waitstate
-	releaseall
-	end
-
-PokemonLeague_LoreleisRoom_EventScript_BossRetryDecline::
 	releaseall
 	end
 
