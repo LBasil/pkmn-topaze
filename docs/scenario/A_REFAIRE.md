@@ -80,4 +80,6 @@ Sortie du repaire -> premier passage au Centre du Plateau : Flora, Brice et Mist
 Principe (demande de Basil : « pas juste entrer – badge – partir ») : chaque ville aura une petite quête optionnelle liée à Onybris : un **témoin** (indice), une **cellule** de 2 sbires dans une maison, un **mémo** qui prouve l'ampleur du réseau (« BRANCH 4 of 7… Report to V. »), une **récompense** utile.
 - Générateur idempotent : `docs/topaze/town_cells.py` (une fonction par ville ; réaffecte des slots de dresseurs inutilisés en sbires Onybris).
 - **Pyropia (fait)** : témoin sur la rue (13,8) devant la porte de la maison 3 ; cellule dans PewterCity_House3 (Ekans/Zubat 14 + Koffing/Grimer 15, TRAINER_GUITARIST/KINDLER) ; mémo au mur nord (9,1) = 2 Rare Candy ; flag 0x117 `FLAG_TOPAZE_CELL_PEWTER`.
-- À décliner : Tourmalia, Apatia, Spinellia (Lavanville), Bourg Quartz, Parmanie, Hematown, Chrondrolia, Sevii (via le compas). Flags libres à partir de 0x118.
+- **Fait (23/10)** : Tourmalia (Cerulean House3, branche 2, signé K, 20-21, PP Plus ; flag 0x118), Apatia (Vermilion House2, branche 6, 26-27, 3 Rappels ; 0x119), Lavanville (House2, branche 5, 29-30, 2 Élixirs ; 0x11A), Parmanie (House3, branche 1, 35-36, 2 PP Plus ; 0x11B). Mémos signés V / K / S, numérotés 1 à 7 : le joueur comprend que le réseau compte sept branches.
+- À décliner : Bourg Quartz, Hematown, Chrondrolia, Sevii (via le compas). Flags libres à partir de 0x11C.
+- Correctif : lignes de texte > 35 caractères dans la quête de Pyropia (version envoyée à 10h40) raccourcies.
