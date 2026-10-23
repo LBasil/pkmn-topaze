@@ -78,3 +78,11 @@ SeafoamIslands_B4F_Text_GoldBeaten::
 SeafoamIslands_B4F_Text_SilverBeaten::
     .string "SILVER: Do not look at me like\n"
     .string "that. Go and finish the job.$"
+
+SeafoamIslands_B4F_Text_Sealed::
+    .string "A wall of heat rolls up from the\n"
+    .string "lava and pushes you back.\p"
+    .string "Something in the volcano is not\n"
+    .string "finished with you yet.\p"
+    .string "{STR_VAR_1} ONYBRIS member(s) still lurk\n"
+    .string "on the floors above…$"

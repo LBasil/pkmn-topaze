@@ -213,8 +213,35 @@ SeafoamIslands_B4F_EventScript_OnybrisHideAll::
 	setflag FLAG_TEMP_3
 	return
 
+@ Topaze: la fin du volcan ne s'ouvre que si tous les sbires des etages ont ete battus (aucun raccourci par les trous / rochers)
+SeafoamIslands_B4F_EventScript_CountGrunts::
+	setvar VAR_0x8004, 0
+	call_if_not_defeated TRAINER_RS_TUBER_M, SeafoamIslands_B4F_EventScript_AddGrunt
+	call_if_not_defeated TRAINER_RS_TUBER_F, SeafoamIslands_B4F_EventScript_AddGrunt
+	call_if_not_defeated TRAINER_RS_GENTLEMAN, SeafoamIslands_B4F_EventScript_AddGrunt
+	call_if_not_defeated TRAINER_RS_BEAUTY, SeafoamIslands_B4F_EventScript_AddGrunt
+	call_if_not_defeated TRAINER_RS_YOUNGSTER, SeafoamIslands_B4F_EventScript_AddGrunt
+	call_if_not_defeated TRAINER_RS_LADY, SeafoamIslands_B4F_EventScript_AddGrunt
+	return
+
+SeafoamIslands_B4F_EventScript_AddGrunt::
+	addvar VAR_0x8004, 1
+	return
+
+SeafoamIslands_B4F_EventScript_Sealed::
+	buffernumberstring STR_VAR_1, VAR_0x8004
+	msgbox SeafoamIslands_B4F_Text_Sealed
+	closemessage
+	fadescreen FADE_TO_BLACK
+	warp MAP_SEAFOAM_ISLANDS_B3F, 12, 10
+	waitstate
+	releaseall
+	end
+
 SeafoamIslands_B4F_EventScript_KronosScene::
 	lockall
+	call SeafoamIslands_B4F_EventScript_CountGrunts
+	goto_if_ne VAR_0x8004, 0, SeafoamIslands_B4F_EventScript_Sealed
 	msgbox SeafoamIslands_B4F_Text_FloorScene
 	msgbox SeafoamIslands_B4F_Text_KronosIntro
 	closemessage
