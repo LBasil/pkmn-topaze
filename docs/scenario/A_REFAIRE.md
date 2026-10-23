@@ -46,3 +46,7 @@ La porte de la mine (Grenalux) mène directement à l'étage de la vérité (Gre
 - Volcan : plus de raccourci. Principe voulu par Basil : peu importe l'entrée, on doit tout parcourir. La scène du boss (B4F) vérifie que les 6 sbires de B1F/B2F/B3F sont battus (`CountGrunts`) ; sinon texte « chaleur » avec le nombre restant et retour en B3F (12,10). Les rochers restent mais ne servent plus de raccourci (mécanique à reconsidérer en refonte).
 - Route 21 Nord : la mer violette (palette 4 de general_route21n) devient bleu sombre « ciel de cendres » pour se raccorder à la Route 21 Sud (avant : mer mauve illisible, transition brutale).
 - Route Victoire (refonte à venir) : garder les rochers déjà tombés sur les interrupteurs (demande de Basil).
+
+## Route 23 / Plateau (24/10)
+- Palette « aube » (or olive, eau turquoise tiède) pour Route 23 et Plateau Indigo (`docs/topaze/route23_dress.py`, tilesets `general_dawn` / `indigo_dawn`) : la route de la Ligue se lève après la nuit bleue de la Route 22.
+- Pas fait : refonte du tracé (7 gardes alignés d'origine). Route Victoire : refonte du tracé non faite non plus (rochers déjà tombés, infirmière présente).
