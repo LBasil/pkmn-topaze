@@ -353,12 +353,12 @@
 #define FLAG_0x12D               0x12D
 #define FLAG_0x12E               0x12E
 #define FLAG_0x12F               0x12F
-#define FLAG_0x130               0x130
-#define FLAG_0x131               0x131
-#define FLAG_0x132               0x132
-#define FLAG_0x133               0x133
-#define FLAG_0x134               0x134
-#define FLAG_0x135               0x135
+#define FLAG_ECHO1_SPARK_DONE1 0x130 // Topaze: Echo 1 etincelles
+#define FLAG_ECHO1_SPARK_DONE2 0x131 // Topaze: Echo 1 etincelles
+#define FLAG_ECHO1_SPARK_DONE3 0x132 // Topaze: Echo 1 etincelles
+#define FLAG_HIDE_ECHO1_SPARK1 0x133 // Topaze: Echo 1 etincelles
+#define FLAG_HIDE_ECHO1_SPARK2 0x134 // Topaze: Echo 1 etincelles
+#define FLAG_HIDE_ECHO1_SPARK3 0x135 // Topaze: Echo 1 etincelles
 #define FLAG_0x136               0x136
 #define FLAG_0x137               0x137
 #define FLAG_0x138               0x138

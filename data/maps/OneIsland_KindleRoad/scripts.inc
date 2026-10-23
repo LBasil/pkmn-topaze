@@ -3,9 +3,35 @@ OneIsland_KindleRoad_MapScripts::
 	.byte 0
 
 OneIsland_KindleRoad_OnTransition::
+	@ Topaze: etincelles visibles seulement a l'etape 1 ; Raikou apres les trois
+	setflag FLAG_HIDE_ECHO1_SPARK1
+	setflag FLAG_HIDE_ECHO1_SPARK2
+	setflag FLAG_HIDE_ECHO1_SPARK3
 	goto_if_set FLAG_ECHO_BEAST_DONE, OneIsland_KindleRoad_EventScript_HideBeast
 	goto_if_ne VAR_ECHO_STAGE, 1, OneIsland_KindleRoad_EventScript_HideBeast
+	goto_if_unset FLAG_ECHO1_SPARK_DONE1, OneIsland_KindleRoad_EventScript_ShowSpark1
+	goto OneIsland_KindleRoad_EventScript_TransSpark2
+
+OneIsland_KindleRoad_EventScript_ShowSpark1::
+	clearflag FLAG_HIDE_ECHO1_SPARK1
+	goto OneIsland_KindleRoad_EventScript_TransSpark2
+
+OneIsland_KindleRoad_EventScript_TransSpark2::
+	goto_if_unset FLAG_ECHO1_SPARK_DONE2, OneIsland_KindleRoad_EventScript_ShowSpark2
+	goto OneIsland_KindleRoad_EventScript_TransSpark3
+
+OneIsland_KindleRoad_EventScript_ShowSpark2::
+	clearflag FLAG_HIDE_ECHO1_SPARK2
+	goto OneIsland_KindleRoad_EventScript_TransSpark3
+
+OneIsland_KindleRoad_EventScript_TransSpark3::
+	goto_if_unset FLAG_ECHO1_SPARK_DONE3, OneIsland_KindleRoad_EventScript_ShowSpark3
 	clearflag FLAG_HIDE_ECHO_BEAST
+	end
+
+OneIsland_KindleRoad_EventScript_ShowSpark3::
+	clearflag FLAG_HIDE_ECHO1_SPARK3
+	setflag FLAG_HIDE_ECHO_BEAST
 	end
 
 OneIsland_KindleRoad_EventScript_HideBeast::
@@ -57,4 +83,54 @@ OneIsland_KindleRoad_EventScript_DefeatedRaikou::
 OneIsland_KindleRoad_EventScript_RanFromRaikou::
 	setvar VAR_0x8004, SPECIES_RAIKOU
 	goto EventScript_MonFlewAway
+	end
+
+@ Topaze: Echo 1, trois etincelles menent a Raikou
+OneIsland_KindleRoad_EventScript_EchoSpark1::
+	lock
+	faceplayer
+	setvar VAR_0x8004, SPECIES_VOLTORB
+	playmoncry SPECIES_VOLTORB, CRY_MODE_ENCOUNTER
+	waitmoncry
+	msgbox OneIsland_KindleRoad_Text_EchoSpark1
+	setflag FLAG_ECHO1_SPARK_DONE1
+	setflag FLAG_HIDE_ECHO1_SPARK1
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
+	release
+	end
+
+OneIsland_KindleRoad_EventScript_EchoSpark2::
+	lock
+	faceplayer
+	playmoncry SPECIES_VOLTORB, CRY_MODE_ENCOUNTER
+	waitmoncry
+	msgbox OneIsland_KindleRoad_Text_EchoSpark2
+	setflag FLAG_ECHO1_SPARK_DONE2
+	setflag FLAG_HIDE_ECHO1_SPARK2
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
+	release
+	end
+
+OneIsland_KindleRoad_EventScript_EchoSpark3::
+	lock
+	faceplayer
+	playmoncry SPECIES_VOLTORB, CRY_MODE_ENCOUNTER
+	waitmoncry
+	msgbox OneIsland_KindleRoad_Text_EchoSpark3
+	setflag FLAG_ECHO1_SPARK_DONE3
+	setflag FLAG_HIDE_ECHO1_SPARK3
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
+	clearflag FLAG_HIDE_ECHO_BEAST
+	addobject LOCALID_ONE_ISLAND_RAIKOU
+	playse SE_THUNDER
+	delay 30
+	playse SE_THUNDER2
+	msgbox OneIsland_KindleRoad_Text_EchoSpark3b
+	release
 	end

@@ -162,3 +162,22 @@ OneIsland_KindleRoad_Text_EmberSpaSign::
     .string "Light the Fire in Your Heart!\n"
     .string "EMBER SPA$"
 
+
+OneIsland_KindleRoad_Text_EchoSpark1::
+    .string "A crackling spark of the ECHO!\p"
+    .string "It hums, then flies off down\n"
+    .string "the road. Follow it!$"
+
+OneIsland_KindleRoad_Text_EchoSpark2::
+    .string "The spark hisses. The storm\n"
+    .string "grows louder.\p"
+    .string "Something big is down there.$"
+
+OneIsland_KindleRoad_Text_EchoSpark3::
+    .string "The last spark bursts in a\n"
+    .string "flash of blue light!$"
+
+OneIsland_KindleRoad_Text_EchoSpark3b::
+    .string "Thunder shakes the ground.\p"
+    .string "A beast of lightning waits at\n"
+    .string "the end of the road!$"

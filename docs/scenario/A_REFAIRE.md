@@ -146,3 +146,6 @@ Avant : on parcourait les 3 étages et on était bloqué pile à la sortie. Main
 - `sevii_levels.py` : planchers de niveau des dresseurs par île (One 58, Mt Brasier 60, Two 60, Three 61, Four 62, Five 64, Six 65, Seven 66), 91 équipes ; Anciens/Echo inchangés (69–72).
 - `sevii_wild_levels.py` : sauvages = plancher − 5 (min plancher − 18), évolutions suivies ; Ledyba/Magby/Wooper non évolués pour rester obtenables.
 - Centre One Island : scientifique (Move Coach) à côté de l'infirmière (6,2), comme dans tous les Centres ; Bill dehors caché hors scène d'arrivée.
+
+## Écho 1 : parcours vers Raikou (23/10)
+`echo1_sparks.py` : après Bill, 3 étincelles (sprite Voltorb) sur la route Kindle (11,61), (11,81), (11,101) ; chacune dit un texte et disparaît ; la 3e déclenche tonnerre et fait apparaître Raikou (12,120). Raikou n'est plus visible avant. Flags 0x130–0x135. À généraliser aux Échos 2–7 si Basil valide. Sprite de Raikou refait (recoloration d'Entei, provisoire).
