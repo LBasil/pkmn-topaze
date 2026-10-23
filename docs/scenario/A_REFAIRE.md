@@ -24,7 +24,7 @@ Corrigé : Mew placé près du camion (Apatia) ; Bill à la sortie d'Une-Île a 
 À faire :
 - Dernier repaire : il manque un admin (Selene/Kronos/Vesper... à placer avant le boss).
 - Cinématiques : trop peu de mise en scène (global) ; on ne comprend pas pourquoi le boss part (« il a tabassé Red »).
-- Défaite contre le boss : il faut refaire Lorelei (tournoi) pour revenir -> prévoir un retour direct au boss.
+- ~~Défaite contre le boss : il faut refaire Lorelei~~ -> FAIT 23/10 : `FLAG_TOPAZE_BOSS_RETRY` (0x0FF) posé quand Chen est battu ; à l'entrée de la salle de Lorelei, une question propose de retourner directement au boss (équipe soignée, warp salle du Champion, le script reprend à la partie boss).
 - Mine de Grenalux = Mont Sélénite recopié, vide : à refaire / à remplir ; rien n'y mène à part l'indice.
 - Vol pendant le Surf : avatar cassé (à reproduire ; demander à Basil le symptôme exact).
 

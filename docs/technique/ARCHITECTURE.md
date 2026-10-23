@@ -689,3 +689,4 @@ Generateurs (a ne lancer qu'une fois) : `tools/topaze/gen/ending3.py`, `ending2.
 - `src/topaze_dexnav.c` : écran plein (CB2 dédié, option_menu comme modèle) — bandeau zone, rangée EAU (5) + 2 rangées SOL (10), icônes Pokémon (« ? » si non vu), panneau infos (types, niveaux, talents, objet tenu, chaîne). A = chercher, B = fermer. Retour via `FieldCB_ContinueScript`.
 - `wild_encounter.c` : `TopazeRadarGetZone(water, out)` (espèces distinctes + niveaux min/max), `TopazeRadarGetChain`, `TopazeRadarPrecheck` (1 = rien ici, 2 = vélo), `TopazeRadarStart` lit `gTopazeRadarPick/PickWater` (VAR_RESULT 3 annulé, 4 il faut surfer, 5 il faut être à terre).
 - Script `EventScript_PokeRadar` : Precheck → `TopazeRadarOpenScreen` → waitstate → Start.
+- Retry boss : FLAG_TOPAZE_BOSS_RETRY (0x0FF), OnFrame VAR_TEMP_E dans PokemonLeague_LoreleisRoom (BossRetry) -> warp ChampionsRoom (6,19).
