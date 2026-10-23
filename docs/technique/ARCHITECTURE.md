@@ -684,3 +684,8 @@ Generateurs (a ne lancer qu'une fois) : `tools/topaze/gen/ending3.py`, `ending2.
 - Indices post-game : marin du ferry (Apatia), mine (Grenalux), Bill (île 1) ; flags 0x10F/0x110.
 - Surf : fix menu Start (fenêtres GBA restaurées), popup de zone fermé, `waitfieldeffect`.
 - Route Victoire : barrières retirées ; Naomi = infirmière. Hématek 11F : héros visibles après l'ombre.
+
+## Pokéradar v3 — écran style DexNav (23/10)
+- `src/topaze_dexnav.c` : écran plein (CB2 dédié, option_menu comme modèle) — bandeau zone, rangée EAU (5) + 2 rangées SOL (10), icônes Pokémon (« ? » si non vu), panneau infos (types, niveaux, talents, objet tenu, chaîne). A = chercher, B = fermer. Retour via `FieldCB_ContinueScript`.
+- `wild_encounter.c` : `TopazeRadarGetZone(water, out)` (espèces distinctes + niveaux min/max), `TopazeRadarGetChain`, `TopazeRadarPrecheck` (1 = rien ici, 2 = vélo), `TopazeRadarStart` lit `gTopazeRadarPick/PickWater` (VAR_RESULT 3 annulé, 4 il faut surfer, 5 il faut être à terre).
+- Script `EventScript_PokeRadar` : Precheck → `TopazeRadarOpenScreen` → waitstate → Start.
