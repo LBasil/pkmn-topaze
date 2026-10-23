@@ -732,8 +732,21 @@ static void Task_UseFameCheckerFromField(u8 taskId)
     }
 }
 
+static void ItemUseOnFieldCB_EchoCompass(u8 taskId)
+{
+    ScriptContext_SetupScript(EventScript_EchoCompass);
+    DestroyTask(taskId);
+}
+
 void FieldUseFunc_VsSeeker(u8 taskId)
 {
+    // Topaze : en post-game la boussole des Echos remplace le VS Seeker
+    if (VarGet(VAR_ECHO_STAGE) >= 1)
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_EchoCompass;
+        SetUpItemUseOnFieldCallback(taskId);
+        return;
+    }
     if ((gMapHeader.mapType != MAP_TYPE_ROUTE
       && gMapHeader.mapType != MAP_TYPE_TOWN
       && gMapHeader.mapType != MAP_TYPE_CITY)

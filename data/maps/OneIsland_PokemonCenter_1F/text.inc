@@ -376,7 +376,9 @@ OneIsland_PokemonCenter_1F_Text_EchoBillCompass::
     .string "ECHO.\p"
     .string "The first one is on KINDLE ROAD.\n"
     .string "A beast of lightning runs there.\p"
-    .string "Calm it down, then see CELIO.$"
+    .string "Calm it down, then see CELIO.\p"
+    .string "Lost? Use the COMPASS from your\n"
+    .string "BAG. It tells you where to go.$"
 
 OneIsland_PokemonCenter_1F_Text_EchoBillAfter::
     .string "BILL: Every ECHO you close makes\n"

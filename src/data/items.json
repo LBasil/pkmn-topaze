@@ -5851,12 +5851,12 @@
       "secondaryId": 0
     },
     {
-      "english": "VS SEEKER",
+      "english": "TIME COMPASS",
       "itemId": "ITEM_VS_SEEKER",
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 0,
-      "description_english": "A device that indicates TRAINERS\\nwho want to battle. The battery\\ncharges while traveling.",
+      "description_english": "Points to the next ECHO. Use it\\nwhen you do not know where to\\ngo next.",
       "importance": 1,
       "registrability": 1,
       "pocket": "POCKET_KEY_ITEMS",

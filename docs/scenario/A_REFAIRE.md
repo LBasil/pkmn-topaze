@@ -30,3 +30,7 @@ Corrigé : Mew placé près du camion (Apatia) ; Bill à la sortie d'Une-Île a 
 
 ## Îles Sevii : passe d'ambiance faite le 23/10 (`docs/topaze/sevii_dress.py`)
 Îles 1-2-3 « braise » (herbe ocre, sable cendre), îles 4-5 « automne » (feuillages roux, eau indigo), îles 6-7 « tropical » (émeraude, corail, eau turquoise). Ports, maisons, grottes et intérieurs inchangés. Reste : villes sans identité propre (décor, PNJ, dialogues), grottes, Mt Ember/Icefall/Tanoby à habiller, sprites provisoires, textes des Échos.
+
+## Guidage post-game Sevii (23/10)
+- **TIME COMPASS** (ancien VS Seeker, donné par Bill) : l'utiliser depuis le sac (`data/scripts/echo_compass.inc`, hook dans `FieldUseFunc_VsSeeker` quand `VAR_ECHO_STAGE >= 1`) dit la prochaine étape selon le stage (île + lieu, ou « voir Bill/Célio/Lorelei »). Les 21 stades sont couverts ; stade >= 22 : « les échos sont fermés ».
+- Les joueurs peuvent aller sur toutes les îles dans le désordre (tous les pass) : le compas est le fil conducteur ; Bill/Célio répètent aussi le lieu. À faire : panneaux/PNJ de guidage dans chaque port, journal de quête.

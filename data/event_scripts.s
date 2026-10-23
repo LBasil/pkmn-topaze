@@ -1138,6 +1138,7 @@ EventScript_ResetAllMapFlags::
 
 	.include "data/scripts/hall_of_fame.inc"
 	.include "data/scripts/pkmn_center_nurse.inc"
+	.include "data/scripts/echo_compass.inc"
 	.include "data/scripts/obtain_item.inc"
 	.include "data/scripts/pc.inc"
 
