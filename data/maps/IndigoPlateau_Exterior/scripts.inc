@@ -6,6 +6,7 @@ IndigoPlateau_Exterior_MapScripts::
 IndigoPlateau_Exterior_OnTransition::
 	call IndigoPlateau_Exterior_EventScript_TitanSetup
 	setworldmapflag FLAG_WORLD_MAP_INDIGO_PLATEAU_EXTERIOR
+	call IndigoPlateau_Exterior_EventScript_GruntsCheck
 	call_if_eq VAR_MAP_SCENE_INDIGO_PLATEAU_EXTERIOR, 1, IndigoPlateau_Exterior_EventScript_PlayCreditsMusic
 	end
 
@@ -233,3 +234,54 @@ IndigoPlateau_Exterior_Text_TitanIntro::
 	.string "rises before you...\p"
 	.string "It has waited for a ruler worthy\n"
 	.string "of the throne. Show it yours!$"
+
+@ --- Sbires silencieux (apres le repaire, avant le Champion)
+IndigoPlateau_Exterior_EventScript_GruntsCheck::
+	setflag FLAG_TOPAZE_HIDE_PLATEAU_GRUNTS
+	goto_if_unset FLAG_VR_BOSS_DONE, IndigoPlateau_Exterior_GruntsEnd
+	goto_if_set FLAG_DEFEATED_CHAMP, IndigoPlateau_Exterior_GruntsEnd
+	clearflag FLAG_TOPAZE_HIDE_PLATEAU_GRUNTS
+IndigoPlateau_Exterior_GruntsEnd::
+	return
+
+IndigoPlateau_Exterior_EventScript_Grunt1::
+	msgbox IndigoPlateau_Exterior_Text_Grunt1, MSGBOX_NPC
+	end
+
+IndigoPlateau_Exterior_Text_Grunt1::
+	.string "GRUNT: ...We are only watching.$"
+
+IndigoPlateau_Exterior_EventScript_Grunt2::
+	msgbox IndigoPlateau_Exterior_Text_Grunt2, MSGBOX_NPC
+	end
+
+IndigoPlateau_Exterior_Text_Grunt2::
+	.string "GRUNT: The BOSS asked us to keep the\nroad warm. Go ahead.$"
+
+IndigoPlateau_Exterior_EventScript_Grunt3::
+	msgbox IndigoPlateau_Exterior_Text_Grunt3, MSGBOX_NPC
+	end
+
+IndigoPlateau_Exterior_Text_Grunt3::
+	.string "GRUNT: Nobody here will touch you.\nOrders.$"
+
+IndigoPlateau_Exterior_EventScript_Grunt4::
+	msgbox IndigoPlateau_Exterior_Text_Grunt4, MSGBOX_NPC
+	end
+
+IndigoPlateau_Exterior_Text_Grunt4::
+	.string "GRUNT: Win. That is the whole job\ntoday.$"
+
+IndigoPlateau_Exterior_EventScript_Grunt5::
+	msgbox IndigoPlateau_Exterior_Text_Grunt5, MSGBOX_NPC
+	end
+
+IndigoPlateau_Exterior_Text_Grunt5::
+	.string "GRUNT: We came from every town you\npassed.$"
+
+IndigoPlateau_Exterior_EventScript_Grunt6::
+	msgbox IndigoPlateau_Exterior_Text_Grunt6, MSGBOX_NPC
+	end
+
+IndigoPlateau_Exterior_Text_Grunt6::
+	.string "GRUNT: Ten stones. One hand. We are\npatient.$"
