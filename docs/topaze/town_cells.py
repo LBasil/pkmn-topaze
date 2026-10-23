@@ -167,7 +167,7 @@ def cell(k):
     dest = 'MAP_' + ''.join(('_' + c if c.isupper() and i else c) for i, c in enumerate(H)).upper().replace('__', '_')
     door = next(w for w in dt['warp_events'] if w['dest_map'].replace('_', '') == ('MAP' + H).upper().replace('_', ''))
     used = {(o['x'], o['y']) for o in dt['object_events']}
-    wpos = next((x, y) for x, y in [(door['x'] + 1, door['y'] + 2), (door['x'] - 1, door['y'] + 2), (door['x'], door['y'] + 2), (door['x'] + 2, door['y'] + 1), (door['x'] - 2, door['y'] + 1), (door['x'] + 1, door['y'] + 3)] if freecell(nt, x, y, used))
+    wpos = k.get('wpos') or next((x, y) for x, y in [(door['x'] + 1, door['y'] + 2), (door['x'] - 1, door['y'] + 2), (door['x'], door['y'] + 2), (door['x'] + 2, door['y'] + 1), (door['x'] - 2, door['y'] + 1), (door['x'] + 1, door['y'] + 3)] if freecell(nt, x, y, used))
     addobj(T, obj('OLD_MAN_1', wpos[0], wpos[1], 'FACE_UP', f'{T}_EventScript_CellWitness'))
     dh = json.load(open(f'{R}/data/maps/{H}/map.json')); nh = RT.Nav(H)
     hused = {(o['x'], o['y']) for o in dh['object_events']} | {(w['x'], w['y']) for w in dh['warp_events']}
@@ -298,7 +298,7 @@ TOWNS = [
   defeat=[('The tower did not warn us...',), ('...You are quite scary yourself.',)],
   post=[('The radio only talks to us. Do not', 'bother.',), ('One more wall to read. Then go.',)],
   memo=('A logbook sits among the crates.\\p', 'BRANCH 5 of 7. Tower relay, all', 'quiet. Fifty recruits this month.\\p', 'Next voice: the BOSS, at noon.', 'Report to S.\\p', 'In a drawer, 2 ELIXIR.')),
- dict(town='FuchsiaCity', house='FuchsiaCity_House3', key='Fuchsia', flag='FLAG_TOPAZE_CELL_FUCHSIA',
+ dict(town='FuchsiaCity', house='FuchsiaCity_House3', key='Fuchsia', wpos=(34, 24), flag='FLAG_TOPAZE_CELL_FUCHSIA',
   tidA='TRAINER_POKEFAN_M', tidB='TRAINER_POKEFAN_F',
   partyA=[('SPECIES_ARBOK', 35), ('SPECIES_WEEZING', 35)], partyB=[('SPECIES_CROBAT', 36), ('SPECIES_MUK', 36)],
   reward=('ITEM_PP_UP', 2),
