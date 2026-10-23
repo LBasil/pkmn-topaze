@@ -89,7 +89,7 @@ PewterCity_Museum_2F_Text_BrockFossil::
 
 PewterCity_Museum_2F_Text_BrockFossilAfter::
     .string "BROCK: Have it revived at the\n"
-    .string "lab on CINNABAR. Bring it back to\l"
+    .string "lab on CHRONDROLIA. Bring it back to\l"
     .string "the world, as it should be.$"
 
 PewterCity_Museum_2F_Text_MonSlowpoke::

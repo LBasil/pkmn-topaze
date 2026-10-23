@@ -79,8 +79,8 @@ IndigoPlateau_PokemonCenter_1F_Text_MistyBefore::
 
 IndigoPlateau_PokemonCenter_1F_Text_MistyAfter::
     .string "MISTY: CHAMPION! I am so proud.\p"
-    .string "Come see me at the CERULEAN\n"
-    .string "cottage when you have a moment.$"
+    .string "Come see me at the SEA COTTAGE\n"
+    .string "when you have a moment.$"
 
 IndigoPlateau_PokemonCenter_1F_Text_RebelsIntro::
     .string "FLORA: The seven REBEL LEADERS have\n"

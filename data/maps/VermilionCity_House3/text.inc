@@ -20,7 +20,7 @@ VermilionCity_House3_Text_SendMyPidgeyToUnionRoom::
 
 
 VermilionCity_House3_Text_BoyAsk::
-    .string "My PIDGEY can't fly to SAFFRON,\n"
+    .string "My PIDGEY can't fly to HEMATOWN,\n"
     .string "its wing is numb. It was shocked\lat the GYM!\pI need two PARALYZE HEALS.$"
 
 VermilionCity_House3_Text_BoyOffer::

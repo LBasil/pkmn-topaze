@@ -171,7 +171,7 @@ SaffronCity_Gym_Text_StoneGift::
     .string "Go back to GRENALUX and SURF south\n"
     .string "along ROUTE 21. A city of lightning\p"
     .string "waits there. The old road by\n"
-    .string "FUCHSIA is molten rock now.$"
+    .string "PARMANIE is under fire now.$"
 
 SaffronCity_Gym_Text_SabrinaVisit1::
     .string "NOX: I saw the wish in my dreams.\n"
