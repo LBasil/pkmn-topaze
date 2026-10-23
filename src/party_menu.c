@@ -2992,6 +2992,16 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
             }
         }
     }
+    // Topaze QoL : un Pokemon de type VOL propose FLY sans l'avoir appris, si le joueur a la CS et le badge
+    if (CheckBagHasItem(ITEM_HM02_FLY, 1) && FlagGet(FLAG_BADGE01_GET + FIELD_MOVE_FLY) == TRUE && !GetMonData(&mons[slotId], MON_DATA_IS_EGG))
+    {
+        u16 sp = GetMonData(&mons[slotId], MON_DATA_SPECIES);
+        bool8 knows = FALSE;
+        for (i = 0; i < MAX_MON_MOVES; ++i)
+            if (GetMonData(&mons[slotId], i + MON_DATA_MOVE1) == MOVE_FLY) knows = TRUE;
+        if (!knows && (gSpeciesInfo[sp].types[0] == TYPE_FLYING || gSpeciesInfo[sp].types[1] == TYPE_FLYING))
+            AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_FLY + CURSOR_OPTION_FIELD_MOVES);
+    }
     if (GetMonData(&mons[1], MON_DATA_SPECIES) != SPECIES_NONE)
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, CURSOR_OPTION_SWITCH);
     if (ItemIsMail(GetMonData(&mons[slotId], MON_DATA_HELD_ITEM)))
