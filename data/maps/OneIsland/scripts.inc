@@ -5,11 +5,11 @@ OneIsland_MapScripts::
 
 OneIsland_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_ONE_ISLAND
-	compare VAR_MAP_SCENE_ONE_ISLAND_HARBOR, 3
-	call_if_ge OneIsland_EventScript_HideBillOutside
+	compare VAR_MAP_SCENE_ONE_ISLAND_HARBOR, 2
+	call_if_ne OneIsland_EventScript_HideBillOutside
 	end
 
-@ Topaze: Bill ne reste plus dehors une fois la scene du Centre passee.
+@ Topaze: Bill n'est visible dehors que pendant la scene d'arrivee (var 2).
 OneIsland_EventScript_HideBillOutside::
 	setflag FLAG_HIDE_ONE_ISLAND_BILL
 	return
