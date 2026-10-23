@@ -1414,6 +1414,7 @@ Text_TestMsg::
 	.include "data/text/help_system.inc"
 	.include "data/scripts/cable_club.inc"
 	.include "data/scripts/field_moves.inc"
+	.include "data/scripts/topaze_news.inc"
 	.include "data/scripts/item_ball_scripts.inc"
 	.include "data/scripts/mystery_event_club.inc"
 	.include "data/scripts/day_care.inc"
