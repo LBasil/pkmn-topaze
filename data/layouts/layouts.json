@@ -4547,7 +4547,7 @@
       "id": "LAYOUT_GYM_EM_DEWFORD",
       "name": "GymEmDewford_Layout",
       "width": 18,
-      "height": 28,
+      "height": 29,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_GymDewfordPri",
