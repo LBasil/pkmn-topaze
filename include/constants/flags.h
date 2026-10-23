@@ -300,8 +300,11 @@
 #define FLAG_0x112               0x112
 #define FLAG_TOPAZE_HIDE_RECRUITER FLAG_0x112 // Topaze: recruteur Onybris cache dans les Centres
 #define FLAG_0x113               0x113
+#define FLAG_TOPAZE_HIDE_VESPER  FLAG_0x113 // cameo cadre Centre (Fuchsia)
 #define FLAG_0x114               0x114
+#define FLAG_TOPAZE_HIDE_SELENE  FLAG_0x114 // cameo cadre Centre (Lavender)
 #define FLAG_0x115               0x115
+#define FLAG_TOPAZE_HIDE_KRONOS  FLAG_0x115 // cameo cadre Centre (Celadon)
 #define FLAG_0x116               0x116
 #define FLAG_0x117               0x117
 #define FLAG_0x118               0x118

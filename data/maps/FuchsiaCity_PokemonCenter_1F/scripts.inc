@@ -6,6 +6,7 @@ FuchsiaCity_PokemonCenter_1F_MapScripts::
 FuchsiaCity_PokemonCenter_1F_OnTransition::
 	setrespawn HEAL_LOCATION_FUCHSIA_CITY
 	call Topaze_EventScript_RecruiterCheck
+	call Topaze_EventScript_VesperCheck
 	end
 
 FuchsiaCity_PokemonCenter_1F_EventScript_Nurse::
