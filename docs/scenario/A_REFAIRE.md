@@ -34,3 +34,6 @@ Corrigé : Mew placé près du camion (Apatia) ; Bill à la sortie d'Une-Île a 
 ## Guidage post-game Sevii (23/10)
 - **TIME COMPASS** (ancien VS Seeker, donné par Bill) : l'utiliser depuis le sac (`data/scripts/echo_compass.inc`, hook dans `FieldUseFunc_VsSeeker` quand `VAR_ECHO_STAGE >= 1`) dit la prochaine étape selon le stage (île + lieu, ou « voir Bill/Célio/Lorelei »). Les 21 stades sont couverts ; stade >= 22 : « les échos sont fermés ».
 - Les joueurs peuvent aller sur toutes les îles dans le désordre (tous les pass) : le compas est le fil conducteur ; Bill/Célio répètent aussi le lieu. À faire : panneaux/PNJ de guidage dans chaque port, journal de quête.
+
+## Guides de port Sevii (23/10)
+Chaque port (îles 1 à 7) a un PNJ guide en (6,4) : présente l'île (2 paragraphes) puis, si `VAR_ECHO_STAGE >= 1`, lit la TIME COMPASS (`EventScript_EchoCompass`). Reste : décor par île, textes des villes, panneaux, journal de quête.

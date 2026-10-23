@@ -690,3 +690,4 @@ Generateurs (a ne lancer qu'une fois) : `tools/topaze/gen/ending3.py`, `ending2.
 - `wild_encounter.c` : `TopazeRadarGetZone(water, out)` (espèces distinctes + niveaux min/max), `TopazeRadarGetChain`, `TopazeRadarPrecheck` (1 = rien ici, 2 = vélo), `TopazeRadarStart` lit `gTopazeRadarPick/PickWater` (VAR_RESULT 3 annulé, 4 il faut surfer, 5 il faut être à terre).
 - Script `EventScript_PokeRadar` : Precheck → `TopazeRadarOpenScreen` → waitstate → Start.
 - Retry boss : FLAG_TOPAZE_BOSS_RETRY (0x0FF), OnFrame VAR_TEMP_E dans PokemonLeague_LoreleisRoom (BossRetry) -> warp ChampionsRoom (6,19).
+- Guides de port Sevii : NPC (6,4) dans {One..Seven}Island_Harbor, scripts+textes dans scripts.inc de la carte, appelle EventScript_EchoCompass.
