@@ -830,6 +830,8 @@ static void AddToWildEncounterRateBuff(u8 encounterRate)
 // and the player must walk up to it (running or riding makes it flee). Chains of the same species raise the shiny odds.
 #define RADAR_BLIP_LOCALID 0xF1
 #define RADAR_MAX_STEPS    70
+u16 gTopazeRadarPick;
+u8 gTopazeRadarPickWater;
 struct MenuAction gTopazeRadarMenu[8];
 u8 gTopazeRadarCount;
 static u8 sRadarNames[8][12];
@@ -889,6 +891,70 @@ static u8 TopazeRadarSlotCount(void)
     return TopazeRadarIsWater() ? WATER_WILD_COUNT : LAND_WILD_COUNT;
 }
 
+// Topaze DexNav screen: distinct species of the current map (water or land table)
+u8 TopazeRadarGetZone(bool8 water, struct TopazeRadarEntry *out)
+{
+    u16 headerId = GetCurrentMapWildMonHeaderId();
+    const struct WildPokemonInfo *info;
+    u8 slots = water ? WATER_WILD_COUNT : LAND_WILD_COUNT;
+    u8 max = water ? 5 : 10;
+    u8 n = 0, slot, i;
+
+    TopazeRadarSettleLastBattle();
+    if (headerId == HEADER_NONE)
+        return 0;
+    info = water ? gWildMonHeaders[headerId].waterMonsInfo : gWildMonHeaders[headerId].landMonsInfo;
+    if (info == NULL)
+        return 0;
+    for (slot = 0; slot < slots; slot++)
+    {
+        const struct WildPokemon *w = &info->wildPokemon[slot];
+
+        if (w->species == SPECIES_NONE || w->species == SPECIES_UNOWN)
+            continue;
+        for (i = 0; i < n; i++)
+            if (out[i].species == w->species)
+                break;
+        if (i < n)
+        {
+            if (w->minLevel < out[i].minLv)
+                out[i].minLv = w->minLevel;
+            if (w->maxLevel > out[i].maxLv)
+                out[i].maxLv = w->maxLevel;
+            continue;
+        }
+        if (n >= max)
+            continue;
+        out[n].species = w->species;
+        out[n].minLv = w->minLevel;
+        out[n].maxLv = w->maxLevel;
+        n++;
+    }
+    return n;
+}
+
+u8 TopazeRadarGetChain(u16 species)
+{
+    return species == sRadarSpecies ? sRadarChain : 0;
+}
+
+bool8 TopazeRadarPlayerSurfing(void)
+{
+    return TopazeRadarIsWater();
+}
+
+// VAR_RESULT: 0 = ok, 1 = nothing to search on this map, 2 = on a bike
+void TopazeRadarPrecheck(void)
+{
+    struct TopazeRadarEntry tmp[10];
+
+    gSpecialVar_Result = 0;
+    if (gPlayerAvatar.flags & (PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
+        gSpecialVar_Result = 2;
+    else if (TopazeRadarGetZone(FALSE, tmp) == 0 && TopazeRadarGetZone(TRUE, tmp) == 0)
+        gSpecialVar_Result = 1;
+}
+
 // VAR_RESULT = number of species that can be searched (0 = none)
 void TopazeRadarBuildList(void)
 {
@@ -924,7 +990,8 @@ void TopazeRadarBuildList(void)
     gSpecialVar_Result = n;
 }
 
-// VAR_0x8004 = chosen index. VAR_RESULT: 0 = no tall grass nearby, 1 = a rustling spot appeared, 2 = cannot use it now.
+// The DexNav screen leaves its choice in gTopazeRadarPick / gTopazeRadarPickWater.
+// VAR_RESULT: 0 = no spot nearby, 1 = a rustling spot appeared, 2 = bike, 3 = cancelled, 4 = must be surfing, 5 = must be on land
 void TopazeRadarStart(void)
 {
     s16 px, py, x, y;
@@ -932,11 +999,24 @@ void TopazeRadarStart(void)
     u8 elevation;
 
     gSpecialVar_Result = 0;
-    if (gSpecialVar_0x8004 >= gTopazeRadarCount)
+    if (gTopazeRadarPick == SPECIES_NONE)
+    {
+        gSpecialVar_Result = 3;
         return;
+    }
     if (gPlayerAvatar.flags & (PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
     {
         gSpecialVar_Result = 2;
+        return;
+    }
+    if (gTopazeRadarPickWater && !TopazeRadarIsWater())
+    {
+        gSpecialVar_Result = 4;
+        return;
+    }
+    if (!gTopazeRadarPickWater && TopazeRadarIsWater())
+    {
+        gSpecialVar_Result = 5;
         return;
     }
     TopazeRadarRemoveBlip();
@@ -956,10 +1036,10 @@ void TopazeRadarStart(void)
             continue;
         if (MapGridGetCollisionAt(x, y) || GetObjectEventIdByXY(x, y) != OBJECT_EVENTS_COUNT)
             continue;
-        gSpecialVar_0x8005 = sRadarList[gSpecialVar_0x8004];
+        gSpecialVar_0x8005 = gTopazeRadarPick;
         sRadarX = x;
         sRadarY = y;
-        sRadarTarget = sRadarList[gSpecialVar_0x8004];
+        sRadarTarget = gTopazeRadarPick;
         sRadarSteps = 0;
         sRadarMapNum = gSaveBlock1Ptr->location.mapNum;
         sRadarMapGroup = gSaveBlock1Ptr->location.mapGroup;

@@ -287,18 +287,31 @@ Text_LooksLikeNothingHere::
 	.string "Looks like there's nothing here…$"
 
 EventScript_PokeRadar::
-	special TopazeRadarBuildList
-	goto_if_eq VAR_RESULT, 0, EventScript_PokeRadarNoMons
-	multichoice 1, 1, MULTICHOICE_TOPAZE_RADAR, FALSE
-	goto_if_eq VAR_RESULT, SCR_MENU_CANCEL, EventScript_PokeRadarEnd
-	copyvar VAR_0x8004, VAR_RESULT
+	special TopazeRadarPrecheck
+	goto_if_eq VAR_RESULT, 1, EventScript_PokeRadarNoMons
+	goto_if_eq VAR_RESULT, 2, EventScript_PokeRadarNotNow
+	special TopazeRadarOpenScreen
+	waitstate
 	special TopazeRadarStart
+	goto_if_eq VAR_RESULT, 3, EventScript_PokeRadarEnd
 	goto_if_eq VAR_RESULT, 0, EventScript_PokeRadarNoGrass
 	goto_if_eq VAR_RESULT, 2, EventScript_PokeRadarNotNow
+	goto_if_eq VAR_RESULT, 4, EventScript_PokeRadarNeedSurf
+	goto_if_eq VAR_RESULT, 5, EventScript_PokeRadarNeedLand
 	showmonpic VAR_0x8005, 10, 3
 	msgbox Text_PokeRadarFound, MSGBOX_SIGN
 	hidemonpic
 EventScript_PokeRadarEnd::
+	releaseall
+	end
+
+EventScript_PokeRadarNeedSurf::
+	msgbox Text_PokeRadarNeedSurf, MSGBOX_SIGN
+	releaseall
+	end
+
+EventScript_PokeRadarNeedLand::
+	msgbox Text_PokeRadarNeedLand, MSGBOX_SIGN
 	releaseall
 	end
 
@@ -335,6 +348,14 @@ Text_PokeRadarNoMons::
 Text_PokeRadarNoGrass::
 	.string "There is no suitable spot nearby\n"
 	.string "to search.$"
+
+Text_PokeRadarNeedSurf::
+	.string "That POKéMON lives in the water.\n"
+	.string "Use SURF first, then try again.$"
+
+Text_PokeRadarNeedLand::
+	.string "That POKéMON lives on land.\n"
+	.string "Get off the water first.$"
 
 Text_PokeRadarNotNow::
 	.string "You can't use the POKé RADAR\n"

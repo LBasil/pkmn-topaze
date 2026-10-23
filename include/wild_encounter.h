@@ -37,6 +37,18 @@ extern const struct WildPokemonHeader gWildMonHeaders[];
 
 void DisableWildEncounters(bool8 disabled);
 bool8 TopazeRadarStep(void);
+struct TopazeRadarEntry
+{
+    u16 species;
+    u8 minLv;
+    u8 maxLv;
+};
+extern u16 gTopazeRadarPick;
+extern u8 gTopazeRadarPickWater;
+u8 TopazeRadarGetZone(bool8 water, struct TopazeRadarEntry *out);
+u8 TopazeRadarGetChain(u16 species);
+bool8 TopazeRadarPlayerSurfing(void);
+
 bool8 StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetaTileBehavior);
 bool8 SweetScentWildEncounter(void);
 bool8 DoesCurrentMapHaveFishingMons(void);

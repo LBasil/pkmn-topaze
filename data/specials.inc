@@ -461,6 +461,8 @@ gSpecials::
 	def_special TopazeRepelNext
 	def_special TopazeRepelUse
 	def_special TopazeRadarBuildList
+	def_special TopazeRadarPrecheck
+	def_special TopazeRadarOpenScreen
 	def_special TopazeRadarStart
 	def_special TopazeRadarBattle
 gSpecialsEnd::
