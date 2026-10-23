@@ -65,3 +65,6 @@ Règles posées (dites au joueur par Kronos puis par la voix du boss, repaire 3F
 3. Il a donc besoin que le joueur devienne Champion avec le pendentif, puis il surgit à la porte (salle du Champion, après Chen/Oak) et prend le vœu de celui qui le tient (« I came for what a CHAMPION wakes »).
 4. Pourquoi le joueur y va : récupérer les pierres et arrêter le dérèglement du temps ; le boss lui laisse le choix de rester chez lui (« nothing wakes, the clocks keep bending »).
 Cohérent avec : Misty (« le gagnant rencontre JIRACHI »), Hall of Fame (« il se réveille pour toi »), les trois fins.
+
+## Scène des alliés au Plateau (23/10)
+Sortie du repaire -> premier passage au Centre du Plateau : Flora, Brice et Misty comprennent le piège (`FLAG_TOPAZE_BRIEFING` 0x111, `IndigoPlateau_PokemonCenter_1F_EventScript_Briefing`, déclenchée à l'entrée). Ils en font un duel : le vœu va d'abord au Champion ; le boss ne peut le prendre qu'en le battant, « dans un lieu que tu as choisi, avec une équipe que tu as construite ». Flora soigne l'équipe. Le tournoi n'est plus subi : c'est la partie jouée par le joueur.
