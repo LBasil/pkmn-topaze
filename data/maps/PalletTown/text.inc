@@ -358,3 +358,11 @@ PalletTown_Text_RefDone::
 PalletTown_Text_RefIdle::
     .string "AYA: I watch over the animals here.\n"
     .string "The world is quieter now.$"
+
+PalletTown_Text_MineHint::
+    .string "A rumble comes from the old mine\n"
+    .string "north of town. Its gate is open.\p"
+    .string "Whatever the AURA left down there,\n"
+    .string "it is waiting at the bottom.\p"
+    .string "(Then follow MEW to APATIA's dock,\n"
+    .string "and talk to the sailor.)$"

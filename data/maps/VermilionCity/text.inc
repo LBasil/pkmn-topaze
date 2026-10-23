@@ -201,3 +201,9 @@ VermilionCity_Text_RefDone::
 VermilionCity_Text_RefIdle::
     .string "ELISE: I watch over the animals here.\n"
     .string "The world is quieter now.$"
+
+VermilionCity_Text_FerryHint::
+    .string "From the dock, a SAILOR is waving\n"
+    .string "at you. He seems to have something\p"
+    .string "for you. He can also take you to\n"
+    .string "the SEVII ISLANDS by ferry.$"

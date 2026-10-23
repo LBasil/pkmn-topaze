@@ -18,3 +18,12 @@
 8. PNJ inutiles / mal placés routes 14, 15, haut de la route 13.
 9. Îles Sevii, Bill, grotte Azurée à déplacer, Ligue/Plateau, intérieurs de la Tour Pokémon, Route 5 et 9, Tunnel Roche, Tour Spinelle (niveaux).
 10. Sprites provisoires (Brice, Flora, N, Gold, Silver, Red, Kronos, Vesper, Selene, Hepha...).
+
+## Retours du 23/10 (post-game et fin)
+Corrigé : Mew placé près du camion (Apatia) ; Bill à la sortie d'Une-Île a maintenant un dialogue qui renvoie au Centre ; indices automatiques post-game (marin du ferry à Apatia, mine à Grenalux, flags 0x10F/0x110).
+À faire :
+- Dernier repaire : il manque un admin (Selene/Kronos/Vesper... à placer avant le boss).
+- Cinématiques : trop peu de mise en scène (global) ; on ne comprend pas pourquoi le boss part (« il a tabassé Red »).
+- Défaite contre le boss : il faut refaire Lorelei (tournoi) pour revenir -> prévoir un retour direct au boss.
+- Mine de Grenalux = Mont Sélénite recopié, vide : à refaire / à remplir ; rien n'y mène à part l'indice.
+- Vol pendant le Surf : avatar cassé (à reproduire ; demander à Basil le symptôme exact).

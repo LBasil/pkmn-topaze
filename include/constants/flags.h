@@ -291,7 +291,9 @@
 #define FLAG_LORD_SEVEN 0x10D // Topaze: ending 3 conquest
 #define FLAG_QUEST_LEADER_SYLVESTRE 0x10E // Topaze: post-game leader gift (CeruleanCity_Gym)
 #define FLAG_0x10F               0x10F
+#define FLAG_HINT_APATIA_FERRY   FLAG_0x10F // Topaze: postgame hint (ferry sailor)
 #define FLAG_0x110               0x110
+#define FLAG_HINT_GRENALUX_MINE  FLAG_0x110 // Topaze: postgame hint (mine)
 #define FLAG_0x111               0x111
 #define FLAG_0x112               0x112
 #define FLAG_0x113               0x113

@@ -7,6 +7,7 @@ PalletTown_MapScripts::
 
 PalletTown_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_PALLET_TOWN
+	call_if_set FLAG_TOPAZE_POSTGAME, PalletTown_EventScript_CheckMineHint
 	call_if_set FLAG_PALLET_LADY_NOT_BLOCKING_SIGN, PalletTown_EventScript_TryReadySignLady
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 0, PalletTown_EventScript_SetSignLadyPos
 	call_if_eq VAR_MAP_SCENE_PALLET_TOWN_SIGN_LADY, 1, PalletTown_EventScript_SetSignLadyDone
@@ -36,6 +37,7 @@ PalletTown_EventScript_MoveSignLadyToRouteEntrance::
 
 PalletTown_OnFrame::
 	map_script_2 VAR_MAP_SCENE_PALLET_TOWN_OAK, 2, PalletTown_EventScript_OakRatingScene
+	map_script_2 VAR_TEMP_F, 1, PalletTown_EventScript_MineHint
 	.2byte 0
 
 @ Oak approaches player after exiting their house post Elite Four to check if they should receieve the National Dex
@@ -759,4 +761,18 @@ PalletTown_EventScript_RefugeDone::
 PalletTown_EventScript_RefugeIdle::
 	msgbox PalletTown_Text_RefIdle
 	release
+	end
+
+@ Topaze: indice automatique post-game (la mine est ouverte)
+PalletTown_EventScript_CheckMineHint::
+	goto_if_set FLAG_HINT_GRENALUX_MINE, EventScript_Return
+	setvar VAR_TEMP_F, 1
+	return
+
+PalletTown_EventScript_MineHint::
+	lockall
+	setflag FLAG_HINT_GRENALUX_MINE
+	setvar VAR_TEMP_F, 0
+	msgbox PalletTown_Text_MineHint
+	releaseall
 	end

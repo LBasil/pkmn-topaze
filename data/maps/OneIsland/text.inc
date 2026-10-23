@@ -118,3 +118,9 @@ OneIsland_Text_RefDone::
 OneIsland_Text_RefIdle::
     .string "JONAH: I watch over the animals here.\n"
     .string "The world is quieter now.$"
+
+OneIsland_Text_BillWaiting::
+    .string "BILL: There you are! CELIO and I\n"
+    .string "are waiting at the POKéMON CENTER.\p"
+    .string "The Echoes are all over the\n"
+    .string "islands. Come, we will explain!$"

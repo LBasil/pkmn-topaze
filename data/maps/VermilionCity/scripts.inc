@@ -5,6 +5,7 @@ VermilionCity_MapScripts::
 
 VermilionCity_OnFrame::
 	map_script_2 VAR_MAP_SCENE_VERMILION_CITY, 2, VermilionCity_EventScript_ExitSSAnne
+	map_script_2 VAR_TEMP_F, 1, VermilionCity_EventScript_FerryHint
 	.2byte 0
 
 VermilionCity_EventScript_ExitSSAnne::
@@ -25,6 +26,7 @@ VermilionCity_OnTransition::
 	call_if_set FLAG_TALKED_TO_OAKS_AIDE_IN_VERMILION, VermilionCity_EventScript_HideOaksAide
 	call_if_set FLAG_GOT_HM01, VermilionCity_EventScript_EastPoliceLeave
 	setflag FLAG_HIDE_MEW_TRUCK
+	call_if_set FLAG_TOPAZE_COUNCIL, VermilionCity_EventScript_CheckFerryHint
 	call_if_set FLAG_MEW_FLED, VermilionCity_EventScript_MaybeShowMew
 	end
 
@@ -401,4 +403,18 @@ VermilionCity_EventScript_RefugeDone::
 VermilionCity_EventScript_RefugeIdle::
 	msgbox VermilionCity_Text_RefIdle
 	release
+	end
+
+@ Topaze: indice automatique post-game (le marin du ferry a quelque chose pour le joueur)
+VermilionCity_EventScript_CheckFerryHint::
+	goto_if_set FLAG_HINT_APATIA_FERRY, EventScript_Return
+	setvar VAR_TEMP_F, 1
+	return
+
+VermilionCity_EventScript_FerryHint::
+	lockall
+	setflag FLAG_HINT_APATIA_FERRY
+	setvar VAR_TEMP_F, 0
+	msgbox VermilionCity_Text_FerryHint
+	releaseall
 	end

@@ -178,3 +178,11 @@ OneIsland_EventScript_RefugeIdle::
 	msgbox OneIsland_Text_RefIdle
 	release
 	end
+
+@ Topaze: Bill attend à la sortie de la ville ; il renvoie vers le Centre.
+OneIsland_EventScript_BillWaiting::
+	lock
+	faceplayer
+	msgbox OneIsland_Text_BillWaiting
+	release
+	end
