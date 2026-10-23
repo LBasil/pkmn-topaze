@@ -50,3 +50,10 @@ La porte de la mine (Grenalux) mène directement à l'étage de la vérité (Gre
 ## Route 23 / Plateau (24/10)
 - Palette « aube » (or olive, eau turquoise tiède) pour Route 23 et Plateau Indigo (`docs/topaze/route23_dress.py`, tilesets `general_dawn` / `indigo_dawn`) : la route de la Ligue se lève après la nuit bleue de la Route 22.
 - Pas fait : refonte du tracé (7 gardes alignés d'origine). Route Victoire : refonte du tracé non faite non plus (rochers déjà tombés, infirmière présente).
+
+## Cinématique du repaire refaite (23/10)
+- **Dernier gardien : KRONOS** (3e admin, 3F du repaire ; `TRAINER_AQUA_LEADER` réaffecté : Arbok 60, Weezing 60, Nidoking 61, Crobat 61, Alakazam 62). Il n'est pas là pour gagner : « le boss m'a demandé cinq minutes de ton temps ».
+- Explication donnée au joueur (ce qui manquait) : le pendentif est un **phare** (« tu étais la lampe ») : Onybris n'a jamais eu besoin de rattraper le joueur, seulement de le laisser courir après les pierres. Red n'est pas battu : l'Opale quitte ses mains, c'est tout.
+- Voix du boss (« ??? », toujours invisible) : remercie, annonce que le vœu dort au bout de la Ligue (« là où les champions marchent »), invite à gagner le tournoi, « Time is the one thing nobody gets back ». Kronos s'enfuit (fumigène) ; Red se relève, regarde vers la Ligue (il vient aussi).
+- Testé en émulateur : scène complète jusqu'à `FLAG_VR_BOSS_DONE`.
+- Infirmière déplacée à la 2F de la Route Victoire, près de l'échelle (32,2) ; Naomi redevient sbire.
