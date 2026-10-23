@@ -58,3 +58,12 @@ VictoryRoad_2F_Text_ExitBlocked::
     .string "out. Something ancient stirs below\p"
     .string "the cave. Look for a way down.$"
 
+
+VictoryRoad_2F_Text_NurseHeal::
+    .string "I am the road's NURSE. I set up\n"
+    .string "here, where the air feels wrong.\p"
+    .string "Whatever you are about to do,\n"
+    .string "do it with a healthy team.$"
+
+VictoryRoad_2F_Text_NurseHealed::
+    .string "All better! Come back any time.$"

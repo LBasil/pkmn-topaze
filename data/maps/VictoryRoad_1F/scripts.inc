@@ -35,13 +35,7 @@ VictoryRoad_1F_EventScript_FloorSwitchAlreadyPressed::
 
 VictoryRoad_1F_EventScript_Naomi::
 	trainerbattle_single TRAINER_COOLTRAINER_NAOMI, VictoryRoad_1F_Text_NaomiIntro, VictoryRoad_1F_Text_NaomiDefeat
-	msgbox VictoryRoad_1F_Text_NaomiHeal
-	fadescreen FADE_TO_BLACK
-	playfanfare MUS_HEAL
-	waitfanfare
-	special HealPlayerParty
-	fadescreen FADE_FROM_BLACK
-	msgbox VictoryRoad_1F_Text_NaomiHealed, MSGBOX_AUTOCLOSE
+	msgbox VictoryRoad_1F_Text_NaomiPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 VictoryRoad_1F_EventScript_Rolando::

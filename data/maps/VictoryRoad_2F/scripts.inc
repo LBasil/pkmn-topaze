@@ -108,3 +108,17 @@ VictoryRoad_2F_Movement_PushUp::
 VictoryRoad_2F_Movement_PushDown::
 	walk_down
 	step_end
+
+@ Topaze: l'infirmiere de la route (deplacee de la 1F), pres de l'echelle cachee du repaire
+VictoryRoad_2F_EventScript_Nurse::
+	lock
+	faceplayer
+	msgbox VictoryRoad_2F_Text_NurseHeal
+	fadescreen FADE_TO_BLACK
+	playfanfare MUS_HEAL
+	waitfanfare
+	special HealPlayerParty
+	fadescreen FADE_FROM_BLACK
+	msgbox VictoryRoad_2F_Text_NurseHealed
+	release
+	end
