@@ -41,3 +41,8 @@ Chaque port (îles 1 à 7) a un PNJ guide en (6,4) : présente l'île (2 paragra
 
 ## Mine de Grenalux raccourcie (23/10)
 La porte de la mine (Grenalux) mène directement à l'étage de la vérité (GrenaluxMine_3F, warp 3) : ~20 pas au lieu de trois étages. Trois moments avant la vision : entrée silencieuse (« It is silent here »), murmure + secousse en (9,6) (« …remember… »), lueur des veines en (13,8), puis la vision et Mew (inchangés). Les cartes 1F/2F restent dans la ROM mais ne sont plus atteignables.
+
+## Volcan Écume et mer de Route 21 (23/10)
+- Volcan : plus de raccourci. Principe voulu par Basil : peu importe l'entrée, on doit tout parcourir. La scène du boss (B4F) vérifie que les 6 sbires de B1F/B2F/B3F sont battus (`CountGrunts`) ; sinon texte « chaleur » avec le nombre restant et retour en B3F (12,10). Les rochers restent mais ne servent plus de raccourci (mécanique à reconsidérer en refonte).
+- Route 21 Nord : la mer violette (palette 4 de general_route21n) devient bleu sombre « ciel de cendres » pour se raccorder à la Route 21 Sud (avant : mer mauve illisible, transition brutale).
+- Route Victoire (refonte à venir) : garder les rochers déjà tombés sur les interrupteurs (demande de Basil).
