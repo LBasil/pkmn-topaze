@@ -32,6 +32,9 @@ ThreeIsland_Harbor_Text_Guide::
 	.string "The birds he caught were seen\n"
 	.string "near this island before they\l"
 	.string "vanished. Keep your eyes open.\p"
+	.string "It rains here more than anywhere.\n"
+	.string "SUICUNE was seen running over the\l"
+	.string "water of the bridge.\p"
 	.string "I can point you to the next ECHO.$"
 
 ThreeIsland_Harbor_Text_GuideCompass::

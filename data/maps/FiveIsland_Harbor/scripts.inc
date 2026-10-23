@@ -31,6 +31,8 @@ FiveIsland_Harbor_Text_Guide::
 	.string "never came home.\p"
 	.string "LOST CAVE is full of voices. Don't\n"
 	.string "go in without a full team.\p"
+	.string "The grey haze keeps REGISTEEL\n"
+	.string "company in the MEADOW.\p"
 	.string "I can point you to the next ECHO.$"
 
 FiveIsland_Harbor_Text_GuideCompass::

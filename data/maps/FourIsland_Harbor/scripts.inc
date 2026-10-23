@@ -31,6 +31,8 @@ FourIsland_Harbor_Text_Guide::
 	.string "up the path.\p"
 	.string "The cold here is older than the\n"
 	.string "island itself, they say.\p"
+	.string "REGICE sleeps deep in ICEFALL CAVE,\n"
+	.string "made of ice that never melted.\p"
 	.string "I can point you to the next ECHO.$"
 
 FourIsland_Harbor_Text_GuideCompass::

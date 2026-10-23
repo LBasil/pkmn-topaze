@@ -3445,3 +3445,171 @@ const u16 gTilesetPalettes_IndigoRoute23V2[][16] =
 	INCBIN_U16("data/tilesets/secondary/indigo_route23v2/palettes/14.gbapal"),
 	INCBIN_U16("data/tilesets/secondary/indigo_route23v2/palettes/15.gbapal"),
 };
+
+const u32 gTilesetTiles_GeneralEcho3[] = INCBIN_U32("data/tilesets/primary/general_echo3/tiles.4bpp.lz");
+const u16 gTilesetPalettes_GeneralEcho3[][16] =
+{
+	INCBIN_U16("data/tilesets/primary/general_echo3/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo3/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo3/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo3/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo3/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo3/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo3/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo3/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo3/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo3/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo3/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo3/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo3/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo3/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo3/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo3/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_SeviiEcho3[] = INCBIN_U32("data/tilesets/secondary/sevii_echo3/tiles.4bpp.lz");
+const u16 gTilesetPalettes_SeviiEcho3[][16] =
+{
+	INCBIN_U16("data/tilesets/secondary/sevii_echo3/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo3/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo3/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo3/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo3/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo3/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo3/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo3/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo3/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo3/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo3/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo3/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo3/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo3/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo3/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo3/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_GeneralEcho4[] = INCBIN_U32("data/tilesets/primary/general_echo4/tiles.4bpp.lz");
+const u16 gTilesetPalettes_GeneralEcho4[][16] =
+{
+	INCBIN_U16("data/tilesets/primary/general_echo4/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo4/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo4/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo4/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo4/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo4/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo4/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo4/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo4/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo4/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo4/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo4/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo4/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo4/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo4/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo4/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_SeviiEcho4[] = INCBIN_U32("data/tilesets/secondary/sevii_echo4/tiles.4bpp.lz");
+const u16 gTilesetPalettes_SeviiEcho4[][16] =
+{
+	INCBIN_U16("data/tilesets/secondary/sevii_echo4/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo4/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo4/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo4/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo4/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo4/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo4/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo4/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo4/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo4/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo4/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo4/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo4/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo4/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo4/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo4/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_GeneralEcho5[] = INCBIN_U32("data/tilesets/primary/general_echo5/tiles.4bpp.lz");
+const u16 gTilesetPalettes_GeneralEcho5[][16] =
+{
+	INCBIN_U16("data/tilesets/primary/general_echo5/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo5/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo5/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo5/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo5/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo5/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo5/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo5/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo5/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo5/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo5/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo5/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo5/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo5/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo5/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo5/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_SeviiEcho5[] = INCBIN_U32("data/tilesets/secondary/sevii_echo5/tiles.4bpp.lz");
+const u16 gTilesetPalettes_SeviiEcho5[][16] =
+{
+	INCBIN_U16("data/tilesets/secondary/sevii_echo5/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo5/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo5/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo5/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo5/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo5/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo5/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo5/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo5/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo5/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo5/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo5/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo5/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo5/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo5/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo5/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_GeneralEcho6[] = INCBIN_U32("data/tilesets/primary/general_echo6/tiles.4bpp.lz");
+const u16 gTilesetPalettes_GeneralEcho6[][16] =
+{
+	INCBIN_U16("data/tilesets/primary/general_echo6/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo6/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo6/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo6/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo6/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo6/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo6/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo6/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo6/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo6/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo6/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo6/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo6/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo6/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo6/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/primary/general_echo6/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_SeviiEcho6[] = INCBIN_U32("data/tilesets/secondary/sevii_echo6/tiles.4bpp.lz");
+const u16 gTilesetPalettes_SeviiEcho6[][16] =
+{
+	INCBIN_U16("data/tilesets/secondary/sevii_echo6/palettes/00.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo6/palettes/01.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo6/palettes/02.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo6/palettes/03.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo6/palettes/04.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo6/palettes/05.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo6/palettes/06.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo6/palettes/07.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo6/palettes/08.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo6/palettes/09.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo6/palettes/10.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo6/palettes/11.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo6/palettes/12.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo6/palettes/13.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo6/palettes/14.gbapal"),
+	INCBIN_U16("data/tilesets/secondary/sevii_echo6/palettes/15.gbapal"),
+};

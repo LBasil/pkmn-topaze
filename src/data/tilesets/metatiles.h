@@ -472,3 +472,27 @@ const u32 gMetatileAttributes_GeneralRoute23V2[] = INCBIN_U32("data/tilesets/pri
 
 const u16 gMetatiles_IndigoRoute23V2[] = INCBIN_U16("data/tilesets/secondary/indigo_route23v2/metatiles.bin");
 const u32 gMetatileAttributes_IndigoRoute23V2[] = INCBIN_U32("data/tilesets/secondary/indigo_route23v2/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralEcho3[] = INCBIN_U16("data/tilesets/primary/general_echo3/metatiles.bin");
+const u32 gMetatileAttributes_GeneralEcho3[] = INCBIN_U32("data/tilesets/primary/general_echo3/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiEcho3[] = INCBIN_U16("data/tilesets/secondary/sevii_echo3/metatiles.bin");
+const u32 gMetatileAttributes_SeviiEcho3[] = INCBIN_U32("data/tilesets/secondary/sevii_echo3/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralEcho4[] = INCBIN_U16("data/tilesets/primary/general_echo4/metatiles.bin");
+const u32 gMetatileAttributes_GeneralEcho4[] = INCBIN_U32("data/tilesets/primary/general_echo4/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiEcho4[] = INCBIN_U16("data/tilesets/secondary/sevii_echo4/metatiles.bin");
+const u32 gMetatileAttributes_SeviiEcho4[] = INCBIN_U32("data/tilesets/secondary/sevii_echo4/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralEcho5[] = INCBIN_U16("data/tilesets/primary/general_echo5/metatiles.bin");
+const u32 gMetatileAttributes_GeneralEcho5[] = INCBIN_U32("data/tilesets/primary/general_echo5/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiEcho5[] = INCBIN_U16("data/tilesets/secondary/sevii_echo5/metatiles.bin");
+const u32 gMetatileAttributes_SeviiEcho5[] = INCBIN_U32("data/tilesets/secondary/sevii_echo5/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralEcho6[] = INCBIN_U16("data/tilesets/primary/general_echo6/metatiles.bin");
+const u32 gMetatileAttributes_GeneralEcho6[] = INCBIN_U32("data/tilesets/primary/general_echo6/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiEcho6[] = INCBIN_U16("data/tilesets/secondary/sevii_echo6/metatiles.bin");
+const u32 gMetatileAttributes_SeviiEcho6[] = INCBIN_U32("data/tilesets/secondary/sevii_echo6/metatile_attributes.bin");

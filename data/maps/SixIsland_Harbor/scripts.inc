@@ -31,6 +31,8 @@ SixIsland_Harbor_Text_Guide::
 	.string "ALTERING CAVE hides odd visitors.\p"
 	.string "They say the AURA first woke up\n"
 	.string "somewhere around here.\p"
+	.string "Sand blows through RUIN VALLEY,\n"
+	.string "where REGIROCK stands like a wall.\p"
 	.string "I can point you to the next ECHO.$"
 
 SixIsland_Harbor_Text_GuideCompass::

@@ -1813,3 +1813,91 @@ const struct Tileset gTileset_IndigoRoute23V2 =
     .metatileAttributes = gMetatileAttributes_IndigoRoute23V2,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralEcho3 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralEcho3,
+    .palettes = gTilesetPalettes_GeneralEcho3,
+    .metatiles = gMetatiles_GeneralEcho3,
+    .metatileAttributes = gMetatileAttributes_GeneralEcho3,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_SeviiEcho3 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiEcho3,
+    .palettes = gTilesetPalettes_SeviiEcho3,
+    .metatiles = gMetatiles_SeviiEcho3,
+    .metatileAttributes = gMetatileAttributes_SeviiEcho3,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GeneralEcho4 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralEcho4,
+    .palettes = gTilesetPalettes_GeneralEcho4,
+    .metatiles = gMetatiles_GeneralEcho4,
+    .metatileAttributes = gMetatileAttributes_GeneralEcho4,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_SeviiEcho4 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiEcho4,
+    .palettes = gTilesetPalettes_SeviiEcho4,
+    .metatiles = gMetatiles_SeviiEcho4,
+    .metatileAttributes = gMetatileAttributes_SeviiEcho4,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GeneralEcho5 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralEcho5,
+    .palettes = gTilesetPalettes_GeneralEcho5,
+    .metatiles = gMetatiles_GeneralEcho5,
+    .metatileAttributes = gMetatileAttributes_GeneralEcho5,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_SeviiEcho5 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiEcho5,
+    .palettes = gTilesetPalettes_SeviiEcho5,
+    .metatiles = gMetatiles_SeviiEcho5,
+    .metatileAttributes = gMetatileAttributes_SeviiEcho5,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_GeneralEcho6 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralEcho6,
+    .palettes = gTilesetPalettes_GeneralEcho6,
+    .metatiles = gMetatiles_GeneralEcho6,
+    .metatileAttributes = gMetatileAttributes_GeneralEcho6,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_SeviiEcho6 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiEcho6,
+    .palettes = gTilesetPalettes_SeviiEcho6,
+    .metatiles = gMetatiles_SeviiEcho6,
+    .metatileAttributes = gMetatileAttributes_SeviiEcho6,
+    .callback = NULL,
+};

@@ -30,6 +30,9 @@ SevenIsland_Harbor_Text_Guide::
 	.string "TRAINER TOWER wait here.\p"
 	.string "The strongest travellers end up on\n"
 	.string "this island sooner or later.\p"
+	.string "Sky, sea and earth all meet in\n"
+	.string "the canyon: that is why the legends\l"
+	.string "of HOENN end up here.\p"
 	.string "I can point you to the next ECHO.$"
 
 SevenIsland_Harbor_Text_GuideCompass::

@@ -30,6 +30,8 @@ TwoIsland_Harbor_Text_Guide::
 	.string "training cliffs at CAPE BRINK.\p"
 	.string "The old League veterans still come\n"
 	.string "here to walk the cliffs and think.\p"
+	.string "The cliffs burn gold all day. ENTEI\n"
+	.string "paces them at dusk, they say.\p"
 	.string "You can sail to any island you\n"
 	.string "like, in any order. I'll point\l"
 	.string "you to the next ECHO.$"
