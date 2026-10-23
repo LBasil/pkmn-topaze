@@ -676,3 +676,11 @@ Generateurs (a ne lancer qu'une fois) : `tools/topaze/gen/ending3.py`, `ending2.
 - Surf: `waitfieldeffect FLDEFF_USE_SURF` avant `releaseall` (plus de relâche anticipée des contrôles).
 - Scène Hematek 11F: ombre, puis apparition visible de Brice/Flora/N avec texte explicatif.
 - Radar: cadeau unique (FLAG_GOT_POKE_RADAR); exp de rattrapage x2/x3 (Cmd_getexp); Route 21 variée; eaux plus fortes.
+
+## Retours 23/10 : Pokéradar eau + image, Sevii, boussole, guidage
+- **Pokéradar** : en Surf il cherche dans la table d'eau (`waterMonsInfo`), sinon table terrestre (herbe/sol de grotte) ; l'image du Pokémon choisi s'affiche (`showmonpic`) avec le cri ; plus d'interdiction en Surf (seulement vélo). Testé en émulateur (liste Gyarados/Seadra..., image, blip sur l'eau).
+- **Sevii** : `docs/topaze/sevii_dress.py` (3 ambiances par groupe d'îles).
+- **TIME COMPASS** (`data/scripts/echo_compass.inc`) guide selon VAR_ECHO_STAGE.
+- Indices post-game : marin du ferry (Apatia), mine (Grenalux), Bill (île 1) ; flags 0x10F/0x110.
+- Surf : fix menu Start (fenêtres GBA restaurées), popup de zone fermé, `waitfieldeffect`.
+- Route Victoire : barrières retirées ; Naomi = infirmière. Hématek 11F : héros visibles après l'ombre.
