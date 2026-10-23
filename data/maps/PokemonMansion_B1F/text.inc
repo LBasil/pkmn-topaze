@@ -6,12 +6,12 @@ PokemonMansion_B1F_Text_LewisDefeat::
     .string "Awooh!$"
 
 PokemonMansion_B1F_Text_LewisPostBattle::
-    .string "You can find stuff lying around.\n"
-    .string "The residents must've left them.$"
+    .string "Spare parts lie around down here.\n"
+    .string "The staff left in a hurry.$"
 
 PokemonMansion_B1F_Text_IvanIntro::
-    .string "This place is ideal for a lab.\n"
-    .string "Look at all this space.$"
+    .string "This boiler room is ideal for a\n"
+    .string "lab. Look at all this heat.$"
 
 PokemonMansion_B1F_Text_IvanDefeat::
     .string "What was that for?$"

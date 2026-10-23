@@ -99,3 +99,10 @@ Basil : « tout sauf trop de dresseurs » (mal placés, hors thème). Fait : 6 m
 Passés en revue à l'œil : Seafoam 1F–B4F (volcan), Route de la Victoire 1F–3F, Repaire (1F–3F), QG Onybris B1F–B4F, Centrale (PowerPlant), Manoir 1F–3F/B1F.
 Résultat : aucun faux raccord, aucun passage bloqué, aucun PNJ bloquant. Les avertissements de audit_stuck restants sont des warps dynamiques (ascenseurs, Union Room…) et des îles Sevii (mises de côté).
 Reste à refaire (inchangé) : layout Route 23 / Route de la Victoire, QG Bourg Quartz, Chrondrolia, cohérence lave/eau Manoir (capture de Basil requise).
+
+## Centrale de Chrondrolia refaite (23/10)
+Les 4 étages (ex-Manoir) sont redessinés par `docs/topaze/centrale_redo.py` (bibliothèque `centrale_lib.py`, originaux dans `centrale_orig/`, contrôle `centrale_check.py`).
+- 1F hall des turbines : 4 turbines, transformateurs, banques de consoles, allées en caillebotis jaune (= chemin principal), monte-charge (plot rouge) vers la chaufferie.
+- 2F galerie des commandes, 3F salle du cœur (couloir de caillebotis jusqu'au piédestal rouge du TOPAZ), B1F chaufferie (chaudières + racks de tuyaux).
+- Motif : plot rouge = point spécial (monte-charge, piédestal). Dialogues vanille du Manoir réécrits (fantômes, puzzle, résidents).
+Règle posée par Basil : œil absolu romhacker + UI/UX sur TOUTES les maps (routes, villes, intérieurs, extérieurs). Inventaire noté en cours.

@@ -10,15 +10,15 @@ PokemonMansion_Text_NotQuiteYet::
 
 PokemonMansion_1F_Text_ArnieIntro::
     .string "I can't get out!\n"
-    .string "This old place is one big puzzle.$"
+    .string "This plant is one big maze.$"
 
 PokemonMansion_1F_Text_ArnieDefeat::
     .string "Oh, no!\n"
     .string "My bag of loot!$"
 
 PokemonMansion_1F_Text_ArniePostBattle::
-    .string "The switches here open and close\n"
-    .string "alternating sets of doors.$"
+    .string "Follow the grated walkways.\n"
+    .string "They lead to every control room.$"
 
 PokemonMansion_1F_Text_NewMonDiscoveredInGuyanaJungle::
     .string "Log: Oct. 5\n"

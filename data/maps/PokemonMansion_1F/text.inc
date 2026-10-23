@@ -11,16 +11,16 @@ PokemonMansion_1F_Text_TedPostBattle::
 
 PokemonMansion_1F_Text_JohnsonIntro::
     .string "W-w-waah! You startled me!\n"
-    .string "I thought you were a ghost.$"
+    .string "I thought you were ONYBRIS.$"
 
 PokemonMansion_1F_Text_JohnsonDefeat::
     .string "Tch!\n"
     .string "I can't get any wins.$"
 
 PokemonMansion_1F_Text_JohnsonPostBattle::
-    .string "I was exploring here by myself,\n"
-    .string "but I feel spooked.\p"
-    .string "I ought to go soon.$"
+    .string "I came to see the turbines.\n"
+    .string "Now there are thugs everywhere.\p"
+    .string "I ought to leave while I can.$"
 
 PokemonMansion_1F_Text_Onybris1Intro::
     .string "The PLANT is ours now, kid!$"

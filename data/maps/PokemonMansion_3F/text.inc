@@ -18,15 +18,15 @@ PokemonMansion_1F_Text_SimonPostBattle::
     .string "I wonder where my partner went.$"
 
 PokemonMansion_1F_Text_BraydonIntro::
-    .string "My mentor once lived here.$"
+    .string "My mentor designed this plant.$"
 
 PokemonMansion_1F_Text_BraydonDefeat::
     .string "Whew!\n"
     .string "Overwhelming!$"
 
 PokemonMansion_1F_Text_BraydonPostBattle::
-    .string "So, you're stuck?\n"
-    .string "Try jumping off over there!$"
+    .string "Looking for the TOPAZ? Take the\n"
+    .string "grated walkway on the east side.$"
 
 PokemonMansion_1F_Text_MewGaveBirthToMewtwo::
     .string "Log: Feb. 6\n"
