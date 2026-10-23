@@ -73,26 +73,26 @@ Route15_Text_OliviaPostBattle::
     .string "in town yesterday. Weird, no?$"
 
 Route15_Text_ErnestIntro::
-    .string "Hey, kid! C'mon!\n"
-    .string "I just got these off some loser!$"
+    .string "Stop. This road is closed for\n"
+    .string "BRANCH business.$"
 
 Route15_Text_ErnestDefeat::
-    .string "Why not?$"
+    .string "...Closed until you win, I guess.$"
 
 Route15_Text_ErnestPostBattle::
-    .string "I saw a big ship at the ROUTE 12\n"
-    .string "pier. No flag, no name.$"
+    .string "Closed means closed. Next time,\n"
+    .string "ask before you walk through.$"
 
 Route15_Text_AlexIntro::
-    .string "Fork over all your cash when you\n"
-    .string "lose to me, kid!$"
+    .string "I used to race for fun. Now I\n"
+    .string "race for orders.$"
 
 Route15_Text_AlexDefeat::
-    .string "That can't be true!$"
+    .string "Out of the race.$"
 
 Route15_Text_AlexPostBattle::
-    .string "I was just joking about the money.\n"
-    .string "Don't take me all serious.$"
+    .string "The finish line is past the LEAGUE.\n"
+    .string "That is what they say.$"
 
 Route15_Text_CeliaIntro::
     .string "What's cool and happening?\n"

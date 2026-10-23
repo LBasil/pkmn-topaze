@@ -84,39 +84,38 @@ Route14_Text_LukasPostBattle::
     .string "What do you want still?$"
 
 Route14_Text_IsaacIntro::
-    .string "I need to burn some time.\n"
-    .string "Shut up and battle.$"
+    .string "Pedals, crates, orders.\n"
+    .string "That is my week.$"
 
 Route14_Text_IsaacDefeat::
-    .string "What?\n"
-    .string "You!?$"
+    .string "Crate dropped.$"
 
 Route14_Text_IsaacPostBattle::
-    .string "Raising POKéMON is a drag, man.$"
+    .string "Some of us carry stones. I only\n"
+    .string "carry the bad news.$"
 
 Route14_Text_GeraldIntro::
-    .string "We ride out here because of the\n"
-    .string "wide-open spaces.$"
+    .string "Nice bike, kid? No? Then walk\n"
+    .string "back the way you came.$"
 
 Route14_Text_GeraldDefeat::
-    .string "Wipeout!$"
+    .string "Wipeout.$"
 
 Route14_Text_GeraldPostBattle::
-    .string "It's cool you made your POKéMON so\n"
-    .string "strong.\p"
-    .string "Might is right!\n"
-    .string "And you know it!$"
+    .string "We came from every town on this\n"
+    .string "road. We are not a gang.\p"
+    .string "We are a union.$"
 
 Route14_Text_MalikIntro::
-    .string "POKéMON battle?\n"
-    .string "Cool! Rumble!$"
+    .string "The boss pays better than the\n"
+    .string "gym ever did.$"
 
 Route14_Text_MalikDefeat::
-    .string "Blown away!$"
+    .string "I still get paid, right?$"
 
 Route14_Text_MalikPostBattle::
-    .string "My bike skidded on a violet glow\n"
-    .string "the other night. Creepy.$"
+    .string "Ask any of us. We signed up of our\n"
+    .string "own will. Mostly.$"
 
 Route14_Text_RouteSign::
     .string "ROUTE 14\n"

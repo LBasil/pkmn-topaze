@@ -90,14 +90,16 @@ Route13_Text_SheilaPostBattle::
     .string "POKé FLUTE. Nobody here has one.$"
 
 Route13_Text_JaredIntro::
-    .string "What're you lookin' at?$"
+    .string "Route 13 is under new\n"
+    .string "management.$"
 
 Route13_Text_JaredDefeat::
-    .string "Dang!\n"
-    .string "Stripped gears!$"
+    .string "Management will not\n"
+    .string "like this.$"
 
 Route13_Text_JaredPostBattle::
-    .string "Get lost!$"
+    .string "I just keep the road quiet. Others\n"
+    .string "do the loud work in the towns.$"
 
 Route13_Text_RobertIntro::
     .string "I always go with bird POKéMON.\n"
