@@ -295,7 +295,9 @@ EventScript_PokeRadar::
 	special TopazeRadarStart
 	goto_if_eq VAR_RESULT, 0, EventScript_PokeRadarNoGrass
 	goto_if_eq VAR_RESULT, 2, EventScript_PokeRadarNotNow
+	showmonpic VAR_0x8005, 10, 3
 	msgbox Text_PokeRadarFound, MSGBOX_SIGN
+	hidemonpic
 EventScript_PokeRadarEnd::
 	releaseall
 	end
@@ -327,20 +329,20 @@ EventScript_TopazeRadarFled::
 	end
 
 Text_PokeRadarNoMons::
-	.string "No POKéMON you have seen live in\n"
-	.string "the tall grass around here.$"
+	.string "No POKéMON you have seen live\n"
+	.string "around here (grass, cave or sea).$"
 
 Text_PokeRadarNoGrass::
-	.string "There is no tall grass nearby\n"
+	.string "There is no suitable spot nearby\n"
 	.string "to search.$"
 
 Text_PokeRadarNotNow::
 	.string "You can't use the POKé RADAR\n"
-	.string "while riding or surfing.$"
+	.string "while riding a bike.$"
 
 Text_PokeRadarFound::
-	.string "The grass is rustling nearby!\n"
-	.string "Walk up to it slowly, on foot.$"
+	.string "Something stirs nearby! Approach\n"
+	.string "it slowly (no running).$"
 
 Text_PokeRadarFled::
 	.string "The wild {STR_VAR_1} noticed you\n"

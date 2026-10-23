@@ -867,13 +867,26 @@ static void TopazeRadarSettleLastBattle(void)
     }
 }
 
+static bool8 TopazeRadarIsWater(void)
+{
+    return (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_SURFING) != 0;
+}
+
+// Surfing: search the water table; otherwise the land table (grass, cave floor)
 static const struct WildPokemonInfo *TopazeRadarGetInfo(void)
 {
     u16 headerId = GetCurrentMapWildMonHeaderId();
 
     if (headerId == HEADER_NONE)
         return NULL;
+    if (TopazeRadarIsWater())
+        return gWildMonHeaders[headerId].waterMonsInfo;
     return gWildMonHeaders[headerId].landMonsInfo;
+}
+
+static u8 TopazeRadarSlotCount(void)
+{
+    return TopazeRadarIsWater() ? WATER_WILD_COUNT : LAND_WILD_COUNT;
 }
 
 // VAR_RESULT = number of species that can be searched (0 = none)
@@ -889,7 +902,7 @@ void TopazeRadarBuildList(void)
     gSpecialVar_Result = 0;
     if (info == NULL)
         return;
-    for (slot = LAND_WILD_COUNT - 1; slot >= 0 && n < 8; slot--)
+    for (slot = TopazeRadarSlotCount() - 1; slot >= 0 && n < 8; slot--)
     {
         species = info->wildPokemon[slot].species;
         if (species == SPECIES_NONE || species == SPECIES_UNOWN)
@@ -921,7 +934,7 @@ void TopazeRadarStart(void)
     gSpecialVar_Result = 0;
     if (gSpecialVar_0x8004 >= gTopazeRadarCount)
         return;
-    if (gPlayerAvatar.flags & (PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE | PLAYER_AVATAR_FLAG_SURFING))
+    if (gPlayerAvatar.flags & (PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
     {
         gSpecialVar_Result = 2;
         return;
@@ -939,10 +952,11 @@ void TopazeRadarStart(void)
             continue;
         x = px + dx;
         y = py + dy;
-        if (MapGridGetMetatileAttributeAt(x, y, METATILE_ATTRIBUTE_ENCOUNTER_TYPE) != TILE_ENCOUNTER_LAND)
+        if (MapGridGetMetatileAttributeAt(x, y, METATILE_ATTRIBUTE_ENCOUNTER_TYPE) != (TopazeRadarIsWater() ? TILE_ENCOUNTER_WATER : TILE_ENCOUNTER_LAND))
             continue;
         if (MapGridGetCollisionAt(x, y) || GetObjectEventIdByXY(x, y) != OBJECT_EVENTS_COUNT)
             continue;
+        gSpecialVar_0x8005 = sRadarList[gSpecialVar_0x8004];
         sRadarX = x;
         sRadarY = y;
         sRadarTarget = sRadarList[gSpecialVar_0x8004];
@@ -1004,7 +1018,7 @@ void TopazeRadarBattle(void)
 
     if (info != NULL)
     {
-        for (i = 0; i < LAND_WILD_COUNT; i++)
+        for (i = 0; i < TopazeRadarSlotCount(); i++)
         {
             if (info->wildPokemon[i].species == species)
             {
