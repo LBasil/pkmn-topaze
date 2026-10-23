@@ -44,6 +44,7 @@ PokemonLeague_ChampionsRoom_EventScript_EnterRoom::
 	msgbox PokemonLeague_ChampionsRoom_Text_OakPostBattle
 	closemessage
 PokemonLeague_ChampionsRoom_EventScript_BossPart::
+	setflag FLAG_TOPAZE_BOSS_RETRY
 	playbgm MUS_ENCOUNTER_ROCKET, 0
 	addobject LOCALID_CHAMPIONS_ROOM_PROF_OAK
 	applymovement LOCALID_CHAMPIONS_ROOM_PROF_OAK, PokemonLeague_ChampionsRoom_Movement_BossEnter

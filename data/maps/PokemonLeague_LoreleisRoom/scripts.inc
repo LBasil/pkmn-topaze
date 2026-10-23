@@ -122,8 +122,33 @@ PokemonLeague_LoreleisRoom_EventScript_TurnPlayerNorth::
 	end
 
 PokemonLeague_LoreleisRoom_OnFrame::
+	map_script_2 VAR_TEMP_E, 0, PokemonLeague_LoreleisRoom_EventScript_BossRetry
 	map_script_2 VAR_MAP_SCENE_POKEMON_LEAGUE, 0, PokemonLeague_LoreleisRoom_EventScript_EnterRoom
 	.2byte 0
+
+@ Topaze: after losing to the boss, offer to go straight back to him (no need to redo the tournament)
+PokemonLeague_LoreleisRoom_EventScript_BossRetry::
+	setvar VAR_TEMP_E, 1
+	goto_if_unset FLAG_TOPAZE_BOSS_RETRY, PokemonLeague_LoreleisRoom_EventScript_BossRetryNo
+	goto_if_defeated TRAINER_LEAGUE_BOSS_2, PokemonLeague_LoreleisRoom_EventScript_BossRetryNo
+	lockall
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox PokemonLeague_LoreleisRoom_Text_BossRetry, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PokemonLeague_LoreleisRoom_EventScript_BossRetryDecline
+	closemessage
+	special HealPlayerParty
+	setvar VAR_TEMP_1, 0
+	warp MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM, 6, 19
+	waitstate
+	releaseall
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_BossRetryDecline::
+	releaseall
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_BossRetryNo::
+	end
 
 PokemonLeague_LoreleisRoom_EventScript_EnterRoom::
 	lockall

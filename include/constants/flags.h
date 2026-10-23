@@ -275,6 +275,7 @@
 #define FLAG_0x0FE               0x0FE
 #define FLAG_GOT_POKE_RADAR      FLAG_0x0FE // Topaze: radar given once (coach / Route 2 aide)
 #define FLAG_0x0FF               0x0FF
+#define FLAG_TOPAZE_BOSS_RETRY   FLAG_0x0FF // Chen battu : retry direct du boss apres defaite
 #define FLAG_REBEL_KAY 0x100 // Topaze: ending 3 conquest
 #define FLAG_REBEL_SYLVESTRE 0x101 // Topaze: ending 3 conquest
 #define FLAG_REBEL_HERA 0x102 // Topaze: ending 3 conquest

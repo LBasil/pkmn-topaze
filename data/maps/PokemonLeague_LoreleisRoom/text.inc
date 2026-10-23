@@ -374,3 +374,10 @@ PokemonLeague_LoreleisRoom_Text_Interlude4::
     .string "PHOEBE: Four left. The sea is calm,\n"
     .string "but something stirs far away.\p"
     .string "Keep going. We will wait.$"
+
+PokemonLeague_LoreleisRoom_Text_BossRetry::
+    .string "A strange pull draws you toward\n"
+    .string "the CHAMPION's hall, where the\l"
+    .string "boss still waits.\p"
+    .string "Go straight back to face him?\n"
+    .string "(Your team will be healed.)$"
