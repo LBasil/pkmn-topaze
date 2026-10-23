@@ -168,3 +168,59 @@ IndigoPlateau_PokemonCenter_1F_Text_RebelsStage3::
     .string "FLORA: The three MASTERS have\n"
     .string "fallen. Now the LORDS of the\l"
     .string "SEVII ISLANDS ask for a duel.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_Brief1::
+    .string "FLORA: {PLAYER}! You are pale as\n"
+    .string "chalk. What happened down there?\p"
+    .string "You tell them everything: the lamp,\n"
+    .string "the heart-stone, the star that\l"
+    .string "wakes only for a CHAMPION.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_Brief2::
+    .string "BRICE: So the tournament is a trap,\n"
+    .string "and you are the bait.\p"
+    .string "He needs you crowned. Then he takes\n"
+    .string "the crown out of your hands.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_Brief3::
+    .string "FLORA: Then do not climb. Leave the\n"
+    .string "garnet in a drawer and let him\l"
+    .string "wait forever.\p"
+    .string "He cannot take it. He cannot open\n"
+    .string "that door without it.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_Brief4::
+    .string "MISTY: And the snow in summer? The\n"
+    .string "caves that burn? The clocks that\l"
+    .string "skip a beat?\p"
+    .string "That does not stop because we are\n"
+    .string "afraid. Every stone he holds bends\l"
+    .string "the world a little more.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_Brief5::
+    .string "BRICE: Look at it from his side.\n"
+    .string "He cannot wish unless he holds the\l"
+    .string "star. And the star will not wake\l"
+    .string "for him.\p"
+    .string "It asks the CHAMPION first. A wish\n"
+    .string "in your hands is still a wish in\l"
+    .string "your hands.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_Brief6::
+    .string "BRICE: He can only take it by\n"
+    .string "beating you. In a place you chose,\l"
+    .string "with a team you built, in front of\l"
+    .string "all of us.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_Brief7::
+    .string "FLORA: He thinks he is lighting his\n"
+    .string "way with you. Lamps can burn,\l"
+    .string "{PLAYER}.\p"
+    .string "Make him regret picking this one.\p"
+    .string "MISTY: We will be in the stands.\n"
+    .string "All of us. Go and win.$"
+
+IndigoPlateau_PokemonCenter_1F_Text_Brief8::
+    .string "FLORA heals your team.\p"
+    .string "Beyond the door, the LEAGUE is\n"
+    .string "waiting. So is he.$"

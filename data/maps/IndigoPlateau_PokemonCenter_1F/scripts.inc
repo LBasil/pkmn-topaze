@@ -1,11 +1,44 @@
 IndigoPlateau_PokemonCenter_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, IndigoPlateau_PokemonCenter_1F_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, IndigoPlateau_PokemonCenter_1F_OnFrame
 	.byte 0
 
 IndigoPlateau_PokemonCenter_1F_OnTransition::
 	setrespawn HEAL_LOCATION_INDIGO_PLATEAU
 	@ Topaze : le Pokedex National est actif des le debut ; la porte de la Ligue ne doit donc jamais etre bloquee par la garde (vanille : bloquee tant que le lien Hoenn/Sevii n'est pas fait).
+	end
+
+IndigoPlateau_PokemonCenter_1F_OnFrame::
+	map_script_2 VAR_TEMP_4, 0, IndigoPlateau_PokemonCenter_1F_EventScript_Briefing
+	.2byte 0
+
+@ Topaze: apres le repaire, les allies comprennent le piege (le boss a besoin d'un Champion portant le coeur) et en font un duel
+IndigoPlateau_PokemonCenter_1F_EventScript_Briefing::
+	setvar VAR_TEMP_4, 1
+	goto_if_unset FLAG_VR_BOSS_DONE, EventScript_Return
+	goto_if_set FLAG_TOPAZE_BRIEFING, EventScript_Return
+	goto_if_set FLAG_DEFEATED_CHAMP, EventScript_Return
+	lockall
+	textcolor NPC_TEXT_COLOR_MALE
+	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
+	waitmovement 0
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_Brief1
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_Brief2
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_Brief3
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_Brief4
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_Brief5
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_Brief6
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_Brief7
+	closemessage
+	fadescreen FADE_TO_BLACK
+	playfanfare MUS_HEAL
+	waitfanfare
+	special HealPlayerParty
+	fadescreen FADE_FROM_BLACK
+	msgbox IndigoPlateau_PokemonCenter_1F_Text_Brief8
+	setflag FLAG_TOPAZE_BRIEFING
+	releaseall
 	end
 
 IndigoPlateau_PokemonCenter_1F_EventScript_CheckBlockDoor::

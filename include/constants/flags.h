@@ -296,6 +296,7 @@
 #define FLAG_0x110               0x110
 #define FLAG_HINT_GRENALUX_MINE  FLAG_0x110 // Topaze: postgame hint (mine)
 #define FLAG_0x111               0x111
+#define FLAG_TOPAZE_BRIEFING     FLAG_0x111 // scene des allies au Plateau apres le repaire
 #define FLAG_0x112               0x112
 #define FLAG_0x113               0x113
 #define FLAG_0x114               0x114
