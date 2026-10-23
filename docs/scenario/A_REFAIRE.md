@@ -140,4 +140,4 @@ Avant : on parcourait les 3 étages et on était bloqué pile à la sortie. Main
 ## Diversité dresseurs / sauvages (23/10)
 - `diversify_trainers.py` : équipes à attaques par défaut re-thématisées (Rocket, Scientifiques, Channelers, Randonneurs…), max 2 d'une espèce par carte, ~12 au total ; Arène Céladopole (Glace), Jadielle (Acier), Dojo (Combat), Tunnel Roche, Tour Pokémon. 257 remplacements. Plus aucune carte « 50 Arbok ».
 - `wild_diversify.py` : 89 créneaux sauvages variés (Mt Lune B1F, Tour Pokémon, Mt Brasier, Port Trois-Îles, Routes 6/7/8/10/11/16/22/23/25, tables d'eau). Aucune espèce perdue du Pokédex.
-- Hepha (Acier) : équipe Acier restaurée (Magneton 52 → Aggron 58), protégée de rebalance21.py.
+- Hepha : équipe d'origine conservée sur demande de Basil (Magneton, Arbok, Machamp, Golem, Tortank 55-60) ; l'équipe Acier 52-58 reste dans gym_opanihrum_trainers.py si besoin.
