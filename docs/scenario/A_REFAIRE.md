@@ -148,4 +148,4 @@ Avant : on parcourait les 3 étages et on était bloqué pile à la sortie. Main
 - Centre One Island : scientifique (Move Coach) à côté de l'infirmière (6,2), comme dans tous les Centres ; Bill dehors caché hors scène d'arrivée.
 
 ## Écho 1 : parcours vers Raikou (23/10)
-`echo1_sparks.py` : après Bill, 3 étincelles (sprite Voltorb) sur la route Kindle (11,61), (11,81), (11,101) ; chacune dit un texte et disparaît ; la 3e déclenche tonnerre et fait apparaître Raikou (12,120). Raikou n'est plus visible avant. Flags 0x130–0x135. À généraliser aux Échos 2–7 si Basil valide. Sprite de Raikou refait (recoloration d'Entei, provisoire).
+`echo1_sparks.py` (Raikou change de refuge à chaque visite parmi 5 points de la route) : après Bill, 3 étincelles (sprite Voltorb) sur la route Kindle (11,61), (11,81), (11,101) ; chacune dit un texte et disparaît ; la 3e déclenche tonnerre et fait apparaître Raikou (12,120). Raikou n'est plus visible avant. Flags 0x130–0x135. À généraliser aux Échos 2–7 si Basil valide. Sprite de Raikou refait (recoloration d'Entei, provisoire).

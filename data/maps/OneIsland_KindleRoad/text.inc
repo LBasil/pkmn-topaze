@@ -179,5 +179,6 @@ OneIsland_KindleRoad_Text_EchoSpark3::
 
 OneIsland_KindleRoad_Text_EchoSpark3b::
     .string "Thunder shakes the ground.\p"
-    .string "A beast of lightning waits at\n"
-    .string "the end of the road!$"
+    .string "A beast of lightning is hiding\n"
+    .string "somewhere on this road.\p"
+    .string "It will not stay in one place.$"
