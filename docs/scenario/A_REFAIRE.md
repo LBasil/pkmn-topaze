@@ -145,4 +145,4 @@ Avant : on parcourait les 3 étages et on était bloqué pile à la sortie. Main
 ## Niveaux Sevii + Centre One Island (23/10)
 - `sevii_levels.py` : planchers de niveau des dresseurs par île (One 58, Mt Brasier 60, Two 60, Three 61, Four 62, Five 64, Six 65, Seven 66), 91 équipes ; Anciens/Echo inchangés (69–72).
 - `sevii_wild_levels.py` : sauvages = plancher − 5 (min plancher − 18), évolutions suivies ; Ledyba/Magby/Wooper non évolués pour rester obtenables.
-- Centre One Island : scientifique (Move Coach) déplacé en (11,3) hors du passage ; Bill dehors caché hors scène d'arrivée.
+- Centre One Island : scientifique (Move Coach) à côté de l'infirmière (6,2), comme dans tous les Centres ; Bill dehors caché hors scène d'arrivée.
