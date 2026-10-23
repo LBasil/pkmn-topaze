@@ -1141,8 +1141,8 @@
       "height": 160,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_GeneralDawn",
-      "secondary_tileset": "gTileset_IndigoDawn",
+      "primary_tileset": "gTileset_GeneralRoute23V2",
+      "secondary_tileset": "gTileset_IndigoRoute23V2",
       "border_filepath": "data/layouts/Route23/border.bin",
       "blockdata_filepath": "data/layouts/Route23/map.bin"
     },

@@ -106,3 +106,8 @@ Les 4 étages (ex-Manoir) sont redessinés par `docs/topaze/centrale_redo.py` (b
 - 2F galerie des commandes, 3F salle du cœur (couloir de caillebotis jusqu'au piédestal rouge du TOPAZ), B1F chaufferie (chaudières + racks de tuyaux).
 - Motif : plot rouge = point spécial (monte-charge, piédestal). Dialogues vanille du Manoir réécrits (fantômes, puzzle, résidents).
 Règle posée par Basil : œil absolu romhacker + UI/UX sur TOUTES les maps (routes, villes, intérieurs, extérieurs). Inventaire noté en cours.
+
+## Route 23 refaite (23/10)
+Générateur `docs/topaze/route23_v2.py` (original conservé dans `docs/topaze/route21_src/r23_orig.bin`), tilesets dédiés `GeneralRoute23V2` / `IndigoRoute23V2`. Les 4 portails de badges (Tonnerre, Arc-en-ciel, Âme, Marais) sont séparés par de vraies sections de route : chemin de sable sinueux, forêts, étangs, rochers, murets à escaliers, façades scellées (impossible de contourner l'arche, vérifié par assertion). Gardes + déclencheurs recalés (var_value n-1). Testé en émulateur : 3 badges → bloqué à Arc-en-ciel ; 4 → passe Arc-en-ciel, bloqué à Âme ; 6+ → tout passe.
+- Piège trouvé : `include/topaze_fog_strips.h` (raccords de cartes) réécrit des métatuiles/tuiles « inutilisés » de la carte → après un changement de tileset, relancer `python3 docs/topaze/fog_strips.py` (sinon cases noires en damier). Fait.
+- Reste : Route de la Victoire, QG Bourg Quartz, Chrondrolia, repaire, gymnases, etc. (inventaire « TOUTES les maps »).

@@ -1791,3 +1791,25 @@ const struct Tileset gTileset_IndigoDawn =
     .metatileAttributes = gMetatileAttributes_IndigoDawn,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralRoute23V2 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralRoute23V2,
+    .palettes = gTilesetPalettes_GeneralRoute23V2,
+    .metatiles = gMetatiles_GeneralRoute23V2,
+    .metatileAttributes = gMetatileAttributes_GeneralRoute23V2,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_IndigoRoute23V2 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_IndigoRoute23V2,
+    .palettes = gTilesetPalettes_IndigoRoute23V2,
+    .metatiles = gMetatiles_IndigoRoute23V2,
+    .metatileAttributes = gMetatileAttributes_IndigoRoute23V2,
+    .callback = NULL,
+};

@@ -466,3 +466,9 @@ const u32 gMetatileAttributes_GeneralDawn[] = INCBIN_U32("data/tilesets/primary/
 
 const u16 gMetatiles_IndigoDawn[] = INCBIN_U16("data/tilesets/secondary/indigo_dawn/metatiles.bin");
 const u32 gMetatileAttributes_IndigoDawn[] = INCBIN_U32("data/tilesets/secondary/indigo_dawn/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralRoute23V2[] = INCBIN_U16("data/tilesets/primary/general_route23v2/metatiles.bin");
+const u32 gMetatileAttributes_GeneralRoute23V2[] = INCBIN_U32("data/tilesets/primary/general_route23v2/metatile_attributes.bin");
+
+const u16 gMetatiles_IndigoRoute23V2[] = INCBIN_U16("data/tilesets/secondary/indigo_route23v2/metatiles.bin");
+const u32 gMetatileAttributes_IndigoRoute23V2[] = INCBIN_U32("data/tilesets/secondary/indigo_route23v2/metatile_attributes.bin");
