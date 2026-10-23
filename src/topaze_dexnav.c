@@ -44,6 +44,7 @@ struct DexNavData
     struct TopazeRadarEntry entries[3][COLS];
     u8 count[3];
     u8 seen[3][COLS];
+    u8 caught[3][COLS];
     u8 sprite[3][COLS];
     u8 row;
     u8 col;
@@ -79,6 +80,12 @@ static const u16 sPalette[16] =
     RGB(4, 8, 22),    // 7 bar
     RGB(31, 31, 31), RGB(31, 31, 31), RGB(31, 31, 31), RGB(31, 31, 31),
     RGB(31, 31, 31), RGB(31, 31, 31), RGB(31, 31, 31), RGB(31, 31, 31),
+};
+
+static const u16 sSilhouettePal[16] =
+{
+    RGB(0, 0, 0), RGB(6, 8, 14), RGB(6, 8, 14), RGB(6, 8, 14), RGB(6, 8, 14), RGB(6, 8, 14), RGB(6, 8, 14), RGB(6, 8, 14),
+    RGB(6, 8, 14), RGB(6, 8, 14), RGB(6, 8, 14), RGB(6, 8, 14), RGB(6, 8, 14), RGB(6, 8, 14), RGB(6, 8, 14), RGB(6, 8, 14),
 };
 
 static const u8 sTxtNormal[] = {C_BG, C_WHITE, C_GRAY};
@@ -255,6 +262,7 @@ static void CreateIcons(void)
     u8 r, c;
 
     LoadMonIconPalettes();
+    LoadPalette(sSilhouettePal, OBJ_PLTT_ID(12), PLTT_SIZE_4BPP);
     for (r = 0; r < 3; r++)
     {
         for (c = 0; c < sDex->count[r]; c++)
@@ -263,6 +271,8 @@ static void CreateIcons(void)
             u8 id = CreateMonIcon(sp, SpriteCallbackDummy, sCellX[c] + 16, 16 + sRowY[r] + 16, 0, 0, FALSE);
 
             gSprites[id].oam.priority = 0;
+            if (sDex->seen[r][c] && !sDex->caught[r][c])
+                gSprites[id].oam.paletteNum = 12;
             sDex->sprite[r][c] = id;
         }
     }
@@ -290,7 +300,12 @@ static void LoadZone(void)
         u8 c;
 
         for (c = 0; c < sDex->count[i]; c++)
+        {
+            u16 n = SpeciesToNationalPokedexNum(sDex->entries[i][c].species);
+
             sDex->seen[i][c] = IsSeen(sDex->entries[i][c].species);
+            sDex->caught[i][c] = GetSetPokedexFlag(n, FLAG_GET_CAUGHT);
+        }
     }
     sDex->surfing = TopazeRadarPlayerSurfing();
     sDex->row = (sDex->surfing && sDex->count[ROW_WATER] > 0) ? ROW_WATER : (sDex->count[ROW_LAND1] > 0 ? ROW_LAND1 : ROW_WATER);
