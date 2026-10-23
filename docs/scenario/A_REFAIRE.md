@@ -166,3 +166,13 @@ Non touchés volontairement : Mew (camion de Carmin et Mine de Grenalux : scène
 Émulateur, de l'entrée à la bête, combats réels : Raikou, Entei, Suicune (gardiens battus, bête combattue, `VAR_ECHO_STAGE` avance 1→4, 4→7, 7→9 avec les appels du Centre), Zapdos (porte ouest), Moltres (escalier puis plateau), Articuno (derrière l'arbre). Portes : fermées aux stages 0 / 3 / 6, ouvertes à 1 / 4 / 7. Revisite après victoire : repaire accessible, bête absente. Gardiens des oiseaux : cachés avant le postgame, révélés après.
 Bug trouvé et corrigé : un dresseur battu reste debout et bouchait les couloirs d'une case des repaires (`guards_vanish.py` : chaque gardien disparaît après sa défaite, flags FLAG_0x136–0x14F). Les deux gardes du bas de Moltres ont été déplacés de part et d'autre de l'arrivée de l'escalier (ils gênaient le puzzle des rochers).
 Limites : Articuno testé à partir de la case derrière l'arbre (le harnais ne sait pas Coupe) ; le puzzle de rochers de Moltres n'est pas résolu par le harnais.
+
+## Tests de bout en bout du 24/10 (bot « god mode » + bot « joueur réel »)
+Fin 1 jouée de bout en bout, puis post-game complet (Articuno, Zapdos, Sulfura, ferry, Échos 1 à 7 jusqu'à Kyogre/Groudon/Rayquaza/Latias/Latios/Jirachi).
+Vrais bugs trouvés et corrigés dans la ROM :
+- Route Victoire 2F : Selene (dresseuse) pouvait bloquer le warp (6,2) -> elle disparaît après sa défaite (flag 0x150).
+- Route Braise : la sortie de l'antre de l'Orage (porte en mer) laissait le joueur à pied sur l'eau, impossible de rejoindre la terre -> remise en Surf automatique à la sortie (`OneIsland_KindleRoad_OnFrame`).
+- Volcan Écume : barrière scellée tant que les 6 sbires d'Onybris ne sont pas battus (rappel, non modifié).
+Ce qui n'est PAS un bug (limites du bot, documentées) : les gardes des légendaires (Articuno, Zapdos, Sulfura, antres d'Entei/Raikou) sont des dresseurs à battre avant le passage ; au sommet du Mont Brasier, le puzzle de rochers est solvable dans les deux sens (vérifié par recherche d'états hors émulateur).
+Limites connues du bot : Écho 10 (salle de la CS07 Cascade) non joué ; Force/boulders et courants du Volcan Écume simulés par flags ; combats de la Ligue joués en god mode.
+Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînement) : en cours, journal détaillé dans /tmp/gx/real_journal.jsonl (à résumer pour Basil).
