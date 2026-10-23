@@ -9,7 +9,7 @@
 
 ## À refaire (non fait)
 1. **Chrondrolia entière** (« Cramois'Île ») : intérieur de la centrale = ancien Manoir (recolorer/reconcevoir), scène du maire, rythme.
-2. **Volcan Écume** : un seul rocher poussé sur 3 étages mène directement au boss (arrivée trop tôt) -> verrouiller / redessiner le parcours B1F-B4F.
+2. ~~**Volcan Écume**~~ (déjà verrouillé : la fin ne s'ouvre qu'une fois les 6 sbires des étages battus, aucun raccourci) : un seul rocher poussé sur 3 étages mène directement au boss (arrivée trop tôt) -> verrouiller / redessiner le parcours B1F-B4F.
 3. **Eau / lave** : transitions bizarres au Manoir (Pokémon Mansion) et à Cramois'Île : une partie inondée de lave (obsidienne), l'autre inchangée -> homogénéiser.
 4. **Route 23** : à refaire entièrement (contrôle des badges de la Ligue).
 5. **Route Victoire** : refonte complète (+ infirmières à d'autres endroits possibles).
@@ -25,7 +25,8 @@ Corrigé : Mew placé près du camion (Apatia) ; Bill à la sortie d'Une-Île a 
 - Dernier repaire : il manque un admin (Selene/Kronos/Vesper... à placer avant le boss).
 - Cinématiques : trop peu de mise en scène (global) ; on ne comprend pas pourquoi le boss part (« il a tabassé Red »).
 - ~~Défaite contre le boss : il faut refaire Lorelei~~ -> FAIT 23/10 : `FLAG_TOPAZE_BOSS_RETRY` (0x0FF) posé quand Chen est battu ; à l'entrée de la salle de Lorelei, le joueur est téléporté directement au boss, sans question (équipe soignée, warp salle du Champion, le script reprend à la partie boss).
-- Mine de Grenalux = Mont Sélénite recopié, vide : à refaire / à remplir ; rien n'y mène à part l'indice.
+- Mine de Grenalux = Mont Sélénite recopié, vide : **remplie le 23/10** (`docs/topaze/mine_fill.py`) : 3 mineurs qui racontent la veine (« les murs bourdonnent », « la lueur n'est pas celle de nos lampes »), 3 objets au sol, 4 objets cachés (flags 0x126-0x12C). Elle reste courte et muette à dessein ; la géométrie (copie du Mont Sélénite) n'est pas redessinée.
+- Route Victoire 1F–3F : déjà refaite (progression, tileset), pas de redessin supplémentaire.
 - Vol pendant le Surf : avatar cassé (à reproduire ; demander à Basil le symptôme exact).
 
 ## Îles Sevii : passe d'ambiance faite le 23/10 (`docs/topaze/sevii_dress.py`)

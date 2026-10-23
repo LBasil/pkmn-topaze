@@ -337,12 +337,19 @@
 #define FLAG_0x125               0x125
 #define FLAG_HIDE_DIGLETTS_CAVE_ULTRA_BALL FLAG_0x125 // Topaze: Diglett's Cave item
 #define FLAG_0x126               0x126
+#define FLAG_TOPAZE_MINE_1F_REVIVE FLAG_0x126 // mine de Grenalux (post-game)
 #define FLAG_0x127               0x127
+#define FLAG_TOPAZE_MINE_1F_HEART FLAG_0x127 // mine de Grenalux (post-game)
 #define FLAG_0x128               0x128
+#define FLAG_TOPAZE_MINE_2F_ETHER FLAG_0x128 // mine de Grenalux (post-game)
 #define FLAG_0x129               0x129
+#define FLAG_TOPAZE_MINE_2F_ELIXIR FLAG_0x129 // mine de Grenalux (post-game)
 #define FLAG_0x12A               0x12A
+#define FLAG_TOPAZE_MINE_2F_PPUP FLAG_0x12A // mine de Grenalux (post-game)
 #define FLAG_0x12B               0x12B
+#define FLAG_TOPAZE_MINE_3F_MAXREVIVE FLAG_0x12B // mine de Grenalux (post-game)
 #define FLAG_0x12C               0x12C
+#define FLAG_TOPAZE_MINE_3F_CALCIUM FLAG_0x12C // mine de Grenalux (post-game)
 #define FLAG_0x12D               0x12D
 #define FLAG_0x12E               0x12E
 #define FLAG_0x12F               0x12F
