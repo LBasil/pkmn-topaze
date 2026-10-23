@@ -136,3 +136,8 @@ Avant : on parcourait les 3 étages et on était bloqué pile à la sortie. Main
 - **B1F neuve** (28x30) : accueil bleu (escalier du casino en (12,2)), couloir, dortoir Rocket (deux escaliers vers la B2F, gardé par une barrière que lève le sbire en (7,13)), réserve, bureau de sécurité bleu avec l'ascenseur. **B4F neuve** (24x26) : remise à clé, grand hall rouille, barrière + deux gardes (à interpeller) menant au bureau bleu de Vesper, sas bleu de l'ascenseur. **B2F/B3F** : labyrinthes à flèches conservés, rouille ; ailes reprises en bleu (le livre de comptes passe dans le bureau bleu de la B3F, en (15,7)).
 - **Lore Rocket rétabli** dans les textes (emblème rouge sous la peinture, « Rocket est parti, Onybris s'est installé, une salle bleue à la fois », labyrinthe/pièges laissés par Rocket, clé de l'ascenseur de Rocket perdue) ; Game Corner : façade de l'ancien gang, tampon Rocket derrière l'affiche.
 - Testé en émulateur : tous les escaliers (B1F↔B2F×2, B2F↔B3F, B3F↔B4F, casino), barrière B1F, clé, deux gardes B4F → barrière levée → bureau de Vesper, ascenseur.
+
+## Diversité dresseurs / sauvages (23/10)
+- `diversify_trainers.py` : équipes à attaques par défaut re-thématisées (Rocket, Scientifiques, Channelers, Randonneurs…), max 2 d'une espèce par carte, ~12 au total ; Arène Céladopole (Glace), Jadielle (Acier), Dojo (Combat), Tunnel Roche, Tour Pokémon. 257 remplacements. Plus aucune carte « 50 Arbok ».
+- `wild_diversify.py` : 89 créneaux sauvages variés (Mt Lune B1F, Tour Pokémon, Mt Brasier, Port Trois-Îles, Routes 6/7/8/10/11/16/22/23/25, tables d'eau). Aucune espèce perdue du Pokédex.
+- Hepha (Acier) : équipe Acier restaurée (Magneton 52 → Aggron 58), protégée de rebalance21.py.
