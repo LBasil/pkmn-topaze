@@ -21,6 +21,8 @@ S('SilphCo_2F SilphCo_3F SilphCo_4F SilphCo_5F SilphCo_6F SilphCo_7F SilphCo_8F 
 S('CinnabarIsland_Gym PokemonMansion_1F PokemonMansion_2F PokemonMansion_3F PokemonMansion_B1F',6)
 S('SeafoamIslands_B1F SeafoamIslands_B2F SeafoamIslands_B3F',6)
 S('ViridianCity_Gym',4)
+S('RockTunnel_1F RockTunnel_B1F',6)
+S('PokemonTower_3F PokemonTower_4F PokemonTower_5F PokemonTower_6F',4)
 S('VictoryRoad_1F VictoryRoad_2F VictoryRoad_3F VictoryRoadLair_1F VictoryRoadLair_2F',4)
 S('OneIsland_KindleRoad ThreeIsland_BondBridge MtEmber_Exterior OneIsland_TreasureBeach',6)
 # chefs d'arène / Conseil 4 / champion (parties nommées)
@@ -36,7 +38,8 @@ def W(names,d):
 W('Route12 Route13 Route14 Route15',5)
 W('Route16 Route17 Route18 Route19 Route20 Route21_North Route21_South FuchsiaCity SafariZone_Center SafariZone_East SafariZone_West SafariZone_North',8)
 W('SeafoamIslands_1F SeafoamIslands_B1F SeafoamIslands_B2F SeafoamIslands_B3F SeafoamIslands_B4F CinnabarIsland PokemonMansion_1F PokemonMansion_2F PokemonMansion_3F PokemonMansion_B1F',6)
-W('PokemonTower_3F PokemonTower_4F PokemonTower_5F PokemonTower_6F PokemonTower_7F',0)
+W('PokemonTower_3F PokemonTower_4F PokemonTower_5F PokemonTower_6F PokemonTower_7F',5)
+W('RockTunnel_1F RockTunnel_B1F',8)
 NOEVO=('Leader','EliteFour','Champion')
 
 S_=''.join(open(f).read() for f in glob.glob('data/scripts/*.inc')+glob.glob('data/maps/*/scripts.inc'))
