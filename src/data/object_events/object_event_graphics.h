@@ -175,6 +175,7 @@ const u16 gObjectEventPic_GymSign[] = INCBIN_U16("graphics/object_events/pics/mi
 const u16 gObjectEventPic_Sign[] = INCBIN_U16("graphics/object_events/pics/misc/sign.4bpp");
 const u16 gObjectEventPic_WoodenSign[] = INCBIN_U16("graphics/object_events/pics/misc/wooden_sign.4bpp");
 const u16 gObjectEventPic_TopazeBlip[] = INCBIN_U16("graphics/object_events/pics/misc/radar_blip.4bpp");
+const u16 gObjectEventPal_TopazeRaikou[] = INCBIN_U16("graphics/object_events/palettes/raikou.gbapal");
 const u16 gObjectEventPal_TopazeBlip[] = INCBIN_U16("graphics/object_events/palettes/radar_blip.gbapal");
 const u16 gObjectEventPic_Clipboard[] = INCBIN_U16("graphics/object_events/pics/misc/clipboard.4bpp");
 const u16 gObjectEventPal_Meteorite[] = INCBIN_U16("graphics/object_events/palettes/meteorite.gbapal");

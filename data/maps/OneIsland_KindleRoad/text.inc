@@ -178,7 +178,16 @@ OneIsland_KindleRoad_Text_EchoSpark3::
     .string "flash of blue light!$"
 
 OneIsland_KindleRoad_Text_EchoSpark3b::
-    .string "Thunder shakes the ground.\p"
-    .string "A beast of lightning is hiding\n"
-    .string "somewhere on this road.\p"
-    .string "It will not stay in one place.$"
+    .string "The sparks gather in the south\n"
+    .string "cliff and sink into a CAVE.\p"
+    .string "Whatever hides inside keeps\n"
+    .string "the storm alive.$"
+
+OneIsland_KindleRoad_Text_DenLockedBill::
+    .string "A cave mouth hums with static.\n"
+    .string "Something forbids the way.$"
+
+OneIsland_KindleRoad_Text_DenLockedSparks::
+    .string "Static crawls over the rock.\n"
+    .string "The cave is not ready for you.\p"
+    .string "Follow the ECHO sparks first.$"

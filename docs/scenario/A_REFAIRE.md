@@ -149,3 +149,6 @@ Avant : on parcourait les 3 étages et on était bloqué pile à la sortie. Main
 
 ## Écho 1 : parcours vers Raikou (23/10)
 `echo1_sparks.py` (Raikou change de refuge à chaque visite parmi 5 points de la route) : après Bill, 3 étincelles (sprite Voltorb) sur la route Kindle (11,61), (11,81), (11,101) ; chacune dit un texte et disparaît ; la 3e déclenche tonnerre et fait apparaître Raikou (12,120). Raikou n'est plus visible avant. Flags 0x130–0x135. À généraliser aux Échos 2–7 si Basil valide. Sprite de Raikou refait (recoloration d'Entei, provisoire).
+
+## Écho 1 : le Repaire de l'Orage (23/10)
+`echo1_den.py` : Raikou n'est plus sur la route Kindle. Une bouche de grotte (6,124) dans la falaise sud (accès à pied depuis le bout de la route, ou en Surf) mène au Repaire de l'Orage (copie de Mt Brasier B3F, carte `OneIsland_KindleRoad_StormDen`). Fermée avant Bill et tant que les 3 étincelles ne sont pas faites. 4 acolytes (Channelers électriques niv. 62–65) + l'Oracle (6 Pokémon 66–68) gardent le chemin ; Raikou est au fond (3,4). Flags : FLAG_HIDE_ECHO_BEAST (réutilisé). Sprite de Raikou : recoloration d'Entei avec palette dédiée (provisoire).

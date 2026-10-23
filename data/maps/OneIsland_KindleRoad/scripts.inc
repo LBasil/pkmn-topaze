@@ -26,35 +26,6 @@ OneIsland_KindleRoad_EventScript_ShowSpark2::
 
 OneIsland_KindleRoad_EventScript_TransSpark3::
 	goto_if_unset FLAG_ECHO1_SPARK_DONE3, OneIsland_KindleRoad_EventScript_ShowSpark3
-	clearflag FLAG_HIDE_ECHO_BEAST
-	@ Topaze: Raikou change de refuge a chaque visite (difficile a trouver)
-	random 6
-	switch VAR_RESULT
-	case 0, OneIsland_KindleRoad_EventScript_RaikouSpot0
-	case 1, OneIsland_KindleRoad_EventScript_RaikouSpot1
-	case 2, OneIsland_KindleRoad_EventScript_RaikouSpot2
-	case 3, OneIsland_KindleRoad_EventScript_RaikouSpot3
-	case 4, OneIsland_KindleRoad_EventScript_RaikouSpot4
-	end
-
-OneIsland_KindleRoad_EventScript_RaikouSpot0::
-	setobjectxyperm LOCALID_ONE_ISLAND_RAIKOU, 12, 120
-	end
-
-OneIsland_KindleRoad_EventScript_RaikouSpot1::
-	setobjectxyperm LOCALID_ONE_ISLAND_RAIKOU, 16, 132
-	end
-
-OneIsland_KindleRoad_EventScript_RaikouSpot2::
-	setobjectxyperm LOCALID_ONE_ISLAND_RAIKOU, 18, 80
-	end
-
-OneIsland_KindleRoad_EventScript_RaikouSpot3::
-	setobjectxyperm LOCALID_ONE_ISLAND_RAIKOU, 10, 54
-	end
-
-OneIsland_KindleRoad_EventScript_RaikouSpot4::
-	setobjectxyperm LOCALID_ONE_ISLAND_RAIKOU, 17, 105
 	end
 
 OneIsland_KindleRoad_EventScript_ShowSpark3::
@@ -154,12 +125,31 @@ OneIsland_KindleRoad_EventScript_EchoSpark3::
 	fadescreen FADE_TO_BLACK
 	removeobject VAR_LAST_TALKED
 	fadescreen FADE_FROM_BLACK
-	clearflag FLAG_HIDE_ECHO_BEAST
-	setobjectxyperm LOCALID_ONE_ISLAND_RAIKOU, 16, 132
-	addobject LOCALID_ONE_ISLAND_RAIKOU
 	playse SE_THUNDER
 	delay 30
 	playse SE_THUNDER2
 	msgbox OneIsland_KindleRoad_Text_EchoSpark3b
 	release
 	end
+
+@ Topaze: la bouche de grotte du repaire (6,124) reste fermee tant que Bill et les etincelles n'ont pas parle
+OneIsland_KindleRoad_EventScript_DenLockedBill::
+	lockall
+	msgbox OneIsland_KindleRoad_Text_DenLockedBill
+	applymovement LOCALID_PLAYER, OneIsland_KindleRoad_Movement_DenBack
+	waitmovement 0
+	releaseall
+	end
+
+OneIsland_KindleRoad_EventScript_DenLockedSparks::
+	goto_if_set FLAG_ECHO1_SPARK_DONE3, EventScript_Return
+	lockall
+	msgbox OneIsland_KindleRoad_Text_DenLockedSparks
+	applymovement LOCALID_PLAYER, OneIsland_KindleRoad_Movement_DenBack
+	waitmovement 0
+	releaseall
+	end
+
+OneIsland_KindleRoad_Movement_DenBack::
+	walk_down
+	step_end

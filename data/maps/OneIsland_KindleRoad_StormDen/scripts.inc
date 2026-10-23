@@ -1,0 +1,77 @@
+OneIsland_KindleRoad_StormDen_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, OneIsland_KindleRoad_StormDen_OnTransition
+	.byte 0
+
+OneIsland_KindleRoad_StormDen_OnTransition::
+	goto_if_set FLAG_ECHO_BEAST_DONE, OneIsland_KindleRoad_StormDen_EventScript_HideBeast
+	goto_if_ne VAR_ECHO_STAGE, 1, OneIsland_KindleRoad_StormDen_EventScript_HideBeast
+	clearflag FLAG_HIDE_ECHO_BEAST
+	end
+
+OneIsland_KindleRoad_StormDen_EventScript_HideBeast::
+	setflag FLAG_HIDE_ECHO_BEAST
+	end
+
+OneIsland_KindleRoad_StormDen_EventScript_Acolyte1::
+	trainerbattle_single TRAINER_RS_PKMN_RANGER_M, OneIsland_KindleRoad_StormDen_Text_Acolyte1Intro, OneIsland_KindleRoad_StormDen_Text_Acolyte1Defeat
+	msgbox OneIsland_KindleRoad_StormDen_Text_Acolyte1Post, MSGBOX_AUTOCLOSE
+	end
+
+OneIsland_KindleRoad_StormDen_EventScript_Acolyte2::
+	trainerbattle_single TRAINER_RS_PKMN_RANGER_F, OneIsland_KindleRoad_StormDen_Text_Acolyte2Intro, OneIsland_KindleRoad_StormDen_Text_Acolyte2Defeat
+	msgbox OneIsland_KindleRoad_StormDen_Text_Acolyte2Post, MSGBOX_AUTOCLOSE
+	end
+
+OneIsland_KindleRoad_StormDen_EventScript_Acolyte3::
+	trainerbattle_single TRAINER_RS_BIRD_KEEPER, OneIsland_KindleRoad_StormDen_Text_Acolyte3Intro, OneIsland_KindleRoad_StormDen_Text_Acolyte3Defeat
+	msgbox OneIsland_KindleRoad_StormDen_Text_Acolyte3Post, MSGBOX_AUTOCLOSE
+	end
+
+OneIsland_KindleRoad_StormDen_EventScript_Acolyte4::
+	trainerbattle_single TRAINER_RS_SWIMMER_M, OneIsland_KindleRoad_StormDen_Text_Acolyte4Intro, OneIsland_KindleRoad_StormDen_Text_Acolyte4Defeat
+	msgbox OneIsland_KindleRoad_StormDen_Text_Acolyte4Post, MSGBOX_AUTOCLOSE
+	end
+
+OneIsland_KindleRoad_StormDen_EventScript_Oracle::
+	trainerbattle_single TRAINER_RS_SWIMMER_F, OneIsland_KindleRoad_StormDen_Text_OracleIntro, OneIsland_KindleRoad_StormDen_Text_OracleDefeat
+	msgbox OneIsland_KindleRoad_StormDen_Text_OraclePost, MSGBOX_AUTOCLOSE
+	end
+
+@ Topaze: Raikou (Echo 1), tapi au fond de la grotte
+OneIsland_KindleRoad_StormDen_EventScript_Raikou::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	setwildbattle SPECIES_RAIKOU, 0
+	waitse
+	playmoncry SPECIES_RAIKOU, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, OneIsland_KindleRoad_StormDen_EventScript_DefeatedRaikou
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, OneIsland_KindleRoad_StormDen_EventScript_RanFromRaikou
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, OneIsland_KindleRoad_StormDen_EventScript_RanFromRaikou
+	setflag FLAG_ECHO_BEAST_DONE
+	setflag FLAG_HIDE_ECHO_BEAST
+	setvar VAR_ECHO_STAGE, 2
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone1
+	end
+
+OneIsland_KindleRoad_StormDen_EventScript_DefeatedRaikou::
+	setflag FLAG_ECHO_BEAST_DONE
+	setvar VAR_ECHO_STAGE, 2
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone1
+	end
+
+OneIsland_KindleRoad_StormDen_EventScript_RanFromRaikou::
+	setvar VAR_0x8004, SPECIES_RAIKOU
+	goto EventScript_MonFlewAway
+	end
