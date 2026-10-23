@@ -68,3 +68,8 @@ Cohérent avec : Misty (« le gagnant rencontre JIRACHI »), Hall of Fame (« il
 
 ## Scène des alliés au Plateau (23/10)
 Sortie du repaire -> premier passage au Centre du Plateau : Flora, Brice et Misty comprennent le piège (`FLAG_TOPAZE_BRIEFING` 0x111, `IndigoPlateau_PokemonCenter_1F_EventScript_Briefing`, déclenchée à l'entrée). Ils en font un duel : le vœu va d'abord au Champion ; le boss ne peut le prendre qu'en le battant, « dans un lieu que tu as choisi, avec une équipe que tu as construite ». Flora soigne l'équipe. Le tournoi n'est plus subi : c'est la partie jouée par le joueur.
+
+## Onybris « grande organisation » (23/10, 10h) — FAIT
+- **Journal télé** : écran vert au mur nord des 17 Centres (bg_event aux cases x11–13, y1, face au nord). 5 paliers selon la progression (badges 0–2 / 3–4 / 5–6 / 7–8 / repaire fini), 2 reportages au hasard par palier, 1 texte « silence » après le Champion. Du « vols isolés » → « bandes organisées » → « ville muette » → « voix à la radio » → « silhouettes sur la route du Plateau ». Script `Topaze_EventScript_NewsTV` dans `data/scripts/topaze_news.inc`.
+- **Recruteurs** : PNJ sprite sbire (non-combattant) dans chaque Centre, visibles de 4 badges jusqu'au Champion battu (`FLAG_TOPAZE_HIDE_RECRUITER` = 0x112, posé par `Topaze_EventScript_RecruiterCheck` appelé dans chaque OnTransition). 3 paliers × 2 répliques (raisons humaines, hiérarchie sbires/cadres/« quelqu'un que personne ne nomme », Hematown tombée sans cri, « le chemin doit rester libre pour lui »).
+- À faire ensuite (proposé) : retours des trois cadres avant la fin ; sbires visibles pendant le tournoi.
