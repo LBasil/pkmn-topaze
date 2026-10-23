@@ -21,7 +21,33 @@
         .species = SPECIES_STARMIE, \
     }
 
-static const struct TrainerMonNoItemDefaultMoves sParty_AquaLeader[] = {DUMMY_TRAINER_MON};
+static const struct TrainerMonNoItemDefaultMoves sParty_AquaLeader[] = {
+    {
+        .iv = 60,
+        .lvl = 60,
+        .species = SPECIES_ARBOK,
+    },
+    {
+        .iv = 60,
+        .lvl = 60,
+        .species = SPECIES_WEEZING,
+    },
+    {
+        .iv = 60,
+        .lvl = 61,
+        .species = SPECIES_NIDOKING,
+    },
+    {
+        .iv = 60,
+        .lvl = 61,
+        .species = SPECIES_CROBAT,
+    },
+    {
+        .iv = 60,
+        .lvl = 62,
+        .species = SPECIES_ALAKAZAM,
+    },
+};
 static const struct TrainerMonNoItemDefaultMoves sParty_AquaGruntM[] = {
     {
         .iv = 30,

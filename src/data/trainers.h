@@ -3,13 +3,14 @@ const struct Trainer gTrainers[] = {
         .trainerName = _(""),
     },
     [TRAINER_AQUA_LEADER] = {
-        .trainerClass = TRAINER_CLASS_AQUA_LEADER,
+        // Topaze: KRONOS, dernier duel (3F du repaire, scene finale)
+        .trainerClass = TRAINER_CLASS_TEAM_ROCKET,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_LEADER_ARCHIE,
-        .trainerName = _(""),
+        .trainerPic = TRAINER_PIC_MAGMA_ADMIN_M,
+        .trainerName = _("KRONOS"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT,
         .party = NO_ITEM_DEFAULT_MOVES(sParty_AquaLeader),
     },
     [TRAINER_AQUA_GRUNT_M] = {
