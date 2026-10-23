@@ -255,24 +255,24 @@ Topaze_Recruiter_Text_T3B::
 @ --- Cameos des cadres (sans combat) dans trois Centres : ils obeissent a quelqu'un, ils sont nombreux.
 Topaze_EventScript_VesperCheck::
 	setflag FLAG_TOPAZE_HIDE_VESPER
-	goto_if_unset FLAG_BADGE04_GET, Topaze_Cameo_VesperEnd
-	goto_if_set FLAG_BADGE06_GET, Topaze_Cameo_VesperEnd
+	goto_if_unset FLAG_BADGE05_GET, Topaze_Cameo_VesperEnd
+	goto_if_set FLAG_BADGE07_GET, Topaze_Cameo_VesperEnd
 	clearflag FLAG_TOPAZE_HIDE_VESPER
 Topaze_Cameo_VesperEnd::
 	return
 
 Topaze_EventScript_SeleneCheck::
 	setflag FLAG_TOPAZE_HIDE_SELENE
-	goto_if_unset FLAG_BADGE06_GET, Topaze_Cameo_SeleneEnd
-	goto_if_set FLAG_BADGE08_GET, Topaze_Cameo_SeleneEnd
+	goto_if_unset FLAG_BADGE03_GET, Topaze_Cameo_SeleneEnd
+	goto_if_set FLAG_BADGE04_GET, Topaze_Cameo_SeleneEnd
 	clearflag FLAG_TOPAZE_HIDE_SELENE
 Topaze_Cameo_SeleneEnd::
 	return
 
 Topaze_EventScript_KronosCheck::
 	setflag FLAG_TOPAZE_HIDE_KRONOS
-	goto_if_unset FLAG_BADGE08_GET, Topaze_Cameo_KronosEnd
-	goto_if_set FLAG_VR_BOSS_DONE, Topaze_Cameo_KronosEnd
+	goto_if_unset FLAG_BADGE04_GET, Topaze_Cameo_KronosEnd
+	goto_if_set FLAG_BADGE06_GET, Topaze_Cameo_KronosEnd
 	clearflag FLAG_TOPAZE_HIDE_KRONOS
 Topaze_Cameo_KronosEnd::
 	return
@@ -299,9 +299,9 @@ Topaze_EventScript_KronosCameo::
 	end
 
 Topaze_Cameo_Text_Vesper::
-	.string "VESPER: ...Yes. Understood. The\n"
-	.string "fourth stone is secured. No, the\l"
-	.string "child is not a problem. Yet.\p"
+	.string "VESPER: ...Yes. Understood. HEMATEK\n"
+	.string "is on schedule. No, the child is\l"
+	.string "not a problem. Yet.\p"
 	.string "...Oh. The pendant.\p"
 	.string "Relax, I am off duty. The BOSS\n"
 	.string "forbids brawls in a POKéMON CENTER.\l"
@@ -311,21 +311,19 @@ Topaze_Cameo_Text_Vesper::
 	.string "Try to keep up.$"
 
 Topaze_Cameo_Text_Selene::
-	.string "SELENE: Yes. The city is ours as of\n"
-	.string "this morning. No one resisted.\p"
-	.string "...You again. Your hands shake, and\n"
-	.string "you walk on anyway. I like that.\p"
+	.string "SELENE: Yes. The tower is quiet\n"
+	.string "again. The stone left with KRONOS.\p"
+	.string "...You. The one who walks on while\n"
+	.string "his hands shake. I like that.\p"
 	.string "Do not mistake us for thieves. A\n"
 	.string "thief needs hiding. We have\l"
 	.string "thousands of mouths that agree.\p"
-	.string "Go on. The LEAGUE will teach you\n"
-	.string "who decides.$"
+	.string "Go on. We will meet again.$"
 
 Topaze_Cameo_Text_Kronos::
 	.string "KRONOS: ...Understood. All branches\n"
 	.string "report in. The road is clear.\p"
-	.string "Last courtesy, child. After the\n"
-	.string "PLATEAU you will see why we never\l"
-	.string "needed to hurry.\p"
+	.string "A courtesy, child. We never needed\n"
+	.string "to hurry. You are the one running.\p"
 	.string "We are not behind you. We are\n"
 	.string "waiting where you are going.$"
