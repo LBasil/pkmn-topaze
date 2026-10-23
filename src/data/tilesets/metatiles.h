@@ -496,3 +496,24 @@ const u32 gMetatileAttributes_GeneralEcho6[] = INCBIN_U32("data/tilesets/primary
 
 const u16 gMetatiles_SeviiEcho6[] = INCBIN_U16("data/tilesets/secondary/sevii_echo6/metatiles.bin");
 const u32 gMetatileAttributes_SeviiEcho6[] = INCBIN_U32("data/tilesets/secondary/sevii_echo6/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiCaveSteel[] = INCBIN_U16("data/tilesets/secondary/sevii_cavesteel/metatiles.bin");
+const u32 gMetatileAttributes_SeviiCaveSteel[] = INCBIN_U32("data/tilesets/secondary/sevii_cavesteel/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiCaveTide[] = INCBIN_U16("data/tilesets/secondary/sevii_cavetide/metatiles.bin");
+const u32 gMetatileAttributes_SeviiCaveTide[] = INCBIN_U32("data/tilesets/secondary/sevii_cavetide/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiNavelStone[] = INCBIN_U16("data/tilesets/secondary/sevii_navelstone/metatiles.bin");
+const u32 gMetatileAttributes_SeviiNavelStone[] = INCBIN_U32("data/tilesets/secondary/sevii_navelstone/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiRockStone[] = INCBIN_U16("data/tilesets/secondary/sevii_rockstone/metatiles.bin");
+const u32 gMetatileAttributes_SeviiRockStone[] = INCBIN_U32("data/tilesets/secondary/sevii_rockstone/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiForestStone[] = INCBIN_U16("data/tilesets/secondary/sevii_foreststone/metatiles.bin");
+const u32 gMetatileAttributes_SeviiForestStone[] = INCBIN_U32("data/tilesets/secondary/sevii_foreststone/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiForestTide[] = INCBIN_U16("data/tilesets/secondary/sevii_foresttide/metatiles.bin");
+const u32 gMetatileAttributes_SeviiForestTide[] = INCBIN_U32("data/tilesets/secondary/sevii_foresttide/metatile_attributes.bin");
+
+const u16 gMetatiles_SeviiDigTropic[] = INCBIN_U16("data/tilesets/secondary/sevii_digtropic/metatiles.bin");
+const u32 gMetatileAttributes_SeviiDigTropic[] = INCBIN_U32("data/tilesets/secondary/sevii_digtropic/metatile_attributes.bin");

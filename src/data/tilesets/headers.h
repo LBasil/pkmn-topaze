@@ -1901,3 +1901,80 @@ const struct Tileset gTileset_SeviiEcho6 =
     .metatileAttributes = gMetatileAttributes_SeviiEcho6,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_SeviiCaveSteel =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiCaveSteel,
+    .palettes = gTilesetPalettes_SeviiCaveSteel,
+    .metatiles = gMetatiles_SeviiCaveSteel,
+    .metatileAttributes = gMetatileAttributes_SeviiCaveSteel,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SeviiCaveTide =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiCaveTide,
+    .palettes = gTilesetPalettes_SeviiCaveTide,
+    .metatiles = gMetatiles_SeviiCaveTide,
+    .metatileAttributes = gMetatileAttributes_SeviiCaveTide,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SeviiNavelStone =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiNavelStone,
+    .palettes = gTilesetPalettes_SeviiNavelStone,
+    .metatiles = gMetatiles_SeviiNavelStone,
+    .metatileAttributes = gMetatileAttributes_SeviiNavelStone,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SeviiRockStone =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiRockStone,
+    .palettes = gTilesetPalettes_SeviiRockStone,
+    .metatiles = gMetatiles_SeviiRockStone,
+    .metatileAttributes = gMetatileAttributes_SeviiRockStone,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SeviiForestStone =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiForestStone,
+    .palettes = gTilesetPalettes_SeviiForestStone,
+    .metatiles = gMetatiles_SeviiForestStone,
+    .metatileAttributes = gMetatileAttributes_SeviiForestStone,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SeviiForestTide =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiForestTide,
+    .palettes = gTilesetPalettes_SeviiForestTide,
+    .metatiles = gMetatiles_SeviiForestTide,
+    .metatileAttributes = gMetatileAttributes_SeviiForestTide,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_SeviiDigTropic =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_SeviiDigTropic,
+    .palettes = gTilesetPalettes_SeviiDigTropic,
+    .metatiles = gMetatiles_SeviiDigTropic,
+    .metatileAttributes = gMetatileAttributes_SeviiDigTropic,
+    .callback = NULL,
+};
