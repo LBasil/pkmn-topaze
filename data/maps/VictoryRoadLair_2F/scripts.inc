@@ -17,8 +17,18 @@ VictoryRoadLair_2F_EventScript_StonesStay::
 	end
 
 VictoryRoadLair_2F_EventScript_Selene::
-	trainerbattle_single TRAINER_RS_AROMA_LADY, VictoryRoadLair_2F_Text_SeleneIntro, VictoryRoadLair_2F_Text_SeleneDefeat
+	trainerbattle_single TRAINER_RS_AROMA_LADY, VictoryRoadLair_2F_Text_SeleneIntro, VictoryRoadLair_2F_Text_SeleneDefeat, VictoryRoadLair_2F_EventScript_SeleneVanish
 	msgbox VictoryRoadLair_2F_Text_SelenePost, MSGBOX_AUTOCLOSE
+	end
+
+VictoryRoadLair_2F_EventScript_SeleneVanish::
+	msgbox VictoryRoadLair_2F_Text_SelenePost, MSGBOX_DEFAULT
+	closemessage
+	setflag FLAG_0x150
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
+	releaseall
 	end
 
 VictoryRoadLair_2F_EventScript_StoneGrenat::
