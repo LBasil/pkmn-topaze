@@ -5,6 +5,36 @@ VictoryRoad_1F_MapScripts::
 
 VictoryRoad_1F_OnLoad::
 	@ Topaze: les rochers sont déjà tombés sur les interrupteurs (passage ouvert)
+	@ Topaze: éboulis ONYBRIS sur le couloir de l'échelle tant que le repaire n'est pas nettoyé
+	goto_if_set FLAG_VR_BOSS_DONE, VictoryRoad_1F_OnLoad_Open
+	setmetatile 4, 8, METATILE_Cave_RockBarrier_Top, 1
+	setmetatile 5, 8, METATILE_Cave_RockBarrier_Top, 1
+	setmetatile 4, 9, METATILE_Cave_RockBarrier_Bottom, 1
+	setmetatile 5, 9, METATILE_Cave_RockBarrier_Bottom, 1
+VictoryRoad_1F_OnLoad_Open::
+	end
+
+VictoryRoad_1F_EventScript_Rubble::
+	lockall
+	setvar VAR_TEMP_0, 1
+	goto_if_set FLAG_VR_BOSS_DONE, VictoryRoad_1F_EventScript_RubbleEnd
+	msgbox VictoryRoad_1F_Text_Rubble
+VictoryRoad_1F_EventScript_RubbleEnd::
+	releaseall
+	end
+
+@ Topaze: l'infirmiere de la route, a cote de l'echelle du repaire
+VictoryRoad_1F_EventScript_Nurse::
+	lock
+	faceplayer
+	msgbox VictoryRoad_1F_Text_NurseHeal
+	fadescreen FADE_TO_BLACK
+	playfanfare MUS_HEAL
+	waitfanfare
+	special HealPlayerParty
+	fadescreen FADE_FROM_BLACK
+	msgbox VictoryRoad_1F_Text_NurseHealed
+	release
 	end
 
 VictoryRoad_1F_EventScript_SetRockBarrier::

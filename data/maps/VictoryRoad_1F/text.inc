@@ -18,3 +18,23 @@ VictoryRoad_1F_Text_RolandoPostBattle::
     .string "The MASTER is ahead. RED went\n"
     .string "in before you. Alone.$"
 
+
+VictoryRoad_1F_Text_Rubble::
+    .string "The tunnel ahead is buried under\n"
+    .string "fresh rubble. Pickaxe marks.\p"
+    .string "Somebody brought this wall down on\n"
+    .string "purpose. The way to the next floor\l"
+    .string "is shut.\p"
+    .string "A cold draft blows in from the\n"
+    .string "north-east end of the cave.$"
+
+VictoryRoad_1F_Text_NurseHeal::
+    .string "I am the road's NURSE. I set up\n"
+    .string "next to this ladder, where the\l"
+    .string "air feels wrong.\p"
+    .string "The ONYBRIS crews went down\n"
+    .string "there and the tunnel behind you\l"
+    .string "was brought down. Heal up first.$"
+
+VictoryRoad_1F_Text_NurseHealed::
+    .string "All better! Come back any time.$"

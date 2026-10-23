@@ -133,15 +133,15 @@
       "x": 14,
       "y": 21,
       "elevation": 0,
-      "dest_map": "MAP_VICTORY_ROAD_2F",
-      "dest_warp_id": "9"
+      "dest_map": "MAP_VICTORY_ROAD_1F",
+      "dest_warp_id": "2"
     },
     {
       "x": 15,
       "y": 21,
       "elevation": 0,
-      "dest_map": "MAP_VICTORY_ROAD_2F",
-      "dest_warp_id": "9"
+      "dest_map": "MAP_VICTORY_ROAD_1F",
+      "dest_warp_id": "2"
     },
     {
       "x": 6,
@@ -151,6 +151,25 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "VictoryRoadLair_1F_EventScript_Welcome"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "VictoryRoadLair_1F_EventScript_Welcome"
+    }
+  ],
   "bg_events": []
 }

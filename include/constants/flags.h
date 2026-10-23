@@ -318,6 +318,7 @@
 #define FLAG_0x11B               0x11B
 #define FLAG_TOPAZE_CELL_FUCHSIA FLAG_0x11B // quete annexe Parmanie
 #define FLAG_0x11C               0x11C
+#define FLAG_TOPAZE_LAIR_ENTERED FLAG_0x11C // premiere arrivee dans le repaire de la Route Victoire (scene d'entree)
 #define FLAG_0x11D               0x11D
 #define FLAG_0x11E               0x11E
 #define FLAG_0x11F               0x11F

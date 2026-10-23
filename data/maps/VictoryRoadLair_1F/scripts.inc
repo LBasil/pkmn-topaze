@@ -38,3 +38,21 @@ VictoryRoadLair_1F_EventScript_ItemMaxRevive::
 VictoryRoadLair_1F_EventScript_ItemRareCandy::
 	finditem ITEM_RARE_CANDY
 	end
+
+@ Topaze: scene d'entree du repaire (premiere arrivee seulement)
+VictoryRoadLair_1F_EventScript_Welcome::
+	lockall
+	setvar VAR_TEMP_0, 1
+	goto_if_set FLAG_TOPAZE_LAIR_ENTERED, VictoryRoadLair_1F_EventScript_WelcomeEnd
+	setflag FLAG_TOPAZE_LAIR_ENTERED
+	playse SE_PIN
+	msgbox VictoryRoadLair_1F_Text_Speaker1
+	msgbox VictoryRoadLair_1F_Text_Speaker2
+	closemessage
+	playse SE_THUNDER
+	special ShakeScreen
+	waitstate
+	msgbox VictoryRoadLair_1F_Text_Speaker3
+VictoryRoadLair_1F_EventScript_WelcomeEnd::
+	releaseall
+	end

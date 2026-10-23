@@ -70,3 +70,18 @@ VictoryRoadLair_1F_Text_VesperPost::
     .string "What he seeks answers wishes. One\n"
     .string "wish, spoken by the right voice.\p"
     .string "Go. SELENE keeps the door.$"
+
+VictoryRoadLair_1F_Text_Speaker1::
+    .string "A speaker on the wall crackles.\p"
+    .string "“Hall guards: he took the ladder.\n"
+    .string "Hold your posts.”$"
+
+VictoryRoadLair_1F_Text_Speaker2::
+    .string "“…No. Let him come. The master\n"
+    .string "wants him to see all of it.”\p"
+    .string "“Every stone. Every statue.\n"
+    .string "Every face that waited for him.”$"
+
+VictoryRoadLair_1F_Text_Speaker3::
+    .string "Nobody tried to stop you at the\n"
+    .string "door. That is what worries you.$"

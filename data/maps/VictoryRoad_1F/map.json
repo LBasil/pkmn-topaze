@@ -113,6 +113,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_StrengthBoulder",
       "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_NURSE",
+      "x": 19,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "VictoryRoad_1F_EventScript_Nurse",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -129,6 +143,13 @@
       "elevation": 3,
       "dest_map": "MAP_ROUTE23",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 18,
+      "y": 1,
+      "elevation": 3,
+      "dest_map": "MAP_VICTORY_ROAD_LAIR_1F",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -140,6 +161,15 @@
       "var": "VAR_MAP_SCENE_VICTORY_ROAD_1F",
       "var_value": "99",
       "script": "VictoryRoad_1F_EventScript_FloorSwitch"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 10,
+      "elevation": 3,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "VictoryRoad_1F_EventScript_Rubble"
     }
   ],
   "bg_events": [

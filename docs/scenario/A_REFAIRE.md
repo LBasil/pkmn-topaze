@@ -111,3 +111,11 @@ Règle posée par Basil : œil absolu romhacker + UI/UX sur TOUTES les maps (rou
 Générateur `docs/topaze/route23_v2.py` (original conservé dans `docs/topaze/route21_src/r23_orig.bin`), tilesets dédiés `GeneralRoute23V2` / `IndigoRoute23V2`. Les 4 portails de badges (Tonnerre, Arc-en-ciel, Âme, Marais) sont séparés par de vraies sections de route : chemin de sable sinueux, forêts, étangs, rochers, murets à escaliers, façades scellées (impossible de contourner l'arche, vérifié par assertion). Gardes + déclencheurs recalés (var_value n-1). Testé en émulateur : 3 badges → bloqué à Arc-en-ciel ; 4 → passe Arc-en-ciel, bloqué à Âme ; 6+ → tout passe.
 - Piège trouvé : `include/topaze_fog_strips.h` (raccords de cartes) réécrit des métatuiles/tuiles « inutilisés » de la carte → après un changement de tileset, relancer `python3 docs/topaze/fog_strips.py` (sinon cases noires en damier). Fait.
 - Reste : Route de la Victoire, QG Bourg Quartz, Chrondrolia, repaire, gymnases, etc. (inventaire « TOUTES les maps »).
+
+## Route Victoire : vraie progression (23/10, demande de Basil)
+Avant : on parcourait les 3 étages et on était bloqué pile à la sortie. Maintenant (`docs/topaze/victory_road_progress.py`) :
+- **1F** : un éboulis ONYBRIS (barrière de rochers en (4–5, 8–9)) scelle le couloir menant à l'échelle de la 2F tant que `FLAG_VR_BOSS_DONE` n'est pas posé ; en s'approchant, texte « tunnel effondré exprès… courant d'air froid au nord-est ». Le joueur peut seulement revenir en arrière.
+- Le **passage visible** : une échelle dans l'alcove nord-est de la 1F (18,1), l'infirmière juste à côté (19,2) → entrée du repaire. Le repaire (3 salles, Kronos, Red) est donc au milieu de la route, plus à la fin.
+- Scène d'entrée au repaire (première fois, flag 0x11C `FLAG_TOPAZE_LAIR_ENTERED`) : haut-parleur « laissez-le entrer, le maître veut qu'il voie tout ».
+- Le boss battu, les entrées du repaire ramènent à la 1F (échelle (18,1)), l'éboulis a disparu : on continue 2F, 3F puis la sortie, qui n'est plus bloquée (mur de brume et échelle de la 2F supprimés).
+- Testé en émulateur : blocage, échelle, scène d'entrée, éboulis levé après `VR_BOSS_DONE`.

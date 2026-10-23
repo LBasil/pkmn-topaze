@@ -198,20 +198,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "VictoryRoad_2F_EventScript_DoubleEdgeTutor",
       "flag": "0"
-    },
-    {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_NURSE",
-      "x": 32,
-      "y": 2,
-      "elevation": 4,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "VictoryRoad_2F_EventScript_Nurse",
-      "flag": "0"
     }
   ],
   "warp_events": [
@@ -277,13 +263,6 @@
       "elevation": 3,
       "dest_map": "MAP_VICTORY_ROAD_3F",
       "dest_warp_id": "4"
-    },
-    {
-      "x": 30,
-      "y": 1,
-      "elevation": 3,
-      "dest_map": "MAP_VICTORY_ROAD_LAIR_1F",
-      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -304,42 +283,6 @@
       "var": "VAR_MAP_SCENE_VICTORY_ROAD_2F_BOULDER2",
       "var_value": "99",
       "script": "VictoryRoad_2F_EventScript_FloorSwitch2"
-    },
-    {
-      "type": "trigger",
-      "x": 47,
-      "y": 12,
-      "elevation": 3,
-      "var": "VAR_TEMP_6",
-      "var_value": "0",
-      "script": "VictoryRoad_2F_EventScript_ExitBlockedN"
-    },
-    {
-      "type": "trigger",
-      "x": 48,
-      "y": 11,
-      "elevation": 3,
-      "var": "VAR_TEMP_6",
-      "var_value": "0",
-      "script": "VictoryRoad_2F_EventScript_ExitBlockedN"
-    },
-    {
-      "type": "trigger",
-      "x": 49,
-      "y": 12,
-      "elevation": 3,
-      "var": "VAR_TEMP_6",
-      "var_value": "0",
-      "script": "VictoryRoad_2F_EventScript_ExitBlockedN"
-    },
-    {
-      "type": "trigger",
-      "x": 47,
-      "y": 14,
-      "elevation": 3,
-      "var": "VAR_TEMP_6",
-      "var_value": "0",
-      "script": "VictoryRoad_2F_EventScript_ExitBlockedS"
     }
   ],
   "bg_events": []
