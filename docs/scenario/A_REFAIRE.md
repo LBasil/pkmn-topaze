@@ -57,3 +57,11 @@ La porte de la mine (Grenalux) mène directement à l'étage de la vérité (Gre
 - Voix du boss (« ??? », toujours invisible) : remercie, annonce que le vœu dort au bout de la Ligue (« là où les champions marchent »), invite à gagner le tournoi, « Time is the one thing nobody gets back ». Kronos s'enfuit (fumigène) ; Red se relève, regarde vers la Ligue (il vient aussi).
 - Testé en émulateur : scène complète jusqu'à `FLAG_VR_BOSS_DONE`.
 - Infirmière déplacée à la 2F de la Route Victoire, près de l'échelle (32,2) ; Naomi redevient sbire.
+
+## Lore : pourquoi le tournoi, alors que le boss a les pierres ? (23/10, corrigé)
+Règles posées (dites au joueur par Kronos puis par la voix du boss, repaire 3F) :
+1. Les dix pierres sont à lui ; le **cœur** de l'ensemble (le pendentif GRENAT du joueur) ne peut pas être pris : un grenat arraché à son gardien se brise.
+2. JIRACHI dort sous la Ligue et ne se réveille que pour un **CHAMPION qui porte le cœur**. Le boss pourrait grimper le tournoi, l'étoile dormirait à travers lui.
+3. Il a donc besoin que le joueur devienne Champion avec le pendentif, puis il surgit à la porte (salle du Champion, après Chen/Oak) et prend le vœu de celui qui le tient (« I came for what a CHAMPION wakes »).
+4. Pourquoi le joueur y va : récupérer les pierres et arrêter le dérèglement du temps ; le boss lui laisse le choix de rester chez lui (« nothing wakes, the clocks keep bending »).
+Cohérent avec : Misty (« le gagnant rencontre JIRACHI »), Hall of Fame (« il se réveille pour toi »), les trois fins.
