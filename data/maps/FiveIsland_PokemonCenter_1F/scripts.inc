@@ -5,6 +5,7 @@ FiveIsland_PokemonCenter_1F_MapScripts::
 
 FiveIsland_PokemonCenter_1F_OnTransition::
 	setrespawn HEAL_LOCATION_FIVE_ISLAND
+	call Topaze_EventScript_RecruiterCheck
 	end
 
 FiveIsland_PokemonCenter_1F_EventScript_Nurse::

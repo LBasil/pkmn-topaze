@@ -5,6 +5,7 @@ ThreeIsland_PokemonCenter_1F_MapScripts::
 
 ThreeIsland_PokemonCenter_1F_OnTransition::
 	setrespawn HEAL_LOCATION_THREE_ISLAND
+	call Topaze_EventScript_RecruiterCheck
 	end
 
 ThreeIsland_PokemonCenter_1F_EventScript_Nurse::

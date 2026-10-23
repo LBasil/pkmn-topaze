@@ -5,6 +5,7 @@ SaffronCity_PokemonCenter_1F_MapScripts::
 
 SaffronCity_PokemonCenter_1F_OnTransition::
 	setrespawn HEAL_LOCATION_SAFFRON_CITY
+	call Topaze_EventScript_RecruiterCheck
 	call_if_unset FLAG_HEMATEK_BOSS_DONE, SaffronCity_PokemonCenter_1F_EventScript_HideAllies
 	end
 

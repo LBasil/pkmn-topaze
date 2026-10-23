@@ -5,6 +5,7 @@ TwoIsland_PokemonCenter_1F_MapScripts::
 
 TwoIsland_PokemonCenter_1F_OnTransition::
 	setrespawn HEAL_LOCATION_TWO_ISLAND
+	call Topaze_EventScript_RecruiterCheck
 	end
 
 TwoIsland_PokemonCenter_1F_EventScript_Nurse::

@@ -298,6 +298,7 @@
 #define FLAG_0x111               0x111
 #define FLAG_TOPAZE_BRIEFING     FLAG_0x111 // scene des allies au Plateau apres le repaire
 #define FLAG_0x112               0x112
+#define FLAG_TOPAZE_HIDE_RECRUITER FLAG_0x112 // Topaze: recruteur Onybris cache dans les Centres
 #define FLAG_0x113               0x113
 #define FLAG_0x114               0x114
 #define FLAG_0x115               0x115

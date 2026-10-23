@@ -156,3 +156,98 @@ Topaze_News_Text_Quiet::
 	.string "groups, unsure what to believe.\p"
 	.string "The world waits to see what comes\n"
 	.string "next.$"
+
+@ --- Recruteur d'Onybris (Centres Pokemon) : visible de 4 badges jusqu'a la victoire sur le Champion.
+Topaze_EventScript_RecruiterCheck::
+	setflag FLAG_TOPAZE_HIDE_RECRUITER
+	goto_if_set FLAG_DEFEATED_CHAMP, Topaze_Recruiter_CheckEnd
+	goto_if_unset FLAG_BADGE04_GET, Topaze_Recruiter_CheckEnd
+	clearflag FLAG_TOPAZE_HIDE_RECRUITER
+Topaze_Recruiter_CheckEnd::
+	return
+
+Topaze_EventScript_Recruiter::
+	lock
+	faceplayer
+	goto_if_set FLAG_VR_BOSS_DONE, Topaze_Recruiter_T3
+	goto_if_set FLAG_BADGE06_GET, Topaze_Recruiter_T2
+	random 2
+	goto_if_eq VAR_RESULT, 0, Topaze_Recruiter_T1A
+	msgbox Topaze_Recruiter_Text_T1B, MSGBOX_DEFAULT
+	goto Topaze_Recruiter_End
+
+Topaze_Recruiter_T1A::
+	msgbox Topaze_Recruiter_Text_T1A, MSGBOX_DEFAULT
+	goto Topaze_Recruiter_End
+
+Topaze_Recruiter_T2::
+	random 2
+	goto_if_eq VAR_RESULT, 0, Topaze_Recruiter_T2A
+	msgbox Topaze_Recruiter_Text_T2B, MSGBOX_DEFAULT
+	goto Topaze_Recruiter_End
+
+Topaze_Recruiter_T2A::
+	msgbox Topaze_Recruiter_Text_T2A, MSGBOX_DEFAULT
+	goto Topaze_Recruiter_End
+
+Topaze_Recruiter_T3::
+	random 2
+	goto_if_eq VAR_RESULT, 0, Topaze_Recruiter_T3A
+	msgbox Topaze_Recruiter_Text_T3B, MSGBOX_DEFAULT
+	goto Topaze_Recruiter_End
+
+Topaze_Recruiter_T3A::
+	msgbox Topaze_Recruiter_Text_T3A, MSGBOX_DEFAULT
+	goto Topaze_Recruiter_End
+
+Topaze_Recruiter_End::
+	release
+	end
+
+Topaze_Recruiter_Text_T1A::
+	.string "RECRUIT: Relax. I am not here to\n"
+	.string "fight, only to talk.\p"
+	.string "I used to run a delivery route.\n"
+	.string "My POKéMON hauled crates fourteen\l"
+	.string "hours a day for nothing.\p"
+	.string "Then someone gave me a black\n"
+	.string "uniform and a reason.$"
+
+Topaze_Recruiter_Text_T1B::
+	.string "RECRUIT: There are people like me\n"
+	.string "in every town now. Quiet ones.\p"
+	.string "We do not steal. We listen, sign\n"
+	.string "people up, carry messages.\p"
+	.string "The ones who fight are GRUNTS.\n"
+	.string "Above them, EXECUTIVES. Above them,\l"
+	.string "someone nobody names.$"
+
+Topaze_Recruiter_Text_T2A::
+	.string "RECRUIT: Did you hear? HEMATOWN\n"
+	.string "fell without a single shout.\p"
+	.string "The guards clocked out and never\n"
+	.string "came back. That is how it works:\l"
+	.string "we do not break doors, we rewrite\l"
+	.string "the rules.\p"
+	.string "There are thousands of us.$"
+
+Topaze_Recruiter_Text_T2B::
+	.string "RECRUIT: Join us or do not. The\n"
+	.string "stones are leaving this region and\l"
+	.string "nobody can stop it.\p"
+	.string "I am not paid. I simply stopped\n"
+	.string "being afraid of the dark.$"
+
+Topaze_Recruiter_Text_T3A::
+	.string "RECRUIT: Ten stones, one hand.\n"
+	.string "We said it would happen.\p"
+	.string "Whatever the LEAGUE planned, it is\n"
+	.string "too late. I am only here to see\l"
+	.string "that the road stays clear for him.$"
+
+Topaze_Recruiter_Text_T3B::
+	.string "RECRUIT: I came to heal a POKéMON\n"
+	.string "that was never mine to begin with.\p"
+	.string "They told me: you will understand\n"
+	.string "in a few days.\p"
+	.string "I think I already do.$"

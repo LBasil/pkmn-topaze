@@ -5,6 +5,7 @@ VermilionCity_PokemonCenter_1F_MapScripts::
 
 VermilionCity_PokemonCenter_1F_OnTransition::
 	setrespawn HEAL_LOCATION_VERMILION_CITY
+	call Topaze_EventScript_RecruiterCheck
 	end
 
 VermilionCity_PokemonCenter_1F_EventScript_Nurse::

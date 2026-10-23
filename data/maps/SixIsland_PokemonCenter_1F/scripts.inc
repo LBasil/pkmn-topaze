@@ -6,6 +6,7 @@ SixIsland_PokemonCenter_1F_MapScripts::
 
 SixIsland_PokemonCenter_1F_OnTransition::
 	setrespawn HEAL_LOCATION_SIX_ISLAND
+	call Topaze_EventScript_RecruiterCheck
 	call_if_eq VAR_MAP_SCENE_SIX_ISLAND_POKEMON_CENTER_1F, 0, SixIsland_PokemonCenter_1F_EventScript_ShowRival
 	end
 

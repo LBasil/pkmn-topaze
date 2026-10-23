@@ -5,6 +5,7 @@ CeruleanCity_PokemonCenter_1F_MapScripts::
 
 CeruleanCity_PokemonCenter_1F_OnTransition::
 	setrespawn HEAL_LOCATION_CERULEAN_CITY
+	call Topaze_EventScript_RecruiterCheck
 	end
 
 CeruleanCity_PokemonCenter_1F_EventScript_Nurse::

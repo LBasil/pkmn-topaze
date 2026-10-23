@@ -5,6 +5,7 @@ CeladonCity_PokemonCenter_1F_MapScripts::
 
 CeladonCity_PokemonCenter_1F_OnTransition::
 	setrespawn HEAL_LOCATION_CELADON_CITY
+	call Topaze_EventScript_RecruiterCheck
 	end
 
 CeladonCity_PokemonCenter_1F_EventScript_Nurse::

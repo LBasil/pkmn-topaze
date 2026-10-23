@@ -5,6 +5,7 @@ CinnabarIsland_PokemonCenter_1F_MapScripts::
 
 CinnabarIsland_PokemonCenter_1F_OnTransition::
 	setrespawn HEAL_LOCATION_CINNABAR_ISLAND
+	call Topaze_EventScript_RecruiterCheck
 	end
 
 CinnabarIsland_PokemonCenter_1F_EventScript_Nurse::

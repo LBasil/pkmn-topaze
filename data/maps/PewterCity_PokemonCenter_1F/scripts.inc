@@ -5,6 +5,7 @@ PewterCity_PokemonCenter_1F_MapScripts::
 
 PewterCity_PokemonCenter_1F_OnTransition::
 	setrespawn HEAL_LOCATION_PEWTER_CITY
+	call Topaze_EventScript_RecruiterCheck
 	end
 
 PewterCity_PokemonCenter_1F_EventScript_Nurse::

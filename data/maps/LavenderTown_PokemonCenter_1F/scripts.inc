@@ -5,6 +5,7 @@ LavenderTown_PokemonCenter_1F_MapScripts::
 
 LavenderTown_PokemonCenter_1F_OnTransition::
 	setrespawn HEAL_LOCATION_LAVENDER_TOWN
+	call Topaze_EventScript_RecruiterCheck
 	end
 
 LavenderTown_PokemonCenter_1F_EventScript_Nurse::

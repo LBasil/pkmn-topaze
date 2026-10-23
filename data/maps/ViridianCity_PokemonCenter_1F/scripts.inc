@@ -5,6 +5,7 @@ ViridianCity_PokemonCenter_1F_MapScripts::
 
 ViridianCity_PokemonCenter_1F_OnTransition::
 	setrespawn HEAL_LOCATION_VIRIDIAN_CITY
+	call Topaze_EventScript_RecruiterCheck
 	end
 
 ViridianCity_PokemonCenter_1F_EventScript_Nurse::
