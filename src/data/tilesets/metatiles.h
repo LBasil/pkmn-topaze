@@ -460,3 +460,9 @@ const u32 gMetatileAttributes_GeneralEcho67[] = INCBIN_U32("data/tilesets/primar
 
 const u16 gMetatiles_SeviiEcho67[] = INCBIN_U16("data/tilesets/secondary/sevii_echo67/metatiles.bin");
 const u32 gMetatileAttributes_SeviiEcho67[] = INCBIN_U32("data/tilesets/secondary/sevii_echo67/metatile_attributes.bin");
+
+const u16 gMetatiles_GeneralDawn[] = INCBIN_U16("data/tilesets/primary/general_dawn/metatiles.bin");
+const u32 gMetatileAttributes_GeneralDawn[] = INCBIN_U32("data/tilesets/primary/general_dawn/metatile_attributes.bin");
+
+const u16 gMetatiles_IndigoDawn[] = INCBIN_U16("data/tilesets/secondary/indigo_dawn/metatiles.bin");
+const u32 gMetatileAttributes_IndigoDawn[] = INCBIN_U32("data/tilesets/secondary/indigo_dawn/metatile_attributes.bin");

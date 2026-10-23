@@ -1769,3 +1769,25 @@ const struct Tileset gTileset_SeviiEcho67 =
     .metatileAttributes = gMetatileAttributes_SeviiEcho67,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_GeneralDawn =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralDawn,
+    .palettes = gTilesetPalettes_GeneralDawn,
+    .metatiles = gMetatiles_GeneralDawn,
+    .metatileAttributes = gMetatileAttributes_GeneralDawn,
+    .callback = InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_IndigoDawn =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_IndigoDawn,
+    .palettes = gTilesetPalettes_IndigoDawn,
+    .metatiles = gMetatiles_IndigoDawn,
+    .metatileAttributes = gMetatileAttributes_IndigoDawn,
+    .callback = NULL,
+};
