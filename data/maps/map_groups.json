@@ -240,7 +240,9 @@
     "BirthIsland_Exterior",
     "OneIsland_KindleRoad_EmberSpa",
     "BirthIsland_Harbor",
-    "NavelRock_Harbor"
+    "NavelRock_Harbor",
+    "TwoIsland_CapeBrink_EmberDen",
+    "ThreeIsland_BondBridge_TideDen"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",

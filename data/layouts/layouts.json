@@ -4614,6 +4614,30 @@
       "secondary_tileset": "gTileset_MtEmber",
       "border_filepath": "data/layouts/OneIsland_KindleRoad_StormDen/border.bin",
       "blockdata_filepath": "data/layouts/OneIsland_KindleRoad_StormDen/map.bin"
+    },
+    {
+      "id": "LAYOUT_TWO_ISLAND_CAPE_BRINK_EMBER_DEN",
+      "name": "TwoIsland_CapeBrink_EmberDen_Layout",
+      "width": 31,
+      "height": 23,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MtEmber",
+      "border_filepath": "data/layouts/TwoIsland_CapeBrink_EmberDen/border.bin",
+      "blockdata_filepath": "data/layouts/TwoIsland_CapeBrink_EmberDen/map.bin"
+    },
+    {
+      "id": "LAYOUT_THREE_ISLAND_BOND_BRIDGE_TIDE_DEN",
+      "name": "ThreeIsland_BondBridge_TideDen_Layout",
+      "width": 32,
+      "height": 24,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_GeneralEcho6",
+      "secondary_tileset": "gTileset_SeviiRockStone",
+      "border_filepath": "data/layouts/ThreeIsland_BondBridge_TideDen/border.bin",
+      "blockdata_filepath": "data/layouts/ThreeIsland_BondBridge_TideDen/map.bin"
     }
   ]
 }

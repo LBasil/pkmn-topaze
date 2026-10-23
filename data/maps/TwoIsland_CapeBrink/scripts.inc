@@ -50,3 +50,16 @@ TwoIsland_CapeBrink_EventScript_RanFromEntei::
 	setvar VAR_0x8004, SPECIES_ENTEI
 	goto EventScript_MonFlewAway
 	end
+
+@ Topaze: la bouche de grotte (8,24) reste fermee tant que l'Echo n'est pas ouvert
+TwoIsland_CapeBrink_EventScript_DenLocked::
+	lockall
+	msgbox TwoIsland_CapeBrink_Text_DenLocked
+	applymovement LOCALID_PLAYER, TwoIsland_CapeBrink_Movement_DenBack
+	waitmovement 0
+	releaseall
+	end
+
+TwoIsland_CapeBrink_Movement_DenBack::
+	walk_down
+	step_end

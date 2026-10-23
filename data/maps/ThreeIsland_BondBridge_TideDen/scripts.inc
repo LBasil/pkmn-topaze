@@ -1,0 +1,71 @@
+ThreeIsland_BondBridge_TideDen_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, ThreeIsland_BondBridge_TideDen_OnTransition
+	.byte 0
+
+ThreeIsland_BondBridge_TideDen_OnTransition::
+	goto_if_set FLAG_ECHO_BEAST3_DONE, ThreeIsland_BondBridge_TideDen_EventScript_HideBeast
+	goto_if_ne VAR_ECHO_STAGE, 7, ThreeIsland_BondBridge_TideDen_EventScript_HideBeast
+	clearflag FLAG_HIDE_ECHO_BEAST3
+	end
+
+ThreeIsland_BondBridge_TideDen_EventScript_HideBeast::
+	setflag FLAG_HIDE_ECHO_BEAST3
+	end
+
+ThreeIsland_BondBridge_TideDen_EventScript_T0::
+	trainerbattle_single TRAINER_RS_TWINS, ThreeIsland_BondBridge_TideDen_Text_T0Intro, ThreeIsland_BondBridge_TideDen_Text_T0Defeat
+	msgbox ThreeIsland_BondBridge_TideDen_Text_T0Post, MSGBOX_AUTOCLOSE
+	end
+
+ThreeIsland_BondBridge_TideDen_EventScript_T1::
+	trainerbattle_single TRAINER_RS_YOUNG_COUPLE, ThreeIsland_BondBridge_TideDen_Text_T1Intro, ThreeIsland_BondBridge_TideDen_Text_T1Defeat
+	msgbox ThreeIsland_BondBridge_TideDen_Text_T1Post, MSGBOX_AUTOCLOSE
+	end
+
+ThreeIsland_BondBridge_TideDen_EventScript_T2::
+	trainerbattle_single TRAINER_RS_SIS_AND_BRO, ThreeIsland_BondBridge_TideDen_Text_T2Intro, ThreeIsland_BondBridge_TideDen_Text_T2Defeat
+	msgbox ThreeIsland_BondBridge_TideDen_Text_T2Post, MSGBOX_AUTOCLOSE
+	end
+
+ThreeIsland_BondBridge_TideDen_EventScript_T3::
+	trainerbattle_single TRAINER_RS_CHAMPION, ThreeIsland_BondBridge_TideDen_Text_T3Intro, ThreeIsland_BondBridge_TideDen_Text_T3Defeat
+	msgbox ThreeIsland_BondBridge_TideDen_Text_T3Post, MSGBOX_AUTOCLOSE
+	end
+
+ThreeIsland_BondBridge_TideDen_EventScript_Beast::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	setwildbattle SPECIES_SUICUNE, 0
+	waitse
+	playmoncry SPECIES_SUICUNE, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, ThreeIsland_BondBridge_TideDen_EventScript_DefeatedBeast
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, ThreeIsland_BondBridge_TideDen_EventScript_RanFromBeast
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, ThreeIsland_BondBridge_TideDen_EventScript_RanFromBeast
+	setflag FLAG_ECHO_BEAST3_DONE
+	setflag FLAG_HIDE_ECHO_BEAST3
+	setvar VAR_ECHO_STAGE, 8
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone3
+	end
+
+ThreeIsland_BondBridge_TideDen_EventScript_DefeatedBeast::
+	setflag FLAG_ECHO_BEAST3_DONE
+	setvar VAR_ECHO_STAGE, 8
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone3
+	end
+
+ThreeIsland_BondBridge_TideDen_EventScript_RanFromBeast::
+	setvar VAR_0x8004, SPECIES_SUICUNE
+	goto EventScript_MonFlewAway
+	end

@@ -99,3 +99,7 @@ ThreeIsland_BondBridge_Text_BondBridgeSign::
     .string "Please be quiet when crossing.\p"
     .string "BERRY FOREST AHEAD$"
 
+
+ThreeIsland_BondBridge_Text_DenLocked::
+    .string "Mist rolls out of the cave mouth.\n"
+    .string "The tide is not ready for you.$"

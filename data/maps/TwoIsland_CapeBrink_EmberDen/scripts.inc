@@ -1,0 +1,76 @@
+TwoIsland_CapeBrink_EmberDen_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, TwoIsland_CapeBrink_EmberDen_OnTransition
+	.byte 0
+
+TwoIsland_CapeBrink_EmberDen_OnTransition::
+	goto_if_set FLAG_ECHO_BEAST2_DONE, TwoIsland_CapeBrink_EmberDen_EventScript_HideBeast
+	goto_if_ne VAR_ECHO_STAGE, 4, TwoIsland_CapeBrink_EmberDen_EventScript_HideBeast
+	clearflag FLAG_HIDE_ECHO_BEAST2
+	end
+
+TwoIsland_CapeBrink_EmberDen_EventScript_HideBeast::
+	setflag FLAG_HIDE_ECHO_BEAST2
+	end
+
+TwoIsland_CapeBrink_EmberDen_EventScript_T0::
+	trainerbattle_single TRAINER_RS_FISHERMAN, TwoIsland_CapeBrink_EmberDen_Text_T0Intro, TwoIsland_CapeBrink_EmberDen_Text_T0Defeat
+	msgbox TwoIsland_CapeBrink_EmberDen_Text_T0Post, MSGBOX_AUTOCLOSE
+	end
+
+TwoIsland_CapeBrink_EmberDen_EventScript_T1::
+	trainerbattle_single TRAINER_RS_PICNICKER, TwoIsland_CapeBrink_EmberDen_Text_T1Intro, TwoIsland_CapeBrink_EmberDen_Text_T1Defeat
+	msgbox TwoIsland_CapeBrink_EmberDen_Text_T1Post, MSGBOX_AUTOCLOSE
+	end
+
+TwoIsland_CapeBrink_EmberDen_EventScript_T2::
+	trainerbattle_single TRAINER_RS_SAILOR, TwoIsland_CapeBrink_EmberDen_Text_T2Intro, TwoIsland_CapeBrink_EmberDen_Text_T2Defeat
+	msgbox TwoIsland_CapeBrink_EmberDen_Text_T2Post, MSGBOX_AUTOCLOSE
+	end
+
+TwoIsland_CapeBrink_EmberDen_EventScript_T3::
+	trainerbattle_single TRAINER_RS_PKMN_BREEDER_M, TwoIsland_CapeBrink_EmberDen_Text_T3Intro, TwoIsland_CapeBrink_EmberDen_Text_T3Defeat
+	msgbox TwoIsland_CapeBrink_EmberDen_Text_T3Post, MSGBOX_AUTOCLOSE
+	end
+
+TwoIsland_CapeBrink_EmberDen_EventScript_T4::
+	trainerbattle_single TRAINER_RS_PKMN_BREEDER_F, TwoIsland_CapeBrink_EmberDen_Text_T4Intro, TwoIsland_CapeBrink_EmberDen_Text_T4Defeat
+	msgbox TwoIsland_CapeBrink_EmberDen_Text_T4Post, MSGBOX_AUTOCLOSE
+	end
+
+TwoIsland_CapeBrink_EmberDen_EventScript_Beast::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	setwildbattle SPECIES_ENTEI, 0
+	waitse
+	playmoncry SPECIES_ENTEI, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, TwoIsland_CapeBrink_EmberDen_EventScript_DefeatedBeast
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, TwoIsland_CapeBrink_EmberDen_EventScript_RanFromBeast
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, TwoIsland_CapeBrink_EmberDen_EventScript_RanFromBeast
+	setflag FLAG_ECHO_BEAST2_DONE
+	setflag FLAG_HIDE_ECHO_BEAST2
+	setvar VAR_ECHO_STAGE, 5
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone2
+	end
+
+TwoIsland_CapeBrink_EmberDen_EventScript_DefeatedBeast::
+	setflag FLAG_ECHO_BEAST2_DONE
+	setvar VAR_ECHO_STAGE, 5
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone2
+	end
+
+TwoIsland_CapeBrink_EmberDen_EventScript_RanFromBeast::
+	setvar VAR_0x8004, SPECIES_ENTEI
+	goto EventScript_MonFlewAway
+	end

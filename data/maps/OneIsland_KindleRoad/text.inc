@@ -163,31 +163,11 @@ OneIsland_KindleRoad_Text_EmberSpaSign::
     .string "EMBER SPA$"
 
 
-OneIsland_KindleRoad_Text_EchoSpark1::
-    .string "A crackling spark of the ECHO!\p"
-    .string "It hums, then flies off down\n"
-    .string "the road. Follow it!$"
 
-OneIsland_KindleRoad_Text_EchoSpark2::
-    .string "The spark hisses. The storm\n"
-    .string "grows louder.\p"
-    .string "Something big is down there.$"
 
-OneIsland_KindleRoad_Text_EchoSpark3::
-    .string "The last spark bursts in a\n"
-    .string "flash of blue light!$"
 
-OneIsland_KindleRoad_Text_EchoSpark3b::
-    .string "The sparks gather in the south\n"
-    .string "cliff and sink into a CAVE.\p"
-    .string "Whatever hides inside keeps\n"
-    .string "the storm alive.$"
 
 OneIsland_KindleRoad_Text_DenLockedBill::
     .string "A cave mouth hums with static.\n"
     .string "Something forbids the way.$"
 
-OneIsland_KindleRoad_Text_DenLockedSparks::
-    .string "Static crawls over the rock.\n"
-    .string "The cave is not ready for you.\p"
-    .string "Follow the ECHO sparks first.$"

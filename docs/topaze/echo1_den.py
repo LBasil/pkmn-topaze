@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Echo 1 : Raikou vit dans le REPAIRE DE L'ORAGE (OneIsland_KindleRoad_StormDen), grotte cachee dans la falaise sud de la route Kindle,
-gardee par des acolytes electriques et une oracle. Les 3 etincelles de la route y menent. Copie de la carte MtEmber_RubyPath_B3F. Idempotent (marqueur)."""
+gardee par des acolytes electriques et une oracle. Copie de la carte MtEmber_RubyPath_B3F. Idempotent (marqueur)."""
 import json,re,sys,os,shutil,collections
 sys.path[:0]=['docs/topaze','tools/topaze/maps']
 rd=lambda p:open(p).read(); wr=lambda p,s:open(p,'w').write(s)

@@ -147,8 +147,12 @@ Avant : on parcourait les 3 étages et on était bloqué pile à la sortie. Main
 - `sevii_wild_levels.py` : sauvages = plancher − 5 (min plancher − 18), évolutions suivies ; Ledyba/Magby/Wooper non évolués pour rester obtenables.
 - Centre One Island : scientifique (Move Coach) à côté de l'infirmière (6,2), comme dans tous les Centres ; Bill dehors caché hors scène d'arrivée.
 
-## Écho 1 : parcours vers Raikou (23/10)
-`echo1_sparks.py` (Raikou change de refuge à chaque visite parmi 5 points de la route) : après Bill, 3 étincelles (sprite Voltorb) sur la route Kindle (11,61), (11,81), (11,101) ; chacune dit un texte et disparaît ; la 3e déclenche tonnerre et fait apparaître Raikou (12,120). Raikou n'est plus visible avant. Flags 0x130–0x135. À généraliser aux Échos 2–7 si Basil valide. Sprite de Raikou refait (recoloration d'Entei, provisoire).
+## Échos 1–3 : repaires gardés (23/10)
+Les trois chiens légendaires ne traînent plus dehors : chacun vit dans une grotte cachée dans une falaise, gardée par des acolytes (Channelers) et un Oracle. Pas d'étincelles (idée abandonnée).
+- **Raikou** : Repaire de l'Orage (`echo1_den.py`), bouche de grotte (6,124) sur la route Kindle, copie de Mt Brasier B3F, acolytes électriques 62–65 + Oracle (66–68), Raikou au fond. Fermé avant Bill.
+- **Entei** : Repaire de la Braise (`echo_dens.py`, carte `TwoIsland_CapeBrink_EmberDen`), bouche (8,24) du Cap Brink, copie de Mt Brasier B3F (chemin de 52 cases), 4 acolytes feu 62–67 + Oracle PYRE (6 Pokémon 66–68), Entei au fond (3,18). Fermé tant que `VAR_ECHO_STAGE` < 4 (message + recul).
+- **Suicune** : Repaire de la Marée (carte `ThreeIsland_BondBridge_TideDen`), bouche (58,5) du Pont du Lien, copie de la Grotte Altérée (chemin de 32 cases), 3 acolytes eau 63–66 + Oracle AURORA (6 Pokémon 66–68), Suicune au fond (8,2). Fermé tant que `VAR_ECHO_STAGE` < 7.
+- Les bêtes n'apparaissent plus dehors. Mêmes flags (`FLAG_HIDE_ECHO_BEAST*`, `FLAG_ECHO_BEAST*_DONE`), même suite (stage +1, appel du Centre).
+- Piège technique : un groupe de cartes ne peut pas dépasser 127 cartes (mapNum est signé et 127 est réservé) ; Dungeons est plein, les repaires 2 et 3 sont dans SpecialArea.
+- Sprite de Raikou : recoloration d'Entei avec palette dédiée (provisoire).
 
-## Écho 1 : le Repaire de l'Orage (23/10)
-`echo1_den.py` : Raikou n'est plus sur la route Kindle. Une bouche de grotte (6,124) dans la falaise sud (accès à pied depuis le bout de la route, ou en Surf) mène au Repaire de l'Orage (copie de Mt Brasier B3F, carte `OneIsland_KindleRoad_StormDen`). Fermée avant Bill et tant que les 3 étincelles ne sont pas faites. 4 acolytes (Channelers électriques niv. 62–65) + l'Oracle (6 Pokémon 66–68) gardent le chemin ; Raikou est au fond (3,4). Flags : FLAG_HIDE_ECHO_BEAST (réutilisé). Sprite de Raikou : recoloration d'Entei avec palette dédiée (provisoire).

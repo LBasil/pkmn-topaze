@@ -146,19 +146,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "EventScript_CutTree",
       "flag": "FLAG_CUT_TREE_31"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SUICUNE",
-      "x": 30,
-      "y": 10,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ThreeIsland_BondBridge_EventScript_Suicune",
-      "flag": "FLAG_HIDE_ECHO_BEAST3"
     }
   ],
   "warp_events": [
@@ -175,9 +162,80 @@
       "elevation": 3,
       "dest_map": "MAP_THREE_ISLAND_BERRY_FOREST",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 58,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_THREE_ISLAND_BOND_BRIDGE_TIDE_DEN",
+      "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 58,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "0",
+      "script": "ThreeIsland_BondBridge_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 58,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "1",
+      "script": "ThreeIsland_BondBridge_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 58,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "2",
+      "script": "ThreeIsland_BondBridge_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 58,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "3",
+      "script": "ThreeIsland_BondBridge_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 58,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "4",
+      "script": "ThreeIsland_BondBridge_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 58,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "5",
+      "script": "ThreeIsland_BondBridge_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 58,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "6",
+      "script": "ThreeIsland_BondBridge_EventScript_DenLocked"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

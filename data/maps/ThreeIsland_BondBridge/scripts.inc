@@ -58,3 +58,16 @@ ThreeIsland_BondBridge_EventScript_RanFromSuicune::
 	setvar VAR_0x8004, SPECIES_SUICUNE
 	goto EventScript_MonFlewAway
 	end
+
+@ Topaze: la bouche de grotte (58,5) reste fermee tant que l'Echo n'est pas ouvert
+ThreeIsland_BondBridge_EventScript_DenLocked::
+	lockall
+	msgbox ThreeIsland_BondBridge_Text_DenLocked
+	applymovement LOCALID_PLAYER, ThreeIsland_BondBridge_Movement_DenBack
+	waitmovement 0
+	releaseall
+	end
+
+ThreeIsland_BondBridge_Movement_DenBack::
+	walk_down
+	step_end
