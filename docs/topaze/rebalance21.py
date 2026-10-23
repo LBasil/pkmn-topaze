@@ -26,7 +26,7 @@ S('PokemonTower_3F PokemonTower_4F PokemonTower_5F PokemonTower_6F',4)
 S('VictoryRoad_1F VictoryRoad_2F VictoryRoad_3F VictoryRoadLair_1F VictoryRoadLair_2F',4)
 S('OneIsland_KindleRoad ThreeIsland_BondBridge MtEmber_Exterior OneIsland_TreasureBeach',6)
 # chefs d'arène / Conseil 4 / champion (parties nommées)
-PARTY={'LeaderKoga':7,'LeaderSabrina':8,'LeaderBlaine':6,'LeaderGiovanni':0,
+PARTY={'LeaderKoga':4,'LeaderSabrina':8,'LeaderBlaine':6,'LeaderGiovanni':0,
  'EliteFourLorelei':5,'EliteFourBruno':5,'EliteFourAgatha':5,'EliteFourLance':5,
  'ChampionFirstSquirtle':5,'ChampionFirstBulbasaur':5,'ChampionFirstCharmander':5,
  'EliteFourLorelei2':2,'EliteFourBruno2':2,'EliteFourAgatha2':2,'EliteFourLance2':2,
@@ -40,7 +40,6 @@ W('Route16 Route17 Route18 Route19 Route20 Route21_North Route21_South FuchsiaCi
 W('SeafoamIslands_1F SeafoamIslands_B1F SeafoamIslands_B2F SeafoamIslands_B3F SeafoamIslands_B4F CinnabarIsland PokemonMansion_1F PokemonMansion_2F PokemonMansion_3F PokemonMansion_B1F',6)
 W('PokemonTower_3F PokemonTower_4F PokemonTower_5F PokemonTower_6F PokemonTower_7F',11)
 W('RockTunnel_1F RockTunnel_B1F',18)
-W('Route22',38)
 NOEVO=('Leader','EliteFour','Champion')
 
 S_=''.join(open(f).read() for f in glob.glob('data/scripts/*.inc')+glob.glob('data/maps/*/scripts.inc'))
