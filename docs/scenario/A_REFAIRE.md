@@ -186,3 +186,8 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 ## Bug ROM corrigé via le run joueur réel (24/10)
 - **Piège de Roc = blocage total du jeu** : `TopazeRockDamage` parcourait la table des types (372 octets) avec un index `u8` ; il bouclait à 256, le terminateur n'étant jamais atteint → boucle infinie dès qu'un Pokémon entre en combat sur un terrain avec Piège de Roc. Corrigé (`u16`). Trouvé en lisant le PC de l'émulateur dans la sauvegarde figée.
 - Autres trouvailles du run réel : Entrave bloquait le bot (attaque refusée), arbre à couper devant l'arène d'Apatia (bot), entraînement d'équipe insuffisant à Azuria (bot).
+
+## Fin de la run joueur réel (24/10) — voir `RAPPORT_RUN_JOUEUR_REEL.md`
+- Run complète jusqu'au post-game ; **réserves** : Champion non battu proprement (Dracolosse 64), Échos bloqués au stade 21/22, scène finale du repaire Bourg Quartz non jouée, tournoi figé au tour 9.
+- Bugs du bot corrigés (hors ROM) : oubli d'attaque toujours slot 0 (56 blanc-outs Route 17), évolutions par pierre, rochers Force poussés (positions périmées), budget de poussées, trajet long de la Route du Tison.
+- À refaire côté jeu : difficulté Azuria (18 défaites), Sulfura trop dur pour niv. ~66 ; Échos 21→22 à vérifier à la main.
