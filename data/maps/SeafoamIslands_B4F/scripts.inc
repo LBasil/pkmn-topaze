@@ -173,6 +173,9 @@ SeafoamIslands_B4F_EventScript_Articuno::
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SeafoamIslands_B4F_EventScript_RanFromArticuno
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SeafoamIslands_B4F_EventScript_RanFromArticuno
 	setflag FLAG_FOUGHT_ARTICUNO
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	release
 	end
 
@@ -298,6 +301,9 @@ SeafoamIslands_B4F_EventScript_Titan::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SeafoamIslands_B4F_EventScript_TitanRan
 	setflag FLAG_FOUGHT_TITAN_KYOGRE
 	setflag FLAG_HIDE_TITAN_KYOGRE
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	release
 	end
 

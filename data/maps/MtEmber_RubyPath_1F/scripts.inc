@@ -35,6 +35,9 @@ MtEmber_RubyPath_1F_EventScript_Titan::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, MtEmber_RubyPath_1F_EventScript_TitanRan
 	setflag FLAG_FOUGHT_TITAN_GROUDON
 	setflag FLAG_HIDE_TITAN_GROUDON
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	release
 	end
 

@@ -42,6 +42,9 @@ CeladonCity_EventScript_Articuno::
 	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, CeladonCity_EventScript_RanFromArticuno
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, CeladonCity_EventScript_RanFromArticuno
 	setflag FLAG_FOUGHT_ARTICUNO
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	release
 	end
 

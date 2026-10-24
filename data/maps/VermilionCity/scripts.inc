@@ -60,6 +60,9 @@ VermilionCity_EventScript_MewTruck::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, VermilionCity_EventScript_RanFromMew
 	setflag FLAG_FOUGHT_MEW_TRUCK
 	setflag FLAG_HIDE_MEW_TRUCK
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	release
 	end
 

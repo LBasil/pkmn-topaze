@@ -216,6 +216,9 @@ IndigoPlateau_Exterior_EventScript_Titan::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, IndigoPlateau_Exterior_EventScript_TitanRan
 	setflag FLAG_FOUGHT_TITAN_RAYQUAZA
 	setflag FLAG_HIDE_TITAN_RAYQUAZA
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	release
 	end
 

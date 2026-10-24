@@ -93,6 +93,9 @@ SevenIsland_SevaultCanyon_EventScript_Kyogre::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SevenIsland_SevaultCanyon_EventScript_RanFromKyogre
 	setflag FLAG_DONE_ECHO_KYOGRE
 	setflag FLAG_HIDE_ECHO_KYOGRE
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	release
 	end
 
@@ -131,6 +134,9 @@ SevenIsland_SevaultCanyon_EventScript_Groudon::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SevenIsland_SevaultCanyon_EventScript_RanFromGroudon
 	setflag FLAG_DONE_ECHO_GROUDON
 	setflag FLAG_HIDE_ECHO_GROUDON
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	release
 	end
 
@@ -169,6 +175,9 @@ SevenIsland_SevaultCanyon_EventScript_Rayquaza::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SevenIsland_SevaultCanyon_EventScript_RanFromRayquaza
 	setflag FLAG_DONE_ECHO_RAYQUAZA
 	setflag FLAG_HIDE_ECHO_RAYQUAZA
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	release
 	end
 
@@ -207,6 +216,9 @@ SevenIsland_SevaultCanyon_EventScript_Latias::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SevenIsland_SevaultCanyon_EventScript_RanFromLatias
 	setflag FLAG_DONE_ECHO_LATIAS
 	setflag FLAG_HIDE_ECHO_LATIAS
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	release
 	end
 
@@ -245,6 +257,9 @@ SevenIsland_SevaultCanyon_EventScript_Latios::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SevenIsland_SevaultCanyon_EventScript_RanFromLatios
 	setflag FLAG_DONE_ECHO_LATIOS
 	setflag FLAG_HIDE_ECHO_LATIOS
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	release
 	end
 
@@ -283,6 +298,9 @@ SevenIsland_SevaultCanyon_EventScript_Jirachi::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SevenIsland_SevaultCanyon_EventScript_RanFromJirachi
 	setflag FLAG_DONE_ECHO_JIRACHI
 	setflag FLAG_HIDE_ECHO_JIRACHI
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	release
 	end
 
