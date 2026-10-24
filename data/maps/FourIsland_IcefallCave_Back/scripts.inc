@@ -224,13 +224,16 @@ FourIsland_IcefallCave_Back_EventScript_Regice::
 	removeobject VAR_LAST_TALKED
 	fadescreen FADE_FROM_BLACK
 	setvar VAR_ECHO_STAGE, 11
-	release
+	goto FourIsland_IcefallCave_Back_EventScript_EchoCall4
 	end
 
 FourIsland_IcefallCave_Back_EventScript_DefeatedRegice::
 	setflag FLAG_ECHO_BEAST4_DONE
 	setvar VAR_ECHO_STAGE, 11
-	goto EventScript_RemoveStaticMon
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
+	goto FourIsland_IcefallCave_Back_EventScript_EchoCall4
 	end
 
 FourIsland_IcefallCave_Back_EventScript_RanFromRegice::
@@ -244,3 +247,15 @@ FourIsland_IcefallCave_Back_EventScript_EchoClearRockets::
 	setflag FLAG_HIDE_ICEFALL_CAVE_LORELEI
 	setvar VAR_MAP_SCENE_ICEFALL_CAVE_BACK, 2
 	return
+
+@ Topaze: the compass rings after Echo 4 (like the others), and points to Lorelei
+FourIsland_IcefallCave_Back_EventScript_EchoCall4::
+	msgbox FourIsland_IcefallCave_Back_Text_EchoCall4
+	release
+	end
+
+FourIsland_IcefallCave_Back_Text_EchoCall4::
+	.string "The COMPASS buzzes in your bag.\n"
+	.string "The ECHO is closed.\p"
+	.string "LORELEI is waiting for you at her\n"
+	.string "house, here on FOUR ISLAND.$"
