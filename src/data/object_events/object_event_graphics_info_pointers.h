@@ -142,6 +142,10 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Mewtwo;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Mew;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Entei;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Suicune;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regirock;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regice;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Registeel;
+
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Raikou;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Lugia;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoOh;
@@ -306,5 +310,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_DEOXYS_A]                 = &gObjectEventGraphicsInfo_DeoxysA,
     [OBJ_EVENT_GFX_DEOXYS_N]                 = &gObjectEventGraphicsInfo_DeoxysN,
     [OBJ_EVENT_GFX_TOPAZE_BLIP]              = &gObjectEventGraphicsInfo_TopazeBlip,
+    [OBJ_EVENT_GFX_REGIROCK]                 = &gObjectEventGraphicsInfo_Regirock,
+    [OBJ_EVENT_GFX_REGICE]                   = &gObjectEventGraphicsInfo_Regice,
+    [OBJ_EVENT_GFX_REGISTEEL]                = &gObjectEventGraphicsInfo_Registeel,
     [OBJ_EVENT_GFX_SS_ANNE]                  = &gObjectEventGraphicsInfo_SSAnne,
 };

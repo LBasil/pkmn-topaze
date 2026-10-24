@@ -472,6 +472,9 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_TOPAZE_RAIKOU               0x111F
 #define OBJ_EVENT_PAL_TAG_TOPAZE_ENTEI                0x1120
 #define OBJ_EVENT_PAL_TAG_TOPAZE_SUICUNE              0x1121
+#define OBJ_EVENT_PAL_TAG_TOPAZE_REGIROCK             0x1122
+#define OBJ_EVENT_PAL_TAG_TOPAZE_REGICE               0x1123
+#define OBJ_EVENT_PAL_TAG_TOPAZE_REGISTEEL            0x1124
 #define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -503,6 +506,9 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_TopazeRaikou,            OBJ_EVENT_PAL_TAG_TOPAZE_RAIKOU},
     {gObjectEventPal_TopazeEntei,             OBJ_EVENT_PAL_TAG_TOPAZE_ENTEI},
     {gObjectEventPal_TopazeSuicune,           OBJ_EVENT_PAL_TAG_TOPAZE_SUICUNE},
+    {gObjectEventPal_TopazeRegirock,          OBJ_EVENT_PAL_TAG_TOPAZE_REGIROCK},
+    {gObjectEventPal_TopazeRegice,            OBJ_EVENT_PAL_TAG_TOPAZE_REGICE},
+    {gObjectEventPal_TopazeRegisteel,         OBJ_EVENT_PAL_TAG_TOPAZE_REGISTEEL},
     {gObjectEventPal_SSAnne,                  OBJ_EVENT_PAL_TAG_SS_ANNE},
     {gObjectEventPal_Seagallop,               OBJ_EVENT_PAL_TAG_SEAGALLOP},
     {},

@@ -193,3 +193,4 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - À refaire côté jeu : difficulté Azuria (18 défaites), Sulfura trop dur pour niv. ~66 ; Échos 21→22 à vérifier à la main.
 - Scenes du Plateau (sbires, discours des allies, journal tele, recruteurs) : condition passee de FLAG_DEFEATED_CHAMP (remis a 0 apres le Hall of Fame) a FLAG_SYS_GAME_CLEAR (24/10). Bug signale par Basil : scene rejouee apres la fin.
 - Bêtes (Raikou/Entei/Suicune) : le sprite disparaît désormais aussi après une capture (removeobject avec fondu), pas seulement après KO (24/10).
+- Regirock/Regice/Registeel : vrais sprites overworld (réduction du sprite Pokédex à ~22 px, palette exacte) à la place du rocher poussable ; 3 nouveaux OBJ_EVENT_GFX 153-155 (24/10).
