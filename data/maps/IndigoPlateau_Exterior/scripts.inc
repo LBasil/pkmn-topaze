@@ -239,7 +239,7 @@ IndigoPlateau_Exterior_Text_TitanIntro::
 IndigoPlateau_Exterior_EventScript_GruntsCheck::
 	setflag FLAG_TOPAZE_HIDE_PLATEAU_GRUNTS
 	goto_if_unset FLAG_VR_BOSS_DONE, IndigoPlateau_Exterior_GruntsEnd
-	goto_if_set FLAG_DEFEATED_CHAMP, IndigoPlateau_Exterior_GruntsEnd
+	goto_if_set FLAG_SYS_GAME_CLEAR, IndigoPlateau_Exterior_GruntsEnd
 	clearflag FLAG_TOPAZE_HIDE_PLATEAU_GRUNTS
 IndigoPlateau_Exterior_GruntsEnd::
 	return

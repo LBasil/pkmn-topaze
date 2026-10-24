@@ -18,7 +18,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_Briefing::
 	setvar VAR_TEMP_4, 1
 	goto_if_unset FLAG_VR_BOSS_DONE, EventScript_Return
 	goto_if_set FLAG_TOPAZE_BRIEFING, EventScript_Return
-	goto_if_set FLAG_DEFEATED_CHAMP, EventScript_Return
+	goto_if_set FLAG_SYS_GAME_CLEAR, EventScript_Return
 	lockall
 	textcolor NPC_TEXT_COLOR_MALE
 	applymovement LOCALID_PLAYER, Common_Movement_WalkUp
@@ -102,7 +102,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_Nurse::
 IndigoPlateau_PokemonCenter_1F_EventScript_Brice::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_CHAMP, IndigoPlateau_PokemonCenter_1F_EventScript_BriceAfter
+	goto_if_set FLAG_SYS_GAME_CLEAR, IndigoPlateau_PokemonCenter_1F_EventScript_BriceAfter
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_BriceBefore
 	release
 	end
@@ -115,7 +115,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_BriceAfter::
 IndigoPlateau_PokemonCenter_1F_EventScript_Flora::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_CHAMP, IndigoPlateau_PokemonCenter_1F_EventScript_FloraAfter
+	goto_if_set FLAG_SYS_GAME_CLEAR, IndigoPlateau_PokemonCenter_1F_EventScript_FloraAfter
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_FloraBefore
 	release
 	end
@@ -329,7 +329,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_RebelsFinal::
 IndigoPlateau_PokemonCenter_1F_EventScript_Misty::
 	lock
 	faceplayer
-	goto_if_set FLAG_DEFEATED_CHAMP, IndigoPlateau_PokemonCenter_1F_EventScript_MistyAfter
+	goto_if_set FLAG_SYS_GAME_CLEAR, IndigoPlateau_PokemonCenter_1F_EventScript_MistyAfter
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_MistyBefore
 	release
 	end

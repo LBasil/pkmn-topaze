@@ -4,7 +4,7 @@
 Topaze_EventScript_NewsTV::
 	lockall
 	msgbox Topaze_News_Text_TurnOn, MSGBOX_DEFAULT
-	goto_if_set FLAG_DEFEATED_CHAMP, Topaze_News_Quiet
+	goto_if_set FLAG_SYS_GAME_CLEAR, Topaze_News_Quiet
 	goto_if_set FLAG_VR_BOSS_DONE, Topaze_News_T5
 	goto_if_set FLAG_BADGE07_GET, Topaze_News_T4
 	goto_if_set FLAG_BADGE05_GET, Topaze_News_T3
@@ -160,7 +160,7 @@ Topaze_News_Text_Quiet::
 @ --- Recruteur d'Onybris (Centres Pokemon) : visible de 4 badges jusqu'a la victoire sur le Champion.
 Topaze_EventScript_RecruiterCheck::
 	setflag FLAG_TOPAZE_HIDE_RECRUITER
-	goto_if_set FLAG_DEFEATED_CHAMP, Topaze_Recruiter_CheckEnd
+	goto_if_set FLAG_SYS_GAME_CLEAR, Topaze_Recruiter_CheckEnd
 	goto_if_unset FLAG_BADGE04_GET, Topaze_Recruiter_CheckEnd
 	clearflag FLAG_TOPAZE_HIDE_RECRUITER
 Topaze_Recruiter_CheckEnd::

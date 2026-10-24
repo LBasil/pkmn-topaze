@@ -191,3 +191,4 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - Run complète jusqu'au post-game ; **réserves** : Champion non battu proprement (Dracolosse 64), Échos bloqués au stade 21/22, scène finale du repaire Bourg Quartz non jouée, tournoi figé au tour 9.
 - Bugs du bot corrigés (hors ROM) : oubli d'attaque toujours slot 0 (56 blanc-outs Route 17), évolutions par pierre, rochers Force poussés (positions périmées), budget de poussées, trajet long de la Route du Tison.
 - À refaire côté jeu : difficulté Azuria (18 défaites), Sulfura trop dur pour niv. ~66 ; Échos 21→22 à vérifier à la main.
+- Scenes du Plateau (sbires, discours des allies, journal tele, recruteurs) : condition passee de FLAG_DEFEATED_CHAMP (remis a 0 apres le Hall of Fame) a FLAG_SYS_GAME_CLEAR (24/10). Bug signale par Basil : scene rejouee apres la fin.
