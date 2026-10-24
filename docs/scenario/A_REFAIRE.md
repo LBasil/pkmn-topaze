@@ -198,3 +198,4 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - Écho 4 (Regice) : message de la boussole ajouté après capture/KO, renvoie chez Lorelei (île 4) (24/10).
 - Registeel déplacé de la mer (6,32) vers la terre (17,33) à Five Island Meadow (24/10).
 - Écho 5 (Registeel, Meadow île 5) : 4 gardiens + la GARDIENNE (acier/psy, niv. 66-72) sur le chemin, visibles seulement à l'étape 13 (même flag que Registeel). Trainers réaffectés : COOLTRAINER_PAUL/GILBERT/OWEN/BERKE/SHANNON. Générateur docs/topaze/echo5_guards.py (24/10). Regice et Regirock n'ont toujours aucun défi de ce type.
+- Typage : Kadabra et Alakazam passent Psy/Acier (la cuillère) (24/10). Abra reste Psy.
