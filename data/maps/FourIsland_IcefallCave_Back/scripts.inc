@@ -220,6 +220,9 @@ FourIsland_IcefallCave_Back_EventScript_Regice::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, FourIsland_IcefallCave_Back_EventScript_RanFromRegice
 	setflag FLAG_ECHO_BEAST4_DONE
 	setflag FLAG_HIDE_ECHO_BEAST4
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	setvar VAR_ECHO_STAGE, 11
 	release
 	end

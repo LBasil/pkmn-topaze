@@ -71,6 +71,9 @@ SixIsland_RuinValley_EventScript_Regirock::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SixIsland_RuinValley_EventScript_RanFromRegirock
 	setflag FLAG_ECHO_BEAST6_DONE
 	setflag FLAG_HIDE_ECHO_BEAST6
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	setvar VAR_ECHO_STAGE, 17
 	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone6
 	end
