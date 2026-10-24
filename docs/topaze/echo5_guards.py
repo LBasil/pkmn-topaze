@@ -24,8 +24,8 @@ GF=['OBJ_EVENT_GFX_CHANNELER','OBJ_EVENT_GFX_BLACK_BELT','OBJ_EVENT_GFX_CHANNELE
 s=rd(f'data/maps/{M}/scripts.inc')
 if f'{M}_EventScript_G0::' in s: print('already'); sys.exit()
 R.SURF=False; nv=R.Nav(M); nv.objs=set()
-path=[(12,27),(12,28),(12,29),(12,30),(12,31),(12,32),(13,32),(14,32),(15,32),(16,32),(17,32)]
-idx=[3,5,7,9,10]; idx=[2,4,6,8,10]
+path=[(12,29),(12,28),(12,27),(12,26),(12,25),(12,24),(12,23),(12,22),(13,22),(14,22)]  # cour fermee sous l'entrepot, seule entree : escalier (12,30)
+idx=[1,3,5,6,8]
 def face(i):
     a,b=path[i],path[i-1]; return {(0,1):'DOWN',(0,-1):'UP',(1,0):'RIGHT',(-1,0):'LEFT'}[(b[0]-a[0],b[1]-a[1])]
 trs=rd('src/data/trainers.h'); pa=rd('src/data/trainer_parties.h'); objs=[]; k=len(TR)
