@@ -176,3 +176,9 @@ Vrais bugs trouvés et corrigés dans la ROM :
 Ce qui n'est PAS un bug (limites du bot, documentées) : les gardes des légendaires (Articuno, Zapdos, Sulfura, antres d'Entei/Raikou) sont des dresseurs à battre avant le passage ; au sommet du Mont Brasier, le puzzle de rochers est solvable dans les deux sens (vérifié par recherche d'états hors émulateur).
 Limites connues du bot : Écho 10 (salle de la CS07 Cascade) non joué ; Force/boulders et courants du Volcan Écume simulés par flags ; combats de la Ligue joués en god mode.
 Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînement) : en cours, journal détaillé dans /tmp/gx/real_journal.jsonl (à résumer pour Basil).
+
+## Leçons sur le bot « joueur réel » (24/10)
+- Symptôme récurrent : le bot perd en arène parce que seule la tête d'équipe monte (XP). J'ai corrigé 3 fois la même famille (cible de grind = meneur, zone inaccessible, rotation).
+- Règle : avant de patcher, lire le journal (`real_journal.jsonl`) et chiffrer l'écart (niveaux équipe vs adversaires, tours, statuts) ; un seul correctif structurel (niveau d'équipe + rotation + zones accessibles) puis ne plus toucher tant que les données ne montrent pas une autre cause.
+- Ne pas relancer le run à chaque micro-correctif : chaque relance rejoue ~30 min d'entraînement depuis la sauvegarde d'étape.
+- Piste restante si Azuria échoue encore : gestion des statuts (Poudre Dodo/Para-spore) – Anti-Sommeil/Antidote, et choix du Pokémon Feu en tête.
