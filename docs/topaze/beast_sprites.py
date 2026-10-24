@@ -7,14 +7,17 @@ R = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..') + '/'
 TRANSP = (115, 197, 164)
 
 OUT = (28, 24, 40)        # contour sombre
-FIT = 22                  # taille max de la bete dans le cadre de 32x32 (style des oiseaux / Pokemon du ranch : compact, aplats, contour)
+FIT = 28                  # taille max de la bete dans le cadre de 32x32 (style des oiseaux / Pokemon du ranch : compact, aplats, contour)
 
-def build(name, ncol=9):
+def build(name, ncol=13):
     fr = Image.open(R + f'graphics/pokemon/{name}/front.png').convert('RGBA')
     bb = fr.getbbox(); fr = fr.crop(bb)
     w, h = fr.size; sc = FIT / max(w, h); nw, nh = max(1, round(w * sc)), max(1, round(h * sc))
     # reduction par moyenne ponderee par l'alpha
+    from PIL import ImageEnhance, ImageFilter
     big = fr.resize((nw * 4, nh * 4), Image.LANCZOS)
+    rgb = big.convert('RGB').filter(ImageFilter.UnsharpMask(radius=2, percent=180, threshold=2)); rgb = ImageEnhance.Contrast(rgb).enhance(1.25); rgb = ImageEnhance.Color(rgb).enhance(1.15)
+    big = Image.merge('RGBA', (*rgb.split(), big.split()[3]))
     sm = Image.new('RGBA', (nw, nh)); sp = sm.load(); bp = big.load()
     for y in range(nh):
         for x in range(nw):
