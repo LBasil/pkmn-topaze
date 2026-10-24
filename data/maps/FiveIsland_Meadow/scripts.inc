@@ -99,3 +99,28 @@ FiveIsland_Meadow_EventScript_RanFromRegisteel::
 	setvar VAR_0x8004, SPECIES_REGISTEEL
 	goto EventScript_MonFlewAway
 	end
+
+FiveIsland_Meadow_EventScript_G0::
+	trainerbattle_single TRAINER_COOLTRAINER_PAUL, FiveIsland_Meadow_Text_G0Intro, FiveIsland_Meadow_Text_G0Defeat
+	msgbox FiveIsland_Meadow_Text_G0Post, MSGBOX_AUTOCLOSE
+	end
+
+FiveIsland_Meadow_EventScript_G1::
+	trainerbattle_single TRAINER_COOLTRAINER_GILBERT, FiveIsland_Meadow_Text_G1Intro, FiveIsland_Meadow_Text_G1Defeat
+	msgbox FiveIsland_Meadow_Text_G1Post, MSGBOX_AUTOCLOSE
+	end
+
+FiveIsland_Meadow_EventScript_G2::
+	trainerbattle_single TRAINER_COOLTRAINER_OWEN, FiveIsland_Meadow_Text_G2Intro, FiveIsland_Meadow_Text_G2Defeat
+	msgbox FiveIsland_Meadow_Text_G2Post, MSGBOX_AUTOCLOSE
+	end
+
+FiveIsland_Meadow_EventScript_G3::
+	trainerbattle_single TRAINER_COOLTRAINER_BERKE, FiveIsland_Meadow_Text_G3Intro, FiveIsland_Meadow_Text_G3Defeat
+	msgbox FiveIsland_Meadow_Text_G3Post, MSGBOX_AUTOCLOSE
+	end
+
+FiveIsland_Meadow_EventScript_G4::
+	trainerbattle_single TRAINER_COOLTRAINER_SHANNON, FiveIsland_Meadow_Text_G4Intro, FiveIsland_Meadow_Text_G4Defeat
+	msgbox FiveIsland_Meadow_Text_G4Post, MSGBOX_AUTOCLOSE
+	end
