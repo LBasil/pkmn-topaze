@@ -169,5 +169,7 @@ OneIsland_KindleRoad_Text_EmberSpaSign::
 
 OneIsland_KindleRoad_Text_DenLockedBill::
     .string "A cave mouth hums with static.\n"
-    .string "Something forbids the way.$"
+    .string "Something forbids the way.\p"
+    .string "Maybe BILL, at the POKéMON CENTER\n"
+    .string "on this island, knows more.$"
 

@@ -42,14 +42,16 @@ Text_ExplosionTaughtJP::
     .string "す　すごい　スリル！$"
 
 MtEmber_Exterior_Text_WellTryDiggingHere::
-    .string "Over here.\n"
-    .string "We'll try digging here.\p"
-    .string "That treasure the ADMINS've been\n"
-    .string "talking about should be here.$"
+    .string "…and the boss said it again.\n"
+    .string "Our job on this mountain is for\l"
+    .string "later.\p"
+    .string "Nobody touches the ruby cave until\n"
+    .string "the signal comes.$"
 
 MtEmber_Exterior_Text_YoureInTheWayGetLost::
-    .string "What the…?\n"
-    .string "You're in the way. Get lost.$"
+    .string "Hm? Shh! You didn't hear that.\p"
+    .string "Our work here comes later.\n"
+    .string "Come back another time.$"
 
 MtEmber_Exterior_Text_PunchedThroughAtLast::
     .string "Whew, punched through at last.\n"
