@@ -5083,7 +5083,8 @@ static u16 TopazeRockDamage(u8 battler)
 {
     const u8 *t = gTypeEffectiveness;
     u32 mul = 10;
-    u8 i, t1 = gBattleMons[battler].type1, t2 = gBattleMons[battler].type2;
+    u16 i;
+    u8 t1 = gBattleMons[battler].type1, t2 = gBattleMons[battler].type2;
     u32 dmg;
 
     for (i = 0; t[i] != 0xFF && t[i] != 0xFE; i += 3)
