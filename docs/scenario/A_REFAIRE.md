@@ -182,3 +182,7 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - Règle : avant de patcher, lire le journal (`real_journal.jsonl`) et chiffrer l'écart (niveaux équipe vs adversaires, tours, statuts) ; un seul correctif structurel (niveau d'équipe + rotation + zones accessibles) puis ne plus toucher tant que les données ne montrent pas une autre cause.
 - Ne pas relancer le run à chaque micro-correctif : chaque relance rejoue ~30 min d'entraînement depuis la sauvegarde d'étape.
 - Piste restante si Azuria échoue encore : gestion des statuts (Poudre Dodo/Para-spore) – Anti-Sommeil/Antidote, et choix du Pokémon Feu en tête.
+
+## Bug ROM corrigé via le run joueur réel (24/10)
+- **Piège de Roc = blocage total du jeu** : `TopazeRockDamage` parcourait la table des types (372 octets) avec un index `u8` ; il bouclait à 256, le terminateur n'étant jamais atteint → boucle infinie dès qu'un Pokémon entre en combat sur un terrain avec Piège de Roc. Corrigé (`u16`). Trouvé en lisant le PC de l'émulateur dans la sauvegarde figée.
+- Autres trouvailles du run réel : Entrave bloquait le bot (attaque refusée), arbre à couper devant l'arène d'Apatia (bot), entraînement d'équipe insuffisant à Azuria (bot).
