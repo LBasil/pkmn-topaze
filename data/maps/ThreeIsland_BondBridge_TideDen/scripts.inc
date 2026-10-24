@@ -84,6 +84,9 @@ ThreeIsland_BondBridge_TideDen_EventScript_Beast::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, ThreeIsland_BondBridge_TideDen_EventScript_RanFromBeast
 	setflag FLAG_ECHO_BEAST3_DONE
 	setflag FLAG_HIDE_ECHO_BEAST3
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	setvar VAR_ECHO_STAGE, 8
 	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone3
 	end

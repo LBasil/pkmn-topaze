@@ -98,6 +98,9 @@ OneIsland_KindleRoad_StormDen_EventScript_Raikou::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, OneIsland_KindleRoad_StormDen_EventScript_RanFromRaikou
 	setflag FLAG_ECHO_BEAST_DONE
 	setflag FLAG_HIDE_ECHO_BEAST
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	setvar VAR_ECHO_STAGE, 2
 	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone1
 	end
