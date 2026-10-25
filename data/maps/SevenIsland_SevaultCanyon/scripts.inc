@@ -9,11 +9,6 @@ SevenIsland_SevaultCanyon_EventScript_RouteSign::
 @ Topaze: Echo 7 finale: keeper of time + gathered legends (static, stay if fled)
 SevenIsland_SevaultCanyon_OnTransition::
 	setflag FLAG_HIDE_ECHO_SCENE
-	setflag FLAG_TEMP_11
-	setflag FLAG_TEMP_14
-	setflag FLAG_TEMP_1E
-	setflag FLAG_TEMP_1F
-	call_if_eq VAR_ECHO_STAGE, 22, SevenIsland_SevaultCanyon_EventScript_ShowWardens
 	setflag FLAG_TEMP_18
 	setflag FLAG_TEMP_19
 	setflag FLAG_TEMP_1A
@@ -111,6 +106,10 @@ SevenIsland_SevaultCanyon_EventScript_Kyogre::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
+	goto_if_not_defeated TRAINER_COOLTRAINER_BROOKE, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_COOLTRAINER_AUSTINA, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_COOLTRAINER_JULIE, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_SUPER_NERD_2, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
 	setwildbattle SPECIES_KYOGRE, 0
 	waitse
 	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
@@ -152,6 +151,10 @@ SevenIsland_SevaultCanyon_EventScript_Groudon::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
+	goto_if_not_defeated TRAINER_COOLTRAINER_BROOKE, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_COOLTRAINER_AUSTINA, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_COOLTRAINER_JULIE, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_SUPER_NERD_2, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
 	setwildbattle SPECIES_GROUDON, 0
 	waitse
 	playmoncry SPECIES_GROUDON, CRY_MODE_ENCOUNTER
@@ -193,6 +196,10 @@ SevenIsland_SevaultCanyon_EventScript_Rayquaza::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
+	goto_if_not_defeated TRAINER_COOLTRAINER_BROOKE, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_COOLTRAINER_AUSTINA, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_COOLTRAINER_JULIE, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_SUPER_NERD_2, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
 	setwildbattle SPECIES_RAYQUAZA, 0
 	waitse
 	playmoncry SPECIES_RAYQUAZA, CRY_MODE_ENCOUNTER
@@ -234,6 +241,10 @@ SevenIsland_SevaultCanyon_EventScript_Latias::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
+	goto_if_not_defeated TRAINER_COOLTRAINER_BROOKE, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_COOLTRAINER_AUSTINA, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_COOLTRAINER_JULIE, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_SUPER_NERD_2, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
 	setwildbattle SPECIES_LATIAS, 0
 	waitse
 	playmoncry SPECIES_LATIAS, CRY_MODE_ENCOUNTER
@@ -275,6 +286,10 @@ SevenIsland_SevaultCanyon_EventScript_Latios::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
+	goto_if_not_defeated TRAINER_COOLTRAINER_BROOKE, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_COOLTRAINER_AUSTINA, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_COOLTRAINER_JULIE, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_SUPER_NERD_2, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
 	setwildbattle SPECIES_LATIOS, 0
 	waitse
 	playmoncry SPECIES_LATIOS, CRY_MODE_ENCOUNTER
@@ -316,6 +331,10 @@ SevenIsland_SevaultCanyon_EventScript_Jirachi::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
+	goto_if_not_defeated TRAINER_COOLTRAINER_BROOKE, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_COOLTRAINER_AUSTINA, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_COOLTRAINER_JULIE, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_SUPER_NERD_2, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
 	setwildbattle SPECIES_JIRACHI, 0
 	waitse
 	playmoncry SPECIES_JIRACHI, CRY_MODE_ENCOUNTER
@@ -551,3 +570,16 @@ SevenIsland_SevaultCanyon_Warden2_Skip:
 	clearflag FLAG_TEMP_1F
 SevenIsland_SevaultCanyon_Warden3_Skip:
 	return
+
+@ Topaze: la bouche de grotte (11,3) reste fermee avant l'Echo final
+SevenIsland_SevaultCanyon_EventScript_GroveLocked::
+	lockall
+	msgbox SevenIsland_SevaultCanyon_Text_GroveLocked
+	applymovement LOCALID_PLAYER, SevenIsland_SevaultCanyon_Movement_GroveBack
+	waitmovement 0
+	releaseall
+	end
+
+SevenIsland_SevaultCanyon_Movement_GroveBack::
+	walk_down
+	step_end

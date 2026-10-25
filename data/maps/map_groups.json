@@ -244,7 +244,8 @@
     "TwoIsland_CapeBrink_EmberDen",
     "ThreeIsland_BondBridge_TideDen",
     "FiveIsland_Meadow_SteelDen",
-    "SixIsland_RuinValley_StoneDen"
+    "SixIsland_RuinValley_StoneDen",
+    "SevenIsland_SevaultCanyon_Grove"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",

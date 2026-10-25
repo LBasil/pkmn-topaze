@@ -268,7 +268,7 @@ SevenIsland_SevaultCanyon_Text_W0Defeat::
     .string "Ebbed...$"
 
 SevenIsland_SevaultCanyon_Text_W0Post::
-    .string "Left stair is open. Mind the top.$"
+    .string "The grove is open. Mind the top.$"
 
 SevenIsland_SevaultCanyon_Text_W1Intro::
     .string "Fire and earth sleep above.\n"
@@ -278,7 +278,7 @@ SevenIsland_SevaultCanyon_Text_W1Defeat::
     .string "Burnt out...$"
 
 SevenIsland_SevaultCanyon_Text_W1Post::
-    .string "The way is open.$"
+    .string "The way is open. Go on.$"
 
 SevenIsland_SevaultCanyon_Text_W2Intro::
     .string "The sky dragon dreams up there.\n"
@@ -301,3 +301,7 @@ SevenIsland_SevaultCanyon_Text_W3Defeat::
 SevenIsland_SevaultCanyon_Text_W3Post::
     .string "Go. Be gentle with them.$"
 
+
+SevenIsland_SevaultCanyon_Text_GroveLocked::
+    .string "A mossy cave mouth. The air within\n"
+    .string "hums. It is not time yet.$"

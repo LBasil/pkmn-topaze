@@ -320,84 +320,6 @@
       "flag": "FLAG_HIDE_ECHO_CELEBI"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_KYOGRE",
-      "x": 10,
-      "y": 4,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "SevenIsland_SevaultCanyon_EventScript_Kyogre",
-      "flag": "FLAG_HIDE_ECHO_KYOGRE"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_GROUDON",
-      "x": 12,
-      "y": 4,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "SevenIsland_SevaultCanyon_EventScript_Groudon",
-      "flag": "FLAG_HIDE_ECHO_GROUDON"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_RAYQUAZA",
-      "x": 14,
-      "y": 4,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "SevenIsland_SevaultCanyon_EventScript_Rayquaza",
-      "flag": "FLAG_HIDE_ECHO_RAYQUAZA"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_LATIAS",
-      "x": 16,
-      "y": 4,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "SevenIsland_SevaultCanyon_EventScript_Latias",
-      "flag": "FLAG_HIDE_ECHO_LATIAS"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_LATIOS",
-      "x": 11,
-      "y": 5,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "SevenIsland_SevaultCanyon_EventScript_Latios",
-      "flag": "FLAG_HIDE_ECHO_LATIOS"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_JIRACHI",
-      "x": 15,
-      "y": 5,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "SevenIsland_SevaultCanyon_EventScript_Jirachi",
-      "flag": "FLAG_HIDE_ECHO_JIRACHI"
-    },
-    {
       "elevation": 3,
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -508,62 +430,6 @@
       "trainer_sight_or_berry_tree_id": "4",
       "script": "SevenIsland_SevaultCanyon_EventScript_G4",
       "flag": "FLAG_TEMP_1D"
-    },
-    {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
-      "x": 9,
-      "y": 6,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "SevenIsland_SevaultCanyon_EventScript_W0",
-      "flag": "FLAG_TEMP_11"
-    },
-    {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
-      "x": 10,
-      "y": 6,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "SevenIsland_SevaultCanyon_EventScript_W1",
-      "flag": "FLAG_TEMP_14"
-    },
-    {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
-      "x": 17,
-      "y": 6,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "SevenIsland_SevaultCanyon_EventScript_W2",
-      "flag": "FLAG_TEMP_1E"
-    },
-    {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
-      "x": 18,
-      "y": 6,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "SevenIsland_SevaultCanyon_EventScript_W3",
-      "flag": "FLAG_TEMP_1F"
     }
   ],
   "warp_events": [
@@ -579,6 +445,13 @@
       "y": 61,
       "elevation": 0,
       "dest_map": "MAP_SEVEN_ISLAND_SEVAULT_CANYON_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 3,
+      "elevation": 3,
+      "dest_map": "MAP_SEVEN_ISLAND_SEVAULT_CANYON_GROVE",
       "dest_warp_id": "0"
     }
   ],
@@ -600,6 +473,204 @@
       "var": "VAR_ECHO_STAGE",
       "var_value": "21",
       "script": "SevenIsland_SevaultCanyon_EventScript_EchoScene"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "0",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "1",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "2",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "3",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "4",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "5",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "6",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "7",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "8",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "9",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "10",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "11",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "12",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "13",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "14",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "15",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "16",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "17",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "18",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "19",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "20",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 3,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "21",
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
     }
   ],
   "bg_events": [
