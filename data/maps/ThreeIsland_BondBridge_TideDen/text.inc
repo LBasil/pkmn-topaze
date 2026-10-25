@@ -39,3 +39,7 @@ ThreeIsland_BondBridge_TideDen_Text_T3Defeat::
 
 ThreeIsland_BondBridge_TideDen_Text_T3Post::
     .string "Go. Treat the sea kindly.$"
+
+ThreeIsland_BondBridge_TideDen_Text_GuardsLeft::
+    .string "The beast does not stir.\n"
+    .string "Its guardians still stand watch.$"

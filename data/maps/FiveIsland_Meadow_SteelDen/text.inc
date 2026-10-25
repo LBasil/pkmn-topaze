@@ -49,3 +49,7 @@ FiveIsland_Meadow_SteelDen_Text_T4Defeat::
 
 FiveIsland_Meadow_SteelDen_Text_T4Post::
     .string "Go. Do not let it rust.$"
+
+FiveIsland_Meadow_SteelDen_Text_GuardsLeft::
+    .string "The beast does not stir.\n"
+    .string "Its guardians still stand watch.$"

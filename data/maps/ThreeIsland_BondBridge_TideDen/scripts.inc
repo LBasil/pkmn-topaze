@@ -69,6 +69,10 @@ ThreeIsland_BondBridge_TideDen_EventScript_Beast::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
+	goto_if_not_defeated TRAINER_RS_TWINS, ThreeIsland_BondBridge_TideDen_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_RS_YOUNG_COUPLE, ThreeIsland_BondBridge_TideDen_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_RS_SIS_AND_BRO, ThreeIsland_BondBridge_TideDen_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_RS_CHAMPION, ThreeIsland_BondBridge_TideDen_EventScript_GuardsLeft
 	setwildbattle SPECIES_SUICUNE, 0
 	waitse
 	playmoncry SPECIES_SUICUNE, CRY_MODE_ENCOUNTER
@@ -103,4 +107,9 @@ ThreeIsland_BondBridge_TideDen_EventScript_DefeatedBeast::
 ThreeIsland_BondBridge_TideDen_EventScript_RanFromBeast::
 	setvar VAR_0x8004, SPECIES_SUICUNE
 	goto EventScript_MonFlewAway
+	end
+
+ThreeIsland_BondBridge_TideDen_EventScript_GuardsLeft::
+	msgbox ThreeIsland_BondBridge_TideDen_Text_GuardsLeft, MSGBOX_DEFAULT
+	release
 	end

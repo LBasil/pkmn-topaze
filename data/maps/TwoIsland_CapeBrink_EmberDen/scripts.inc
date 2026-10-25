@@ -82,6 +82,11 @@ TwoIsland_CapeBrink_EmberDen_EventScript_Beast::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
+	goto_if_not_defeated TRAINER_RS_FISHERMAN, TwoIsland_CapeBrink_EmberDen_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_RS_PICNICKER, TwoIsland_CapeBrink_EmberDen_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_RS_SAILOR, TwoIsland_CapeBrink_EmberDen_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_RS_PKMN_BREEDER_M, TwoIsland_CapeBrink_EmberDen_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_RS_PKMN_BREEDER_F, TwoIsland_CapeBrink_EmberDen_EventScript_GuardsLeft
 	setwildbattle SPECIES_ENTEI, 0
 	waitse
 	playmoncry SPECIES_ENTEI, CRY_MODE_ENCOUNTER
@@ -116,4 +121,9 @@ TwoIsland_CapeBrink_EmberDen_EventScript_DefeatedBeast::
 TwoIsland_CapeBrink_EmberDen_EventScript_RanFromBeast::
 	setvar VAR_0x8004, SPECIES_ENTEI
 	goto EventScript_MonFlewAway
+	end
+
+TwoIsland_CapeBrink_EmberDen_EventScript_GuardsLeft::
+	msgbox TwoIsland_CapeBrink_EmberDen_Text_GuardsLeft, MSGBOX_DEFAULT
+	release
 	end

@@ -83,6 +83,11 @@ OneIsland_KindleRoad_StormDen_EventScript_Raikou::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
+	goto_if_not_defeated TRAINER_RS_PKMN_RANGER_M, OneIsland_KindleRoad_StormDen_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_RS_PKMN_RANGER_F, OneIsland_KindleRoad_StormDen_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_RS_BIRD_KEEPER, OneIsland_KindleRoad_StormDen_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_RS_SWIMMER_M, OneIsland_KindleRoad_StormDen_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_RS_SWIMMER_F, OneIsland_KindleRoad_StormDen_EventScript_GuardsLeft
 	setwildbattle SPECIES_RAIKOU, 0
 	waitse
 	playmoncry SPECIES_RAIKOU, CRY_MODE_ENCOUNTER
@@ -117,4 +122,9 @@ OneIsland_KindleRoad_StormDen_EventScript_DefeatedRaikou::
 OneIsland_KindleRoad_StormDen_EventScript_RanFromRaikou::
 	setvar VAR_0x8004, SPECIES_RAIKOU
 	goto EventScript_MonFlewAway
+	end
+
+OneIsland_KindleRoad_StormDen_EventScript_GuardsLeft::
+	msgbox OneIsland_KindleRoad_StormDen_Text_GuardsLeft, MSGBOX_DEFAULT
+	release
 	end

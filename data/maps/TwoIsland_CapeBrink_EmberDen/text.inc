@@ -49,3 +49,7 @@ TwoIsland_CapeBrink_EmberDen_Text_T4Defeat::
 
 TwoIsland_CapeBrink_EmberDen_Text_T4Post::
     .string "Go. Keep it burning.$"
+
+TwoIsland_CapeBrink_EmberDen_Text_GuardsLeft::
+    .string "The beast does not stir.\n"
+    .string "Its guardians still stand watch.$"

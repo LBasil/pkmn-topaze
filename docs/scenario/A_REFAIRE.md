@@ -203,3 +203,4 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - Écho 5 REFAIT comme les Bêtes (25/10) : Registeel vit dans un repaire (FiveIsland_Meadow_SteelDen, copie de Mt Ember Ruby Path B2F), bouche de grotte dans la falaise est de la prairie en (17,28), fermée tant que VAR_ECHO_STAGE < 13 ; 4 gardiens + la GARDIENNE (acier/psy, niv. 66-72) en file jusqu'à lui. Plus d'équipe devant l'entrepôt Onybris. Config ajoutée à docs/topaze/echo_dens.py.
 - Repaire de Registeel : les gardiens disparaissent une fois battus (removeobject + drapeau de dresseur utilisé comme flag de l'objet : pas de flag libre consommé) (25/10).
 - Repaire de Registeel : sortie unique (la 2e échelle en (13,9) supprimée et scellée) (25/10).
+- Repaires des 4 bêtes (Raikou, Entei, Suicune, Registeel) : impossible de contourner les gardiens — la bête refuse tant qu'un gardien n'est pas battu (« Its guardians still stand watch ») (25/10).

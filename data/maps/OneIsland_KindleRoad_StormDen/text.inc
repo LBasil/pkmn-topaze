@@ -52,3 +52,7 @@ OneIsland_KindleRoad_StormDen_Text_OracleDefeat::
 OneIsland_KindleRoad_StormDen_Text_OraclePost::
     .string "Go. But treat it as the storm\n"
     .string "treats us: with respect.$"
+
+OneIsland_KindleRoad_StormDen_Text_GuardsLeft::
+    .string "The beast does not stir.\n"
+    .string "Its guardians still stand watch.$"

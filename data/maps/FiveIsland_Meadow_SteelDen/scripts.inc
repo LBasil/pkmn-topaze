@@ -77,6 +77,11 @@ FiveIsland_Meadow_SteelDen_EventScript_Beast::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
+	goto_if_not_defeated TRAINER_COOLTRAINER_PAUL, FiveIsland_Meadow_SteelDen_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_COOLTRAINER_GILBERT, FiveIsland_Meadow_SteelDen_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_COOLTRAINER_OWEN, FiveIsland_Meadow_SteelDen_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_COOLTRAINER_BERKE, FiveIsland_Meadow_SteelDen_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_COOLTRAINER_SHANNON, FiveIsland_Meadow_SteelDen_EventScript_GuardsLeft
 	setwildbattle SPECIES_REGISTEEL, 0
 	waitse
 	playmoncry SPECIES_REGISTEEL, CRY_MODE_ENCOUNTER
@@ -108,4 +113,9 @@ FiveIsland_Meadow_SteelDen_EventScript_DefeatedBeast::
 FiveIsland_Meadow_SteelDen_EventScript_RanFromBeast::
 	setvar VAR_0x8004, SPECIES_REGISTEEL
 	goto EventScript_MonFlewAway
+	end
+
+FiveIsland_Meadow_SteelDen_EventScript_GuardsLeft::
+	msgbox FiveIsland_Meadow_SteelDen_Text_GuardsLeft, MSGBOX_DEFAULT
+	release
 	end
