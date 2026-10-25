@@ -5,7 +5,7 @@
   "music": "MUS_SEVII_ROUTE",
   "region_map_section": "MAPSEC_SEVAULT_CANYON",
   "requires_flash": false,
-  "weather": "WEATHER_FOG_HORIZONTAL",
+  "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_ROUTE",
   "allow_cycling": true,
   "allow_escaping": false,
@@ -16,15 +16,15 @@
   "connections": null,
   "warp_events": [
     {
-      "x": 10,
-      "y": 26,
+      "x": 8,
+      "y": 42,
       "elevation": 3,
       "dest_map": "MAP_SEVEN_ISLAND_SEVAULT_CANYON",
       "dest_warp_id": "3"
     },
     {
       "x": 8,
-      "y": 3,
+      "y": 4,
       "elevation": 3,
       "dest_map": "MAP_SEVEN_ISLAND_SEVAULT_CANYON_GROVE",
       "dest_warp_id": "0"
@@ -48,204 +48,6 @@
       "var": "VAR_ECHO_STAGE",
       "var_value": "21",
       "script": "SevenIsland_SevaultCanyon_EventScript_EchoSceneB"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "0",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "1",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "2",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "3",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "4",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "5",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "6",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "7",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "8",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "9",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "10",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "11",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "12",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "13",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "14",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "15",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "16",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "17",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "18",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "19",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "20",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "21",
-      "script": "SevenIsland_SevaultCanyon_EventScript_SummitPassLocked"
     }
   ],
   "bg_events": [],
@@ -260,7 +62,7 @@
       "flag": "FLAG_HIDE_ECHO_SCENE",
       "local_id": "LOCALID_ECHO_SILVER",
       "graphics_id": "OBJ_EVENT_GFX_BLUE",
-      "x": 9,
+      "x": 6,
       "y": 6,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT"
     },
@@ -274,7 +76,7 @@
       "flag": "FLAG_HIDE_ECHO_SCENE",
       "local_id": "LOCALID_ECHO_GIOVANNI",
       "graphics_id": "OBJ_EVENT_GFX_GIOVANNI",
-      "x": 7,
+      "x": 4,
       "y": 6,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT"
     },
@@ -288,8 +90,8 @@
       "flag": "FLAG_HIDE_ECHO_SCENE",
       "local_id": "LOCALID_ECHO_RED",
       "graphics_id": "OBJ_EVENT_GFX_RED_NORMAL",
-      "x": 8,
-      "y": 5,
+      "x": 5,
+      "y": 4,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN"
     }
   ]

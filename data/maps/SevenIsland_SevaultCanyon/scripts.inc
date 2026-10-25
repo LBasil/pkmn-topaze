@@ -388,6 +388,8 @@ SevenIsland_SevaultCanyon_EventScript_EchoSceneB::
 	goto SevenIsland_SevaultCanyon_EventScript_EchoSceneCont
 
 SevenIsland_SevaultCanyon_EventScript_EchoSceneCont::
+	setweather WEATHER_FOG_HORIZONTAL
+	doweather
 	delay 30
 	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
 	waitmoncry
@@ -462,12 +464,16 @@ SevenIsland_SevaultCanyon_Movement_PlayerToScene::
 	walk_left
 	walk_left
 	walk_left
+	walk_left
+	walk_left
 	step_end
 
 SevenIsland_SevaultCanyon_Movement_PlayerToSceneB::
 	walk_up
 	walk_up
 	walk_up
+	walk_left
+	walk_left
 	walk_left
 	walk_left
 	walk_left

@@ -13,11 +13,13 @@ def clean(r):  # retire les bouches de grotte
     return [FACE if (v&0x3ff)==0xa9 else v for v in r]
 rows=[row(0),row(0),row(2),clean(row(3))]
 rows+= [row(4),row(5)]*3          # plateforme : y 4..9
-rows+= [clean(row(y)) for y in range(6,22)]   # montee : src 6..21 -> y 10..25
-rows+= [[FILL]*15,[FILL]*15]
+rows+= [clean(row(y)) for y in range(6,39)]   # montee : src 6..38 -> y 10..42
+rows+= [[FILL]*15,[FILL]*15,[FILL]*15]
 # bouche d'entree sous la case (10,25)
 mouth=(FACE&~0x3ff&~(3<<10))|0xa9
-rows[26][10]=mouth
+rows.insert(43,[FILL]*15) if False else None
+rows[43]=[FILL]*15; rows[43][8]=(g(14,39)&~0x3ff&~(3<<10)|0xa9)|(1<<10)
+rows[43][8]=(g(14,39)&~0x3ff)|0xa9|(1<<10)
 H=len(rows); print('H',H)
 data=b''.join(struct.pack('<H',v) for r in rows for v in r)
 os.makedirs('data/layouts/'+D,exist_ok=True); open('data/layouts/%s/map.bin'%D,'wb').write(data)
@@ -28,7 +30,7 @@ json.dump(lj,open('data/layouts/layouts.json','w'),indent=2); open('data/layouts
 M.render(new,'/tmp/gx/maps/summit2.png')
 import collections
 c=lambda x,y:(struct.unpack_from('<H',data,(y*15+x)*2)[0]>>10)&3
-st=(10,25); seen={st}; q=collections.deque([st])
+st=(8,42); seen={st}; q=collections.deque([st])
 while q:
     a=q.popleft()
     for dx,dy in((0,1),(0,-1),(1,0),(-1,0)):
