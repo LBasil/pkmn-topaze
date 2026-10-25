@@ -627,3 +627,11 @@ SevenIsland_SevaultCanyon_EventScript_SummitLocked::
 	waitmovement 0
 	releaseall
 	end
+
+SevenIsland_SevaultCanyon_EventScript_GroveHint::
+	lockall
+	msgbox SevenIsland_SevaultCanyon_Text_GroveHint
+	applymovement LOCALID_PLAYER, SevenIsland_SevaultCanyon_Movement_GroveBack
+	waitmovement 0
+	releaseall
+	end

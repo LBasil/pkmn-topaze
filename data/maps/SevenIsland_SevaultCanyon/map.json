@@ -971,7 +971,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "21",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_GroveHint"
     }
   ],
   "bg_events": [

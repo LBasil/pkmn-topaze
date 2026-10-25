@@ -317,3 +317,7 @@ SevenIsland_SevaultCanyon_Text_SummitLocked::
 SevenIsland_SevaultCanyon_Text_SceneEnd::
     .string "The sky falls silent. Far below,\n"
     .string "the GROVE has opened its mouth.$"
+
+SevenIsland_SevaultCanyon_Text_GroveHint::
+    .string "The GROVE is sealed. The ECHO\n"
+    .string "calls from the passage to the east.$"

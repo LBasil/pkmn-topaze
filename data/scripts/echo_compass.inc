@@ -218,5 +218,5 @@ EchoCompass_Text_20::
 
 EchoCompass_Text_21::
     .string "A strong signal on SEVEN ISLAND:\n"
-    .string "SEVAULT CANYON, far inside.$"
+    .string "SEVAULT CANYON, high on the cliffs.$"
 
