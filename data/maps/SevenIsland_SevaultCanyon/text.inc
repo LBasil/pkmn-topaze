@@ -204,3 +204,58 @@ SevenIsland_SevaultCanyon_Text_SceneRed2::
     .string "(He tips his cap to you and\n"
     .string "smiles for the very first time.)$"
 
+
+SevenIsland_SevaultCanyon_Text_G0Intro::
+    .string "The little guardian sleeps in the\n"
+    .string "grove. Not one step further.$"
+
+SevenIsland_SevaultCanyon_Text_G0Defeat::
+    .string "Wilted...$"
+
+SevenIsland_SevaultCanyon_Text_G0Post::
+    .string "The WARDEN waits at the top.$"
+
+SevenIsland_SevaultCanyon_Text_G1Intro::
+    .string "Time folds around it. We keep the\n"
+    .string "grove from folding with it.$"
+
+SevenIsland_SevaultCanyon_Text_G1Defeat::
+    .string "Pruned.$"
+
+SevenIsland_SevaultCanyon_Text_G1Post::
+    .string "Keep climbing. It gets greener.$"
+
+SevenIsland_SevaultCanyon_Text_G2Intro::
+    .string "No one should reach the top alone.$"
+
+SevenIsland_SevaultCanyon_Text_G2Defeat::
+    .string "Snapped.$"
+
+SevenIsland_SevaultCanyon_Text_G2Post::
+    .string "The WARDEN has felt you coming.$"
+
+SevenIsland_SevaultCanyon_Text_G3Intro::
+    .string "The forest spirit gave us shelter\n"
+    .string "when the sky turned. We stay.$"
+
+SevenIsland_SevaultCanyon_Text_G3Defeat::
+    .string "Uprooted.$"
+
+SevenIsland_SevaultCanyon_Text_G3Post::
+    .string "Almost there. Mind your pride.$"
+
+SevenIsland_SevaultCanyon_Text_G4Intro::
+    .string "I am the WARDEN of the GROVE.\n"
+    .string "The little one sleeps in my care.\p"
+    .string "Prove that your will is worth\n"
+    .string "more than my fear.$"
+
+SevenIsland_SevaultCanyon_Text_G4Defeat::
+    .string "...Then the grove has chosen you.$"
+
+SevenIsland_SevaultCanyon_Text_G4Post::
+    .string "Go. Let it sleep after.$"
+
+SevenIsland_SevaultCanyon_Text_GuardsLeft::
+    .string "The beast does not stir.\n"
+    .string "Its guardians still stand watch.$"

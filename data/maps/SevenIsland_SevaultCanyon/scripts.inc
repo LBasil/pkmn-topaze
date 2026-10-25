@@ -9,6 +9,11 @@ SevenIsland_SevaultCanyon_EventScript_RouteSign::
 @ Topaze: Echo 7 finale: keeper of time + gathered legends (static, stay if fled)
 SevenIsland_SevaultCanyon_OnTransition::
 	setflag FLAG_HIDE_ECHO_SCENE
+	setflag FLAG_TEMP_18
+	setflag FLAG_TEMP_19
+	setflag FLAG_TEMP_1A
+	setflag FLAG_TEMP_1C
+	setflag FLAG_TEMP_1D
 	setflag FLAG_HIDE_ECHO_CELEBI
 	call_if_unset FLAG_DONE_ECHO_CELEBI, SevenIsland_SevaultCanyon_EventScript_MaybeCelebi
 	setflag FLAG_HIDE_ECHO_KYOGRE
@@ -27,6 +32,21 @@ SevenIsland_SevaultCanyon_OnTransition::
 
 SevenIsland_SevaultCanyon_EventScript_MaybeCelebi::
 	goto_if_ne VAR_ECHO_STAGE, 19, EventScript_Return
+	goto_if_defeated TRAINER_BUG_CATCHER_2, SevenIsland_SevaultCanyon_Guard0_Skip
+	clearflag FLAG_TEMP_18
+SevenIsland_SevaultCanyon_Guard0_Skip:
+	goto_if_defeated TRAINER_BUG_CATCHER_5, SevenIsland_SevaultCanyon_Guard1_Skip
+	clearflag FLAG_TEMP_19
+SevenIsland_SevaultCanyon_Guard1_Skip:
+	goto_if_defeated TRAINER_BUG_CATCHER_6, SevenIsland_SevaultCanyon_Guard2_Skip
+	clearflag FLAG_TEMP_1A
+SevenIsland_SevaultCanyon_Guard2_Skip:
+	goto_if_defeated TRAINER_BUG_CATCHER_7, SevenIsland_SevaultCanyon_Guard3_Skip
+	clearflag FLAG_TEMP_1C
+SevenIsland_SevaultCanyon_Guard3_Skip:
+	goto_if_defeated TRAINER_BUG_CATCHER_8, SevenIsland_SevaultCanyon_Guard4_Skip
+	clearflag FLAG_TEMP_1D
+SevenIsland_SevaultCanyon_Guard4_Skip:
 	clearflag FLAG_HIDE_ECHO_CELEBI
 	return
 
@@ -35,6 +55,11 @@ SevenIsland_SevaultCanyon_EventScript_Celebi::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
+	goto_if_not_defeated TRAINER_BUG_CATCHER_2, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_BUG_CATCHER_5, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_BUG_CATCHER_6, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_BUG_CATCHER_7, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_BUG_CATCHER_8, SevenIsland_SevaultCanyon_EventScript_GuardsLeft
 	setwildbattle SPECIES_CELEBI, 0
 	waitse
 	playmoncry SPECIES_CELEBI, CRY_MODE_ENCOUNTER
@@ -393,3 +418,68 @@ SevenIsland_SevaultCanyon_Movement_GiovanniStepUp::
 	walk_right
 	walk_right
 	step_end
+
+SevenIsland_SevaultCanyon_EventScript_G0::
+	trainerbattle_single TRAINER_BUG_CATCHER_2, SevenIsland_SevaultCanyon_Text_G0Intro, SevenIsland_SevaultCanyon_Text_G0Defeat, SevenIsland_SevaultCanyon_EventScript_G0_Vanish
+	msgbox SevenIsland_SevaultCanyon_Text_G0Post, MSGBOX_AUTOCLOSE
+	end
+
+SevenIsland_SevaultCanyon_EventScript_G0_Vanish::
+	msgbox SevenIsland_SevaultCanyon_Text_G0Post, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
+SevenIsland_SevaultCanyon_EventScript_G1::
+	trainerbattle_single TRAINER_BUG_CATCHER_5, SevenIsland_SevaultCanyon_Text_G1Intro, SevenIsland_SevaultCanyon_Text_G1Defeat, SevenIsland_SevaultCanyon_EventScript_G1_Vanish
+	msgbox SevenIsland_SevaultCanyon_Text_G1Post, MSGBOX_AUTOCLOSE
+	end
+
+SevenIsland_SevaultCanyon_EventScript_G1_Vanish::
+	msgbox SevenIsland_SevaultCanyon_Text_G1Post, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
+SevenIsland_SevaultCanyon_EventScript_G2::
+	trainerbattle_single TRAINER_BUG_CATCHER_6, SevenIsland_SevaultCanyon_Text_G2Intro, SevenIsland_SevaultCanyon_Text_G2Defeat, SevenIsland_SevaultCanyon_EventScript_G2_Vanish
+	msgbox SevenIsland_SevaultCanyon_Text_G2Post, MSGBOX_AUTOCLOSE
+	end
+
+SevenIsland_SevaultCanyon_EventScript_G2_Vanish::
+	msgbox SevenIsland_SevaultCanyon_Text_G2Post, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
+SevenIsland_SevaultCanyon_EventScript_G3::
+	trainerbattle_single TRAINER_BUG_CATCHER_7, SevenIsland_SevaultCanyon_Text_G3Intro, SevenIsland_SevaultCanyon_Text_G3Defeat, SevenIsland_SevaultCanyon_EventScript_G3_Vanish
+	msgbox SevenIsland_SevaultCanyon_Text_G3Post, MSGBOX_AUTOCLOSE
+	end
+
+SevenIsland_SevaultCanyon_EventScript_G3_Vanish::
+	msgbox SevenIsland_SevaultCanyon_Text_G3Post, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
+SevenIsland_SevaultCanyon_EventScript_G4::
+	trainerbattle_single TRAINER_BUG_CATCHER_8, SevenIsland_SevaultCanyon_Text_G4Intro, SevenIsland_SevaultCanyon_Text_G4Defeat, SevenIsland_SevaultCanyon_EventScript_G4_Vanish
+	msgbox SevenIsland_SevaultCanyon_Text_G4Post, MSGBOX_AUTOCLOSE
+	end
+
+SevenIsland_SevaultCanyon_EventScript_G4_Vanish::
+	msgbox SevenIsland_SevaultCanyon_Text_G4Post, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
+SevenIsland_SevaultCanyon_EventScript_GuardsLeft::
+	msgbox SevenIsland_SevaultCanyon_Text_GuardsLeft, MSGBOX_DEFAULT
+	release
+	end
