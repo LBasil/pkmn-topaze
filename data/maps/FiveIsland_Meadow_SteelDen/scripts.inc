@@ -97,6 +97,9 @@ FiveIsland_Meadow_SteelDen_EventScript_Beast::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, FiveIsland_Meadow_SteelDen_EventScript_RanFromBeast
 	setflag FLAG_ECHO_BEAST5_DONE
 	setflag FLAG_HIDE_ECHO_BEAST5
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	setvar VAR_ECHO_STAGE, 14
 	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone5
 	end

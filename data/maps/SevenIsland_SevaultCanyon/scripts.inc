@@ -50,6 +50,9 @@ SevenIsland_SevaultCanyon_EventScript_Celebi::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SevenIsland_SevaultCanyon_EventScript_RanFromCelebi
 	setflag FLAG_DONE_ECHO_CELEBI
 	setflag FLAG_HIDE_ECHO_CELEBI
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	setvar VAR_ECHO_STAGE, 20
 	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone7
 	end

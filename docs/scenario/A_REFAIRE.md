@@ -204,3 +204,4 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - Repaire de Registeel : les gardiens disparaissent une fois battus (removeobject + drapeau de dresseur utilisé comme flag de l'objet : pas de flag libre consommé) (25/10).
 - Repaire de Registeel : sortie unique (la 2e échelle en (13,9) supprimée et scellée) (25/10).
 - Repaires des 4 bêtes (Raikou, Entei, Suicune, Registeel) : impossible de contourner les gardiens — la bête refuse tant qu'un gardien n'est pas battu (« Its guardians still stand watch ») (25/10).
+- Capture : le Pokémon disparaît aussi à Registeel (repaire), Celebi et les anciens scripts des Bêtes ; vérification automatique de tous les scripts de combat légendaire (plus aucun cas restant) (25/10).

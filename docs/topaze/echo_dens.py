@@ -195,6 +195,9 @@ for c in CFG:
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, {D}_EventScript_RanFromBeast
 	setflag {c['done']}
 	setflag {c['hide']}
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	setvar VAR_ECHO_STAGE, {c['after']}
 	goto {c['phone']}
 	end

@@ -33,6 +33,9 @@ TwoIsland_CapeBrink_EventScript_Entei::
 	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, TwoIsland_CapeBrink_EventScript_RanFromEntei
 	setflag FLAG_ECHO_BEAST2_DONE
 	setflag FLAG_HIDE_ECHO_BEAST2
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
 	setvar VAR_ECHO_STAGE, 5
 	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone2
 	end
