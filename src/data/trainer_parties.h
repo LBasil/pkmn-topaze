@@ -2643,32 +2643,32 @@ static const struct TrainerMonNoItemCustomMoves sParty_BikerLao[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Biker1[] = {
     {
         .iv = 60,
-        .lvl = 77,
+        .lvl = 82,
         .species = SPECIES_PIKACHU,
     },
     {
         .iv = 60,
-        .lvl = 74,
+        .lvl = 79,
         .species = SPECIES_ESPEON,
     },
     {
         .iv = 60,
-        .lvl = 75,
+        .lvl = 80,
         .species = SPECIES_SNORLAX,
     },
     {
         .iv = 60,
-        .lvl = 76,
+        .lvl = 81,
         .species = SPECIES_VENUSAUR,
     },
     {
         .iv = 60,
-        .lvl = 76,
+        .lvl = 81,
         .species = SPECIES_CHARIZARD,
     },
     {
         .iv = 60,
-        .lvl = 77,
+        .lvl = 82,
         .species = SPECIES_BLASTOISE,
     },
 };
@@ -8295,32 +8295,32 @@ static const struct TrainerMonNoItemDefaultMoves sParty_PlayerLeaf[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_EchoGiovanni[] = {
     {
         .iv = 255,
-        .lvl = 66,
+        .lvl = 72,
         .species = SPECIES_PERSIAN,
     },
     {
         .iv = 255,
-        .lvl = 66,
+        .lvl = 72,
         .species = SPECIES_DUGTRIO,
     },
     {
         .iv = 255,
-        .lvl = 68,
+        .lvl = 74,
         .species = SPECIES_NIDOKING,
     },
     {
         .iv = 255,
-        .lvl = 68,
+        .lvl = 74,
         .species = SPECIES_NIDOQUEEN,
     },
     {
         .iv = 255,
-        .lvl = 70,
+        .lvl = 76,
         .species = SPECIES_KANGASKHAN,
     },
     {
         .iv = 255,
-        .lvl = 72,
+        .lvl = 78,
         .species = SPECIES_RHYDON,
     },
 };
@@ -12908,32 +12908,32 @@ static const struct TrainerMonNoItemDefaultMoves sParty_ElderWallace[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_EchoSilver[] = {
     {
         .iv = 220,
-        .lvl = 68,
+        .lvl = 74,
         .species = SPECIES_SNEASEL,
     },
     {
         .iv = 220,
-        .lvl = 68,
+        .lvl = 74,
         .species = SPECIES_CROBAT,
     },
     {
         .iv = 220,
-        .lvl = 69,
+        .lvl = 75,
         .species = SPECIES_GENGAR,
     },
     {
         .iv = 220,
-        .lvl = 69,
+        .lvl = 75,
         .species = SPECIES_ALAKAZAM,
     },
     {
         .iv = 220,
-        .lvl = 70,
+        .lvl = 76,
         .species = SPECIES_MAGNETON,
     },
     {
         .iv = 220,
-        .lvl = 72,
+        .lvl = 78,
         .species = SPECIES_FERALIGATR,
     },
 };
