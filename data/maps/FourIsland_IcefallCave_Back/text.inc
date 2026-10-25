@@ -71,3 +71,57 @@ FourIsland_IcefallCave_Back_Text_ThankYouThisIsAwful::
     .string "I had no idea that those horrible\n"
     .string "criminals were loose here…$"
 
+
+FourIsland_IcefallCave_Back_Text_G0Intro::
+    .string "The cold keeps what it is given.$"
+
+FourIsland_IcefallCave_Back_Text_G0Defeat::
+    .string "Thawed...$"
+
+FourIsland_IcefallCave_Back_Text_G0Post::
+    .string "The WARDEN is further on.$"
+
+FourIsland_IcefallCave_Back_Text_G1Intro::
+    .string "The ancient one chills the air when\n"
+    .string "the sky cracks. We keep it calm.$"
+
+FourIsland_IcefallCave_Back_Text_G1Defeat::
+    .string "Cracked.$"
+
+FourIsland_IcefallCave_Back_Text_G1Post::
+    .string "Keep going. It only gets colder.$"
+
+FourIsland_IcefallCave_Back_Text_G2Intro::
+    .string "No one walks in alone anymore.$"
+
+FourIsland_IcefallCave_Back_Text_G2Defeat::
+    .string "Melted away.$"
+
+FourIsland_IcefallCave_Back_Text_G2Post::
+    .string "The WARDEN has felt you coming.$"
+
+FourIsland_IcefallCave_Back_Text_G3Intro::
+    .string "The beast gave us shelter when\n"
+    .string "the sky turned. We stay for it.$"
+
+FourIsland_IcefallCave_Back_Text_G3Defeat::
+    .string "The hail stops.$"
+
+FourIsland_IcefallCave_Back_Text_G3Post::
+    .string "Almost there. Mind your pride.$"
+
+FourIsland_IcefallCave_Back_Text_G4Intro::
+    .string "I am the WARDEN of the ICE.\n"
+    .string "The beast sleeps in my care.\p"
+    .string "Prove that your will is worth\n"
+    .string "more than my fear.$"
+
+FourIsland_IcefallCave_Back_Text_G4Defeat::
+    .string "...Then the ice has chosen you.$"
+
+FourIsland_IcefallCave_Back_Text_G4Post::
+    .string "Go. Do not let it melt.$"
+
+FourIsland_IcefallCave_Back_Text_GuardsLeft::
+    .string "The beast does not stir.\n"
+    .string "Its guardians still stand watch.$"

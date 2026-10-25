@@ -91,3 +91,16 @@ SixIsland_RuinValley_EventScript_RanFromRegirock::
 	setvar VAR_0x8004, SPECIES_REGIROCK
 	goto EventScript_MonFlewAway
 	end
+
+@ Topaze: la bouche de grotte (24,13) reste fermee tant que l'Echo n'est pas ouvert
+SixIsland_RuinValley_EventScript_DenLocked::
+	lockall
+	msgbox SixIsland_RuinValley_Text_DenLocked
+	applymovement LOCALID_PLAYER, SixIsland_RuinValley_Movement_DenBack
+	waitmovement 0
+	releaseall
+	end
+
+SixIsland_RuinValley_Movement_DenBack::
+	walk_down
+	step_end

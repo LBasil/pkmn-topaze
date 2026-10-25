@@ -4650,6 +4650,18 @@
       "secondary_tileset": "gTileset_MtEmber",
       "border_filepath": "data/layouts/FiveIsland_Meadow_SteelDen/border.bin",
       "blockdata_filepath": "data/layouts/FiveIsland_Meadow_SteelDen/map.bin"
+    },
+    {
+      "id": "LAYOUT_SIX_ISLAND_RUIN_VALLEY_STONE_DEN",
+      "name": "SixIsland_RuinValley_StoneDen_Layout",
+      "width": 11,
+      "height": 23,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MtEmber",
+      "border_filepath": "data/layouts/SixIsland_RuinValley_StoneDen/border.bin",
+      "blockdata_filepath": "data/layouts/SixIsland_RuinValley_StoneDen/map.bin"
     }
   ]
 }

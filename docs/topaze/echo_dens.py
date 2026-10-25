@@ -45,7 +45,18 @@ CFG=[dict(
       ('COOLTRAINER_OWEN','ALLOY',[('METAGROSS',68),('STEELIX',68),('CLAYDOL',69),('MAWILE',69)],[["No one walks to the shore alone","anymore."]],["The seam gave way."],[["The WARDEN has heard you coming."]]),
       ('COOLTRAINER_BERKE','FORGE',[('AGGRON',69),('SKARMORY',69),('SCIZOR',70),('METAGROSS',70)],[["The beast gave us shelter when","the sky turned. We stay for it."]],["The forge cools."],[["Almost there. Mind your pride."]]),
       ('COOLTRAINER_SHANNON','WARDEN',[('METAGROSS',70),('STEELIX',70),('CLAYDOL',71),('SCIZOR',71),('SKARMORY',72),('AGGRON',72)],
-        [["I am the WARDEN of the STEEL.","The beast sleeps in my care."],["Prove that your will is worth","more than my fear."]],["...Then the iron has chosen you."],[["Go. Do not let it rust."]])])]
+        [["I am the WARDEN of the STEEL.","The beast sleeps in my care."],["Prove that your will is worth","more than my fear."]],["...Then the iron has chosen you."],[["Go. Do not let it rust."]])]),
+ dict(
+  D='SixIsland_RuinValley_StoneDen',P='SixIsland_RuinValley',playout='LAYOUT_SIX_ISLAND_RUIN_VALLEY',door=None,
+  src='MtEmber_RubyPath_B1F',srclay='LAYOUT_MT_EMBER_RUBY_PATH_B1F',srcdir='MtEmber_RubyPath_B1F',mapsec='MAPSEC_SIX_ISLAND',
+  need=16,beast='REGIROCK',bname='Regirock',hide='FLAG_HIDE_ECHO_BEAST6',done='FLAG_ECHO_BEAST6_DONE',after=17,phone='OneIsland_PokemonCenter_1F_EventScript_EchoPhone6',
+  locked=[["The stone is silent. Inside,","something has waited long."]],
+  tr=[('BURGLAR_1','GRAVEL',[('GOLEM',64),('RHYDON',64),('NIDOKING',65)],[["Nothing leaves this valley. Nothing","enters."]],["Crumbled..."],[["Deeper in, the stone is older."]]),
+      ('BURGLAR_2','FLINT',[('DONPHAN',65),('ARMALDO',65),('CRADILY',66),('STEELIX',66)],[["The ancient one woke when the sky","cracked. We keep watch."]],["Ground to dust."],[["The WARDEN does not bend."]]),
+      ('BURGLAR_3','SLATE',[('TYRANITAR',66),('GOLEM',67),('RHYDON',67),('AGGRON',67)],[["Turn back. Stone remembers","everything."]],["The wall gave way."],[["Mind your footing ahead."]]),
+      ('BURGLAR_4','CAIRN',[('NIDOKING',67),('DONPHAN',68),('ARMALDO',68),('CRADILY',68)],[["The beast shelters us from the","broken sky. We stay for it."]],["The cairn falls."],[["Last room. Mind your pride."]]),
+      ('SUPER_NERD_1','WARDEN',[('TYRANITAR',68),('GOLEM',69),('RHYDON',69),('STEELIX',70),('AGGRON',70),('ARMALDO',70)],
+        [["I am the WARDEN of the STONE.","The beast sleeps in my care."],["Prove that your will is worth","more than my fear."]],["...Then the stone has chosen you."],[["Go. Let it rest after."]])])]
 def pick_door(c):
     R.SURF=False; nv=R.Nav(c['P']); nv.objs=set(); L=mapkit.Layout(c['playout'])
     mj=json.load(open('data/maps/%s/map.json'%c['P']))

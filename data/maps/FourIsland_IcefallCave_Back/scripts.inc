@@ -194,9 +194,29 @@ FourIsland_IcefallCave_Back_EventScript_Lorelei::
 @ Topaze: Echo 4 (static, stays if fled)
 FourIsland_IcefallCave_Back_EventScript_EchoSetup::
 	setflag FLAG_HIDE_ECHO_BEAST4
+	setflag FLAG_TEMP_11
+	setflag FLAG_TEMP_12
+	setflag FLAG_TEMP_13
+	setflag FLAG_TEMP_14
+	setflag FLAG_TEMP_15
 	call_if_set FLAG_TOPAZE_COUNCIL, FourIsland_IcefallCave_Back_EventScript_EchoClearRockets
 	goto_if_set FLAG_ECHO_BEAST4_DONE, EventScript_Return
 	goto_if_ne VAR_ECHO_STAGE, 10, EventScript_Return
+	goto_if_defeated TRAINER_BIRD_KEEPER_REED, FourIsland_IcefallCave_Back_Guard0_Skip
+	clearflag FLAG_TEMP_11
+FourIsland_IcefallCave_Back_Guard0_Skip:
+	goto_if_defeated TRAINER_BIRD_KEEPER_KEITH, FourIsland_IcefallCave_Back_Guard1_Skip
+	clearflag FLAG_TEMP_12
+FourIsland_IcefallCave_Back_Guard1_Skip:
+	goto_if_defeated TRAINER_TAMER_JOHN, FourIsland_IcefallCave_Back_Guard2_Skip
+	clearflag FLAG_TEMP_13
+FourIsland_IcefallCave_Back_Guard2_Skip:
+	goto_if_defeated TRAINER_ROCKER_RANDALL, FourIsland_IcefallCave_Back_Guard3_Skip
+	clearflag FLAG_TEMP_14
+FourIsland_IcefallCave_Back_Guard3_Skip:
+	goto_if_defeated TRAINER_BEAUTY_LAUREN, FourIsland_IcefallCave_Back_Guard4_Skip
+	clearflag FLAG_TEMP_15
+FourIsland_IcefallCave_Back_Guard4_Skip:
 	clearflag FLAG_HIDE_ECHO_BEAST4
 	return
 
@@ -205,6 +225,11 @@ FourIsland_IcefallCave_Back_EventScript_Regice::
 	special QuestLog_CutRecording
 	lock
 	faceplayer
+	goto_if_not_defeated TRAINER_BIRD_KEEPER_REED, FourIsland_IcefallCave_Back_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_BIRD_KEEPER_KEITH, FourIsland_IcefallCave_Back_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_TAMER_JOHN, FourIsland_IcefallCave_Back_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_ROCKER_RANDALL, FourIsland_IcefallCave_Back_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_BEAUTY_LAUREN, FourIsland_IcefallCave_Back_EventScript_GuardsLeft
 	setwildbattle SPECIES_REGICE, 0
 	waitse
 	playmoncry SPECIES_REGICE, CRY_MODE_ENCOUNTER
@@ -259,3 +284,68 @@ FourIsland_IcefallCave_Back_Text_EchoCall4::
 	.string "The ECHO is closed.\p"
 	.string "LORELEI is waiting for you at her\n"
 	.string "house, here on FOUR ISLAND.$"
+
+FourIsland_IcefallCave_Back_EventScript_G0::
+	trainerbattle_single TRAINER_BIRD_KEEPER_REED, FourIsland_IcefallCave_Back_Text_G0Intro, FourIsland_IcefallCave_Back_Text_G0Defeat, FourIsland_IcefallCave_Back_EventScript_G0_Vanish
+	msgbox FourIsland_IcefallCave_Back_Text_G0Post, MSGBOX_AUTOCLOSE
+	end
+
+FourIsland_IcefallCave_Back_EventScript_G0_Vanish::
+	msgbox FourIsland_IcefallCave_Back_Text_G0Post, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
+FourIsland_IcefallCave_Back_EventScript_G1::
+	trainerbattle_single TRAINER_BIRD_KEEPER_KEITH, FourIsland_IcefallCave_Back_Text_G1Intro, FourIsland_IcefallCave_Back_Text_G1Defeat, FourIsland_IcefallCave_Back_EventScript_G1_Vanish
+	msgbox FourIsland_IcefallCave_Back_Text_G1Post, MSGBOX_AUTOCLOSE
+	end
+
+FourIsland_IcefallCave_Back_EventScript_G1_Vanish::
+	msgbox FourIsland_IcefallCave_Back_Text_G1Post, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
+FourIsland_IcefallCave_Back_EventScript_G2::
+	trainerbattle_single TRAINER_TAMER_JOHN, FourIsland_IcefallCave_Back_Text_G2Intro, FourIsland_IcefallCave_Back_Text_G2Defeat, FourIsland_IcefallCave_Back_EventScript_G2_Vanish
+	msgbox FourIsland_IcefallCave_Back_Text_G2Post, MSGBOX_AUTOCLOSE
+	end
+
+FourIsland_IcefallCave_Back_EventScript_G2_Vanish::
+	msgbox FourIsland_IcefallCave_Back_Text_G2Post, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
+FourIsland_IcefallCave_Back_EventScript_G3::
+	trainerbattle_single TRAINER_ROCKER_RANDALL, FourIsland_IcefallCave_Back_Text_G3Intro, FourIsland_IcefallCave_Back_Text_G3Defeat, FourIsland_IcefallCave_Back_EventScript_G3_Vanish
+	msgbox FourIsland_IcefallCave_Back_Text_G3Post, MSGBOX_AUTOCLOSE
+	end
+
+FourIsland_IcefallCave_Back_EventScript_G3_Vanish::
+	msgbox FourIsland_IcefallCave_Back_Text_G3Post, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
+FourIsland_IcefallCave_Back_EventScript_G4::
+	trainerbattle_single TRAINER_BEAUTY_LAUREN, FourIsland_IcefallCave_Back_Text_G4Intro, FourIsland_IcefallCave_Back_Text_G4Defeat, FourIsland_IcefallCave_Back_EventScript_G4_Vanish
+	msgbox FourIsland_IcefallCave_Back_Text_G4Post, MSGBOX_AUTOCLOSE
+	end
+
+FourIsland_IcefallCave_Back_EventScript_G4_Vanish::
+	msgbox FourIsland_IcefallCave_Back_Text_G4Post, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
+FourIsland_IcefallCave_Back_EventScript_GuardsLeft::
+	msgbox FourIsland_IcefallCave_Back_Text_GuardsLeft, MSGBOX_DEFAULT
+	release
+	end

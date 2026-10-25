@@ -259,19 +259,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SixIsland_RuinValley_EventScript_ItemSunStone",
       "flag": "FLAG_HIDE_SIX_ISLAND_RUIN_VALLEY_SUN_STONE"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_REGIROCK",
-      "x": 14,
-      "y": 23,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "SixIsland_RuinValley_EventScript_Regirock",
-      "flag": "FLAG_HIDE_ECHO_BEAST6"
     }
   ],
   "warp_events": [
@@ -281,9 +268,161 @@
       "elevation": 0,
       "dest_map": "MAP_SIX_ISLAND_DOTTED_HOLE_1F",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 24,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_SIX_ISLAND_RUIN_VALLEY_STONE_DEN",
+      "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "0",
+      "script": "SixIsland_RuinValley_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "1",
+      "script": "SixIsland_RuinValley_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "2",
+      "script": "SixIsland_RuinValley_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "3",
+      "script": "SixIsland_RuinValley_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "4",
+      "script": "SixIsland_RuinValley_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "5",
+      "script": "SixIsland_RuinValley_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "6",
+      "script": "SixIsland_RuinValley_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "7",
+      "script": "SixIsland_RuinValley_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "8",
+      "script": "SixIsland_RuinValley_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "9",
+      "script": "SixIsland_RuinValley_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "10",
+      "script": "SixIsland_RuinValley_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "11",
+      "script": "SixIsland_RuinValley_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "12",
+      "script": "SixIsland_RuinValley_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "13",
+      "script": "SixIsland_RuinValley_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "14",
+      "script": "SixIsland_RuinValley_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "15",
+      "script": "SixIsland_RuinValley_EventScript_DenLocked"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

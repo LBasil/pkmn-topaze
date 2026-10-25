@@ -1,0 +1,124 @@
+SixIsland_RuinValley_StoneDen_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SixIsland_RuinValley_StoneDen_OnTransition
+	.byte 0
+
+SixIsland_RuinValley_StoneDen_OnTransition::
+	goto_if_set FLAG_ECHO_BEAST6_DONE, SixIsland_RuinValley_StoneDen_EventScript_HideBeast
+	goto_if_ne VAR_ECHO_STAGE, 16, SixIsland_RuinValley_StoneDen_EventScript_HideBeast
+	clearflag FLAG_HIDE_ECHO_BEAST6
+	end
+
+SixIsland_RuinValley_StoneDen_EventScript_HideBeast::
+	setflag FLAG_HIDE_ECHO_BEAST6
+	end
+
+SixIsland_RuinValley_StoneDen_EventScript_T0::
+	trainerbattle_single TRAINER_BURGLAR_1, SixIsland_RuinValley_StoneDen_Text_T0Intro, SixIsland_RuinValley_StoneDen_Text_T0Defeat, SixIsland_RuinValley_StoneDen_EventScript_T0_Vanish
+	msgbox SixIsland_RuinValley_StoneDen_Text_T0Post, MSGBOX_AUTOCLOSE
+	end
+
+SixIsland_RuinValley_StoneDen_EventScript_T0_Vanish::
+	msgbox SixIsland_RuinValley_StoneDen_Text_T0Post, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
+SixIsland_RuinValley_StoneDen_EventScript_T1::
+	trainerbattle_single TRAINER_BURGLAR_2, SixIsland_RuinValley_StoneDen_Text_T1Intro, SixIsland_RuinValley_StoneDen_Text_T1Defeat, SixIsland_RuinValley_StoneDen_EventScript_T1_Vanish
+	msgbox SixIsland_RuinValley_StoneDen_Text_T1Post, MSGBOX_AUTOCLOSE
+	end
+
+SixIsland_RuinValley_StoneDen_EventScript_T1_Vanish::
+	msgbox SixIsland_RuinValley_StoneDen_Text_T1Post, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
+SixIsland_RuinValley_StoneDen_EventScript_T2::
+	trainerbattle_single TRAINER_BURGLAR_3, SixIsland_RuinValley_StoneDen_Text_T2Intro, SixIsland_RuinValley_StoneDen_Text_T2Defeat, SixIsland_RuinValley_StoneDen_EventScript_T2_Vanish
+	msgbox SixIsland_RuinValley_StoneDen_Text_T2Post, MSGBOX_AUTOCLOSE
+	end
+
+SixIsland_RuinValley_StoneDen_EventScript_T2_Vanish::
+	msgbox SixIsland_RuinValley_StoneDen_Text_T2Post, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
+SixIsland_RuinValley_StoneDen_EventScript_T3::
+	trainerbattle_single TRAINER_BURGLAR_4, SixIsland_RuinValley_StoneDen_Text_T3Intro, SixIsland_RuinValley_StoneDen_Text_T3Defeat, SixIsland_RuinValley_StoneDen_EventScript_T3_Vanish
+	msgbox SixIsland_RuinValley_StoneDen_Text_T3Post, MSGBOX_AUTOCLOSE
+	end
+
+SixIsland_RuinValley_StoneDen_EventScript_T3_Vanish::
+	msgbox SixIsland_RuinValley_StoneDen_Text_T3Post, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
+SixIsland_RuinValley_StoneDen_EventScript_T4::
+	trainerbattle_single TRAINER_SUPER_NERD_1, SixIsland_RuinValley_StoneDen_Text_T4Intro, SixIsland_RuinValley_StoneDen_Text_T4Defeat, SixIsland_RuinValley_StoneDen_EventScript_T4_Vanish
+	msgbox SixIsland_RuinValley_StoneDen_Text_T4Post, MSGBOX_AUTOCLOSE
+	end
+
+SixIsland_RuinValley_StoneDen_EventScript_T4_Vanish::
+	msgbox SixIsland_RuinValley_StoneDen_Text_T4Post, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
+SixIsland_RuinValley_StoneDen_EventScript_Beast::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	goto_if_not_defeated TRAINER_BURGLAR_1, SixIsland_RuinValley_StoneDen_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_BURGLAR_2, SixIsland_RuinValley_StoneDen_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_BURGLAR_3, SixIsland_RuinValley_StoneDen_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_BURGLAR_4, SixIsland_RuinValley_StoneDen_EventScript_GuardsLeft
+	goto_if_not_defeated TRAINER_SUPER_NERD_1, SixIsland_RuinValley_StoneDen_EventScript_GuardsLeft
+	setwildbattle SPECIES_REGIROCK, 0
+	waitse
+	playmoncry SPECIES_REGIROCK, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, SixIsland_RuinValley_StoneDen_EventScript_DefeatedBeast
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, SixIsland_RuinValley_StoneDen_EventScript_RanFromBeast
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, SixIsland_RuinValley_StoneDen_EventScript_RanFromBeast
+	setflag FLAG_ECHO_BEAST6_DONE
+	setflag FLAG_HIDE_ECHO_BEAST6
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
+	setvar VAR_ECHO_STAGE, 17
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone6
+	end
+
+SixIsland_RuinValley_StoneDen_EventScript_DefeatedBeast::
+	setflag FLAG_ECHO_BEAST6_DONE
+	setvar VAR_ECHO_STAGE, 17
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone6
+	end
+
+SixIsland_RuinValley_StoneDen_EventScript_RanFromBeast::
+	setvar VAR_0x8004, SPECIES_REGIROCK
+	goto EventScript_MonFlewAway
+	end
+
+SixIsland_RuinValley_StoneDen_EventScript_GuardsLeft::
+	msgbox SixIsland_RuinValley_StoneDen_Text_GuardsLeft, MSGBOX_DEFAULT
+	release
+	end

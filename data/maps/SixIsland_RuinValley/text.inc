@@ -85,3 +85,7 @@ SixIsland_RuinValley_Text_HectorPostBattle::
     .string "engraved on the outside.\p"
     .string "I don't know what they mean,\n"
     .string "though.$"
+
+SixIsland_RuinValley_Text_DenLocked::
+    .string "The stone is silent. Inside,\n"
+    .string "something has waited long.$"
