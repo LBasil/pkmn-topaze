@@ -375,6 +375,19 @@ SevenIsland_SevaultCanyon_EventScript_EchoScene::
 	addobject LOCALID_ECHO_RED
 	applymovement LOCALID_PLAYER, SevenIsland_SevaultCanyon_Movement_PlayerToScene
 	waitmovement 0
+	goto SevenIsland_SevaultCanyon_EventScript_EchoSceneCont
+
+SevenIsland_SevaultCanyon_EventScript_EchoSceneB::
+	lockall
+	clearflag FLAG_HIDE_ECHO_SCENE
+	addobject LOCALID_ECHO_SILVER
+	addobject LOCALID_ECHO_GIOVANNI
+	addobject LOCALID_ECHO_RED
+	applymovement LOCALID_PLAYER, SevenIsland_SevaultCanyon_Movement_PlayerToSceneB
+	waitmovement 0
+	goto SevenIsland_SevaultCanyon_EventScript_EchoSceneCont
+
+SevenIsland_SevaultCanyon_EventScript_EchoSceneCont::
 	delay 30
 	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
 	waitmoncry
@@ -438,21 +451,27 @@ SevenIsland_SevaultCanyon_EventScript_EchoScene::
 	fadescreen FADE_FROM_BLACK
 	setvar VAR_ECHO_STAGE, 22
 	msgbox SevenIsland_SevaultCanyon_Text_SceneEnd
-	warp MAP_SEVEN_ISLAND_SEVAULT_CANYON, 0, 11, 4
+	warp MAP_SEVEN_ISLAND_SEVAULT_CANYON_SUMMIT, 0, 8, 6
 	waitstate
 	end
 
 SevenIsland_SevaultCanyon_Movement_PlayerToScene::
+	walk_up
+	walk_up
+	walk_up
 	walk_left
 	walk_left
+	walk_left
+	step_end
+
+SevenIsland_SevaultCanyon_Movement_PlayerToSceneB::
 	walk_up
 	walk_up
 	walk_up
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_right
+	walk_left
+	walk_left
+	walk_left
+	walk_left
 	step_end
 
 SevenIsland_SevaultCanyon_Movement_FaceLeft::
@@ -598,7 +617,7 @@ SevenIsland_SevaultCanyon_Warden3_Skip:
 	return
 
 @ Topaze: la bouche de grotte (11,3) reste fermee avant l'Echo final
-SevenIsland_SevaultCanyon_EventScript_GroveLocked::
+SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked::
 	lockall
 	msgbox SevenIsland_SevaultCanyon_Text_GroveLocked
 	applymovement LOCALID_PLAYER, SevenIsland_SevaultCanyon_Movement_GroveBack
@@ -628,9 +647,17 @@ SevenIsland_SevaultCanyon_EventScript_SummitLocked::
 	releaseall
 	end
 
-SevenIsland_SevaultCanyon_EventScript_GroveHint::
+SevenIsland_SevaultCanyon_EventScript_SummitPassLocked_unused::
 	lockall
 	msgbox SevenIsland_SevaultCanyon_Text_GroveHint
+	applymovement LOCALID_PLAYER, SevenIsland_SevaultCanyon_Movement_GroveBack
+	waitmovement 0
+	releaseall
+	end
+
+SevenIsland_SevaultCanyon_EventScript_SummitPassLocked::
+	lockall
+	msgbox SevenIsland_SevaultCanyon_Text_SummitPassLocked
 	applymovement LOCALID_PLAYER, SevenIsland_SevaultCanyon_Movement_GroveBack
 	waitmovement 0
 	releaseall

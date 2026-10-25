@@ -303,8 +303,8 @@ SevenIsland_SevaultCanyon_Text_W3Post::
 
 
 SevenIsland_SevaultCanyon_Text_GroveLocked::
-    .string "A mossy cave mouth. The air within\n"
-    .string "hums. It is not time yet.$"
+    .string "A mossy cave mouth. Something small\n"
+    .string "stirs within. Not yet.$"
 
 SevenIsland_SevaultCanyon_Text_GladeLocked::
     .string "A small, mossy cave mouth. Nothing\n"
@@ -315,9 +315,13 @@ SevenIsland_SevaultCanyon_Text_SummitLocked::
     .string "clouds. The ECHO is still silent.$"
 
 SevenIsland_SevaultCanyon_Text_SceneEnd::
-    .string "The sky falls silent. Far below,\n"
-    .string "the GROVE has opened its mouth.$"
+    .string "The sky falls silent. Behind the\n"
+    .string "peak, a dark passage has opened.$"
 
 SevenIsland_SevaultCanyon_Text_GroveHint::
     .string "The GROVE is sealed. The ECHO\n"
     .string "calls from the passage to the east.$"
+
+SevenIsland_SevaultCanyon_Text_SummitPassLocked::
+    .string "A dark passage in the rock. The\n"
+    .string "air within hums. Not yet.$"

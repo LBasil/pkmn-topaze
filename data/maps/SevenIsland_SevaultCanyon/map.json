@@ -396,13 +396,6 @@
       "x": 11,
       "y": 3,
       "elevation": 3,
-      "dest_map": "MAP_SEVEN_ISLAND_SEVAULT_CANYON_GROVE",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 15,
-      "y": 3,
-      "elevation": 3,
       "dest_map": "MAP_SEVEN_ISLAND_SEVAULT_CANYON_GLADE",
       "dest_warp_id": "0"
     },
@@ -422,7 +415,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "0",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked"
     },
     {
       "type": "trigger",
@@ -431,7 +424,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "1",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked"
     },
     {
       "type": "trigger",
@@ -440,7 +433,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "2",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked"
     },
     {
       "type": "trigger",
@@ -449,7 +442,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "3",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked"
     },
     {
       "type": "trigger",
@@ -458,7 +451,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "4",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked"
     },
     {
       "type": "trigger",
@@ -467,7 +460,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "5",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked"
     },
     {
       "type": "trigger",
@@ -476,7 +469,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "6",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked"
     },
     {
       "type": "trigger",
@@ -485,7 +478,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "7",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked"
     },
     {
       "type": "trigger",
@@ -494,7 +487,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "8",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked"
     },
     {
       "type": "trigger",
@@ -503,7 +496,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "9",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked"
     },
     {
       "type": "trigger",
@@ -512,7 +505,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "10",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked"
     },
     {
       "type": "trigger",
@@ -521,7 +514,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "11",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked"
     },
     {
       "type": "trigger",
@@ -530,7 +523,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "12",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked"
     },
     {
       "type": "trigger",
@@ -539,7 +532,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "13",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked"
     },
     {
       "type": "trigger",
@@ -548,7 +541,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "14",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked"
     },
     {
       "type": "trigger",
@@ -557,7 +550,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "15",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked"
     },
     {
       "type": "trigger",
@@ -566,7 +559,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "16",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked"
     },
     {
       "type": "trigger",
@@ -575,7 +568,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "17",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked"
     },
     {
       "type": "trigger",
@@ -584,196 +577,7 @@
       "elevation": 3,
       "var": "VAR_ECHO_STAGE",
       "var_value": "18",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "0",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GladeLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "1",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GladeLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "2",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GladeLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "3",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GladeLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "4",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GladeLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "5",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GladeLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "6",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GladeLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "7",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GladeLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "8",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GladeLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "9",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GladeLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "10",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GladeLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "11",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GladeLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "12",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GladeLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "13",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GladeLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "14",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GladeLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "15",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GladeLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "16",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GladeLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "17",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GladeLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "18",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GladeLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 11,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "19",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 11,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "20",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveLocked"
+      "script": "SevenIsland_SevaultCanyon_EventScript_CelebiCaveLocked"
     },
     {
       "type": "trigger",
@@ -963,15 +767,6 @@
       "var": "VAR_ECHO_STAGE",
       "var_value": "20",
       "script": "SevenIsland_SevaultCanyon_EventScript_SummitLocked"
-    },
-    {
-      "type": "trigger",
-      "x": 11,
-      "y": 4,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "21",
-      "script": "SevenIsland_SevaultCanyon_EventScript_GroveHint"
     }
   ],
   "bg_events": [
