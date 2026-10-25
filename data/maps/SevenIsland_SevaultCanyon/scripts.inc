@@ -584,3 +584,12 @@ SevenIsland_SevaultCanyon_EventScript_GroveLocked::
 SevenIsland_SevaultCanyon_Movement_GroveBack::
 	walk_down
 	step_end
+
+@ Topaze: la petite grotte de Celebi (15,3) reste fermee avant l'Echo 7
+SevenIsland_SevaultCanyon_EventScript_GladeLocked::
+	lockall
+	msgbox SevenIsland_SevaultCanyon_Text_GladeLocked
+	applymovement LOCALID_PLAYER, SevenIsland_SevaultCanyon_Movement_GroveBack
+	waitmovement 0
+	releaseall
+	end

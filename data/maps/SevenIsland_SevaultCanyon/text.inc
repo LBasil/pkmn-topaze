@@ -305,3 +305,7 @@ SevenIsland_SevaultCanyon_Text_W3Post::
 SevenIsland_SevaultCanyon_Text_GroveLocked::
     .string "A mossy cave mouth. The air within\n"
     .string "hums. It is not time yet.$"
+
+SevenIsland_SevaultCanyon_Text_GladeLocked::
+    .string "A small, mossy cave mouth. Nothing\n"
+    .string "stirs inside. Not yet.$"

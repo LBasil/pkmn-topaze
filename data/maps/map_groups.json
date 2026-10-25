@@ -245,7 +245,8 @@
     "ThreeIsland_BondBridge_TideDen",
     "FiveIsland_Meadow_SteelDen",
     "SixIsland_RuinValley_StoneDen",
-    "SevenIsland_SevaultCanyon_Grove"
+    "SevenIsland_SevaultCanyon_Grove",
+    "SevenIsland_SevaultCanyon_Glade"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
