@@ -420,6 +420,8 @@ SevenIsland_SevaultCanyon_EventScript_EchoSceneCont::
 	msgbox SevenIsland_SevaultCanyon_Text_SceneSilver2
 	msgbox SevenIsland_SevaultCanyon_Text_SceneGiovanni2
 	msgbox SevenIsland_SevaultCanyon_Text_SceneSilver3
+	msgbox SevenIsland_SevaultCanyon_Text_SceneSilverRed
+	msgbox SevenIsland_SevaultCanyon_Text_SceneGiovanniKnew
 	applymovement LOCALID_ECHO_SILVER, Common_Movement_FacePlayer
 	waitmovement 0
 	msgbox SevenIsland_SevaultCanyon_Text_SceneSilver4

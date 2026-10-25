@@ -158,10 +158,11 @@ SevenIsland_SevaultCanyon_Text_SceneSilver3::
     .string "Show me. Let me earn it.$"
 
 SevenIsland_SevaultCanyon_Text_SceneSilver4::
-    .string "SILVER: {PLAYER}. Fight me.\p"
-    .string "If I cannot face the one who\n"
-    .string "beat the LEAGUE, I cannot stand\l"
-    .string "before my father.$"
+    .string "SILVER: {PLAYER}. Fight us. Both of\n"
+    .string "us, back to back. No rest between.\p"
+    .string "If you cannot stand before the\n"
+    .string "two of us, you cannot stand\l"
+    .string "before the ECHO.$"
 
 SevenIsland_SevaultCanyon_Text_SceneSilverDefeat::
     .string "I lost. But for the first time...\n"
@@ -172,9 +173,9 @@ SevenIsland_SevaultCanyon_Text_SceneSilver5::
     .string "beside him now. Not behind.$"
 
 SevenIsland_SevaultCanyon_Text_SceneGiovanni3::
-    .string "GIOVANNI: CHAMPION. Let me see\n"
-    .string "what my son measured himself\l"
-    .string "against.$"
+    .string "GIOVANNI: CHAMPION. No pause. Let\n"
+    .string "me see what my son measured\l"
+    .string "himself against.$"
 
 SevenIsland_SevaultCanyon_Text_SceneGiovanniDefeat::
     .string "Hm. The earth bows to you.$"
@@ -325,3 +326,13 @@ SevenIsland_SevaultCanyon_Text_GroveHint::
 SevenIsland_SevaultCanyon_Text_SummitPassLocked::
     .string "A dark passage in the rock. The\n"
     .string "air within hums. Not yet.$"
+
+SevenIsland_SevaultCanyon_Text_SceneSilverRed::
+    .string "SILVER: RED trains here again, on\n"
+    .string "the highest peak. I came for a\l"
+    .string "rematch. He has not answered yet.$"
+
+SevenIsland_SevaultCanyon_Text_SceneGiovanniKnew::
+    .string "GIOVANNI: I knew I would find you\n"
+    .string "both here. The strong always end\l"
+    .string "up at the top of the world.$"
