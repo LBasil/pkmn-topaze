@@ -144,6 +144,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Entei;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Suicune;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regirock;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regice;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Kyogre;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Groudon;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Rayquaza;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Latias;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Latios;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jirachi;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Registeel;
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Raikou;
@@ -313,5 +319,11 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_REGIROCK]                 = &gObjectEventGraphicsInfo_Regirock,
     [OBJ_EVENT_GFX_REGICE]                   = &gObjectEventGraphicsInfo_Regice,
     [OBJ_EVENT_GFX_REGISTEEL]                = &gObjectEventGraphicsInfo_Registeel,
+    [OBJ_EVENT_GFX_KYOGRE]                   = &gObjectEventGraphicsInfo_Kyogre,
+    [OBJ_EVENT_GFX_GROUDON]                  = &gObjectEventGraphicsInfo_Groudon,
+    [OBJ_EVENT_GFX_RAYQUAZA]                 = &gObjectEventGraphicsInfo_Rayquaza,
+    [OBJ_EVENT_GFX_LATIAS]                   = &gObjectEventGraphicsInfo_Latias,
+    [OBJ_EVENT_GFX_LATIOS]                   = &gObjectEventGraphicsInfo_Latios,
+    [OBJ_EVENT_GFX_JIRACHI]                  = &gObjectEventGraphicsInfo_Jirachi,
     [OBJ_EVENT_GFX_SS_ANNE]                  = &gObjectEventGraphicsInfo_SSAnne,
 };

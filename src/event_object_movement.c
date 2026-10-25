@@ -475,6 +475,12 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_TOPAZE_REGIROCK             0x1122
 #define OBJ_EVENT_PAL_TAG_TOPAZE_REGICE               0x1123
 #define OBJ_EVENT_PAL_TAG_TOPAZE_REGISTEEL            0x1124
+#define OBJ_EVENT_PAL_TAG_TOPAZE_KYOGRE                     0x1125
+#define OBJ_EVENT_PAL_TAG_TOPAZE_GROUDON                    0x1126
+#define OBJ_EVENT_PAL_TAG_TOPAZE_RAYQUAZA                   0x1127
+#define OBJ_EVENT_PAL_TAG_TOPAZE_LATIAS                     0x1128
+#define OBJ_EVENT_PAL_TAG_TOPAZE_LATIOS                     0x1129
+#define OBJ_EVENT_PAL_TAG_TOPAZE_JIRACHI                    0x112A
 #define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
 
 #include "data/object_events/object_event_graphics_info_pointers.h"
@@ -509,6 +515,12 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_TopazeRegirock,          OBJ_EVENT_PAL_TAG_TOPAZE_REGIROCK},
     {gObjectEventPal_TopazeRegice,            OBJ_EVENT_PAL_TAG_TOPAZE_REGICE},
     {gObjectEventPal_TopazeRegisteel,         OBJ_EVENT_PAL_TAG_TOPAZE_REGISTEEL},
+    {gObjectEventPal_TopazeKyogre,            OBJ_EVENT_PAL_TAG_TOPAZE_KYOGRE},
+    {gObjectEventPal_TopazeGroudon,           OBJ_EVENT_PAL_TAG_TOPAZE_GROUDON},
+    {gObjectEventPal_TopazeRayquaza,          OBJ_EVENT_PAL_TAG_TOPAZE_RAYQUAZA},
+    {gObjectEventPal_TopazeLatias,            OBJ_EVENT_PAL_TAG_TOPAZE_LATIAS},
+    {gObjectEventPal_TopazeLatios,            OBJ_EVENT_PAL_TAG_TOPAZE_LATIOS},
+    {gObjectEventPal_TopazeJirachi,           OBJ_EVENT_PAL_TAG_TOPAZE_JIRACHI},
     {gObjectEventPal_SSAnne,                  OBJ_EVENT_PAL_TAG_SS_ANNE},
     {gObjectEventPal_Seagallop,               OBJ_EVENT_PAL_TAG_SEAGALLOP},
     {},

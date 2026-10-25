@@ -9,6 +9,11 @@ SevenIsland_SevaultCanyon_EventScript_RouteSign::
 @ Topaze: Echo 7 finale: keeper of time + gathered legends (static, stay if fled)
 SevenIsland_SevaultCanyon_OnTransition::
 	setflag FLAG_HIDE_ECHO_SCENE
+	setflag FLAG_TEMP_11
+	setflag FLAG_TEMP_14
+	setflag FLAG_TEMP_1E
+	setflag FLAG_TEMP_1F
+	call_if_eq VAR_ECHO_STAGE, 22, SevenIsland_SevaultCanyon_EventScript_ShowWardens
 	setflag FLAG_TEMP_18
 	setflag FLAG_TEMP_19
 	setflag FLAG_TEMP_1A
@@ -483,3 +488,66 @@ SevenIsland_SevaultCanyon_EventScript_GuardsLeft::
 	msgbox SevenIsland_SevaultCanyon_Text_GuardsLeft, MSGBOX_DEFAULT
 	release
 	end
+
+SevenIsland_SevaultCanyon_EventScript_W0::
+	trainerbattle_single TRAINER_COOLTRAINER_BROOKE, SevenIsland_SevaultCanyon_Text_W0Intro, SevenIsland_SevaultCanyon_Text_W0Defeat, SevenIsland_SevaultCanyon_EventScript_W0_Vanish
+	msgbox SevenIsland_SevaultCanyon_Text_W0Post, MSGBOX_AUTOCLOSE
+	end
+
+SevenIsland_SevaultCanyon_EventScript_W0_Vanish::
+	msgbox SevenIsland_SevaultCanyon_Text_W0Post, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
+SevenIsland_SevaultCanyon_EventScript_W1::
+	trainerbattle_single TRAINER_COOLTRAINER_AUSTINA, SevenIsland_SevaultCanyon_Text_W1Intro, SevenIsland_SevaultCanyon_Text_W1Defeat, SevenIsland_SevaultCanyon_EventScript_W1_Vanish
+	msgbox SevenIsland_SevaultCanyon_Text_W1Post, MSGBOX_AUTOCLOSE
+	end
+
+SevenIsland_SevaultCanyon_EventScript_W1_Vanish::
+	msgbox SevenIsland_SevaultCanyon_Text_W1Post, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
+SevenIsland_SevaultCanyon_EventScript_W2::
+	trainerbattle_single TRAINER_COOLTRAINER_JULIE, SevenIsland_SevaultCanyon_Text_W2Intro, SevenIsland_SevaultCanyon_Text_W2Defeat, SevenIsland_SevaultCanyon_EventScript_W2_Vanish
+	msgbox SevenIsland_SevaultCanyon_Text_W2Post, MSGBOX_AUTOCLOSE
+	end
+
+SevenIsland_SevaultCanyon_EventScript_W2_Vanish::
+	msgbox SevenIsland_SevaultCanyon_Text_W2Post, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
+SevenIsland_SevaultCanyon_EventScript_W3::
+	trainerbattle_single TRAINER_SUPER_NERD_2, SevenIsland_SevaultCanyon_Text_W3Intro, SevenIsland_SevaultCanyon_Text_W3Defeat, SevenIsland_SevaultCanyon_EventScript_W3_Vanish
+	msgbox SevenIsland_SevaultCanyon_Text_W3Post, MSGBOX_AUTOCLOSE
+	end
+
+SevenIsland_SevaultCanyon_EventScript_W3_Vanish::
+	msgbox SevenIsland_SevaultCanyon_Text_W3Post, MSGBOX_DEFAULT
+	closemessage
+	removeobject VAR_LAST_TALKED
+	releaseall
+	end
+
+SevenIsland_SevaultCanyon_EventScript_ShowWardens::
+	goto_if_defeated TRAINER_COOLTRAINER_BROOKE, SevenIsland_SevaultCanyon_Warden0_Skip
+	clearflag FLAG_TEMP_11
+SevenIsland_SevaultCanyon_Warden0_Skip:
+	goto_if_defeated TRAINER_COOLTRAINER_AUSTINA, SevenIsland_SevaultCanyon_Warden1_Skip
+	clearflag FLAG_TEMP_14
+SevenIsland_SevaultCanyon_Warden1_Skip:
+	goto_if_defeated TRAINER_COOLTRAINER_JULIE, SevenIsland_SevaultCanyon_Warden2_Skip
+	clearflag FLAG_TEMP_1E
+SevenIsland_SevaultCanyon_Warden2_Skip:
+	goto_if_defeated TRAINER_SUPER_NERD_2, SevenIsland_SevaultCanyon_Warden3_Skip
+	clearflag FLAG_TEMP_1F
+SevenIsland_SevaultCanyon_Warden3_Skip:
+	return

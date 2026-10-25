@@ -320,7 +320,7 @@
       "flag": "FLAG_HIDE_ECHO_CELEBI"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "graphics_id": "OBJ_EVENT_GFX_KYOGRE",
       "x": 10,
       "y": 4,
       "elevation": 3,
@@ -333,7 +333,7 @@
       "flag": "FLAG_HIDE_ECHO_KYOGRE"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "graphics_id": "OBJ_EVENT_GFX_GROUDON",
       "x": 12,
       "y": 4,
       "elevation": 3,
@@ -346,7 +346,7 @@
       "flag": "FLAG_HIDE_ECHO_GROUDON"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "graphics_id": "OBJ_EVENT_GFX_RAYQUAZA",
       "x": 14,
       "y": 4,
       "elevation": 3,
@@ -359,7 +359,7 @@
       "flag": "FLAG_HIDE_ECHO_RAYQUAZA"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "graphics_id": "OBJ_EVENT_GFX_LATIAS",
       "x": 16,
       "y": 4,
       "elevation": 3,
@@ -372,7 +372,7 @@
       "flag": "FLAG_HIDE_ECHO_LATIAS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "graphics_id": "OBJ_EVENT_GFX_LATIOS",
       "x": 11,
       "y": 5,
       "elevation": 3,
@@ -385,7 +385,7 @@
       "flag": "FLAG_HIDE_ECHO_LATIOS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "graphics_id": "OBJ_EVENT_GFX_JIRACHI",
       "x": 15,
       "y": 5,
       "elevation": 3,
@@ -508,6 +508,62 @@
       "trainer_sight_or_berry_tree_id": "4",
       "script": "SevenIsland_SevaultCanyon_EventScript_G4",
       "flag": "FLAG_TEMP_1D"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
+      "x": 9,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "SevenIsland_SevaultCanyon_EventScript_W0",
+      "flag": "FLAG_TEMP_11"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+      "x": 10,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "SevenIsland_SevaultCanyon_EventScript_W1",
+      "flag": "FLAG_TEMP_14"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
+      "x": 17,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "SevenIsland_SevaultCanyon_EventScript_W2",
+      "flag": "FLAG_TEMP_1E"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
+      "x": 18,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "SevenIsland_SevaultCanyon_EventScript_W3",
+      "flag": "FLAG_TEMP_1F"
     }
   ],
   "warp_events": [

@@ -259,3 +259,45 @@ SevenIsland_SevaultCanyon_Text_G4Post::
 SevenIsland_SevaultCanyon_Text_GuardsLeft::
     .string "The beast does not stir.\n"
     .string "Its guardians still stand watch.$"
+
+SevenIsland_SevaultCanyon_Text_W0Intro::
+    .string "The tide keeps this canyon.\n"
+    .string "Turn back, or be washed away.$"
+
+SevenIsland_SevaultCanyon_Text_W0Defeat::
+    .string "Ebbed...$"
+
+SevenIsland_SevaultCanyon_Text_W0Post::
+    .string "Left stair is open. Mind the top.$"
+
+SevenIsland_SevaultCanyon_Text_W1Intro::
+    .string "Fire and earth sleep above.\n"
+    .string "None wake them on my watch.$"
+
+SevenIsland_SevaultCanyon_Text_W1Defeat::
+    .string "Burnt out...$"
+
+SevenIsland_SevaultCanyon_Text_W1Post::
+    .string "The way is open.$"
+
+SevenIsland_SevaultCanyon_Text_W2Intro::
+    .string "The sky dragon dreams up there.\n"
+    .string "You must earn the wind first.$"
+
+SevenIsland_SevaultCanyon_Text_W2Defeat::
+    .string "Grounded...$"
+
+SevenIsland_SevaultCanyon_Text_W2Post::
+    .string "Go on. The wind allows it.$"
+
+SevenIsland_SevaultCanyon_Text_W3Intro::
+    .string "I am the last guardian of the\n"
+    .string "dreamers. The eon twins and the\n"
+    .string "wish star rest behind me.$"
+
+SevenIsland_SevaultCanyon_Text_W3Defeat::
+    .string "Awake at last...$"
+
+SevenIsland_SevaultCanyon_Text_W3Post::
+    .string "Go. Be gentle with them.$"
+

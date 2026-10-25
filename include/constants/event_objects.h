@@ -162,7 +162,14 @@
 #define OBJ_EVENT_GFX_REGICE 154
 #define OBJ_EVENT_GFX_REGISTEEL 155
 
-#define NUM_OBJ_EVENT_GFX     156
+#define OBJ_EVENT_GFX_KYOGRE 156
+#define OBJ_EVENT_GFX_GROUDON 157
+#define OBJ_EVENT_GFX_RAYQUAZA 158
+#define OBJ_EVENT_GFX_LATIAS 159
+#define OBJ_EVENT_GFX_LATIOS 160
+#define OBJ_EVENT_GFX_JIRACHI 161
+
+#define NUM_OBJ_EVENT_GFX     162
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.
