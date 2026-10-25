@@ -1,6 +1,17 @@
 SixIsland_DottedHole_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, SixIsland_DottedHole_1F_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SixIsland_DottedHole_1F_OnFrame
 	.byte 0
+
+SixIsland_DottedHole_1F_OnFrame::
+	map_script_2 VAR_ECHO_STAGE, 16, SixIsland_DottedHole_1F_EventScript_ToStoneDen
+	.2byte 0
+
+@ Topaze: a l'etape de l'Echo 6, la porte de la VALLEE DES RUINES mene au repaire de REGIROCK
+SixIsland_DottedHole_1F_EventScript_ToStoneDen::
+	warp MAP_SIX_ISLAND_RUIN_VALLEY_STONE_DEN, 0, 9, 21
+	waitstate
+	end
 
 SixIsland_DottedHole_1F_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_SIX_ISLAND_DOTTED_HOLE_1F

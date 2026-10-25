@@ -5,6 +5,7 @@ SixIsland_RuinValley_MapScripts::
 
 SixIsland_RuinValley_OnLoad::
 	call_if_set FLAG_USED_CUT_ON_RUIN_VALLEY_BRAILLE, SixIsland_RuinValley_EventScript_OpenDottedHoleDoor
+	call_if_eq VAR_ECHO_STAGE, 16, SixIsland_RuinValley_EventScript_OpenDottedHoleDoor
 	end
 
 SixIsland_RuinValley_EventScript_OpenDottedHoleDoor::
@@ -49,6 +50,8 @@ SixIsland_RuinValley_OnTransition::
 	goto_if_set FLAG_ECHO_BEAST6_DONE, EventScript_Return
 	goto_if_ne VAR_ECHO_STAGE, 16, EventScript_Return
 	clearflag FLAG_HIDE_ECHO_BEAST6
+	@ Topaze: le savant ne bloque plus la porte quand elle s'ouvre pour l'Echo
+	setflag FLAG_HIDE_RUIN_VALLEY_SCIENTIST
 	end
 
 SixIsland_RuinValley_EventScript_Regirock::
