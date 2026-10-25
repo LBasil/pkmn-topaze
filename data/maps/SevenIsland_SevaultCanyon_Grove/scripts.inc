@@ -7,5 +7,18 @@ SevenIsland_SevaultCanyon_Grove_OnTransition::
 	setflag FLAG_TEMP_14
 	setflag FLAG_TEMP_1E
 	setflag FLAG_TEMP_1F
+	setflag FLAG_HIDE_ECHO_SCENE
+	setflag FLAG_HIDE_ECHO_KYOGRE
+	call_if_unset FLAG_DONE_ECHO_KYOGRE, SevenIsland_SevaultCanyon_EventScript_MaybeKyogre
+	setflag FLAG_HIDE_ECHO_GROUDON
+	call_if_unset FLAG_DONE_ECHO_GROUDON, SevenIsland_SevaultCanyon_EventScript_MaybeGroudon
+	setflag FLAG_HIDE_ECHO_RAYQUAZA
+	call_if_unset FLAG_DONE_ECHO_RAYQUAZA, SevenIsland_SevaultCanyon_EventScript_MaybeRayquaza
+	setflag FLAG_HIDE_ECHO_LATIAS
+	call_if_unset FLAG_DONE_ECHO_LATIAS, SevenIsland_SevaultCanyon_EventScript_MaybeLatias
+	setflag FLAG_HIDE_ECHO_LATIOS
+	call_if_unset FLAG_DONE_ECHO_LATIOS, SevenIsland_SevaultCanyon_EventScript_MaybeLatios
+	setflag FLAG_HIDE_ECHO_JIRACHI
+	call_if_unset FLAG_DONE_ECHO_JIRACHI, SevenIsland_SevaultCanyon_EventScript_MaybeJirachi
 	call_if_eq VAR_ECHO_STAGE, 22, SevenIsland_SevaultCanyon_EventScript_ShowWardens
 	end

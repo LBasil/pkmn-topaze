@@ -417,16 +417,17 @@ SevenIsland_SevaultCanyon_EventScript_EchoScene::
 	removeobject LOCALID_ECHO_RED
 	fadescreen FADE_FROM_BLACK
 	setvar VAR_ECHO_STAGE, 22
-	releaseall
+	warp MAP_SEVEN_ISLAND_SEVAULT_CANYON_GROVE, 0, 7, 12
+	waitstate
 	end
 
 SevenIsland_SevaultCanyon_Movement_PlayerToScene::
-	walk_up
-	walk_up
-	walk_up
 	walk_left
 	walk_left
-	walk_left
+	walk_up
+	walk_up
+	walk_right
+	walk_right
 	step_end
 
 SevenIsland_SevaultCanyon_Movement_FaceLeft::
