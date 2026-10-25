@@ -34,7 +34,18 @@ CFG=[dict(
       ('RS_YOUNG_COUPLE','MIST',[('LAPRAS',64),('KINGDRA',64),('POLITOED',65),('SLOWBRO',65)],[["The beast calmed the sea when","the sky broke. We stay for it."]],["The tide turns."],[["The ORACLE will not be so gentle."]]),
       ('RS_SIS_AND_BRO','BROOK',[('BLASTOISE',65),('MILOTIC',66),('STARMIE',66),('LAPRAS',66)],[["You smell of dry land. You do","not belong in the water's hall."]],["Dry as ever..."],[["Almost there. Mind your breath."]]),
       ('RS_CHAMPION','AURORA',[('LAPRAS',66),('MILOTIC',66),('VAPOREON',67),('KINGDRA',67),('BLASTOISE',67),('STARMIE',68)],
-        [["I am the ORACLE of the TIDE.","The beast sleeps in my care."],["Prove that your water is worth","more than my fear."]],["...Then the tide has chosen you."],[["Go. Treat the sea kindly."]])])]
+        [["I am the ORACLE of the TIDE.","The beast sleeps in my care."],["Prove that your water is worth","more than my fear."]],["...Then the tide has chosen you."],[["Go. Treat the sea kindly."]])]),
+ dict(
+  D='FiveIsland_Meadow_SteelDen',P='FiveIsland_Meadow',playout='LAYOUT_FIVE_ISLAND_MEADOW',door=(17,28),
+  src='MtEmber_RubyPath_B2F',srclay='LAYOUT_MT_EMBER_RUBY_PATH_B2F',srcdir='MtEmber_RubyPath_B2F',mapsec='MAPSEC_FIVE_ISLAND',
+  need=13,beast='REGISTEEL',bname='Registeel',hide='FLAG_HIDE_ECHO_BEAST5',done='FLAG_ECHO_BEAST5_DONE',after=14,phone='OneIsland_PokemonCenter_1F_EventScript_EchoPhone5',
+  locked=[["The cliff is cold. Something inside","does not rust. Not yet."]],
+  tr=[('COOLTRAINER_PAUL','BOLT',[('MAGNETON',66),('SKARMORY',66),('STEELIX',67)],[["Steel does not rust, and neither","does our watch."]],["Rusted through..."],[["The WARDEN is further on."]]),
+      ('COOLTRAINER_GILBERT','RIVET',[('SCIZOR',67),('FORRETRESS',67),('AGGRON',68),('MAGNETON',68)],[["The ancient one hums when the","sky cracks. We keep it quiet."]],["Bent out of shape."],[["Keep going. It only gets harder."]]),
+      ('COOLTRAINER_OWEN','ALLOY',[('METAGROSS',68),('STEELIX',68),('CLAYDOL',69),('MAWILE',69)],[["No one walks to the shore alone","anymore."]],["The seam gave way."],[["The WARDEN has heard you coming."]]),
+      ('COOLTRAINER_BERKE','FORGE',[('AGGRON',69),('SKARMORY',69),('SCIZOR',70),('METAGROSS',70)],[["The beast gave us shelter when","the sky turned. We stay for it."]],["The forge cools."],[["Almost there. Mind your pride."]]),
+      ('COOLTRAINER_SHANNON','WARDEN',[('METAGROSS',70),('STEELIX',70),('CLAYDOL',71),('SCIZOR',71),('SKARMORY',72),('AGGRON',72)],
+        [["I am the WARDEN of the STEEL.","The beast sleeps in my care."],["Prove that your will is worth","more than my fear."]],["...Then the iron has chosen you."],[["Go. Do not let it rust."]])])]
 def pick_door(c):
     R.SURF=False; nv=R.Nav(c['P']); nv.objs=set(); L=mapkit.Layout(c['playout'])
     mj=json.load(open('data/maps/%s/map.json'%c['P']))

@@ -100,27 +100,15 @@ FiveIsland_Meadow_EventScript_RanFromRegisteel::
 	goto EventScript_MonFlewAway
 	end
 
-FiveIsland_Meadow_EventScript_G0::
-	trainerbattle_single TRAINER_COOLTRAINER_PAUL, FiveIsland_Meadow_Text_G0Intro, FiveIsland_Meadow_Text_G0Defeat
-	msgbox FiveIsland_Meadow_Text_G0Post, MSGBOX_AUTOCLOSE
+@ Topaze: la bouche de grotte (17,28) reste fermee tant que l'Echo n'est pas ouvert
+FiveIsland_Meadow_EventScript_DenLocked::
+	lockall
+	msgbox FiveIsland_Meadow_Text_DenLocked
+	applymovement LOCALID_PLAYER, FiveIsland_Meadow_Movement_DenBack
+	waitmovement 0
+	releaseall
 	end
 
-FiveIsland_Meadow_EventScript_G1::
-	trainerbattle_single TRAINER_COOLTRAINER_GILBERT, FiveIsland_Meadow_Text_G1Intro, FiveIsland_Meadow_Text_G1Defeat
-	msgbox FiveIsland_Meadow_Text_G1Post, MSGBOX_AUTOCLOSE
-	end
-
-FiveIsland_Meadow_EventScript_G2::
-	trainerbattle_single TRAINER_COOLTRAINER_OWEN, FiveIsland_Meadow_Text_G2Intro, FiveIsland_Meadow_Text_G2Defeat
-	msgbox FiveIsland_Meadow_Text_G2Post, MSGBOX_AUTOCLOSE
-	end
-
-FiveIsland_Meadow_EventScript_G3::
-	trainerbattle_single TRAINER_COOLTRAINER_BERKE, FiveIsland_Meadow_Text_G3Intro, FiveIsland_Meadow_Text_G3Defeat
-	msgbox FiveIsland_Meadow_Text_G3Post, MSGBOX_AUTOCLOSE
-	end
-
-FiveIsland_Meadow_EventScript_G4::
-	trainerbattle_single TRAINER_COOLTRAINER_SHANNON, FiveIsland_Meadow_Text_G4Intro, FiveIsland_Meadow_Text_G4Defeat
-	msgbox FiveIsland_Meadow_Text_G4Post, MSGBOX_AUTOCLOSE
-	end
+FiveIsland_Meadow_Movement_DenBack::
+	walk_down
+	step_end

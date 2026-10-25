@@ -4638,6 +4638,18 @@
       "secondary_tileset": "gTileset_SeviiRockStone",
       "border_filepath": "data/layouts/ThreeIsland_BondBridge_TideDen/border.bin",
       "blockdata_filepath": "data/layouts/ThreeIsland_BondBridge_TideDen/map.bin"
+    },
+    {
+      "id": "LAYOUT_FIVE_ISLAND_MEADOW_STEEL_DEN",
+      "name": "FiveIsland_Meadow_SteelDen_Layout",
+      "width": 16,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_MtEmber",
+      "border_filepath": "data/layouts/FiveIsland_Meadow_SteelDen/border.bin",
+      "blockdata_filepath": "data/layouts/FiveIsland_Meadow_SteelDen/map.bin"
     }
   ]
 }

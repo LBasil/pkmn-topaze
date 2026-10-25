@@ -1,0 +1,76 @@
+FiveIsland_Meadow_SteelDen_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, FiveIsland_Meadow_SteelDen_OnTransition
+	.byte 0
+
+FiveIsland_Meadow_SteelDen_OnTransition::
+	goto_if_set FLAG_ECHO_BEAST5_DONE, FiveIsland_Meadow_SteelDen_EventScript_HideBeast
+	goto_if_ne VAR_ECHO_STAGE, 13, FiveIsland_Meadow_SteelDen_EventScript_HideBeast
+	clearflag FLAG_HIDE_ECHO_BEAST5
+	end
+
+FiveIsland_Meadow_SteelDen_EventScript_HideBeast::
+	setflag FLAG_HIDE_ECHO_BEAST5
+	end
+
+FiveIsland_Meadow_SteelDen_EventScript_T0::
+	trainerbattle_single TRAINER_COOLTRAINER_PAUL, FiveIsland_Meadow_SteelDen_Text_T0Intro, FiveIsland_Meadow_SteelDen_Text_T0Defeat
+	msgbox FiveIsland_Meadow_SteelDen_Text_T0Post, MSGBOX_AUTOCLOSE
+	end
+
+FiveIsland_Meadow_SteelDen_EventScript_T1::
+	trainerbattle_single TRAINER_COOLTRAINER_GILBERT, FiveIsland_Meadow_SteelDen_Text_T1Intro, FiveIsland_Meadow_SteelDen_Text_T1Defeat
+	msgbox FiveIsland_Meadow_SteelDen_Text_T1Post, MSGBOX_AUTOCLOSE
+	end
+
+FiveIsland_Meadow_SteelDen_EventScript_T2::
+	trainerbattle_single TRAINER_COOLTRAINER_OWEN, FiveIsland_Meadow_SteelDen_Text_T2Intro, FiveIsland_Meadow_SteelDen_Text_T2Defeat
+	msgbox FiveIsland_Meadow_SteelDen_Text_T2Post, MSGBOX_AUTOCLOSE
+	end
+
+FiveIsland_Meadow_SteelDen_EventScript_T3::
+	trainerbattle_single TRAINER_COOLTRAINER_BERKE, FiveIsland_Meadow_SteelDen_Text_T3Intro, FiveIsland_Meadow_SteelDen_Text_T3Defeat
+	msgbox FiveIsland_Meadow_SteelDen_Text_T3Post, MSGBOX_AUTOCLOSE
+	end
+
+FiveIsland_Meadow_SteelDen_EventScript_T4::
+	trainerbattle_single TRAINER_COOLTRAINER_SHANNON, FiveIsland_Meadow_SteelDen_Text_T4Intro, FiveIsland_Meadow_SteelDen_Text_T4Defeat
+	msgbox FiveIsland_Meadow_SteelDen_Text_T4Post, MSGBOX_AUTOCLOSE
+	end
+
+FiveIsland_Meadow_SteelDen_EventScript_Beast::
+	goto_if_questlog EventScript_ReleaseEnd
+	special QuestLog_CutRecording
+	lock
+	faceplayer
+	setwildbattle SPECIES_REGISTEEL, 0
+	waitse
+	playmoncry SPECIES_REGISTEEL, CRY_MODE_ENCOUNTER
+	delay 40
+	waitmoncry
+	setflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	special StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_SPECIAL_WILD_BATTLE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, FiveIsland_Meadow_SteelDen_EventScript_DefeatedBeast
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, FiveIsland_Meadow_SteelDen_EventScript_RanFromBeast
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, FiveIsland_Meadow_SteelDen_EventScript_RanFromBeast
+	setflag FLAG_ECHO_BEAST5_DONE
+	setflag FLAG_HIDE_ECHO_BEAST5
+	setvar VAR_ECHO_STAGE, 14
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone5
+	end
+
+FiveIsland_Meadow_SteelDen_EventScript_DefeatedBeast::
+	setflag FLAG_ECHO_BEAST5_DONE
+	setvar VAR_ECHO_STAGE, 14
+	fadescreen FADE_TO_BLACK
+	removeobject VAR_LAST_TALKED
+	fadescreen FADE_FROM_BLACK
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoPhone5
+	end
+
+FiveIsland_Meadow_SteelDen_EventScript_RanFromBeast::
+	setvar VAR_0x8004, SPECIES_REGISTEEL
+	goto EventScript_MonFlewAway
+	end

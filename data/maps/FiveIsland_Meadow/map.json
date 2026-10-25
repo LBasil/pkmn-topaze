@@ -124,89 +124,6 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "FiveIsland_Meadow_EventScript_ItemPPUp",
       "flag": "FLAG_HIDE_FIVE_ISLAND_MEADOW_PP_UP"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_REGISTEEL",
-      "x": 14,
-      "y": 22,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "FiveIsland_Meadow_EventScript_Registeel",
-      "flag": "FLAG_HIDE_ECHO_BEAST5"
-    },
-    {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
-      "x": 12,
-      "y": 28,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "FiveIsland_Meadow_EventScript_G0",
-      "flag": "FLAG_HIDE_ECHO_BEAST5"
-    },
-    {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
-      "x": 12,
-      "y": 26,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "FiveIsland_Meadow_EventScript_G1",
-      "flag": "FLAG_HIDE_ECHO_BEAST5"
-    },
-    {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_CHANNELER",
-      "x": 12,
-      "y": 24,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "FiveIsland_Meadow_EventScript_G2",
-      "flag": "FLAG_HIDE_ECHO_BEAST5"
-    },
-    {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
-      "x": 12,
-      "y": 23,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "FiveIsland_Meadow_EventScript_G3",
-      "flag": "FLAG_HIDE_ECHO_BEAST5"
-    },
-    {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
-      "x": 13,
-      "y": 22,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "FiveIsland_Meadow_EventScript_G4",
-      "flag": "FLAG_HIDE_ECHO_BEAST5"
     }
   ],
   "warp_events": [
@@ -216,9 +133,134 @@
       "elevation": 0,
       "dest_map": "MAP_FIVE_ISLAND_ROCKET_WAREHOUSE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_FIVE_ISLAND_MEADOW_STEEL_DEN",
+      "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "0",
+      "script": "FiveIsland_Meadow_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "1",
+      "script": "FiveIsland_Meadow_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "2",
+      "script": "FiveIsland_Meadow_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "3",
+      "script": "FiveIsland_Meadow_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "4",
+      "script": "FiveIsland_Meadow_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "5",
+      "script": "FiveIsland_Meadow_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "6",
+      "script": "FiveIsland_Meadow_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "7",
+      "script": "FiveIsland_Meadow_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "8",
+      "script": "FiveIsland_Meadow_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "9",
+      "script": "FiveIsland_Meadow_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "10",
+      "script": "FiveIsland_Meadow_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "11",
+      "script": "FiveIsland_Meadow_EventScript_DenLocked"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_ECHO_STAGE",
+      "var_value": "12",
+      "script": "FiveIsland_Meadow_EventScript_DenLocked"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",
