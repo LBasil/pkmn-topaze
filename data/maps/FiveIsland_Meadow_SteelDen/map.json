@@ -108,13 +108,6 @@
       "elevation": 0,
       "dest_map": "MAP_FIVE_ISLAND_MEADOW",
       "dest_warp_id": "1"
-    },
-    {
-      "x": 13,
-      "y": 9,
-      "elevation": 0,
-      "dest_map": "MAP_FIVE_ISLAND_MEADOW",
-      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],

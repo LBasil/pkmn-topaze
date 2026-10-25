@@ -202,3 +202,4 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - Écho 5 corrigé : Registeel déplacé dans la cour fermée sous l'entrepôt (seule entrée : l'escalier (12,30), aucune case côté mer), 4 gardiens en file + la gardienne à côté de lui. Avant : en bord de plage, contournable par la mer (24/10).
 - Écho 5 REFAIT comme les Bêtes (25/10) : Registeel vit dans un repaire (FiveIsland_Meadow_SteelDen, copie de Mt Ember Ruby Path B2F), bouche de grotte dans la falaise est de la prairie en (17,28), fermée tant que VAR_ECHO_STAGE < 13 ; 4 gardiens + la GARDIENNE (acier/psy, niv. 66-72) en file jusqu'à lui. Plus d'équipe devant l'entrepôt Onybris. Config ajoutée à docs/topaze/echo_dens.py.
 - Repaire de Registeel : les gardiens disparaissent une fois battus (removeobject + drapeau de dresseur utilisé comme flag de l'objet : pas de flag libre consommé) (25/10).
+- Repaire de Registeel : sortie unique (la 2e échelle en (13,9) supprimée et scellée) (25/10).
