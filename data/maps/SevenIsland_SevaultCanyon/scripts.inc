@@ -434,6 +434,7 @@ SevenIsland_SevaultCanyon_EventScript_EchoSceneCont::
 	waitmovement 0
 	msgbox SevenIsland_SevaultCanyon_Text_SceneGiovanni3
 	trainerbattle_no_intro TRAINER_ECHO_GIOVANNI, SevenIsland_SevaultCanyon_Text_SceneGiovanniDefeat
+	special HealPlayerParty
 	msgbox SevenIsland_SevaultCanyon_Text_SceneGiovanni4
 	applymovement LOCALID_ECHO_RED, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0

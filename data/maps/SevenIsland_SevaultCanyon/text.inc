@@ -202,8 +202,9 @@ SevenIsland_SevaultCanyon_Text_SceneSilver6::
 
 SevenIsland_SevaultCanyon_Text_SceneRed2::
     .string "RED: ...\p"
-    .string "(He tips his cap to you and\n"
-    .string "smiles for the very first time.)$"
+    .string "(He tips his cap. Then he taps his\n"
+    .string "chest. He is ready, whenever you\l"
+    .string "are.)$"
 
 
 SevenIsland_SevaultCanyon_Text_G0Intro::

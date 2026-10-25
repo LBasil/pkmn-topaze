@@ -4,4 +4,21 @@ SevenIsland_SevaultCanyon_Summit_MapScripts::
 
 SevenIsland_SevaultCanyon_Summit_OnTransition::
 	setflag FLAG_HIDE_ECHO_SCENE
+	setflag FLAG_TEMP_11
+	call_if_eq VAR_ECHO_STAGE, 22, SevenIsland_SevaultCanyon_Summit_EventScript_ShowRed
+	end
+
+SevenIsland_SevaultCanyon_Summit_EventScript_ShowRed::
+	clearflag FLAG_TEMP_11
+	return
+
+SevenIsland_SevaultCanyon_Summit_EventScript_Red::
+	trainerbattle_single TRAINER_BIKER_1, SevenIsland_SevaultCanyon_Summit_Text_RedIntro, SevenIsland_SevaultCanyon_Summit_Text_RedDefeat, SevenIsland_SevaultCanyon_Summit_EventScript_RedWon
+	msgbox SevenIsland_SevaultCanyon_Summit_Text_RedPost, MSGBOX_AUTOCLOSE
+	end
+
+SevenIsland_SevaultCanyon_Summit_EventScript_RedWon::
+	special HealPlayerParty
+	msgbox SevenIsland_SevaultCanyon_Summit_Text_RedPost, MSGBOX_DEFAULT
+	releaseall
 	end

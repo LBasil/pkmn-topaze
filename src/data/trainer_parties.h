@@ -2640,7 +2640,38 @@ static const struct TrainerMonNoItemCustomMoves sParty_BikerLao[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Biker1[] = {DUMMY_TRAINER_MON};
+static const struct TrainerMonNoItemDefaultMoves sParty_Biker1[] = {
+    {
+        .iv = 60,
+        .lvl = 77,
+        .species = SPECIES_PIKACHU,
+    },
+    {
+        .iv = 60,
+        .lvl = 74,
+        .species = SPECIES_ESPEON,
+    },
+    {
+        .iv = 60,
+        .lvl = 75,
+        .species = SPECIES_SNORLAX,
+    },
+    {
+        .iv = 60,
+        .lvl = 76,
+        .species = SPECIES_VENUSAUR,
+    },
+    {
+        .iv = 60,
+        .lvl = 76,
+        .species = SPECIES_CHARIZARD,
+    },
+    {
+        .iv = 60,
+        .lvl = 77,
+        .species = SPECIES_BLASTOISE,
+    },
+};
 
 static const struct TrainerMonNoItemDefaultMoves sParty_BikerHideo[] = {
     {
