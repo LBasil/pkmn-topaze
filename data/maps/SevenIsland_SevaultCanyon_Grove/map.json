@@ -148,48 +148,6 @@
       "trainer_sight_or_berry_tree_id": "4",
       "script": "SevenIsland_SevaultCanyon_EventScript_W3",
       "flag": "FLAG_TEMP_1F"
-    },
-    {
-      "elevation": 3,
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
-      "flag": "FLAG_HIDE_ECHO_SCENE",
-      "local_id": "LOCALID_ECHO_SILVER",
-      "graphics_id": "OBJ_EVENT_GFX_BLUE",
-      "x": 8,
-      "y": 8,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT"
-    },
-    {
-      "elevation": 3,
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
-      "flag": "FLAG_HIDE_ECHO_SCENE",
-      "local_id": "LOCALID_ECHO_GIOVANNI",
-      "graphics_id": "OBJ_EVENT_GFX_GIOVANNI",
-      "x": 6,
-      "y": 8,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT"
-    },
-    {
-      "elevation": 3,
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
-      "flag": "FLAG_HIDE_ECHO_SCENE",
-      "local_id": "LOCALID_ECHO_RED",
-      "graphics_id": "OBJ_EVENT_GFX_RED_NORMAL",
-      "x": 7,
-      "y": 6,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN"
     }
   ],
   "warp_events": [
@@ -201,16 +159,6 @@
       "dest_warp_id": "2"
     }
   ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 7,
-      "y": 12,
-      "elevation": 3,
-      "var": "VAR_ECHO_STAGE",
-      "var_value": "21",
-      "script": "SevenIsland_SevaultCanyon_EventScript_EchoScene"
-    }
-  ],
+  "coord_events": [],
   "bg_events": []
 }

@@ -1,0 +1,7 @@
+SevenIsland_SevaultCanyon_Summit_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SevenIsland_SevaultCanyon_Summit_OnTransition
+	.byte 0
+
+SevenIsland_SevaultCanyon_Summit_OnTransition::
+	setflag FLAG_HIDE_ECHO_SCENE
+	end

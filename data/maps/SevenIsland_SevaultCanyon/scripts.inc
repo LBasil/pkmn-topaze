@@ -375,6 +375,26 @@ SevenIsland_SevaultCanyon_EventScript_EchoScene::
 	addobject LOCALID_ECHO_RED
 	applymovement LOCALID_PLAYER, SevenIsland_SevaultCanyon_Movement_PlayerToScene
 	waitmovement 0
+	delay 30
+	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
+	waitmoncry
+	delay 20
+	playmoncry SPECIES_GROUDON, CRY_MODE_ENCOUNTER
+	waitmoncry
+	delay 20
+	playmoncry SPECIES_RAYQUAZA, CRY_MODE_ENCOUNTER
+	waitmoncry
+	delay 20
+	playmoncry SPECIES_LATIAS, CRY_MODE_ENCOUNTER
+	waitmoncry
+	delay 20
+	playmoncry SPECIES_LATIOS, CRY_MODE_ENCOUNTER
+	waitmoncry
+	delay 20
+	playmoncry SPECIES_JIRACHI, CRY_MODE_ENCOUNTER
+	waitmoncry
+	delay 20
+	delay 40
 	textcolor NPC_TEXT_COLOR_MALE
 	applymovement LOCALID_ECHO_SILVER, Common_Movement_FacePlayer
 	waitmovement 0
@@ -417,7 +437,8 @@ SevenIsland_SevaultCanyon_EventScript_EchoScene::
 	removeobject LOCALID_ECHO_RED
 	fadescreen FADE_FROM_BLACK
 	setvar VAR_ECHO_STAGE, 22
-	warp MAP_SEVEN_ISLAND_SEVAULT_CANYON_GROVE, 0, 7, 12
+	msgbox SevenIsland_SevaultCanyon_Text_SceneEnd
+	warp MAP_SEVEN_ISLAND_SEVAULT_CANYON, 0, 11, 4
 	waitstate
 	end
 
@@ -426,6 +447,10 @@ SevenIsland_SevaultCanyon_Movement_PlayerToScene::
 	walk_left
 	walk_up
 	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
 	walk_right
 	walk_right
 	step_end
@@ -589,6 +614,15 @@ SevenIsland_SevaultCanyon_Movement_GroveBack::
 SevenIsland_SevaultCanyon_EventScript_GladeLocked::
 	lockall
 	msgbox SevenIsland_SevaultCanyon_Text_GladeLocked
+	applymovement LOCALID_PLAYER, SevenIsland_SevaultCanyon_Movement_GroveBack
+	waitmovement 0
+	releaseall
+	end
+
+@ Topaze: la bouche du sommet (17,3) reste fermee avant l'etape 21
+SevenIsland_SevaultCanyon_EventScript_SummitLocked::
+	lockall
+	msgbox SevenIsland_SevaultCanyon_Text_SummitLocked
 	applymovement LOCALID_PLAYER, SevenIsland_SevaultCanyon_Movement_GroveBack
 	waitmovement 0
 	releaseall
