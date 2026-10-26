@@ -33,7 +33,7 @@
 
 struct JournalData
 {
-    u8 sections[8];
+    u8 sections[JOURNAL_MAX_SECTIONS];
     u8 numSections;
     u8 tab;
     u16 entries[JOURNAL_MAX_ENTRIES];
@@ -109,7 +109,15 @@ static void CB2_Main(void)
 
 static u8 *PrintNum(u8 *dst, u32 n)
 {
-    return ConvertIntToDecimalStringN(dst, n, STR_CONV_MODE_LEFT_ALIGN, 3);
+    u8 digits = 3;
+
+    if (n >= 100000)
+        digits = 6;
+    else if (n >= 10000)
+        digits = 5;
+    else if (n >= 1000)
+        digits = 4;
+    return ConvertIntToDecimalStringN(dst, n, STR_CONV_MODE_LEFT_ALIGN, digits);
 }
 
 static u8 CurSection(void)
@@ -189,8 +197,22 @@ static void DrawList(void)
         if (!done)
             FillWindowPixelRect(WIN_LIST, sel ? C_SEL : C_BG, 9, y + 3, 6, 6);
         AddTextPrinterParameterized3(WIN_LIST, FONT_SMALL, 22, y, sel ? sTxtSel : sTxtNormal, 0, TopazeJournalEntryName(e));
-        AddTextPrinterParameterized3(WIN_LIST, FONT_SMALL, 216 - GetStringWidth(FONT_SMALL, done ? sText_Done : sText_Todo, 0) - 6, y,
-                                     done ? (sel ? sTxtGreenSel : sTxtGreen) : (sel ? sTxtDimSel : sTxtDim), 0, done ? sText_Done : sText_Todo);
+        {
+            u8 buf[24];
+            const u8 *rt = done ? sText_Done : sText_Todo;
+            u32 cur, target;
+
+            if (!done && TopazeJournalEntryProgress(e, &cur, &target))
+            {
+                u8 *q = PrintNum(buf, cur);
+
+                q = StringCopy(q, sText_Slash);
+                PrintNum(q, target);
+                rt = buf;
+            }
+            AddTextPrinterParameterized3(WIN_LIST, FONT_SMALL, 216 - GetStringWidth(FONT_SMALL, rt, 0) - 6, y,
+                                         done ? (sel ? sTxtGreenSel : sTxtGreen) : (sel ? sTxtDimSel : sTxtDim), 0, rt);
+        }
     }
     // scroll bar
     if (sJ->numEntries > ROWS)

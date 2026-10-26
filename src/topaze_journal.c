@@ -1,5 +1,8 @@
 #include "global.h"
 #include "event_data.h"
+#include "overworld.h"
+#include "pokedex.h"
+#include "constants/game_stat.h"
 #include "constants/flags.h"
 #include "constants/vars.h"
 #include "constants/opponents.h"
@@ -10,19 +13,30 @@
 #define JK_FLAG    0
 #define JK_VAR     1
 #define JK_TRAINER 2
+#define JK_STAT    3 // game stat >= val (counter)
+#define JK_DEX     4 // different species caught >= val (counter)
+
+#define JV_ALWAYS  0
+#define JV_BADGES  1 // badges >= visVal
+#define JV_FLAG    2 // flag visId
+#define JV_VAR     3 // var visId >= visVal
+#define JV_PREV    4 // previous entry done (or badges >= visVal, when visVal != 0)
 
 struct TopazeJournalSection
 {
     const u8 *name;
-    u16 gate; // 0 = always visible, else the flag that unlocks the section
+    u16 gate; // 0 = always allowed, else the flag that unlocks the section
 };
 
 struct TopazeJournalEntry
 {
     u8 section;
     u8 kind;
+    u8 visKind;
     u16 id;
-    u16 val;
+    u32 val;
+    u16 visId;
+    u16 visVal;
     const u8 *name;
     const u8 *hint;
 };
@@ -31,6 +45,30 @@ struct TopazeJournalEntry
 
 #define NUM_SECTIONS ARRAY_COUNT(sJournalSections)
 #define NUM_ENTRIES  ARRAY_COUNT(sJournalEntries)
+
+static u8 CountBadges(void)
+{
+    u8 i, n = 0;
+
+    for (i = 0; i < 8; i++)
+    {
+        if (FlagGet(FLAG_BADGE01_GET + i))
+            n++;
+    }
+    return n;
+}
+
+static u32 EntryCurrent(const struct TopazeJournalEntry *e)
+{
+    switch (e->kind)
+    {
+    case JK_STAT:
+        return GetGameStat(e->id);
+    case JK_DEX:
+        return GetNationalPokedexCount(FLAG_GET_CAUGHT);
+    }
+    return 0;
+}
 
 bool8 TopazeJournalEntryDone(u16 entry)
 {
@@ -42,19 +80,68 @@ bool8 TopazeJournalEntryDone(u16 entry)
         return VarGet(e->id) >= e->val;
     case JK_TRAINER:
         return FlagGet(TRAINER_FLAGS_START + e->id);
+    case JK_STAT:
+    case JK_DEX:
+        return EntryCurrent(e) >= e->val;
     default:
         return FlagGet(e->id);
     }
 }
 
+// counters show "cur / target" while pending
+bool8 TopazeJournalEntryProgress(u16 entry, u32 *cur, u32 *target)
+{
+    const struct TopazeJournalEntry *e = &sJournalEntries[entry];
+
+    if (e->kind != JK_STAT && e->kind != JK_DEX)
+        return FALSE;
+    *cur = EntryCurrent(e);
+    if (*cur > e->val)
+        *cur = e->val;
+    *target = e->val;
+    return TRUE;
+}
+
+// spoiler guard: an objective only shows once the player has progressed far enough (or already did it)
+bool8 TopazeJournalEntryVisible(u16 entry)
+{
+    const struct TopazeJournalEntry *e = &sJournalEntries[entry];
+
+    if (TopazeJournalEntryDone(entry))
+        return TRUE;
+    switch (e->visKind)
+    {
+    case JV_BADGES:
+        return CountBadges() >= e->visVal;
+    case JV_FLAG:
+        return FlagGet(e->visId);
+    case JV_VAR:
+        return VarGet(e->visId) >= e->visVal;
+    case JV_PREV:
+        if (entry > 0 && TopazeJournalEntryDone(entry - 1))
+            return TRUE;
+        return e->visVal != 0 && CountBadges() >= e->visVal;
+    }
+    return TRUE;
+}
+
 u8 TopazeJournalGetSections(u8 *out)
 {
     u8 s, n = 0;
+    u16 i;
 
-    for (s = 0; s < NUM_SECTIONS; s++)
+    for (s = 0; s < NUM_SECTIONS && n < JOURNAL_MAX_SECTIONS; s++)
     {
-        if (sJournalSections[s].gate == 0 || FlagGet(sJournalSections[s].gate))
-            out[n++] = s;
+        if (sJournalSections[s].gate != 0 && !FlagGet(sJournalSections[s].gate))
+            continue;
+        for (i = 0; i < NUM_ENTRIES; i++)
+        {
+            if (sJournalEntries[i].section == s && TopazeJournalEntryVisible(i))
+            {
+                out[n++] = s;
+                break;
+            }
+        }
     }
     return n;
 }
@@ -72,7 +159,7 @@ void TopazeJournalCount(u8 section, u8 *done, u8 *total)
     *total = 0;
     for (i = 0; i < NUM_ENTRIES; i++)
     {
-        if (sJournalEntries[i].section != section)
+        if (sJournalEntries[i].section != section || !TopazeJournalEntryVisible(i))
             continue;
         (*total)++;
         if (TopazeJournalEntryDone(i))
@@ -87,7 +174,7 @@ u8 TopazeJournalGetEntries(u8 section, u16 *out)
 
     for (i = 0; i < NUM_ENTRIES && n < JOURNAL_MAX_ENTRIES; i++)
     {
-        if (sJournalEntries[i].section == section)
+        if (sJournalEntries[i].section == section && TopazeJournalEntryVisible(i))
             out[n++] = i;
     }
     return n;

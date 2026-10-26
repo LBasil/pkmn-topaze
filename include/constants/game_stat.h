@@ -53,8 +53,13 @@
 #define GAME_STAT_ENTERED_HOT_SPRINGS       49
 #define GAME_STAT_NUM_UNION_ROOM_BATTLES    50
 #define GAME_STAT_BERRY_CRUSH_POINTS        51
+#define GAME_STAT_SHINIES_SEEN              52 // Topaze: wild shiny met in battle
+#define GAME_STAT_SHINIES_CAUGHT            53 // Topaze
+#define GAME_STAT_CRITS_DEALT               54 // Topaze: critical hits landed by the player
+#define GAME_STAT_BATTLES_WON               55 // Topaze: wild + trainer battles won or ended by a capture
+#define GAME_STAT_TRAINERS_BEATEN           56 // Topaze
 
-#define NUM_USED_GAME_STATS                 52
+#define NUM_USED_GAME_STATS                 57
 #define NUM_GAME_STATS                      64
 
 #endif // GUARD_CONSTANTS_GAME_STAT_H

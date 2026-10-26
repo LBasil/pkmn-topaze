@@ -41,6 +41,8 @@
 #include "constants/hold_effects.h"
 #include "constants/items.h"
 #include "constants/moves.h"
+#include "overworld.h"
+#include "constants/game_stat.h"
 #include "constants/pokemon.h"
 #include "constants/songs.h"
 #include "constants/trainers.h"
@@ -2594,6 +2596,9 @@ static void BattleIntroPrepareBackgroundSlide(void)
 {
     if (gBattleControllerExecFlags == 0)
     {
+        // Topaze: JOURNAL counter (wild shiny met)
+        if (!(gBattleTypeFlags & (BATTLE_TYPE_TRAINER | BATTLE_TYPE_LINK)) && IsMonShiny(&gEnemyParty[0]))
+            IncrementGameStat(GAME_STAT_SHINIES_SEEN);
         gActiveBattler = GetBattlerAtPosition(0);
         BtlController_EmitIntroSlide(BUFFER_A, gBattleTerrain);
         MarkBattlerForControllerExec(gActiveBattler);
@@ -3949,6 +3954,20 @@ static void FreeResetData_ReturnToOvOrDoEvolutions(void)
 {
     if (!gPaletteFade.active)
     {
+        // Topaze: JOURNAL counters (battles won, trainers beaten, captures, shiny captures)
+        if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_BATTLE_TOWER | BATTLE_TYPE_TRAINER_TOWER | BATTLE_TYPE_EREADER_TRAINER | BATTLE_TYPE_OLD_MAN_TUTORIAL)))
+        {
+            if (gBattleOutcome == B_OUTCOME_WON || gBattleOutcome == B_OUTCOME_CAUGHT)
+                IncrementGameStat(GAME_STAT_BATTLES_WON);
+            if (gBattleOutcome == B_OUTCOME_WON && (gBattleTypeFlags & BATTLE_TYPE_TRAINER))
+                IncrementGameStat(GAME_STAT_TRAINERS_BEATEN);
+            if (gBattleOutcome == B_OUTCOME_CAUGHT)
+            {
+                IncrementGameStat(GAME_STAT_POKEMON_CAPTURES);
+                if (IsMonShiny(&gEnemyParty[0]))
+                    IncrementGameStat(GAME_STAT_SHINIES_CAUGHT);
+            }
+        }
         if (gBattleOutcome == B_OUTCOME_WON && !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_BATTLE_TOWER | BATTLE_TYPE_TRAINER_TOWER | BATTLE_TYPE_SAFARI)))
         {
             // Topaze: winning a battle makes the whole team a little fonder of you (x2 against trainers)

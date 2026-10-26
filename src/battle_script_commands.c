@@ -1944,6 +1944,8 @@ static void Cmd_critmessage(void)
         {
             PrepareStringBattle(STRINGID_CRITICALHIT, gBattlerAttacker);
             gBattleCommunication[MSG_DISPLAY] = 1;
+            if (GetBattlerSide(gBattlerAttacker) == B_SIDE_PLAYER && !(gBattleTypeFlags & BATTLE_TYPE_LINK))
+                IncrementGameStat(GAME_STAT_CRITS_DEALT); // Topaze: JOURNAL counter
         }
         gBattlescriptCurrInstr++;
     }
