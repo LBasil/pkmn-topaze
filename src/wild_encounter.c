@@ -848,7 +848,8 @@ static u16 sRadarList[8];
 #define RADAR_HUD_PAL   13
 #define RADAR_HUD_BASE  0x150
 
-static u8 sRadarHudWin = WINDOW_NONE;
+static u8 sRadarHudWin;
+static bool8 sRadarHudOn; // bss only: initialised statics are not allowed here
 
 static const struct WindowTemplate sRadarHudTemplate =
 {
@@ -867,17 +868,17 @@ static const s8 sRadarShakeX[] = { -1, 0, 1, 0 };
 
 void TopazeRadarHudReset(void)
 {
-    sRadarHudWin = WINDOW_NONE; // the overworld windows were rebuilt
+    sRadarHudOn = FALSE; // the overworld windows were rebuilt
 }
 
 static void TopazeRadarHudRemove(void)
 {
-    if (sRadarHudWin != WINDOW_NONE)
+    if (sRadarHudOn)
     {
         ClearWindowTilemap(sRadarHudWin);
         CopyWindowToVram(sRadarHudWin, COPYWIN_MAP);
         RemoveWindow(sRadarHudWin);
-        sRadarHudWin = WINDOW_NONE;
+        sRadarHudOn = FALSE;
     }
 }
 
@@ -891,11 +892,12 @@ static void TopazeRadarHudDraw(s16 px, s16 py)
     s16 ay = dy < 0 ? -dy : dy;
     s16 dist = ax > ay ? ax : ay;
 
-    if (sRadarHudWin == WINDOW_NONE)
+    if (!sRadarHudOn)
     {
         sRadarHudWin = AddWindow(&sRadarHudTemplate);
         if (sRadarHudWin == WINDOW_NONE)
             return;
+        sRadarHudOn = TRUE;
         LoadPalette(sRadarHudPal, BG_PLTT_ID(RADAR_HUD_PAL), sizeof(sRadarHudPal));
         PutWindowTilemap(sRadarHudWin);
     }
@@ -934,7 +936,7 @@ static void Task_RadarFx(u8 taskId)
         sprite->y2 = (data[0] & 8) ? 1 : 0;
     }
     PlayerGetDestCoords(&px, &py);
-    if (px != data[1] || py != data[2] || sRadarHudWin == WINDOW_NONE)
+    if (px != data[1] || py != data[2] || !sRadarHudOn)
     {
         data[1] = px;
         data[2] = py;
