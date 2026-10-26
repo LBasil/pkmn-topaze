@@ -1172,6 +1172,7 @@ extern const u8 EventScript_PC[];
 
 extern const u8 EventScript_RepelWoreOff[];
 extern const u8 EventScript_PokeRadar[];
+extern const u8 EventScript_Journal[];
 extern const u8 EventScript_EchoCompass[];
 extern const u8 EventScript_TopazeRadarContact[];
 extern const u8 EventScript_TopazeRadarFled[];

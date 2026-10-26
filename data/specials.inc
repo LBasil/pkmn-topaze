@@ -461,6 +461,10 @@ gSpecials::
 	def_special TopazeRepelNext
 	def_special TopazeRepelUse
 	def_special TopazeRadarBuildList
+	def_special TopazeJournalBuildSections
+	def_special TopazeJournalPickSection
+	def_special TopazeJournalBuildEntries
+	def_special TopazeJournalShowEntry
 	def_special TopazeRadarPrecheck
 	def_special TopazeRadarOpenScreen
 	def_special TopazeRadarStart
