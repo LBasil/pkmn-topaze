@@ -369,22 +369,10 @@ Text_PokeRadarFled::
 	.string "The wild {STR_VAR_1} noticed you\n"
 	.string "and ran away!$"
 
-@ Topaze: JOURNAL (Start menu). Sections -> objectives -> hint. B goes back one level.
+@ Topaze: JOURNAL (Start menu): full screen, see src/topaze_journal_screen.c
 EventScript_Journal::
 	lockall
-Journal_Sections::
-	special TopazeJournalBuildSections
-	multichoice 0, 0, MULTICHOICE_TOPAZE_JOURNAL, FALSE
-	goto_if_ge VAR_RESULT, 100, Journal_End
-	special TopazeJournalPickSection
-Journal_Entries::
-	special TopazeJournalBuildEntries
-	multichoice 0, 0, MULTICHOICE_TOPAZE_JOURNAL, FALSE
-	goto_if_ge VAR_RESULT, 100, Journal_Sections
-	special TopazeJournalShowEntry
-	msgbox gStringVar4, MSGBOX_DEFAULT
-	goto Journal_Entries
-
-Journal_End::
+	special TopazeJournalOpenScreen
+	waitstate
 	releaseall
 	end

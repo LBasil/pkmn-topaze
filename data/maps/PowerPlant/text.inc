@@ -38,3 +38,8 @@ PowerPlant_Text_Guard3Defeat::
 
 PowerPlant_Text_Guard3Post::
     .string "Go. Do not waste the lightning.$"
+
+PowerPlant_Text_ZapdosGuarded::
+    .string "Sparks crackle around ZAPDOS.\n"
+    .string "The four channelers still guard\l"
+    .string "it. They must all yield first.$"

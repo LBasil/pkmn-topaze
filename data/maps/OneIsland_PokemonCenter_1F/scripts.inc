@@ -6,8 +6,8 @@ OneIsland_PokemonCenter_1F_MapScripts::
 	.byte 0
 
 OneIsland_PokemonCenter_1F_OnLoad::
-	call_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 5, OneIsland_PokemonCenter_1F_EventScript_SetRubyMetatile
-	call_if_set FLAG_SYS_CAN_LINK_WITH_RS, OneIsland_PokemonCenter_1F_EventScript_SetNetworkMachineOn
+	call_if_set FLAG_TOPAZE_RUBY_GIVEN, OneIsland_PokemonCenter_1F_EventScript_SetRubyMetatile
+	call_if_set FLAG_TOPAZE_SAPPHIRE_GIVEN, OneIsland_PokemonCenter_1F_EventScript_SetNetworkMachineOn
 	end
 
 OneIsland_PokemonCenter_1F_EventScript_SetRubyMetatile::
@@ -125,7 +125,7 @@ OneIsland_PokemonCenter_1F_EventScript_MeetCelioScene::
 	waitmovement 0
 	applymovement LOCALID_CELIO, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
-	setflag FLAG_SYS_PC_STORAGE_DISABLED
+	clearflag FLAG_SYS_PC_STORAGE_DISABLED
 	setvar VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 1
 	releaseall
 	end
@@ -211,7 +211,7 @@ OneIsland_PokemonCenter_1F_EventScript_BillGoTakeStroll::
 OneIsland_PokemonCenter_1F_EventScript_Celio::
 	lock
 	faceplayer
-	goto_if_set FLAG_TOPAZE_COUNCIL, OneIsland_PokemonCenter_1F_EventScript_EchoCelio
+	goto_if_set FLAG_TOPAZE_COUNCIL, OneIsland_PokemonCenter_1F_EventScript_CelioGems
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 7, OneIsland_PokemonCenter_1F_EventScript_CelioGiveBillFact
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 6, OneIsland_PokemonCenter_1F_EventScript_CelioJustGivenSapphire
 	goto_if_set FLAG_RECOVERED_SAPPHIRE, OneIsland_PokemonCenter_1F_EventScript_GiveCelioSapphire
@@ -965,4 +965,66 @@ OneIsland_PokemonCenter_1F_EventScript_EchoPhone6::
 OneIsland_PokemonCenter_1F_EventScript_EchoPhone7::
 	msgbox OneIsland_PokemonCenter_1F_Text_EchoPhoneRing
 	goto OneIsland_PokemonCenter_1F_EventScript_Echo7Epilogue
+	end
+
+@ Topaze: CELIO takes the RUBY and the SAPPHIRE (post-game side quest), then goes on with the ECHO talk
+OneIsland_PokemonCenter_1F_EventScript_CelioGems::
+	goto_if_set FLAG_TOPAZE_RUBY_GIVEN, OneIsland_PokemonCenter_1F_EventScript_CelioGemsSapphire
+	checkitem ITEM_RUBY
+	goto_if_eq VAR_RESULT, TRUE, OneIsland_PokemonCenter_1F_EventScript_TopazeGiveRuby
+OneIsland_PokemonCenter_1F_EventScript_CelioGemsSapphire::
+	goto_if_set FLAG_TOPAZE_SAPPHIRE_GIVEN, OneIsland_PokemonCenter_1F_EventScript_EchoCelio
+	checkitem ITEM_SAPPHIRE
+	goto_if_eq VAR_RESULT, TRUE, OneIsland_PokemonCenter_1F_EventScript_TopazeGiveSapphire
+	goto OneIsland_PokemonCenter_1F_EventScript_EchoCelio
+
+OneIsland_PokemonCenter_1F_EventScript_TopazeGiveRuby::
+	msgbox OneIsland_PokemonCenter_1F_Text_OhThats
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playfanfare MUS_OBTAIN_TMHM
+	message OneIsland_PokemonCenter_1F_Text_HandedRubyToCelio
+	waitmessage
+	waitfanfare
+	call EventScript_RestorePrevTextColor
+	removeitem ITEM_RUBY
+	setflag FLAG_TOPAZE_RUBY_GIVEN
+	closemessage
+	applymovement LOCALID_CELIO, OneIsland_PokemonCenter_1F_Movement_CelioPutGemInMachine
+	waitmovement 0
+	playse SE_CLICK
+	call OneIsland_PokemonCenter_1F_EventScript_SetRubyMetatile
+	special DrawWholeMapView
+	delay 30
+	applymovement LOCALID_CELIO, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox OneIsland_PokemonCenter_1F_Text_TopazeRubyThanks
+	giveitem ITEM_RARE_CANDY, 5
+	msgbox OneIsland_PokemonCenter_1F_Text_TopazeNeedPair
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_TopazeGiveSapphire::
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	playfanfare MUS_OBTAIN_TMHM
+	message OneIsland_PokemonCenter_1F_Text_HandedSapphireToCelio
+	waitmessage
+	waitfanfare
+	call EventScript_RestorePrevTextColor
+	removeitem ITEM_SAPPHIRE
+	setflag FLAG_TOPAZE_SAPPHIRE_GIVEN
+	closemessage
+	applymovement LOCALID_CELIO, OneIsland_PokemonCenter_1F_Movement_CelioPutGemInMachine
+	waitmovement 0
+	playse SE_CLICK
+	call OneIsland_PokemonCenter_1F_EventScript_SetSapphireMetatile
+	special DrawWholeMapView
+	delay 40
+	playse SE_PC_ON
+	call OneIsland_PokemonCenter_1F_EventScript_SetNetworkMachineOn
+	special DrawWholeMapView
+	applymovement LOCALID_CELIO, Common_Movement_FacePlayer
+	waitmovement 0
+	msgbox OneIsland_PokemonCenter_1F_Text_TopazeSapphireThanks
+	giveitem ITEM_PP_MAX, 3
+	release
 	end

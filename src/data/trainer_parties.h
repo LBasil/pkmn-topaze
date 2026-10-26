@@ -8632,37 +8632,37 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BikerJaren[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt43[] = {
     {
-        .iv = 0,
-        .lvl = 41,
-        .species = SPECIES_CUBONE,
+        .iv = 40,
+        .lvl = 64,
+        .species = SPECIES_MAROWAK,
     },
     {
-        .iv = 0,
-        .lvl = 41,
-        .species = SPECIES_MAROWAK,
+        .iv = 40,
+        .lvl = 64,
+        .species = SPECIES_GOLEM,
     },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_TeamRocketGrunt44[] = {
     {
-        .iv = 0,
-        .lvl = 39,
-        .species = SPECIES_RATTATA,
-    },
-    {
-        .iv = 0,
-        .lvl = 39,
+        .iv = 40,
+        .lvl = 64,
         .species = SPECIES_RATICATE,
     },
     {
-        .iv = 0,
-        .lvl = 39,
-        .species = SPECIES_SANDSHREW,
+        .iv = 40,
+        .lvl = 64,
+        .species = SPECIES_SANDSLASH,
     },
     {
-        .iv = 0,
-        .lvl = 39,
-        .species = SPECIES_SANDSLASH,
+        .iv = 40,
+        .lvl = 64,
+        .species = SPECIES_DUGTRIO,
+    },
+    {
+        .iv = 40,
+        .lvl = 64,
+        .species = SPECIES_PERSIAN,
     },
 };
 

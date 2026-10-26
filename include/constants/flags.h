@@ -350,6 +350,8 @@
 #define FLAG_TOPAZE_MINE_3F_MAXREVIVE FLAG_0x12B // mine de Grenalux (post-game)
 #define FLAG_0x12C               0x12C
 #define FLAG_TOPAZE_MINE_3F_CALCIUM FLAG_0x12C // mine de Grenalux (post-game)
+#define FLAG_TOPAZE_RUBY_GIVEN     0x130 // Topaze: RUBY handed to CELIO (post-game)
+#define FLAG_TOPAZE_SAPPHIRE_GIVEN 0x131 // Topaze: SAPPHIRE handed to CELIO (post-game)
 #define FLAG_0x12D               0x12D
 #define FLAG_0x12E               0x12E
 #define FLAG_0x12F               0x12F

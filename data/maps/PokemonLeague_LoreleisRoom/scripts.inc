@@ -500,7 +500,14 @@ PokemonLeague_LoreleisRoom_EventScript_Interlude1::
 
 PokemonLeague_LoreleisRoom_EventScript_Interlude2::
 	special HealPlayerParty
+	goto_if_ne VAR_ECHO_STAGE, 0, PokemonLeague_LoreleisRoom_EventScript_Interlude2Known
 	msgbox PokemonLeague_LoreleisRoom_Text_Interlude2
+	goto PokemonLeague_LoreleisRoom_EventScript_Interlude2Gift
+	end
+
+PokemonLeague_LoreleisRoom_EventScript_Interlude2Known::
+	msgbox PokemonLeague_LoreleisRoom_Text_Interlude2Known
+PokemonLeague_LoreleisRoom_EventScript_Interlude2Gift::
 	giveitem ITEM_PP_MAX, 2
 	goto PokemonLeague_LoreleisRoom_EventScript_NextElder
 	end

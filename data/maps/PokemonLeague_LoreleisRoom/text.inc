@@ -352,6 +352,18 @@ PokemonLeague_LoreleisRoom_Text_Interlude2::
     .string "He has been listening for years.\p"
     .string "Here. A gift from the old guard.$"
 
+PokemonLeague_LoreleisRoom_Text_Interlude2Known::
+    .string "LORELEI: Four more. The word has\n"
+    .string "reached us: you are closing the\l"
+    .string "ECHOES, one after another.\p"
+    .string "SABRINA: I saw them in my visions\n"
+    .string "long before you set out.\p"
+    .string "BLAINE: Beasts, golems, and one that\n"
+    .string "travels through time. Quite a hunt!\p"
+    .string "GIOVANNI: BILL listened to them for\n"
+    .string "years. You are the one who answers.\p"
+    .string "Here. A gift from the old guard.$"
+
 PokemonLeague_LoreleisRoom_Text_Interlude3::
     .string "LANCE: A dragon's trust is earned,\n"
     .string "never commanded. The boss forgot.\p"

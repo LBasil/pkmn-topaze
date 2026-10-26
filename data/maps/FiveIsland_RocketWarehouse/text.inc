@@ -8,13 +8,13 @@ FiveIsland_RocketWarehouse_Text_PenUnlockedMonsFled::
 
 FiveIsland_RocketWarehouse_Text_Grunt2Intro::
     .string "Did you come here knowing it's\n"
-    .string "TEAM ONYBRIS's WAREHOUSE?$"
+    .string "TEAM ROCKET's WAREHOUSE?$"
 
 FiveIsland_RocketWarehouse_Text_Grunt2Defeat::
     .string "What do you think you're doing?!$"
 
 FiveIsland_RocketWarehouse_Text_Grunt2PostBattle::
-    .string "TEAM ONYBRIS broke up?\n"
+    .string "TEAM ROCKET broke up?\n"
     .string "What planet are you from?$"
 
 FiveIsland_RocketWarehouse_Text_Grunt1Intro::
@@ -73,7 +73,7 @@ FiveIsland_RocketWarehouse_Text_Admin2Intro::
     .string "That's quite enough of you \n"
     .string "playing the hero, kid.\p"
     .string "Spreading lies about how TEAM\n"
-    .string "ONYBRIS has disbanded…\p"
+    .string "ROCKET has disbanded…\p"
     .string "It's such an obvious attempt to\n"
     .string "cause confusion in our ranks.\p"
     .string "Fortunately, we're not so ignorant\n"
@@ -85,16 +85,16 @@ FiveIsland_RocketWarehouse_Text_Admin2Defeat::
     .string "Urgh…\n"
     .string "You were too strong…\p"
     .string "…\n"
-    .string "Th-that's GIOVANNI's BADGE!\p"
+    .string "Th-that's a CHAMPION's crest!\p"
     .string "So it's true?\n"
-    .string "TEAM ONYBRIS really has disbanded?$"
+    .string "TEAM ROCKET really has disbanded?$"
 
 FiveIsland_RocketWarehouse_Text_Admin2PostBattle::
     .string "We will abandon this WAREHOUSE…\p"
     .string "But don't think this is over.\n"
     .string "I won't let this be the end.\p"
     .string "I will find GIOVANNI.\n"
-    .string "And I will resurrect TEAM ONYBRIS!\l"
+    .string "And I will resurrect TEAM ROCKET!\l"
     .string "I will…\p"
     .string "Until then, farewell!$"
 

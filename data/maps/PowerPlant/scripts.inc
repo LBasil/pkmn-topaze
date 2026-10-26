@@ -57,6 +57,10 @@ PowerPlant_EventScript_Zapdos::
 	goto_if_questlog EventScript_ReleaseEnd
 	special QuestLog_CutRecording
 	lock
+	goto_if_not_defeated TRAINER_CHANNELER_1, PowerPlant_EventScript_ZapdosGuarded
+	goto_if_not_defeated TRAINER_CHANNELER_2, PowerPlant_EventScript_ZapdosGuarded
+	goto_if_not_defeated TRAINER_CHANNELER_3, PowerPlant_EventScript_ZapdosGuarded
+	goto_if_not_defeated TRAINER_CHANNELER_4, PowerPlant_EventScript_ZapdosGuarded
 	faceplayer
 	setwildbattle SPECIES_ZAPDOS, 0
 	waitse
@@ -194,4 +198,9 @@ PowerPlant_Guard3_Vanish::
 	setflag FLAG_0x147
 	removeobject VAR_LAST_TALKED
 	releaseall
+	end
+
+PowerPlant_EventScript_ZapdosGuarded::
+	msgbox PowerPlant_Text_ZapdosGuarded, MSGBOX_DEFAULT
+	release
 	end

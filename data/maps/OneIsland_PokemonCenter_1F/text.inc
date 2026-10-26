@@ -523,3 +523,22 @@ OneIsland_PokemonCenter_1F_Text_Echo7Epilogue::
 OneIsland_PokemonCenter_1F_Text_EchoPhoneRing::
     .string "The COMPASS buzzes in your bag.\n"
     .string "Someone is calling through it!$"
+
+OneIsland_PokemonCenter_1F_Text_TopazeRubyThanks::
+    .string "CELIO: The RUBY fits the NETWORK\n"
+    .string "MACHINE perfectly!\p"
+    .string "It hums… but it needs a pair to\n"
+    .string "run. A gem of the opposite kind.\p"
+    .string "Take these for your trouble.$"
+
+OneIsland_PokemonCenter_1F_Text_TopazeNeedPair::
+    .string "CELIO: The SAPPHIRE is somewhere\n"
+    .string "in the DOTTED HOLE, SIX ISLAND.\p"
+    .string "Old thieves hide there. Be careful!$"
+
+OneIsland_PokemonCenter_1F_Text_TopazeSapphireThanks::
+    .string "CELIO: The pair is complete!\n"
+    .string "The NETWORK MACHINE is running!\p"
+    .string "I am linked with trainers far\n"
+    .string "away. This is all thanks to you.\p"
+    .string "Please, take this as thanks.$"
