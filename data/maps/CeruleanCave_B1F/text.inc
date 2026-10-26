@@ -3,14 +3,20 @@ CeruleanCave_B1F_Text_Mew::
 
 
 CeruleanCave_B1F_Text_RedIntro::
-    .string "...$"
+    .string "BASIL: ...So you made it down here.\p"
+    .string "I waited next to MEWTWO for a fight\n"
+    .string "worth the walk.\p"
+    .string "No speeches. My team does the\n"
+    .string "talking.$"
 
 CeruleanCave_B1F_Text_RedDefeat::
-    .string "...!$"
+    .string "BASIL: ...Ha! That is the fight\n"
+    .string "I was waiting for.$"
 
 CeruleanCave_B1F_Text_RedAfter::
-    .string "...\p"
-    .string "RED tips his cap, and smiles.$"
+    .string "BASIL: Look after them. And look\n"
+    .string "after the world they live in.\p"
+    .string "BASIL smiles and walks out.$"
 
 CeruleanCave_B1F_Text_Epilogue::
     .string "Some time later, at a quiet harbor,\n"

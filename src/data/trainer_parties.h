@@ -8227,36 +8227,43 @@ static const struct TrainerMonNoItemDefaultMoves sParty_HikerFranklin2[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_PkmnProfProfOak[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_PlayerBrendan[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_PlayerMay[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_PlayerRed[] = {
+// Topaze: BASIL (secret post-game trainer in the CERULEAN CAVE, replaces the old RED slot)
+static const struct TrainerMonNoItemCustomMoves sParty_PlayerRed[] = {
     {
         .iv = 255,
-        .lvl = 78,
-        .species = SPECIES_PIKACHU,
+        .lvl = 90,
+        .species = SPECIES_GENGAR,
+        .moves = {MOVE_SHADOW_BALL, MOVE_SLUDGE_BOMB, MOVE_THUNDERBOLT, MOVE_DESTINY_BOND},
     },
     {
         .iv = 255,
-        .lvl = 76,
-        .species = SPECIES_LAPRAS,
+        .lvl = 88,
+        .species = SPECIES_ARCANINE,
+        .moves = {MOVE_FLAMETHROWER, MOVE_EXTREME_SPEED, MOVE_CRUNCH, MOVE_IRON_TAIL},
     },
     {
         .iv = 255,
-        .lvl = 76,
-        .species = SPECIES_SNORLAX,
+        .lvl = 89,
+        .species = SPECIES_DRAGONITE,
+        .moves = {MOVE_DRAGON_CLAW, MOVE_EARTHQUAKE, MOVE_FIRE_PUNCH, MOVE_AERIAL_ACE},
     },
     {
         .iv = 255,
-        .lvl = 80,
+        .lvl = 88,
+        .species = SPECIES_GYARADOS,
+        .moves = {MOVE_WATERFALL, MOVE_EARTHQUAKE, MOVE_ICE_BEAM, MOVE_DRAGON_DANCE},
+    },
+    {
+        .iv = 255,
+        .lvl = 88,
+        .species = SPECIES_ALAKAZAM,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_FOCUS_BLAST, MOVE_RECOVER},
+    },
+    {
+        .iv = 255,
+        .lvl = 88,
         .species = SPECIES_VENUSAUR,
-    },
-    {
-        .iv = 255,
-        .lvl = 80,
-        .species = SPECIES_CHARIZARD,
-    },
-    {
-        .iv = 255,
-        .lvl = 82,
-        .species = SPECIES_BLASTOISE,
+        .moves = {MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_SLEEP_POWDER, MOVE_EARTHQUAKE},
     },
 };
 static const struct TrainerMonNoItemDefaultMoves sParty_PlayerLeaf[] = {

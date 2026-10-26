@@ -86,7 +86,7 @@ Route22_Text_StrangerDefeat::
 Route22_Text_StrangerPostBattle::
     .string "Thank you.\p"
     .string "If you want a last test, there is\n"
-    .string "a TRAINER waiting in the cave\l"
-    .string "where MEWTWO sleeps.\p"
-    .string "He has not said a word in years.\n"
-    .string "He does not need to.$"
+    .string "a TRAINER named BASIL waiting\l"
+    .string "in the cave where MEWTWO sleeps.\p"
+    .string "Whatever you have learned on this\n"
+    .string "road, you will need all of it.$"
