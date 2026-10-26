@@ -256,7 +256,7 @@ static const u8 sJH_120[] = _("The POWER PLANT, ROUTE 10. Four\nchannelers ring 
 static const u8 sJN_121[] = _("MOLTRES");
 static const u8 sJH_121[] = _("MT. EMBER summit, ONE ISLAND.\nNeeds ROCK SMASH and STRENGTH.");
 static const u8 sJN_122[] = _("MEWTWO");
-static const u8 sJH_122[] = _("CERULEAN CAVE (TOURMALIA), the\nvery bottom.");
+static const u8 sJH_122[] = _("TOURMALIA: follow the sand path in\nthe NW forest to a hollow trunk.\nCERULEAN CAVE, to the very bottom.");
 static const u8 sJN_123[] = _("MEW");
 static const u8 sJH_123[] = _("A strange truck is parked near the\nAPATIA docks.");
 
