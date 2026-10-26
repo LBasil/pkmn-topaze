@@ -350,11 +350,11 @@
 #define FLAG_TOPAZE_MINE_3F_MAXREVIVE FLAG_0x12B // mine de Grenalux (post-game)
 #define FLAG_0x12C               0x12C
 #define FLAG_TOPAZE_MINE_3F_CALCIUM FLAG_0x12C // mine de Grenalux (post-game)
-#define FLAG_TOPAZE_RUBY_GIVEN     0x130 // Topaze: RUBY handed to CELIO (post-game)
-#define FLAG_TOPAZE_SAPPHIRE_GIVEN 0x131 // Topaze: SAPPHIRE handed to CELIO (post-game)
-#define FLAG_0x12D               0x12D
-#define FLAG_0x12E               0x12E
-#define FLAG_0x12F               0x12F
+#define FLAG_TOPAZE_RUBY_GIVEN     0x151 // Topaze: RUBY handed to CELIO (post-game)
+#define FLAG_TOPAZE_SAPPHIRE_GIVEN 0x152 // Topaze: SAPPHIRE handed to CELIO (post-game)
+#define FLAG_TOPAZE_ALTCAVE_1 0x12D // Topaze: Altering Cave item
+#define FLAG_TOPAZE_ALTCAVE_2 0x12E // Topaze: Altering Cave item
+#define FLAG_TOPAZE_ALTCAVE_3 0x12F // Topaze: Altering Cave item
 #define FLAG_ECHO1_SPARK_DONE1 0x130 // Topaze: Echo 1 etincelles
 #define FLAG_ECHO1_SPARK_DONE2 0x131 // Topaze: Echo 1 etincelles
 #define FLAG_ECHO1_SPARK_DONE3 0x132 // Topaze: Echo 1 etincelles
@@ -388,8 +388,6 @@
 #define FLAG_0x14E               0x14E
 #define FLAG_0x14F               0x14F
 #define FLAG_0x150               0x150
-#define FLAG_0x151               0x151
-#define FLAG_0x152               0x152
 #define FLAG_0x153               0x153
 
 // Item ball hide/show
