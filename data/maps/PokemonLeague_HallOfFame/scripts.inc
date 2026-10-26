@@ -73,7 +73,6 @@ PokemonLeague_HallOfFame_EventScript_WishLetGo::
 	setvar VAR_TOPAZE_ENDING, 1
 	setflag FLAG_TOPAZE_COUNCIL
 	setflag FLAG_TOPAZE_POSTGAME
-	clearflag FLAG_HIDE_POSTGAME_STRANGER
 	msgbox PokemonLeague_HallOfFame_Text_EndingLetGo
 	closemessage
 	return

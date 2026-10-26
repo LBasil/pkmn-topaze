@@ -219,46 +219,48 @@ static const u8 sJN_102[] = _("ROCKET WAREHOUSE");
 static const u8 sJH_102[] = _("MEADOW (FIVE ISLAND): use password\nat the warehouse door, clear it\nand win back the SAPPHIRE.");
 static const u8 sJN_103[] = _("THE SAPPHIRE");
 static const u8 sJH_103[] = _("Give the SAPPHIRE to CELIO (ONE\nISLAND) to start the NETWORK\nMACHINE.");
-static const u8 sJN_104[] = _("RAIKOU");
-static const u8 sJH_104[] = _("RAIKOU. Go north of the town on\nONE ISLAND: KINDLE ROAD.\nEach ECHO opens after the last one.");
-static const u8 sJN_105[] = _("ENTEI");
-static const u8 sJH_105[] = _("ENTEI. Go to CAPE BRINK on\nTWO ISLAND.\nEach ECHO opens after the last one.");
-static const u8 sJN_106[] = _("SUICUNE");
-static const u8 sJH_106[] = _("SUICUNE. Cross the BOND BRIDGE\non THREE ISLAND.\nEach ECHO opens after the last one.");
-static const u8 sJN_107[] = _("REGICE");
-static const u8 sJH_107[] = _("REGICE. ICEFALL CAVE on FOUR\nISLAND, to the very back.\nEach ECHO opens after the last one.");
-static const u8 sJN_108[] = _("REGISTEEL");
-static const u8 sJH_108[] = _("REGISTEEL. The MEADOW on\nFIVE ISLAND.\nEach ECHO opens after the last one.");
-static const u8 sJN_109[] = _("REGIROCK");
-static const u8 sJH_109[] = _("REGIROCK. RUIN VALLEY on\nSIX ISLAND.\nEach ECHO opens after the last one.");
-static const u8 sJN_110[] = _("CELEBI");
-static const u8 sJH_110[] = _("CELEBI. SEVAULT CANYON on\nSEVEN ISLAND (the mossy cave).\nEach ECHO opens after the last one.");
-static const u8 sJN_111[] = _("THE SUMMIT");
-static const u8 sJH_111[] = _("SEVAULT CANYON, SEVEN ISLAND:\nclimb to the north cave, to the top\nSILVER and GIOVANNI wait there.");
-static const u8 sJN_112[] = _("KYOGRE");
-static const u8 sJH_112[] = _("KYOGRE rests in the legends cave,\nat the top of SEVAULT CANYON.");
-static const u8 sJN_113[] = _("GROUDON");
-static const u8 sJH_113[] = _("GROUDON rests in the legends cave,\nat the top of SEVAULT CANYON.");
-static const u8 sJN_114[] = _("RAYQUAZA");
-static const u8 sJH_114[] = _("RAYQUAZA rests in the legends cave,\nat the top of SEVAULT CANYON.");
-static const u8 sJN_115[] = _("LATIAS");
-static const u8 sJH_115[] = _("LATIAS rests in the legends cave,\nat the top of SEVAULT CANYON.");
-static const u8 sJN_116[] = _("LATIOS");
-static const u8 sJH_116[] = _("LATIOS rests in the legends cave,\nat the top of SEVAULT CANYON.");
-static const u8 sJN_117[] = _("JIRACHI");
-static const u8 sJH_117[] = _("JIRACHI rests in the legends cave,\nat the top of SEVAULT CANYON.");
-static const u8 sJN_118[] = _("RED, THE SUMMIT");
-static const u8 sJH_118[] = _("RED trains at the very top of the\nSEVAULT summit. Talk to him for a\n1-on-1: the hardest fight of all.");
-static const u8 sJN_119[] = _("ARTICUNO");
-static const u8 sJH_119[] = _("It sleeps in a quartz clearing\nbehind a tree near BOURG QUARTZ.");
-static const u8 sJN_120[] = _("ZAPDOS");
-static const u8 sJH_120[] = _("The POWER PLANT, ROUTE 10. Four\nchannelers ring it: beat them all.");
-static const u8 sJN_121[] = _("MOLTRES");
-static const u8 sJH_121[] = _("MT. EMBER summit, ONE ISLAND.\nNeeds ROCK SMASH and STRENGTH.");
-static const u8 sJN_122[] = _("MEWTWO");
-static const u8 sJH_122[] = _("TOURMALIA: follow the sand path in\nthe NW forest to a hollow trunk.\nCERULEAN CAVE, to the very bottom.");
-static const u8 sJN_123[] = _("MEW");
-static const u8 sJH_123[] = _("A strange truck is parked near the\nAPATIA docks.");
+static const u8 sJN_104[] = _("THE FINAL TEST");
+static const u8 sJH_104[] = _("BASIL waits beside MEWTWO, deep in\nCERULEAN CAVE. The hardest 1-on-1.");
+static const u8 sJN_105[] = _("RAIKOU");
+static const u8 sJH_105[] = _("RAIKOU. Go north of the town on\nONE ISLAND: KINDLE ROAD.\nEach ECHO opens after the last one.");
+static const u8 sJN_106[] = _("ENTEI");
+static const u8 sJH_106[] = _("ENTEI. Go to CAPE BRINK on\nTWO ISLAND.\nEach ECHO opens after the last one.");
+static const u8 sJN_107[] = _("SUICUNE");
+static const u8 sJH_107[] = _("SUICUNE. Cross the BOND BRIDGE\non THREE ISLAND.\nEach ECHO opens after the last one.");
+static const u8 sJN_108[] = _("REGICE");
+static const u8 sJH_108[] = _("REGICE. ICEFALL CAVE on FOUR\nISLAND, to the very back.\nEach ECHO opens after the last one.");
+static const u8 sJN_109[] = _("REGISTEEL");
+static const u8 sJH_109[] = _("REGISTEEL. The MEADOW on\nFIVE ISLAND.\nEach ECHO opens after the last one.");
+static const u8 sJN_110[] = _("REGIROCK");
+static const u8 sJH_110[] = _("REGIROCK. RUIN VALLEY on\nSIX ISLAND.\nEach ECHO opens after the last one.");
+static const u8 sJN_111[] = _("CELEBI");
+static const u8 sJH_111[] = _("CELEBI. SEVAULT CANYON on\nSEVEN ISLAND (the mossy cave).\nEach ECHO opens after the last one.");
+static const u8 sJN_112[] = _("THE SUMMIT");
+static const u8 sJH_112[] = _("SEVAULT CANYON, SEVEN ISLAND:\nclimb to the north cave, to the top\nSILVER and GIOVANNI wait there.");
+static const u8 sJN_113[] = _("KYOGRE");
+static const u8 sJH_113[] = _("KYOGRE rests in the legends cave,\nat the top of SEVAULT CANYON.");
+static const u8 sJN_114[] = _("GROUDON");
+static const u8 sJH_114[] = _("GROUDON rests in the legends cave,\nat the top of SEVAULT CANYON.");
+static const u8 sJN_115[] = _("RAYQUAZA");
+static const u8 sJH_115[] = _("RAYQUAZA rests in the legends cave,\nat the top of SEVAULT CANYON.");
+static const u8 sJN_116[] = _("LATIAS");
+static const u8 sJH_116[] = _("LATIAS rests in the legends cave,\nat the top of SEVAULT CANYON.");
+static const u8 sJN_117[] = _("LATIOS");
+static const u8 sJH_117[] = _("LATIOS rests in the legends cave,\nat the top of SEVAULT CANYON.");
+static const u8 sJN_118[] = _("JIRACHI");
+static const u8 sJH_118[] = _("JIRACHI rests in the legends cave,\nat the top of SEVAULT CANYON.");
+static const u8 sJN_119[] = _("RED, THE SUMMIT");
+static const u8 sJH_119[] = _("RED trains at the very top of the\nSEVAULT summit. Talk to him for a\n1-on-1: the hardest fight of all.");
+static const u8 sJN_120[] = _("ARTICUNO");
+static const u8 sJH_120[] = _("It sleeps in a quartz clearing\nbehind a tree near BOURG QUARTZ.");
+static const u8 sJN_121[] = _("ZAPDOS");
+static const u8 sJH_121[] = _("The POWER PLANT, ROUTE 10. Four\nchannelers ring it: beat them all.");
+static const u8 sJN_122[] = _("MOLTRES");
+static const u8 sJH_122[] = _("MT. EMBER summit, ONE ISLAND.\nNeeds ROCK SMASH and STRENGTH.");
+static const u8 sJN_123[] = _("MEWTWO");
+static const u8 sJH_123[] = _("TOURMALIA: follow the sand path in\nthe NW forest to a hollow trunk.\nCERULEAN CAVE, to the very bottom.");
+static const u8 sJN_124[] = _("MEW");
+static const u8 sJH_124[] = _("A strange truck is parked near the\nAPATIA docks.");
 
 static const struct TopazeJournalSection sJournalSections[] = {
     { sJS_0, 0 },
@@ -379,24 +381,25 @@ static const struct TopazeJournalEntry sJournalEntries[] = {
     { 7, 0, 4, FLAG_LEARNED_YES_NAH_CHANSEY, 0, 0, 0, 0, 0, 0, sJN_101, sJH_101 },
     { 7, 0, 4, FLAG_DEFEATED_ROCKETS_IN_WAREHOUSE, 0, 0, 0, 0, 0, 0, sJN_102, sJH_102 },
     { 7, 0, 4, FLAG_TOPAZE_SAPPHIRE_GIVEN, 0, 0, 0, 0, 0, 0, sJN_103, sJH_103 },
-    { 8, 0, 0, FLAG_ECHO_BEAST_DONE, 0, 0, 0, 1, 0, 0, sJN_104, sJH_104 },
-    { 8, 0, 4, FLAG_ECHO_BEAST2_DONE, 0, 0, 0, 1, 0, 0, sJN_105, sJH_105 },
-    { 8, 0, 4, FLAG_ECHO_BEAST3_DONE, 0, 0, 0, 1, 0, 0, sJN_106, sJH_106 },
-    { 8, 0, 4, FLAG_ECHO_BEAST4_DONE, 0, 0, 0, 1, 0, 0, sJN_107, sJH_107 },
-    { 8, 0, 4, FLAG_ECHO_BEAST5_DONE, 0, 0, 0, 1, 0, 0, sJN_108, sJH_108 },
-    { 8, 0, 4, FLAG_ECHO_BEAST6_DONE, 0, 0, 0, 1, 0, 0, sJN_109, sJH_109 },
-    { 8, 0, 4, FLAG_DONE_ECHO_CELEBI, 0, 0, 0, 1, 0, 0, sJN_110, sJH_110 },
-    { 8, 1, 4, VAR_ECHO_STAGE, 22, 0, 0, 0, 0, 0, sJN_111, sJH_111 },
-    { 9, 0, 3, FLAG_DONE_ECHO_KYOGRE, 0, VAR_ECHO_STAGE, 22, 0, 0, 0, sJN_112, sJH_112 },
-    { 9, 0, 3, FLAG_DONE_ECHO_GROUDON, 0, VAR_ECHO_STAGE, 22, 0, 0, 0, sJN_113, sJH_113 },
-    { 9, 0, 3, FLAG_DONE_ECHO_RAYQUAZA, 0, VAR_ECHO_STAGE, 22, 0, 0, 0, sJN_114, sJH_114 },
-    { 9, 0, 3, FLAG_DONE_ECHO_LATIAS, 0, VAR_ECHO_STAGE, 22, 0, 0, 0, sJN_115, sJH_115 },
-    { 9, 0, 3, FLAG_DONE_ECHO_LATIOS, 0, VAR_ECHO_STAGE, 22, 0, 0, 0, sJN_116, sJH_116 },
-    { 9, 0, 3, FLAG_DONE_ECHO_JIRACHI, 0, VAR_ECHO_STAGE, 22, 0, 0, 0, sJN_117, sJH_117 },
-    { 9, 2, 3, TRAINER_BIKER_1, 0, VAR_ECHO_STAGE, 22, 0, 0, 0, sJN_118, sJH_118 },
-    { 10, 0, 1, FLAG_FOUGHT_ARTICUNO, 0, 0, 4, 0, 0, 0, sJN_119, sJH_119 },
-    { 10, 0, 1, FLAG_FOUGHT_ZAPDOS, 0, 0, 5, 0, 0, 0, sJN_120, sJH_120 },
-    { 10, 0, 2, FLAG_FOUGHT_MOLTRES, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_121, sJH_121 },
-    { 10, 0, 1, FLAG_FOUGHT_MEWTWO, 0, 0, 7, 0, 0, 0, sJN_122, sJH_122 },
-    { 10, 0, 2, FLAG_FOUGHT_MEW_TRUCK, 0, FLAG_SYS_GAME_CLEAR, 0, 0, 0, 0, sJN_123, sJH_123 },
+    { 7, 0, 3, FLAG_POSTGAME_DONE, 0, VAR_ECHO_STAGE, 22, 0, 0, 0, sJN_104, sJH_104 },
+    { 8, 0, 0, FLAG_ECHO_BEAST_DONE, 0, 0, 0, 1, 0, 0, sJN_105, sJH_105 },
+    { 8, 0, 4, FLAG_ECHO_BEAST2_DONE, 0, 0, 0, 1, 0, 0, sJN_106, sJH_106 },
+    { 8, 0, 4, FLAG_ECHO_BEAST3_DONE, 0, 0, 0, 1, 0, 0, sJN_107, sJH_107 },
+    { 8, 0, 4, FLAG_ECHO_BEAST4_DONE, 0, 0, 0, 1, 0, 0, sJN_108, sJH_108 },
+    { 8, 0, 4, FLAG_ECHO_BEAST5_DONE, 0, 0, 0, 1, 0, 0, sJN_109, sJH_109 },
+    { 8, 0, 4, FLAG_ECHO_BEAST6_DONE, 0, 0, 0, 1, 0, 0, sJN_110, sJH_110 },
+    { 8, 0, 4, FLAG_DONE_ECHO_CELEBI, 0, 0, 0, 1, 0, 0, sJN_111, sJH_111 },
+    { 8, 1, 4, VAR_ECHO_STAGE, 22, 0, 0, 0, 0, 0, sJN_112, sJH_112 },
+    { 9, 0, 3, FLAG_DONE_ECHO_KYOGRE, 0, VAR_ECHO_STAGE, 22, 0, 0, 0, sJN_113, sJH_113 },
+    { 9, 0, 3, FLAG_DONE_ECHO_GROUDON, 0, VAR_ECHO_STAGE, 22, 0, 0, 0, sJN_114, sJH_114 },
+    { 9, 0, 3, FLAG_DONE_ECHO_RAYQUAZA, 0, VAR_ECHO_STAGE, 22, 0, 0, 0, sJN_115, sJH_115 },
+    { 9, 0, 3, FLAG_DONE_ECHO_LATIAS, 0, VAR_ECHO_STAGE, 22, 0, 0, 0, sJN_116, sJH_116 },
+    { 9, 0, 3, FLAG_DONE_ECHO_LATIOS, 0, VAR_ECHO_STAGE, 22, 0, 0, 0, sJN_117, sJH_117 },
+    { 9, 0, 3, FLAG_DONE_ECHO_JIRACHI, 0, VAR_ECHO_STAGE, 22, 0, 0, 0, sJN_118, sJH_118 },
+    { 9, 2, 3, TRAINER_BIKER_1, 0, VAR_ECHO_STAGE, 22, 0, 0, 0, sJN_119, sJH_119 },
+    { 10, 0, 1, FLAG_FOUGHT_ARTICUNO, 0, 0, 4, 0, 0, 0, sJN_120, sJH_120 },
+    { 10, 0, 1, FLAG_FOUGHT_ZAPDOS, 0, 0, 5, 0, 0, 0, sJN_121, sJH_121 },
+    { 10, 0, 2, FLAG_FOUGHT_MOLTRES, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_122, sJH_122 },
+    { 10, 0, 1, FLAG_FOUGHT_MEWTWO, 0, 0, 7, 0, 0, 0, sJN_123, sJH_123 },
+    { 10, 0, 2, FLAG_FOUGHT_MEW_TRUCK, 0, FLAG_SYS_GAME_CLEAR, 0, 0, 0, 0, sJN_124, sJH_124 },
 };

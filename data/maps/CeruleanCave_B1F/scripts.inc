@@ -15,7 +15,14 @@ CeruleanCave_B1F_EventScript_TryRemoveMewtwo::
 
 CeruleanCave_B1F_OnTransition::
 	call_if_unset FLAG_FOUGHT_MEWTWO, CeruleanCave_B1F_EventScript_ShowMewtwo
+	call_if_ge VAR_ECHO_STAGE, 22, CeruleanCave_B1F_EventScript_ShowBasil
 	end
+
+@ Topaze: BASIL waits beside MEWTWO once the SEVAULT summit is cleared (until beaten)
+CeruleanCave_B1F_EventScript_ShowBasil::
+	goto_if_set FLAG_POSTGAME_DONE, EventScript_Return
+	clearflag FLAG_HIDE_POSTGAME_RED
+	return
 
 CeruleanCave_B1F_EventScript_ShowMewtwo::
 	clearflag FLAG_HIDE_MEWTWO
