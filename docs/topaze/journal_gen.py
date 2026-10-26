@@ -157,7 +157,7 @@ add("LEGENDS", T, "TRAINER_BIKER_1", 0, "RED, THE SUMMIT", "RED trains at the ve
 add("RARE POKéMON", F, "FLAG_FOUGHT_ARTICUNO", 0, "ARTICUNO", "It sleeps in a quartz clearing\\nbehind a tree near BOURG QUARTZ.", B(4))
 add("RARE POKéMON", F, "FLAG_FOUGHT_ZAPDOS", 0, "ZAPDOS", "The POWER PLANT, ROUTE 10. Four\\nchannelers ring it: beat them all.", B(5))
 add("RARE POKéMON", F, "FLAG_FOUGHT_MOLTRES", 0, "MOLTRES", "MT. EMBER summit, ONE ISLAND.\\nNeeds ROCK SMASH and STRENGTH.", FL("FLAG_TOPAZE_POSTGAME"))
-add("RARE POKéMON", F, "FLAG_FOUGHT_MEWTWO", 0, "MEWTWO", "CERULEAN CAVE (TOURMALIA), the\\nvery bottom.", B(7))
+add("RARE POKéMON", F, "FLAG_FOUGHT_MEWTWO", 0, "MEWTWO", "TOURMALIA: follow the sand path in\\nthe far NW forest to a hollow trunk.\\nCERULEAN CAVE, to the very bottom.", B(7))
 add("RARE POKéMON", F, "FLAG_FOUGHT_MEW_TRUCK", 0, "MEW", "A strange truck is parked near the\\nAPATIA docks.", FL("FLAG_SYS_GAME_CLEAR"))
 
 # une etape finie implique les precedentes de la meme chaine (sauts de scenes, anciennes sauvegardes)
