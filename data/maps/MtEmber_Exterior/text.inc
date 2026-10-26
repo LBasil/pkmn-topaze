@@ -74,8 +74,8 @@ MtEmber_Exterior_Text_SnoopsBeenListeningIn::
     .string "This snoop's been listening in!$"
 
 MtEmber_Exterior_Text_Grunt1Intro::
-    .string "You've been eavesdropping on us,\n"
-    .string "haven't you?$"
+    .string "The boss lost, but nobody told\n"
+    .string "us to leave. Scram!$"
 
 MtEmber_Exterior_Text_Grunt1Defeat::
     .string "Huh, what?$"
@@ -84,8 +84,8 @@ MtEmber_Exterior_Text_Grunt1PostBattle::
     .string "Why'd you have to win?$"
 
 MtEmber_Exterior_Text_Grunt2Intro::
-    .string "Trying to horn in on our treasure?\n"
-    .string "Don't bet on it!$"
+    .string "Our treasure is under that cave.\n"
+    .string "Over my dead RATTATA!$"
 
 MtEmber_Exterior_Text_Grunt2Defeat::
     .string "Wait!\n"

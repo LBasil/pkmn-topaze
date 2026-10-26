@@ -41,6 +41,7 @@ add(2, F, "FLAG_TOPAZE_LEDGER_CELADON", 0, "QUARTZ LEDGER", "Find the account bo
 add(3, V, "VAR_ELDERS_ROUND", 13, "COUNCIL OF ELDERS", "At the LEAGUE: 20 veterans wait in\\nthe first hall. Beat them all.")
 add(3, F, "FLAG_TOPAZE_GOT_TICKETS", 0, "FERRY TICKETS", "Talk to the sailor at the ferry\\nin APATIA for the old tickets.")
 add(3, F, "FLAG_GOT_HM06", 0, "ROCK SMASH", "The man in the EMBER SPA (KINDLE\\nROAD, ONE ISLAND) gives ROCK SMASH.")
+add(3, T, "TRAINER_TEAM_ROCKET_GRUNT_44", 0, "MT. EMBER GUARDS", "Two ONYBRIS guards watch the ruby\\ncave at MT. EMBER (ONE ISLAND).")
 add(3, F, "FLAG_LEARNED_YES_NAH_CHANSEY", 0, "CHANSEY PASSWORD", "In the DOTTED HOLE (SIX ISLAND),\\nreach the SAPPHIRE room: a thief\\nreveals the warehouse password.")
 add(3, F, "FLAG_DEFEATED_ROCKETS_IN_WAREHOUSE", 0, "ROCKET WAREHOUSE", "MEADOW (FIVE ISLAND): use password\\nat the warehouse door, clear it.")
 # 4 ECHOES

@@ -15,6 +15,7 @@ MtEmber_Exterior_EventScript_RocketsFaceDown::
 
 MtEmber_Exterior_OnLoad::
 	call_if_ge VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 4, MtEmber_Exterior_EventScript_OpenCave
+	call_if_set FLAG_TOPAZE_POSTGAME, MtEmber_Exterior_EventScript_OpenCave
 	end
 
 MtEmber_Exterior_EventScript_OpenCave::
@@ -25,6 +26,7 @@ MtEmber_Exterior_EventScript_Grunt1::
 	lock
 	goto_if_defeated TRAINER_TEAM_ROCKET_GRUNT_43, MtEmber_Exterior_EventScript_Grunt1Defeated
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 4, MtEmber_Exterior_EventScript_BattleGrunt1
+	goto_if_set FLAG_TOPAZE_POSTGAME, MtEmber_Exterior_EventScript_BattleGrunt1
 	msgbox MtEmber_Exterior_Text_WellTryDiggingHere
 	release
 	end
@@ -60,6 +62,7 @@ MtEmber_Exterior_EventScript_Grunt2::
 	faceplayer
 	goto_if_defeated TRAINER_TEAM_ROCKET_GRUNT_44, MtEmber_Exterior_EventScript_DefeatedGrunt2
 	goto_if_eq VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F, 4, MtEmber_Exterior_EventScript_BattleGrunt2
+	goto_if_set FLAG_TOPAZE_POSTGAME, MtEmber_Exterior_EventScript_BattleGrunt2
 	msgbox MtEmber_Exterior_Text_YoureInTheWayGetLost
 	closemessage
 	applymovement LOCALID_MT_EMBER_GRUNT2, Common_Movement_FaceOriginalDirection

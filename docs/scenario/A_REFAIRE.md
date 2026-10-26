@@ -222,3 +222,4 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - 25-10 21h36 : Sommet de Sevault : Red reste apres la scene ; lui parler lance un duel 1v1 optionnel (6 Pokemon niv. 74-77, trainer BIKER_1 reecrit) ; soin immediat apres la defaite de Giovanni et apres Red. Un combat unique a 12 Pokemon est impossible (6 max cote ennemi). Generateur docs/topaze/echo13_red.py.
 - 25-10 21h41 : niveaux releves : Silver 74-78, Giovanni 72-78, Red 79-82 (dernier combat dur du jeu).
 - 26/10 JOURNAL (menu Start): sections BADGES/STORY/SIDE QUESTS + post-game (POST-GAME/ECHOES/LEGENDS/RARE), coches + indices ; donnees docs/topaze/journal_gen.py -> src/data/topaze_journal.h ; non teste en emulateur
+- 26/10 grotte du sommet/Bosquet/Clairiere: pas de demi-tour a l'arrivee -> le joueur avance d'une case (on-warp) ; Mt Braise: sbires de la grotte Rubis combattables et grotte ouverte en post-game ; Journal +1 entree
