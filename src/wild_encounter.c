@@ -22,6 +22,13 @@
 #include "pokedex.h"
 #include "pokemon.h"
 #include "menu.h"
+#include "task.h"
+#include "window.h"
+#include "text.h"
+#include "sprite.h"
+#include "characters.h"
+#include "gpu_regs.h"
+#include "palette.h"
 #include "string_util.h"
 #include "battle.h"
 #include "data.h"
@@ -837,11 +844,121 @@ u8 gTopazeRadarCount;
 static u8 sRadarNames[8][12];
 static u16 sRadarList[8];
 
+// ---- POKeRADAR HUD (top-left bar: species, direction arrows, distance) and the shaking target tile
+#define RADAR_HUD_PAL   13
+#define RADAR_HUD_BASE  0x150
+
+static u8 sRadarHudWin = WINDOW_NONE;
+
+static const struct WindowTemplate sRadarHudTemplate =
+{
+    .bg = 0,
+    .tilemapLeft = 0,
+    .tilemapTop = 0,
+    .width = 15,
+    .height = 2,
+    .paletteNum = RADAR_HUD_PAL,
+    .baseBlock = RADAR_HUD_BASE,
+};
+
+static const u16 sRadarHudPal[] = { RGB(0, 0, 0), RGB(1, 1, 2), RGB(31, 31, 31), RGB(14, 14, 18) };
+static const u8 sRadarHudColors[] = { 1, 2, 3 };
+static const s8 sRadarShakeX[] = { -1, 0, 1, 0 };
+
+void TopazeRadarHudReset(void)
+{
+    sRadarHudWin = WINDOW_NONE; // the overworld windows were rebuilt
+}
+
+static void TopazeRadarHudRemove(void)
+{
+    if (sRadarHudWin != WINDOW_NONE)
+    {
+        ClearWindowTilemap(sRadarHudWin);
+        CopyWindowToVram(sRadarHudWin, COPYWIN_MAP);
+        RemoveWindow(sRadarHudWin);
+        sRadarHudWin = WINDOW_NONE;
+    }
+}
+
+static void TopazeRadarHudDraw(s16 px, s16 py)
+{
+    u8 buf[16];
+    u8 *p = buf;
+    s16 dx = sRadarX - px;
+    s16 dy = sRadarY - py;
+    s16 ax = dx < 0 ? -dx : dx;
+    s16 ay = dy < 0 ? -dy : dy;
+    s16 dist = ax > ay ? ax : ay;
+
+    if (sRadarHudWin == WINDOW_NONE)
+    {
+        sRadarHudWin = AddWindow(&sRadarHudTemplate);
+        if (sRadarHudWin == WINDOW_NONE)
+            return;
+        LoadPalette(sRadarHudPal, BG_PLTT_ID(RADAR_HUD_PAL), sizeof(sRadarHudPal));
+        PutWindowTilemap(sRadarHudWin);
+    }
+    FillWindowPixelBuffer(sRadarHudWin, PIXEL_FILL(1));
+    AddTextPrinterParameterized3(sRadarHudWin, FONT_SMALL, 4, 1, sRadarHudColors, 0, gSpeciesNames[sRadarTarget]);
+    if (ay != 0 && ay * 2 >= ax)
+        *p++ = dy < 0 ? CHAR_UP_ARROW : CHAR_DOWN_ARROW;
+    if (ax != 0 && ax * 2 >= ay)
+        *p++ = dx < 0 ? CHAR_LEFT_ARROW : CHAR_RIGHT_ARROW;
+    *p++ = CHAR_SPACE;
+    p = ConvertIntToDecimalStringN(p, dist, STR_CONV_MODE_LEFT_ALIGN, 2);
+    *p = EOS;
+    AddTextPrinterParameterized3(sRadarHudWin, FONT_SMALL, 116 - GetStringWidth(FONT_SMALL, buf, 0), 1, sRadarHudColors, 0, buf);
+    CopyWindowToVram(sRadarHudWin, COPYWIN_FULL);
+}
+
+static void Task_RadarFx(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+    u8 objId;
+    s16 px, py;
+
+    data[0]++;
+    if (!sRadarActive)
+    {
+        TopazeRadarHudRemove();
+        DestroyTask(taskId);
+        return;
+    }
+    // the target tile trembles
+    if (TryGetObjectEventIdByLocalIdAndMap(RADAR_BLIP_LOCALID, sRadarMapNum, sRadarMapGroup, &objId))
+    {
+        struct Sprite *sprite = &gSprites[gObjectEvents[objId].spriteId];
+
+        sprite->x2 = sRadarShakeX[(data[0] >> 1) & 3];
+        sprite->y2 = (data[0] & 8) ? 1 : 0;
+    }
+    PlayerGetDestCoords(&px, &py);
+    if (px != data[1] || py != data[2] || sRadarHudWin == WINDOW_NONE)
+    {
+        data[1] = px;
+        data[2] = py;
+        TopazeRadarHudDraw(px, py);
+    }
+}
+
+static void TopazeRadarEnsureFx(void)
+{
+    u8 taskId;
+
+    if (FindTaskIdByFunc(Task_RadarFx) != TASK_NONE)
+        return;
+    taskId = CreateTask(Task_RadarFx, 80);
+    gTasks[taskId].data[1] = 0x7FFF;
+    gTasks[taskId].data[2] = 0x7FFF;
+}
+
 static void TopazeRadarRemoveBlip(void)
 {
     if (sRadarActive)
         RemoveObjectEventByLocalIdAndMap(RADAR_BLIP_LOCALID, sRadarMapNum, sRadarMapGroup);
     sRadarActive = FALSE;
+    TopazeRadarHudRemove();
 }
 
 static void TopazeRadarSettleLastBattle(void)
@@ -1045,6 +1162,7 @@ void TopazeRadarStart(void)
         sRadarMapGroup = gSaveBlock1Ptr->location.mapGroup;
         SpawnSpecialObjectEventParameterized(OBJ_EVENT_GFX_TOPAZE_BLIP, MOVEMENT_TYPE_NONE, RADAR_BLIP_LOCALID, x, y, elevation);
         sRadarActive = TRUE;
+        TopazeRadarEnsureFx();
         gSpecialVar_Result = 1;
         return;
     }
@@ -1072,6 +1190,7 @@ bool8 TopazeRadarStep(void)
         dy = -dy;
     dist = dx > dy ? dx : dy;
     sRadarSteps++;
+    TopazeRadarEnsureFx();
     if (dist <= 4 && (gPlayerAvatar.flags & (PLAYER_AVATAR_FLAG_DASH | PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE)))
     {
         TopazeRadarRemoveBlip();

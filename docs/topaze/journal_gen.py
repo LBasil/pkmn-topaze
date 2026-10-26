@@ -19,8 +19,9 @@ def VR(v, n): return ("V", v, n)
 def PV(n=0): return ("P", "0", n)
 VK = {"A": 0, "B": 1, "F": 2, "V": 3, "P": 4}
 E = []
-def add(sec, kind, ident, val, name, hint, vis=A):
-    E.append((SEC[sec], kind, ident, val, name, hint, vis))
+def add(sec, kind, ident, val, name, hint, vis=A, alt=("0", "0")):
+    # alt = ("F"|"I", id) : autre condition qui vaut "fait" (flag / objet en sac)
+    E.append([SEC[sec], kind, ident, val, name, hint, vis, 0, alt])
 def tiers(sec, kind, ident, items):
     """items = [(val, name, hint)] ; le premier est visible d'emblee, les suivants apres le palier precedent"""
     for k, (val, name, hint) in enumerate(items):
@@ -36,7 +37,6 @@ for i, (nm, town, boss) in enumerate([
 
 # ---- STORY (chaine ; repli par nombre de badges si un maillon est saute)
 add("STORY", F, "FLAG_GRENALUX_ONYBRIS_STRIKE", 0, "THE RANCH ATTACK", "ONYBRIS strikes GRENALUX. Beat the\\ngrunt on the road out of town.")
-add("STORY", F, "FLAG_GRENALUX_GEM_REWARD", 0, "THE TRUE GRENAT", "A ranch worker in GRENALUX has the\\ntrue GRENAT stone for you.", PV(1))
 add("STORY", F, "FLAG_PIER_KRONOS_DONE", 0, "THE APATIA PIER", "Reach the harbor of APATIA in time\\nto save the APATITE.", PV(2))
 add("STORY", F, "FLAG_RESCUED_MR_FUJI", 0, "SPINELLIA TOWER", "Calm the spirits of the TOWER in\\nSPINELLIA and find FUJI.", PV(3))
 add("STORY", F, "FLAG_QUARTZ_DUEL_DONE", 0, "THE QUARTZ DUEL", "Clear the hideout under the GAME\\nCORNER, then play the casino duel.", PV(3))
@@ -48,8 +48,9 @@ add("STORY", F, "FLAG_SYS_GAME_CLEAR", 0, "POKéMON LEAGUE", "Win the LEAGUE tou
 add("STORY", F, "FLAG_TOPAZE_POSTGAME", 0, "THE FINAL CHOICE", "Face the BOSS after the tournament\\nand decide JIRACHI's fate.", PV())
 
 # ---- SIDE QUESTS (apparaissent avec la progression)
-add("SIDE QUESTS", F, "FLAG_GOT_POKE_RADAR", 0, "THE POKé RADAR", "Get the RADAR from the aide in the\\nROUTE 2 east building. Use it from\\nthe START menu.", B(1))
+add("SIDE QUESTS", F, "FLAG_GOT_POKE_RADAR", 0, "THE POKé RADAR", "The MOVE COACH in a POKéMON CENTER\\nhas a gift for trainers. Use it\\nfrom the START menu.", B(1), ("I", "ITEM_10B"))
 add("SIDE QUESTS", F, "FLAG_GRENALUX_TYPE_COURSE", 0, "THE TYPE MEMO", "The GRENALUX teacher has a type\\ncourse for you.", B(1))
+add("SIDE QUESTS", F, "FLAG_GRENALUX_GEM_REWARD", 0, "RANCH REWARD", "Once the animals are home, talk to\\nthe ranch worker by the fence.", FL("FLAG_ONYBRIS_ANIMALS_FOUND"))
 add("SIDE QUESTS", F, "FLAG_ONYBRIS_ANIMALS_FOUND", 0, "STRAYED ANIMALS", "Find the DODUO and 2 NIDORAN that\\nran off from the ranch (ROUTE 1).", FL("FLAG_GRENALUX_ONYBRIS_STRIKE"))
 add("SIDE QUESTS", F, "FLAG_VIRIDIAN_TUTORIAL_DONE", 0, "THE CATCH DEMO", "The old man in OPANIHRUM shows how\\nto catch a POKéMON.", B(7))
 for n, (fl, town) in zip([1, 2, 3, 3, 5], [("PEWTER", "PYROPIA"), ("CERULEAN", "TOURMALIA"), ("VERMILION", "APATIA"), ("LAVENDER", "SPINELLIA"), ("FUCHSIA", "AMETHIOLITE")]):
@@ -159,6 +160,11 @@ add("RARE POKéMON", F, "FLAG_FOUGHT_MOLTRES", 0, "MOLTRES", "MT. EMBER summit, 
 add("RARE POKéMON", F, "FLAG_FOUGHT_MEWTWO", 0, "MEWTWO", "CERULEAN CAVE (TOURMALIA), the\\nvery bottom.", B(7))
 add("RARE POKéMON", F, "FLAG_FOUGHT_MEW_TRUCK", 0, "MEW", "A strange truck is parked near the\\nAPATIA docks.", FL("FLAG_SYS_GAME_CLEAR"))
 
+# une etape finie implique les precedentes de la meme chaine (sauts de scenes, anciennes sauvegardes)
+for sec in ("BADGES", "STORY", "ECHOES"):
+    idx = [i for i, e in enumerate(E) if e[0] == SEC[sec]]
+    for i in idx[:-1]:
+        E[i][7] = 1
 assert len(SECTIONS) <= 12
 for e in E:
     lines = e[5].split("\\n")
@@ -182,8 +188,9 @@ for k, (n, g) in enumerate(SECTIONS):
     out.append('    { sJS_%d, %s },' % (k, g or "0"))
 out.append("};\n")
 out.append("static const struct TopazeJournalEntry sJournalEntries[] = {")
-for k, (sec, kd, i2, v, nm, h, vis) in enumerate(E):
-    out.append('    { %d, %d, %d, %s, %d, %s, %d, sJN_%d, sJH_%d },' % (sec, kd, VK[vis[0]], i2, v, vis[1], vis[2], k, k))
+AK = {"0": 0, "F": 1, "I": 2}
+for k, (sec, kd, i2, v, nm, h, vis, imp, alt) in enumerate(E):
+    out.append('    { %d, %d, %d, %s, %d, %s, %d, %d, %d, %s, sJN_%d, sJH_%d },' % (sec, kd, VK[vis[0]], i2, v, vis[1], vis[2], imp, AK[alt[0]], alt[1], k, k))
 out.append("};")
 open("src/data/topaze_journal.h", "w").write("\n".join(out) + "\n")
 print(len(E), "entries, max/section", mx)

@@ -2,6 +2,8 @@
 #include "event_data.h"
 #include "overworld.h"
 #include "pokedex.h"
+#include "item.h"
+#include "constants/items.h"
 #include "constants/game_stat.h"
 #include "constants/flags.h"
 #include "constants/vars.h"
@@ -37,6 +39,9 @@ struct TopazeJournalEntry
     u32 val;
     u16 visId;
     u16 visVal;
+    u8 imply;    // done too when the next entry is done (story chain)
+    u8 altKind;  // 0 none, 1 flag, 2 item in bag: another condition that counts as done
+    u16 altId;
     const u8 *name;
     const u8 *hint;
 };
@@ -70,10 +75,14 @@ static u32 EntryCurrent(const struct TopazeJournalEntry *e)
     return 0;
 }
 
-bool8 TopazeJournalEntryDone(u16 entry)
+static bool8 EntryDoneRaw(u16 entry)
 {
     const struct TopazeJournalEntry *e = &sJournalEntries[entry];
 
+    if (e->altKind == 1 && FlagGet(e->altId))
+        return TRUE;
+    if (e->altKind == 2 && CheckBagHasItem(e->altId, 1))
+        return TRUE;
     switch (e->kind)
     {
     case JK_VAR:
@@ -85,6 +94,18 @@ bool8 TopazeJournalEntryDone(u16 entry)
         return EntryCurrent(e) >= e->val;
     default:
         return FlagGet(e->id);
+    }
+}
+
+bool8 TopazeJournalEntryDone(u16 entry)
+{
+    while (TRUE)
+    {
+        if (EntryDoneRaw(entry))
+            return TRUE;
+        if (!sJournalEntries[entry].imply || entry + 1 >= NUM_ENTRIES)
+            return FALSE;
+        entry++;
     }
 }
 

@@ -1408,6 +1408,7 @@ static void InitOverworldBgs(void)
     InitStandardTextBoxWindows();
     InitTextBoxGfxAndPrinters();
     InitFieldMessageBox();
+    TopazeRadarHudReset();
 }
 
 static void InitOverworldBgs_NoResetHeap(void)
@@ -1426,6 +1427,7 @@ static void InitOverworldBgs_NoResetHeap(void)
     InitStandardTextBoxWindows();
     InitTextBoxGfxAndPrinters();
     InitFieldMessageBox();
+    TopazeRadarHudReset();
 }
 
 void CleanupOverworldWindowsAndTilemaps(void)
