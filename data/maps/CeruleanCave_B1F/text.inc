@@ -14,8 +14,13 @@ CeruleanCave_B1F_Text_RedDefeat::
     .string "I was waiting for.$"
 
 CeruleanCave_B1F_Text_RedAfter::
-    .string "BASIL: Look after them. And look\n"
-    .string "after the world they live in.\p"
+    .string "BASIL: MEWTWO is not my POKéMON.\n"
+    .string "He is my friend.\p"
+    .string "He fights at my side because he\n"
+    .string "chooses to. He is free to leave\l"
+    .string "whenever he wants.\p"
+    .string "Free, like every POKéMON should\n"
+    .string "be. Remember that.\p"
     .string "BASIL smiles and walks out.$"
 
 CeruleanCave_B1F_Text_Epilogue::

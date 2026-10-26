@@ -8261,9 +8261,9 @@ static const struct TrainerMonNoItemCustomMoves sParty_PlayerRed[] = {
     },
     {
         .iv = 255,
-        .lvl = 89,
-        .species = SPECIES_SNORLAX,
-        .moves = {MOVE_BODY_SLAM, MOVE_CROSS_CHOP, MOVE_EARTHQUAKE, MOVE_REST},
+        .lvl = 93,
+        .species = SPECIES_MEWTWO,
+        .moves = {MOVE_PSYCHIC, MOVE_AURA_SPHERE, MOVE_ICE_BEAM, MOVE_RECOVER},
     },
 };
 static const struct TrainerMonNoItemDefaultMoves sParty_PlayerLeaf[] = {
