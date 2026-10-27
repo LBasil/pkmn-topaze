@@ -342,7 +342,7 @@
       "x": 2,
       "y": 5,
       "elevation": 0,
-      "var": "0",
+      "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "CeruleanCity_EventScript_CaveSealed"
     }
