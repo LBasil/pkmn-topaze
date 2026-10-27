@@ -21,6 +21,8 @@ CeruleanCave_B1F_OnTransition::
 @ Topaze: BASIL waits beside MEWTWO once the SEVAULT summit is cleared (until beaten)
 CeruleanCave_B1F_EventScript_ShowBasil::
 	goto_if_set FLAG_POSTGAME_DONE, EventScript_Return
+	@ BASIL = very last fight: only once RED (Sevault summit) is beaten
+	goto_if_not_defeated TRAINER_BIKER_1, EventScript_Return
 	clearflag FLAG_HIDE_POSTGAME_RED
 	return
 

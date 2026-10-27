@@ -135,7 +135,7 @@ add("POST-GAME", F, "FLAG_LEARNED_YES_NAH_CHANSEY", 0, "CHANSEY PASSWORD", "In t
 add("POST-GAME", F, "FLAG_DEFEATED_ROCKETS_IN_WAREHOUSE", 0, "ROCKET WAREHOUSE", "MEADOW (FIVE ISLAND): use password\\nat the warehouse door, clear it\\nand win back the SAPPHIRE.", PV())
 add("POST-GAME", F, "FLAG_TOPAZE_SAPPHIRE_GIVEN", 0, "THE SAPPHIRE", "Give the SAPPHIRE to CELIO (ONE\\nISLAND) to start the NETWORK\\nMACHINE.", PV())
 
-add("POST-GAME", F, "FLAG_POSTGAME_DONE", 0, "THE FINAL TEST", "BASIL waits beside MEWTWO, deep in\\nCERULEAN CAVE. The hardest 1-on-1.", VR("VAR_ECHO_STAGE", 22))
+add("POST-GAME", F, "FLAG_POSTGAME_DONE", 0, "THE FINAL TEST", "BASIL waits beside MEWTWO, deep in\\nCERULEAN CAVE. The hardest 1-on-1.", FL("TRAINER_FLAGS_START + TRAINER_BIKER_1"))
 
 # ---- ECHOES (chaine)
 for k, (fl, nm, hint) in enumerate([

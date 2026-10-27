@@ -1,6 +1,6 @@
 SevenIsland_SevaultCanyon_Grove_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, SevenIsland_SevaultCanyon_Grove_OnTransition
-	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, SevenIsland_SevaultCanyon_Grove_OnWarp
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SevenIsland_SevaultCanyon_Grove_OnWarp
 	.byte 0
 
 SevenIsland_SevaultCanyon_Grove_OnTransition::
@@ -28,8 +28,9 @@ SevenIsland_SevaultCanyon_Grove_OnWarp::
 	map_script_2 VAR_TEMP_0, 0, SevenIsland_SevaultCanyon_Grove_Arrive
 	.2byte 0
 
-@ arrival on the exit-warp tile: step one tile inward so the player can walk back out (re-trigger the warp)
+@ arrival on the exit-warp tile: step one tile inward (ON_FRAME, never ON_WARP: waitmovement hangs in an immediate script)
 SevenIsland_SevaultCanyon_Grove_Arrive::
+	setvar VAR_TEMP_0, 1
 	getplayerxy VAR_0x8004, VAR_0x8005
 	goto_if_ne VAR_0x8004, 7, SevenIsland_SevaultCanyon_Grove_ArriveEnd
 	goto_if_eq VAR_0x8005, 13, SevenIsland_SevaultCanyon_Grove_StepUp

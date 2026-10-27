@@ -381,7 +381,7 @@ static const struct TopazeJournalEntry sJournalEntries[] = {
     { 7, 0, 4, FLAG_LEARNED_YES_NAH_CHANSEY, 0, 0, 0, 0, 0, 0, sJN_101, sJH_101 },
     { 7, 0, 4, FLAG_DEFEATED_ROCKETS_IN_WAREHOUSE, 0, 0, 0, 0, 0, 0, sJN_102, sJH_102 },
     { 7, 0, 4, FLAG_TOPAZE_SAPPHIRE_GIVEN, 0, 0, 0, 0, 0, 0, sJN_103, sJH_103 },
-    { 7, 0, 3, FLAG_POSTGAME_DONE, 0, VAR_ECHO_STAGE, 22, 0, 0, 0, sJN_104, sJH_104 },
+    { 7, 0, 2, FLAG_POSTGAME_DONE, 0, TRAINER_FLAGS_START + TRAINER_BIKER_1, 0, 0, 0, 0, sJN_104, sJH_104 },
     { 8, 0, 0, FLAG_ECHO_BEAST_DONE, 0, 0, 0, 1, 0, 0, sJN_105, sJH_105 },
     { 8, 0, 4, FLAG_ECHO_BEAST2_DONE, 0, 0, 0, 1, 0, 0, sJN_106, sJH_106 },
     { 8, 0, 4, FLAG_ECHO_BEAST3_DONE, 0, 0, 0, 1, 0, 0, sJN_107, sJH_107 },
