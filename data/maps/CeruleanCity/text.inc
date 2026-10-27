@@ -156,3 +156,7 @@ CeruleanCity_Text_RefDone::
 CeruleanCity_Text_RefIdle::
     .string "DANTE: I watch over the animals here.\n"
     .string "The world is quieter now.$"
+
+CeruleanCity_Text_CaveSealed::
+	.string "The hollow trunk is sealed by a\n"
+	.string "strange force. Not yet...$"

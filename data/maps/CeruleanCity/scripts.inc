@@ -347,3 +347,17 @@ CeruleanCity_Text_CellWitnessDone::
 	.string "The lights are normal again.\p"
 	.string "A pity. They paid for every lock"
 	.string "in cash. Who has that much cash?$"
+
+@ Topaze: the hollow trunk (CERULEAN CAVE) stays sealed until RED (Sevault summit) is beaten
+CeruleanCity_EventScript_CaveSealed::
+	goto_if_defeated TRAINER_BIKER_1, EventScript_Return
+	lockall
+	msgbox CeruleanCity_Text_CaveSealed
+	applymovement OBJ_EVENT_ID_PLAYER, CeruleanCity_Movement_CaveBack
+	waitmovement 0
+	releaseall
+	end
+
+CeruleanCity_Movement_CaveBack::
+	walk_down
+	step_end

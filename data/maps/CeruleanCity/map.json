@@ -336,6 +336,15 @@
       "var": "VAR_MAP_SCENE_CERULEAN_CITY_RIVAL",
       "var_value": "0",
       "script": "CeruleanCity_EventScript_RivalTriggerRight"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 5,
+      "elevation": 0,
+      "var": "0",
+      "var_value": "0",
+      "script": "CeruleanCity_EventScript_CaveSealed"
     }
   ],
   "bg_events": [
