@@ -350,8 +350,8 @@ CeruleanCity_Text_CellWitnessDone::
 
 @ Topaze: the hollow trunk (CERULEAN CAVE) stays sealed until RED (Sevault summit) is beaten
 CeruleanCity_EventScript_CaveSealed::
-	goto_if_defeated TRAINER_BIKER_1, EventScript_Return
 	lockall
+	goto_if_defeated TRAINER_BIKER_1, CeruleanCity_EventScript_CaveOpen
 	msgbox CeruleanCity_Text_CaveSealed
 	applymovement OBJ_EVENT_ID_PLAYER, CeruleanCity_Movement_CaveBack
 	waitmovement 0
@@ -361,3 +361,7 @@ CeruleanCity_EventScript_CaveSealed::
 CeruleanCity_Movement_CaveBack::
 	walk_down
 	step_end
+
+CeruleanCity_EventScript_CaveOpen::
+	releaseall
+	end
