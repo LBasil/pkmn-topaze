@@ -118,6 +118,53 @@ def sprite_png(gfx):
     return out
 
 
+sys.path.insert(0, os.path.join(ROOT, 'tools', 'topaze', 'i18n'))
+_dlg = {'db': None}
+
+def dlg_db(refresh=False):
+    import extract
+    if refresh or _dlg['db'] is None:
+        _dlg['db'] = extract.build()
+    return _dlg['db']
+
+
+def dlg_maps(lang):
+    import lang as L
+    out = []
+    for m, es in dlg_db().items():
+        if not es:
+            continue
+        tr = L.load(lang, m)
+        done = sum(1 for e in es if tr.get(e['label'], {}).get('fr', '').strip())
+        stale = sum(1 for e in es if tr.get(e['label'], {}).get('fr', '').strip() and tr[e['label']].get('en') != e['en'])
+        out.append({'name': m, 'n': len(es), 'done': done, 'stale': stale})
+    return out
+
+
+def dlg_map(m, lang):
+    import lang as L
+    tr = L.load(lang, m)
+    es = []
+    for e in dlg_db().get(m, []):
+        t = tr.get(e['label'], {})
+        es.append(dict(e, fr=t.get('fr', ''), stale=bool(t.get('fr', '').strip() and t.get('en') != e['en'])))
+    return es
+
+
+def dlg_save(lang, m, label, fr):
+    import lang as L
+    en = next((e['en'] for e in dlg_db().get(m, []) if e['label'] == label), None)
+    if en is None:
+        raise ValueError('texte inconnu')
+    d = L.load(lang, m)
+    if fr.strip():
+        d[label] = {'fr': fr, 'en': en}
+    else:
+        d.pop(label, None)
+    L.save(lang, m, d)
+    return {'ok': True, 'problems': L.check(fr) if fr.strip() else []}
+
+
 def load_map(name):
     mj = json.load(open(map_json_path(name), encoding='utf-8'))
     lay = mapkit.layouts()[mj['layout']]
@@ -171,6 +218,17 @@ class H(BaseHTTPRequestHandler):
         try:
             if u.path in ('/', '/index.html'):
                 return self.send(200, open(os.path.join(HERE, 'index.html'), 'rb').read(), 'text/html; charset=utf-8')
+            if u.path == '/dialogues':
+                return self.send(200, open(os.path.join(HERE, 'dialogues.html'), 'rb').read(), 'text/html; charset=utf-8')
+            if u.path == '/api/dlg/maps':
+                with LOCK:
+                    return self.send(200, dlg_maps(q.get('lang', 'fr')))
+            if u.path == '/api/dlg':
+                with LOCK:
+                    return self.send(200, dlg_map(q['map'], q.get('lang', 'fr')))
+            if u.path == '/api/dlg/refresh':
+                with LOCK:
+                    dlg_db(True); return self.send(200, {'ok': True})
             if u.path == '/api/maps':
                 return self.send(200, map_names())
             if u.path == '/api/lookups':
@@ -194,6 +252,9 @@ class H(BaseHTTPRequestHandler):
         q = {k: v[0] for k, v in parse_qs(u.query).items()}
         try:
             body = json.loads(self.rfile.read(int(self.headers.get('Content-Length', 0))) or b'{}')
+            if u.path == '/api/dlg/save':
+                with LOCK:
+                    return self.send(200, dlg_save(q.get('lang', 'fr'), q['map'], q['label'], body.get('fr', '')))
             if u.path == '/api/save':
                 with LOCK:
                     return self.send(200, save_map(q['name'], body))

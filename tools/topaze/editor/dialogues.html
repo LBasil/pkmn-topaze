@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Dialogues Topaze</title>
+<style>
+  :root { --bg:#1b1d23; --panel:#242730; --line:#3a3f4b; --txt:#e6e8ee; --dim:#8b92a3; --acc:#f2b84b; --ok:#3fae6a; --bad:#e5604d; --box:#f8f8f8; --boxtxt:#303030; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--txt); font:13px system-ui,sans-serif; height:100vh; display:flex; flex-direction:column; }
+  header { display:flex; gap:10px; align-items:center; padding:6px 10px; background:var(--panel); border-bottom:1px solid var(--line); flex-wrap:wrap; }
+  header h1 { font-size:14px; margin:0 8px 0 0; color:var(--acc); }
+  a { color:var(--acc); }
+  button, select, input, textarea { background:#2e323d; color:var(--txt); border:1px solid var(--line); border-radius:4px; padding:4px 8px; font:inherit; }
+  button { cursor:pointer; } button:hover { border-color:var(--acc); }
+  #main { flex:1; display:flex; min-height:0; }
+  #left { width:250px; background:var(--panel); border-right:1px solid var(--line); overflow:auto; flex:none; }
+  #left div.m { padding:5px 10px; cursor:pointer; display:flex; justify-content:space-between; gap:6px; border-bottom:1px solid #2c303a; }
+  #left div.m:hover { background:#333845; } #left div.m.cur { background:var(--acc); color:#000; }
+  #left .bar { height:3px; background:#3a3f4b; margin-top:3px; } #left .bar i { display:block; height:3px; background:var(--ok); }
+  #center { flex:1; overflow:auto; padding:12px 16px; }
+  #right { width:380px; background:var(--panel); border-left:1px solid var(--line); flex:none; padding:10px; overflow:auto; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:10px 12px; margin-bottom:12px; }
+  .card.sel { border-color:var(--acc); }
+  .card.done { border-left:4px solid var(--ok); } .card.stale { border-left:4px solid var(--acc); }
+  .who { display:flex; gap:10px; align-items:center; margin-bottom:6px; }
+  .who img { image-rendering:pixelated; height:32px; max-width:48px; object-fit:contain; background:#111; border-radius:4px; padding:2px; }
+  .who b { font-size:13px; } .who small { color:var(--dim); }
+  .chips { display:flex; flex-wrap:wrap; gap:4px; margin:4px 0 8px; }
+  .chip { background:#2e323d; border:1px solid var(--line); border-radius:10px; padding:1px 8px; font-size:11px; color:#cfd3dc; }
+  .chip.f { border-color:#4f7cc7; } .chip.v { border-color:#a06ad0; } .chip.t { border-color:#c9843a; } .chip.k { border-color:#3fae6a; }
+  .cols { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media (max-width:1250px) { .cols { grid-template-columns:1fr; } }
+  .pages .box { background:var(--box); color:var(--boxtxt); border-radius:6px; padding:6px 10px; margin-bottom:5px; font:13px/1.45 ui-monospace,Menlo,Consolas,monospace; white-space:pre; min-height:42px; border:2px solid #606060; }
+  .pages .box.ovr { border-color:var(--bad); }
+  textarea { width:100%; min-height:110px; font:13px/1.45 ui-monospace,Menlo,Consolas,monospace; white-space:pre; resize:vertical; background:#fff; color:#222; }
+  textarea.err { border-color:var(--bad); }
+  .tools { display:flex; gap:6px; align-items:center; margin-top:6px; flex-wrap:wrap; }
+  .tools .st { margin-left:auto; color:var(--dim); font-size:12px; } .tools .st.bad { color:var(--bad); } .tools .st.ok { color:var(--ok); }
+  .lab { color:var(--dim); font-size:11px; margin:6px 0 2px; font-family:ui-monospace,monospace; word-break:break-all; }
+  canvas { image-rendering:pixelated; display:block; max-width:100%; border:1px solid var(--line); }
+  h3 { margin:0 0 6px; font-size:12px; color:var(--dim); text-transform:uppercase; letter-spacing:.05em; }
+  .dim { color:var(--dim); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Dialogues Topaze</h1>
+  <a href="/">← éditeur de cartes</a>
+  <input id="q" placeholder="Rechercher (texte, PNJ, label)…" size="30">
+  <select id="fst"><option value="">Tous</option><option value="todo">À traduire</option><option value="done">Traduits</option><option value="stale">À revoir</option></select>
+  <select id="fkd"><option value="">Tous types</option><option value="npc">PNJ</option><option value="trainer">Dresseurs</option><option value="sign">Panneaux</option><option value="trigger">Déclencheurs</option><option value="scene">Scènes</option><option value="other">Autres</option></select>
+  <span class="dim" id="tot"></span>
+  <span class="dim" style="margin-left:auto">Ctrl+S enregistre · Ctrl+↓ / Ctrl+↑ carte suivante/précédente texte</span>
+</header>
+<div id="main">
+  <div id="left"></div>
+  <div id="center"></div>
+  <div id="right"><h3>Où est-ce ?</h3><canvas id="cv"></canvas><div id="rinfo" class="dim" style="margin-top:8px"></div></div>
+</div>
+<script>
+const $=s=>document.querySelector(s);
+const LANG='fr', MAXW=35;
+let maps=[], cur=null, ents=[], M=null, sheet=null, sprites={}, selIdx=-1;
+async function j(u,o){ const r=await fetch(u,o); if(!r.ok) throw new Error((await r.json()).error||r.status); return r.json(); }
+
+// --- conversions : format du jeu <-> format de saisie (ligne vide = nouvelle boite de texte) ---
+function rawToEdit(raw){ return raw.replace(/\\p/g,'\n\n').replace(/\\n|\\l/g,'\n'); }
+function editToRaw(t){
+  return t.replace(/\r/g,'').split(/\n{2,}/).map(p=>p.split('\n').map(s=>s.replace(/\s+$/,'')).filter((s,i,a)=>s.length||a.length===1)
+    .map((l,i,a)=>i<a.length-1?l+(i===0?'\\n':'\\l'):l).join('')).join('\\p').replace(/\\p$/,'');
+}
+function pagesOf(raw){ return raw.split('\\p').map(p=>p.replace(/\\n|\\l/g,'\n')); }
+const vlen=l=>l.replace(/\{[A-Z_0-9]+\}/g,'XXXXXXX').length;
+function wrapRaw(plain){ // retour automatique 35 colonnes, boites de 2 lignes
+  const out=[]; for(const para of plain.replace(/\r/g,'').split(/\n{2,}/)){
+    const words=para.replace(/\n/g,' ').split(/\s+/).filter(Boolean); const lines=[]; let l='';
+    for(const w of words){ if(l&&vlen(l+' '+w)>MAXW){ lines.push(l); l=w; } else l=l?l+' '+w:w; } if(l) lines.push(l);
+    for(let i=0;i<lines.length;i+=2) out.push(lines.slice(i,i+2).join('\n')); }
+  return out.join('\n\n'); }
+function problems(raw){ const pb=[]; for(const l of raw.split(/\\n|\\l|\\p/)) if(vlen(l)>MAXW) pb.push('« '+l+' » : '+vlen(l)+' car. (max '+MAXW+')'); return pb; }
+
+// --- conditions lisibles ---
+function pretty(c){
+  const [op,...a]=c.split(' '); const nm=s=>s.replace(/^(FLAG_|VAR_)/,'').replace(/_/g,' ').toLowerCase();
+  const badge=a[0]&&a[0].match(/^FLAG_BADGE0?(\d+)_GET$/);
+  if(badge) return {t:(op==='set'?'badge ':'pas de badge ')+badge[1],c:'k'};
+  const sym={eq:'=',ne:'≠',lt:'<',ge:'≥',le:'≤',gt:'>'};
+  if(op==='set') return {t:nm(a[0])+' ✓',c:'f'}; if(op==='unset') return {t:nm(a[0])+' ✗',c:'f'};
+  if(op==='defeated') return {t:nm(a[0])+' battu',c:'t'}; if(op==='not_defeated') return {t:nm(a[0])+' non battu',c:'t'};
+  if(sym[op]) return {t:nm(a[0])+' '+sym[op]+' '+a[1],c:'v'}; return {t:c,c:''}; }
+
+async function init(){
+  maps=await j('/api/dlg/maps?lang='+LANG); drawList();
+  const h=decodeURIComponent(location.hash.slice(1)); openMap(maps.find(m=>m.name===h)?h:maps[0].name);
+}
+function drawList(){
+  const T=maps.reduce((a,m)=>a+m.n,0), D=maps.reduce((a,m)=>a+m.done,0);
+  $('#tot').textContent=D+' / '+T+' traduits ('+(100*D/T).toFixed(1)+' %)';
+  $('#left').innerHTML=maps.map(m=>`<div class="m${m.name===cur?' cur':''}" data-m="${m.name}"><span>${m.name}<div class="bar"><i style="width:${100*m.done/m.n}%"></i></div></span><span>${m.done}/${m.n}${m.stale?' ⚠':''}</span></div>`).join('');
+  $('#left').querySelectorAll('.m').forEach(d=>d.onclick=()=>openMap(d.dataset.m));
+}
+async function openMap(name){
+  cur=name; location.hash=name; selIdx=-1;
+  [ents,M]=await Promise.all([j('/api/dlg?lang='+LANG+'&map='+name), j('/api/map?name='+name).catch(()=>null)]);
+  if(M){ await new Promise(r=>{ sheet=new Image(); sheet.onload=r; sheet.onerror=r; sheet.src='/api/metatiles?layout='+M.layout; }); }
+  drawList(); render(); drawMap(); $('#center').scrollTop=0; const c=$('#left .cur'); if(c) c.scrollIntoView({block:'center'});
+}
+function who(e){
+  if(!e.who) return {n:'(texte sans PNJ identifié)',s:''};
+  const w=e.who; const g=w.gfx?w.gfx.replace('OBJ_EVENT_GFX_','').replace(/_/g,' ').toLowerCase():'';
+  const kind={npc:'PNJ',trainer:'Dresseur',sign:'Panneau',trigger:'Déclencheur',scene:'Scène'}[e.kind]||e.kind;
+  return {n:kind+(g?' — '+g:''), s:(w.map!==cur?'depuis '+w.map+' · ':'')+(w.x>=0?'('+w.x+', '+w.y+')':'script de carte')+(w.hide?' · caché tant que '+w.hide.replace('FLAG_','')+' posé':'')};
+}
+function render(){
+  const q=$('#q').value.toLowerCase(), fs=$('#fst').value, fk=$('#fkd').value;
+  const box=$('#center'); box.innerHTML='';
+  ents.forEach((e,i)=>{
+    const has=e.fr.trim()!=='', st=has?(e.stale?'stale':'done'):'todo';
+    if(fs&&fs!==st) return; if(fk&&fk!==e.kind) return;
+    if(q&&!(e.en+' '+e.fr+' '+e.label+' '+(e.who?e.who.gfx:'')).toLowerCase().includes(q)) return;
+    const w=who(e), d=document.createElement('div'); d.className='card '+(has?(e.stale?'stale':'done'):''); d.dataset.i=i;
+    const gfx=e.who&&e.who.gfx; if(gfx) loadSprite(gfx);
+    d.innerHTML=`<div class="who">${gfx?`<img data-g="${gfx}" src="/api/sprite?gfx=${gfx}" onerror="this.style.display='none'">`:''}<div><b>${w.n}</b><br><small>${w.s}</small></div></div>
+      <div class="chips">${e.conds.map(c=>{const p=pretty(c);return `<span class="chip ${p.c}" title="${c}">${p.t}</span>`}).join('')}${e.also.length?`<span class="chip" title="${e.also.map(a=>a.conds.join(' & ')).join('\n')}">+${e.also.length} autre(s) chemin(s)</span>`:''}</div>
+      <div class="cols"><div><div class="dim" style="margin-bottom:3px">Anglais</div><div class="pages">${pagesOf(e.en).map(p=>`<div class="box${p.split('\n').some(l=>vlen(l)>MAXW)?' ovr':''}">${p.replace(/&/g,'&amp;').replace(/</g,'&lt;')}</div>`).join('')}</div></div>
+      <div><div class="dim" style="margin-bottom:3px">Français ${e.stale?`<b style="color:var(--acc)">— l'anglais a changé depuis, à revoir</b>`:''}</div><textarea spellcheck="true" lang="fr" data-i="${i}">${rawToEdit(e.fr).replace(/&/g,'&amp;').replace(/</g,'&lt;')}</textarea>
+      <div class="tools"><button data-a="copy">Copier l'anglais</button><button data-a="wrap">Retour auto</button><button data-a="save">Enregistrer</button><span class="st"></span></div></div></div>
+      <div class="lab">${e.label}</div>`;
+    d.querySelector('[data-a=copy]').onclick=()=>{ const t=d.querySelector('textarea'); t.value=rawToEdit(e.en); check(d); };
+    d.querySelector('[data-a=wrap]').onclick=()=>{ const t=d.querySelector('textarea'); t.value=wrapRaw(t.value); check(d); };
+    d.querySelector('[data-a=save]').onclick=()=>save(d);
+    const ta=d.querySelector('textarea'); ta.oninput=()=>check(d); ta.onfocus=()=>select(i);
+    d.onclick=()=>select(i); box.appendChild(d); check(d,true);
+  });
+}
+function check(d,quiet){
+  const t=d.querySelector('textarea'), raw=editToRaw(t.value), pb=raw?problems(raw):[], st=d.querySelector('.st');
+  t.classList.toggle('err',pb.length>0); st.className='st'+(pb.length?' bad':''); st.textContent=pb.length?pb[0]:(t.value.trim()&&!quiet?'non enregistré':'');
+}
+async function save(d){
+  const i=+d.dataset.i, e=ents[i], t=d.querySelector('textarea'), raw=editToRaw(t.value), st=d.querySelector('.st');
+  try{ const r=await j('/api/dlg/save?lang='+LANG+'&map='+cur+'&label='+e.label,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({fr:raw})});
+    e.fr=raw; e.stale=false; d.className='card sel '+(raw.trim()?'done':''); st.className='st ok'; st.textContent=r.problems.length?'enregistré (à corriger : '+r.problems[0]+')':'enregistré ✓';
+    const m=maps.find(x=>x.name===cur); m.done=ents.filter(x=>x.fr.trim()).length; m.stale=ents.filter(x=>x.stale).length; drawList(); }
+  catch(err){ st.className='st bad'; st.textContent=err.message; }
+}
+function select(i){ if(selIdx===i) return; selIdx=i; document.querySelectorAll('.card').forEach(c=>c.classList.toggle('sel',+c.dataset.i===i)); drawMap(); }
+
+function loadSprite(g){ if(sprites[g]) return; const im=new Image(); im.onload=()=>{ sprites[g]=im; drawMap(); }; im.onerror=()=>{ sprites[g]=false; }; sprites[g]=false; im.src='/api/sprite?gfx='+g; }
+function drawMap(){
+  const cv=$('#cv'); if(!M){ cv.width=cv.height=0; $('#rinfo').textContent=''; return; }
+  const T=16, W=M.w*T, H=M.h*T; cv.width=W; cv.height=H; const c=cv.getContext('2d');
+  for(let y=0;y<M.h;y++)for(let x=0;x<M.w;x++){ const id=M.blocks[y*M.w+x]&0x3ff; c.drawImage(sheet,(id%32)*T,Math.floor(id/32)*T,T,T,x*T,y*T,T,T); }
+  const e=ents[selIdx]; const marks=new Set();
+  ents.forEach((x,i)=>{ if(x.who&&x.who.map===cur&&x.who.x>=0){ const k=x.who.x+','+x.who.y; if(marks.has(k)) return; marks.add(k);
+    const sel=i===selIdx, px=x.who.x*T, py=x.who.y*T; const sp=x.who.gfx&&sprites[x.who.gfx];
+    if(sp) c.drawImage(sp,px+(T-sp.width)/2,py+T-sp.height); else { c.fillStyle=x.kind==='sign'?'#4fa3e8aa':'#ffffff88'; c.fillRect(px+2,py+2,T-4,T-4); }
+    c.strokeStyle=sel?'#ff2d2d':'rgba(255,255,255,.35)'; c.lineWidth=sel?3:1; c.strokeRect(px+.5,py+.5,T-1,T-1); } });
+  if(e&&e.who&&e.who.map===cur&&e.who.x>=0){ c.strokeStyle='#ff2d2d'; c.lineWidth=2; const px=e.who.x*T+T/2, py=e.who.y*T+T/2; c.beginPath(); c.arc(px,py,T*1.1,0,7); c.stroke(); }
+  $('#rinfo').textContent=e?(e.who?(e.who.map!==cur?'Ce texte est déclenché depuis '+e.who.map+'.':(e.who.x>=0?'Case ('+e.who.x+', '+e.who.y+')':'Script de carte (pas de case).')):'Aucun PNJ ne mène à ce texte (appelé par un script partagé).'):'Clique sur un texte pour voir où il se trouve.';
+}
+['#q','#fst','#fkd'].forEach(s=>$(s).oninput=render);
+document.addEventListener('keydown',e=>{ if((e.ctrlKey||e.metaKey)&&e.key==='s'){ e.preventDefault(); const a=document.activeElement; if(a&&a.tagName==='TEXTAREA') save(a.closest('.card')); }
+  if((e.ctrlKey||e.metaKey)&&(e.key==='ArrowDown'||e.key==='ArrowUp')){ e.preventDefault(); const t=[...document.querySelectorAll('textarea')]; const k=t.indexOf(document.activeElement); const n=t[k+(e.key==='ArrowDown'?1:-1)]; if(n){ n.focus(); n.scrollIntoView({block:'center'}); } } });
+init();
+</script>
+</body>
+</html>

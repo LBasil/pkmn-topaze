@@ -75,3 +75,5 @@ compile_commands.json
 
 __pycache__/
 *.pyc
+/Topaze_EN.gba
+/Topaze_FR.gba

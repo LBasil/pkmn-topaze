@@ -18,3 +18,11 @@ Le serveur lit et écrit directement `data/maps/<Carte>/map.json` et `data/layou
 
 ## Pas encore (versions suivantes)
 Création de carte et de connexions, édition des textes et des scripts, bouton « compiler et tester », contrôle des raccords, vérification du dest_warp_id, redimensionnement de carte.
+
+## Dialogues / traduction FR (page /dialogues)
+`python3 tools/topaze/editor/server.py` puis ouvrir http://localhost:8765/dialogues (lien aussi dans l'editeur de cartes).
+- Pour chaque texte d'une carte : qui parle (sprite, case), conditions d'apparition (flags / variables / badges / dresseur battu), l'anglais en boites de jeu, la saisie du francais, plan de la carte avec le PNJ entoure.
+- Saisie : une ligne vide = nouvelle boite de texte ; 35 caracteres max par ligne (compteur rouge) ; « Retour auto » coupe a 35 et fait des boites de 2 lignes. Ctrl+S enregistre.
+- Stockage : `i18n/fr/<Carte>.json` (texte FR + copie de l'EN traduit ; si l'EN change, la carte passe en « a revoir »).
+- ROM francaise : `sh tools/topaze/i18n/build_lang.sh fr` -> `Topaze_FR.gba` (les sources restent en anglais ; un texte non traduit reste en anglais). ROM anglaise : `build_lang.sh en`.
+- Perimetre v1 : dialogues des cartes (4182 textes). Pas encore : textes C (menus, objets, attaques), noms.
