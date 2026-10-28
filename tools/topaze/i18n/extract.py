@@ -161,11 +161,42 @@ def build():
         # scripts de carte (tables OnTransition / OnFrame / OnLoad...) et scripts sans appelant
         owner = {'kind': 'scene', 'map': m, 'gfx': '', 'x': -1, 'y': -1, 'hide': '', 'script': m + '_MapScripts'}
         walk(m + '_MapScripts', [], owner, 0, set())
+    # references globales (scripts, C, donnees) : sert a reperer les textes / scripts jamais utilises
+    import collections, re as _re
+    refs = collections.Counter()
+    for pat in ('data/**/*.inc', 'data/**/*.s', 'data/**/*.json', 'src/**/*.c', 'src/**/*.h', 'include/**/*.h', 'asm/**/*.inc'):
+        for p in glob.glob(os.path.join(ROOT, pat), recursive=True):
+            if p.endswith('/events.inc') or '/layouts/' in p or p.endswith('layouts.json'):
+                continue
+            try:
+                txt = open(p, encoding='utf-8', errors='ignore').read()
+            except Exception:
+                continue
+            refs.update(_re.findall(r'[A-Za-z_]\w*', txt))
+    defs = collections.Counter()
+    for p in glob.glob(os.path.join(ROOT, 'data/**/*.inc'), recursive=True) + glob.glob(os.path.join(ROOT, 'data/**/*.s'), recursive=True):
+        try:
+            defs.update(_re.findall(r'^([A-Za-z_]\w*)::?', open(p, encoding='utf-8', errors='ignore').read(), _re.M))
+        except Exception:
+            pass
+    def nrefs(lab): return refs[lab] - defs[lab]
     refd = set(t for body in scripts.values() for cmd in body for t in cmd[1:])
+    dead_roots = []
     for lab, mp in labelmap.items():
         if lab not in refd and not lab.endswith('_MapScripts'):
-            owner = {'kind': 'scene', 'map': mp, 'gfx': '', 'x': -1, 'y': -1, 'hide': '', 'script': lab}
-            walk(lab, [], owner, 0, set())
+            if nrefs(lab) > 0:     # appele depuis le C ou une table : vivant
+                owner = {'kind': 'scene', 'map': mp, 'gfx': '', 'x': -1, 'y': -1, 'hide': '', 'script': lab}
+                walk(lab, [], owner, 0, set())
+            else:
+                dead_roots.append((lab, mp))
+    live = set(found)
+    found_live = dict(found)
+    found.clear()
+    for lab, mp in dead_roots:
+        owner = {'kind': 'unused', 'map': mp, 'gfx': '', 'x': -1, 'y': -1, 'hide': '', 'script': lab}
+        walk(lab, [], owner, 0, set())
+    found_dead = dict(found)
+    found.clear(); found.update(found_live)
     db = {m: [] for m in maps}
     order = {}
     for m in maps:
@@ -176,12 +207,15 @@ def build():
             if k not in texts:
                 continue
             ow = found.get(k, [])
+            dead = (not ow) and (nrefs(k) <= 0 or k in found_dead)
             e = {'label': k, 'en': texts[k]}
             if ow:
                 o, c = ow[0]
                 e['kind'] = o['kind']; e['who'] = o; e['conds'] = c
                 e['also'] = [{'who': o2, 'conds': c2} for o2, c2 in ow[1:]]
                 # un texte atteint depuis une autre carte garde sa carte d'origine dans who.map
+            elif dead:
+                e['kind'] = 'unused'; e['who'] = None; e['conds'] = []; e['also'] = []
             else:
                 e['kind'] = 'other'; e['who'] = None; e['conds'] = []; e['also'] = []
             db[m].append(e)
