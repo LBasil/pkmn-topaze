@@ -34,7 +34,7 @@ for m, t in H:
         if any(abs(x - o[0]) + abs(y - o[1]) < 3 for o in occ) or any(abs(x - w[0]) + abs(y - w[1]) < 3 for w in nav.warps): continue
         pick = c; break
     if not pick: print('pas de place', m); continue
-    d['bg_events'].append({'type': 'sign', 'x': pick[0], 'y': pick[1], 'elevation': nav.g[pick[1] * nav.w + pick[0]] >> 12 or 3, 'player_facing_dir': 'BG_EVENT_PLAYER_FACING_ANY', 'script': lab})
+    d['bg_events'].append({'type': 'sign', 'x': pick[0], 'y': pick[1], 'elevation': 0, 'player_facing_dir': 'BG_EVENT_PLAYER_FACING_ANY', 'script': lab})
     json.dump(d, open(mp, 'w'), indent=2, ensure_ascii=False); open(mp, 'a').write('\n')
     open('data/maps/%s/scripts.inc' % m, 'a').write('\n@ Topaze: indice du temps deregle\n%s::\n\tmsgbox %s_Text_TimeHint, MSGBOX_SIGN\n\tend\n' % (lab, m))
     open('data/maps/%s/text.inc' % m, 'a').write('\n%s_Text_TimeHint::\n%s\n' % (m, wrap(t)))
