@@ -202,3 +202,38 @@ SaffronCity_Text_ProcheViolette_Early::
 SaffronCity_Text_ProcheViolette_NoRoom::
 	.string "Your BAG is full. Make some room\n"
 	.string "first, then talk to me again.$"
+
+SaffronCity_Text_Clock_Ask::
+	.string "The big clock stopped the day the\n"
+	.string "lights died. Read the clocks on\p"
+	.string "ROUTE 1, ROUTE 11 and ROUTE 22 for\n"
+	.string "me, then come back.$"
+
+SaffronCity_Text_Clock_Solved::
+	.string "3:07 stuck, hands spinning\n"
+	.string "backwards, sand falling up. The\p"
+	.string "same stop, three times. So the\n"
+	.string "clock is not broken. Time is. Take\p"
+	.string "this, it will help you.$"
+
+SaffronCity_Text_Clock_Done::
+	.string "I stopped fixing the clock. I watch\n"
+	.string "it now. It helps to know where time\p"
+	.string "went.$"
+
+SaffronCity_Text_Clock_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"
+
+SaffronCity_Text_Market_Open::
+	.string "The night market opens when the\n"
+	.string "clocks stop. Look around, {PLAYER}.$"
+
+SaffronCity_Text_Market_Bye::
+	.string "The market closes whenever time\n"
+	.string "says so.$"
+
+SaffronCity_Text_Market_Closed::
+	.string "Come back when the LEAGUE is behind\n"
+	.string "you. The market is not open for you\p"
+	.string "yet.$"

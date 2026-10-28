@@ -194,6 +194,9 @@ add("SIDE QUESTS", F, "FLAG_TOPAZE_QUEST_7", 0, "THE RESEARCHER", "ROUTE 23: a n
 
 add("SIDE QUESTS", T, "TRAINER_ECHO_RIVAL", 0, "THE RIVAL FROM YESTERDAY", "ROUTE 8: he swears you already\\nbeat him. Needs 4 BADGES.", B(4))
 
+add("SIDE QUESTS", F, "FLAG_TOPAZE_CLOCK_DONE", 0, "THE STOPPED CLOCK", "SAFFRON: a man asks you to read\\nthe clocks on ROUTES 1, 11 and 22.", B(2))
+add("POST-GAME", F, "FLAG_TOPAZE_ARCHIVE_DONE", 0, "THE ECHO ARCHIVE", "PALLET: a woman keeps record\\nof the 7 ECHOES. Close them all.", PV())
+
 assert len(SECTIONS) <= 12
 for e in E:
     lines = e[5].split("\\n")

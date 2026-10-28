@@ -140,5 +140,6 @@ Route1_EventScript_Walker::
 
 @ Topaze: indice du temps deregle
 Route1_EventScript_TimeHint::
+	setflag FLAG_TOPAZE_CLOCK_1
 	msgbox Route1_Text_TimeHint, MSGBOX_SIGN
 	end

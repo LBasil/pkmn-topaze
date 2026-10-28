@@ -399,3 +399,23 @@ PalletTown_Text_ProcheAdrian_Early::
 PalletTown_Text_ProcheAdrian_NoRoom::
 	.string "Your BAG is full. Make some room\n"
 	.string "first, then talk to me again.$"
+
+PalletTown_Text_Archive_Ask::
+	.string "I keep a record of every ECHO that\n"
+	.string "washed ashore. Seven fragments,\p"
+	.string "seven stories. Close them all and\n"
+	.string "the archive is complete.$"
+
+PalletTown_Text_Archive_Solved::
+	.string "Seven ECHOES, seven stories closed.\n"
+	.string "The archive is complete. You may\p"
+	.string "keep these, they never fit on my\n"
+	.string "shelves.$"
+
+PalletTown_Text_Archive_Done::
+	.string "The archive is complete. Thank you\n"
+	.string "for writing its last pages.$"
+
+PalletTown_Text_Archive_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

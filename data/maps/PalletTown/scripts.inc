@@ -820,3 +820,38 @@ PalletTown_EventScript_ProcheAdrian_NoRoom::
 	msgbox PalletTown_Text_ProcheAdrian_NoRoom
 	release
 	end
+
+@ Topaze: ARCHIVISTE DES ECHOS (recompense quand les 7 Echos sont clos)
+PalletTown_EventScript_EchoArchivist::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_ARCHIVE_DONE, PalletTown_EventScript_EchoArchivist_Done
+	goto_if_unset FLAG_ECHO_BEAST_DONE, PalletTown_EventScript_EchoArchivist_Ask
+	goto_if_unset FLAG_ECHO_BEAST2_DONE, PalletTown_EventScript_EchoArchivist_Ask
+	goto_if_unset FLAG_ECHO_BEAST3_DONE, PalletTown_EventScript_EchoArchivist_Ask
+	goto_if_unset FLAG_ECHO_BEAST4_DONE, PalletTown_EventScript_EchoArchivist_Ask
+	goto_if_unset FLAG_ECHO_BEAST5_DONE, PalletTown_EventScript_EchoArchivist_Ask
+	goto_if_unset FLAG_ECHO_BEAST6_DONE, PalletTown_EventScript_EchoArchivist_Ask
+	goto_if_unset FLAG_DONE_ECHO_CELEBI, PalletTown_EventScript_EchoArchivist_Ask
+	checkitemspace ITEM_RARE_CANDY, 5
+	goto_if_eq VAR_RESULT, FALSE, PalletTown_EventScript_EchoArchivist_NoRoom
+	setflag FLAG_TOPAZE_ARCHIVE_DONE
+	msgbox PalletTown_Text_Archive_Solved
+	giveitem ITEM_RARE_CANDY, 5
+	release
+	end
+
+PalletTown_EventScript_EchoArchivist_Ask::
+	msgbox PalletTown_Text_Archive_Ask
+	release
+	end
+
+PalletTown_EventScript_EchoArchivist_Done::
+	msgbox PalletTown_Text_Archive_Done
+	release
+	end
+
+PalletTown_EventScript_EchoArchivist_NoRoom::
+	msgbox PalletTown_Text_Archive_NoRoom
+	release
+	end

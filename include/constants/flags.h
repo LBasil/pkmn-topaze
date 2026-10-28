@@ -1612,4 +1612,11 @@
 #define FLAG_TOPAZE_QUEST_6 FLAG_0x209 // mini-quete PNJ 6
 #define FLAG_TOPAZE_QUEST_7 FLAG_0x20A // mini-quete PNJ 7
 
+// Topaze: horloge de Safrania / archiviste
+#define FLAG_TOPAZE_CLOCK_1 FLAG_0x20B
+#define FLAG_TOPAZE_CLOCK_2 FLAG_0x20C
+#define FLAG_TOPAZE_CLOCK_3 FLAG_0x20D
+#define FLAG_TOPAZE_CLOCK_DONE FLAG_0x20E
+#define FLAG_TOPAZE_ARCHIVE_DONE FLAG_0x20F
+
 #endif // GUARD_CONSTANTS_FLAGS_H

@@ -298,3 +298,59 @@ SaffronCity_EventScript_ProcheViolette_NoRoom::
 	msgbox SaffronCity_Text_ProcheViolette_NoRoom
 	release
 	end
+
+@ Topaze: HORLOGE DE SAFRANIA (quete des 3 indices : R1, R11, R22)
+SaffronCity_EventScript_ClockKeeper::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_CLOCK_DONE, SaffronCity_EventScript_ClockKeeper_Done
+	goto_if_unset FLAG_TOPAZE_CLOCK_1, SaffronCity_EventScript_ClockKeeper_Ask
+	goto_if_unset FLAG_TOPAZE_CLOCK_2, SaffronCity_EventScript_ClockKeeper_Ask
+	goto_if_unset FLAG_TOPAZE_CLOCK_3, SaffronCity_EventScript_ClockKeeper_Ask
+	checkitemspace ITEM_EXP_SHARE, 1
+	goto_if_eq VAR_RESULT, FALSE, SaffronCity_EventScript_ClockKeeper_NoRoom
+	setflag FLAG_TOPAZE_CLOCK_DONE
+	msgbox SaffronCity_Text_Clock_Solved
+	giveitem ITEM_EXP_SHARE, 1
+	release
+	end
+
+SaffronCity_EventScript_ClockKeeper_Ask::
+	msgbox SaffronCity_Text_Clock_Ask
+	release
+	end
+
+SaffronCity_EventScript_ClockKeeper_Done::
+	msgbox SaffronCity_Text_Clock_Done
+	release
+	end
+
+SaffronCity_EventScript_ClockKeeper_NoRoom::
+	msgbox SaffronCity_Text_Clock_NoRoom
+	release
+	end
+
+@ Topaze: MARCHE NOCTURNE (post-game)
+SaffronCity_EventScript_NightMarket::
+	lock
+	faceplayer
+	goto_if_unset FLAG_TOPAZE_POSTGAME, SaffronCity_EventScript_NightMarket_Closed
+	msgbox SaffronCity_Text_Market_Open
+	pokemart SaffronCity_NightMarketItems
+	msgbox SaffronCity_Text_Market_Bye
+	release
+	end
+
+SaffronCity_EventScript_NightMarket_Closed::
+	msgbox SaffronCity_Text_Market_Closed
+	release
+	end
+
+	.align 2
+SaffronCity_NightMarketItems::
+	.2byte ITEM_RARE_CANDY
+	.2byte ITEM_PP_MAX
+	.2byte ITEM_MAX_REVIVE
+	.2byte ITEM_FULL_RESTORE
+	.2byte ITEM_LUCKY_EGG
+	.2byte ITEM_NONE

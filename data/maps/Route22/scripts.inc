@@ -272,5 +272,6 @@ Route22_EventScript_ProcheVincent_NoRoom::
 
 @ Topaze: indice du temps deregle
 Route22_EventScript_TimeHint::
+	setflag FLAG_TOPAZE_CLOCK_3
 	msgbox Route22_Text_TimeHint, MSGBOX_SIGN
 	end
