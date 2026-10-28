@@ -13,7 +13,7 @@ Route3_EventScript_RouteSign::
 Route3_EventScript_ProcheThomas::
 	lock
 	faceplayer
-	goto_if_unset FLAG_BADGE02_GET, Route3_EventScript_ProcheThomas_TooEarly
+	goto_if_unset FLAG_TOPAZE_POSTGAME, Route3_EventScript_ProcheThomas_TooEarly
 	goto_if_defeated TRAINER_PROCHE_THOMAS, Route3_EventScript_ProcheThomas_After
 	msgbox Route3_Text_ProcheThomas_Intro
 	checkitemspace ITEM_SILVER_POWDER

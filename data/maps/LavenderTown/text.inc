@@ -103,8 +103,9 @@ LavenderTown_Text_ProcheNathan_After::
 	.string "disguise.$"
 
 LavenderTown_Text_ProcheNathan_Early::
-	.string "Not yet, {PLAYER}. Return with all 8\n"
-	.string "BADGES.$"
+	.string "Not yet, {PLAYER}. Finish your\n"
+	.string "journey first, then come and find\p"
+	.string "me.$"
 
 LavenderTown_Text_ProcheNathan_NoRoom::
 	.string "Your BAG is full. Make some room\n"

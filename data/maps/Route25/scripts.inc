@@ -37,7 +37,7 @@ Route25_EventScript_SeaCottageSign::
 Route25_EventScript_ProcheLola::
 	lock
 	faceplayer
-	goto_if_unset FLAG_BADGE03_GET, Route25_EventScript_ProcheLola_TooEarly
+	goto_if_unset FLAG_TOPAZE_POSTGAME, Route25_EventScript_ProcheLola_TooEarly
 	goto_if_defeated TRAINER_PROCHE_LOLA, Route25_EventScript_ProcheLola_After
 	msgbox Route25_Text_ProcheLola_Intro
 	checkitemspace ITEM_NEVER_MELT_ICE

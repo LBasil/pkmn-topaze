@@ -147,8 +147,9 @@ Route25_Text_ProcheLola_After::
 	.string "see me anytime.$"
 
 Route25_Text_ProcheLola_Early::
-	.string "Not yet, {PLAYER}. Earn 3 BADGES,\n"
-	.string "then we talk.$"
+	.string "Not yet, {PLAYER}. Finish your\n"
+	.string "journey first, then come and find\p"
+	.string "me.$"
 
 Route25_Text_ProcheLola_NoRoom::
 	.string "Your BAG is full. Make some room\n"

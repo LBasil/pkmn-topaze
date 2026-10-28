@@ -9,7 +9,7 @@ Route15_EventScript_RouteSign::
 Route15_EventScript_ProcheGauthier::
 	lock
 	faceplayer
-	goto_if_unset FLAG_BADGE06_GET, Route15_EventScript_ProcheGauthier_TooEarly
+	goto_if_unset FLAG_TOPAZE_POSTGAME, Route15_EventScript_ProcheGauthier_TooEarly
 	goto_if_defeated TRAINER_PROCHE_GAUTHIER, Route15_EventScript_ProcheGauthier_After
 	msgbox Route15_Text_ProcheGauthier_Intro
 	checkitemspace ITEM_BLACK_BELT

@@ -178,8 +178,9 @@ FuchsiaCity_Text_ProcheThibault_After::
 	.string "fight, {PLAYER}.$"
 
 FuchsiaCity_Text_ProcheThibault_Early::
-	.string "Come back with all 8 BADGES. The\n"
-	.string "sea is deep.$"
+	.string "Not yet, {PLAYER}. Finish your\n"
+	.string "journey first, then come and find\p"
+	.string "me.$"
 
 FuchsiaCity_Text_ProcheThibault_NoRoom::
 	.string "Your BAG is full. Make some room\n"

@@ -91,8 +91,9 @@ Route6_Text_ProcheJordan_After::
 	.string "That is the way.$"
 
 Route6_Text_ProcheJordan_Early::
-	.string "Come back with 4 BADGES. Then I\n"
-	.string "will not hold back.$"
+	.string "Not yet, {PLAYER}. Finish your\n"
+	.string "journey first, then come and find\p"
+	.string "me.$"
 
 Route6_Text_ProcheJordan_NoRoom::
 	.string "Your BAG is full. Make some room\n"

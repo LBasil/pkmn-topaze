@@ -383,8 +383,9 @@ PalletTown_Text_ProcheAdrian_After::
 	.string "Fly high.$"
 
 PalletTown_Text_ProcheAdrian_Early::
-	.string "Come back once you have beaten all\n"
-	.string "my friends.$"
+	.string "Not yet, {PLAYER}. Finish your\n"
+	.string "journey first, then come and find\p"
+	.string "me.$"
 
 PalletTown_Text_ProcheAdrian_NoRoom::
 	.string "Your BAG is full. Make some room\n"

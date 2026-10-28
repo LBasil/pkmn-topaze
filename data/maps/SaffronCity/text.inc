@@ -195,8 +195,9 @@ SaffronCity_Text_ProcheViolette_After::
 	.string "that today.$"
 
 SaffronCity_Text_ProcheViolette_Early::
-	.string "Not yet. I see 5 BADGES in your\n"
-	.string "future.$"
+	.string "Not yet, {PLAYER}. Finish your\n"
+	.string "journey first, then come and find\p"
+	.string "me.$"
 
 SaffronCity_Text_ProcheViolette_NoRoom::
 	.string "Your BAG is full. Make some room\n"

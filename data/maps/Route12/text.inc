@@ -193,8 +193,9 @@ Route12_Text_ProcheEmma_After::
 	.string "prettier then.$"
 
 Route12_Text_ProcheEmma_Early::
-	.string "Come back with 6 BADGES, dear. The\n"
-	.string "flowers can wait.$"
+	.string "Not yet, {PLAYER}. Finish your\n"
+	.string "journey first, then come and find\p"
+	.string "me.$"
 
 Route12_Text_ProcheEmma_NoRoom::
 	.string "Your BAG is full. Make some room\n"

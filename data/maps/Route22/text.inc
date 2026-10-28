@@ -81,8 +81,9 @@ Route22_Text_ProcheVincent_After::
 	.string "Stay shocking, {PLAYER}!$"
 
 Route22_Text_ProcheVincent_Early::
-	.string "Come back with all 8 BADGES. High\n"
-	.string "voltage only.$"
+	.string "Not yet, {PLAYER}. Finish your\n"
+	.string "journey first, then come and find\p"
+	.string "me.$"
 
 Route22_Text_ProcheVincent_NoRoom::
 	.string "Your BAG is full. Make some room\n"

@@ -9,7 +9,7 @@ Route6_EventScript_UndergroundPathSign::
 Route6_EventScript_ProcheJordan::
 	lock
 	faceplayer
-	goto_if_unset FLAG_BADGE04_GET, Route6_EventScript_ProcheJordan_TooEarly
+	goto_if_unset FLAG_TOPAZE_POSTGAME, Route6_EventScript_ProcheJordan_TooEarly
 	goto_if_defeated TRAINER_PROCHE_JORDAN, Route6_EventScript_ProcheJordan_After
 	msgbox Route6_Text_ProcheJordan_Intro
 	checkitemspace ITEM_SILK_SCARF

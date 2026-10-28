@@ -96,8 +96,9 @@ Route10_Text_ProcheEdouard_After::
 	.string "I.$"
 
 Route10_Text_ProcheEdouard_Early::
-	.string "Come back with 5 BADGES. Rocks are\n"
-	.string "patient.$"
+	.string "Not yet, {PLAYER}. Finish your\n"
+	.string "journey first, then come and find\p"
+	.string "me.$"
 
 Route10_Text_ProcheEdouard_NoRoom::
 	.string "Your BAG is full. Make some room\n"

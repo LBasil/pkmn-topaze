@@ -263,27 +263,27 @@ static const u8 sJH_123[] = _("TOURMALIA: follow the sand path in\nthe NW forest
 static const u8 sJN_124[] = _("MEW");
 static const u8 sJH_124[] = _("A strange truck is parked near the\nAPATIA docks.");
 static const u8 sJN_125[] = _("THOMAS");
-static const u8 sJH_125[] = _("ROUTE 3: a BUG specialist.\nNeeds 2 BADGES.");
+static const u8 sJH_125[] = _("ROUTE 3: a BUG specialist.\nNeeds the LEAGUE beaten.");
 static const u8 sJN_126[] = _("LOLA");
-static const u8 sJH_126[] = _("ROUTE 25: a ICE specialist.\nNeeds 3 BADGES.");
+static const u8 sJH_126[] = _("ROUTE 25: a ICE specialist.\nNeeds the LEAGUE beaten.");
 static const u8 sJN_127[] = _("JORDAN");
-static const u8 sJH_127[] = _("ROUTE 6: a NORMAL specialist.\nNeeds 4 BADGES.");
+static const u8 sJH_127[] = _("ROUTE 6: a NORMAL specialist.\nNeeds the LEAGUE beaten.");
 static const u8 sJN_128[] = _("VIOLETTE");
-static const u8 sJH_128[] = _("SAFFRON CITY: a PSYCHIC specialist.\nNeeds 5 BADGES.");
+static const u8 sJH_128[] = _("SAFFRON CITY: a PSYCHIC specialist.\nNeeds the LEAGUE beaten.");
 static const u8 sJN_129[] = _("EDOUARD");
-static const u8 sJH_129[] = _("ROUTE 10: a ROCK specialist.\nNeeds 5 BADGES.");
+static const u8 sJH_129[] = _("ROUTE 10: a ROCK specialist.\nNeeds the LEAGUE beaten.");
 static const u8 sJN_130[] = _("EMMA");
-static const u8 sJH_130[] = _("ROUTE 12: a GRASS specialist.\nNeeds 6 BADGES.");
+static const u8 sJH_130[] = _("ROUTE 12: a GRASS specialist.\nNeeds the LEAGUE beaten.");
 static const u8 sJN_131[] = _("GAUTHIER");
-static const u8 sJH_131[] = _("ROUTE 15: a FIGHT specialist.\nNeeds 6 BADGES.");
+static const u8 sJH_131[] = _("ROUTE 15: a FIGHT specialist.\nNeeds the LEAGUE beaten.");
 static const u8 sJN_132[] = _("CHLOE");
-static const u8 sJH_132[] = _("CINNABAR ISLAND: a FIRE specialist.\nNeeds 7 BADGES.");
+static const u8 sJH_132[] = _("CINNABAR ISLAND: a FIRE specialist.\nNeeds the LEAGUE beaten.");
 static const u8 sJN_133[] = _("VINCENT");
-static const u8 sJH_133[] = _("ROUTE 22: a ELECTRIC specialist.\nNeeds 8 BADGES.");
+static const u8 sJH_133[] = _("ROUTE 22: a ELECTRIC specialist.\nNeeds the LEAGUE beaten.");
 static const u8 sJN_134[] = _("THIBAULT");
-static const u8 sJH_134[] = _("FUCHSIA CITY: a WATER specialist.\nNeeds 8 BADGES.");
+static const u8 sJH_134[] = _("FUCHSIA CITY: a WATER specialist.\nNeeds the LEAGUE beaten.");
 static const u8 sJN_135[] = _("NATHAN");
-static const u8 sJH_135[] = _("LAVENDER TOWN: a GHOST specialist.\nNeeds 8 BADGES.");
+static const u8 sJH_135[] = _("LAVENDER TOWN: a GHOST specialist.\nNeeds the LEAGUE beaten.");
 static const u8 sJN_136[] = _("DYLAN");
 static const u8 sJH_136[] = _("FOUR ISLAND: a DRAGON specialist.\nNeeds the LEAGUE beaten.");
 static const u8 sJN_137[] = _("ADRIAN");
@@ -430,17 +430,17 @@ static const struct TopazeJournalEntry sJournalEntries[] = {
     { 10, 0, 2, FLAG_FOUGHT_MOLTRES, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_122, sJH_122 },
     { 10, 0, 1, FLAG_FOUGHT_MEWTWO, 0, 0, 7, 0, 0, 0, sJN_123, sJH_123 },
     { 10, 0, 2, FLAG_FOUGHT_MEW_TRUCK, 0, FLAG_SYS_GAME_CLEAR, 0, 0, 0, 0, sJN_124, sJH_124 },
-    { 11, 2, 1, TRAINER_PROCHE_THOMAS, 0, 0, 2, 0, 0, 0, sJN_125, sJH_125 },
-    { 11, 2, 1, TRAINER_PROCHE_LOLA, 0, 0, 3, 0, 0, 0, sJN_126, sJH_126 },
-    { 11, 2, 1, TRAINER_PROCHE_JORDAN, 0, 0, 4, 0, 0, 0, sJN_127, sJH_127 },
-    { 11, 2, 1, TRAINER_PROCHE_VIOLETTE, 0, 0, 5, 0, 0, 0, sJN_128, sJH_128 },
-    { 11, 2, 1, TRAINER_PROCHE_EDOUARD, 0, 0, 5, 0, 0, 0, sJN_129, sJH_129 },
-    { 11, 2, 1, TRAINER_PROCHE_EMMA, 0, 0, 6, 0, 0, 0, sJN_130, sJH_130 },
-    { 11, 2, 1, TRAINER_PROCHE_GAUTHIER, 0, 0, 6, 0, 0, 0, sJN_131, sJH_131 },
-    { 11, 2, 1, TRAINER_PROCHE_CHLOE, 0, 0, 7, 0, 0, 0, sJN_132, sJH_132 },
-    { 11, 2, 1, TRAINER_PROCHE_VINCENT, 0, 0, 8, 0, 0, 0, sJN_133, sJH_133 },
-    { 11, 2, 1, TRAINER_PROCHE_THIBAULT, 0, 0, 8, 0, 0, 0, sJN_134, sJH_134 },
-    { 11, 2, 1, TRAINER_PROCHE_NATHAN, 0, 0, 8, 0, 0, 0, sJN_135, sJH_135 },
+    { 11, 2, 2, TRAINER_PROCHE_THOMAS, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_125, sJH_125 },
+    { 11, 2, 2, TRAINER_PROCHE_LOLA, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_126, sJH_126 },
+    { 11, 2, 2, TRAINER_PROCHE_JORDAN, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_127, sJH_127 },
+    { 11, 2, 2, TRAINER_PROCHE_VIOLETTE, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_128, sJH_128 },
+    { 11, 2, 2, TRAINER_PROCHE_EDOUARD, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_129, sJH_129 },
+    { 11, 2, 2, TRAINER_PROCHE_EMMA, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_130, sJH_130 },
+    { 11, 2, 2, TRAINER_PROCHE_GAUTHIER, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_131, sJH_131 },
+    { 11, 2, 2, TRAINER_PROCHE_CHLOE, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_132, sJH_132 },
+    { 11, 2, 2, TRAINER_PROCHE_VINCENT, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_133, sJH_133 },
+    { 11, 2, 2, TRAINER_PROCHE_THIBAULT, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_134, sJH_134 },
+    { 11, 2, 2, TRAINER_PROCHE_NATHAN, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_135, sJH_135 },
     { 11, 2, 2, TRAINER_PROCHE_DYLAN, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_136, sJH_136 },
     { 11, 2, 2, TRAINER_PROCHE_ADRIAN, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_137, sJH_137 },
 };

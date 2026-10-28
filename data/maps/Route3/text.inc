@@ -119,8 +119,9 @@ Route3_Text_ProcheThomas_After::
 	.string "always come back stronger.$"
 
 Route3_Text_ProcheThomas_Early::
-	.string "Come back with 2 BADGES. I want a\n"
-	.string "real fight, not a warm-up.$"
+	.string "Not yet, {PLAYER}. Finish your\n"
+	.string "journey first, then come and find\p"
+	.string "me.$"
 
 Route3_Text_ProcheThomas_NoRoom::
 	.string "Your BAG is full. Make some room\n"

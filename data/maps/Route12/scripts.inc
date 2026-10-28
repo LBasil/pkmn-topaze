@@ -107,7 +107,7 @@ Route12_EventScript_FishingSign::
 Route12_EventScript_ProcheEmma::
 	lock
 	faceplayer
-	goto_if_unset FLAG_BADGE06_GET, Route12_EventScript_ProcheEmma_TooEarly
+	goto_if_unset FLAG_TOPAZE_POSTGAME, Route12_EventScript_ProcheEmma_TooEarly
 	goto_if_defeated TRAINER_PROCHE_EMMA, Route12_EventScript_ProcheEmma_After
 	msgbox Route12_Text_ProcheEmma_Intro
 	checkitemspace ITEM_MIRACLE_SEED

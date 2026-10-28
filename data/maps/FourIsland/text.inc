@@ -132,8 +132,9 @@ FourIsland_Text_ProcheDylan_After::
 	.string "it.$"
 
 FourIsland_Text_ProcheDylan_Early::
-	.string "Come back after the LEAGUE. Dragons\n"
-	.string "wait for no one.$"
+	.string "Not yet, {PLAYER}. Finish your\n"
+	.string "journey first, then come and find\p"
+	.string "me.$"
 
 FourIsland_Text_ProcheDylan_NoRoom::
 	.string "Your BAG is full. Make some room\n"

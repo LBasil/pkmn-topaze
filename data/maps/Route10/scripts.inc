@@ -20,7 +20,7 @@ Route10_EventScript_PowerPlantSign::
 Route10_EventScript_ProcheEdouard::
 	lock
 	faceplayer
-	goto_if_unset FLAG_BADGE05_GET, Route10_EventScript_ProcheEdouard_TooEarly
+	goto_if_unset FLAG_TOPAZE_POSTGAME, Route10_EventScript_ProcheEdouard_TooEarly
 	goto_if_defeated TRAINER_PROCHE_EDOUARD, Route10_EventScript_ProcheEdouard_After
 	msgbox Route10_Text_ProcheEdouard_Intro
 	checkitemspace ITEM_HARD_STONE

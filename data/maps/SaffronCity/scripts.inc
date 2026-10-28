@@ -272,7 +272,7 @@ SaffronCity_EventScript_RefugeIdle::
 SaffronCity_EventScript_ProcheViolette::
 	lock
 	faceplayer
-	goto_if_unset FLAG_BADGE05_GET, SaffronCity_EventScript_ProcheViolette_TooEarly
+	goto_if_unset FLAG_TOPAZE_POSTGAME, SaffronCity_EventScript_ProcheViolette_TooEarly
 	goto_if_defeated TRAINER_PROCHE_VIOLETTE, SaffronCity_EventScript_ProcheViolette_After
 	msgbox SaffronCity_Text_ProcheViolette_Intro
 	checkitemspace ITEM_TWISTED_SPOON

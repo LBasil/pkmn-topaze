@@ -143,7 +143,7 @@ LavenderTown_Text_CellWitnessDone::
 LavenderTown_EventScript_ProcheNathan::
 	lock
 	faceplayer
-	goto_if_unset FLAG_BADGE08_GET, LavenderTown_EventScript_ProcheNathan_TooEarly
+	goto_if_unset FLAG_TOPAZE_POSTGAME, LavenderTown_EventScript_ProcheNathan_TooEarly
 	goto_if_defeated TRAINER_PROCHE_NATHAN, LavenderTown_EventScript_ProcheNathan_After
 	msgbox LavenderTown_Text_ProcheNathan_Intro
 	checkitemspace ITEM_SPELL_TAG

@@ -298,7 +298,7 @@ FuchsiaCity_Text_CellWitnessDone::
 FuchsiaCity_EventScript_ProcheThibault::
 	lock
 	faceplayer
-	goto_if_unset FLAG_BADGE08_GET, FuchsiaCity_EventScript_ProcheThibault_TooEarly
+	goto_if_unset FLAG_TOPAZE_POSTGAME, FuchsiaCity_EventScript_ProcheThibault_TooEarly
 	goto_if_defeated TRAINER_PROCHE_THIBAULT, FuchsiaCity_EventScript_ProcheThibault_After
 	msgbox FuchsiaCity_Text_ProcheThibault_Intro
 	checkitemspace ITEM_MYSTIC_WATER

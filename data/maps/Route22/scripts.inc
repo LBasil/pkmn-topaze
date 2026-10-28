@@ -243,7 +243,7 @@ Route22_Movement_OneLeft::
 Route22_EventScript_ProcheVincent::
 	lock
 	faceplayer
-	goto_if_unset FLAG_BADGE08_GET, Route22_EventScript_ProcheVincent_TooEarly
+	goto_if_unset FLAG_TOPAZE_POSTGAME, Route22_EventScript_ProcheVincent_TooEarly
 	goto_if_defeated TRAINER_PROCHE_VINCENT, Route22_EventScript_ProcheVincent_After
 	msgbox Route22_Text_ProcheVincent_Intro
 	checkitemspace ITEM_MAGNET

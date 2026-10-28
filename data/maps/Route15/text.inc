@@ -169,8 +169,9 @@ Route15_Text_ProcheGauthier_After::
 	.string "{PLAYER}.$"
 
 Route15_Text_ProcheGauthier_Early::
-	.string "Come back with 6 BADGES. I want\n"
-	.string "your full strength.$"
+	.string "Not yet, {PLAYER}. Finish your\n"
+	.string "journey first, then come and find\p"
+	.string "me.$"
 
 Route15_Text_ProcheGauthier_NoRoom::
 	.string "Your BAG is full. Make some room\n"

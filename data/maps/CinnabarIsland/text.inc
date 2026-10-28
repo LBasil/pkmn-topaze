@@ -192,8 +192,9 @@ CinnabarIsland_Text_ProcheChloe_After::
 	.string "flame go out.$"
 
 CinnabarIsland_Text_ProcheChloe_Early::
-	.string "Come back with 7 BADGES. I like my\n"
-	.string "fights well done.$"
+	.string "Not yet, {PLAYER}. Finish your\n"
+	.string "journey first, then come and find\p"
+	.string "me.$"
 
 CinnabarIsland_Text_ProcheChloe_NoRoom::
 	.string "Your BAG is full. Make some room\n"

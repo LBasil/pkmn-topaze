@@ -478,7 +478,7 @@ CinnabarIsland_EventScript_RefugeIdle::
 CinnabarIsland_EventScript_ProcheChloe::
 	lock
 	faceplayer
-	goto_if_unset FLAG_BADGE07_GET, CinnabarIsland_EventScript_ProcheChloe_TooEarly
+	goto_if_unset FLAG_TOPAZE_POSTGAME, CinnabarIsland_EventScript_ProcheChloe_TooEarly
 	goto_if_defeated TRAINER_PROCHE_CHLOE, CinnabarIsland_EventScript_ProcheChloe_After
 	msgbox CinnabarIsland_Text_ProcheChloe_Intro
 	checkitemspace ITEM_CHARCOAL
