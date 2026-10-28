@@ -32,3 +32,34 @@ Route25_EventScript_SeaCottageSign::
 	msgbox Route25_Text_SeaCottageSign, MSGBOX_SIGN
 	end
 
+
+@ Topaze: PROCHE LOLA (optionnel, fort)
+Route25_EventScript_ProcheLola::
+	lock
+	faceplayer
+	goto_if_unset FLAG_BADGE03_GET, Route25_EventScript_ProcheLola_TooEarly
+	goto_if_defeated TRAINER_PROCHE_LOLA, Route25_EventScript_ProcheLola_After
+	msgbox Route25_Text_ProcheLola_Intro
+	checkitemspace ITEM_NEVER_MELT_ICE
+	goto_if_eq VAR_RESULT, FALSE, Route25_EventScript_ProcheLola_NoRoom
+	trainerbattle_no_intro TRAINER_PROCHE_LOLA, Route25_Text_ProcheLola_Defeat
+	msgbox Route25_Text_ProcheLola_Win
+	giveitem ITEM_NEVER_MELT_ICE
+	msgbox Route25_Text_ProcheLola_After
+	release
+	end
+
+Route25_EventScript_ProcheLola_After::
+	msgbox Route25_Text_ProcheLola_After
+	release
+	end
+
+Route25_EventScript_ProcheLola_TooEarly::
+	msgbox Route25_Text_ProcheLola_Early
+	release
+	end
+
+Route25_EventScript_ProcheLola_NoRoom::
+	msgbox Route25_Text_ProcheLola_NoRoom
+	release
+	end

@@ -267,3 +267,34 @@ SaffronCity_EventScript_RefugeIdle::
 	msgbox SaffronCity_Text_RefIdle
 	release
 	end
+
+@ Topaze: PROCHE VIOLETTE (optionnel, fort)
+SaffronCity_EventScript_ProcheViolette::
+	lock
+	faceplayer
+	goto_if_unset FLAG_BADGE05_GET, SaffronCity_EventScript_ProcheViolette_TooEarly
+	goto_if_defeated TRAINER_PROCHE_VIOLETTE, SaffronCity_EventScript_ProcheViolette_After
+	msgbox SaffronCity_Text_ProcheViolette_Intro
+	checkitemspace ITEM_TWISTED_SPOON
+	goto_if_eq VAR_RESULT, FALSE, SaffronCity_EventScript_ProcheViolette_NoRoom
+	trainerbattle_no_intro TRAINER_PROCHE_VIOLETTE, SaffronCity_Text_ProcheViolette_Defeat
+	msgbox SaffronCity_Text_ProcheViolette_Win
+	giveitem ITEM_TWISTED_SPOON
+	msgbox SaffronCity_Text_ProcheViolette_After
+	release
+	end
+
+SaffronCity_EventScript_ProcheViolette_After::
+	msgbox SaffronCity_Text_ProcheViolette_After
+	release
+	end
+
+SaffronCity_EventScript_ProcheViolette_TooEarly::
+	msgbox SaffronCity_Text_ProcheViolette_Early
+	release
+	end
+
+SaffronCity_EventScript_ProcheViolette_NoRoom::
+	msgbox SaffronCity_Text_ProcheViolette_NoRoom
+	release
+	end

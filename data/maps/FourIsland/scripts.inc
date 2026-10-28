@@ -243,3 +243,34 @@ FourIsland_EventScript_RefugeIdle::
 	msgbox FourIsland_Text_RefIdle
 	release
 	end
+
+@ Topaze: PROCHE DYLAN (optionnel, fort)
+FourIsland_EventScript_ProcheDylan::
+	lock
+	faceplayer
+	goto_if_unset FLAG_TOPAZE_POSTGAME, FourIsland_EventScript_ProcheDylan_TooEarly
+	goto_if_defeated TRAINER_PROCHE_DYLAN, FourIsland_EventScript_ProcheDylan_After
+	msgbox FourIsland_Text_ProcheDylan_Intro
+	checkitemspace ITEM_DRAGON_FANG
+	goto_if_eq VAR_RESULT, FALSE, FourIsland_EventScript_ProcheDylan_NoRoom
+	trainerbattle_no_intro TRAINER_PROCHE_DYLAN, FourIsland_Text_ProcheDylan_Defeat
+	msgbox FourIsland_Text_ProcheDylan_Win
+	giveitem ITEM_DRAGON_FANG
+	msgbox FourIsland_Text_ProcheDylan_After
+	release
+	end
+
+FourIsland_EventScript_ProcheDylan_After::
+	msgbox FourIsland_Text_ProcheDylan_After
+	release
+	end
+
+FourIsland_EventScript_ProcheDylan_TooEarly::
+	msgbox FourIsland_Text_ProcheDylan_Early
+	release
+	end
+
+FourIsland_EventScript_ProcheDylan_NoRoom::
+	msgbox FourIsland_Text_ProcheDylan_NoRoom
+	release
+	end

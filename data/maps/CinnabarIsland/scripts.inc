@@ -473,3 +473,34 @@ CinnabarIsland_EventScript_RefugeIdle::
 	msgbox CinnabarIsland_Text_RefIdle
 	release
 	end
+
+@ Topaze: PROCHE CHLOE (optionnel, fort)
+CinnabarIsland_EventScript_ProcheChloe::
+	lock
+	faceplayer
+	goto_if_unset FLAG_BADGE07_GET, CinnabarIsland_EventScript_ProcheChloe_TooEarly
+	goto_if_defeated TRAINER_PROCHE_CHLOE, CinnabarIsland_EventScript_ProcheChloe_After
+	msgbox CinnabarIsland_Text_ProcheChloe_Intro
+	checkitemspace ITEM_CHARCOAL
+	goto_if_eq VAR_RESULT, FALSE, CinnabarIsland_EventScript_ProcheChloe_NoRoom
+	trainerbattle_no_intro TRAINER_PROCHE_CHLOE, CinnabarIsland_Text_ProcheChloe_Defeat
+	msgbox CinnabarIsland_Text_ProcheChloe_Win
+	giveitem ITEM_CHARCOAL
+	msgbox CinnabarIsland_Text_ProcheChloe_After
+	release
+	end
+
+CinnabarIsland_EventScript_ProcheChloe_After::
+	msgbox CinnabarIsland_Text_ProcheChloe_After
+	release
+	end
+
+CinnabarIsland_EventScript_ProcheChloe_TooEarly::
+	msgbox CinnabarIsland_Text_ProcheChloe_Early
+	release
+	end
+
+CinnabarIsland_EventScript_ProcheChloe_NoRoom::
+	msgbox CinnabarIsland_Text_ProcheChloe_NoRoom
+	release
+	end

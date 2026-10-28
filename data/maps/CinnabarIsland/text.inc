@@ -176,3 +176,25 @@ CinnabarIsland_Text_RefDone::
 CinnabarIsland_Text_RefIdle::
     .string "IRIS: I watch over the animals here.\n"
     .string "The world is quieter now.$"
+
+CinnabarIsland_Text_ProcheChloe_Intro::
+	.string "Hey {PLAYER}! Hot day, hotter team.\n"
+	.string "Try not to get burned!$"
+
+CinnabarIsland_Text_ProcheChloe_Defeat::
+	.string "Okay okay, you are on fire too!$"
+
+CinnabarIsland_Text_ProcheChloe_Win::
+	.string "Here, a little spark for your team.$"
+
+CinnabarIsland_Text_ProcheChloe_After::
+	.string "Stay fiery, {PLAYER}. Never let the\n"
+	.string "flame go out.$"
+
+CinnabarIsland_Text_ProcheChloe_Early::
+	.string "Come back with 7 BADGES. I like my\n"
+	.string "fights well done.$"
+
+CinnabarIsland_Text_ProcheChloe_NoRoom::
+	.string "Your BAG is full. Make some room\n"
+	.string "first, then talk to me again.$"

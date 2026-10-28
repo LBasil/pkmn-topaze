@@ -9,7 +9,7 @@ SECTIONS = [  # (nom, drapeau de deblocage ou None) ; une section sans entree vi
     ("BADGES", None), ("STORY", None), ("SIDE QUESTS", None), ("GIFTS", None),
     ("BATTLE", None), ("COLLECTION", None), ("JOURNEY", None),
     ("POST-GAME", "FLAG_TOPAZE_POSTGAME"), ("ECHOES", "FLAG_TOPAZE_POSTGAME"),
-    ("LEGENDS", None), ("RARE POKéMON", None),
+    ("LEGENDS", None), ("RARE POKéMON", None), ("FRIENDS", None),
 ]
 SEC = {n: i for i, (n, _) in enumerate(SECTIONS)}
 A = ("A", "0", 0)
@@ -167,6 +167,22 @@ for sec in ("BADGES", "STORY", "ECHOES"):
     idx = [i for i, e in enumerate(E) if e[0] == SEC[sec]]
     for i in idx[:-1]:
         E[i][7] = 1
+
+# ---- FRIENDS (les Proches : dresseurs optionnels tres forts)
+add("FRIENDS", T, "TRAINER_PROCHE_THOMAS", 0, "THOMAS", "ROUTE 3: a BUG specialist.\\nNeeds 2 BADGES.", B(2))
+add("FRIENDS", T, "TRAINER_PROCHE_LOLA", 0, "LOLA", "ROUTE 25: a ICE specialist.\\nNeeds 3 BADGES.", B(3))
+add("FRIENDS", T, "TRAINER_PROCHE_JORDAN", 0, "JORDAN", "ROUTE 6: a NORMAL specialist.\\nNeeds 4 BADGES.", B(4))
+add("FRIENDS", T, "TRAINER_PROCHE_VIOLETTE", 0, "VIOLETTE", "SAFFRON CITY: a PSYCHIC specialist.\\nNeeds 5 BADGES.", B(5))
+add("FRIENDS", T, "TRAINER_PROCHE_EDOUARD", 0, "EDOUARD", "ROUTE 10: a ROCK specialist.\\nNeeds 5 BADGES.", B(5))
+add("FRIENDS", T, "TRAINER_PROCHE_EMMA", 0, "EMMA", "ROUTE 12: a GRASS specialist.\\nNeeds 6 BADGES.", B(6))
+add("FRIENDS", T, "TRAINER_PROCHE_GAUTHIER", 0, "GAUTHIER", "ROUTE 15: a FIGHT specialist.\\nNeeds 6 BADGES.", B(6))
+add("FRIENDS", T, "TRAINER_PROCHE_CHLOE", 0, "CHLOE", "CINNABAR ISLAND: a FIRE specialist.\\nNeeds 7 BADGES.", B(7))
+add("FRIENDS", T, "TRAINER_PROCHE_VINCENT", 0, "VINCENT", "ROUTE 22: a ELECTRIC specialist.\\nNeeds 8 BADGES.", B(8))
+add("FRIENDS", T, "TRAINER_PROCHE_THIBAULT", 0, "THIBAULT", "FUCHSIA CITY: a WATER specialist.\\nNeeds 8 BADGES.", B(8))
+add("FRIENDS", T, "TRAINER_PROCHE_NATHAN", 0, "NATHAN", "LAVENDER TOWN: a GHOST specialist.\\nNeeds 8 BADGES.", B(8))
+add("FRIENDS", T, "TRAINER_PROCHE_DYLAN", 0, "DYLAN", "FOUR ISLAND: a DRAGON specialist.\\nNeeds the LEAGUE beaten.", FL("FLAG_TOPAZE_POSTGAME"))
+add("FRIENDS", T, "TRAINER_PROCHE_ADRIAN", 0, "ADRIAN", "PALLET TOWN: a FLYING specialist.\\nBeat all your other friends.", FL("FLAG_TOPAZE_POSTGAME"))
+
 assert len(SECTIONS) <= 12
 for e in E:
     lines = e[5].split("\\n")

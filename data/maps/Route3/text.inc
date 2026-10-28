@@ -102,3 +102,26 @@ Route3_Text_RouteSign::
     .string "ROUTE 3\n"
     .string "MT. MOON AHEAD$"
 
+
+Route3_Text_ProcheThomas_Intro::
+	.string "Yo, {PLAYER}! Nobody takes BUG types\n"
+	.string "seriously. Let me change your mind!$"
+
+Route3_Text_ProcheThomas_Defeat::
+	.string "Ha! Not bad at all!$"
+
+Route3_Text_ProcheThomas_Win::
+	.string "Take this. Bugs love it. You earned\n"
+	.string "it!$"
+
+Route3_Text_ProcheThomas_After::
+	.string "Never underestimate bugs. They\n"
+	.string "always come back stronger.$"
+
+Route3_Text_ProcheThomas_Early::
+	.string "Come back with 2 BADGES. I want a\n"
+	.string "real fight, not a warm-up.$"
+
+Route3_Text_ProcheThomas_NoRoom::
+	.string "Your BAG is full. Make some room\n"
+	.string "first, then talk to me again.$"

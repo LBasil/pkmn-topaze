@@ -74,3 +74,26 @@ Route6_Text_UndergroundPathSign::
     .string "UNDERGROUND PATH\n"
     .string "TOURMALIA - APATIA$"
 
+
+Route6_Text_ProcheJordan_Intro::
+	.string "Normal is not boring, {PLAYER}.\n"
+	.string "Normal is solid. Prove me wrong!$"
+
+Route6_Text_ProcheJordan_Defeat::
+	.string "Solid... and yet you broke through.$"
+
+Route6_Text_ProcheJordan_Win::
+	.string "A little gift. Nothing fancy, just\n"
+	.string "good.$"
+
+Route6_Text_ProcheJordan_After::
+	.string "Keep it simple, keep it strong.\n"
+	.string "That is the way.$"
+
+Route6_Text_ProcheJordan_Early::
+	.string "Come back with 4 BADGES. Then I\n"
+	.string "will not hold back.$"
+
+Route6_Text_ProcheJordan_NoRoom::
+	.string "Your BAG is full. Make some room\n"
+	.string "first, then talk to me again.$"

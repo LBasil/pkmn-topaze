@@ -65,3 +65,25 @@ Route22_Text_LeagueGateSign::
 	.string "Front Gate$"
 
 
+
+Route22_Text_ProcheVincent_Intro::
+	.string "Whoa, {PLAYER}! You look charged up.\n"
+	.string "Let us see whose spark is brighter!$"
+
+Route22_Text_ProcheVincent_Defeat::
+	.string "Lights out... for me.$"
+
+Route22_Text_ProcheVincent_Win::
+	.string "Plug this in. It will serve you\n"
+	.string "well.$"
+
+Route22_Text_ProcheVincent_After::
+	.string "Stay shocking, {PLAYER}!$"
+
+Route22_Text_ProcheVincent_Early::
+	.string "Come back with all 8 BADGES. High\n"
+	.string "voltage only.$"
+
+Route22_Text_ProcheVincent_NoRoom::
+	.string "Your BAG is full. Make some room\n"
+	.string "first, then talk to me again.$"

@@ -130,3 +130,26 @@ Route25_Text_MistyHighHopesAboutThisPlace::
     .string "to this cape. It's a lovely spot,\p"
     .string "even with the old cottage so\n"
     .string "empty and quiet.$"
+
+Route25_Text_ProcheLola_Intro::
+	.string "There you are, {PLAYER}! Cold hands,\n"
+	.string "warm heart... but my team is pure\p"
+	.string "ice!$"
+
+Route25_Text_ProcheLola_Defeat::
+	.string "You melted my team...$"
+
+Route25_Text_ProcheLola_Win::
+	.string "Keep this one. It never melts!$"
+
+Route25_Text_ProcheLola_After::
+	.string "Winter is my favorite season. Come\n"
+	.string "see me anytime.$"
+
+Route25_Text_ProcheLola_Early::
+	.string "Not yet, {PLAYER}. Earn 3 BADGES,\n"
+	.string "then we talk.$"
+
+Route25_Text_ProcheLola_NoRoom::
+	.string "Your BAG is full. Make some room\n"
+	.string "first, then talk to me again.$"

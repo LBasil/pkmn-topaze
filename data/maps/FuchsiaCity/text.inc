@@ -162,3 +162,25 @@ FuchsiaCity_Text_PoliceVolcano::
     .string "the water is molten rock.\p"
     .string "Looking for CHRONDROLIA? Go back\n"
     .string "to GRENALUX and SURF south.$"
+
+FuchsiaCity_Text_ProcheThibault_Intro::
+	.string "{PLAYER}! The tide is perfect today.\n"
+	.string "Come, ride the wave with me!$"
+
+FuchsiaCity_Text_ProcheThibault_Defeat::
+	.string "Washed away... what a wave!$"
+
+FuchsiaCity_Text_ProcheThibault_Win::
+	.string "From the deep. A gift for you.$"
+
+FuchsiaCity_Text_ProcheThibault_After::
+	.string "The sea is calm now. Thanks for the\n"
+	.string "fight, {PLAYER}.$"
+
+FuchsiaCity_Text_ProcheThibault_Early::
+	.string "Come back with all 8 BADGES. The\n"
+	.string "sea is deep.$"
+
+FuchsiaCity_Text_ProcheThibault_NoRoom::
+	.string "Your BAG is full. Make some room\n"
+	.string "first, then talk to me again.$"

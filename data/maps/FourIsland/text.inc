@@ -114,3 +114,27 @@ FourIsland_Text_RefDone::
 FourIsland_Text_RefIdle::
     .string "MAYA: I watch over the animals here.\n"
     .string "The world is quieter now.$"
+
+FourIsland_Text_ProcheDylan_Intro::
+	.string "{PLAYER}! You beat the LEAGUE? Then\n"
+	.string "you can handle my dragons. Do not\p"
+	.string "hold back!$"
+
+FourIsland_Text_ProcheDylan_Defeat::
+	.string "Magnificent! The dragons approve!$"
+
+FourIsland_Text_ProcheDylan_Win::
+	.string "A fang from my oldest dragon. Take\n"
+	.string "it.$"
+
+FourIsland_Text_ProcheDylan_After::
+	.string "Dragons respect strength. You have\n"
+	.string "it.$"
+
+FourIsland_Text_ProcheDylan_Early::
+	.string "Come back after the LEAGUE. Dragons\n"
+	.string "wait for no one.$"
+
+FourIsland_Text_ProcheDylan_NoRoom::
+	.string "Your BAG is full. Make some room\n"
+	.string "first, then talk to me again.$"

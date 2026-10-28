@@ -238,3 +238,34 @@ Route22_EventScript_LateRivalExtraLeft::
 Route22_Movement_OneLeft::
 	walk_left
 	step_end
+
+@ Topaze: PROCHE VINCENT (optionnel, fort)
+Route22_EventScript_ProcheVincent::
+	lock
+	faceplayer
+	goto_if_unset FLAG_BADGE08_GET, Route22_EventScript_ProcheVincent_TooEarly
+	goto_if_defeated TRAINER_PROCHE_VINCENT, Route22_EventScript_ProcheVincent_After
+	msgbox Route22_Text_ProcheVincent_Intro
+	checkitemspace ITEM_MAGNET
+	goto_if_eq VAR_RESULT, FALSE, Route22_EventScript_ProcheVincent_NoRoom
+	trainerbattle_no_intro TRAINER_PROCHE_VINCENT, Route22_Text_ProcheVincent_Defeat
+	msgbox Route22_Text_ProcheVincent_Win
+	giveitem ITEM_MAGNET
+	msgbox Route22_Text_ProcheVincent_After
+	release
+	end
+
+Route22_EventScript_ProcheVincent_After::
+	msgbox Route22_Text_ProcheVincent_After
+	release
+	end
+
+Route22_EventScript_ProcheVincent_TooEarly::
+	msgbox Route22_Text_ProcheVincent_Early
+	release
+	end
+
+Route22_EventScript_ProcheVincent_NoRoom::
+	msgbox Route22_Text_ProcheVincent_NoRoom
+	release
+	end

@@ -102,3 +102,34 @@ Route12_EventScript_RouteSign::
 Route12_EventScript_FishingSign::
 	msgbox Route12_Text_SportfishingArea, MSGBOX_SIGN
 	end
+
+@ Topaze: PROCHE EMMA (optionnel, fort)
+Route12_EventScript_ProcheEmma::
+	lock
+	faceplayer
+	goto_if_unset FLAG_BADGE06_GET, Route12_EventScript_ProcheEmma_TooEarly
+	goto_if_defeated TRAINER_PROCHE_EMMA, Route12_EventScript_ProcheEmma_After
+	msgbox Route12_Text_ProcheEmma_Intro
+	checkitemspace ITEM_MIRACLE_SEED
+	goto_if_eq VAR_RESULT, FALSE, Route12_EventScript_ProcheEmma_NoRoom
+	trainerbattle_no_intro TRAINER_PROCHE_EMMA, Route12_Text_ProcheEmma_Defeat
+	msgbox Route12_Text_ProcheEmma_Win
+	giveitem ITEM_MIRACLE_SEED
+	msgbox Route12_Text_ProcheEmma_After
+	release
+	end
+
+Route12_EventScript_ProcheEmma_After::
+	msgbox Route12_Text_ProcheEmma_After
+	release
+	end
+
+Route12_EventScript_ProcheEmma_TooEarly::
+	msgbox Route12_Text_ProcheEmma_Early
+	release
+	end
+
+Route12_EventScript_ProcheEmma_NoRoom::
+	msgbox Route12_Text_ProcheEmma_NoRoom
+	release
+	end

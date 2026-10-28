@@ -150,3 +150,28 @@ Route15_Text_RonNotEnoughMons::
     .string "RON: Did you want to battle with\n"
     .string "my sister and me?\p"
     .string "You need two POKéMON, then.$"
+
+Route15_Text_ProcheGauthier_Intro::
+	.string "{PLAYER}! Finally. I have trained\n"
+	.string "every single day for this. Give me\p"
+	.string "everything!$"
+
+Route15_Text_ProcheGauthier_Defeat::
+	.string "Haha! THAT is what I was waiting\n"
+	.string "for!$"
+
+Route15_Text_ProcheGauthier_Win::
+	.string "You earned this. Wear it with\n"
+	.string "pride.$"
+
+Route15_Text_ProcheGauthier_After::
+	.string "Strength is a habit. Keep training,\n"
+	.string "{PLAYER}.$"
+
+Route15_Text_ProcheGauthier_Early::
+	.string "Come back with 6 BADGES. I want\n"
+	.string "your full strength.$"
+
+Route15_Text_ProcheGauthier_NoRoom::
+	.string "Your BAG is full. Make some room\n"
+	.string "first, then talk to me again.$"

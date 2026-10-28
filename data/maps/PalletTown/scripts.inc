@@ -776,3 +776,46 @@ PalletTown_EventScript_MineHint::
 	msgbox PalletTown_Text_MineHint
 	releaseall
 	end
+
+@ Topaze: PROCHE ADRIAN (optionnel, fort)
+PalletTown_EventScript_ProcheAdrian::
+	lock
+	faceplayer
+	goto_if_unset FLAG_TOPAZE_POSTGAME, PalletTown_EventScript_ProcheAdrian_TooEarly
+	goto_if_not_defeated TRAINER_PROCHE_THOMAS, PalletTown_EventScript_ProcheAdrian_TooEarly
+	goto_if_not_defeated TRAINER_PROCHE_LOLA, PalletTown_EventScript_ProcheAdrian_TooEarly
+	goto_if_not_defeated TRAINER_PROCHE_JORDAN, PalletTown_EventScript_ProcheAdrian_TooEarly
+	goto_if_not_defeated TRAINER_PROCHE_VIOLETTE, PalletTown_EventScript_ProcheAdrian_TooEarly
+	goto_if_not_defeated TRAINER_PROCHE_EDOUARD, PalletTown_EventScript_ProcheAdrian_TooEarly
+	goto_if_not_defeated TRAINER_PROCHE_EMMA, PalletTown_EventScript_ProcheAdrian_TooEarly
+	goto_if_not_defeated TRAINER_PROCHE_GAUTHIER, PalletTown_EventScript_ProcheAdrian_TooEarly
+	goto_if_not_defeated TRAINER_PROCHE_CHLOE, PalletTown_EventScript_ProcheAdrian_TooEarly
+	goto_if_not_defeated TRAINER_PROCHE_VINCENT, PalletTown_EventScript_ProcheAdrian_TooEarly
+	goto_if_not_defeated TRAINER_PROCHE_THIBAULT, PalletTown_EventScript_ProcheAdrian_TooEarly
+	goto_if_not_defeated TRAINER_PROCHE_NATHAN, PalletTown_EventScript_ProcheAdrian_TooEarly
+	goto_if_not_defeated TRAINER_PROCHE_DYLAN, PalletTown_EventScript_ProcheAdrian_TooEarly
+	goto_if_defeated TRAINER_PROCHE_ADRIAN, PalletTown_EventScript_ProcheAdrian_After
+	msgbox PalletTown_Text_ProcheAdrian_Intro
+	checkitemspace ITEM_MASTER_BALL
+	goto_if_eq VAR_RESULT, FALSE, PalletTown_EventScript_ProcheAdrian_NoRoom
+	trainerbattle_no_intro TRAINER_PROCHE_ADRIAN, PalletTown_Text_ProcheAdrian_Defeat
+	msgbox PalletTown_Text_ProcheAdrian_Win
+	giveitem ITEM_MASTER_BALL
+	msgbox PalletTown_Text_ProcheAdrian_After
+	release
+	end
+
+PalletTown_EventScript_ProcheAdrian_After::
+	msgbox PalletTown_Text_ProcheAdrian_After
+	release
+	end
+
+PalletTown_EventScript_ProcheAdrian_TooEarly::
+	msgbox PalletTown_Text_ProcheAdrian_Early
+	release
+	end
+
+PalletTown_EventScript_ProcheAdrian_NoRoom::
+	msgbox PalletTown_Text_ProcheAdrian_NoRoom
+	release
+	end

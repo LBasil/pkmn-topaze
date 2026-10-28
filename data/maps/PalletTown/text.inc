@@ -366,3 +366,26 @@ PalletTown_Text_MineHint::
     .string "it is waiting at the bottom.\p"
     .string "(Then follow MEW to APATIA's dock,\n"
     .string "and talk to the sailor.)$"
+
+PalletTown_Text_ProcheAdrian_Intro::
+	.string "{PLAYER}. You met all of them. So\n"
+	.string "now it is my turn. Let us see the\p"
+	.string "sky together.$"
+
+PalletTown_Text_ProcheAdrian_Defeat::
+	.string "You flew higher than all of us.$"
+
+PalletTown_Text_ProcheAdrian_Win::
+	.string "Take it. You have earned the sky.$"
+
+PalletTown_Text_ProcheAdrian_After::
+	.string "We will always be here, {PLAYER}.\n"
+	.string "Fly high.$"
+
+PalletTown_Text_ProcheAdrian_Early::
+	.string "Come back once you have beaten all\n"
+	.string "my friends.$"
+
+PalletTown_Text_ProcheAdrian_NoRoom::
+	.string "Your BAG is full. Make some room\n"
+	.string "first, then talk to me again.$"

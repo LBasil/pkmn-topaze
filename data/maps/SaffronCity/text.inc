@@ -178,3 +178,26 @@ SaffronCity_Text_RefDone::
 SaffronCity_Text_RefIdle::
     .string "HUGO: I watch over the animals here.\n"
     .string "The world is quieter now.$"
+
+SaffronCity_Text_ProcheViolette_Intro::
+	.string "I knew you would come, {PLAYER}. I\n"
+	.string "saw it. Now let us see if you can\p"
+	.string "see my moves.$"
+
+SaffronCity_Text_ProcheViolette_Defeat::
+	.string "So you did see it coming...$"
+
+SaffronCity_Text_ProcheViolette_Win::
+	.string "Take this. I foresaw you would win.$"
+
+SaffronCity_Text_ProcheViolette_After::
+	.string "The future is not fixed. You proved\n"
+	.string "that today.$"
+
+SaffronCity_Text_ProcheViolette_Early::
+	.string "Not yet. I see 5 BADGES in your\n"
+	.string "future.$"
+
+SaffronCity_Text_ProcheViolette_NoRoom::
+	.string "Your BAG is full. Make some room\n"
+	.string "first, then talk to me again.$"

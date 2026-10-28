@@ -78,3 +78,27 @@ Route10_Text_RockTunnel::
 Route10_Text_PowerPlant::
     .string "POWER PLANT$"
 
+
+Route10_Text_ProcheEdouard_Intro::
+	.string "{PLAYER}! I have been digging up\n"
+	.string "fossils all week. Ready to face the\p"
+	.string "old ones?$"
+
+Route10_Text_ProcheEdouard_Defeat::
+	.string "Crushed... by the new generation!$"
+
+Route10_Text_ProcheEdouard_Win::
+	.string "Found this in a cave. It is yours\n"
+	.string "now.$"
+
+Route10_Text_ProcheEdouard_After::
+	.string "Stone remembers everything. So will\n"
+	.string "I.$"
+
+Route10_Text_ProcheEdouard_Early::
+	.string "Come back with 5 BADGES. Rocks are\n"
+	.string "patient.$"
+
+Route10_Text_ProcheEdouard_NoRoom::
+	.string "Your BAG is full. Make some room\n"
+	.string "first, then talk to me again.$"

@@ -293,3 +293,34 @@ FuchsiaCity_Text_CellWitnessDone::
 	.string "The street feels like ours again.\p"
 	.string "Though I count them everywhere now."
 	.string "In every town. Do you notice too?$"
+
+@ Topaze: PROCHE THIBAULT (optionnel, fort)
+FuchsiaCity_EventScript_ProcheThibault::
+	lock
+	faceplayer
+	goto_if_unset FLAG_BADGE08_GET, FuchsiaCity_EventScript_ProcheThibault_TooEarly
+	goto_if_defeated TRAINER_PROCHE_THIBAULT, FuchsiaCity_EventScript_ProcheThibault_After
+	msgbox FuchsiaCity_Text_ProcheThibault_Intro
+	checkitemspace ITEM_MYSTIC_WATER
+	goto_if_eq VAR_RESULT, FALSE, FuchsiaCity_EventScript_ProcheThibault_NoRoom
+	trainerbattle_no_intro TRAINER_PROCHE_THIBAULT, FuchsiaCity_Text_ProcheThibault_Defeat
+	msgbox FuchsiaCity_Text_ProcheThibault_Win
+	giveitem ITEM_MYSTIC_WATER
+	msgbox FuchsiaCity_Text_ProcheThibault_After
+	release
+	end
+
+FuchsiaCity_EventScript_ProcheThibault_After::
+	msgbox FuchsiaCity_Text_ProcheThibault_After
+	release
+	end
+
+FuchsiaCity_EventScript_ProcheThibault_TooEarly::
+	msgbox FuchsiaCity_Text_ProcheThibault_Early
+	release
+	end
+
+FuchsiaCity_EventScript_ProcheThibault_NoRoom::
+	msgbox FuchsiaCity_Text_ProcheThibault_NoRoom
+	release
+	end

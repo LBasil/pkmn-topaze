@@ -86,3 +86,26 @@ LavenderTown_Text_RefDone::
 LavenderTown_Text_RefIdle::
     .string "FINN: I watch over the animals here.\n"
     .string "The world is quieter now.$"
+
+LavenderTown_Text_ProcheNathan_Intro::
+	.string "{PLAYER}. I felt you coming. This\n"
+	.string "town keeps its secrets... and so\p"
+	.string "does my team.$"
+
+LavenderTown_Text_ProcheNathan_Defeat::
+	.string "Even the dead cheer for you...$"
+
+LavenderTown_Text_ProcheNathan_Win::
+	.string "Take it. It whispers your name.$"
+
+LavenderTown_Text_ProcheNathan_After::
+	.string "Some shadows are only friends in\n"
+	.string "disguise.$"
+
+LavenderTown_Text_ProcheNathan_Early::
+	.string "Not yet, {PLAYER}. Return with all 8\n"
+	.string "BADGES.$"
+
+LavenderTown_Text_ProcheNathan_NoRoom::
+	.string "Your BAG is full. Make some room\n"
+	.string "first, then talk to me again.$"

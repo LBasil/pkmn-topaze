@@ -458,12 +458,276 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RSFisherman[] = {
         .species = SPECIES_RAPIDASH,
     },
 };
-static const struct TrainerMonNoItemDefaultMoves sParty_CyclingTriathleteM[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_CyclingTriathleteF[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_RunningTriathleteM[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_RunningTriathleteF[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_SwimmingTriathleteM[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_SwimmingTriathleteF[] = {DUMMY_TRAINER_MON};
+// Topaze: PROCHE THOMAS (BUG), optionnel, fort
+static const struct TrainerMonItemCustomMoves sParty_ThomasProche[] = {
+    {
+        .iv = 160,
+        .lvl = 24,
+        .species = SPECIES_BUTTERFREE,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_BUG_BUZZ, MOVE_SLEEP_POWDER, MOVE_PSYCHIC, MOVE_PROTECT},
+    },
+    {
+        .iv = 160,
+        .lvl = 25,
+        .species = SPECIES_BEEDRILL,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_X_SCISSOR, MOVE_POISON_JAB, MOVE_SWORDS_DANCE, MOVE_U_TURN},
+    },
+    {
+        .iv = 160,
+        .lvl = 26,
+        .species = SPECIES_VENOMOTH,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_BUG_BUZZ, MOVE_SLUDGE_BOMB, MOVE_SLEEP_POWDER, MOVE_PSYCHIC},
+    },
+    {
+        .iv = 160,
+        .lvl = 26,
+        .species = SPECIES_PARASECT,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_SPORE, MOVE_X_SCISSOR, MOVE_SEED_BOMB, MOVE_LEECH_LIFE},
+    },
+    {
+        .iv = 160,
+        .lvl = 27,
+        .species = SPECIES_PINSIR,
+        .heldItem = ITEM_KINGS_ROCK,
+        .moves = {MOVE_X_SCISSOR, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE, MOVE_ROCK_SLIDE},
+    },
+    {
+        .iv = 160,
+        .lvl = 28,
+        .species = SPECIES_SCYTHER,
+        .heldItem = ITEM_SILVER_POWDER,
+        .moves = {MOVE_X_SCISSOR, MOVE_AIR_SLASH, MOVE_SWORDS_DANCE, MOVE_U_TURN},
+    },
+};
+// Topaze: PROCHE LOLA (ICE), optionnel, fort
+static const struct TrainerMonItemCustomMoves sParty_LolaProche[] = {
+    {
+        .iv = 170,
+        .lvl = 30,
+        .species = SPECIES_DEWGONG,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_ICE_BEAM, MOVE_SURF, MOVE_REST, MOVE_SLEEP_TALK},
+    },
+    {
+        .iv = 170,
+        .lvl = 31,
+        .species = SPECIES_CLOYSTER,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_ICICLE_CRASH, MOVE_HYDRO_PUMP, MOVE_ROCK_BLAST, MOVE_SPIKES},
+    },
+    {
+        .iv = 170,
+        .lvl = 32,
+        .species = SPECIES_JYNX,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_ICE_BEAM, MOVE_PSYCHIC, MOVE_LOVELY_KISS, MOVE_NASTY_PLOT},
+    },
+    {
+        .iv = 170,
+        .lvl = 32,
+        .species = SPECIES_SLOWBRO,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_SURF, MOVE_PSYCHIC, MOVE_ICE_BEAM, MOVE_CALM_MIND},
+    },
+    {
+        .iv = 170,
+        .lvl = 33,
+        .species = SPECIES_SEADRA,
+        .heldItem = ITEM_KINGS_ROCK,
+        .moves = {MOVE_HYDRO_PUMP, MOVE_ICE_BEAM, MOVE_DRAGON_PULSE, MOVE_AGILITY},
+    },
+    {
+        .iv = 170,
+        .lvl = 34,
+        .species = SPECIES_LAPRAS,
+        .heldItem = ITEM_NEVER_MELT_ICE,
+        .moves = {MOVE_ICE_BEAM, MOVE_SURF, MOVE_THUNDERBOLT, MOVE_HYPNOSIS},
+    },
+};
+// Topaze: PROCHE JORDAN (NORMAL), optionnel, fort
+static const struct TrainerMonItemCustomMoves sParty_JordanProche[] = {
+    {
+        .iv = 185,
+        .lvl = 38,
+        .species = SPECIES_PERSIAN,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_KNOCK_OFF, MOVE_THUNDERBOLT, MOVE_HYPER_BEAM},
+    },
+    {
+        .iv = 185,
+        .lvl = 39,
+        .species = SPECIES_CHANSEY,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_BODY_SLAM, MOVE_ICE_BEAM, MOVE_THUNDERBOLT, MOVE_REFLECT},
+    },
+    {
+        .iv = 185,
+        .lvl = 40,
+        .species = SPECIES_KANGASKHAN,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_CRUNCH, MOVE_FIRE_PUNCH},
+    },
+    {
+        .iv = 185,
+        .lvl = 40,
+        .species = SPECIES_PORYGON,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_TRI_ATTACK, MOVE_ICE_BEAM, MOVE_THUNDERBOLT, MOVE_RECOVER},
+    },
+    {
+        .iv = 185,
+        .lvl = 41,
+        .species = SPECIES_TAUROS,
+        .heldItem = ITEM_KINGS_ROCK,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_ZEN_HEADBUTT, MOVE_ROCK_SLIDE},
+    },
+    {
+        .iv = 185,
+        .lvl = 42,
+        .species = SPECIES_SNORLAX,
+        .heldItem = ITEM_SILK_SCARF,
+        .moves = {MOVE_BODY_SLAM, MOVE_EARTHQUAKE, MOVE_REST, MOVE_SLEEP_TALK},
+    },
+};
+// Topaze: PROCHE VIOLETTE (PSYCHIC), optionnel, fort
+static const struct TrainerMonItemCustomMoves sParty_VioletteProche[] = {
+    {
+        .iv = 200,
+        .lvl = 44,
+        .species = SPECIES_MR_MIME,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_ENERGY_BALL, MOVE_REFLECT},
+    },
+    {
+        .iv = 200,
+        .lvl = 45,
+        .species = SPECIES_HYPNO,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_HYPNOSIS, MOVE_NASTY_PLOT},
+    },
+    {
+        .iv = 200,
+        .lvl = 46,
+        .species = SPECIES_SLOWBRO,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_PSYCHIC, MOVE_SURF, MOVE_ICE_BEAM, MOVE_CALM_MIND},
+    },
+    {
+        .iv = 200,
+        .lvl = 46,
+        .species = SPECIES_EXEGGUTOR,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_PSYCHIC, MOVE_GIGA_DRAIN, MOVE_SLEEP_POWDER, MOVE_EARTHQUAKE},
+    },
+    {
+        .iv = 200,
+        .lvl = 47,
+        .species = SPECIES_STARMIE,
+        .heldItem = ITEM_KINGS_ROCK,
+        .moves = {MOVE_SURF, MOVE_PSYCHIC, MOVE_ICE_BEAM, MOVE_THUNDERBOLT},
+    },
+    {
+        .iv = 200,
+        .lvl = 48,
+        .species = SPECIES_ALAKAZAM,
+        .heldItem = ITEM_TWISTED_SPOON,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_FOCUS_BLAST, MOVE_CALM_MIND},
+    },
+};
+// Topaze: PROCHE EDOUARD (ROCK), optionnel, fort
+static const struct TrainerMonItemCustomMoves sParty_EdouardProche[] = {
+    {
+        .iv = 200,
+        .lvl = 46,
+        .species = SPECIES_OMASTAR,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_HYDRO_PUMP, MOVE_ICE_BEAM, MOVE_EARTH_POWER, MOVE_SPIKES},
+    },
+    {
+        .iv = 200,
+        .lvl = 47,
+        .species = SPECIES_KABUTOPS,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_STONE_EDGE, MOVE_WATERFALL, MOVE_SWORDS_DANCE, MOVE_X_SCISSOR},
+    },
+    {
+        .iv = 200,
+        .lvl = 48,
+        .species = SPECIES_GOLEM,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_STONE_EDGE, MOVE_FIRE_PUNCH},
+    },
+    {
+        .iv = 200,
+        .lvl = 48,
+        .species = SPECIES_RHYDON,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_EARTHQUAKE, MOVE_STONE_EDGE, MOVE_MEGAHORN, MOVE_SWORDS_DANCE},
+    },
+    {
+        .iv = 200,
+        .lvl = 49,
+        .species = SPECIES_AERODACTYL,
+        .heldItem = ITEM_KINGS_ROCK,
+        .moves = {MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_FLY, MOVE_ROOST},
+    },
+    {
+        .iv = 200,
+        .lvl = 50,
+        .species = SPECIES_ONIX,
+        .heldItem = ITEM_HARD_STONE,
+        .moves = {MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_IRON_HEAD, MOVE_ROCK_TOMB},
+    },
+};
+// Topaze: PROCHE EMMA (GRASS), optionnel, fort
+static const struct TrainerMonItemCustomMoves sParty_EmmaProche[] = {
+    {
+        .iv = 215,
+        .lvl = 50,
+        .species = SPECIES_NIDOQUEEN,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_EARTH_POWER, MOVE_SLUDGE_WAVE, MOVE_ICE_BEAM, MOVE_THUNDERBOLT},
+    },
+    {
+        .iv = 215,
+        .lvl = 51,
+        .species = SPECIES_TANGELA,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_GIGA_DRAIN, MOVE_SLEEP_POWDER, MOVE_KNOCK_OFF, MOVE_LEECH_SEED},
+    },
+    {
+        .iv = 215,
+        .lvl = 52,
+        .species = SPECIES_VICTREEBEL,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_LEAF_STORM, MOVE_SLUDGE_BOMB, MOVE_SWORDS_DANCE, MOVE_POWER_WHIP},
+    },
+    {
+        .iv = 215,
+        .lvl = 52,
+        .species = SPECIES_VILEPLUME,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_SLEEP_POWDER, MOVE_MOONBLAST},
+    },
+    {
+        .iv = 215,
+        .lvl = 53,
+        .species = SPECIES_EXEGGUTOR,
+        .heldItem = ITEM_KINGS_ROCK,
+        .moves = {MOVE_ENERGY_BALL, MOVE_PSYCHIC, MOVE_SLEEP_POWDER, MOVE_EARTHQUAKE},
+    },
+    {
+        .iv = 215,
+        .lvl = 54,
+        .species = SPECIES_VENUSAUR,
+        .heldItem = ITEM_MIRACLE_SEED,
+        .moves = {MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_SLEEP_POWDER, MOVE_EARTHQUAKE},
+    },
+};
 static const struct TrainerMonNoItemDefaultMoves sParty_DragonTamer[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_RSBirdKeeper[] = {
     {
@@ -488,8 +752,96 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RSBirdKeeper[] = {
     },
 };
 static const struct TrainerMonNoItemDefaultMoves sParty_NinjaBoy[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_BattleGirl[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_ParasolLady[] = {DUMMY_TRAINER_MON};
+// Topaze: PROCHE GAUTHIER (FIGHT), optionnel, fort
+static const struct TrainerMonItemCustomMoves sParty_GauthierProche[] = {
+    {
+        .iv = 215,
+        .lvl = 52,
+        .species = SPECIES_HITMONLEE,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_HI_JUMP_KICK, MOVE_BLAZE_KICK, MOVE_STONE_EDGE, MOVE_BULK_UP},
+    },
+    {
+        .iv = 215,
+        .lvl = 53,
+        .species = SPECIES_HITMONCHAN,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_DRAIN_PUNCH, MOVE_THUNDER_PUNCH, MOVE_ICE_PUNCH, MOVE_FIRE_PUNCH},
+    },
+    {
+        .iv = 215,
+        .lvl = 54,
+        .species = SPECIES_PRIMEAPE,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_ROCK_SLIDE, MOVE_EARTHQUAKE, MOVE_U_TURN},
+    },
+    {
+        .iv = 215,
+        .lvl = 54,
+        .species = SPECIES_POLIWRATH,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_WATERFALL, MOVE_DRAIN_PUNCH, MOVE_ICE_PUNCH, MOVE_BULK_UP},
+    },
+    {
+        .iv = 215,
+        .lvl = 55,
+        .species = SPECIES_ARCANINE,
+        .heldItem = ITEM_KINGS_ROCK,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_EXTREME_SPEED, MOVE_CLOSE_COMBAT, MOVE_CRUNCH},
+    },
+    {
+        .iv = 215,
+        .lvl = 56,
+        .species = SPECIES_MACHAMP,
+        .heldItem = ITEM_BLACK_BELT,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_BULLET_PUNCH},
+    },
+};
+// Topaze: PROCHE CHLOE (FIRE), optionnel, fort
+static const struct TrainerMonItemCustomMoves sParty_ChloeProche[] = {
+    {
+        .iv = 230,
+        .lvl = 58,
+        .species = SPECIES_NINETALES,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_FLAMETHROWER, MOVE_SHADOW_BALL, MOVE_NASTY_PLOT, MOVE_WILL_O_WISP},
+    },
+    {
+        .iv = 230,
+        .lvl = 59,
+        .species = SPECIES_RAPIDASH,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_MEGAHORN, MOVE_WILL_O_WISP, MOVE_EARTHQUAKE},
+    },
+    {
+        .iv = 230,
+        .lvl = 60,
+        .species = SPECIES_MAGMAR,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_FIRE_BLAST, MOVE_THUNDERBOLT, MOVE_FOCUS_BLAST, MOVE_PSYCHIC},
+    },
+    {
+        .iv = 230,
+        .lvl = 60,
+        .species = SPECIES_FLAREON,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_SUPERPOWER, MOVE_WILL_O_WISP, MOVE_SUCKER_PUNCH},
+    },
+    {
+        .iv = 230,
+        .lvl = 61,
+        .species = SPECIES_CHARIZARD,
+        .heldItem = ITEM_KINGS_ROCK,
+        .moves = {MOVE_FLAMETHROWER, MOVE_AIR_SLASH, MOVE_DRAGON_PULSE, MOVE_ROOST},
+    },
+    {
+        .iv = 230,
+        .lvl = 62,
+        .species = SPECIES_ARCANINE,
+        .heldItem = ITEM_CHARCOAL,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_EXTREME_SPEED, MOVE_CRUNCH, MOVE_CLOSE_COMBAT},
+    },
+};
 static const struct TrainerMonNoItemDefaultMoves sParty_RSSwimmerF[] = {
     {
         .iv = 60,
@@ -578,9 +930,141 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RSSailor[] = {
         .species = SPECIES_CHARIZARD,
     },
 };
-static const struct TrainerMonNoItemDefaultMoves sParty_BoarderM[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_BoarderF[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_Collector[] = {DUMMY_TRAINER_MON};
+// Topaze: PROCHE VINCENT (ELECTRIC), optionnel, fort
+static const struct TrainerMonItemCustomMoves sParty_VincentProche[] = {
+    {
+        .iv = 240,
+        .lvl = 62,
+        .species = SPECIES_RAICHU,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_THUNDERBOLT, MOVE_FOCUS_BLAST, MOVE_SURF, MOVE_NASTY_PLOT},
+    },
+    {
+        .iv = 240,
+        .lvl = 63,
+        .species = SPECIES_ELECTRODE,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_THUNDERBOLT, MOVE_VOLT_SWITCH, MOVE_THUNDER_WAVE, MOVE_ENERGY_BALL},
+    },
+    {
+        .iv = 240,
+        .lvl = 64,
+        .species = SPECIES_MAGNETON,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_THUNDERBOLT, MOVE_FLASH_CANNON, MOVE_THUNDER_WAVE, MOVE_PROTECT},
+    },
+    {
+        .iv = 240,
+        .lvl = 64,
+        .species = SPECIES_ELECTABUZZ,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_THUNDERBOLT, MOVE_ICE_PUNCH, MOVE_PSYCHIC, MOVE_FOCUS_BLAST},
+    },
+    {
+        .iv = 240,
+        .lvl = 65,
+        .species = SPECIES_PORYGON,
+        .heldItem = ITEM_KINGS_ROCK,
+        .moves = {MOVE_THUNDERBOLT, MOVE_TRI_ATTACK, MOVE_ICE_BEAM, MOVE_RECOVER},
+    },
+    {
+        .iv = 240,
+        .lvl = 66,
+        .species = SPECIES_JOLTEON,
+        .heldItem = ITEM_MAGNET,
+        .moves = {MOVE_THUNDER, MOVE_SHADOW_BALL, MOVE_VOLT_SWITCH, MOVE_ENERGY_BALL},
+    },
+};
+// Topaze: PROCHE THIBAULT (WATER), optionnel, fort
+static const struct TrainerMonItemCustomMoves sParty_ThibaultProche[] = {
+    {
+        .iv = 240,
+        .lvl = 64,
+        .species = SPECIES_KINGLER,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_WATERFALL, MOVE_X_SCISSOR, MOVE_SWORDS_DANCE, MOVE_SUPERPOWER},
+    },
+    {
+        .iv = 240,
+        .lvl = 65,
+        .species = SPECIES_VAPOREON,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_SHADOW_BALL, MOVE_PROTECT},
+    },
+    {
+        .iv = 240,
+        .lvl = 66,
+        .species = SPECIES_LAPRAS,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_THUNDERBOLT, MOVE_REST},
+    },
+    {
+        .iv = 240,
+        .lvl = 66,
+        .species = SPECIES_STARMIE,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_HYDRO_PUMP, MOVE_ICE_BEAM, MOVE_PSYCHIC, MOVE_RECOVER},
+    },
+    {
+        .iv = 240,
+        .lvl = 67,
+        .species = SPECIES_GYARADOS,
+        .heldItem = ITEM_KINGS_ROCK,
+        .moves = {MOVE_WATERFALL, MOVE_CRUNCH, MOVE_EARTHQUAKE, MOVE_DRAGON_DANCE},
+    },
+    {
+        .iv = 240,
+        .lvl = 68,
+        .species = SPECIES_BLASTOISE,
+        .heldItem = ITEM_MYSTIC_WATER,
+        .moves = {MOVE_SCALD, MOVE_ICE_BEAM, MOVE_FLASH_CANNON, MOVE_ROAR},
+    },
+};
+// Topaze: PROCHE NATHAN (GHOST), optionnel, fort
+static const struct TrainerMonItemCustomMoves sParty_NathanProche[] = {
+    {
+        .iv = 250,
+        .lvl = 68,
+        .species = SPECIES_UMBREON,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_KNOCK_OFF, MOVE_SUCKER_PUNCH, MOVE_TOXIC, MOVE_PROTECT},
+    },
+    {
+        .iv = 250,
+        .lvl = 69,
+        .species = SPECIES_MISDREAVUS,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_SHADOW_BALL, MOVE_THUNDERBOLT, MOVE_NASTY_PLOT, MOVE_PSYCHIC},
+    },
+    {
+        .iv = 250,
+        .lvl = 70,
+        .species = SPECIES_SABLEYE,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_KNOCK_OFF, MOVE_SHADOW_CLAW, MOVE_RECOVER, MOVE_WILL_O_WISP},
+    },
+    {
+        .iv = 250,
+        .lvl = 70,
+        .species = SPECIES_HOUNDOOM,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_DARK_PULSE, MOVE_FLAMETHROWER, MOVE_SLUDGE_BOMB, MOVE_NASTY_PLOT},
+    },
+    {
+        .iv = 250,
+        .lvl = 71,
+        .species = SPECIES_TYRANITAR,
+        .heldItem = ITEM_KINGS_ROCK,
+        .moves = {MOVE_CRUNCH, MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_DRAGON_DANCE},
+    },
+    {
+        .iv = 250,
+        .lvl = 72,
+        .species = SPECIES_GENGAR,
+        .heldItem = ITEM_SPELL_TAG,
+        .moves = {MOVE_SHADOW_BALL, MOVE_SLUDGE_BOMB, MOVE_FOCUS_BLAST, MOVE_THUNDERBOLT},
+    },
+};
 static const struct TrainerMonNoItemDefaultMoves sParty_Wally[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_Brendan[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_Brendan2[] = {DUMMY_TRAINER_MON};
@@ -676,7 +1160,51 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RSPkmnRangerF[] = {
         .species = SPECIES_JOLTEON,
     },
 };
-static const struct TrainerMonNoItemDefaultMoves sParty_MagmaLeader[] = {DUMMY_TRAINER_MON};
+// Topaze: PROCHE DYLAN (DRAGON), optionnel, fort
+static const struct TrainerMonItemCustomMoves sParty_DylanProche[] = {
+    {
+        .iv = 255,
+        .lvl = 80,
+        .species = SPECIES_ALTARIA,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_DRAGON_PULSE, MOVE_MOONBLAST, MOVE_HURRICANE, MOVE_ROOST},
+    },
+    {
+        .iv = 255,
+        .lvl = 81,
+        .species = SPECIES_KINGDRA,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_HYDRO_PUMP, MOVE_DRAGON_PULSE, MOVE_ICE_BEAM, MOVE_DRAGON_DANCE},
+    },
+    {
+        .iv = 255,
+        .lvl = 82,
+        .species = SPECIES_FLYGON,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_EARTHQUAKE, MOVE_DRAGON_CLAW, MOVE_U_TURN, MOVE_ROOST},
+    },
+    {
+        .iv = 255,
+        .lvl = 84,
+        .species = SPECIES_CHARIZARD,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_DRAGON_CLAW, MOVE_FLARE_BLITZ, MOVE_EARTHQUAKE, MOVE_SWORDS_DANCE},
+    },
+    {
+        .iv = 255,
+        .lvl = 85,
+        .species = SPECIES_SALAMENCE,
+        .heldItem = ITEM_KINGS_ROCK,
+        .moves = {MOVE_OUTRAGE, MOVE_FIRE_BLAST, MOVE_EARTHQUAKE, MOVE_DRAGON_DANCE},
+    },
+    {
+        .iv = 255,
+        .lvl = 86,
+        .species = SPECIES_DRAGONITE,
+        .heldItem = ITEM_DRAGON_FANG,
+        .moves = {MOVE_OUTRAGE, MOVE_EXTREME_SPEED, MOVE_EARTHQUAKE, MOVE_DRAGON_DANCE},
+    },
+};
 static const struct TrainerMonNoItemDefaultMoves sParty_MagmaGruntM[] = {
     {
         .iv = 30,
@@ -779,7 +1307,51 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RSYoungCouple[] = {
         .species = SPECIES_SLOWBRO,
     },
 };
-static const struct TrainerMonNoItemDefaultMoves sParty_OldCouple[] = {DUMMY_TRAINER_MON};
+// Topaze: PROCHE ADRIAN (FLYING), optionnel, fort
+static const struct TrainerMonItemCustomMoves sParty_AdrianProche[] = {
+    {
+        .iv = 255,
+        .lvl = 88,
+        .species = SPECIES_DODRIO,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_BRAVE_BIRD, MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_ROOST},
+    },
+    {
+        .iv = 255,
+        .lvl = 89,
+        .species = SPECIES_PIDGEOT,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_BRAVE_BIRD, MOVE_HURRICANE, MOVE_ROOST, MOVE_U_TURN},
+    },
+    {
+        .iv = 255,
+        .lvl = 90,
+        .species = SPECIES_SKARMORY,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_BRAVE_BIRD, MOVE_IRON_HEAD, MOVE_ROOST, MOVE_SPIKES},
+    },
+    {
+        .iv = 255,
+        .lvl = 91,
+        .species = SPECIES_ARTICUNO,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_ICE_BEAM, MOVE_HURRICANE, MOVE_ROOST, MOVE_FREEZE_DRY},
+    },
+    {
+        .iv = 255,
+        .lvl = 92,
+        .species = SPECIES_ZAPDOS,
+        .heldItem = ITEM_KINGS_ROCK,
+        .moves = {MOVE_THUNDER, MOVE_HURRICANE, MOVE_HEAT_WAVE, MOVE_ROOST},
+    },
+    {
+        .iv = 255,
+        .lvl = 93,
+        .species = SPECIES_MOLTRES,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_FIRE_BLAST, MOVE_HURRICANE, MOVE_ROOST, MOVE_AIR_SLASH},
+    },
+};
 static const struct TrainerMonNoItemDefaultMoves sParty_RSSisAndBro[] = {
     {
         .iv = 40,

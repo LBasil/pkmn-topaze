@@ -138,3 +138,34 @@ LavenderTown_Text_CellWitnessDone::
 	.string "The bell is quiet again.\p"
 	.string "I think the dead are relieved. Or"
 	.string "they are listening to someone else.$"
+
+@ Topaze: PROCHE NATHAN (optionnel, fort)
+LavenderTown_EventScript_ProcheNathan::
+	lock
+	faceplayer
+	goto_if_unset FLAG_BADGE08_GET, LavenderTown_EventScript_ProcheNathan_TooEarly
+	goto_if_defeated TRAINER_PROCHE_NATHAN, LavenderTown_EventScript_ProcheNathan_After
+	msgbox LavenderTown_Text_ProcheNathan_Intro
+	checkitemspace ITEM_SPELL_TAG
+	goto_if_eq VAR_RESULT, FALSE, LavenderTown_EventScript_ProcheNathan_NoRoom
+	trainerbattle_no_intro TRAINER_PROCHE_NATHAN, LavenderTown_Text_ProcheNathan_Defeat
+	msgbox LavenderTown_Text_ProcheNathan_Win
+	giveitem ITEM_SPELL_TAG
+	msgbox LavenderTown_Text_ProcheNathan_After
+	release
+	end
+
+LavenderTown_EventScript_ProcheNathan_After::
+	msgbox LavenderTown_Text_ProcheNathan_After
+	release
+	end
+
+LavenderTown_EventScript_ProcheNathan_TooEarly::
+	msgbox LavenderTown_Text_ProcheNathan_Early
+	release
+	end
+
+LavenderTown_EventScript_ProcheNathan_NoRoom::
+	msgbox LavenderTown_Text_ProcheNathan_NoRoom
+	release
+	end

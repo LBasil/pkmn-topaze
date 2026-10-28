@@ -176,3 +176,26 @@ Route12_Text_PierKronos2::
     .string "or I will take it before you.\p"
     .string "Do not follow me. This pier is\n"
     .string "mine tonight. Farewell!$"
+
+Route12_Text_ProcheEmma_Intro::
+	.string "Oh, {PLAYER}, what a lovely day for\n"
+	.string "a battle! My flowers are in full\p"
+	.string "bloom.$"
+
+Route12_Text_ProcheEmma_Defeat::
+	.string "Oh my... you trampled my garden!$"
+
+Route12_Text_ProcheEmma_Win::
+	.string "For you. It grew in my garden.$"
+
+Route12_Text_ProcheEmma_After::
+	.string "Come back in spring. Everything is\n"
+	.string "prettier then.$"
+
+Route12_Text_ProcheEmma_Early::
+	.string "Come back with 6 BADGES, dear. The\n"
+	.string "flowers can wait.$"
+
+Route12_Text_ProcheEmma_NoRoom::
+	.string "Your BAG is full. Make some room\n"
+	.string "first, then talk to me again.$"
