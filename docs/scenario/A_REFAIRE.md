@@ -237,3 +237,4 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - 28/10 : Proches = verrouilles jusqu'au POST-GAME (FLAG_TOPAZE_POSTGAME) en attendant que Basil definisse les conditions (une ligne par Proche a changer dans scripts.inc de la carte + Journal).
 - 28/10 : 12 indices du temps deregle (panneaux/horloges) sur les routes 1,3,6,8,11,12,15,16,18,19,22,24 (docs/topaze/time_hints.py) : textes provisoires.
 - 28/10 : 7 mini-quetes PNJ (Route 2,5,9,13,17,20,23 : apporte N objets -> recompense PP Up/HP Up/Proteine/Fer/Calcium/Carbos/Zinc), flags FLAG_TOPAZE_QUEST_1..7 (docs/topaze/miniquetes.py). Textes provisoires.
+- 28/10 : RIVAL DU PASSE 'ECHO' (Route 8, badge 4, 6 Pokemon 36-40, 3 Rare Candy) + monologue des 12 Proches avant Adrian (docs/topaze/rival_passe.py). Textes provisoires. A faire (cartes) : phare Route 19, marche nocturne, jardin d'Echos, grotte sans fond, horloge de Safrania.
