@@ -192,6 +192,8 @@ add("SIDE QUESTS", F, "FLAG_TOPAZE_QUEST_5", 0, "THE COLLECTOR", "ROUTE 17: a bi
 add("SIDE QUESTS", F, "FLAG_TOPAZE_QUEST_6", 0, "SEA MARATHON", "ROUTE 20: a swimmer needs ELIXIRS.", A)
 add("SIDE QUESTS", F, "FLAG_TOPAZE_QUEST_7", 0, "THE RESEARCHER", "ROUTE 23: a nerd wants LEAF STONE.", A)
 
+add("SIDE QUESTS", T, "TRAINER_ECHO_RIVAL", 0, "THE RIVAL FROM YESTERDAY", "ROUTE 8: he swears you already\\nbeat him. Needs 4 BADGES.", B(4))
+
 assert len(SECTIONS) <= 12
 for e in E:
     lines = e[5].split("\\n")

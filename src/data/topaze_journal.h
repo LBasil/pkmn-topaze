@@ -302,6 +302,8 @@ static const u8 sJN_143[] = _("SEA MARATHON");
 static const u8 sJH_143[] = _("ROUTE 20: a swimmer needs ELIXIRS.");
 static const u8 sJN_144[] = _("THE RESEARCHER");
 static const u8 sJH_144[] = _("ROUTE 23: a nerd wants LEAF STONE.");
+static const u8 sJN_145[] = _("THE RIVAL FROM YESTERDAY");
+static const u8 sJH_145[] = _("ROUTE 8: he swears you already\nbeat him. Needs 4 BADGES.");
 
 static const struct TopazeJournalSection sJournalSections[] = {
     { sJS_0, 0 },
@@ -464,4 +466,5 @@ static const struct TopazeJournalEntry sJournalEntries[] = {
     { 2, 0, 0, FLAG_TOPAZE_QUEST_5, 0, 0, 0, 0, 0, 0, sJN_142, sJH_142 },
     { 2, 0, 0, FLAG_TOPAZE_QUEST_6, 0, 0, 0, 0, 0, 0, sJN_143, sJH_143 },
     { 2, 0, 0, FLAG_TOPAZE_QUEST_7, 0, 0, 0, 0, 0, 0, sJN_144, sJH_144 },
+    { 2, 2, 1, TRAINER_ECHO_RIVAL, 0, 0, 4, 0, 0, 0, sJN_145, sJH_145 },
 };

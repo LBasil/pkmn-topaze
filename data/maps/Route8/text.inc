@@ -177,3 +177,28 @@ Route8_Text_TimeHint::
 	.string "A hiker mutters: I left at dawn and\n"
 	.string "arrived at dusk. The walk took ten\p"
 	.string "minutes.$"
+
+Route8_Text_Echo_Intro::
+	.string "{PLAYER}! There you are. You beat me\n"
+	.string "yesterday, remember? ...Or\p"
+	.string "tomorrow. The days are tangled.$"
+
+Route8_Text_Echo_Defeat::
+	.string "Again! I lose again. At least it is\n"
+	.string "consistent.$"
+
+Route8_Text_Echo_Win::
+	.string "Take these. I owe them to you. I\n"
+	.string "think.$"
+
+Route8_Text_Echo_After::
+	.string "Tell me when you beat me. I would\n"
+	.string "like to know which day it was.$"
+
+Route8_Text_Echo_Early::
+	.string "Not yet, {PLAYER}. Come back with 4\n"
+	.string "BADGES. Or I already told you that?$"
+
+Route8_Text_Echo_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

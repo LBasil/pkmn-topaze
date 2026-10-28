@@ -387,7 +387,51 @@ static const struct TrainerMonNoItemDefaultMoves sParty_LeaderBrawly[] = {DUMMY_
 static const struct TrainerMonNoItemDefaultMoves sParty_LeaderTateLiza[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_SchoolKidM[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_SchoolKidF[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_SrAndJr[] = {DUMMY_TRAINER_MON};
+// Topaze: ECHO, le rival du passe (Route 8)
+static const struct TrainerMonItemCustomMoves sParty_EchoRival[] = {
+    {
+        .iv = 200,
+        .lvl = 36,
+        .species = SPECIES_DUGTRIO,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_SWORDS_DANCE, MOVE_SUCKER_PUNCH},
+    },
+    {
+        .iv = 200,
+        .lvl = 36,
+        .species = SPECIES_KADABRA,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_CALM_MIND, MOVE_RECOVER},
+    },
+    {
+        .iv = 200,
+        .lvl = 37,
+        .species = SPECIES_HAUNTER,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_SHADOW_BALL, MOVE_SLUDGE_BOMB, MOVE_THUNDERBOLT, MOVE_HYPNOSIS},
+    },
+    {
+        .iv = 200,
+        .lvl = 38,
+        .species = SPECIES_ARCANINE,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_EXTREME_SPEED, MOVE_CRUNCH, MOVE_CLOSE_COMBAT},
+    },
+    {
+        .iv = 200,
+        .lvl = 39,
+        .species = SPECIES_SANDSLASH,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_EARTHQUAKE, MOVE_X_SCISSOR, MOVE_SWORDS_DANCE, MOVE_ROCK_SLIDE},
+    },
+    {
+        .iv = 200,
+        .lvl = 40,
+        .species = SPECIES_GYARADOS,
+        .heldItem = ITEM_MYSTIC_WATER,
+        .moves = {MOVE_WATERFALL, MOVE_CRUNCH, MOVE_EARTHQUAKE, MOVE_DRAGON_DANCE},
+    },
+};
 static const struct TrainerMonNoItemDefaultMoves sParty_PokefanM[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_PokefanF[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_ExpertM[] = {DUMMY_TRAINER_MON};

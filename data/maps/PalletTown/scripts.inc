@@ -795,6 +795,7 @@ PalletTown_EventScript_ProcheAdrian::
 	goto_if_not_defeated TRAINER_PROCHE_NATHAN, PalletTown_EventScript_ProcheAdrian_TooEarly
 	goto_if_not_defeated TRAINER_PROCHE_DYLAN, PalletTown_EventScript_ProcheAdrian_TooEarly
 	goto_if_defeated TRAINER_PROCHE_ADRIAN, PalletTown_EventScript_ProcheAdrian_After
+	msgbox PalletTown_Text_ProcheAdrian_Gather
 	msgbox PalletTown_Text_ProcheAdrian_Intro
 	checkitemspace ITEM_MASTER_BALL
 	goto_if_eq VAR_RESULT, FALSE, PalletTown_EventScript_ProcheAdrian_NoRoom

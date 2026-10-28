@@ -367,6 +367,15 @@ PalletTown_Text_MineHint::
     .string "(Then follow MEW to APATIA's dock,\n"
     .string "and talk to the sailor.)$"
 
+PalletTown_Text_ProcheAdrian_Gather::
+	.string "{PLAYER}. THOMAS, LOLA, JORDAN,\n"
+	.string "VIOLETTE, EDOUARD, EMMA... they all\p"
+	.string "told me about you. GAUTHIER, CHLOE,\n"
+	.string "VINCENT, THIBAULT, NATHAN, DYLAN\p"
+	.string "too. We were all waiting here, in\n"
+	.string "our own time. You came for each of\p"
+	.string "us.$"
+
 PalletTown_Text_ProcheAdrian_Intro::
 	.string "{PLAYER}. You met all of them. So\n"
 	.string "now it is my turn. Let us see the\p"
