@@ -126,3 +126,18 @@ Route13_Text_RouteSign::
     .string "ROUTE 13\n"
     .string "North to SILENCE BRIDGE$"
 
+
+Route13_Text_Quest4_Ask::
+	.string "My best fighter is out of PP. Got 2\n"
+	.string "ETHERS for an old angler?$"
+
+Route13_Text_Quest4_Ok::
+	.string "That did it! Here, a reward.$"
+
+Route13_Text_Quest4_Done::
+	.string "The big one did not get away this\n"
+	.string "time.$"
+
+Route13_Text_Quest4_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

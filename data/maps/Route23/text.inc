@@ -15,3 +15,19 @@ Route23_Text_RedEnters::
     .string "the BLACK OPAL of OPANIHRUM.\p"
     .string "He tips his cap and walks into\n"
     .string "the VICTORY ROAD alone.$"
+
+Route23_Text_Quest7_Ask::
+	.string "I study evolution. Bring me a LEAF\n"
+	.string "STONE for my research.$"
+
+Route23_Text_Quest7_Ok::
+	.string "Fascinating! Please take this in\n"
+	.string "return.$"
+
+Route23_Text_Quest7_Done::
+	.string "My research is moving forward.\n"
+	.string "Thanks!$"
+
+Route23_Text_Quest7_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

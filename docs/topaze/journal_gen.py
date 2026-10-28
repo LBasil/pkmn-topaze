@@ -183,6 +183,15 @@ add("FRIENDS", T, "TRAINER_PROCHE_NATHAN", 0, "NATHAN", "LAVENDER TOWN: a GHOST 
 add("FRIENDS", T, "TRAINER_PROCHE_DYLAN", 0, "DYLAN", "FOUR ISLAND: a DRAGON specialist.\\nNeeds the LEAGUE beaten.", FL("FLAG_TOPAZE_POSTGAME"))
 add("FRIENDS", T, "TRAINER_PROCHE_ADRIAN", 0, "ADRIAN", "PALLET TOWN: a FLYING specialist.\\nBeat all your other friends.", FL("FLAG_TOPAZE_POSTGAME"))
 
+# ---- MINI-QUETES (PNJ des routes)
+add("SIDE QUESTS", F, "FLAG_TOPAZE_QUEST_1", 0, "BUG BITES", "ROUTE 2: a girl needs 3 ANTIDOTES.", A)
+add("SIDE QUESTS", F, "FLAG_TOPAZE_QUEST_2", 0, "LOST HEIRLOOM", "ROUTE 5: a man needs 2 REVIVES.", A)
+add("SIDE QUESTS", F, "FLAG_TOPAZE_QUEST_3", 0, "NO MORE BUGS", "ROUTE 9: a hiker needs 3 REPELS.", A)
+add("SIDE QUESTS", F, "FLAG_TOPAZE_QUEST_4", 0, "THE ANGLER", "ROUTE 13: an angler needs 2 ETHERS.", A)
+add("SIDE QUESTS", F, "FLAG_TOPAZE_QUEST_5", 0, "THE COLLECTOR", "ROUTE 17: a biker wants FIRE STONE.", A)
+add("SIDE QUESTS", F, "FLAG_TOPAZE_QUEST_6", 0, "SEA MARATHON", "ROUTE 20: a swimmer needs ELIXIRS.", A)
+add("SIDE QUESTS", F, "FLAG_TOPAZE_QUEST_7", 0, "THE RESEARCHER", "ROUTE 23: a nerd wants LEAF STONE.", A)
+
 assert len(SECTIONS) <= 12
 for e in E:
     lines = e[5].split("\\n")

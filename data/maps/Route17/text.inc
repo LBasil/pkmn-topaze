@@ -133,3 +133,20 @@ Route17_Text_CyclingRoadSign::
     .string "CYCLING ROAD\n"
     .string "Slope ends here!$"
 
+
+Route17_Text_Quest5_Ask::
+	.string "I collect STONES. Bring me a FIRE\n"
+	.string "STONE and I will make it worth your\p"
+	.string "while.$"
+
+Route17_Text_Quest5_Ok::
+	.string "Beautiful! Take this for your\n"
+	.string "trouble.$"
+
+Route17_Text_Quest5_Done::
+	.string "My collection is shining. Thanks,\n"
+	.string "friend.$"
+
+Route17_Text_Quest5_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

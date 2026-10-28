@@ -159,3 +159,34 @@ Route23_EventScript_EarthBadgeGuardTrigger::
 Route23_EventScript_VictoryRoadGateSign::
 	msgbox Route23_Text_VictoryRoadGateSign, MSGBOX_SIGN
 	end
+
+@ Topaze: mini-quete 7 (THE RESEARCHER)
+Route23_EventScript_Quest7::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_QUEST_7, Route23_EventScript_Quest7_Done
+	checkitem ITEM_LEAF_STONE, 1
+	goto_if_eq VAR_RESULT, FALSE, Route23_EventScript_Quest7_Ask
+	checkitemspace ITEM_ZINC, 1
+	goto_if_eq VAR_RESULT, FALSE, Route23_EventScript_Quest7_NoRoom
+	removeitem ITEM_LEAF_STONE, 1
+	setflag FLAG_TOPAZE_QUEST_7
+	msgbox Route23_Text_Quest7_Ok
+	giveitem ITEM_ZINC, 1
+	release
+	end
+
+Route23_EventScript_Quest7_Ask::
+	msgbox Route23_Text_Quest7_Ask
+	release
+	end
+
+Route23_EventScript_Quest7_Done::
+	msgbox Route23_Text_Quest7_Done
+	release
+	end
+
+Route23_EventScript_Quest7_NoRoom::
+	msgbox Route23_Text_Quest7_NoRoom
+	release
+	end

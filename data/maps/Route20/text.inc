@@ -129,3 +129,18 @@ Route20_Text_CaveClosed::
     .string "A wall of heat and steam blasts\n"
     .string "out of the cave!\p"
     .string "The way in is far too hot.$"
+
+Route20_Text_Quest6_Ask::
+	.string "Long swim ahead. 2 ELIXIRS would\n"
+	.string "keep my team going!$"
+
+Route20_Text_Quest6_Ok::
+	.string "Perfect! Here, a little something.$"
+
+Route20_Text_Quest6_Done::
+	.string "The sea is calm. Good luck out\n"
+	.string "there!$"
+
+Route20_Text_Quest6_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

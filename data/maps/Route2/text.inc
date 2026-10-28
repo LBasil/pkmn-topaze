@@ -17,3 +17,18 @@ Route2_Text_Miner::
     .string "bleeds. PYROPIA sits right on it.\p"
     .string "Smell that smoke? The volcano is\n"
     .string "just warming up.$"
+
+Route2_Text_Quest1_Ask::
+	.string "Ouch! The bugs here bite so hard.\n"
+	.string "Please bring me 3 ANTIDOTES!$"
+
+Route2_Text_Quest1_Ok::
+	.string "Thank you! Take this as thanks.$"
+
+Route2_Text_Quest1_Done::
+	.string "My poison is gone. You are a\n"
+	.string "lifesaver!$"
+
+Route2_Text_Quest1_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

@@ -288,6 +288,20 @@ static const u8 sJN_136[] = _("DYLAN");
 static const u8 sJH_136[] = _("FOUR ISLAND: a DRAGON specialist.\nNeeds the LEAGUE beaten.");
 static const u8 sJN_137[] = _("ADRIAN");
 static const u8 sJH_137[] = _("PALLET TOWN: a FLYING specialist.\nBeat all your other friends.");
+static const u8 sJN_138[] = _("BUG BITES");
+static const u8 sJH_138[] = _("ROUTE 2: a girl needs 3 ANTIDOTES.");
+static const u8 sJN_139[] = _("LOST HEIRLOOM");
+static const u8 sJH_139[] = _("ROUTE 5: a man needs 2 REVIVES.");
+static const u8 sJN_140[] = _("NO MORE BUGS");
+static const u8 sJH_140[] = _("ROUTE 9: a hiker needs 3 REPELS.");
+static const u8 sJN_141[] = _("THE ANGLER");
+static const u8 sJH_141[] = _("ROUTE 13: an angler needs 2 ETHERS.");
+static const u8 sJN_142[] = _("THE COLLECTOR");
+static const u8 sJH_142[] = _("ROUTE 17: a biker wants FIRE STONE.");
+static const u8 sJN_143[] = _("SEA MARATHON");
+static const u8 sJH_143[] = _("ROUTE 20: a swimmer needs ELIXIRS.");
+static const u8 sJN_144[] = _("THE RESEARCHER");
+static const u8 sJH_144[] = _("ROUTE 23: a nerd wants LEAF STONE.");
 
 static const struct TopazeJournalSection sJournalSections[] = {
     { sJS_0, 0 },
@@ -443,4 +457,11 @@ static const struct TopazeJournalEntry sJournalEntries[] = {
     { 11, 2, 2, TRAINER_PROCHE_NATHAN, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_135, sJH_135 },
     { 11, 2, 2, TRAINER_PROCHE_DYLAN, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_136, sJH_136 },
     { 11, 2, 2, TRAINER_PROCHE_ADRIAN, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_137, sJH_137 },
+    { 2, 0, 0, FLAG_TOPAZE_QUEST_1, 0, 0, 0, 0, 0, 0, sJN_138, sJH_138 },
+    { 2, 0, 0, FLAG_TOPAZE_QUEST_2, 0, 0, 0, 0, 0, 0, sJN_139, sJH_139 },
+    { 2, 0, 0, FLAG_TOPAZE_QUEST_3, 0, 0, 0, 0, 0, 0, sJN_140, sJH_140 },
+    { 2, 0, 0, FLAG_TOPAZE_QUEST_4, 0, 0, 0, 0, 0, 0, sJN_141, sJH_141 },
+    { 2, 0, 0, FLAG_TOPAZE_QUEST_5, 0, 0, 0, 0, 0, 0, sJN_142, sJH_142 },
+    { 2, 0, 0, FLAG_TOPAZE_QUEST_6, 0, 0, 0, 0, 0, 0, sJN_143, sJH_143 },
+    { 2, 0, 0, FLAG_TOPAZE_QUEST_7, 0, 0, 0, 0, 0, 0, sJN_144, sJH_144 },
 };

@@ -101,3 +101,19 @@ Route9_Text_RouteSign::
     .string "ROUTE 9\n"
     .string "TOURMALIA - ROCK TUNNEL$"
 
+
+Route9_Text_Quest3_Ask::
+	.string "Wild POKéMON keep jumping me. 3\n"
+	.string "REPELS would save my trip!$"
+
+Route9_Text_Quest3_Ok::
+	.string "Ahh, peace! Take this. I do not\n"
+	.string "need it.$"
+
+Route9_Text_Quest3_Done::
+	.string "Not a single POKéMON bothers me\n"
+	.string "now.$"
+
+Route9_Text_Quest3_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

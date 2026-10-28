@@ -61,3 +61,34 @@ Route20_Movement_StepDown::
 Route20_EventScript_SeaOpen::
 	setvar VAR_TEMP_1, 1
 	return
+
+@ Topaze: mini-quete 6 (SEA MARATHON)
+Route20_EventScript_Quest6::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_QUEST_6, Route20_EventScript_Quest6_Done
+	checkitem ITEM_ELIXIR, 2
+	goto_if_eq VAR_RESULT, FALSE, Route20_EventScript_Quest6_Ask
+	checkitemspace ITEM_CARBOS, 1
+	goto_if_eq VAR_RESULT, FALSE, Route20_EventScript_Quest6_NoRoom
+	removeitem ITEM_ELIXIR, 2
+	setflag FLAG_TOPAZE_QUEST_6
+	msgbox Route20_Text_Quest6_Ok
+	giveitem ITEM_CARBOS, 1
+	release
+	end
+
+Route20_EventScript_Quest6_Ask::
+	msgbox Route20_Text_Quest6_Ask
+	release
+	end
+
+Route20_EventScript_Quest6_Done::
+	msgbox Route20_Text_Quest6_Done
+	release
+	end
+
+Route20_EventScript_Quest6_NoRoom::
+	msgbox Route20_Text_Quest6_NoRoom
+	release
+	end

@@ -1603,4 +1603,13 @@
 // FLAG_SPECIAL_FLAG_0x4002 - 0x407F also exist and are unused
 #define SPECIAL_FLAGS_END             (SPECIAL_FLAGS_START + 0x7F)
 
+// Topaze: mini-quetes
+#define FLAG_TOPAZE_QUEST_1 FLAG_0x204 // mini-quete PNJ 1
+#define FLAG_TOPAZE_QUEST_2 FLAG_0x205 // mini-quete PNJ 2
+#define FLAG_TOPAZE_QUEST_3 FLAG_0x206 // mini-quete PNJ 3
+#define FLAG_TOPAZE_QUEST_4 FLAG_0x207 // mini-quete PNJ 4
+#define FLAG_TOPAZE_QUEST_5 FLAG_0x208 // mini-quete PNJ 5
+#define FLAG_TOPAZE_QUEST_6 FLAG_0x209 // mini-quete PNJ 6
+#define FLAG_TOPAZE_QUEST_7 FLAG_0x20A // mini-quete PNJ 7
+
 #endif // GUARD_CONSTANTS_FLAGS_H
