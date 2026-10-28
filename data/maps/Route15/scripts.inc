@@ -35,3 +35,8 @@ Route15_EventScript_ProcheGauthier_NoRoom::
 	msgbox Route15_Text_ProcheGauthier_NoRoom
 	release
 	end
+
+@ Topaze: indice du temps deregle
+Route15_EventScript_TimeHint::
+	msgbox Route15_Text_TimeHint, MSGBOX_SIGN
+	end

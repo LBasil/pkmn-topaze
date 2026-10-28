@@ -39,3 +39,8 @@ Route18_Text_CyclingRoadSign::
     .string "CYCLING ROAD\n"
     .string "No pedestrians permitted!$"
 
+
+Route18_Text_TimeHint::
+	.string "A bench plaque: RESERVED FOR 6:00\n"
+	.string "PM. The sky above is dark. The\p"
+	.string "plaque is dry. It is not raining.$"

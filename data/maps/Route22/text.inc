@@ -88,3 +88,7 @@ Route22_Text_ProcheVincent_Early::
 Route22_Text_ProcheVincent_NoRoom::
 	.string "Your BAG is full. Make some room\n"
 	.string "first, then talk to me again.$"
+
+Route22_Text_TimeHint::
+	.string "A cracked hourglass. The sand falls\n"
+	.string "up.$"

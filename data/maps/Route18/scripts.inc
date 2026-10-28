@@ -26,3 +26,8 @@ Route18_EventScript_RouteSign::
 Route18_EventScript_CyclingRoadSign::
 	msgbox Route18_Text_CyclingRoadSign, MSGBOX_SIGN
 	end
+
+@ Topaze: indice du temps deregle
+Route18_EventScript_TimeHint::
+	msgbox Route18_Text_TimeHint, MSGBOX_SIGN
+	end

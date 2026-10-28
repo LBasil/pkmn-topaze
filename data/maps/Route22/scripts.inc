@@ -269,3 +269,8 @@ Route22_EventScript_ProcheVincent_NoRoom::
 	msgbox Route22_Text_ProcheVincent_NoRoom
 	release
 	end
+
+@ Topaze: indice du temps deregle
+Route22_EventScript_TimeHint::
+	msgbox Route22_Text_TimeHint, MSGBOX_SIGN
+	end

@@ -172,3 +172,8 @@ Route8_Text_MonSpearow::
 
 Route8_Text_MonMeowth::
     .string "MEOWTH: Nyaa!\nIt is chasing something shiny.$"
+
+Route8_Text_TimeHint::
+	.string "A hiker mutters: I left at dawn and\n"
+	.string "arrived at dusk. The walk took ten\p"
+	.string "minutes.$"

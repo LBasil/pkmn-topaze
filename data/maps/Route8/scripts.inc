@@ -24,3 +24,8 @@ Route8_EventScript_MonMeowth::
 	waitmoncry
 	release
 	end
+
+@ Topaze: indice du temps deregle
+Route8_EventScript_TimeHint::
+	msgbox Route8_Text_TimeHint, MSGBOX_SIGN
+	end

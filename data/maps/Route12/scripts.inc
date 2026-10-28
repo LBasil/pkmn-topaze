@@ -133,3 +133,8 @@ Route12_EventScript_ProcheEmma_NoRoom::
 	msgbox Route12_Text_ProcheEmma_NoRoom
 	release
 	end
+
+@ Topaze: indice du temps deregle
+Route12_EventScript_TimeHint::
+	msgbox Route12_Text_TimeHint, MSGBOX_SIGN
+	end

@@ -112,3 +112,8 @@ Route24_EventScript_NoRoomForNugget::
 	release
 	end
 
+
+@ Topaze: indice du temps deregle
+Route24_EventScript_TimeHint::
+	msgbox Route24_Text_TimeHint, MSGBOX_SIGN
+	end

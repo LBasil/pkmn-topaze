@@ -39,3 +39,8 @@ Route3_EventScript_ProcheThomas_NoRoom::
 	msgbox Route3_Text_ProcheThomas_NoRoom
 	release
 	end
+
+@ Topaze: indice du temps deregle
+Route3_EventScript_TimeHint::
+	msgbox Route3_Text_TimeHint, MSGBOX_SIGN
+	end

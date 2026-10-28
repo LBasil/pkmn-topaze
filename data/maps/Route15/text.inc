@@ -176,3 +176,8 @@ Route15_Text_ProcheGauthier_Early::
 Route15_Text_ProcheGauthier_NoRoom::
 	.string "Your BAG is full. Make some room\n"
 	.string "first, then talk to me again.$"
+
+Route15_Text_TimeHint::
+	.string "A broken alarm clock rings, though\n"
+	.string "nobody set it. It rings for\p"
+	.string "yesterday.$"

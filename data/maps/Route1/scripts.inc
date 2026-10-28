@@ -137,3 +137,8 @@ Route1_EventScript_AnimalsHome::
 Route1_EventScript_Walker::
 	msgbox Route1_Text_Walker, MSGBOX_NPC
 	end
+
+@ Topaze: indice du temps deregle
+Route1_EventScript_TimeHint::
+	msgbox Route1_Text_TimeHint, MSGBOX_SIGN
+	end

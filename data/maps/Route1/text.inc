@@ -60,3 +60,7 @@ Route1_Text_Walker::
     .string "That little PIDGEY? Part DARK now.\n"
     .string "Check your TYPE MEMO before you\l"
     .string "fight anything.$"
+
+Route1_Text_TimeHint::
+	.string "A roadside clock. It says 3:07. It\n"
+	.string "has said 3:07 all week.$"

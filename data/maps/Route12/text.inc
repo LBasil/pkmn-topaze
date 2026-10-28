@@ -200,3 +200,8 @@ Route12_Text_ProcheEmma_Early::
 Route12_Text_ProcheEmma_NoRoom::
 	.string "Your BAG is full. Make some room\n"
 	.string "first, then talk to me again.$"
+
+Route12_Text_TimeHint::
+	.string "The fishing spot sign: BEST HOUR TO\n"
+	.string "FISH... crossed out. Nobody knows\p"
+	.string "the hour anymore.$"

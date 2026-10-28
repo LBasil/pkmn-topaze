@@ -4,3 +4,8 @@ Route11_MapScripts::
 Route11_EventScript_DiglettsCaveSign::
 	msgbox Route11_Text_DiglettsCave, MSGBOX_SIGN
 	end
+
+@ Topaze: indice du temps deregle
+Route11_EventScript_TimeHint::
+	msgbox Route11_Text_TimeHint, MSGBOX_SIGN
+	end

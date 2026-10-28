@@ -106,3 +106,7 @@ Route11_Text_DavePostBattle::
 Route11_Text_DiglettsCave::
     .string "DIGLETT'S CAVE$"
 
+
+Route11_Text_TimeHint::
+	.string "A clock on a post. Its hands spin\n"
+	.string "backwards. Slowly. Then fast.$"

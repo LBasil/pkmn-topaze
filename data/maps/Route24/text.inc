@@ -102,3 +102,8 @@ Route24_Text_CalePostBattle::
 Route24_Text_ImOutOfHere::
     .string "I'm out of here!\n"
     .string "Don't follow me!$"
+
+Route24_Text_TimeHint::
+	.string "A stopped wristwatch lies in the\n"
+	.string "grass. The second hand trembles but\p"
+	.string "never moves.$"

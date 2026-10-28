@@ -35,3 +35,8 @@ Route6_EventScript_ProcheJordan_NoRoom::
 	msgbox Route6_Text_ProcheJordan_NoRoom
 	release
 	end
+
+@ Topaze: indice du temps deregle
+Route6_EventScript_TimeHint::
+	msgbox Route6_Text_TimeHint, MSGBOX_SIGN
+	end

@@ -126,3 +126,7 @@ Route3_Text_ProcheThomas_Early::
 Route3_Text_ProcheThomas_NoRoom::
 	.string "Your BAG is full. Make some room\n"
 	.string "first, then talk to me again.$"
+
+Route3_Text_TimeHint::
+	.string "Someone scratched on the rock: THE\n"
+	.string "SUN ROSE TWICE TODAY.$"

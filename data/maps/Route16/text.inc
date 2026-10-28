@@ -115,3 +115,7 @@ Route16_Text_LeaNotEnoughMons::
     .string "POKéMON with you?\p"
     .string "Doesn't it feel lonely for you or\n"
     .string "your POKéMON?$"
+
+Route16_Text_TimeHint::
+	.string "Two calendars nailed to a post show\n"
+	.string "different days. Both are wrong.$"

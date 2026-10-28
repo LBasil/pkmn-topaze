@@ -152,3 +152,7 @@ Route19_Text_LucNotEnoughMons::
     .string "LUC: I don't want to if I can't\n"
     .string "battle you with my big sis.\p"
     .string "Don't you have two POKéMON?$"
+
+Route19_Text_TimeHint::
+	.string "The tide has not turned since the\n"
+	.string "lights went out in CHRONDROLIA.$"

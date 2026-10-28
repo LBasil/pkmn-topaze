@@ -98,3 +98,7 @@ Route6_Text_ProcheJordan_Early::
 Route6_Text_ProcheJordan_NoRoom::
 	.string "Your BAG is full. Make some room\n"
 	.string "first, then talk to me again.$"
+
+Route6_Text_TimeHint::
+	.string "The signpost shadow points west at\n"
+	.string "noon. Even the shadows are lost.$"
