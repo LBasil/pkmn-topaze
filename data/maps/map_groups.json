@@ -249,7 +249,8 @@
     "SevenIsland_SevaultCanyon_Glade",
     "SevenIsland_SevaultCanyon_Summit",
     "LastDayIsland",
-    "ReflectionMarsh"
+    "ReflectionMarsh",
+    "BerryOrchard"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
@@ -326,7 +327,11 @@
     "StoneGreenhouse",
     "TradeDock",
     "FossilDig",
-    "CyclePond"
+    "CyclePond",
+    "HoennWestReserve",
+    "HoennEastReserve",
+    "SunriseMeadow",
+    "AshenMine"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",
@@ -472,7 +477,10 @@
     "SaffronCity_HomeK",
     "SaffronCity_HomeL",
     "SaffronCity_HomeM",
-    "SaffronCity_HomeN"
+    "SaffronCity_HomeN",
+    "DockCafe",
+    "EvolutionLibrary",
+    "CollectorShop"
   ],
   "gMapGroup_IndoorRoute2": [
     "Route2_ViridianForest_SouthEntrance",

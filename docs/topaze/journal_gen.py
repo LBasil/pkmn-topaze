@@ -218,6 +218,14 @@ add("SIDE QUESTS", F, "FLAG_TOPAZE_GHOST_4", 0, "THE GHOST EGGS", "FOSSIL DIG: 4
 add("SIDE QUESTS", F, "FLAG_TOPAZE_BOND", 0, "THE BOND TREATMENT", "CYCLE POND: a treatment for\\nbond evolutions.", FL("FLAG_TOPAZE_CLOCK_DONE"))
 add("SIDE QUESTS", F, "FLAG_TOPAZE_EVERSTONE", 0, "THE FORBIDDEN EVOLUTION", "CYCLE POND hermit keeps a stone.\\nPOKeMON that never evolve.", FL("FLAG_TOPAZE_CLOCK_DONE"))
 
+# ---- ZONES LOT 3 (le passeur des lanternes) LANTERN
+add("SIDE QUESTS", F, "FLAG_TOPAZE_QUEST_HOENNW", 0, "THE SCALE COLLECTOR", "WEST RESERVE: bring 2 HEART SCALES.\\nFerry from AMETHIOLITE.", FL("FLAG_TOPAZE_CLOCK_DONE"))
+add("SIDE QUESTS", F, "FLAG_TOPAZE_QUEST_HOENNE", 0, "THE SALT TRADE", "EAST RESERVE: bring a SHOAL SALT.\\nFerry from AMETHIOLITE.", FL("FLAG_TOPAZE_CLOCK_DONE"))
+add("SIDE QUESTS", F, "FLAG_TOPAZE_QUEST_JOHTO", 0, "THE MORNING STAR", "SUNRISE MEADOW: bring a STAR PIECE.\\nFerry from AMETHIOLITE.", FL("FLAG_TOPAZE_CLOCK_DONE"))
+add("SIDE QUESTS", F, "FLAG_TOPAZE_GIFT_JOHTO", 0, "A GIFT FROM THE MEADOW", "SUNRISE MEADOW: a young one awaits.\\nFerry from AMETHIOLITE.", FL("FLAG_TOPAZE_CLOCK_DONE"))
+add("SIDE QUESTS", F, "FLAG_TOPAZE_QUEST_MINE", 0, "THE GEM COLLECTOR", "ASHEN MINE: bring 2 STARDUST.\\nFerry from AMETHIOLITE.", FL("FLAG_TOPAZE_CLOCK_DONE"))
+add("SIDE QUESTS", F, "FLAG_TOPAZE_QUEST_ORCHARD", 0, "THE LUM BERRY", "BERRY ORCHARD: bring a LUM BERRY.\\nFerry from AMETHIOLITE.", FL("FLAG_TOPAZE_CLOCK_DONE"))
+
 assert len(SECTIONS) <= 12
 for e in E:
     lines = e[5].split("\\n")
@@ -228,7 +236,7 @@ for e in E:
 # longueur max d'une section visible (JOURNAL_MAX_ENTRIES)
 from collections import Counter
 mx = max(Counter(e[0] for e in E).values())
-assert mx <= 40, mx
+assert mx <= 64, mx
 out = ["// GENERE par docs/topaze/journal_gen.py - ne pas editer a la main", ""]
 for k, (n, g) in enumerate(SECTIONS):
     out.append('static const u8 sJS_%d[] = _("%s");' % (k, n))

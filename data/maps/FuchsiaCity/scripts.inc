@@ -486,3 +486,94 @@ FuchsiaCity_EventScript_TideFerrywoman_EventScript_Closed::
 	msgbox FuchsiaCity_Text_Tide_Closed
 	release
 	end
+
+@ Topaze: le PASSEUR DES LANTERNES (zones lot 3)
+FuchsiaCity_EventScript_LanternBoatman::
+	lock
+	faceplayer
+	goto_if_unset FLAG_TOPAZE_CLOCK_DONE, FuchsiaCity_EventScript_LanternBoatman_EventScript_Closed
+	msgbox FuchsiaCity_Text_Lantern_Hello
+	goto_if_unset FLAG_BADGE06_GET, FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate0
+	msgbox FuchsiaCity_Text_Lantern_Ask0, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest1
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_HOENN_WEST_RESERVE, 255, 14, 105
+	waitstate
+	end
+FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate0::
+	msgbox FuchsiaCity_Text_Lantern_GateText0
+	goto FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest1
+FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest1::
+	goto_if_unset FLAG_BADGE06_GET, FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate1
+	msgbox FuchsiaCity_Text_Lantern_Ask1, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest2
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_HOENN_EAST_RESERVE, 255, 12, 45
+	waitstate
+	end
+FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate1::
+	msgbox FuchsiaCity_Text_Lantern_GateText1
+	goto FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest2
+FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest2::
+	goto_if_unset FLAG_BADGE04_GET, FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate2
+	msgbox FuchsiaCity_Text_Lantern_Ask2, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest3
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_SUNRISE_MEADOW, 255, 12, 31
+	waitstate
+	end
+FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate2::
+	msgbox FuchsiaCity_Text_Lantern_GateText2
+	goto FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest3
+FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest3::
+	goto_if_unset FLAG_BADGE07_GET, FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate3
+	msgbox FuchsiaCity_Text_Lantern_Ask3, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest4
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_ASHEN_MINE, 255, 11, 60
+	waitstate
+	end
+FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate3::
+	msgbox FuchsiaCity_Text_Lantern_GateText3
+	goto FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest4
+FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest4::
+	goto_if_unset FLAG_BADGE03_GET, FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate4
+	msgbox FuchsiaCity_Text_Lantern_Ask4, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest5
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_BERRY_ORCHARD, 255, 31, 35
+	waitstate
+	end
+FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate4::
+	msgbox FuchsiaCity_Text_Lantern_GateText4
+	goto FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest5
+FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest5::
+	msgbox FuchsiaCity_Text_Lantern_Ask5, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest6
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_DOCK_CAFE, 255, 4, 6
+	waitstate
+	end
+FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest6::
+	msgbox FuchsiaCity_Text_Lantern_Ask6, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest7
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_EVOLUTION_LIBRARY, 255, 4, 6
+	waitstate
+	end
+FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest7::
+	msgbox FuchsiaCity_Text_Lantern_Ask7, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_LanternBoatman_EventScript_End
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_COLLECTOR_SHOP, 255, 4, 6
+	waitstate
+	end
+FuchsiaCity_EventScript_LanternBoatman_EventScript_End::
+	msgbox FuchsiaCity_Text_Lantern_Never
+	release
+	end
+
+FuchsiaCity_EventScript_LanternBoatman_EventScript_Closed::
+	msgbox FuchsiaCity_Text_Lantern_Closed
+	release
+	end

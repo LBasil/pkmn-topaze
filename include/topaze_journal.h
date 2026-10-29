@@ -1,7 +1,7 @@
 #ifndef GUARD_TOPAZE_JOURNAL_H
 #define GUARD_TOPAZE_JOURNAL_H
 
-#define JOURNAL_MAX_ENTRIES 32
+#define JOURNAL_MAX_ENTRIES 64
 #define JOURNAL_MAX_SECTIONS 12
 
 u8 TopazeJournalGetSections(u8 *out);

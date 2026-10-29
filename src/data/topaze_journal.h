@@ -340,6 +340,18 @@ static const u8 sJN_162[] = _("THE BOND TREATMENT");
 static const u8 sJH_162[] = _("CYCLE POND: a treatment for\nbond evolutions.");
 static const u8 sJN_163[] = _("THE FORBIDDEN EVOLUTION");
 static const u8 sJH_163[] = _("CYCLE POND hermit keeps a stone.\nPOKeMON that never evolve.");
+static const u8 sJN_164[] = _("THE SCALE COLLECTOR");
+static const u8 sJH_164[] = _("WEST RESERVE: bring 2 HEART SCALES.\nFerry from AMETHIOLITE.");
+static const u8 sJN_165[] = _("THE SALT TRADE");
+static const u8 sJH_165[] = _("EAST RESERVE: bring a SHOAL SALT.\nFerry from AMETHIOLITE.");
+static const u8 sJN_166[] = _("THE MORNING STAR");
+static const u8 sJH_166[] = _("SUNRISE MEADOW: bring a STAR PIECE.\nFerry from AMETHIOLITE.");
+static const u8 sJN_167[] = _("A GIFT FROM THE MEADOW");
+static const u8 sJH_167[] = _("SUNRISE MEADOW: a young one awaits.\nFerry from AMETHIOLITE.");
+static const u8 sJN_168[] = _("THE GEM COLLECTOR");
+static const u8 sJH_168[] = _("ASHEN MINE: bring 2 STARDUST.\nFerry from AMETHIOLITE.");
+static const u8 sJN_169[] = _("THE LUM BERRY");
+static const u8 sJH_169[] = _("BERRY ORCHARD: bring a LUM BERRY.\nFerry from AMETHIOLITE.");
 
 static const struct TopazeJournalSection sJournalSections[] = {
     { sJS_0, 0 },
@@ -521,4 +533,10 @@ static const struct TopazeJournalEntry sJournalEntries[] = {
     { 2, 0, 2, FLAG_TOPAZE_GHOST_4, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_161, sJH_161 },
     { 2, 0, 2, FLAG_TOPAZE_BOND, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_162, sJH_162 },
     { 2, 0, 2, FLAG_TOPAZE_EVERSTONE, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_163, sJH_163 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_HOENNW, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_164, sJH_164 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_HOENNE, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_165, sJH_165 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_JOHTO, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_166, sJH_166 },
+    { 2, 0, 2, FLAG_TOPAZE_GIFT_JOHTO, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_167, sJH_167 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_MINE, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_168, sJH_168 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_ORCHARD, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_169, sJH_169 },
 };

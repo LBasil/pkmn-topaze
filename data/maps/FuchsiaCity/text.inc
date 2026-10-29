@@ -306,3 +306,62 @@ FuchsiaCity_Text_Tide_Ask4::
 
 FuchsiaCity_Text_Tide_GateText4::
 	.string "Come back with 7 BADGES.$"
+
+FuchsiaCity_Text_Lantern_Hello::
+	.string "My lantern lights the way to calmer\n"
+	.string "places, {PLAYER}.$"
+
+FuchsiaCity_Text_Lantern_Closed::
+	.string "The lantern is lit only for those\n"
+	.string "who read the clocks.$"
+
+FuchsiaCity_Text_Lantern_Never::
+	.string "Another time. The lantern stays\n"
+	.string "lit.$"
+
+FuchsiaCity_Text_Lantern_GateText0::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_Lantern_Ask0::
+	.string "The WEST RESERVE, home of POKeMON\n"
+	.string "from a far region. Visit?$"
+
+FuchsiaCity_Text_Lantern_GateText1::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_Lantern_Ask1::
+	.string "The EAST RESERVE: sea and cliffs\n"
+	.string "from a far region. Visit?$"
+
+FuchsiaCity_Text_Lantern_GateText2::
+	.string "Come back with 4 BADGES.$"
+
+FuchsiaCity_Text_Lantern_Ask2::
+	.string "The SUNRISE MEADOW: POKeMON from\n"
+	.string "the other side of the sea. Visit?$"
+
+FuchsiaCity_Text_Lantern_GateText3::
+	.string "Come back with 7 BADGES.$"
+
+FuchsiaCity_Text_Lantern_Ask3::
+	.string "The ASHEN MINE: gems, stones, odd\n"
+	.string "POKeMON. Visit?$"
+
+FuchsiaCity_Text_Lantern_GateText4::
+	.string "Come back with 3 BADGES.$"
+
+FuchsiaCity_Text_Lantern_Ask4::
+	.string "The BERRY ORCHARD grows every kind\n"
+	.string "of berry. Visit?$"
+
+FuchsiaCity_Text_Lantern_Ask5::
+	.string "The DOCK CAFE: rest, a drink and a\n"
+	.string "chat. Visit?$"
+
+FuchsiaCity_Text_Lantern_Ask6::
+	.string "The EVOLUTION LIBRARY: every way a\n"
+	.string "POKeMON can change. Visit?$"
+
+FuchsiaCity_Text_Lantern_Ask7::
+	.string "The COLLECTOR SHOP: little\n"
+	.string "treasures for sale. Visit?$"
