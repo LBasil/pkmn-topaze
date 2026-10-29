@@ -618,3 +618,45 @@ FuchsiaCity_Text_Apprentice_Ask9::
 FuchsiaCity_Text_FerryLocked::
 	.string "Some places need more BADGES. Come\n"
 	.string "back later.$"
+
+FuchsiaCity_Text_Apprentice_Ask10::
+	.string "The PEBBLE BEACH: smooth stones and\n"
+	.string "tiny tides. Visit?$"
+
+FuchsiaCity_Text_Apprentice_GateText10::
+	.string "Come back with 1 BADGE.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask14::
+	.string "The HONEY GROVE: sweet air and busy\n"
+	.string "wings. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText14::
+	.string "Come back with 3 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask15::
+	.string "The CIRCUS LAWN: psychic acts and\n"
+	.string "strange shows. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText15::
+	.string "Come back with 4 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask20::
+	.string "The CINDER PLAIN: burnt grass, hot\n"
+	.string "winds. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText20::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask15::
+	.string "The FROZEN MARSH: ice on the reeds.\n"
+	.string "Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText15::
+	.string "Come back with 7 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask16::
+	.string "The THORNY TRAIL: a sharp path for\n"
+	.string "sharp teeth. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText16::
+	.string "Come back with 4 BADGES.$"

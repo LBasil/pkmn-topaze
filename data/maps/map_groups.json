@@ -268,7 +268,10 @@
     "IvyMaze",
     "MossyDell",
     "HushedBog",
-    "ObsidianPass"
+    "ObsidianPass",
+    "HoneyGrove",
+    "CircusLawn",
+    "FrozenMarsh"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
@@ -383,7 +386,10 @@
     "SoundMeadow",
     "MirrorPond",
     "PhantomLane",
-    "CrownField"
+    "CrownField",
+    "PebbleBeach",
+    "CinderPlain",
+    "ThornyTrail"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",

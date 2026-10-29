@@ -490,6 +490,18 @@ static const u8 sJN_237[] = _("AN OLD FRIEND");
 static const u8 sJH_237[] = _("PHANTOM LANE: bring a MAX REVIVE.");
 static const u8 sJN_238[] = _("A CHAMPION'S PRIZE");
 static const u8 sJH_238[] = _("CROWN FIELD: bring a RARE CANDY.");
+static const u8 sJN_239[] = _("A BUCKET OF BALLS");
+static const u8 sJH_239[] = _("PEBBLE BEACH: bring a POKE BALL.");
+static const u8 sJN_240[] = _("STUNG TWICE");
+static const u8 sJH_240[] = _("HONEY GROVE: bring 2 ANTIDOTES.");
+static const u8 sJN_241[] = _("BALLS FOR THE SHOW");
+static const u8 sJH_241[] = _("CIRCUS LAWN: bring 2 GREAT BALLS.");
+static const u8 sJN_242[] = _("A STONE ON FIRE");
+static const u8 sJH_242[] = _("CINDER PLAIN: bring a FIRE STONE.");
+static const u8 sJN_243[] = _("A PEARL FOR HER");
+static const u8 sJH_243[] = _("FROZEN MARSH: bring a PEARL.");
+static const u8 sJN_244[] = _("A FALLEN BUDDY");
+static const u8 sJH_244[] = _("THORNY TRAIL: bring a REVIVE.");
 
 static const struct TopazeJournalSection sJournalSections[] = {
     { sJS_0, 0 },
@@ -746,4 +758,10 @@ static const struct TopazeJournalEntry sJournalEntries[] = {
     { 2, 0, 2, FLAG_TOPAZE_QUEST_MIRRORPOND, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_236, sJH_236 },
     { 2, 0, 2, FLAG_TOPAZE_QUEST_PHANTOMLANE, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_237, sJH_237 },
     { 2, 0, 2, FLAG_TOPAZE_QUEST_CROWNFIELD, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_238, sJH_238 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_PEBBLEBEACH, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_239, sJH_239 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_HONEYGROVE, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_240, sJH_240 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_CIRCUSLAWN, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_241, sJH_241 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_CINDERPLAIN, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_242, sJH_242 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_FROZENMARSH, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_243, sJH_243 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_THORNYTRAIL, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_244, sJH_244 },
 };
