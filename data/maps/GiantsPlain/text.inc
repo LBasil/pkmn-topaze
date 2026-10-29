@@ -5,7 +5,7 @@ GiantsPlain_Text_Stay::
 	.string "Take your time. The tide can wait.$"
 
 GiantsPlain_Text_Npc0::
-	.string "Big POKeMON need big space. Mind\n"
+	.string "Big POKéMON need big space. Mind\n"
 	.string "the herds.$"
 
 GiantsPlain_Text_Npc1::

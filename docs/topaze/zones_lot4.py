@@ -15,7 +15,7 @@ Q = [
  ('Route8', 'BUG_CATCHER', 'AWAKENING', 2, 'FULL_HEAL', 2, 'THE SLEEPYHEADS', 'ROUTE 8: a kid needs 2 AWAKENINGS.', 'My team will not wake up. I need 2 AWAKENINGS.', 'They are up! Take these.', 'We are wide awake now.'),
  ('Route10', 'SCIENTIST', 'HYPER_POTION', 2, 'MAX_REPEL', 2, 'THE FIELD RESEARCH', 'ROUTE 10: a nerd needs 2 HYPER POTIONS.', 'My research subject is injured. 2 HYPER POTIONS, quick!', 'Data saved. Thanks, take these.', 'The study goes on.'),
  ('Route11', 'FISHER', 'ICE_HEAL', 2, 'GREAT_BALL', 5, 'COLD CATCH', 'ROUTE 11: an angler needs 2 ICE HEALS.', 'My catch froze solid! 2 ICE HEALS, please.', 'Thaw complete! Here.', 'It swam off, warm and happy.'),
- ('Route12', 'FISHER', 'SUPER_REPEL', 2, 'ULTRA_BALL', 4, 'QUIET FISHING', 'ROUTE 12: an angler needs 2 SUPER REPELS.', 'Wild POKeMON scare the fish. 2 SUPER REPELS, please.', 'Peace and quiet. Thanks!', 'The fish are biting.'),
+ ('Route12', 'FISHER', 'SUPER_REPEL', 2, 'ULTRA_BALL', 4, 'QUIET FISHING', 'ROUTE 12: an angler needs 2 SUPER REPELS.', 'Wild POKéMON scare the fish. 2 SUPER REPELS, please.', 'Peace and quiet. Thanks!', 'The fish are biting.'),
  ('Route14', 'BIKER', 'FULL_HEAL', 2, 'MAX_REVIVE', 1, 'ENGINE TROUBLE', 'ROUTE 14: a biker needs 2 FULL HEALS.', 'My crew is a mess. 2 FULL HEALS and I owe you.', 'Back on the road! Thanks.', 'The engine purrs again.'),
  ('Route15', 'GENTLEMAN', 'REVIVE', 1, 'RARE_CANDY', 1, 'THE LAST WISH', 'ROUTE 15: a man needs a REVIVE.', 'My oldest friend fainted. A single REVIVE would mean everything.', 'You are kind. Take this treasure.', 'He is up. He says thank you.'),
  ('Route16', 'BIKER', 'ANTIDOTE', 3, 'SUPER_POTION', 3, 'ROAD RASH', 'ROUTE 16: a biker needs 3 ANTIDOTES.', 'Poison all over my team. 3 ANTIDOTES, fast!', 'You saved the ride. Here.', 'We are riding again.'),
@@ -83,8 +83,8 @@ BART = [dict(sp='FEEBAS', lv=20, item=('HEART_SCALE', 3), offer='3 HEART SCALES 
         dict(sp='BRELOOM', lv=30, item=('BIG_MUSHROOM', 1), offer='A BIG MUSHROOM for a BRELOOM. Deal?'), dict(sp='CLAMPERL', lv=25, item=('PEARL', 1), offer='A PEARL for a CLAMPERL. Deal?'),
         dict(sp='LUNATONE', lv=30, item=('STARDUST', 1), offer='A STARDUST for a LUNATONE. Deal?'), dict(sp='SOLROCK', lv=30, item=('STAR_PIECE', 2), offer='2 STAR PIECES for a SOLROCK. Deal?')]
 an = chain_building('BabyNursery', 'SaffronCity_HomeD', 'WOMAN_3', NURS, 'Little ones need a home. Each BADGE opens a new cradle. Take one?', 'NURSERY')
-ab = chain_building('BarterHouse', 'SaffronCity_HomeE', 'MAN', BART, 'I trade small treasures for rare POKeMON. Let us see what you carry.', 'BARTER')
+ab = chain_building('BarterHouse', 'SaffronCity_HomeE', 'MAN', BART, 'I trade small treasures for rare POKéMON. Let us see what you carry.', 'BARTER')
 ferry('Apprentice', 'LITTLE_BOY', (31, 26), 'The master is busy. I row the small trips, {PLAYER}.', 'The boat is not ready. Come back when the clocks make sense.', 'Another time, then.',
-      [('BabyNursery', an, 0, 'The BABY NURSERY: little POKeMON need a home. Visit?', ''), ('BarterHouse', ab, 0, 'The BARTER HOUSE: trade treasures for rare POKeMON. Visit?', '')])
-journal += [jl('SIDE QUESTS', NURS[-1]['F'], 'THE BABY NURSERY', 'Ferry from AMETHIOLITE: one baby\nPOKeMON per badge.'), jl('SIDE QUESTS', BART[-1]['F'], 'THE BARTER HOUSE', 'Ferry from AMETHIOLITE: treasures\nfor rare POKeMON.')]
+      [('BabyNursery', an, 0, 'The BABY NURSERY: little POKéMON need a home. Visit?', ''), ('BarterHouse', ab, 0, 'The BARTER HOUSE: trade treasures for rare POKéMON. Visit?', '')])
+journal += [jl('SIDE QUESTS', NURS[-1]['F'], 'THE BABY NURSERY', 'Ferry from AMETHIOLITE: one baby\nPOKéMON per badge.'), jl('SIDE QUESTS', BART[-1]['F'], 'THE BARTER HOUSE', 'Ferry from AMETHIOLITE: treasures\nfor rare POKéMON.')]
 journal_add(['# ---- LOT 4 (quetes de routes, nursery, troc)'] + journal); flush_flags()

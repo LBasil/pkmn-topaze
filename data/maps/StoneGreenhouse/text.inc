@@ -5,7 +5,7 @@ StoneGreenhouse_Text_Stay::
 	.string "Take your time. The tide can wait.$"
 
 StoneGreenhouse_Text_Npc0::
-	.string "Each stone has a POKeMON that waits\n"
+	.string "Each stone has a POKéMON that waits\n"
 	.string "for it.$"
 
 StoneGreenhouse_Text_Merchant::
@@ -13,5 +13,5 @@ StoneGreenhouse_Text_Merchant::
 	.string "What do you need?$"
 
 StoneGreenhouse_Text_Bye::
-	.string "May your POKeMON become what they\n"
+	.string "May your POKéMON become what they\n"
 	.string "dream of.$"

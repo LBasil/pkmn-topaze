@@ -6,14 +6,14 @@ ReflectionMarsh_Text_Stay::
 
 ReflectionMarsh_Text_Npc0::
 	.string "Everything here looks like another\n"
-	.string "POKeMON, before or after.$"
+	.string "POKéMON, before or after.$"
 
 ReflectionMarsh_Text_Npc1::
 	.string "I caught an EEVEE here. It would\n"
 	.string "not stop looking at its reflection.$"
 
 ReflectionMarsh_Text_Radar0::
-	.string "I track rare POKeMON. Today my\n"
+	.string "I track rare POKéMON. Today my\n"
 	.string "radar says...$"
 
 ReflectionMarsh_Text_Radar1::

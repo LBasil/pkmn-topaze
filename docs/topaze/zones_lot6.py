@@ -29,7 +29,7 @@ def place(gfx, pref, script, mg=1):
 objs = [place('SAILOR', (a[0] + 2, a[1]), mn + '_EventScript_ReturnFerry'), place('SCIENTIST', (a[0], a[1] - 3), mn + '_EventScript_Judge')]
 MS = [(25, 'ULTRA_BALL', 5), (50, 'RARE_CANDY', 2), (75, 'PP_UP', 2), (100, 'MAX_REVIVE', 3), (150, 'RARE_CANDY', 5), (200, 'PP_MAX', 3), (250, 'MASTER_BALL', 1), (300, 'RARE_CANDY', 10), (350, 'PP_MAX', 5), (386, 'RARE_CANDY', 30)]
 sc = ('%s_EventScript_ReturnFerry::\n\tlock\n\tfaceplayer\n\tmsgbox %s_Text_ReturnAsk, MSGBOX_YESNO\n\tgoto_if_eq VAR_RESULT, NO, %s_EventScript_Stay\n\twarp MAP_FUCHSIA_CITY, 255, 24, 27\n\twaitstate\n\tend\n\n%s_EventScript_Stay::\n\tmsgbox %s_Text_Stay\n\trelease\n\tend\n\n') % ((mn,) * 5)
-tx = N.text(mn + '_Text_ReturnAsk', 'Ready to go back to the dock?') + N.text(mn + '_Text_Stay', 'Take your time. The tide can wait.') + N.text(mn + '_Text_Hello', 'I judge the POKeDEX. Every caught species earns a reward at each milestone. Let me count.') + N.text(mn + '_Text_Nothing', 'No new milestone yet. Keep catching them all.') + N.text(mn + '_Text_NoRoom', 'Your BAG is full. Make room, then come back.')
+tx = N.text(mn + '_Text_ReturnAsk', 'Ready to go back to the dock?') + N.text(mn + '_Text_Stay', 'Take your time. The tide can wait.') + N.text(mn + '_Text_Hello', 'I judge the POKéDEX. Every caught species earns a reward at each milestone. Let me count.') + N.text(mn + '_Text_Nothing', 'No new milestone yet. Keep catching them all.') + N.text(mn + '_Text_NoRoom', 'Your BAG is full. Make room, then come back.')
 J = mn + '_EventScript_Judge'; sc += '%s::\n\tlock\n\tfaceplayer\n\tmsgbox %s_Text_Hello\n\tsetvar VAR_0x8004, 1\n\tspecialvar VAR_RESULT, GetPokedexCount\n' % (J, mn)
 for i, (n, itn, q) in enumerate(MS):
     nxt = '%s_%d' % (J, i + 1) if i < len(MS) - 1 else J + '_End'; F = flag('DEXHALL_%d' % n)
@@ -37,6 +37,6 @@ for i, (n, itn, q) in enumerate(MS):
     tx += N.text('%s_Text_M%d' % (mn, n), 'You have caught %d species! A reward for you.' % n)
 sc += '%s_End::\n\tmsgbox %s_Text_Nothing\n\trelease\n\tend\n\n%s_NoRoom::\n\tmsgbox %s_Text_NoRoom\n\trelease\n\tend\n' % (J, mn, J, mn)
 N.rewrite(mn, objs, sc, tx)
-ferry('ScribeFerryman', 'SCIENTIST', (19, 30), 'The scribe waits for you with his ledger, {PLAYER}.', 'The ledger is closed. Come back when the clocks make sense.', 'Another time, then.', [(mn, a, 0, 'The HALL OF THE POKeDEX: rewards for every milestone. Visit?', '')])
-journal.append(jl('SIDE QUESTS', 'FLAG_TOPAZE_DEXHALL_350', 'THE POKeDEX HALL', 'Ferry from AMETHIOLITE: rewards at\n25, 50, 100... species caught.'))
+ferry('ScribeFerryman', 'SCIENTIST', (19, 30), 'The scribe waits for you with his ledger, {PLAYER}.', 'The ledger is closed. Come back when the clocks make sense.', 'Another time, then.', [(mn, a, 0, 'The HALL OF THE POKéDEX: rewards for every milestone. Visit?', '')])
+journal.append(jl('SIDE QUESTS', 'FLAG_TOPAZE_DEXHALL_350', 'THE POKéDEX HALL', 'Ferry from AMETHIOLITE: rewards at\n25, 50, 100... species caught.'))
 journal_add(journal); flush_flags()

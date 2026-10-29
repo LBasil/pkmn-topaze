@@ -14,4 +14,4 @@ Apothecary_Text_ShopBye::
 
 Apothecary_Text_Npc0::
 	.string "The boosters work best on young\n"
-	.string "POKeMON. Do not wait too long.$"
+	.string "POKéMON. Do not wait too long.$"

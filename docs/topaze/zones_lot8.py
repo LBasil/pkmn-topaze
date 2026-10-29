@@ -30,7 +30,7 @@ objs = [place('SAILOR', (a[0] + 2, a[1]), mn + '_EventScript_ReturnFerry'), plac
 sc = ('%s_EventScript_ReturnFerry::\n\tlock\n\tfaceplayer\n\tmsgbox %s_Text_ReturnAsk, MSGBOX_YESNO\n\tgoto_if_eq VAR_RESULT, NO, %s_EventScript_Stay\n\twarp MAP_FUCHSIA_CITY, 255, 24, 27\n\twaitstate\n\tend\n\n%s_EventScript_Stay::\n\tmsgbox %s_Text_Stay\n\trelease\n\tend\n\n') % ((mn,) * 5)
 sc += '%s_EventScript_Npc0::\n\tmsgbox %s_Text_Npc0, MSGBOX_NPC\n\tend\n\n%s_EventScript_Shop::\n\tlock\n\tfaceplayer\n\tmsgbox %s_Text_ShopHi\n\tpokemart %s_Stock\n\tmsgbox %s_Text_ShopBye\n\trelease\n\tend\n\n\t.align 2\n%s_Stock::\n' % ((mn,) * 7)
 sc += ''.join('\t.2byte %s\n' % it(i) for i in ['HP_UP', 'PROTEIN', 'IRON', 'CALCIUM', 'ZINC', 'CARBOS']) + '\t.2byte ITEM_NONE\n\n'
-tx = (N.text(mn + '_Text_ReturnAsk', 'Ready to go back to the dock?') + N.text(mn + '_Text_Stay', 'Take your time. The tide can wait.') + N.text(mn + '_Text_ShopHi', 'Tonics and boosters, made fresh. What is your team missing?') + N.text(mn + '_Text_ShopBye', 'Strength has a price. Pay it wisely.') + N.text(mn + '_Text_Npc0', 'The boosters work best on young POKeMON. Do not wait too long.'))
+tx = (N.text(mn + '_Text_ReturnAsk', 'Ready to go back to the dock?') + N.text(mn + '_Text_Stay', 'Take your time. The tide can wait.') + N.text(mn + '_Text_ShopHi', 'Tonics and boosters, made fresh. What is your team missing?') + N.text(mn + '_Text_ShopBye', 'Strength has a price. Pay it wisely.') + N.text(mn + '_Text_Npc0', 'The boosters work best on young POKéMON. Do not wait too long.'))
 N.rewrite(mn, objs, sc, tx)
 # ajout au menu de l'apprenti : le dernier "Dest" ne pointe plus vers End mais vers un nouveau Dest
 S = 'FuchsiaCity_EventScript_Apprentice'; T = 'FuchsiaCity_Text_Apprentice'

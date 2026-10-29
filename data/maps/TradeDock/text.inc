@@ -5,7 +5,7 @@ TradeDock_Text_Stay::
 	.string "Take your time. The tide can wait.$"
 
 TradeDock_Text_Npc0::
-	.string "Some POKeMON only change when\n"
+	.string "Some POKéMON only change when\n"
 	.string "traded. Here they arrive already\p"
 	.string "changed.$"
 

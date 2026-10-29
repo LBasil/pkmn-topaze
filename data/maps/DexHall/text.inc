@@ -5,7 +5,7 @@ DexHall_Text_Stay::
 	.string "Take your time. The tide can wait.$"
 
 DexHall_Text_Hello::
-	.string "I judge the POKeDEX. Every caught\n"
+	.string "I judge the POKéDEX. Every caught\n"
 	.string "species earns a reward at each\p"
 	.string "milestone. Let me count.$"
 

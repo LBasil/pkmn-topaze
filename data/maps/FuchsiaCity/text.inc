@@ -258,7 +258,7 @@ FuchsiaCity_Text_Ferry_GateText6::
 	.string "may enter.$"
 
 FuchsiaCity_Text_Tide_Hello::
-	.string "I row to places where POKeMON\n"
+	.string "I row to places where POKéMON\n"
 	.string "gather to become something else,\p"
 	.string "{PLAYER}.$"
 
@@ -272,21 +272,21 @@ FuchsiaCity_Text_Tide_Never::
 
 FuchsiaCity_Text_Tide_Ask0::
 	.string "The MARSH OF REFLECTIONS shows what\n"
-	.string "POKeMON could become, or were.\p"
+	.string "POKéMON could become, or were.\p"
 	.string "Visit?$"
 
 FuchsiaCity_Text_Tide_GateText0::
 	.string "Come back with 3 BADGES.$"
 
 FuchsiaCity_Text_Tide_Ask1::
-	.string "The STONE GREENHOUSE grows POKeMON\n"
+	.string "The STONE GREENHOUSE grows POKéMON\n"
 	.string "that wait for a stone. Visit?$"
 
 FuchsiaCity_Text_Tide_GateText1::
 	.string "Come back with 4 BADGES.$"
 
 FuchsiaCity_Text_Tide_Ask2::
-	.string "The TRADE DOCK, where POKeMON that\n"
+	.string "The TRADE DOCK, where POKéMON that\n"
 	.string "evolve by trade wait on the pier.\p"
 	.string "Visit?$"
 
@@ -323,7 +323,7 @@ FuchsiaCity_Text_Lantern_GateText0::
 	.string "Come back with 6 BADGES.$"
 
 FuchsiaCity_Text_Lantern_Ask0::
-	.string "The WEST RESERVE, home of POKeMON\n"
+	.string "The WEST RESERVE, home of POKéMON\n"
 	.string "from a far region. Visit?$"
 
 FuchsiaCity_Text_Lantern_GateText1::
@@ -337,7 +337,7 @@ FuchsiaCity_Text_Lantern_GateText2::
 	.string "Come back with 4 BADGES.$"
 
 FuchsiaCity_Text_Lantern_Ask2::
-	.string "The SUNRISE MEADOW: POKeMON from\n"
+	.string "The SUNRISE MEADOW: POKéMON from\n"
 	.string "the other side of the sea. Visit?$"
 
 FuchsiaCity_Text_Lantern_GateText3::
@@ -345,7 +345,7 @@ FuchsiaCity_Text_Lantern_GateText3::
 
 FuchsiaCity_Text_Lantern_Ask3::
 	.string "The ASHEN MINE: gems, stones, odd\n"
-	.string "POKeMON. Visit?$"
+	.string "POKéMON. Visit?$"
 
 FuchsiaCity_Text_Lantern_GateText4::
 	.string "Come back with 3 BADGES.$"
@@ -360,7 +360,7 @@ FuchsiaCity_Text_Lantern_Ask5::
 
 FuchsiaCity_Text_Lantern_Ask6::
 	.string "The EVOLUTION LIBRARY: every way a\n"
-	.string "POKeMON can change. Visit?$"
+	.string "POKéMON can change. Visit?$"
 
 FuchsiaCity_Text_Lantern_Ask7::
 	.string "The COLLECTOR SHOP: little\n"
@@ -378,12 +378,12 @@ FuchsiaCity_Text_Apprentice_Never::
 	.string "Another time, then.$"
 
 FuchsiaCity_Text_Apprentice_Ask0::
-	.string "The BABY NURSERY: little POKeMON\n"
+	.string "The BABY NURSERY: little POKéMON\n"
 	.string "need a home. Visit?$"
 
 FuchsiaCity_Text_Apprentice_Ask1::
 	.string "The BARTER HOUSE: trade treasures\n"
-	.string "for rare POKeMON. Visit?$"
+	.string "for rare POKéMON. Visit?$"
 
 FuchsiaCity_Text_DuskFerrywoman_Hello::
 	.string "At dusk the strangest places open,\n"
@@ -429,7 +429,7 @@ FuchsiaCity_Text_DuskFerrywoman_GateText4::
 
 FuchsiaCity_Text_DuskFerrywoman_Ask4::
 	.string "The PLAIN OF GIANTS: wide grass and\n"
-	.string "big POKeMON. Visit?$"
+	.string "big POKéMON. Visit?$"
 
 FuchsiaCity_Text_DuskFerrywoman_GateText5::
 	.string "Come back with 5 BADGES.$"
@@ -464,7 +464,7 @@ FuchsiaCity_Text_ScribeFerryman_Never::
 	.string "Another time, then.$"
 
 FuchsiaCity_Text_ScribeFerryman_Ask0::
-	.string "The HALL OF THE POKeDEX: rewards\n"
+	.string "The HALL OF THE POKéDEX: rewards\n"
 	.string "for every milestone. Visit?$"
 
 FuchsiaCity_Text_SeasonsFerryman_Hello::
@@ -483,7 +483,7 @@ FuchsiaCity_Text_SeasonsFerryman_GateText0::
 
 FuchsiaCity_Text_SeasonsFerryman_Ask0::
 	.string "The FROST HOLLOW: ice, silence and\n"
-	.string "cold POKeMON. Visit?$"
+	.string "cold POKéMON. Visit?$"
 
 FuchsiaCity_Text_SeasonsFerryman_GateText1::
 	.string "Come back with 6 BADGES.$"

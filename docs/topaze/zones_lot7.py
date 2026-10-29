@@ -5,12 +5,12 @@ from zonelib import *
 if 'FuchsiaCity_EventScript_SeasonsFerryman' in rd('data/maps/FuchsiaCity/scripts.inc'): print('deja applique'); raise SystemExit
 Z = [
  dict(map='FrostHollow', tpl='FourIsland_IcefallCave_Back', badge=6, lv=(38, 44), land=['SWINUB', 'SNEASEL', 'DELIBIRD', 'SNORUNT', 'SPHEAL', 'SMOOCHUM', 'JYNX', 'GLALIE', 'PILOSWINE', 'SEALEO', 'LAPRAS', 'DEWGONG'],
-      ask='The FROST HOLLOW: ice, silence and cold POKeMON. Visit?', gt='Come back with 6 BADGES.',
+      ask='The FROST HOLLOW: ice, silence and cold POKéMON. Visit?', gt='Come back with 6 BADGES.',
       npcs=[('OLD_MAN_1', 'It is always winter in here. The ice remembers everything.'), ('LASS', 'SNEASEL steal what they can. Keep your berries close.')], hidden=['ELIXIR', 'MAX_ETHER', 'REVIVE'],
       quests=[dict(g='SCIENTIST', want=('BURN_HEAL', 2), rew=('NEVER_MELT_ICE', 1), ask='I study how ice melts. Two BURN HEALs would help my tests.', done='Perfect data! Take this NEVER-MELT ICE.', after='The hollow stays frozen. Good.', miss='Two BURN HEALs, please.', j=('THE ICE STUDY', 'FROST HOLLOW: bring 2 BURN HEALS.'))]),
  dict(map='EmberRim', tpl='MtEmber_RubyPath_B3F', badge=6, lv=(38, 44), land=['SLUGMA', 'MAGCARGO', 'NUMEL', 'HOUNDOUR', 'MAGBY', 'TORKOAL', 'GROWLITHE', 'PONYTA', 'RAPIDASH', 'MAGMAR', 'CAMERUPT', 'HOUNDOOM'],
       ask='The EMBER RIM: lava glows below the rock. Visit?', gt='Come back with 6 BADGES.',
-      npcs=[('HIKER', 'Heat makes POKeMON bold. It makes me thirsty.'), ('CAMPER', 'MAGBY juggle sparks. I do not recommend catching them barehanded.')], hidden=['ELIXIR', 'MAX_ETHER', 'REVIVE'],
+      npcs=[('HIKER', 'Heat makes POKéMON bold. It makes me thirsty.'), ('CAMPER', 'MAGBY juggle sparks. I do not recommend catching them barehanded.')], hidden=['ELIXIR', 'MAX_ETHER', 'REVIVE'],
       quests=[dict(g='OLD_WOMAN', want=('ICE_HEAL', 2), rew=('CHARCOAL', 1), ask='Two ICE HEALs would cool my pot. I will pay in charcoal.', done='Cool as snow. Take this CHARCOAL.', after='The rim is warm and cozy.', miss='Two ICE HEALs, please.', j=('A COOL CHANGE', 'EMBER RIM: bring 2 ICE HEALS.'))]),
  dict(map='NocturneWood', tpl='ViridianForest', badge=3, lv=(18, 24), land=['HOOTHOOT', 'SPINARAK', 'LEDYBA', 'ZUBAT', 'GLOOM', 'VENONAT', 'PINECO', 'WURMPLE', 'SHROOMISH', 'SURSKIT', 'NINCADA', 'VOLBEAT'],
       ask='The NOCTURNE WOOD: the owls sing all day long. Visit?', gt='Come back with 3 BADGES.',

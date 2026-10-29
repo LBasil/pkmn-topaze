@@ -14,17 +14,17 @@ def mons(lst, lo, hi):
 Z = [
  dict(k='MARSH', map='ReflectionMarsh', tpl='SixIsland_PatternBush', badge=3, lv=(22, 27), music=None,
       land=['EEVEE', 'RHYHORN', 'PIKACHU', 'TANGELA', 'LICKITUNG', 'PINSIR', 'SCYTHER', 'KANGASKHAN', 'ABRA', 'DITTO', 'HERACROSS', 'CHANSEY'],
-      ask='The MARSH OF REFLECTIONS shows what POKeMON could become, or were. Visit?', gate='Come back with 3 BADGES.',
-      npcs=[('BUG_CATCHER', 'Everything here looks like another POKeMON, before or after.'), ('LASS', 'I caught an EEVEE here. It would not stop looking at its reflection.')]),
+      ask='The MARSH OF REFLECTIONS shows what POKéMON could become, or were. Visit?', gate='Come back with 3 BADGES.',
+      npcs=[('BUG_CATCHER', 'Everything here looks like another POKéMON, before or after.'), ('LASS', 'I caught an EEVEE here. It would not stop looking at its reflection.')]),
  dict(k='GREENHOUSE', map='StoneGreenhouse', tpl='TwoIsland_CapeBrink', badge=4, lv=(28, 33), music=None,
       land=['GROWLITHE', 'VULPIX', 'ODDISH', 'POLIWHIRL', 'CLEFAIRY', 'JIGGLYPUFF', 'NIDORINA', 'NIDORINO', 'SHELLDER', 'STARYU', 'EXEGGCUTE', 'EEVEE'],
-      ask='The STONE GREENHOUSE grows POKeMON that wait for a stone. Visit?', gate='Come back with 4 BADGES.',
-      npcs=[('WOMAN_1', 'Each stone has a POKeMON that waits for it.')]),
+      ask='The STONE GREENHOUSE grows POKéMON that wait for a stone. Visit?', gate='Come back with 4 BADGES.',
+      npcs=[('WOMAN_1', 'Each stone has a POKéMON that waits for it.')]),
  dict(k='DOCK', map='TradeDock', tpl='ThreeIsland_BondBridge', badge=5, lv=(32, 37), music=None,
       land=['KADABRA', 'MACHOKE', 'GRAVELER', 'HAUNTER', 'ONIX', 'SEADRA', 'SLOWPOKE', 'SCYTHER', 'PORYGON', 'ELECTABUZZ', 'MAGMAR', 'DRAGONAIR'],
       water=['SEADRA', 'POLIWHIRL', 'SLOWPOKE', 'HORSEA', 'KINGLER'], fish=['MAGIKARP', 'HORSEA', 'POLIWAG', 'SEADRA', 'POLIWHIRL', 'KINGLER', 'SLOWPOKE', 'LAPRAS', 'DRAGONAIR', 'DRATINI'],
-      ask='The TRADE DOCK, where POKeMON that evolve by trade wait on the pier. Visit?', gate='Come back with 5 BADGES.',
-      npcs=[('SAILOR', 'Some POKeMON only change when traded. Here they arrive already changed.'), ('OLD_MAN_1', 'Three birds, three beasts and a dreamer sleep in this world. Listen to the wind and the water.')]),
+      ask='The TRADE DOCK, where POKéMON that evolve by trade wait on the pier. Visit?', gate='Come back with 5 BADGES.',
+      npcs=[('SAILOR', 'Some POKéMON only change when traded. Here they arrive already changed.'), ('OLD_MAN_1', 'Three birds, three beasts and a dreamer sleep in this world. Listen to the wind and the water.')]),
  dict(k='DIG', map='FossilDig', tpl='SixIsland_RuinValley', badge=6, lv=(36, 41), music=None,
       land=['GEODUDE', 'ONIX', 'RHYHORN', 'CUBONE', 'SANDSLASH', 'DUGTRIO', 'MAROWAK', 'GOLEM', 'NOSEPASS', 'LARVITAR', 'ARON', 'AERODACTYL'],
       ask='The FOSSIL DIG: five fossils sleep in the sand. Visit?', gate='Come back with 6 BADGES.',
@@ -92,12 +92,12 @@ for z in Z:
         place('MAN', far(8), mn + '_EventScript_Radar')
         sc += ('%s_EventScript_Radar::\n\tlock\n\tfaceplayer\n\tmsgbox %s_Text_Radar0\n\trandom 3\n\tgoto_if_eq VAR_RESULT, 0, %s_EventScript_R1\n\tgoto_if_eq VAR_RESULT, 1, %s_EventScript_R2\n\tmsgbox %s_Text_Radar3\n\trelease\n\tend\n\n'
                '%s_EventScript_R1::\n\tmsgbox %s_Text_Radar1\n\trelease\n\tend\n\n%s_EventScript_R2::\n\tmsgbox %s_Text_Radar2\n\trelease\n\tend\n\n').replace('%s', mn)
-        tx += N.text(mn + '_Text_Radar0', 'I track rare POKeMON. Today my radar says...') + N.text(mn + '_Text_Radar1', 'FEEBAS bites in the quiet water of the POND OF CYCLES, by fishing.') + N.text(mn + '_Text_Radar2', 'AERODACTYL is sighted in the FOSSIL DIG, among the rocks.') + N.text(mn + '_Text_Radar3', 'DRATINI hides under the water of the POND and the TRADE DOCK.')
+        tx += N.text(mn + '_Text_Radar0', 'I track rare POKéMON. Today my radar says...') + N.text(mn + '_Text_Radar1', 'FEEBAS bites in the quiet water of the POND OF CYCLES, by fishing.') + N.text(mn + '_Text_Radar2', 'AERODACTYL is sighted in the FOSSIL DIG, among the rocks.') + N.text(mn + '_Text_Radar3', 'DRATINI hides under the water of the POND and the TRADE DOCK.')
     if k == 'GREENHOUSE':   # marchand de pierres
         place('FAT_MAN', far(8), mn + '_EventScript_Merchant')
         sc += ('%s_EventScript_Merchant::\n\tlock\n\tfaceplayer\n\tmsgbox %s_Text_Merchant\n\tpokemart %s_Stock\n\tmsgbox %s_Text_Bye\n\trelease\n\tend\n\n\t.align 2\n%s_Stock::\n').replace('%s', mn)
         sc += ''.join('\t.2byte ITEM_%s\n' % i for i in ['FIRE_STONE', 'WATER_STONE', 'THUNDER_STONE', 'LEAF_STONE', 'MOON_STONE', 'SUN_STONE', 'DRAGON_SCALE', 'UP_GRADE', 'METAL_COAT', 'KINGS_ROCK', 'DEEP_SEA_TOOTH', 'DEEP_SEA_SCALE', 'LINK_CABLE', 'ITEM_NONE'][:-1]) + '\t.2byte ITEM_NONE\n\n'
-        tx += N.text(mn + '_Text_Merchant', 'Evolution items, all in one place. What do you need?') + N.text(mn + '_Text_Bye', 'May your POKeMON become what they dream of.')
+        tx += N.text(mn + '_Text_Merchant', 'Evolution items, all in one place. What do you need?') + N.text(mn + '_Text_Bye', 'May your POKéMON become what they dream of.')
     if k == 'DOCK':    # indices legendaires
         place('OLD_WOMAN', far(8), mn + '_EventScript_Sage')
         sc += ('%s_EventScript_Sage::\n\tlock\n\tfaceplayer\n\tmsgbox %s_Text_Sage0\n\trandom 3\n\tgoto_if_eq VAR_RESULT, 0, %s_EventScript_S1\n\tgoto_if_eq VAR_RESULT, 1, %s_EventScript_S2\n\tmsgbox %s_Text_Sage3\n\trelease\n\tend\n\n'
@@ -123,12 +123,12 @@ for z in Z:
                '\tmsgbox %s_Text_SpaWhich\n\tspecial ChoosePartyMon\n\twaitstate\n\tlock\n\tfaceplayer\n\tgoto_if_ge VAR_0x8004, PARTY_SIZE, %s_EventScript_SpaNo\n\tspecialvar VAR_RESULT, GetPartyMonSpecies\n\tgoto_if_eq VAR_RESULT, SPECIES_EGG, %s_EventScript_SpaNo\n'
                '\tremovemoney 2000\n\tclosemessage\n\tfadescreen FADE_TO_BLACK\n\tplayfanfare MUS_HEAL\n\twaitfanfare\n\tspecial TopazeBondMax\n\tsetflag FLAG_TOPAZE_BOND\n\tfadescreen FADE_FROM_BLACK\n\tspecial BufferMonNickname\n\tmsgbox %s_Text_SpaDone\n\trelease\n\tend\n\n'
                '%s_EventScript_SpaNo::\n\tmsgbox %s_Text_SpaNo\n\trelease\n\tend\n\n%s_EventScript_SpaPoor::\n\tmsgbox %s_Text_SpaPoor\n\trelease\n\tend\n\n').replace('%s', mn)
-        tx += (N.text(mn + '_Text_SpaOffer', 'A bond treatment for 2000 turns a POKeMON into your best friend. Interested?') + N.text(mn + '_Text_SpaWhich', 'Which POKeMON needs the treatment?') + N.text(mn + '_Text_SpaDone', 'Wonderful! @ adores you now. Evolutions that need bonds will follow.').replace('@', '{STR_VAR_1}') +
+        tx += (N.text(mn + '_Text_SpaOffer', 'A bond treatment for 2000 turns a POKéMON into your best friend. Interested?') + N.text(mn + '_Text_SpaWhich', 'Which POKéMON needs the treatment?') + N.text(mn + '_Text_SpaDone', 'Wonderful! @ adores you now. Evolutions that need bonds will follow.').replace('@', '{STR_VAR_1}') +
                N.text(mn + '_Text_SpaNo', 'Another time, then.') + N.text(mn + '_Text_SpaPoor', 'The treatment costs 2000. Come back with enough.'))
         place('OLD_MAN_1', far(11), mn + '_EventScript_Hermit')
         sc += ('%s_EventScript_Hermit::\n\tlock\n\tfaceplayer\n\tgoto_if_set FLAG_TOPAZE_EVERSTONE, %s_EventScript_HermitDone\n\tmsgbox %s_Text_Hermit\n\tcheckitemspace ITEM_EVERSTONE, 1\n\tgoto_if_eq VAR_RESULT, FALSE, %s_EventScript_HermitFull\n\tgiveitem ITEM_EVERSTONE\n\tsetflag FLAG_TOPAZE_EVERSTONE\n\trelease\n\tend\n\n'
                '%s_EventScript_HermitDone::\n\tmsgbox %s_Text_HermitDone\n\trelease\n\tend\n\n%s_EventScript_HermitFull::\n\tmsgbox %s_Text_HermitFull\n\trelease\n\tend\n\n').replace('%s', mn)
-        tx += N.text(mn + '_Text_Hermit', 'Some POKeMON should never evolve. This stone will keep them as they are. Take it.') + N.text(mn + '_Text_HermitDone', 'Hold it, and nothing changes. That is the point.') + N.text(mn + '_Text_HermitFull', 'Your BAG is full.')
+        tx += N.text(mn + '_Text_Hermit', 'Some POKéMON should never evolve. This stone will keep them as they are. Take it.') + N.text(mn + '_Text_HermitDone', 'Hold it, and nothing changes. That is the point.') + N.text(mn + '_Text_HermitFull', 'Your BAG is full.')
     N.rewrite(mn, objs, sc, tx, bgs=bgs)
     # --- sauvages : FireRed + LeafGreen
     ent = {'land_mons': {'encounter_rate': 20, 'mons': mons(z['land'], *z['lv'])}}
@@ -143,7 +143,7 @@ for z in Z:
 N.jdump(WE, 'src/data/wild_encounters.json')
 # ---------------- passeuse : script + textes
 sc = '%s::\n\tlock\n\tfaceplayer\n\tgoto_if_unset FLAG_TOPAZE_CLOCK_DONE, %s_EventScript_Closed\n\tmsgbox %s_Hello\n' % (FERRY, FERRY, FT)
-tx = N.text(FT + '_Hello', 'I row to places where POKeMON gather to become something else, {PLAYER}.') + N.text(FT + '_Closed', 'The tide is not ready. Come back once the clocks make sense.') + N.text(FT + '_Never', 'Another time, then. The tide can wait.')
+tx = N.text(FT + '_Hello', 'I row to places where POKéMON gather to become something else, {PLAYER}.') + N.text(FT + '_Closed', 'The tide is not ready. Come back once the clocks make sense.') + N.text(FT + '_Never', 'Another time, then. The tide can wait.')
 for i, z in enumerate(Z):
     nxt = '%s_EventScript_Dest%d' % (FERRY, i + 1) if i < len(Z) - 1 else '%s_EventScript_End' % FERRY
     sc += ('%s_EventScript_Dest%d::\n' % (FERRY, i) if i else '') + '\tgoto_if_unset FLAG_BADGE0%d_GET, %s_EventScript_Gate%d\n\tmsgbox %s_Ask%d, MSGBOX_YESNO\n\tgoto_if_eq VAR_RESULT, NO, %s\n\tsetdynamicwarp MAP_FUCHSIA_CITY, 255, %d, %d\n' % (z['badge'], FERRY, i, FT, i, nxt, fx, fy)
@@ -157,7 +157,7 @@ if 'FLAG_TOPAZE_FOSSIL_5' not in g:
     i = g.index('assert len(SECTIONS) <= 12')
     L = ['# ---- ZONES DE CAPTURE (la passeuse)',
          'add("SIDE QUESTS", F, "FLAG_TOPAZE_FOSSIL_5", 0, "THE FOSSIL DIG", "Ferry from AMETHIOLITE. Dig the\\\\n5 shining spots in the sand.", FL("FLAG_TOPAZE_CLOCK_DONE"))',
-         'add("SIDE QUESTS", F, "FLAG_TOPAZE_GHOST_4", 0, "THE GHOST EGGS", "FOSSIL DIG: 4 ghosts leave a rare\\\\nPOKeMON each.", FL("FLAG_TOPAZE_CLOCK_DONE"))',
+         'add("SIDE QUESTS", F, "FLAG_TOPAZE_GHOST_4", 0, "THE GHOST EGGS", "FOSSIL DIG: 4 ghosts leave a rare\\\\nPOKéMON each.", FL("FLAG_TOPAZE_CLOCK_DONE"))',
          'add("SIDE QUESTS", F, "FLAG_TOPAZE_BOND", 0, "THE BOND TREATMENT", "CYCLE POND: a treatment for\\\\nbond evolutions.", FL("FLAG_TOPAZE_CLOCK_DONE"))',
-         'add("SIDE QUESTS", F, "FLAG_TOPAZE_EVERSTONE", 0, "THE FORBIDDEN EVOLUTION", "CYCLE POND hermit keeps a stone.\\\\nPOKeMON that never evolve.", FL("FLAG_TOPAZE_CLOCK_DONE"))']
+         'add("SIDE QUESTS", F, "FLAG_TOPAZE_EVERSTONE", 0, "THE FORBIDDEN EVOLUTION", "CYCLE POND hermit keeps a stone.\\\\nPOKéMON that never evolve.", FL("FLAG_TOPAZE_CLOCK_DONE"))']
     wr('docs/topaze/journal_gen.py', g[:i] + '\n'.join(L) + '\n\n' + g[i:])

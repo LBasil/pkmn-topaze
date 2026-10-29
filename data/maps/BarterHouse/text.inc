@@ -6,7 +6,7 @@ BarterHouse_Text_Stay::
 
 BarterHouse_Text_Hello::
 	.string "I trade small treasures for rare\n"
-	.string "POKeMON. Let us see what you carry.$"
+	.string "POKéMON. Let us see what you carry.$"
 
 BarterHouse_Text_Nothing::
 	.string "Nothing for you right now. Come\n"

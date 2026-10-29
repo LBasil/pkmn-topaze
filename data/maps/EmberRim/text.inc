@@ -5,7 +5,7 @@ EmberRim_Text_Stay::
 	.string "Take your time. The tide can wait.$"
 
 EmberRim_Text_Npc0::
-	.string "Heat makes POKeMON bold. It makes\n"
+	.string "Heat makes POKéMON bold. It makes\n"
 	.string "me thirsty.$"
 
 EmberRim_Text_Npc1::

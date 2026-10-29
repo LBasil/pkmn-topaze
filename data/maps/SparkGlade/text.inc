@@ -6,7 +6,7 @@ SparkGlade_Text_Stay::
 
 SparkGlade_Text_Npc0::
 	.string "The air here is full of charge. My\n"
-	.string "hair stands up, even my POKeMON's.$"
+	.string "hair stands up, even my POKéMON's.$"
 
 SparkGlade_Text_Npc1::
 	.string "I touched a VOLTORB. It was a\n"

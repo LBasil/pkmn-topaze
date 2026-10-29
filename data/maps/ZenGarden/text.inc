@@ -5,7 +5,7 @@ ZenGarden_Text_Stay::
 	.string "Take your time. The tide can wait.$"
 
 ZenGarden_Text_Npc0::
-	.string "Sit. Breathe. The POKeMON will come\n"
+	.string "Sit. Breathe. The POKéMON will come\n"
 	.string "to you.$"
 
 ZenGarden_Text_Npc1::

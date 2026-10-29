@@ -207,7 +207,7 @@ Route12_Text_TimeHint::
 	.string "the hour anymore.$"
 
 Route12_Text_RQuest_Ask::
-	.string "Wild POKeMON scare the fish. 2\n"
+	.string "Wild POKéMON scare the fish. 2\n"
 	.string "SUPER REPELS, please.$"
 
 Route12_Text_RQuest_Ok::

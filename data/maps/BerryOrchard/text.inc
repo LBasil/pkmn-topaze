@@ -9,7 +9,7 @@ BerryOrchard_Text_Npc0::
 	.string "what you find, but leave the trees.$"
 
 BerryOrchard_Text_Npc1::
-	.string "Bug POKeMON love the orchard. Me\n"
+	.string "Bug POKéMON love the orchard. Me\n"
 	.string "too.$"
 
 BerryOrchard_Text_Quest0_Ask::

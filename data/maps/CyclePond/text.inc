@@ -11,11 +11,11 @@ CyclePond_Text_Npc0::
 
 CyclePond_Text_SpaOffer::
 	.string "A bond treatment for 2000 turns a\n"
-	.string "POKeMON into your best friend.\p"
+	.string "POKéMON into your best friend.\p"
 	.string "Interested?$"
 
 CyclePond_Text_SpaWhich::
-	.string "Which POKeMON needs the treatment?$"
+	.string "Which POKéMON needs the treatment?$"
 
 CyclePond_Text_SpaDone::
 	.string "Wonderful! {STR_VAR_1} adores you now.\n"
@@ -30,7 +30,7 @@ CyclePond_Text_SpaPoor::
 	.string "with enough.$"
 
 CyclePond_Text_Hermit::
-	.string "Some POKeMON should never evolve.\n"
+	.string "Some POKéMON should never evolve.\n"
 	.string "This stone will keep them as they\p"
 	.string "are. Take it.$"
 

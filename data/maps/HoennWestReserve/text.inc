@@ -5,7 +5,7 @@ HoennWestReserve_Text_Stay::
 	.string "Take your time. The tide can wait.$"
 
 HoennWestReserve_Text_Npc0::
-	.string "These POKeMON came from beyond the\n"
+	.string "These POKéMON came from beyond the\n"
 	.string "sea. They like the dry grass.$"
 
 HoennWestReserve_Text_Npc1::
