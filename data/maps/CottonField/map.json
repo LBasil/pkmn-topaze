@@ -31,7 +31,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_FARMER",
+      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
       "x": 11,
       "y": 28,
       "elevation": 3,
@@ -59,7 +59,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_FARMER",
+      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
       "x": 3,
       "y": 21,
       "elevation": 3,
