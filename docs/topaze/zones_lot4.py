@@ -78,10 +78,10 @@ NURS = [dict(sp='PICHU', lv=10, badge=2, offer='A PICHU, shy and sparkling. Adop
         dict(sp='IGGLYBUFF', lv=10, badge=3, offer='An IGGLYBUFF, soft as a cloud. Adopt it?'), dict(sp='AZURILL', lv=10, badge=3, offer='An AZURILL, bouncy and blue. Adopt it?'),
         dict(sp='SMOOCHUM', lv=12, badge=4, offer='A SMOOCHUM, always ready for a kiss. Adopt it?'), dict(sp='ELEKID', lv=14, badge=5, offer='An ELEKID, full of sparks. Adopt it?'),
         dict(sp='MAGBY', lv=14, badge=6, offer='A MAGBY, warm and curious. Adopt it?'), dict(sp='TYROGUE', lv=16, badge=7, offer='A TYROGUE, ready to brawl. Adopt it?'), dict(sp='WYNAUT', lv=18, badge=8, offer='A WYNAUT, always smiling. Adopt it?')]
-BART = [dict(sp='FEEBAS', lv=20, item=('HEART_SCALE', 5), offer='5 HEART SCALES for a FEEBAS. Deal?'), dict(sp='SPHEAL', lv=25, item=('SHOAL_SHELL', 1), offer='A SHOAL SHELL for a SPHEAL. Deal?'),
+BART = [dict(sp='FEEBAS', lv=20, item=('HEART_SCALE', 3), offer='3 HEART SCALES for a FEEBAS. Deal?'), dict(sp='SPHEAL', lv=25, item=('SHOAL_SHELL', 1), offer='A SHOAL SHELL for a SPHEAL. Deal?'),
         dict(sp='SNORUNT', lv=25, item=('SHOAL_SALT', 1), offer='A SHOAL SALT for a SNORUNT. Deal?'), dict(sp='SHROOMISH', lv=20, item=('TINY_MUSHROOM', 1), offer='A TINY MUSHROOM for a SHROOMISH. Deal?'),
         dict(sp='BRELOOM', lv=30, item=('BIG_MUSHROOM', 1), offer='A BIG MUSHROOM for a BRELOOM. Deal?'), dict(sp='CLAMPERL', lv=25, item=('PEARL', 1), offer='A PEARL for a CLAMPERL. Deal?'),
-        dict(sp='LUNATONE', lv=30, item=('STARDUST', 2), offer='2 STARDUST for a LUNATONE. Deal?'), dict(sp='SOLROCK', lv=30, item=('STAR_PIECE', 2), offer='2 STAR PIECES for a SOLROCK. Deal?')]
+        dict(sp='LUNATONE', lv=30, item=('STARDUST', 1), offer='A STARDUST for a LUNATONE. Deal?'), dict(sp='SOLROCK', lv=30, item=('STAR_PIECE', 2), offer='2 STAR PIECES for a SOLROCK. Deal?')]
 an = chain_building('BabyNursery', 'SaffronCity_HomeD', 'WOMAN_3', NURS, 'Little ones need a home. Each BADGE opens a new cradle. Take one?', 'NURSERY')
 ab = chain_building('BarterHouse', 'SaffronCity_HomeE', 'MAN', BART, 'I trade small treasures for rare POKeMON. Let us see what you carry.', 'BARTER')
 ferry('Apprentice', 'LITTLE_BOY', (31, 26), 'The master is busy. I row the small trips, {PLAYER}.', 'The boat is not ready. Come back when the clocks make sense.', 'Another time, then.',

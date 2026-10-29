@@ -307,3 +307,34 @@ CeladonCity_Guard3_Vanish::
 	removeobject VAR_LAST_TALKED
 	releaseall
 	end
+
+@ Topaze: quete (THE SPA REGULAR)
+CeladonCity_EventScript_TQ::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_TQ_CELADONCITY, CeladonCity_EventScript_TQ_Done
+	checkitem ITEM_ELIXIR, 1
+	goto_if_eq VAR_RESULT, FALSE, CeladonCity_EventScript_TQ_Ask
+	checkitemspace ITEM_MIRACLE_SEED, 1
+	goto_if_eq VAR_RESULT, FALSE, CeladonCity_EventScript_TQ_NoRoom
+	removeitem ITEM_ELIXIR, 1
+	setflag FLAG_TOPAZE_TQ_CELADONCITY
+	msgbox CeladonCity_Text_TQ_Ok
+	giveitem ITEM_MIRACLE_SEED, 1
+	release
+	end
+
+CeladonCity_EventScript_TQ_Ask::
+	msgbox CeladonCity_Text_TQ_Ask
+	release
+	end
+
+CeladonCity_EventScript_TQ_Done::
+	msgbox CeladonCity_Text_TQ_Done
+	release
+	end
+
+CeladonCity_EventScript_TQ_NoRoom::
+	msgbox CeladonCity_Text_TQ_NoRoom
+	release
+	end

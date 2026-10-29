@@ -488,7 +488,8 @@
     "EvolutionLibrary",
     "CollectorShop",
     "BabyNursery",
-    "BarterHouse"
+    "BarterHouse",
+    "DexHall"
   ],
   "gMapGroup_IndoorRoute2": [
     "Route2_ViridianForest_SouthEntrance",

@@ -687,3 +687,56 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Closed::
 	msgbox FuchsiaCity_Text_DuskFerrywoman_Closed
 	release
 	end
+
+@ Topaze: quete (A BERRY GOOD DEAL)
+FuchsiaCity_EventScript_TQ::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_TQ_FUCHSIACITY, FuchsiaCity_EventScript_TQ_Done
+	checkitem ITEM_SITRUS_BERRY, 1
+	goto_if_eq VAR_RESULT, FALSE, FuchsiaCity_EventScript_TQ_Ask
+	checkitemspace ITEM_CHARCOAL, 1
+	goto_if_eq VAR_RESULT, FALSE, FuchsiaCity_EventScript_TQ_NoRoom
+	removeitem ITEM_SITRUS_BERRY, 1
+	setflag FLAG_TOPAZE_TQ_FUCHSIACITY
+	msgbox FuchsiaCity_Text_TQ_Ok
+	giveitem ITEM_CHARCOAL, 1
+	release
+	end
+
+FuchsiaCity_EventScript_TQ_Ask::
+	msgbox FuchsiaCity_Text_TQ_Ask
+	release
+	end
+
+FuchsiaCity_EventScript_TQ_Done::
+	msgbox FuchsiaCity_Text_TQ_Done
+	release
+	end
+
+FuchsiaCity_EventScript_TQ_NoRoom::
+	msgbox FuchsiaCity_Text_TQ_NoRoom
+	release
+	end
+
+@ Topaze: passeur ScribeFerryman
+FuchsiaCity_EventScript_ScribeFerryman::
+	lock
+	faceplayer
+	goto_if_unset FLAG_TOPAZE_CLOCK_DONE, FuchsiaCity_EventScript_ScribeFerryman_EventScript_Closed
+	msgbox FuchsiaCity_Text_ScribeFerryman_Hello
+	msgbox FuchsiaCity_Text_ScribeFerryman_Ask0, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_ScribeFerryman_EventScript_End
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_DEX_HALL, 255, 4, 6
+	waitstate
+	end
+FuchsiaCity_EventScript_ScribeFerryman_EventScript_End::
+	msgbox FuchsiaCity_Text_ScribeFerryman_Never
+	release
+	end
+
+FuchsiaCity_EventScript_ScribeFerryman_EventScript_Closed::
+	msgbox FuchsiaCity_Text_ScribeFerryman_Closed
+	release
+	end

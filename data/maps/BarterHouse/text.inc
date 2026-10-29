@@ -13,7 +13,7 @@ BarterHouse_Text_Nothing::
 	.string "back with more.$"
 
 BarterHouse_Text_O0::
-	.string "5 HEART SCALES for a FEEBAS. Deal?$"
+	.string "3 HEART SCALES for a FEEBAS. Deal?$"
 
 BarterHouse_Text_G0::
 	.string "Take good care of it!$"
@@ -50,7 +50,7 @@ BarterHouse_Text_G5::
 	.string "Take good care of it!$"
 
 BarterHouse_Text_O6::
-	.string "2 STARDUST for a LUNATONE. Deal?$"
+	.string "A STARDUST for a LUNATONE. Deal?$"
 
 BarterHouse_Text_G6::
 	.string "Take good care of it!$"

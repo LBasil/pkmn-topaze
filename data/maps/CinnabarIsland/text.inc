@@ -199,3 +199,17 @@ CinnabarIsland_Text_ProcheChloe_Early::
 CinnabarIsland_Text_ProcheChloe_NoRoom::
 	.string "Your BAG is full. Make some room\n"
 	.string "first, then talk to me again.$"
+
+CinnabarIsland_Text_TQ_Ask::
+	.string "I need a MAGNET for my experiment.\n"
+	.string "Can you spare one?$"
+
+CinnabarIsland_Text_TQ_Ok::
+	.string "Fascinating! Take this ICE.$"
+
+CinnabarIsland_Text_TQ_Done::
+	.string "The experiment is a success.$"
+
+CinnabarIsland_Text_TQ_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

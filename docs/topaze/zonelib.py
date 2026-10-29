@@ -104,3 +104,25 @@ def make_zone(z, WE_group, journal, fx=24, fy=27):
     for ver in ('FireRed', 'LeafGreen'):
         e = {'map': N.mapid(mn), 'base_label': 's%s_%s' % (mn, ver)}; e.update(json.loads(json.dumps(ent))); WE_group.append(e)
     print(mn, 'arrivee', a, 'cells', len(cells), 'objs', len(objs), 'hidden', len(bgs)); return a
+
+def route_quest(m, gfx, w, wn, r, rn, name, hint, ask, ok, done, journal, tag='RQ', pref=None):
+    """PNJ de quete d'objets pose sur une carte existante (route/ville), zone atteignable, hors lignes de vue de dresseurs."""
+    nav = R.Nav(m); d = json.load(open('data/maps/%s/map.json' % m)); cells = comp(nav)
+    taken = [(o['x'], o['y']) for o in d['object_events']] + [(b['x'], b['y']) for b in d['bg_events']] + list(nav.warps)
+    trainers = [(o['x'], o['y']) for o in d['object_events'] if o.get('trainer_type', 'TRAINER_TYPE_NONE') != 'TRAINER_TYPE_NONE']
+    cand = [c for c in cells if not any((c[0] == t[0] and abs(c[1] - t[1]) <= 7) or (c[1] == t[1] and abs(c[0] - t[0]) <= 7) for t in trainers) and 2 <= c[0] < nav.w - 2 and 2 <= c[1] < nav.h - 2
+            and all(not nav.blocked(c[0] + dx, c[1] + dy) for dx in (-1, 0, 1) for dy in (-1, 0, 1))]
+    c = near(nav, cand, pref or (nav.w // 2 + 5, nav.h // 2 + 2), taken, margin=3)
+    F = flag('%s_%s' % (tag, m.upper())); S = '%s_EventScript_%s' % (m, tag); T = '%s_Text_%s' % (m, tag)
+    d['object_events'].append(N.obj(gfx, c[0], c[1], S, el=EL(nav, c))); N.jdump(d, 'data/maps/%s/map.json' % m)
+    sc = ('\n@ Topaze: quete (%s)\n%s::\n\tlock\n\tfaceplayer\n\tgoto_if_set %s, %s_Done\n\tcheckitem %s, %d\n\tgoto_if_eq VAR_RESULT, FALSE, %s_Ask\n\tcheckitemspace %s, %d\n\tgoto_if_eq VAR_RESULT, FALSE, %s_NoRoom\n'
+          '\tremoveitem %s, %d\n\tsetflag %s\n\tmsgbox %s_Ok\n\tgiveitem %s, %d\n\trelease\n\tend\n\n%s_Ask::\n\tmsgbox %s_Ask\n\trelease\n\tend\n\n%s_Done::\n\tmsgbox %s_Done\n\trelease\n\tend\n\n%s_NoRoom::\n\tmsgbox %s_NoRoom\n\trelease\n\tend\n') % (
+        name, S, F, S, it(w), wn, S, it(r), rn, S, it(w), wn, F, T, it(r), rn, S, T, S, T, S, T)
+    open('data/maps/%s/scripts.inc' % m, 'a').write(sc)
+    open('data/maps/%s/text.inc' % m, 'a').write(N.text(T + '_Ask', ask) + N.text(T + '_Ok', ok) + N.text(T + '_Done', done) + N.text(T + '_NoRoom', 'Your BAG is full. Make room, then come back.'))
+    journal.append(jl('SIDE QUESTS', F, name, hint, 'A'))
+def hidden_on(m, itn, tag, pref=None):
+    nav = R.Nav(m); d = json.load(open('data/maps/%s/map.json' % m)); cells = comp(nav)
+    taken = [(o['x'], o['y']) for o in d['object_events']] + [(b['x'], b['y']) for b in d['bg_events']] + list(nav.warps)
+    c = near(nav, [c for c in cells if 2 <= c[0] < nav.w - 2 and 2 <= c[1] < nav.h - 2], pref or (nav.w // 3, nav.h // 3), taken, margin=4)
+    d['bg_events'].append({'type': 'hidden_item', 'x': c[0], 'y': c[1], 'elevation': 0, 'item': it(itn), 'flag': flag('HID_%s_%s' % (tag, m.upper())), 'quantity': 1, 'underfoot': False}); N.jdump(d, 'data/maps/%s/map.json' % m)

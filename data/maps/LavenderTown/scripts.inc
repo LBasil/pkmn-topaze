@@ -169,3 +169,34 @@ LavenderTown_EventScript_ProcheNathan_NoRoom::
 	msgbox LavenderTown_Text_ProcheNathan_NoRoom
 	release
 	end
+
+@ Topaze: quete (A TAG FOR THE DEAD)
+LavenderTown_EventScript_TQ::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_TQ_LAVENDERTOWN, LavenderTown_EventScript_TQ_Done
+	checkitem ITEM_SPELL_TAG, 1
+	goto_if_eq VAR_RESULT, FALSE, LavenderTown_EventScript_TQ_Ask
+	checkitemspace ITEM_BLACK_GLASSES, 1
+	goto_if_eq VAR_RESULT, FALSE, LavenderTown_EventScript_TQ_NoRoom
+	removeitem ITEM_SPELL_TAG, 1
+	setflag FLAG_TOPAZE_TQ_LAVENDERTOWN
+	msgbox LavenderTown_Text_TQ_Ok
+	giveitem ITEM_BLACK_GLASSES, 1
+	release
+	end
+
+LavenderTown_EventScript_TQ_Ask::
+	msgbox LavenderTown_Text_TQ_Ask
+	release
+	end
+
+LavenderTown_EventScript_TQ_Done::
+	msgbox LavenderTown_Text_TQ_Done
+	release
+	end
+
+LavenderTown_EventScript_TQ_NoRoom::
+	msgbox LavenderTown_Text_TQ_NoRoom
+	release
+	end

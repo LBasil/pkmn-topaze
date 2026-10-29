@@ -437,3 +437,32 @@ FuchsiaCity_Text_DuskFerrywoman_GateText5::
 FuchsiaCity_Text_DuskFerrywoman_Ask5::
 	.string "The DUNE SEA: sand as far as the\n"
 	.string "eye can see. Visit?$"
+
+FuchsiaCity_Text_TQ_Ask::
+	.string "A SITRUS BERRY would warm me up. I\n"
+	.string "will pay in charcoal.$"
+
+FuchsiaCity_Text_TQ_Ok::
+	.string "Delicious! Here is your charcoal.$"
+
+FuchsiaCity_Text_TQ_Done::
+	.string "I am warm all night.$"
+
+FuchsiaCity_Text_TQ_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"
+
+FuchsiaCity_Text_ScribeFerryman_Hello::
+	.string "The scribe waits for you with his\n"
+	.string "ledger, {PLAYER}.$"
+
+FuchsiaCity_Text_ScribeFerryman_Closed::
+	.string "The ledger is closed. Come back\n"
+	.string "when the clocks make sense.$"
+
+FuchsiaCity_Text_ScribeFerryman_Never::
+	.string "Another time, then.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask0::
+	.string "The HALL OF THE POKeDEX: rewards\n"
+	.string "for every milestone. Visit?$"

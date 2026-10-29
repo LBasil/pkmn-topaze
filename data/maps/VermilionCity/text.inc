@@ -207,3 +207,18 @@ VermilionCity_Text_FerryHint::
     .string "at you. He seems to have something\p"
     .string "for you. He can also take you to\n"
     .string "the SEVII ISLANDS by ferry.$"
+
+VermilionCity_Text_TQ_Ask::
+	.string "A BIG PEARL! My wife would cry. I\n"
+	.string "will trade a charm.$"
+
+VermilionCity_Text_TQ_Ok::
+	.string "She will be overjoyed. Take this\n"
+	.string "MYSTIC WATER.$"
+
+VermilionCity_Text_TQ_Done::
+	.string "The sea has been kind lately.$"
+
+VermilionCity_Text_TQ_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

@@ -213,3 +213,17 @@ CeladonCity_Text_Guard3Defeat::
 
 CeladonCity_Text_Guard3Post::
     .string "Go. Tread lightly.$"
+
+CeladonCity_Text_TQ_Ask::
+	.string "I need an ELIXIR for my spa day. Do\n"
+	.string "you have one?$"
+
+CeladonCity_Text_TQ_Ok::
+	.string "Bliss! This is for you.$"
+
+CeladonCity_Text_TQ_Done::
+	.string "My skin has never been so good.$"
+
+CeladonCity_Text_TQ_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

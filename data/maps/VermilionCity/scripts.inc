@@ -455,3 +455,34 @@ VermilionCity_Text_CellWitnessDone::
 	.string "The night ships stopped.\p"
 	.string "Funny. The captain looks relieved"
 	.string "and worried at once.$"
+
+@ Topaze: quete (THE SAILOR'S PEARL)
+VermilionCity_EventScript_TQ::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_TQ_VERMILIONCITY, VermilionCity_EventScript_TQ_Done
+	checkitem ITEM_BIG_PEARL, 1
+	goto_if_eq VAR_RESULT, FALSE, VermilionCity_EventScript_TQ_Ask
+	checkitemspace ITEM_MYSTIC_WATER, 1
+	goto_if_eq VAR_RESULT, FALSE, VermilionCity_EventScript_TQ_NoRoom
+	removeitem ITEM_BIG_PEARL, 1
+	setflag FLAG_TOPAZE_TQ_VERMILIONCITY
+	msgbox VermilionCity_Text_TQ_Ok
+	giveitem ITEM_MYSTIC_WATER, 1
+	release
+	end
+
+VermilionCity_EventScript_TQ_Ask::
+	msgbox VermilionCity_Text_TQ_Ask
+	release
+	end
+
+VermilionCity_EventScript_TQ_Done::
+	msgbox VermilionCity_Text_TQ_Done
+	release
+	end
+
+VermilionCity_EventScript_TQ_NoRoom::
+	msgbox VermilionCity_Text_TQ_NoRoom
+	release
+	end

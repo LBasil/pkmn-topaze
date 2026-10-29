@@ -956,3 +956,34 @@ PewterCity_Text_CellWitnessDone::
 	.string "The shutters are open again.\p"
 	.string "You know, those crates were labeled"
 	.string "BRANCH FOUR. Think about that.$"
+
+@ Topaze: quete (THE FALLEN STAR)
+PewterCity_EventScript_TQ::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_TQ_PEWTERCITY, PewterCity_EventScript_TQ_Done
+	checkitem ITEM_STAR_PIECE, 1
+	goto_if_eq VAR_RESULT, FALSE, PewterCity_EventScript_TQ_Ask
+	checkitemspace ITEM_HARD_STONE, 1
+	goto_if_eq VAR_RESULT, FALSE, PewterCity_EventScript_TQ_NoRoom
+	removeitem ITEM_STAR_PIECE, 1
+	setflag FLAG_TOPAZE_TQ_PEWTERCITY
+	msgbox PewterCity_Text_TQ_Ok
+	giveitem ITEM_HARD_STONE, 1
+	release
+	end
+
+PewterCity_EventScript_TQ_Ask::
+	msgbox PewterCity_Text_TQ_Ask
+	release
+	end
+
+PewterCity_EventScript_TQ_Done::
+	msgbox PewterCity_Text_TQ_Done
+	release
+	end
+
+PewterCity_EventScript_TQ_NoRoom::
+	msgbox PewterCity_Text_TQ_NoRoom
+	release
+	end

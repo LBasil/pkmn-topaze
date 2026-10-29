@@ -216,3 +216,17 @@ PewterCity_Text_RefDone::
 PewterCity_Text_RefIdle::
     .string "CLEO: I watch over the animals here.\n"
     .string "The world is quieter now.$"
+
+PewterCity_Text_TQ_Ask::
+	.string "A STAR PIECE would complete my rock\n"
+	.string "collection.$"
+
+PewterCity_Text_TQ_Ok::
+	.string "Beautiful! A HARD STONE for you.$"
+
+PewterCity_Text_TQ_Done::
+	.string "It sparkles above my desk.$"
+
+PewterCity_Text_TQ_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

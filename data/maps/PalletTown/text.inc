@@ -419,3 +419,18 @@ PalletTown_Text_Archive_Done::
 PalletTown_Text_Archive_NoRoom::
 	.string "Your BAG is full. Make room, then\n"
 	.string "come back.$"
+
+PalletTown_Text_TQ_Ask::
+	.string "The lab kids love MOOMOO MILK.\n"
+	.string "Bring me 2 and I will reward you.$"
+
+PalletTown_Text_TQ_Ok::
+	.string "Wonderful! A little help for your\n"
+	.string "team.$"
+
+PalletTown_Text_TQ_Done::
+	.string "The lab is happy, thanks to you.$"
+
+PalletTown_Text_TQ_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

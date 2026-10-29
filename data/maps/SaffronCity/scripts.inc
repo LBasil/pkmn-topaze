@@ -354,3 +354,34 @@ SaffronCity_NightMarketItems::
 	.2byte ITEM_FULL_RESTORE
 	.2byte ITEM_LUCKY_EGG
 	.2byte ITEM_NONE
+
+@ Topaze: quete (THE FORTUNE SPOON)
+SaffronCity_EventScript_TQ::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_TQ_SAFFRONCITY, SaffronCity_EventScript_TQ_Done
+	checkitem ITEM_TWISTED_SPOON, 1
+	goto_if_eq VAR_RESULT, FALSE, SaffronCity_EventScript_TQ_Ask
+	checkitemspace ITEM_SILVER_POWDER, 1
+	goto_if_eq VAR_RESULT, FALSE, SaffronCity_EventScript_TQ_NoRoom
+	removeitem ITEM_TWISTED_SPOON, 1
+	setflag FLAG_TOPAZE_TQ_SAFFRONCITY
+	msgbox SaffronCity_Text_TQ_Ok
+	giveitem ITEM_SILVER_POWDER, 1
+	release
+	end
+
+SaffronCity_EventScript_TQ_Ask::
+	msgbox SaffronCity_Text_TQ_Ask
+	release
+	end
+
+SaffronCity_EventScript_TQ_Done::
+	msgbox SaffronCity_Text_TQ_Done
+	release
+	end
+
+SaffronCity_EventScript_TQ_NoRoom::
+	msgbox SaffronCity_Text_TQ_NoRoom
+	release
+	end

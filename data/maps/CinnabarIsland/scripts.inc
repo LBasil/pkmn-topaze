@@ -504,3 +504,34 @@ CinnabarIsland_EventScript_ProcheChloe_NoRoom::
 	msgbox CinnabarIsland_Text_ProcheChloe_NoRoom
 	release
 	end
+
+@ Topaze: quete (THE MAGNET EXPERIMENT)
+CinnabarIsland_EventScript_TQ::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_TQ_CINNABARISLAND, CinnabarIsland_EventScript_TQ_Done
+	checkitem ITEM_MAGNET, 1
+	goto_if_eq VAR_RESULT, FALSE, CinnabarIsland_EventScript_TQ_Ask
+	checkitemspace ITEM_NEVER_MELT_ICE, 1
+	goto_if_eq VAR_RESULT, FALSE, CinnabarIsland_EventScript_TQ_NoRoom
+	removeitem ITEM_MAGNET, 1
+	setflag FLAG_TOPAZE_TQ_CINNABARISLAND
+	msgbox CinnabarIsland_Text_TQ_Ok
+	giveitem ITEM_NEVER_MELT_ICE, 1
+	release
+	end
+
+CinnabarIsland_EventScript_TQ_Ask::
+	msgbox CinnabarIsland_Text_TQ_Ask
+	release
+	end
+
+CinnabarIsland_EventScript_TQ_Done::
+	msgbox CinnabarIsland_Text_TQ_Done
+	release
+	end
+
+CinnabarIsland_EventScript_TQ_NoRoom::
+	msgbox CinnabarIsland_Text_TQ_NoRoom
+	release
+	end

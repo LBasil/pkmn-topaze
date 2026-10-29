@@ -855,3 +855,34 @@ PalletTown_EventScript_EchoArchivist_NoRoom::
 	msgbox PalletTown_Text_Archive_NoRoom
 	release
 	end
+
+@ Topaze: quete (MILK FOR THE LAB)
+PalletTown_EventScript_TQ::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_TQ_PALLETTOWN, PalletTown_EventScript_TQ_Done
+	checkitem ITEM_MOOMOO_MILK, 2
+	goto_if_eq VAR_RESULT, FALSE, PalletTown_EventScript_TQ_Ask
+	checkitemspace ITEM_EXP_SHARE, 1
+	goto_if_eq VAR_RESULT, FALSE, PalletTown_EventScript_TQ_NoRoom
+	removeitem ITEM_MOOMOO_MILK, 2
+	setflag FLAG_TOPAZE_TQ_PALLETTOWN
+	msgbox PalletTown_Text_TQ_Ok
+	giveitem ITEM_EXP_SHARE, 1
+	release
+	end
+
+PalletTown_EventScript_TQ_Ask::
+	msgbox PalletTown_Text_TQ_Ask
+	release
+	end
+
+PalletTown_EventScript_TQ_Done::
+	msgbox PalletTown_Text_TQ_Done
+	release
+	end
+
+PalletTown_EventScript_TQ_NoRoom::
+	msgbox PalletTown_Text_TQ_NoRoom
+	release
+	end

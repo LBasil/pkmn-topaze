@@ -219,3 +219,34 @@ ViridianCity_EventScript_RefugeIdle::
 	msgbox ViridianCity_Text_RefIdle
 	release
 	end
+
+@ Topaze: quete (THE GILDED GIFT)
+ViridianCity_EventScript_TQ::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_TQ_VIRIDIANCITY, ViridianCity_EventScript_TQ_Done
+	checkitem ITEM_NUGGET, 1
+	goto_if_eq VAR_RESULT, FALSE, ViridianCity_EventScript_TQ_Ask
+	checkitemspace ITEM_SILK_SCARF, 1
+	goto_if_eq VAR_RESULT, FALSE, ViridianCity_EventScript_TQ_NoRoom
+	removeitem ITEM_NUGGET, 1
+	setflag FLAG_TOPAZE_TQ_VIRIDIANCITY
+	msgbox ViridianCity_Text_TQ_Ok
+	giveitem ITEM_SILK_SCARF, 1
+	release
+	end
+
+ViridianCity_EventScript_TQ_Ask::
+	msgbox ViridianCity_Text_TQ_Ask
+	release
+	end
+
+ViridianCity_EventScript_TQ_Done::
+	msgbox ViridianCity_Text_TQ_Done
+	release
+	end
+
+ViridianCity_EventScript_TQ_NoRoom::
+	msgbox ViridianCity_Text_TQ_NoRoom
+	release
+	end

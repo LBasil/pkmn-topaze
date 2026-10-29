@@ -159,3 +159,17 @@ ViridianCity_Text_RefDone::
 ViridianCity_Text_RefIdle::
     .string "BRUN: I watch over the animals here.\n"
     .string "The world is quieter now.$"
+
+ViridianCity_Text_TQ_Ask::
+	.string "A NUGGET for my collection. Bring\n"
+	.string "me one, will you?$"
+
+ViridianCity_Text_TQ_Ok::
+	.string "How it shines! Take this SCARF.$"
+
+ViridianCity_Text_TQ_Done::
+	.string "My shelf has never looked better.$"
+
+ViridianCity_Text_TQ_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

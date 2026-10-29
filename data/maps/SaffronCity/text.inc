@@ -237,3 +237,18 @@ SaffronCity_Text_Market_Closed::
 	.string "Come back when the LEAGUE is behind\n"
 	.string "you. The market is not open for you\p"
 	.string "yet.$"
+
+SaffronCity_Text_TQ_Ask::
+	.string "A TWISTED SPOON helps my fortune\n"
+	.string "telling. Bring me one.$"
+
+SaffronCity_Text_TQ_Ok::
+	.string "The future is clear. Take this\n"
+	.string "powder.$"
+
+SaffronCity_Text_TQ_Done::
+	.string "I see good things for you.$"
+
+SaffronCity_Text_TQ_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

@@ -110,3 +110,18 @@ LavenderTown_Text_ProcheNathan_Early::
 LavenderTown_Text_ProcheNathan_NoRoom::
 	.string "Your BAG is full. Make some room\n"
 	.string "first, then talk to me again.$"
+
+LavenderTown_Text_TQ_Ask::
+	.string "The spirits ask for a SPELL TAG.\n"
+	.string "Can you find one?$"
+
+LavenderTown_Text_TQ_Ok::
+	.string "They are at peace. Take these\n"
+	.string "glasses.$"
+
+LavenderTown_Text_TQ_Done::
+	.string "The tower is quieter now.$"
+
+LavenderTown_Text_TQ_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

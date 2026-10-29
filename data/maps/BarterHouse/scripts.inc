@@ -20,11 +20,11 @@ BarterHouse_EventScript_Clerk::
 	faceplayer
 	msgbox BarterHouse_Text_Hello
 	goto_if_set FLAG_TOPAZE_BARTER_0, BarterHouse_EventScript_Clerk_1
-	checkitem ITEM_HEART_SCALE, 5
+	checkitem ITEM_HEART_SCALE, 3
 	goto_if_eq VAR_RESULT, FALSE, BarterHouse_EventScript_Clerk_1
 	msgbox BarterHouse_Text_O0, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, BarterHouse_EventScript_Clerk_1
-	removeitem ITEM_HEART_SCALE, 5
+	removeitem ITEM_HEART_SCALE, 3
 	givemon SPECIES_FEEBAS, 20
 	goto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon
 	setflag FLAG_TOPAZE_BARTER_0
@@ -92,11 +92,11 @@ BarterHouse_EventScript_Clerk_5::
 	goto BarterHouse_EventScript_Clerk_6
 BarterHouse_EventScript_Clerk_6::
 	goto_if_set FLAG_TOPAZE_BARTER_6, BarterHouse_EventScript_Clerk_7
-	checkitem ITEM_STARDUST, 2
+	checkitem ITEM_STARDUST, 1
 	goto_if_eq VAR_RESULT, FALSE, BarterHouse_EventScript_Clerk_7
 	msgbox BarterHouse_Text_O6, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, BarterHouse_EventScript_Clerk_7
-	removeitem ITEM_STARDUST, 2
+	removeitem ITEM_STARDUST, 1
 	givemon SPECIES_LUNATONE, 30
 	goto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon
 	setflag FLAG_TOPAZE_BARTER_6
