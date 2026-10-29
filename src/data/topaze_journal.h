@@ -384,6 +384,20 @@ static const u8 sJN_184[] = _("THE BABY NURSERY");
 static const u8 sJH_184[] = _("Ferry from AMETHIOLITE: one baby\nPOKeMON per badge.");
 static const u8 sJN_185[] = _("THE BARTER HOUSE");
 static const u8 sJH_185[] = _("Ferry from AMETHIOLITE: treasures\nfor rare POKeMON.");
+static const u8 sJN_186[] = _("THE FERRYMAN FEE");
+static const u8 sJH_186[] = _("WHISPER GROVE: bring a NUGGET.");
+static const u8 sJN_187[] = _("THE COIL KEEPER");
+static const u8 sJH_187[] = _("SPARK GLADE: bring 2 ELIXIRS.");
+static const u8 sJN_188[] = _("THE OLD NEST");
+static const u8 sJH_188[] = _("DRAGON PERCH: bring a DRAGON SCALE.");
+static const u8 sJN_189[] = _("TEA FOR TWO");
+static const u8 sJH_189[] = _("ZEN GARDEN: bring 2 LEMONADES.");
+static const u8 sJN_190[] = _("FIZZY TRADE");
+static const u8 sJH_190[] = _("GIANTS PLAIN: bring 2 SODA POPS.");
+static const u8 sJN_191[] = _("THE LOST CALF");
+static const u8 sJH_191[] = _("GIANTS PLAIN: a baby needs a home.");
+static const u8 sJN_192[] = _("WATER FOR THE DUNES");
+static const u8 sJH_192[] = _("DUNE SEA: bring 2 FRESH WATERS.");
 
 static const struct TopazeJournalSection sJournalSections[] = {
     { sJS_0, 0 },
@@ -587,4 +601,11 @@ static const struct TopazeJournalEntry sJournalEntries[] = {
     { 2, 0, 0, FLAG_TOPAZE_RQ_ROUTE24, 0, 0, 0, 0, 0, 0, sJN_183, sJH_183 },
     { 2, 0, 2, FLAG_TOPAZE_NURSERY_8, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_184, sJH_184 },
     { 2, 0, 2, FLAG_TOPAZE_BARTER_7, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_185, sJH_185 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_WHISPERGROVE, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_186, sJH_186 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_SPARKGLADE, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_187, sJH_187 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_DRAGONPERCH, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_188, sJH_188 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_ZENGARDEN, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_189, sJH_189 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_GIANTSPLAIN, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_190, sJH_190 },
+    { 2, 0, 2, FLAG_TOPAZE_GIFT_GIANTSPLAIN, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_191, sJH_191 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_DUNESEA, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_192, sJH_192 },
 };

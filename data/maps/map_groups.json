@@ -250,7 +250,13 @@
     "SevenIsland_SevaultCanyon_Summit",
     "LastDayIsland",
     "ReflectionMarsh",
-    "BerryOrchard"
+    "BerryOrchard",
+    "WhisperGrove",
+    "SparkGlade",
+    "DragonPerch",
+    "ZenGarden",
+    "GiantsPlain",
+    "DuneSea"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",

@@ -60,3 +60,47 @@ def journal_add(lines):
     g = rd('docs/topaze/journal_gen.py'); i = g.index('assert len(SECTIONS) <= 12'); wr('docs/topaze/journal_gen.py', g[:i] + '\n'.join(lines) + '\n\n' + g[i:])
 def jl(sec, flg, name, hint, vis='FL("FLAG_TOPAZE_CLOCK_DONE")'):
     return 'add("%s", F, "%s", 0, "%s", "%s", %s)' % (sec, flg, name, hint.replace('\n', '\\\\n'), vis)
+
+def _mons(lst, lo, hi): return [{'min_level': lo + (i % 3), 'max_level': max(lo + 1, hi - (2 - i % 3)), 'species': sp(n)} for i, n in enumerate(lst)]
+def make_zone(z, WE_group, journal, fx=24, fy=27):
+    """z : dict(map,tpl,lv,land,[water],[fish],npcs[(gfx,text)],hidden[item],quests[...],gifts[...])  -> clone + PNJ + objets caches + sauvages. Retourne l'arrivee."""
+    mn, tpl = z['map'], z['tpl']; k = mn.upper()
+    N.clone(mn, tpl, objects=[], warps=[], scripts='', txt=''); nav = R.Nav(mn); cells = comp(nav)
+    a = near(nav, cells, (nav.w // 2, int(nav.h * .75)), [], margin=0)
+    sc = ''; tx = ''; objs = []; bgs = []; taken = [a]
+    def place(gfx, pref, script, margin=2):
+        c = near(nav, cells, pref, taken, margin); taken.append(c); objs.append(N.obj(gfx, c[0], c[1], script, el=EL(nav, c))); return c
+    off = lambda d: (a[0] + d * (1 if (d // 3) % 2 == 0 else -1), a[1] - abs(d))
+    place('SAILOR', (a[0] + 2, a[1]), mn + '_EventScript_ReturnFerry', 1)
+    sc += ('%s_EventScript_ReturnFerry::\n\tlock\n\tfaceplayer\n\tmsgbox %s_Text_ReturnAsk, MSGBOX_YESNO\n\tgoto_if_eq VAR_RESULT, NO, %s_EventScript_Stay\n\twarp MAP_FUCHSIA_CITY, 255, %d, %d\n\twaitstate\n\tend\n\n%s_EventScript_Stay::\n\tmsgbox %s_Text_Stay\n\trelease\n\tend\n\n') % (mn, mn, mn, fx, fy, mn, mn)
+    tx += N.text(mn + '_Text_ReturnAsk', 'Ready to go back to the dock?') + N.text(mn + '_Text_Stay', 'Take your time. The tide can wait.')
+    d = 3
+    for j, (gfx, line) in enumerate(z['npcs']):
+        S_, T_ = '%s_EventScript_Npc%d' % (mn, j), '%s_Text_Npc%d' % (mn, j)
+        place(gfx, off(d), S_); d += 3; sc += '%s::\n\tmsgbox %s, MSGBOX_NPC\n\tend\n\n' % (S_, T_); tx += N.text(T_, line)
+    for j, q in enumerate(z.get('quests', [])):
+        F = flag('QUEST_%s' % k); S_, T_ = '%s_EventScript_Quest%d' % (mn, j), '%s_Text_Quest%d' % (mn, j); W, R_ = q['want'], q['rew']
+        place(q['g'], off(d), S_); d += 3
+        sc += ('%s::\n\tlock\n\tfaceplayer\n\tgoto_if_set %s, %s_After\n\tmsgbox %s_Ask\n\tcheckitem %s, %d\n\tgoto_if_eq VAR_RESULT, FALSE, %s_Miss\n\tcheckitemspace %s, %d\n\tgoto_if_eq VAR_RESULT, FALSE, %s_NoRoom\n'
+               '\tremoveitem %s, %d\n\tgiveitem %s, %d\n\tsetflag %s\n\tmsgbox %s_Done\n\trelease\n\tend\n\n%s_After::\n\tmsgbox %s_AfterT\n\trelease\n\tend\n\n%s_Miss::\n\tmsgbox %s_MissT\n\trelease\n\tend\n\n%s_NoRoom::\n\tmsgbox %s_NoRoomT\n\trelease\n\tend\n\n') % (
+            S_, F, S_, T_, it(W[0]), W[1], S_, it(R_[0]), R_[1], S_, it(W[0]), W[1], it(R_[0]), R_[1], F, T_, S_, T_, S_, T_, S_, T_)
+        tx += N.text(T_ + '_Ask', q['ask']) + N.text(T_ + '_Done', q['done']) + N.text(T_ + '_AfterT', q['after']) + N.text(T_ + '_MissT', q['miss']) + N.text(T_ + '_NoRoomT', 'Your BAG is full. Make room, then come back.')
+        journal.append(jl('SIDE QUESTS', F, q['j'][0], q['j'][1]))
+    for j, (spn, lvl, line) in enumerate(z.get('gifts', [])):
+        F = flag('GIFT_%s' % k); S_, T_ = '%s_EventScript_Gift%d' % (mn, j), '%s_Text_Gift%d' % (mn, j)
+        place('LITTLE_GIRL', off(d), S_); d += 3
+        sc += ('%s::\n\tlock\n\tfaceplayer\n\tgoto_if_set %s, %s_Done\n\tmsgbox %s_Offer, MSGBOX_YESNO\n\tgoto_if_eq VAR_RESULT, NO, %s_No\n\tgivemon %s, %d\n\tgoto_if_eq VAR_RESULT, 2, EventScript_NoMoreRoomForPokemon\n\tsetflag %s\n\tmsgbox %s_Got\n\trelease\n\tend\n\n'
+               '%s_Done::\n\tmsgbox %s_After\n\trelease\n\tend\n\n%s_No::\n\tmsgbox %s_Refuse\n\trelease\n\tend\n\n') % (S_, F, S_, T_, S_, sp(spn), lvl, F, T_, S_, T_, S_, T_)
+        tx += N.text(T_ + '_Offer', line) + N.text(T_ + '_Got', 'Please look after it.') + N.text(T_ + '_After', 'I hope it is happy with you.') + N.text(T_ + '_Refuse', 'Then I will keep it a little longer.')
+        journal.append(jl('SIDE QUESTS', F, z.get('gift_name', 'A GIFT'), z.get('gift_hint', 'A young one awaits.')))
+    for i, itn in enumerate(z.get('hidden', [])):
+        F = flag('FIND_%s_%d' % (k, i)); c = near(nav, cells, (a[0] + (i - len(z['hidden']) // 2) * 4, a[1] - 4 - 3 * (i % 4)), taken, margin=3); taken.append(c)
+        bgs.append({'type': 'hidden_item', 'x': c[0], 'y': c[1], 'elevation': 0, 'item': it(itn), 'flag': F, 'quantity': 1, 'underfoot': False})
+    N.rewrite(mn, objs, sc, tx, bgs=bgs)
+    ent = {'land_mons': {'encounter_rate': 20, 'mons': _mons(z['land'], *z['lv'])}}
+    if z.get('water'): ent['water_mons'] = {'encounter_rate': 4, 'mons': _mons(z['water'], *z['lv'])}
+    if z.get('fish'):
+        lo, hi = z['lv']; ent['fishing_mons'] = {'encounter_rate': 20, 'mons': [{'min_level': 5 if i < 2 else (lo if i < 5 else lo + 2), 'max_level': 10 if i < 2 else (lo + 3 if i < 5 else hi), 'species': sp(n)} for i, n in enumerate(z['fish'])]}
+    for ver in ('FireRed', 'LeafGreen'):
+        e = {'map': N.mapid(mn), 'base_label': 's%s_%s' % (mn, ver)}; e.update(json.loads(json.dumps(ent))); WE_group.append(e)
+    print(mn, 'arrivee', a, 'cells', len(cells), 'objs', len(objs), 'hidden', len(bgs)); return a

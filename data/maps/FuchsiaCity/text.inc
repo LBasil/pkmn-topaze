@@ -384,3 +384,56 @@ FuchsiaCity_Text_Apprentice_Ask0::
 FuchsiaCity_Text_Apprentice_Ask1::
 	.string "The BARTER HOUSE: trade treasures\n"
 	.string "for rare POKeMON. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_Hello::
+	.string "At dusk the strangest places open,\n"
+	.string "{PLAYER}.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Closed::
+	.string "The dusk is not ready. Come back\n"
+	.string "when the clocks make sense.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Never::
+	.string "Another time. Dusk will come again.$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText0::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask0::
+	.string "The GROVE OF WHISPERS: spirits\n"
+	.string "drift between the trees. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText1::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask1::
+	.string "The SPARK GLADE hums with static.\n"
+	.string "Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText2::
+	.string "Come back with all 8 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask2::
+	.string "The DRAGON PERCH: the air is thin\n"
+	.string "and the wings are large. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText3::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask3::
+	.string "The ZEN GARDEN: still water, calm\n"
+	.string "minds. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText4::
+	.string "Come back with 4 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask4::
+	.string "The PLAIN OF GIANTS: wide grass and\n"
+	.string "big POKeMON. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText5::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask5::
+	.string "The DUNE SEA: sand as far as the\n"
+	.string "eye can see. Visit?$"
