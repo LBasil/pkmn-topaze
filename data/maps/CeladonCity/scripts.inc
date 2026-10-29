@@ -363,3 +363,13 @@ CeladonCity_EventScript_TopazeFind0_Full::
 CeladonCity_Text_TopazeFindFull::
 	.string "Something shines here, but your BAG\n"
 	.string "is full.$"
+
+@ Topaze: tableau d'avis (ou trouver les rares)
+CeladonCity_EventScript_NoticeBoard::
+	msgbox CeladonCity_Text_NoticeBoard, MSGBOX_SIGN
+	end
+
+CeladonCity_Text_NoticeBoard::
+	.string "WANTED: DITTO: REFLECTION MARSH.\n"
+	.string "SABLEYE: EAST RESERVE, ASHEN MINE.\p"
+	.string "MAWILE: EAST RESERVE, ASHEN MINE.$"

@@ -1012,3 +1012,14 @@ PewterCity_EventScript_TopazeFind0_Full::
 PewterCity_Text_TopazeFindFull::
 	.string "Something shines here, but your BAG\n"
 	.string "is full.$"
+
+@ Topaze: tableau d'avis (ou trouver les rares)
+PewterCity_EventScript_NoticeBoard::
+	msgbox PewterCity_Text_NoticeBoard, MSGBOX_SIGN
+	end
+
+PewterCity_Text_NoticeBoard::
+	.string "WANTED: KANGASKHAN: REFLECTION\n"
+	.string "MARSH, GIANTS PLAIN. EEVEE:\p"
+	.string "REFLECTION MARSH, STONE GREENHOUSE.\n"
+	.string "PORYGON: TRADE DOCK.$"

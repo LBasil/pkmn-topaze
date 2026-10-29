@@ -225,3 +225,14 @@ LavenderTown_EventScript_TopazeFind0_Full::
 LavenderTown_Text_TopazeFindFull::
 	.string "Something shines here, but your BAG\n"
 	.string "is full.$"
+
+@ Topaze: tableau d'avis (ou trouver les rares)
+LavenderTown_EventScript_NoticeBoard::
+	msgbox LavenderTown_Text_NoticeBoard, MSGBOX_SIGN
+	end
+
+LavenderTown_Text_NoticeBoard::
+	.string "WANTED: HERACROSS: REFLECTION\n"
+	.string "MARSH, GIANTS PLAIN. SKARMORY: DUNE\p"
+	.string "SEA. LAPRAS: TRADE DOCK, CYCLE\n"
+	.string "POND.$"

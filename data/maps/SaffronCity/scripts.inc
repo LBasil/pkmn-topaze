@@ -410,3 +410,13 @@ SaffronCity_EventScript_TopazeFind0_Full::
 SaffronCity_Text_TopazeFindFull::
 	.string "Something shines here, but your BAG\n"
 	.string "is full.$"
+
+@ Topaze: tableau d'avis (ou trouver les rares)
+SaffronCity_EventScript_NoticeBoard::
+	msgbox SaffronCity_Text_NoticeBoard, MSGBOX_SIGN
+	end
+
+SaffronCity_Text_NoticeBoard::
+	.string "WANTED: LUNATONE: ASHEN MINE.\n"
+	.string "SOLROCK: ASHEN MINE. SNEASEL: FROST\p"
+	.string "HOLLOW.$"

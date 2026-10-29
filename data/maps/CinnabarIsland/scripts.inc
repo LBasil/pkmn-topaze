@@ -560,3 +560,13 @@ CinnabarIsland_EventScript_TopazeFind0_Full::
 CinnabarIsland_Text_TopazeFindFull::
 	.string "Something shines here, but your BAG\n"
 	.string "is full.$"
+
+@ Topaze: tableau d'avis (ou trouver les rares)
+CinnabarIsland_EventScript_NoticeBoard::
+	msgbox CinnabarIsland_Text_NoticeBoard, MSGBOX_SIGN
+	end
+
+CinnabarIsland_Text_NoticeBoard::
+	.string "WANTED: MR MIME: ZEN GARDEN.\n"
+	.string "WOBBUFFET: ZEN GARDEN. CHIMECHO:\p"
+	.string "ZEN GARDEN.$"

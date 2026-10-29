@@ -313,3 +313,14 @@ IndigoPlateau_Exterior_EventScript_TopazeFind0_Full::
 IndigoPlateau_Exterior_Text_TopazeFindFull::
 	.string "Something shines here, but your BAG\n"
 	.string "is full.$"
+
+@ Topaze: tableau d'avis (ou trouver les rares)
+IndigoPlateau_Exterior_EventScript_NoticeBoard::
+	msgbox IndigoPlateau_Exterior_Text_NoticeBoard, MSGBOX_SIGN
+	end
+
+IndigoPlateau_Exterior_Text_NoticeBoard::
+	.string "WANTED: DRAGONAIR: TRADE DOCK,\n"
+	.string "DRAGON PERCH. PIKACHU: REFLECTION\p"
+	.string "MARSH, SPARK GLADE. TOGEPI: EEVEE\n"
+	.string "GROVE.$"

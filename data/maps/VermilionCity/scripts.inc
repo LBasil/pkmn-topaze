@@ -511,3 +511,13 @@ VermilionCity_EventScript_TopazeFind0_Full::
 VermilionCity_Text_TopazeFindFull::
 	.string "Something shines here, but your BAG\n"
 	.string "is full.$"
+
+@ Topaze: tableau d'avis (ou trouver les rares)
+VermilionCity_EventScript_NoticeBoard::
+	msgbox VermilionCity_Text_NoticeBoard, MSGBOX_SIGN
+	end
+
+VermilionCity_Text_NoticeBoard::
+	.string "WANTED: RELICANTH: EAST RESERVE.\n"
+	.string "ZANGOOSE: WEST RESERVE. SEVIPER:\p"
+	.string "WEST RESERVE.$"

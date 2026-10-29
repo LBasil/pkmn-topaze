@@ -517,3 +517,18 @@ FuchsiaCity_Text_Apprentice_Ask2::
 	.string "The APOTHECARY: boosters for your\n"
 	.string "whole team. Visit?$"
 
+
+FuchsiaCity_Text_SeasonsFerryman_Ask4::
+	.string "The EEVEE GROVE: every shade of one\n"
+	.string "family lives here. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText4::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask5::
+	.string "The PROFESSOR'S RESERVE: first\n"
+	.string "partners run free here. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText5::
+	.string "Come back with all 8 BADGES.$"
+

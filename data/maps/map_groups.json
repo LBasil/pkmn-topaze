@@ -259,7 +259,8 @@
     "DuneSea",
     "FrostHollow",
     "EmberRim",
-    "NocturneWood"
+    "NocturneWood",
+    "EeveeGrove"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
@@ -341,7 +342,8 @@
     "HoennEastReserve",
     "SunriseMeadow",
     "AshenMine",
-    "ShellCoast"
+    "ShellCoast",
+    "ProfessorReserve"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",

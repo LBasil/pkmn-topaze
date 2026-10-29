@@ -435,3 +435,4 @@ PalletTown_Text_TQ_NoRoom::
 	.string "Your BAG is full. Make room, then\n"
 	.string "come back.$"
 
+

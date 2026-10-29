@@ -126,3 +126,18 @@ def hidden_on(m, itn, tag, pref=None):
     taken = [(o['x'], o['y']) for o in d['object_events']] + [(b['x'], b['y']) for b in d['bg_events']] + list(nav.warps)
     c = near(nav, [c for c in cells if 2 <= c[0] < nav.w - 2 and 2 <= c[1] < nav.h - 2], pref or (nav.w // 3, nav.h // 3), taken, margin=4)
     d['bg_events'].append({'type': 'hidden_item', 'x': c[0], 'y': c[1], 'elevation': 0, 'item': it(itn), 'flag': flag('HID_%s_%s' % (tag, m.upper())), 'quantity': 1, 'underfoot': False}); N.jdump(d, 'data/maps/%s/map.json' % m)
+
+def ferry_add(name, m, a, gate, ask, gt=''):
+    """Ajoute une destination a un passeur existant (avant 'End')."""
+    S = 'FuchsiaCity_EventScript_' + name; T = 'FuchsiaCity_Text_' + name
+    fs = rd('data/maps/FuchsiaCity/scripts.inc'); txt = rd('data/maps/FuchsiaCity/text.inc')
+    ks = [int(x) for x in re.findall(r'%s_Ask(\d+)::' % re.escape(T), txt)]; k = max(ks) + 1
+    old = 'goto_if_eq VAR_RESULT, NO, %s_EventScript_End' % S; idx = fs.rindex(old)       # derniere destination
+    fs = fs[:idx] + 'goto_if_eq VAR_RESULT, NO, %s_EventScript_Dest%d' % (S, k) + fs[idx + len(old):]
+    blk = '%s_EventScript_Dest%d::\n' % (S, k)
+    if gate: blk += '\tgoto_if_unset FLAG_BADGE0%d_GET, %s_EventScript_Gate%d\n' % (gate, S, k)
+    blk += '\tmsgbox %s_Ask%d, MSGBOX_YESNO\n\tgoto_if_eq VAR_RESULT, NO, %s_EventScript_End\n\tsetdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27\n\twarp %s, 255, %d, %d\n\twaitstate\n\tend\n' % (T, k, S, N.mapid(m), a[0], a[1])
+    if gate: blk += '%s_EventScript_Gate%d::\n\tmsgbox %s_GateText%d\n\tgoto %s_EventScript_End\n' % (S, k, T, k, S)
+    anchor = '%s_EventScript_End::' % S; assert anchor in fs
+    fs = fs.replace(anchor, blk + anchor, 1); wr('data/maps/FuchsiaCity/scripts.inc', fs)
+    t = N.text('%s_Ask%d' % (T, k), ask) + (N.text('%s_GateText%d' % (T, k), gt) if gate else ''); open('data/maps/FuchsiaCity/text.inc', 'a').write(t)

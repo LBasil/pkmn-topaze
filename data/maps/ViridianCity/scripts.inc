@@ -275,3 +275,14 @@ ViridianCity_EventScript_TopazeFind0_Full::
 ViridianCity_Text_TopazeFindFull::
 	.string "Something shines here, but your BAG\n"
 	.string "is full.$"
+
+@ Topaze: tableau d'avis (ou trouver les rares)
+ViridianCity_EventScript_NoticeBoard::
+	msgbox ViridianCity_Text_NoticeBoard, MSGBOX_SIGN
+	end
+
+ViridianCity_Text_NoticeBoard::
+	.string "WANTED: DRATINI: TRADE DOCK, CYCLE\n"
+	.string "POND. AERODACTYL: FOSSIL DIG.\p"
+	.string "CHANSEY: REFLECTION MARSH, GIANTS\n"
+	.string "PLAIN.$"

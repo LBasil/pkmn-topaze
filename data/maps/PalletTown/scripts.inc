@@ -911,3 +911,14 @@ PalletTown_EventScript_TopazeFind0_Full::
 PalletTown_Text_TopazeFindFull::
 	.string "Something shines here, but your BAG\n"
 	.string "is full.$"
+
+@ Topaze: tableau d'avis (ou trouver les rares)
+PalletTown_EventScript_NoticeBoard::
+	msgbox PalletTown_Text_NoticeBoard, MSGBOX_SIGN
+	end
+
+PalletTown_Text_NoticeBoard::
+	.string "WANTED: FEEBAS: CYCLE POND, EAST\n"
+	.string "RESERVE. ABSOL: WEST RESERVE,\p"
+	.string "WHISPER GROVE. LARVITAR: FOSSIL\n"
+	.string "DIG, DRAGON PERCH.$"

@@ -789,13 +789,35 @@ FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate2::
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest3::
 	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate3
 	msgbox FuchsiaCity_Text_SeasonsFerryman_Ask3, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_End
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest4
 	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
 	warp MAP_SHELL_COAST, 255, 12, 36
 	waitstate
 	end
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate3::
 	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText3
+	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_End
+FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest4::
+	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate4
+	msgbox FuchsiaCity_Text_SeasonsFerryman_Ask4, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest5
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_EEVEE_GROVE, 255, 30, 23
+	waitstate
+	end
+FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate4::
+	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText4
+	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_End
+FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest5::
+	goto_if_unset FLAG_BADGE08_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate5
+	msgbox FuchsiaCity_Text_SeasonsFerryman_Ask5, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_End
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_PROFESSOR_RESERVE, 255, 12, 31
+	waitstate
+	end
+FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate5::
+	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText5
 	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_End
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_End::
 	msgbox FuchsiaCity_Text_SeasonsFerryman_Never
@@ -836,3 +858,14 @@ FuchsiaCity_EventScript_TopazeFind0_Full::
 FuchsiaCity_Text_TopazeFindFull::
 	.string "Something shines here, but your BAG\n"
 	.string "is full.$"
+
+@ Topaze: tableau d'avis (ou trouver les rares)
+FuchsiaCity_EventScript_NoticeBoard::
+	msgbox FuchsiaCity_Text_NoticeBoard, MSGBOX_SIGN
+	end
+
+FuchsiaCity_Text_NoticeBoard::
+	.string "WANTED: SHEDINJA: WHISPER GROVE.\n"
+	.string "ELECTABUZZ: TRADE DOCK, SPARK\p"
+	.string "GLADE. MAGMAR: TRADE DOCK, EMBER\n"
+	.string "RIM.$"
