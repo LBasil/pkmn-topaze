@@ -151,3 +151,17 @@ Route14_Text_JanPostBattle::
 Route14_Text_JanNotEnoughMons::
     .string "JAN: You want to battle?\n"
     .string "You don't have enough POKéMON.$"
+
+Route14_Text_RQuest_Ask::
+	.string "My crew is a mess. 2 FULL HEALS and\n"
+	.string "I owe you.$"
+
+Route14_Text_RQuest_Ok::
+	.string "Back on the road! Thanks.$"
+
+Route14_Text_RQuest_Done::
+	.string "The engine purrs again.$"
+
+Route14_Text_RQuest_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

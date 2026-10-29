@@ -205,3 +205,17 @@ Route12_Text_TimeHint::
 	.string "The fishing spot sign: BEST HOUR TO\n"
 	.string "FISH... crossed out. Nobody knows\p"
 	.string "the hour anymore.$"
+
+Route12_Text_RQuest_Ask::
+	.string "Wild POKeMON scare the fish. 2\n"
+	.string "SUPER REPELS, please.$"
+
+Route12_Text_RQuest_Ok::
+	.string "Peace and quiet. Thanks!$"
+
+Route12_Text_RQuest_Done::
+	.string "The fish are biting.$"
+
+Route12_Text_RQuest_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

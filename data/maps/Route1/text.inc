@@ -64,3 +64,17 @@ Route1_Text_Walker::
 Route1_Text_TimeHint::
 	.string "A roadside clock. It says 3:07. It\n"
 	.string "has said 3:07 all week.$"
+
+Route1_Text_RQuest_Ask::
+	.string "My buddy is hurt! Could you spare 3\n"
+	.string "POTIONS?$"
+
+Route1_Text_RQuest_Ok::
+	.string "Thanks! Take these BALLS.$"
+
+Route1_Text_RQuest_Done::
+	.string "He is up and running again!$"
+
+Route1_Text_RQuest_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

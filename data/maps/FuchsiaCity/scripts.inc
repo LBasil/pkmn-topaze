@@ -577,3 +577,32 @@ FuchsiaCity_EventScript_LanternBoatman_EventScript_Closed::
 	msgbox FuchsiaCity_Text_Lantern_Closed
 	release
 	end
+
+@ Topaze: passeur Apprentice
+FuchsiaCity_EventScript_Apprentice::
+	lock
+	faceplayer
+	goto_if_unset FLAG_TOPAZE_CLOCK_DONE, FuchsiaCity_EventScript_Apprentice_EventScript_Closed
+	msgbox FuchsiaCity_Text_Apprentice_Hello
+	msgbox FuchsiaCity_Text_Apprentice_Ask0, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_Apprentice_EventScript_Dest1
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_BABY_NURSERY, 255, 4, 6
+	waitstate
+	end
+FuchsiaCity_EventScript_Apprentice_EventScript_Dest1::
+	msgbox FuchsiaCity_Text_Apprentice_Ask1, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_Apprentice_EventScript_End
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_BARTER_HOUSE, 255, 4, 6
+	waitstate
+	end
+FuchsiaCity_EventScript_Apprentice_EventScript_End::
+	msgbox FuchsiaCity_Text_Apprentice_Never
+	release
+	end
+
+FuchsiaCity_EventScript_Apprentice_EventScript_Closed::
+	msgbox FuchsiaCity_Text_Apprentice_Closed
+	release
+	end

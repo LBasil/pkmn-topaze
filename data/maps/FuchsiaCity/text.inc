@@ -365,3 +365,22 @@ FuchsiaCity_Text_Lantern_Ask6::
 FuchsiaCity_Text_Lantern_Ask7::
 	.string "The COLLECTOR SHOP: little\n"
 	.string "treasures for sale. Visit?$"
+
+FuchsiaCity_Text_Apprentice_Hello::
+	.string "The master is busy. I row the small\n"
+	.string "trips, {PLAYER}.$"
+
+FuchsiaCity_Text_Apprentice_Closed::
+	.string "The boat is not ready. Come back\n"
+	.string "when the clocks make sense.$"
+
+FuchsiaCity_Text_Apprentice_Never::
+	.string "Another time, then.$"
+
+FuchsiaCity_Text_Apprentice_Ask0::
+	.string "The BABY NURSERY: little POKeMON\n"
+	.string "need a home. Visit?$"
+
+FuchsiaCity_Text_Apprentice_Ask1::
+	.string "The BARTER HOUSE: trade treasures\n"
+	.string "for rare POKeMON. Visit?$"

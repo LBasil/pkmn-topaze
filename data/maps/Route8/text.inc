@@ -202,3 +202,17 @@ Route8_Text_Echo_Early::
 Route8_Text_Echo_NoRoom::
 	.string "Your BAG is full. Make room, then\n"
 	.string "come back.$"
+
+Route8_Text_RQuest_Ask::
+	.string "My team will not wake up. I need 2\n"
+	.string "AWAKENINGS.$"
+
+Route8_Text_RQuest_Ok::
+	.string "They are up! Take these.$"
+
+Route8_Text_RQuest_Done::
+	.string "We are wide awake now.$"
+
+Route8_Text_RQuest_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

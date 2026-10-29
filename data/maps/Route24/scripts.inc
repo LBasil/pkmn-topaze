@@ -117,3 +117,34 @@ Route24_EventScript_NoRoomForNugget::
 Route24_EventScript_TimeHint::
 	msgbox Route24_Text_TimeHint, MSGBOX_SIGN
 	end
+
+@ Topaze: quete de route (THE BRIDGE WATCH)
+Route24_EventScript_RQuest::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_RQ_ROUTE24, Route24_EventScript_RQuest_Done
+	checkitem ITEM_MAX_REPEL, 2
+	goto_if_eq VAR_RESULT, FALSE, Route24_EventScript_RQuest_Ask
+	checkitemspace ITEM_RARE_CANDY, 2
+	goto_if_eq VAR_RESULT, FALSE, Route24_EventScript_RQuest_NoRoom
+	removeitem ITEM_MAX_REPEL, 2
+	setflag FLAG_TOPAZE_RQ_ROUTE24
+	msgbox Route24_Text_RQuest_Ok
+	giveitem ITEM_RARE_CANDY, 2
+	release
+	end
+
+Route24_EventScript_RQuest_Ask::
+	msgbox Route24_Text_RQuest_Ask
+	release
+	end
+
+Route24_EventScript_RQuest_Done::
+	msgbox Route24_Text_RQuest_Done
+	release
+	end
+
+Route24_EventScript_RQuest_NoRoom::
+	msgbox Route24_Text_RQuest_NoRoom
+	release
+	end

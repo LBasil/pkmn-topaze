@@ -107,3 +107,17 @@ Route24_Text_TimeHint::
 	.string "A stopped wristwatch lies in the\n"
 	.string "grass. The second hand trembles but\p"
 	.string "never moves.$"
+
+Route24_Text_RQuest_Ask::
+	.string "I guard this bridge. 2 MAX REPELS\n"
+	.string "would keep it calm.$"
+
+Route24_Text_RQuest_Ok::
+	.string "Calm at last. Take these.$"
+
+Route24_Text_RQuest_Done::
+	.string "The bridge is quiet.$"
+
+Route24_Text_RQuest_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

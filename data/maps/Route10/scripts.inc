@@ -46,3 +46,34 @@ Route10_EventScript_ProcheEdouard_NoRoom::
 	msgbox Route10_Text_ProcheEdouard_NoRoom
 	release
 	end
+
+@ Topaze: quete de route (THE FIELD RESEARCH)
+Route10_EventScript_RQuest::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_RQ_ROUTE10, Route10_EventScript_RQuest_Done
+	checkitem ITEM_HYPER_POTION, 2
+	goto_if_eq VAR_RESULT, FALSE, Route10_EventScript_RQuest_Ask
+	checkitemspace ITEM_MAX_REPEL, 2
+	goto_if_eq VAR_RESULT, FALSE, Route10_EventScript_RQuest_NoRoom
+	removeitem ITEM_HYPER_POTION, 2
+	setflag FLAG_TOPAZE_RQ_ROUTE10
+	msgbox Route10_Text_RQuest_Ok
+	giveitem ITEM_MAX_REPEL, 2
+	release
+	end
+
+Route10_EventScript_RQuest_Ask::
+	msgbox Route10_Text_RQuest_Ask
+	release
+	end
+
+Route10_EventScript_RQuest_Done::
+	msgbox Route10_Text_RQuest_Done
+	release
+	end
+
+Route10_EventScript_RQuest_NoRoom::
+	msgbox Route10_Text_RQuest_NoRoom
+	release
+	end

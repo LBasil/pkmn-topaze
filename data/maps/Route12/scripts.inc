@@ -138,3 +138,34 @@ Route12_EventScript_ProcheEmma_NoRoom::
 Route12_EventScript_TimeHint::
 	msgbox Route12_Text_TimeHint, MSGBOX_SIGN
 	end
+
+@ Topaze: quete de route (QUIET FISHING)
+Route12_EventScript_RQuest::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_RQ_ROUTE12, Route12_EventScript_RQuest_Done
+	checkitem ITEM_SUPER_REPEL, 2
+	goto_if_eq VAR_RESULT, FALSE, Route12_EventScript_RQuest_Ask
+	checkitemspace ITEM_ULTRA_BALL, 4
+	goto_if_eq VAR_RESULT, FALSE, Route12_EventScript_RQuest_NoRoom
+	removeitem ITEM_SUPER_REPEL, 2
+	setflag FLAG_TOPAZE_RQ_ROUTE12
+	msgbox Route12_Text_RQuest_Ok
+	giveitem ITEM_ULTRA_BALL, 4
+	release
+	end
+
+Route12_EventScript_RQuest_Ask::
+	msgbox Route12_Text_RQuest_Ask
+	release
+	end
+
+Route12_EventScript_RQuest_Done::
+	msgbox Route12_Text_RQuest_Done
+	release
+	end
+
+Route12_EventScript_RQuest_NoRoom::
+	msgbox Route12_Text_RQuest_NoRoom
+	release
+	end

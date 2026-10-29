@@ -181,3 +181,17 @@ Route15_Text_TimeHint::
 	.string "A broken alarm clock rings, though\n"
 	.string "nobody set it. It rings for\p"
 	.string "yesterday.$"
+
+Route15_Text_RQuest_Ask::
+	.string "My oldest friend fainted. A single\n"
+	.string "REVIVE would mean everything.$"
+
+Route15_Text_RQuest_Ok::
+	.string "You are kind. Take this treasure.$"
+
+Route15_Text_RQuest_Done::
+	.string "He is up. He says thank you.$"
+
+Route15_Text_RQuest_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

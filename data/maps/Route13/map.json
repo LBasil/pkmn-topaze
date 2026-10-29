@@ -200,6 +200,26 @@
       "flag": "FLAG_HIDDEN_ITEM_ROUTE13_PP_UP",
       "quantity": 1,
       "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 20,
+      "y": 11,
+      "elevation": 0,
+      "item": "ITEM_RARE_CANDY",
+      "flag": "FLAG_TOPAZE_HID_ROUTE13_0",
+      "quantity": 1,
+      "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 57,
+      "y": 10,
+      "elevation": 0,
+      "item": "ITEM_FULL_HEAL",
+      "flag": "FLAG_TOPAZE_HID_ROUTE13_1",
+      "quantity": 1,
+      "underfoot": false
     }
   ]
 }

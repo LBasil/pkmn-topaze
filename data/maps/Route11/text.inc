@@ -110,3 +110,17 @@ Route11_Text_DiglettsCave::
 Route11_Text_TimeHint::
 	.string "A clock on a post. Its hands spin\n"
 	.string "backwards. Slowly. Then fast.$"
+
+Route11_Text_RQuest_Ask::
+	.string "My catch froze solid! 2 ICE HEALS,\n"
+	.string "please.$"
+
+Route11_Text_RQuest_Ok::
+	.string "Thaw complete! Here.$"
+
+Route11_Text_RQuest_Done::
+	.string "It swam off, warm and happy.$"
+
+Route11_Text_RQuest_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

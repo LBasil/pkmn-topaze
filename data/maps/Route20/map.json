@@ -391,6 +391,26 @@
       "flag": "FLAG_HIDDEN_ITEM_ROUTE20_STARDUST",
       "quantity": 1,
       "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 76,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_PP_UP",
+      "flag": "FLAG_TOPAZE_HID_ROUTE20_0",
+      "quantity": 1,
+      "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 74,
+      "y": 4,
+      "elevation": 0,
+      "item": "ITEM_ULTRA_BALL",
+      "flag": "FLAG_TOPAZE_HID_ROUTE20_1",
+      "quantity": 1,
+      "underfoot": false
     }
   ]
 }

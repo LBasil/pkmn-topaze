@@ -256,6 +256,26 @@
       "flag": "FLAG_HIDDEN_ITEM_ROUTE17_MAX_ELIXIR",
       "quantity": 1,
       "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 6,
+      "y": 24,
+      "elevation": 0,
+      "item": "ITEM_RARE_CANDY",
+      "flag": "FLAG_TOPAZE_HID_ROUTE17_0",
+      "quantity": 1,
+      "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 15,
+      "y": 49,
+      "elevation": 0,
+      "item": "ITEM_MAX_POTION",
+      "flag": "FLAG_TOPAZE_HID_ROUTE17_1",
+      "quantity": 1,
+      "underfoot": false
     }
   ]
 }

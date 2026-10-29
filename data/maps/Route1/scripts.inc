@@ -143,3 +143,34 @@ Route1_EventScript_TimeHint::
 	setflag FLAG_TOPAZE_CLOCK_1
 	msgbox Route1_Text_TimeHint, MSGBOX_SIGN
 	end
+
+@ Topaze: quete de route (A SIP OF HEALTH)
+Route1_EventScript_RQuest::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_RQ_ROUTE1, Route1_EventScript_RQuest_Done
+	checkitem ITEM_POTION, 3
+	goto_if_eq VAR_RESULT, FALSE, Route1_EventScript_RQuest_Ask
+	checkitemspace ITEM_GREAT_BALL, 5
+	goto_if_eq VAR_RESULT, FALSE, Route1_EventScript_RQuest_NoRoom
+	removeitem ITEM_POTION, 3
+	setflag FLAG_TOPAZE_RQ_ROUTE1
+	msgbox Route1_Text_RQuest_Ok
+	giveitem ITEM_GREAT_BALL, 5
+	release
+	end
+
+Route1_EventScript_RQuest_Ask::
+	msgbox Route1_Text_RQuest_Ask
+	release
+	end
+
+Route1_EventScript_RQuest_Done::
+	msgbox Route1_Text_RQuest_Done
+	release
+	end
+
+Route1_EventScript_RQuest_NoRoom::
+	msgbox Route1_Text_RQuest_NoRoom
+	release
+	end

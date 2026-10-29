@@ -44,3 +44,17 @@ Route18_Text_TimeHint::
 	.string "A bench plaque: RESERVED FOR 6:00\n"
 	.string "PM. The sky above is dark. The\p"
 	.string "plaque is dry. It is not raining.$"
+
+Route18_Text_RQuest_Ask::
+	.string "One MAX POTION would let me finish\n"
+	.string "my training run.$"
+
+Route18_Text_RQuest_Ok::
+	.string "Strong! Take this reward.$"
+
+Route18_Text_RQuest_Done::
+	.string "Run complete. Thanks.$"
+
+Route18_Text_RQuest_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

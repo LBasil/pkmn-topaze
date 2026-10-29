@@ -119,3 +119,17 @@ Route16_Text_LeaNotEnoughMons::
 Route16_Text_TimeHint::
 	.string "Two calendars nailed to a post show\n"
 	.string "different days. Both are wrong.$"
+
+Route16_Text_RQuest_Ask::
+	.string "Poison all over my team. 3\n"
+	.string "ANTIDOTES, fast!$"
+
+Route16_Text_RQuest_Ok::
+	.string "You saved the ride. Here.$"
+
+Route16_Text_RQuest_Done::
+	.string "We are riding again.$"
+
+Route16_Text_RQuest_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

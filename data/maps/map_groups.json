@@ -480,7 +480,9 @@
     "SaffronCity_HomeN",
     "DockCafe",
     "EvolutionLibrary",
-    "CollectorShop"
+    "CollectorShop",
+    "BabyNursery",
+    "BarterHouse"
   ],
   "gMapGroup_IndoorRoute2": [
     "Route2_ViridianForest_SouthEntrance",

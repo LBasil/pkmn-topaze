@@ -272,6 +272,26 @@
       "flag": "FLAG_HIDDEN_ITEM_ROUTE25_BLUK_BERRY",
       "quantity": 1,
       "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 25,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_PP_UP",
+      "flag": "FLAG_TOPAZE_HID_ROUTE25_0",
+      "quantity": 1,
+      "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 52,
+      "y": 11,
+      "elevation": 0,
+      "item": "ITEM_STAR_PIECE",
+      "flag": "FLAG_TOPAZE_HID_ROUTE25_1",
+      "quantity": 1,
+      "underfoot": false
     }
   ]
 }

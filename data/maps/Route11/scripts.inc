@@ -10,3 +10,34 @@ Route11_EventScript_TimeHint::
 	setflag FLAG_TOPAZE_CLOCK_2
 	msgbox Route11_Text_TimeHint, MSGBOX_SIGN
 	end
+
+@ Topaze: quete de route (COLD CATCH)
+Route11_EventScript_RQuest::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_RQ_ROUTE11, Route11_EventScript_RQuest_Done
+	checkitem ITEM_ICE_HEAL, 2
+	goto_if_eq VAR_RESULT, FALSE, Route11_EventScript_RQuest_Ask
+	checkitemspace ITEM_GREAT_BALL, 5
+	goto_if_eq VAR_RESULT, FALSE, Route11_EventScript_RQuest_NoRoom
+	removeitem ITEM_ICE_HEAL, 2
+	setflag FLAG_TOPAZE_RQ_ROUTE11
+	msgbox Route11_Text_RQuest_Ok
+	giveitem ITEM_GREAT_BALL, 5
+	release
+	end
+
+Route11_EventScript_RQuest_Ask::
+	msgbox Route11_Text_RQuest_Ask
+	release
+	end
+
+Route11_EventScript_RQuest_Done::
+	msgbox Route11_Text_RQuest_Done
+	release
+	end
+
+Route11_EventScript_RQuest_NoRoom::
+	msgbox Route11_Text_RQuest_NoRoom
+	release
+	end

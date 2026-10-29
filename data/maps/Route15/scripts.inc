@@ -40,3 +40,34 @@ Route15_EventScript_ProcheGauthier_NoRoom::
 Route15_EventScript_TimeHint::
 	msgbox Route15_Text_TimeHint, MSGBOX_SIGN
 	end
+
+@ Topaze: quete de route (THE LAST WISH)
+Route15_EventScript_RQuest::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_RQ_ROUTE15, Route15_EventScript_RQuest_Done
+	checkitem ITEM_REVIVE, 1
+	goto_if_eq VAR_RESULT, FALSE, Route15_EventScript_RQuest_Ask
+	checkitemspace ITEM_RARE_CANDY, 1
+	goto_if_eq VAR_RESULT, FALSE, Route15_EventScript_RQuest_NoRoom
+	removeitem ITEM_REVIVE, 1
+	setflag FLAG_TOPAZE_RQ_ROUTE15
+	msgbox Route15_Text_RQuest_Ok
+	giveitem ITEM_RARE_CANDY, 1
+	release
+	end
+
+Route15_EventScript_RQuest_Ask::
+	msgbox Route15_Text_RQuest_Ask
+	release
+	end
+
+Route15_EventScript_RQuest_Done::
+	msgbox Route15_Text_RQuest_Done
+	release
+	end
+
+Route15_EventScript_RQuest_NoRoom::
+	msgbox Route15_Text_RQuest_NoRoom
+	release
+	end

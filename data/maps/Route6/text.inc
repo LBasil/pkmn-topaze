@@ -102,3 +102,17 @@ Route6_Text_ProcheJordan_NoRoom::
 Route6_Text_TimeHint::
 	.string "The signpost shadow points west at\n"
 	.string "noon. Even the shadows are lost.$"
+
+Route6_Text_RQuest_Ask::
+	.string "My partner is wounded. Two SUPER\n"
+	.string "POTIONS, if you please.$"
+
+Route6_Text_RQuest_Ok::
+	.string "Excellent. Please accept these.$"
+
+Route6_Text_RQuest_Done::
+	.string "He is as good as new.$"
+
+Route6_Text_RQuest_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

@@ -44,3 +44,34 @@ Route3_EventScript_ProcheThomas_NoRoom::
 Route3_EventScript_TimeHint::
 	msgbox Route3_Text_TimeHint, MSGBOX_SIGN
 	end
+
+@ Topaze: quete de route (STIFF AS A BOARD)
+Route3_EventScript_RQuest::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_RQ_ROUTE3, Route3_EventScript_RQuest_Done
+	checkitem ITEM_PARALYZE_HEAL, 2
+	goto_if_eq VAR_RESULT, FALSE, Route3_EventScript_RQuest_Ask
+	checkitemspace ITEM_SUPER_POTION, 2
+	goto_if_eq VAR_RESULT, FALSE, Route3_EventScript_RQuest_NoRoom
+	removeitem ITEM_PARALYZE_HEAL, 2
+	setflag FLAG_TOPAZE_RQ_ROUTE3
+	msgbox Route3_Text_RQuest_Ok
+	giveitem ITEM_SUPER_POTION, 2
+	release
+	end
+
+Route3_EventScript_RQuest_Ask::
+	msgbox Route3_Text_RQuest_Ask
+	release
+	end
+
+Route3_EventScript_RQuest_Done::
+	msgbox Route3_Text_RQuest_Done
+	release
+	end
+
+Route3_EventScript_RQuest_NoRoom::
+	msgbox Route3_Text_RQuest_NoRoom
+	release
+	end

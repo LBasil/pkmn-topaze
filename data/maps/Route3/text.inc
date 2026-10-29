@@ -130,3 +130,17 @@ Route3_Text_ProcheThomas_NoRoom::
 Route3_Text_TimeHint::
 	.string "Someone scratched on the rock: THE\n"
 	.string "SUN ROSE TWICE TODAY.$"
+
+Route3_Text_RQuest_Ask::
+	.string "My team is paralyzed. Please bring\n"
+	.string "2 PARALYZE HEALS!$"
+
+Route3_Text_RQuest_Ok::
+	.string "Wonderful! A little thank you.$"
+
+Route3_Text_RQuest_Done::
+	.string "They are dancing again!$"
+
+Route3_Text_RQuest_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

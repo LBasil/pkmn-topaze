@@ -103,3 +103,17 @@ Route10_Text_ProcheEdouard_Early::
 Route10_Text_ProcheEdouard_NoRoom::
 	.string "Your BAG is full. Make some room\n"
 	.string "first, then talk to me again.$"
+
+Route10_Text_RQuest_Ask::
+	.string "My research subject is injured. 2\n"
+	.string "HYPER POTIONS, quick!$"
+
+Route10_Text_RQuest_Ok::
+	.string "Data saved. Thanks, take these.$"
+
+Route10_Text_RQuest_Done::
+	.string "The study goes on.$"
+
+Route10_Text_RQuest_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

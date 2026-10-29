@@ -79,3 +79,34 @@ Route16_EventScript_RouteSign::
 Route16_EventScript_TimeHint::
 	msgbox Route16_Text_TimeHint, MSGBOX_SIGN
 	end
+
+@ Topaze: quete de route (ROAD RASH)
+Route16_EventScript_RQuest::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_RQ_ROUTE16, Route16_EventScript_RQuest_Done
+	checkitem ITEM_ANTIDOTE, 3
+	goto_if_eq VAR_RESULT, FALSE, Route16_EventScript_RQuest_Ask
+	checkitemspace ITEM_SUPER_POTION, 3
+	goto_if_eq VAR_RESULT, FALSE, Route16_EventScript_RQuest_NoRoom
+	removeitem ITEM_ANTIDOTE, 3
+	setflag FLAG_TOPAZE_RQ_ROUTE16
+	msgbox Route16_Text_RQuest_Ok
+	giveitem ITEM_SUPER_POTION, 3
+	release
+	end
+
+Route16_EventScript_RQuest_Ask::
+	msgbox Route16_Text_RQuest_Ask
+	release
+	end
+
+Route16_EventScript_RQuest_Done::
+	msgbox Route16_Text_RQuest_Done
+	release
+	end
+
+Route16_EventScript_RQuest_NoRoom::
+	msgbox Route16_Text_RQuest_NoRoom
+	release
+	end

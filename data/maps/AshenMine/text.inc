@@ -20,7 +20,7 @@ AshenMine_Text_Quest0_AfterT::
 	.string "The mine is generous today.$"
 
 AshenMine_Text_Quest0_MissT::
-	.string "Two STARDUSTs. Look around the\n"
+	.string "Two STARDUST. Look around the\n"
 	.string "shiny spots.$"
 
 AshenMine_Text_Quest0_NoRoomT::

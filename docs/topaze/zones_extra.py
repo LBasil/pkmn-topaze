@@ -42,7 +42,7 @@ Z = [
       ask='The ASHEN MINE: gems, stones, odd POKeMON. Visit?', gt='Come back with 7 BADGES.',
       npcs=[('HIKER', 'Gems hide in the rock. Stones too. Keep your eyes on the shiny spots.')],
       hidden=['STAR_PIECE', 'STAR_PIECE', 'STARDUST', 'STARDUST', 'SUN_STONE', 'MOON_STONE'],
-      quests=[dict(g='HIKER', want=('STARDUST', 2), rew=('DRAGON_SCALE', 1), ask='STARDUST! I need two for my collection. I will give you a rare scale.', done='Wonderful! A DRAGON SCALE for you.', after='The mine is generous today.', miss='Two STARDUSTs. Look around the shiny spots.', j=('THE GEM COLLECTOR', 'ASHEN MINE: bring 2 STARDUST.'))]),
+      quests=[dict(g='HIKER', want=('STARDUST', 2), rew=('DRAGON_SCALE', 1), ask='STARDUST! I need two for my collection. I will give you a rare scale.', done='Wonderful! A DRAGON SCALE for you.', after='The mine is generous today.', miss='Two STARDUST. Look around the shiny spots.', j=('THE GEM COLLECTOR', 'ASHEN MINE: bring 2 STARDUST.'))]),
  dict(k='ORCHARD', map='BerryOrchard', tpl='ThreeIsland_BerryForest', gate=3, lv=(20, 26), kind='out',
       land=['ODDISH', 'BELLSPROUT', 'PARAS', 'VENONAT', 'SUNKERN', 'HOPPIP', 'LEDYBA', 'SPINARAK', 'PINECO', 'WURMPLE', 'SEEDOT', 'SHROOMISH'],
       ask='The BERRY ORCHARD grows every kind of berry. Visit?', gt='Come back with 3 BADGES.',

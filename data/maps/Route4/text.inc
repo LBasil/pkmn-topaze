@@ -77,3 +77,19 @@ Route4_Text_PeopleLikeAndRespectBrock::
     .string "People like and respect her.\p"
     .string "I want to become a GYM LEADER\n"
     .string "like her.$"
+
+Route4_Text_RQuest_Ask::
+	.string "I got lost in the cave. One ESCAPE\n"
+	.string "ROPE would save me.$"
+
+Route4_Text_RQuest_Ok::
+	.string "Saved! Take this, I found it down\n"
+	.string "there.$"
+
+Route4_Text_RQuest_Done::
+	.string "I am never going back in without a\n"
+	.string "rope.$"
+
+Route4_Text_RQuest_NoRoom::
+	.string "Your BAG is full. Make room, then\n"
+	.string "come back.$"

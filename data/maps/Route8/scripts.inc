@@ -60,3 +60,34 @@ Route8_EventScript_EchoRival_NoRoom::
 	msgbox Route8_Text_Echo_NoRoom
 	release
 	end
+
+@ Topaze: quete de route (THE SLEEPYHEADS)
+Route8_EventScript_RQuest::
+	lock
+	faceplayer
+	goto_if_set FLAG_TOPAZE_RQ_ROUTE8, Route8_EventScript_RQuest_Done
+	checkitem ITEM_AWAKENING, 2
+	goto_if_eq VAR_RESULT, FALSE, Route8_EventScript_RQuest_Ask
+	checkitemspace ITEM_FULL_HEAL, 2
+	goto_if_eq VAR_RESULT, FALSE, Route8_EventScript_RQuest_NoRoom
+	removeitem ITEM_AWAKENING, 2
+	setflag FLAG_TOPAZE_RQ_ROUTE8
+	msgbox Route8_Text_RQuest_Ok
+	giveitem ITEM_FULL_HEAL, 2
+	release
+	end
+
+Route8_EventScript_RQuest_Ask::
+	msgbox Route8_Text_RQuest_Ask
+	release
+	end
+
+Route8_EventScript_RQuest_Done::
+	msgbox Route8_Text_RQuest_Done
+	release
+	end
+
+Route8_EventScript_RQuest_NoRoom::
+	msgbox Route8_Text_RQuest_NoRoom
+	release
+	end

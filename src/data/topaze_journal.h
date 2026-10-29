@@ -352,6 +352,38 @@ static const u8 sJN_168[] = _("THE GEM COLLECTOR");
 static const u8 sJH_168[] = _("ASHEN MINE: bring 2 STARDUST.\nFerry from AMETHIOLITE.");
 static const u8 sJN_169[] = _("THE LUM BERRY");
 static const u8 sJH_169[] = _("BERRY ORCHARD: bring a LUM BERRY.\nFerry from AMETHIOLITE.");
+static const u8 sJN_170[] = _("A SIP OF HEALTH");
+static const u8 sJH_170[] = _("ROUTE 1: bring 3 POTION.");
+static const u8 sJN_171[] = _("STIFF AS A BOARD");
+static const u8 sJH_171[] = _("ROUTE 3: bring 2 PARALYZE HEAL.");
+static const u8 sJN_172[] = _("LOST IN THE CAVE");
+static const u8 sJH_172[] = _("ROUTE 4: bring an ESCAPE ROPE.");
+static const u8 sJN_173[] = _("THE HURT PARTNER");
+static const u8 sJH_173[] = _("ROUTE 6: bring 2 SUPER POTION.");
+static const u8 sJN_174[] = _("PLAYING WITH FIRE");
+static const u8 sJH_174[] = _("ROUTE 7: bring 2 BURN HEAL.");
+static const u8 sJN_175[] = _("THE SLEEPYHEADS");
+static const u8 sJH_175[] = _("ROUTE 8: bring 2 AWAKENING.");
+static const u8 sJN_176[] = _("THE FIELD RESEARCH");
+static const u8 sJH_176[] = _("ROUTE 10: bring 2 HYPER POTION.");
+static const u8 sJN_177[] = _("COLD CATCH");
+static const u8 sJH_177[] = _("ROUTE 11: bring 2 ICE HEAL.");
+static const u8 sJN_178[] = _("QUIET FISHING");
+static const u8 sJH_178[] = _("ROUTE 12: bring 2 SUPER REPEL.");
+static const u8 sJN_179[] = _("ENGINE TROUBLE");
+static const u8 sJH_179[] = _("ROUTE 14: bring 2 FULL HEAL.");
+static const u8 sJN_180[] = _("THE LAST WISH");
+static const u8 sJH_180[] = _("ROUTE 15: bring a REVIVE.");
+static const u8 sJN_181[] = _("ROAD RASH");
+static const u8 sJH_181[] = _("ROUTE 16: bring 3 ANTIDOTE.");
+static const u8 sJN_182[] = _("THE ENDURANCE TEST");
+static const u8 sJH_182[] = _("ROUTE 18: bring a MAX POTION.");
+static const u8 sJN_183[] = _("THE BRIDGE WATCH");
+static const u8 sJH_183[] = _("ROUTE 24: bring 2 MAX REPEL.");
+static const u8 sJN_184[] = _("THE BABY NURSERY");
+static const u8 sJH_184[] = _("Ferry from AMETHIOLITE: one baby\nPOKeMON per badge.");
+static const u8 sJN_185[] = _("THE BARTER HOUSE");
+static const u8 sJH_185[] = _("Ferry from AMETHIOLITE: treasures\nfor rare POKeMON.");
 
 static const struct TopazeJournalSection sJournalSections[] = {
     { sJS_0, 0 },
@@ -539,4 +571,20 @@ static const struct TopazeJournalEntry sJournalEntries[] = {
     { 2, 0, 2, FLAG_TOPAZE_GIFT_JOHTO, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_167, sJH_167 },
     { 2, 0, 2, FLAG_TOPAZE_QUEST_MINE, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_168, sJH_168 },
     { 2, 0, 2, FLAG_TOPAZE_QUEST_ORCHARD, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_169, sJH_169 },
+    { 2, 0, 0, FLAG_TOPAZE_RQ_ROUTE1, 0, 0, 0, 0, 0, 0, sJN_170, sJH_170 },
+    { 2, 0, 0, FLAG_TOPAZE_RQ_ROUTE3, 0, 0, 0, 0, 0, 0, sJN_171, sJH_171 },
+    { 2, 0, 0, FLAG_TOPAZE_RQ_ROUTE4, 0, 0, 0, 0, 0, 0, sJN_172, sJH_172 },
+    { 2, 0, 0, FLAG_TOPAZE_RQ_ROUTE6, 0, 0, 0, 0, 0, 0, sJN_173, sJH_173 },
+    { 2, 0, 0, FLAG_TOPAZE_RQ_ROUTE7, 0, 0, 0, 0, 0, 0, sJN_174, sJH_174 },
+    { 2, 0, 0, FLAG_TOPAZE_RQ_ROUTE8, 0, 0, 0, 0, 0, 0, sJN_175, sJH_175 },
+    { 2, 0, 0, FLAG_TOPAZE_RQ_ROUTE10, 0, 0, 0, 0, 0, 0, sJN_176, sJH_176 },
+    { 2, 0, 0, FLAG_TOPAZE_RQ_ROUTE11, 0, 0, 0, 0, 0, 0, sJN_177, sJH_177 },
+    { 2, 0, 0, FLAG_TOPAZE_RQ_ROUTE12, 0, 0, 0, 0, 0, 0, sJN_178, sJH_178 },
+    { 2, 0, 0, FLAG_TOPAZE_RQ_ROUTE14, 0, 0, 0, 0, 0, 0, sJN_179, sJH_179 },
+    { 2, 0, 0, FLAG_TOPAZE_RQ_ROUTE15, 0, 0, 0, 0, 0, 0, sJN_180, sJH_180 },
+    { 2, 0, 0, FLAG_TOPAZE_RQ_ROUTE16, 0, 0, 0, 0, 0, 0, sJN_181, sJH_181 },
+    { 2, 0, 0, FLAG_TOPAZE_RQ_ROUTE18, 0, 0, 0, 0, 0, 0, sJN_182, sJH_182 },
+    { 2, 0, 0, FLAG_TOPAZE_RQ_ROUTE24, 0, 0, 0, 0, 0, 0, sJN_183, sJH_183 },
+    { 2, 0, 2, FLAG_TOPAZE_NURSERY_8, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_184, sJH_184 },
+    { 2, 0, 2, FLAG_TOPAZE_BARTER_7, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_185, sJH_185 },
 };
