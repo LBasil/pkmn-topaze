@@ -1,0 +1,39 @@
+{
+  "id": "MAP_DEPTHS_2F",
+  "name": "Depths_2F",
+  "layout": "LAYOUT_SIX_ISLAND_ALTERING_CAVE",
+  "music": "MUS_SEVII_CAVE",
+  "region_map_section": "MAPSEC_ALTERING_CAVE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": false,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 18,
+      "y": 22,
+      "elevation": 3,
+      "dest_map": "MAP_DEPTHS_1F",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 2,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Depths_2F_EventScript_Fall"
+    }
+  ],
+  "bg_events": []
+}

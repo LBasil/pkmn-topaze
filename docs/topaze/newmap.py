@@ -26,8 +26,11 @@ def _register(new, template):
     for kind in ('scripts', 'text'):
         line = '\t.include "data/maps/%s/%s.inc"\n' % (new, kind)
         if line not in s:
-            prev = '\t.include "data/maps/%s/%s.inc"\n' % (template, kind); assert prev in s, (template, kind)
-            s = s.replace(prev, prev + line, 1)
+            prev = '\t.include "data/maps/%s/%s.inc"\n' % (template, kind)
+            if prev in s: s = s.replace(prev, prev + line, 1)
+            else:
+                alt = '\t.include "data/maps/%s/scripts.inc"\n' % template; assert alt in s, (template, kind)
+                s = s.replace(alt, alt + line, 1)
     wr('data/event_scripts.s', s)
 def clone(new, template, objects=(), warps=None, bgs=(), coords=(), scripts='', txt='', **ov):
     base = json.load(open('data/maps/%s/map.json' % template))

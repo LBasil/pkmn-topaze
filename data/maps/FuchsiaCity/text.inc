@@ -185,3 +185,74 @@ FuchsiaCity_Text_ProcheThibault_Early::
 FuchsiaCity_Text_ProcheThibault_NoRoom::
 	.string "Your BAG is full. Make some room\n"
 	.string "first, then talk to me again.$"
+
+FuchsiaCity_Text_Ferry_Hello::
+	.string "I row where time runs differently.\n"
+	.string "Where do you want to go, {PLAYER}?$"
+
+FuchsiaCity_Text_Ferry_Closed::
+	.string "The ferry is not running. The\n"
+	.string "clocks of the routes are still\p"
+	.string "unread. Come back when you know why\n"
+	.string "they stopped.$"
+
+FuchsiaCity_Text_Ferry_Never::
+	.string "Another time, then. The tide will\n"
+	.string "wait.$"
+
+FuchsiaCity_Text_Ferry_Gate::
+	.string "The tide says no, {PLAYER}.$"
+
+FuchsiaCity_Text_Ferry_Ask0::
+	.string "The old LIGHTHOUSE? Its lamp turns\n"
+	.string "backwards. Want to see it?$"
+
+FuchsiaCity_Text_Ferry_GateText0::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_Ferry_Ask1::
+	.string "The CLOCK BEACH? Every wave brings\n"
+	.string "in a broken clock. Want to see it?$"
+
+FuchsiaCity_Text_Ferry_GateText1::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_Ferry_Ask2::
+	.string "A village where today never ends?\n"
+	.string "Do you want to go?$"
+
+FuchsiaCity_Text_Ferry_GateText2::
+	.string "Come back with 7 BADGES.$"
+
+FuchsiaCity_Text_Ferry_Ask3::
+	.string "The BOTTOMLESS CAVE? Every time you\n"
+	.string "go down, the floor count changes.\p"
+	.string "Brave enough?$"
+
+FuchsiaCity_Text_Ferry_GateText3::
+	.string "Come back with all 8 BADGES.$"
+
+FuchsiaCity_Text_Ferry_Ask4::
+	.string "The GARDEN OF ECHOES blooms with\n"
+	.string "what the ECHOES left behind. Visit?$"
+
+FuchsiaCity_Text_Ferry_GateText4::
+	.string "The garden opens once the ARCHIVE\n"
+	.string "of ECHOES is complete.$"
+
+FuchsiaCity_Text_Ferry_Ask5::
+	.string "The ISLAND OF THE LAST DAY... no\n"
+	.string "one has come back from there\p"
+	.string "unchanged. Go anyway?$"
+
+FuchsiaCity_Text_Ferry_GateText5::
+	.string "This place opens only after the\n"
+	.string "LEAGUE.$"
+
+FuchsiaCity_Text_Ferry_Ask6::
+	.string "A clearing where your friends rest\n"
+	.string "between battles. Visit?$"
+
+FuchsiaCity_Text_Ferry_GateText6::
+	.string "Only those who beat every friend\n"
+	.string "may enter.$"

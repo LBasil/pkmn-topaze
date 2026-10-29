@@ -178,7 +178,14 @@
     "VictoryRoadLair_1F",
     "VictoryRoadLair_2F",
     "VictoryRoadLair_3F",
-    "OneIsland_KindleRoad_StormDen"
+    "OneIsland_KindleRoad_StormDen",
+    "Lighthouse_1F",
+    "Lighthouse_2F",
+    "Lighthouse_3F",
+    "Depths_1F",
+    "Depths_2F",
+    "Depths_3F",
+    "FriendsClearing"
   ],
   "gMapGroup_SpecialArea": [
     "NavelRock_Exterior",
@@ -247,7 +254,8 @@
     "SixIsland_RuinValley_StoneDen",
     "SevenIsland_SevaultCanyon_Grove",
     "SevenIsland_SevaultCanyon_Glade",
-    "SevenIsland_SevaultCanyon_Summit"
+    "SevenIsland_SevaultCanyon_Summit",
+    "LastDayIsland"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
@@ -317,7 +325,10 @@
     "SevenIsland_SevaultCanyon",
     "SevenIsland_TanobyRuins",
     "Route4East",
-    "ViridianCity_WestLane"
+    "ViridianCity_WestLane",
+    "ClockBeach",
+    "NoTomorrowVillage",
+    "EchoGarden"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",

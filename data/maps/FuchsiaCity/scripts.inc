@@ -324,3 +324,95 @@ FuchsiaCity_EventScript_ProcheThibault_NoRoom::
 	msgbox FuchsiaCity_Text_ProcheThibault_NoRoom
 	release
 	end
+
+@ Topaze: le PASSEUR des Echos (menu des zones du Temps)
+FuchsiaCity_EventScript_EchoFerryman::
+	lock
+	faceplayer
+	goto_if_unset FLAG_TOPAZE_CLOCK_DONE, FuchsiaCity_EventScript_EchoFerryman_EventScript_Closed
+	msgbox FuchsiaCity_Text_Ferry_Hello
+	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate0
+	msgbox FuchsiaCity_Text_Ferry_Ask0, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest1
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_LIGHTHOUSE_1F, 1, 0, 0
+	waitstate
+	end
+FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate0::
+	msgbox FuchsiaCity_Text_Ferry_GateText0
+	goto FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest1
+FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest1::
+	goto_if_unset FLAG_BADGE06_GET, FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate1
+	msgbox FuchsiaCity_Text_Ferry_Ask1, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest2
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_CLOCK_BEACH, 255, 12, 24
+	waitstate
+	end
+FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate1::
+	msgbox FuchsiaCity_Text_Ferry_GateText1
+	goto FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest2
+FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest2::
+	goto_if_unset FLAG_BADGE07_GET, FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate2
+	msgbox FuchsiaCity_Text_Ferry_Ask2, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest3
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_NO_TOMORROW_VILLAGE, 255, 9, 11
+	waitstate
+	end
+FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate2::
+	msgbox FuchsiaCity_Text_Ferry_GateText2
+	goto FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest3
+FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest3::
+	goto_if_unset FLAG_BADGE08_GET, FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate3
+	msgbox FuchsiaCity_Text_Ferry_Ask3, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest4
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_DEPTHS_1F, 255, 18, 21
+	waitstate
+	end
+FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate3::
+	msgbox FuchsiaCity_Text_Ferry_GateText3
+	goto FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest4
+FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest4::
+	goto_if_unset FLAG_TOPAZE_ARCHIVE_DONE, FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate4
+	msgbox FuchsiaCity_Text_Ferry_Ask4, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest5
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_ECHO_GARDEN, 255, 12, 23
+	waitstate
+	end
+FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate4::
+	msgbox FuchsiaCity_Text_Ferry_GateText4
+	goto FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest5
+FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest5::
+	goto_if_unset FLAG_TOPAZE_POSTGAME, FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate5
+	msgbox FuchsiaCity_Text_Ferry_Ask5, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest6
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_LAST_DAY_ISLAND, 255, 15, 20
+	waitstate
+	end
+FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate5::
+	msgbox FuchsiaCity_Text_Ferry_GateText5
+	goto FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest6
+FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest6::
+	goto_if_not_defeated TRAINER_PROCHE_ADRIAN, FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate6
+	msgbox FuchsiaCity_Text_Ferry_Ask6, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_EchoFerryman_EventScript_End
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_FRIENDS_CLEARING, 255, 43, 38
+	waitstate
+	end
+FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate6::
+	msgbox FuchsiaCity_Text_Ferry_GateText6
+	goto FuchsiaCity_EventScript_EchoFerryman_EventScript_End
+FuchsiaCity_EventScript_EchoFerryman_EventScript_End::
+	msgbox FuchsiaCity_Text_Ferry_Never
+	release
+	end
+
+FuchsiaCity_EventScript_EchoFerryman_EventScript_Closed::
+	msgbox FuchsiaCity_Text_Ferry_Closed
+	release
+	end

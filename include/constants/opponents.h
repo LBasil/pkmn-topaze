@@ -27,8 +27,8 @@
 #define TRAINER_RS_PSYCHIC_M                      22
 #define TRAINER_RS_PSYCHIC_F                      23
 #define TRAINER_RS_GENTLEMAN                      24
-#define TRAINER_ELITE_FOUR_SIDNEY                 25
-#define TRAINER_ELITE_FOUR_PHOEBE                 26
+#define TRAINER_ZONE_LIGHTHOUSE                 25
+#define TRAINER_ZONE_BEACH                 26
 #define TRAINER_ELDER_BROCK                    27
 #define TRAINER_ELDER_MISTY                     28
 #define TRAINER_ELDER_SURGE                  29
@@ -514,11 +514,11 @@
 #define TRAINER_LASS_JANICE_3                    508
 #define TRAINER_YOUNGSTER_CHAD_4                 509
 #define TRAINER_HIKER_FRANKLIN_2                 510
-#define TRAINER_PKMN_PROF_PROF_OAK               511
-#define TRAINER_PLAYER_BRENDAN                   512
-#define TRAINER_PLAYER_MAY                       513
+#define TRAINER_ZONE_VILLAGE               511
+#define TRAINER_ZONE_GARDEN                   512
+#define TRAINER_ZONE_CAVE                       513
 #define TRAINER_PLAYER_RED                       514
-#define TRAINER_PLAYER_LEAF                      515
+#define TRAINER_ZONE_ISLAND                      515
 #define TRAINER_TEAM_ROCKET_GRUNT_42             516
 #define TRAINER_PSYCHIC_JACLYN                   517
 #define TRAINER_CRUSH_GIRL_SHARON                518
@@ -533,7 +533,7 @@
 #define TRAINER_BIKER_GOON                       527
 #define TRAINER_BIKER_GOON_2                     528
 #define TRAINER_BIKER_GOON_3                     529
-#define TRAINER_BIKER_2                          530
+#define TRAINER_ZONE_CLEARING                          530
 #define TRAINER_BUG_CATCHER_ANTHONY              531
 #define TRAINER_BUG_CATCHER_CHARLIE              532
 #define TRAINER_TWINS_ELI_ANNE_2                 533

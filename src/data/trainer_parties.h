@@ -380,8 +380,68 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RSGentleman[] = {
         .species = SPECIES_MIGHTYENA,
     },
 };
-static const struct TrainerMonNoItemDefaultMoves sParty_EliteFourSidney[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_EliteFourPhoebe[] = {DUMMY_TRAINER_MON};
+// Topaze: zone LIGHTHOUSE (boss KEEPER)
+static const struct TrainerMonItemCustomMoves sParty_ZoneLighthouse[] = {
+    {
+        .iv = 210,
+        .lvl = 52,
+        .species = SPECIES_MAGNETON,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_THUNDERBOLT, MOVE_FLASH_CANNON, MOVE_THUNDER_WAVE, MOVE_PROTECT},
+    },
+    {
+        .iv = 210,
+        .lvl = 53,
+        .species = SPECIES_STARMIE,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_SURF, MOVE_PSYCHIC, MOVE_ICE_BEAM, MOVE_THUNDERBOLT},
+    },
+    {
+        .iv = 210,
+        .lvl = 54,
+        .species = SPECIES_LAPRAS,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_THUNDERBOLT, MOVE_REST},
+    },
+    {
+        .iv = 210,
+        .lvl = 55,
+        .species = SPECIES_JOLTEON,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_THUNDER, MOVE_SHADOW_BALL, MOVE_VOLT_SWITCH, MOVE_ENERGY_BALL},
+    },
+};
+// Topaze: zone BEACH (boss TIDE)
+static const struct TrainerMonItemCustomMoves sParty_ZoneBeach[] = {
+    {
+        .iv = 220,
+        .lvl = 58,
+        .species = SPECIES_KINGLER,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_WATERFALL, MOVE_X_SCISSOR, MOVE_SWORDS_DANCE, MOVE_SUPERPOWER},
+    },
+    {
+        .iv = 220,
+        .lvl = 59,
+        .species = SPECIES_VAPOREON,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_SHADOW_BALL, MOVE_PROTECT},
+    },
+    {
+        .iv = 220,
+        .lvl = 60,
+        .species = SPECIES_GYARADOS,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_WATERFALL, MOVE_CRUNCH, MOVE_EARTHQUAKE, MOVE_DRAGON_DANCE},
+    },
+    {
+        .iv = 220,
+        .lvl = 61,
+        .species = SPECIES_BLASTOISE,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_SCALD, MOVE_ICE_BEAM, MOVE_FLASH_CANNON, MOVE_ROAR},
+    },
+};
 static const struct TrainerMonNoItemDefaultMoves sParty_LeaderRoxanne[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_LeaderBrawly[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_LeaderTateLiza[] = {DUMMY_TRAINER_MON};
@@ -9007,9 +9067,99 @@ static const struct TrainerMonNoItemDefaultMoves sParty_HikerFranklin2[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_PkmnProfProfOak[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_PlayerBrendan[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_PlayerMay[] = {DUMMY_TRAINER_MON};
+// Topaze: zone VILLAGE (boss TOMORROW)
+static const struct TrainerMonItemCustomMoves sParty_ZoneVillage[] = {
+    {
+        .iv = 235,
+        .lvl = 64,
+        .species = SPECIES_MR_MIME,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_PSYCHIC, MOVE_THUNDERBOLT, MOVE_ENERGY_BALL, MOVE_REFLECT},
+    },
+    {
+        .iv = 235,
+        .lvl = 65,
+        .species = SPECIES_HYPNO,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_HYPNOSIS, MOVE_NASTY_PLOT},
+    },
+    {
+        .iv = 235,
+        .lvl = 66,
+        .species = SPECIES_SLOWBRO,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_PSYCHIC, MOVE_SURF, MOVE_ICE_BEAM, MOVE_CALM_MIND},
+    },
+    {
+        .iv = 235,
+        .lvl = 67,
+        .species = SPECIES_ALAKAZAM,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_FOCUS_BLAST, MOVE_CALM_MIND},
+    },
+};
+// Topaze: zone GARDEN (boss GARDENER)
+static const struct TrainerMonItemCustomMoves sParty_ZoneGarden[] = {
+    {
+        .iv = 255,
+        .lvl = 75,
+        .species = SPECIES_VENUSAUR,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_SLEEP_POWDER, MOVE_EARTHQUAKE},
+    },
+    {
+        .iv = 255,
+        .lvl = 76,
+        .species = SPECIES_VILEPLUME,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_SLEEP_POWDER, MOVE_MOONBLAST},
+    },
+    {
+        .iv = 255,
+        .lvl = 77,
+        .species = SPECIES_VICTREEBEL,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_LEAF_STORM, MOVE_SLUDGE_BOMB, MOVE_SWORDS_DANCE, MOVE_POWER_WHIP},
+    },
+    {
+        .iv = 255,
+        .lvl = 78,
+        .species = SPECIES_EXEGGUTOR,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_ENERGY_BALL, MOVE_PSYCHIC, MOVE_SLEEP_POWDER, MOVE_EARTHQUAKE},
+    },
+};
+// Topaze: zone CAVE (boss DEPTH)
+static const struct TrainerMonItemCustomMoves sParty_ZoneCave[] = {
+    {
+        .iv = 245,
+        .lvl = 70,
+        .species = SPECIES_GOLEM,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE, MOVE_STONE_EDGE, MOVE_FIRE_PUNCH},
+    },
+    {
+        .iv = 245,
+        .lvl = 71,
+        .species = SPECIES_RHYDON,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_EARTHQUAKE, MOVE_STONE_EDGE, MOVE_MEGAHORN, MOVE_SWORDS_DANCE},
+    },
+    {
+        .iv = 245,
+        .lvl = 72,
+        .species = SPECIES_ONIX,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_IRON_HEAD, MOVE_ROCK_TOMB},
+    },
+    {
+        .iv = 245,
+        .lvl = 73,
+        .species = SPECIES_AERODACTYL,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_FLY, MOVE_ROOST},
+    },
+};
 // Topaze: BASIL (secret post-game trainer in the CERULEAN CAVE, replaces the old RED slot)
 static const struct TrainerMonNoItemCustomMoves sParty_PlayerRed[] = {
     {
@@ -9049,36 +9199,49 @@ static const struct TrainerMonNoItemCustomMoves sParty_PlayerRed[] = {
         .moves = {MOVE_PSYCHIC, MOVE_AURA_SPHERE, MOVE_ICE_BEAM, MOVE_RECOVER},
     },
 };
-static const struct TrainerMonNoItemDefaultMoves sParty_PlayerLeaf[] = {
+// Topaze: zone ISLAND (boss LAST)
+static const struct TrainerMonItemCustomMoves sParty_ZoneIsland[] = {
     {
         .iv = 255,
-        .lvl = 66,
-        .species = SPECIES_PERSIAN,
+        .lvl = 84,
+        .species = SPECIES_MEWTWO,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_FOCUS_BLAST, MOVE_RECOVER},
     },
     {
         .iv = 255,
-        .lvl = 66,
-        .species = SPECIES_DUGTRIO,
+        .lvl = 85,
+        .species = SPECIES_DRAGONITE,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_OUTRAGE, MOVE_EXTREME_SPEED, MOVE_EARTHQUAKE, MOVE_DRAGON_DANCE},
     },
     {
         .iv = 255,
-        .lvl = 68,
-        .species = SPECIES_NIDOKING,
+        .lvl = 86,
+        .species = SPECIES_SNORLAX,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_BODY_SLAM, MOVE_EARTHQUAKE, MOVE_REST, MOVE_SLEEP_TALK},
     },
     {
         .iv = 255,
-        .lvl = 68,
-        .species = SPECIES_NIDOQUEEN,
+        .lvl = 87,
+        .species = SPECIES_ALAKAZAM,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_FOCUS_BLAST, MOVE_CALM_MIND},
     },
     {
         .iv = 255,
-        .lvl = 70,
-        .species = SPECIES_KANGASKHAN,
+        .lvl = 88,
+        .species = SPECIES_GENGAR,
+        .heldItem = ITEM_KINGS_ROCK,
+        .moves = {MOVE_SHADOW_BALL, MOVE_SLUDGE_BOMB, MOVE_FOCUS_BLAST, MOVE_THUNDERBOLT},
     },
     {
         .iv = 255,
-        .lvl = 72,
-        .species = SPECIES_RHYDON,
+        .lvl = 89,
+        .species = SPECIES_MEW,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_PSYCHIC, MOVE_AURA_SPHERE, MOVE_NASTY_PLOT, MOVE_RECOVER},
     },
 };
 
@@ -9317,7 +9480,51 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BikerGoon3[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Biker2[] = {DUMMY_TRAINER_MON};
+// Topaze: zone CLEARING (boss FRIEND)
+static const struct TrainerMonItemCustomMoves sParty_ZoneClearing[] = {
+    {
+        .iv = 255,
+        .lvl = 86,
+        .species = SPECIES_DRAGONITE,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_OUTRAGE, MOVE_EXTREME_SPEED, MOVE_EARTHQUAKE, MOVE_DRAGON_DANCE},
+    },
+    {
+        .iv = 255,
+        .lvl = 87,
+        .species = SPECIES_ARCANINE,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_EXTREME_SPEED, MOVE_CRUNCH, MOVE_CLOSE_COMBAT},
+    },
+    {
+        .iv = 255,
+        .lvl = 88,
+        .species = SPECIES_BLASTOISE,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_SCALD, MOVE_ICE_BEAM, MOVE_FLASH_CANNON, MOVE_ROAR},
+    },
+    {
+        .iv = 255,
+        .lvl = 89,
+        .species = SPECIES_VENUSAUR,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_SLEEP_POWDER, MOVE_EARTHQUAKE},
+    },
+    {
+        .iv = 255,
+        .lvl = 90,
+        .species = SPECIES_MACHAMP,
+        .heldItem = ITEM_KINGS_ROCK,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_BULLET_PUNCH},
+    },
+    {
+        .iv = 255,
+        .lvl = 91,
+        .species = SPECIES_ALAKAZAM,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_FOCUS_BLAST, MOVE_CALM_MIND},
+    },
+};
 
 static const struct TrainerMonNoItemDefaultMoves sParty_BugCatcherAnthony[] = {
     {

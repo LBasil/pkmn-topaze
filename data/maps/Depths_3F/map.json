@@ -1,0 +1,58 @@
+{
+  "id": "MAP_DEPTHS_3F",
+  "name": "Depths_3F",
+  "layout": "LAYOUT_SIX_ISLAND_ALTERING_CAVE",
+  "music": "MUS_SEVII_CAVE",
+  "region_map_section": "MAPSEC_ALTERING_CAVE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": true,
+  "allow_escaping": true,
+  "allow_running": true,
+  "show_map_name": false,
+  "floor_number": 0,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_MAN",
+      "x": 20,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Depths_3F_EventScript_Boss",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 20,
+      "y": 20,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Depths_3F_EventScript_ReturnFerry",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 18,
+      "y": 22,
+      "elevation": 3,
+      "dest_map": "MAP_DEPTHS_2F",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}
