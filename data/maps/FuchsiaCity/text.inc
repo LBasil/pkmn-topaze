@@ -623,3 +623,15 @@ FuchsiaCity_Text_DuskFerrywoman_Ask10::
 
 FuchsiaCity_Text_DuskFerrywoman_GateText10::
 	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask8::
+	.string "The BALL BOUTIQUE: rare balls for\n"
+	.string "keen collectors. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask5::
+	.string "The BATTLE STALL: small boosts for\n"
+	.string "hard fights. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask11::
+	.string "The BERRY STAND: fresh berries for\n"
+	.string "every need. Visit?$"

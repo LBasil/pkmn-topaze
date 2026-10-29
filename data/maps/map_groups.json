@@ -509,7 +509,10 @@
     "BabyNursery",
     "BarterHouse",
     "DexHall",
-    "Apothecary"
+    "Apothecary",
+    "BallBoutique",
+    "BattleStall",
+    "BerryStand"
   ],
   "gMapGroup_IndoorRoute2": [
     "Route2_ViridianForest_SouthEntrance",
