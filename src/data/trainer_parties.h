@@ -1525,9 +1525,99 @@ static const struct TrainerMonNoItemDefaultMoves sParty_LeaderWattson[] = {DUMMY
 static const struct TrainerMonNoItemDefaultMoves sParty_LeaderFlannery[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_LeaderNorman[] = {DUMMY_TRAINER_MON};
 static const struct TrainerMonNoItemDefaultMoves sParty_LeaderWinona[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_LeaderWallace[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_EliteFourGlacia[] = {DUMMY_TRAINER_MON};
-static const struct TrainerMonNoItemDefaultMoves sParty_EliteFourDrake[] = {DUMMY_TRAINER_MON};
+// Topaze: SECOND (hub du Temps)
+static const struct TrainerMonItemCustomMoves sParty_Trial1[] = {
+    {
+        .iv = 255,
+        .lvl = 60,
+        .species = SPECIES_ALAKAZAM,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_FOCUS_BLAST, MOVE_RECOVER},
+    },
+    {
+        .iv = 255,
+        .lvl = 61,
+        .species = SPECIES_JOLTEON,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_THUNDER, MOVE_SHADOW_BALL, MOVE_VOLT_SWITCH, MOVE_ENERGY_BALL},
+    },
+    {
+        .iv = 255,
+        .lvl = 62,
+        .species = SPECIES_ELECTRODE,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_THUNDERBOLT, MOVE_VOLT_SWITCH, MOVE_THUNDER_WAVE, MOVE_ENERGY_BALL},
+    },
+    {
+        .iv = 255,
+        .lvl = 63,
+        .species = SPECIES_AERODACTYL,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_FLY, MOVE_ROOST},
+    },
+};
+// Topaze: MINUTE (hub du Temps)
+static const struct TrainerMonItemCustomMoves sParty_Trial2[] = {
+    {
+        .iv = 255,
+        .lvl = 65,
+        .species = SPECIES_STARMIE,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_HYDRO_PUMP, MOVE_ICE_BEAM, MOVE_PSYCHIC, MOVE_RECOVER},
+    },
+    {
+        .iv = 255,
+        .lvl = 66,
+        .species = SPECIES_LAPRAS,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_THUNDERBOLT, MOVE_REST},
+    },
+    {
+        .iv = 255,
+        .lvl = 67,
+        .species = SPECIES_GYARADOS,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_WATERFALL, MOVE_CRUNCH, MOVE_EARTHQUAKE, MOVE_DRAGON_DANCE},
+    },
+    {
+        .iv = 255,
+        .lvl = 68,
+        .species = SPECIES_VAPOREON,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_SURF, MOVE_ICE_BEAM, MOVE_SHADOW_BALL, MOVE_PROTECT},
+    },
+};
+// Topaze: HOUR (hub du Temps)
+static const struct TrainerMonItemCustomMoves sParty_Trial3[] = {
+    {
+        .iv = 255,
+        .lvl = 70,
+        .species = SPECIES_SNORLAX,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_BODY_SLAM, MOVE_EARTHQUAKE, MOVE_REST, MOVE_SLEEP_TALK},
+    },
+    {
+        .iv = 255,
+        .lvl = 71,
+        .species = SPECIES_TAUROS,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_ZEN_HEADBUTT, MOVE_ROCK_SLIDE},
+    },
+    {
+        .iv = 255,
+        .lvl = 72,
+        .species = SPECIES_KANGASKHAN,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_DOUBLE_EDGE, MOVE_EARTHQUAKE, MOVE_CRUNCH, MOVE_FIRE_PUNCH},
+    },
+    {
+        .iv = 255,
+        .lvl = 73,
+        .species = SPECIES_PORYGON,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_TRI_ATTACK, MOVE_ICE_BEAM, MOVE_THUNDERBOLT, MOVE_RECOVER},
+    },
+};
 
 // Start of actual trainer data
 static const struct TrainerMonNoItemDefaultMoves sParty_YoungsterBen[] = {
@@ -2848,16 +2938,35 @@ static const struct TrainerMonNoItemDefaultMoves sParty_SuperNerd2[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_SuperNerd3[] = {
+// Topaze: DAY (hub du Temps)
+static const struct TrainerMonItemCustomMoves sParty_Trial4[] = {
     {
-        .iv = 0,
-        .lvl = 27,
-        .species = SPECIES_MAGNEMITE,
+        .iv = 255,
+        .lvl = 75,
+        .species = SPECIES_ARCANINE,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_FLARE_BLITZ, MOVE_EXTREME_SPEED, MOVE_CRUNCH, MOVE_CLOSE_COMBAT},
     },
     {
-        .iv = 0,
-        .lvl = 27,
-        .species = SPECIES_VOLTORB,
+        .iv = 255,
+        .lvl = 76,
+        .species = SPECIES_GENGAR,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_SHADOW_BALL, MOVE_SLUDGE_BOMB, MOVE_FOCUS_BLAST, MOVE_THUNDERBOLT},
+    },
+    {
+        .iv = 255,
+        .lvl = 77,
+        .species = SPECIES_MACHAMP,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_CLOSE_COMBAT, MOVE_STONE_EDGE, MOVE_EARTHQUAKE, MOVE_BULLET_PUNCH},
+    },
+    {
+        .iv = 255,
+        .lvl = 78,
+        .species = SPECIES_VENUSAUR,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_GIGA_DRAIN, MOVE_SLUDGE_BOMB, MOVE_SLEEP_POWDER, MOVE_EARTHQUAKE},
     },
 };
 
@@ -4203,21 +4312,35 @@ static const struct TrainerMonNoItemDefaultMoves sParty_CueBallCorey[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_CueBallChase[] = {
+// Topaze: YEAR (hub du Temps)
+static const struct TrainerMonItemCustomMoves sParty_Trial5[] = {
     {
-        .iv = 0,
-        .lvl = 35,
-        .species = SPECIES_TENTACOOL,
+        .iv = 255,
+        .lvl = 80,
+        .species = SPECIES_BLASTOISE,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_SCALD, MOVE_ICE_BEAM, MOVE_FLASH_CANNON, MOVE_ROAR},
     },
     {
-        .iv = 0,
-        .lvl = 35,
-        .species = SPECIES_TENTACOOL,
+        .iv = 255,
+        .lvl = 81,
+        .species = SPECIES_CHARIZARD,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_FLAMETHROWER, MOVE_AIR_SLASH, MOVE_DRAGON_PULSE, MOVE_ROOST},
     },
     {
-        .iv = 0,
-        .lvl = 35,
-        .species = SPECIES_TENTACRUEL,
+        .iv = 255,
+        .lvl = 82,
+        .species = SPECIES_ZAPDOS,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_THUNDER, MOVE_HURRICANE, MOVE_HEAT_WAVE, MOVE_ROOST},
+    },
+    {
+        .iv = 255,
+        .lvl = 83,
+        .species = SPECIES_DRAGONITE,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_OUTRAGE, MOVE_EXTREME_SPEED, MOVE_EARTHQUAKE, MOVE_DRAGON_DANCE},
     },
 };
 
@@ -4306,7 +4429,51 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GamerStan[] = {
     },
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Gamer1[] = {DUMMY_TRAINER_MON};
+// Topaze: KING (hub du Temps)
+static const struct TrainerMonItemCustomMoves sParty_RouteKing[] = {
+    {
+        .iv = 230,
+        .lvl = 46,
+        .species = SPECIES_PIDGEOT,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_BRAVE_BIRD, MOVE_HURRICANE, MOVE_ROOST, MOVE_U_TURN},
+    },
+    {
+        .iv = 230,
+        .lvl = 46,
+        .species = SPECIES_RAICHU,
+        .heldItem = ITEM_SCOPE_LENS,
+        .moves = {MOVE_THUNDERBOLT, MOVE_FOCUS_BLAST, MOVE_SURF, MOVE_NASTY_PLOT},
+    },
+    {
+        .iv = 230,
+        .lvl = 47,
+        .species = SPECIES_FEAROW,
+        .heldItem = ITEM_FOCUS_BAND,
+        .moves = {MOVE_DRILL_PECK, MOVE_DOUBLE_EDGE, MOVE_U_TURN, MOVE_ROOST},
+    },
+    {
+        .iv = 230,
+        .lvl = 47,
+        .species = SPECIES_NIDOKING,
+        .heldItem = ITEM_QUICK_CLAW,
+        .moves = {MOVE_EARTH_POWER, MOVE_SLUDGE_WAVE, MOVE_ICE_BEAM, MOVE_THUNDERBOLT},
+    },
+    {
+        .iv = 230,
+        .lvl = 48,
+        .species = SPECIES_NIDOQUEEN,
+        .heldItem = ITEM_KINGS_ROCK,
+        .moves = {MOVE_EARTH_POWER, MOVE_SLUDGE_WAVE, MOVE_ICE_BEAM, MOVE_THUNDERBOLT},
+    },
+    {
+        .iv = 230,
+        .lvl = 48,
+        .species = SPECIES_SNORLAX,
+        .heldItem = ITEM_LEFTOVERS,
+        .moves = {MOVE_BODY_SLAM, MOVE_EARTHQUAKE, MOVE_REST, MOVE_SLEEP_TALK},
+    },
+};
 
 static const struct TrainerMonNoItemDefaultMoves sParty_GamerRich[] = {
     {

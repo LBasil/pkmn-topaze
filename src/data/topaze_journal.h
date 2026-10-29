@@ -308,6 +308,14 @@ static const u8 sJN_146[] = _("THE STOPPED CLOCK");
 static const u8 sJH_146[] = _("SAFFRON: a man asks you to read\nthe clocks on ROUTES 1, 11 and 22.");
 static const u8 sJN_147[] = _("THE ECHO ARCHIVE");
 static const u8 sJH_147[] = _("PALLET: a woman keeps record\nof the 7 ECHOES. Close them all.");
+static const u8 sJN_148[] = _("THE TRIAL TOWER");
+static const u8 sJH_148[] = _("SAFFRON: beat 5 rivals in a row,\nno healing. Needs 8 BADGES.");
+static const u8 sJN_149[] = _("A LETTER FROM TOMORROW");
+static const u8 sJH_149[] = _("SAFFRON POST OFFICE: read the 3\nclocks, then ask for your mail.");
+static const u8 sJN_150[] = _("LOST AND FOUND");
+static const u8 sJH_150[] = _("SAFFRON: find 3 lost items hidden\non ROUTES 4, 10 and 14.");
+static const u8 sJN_151[] = _("THE ROUTE TOURNAMENT");
+static const u8 sJH_151[] = _("SAFFRON: beat a trainer on 10\nroutes, then face the KING.");
 
 static const struct TopazeJournalSection sJournalSections[] = {
     { sJS_0, 0 },
@@ -473,4 +481,8 @@ static const struct TopazeJournalEntry sJournalEntries[] = {
     { 2, 2, 1, TRAINER_ECHO_RIVAL, 0, 0, 4, 0, 0, 0, sJN_145, sJH_145 },
     { 2, 0, 1, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 2, 0, 0, 0, sJN_146, sJH_146 },
     { 7, 0, 4, FLAG_TOPAZE_ARCHIVE_DONE, 0, 0, 0, 0, 0, 0, sJN_147, sJH_147 },
+    { 2, 2, 1, TRAINER_TRIAL_5, 0, 0, 8, 0, 0, 0, sJN_148, sJH_148 },
+    { 2, 0, 1, FLAG_TOPAZE_LETTER, 0, 0, 2, 0, 0, 0, sJN_149, sJH_149 },
+    { 2, 0, 1, FLAG_TOPAZE_LOST_DONE, 0, 0, 2, 0, 0, 0, sJN_150, sJH_150 },
+    { 2, 2, 1, TRAINER_ROUTE_KING, 0, 0, 3, 0, 0, 0, sJN_151, sJH_151 },
 };

@@ -88,9 +88,9 @@
 #define TRAINER_ELDER_SABRINA                   83
 #define TRAINER_ELDER_BLAINE                     84
 #define TRAINER_ELDER_GIOVANNI                     85
-#define TRAINER_LEADER_WALLACE                    86
-#define TRAINER_ELITE_FOUR_GLACIA                 87
-#define TRAINER_ELITE_FOUR_DRAKE                  88
+#define TRAINER_TRIAL_1                    86
+#define TRAINER_TRIAL_2                 87
+#define TRAINER_TRIAL_3                  88
 // Actual FRLG trainers start here
 #define TRAINER_YOUNGSTER_BEN                     89
 #define TRAINER_YOUNGSTER_CALVIN                  90
@@ -179,7 +179,7 @@
 #define TRAINER_SUPER_NERD_LESLIE                173
 #define TRAINER_SUPER_NERD_1                     174
 #define TRAINER_SUPER_NERD_2                     175
-#define TRAINER_SUPER_NERD_3                     176
+#define TRAINER_TRIAL_4                     176
 #define TRAINER_SUPER_NERD_ERIK                  177
 #define TRAINER_SUPER_NERD_AVERY                 178
 #define TRAINER_SUPER_NERD_DEREK                 179
@@ -260,13 +260,13 @@
 #define TRAINER_CUE_BALL_ZEEK                    254
 #define TRAINER_CUE_BALL_JAMAL                   255
 #define TRAINER_CUE_BALL_COREY                   256
-#define TRAINER_CUE_BALL_CHASE                   257
+#define TRAINER_TRIAL_5                   257
 #define TRAINER_GAMER_HUGO                       258
 #define TRAINER_GAMER_JASPER                     259
 #define TRAINER_GAMER_DIRK                       260
 #define TRAINER_GAMER_DARIAN                     261
 #define TRAINER_GAMER_STAN                       262
-#define TRAINER_GAMER_1                          263
+#define TRAINER_ROUTE_KING                          263
 #define TRAINER_GAMER_RICH                       264
 #define TRAINER_BEAUTY_BRIDGET                   265
 #define TRAINER_BEAUTY_TAMIA                     266

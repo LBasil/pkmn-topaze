@@ -1,6 +1,45 @@
 SaffronCity_HomeN_MapScripts::
 	.byte 0
 
-SaffronCity_HomeN_EventScript_Resident::
-	msgbox SaffronCity_HomeN_Text_Resident, MSGBOX_NPC
+SaffronCity_HomeN_EventScript_Guide::
+	msgbox SaffronCity_HomeN_Text_Guide, MSGBOX_NPC
+	end
+
+SaffronCity_HomeN_EventScript_Plate0::
+	goto_if_unset FLAG_ECHO_BEAST_DONE, SaffronCity_HomeN_EventScript_Blank
+	msgbox SaffronCity_HomeN_Text_Plate0, MSGBOX_SIGN
+	end
+
+SaffronCity_HomeN_EventScript_Plate1::
+	goto_if_unset FLAG_ECHO_BEAST2_DONE, SaffronCity_HomeN_EventScript_Blank
+	msgbox SaffronCity_HomeN_Text_Plate1, MSGBOX_SIGN
+	end
+
+SaffronCity_HomeN_EventScript_Plate2::
+	goto_if_unset FLAG_ECHO_BEAST3_DONE, SaffronCity_HomeN_EventScript_Blank
+	msgbox SaffronCity_HomeN_Text_Plate2, MSGBOX_SIGN
+	end
+
+SaffronCity_HomeN_EventScript_Plate3::
+	goto_if_unset FLAG_ECHO_BEAST4_DONE, SaffronCity_HomeN_EventScript_Blank
+	msgbox SaffronCity_HomeN_Text_Plate3, MSGBOX_SIGN
+	end
+
+SaffronCity_HomeN_EventScript_Plate4::
+	goto_if_unset FLAG_ECHO_BEAST5_DONE, SaffronCity_HomeN_EventScript_Blank
+	msgbox SaffronCity_HomeN_Text_Plate4, MSGBOX_SIGN
+	end
+
+SaffronCity_HomeN_EventScript_Plate5::
+	goto_if_unset FLAG_ECHO_BEAST6_DONE, SaffronCity_HomeN_EventScript_Blank
+	msgbox SaffronCity_HomeN_Text_Plate5, MSGBOX_SIGN
+	end
+
+SaffronCity_HomeN_EventScript_Plate6::
+	goto_if_unset FLAG_DONE_ECHO_CELEBI, SaffronCity_HomeN_EventScript_Blank
+	msgbox SaffronCity_HomeN_Text_Plate6, MSGBOX_SIGN
+	end
+
+SaffronCity_HomeN_EventScript_Blank::
+	msgbox SaffronCity_HomeN_Text_Blank, MSGBOX_SIGN
 	end

@@ -181,6 +181,16 @@
       "flag": "FLAG_HIDDEN_ITEM_ROUTE4_RAZZ_BERRY",
       "quantity": 1,
       "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 18,
+      "y": 54,
+      "elevation": 3,
+      "item": "ITEM_SCOPE_LENS",
+      "flag": "FLAG_TOPAZE_LOST_1",
+      "quantity": 1,
+      "underfoot": false
     }
   ]
 }

@@ -197,6 +197,11 @@ add("SIDE QUESTS", T, "TRAINER_ECHO_RIVAL", 0, "THE RIVAL FROM YESTERDAY", "ROUT
 add("SIDE QUESTS", F, "FLAG_TOPAZE_CLOCK_DONE", 0, "THE STOPPED CLOCK", "SAFFRON: a man asks you to read\\nthe clocks on ROUTES 1, 11 and 22.", B(2))
 add("POST-GAME", F, "FLAG_TOPAZE_ARCHIVE_DONE", 0, "THE ECHO ARCHIVE", "PALLET: a woman keeps record\\nof the 7 ECHOES. Close them all.", PV())
 
+# ---- HUB DU TEMPS (Safrania)
+add("SIDE QUESTS", T, "TRAINER_TRIAL_5", 0, "THE TRIAL TOWER", "SAFFRON: beat 5 rivals in a row,\\nno healing. Needs 8 BADGES.", B(8))
+add("SIDE QUESTS", F, "FLAG_TOPAZE_LETTER", 0, "A LETTER FROM TOMORROW", "SAFFRON POST OFFICE: read the 3\\nclocks, then ask for your mail.", B(2))
+add("SIDE QUESTS", F, "FLAG_TOPAZE_LOST_DONE", 0, "LOST AND FOUND", "SAFFRON: find 3 lost items hidden\\non ROUTES 4, 10 and 14.", B(2))
+add("SIDE QUESTS", T, "TRAINER_ROUTE_KING", 0, "THE ROUTE TOURNAMENT", "SAFFRON: beat a trainer on 10\\nroutes, then face the KING.", B(3))
 assert len(SECTIONS) <= 12
 for e in E:
     lines = e[5].split("\\n")

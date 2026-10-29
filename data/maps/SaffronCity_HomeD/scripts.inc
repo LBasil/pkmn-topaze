@@ -1,6 +1,37 @@
 SaffronCity_HomeD_MapScripts::
 	.byte 0
 
-SaffronCity_HomeD_EventScript_Resident::
-	msgbox SaffronCity_HomeD_Text_Resident, MSGBOX_NPC
+SaffronCity_HomeD_EventScript_Registrar::
+	lock
+	faceplayer
+	goto_if_defeated TRAINER_ROUTE_KING, SaffronCity_HomeD_EventScript_Done
+	goto_if_not_defeated TRAINER_YOUNGSTER_BEN, SaffronCity_HomeD_EventScript_Ask
+	goto_if_not_defeated TRAINER_LASS_CRISSY, SaffronCity_HomeD_EventScript_Ask
+	goto_if_not_defeated TRAINER_YOUNGSTER_TIMMY, SaffronCity_HomeD_EventScript_Ask
+	goto_if_not_defeated TRAINER_YOUNGSTER_JOEY, SaffronCity_HomeD_EventScript_Ask
+	goto_if_not_defeated TRAINER_BUG_CATCHER_KEIGO, SaffronCity_HomeD_EventScript_Ask
+	goto_if_not_defeated TRAINER_YOUNGSTER_EDDIE, SaffronCity_HomeD_EventScript_Ask
+	goto_if_not_defeated TRAINER_BUG_CATCHER_BRENT, SaffronCity_HomeD_EventScript_Ask
+	goto_if_not_defeated TRAINER_PICNICKER_HEIDI, SaffronCity_HomeD_EventScript_Ask
+	goto_if_not_defeated TRAINER_LASS_PAIGE, SaffronCity_HomeD_EventScript_Ask
+	goto_if_not_defeated TRAINER_FISHERMAN_NED, SaffronCity_HomeD_EventScript_Ask
+	msgbox SaffronCity_HomeD_Text_Ready
+	trainerbattle_no_intro TRAINER_ROUTE_KING, SaffronCity_HomeD_Text_Beaten
+	checkitemspace ITEM_RARE_CANDY, 3
+	goto_if_eq VAR_RESULT, FALSE, SaffronCity_HomeD_EventScript_NoRoom
+	msgbox SaffronCity_HomeD_Text_Prize
+	giveitem ITEM_RARE_CANDY, 3
+	release
+	end
+SaffronCity_HomeD_EventScript_Ask::
+	msgbox SaffronCity_HomeD_Text_Ask
+	release
+	end
+SaffronCity_HomeD_EventScript_Done::
+	msgbox SaffronCity_HomeD_Text_Done
+	release
+	end
+SaffronCity_HomeD_EventScript_NoRoom::
+	msgbox SaffronCity_HomeD_Text_NoRoom
+	release
 	end
