@@ -828,3 +828,45 @@ FuchsiaCity_Text_DuskFerrywoman_Ask28::
 
 FuchsiaCity_Text_DuskFerrywoman_GateText28::
 	.string "Come back with all 8 BADGES.$"
+
+FuchsiaCity_Text_Apprentice_Ask15::
+	.string "The TUMBLEWEED TRAIL: dry wind,\n"
+	.string "rolling bushes. Visit?$"
+
+FuchsiaCity_Text_Apprentice_GateText15::
+	.string "Come back with 2 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask24::
+	.string "The MARBLE HALL: a quiet gallery\n"
+	.string "open to the sky. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText24::
+	.string "Come back with 3 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask21::
+	.string "The BONEYARD RISE: old bones, old\n"
+	.string "stories. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText21::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask29::
+	.string "The LAVA LAGOON: red water, hot\n"
+	.string "air. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText29::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask25::
+	.string "The SLEEPY HOLLOW: naps are\n"
+	.string "mandatory. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText25::
+	.string "Come back with 2 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask30::
+	.string "The CHAMPIONS PATH: only the best\n"
+	.string "walk here. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText30::
+	.string "Come back with all 8 BADGES.$"

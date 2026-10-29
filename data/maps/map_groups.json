@@ -291,7 +291,13 @@
     "CopperCanyon",
     "GlimmerBay",
     "IronForest",
-    "MythicSpring"
+    "MythicSpring",
+    "TumbleweedTrail",
+    "MarbleHall",
+    "BoneyardRise",
+    "LavaLagoon",
+    "DozyDell",
+    "ChampionsPath"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
