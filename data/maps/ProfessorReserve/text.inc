@@ -28,3 +28,7 @@ ProfessorReserve_Text_Quest0_MissT::
 ProfessorReserve_Text_Quest0_NoRoomT::
 	.string "Your BAG is full. Make room, then\n"
 	.string "come back.$"
+
+ProfessorReserve_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

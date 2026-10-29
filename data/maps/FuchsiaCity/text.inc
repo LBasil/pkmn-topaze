@@ -532,3 +532,31 @@ FuchsiaCity_Text_SeasonsFerryman_Ask5::
 FuchsiaCity_Text_SeasonsFerryman_GateText5::
 	.string "Come back with all 8 BADGES.$"
 
+
+FuchsiaCity_Text_ScribeFerryman_Ask1::
+	.string "The THORN THICKET: bugs of every\n"
+	.string "kind hide here. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText1::
+	.string "Come back with 4 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask2::
+	.string "The KINDLE TRAIL: a training path\n"
+	.string "for fighters. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText2::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask6::
+	.string "The RUIN HOLLOW: old stones, older\n"
+	.string "secrets. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText6::
+	.string "Come back with 7 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask7::
+	.string "The TIDE CAVE: deep water, strange\n"
+	.string "lights. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText7::
+	.string "Come back with 6 BADGES.$"

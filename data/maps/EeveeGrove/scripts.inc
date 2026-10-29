@@ -54,3 +54,62 @@ EeveeGrove_EventScript_Quest0_NoRoom::
 	release
 	end
 
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+EeveeGrove_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_EEVEEGROVE_0, EeveeGrove_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_FIRE_STONE, 1
+	goto_if_eq VAR_RESULT, FALSE, EeveeGrove_EventScript_TopazeFind0_Full
+	giveitem ITEM_FIRE_STONE, 1
+	setflag FLAG_TOPAZE_FIND_EEVEEGROVE_0
+	release
+	end
+
+EeveeGrove_EventScript_TopazeFind0_Done::
+	release
+	end
+
+EeveeGrove_EventScript_TopazeFind0_Full::
+	msgbox EeveeGrove_Text_TopazeFindFull
+	release
+	end
+
+EeveeGrove_EventScript_TopazeFind1::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_EEVEEGROVE_1, EeveeGrove_EventScript_TopazeFind1_Done
+	checkitemspace ITEM_WATER_STONE, 1
+	goto_if_eq VAR_RESULT, FALSE, EeveeGrove_EventScript_TopazeFind1_Full
+	giveitem ITEM_WATER_STONE, 1
+	setflag FLAG_TOPAZE_FIND_EEVEEGROVE_1
+	release
+	end
+
+EeveeGrove_EventScript_TopazeFind1_Done::
+	release
+	end
+
+EeveeGrove_EventScript_TopazeFind1_Full::
+	msgbox EeveeGrove_Text_TopazeFindFull
+	release
+	end
+
+EeveeGrove_EventScript_TopazeFind2::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_EEVEEGROVE_2, EeveeGrove_EventScript_TopazeFind2_Done
+	checkitemspace ITEM_THUNDER_STONE, 1
+	goto_if_eq VAR_RESULT, FALSE, EeveeGrove_EventScript_TopazeFind2_Full
+	giveitem ITEM_THUNDER_STONE, 1
+	setflag FLAG_TOPAZE_FIND_EEVEEGROVE_2
+	release
+	end
+
+EeveeGrove_EventScript_TopazeFind2_Done::
+	release
+	end
+
+EeveeGrove_EventScript_TopazeFind2_Full::
+	msgbox EeveeGrove_Text_TopazeFindFull
+	release
+	end
+

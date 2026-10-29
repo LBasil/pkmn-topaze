@@ -260,7 +260,8 @@
     "FrostHollow",
     "EmberRim",
     "NocturneWood",
-    "EeveeGrove"
+    "EeveeGrove",
+    "ThornThicket"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
@@ -343,7 +344,10 @@
     "SunriseMeadow",
     "AshenMine",
     "ShellCoast",
-    "ProfessorReserve"
+    "ProfessorReserve",
+    "KindleTrail",
+    "RuinHollow",
+    "TideCave"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",
