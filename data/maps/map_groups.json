@@ -261,7 +261,8 @@
     "EmberRim",
     "NocturneWood",
     "EeveeGrove",
-    "ThornThicket"
+    "ThornThicket",
+    "MeadowPath"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
@@ -347,7 +348,11 @@
     "ProfessorReserve",
     "KindleTrail",
     "RuinHollow",
-    "TideCave"
+    "TideCave",
+    "SunkenBeach",
+    "SoulPillar",
+    "MirrorLabyrinth",
+    "OutcastShore"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",

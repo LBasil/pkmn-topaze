@@ -560,3 +560,38 @@ FuchsiaCity_Text_DuskFerrywoman_Ask7::
 
 FuchsiaCity_Text_DuskFerrywoman_GateText7::
 	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask6::
+	.string "The SUNKEN BEACH: shells, sand and\n"
+	.string "early water types. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText6::
+	.string "Come back with 2 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask8::
+	.string "The SOUL PILLAR: the quiet place of\n"
+	.string "remembrance. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText8::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask3::
+	.string "The MIRROR BRIDGE: calm water, calm\n"
+	.string "reflections. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText3::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_Apprentice_Ask3::
+	.string "The MEADOW PATH: a calm start for\n"
+	.string "new collectors. Visit?$"
+
+FuchsiaCity_Text_Apprentice_GateText3::
+	.string "Come back with 1 BADGE.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask9::
+	.string "The OUTCAST SHORE: wild waters,\n"
+	.string "wild POKéMON. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText9::
+	.string "Come back with 7 BADGES.$"
