@@ -663,3 +663,45 @@ FuchsiaCity_Text_DuskFerrywoman_Ask12::
 
 FuchsiaCity_Text_DuskFerrywoman_GateText12::
 	.string "Come back with 2 BADGES.$"
+
+FuchsiaCity_Text_Apprentice_Ask6::
+	.string "The DROWSY DOWN: sleepy hills full\n"
+	.string "of dozing POKéMON. Visit?$"
+
+FuchsiaCity_Text_Apprentice_GateText6::
+	.string "Come back with 4 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask7::
+	.string "The BLOSSOM CREST: a hill covered\n"
+	.string "in flowers. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText7::
+	.string "Come back with 3 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask10::
+	.string "The THUNDER RIDGE: static in the\n"
+	.string "air, storms on the horizon. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText10::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask13::
+	.string "The FANG VALLEY: fierce hunters and\n"
+	.string "sharp teeth. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText13::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask8::
+	.string "The LUCKY CLOVER: normal types, big\n"
+	.string "hearts. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText8::
+	.string "Come back with 2 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask14::
+	.string "The SILENT HOLLOW: no wind, no\n"
+	.string "sound. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText14::
+	.string "Come back with 7 BADGES.$"

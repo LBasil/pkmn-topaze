@@ -360,7 +360,13 @@
     "BreezeHill",
     "StarlitSteppe",
     "SaltFlats",
-    "MistLake"
+    "MistLake",
+    "DrowsyDown",
+    "BlossomCrest",
+    "ThunderRidge",
+    "FangValley",
+    "LuckyClover",
+    "SilentHollow"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",

@@ -10,6 +10,8 @@ _fl = rd('include/constants/flags.h')
 _used = set(re.findall(r'FLAG_0x[0-9A-F]+', ''.join(l for l in _fl.split('\n') if not re.match(r'#define FLAG_0x[0-9A-F]+\s+0x', l))))
 _pool = [('FLAG_0x%X' % i) for i in list(range(0x300, 0x3D8)) + list(range(0x4CF, 0x500)) + list(range(0x220, 0x230)) if ('FLAG_0x%X' % i) not in _used]
 _pool += ['FLAG_HIDDEN_ITEM_UNUSED_%s' % h for h in ('0x07','0x10','0x28','0x2B','0x2C','0x2D','0x2E','0x7C') if re.search(r'FLAG_HIDDEN_ITEM_UNUSED_%s\b' % h, _fl)]
+_pool += [('FLAG_0x%X' % i) for i in (0x23E,0x242,0x24C,0x25A,0x25C,0x25D,0x25F,0x260,0x261,0x262,0x277,0x279,0x28E,0x28F,0x299,0x2A4,0x2E5,0x2E6,0x2E7,0x2E8,0x2E9,0x2EA,0x2EB) if ('FLAG_0x%X' % i) not in _used and re.search(r'#define FLAG_0x%X\s+0x' % i, _fl)]
+_tgt = set(re.findall(r'#define FLAG_TOPAZE_\w+\s+(\S+)', _fl)); _pool = [f for f in _pool if f not in _tgt]
 _new = []
 def flag(name):
     a = _pool.pop(0); _new.append('#define FLAG_TOPAZE_%s %s\n' % (name, a)); return 'FLAG_TOPAZE_' + name
