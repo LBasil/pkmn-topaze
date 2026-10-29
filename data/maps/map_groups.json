@@ -303,7 +303,13 @@
     "MeteorField",
     "VenomSwamp",
     "WindmillFlats",
-    "RoyalGarden"
+    "RoyalGarden",
+    "LilyLagoon",
+    "PrairieDusk",
+    "CoralTerrace",
+    "SpireYard",
+    "QuartzQuarry",
+    "EdgeOfTheWorld"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",

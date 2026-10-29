@@ -912,3 +912,45 @@ FuchsiaCity_Text_DuskFerrywoman_Ask32::
 
 FuchsiaCity_Text_DuskFerrywoman_GateText32::
 	.string "Come back with all 8 BADGES.$"
+
+FuchsiaCity_Text_Apprentice_Ask17::
+	.string "The LILY LAGOON: pads to hop and\n"
+	.string "tiny frogs. Visit?$"
+
+FuchsiaCity_Text_Apprentice_GateText17::
+	.string "Come back with 1 BADGE.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask28::
+	.string "The PRAIRIE DUSK: tall grass,\n"
+	.string "orange sky. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText28::
+	.string "Come back with 2 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask23::
+	.string "The CORAL TERRACE: stone steps\n"
+	.string "built by the tide. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText23::
+	.string "Come back with 4 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask33::
+	.string "The SPIRE YARD: a graveyard around\n"
+	.string "a tall tower. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText33::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask29::
+	.string "The QUARTZ QUARRY: pale rock and\n"
+	.string "loud hammers. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText29::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask34::
+	.string "The EDGE OF THE WORLD: the last\n"
+	.string "cliff. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText34::
+	.string "Come back with all 8 BADGES.$"
