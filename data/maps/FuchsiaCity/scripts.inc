@@ -740,3 +740,62 @@ FuchsiaCity_EventScript_ScribeFerryman_EventScript_Closed::
 	msgbox FuchsiaCity_Text_ScribeFerryman_Closed
 	release
 	end
+
+@ Topaze: passeur SeasonsFerryman
+FuchsiaCity_EventScript_SeasonsFerryman::
+	lock
+	faceplayer
+	goto_if_unset FLAG_TOPAZE_CLOCK_DONE, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Closed
+	msgbox FuchsiaCity_Text_SeasonsFerryman_Hello
+	goto_if_unset FLAG_BADGE06_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate0
+	msgbox FuchsiaCity_Text_SeasonsFerryman_Ask0, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest1
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_FROST_HOLLOW, 255, 12, 20
+	waitstate
+	end
+FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate0::
+	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText0
+	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest1
+FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest1::
+	goto_if_unset FLAG_BADGE06_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate1
+	msgbox FuchsiaCity_Text_SeasonsFerryman_Ask1, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest2
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_EMBER_RIM, 255, 5, 18
+	waitstate
+	end
+FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate1::
+	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText1
+	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest2
+FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest2::
+	goto_if_unset FLAG_BADGE03_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate2
+	msgbox FuchsiaCity_Text_SeasonsFerryman_Ask2, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest3
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_NOCTURNE_WOOD, 255, 23, 36
+	waitstate
+	end
+FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate2::
+	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText2
+	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest3
+FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest3::
+	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate3
+	msgbox FuchsiaCity_Text_SeasonsFerryman_Ask3, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_End
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_SHELL_COAST, 255, 12, 36
+	waitstate
+	end
+FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate3::
+	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText3
+	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_End
+FuchsiaCity_EventScript_SeasonsFerryman_EventScript_End::
+	msgbox FuchsiaCity_Text_SeasonsFerryman_Never
+	release
+	end
+
+FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Closed::
+	msgbox FuchsiaCity_Text_SeasonsFerryman_Closed
+	release
+	end

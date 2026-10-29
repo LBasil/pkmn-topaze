@@ -466,3 +466,42 @@ FuchsiaCity_Text_ScribeFerryman_Never::
 FuchsiaCity_Text_ScribeFerryman_Ask0::
 	.string "The HALL OF THE POKeDEX: rewards\n"
 	.string "for every milestone. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_Hello::
+	.string "Each season has its own shore,\n"
+	.string "{PLAYER}.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Closed::
+	.string "The seasons are frozen. Come back\n"
+	.string "when the clocks make sense.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Never::
+	.string "Another time, then.$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText0::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask0::
+	.string "The FROST HOLLOW: ice, silence and\n"
+	.string "cold POKeMON. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText1::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask1::
+	.string "The EMBER RIM: lava glows below the\n"
+	.string "rock. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText2::
+	.string "Come back with 3 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask2::
+	.string "The NOCTURNE WOOD: the owls sing\n"
+	.string "all day long. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText3::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask3::
+	.string "The SHELL COAST: the tide leaves\n"
+	.string "treasure behind. Visit?$"

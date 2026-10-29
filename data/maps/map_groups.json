@@ -256,7 +256,10 @@
     "DragonPerch",
     "ZenGarden",
     "GiantsPlain",
-    "DuneSea"
+    "DuneSea",
+    "FrostHollow",
+    "EmberRim",
+    "NocturneWood"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
@@ -337,7 +340,8 @@
     "HoennWestReserve",
     "HoennEastReserve",
     "SunriseMeadow",
-    "AshenMine"
+    "AshenMine",
+    "ShellCoast"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",

@@ -418,6 +418,14 @@ static const u8 sJN_201[] = _("THE FORTUNE SPOON");
 static const u8 sJH_201[] = _("SAFFRON: bring a TWISTED SPOON.");
 static const u8 sJN_202[] = _("THE POKeDEX HALL");
 static const u8 sJH_202[] = _("Ferry from AMETHIOLITE: rewards at\n25, 50, 100... species caught.");
+static const u8 sJN_203[] = _("THE ICE STUDY");
+static const u8 sJH_203[] = _("FROST HOLLOW: bring 2 BURN HEALS.");
+static const u8 sJN_204[] = _("A COOL CHANGE");
+static const u8 sJH_204[] = _("EMBER RIM: bring 2 ICE HEALS.");
+static const u8 sJN_205[] = _("THE WOOD BITES");
+static const u8 sJH_205[] = _("NOCTURNE WOOD: bring 3 ANTIDOTES.");
+static const u8 sJN_206[] = _("A COLD DRINK");
+static const u8 sJH_206[] = _("SHELL COAST: bring a LEMONADE.");
 
 static const struct TopazeJournalSection sJournalSections[] = {
     { sJS_0, 0 },
@@ -638,4 +646,8 @@ static const struct TopazeJournalEntry sJournalEntries[] = {
     { 2, 0, 0, FLAG_TOPAZE_TQ_CINNABARISLAND, 0, 0, 0, 0, 0, 0, sJN_200, sJH_200 },
     { 2, 0, 0, FLAG_TOPAZE_TQ_SAFFRONCITY, 0, 0, 0, 0, 0, 0, sJN_201, sJH_201 },
     { 2, 0, 2, FLAG_TOPAZE_DEXHALL_350, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_202, sJH_202 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_FROSTHOLLOW, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_203, sJH_203 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_EMBERRIM, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_204, sJH_204 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_NOCTURNEWOOD, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_205, sJH_205 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_SHELLCOAST, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_206, sJH_206 },
 };
