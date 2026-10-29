@@ -329,6 +329,7 @@ FuchsiaCity_EventScript_ProcheThibault_NoRoom::
 FuchsiaCity_EventScript_EchoFerryman::
 	lock
 	faceplayer
+	setvar VAR_0x8004, 0
 	goto_if_unset FLAG_TOPAZE_CLOCK_DONE, FuchsiaCity_EventScript_EchoFerryman_EventScript_Closed
 	msgbox FuchsiaCity_Text_Ferry_Hello
 	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate0
@@ -342,7 +343,7 @@ FuchsiaCity_EventScript_EchoFerryman::
 	waitstate
 	end
 FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate0::
-	msgbox FuchsiaCity_Text_Ferry_GateText0
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest1
 FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest1::
 	goto_if_unset FLAG_BADGE06_GET, FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate1
@@ -356,7 +357,7 @@ FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest1::
 	waitstate
 	end
 FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate1::
-	msgbox FuchsiaCity_Text_Ferry_GateText1
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest2
 FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest2::
 	goto_if_unset FLAG_BADGE07_GET, FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate2
@@ -370,7 +371,7 @@ FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest2::
 	waitstate
 	end
 FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate2::
-	msgbox FuchsiaCity_Text_Ferry_GateText2
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest3
 FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest3::
 	goto_if_unset FLAG_BADGE08_GET, FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate3
@@ -384,7 +385,7 @@ FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest3::
 	waitstate
 	end
 FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate3::
-	msgbox FuchsiaCity_Text_Ferry_GateText3
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest4
 FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest4::
 	goto_if_unset FLAG_TOPAZE_ARCHIVE_DONE, FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate4
@@ -398,7 +399,7 @@ FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest4::
 	waitstate
 	end
 FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate4::
-	msgbox FuchsiaCity_Text_Ferry_GateText4
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest5
 FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest5::
 	goto_if_unset FLAG_TOPAZE_POSTGAME, FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate5
@@ -412,7 +413,7 @@ FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest5::
 	waitstate
 	end
 FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate5::
-	msgbox FuchsiaCity_Text_Ferry_GateText5
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest6
 FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest6::
 	goto_if_not_defeated TRAINER_PROCHE_ADRIAN, FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate6
@@ -426,10 +427,15 @@ FuchsiaCity_EventScript_EchoFerryman_EventScript_Dest6::
 	waitstate
 	end
 FuchsiaCity_EventScript_EchoFerryman_EventScript_Gate6::
-	msgbox FuchsiaCity_Text_Ferry_GateText6
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_EchoFerryman_EventScript_End
 FuchsiaCity_EventScript_EchoFerryman_EventScript_End::
 	msgbox FuchsiaCity_Text_Ferry_Never
+	goto_if_eq VAR_0x8004, 1, FuchsiaCity_EventScript_EchoFerryman_EventScript_EndLocked
+	release
+	end
+FuchsiaCity_EventScript_EchoFerryman_EventScript_EndLocked::
+	msgbox FuchsiaCity_Text_FerryLocked
 	release
 	end
 
@@ -442,6 +448,7 @@ FuchsiaCity_EventScript_EchoFerryman_EventScript_Closed::
 FuchsiaCity_EventScript_TideFerrywoman::
 	lock
 	faceplayer
+	setvar VAR_0x8004, 0
 	goto_if_unset FLAG_TOPAZE_CLOCK_DONE, FuchsiaCity_EventScript_TideFerrywoman_EventScript_Closed
 	msgbox FuchsiaCity_Text_Tide_Hello
 	goto_if_unset FLAG_BADGE03_GET, FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate0
@@ -455,7 +462,7 @@ FuchsiaCity_EventScript_TideFerrywoman::
 	waitstate
 	end
 FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate0::
-	msgbox FuchsiaCity_Text_Tide_GateText0
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest1
 FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest1::
 	goto_if_unset FLAG_BADGE04_GET, FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate1
@@ -469,7 +476,7 @@ FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest1::
 	waitstate
 	end
 FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate1::
-	msgbox FuchsiaCity_Text_Tide_GateText1
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest2
 FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest2::
 	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate2
@@ -483,7 +490,7 @@ FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest2::
 	waitstate
 	end
 FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate2::
-	msgbox FuchsiaCity_Text_Tide_GateText2
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest3
 FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest3::
 	goto_if_unset FLAG_BADGE06_GET, FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate3
@@ -497,7 +504,7 @@ FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest3::
 	waitstate
 	end
 FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate3::
-	msgbox FuchsiaCity_Text_Tide_GateText3
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest4
 FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest4::
 	goto_if_unset FLAG_BADGE07_GET, FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate4
@@ -511,10 +518,15 @@ FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest4::
 	waitstate
 	end
 FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate4::
-	msgbox FuchsiaCity_Text_Tide_GateText4
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_TideFerrywoman_EventScript_End
 FuchsiaCity_EventScript_TideFerrywoman_EventScript_End::
 	msgbox FuchsiaCity_Text_Tide_Never
+	goto_if_eq VAR_0x8004, 1, FuchsiaCity_EventScript_TideFerrywoman_EventScript_EndLocked
+	release
+	end
+FuchsiaCity_EventScript_TideFerrywoman_EventScript_EndLocked::
+	msgbox FuchsiaCity_Text_FerryLocked
 	release
 	end
 
@@ -527,6 +539,7 @@ FuchsiaCity_EventScript_TideFerrywoman_EventScript_Closed::
 FuchsiaCity_EventScript_LanternBoatman::
 	lock
 	faceplayer
+	setvar VAR_0x8004, 0
 	goto_if_unset FLAG_TOPAZE_CLOCK_DONE, FuchsiaCity_EventScript_LanternBoatman_EventScript_Closed
 	msgbox FuchsiaCity_Text_Lantern_Hello
 	goto_if_unset FLAG_BADGE06_GET, FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate0
@@ -540,7 +553,7 @@ FuchsiaCity_EventScript_LanternBoatman::
 	waitstate
 	end
 FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate0::
-	msgbox FuchsiaCity_Text_Lantern_GateText0
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest1
 FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest1::
 	goto_if_unset FLAG_BADGE06_GET, FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate1
@@ -554,7 +567,7 @@ FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest1::
 	waitstate
 	end
 FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate1::
-	msgbox FuchsiaCity_Text_Lantern_GateText1
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest2
 FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest2::
 	goto_if_unset FLAG_BADGE04_GET, FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate2
@@ -568,7 +581,7 @@ FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest2::
 	waitstate
 	end
 FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate2::
-	msgbox FuchsiaCity_Text_Lantern_GateText2
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest3
 FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest3::
 	goto_if_unset FLAG_BADGE07_GET, FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate3
@@ -582,7 +595,7 @@ FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest3::
 	waitstate
 	end
 FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate3::
-	msgbox FuchsiaCity_Text_Lantern_GateText3
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest4
 FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest4::
 	goto_if_unset FLAG_BADGE03_GET, FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate4
@@ -596,7 +609,7 @@ FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest4::
 	waitstate
 	end
 FuchsiaCity_EventScript_LanternBoatman_EventScript_Gate4::
-	msgbox FuchsiaCity_Text_Lantern_GateText4
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest5
 FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest5::
 	msgbox FuchsiaCity_Text_Lantern_Ask5, MSGBOX_DEFAULT
@@ -630,6 +643,11 @@ FuchsiaCity_EventScript_LanternBoatman_EventScript_Dest7::
 	end
 FuchsiaCity_EventScript_LanternBoatman_EventScript_End::
 	msgbox FuchsiaCity_Text_Lantern_Never
+	goto_if_eq VAR_0x8004, 1, FuchsiaCity_EventScript_LanternBoatman_EventScript_EndLocked
+	release
+	end
+FuchsiaCity_EventScript_LanternBoatman_EventScript_EndLocked::
+	msgbox FuchsiaCity_Text_FerryLocked
 	release
 	end
 
@@ -642,6 +660,7 @@ FuchsiaCity_EventScript_LanternBoatman_EventScript_Closed::
 FuchsiaCity_EventScript_Apprentice::
 	lock
 	faceplayer
+	setvar VAR_0x8004, 0
 	goto_if_unset FLAG_TOPAZE_CLOCK_DONE, FuchsiaCity_EventScript_Apprentice_EventScript_Closed
 	msgbox FuchsiaCity_Text_Apprentice_Hello
 	msgbox FuchsiaCity_Text_Apprentice_Ask0, MSGBOX_DEFAULT
@@ -685,7 +704,7 @@ FuchsiaCity_EventScript_Apprentice_EventScript_Dest3::
 	waitstate
 	end
 FuchsiaCity_EventScript_Apprentice_EventScript_Gate3::
-	msgbox FuchsiaCity_Text_Apprentice_GateText3
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_Apprentice_EventScript_Dest4
 FuchsiaCity_EventScript_Apprentice_EventScript_Dest4::
 	goto_if_unset FLAG_BADGE03_GET, FuchsiaCity_EventScript_Apprentice_EventScript_Gate4
@@ -699,7 +718,7 @@ FuchsiaCity_EventScript_Apprentice_EventScript_Dest4::
 	waitstate
 	end
 FuchsiaCity_EventScript_Apprentice_EventScript_Gate4::
-	msgbox FuchsiaCity_Text_Apprentice_GateText4
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_Apprentice_EventScript_Dest5
 FuchsiaCity_EventScript_Apprentice_EventScript_Dest5::
 	goto_if_unset FLAG_BADGE01_GET, FuchsiaCity_EventScript_Apprentice_EventScript_Gate5
@@ -713,7 +732,7 @@ FuchsiaCity_EventScript_Apprentice_EventScript_Dest5::
 	waitstate
 	end
 FuchsiaCity_EventScript_Apprentice_EventScript_Gate5::
-	msgbox FuchsiaCity_Text_Apprentice_GateText5
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_Apprentice_EventScript_Dest6
 FuchsiaCity_EventScript_Apprentice_EventScript_Dest6::
 	goto_if_unset FLAG_BADGE04_GET, FuchsiaCity_EventScript_Apprentice_EventScript_Gate6
@@ -727,7 +746,7 @@ FuchsiaCity_EventScript_Apprentice_EventScript_Dest6::
 	waitstate
 	end
 FuchsiaCity_EventScript_Apprentice_EventScript_Gate6::
-	msgbox FuchsiaCity_Text_Apprentice_GateText6
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_Apprentice_EventScript_Dest7
 FuchsiaCity_EventScript_Apprentice_EventScript_Dest7::
 	goto_if_unset FLAG_BADGE01_GET, FuchsiaCity_EventScript_Apprentice_EventScript_Gate7
@@ -741,7 +760,7 @@ FuchsiaCity_EventScript_Apprentice_EventScript_Dest7::
 	waitstate
 	end
 FuchsiaCity_EventScript_Apprentice_EventScript_Gate7::
-	msgbox FuchsiaCity_Text_Apprentice_GateText7
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_Apprentice_EventScript_Dest8
 FuchsiaCity_EventScript_Apprentice_EventScript_Dest8::
 	goto_if_unset FLAG_BADGE02_GET, FuchsiaCity_EventScript_Apprentice_EventScript_Gate8
@@ -755,7 +774,7 @@ FuchsiaCity_EventScript_Apprentice_EventScript_Dest8::
 	waitstate
 	end
 FuchsiaCity_EventScript_Apprentice_EventScript_Gate8::
-	msgbox FuchsiaCity_Text_Apprentice_GateText8
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_Apprentice_EventScript_Dest9
 FuchsiaCity_EventScript_Apprentice_EventScript_Dest9::
 	goto_if_unset FLAG_BADGE08_GET, FuchsiaCity_EventScript_Apprentice_EventScript_Gate9
@@ -769,10 +788,15 @@ FuchsiaCity_EventScript_Apprentice_EventScript_Dest9::
 	waitstate
 	end
 FuchsiaCity_EventScript_Apprentice_EventScript_Gate9::
-	msgbox FuchsiaCity_Text_Apprentice_GateText9
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_Apprentice_EventScript_End
 FuchsiaCity_EventScript_Apprentice_EventScript_End::
 	msgbox FuchsiaCity_Text_Apprentice_Never
+	goto_if_eq VAR_0x8004, 1, FuchsiaCity_EventScript_Apprentice_EventScript_EndLocked
+	release
+	end
+FuchsiaCity_EventScript_Apprentice_EventScript_EndLocked::
+	msgbox FuchsiaCity_Text_FerryLocked
 	release
 	end
 
@@ -785,6 +809,7 @@ FuchsiaCity_EventScript_Apprentice_EventScript_Closed::
 FuchsiaCity_EventScript_DuskFerrywoman::
 	lock
 	faceplayer
+	setvar VAR_0x8004, 0
 	goto_if_unset FLAG_TOPAZE_CLOCK_DONE, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Closed
 	msgbox FuchsiaCity_Text_DuskFerrywoman_Hello
 	goto_if_unset FLAG_BADGE06_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate0
@@ -798,7 +823,7 @@ FuchsiaCity_EventScript_DuskFerrywoman::
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate0::
-	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText0
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest1
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest1::
 	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate1
@@ -812,7 +837,7 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest1::
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate1::
-	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText1
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest2
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest2::
 	goto_if_unset FLAG_BADGE08_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate2
@@ -826,7 +851,7 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest2::
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate2::
-	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText2
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest3
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest3::
 	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate3
@@ -840,7 +865,7 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest3::
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate3::
-	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText3
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest4
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest4::
 	goto_if_unset FLAG_BADGE04_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate4
@@ -854,7 +879,7 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest4::
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate4::
-	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText4
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest5
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest5::
 	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate5
@@ -868,7 +893,7 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest5::
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate5::
-	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText5
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest6
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest6::
 	goto_if_unset FLAG_BADGE07_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate6
@@ -882,7 +907,7 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest6::
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate6::
-	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText6
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest7
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest7::
 	goto_if_unset FLAG_BADGE06_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate7
@@ -896,7 +921,7 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest7::
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate7::
-	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText7
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest8
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest8::
 	goto_if_unset FLAG_BADGE06_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate8
@@ -910,7 +935,7 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest8::
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate8::
-	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText8
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest9
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest9::
 	goto_if_unset FLAG_BADGE07_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate9
@@ -924,7 +949,7 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest9::
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate9::
-	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText9
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest10
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest10::
 	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate10
@@ -938,7 +963,7 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest10::
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate10::
-	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText10
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest11
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest11::
 	msgbox FuchsiaCity_Text_DuskFerrywoman_Ask11, MSGBOX_DEFAULT
@@ -962,7 +987,7 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest12::
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate12::
-	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText12
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest13
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest13::
 	goto_if_unset FLAG_BADGE06_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate13
@@ -976,7 +1001,7 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest13::
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate13::
-	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText13
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest14
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest14::
 	goto_if_unset FLAG_BADGE07_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate14
@@ -990,7 +1015,7 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest14::
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate14::
-	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText14
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest15
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest15::
 	goto_if_unset FLAG_BADGE02_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate15
@@ -1004,7 +1029,7 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest15::
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate15::
-	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText15
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest16
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest16::
 	goto_if_unset FLAG_BADGE08_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate16
@@ -1018,7 +1043,7 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest16::
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate16::
-	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText16
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest17
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest17::
 	goto_if_unset FLAG_BADGE04_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate17
@@ -1032,7 +1057,7 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest17::
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate17::
-	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText17
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest18
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest18::
 	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate18
@@ -1046,7 +1071,7 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest18::
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate18::
-	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText18
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest19
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest19::
 	goto_if_unset FLAG_BADGE06_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate19
@@ -1060,10 +1085,15 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest19::
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate19::
-	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText19
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_End
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_End::
 	msgbox FuchsiaCity_Text_DuskFerrywoman_Never
+	goto_if_eq VAR_0x8004, 1, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_EndLocked
+	release
+	end
+FuchsiaCity_EventScript_DuskFerrywoman_EventScript_EndLocked::
+	msgbox FuchsiaCity_Text_FerryLocked
 	release
 	end
 
@@ -1107,6 +1137,7 @@ FuchsiaCity_EventScript_TQ_NoRoom::
 FuchsiaCity_EventScript_ScribeFerryman::
 	lock
 	faceplayer
+	setvar VAR_0x8004, 0
 	goto_if_unset FLAG_TOPAZE_CLOCK_DONE, FuchsiaCity_EventScript_ScribeFerryman_EventScript_Closed
 	msgbox FuchsiaCity_Text_ScribeFerryman_Hello
 	msgbox FuchsiaCity_Text_ScribeFerryman_Ask0, MSGBOX_DEFAULT
@@ -1130,7 +1161,7 @@ FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest1::
 	waitstate
 	end
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate1::
-	msgbox FuchsiaCity_Text_ScribeFerryman_GateText1
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest2
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest2::
 	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate2
@@ -1144,7 +1175,7 @@ FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest2::
 	waitstate
 	end
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate2::
-	msgbox FuchsiaCity_Text_ScribeFerryman_GateText2
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest3
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest3::
 	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate3
@@ -1158,7 +1189,7 @@ FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest3::
 	waitstate
 	end
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate3::
-	msgbox FuchsiaCity_Text_ScribeFerryman_GateText3
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest4
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest4::
 	goto_if_unset FLAG_BADGE04_GET, FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate4
@@ -1172,7 +1203,7 @@ FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest4::
 	waitstate
 	end
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate4::
-	msgbox FuchsiaCity_Text_ScribeFerryman_GateText4
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest5
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest5::
 	msgbox FuchsiaCity_Text_ScribeFerryman_Ask5, MSGBOX_DEFAULT
@@ -1196,7 +1227,7 @@ FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest6::
 	waitstate
 	end
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate6::
-	msgbox FuchsiaCity_Text_ScribeFerryman_GateText6
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest7
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest7::
 	goto_if_unset FLAG_BADGE03_GET, FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate7
@@ -1210,7 +1241,7 @@ FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest7::
 	waitstate
 	end
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate7::
-	msgbox FuchsiaCity_Text_ScribeFerryman_GateText7
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest8
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest8::
 	goto_if_unset FLAG_BADGE02_GET, FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate8
@@ -1224,7 +1255,7 @@ FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest8::
 	waitstate
 	end
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate8::
-	msgbox FuchsiaCity_Text_ScribeFerryman_GateText8
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest9
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest9::
 	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate9
@@ -1238,7 +1269,7 @@ FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest9::
 	waitstate
 	end
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate9::
-	msgbox FuchsiaCity_Text_ScribeFerryman_GateText9
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest10
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest10::
 	goto_if_unset FLAG_BADGE07_GET, FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate10
@@ -1252,7 +1283,7 @@ FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest10::
 	waitstate
 	end
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate10::
-	msgbox FuchsiaCity_Text_ScribeFerryman_GateText10
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest11
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest11::
 	goto_if_unset FLAG_BADGE02_GET, FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate11
@@ -1266,7 +1297,7 @@ FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest11::
 	waitstate
 	end
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate11::
-	msgbox FuchsiaCity_Text_ScribeFerryman_GateText11
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest12
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest12::
 	goto_if_unset FLAG_BADGE04_GET, FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate12
@@ -1280,7 +1311,7 @@ FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest12::
 	waitstate
 	end
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate12::
-	msgbox FuchsiaCity_Text_ScribeFerryman_GateText12
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest13
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest13::
 	goto_if_unset FLAG_BADGE06_GET, FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate13
@@ -1294,10 +1325,15 @@ FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest13::
 	waitstate
 	end
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate13::
-	msgbox FuchsiaCity_Text_ScribeFerryman_GateText13
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_ScribeFerryman_EventScript_End
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_End::
 	msgbox FuchsiaCity_Text_ScribeFerryman_Never
+	goto_if_eq VAR_0x8004, 1, FuchsiaCity_EventScript_ScribeFerryman_EventScript_EndLocked
+	release
+	end
+FuchsiaCity_EventScript_ScribeFerryman_EventScript_EndLocked::
+	msgbox FuchsiaCity_Text_FerryLocked
 	release
 	end
 
@@ -1310,6 +1346,7 @@ FuchsiaCity_EventScript_ScribeFerryman_EventScript_Closed::
 FuchsiaCity_EventScript_SeasonsFerryman::
 	lock
 	faceplayer
+	setvar VAR_0x8004, 0
 	goto_if_unset FLAG_TOPAZE_CLOCK_DONE, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Closed
 	msgbox FuchsiaCity_Text_SeasonsFerryman_Hello
 	goto_if_unset FLAG_BADGE06_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate0
@@ -1323,7 +1360,7 @@ FuchsiaCity_EventScript_SeasonsFerryman::
 	waitstate
 	end
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate0::
-	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText0
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest1
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest1::
 	goto_if_unset FLAG_BADGE06_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate1
@@ -1337,7 +1374,7 @@ FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest1::
 	waitstate
 	end
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate1::
-	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText1
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest2
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest2::
 	goto_if_unset FLAG_BADGE03_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate2
@@ -1351,7 +1388,7 @@ FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest2::
 	waitstate
 	end
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate2::
-	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText2
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest3
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest3::
 	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate3
@@ -1365,7 +1402,7 @@ FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest3::
 	waitstate
 	end
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate3::
-	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText3
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest4
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest4::
 	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate4
@@ -1379,7 +1416,7 @@ FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest4::
 	waitstate
 	end
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate4::
-	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText4
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest5
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest5::
 	goto_if_unset FLAG_BADGE08_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate5
@@ -1393,7 +1430,7 @@ FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest5::
 	waitstate
 	end
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate5::
-	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText5
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest6
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest6::
 	goto_if_unset FLAG_BADGE02_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate6
@@ -1407,7 +1444,7 @@ FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest6::
 	waitstate
 	end
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate6::
-	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText6
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest7
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest7::
 	goto_if_unset FLAG_BADGE03_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate7
@@ -1421,7 +1458,7 @@ FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest7::
 	waitstate
 	end
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate7::
-	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText7
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest8
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest8::
 	msgbox FuchsiaCity_Text_SeasonsFerryman_Ask8, MSGBOX_DEFAULT
@@ -1445,7 +1482,7 @@ FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest9::
 	waitstate
 	end
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate9::
-	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText9
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest10
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest10::
 	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate10
@@ -1459,7 +1496,7 @@ FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest10::
 	waitstate
 	end
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate10::
-	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText10
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest11
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest11::
 	goto_if_unset FLAG_BADGE03_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate11
@@ -1473,7 +1510,7 @@ FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest11::
 	waitstate
 	end
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate11::
-	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText11
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest12
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest12::
 	goto_if_unset FLAG_BADGE03_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate12
@@ -1487,7 +1524,7 @@ FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest12::
 	waitstate
 	end
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate12::
-	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText12
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest13
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest13::
 	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate13
@@ -1501,7 +1538,7 @@ FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest13::
 	waitstate
 	end
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate13::
-	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText13
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest14
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest14::
 	goto_if_unset FLAG_BADGE07_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate14
@@ -1515,10 +1552,15 @@ FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest14::
 	waitstate
 	end
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate14::
-	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText14
+	setvar VAR_0x8004, 1
 	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_End
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_End::
 	msgbox FuchsiaCity_Text_SeasonsFerryman_Never
+	goto_if_eq VAR_0x8004, 1, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_EndLocked
+	release
+	end
+FuchsiaCity_EventScript_SeasonsFerryman_EventScript_EndLocked::
+	msgbox FuchsiaCity_Text_FerryLocked
 	release
 	end
 
