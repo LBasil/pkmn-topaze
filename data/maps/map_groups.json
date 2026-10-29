@@ -493,7 +493,8 @@
     "CollectorShop",
     "BabyNursery",
     "BarterHouse",
-    "DexHall"
+    "DexHall",
+    "Apothecary"
   ],
   "gMapGroup_IndoorRoute2": [
     "Route2_ViridianForest_SouthEntrance",

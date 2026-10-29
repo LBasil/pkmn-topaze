@@ -512,3 +512,7 @@ FuchsiaCity_Text_DockGuide0::
 	.string "lanterns and calm shores, babies\n"
 	.string "and trades, dusk, the scribe and\p"
 	.string "the seasons. Ask them all.$"
+
+FuchsiaCity_Text_Apprentice_Ask2::
+	.string "The APOTHECARY: boosters for your\n"
+	.string "whole team. Visit?$"

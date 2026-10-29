@@ -269,6 +269,26 @@
       "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_ANTIDOTE",
       "quantity": 1,
       "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 10,
+      "y": 16,
+      "elevation": 0,
+      "item": "ITEM_POTION",
+      "flag": "FLAG_TOPAZE_HID_VIRIDIANFOREST_0",
+      "quantity": 1,
+      "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 34,
+      "y": 32,
+      "elevation": 0,
+      "item": "ITEM_ANTIDOTE",
+      "flag": "FLAG_TOPAZE_HID_VIRIDIANFOREST_1",
+      "quantity": 1,
+      "underfoot": false
     }
   ]
 }

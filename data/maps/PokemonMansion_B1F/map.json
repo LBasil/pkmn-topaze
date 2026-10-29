@@ -128,6 +128,26 @@
       "flag": "FLAG_HIDDEN_ITEM_POKEMON_MANSION_B1F_ELIXIR",
       "quantity": 1,
       "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 7,
+      "y": 8,
+      "elevation": 0,
+      "item": "ITEM_RARE_CANDY",
+      "flag": "FLAG_TOPAZE_HID_POKEMONMANSION_B1F_0",
+      "quantity": 1,
+      "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 20,
+      "y": 17,
+      "elevation": 0,
+      "item": "ITEM_NUGGET",
+      "flag": "FLAG_TOPAZE_HID_POKEMONMANSION_B1F_1",
+      "quantity": 1,
+      "underfoot": false
     }
   ]
 }

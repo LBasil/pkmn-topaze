@@ -234,6 +234,26 @@
       "flag": "FLAG_HIDDEN_ITEM_MT_MOON_B2F_ETHER",
       "quantity": 1,
       "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 12,
+      "y": 14,
+      "elevation": 0,
+      "item": "ITEM_STAR_PIECE",
+      "flag": "FLAG_TOPAZE_HID_MTMOON_B2F_0",
+      "quantity": 1,
+      "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 38,
+      "y": 28,
+      "elevation": 0,
+      "item": "ITEM_SUPER_POTION",
+      "flag": "FLAG_TOPAZE_HID_MTMOON_B2F_1",
+      "quantity": 1,
+      "underfoot": false
     }
   ]
 }

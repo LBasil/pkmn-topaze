@@ -234,5 +234,26 @@
       "script": "VictoryRoad_3F_EventScript_FloorSwitch"
     }
   ],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 11,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_RARE_CANDY",
+      "flag": "FLAG_TOPAZE_HID_VICTORYROAD_3F_0",
+      "quantity": 1,
+      "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 30,
+      "y": 17,
+      "elevation": 0,
+      "item": "ITEM_PP_UP",
+      "flag": "FLAG_TOPAZE_HID_VICTORYROAD_3F_1",
+      "quantity": 1,
+      "underfoot": false
+    }
+  ]
 }

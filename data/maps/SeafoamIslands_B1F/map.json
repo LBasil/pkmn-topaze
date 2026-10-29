@@ -180,5 +180,26 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 7,
+      "y": 7,
+      "elevation": 0,
+      "item": "ITEM_WATER_STONE",
+      "flag": "FLAG_TOPAZE_HID_SEAFOAMISLANDS_B1F_0",
+      "quantity": 1,
+      "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 21,
+      "y": 13,
+      "elevation": 0,
+      "item": "ITEM_ELIXIR",
+      "flag": "FLAG_TOPAZE_HID_SEAFOAMISLANDS_B1F_1",
+      "quantity": 1,
+      "underfoot": false
+    }
+  ]
 }

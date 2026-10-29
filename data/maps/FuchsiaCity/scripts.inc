@@ -592,9 +592,16 @@ FuchsiaCity_EventScript_Apprentice::
 	end
 FuchsiaCity_EventScript_Apprentice_EventScript_Dest1::
 	msgbox FuchsiaCity_Text_Apprentice_Ask1, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_Apprentice_EventScript_End
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_Apprentice_EventScript_Dest2
 	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
 	warp MAP_BARTER_HOUSE, 255, 4, 6
+	waitstate
+	end
+FuchsiaCity_EventScript_Apprentice_EventScript_Dest2::
+	msgbox FuchsiaCity_Text_Apprentice_Ask2, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_Apprentice_EventScript_End
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_APOTHECARY, 255, 4, 6
 	waitstate
 	end
 FuchsiaCity_EventScript_Apprentice_EventScript_End::

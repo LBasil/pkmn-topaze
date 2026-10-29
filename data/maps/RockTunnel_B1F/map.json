@@ -425,5 +425,26 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "hidden_item",
+      "x": 32,
+      "y": 11,
+      "elevation": 0,
+      "item": "ITEM_REVIVE",
+      "flag": "FLAG_TOPAZE_HID_ROCKTUNNEL_B1F_0",
+      "quantity": 1,
+      "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 36,
+      "y": 30,
+      "elevation": 0,
+      "item": "ITEM_ELIXIR",
+      "flag": "FLAG_TOPAZE_HID_ROCKTUNNEL_B1F_1",
+      "quantity": 1,
+      "underfoot": false
+    }
+  ]
 }

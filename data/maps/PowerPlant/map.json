@@ -242,6 +242,26 @@
       "flag": "FLAG_HIDDEN_ITEM_POWER_PLANT_THUNDER_STONE",
       "quantity": 1,
       "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 15,
+      "y": 12,
+      "elevation": 0,
+      "item": "ITEM_THUNDER_STONE",
+      "flag": "FLAG_TOPAZE_HID_POWERPLANT_0",
+      "quantity": 1,
+      "underfoot": false
+    },
+    {
+      "type": "hidden_item",
+      "x": 38,
+      "y": 31,
+      "elevation": 0,
+      "item": "ITEM_MAX_ETHER",
+      "flag": "FLAG_TOPAZE_HID_POWERPLANT_1",
+      "quantity": 1,
+      "underfoot": false
     }
   ]
 }
