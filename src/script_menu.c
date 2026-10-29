@@ -507,6 +507,16 @@ static const struct MenuAction sMultichoiceList_TopazeStarter[] = {
 extern struct MenuAction gTopazeRadarMenu[];
 extern u8 gTopazeRadarCount;
 
+// Topaze: passeurs du quai (GO / NEXT / STOP)
+static const u8 sText_FerryGo[] = _("GO");
+static const u8 sText_FerryNext[] = _("NEXT");
+static const u8 sText_FerryStop[] = _("STOP");
+static const struct MenuAction sMultichoiceList_TopazeFerry[] = {
+    { sText_FerryGo },
+    { sText_FerryNext },
+    { sText_FerryStop }
+};
+
 static const struct MenuAction sMultichoiceList_TopazeWish[] = {
     { sText_WishLetGo },
     { sText_WishNoBalls },
@@ -593,6 +603,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] = {
     [MULTICHOICE_TRAINER_TOWER_MODE]                         = MULTICHOICE(sMultichoiceList_TrainerTowerMode),
     [MULTICHOICE_TOPAZE_WISH]                                = MULTICHOICE(sMultichoiceList_TopazeWish),
     [MULTICHOICE_TOPAZE_STARTER]                             = MULTICHOICE(sMultichoiceList_TopazeStarter),
+    [MULTICHOICE_TOPAZE_FERRY]                               = MULTICHOICE(sMultichoiceList_TopazeFerry),
     [MULTICHOICE_TOPAZE_RADAR]                               = { gTopazeRadarMenu, 8 },
 };
 

@@ -135,11 +135,11 @@ def ferry_add(name, m, a, gate, ask, gt=''):
     S = 'FuchsiaCity_EventScript_' + name; T = 'FuchsiaCity_Text_' + name
     fs = rd('data/maps/FuchsiaCity/scripts.inc'); txt = rd('data/maps/FuchsiaCity/text.inc')
     ks = [int(x) for x in re.findall(r'%s_Ask(\d+)::' % re.escape(T), txt)]; k = max(ks) + 1
-    old = 'goto_if_eq VAR_RESULT, NO, %s_EventScript_End' % S; idx = fs.rindex(old)       # derniere destination
-    fs = fs[:idx] + 'goto_if_eq VAR_RESULT, NO, %s_EventScript_Dest%d' % (S, k) + fs[idx + len(old):]
+    old = 'goto_if_eq VAR_RESULT, 1, %s_EventScript_End' % S; idx = fs.rindex(old)       # derniere destination (NEXT)
+    fs = fs[:idx] + 'goto_if_eq VAR_RESULT, 1, %s_EventScript_Dest%d' % (S, k) + fs[idx + len(old):]
     blk = '%s_EventScript_Dest%d::\n' % (S, k)
     if gate: blk += '\tgoto_if_unset FLAG_BADGE0%d_GET, %s_EventScript_Gate%d\n' % (gate, S, k)
-    blk += '\tmsgbox %s_Ask%d, MSGBOX_YESNO\n\tgoto_if_eq VAR_RESULT, NO, %s_EventScript_End\n\tsetdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27\n\twarp %s, 255, %d, %d\n\twaitstate\n\tend\n' % (T, k, S, N.mapid(m), a[0], a[1])
+    blk += '\tmsgbox %s_Ask%d, MSGBOX_DEFAULT\n\tmultichoice 0, 0, MULTICHOICE_TOPAZE_FERRY, FALSE\n\tgoto_if_eq VAR_RESULT, 1, %s_EventScript_End\n\tgoto_if_ne VAR_RESULT, 0, %s_EventScript_End\n\tsetdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27\n\twarp %s, 255, %d, %d\n\twaitstate\n\tend\n' % (T, k, S, S, N.mapid(m), a[0], a[1])
     if gate: blk += '%s_EventScript_Gate%d::\n\tmsgbox %s_GateText%d\n\tgoto %s_EventScript_End\n' % (S, k, T, k, S)
     anchor = '%s_EventScript_End::' % S; assert anchor in fs
     fs = fs.replace(anchor, blk + anchor, 1); wr('data/maps/FuchsiaCity/scripts.inc', fs)
