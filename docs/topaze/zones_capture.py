@@ -108,7 +108,7 @@ for z in Z:
         items = ['OLD_AMBER', 'HELIX_FOSSIL', 'DOME_FOSSIL', 'ROOT_FOSSIL', 'CLAW_FOSSIL']
         spots = []
         for i, it in enumerate(items):
-            c = near(nav, cells, (a[0] + (i - 2) * 6, a[1] - 5 - 4 * (i % 3)), taken + spots, margin=3); spots.append(c)
+            c = near(nav, cells, (a[0] + (i - 2) * 6, a[1] - 5 - 4 * (i % 3)), taken + spots, margin=3); spots.append(c); taken.append(c)
             bgs.append({'type': 'hidden_item', 'x': c[0], 'y': c[1], 'elevation': 0, 'item': 'ITEM_' + it, 'flag': 'FLAG_TOPAZE_FOSSIL_%d' % (i + 1), 'quantity': 1, 'underfoot': False})
         G = [('LARVITAR', 25, 'a LARVITAR'), ('DRATINI', 25, 'a DRATINI'), ('BAGON', 25, 'a BAGON'), ('BELDUM', 25, 'a BELDUM')]
         for i, (spn, lvl, nm) in enumerate(G):

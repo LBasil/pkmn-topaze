@@ -125,7 +125,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 24,
+      "x": 21,
       "y": 15,
       "elevation": 0,
       "item": "ITEM_DOME_FOSSIL",
