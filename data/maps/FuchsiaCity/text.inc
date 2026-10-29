@@ -824,3 +824,7 @@ FuchsiaCity_Text_Apprentice_Ask9::
 
 FuchsiaCity_Text_Apprentice_GateText9::
 	.string "Come back with all 8 BADGES.$"
+
+FuchsiaCity_Text_FerryMore::
+	.string "That is all I row. Other boats wait\n"
+	.string "along the dock.$"

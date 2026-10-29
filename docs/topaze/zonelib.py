@@ -154,5 +154,7 @@ def ferry_add(name, m, a, gate, ask, gt=''):
     blk += '\tmsgbox %s_Ask%d, MSGBOX_DEFAULT\n\tmultichoice 0, 0, MULTICHOICE_TOPAZE_FERRY, FALSE\n\tgoto_if_eq VAR_RESULT, 1, %s_EventScript_End\n\tgoto_if_ne VAR_RESULT, 0, %s_EventScript_End\n\tsetdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27\n\twarp %s, 255, %d, %d\n\twaitstate\n\tend\n' % (T, k, S, S, N.mapid(m), a[0], a[1])
     if gate: blk += '%s_EventScript_Gate%d::\n\tmsgbox %s_GateText%d\n\tgoto %s_EventScript_End\n' % (S, k, T, k, S)
     anchor = '%s_EventScript_End::' % S; assert anchor in fs
+    gm = list(re.finditer(re.escape(S) + r'_EventScript_Gate\d+::\n\tmsgbox \w+\n\tgoto (\w+)\n', fs))
+    if gm and gm[-1].group(1) == S + '_EventScript_End': fs = fs[:gm[-1].start(1)] + S + '_EventScript_Dest%d' % k + fs[gm[-1].end(1):]   # la gate precedente passe a la nouvelle destination
     fs = fs.replace(anchor, blk + anchor, 1); wr('data/maps/FuchsiaCity/scripts.inc', fs)
     t = N.text('%s_Ask%d' % (T, k), ask) + (N.text('%s_GateText%d' % (T, k), gt) if gate else ''); open('data/maps/FuchsiaCity/text.inc', 'a').write(t)
