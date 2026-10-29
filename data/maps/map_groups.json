@@ -308,8 +308,7 @@
     "PrairieDusk",
     "CoralTerrace",
     "SpireYard",
-    "QuartzQuarry",
-    "EdgeOfTheWorld"
+    "QuartzQuarry"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
@@ -446,7 +445,8 @@
     "GenericHouse_A",
     "GenericHouse_B",
     "GenericHouse_C",
-    "GenericHouse_D"
+    "GenericHouse_D",
+    "EdgeOfTheWorld"
   ],
   "gMapGroup_IndoorViridian": [
     "ViridianCity_House",

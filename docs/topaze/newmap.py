@@ -21,7 +21,7 @@ def text(label, s):
 def _register(new, template):
     mg = json.load(open('data/maps/map_groups.json'))
     if not any(new in mg[g] for g in mg['group_order']):
-        g = next((g for g in mg['group_order'] if template in mg[g] and len(mg[g]) < 120), 'gMapGroup_SpecialArea'); mg[g].append(new); jdump(mg, 'data/maps/map_groups.json')
+        g = next((g for g in mg['group_order'] if template in mg[g] and len(mg[g]) < 120), None) or next(g for g in mg['group_order'] if g != 'gMapGroup_Link' and len(mg[g]) < 120); mg[g].append(new); jdump(mg, 'data/maps/map_groups.json')
     s = rd('data/event_scripts.s')
     for kind in ('scripts', 'text'):
         line = '\t.include "data/maps/%s/%s.inc"\n' % (new, kind)
