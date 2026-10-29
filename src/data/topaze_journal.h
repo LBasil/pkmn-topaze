@@ -316,6 +316,22 @@ static const u8 sJN_150[] = _("LOST AND FOUND");
 static const u8 sJH_150[] = _("SAFFRON: find 3 lost items hidden\non ROUTES 4, 10 and 14.");
 static const u8 sJN_151[] = _("THE ROUTE TOURNAMENT");
 static const u8 sJH_151[] = _("SAFFRON: beat a trainer on 10\nroutes, then face the KING.");
+static const u8 sJN_152[] = _("THE ECHO FERRYMAN");
+static const u8 sJH_152[] = _("AMETHIOLITE dock: a ferryman rows\nto places where time runs apart.");
+static const u8 sJN_153[] = _("THE LIGHTHOUSE");
+static const u8 sJH_153[] = _("Ferry from AMETHIOLITE dock.\nNeeds 5 BADGES.");
+static const u8 sJN_154[] = _("THE CLOCK BEACH");
+static const u8 sJH_154[] = _("Ferry from AMETHIOLITE dock.\nNeeds 6 BADGES.");
+static const u8 sJN_155[] = _("NO-TOMORROW VILLAGE");
+static const u8 sJH_155[] = _("Ferry from AMETHIOLITE dock.\nNeeds 7 BADGES.");
+static const u8 sJN_156[] = _("THE BOTTOMLESS CAVE");
+static const u8 sJH_156[] = _("Ferry from AMETHIOLITE dock.\nNeeds 8 BADGES.");
+static const u8 sJN_157[] = _("GARDEN OF ECHOES");
+static const u8 sJH_157[] = _("Ferry from AMETHIOLITE dock.\nNeeds the ECHO ARCHIVE done.");
+static const u8 sJN_158[] = _("ISLAND OF THE LAST DAY");
+static const u8 sJH_158[] = _("Ferry from AMETHIOLITE dock.\nNeeds the LEAGUE beaten.");
+static const u8 sJN_159[] = _("CLEARING OF FRIENDS");
+static const u8 sJH_159[] = _("Ferry from AMETHIOLITE dock.\nBeat every friend first.");
 
 static const struct TopazeJournalSection sJournalSections[] = {
     { sJS_0, 0 },
@@ -485,4 +501,12 @@ static const struct TopazeJournalEntry sJournalEntries[] = {
     { 2, 0, 1, FLAG_TOPAZE_LETTER, 0, 0, 2, 0, 0, 0, sJN_149, sJH_149 },
     { 2, 0, 1, FLAG_TOPAZE_LOST_DONE, 0, 0, 2, 0, 0, 0, sJN_150, sJH_150 },
     { 2, 2, 1, TRAINER_ROUTE_KING, 0, 0, 3, 0, 0, 0, sJN_151, sJH_151 },
+    { 2, 0, 4, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, 0, 0, sJN_152, sJH_152 },
+    { 2, 2, 2, TRAINER_ZONE_LIGHTHOUSE, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_153, sJH_153 },
+    { 2, 2, 2, TRAINER_ZONE_BEACH, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_154, sJH_154 },
+    { 2, 2, 2, TRAINER_ZONE_VILLAGE, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_155, sJH_155 },
+    { 2, 2, 2, TRAINER_ZONE_CAVE, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_156, sJH_156 },
+    { 7, 2, 2, TRAINER_ZONE_GARDEN, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_157, sJH_157 },
+    { 7, 2, 2, TRAINER_ZONE_ISLAND, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_158, sJH_158 },
+    { 7, 2, 2, TRAINER_ZONE_CLEARING, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_159, sJH_159 },
 };

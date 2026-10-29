@@ -44,22 +44,17 @@
       "flag": "0"
     }
   ],
-  "warp_events": [
+  "warp_events": [],
+  "coord_events": [
     {
-      "x": 18,
-      "y": 22,
-      "elevation": 3,
-      "dest_map": "MAP_DYNAMIC",
-      "dest_warp_id": "WARP_ID_DYNAMIC"
-    },
-    {
+      "type": "trigger",
       "x": 6,
       "y": 2,
       "elevation": 3,
-      "dest_map": "MAP_DEPTHS_2F",
-      "dest_warp_id": "0"
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "Depths_1F_EventScript_Down"
     }
   ],
-  "coord_events": [],
   "bg_events": []
 }

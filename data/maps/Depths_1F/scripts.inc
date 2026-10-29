@@ -19,3 +19,10 @@ Depths_1F_EventScript_Npc0::
 	msgbox Depths_1F_Text_Npc0, MSGBOX_NPC
 	end
 
+
+Depths_1F_EventScript_Down::
+	lockall
+	msgbox Depths_1F_Text_Down
+	warp MAP_DEPTHS_2F, 255, 18, 21
+	waitstate
+	end

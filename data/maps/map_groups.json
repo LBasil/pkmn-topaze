@@ -178,14 +178,7 @@
     "VictoryRoadLair_1F",
     "VictoryRoadLair_2F",
     "VictoryRoadLair_3F",
-    "OneIsland_KindleRoad_StormDen",
-    "Lighthouse_1F",
-    "Lighthouse_2F",
-    "Lighthouse_3F",
-    "Depths_1F",
-    "Depths_2F",
-    "Depths_3F",
-    "FriendsClearing"
+    "OneIsland_KindleRoad_StormDen"
   ],
   "gMapGroup_SpecialArea": [
     "NavelRock_Exterior",
@@ -427,7 +420,14 @@
     "FuchsiaCity_PokemonCenter_2F",
     "FuchsiaCity_WardensHouse",
     "FuchsiaCity_House2",
-    "FuchsiaCity_House3"
+    "FuchsiaCity_House3",
+    "Lighthouse_1F",
+    "Lighthouse_2F",
+    "Lighthouse_3F",
+    "Depths_1F",
+    "Depths_2F",
+    "Depths_3F",
+    "FriendsClearing"
   ],
   "gMapGroup_IndoorCinnabar": [
     "CinnabarIsland_Gym",
