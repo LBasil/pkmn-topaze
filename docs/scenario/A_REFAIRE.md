@@ -259,3 +259,4 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - 29-10 lot 18: PebbleBeach (b1), HoneyGrove (3), CircusLawn (4), ThornyTrail (4), CinderPlain (6), FrozenMarsh (7) : 6 zones + 6 quetes + 18 objets caches. Il reste 5 drapeaux libres dans le pool (FLAG_0x82A+ ...). Textes EN provisoires, clones a refaire.
 - 29-10 lot 19: LanternMeadow, RustyYard, WillowBank, EmberRidge, GlassCavern, DawnSummit (sauvages sans drapeau, ferry FuchsiaCity). Textes provisoires, clones de templates à refaire à la main.
 - 29-10 lot 20: CrickPond, PineRow, SaltyDunes, TwilightGlen, SteelGarden, RainbowFalls (sauvages sans drapeau, ferry). Textes provisoires, templates à refaire à la main.
+- 29-10 lots 21-22: DaisyHill, MuddyCreek, CrystalGrotto, SunsetRoad, ThunderPlain, AncientLibrary, BerryBrook, HauntedOrchard, CopperCanyon, GlimmerBay, IronForest, MythicSpring (sauvages sans drapeau, ferry). Textes provisoires, templates à refaire à la main.
