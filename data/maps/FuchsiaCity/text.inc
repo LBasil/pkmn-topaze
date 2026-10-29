@@ -635,3 +635,31 @@ FuchsiaCity_Text_ScribeFerryman_Ask5::
 FuchsiaCity_Text_DuskFerrywoman_Ask11::
 	.string "The BERRY STAND: fresh berries for\n"
 	.string "every need. Visit?$"
+
+FuchsiaCity_Text_Apprentice_Ask5::
+	.string "The BREEZE HILL: wind, grass and\n"
+	.string "first catches. Visit?$"
+
+FuchsiaCity_Text_Apprentice_GateText5::
+	.string "Come back with 1 BADGE.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask6::
+	.string "The STARLIT STEPPE: wide plains\n"
+	.string "under a thousand stars. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText6::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask9::
+	.string "The SALT FLATS: dry crust and\n"
+	.string "bright shores. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText9::
+	.string "Come back with 4 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask12::
+	.string "The MIST LAKE: soft fog, calm\n"
+	.string "water. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText12::
+	.string "Come back with 2 BADGES.$"

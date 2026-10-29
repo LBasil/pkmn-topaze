@@ -356,7 +356,11 @@
     "OutcastShore",
     "CottonField",
     "QuarryHeights",
-    "PondOfSong"
+    "PondOfSong",
+    "BreezeHill",
+    "StarlitSteppe",
+    "SaltFlats",
+    "MistLake"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",
