@@ -20,7 +20,7 @@ Z = [
  dict(map='TideCave', tpl='SixIsland_WaterPath', badge=6, lv=(40, 46), land=['TENTACOOL', 'TENTACRUEL', 'SEEL', 'DEWGONG', 'SLOWPOKE', 'SLOWBRO', 'SHELLDER', 'CLOYSTER', 'STARYU', 'CORSOLA', 'LAPRAS', 'KINGDRA'.replace('KINGDRA', 'HORSEA')],
       water=['TENTACOOL', 'TENTACRUEL', 'WAILMER', 'LAPRAS', 'KINGLER'], fish=['MAGIKARP', 'HORSEA', 'SEADRA', 'CHINCHOU', 'LANTURN', 'WAILMER', 'RELICANTH', 'FEEBAS', 'CORSOLA', 'LAPRAS'],
       ask='The TIDE CAVE: deep water, strange lights. Visit?', gt='Come back with 6 BADGES.',
-      npcs=[('FISHER', 'Rare fish hide in the deep. Bring a GOOD ROD.'), ('SWIMMER_M', 'SEADRA, RELICANTH... the sea keeps its treasures.')], hidden=['DEEP_SEA_TOOTH', 'DEEP_SEA_SCALE', 'PEARL'],
+      npcs=[('FISHER', 'Rare fish hide in the deep. Bring a GOOD ROD.'), ('SWIMMER_M_LAND', 'SEADRA, RELICANTH... the sea keeps its treasures.')], hidden=['DEEP_SEA_TOOTH', 'DEEP_SEA_SCALE', 'PEARL'],
       quests=[dict(g='FISHER', want=('PEARL', 1), rew=('MYSTIC_WATER', 1), ask='A PEARL for my collection, a MYSTIC WATER for you.', done='Beautiful! Take this MYSTIC WATER.', after='The tide is calm.', miss='One PEARL, please.', j=('PEARL FOR A FISHER', 'TIDE CAVE: bring a PEARL.'))]),
 ]
 WE = json.load(open('src/data/wild_encounters.json')); grp = WE['wild_encounter_groups'][0]['encounters']; journal = ['# ---- LOT 10 (ronces, sentier, ruines, maree)']; arr = {}
