@@ -156,3 +156,4 @@ Route19_Text_LucNotEnoughMons::
 Route19_Text_TimeHint::
 	.string "The tide has not turned since the\n"
 	.string "lights went out in CHRONDROLIA.$"
+

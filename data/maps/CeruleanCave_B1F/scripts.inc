@@ -85,3 +85,47 @@ CeruleanCave_B1F_EventScript_PostgameRed::
 	fadescreen FADE_FROM_BLACK
 	release
 	end
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+CeruleanCave_B1F_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_CERULEANCAVE_B1F_0, CeruleanCave_B1F_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_RARE_CANDY, 1
+	goto_if_eq VAR_RESULT, FALSE, CeruleanCave_B1F_EventScript_TopazeFind0_Full
+	giveitem ITEM_RARE_CANDY, 1
+	setflag FLAG_TOPAZE_HID_CERULEANCAVE_B1F_0
+	release
+	end
+
+CeruleanCave_B1F_EventScript_TopazeFind0_Done::
+	release
+	end
+
+CeruleanCave_B1F_EventScript_TopazeFind0_Full::
+	msgbox CeruleanCave_B1F_Text_TopazeFindFull
+	release
+	end
+
+CeruleanCave_B1F_EventScript_TopazeFind1::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_CERULEANCAVE_B1F_1, CeruleanCave_B1F_EventScript_TopazeFind1_Done
+	checkitemspace ITEM_STAR_PIECE, 1
+	goto_if_eq VAR_RESULT, FALSE, CeruleanCave_B1F_EventScript_TopazeFind1_Full
+	giveitem ITEM_STAR_PIECE, 1
+	setflag FLAG_TOPAZE_HID_CERULEANCAVE_B1F_1
+	release
+	end
+
+CeruleanCave_B1F_EventScript_TopazeFind1_Done::
+	release
+	end
+
+CeruleanCave_B1F_EventScript_TopazeFind1_Full::
+	msgbox CeruleanCave_B1F_Text_TopazeFindFull
+	release
+	end
+
+
+CeruleanCave_B1F_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

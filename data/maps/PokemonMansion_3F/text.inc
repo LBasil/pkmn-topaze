@@ -70,3 +70,4 @@ PokemonMansion_3F_Text_ObtainedTopaz::
 PokemonMansion_3F_Text_SeleneStops::
     .string "SELENE: Hands off the pedestal!\n"
     .string "You do not walk past ME, brat!$"
+

@@ -288,3 +288,28 @@ IndigoPlateau_Exterior_EventScript_Grunt6::
 
 IndigoPlateau_Exterior_Text_Grunt6::
 	.string "GRUNT: Ten stones. One hand. We are\npatient.$"
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+IndigoPlateau_Exterior_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_TOWN_INDIGOPLATEAU_EXTERIOR, IndigoPlateau_Exterior_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_RARE_CANDY, 1
+	goto_if_eq VAR_RESULT, FALSE, IndigoPlateau_Exterior_EventScript_TopazeFind0_Full
+	giveitem ITEM_RARE_CANDY, 1
+	setflag FLAG_TOPAZE_HID_TOWN_INDIGOPLATEAU_EXTERIOR
+	release
+	end
+
+IndigoPlateau_Exterior_EventScript_TopazeFind0_Done::
+	release
+	end
+
+IndigoPlateau_Exterior_EventScript_TopazeFind0_Full::
+	msgbox IndigoPlateau_Exterior_Text_TopazeFindFull
+	release
+	end
+
+
+IndigoPlateau_Exterior_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

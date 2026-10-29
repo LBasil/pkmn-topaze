@@ -32,3 +32,4 @@ CeruleanCave_B1F_Text_Epilogue::
     .string "the first time, neither looks away.\p"
     .string "THE END... OR MAYBE JUST THE\n"
     .string "BEGINNING.$"
+

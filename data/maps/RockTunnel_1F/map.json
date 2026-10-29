@@ -239,24 +239,20 @@
       "script": "RockTunnel_1F_EventScript_RouteSign"
     },
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 12,
       "y": 29,
       "elevation": 0,
-      "item": "ITEM_SUPER_POTION",
-      "flag": "FLAG_TOPAZE_HID_ROCKTUNNEL_1F_0",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RockTunnel_1F_EventScript_TopazeFind0"
     },
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 34,
       "y": 28,
       "elevation": 0,
-      "item": "ITEM_GREAT_BALL",
-      "flag": "FLAG_TOPAZE_HID_ROCKTUNNEL_1F_1",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "RockTunnel_1F_EventScript_TopazeFind1"
     }
   ]
 }

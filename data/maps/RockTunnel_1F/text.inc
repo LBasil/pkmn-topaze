@@ -91,3 +91,4 @@ RockTunnel_1F_Text_MonMachop::
 
 RockTunnel_1F_Text_MonNidorino::
     .string "NIDORINO: Gyuu!\nIt sniffs around for ore.$"
+

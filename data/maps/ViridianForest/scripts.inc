@@ -62,3 +62,47 @@ ViridianForest_EventScript_Charlie::
 	trainerbattle_single TRAINER_BUG_CATCHER_CHARLIE, ViridianForest_Text_CharlieIntro, ViridianForest_Text_CharlieDefeat
 	msgbox ViridianForest_Text_CharliePostBattle, MSGBOX_AUTOCLOSE
 	end
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+ViridianForest_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_VIRIDIANFOREST_0, ViridianForest_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_POTION, 1
+	goto_if_eq VAR_RESULT, FALSE, ViridianForest_EventScript_TopazeFind0_Full
+	giveitem ITEM_POTION, 1
+	setflag FLAG_TOPAZE_HID_VIRIDIANFOREST_0
+	release
+	end
+
+ViridianForest_EventScript_TopazeFind0_Done::
+	release
+	end
+
+ViridianForest_EventScript_TopazeFind0_Full::
+	msgbox ViridianForest_Text_TopazeFindFull
+	release
+	end
+
+ViridianForest_EventScript_TopazeFind1::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_VIRIDIANFOREST_1, ViridianForest_EventScript_TopazeFind1_Done
+	checkitemspace ITEM_ANTIDOTE, 1
+	goto_if_eq VAR_RESULT, FALSE, ViridianForest_EventScript_TopazeFind1_Full
+	giveitem ITEM_ANTIDOTE, 1
+	setflag FLAG_TOPAZE_HID_VIRIDIANFOREST_1
+	release
+	end
+
+ViridianForest_EventScript_TopazeFind1_Done::
+	release
+	end
+
+ViridianForest_EventScript_TopazeFind1_Full::
+	msgbox ViridianForest_Text_TopazeFindFull
+	release
+	end
+
+
+ViridianForest_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

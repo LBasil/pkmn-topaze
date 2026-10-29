@@ -37,3 +37,47 @@ PokemonMansion_1F_EventScript_Onybris2::
 	trainerbattle_single TRAINER_RS_PSYCHIC_F, PokemonMansion_1F_Text_Onybris2Intro, PokemonMansion_1F_Text_Onybris2Defeat
 	msgbox PokemonMansion_1F_Text_Onybris2Post, MSGBOX_AUTOCLOSE
 	end
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+PokemonMansion_1F_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_POKEMONMANSION_1F_0, PokemonMansion_1F_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_FIRE_STONE, 1
+	goto_if_eq VAR_RESULT, FALSE, PokemonMansion_1F_EventScript_TopazeFind0_Full
+	giveitem ITEM_FIRE_STONE, 1
+	setflag FLAG_TOPAZE_HID_POKEMONMANSION_1F_0
+	release
+	end
+
+PokemonMansion_1F_EventScript_TopazeFind0_Done::
+	release
+	end
+
+PokemonMansion_1F_EventScript_TopazeFind0_Full::
+	msgbox PokemonMansion_1F_Text_TopazeFindFull
+	release
+	end
+
+PokemonMansion_1F_EventScript_TopazeFind1::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_POKEMONMANSION_1F_1, PokemonMansion_1F_EventScript_TopazeFind1_Done
+	checkitemspace ITEM_ULTRA_BALL, 1
+	goto_if_eq VAR_RESULT, FALSE, PokemonMansion_1F_EventScript_TopazeFind1_Full
+	giveitem ITEM_ULTRA_BALL, 1
+	setflag FLAG_TOPAZE_HID_POKEMONMANSION_1F_1
+	release
+	end
+
+PokemonMansion_1F_EventScript_TopazeFind1_Done::
+	release
+	end
+
+PokemonMansion_1F_EventScript_TopazeFind1_Full::
+	msgbox PokemonMansion_1F_Text_TopazeFindFull
+	release
+	end
+
+
+PokemonMansion_1F_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

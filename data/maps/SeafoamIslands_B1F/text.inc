@@ -20,3 +20,4 @@ SeafoamIslands_B1F_Text_Onybris2Defeat::
 SeafoamIslands_B1F_Text_Onybris2Post::
     .string "Two kids in caps went by earlier.\n"
     .string "Be glad you are not them.$"
+

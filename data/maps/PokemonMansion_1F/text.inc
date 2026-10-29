@@ -41,3 +41,4 @@ PokemonMansion_1F_Text_Onybris2Defeat::
 PokemonMansion_1F_Text_Onybris2Post::
     .string "The MAYOR opened every door for\n"
     .string "us. Smart man.$"
+

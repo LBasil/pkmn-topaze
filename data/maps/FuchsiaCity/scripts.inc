@@ -811,3 +811,28 @@ FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Closed::
 FuchsiaCity_EventScript_DockGuide::
 	msgbox FuchsiaCity_Text_DockGuide0, MSGBOX_NPC
 	end
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+FuchsiaCity_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_TOWN_FUCHSIACITY, FuchsiaCity_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_HYPER_POTION, 1
+	goto_if_eq VAR_RESULT, FALSE, FuchsiaCity_EventScript_TopazeFind0_Full
+	giveitem ITEM_HYPER_POTION, 1
+	setflag FLAG_TOPAZE_HID_TOWN_FUCHSIACITY
+	release
+	end
+
+FuchsiaCity_EventScript_TopazeFind0_Done::
+	release
+	end
+
+FuchsiaCity_EventScript_TopazeFind0_Full::
+	msgbox FuchsiaCity_Text_TopazeFindFull
+	release
+	end
+
+
+FuchsiaCity_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

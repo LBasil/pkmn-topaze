@@ -250,3 +250,28 @@ ViridianCity_EventScript_TQ_NoRoom::
 	msgbox ViridianCity_Text_TQ_NoRoom
 	release
 	end
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+ViridianCity_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_TOWN_VIRIDIANCITY, ViridianCity_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_ULTRA_BALL, 1
+	goto_if_eq VAR_RESULT, FALSE, ViridianCity_EventScript_TopazeFind0_Full
+	giveitem ITEM_ULTRA_BALL, 1
+	setflag FLAG_TOPAZE_HID_TOWN_VIRIDIANCITY
+	release
+	end
+
+ViridianCity_EventScript_TopazeFind0_Done::
+	release
+	end
+
+ViridianCity_EventScript_TopazeFind0_Full::
+	msgbox ViridianCity_Text_TopazeFindFull
+	release
+	end
+
+
+ViridianCity_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

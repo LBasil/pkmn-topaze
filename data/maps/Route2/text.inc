@@ -32,3 +32,4 @@ Route2_Text_Quest1_Done::
 Route2_Text_Quest1_NoRoom::
 	.string "Your BAG is full. Make room, then\n"
 	.string "come back.$"
+

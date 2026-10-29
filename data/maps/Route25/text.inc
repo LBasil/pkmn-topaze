@@ -154,3 +154,4 @@ Route25_Text_ProcheLola_Early::
 Route25_Text_ProcheLola_NoRoom::
 	.string "Your BAG is full. Make some room\n"
 	.string "first, then talk to me again.$"
+

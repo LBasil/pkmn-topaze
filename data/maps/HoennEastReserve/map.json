@@ -76,44 +76,36 @@
   "coord_events": [],
   "bg_events": [
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 5,
       "y": 42,
       "elevation": 0,
-      "item": "ITEM_SHOAL_SALT",
-      "flag": "FLAG_TOPAZE_FIND_HOENNE_0",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "HoennEastReserve_EventScript_TopazeFind0"
     },
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 8,
       "y": 45,
       "elevation": 0,
-      "item": "ITEM_SHOAL_SHELL",
-      "flag": "FLAG_TOPAZE_FIND_HOENNE_1",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "HoennEastReserve_EventScript_TopazeFind1"
     },
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 15,
       "y": 48,
       "elevation": 0,
-      "item": "ITEM_PEARL",
-      "flag": "FLAG_TOPAZE_FIND_HOENNE_2",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "HoennEastReserve_EventScript_TopazeFind2"
     },
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 5,
       "y": 47,
       "elevation": 0,
-      "item": "ITEM_SHOAL_SALT",
-      "flag": "FLAG_TOPAZE_HID_SUP_HOENNEASTRESERVE",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "HoennEastReserve_EventScript_TopazeFind3"
     }
   ]
 }

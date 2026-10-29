@@ -357,24 +357,20 @@
       "script": "Route8_EventScript_TimeHint"
     },
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 14,
       "y": 8,
       "elevation": 0,
-      "item": "ITEM_ELIXIR",
-      "flag": "FLAG_TOPAZE_HID_ROUTE8_0",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route8_EventScript_TopazeFind0"
     },
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 52,
       "y": 13,
       "elevation": 0,
-      "item": "ITEM_HYPER_POTION",
-      "flag": "FLAG_TOPAZE_HID_ROUTE8_1",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route8_EventScript_TopazeFind1"
     }
   ]
 }

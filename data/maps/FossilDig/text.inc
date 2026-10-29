@@ -60,3 +60,4 @@ FossilDig_Text_Ghost4_After::
 
 FossilDig_Text_Ghost4_Refuse::
 	.string "Then I will wait a little longer.$"
+

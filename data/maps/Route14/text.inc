@@ -165,3 +165,4 @@ Route14_Text_RQuest_Done::
 Route14_Text_RQuest_NoRoom::
 	.string "Your BAG is full. Make room, then\n"
 	.string "come back.$"
+

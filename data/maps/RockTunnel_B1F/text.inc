@@ -96,3 +96,4 @@ RockTunnel_B1F_Text_WinstonPostBattle::
 
 RockTunnel_B1F_Text_MonSlowpoke::
     .string "SLOWPOKE: ...Yawn.\nIt dozes in the cool air.$"
+

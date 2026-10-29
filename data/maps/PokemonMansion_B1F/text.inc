@@ -27,3 +27,4 @@ PokemonMansion_B1F_Text_MewtwoIsFarTooPowerful::
     .string "We have failed to tame the gallery.\n"
     .string "Leave the key where it lies…$"
 
+

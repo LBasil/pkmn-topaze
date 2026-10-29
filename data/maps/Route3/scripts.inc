@@ -75,3 +75,47 @@ Route3_EventScript_RQuest_NoRoom::
 	msgbox Route3_Text_RQuest_NoRoom
 	release
 	end
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+Route3_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_ROUTE3_0, Route3_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_SUPER_POTION, 1
+	goto_if_eq VAR_RESULT, FALSE, Route3_EventScript_TopazeFind0_Full
+	giveitem ITEM_SUPER_POTION, 1
+	setflag FLAG_TOPAZE_HID_ROUTE3_0
+	release
+	end
+
+Route3_EventScript_TopazeFind0_Done::
+	release
+	end
+
+Route3_EventScript_TopazeFind0_Full::
+	msgbox Route3_Text_TopazeFindFull
+	release
+	end
+
+Route3_EventScript_TopazeFind1::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_ROUTE3_1, Route3_EventScript_TopazeFind1_Done
+	checkitemspace ITEM_GREAT_BALL, 1
+	goto_if_eq VAR_RESULT, FALSE, Route3_EventScript_TopazeFind1_Full
+	giveitem ITEM_GREAT_BALL, 1
+	setflag FLAG_TOPAZE_HID_ROUTE3_1
+	release
+	end
+
+Route3_EventScript_TopazeFind1_Done::
+	release
+	end
+
+Route3_EventScript_TopazeFind1_Full::
+	msgbox Route3_Text_TopazeFindFull
+	release
+	end
+
+
+Route3_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

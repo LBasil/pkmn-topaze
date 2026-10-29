@@ -275,3 +275,28 @@ Route22_EventScript_TimeHint::
 	setflag FLAG_TOPAZE_CLOCK_3
 	msgbox Route22_Text_TimeHint, MSGBOX_SIGN
 	end
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+Route22_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_ROUTE22_0, Route22_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_HYPER_POTION, 1
+	goto_if_eq VAR_RESULT, FALSE, Route22_EventScript_TopazeFind0_Full
+	giveitem ITEM_HYPER_POTION, 1
+	setflag FLAG_TOPAZE_HID_ROUTE22_0
+	release
+	end
+
+Route22_EventScript_TopazeFind0_Done::
+	release
+	end
+
+Route22_EventScript_TopazeFind0_Full::
+	msgbox Route22_Text_TopazeFindFull
+	release
+	end
+
+
+Route22_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

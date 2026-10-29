@@ -90,3 +90,4 @@ MtMoon_1F_Text_BrockHelpsExcavateFossils::
     .string "under MT. MOON.\p"
     .string "Sometimes, KAY of PYROPIA GYM\n"
     .string "lends me a hand.$"
+

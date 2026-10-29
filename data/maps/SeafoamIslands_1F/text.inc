@@ -26,3 +26,4 @@ SeafoamIslands_1F_Text_SilverPlan::
     .string "We take the lower floors first.\p"
     .string "Mop up the grunts we leave.\n"
     .string "And do not die on me.$"
+

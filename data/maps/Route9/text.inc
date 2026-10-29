@@ -117,3 +117,4 @@ Route9_Text_Quest3_Done::
 Route9_Text_Quest3_NoRoom::
 	.string "Your BAG is full. Make room, then\n"
 	.string "come back.$"
+

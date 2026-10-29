@@ -76,34 +76,28 @@
   "coord_events": [],
   "bg_events": [
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 6,
       "y": 23,
       "elevation": 0,
-      "item": "ITEM_PEARL",
-      "flag": "FLAG_TOPAZE_FIND_SHELLCOAST_0",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ShellCoast_EventScript_TopazeFind0"
     },
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 9,
       "y": 18,
       "elevation": 0,
-      "item": "ITEM_HEART_SCALE",
-      "flag": "FLAG_TOPAZE_FIND_SHELLCOAST_1",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ShellCoast_EventScript_TopazeFind1"
     },
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 15,
       "y": 18,
       "elevation": 0,
-      "item": "ITEM_ELIXIR",
-      "flag": "FLAG_TOPAZE_FIND_SHELLCOAST_2",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ShellCoast_EventScript_TopazeFind2"
     }
   ]
 }

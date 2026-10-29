@@ -38,3 +38,4 @@ VictoryRoad_1F_Text_NurseHeal::
 
 VictoryRoad_1F_Text_NurseHealed::
     .string "All better! Come back any time.$"
+

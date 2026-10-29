@@ -24,3 +24,4 @@ SeafoamIslands_B2F_Text_BeatenGrunt::
     .string "He wiped out my whole team…\p"
     .string "Go on. The cap kid is ahead,\n"
     .string "with a redhead.$"
+

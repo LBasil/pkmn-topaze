@@ -92,3 +92,4 @@ Route22_Text_ProcheVincent_NoRoom::
 Route22_Text_TimeHint::
 	.string "A cracked hourglass. The sand falls\n"
 	.string "up.$"
+

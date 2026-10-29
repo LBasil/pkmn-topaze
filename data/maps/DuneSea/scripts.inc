@@ -54,3 +54,66 @@ DuneSea_EventScript_Quest0_NoRoom::
 	release
 	end
 
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+DuneSea_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_DUNESEA_0, DuneSea_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_STARDUST, 1
+	goto_if_eq VAR_RESULT, FALSE, DuneSea_EventScript_TopazeFind0_Full
+	giveitem ITEM_STARDUST, 1
+	setflag FLAG_TOPAZE_FIND_DUNESEA_0
+	release
+	end
+
+DuneSea_EventScript_TopazeFind0_Done::
+	release
+	end
+
+DuneSea_EventScript_TopazeFind0_Full::
+	msgbox DuneSea_Text_TopazeFindFull
+	release
+	end
+
+DuneSea_EventScript_TopazeFind1::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_DUNESEA_1, DuneSea_EventScript_TopazeFind1_Done
+	checkitemspace ITEM_STAR_PIECE, 1
+	goto_if_eq VAR_RESULT, FALSE, DuneSea_EventScript_TopazeFind1_Full
+	giveitem ITEM_STAR_PIECE, 1
+	setflag FLAG_TOPAZE_FIND_DUNESEA_1
+	release
+	end
+
+DuneSea_EventScript_TopazeFind1_Done::
+	release
+	end
+
+DuneSea_EventScript_TopazeFind1_Full::
+	msgbox DuneSea_Text_TopazeFindFull
+	release
+	end
+
+DuneSea_EventScript_TopazeFind2::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_DUNESEA_2, DuneSea_EventScript_TopazeFind2_Done
+	checkitemspace ITEM_NUGGET, 1
+	goto_if_eq VAR_RESULT, FALSE, DuneSea_EventScript_TopazeFind2_Full
+	giveitem ITEM_NUGGET, 1
+	setflag FLAG_TOPAZE_FIND_DUNESEA_2
+	release
+	end
+
+DuneSea_EventScript_TopazeFind2_Done::
+	release
+	end
+
+DuneSea_EventScript_TopazeFind2_Full::
+	msgbox DuneSea_Text_TopazeFindFull
+	release
+	end
+
+
+DuneSea_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

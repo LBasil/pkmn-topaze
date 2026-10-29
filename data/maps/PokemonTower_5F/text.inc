@@ -52,3 +52,4 @@ PokemonTower_5F_Text_PurifiedZoneMonsFullyHealed::
 
 PokemonTower_5F_Text_MonJigglypuff::
     .string "JIGGLYPUFF: Purin...\nIt sings a lullaby for the spirits.$"
+

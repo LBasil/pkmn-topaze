@@ -31,3 +31,4 @@ Route23_Text_Quest7_Done::
 Route23_Text_Quest7_NoRoom::
 	.string "Your BAG is full. Make room, then\n"
 	.string "come back.$"
+

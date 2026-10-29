@@ -144,3 +144,4 @@ Route20_Text_Quest6_Done::
 Route20_Text_Quest6_NoRoom::
 	.string "Your BAG is full. Make room, then\n"
 	.string "come back.$"
+

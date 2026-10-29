@@ -55,3 +55,47 @@ Route17_EventScript_Quest5_NoRoom::
 	msgbox Route17_Text_Quest5_NoRoom
 	release
 	end
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+Route17_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_ROUTE17_0, Route17_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_RARE_CANDY, 1
+	goto_if_eq VAR_RESULT, FALSE, Route17_EventScript_TopazeFind0_Full
+	giveitem ITEM_RARE_CANDY, 1
+	setflag FLAG_TOPAZE_HID_ROUTE17_0
+	release
+	end
+
+Route17_EventScript_TopazeFind0_Done::
+	release
+	end
+
+Route17_EventScript_TopazeFind0_Full::
+	msgbox Route17_Text_TopazeFindFull
+	release
+	end
+
+Route17_EventScript_TopazeFind1::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_ROUTE17_1, Route17_EventScript_TopazeFind1_Done
+	checkitemspace ITEM_MAX_POTION, 1
+	goto_if_eq VAR_RESULT, FALSE, Route17_EventScript_TopazeFind1_Full
+	giveitem ITEM_MAX_POTION, 1
+	setflag FLAG_TOPAZE_HID_ROUTE17_1
+	release
+	end
+
+Route17_EventScript_TopazeFind1_Done::
+	release
+	end
+
+Route17_EventScript_TopazeFind1_Full::
+	msgbox Route17_Text_TopazeFindFull
+	release
+	end
+
+
+Route17_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

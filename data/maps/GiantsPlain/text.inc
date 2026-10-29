@@ -43,3 +43,4 @@ GiantsPlain_Text_Gift0_After::
 GiantsPlain_Text_Gift0_Refuse::
 	.string "Then I will keep it a little\n"
 	.string "longer.$"
+

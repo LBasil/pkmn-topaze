@@ -77,3 +77,28 @@ SunriseMeadow_EventScript_Gift0_No::
 	release
 	end
 
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+SunriseMeadow_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_JOHTO_0, SunriseMeadow_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_STAR_PIECE, 1
+	goto_if_eq VAR_RESULT, FALSE, SunriseMeadow_EventScript_TopazeFind0_Full
+	giveitem ITEM_STAR_PIECE, 1
+	setflag FLAG_TOPAZE_FIND_JOHTO_0
+	release
+	end
+
+SunriseMeadow_EventScript_TopazeFind0_Done::
+	release
+	end
+
+SunriseMeadow_EventScript_TopazeFind0_Full::
+	msgbox SunriseMeadow_Text_TopazeFindFull
+	release
+	end
+
+
+SunriseMeadow_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

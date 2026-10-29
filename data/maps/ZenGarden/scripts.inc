@@ -54,3 +54,66 @@ ZenGarden_EventScript_Quest0_NoRoom::
 	release
 	end
 
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+ZenGarden_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_ZENGARDEN_0, ZenGarden_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_ELIXIR, 1
+	goto_if_eq VAR_RESULT, FALSE, ZenGarden_EventScript_TopazeFind0_Full
+	giveitem ITEM_ELIXIR, 1
+	setflag FLAG_TOPAZE_FIND_ZENGARDEN_0
+	release
+	end
+
+ZenGarden_EventScript_TopazeFind0_Done::
+	release
+	end
+
+ZenGarden_EventScript_TopazeFind0_Full::
+	msgbox ZenGarden_Text_TopazeFindFull
+	release
+	end
+
+ZenGarden_EventScript_TopazeFind1::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_ZENGARDEN_1, ZenGarden_EventScript_TopazeFind1_Done
+	checkitemspace ITEM_REVIVAL_HERB, 1
+	goto_if_eq VAR_RESULT, FALSE, ZenGarden_EventScript_TopazeFind1_Full
+	giveitem ITEM_REVIVAL_HERB, 1
+	setflag FLAG_TOPAZE_FIND_ZENGARDEN_1
+	release
+	end
+
+ZenGarden_EventScript_TopazeFind1_Done::
+	release
+	end
+
+ZenGarden_EventScript_TopazeFind1_Full::
+	msgbox ZenGarden_Text_TopazeFindFull
+	release
+	end
+
+ZenGarden_EventScript_TopazeFind2::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_ZENGARDEN_2, ZenGarden_EventScript_TopazeFind2_Done
+	checkitemspace ITEM_MENTAL_HERB, 1
+	goto_if_eq VAR_RESULT, FALSE, ZenGarden_EventScript_TopazeFind2_Full
+	giveitem ITEM_MENTAL_HERB, 1
+	setflag FLAG_TOPAZE_FIND_ZENGARDEN_2
+	release
+	end
+
+ZenGarden_EventScript_TopazeFind2_Done::
+	release
+	end
+
+ZenGarden_EventScript_TopazeFind2_Full::
+	msgbox ZenGarden_Text_TopazeFindFull
+	release
+	end
+
+
+ZenGarden_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

@@ -43,3 +43,4 @@ PokemonMansion_2F_Text_Onybris3Post::
     .string "key. Thanks for that!\p"
     .string "The boss says the stones are only\n"
     .string "a lock. Every theft is a key.$"
+

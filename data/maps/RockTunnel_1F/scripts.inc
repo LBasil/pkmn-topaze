@@ -64,3 +64,47 @@ RockTunnel_1F_EventScript_MonNidorino::
 	waitmoncry
 	release
 	end
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+RockTunnel_1F_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_ROCKTUNNEL_1F_0, RockTunnel_1F_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_SUPER_POTION, 1
+	goto_if_eq VAR_RESULT, FALSE, RockTunnel_1F_EventScript_TopazeFind0_Full
+	giveitem ITEM_SUPER_POTION, 1
+	setflag FLAG_TOPAZE_HID_ROCKTUNNEL_1F_0
+	release
+	end
+
+RockTunnel_1F_EventScript_TopazeFind0_Done::
+	release
+	end
+
+RockTunnel_1F_EventScript_TopazeFind0_Full::
+	msgbox RockTunnel_1F_Text_TopazeFindFull
+	release
+	end
+
+RockTunnel_1F_EventScript_TopazeFind1::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_ROCKTUNNEL_1F_1, RockTunnel_1F_EventScript_TopazeFind1_Done
+	checkitemspace ITEM_GREAT_BALL, 1
+	goto_if_eq VAR_RESULT, FALSE, RockTunnel_1F_EventScript_TopazeFind1_Full
+	giveitem ITEM_GREAT_BALL, 1
+	setflag FLAG_TOPAZE_HID_ROCKTUNNEL_1F_1
+	release
+	end
+
+RockTunnel_1F_EventScript_TopazeFind1_Done::
+	release
+	end
+
+RockTunnel_1F_EventScript_TopazeFind1_Full::
+	msgbox RockTunnel_1F_Text_TopazeFindFull
+	release
+	end
+
+
+RockTunnel_1F_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

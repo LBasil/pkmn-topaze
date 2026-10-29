@@ -98,3 +98,4 @@ VictoryRoad_3F_Text_TyraNotEnoughMons::
     .string "TYRA: You can't battle with us if\n"
     .string "you have only one POKéMON.$"
 
+

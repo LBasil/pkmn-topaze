@@ -37,3 +37,4 @@ PokemonTower_3F_Text_PatriciaPostBattle::
 
 PokemonTower_3F_Text_MonCubone::
     .string "CUBONE: Kyarugoo...\nIt keeps vigil over a grave.$"
+

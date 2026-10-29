@@ -54,3 +54,66 @@ ShellCoast_EventScript_Quest0_NoRoom::
 	release
 	end
 
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+ShellCoast_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_SHELLCOAST_0, ShellCoast_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_PEARL, 1
+	goto_if_eq VAR_RESULT, FALSE, ShellCoast_EventScript_TopazeFind0_Full
+	giveitem ITEM_PEARL, 1
+	setflag FLAG_TOPAZE_FIND_SHELLCOAST_0
+	release
+	end
+
+ShellCoast_EventScript_TopazeFind0_Done::
+	release
+	end
+
+ShellCoast_EventScript_TopazeFind0_Full::
+	msgbox ShellCoast_Text_TopazeFindFull
+	release
+	end
+
+ShellCoast_EventScript_TopazeFind1::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_SHELLCOAST_1, ShellCoast_EventScript_TopazeFind1_Done
+	checkitemspace ITEM_HEART_SCALE, 1
+	goto_if_eq VAR_RESULT, FALSE, ShellCoast_EventScript_TopazeFind1_Full
+	giveitem ITEM_HEART_SCALE, 1
+	setflag FLAG_TOPAZE_FIND_SHELLCOAST_1
+	release
+	end
+
+ShellCoast_EventScript_TopazeFind1_Done::
+	release
+	end
+
+ShellCoast_EventScript_TopazeFind1_Full::
+	msgbox ShellCoast_Text_TopazeFindFull
+	release
+	end
+
+ShellCoast_EventScript_TopazeFind2::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_SHELLCOAST_2, ShellCoast_EventScript_TopazeFind2_Done
+	checkitemspace ITEM_ELIXIR, 1
+	goto_if_eq VAR_RESULT, FALSE, ShellCoast_EventScript_TopazeFind2_Full
+	giveitem ITEM_ELIXIR, 1
+	setflag FLAG_TOPAZE_FIND_SHELLCOAST_2
+	release
+	end
+
+ShellCoast_EventScript_TopazeFind2_Done::
+	release
+	end
+
+ShellCoast_EventScript_TopazeFind2_Full::
+	msgbox ShellCoast_Text_TopazeFindFull
+	release
+	end
+
+
+ShellCoast_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

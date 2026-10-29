@@ -43,3 +43,4 @@ PowerPlant_Text_ZapdosGuarded::
     .string "Sparks crackle around ZAPDOS.\n"
     .string "The four channelers still guard\l"
     .string "it. They must all yield first.$"
+

@@ -311,24 +311,20 @@
       "underfoot": false
     },
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 5,
       "y": 6,
       "elevation": 0,
-      "item": "ITEM_ELIXIR",
-      "flag": "FLAG_TOPAZE_HID_POKEMONTOWER_5F_0",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PokemonTower_5F_EventScript_TopazeFind0"
     },
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 16,
       "y": 12,
       "elevation": 0,
-      "item": "ITEM_MAX_REVIVE",
-      "flag": "FLAG_TOPAZE_HID_POKEMONTOWER_5F_1",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PokemonTower_5F_EventScript_TopazeFind1"
     }
   ]
 }

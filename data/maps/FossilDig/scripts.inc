@@ -111,3 +111,104 @@ FossilDig_EventScript_Ghost4_No::
 	release
 	end
 
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+FossilDig_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_FOSSIL_1, FossilDig_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_OLD_AMBER, 1
+	goto_if_eq VAR_RESULT, FALSE, FossilDig_EventScript_TopazeFind0_Full
+	giveitem ITEM_OLD_AMBER, 1
+	setflag FLAG_TOPAZE_FOSSIL_1
+	release
+	end
+
+FossilDig_EventScript_TopazeFind0_Done::
+	release
+	end
+
+FossilDig_EventScript_TopazeFind0_Full::
+	msgbox FossilDig_Text_TopazeFindFull
+	release
+	end
+
+FossilDig_EventScript_TopazeFind1::
+	lock
+	goto_if_set FLAG_TOPAZE_FOSSIL_2, FossilDig_EventScript_TopazeFind1_Done
+	checkitemspace ITEM_HELIX_FOSSIL, 1
+	goto_if_eq VAR_RESULT, FALSE, FossilDig_EventScript_TopazeFind1_Full
+	giveitem ITEM_HELIX_FOSSIL, 1
+	setflag FLAG_TOPAZE_FOSSIL_2
+	release
+	end
+
+FossilDig_EventScript_TopazeFind1_Done::
+	release
+	end
+
+FossilDig_EventScript_TopazeFind1_Full::
+	msgbox FossilDig_Text_TopazeFindFull
+	release
+	end
+
+FossilDig_EventScript_TopazeFind2::
+	lock
+	goto_if_set FLAG_TOPAZE_FOSSIL_3, FossilDig_EventScript_TopazeFind2_Done
+	checkitemspace ITEM_DOME_FOSSIL, 1
+	goto_if_eq VAR_RESULT, FALSE, FossilDig_EventScript_TopazeFind2_Full
+	giveitem ITEM_DOME_FOSSIL, 1
+	setflag FLAG_TOPAZE_FOSSIL_3
+	release
+	end
+
+FossilDig_EventScript_TopazeFind2_Done::
+	release
+	end
+
+FossilDig_EventScript_TopazeFind2_Full::
+	msgbox FossilDig_Text_TopazeFindFull
+	release
+	end
+
+FossilDig_EventScript_TopazeFind3::
+	lock
+	goto_if_set FLAG_TOPAZE_FOSSIL_4, FossilDig_EventScript_TopazeFind3_Done
+	checkitemspace ITEM_ROOT_FOSSIL, 1
+	goto_if_eq VAR_RESULT, FALSE, FossilDig_EventScript_TopazeFind3_Full
+	giveitem ITEM_ROOT_FOSSIL, 1
+	setflag FLAG_TOPAZE_FOSSIL_4
+	release
+	end
+
+FossilDig_EventScript_TopazeFind3_Done::
+	release
+	end
+
+FossilDig_EventScript_TopazeFind3_Full::
+	msgbox FossilDig_Text_TopazeFindFull
+	release
+	end
+
+FossilDig_EventScript_TopazeFind4::
+	lock
+	goto_if_set FLAG_TOPAZE_FOSSIL_5, FossilDig_EventScript_TopazeFind4_Done
+	checkitemspace ITEM_CLAW_FOSSIL, 1
+	goto_if_eq VAR_RESULT, FALSE, FossilDig_EventScript_TopazeFind4_Full
+	giveitem ITEM_CLAW_FOSSIL, 1
+	setflag FLAG_TOPAZE_FOSSIL_5
+	release
+	end
+
+FossilDig_EventScript_TopazeFind4_Done::
+	release
+	end
+
+FossilDig_EventScript_TopazeFind4_Full::
+	msgbox FossilDig_Text_TopazeFindFull
+	release
+	end
+
+
+FossilDig_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

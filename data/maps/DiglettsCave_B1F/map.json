@@ -119,24 +119,20 @@
   "coord_events": [],
   "bg_events": [
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 21,
       "y": 22,
       "elevation": 0,
-      "item": "ITEM_NUGGET",
-      "flag": "FLAG_TOPAZE_HID_DIGLETTSCAVE_B1F_0",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DiglettsCave_B1F_EventScript_TopazeFind0"
     },
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 63,
       "y": 52,
       "elevation": 0,
-      "item": "ITEM_ULTRA_BALL",
-      "flag": "FLAG_TOPAZE_HID_DIGLETTSCAVE_B1F_1",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "DiglettsCave_B1F_EventScript_TopazeFind1"
     }
   ]
 }

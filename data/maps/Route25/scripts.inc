@@ -63,3 +63,47 @@ Route25_EventScript_ProcheLola_NoRoom::
 	msgbox Route25_Text_ProcheLola_NoRoom
 	release
 	end
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+Route25_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_ROUTE25_0, Route25_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_PP_UP, 1
+	goto_if_eq VAR_RESULT, FALSE, Route25_EventScript_TopazeFind0_Full
+	giveitem ITEM_PP_UP, 1
+	setflag FLAG_TOPAZE_HID_ROUTE25_0
+	release
+	end
+
+Route25_EventScript_TopazeFind0_Done::
+	release
+	end
+
+Route25_EventScript_TopazeFind0_Full::
+	msgbox Route25_Text_TopazeFindFull
+	release
+	end
+
+Route25_EventScript_TopazeFind1::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_ROUTE25_1, Route25_EventScript_TopazeFind1_Done
+	checkitemspace ITEM_STAR_PIECE, 1
+	goto_if_eq VAR_RESULT, FALSE, Route25_EventScript_TopazeFind1_Full
+	giveitem ITEM_STAR_PIECE, 1
+	setflag FLAG_TOPAZE_HID_ROUTE25_1
+	release
+	end
+
+Route25_EventScript_TopazeFind1_Done::
+	release
+	end
+
+Route25_EventScript_TopazeFind1_Full::
+	msgbox Route25_Text_TopazeFindFull
+	release
+	end
+
+
+Route25_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

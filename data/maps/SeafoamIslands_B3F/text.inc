@@ -27,3 +27,4 @@ SeafoamIslands_B3F_Text_BeatenGrunt::
     .string "He just took us apart.\p"
     .string "The boss is waiting at the\n"
     .string "bottom. Brace yourself.$"
+

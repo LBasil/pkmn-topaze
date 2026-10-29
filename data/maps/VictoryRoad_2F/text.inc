@@ -67,3 +67,4 @@ VictoryRoad_2F_Text_NurseHeal::
 
 VictoryRoad_2F_Text_NurseHealed::
     .string "All better! Come back any time.$"
+

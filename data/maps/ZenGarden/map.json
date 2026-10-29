@@ -76,34 +76,28 @@
   "coord_events": [],
   "bg_events": [
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 24,
       "y": 29,
       "elevation": 0,
-      "item": "ITEM_ELIXIR",
-      "flag": "FLAG_TOPAZE_FIND_ZENGARDEN_0",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ZenGarden_EventScript_TopazeFind0"
     },
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 27,
       "y": 23,
       "elevation": 0,
-      "item": "ITEM_REVIVAL_HERB",
-      "flag": "FLAG_TOPAZE_FIND_ZENGARDEN_1",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ZenGarden_EventScript_TopazeFind1"
     },
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 32,
       "y": 20,
       "elevation": 0,
-      "item": "ITEM_MENTAL_HERB",
-      "flag": "FLAG_TOPAZE_FIND_ZENGARDEN_2",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ZenGarden_EventScript_TopazeFind2"
     }
   ]
 }

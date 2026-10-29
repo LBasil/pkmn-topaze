@@ -148,3 +148,47 @@ Route24_EventScript_RQuest_NoRoom::
 	msgbox Route24_Text_RQuest_NoRoom
 	release
 	end
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+Route24_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_ROUTE24_0, Route24_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_NUGGET, 1
+	goto_if_eq VAR_RESULT, FALSE, Route24_EventScript_TopazeFind0_Full
+	giveitem ITEM_NUGGET, 1
+	setflag FLAG_TOPAZE_HID_ROUTE24_0
+	release
+	end
+
+Route24_EventScript_TopazeFind0_Done::
+	release
+	end
+
+Route24_EventScript_TopazeFind0_Full::
+	msgbox Route24_Text_TopazeFindFull
+	release
+	end
+
+Route24_EventScript_TopazeFind1::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_ROUTE24_1, Route24_EventScript_TopazeFind1_Done
+	checkitemspace ITEM_MAX_ELIXIR, 1
+	goto_if_eq VAR_RESULT, FALSE, Route24_EventScript_TopazeFind1_Full
+	giveitem ITEM_MAX_ELIXIR, 1
+	setflag FLAG_TOPAZE_HID_ROUTE24_1
+	release
+	end
+
+Route24_EventScript_TopazeFind1_Done::
+	release
+	end
+
+Route24_EventScript_TopazeFind1_Full::
+	msgbox Route24_Text_TopazeFindFull
+	release
+	end
+
+
+Route24_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

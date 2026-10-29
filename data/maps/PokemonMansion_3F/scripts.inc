@@ -84,3 +84,47 @@ PokemonMansion_3F_EventScript_TopazTake::
 	setflag FLAG_CHRONDROLIA_RAID_DONE
 	releaseall
 	end
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+PokemonMansion_3F_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_POKEMONMANSION_3F_0, PokemonMansion_3F_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_MAX_REVIVE, 1
+	goto_if_eq VAR_RESULT, FALSE, PokemonMansion_3F_EventScript_TopazeFind0_Full
+	giveitem ITEM_MAX_REVIVE, 1
+	setflag FLAG_TOPAZE_HID_POKEMONMANSION_3F_0
+	release
+	end
+
+PokemonMansion_3F_EventScript_TopazeFind0_Done::
+	release
+	end
+
+PokemonMansion_3F_EventScript_TopazeFind0_Full::
+	msgbox PokemonMansion_3F_Text_TopazeFindFull
+	release
+	end
+
+PokemonMansion_3F_EventScript_TopazeFind1::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_POKEMONMANSION_3F_1, PokemonMansion_3F_EventScript_TopazeFind1_Done
+	checkitemspace ITEM_MAX_ETHER, 1
+	goto_if_eq VAR_RESULT, FALSE, PokemonMansion_3F_EventScript_TopazeFind1_Full
+	giveitem ITEM_MAX_ETHER, 1
+	setflag FLAG_TOPAZE_HID_POKEMONMANSION_3F_1
+	release
+	end
+
+PokemonMansion_3F_EventScript_TopazeFind1_Done::
+	release
+	end
+
+PokemonMansion_3F_EventScript_TopazeFind1_Full::
+	msgbox PokemonMansion_3F_Text_TopazeFindFull
+	release
+	end
+
+
+PokemonMansion_3F_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

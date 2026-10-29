@@ -54,3 +54,66 @@ NocturneWood_EventScript_Quest0_NoRoom::
 	release
 	end
 
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+NocturneWood_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_NOCTURNEWOOD_0, NocturneWood_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_SUPER_POTION, 1
+	goto_if_eq VAR_RESULT, FALSE, NocturneWood_EventScript_TopazeFind0_Full
+	giveitem ITEM_SUPER_POTION, 1
+	setflag FLAG_TOPAZE_FIND_NOCTURNEWOOD_0
+	release
+	end
+
+NocturneWood_EventScript_TopazeFind0_Done::
+	release
+	end
+
+NocturneWood_EventScript_TopazeFind0_Full::
+	msgbox NocturneWood_Text_TopazeFindFull
+	release
+	end
+
+NocturneWood_EventScript_TopazeFind1::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_NOCTURNEWOOD_1, NocturneWood_EventScript_TopazeFind1_Done
+	checkitemspace ITEM_ANTIDOTE, 1
+	goto_if_eq VAR_RESULT, FALSE, NocturneWood_EventScript_TopazeFind1_Full
+	giveitem ITEM_ANTIDOTE, 1
+	setflag FLAG_TOPAZE_FIND_NOCTURNEWOOD_1
+	release
+	end
+
+NocturneWood_EventScript_TopazeFind1_Done::
+	release
+	end
+
+NocturneWood_EventScript_TopazeFind1_Full::
+	msgbox NocturneWood_Text_TopazeFindFull
+	release
+	end
+
+NocturneWood_EventScript_TopazeFind2::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_NOCTURNEWOOD_2, NocturneWood_EventScript_TopazeFind2_Done
+	checkitemspace ITEM_ULTRA_BALL, 1
+	goto_if_eq VAR_RESULT, FALSE, NocturneWood_EventScript_TopazeFind2_Full
+	giveitem ITEM_ULTRA_BALL, 1
+	setflag FLAG_TOPAZE_FIND_NOCTURNEWOOD_2
+	release
+	end
+
+NocturneWood_EventScript_TopazeFind2_Done::
+	release
+	end
+
+NocturneWood_EventScript_TopazeFind2_Full::
+	msgbox NocturneWood_Text_TopazeFindFull
+	release
+	end
+
+
+NocturneWood_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

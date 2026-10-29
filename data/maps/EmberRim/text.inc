@@ -28,3 +28,4 @@ EmberRim_Text_Quest0_MissT::
 EmberRim_Text_Quest0_NoRoomT::
 	.string "Your BAG is full. Make room, then\n"
 	.string "come back.$"
+

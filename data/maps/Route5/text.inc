@@ -16,3 +16,4 @@ Route5_Text_Quest2_Done::
 Route5_Text_Quest2_NoRoom::
 	.string "Your BAG is full. Make room, then\n"
 	.string "come back.$"
+

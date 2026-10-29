@@ -204,24 +204,20 @@
       "script": "Route24_EventScript_TimeHint"
     },
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 6,
       "y": 10,
       "elevation": 0,
-      "item": "ITEM_NUGGET",
-      "flag": "FLAG_TOPAZE_HID_ROUTE24_0",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route24_EventScript_TopazeFind0"
     },
     {
-      "type": "hidden_item",
+      "type": "sign",
       "x": 4,
       "y": 25,
       "elevation": 0,
-      "item": "ITEM_MAX_ELIXIR",
-      "flag": "FLAG_TOPAZE_HID_ROUTE24_1",
-      "quantity": 1,
-      "underfoot": false
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route24_EventScript_TopazeFind1"
     }
   ]
 }

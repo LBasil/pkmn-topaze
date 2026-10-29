@@ -54,3 +54,66 @@ SparkGlade_EventScript_Quest0_NoRoom::
 	release
 	end
 
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+SparkGlade_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_SPARKGLADE_0, SparkGlade_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_MAX_ETHER, 1
+	goto_if_eq VAR_RESULT, FALSE, SparkGlade_EventScript_TopazeFind0_Full
+	giveitem ITEM_MAX_ETHER, 1
+	setflag FLAG_TOPAZE_FIND_SPARKGLADE_0
+	release
+	end
+
+SparkGlade_EventScript_TopazeFind0_Done::
+	release
+	end
+
+SparkGlade_EventScript_TopazeFind0_Full::
+	msgbox SparkGlade_Text_TopazeFindFull
+	release
+	end
+
+SparkGlade_EventScript_TopazeFind1::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_SPARKGLADE_1, SparkGlade_EventScript_TopazeFind1_Done
+	checkitemspace ITEM_ELIXIR, 1
+	goto_if_eq VAR_RESULT, FALSE, SparkGlade_EventScript_TopazeFind1_Full
+	giveitem ITEM_ELIXIR, 1
+	setflag FLAG_TOPAZE_FIND_SPARKGLADE_1
+	release
+	end
+
+SparkGlade_EventScript_TopazeFind1_Done::
+	release
+	end
+
+SparkGlade_EventScript_TopazeFind1_Full::
+	msgbox SparkGlade_Text_TopazeFindFull
+	release
+	end
+
+SparkGlade_EventScript_TopazeFind2::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_SPARKGLADE_2, SparkGlade_EventScript_TopazeFind2_Done
+	checkitemspace ITEM_REVIVE, 1
+	goto_if_eq VAR_RESULT, FALSE, SparkGlade_EventScript_TopazeFind2_Full
+	giveitem ITEM_REVIVE, 1
+	setflag FLAG_TOPAZE_FIND_SPARKGLADE_2
+	release
+	end
+
+SparkGlade_EventScript_TopazeFind2_Done::
+	release
+	end
+
+SparkGlade_EventScript_TopazeFind2_Full::
+	msgbox SparkGlade_Text_TopazeFindFull
+	release
+	end
+
+
+SparkGlade_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

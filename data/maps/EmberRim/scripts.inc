@@ -54,3 +54,66 @@ EmberRim_EventScript_Quest0_NoRoom::
 	release
 	end
 
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+EmberRim_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_EMBERRIM_0, EmberRim_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_ELIXIR, 1
+	goto_if_eq VAR_RESULT, FALSE, EmberRim_EventScript_TopazeFind0_Full
+	giveitem ITEM_ELIXIR, 1
+	setflag FLAG_TOPAZE_FIND_EMBERRIM_0
+	release
+	end
+
+EmberRim_EventScript_TopazeFind0_Done::
+	release
+	end
+
+EmberRim_EventScript_TopazeFind0_Full::
+	msgbox EmberRim_Text_TopazeFindFull
+	release
+	end
+
+EmberRim_EventScript_TopazeFind1::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_EMBERRIM_1, EmberRim_EventScript_TopazeFind1_Done
+	checkitemspace ITEM_MAX_ETHER, 1
+	goto_if_eq VAR_RESULT, FALSE, EmberRim_EventScript_TopazeFind1_Full
+	giveitem ITEM_MAX_ETHER, 1
+	setflag FLAG_TOPAZE_FIND_EMBERRIM_1
+	release
+	end
+
+EmberRim_EventScript_TopazeFind1_Done::
+	release
+	end
+
+EmberRim_EventScript_TopazeFind1_Full::
+	msgbox EmberRim_Text_TopazeFindFull
+	release
+	end
+
+EmberRim_EventScript_TopazeFind2::
+	lock
+	goto_if_set FLAG_TOPAZE_FIND_EMBERRIM_2, EmberRim_EventScript_TopazeFind2_Done
+	checkitemspace ITEM_REVIVE, 1
+	goto_if_eq VAR_RESULT, FALSE, EmberRim_EventScript_TopazeFind2_Full
+	giveitem ITEM_REVIVE, 1
+	setflag FLAG_TOPAZE_FIND_EMBERRIM_2
+	release
+	end
+
+EmberRim_EventScript_TopazeFind2_Done::
+	release
+	end
+
+EmberRim_EventScript_TopazeFind2_Full::
+	msgbox EmberRim_Text_TopazeFindFull
+	release
+	end
+
+
+EmberRim_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"

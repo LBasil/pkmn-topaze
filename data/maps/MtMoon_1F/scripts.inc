@@ -44,3 +44,47 @@ MtMoon_1F_EventScript_Robby::
 	trainerbattle_single TRAINER_BUG_CATCHER_ROBBY, MtMoon_1F_Text_RobbyIntro, MtMoon_1F_Text_RobbyDefeat
 	msgbox MtMoon_1F_Text_RobbyPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+@ Topaze: objets caches (panneaux a script, drapeaux hors plage moteur)
+MtMoon_1F_EventScript_TopazeFind0::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_MTMOON_1F_0, MtMoon_1F_EventScript_TopazeFind0_Done
+	checkitemspace ITEM_MOON_STONE, 1
+	goto_if_eq VAR_RESULT, FALSE, MtMoon_1F_EventScript_TopazeFind0_Full
+	giveitem ITEM_MOON_STONE, 1
+	setflag FLAG_TOPAZE_HID_MTMOON_1F_0
+	release
+	end
+
+MtMoon_1F_EventScript_TopazeFind0_Done::
+	release
+	end
+
+MtMoon_1F_EventScript_TopazeFind0_Full::
+	msgbox MtMoon_1F_Text_TopazeFindFull
+	release
+	end
+
+MtMoon_1F_EventScript_TopazeFind1::
+	lock
+	goto_if_set FLAG_TOPAZE_HID_MTMOON_1F_1, MtMoon_1F_EventScript_TopazeFind1_Done
+	checkitemspace ITEM_POTION, 1
+	goto_if_eq VAR_RESULT, FALSE, MtMoon_1F_EventScript_TopazeFind1_Full
+	giveitem ITEM_POTION, 1
+	setflag FLAG_TOPAZE_HID_MTMOON_1F_1
+	release
+	end
+
+MtMoon_1F_EventScript_TopazeFind1_Done::
+	release
+	end
+
+MtMoon_1F_EventScript_TopazeFind1_Full::
+	msgbox MtMoon_1F_Text_TopazeFindFull
+	release
+	end
+
+
+MtMoon_1F_Text_TopazeFindFull::
+	.string "Something shines here, but your BAG\n"
+	.string "is full.$"
