@@ -1,7 +1,7 @@
 const COL={Normal:'#9a9a8a',Fighting:'#b8402e',Flying:'#7f8fe0',Poison:'#8e47a8',Ground:'#c9a64a',Rock:'#a08d3a',Bug:'#8aa31c',Ghost:'#654d8e',Steel:'#8e8ea8',Fire:'#e8642a',Water:'#3f7fe0',Grass:'#4cae43',Electric:'#e0b800',Psychic:'#e0457a',Ice:'#4cc2c2',Dragon:'#5a3de0',Dark:'#5a463a',Fairy:'#e87fb4'};
 const tb=t=>`<span class="t" style="background:${COL[t]||'#777'}">${t}</span>`;
 const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-function nav(on){const p=[['index','Home'],['guide','Player guide'],['pokedex','Pokédex'],['movedex','Movedex'],['types','Types'],['champions','Gym Champions'],['wild','Wild Encounters']];
+function nav(on){const p=[['index','Home'],['guide','Player guide'],['pokedex','Pokédex'],['movedex','Movedex'],['types','Types'],['champions','Gym Champions'],['wild','Wild Encounters'],['dock','The Dock']];
 document.body.insertAdjacentHTML('afterbegin','<header><nav><b>Pokémon Topaze</b>'+p.map(([h,l])=>`<a href="${h}.html"${h===on?' class="on"':''}>${l}</a>`).join('')+'</nav></header>')}
 // table générique : cols=[{h,get,html?,num?}]
 function table(el,rows,cols,opts={}){

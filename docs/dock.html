@@ -1,0 +1,7 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Dock – Pokémon Topaze</title><link rel="stylesheet" href="style.css"></head><body><main>
+<h1>The Dock (Amethiolite)</h1>
+<p>Eight ferrymen wait at the harbor of Amethiolite. Each one rows to extra zones: wild areas full of rare Pokémon, quests, hidden items and shops. Talk to a ferryman, choose <b>GO</b>, <b>NEXT</b> or <b>STOP</b>. Zones open with badges; the temporal zones open with the story. Species lists below are generated from the game data.</p>
+<div id="t"></div></main>
+<script src="app.js"></script><script src="data/dock.js"></script><script>
+table("t",DOCK,[{h:"Ferry",get:x=>x.ferry},{h:"Zone",get:x=>x.name},{h:"Badges",get:x=>x.badges,num:1},{h:"Pokémon",get:x=>x.species.join(", "),html:x=>x.species.length?x.species.join(", "):"<span class='mut'>no wild Pokémon (story / shop / event)</span>"}],{max:200});
+</script><script>nav('dock')</script></body></html>

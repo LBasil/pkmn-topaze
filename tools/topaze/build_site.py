@@ -93,4 +93,33 @@ def out(name, var, obj):
     open(os.path.join(R, 'docs/data/%s.js' % name), 'w', encoding='utf-8').write('window.%s = %s;\n' % (var, json.dumps(obj, ensure_ascii=False, separators=(',', ':'))))
 out('pokedex', 'POKEDEX', dex); out('moves', 'MOVES', moves); out('types', 'TYPES', dict(list=tlist, chart=chart))
 out('champions', 'CHAMPIONS', champs); out('wild', 'WILD', wild)
+
+# --- quai d'Amethiolite : destinations des passeurs (FuchsiaCity) + especes sauvages de chaque zone
+allnames = {c: n for c, n in names if c != 'NONE'}
+fs = rd('data/maps/FuchsiaCity/scripts.inc'); ftx = rd('data/maps/FuchsiaCity/text.inc')
+ftext = {m.group(1): re.sub(r'\\[nlp]|\{[^}]*\}', ' ', m.group(2)).replace('\n', ' ') for m in re.finditer(r'^(\w+)::\n\t\.string "(.*?)\$"', ftx, re.M | re.S)}
+mapname = {}
+for e in wj:
+    mapname.setdefault(e['map'], e)
+dock = []; ferry = None; gate = 0; ask = None
+for ln in fs.split('\n'):
+    m = re.match(r'FuchsiaCity_EventScript_(\w+?)::', ln)
+    if m and m.group(1) in ('EchoFerryman', 'TideFerrywoman', 'LanternBoatman', 'Apprentice', 'DuskFerrywoman', 'ScribeFerryman', 'SeasonsFerryman'): ferry = m.group(1); gate = 0
+    m = re.search(r'goto_if_unset FLAG_BADGE0(\d)_GET', ln)
+    if m: gate = int(m.group(1))
+    m = re.search(r'msgbox (\w+_Ask\d*), MSGBOX_(?:YESNO|DEFAULT)', ln)
+    if m: ask = m.group(1)
+    m = re.search(r'^\twarp (MAP_\w+), -?\d+, -?\d+, -?\d+', ln)
+    if m and ferry and ask:
+        mp = m.group(1); sp_ = {}
+        for e in wj:
+            if e['map'] == mp and 'FireRed' in e['base_label']:
+                for key, lab in (('land_mons', 'Grass/cave'), ('water_mons', 'Surf'), ('fishing_mons', 'Fishing')):
+                    if key in e:
+                        for mo in e[key]['mons']: sp_.setdefault(allnames.get(mo['species'].replace('SPECIES_', ''), mo['species']).title(), set()).add(lab)
+        nm = pretty(mp.replace('MAP_', ''))
+        dock.append(dict(ferry=ferry.replace('Ferryman', '').replace('Ferrywoman', '').replace('Boatman', ''), name=nm, map=pretty(mp.replace('MAP_', '')), badges=gate, species=sorted(sp_), levels=''))
+        ask = None; gate = 0
+out('dock', 'DOCK', dock)
+print(len(dock), 'destinations du quai')
 print(len(dex), 'pokémon,', len(moves), 'attaques,', len(champs), 'champions,', len(wild), 'lignes sauvages')
