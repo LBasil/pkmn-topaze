@@ -297,7 +297,13 @@
     "BoneyardRise",
     "LavaLagoon",
     "DozyDell",
-    "ChampionsPath"
+    "ChampionsPath",
+    "FernGully",
+    "CliffsideCove",
+    "MeteorField",
+    "VenomSwamp",
+    "WindmillFlats",
+    "RoyalGarden"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",

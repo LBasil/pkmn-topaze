@@ -870,3 +870,45 @@ FuchsiaCity_Text_DuskFerrywoman_Ask30::
 
 FuchsiaCity_Text_DuskFerrywoman_GateText30::
 	.string "Come back with all 8 BADGES.$"
+
+FuchsiaCity_Text_Apprentice_Ask16::
+	.string "The FERN GULLY: a green dip full of\n"
+	.string "tiny wings. Visit?$"
+
+FuchsiaCity_Text_Apprentice_GateText16::
+	.string "Come back with 1 BADGE.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask26::
+	.string "The CLIFFSIDE COVE: a hidden beach\n"
+	.string "under the rocks. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText26::
+	.string "Come back with 3 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask22::
+	.string "The METEOR FIELD: craters and star\n"
+	.string "dust. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText22::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask31::
+	.string "The VENOM SWAMP: the air itself\n"
+	.string "bites. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText31::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask27::
+	.string "The WINDMILL FLATS: wide fields and\n"
+	.string "slow blades. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText27::
+	.string "Come back with 4 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask32::
+	.string "The ROYAL GARDEN: the most perfect\n"
+	.string "hedges you will see. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText32::
+	.string "Come back with all 8 BADGES.$"
