@@ -273,7 +273,13 @@
     "CircusLawn",
     "FrozenMarsh",
     "WillowBank",
-    "GlassCavern"
+    "GlassCavern",
+    "CrickPond",
+    "PineRow",
+    "SaltyDunes",
+    "TwilightGlen",
+    "SteelGarden",
+    "RainbowFalls"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",

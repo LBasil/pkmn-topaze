@@ -702,3 +702,45 @@ FuchsiaCity_Text_DuskFerrywoman_Ask22::
 
 FuchsiaCity_Text_DuskFerrywoman_GateText22::
 	.string "Come back with all 8 BADGES.$"
+
+FuchsiaCity_Text_Apprentice_Ask12::
+	.string "The CRICK POND: small ripples,\n"
+	.string "small friends. Visit?$"
+
+FuchsiaCity_Text_Apprentice_GateText12::
+	.string "Come back with 1 BADGE.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask18::
+	.string "The PINE ROW: tall trunks and quiet\n"
+	.string "needles. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText18::
+	.string "Come back with 2 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask18::
+	.string "The SALTY DUNES: sand, wind and sea\n"
+	.string "spray. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText18::
+	.string "Come back with 3 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask23::
+	.string "The TWILIGHT GLEN: everything is a\n"
+	.string "shade of blue. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText23::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask19::
+	.string "The STEEL GARDEN: metal flowers\n"
+	.string "that never wilt. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText19::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask24::
+	.string "The RAINBOW FALLS: a rainbow, a\n"
+	.string "waterfall and big splashes. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText24::
+	.string "Come back with all 8 BADGES.$"
