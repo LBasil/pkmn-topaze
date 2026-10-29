@@ -799,3 +799,8 @@ FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Closed::
 	msgbox FuchsiaCity_Text_SeasonsFerryman_Closed
 	release
 	end
+
+@ Topaze: guide du quai
+FuchsiaCity_EventScript_DockGuide::
+	msgbox FuchsiaCity_Text_DockGuide0, MSGBOX_NPC
+	end

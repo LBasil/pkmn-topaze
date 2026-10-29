@@ -464,8 +464,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
-      "x": 31,
-      "y": 21,
+      "x": 22,
+      "y": 28,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -478,8 +478,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
-      "x": 20,
-      "y": 18,
+      "x": 27,
+      "y": 23,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -506,8 +506,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST",
-      "x": 18,
-      "y": 17,
+      "x": 23,
+      "y": 27,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -520,8 +520,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_FISHER",
-      "x": 12,
-      "y": 22,
+      "x": 25,
+      "y": 28,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -529,6 +529,20 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "FuchsiaCity_EventScript_SeasonsFerryman",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
+      "x": 24,
+      "y": 23,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FuchsiaCity_EventScript_DockGuide",
       "flag": "0"
     }
   ],

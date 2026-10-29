@@ -505,3 +505,10 @@ FuchsiaCity_Text_SeasonsFerryman_GateText3::
 FuchsiaCity_Text_SeasonsFerryman_Ask3::
 	.string "The SHELL COAST: the tide leaves\n"
 	.string "treasure behind. Visit?$"
+
+FuchsiaCity_Text_DockGuide0::
+	.string "Seven ferries leave from this dock.\n"
+	.string "Echoes and time, tides and capture,\p"
+	.string "lanterns and calm shores, babies\n"
+	.string "and trades, dusk, the scribe and\p"
+	.string "the seasons. Ask them all.$"
