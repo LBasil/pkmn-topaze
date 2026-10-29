@@ -279,7 +279,19 @@
     "SaltyDunes",
     "TwilightGlen",
     "SteelGarden",
-    "RainbowFalls"
+    "RainbowFalls",
+    "DaisyHill",
+    "MuddyCreek",
+    "CrystalGrotto",
+    "SunsetRoad",
+    "ThunderPlain",
+    "AncientLibrary",
+    "BerryBrook",
+    "HauntedOrchard",
+    "CopperCanyon",
+    "GlimmerBay",
+    "IronForest",
+    "MythicSpring"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",

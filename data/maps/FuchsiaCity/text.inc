@@ -744,3 +744,87 @@ FuchsiaCity_Text_DuskFerrywoman_Ask24::
 
 FuchsiaCity_Text_DuskFerrywoman_GateText24::
 	.string "Come back with all 8 BADGES.$"
+
+FuchsiaCity_Text_Apprentice_Ask13::
+	.string "The DAISY HILL: flowers all the way\n"
+	.string "up. Visit?$"
+
+FuchsiaCity_Text_Apprentice_GateText13::
+	.string "Come back with 1 BADGE.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask20::
+	.string "The MUDDY CREEK: brown water and\n"
+	.string "slippery friends. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText20::
+	.string "Come back with 2 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask19::
+	.string "The CRYSTAL GROTTO: gems in every\n"
+	.string "wall. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText19::
+	.string "Come back with 4 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask25::
+	.string "The SUNSET ROAD: a long walk toward\n"
+	.string "the red sky. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText25::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask21::
+	.string "The THUNDER PLAIN: static in the\n"
+	.string "air. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText21::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask26::
+	.string "The ANCIENT LIBRARY: old books and\n"
+	.string "older minds. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText26::
+	.string "Come back with all 8 BADGES.$"
+
+FuchsiaCity_Text_Apprentice_Ask14::
+	.string "The BERRY BROOK: a sweet stream.\n"
+	.string "Visit?$"
+
+FuchsiaCity_Text_Apprentice_GateText14::
+	.string "Come back with 1 BADGE.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask22::
+	.string "The HAUNTED ORCHARD: the apples\n"
+	.string "whisper. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText22::
+	.string "Come back with 3 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask20::
+	.string "The COPPER CANYON: red walls and\n"
+	.string "echo. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText20::
+	.string "Come back with 4 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask27::
+	.string "The GLIMMER BAY: the sea sparkles\n"
+	.string "at noon. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText27::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask23::
+	.string "The IRON FOREST: leaves like\n"
+	.string "blades. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText23::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask28::
+	.string "The MYTHIC SPRING: a pool that\n"
+	.string "grants wishes, they say. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText28::
+	.string "Come back with all 8 BADGES.$"
