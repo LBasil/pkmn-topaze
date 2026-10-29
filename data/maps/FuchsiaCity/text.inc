@@ -705,3 +705,45 @@ FuchsiaCity_Text_DuskFerrywoman_Ask14::
 
 FuchsiaCity_Text_DuskFerrywoman_GateText14::
 	.string "Come back with 7 BADGES.$"
+
+FuchsiaCity_Text_Apprentice_Ask7::
+	.string "The WEED PATCH: tall grass and tiny\n"
+	.string "bugs. Visit?$"
+
+FuchsiaCity_Text_Apprentice_GateText7::
+	.string "Come back with 1 BADGE.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask9::
+	.string "The SKY PERCH: cliffs for birds and\n"
+	.string "wind riders. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText9::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask11::
+	.string "The SANDBOX GROVE: a sandy\n"
+	.string "playground for ground types. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText11::
+	.string "Come back with 3 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask15::
+	.string "The IVY MAZE: twisting paths of\n"
+	.string "green. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText15::
+	.string "Come back with 2 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask10::
+	.string "The NORTH WIND: bitter gusts and\n"
+	.string "cold fur. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText10::
+	.string "Come back with 7 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask16::
+	.string "The STONE CIRCLE: dragons gather\n"
+	.string "under standing stones. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText16::
+	.string "Come back with all 8 BADGES.$"

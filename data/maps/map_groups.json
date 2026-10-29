@@ -263,7 +263,9 @@
     "EeveeGrove",
     "ThornThicket",
     "MeadowPath",
-    "CenterMeadow"
+    "CenterMeadow",
+    "SandboxGrove",
+    "IvyMaze"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
@@ -366,7 +368,11 @@
     "ThunderRidge",
     "FangValley",
     "LuckyClover",
-    "SilentHollow"
+    "SilentHollow",
+    "WeedPatch",
+    "SkyPerch",
+    "NorthWind",
+    "StoneCircle"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",
