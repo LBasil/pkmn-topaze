@@ -426,6 +426,28 @@ static const u8 sJN_205[] = _("THE WOOD BITES");
 static const u8 sJH_205[] = _("NOCTURNE WOOD: bring 3 ANTIDOTES.");
 static const u8 sJN_206[] = _("A COLD DRINK");
 static const u8 sJH_206[] = _("SHELL COAST: bring a LEMONADE.");
+static const u8 sJN_207[] = _("A FIZZY TREAT");
+static const u8 sJH_207[] = _("EEVEE GROVE: bring a SODA POP.");
+static const u8 sJN_208[] = _("THE RESERVE STUDY");
+static const u8 sJH_208[] = _("PROFESSOR RESERVE: bring a RARE\nCANDY.");
+static const u8 sJN_209[] = _("LUNCH THIEVES");
+static const u8 sJH_209[] = _("THORN THICKET: bring 2 REPELS.");
+static const u8 sJN_210[] = _("A STRONG BODY");
+static const u8 sJH_210[] = _("KINDLE TRAIL: bring a PROTEIN.");
+static const u8 sJN_211[] = _("A GHOSTLY SWAP");
+static const u8 sJH_211[] = _("RUIN HOLLOW: bring an ULTRA BALL.");
+static const u8 sJN_212[] = _("PEARL FOR A FISHER");
+static const u8 sJH_212[] = _("TIDE CAVE: bring a PEARL.");
+static const u8 sJN_213[] = _("SHINY SHELLS");
+static const u8 sJH_213[] = _("SUNKEN BEACH: bring a HEART SCALE.");
+static const u8 sJN_214[] = _("A TOKEN OF ZINC");
+static const u8 sJH_214[] = _("SOUL PILLAR: bring a ZINC.");
+static const u8 sJN_215[] = _("MIRROR TRADE");
+static const u8 sJH_215[] = _("MIRROR BRIDGE: bring a WATER STONE.");
+static const u8 sJN_216[] = _("HURT FRIENDS");
+static const u8 sJH_216[] = _("MEADOW PATH: bring 2 POTIONS.");
+static const u8 sJN_217[] = _("A QUIET SHORE");
+static const u8 sJH_217[] = _("OUTCAST SHORE: bring a MAX REPEL.");
 
 static const struct TopazeJournalSection sJournalSections[] = {
     { sJS_0, 0 },
@@ -650,4 +672,15 @@ static const struct TopazeJournalEntry sJournalEntries[] = {
     { 2, 0, 2, FLAG_TOPAZE_QUEST_EMBERRIM, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_204, sJH_204 },
     { 2, 0, 2, FLAG_TOPAZE_QUEST_NOCTURNEWOOD, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_205, sJH_205 },
     { 2, 0, 2, FLAG_TOPAZE_QUEST_SHELLCOAST, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_206, sJH_206 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_EEVEEGROVE, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_207, sJH_207 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_PROFESSORRESERVE, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_208, sJH_208 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_THORNTHICKET, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_209, sJH_209 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_KINDLETRAIL, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_210, sJH_210 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_RUINHOLLOW, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_211, sJH_211 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_TIDECAVE, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_212, sJH_212 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_SUNKENBEACH, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_213, sJH_213 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_SOULPILLAR, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_214, sJH_214 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_MIRRORLABYRINTH, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_215, sJH_215 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_MEADOWPATH, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_216, sJH_216 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_OUTCASTSHORE, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_217, sJH_217 },
 };

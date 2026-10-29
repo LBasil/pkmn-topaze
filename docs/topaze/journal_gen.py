@@ -291,6 +291,10 @@ add("SIDE QUESTS", F, "FLAG_TOPAZE_QUEST_MEADOWPATH", 0, "HURT FRIENDS", "MEADOW
 add("SIDE QUESTS", F, "FLAG_TOPAZE_QUEST_OUTCASTSHORE", 0, "A QUIET SHORE", "OUTCAST SHORE: bring a MAX REPEL.", FL("FLAG_TOPAZE_CLOCK_DONE"))
 
 assert len(SECTIONS) <= 12
+import textwrap
+for i_, e_ in enumerate(E):
+    if any(len(l_) > 35 for l_ in e_[5].split("\\n")):
+        e_ = list(e_); e_[5] = "\\n".join(textwrap.wrap(e_[5].replace("\\n", " "), 35)); E[i_] = tuple(e_) if isinstance(E[i_], tuple) else e_
 for e in E:
     lines = e[5].split("\\n")
     assert len(lines) <= 3, (e[4], len(lines))
