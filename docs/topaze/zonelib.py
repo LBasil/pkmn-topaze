@@ -11,6 +11,18 @@ _used = set(re.findall(r'FLAG_0x[0-9A-F]+', ''.join(l for l in _fl.split('\n') i
 _pool = [('FLAG_0x%X' % i) for i in list(range(0x300, 0x3D8)) + list(range(0x4CF, 0x500)) + list(range(0x220, 0x230)) if ('FLAG_0x%X' % i) not in _used]
 _pool += ['FLAG_HIDDEN_ITEM_UNUSED_%s' % h for h in ('0x07','0x10','0x28','0x2B','0x2C','0x2D','0x2E','0x7C') if re.search(r'FLAG_HIDDEN_ITEM_UNUSED_%s\b' % h, _fl)]
 _pool += [('FLAG_0x%X' % i) for i in (0x23E,0x242,0x24C,0x25A,0x25C,0x25D,0x25F,0x260,0x261,0x262,0x277,0x279,0x28E,0x28F,0x299,0x2A4,0x2E5,0x2E6,0x2E7,0x2E8,0x2E9,0x2EA,0x2EB) if ('FLAG_0x%X' % i) not in _used and re.search(r'#define FLAG_0x%X\s+0x' % i, _fl)]
+import os
+def _sys_free():
+    """FLAG_0x82A..0x8FF permanents jamais references par nom dans src/data/include (hors flags.h)."""
+    txt = ''
+    for root in ('src', 'data', 'include'):
+        for dp, dn, fn in os.walk(root):
+            for f in fn:
+                if f.endswith(('.c', '.h', '.inc', '.json', '.s')) and f != 'flags.h':
+                    try: txt += open(os.path.join(dp, f), errors='ignore').read()
+                    except Exception: pass
+    return [('FLAG_0x%X' % i) for i in range(0x82A, 0x900) if re.search(r'#define FLAG_0x%X\s+\(SYS_FLAGS' % i, _fl) and ('FLAG_0x%X' % i) not in txt]
+_pool += _sys_free()
 _tgt = set(re.findall(r'#define FLAG_TOPAZE_\w+\s+(\S+)', _fl)); _pool = [f for f in _pool if f not in _tgt]
 _new = []
 def flag(name):

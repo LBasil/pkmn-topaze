@@ -747,3 +747,80 @@ FuchsiaCity_Text_DuskFerrywoman_Ask16::
 
 FuchsiaCity_Text_DuskFerrywoman_GateText16::
 	.string "Come back with all 8 BADGES.$"
+
+FuchsiaCity_Text_Apprentice_Ask8::
+	.string "The FOX FIELD: sly hunters in\n"
+	.string "golden grass. Visit?$"
+
+FuchsiaCity_Text_Apprentice_GateText8::
+	.string "Come back with 2 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask11::
+	.string "The MOSSY DELL: old trees and\n"
+	.string "Pikachu. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText11::
+	.string "Come back with 2 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask12::
+	.string "The BRIGHT SHALLOWS: warm water,\n"
+	.string "easy fishing. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText12::
+	.string "Come back with 3 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask17::
+	.string "The ASHEN HEIGHTS: warm rock and\n"
+	.string "smoking cracks. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText17::
+	.string "Come back with 4 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask12::
+	.string "The HUSHED BOG: slime, mist and\n"
+	.string "poison types. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText12::
+	.string "Come back with 4 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask18::
+	.string "The GALE CLIFF: wind-whipped rocks.\n"
+	.string "Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText18::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask13::
+	.string "The SOUND MEADOW: songs, echoes and\n"
+	.string "Normal types. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText13::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask13::
+	.string "The OBSIDIAN PASS: black rock and\n"
+	.string "heavy hitters. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText13::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask19::
+	.string "The MIRROR POND: still water,\n"
+	.string "strong swimmers. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText19::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask14::
+	.string "The PHANTOM LANE: a road for ghosts\n"
+	.string "and shadows. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText14::
+	.string "Come back with 7 BADGES.$"
+
+FuchsiaCity_Text_Apprentice_Ask9::
+	.string "The CROWN FIELD: the strongest wild\n"
+	.string "POKéMON gather here. Visit?$"
+
+FuchsiaCity_Text_Apprentice_GateText9::
+	.string "Come back with all 8 BADGES.$"

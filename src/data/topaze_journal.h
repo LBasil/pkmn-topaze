@@ -468,6 +468,28 @@ static const u8 sJN_226[] = _("A SCARF FOR BALLS");
 static const u8 sJH_226[] = _("LUCKY CLOVER: bring 3 POKE BALLS.");
 static const u8 sJN_227[] = _("A QUIET NIGHT");
 static const u8 sJH_227[] = _("SILENT HOLLOW: bring a MAX ELIXIR.");
+static const u8 sJN_228[] = _("A FOX NEEDS HELP");
+static const u8 sJH_228[] = _("FOX FIELD: bring 2 POTIONS.");
+static const u8 sJN_229[] = _("STINGS AND SALVE");
+static const u8 sJH_229[] = _("MOSSY DELL: bring 2 ANTIDOTES.");
+static const u8 sJN_230[] = _("A TIRED FISHERMAN");
+static const u8 sJH_230[] = _("BRIGHT SHALLOWS: bring a SUPER\nPOTION.");
+static const u8 sJN_231[] = _("BURNING HANDS");
+static const u8 sJH_231[] = _("ASHEN HEIGHTS: bring 2 BURN HEALS.");
+static const u8 sJN_232[] = _("BOG RESEARCH");
+static const u8 sJH_232[] = _("HUSHED BOG: bring a FULL HEAL.");
+static const u8 sJN_233[] = _("GRANNY AND BALLS");
+static const u8 sJH_233[] = _("GALE CLIFF: bring 2 GREAT BALLS.");
+static const u8 sJN_234[] = _("A BERRY FOR A SONG");
+static const u8 sJH_234[] = _("SOUND MEADOW: bring a LEPPA BERRY.");
+static const u8 sJN_235[] = _("A LONG WALK HOME");
+static const u8 sJH_235[] = _("OBSIDIAN PASS: bring a MAX REPEL.");
+static const u8 sJN_236[] = _("A STONE FOR THE POND");
+static const u8 sJH_236[] = _("MIRROR POND: bring a WATER STONE.");
+static const u8 sJN_237[] = _("AN OLD FRIEND");
+static const u8 sJH_237[] = _("PHANTOM LANE: bring a MAX REVIVE.");
+static const u8 sJN_238[] = _("A CHAMPION'S PRIZE");
+static const u8 sJH_238[] = _("CROWN FIELD: bring a RARE CANDY.");
 
 static const struct TopazeJournalSection sJournalSections[] = {
     { sJS_0, 0 },
@@ -713,4 +735,15 @@ static const struct TopazeJournalEntry sJournalEntries[] = {
     { 2, 0, 2, FLAG_TOPAZE_QUEST_FANGVALLEY, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_225, sJH_225 },
     { 2, 0, 2, FLAG_TOPAZE_QUEST_LUCKYCLOVER, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_226, sJH_226 },
     { 2, 0, 2, FLAG_TOPAZE_QUEST_SILENTHOLLOW, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_227, sJH_227 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_FOXFIELD, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_228, sJH_228 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_MOSSYDELL, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_229, sJH_229 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_BRIGHTSHALLOWS, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_230, sJH_230 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_ASHENHEIGHTS, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_231, sJH_231 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_HUSHEDBOG, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_232, sJH_232 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_GALECLIFF, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_233, sJH_233 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_SOUNDMEADOW, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_234, sJH_234 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_OBSIDIANPASS, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_235, sJH_235 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_MIRRORPOND, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_236, sJH_236 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_PHANTOMLANE, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_237, sJH_237 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_CROWNFIELD, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_238, sJH_238 },
 };

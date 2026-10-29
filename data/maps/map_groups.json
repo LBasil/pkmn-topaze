@@ -265,7 +265,10 @@
     "MeadowPath",
     "CenterMeadow",
     "SandboxGrove",
-    "IvyMaze"
+    "IvyMaze",
+    "MossyDell",
+    "HushedBog",
+    "ObsidianPass"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
@@ -372,7 +375,15 @@
     "WeedPatch",
     "SkyPerch",
     "NorthWind",
-    "StoneCircle"
+    "StoneCircle",
+    "FoxField",
+    "BrightShallows",
+    "AshenHeights",
+    "GaleCliff",
+    "SoundMeadow",
+    "MirrorPond",
+    "PhantomLane",
+    "CrownField"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",
