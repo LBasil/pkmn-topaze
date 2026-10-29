@@ -446,7 +446,13 @@
     "GenericHouse_B",
     "GenericHouse_C",
     "GenericHouse_D",
-    "EdgeOfTheWorld"
+    "EdgeOfTheWorld",
+    "HarvestHollow",
+    "MirrorMarsh",
+    "HighPines",
+    "SeaGlassShore",
+    "DeepEmberCave",
+    "SkyGarden"
   ],
   "gMapGroup_IndoorViridian": [
     "ViridianCity_House",

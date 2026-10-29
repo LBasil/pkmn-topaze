@@ -954,3 +954,45 @@ FuchsiaCity_Text_DuskFerrywoman_Ask34::
 
 FuchsiaCity_Text_DuskFerrywoman_GateText34::
 	.string "Come back with all 8 BADGES.$"
+
+FuchsiaCity_Text_Apprentice_Ask18::
+	.string "The HARVEST HOLLOW: golden fields\n"
+	.string "and scarecrows. Visit?$"
+
+FuchsiaCity_Text_Apprentice_GateText18::
+	.string "Come back with 1 BADGE.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask30::
+	.string "The MIRROR MARSH: still water that\n"
+	.string "copies the sky. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText30::
+	.string "Come back with 3 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask24::
+	.string "The HIGH PINES: thin air and strong\n"
+	.string "bugs. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText24::
+	.string "Come back with 4 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask35::
+	.string "The SEA GLASS SHORE: green shards,\n"
+	.string "soft waves. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText35::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask31::
+	.string "The DEEP EMBER CAVE: hot stone,\n"
+	.string "hotter echoes. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText31::
+	.string "Come back with 7 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask36::
+	.string "The SKY GARDEN: flowers above the\n"
+	.string "clouds. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText36::
+	.string "Come back with all 8 BADGES.$"

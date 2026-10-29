@@ -44729,6 +44729,834 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_HARVEST_HOLLOW",
+          "base_label": "sHarvestHollow_FireRed",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_RATTATA"
+              },
+              {
+                "min_level": 6,
+                "max_level": 9,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_ZIGZAGOON"
+              },
+              {
+                "min_level": 6,
+                "max_level": 9,
+                "species": "SPECIES_HOPPIP"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_SUNKERN"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 6,
+                "max_level": 9,
+                "species": "SPECIES_BELLSPROUT"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_MEOWTH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SPEAROW"
+              },
+              {
+                "min_level": 6,
+                "max_level": 9,
+                "species": "SPECIES_AZURILL"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_SKITTY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_HARVEST_HOLLOW",
+          "base_label": "sHarvestHollow_LeafGreen",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_RATTATA"
+              },
+              {
+                "min_level": 6,
+                "max_level": 9,
+                "species": "SPECIES_PIDGEY"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_SENTRET"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_ZIGZAGOON"
+              },
+              {
+                "min_level": 6,
+                "max_level": 9,
+                "species": "SPECIES_HOPPIP"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_SUNKERN"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_ODDISH"
+              },
+              {
+                "min_level": 6,
+                "max_level": 9,
+                "species": "SPECIES_BELLSPROUT"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_MEOWTH"
+              },
+              {
+                "min_level": 5,
+                "max_level": 8,
+                "species": "SPECIES_SPEAROW"
+              },
+              {
+                "min_level": 6,
+                "max_level": 9,
+                "species": "SPECIES_AZURILL"
+              },
+              {
+                "min_level": 7,
+                "max_level": 10,
+                "species": "SPECIES_SKITTY"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MIRROR_MARSH",
+          "base_label": "sMirrorMarsh_FireRed",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 18,
+                "max_level": 22,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 19,
+                "max_level": 23,
+                "species": "SPECIES_GOLDUCK"
+              },
+              {
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 18,
+                "max_level": 22,
+                "species": "SPECIES_POLIWHIRL"
+              },
+              {
+                "min_level": 19,
+                "max_level": 23,
+                "species": "SPECIES_LOTAD"
+              },
+              {
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_LOMBRE"
+              },
+              {
+                "min_level": 18,
+                "max_level": 22,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 19,
+                "max_level": 23,
+                "species": "SPECIES_QUAGSIRE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 18,
+                "max_level": 22,
+                "species": "SPECIES_SURSKIT"
+              },
+              {
+                "min_level": 19,
+                "max_level": 23,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_MIRROR_MARSH",
+          "base_label": "sMirrorMarsh_LeafGreen",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 18,
+                "max_level": 22,
+                "species": "SPECIES_PSYDUCK"
+              },
+              {
+                "min_level": 19,
+                "max_level": 23,
+                "species": "SPECIES_GOLDUCK"
+              },
+              {
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 18,
+                "max_level": 22,
+                "species": "SPECIES_POLIWHIRL"
+              },
+              {
+                "min_level": 19,
+                "max_level": 23,
+                "species": "SPECIES_LOTAD"
+              },
+              {
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_LOMBRE"
+              },
+              {
+                "min_level": 18,
+                "max_level": 22,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 19,
+                "max_level": 23,
+                "species": "SPECIES_QUAGSIRE"
+              },
+              {
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 18,
+                "max_level": 22,
+                "species": "SPECIES_SURSKIT"
+              },
+              {
+                "min_level": 19,
+                "max_level": 23,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 20,
+                "max_level": 24,
+                "species": "SPECIES_SLOWPOKE"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_HIGH_PINES",
+          "base_label": "sHighPines_FireRed",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 24,
+                "max_level": 28,
+                "species": "SPECIES_HERACROSS"
+              },
+              {
+                "min_level": 25,
+                "max_level": 29,
+                "species": "SPECIES_PINSIR"
+              },
+              {
+                "min_level": 26,
+                "max_level": 30,
+                "species": "SPECIES_SCYTHER"
+              },
+              {
+                "min_level": 24,
+                "max_level": 28,
+                "species": "SPECIES_ARIADOS"
+              },
+              {
+                "min_level": 25,
+                "max_level": 29,
+                "species": "SPECIES_BEEDRILL"
+              },
+              {
+                "min_level": 26,
+                "max_level": 30,
+                "species": "SPECIES_GLIGAR"
+              },
+              {
+                "min_level": 24,
+                "max_level": 28,
+                "species": "SPECIES_TEDDIURSA"
+              },
+              {
+                "min_level": 25,
+                "max_level": 29,
+                "species": "SPECIES_URSARING"
+              },
+              {
+                "min_level": 26,
+                "max_level": 30,
+                "species": "SPECIES_PIDGEOTTO"
+              },
+              {
+                "min_level": 24,
+                "max_level": 28,
+                "species": "SPECIES_NOCTOWL"
+              },
+              {
+                "min_level": 25,
+                "max_level": 29,
+                "species": "SPECIES_STANTLER"
+              },
+              {
+                "min_level": 26,
+                "max_level": 30,
+                "species": "SPECIES_PINECO"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_HIGH_PINES",
+          "base_label": "sHighPines_LeafGreen",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 24,
+                "max_level": 28,
+                "species": "SPECIES_HERACROSS"
+              },
+              {
+                "min_level": 25,
+                "max_level": 29,
+                "species": "SPECIES_PINSIR"
+              },
+              {
+                "min_level": 26,
+                "max_level": 30,
+                "species": "SPECIES_SCYTHER"
+              },
+              {
+                "min_level": 24,
+                "max_level": 28,
+                "species": "SPECIES_ARIADOS"
+              },
+              {
+                "min_level": 25,
+                "max_level": 29,
+                "species": "SPECIES_BEEDRILL"
+              },
+              {
+                "min_level": 26,
+                "max_level": 30,
+                "species": "SPECIES_GLIGAR"
+              },
+              {
+                "min_level": 24,
+                "max_level": 28,
+                "species": "SPECIES_TEDDIURSA"
+              },
+              {
+                "min_level": 25,
+                "max_level": 29,
+                "species": "SPECIES_URSARING"
+              },
+              {
+                "min_level": 26,
+                "max_level": 30,
+                "species": "SPECIES_PIDGEOTTO"
+              },
+              {
+                "min_level": 24,
+                "max_level": 28,
+                "species": "SPECIES_NOCTOWL"
+              },
+              {
+                "min_level": 25,
+                "max_level": 29,
+                "species": "SPECIES_STANTLER"
+              },
+              {
+                "min_level": 26,
+                "max_level": 30,
+                "species": "SPECIES_PINECO"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SEA_GLASS_SHORE",
+          "base_label": "sSeaGlassShore_FireRed",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 30,
+                "max_level": 34,
+                "species": "SPECIES_WINGULL"
+              },
+              {
+                "min_level": 31,
+                "max_level": 35,
+                "species": "SPECIES_PELIPPER"
+              },
+              {
+                "min_level": 32,
+                "max_level": 36,
+                "species": "SPECIES_CORSOLA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 34,
+                "species": "SPECIES_KINGLER"
+              },
+              {
+                "min_level": 31,
+                "max_level": 35,
+                "species": "SPECIES_STARMIE"
+              },
+              {
+                "min_level": 32,
+                "max_level": 36,
+                "species": "SPECIES_SEADRA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 34,
+                "species": "SPECIES_TENTACRUEL"
+              },
+              {
+                "min_level": 31,
+                "max_level": 35,
+                "species": "SPECIES_LUVDISC"
+              },
+              {
+                "min_level": 32,
+                "max_level": 36,
+                "species": "SPECIES_CLAMPERL"
+              },
+              {
+                "min_level": 30,
+                "max_level": 34,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 31,
+                "max_level": 35,
+                "species": "SPECIES_LAPRAS"
+              },
+              {
+                "min_level": 32,
+                "max_level": 36,
+                "species": "SPECIES_WAILMER"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SEA_GLASS_SHORE",
+          "base_label": "sSeaGlassShore_LeafGreen",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 30,
+                "max_level": 34,
+                "species": "SPECIES_WINGULL"
+              },
+              {
+                "min_level": 31,
+                "max_level": 35,
+                "species": "SPECIES_PELIPPER"
+              },
+              {
+                "min_level": 32,
+                "max_level": 36,
+                "species": "SPECIES_CORSOLA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 34,
+                "species": "SPECIES_KINGLER"
+              },
+              {
+                "min_level": 31,
+                "max_level": 35,
+                "species": "SPECIES_STARMIE"
+              },
+              {
+                "min_level": 32,
+                "max_level": 36,
+                "species": "SPECIES_SEADRA"
+              },
+              {
+                "min_level": 30,
+                "max_level": 34,
+                "species": "SPECIES_TENTACRUEL"
+              },
+              {
+                "min_level": 31,
+                "max_level": 35,
+                "species": "SPECIES_LUVDISC"
+              },
+              {
+                "min_level": 32,
+                "max_level": 36,
+                "species": "SPECIES_CLAMPERL"
+              },
+              {
+                "min_level": 30,
+                "max_level": 34,
+                "species": "SPECIES_SHELLDER"
+              },
+              {
+                "min_level": 31,
+                "max_level": 35,
+                "species": "SPECIES_LAPRAS"
+              },
+              {
+                "min_level": 32,
+                "max_level": 36,
+                "species": "SPECIES_WAILMER"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_DEEP_EMBER_CAVE",
+          "base_label": "sDeepEmberCave_FireRed",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 45,
+                "max_level": 49,
+                "species": "SPECIES_MAGCARGO"
+              },
+              {
+                "min_level": 46,
+                "max_level": 50,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_TORKOAL"
+              },
+              {
+                "min_level": 45,
+                "max_level": 49,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 50,
+                "species": "SPECIES_CROBAT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_STEELIX"
+              },
+              {
+                "min_level": 45,
+                "max_level": 49,
+                "species": "SPECIES_ONIX"
+              },
+              {
+                "min_level": 46,
+                "max_level": 50,
+                "species": "SPECIES_SLUGMA"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_NINETALES"
+              },
+              {
+                "min_level": 45,
+                "max_level": 49,
+                "species": "SPECIES_ARCANINE"
+              },
+              {
+                "min_level": 46,
+                "max_level": 50,
+                "species": "SPECIES_RAPIDASH"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_DEEP_EMBER_CAVE",
+          "base_label": "sDeepEmberCave_LeafGreen",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_MAGMAR"
+              },
+              {
+                "min_level": 45,
+                "max_level": 49,
+                "species": "SPECIES_MAGCARGO"
+              },
+              {
+                "min_level": 46,
+                "max_level": 50,
+                "species": "SPECIES_CAMERUPT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_TORKOAL"
+              },
+              {
+                "min_level": 45,
+                "max_level": 49,
+                "species": "SPECIES_GOLBAT"
+              },
+              {
+                "min_level": 46,
+                "max_level": 50,
+                "species": "SPECIES_CROBAT"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_STEELIX"
+              },
+              {
+                "min_level": 45,
+                "max_level": 49,
+                "species": "SPECIES_ONIX"
+              },
+              {
+                "min_level": 46,
+                "max_level": 50,
+                "species": "SPECIES_SLUGMA"
+              },
+              {
+                "min_level": 44,
+                "max_level": 48,
+                "species": "SPECIES_NINETALES"
+              },
+              {
+                "min_level": 45,
+                "max_level": 49,
+                "species": "SPECIES_ARCANINE"
+              },
+              {
+                "min_level": 46,
+                "max_level": 50,
+                "species": "SPECIES_RAPIDASH"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SKY_GARDEN",
+          "base_label": "sSkyGarden_FireRed",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 56,
+                "max_level": 60,
+                "species": "SPECIES_ALTARIA"
+              },
+              {
+                "min_level": 57,
+                "max_level": 61,
+                "species": "SPECIES_DRAGONITE"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_SALAMENCE"
+              },
+              {
+                "min_level": 56,
+                "max_level": 60,
+                "species": "SPECIES_FLYGON"
+              },
+              {
+                "min_level": 57,
+                "max_level": 61,
+                "species": "SPECIES_TOGETIC"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_XATU"
+              },
+              {
+                "min_level": 56,
+                "max_level": 60,
+                "species": "SPECIES_SKARMORY"
+              },
+              {
+                "min_level": 57,
+                "max_level": 61,
+                "species": "SPECIES_HOUNDOOM"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_MILOTIC"
+              },
+              {
+                "min_level": 56,
+                "max_level": 60,
+                "species": "SPECIES_GARDEVOIR"
+              },
+              {
+                "min_level": 57,
+                "max_level": 61,
+                "species": "SPECIES_ROSELIA"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_BELLOSSOM"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_SKY_GARDEN",
+          "base_label": "sSkyGarden_LeafGreen",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 56,
+                "max_level": 60,
+                "species": "SPECIES_ALTARIA"
+              },
+              {
+                "min_level": 57,
+                "max_level": 61,
+                "species": "SPECIES_DRAGONITE"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_SALAMENCE"
+              },
+              {
+                "min_level": 56,
+                "max_level": 60,
+                "species": "SPECIES_FLYGON"
+              },
+              {
+                "min_level": 57,
+                "max_level": 61,
+                "species": "SPECIES_TOGETIC"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_XATU"
+              },
+              {
+                "min_level": 56,
+                "max_level": 60,
+                "species": "SPECIES_SKARMORY"
+              },
+              {
+                "min_level": 57,
+                "max_level": 61,
+                "species": "SPECIES_HOUNDOOM"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_MILOTIC"
+              },
+              {
+                "min_level": 56,
+                "max_level": 60,
+                "species": "SPECIES_GARDEVOIR"
+              },
+              {
+                "min_level": 57,
+                "max_level": 61,
+                "species": "SPECIES_ROSELIA"
+              },
+              {
+                "min_level": 58,
+                "max_level": 62,
+                "species": "SPECIES_BELLOSSOM"
+              }
+            ]
+          }
         }
       ]
     }
