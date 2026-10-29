@@ -398,6 +398,26 @@ static const u8 sJN_191[] = _("THE LOST CALF");
 static const u8 sJH_191[] = _("GIANTS PLAIN: a baby needs a home.");
 static const u8 sJN_192[] = _("WATER FOR THE DUNES");
 static const u8 sJH_192[] = _("DUNE SEA: bring 2 FRESH WATERS.");
+static const u8 sJN_193[] = _("MILK FOR THE LAB");
+static const u8 sJH_193[] = _("PALLET: bring 2 MOOMOO MILKS.");
+static const u8 sJN_194[] = _("THE GILDED GIFT");
+static const u8 sJH_194[] = _("VIRIDIAN: bring a NUGGET.");
+static const u8 sJN_195[] = _("THE FALLEN STAR");
+static const u8 sJH_195[] = _("PEWTER: bring a STAR PIECE.");
+static const u8 sJN_196[] = _("THE SAILOR'S PEARL");
+static const u8 sJH_196[] = _("VERMILION: bring a BIG PEARL.");
+static const u8 sJN_197[] = _("A TAG FOR THE DEAD");
+static const u8 sJH_197[] = _("LAVENDER: bring a SPELL TAG.");
+static const u8 sJN_198[] = _("THE SPA REGULAR");
+static const u8 sJH_198[] = _("CELADON: bring an ELIXIR.");
+static const u8 sJN_199[] = _("A BERRY GOOD DEAL");
+static const u8 sJH_199[] = _("AMETHIOLITE: bring a SITRUS BERRY.");
+static const u8 sJN_200[] = _("THE MAGNET EXPERIMENT");
+static const u8 sJH_200[] = _("CINNABAR: bring a MAGNET.");
+static const u8 sJN_201[] = _("THE FORTUNE SPOON");
+static const u8 sJH_201[] = _("SAFFRON: bring a TWISTED SPOON.");
+static const u8 sJN_202[] = _("THE POKeDEX HALL");
+static const u8 sJH_202[] = _("Ferry from AMETHIOLITE: rewards at\n25, 50, 100... species caught.");
 
 static const struct TopazeJournalSection sJournalSections[] = {
     { sJS_0, 0 },
@@ -608,4 +628,14 @@ static const struct TopazeJournalEntry sJournalEntries[] = {
     { 2, 0, 2, FLAG_TOPAZE_QUEST_GIANTSPLAIN, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_190, sJH_190 },
     { 2, 0, 2, FLAG_TOPAZE_GIFT_GIANTSPLAIN, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_191, sJH_191 },
     { 2, 0, 2, FLAG_TOPAZE_QUEST_DUNESEA, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_192, sJH_192 },
+    { 2, 0, 0, FLAG_TOPAZE_TQ_PALLETTOWN, 0, 0, 0, 0, 0, 0, sJN_193, sJH_193 },
+    { 2, 0, 0, FLAG_TOPAZE_TQ_VIRIDIANCITY, 0, 0, 0, 0, 0, 0, sJN_194, sJH_194 },
+    { 2, 0, 0, FLAG_TOPAZE_TQ_PEWTERCITY, 0, 0, 0, 0, 0, 0, sJN_195, sJH_195 },
+    { 2, 0, 0, FLAG_TOPAZE_TQ_VERMILIONCITY, 0, 0, 0, 0, 0, 0, sJN_196, sJH_196 },
+    { 2, 0, 0, FLAG_TOPAZE_TQ_LAVENDERTOWN, 0, 0, 0, 0, 0, 0, sJN_197, sJH_197 },
+    { 2, 0, 0, FLAG_TOPAZE_TQ_CELADONCITY, 0, 0, 0, 0, 0, 0, sJN_198, sJH_198 },
+    { 2, 0, 0, FLAG_TOPAZE_TQ_FUCHSIACITY, 0, 0, 0, 0, 0, 0, sJN_199, sJH_199 },
+    { 2, 0, 0, FLAG_TOPAZE_TQ_CINNABARISLAND, 0, 0, 0, 0, 0, 0, sJN_200, sJH_200 },
+    { 2, 0, 0, FLAG_TOPAZE_TQ_SAFFRONCITY, 0, 0, 0, 0, 0, 0, sJN_201, sJH_201 },
+    { 2, 0, 2, FLAG_TOPAZE_DEXHALL_350, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_202, sJH_202 },
 };
