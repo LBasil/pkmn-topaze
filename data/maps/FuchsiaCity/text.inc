@@ -256,3 +256,53 @@ FuchsiaCity_Text_Ferry_Ask6::
 FuchsiaCity_Text_Ferry_GateText6::
 	.string "Only those who beat every friend\n"
 	.string "may enter.$"
+
+FuchsiaCity_Text_Tide_Hello::
+	.string "I row to places where POKeMON\n"
+	.string "gather to become something else,\p"
+	.string "{PLAYER}.$"
+
+FuchsiaCity_Text_Tide_Closed::
+	.string "The tide is not ready. Come back\n"
+	.string "once the clocks make sense.$"
+
+FuchsiaCity_Text_Tide_Never::
+	.string "Another time, then. The tide can\n"
+	.string "wait.$"
+
+FuchsiaCity_Text_Tide_Ask0::
+	.string "The MARSH OF REFLECTIONS shows what\n"
+	.string "POKeMON could become, or were.\p"
+	.string "Visit?$"
+
+FuchsiaCity_Text_Tide_GateText0::
+	.string "Come back with 3 BADGES.$"
+
+FuchsiaCity_Text_Tide_Ask1::
+	.string "The STONE GREENHOUSE grows POKeMON\n"
+	.string "that wait for a stone. Visit?$"
+
+FuchsiaCity_Text_Tide_GateText1::
+	.string "Come back with 4 BADGES.$"
+
+FuchsiaCity_Text_Tide_Ask2::
+	.string "The TRADE DOCK, where POKeMON that\n"
+	.string "evolve by trade wait on the pier.\p"
+	.string "Visit?$"
+
+FuchsiaCity_Text_Tide_GateText2::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_Tide_Ask3::
+	.string "The FOSSIL DIG: five fossils sleep\n"
+	.string "in the sand. Visit?$"
+
+FuchsiaCity_Text_Tide_GateText3::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_Tide_Ask4::
+	.string "The POND OF CYCLES: water, patience\n"
+	.string "and rare catches. Visit?$"
+
+FuchsiaCity_Text_Tide_GateText4::
+	.string "Come back with 7 BADGES.$"

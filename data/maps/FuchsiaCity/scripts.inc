@@ -416,3 +416,73 @@ FuchsiaCity_EventScript_EchoFerryman_EventScript_Closed::
 	msgbox FuchsiaCity_Text_Ferry_Closed
 	release
 	end
+
+@ Topaze: la PASSEUSE (zones de capture)
+FuchsiaCity_EventScript_TideFerrywoman::
+	lock
+	faceplayer
+	goto_if_unset FLAG_TOPAZE_CLOCK_DONE, FuchsiaCity_EventScript_TideFerrywoman_EventScript_Closed
+	msgbox FuchsiaCity_Text_Tide_Hello
+	goto_if_unset FLAG_BADGE03_GET, FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate0
+	msgbox FuchsiaCity_Text_Tide_Ask0, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest1
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_REFLECTION_MARSH, 255, 30, 23
+	waitstate
+	end
+FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate0::
+	msgbox FuchsiaCity_Text_Tide_GateText0
+	goto FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest1
+FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest1::
+	goto_if_unset FLAG_BADGE04_GET, FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate1
+	msgbox FuchsiaCity_Text_Tide_Ask1, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest2
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_STONE_GREENHOUSE, 255, 12, 36
+	waitstate
+	end
+FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate1::
+	msgbox FuchsiaCity_Text_Tide_GateText1
+	goto FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest2
+FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest2::
+	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate2
+	msgbox FuchsiaCity_Text_Tide_Ask2, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest3
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_TRADE_DOCK, 255, 48, 11
+	waitstate
+	end
+FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate2::
+	msgbox FuchsiaCity_Text_Tide_GateText2
+	goto FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest3
+FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest3::
+	goto_if_unset FLAG_BADGE06_GET, FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate3
+	msgbox FuchsiaCity_Text_Tide_Ask3, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest4
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_FOSSIL_DIG, 255, 24, 30
+	waitstate
+	end
+FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate3::
+	msgbox FuchsiaCity_Text_Tide_GateText3
+	goto FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest4
+FuchsiaCity_EventScript_TideFerrywoman_EventScript_Dest4::
+	goto_if_unset FLAG_BADGE07_GET, FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate4
+	msgbox FuchsiaCity_Text_Tide_Ask4, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_TideFerrywoman_EventScript_End
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_CYCLE_POND, 255, 14, 75
+	waitstate
+	end
+FuchsiaCity_EventScript_TideFerrywoman_EventScript_Gate4::
+	msgbox FuchsiaCity_Text_Tide_GateText4
+	goto FuchsiaCity_EventScript_TideFerrywoman_EventScript_End
+FuchsiaCity_EventScript_TideFerrywoman_EventScript_End::
+	msgbox FuchsiaCity_Text_Tide_Never
+	release
+	end
+
+FuchsiaCity_EventScript_TideFerrywoman_EventScript_Closed::
+	msgbox FuchsiaCity_Text_Tide_Closed
+	release
+	end

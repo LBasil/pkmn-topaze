@@ -332,6 +332,14 @@ static const u8 sJN_158[] = _("ISLAND OF THE LAST DAY");
 static const u8 sJH_158[] = _("Ferry from AMETHIOLITE dock.\nNeeds the LEAGUE beaten.");
 static const u8 sJN_159[] = _("CLEARING OF FRIENDS");
 static const u8 sJH_159[] = _("Ferry from AMETHIOLITE dock.\nBeat every friend first.");
+static const u8 sJN_160[] = _("THE FOSSIL DIG");
+static const u8 sJH_160[] = _("Ferry from AMETHIOLITE. Dig the\n5 shining spots in the sand.");
+static const u8 sJN_161[] = _("THE GHOST EGGS");
+static const u8 sJH_161[] = _("FOSSIL DIG: 4 ghosts leave a rare\nPOKeMON each.");
+static const u8 sJN_162[] = _("THE BOND TREATMENT");
+static const u8 sJH_162[] = _("CYCLE POND: a treatment for\nbond evolutions.");
+static const u8 sJN_163[] = _("THE FORBIDDEN EVOLUTION");
+static const u8 sJH_163[] = _("CYCLE POND hermit keeps a stone.\nPOKeMON that never evolve.");
 
 static const struct TopazeJournalSection sJournalSections[] = {
     { sJS_0, 0 },
@@ -509,4 +517,8 @@ static const struct TopazeJournalEntry sJournalEntries[] = {
     { 7, 2, 2, TRAINER_ZONE_GARDEN, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_157, sJH_157 },
     { 7, 2, 2, TRAINER_ZONE_ISLAND, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_158, sJH_158 },
     { 7, 2, 2, TRAINER_ZONE_CLEARING, 0, FLAG_TOPAZE_POSTGAME, 0, 0, 0, 0, sJN_159, sJH_159 },
+    { 2, 0, 2, FLAG_TOPAZE_FOSSIL_5, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_160, sJH_160 },
+    { 2, 0, 2, FLAG_TOPAZE_GHOST_4, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_161, sJH_161 },
+    { 2, 0, 2, FLAG_TOPAZE_BOND, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_162, sJH_162 },
+    { 2, 0, 2, FLAG_TOPAZE_EVERSTONE, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_163, sJH_163 },
 };

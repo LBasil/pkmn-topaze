@@ -212,6 +212,12 @@ add("POST-GAME" if "GARDEN" in ("GARDEN","ISLAND","CLEARING") else "SIDE QUESTS"
 add("POST-GAME" if "ISLAND" in ("GARDEN","ISLAND","CLEARING") else "SIDE QUESTS", T, "TRAINER_ZONE_ISLAND", 0, "ISLAND OF THE LAST DAY", "Ferry from AMETHIOLITE dock.\\nNeeds the LEAGUE beaten.", FL("FLAG_TOPAZE_POSTGAME"))
 add("POST-GAME" if "CLEARING" in ("GARDEN","ISLAND","CLEARING") else "SIDE QUESTS", T, "TRAINER_ZONE_CLEARING", 0, "CLEARING OF FRIENDS", "Ferry from AMETHIOLITE dock.\\nBeat every friend first.", FL("FLAG_TOPAZE_POSTGAME"))
 
+# ---- ZONES DE CAPTURE (la passeuse)
+add("SIDE QUESTS", F, "FLAG_TOPAZE_FOSSIL_5", 0, "THE FOSSIL DIG", "Ferry from AMETHIOLITE. Dig the\\n5 shining spots in the sand.", FL("FLAG_TOPAZE_CLOCK_DONE"))
+add("SIDE QUESTS", F, "FLAG_TOPAZE_GHOST_4", 0, "THE GHOST EGGS", "FOSSIL DIG: 4 ghosts leave a rare\\nPOKeMON each.", FL("FLAG_TOPAZE_CLOCK_DONE"))
+add("SIDE QUESTS", F, "FLAG_TOPAZE_BOND", 0, "THE BOND TREATMENT", "CYCLE POND: a treatment for\\nbond evolutions.", FL("FLAG_TOPAZE_CLOCK_DONE"))
+add("SIDE QUESTS", F, "FLAG_TOPAZE_EVERSTONE", 0, "THE FORBIDDEN EVOLUTION", "CYCLE POND hermit keeps a stone.\\nPOKeMON that never evolve.", FL("FLAG_TOPAZE_CLOCK_DONE"))
+
 assert len(SECTIONS) <= 12
 for e in E:
     lines = e[5].split("\\n")

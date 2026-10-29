@@ -248,7 +248,8 @@
     "SevenIsland_SevaultCanyon_Grove",
     "SevenIsland_SevaultCanyon_Glade",
     "SevenIsland_SevaultCanyon_Summit",
-    "LastDayIsland"
+    "LastDayIsland",
+    "ReflectionMarsh"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
@@ -321,7 +322,11 @@
     "ViridianCity_WestLane",
     "ClockBeach",
     "NoTomorrowVillage",
-    "EchoGarden"
+    "EchoGarden",
+    "StoneGreenhouse",
+    "TradeDock",
+    "FossilDig",
+    "CyclePond"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",

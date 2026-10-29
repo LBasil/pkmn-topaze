@@ -466,4 +466,5 @@ gSpecials::
 	def_special TopazeRadarOpenScreen
 	def_special TopazeRadarStart
 	def_special TopazeRadarBattle
+	def_special TopazeBondMax
 gSpecialsEnd::

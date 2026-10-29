@@ -2123,6 +2123,12 @@ void TopazeMassageOne(void)
     AdjustFriendship(&gPlayerParty[gSpecialVar_0x8004], FRIENDSHIP_EVENT_MASSAGE);
 }
 
+void TopazeBondMax(void)
+{
+    u8 f = 255;
+    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_FRIENDSHIP, &f);
+}
+
 void DaisyMassageServices(void)
 {
     AdjustFriendship(&gPlayerParty[gSpecialVar_0x8004], FRIENDSHIP_EVENT_MASSAGE);
