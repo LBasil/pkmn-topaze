@@ -996,3 +996,45 @@ FuchsiaCity_Text_DuskFerrywoman_Ask36::
 
 FuchsiaCity_Text_DuskFerrywoman_GateText36::
 	.string "Come back with all 8 BADGES.$"
+
+FuchsiaCity_Text_Apprentice_Ask19::
+	.string "The BUZZING MEADOW: wings\n"
+	.string "everywhere. Visit?$"
+
+FuchsiaCity_Text_Apprentice_GateText19::
+	.string "Come back with 1 BADGE.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask32::
+	.string "The PUDDLE LANE: it rained. It\n"
+	.string "always rains. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText32::
+	.string "Come back with 2 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask25::
+	.string "The GRANITE BLUFF: heavy stone and\n"
+	.string "heavy boots. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText25::
+	.string "Come back with 4 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask37::
+	.string "The ELECTRIC AVENUE: street lights\n"
+	.string "that bite. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText37::
+	.string "Come back with 5 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask33::
+	.string "The SPIRIT FALLS: a waterfall with\n"
+	.string "a voice. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText33::
+	.string "Come back with 7 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask38::
+	.string "The FINAL GATE: beyond it, only\n"
+	.string "legends. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText38::
+	.string "Come back with all 8 BADGES.$"
