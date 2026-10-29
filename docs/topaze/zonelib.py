@@ -9,6 +9,7 @@ def it(n): assert re.search(r'#define ITEM_%s\b' % n, IT), n; return 'ITEM_' + n
 _fl = rd('include/constants/flags.h')
 _used = set(re.findall(r'FLAG_0x[0-9A-F]+', ''.join(l for l in _fl.split('\n') if not re.match(r'#define FLAG_0x[0-9A-F]+\s+0x', l))))
 _pool = [('FLAG_0x%X' % i) for i in list(range(0x300, 0x3D8)) + list(range(0x4CF, 0x500)) + list(range(0x220, 0x230)) if ('FLAG_0x%X' % i) not in _used]
+_pool += ['FLAG_HIDDEN_ITEM_UNUSED_%s' % h for h in ('0x07','0x10','0x28','0x2B','0x2C','0x2D','0x2E','0x7C') if re.search(r'FLAG_HIDDEN_ITEM_UNUSED_%s\b' % h, _fl)]
 _new = []
 def flag(name):
     a = _pool.pop(0); _new.append('#define FLAG_TOPAZE_%s %s\n' % (name, a)); return 'FLAG_TOPAZE_' + name

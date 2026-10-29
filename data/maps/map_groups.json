@@ -262,7 +262,8 @@
     "NocturneWood",
     "EeveeGrove",
     "ThornThicket",
-    "MeadowPath"
+    "MeadowPath",
+    "CenterMeadow"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
@@ -352,7 +353,10 @@
     "SunkenBeach",
     "SoulPillar",
     "MirrorLabyrinth",
-    "OutcastShore"
+    "OutcastShore",
+    "CottonField",
+    "QuarryHeights",
+    "PondOfSong"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",

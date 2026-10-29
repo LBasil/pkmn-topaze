@@ -595,3 +595,31 @@ FuchsiaCity_Text_DuskFerrywoman_Ask9::
 
 FuchsiaCity_Text_DuskFerrywoman_GateText9::
 	.string "Come back with 7 BADGES.$"
+
+FuchsiaCity_Text_Apprentice_Ask4::
+	.string "The COTTON FIELD: soft grass,\n"
+	.string "sleepy POKéMON. Visit?$"
+
+FuchsiaCity_Text_Apprentice_GateText4::
+	.string "Come back with 3 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask4::
+	.string "The QUARRY HEIGHTS: rock, steel and\n"
+	.string "hard heads. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText4::
+	.string "Come back with 4 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask7::
+	.string "The POND OF SONG: frogs, ducks and\n"
+	.string "gentle ripples. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText7::
+	.string "Come back with 3 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask10::
+	.string "The CENTER MEADOW: the old safari\n"
+	.string "grounds. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText10::
+	.string "Come back with 5 BADGES.$"

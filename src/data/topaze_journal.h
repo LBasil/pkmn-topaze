@@ -448,6 +448,14 @@ static const u8 sJN_216[] = _("HURT FRIENDS");
 static const u8 sJH_216[] = _("MEADOW PATH: bring 2 POTIONS.");
 static const u8 sJN_217[] = _("A QUIET SHORE");
 static const u8 sJH_217[] = _("OUTCAST SHORE: bring a MAX REPEL.");
+static const u8 sJN_218[] = _("A TIRED FLOCK");
+static const u8 sJH_218[] = _("COTTON FIELD: bring a SUPER POTION.");
+static const u8 sJN_219[] = _("IRON FOR THE HIKER");
+static const u8 sJH_219[] = _("QUARRY HEIGHTS: bring an IRON.");
+static const u8 sJN_220[] = _("A BALL FOR A ROCK");
+static const u8 sJH_220[] = _("POND OF SONG: bring a NET BALL.");
+static const u8 sJN_221[] = _("A COLLECTOR'S WISH");
+static const u8 sJH_221[] = _("CENTER MEADOW: bring 2 ULTRA BALLS.");
 
 static const struct TopazeJournalSection sJournalSections[] = {
     { sJS_0, 0 },
@@ -683,4 +691,8 @@ static const struct TopazeJournalEntry sJournalEntries[] = {
     { 2, 0, 2, FLAG_TOPAZE_QUEST_MIRRORLABYRINTH, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_215, sJH_215 },
     { 2, 0, 2, FLAG_TOPAZE_QUEST_MEADOWPATH, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_216, sJH_216 },
     { 2, 0, 2, FLAG_TOPAZE_QUEST_OUTCASTSHORE, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_217, sJH_217 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_COTTONFIELD, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_218, sJH_218 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_QUARRYHEIGHTS, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_219, sJH_219 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_PONDOFSONG, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_220, sJH_220 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_CENTERMEADOW, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_221, sJH_221 },
 };

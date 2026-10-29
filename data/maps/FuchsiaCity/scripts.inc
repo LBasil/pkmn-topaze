@@ -607,13 +607,24 @@ FuchsiaCity_EventScript_Apprentice_EventScript_Dest2::
 FuchsiaCity_EventScript_Apprentice_EventScript_Dest3::
 	goto_if_unset FLAG_BADGE01_GET, FuchsiaCity_EventScript_Apprentice_EventScript_Gate3
 	msgbox FuchsiaCity_Text_Apprentice_Ask3, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_Apprentice_EventScript_End
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_Apprentice_EventScript_Dest4
 	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
 	warp MAP_MEADOW_PATH, 255, 30, 23
 	waitstate
 	end
 FuchsiaCity_EventScript_Apprentice_EventScript_Gate3::
 	msgbox FuchsiaCity_Text_Apprentice_GateText3
+	goto FuchsiaCity_EventScript_Apprentice_EventScript_End
+FuchsiaCity_EventScript_Apprentice_EventScript_Dest4::
+	goto_if_unset FLAG_BADGE03_GET, FuchsiaCity_EventScript_Apprentice_EventScript_Gate4
+	msgbox FuchsiaCity_Text_Apprentice_Ask4, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_Apprentice_EventScript_End
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_COTTON_FIELD, 255, 12, 30
+	waitstate
+	end
+FuchsiaCity_EventScript_Apprentice_EventScript_Gate4::
+	msgbox FuchsiaCity_Text_Apprentice_GateText4
 	goto FuchsiaCity_EventScript_Apprentice_EventScript_End
 FuchsiaCity_EventScript_Apprentice_EventScript_End::
 	msgbox FuchsiaCity_Text_Apprentice_Never
@@ -732,13 +743,24 @@ FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate8::
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest9::
 	goto_if_unset FLAG_BADGE07_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate9
 	msgbox FuchsiaCity_Text_DuskFerrywoman_Ask9, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_End
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest10
 	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
 	warp MAP_OUTCAST_SHORE, 255, 14, 75
 	waitstate
 	end
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate9::
 	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText9
+	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_End
+FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Dest10::
+	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate10
+	msgbox FuchsiaCity_Text_DuskFerrywoman_Ask10, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_DuskFerrywoman_EventScript_End
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_CENTER_MEADOW, 255, 25, 25
+	waitstate
+	end
+FuchsiaCity_EventScript_DuskFerrywoman_EventScript_Gate10::
+	msgbox FuchsiaCity_Text_DuskFerrywoman_GateText10
 	goto FuchsiaCity_EventScript_DuskFerrywoman_EventScript_End
 FuchsiaCity_EventScript_DuskFerrywoman_EventScript_End::
 	msgbox FuchsiaCity_Text_DuskFerrywoman_Never
@@ -818,13 +840,24 @@ FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate2::
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest3::
 	goto_if_unset FLAG_BADGE05_GET, FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate3
 	msgbox FuchsiaCity_Text_ScribeFerryman_Ask3, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_ScribeFerryman_EventScript_End
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest4
 	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
 	warp MAP_MIRROR_LABYRINTH, 255, 48, 11
 	waitstate
 	end
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate3::
 	msgbox FuchsiaCity_Text_ScribeFerryman_GateText3
+	goto FuchsiaCity_EventScript_ScribeFerryman_EventScript_End
+FuchsiaCity_EventScript_ScribeFerryman_EventScript_Dest4::
+	goto_if_unset FLAG_BADGE04_GET, FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate4
+	msgbox FuchsiaCity_Text_ScribeFerryman_Ask4, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_ScribeFerryman_EventScript_End
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_QUARRY_HEIGHTS, 255, 20, 63
+	waitstate
+	end
+FuchsiaCity_EventScript_ScribeFerryman_EventScript_Gate4::
+	msgbox FuchsiaCity_Text_ScribeFerryman_GateText4
 	goto FuchsiaCity_EventScript_ScribeFerryman_EventScript_End
 FuchsiaCity_EventScript_ScribeFerryman_EventScript_End::
 	msgbox FuchsiaCity_Text_ScribeFerryman_Never
@@ -910,13 +943,24 @@ FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate5::
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest6::
 	goto_if_unset FLAG_BADGE02_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate6
 	msgbox FuchsiaCity_Text_SeasonsFerryman_Ask6, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_End
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest7
 	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
 	warp MAP_SUNKEN_BEACH, 255, 12, 30
 	waitstate
 	end
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate6::
 	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText6
+	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_End
+FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Dest7::
+	goto_if_unset FLAG_BADGE03_GET, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate7
+	msgbox FuchsiaCity_Text_SeasonsFerryman_Ask7, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, FuchsiaCity_EventScript_SeasonsFerryman_EventScript_End
+	setdynamicwarp MAP_FUCHSIA_CITY, 255, 24, 27
+	warp MAP_POND_OF_SONG, 255, 36, 6
+	waitstate
+	end
+FuchsiaCity_EventScript_SeasonsFerryman_EventScript_Gate7::
+	msgbox FuchsiaCity_Text_SeasonsFerryman_GateText7
 	goto FuchsiaCity_EventScript_SeasonsFerryman_EventScript_End
 FuchsiaCity_EventScript_SeasonsFerryman_EventScript_End::
 	msgbox FuchsiaCity_Text_SeasonsFerryman_Never
