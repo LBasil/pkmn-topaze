@@ -207,55 +207,31 @@ FuchsiaCity_Text_Ferry_Ask0::
 	.string "The old LIGHTHOUSE? Its lamp turns\n"
 	.string "backwards. Want to see it?$"
 
-FuchsiaCity_Text_Ferry_GateText0::
-	.string "Come back with 5 BADGES.$"
-
 FuchsiaCity_Text_Ferry_Ask1::
 	.string "The CLOCK BEACH? Every wave brings\n"
 	.string "in a broken clock. Want to see it?$"
 
-FuchsiaCity_Text_Ferry_GateText1::
-	.string "Come back with 6 BADGES.$"
-
 FuchsiaCity_Text_Ferry_Ask2::
 	.string "A village where today never ends?\n"
 	.string "Do you want to go?$"
-
-FuchsiaCity_Text_Ferry_GateText2::
-	.string "Come back with 7 BADGES.$"
 
 FuchsiaCity_Text_Ferry_Ask3::
 	.string "The BOTTOMLESS CAVE? Every time you\n"
 	.string "go down, the floor count changes.\p"
 	.string "Brave enough?$"
 
-FuchsiaCity_Text_Ferry_GateText3::
-	.string "Come back with all 8 BADGES.$"
-
 FuchsiaCity_Text_Ferry_Ask4::
 	.string "The GARDEN OF ECHOES blooms with\n"
 	.string "what the ECHOES left behind. Visit?$"
-
-FuchsiaCity_Text_Ferry_GateText4::
-	.string "The garden opens once the ARCHIVE\n"
-	.string "of ECHOES is complete.$"
 
 FuchsiaCity_Text_Ferry_Ask5::
 	.string "The ISLAND OF THE LAST DAY... no\n"
 	.string "one has come back from there\p"
 	.string "unchanged. Go anyway?$"
 
-FuchsiaCity_Text_Ferry_GateText5::
-	.string "This place opens only after the\n"
-	.string "LEAGUE.$"
-
 FuchsiaCity_Text_Ferry_Ask6::
 	.string "A clearing where your friends rest\n"
 	.string "between battles. Visit?$"
-
-FuchsiaCity_Text_Ferry_GateText6::
-	.string "Only those who beat every friend\n"
-	.string "may enter.$"
 
 FuchsiaCity_Text_Tide_Hello::
 	.string "I row to places where POKéMON\n"
@@ -275,37 +251,22 @@ FuchsiaCity_Text_Tide_Ask0::
 	.string "POKéMON could become, or were.\p"
 	.string "Visit?$"
 
-FuchsiaCity_Text_Tide_GateText0::
-	.string "Come back with 3 BADGES.$"
-
 FuchsiaCity_Text_Tide_Ask1::
 	.string "The STONE GREENHOUSE grows POKéMON\n"
 	.string "that wait for a stone. Visit?$"
-
-FuchsiaCity_Text_Tide_GateText1::
-	.string "Come back with 4 BADGES.$"
 
 FuchsiaCity_Text_Tide_Ask2::
 	.string "The TRADE DOCK, where POKéMON that\n"
 	.string "evolve by trade wait on the pier.\p"
 	.string "Visit?$"
 
-FuchsiaCity_Text_Tide_GateText2::
-	.string "Come back with 5 BADGES.$"
-
 FuchsiaCity_Text_Tide_Ask3::
 	.string "The FOSSIL DIG: five fossils sleep\n"
 	.string "in the sand. Visit?$"
 
-FuchsiaCity_Text_Tide_GateText3::
-	.string "Come back with 6 BADGES.$"
-
 FuchsiaCity_Text_Tide_Ask4::
 	.string "The POND OF CYCLES: water, patience\n"
 	.string "and rare catches. Visit?$"
-
-FuchsiaCity_Text_Tide_GateText4::
-	.string "Come back with 7 BADGES.$"
 
 FuchsiaCity_Text_Lantern_Hello::
 	.string "My lantern lights the way to calmer\n"
@@ -319,36 +280,21 @@ FuchsiaCity_Text_Lantern_Never::
 	.string "Another time. The lantern stays\n"
 	.string "lit.$"
 
-FuchsiaCity_Text_Lantern_GateText0::
-	.string "Come back with 6 BADGES.$"
-
 FuchsiaCity_Text_Lantern_Ask0::
 	.string "The WEST RESERVE, home of POKéMON\n"
 	.string "from a far region. Visit?$"
-
-FuchsiaCity_Text_Lantern_GateText1::
-	.string "Come back with 6 BADGES.$"
 
 FuchsiaCity_Text_Lantern_Ask1::
 	.string "The EAST RESERVE: sea and cliffs\n"
 	.string "from a far region. Visit?$"
 
-FuchsiaCity_Text_Lantern_GateText2::
-	.string "Come back with 4 BADGES.$"
-
 FuchsiaCity_Text_Lantern_Ask2::
 	.string "The SUNRISE MEADOW: POKéMON from\n"
 	.string "the other side of the sea. Visit?$"
 
-FuchsiaCity_Text_Lantern_GateText3::
-	.string "Come back with 7 BADGES.$"
-
 FuchsiaCity_Text_Lantern_Ask3::
 	.string "The ASHEN MINE: gems, stones, odd\n"
 	.string "POKéMON. Visit?$"
-
-FuchsiaCity_Text_Lantern_GateText4::
-	.string "Come back with 3 BADGES.$"
 
 FuchsiaCity_Text_Lantern_Ask4::
 	.string "The BERRY ORCHARD grows every kind\n"
@@ -396,43 +342,25 @@ FuchsiaCity_Text_DuskFerrywoman_Closed::
 FuchsiaCity_Text_DuskFerrywoman_Never::
 	.string "Another time. Dusk will come again.$"
 
-FuchsiaCity_Text_DuskFerrywoman_GateText0::
-	.string "Come back with 6 BADGES.$"
-
 FuchsiaCity_Text_DuskFerrywoman_Ask0::
 	.string "The GROVE OF WHISPERS: spirits\n"
 	.string "drift between the trees. Visit?$"
-
-FuchsiaCity_Text_DuskFerrywoman_GateText1::
-	.string "Come back with 5 BADGES.$"
 
 FuchsiaCity_Text_DuskFerrywoman_Ask1::
 	.string "The SPARK GLADE hums with static.\n"
 	.string "Visit?$"
 
-FuchsiaCity_Text_DuskFerrywoman_GateText2::
-	.string "Come back with all 8 BADGES.$"
-
 FuchsiaCity_Text_DuskFerrywoman_Ask2::
 	.string "The DRAGON PERCH: the air is thin\n"
 	.string "and the wings are large. Visit?$"
-
-FuchsiaCity_Text_DuskFerrywoman_GateText3::
-	.string "Come back with 5 BADGES.$"
 
 FuchsiaCity_Text_DuskFerrywoman_Ask3::
 	.string "The ZEN GARDEN: still water, calm\n"
 	.string "minds. Visit?$"
 
-FuchsiaCity_Text_DuskFerrywoman_GateText4::
-	.string "Come back with 4 BADGES.$"
-
 FuchsiaCity_Text_DuskFerrywoman_Ask4::
 	.string "The PLAIN OF GIANTS: wide grass and\n"
 	.string "big POKéMON. Visit?$"
-
-FuchsiaCity_Text_DuskFerrywoman_GateText5::
-	.string "Come back with 5 BADGES.$"
 
 FuchsiaCity_Text_DuskFerrywoman_Ask5::
 	.string "The DUNE SEA: sand as far as the\n"
@@ -478,29 +406,17 @@ FuchsiaCity_Text_SeasonsFerryman_Closed::
 FuchsiaCity_Text_SeasonsFerryman_Never::
 	.string "Another time, then.$"
 
-FuchsiaCity_Text_SeasonsFerryman_GateText0::
-	.string "Come back with 6 BADGES.$"
-
 FuchsiaCity_Text_SeasonsFerryman_Ask0::
 	.string "The FROST HOLLOW: ice, silence and\n"
 	.string "cold POKéMON. Visit?$"
-
-FuchsiaCity_Text_SeasonsFerryman_GateText1::
-	.string "Come back with 6 BADGES.$"
 
 FuchsiaCity_Text_SeasonsFerryman_Ask1::
 	.string "The EMBER RIM: lava glows below the\n"
 	.string "rock. Visit?$"
 
-FuchsiaCity_Text_SeasonsFerryman_GateText2::
-	.string "Come back with 3 BADGES.$"
-
 FuchsiaCity_Text_SeasonsFerryman_Ask2::
 	.string "The NOCTURNE WOOD: the owls sing\n"
 	.string "all day long. Visit?$"
-
-FuchsiaCity_Text_SeasonsFerryman_GateText3::
-	.string "Come back with 5 BADGES.$"
 
 FuchsiaCity_Text_SeasonsFerryman_Ask3::
 	.string "The SHELL COAST: the tide leaves\n"
@@ -522,107 +438,62 @@ FuchsiaCity_Text_SeasonsFerryman_Ask4::
 	.string "The EEVEE GROVE: every shade of one\n"
 	.string "family lives here. Visit?$"
 
-FuchsiaCity_Text_SeasonsFerryman_GateText4::
-	.string "Come back with 5 BADGES.$"
-
 FuchsiaCity_Text_SeasonsFerryman_Ask5::
 	.string "The PROFESSOR'S RESERVE: first\n"
 	.string "partners run free here. Visit?$"
-
-FuchsiaCity_Text_SeasonsFerryman_GateText5::
-	.string "Come back with all 8 BADGES.$"
 
 
 FuchsiaCity_Text_ScribeFerryman_Ask1::
 	.string "The THORN THICKET: bugs of every\n"
 	.string "kind hide here. Visit?$"
 
-FuchsiaCity_Text_ScribeFerryman_GateText1::
-	.string "Come back with 4 BADGES.$"
-
 FuchsiaCity_Text_ScribeFerryman_Ask2::
 	.string "The KINDLE TRAIL: a training path\n"
 	.string "for fighters. Visit?$"
-
-FuchsiaCity_Text_ScribeFerryman_GateText2::
-	.string "Come back with 5 BADGES.$"
 
 FuchsiaCity_Text_DuskFerrywoman_Ask6::
 	.string "The RUIN HOLLOW: old stones, older\n"
 	.string "secrets. Visit?$"
 
-FuchsiaCity_Text_DuskFerrywoman_GateText6::
-	.string "Come back with 7 BADGES.$"
-
 FuchsiaCity_Text_DuskFerrywoman_Ask7::
 	.string "The TIDE CAVE: deep water, strange\n"
 	.string "lights. Visit?$"
-
-FuchsiaCity_Text_DuskFerrywoman_GateText7::
-	.string "Come back with 6 BADGES.$"
 
 FuchsiaCity_Text_SeasonsFerryman_Ask6::
 	.string "The SUNKEN BEACH: shells, sand and\n"
 	.string "early water types. Visit?$"
 
-FuchsiaCity_Text_SeasonsFerryman_GateText6::
-	.string "Come back with 2 BADGES.$"
-
 FuchsiaCity_Text_DuskFerrywoman_Ask8::
 	.string "The SOUL PILLAR: the quiet place of\n"
 	.string "remembrance. Visit?$"
-
-FuchsiaCity_Text_DuskFerrywoman_GateText8::
-	.string "Come back with 6 BADGES.$"
 
 FuchsiaCity_Text_ScribeFerryman_Ask3::
 	.string "The MIRROR BRIDGE: calm water, calm\n"
 	.string "reflections. Visit?$"
 
-FuchsiaCity_Text_ScribeFerryman_GateText3::
-	.string "Come back with 5 BADGES.$"
-
 FuchsiaCity_Text_Apprentice_Ask3::
 	.string "The MEADOW PATH: a calm start for\n"
 	.string "new collectors. Visit?$"
-
-FuchsiaCity_Text_Apprentice_GateText3::
-	.string "Come back with 1 BADGE.$"
 
 FuchsiaCity_Text_DuskFerrywoman_Ask9::
 	.string "The OUTCAST SHORE: wild waters,\n"
 	.string "wild POKéMON. Visit?$"
 
-FuchsiaCity_Text_DuskFerrywoman_GateText9::
-	.string "Come back with 7 BADGES.$"
-
 FuchsiaCity_Text_Apprentice_Ask4::
 	.string "The COTTON FIELD: soft grass,\n"
 	.string "sleepy POKéMON. Visit?$"
-
-FuchsiaCity_Text_Apprentice_GateText4::
-	.string "Come back with 3 BADGES.$"
 
 FuchsiaCity_Text_ScribeFerryman_Ask4::
 	.string "The QUARRY HEIGHTS: rock, steel and\n"
 	.string "hard heads. Visit?$"
 
-FuchsiaCity_Text_ScribeFerryman_GateText4::
-	.string "Come back with 4 BADGES.$"
-
 FuchsiaCity_Text_SeasonsFerryman_Ask7::
 	.string "The POND OF SONG: frogs, ducks and\n"
 	.string "gentle ripples. Visit?$"
 
-FuchsiaCity_Text_SeasonsFerryman_GateText7::
-	.string "Come back with 3 BADGES.$"
-
 FuchsiaCity_Text_DuskFerrywoman_Ask10::
 	.string "The CENTER MEADOW: the old safari\n"
 	.string "grounds. Visit?$"
-
-FuchsiaCity_Text_DuskFerrywoman_GateText10::
-	.string "Come back with 5 BADGES.$"
 
 FuchsiaCity_Text_SeasonsFerryman_Ask8::
 	.string "The BALL BOUTIQUE: rare balls for\n"
@@ -640,190 +511,109 @@ FuchsiaCity_Text_Apprentice_Ask5::
 	.string "The BREEZE HILL: wind, grass and\n"
 	.string "first catches. Visit?$"
 
-FuchsiaCity_Text_Apprentice_GateText5::
-	.string "Come back with 1 BADGE.$"
-
 FuchsiaCity_Text_ScribeFerryman_Ask6::
 	.string "The STARLIT STEPPE: wide plains\n"
 	.string "under a thousand stars. Visit?$"
-
-FuchsiaCity_Text_ScribeFerryman_GateText6::
-	.string "Come back with 6 BADGES.$"
 
 FuchsiaCity_Text_SeasonsFerryman_Ask9::
 	.string "The SALT FLATS: dry crust and\n"
 	.string "bright shores. Visit?$"
 
-FuchsiaCity_Text_SeasonsFerryman_GateText9::
-	.string "Come back with 4 BADGES.$"
-
 FuchsiaCity_Text_DuskFerrywoman_Ask12::
 	.string "The MIST LAKE: soft fog, calm\n"
 	.string "water. Visit?$"
-
-FuchsiaCity_Text_DuskFerrywoman_GateText12::
-	.string "Come back with 2 BADGES.$"
 
 FuchsiaCity_Text_Apprentice_Ask6::
 	.string "The DROWSY DOWN: sleepy hills full\n"
 	.string "of dozing POKéMON. Visit?$"
 
-FuchsiaCity_Text_Apprentice_GateText6::
-	.string "Come back with 4 BADGES.$"
-
 FuchsiaCity_Text_ScribeFerryman_Ask7::
 	.string "The BLOSSOM CREST: a hill covered\n"
 	.string "in flowers. Visit?$"
-
-FuchsiaCity_Text_ScribeFerryman_GateText7::
-	.string "Come back with 3 BADGES.$"
 
 FuchsiaCity_Text_SeasonsFerryman_Ask10::
 	.string "The THUNDER RIDGE: static in the\n"
 	.string "air, storms on the horizon. Visit?$"
 
-FuchsiaCity_Text_SeasonsFerryman_GateText10::
-	.string "Come back with 5 BADGES.$"
-
 FuchsiaCity_Text_DuskFerrywoman_Ask13::
 	.string "The FANG VALLEY: fierce hunters and\n"
 	.string "sharp teeth. Visit?$"
-
-FuchsiaCity_Text_DuskFerrywoman_GateText13::
-	.string "Come back with 6 BADGES.$"
 
 FuchsiaCity_Text_ScribeFerryman_Ask8::
 	.string "The LUCKY CLOVER: normal types, big\n"
 	.string "hearts. Visit?$"
 
-FuchsiaCity_Text_ScribeFerryman_GateText8::
-	.string "Come back with 2 BADGES.$"
-
 FuchsiaCity_Text_DuskFerrywoman_Ask14::
 	.string "The SILENT HOLLOW: no wind, no\n"
 	.string "sound. Visit?$"
-
-FuchsiaCity_Text_DuskFerrywoman_GateText14::
-	.string "Come back with 7 BADGES.$"
 
 FuchsiaCity_Text_Apprentice_Ask7::
 	.string "The WEED PATCH: tall grass and tiny\n"
 	.string "bugs. Visit?$"
 
-FuchsiaCity_Text_Apprentice_GateText7::
-	.string "Come back with 1 BADGE.$"
-
 FuchsiaCity_Text_ScribeFerryman_Ask9::
 	.string "The SKY PERCH: cliffs for birds and\n"
 	.string "wind riders. Visit?$"
-
-FuchsiaCity_Text_ScribeFerryman_GateText9::
-	.string "Come back with 5 BADGES.$"
 
 FuchsiaCity_Text_SeasonsFerryman_Ask11::
 	.string "The SANDBOX GROVE: a sandy\n"
 	.string "playground for ground types. Visit?$"
 
-FuchsiaCity_Text_SeasonsFerryman_GateText11::
-	.string "Come back with 3 BADGES.$"
-
 FuchsiaCity_Text_DuskFerrywoman_Ask15::
 	.string "The IVY MAZE: twisting paths of\n"
 	.string "green. Visit?$"
-
-FuchsiaCity_Text_DuskFerrywoman_GateText15::
-	.string "Come back with 2 BADGES.$"
 
 FuchsiaCity_Text_ScribeFerryman_Ask10::
 	.string "The NORTH WIND: bitter gusts and\n"
 	.string "cold fur. Visit?$"
 
-FuchsiaCity_Text_ScribeFerryman_GateText10::
-	.string "Come back with 7 BADGES.$"
-
 FuchsiaCity_Text_DuskFerrywoman_Ask16::
 	.string "The STONE CIRCLE: dragons gather\n"
 	.string "under standing stones. Visit?$"
-
-FuchsiaCity_Text_DuskFerrywoman_GateText16::
-	.string "Come back with all 8 BADGES.$"
 
 FuchsiaCity_Text_Apprentice_Ask8::
 	.string "The FOX FIELD: sly hunters in\n"
 	.string "golden grass. Visit?$"
 
-FuchsiaCity_Text_Apprentice_GateText8::
-	.string "Come back with 2 BADGES.$"
-
 FuchsiaCity_Text_ScribeFerryman_Ask11::
 	.string "The MOSSY DELL: old trees and\n"
 	.string "Pikachu. Visit?$"
-
-FuchsiaCity_Text_ScribeFerryman_GateText11::
-	.string "Come back with 2 BADGES.$"
 
 FuchsiaCity_Text_SeasonsFerryman_Ask12::
 	.string "The BRIGHT SHALLOWS: warm water,\n"
 	.string "easy fishing. Visit?$"
 
-FuchsiaCity_Text_SeasonsFerryman_GateText12::
-	.string "Come back with 3 BADGES.$"
-
 FuchsiaCity_Text_DuskFerrywoman_Ask17::
 	.string "The ASHEN HEIGHTS: warm rock and\n"
 	.string "smoking cracks. Visit?$"
-
-FuchsiaCity_Text_DuskFerrywoman_GateText17::
-	.string "Come back with 4 BADGES.$"
 
 FuchsiaCity_Text_ScribeFerryman_Ask12::
 	.string "The HUSHED BOG: slime, mist and\n"
 	.string "poison types. Visit?$"
 
-FuchsiaCity_Text_ScribeFerryman_GateText12::
-	.string "Come back with 4 BADGES.$"
-
 FuchsiaCity_Text_DuskFerrywoman_Ask18::
 	.string "The GALE CLIFF: wind-whipped rocks.\n"
 	.string "Visit?$"
-
-FuchsiaCity_Text_DuskFerrywoman_GateText18::
-	.string "Come back with 5 BADGES.$"
 
 FuchsiaCity_Text_SeasonsFerryman_Ask13::
 	.string "The SOUND MEADOW: songs, echoes and\n"
 	.string "Normal types. Visit?$"
 
-FuchsiaCity_Text_SeasonsFerryman_GateText13::
-	.string "Come back with 5 BADGES.$"
-
 FuchsiaCity_Text_ScribeFerryman_Ask13::
 	.string "The OBSIDIAN PASS: black rock and\n"
 	.string "heavy hitters. Visit?$"
-
-FuchsiaCity_Text_ScribeFerryman_GateText13::
-	.string "Come back with 6 BADGES.$"
 
 FuchsiaCity_Text_DuskFerrywoman_Ask19::
 	.string "The MIRROR POND: still water,\n"
 	.string "strong swimmers. Visit?$"
 
-FuchsiaCity_Text_DuskFerrywoman_GateText19::
-	.string "Come back with 6 BADGES.$"
-
 FuchsiaCity_Text_SeasonsFerryman_Ask14::
 	.string "The PHANTOM LANE: a road for ghosts\n"
 	.string "and shadows. Visit?$"
 
-FuchsiaCity_Text_SeasonsFerryman_GateText14::
-	.string "Come back with 7 BADGES.$"
-
 FuchsiaCity_Text_Apprentice_Ask9::
 	.string "The CROWN FIELD: the strongest wild\n"
 	.string "POKéMON gather here. Visit?$"
-
-FuchsiaCity_Text_Apprentice_GateText9::
-	.string "Come back with all 8 BADGES.$"
 
 FuchsiaCity_Text_FerryLocked::
 	.string "Some places need more BADGES. Come\n"
