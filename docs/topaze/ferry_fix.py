@@ -4,7 +4,7 @@ import sys, re, json; sys.path.insert(0, 'docs/topaze')
 from zonelib import *
 fp = 'data/maps/FuchsiaCity/scripts.inc'; fs = rd(fp)
 FER = ['EchoFerryman', 'TideFerrywoman', 'LanternBoatman', 'Apprentice', 'DuskFerrywoman', 'ScribeFerryman', 'SeasonsFerryman']
-CH = 8
+CH = 10**6        # pas de troncons : trop d'objets sur le quai (limite de 16 objets actifs) ; on utilise SKIP a la place
 if 'TOPAZE FERRY CHUNK' in fs: print('deja applique'); raise SystemExit
 jm = json.load(open('data/maps/FuchsiaCity/map.json')); nav = R.Nav('FuchsiaCity')
 GFX = ['SAILOR', 'FISHER', 'OLD_MAN_1', 'WOMAN_1', 'GENTLEMAN', 'SCIENTIST']

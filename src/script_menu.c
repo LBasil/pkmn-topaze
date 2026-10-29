@@ -510,10 +510,12 @@ extern u8 gTopazeRadarCount;
 // Topaze: passeurs du quai (GO / NEXT / STOP)
 static const u8 sText_FerryGo[] = _("GO");
 static const u8 sText_FerryNext[] = _("NEXT");
+static const u8 sText_FerrySkip[] = _("SKIP 5");
 static const u8 sText_FerryStop[] = _("STOP");
 static const struct MenuAction sMultichoiceList_TopazeFerry[] = {
     { sText_FerryGo },
     { sText_FerryNext },
+    { sText_FerrySkip },
     { sText_FerryStop }
 };
 
