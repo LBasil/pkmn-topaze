@@ -13,10 +13,10 @@ CircusLawn_Text_Npc1::
 
 CircusLawn_Text_Quest0_Ask::
 	.string "Two GREAT BALLs for the show. A\n"
-	.string "TWISTED_SPOON for you.$"
+	.string "TWISTEDSPOON for you.$"
 
 CircusLawn_Text_Quest0_Done::
-	.string "Splendid! Take this TWISTED_SPOON.$"
+	.string "Splendid! Take this TWISTEDSPOON.$"
 
 CircusLawn_Text_Quest0_AfterT::
 	.string "The show goes on.$"
