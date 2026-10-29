@@ -271,7 +271,9 @@
     "ObsidianPass",
     "HoneyGrove",
     "CircusLawn",
-    "FrozenMarsh"
+    "FrozenMarsh",
+    "WillowBank",
+    "GlassCavern"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
@@ -389,7 +391,11 @@
     "CrownField",
     "PebbleBeach",
     "CinderPlain",
-    "ThornyTrail"
+    "ThornyTrail",
+    "LanternMeadow",
+    "RustyYard",
+    "EmberRidge",
+    "DawnSummit"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",

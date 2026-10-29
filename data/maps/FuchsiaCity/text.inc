@@ -660,3 +660,45 @@ FuchsiaCity_Text_SeasonsFerryman_Ask16::
 
 FuchsiaCity_Text_SeasonsFerryman_GateText16::
 	.string "Come back with 4 BADGES.$"
+
+FuchsiaCity_Text_Apprentice_Ask11::
+	.string "The LANTERN MEADOW: glowing flowers\n"
+	.string "at dusk. Visit?$"
+
+FuchsiaCity_Text_Apprentice_GateText11::
+	.string "Come back with 2 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask16::
+	.string "The RUSTY YARD: old scrap and new\n"
+	.string "friends. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText16::
+	.string "Come back with 3 BADGES.$"
+
+FuchsiaCity_Text_SeasonsFerryman_Ask17::
+	.string "The WILLOW BANK: a slow river and\n"
+	.string "calm shade. Visit?$"
+
+FuchsiaCity_Text_SeasonsFerryman_GateText17::
+	.string "Come back with 4 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask21::
+	.string "The EMBER RIDGE: warm rocks and red\n"
+	.string "sparks. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText21::
+	.string "Come back with 6 BADGES.$"
+
+FuchsiaCity_Text_ScribeFerryman_Ask17::
+	.string "The GLASS CAVERN: shining walls and\n"
+	.string "sharp echoes. Visit?$"
+
+FuchsiaCity_Text_ScribeFerryman_GateText17::
+	.string "Come back with 7 BADGES.$"
+
+FuchsiaCity_Text_DuskFerrywoman_Ask22::
+	.string "The DAWN SUMMIT: the first light of\n"
+	.string "the region. Visit?$"
+
+FuchsiaCity_Text_DuskFerrywoman_GateText22::
+	.string "Come back with all 8 BADGES.$"
