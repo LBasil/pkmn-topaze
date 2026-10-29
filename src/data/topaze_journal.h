@@ -456,6 +456,18 @@ static const u8 sJN_220[] = _("A BALL FOR A ROCK");
 static const u8 sJH_220[] = _("POND OF SONG: bring a NET BALL.");
 static const u8 sJN_221[] = _("A COLLECTOR'S WISH");
 static const u8 sJH_221[] = _("CENTER MEADOW: bring 2 ULTRA BALLS.");
+static const u8 sJN_222[] = _("STAY AWAKE");
+static const u8 sJH_222[] = _("DROWSY DOWN: bring a CHESTO BERRY.");
+static const u8 sJN_223[] = _("A GARDEN IN BLOOM");
+static const u8 sJH_223[] = _("BLOSSOM CREST: bring a LEAF STONE.");
+static const u8 sJN_224[] = _("A SHOCKING SWAP");
+static const u8 sJH_224[] = _("THUNDER RIDGE: bring a THUNDER\nSTONE.");
+static const u8 sJN_225[] = _("CURE FOR THE HIKER");
+static const u8 sJH_225[] = _("FANG VALLEY: bring 2 FULL HEALS.");
+static const u8 sJN_226[] = _("A SCARF FOR BALLS");
+static const u8 sJH_226[] = _("LUCKY CLOVER: bring 3 POKE BALLS.");
+static const u8 sJN_227[] = _("A QUIET NIGHT");
+static const u8 sJH_227[] = _("SILENT HOLLOW: bring a MAX ELIXIR.");
 
 static const struct TopazeJournalSection sJournalSections[] = {
     { sJS_0, 0 },
@@ -695,4 +707,10 @@ static const struct TopazeJournalEntry sJournalEntries[] = {
     { 2, 0, 2, FLAG_TOPAZE_QUEST_QUARRYHEIGHTS, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_219, sJH_219 },
     { 2, 0, 2, FLAG_TOPAZE_QUEST_PONDOFSONG, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_220, sJH_220 },
     { 2, 0, 2, FLAG_TOPAZE_QUEST_CENTERMEADOW, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_221, sJH_221 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_DROWSYDOWN, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_222, sJH_222 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_BLOSSOMCREST, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_223, sJH_223 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_THUNDERRIDGE, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_224, sJH_224 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_FANGVALLEY, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_225, sJH_225 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_LUCKYCLOVER, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_226, sJH_226 },
+    { 2, 0, 2, FLAG_TOPAZE_QUEST_SILENTHOLLOW, 0, FLAG_TOPAZE_CLOCK_DONE, 0, 0, 0, 0, sJN_227, sJH_227 },
 };

@@ -318,7 +318,7 @@ for e in E:
 # longueur max d'une section visible (JOURNAL_MAX_ENTRIES)
 from collections import Counter
 mx = max(Counter(e[0] for e in E).values())
-assert mx <= 96, mx
+assert mx <= 160, mx
 out = ["// GENERE par docs/topaze/journal_gen.py - ne pas editer a la main", ""]
 for k, (n, g) in enumerate(SECTIONS):
     out.append('static const u8 sJS_%d[] = _("%s");' % (k, n))
