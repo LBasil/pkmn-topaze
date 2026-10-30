@@ -257,10 +257,12 @@ for _c in sorted(_w):
         for _d in ((1, 0), (-1, 0), (0, 1), (0, -1)):
             _n = (_a[0] + _d[0], _a[1] + _d[1])
             if _n in _w and _n not in _ws: _ws.add(_n); _cp.add(_n); _q.append(_n)
-    if len(_cp) < 40 and not any(k[0] in (0, W - 1) or k[1] in (0, H - 1) for k in _cp):
-        print('flaque marchable', len(_cp), min(_cp))
-        for _k in _cp:                                       # copie de la metatuile sans comportement d'eau : on marche dedans (pas de reflet, pas de Surf, pas de combat aquatique)
-            _v = (G[_k] & 0x3ff) - 640
+    if len(_cp) <= 4 and not any(k[0] in (0, W - 1) or k[1] in (0, H - 1) for k in _cp):
+        _pud = all(((G[k] & 0x3ff) - 640) in (107, 108, 179, 180) for k in _cp)
+        print('flaque marchable' if _pud else 'filet d eau bloque', len(_cp), min(_cp))
+        for _k in _cp:
+            if not _pud: G[_k] |= 0x400; continue            # filet d'eau (sous un pont...) : bloque
+            _v = (G[_k] & 0x3ff) - 640                        # vraie flaque : copie de la metatuile sans comportement d'eau -> on marche dedans (pas de reflet, pas de Surf, pas de combat aquatique)
             if _v not in PUDDLE: ENT.append(list(ENT[_v])); ATT.append(0); NM += 1; PUDDLE[_v] = NM - 1
             G[_k] = 0x3000 | (640 + PUDDLE[_v])
 # ------------------------------------------------------------------ dumps pour tourmalia_river_events.py
