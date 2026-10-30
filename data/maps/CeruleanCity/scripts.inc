@@ -33,8 +33,8 @@ CeruleanCity_Movement_PlayerBackOff::
 	step_end
 
 CeruleanCity_EventScript_BlockExits::
-	setobjectxyperm LOCALID_CERULEAN_SLOWBRO, 24, 31
-	setobjectxyperm LOCALID_CERULEAN_LASS, 25, 31
+	setobjectxyperm LOCALID_CERULEAN_SLOWBRO, 41, 43
+	setobjectxyperm LOCALID_CERULEAN_LASS, 41, 44
 	return
 
 CeruleanCity_EventScript_RivalTriggerLeft::
@@ -48,7 +48,7 @@ CeruleanCity_EventScript_RivalTriggerMid::
 	lockall
 	goto_if_unset FLAG_BADGE02_GET, CeruleanCity_EventScript_NorthBlocked
 	setvar VAR_TEMP_1, 1
-	setobjectxyperm LOCALID_CERULEAN_RIVAL, 23, 0
+	setobjectxyperm LOCALID_CERULEAN_RIVAL, 71, 6
 	goto CeruleanCity_EventScript_Rival
 	end
 
@@ -56,7 +56,7 @@ CeruleanCity_EventScript_RivalTriggerRight::
 	lockall
 	goto_if_unset FLAG_BADGE02_GET, CeruleanCity_EventScript_NorthBlocked
 	setvar VAR_TEMP_1, 2
-	setobjectxyperm LOCALID_CERULEAN_RIVAL, 24, 0
+	setobjectxyperm LOCALID_CERULEAN_RIVAL, 72, 6
 	goto CeruleanCity_EventScript_Rival
 	end
 
