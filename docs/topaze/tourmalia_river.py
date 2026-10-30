@@ -127,9 +127,11 @@ def walk(n, lo, hi, s):
         s = min(hi, max(lo, s + rj.choice((-1, 0, 0, 0, 1)))); out.append(s)
     return out
 JR = walk(H, 0, 1, 0); JT = walk(W, 0, 1, 0)
-_XL = {2: 9, 3: 8, 4: 7, 36: 7, 37: 8, 38: 9}
+_XL = {36: 7, 37: 8, 38: 9}
+for _y in range(2, 10): _XL[_y] = 2
 _XRt = {2: 11, 3: 13, 12: 15, 13: 17, 14: 20, 15: 23, 22: 25, 23: 22, 24: 19, 25: 17, 26: 17, 27: 16, 28: 16, 29: 17, 30: 18, 31: 18, 32: 18, 33: 18, 34: 17, 35: 15, 36: 13, 37: 11, 38: 9}
-for _y in range(4, 12): _XRt[_y] = 14 + (1 if _y in (6, 7) else 0)
+for _y in range(2, 10): _XRt[_y] = 15
+for _y in (10, 11): _XRt[_y] = 14
 for _y in range(16, 22): _XRt[_y] = 26
 def XR(y): return _XRt[max(2, min(38, y))]
 def XL(y): return _XL.get(y, 6)
@@ -147,8 +149,8 @@ for x in range(0, 5):                                                           
 BEACH = set()
 # ---- plateau de la ville (haut droite) : bords irreguliers, 2 niveaux de sol
 for y in range(1, 16):
-    for x in range(XR(y) + 3, 46 - JR[y]):
-        if y >= 1 + JT[x] and y < CLT(x): OPEN.add((x, y))
+    for x in range(22 if y < 5 else (16 if y in (7, 8) else XR(y) + 3), 46):
+        if y >= 1 and y < CLT(x) and not (y < 5 and 25 > x > 24): OPEN.add((x, y))
 for x in (22, 23, 24):
     for y in range(0, 15): OPEN.add((x, y))
 thin([(23, 0), (23, 4)])                                                      # allee du Gardien (rival : voie droite)
@@ -171,14 +173,14 @@ for c in ((36, 27), (36, 30), (36, 31)): OPEN.add(c); WAY.add(c)
 blob(39.2, 33.2, 6.4, 4.0, 74)                                                # terrasse sud-est (maison 6)
 thin([(36, 30), (36, 36), (40, 36)])
 # ---- rive ouest : 3 terrasses (grotte / sortie ouest / berge sud), escaliers, deux ponts
-rect(0, 9, 5, 13, way=False); rect(0, 16, 5, 24, way=False); rect(0, 27, 5, 37, way=False); rect(0, 19, 2, 22)
-thin([(3, 13), (3, 11), (5, 11)]); thin([(2, 13), (2, 14)]); thin([(2, 16), (2, 19)]); thin([(2, 22), (2, 24)]); thin([(2, 27), (2, 28), (5, 28)])
+rect(0, 7, 1, 9, way=False); rect(0, 10, 5, 13, way=False); rect(0, 16, 5, 24, way=False); rect(0, 27, 5, 37, way=False); rect(0, 19, 2, 22)
+thin([(1, 13), (1, 9)]); thin([(2, 13), (5, 13)]); thin([(2, 13), (2, 14)]); thin([(2, 16), (2, 19)]); thin([(2, 22), (2, 24)]); thin([(2, 27), (2, 28), (5, 28)])
 # --- batiments d'Emeraude (Petalburg) : maisons (A 5x4, B 4x4), Centre, Boutique, Arene
 D = {}
 HA = (5, 2, 5, 4); HB = (9, 16, 4, 4)
 def house(key, kind, dx, dy): D[key] = chunk(*kind, dx, dy, key)
-house('th1', HA, 17, 1); house('th2', HB, 26, 1); house('th3', HA, 37, 1); house('th4', HB, 42, 1)       # th4 = maison "HOUSE2" du recoin du terrier
-house('th5', HB, 34, 9); house('th6', HA, 38, 31)
+house('th1', HA, 3, 3); house('th2', HB, 10, 3); house('th3', HA, 37, 1); house('th4', HB, 42, 1)       # th4 = maison "HOUSE2" du recoin du terrier
+house('th5', HB, 26, 1); house('th6', HA, 38, 31)
 D['center'] = chunk(19, 13, 4, 4, 26, 9, 'centre')
 D['mart'] = chunk(24, 10, 4, 3, 34, 20, 'boutique')
 D['gym'] = chunk(12, 4, 6, 5, 30, 1, 'arene')
@@ -301,7 +303,7 @@ for (cx, cy, rx, ry) in ((42.4, 24.8, 3.2, 2.2),):
         for x in range(38, 47):
             if ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 <= 1 and (x, y) not in OCC and (x, y) not in CLIFF: WATERC.add((x, y)); OPEN.discard((x, y))
 WATERC = {c for c in WATERC if c not in OCC}
-BRIDGE_ROWS = [(10, 11), (27, 28)]
+BRIDGE_ROWS = [(7, 8), (27, 28)]
 ROPEC = set()
 BRIDGEC = set()
 for rows in BRIDGE_ROWS:
@@ -448,6 +450,13 @@ for c in sorted(CLIFF | STAIRS):
     if k not in CCACHE:
         t4 = slice_tiles(cliff_img(c, st)); SEC_ENT.append(list(GBOT) + [('B', t) for t in t4]); SEC_ATT.append(0); CCACHE[k] = len(SEC_ENT) - 1
     G[c] = (0x3000 if st else 0x400) | (640 + CCACHE[k])
+# ---- erosion : l'herbe ne reste que pres des chemins, des batiments et de l'eau (foret dense ailleurs, comme la carte de reference)
+ANCH = set(WAY) | set(OCC) | {(x, y) for y in range(5, 8) for x in range(0, W)} | {(x, y) for y in range(8, 15) for x in range(23, 35)} | set(BEACH) | {(41, 19)} | set(CORR)
+def _near(c, r):
+    return any(((c[0] + a_, c[1] + b_) in ANCH) for a_ in range(-r, r + 1) for b_ in range(-r, r + 1))
+ERO = {c for c in OPEN if c not in ANCH and not _near(c, 1)}
+for c in ERO: OPEN.discard(c)
+print('herbe erodee', len(ERO))
 # ------------------------------------------------------------------ sol + foret (arbres d'Emeraude : 14/15 en lisiere, 198/199 au coeur)
 for (x, y) in sorted(OPEN):
     if (x, y) in OCC: continue
@@ -456,11 +465,9 @@ for (x, y) in list(G):
     c = (x, y)
     if c in OPEN or c in OCC: continue
     edge = any(((x + a, y + b) in OPEN) for a in (-1, 0, 1) for b in (-1, 0, 1))
-    m = rnd.choice((14, 15, 14)) if edge else rnd.choice((198, 199, 198, 199, 198))
+    m = 198 if x % 2 == 0 else 199
     bx, by = x - x % 2, y - y % 2
     blk = [(bx + i, by + j) for i in (0, 1) for j in (0, 1)]
-    if all((q not in OPEN and q not in OCC and 0 <= q[0] < W and 0 <= q[1] < H) for q in blk):
-        m = (468 if x % 2 == 0 else 469) if y % 2 == 0 else (476 if x % 2 == 0 else 477)
     G[c] = 0x400 | m
 for c in list(GROUND):
     if c not in OPEN: del GROUND[c]
@@ -469,8 +476,8 @@ pr = random.Random(31)
 for c in sorted(G):
     if c in OPEN or c in OCC or c in ARTPLACE or not (G[c] & 0x400): continue
     if not any(((c[0] + a, c[1] + b) in BEACH) for a in (-1, 0, 1) for b in (-1, 0, 1)): continue
-    if any(max(abs(c[0] - q[0]), abs(c[1] - q[1])) < 2 for q in PALMS): continue
-    if pr.random() < 0.85: PALMS.append(c)
+    if any(max(abs(c[0] - q[0]), abs(c[1] - q[1])) < 3 for q in PALMS): continue
+    if pr.random() < 0.40: PALMS.append(c)
 PALM_IM = [palm_img(0), palm_img(1)]
 for i, c in enumerate(PALMS): ARTPLACE[c] = (slice_tiles(PALM_IM[(c[0] + c[1]) % 2]), GRASS)
 print('palmiers', len(PALMS))
@@ -479,7 +486,7 @@ rr = random.Random(41); ROCKS = []
 for c in sorted(WATERONLY):
     if not all(((c[0] + a, c[1] + b) in WATERC) for a in (-2, -1, 0, 1, 2) for b in (-2, -1, 0, 1, 2)): continue
     if any(max(abs(c[0] - q[0]), abs(c[1] - q[1])) < 3 for q in ROCKS): continue
-    if rr.random() < 0.16: ROCKS.append(c)
+    if rr.random() < 0.05: ROCKS.append(c)
 RK = []
 for i in range(2): SEC_ENT.append([('B', t) for t in WIMG_FULL] + [('A', t) for t in slice_tiles(rock_img(i))]); SEC_ATT.append(0); RK.append(len(SEC_ENT) - 1)
 for i, c in enumerate(ROCKS): G[c] = 0x400 | (640 + RK[i % 2])
@@ -487,7 +494,7 @@ print('rochers', len(ROCKS))
 # ------------------------------------------------------------------ art : monolithe de tourmaline (place), terrier
 MONO = monolith(); GROT = grotto()
 art_block(MONO, 3, 3, 30, 9, 'monolithe', GRASS)
-art_block(GROT, 3, 3, 0, 10, 'grotte azuree', GRASS); GROT_DOOR = (1, 12); HOLE_CELLS = []       # entree de la Grotte Azuree (scellee tant que Red n'est pas battu)
+art_block(GROT, 3, 3, 3, 10, 'grotte azuree', GRASS); GROT_DOOR = (4, 12); HOLE_CELLS = []       # entree de la Grotte Azuree (scellee tant que Red n'est pas battu)
 TREE_PAL = 9; TP = [(0, 0, 0)] * 16; OVH = {}; GT_CELLS = {}
 def add_tile_f(t):
     t = tuple(t)
@@ -500,7 +507,7 @@ for k, ds in D.items():
     for (x, y) in ds:
         for a in range(-2, 3):
             for b in range(-1, 3): KEEP.add((x + a, y + b))
-for c in [(24, 29), (25, 29), (24, 30), (25, 30), (24, 31), (25, 31), (26, 29), (27, 29), (24, 32), (24, 33), (24, 34), (24, 35), (41, 19), (40, 18), (40, 17), (40, 19), (42, 19), (1, 13), (1, 14), (0, 13), (2, 13), (31, 14), (31, 17), (38, 15), (38, 18), (36, 27), (36, 30), (2, 13), (2, 16), (2, 24), (2, 27), (35, 18), (35, 19), (31, 12), (31, 13)]: KEEP.add(c)
+for c in [(24, 29), (25, 29), (24, 30), (25, 30), (24, 31), (25, 31), (26, 29), (27, 29), (24, 32), (24, 33), (24, 34), (24, 35), (41, 19), (40, 18), (40, 17), (40, 19), (42, 19), (4, 13), (4, 14), (3, 13), (5, 13), (16, 7), (16, 8), (1, 9), (1, 10), (31, 14), (31, 17), (38, 15), (38, 18), (36, 27), (36, 30), (2, 13), (2, 16), (2, 24), (2, 27), (35, 18), (35, 19), (31, 12), (31, 13)]: KEEP.add(c)
 USED = set()
 _DOORS = {c for v in D.values() for c in v}
 _FL = {(23, 0)}; _q = collections.deque([(23, 0)])
@@ -553,7 +560,7 @@ for c in sorted(OPEN):
     n8 = sum(((c[0] + a_, c[1] + b_) in OPEN) for a_ in (-1, 0, 1) for b_ in (-1, 0, 1) if (a_, b_) != (0, 0))
     if n8 < 8: continue
     if any(max(abs(c[0] - q[0]), abs(c[1] - q[1])) < 3 for q in DECOR): continue
-    if dr.random() < 0.30: DECOR.append(c)
+    if False: DECOR.append(c)
 for c in DECOR: G[c] = 0x400 | dr.choice((14, 15)); OCC[c] = 'arbre'; OPEN.discard(c)
 print('arbres isoles', len(DECOR))
 # ------------------------------------------------------------------ resolution art -> metatuiles, valeurs brutes
@@ -567,6 +574,7 @@ for c, (t4, gid) in sorted(GT_CELLS.items()):
 for k, c in SIGNS.items(): G[c] = remap(0x400 | 3)
 # ---- sentiers : sable d'Emeraude (autotuile, comme la Route 4 Est) ; prairies : fleurs
 PAVEC = {(x, y) for y in range(5, 8) for x in range(0, W)} | {(x, y) for y in range(8, 15) for x in range(23, 35)}
+PAVEC |= {c for c in WAY if c in OPEN and c not in BEACH}
 PAVEC = {c for c in PAVEC if c in OPEN and c not in OCC and c not in ARTPLACE and c not in WATERONLY and c not in BRIDGEC and not (G[c] & 0xc00)}
 PATHC = {c for c in WAY if c in OPEN and c not in OCC and c not in ARTPLACE and c not in WATERONLY and c not in BRIDGEC and not (G[c] & 0xc00)}
 # mise en forme du sable : l'autotuile d'Emeraude n'a ni piece de 1 case de large ni angle rentrant -> on epaissit / comble
@@ -613,7 +621,7 @@ for c in sorted(PAVEC):
 for (x, y) in sorted(OPEN):
     c = (x, y)
     if c in PATHC or c in PAVEC or c in OCC or c in ARTPLACE or c in KEEP or c in WATERONLY or c in BRIDGEC or (G[c] & 0xc00): continue
-    if GROUND.get(c) == GRASS and rnd.random() < 0.10: G[c] = remap(0x3000 | 4)
+    pass
 
 def raw_blocked(c): return bool(G[c] & 0xc00) or c in WATERONLY
 if os.environ.get('ASCII'):
@@ -633,7 +641,7 @@ while q:
         if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen and not raw_blocked(n): seen.add(n); q.append(n)
 for k, ds in D.items():
     for c in ds: assert c in seen, ('porte inaccessible', k, c)
-assert GROT_DOOR in seen and (1, 13) in seen, 'grotte inaccessible'
+assert GROT_DOOR in seen and (4, 13) in seen, 'grotte inaccessible'
 for k in ('policeman', 'policeman_block', 'slowbro', 'lass', 'slowbro_block', 'lass_block', 'cuttree', 'rival', 'boy', 'balding', 'youngster', 'woman', 'hidden', 'camper', 'oldman'):
     assert NPC[k] in seen, ('PNJ inaccessible', k, NPC[k])
 EXITS = {'west': [(0, y) for y in (19, 20, 21, 22)], 'north': [(x, 0) for x in (22, 23, 24)], 'east': [(47, 18), (47, 19)], 'south': [(x, H - 1) for x in (22, 23, 24, 25)]}
