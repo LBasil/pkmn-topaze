@@ -237,6 +237,12 @@ for o in d['object_events']:
     if o['graphics_id'] == 'OBJ_EVENT_GFX_CUT_TREE':
         o['x'], o['y'] = NPC['cuttree']
 json.dump(d, open(f, 'w'), indent=2); open(f, 'a').write('\n')
+# connexions inverses (cote routes voisines) : ecart oppose
+for mp, nb in (('Route9', 'MAP_ROUTE9'), ('Route4East', 'MAP_ROUTE4_EAST'), ('Route24', 'MAP_ROUTE24'), ('Route5', 'MAP_ROUTE5')):
+    fn = 'data/maps/%s/map.json' % mp; dd = json.load(open(fn))
+    for c in dd['connections']:
+        if c['map'] == 'MAP_CERULEAN_CITY': c['offset'] = -OFF[nb]
+    json.dump(dd, open(fn, 'w'), indent=2); open(fn, 'a').write('\n')
 f = 'data/maps/CeruleanCity/scripts.inc'; s = open(f).read()
 s = re.sub(r'(setobjectxyperm LOCALID_CERULEAN_RIVAL, )23, 0', r'\g<1>71, 6', s); s = re.sub(r'(setobjectxyperm LOCALID_CERULEAN_RIVAL, )24, 0', r'\g<1>72, 6', s)
 open(f, 'w').write(s)
