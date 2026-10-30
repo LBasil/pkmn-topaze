@@ -165,5 +165,6 @@ CeruleanCity_Text_RefIdle::
     .string "The world is quieter now.$"
 
 CeruleanCity_Text_CaveSealed::
-	.string "The grotto is sealed by a strange\n"
-	.string "force. Not yet...$"
+    .string "The grotto is sealed by a strange\n"
+    .string "force. Not yet...\p"
+    .string "The hall's north passage is open.$"

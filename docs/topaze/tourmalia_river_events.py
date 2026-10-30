@@ -43,3 +43,10 @@ _t = re.sub(r'(CeruleanCity_Text_TrainerTipsHeldItems::\n)(?:    \.string ".*"\n
 _t = re.sub(r'(CeruleanCity_Text_BikeShopSign::\n)(?:    \.string ".*"\n)*?    \.string ".*\$"', lambda m: m.group(1) + '    .string "GLASS HALL\\n"\n    .string "RIGHT DOOR: NORTH PASSAGE\\n"\n    .string "(ROUTE 24)\\p"\n    .string "LEFT DOOR: CERULEAN CAVE\\n"\n    .string "(sealed)$"', _t, count=1)
 _t = _t.replace('NORTH: ROUTE 24 (the hillside)', 'NORTH: ROUTE 24 (glass hall)')
 open('data/maps/CeruleanCity/text.inc', 'w').write(_t)
+# v27b : le cote gauche du dome (grotte scellee) ne renvoie plus en arriere : il mene aussi au passage nord (porte droite) tant que la grotte est scellee
+_s = open('data/maps/CeruleanCity/scripts.inc').read()
+_s = re.sub(r'(\tmsgbox CeruleanCity_Text_CaveSealed\n)(?:\tapplymovement OBJ_EVENT_ID_PLAYER, CeruleanCity_Movement_CaveBack\n\twaitmovement 0\n\treleaseall\n\tend\n|\twarp MAP_CERULEAN_CITY, 15\n\twaitstate\n\tend\n)', r'\1\twarp MAP_CERULEAN_CITY, 15\n\twaitstate\n\tend\n', _s, count=1)
+open('data/maps/CeruleanCity/scripts.inc', 'w').write(_s)
+_t = open('data/maps/CeruleanCity/text.inc').read()
+_t = re.sub(r'(CeruleanCity_Text_CaveSealed::\n)(?:[ \t]+\.string ".*"\n)*?[ \t]+\.string ".*\$"', lambda m: m.group(1) + '    .string "The grotto is sealed by a strange\\n"\n    .string "force. Not yet...\\p"\n    .string "The hall\'s north passage is open.$"', _t, count=1)
+open('data/maps/CeruleanCity/text.inc', 'w').write(_t)

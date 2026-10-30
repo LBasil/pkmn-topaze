@@ -353,9 +353,8 @@ CeruleanCity_EventScript_CaveSealed::
 	lockall
 	goto_if_defeated TRAINER_BIKER_1, CeruleanCity_EventScript_CaveOpen
 	msgbox CeruleanCity_Text_CaveSealed
-	applymovement OBJ_EVENT_ID_PLAYER, CeruleanCity_Movement_CaveBack
-	waitmovement 0
-	releaseall
+	warp MAP_CERULEAN_CITY, 15
+	waitstate
 	end
 
 CeruleanCity_Movement_CaveBack::
