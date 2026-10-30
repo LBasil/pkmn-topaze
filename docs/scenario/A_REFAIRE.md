@@ -277,3 +277,4 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - **v25b (30-10)** : poche de sentiers/échelle/étangs sans issue au nord de l'Arène → forêt bloquée (demande Basil) ; le chemin du nord passe par un sentier creusé le long de l'Arène. 8 portes toujours atteignables.
 - **v25c (30-10)** : poche nord de l'Arène = forêt uniforme (arbres entiers, sans carrés clairs ni bouts de tronc) ; sentiers creusés en pavé.
 - **v25d (30-10)** : approche pavée continue vers la cabane au bord de l'eau (th6), rivage île SO nettoyé (arbres flottants), poches marchables orphelines (échelle près de la cascade…) bloquées automatiquement, sentier du rival en herbe claire. Accès aux 8 portes + entrée th6 vérifiés en émulateur.
+- **v25e (30-10)** : sentier du nord derrière l'Arène = seul lien colline↔ville ; panneau ajouté à son entrée (remplace le panneau 'Trainer Tips' : "ROUTE 24 - NORTH / Follow the ridge path behind the GYM").
