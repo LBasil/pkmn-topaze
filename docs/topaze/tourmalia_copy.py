@@ -108,6 +108,10 @@ def comp(s):
             n = (c[0] + dx, c[1] + dy)
             if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen and walk(n) and n not in DOORSET: seen.add(n); qq.append(n)
     return seen
+# v25b : poche inutile au nord de l'Arene (sentiers/echelle/etangs sans issue) -> foret bloquee, demande de Basil
+for _y in range(4, 23):
+    for _x in range(29, 46):
+        if (_y <= 14 or 37 <= _x <= 40) and (_x, _y) not in WALKC and grid[_y][_x] in WALK: grid[_y][_x] = 1
 CARVED |= set(RIV)
 STUBS = [S(c) for c in ((83, 32), (42, 45), (43, 45), (44, 45), (81, 0))]      # largeur des sorties = celle des anciennes sorties (retour depuis les routes voisines)
 CARVED |= set(STUBS)
