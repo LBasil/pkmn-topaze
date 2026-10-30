@@ -137,6 +137,7 @@ def reach_from(s, ban=()):
             if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen and n not in ban and passable(n) and not (G[n] & 0x1000 and not G[n] & 0x2000): seen.add(n); qq.append(n)
     return seen
 ALL = reach_from(HUB)
+NPCCELLS = set()
 USED = set(DOORS.values()) | set(SIGNC.values()) | set(FRONT.values())
 def near(t, r=4, nb=3):
     best = None
@@ -145,13 +146,13 @@ def near(t, r=4, nb=3):
             c = (x, y)
             if c in ALL and c not in USED and c not in CARVED and c not in WALKC and grid[y][x] in (9, 10, 18, 26, 27, 45, 49, 87, 88, 98, 114):
                 n = sum(1 for d in ((1, 0), (-1, 0), (0, 1), (0, -1)) if (x + d[0], y + d[1]) in ALL)
-                if n >= nb:
+                if n >= nb and len(reach_from(HUB, ban={c} | NPCCELLS)) == len(ALL) - 1 - len(NPCCELLS & ALL):
                     s = abs(x - t[0]) + abs(y - t[1])
                     if best is None or s < best[0]: best = (s, c)
-    assert best, ('pas de case', t); USED.add(best[1]); return best[1]
+    assert best, ('pas de case', t); USED.add(best[1]); NPCCELLS.add(best[1]); return best[1]
 NPC = {}
 NPC['boy'] = near((40, 28)); NPC['balding'] = near((44, 22)); NPC['youngster'] = near((38, 20)); NPC['woman'] = near((20, 36), 8)
-NPC['camper'] = near((3, 31), 6); NPC['oldman'] = near((64, 32), 6); NPC['hidden'] = near((58, 25), 5)
+NPC['camper'] = near((6, 33), 12, 2); NPC['oldman'] = near((64, 32), 6); NPC['hidden'] = near((58, 25), 5)
 # est : couloir creuse (75..83, 31) ; arbre a couper + policier a la porte
 corr = sorted(c for c in CARVED if c[1] == 31 and c[0] >= 75)
 assert corr, 'pas de couloir est'
