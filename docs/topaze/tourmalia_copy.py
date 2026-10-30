@@ -54,7 +54,7 @@ HATCH_ID = NM; ENT.append(list(ENT[244])); NM += 1                    # metatuil
 assert NT <= 640 + 384, ('trop de tuiles', NT)
 
 # ------------------------------------------------------------------ classification a la main
-WALK = {9, 10, 18, 26, 27, 45, 49, 87, 88, 98, 114, 169, 257, 270, 271, 284, 285, 292, 297, 30, 100, 110, 229, 277, 95, 282, 283, 86, 99, 244, 253, 97}
+WALK = {9, 10, 18, 26, 27, 45, 49, 87, 88, 98, 114, 169, 257, 284, 285, 292, 297, 30, 100, 110, 229, 277, 95, 282, 283, 86, 99, 244, 253, 97}      # v27 : 270/271 (pied des piliers du dome) retires
 WATER = {93, 102, 103, 104, 107, 108, 112, 113, 115, 116, 119, 137, 179, 180, 293, 294, 295, 296, 300, 301, 309, 311, 125, 126}      # v26c : 133 = falaise brune (etait classee eau : reflet + Surf sur la roche) -> bloquee
 WALK |= {53, 62}                                                          # planchers des cabanes (marchables)
 TALL = {30, 100}; DOORIDS = {70, 248, 184, 244}
@@ -73,7 +73,9 @@ DECK = {53, 78, 62}
 WALKC = {}                                                              # cellule -> 'W' marchable force
 for k, (x, y) in DOORS.items(): WALKC[(x, y)] = 1
 for k, (x, y) in DOORS.items():                                         # couloir echelle/ponton sous chaque cabane
-    if k.startswith('th'):
+    if k == 'th3':                                                     # v27 : l'echelle de la cabane 3 est en x=19 (la porte en x=20) : couloir = plancher puis echelle reelle
+        for _c in [(20, 9), (19, 9)] + [(19, _y) for _y in range(10, 18)]: WALKC[_c] = 1
+    elif k.startswith('th'):
         y += 1
         while y < H and not (grid[y][x] in WALK and y > DOORS[k][1] + 1):
             WALKC[(x, y)] = 1; y += 1
