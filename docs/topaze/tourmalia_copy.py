@@ -55,7 +55,7 @@ assert NT <= 640 + 384, ('trop de tuiles', NT)
 
 # ------------------------------------------------------------------ classification a la main
 WALK = {9, 10, 18, 26, 27, 45, 49, 87, 88, 98, 114, 169, 257, 270, 271, 284, 285, 292, 297, 30, 100, 110, 229, 277, 95, 282, 283, 86, 99, 244, 253, 97}
-WATER = {93, 102, 103, 104, 107, 108, 112, 113, 115, 116, 119, 137, 179, 180, 293, 294, 295, 296, 300, 301, 309, 311, 133, 125, 126}
+WATER = {93, 102, 103, 104, 107, 108, 112, 113, 115, 116, 119, 137, 179, 180, 293, 294, 295, 296, 300, 301, 309, 311, 125, 126}      # v26c : 133 = falaise brune (etait classee eau : reflet + Surf sur la roche) -> bloquee
 WALK |= {53, 62}                                                          # planchers des cabanes (marchables)
 TALL = {30, 100}; DOORIDS = {70, 248, 184, 244}
 GRASS = 45
@@ -247,6 +247,7 @@ print('portes/sorties/PNJ OK ; cases accessibles', len(ALL))
 assert passable(SOUTH_TREE), 'case arbre sud bloquee'
 NPC['cuttree_s'] = SOUTH_TREE
 # v26b : flaques isolees (petits etangs sans lien avec la riviere) = decor bloque, pas de Surf possible dedans
+PUDDLE = {}
 _w = {c for c in G if (G[c] & 0x1000) and not (G[c] & 0x2000) and not (G[c] & 0x400)}; _ws = set()
 for _c in sorted(_w):
     if _c in _ws: continue
@@ -257,8 +258,11 @@ for _c in sorted(_w):
             _n = (_a[0] + _d[0], _a[1] + _d[1])
             if _n in _w and _n not in _ws: _ws.add(_n); _cp.add(_n); _q.append(_n)
     if len(_cp) < 40 and not any(k[0] in (0, W - 1) or k[1] in (0, H - 1) for k in _cp):
-        print('flaque bloquee', len(_cp), min(_cp))
-        for _k in _cp: G[_k] |= 0x400
+        print('flaque marchable', len(_cp), min(_cp))
+        for _k in _cp:                                       # copie de la metatuile sans comportement d'eau : on marche dedans (pas de reflet, pas de Surf, pas de combat aquatique)
+            _v = (G[_k] & 0x3ff) - 640
+            if _v not in PUDDLE: ENT.append(list(ENT[_v])); ATT.append(0); NM += 1; PUDDLE[_v] = NM - 1
+            G[_k] = 0x3000 | (640 + PUDDLE[_v])
 # ------------------------------------------------------------------ dumps pour tourmalia_river_events.py
 json.dump({k: [list(c)] for k, c in {**DOORS, **PARKED}.items() if k != 'cave'}, open('/tmp/tourmalia_doors.json', 'w'))
 json.dump({k: list(v) for k, v in NPC.items()}, open('/tmp/tourmalia_npc.json', 'w'))
