@@ -33,3 +33,8 @@ for l in h['heal_locations']:
     if l['id'] == 'HEAL_LOCATION_CERULEAN_CITY': l['x'], l['y'] = x, y + 1
 json.dump(h, open(f, 'w'), indent=2); open(f, 'a').write('\n')
 print('evenements Tourmalia v18 ecrits')
+
+# v25 : le panneau du pied du pont indique les 4 sorties
+_t = open('data/maps/CeruleanCity/text.inc').read()
+_t = re.sub(r'(CeruleanCity_Text_CitySign::\n).*?\$"', lambda m: m.group(1) + '    .string "TOURMALIA CITY\\n"\n    .string "Where the forest grows crystal\\p"\n    .string "WEST:  ROUTE 4 (this road)\\n"\n    .string "SOUTH: ROUTE 5 (ladder below)\\p"\n    .string "EAST:  ROUTE 9 (past the dome)\\n"\n    .string "NORTH: ROUTE 24 (the hillside)$"', _t, count=1, flags=re.S)
+open('data/maps/CeruleanCity/text.inc', 'w').write(_t)

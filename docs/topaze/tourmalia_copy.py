@@ -267,6 +267,7 @@ for c in d['coord_events']:
     if 'RivalTriggerRight' in c['script']: c['x'], c['y'] = 72 - X0, 12
 for o in d['object_events']:
     if o.get('local_id') == 'LOCALID_CERULEAN_POLICE_N': o['x'], o['y'] = NPC['policeman_n']
+    if 'WANDER' in o['movement_type']: o['movement_type'] = 'MOVEMENT_TYPE_FACE_DOWN'; o['movement_range_x'] = o['movement_range_y'] = 0      # v25 : plus de PNJ errants (ils bloquaient les passages etroits)
     if o['graphics_id'] == 'OBJ_EVENT_GFX_CUT_TREE':
         o['x'], o['y'] = NPC['cuttree']
 json.dump(d, open(f, 'w'), indent=2); open(f, 'a').write('\n')

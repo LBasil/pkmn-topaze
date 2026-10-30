@@ -87,7 +87,11 @@ CeruleanCity_Text_ThisIsCeruleanCave::
 
 CeruleanCity_Text_CitySign::
     .string "TOURMALIA CITY\n"
-    .string "Where the river meets the crystal$"
+    .string "Where the forest grows crystal\p"
+    .string "WEST:  ROUTE 4 (this road)\n"
+    .string "SOUTH: ROUTE 5 (ladder below)\p"
+    .string "EAST:  ROUTE 9 (past the dome)\n"
+    .string "NORTH: ROUTE 24 (the hillside)$"
 
 CeruleanCity_Text_TrainerTipsHeldItems::
     .string "TRAINER TIPS\p"
