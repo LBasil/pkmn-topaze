@@ -87,6 +87,8 @@ def comp(s):
             if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen and walk(n) and n not in DOORSET: seen.add(n); qq.append(n)
     return seen
 CARVED |= set(RIV)
+STUBS = [(83, 32), (0, 30), (0, 31), (0, 32), (42, 45), (43, 45), (44, 45), (81, 0)]      # largeur des sorties = celle des anciennes sorties (retour depuis les routes voisines)
+CARVED |= set(STUBS)
 HUB = (37, 26)
 FRONT = {'mart': (46, 30), 'gym': (55, 21), 'cave': (69, 26), 'th1': (13, 10), 'th2': (18, 19), 'th3': (42, 9), 'th4': (47, 15), 'th5': (35, 17), 'th6': (53, 33)}
 EXITC = {'N': (82, 0), 'E': (83, 31), 'S': (41, 45), 'W': (0, 29), 'riv': (71, 6)}
@@ -223,7 +225,7 @@ json.dump(L, open('data/layouts/layouts.json', 'w'), indent=2); open('data/layou
 json.dump({'w': W, 'h': H, 'blocked': [list(c) for c in sorted(c for c in G if (G[c] & 0x400) or ((G[c] & 0x1000) and not (G[c] & 0x2000)))]}, open('/tmp/tourmalia_col.json', 'w'))
 # connexions : ecart = case de sortie - case locale du voisin
 f = 'data/maps/CeruleanCity/map.json'; d = json.load(open(f))
-OFF = {'MAP_ROUTE9': EXITC['E'][1] - 8, 'MAP_ROUTE4_EAST': EXITC['W'][1] - 14, 'MAP_ROUTE24': EXITC['N'][0] - 10, 'MAP_ROUTE5': EXITC['S'][0] - 22}
+OFF = {'MAP_ROUTE9': EXITC['E'][1] - 8, 'MAP_ROUTE4_EAST': EXITC['W'][1] - 14, 'MAP_ROUTE24': EXITC['N'][0] - 11, 'MAP_ROUTE5': EXITC['S'][0] - 22}
 for c in d['connections']: c['offset'] = OFF[c['map']]
 # declencheurs du rival (3 colonnes x=70..72, ligne y=12) + sorties
 for c in d['coord_events']:
