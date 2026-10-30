@@ -58,7 +58,9 @@ for k, (x, y) in DOORS.items():                                         # couloi
 RIV = [(x, y) for y in range(6, 13) for x in (70, 71, 72)] + [(73, 6)]
 def walk(c): return grid[c[1]][c[0]] in WALK or c in WALKC or c in CARVED
 CARVED = set()
+DOORSET = set(DOORS.values())
 def cost(c):
+    if c in DOORSET: return 500
     if walk(c): return 1
     if c in BUILD: return 500
     return 60 if grid[c[1]][c[0]] in WATER else 6
@@ -82,7 +84,7 @@ def comp(s):
         c = qq.popleft()
         for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
             n = (c[0] + dx, c[1] + dy)
-            if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen and walk(n): seen.add(n); qq.append(n)
+            if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen and walk(n) and n not in DOORSET: seen.add(n); qq.append(n)
     return seen
 CARVED |= set(RIV)
 HUB = (37, 26)
@@ -134,7 +136,7 @@ def reach_from(s, ban=()):
         c = qq.popleft()
         for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
             n = (c[0] + dx, c[1] + dy)
-            if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen and n not in ban and passable(n) and not (G[n] & 0x1000 and not G[n] & 0x2000): seen.add(n); qq.append(n)
+            if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen and n not in ban and n not in DOORSET and passable(n) and not (G[n] & 0x1000 and not G[n] & 0x2000): seen.add(n); qq.append(n)
     return seen
 ALL = reach_from(HUB)
 NPCCELLS = set()
