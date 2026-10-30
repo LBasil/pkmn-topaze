@@ -98,6 +98,22 @@ def recolor(name, o, n, pal, cnt):
                     if i in used or cov() >= .25: continue
                     out[i] = paint(pal[i], A_); used.add(i); acc.append(i)
     return out
+
+# Retouches manuelles (indice de palette -> 'o' = couleur d'origine, ou (r,g,b)), appliquees apres le recolorage auto
+YEL = {1: (255, 248, 140), 2: (245, 220, 70), 3: (210, 175, 35), 4: (150, 115, 15), 5: (100, 70, 5)}
+OVR = {
+ 'VOLTORB': {1: YEL[1], 2: YEL[2], 3: YEL[3], 4: YEL[5], 10: 'o', 11: 'o', 12: 'o', 13: 'o', 14: 'o'},
+ 'ELECTRODE': {1: YEL[1], 2: YEL[2], 3: YEL[3], 4: YEL[4], 5: YEL[5], 10: 'o', 11: 'o', 12: 'o', 13: 'o', 14: 'o'},
+ 'MACHOKE': {2: (230, 236, 245), 3: (190, 200, 215), 4: (150, 160, 178), 5: (90, 100, 120), 8: 'o', 11: (225, 175, 160), 12: (200, 120, 100), 13: (150, 80, 70), 14: (95, 45, 40)},
+ 'MACHAMP': {1: 'o', 2: (230, 236, 245), 3: (190, 200, 215), 4: (150, 160, 178), 5: (90, 100, 120), 11: (225, 175, 160), 12: (200, 120, 100), 13: (150, 80, 70), 14: (95, 45, 40)},
+ 'DIGLETT': {5: (215, 222, 232), 6: (160, 168, 180), 7: (112, 120, 134), 8: (70, 76, 90), 11: 'o', 14: 'o'},
+ 'DUGTRIO': {5: (215, 222, 232), 6: (160, 168, 180), 7: (112, 120, 134), 8: (70, 76, 90), 11: 'o', 14: 'o'},
+ 'PONYTA': {5: 'o', 9: 'o', 10: 'o', 11: 'o', 12: 'o'},
+ 'RAPIDASH': {6: 'o', 9: 'o', 10: 'o', 11: 'o', 12: 'o'},
+}
+def retouche(name, po, newp):
+    for i, c in OVR.get(name, {}).items(): newp[i] = po[i] if c == 'o' else c
+    return newp
 def main():
     base = R + '/graphics/pokemon'; cache = os.path.dirname(os.path.abspath(__file__)) + '/orig_pal'
     sheet = []; rep = []
@@ -110,7 +126,7 @@ def main():
         for f in ('normal.pal', 'shiny.pal'):
             if not os.path.exists(cd + '/' + f): shutil.copy(d + '/' + f, cd + '/' + f)
         po, ps = load_pal(cd + '/normal.pal'), load_pal(cd + '/shiny.pal')
-        cnt = counts(d); newp = recolor(nm, o, n, po, cnt)
+        cnt = counts(d); newp = retouche(nm, po, recolor(nm, o, n, po, cnt))
         # shiny : meme transformation, applique par indice (decalage de teinte relatif)
         news = list(ps)
         for i in range(1, 16):
