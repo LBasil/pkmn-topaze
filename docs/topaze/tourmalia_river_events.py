@@ -8,15 +8,14 @@ f = 'data/maps/CeruleanCity/map.json'; d = json.load(open(f))
 # portes : (index, batiment) ; 8..11 = portes de secours garees dans la foret (indices stables), non touchees
 WARP = {0: 'th1', 1: 'th4', 2: 'th3', 3: 'center', 4: 'gym', 5: 'th5', 6: 'mart', 12: 'th6', 13: 'th2'}
 for i, k in WARP.items(): d['warp_events'][i]['x'], d['warp_events'][i]['y'] = door(k)
-assert d['warp_events'][7]['dest_map'] == 'MAP_CERULEAN_CAVE_1F'
+assert d['warp_events'][7]['dest_map'] in ('MAP_CERULEAN_CAVE_1F', 'MAP_CERULEAN_CITY_GLASS_HALL')
 d['warp_events'][7]['x'], d['warp_events'][7]['y'] = M['grot_door']
 POS = {'LOCALID_CERULEAN_POLICEMAN': N['policeman'], 'LOCALID_CERULEAN_SLOWBRO': N['slowbro'], 'LOCALID_CERULEAN_LASS': N['lass'], 'LOCALID_CERULEAN_RIVAL': N['rival'], 'LOCALID_CERULEAN_WOMAN': N['woman']}
 GFX = {'OBJ_EVENT_GFX_LITTLE_BOY': 'boy', 'OBJ_EVENT_GFX_BALDING_MAN': 'balding', 'OBJ_EVENT_GFX_YOUNGSTER': 'youngster', 'OBJ_EVENT_GFX_CAMPER': 'camper', 'OBJ_EVENT_GFX_OLD_MAN_1': 'oldman'}
 for o in d['object_events']:
     p = POS.get(o.get('local_id')) or (N[GFX[o['graphics_id']]] if o['graphics_id'] in GFX else None)
     if p: o['x'], o['y'] = p
-for c in d['coord_events']:
-    if 'CaveSealed' in c['script']: c['x'], c['y'] = M['grot_door'][0], M['grot_door'][1] + 1
+d['coord_events'] = [c for c in d['coord_events'] if 'CaveSealed' not in c['script']]      # v28 : plus de message 'grotte scellee' (le dome est un vrai batiment visitable)
 SG = {'CitySign': 'city', 'GymSign': 'gym', 'BikeShopSign': 'bike', 'TrainerTips': 'tips'}
 for b in d['bg_events']:
     if b['type'] == 'sign': b['x'], b['y'] = S[SG[b['script'].split('_')[-1]]]
@@ -40,13 +39,7 @@ _t = re.sub(r'(CeruleanCity_Text_CitySign::\n).*?\$"', lambda m: m.group(1) + ' 
 open('data/maps/CeruleanCity/text.inc', 'w').write(_t)
 _t = open('data/maps/CeruleanCity/text.inc').read()
 _t = re.sub(r'(CeruleanCity_Text_TrainerTipsHeldItems::\n)(?:    \.string ".*"\n)*?    \.string ".*\$"', lambda m: m.group(1) + '    .string "TRAINER TIPS\\p"\n    .string "A POKéMON can be made to hold\\n"\n    .string "an item.\\p"\n    .string "Some items can even be used by\\n"\n    .string "the holding POKéMON in battle.$"', _t, count=1)
-_t = re.sub(r'(CeruleanCity_Text_BikeShopSign::\n)(?:    \.string ".*"\n)*?    \.string ".*\$"', lambda m: m.group(1) + '    .string "GLASS HALL\\n"\n    .string "RIGHT DOOR: NORTH PASSAGE\\n"\n    .string "(ROUTE 24)\\p"\n    .string "LEFT DOOR: CERULEAN CAVE\\n"\n    .string "(sealed)$"', _t, count=1)
+_t = re.sub(r'(CeruleanCity_Text_BikeShopSign::\n)(?:    \.string ".*"\n)*?    \.string ".*\$"', lambda m: m.group(1) + '    .string "GLASS HALL\\n"\n    .string "Open to visitors.\\p"\n    .string "North exit: ROUTE 24$"', _t, count=1)
 _t = _t.replace('NORTH: ROUTE 24 (the hillside)', 'NORTH: ROUTE 24 (glass hall)')
 open('data/maps/CeruleanCity/text.inc', 'w').write(_t)
-# v27b : le cote gauche du dome (grotte scellee) ne renvoie plus en arriere : il mene aussi au passage nord (porte droite) tant que la grotte est scellee
-_s = open('data/maps/CeruleanCity/scripts.inc').read()
-_s = re.sub(r'(\tmsgbox CeruleanCity_Text_CaveSealed\n)(?:\tapplymovement OBJ_EVENT_ID_PLAYER, CeruleanCity_Movement_CaveBack\n\twaitmovement 0\n\treleaseall\n\tend\n|\twarp MAP_CERULEAN_CITY, 15\n\twaitstate\n\tend\n)', r'\1\twarp MAP_CERULEAN_CITY, 15\n\twaitstate\n\tend\n', _s, count=1)
-open('data/maps/CeruleanCity/scripts.inc', 'w').write(_s)
-_t = open('data/maps/CeruleanCity/text.inc').read()
-_t = re.sub(r'(CeruleanCity_Text_CaveSealed::\n)(?:[ \t]+\.string ".*"\n)*?[ \t]+\.string ".*\$"', lambda m: m.group(1) + '    .string "The grotto is sealed by a strange\\n"\n    .string "force. Not yet...\\p"\n    .string "The hall\'s north passage is open.$"', _t, count=1)
-open('data/maps/CeruleanCity/text.inc', 'w').write(_t)
+# v28 : le dome est une vraie salle (CeruleanCity_GlassHall, cree par tourmalia_hall.py)

@@ -263,8 +263,8 @@
       "x": 47,
       "y": 24,
       "elevation": 0,
-      "dest_map": "MAP_CERULEAN_CAVE_1F",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_CERULEAN_CITY_GLASS_HALL",
+      "dest_warp_id": "2"
     },
     {
       "x": 0,
@@ -312,15 +312,15 @@
       "x": 48,
       "y": 24,
       "elevation": 0,
-      "dest_map": "MAP_CERULEAN_CITY",
-      "dest_warp_id": "15"
+      "dest_map": "MAP_CERULEAN_CITY_GLASS_HALL",
+      "dest_warp_id": "3"
     },
     {
       "x": 48,
       "y": 17,
       "elevation": 0,
-      "dest_map": "MAP_CERULEAN_CITY",
-      "dest_warp_id": "14"
+      "dest_map": "MAP_CERULEAN_CITY_GLASS_HALL",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -350,15 +350,6 @@
       "var": "VAR_MAP_SCENE_CERULEAN_CITY_RIVAL",
       "var_value": "0",
       "script": "CeruleanCity_EventScript_RivalTriggerRight"
-    },
-    {
-      "type": "trigger",
-      "x": 47,
-      "y": 25,
-      "elevation": 0,
-      "var": "VAR_TEMP_0",
-      "var_value": "0",
-      "script": "CeruleanCity_EventScript_CaveSealed"
     }
   ],
   "bg_events": [

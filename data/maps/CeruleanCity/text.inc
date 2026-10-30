@@ -102,10 +102,8 @@ CeruleanCity_Text_TrainerTipsHeldItems::
 
 CeruleanCity_Text_BikeShopSign::
     .string "GLASS HALL\n"
-    .string "RIGHT DOOR: NORTH PASSAGE\n"
-    .string "(ROUTE 24)\p"
-    .string "LEFT DOOR: CERULEAN CAVE\n"
-    .string "(sealed)$"
+    .string "Open to visitors.\p"
+    .string "North exit: ROUTE 24$"
 
 CeruleanCity_Text_GymSign::
     .string "TOURMALIA POKéMON GYM\n"

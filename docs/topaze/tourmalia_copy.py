@@ -50,7 +50,7 @@ for m in mts:
             t, pi = tile_of(m[ty * 8:ty * 8 + 8, tx * 8:tx * 8 + 8]); bot.append(t | (pi << 12))
     ENT.append(bot + [0, 0, 0, 0])
 NT = len(TILE_LIST)
-HATCH_ID = NM; ENT.append(list(ENT[244])); NM += 1                    # metatuile 'trappe' = aspect de la porte sombre, comportement normal (pas d'animation de porte)
+HATCH_ID = 229                    # metatuile 'trappe' = aspect de la porte sombre, comportement normal (pas d'animation de porte)
 assert NT <= 640 + 384, ('trop de tuiles', NT)
 
 # ------------------------------------------------------------------ classification a la main
@@ -267,6 +267,11 @@ for _c in sorted(_w):
             _v = (G[_k] & 0x3ff) - 640                        # vraie flaque : copie de la metatuile sans comportement d'eau -> on marche dedans (pas de reflet, pas de Surf, pas de combat aquatique)
             if _v not in PUDDLE: ENT.append(list(ENT[_v])); ATT.append(0); NM += 1; PUDDLE[_v] = NM - 1
             G[_k] = 0x3000 | (640 + PUDDLE[_v])
+# v28 : centres de mares (195/224/241) = cases pleines de flaque, bloquees par oubli -> flaque marchable
+for _k in [k for k in G if ((G[k] & 0x3ff) - 640) in (195, 224, 241)]:
+    _v = (G[_k] & 0x3ff) - 640
+    if _v not in PUDDLE: ENT.append(list(ENT[_v])); ATT.append(0); NM += 1; PUDDLE[_v] = NM - 1
+    G[_k] = 0x3000 | (640 + PUDDLE[_v]); print('centre de mare marchable', _k)
 # ------------------------------------------------------------------ dumps pour tourmalia_river_events.py
 json.dump({k: [list(c)] for k, c in {**DOORS, **PARKED}.items() if k != 'cave'}, open('/tmp/tourmalia_doors.json', 'w'))
 json.dump({k: list(v) for k, v in NPC.items()}, open('/tmp/tourmalia_npc.json', 'w'))
@@ -319,8 +324,9 @@ for o in d['object_events']:
     if o['graphics_id'] == 'OBJ_EVENT_GFX_CUT_TREE':
         o['x'], o['y'] = NPC['cuttree']
 d['warp_events'] = d['warp_events'][:14] + [
-    {'x': PASS[0], 'y': PASS[1], 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY', 'dest_warp_id': '15'},
-    {'x': HATCH[0], 'y': HATCH[1], 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY', 'dest_warp_id': '14'}]
+    {'x': PASS[0], 'y': PASS[1], 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY_GLASS_HALL', 'dest_warp_id': '3'},
+    {'x': HATCH[0], 'y': HATCH[1], 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY_GLASS_HALL', 'dest_warp_id': '0'}]
+d['warp_events'][7].update(dest_map='MAP_CERULEAN_CITY_GLASS_HALL', dest_warp_id='2')     # v28 : porte gauche du dome -> salle de verre
 json.dump(d, open(f, 'w'), indent=2); open(f, 'a').write('\n')
 # connexions inverses (cote routes voisines) : ecart oppose
 for mp, nb in (('Route9', 'MAP_ROUTE9'), ('Route4East', 'MAP_ROUTE4_EAST'), ('Route24', 'MAP_ROUTE24'), ('Route5', 'MAP_ROUTE5')):
