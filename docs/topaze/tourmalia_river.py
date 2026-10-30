@@ -126,63 +126,62 @@ def walk(n, lo, hi, s):
     for _ in range(n):
         s = min(hi, max(lo, s + rj.choice((-1, 0, 0, 0, 1)))); out.append(s)
     return out
-JL = walk(H, 0, 2, 1); JR = walk(H, 0, 2, 1); JT = walk(W, 0, 2, 0)
-_XR = {3: 7, 4: 9, 5: 11, 6: 12, 33: 14, 34: 16, 35: 16, 36: 15, 37: 12, 38: 9}
-for _y in range(7, 33): _XR[_y] = 11 + int(round(1.5 * math.sin(0.55 * _y + 0.6)))
-for _y in range(19, 23): _XR[_y] = 10
-_XL = {3: 6, 4: 5, 5: 4, 37: 4, 38: 6}
-def XR(y): return _XR[max(3, min(38, y))]
-def XL(y): return _XL.get(y, 3)
-def CLT(x): return 23 if x < 17 else (24 if x < 22 else (23 if x < 26 else (24 if x < 31 else (23 if x < 36 else 22))))      # case la plus haute de la falaise (2 cases de haut)
-def YL(x): return CLT(x) + 2                                                           # premiere ligne du bas-pays
-STAIRX = (27, 36)
+JR = walk(H, 0, 1, 0); JT = walk(W, 0, 1, 0)
+_XL = {2: 9, 3: 8, 4: 7, 36: 7, 37: 8, 38: 9}
+_XRt = {2: 11, 3: 13, 12: 15, 13: 17, 14: 20, 15: 23, 22: 25, 23: 22, 24: 19, 25: 17, 26: 17, 27: 16, 28: 16, 29: 17, 30: 18, 31: 18, 32: 18, 33: 18, 34: 17, 35: 15, 36: 13, 37: 11, 38: 9}
+for _y in range(4, 12): _XRt[_y] = 14 + (1 if _y in (6, 7) else 0)
+for _y in range(16, 22): _XRt[_y] = 26
+def XR(y): return _XRt[max(2, min(38, y))]
+def XL(y): return _XL.get(y, 6)
+def CLT(x): return 15 if x < 38 else 16                                        # case la plus haute de la falaise du plateau (2 cases de haut)
+def YL(x): return CLT(x) + 2
+STAIRX = (31, 38)
 CLIFF = set(); STAIRS = set()
 for x in range(0, 41):
     for y in (CLT(x), CLT(x) + 1):
-        if x > XR(y):
-            (STAIRS if x in STAIRX else CLIFF).add((x, y))
-for x in range(31, 41):                                                      # corniche B : terrasse de l'arene / quartier de la boutique
-    for y in (12, 13): (STAIRS if x == 32 else CLIFF).add((x, y))
-# plateau : clairieres reliees par des sentiers (le reste = foret dense)
-for (cx, cy, rx, ry, sd) in ((32, 5.2, 5.8, 4.4, 61), (40.4, 4.6, 3.6, 3.6, 62), (17.2, 4.6, 4.4, 3.6, 63), (17.5, 10.6, 3.8, 3.4, 64), (19.4, 17.2, 3.8, 3.4, 65),
-                             (35.4, 16.6, 4.6, 3.2, 66), (28.6, 13.8, 3.6, 3.4, 67), (14.2, 20.8, 3.4, 2.4, 68), (37, 9.6, 5.5, 1.8, 69)):
-    blob(cx, cy, rx, ry, sd)
+        if x > XR(y): (STAIRS if x in STAIRX else CLIFF).add((x, y))
+for x in range(30, 46):                                                         # corniche du bas-pays : terrasse sud-est
+    for y in (28, 29): (STAIRS if x == 36 else CLIFF).add((x, y))
+for x in range(0, 5):                                                           # corniches de la rive ouest
+    for y in (14, 15, 25, 26): (STAIRS if x == 2 else CLIFF).add((x, y))
+BEACH = set()
+# ---- plateau de la ville (haut droite) : bords irreguliers, 2 niveaux de sol
+for y in range(1, 16):
+    for x in range(XR(y) + 3, 46 - JR[y]):
+        if y >= 1 + JT[x] and y < CLT(x): OPEN.add((x, y))
 for x in (22, 23, 24):
-    for y in range(0, 17): OPEN.add((x, y))
-blob(23, 19, 4.6, 2.8, 11, way=True)                                          # place du monolithe
-thin([(23, 0), (23, 16)])                                                     # l'allee du Gardien (rival : voie droite)
-thin([(XR(20) + 1, 20), (21, 20)])                                            # route du pont de l'ouest
-thin([(18, 7), (21, 7)]); thin([(18, 13), (21, 13)])                          # sentiers des maisons du nord-ouest
-thin([(25, 9), (39, 9)]); thin([(39, 7), (39, 10)])                           # vers l'arene, la maison du nord-est
-thin([(27, 18), (36, 18)]); rect(36, 18, 40, 19); rect(42, 18, 47, 19)        # sortie est (Route 9) ; goulet en x=41 (y=19 seul)
-OPEN.add((41, 19)); WAY.add((41, 19))
-thin([(36, 19), (36, 21)]); thin([(32, 10), (32, 11)]); thin([(32, 14), (32, 15)])      # escaliers
-# rive ouest : sentier du terrier, entrees des ponts
-rect(0, 9, 2, 24, way=False); thin([(1, 14), (1, 19)]); rect(0, 19, 2, 22)
-rect(0, 27, 2, 36, way=False); rect(0, 30, 2, 31)
-# bas-pays : plage etroite le long de la riviere, prairie du couloir, clairieres des maisons du sud
-for y in range(25, 38):
+    for y in range(0, 15): OPEN.add((x, y))
+thin([(23, 0), (23, 4)])                                                      # allee du Gardien (rival : voie droite)
+thin([(31, 12), (31, 14)]); thin([(38, 13), (38, 15)])                         # escaliers du plateau
+# ---- bas-pays : plage le long de la baie, clairiere de la boutique, prairie du couloir
+for y in range(17, 38):
     for x in range(XR(y) + 1, XR(y) + 3):
-        if y >= YL(x): OPEN.add((x, y)); WAY.add((x, y)) if x <= XR(y) + 1 else None
-for (cx, cy, rx, ry, sd) in ((24.5, 27.6, 6.8, 2.5, 71), (17.6, 29.4, 4.4, 3.6, 72), (16.4, 32.4, 3.2, 2.6, 73), (38.6, 30.6, 6.4, 4.6, 74), (31.5, 27.5, 3.0, 1.8, 75)):
+        if y >= YL(x) and x < 30: OPEN.add((x, y)); WAY.add((x, y)); BEACH.add((x, y))
+for (cx, cy, rx, ry, sd) in ((34.5, 22.2, 6.2, 4.4, 81), (24.5, 27.6, 6.8, 2.5, 71), (30, 20.5, 3.4, 2.4, 82)):
     blob(cx, cy, rx, ry, sd)
+thin([(28, 18), (36, 18)]); rect(36, 18, 40, 19); rect(42, 18, 47, 19)        # sortie est (Route 9) ; goulet en x=41 (y=19 seul)
+OPEN.add((41, 19)); WAY.add((41, 19))
+thin([(31, 17), (31, 19)]); thin([(35, 19), (35, 21)])
 for y in range(26, 30):
     for x in range(21, 29): OPEN.add((x, y)); WAY.add((x, y)) if x in (23, 24, 25) else None
 for (x, y) in [(24, 30), (25, 30), (24, 31), (25, 31)] + [(x, y) for y in (32, 33, 34) for x in (23, 24, 25)] + [(24, 35)] + [(x, y) for y in range(36, 40) for x in range(22, 26)]:
     OPEN.add((x, y)); WAY.add((x, y))
-for c in ((27, 22), (27, 23), (27, 26), (27, 27), (36, 24), (36, 25)): OPEN.add(c); WAY.add(c)
-thin([(36, 24), (36, 34), (40, 34)])                                          # vers la maison du sud-est
-thin([(XR(31) + 1, 31), (17, 31)])                                            # plage -> maison du sud-ouest
-rect(13, 26, 21, 26, way=False); thin([(28, 27), (36, 27)]); thin([(27, 19), (27, 23)])
+thin([(30, 24), (30, 27)]); thin([(27, 27), (30, 27)])
+for c in ((36, 27), (36, 30), (36, 31)): OPEN.add(c); WAY.add(c)
+blob(39.2, 33.2, 6.4, 4.0, 74)                                                # terrasse sud-est (maison 6)
+thin([(36, 30), (36, 36), (40, 36)])
+# ---- rive ouest : 3 terrasses (grotte / sortie ouest / berge sud), escaliers, deux ponts
+rect(0, 9, 5, 13, way=False); rect(0, 16, 5, 24, way=False); rect(0, 27, 5, 37, way=False); rect(0, 19, 2, 22)
+thin([(3, 13), (3, 11), (5, 11)]); thin([(2, 13), (2, 14)]); thin([(2, 16), (2, 19)]); thin([(2, 22), (2, 24)]); thin([(2, 27), (2, 28), (5, 28)])
 # --- batiments d'Emeraude (Petalburg) : maisons (A 5x4, B 4x4), Centre, Boutique, Arene
 D = {}
 HA = (5, 2, 5, 4); HB = (9, 16, 4, 4)
 def house(key, kind, dx, dy): D[key] = chunk(*kind, dx, dy, key)
-house('th1', HA, 15, 2); house('th2', HB, 16, 8); house('th3', HA, 38, 2); house('th4', HB, 27, 12)       # th4 = maison "HOUSE2" du recoin du terrier
-house('th5', HB, 16, 27); house('th6', HA, 38, 29)
-D['center'] = chunk(19, 13, 4, 4, 18, 15, 'centre')
-D['mart'] = chunk(24, 10, 4, 3, 34, 15, 'boutique')
-D['gym'] = chunk(12, 4, 6, 5, 29, 3, 'arene')
+house('th1', HA, 17, 1); house('th2', HB, 26, 1); house('th3', HA, 37, 1); house('th4', HB, 42, 1)       # th4 = maison "HOUSE2" du recoin du terrier
+house('th5', HB, 34, 9); house('th6', HA, 38, 31)
+D['center'] = chunk(19, 13, 4, 4, 26, 9, 'centre')
+D['mart'] = chunk(24, 10, 4, 3, 34, 20, 'boutique')
+D['gym'] = chunk(12, 4, 6, 5, 30, 1, 'arene')
 print('portes detectees', D)
 for k, ds in D.items():
     for (x, y) in ds:
@@ -270,16 +269,39 @@ def art_block(im, bw, bh, x0, y0, name, gid=609):
         for i in range(bw):
             ARTPLACE[(x0 + i, y0 + j)] = (slice_tiles(im.crop((i * 16, j * 16, i * 16 + 16, j * 16 + 16))), gid)
             OPEN.discard((x0 + i, y0 + j))
+def pave_img(var):
+    im = newimg(16, 16); d = ImageDraw.Draw(im); d.rectangle((0, 0, 15, 15), fill=13)
+    d.line((0, 7, 15, 7), fill=14); d.line((0, 15, 15, 15), fill=14)
+    d.line((7, 0, 7, 6), fill=14); d.line((3 + 8 * var % 5, 8, 3 + 8 * var % 5, 14), fill=14); d.line((11 + 8 * var % 5 - 3, 8, 11 + 8 * var % 5 - 3, 14), fill=14)
+    for (x, y) in ((1, 1), (9, 2), (2, 9), (10, 10), (5, 12)): d.point((x, y), fill=6)
+    return im
+def palm_img(var):
+    im = newimg(16, 16); d = ImageDraw.Draw(im); shadow(d, 3, 13, 13, 16)
+    d.line([(8, 15), (8, 12), (9, 9), (8, 7)], fill=12, width=2); d.line((9, 10, 9, 14), fill=11)
+    tips = [(0, 8 + var), (1, 2), (6, 0), (11, 0), (15, 3), (15, 8 + var), (8, 12 - var)]
+    for t in tips: d.line((8, 6, t[0], t[1]), fill=2, width=4)
+    for t in tips: d.line((8, 6, t[0], t[1]), fill=3, width=3)
+    for t in tips: d.line((8, 6, t[0], t[1]), fill=4, width=1)
+    d.ellipse((6, 4, 10, 8), fill=3); d.point((7, 5), fill=5); d.point((10, 7), fill=12)
+    return im
+def rock_img(var):
+    im = newimg(16, 16); d = ImageDraw.Draw(im)
+    pts = [(2, 13), (3, 8), (6, 4), (11, 4), (14, 8), (13, 13), (7, 15)] if var == 0 else [(1, 12), (4, 6), (8, 3), (12, 6), (14, 11), (11, 14), (4, 14)]
+    d.polygon(pts, fill=13, outline=1)
+    d.polygon([(8, 15), (13, 13), (14, 9), (10, 9)], fill=14)
+    d.line((5, 8, 8, 5), fill=6); d.point((7, 6), fill=6)
+    d.line((1, 15, 4, 15), fill=6); d.line((11, 15, 15, 15), fill=6)
+    return im
 SM = [small(0), small(1), small(2)]
 
 # ------------------------------------------------------------------ EAU v19 : la grande riviere de l'ouest, deux ponts de planches, falaises
-WATERC = {(x, y) for y in range(3, 39) for x in range(XL(y), XR(y) + 1)}
-for (cx, cy, rx, ry) in ((42.2, 27.2, 3.0, 2.0),):
-    for y in range(24, 31):
-        for x in range(38, 46):
-            if ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 <= 1 and (x, y) in OPEN: WATERC.add((x, y))
+WATERC = {(x, y) for y in range(2, 39) for x in range(XL(y), XR(y) + 1)}
+for (cx, cy, rx, ry) in ((42.4, 24.8, 3.2, 2.2),):
+    for y in range(21, 29):
+        for x in range(38, 47):
+            if ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 <= 1 and (x, y) not in OCC and (x, y) not in CLIFF: WATERC.add((x, y)); OPEN.discard((x, y))
 WATERC = {c for c in WATERC if c not in OCC}
-BRIDGE_ROWS = [(20, 21), (30, 31)]
+BRIDGE_ROWS = [(10, 11), (27, 28)]
 ROPEC = set()
 BRIDGEC = set()
 for rows in BRIDGE_ROWS:
@@ -442,9 +464,29 @@ for (x, y) in list(G):
     G[c] = 0x400 | m
 for c in list(GROUND):
     if c not in OPEN: del GROUND[c]
+PALMS = []
+pr = random.Random(31)
+for c in sorted(G):
+    if c in OPEN or c in OCC or c in ARTPLACE or not (G[c] & 0x400): continue
+    if not any(((c[0] + a, c[1] + b) in BEACH) for a in (-1, 0, 1) for b in (-1, 0, 1)): continue
+    if any(max(abs(c[0] - q[0]), abs(c[1] - q[1])) < 2 for q in PALMS): continue
+    if pr.random() < 0.85: PALMS.append(c)
+PALM_IM = [palm_img(0), palm_img(1)]
+for i, c in enumerate(PALMS): ARTPLACE[c] = (slice_tiles(PALM_IM[(c[0] + c[1]) % 2]), GRASS)
+print('palmiers', len(PALMS))
+# rochers dans l'eau
+rr = random.Random(41); ROCKS = []
+for c in sorted(WATERONLY):
+    if not all(((c[0] + a, c[1] + b) in WATERC) for a in (-2, -1, 0, 1, 2) for b in (-2, -1, 0, 1, 2)): continue
+    if any(max(abs(c[0] - q[0]), abs(c[1] - q[1])) < 3 for q in ROCKS): continue
+    if rr.random() < 0.16: ROCKS.append(c)
+RK = []
+for i in range(2): SEC_ENT.append([('B', t) for t in WIMG_FULL] + [('A', t) for t in slice_tiles(rock_img(i))]); SEC_ATT.append(0); RK.append(len(SEC_ENT) - 1)
+for i, c in enumerate(ROCKS): G[c] = 0x400 | (640 + RK[i % 2])
+print('rochers', len(ROCKS))
 # ------------------------------------------------------------------ art : monolithe de tourmaline (place), terrier
 MONO = monolith(); GROT = grotto()
-art_block(MONO, 3, 3, 22, 18, 'monolithe', GRASS)
+art_block(MONO, 3, 3, 30, 9, 'monolithe', GRASS)
 art_block(GROT, 3, 3, 0, 10, 'grotte azuree', GRASS); GROT_DOOR = (1, 12); HOLE_CELLS = []       # entree de la Grotte Azuree (scellee tant que Red n'est pas battu)
 TREE_PAL = 9; TP = [(0, 0, 0)] * 16; OVH = {}; GT_CELLS = {}
 def add_tile_f(t):
@@ -458,7 +500,7 @@ for k, ds in D.items():
     for (x, y) in ds:
         for a in range(-2, 3):
             for b in range(-1, 3): KEEP.add((x + a, y + b))
-for c in [(24, 29), (25, 29), (24, 30), (25, 30), (24, 31), (25, 31), (26, 29), (27, 29), (24, 32), (24, 33), (24, 34), (24, 35), (41, 19), (40, 18), (40, 17), (40, 19), (42, 19), (1, 13), (1, 14), (0, 13), (2, 13)]: KEEP.add(c)
+for c in [(24, 29), (25, 29), (24, 30), (25, 30), (24, 31), (25, 31), (26, 29), (27, 29), (24, 32), (24, 33), (24, 34), (24, 35), (41, 19), (40, 18), (40, 17), (40, 19), (42, 19), (1, 13), (1, 14), (0, 13), (2, 13), (31, 14), (31, 17), (38, 15), (38, 18), (36, 27), (36, 30), (2, 13), (2, 16), (2, 24), (2, 27), (35, 18), (35, 19), (31, 12), (31, 13)]: KEEP.add(c)
 USED = set()
 _DOORS = {c for v in D.values() for c in v}
 _FL = {(23, 0)}; _q = collections.deque([(23, 0)])
@@ -491,9 +533,9 @@ NPC = {}
 NPC['policeman'] = (40, 18); NPC['policeman_block'] = (41, 19)
 NPC['slowbro'] = (26, 29); NPC['lass'] = (27, 29); NPC['slowbro_block'] = (24, 31); NPC['lass_block'] = (25, 31)
 NPC['guard'] = (1, 2); NPC['cuttree'] = (24, 35); NPC['rival'] = (22, 0)
-NPC['boy'] = pick((18, 21)); NPC['balding'] = pick((14, 21)); NPC['youngster'] = pick((38, 21)); NPC['woman'] = pick((1, 33))
-NPC['hidden'] = pick((20, 11), r=12); NPC['camper'] = pick((1, 16)); NPC['oldman'] = pick((27, 8))
-SIGNS = {'city': pick((1, 18)), 'gym': pick((33, 10)), 'bike': pick((20, 26)), 'tips': pick((21, 28), r=12)}
+NPC['boy'] = pick((20, 10)); NPC['balding'] = pick((30, 22)); NPC['youngster'] = pick((38, 22)); NPC['woman'] = pick((2, 32))
+NPC['hidden'] = pick((20, 11), r=12); NPC['camper'] = pick((2, 18)); NPC['oldman'] = pick((39, 10))
+SIGNS = {'city': pick((3, 18)), 'gym': pick((32, 8)), 'bike': pick((22, 28)), 'tips': pick((21, 27), r=12)}
 for k, c in SIGNS.items():
     claim(c[0], c[1], 1, 1, 'panneau: ' + k)
 for k in ('policeman', 'policeman_block', 'slowbro', 'lass', 'slowbro_block', 'lass_block', 'cuttree', 'rival'):
@@ -503,10 +545,11 @@ NEAR = set()
 for c in list(USED) + list(NPC.values()) + list(SIGNS.values()) + list(KEEP):
     for a_ in (-1, 0, 1):
         for b_ in (-1, 0, 1): NEAR.add((c[0] + a_, c[1] + b_))
+PAVE0 = {(x, y) for y in range(5, 8) for x in range(0, W)} | {(x, y) for y in range(8, 15) for x in range(23, 35)}
 DECOR = []
 dr = random.Random(5)
 for c in sorted(OPEN):
-    if c in OCC or c in WAY or c in NEAR or c in ARTPLACE or c not in _FL or c in BANK: continue
+    if c in OCC or c in WAY or c in PAVE0 or c in NEAR or c in ARTPLACE or c not in _FL or c in BANK: continue
     n8 = sum(((c[0] + a_, c[1] + b_) in OPEN) for a_ in (-1, 0, 1) for b_ in (-1, 0, 1) if (a_, b_) != (0, 0))
     if n8 < 8: continue
     if any(max(abs(c[0] - q[0]), abs(c[1] - q[1])) < 3 for q in DECOR): continue
@@ -523,10 +566,12 @@ for c, (t4, gid) in sorted(GT_CELLS.items()):
     G[c] = (0x3000 if c == D['gym'][0] else 0x400) | mid
 for k, c in SIGNS.items(): G[c] = remap(0x400 | 3)
 # ---- sentiers : sable d'Emeraude (autotuile, comme la Route 4 Est) ; prairies : fleurs
+PAVEC = {(x, y) for y in range(5, 8) for x in range(0, W)} | {(x, y) for y in range(8, 15) for x in range(23, 35)}
+PAVEC = {c for c in PAVEC if c in OPEN and c not in OCC and c not in ARTPLACE and c not in WATERONLY and c not in BRIDGEC and not (G[c] & 0xc00)}
 PATHC = {c for c in WAY if c in OPEN and c not in OCC and c not in ARTPLACE and c not in WATERONLY and c not in BRIDGEC and not (G[c] & 0xc00)}
 # mise en forme du sable : l'autotuile d'Emeraude n'a ni piece de 1 case de large ni angle rentrant -> on epaissit / comble
-RING = {(x, y) for x in range(21, 26) for y in range(17, 22)} - {(x, y) for x in range(22, 25) for y in range(18, 21)}     # rond-point : pelouse autour du monolithe
-PATHC -= RING
+RING = set()     # rond-point : pelouse autour du monolithe
+PATHC -= RING; PATHC -= PAVEC
 def _free(c):
     return (c not in RING and c in OPEN and c not in OCC and c not in ARTPLACE and c not in WATERONLY and c not in BRIDGEC and not (G[c] & 0xc00) and c not in HOLE_CELLS and 0 <= c[0] < W and 0 <= c[1] < H)
 for _ in range(3):
@@ -544,7 +589,7 @@ for _ in range(3):
     if not add: break
     PATHC |= add
 def path_id(x, y):
-    f = lambda c: (c in PATHC) or c[0] < 0 or c[0] >= W or c[1] < 0 or c[1] >= H or c in BRIDGEC or c in WATERONLY or c in CLIFF or (c in OCC and not (G.get(c, 0) & 0xc00) and c not in OPEN)
+    f = lambda c: (c in PATHC) or c[0] < 0 or c[0] >= W or c[1] < 0 or c[1] >= H or c in BRIDGEC or c in WATERONLY or c in CLIFF or c in PAVEC or (c in OCC and not (G.get(c, 0) & 0xc00) and c not in OPEN)
     N = f((x, y - 1)); S = f((x, y + 1)); Wn = f((x - 1, y)); E_ = f((x + 1, y))
     if N and S and Wn and E_: return 289
     if not N and not Wn and S and E_: return 280
@@ -559,9 +604,15 @@ def path_id(x, y):
 for (x, y) in PATHC:
     if (x, y) in HOLE_CELLS: continue
     G[(x, y)] = remap(0x3000 | path_id(x, y))
+PVC = {}
+for c in sorted(PAVEC):
+    k = (c[0] + c[1]) % 2
+    if k not in PVC:
+        SEC_ENT.append([('A', t) for t in slice_tiles(pave_img(k))] + list(EMPTY_TOP)); SEC_ATT.append(0); PVC[k] = len(SEC_ENT) - 1
+    G[c] = 0x3000 | (640 + PVC[k])
 for (x, y) in sorted(OPEN):
     c = (x, y)
-    if c in PATHC or c in OCC or c in ARTPLACE or c in KEEP or c in WATERONLY or c in BRIDGEC or (G[c] & 0xc00): continue
+    if c in PATHC or c in PAVEC or c in OCC or c in ARTPLACE or c in KEEP or c in WATERONLY or c in BRIDGEC or (G[c] & 0xc00): continue
     if GROUND.get(c) == GRASS and rnd.random() < 0.10: G[c] = remap(0x3000 | 4)
 
 def raw_blocked(c): return bool(G[c] & 0xc00) or c in WATERONLY
