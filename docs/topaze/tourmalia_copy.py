@@ -14,6 +14,13 @@ X0 = 22                                                    # coupe de la zone ou
 grid = [r[X0:] for r in grid]
 H, W = len(grid), len(grid[0]); NM = len(mts)
 S = lambda c: (c[0] - X0, c[1])
+# retouches demandees par Basil : cabane coupee en haut a gauche retiree, ponts de corde (decoratifs, ne menent nulle part) et pont de rondins sans issue retires
+for _y in range(1, 10):
+    for _x in range(0, 5): grid[_y][_x] = 1
+for _y in range(H):
+    for _x in range(W):
+        if grid[_y][_x] in (58, 59, 60, 61, 82, 83, 84): grid[_y][_x] = 1
+for _x, _y in ((42, 9), (43, 9), (42, 10), (43, 10)): grid[_y][_x] = 6
 q5 = lambda p: (int(p[0]) >> 3, int(p[1]) >> 3, int(p[2]) >> 3)
 
 # ------------------------------------------------------------------ tuiles + palettes
@@ -193,6 +200,11 @@ for k, c in NPC.items(): assert c in ALL or k in ('cuttree', 'policeman_block', 
 # forces de passage
 def flood_wo(cells, start=HUB):
     return reach_from(start, ban=set(cells))
+# depuis la sortie OUEST (arrivee de la Route 4 Est), avant billet/badge : tout le coeur de la ville doit rester accessible
+_ban = {NPC['cuttree'], NPC['slowbro_block'], NPC['lass_block']} | {(x, 12) for x in (48, 49, 50)}
+_fw = flood_wo(_ban, EXITC['W'])
+for _k, _c in list(FRONT.items()) + [('center', S((37, 26)))]: assert _c in _fw, ('inaccessible depuis l ouest', _k, _c)
+for _k in ('N', 'E', 'S'): assert EXITC[_k] not in _fw or _k == 'N' and False or EXITC[_k] not in _fw, ('sortie ouverte sans condition', _k)
 assert EXITC['E'] not in flood_wo({NPC['cuttree']}), 'est sans arbre ?!'
 assert EXITC['S'] not in flood_wo({NPC['slowbro_block']}), 'sud sans barrage'
 print('portes/sorties/PNJ OK ; cases accessibles', len(ALL))
