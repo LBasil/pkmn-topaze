@@ -115,7 +115,10 @@ for _y in range(4, 15):
 for _y in range(15, 23):
     for _x in range(37, 41):
         if grid[_y][_x] in WALK and (_x, _y) not in WALKC: grid[_y][_x] = 1
-CARVED |= set(RIV)
+for _x in range(0, 3):                                   # arbres flottant sur l'eau au nord de l'ile SO -> eau / rivage
+    grid[32][_x] = 104; grid[33][_x] = grid[33][3]
+FORCEPATH = [(26, 31), (27, 31), (27, 32), (27, 33), (28, 33), (29, 33)]   # approche lisible de la cabane au bord de l'eau (th6)
+CARVED |= set(RIV) | set(FORCEPATH)
 STUBS = [S(c) for c in ((83, 32), (42, 45), (43, 45), (44, 45), (81, 0))]      # largeur des sorties = celle des anciennes sorties (retour depuis les routes voisines)
 CARVED |= set(STUBS)
 HUB = S((37, 26))
@@ -159,7 +162,8 @@ G = {}
 for y in range(H):
     for x in range(W):
         c = (x, y); v = grid[y][x]
-        if c in CARVED and c not in WALKC and v not in WALK: v = (9, 10, 10, 18)[(c[0] * 7 + c[1] * 3) % 4] if c in set(EPATH) else 98        # sentier : herbe claire (est) ou pave (le reste)
+        if c in FORCEPATH: v = 98
+        elif c in CARVED and c not in WALKC and v not in WALK: v = 98 if (c in FORCEPATH or c not in set(EPATH) | set(RIV)) else (9, 10, 10, 18)[(c[0] * 7 + c[1] * 3) % 4]        # sentier : herbe claire (est) ou pave (le reste)
         if c in BUILD and c not in WALKC: G[c] = 0x400 | (640 + v)
         elif walk(c): G[c] = 0x3000 | (640 + v)
         elif v in WATER: G[c] = 0x1000 | (640 + v)
@@ -176,6 +180,18 @@ def reach_from(s, ban=()):
             if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen and n not in ban and n not in DOORSET and passable(n) and not (G[n] & 0x1000 and not G[n] & 0x2000): seen.add(n); qq.append(n)
     return seen
 ALL = reach_from(HUB)
+# v25d : poches marchables inaccessibles (echelles/pavés orphelins) -> foret si >= 2 cases, sinon simple collision
+_un = {c for c in G if passable(c) and c not in ALL and (G[c] & 0x2000) and c not in DOORSET}
+_seen = set()
+for _c in sorted(_un):
+    if _c in _seen: continue
+    _comp = {_c}; _qq = collections.deque([_c]); _seen.add(_c)
+    while _qq:
+        _a = _qq.popleft()
+        for _d in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            _n = (_a[0] + _d[0], _a[1] + _d[1])
+            if _n in _un and _n not in _seen: _seen.add(_n); _comp.add(_n); _qq.append(_n)
+    for _k in _comp: G[_k] = 0x400 | (640 + (1 if len(_comp) >= 2 else grid[_k[1]][_k[0]]))
 NPCCELLS = set()
 USED = set(DOORS.values()) | set(SIGNC.values()) | set(FRONT.values())
 def near(t, r=4, nb=3):
