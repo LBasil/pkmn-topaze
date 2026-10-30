@@ -66,7 +66,7 @@ DOORS = {'center': (37, 25), 'mart': (46, 29), 'gym': (55, 20), 'cave': (69, 24)
          'th3': (42, 8), 'th4': (47, 14), 'th5': (35, 16), 'th6': (53, 32)}
 DOORS = {k: S(v) for k, v in DOORS.items()}
 PARKED = {'th1': (0, 0), 'th2': (0, 1)}                  # cabanes 1 et 2 coupees : portes garees dans la foret
-SIGNC = {'city': S((40, 39)), 'gym': S((51, 19)), 'bike': S((66, 29)), 'tips': S((37, 16))}
+SIGNC = {'city': S((40, 39)), 'gym': S((51, 19)), 'bike': S((66, 29)), 'tips': (36, 22)}
 BUILD |= set(SIGNC.values()); BUILD |= {S(c) for c in ((36, 16), (70, 24))}
 DECK = {53, 78, 62}
 WALKC = {}                                                              # cellule -> 'W' marchable force
@@ -117,6 +117,7 @@ for _y in range(15, 23):
         if grid[_y][_x] in WALK and (_x, _y) not in WALKC: grid[_y][_x] = 1
 for _x in range(0, 3):                                   # arbres flottant sur l'eau au nord de l'ile SO -> eau / rivage
     grid[32][_x] = 104; grid[33][_x] = grid[33][3]
+grid[22][36] = 72                                        # panneau a l'entree du sentier du nord (derriere l'Arene)
 FORCEPATH = [(26, 31), (27, 31), (27, 32), (27, 33), (28, 33), (29, 33)]   # approche lisible de la cabane au bord de l'eau (th6)
 CARVED |= set(RIV) | set(FORCEPATH)
 STUBS = [S(c) for c in ((83, 32), (42, 45), (43, 45), (44, 45), (81, 0))]      # largeur des sorties = celle des anciennes sorties (retour depuis les routes voisines)

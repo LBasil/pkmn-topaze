@@ -94,11 +94,9 @@ CeruleanCity_Text_CitySign::
     .string "NORTH: ROUTE 24 (the hillside)$"
 
 CeruleanCity_Text_TrainerTipsHeldItems::
-    .string "TRAINER TIPS\p"
-    .string "A POKéMON can be made to hold\n"
-    .string "an item.\p"
-    .string "Some items can even be used by\n"
-    .string "the holding POKéMON in battle.$"
+    .string "ROUTE 24 - NORTH\p"
+    .string "Follow the ridge path behind\n"
+    .string "the GYM, then climb the hill.$"
 
 CeruleanCity_Text_BikeShopSign::
     .string "Grass and caves handled easily!\n"
