@@ -38,7 +38,7 @@ def paint(c, ty, keep=1.0):
     h, s, v = hsv(c); th, ts, tv, mode = TY[ty]
     if ty in ('STEEL', 'NORMAL', 'DARK'):
         ns = s * 0.25 + ts * 0.75 if s > .12 else ts * .6; return rgb(th, ns, v * tv if ty == 'DARK' else v)
-    ns = max(s * .7 + ts * .3, ts * .65) if s > .18 else ts * .55
+    ns = max(s * .5 + ts * .5, ts * .8) if s > .18 else ts * .75
     nv = min(1.0, v * tv) if v > .25 else v
     return rgb(th, ns, nv)
 def counts(d):
@@ -66,29 +66,37 @@ def recolor(name, o, n, pal, cnt):
         ents += [(i, hsv(pal[i]), W(i)) for i in range(1, 16) if i not in [e[0] for e in ents] and hsv(pal[i])[1] < .2 and .3 < hsv(pal[i])[2] < .97 and W(i) > .02]
         for i, c, w in ents: out[i] = paint(pal[i], body_t); used.add(i)
     for A_ in acc_t:
-        done = False
+        mode = TY[A_][3]; pick = []
         for f in fam:                # accent = famille de teinte secondaire assez presente
             if f is fam[0]: continue
             if f['w'] > .015 and all(i not in used for i, _, _ in f['m']):
-                for i, c, w in f['m']: out[i] = paint(pal[i], A_); used.add(i)
-                done = True; break
-        if done: continue
-        prot = {i for i, _, _ in sorted([(i, 0, W(i)) for i in range(1, 16) if hsv(pal[i])[2] > .26], key=lambda x: -x[2])[:2]}
-        cand = [(i, hsv(pal[i]), W(i)) for i in range(1, 16) if i not in used and i not in prot and hsv(pal[i])[2] > .26 and W(i) > .008]
-        mode = TY[A_][3]; cand.sort(key=lambda x: x[1][2])
-        if not cand: cand = [(i, hsv(pal[i]), W(i)) for i in range(1, 16) if i not in used and hsv(pal[i])[2] > .26 and W(i) > .008]; cand.sort(key=lambda x: x[1][2])
-        if not cand: continue
-        m = len(cand); third = max(1, round(m / 2.5))
-        pick = cand[:third] if mode == 'dark' else cand[-third:] if mode == 'light' else cand[max(0, (m - third) // 2):(m - third) // 2 + third]
+                pick = [(i, c, w) for i, c, w in f['m']]; break
+        if not pick:
+            prot = {i for i, _, _ in sorted([(i, 0, W(i)) for i in range(1, 16) if hsv(pal[i])[2] > .26], key=lambda x: -x[2])[:2]}
+            cand = [(i, hsv(pal[i]), W(i)) for i in range(1, 16) if i not in used and i not in prot and hsv(pal[i])[2] > .26 and W(i) > .008]
+            cand.sort(key=lambda x: x[1][2])
+            if not cand: cand = [(i, hsv(pal[i]), W(i)) for i in range(1, 16) if i not in used and hsv(pal[i])[2] > .26 and W(i) > .008]; cand.sort(key=lambda x: x[1][2])
+            if not cand: continue
+            m = len(cand); third = max(1, round(m / 2.5))
+            pick = cand[:third] if mode == 'dark' else cand[-third:] if mode == 'light' else cand[max(0, (m - third) // 2):(m - third) // 2 + third]
         for i, c, w in pick: out[i] = paint(pal[i], A_); used.add(i)
-        cov = sum(W(i) for i, _, _ in pick)
-        if cov < .12:      # pas assez visible : on elargit par ordre de preference du type, protegees comprises
-            pool = [(i, hsv(pal[i]), W(i)) for i in range(1, 16) if i not in used and hsv(pal[i])[2] > .22 and W(i) > .004]
+        acc = [i for i, _, _ in pick]
+        dist = lambda i: sum((x - y) ** 2 for x, y in zip(out[i], pal[i])) ** .5
+        cov = lambda: sum(W(i) for i in acc if dist(i) > 48)      # couverture VISIBLE (la couleur a vraiment change)
+        if cov() < .30:
+            keptc = [HUEC[t] for t in nd if t in o and t not in ('NORMAL', 'STEEL', 'DARK', 'GHOST')]
+            keepcol = {i for i in range(1, 16) if hsv(pal[i])[1] > .3 and hsv(pal[i])[2] > .3 and W(i) > .008 and any(hd(hsv(pal[i])[0], h) < 30 for h in keptc)}
+            bodyp = keepcol | {i for i, _, _ in sorted([(i, 0, W(i)) for i in range(1, 16) if hsv(pal[i])[2] > .26 and hsv(pal[i])[1] > .2], key=lambda x: -x[2])[:2]} if not body_t else set()
+            pool = [(i, hsv(pal[i]), W(i)) for i in range(1, 16) if i not in used and i not in bodyp and hsv(pal[i])[2] > .22 and W(i) > .003]
             pool.sort(key=lambda x: x[1][2], reverse=(mode == 'light'))
-            if mode == 'mid': pool.sort(key=lambda x: -x[2])
+            if mode == 'mid': pool.sort(key=lambda x: x[2])
             for i, c, w in pool:
-                if cov >= .17: break
-                out[i] = paint(pal[i], A_); used.add(i); cov += w
+                if cov() >= .40: break
+                out[i] = paint(pal[i], A_); used.add(i); acc.append(i)
+            if cov() < .18:      # vraiment rien de visible : on entame le corps, par ordre de poids croissant
+                for i in sorted(bodyp, key=lambda i: W(i)):
+                    if i in used or cov() >= .25: continue
+                    out[i] = paint(pal[i], A_); used.add(i); acc.append(i)
     return out
 def main():
     base = R + '/graphics/pokemon'; cache = os.path.dirname(os.path.abspath(__file__)) + '/orig_pal'
