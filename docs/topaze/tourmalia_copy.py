@@ -246,6 +246,19 @@ print('portes/sorties/PNJ OK ; cases accessibles', len(ALL))
 # l'arbre du sud bloque la case (41,42) : s'assurer qu'elle est marchable
 assert passable(SOUTH_TREE), 'case arbre sud bloquee'
 NPC['cuttree_s'] = SOUTH_TREE
+# v26b : flaques isolees (petits etangs sans lien avec la riviere) = decor bloque, pas de Surf possible dedans
+_w = {c for c in G if (G[c] & 0x1000) and not (G[c] & 0x2000) and not (G[c] & 0x400)}; _ws = set()
+for _c in sorted(_w):
+    if _c in _ws: continue
+    _cp = {_c}; _q = collections.deque([_c]); _ws.add(_c)
+    while _q:
+        _a = _q.popleft()
+        for _d in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+            _n = (_a[0] + _d[0], _a[1] + _d[1])
+            if _n in _w and _n not in _ws: _ws.add(_n); _cp.add(_n); _q.append(_n)
+    if len(_cp) < 40 and not any(k[0] in (0, W - 1) or k[1] in (0, H - 1) for k in _cp):
+        print('flaque bloquee', len(_cp), min(_cp))
+        for _k in _cp: G[_k] |= 0x400
 # ------------------------------------------------------------------ dumps pour tourmalia_river_events.py
 json.dump({k: [list(c)] for k, c in {**DOORS, **PARKED}.items() if k != 'cave'}, open('/tmp/tourmalia_doors.json', 'w'))
 json.dump({k: list(v) for k, v in NPC.items()}, open('/tmp/tourmalia_npc.json', 'w'))
