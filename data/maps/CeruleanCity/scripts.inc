@@ -348,7 +348,7 @@ CeruleanCity_Text_CellWitnessDone::
 	.string "A pity. They paid for every lock"
 	.string "in cash. Who has that much cash?$"
 
-@ Topaze: the hollow trunk (CERULEAN CAVE) stays sealed until RED (Sevault summit) is beaten
+@ Topaze: the crystal grotto (CERULEAN CAVE) stays sealed until RED (Sevault summit) is beaten
 CeruleanCity_EventScript_CaveSealed::
 	lockall
 	goto_if_defeated TRAINER_BIKER_1, CeruleanCity_EventScript_CaveOpen

@@ -5,12 +5,12 @@ CeruleanCity_House2_Text_RocketsStoleTMForDig::
     .string "you look like you'll need it!$"
 
 CeruleanCity_House2_Text_TeachDiglettDigWithoutTM::
-    .string "The tree-houses sway a little in\n"
+    .string "The bridges creak a little in\n"
     .string "the wind. You get used to it.$"
 
 CeruleanCity_House2_Text_TeamRocketTryingToDigIntoNoGood::
-    .string "I love living up in the trees.\n"
-    .string "The forest sings at night.$"
+    .string "I love living by the river.\n"
+    .string "The water sings at night.$"
 
 
 CeruleanCity_House2_Text_MakeRoomForTM28::
