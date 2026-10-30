@@ -50,6 +50,7 @@ for m in mts:
             t, pi = tile_of(m[ty * 8:ty * 8 + 8, tx * 8:tx * 8 + 8]); bot.append(t | (pi << 12))
     ENT.append(bot + [0, 0, 0, 0])
 NT = len(TILE_LIST)
+HATCH_ID = NM; ENT.append(list(ENT[244])); NM += 1                    # metatuile 'trappe' = aspect de la porte sombre, comportement normal (pas d'animation de porte)
 assert NT <= 640 + 384, ('trop de tuiles', NT)
 
 # ------------------------------------------------------------------ classification a la main
@@ -66,7 +67,7 @@ DOORS = {'center': (37, 25), 'mart': (46, 29), 'gym': (55, 20), 'cave': (69, 24)
          'th3': (42, 8), 'th4': (47, 14), 'th5': (35, 16), 'th6': (53, 32)}
 DOORS = {k: S(v) for k, v in DOORS.items()}
 PARKED = {'th1': (0, 0), 'th2': (0, 1)}                  # cabanes 1 et 2 coupees : portes garees dans la foret
-SIGNC = {'city': S((40, 39)), 'gym': S((51, 19)), 'bike': S((66, 29)), 'tips': (36, 22)}
+SIGNC = {'city': S((40, 39)), 'gym': S((51, 19)), 'bike': S((66, 29)), 'tips': S((37, 16))}
 BUILD |= set(SIGNC.values()); BUILD |= {S(c) for c in ((36, 16), (70, 24))}
 DECK = {53, 78, 62}
 WALKC = {}                                                              # cellule -> 'W' marchable force
@@ -86,6 +87,12 @@ def cost(c):
     if walk(c): return 1
     if c in BUILD: return 500
     return 60 if grid[c[1]][c[0]] in WATER else 6
+# v26 : passage du NORD par le gros batiment : porte droite du dome (48,24) <-> trappe au pied de la colline (48,17) (liaison virtuelle pour les calculs d'accessibilite)
+grid[17][48] = HATCH_ID
+PASS = (48, 24); HATCH = (48, 17); PASSFRONT = (48, 25)
+LINK = {PASSFRONT: HATCH, HATCH: PASSFRONT}
+WALKC[PASS] = 1; WALKC[HATCH] = 1; DOORSET.add(PASS)
+def NB(c): return [(c[0] + dx, c[1] + dy) for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))] + ([LINK[c]] if c in LINK else [])
 def dij(srcs, targets):
     dist = {s: 0 for s in srcs}; prev = {}; pq = [(0, s) for s in srcs]; heapq.heapify(pq)
     while pq:
@@ -95,8 +102,7 @@ def dij(srcs, targets):
             p = [c]
             while p[-1] in prev: p.append(prev[p[-1]])
             return p
-        for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
-            n = (c[0] + dx, c[1] + dy)
+        for n in NB(c):
             if 0 <= n[0] < W and 0 <= n[1] < H:
                 nd = dd + cost(n)
                 if nd < dist.get(n, 1e9): dist[n] = nd; prev[n] = c; heapq.heappush(pq, (nd, n))
@@ -104,8 +110,7 @@ def comp(s):
     seen = {s}; qq = collections.deque([s])
     while qq:
         c = qq.popleft()
-        for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
-            n = (c[0] + dx, c[1] + dy)
+        for n in NB(c):
             if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen and walk(n) and n not in DOORSET: seen.add(n); qq.append(n)
     return seen
 # v25b : poche inutile au nord de l'Arene (sentiers/echelle/etangs sans issue) -> vraie foret dense uniforme (arbres entiers, sans bouts de tronc ni crêtes), bloquee
@@ -117,13 +122,12 @@ for _y in range(15, 23):
         if grid[_y][_x] in WALK and (_x, _y) not in WALKC: grid[_y][_x] = 1
 for _x in range(0, 3):                                   # arbres flottant sur l'eau au nord de l'ile SO -> eau / rivage
     grid[32][_x] = 104; grid[33][_x] = grid[33][3]
-grid[22][36] = 72                                        # panneau a l'entree du sentier du nord (derriere l'Arene)
 FORCEPATH = [(26, 31), (27, 31), (27, 32), (27, 33), (28, 33), (29, 33)]   # approche lisible de la cabane au bord de l'eau (th6)
 CARVED |= set(RIV) | set(FORCEPATH)
 STUBS = [S(c) for c in ((83, 32), (42, 45), (43, 45), (44, 45), (81, 0))]      # largeur des sorties = celle des anciennes sorties (retour depuis les routes voisines)
 CARVED |= set(STUBS)
 HUB = S((37, 26))
-FRONT = {k: S(v) for k, v in {'mart': (46, 30), 'gym': (55, 21), 'cave': (69, 26), 'th3': (42, 9), 'th4': (47, 15), 'th5': (35, 17), 'th6': (53, 33)}.items()}
+FRONT = {k: S(v) for k, v in {'mart': (46, 30), 'gym': (55, 21), 'cave': (69, 26), 'th3': (42, 9), 'th4': (47, 15), 'th5': (35, 17), 'th6': (53, 33)}.items()}; FRONT['pass'] = PASSFRONT; FRONT['hatch'] = (48, 16)
 EXITC = {'N': S((82, 0)), 'E': S((83, 31)), 'S': S((41, 45)), 'riv': S((71, 6))}
 # sortie ouest : bord gauche le moins couteux a relier ; 4 cases de large (Route 4 Est)
 _bw = (0, 36)
@@ -176,8 +180,7 @@ def reach_from(s, ban=()):
     seen = {s}; qq = collections.deque([s])
     while qq:
         c = qq.popleft()
-        for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
-            n = (c[0] + dx, c[1] + dy)
+        for n in NB(c):
             if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen and n not in ban and n not in DOORSET and passable(n) and not (G[n] & 0x1000 and not G[n] & 0x2000): seen.add(n); qq.append(n)
     return seen
 ALL = reach_from(HUB)
@@ -294,6 +297,9 @@ for o in d['object_events']:
     if 'WANDER' in o['movement_type']: o['movement_type'] = 'MOVEMENT_TYPE_FACE_DOWN'; o['movement_range_x'] = o['movement_range_y'] = 0      # v25 : plus de PNJ errants (ils bloquaient les passages etroits)
     if o['graphics_id'] == 'OBJ_EVENT_GFX_CUT_TREE':
         o['x'], o['y'] = NPC['cuttree']
+d['warp_events'] = d['warp_events'][:14] + [
+    {'x': PASS[0], 'y': PASS[1], 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY', 'dest_warp_id': '15'},
+    {'x': HATCH[0], 'y': HATCH[1], 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY', 'dest_warp_id': '14'}]
 json.dump(d, open(f, 'w'), indent=2); open(f, 'a').write('\n')
 # connexions inverses (cote routes voisines) : ecart oppose
 for mp, nb in (('Route9', 'MAP_ROUTE9'), ('Route4East', 'MAP_ROUTE4_EAST'), ('Route24', 'MAP_ROUTE24'), ('Route5', 'MAP_ROUTE5')):

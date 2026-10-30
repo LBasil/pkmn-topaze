@@ -91,16 +91,21 @@ CeruleanCity_Text_CitySign::
     .string "WEST:  ROUTE 4 (this road)\n"
     .string "SOUTH: ROUTE 5 (ladder below)\p"
     .string "EAST:  ROUTE 9 (past the dome)\n"
-    .string "NORTH: ROUTE 24 (the hillside)$"
+    .string "NORTH: ROUTE 24 (glass hall)$"
 
 CeruleanCity_Text_TrainerTipsHeldItems::
-    .string "ROUTE 24 - NORTH\p"
-    .string "Follow the ridge path behind\n"
-    .string "the GYM, then climb the hill.$"
+    .string "TRAINER TIPS\p"
+    .string "A POKéMON can be made to hold\n"
+    .string "an item.\p"
+    .string "Some items can even be used by\n"
+    .string "the holding POKéMON in battle.$"
 
 CeruleanCity_Text_BikeShopSign::
-    .string "Grass and caves handled easily!\n"
-    .string "BIKE SHOP$"
+    .string "GLASS HALL\n"
+    .string "RIGHT DOOR: NORTH PASSAGE\n"
+    .string "(ROUTE 24)\p"
+    .string "LEFT DOOR: CERULEAN CAVE\n"
+    .string "(sealed)$"
 
 CeruleanCity_Text_GymSign::
     .string "TOURMALIA POKéMON GYM\n"
