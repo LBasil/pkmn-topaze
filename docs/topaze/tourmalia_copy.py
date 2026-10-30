@@ -108,10 +108,13 @@ def comp(s):
             n = (c[0] + dx, c[1] + dy)
             if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen and walk(n) and n not in DOORSET: seen.add(n); qq.append(n)
     return seen
-# v25b : poche inutile au nord de l'Arene (sentiers/echelle/etangs sans issue) -> foret bloquee, demande de Basil
-for _y in range(4, 23):
-    for _x in range(29, 46):
-        if (_y <= 14 or 37 <= _x <= 40) and (_x, _y) not in WALKC and grid[_y][_x] in WALK: grid[_y][_x] = 1
+# v25b : poche inutile au nord de l'Arene (sentiers/echelle/etangs sans issue) -> vraie foret dense uniforme (arbres entiers, sans bouts de tronc ni crêtes), bloquee
+for _y in range(4, 15):
+    for _x in range(29, 45):
+        if (_x, _y) not in WALKC: grid[_y][_x] = 1
+for _y in range(15, 23):
+    for _x in range(37, 41):
+        if grid[_y][_x] in WALK and (_x, _y) not in WALKC: grid[_y][_x] = 1
 CARVED |= set(RIV)
 STUBS = [S(c) for c in ((83, 32), (42, 45), (43, 45), (44, 45), (81, 0))]      # largeur des sorties = celle des anciennes sorties (retour depuis les routes voisines)
 CARVED |= set(STUBS)
@@ -156,7 +159,7 @@ G = {}
 for y in range(H):
     for x in range(W):
         c = (x, y); v = grid[y][x]
-        if c in CARVED and c not in WALKC and v not in WALK: v = (9, 10, 10, 18)[(c[0] * 7 + c[1] * 3) % 4]        # sentier d'herbe claire
+        if c in CARVED and c not in WALKC and v not in WALK: v = (9, 10, 10, 18)[(c[0] * 7 + c[1] * 3) % 4] if c in set(EPATH) else 98        # sentier : herbe claire (est) ou pave (le reste)
         if c in BUILD and c not in WALKC: G[c] = 0x400 | (640 + v)
         elif walk(c): G[c] = 0x3000 | (640 + v)
         elif v in WATER: G[c] = 0x1000 | (640 + v)
