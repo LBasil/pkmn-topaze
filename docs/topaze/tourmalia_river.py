@@ -133,55 +133,53 @@ for _y in range(19, 23): _XR[_y] = 10
 _XL = {3: 6, 4: 5, 5: 4, 37: 4, 38: 6}
 def XR(y): return _XR[max(3, min(38, y))]
 def XL(y): return _XL.get(y, 3)
-def CLT(x): return 23 if x < 24 else (24 if x < 31 else (23 if x < 37 else 22))      # case la plus haute de la falaise (2 cases de haut)
+def CLT(x): return 23 if x < 17 else (24 if x < 22 else (23 if x < 26 else (24 if x < 31 else (23 if x < 36 else 22))))      # case la plus haute de la falaise (2 cases de haut)
 def YL(x): return CLT(x) + 2                                                           # premiere ligne du bas-pays
-STAIRX = (27, 35)
+STAIRX = (27, 36)
 CLIFF = set(); STAIRS = set()
 for x in range(0, 41):
     for y in (CLT(x), CLT(x) + 1):
         if x > XR(y):
             (STAIRS if x in STAIRX else CLIFF).add((x, y))
-# plateau de la ville (contours irreguliers) ; le goulet de l'est reste en x=41 (y=19)
-for y in range(1, 24):
-    x0 = XR(y) + 3 + JL[y]
-    if 19 <= y <= 22: x0 = XR(y) + 1
-    x1 = 42 - JR[y] if y <= 12 else 40
-    for x in range(x0, x1 + 1):
-        if y >= 2 + JT[x] and y < CLT(x): OPEN.add((x, y))
+for x in range(31, 41):                                                      # corniche B : terrasse de l'arene / quartier de la boutique
+    for y in (12, 13): (STAIRS if x == 32 else CLIFF).add((x, y))
+# plateau : clairieres reliees par des sentiers (le reste = foret dense)
+for (cx, cy, rx, ry, sd) in ((32, 5.2, 5.8, 4.4, 61), (40.4, 4.6, 3.6, 3.6, 62), (17.2, 4.6, 4.4, 3.6, 63), (17.5, 10.6, 3.8, 3.4, 64), (19.4, 17.2, 3.8, 3.4, 65),
+                             (35.4, 16.6, 4.6, 3.2, 66), (28.6, 13.8, 3.6, 3.4, 67), (14.2, 20.8, 3.4, 2.4, 68), (37, 9.6, 5.5, 1.8, 69)):
+    blob(cx, cy, rx, ry, sd)
 for x in (22, 23, 24):
     for y in range(0, 17): OPEN.add((x, y))
-thin([(23, 0), (23, 16)])                      # l'allee du Gardien (rival : voie droite)
 blob(23, 19, 4.6, 2.8, 11, way=True)                                          # place du monolithe
+thin([(23, 0), (23, 16)])                                                     # l'allee du Gardien (rival : voie droite)
 thin([(XR(20) + 1, 20), (21, 20)])                                            # route du pont de l'ouest
 thin([(18, 7), (21, 7)]); thin([(18, 13), (21, 13)])                          # sentiers des maisons du nord-ouest
 thin([(25, 9), (39, 9)]); thin([(39, 7), (39, 10)])                           # vers l'arene, la maison du nord-est
 thin([(27, 18), (36, 18)]); rect(36, 18, 40, 19); rect(42, 18, 47, 19)        # sortie est (Route 9) ; goulet en x=41 (y=19 seul)
 OPEN.add((41, 19)); WAY.add((41, 19))
-thin([(35, 19), (35, 22)])                                                    # escalier est
+thin([(36, 19), (36, 21)]); thin([(32, 10), (32, 11)]); thin([(32, 14), (32, 15)])      # escaliers
 # rive ouest : sentier du terrier, entrees des ponts
 rect(0, 9, 2, 24, way=False); thin([(1, 14), (1, 19)]); rect(0, 19, 2, 22)
 rect(0, 27, 2, 36, way=False); rect(0, 30, 2, 31)
-# bas-pays (sous la falaise) : plage le long de la riviere, prairie du couloir, clairiere sud-est
+# bas-pays : plage etroite le long de la riviere, prairie du couloir, clairieres des maisons du sud
 for y in range(25, 38):
-    for x in range(XR(y) + 1, 45):
-        if y < YL(x): continue
-        if y >= 30 and not (x <= 18 or (x >= 33 + JL[y] and x <= 44 - JR[y] and y <= 36)): continue
-        if y < 30 and x > 44 - JR[y]: continue
-        OPEN.add((x, y))
-        if x <= XR(y) + 1: WAY.add((x, y))
+    for x in range(XR(y) + 1, XR(y) + 3):
+        if y >= YL(x): OPEN.add((x, y)); WAY.add((x, y)) if x <= XR(y) + 1 else None
+for (cx, cy, rx, ry, sd) in ((24.5, 27.6, 6.8, 2.5, 71), (17.6, 29.4, 4.4, 3.6, 72), (16.4, 32.4, 3.2, 2.6, 73), (38.6, 30.6, 6.4, 4.6, 74), (31.5, 27.5, 3.0, 1.8, 75)):
+    blob(cx, cy, rx, ry, sd)
 for y in range(26, 30):
     for x in range(21, 29): OPEN.add((x, y)); WAY.add((x, y)) if x in (23, 24, 25) else None
 for (x, y) in [(24, 30), (25, 30), (24, 31), (25, 31)] + [(x, y) for y in (32, 33, 34) for x in (23, 24, 25)] + [(24, 35)] + [(x, y) for y in range(36, 40) for x in range(22, 26)]:
     OPEN.add((x, y)); WAY.add((x, y))
-for c in ((27, 22), (27, 23), (27, 26), (27, 27), (35, 25), (35, 26)): OPEN.add(c); WAY.add(c)
-thin([(35, 25), (35, 34), (40, 34)])                                          # vers la maison du sud-est
-thin([(XR(30) + 1, 30), (17, 30)])                                            # plage -> maison du sud-ouest
+for c in ((27, 22), (27, 23), (27, 26), (27, 27), (36, 24), (36, 25)): OPEN.add(c); WAY.add(c)
+thin([(36, 24), (36, 34), (40, 34)])                                          # vers la maison du sud-est
+thin([(XR(31) + 1, 31), (17, 31)])                                            # plage -> maison du sud-ouest
+rect(13, 26, 21, 26, way=False); thin([(28, 27), (36, 27)]); thin([(27, 19), (27, 23)])
 # --- batiments d'Emeraude (Petalburg) : maisons (A 5x4, B 4x4), Centre, Boutique, Arene
 D = {}
 HA = (5, 2, 5, 4); HB = (9, 16, 4, 4)
 def house(key, kind, dx, dy): D[key] = chunk(*kind, dx, dy, key)
 house('th1', HA, 15, 2); house('th2', HB, 16, 8); house('th3', HA, 38, 2); house('th4', HB, 27, 12)       # th4 = maison "HOUSE2" du recoin du terrier
-house('th5', HB, 16, 26); house('th6', HA, 38, 29)
+house('th5', HB, 16, 27); house('th6', HA, 38, 29)
 D['center'] = chunk(19, 13, 4, 4, 18, 15, 'centre')
 D['mart'] = chunk(24, 10, 4, 3, 34, 15, 'boutique')
 D['gym'] = chunk(12, 4, 6, 5, 29, 3, 'arene')
@@ -276,7 +274,7 @@ SM = [small(0), small(1), small(2)]
 
 # ------------------------------------------------------------------ EAU v19 : la grande riviere de l'ouest, deux ponts de planches, falaises
 WATERC = {(x, y) for y in range(3, 39) for x in range(XL(y), XR(y) + 1)}
-for (cx, cy, rx, ry) in ((41.8, 27.4, 3.4, 2.3),):
+for (cx, cy, rx, ry) in ((42.2, 27.2, 3.0, 2.0),):
     for y in range(24, 31):
         for x in range(38, 46):
             if ((x - cx) / rx) ** 2 + ((y - cy) / ry) ** 2 <= 1 and (x, y) in OPEN: WATERC.add((x, y))
@@ -439,7 +437,7 @@ for (x, y) in list(G):
     m = rnd.choice((14, 15, 14)) if edge else rnd.choice((198, 199, 198, 199, 198))
     bx, by = x - x % 2, y - y % 2
     blk = [(bx + i, by + j) for i in (0, 1) for j in (0, 1)]
-    if not edge and all((q not in OPEN and q not in OCC and 0 <= q[0] < W and 0 <= q[1] < H and not any(((q[0] + a_, q[1] + b_) in OPEN) for a_ in (-1, 0, 1) for b_ in (-1, 0, 1))) for q in blk):
+    if all((q not in OPEN and q not in OCC and 0 <= q[0] < W and 0 <= q[1] < H) for q in blk):
         m = (468 if x % 2 == 0 else 469) if y % 2 == 0 else (476 if x % 2 == 0 else 477)
     G[c] = 0x400 | m
 for c in list(GROUND):
@@ -512,7 +510,7 @@ for c in sorted(OPEN):
     n8 = sum(((c[0] + a_, c[1] + b_) in OPEN) for a_ in (-1, 0, 1) for b_ in (-1, 0, 1) if (a_, b_) != (0, 0))
     if n8 < 8: continue
     if any(max(abs(c[0] - q[0]), abs(c[1] - q[1])) < 3 for q in DECOR): continue
-    if dr.random() < 0.20: DECOR.append(c)
+    if dr.random() < 0.30: DECOR.append(c)
 for c in DECOR: G[c] = 0x400 | dr.choice((14, 15)); OCC[c] = 'arbre'; OPEN.discard(c)
 print('arbres isoles', len(DECOR))
 # ------------------------------------------------------------------ resolution art -> metatuiles, valeurs brutes
