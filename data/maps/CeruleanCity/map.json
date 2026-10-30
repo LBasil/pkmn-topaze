@@ -55,7 +55,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
       "x": 18,
-      "y": 16,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 1,
@@ -68,8 +68,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
-      "x": 9,
-      "y": 18,
+      "x": 14,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -112,8 +112,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "x": 37,
-      "y": 24,
+      "x": 38,
+      "y": 21,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -142,8 +142,8 @@
       "local_id": "LOCALID_CERULEAN_WOMAN",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
-      "x": 13,
-      "y": 31,
+      "x": 1,
+      "y": 33,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
@@ -184,8 +184,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 9,
-      "y": 9,
+      "x": 0,
+      "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -211,8 +211,8 @@
   ],
   "warp_events": [
     {
-      "x": 7,
-      "y": 6,
+      "x": 17,
+      "y": 5,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_HOUSE1",
       "dest_warp_id": "1"
@@ -232,8 +232,8 @@
       "dest_warp_id": "1"
     },
     {
-      "x": 15,
-      "y": 17,
+      "x": 19,
+      "y": 18,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": "1"
@@ -246,8 +246,8 @@
       "dest_warp_id": "1"
     },
     {
-      "x": 16,
-      "y": 31,
+      "x": 17,
+      "y": 29,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_BIKE_SHOP",
       "dest_warp_id": "1"
@@ -260,7 +260,7 @@
       "dest_warp_id": "1"
     },
     {
-      "x": 3,
+      "x": 1,
       "y": 12,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CAVE_1F",
@@ -302,7 +302,7 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 12,
+      "x": 17,
       "y": 11,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_HOUSE5",
@@ -339,7 +339,7 @@
     },
     {
       "type": "trigger",
-      "x": 3,
+      "x": 1,
       "y": 13,
       "elevation": 0,
       "var": "VAR_TEMP_0",
@@ -350,15 +350,15 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 2,
-      "y": 16,
+      "x": 0,
+      "y": 18,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CeruleanCity_EventScript_CitySign"
     },
     {
       "type": "sign",
-      "x": 32,
+      "x": 33,
       "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
@@ -366,8 +366,8 @@
     },
     {
       "type": "sign",
-      "x": 19,
-      "y": 29,
+      "x": 20,
+      "y": 26,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CeruleanCity_EventScript_BikeShopSign"
@@ -382,7 +382,7 @@
     },
     {
       "type": "hidden_item",
-      "x": 16,
+      "x": 20,
       "y": 11,
       "elevation": 3,
       "item": "ITEM_RARE_CANDY",
