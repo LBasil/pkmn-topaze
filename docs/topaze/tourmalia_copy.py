@@ -10,7 +10,10 @@ D0 = 'docs/topaze/tourmalia_copy/'
 PRI = 'data/tilesets/primary/general_tourmaline/'; SEC = 'data/tilesets/secondary/fortree_tourmaline/'
 for d in (PRI, SEC): os.makedirs(d + 'palettes', exist_ok=True)
 grid, mts = pickle.load(open(D0 + 'grid.pkl', 'rb')); mapc, PALS = pickle.load(open(D0 + 'pal.pkl', 'rb'))
+X0 = 22                                                    # coupe de la zone ouest (cabanes 1 et 2, bas-pays SO) : carte 62 x 46
+grid = [r[X0:] for r in grid]
 H, W = len(grid), len(grid[0]); NM = len(mts)
+S = lambda c: (c[0] - X0, c[1])
 q5 = lambda p: (int(p[0]) >> 3, int(p[1]) >> 3, int(p[2]) >> 3)
 
 # ------------------------------------------------------------------ tuiles + palettes
@@ -39,13 +42,15 @@ WATER = {93, 102, 103, 104, 107, 108, 112, 113, 115, 116, 119, 137, 179, 180, 29
 TALL = {30, 100}; DOORIDS = {70, 248, 184, 244}
 GRASS = 45
 BUILD = set()
-for x0, y0, x1, y1 in ((36, 22, 39, 25), (45, 26, 48, 29), (52, 16, 58, 20), (62, 17, 78, 24)):
+for x0, y0, x1, y1 in ((14, 22, 17, 25), (23, 26, 26, 29), (30, 16, 36, 20), (40, 17, 56, 24)):
     for y in range(y0, y1 + 1):
         for x in range(x0, x1 + 1): BUILD.add((x, y))
 DOORS = {'center': (37, 25), 'mart': (46, 29), 'gym': (55, 20), 'cave': (69, 24),
-         'th1': (13, 9), 'th2': (18, 18), 'th3': (42, 8), 'th4': (47, 14), 'th5': (35, 16), 'th6': (53, 32)}
-SIGNC = {'city': (40, 39), 'gym': (51, 19), 'bike': (66, 29), 'tips': (11, 31)}
-BUILD |= set(SIGNC.values()); BUILD |= {(14, 9), (36, 16), (70, 24)}
+         'th3': (42, 8), 'th4': (47, 14), 'th5': (35, 16), 'th6': (53, 32)}
+DOORS = {k: S(v) for k, v in DOORS.items()}
+PARKED = {'th1': (0, 0), 'th2': (0, 1)}                  # cabanes 1 et 2 coupees : portes garees dans la foret
+SIGNC = {'city': S((40, 39)), 'gym': S((51, 19)), 'bike': S((66, 29)), 'tips': S((37, 16))}
+BUILD |= set(SIGNC.values()); BUILD |= {S(c) for c in ((36, 16), (70, 24))}
 DECK = {53, 78, 62}
 WALKC = {}                                                              # cellule -> 'W' marchable force
 for k, (x, y) in DOORS.items(): WALKC[(x, y)] = 1
@@ -55,7 +60,7 @@ for k, (x, y) in DOORS.items():                                         # couloi
         while y < H and not (grid[y][x] in WALK and y > DOORS[k][1] + 1):
             WALKC[(x, y)] = 1; y += 1
 # couloir droit de la rencontre avec le rival (3 de large) + bande du nord
-RIV = [(x, y) for y in range(6, 13) for x in (70, 71, 72)] + [(73, 6)]
+RIV = [(x - X0, y) for y in range(6, 13) for x in (70, 71, 72)] + [(73 - X0, 6)]
 def walk(c): return grid[c[1]][c[0]] in WALK or c in WALKC or c in CARVED
 CARVED = set()
 DOORSET = set(DOORS.values())
@@ -87,11 +92,19 @@ def comp(s):
             if 0 <= n[0] < W and 0 <= n[1] < H and n not in seen and walk(n) and n not in DOORSET: seen.add(n); qq.append(n)
     return seen
 CARVED |= set(RIV)
-STUBS = [(83, 32), (0, 30), (0, 31), (0, 32), (42, 45), (43, 45), (44, 45), (81, 0)]      # largeur des sorties = celle des anciennes sorties (retour depuis les routes voisines)
+STUBS = [S(c) for c in ((83, 32), (42, 45), (43, 45), (44, 45), (81, 0))]      # largeur des sorties = celle des anciennes sorties (retour depuis les routes voisines)
 CARVED |= set(STUBS)
-HUB = (37, 26)
-FRONT = {'mart': (46, 30), 'gym': (55, 21), 'cave': (69, 26), 'th1': (13, 10), 'th2': (18, 19), 'th3': (42, 9), 'th4': (47, 15), 'th5': (35, 17), 'th6': (53, 33)}
-EXITC = {'N': (82, 0), 'E': (83, 31), 'S': (41, 45), 'W': (0, 29), 'riv': (71, 6)}
+HUB = S((37, 26))
+FRONT = {k: S(v) for k, v in {'mart': (46, 30), 'gym': (55, 21), 'cave': (69, 26), 'th3': (42, 9), 'th4': (47, 15), 'th5': (35, 17), 'th6': (53, 33)}.items()}
+EXITC = {'N': S((82, 0)), 'E': S((83, 31)), 'S': S((41, 45)), 'riv': S((71, 6))}
+# sortie ouest : bord gauche le moins couteux a relier ; 4 cases de large (Route 4 Est)
+_m0 = comp(HUB); _bw = None
+for _y in range(4, H - 4):
+    _p = dij(_m0, {(0, _y)})
+    if _p:
+        _c = sum(cost(z) for z in _p[:-1])
+        if _bw is None or _c < _bw[0]: _bw = (_c, _y)
+EXITC['W'] = (0, _bw[1]); STUBS += [(0, _bw[1] + i) for i in (1, 2, 3)]; CARVED |= set(STUBS)
 todo = dict(FRONT); todo.update(EXITC)
 main = comp(HUB)
 while todo:
@@ -155,26 +168,26 @@ def near(t, r=4, nb=3):
                     if best is None or s < best[0]: best = (s, c)
     assert best, ('pas de case', t); USED.add(best[1]); NPCCELLS.add(best[1]); return best[1]
 NPC = {}
-NPC['boy'] = near((40, 28)); NPC['balding'] = near((44, 22)); NPC['youngster'] = near((38, 20)); NPC['woman'] = near((20, 36), 8)
-NPC['camper'] = near((6, 33), 12, 2); NPC['oldman'] = near((64, 32), 6); NPC['hidden'] = near((58, 25), 5)
+NPC['boy'] = near(S((40, 28))); NPC['balding'] = near(S((44, 22))); NPC['youngster'] = near(S((38, 20))); NPC['woman'] = near((6, 36), 10)
+NPC['camper'] = near((4, 31), 12, 2); NPC['oldman'] = near(S((64, 32)), 6); NPC['hidden'] = near(S((58, 25)), 5)
 # est : couloir creuse (75..83, 31) ; arbre a couper + policier a la porte
-corr = sorted(c for c in CARVED if c[1] == 31 and c[0] >= 75)
+corr = sorted(c for c in CARVED if c[1] == 31 and c[0] >= 75 - X0)
 assert corr, 'pas de couloir est'
 gate = corr[len(corr) // 2]
 NPC['cuttree'] = gate; NPC['policeman_block'] = gate
 NPC['policeman'] = near((corr[0][0] - 1, 31), 6)
 # sud : echelle (41,43..45) ; arbre devant, Spectrum + la fille sur l'echelle (barrage) puis a cote (repos)
-NPC['slowbro_block'] = (41, 43); NPC['lass_block'] = (41, 44)
-NPC['slowbro'] = near((43, 41), 4); NPC['lass'] = near((44, 41), 4)
+NPC['slowbro_block'] = S((41, 43)); NPC['lass_block'] = S((41, 44))
+NPC['slowbro'] = near(S((43, 41)), 4); NPC['lass'] = near(S((44, 41)), 4)
 if NPC['cuttree'] is None: pass
-SOUTH_TREE = (41, 42)
+SOUTH_TREE = S((41, 42))
 # nord : policier au milieu de la bande ; declencheurs du rival sur la ligne y=12
-NPC['policeman_n'] = (71, 11); NPC['rival'] = (70, 6)
+NPC['policeman_n'] = S((71, 11)); NPC['rival'] = S((70, 6))
 SIGNS = {k: v for k, v in SIGNC.items()}
 # ------------------------------------------------------------------ verifications
 for k, c in DOORS.items(): assert c in ALL or k == 'cave' or True
 fr = {k: (c[0], c[1] + 1) for k, c in DOORS.items()}
-for k, c in list(FRONT.items()) + [('center', (37, 26))]: assert c in ALL, ('devant la porte inaccessible', k, c)
+for k, c in list(FRONT.items()) + [('center', S((37, 26)))]: assert c in ALL, ('devant la porte inaccessible', k, c)
 for k, c in EXITC.items(): assert c in ALL, ('sortie inaccessible', k)
 for k, c in NPC.items(): assert c in ALL or k in ('cuttree', 'policeman_block', 'slowbro_block', 'lass_block', 'policeman_n', 'rival'), ('PNJ inaccessible', k, c)
 # forces de passage
@@ -187,7 +200,7 @@ print('portes/sorties/PNJ OK ; cases accessibles', len(ALL))
 assert passable(SOUTH_TREE), 'case arbre sud bloquee'
 NPC['cuttree_s'] = SOUTH_TREE
 # ------------------------------------------------------------------ dumps pour tourmalia_river_events.py
-json.dump({k: [list(c)] for k, c in DOORS.items() if k != 'cave'}, open('/tmp/tourmalia_doors.json', 'w'))
+json.dump({k: [list(c)] for k, c in {**DOORS, **PARKED}.items() if k != 'cave'}, open('/tmp/tourmalia_doors.json', 'w'))
 json.dump({k: list(v) for k, v in NPC.items()}, open('/tmp/tourmalia_npc.json', 'w'))
 json.dump({k: list(v) for k, v in SIGNS.items()}, open('/tmp/tourmalia_signs.json', 'w'))
 json.dump({'grot_door': list(DOORS['cave']), 'hole': []}, open('/tmp/tourmalia_misc.json', 'w'))
@@ -229,9 +242,9 @@ OFF = {'MAP_ROUTE9': EXITC['E'][1] - 8, 'MAP_ROUTE4_EAST': EXITC['W'][1] - 14, '
 for c in d['connections']: c['offset'] = OFF[c['map']]
 # declencheurs du rival (3 colonnes x=70..72, ligne y=12) + sorties
 for c in d['coord_events']:
-    if 'RivalTriggerLeft' in c['script']: c['x'], c['y'] = 70, 12
-    if 'RivalTriggerMid' in c['script']: c['x'], c['y'] = 71, 12
-    if 'RivalTriggerRight' in c['script']: c['x'], c['y'] = 72, 12
+    if 'RivalTriggerLeft' in c['script']: c['x'], c['y'] = 70 - X0, 12
+    if 'RivalTriggerMid' in c['script']: c['x'], c['y'] = 71 - X0, 12
+    if 'RivalTriggerRight' in c['script']: c['x'], c['y'] = 72 - X0, 12
 for o in d['object_events']:
     if o.get('local_id') == 'LOCALID_CERULEAN_POLICE_N': o['x'], o['y'] = NPC['policeman_n']
     if o['graphics_id'] == 'OBJ_EVENT_GFX_CUT_TREE':
@@ -244,6 +257,6 @@ for mp, nb in (('Route9', 'MAP_ROUTE9'), ('Route4East', 'MAP_ROUTE4_EAST'), ('Ro
         if c['map'] == 'MAP_CERULEAN_CITY': c['offset'] = -OFF[nb]
     json.dump(dd, open(fn, 'w'), indent=2); open(fn, 'a').write('\n')
 f = 'data/maps/CeruleanCity/scripts.inc'; s = open(f).read()
-s = re.sub(r'(setobjectxyperm LOCALID_CERULEAN_RIVAL, )23, 0', r'\g<1>71, 6', s); s = re.sub(r'(setobjectxyperm LOCALID_CERULEAN_RIVAL, )24, 0', r'\g<1>72, 6', s)
+s = re.sub(r'(RivalTriggerMid::.*?setobjectxyperm LOCALID_CERULEAN_RIVAL, )\d+, \d+', r'\g<1>%d, 6' % (71 - X0), s, flags=re.S); s = re.sub(r'(RivalTriggerRight::.*?setobjectxyperm LOCALID_CERULEAN_RIVAL, )\d+, \d+', r'\g<1>%d, 6' % (72 - X0), s, flags=re.S)
 open(f, 'w').write(s)
 print('tourmalia copie : tuiles', NT, '; metatuiles', NM, '; palettes', len(PALCOLS), '; offsets', OFF)
