@@ -15,8 +15,12 @@ grid = [r[X0:] for r in grid]
 H, W = len(grid), len(grid[0]); NM = len(mts)
 S = lambda c: (c[0] - X0, c[1])
 # retouches demandees par Basil : cabane coupee en haut a gauche retiree, ponts de corde (decoratifs, ne menent nulle part) et pont de rondins sans issue retires
-for _y in range(1, 10):
-    for _x in range(0, 5): grid[_y][_x] = 1
+for _x0, _y0, _x1, _y1 in ((0, 1, 4, 9), (7, 1, 14, 9), (2, 13, 6, 20), (28, 2, 33, 10)):       # cabanes sans porte (inaccessibles) -> foret
+    for _y in range(_y0, _y1 + 1):
+        for _x in range(_x0, _x1 + 1): grid[_y][_x] = 1
+grid[11][32] = 1
+for _y in (21, 22):                                                                          # pont de la cascade (mene au bord de la carte) -> eau
+    for _x in range(7, 11): grid[_y][_x] = 104
 for _y in range(H):
     for _x in range(W):
         if grid[_y][_x] in (58, 59, 60, 61, 82, 83, 84): grid[_y][_x] = 1
@@ -106,11 +110,14 @@ FRONT = {k: S(v) for k, v in {'mart': (46, 30), 'gym': (55, 21), 'cave': (69, 26
 EXITC = {'N': S((82, 0)), 'E': S((83, 31)), 'S': S((41, 45)), 'riv': S((71, 6))}
 # sortie ouest : bord gauche le moins couteux a relier ; 4 cases de large (Route 4 Est)
 _m0 = comp(HUB); _bw = None
-for _y in range(4, H - 4):
+for _y in range(30, 41):
     _p = dij(_m0, {(0, _y)})
     if _p:
         _c = sum(cost(z) for z in _p[:-1])
         if _bw is None or _c < _bw[0]: _bw = (_c, _y)
+# chemin de la sortie est : sentier sinueux (1 a 2 de large, 1 seule case au portail) au lieu d'une ligne droite
+EPATH = [(x, 31) for x in range(51, 62)] + [(x, 30) for x in (52, 53, 54, 59, 60)]
+CARVED |= set(EPATH)
 EXITC['W'] = (0, _bw[1]); STUBS += [(0, _bw[1] + i) for i in (1, 2, 3)]; CARVED |= set(STUBS)
 todo = dict(FRONT); todo.update(EXITC)
 main = comp(HUB)
@@ -144,7 +151,7 @@ G = {}
 for y in range(H):
     for x in range(W):
         c = (x, y); v = grid[y][x]
-        if c in CARVED and c not in WALKC and v not in WALK: v = GRASS
+        if c in CARVED and c not in WALKC and v not in WALK: v = (9, 10, 10, 18)[(c[0] * 7 + c[1] * 3) % 4]        # sentier d'herbe claire
         if c in BUILD and c not in WALKC: G[c] = 0x400 | (640 + v)
         elif walk(c): G[c] = 0x3000 | (640 + v)
         elif v in WATER: G[c] = 0x1000 | (640 + v)
