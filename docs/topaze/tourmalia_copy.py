@@ -249,7 +249,7 @@ open(SEC + 'metatile_attributes.bin', 'wb').write(b''.join(struct.pack('<I', a) 
 # ------------------------------------------------------------------ carte
 g = [G[(x, y)] for y in range(H) for x in range(W)]
 open('data/layouts/CeruleanCity/map.bin', 'wb').write(struct.pack('<%dH' % len(g), *g))
-open('data/layouts/CeruleanCity/border.bin', 'wb').write(struct.pack('<4H', 0x400 | (640 + 1), 0x400 | (640 + 5), 0x400 | (640 + 5), 0x400 | (640 + 1)))
+open('data/layouts/CeruleanCity/border.bin', 'wb').write(struct.pack('<4H', 0x400 | (640 + 1), 0x400 | (640 + 1), 0x400 | (640 + 1), 0x400 | (640 + 1)))
 L = json.load(open('data/layouts/layouts.json'))
 for l in L['layouts']:
     if l.get('id') == 'LAYOUT_CERULEAN_CITY':
