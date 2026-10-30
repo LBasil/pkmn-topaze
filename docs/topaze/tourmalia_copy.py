@@ -25,6 +25,11 @@ for _y in range(H):
     for _x in range(W):
         if grid[_y][_x] in (58, 59, 60, 61, 82, 83, 84): grid[_y][_x] = 1
 for _x, _y in ((42, 9), (43, 9), (42, 10), (43, 10)): grid[_y][_x] = 6
+# v25 : route OUEST droite, large (4 cases) et lisible : du bord gauche au pied du pont (grille de pave + bas-cotes d'herbe)
+for _x in range(0, 11):
+    grid[36][_x] = 45; grid[37][_x] = 98; grid[38][_x] = 98; grid[39][_x] = 45
+grid[38][11] = 98
+for _x in range(11, 18): grid[39][_x] = 98
 q5 = lambda p: (int(p[0]) >> 3, int(p[1]) >> 3, int(p[2]) >> 3)
 
 # ------------------------------------------------------------------ tuiles + palettes
@@ -50,6 +55,7 @@ assert NT <= 640 + 384, ('trop de tuiles', NT)
 # ------------------------------------------------------------------ classification a la main
 WALK = {9, 10, 18, 26, 27, 45, 49, 87, 88, 98, 114, 169, 257, 270, 271, 284, 285, 292, 297, 30, 100, 110, 229, 277, 95, 282, 283, 86, 99, 244, 253, 97}
 WATER = {93, 102, 103, 104, 107, 108, 112, 113, 115, 116, 119, 137, 179, 180, 293, 294, 295, 296, 300, 301, 309, 311, 133, 125, 126}
+WALK |= {53, 62}                                                          # planchers des cabanes (marchables)
 TALL = {30, 100}; DOORIDS = {70, 248, 184, 244}
 GRASS = 45
 BUILD = set()
@@ -109,16 +115,11 @@ HUB = S((37, 26))
 FRONT = {k: S(v) for k, v in {'mart': (46, 30), 'gym': (55, 21), 'cave': (69, 26), 'th3': (42, 9), 'th4': (47, 15), 'th5': (35, 17), 'th6': (53, 33)}.items()}
 EXITC = {'N': S((82, 0)), 'E': S((83, 31)), 'S': S((41, 45)), 'riv': S((71, 6))}
 # sortie ouest : bord gauche le moins couteux a relier ; 4 cases de large (Route 4 Est)
-_m0 = comp(HUB); _bw = None
-for _y in range(30, 41):
-    _p = dij(_m0, {(0, _y)})
-    if _p:
-        _c = sum(cost(z) for z in _p[:-1])
-        if _bw is None or _c < _bw[0]: _bw = (_c, _y)
+_bw = (0, 36)
 # chemin de la sortie est : sentier sinueux (1 a 2 de large, 1 seule case au portail) au lieu d'une ligne droite
 EPATH = [(x, 31) for x in range(51, 62)] + [(x, 30) for x in (52, 53, 54, 59, 60)]
 CARVED |= set(EPATH)
-EXITC['W'] = (0, _bw[1]); STUBS += [(0, _bw[1] + i) for i in (1, 2, 3)]; CARVED |= set(STUBS)
+EXITC['W'] = (0, 36); STUBS += [(0, 36 + i) for i in (1, 2, 3)]; CARVED |= set(STUBS)
 todo = dict(FRONT); todo.update(EXITC)
 main = comp(HUB)
 while todo:
