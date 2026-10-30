@@ -55,7 +55,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
       "x": 18,
-      "y": 17,
+      "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
       "movement_range_x": 1,
@@ -68,8 +68,8 @@
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_BALDING_MAN",
-      "x": 7,
-      "y": 22,
+      "x": 9,
+      "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 1,
@@ -113,7 +113,7 @@
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 37,
-      "y": 21,
+      "y": 24,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
@@ -142,8 +142,8 @@
       "local_id": "LOCALID_CERULEAN_WOMAN",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
-      "x": 7,
-      "y": 35,
+      "x": 13,
+      "y": 31,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
@@ -184,8 +184,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CAMPER",
-      "x": 8,
-      "y": 8,
+      "x": 9,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -197,8 +197,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_1",
-      "x": 29,
-      "y": 5,
+      "x": 27,
+      "y": 8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -211,57 +211,57 @@
   ],
   "warp_events": [
     {
-      "x": 8,
-      "y": 3,
+      "x": 7,
+      "y": 6,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_HOUSE1",
       "dest_warp_id": "1"
     },
     {
-      "x": 36,
-      "y": 2,
+      "x": 28,
+      "y": 15,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_HOUSE2",
       "dest_warp_id": "1"
     },
     {
-      "x": 29,
-      "y": 3,
+      "x": 40,
+      "y": 5,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_HOUSE3",
       "dest_warp_id": "1"
     },
     {
-      "x": 13,
-      "y": 16,
+      "x": 15,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": "1"
     },
     {
-      "x": 30,
-      "y": 16,
+      "x": 32,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_GYM",
       "dest_warp_id": "1"
     },
     {
-      "x": 5,
-      "y": 30,
+      "x": 16,
+      "y": 31,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_BIKE_SHOP",
       "dest_warp_id": "1"
     },
     {
-      "x": 34,
-      "y": 23,
+      "x": 35,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_MART",
       "dest_warp_id": "1"
     },
     {
-      "x": 2,
-      "y": 4,
+      "x": 3,
+      "y": 12,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CAVE_1F",
       "dest_warp_id": "0"
@@ -295,15 +295,15 @@
       "dest_warp_id": "1"
     },
     {
-      "x": 16,
-      "y": 30,
+      "x": 40,
+      "y": 32,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_HOUSE4",
       "dest_warp_id": "0"
     },
     {
-      "x": 17,
-      "y": 3,
+      "x": 12,
+      "y": 11,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_HOUSE5",
       "dest_warp_id": "0"
@@ -339,8 +339,8 @@
     },
     {
       "type": "trigger",
-      "x": 2,
-      "y": 5,
+      "x": 3,
+      "y": 13,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -350,32 +350,32 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 3,
-      "y": 18,
+      "x": 2,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CeruleanCity_EventScript_CitySign"
     },
     {
       "type": "sign",
-      "x": 33,
-      "y": 17,
+      "x": 32,
+      "y": 11,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CeruleanCity_EventScript_GymSign"
     },
     {
       "type": "sign",
-      "x": 6,
-      "y": 35,
+      "x": 19,
+      "y": 29,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CeruleanCity_EventScript_BikeShopSign"
     },
     {
       "type": "sign",
-      "x": 20,
-      "y": 34,
+      "x": 21,
+      "y": 28,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "CeruleanCity_EventScript_TrainerTips"
@@ -383,7 +383,7 @@
     {
       "type": "hidden_item",
       "x": 16,
-      "y": 10,
+      "y": 11,
       "elevation": 3,
       "item": "ITEM_RARE_CANDY",
       "flag": "FLAG_HIDDEN_ITEM_CERULEAN_CITY_RARE_CANDY",

@@ -87,7 +87,7 @@ CeruleanCity_Text_ThisIsCeruleanCave::
 
 CeruleanCity_Text_CitySign::
     .string "TOURMALIA CITY\n"
-    .string "Where the forest grows crystal$"
+    .string "Where the river meets the crystal$"
 
 CeruleanCity_Text_TrainerTipsHeldItems::
     .string "TRAINER TIPS\p"
