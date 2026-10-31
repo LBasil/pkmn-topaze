@@ -42,7 +42,7 @@ gtxt = text('CeruleanCity_GateEast_Text_Guide', 'TOURMALIA lies behind you. Next
 f9 = 'data/maps/Route9/map.json'; d9 = json.load(open(f9))
 d9['connections'] = [c for c in (d9['connections'] or []) if c['map'] != 'MAP_CERULEAN_CITY']
 d9['warp_events'] = [w for w in d9['warp_events'] if w['dest_map'] != 'MAP_CERULEAN_CITY_GATE_EAST']
-RW = len(d9['warp_events']); d9['warp_events'].append(warp(6, 4, 'MAP_CERULEAN_CITY_GATE_EAST', 2, el=0)); jdump(d9, f9)
+RW = len(d9['warp_events']); d9['warp_events'].append(warp(4, 4, 'MAP_CERULEAN_CITY_GATE_EAST', 2, el=0)); jdump(d9, f9)
 clone('CeruleanCity_GateEast', 'Route6_NorthEntrance',
       objects=[obj('POLICEMAN', 7, 5, 'CeruleanCity_GateEast_EventScript_Guide')],
       warps=[warp(4, 9, C, 16), warp(5, 9, C, 16), warp(4, 1, 'MAP_ROUTE9', RW), warp(5, 1, 'MAP_ROUTE9', RW)],

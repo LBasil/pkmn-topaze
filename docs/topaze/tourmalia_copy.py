@@ -26,8 +26,8 @@ for _y in range(H):
     for _x in range(W):
         if grid[_y][_x] in (58, 59, 60, 61, 82, 83, 84): grid[_y][_x] = 1
 for _x, _y in ((42, 9), (43, 9), (42, 10), (43, 10)): grid[_y][_x] = 6
-EXT = [25, 11, 37, 7, 64, 70, 53, 77, 16]                                  # v33 : cabane-portail LONGUE (9 cases) : le corps de la cabane s'etire vers la droite (on la traverse d'ouest en est)
-TH6 = [r[:4] + [EXT[_j]] * 4 + r[4:] for _j, r in enumerate(TH6)]
+EXT = [25, 11, 37, 7, 64, 53, 53, 77, 16]                                  # v33 : cabane-portail LONGUE (9 cases) : le corps de la cabane s'etire vers la droite (on la traverse d'ouest en est)
+TH6 = [r[:1] + [EXT[_j]] * 2 + r[1:4] + [EXT[_j]] * 2 + r[4:] for _j, r in enumerate(TH6)]      # symetrique : porte au centre (9 cases)
 GATE_E = (53, 22)                                                          # v31 : cabane-portail est (porte (59,27), echelle (59,30)) : plus de raccord direct Tourmalia / Route 9
 for _j, _row in enumerate(TH6):
     for _i, _v in enumerate(_row): grid[GATE_E[1] + _j][GATE_E[0] + _i] = _v
@@ -72,7 +72,7 @@ for x0, y0, x1, y1 in ((14, 22, 17, 25), (23, 26, 26, 29), (30, 16, 36, 20), (40
 DOORS = {'center': (37, 25), 'mart': (46, 29), 'gym': (55, 20), 'cave': (69, 24),
          'th3': (42, 8), 'th4': (47, 14), 'th5': (35, 16), 'th6': (53, 32)}
 DOORS = {k: S(v) for k, v in DOORS.items()}
-DOORS['gateE'] = (55, 27)
+DOORS['gateE'] = (57, 27)
 PARKED = {'th1': (0, 0), 'th2': (0, 1)}                  # cabanes 1 et 2 coupees : portes garees dans la foret
 SIGNC = {'city': S((40, 39)), 'gym': S((51, 19)), 'bike': S((66, 29)), 'tips': S((37, 16))}
 BUILD |= set(SIGNC.values()); BUILD |= {S(c) for c in ((36, 16), (70, 24))}
@@ -144,12 +144,12 @@ CARVED |= set(RIV) | set(FORCEPATH)
 STUBS = [S(c) for c in ((42, 45), (43, 45), (44, 45), (81, 0))]      # largeur des sorties = celle des anciennes sorties (retour depuis les routes voisines)
 CARVED |= set(STUBS)
 HUB = S((37, 26))
-FRONT = {k: S(v) for k, v in {'mart': (46, 30), 'gym': (55, 21), 'cave': (69, 26), 'th3': (42, 9), 'th4': (47, 15), 'th5': (35, 17), 'th6': (53, 33)}.items()}; FRONT['hatch'] = (53, 17); FRONT['gateE'] = (55, 28)
-EXITC = {'N': S((82, 0)), 'E': (55, 31), 'S': S((41, 45)), 'riv': S((71, 6))}
+FRONT = {k: S(v) for k, v in {'mart': (46, 30), 'gym': (55, 21), 'cave': (69, 26), 'th3': (42, 9), 'th4': (47, 15), 'th5': (35, 17), 'th6': (53, 33)}.items()}; FRONT['hatch'] = (53, 17); FRONT['gateE'] = (57, 28)
+EXITC = {'N': S((82, 0)), 'E': (57, 31), 'S': S((41, 45)), 'riv': S((71, 6))}
 # sortie ouest : bord gauche le moins couteux a relier ; 4 cases de large (Route 4 Est)
 _bw = (0, 36)
 # chemin de la sortie est : sentier sinueux (1 a 2 de large, 1 seule case au portail) au lieu d'une ligne droite
-EPATH = [(x, 31) for x in range(51, 57)] + [(52, 30)]
+EPATH = [(x, 31) for x in range(51, 59)] + [(52, 30)]
 CARVED |= set(EPATH)
 EXITC['W'] = (0, 36); STUBS += [(0, 36 + i) for i in (1, 2, 3)]; CARVED |= set(STUBS)
 todo = dict(FRONT); todo.update(EXITC)
@@ -232,7 +232,7 @@ NPC['camper'] = near((4, 31), 12, 2); NPC['oldman'] = near(S((64, 32)), 6); NPC[
 # est : couloir creuse (75..83, 31) ; arbre a couper + policier a la porte
 corr = sorted(c for c in CARVED if c[1] == 31 and c[0] >= 75 - X0)
 assert corr, 'pas de couloir est'
-gate = (54, 31)                          # v33 : l'arbre est avant le pied de l'echelle (55,31), pas dessus
+gate = (56, 31)                          # v33 : l'arbre est avant le pied de l'echelle (55,31), pas dessus
 NPC['cuttree'] = gate; NPC['policeman_block'] = gate
 NPC['policeman'] = near((corr[0][0] - 1, 31), 6)
 # sud : echelle (41,43..45) ; arbre devant, Spectrum + la fille sur l'echelle (barrage) puis a cote (repos)
@@ -343,7 +343,7 @@ for o in d['object_events']:
 d['warp_events'] = d['warp_events'][:14] + [
     {'x': PASS[0], 'y': PASS[1], 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY_GLASS_HALL', 'dest_warp_id': '1'},
     {'x': HATCH[0], 'y': HATCH[1], 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY_GLASS_HALL', 'dest_warp_id': '3'}]
-d['warp_events'].append({'x': 55, 'y': 27, 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY_GATE_EAST', 'dest_warp_id': '0'})
+d['warp_events'].append({'x': 57, 'y': 27, 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY_GATE_EAST', 'dest_warp_id': '0'})
 d['warp_events'][7].update(dest_map='MAP_CERULEAN_CITY_GLASS_HALL', dest_warp_id='0')
 json.dump(d, open(f, 'w'), indent=2); open(f, 'a').write('\n')
 # connexions inverses (cote routes voisines) : ecart oppose
