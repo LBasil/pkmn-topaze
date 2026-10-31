@@ -32,7 +32,7 @@ d['warp_events'][0].update(dest_map='MAP_CERULEAN_CITY_GLASS_HALL', dest_warp_id
 print('salle de verre ecrite')
 
 # v31 : cabane-portail EST (remplace le raccord direct Tourmalia <-> Route 9). Clone de la salle de passage de la Route 6.
-# Portes sud (4,9)/(5,9) -> porte de la cabane (59,27) ; portes nord (4,1)/(5,1) -> case-porte (0,8) a l'extremite ouest de la Route 9.
+# Portes sud (4,9)/(5,9) -> porte de la cabane (59,27) ; portes nord (4,1)/(5,1) -> case-porte (2,4) de la cabane de l'extremite ouest de la Route 9 (route9_gate_art.py).
 gscripts = '''
 CeruleanCity_GateEast_EventScript_Guide::
 	msgbox CeruleanCity_GateEast_Text_Guide, MSGBOX_NPC
@@ -42,7 +42,7 @@ gtxt = text('CeruleanCity_GateEast_Text_Guide', 'TOURMALIA lies behind you. Next
 f9 = 'data/maps/Route9/map.json'; d9 = json.load(open(f9))
 d9['connections'] = [c for c in (d9['connections'] or []) if c['map'] != 'MAP_CERULEAN_CITY']
 d9['warp_events'] = [w for w in d9['warp_events'] if w['dest_map'] != 'MAP_CERULEAN_CITY_GATE_EAST']
-RW = len(d9['warp_events']); d9['warp_events'].append(warp(0, 8, 'MAP_CERULEAN_CITY_GATE_EAST', 2, el=0)); jdump(d9, f9)
+RW = len(d9['warp_events']); d9['warp_events'].append(warp(2, 4, 'MAP_CERULEAN_CITY_GATE_EAST', 2, el=0)); jdump(d9, f9)
 clone('CeruleanCity_GateEast', 'Route6_NorthEntrance',
       objects=[obj('POLICEMAN', 7, 5, 'CeruleanCity_GateEast_EventScript_Guide')],
       warps=[warp(4, 9, C, 15), warp(5, 9, C, 15), warp(4, 1, 'MAP_ROUTE9', RW), warp(5, 1, 'MAP_ROUTE9', RW)],
