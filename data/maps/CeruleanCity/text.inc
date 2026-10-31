@@ -91,7 +91,7 @@ CeruleanCity_Text_CitySign::
     .string "WEST:  ROUTE 4 (this road)\n"
     .string "SOUTH: ROUTE 5 (ladder below)\p"
     .string "EAST:  ROUTE 9 (past the dome)\n"
-    .string "NORTH: ROUTE 24 (glass hall)$"
+    .string "NORTH: ROUTE 24 (hill path)$"
 
 CeruleanCity_Text_TrainerTipsHeldItems::
     .string "TRAINER TIPS\p"
@@ -102,8 +102,7 @@ CeruleanCity_Text_TrainerTipsHeldItems::
 
 CeruleanCity_Text_BikeShopSign::
     .string "GLASS HALL\n"
-    .string "Open to visitors.\p"
-    .string "North exit: ROUTE 24$"
+    .string "Open to visitors.$"
 
 CeruleanCity_Text_GymSign::
     .string "TOURMALIA POKéMON GYM\n"

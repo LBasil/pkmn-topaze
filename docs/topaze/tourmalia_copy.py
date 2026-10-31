@@ -90,10 +90,10 @@ def cost(c):
     if c in BUILD: return 500
     return 60 if grid[c[1]][c[0]] in WATER else 6
 # v26 : passage du NORD par le gros batiment : porte droite du dome (48,24) <-> trappe au pied de la colline (48,17) (liaison virtuelle pour les calculs d'accessibilite)
-grid[17][48] = HATCH_ID; grid[18][48] = 97                  # v29 : echelle d'acces au toit du dome (haut = porte vers la salle)
+
 PASS = (48, 24); HATCH = (48, 17); PASSFRONT = (48, 25)
-LINK = {PASSFRONT: HATCH, HATCH: PASSFRONT}
-WALKC[PASS] = 1; WALKC[HATCH] = 1; DOORSET.add(PASS)
+LINK = {}
+DOORSET.add(PASS)
 def NB(c): return [(c[0] + dx, c[1] + dy) for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))] + ([LINK[c]] if c in LINK else [])
 def dij(srcs, targets):
     dist = {s: 0 for s in srcs}; prev = {}; pq = [(0, s) for s in srcs]; heapq.heapify(pq)
@@ -129,7 +129,7 @@ CARVED |= set(RIV) | set(FORCEPATH)
 STUBS = [S(c) for c in ((83, 32), (42, 45), (43, 45), (44, 45), (81, 0))]      # largeur des sorties = celle des anciennes sorties (retour depuis les routes voisines)
 CARVED |= set(STUBS)
 HUB = S((37, 26))
-FRONT = {k: S(v) for k, v in {'mart': (46, 30), 'gym': (55, 21), 'cave': (69, 26), 'th3': (42, 9), 'th4': (47, 15), 'th5': (35, 17), 'th6': (53, 33)}.items()}; FRONT['pass'] = PASSFRONT; FRONT['hatch'] = (48, 16)
+FRONT = {k: S(v) for k, v in {'mart': (46, 30), 'gym': (55, 21), 'cave': (69, 26), 'th3': (42, 9), 'th4': (47, 15), 'th5': (35, 17), 'th6': (53, 33)}.items()}; FRONT['hatch'] = (48, 16)
 EXITC = {'N': S((82, 0)), 'E': S((83, 31)), 'S': S((41, 45)), 'riv': S((71, 6))}
 # sortie ouest : bord gauche le moins couteux a relier ; 4 cases de large (Route 4 Est)
 _bw = (0, 36)
@@ -324,9 +324,8 @@ for o in d['object_events']:
     if o['graphics_id'] == 'OBJ_EVENT_GFX_CUT_TREE':
         o['x'], o['y'] = NPC['cuttree']
 d['warp_events'] = d['warp_events'][:14] + [
-    {'x': PASS[0], 'y': PASS[1], 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY_GLASS_HALL', 'dest_warp_id': '3'},
-    {'x': HATCH[0], 'y': HATCH[1], 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY_GLASS_HALL', 'dest_warp_id': '0'}]
-d['warp_events'][7].update(dest_map='MAP_CERULEAN_CITY_GLASS_HALL', dest_warp_id='2')     # v28 : porte gauche du dome -> salle de verre
+    {'x': PASS[0], 'y': PASS[1], 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY_GLASS_HALL', 'dest_warp_id': '1'}]      # v30 : 2 portes du dome -> salle de verre ; le nord se rejoint a pied (sentier de la colline)
+d['warp_events'][7].update(dest_map='MAP_CERULEAN_CITY_GLASS_HALL', dest_warp_id='0')
 json.dump(d, open(f, 'w'), indent=2); open(f, 'a').write('\n')
 # connexions inverses (cote routes voisines) : ecart oppose
 for mp, nb in (('Route9', 'MAP_ROUTE9'), ('Route4East', 'MAP_ROUTE4_EAST'), ('Route24', 'MAP_ROUTE24'), ('Route5', 'MAP_ROUTE5')):

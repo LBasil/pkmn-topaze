@@ -264,7 +264,7 @@
       "y": 24,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_GLASS_HALL",
-      "dest_warp_id": "2"
+      "dest_warp_id": "0"
     },
     {
       "x": 0,
@@ -313,14 +313,7 @@
       "y": 24,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_GLASS_HALL",
-      "dest_warp_id": "3"
-    },
-    {
-      "x": 48,
-      "y": 17,
-      "elevation": 0,
-      "dest_map": "MAP_CERULEAN_CITY_GLASS_HALL",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [
