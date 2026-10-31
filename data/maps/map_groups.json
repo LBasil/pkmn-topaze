@@ -617,7 +617,8 @@
   ],
   "gMapGroup_IndoorRoute6": [
     "Route6_NorthEntrance",
-    "Route6_UnusedHouse"
+    "Route6_UnusedHouse",
+    "CeruleanCity_GateEast"
   ],
   "gMapGroup_IndoorRoute7": [
     "Route7_EastEntrance"

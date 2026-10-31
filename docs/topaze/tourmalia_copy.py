@@ -14,6 +14,7 @@ X0 = 22                                                    # coupe de la zone ou
 grid = [r[X0:] for r in grid]
 H, W = len(grid), len(grid[0]); NM = len(mts)
 S = lambda c: (c[0] - X0, c[1])
+TH6 = [[grid[_y][_x] for _x in range(29, 34)] for _y in range(27, 36)]       # v31 : cabane au bord de l'eau (5 x 9 cases) recopiee en cabane-portail
 # retouches demandees par Basil : cabane coupee en haut a gauche retiree, ponts de corde (decoratifs, ne menent nulle part) et pont de rondins sans issue retires
 for _x0, _y0, _x1, _y1 in ((0, 1, 4, 9), (7, 1, 14, 9), (2, 13, 6, 20), (28, 2, 33, 10)):       # cabanes sans porte (inaccessibles) -> foret
     for _y in range(_y0, _y1 + 1):
@@ -25,6 +26,9 @@ for _y in range(H):
     for _x in range(W):
         if grid[_y][_x] in (58, 59, 60, 61, 82, 83, 84): grid[_y][_x] = 1
 for _x, _y in ((42, 9), (43, 9), (42, 10), (43, 10)): grid[_y][_x] = 6
+GATE_E = (57, 22)                                                          # v31 : cabane-portail est (porte (59,27), echelle (59,30)) : plus de raccord direct Tourmalia / Route 9
+for _j, _row in enumerate(TH6):
+    for _i, _v in enumerate(_row): grid[GATE_E[1] + _j][GATE_E[0] + _i] = _v
 # v25 : route OUEST droite, large (4 cases) et lisible : du bord gauche au pied du pont (grille de pave + bas-cotes d'herbe)
 for _x in range(0, 11):
     grid[36][_x] = 45; grid[37][_x] = 98; grid[38][_x] = 98; grid[39][_x] = 45
@@ -66,6 +70,7 @@ for x0, y0, x1, y1 in ((14, 22, 17, 25), (23, 26, 26, 29), (30, 16, 36, 20), (40
 DOORS = {'center': (37, 25), 'mart': (46, 29), 'gym': (55, 20), 'cave': (69, 24),
          'th3': (42, 8), 'th4': (47, 14), 'th5': (35, 16), 'th6': (53, 32)}
 DOORS = {k: S(v) for k, v in DOORS.items()}
+DOORS['gateE'] = (59, 27)
 PARKED = {'th1': (0, 0), 'th2': (0, 1)}                  # cabanes 1 et 2 coupees : portes garees dans la foret
 SIGNC = {'city': S((40, 39)), 'gym': S((51, 19)), 'bike': S((66, 29)), 'tips': S((37, 16))}
 BUILD |= set(SIGNC.values()); BUILD |= {S(c) for c in ((36, 16), (70, 24))}
@@ -126,15 +131,15 @@ for _x in range(0, 3):                                   # arbres flottant sur l
     grid[32][_x] = 104; grid[33][_x] = grid[33][3]
 FORCEPATH = [(26, 31), (27, 31), (27, 32), (27, 33), (28, 33), (29, 33)]   # approche lisible de la cabane au bord de l'eau (th6)
 CARVED |= set(RIV) | set(FORCEPATH)
-STUBS = [S(c) for c in ((83, 32), (42, 45), (43, 45), (44, 45), (81, 0))]      # largeur des sorties = celle des anciennes sorties (retour depuis les routes voisines)
+STUBS = [S(c) for c in ((42, 45), (43, 45), (44, 45), (81, 0))]      # largeur des sorties = celle des anciennes sorties (retour depuis les routes voisines)
 CARVED |= set(STUBS)
 HUB = S((37, 26))
-FRONT = {k: S(v) for k, v in {'mart': (46, 30), 'gym': (55, 21), 'cave': (69, 26), 'th3': (42, 9), 'th4': (47, 15), 'th5': (35, 17), 'th6': (53, 33)}.items()}; FRONT['hatch'] = (48, 16)
-EXITC = {'N': S((82, 0)), 'E': S((83, 31)), 'S': S((41, 45)), 'riv': S((71, 6))}
+FRONT = {k: S(v) for k, v in {'mart': (46, 30), 'gym': (55, 21), 'cave': (69, 26), 'th3': (42, 9), 'th4': (47, 15), 'th5': (35, 17), 'th6': (53, 33)}.items()}; FRONT['hatch'] = (48, 16); FRONT['gateE'] = (59, 28)
+EXITC = {'N': S((82, 0)), 'E': (59, 31), 'S': S((41, 45)), 'riv': S((71, 6))}
 # sortie ouest : bord gauche le moins couteux a relier ; 4 cases de large (Route 4 Est)
 _bw = (0, 36)
 # chemin de la sortie est : sentier sinueux (1 a 2 de large, 1 seule case au portail) au lieu d'une ligne droite
-EPATH = [(x, 31) for x in range(51, 62)] + [(x, 30) for x in (52, 53, 54, 59, 60)]
+EPATH = [(x, 31) for x in range(51, 60)] + [(x, 30) for x in (52, 53, 54)]
 CARVED |= set(EPATH)
 EXITC['W'] = (0, 36); STUBS += [(0, 36 + i) for i in (1, 2, 3)]; CARVED |= set(STUBS)
 todo = dict(FRONT); todo.update(EXITC)
@@ -240,7 +245,8 @@ def flood_wo(cells, start=HUB):
 # depuis la sortie OUEST (arrivee de la Route 4 Est), avant billet/badge : tout le coeur de la ville doit rester accessible
 _ban = {NPC['cuttree'], NPC['slowbro_block'], NPC['lass_block']} | {(x, 12) for x in (48, 49, 50)}
 _fw = flood_wo(_ban, EXITC['W'])
-for _k, _c in list(FRONT.items()) + [('center', S((37, 26)))]: assert _c in _fw, ('inaccessible depuis l ouest', _k, _c)
+for _k, _c in list(FRONT.items()) + [('center', S((37, 26)))]:
+    if _k != 'gateE': assert _c in _fw, ('inaccessible depuis l ouest', _k, _c)
 for _k in ('N', 'E', 'S'): assert EXITC[_k] not in _fw or _k == 'N' and False or EXITC[_k] not in _fw, ('sortie ouverte sans condition', _k)
 assert EXITC['E'] not in flood_wo({NPC['cuttree']}), 'est sans arbre ?!'
 assert EXITC['S'] not in flood_wo({NPC['slowbro_block']}), 'sud sans barrage'
@@ -312,6 +318,7 @@ json.dump({'w': W, 'h': H, 'blocked': [list(c) for c in sorted(c for c in G if (
 # connexions : ecart = case de sortie - case locale du voisin
 f = 'data/maps/CeruleanCity/map.json'; d = json.load(open(f))
 OFF = {'MAP_ROUTE9': EXITC['E'][1] - 8, 'MAP_ROUTE4_EAST': EXITC['W'][1] - 14, 'MAP_ROUTE24': EXITC['N'][0] - 11, 'MAP_ROUTE5': EXITC['S'][0] - 22}
+d['connections'] = [c for c in d['connections'] if c['map'] != 'MAP_ROUTE9']        # v31 : l'est passe par la cabane-portail
 for c in d['connections']: c['offset'] = OFF[c['map']]
 # declencheurs du rival (3 colonnes x=70..72, ligne y=12) + sorties
 for c in d['coord_events']:
@@ -325,10 +332,11 @@ for o in d['object_events']:
         o['x'], o['y'] = NPC['cuttree']
 d['warp_events'] = d['warp_events'][:14] + [
     {'x': PASS[0], 'y': PASS[1], 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY_GLASS_HALL', 'dest_warp_id': '1'}]      # v30 : 2 portes du dome -> salle de verre ; le nord se rejoint a pied (sentier de la colline)
+d['warp_events'].append({'x': 59, 'y': 27, 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY_GATE_EAST', 'dest_warp_id': '0'})
 d['warp_events'][7].update(dest_map='MAP_CERULEAN_CITY_GLASS_HALL', dest_warp_id='0')
 json.dump(d, open(f, 'w'), indent=2); open(f, 'a').write('\n')
 # connexions inverses (cote routes voisines) : ecart oppose
-for mp, nb in (('Route9', 'MAP_ROUTE9'), ('Route4East', 'MAP_ROUTE4_EAST'), ('Route24', 'MAP_ROUTE24'), ('Route5', 'MAP_ROUTE5')):
+for mp, nb in (('Route4East', 'MAP_ROUTE4_EAST'), ('Route24', 'MAP_ROUTE24'), ('Route5', 'MAP_ROUTE5')):
     fn = 'data/maps/%s/map.json' % mp; dd = json.load(open(fn))
     for c in dd['connections']:
         if c['map'] == 'MAP_CERULEAN_CITY': c['offset'] = -OFF[nb]
