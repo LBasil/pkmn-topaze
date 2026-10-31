@@ -1,11 +1,11 @@
 # v32 : cabane-portail cote ROUTE 9 : copie de la cabane sur arbre de Tourmalia (5 x 8 cases) injectee dans le tileset de la Route 9
-# (nouvelles tuiles + 2 palettes libres 6 et 8 du tileset secondaire gTileset_CeladonRoute9V2 + nouvelles metatuiles), posee a l'extremite ouest de la Route 9.
+# (nouvelles tuiles + 2 palettes libres 6 (primaire, propre a la Route 9) et 8 (secondaire) de gTileset_GeneralRoute9V2/CeladonRoute9V2 + nouvelles metatuiles), posee a l'extremite ouest de la Route 9.
 # Porte (2,4), echelle (2,7). Rejouable : repart toujours des fichiers d'origine sauvegardes dans docs/topaze/route9_gate/orig_*.
 import pickle, struct, os, shutil
 import numpy as np
 from PIL import Image
-SEC = 'data/tilesets/secondary/celadon_route9v2/'; OD = 'docs/topaze/route9_gate/'; MAPBIN = 'data/layouts/Route9/map.bin'
-FILES = {'tiles.png': SEC + 'tiles.png', 'metatiles.bin': SEC + 'metatiles.bin', 'metatile_attributes.bin': SEC + 'metatile_attributes.bin', '06.pal': SEC + 'palettes/06.pal', '08.pal': SEC + 'palettes/08.pal', 'map.bin': MAPBIN}
+SEC = 'data/tilesets/secondary/celadon_route9v2/'; PRI = 'data/tilesets/primary/general_route9v2/'; OD = 'docs/topaze/route9_gate/'; MAPBIN = 'data/layouts/Route9/map.bin'
+FILES = {'tiles.png': SEC + 'tiles.png', 'metatiles.bin': SEC + 'metatiles.bin', 'metatile_attributes.bin': SEC + 'metatile_attributes.bin', '06.pal': PRI + 'palettes/06.pal', '08.pal': SEC + 'palettes/08.pal', 'map.bin': MAPBIN}
 os.makedirs(OD, exist_ok=True)
 for k, p in FILES.items():
     o = OD + 'orig_' + k
@@ -27,7 +27,7 @@ for g in (0, 1):
 BANK = (6, 8)
 for g, b in enumerate(BANK):
     cols = [(0, 0, 0)] + [tuple((int(c) & 0xf8) | (int(c) >> 5) for c in p) for p in pals[g]]
-    open(SEC + 'palettes/%02d.pal' % b, 'w').write('JASC-PAL\r\n0100\r\n16\r\n' + ''.join('%d %d %d\r\n' % c for c in cols))
+    open((PRI if b < 7 else SEC) + 'palettes/%02d.pal' % b, 'w').write('JASC-PAL\r\n0100\r\n16\r\n' + ''.join('%d %d %d\r\n' % c for c in cols))
 timg = Image.open(SEC + 'tiles.png'); tw = timg.width // 8; nt0 = tw * (timg.height // 8)
 TL = {}; newt = []
 def tile_for(k):
