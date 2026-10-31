@@ -51,6 +51,13 @@
       "elevation": 3,
       "dest_map": "MAP_CERULEAN_CAVE_1F",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "elevation": 3,
+      "dest_map": "MAP_CERULEAN_CITY",
+      "dest_warp_id": "16"
     }
   ],
   "coord_events": [

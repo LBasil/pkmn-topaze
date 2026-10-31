@@ -14,6 +14,8 @@ for k, p in FILES.items():
 grid, mts = pickle.load(open('docs/topaze/tourmalia_copy/grid.pkl', 'rb'))
 X0 = 22; BX, BY, BW, BH = 29, 28, 5, 8                       # bloc (coordonnees ville) : x 29..33, y 28..35
 block = [[grid[BY + j][X0 + BX + i] for i in range(BW)] for j in range(BH)]
+EXT = [11, 37, 7, 64, 70, 53, 77, 16]                       # v33 : cabane longue vers la GAUCHE depuis la route (porte a l'est de la cabane, corps etire vers l'ouest)
+block = [r[:1] + [EXT[_j]] * 4 + r[1:] for _j, r in enumerate(block)]; BW = 9; DOORX = 6
 uniq = sorted({v for r in block for v in r})
 subs = {(m, q): mts[m][(q // 2) * 8:(q // 2) * 8 + 8, (q % 2) * 8:(q % 2) * 8 + 8].astype(np.uint8) for m in uniq for q in range(4)}
 def is_green(t): p = t.reshape(-1, 3).astype(int); return bool(((p[:, 1] > p[:, 0] + 8) & (p[:, 1] >= p[:, 2])).mean() > 0.5)
@@ -53,6 +55,6 @@ W9, H9 = 72, 20; g9 = list(struct.unpack('<%dH' % (W9 * H9), open(MAPBIN, 'rb').
 WALKB = {53, 62, 78, 97, 70}
 for j in range(BH):
     for i in range(BW):
-        v = block[j][i]; g9[j * W9 + i] = ((0x3000 if v in WALKB else 0x400) | newid[v])
+        v = block[j][i]; g9[j * W9 + i] = ((0x3000 if v in WALKB and not (v == 70 and i != DOORX) else 0x400) | newid[v])
 open(MAPBIN, 'wb').write(struct.pack('<%dH' % len(g9), *g9))
-print('cabane Route 9 : %d metatuiles, %d tuiles, porte (2,4), echelle (2,7)' % (len(uniq), len(newt)))
+print('cabane Route 9 : %d metatuiles, %d tuiles, porte (6,4), echelle (6,7)' % (len(uniq), len(newt)))

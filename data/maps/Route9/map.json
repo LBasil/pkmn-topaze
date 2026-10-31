@@ -191,7 +191,7 @@
   ],
   "warp_events": [
     {
-      "x": 2,
+      "x": 6,
       "y": 4,
       "elevation": 0,
       "dest_map": "MAP_CERULEAN_CITY_GATE_EAST",

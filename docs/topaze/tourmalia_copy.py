@@ -26,7 +26,9 @@ for _y in range(H):
     for _x in range(W):
         if grid[_y][_x] in (58, 59, 60, 61, 82, 83, 84): grid[_y][_x] = 1
 for _x, _y in ((42, 9), (43, 9), (42, 10), (43, 10)): grid[_y][_x] = 6
-GATE_E = (57, 22)                                                          # v31 : cabane-portail est (porte (59,27), echelle (59,30)) : plus de raccord direct Tourmalia / Route 9
+EXT = [25, 11, 37, 7, 64, 70, 53, 77, 16]                                  # v33 : cabane-portail LONGUE (9 cases) : le corps de la cabane s'etire vers la droite (on la traverse d'ouest en est)
+TH6 = [r[:4] + [EXT[_j]] * 4 + r[4:] for _j, r in enumerate(TH6)]
+GATE_E = (53, 22)                                                          # v31 : cabane-portail est (porte (59,27), echelle (59,30)) : plus de raccord direct Tourmalia / Route 9
 for _j, _row in enumerate(TH6):
     for _i, _v in enumerate(_row): grid[GATE_E[1] + _j][GATE_E[0] + _i] = _v
 # v25 : route OUEST droite, large (4 cases) et lisible : du bord gauche au pied du pont (grille de pave + bas-cotes d'herbe)
@@ -70,7 +72,7 @@ for x0, y0, x1, y1 in ((14, 22, 17, 25), (23, 26, 26, 29), (30, 16, 36, 20), (40
 DOORS = {'center': (37, 25), 'mart': (46, 29), 'gym': (55, 20), 'cave': (69, 24),
          'th3': (42, 8), 'th4': (47, 14), 'th5': (35, 16), 'th6': (53, 32)}
 DOORS = {k: S(v) for k, v in DOORS.items()}
-DOORS['gateE'] = (59, 27)
+DOORS['gateE'] = (55, 27)
 PARKED = {'th1': (0, 0), 'th2': (0, 1)}                  # cabanes 1 et 2 coupees : portes garees dans la foret
 SIGNC = {'city': S((40, 39)), 'gym': S((51, 19)), 'bike': S((66, 29)), 'tips': S((37, 16))}
 BUILD |= set(SIGNC.values()); BUILD |= {S(c) for c in ((36, 16), (70, 24))}
@@ -96,9 +98,12 @@ def cost(c):
     return 60 if grid[c[1]][c[0]] in WATER else 6
 # v26 : passage du NORD par le gros batiment : porte droite du dome (48,24) <-> trappe au pied de la colline (48,17) (liaison virtuelle pour les calculs d'accessibilite)
 
-PASS = (48, 24); HATCH = (48, 17); PASSFRONT = (48, 25)
-LINK = {}
-DOORSET.add(PASS)
+# v33 : le nord se prend de nouveau PAR le batiment : porte de verre double au pied de la colline (47..48,18) + paillasson (47..48,17), sortie nord de la salle
+for _x in (47, 48): grid[18][_x] = 248; grid[17][_x] = 253
+PASS = (48, 24); HATCH = (48, 18); HATCH2 = (47, 18); PASSFRONT = (48, 25)
+LINK = {PASSFRONT: (48, 17), (48, 17): PASSFRONT}
+WALKC[PASS] = 1; WALKC[HATCH] = 1; WALKC[HATCH2] = 1; WALKC[(47, 17)] = 1; WALKC[(48, 17)] = 1
+DOORSET.add(PASS); DOORSET.add(HATCH); DOORSET.add(HATCH2)
 def NB(c): return [(c[0] + dx, c[1] + dy) for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))] + ([LINK[c]] if c in LINK else [])
 def dij(srcs, targets):
     dist = {s: 0 for s in srcs}; prev = {}; pq = [(0, s) for s in srcs]; heapq.heapify(pq)
@@ -134,12 +139,12 @@ CARVED |= set(RIV) | set(FORCEPATH)
 STUBS = [S(c) for c in ((42, 45), (43, 45), (44, 45), (81, 0))]      # largeur des sorties = celle des anciennes sorties (retour depuis les routes voisines)
 CARVED |= set(STUBS)
 HUB = S((37, 26))
-FRONT = {k: S(v) for k, v in {'mart': (46, 30), 'gym': (55, 21), 'cave': (69, 26), 'th3': (42, 9), 'th4': (47, 15), 'th5': (35, 17), 'th6': (53, 33)}.items()}; FRONT['hatch'] = (48, 16); FRONT['gateE'] = (59, 28)
-EXITC = {'N': S((82, 0)), 'E': (59, 31), 'S': S((41, 45)), 'riv': S((71, 6))}
+FRONT = {k: S(v) for k, v in {'mart': (46, 30), 'gym': (55, 21), 'cave': (69, 26), 'th3': (42, 9), 'th4': (47, 15), 'th5': (35, 17), 'th6': (53, 33)}.items()}; FRONT['hatch'] = (48, 16); FRONT['gateE'] = (55, 28)
+EXITC = {'N': S((82, 0)), 'E': (55, 31), 'S': S((41, 45)), 'riv': S((71, 6))}
 # sortie ouest : bord gauche le moins couteux a relier ; 4 cases de large (Route 4 Est)
 _bw = (0, 36)
 # chemin de la sortie est : sentier sinueux (1 a 2 de large, 1 seule case au portail) au lieu d'une ligne droite
-EPATH = [(x, 31) for x in range(51, 60)] + [(x, 30) for x in (52, 53, 54)]
+EPATH = [(x, 31) for x in range(51, 57)] + [(52, 30)]
 CARVED |= set(EPATH)
 EXITC['W'] = (0, 36); STUBS += [(0, 36 + i) for i in (1, 2, 3)]; CARVED |= set(STUBS)
 todo = dict(FRONT); todo.update(EXITC)
@@ -222,7 +227,7 @@ NPC['camper'] = near((4, 31), 12, 2); NPC['oldman'] = near(S((64, 32)), 6); NPC[
 # est : couloir creuse (75..83, 31) ; arbre a couper + policier a la porte
 corr = sorted(c for c in CARVED if c[1] == 31 and c[0] >= 75 - X0)
 assert corr, 'pas de couloir est'
-gate = corr[len(corr) // 2]
+gate = (54, 31)                          # v33 : l'arbre est avant le pied de l'echelle (55,31), pas dessus
 NPC['cuttree'] = gate; NPC['policeman_block'] = gate
 NPC['policeman'] = near((corr[0][0] - 1, 31), 6)
 # sud : echelle (41,43..45) ; arbre devant, Spectrum + la fille sur l'echelle (barrage) puis a cote (repos)
@@ -278,6 +283,9 @@ for _k in [k for k in G if ((G[k] & 0x3ff) - 640) in (195, 224, 241)]:
     _v = (G[_k] & 0x3ff) - 640
     if _v not in PUDDLE: ENT.append(list(ENT[_v])); ATT.append(0); NM += 1; PUDDLE[_v] = NM - 1
     G[_k] = 0x3000 | (640 + PUDDLE[_v]); print('centre de mare marchable', _k)
+# v33 : portes de verre du pied de la colline : copie de 248 sans comportement de porte (on arrive SUR la case, pas de pas force vers le toit)
+ENT.append(list(ENT[248])); ATT.append(0); NM += 1
+for _k in (HATCH, HATCH2): G[_k] = 0x3000 | (640 + NM - 1)
 # ------------------------------------------------------------------ dumps pour tourmalia_river_events.py
 json.dump({k: [list(c)] for k, c in {**DOORS, **PARKED}.items() if k != 'cave'}, open('/tmp/tourmalia_doors.json', 'w'))
 json.dump({k: list(v) for k, v in NPC.items()}, open('/tmp/tourmalia_npc.json', 'w'))
@@ -331,8 +339,10 @@ for o in d['object_events']:
     if o['graphics_id'] == 'OBJ_EVENT_GFX_CUT_TREE':
         o['x'], o['y'] = NPC['cuttree']
 d['warp_events'] = d['warp_events'][:14] + [
-    {'x': PASS[0], 'y': PASS[1], 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY_GLASS_HALL', 'dest_warp_id': '1'}]      # v30 : 2 portes du dome -> salle de verre ; le nord se rejoint a pied (sentier de la colline)
-d['warp_events'].append({'x': 59, 'y': 27, 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY_GATE_EAST', 'dest_warp_id': '0'})
+    {'x': PASS[0], 'y': PASS[1], 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY_GLASS_HALL', 'dest_warp_id': '1'},
+    {'x': HATCH2[0], 'y': HATCH2[1], 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY_GLASS_HALL', 'dest_warp_id': '3'},
+    {'x': HATCH[0], 'y': HATCH[1], 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY_GLASS_HALL', 'dest_warp_id': '3'}]      # v30 : 2 portes du dome -> salle de verre ; le nord se rejoint a pied (sentier de la colline)
+d['warp_events'].append({'x': 55, 'y': 27, 'elevation': 0, 'dest_map': 'MAP_CERULEAN_CITY_GATE_EAST', 'dest_warp_id': '0'})
 d['warp_events'][7].update(dest_map='MAP_CERULEAN_CITY_GLASS_HALL', dest_warp_id='0')
 json.dump(d, open(f, 'w'), indent=2); open(f, 'a').write('\n')
 # connexions inverses (cote routes voisines) : ecart oppose
