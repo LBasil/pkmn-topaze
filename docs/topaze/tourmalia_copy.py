@@ -50,7 +50,7 @@ for m in mts:
             t, pi = tile_of(m[ty * 8:ty * 8 + 8, tx * 8:tx * 8 + 8]); bot.append(t | (pi << 12))
     ENT.append(bot + [0, 0, 0, 0])
 NT = len(TILE_LIST)
-HATCH_ID = 229                    # metatuile 'trappe' = aspect de la porte sombre, comportement normal (pas d'animation de porte)
+HATCH_ID = 97                    # metatuile 'trappe' = aspect de la porte sombre, comportement normal (pas d'animation de porte)
 assert NT <= 640 + 384, ('trop de tuiles', NT)
 
 # ------------------------------------------------------------------ classification a la main
@@ -90,7 +90,7 @@ def cost(c):
     if c in BUILD: return 500
     return 60 if grid[c[1]][c[0]] in WATER else 6
 # v26 : passage du NORD par le gros batiment : porte droite du dome (48,24) <-> trappe au pied de la colline (48,17) (liaison virtuelle pour les calculs d'accessibilite)
-grid[17][48] = HATCH_ID
+grid[17][48] = HATCH_ID; grid[18][48] = 97                  # v29 : echelle d'acces au toit du dome (haut = porte vers la salle)
 PASS = (48, 24); HATCH = (48, 17); PASSFRONT = (48, 25)
 LINK = {PASSFRONT: HATCH, HATCH: PASSFRONT}
 WALKC[PASS] = 1; WALKC[HATCH] = 1; DOORSET.add(PASS)

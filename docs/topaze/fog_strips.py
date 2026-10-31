@@ -432,6 +432,8 @@ for g in GR:
         x0,y0,w,h=j['rect']; mm=j['mm']; data=[]; tot=0.0;nn=0
         for y in range(y0,y0+h):
             for x in range(x0,x0+w):
+                if a=='CeruleanCity' and not (0<=x<LB.w and 0<=y<LB.h):      # v29 : hors de la route voisine = bordure de TOURMALIA (foret sombre), pas la bordure de la route (gros arbres clairs)
+                    data.append((640+1)|(3<<10)); continue
                 v=cv(LB,x,y); nid,blk,_,e=mm[v&0x3ff]
                 coll=(v>>10)&3
                 if blk: coll=1
