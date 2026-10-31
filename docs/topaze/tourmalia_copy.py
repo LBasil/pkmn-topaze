@@ -99,10 +99,9 @@ def cost(c):
 # v26 : passage du NORD par le gros batiment : porte droite du dome (48,24) <-> trappe au pied de la colline (48,17) (liaison virtuelle pour les calculs d'accessibilite)
 
 # v33d : le nord se prend PAR le batiment : deux portes sombres (comme celles du sud) sur le bord nord du dome (47..48,18) + paillasson (47..48,17) (choix de Basil : « on sort et on rentre comme si c'etait une porte »)
-for _x in (47, 48): grid[18][_x] = 244; grid[17][_x] = 253
 PASS = (48, 24); HATCH = (48, 18); HATCH2 = (47, 18); PASSFRONT = (48, 25)
 LINK = {PASSFRONT: (48, 17), (48, 17): PASSFRONT}
-WALKC[PASS] = 1; WALKC[HATCH] = 1; WALKC[HATCH2] = 1; WALKC[(47, 17)] = 1; WALKC[(48, 17)] = 1
+WALKC[PASS] = 1; WALKC[HATCH] = 1; WALKC[HATCH2] = 1; WALKC[(47, 17)] = 1; WALKC[(48, 17)] = 1      # v33e : AUCUNE case speciale : le toit reste tel quel, on y entre/sort simplement
 DOORSET.add(PASS); DOORSET.add(HATCH); DOORSET.add(HATCH2)
 def NB(c): return [(c[0] + dx, c[1] + dy) for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))] + ([LINK[c]] if c in LINK else [])
 def dij(srcs, targets):
@@ -283,9 +282,6 @@ for _k in [k for k in G if ((G[k] & 0x3ff) - 640) in (195, 224, 241)]:
     _v = (G[_k] & 0x3ff) - 640
     if _v not in PUDDLE: ENT.append(list(ENT[_v])); ATT.append(0); NM += 1; PUDDLE[_v] = NM - 1
     G[_k] = 0x3000 | (640 + PUDDLE[_v]); print('centre de mare marchable', _k)
-# v33d : portes du nord = copie de 244 SANS comportement de porte (on arrive SUR la case, pas pousse vers le toit)
-ENT.append(list(ENT[244])); ATT.append(0); NM += 1
-for _k in (HATCH, HATCH2): G[_k] = 0x3000 | (640 + NM - 1)
 # ------------------------------------------------------------------ dumps pour tourmalia_river_events.py
 json.dump({k: [list(c)] for k, c in {**DOORS, **PARKED}.items() if k != 'cave'}, open('/tmp/tourmalia_doors.json', 'w'))
 json.dump({k: list(v) for k, v in NPC.items()}, open('/tmp/tourmalia_npc.json', 'w'))
