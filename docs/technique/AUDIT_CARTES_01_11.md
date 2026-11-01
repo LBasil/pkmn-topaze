@@ -26,7 +26,7 @@ Chemin principal complet : aucune zone coupée sur le parcours principal (villes
 2. **Bourg Quartz** : 3 portes de toit (25..27, 4..5) inaccessibles → retirées ; la sortie arrière de la résidence (1F) ramène à la porte principale. CORRIGÉ.
 3. **Route 24** : objet caché Baie Pêcha (19,4) dans un recoin muré (corniche) → déplacé en (16,3), accessible. CORRIGÉ.
 4. Panneaux d'Hematown (53,24) et du manoir de Bourg Quartz (24,12) : FAUX POSITIFS de la méthode (accessibles). Panneaux décor de Grenalux (jardin de baies) : voulus.
-5. **Intérieurs orphelins** (aucune porte ne mène à eux) : `Route2_House`, `Route2_EastBuilding`, `Route16_NorthEntrance_1F/2F`, `SaffronCity_Connection`, plus 137 cartes « gabarit » (ANCIENT_LIBRARY, APOTHECARY, BERRY_BROOK… marin générique) : décision de Basil (garder ou purger).
+5. **Intérieurs orphelins** (aucune porte ne mène à eux) : `Route2_House`, `Route2_EastBuilding`, `Route16_NorthEntrance_1F/2F`, `SaffronCity_Connection`, (CORRECTION : les ~137 autres cartes « non reliées » — ANCIENT_LIBRARY, BUZZING_MEADOW, APOTHECARY… — sont les zones sauvages et boutiques des lots 3-5, atteintes par les passeurs d'Amethiolite via `warp` scripté ; ce ne sont PAS des orphelines. Mon analyse ne suit que les warps de `map.json`. Ce sont des clones de routes provisoires, voir A_REFAIRE 29/10.)
 6. Tourmalia : Blue (48,6) et le policier (49,11) sont dans la zone nord réservée par script (voulu) ; sortie est = cabane-portail (3 connexions, voulu).
 Îles Sevii : non évaluées.
 
@@ -37,4 +37,4 @@ Moins de panneaux qu'à l'origine : Amethiolite 4 (origine 11), Tourmalia 4 (7),
 1. Tourmalia : 2–3 panneaux vers l'Arène (41–72 pas) et un axe ouest-est plus large (nécessite de dessiner des panneaux dans la carte : à valider avant).
 2. Amethiolite/Hematown : panneaux directionnels vers Arène et Centre ; raccourcis pour les culs-de-sac.
 3. Opanihrum : varier 3–4 maisons (couleurs/toits).
-4. Sort des 137 cartes gabarit et des intérieurs orphelins.
+4. Intérieurs orphelins listés ci-dessus (Route2_House, etc.) : garder ou supprimer. Les zones sauvages des lots 3-5 sont des clones de routes à redessiner un jour.
