@@ -1,7 +1,7 @@
 {
   "id": "MAP_IRON_FOREST",
   "name": "IronForest",
-  "layout": "LAYOUT_VIRIDIAN_FOREST",
+  "layout": "LAYOUT_IRON_FOREST",
   "music": "MUS_VIRIDIAN_FOREST",
   "region_map_section": "MAPSEC_VIRIDIAN_FOREST",
   "requires_flash": false,

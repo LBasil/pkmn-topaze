@@ -1,7 +1,7 @@
 {
   "id": "MAP_TRADE_DOCK",
   "name": "TradeDock",
-  "layout": "LAYOUT_THREE_ISLAND_BOND_BRIDGE",
+  "layout": "LAYOUT_TRADE_DOCK",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_BOND_BRIDGE",
   "requires_flash": false,

@@ -1,7 +1,7 @@
 {
   "id": "MAP_MIST_LAKE",
   "name": "MistLake",
-  "layout": "LAYOUT_ROUTE10",
+  "layout": "LAYOUT_MIST_LAKE",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_ROUTE_10",
   "requires_flash": false,

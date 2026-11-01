@@ -1,7 +1,7 @@
 {
   "id": "MAP_OUTCAST_SHORE",
   "name": "OutcastShore",
-  "layout": "LAYOUT_SIX_ISLAND_WATER_PATH",
+  "layout": "LAYOUT_OUTCAST_SHORE",
   "music": "MUS_SEVII_ROUTE",
   "region_map_section": "MAPSEC_WATER_PATH",
   "requires_flash": false,

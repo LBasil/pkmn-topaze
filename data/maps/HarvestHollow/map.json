@@ -1,7 +1,7 @@
 {
   "id": "MAP_HARVEST_HOLLOW",
   "name": "HarvestHollow",
-  "layout": "LAYOUT_ROUTE25",
+  "layout": "LAYOUT_HARVEST_HOLLOW",
   "music": "MUS_ROUTE24",
   "region_map_section": "MAPSEC_ROUTE_25",
   "requires_flash": false,

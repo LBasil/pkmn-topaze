@@ -1,7 +1,7 @@
 {
   "id": "MAP_POND_OF_SONG",
   "name": "PondOfSong",
-  "layout": "LAYOUT_ROUTE25",
+  "layout": "LAYOUT_POND_OF_SONG",
   "music": "MUS_ROUTE24",
   "region_map_section": "MAPSEC_ROUTE_25",
   "requires_flash": false,

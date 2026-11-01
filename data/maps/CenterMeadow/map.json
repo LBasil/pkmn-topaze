@@ -1,7 +1,7 @@
 {
   "id": "MAP_CENTER_MEADOW",
   "name": "CenterMeadow",
-  "layout": "LAYOUT_SAFARI_ZONE_CENTER",
+  "layout": "LAYOUT_CENTER_MEADOW",
   "music": "MUS_EVOLUTION",
   "region_map_section": "MAPSEC_KANTO_SAFARI_ZONE",
   "requires_flash": false,

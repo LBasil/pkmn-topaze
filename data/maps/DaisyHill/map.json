@@ -1,7 +1,7 @@
 {
   "id": "MAP_DAISY_HILL",
   "name": "DaisyHill",
-  "layout": "LAYOUT_ROUTE25",
+  "layout": "LAYOUT_DAISY_HILL",
   "music": "MUS_ROUTE24",
   "region_map_section": "MAPSEC_ROUTE_25",
   "requires_flash": false,

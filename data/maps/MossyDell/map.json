@@ -1,7 +1,7 @@
 {
   "id": "MAP_MOSSY_DELL",
   "name": "MossyDell",
-  "layout": "LAYOUT_VIRIDIAN_FOREST",
+  "layout": "LAYOUT_MOSSY_DELL",
   "music": "MUS_VIRIDIAN_FOREST",
   "region_map_section": "MAPSEC_VIRIDIAN_FOREST",
   "requires_flash": false,

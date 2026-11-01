@@ -1,7 +1,7 @@
 {
   "id": "MAP_DEEP_EMBER_CAVE",
   "name": "DeepEmberCave",
-  "layout": "LAYOUT_SAFARI_ZONE_CENTER",
+  "layout": "LAYOUT_DEEP_EMBER_CAVE",
   "music": "MUS_EVOLUTION",
   "region_map_section": "MAPSEC_KANTO_SAFARI_ZONE",
   "requires_flash": false,

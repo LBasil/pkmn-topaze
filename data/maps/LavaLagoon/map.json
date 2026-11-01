@@ -1,7 +1,7 @@
 {
   "id": "MAP_LAVA_LAGOON",
   "name": "LavaLagoon",
-  "layout": "LAYOUT_SAFARI_ZONE_WEST",
+  "layout": "LAYOUT_LAVA_LAGOON",
   "music": "MUS_EVOLUTION",
   "region_map_section": "MAPSEC_KANTO_SAFARI_ZONE",
   "requires_flash": false,

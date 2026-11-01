@@ -1,7 +1,7 @@
 {
   "id": "MAP_FRIENDS_CLEARING",
   "name": "FriendsClearing",
-  "layout": "LAYOUT_THREE_ISLAND_BERRY_FOREST",
+  "layout": "LAYOUT_FRIENDS_CLEARING",
   "music": "MUS_VIRIDIAN_FOREST",
   "region_map_section": "MAPSEC_BERRY_FOREST",
   "requires_flash": false,

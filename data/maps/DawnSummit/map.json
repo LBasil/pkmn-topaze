@@ -1,7 +1,7 @@
 {
   "id": "MAP_DAWN_SUMMIT",
   "name": "DawnSummit",
-  "layout": "LAYOUT_ROUTE22",
+  "layout": "LAYOUT_DAWN_SUMMIT",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_ROUTE_22",
   "requires_flash": false,

@@ -1,7 +1,7 @@
 {
   "id": "MAP_LANTERN_MEADOW",
   "name": "LanternMeadow",
-  "layout": "LAYOUT_ROUTE25",
+  "layout": "LAYOUT_LANTERN_MEADOW",
   "music": "MUS_ROUTE24",
   "region_map_section": "MAPSEC_ROUTE_25",
   "requires_flash": false,

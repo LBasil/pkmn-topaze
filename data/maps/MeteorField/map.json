@@ -1,7 +1,7 @@
 {
   "id": "MAP_METEOR_FIELD",
   "name": "MeteorField",
-  "layout": "LAYOUT_SAFARI_ZONE_EAST",
+  "layout": "LAYOUT_METEOR_FIELD",
   "music": "MUS_EVOLUTION",
   "region_map_section": "MAPSEC_KANTO_SAFARI_ZONE",
   "requires_flash": false,

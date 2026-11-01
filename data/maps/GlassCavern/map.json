@@ -1,7 +1,7 @@
 {
   "id": "MAP_GLASS_CAVERN",
   "name": "GlassCavern",
-  "layout": "LAYOUT_SAFARI_ZONE_CENTER",
+  "layout": "LAYOUT_GLASS_CAVERN",
   "music": "MUS_EVOLUTION",
   "region_map_section": "MAPSEC_KANTO_SAFARI_ZONE",
   "requires_flash": false,

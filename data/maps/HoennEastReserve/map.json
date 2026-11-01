@@ -1,7 +1,7 @@
 {
   "id": "MAP_HOENN_EAST_RESERVE",
   "name": "HoennEastReserve",
-  "layout": "LAYOUT_FIVE_ISLAND_MEMORIAL_PILLAR",
+  "layout": "LAYOUT_HOENN_EAST_RESERVE",
   "music": "MUS_SEVII_ROUTE",
   "region_map_section": "MAPSEC_MEMORIAL_PILLAR",
   "requires_flash": false,

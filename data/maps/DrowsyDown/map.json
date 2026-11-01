@@ -1,7 +1,7 @@
 {
   "id": "MAP_DROWSY_DOWN",
   "name": "DrowsyDown",
-  "layout": "LAYOUT_ROUTE11",
+  "layout": "LAYOUT_DROWSY_DOWN",
   "music": "MUS_ROUTE11",
   "region_map_section": "MAPSEC_ROUTE_11",
   "requires_flash": false,

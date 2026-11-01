@@ -1,7 +1,7 @@
 {
   "id": "MAP_CRICK_POND",
   "name": "CrickPond",
-  "layout": "LAYOUT_ROUTE25",
+  "layout": "LAYOUT_CRICK_POND",
   "music": "MUS_ROUTE24",
   "region_map_section": "MAPSEC_ROUTE_25",
   "requires_flash": false,

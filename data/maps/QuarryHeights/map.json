@@ -1,7 +1,7 @@
 {
   "id": "MAP_QUARRY_HEIGHTS",
   "name": "QuarryHeights",
-  "layout": "LAYOUT_ROUTE4",
+  "layout": "LAYOUT_QUARRY_HEIGHTS",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_ROUTE_4",
   "requires_flash": false,

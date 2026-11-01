@@ -1,7 +1,7 @@
 {
   "id": "MAP_MIRROR_LABYRINTH",
   "name": "MirrorLabyrinth",
-  "layout": "LAYOUT_THREE_ISLAND_BOND_BRIDGE",
+  "layout": "LAYOUT_MIRROR_LABYRINTH",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_BOND_BRIDGE",
   "requires_flash": false,

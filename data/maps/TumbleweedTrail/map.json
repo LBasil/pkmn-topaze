@@ -1,7 +1,7 @@
 {
   "id": "MAP_TUMBLEWEED_TRAIL",
   "name": "TumbleweedTrail",
-  "layout": "LAYOUT_ROUTE22",
+  "layout": "LAYOUT_TUMBLEWEED_TRAIL",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_ROUTE_22",
   "requires_flash": false,

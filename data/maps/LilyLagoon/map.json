@@ -1,7 +1,7 @@
 {
   "id": "MAP_LILY_LAGOON",
   "name": "LilyLagoon",
-  "layout": "LAYOUT_ROUTE25",
+  "layout": "LAYOUT_LILY_LAGOON",
   "music": "MUS_ROUTE24",
   "region_map_section": "MAPSEC_ROUTE_25",
   "requires_flash": false,

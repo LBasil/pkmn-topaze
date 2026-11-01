@@ -1,7 +1,7 @@
 {
   "id": "MAP_SHELL_COAST",
   "name": "ShellCoast",
-  "layout": "LAYOUT_TWO_ISLAND_CAPE_BRINK",
+  "layout": "LAYOUT_SHELL_COAST",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_CAPE_BRINK",
   "requires_flash": false,

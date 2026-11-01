@@ -1,7 +1,7 @@
 {
   "id": "MAP_SILENT_HOLLOW",
   "name": "SilentHollow",
-  "layout": "LAYOUT_ROUTE16",
+  "layout": "LAYOUT_SILENT_HOLLOW",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_ROUTE_16",
   "requires_flash": false,

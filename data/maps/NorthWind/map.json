@@ -1,7 +1,7 @@
 {
   "id": "MAP_NORTH_WIND",
   "name": "NorthWind",
-  "layout": "LAYOUT_ROUTE4",
+  "layout": "LAYOUT_NORTH_WIND",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_ROUTE_4",
   "requires_flash": false,

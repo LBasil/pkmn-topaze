@@ -1,7 +1,7 @@
 {
   "id": "MAP_ECHO_GARDEN",
   "name": "EchoGarden",
-  "layout": "LAYOUT_FIVE_ISLAND_MEADOW",
+  "layout": "LAYOUT_ECHO_GARDEN",
   "music": "MUS_SEVII_ROUTE",
   "region_map_section": "MAPSEC_FIVE_ISLE_MEADOW",
   "requires_flash": false,

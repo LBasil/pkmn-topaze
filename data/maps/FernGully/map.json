@@ -1,7 +1,7 @@
 {
   "id": "MAP_FERN_GULLY",
   "name": "FernGully",
-  "layout": "LAYOUT_VIRIDIAN_FOREST",
+  "layout": "LAYOUT_FERN_GULLY",
   "music": "MUS_VIRIDIAN_FOREST",
   "region_map_section": "MAPSEC_VIRIDIAN_FOREST",
   "requires_flash": false,

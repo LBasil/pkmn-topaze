@@ -1,7 +1,7 @@
 {
   "id": "MAP_HIGH_PINES",
   "name": "HighPines",
-  "layout": "LAYOUT_VIRIDIAN_FOREST",
+  "layout": "LAYOUT_HIGH_PINES",
   "music": "MUS_VIRIDIAN_FOREST",
   "region_map_section": "MAPSEC_VIRIDIAN_FOREST",
   "requires_flash": false,

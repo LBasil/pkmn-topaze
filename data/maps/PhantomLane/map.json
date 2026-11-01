@@ -1,7 +1,7 @@
 {
   "id": "MAP_PHANTOM_LANE",
   "name": "PhantomLane",
-  "layout": "LAYOUT_ROUTE11",
+  "layout": "LAYOUT_PHANTOM_LANE",
   "music": "MUS_ROUTE11",
   "region_map_section": "MAPSEC_ROUTE_11",
   "requires_flash": false,

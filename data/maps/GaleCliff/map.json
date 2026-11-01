@@ -1,7 +1,7 @@
 {
   "id": "MAP_GALE_CLIFF",
   "name": "GaleCliff",
-  "layout": "LAYOUT_ROUTE16",
+  "layout": "LAYOUT_GALE_CLIFF",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_ROUTE_16",
   "requires_flash": false,

@@ -1,7 +1,7 @@
 {
   "id": "MAP_SOUL_PILLAR",
   "name": "SoulPillar",
-  "layout": "LAYOUT_FIVE_ISLAND_MEMORIAL_PILLAR",
+  "layout": "LAYOUT_SOUL_PILLAR",
   "music": "MUS_SEVII_ROUTE",
   "region_map_section": "MAPSEC_MEMORIAL_PILLAR",
   "requires_flash": false,

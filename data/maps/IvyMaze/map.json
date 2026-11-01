@@ -1,7 +1,7 @@
 {
   "id": "MAP_IVY_MAZE",
   "name": "IvyMaze",
-  "layout": "LAYOUT_VIRIDIAN_FOREST",
+  "layout": "LAYOUT_IVY_MAZE",
   "music": "MUS_VIRIDIAN_FOREST",
   "region_map_section": "MAPSEC_VIRIDIAN_FOREST",
   "requires_flash": false,

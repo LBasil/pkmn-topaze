@@ -1,7 +1,7 @@
 {
   "id": "MAP_FINAL_GATE",
   "name": "FinalGate",
-  "layout": "LAYOUT_SAFARI_ZONE_EAST",
+  "layout": "LAYOUT_FINAL_GATE",
   "music": "MUS_EVOLUTION",
   "region_map_section": "MAPSEC_KANTO_SAFARI_ZONE",
   "requires_flash": false,

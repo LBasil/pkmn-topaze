@@ -1,7 +1,7 @@
 {
   "id": "MAP_NOCTURNE_WOOD",
   "name": "NocturneWood",
-  "layout": "LAYOUT_VIRIDIAN_FOREST",
+  "layout": "LAYOUT_NOCTURNE_WOOD",
   "music": "MUS_VIRIDIAN_FOREST",
   "region_map_section": "MAPSEC_VIRIDIAN_FOREST",
   "requires_flash": false,
