@@ -165,3 +165,15 @@ CeruleanCity_Text_CaveSealed::
     .string "The grotto is sealed by a strange\n"
     .string "force. Not yet...\p"
     .string "The hall's north passage is open.$"
+
+CeruleanCity_Text_ExitSignNorth::
+    .string "NORTH:\nROUTE 24$"
+
+CeruleanCity_Text_ExitSignSouth::
+    .string "SOUTH:\nROUTE 5$"
+
+CeruleanCity_Text_ExitSignWest::
+    .string "WEST:\nROUTE 4 EAST$"
+
+CeruleanCity_Text_ExitSignEast::
+    .string "EAST GATE:\nROUTE 9$"

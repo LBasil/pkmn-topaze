@@ -1,9 +1,9 @@
 # Tourmalia v23 : copie exacte de la carte d'inspiration
 
-Les pixels de la ville viennent d'une capture de carte d'un **fan-game** que Basil a envoyee comme inspiration (auteur inconnu).
+Les pixels de la ville viennent d'une capture de carte d'un **fan-game** que Basil a envoyee comme inspiration (l'auteur est Basil lui-meme : accord donne le 01-11-2026).
 La carte est decoupee telle quelle en tuiles (copie exacte, aucune retouche artistique, 92 couleurs fusionnees en 36 pour tenir dans 9 palettes GBA).
 
-- **Prototype / usage prive uniquement.** Avant toute diffusion publique de la ROM : obtenir l'accord de l'auteur et le crediter, ou remplacer ces tuiles par des graphismes originaux.
+- **Accord de l'auteur obtenu** (Basil, 01-11-2026) : mentionner son nom dans le CREDITS.md racine (fait). Les tuiles restent derivees de graphismes Pokemon : usage fan-game non commercial uniquement.
 - Source : `34805252-image.png` (piece jointe de la conversation du 30-10), grille 16 px, decalage (10, 0), 84 x 46 cases.
 - Donnees derivees dans ce dossier : `grid.pkl` (indices de metatuiles + pixels), `pal.pkl` (fusion des couleurs + palettes), `crop.png` (recadrage).
 - Regenerer : `python3 docs/topaze/tourmalia_copy.py` puis `tourmalia_river_events.py` puis `fog_strips.py`.

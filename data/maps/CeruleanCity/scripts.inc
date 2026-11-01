@@ -364,3 +364,19 @@ CeruleanCity_Movement_CaveBack::
 CeruleanCity_EventScript_CaveOpen::
 	releaseall
 	end
+
+CeruleanCity_EventScript_ExitSignNorth::
+	msgbox CeruleanCity_Text_ExitSignNorth, MSGBOX_SIGN
+	end
+
+CeruleanCity_EventScript_ExitSignSouth::
+	msgbox CeruleanCity_Text_ExitSignSouth, MSGBOX_SIGN
+	end
+
+CeruleanCity_EventScript_ExitSignWest::
+	msgbox CeruleanCity_Text_ExitSignWest, MSGBOX_SIGN
+	end
+
+CeruleanCity_EventScript_ExitSignEast::
+	msgbox CeruleanCity_Text_ExitSignEast, MSGBOX_SIGN
+	end
