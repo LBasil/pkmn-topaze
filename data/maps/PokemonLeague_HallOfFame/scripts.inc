@@ -60,13 +60,37 @@ PokemonLeague_HallOfFame_EventScript_JirachiWish::
 	closemessage
 	special ShakeScreen
 	delay 30
+	msgbox PokemonLeague_HallOfFame_Text_JirachiBossWish
+PokemonLeague_HallOfFame_EventScript_WishMenu::
 	msgbox PokemonLeague_HallOfFame_Text_JirachiAsks
 	multichoice 17, 3, MULTICHOICE_TOPAZE_WISH, FALSE
 	switch VAR_RESULT
-	case 0, PokemonLeague_HallOfFame_EventScript_WishLetGo
-	case 1, PokemonLeague_HallOfFame_EventScript_WishNoBalls
-	case 2, PokemonLeague_HallOfFame_EventScript_WishRuleAll
-	goto PokemonLeague_HallOfFame_EventScript_WishLetGo
+	case 0, PokemonLeague_HallOfFame_EventScript_Explain1
+	case 1, PokemonLeague_HallOfFame_EventScript_Explain2
+	case 2, PokemonLeague_HallOfFame_EventScript_Explain3
+	goto PokemonLeague_HallOfFame_EventScript_WishMenu
+	end
+
+@ Topaze : chaque voeu est explique puis confirme (Oui = definitif, Non = retour au menu)
+PokemonLeague_HallOfFame_EventScript_Explain1::
+	msgbox PokemonLeague_HallOfFame_Text_Explain1
+	msgbox PokemonLeague_HallOfFame_Text_ConfirmWish, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, PokemonLeague_HallOfFame_EventScript_WishLetGo
+	goto PokemonLeague_HallOfFame_EventScript_WishMenu
+	end
+
+PokemonLeague_HallOfFame_EventScript_Explain2::
+	msgbox PokemonLeague_HallOfFame_Text_Explain2
+	msgbox PokemonLeague_HallOfFame_Text_ConfirmWish, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, PokemonLeague_HallOfFame_EventScript_WishNoBalls
+	goto PokemonLeague_HallOfFame_EventScript_WishMenu
+	end
+
+PokemonLeague_HallOfFame_EventScript_Explain3::
+	msgbox PokemonLeague_HallOfFame_Text_Explain3
+	msgbox PokemonLeague_HallOfFame_Text_ConfirmWish, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, PokemonLeague_HallOfFame_EventScript_WishRuleAll
+	goto PokemonLeague_HallOfFame_EventScript_WishMenu
 	end
 
 PokemonLeague_HallOfFame_EventScript_WishLetGo::

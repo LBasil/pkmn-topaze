@@ -66,3 +66,45 @@ PokemonLeague_HallOfFame_Text_EndingRuleAll::
     .string "silent. Another wish might have\l"
     .string "woken them.\p"
     .string "THE END.$"
+@ Topaze : explications des trois voeux (35 caracteres max par ligne)
+PokemonLeague_HallOfFame_Text_JirachiBossWish::
+    .string "The ONYBRIS boss wanted this wish:\n"
+    .string "free every POKéMON from humans,\l"
+    .string "and end all POKé BALLS.\p"
+    .string "Now the choice is yours.\n"
+    .string "Each wish is explained first.$"
+
+PokemonLeague_HallOfFame_Text_Explain1::
+    .string "LET IT GO:\n"
+    .string "nothing changes in the world.\p"
+    .string "You keep catching POKéMON freely.\p"
+    .string "The AURA calms down and the\n"
+    .string "ECHOES OF TIME open up.\p"
+    .string "More to explore: the GRENALUX\n"
+    .string "MINE, MEW, the legendary birds,\l"
+    .string "and the COUNCIL of 20 veterans.$"
+
+PokemonLeague_HallOfFame_Text_Explain2::
+    .string "NO MORE BALLS:\n"
+    .string "the boss's wish comes true.\p"
+    .string "You can NOT catch wild POKéMON\n"
+    .string "anymore, except at the SAFARI.\p"
+    .string "Your own POKéMON stay with you.\p"
+    .string "In return: 6 partners from JOHTO\n"
+    .string "and HOENN, 16 guard posts, each\l"
+    .string "giving a rare POKéMON, and\l"
+    .string "LUGIA, HO-OH and DEOXYS to earn.$"
+
+PokemonLeague_HallOfFame_Text_Explain3::
+    .string "RULE THEM ALL:\n"
+    .string "you get MEWTWO, the 3 birds, MEW\l"
+    .string "and CELEBI right now.\p"
+    .string "But everyone wants them back:\n"
+    .string "about 25 duels await you, from\l"
+    .string "the KANTO LEADERS up to STEVEN.\p"
+    .string "The world stays as it is, and the\n"
+    .string "ECHOES OF TIME stay shut.$"
+
+PokemonLeague_HallOfFame_Text_ConfirmWish::
+    .string "This choice is FINAL.\n"
+    .string "Make this wish?$"
