@@ -96,7 +96,7 @@ The LEADER, SYLVESTRE, uses BUG and GRASS-type POKéMON.
 FIRE is great against both, FLYING hits bugs hard, and POISON is good against plants. ICE works too!''')
 sub('CeruleanCity',[('LEADER: MISTY','LEADER: SYLVESTRE'),('The Tomboyish Mermaid!','The Warden of the Forest!')])
 
-# ---------- 3. APATIA : HERA (Dragon/Vol) ----------
+# ---------- 3. APATIA : HERA (Dragon/Fée) ----------
 g='VermilionCity_Gym'
 setlabel(g,'LtSurgeIntro','''I am HERA, LEADER of APATIA GYM, up here where the air is thin.
 

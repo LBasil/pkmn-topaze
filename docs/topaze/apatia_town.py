@@ -1,4 +1,4 @@
-# APATIA (ex-Vermilion / Carmin, LAYOUT_VERMILION_CITY 48x40) : le port du coucher de soleil, 10 ans apres l'aura (arene de HERA, Dragon/Vol, badge Apatite).
+# APATIA (ex-Vermilion / Carmin, LAYOUT_VERMILION_CITY 48x40) : le port du coucher de soleil, 10 ans apres l'aura (arene de HERA, Dragon/Fée, badge Apatite).
 # On GARDE la mer, la cote, le ponton, les 7 batiments a interieur et leurs portes (positions d'origine) ; on refait tout le reste : batiments decoratifs supprimes,
 # haies/clotures/terrain vague remplaces par des rues sinueuses, une carriere d'apatite, des forets de pins FR et des cristaux d'apatite (bleu-vert, coeur dore).
 # Couleurs : herbe or ambre, sable peche, pins vert-bleu, mer indigo. Tilesets propres (copies de General + VermilionCity, eau animee conservee).
@@ -15,7 +15,7 @@ def writepal(p, cols): open(p, 'w').write('JASC-PAL\r\n0100\r\n16\r\n' + ''.join
 def hls(c): h, l, s = colorsys.rgb_to_hls(c[0] / 255, c[1] / 255, c[2] / 255); return h * 360, l, s
 def rgb(h, l, s): r, g, b = colorsys.hls_to_rgb((h % 360) / 360, max(0, min(1, l)), max(0, min(1, s))); return int(r * 255 + .5), int(g * 255 + .5), int(b * 255 + .5)
 def tint_sunset(c):
-    """APATIA = port au coucher de soleil (arene de HERA, Dragon/Vol ; badge Apatite) : herbes -> or ambre, sable -> peche, pins -> vert-bleu d'apatite (ombre complementaire), mer -> bleu indigo du soir ; rouges/gris inchanges"""
+    """APATIA = port au coucher de soleil (arene de HERA, Dragon/Fée ; badge Apatite) : herbes -> or ambre, sable -> peche, pins -> vert-bleu d'apatite (ombre complementaire), mer -> bleu indigo du soir ; rouges/gris inchanges"""
     h, l, s = hls(c)
     if s < 0.08: return c
     if 28 <= h < 70 and s > 0.1: return rgb(24, min(0.9, l * 0.9 + 0.08), min(0.75, s * 0.9 + 0.1))
