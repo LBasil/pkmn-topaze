@@ -1,7 +1,7 @@
 {
   "id": "MAP_TIDE_CAVE",
   "name": "TideCave",
-  "layout": "LAYOUT_SIX_ISLAND_WATER_PATH",
+  "layout": "LAYOUT_TIDE_CAVE",
   "music": "MUS_SEVII_ROUTE",
   "region_map_section": "MAPSEC_WATER_PATH",
   "requires_flash": false,

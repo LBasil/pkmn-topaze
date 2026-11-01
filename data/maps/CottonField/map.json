@@ -1,7 +1,7 @@
 {
   "id": "MAP_COTTON_FIELD",
   "name": "CottonField",
-  "layout": "LAYOUT_ROUTE6",
+  "layout": "LAYOUT_COTTON_FIELD",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_ROUTE_6",
   "requires_flash": false,

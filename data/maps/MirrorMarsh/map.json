@@ -1,7 +1,7 @@
 {
   "id": "MAP_MIRROR_MARSH",
   "name": "MirrorMarsh",
-  "layout": "LAYOUT_SAFARI_ZONE_WEST",
+  "layout": "LAYOUT_MIRROR_MARSH",
   "music": "MUS_EVOLUTION",
   "region_map_section": "MAPSEC_KANTO_SAFARI_ZONE",
   "requires_flash": false,

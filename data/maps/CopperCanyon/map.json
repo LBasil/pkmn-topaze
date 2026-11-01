@@ -1,7 +1,7 @@
 {
   "id": "MAP_COPPER_CANYON",
   "name": "CopperCanyon",
-  "layout": "LAYOUT_SAFARI_ZONE_WEST",
+  "layout": "LAYOUT_COPPER_CANYON",
   "music": "MUS_EVOLUTION",
   "region_map_section": "MAPSEC_KANTO_SAFARI_ZONE",
   "requires_flash": false,

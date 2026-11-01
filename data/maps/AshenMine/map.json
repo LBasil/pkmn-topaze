@@ -1,7 +1,7 @@
 {
   "id": "MAP_ASHEN_MINE",
   "name": "AshenMine",
-  "layout": "LAYOUT_SEVEN_ISLAND_SEVAULT_CANYON",
+  "layout": "LAYOUT_ASHEN_MINE",
   "music": "MUS_SEVII_ROUTE",
   "region_map_section": "MAPSEC_SEVAULT_CANYON",
   "requires_flash": false,

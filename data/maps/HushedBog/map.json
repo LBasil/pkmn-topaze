@@ -1,7 +1,7 @@
 {
   "id": "MAP_HUSHED_BOG",
   "name": "HushedBog",
-  "layout": "LAYOUT_SAFARI_ZONE_NORTH",
+  "layout": "LAYOUT_HUSHED_BOG",
   "music": "MUS_EVOLUTION",
   "region_map_section": "MAPSEC_KANTO_SAFARI_ZONE",
   "requires_flash": false,

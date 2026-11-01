@@ -1,7 +1,7 @@
 {
   "id": "MAP_EDGE_OF_THE_WORLD",
   "name": "EdgeOfTheWorld",
-  "layout": "LAYOUT_SAFARI_ZONE_CENTER",
+  "layout": "LAYOUT_EDGE_OF_THE_WORLD",
   "music": "MUS_EVOLUTION",
   "region_map_section": "MAPSEC_KANTO_SAFARI_ZONE",
   "requires_flash": false,

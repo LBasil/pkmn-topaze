@@ -1,7 +1,7 @@
 {
   "id": "MAP_MEADOW_PATH",
   "name": "MeadowPath",
-  "layout": "LAYOUT_SIX_ISLAND_PATTERN_BUSH",
+  "layout": "LAYOUT_MEADOW_PATH",
   "music": "MUS_VIRIDIAN_FOREST",
   "region_map_section": "MAPSEC_PATTERN_BUSH",
   "requires_flash": false,

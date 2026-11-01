@@ -1,7 +1,7 @@
 {
   "id": "MAP_THUNDER_PLAIN",
   "name": "ThunderPlain",
-  "layout": "LAYOUT_ROUTE4",
+  "layout": "LAYOUT_THUNDER_PLAIN",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_ROUTE_4",
   "requires_flash": false,

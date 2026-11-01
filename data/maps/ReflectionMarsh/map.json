@@ -1,7 +1,7 @@
 {
   "id": "MAP_REFLECTION_MARSH",
   "name": "ReflectionMarsh",
-  "layout": "LAYOUT_SIX_ISLAND_PATTERN_BUSH",
+  "layout": "LAYOUT_REFLECTION_MARSH",
   "music": "MUS_VIRIDIAN_FOREST",
   "region_map_section": "MAPSEC_PATTERN_BUSH",
   "requires_flash": false,

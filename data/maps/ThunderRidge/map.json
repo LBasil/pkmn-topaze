@@ -1,7 +1,7 @@
 {
   "id": "MAP_THUNDER_RIDGE",
   "name": "ThunderRidge",
-  "layout": "LAYOUT_ROUTE24",
+  "layout": "LAYOUT_THUNDER_RIDGE",
   "music": "MUS_ROUTE24",
   "region_map_section": "MAPSEC_ROUTE_24",
   "requires_flash": false,

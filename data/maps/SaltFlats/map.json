@@ -1,7 +1,7 @@
 {
   "id": "MAP_SALT_FLATS",
   "name": "SaltFlats",
-  "layout": "LAYOUT_ROUTE9",
+  "layout": "LAYOUT_SALT_FLATS",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_ROUTE_9",
   "requires_flash": false,

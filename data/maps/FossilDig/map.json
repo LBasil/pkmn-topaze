@@ -1,7 +1,7 @@
 {
   "id": "MAP_FOSSIL_DIG",
   "name": "FossilDig",
-  "layout": "LAYOUT_SIX_ISLAND_RUIN_VALLEY",
+  "layout": "LAYOUT_FOSSIL_DIG",
   "music": "MUS_SEVII_ROUTE",
   "region_map_section": "MAPSEC_RUIN_VALLEY",
   "requires_flash": false,

@@ -1,7 +1,7 @@
 {
   "id": "MAP_EMBER_RIDGE",
   "name": "EmberRidge",
-  "layout": "LAYOUT_ROUTE4",
+  "layout": "LAYOUT_EMBER_RIDGE",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_ROUTE_4",
   "requires_flash": false,

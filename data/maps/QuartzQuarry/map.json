@@ -1,7 +1,7 @@
 {
   "id": "MAP_QUARTZ_QUARRY",
   "name": "QuartzQuarry",
-  "layout": "LAYOUT_ROUTE4",
+  "layout": "LAYOUT_QUARTZ_QUARRY",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_ROUTE_4",
   "requires_flash": false,

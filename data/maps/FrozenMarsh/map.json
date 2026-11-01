@@ -1,7 +1,7 @@
 {
   "id": "MAP_FROZEN_MARSH",
   "name": "FrozenMarsh",
-  "layout": "LAYOUT_SAFARI_ZONE_CENTER",
+  "layout": "LAYOUT_FROZEN_MARSH",
   "music": "MUS_EVOLUTION",
   "region_map_section": "MAPSEC_KANTO_SAFARI_ZONE",
   "requires_flash": false,

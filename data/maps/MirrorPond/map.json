@@ -1,7 +1,7 @@
 {
   "id": "MAP_MIRROR_POND",
   "name": "MirrorPond",
-  "layout": "LAYOUT_ROUTE10",
+  "layout": "LAYOUT_MIRROR_POND",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_ROUTE_10",
   "requires_flash": false,

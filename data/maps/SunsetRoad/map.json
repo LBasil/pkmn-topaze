@@ -1,7 +1,7 @@
 {
   "id": "MAP_SUNSET_ROAD",
   "name": "SunsetRoad",
-  "layout": "LAYOUT_ROUTE22",
+  "layout": "LAYOUT_SUNSET_ROAD",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_ROUTE_22",
   "requires_flash": false,

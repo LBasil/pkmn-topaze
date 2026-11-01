@@ -1,7 +1,7 @@
 {
   "id": "MAP_CIRCUS_LAWN",
   "name": "CircusLawn",
-  "layout": "LAYOUT_SAFARI_ZONE_EAST",
+  "layout": "LAYOUT_CIRCUS_LAWN",
   "music": "MUS_EVOLUTION",
   "region_map_section": "MAPSEC_KANTO_SAFARI_ZONE",
   "requires_flash": false,

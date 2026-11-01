@@ -1,7 +1,7 @@
 {
   "id": "MAP_GIANTS_PLAIN",
   "name": "GiantsPlain",
-  "layout": "LAYOUT_SAFARI_ZONE_EAST",
+  "layout": "LAYOUT_GIANTS_PLAIN",
   "music": "MUS_EVOLUTION",
   "region_map_section": "MAPSEC_KANTO_SAFARI_ZONE",
   "requires_flash": false,

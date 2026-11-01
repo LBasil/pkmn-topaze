@@ -1,7 +1,7 @@
 {
   "id": "MAP_DUNE_SEA",
   "name": "DuneSea",
-  "layout": "LAYOUT_SAFARI_ZONE_WEST",
+  "layout": "LAYOUT_DUNE_SEA",
   "music": "MUS_EVOLUTION",
   "region_map_section": "MAPSEC_KANTO_SAFARI_ZONE",
   "requires_flash": false,

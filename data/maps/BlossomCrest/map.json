@@ -1,7 +1,7 @@
 {
   "id": "MAP_BLOSSOM_CREST",
   "name": "BlossomCrest",
-  "layout": "LAYOUT_ROUTE16",
+  "layout": "LAYOUT_BLOSSOM_CREST",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_ROUTE_16",
   "requires_flash": false,

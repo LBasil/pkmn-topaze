@@ -1,7 +1,7 @@
 {
   "id": "MAP_BUZZING_MEADOW",
   "name": "BuzzingMeadow",
-  "layout": "LAYOUT_ROUTE25",
+  "layout": "LAYOUT_BUZZING_MEADOW",
   "music": "MUS_ROUTE24",
   "region_map_section": "MAPSEC_ROUTE_25",
   "requires_flash": false,

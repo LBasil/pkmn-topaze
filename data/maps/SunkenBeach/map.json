@@ -1,7 +1,7 @@
 {
   "id": "MAP_SUNKEN_BEACH",
   "name": "SunkenBeach",
-  "layout": "LAYOUT_ONE_ISLAND_TREASURE_BEACH",
+  "layout": "LAYOUT_SUNKEN_BEACH",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_TREASURE_BEACH",
   "requires_flash": false,

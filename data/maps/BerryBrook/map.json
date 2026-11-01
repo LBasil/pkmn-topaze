@@ -1,7 +1,7 @@
 {
   "id": "MAP_BERRY_BROOK",
   "name": "BerryBrook",
-  "layout": "LAYOUT_ROUTE25",
+  "layout": "LAYOUT_BERRY_BROOK",
   "music": "MUS_ROUTE24",
   "region_map_section": "MAPSEC_ROUTE_25",
   "requires_flash": false,

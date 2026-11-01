@@ -1,7 +1,7 @@
 {
   "id": "MAP_WINDMILL_FLATS",
   "name": "WindmillFlats",
-  "layout": "LAYOUT_ROUTE25",
+  "layout": "LAYOUT_WINDMILL_FLATS",
   "music": "MUS_ROUTE24",
   "region_map_section": "MAPSEC_ROUTE_25",
   "requires_flash": false,

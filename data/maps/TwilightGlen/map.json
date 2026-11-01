@@ -1,7 +1,7 @@
 {
   "id": "MAP_TWILIGHT_GLEN",
   "name": "TwilightGlen",
-  "layout": "LAYOUT_ROUTE22",
+  "layout": "LAYOUT_TWILIGHT_GLEN",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_ROUTE_22",
   "requires_flash": false,

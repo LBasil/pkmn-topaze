@@ -1,7 +1,7 @@
 {
   "id": "MAP_RAINBOW_FALLS",
   "name": "RainbowFalls",
-  "layout": "LAYOUT_ROUTE4",
+  "layout": "LAYOUT_RAINBOW_FALLS",
   "music": "MUS_ROUTE3",
   "region_map_section": "MAPSEC_ROUTE_4",
   "requires_flash": false,

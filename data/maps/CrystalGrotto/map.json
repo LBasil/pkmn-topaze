@@ -1,7 +1,7 @@
 {
   "id": "MAP_CRYSTAL_GROTTO",
   "name": "CrystalGrotto",
-  "layout": "LAYOUT_SAFARI_ZONE_CENTER",
+  "layout": "LAYOUT_CRYSTAL_GROTTO",
   "music": "MUS_EVOLUTION",
   "region_map_section": "MAPSEC_KANTO_SAFARI_ZONE",
   "requires_flash": false,
