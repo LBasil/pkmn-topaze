@@ -312,4 +312,3 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - Équilibrage sauvages (docs/topaze/wild_balance.py, idempotent) : 20 zones à exigence de badge trop faibles de plus de 6 niveaux sous le champion du même badge (badges 3 à 6) décalées vers le haut (champion − 3) ; la pêche garde ses niveaux de canne. Zones 1, 2, 7, 8 inchangées (déjà dans la fenêtre).
 - Tourmalia : 4 panneaux de direction aux sorties (nord R24, sud R5, ouest R4 Est, porte est R9), cases choisies sans couper de chemin ; « Badge Guy » et « Berry Powder » déménagés dans la maison 4 (leurs maisons d'origine restent inaccessibles, portes garées).
 - Palette 13 de Hematown : déjà corrigée (docs/technique/EMULATEUR.md), l'alerte était périmée.
-- CREDITS.md créé (auteur de la carte d'inspiration de Tourmalia = Basil, accord donné le 01-11) ; liste « à compléter » pour sprites/sons.
