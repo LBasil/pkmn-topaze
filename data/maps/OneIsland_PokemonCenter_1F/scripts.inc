@@ -580,6 +580,9 @@ OneIsland_PokemonCenter_1F_Movement_BillExit::
 OneIsland_PokemonCenter_1F_EventScript_EchoBill::
 	applymovement LOCALID_ONE_ISLAND_POKEMON_CENTER_BILL, Common_Movement_FacePlayer
 	waitmovement 0
+	@ Topaze : les ECHOS ne s'eveillent que si le voeu a ete laisse (fin 1) ; fins 2 et 3 : Bill constate le silence
+	goto_if_eq VAR_TOPAZE_ENDING, 2, OneIsland_PokemonCenter_1F_EventScript_EchoBillSilent2
+	goto_if_eq VAR_TOPAZE_ENDING, 3, OneIsland_PokemonCenter_1F_EventScript_EchoBillSilent3
 	goto_if_eq VAR_ECHO_STAGE, 5, OneIsland_PokemonCenter_1F_EventScript_EchoBillGift2
 	goto_if_eq VAR_ECHO_STAGE, 4, OneIsland_PokemonCenter_1F_EventScript_EchoBillWait2
 	goto_if_eq VAR_ECHO_STAGE, 3, OneIsland_PokemonCenter_1F_EventScript_EchoBillEcho2
@@ -1026,5 +1029,15 @@ OneIsland_PokemonCenter_1F_EventScript_TopazeGiveSapphire::
 	waitmovement 0
 	msgbox OneIsland_PokemonCenter_1F_Text_TopazeSapphireThanks
 	giveitem ITEM_PP_MAX, 3
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoBillSilent2::
+	msgbox OneIsland_PokemonCenter_1F_Text_EchoBillSilent2
+	release
+	end
+
+OneIsland_PokemonCenter_1F_EventScript_EchoBillSilent3::
+	msgbox OneIsland_PokemonCenter_1F_Text_EchoBillSilent3
 	release
 	end

@@ -299,3 +299,9 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 
 ## 01-11 (16h) — Choix des fins expliqué
 - Salle d'Honneur : rappel du vœu du boss, puis chaque vœu (Let it go / No more BALLS / Rule them all) est expliqué avec ses conséquences, confirmation Oui/Non « choix définitif » (Non = retour au menu). Testé en émulateur (branche 1). Sur `topaze`, non poussé.
+
+## 01-11 (17h) — Enchaînement « fais tout »
+- Échos du Temps : la chaîne (Bill/Celio, 22 étapes) ne démarre plus que pour la fin 1 ; fins 2 et 3 : Bill constate le silence (textes propres à chaque fin, provisoires EN). Avant, elle démarrait aussi en fins 2/3, contredisant les textes de la Salle d'Honneur.
+- Temps déréglé : météo permanente posée sur les routes 6 (pluie), 8 (orage), 11 (chaleur), 12 (pluie), 15 (chaleur), 18 (neige), 19 (orage), 22 (chaleur), 24 (neige) ; 3, 4 (cendres) et 16 (neige) existaient déjà. Non vérifié en jeu (compilé seulement) : à regarder sur PC.
+- Les 14 personnages de Basil étaient DÉJÀ tous placés (Gauthier R15, Thibault Fuchsia, Vincent Route Victoire 2F, Violette Safrania, Jordan R6, Emma R12, Lola R25, Edouard R10, Chloé Cinabre, Thomas R3, Nathan Lavanville, Dylan S.S. Anne B1, Adrian Bourg Palette) : la note du Projet « rien de placé » était périmée.
+- Cartes clonées : audit seulement (docs/technique/CARTES_CLONEES_01_11.md), pas de refonte (153 cartes sur 31 layouts).

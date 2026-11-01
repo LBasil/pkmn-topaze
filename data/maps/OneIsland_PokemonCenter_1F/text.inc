@@ -542,3 +542,20 @@ OneIsland_PokemonCenter_1F_Text_TopazeSapphireThanks::
     .string "I am linked with trainers far\n"
     .string "away. This is all thanks to you.\p"
     .string "Please, take this as thanks.$"
+
+@ Topaze : fins 2 et 3, les ECHOS restent muets (35 caracteres max par ligne)
+OneIsland_PokemonCenter_1F_Text_EchoBillSilent2::
+    .string "BILL: Since the wish, the wild ones\n"
+    .string "are gone. Even the old signals.\p"
+    .string "My device hears nothing. The ECHOES\n"
+    .string "slept on, with no trainer's call.\p"
+    .string "But the REFUGE needs hands. Help\n"
+    .string "the guards, CHAMPION.$"
+
+OneIsland_PokemonCenter_1F_Text_EchoBillSilent3::
+    .string "BILL: Six legends in one trainer's\n"
+    .string "hands. The air feels heavy.\p"
+    .string "My device hears nothing. The ECHOES\n"
+    .string "stay shut, as if they waited.\p"
+    .string "Everyone wants those legends back.\n"
+    .string "Watch your back, CHAMPION.$"
