@@ -315,3 +315,4 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 
 ## 02-11 (22h45)
 - Fin du postgame (Grotte Azuree B1F) : le texte epilogue « SILVER au port… THE END… » est retire (BASIL = tout dernier combat) ; apres la victoire sur BASIL : fondu noir puis retour au jeu, FLAG_POSTGAME_DONE inchange. Label retire (CeruleanCave_B1F_Text_Epilogue). Build 02-11 22h45. Non teste en emulateur.
+- IDEE (Basil, 02-11 22h44, a faire plus tard, il se concentre sur les traductions) : donner au combat de BASIL (Grotte Azuree) plusieurs phases, comme le boss Onybris. Rien de decide ni de code.
