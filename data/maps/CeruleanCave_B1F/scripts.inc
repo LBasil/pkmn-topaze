@@ -81,7 +81,6 @@ CeruleanCave_B1F_EventScript_PostgameRed::
 	removeobject LOCALID_CAVE_RED
 	setflag FLAG_HIDE_POSTGAME_RED
 	setflag FLAG_POSTGAME_DONE
-	msgbox CeruleanCave_B1F_Text_Epilogue
 	fadescreen FADE_FROM_BLACK
 	release
 	end
