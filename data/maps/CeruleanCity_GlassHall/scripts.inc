@@ -9,6 +9,7 @@ CeruleanCity_GlassHall_EventScript_Guide::
 CeruleanCity_GlassHall_EventScript_Stairs::
 	lockall
 	goto_if_defeated TRAINER_BIKER_1, CeruleanCity_GlassHall_EventScript_StairsOpen
+	msgbox CeruleanCity_GlassHall_Text_StairsSealed
 	releaseall
 	end
 
