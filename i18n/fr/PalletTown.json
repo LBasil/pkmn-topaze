@@ -169,11 +169,11 @@
  },
  "PalletTown_Text_RanchDadFlees": {
   "en": "{RIVAL}'s DAD: My pens! Stay here!",
-  "fr": "Le PÈRE de {RIVAL} : Mes enclos !\\nRestez ici !"
+  "fr": "ALBAN : Mes enclos !\\nRestez ici !"
  },
  "PalletTown_Text_RanchDadHello": {
   "en": "{RIVAL}'s DAD: So you're {PLAYER}.\\n{RIVAL} never stops talking about you.",
-  "fr": "Le PÈRE de {RIVAL} : Alors c'est\\ntoi, {PLAYER}. {RIVAL} arrête pas\\lde parler de toi."
+  "fr": "ALBAN : Alors c'est toi, {PLAYER}.\\nMon fils {RIVAL} arrête pas de\\lparler de toi."
  },
  "PalletTown_Text_RanchGrunt2Taunt": {
   "en": "A kid with a borrowed POKéMON?\\nThis will take two seconds!",
@@ -225,7 +225,7 @@
  },
  "PalletTown_Text_RanchRivalWin": {
   "en": "{RIVAL}: Mine ran off after one hit!\\p...Yours too? Not bad, {PLAYER}.\\nBut next time I win first!",
-  "fr": "{RIVAL} : Le mien s'est enfui après\\nun coup !\\p…Le tien aussi ? Pas mal, {PLAYER}.\\nMais la prochaine fois, je gagne\\ld'abord !"
+  "fr": "{RIVAL} : Mon adversaire a flanché\\ndès le premier coup !\\p…Le tien aussi ? Pas mal, {PLAYER}.\\nMais la prochaine fois, je gagne\\ld'abord !"
  },
  "PalletTown_Text_RanchTrackersHowl": {
   "en": "...Do you hear that?\\nThe trackers are howling.",

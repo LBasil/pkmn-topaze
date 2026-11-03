@@ -383,3 +383,6 @@ Tous les textes originaux (0–4312) relus à la main, puis passe de suppression
 
 ## 03-11 (19h) — Passe grammaire
 Impératifs négatifs corrigés (Ne te fie jamais, Ne te mêle pas…), « personne/rien » sujets remis avec « ne », registre de la maîtresse (tu es, Puis-je, Cela ne me regarde pas).
+
+## 03-11 (19h45) — Père du rival
+Le père du rival devient ALBAN (nom court dans le dialogue, « Mon fils {RIVAL} »). Réplique du rival au ranch reformulée (adversaire qui flanche, plus de fuite).
