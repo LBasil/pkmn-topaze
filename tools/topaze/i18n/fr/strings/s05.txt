@@ -1,0 +1,92 @@
+gText_RegionMap_AreaDesc_ViridianForest|Une forêt profonde et tentaculaire\nautour d'OPANIHRUM.\nUn labyrinthe naturel où\nbeaucoup se perdent.
+gText_RegionMap_AreaDesc_MtMoon|Une montagne mystique connue pour\nses fréquentes chutes de météorites.\nLes éclats d'étoiles tombés ici\nsont des PIERRES LUNE.
+gText_RegionMap_AreaDesc_DiglettsCave|Un tunnel d'apparence banale creusé\npar des TAUPIQUEUR sauvages.\nIl est célèbre pour relier\nles ROUTES 2 et 11.
+gText_RegionMap_AreaDesc_VictoryRoad|Un tunnel situé sur la ROUTE 23.\nIl doit son nom au fait que tous\nles DRESSEURS visant le sommet\ndoivent le traverser.
+gText_RegionMap_AreaDesc_PokemonMansion|Un manoir délabré et incendié\nà CHRONDROLIA.\nIl doit son nom à un célèbre\nchercheur POKéMON qui y vivait.
+gText_RegionMap_AreaDesc_SafariZone|Un parc d'attractions près d'AMÉTHIOLITE\nVILLE où l'on observe de nombreux\nPOKéMON rares à l'état sauvage.\nAttrape-les dans un jeu populaire !
+gText_RegionMap_AreaDesc_RockTunnel|Un tunnel souterrain naturel.\nNon aménagé, il y fait noir comme\ndans un four. Il faut une lumière\npour le traverser.
+gText_RegionMap_AreaDesc_SeafoamIslands|Deux îles situées sur la ROUTE 20.\nElles ont exactement la même forme,\ncomme si elles étaient jumelles.
+gText_RegionMap_AreaDesc_PokemonTower|Une tour abritant les tombes de\nd'innombrables POKéMON.\nBeaucoup viennent chaque jour\ns'y recueillir.
+gText_RegionMap_AreaDesc_CeruleanCave|Une grotte mystérieuse peuplée de\nPOKéMON terriblement puissants.\nElle est si dangereuse que la LIGUE\nPOKéMON en a la charge.
+gText_RegionMap_AreaDesc_PowerPlant|Une centrale abandonnée depuis des\nannées, dont certaines machines\nfonctionnent encore. Elle grouille\nde POKéMON électriques.
+gText_RegionMap_AreaDesc_MtEmber|Soi-disant un volcan éteint.\nPourtant, des rumeurs persistantes\ndisent que son sommet s'embrase\nla nuit.
+gText_RegionMap_AreaDesc_BerryForest|Une forêt sur un îlot au large de\nl'ÎLE TROIS. Les BAIES y poussent\nen abondance et remplacent vite\ncelles qui tombent.
+gText_RegionMap_AreaDesc_IcefallCave|Une grotte couverte d'eau et de\nglace sur l'ÎLE QUATRE.\nSon fond semble relié à l'océan.
+gText_RegionMap_AreaDesc_LostCave|Une grotte déroutante au large de\nSTATION LUXE.\nDes curieux en quête de frissons\nn'en sont jamais ressortis.
+gText_RegionMap_AreaDesc_TanobyRuins|Des ruines antiques qui abriteraient\nun POKéMON singulier.\nPour l'instant, ce POKéMON reste\nune rumeur non confirmée.
+gText_RegionMap_AreaDesc_AlteringCave|Cette île porte ce nom depuis la\nnuit des temps.\nPersonne ne sait aujourd'hui\nd'où il vient.
+gText_RegionMap_AreaDesc_PatternBush|Une zone luxuriante en buissons.\nOn y trouve des motifs où l'herbe\nne pousse pas. Certains l'étudient,\npersuadés qu'un secret s'y cache.
+gText_RegionMap_AreaDesc_DottedHole|Des ruines antiques mystérieuses,\ntout juste découvertes.\nElles doivent leur nom aux six\npoints de leur porte.
+gText_PokeSum_MetInATrade|Nature {DYNAMIC 0x00}.\nRencontré lors d'un échange.
+gText_PokeSum_MetInATrade_BoldGentleGrammar|Nature {DYNAMIC 0x00}.\nRencontré lors d'un échange.
+gText_PokeSum_FatefulEncounterMet|Nature {DYNAMIC 0x00}.\nRencontre providentielle\nau {LV_2} {DYNAMIC 0x01}.
+gText_PokeSum_FatefulEncounterMet_BoldGentleGrammar|Nature {DYNAMIC 0x00}.\nRencontre providentielle\nau {LV_2} {DYNAMIC 0x01}.
+gText_PokeSum_Met|Nature {DYNAMIC 0x00}.\nRencontré à {DYNAMIC 0x02}, {LV_2} {DYNAMIC 0x01}.
+gText_PokeSum_Met_BoldGentleGrammar|Nature {DYNAMIC 0x00}.\nRencontré à {DYNAMIC 0x02}, {LV_2} {DYNAMIC 0x01}.
+gText_PokeSum_ApparentlyMet|Nature {DYNAMIC 0x00}.\nApparemment rencontré à\n{DYNAMIC 0x02}, {LV_2} {DYNAMIC 0x01}.
+gText_PokeSum_ApparentlyMet_BoldGentleGrammar|Nature {DYNAMIC 0x00}.\nApparemment rencontré à\n{DYNAMIC 0x02}, {LV_2} {DYNAMIC 0x01}.
+gText_PokeSum_Hatched|Nature {DYNAMIC 0x00}.\nÉclos : {DYNAMIC 0x02}\nau {LV_2} {DYNAMIC 0x01}.
+gText_PokeSum_Hatched_BoldGentleGrammar|Nature {DYNAMIC 0x00}.\nÉclos : {DYNAMIC 0x02}\nau {LV_2} {DYNAMIC 0x01}.
+gText_PokeSum_FatefulEncounterHatched|Nature {DYNAMIC 0x00}. Rencontre\nprovidentielle (éclos : {DYNAMIC 0x02}\nau {LV_2} {DYNAMIC 0x01}).
+gText_PokeSum_FatefulEncounterHatched_BoldGentleGrammar|Nature {DYNAMIC 0x00}. Rencontre\nprovidentielle (éclos : {DYNAMIC 0x02}\nau {LV_2} {DYNAMIC 0x01}).
+gText_PokeSum_ApparentlyFatefulEncounterHatched|Nature {DYNAMIC 0x00}. Apparemment une\nrencontre providentielle (éclos :\n{DYNAMIC 0x02}, {LV_2} {DYNAMIC 0x01}).
+gText_PokeSum_ApparentlyFatefulEncounterHatched_BoldGentleGrammar|Nature {DYNAMIC 0x00}. Apparemment une\nrencontre providentielle (éclos :\n{DYNAMIC 0x02}, {LV_2} {DYNAMIC 0x01}).
+gText_PokeSum_EggOrigin_DayCare|Un ŒUF POKéMON étrange trouvé\npar le couple de la GARDERIE.
+gText_PokeSum_EggOrigin_TravelingMan|Un ŒUF POKéMON étrange reçu\nd'un voyageur.
+gText_PokeSum_EggOrigin_NicePlace|Un ŒUF POKéMON étrangement rare\nobtenu dans un bel endroit.
+gText_PokeSum_EggOrigin_Spa|Un ŒUF POKéMON étrange reçu\nd'une vieille dame aux THERMES.
+gText_PokeSum_EggOrigin_Trade|Un ŒUF POKéMON étrange obtenu\nlors d'un échange.
+gText_PokeSum_EggHatch_LongTime|Cet ŒUF semble\ndevoir mettre\nlongtemps à éclore.
+gText_PokeSum_EggHatch_SomeTime|Que va-t-il\nen sortir ? Ça\nprendra du temps.
+gText_PokeSum_EggHatch_Soon|Il bouge de temps\nen temps. Il devrait\néclore bientôt.
+gText_PokeSum_EggHatch_AlmostReady|Il fait du bruit.\nIl est presque\nprêt à éclore !
+gText_PokeSum_ATrade|un échange
+gText_Somewhere|Quelque part
+gText_PokeSum_PageName_PokemonInfo|INFOS POKéMON
+gText_PokeSum_PageName_PokemonSkills|APTITUDES POKéMON
+gText_PokeSum_PageName_KnownMoves|ATTAQUES CONNUES
+gText_PokeSum_NoData|Aucune donnée
+gText_PokeSum_ExpPoints|POINTS D'EXP.
+gText_PokeSum_NextLv|NIV. SUIVANT
+gText_PokeSum_Friendship|AMITIÉ
+gText_PokeSum_Controls_PageCancel|{DPAD_RIGHT}PAGE {A_BUTTON}ANNULER
+gText_PokeSum_Controls_Cancel|{A_BUTTON}ANNULER
+gText_PokeSum_Controls_PageDetail|{DPAD_LEFT}PAGE {A_BUTTON}DÉTAIL
+gText_PokeSum_Controls_PickSwitch|{DPAD_UPDOWN}CHOIX {A_BUTTON}ÉCHANGER
+gText_PokeSum_Controls_Pick|{DPAD_UPDOWN}CHOIX
+gText_PokeSum_Controls_PickDelete|{DPAD_UPDOWN}CHOIX {A_BUTTON}OUBLIER
+gText_PokeSum_HmMovesCantBeForgotten|Impossible d'oublier\nune CS maintenant.
+gText_TrainerCardName|NOM : 
+gText_TrainerCardIDNo|No ID
+gText_TrainerCardMoney|ARGENT
+gText_TrainerCardTime|TEMPS
+gText_Var1sTrainerCard| - CARTE DRESSEUR
+gText_HallOfFameDebut|ENTRÉE AU HALL  
+gText_LinkBattles|COMBATS LINK
+gText_LinkCableBattles|COMBATS CÂBLE LINK
+gText_WinLossRatio|V:{CLEAR_TO 0x30}D:
+gText_PokemonTrades|ÉCHANGES POKéMON
+gText_UnionRoomTradesBattles|ÉCHANGES & COMBATS UNION
+gText_BerryCrushes|BAIES EN FOLIE
+gText_WaitingTrainerFinishReading|En attente de l'autre DRESSEUR,\nqui lit ta CARTE DRESSEUR.
+gText_TextSpeed|VIT. TEXTE
+gText_BattleScene|ANIM. COMBAT
+gText_BattleStyle|STYLE COMBAT
+gText_Sound|SON
+gText_ButtonMode|BOUTONS
+gText_Frame|CADRE
+gText_OptionMenuCancel|ANNULER
+gText_HpBarSpeed|BARRE PV
+gText_ExpBarSpeed|BARRE EXP
+gText_LevelUps|NIVEAUX
+gText_GameSpeed|VIT. JEU
+gText_LevelCap|LIM. NIV.
+gText_PkmnCenterHeal|CENTRE POKéMON
+gText_LvCapOff|NON
+gText_LvCapLight|LÉGER
+gText_LvCapMedium|MOYEN
+gText_LvCapHard|DUR
+gText_BarFast|RAPIDE
+gText_Difficulty|DIFFICULTÉ
+gText_DifficultyHard|DIFFICILE
+gText_ShinyRate|CHROMA

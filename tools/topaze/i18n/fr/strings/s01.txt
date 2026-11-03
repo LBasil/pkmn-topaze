@@ -71,12 +71,12 @@ gText_HintGiftEvent|CADEAU OU ÉVÉNEMENT
 gText_Page|PAGE
 gText_WelcomeToHOF|Bienvenue au HALL DES LÉGENDES !
 gText_HOFCorrupted|Les données du HALL DES LÉGENDES\nsont corrompues.
-gText_HOFNumber|HALL DES LÉGENDES n°{STR_VAR_1}
+gText_HOFNumber|HALL DES LÉGENDES No. {STR_VAR_1}
 gText_LeagueChamp|CHAMPION DE LA LIGUE !\nFÉLICITATIONS !
-gText_Number|N°
+gText_Number|No. 
 gText_Level|Nv.
 gText_Name|NOM
-gText_IDNumber|N°ID
+gText_IDNumber|No ID
 gText_SaveError_PleaseExchangeBackupMemory|Erreur de sauvegarde.\pVeuillez changer la mémoire\nde secours.
 gSaveStatName_Player|JOUEUR
 gSaveStatName_Badges|BADGES

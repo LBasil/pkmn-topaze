@@ -1,0 +1,152 @@
+gOtherText_Mixed|MIXTE
+gText_BigGuy|gamin
+gText_BigGirl|gamine
+gText_Son|fils
+gText_Daughter|fille
+gText_Rooftop|TOIT
+gText_NowOn|Actuel :
+gText_LinkedGamePlay|JEU EN RÉSEAU
+gText_DirectCorner|ESPACE DIRECT
+gText_UnionRoom|SALLE UNION
+gText_Energypowder_50|POUDRE ÉNERGIE{CLEAR_TO 0x74}{FONT_SMALL}50
+gText_EnergyRoot_80|RACINE ÉNERGIE{CLEAR_TO 0x74}{FONT_SMALL}80
+gText_HealPowder_50|POUDRE SOIN{CLEAR_TO 0x74}{FONT_SMALL}50
+gText_RevivalHerb_300|HERBE RAPPEL{CLEAR_TO 0x6F}{FONT_SMALL}300
+gText_Protein_1000|PROTÉINE{CLEAR_TO 0x65}{FONT_SMALL}1,000
+gText_Iron_1000|FER{CLEAR_TO 0x65}{FONT_SMALL}1,000
+gText_Carbos_1000|CARBONE{CLEAR_TO 0x65}{FONT_SMALL}1,000
+gText_HpUp_1000|PV PLUS{CLEAR_TO 0x65}{FONT_SMALL}1,000
+gText_PpUp_3000|PP PLUS{CLEAR_TO 0x65}{FONT_SMALL}3,000
+gString_BattleRecords_PlayersBattleResults|RÉSULTATS DE {PLAYER}
+gString_BattleRecords_TotalRecord|TOTAL V:{STR_VAR_1} D:{STR_VAR_2} N:{STR_VAR_3}
+gString_BattleRecords_ColumnHeaders|VICT.{CLEAR_TO 0x30}DÉF.{CLEAR_TO 0x60}NUL
+gFameCheckerText_FameCheckerWillBeClosed|Le FAME CHECKER va se fermer.
+gText_ExitFromBox|Quitter la BOÎTE.
+gText_WhatDoYouWantToDo|Que veux-tu faire ?
+gText_PleasePickATheme|Choisis un thème.
+gText_PickTheWallpaper|Choisis un fond d'écran.
+gText_PkmnIsSelected|{DYNAMIC 0x00} est sélectionné.
+gText_JumpToWhichBox|Aller à quelle BOÎTE ?
+gText_DepositInWhichBox|Déposer dans quelle BOÎTE ?
+gText_PkmnWasDeposited|{DYNAMIC 0x00} a été déposé.
+gText_BoxIsFull2|La BOÎTE est pleine.
+gText_ReleaseThisPokemon|Relâcher ce POKéMON ?
+gText_PkmnWasReleased|{DYNAMIC 0x00} a été relâché.
+gText_ByeByePkmn|Bye-bye, {DYNAMIC 0x00} !
+gText_MarkYourPkmn|Marque ton POKéMON.
+gText_ThatsYourLastPkmn|C'est ton dernier POKéMON !
+gText_YourPartysFull|Ton équipe est pleine !
+gText_YoureHoldingAPkmn|Tu tiens déjà un POKéMON !
+gText_WhichOneWillYouTake|Lequel prends-tu ?
+gText_YouCantReleaseAnEgg|Tu ne peux pas relâcher un ŒUF.
+gText_ContinueBoxOperations|Continuer les opérations BOÎTE ?
+gText_PkmnCameBack|{DYNAMIC 0x00} est revenu !
+gText_WasItWorriedAboutYou|S'inquiétait-il pour toi ?
+gText_FourEllipsesExclamation|‥ ‥ ‥ ‥ ‥ !
+gText_PleaseRemoveTheMail|Retire d'abord la LETTRE.
+gText_GiveToAPkmn|DONNER à un POKéMON ?
+gText_PlacedItemInBag|Objet mis dans le SAC.
+gText_BagIsFull2|Le SAC est plein.
+gText_PutItemInBag|Mettre cet objet dans le SAC ?
+gText_ItemIsNowHeld|{DYNAMIC 0x00} tient l'objet.
+gText_ChangedToNewItem|Changé en {DYNAMIC 0x00}.
+gText_MailCantBeStored|LETTRE impossible à ranger !
+gPCText_Cancel|ANNULER
+gPCText_Store|DÉPOSER
+gPCText_Withdraw|RETIRER
+gPCText_Shift|CHANGER
+gPCText_Move|DÉPLACER
+gPCText_Place|POSER
+gPCText_Summary|RÉSUMÉ
+gPCText_Release|RELÂCHER
+gPCText_Mark|MARQUER
+gPCText_Name|NOM
+gPCText_Jump|ALLER
+gPCText_Sort|TRIER
+gPCText_Wallpaper|FOND
+gPCText_Take|PRENDRE
+gPCText_Give|DONNER
+gPCText_Switch|ÉCHANGER
+gPCText_Bag|SAC
+gPCText_Info|INFO
+gPCText_Scenery1|PAYSAGE 1
+gPCText_Scenery2|PAYSAGE 2
+gPCText_Scenery3|PAYSAGE 3
+gPCText_Etcetera|DIVERS
+gPCText_Forest|FORÊT
+gPCText_City|VILLE
+gPCText_Desert|DÉSERT
+gPCText_Savanna|SAVANE
+gPCText_Crag|FALAISE
+gPCText_Volcano|VOLCAN
+gPCText_Snow|NEIGE
+gPCText_Cave|GROTTE
+gPCText_Beach|PLAGE
+gPCText_Seafloor|FOND MARIN
+gPCText_River|RIVIÈRE
+gPCText_Sky|CIEL
+gPCText_PolkaDot|ÉTOILES
+gPCText_Pokecenter|CENTRE
+gPCText_Machine|CARREAUX
+gPCText_Simple|SIMPLE
+gText_WithdrawPokemon|RETIRER POKéMON
+gText_DepositPokemon|DÉPOSER POKéMON
+gText_MovePokemon|DÉPLACER POKéMON
+gText_MoveItems|DÉPLACER OBJETS
+gText_SeeYa|À BIENTÔT !
+gText_WithdrawMonDescription|Retire un POKéMON d'une BOÎTE.
+gText_DepositMonDescription|Dépose un POKéMON de ton équipe\ndans une BOÎTE.
+gText_MoveMonDescription|Déplace les POKéMON rangés\ndans les BOÎTES.
+gText_MoveItemsDescription|Déplace les objets tenus par un\nPOKéMON de BOÎTE ou d'équipe.
+gText_SeeYaDescription|À la prochaine !
+gText_JustOnePkmn|Dernier POKéMON : impossible !
+gText_PartyFull|Équipe pleine : impossible !
+gText_Box|BOÎTE
+gText_CombineFourWordsOrPhrases|Combine quatre mots ou phrases
+gText_AndMakeYourProfile|pour faire ton profil.
+gText_MakeMessageSixPhrases|Fais un message de six phrases.
+gText_MaxTwoTwelveLetterPhrases|Max. 2 phrases de 12 lettres/ligne.
+gText_FindWordsThatDescribeYour|Trouve des mots qui décrivent
+gText_FeelingsRightNow|tes émotions du moment.
+gText_CombineNineWordsOrPhrases|Combine neuf mots ou phrases
+gText_AndMakeAMessage|pour faire un message.
+gText_ChangeJustOneWordOrPhrase|Change un seul mot ou phrase
+gText_AndImproveTheBardsSong|pour améliorer la chanson du BARDE.
+gText_AndFillOutTheQuestionnaire|et remplis le questionnaire.
+gText_YourProfile|Ton profil
+gText_YourFeelingAtTheBattlesStart|Tes émotions au début du combat
+gText_WhatYouSayIfYouWin|Ce que tu dis si tu gagnes
+gText_WhatYouSayIfYouLose|Ce que tu dis si tu perds
+gText_TheAnswer|La réponse
+gText_TheMailMessage|Le message de la LETTRE
+gText_TheNewSong|La nouvelle chanson
+gText_CombineTwoWordsOrPhrases|Combine deux mots ou phrases
+gText_AndMakeATrendySaying|pour faire un dicton branché.
+gText_TheTrendySaying|Le dicton branché
+gText_IsAsShownOkay|est ainsi. D'accord ?
+gText_AllTextBeingEditedWill|Tout le texte en cours d'édition
+gText_BeDeletedThatOkay|sera effacé. D'accord ?
+gText_QuitEditing|Arrêter l'édition ?
+gText_StopGivingPkmnMail|Ne plus donner la LETTRE ?
+gText_Profile|PROFIL
+gText_AtTheBattlesStart|Début du combat :
+gText_UponWinningABattle|Si tu gagnes :
+gText_UponLosingABattle|Si tu perds :
+gText_TheBardsSong|Chanson du BARDE
+gText_WhatsHipAndHappening|Quoi de branché ?
+gText_PokemonCenter|CENTRE POKéMON
+gText_SaveFailedCheckingBackup|Échec de la sauvegarde.\nVérification de la mémoire‥\nPatiente un instant.\n“Durée requise :\nenv. 1 minute”
+gText_BackupMemoryDamaged|La mémoire de sauvegarde est\nendommagée ou la pile est vide.\nOn peut jouer, mais la progression\nne peut être sauvegardée.\n“Appuie sur le bouton A.”
+gText_SaveCompletePressA|Sauvegarde terminée.\n“Appuie sur le bouton A.”
+gText_YourName|TON NOM ?
+gText_BoxName|NOM DE LA BOÎTE ?
+gText_PkmnsNickname| : quel surnom ?
+gText_RivalsName|NOM DU RIVAL ?
+gText_MoveOkBack|{DPAD_ANY}DÉPL. {A_BUTTON}OK {B_BUTTON}RETOUR
+gText_RegionMap_AButtonCancel|{A_BUTTON}ANNULER
+gText_RegionMap_AButtonCancel2|{A_BUTTON}ANNULER
+gText_RegionMap_AButtonSwitch|{A_BUTTON}CHANGER
+gText_RegionMap_DPadMove|{DPAD_ANY}DÉPL.
+gText_RegionMap_UpDownPick|{DPAD_UPDOWN}CHOIX
+gText_RegionMap_NoData|Aucune donnée
+gText_TypeMemo|MÉMO TYPES : ce que chaque type\nfrappe fort, et ce qu'il craint.\pTypes abrégés en 3 lettres.\nFEE = FÉE.\pNORMAL bat : rien\nCraint : COM\pCOMBAT bat : NOR ROC ACI GLA TEN\nCraint : VOL PSY FEE\pVOL bat : COM INS PLA\nCraint : ROC ELE GLA\pPOISON bat : PLA FEE\nCraint : SOL PSY\pSOL bat : POI ROC ACI FEU ELE\nCraint : EAU PLA GLA\pROCHE bat : VOL INS FEU GLA\nCraint : COM SOL ACI EAU PLA\pINSECTE bat : PLA PSY TEN\nCraint : VOL ROC FEU\pSPECTRE bat : SPE PSY\nCraint : SPE TEN\pACIER bat : ROC GLA FEE\nCraint : COM SOL FEU\pFEU bat : INS ACI PLA GLA\nCraint : SOL ROC EAU\pEAU bat : SOL ROC FEU\nCraint : PLA ELE\pPLANTE bat : SOL ROC EAU\nCraint : VOL POI INS FEU GLA\pÉLECTRIK bat : VOL EAU\nCraint : SOL\pPSY bat : COM POI\nCraint : INS SPE TEN\pGLACE bat : VOL SOL PLA DRA\nCraint : COM ROC ACI FEU\pDRAGON bat : DRA\nCraint : GLA DRA FEE\pTÉNÈBRES bat : SPE PSY\nCraint : COM INS FEE\pFÉE bat : COM DRA TEN\nCraint : POI ACI\pSans effet : NOR>SPE  COM>SPE\nSPE>NOR  SOL>VOL  ELE>SOL\pSans effet : PSY>TEN  POI>ACI\nDRA>FEE{PAUSE_UNTIL_PRESS}

@@ -1,0 +1,133 @@
+gText_ButtonTypeHelp|AIDE
+gText_FrameType|TYPE
+gText_PickSwitchCancel|{DPAD_UPDOWN}CHOIX {DPAD_LEFTRIGHT}CHANGER {A_BUTTON}{B_BUTTON}ANNULER
+gText_SavingDontTurnOffThePower2|SAUVEGARDE…\nNE PAS ÉTEINDRE LA CONSOLE.
+gStartMenuDesc_Pokedex|Appareil qui enregistre les secrets\ndes POKéMON rencontrés ou capturés.
+gStartMenuDesc_Pokemon|Vérifie et organise les POKéMON\nqui voyagent avec toi.
+gStartMenuDesc_Bag|Poches pour ranger les objets\nachetés, reçus ou trouvés.
+gStartMenuDesc_Player|Vérifie ton argent et d'autres\ndonnées de jeu.
+gStartMenuDesc_Save|Sauvegarde ta progression pour\nfaire une pause.
+gStartMenuDesc_Option|Règle divers paramètres : vitesse\ndu texte, règles du jeu, etc.
+gStartMenuDesc_Exit|Ferme cette fenêtre MENU.
+gStartMenuDesc_Journal|Tes objectifs, triés : ce qui est\nfait et ce qu'il reste à faire.
+gStartMenuDesc_Radar|Cherche dans les hautes herbes un\nPOKéMON que tu as déjà vu.
+gStartMenuDesc_Retire|Quitte la SAFARI ZONE et retourne\nau comptoir d'inscription.
+gText_WasUsedOn| a été utilisé sur\n
+gText_LevelRoseTo| passe au niveau\n
+gText_LevelUp_MaxHP|{FONT_SMALL}PV{FONT_NORMAL} MAX.
+gText_LevelUp_Attack|ATTAQUE
+gText_LevelUp_Defense|DÉFENSE
+gText_LevelUp_Speed|VITESSE
+gText_LevelUp_SpAtk|ATQ. SPÉ.
+gText_LevelUp_SpDef|DÉF. SPÉ.
+gText_Counting_2And|2 et ‥ ‥ ‥ 
+gText_Poof|Hop !\p
+gText_MonForgotMove|{DYNAMIC 0x00} oublie\n{DYNAMIC 0x01}.\p
+gText_And|Et‥\p
+gText_MachineSet|Machine prête !\p
+gText_Huh|Hein ?
+gText_MonLearnedTMHM|{DYNAMIC 0x00} apprend\n{DYNAMIC 0x01} !
+gText_Upper|MAJ.
+gText_Lower|min.
+gText_Others|AUTRES
+gText_Symbols|SYMBOLES
+gText_Register2|ENREG.
+gText_Exit|SORTIR
+gText_QuitChatting|Quitter la discussion ?
+gText_RegisterTextWhere|Enregistrer le texte où ?
+gText_RegisterTextHere|Enregistrer le texte ici ?
+gText_InputText|Saisis un texte.
+gText_F700JoinedChat|{DYNAMIC 0x00} a rejoint la discussion !
+gText_F700LeftChat|{DYNAMIC 0x00} a quitté la discussion.
+gText_ExitingTheChat|Sortie de la discussion‥
+gText_LeaderHasLeftEndingChat|Le CHEF, {DYNAMIC 0x00}, est parti,\nla discussion est terminée.
+gText_RegisteredTextChanged_OKtoSave|Le texte enregistré a été modifié.\nSauvegarder la partie ?
+gText_RegisteredTextChanged_AlreadySavedFile|Il existe déjà une sauvegarde.\nL'écraser ?
+gText_RegisteredTextChanged_SavingDontTurnOff|SAUVEGARDE‥\nNE PAS ÉTEINDRE LA CONSOLE.
+gText_RegisteredTextChanged_SavedTheGame|{DYNAMIC 0x00} a sauvegardé la partie.
+gText_IfLeaderLeavesChatWillEnd|Si le CHEF part, la discussion\nse termine. Ça va ?
+gText_Hello|SALUT
+gText_Trade|ÉCHANGE
+gText_Battle|COMBAT
+gText_Lets|ALLONS
+gText_Ok|OK !
+gText_Sorry|DÉSOLÉ
+gText_YaySmileEmoji|YÉ{EMOJI_BIGSMILE}
+gText_ThankYou|MERCI
+gText_ByeBye|AU REVOIR !
+gText_PlayerScurriedToCenter|{PLAYER} a filé dans un CENTRE POKéMON,\npour protéger ses POKéMON épuisés\net K.O. de tout nouveau danger‥\p
+gText_PlayerScurriedBackHome|{PLAYER} est vite rentré chez lui,\npour protéger ses POKéMON épuisés\net K.O. de tout nouveau danger‥\p
+gText_Diploma_Player|DRESSEUR : {DYNAMIC 0x00}
+gText_Diploma_ThisDocument|Ce document est décerné en\nreconnaissance de ton magnifique\nexploit : avoir complété\nle POKéDEX {DYNAMIC 0x01}.
+gText_Diploma_National|NATIONAL
+gText_ClearAllSaveData|Effacer toutes les sauvegardes ?
+gText_ClearingData|Effacement des données‥\nPatiente un instant.
+gText_Player|DRESSEUR
+gText_Time|TEMPS
+gText_Badges|BADGES
+gText_Register|ENREG.
+gText_HatchedFromEgg|{STR_VAR_1} est sorti de l'ŒUF !
+gText_NickHatchPrompt|Donner un surnom au {STR_VAR_1}\nnouvellement éclos ?
+gString_OutOfCoins|Tu n'as plus de JETONS.\nFin de la partie !
+gString_QuitPlaying|Arrêter de jouer ?
+gString_SlotMachineControls|{DPAD_LEFTRIGHT}COMBOS {DPAD_DOWN}MISE {A_BUTTON}STOP {B_BUTTON}SORTIE
+gString_Bill|LANORIS
+gString_Someone|QUELQU'UN
+gString_Help|AIDE
+gText_SpacePoints2| points
+gText_SpaceTimes3| fois
+gText_PkmnJumpRecords|RECORDS POKéMON JUMP
+gText_JumpsInARow|Sauts d'affilée :
+gText_BestScore2|Meilleur score :
+gText_ExcellentsInARow|EXCELLENTS d'affilée :
+gText_AwesomeWonF701F700|Score génial ! Tu as\ngagné {DYNAMIC 01} {DYNAMIC 00} !
+gText_FilledStorageSpace2|Il n'y a plus de place.
+gText_CantHoldMore|Tu ne peux plus en porter !
+gText_WantToPlayAgain2|Rejouer ?
+gText_SomeoneDroppedOut2|Quelqu'un a abandonné.\nLa connexion est annulée.
+gText_SavingDontTurnOffPower|SAUVEGARDE…\nNE PAS ÉTEINDRE LA CONSOLE.
+gText_CommunicationStandby4|Communication en attente…
+gText_SavingDontTurnOffPower2|SAUVEGARDE...\nNE PAS ÉTEINDRE LA CONSOLE.
+gText_BerryPickingRecords|RECORDS CUEILLETTE DODRIO
+gText_BerriesPicked|BAIES cueillies :
+gText_BestScore|Meilleur score :
+gText_BerriesInRowFivePlayers|BAIES cueillies d'affilée à\ncinq joueurs :
+gText_BerryPickingResults|Résultats de la cueillette !
+gText_AnnouncingRankings|Annonce des classements !
+gText_AnnouncingPrizes|Annonce des prix !
+gText_FirstPlacePrize|Le gagnant reçoit\nce {DYNAMIC 00} !
+gText_CantHoldAnyMore|Tu ne peux plus en porter...
+gText_FilledStorageSpace|Il a rempli son espace de stockage.
+gText_WantToPlayAgain|Rejouer ?
+gText_SomeoneDroppedOut|Quelqu'un a abandonné.\nLa connexion est annulée.
+gText_CommunicationStandby3|Communication en attente…
+gText_BerryCrush_AreYouReady|Prêt pour BAIES EN FOLIE ?\nChoisis une BAIE à utiliser.\p
+gText_BerryCrush_WaitForOthersToChooseBerry|Patiente pendant que chacun\nchoisit une BAIE.
+gText_BerryCrush_GainedXUnitsOfPowder|{PAUSE_MUSIC}{PLAY_BGM MUS_LEVEL_UP}Tu obtiens {STR_VAR_1} unités de\nPOUDRE BAIE bien soyeuse.{RESUME_MUSIC}\pTon total de POUDRE BAIE\nest de {STR_VAR_2}.\p
+gText_BerryCrush_RecordingGameResults|Enregistrement des résultats\ndans la sauvegarde.\nPatiente un instant.
+gText_BerryCrush_WantToPlayAgain|Rejouer à BAIES EN FOLIE ?
+gText_BerryCrush_NoBerries|Tu n'as pas de BAIES.\nLa partie est annulée.
+gText_BerryCrush_MemberDroppedOut|Un membre a abandonné.\nLa partie est annulée.
+gText_BerryCrush_TimeUp|Temps écoulé.\pOn n'a pas pu faire de bonne\nPOUDRE BAIE…\p
+gText_BerryCrush_CommunicationStandby|Communication en attente…
+gText_SpaceTimes2| fois
+gText_StrVar1Berry|BAIE {STR_VAR_1}
+gText_TimeColon|Temps :
+gText_PressingSpeed|Vitesse d'appui :
+gText_Silkiness|Douceur :
+gText_SpaceMin|min.
+gText_SpaceSec|s
+gText_TimesPerSec|fois/s
+gText_PressesRankings|Classement nombre d'appuis
+gText_CrushingResults|Résultats du broyage
+gText_NeatnessRankings|Classement précision
+gText_CooperativeRankings|Classement coopération
+gText_PressingPowerRankings|Classement force d'appui
+gText_BerryCrush2|BAIES EN FOLIE
+gText_PressingSpeedRankings|Classement vitesse d'appui
+gText_Var1Players|{STR_VAR_1} JOUEURS
+gText_Ghost|SPECTRE
+gText_PokemonOnHook|Un POKéMON a mordu !{PAUSE_UNTIL_PRESS}
+gText_NotEvenANibble|Même pas une touche‥{PAUSE_UNTIL_PRESS}
+gText_ItGotAway|Il s'est échappé‥{PAUSE_UNTIL_PRESS}
+gText_Rooftop2|TOIT

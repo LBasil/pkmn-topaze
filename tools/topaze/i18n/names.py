@@ -142,6 +142,35 @@ def apply_dex(lg):
     open(pe, 'w', encoding='utf-8').write(ent); open(pt, 'w', encoding='utf-8').write(txt)
     print('pokedex localise :', n, '| refuses :', bad)
 
+STR_FILES = ['src/strings.c', 'src/battle_message.c', 'src/union_room_message.c', 'src/berry.c', 'src/data/text/quest_log.h', 'src/data/region_map/region_map_entry_strings.h', 'src/data/topaze_journal.h']
+
+def apply_strings(lg):
+    import glob
+    cs = lang.charset(); d = {}
+    for f in sorted(glob.glob(os.path.join(HERE, lg, 'strings', '*.txt'))):
+        for l in open(f, encoding='utf-8'):
+            l = l.rstrip('\n')
+            if '|' in l:
+                k, v = l.split('|', 1); d[k] = v.replace('\u2019', "'")
+    n = bad = 0
+    for rel in STR_FILES:
+        p = os.path.join(ROOT, rel)
+        if not os.path.exists(p): continue
+        src = open(p, encoding='utf-8').read()
+        bk = os.path.join(BACKUP, rel.replace('/', '__'))
+        if not os.path.exists(bk): shutil.copy(p, bk)
+        def rep(m):
+            nonlocal n, bad
+            v = d.get(m.group(2))
+            if v is None: return m.group(0)
+            ch = [c for c in re.sub(r'\{[^{}]+\}|\\[nlp]', '', v) if c not in cs]
+            if ch: bad += 1; print('! str', m.group(2), ch); return m.group(0)
+            n += 1
+            return m.group(1) + v + m.group(3)
+        src = re.sub(r'(\b(\w+)\[\]\s*=\s*_\(")(?:[^"\\]|\\.)*("\))', lambda m: rep(re.match(r'(.*)', m.group(0)) and type('M', (), {'group': lambda self, i, m=m: {0: m.group(0), 1: m.group(1), 2: m.group(2), 3: m.group(3)}[i]})()), src)
+        open(p, 'w', encoding='utf-8').write(src)
+    print('chaines localisees :', n, '| refusees :', bad)
+
 def restore():
     for b in glob_backups():
         rel = os.path.basename(b).replace('__', '/')
@@ -152,5 +181,5 @@ def glob_backups():
     return [os.path.join(BACKUP, f) for f in os.listdir(BACKUP)] if os.path.isdir(BACKUP) else []
 
 if __name__ == '__main__':
-    if sys.argv[1] == 'apply': apply(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_desc(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_dex(sys.argv[2] if len(sys.argv) > 2 else 'fr')
+    if sys.argv[1] == 'apply': apply(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_desc(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_dex(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_strings(sys.argv[2] if len(sys.argv) > 2 else 'fr')
     else: restore()

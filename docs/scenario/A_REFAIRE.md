@@ -339,3 +339,7 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - tools/topaze/i18n/names.py + tools/topaze/i18n/fr/*.txt : espèces (386), attaques (617), talents (174), objets (375, CT/CS), types, natures. Appliqué au build FR puis restauré (build_lang.sh).
 - Noms officiels FR de mémoire (gen 1-3 fiables ; gen 4-9 des attaques et certains talents à vérifier). Les noms trop longs sont abrégés automatiquement (fit()).
 - PAS ENCORE FAIT : descriptions (objets/attaques/talents), menus, textes de combat.
+
+## 03-11 (13h34) — localisation menus
+- strings.c : ~930 chaînes FR (fr/strings/s01–s07). Restent EN : crédits, WONDER CARD/NEWS, battle_message.c, berry.c, quest_log, journal, décos, easy chat (mots), trainer tower.
+- À vérifier : natures (HARDI, LÂCHE), Water Compaction, STEAM BLAST, « FAME CHECKER » (nom officiel FR ?).

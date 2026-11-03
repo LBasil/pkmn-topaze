@@ -1,0 +1,103 @@
+gText_Calcium_1000|CALCIUM{CLEAR_TO 0x65}{FONT_SMALL}1,000
+gText_Zinc_1000|ZINC{CLEAR_TO 0x65}{FONT_SMALL}1,000
+gText_Interview|Interview
+gText_PokeSum_TotalEv|EV TOTAL
+gText_BarInstant|INSTANT
+gText_LevelUpsOneByOne|UN PAR UN
+gText_LevelUpsStacked|GROUPÉS
+gText_TextSpeedSlow|LENT
+gText_TextSpeedMid|MOYEN
+gText_TextSpeedFast|RAPIDE
+gText_TextSpeedInstant|INSTANT
+gText_BattleSceneOn|OUI
+gText_BattleSceneOff|NON
+gText_BattleStyleShift|CHANGE
+gText_BattleStyleSet|FIXE
+gText_SoundMono|MONO
+gText_SoundStereo|STÉRÉO
+gText_CommErrorCheckConnections|Erreur de communication…\nVérifie toutes les connexions,\npuis éteins et rallume la console.
+gText_CommErrorEllipsis|Erreur de communication…
+gText_MoveCloserToLinkPartner|Rapproche-toi de ton partenaire.\nÉvite les obstacles entre vous.
+gText_ABtnRegistrationCounter|Bouton A : Comptoir d'inscription
+gText_ABtnTitleScreen|Bouton A : Écran titre
+gText_NumPlayerLink|LINK {STR_VAR_1}J
+gText_BronzeCard|BRONZE
+gText_CopperCard|CUIVRE
+gText_SilverCard|ARGENT
+gText_GoldCard|OR
+gText_HelpSystemControls_A_Next|{A_BUTTON}SUIVANT
+gText_HelpSystemControls_PickOkEnd|{DPAD_UPDOWN}CHOIX {A_BUTTON}OK {B_BUTTON}FIN
+gText_HelpSystemControls_AorBtoCancel|{A_BUTTON}{B_BUTTON}ANNULER
+gText_HelpSystemControls_PickOkCancel|{DPAD_UPDOWN}CHOIX {A_BUTTON}OK {B_BUTTON}ANNULER
+gEasyChatGroupName_Trainer|DRESSEUR
+gEasyChatGroupName_Status|ÉTAT
+gEasyChatGroupName_Battle|COMBAT
+gEasyChatGroupName_Greetings|SALUTS
+gEasyChatGroupName_People|GENS
+gEasyChatGroupName_Voices|VOIX
+gEasyChatGroupName_Speech|DISCOURS
+gEasyChatGroupName_Endings|FINALES
+gEasyChatGroupName_Feelings|ÉMOTIONS
+gEasyChatGroupName_Actions|ACTIONS
+gEasyChatGroupName_Lifestyle|QUOTIDIEN
+gEasyChatGroupName_Hobbies|LOISIRS
+gEasyChatGroupName_Time|TEMPS
+gEasyChatGroupName_Misc|DIVERS
+gEasyChatGroupName_Adjectives|ADJECTIFS
+gEasyChatGroupName_Events|ÉVÉNEMENTS
+gEasyChatGroupName_Move1|ATTAQUE 1
+gEasyChatGroupName_Move2|ATTAQUE 2
+gEasyChatGroupName_TrendySaying|DICTON
+gText_IsThisTradeOkay|Cet échange te convient ?
+gTradeText_Cancel|ANNULER
+gTradeText_ChooseAPokemon|Choisis un POKéMON.
+gTradeText_Summary|RÉSUMÉ
+gTradeText_Trade|ÉCHANGE
+gText_CancelTrade|Annuler l'échange ?
+gTradeText_PressBButtonToExit|Appuie sur B pour sortir.
+gText_TradeAction_Summary|RÉSUMÉ
+gText_TradeAction_Trade|ÉCHANGE
+gText_Trade_CommunicationStandby|{COLOR DARK_GRAY}{HIGHLIGHT WHITE}{SHADOW LIGHT_GRAY}Communication en attente…\nPatiente un instant.
+gText_TradeHasBeenCanceled|{COLOR DARK_GRAY}{HIGHLIGHT WHITE}{SHADOW LIGHT_GRAY}L'échange a été annulé.
+gText_Trade_OnlyPkmnForBattle|{COLOR DARK_GRAY}{HIGHLIGHT WHITE}{SHADOW LIGHT_GRAY}C'est ton seul POKéMON\npour combattre.
+gText_WaitingForFriendToFinish|{COLOR DARK_GRAY}{HIGHLIGHT WHITE}{SHADOW LIGHT_GRAY}En attente de ton ami…
+gText_FriendWantsToTrade|Ton ami veut échanger\ndes POKéMON.
+gText_XWillBeSentToY|{STR_VAR_2} sera\nenvoyé à {STR_VAR_1}.
+gText_ByeByeVar1|Bye-bye, {STR_VAR_2} !
+gText_XSentOverY|{STR_VAR_1} a envoyé {STR_VAR_3}.
+gText_TakeGoodCareOfX|Prends bien soin de {STR_VAR_3} !
+gText_From|De 
+gText_WirelessCommunicationStatus|État de la communication sans fil
+gText_PeopleTrading|Échanges en cours :
+gText_PeopleBattling|Combats en cours :
+gText_PeopleInUnionRoom|Dans la SALLE UNION :
+gText_PeopleCommunicating|Communications en cours :
+gText_Dynamic0Players|{DYNAMIC 0x00} joueurs
+gText_Dynamic1Players|{DYNAMIC 0x01} joueur
+gText_Dynamic2Players|{DYNAMIC 0x02} joueurs
+gText_Dynamic3Players|{DYNAMIC 0x03} joueurs
+gText_BButtonCancel|{B_BUTTON}ANNULER
+gText_CommunicationStandby5|Communication en attente…
+gDaycareText_GetAlongVeryWell|Les deux semblent très bien\ns'entendre.
+gDaycareText_GetAlong|Les deux semblent s'entendre.
+gDaycareText_DontLikeOther|Les deux ne semblent pas trop\ns'apprécier.
+gDaycareText_PlayOther|Les deux préfèrent jouer avec\nd'autres POKéMON.
+gText_TeachWhichMoveToMon|Apprendre quelle attaque à\n{STR_VAR_1} ?
+gText_TeachMoveQues|Apprendre {STR_VAR_2} ?
+gText_MonLearnedMove|{STR_VAR_1} apprend\n{STR_VAR_2}.
+gText_MonIsTryingToLearnMove|{STR_VAR_1} veut apprendre\n{STR_VAR_2}.\pMais {STR_VAR_1} ne peut pas\napprendre plus de quatre attaques.\pOublier une ancienne attaque\npour apprendre {STR_VAR_2} ?
+gText_StopLearningMove|Renoncer à apprendre {STR_VAR_2} ?
+gText_1_2_and_Poof|{PAUSE 0x20}1, {PAUSE 0x0F}2 et {PAUSE 0x0F}‥ {PAUSE 0x0F}‥ {PAUSE 0x0F}‥ {PAUSE 0x0F}{PLAY_SE SE_BALL_BOUNCE_1}Hop !\p
+gText_MonForgotOldMoveAndMonLearnedNewMove|{STR_VAR_1} oublie {STR_VAR_3}.\pEt‥\p{STR_VAR_1}\napprend {STR_VAR_2}.
+gText_GiveUpTryingToTeachNewMove|Renoncer à enseigner une\nnouvelle attaque à {STR_VAR_1} ?
+gText_WhichMoveShouldBeForgotten|Quelle attaque oublier ?\p
+gText_CommStandbyAwaitingOtherPlayer|Communication en attente‥\nL'autre joueur choisit.
+gText_BattleWasRefused|Le combat a été refusé.{PAUSE 0x3C}
+gText_RefusedBattle|Combat refusé.{PAUSE 0x3C}
+gFameCheckerText_MainScreenUI|{START_BUTTON}CHOIX {DPAD_UPDOWN}SÉLECT. {A_BUTTON}OK
+gFameCheckerText_PickScreenUI|{START_BUTTON}CHOIX {DPAD_UPDOWN}SÉLECT. {B_BUTTON}ANNULER
+gFameCheckerText_FlavorTextUI|{DPAD_ANY}CHOIX {A_BUTTON}LIRE {B_BUTTON}ANNULER
+gFameCheckerOakName|CHEN
+gFameCheckerDaisyName|MARGUERITE
+gFameCheckerBillName|LANORIS
+gFameCheckerMrFujiName|M. FUJI

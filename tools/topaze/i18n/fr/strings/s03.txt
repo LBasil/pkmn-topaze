@@ -1,0 +1,192 @@
+gExpandedPlaceholder_Aqua|AQUA
+gExpandedPlaceholder_Magma|MAGMA
+gUnusedText_MysteryGift|CADEAU MYSTÈRE
+gText_EnjoyCycling|Profitons du vélo !
+gText_InUseAlready_PM|C'est déjà utilisé.
+gText_NoUse|Sans effet.
+gText_Able|APTE
+gText_First_PM|1ER
+gText_Second_PM|2E
+gText_Third_PM|3E
+gText_Able2|APTE
+gText_NotAble|INAPTE
+gText_Able3|APTE !
+gText_NotAble2|INAPTE !
+gText_Learned|APPRIS
+gText_OakImportantToGetToKnowPokemonThroughly|CHEN : Il est important de bien\nconnaître tes POKéMON.\p
+gText_OakThisIsListOfPokemon|Voici la liste de tes POKéMON,\n{PLAYER}.\pOuvre-la pour voir les talents\net les attaques de tes POKéMON.\pTu y choisis aussi le POKéMON\nsur lequel utiliser un objet.{PAUSE_UNTIL_PRESS}
+gText_CutATreeOrGrass|Couper un arbre ou l'herbe.
+gText_FlyToAKnownTown|Voler vers une ville connue.
+gText_TravelOnWater|Voyager sur l'eau.
+gText_MoveHeavyBoulders|Déplacer de gros rochers.
+gText_LightUpDarkness|Éclairer l'obscurité.
+gText_ShatterACrackedRock|Briser un rocher fissuré.
+gText_ClimbAWaterfall|Gravir une cascade.
+gText_EscapeFromHere|S'échapper d'ici.
+gText_LureWildPokemon|Attirer les POKéMON sauvages.
+gText_ShareHp|Partager ses PV.
+gText_ReturnToAHealingSpot|Retourner à un lieu de soin.
+gText_EscapeFromHereAndReturnTo|S'échapper d'ici et retourner\nà {STR_VAR_1} ?
+gText_ReturnToHealingSpot|Retourner au dernier lieu de soin\nutilisé à {STR_VAR_1} ?
+gText_ItemEffect_Attack|ATTAQUE
+gText_ItemEffect_Defense|DÉFENSE
+gText_ItemEffect_Speed|VITESSE
+gText_PkmnCantParticipate|Ce POKéMON ne peut pas participer.{PAUSE_UNTIL_PRESS}
+gText_CancelParticipation|Annuler la participation ?
+gText_CancelBattle|Annuler le combat ?
+gText_TurnOff|ÉTEINDRE
+gText_ItemStorage|STOCKAGE OBJETS
+gText_Mailbox|BOÎTE LETTRES
+gText_DepositItem2|DÉPOSER OBJET
+gText_WithdrawItem2|RETIRER OBJET
+gText_StoreItemsInThePC|Ranger des objets dans le PC.
+gText_TakeOutItemsFromThePC|Sortir des objets du PC.
+gText_ThereAreNoItems|Il n'y a aucun objet.{PAUSE_UNTIL_PRESS}
+gText_NoMoreRoomInBag|Il n'y a plus de place\ndans le SAC.
+gText_WithdrawHowMany|Retirer combien de\n{STR_VAR_1} ?
+gText_WithdrewQuantItem|{STR_VAR_2} {STR_VAR_1}\nretiré(s).
+gOtherText_Read|LIRE
+gOtherText_MoveToBag|METTRE AU SAC
+gOtherText_Give2|DONNER
+gText_TheresNoMailHere|Il n'y a pas de LETTRE.{PAUSE_UNTIL_PRESS}
+gText_WhatWouldYouLikeToDoWithPlayersMail|Que faire de la LETTRE\nde {STR_VAR_1} ?
+gText_MessageWillBeLost|Le message sera perdu.\nÇa va ?
+gText_BagIsFull|Le SAC est plein.{PAUSE_UNTIL_PRESS}
+gText_MailReturnedToBagMessageErased|La LETTRE est dans le SAC,\nson message effacé.{PAUSE_UNTIL_PRESS}
+gText_WithdrawItem|RETIRER\nOBJET
+gText_Withdraw|RETIRER
+gText_ReturnToPC|Retourner au PC.
+gText_LtSurge|LT. SURGE
+gText_Koga|KOGA
+gText_Info|INFO
+gText_Eggs|ŒUFS
+gText_HallOfFame|HALL DES LÉGENDES
+gText_Victories|VICTOIRES
+gText_Quit|QUITTER
+gText_Psn|PSN
+gText_Par|PAR
+gText_Slp|SOM
+gText_Brn|BRÛ
+gText_Frz|GEL
+gText_Toxic|TOX
+gOtherText_Quit|QUITTER
+gText_Yes|OUI
+gText_No|NON
+gText_SingleBattle|COMBAT SIMPLE
+gText_DoubleBattle|COMBAT DOUBLE
+gText_MultiBattle|COMBAT MULTI
+gText_MakeAChallenge|Lancer un défi.
+gText_Info_2|INFO
+gText_FreshWater_200|EAU FRAÎCHE{CLEAR_TO 0x57}{FONT_SMALL}¥200
+gText_SodaPop_300|SODA COOL{CLEAR_TO 0x57}{FONT_SMALL}¥300
+gText_Lemonade_350|LIMONADE{CLEAR_TO 0x57}{FONT_SMALL}¥350
+gText_50Coins_1000|{FONT_SMALL} 50 JETONS{CLEAR_TO 0x45}¥1,000
+gText_500Coins_10000|{FONT_SMALL}500 JETONS{CLEAR_TO 0x40}¥10,000
+gText_Excellent|Excellent
+gText_NotSoBad|Pas mal
+gText_RedShard|TESSON ROUGE
+gText_YellowShard|TESSON JAUNE
+gText_BlueShard|TESSON BLEU
+gText_GreenShard|TESSON VERT
+gText_Right|Droite
+gText_Left|Gauche
+gText_Tm13_4000Coins|CT13{CLEAR_TO 0x48}{FONT_SMALL}4,000 JETONS
+gText_Tm23_3500Coins|CT23{CLEAR_TO 0x48}{FONT_SMALL}3,500 JETONS
+gText_Tm24_4000Coins|CT24{CLEAR_TO 0x48}{FONT_SMALL}4,000 JETONS
+gText_Tm30_4500Coins|CT30{CLEAR_TO 0x48}{FONT_SMALL}4,500 JETONS
+gText_Tm35_4000Coins|CT35{CLEAR_TO 0x48}{FONT_SMALL}4,000 JETONS
+gText_Cool|COOL
+gText_Beauty|BEAUTÉ
+gText_Cute|MIGNON
+gText_Smart|FUTÉ
+gText_Tough|ROBUSTE
+gText_Normal|NORMAL
+gText_Black|NOIR
+gText_Pink|ROSE
+gText_Sepia|SÉPIA
+gText_Cool_2|COOL
+gText_Beauty_2|BEAUTÉ
+gText_Cute_2|MIGNON
+gText_Smart_2|FUTÉ
+gText_Tough_2|ROBUSTE
+gText_Items|OBJETS
+gText_KeyItems|OBJETS CLÉS
+gText_PokeBalls|POKé BALLS
+gText_TMsAndHMs|CT & CS
+gText_Berries|BAIES
+gText_Boulderbadge|BADGE PYROPE
+gText_Cascadebadge|BADGE TOURMALINE
+gText_Thunderbadge|BADGE APATITE
+gText_Rainbowbadge|BADGE QUARTZ
+gText_Soulbadge|BADGE AMÉTHYSTE
+gText_Marshbadge|BADGE HÉMATITE
+gText_Volcanobadge|BADGE TOPAZE
+gText_Earthbadge|BADGE OPALE
+gText_SomeoneSPc|PC DE QUELQU'UN
+gText_BillSPc|PC DE LANORIS
+gText_SPc|PC de {PLAYER}
+gText_HallOfFame_2|HALL DES LÉGENDES
+gText_LogOff|DÉCONNEXION
+gText_ProfOakSPc|PC du PROF. CHEN
+gText_Eevee|ÉVOLI
+gText_Flareon|PYROLI
+gText_Jolteon|VOLTALI
+gText_Vaporeon|AQUALI
+gText_QuitLooking|Arrêter de regarder.
+gText_FreshWater|EAU FRAÎCHE
+gText_SodaPop|SODA COOL
+gText_Lemonade|LIMONADE
+gText_Coins_2|JETONS
+gText_Bicycle_Price|VÉLO{CLEAR_TO 0x49}{FONT_SMALL}¥1,000,000
+gText_NoThanks|NON MERCI
+gText_Abra_180Coins|ABRA{CLEAR_TO 0x55}{FONT_SMALL} 180 JETONS
+gText_Clefairy_500Coins|MÉLOFÉE{CLEAR_TO 0x55}{FONT_SMALL} 500 JETONS
+gText_Dratini_2800Coins|MINIDRACO{CLEAR_TO 0x4B}{FONT_SMALL} 2,800 JETONS
+gText_Scyther_5500Coins|INSÉCATEUR{CLEAR_TO 0x4B}{FONT_SMALL} 5,500 JETONS
+gText_Porygon_9999Coins|PORYGON{CLEAR_TO 0x4B}{FONT_SMALL} 9,999 JETONS
+gText_Abra_120Coins|ABRA{CLEAR_TO 0x55}{FONT_SMALL} 120 JETONS
+gText_Clefairy_750Coins|MÉLOFÉE{CLEAR_TO 0x55}{FONT_SMALL} 750 JETONS
+gText_Pinsir_2500Coins|SCARABRUTE{CLEAR_TO 0x4B}{FONT_SMALL} 2,500 JETONS
+gText_Dratini_4600Coins|MINIDRACO{CLEAR_TO 0x4B}{FONT_SMALL} 4,600 JETONS
+gText_Porygon_6500Coins|PORYGON{CLEAR_TO 0x4B}{FONT_SMALL} 6,500 JETONS
+gText_NoThanks_2|NON MERCI
+gText_HelixFossil|FOSSILE NAUTILE
+gText_DomeFossil|FOSSILE DÔME
+gText_OldAmber|VIEIL AMBRE
+gText_TradeCenter|CENTRE ÉCHANGE
+gText_Colosseum|COLISÉE
+gText_GameLinkCable|Câble Link
+gText_Wireless|Sans fil
+gText_ItemsPocket|POCHE OBJETS
+gText_KeyItemsPocket|POCHE OBJETS CLÉS
+gText_PokeBallsPocket|POCHE POKé BALLS
+gText_TmCase|BOÎTE CT
+gText_BerryPouch_2|SAC À BAIES
+gText_Other|AUTRE
+gText_OneIsland|ÎLE UN
+gText_TwoIsland|ÎLE DEUX
+gText_ThreeIsland|ÎLE TROIS
+gText_FourIsland|ÎLE QUATRE
+gText_FiveIsland|ÎLE CINQ
+gText_SixIsland|ÎLE SIX
+gText_SevenIsland|ÎLE SEPT
+gText_Vermilion|APATIA
+gText_Colosseum_2|COLISÉE
+gText_BerryCrush|BAIES EN FOLIE
+gText_PokemonJump|POKéMON JUMP
+gText_DodrioBerryPicking|CUEILLETTE DODRIO
+gText_2Tinymushrooms|2 PETITS CHAMPIS
+gText_1BigMushroom|1 GROS CHAMPI
+gText_SeviiIslands|ÎLES SEVII
+gText_NavelRock|ROCHER NOMBRIL
+gText_BirthIsland|ÎLE NAISSANCE
+gText_MiracleSeed_1000Coins|GRAINE MIRAC.{CLEAR_TO 0x50}{FONT_SMALL}1,000 JETONS
+gText_Charcoal_1000Coins|CHARBON{CLEAR_TO 0x50}{FONT_SMALL}1,000 JETONS
+gText_MysticWater_1000Coins|EAU MYSTIQUE{CLEAR_TO 0x50}{FONT_SMALL}1,000 JETONS
+gText_YellowFlute_1600Coins|FLÛTE JAUNE{CLEAR_TO 0x50}{FONT_SMALL}1,600 JETONS
+gText_SmokeBall_800Coins|BALLE FUMÉE{CLEAR_TO 0x5A}{FONT_SMALL}800 JETONS
+gText_BecomeLeader|DEVENIR CHEF
+gText_JoinGroup|REJOINDRE
+gOtherText_Single|SIMPLE
+gOtherText_Double|DOUBLE
+gOtherText_Knockout|ÉLIMINATOIRE
