@@ -1,7 +1,23 @@
 {
+ "Route15_WestEntrance_2F_Text_ExplainExpShare": {
+  "en": "EXP. SHARE is an item to be held\\nby a POKéMON.\\pThe POKéMON will receive a share\\nof the EXP. Points without having\\lto battle.",
+  "fr": "Le PARTAGE EXP. est un objet à\\nfaire tenir à un POKéMON.\\pLe POKéMON recevra une part des\\nPoints d'EXP. sans avoir à\\lcombattre."
+ },
+ "Route15_WestEntrance_2F_Text_GiveItemIfCaughtEnough": {
+  "en": "Hi! Remember me?\\nI'm one of PROF. OAK's AIDES.\\pIf your POKéDEX has complete data\\non {STR_VAR_1} species, I'm supposed to\\lgive you a reward.\\pPROF. OAK entrusted me with the\\n{STR_VAR_2} for you.\\pSo, {PLAYER}, let me ask you.\\pHave you gathered data on at least\\n{STR_VAR_1} kinds of POKéMON?",
+  "fr": "Salut ! Tu te souviens de moi ?\\nJe suis un ASSISTANT du PROF. CHEN.\\pSi ton POKéDEX contient les données\\nde {STR_VAR_1} espèces, je dois te\\ldonner une récompense.\\pLe PROF. CHEN m'a confié\\n{STR_VAR_2} pour toi.\\pAlors, {PLAYER}, je te le demande.\\pAs-tu réuni des données sur au\\nmoins {STR_VAR_1} sortes de POKéMON ?"
+ },
+ "Route15_WestEntrance_2F_Text_GreatHereYouGo": {
+  "en": "Great! You have caught or owned\\n{STR_VAR_3} kinds of POKéMON!\\pCongratulations!\\nHere you go!",
+  "fr": "Super ! Tu as capturé ou possédé\\n{STR_VAR_3} sortes de POKéMON !\\pFélicitations !\\nTiens, voilà !"
+ },
  "Route15_WestEntrance_2F_Text_LargeShiningBird": {
   "en": "Let's see what the binoculars have\\nto show…\\pA large, shining bird is flying\\ntoward the sea.",
   "fr": "Voyons ce que les jumelles\\nmontrent…\\pUn grand oiseau brillant vole vers\\nla mer."
+ },
+ "Route15_WestEntrance_2F_Text_ReceivedItemFromAide": {
+  "en": "{PLAYER} received the {STR_VAR_2}\\nfrom the AIDE.",
+  "fr": "{PLAYER} a reçu {STR_VAR_2}\\nde l'ASSISTANT."
  },
  "Route15_WestEntrance_2F_Text_SmallIslandOnHorizon": {
   "en": "Let's see what the binoculars have\\nto show…\\pIt looks like a small island on\\nthe horizon!",

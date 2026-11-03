@@ -3,8 +3,24 @@
   "en": "I've got to buy some POTIONS.\\pYou never know when your POKéMON\\nwill need quick healing.",
   "fr": "Je dois acheter des POTIONS.\\pOn ne sait jamais quand ses POKéMON\\nauront besoin de soins rapides."
  },
+ "ViridianCity_Mart_Text_ReceivedOaksParcelFromClerk": {
+  "en": "{PLAYER} received OAK'S PARCEL\\nfrom the POKéMON MART clerk.",
+  "fr": "{PLAYER} a reçu le COLIS DE CHEN\\ndu vendeur de la BOUTIQUE POKéMON."
+ },
+ "ViridianCity_Mart_Text_SayHiToOakForMe": {
+  "en": "Okay, thanks! Please say hi to\\nPROF. OAK for me, too.",
+  "fr": "D'accord, merci ! Salue aussi le\\nPROF. CHEN de ma part."
+ },
  "ViridianCity_Mart_Text_ShopDoesGoodBusinessInAntidotes": {
   "en": "This shop does good business in\\nANTIDOTES, I've heard.",
   "fr": "Cette boutique fait de bonnes\\naffaires avec les ANTIDOTES,\\lparaît-il."
+ },
+ "ViridianCity_Mart_Text_TakeThisToProfOak": {
+  "en": "You know PROF. OAK, right?\\pHis order came in.\\nCan I get you to take it to him?",
+  "fr": "Tu connais le PROF. CHEN, n'est-ce\\npas ?\\pSa commande est arrivée.\\nPeux-tu la lui apporter ?"
+ },
+ "ViridianCity_Mart_Text_YouCameFromPallet": {
+  "en": "Hey!\\nYou came from GRENALUX?",
+  "fr": "Hé !\\nTu viens de GRENALUX ?"
  }
 }

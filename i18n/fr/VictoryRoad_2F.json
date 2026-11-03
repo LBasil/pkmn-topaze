@@ -23,6 +23,10 @@
   "en": "Strongest in KANTO, they say.\\nHe did not even draw a weapon.",
   "fr": "Le plus fort de KANTO, dit-on.\\nIl n'a même pas sorti d'arme."
  },
+ "VictoryRoad_2F_Text_ExitBlocked": {
+  "en": "A wall of black mist seals the way\\nout. Something ancient stirs below\\pthe cave. Look for a way down.",
+  "fr": "Un mur de brume noire bloque la\\nsortie. Quelque chose d'ancien\\ls'agite sous la grotte.\\pCherche un chemin vers le bas."
+ },
  "VictoryRoad_2F_Text_GregoryDefeat": {
   "en": "Doors slam…",
   "fr": "Les portes claquent…"
@@ -46,6 +50,14 @@
  "VictoryRoad_2F_Text_NelsonPostBattle": {
   "en": "Everyone on the exit side fears\\nVESPER. Be careful.",
   "fr": "Tous ceux du côté de la sortie\\ncraignent VESPER. Sois prudent."
+ },
+ "VictoryRoad_2F_Text_NurseHeal": {
+  "en": "I am the road's NURSE. I set up\\nhere, where the air feels wrong.\\pWhatever you are about to do,\\ndo it with a healthy team.",
+  "fr": "Je suis l'INFIRMIÈRE de la route.\\nJe me suis installée ici, où l'air\\lest étrange.\\pQuoi que tu t'apprêtes à faire,\\nfais-le avec une équipe en forme."
+ },
+ "VictoryRoad_2F_Text_NurseHealed": {
+  "en": "All better! Come back any time.",
+  "fr": "Te voilà en pleine forme !\\nReviens quand tu veux."
  },
  "VictoryRoad_2F_Text_VincentDefeat": {
   "en": "I lost my way…",

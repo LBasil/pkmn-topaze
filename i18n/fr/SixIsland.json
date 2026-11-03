@@ -20,7 +20,7 @@
   "fr": "DRAKE : Un souverain digne des six.\\nJe me souviendrai de ce jour."
  },
  "SixIsland_Text_LordEarly": {
-  "en": "DRAKE: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\nFLORA will tell you the way.",
+  "en": "DRAKE: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\lFLORA will tell you the way.",
   "fr": "DRAKE : Pas encore. L'ancienne\\nLIGUE et les MAÎTRES doivent\\ld'abord tomber. FLORA te dira le\\nchemin."
  },
  "SixIsland_Text_LordIdle": {
@@ -40,8 +40,8 @@
   "fr": "OLGA : Merci encore. Le REFUGE est\\nplus sûr grâce à toi."
  },
  "SixIsland_Text_RefEarly": {
-  "en": "OLGA: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
-  "fr": "OLGA : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\lde la ZONE SAFARI connaît l'ordre."
+  "en": "OLGA: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\lSAFARI ZONE knows the order.",
+  "fr": "OLGA : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\lde la PARC SAFARI connaît l'ordre."
  },
  "SixIsland_Text_RefGives": {
   "en": "OLGA: You saved the day. The post\\nhas a gift for you: PINSIR!",

@@ -92,7 +92,7 @@
   "fr": "SIDNEY : Un souverain digne des\\nsix. Je me souviendrai de ce jour."
  },
  "ThreeIsland_Text_LordEarly": {
-  "en": "SIDNEY: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\nFLORA will tell you the way.",
+  "en": "SIDNEY: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\lFLORA will tell you the way.",
   "fr": "SIDNEY : Pas encore. L'ancienne\\nLIGUE et les MAÎTRES doivent\\ld'abord tomber. FLORA te dira le\\nchemin."
  },
  "ThreeIsland_Text_LordIdle": {
@@ -128,7 +128,7 @@
   "fr": "LEON : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
  },
  "ThreeIsland_Text_RefAsk": {
-  "en": "LEON: An ABSOL warned me of danger for\\nweeks. Now I know why: hunters\\nare on the island.",
+  "en": "LEON: An ABSOL warned me of danger for\\nweeks. Now I know why: hunters\\lare on the island.",
   "fr": "LEON : Un ABSOL m'a averti d'un\\ndanger pendant des semaines.\\pMaintenant je sais pourquoi : des\\nchasseurs sont sur l'île."
  },
  "ThreeIsland_Text_RefDone": {
@@ -136,8 +136,8 @@
   "fr": "LEON : Merci encore. Le REFUGE est\\nplus sûr grâce à toi."
  },
  "ThreeIsland_Text_RefEarly": {
-  "en": "LEON: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
-  "fr": "LEON : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\lde la ZONE SAFARI connaît l'ordre."
+  "en": "LEON: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\lSAFARI ZONE knows the order.",
+  "fr": "LEON : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\lde la PARC SAFARI connaît l'ordre."
  },
  "ThreeIsland_Text_RefGives": {
   "en": "LEON: You saved the day. The post\\nhas a gift for you: ABSOL!",

@@ -23,6 +23,10 @@
   "en": "Hi, {PLAYER}. I bet you've become\\ngood friends with your POKéMON.\\pBy the way, did you know about\\nDAISY?\\pIf you show DAISY your POKéMON,\\nshe can tell how much it likes you.\\pOccasionally, she will even groom\\na POKéMON for you.\\pThis is a secret, so please don't\\ntell anyone.",
   "fr": "Salut, {PLAYER}. Je parie que tu es\\ndevenu bon ami avec tes POKéMON.\\pAu fait, tu connais MARGUERITE ?\\pSi tu montres tes POKéMON à\\nMARGUERITE, elle peut dire à quel\\lpoint ils t'aiment.\\pParfois, elle toilette même un\\nPOKéMON pour toi.\\pC'est un secret, alors ne le dis à\\npersonne."
  },
+ "PalletTown_ProfessorOaksLab_Text_DeliveredOaksParcel": {
+  "en": "{PLAYER} delivered OAK'S PARCEL.",
+  "fr": "{PLAYER} a livré le COLIS DE CHEN."
+ },
  "PalletTown_ProfessorOaksLab_Text_EmailMessage": {
   "en": "There's an e-mail message here.\\p…\\pFinally!\\nThe ultimate TRAINERS of the\\lPOKéMON LEAGUE are ready to\\ltake on all comers!\\pBring your best POKéMON and see\\nhow you rate as a TRAINER!\\pPOKéMON LEAGUE HQ\\nINDIGO PLATEAU\\pPROF. OAK, please visit us!\\n…",
   "fr": "Il y a un e-mail ici.\\p…\\pEnfin ! Les DRESSEURS ultimes de la\\nLIGUE POKéMON sont prêts à\\laffronter tous les challengers !\\pAmène tes meilleurs POKéMON et vois\\nce que tu vaux comme DRESSEUR !\\pQG DE LA LIGUE POKéMON PLATEAU\\nINDIGO\\pPROF. CHEN, venez nous voir ! …"
@@ -71,6 +75,10 @@
   "en": "To make a complete guide on all\\nthe POKéMON in the world…\\pThat was my dream!\\pBut, I'm too old.\\nI can't get the job done.\\pSo, I want you two to fulfill my\\ndream for me.\\pGet moving, you two.\\pThis is a great undertaking in\\nPOKéMON history!",
   "fr": "Faire un guide complet de tous les\\nPOKéMON du monde…\\pC'était mon rêve !\\pMais je suis trop vieux.\\nJe ne peux pas y arriver.\\pAlors, je veux que vous deux\\nréalisiez mon rêve à ma place.\\pAllez, en route, vous deux.\\pC'est une grande entreprise dans\\nl'histoire des POKéMON !"
  },
+ "PalletTown_ProfessorOaksLab_Text_OakCustomBallIOrdered": {
+  "en": "Ah! \\nIt's the custom POKé BALL!\\pI had it on order.\\nThank you!",
+  "fr": "Ah !\\nC'est la POKé BALL sur mesure !\\pElle était en commande.\\nMerci !"
+ },
  "PalletTown_ProfessorOaksLab_Text_OakExplainCatching": {
   "en": "When a wild POKéMON appears,\\nit's fair game.\\pJust throw a POKé BALL at it and\\ntry to catch it!\\pThis won't always work, however.\\pA healthy POKéMON can escape.\\nYou have to be lucky!",
   "fr": "Quand un POKéMON sauvage apparaît,\\nil est de bonne guerre.\\pLance-lui une POKé BALL et essaie\\nde le capturer !\\pÇa ne marche pas toujours,\\ncependant.\\pUn POKéMON en bonne santé peut\\ns'échapper. Il faut de la chance !"
@@ -82,6 +90,10 @@
  "PalletTown_ProfessorOaksLab_Text_OakHaveRequestForYouTwo": {
   "en": "OAK: Oh, right!\\nI have a request for you two.",
   "fr": "CHEN : Ah, oui !\\nJ'ai une requête pour vous deux."
+ },
+ "PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMe": {
+  "en": "OAK: Oh, {PLAYER}!\\nHow is my old POKéMON?\\pWell, it seems to be growing more\\nattached to you.\\pYou must be talented as a POKéMON\\nTRAINER.\\pWhat's that?\\nYou have something for me?",
+  "fr": "CHEN : Oh, {PLAYER} !\\nComment va mon ancien POKéMON ?\\pEh bien, il semble s'attacher de\\nplus en plus à toi.\\pTu dois avoir du talent comme\\nDRESSEUR de POKéMON.\\pQu'est-ce que c'est ?\\nTu as quelque chose pour moi ?"
  },
  "PalletTown_ProfessorOaksLab_Text_OakHeyDontGoAwayYet": {
   "en": "OAK: Hey!\\nDon't go away yet!",
@@ -122,6 +134,10 @@
  "PalletTown_ProfessorOaksLab_Text_OakSightingsOfRareMons": {
   "en": "Recently, there have been sightings\\nof many rare POKéMON species.\\pI'm talking about POKéMON that\\nhave never been seen in KANTO.\\pI would love to go see things for\\nmyself, but I'm much too old.\\pSince I can't do it, {PLAYER}, I'd\\nlike you to go in my place.",
   "fr": "Récemment, de nombreuses espèces\\nrares de POKéMON ont été observées.\\pJe parle de POKéMON jamais vus à\\nKANTO.\\pJ'aimerais bien aller voir par\\nmoi-même, mais je suis bien trop\\lvieux.\\pComme je ne peux pas, {PLAYER}, je\\nvoudrais que tu y ailles à ma\\lplace."
+ },
+ "PalletTown_ProfessorOaksLab_Text_OakTakeTheseWithYou": {
+  "en": "OAK: {PLAYER} and {RIVAL}.\\nTake these with you.",
+  "fr": "CHEN : {PLAYER} et {RIVAL}.\\nPrenez ceci avec vous."
  },
  "PalletTown_ProfessorOaksLab_Text_OakThisMonIsEnergetic": {
   "en": "This POKéMON is really quite\\nenergetic!",
@@ -179,6 +195,10 @@
   "en": "{RIVAL}: Okay! I'll make my\\nPOKéMON battle to toughen it up!\\p{PLAYER}! Gramps!\\nSmell you later!",
   "fr": "{RIVAL} : Bien ! Je vais faire\\ncombattre mon POKéMON pour\\ll'endurcir !\\p{PLAYER} ! Papy ! À plus !"
  },
+ "PalletTown_ProfessorOaksLab_Text_RivalGramps": {
+  "en": "{RIVAL}: Gramps!",
+  "fr": "{RIVAL} : Papy !"
+ },
  "PalletTown_ProfessorOaksLab_Text_RivalGrampsIsntAround": {
   "en": "{RIVAL}: What, it's only {PLAYER}?\\nGramps isn't around.",
   "fr": "{RIVAL} : Quoi, ce n'est que\\n{PLAYER} ? Papy n'est pas là."
@@ -214,6 +234,14 @@
  "PalletTown_ProfessorOaksLab_Text_RivalReceivedMonFromOak": {
   "en": "{RIVAL} received the {STR_VAR_1}\\nfrom PROF. OAK!",
   "fr": "{RIVAL} a reçu {STR_VAR_1}\\ndu PROF. CHEN !"
+ },
+ "PalletTown_ProfessorOaksLab_Text_RivalTellSisNotToGiveYouMap": {
+  "en": "{PLAYER}, I hate to say it, but you\\nwon't be necessary for this.\\pI know! I'll borrow a TOWN MAP\\nfrom my sis!\\pI'll tell her not to lend you one,\\n{PLAYER}! Hahaha!\\pDon't bother coming around to\\nmy place after this!",
+  "fr": "{PLAYER}, désolé de le dire, mais\\ntu n'es pas nécessaire pour ça.\\pJe sais ! Je vais emprunter une\\nCARTE DE LA VILLE à ma sœur !\\pJe lui dirai de ne pas t'en prêter\\nune, {PLAYER} ! Hahaha !\\pPas la peine de venir chez moi\\naprès ça !"
+ },
+ "PalletTown_ProfessorOaksLab_Text_RivalWhatDidYouCallMeFor": {
+  "en": "{RIVAL}: I almost forgot!\\nWhat did you call me for?",
+  "fr": "{RIVAL} : J'allais oublier !\\nPourquoi m'as-tu appelé ?"
  },
  "PalletTown_ProfessorOaksLab_Text_SaveOptionInMenu": {
   "en": "The SAVE option is on the MENU.\\nUse it regularly.",

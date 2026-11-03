@@ -20,7 +20,7 @@
   "fr": "Mon mari aime échanger des POKéMON.\\pTu collectionnes des POKéMON pour\\nton POKéDEX, n'est-ce pas ?\\pVoudrais-tu échanger avec lui ?"
  },
  "CeruleanCity_House3_Text_QuestAsk": {
-  "en": "I'm a retired TRAINER.\\pShow me a POKéMON at level 45\\nor higher and I'll give you my\\nLINK CABLE.",
+  "en": "I'm a retired TRAINER.\\pShow me a POKéMON at level 45\\nor higher and I'll give you my\\lLINK CABLE.",
   "fr": "Je suis une DRESSEUSE à la\\nretraite.\\pMontre-moi un POKéMON de niveau\\n45 ou plus et je te donne mon\\nCÂBLE LINK."
  },
  "CeruleanCity_House3_Text_QuestDone": {

@@ -19,6 +19,10 @@
   "en": "Experience the joy of climbing!",
   "fr": "Découvre la joie de grimper !"
  },
+ "SixIsland_RuinValley_Text_DenLocked": {
+  "en": "The stone is silent. Inside,\\nsomething has waited long.",
+  "fr": "La pierre est silencieuse.\\nÀ l'intérieur, quelque chose\\lattend depuis longtemps."
+ },
  "SixIsland_RuinValley_Text_DoorIsOpen": {
   "en": "The door is open.",
   "fr": "La porte est ouverte."

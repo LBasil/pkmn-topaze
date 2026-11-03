@@ -20,7 +20,7 @@
   "fr": "GLACIA : Un souverain digne des\\nsix. Je me souviendrai de ce jour."
  },
  "FourIsland_Text_LordEarly": {
-  "en": "GLACIA: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\nFLORA will tell you the way.",
+  "en": "GLACIA: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\lFLORA will tell you the way.",
   "fr": "GLACIA : Pas encore. L'ancienne\\nLIGUE et les MAÎTRES doivent\\ld'abord tomber. FLORA te montrera\\nle chemin."
  },
  "FourIsland_Text_LordIdle": {
@@ -76,7 +76,7 @@
   "fr": "MAYA : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
  },
  "FourIsland_Text_RefAsk": {
-  "en": "MAYA: A strange fish lives in a cold\\npond. It is ill and nobody can\\nsee it. Three ICE HEALS, please.",
+  "en": "MAYA: A strange fish lives in a cold\\npond. It is ill and nobody can\\lsee it. Three ICE HEALS, please.",
   "fr": "MAYA : Un étrange poisson vit dans\\nun étang froid. Il est malade et\\lpersonne ne le voit. Trois\\nANTI-GEL, s'il vous plaît."
  },
  "FourIsland_Text_RefDone": {
@@ -84,7 +84,7 @@
   "fr": "MAYA : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
  },
  "FourIsland_Text_RefEarly": {
-  "en": "MAYA: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "en": "MAYA: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\lSAFARI ZONE knows the order.",
   "fr": "MAYA : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\ldu PARC SAFARI connaît l'ordre."
  },
  "FourIsland_Text_RefGives": {

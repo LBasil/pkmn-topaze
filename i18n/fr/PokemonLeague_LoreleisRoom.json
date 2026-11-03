@@ -1,4 +1,8 @@
 {
+ "PokemonLeague_LoreleisRoom_Text_BossRetry": {
+  "en": "A strange pull draws you toward\\nthe CHAMPION's hall, where the\\lboss still waits.\\pGo straight back to face him?\\n(Your team will be healed.)",
+  "fr": "Une étrange attraction t'entraîne\\nvers la salle du CHAMPION, où le\\lboss attend toujours.\\pRetourner l'affronter directement ?\\n(Ton équipe sera soignée.)"
+ },
  "PokemonLeague_LoreleisRoom_Text_Defeat": {
   "en": "…Things shouldn't be this way!",
   "fr": "…Les choses ne devraient pas être\\nainsi !"

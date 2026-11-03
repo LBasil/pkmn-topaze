@@ -108,7 +108,7 @@
   "fr": "IRIS : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
  },
  "CinnabarIsland_Text_RefAsk": {
-  "en": "IRIS: The old lab revived a creature\\nfrom the amber. It needs two MAX\\nPOTIONS to get through the week.",
+  "en": "IRIS: The old lab revived a creature\\nfrom the amber. It needs two MAX\\lPOTIONS to get through the week.",
   "fr": "IRIS : Le vieux labo a ressuscité\\nune créature de l'ambre. Il lui\\lfaut deux MAX POTIONS pour tenir la\\nsemaine."
  },
  "CinnabarIsland_Text_RefDone": {
@@ -116,7 +116,7 @@
   "fr": "IRIS : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
  },
  "CinnabarIsland_Text_RefEarly": {
-  "en": "IRIS: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "en": "IRIS: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\lSAFARI ZONE knows the order.",
   "fr": "IRIS : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\ldu PARC SAFARI connaît l'ordre."
  },
  "CinnabarIsland_Text_RefGives": {

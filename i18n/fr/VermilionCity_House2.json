@@ -1,4 +1,12 @@
 {
+ "VermilionCity_House2_Text_DoYouHaveMonWantToTradeForMyMon": {
+  "en": "Hi!\\nDo you have a {STR_VAR_1}?\\pWant to trade it for my\\n{STR_VAR_2}?",
+  "fr": "Salut !\\nAs-tu un {STR_VAR_1} ?\\pVeux-tu l'échanger contre mon\\n{STR_VAR_2} ?"
+ },
+ "VermilionCity_House2_Text_HowIsMyOldMon": {
+  "en": "How is my old {STR_VAR_2}?\\pMy {STR_VAR_1} is doing great!",
+  "fr": "Comment va mon ancien {STR_VAR_2} ?\\pMon {STR_VAR_1} se porte à merveille !"
+ },
  "VermilionCity_House2_Text_QuestAsk": {
   "en": "I found this stone near the old\\nquarry. It glows at night!\\pI'll give it to a POKéMON that\\ntruly loves its TRAINER.\\pShow me your lead POKéMON!",
   "fr": "J'ai trouvé cette pierre près de\\nl'ancienne carrière. Elle brille la\\lnuit !\\pJe la donnerai à un POKéMON qui\\naime vraiment son DRESSEUR.\\pMontre-moi ton POKéMON de tête !"
@@ -22,5 +30,17 @@
  "VermilionCity_House2_Text_QuestOk": {
   "en": "Oh! It adores you!\\pPlease, take this MOON STONE.",
   "fr": "Oh ! Il t'adore !\\pPrends cette PIERRE LUNE, s'il te\\nplaît."
+ },
+ "VermilionCity_House2_Text_ThankYou": {
+  "en": "Thank you!",
+  "fr": "Merci !"
+ },
+ "VermilionCity_House2_Text_ThatsTooBad": {
+  "en": "That's too bad.",
+  "fr": "Dommage."
+ },
+ "VermilionCity_House2_Text_ThisIsNoMon": {
+  "en": "…This is no {STR_VAR_1}.\\pIf you get one, please trade it\\nto me!",
+  "fr": "…Ce n'est pas un {STR_VAR_1}.\\pSi tu en trouves un, échange-le\\navec moi !"
  }
 }

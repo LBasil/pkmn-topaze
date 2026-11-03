@@ -56,7 +56,7 @@
   "fr": "KAREN : Un souverain digne des six.\\nJe me souviendrai de ce jour."
  },
  "TwoIsland_Text_LordEarly": {
-  "en": "KAREN: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\nFLORA will tell you the way.",
+  "en": "KAREN: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\lFLORA will tell you the way.",
   "fr": "KAREN : Pas encore. L'ancienne\\nLIGUE et les MAÎTRES doivent\\ld'abord tomber. FLORA te dira le\\nchemin."
  },
  "TwoIsland_Text_LordIdle": {
@@ -72,7 +72,7 @@
   "fr": "KIRA : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
  },
  "TwoIsland_Text_RefAsk": {
-  "en": "KIRA: The forest beetles are hurt by\\ndrought. Three HYPER POTIONS will\\nkeep the elders alive.",
+  "en": "KIRA: The forest beetles are hurt by\\ndrought. Three HYPER POTIONS will\\lkeep the elders alive.",
   "fr": "KIRA : Les scarabées de la forêt\\nsouffrent de la sécheresse. Trois\\pHYPER POTIONS garderont les anciens\\nen vie."
  },
  "TwoIsland_Text_RefDone": {
@@ -80,8 +80,8 @@
   "fr": "KIRA : Merci encore. Le REFUGE est\\nplus sûr grâce à toi."
  },
  "TwoIsland_Text_RefEarly": {
-  "en": "KIRA: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
-  "fr": "KIRA : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\lde la ZONE SAFARI connaît l'ordre."
+  "en": "KIRA: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\lSAFARI ZONE knows the order.",
+  "fr": "KIRA : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\lde la PARC SAFARI connaît l'ordre."
  },
  "TwoIsland_Text_RefGives": {
   "en": "KIRA: You saved the day. The post\\nhas a gift for you: HERACROSS!",

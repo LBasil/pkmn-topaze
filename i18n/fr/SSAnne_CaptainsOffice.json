@@ -39,6 +39,10 @@
   "en": "VESPER: The boss was right to\\nwatch you. We have the sea chart\\lanyway.\\pNext time, the gems are ours.\\nFarewell!",
   "fr": "VESPER : Le boss avait raison de te\\nsurveiller. Nous avons la carte\\lmarine de toute façon.\\pLa prochaine fois, les gemmes\\nseront à nous. Adieu !"
  },
+ "SSAnne_CaptainsOffice_Text_YouHaveNoRoomForThis": {
+  "en": "Oh, no!\\nYou have no room for this!",
+  "fr": "Oh non !\\nTu n'as plus de place pour ça !"
+ },
  "SSAnne_CaptainsOffice_Text_YuckShouldntHaveLooked": {
   "en": "Yuck!\\nShouldn't have looked!",
   "fr": "Beurk !\\nIl ne fallait pas regarder !"

@@ -11,6 +11,42 @@
   "en": "MR. FUJI: Your POKéMON are weak.\\nRest them here, child.\\p...They are well again. Do not\\nblame yourself. Go, and be careful.",
   "fr": "M. FUJI : Tes POKéMON sont faibles.\\nRepose-les ici.\\p…Ils vont bien de nouveau. Ne\\nt'en veux pas. Va, et sois prudent."
  },
+ "PokemonTower_7F_Text_Grunt1Defeat": {
+  "en": "I give up!",
+  "fr": "J'abandonne !"
+ },
+ "PokemonTower_7F_Text_Grunt1Intro": {
+  "en": "What do you want?\\nWhy are you here?",
+  "fr": "Que veux-tu ?\\nPourquoi es-tu ici ?"
+ },
+ "PokemonTower_7F_Text_Grunt1PostBattle": {
+  "en": "I'm not going to forget this!",
+  "fr": "Je ne vais pas oublier ça !"
+ },
+ "PokemonTower_7F_Text_Grunt2Defeat": {
+  "en": "Please!\\nNo more!",
+  "fr": "Pitié !\\nArrête !"
+ },
+ "PokemonTower_7F_Text_Grunt2Intro": {
+  "en": "This old guy marched right up to\\nour HIDEOUT.\\pThen, he starts ranting about how\\nTEAM ONYBRIS's abusing POKéMON.\\pSo, we're just talking it over as\\nadults.",
+  "fr": "Ce vieux est venu tout droit à\\nnotre REPAIRE.\\pPuis il s'est mis à crier que la\\nTEAM ONYBRIS maltraite les POKéMON.\\pAlors on en discute entre adultes."
+ },
+ "PokemonTower_7F_Text_Grunt2PostBattle": {
+  "en": "POKéMON are only good for making\\nmoney. Why not use them?\\pYou stay out of our business!",
+  "fr": "Les POKéMON ne servent qu'à faire\\nde l'argent. Pourquoi pas ?\\pNe te mêle pas de nos affaires !"
+ },
+ "PokemonTower_7F_Text_Grunt3Defeat": {
+  "en": "Don't fight us ONYBRIS!",
+  "fr": "Ne t'en prends pas à ONYBRIS !"
+ },
+ "PokemonTower_7F_Text_Grunt3Intro": {
+  "en": "You're not saving anyone, kid!",
+  "fr": "Tu ne sauves personne, petit !"
+ },
+ "PokemonTower_7F_Text_Grunt3PostBattle": {
+  "en": "You're not getting away with this!",
+  "fr": "Tu ne t'en tireras pas comme ça !"
+ },
  "PokemonTower_7F_Text_MrFujiAdmin": {
   "en": "MR. FUJI: That was KRONOS, one of\\nthe ADMINS of TEAM ONYBRIS.\\pThey say he stands next to the\\nboss himself. And he took it.",
   "fr": "M. FUJI : C'était KRONOS, l'un des\\nADMINS de la TEAM ONYBRIS.\\pOn dit qu'il se tient à côté du\\nboss lui-même. Et il l'a pris."
@@ -22,6 +58,10 @@
  "PokemonTower_7F_Text_MrFujiCrypt": {
   "en": "MR. FUJI: Shh... Quietly, child.\\nI am calming the restless spirits.\\pThieves came for the SPINEL, and\\nthe dead rose against them. They\\lfled without the stone.\\pYou eased the spirit below, thank\\nyou. The SPINEL is safe on the\\laltar, up here at the top...",
   "fr": "M. FUJI : Chut… Doucement. J'apaise\\nles esprits agités.\\pDes voleurs sont venus pour le\\nSPINEL, et les morts se sont\\ldressés contre eux. Ils ont fui\\nsans la pierre.\\pTu as apaisé l'esprit en bas,\\nmerci. Le SPINEL est en sécurité\\lsur l'autel, ici tout en haut…"
+ },
+ "PokemonTower_7F_Text_MrFujiThankYouFollowMe": {
+  "en": "MR. FUJI: Heh?\\nYou came to save me?\\pThank you. But, I came here of my\\nown free will.\\pI came to calm the spirit of\\nCUBONE's mother.\\pI think MAROWAK's spirit has\\nfinally left us.\\pThe men in black took the SPINEL\\nfrom the crypt, and left me here.\\pI must thank you for your kind\\nconcern.\\pFollow me to my home, POKéMON\\nHOUSE, at the foot of this tower.",
+  "fr": "M. FUJI : Hein ?\\nTu es venu me sauver ?\\pMerci. Mais je suis venu ici de\\nmon plein gré.\\pJe voulais apaiser l'esprit de la\\nmère de OSSELAIT.\\pJe crois que l'esprit de ROUCARNAGE\\nnous a enfin quittés.\\pLes hommes en noir ont pris la\\nSPINELLE de la crypte et m'ont\\llaissé ici.\\pJe te remercie de ta gentille\\nattention.\\pSuis-moi jusque chez moi, la MAISON\\nPOKéMON, au pied de cette tour."
  },
  "PokemonTower_7F_Text_StoneGlows": {
   "en": "A crystal glows faintly on the\\naltar at the top: the SPINEL.",

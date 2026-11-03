@@ -15,6 +15,10 @@
   "en": "How do you like your new BICYCLE?\\nDo you like how it rides?\\pYou can take it out on CYCLING\\nROAD and even into caves!",
   "fr": "Comment tu trouves ta BICYCLETTE ?\\nElle roule bien ?\\pTu peux l'emmener sur la PISTE\\nCYCLABLE et même dans les grottes !"
  },
+ "CeruleanCity_BikeShop_Text_MakeRoomForBicycle": {
+  "en": "You better make room for your\\nBICYCLE!",
+  "fr": "Fais de la place pour ton VÉLO !"
+ },
  "CeruleanCity_BikeShop_Text_OhBikeVoucherHereYouGo": {
   "en": "Oh, that's…\\pA BIKE VOUCHER!\\pOkay!\\nHere you go!",
   "fr": "Oh, c'est...\\pUn BON POUR UN VÉLO !\\pD'accord !\\nTiens, voilà !"

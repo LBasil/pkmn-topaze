@@ -19,9 +19,17 @@
   "en": "There is a beautiful piece of\\nAMBER in a clear gold color.",
   "fr": "Il y a un beau morceau d'AMBRE\\nd'une claire couleur dorée."
  },
+ "PewterCity_Museum_1F_Text_ComeAgain": {
+  "en": "Come again!",
+  "fr": "Reviens nous voir !"
+ },
  "PewterCity_Museum_1F_Text_DoYouKnowWhatAmberIs": {
   "en": "You can't sneak in the back way!\\nNice try, kid, but no.\\pOh, whatever!\\nDo you know what AMBER is?",
   "fr": "Tu ne peux pas te faufiler par\\nl'arrière ! Bien essayé, mais non.\\pOh, peu importe !\\nSais-tu ce qu'est l'AMBRE ?"
+ },
+ "PewterCity_Museum_1F_Text_DontHaveEnoughMoney": {
+  "en": "You don't have enough money.",
+  "fr": "Tu n'as pas assez d'argent."
  },
  "PewterCity_Museum_1F_Text_DontHaveSpaceForThis": {
   "en": "You don't have space for this.",
@@ -31,12 +39,16 @@
   "en": "Ssh!\\nGet the OLD AMBER checked!",
   "fr": "Chut !\\nFais examiner le VIEIL AMBRE !"
  },
+ "PewterCity_Museum_1F_Text_Its50YForChildsTicket": {
+  "en": "Yes, yes.\\nIt's ¥50 for a child's ticket.\\pWould you like to come in?",
+  "fr": "Oui, oui.\\nC'est 50¥ le billet enfant.\\pVeux-tu entrer ?"
+ },
  "PewterCity_Museum_1F_Text_KabutopsFossil": {
   "en": "KABUTOPS Fossil\\nA primitive and rare POKéMON.",
   "fr": "Fossile de KABUTOPS\\nUn POKéMON primitif et rare."
  },
  "PewterCity_Museum_1F_Text_MonKabuto": {
-  "en": "KABUTO: Kabu!\\nA revived fossil, warming up\\nnext to the lava.",
+  "en": "KABUTO: Kabu!\\nA revived fossil, warming up\\lnext to the lava.",
   "fr": "KABUTO : Kabu ! Un fossile ravivé,\\nqui se réchauffe près de la lave."
  },
  "PewterCity_Museum_1F_Text_PleaseEnjoyYourself": {
@@ -46,6 +58,10 @@
  "PewterCity_Museum_1F_Text_ReceivedOldAmberFromMan": {
   "en": "{PLAYER} received the OLD AMBER\\nfrom the man.",
   "fr": "{PLAYER} a reçu le VIEIL AMBRE\\nde l'homme."
+ },
+ "PewterCity_Museum_1F_Text_Right50YThankYou": {
+  "en": "Right, ¥50!\\nThank you!",
+  "fr": "Bien, 50¥ !\\nMerci !"
  },
  "PewterCity_Museum_1F_Text_ShouldBeGratefulForLongLife": {
   "en": "I should be grateful for my long\\nlife.\\pNever did I think I would get to\\nsee the bones of a dragon!",

@@ -24,7 +24,7 @@
   "fr": "PHOEBE : Un souverain digne des\\nsix. Je me souviendrai de ce jour."
  },
  "FiveIsland_Text_LordEarly": {
-  "en": "PHOEBE: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\nFLORA will tell you the way.",
+  "en": "PHOEBE: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\lFLORA will tell you the way.",
   "fr": "PHOEBE : Pas encore. L'ancienne\\nLIGUE et les MAÎTRES doivent\\ld'abord tomber. FLORA te montrera\\nle chemin."
  },
  "FiveIsland_Text_LordIdle": {
@@ -44,7 +44,7 @@
   "fr": "NOEL : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
  },
  "FiveIsland_Text_RefEarly": {
-  "en": "NOEL: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "en": "NOEL: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\lSAFARI ZONE knows the order.",
   "fr": "NOEL : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\ldu PARC SAFARI connaît l'ordre."
  },
  "FiveIsland_Text_RefGives": {

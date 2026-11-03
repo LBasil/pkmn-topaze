@@ -63,6 +63,10 @@
   "en": "Maybe becoming an ELITE FOUR\\nmember is in the blood.\\pFrom what I've heard, LANCE has\\na cousin who's a GYM LEADER\\lsomewhere far away.",
   "fr": "Peut-être que devenir membre du\\nCONSEIL 4 est dans le sang.\\pD'après ce que j'ai entendu, PETER\\na un cousin CHAMPION quelque part\\lau loin."
  },
+ "IndigoPlateau_PokemonCenter_1F_Text_LoreleiIsAbsentClosedForTimeBeing": {
+  "en": "I am so sorry, but you've wasted\\nyour time coming here.\\pLORELEI of the ELITE FOUR is\\nabsent, you see.\\pAs a result, the POKéMON LEAGUE is\\nclosed for the time being.",
+  "fr": "Je suis désolée, mais tu as perdu\\nton temps en venant ici.\\pLORELEI du CONSEIL 4 est absente.\\pPar conséquent, la LIGUE POKéMON\\nest fermée pour le moment."
+ },
  "IndigoPlateau_PokemonCenter_1F_Text_MarketAsk": {
   "en": "FLORA: Do you wish to visit the\\nTHRONE MARKET?",
   "fr": "FLORA : Veux-tu visiter le MARCHÉ\\nDU TRÔNE ?"
@@ -83,6 +87,10 @@
   "en": "FLORA: The next REBEL is waiting.\\nShall we?",
   "fr": "FLORA : Le prochain REBELLE attend.\\nOn y va ?"
  },
+ "IndigoPlateau_PokemonCenter_1F_Text_RebelsCourt": {
+  "en": "FLORA: The old LEAGUE wants to test\\nthe one who rules the six legends.",
+  "fr": "FLORA : L'ancienne LIGUE veut\\ntester celui qui règne sur les\\lsix légendes."
+ },
  "IndigoPlateau_PokemonCenter_1F_Text_RebelsDone": {
   "en": "FLORA: The REBELS keep their gyms\\nand their pride. Peace holds.\\pThe THRONE MARKET is open to you,\\nCHAMPION of all.\\pOne more thing. Three TITANS woke\\nwhen the throne was settled: one\\lin the RUBY PATH under MT. EMBER,\\lone in the SEAFOAM depths, one on\\lthe PLATEAU itself. Go meet them.",
   "fr": "FLORA : Les REBELLES gardent leurs\\narènes et leur fierté. La paix\\ltient.\\pLe MARCHÉ DU TRÔNE t'est ouvert,\\nCHAMPION de tous.\\pEncore une chose. Trois TITANS se\\nsont réveillés quand le trône a été\\lréglé : un dans le CHEMIN RUBIS\\nsous le MT. EMBER, un dans les\\lprofondeurs de SEAFOAM, un sur le\\nPLATEAU lui-même. Va les\\lrencontrer."
@@ -102,6 +110,10 @@
  "IndigoPlateau_PokemonCenter_1F_Text_RebelsLords": {
   "en": "FLORA: Seven LORDS now guard the\\nSEVII ISLANDS, one on each. Beat\\lthem all, then STEVEN will come.",
   "fr": "FLORA : Sept SEIGNEURS gardent\\ndésormais les ÎLES SEVII, un sur\\lchaque. Bats-les tous, puis STEVEN\\nviendra."
+ },
+ "IndigoPlateau_PokemonCenter_1F_Text_RebelsMasters": {
+  "en": "FLORA: GOLD, SILVER and GIOVANNI.\\nThey trained for this day.",
+  "fr": "FLORA : GOLD, SILVER et GIOVANNI.\\nIls se sont entraînés pour ce jour."
  },
  "IndigoPlateau_PokemonCenter_1F_Text_RebelsNo": {
   "en": "FLORA: Take your time. They will\\nwait. Rebels are patient.",

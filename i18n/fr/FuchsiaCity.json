@@ -83,6 +83,46 @@
   "en": "The boat is not ready. Come back\\nwhen the clocks make sense.",
   "fr": "Le bateau n'est pas prêt. Reviens\\nquand les horloges auront un sens."
  },
+ "FuchsiaCity_Text_Apprentice_GateText10": {
+  "en": "Come back with 1 BADGE.",
+  "fr": "Reviens avec 1 BADGE."
+ },
+ "FuchsiaCity_Text_Apprentice_GateText11": {
+  "en": "Come back with 2 BADGES.",
+  "fr": "Reviens avec 2 BADGES."
+ },
+ "FuchsiaCity_Text_Apprentice_GateText12": {
+  "en": "Come back with 1 BADGE.",
+  "fr": "Reviens avec 1 BADGE."
+ },
+ "FuchsiaCity_Text_Apprentice_GateText13": {
+  "en": "Come back with 1 BADGE.",
+  "fr": "Reviens avec 1 BADGE."
+ },
+ "FuchsiaCity_Text_Apprentice_GateText14": {
+  "en": "Come back with 1 BADGE.",
+  "fr": "Reviens avec 1 BADGE."
+ },
+ "FuchsiaCity_Text_Apprentice_GateText15": {
+  "en": "Come back with 2 BADGES.",
+  "fr": "Reviens avec 2 BADGES."
+ },
+ "FuchsiaCity_Text_Apprentice_GateText16": {
+  "en": "Come back with 1 BADGE.",
+  "fr": "Reviens avec 1 BADGE."
+ },
+ "FuchsiaCity_Text_Apprentice_GateText17": {
+  "en": "Come back with 1 BADGE.",
+  "fr": "Reviens avec 1 BADGE."
+ },
+ "FuchsiaCity_Text_Apprentice_GateText18": {
+  "en": "Come back with 1 BADGE.",
+  "fr": "Reviens avec 1 BADGE."
+ },
+ "FuchsiaCity_Text_Apprentice_GateText19": {
+  "en": "Come back with 1 BADGE.",
+  "fr": "Reviens avec 1 BADGE."
+ },
  "FuchsiaCity_Text_Apprentice_Hello": {
   "en": "The master is busy. I row the small\\ntrips, {PLAYER}.",
   "fr": "Le maître est occupé. Je ne fais\\nque les petits trajets, {PLAYER}."
@@ -90,6 +130,10 @@
  "FuchsiaCity_Text_Apprentice_Never": {
   "en": "Another time, then.",
   "fr": "Une autre fois, alors."
+ },
+ "FuchsiaCity_Text_ChanseySign": {
+  "en": "Name: CHANSEY\\nCatching one is all up to chance.",
+  "fr": "Nom : LAPOUSSIE\\nLe capturer est une question de\\lchance."
  },
  "FuchsiaCity_Text_CitySign": {
   "en": "AMETHIOLITE CITY\\nThe Amethyst Lake Town",
@@ -263,6 +307,82 @@
   "en": "The dusk is not ready. Come back\\nwhen the clocks make sense.",
   "fr": "Le crépuscule n'est pas prêt.\\nReviens quand les horloges auront\\lun sens."
  },
+ "FuchsiaCity_Text_DuskFerrywoman_GateText20": {
+  "en": "Come back with 6 BADGES.",
+  "fr": "Reviens avec 6 BADGES."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_GateText21": {
+  "en": "Come back with 6 BADGES.",
+  "fr": "Reviens avec 6 BADGES."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_GateText22": {
+  "en": "Come back with all 8 BADGES.",
+  "fr": "Reviens avec les 8 BADGES."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_GateText23": {
+  "en": "Come back with 5 BADGES.",
+  "fr": "Reviens avec 5 BADGES."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_GateText24": {
+  "en": "Come back with all 8 BADGES.",
+  "fr": "Reviens avec les 8 BADGES."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_GateText25": {
+  "en": "Come back with 5 BADGES.",
+  "fr": "Reviens avec 5 BADGES."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_GateText26": {
+  "en": "Come back with all 8 BADGES.",
+  "fr": "Reviens avec les 8 BADGES."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_GateText27": {
+  "en": "Come back with 5 BADGES.",
+  "fr": "Reviens avec 5 BADGES."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_GateText28": {
+  "en": "Come back with all 8 BADGES.",
+  "fr": "Reviens avec les 8 BADGES."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_GateText29": {
+  "en": "Come back with 6 BADGES.",
+  "fr": "Reviens avec 6 BADGES."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_GateText30": {
+  "en": "Come back with all 8 BADGES.",
+  "fr": "Reviens avec les 8 BADGES."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_GateText31": {
+  "en": "Come back with 6 BADGES.",
+  "fr": "Reviens avec 6 BADGES."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_GateText32": {
+  "en": "Come back with all 8 BADGES.",
+  "fr": "Reviens avec les 8 BADGES."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_GateText33": {
+  "en": "Come back with 6 BADGES.",
+  "fr": "Reviens avec 6 BADGES."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_GateText34": {
+  "en": "Come back with all 8 BADGES.",
+  "fr": "Reviens avec les 8 BADGES."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_GateText35": {
+  "en": "Come back with 5 BADGES.",
+  "fr": "Reviens avec 5 BADGES."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_GateText36": {
+  "en": "Come back with all 8 BADGES.",
+  "fr": "Reviens avec les 8 BADGES."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_GateText37": {
+  "en": "Come back with 5 BADGES.",
+  "fr": "Reviens avec 5 BADGES."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_GateText38": {
+  "en": "Come back with all 8 BADGES.",
+  "fr": "Reviens avec les 8 BADGES."
+ },
  "FuchsiaCity_Text_DuskFerrywoman_Hello": {
   "en": "At dusk the strangest places open,\\n{PLAYER}.",
   "fr": "Au crépuscule, les endroits les\\nplus étranges s'ouvrent, {PLAYER}."
@@ -270,6 +390,10 @@
  "FuchsiaCity_Text_DuskFerrywoman_Never": {
   "en": "Another time. Dusk will come again.",
   "fr": "Une autre fois. Le crépuscule\\nreviendra."
+ },
+ "FuchsiaCity_Text_Ellipsis": {
+  "en": "……",
+  "fr": "……"
  },
  "FuchsiaCity_Text_FerryLocked": {
   "en": "Some places need more BADGES. Come\\nback later.",
@@ -307,6 +431,10 @@
   "en": "The ferry is not running. The\\nclocks of the routes are still\\punread. Come back when you know why\\nthey stopped.",
   "fr": "Le ferry ne circule pas. Les\\nhorloges des routes sont encore\\lillisibles. Reviens quand tu sauras\\npourquoi elles se sont arrêtées."
  },
+ "FuchsiaCity_Text_Ferry_Gate": {
+  "en": "The tide says no, {PLAYER}.",
+  "fr": "La marée dit non, {PLAYER}."
+ },
  "FuchsiaCity_Text_Ferry_Hello": {
   "en": "I row where time runs differently.\\nWhere do you want to go, {PLAYER}?",
   "fr": "Je rame là où le temps s'écoule\\ndifféremment. Où veux-tu aller,\\l{PLAYER} ?"
@@ -322,6 +450,14 @@
  "FuchsiaCity_Text_ItemBallInThere": {
   "en": "That item ball in there…\\nWere you wanting that?\\pMe, too!\\n…Huh? That's a POKéMON?",
   "fr": "Cette Ball dans le coin…\\nTu la voulais ?\\pMoi aussi !\\n…Hein ? C'est un POKéMON ?"
+ },
+ "FuchsiaCity_Text_KabutoSign": {
+  "en": "Name: KABUTO\\nAn extremely rare POKéMON that was\\lregenerated from a fossil.",
+  "fr": "Nom : KABUTO\\nUn POKéMON extrêmement rare\\lrégénéré à partir d'un fossile."
+ },
+ "FuchsiaCity_Text_KangaskhanSign": {
+  "en": "Name: KANGASKHAN\\pA maternal POKéMON that raises its\\nyoung in a pouch on its belly.",
+  "fr": "Nom : KANGOUREX\\pUn POKéMON maternel qui élève son\\npetit dans la poche de son ventre."
  },
  "FuchsiaCity_Text_Lantern_Ask0": {
   "en": "The WEST RESERVE, home of POKéMON\\nfrom a far region. Visit?",
@@ -367,6 +503,10 @@
   "en": "Another time. The lantern stays\\nlit.",
   "fr": "Une autre fois. La lanterne reste\\nallumée."
  },
+ "FuchsiaCity_Text_LaprasSign": {
+  "en": "Name: LAPRAS\\nAKA the king of the seas.",
+  "fr": "Nom : LOKHLASS\\nSurnommé le roi des mers."
+ },
  "FuchsiaCity_Text_LooseMonChansey": {
   "en": "CHANSEY: Chansey! Chansey!\\pIt escaped from the zoo, and does\\nnot seem to want to go back.",
   "fr": "LEVEINARD : Chansey ! Chansey !\\pIl s'est échappé du zoo, et ne\\nsemble pas vouloir y retourner."
@@ -390,6 +530,10 @@
  "FuchsiaCity_Text_MyFatherIsGymLeader": {
   "en": "My father is the GYM LEADER of\\nthis town.\\pI'm training to use POISON POKéMON\\nas well as my father.",
   "fr": "Mon père est le CHAMPION de cette\\nville.\\pJe m'entraîne à utiliser les\\nPOKéMON POISON aussi bien que mon\\lpère."
+ },
+ "FuchsiaCity_Text_OmanyteSign": {
+  "en": "Name: OMANYTE\\nAn extremely rare POKéMON that was\\lregenerated from a fossil.",
+  "fr": "Nom : AMONITA\\nUn POKéMON extrêmement rare\\lrégénéré à partir d'un fossile."
  },
  "FuchsiaCity_Text_PoliceBadge": {
   "en": "The thieves slipped away, so we\\nkeep watch. Only trainers who can\\lprove themselves may pass.\\pBeat the GYM LEADER first, kid.",
@@ -426,6 +570,18 @@
  "FuchsiaCity_Text_ProcheThibault_Win": {
   "en": "From the deep. A gift for you.",
   "fr": "Des profondeurs. Un cadeau pour\\ntoi."
+ },
+ "FuchsiaCity_Text_SafariGameSign": {
+  "en": "SAFARI GAME\\nPOKéMON-U-CATCH!",
+  "fr": "JEU SAFARI\\nATTRAPE-LES-TOUS !"
+ },
+ "FuchsiaCity_Text_SafariZoneOfficeSign": {
+  "en": "POKéMON PARADISE!\\nWelcome to the SAFARI ZONE!\\lSAFARI ZONE OFFICE",
+  "fr": "PARADIS DES POKéMON !\\nBienvenue au PARC SAFARI !\\lBUREAU DU PARC SAFARI"
+ },
+ "FuchsiaCity_Text_SafariZoneSign": {
+  "en": "POKéMON PARADISE\\nSAFARI ZONE",
+  "fr": "PARADIS DES POKéMON\\nPARC SAFARI"
  },
  "FuchsiaCity_Text_SafariZoneZooInFront": {
   "en": "The SAFARI ZONE has a zoo in front\\nof the entrance.\\pOut back is the SAFARI GAME for\\ncatching POKéMON.",
@@ -571,6 +727,86 @@
   "en": "The ledger is closed. Come back\\nwhen the clocks make sense.",
   "fr": "Le registre est fermé. Reviens\\nquand les horloges auront un sens."
  },
+ "FuchsiaCity_Text_ScribeFerryman_GateText14": {
+  "en": "Come back with 3 BADGES.",
+  "fr": "Reviens avec 3 BADGES."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_GateText15": {
+  "en": "Come back with 7 BADGES.",
+  "fr": "Reviens avec 7 BADGES."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_GateText16": {
+  "en": "Come back with 3 BADGES.",
+  "fr": "Reviens avec 3 BADGES."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_GateText17": {
+  "en": "Come back with 7 BADGES.",
+  "fr": "Reviens avec 7 BADGES."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_GateText18": {
+  "en": "Come back with 2 BADGES.",
+  "fr": "Reviens avec 2 BADGES."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_GateText19": {
+  "en": "Come back with 6 BADGES.",
+  "fr": "Reviens avec 6 BADGES."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_GateText20": {
+  "en": "Come back with 2 BADGES.",
+  "fr": "Reviens avec 2 BADGES."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_GateText21": {
+  "en": "Come back with 6 BADGES.",
+  "fr": "Reviens avec 6 BADGES."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_GateText22": {
+  "en": "Come back with 3 BADGES.",
+  "fr": "Reviens avec 3 BADGES."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_GateText23": {
+  "en": "Come back with 6 BADGES.",
+  "fr": "Reviens avec 6 BADGES."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_GateText24": {
+  "en": "Come back with 3 BADGES.",
+  "fr": "Reviens avec 3 BADGES."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_GateText25": {
+  "en": "Come back with 2 BADGES.",
+  "fr": "Reviens avec 2 BADGES."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_GateText26": {
+  "en": "Come back with 3 BADGES.",
+  "fr": "Reviens avec 3 BADGES."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_GateText27": {
+  "en": "Come back with 4 BADGES.",
+  "fr": "Reviens avec 4 BADGES."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_GateText28": {
+  "en": "Come back with 2 BADGES.",
+  "fr": "Reviens avec 2 BADGES."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_GateText29": {
+  "en": "Come back with 5 BADGES.",
+  "fr": "Reviens avec 5 BADGES."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_GateText30": {
+  "en": "Come back with 3 BADGES.",
+  "fr": "Reviens avec 3 BADGES."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_GateText31": {
+  "en": "Come back with 7 BADGES.",
+  "fr": "Reviens avec 7 BADGES."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_GateText32": {
+  "en": "Come back with 2 BADGES.",
+  "fr": "Reviens avec 2 BADGES."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_GateText33": {
+  "en": "Come back with 7 BADGES.",
+  "fr": "Reviens avec 7 BADGES."
+ },
  "FuchsiaCity_Text_ScribeFerryman_Hello": {
   "en": "The scribe waits for you with his\\nledger, {PLAYER}.",
   "fr": "Le scribe t'attend avec son\\nregistre, {PLAYER}."
@@ -687,6 +923,50 @@
   "en": "The seasons are frozen. Come back\\nwhen the clocks make sense.",
   "fr": "Les saisons sont figées. Reviens\\nquand les horloges auront un sens."
  },
+ "FuchsiaCity_Text_SeasonsFerryman_GateText15": {
+  "en": "Come back with 4 BADGES.",
+  "fr": "Reviens avec 4 BADGES."
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_GateText16": {
+  "en": "Come back with 4 BADGES.",
+  "fr": "Reviens avec 4 BADGES."
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_GateText17": {
+  "en": "Come back with 4 BADGES.",
+  "fr": "Reviens avec 4 BADGES."
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_GateText18": {
+  "en": "Come back with 3 BADGES.",
+  "fr": "Reviens avec 3 BADGES."
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_GateText19": {
+  "en": "Come back with 4 BADGES.",
+  "fr": "Reviens avec 4 BADGES."
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_GateText20": {
+  "en": "Come back with 4 BADGES.",
+  "fr": "Reviens avec 4 BADGES."
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_GateText21": {
+  "en": "Come back with 5 BADGES.",
+  "fr": "Reviens avec 5 BADGES."
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_GateText22": {
+  "en": "Come back with 5 BADGES.",
+  "fr": "Reviens avec 5 BADGES."
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_GateText23": {
+  "en": "Come back with 4 BADGES.",
+  "fr": "Reviens avec 4 BADGES."
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_GateText24": {
+  "en": "Come back with 4 BADGES.",
+  "fr": "Reviens avec 4 BADGES."
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_GateText25": {
+  "en": "Come back with 4 BADGES.",
+  "fr": "Reviens avec 4 BADGES."
+ },
  "FuchsiaCity_Text_SeasonsFerryman_Hello": {
   "en": "Each season has its own shore,\\n{PLAYER}.",
   "fr": "Chaque saison a son propre rivage,\\n{PLAYER}."
@@ -694,6 +974,10 @@
  "FuchsiaCity_Text_SeasonsFerryman_Never": {
   "en": "Another time, then.",
   "fr": "Une autre fois, alors."
+ },
+ "FuchsiaCity_Text_SlowpokeSign": {
+  "en": "Name: SLOWPOKE\\nFriendly and very slow moving.",
+  "fr": "Nom : RAMOLOSS\\nAimable et très lent."
  },
  "FuchsiaCity_Text_StafferAlarm": {
   "en": "Help! Men in black burst into the\\nzoo and threw open every cage!\\pPOKéMON are running loose, and\\nthey went for the WARDEN's HOUSE!\\pHis AMETHIOLITE is on display\\nthere. Please, stop them!",
@@ -746,6 +1030,14 @@
  "FuchsiaCity_Text_Tide_Never": {
   "en": "Another time, then. The tide can\\nwait.",
   "fr": "Une autre fois, alors. La marée\\npeut attendre."
+ },
+ "FuchsiaCity_Text_VoltorbSign": {
+  "en": "Name: VOLTORB\\nThe very image of a POKé BALL.",
+  "fr": "Nom : VOLTORBE\\nLe portrait craché d'une POKé BALL."
+ },
+ "FuchsiaCity_Text_WardensHomeSign": {
+  "en": "SAFARI ZONE\\nWARDEN'S HOME",
+  "fr": "PARC SAFARI\\nMAISON DU GARDIEN"
  },
  "FuchsiaCity_Text_WheresSara": {
   "en": "ERIK: Where's SARA?\\nI said I'd meet her here.",

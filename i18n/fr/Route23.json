@@ -24,7 +24,7 @@
   "fr": "RED : ……"
  },
  "Route23_Text_RedStares": {
-  "en": "A trainer in a red cap stands at\\nthe cave mouth, staring into the\\ndark.",
+  "en": "A trainer in a red cap stands at\\nthe cave mouth, staring into the\\ldark.",
   "fr": "Un dresseur à casquette rouge se\\ntient à l'entrée de la grotte, le\\lregard perdu dans le noir."
  },
  "Route23_Text_VictoryRoadGateSign": {

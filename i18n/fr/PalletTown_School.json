@@ -47,6 +47,14 @@
   "en": "Since you are here, a short lesson.\\pTen years ago the AURA changed the\\ntypes of many POKéMON. FIRE ones may\\lnow be ICE, and WATER ones STEEL.\\pA new type also appeared: FAIRY.\\nIt beats DRAGON, FIGHTING and DARK,\\lbut POISON and STEEL beat it.\\pNever trust a POKéMON's old type.\\nCheck it in the SUMMARY first!",
   "fr": "Puisque tu es là, une petite leçon.\\pIl y a dix ans l'AURA a changé les\\ntypes de nombreux POKéMON. Les FEU\\lpeuvent maintenant être GLACE, et\\nles EAU ACIER.\\pUn nouveau type est aussi apparu :\\nFÉE. Il bat DRAGON, COMBAT et\\pTÉNÈBRES, mais POISON et ACIER le\\nbattent.\\pNe te fie jamais à l'ancien type\\nd'un POKéMON. Vérifie-le d'abord\\ldans le RÉSUMÉ !"
  },
+ "PalletTown_School_Text_TeacherCourseDone": {
+  "en": "Remember: check a POKéMON's type in\\nthe SUMMARY. The old ones lie.",
+  "fr": "Rappelle-toi : vérifie le type d'un\\nPOKéMON dans le RÉSUMÉ. Les\\lanciens mentent."
+ },
+ "PalletTown_School_Text_TeacherCourseEnd": {
+  "en": "I wrote it all down for you.\\nRead it whenever you doubt.",
+  "fr": "J'ai tout écrit pour toi.\\nRelis-le quand tu doutes."
+ },
  "PalletTown_School_Text_TeacherCourseShort": {
   "en": "Still, a teacher teaches. Types\\nchanged ten years ago, and FAIRY\\lnow beats DRAGON, FIGHTING and DARK.\\pI wrote it down for you.",
   "fr": "Pourtant, un maître enseigne. Les\\ntypes ont changé il y a dix ans, et\\pFÉE bat maintenant DRAGON, COMBAT\\net TÉNÈBRES.\\pJe te l'ai noté."

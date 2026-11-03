@@ -23,6 +23,10 @@
   "en": "I go shopping in PYROPIA\\noccasionally.\\pI have to take the winding trail in\\nCINDER FOREST when I go.",
   "fr": "Je vais faire des courses à PYROPIA\\nde temps en temps.\\pJe dois prendre le sentier sinueux\\nde la FORÊT DE CENDRES pour y\\laller."
  },
+ "ViridianCity_Text_GrandpaHasntHadCoffeeYet": {
+  "en": "Oh, Grandpa!\\nDon't be so mean!\\pI'm so sorry. Since the TEAM ONYBRIS\\nnews, he doesn't trust strangers.",
+  "fr": "Oh, Papy !\\nNe sois pas si méchant !\\pJe suis désolée. Depuis les\\nnouvelles de la TEAM ONYBRIS, il se\\lméfie des inconnus."
+ },
  "ViridianCity_Text_GymClosedWonderWhoLeaderIs": {
   "en": "This GYM has been closed ever since\\nthe LEADER left on a long trip.\\pRumor says HEPHA forges her own\\nsteel. I'd love to see it.",
   "fr": "Cette ARÈNE est fermée depuis que\\nla CHAMPIONNE est partie en long\\lvoyage.\\pLa rumeur dit qu'HEPHA forge son\\npropre acier. J'adorerais le voir."
@@ -60,7 +64,7 @@
   "fr": "BRUN : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
  },
  "ViridianCity_Text_RefAsk": {
-  "en": "BRUN: Hunters came last night, looking\\nfor rare POKéMON to sell. They\\nwant them back in cages.\\pI cannot fight them alone.",
+  "en": "BRUN: Hunters came last night, looking\\nfor rare POKéMON to sell. They\\lwant them back in cages.\\pI cannot fight them alone.",
   "fr": "BRUN : Des chasseurs sont venus\\nhier soir, à la recherche de\\pPOKéMON rares à vendre. Ils veulent\\nles remettre en cage.\\pJe ne peux pas les combattre seul."
  },
  "ViridianCity_Text_RefDone": {
@@ -68,8 +72,8 @@
   "fr": "BRUN : Merci encore. Le REFUGE est\\nplus sûr grâce à toi."
  },
  "ViridianCity_Text_RefEarly": {
-  "en": "BRUN: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
-  "fr": "BRUN : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\lde la ZONE SAFARI connaît l'ordre."
+  "en": "BRUN: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\lSAFARI ZONE knows the order.",
+  "fr": "BRUN : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\lde la PARC SAFARI connaît l'ordre."
  },
  "ViridianCity_Text_RefGives": {
   "en": "BRUN: You saved the day. The post\\nhas a gift for you: LARVITAR!",
@@ -110,6 +114,10 @@
  "ViridianCity_Text_ThatWasEducationalTakeThis": {
   "en": "There! Now tell me, that was\\neducational, was it not?\\pAnd here, take this, too.",
   "fr": "Voilà ! Dis-moi, c'était\\ninstructif, non ?\\pEt tiens, prends ceci aussi."
+ },
+ "ViridianCity_Text_ThisIsPrivateProperty": {
+  "en": "I absolutely forbid you from\\ngoing through here!\\pThis is private property!",
+  "fr": "Je t'interdis formellement de\\npasser par ici !\\pC'est une propriété privée !"
  },
  "ViridianCity_Text_TooBusyForTeachyTV": {
   "en": "Hm… You're too busy to not even\\nhave the time for TEACHY TV…\\pTime is money, and neither should\\nbe ill spent…",

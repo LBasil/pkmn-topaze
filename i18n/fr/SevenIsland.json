@@ -28,7 +28,7 @@
   "fr": "WALLACE : Un souverain digne des\\nsix. Je me souviendrai de ce jour."
  },
  "SevenIsland_Text_LordEarly": {
-  "en": "WALLACE: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\nFLORA will tell you the way.",
+  "en": "WALLACE: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\lFLORA will tell you the way.",
   "fr": "WALLACE : Pas encore. L'ancienne\\nLIGUE et les MAÎTRES doivent\\ld'abord tomber. FLORA te dira le\\nchemin."
  },
  "SevenIsland_Text_LordIdle": {
@@ -48,8 +48,8 @@
   "fr": "PAXTON : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
  },
  "SevenIsland_Text_RefEarly": {
-  "en": "PAXTON: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
-  "fr": "PAXTON : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\lde la ZONE SAFARI connaît l'ordre."
+  "en": "PAXTON: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\lSAFARI ZONE knows the order.",
+  "fr": "PAXTON : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\lde la PARC SAFARI connaît l'ordre."
  },
  "SevenIsland_Text_RefGives": {
   "en": "PAXTON: You saved the day. The post\\nhas a gift for you: SKARMORY!",

@@ -44,7 +44,7 @@
   "fr": "Si tu as ce qu'il faut, va défier\\nKAY !"
  },
  "PewterCity_Text_Grandma": {
-  "en": "Careful near the CAIRN.\\nThe flame there has never gone\\nout, not once.",
+  "en": "Careful near the CAIRN.\\nThe flame there has never gone\\lout, not once.",
   "fr": "Attention près du CAIRN. La flamme\\nn'y a jamais été éteinte, pas une\\lseule fois."
  },
  "PewterCity_Text_Guide": {
@@ -88,7 +88,7 @@
   "fr": "CLEO : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
  },
  "PewterCity_Text_RefAsk": {
-  "en": "CLEO: A DRATINI came down from the\\nmountain, sick and scared. I need\\nthree FULL HEALS to cure it.",
+  "en": "CLEO: A DRATINI came down from the\\nmountain, sick and scared. I need\\lthree FULL HEALS to cure it.",
   "fr": "CLEO : Un MINIDRACO est descendu de\\nla montagne, malade et effrayé.\\pJ'ai besoin de trois TOUT-SOIN pour\\nle guérir."
  },
  "PewterCity_Text_RefDone": {
@@ -96,7 +96,7 @@
   "fr": "CLEO : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
  },
  "PewterCity_Text_RefEarly": {
-  "en": "CLEO: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "en": "CLEO: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\lSAFARI ZONE knows the order.",
   "fr": "CLEO : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\ldu PARC SAFARI connaît l'ordre."
  },
  "PewterCity_Text_RefGives": {
@@ -154,6 +154,10 @@
  "PewterCity_Text_ThisIsTheMuseum": {
   "en": "This is it, the MUSEUM.\\pYou have to pay to get in, but it's\\nworth it. See you around!",
   "fr": "Voilà, le MUSÉE.\\pIl faut payer pour entrer, mais ça\\nen vaut la peine. À plus !"
+ },
+ "PewterCity_Text_TrainerTipsEarningEXP": {
+  "en": "TRAINER TIPS\\pAll POKéMON that appear in battle,\\nhowever briefly, earn EXP Points.",
+  "fr": "CONSEILS AUX DRESSEURS\\pTous les POKéMON qui apparaissent\\nau combat, même brièvement,\\lgagnent des Points d'EXP."
  },
  "PewterCity_Text_WerentThoseFossilsAmazing": {
   "en": "Weren't those fossils from MT. MOON\\namazing?",

@@ -3,6 +3,10 @@
   "en": "GLASS HALL\\nOpen to visitors.",
   "fr": "HALL DE VERRE\\nOuvert aux visiteurs."
  },
+ "CeruleanCity_Text_CaveSealed": {
+  "en": "The grotto is sealed by a strange\\nforce. Not yet...\\pThe hall's north passage is open.",
+  "fr": "La grotte est scellée par une force\\nétrange. Pas encore…\\pLe passage nord de la salle est\\nouvert."
+ },
  "CeruleanCity_Text_CitySign": {
   "en": "TOURMALIA CITY\\nWhere the forest grows crystal\\pWEST:  ROUTE 4 (this road)\\nSOUTH: ROUTE 5 (ladder below)\\pEAST:  ROUTE 9 (past the dome)\\nNORTH: ROUTE 24 (via glass hall)",
   "fr": "TOURMALIA\\nLà où la forêt devient cristal\\pOUEST : ROUTE 4 (cette route)\\nSUD : ROUTE 5 (échelle en bas)\\pEST : ROUTE 9 (après le dôme)\\nNORD : ROUTE 24 (par le hall)"
@@ -56,7 +60,7 @@
   "fr": "DANTE : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
  },
  "CeruleanCity_Text_RefAsk": {
-  "en": "DANTE: The river is quiet. Too quiet.\\nHunters set traps near the bridge\\nand I saw them with nets.",
+  "en": "DANTE: The river is quiet. Too quiet.\\nHunters set traps near the bridge\\land I saw them with nets.",
   "fr": "DANTE : La rivière est calme. Trop\\ncalme. Des chasseurs ont posé des\\ppièges près du pont, avec des\\nfilets."
  },
  "CeruleanCity_Text_RefDone": {
@@ -64,7 +68,7 @@
   "fr": "DANTE : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
  },
  "CeruleanCity_Text_RefEarly": {
-  "en": "DANTE: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "en": "DANTE: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\lSAFARI ZONE knows the order.",
   "fr": "DANTE : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\pdu PARC SAFARI connaît l'ordre."
  },
  "CeruleanCity_Text_RefGives": {
@@ -102,6 +106,10 @@
  "CeruleanCity_Text_RoadsOpen": {
   "en": "POLICEMAN: The south road is open\\nagain. Stay safe out there!",
   "fr": "POLICIER : La route du sud est\\nrouverte. Sois prudent !"
+ },
+ "CeruleanCity_Text_ThisIsCeruleanCave": {
+  "en": "This is TOURMALIA CAVE.\\pHorribly strong POKéMON live inside\\nthere.\\pIt takes a very special TRAINER to\\nbe allowed inside there.\\pYou'd have to be strong enough to\\nbecome the POKéMON LEAGUE\\lCHAMPION for starters.\\pAnd, you would have to have\\nmade a great achievement.",
+  "fr": "Voici la GROTTE TOURMALIA.\\pDes POKéMON terriblement forts y\\nvivent.\\pIl faut un DRESSEUR bien spécial\\npour avoir le droit d'y entrer.\\pIl faudrait déjà être assez fort\\npour devenir CHAMPION de la LIGUE\\lPOKéMON.\\pEt avoir accompli un grand exploit."
  },
  "CeruleanCity_Text_TrainerLifeIsToughIsntIt": {
   "en": "You're a TRAINER, too?\\pCollecting, battling…\\nIt's a tough life, isn't it?",

@@ -23,6 +23,14 @@
   "en": "Be ready to fight for your beliefs!\\pThe thieves in black? They went\\npast at dawn, in a big hurry.",
   "fr": "Sois prêt à te battre pour tes\\nconvictions !\\pLes voleurs en noir ? Ils sont\\npassés à l'aube, très pressés."
  },
+ "Route17_Text_CyclingRoadSign": {
+  "en": "CYCLING ROAD\\nSlope ends here!",
+  "fr": "PISTE CYCLABLE\\nFin de la pente !"
+ },
+ "Route17_Text_DontThrowGameThrowBalls": {
+  "en": "It's a notice!\\pDon't throw the game, throw POKé\\nBALLS instead!",
+  "fr": "C'est un avis !\\pNe jette pas la partie, jette\\ndes POKé BALLS à la place !"
+ },
  "Route17_Text_IsaiahDefeat": {
   "en": "Whoo!",
   "fr": "Whoo !"
@@ -122,6 +130,10 @@
  "Route17_Text_VirgilPostBattle": {
   "en": "I love racing downhill!",
   "fr": "J'adore la course en descente !"
+ },
+ "Route17_Text_WatchOutForDiscardedItems": {
+  "en": "It's a notice.\\pWatch out for discarded items.",
+  "fr": "C'est un avis.\\pAttention aux objets jetés."
  },
  "Route17_Text_WilliamDefeat": {
   "en": "Are you satisfied?",

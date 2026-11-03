@@ -120,7 +120,7 @@
   "fr": "GWEN : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
  },
  "CeladonCity_Text_RefAsk": {
-  "en": "GWEN: My LAPRAS hasn't spoken in days.\\nShe misses the sea. Three\\nLEMONADES might cheer her up.",
+  "en": "GWEN: My LAPRAS hasn't spoken in days.\\nShe misses the sea. Three\\lLEMONADES might cheer her up.",
   "fr": "GWEN : Mon LOKHLASS n'a pas parlé\\ndepuis des jours. La mer lui\\nmanque. Trois LIMONADES pourraient\\nlui remonter le moral."
  },
  "CeladonCity_Text_RefDone": {
@@ -128,7 +128,7 @@
   "fr": "GWEN : Merci encore. Le REFUGE est\\nplus sûr grâce à toi."
  },
  "CeladonCity_Text_RefEarly": {
-  "en": "GWEN: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "en": "GWEN: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\lSAFARI ZONE knows the order.",
   "fr": "GWEN : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\pdu PARC SAFARI connaît l'ordre."
  },
  "CeladonCity_Text_RefGives": {

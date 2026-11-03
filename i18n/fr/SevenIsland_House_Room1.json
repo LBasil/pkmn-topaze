@@ -39,6 +39,18 @@
   "en": "There is a slight breeze blowing\\naround the box.",
   "fr": "Une légère brise souffle autour\\nde la boîte."
  },
+ "SevenIsland_House_Room1_Text_StrVar1_1": {
+  "en": "{STR_VAR_1}",
+  "fr": "{STR_VAR_1}"
+ },
+ "SevenIsland_House_Room1_Text_StrVar1_2": {
+  "en": "{STR_VAR_1}",
+  "fr": "{STR_VAR_1}"
+ },
+ "SevenIsland_House_Room1_Text_StrVar1_3": {
+  "en": "{STR_VAR_1}",
+  "fr": "{STR_VAR_1}"
+ },
  "SevenIsland_House_Room2_Text_MatchEndedUpDraw": {
   "en": "The match ended up a draw.",
   "fr": "Le match s'est terminé par un nul."

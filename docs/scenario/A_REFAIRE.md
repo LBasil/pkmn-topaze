@@ -362,3 +362,5 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - 37 descriptions d'objets, 2 descriptions d'attaques (Mille Flèches/Mille Vagues) et le texte du Tableau d'échanges traduits.
 
 - 03-11 14h55 : FR — écran titre (APPUYEZ SUR START), intro avec Tauros, textes .inc (PC, boutique, câble, journal…) et système d'AIDE complet traduits ; noms officiels des PNJ.
+
+- 03-11 15h04 : FR — 151 dialogues de cartes restants traduits (panneaux, BADGES, Chen/Grenalux, Tour Pokémon, etc.) ; 50 entrées « à revoir » rafraîchies. Reste 56 textes japonais inutilisés (hérités).

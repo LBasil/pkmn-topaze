@@ -111,6 +111,10 @@
   "en": "BILL: The ECHO is closed!\\pA little POKéMON came through.\\nIt will warm your journey.",
   "fr": "LÉO : L'ÉCHO est refermé !\\pUn petit POKéMON est passé à\\ntravers. Il réchauffera ton voyage."
  },
+ "OneIsland_PokemonCenter_1F_Text_Echo5Next": {
+  "en": "BILL: Five ECHOES closed. Ask\\nCELIO about the next one.",
+  "fr": "LÉO : Cinq ÉCHOS refermés. Demande\\nà CELIO pour le suivant."
+ },
  "OneIsland_PokemonCenter_1F_Text_Echo5Wait": {
   "en": "BILL: The MEADOW, on FIVE ISLAND.\\nSteel does not bend easily.",
   "fr": "LÉO : La PRAIRIE, sur l'ÎLE 5.\\nL'acier ne plie pas facilement."
@@ -122,6 +126,10 @@
  "OneIsland_PokemonCenter_1F_Text_Echo6Gift": {
   "en": "CELIO: The ECHO is closed!\\pThis POKéMON came with the\\ntide. Take good care of it.",
   "fr": "CELIO : L'ÉCHO est refermé !\\pCe POKéMON est venu avec la marée.\\nPrends-en bien soin."
+ },
+ "OneIsland_PokemonCenter_1F_Text_Echo6Next": {
+  "en": "CELIO: Six ECHOES closed. Only\\none remains.",
+  "fr": "CELIO : Six ÉCHOS refermés. Il n'en\\nreste qu'un."
  },
  "OneIsland_PokemonCenter_1F_Text_Echo6Wait": {
   "en": "CELIO: RUIN VALLEY, SIX ISLAND.\\nMind the old ruins.",
@@ -158,6 +166,10 @@
  "OneIsland_PokemonCenter_1F_Text_EchoBillIntro": {
   "en": "BILL: Hey, CHAMPION! I knew\\nyou would find me.\\pSince the LEAGUE, time has been\\nacting up all over KANTO.\\pClocks run backward. Old POKéMON\\nshow up where they should not.\\pI call them ECHOES: pieces of\\nother lands and other times.\\pThey wash up on these islands.\\pCELIO and I built a device to\\nfind them. Take it.",
   "fr": "LÉO : Hé, CHAMPION ! Je savais que\\ntu me trouverais.\\pDepuis la LIGUE, le temps déraille\\ndans tout KANTO.\\pLes horloges tournent à l'envers.\\nDe vieux POKéMON apparaissent là où\\lils ne devraient pas.\\pJe les appelle ÉCHOS : des morceaux\\nd'autres terres et d'autres temps.\\pIls s'échouent sur ces îles.\\pCELIO et moi avons construit un\\nappareil pour les trouver.\\pPrends-le."
+ },
+ "OneIsland_PokemonCenter_1F_Text_EchoBillNext2": {
+  "en": "BILL: Two ECHOES closed. The\\nthird one is near THREE ISLAND.",
+  "fr": "LÉO : Deux ÉCHOS refermés. Le\\ntroisième est près de l'ÎLE 3."
  },
  "OneIsland_PokemonCenter_1F_Text_EchoBillSilent2": {
   "en": "BILL: Since the wish, the wild ones\\nare gone. Even the old signals.\\pMy device hears nothing. The ECHOES\\nslept on, with no trainer's call.\\pBut the REFUGE needs hands. Help\\nthe guards, CHAMPION.",

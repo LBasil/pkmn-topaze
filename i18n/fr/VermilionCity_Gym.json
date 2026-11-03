@@ -60,7 +60,7 @@
   "fr": "Je suis HERA, CHAMPIONNE de\\nl'ARÈNE d'APATIA, ici-haut où l'air\\lest mince.\\pOn dit qu'une REINE DES FÉES\\nrégnait jadis sur ces cimes, et que\\lles dragons s'inclinaient devant\\nelle. Mes POKéMON DRAGON et FÉE\\lfont vivre la légende.\\pMontre-moi que tu supportes\\nl'altitude. Frappe-moi avec tout ce\\lque tu as !"
  },
  "VermilionCity_Gym_Text_LtSurgePostBattle": {
-  "en": "The CAPTAIN called me: you saved\\nmy APATITE from those thieves.\\pTake my badge as thanks. Now keep\\nclimbing, kid. Cut the tree east\\nof TOURMALIA: ROCK TUNNEL leads\\lto SPINELLIA.",
+  "en": "The CAPTAIN called me: you saved\\nmy APATITE from those thieves.\\pTake my badge as thanks. Now keep\\nclimbing, kid. Cut the tree east\\lof TOURMALIA: ROCK TUNNEL leads\\lto SPINELLIA.",
   "fr": "Le CAPITAINE m'a appelée : tu as\\nsauvé mon APATITE de ces voleurs.\\pPrends mon badge en remerciement.\\nMaintenant continue de grimper.\\lCoupe l'arbre à l'est de\\nTOURMALIA : le TUNNEL ROCHE mène à\\lSPINELLIA."
  },
  "VermilionCity_Gym_Text_LtSurgeRebel1": {
@@ -83,13 +83,33 @@
   "en": "HERA: No balls, no cages. A real\\nsoldier needs rest. Take these.",
   "fr": "HERA : Pas de balls, pas de cages.\\nUn vrai soldat a besoin de repos.\\pPrends ça."
  },
+ "VermilionCity_Gym_Text_LtSurgeVisit3": {
+  "en": "HERA: The six legends? Hah! Don't let\\nthem fry your head. Use this.",
+  "fr": "HERA : Les six légendes ? Hah ! Ne\\nles laisse pas te frire la tête.\\lUtilise ça."
+ },
  "VermilionCity_Gym_Text_MakeRoomInYourBag": {
   "en": "Yo, kid, make room in your BAG!",
   "fr": "Hé, fais de la place dans ton SAC !"
  },
+ "VermilionCity_Gym_Text_NopeOnlyTrashHere": {
+  "en": "Nope!\\nThere's only trash here.",
+  "fr": "Non !\\nIl n'y a que des ordures ici."
+ },
+ "VermilionCity_Gym_Text_OnlyTrashLocksWereReset": {
+  "en": "Nope!\\nThere's only trash here.\\pHey!\\nThe electric locks were reset!",
+  "fr": "Non !\\nIl n'y a que des ordures ici.\\pHé !\\nLes verrous électriques se sont\\lréinitialisés !"
+ },
  "VermilionCity_Gym_Text_ReceivedTM34FromLtSurge": {
   "en": "{PLAYER} received TM02\\nfrom HERA.",
   "fr": "{PLAYER} a reçu la CT02\\nd'HERA."
+ },
+ "VermilionCity_Gym_Text_SecondLockOpened": {
+  "en": "The second electric lock opened!\\nThe motorized door opened!",
+  "fr": "Le deuxième verrou électrique s'est\\nouvert !\\lLa porte motorisée s'est ouverte !"
+ },
+ "VermilionCity_Gym_Text_SwitchUnderTrashFirstLockOpened": {
+  "en": "Hey! There's a switch under the\\ntrash! Turn it on!\\pThe first electric lock opened!",
+  "fr": "Hé ! Il y a un interrupteur sous\\nles ordures ! Active-le !\\pLe premier verrou électrique s'est\\nouvert !"
  },
  "VermilionCity_Gym_Text_TuckerDefeat": {
   "en": "Stop!\\nYou're very good!",

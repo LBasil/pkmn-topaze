@@ -40,7 +40,7 @@
   "fr": "WILL : Un souverain digne des six.\\nJe me souviendrai de ce jour."
  },
  "OneIsland_Text_LordEarly": {
-  "en": "WILL: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\nFLORA will tell you the way.",
+  "en": "WILL: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\lFLORA will tell you the way.",
   "fr": "WILL : Pas encore. L'ancienne LIGUE\\net les MAÎTRES doivent d'abord\\ltomber. FLORA te montrera le\\nchemin."
  },
  "OneIsland_Text_LordIdle": {
@@ -60,7 +60,7 @@
   "fr": "JONAH : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
  },
  "OneIsland_Text_RefAsk": {
-  "en": "JONAH: Poachers took a baby from its\\nmother on the shore. Bring them\\nto justice, please.",
+  "en": "JONAH: Poachers took a baby from its\\nmother on the shore. Bring them\\lto justice, please.",
   "fr": "JONAH : Des braconniers ont pris un\\nbébé à sa mère sur le rivage.\\pFais-les traduire en justice, s'il\\nte plaît."
  },
  "OneIsland_Text_RefDone": {
@@ -68,7 +68,7 @@
   "fr": "JONAH : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
  },
  "OneIsland_Text_RefEarly": {
-  "en": "JONAH: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "en": "JONAH: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\lSAFARI ZONE knows the order.",
   "fr": "JONAH : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\ldu PARC SAFARI connaît l'ordre."
  },
  "OneIsland_Text_RefGives": {

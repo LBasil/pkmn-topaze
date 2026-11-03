@@ -23,6 +23,14 @@
   "en": "The party's over.\\nThe ship will be departing soon.",
   "fr": "La fête est finie.\\nLe navire va bientôt partir."
  },
+ "SSAnne_Deck_Text_TrevorDefeat": {
+  "en": "I was just careless!",
+  "fr": "J'ai juste manqué d'attention !"
+ },
+ "SSAnne_Deck_Text_TrevorIntro": {
+  "en": "Ahoy, there!\\nAre you seasick?",
+  "fr": "Ohé !\\nTu as le mal de mer ?"
+ },
  "SSAnne_Deck_Text_TrevorPostBattle": {
   "en": "My pa said there are 100 kinds of\\nPOKéMON. I think there are more.",
   "fr": "Mon père dit qu'il y a 100 espèces\\nde POKéMON. Je pense qu'il y en a\\lplus."

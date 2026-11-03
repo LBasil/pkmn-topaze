@@ -47,6 +47,10 @@
   "en": "I wonder which is stronger, male or\\nfemale POKéMON?",
   "fr": "Je me demande qui est le plus fort,\\nles POKéMON mâles ou femelles ?"
  },
+ "Route13_Text_LookToLeftOfThatPost": {
+  "en": "TRAINER TIPS\\pLook, look!\\nLook to the left of that post!",
+  "fr": "CONSEILS AUX DRESSEURS\\pRegarde, regarde !\\nRegarde à gauche de ce poteau !"
+ },
  "Route13_Text_PerryDefeat": {
   "en": "The wind turned!",
   "fr": "Le vent a tourné !"
@@ -102,6 +106,10 @@
  "Route13_Text_SebastianPostBattle": {
   "en": "My POKéMON look happy even though\\nthey lost.",
   "fr": "Mes POKéMON ont l'air heureux\\nmême s'ils ont perdu."
+ },
+ "Route13_Text_SelectToSwitchItems": {
+  "en": "TRAINER TIPS\\pUse SELECT to switch items in the\\nITEMS window.",
+  "fr": "CONSEILS AUX DRESSEURS\\pUtilise SELECT pour échanger des\\nobjets dans la fenêtre OBJETS."
  },
  "Route13_Text_SheilaDefeat": {
   "en": "It's over already?",

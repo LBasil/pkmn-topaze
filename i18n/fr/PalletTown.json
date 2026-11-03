@@ -75,6 +75,10 @@
   "en": "Seven ECHOES, seven stories closed.\\nThe archive is complete. You may\\pkeep these, they never fit on my\\nshelves.",
   "fr": "Sept ÉCHOS, sept histoires closes.\\nL'archive est complète. Tu peux les\\lgarder, ils ne tenaient jamais sur\\nmes étagères."
  },
+ "PalletTown_Text_CanStoreItemsAndMonsInPC": {
+  "en": "Technology is incredible!\\pYou can now store and recall items\\nand POKéMON as data via PC.",
+  "fr": "La technologie est incroyable !\\pOn peut désormais stocker et\\nrécupérer objets et POKéMON sous\\lforme de données via le PC."
+ },
  "PalletTown_Text_CaughtXImpressiveFollowMe": {
   "en": "You've caught… {STR_VAR_2}!?\\nNow, this is impressive!\\pThere's something I wanted to ask\\nof you, {PLAYER}.\\pCome.\\nFollow me.",
   "fr": "Tu as capturé… {STR_VAR_2} !?\\nVoilà qui est impressionnant !\\pIl y a quelque chose que je voulais\\nte demander, {PLAYER}.\\pViens.\\nSuis-moi."
@@ -98,6 +102,14 @@
  "PalletTown_Text_MineHint": {
   "en": "A rumble comes from the old mine\\nnorth of town. Its gate is open.\\pWhatever the AURA left down there,\\nit is waiting at the bottom.\\p(Then follow MEW to APATIA's dock,\\nand talk to the sailor.)",
   "fr": "Un grondement vient de l'ancienne\\nmine au nord de la ville. Sa porte\\lest ouverte.\\pQuoi que l'AURA ait laissé\\nlà-dessous, il attend au fond.\\p(Puis suis MEW jusqu'au quai\\nd'APATIA, et parle au marin.)"
+ },
+ "PalletTown_Text_OakDontGoOut": {
+  "en": "OAK: Hey! Wait!\\nDon't go out!",
+  "fr": "CHEN : Hé ! Attends !\\nNe sors pas !"
+ },
+ "PalletTown_Text_OakGrassUnsafeNeedMon": {
+  "en": "OAK: Hey, kid! Be careful!\\nWild POKéMON live in tall grass.\\p{PLAYER}: But how can I catch my\\nfirst POKéMON if I never meet one?\\pOAK: Hm… Tell me, how old are you?\\p{PLAYER}: Fourteen.\\pOAK: I see. Come with me to my\\nLAB, kid.",
+  "fr": "CHEN : Hé, petit ! Fais attention !\\nDes POKéMON sauvages vivent dans\\lles hautes herbes.\\p{PLAYER} : Mais comment capturer mon\\npremier POKéMON si je n'en croise\\ljamais ?\\pCHEN : Hm… Quel âge as-tu ?\\p{PLAYER} : Quatorze ans.\\pCHEN : Je vois. Suis-moi à mon\\nLABO, petit."
  },
  "PalletTown_Text_OakLetMeSeePokedex": {
   "en": "OAK: Ah, {PLAYER}!\\nYou're back, are you?\\pHow much have you filled in your\\nPOKéDEX?\\pMay I see it?\\pLet's see…",
@@ -228,7 +240,7 @@
   "fr": "AYA : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
  },
  "PalletTown_Text_RefAsk": {
-  "en": "AYA: I run the first REFUGE post. Our\\nfirst rule: nobody goes hungry.\\nPOKéMON hurt in the wild have\\nnowhere to go but here.\\pI need five POTIONS for the new\\narrivals. Can you spare them?",
+  "en": "AYA: I run the first REFUGE post. Our\\nfirst rule: nobody goes hungry.\\lPOKéMON hurt in the wild have\\nnowhere to go but here.\\pI need five POTIONS for the new\\narrivals. Can you spare them?",
   "fr": "AYA : Je tiens le premier poste du\\nREFUGE. Notre première règle :\\ppersonne n'a faim. Les POKéMON\\nblessés dans la nature n'ont nulle\\lpart où aller sauf ici.\\pJ'ai besoin de cinq POTIONS pour\\nles nouveaux arrivants. Peux-tu les\\lcéder ?"
  },
  "PalletTown_Text_RefDone": {
@@ -236,7 +248,7 @@
   "fr": "AYA : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
  },
  "PalletTown_Text_RefEarly": {
-  "en": "AYA: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "en": "AYA: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\lSAFARI ZONE knows the order.",
   "fr": "AYA : Pas encore. Finis d'abord les\\npostes précédents. Le GARDIEN du\\pPARC SAFARI connaît l'ordre."
  },
  "PalletTown_Text_RefGives": {

@@ -59,6 +59,10 @@
   "en": "HERA lent her APATITE to the\\nS.S. ANNE for the cruise's gala.\\pBetween us, I hope nothing happens\\nto it. Folks in black were seen\\lnear the harbor!",
   "fr": "HERA a prêté son APATITE au S.S.\\nANNE pour le gala de la croisière.\\pEntre nous, j'espère qu'il ne lui\\narrivera rien. On a vu des gens en\\lnoir près du port !"
  },
+ "VermilionCity_Text_GymSign": {
+  "en": "APATIA POKéMON GYM\\nLEADER: HERA\\lThe Queen of the Peaks!",
+  "fr": "ARÈNE POKéMON D'APATIA\\nCHAMPIONNE : HERA\\lLa Reine des Cimes !"
+ },
  "VermilionCity_Text_Machop": {
   "en": "MACHOP: Guoh! Gogogoh!",
   "fr": "MACHOC : Guoh ! Gogogoh !"
@@ -100,8 +104,8 @@
   "fr": "ELISE : Merci encore. Le REFUGE est\\nplus sûr grâce à toi."
  },
  "VermilionCity_Text_RefEarly": {
-  "en": "ELISE: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
-  "fr": "ELISE : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\lde la ZONE SAFARI connaît l'ordre."
+  "en": "ELISE: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\lSAFARI ZONE knows the order.",
+  "fr": "ELISE : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\lde la PARC SAFARI connaît l'ordre."
  },
  "VermilionCity_Text_RefGives": {
   "en": "ELISE: You saved the day. The post\\nhas a gift for you: BELDUM!",
@@ -143,6 +147,10 @@
   "en": "Okay, everything's in order.\\pSEAGALLOP HI-SPEED 7 will be\\ndeparting immediately.",
   "fr": "Très bien, tout est en ordre.\\pLe SEAGALLOP HI-SPEED 7 partira\\nimmédiatement."
  },
+ "VermilionCity_Text_SnorlaxBlockingRoute12": {
+  "en": "NOTICE!\\pROUTE 12 may be blocked off by a\\nsleeping POKéMON.\\pDetour through ROCK TUNNEL to\\nSPINELLIA.\\pAPATIA POLICE",
+  "fr": "AVIS !\\pLa ROUTE 12 peut être bloquée par\\nun POKéMON endormi.\\pFais un détour par le TUNNEL ROCHE\\njusqu'à SPINELLIA.\\pPOLICE D'APATIA"
+ },
  "VermilionCity_Text_TQ_Ask": {
   "en": "A BIG PEARL! My wife would cry. I\\nwill trade a charm.",
   "fr": "Une GROSSE PERLE ! Ma femme\\npleurerait. J'échange un\\lporte-bonheur."
@@ -166,6 +174,10 @@
  "VermilionCity_Text_TruckDriver": {
   "en": "DRIVER: Don't mind the truck!\\nI just park here.\\p...Why does it keep shaking?\\nIs something under there?",
   "fr": "CHAUFFEUR : Ne fais pas attention\\nau camion ! Je me gare juste ici.\\p…Pourquoi ça n'arrête pas de\\nbouger ? Y a-t-il quelque chose en\\ldessous ?"
+ },
+ "VermilionCity_Text_VermilionHarbor": {
+  "en": "APATIA HARBOR",
+  "fr": "PORT D'APATIA"
  },
  "VermilionCity_Text_WelcomeToTheSSAnne": {
   "en": "Welcome to the S.S. ANNE!",

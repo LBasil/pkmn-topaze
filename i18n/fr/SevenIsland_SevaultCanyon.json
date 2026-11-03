@@ -87,6 +87,14 @@
   "en": "Go. Let it sleep after.",
   "fr": "Va. Laisse-le dormir après."
  },
+ "SevenIsland_SevaultCanyon_Text_GladeLocked": {
+  "en": "A small, mossy cave mouth. Nothing\\nstirs inside. Not yet.",
+  "fr": "Une petite grotte moussue. Rien ne\\nbouge à l'intérieur. Pas encore."
+ },
+ "SevenIsland_SevaultCanyon_Text_GroveHint": {
+  "en": "The GROVE is sealed. The ECHO\\ncalls from the passage to the east.",
+  "fr": "Le BOSQUET est scellé. L'ÉCHO\\nappelle depuis le passage à l'est."
+ },
  "SevenIsland_SevaultCanyon_Text_GroveLocked": {
   "en": "A mossy cave mouth. Something small\\nstirs within. Not yet.",
   "fr": "Une entrée de grotte moussue.\\nQuelque chose de petit remue à\\ll'intérieur. Pas encore."
@@ -259,6 +267,10 @@
   "en": "A dark passage climbs into the\\nclouds. The ECHO is still silent.",
   "fr": "Un sombre passage monte dans les\\nnuages. L'ÉCHO est encore\\lsilencieux."
  },
+ "SevenIsland_SevaultCanyon_Text_SummitPassLocked": {
+  "en": "A dark passage in the rock. The\\nair within hums. Not yet.",
+  "fr": "Un passage sombre dans la roche.\\nL'air à l'intérieur vibre.\\lPas encore."
+ },
  "SevenIsland_SevaultCanyon_Text_W0Defeat": {
   "en": "Ebbed...",
   "fr": "Reflué…"
@@ -300,7 +312,7 @@
   "fr": "Enfin éveillé…"
  },
  "SevenIsland_SevaultCanyon_Text_W3Intro": {
-  "en": "I am the last guardian of the\\ndreamers. The eon twins and the\\nwish star rest behind me.",
+  "en": "I am the last guardian of the\\ndreamers. The eon twins and the\\lwish star rest behind me.",
   "fr": "Je suis le dernier gardien des\\nrêveurs. Les jumeaux de l'éon et\\ll'étoile des vœux reposent derrière\\nmoi."
  },
  "SevenIsland_SevaultCanyon_Text_W3Post": {

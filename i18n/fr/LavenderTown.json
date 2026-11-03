@@ -52,7 +52,7 @@
   "fr": "FINN : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
  },
  "LavenderTown_Text_RefAsk": {
-  "en": "FINN: The old tower is full of lost\\nPOKéMON. Hunters know it, and they\\ncome at dusk with lanterns.",
+  "en": "FINN: The old tower is full of lost\\nPOKéMON. Hunters know it, and they\\lcome at dusk with lanterns.",
   "fr": "FINN : La vieille tour est pleine\\nde POKéMON perdus. Les chasseurs le\\lsavent, et ils viennent au\\ncrépuscule avec des lanternes."
  },
  "LavenderTown_Text_RefDone": {
@@ -60,7 +60,7 @@
   "fr": "FINN : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
  },
  "LavenderTown_Text_RefEarly": {
-  "en": "FINN: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "en": "FINN: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\lSAFARI ZONE knows the order.",
   "fr": "FINN : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\ldu PARC SAFARI connaît l'ordre."
  },
  "LavenderTown_Text_RefGives": {
