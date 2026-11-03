@@ -1,0 +1,130 @@
+Help_Text_UsingMailbox|  Utiliser “BOÎTE AUX LETTRES”$
+Help_Text_UsingProfOaksPC| Utiliser “PC DU PROF. CHEN”$
+Help_Text_OpeningMenu|Ouvrir le MENU$
+Help_Text_UsingFight| Utiliser “COMBAT”$
+Help_Text_UsingPokemon2| Utiliser “POKéMON”$
+Help_Text_UsingShift|  Utiliser “CHANGER”$
+Help_Text_UsingSummary2|  Utiliser “RÉSUMÉ”$
+Help_Text_UsingBag2| Utiliser “SAC”$
+Help_Text_ReadingPokedex| Lire le “POKéDEX”$
+Help_Text_UsingHomePC|Utiliser le PC de la maison$
+Help_Text_UsingItemStorage|Utiliser le Stockage d'objets$
+Help_Text_UsingWithdrawItem2|  Utiliser “RETIRER OBJET”$
+Help_Text_UsingDepositItem2|  Utiliser “DÉPOSER OBJET”$
+Help_Text_UsingMailbox2|Utiliser la BOÎTE AUX LETTRES$
+Help_Text_UsingRun| Utiliser “FUITE”$
+Help_Text_RegisterKeyItem|  “ENREGISTRER” un objet rare$
+Help_Text_UsingBall| Utiliser “BALL”$
+Help_Text_UsingBait| Utiliser “APPÂT”$
+Help_Text_UsingRock| Utiliser “CAILLOU”$
+Help_Text_UsingHallOfFame| Utiliser “PANTHÉON”$
+Help_Text_HowToUsePokedex|{CIRCLE_1} Choisis “POKéDEX” dans le MENU.\n{CIRCLE_2} Choisis un POKéMON avec des\n   commandes comme “LISTE POKéMON”,\n   “HABITATS DES POKéMON” et\n   “RECHERCHE”.\n{CIRCLE_3} Choisis un POKéMON pour obtenir\n   des informations détaillées.$
+Help_Text_HowToUsePokemon|{CIRCLE_1} Choisis “POKéMON” dans le MENU.\n{CIRCLE_2} Choisis un POKéMON de ton équipe.\n{CIRCLE_3} Choisis “RÉSUMÉ”, “CHANGER”\n   ou “OBJET”.$
+Help_Text_HowToUseSummary|{CIRCLE_1} Choisis “RÉSUMÉ”.\n{CIRCLE_2} Appuie à gauche ou à droite sur la\n   {PLUS} Croix pour voir les infos :\n   “INFOS POKéMON”\n   “COMPÉTENCES”\n   “ATTAQUES”$
+Help_Text_HowToUseSwitch|{CIRCLE_1} Choisis le POKéMON à déplacer.\n{CIRCLE_2} Choisis “CHANGER”.\n{CIRCLE_3} Choisis le POKéMON avec lequel\n   l'échanger.\nLe POKéMON à gauche de l'écran sera\nle premier envoyé au combat.$
+Help_Text_HowToUseItem|{CIRCLE_1} Choisis “OBJET”.\n{CIRCLE_2} Choisis “DONNER” pour faire\n   porter un objet au POKéMON, ou\n   “RETIRER” pour lui reprendre.\nUn POKéMON ne peut porter qu'un\nseul objet !$
+Help_Text_HowToUseBag|{CIRCLE_1} Choisis “SAC” dans le MENU.\n{CIRCLE_2} Appuie à gauche ou à droite sur la\n   {PLUS} Croix pour voir les poches :\n   “OBJETS”\n   “OBJETS RARES”\n   “POKé BALLS”\n   Haut ou bas pour choisir un objet.$
+Help_Text_HowToUseAnItem|{CIRCLE_1} Choisis la poche “OBJETS”.\n{CIRCLE_2} Appuie en haut ou en bas sur la\n   {PLUS} Croix pour choisir un objet.\n{CIRCLE_3} Choisis “UTILISER” pour s'en\n   servir.\nCertains objets sont inutilisables\nselon le lieu ou la situation.$
+Help_Text_HowToUseKeyItem|{CIRCLE_1} Choisis la poche “OBJETS RARES”.\n{CIRCLE_2} Appuie en haut ou en bas sur la\n   {PLUS} Croix pour choisir un objet rare.\n{CIRCLE_3} Choisis “UTILISER” pour s'en\n   servir.$
+Help_Text_HowToUsePokeBall|{CIRCLE_1} Face à un POKéMON sauvage, choisis\n   la poche “POKé BALLS” du SAC.\n{CIRCLE_2} Appuie en haut ou en bas sur la\n   {PLUS} Croix pour choisir une POKé BALL.\n{CIRCLE_3} Choisis “UTILISER” pour la\n   lancer.$
+Help_Text_HowToUsePlayer|{CIRCLE_1} Choisis “{PLAYER}” dans le MENU.\n{CIRCLE_2} Ta CARTE DRESSEUR s'affiche, face\n   avant, avec les infos de base.\n   Appuie sur A pour la retourner.\n{CIRCLE_3} Le verso contient diverses données.$
+Help_Text_HowToUseSave|{CIRCLE_1} Choisis “SAUVER” dans le MENU.\n{CIRCLE_2} Choisis “OUI” et ta progression\n   est enregistrée.\nUne fois la partie sauvegardée, tu\npeux éteindre le jeu. Tu reprendras\nlà où tu as sauvegardé.$
+Help_Text_HowToUseOption|{CIRCLE_1} Choisis “OPTION” dans le MENU.\n{CIRCLE_2} Appuie en haut ou en bas sur la\n   {PLUS} Croix pour choisir une option,\n   puis à gauche ou à droite pour\n   la modifier.\n{CIRCLE_3} Choisis “ANNULER” ou appuie\n   sur B après les changements.$
+Help_Text_HowToUsePotion|{CIRCLE_1} Ouvre le MENU.\n{CIRCLE_2} Appuie en haut ou en bas sur la\n   {PLUS} Croix et choisis “SAC”.\n{CIRCLE_3} Choisis “POTION” dans la poche\n   “OBJETS”.\n{CIRCLE_4} Choisis “UTILISER”.\n{CIRCLE_5} Choisis le POKéMON à soigner.$
+Help_Text_HowToUseTownMap|{CIRCLE_1} Ouvre le MENU.\n{CIRCLE_2} Appuie en haut ou en bas sur la\n   {PLUS} Croix et choisis “SAC”.\n{CIRCLE_3} Appuie à gauche ou à droite pour\n   ouvrir “OBJETS RARES”, puis haut\n   ou bas pour choisir “CARTE”.\n{CIRCLE_4} Choisis “UTILISER” pour l'ouvrir.$
+Help_Text_HowToUseTM|{CIRCLE_1} Ouvre le MENU.\n{CIRCLE_2} Ouvre la poche “OBJETS RARES”\n   du “SAC”.\n{CIRCLE_3} “OUVRE” la BOÎTE CT.\n{CIRCLE_4} Choisis et “UTILISE” une CT.\n{CIRCLE_5} Choisis un POKéMON pouvant\n   apprendre l'attaque de la CT.$
+Help_Text_HowToUseHM|{CIRCLE_1} Ouvre le MENU.\n{CIRCLE_2} Ouvre la poche “OBJETS RARES”\n   du “SAC”.\n{CIRCLE_3} “OUVRE” la BOÎTE CT.\n{CIRCLE_4} Choisis et “UTILISE” une CS.\n{CIRCLE_5} Choisis un POKéMON pouvant\n   l'apprendre.\nLes CS sont difficiles à oublier !$
+Help_Text_HowToUseMoveOutsideOfBattle|{CIRCLE_1} Ouvre le MENU.\n{CIRCLE_2} Choisis “POKéMON”.\n{CIRCLE_3} Choisis un POKéMON connaissant\n   une attaque CS. Les attaques CS\n   utilisables sont en bleu. Choisis-\n   en une pour détruire un obstacle,\n   voler, surfer, etc.$
+Help_Text_HowToRideBicycle|{CIRCLE_1} Ouvre le MENU. Ouvre la poche\n   “OBJETS RARES” du “SAC” et\n   choisis le “VÉLO”.\n{CIRCLE_2} Choisis “UTILISER” pour monter\n   dessus. Tu peux aussi\n   l'“ENREGISTRER” pour l'utiliser\n   avec SELECT.$
+Help_Text_HowToEnterName|{CIRCLE_1} Place le curseur sur la lettre\n   avec la {PLUS} Croix, puis appuie sur A.\n{CIRCLE_2} Appuie sur B pour effacer.\n{CIRCLE_3} Appuie sur SELECT pour passer\n   des majuscules aux minuscules.\n{CIRCLE_4} Appuie sur A sur “OK”.$
+Help_Text_HowToUsePC|{CIRCLE_1} Va dans un CENTRE POKéMON, approche-\n   toi du PC et appuie sur A.$
+Help_Text_HowToUseBillsPC|{CIRCLE_1} Choisis “PC DE {STR_VAR_1}” sur le PC.\n{CIRCLE_2} Choisis l'un des trois premiers\n   éléments pour accéder au Système\n   de stockage des POKéMON.\nSi tu captures un POKéMON avec six\nen équipe, il est envoyé\nautomatiquement dans une BOÎTE !$
+Help_Text_HowToUseWithdraw|{CIRCLE_1} Choisis un POKéMON de la BOÎTE\n   ouverte avec la {PLUS} Croix.\n{CIRCLE_2} Choisis “RETIRER” pour le sortir\n   de la BOÎTE et l'ajouter à ton\n   équipe.\nImpossible de retirer un POKéMON si\ntu en as déjà six avec toi !$
+Help_Text_HowToUseDeposit|{CIRCLE_1} Choisis un POKéMON de ton équipe\n   avec la {PLUS} Croix.\n{CIRCLE_2} Choisis “DÉPOSER”.\n{CIRCLE_3} Choisis la BOÎTE, puis appuie\n   sur A pour y ranger le POKéMON.\nSi tu n'as qu'un POKéMON avec toi,\nil ne peut pas être déposé !$
+Help_Text_HowToUseMove|{CIRCLE_1} Choisis un POKéMON de la BOÎTE\n   ouverte.\n{CIRCLE_2} Prends-le avec “DÉPLACER” et\n   bouge-le avec la {PLUS} Croix.\n{CIRCLE_3} Amène-le sur le nom de la BOÎTE\n   et appuie à gauche ou à droite pour\n   le mettre dans une autre BOÎTE.$
+Help_Text_HowToMoveItems|{CIRCLE_1} Un POKéMON en grisé peut recevoir\n   un objet : choisis l'objet et\n   appuie sur A.\n{CIRCLE_2} Un POKéMON net peut donner\n   son objet à un autre POKéMON ou le\n   remettre dans le SAC avec A.$
+Help_Text_HowToUsePlayersPC|{CIRCLE_1} Choisis “PC DE {PLAYER}” sur le PC.\n{CIRCLE_2} Choisis “STOCKAGE D'OBJETS”\n   ou “BOÎTE AUX LETTRES”.\nTu peux ranger des choses dans ton\nPC si ton SAC est plein, et aussi\nretirer des objets de ton PC.$
+Help_Text_HowToUseWithdrawItem|{CIRCLE_1} Choisis “RETIRER OBJET”.\n{CIRCLE_2} Choisis l'objet à retirer.\n{CIRCLE_3} L'objet est placé dans la poche\n   OBJETS du SAC. Il peut aussi être\n   donné directement à un POKéMON\n   pour qu'il le porte.$
+Help_Text_HowToUseDepositItem|{CIRCLE_1} Choisis “DÉPOSER OBJET”.\n{CIRCLE_2} Choisis l'objet du SAC à déposer\n   avec la {PLUS} Croix.\n{CIRCLE_3} Pour plusieurs exemplaires, entre\n   la quantité avec la {PLUS} Croix,\n   puis appuie sur A.$
+Help_Text_HowToUseMailbox|Quand une LETTRE est retirée à un\nPOKéMON, elle va dans la BOÎTE AUX\nLETTRES. Sans LETTRE, la BOÎTE AUX\nLETTRES est inutilisable.\n{CIRCLE_1} Choisis “PC DE {PLAYER}” sur le PC.\n{CIRCLE_2} Choisis “BOÎTE AUX LETTRES”\n   pour lire ou faire porter une LETTRE.$
+Help_Text_HowToUseProfOaksPC|{CIRCLE_1} Choisis “PC DU PROF. CHEN”\n   sur le PC.\n{CIRCLE_2} Le PROF. CHEN évaluera ton\n   POKéDEX.\nSes évaluations te donneront des\nindices pour capturer plus de POKéMON !$
+Help_Text_HowToOpenMenu|{CIRCLE_1} Appuie sur START.\n{CIRCLE_2} Le MENU s'ouvre à droite.\n{CIRCLE_3} Selon la situation, le MENU peut\n   proposer des rubriques différentes.\nLe MENU ne s'ouvre pas dans certains\ncas : en parlant, en agissant, en\ncombattant, etc.$
+Help_Text_HowToUseFight|{CIRCLE_1} Choisis “COMBAT”.\n{CIRCLE_2} Choisis l'une des attaques\naffichées, elle sera utilisée !$
+Help_Text_HowToUsePokemon2|{CIRCLE_1} Choisis “POKéMON”.\n{CIRCLE_2} Choisis le POKéMON de ton équipe\n   que tu veux utiliser.\n{CIRCLE_3} Avec deux POKéMON ou plus, tu\n   peux les changer avec “CHANGER”.\n   Vois leurs données avec “RÉSUMÉ”.$
+Help_Text_HowToUseShift|Cette commande remplace le POKéMON\nau combat par un autre de ton équipe.\n{CIRCLE_1} Choisis le POKéMON à envoyer.\n{CIRCLE_2} Choisis “CHANGER”.\n{CIRCLE_3} Le POKéMON choisi prend la place\n   du POKéMON au combat !$
+Help_Text_HowToUseSummary2|{CIRCLE_1} Choisis “RÉSUMÉ”.\n{CIRCLE_2} Appuie à gauche ou à droite sur la\n   {PLUS} Croix pour voir les infos :\n   “INFOS POKéMON”\n   “COMPÉTENCES”\n   “ATTAQUES”$
+Help_Text_HowToUseBag2|{CIRCLE_1} Choisis “SAC”.\n{CIRCLE_2} Appuie à gauche ou à droite sur la\n   {PLUS} Croix pour voir les poches :\n   “OBJETS”\n   “OBJETS RARES”\n   “POKé BALLS”\n   Haut ou bas pour choisir un objet.$
+Help_Text_HowToReadPokedex|{CIRCLE_1} Les POKéMON capturés sont repérés\n   par une icône POKé BALL dans la\n   liste du POKéDEX.\n{CIRCLE_2} Un POKéMON capturé donne\n   beaucoup de données.\n$
+Help_Text_HowToUseHomePC|{CIRCLE_1} Approche-toi du PC de la maison\n   et appuie sur A.\n{CIRCLE_2} Le PC s'allume.\n{CIRCLE_3} Choisis “STOCKAGE D'OBJETS”\n   ou “BOÎTE AUX LETTRES”.$
+Help_Text_HowToUseItemStorage|{CIRCLE_1} Choisis “RETIRER OBJET” pour\n   reprendre un objet stocké sur ton PC.\n{CIRCLE_2} Choisis “DÉPOSER OBJET” pour\n   ranger un objet du SAC dans ton PC.$
+Help_Text_HowToUseWithdrawItem2|{CIRCLE_1} Choisis “RETIRER OBJET”.\n{CIRCLE_2} Choisis l'objet à retirer.\n{CIRCLE_3} L'objet est placé dans la poche\n   OBJETS du SAC. Il peut aussi être\n   donné directement à un POKéMON\n   pour qu'il le porte.$
+Help_Text_HowToUseDepositItem2|{CIRCLE_1} Choisis “DÉPOSER OBJET”.\n{CIRCLE_2} Choisis l'objet du SAC à déposer\n   avec la {PLUS} Croix.\n{CIRCLE_3} Si le SAC est vide, cette\n   commande est inutilisable !$
+Help_Text_HowToUseMailbox2|Quand une LETTRE est retirée à un\nPOKéMON, elle va dans la BOÎTE AUX\nLETTRES. Sans LETTRE, la BOÎTE AUX\nLETTRES est inutilisable.\n{CIRCLE_1} Choisis une LETTRE par son nom pour\n   la lire ou la faire porter.$
+Help_Text_HowToUseRun|Tu ne peux pas “FUIR” un combat\ncontre un DRESSEUR !\n{CIRCLE_1} Tu peux “FUIR” un POKéMON sauvage.\n{CIRCLE_2} Tes chances de fuite augmentent si\n   ton POKéMON au combat est rapide.$
+Help_Text_HowToRegisterKeyItem|Tu peux “ENREGISTRER” un objet rare\npour l'utiliser avec SELECT !\n{CIRCLE_1} Ouvre la poche “OBJETS RARES”.\n{CIRCLE_2} Choisis l'objet rare, puis\n   “ENREGISTRER”.$
+Help_Text_HowToUseBall|{CIRCLE_1} Choisis pour lancer la BALL spéciale\n   utilisée seulement au PARC SAFARI.\nQuand des POKéMON sauvages\napparaissent, lance plein de SAFARI\nBALLS pour les capturer !$
+Help_Text_HowToUseBait|{CIRCLE_1} Choisis pour lancer l'appât\n   utilisé seulement au PARC SAFARI.\nC'est de la nourriture POKéMON roulée\nen boule pour être mangée facilement.\nQuand on lance un APPÂT, le POKéMON\nsauvage peut être attiré et ne pas\nfuir !$
+Help_Text_HowToUseRock|{CIRCLE_1} Choisis pour lancer un caillou\n   ramassé dans le PARC SAFARI.\nLancer un caillou à un POKéMON peut le\nfaire fuir, mais il devient plus\nfacile à capturer !$
+Help_Text_HowToUseHallOfFame|{CIRCLE_1} Choisis “PANTHÉON” sur le PC.\n{CIRCLE_2} Tu peux examiner les POKéMON\n   entrés au PANTHÉON.$
+Help_Text_HP|PV$
+Help_Text_EXP|EXP. {LEFT_PAREN}Points d'EXP.{RIGHT_PAREN}$
+Help_Text_Moves|ATTAQUES$
+Help_Text_Attack|ATTAQUE$
+Help_Text_Defense|DÉFENSE$
+Help_Text_SpAtk|ATQ. SPÉ.$
+Help_Text_SpDef|DÉF. SPÉ.$
+Help_Text_Speed|VITESSE$
+Help_Text_Level|N. {LEFT_PAREN}Niveau{RIGHT_PAREN}$
+Help_Text_Type|TYPE$
+Help_Text_OT|DO$
+Help_Text_Item|OBJET$
+Help_Text_Ability|TALENT$
+Help_Text_Money|ARGENT$
+Help_Text_MoveType|TYPE ATTAQUE$
+Help_Text_Nature|NATURE$
+Help_Text_IDNo|No. ID$
+Help_Text_PP|PP$
+Help_Text_Power|PUISSANCE$
+Help_Text_Accuracy|PRÉCISION$
+Help_Text_FNT|K.O.$
+Help_Text_Items|OBJETS$
+Help_Text_KeyItems|OBJETS RARES$
+Help_Text_PokeBalls|POKé BALLS$
+Help_Text_Pokedex|POKéDEX$
+Help_Text_PlayTime|DURÉE JEU$
+Help_Text_Badges|BADGES$
+Help_Text_TextSpeed|VIT. TEXTE$
+Help_Text_BattleScene|ANIM. COMBAT$
+Help_Text_BattleStyle|STYLE COMBAT$
+Help_Text_Sound|SON$
+Help_Text_ButtonMode|MODE TOUCHES$
+Help_Text_Frame|CADRE$
+Help_Text_Cancel2|ANNULER$
+Help_Text_TM|CT$
+Help_Text_HM|CS$
+Help_Text_HMMove|ATTAQUE CS$
+Help_Text_Evolution|ÉVOLUTION$
+Help_Text_StatusProblem|PROBLÈME STATUT$
+Help_Text_Pokemon|POKéMON$
+Help_Text_IDNo2|No. ID$
+Help_Text_Money2|ARGENT$
+Help_Text_Badges2|BADGES$
+Help_Text_DefineHP|PV indique la vitalité d'un POKéMON.\nSi ses PV tombent à zéro, il est K.O.\let ne peut plus se battre.\lL'essentiel au combat est de réduire\lles PV adverses à zéro.\lSi tes POKéMON sont blessés, rends-\lleur des PV au CENTRE POKéMON ou avec\ldes objets.$
+Help_Text_DefineEXP|EXP. signifie “points d'expérience”.\nLes POKéMON en gagnent en participant\là des combats victorieux.\lQuand un POKéMON en accumule assez,\lil monte de niveau. La barre d'EXP.\lmontre les points accumulés.\lElle revient à zéro à chaque niveau.$
+Help_Text_DefineMoves|Un POKéMON peut apprendre jusqu'à\nquatre attaques. Il y en a de\ltoutes sortes : attaques et effets\lspéciaux. Les attaques apprenables\lvarient selon le POKéMON. Certaines\ls'apprennent avec des objets.$
+Help_Text_DefineAttack|ATTAQUE indique la puissance d'une\nattaque offensive. Plus la stat est\lélevée, plus l'attaque est puissante.\lElle s'applique aux types : NORMAL,\lPOISON, SOL, VOL, INSECTE, COMBAT,\lROCHE, SPECTRE et ACIER.$
+Help_Text_DefineDefense|DÉFENSE indique la résistance d'un\nPOKéMON aux attaques physiques.\lPlus la stat est élevée, moins il subit\lde dégâts d'une attaque physique.$
+Help_Text_DefineSpAtk|ATQ. SPÉ. (Attaque Spéciale) indique\nla puissance d'une attaque spéciale.\lPlus la stat est élevée, plus\ll'attaque spéciale est puissante.\lElle s'applique aux types : FEU, EAU,\lÉLECTRIK, PLANTE, GLACE, PSY, DRAGON\let TÉNÈBRES.$
+Help_Text_DefineSpDef|DÉF. SPÉ. (Défense Spéciale) indique\nla résistance d'un POKéMON aux\lattaques spéciales.\lPlus la stat est élevée, moins il subit\lde dégâts d'une attaque spéciale.$
+Help_Text_DefineSpeed|VITESSE indique l'agilité d'un POKéMON.\nSi elle dépasse celle de l'adversaire,\lle POKéMON peut agir avant lui.$
+Help_Text_DefineLevel|N. (Niveau) indique la croissance et la\nforce d'un POKéMON.\lEn général, en montant de niveau, ses\lstats comme PV, ATTAQUE et DÉFENSE\lmontent, le rendant plus fort.\lIl peut aussi apprendre une nouvelle\lattaque en montant de niveau.$
+Help_Text_DefineType|Les POKéMON et attaques sont classés\npar type. Chaque type a des avantages\let des désavantages face aux autres.\lPar exemple, comme à pierre-feuille-\lciseaux, le type EAU est fort contre\lle type FEU et faible contre le type\lPLANTE.$
+Help_Text_DefineOT|DO signifie “Dresseur d'Origine”,\nle premier DRESSEUR à avoir capturé\lle POKéMON choisi.\lMême échangé, le nom du DO ne change\lpas.$
+Help_Text_DefineItem|Tout POKéMON peut porter un objet.\nCertains objets sont utilisés\lautomatiquement par le POKéMON dans\lcertaines situations. Pour en faire\lporter un, choisis l'objet dans le\lSAC et “DONNE-LE” au POKéMON.$
+Help_Text_DefineAbility|Tout POKéMON possède un TALENT\nspécial. Il en existe de nombreux,\ldont certains servent au combat et\ld'autres ailleurs. Les talents varient\lselon l'espèce. Certaines espèces\lpeuvent en avoir plusieurs sortes.$
+Help_Text_DefineMoney|Chaque fois que tu bats un DRESSEUR,\ntu reçois une récompense.\lMets-la de côté pour faire des\lachats à la BOUTIQUE POKéMON !$
+Help_Text_DefineMoveType|Les attaques ont aussi un type.\nSi un POKéMON d'un certain type\lutilise une attaque du même type,\lsa puissance augmente. Si le type de\ll'attaque a l'avantage sur la cible,\lson efficacité augmente aussi.$
+Help_Text_DefineNature|Tout POKéMON a une personnalité,\nou “NATURE”. Elle semble influer\lsur la croissance du POKéMON\lquand il monte de niveau.$
+Help_Text_DefineIDNo|Le No. ID est un numéro spécial attribué\nà toi seul en tant que DRESSEUR.\lAvec le nom du DO, il sert à\lidentifier précisément le Dresseur\ld'Origine.\lIl ne change pas même si le POKéMON\lest échangé.$
+Help_Text_DefinePP|PP signifie “Points de Pouvoir”.\nIls indiquent combien de fois une\lattaque peut être utilisée au combat.\lComme les PV, les PP se rendent au\lCENTRE POKéMON ou avec certains\lobjets.$
+Help_Text_DefinePower|PUISSANCE indique la force d'une\nattaque. Plus ce nombre est élevé,\lplus les dégâts infligés à l'adversaire\lsont importants !$

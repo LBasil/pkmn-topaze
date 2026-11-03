@@ -360,3 +360,5 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - STEAM BLAST était en fait Vapeur Féérique (Fée, 90, confusion) : nom + description corrigés (la description était celle de Téra Explosion).
 - FAME CHECKER = MEMORYDEX (Poképédia). CARTE MIRACLE / CADEAU MYSTÈRE confirmés ; « INFOS MIRACLE » et « TAMPON » : aucun nom officiel trouvé, gardés.
 - 37 descriptions d'objets, 2 descriptions d'attaques (Mille Flèches/Mille Vagues) et le texte du Tableau d'échanges traduits.
+
+- 03-11 14h55 : FR — écran titre (APPUYEZ SUR START), intro avec Tauros, textes .inc (PC, boutique, câble, journal…) et système d'AIDE complet traduits ; noms officiels des PNJ.

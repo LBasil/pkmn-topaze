@@ -1,0 +1,130 @@
+Help_Text_WhatShouldIDo|Que faire dans cette situation ?$
+Help_Text_HowDoIDoThis|Comment faire ceci ?$
+Help_Text_WhatDoesThisTermMean|Que signifie ce terme ?$
+Help_Text_AboutThisGame|À propos de ce jeu$
+Help_Text_TypeMatchupList|Table des types$
+Help_Text_Exit|QUITTER$
+Help_Text_Cancel|ANNULER$
+Help_Text_DescWhatShouldIDo|Des conseils pour surmonter les\nsituations difficiles.$
+Help_Text_DescHowDoIDoThis|Des instructions détaillées pour\ndiverses opérations.$
+Help_Text_DescWhatDoesThisTermMean|Des explications détaillées sur\nles termes du jeu.$
+Help_Text_DescAboutThisGame|Des explications détaillées sur\nce jeu.$
+Help_Text_DescTypeMatchupList|La liste des affinités entre types\nde POKéMON et d'attaques.$
+Help_Text_DescExit|Choisir pour quitter l'AIDE.$
+Help_Text_Greetings|Salut ! Voici le système d'AIDE.\nAppelle-moi quand tu veux, où tu\lveux, avec les touches L ou R.\lLes messages changent selon la\lsituation, consulte-les souvent.$
+Help_Text_PlayingForFirstTime|Première partie. Aide-moi !$
+Help_Text_WhatShouldIBeDoing|Que dois-je faire ?$
+Help_Text_CantGetOutOfRoom|Je ne peux pas sortir d'une pièce !$
+Help_Text_CantFindPersonIWant|Je ne trouve pas la personne voulue.$
+Help_Text_TalkedToEveryoneNowWhat|J'ai parlé à tous. Et maintenant ?$
+Help_Text_SomeoneBlockingMyWay|Quelqu'un me bloque le passage !$
+Help_Text_ICantGoOn|Je suis bloqué !$
+Help_Text_OutOfThingsToDo|Je n'ai plus rien à faire.$
+Help_Text_WhatHappenedToItemIGot|Où est passé l'objet reçu ?$
+Help_Text_WhatAreMyAdventureBasics|Les bases de mon aventure ?$
+Help_Text_HowAreRoadsForestsDifferent|Routes et forêts : différences ?$
+Help_Text_HowAreCavesDifferent|Les grottes, c'est différent ?$
+Help_Text_HowDoIProgress|Comment progresser ?$
+Help_Text_WhenCanIUseItem|Quand utiliser les objets ?$
+Help_Text_WhatsABattle|Qu'est-ce qu'un combat ?$
+Help_Text_HowDoIPrepareForBattle|Comment préparer un combat ?$
+Help_Text_WhatIsAMonsVitality|Qu'est-ce que la vitalité ?$
+Help_Text_MyMonsAreHurt|Mes POKéMON sont blessés !$
+Help_Text_WhatIsStatusProblem|Qu'est-ce qu'un problème de statut ?$
+Help_Text_WhatHappensIfAllMyMonsFaint|Si tous mes POKéMON sont K.O. ?$
+Help_Text_CantCatchMons|Je n'arrive pas à capturer !$
+Help_Text_RanOutOfPotions|Je n'ai plus de POTIONS.$
+Help_Text_CanIBuyPokeBalls|Puis-je acheter des POKé BALLS ?$
+Help_Text_WhatsATrainer|Qu'est-ce qu'un DRESSEUR ?$
+Help_Text_HowDoIWinAgainstTrainer|Comment battre un DRESSEUR ?$
+Help_Text_WhereDoMonsAppear|Où apparaissent les POKéMON ?$
+Help_Text_WhatAreMoves|Que sont les attaques ?$
+Help_Text_WhatAreHiddenMoves|Que sont les attaques CACHÉES ?$
+Help_Text_WhatMovesShouldIUse|Quelles attaques utiliser ?$
+Help_Text_WantToAddMoreMoves|Je veux plus d'attaques.$
+Help_Text_WantToMakeMonStronger|Je veux renforcer mon POKéMON.$
+Help_Text_FoeMonsTooStrong|Les POKéMON adverses sont forts !$
+Help_Text_WhatDoIDoInCave|Que faire dans une grotte ?$
+Help_Text_NothingIWantToKnow|Rien ne m'intéresse !$
+Help_Text_WhatsPokemonCenter|Qu'est-ce qu'un CENTRE POKéMON ?$
+Help_Text_WhatsPokemonMart|Qu'est-ce qu'une BOUTIQUE POKéMON ?$
+Help_Text_WantToEndGame|Je veux arrêter de jouer.$
+Help_Text_WhatsAMon|Qu'est-ce qu'un POKéMON ?$
+Help_Text_WhatIsThatPersonLike|Comment est cette personne ?$
+Help_Text_WhatDoesHiddenMoveDo|À quoi sert une attaque CACHÉE ?$
+Help_Text_WhatDoIDoInSafari|Que faire dans un SAFARI ?$
+Help_Text_WhatAreSafariRules|Quelles sont les règles du SAFARI ?$
+Help_Text_WantToEndSafari|Je veux arrêter ce SAFARI !$
+Help_Text_WhatIsAGym|Qu'est-ce qu'une ARÈNE ?$
+Help_Text_AnswerPlayingForFirstTime|Tu deviens le héros et explores le\nmonde des POKéMON. En parlant aux\lgens et en résolvant des mystères,\lde nouvelles voies s'ouvriront.\lVise le but avec tes merveilleux\lPOKéMON.$
+Help_Text_AnswerWhatShouldIBeDoing|Si tu croises quelqu'un, approche-\ntoi et appuie sur A. Il te parlera.\lTu peux aussi examiner des objets\lde la même façon. Parle aux gens et\lexamine les choses souvent pour\lobtenir des informations.$
+Help_Text_AnswerCantGetOutOfRoom|Sur les escaliers ou aux sorties d'un\nbâtiment se trouve un tapis rouge.\lPlace ton personnage dessus. Appuie\lsur la {PLUS} Croix vers l'escalier ou\lla sortie pour avancer.$
+Help_Text_AnswerCantFindPersonIWant|Ne t'en fais pas trop.\nParle aux autres, lis les panneaux,\lexamine les objets, etc.\lParfois, il faut simplement aller\ldans une autre ville ou un autre lieu.$
+Help_Text_AnswerTalkedToEveryoneNowWhat|Essaie d'aller vers une autre route,\nville ou un autre lieu.$
+Help_Text_AnswerSomeoneBlockingMyWay|Quelque chose en ville ou dans un\nbâtiment en est peut-être la cause.\lReparle aux gens des environs. S'ils\lont un problème, aide-les peut-être.\lPuis reparle à la personne qui\lbloque ton chemin.$
+Help_Text_AnswerICantGoOn|Parle aux gens en t'approchant et\nen appuyant sur A.\lExamine aussi les arbres étranges\let les rochers avec A.\lEssaie aussi la {PLUS} Croix vers\ldes endroits infranchissables.$
+Help_Text_AnswerOutOfThingsToDo|Va dans des endroits où tu n'es pas\nencore allé.\lExamine aussi tout ce qui semble\lsuspect en appuyant sur A.$
+Help_Text_AnswerWhatHappenedToItemIGot|Tout objet reçu d'un personnage va\ndans ton SAC.\lIl est trié automatiquement dans\lune des trois poches.\lPour l'usage du SAC, consulte la\lrubrique “Comment faire ceci ?”\ldu système d'AIDE.$
+Help_Text_AnswerWhatAreMyAdventureBasics|Si tes POKéMON sont blessés au\ncombat, va au CENTRE POKéMON.\lPrends l'habitude de sauvegarder\lta partie. Fais le plein d'objets de\lsoin à la BOUTIQUE POKéMON avant\lde partir loin.$
+Help_Text_AnswerHowAreRoadsForestsDifferent|Les forêts ressemblent aux routes,\nmais peuvent être des labyrinthes.\lToutes les forêts ont une sortie, ne\lte décourage pas si tu te perds.$
+Help_Text_AnswerHowAreCavesDifferent|Les grottes sont sombres et\ndangereuses. Des POKéMON sauvages\lpeuvent y apparaître partout.\lEn cas d'urgence, va au CENTRE\lPOKéMON ou utilise des objets.\lDe nouvelles villes t'attendent au-\ldelà de certaines grottes.$
+Help_Text_AnswerHowDoIProgress|Le but du jeu est d'entraîner tes\nPOKéMON et d'avancer.\lIl faut réunir des infos et résoudre\ldes problèmes. Par exemple, que te\lfaut-il pour contourner un obstacle ?\lComment écarter cette personne ?$
+Help_Text_AnswerWhenCanIUseItem|Il y a plusieurs sortes d'objets.\nCertains ne servent que sur le terrain.\lD'autres seulement en combat.\lD'autres à tout moment.\lEssaie un objet : s'il est inutilisable,\lun message te le dira.$
+Help_Text_AnswerWhatsABattle|Au combat, les POKéMON tentent de\nréduire la vitalité de l'autre, en PV.\lSi les PV d'un POKéMON tombent à\lzéro, il est K.O. et l'autre gagne.\lEn gagnant, les POKéMON gagnent des\lpoints d'EXP. et montent de niveau\l(deviennent plus forts).$
+Help_Text_AnswerHowDoIPrepareForBattle|D'abord, soigne complètement les\nPOKéMON de ton équipe (ceux avec toi)\là n'importe quel CENTRE POKéMON.\lAchète aussi des objets de soin\lpour les urgences à la BOUTIQUE\lPOKéMON.$
+Help_Text_AnswerWhatIsAMonsVitality|La vitalité d'un POKéMON s'exprime\nen PV. S'il est blessé au combat,\lses PV baissent. À zéro PV,\lle POKéMON est K.O.\lSoigne les POKéMON blessés ou K.O.\lau CENTRE POKéMON ou avec des objets.$
+Help_Text_AnswerMyMonsAreHurt|Un CENTRE POKéMON est comme une\nauberge pour POKéMON. Il soigne\ltous les problèmes de statut et\lrend tous les PV grâce à une\lmachine spéciale. Ce service est\lgratuit, prends l'habitude de\lsoigner souvent tes POKéMON.$
+Help_Text_AnswerWhatIsStatusProblem|Un problème de statut est un mal\ninfligé à un POKéMON par l'attaque\lde l'adversaire : brûlure,\lparalysie, poison, sommeil, gel.\lIls se soignent au CENTRE POKéMON\lou avec l'objet adapté.$
+Help_Text_AnswerWhatHappensIfAllMyMonsFaint|Si tous les POKéMON de ton équipe\n(ceux avec toi) sont K.O., tu perds\lde l'ARGENT et tu es ramené chez toi\lou au CENTRE POKéMON. Pour limiter\lce risque, va souvent au CENTRE\lPOKéMON et sauvegarde souvent.$
+Help_Text_AnswerCantCatchMons|Si un POKéMON sauvage s'échappe de\nla POKé BALL, il est encore vaillant.\lRéduis encore ses PV, et affaiblis-le\lavec paralysie ou sommeil avant de\lretenter. Si la POKé BALL remue\llongtemps, la capture est proche !$
+Help_Text_AnswerRanOutOfPotions|Les boutiques appelées BOUTIQUES\nPOKéMON vendent des objets.\lIl n'y en a pas sur les routes,\ldans les forêts ou les grottes.\lFais le plein dans une ville avec\lune BOUTIQUE POKéMON.$
+Help_Text_AnswerCanIBuyPokeBalls|Tu peux acheter des POKé BALLS dans\nn'importe quelle BOUTIQUE POKéMON.\lIl n'y en a pas sur les routes,\ldans les forêts ou les grottes.\lFais le plein de POKé BALLS dans\lune ville avec une BOUTIQUE.$
+Help_Text_AnswerWhatsATrainer|Un DRESSEUR est une personne qui\nélève des POKéMON en se battant.\lLes DRESSEURS te défieront où qu'ils\lsoient : route, forêt, grotte...\lSi vos regards se croisent, tu dois\laccepter le défi. Attention !$
+Help_Text_AnswerHowDoIWinAgainstTrainer|Pour battre un DRESSEUR, utilise des\nPOKéMON ayant l'avantage de type sur\lceux de l'adversaire. Tu peux aussi\lutiliser des POKéMON très entraînés\let d'une puissance écrasante.\lAvoir plus de POKéMON est aussi une\ltactique évidente.$
+Help_Text_AnswerWhereDoMonsAppear|Les POKéMON sauvages apparaissent\ndans les hautes herbes, sur les\lroutes et dans les forêts. Ils\lapparaissent partout dans les grottes\lsombres. Il n'y a ni POKéMON sauvages\lni DRESSEURS en ville : c'est sûr.$
+Help_Text_AnswerWhatAreMoves|Un POKéMON peut apprendre jusqu'à\nquatre techniques, ou attaques.\lIl y en a une grande variété :\lattaques et effets spéciaux. Les\lattaques apprenables varient selon\lle POKéMON. Certaines s'apprennent\lavec des machines.$
+Help_Text_AnswerWhatAreHiddenMoves|Les attaques CACHÉES sont\nparticulièrement importantes pour\ltoute ton aventure. Pour en utiliser\lune hors combat, ouvre le MENU\l“POKéMON” et fais-la utiliser par\lle POKéMON qui la connaît. Un POKéMON\lK.O. peut l'utiliser hors combat.$
+Help_Text_AnswerWhatMovesShouldIUse|Choisis “COMBAT” : le MENU des\nattaques apparaît. Tiens compte\ldes affinités de type et emploie\lles attaques les plus efficaces.\lPour voir les effets : ouvre\l“POKéMON”, choisis-en un, puis\l“RÉSUMÉ” et “COMPÉTENCES”.$
+Help_Text_AnswerWantToAddMoreMoves|Un POKéMON apprend au plus quatre\nattaques. Il les apprend en montant\lde niveau. On peut aussi lui\lenseigner une attaque avec une CT\l(Capsule Technique) ou CS (Capsule\lSecrète). Certaines personnes en\lenseignent aussi.$
+Help_Text_AnswerWantToMakeMonStronger|Pour renforcer tes POKéMON, bats-toi\net gagne souvent. Les points d'EXP.\lgagnés s'accumulent et font monter\lde niveau les POKéMON qui ont\lparticipé. Affronte souvent des POKéMON\lsauvages pour monter ton équipe.$
+Help_Text_AnswerFoeMonsTooStrong|Si tes adversaires sont trop forts,\nfais encore monter tes POKéMON.\lRetourne sur tes pas et affronte\ldes POKéMON sauvages.\lTu peux aussi affronter des DRESSEURS\lque tu n'as pas encore battus.$
+Help_Text_AnswerWhatDoIDoInCave|Contrairement aux routes et forêts,\ndes POKéMON sauvages peuvent surgir\lpartout dans les grottes.\lSi tes POKéMON sont blessés, file au\lCENTRE POKéMON ou soigne-les vite avec\ldes objets. Forcer sa chance en\lgrotte est très dangereux.$
+Help_Text_AnswerNothingIWantToKnow|Fais confiance à ton savoir et\nà ta force. Crois en toi et trouve\lton chemin !$
+Help_Text_AnswerWhatsPokemonCenter|Un CENTRE POKéMON se reconnaît à son\ntoit rouge et à l'enseigne “P.C”.\lChacun offre des services : soin\lcomplet et PC gratuit, indispensables\là ton voyage. À l'étage se trouvent\lles installations de liaison avec\ltes amis.$
+Help_Text_AnswerWhatsPokemonMart|Une BOUTIQUE POKéMON se reconnaît à\nson toit bleu et l'enseigne “MART”.\lOn y achète et vend des objets.\lCertaines vendent des objets\lréservés à leur ville.$
+Help_Text_AnswerWantToEndGame|Tu peux arrêter sans risque en\nchoisissant “SAUVER” dans le MENU.\lUne fois sauvegardé, tu peux éteindre\lle jeu. Au rallumage, tu reprends\llà où tu as sauvegardé.$
+Help_Text_AnswerWhatsAMon|Les POKéMON sont des êtres vivants\nencore pleins de mystères. On en voit\ldans l'herbe, la mer et les grottes.\lIls semblent obéir à leurs DRESSEURS.$
+Help_Text_AnswerWhatIsThatPersonLike|Utilise le MEMORYDEX parmi les\nOBJETS RARES de ton SAC.\lIl peut te donner un indice,\lessaie-le.$
+Help_Text_AnswerWhatDoesHiddenMoveDo|Une attaque CACHÉE s'enseigne à un\nPOKéMON avec une CS (Capsule Secrète).\lElle aide ton aventure. Par exemple,\lune éclaire les grottes sombres, une\lautre coupe les petits arbres, une\lautre permet de voyager sur l'eau...$
+Help_Text_AnswerWhatDoIDoInSafari|Essaie de capturer des POKéMON\nsauvages en lançant des SAFARI BALLS.\lTu peux garder tout objet trouvé.$
+Help_Text_AnswerWhatAreSafariRules|Ta PARTIE SAFARI se termine quand tu\nas parcouru une certaine distance ou\llancé toutes tes SAFARI BALLS.\lOuvre le MENU pour voir les pas et\lSAFARI BALLS restants.$
+Help_Text_AnswerWantToEndSafari|Pour écourter ta PARTIE SAFARI,\nouvre le MENU et choisis\l“ABANDON” en haut de la liste.$
+Help_Text_AnswerWhatIsAGym|Les ARÈNES POKéMON sont gérées par\nla LIGUE POKéMON et servent à\lentraîner les DRESSEURS. Il y en a\ldans tout le pays. Chacune est\ldirigée par un CHAMPION, un DRESSEUR\ltrès doué. Bats-le pour gagner un\lBADGE.$
+Help_Text_UsingPokedex| Utiliser “POKéDEX”$
+Help_Text_UsingPokemon| Utiliser “POKéMON”$
+Help_Text_UsingSummary|  Utiliser “RÉSUMÉ”$
+Help_Text_UsingSwitch|  Utiliser “CHANGER”$
+Help_Text_UsingItem|  Utiliser “OBJET”$
+Help_Text_UsingBag| Utiliser “SAC”$
+Help_Text_UsingAnItem|  Utiliser un objet$
+Help_Text_UsingKeyItem|  Utiliser un objet rare$
+Help_Text_UsingPokeBall|  Utiliser une POKé BALL$
+Help_Text_UsingPlayer| Utiliser “{PLAYER}”$
+Help_Text_UsingSave| Utiliser “SAUVER”$
+Help_Text_UsingOption| Utiliser “OPTION”$
+Help_Text_UsingPotion|    Utiliser une POTION$
+Help_Text_UsingTownMap|    Utiliser la CARTE$
+Help_Text_UsingTM|    Utiliser une CT$
+Help_Text_UsingHM|    Utiliser une CS$
+Help_Text_UsingMoveOutsideOfBattle|Utiliser une attaque hors combat$
+Help_Text_RidingBicycle|    Monter à VÉLO$
+Help_Text_EnteringName|Saisir un nom$
+Help_Text_UsingPC|Utiliser un PC$
+Help_Text_UsingBillsPC| Utiliser “PC DE {STR_VAR_1}”$
+Help_Text_UsingWithdraw|  Utiliser “RETIRER”$
+Help_Text_UsingDeposit|  Utiliser “DÉPOSER”$
+Help_Text_UsingMove|  Utiliser “DÉPLACER”$
+Help_Text_MovingItems|  Déplacer des objets$
+Help_Text_UsingPlayersPC| Utiliser “PC DE {PLAYER}”$
+Help_Text_UsingWithdrawItem|  Utiliser “RETIRER OBJET”$
+Help_Text_UsingDepositItem|  Utiliser “DÉPOSER OBJET”$
