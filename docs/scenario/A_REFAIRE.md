@@ -343,3 +343,8 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 ## 03-11 (13h34) — localisation menus
 - strings.c : ~930 chaînes FR (fr/strings/s01–s07). Restent EN : crédits, WONDER CARD/NEWS, battle_message.c, berry.c, quest_log, journal, décos, easy chat (mots), trainer tower.
 - À vérifier : natures (HARDI, LÂCHE), Water Compaction, STEAM BLAST, « FAME CHECKER » (nom officiel FR ?).
+
+## 03-11 (14h00) — localisation combats/journal/lieux
+- battle_message.c, topaze_journal.h, quest_log.h, region_map_entry_strings.h traduits (fr/strings/s10–s19). Préfixes combat : sauvage = vide, adverse = « ADV. ».
+- Restent EN : SALLE UNION/Link (union_room_message.c), WONDER CARD, crédits, décorations, mots du chat, Trainer Tower, berry.c (JP inutilisé).
+- À vérifier en jeu : largeur des lignes de combat (≤ ~30 car.), « fortement en hausse ! », noms de lieux hack vs officiels.

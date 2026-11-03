@@ -1,0 +1,130 @@
+sJS_0|BADGES
+sJS_1|HISTOIRE
+sJS_2|QUÊTES ANNEXES
+sJS_3|CADEAUX
+sJS_4|COMBAT
+sJS_5|COLLECTION
+sJS_6|VOYAGE
+sJS_7|POST-JEU
+sJS_8|ÉCHOS
+sJS_9|LÉGENDES
+sJS_10|POKéMON RARES
+sJS_11|AMIS
+sJN_0|KAY, PYROPIA
+sJH_0|BADGE 1. Bats KAY à PYROPIA.\nSpécialiste du feu.
+sJN_1|SYLVESTRE, TOURMALIA
+sJH_1|BADGE 2. Bats SYLVESTRE à\nTOURMALIA. Insecte / Plante.
+sJN_2|HERA, APATIA
+sJH_2|BADGE 3. Bats HERA à APATIA.\nSpécialiste Dragon / Fée.
+sJN_3|GRIM, BOURG QUARTZ
+sJH_3|BADGE 4. Bats GRIM au BOURG QUARTZ.\nSpécialiste de la glace.
+sJN_4|ACHLYS, AMETHIOLITE
+sJH_4|BADGE 5. Bats ACHLYS à AMETHIOLITE.\nSpécialiste Poison.
+sJN_5|NOX, HEMATOWN
+sJH_5|BADGE 6. Bats NOX à HEMATOWN.\nSpécialiste Ténèbres.
+sJN_6|EDDIE, CHRONDROLIA
+sJH_6|BADGE 7. Bats EDDIE à CHRONDROLIA.\nSpécialiste Électrik.
+sJN_7|HEPHA, OPANIHRUM
+sJH_7|BADGE 8. Bats HEPHA à OPANIHRUM.\nSpécialiste Acier.
+sJN_8|L'ATTAQUE DU RANCH
+sJH_8|ONYBRIS frappe GRENALUX. Bats le\nsbire sur la route hors de la\nville.
+sJN_9|LE PORT D'APATIA
+sJH_9|Atteins le port d'APATIA à temps\npour sauver l'APATITE.
+sJN_10|TOUR SPINELLIA
+sJH_10|Apaise les esprits de la TOUR de\nSPINELLIA et trouve FUJI.
+sJN_11|LE DUEL QUARTZ
+sJH_11|Nettoie le repaire sous la SALLE DE\nJEUX, puis joue le duel du casino.
+sJN_12|RAID SUR AMETHIOLITE
+sJH_12|Aide à repousser le raid d'ONYBRIS\nsur AMETHIOLITE.
+sJN_13|TOUR HEMATEK
+sJH_13|Prends d'assaut le QG d'ONYBRIS à\nHEMATOWN. Grimpe tout en haut.
+sJN_14|ÎLES ÉCUME
+sJH_14|Navigue de GRENALUX jusqu'au VOLCAN\nÉCUME quand CHRONDROLIA est sûre.
+sJN_15|ROUTE VICTOIRE
+sJH_15|Bats les gardes d'ONYBRIS dans le\nROUTE VICTOIRE (ROUTE 23).
+sJN_16|LIGUE POKéMON
+sJH_16|Gagne le tournoi de la LIGUE au\nPLATEAU INDIGO (8 BADGES requis).
+sJN_17|LE CHOIX FINAL
+sJH_17|Affronte le BOSS après le tournoi\net décide du sort de JIRACHI.
+sJN_18|LE POKé RADAR
+sJH_18|Le COACH ATTAQUES d'un CENTRE\nPOKéMON a un cadeau pour toi. À\nutiliser depuis le menu START.
+sJN_19|LE MÉMO DES TYPES
+sJH_19|Le professeur de GRENALUX a un\ncours sur les types pour toi.
+sJN_20|RÉCOMPENSE DU RANCH
+sJH_20|Quand les animaux sont rentrés,\nparle à l'ouvrier près de la\nbarrière.
+sJN_21|ANIMAUX ÉGARÉS
+sJH_21|Retrouve le DODUO et les 2 NIDORAN\nfugués du ranch (ROUTE 1).
+sJN_22|LA DÉMO DE CAPTURE
+sJH_22|Le vieil homme d'OPANIHRUM montre\ncomment capturer un POKéMON.
+sJN_23|CELLULE : PYROPIA
+sJH_23|Cellule secrète d'ONYBRIS à\nPYROPIA. Nettoie-la et lis le mémo.
+sJN_24|CELLULE : TOURMALIA
+sJH_24|Cellule secrète d'ONYBRIS à\nTOURMALIA. Nettoie-la et lis le\nmémo.
+sJN_25|CELLULE : APATIA
+sJH_25|Cellule secrète d'ONYBRIS à APATIA.\nNettoie-la et lis le mémo.
+sJN_26|CELLULE : SPINELLIA
+sJH_26|Cellule secrète d'ONYBRIS à\nSPINELLIA. Nettoie-la et lis le\nmémo.
+sJN_27|CELLULE : AMETHIOLITE
+sJH_27|Cellule secrète d'ONYBRIS à\nAMETHIOLITE. Nettoie-la et lis le\nmémo.
+sJN_28|REGISTRE QUARTZ
+sJH_28|Trouve le livre de comptes dans le\nrepaire sous la SALLE DE JEUX\n(QUARTZ).
+sJN_29|LA VIEILLE CANNE
+sJH_29|Quelqu'un offre une canne à pêche à\nun pêcheur débutant.
+sJN_30|UN VÉLO POUR TOI
+sJH_30|Un patron de magasin de vélos est\ngénéreux avec les bons papiers.
+sJN_31|UNE COUPE UTILE
+sJH_31|Un capitaine sait comment couper\nles arbres. Trouve-le.
+sJN_32|LE DÉTECTEUR
+sJH_32|Un homme qui garde une porte te\ndonnera un DÉTECTEUR.
+sJN_33|LA BOÎTE JETONS
+sJH_33|Un patron de restaurant offre une\nBOÎTE JETONS.
+sJN_34|LA BONNE CANNE
+sJH_34|Un pêcheur a une meilleure canne\npour toi si tu le demandes\npoliment.
+sJN_35|ENTRAÎNEMENT FORCE
+sJH_35|Un gardien à la retraite veut ses\ndents. En échange : FORCE.
+sJN_36|LA POKé FLÛTE
+sJH_36|Un radiophoniste te récompense pour\nl'accord de la tour et te donne une\nFLÛTE.
+sJN_37|DÉPLOIE TES AILES
+sJH_37|Une maison sur une longue route\nenseigne l'art de voler.
+sJN_38|LA SUPER CANNE
+sJH_38|Le gourou de la pêche vit dans une\nmaison au bord de l'eau.\nImpressionne-le.
+sJN_39|UN CADEAU DE SILPH
+sJH_39|Un employé reconnaissant te donne\nun POKéMON rare.
+sJN_40|PRIX DU DOJO
+sJH_40|Gagne le duel du dojo de combat et\nchoisis ton prix.
+sJN_41|UN AMI SUR LE TOIT
+sJH_41|Quelqu'un sur un toit offre une\nPOKé BALL.
+sJN_42|TRÉSOR ANCIEN
+sJH_42|Choisis un fossile dans la grotte.\nUn scientifique le ramènera à la\nvie.
+sJN_43|BIEN COMMENCER
+sJH_43|Gagne 10 combats.
+sJN_44|SUR LA LANCÉE
+sJH_44|Gagne 50 combats.
+sJN_45|COMBATTANT AGUERRI
+sJH_45|Gagne 100 combats.
+sJN_46|VÉTÉRAN
+sJH_46|Gagne 250 combats.
+sJN_47|MACHINE DE GUERRE
+sJH_47|Gagne 500 combats.
+sJN_48|LÉGENDE VIVANTE
+sJH_48|Gagne 1000 combats.
+sJN_49|CHALLENGER
+sJH_49|Bats 5 dresseurs.
+sJN_50|BRISEUR DE RIVAUX
+sJH_50|Bats 25 dresseurs.
+sJN_51|MAÎTRE DU DOJO
+sJH_51|Bats 75 dresseurs.
+sJN_52|INVAINCU
+sJH_52|Bats 150 dresseurs.
+sJN_53|TERREUR DES DRESSEURS
+sJH_53|Bats 300 dresseurs.
+sJN_54|COUP DE CHANCE
+sJH_54|Inflige un coup critique.
+sJN_55|ŒIL AIGUISÉ
+sJH_55|Inflige 25 coups critiques.
+sJN_56|MASSE CRITIQUE
+sJH_56|Inflige 100 coups critiques.
+sJN_57|CHASSEUR DE TÊTES
+sJH_57|Inflige 300 coups critiques.
+sJN_58|PURE PRÉCISION
+sJH_58|Inflige 750 coups critiques.

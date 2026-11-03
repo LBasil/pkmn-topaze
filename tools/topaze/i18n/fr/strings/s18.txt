@@ -1,0 +1,123 @@
+gText_QuestLog_PreviouslyOnYourQuest|Précédemment dans ton aventure…
+gText_QuestLog_SwitchMon1WithMon2|{PLAYER} a échangé les POKéMON\n{STR_VAR_1} et {STR_VAR_2}.
+gText_QuestLog_SwappedHeldItemsOnMon|A repris l'objet {STR_VAR_2} de\n{STR_VAR_1} et lui a fait tenir\nl'objet {STR_VAR_3}.
+gText_QuestLog_TookHeldItemFromMon|A repris l'objet {STR_VAR_2} de\n{STR_VAR_1}.
+gText_QuestLog_UsedItemOnMonAtThisLocation|A utilisé l'objet {STR_VAR_1} sur {STR_VAR_2}\nà cet endroit.
+gText_QuestLog_UsedTheItem|{PLAYER} a utilisé\n{STR_VAR_1}.
+gText_QuestLog_UsedTheKeyItem|A utilisé l'objet {STR_VAR_1}, rangé\ndans la POCHE OBJETS CLÉS.
+gText_QuestLog_MonLearnedMoveFromTM|{STR_VAR_1} a appris l'attaque\n{STR_VAR_2} grâce à une CT.
+gText_QuestLog_MonReplacedMoveWithTM|{STR_VAR_1} a appris l'attaque\n{STR_VAR_2} grâce à une CT et a\noublié l'attaque {STR_VAR_3}.
+gText_QuestLog_MonsWereFullyRestoredAtCenter|Les POKéMON ont été soignés\nà un CENTRE POKéMON.
+gText_QuestLog_PlayerBattledChampionRival|{DYNAMIC 0x00} a livré un combat superbe\ncontre le CHAMPION, {DYNAMIC 0x01}.
+gText_QuestLog_PlayerSentOutMon1RivalSentOutMon2|À la fin, {DYNAMIC 0x00} a envoyé {DYNAMIC 0x01}\ntandis que {DYNAMIC 0x02} ripostait avec\n{DYNAMIC 0x03}.
+gText_QuestLog_WonTheMatchAsAResult|Et, en combattant de toutes ses\nforces, {DYNAMIC 0x00} a remporté le match.
+gText_QuestLog_StoredItemInPC|A retiré l'objet {STR_VAR_1} de la\nPOCHE OBJETS du SAC et l'a rangé\ndans le PC.
+gText_QuestLog_WithdrewItemFromPC|{PLAYER} a retiré l'objet {STR_VAR_1}\ndu PC.
+gText_QuestLog_TradedMon1ForPersonsMon2|A échangé {STR_VAR_3} contre\n{STR_VAR_2} de {STR_VAR_1}.
+gText_QuestLog_SingleBattleWithPersonResultedInOutcome|A affronté {DYNAMIC 0x00} en COMBAT SIMPLE.\nUn match acharné qui s'est soldé\npar {DYNAMIC 0x01}.
+gText_QuestLog_DoubleBattleWithPersonResultedInOutcome|A affronté {DYNAMIC 0x00} en COMBAT DOUBLE.\nUn long match qui s'est soldé\npar {DYNAMIC 0x01}.
+gText_QuestLog_MultiBattleWithPeopleResultedInOutcome|{DYNAMIC 0x00} et {DYNAMIC 0x01} ont affronté\n{DYNAMIC 0x02} et {DYNAMIC 0x03} en COMBAT\nMULTI et obtenu {DYNAMIC 0x04}.
+gText_QuestLog_Win|une victoire
+gText_QuestLog_Loss|une défaite
+gText_QuestLog_MingledInUnionRoom|S'est mêlé aux autres DRESSEURS\ndans la SALLE UNION.
+gText_QuestLog_DepartedPlaceInTownForNextDestination|A quitté {STR_VAR_2}\nà {STR_VAR_1} pour la prochaine\ndestination.
+gText_QuestLog_SwitchedMonsBetweenBoxes|Après réflexion, a échangé\n{DYNAMIC 0x01} de {DYNAMIC 0x00} avec\n{DYNAMIC 0x03} de {DYNAMIC 0x02}.
+gText_QuestLog_MovedMonToNewBox|Après mûre réflexion, a déplacé\n{DYNAMIC 0x01} de la BOÎTE “{DYNAMIC 0x00}” vers\nla BOÎTE “{DYNAMIC 0x02}”.
+gText_QuestLog_SwitchedMonsWithinBox|A permuté {DYNAMIC 0x01} et\n{DYNAMIC 0x02} dans {DYNAMIC 0x00}.
+gText_QuestLog_MovedMonWithinBox|A déplacé {DYNAMIC 0x01} dans {DYNAMIC 0x00}.
+gText_QuestLog_SwitchedPartyMonForPCMon|A échangé {DYNAMIC 0x01} de {DYNAMIC 0x00}\navec {DYNAMIC 0x02} de l'équipe.
+gText_QuestLog_WithdrewMonFromPC|A ajouté {DYNAMIC 0x01} de {DYNAMIC 0x00}\nà l'équipe.
+gText_QuestLog_DepositedMonInPC|A déplacé {DYNAMIC 0x00} de l'équipe\nvers {DYNAMIC 0x01}.
+gText_QuestLog_SwitchedMultipleMons|A déplacé un groupe de POKéMON de\n{DYNAMIC 0x00} vers {DYNAMIC 0x01}.
+gText_QuestLog_ADifferentSpot|un autre emplacement
+gText_QuestLog_GaveMonHeldItemFromPC|A retiré l'objet {STR_VAR_1} du PC de\n{PLAYER} et l'a fait tenir à\n{STR_VAR_2}.
+gText_QuestLog_SwappedHeldItemFromPC|A retiré l'objet {STR_VAR_1} d'un PC,\nl'a donné à {STR_VAR_2} et a mis\n{STR_VAR_3} qu'il tenait dans le SAC.
+gText_QuestLog_ChattedWithManyTrainers|A bavardé avec de nombreux DRESSEURS.
+gText_QuestLog_Handily|haut la main
+gText_QuestLog_Tenaciously|avec ténacité
+gText_QuestLog_Somehow|tant bien que mal
+gText_QuestLog_TradedMon1ForTrainersMon2|A rencontré {STR_VAR_1} et échangé.\nA obtenu {STR_VAR_2} du DRESSEUR en\néchange de {STR_VAR_3}.
+gText_QuestLog_BattledTrainerEndedInOutcome|A rencontré et combattu {STR_VAR_1}.\nLe match s'est soldé par {STR_VAR_2}.
+gText_QuestLog_BoughtItem|Est allé à la BOUTIQUE POKéMON de\n{DYNAMIC 0x00} et a acheté un(e)\n{DYNAMIC 0x01}.
+gText_QuestLog_BoughtItemsIncludingItem|Est allé à la BOUTIQUE POKéMON de\n{DYNAMIC 0x00} et a dépensé ¥{DYNAMIC 0x02} pour\ndes objets dont {DYNAMIC 0x01}.
+gText_QuestLog_SoldNumOfItem|{DYNAMIC 0x00} est allé à la BOUTIQUE POKéMON de\n{DYNAMIC 0x01} et a vendu {DYNAMIC 0x03}\nde l'objet {DYNAMIC 0x02}.
+gText_QuestLog_SoldItemsIncludingItem|A vendu des objets dont {DYNAMIC 0x01} à\nla BOUTIQUE POKéMON de {DYNAMIC 0x00},\npour ¥{DYNAMIC 0x02}.
+gText_QuestLog_JustOne|un seul
+gText_QuestLog_UsedSoftboiled|{STR_VAR_1} a partagé ses PV avec\nla capacité E-COQUE.
+gText_QuestLog_UsedMilkDrink|{STR_VAR_1} a partagé ses PV avec\nla capacité LAIT À BOIRE.
+gText_QuestLog_MonLearnedMoveFromHM|{STR_VAR_1} a appris sans risque l'attaque\n{STR_VAR_2} grâce à une CS.
+gText_QuestLog_MonReplacedMoveWithHM|{STR_VAR_1} a appris sans risque l'attaque\n{STR_VAR_2} grâce à une CS et a\noublié l'attaque {STR_VAR_3}.
+gText_QuestLog_DefeatedWildMon|{DYNAMIC 0x05} a réussi à vaincre {DYNAMIC 0x01}\nsauvage à {DYNAMIC 0x00}.
+gText_QuestLog_DefeatedWildMons|A vaincu {DYNAMIC 0x02} POKéMON sauvages dont\n{DYNAMIC 0x01} à {DYNAMIC 0x00}.
+gText_QuestLog_CaughtWildMon|{DYNAMIC 0x05} a réussi à capturer {DYNAMIC 0x03}\nà {DYNAMIC 0x00}.
+gText_QuestLog_CaughtWildMons|A lancé des POKé BALLS comme un fou et\ncapturé {DYNAMIC 0x04} POKéMON dont {DYNAMIC 0x03}\nà {DYNAMIC 0x00}.
+gText_QuestLog_DefeatedWildMonAndCaughtWildMon|{DYNAMIC 0x05} a vaincu {DYNAMIC 0x01}\net capturé un {DYNAMIC 0x03}\nà {DYNAMIC 0x00}.
+gText_QuestLog_DefeatedWildMonAndCaughtWildMons|A vaincu {DYNAMIC 0x01} et capturé\n{DYNAMIC 0x04} POKéMON dont\n{DYNAMIC 0x03} à {DYNAMIC 0x00}.
+gText_QuestLog_DefeatedWildMonsAndCaughtWildMon|{DYNAMIC 0x05} a vaincu {DYNAMIC 0x02} POKéMON dont\n{DYNAMIC 0x01} et capturé un {DYNAMIC 0x03}\nà {DYNAMIC 0x00}.
+gText_QuestLog_DefeatedWildMonsAndCaughtWildMons|A vaincu {DYNAMIC 0x02} POKéMON dont\n{DYNAMIC 0x01} et capturé {DYNAMIC 0x04} POKéMON\ndont {DYNAMIC 0x03} à {DYNAMIC 0x00}.
+gText_QuestLog_GaveMonHeldItem|A fait tenir l'objet\n{STR_VAR_2} à {STR_VAR_1}.
+gText_QuestLog_GaveMonHeldItem2|{PLAYER} a fait tenir l'objet\n{STR_VAR_2} à {STR_VAR_1}.
+gText_QuestLog_UsedCut|{STR_VAR_1} a utilisé la CS\nCOUPE ici.
+gText_QuestLog_UsedFly|{STR_VAR_1} a utilisé la CS\nVOL et s'est envolé vers {STR_VAR_2}.
+gText_QuestLog_UsedSurf|{STR_VAR_1} a utilisé la CS\nSURF et chevauché les vagues.
+gText_QuestLog_UsedStrength|{STR_VAR_1} a utilisé la CS\nFORCE ici.
+gText_QuestLog_UsedFlash|{STR_VAR_1} a utilisé la CS\nFLASH et éclairé une grotte\nplongée dans le noir.
+gText_QuestLog_UsedRockSmash|{STR_VAR_1} a utilisé la CS\nÉCLATE-ROC ici.
+gText_QuestLog_UsedWaterfall|{STR_VAR_1} a utilisé la CS\nCASCADE pour gravir un torrent furieux.
+gText_QuestLog_UsedDigInLocation|{STR_VAR_1} a utilisé TUNNEL pour\nfuir {STR_VAR_2}.
+gText_QuestLog_UsedSweetScent|{STR_VAR_1} a utilisé DOUX PARFUM pour attirer\ndes POKéMON sauvages.
+gText_QuestLog_UsedTeleportToLocation|{STR_VAR_1} a utilisé TÉLÉPORT, menant\nl'équipe à {STR_VAR_3} de {STR_VAR_2}.
+gText_QuestLog_LeftTownsLocationForNextDestination|{PLAYER} a quitté {STR_VAR_2} de\n{STR_VAR_1} pour la prochaine\ndestination.
+gText_QuestLog_PlayedGamesAtGameCorner|A beaucoup joué à la SALLE DE JEUX\nROCKET de {STR_VAR_1}.
+gText_QuestLog_RestedAtHome|{PLAYER} s'est bien reposé à la maison.
+gText_QuestLog_LeftOaksLab|{PLAYER} a quitté le LABO POKéMON\ndu PROF. CHEN.
+gText_QuestLog_GymWasFullOfToughTrainers|L'ARÈNE de {STR_VAR_1} était pleine de\nDRESSEURS coriaces…\nIl fallait se préparer.
+gText_QuestLog_DepartedGym|A quitté l'ARÈNE de {STR_VAR_1}.
+gText_QuestLog_HadGreatTimeInSafariZone|{PLAYER} s'est bien amusé avec les\nPOKéMON dans la ZONE SAFARI.
+gText_QuestLog_ManagedToGetOutOfLocation|A réussi à sortir de {STR_VAR_2}\naprès avoir erré.
+gText_QuestLog_TookOnGymLeadersMonWithMonAndWon|A affronté {DYNAMIC 0x01}, CHEF D'ARÈNE {DYNAMIC 0x00},\net son {DYNAMIC 0x02} avec {DYNAMIC 0x03}\net a gagné {DYNAMIC 0x04} !
+gText_QuestLog_TookOnEliteFoursMonWithMonAndWon|A affronté le {DYNAMIC 0x01} de {DYNAMIC 0x00}\ndu CONSEIL 4 avec {DYNAMIC 0x02} et\na gagné {DYNAMIC 0x03} !
+gText_QuestLog_TookOnTrainersMonWithMonAndWon|À {DYNAMIC 0x00}, a affronté le\n{DYNAMIC 0x02} de {DYNAMIC 0x01} avec {DYNAMIC 0x03}\net a gagné {DYNAMIC 0x04} !
+gText_QuestLog_Coolly|avec classe
+gText_QuestLog_Barely|de justesse
+gText_QuestLog_UsedEscapeRope|{PLAYER} a utilisé une CORDE SORTIE\npour quitter {STR_VAR_2}.
+gText_QuestLog_Draw|un match nul
+gText_QuestLog_DepartedTheLocationForNextDestination|A quitté {STR_VAR_2}\npour la prochaine destination.
+gText_QuestLog_DepartedFromLocationToNextDestination|{PLAYER} a quitté\n{STR_VAR_2} et s'est mis en route\nvers la prochaine destination.
+gText_QuestLog_ObtainedItemInLocation|Ici, à {STR_VAR_1}, {PLAYER}\na obtenu l'objet {STR_VAR_2}.
+gText_QuestLog_ArrivedInLocation|Arrivé à {STR_VAR_1}.
+gText_QuestLog_SavedGameAtLocation|Et {PLAYER} a sauvegardé la partie\nà cet endroit : {STR_VAR_1}.
+gText_QuestLog_Home|MAISON
+gText_QuestLog_OakResearchLab|LABO DE RECHERCHE CHEN
+gText_QuestLog_Gym|ARÈNE
+gText_QuestLog_PokemonLeagueGate|PORTE DE LA LIGUE POKéMON
+gText_QuestLog_ViridianForest|FORÊT D'OPANIHRUM
+gText_QuestLog_PewterMuseumOfScience|MUSÉE DES SCIENCES DE PYROPIA
+gText_QuestLog_MtMoon|MONT SÉLÉNITE
+gText_QuestLog_BikeShop|MAGASIN DE VÉLOS
+gText_QuestLog_BillsHouse|MAISON DE LANORIS
+gText_QuestLog_DayCare|GARDERIE
+gText_QuestLog_UndergroundPath|SOUTERRAIN
+gText_QuestLog_PokemonFanClub|CLUB DES FANS POKéMON
+gText_QuestLog_SSAnne|S.S. ANNE
+gText_QuestLog_DiglettsCave|CAVE TAUPIQUEUR
+gText_QuestLog_RockTunnel|GROTTE
+gText_QuestLog_PowerPlant|CENTRALE
+gText_QuestLog_PokemonTower|TOUR POKéMON
+gText_QuestLog_VolunteerHouse|MAISON DES BÉNÉVOLES
+gText_QuestLog_NameRatersHouse|MAISON DE L'ÉVALUATEUR
+gText_QuestLog_CeladonDeptStore|GRAND MAGASIN DE BOURG QUARTZ
+gText_QuestLog_CeladonMansion|MANOIR DE BOURG QUARTZ
+gText_QuestLog_RocketGameCorner|SALLE DE JEUX ROCKET
+gText_QuestLog_Restaurant|RESTAURANT
+gText_QuestLog_RocketHideout|REPAIRE ROCKET
+gText_QuestLog_SafariZone|PARC SAFARI
+gText_QuestLog_WardensHome|MAISON DU GARDIEN
+gText_QuestLog_FightingDojo|DOJO DE COMBAT
+gText_QuestLog_SilphCo|SILPH SA
+gText_QuestLog_SeafoamIslands|ÎLES ÉCUME
+gText_QuestLog_PokemonMansion|MANOIR POKéMON
+gText_QuestLog_PokemonResearchLab|LABO DE RECHERCHE POKéMON
+gText_QuestLog_VictoryRoad|ROUTE VICTOIRE
+gText_QuestLog_PokemonLeague|LIGUE POKéMON
+gText_QuestLog_CeruleanCave|GROTTE DE TOURMALIA

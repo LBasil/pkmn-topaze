@@ -163,13 +163,13 @@ gText_PokeBallsPocket|POCHE POKé BALLS
 gText_TmCase|BOÎTE CT
 gText_BerryPouch_2|SAC À BAIES
 gText_Other|AUTRE
-gText_OneIsland|ÎLE UN
-gText_TwoIsland|ÎLE DEUX
-gText_ThreeIsland|ÎLE TROIS
-gText_FourIsland|ÎLE QUATRE
-gText_FiveIsland|ÎLE CINQ
-gText_SixIsland|ÎLE SIX
-gText_SevenIsland|ÎLE SEPT
+gText_OneIsland|ÎLE 1
+gText_TwoIsland|ÎLE 2
+gText_ThreeIsland|ÎLE 3
+gText_FourIsland|ÎLE 4
+gText_FiveIsland|ÎLE 5
+gText_SixIsland|ÎLE 6
+gText_SevenIsland|ÎLE 7
 gText_Vermilion|APATIA
 gText_Colosseum_2|COLISÉE
 gText_BerryCrush|BAIES EN FOLIE

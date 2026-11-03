@@ -1,0 +1,150 @@
+sJN_59|PREMIÈRE ÉVOLUTION
+sJH_59|Fais évoluer un POKéMON.
+sJN_60|FAN D'ÉVOLUTION
+sJH_60|Fais évoluer 10 POKéMON.
+sJN_61|SÉLECTION NATURELLE
+sJH_61|Fais évoluer 30 POKéMON.
+sJN_62|PREMIÈRE CAPTURE
+sJH_62|Capture un POKéMON sauvage.
+sJN_63|COLLECTIONNEUR
+sJH_63|Capture 25 POKéMON.
+sJN_64|LANCEUR DE BALLS
+sJH_64|Capture 100 POKéMON.
+sJN_65|ROI DU SAFARI
+sJH_65|Capture 250 POKéMON.
+sJN_66|ATTRAPEZ-LES TOUS
+sJH_66|Capture 500 POKéMON.
+sJN_67|NOVICE DU POKéDEX
+sJH_67|Possède 10 espèces différentes.
+sJN_68|ÉTUDIANT DU POKéDEX
+sJH_68|Possède 25 espèces différentes.
+sJN_69|FAN DU POKéDEX
+sJH_69|Possède 50 espèces différentes.
+sJN_70|EXPERT DU POKéDEX
+sJH_70|Possède 100 espèces différentes.
+sJN_71|PROFESSEUR DU POKéDEX
+sJH_71|Possède 150 espèces différentes.
+sJN_72|ÉTINCELLE REPÉRÉE
+sJH_72|Croise un POKéMON chromatique à\nl'état sauvage.
+sJN_73|REPÉREUR DE CHROMA
+sJH_73|Croise 5 POKéMON chromatiques à\nl'état sauvage.
+sJN_74|CHASSEUR DE CHROMA
+sJH_74|Capture un POKéMON chromatique.
+sJN_75|COLLECTION DE CHROMA
+sJH_75|Capture 3 POKéMON chromatiques.
+sJN_76|MAÎTRE DU CHROMA
+sJH_76|Capture 10 POKéMON chromatiques.
+sJN_77|PREMIÈRE TOUCHE
+sJH_77|Capture un POKéMON à la canne.
+sJN_78|PÊCHEUR
+sJH_78|Ramène 10 POKéMON à la canne.
+sJN_79|LOUP DE MER
+sJH_79|Ramène 30 POKéMON à la canne.
+sJN_80|ÉCLOSEUR D'ŒUFS
+sJH_80|Fais éclore un ŒUF.
+sJN_81|ÉTOILE DE LA GARDERIE
+sJH_81|Fais éclore 10 ŒUFS.
+sJN_82|MARCHÉ AUX ÉCHANGES
+sJH_82|Échange un POKéMON avec quelqu'un.
+sJN_83|PREMIERS PAS
+sJH_83|Marche 1000 pas.
+sJN_84|VAGABOND
+sJH_84|Marche 10000 pas.
+sJN_85|MARATHON
+sJH_85|Marche 50000 pas.
+sJN_86|GLOBE-TROTTER
+sJH_86|Marche 100000 pas.
+sJN_87|BÛCHERON
+sJH_87|Coupe 10 arbres.
+sJN_88|ABATTEUR DE FORÊTS
+sJH_88|Coupe 50 arbres.
+sJN_89|CASSEUR DE ROCHES
+sJH_89|Brise 10 rochers.
+sJN_90|CARRIER
+sJH_90|Brise 40 rochers.
+sJN_91|SAUT DE LA FOI
+sJH_91|Saute de 50 corniches.
+sJN_92|SOUS LA PLUIE
+sJH_92|Sois surpris par la pluie 20 fois.
+sJN_93|GROS DÉPENSIER
+sJH_93|Fais des achats dans une BOUTIQUE\nPOKéMON 20 fois.
+sJN_94|JOUEUR PRUDENT
+sJH_94|Sauvegarde 10 fois.
+sJN_95|CHASSEUR DE TRÉSORS
+sJH_95|Utilise le DÉTECTEUR 10 fois.
+sJN_96|CONSEIL DES ANCIENS
+sJH_96|À la LIGUE : 20 vétérans attendent\ndans le premier hall. Bats-les\ntous.
+sJN_97|TICKETS DE FERRY
+sJH_97|Parle au marin du ferry d'APATIA\npour avoir les vieux tickets.
+sJN_98|ÉCLATE-ROC
+sJH_98|L'homme des THERMES BRAISE (CHEMIN\nBRASIER, ÎLE 1) donne ÉCLATE-ROC.
+sJN_99|GARDES DU MONT BRAISE
+sJH_99|Deux gardes veillent la grotte du\nrubis au MONT BRAISE (ÎLE 1). Bats-\nles.
+sJN_100|LE RUBIS
+sJH_100|Trouve le RUBIS au fond du VOIE DU\nRUBIS (MONT BRAISE) et donne-le à\nCELIO sur l'ÎLE 1.
+sJN_101|MOT DE PASSE CHANSEY
+sJH_101|TROU POINTILLÉ (ÎLE 6), salle du\nSAPHIR : un voleur révèle le mot de\npasse de l'entrepôt.
+sJN_102|ENTREPÔT DE LA TEAM ROCKET
+sJH_102|PRÉ ÎLE 5 : utilise le mot de passe\nà la porte de l'entrepôt, nettoie-\nle et reprends le SAPHIR.
+sJN_103|LE SAPHIR
+sJH_103|Donne le SAPHIR à CELIO (ÎLE 1)\npour lancer la MACHINE RÉSEAU.
+sJN_104|L'ÉPREUVE FINALE
+sJH_104|BASIL attend près de MEWTWO, au\nfond de la CAVERNE AZURÉE. Le 1\ncontre 1 le plus dur.
+sJN_105|RAIKOU
+sJH_105|RAIKOU. Va au nord de la ville sur\nl'ÎLE 1 : ROUTE TISON. Chaque ÉCHO\ns'ouvre après le précédent.
+sJN_106|ENTEI
+sJH_106|ENTEI. Va au CAP FALAISE sur l'ÎLE\n2. Chaque ÉCHO s'ouvre après le\nprécédent.
+sJN_107|SUICUNE
+sJH_107|SUICUNE. Traverse le PONT DU LIEN\nsur l'ÎLE 3. Chaque ÉCHO s'ouvre\naprès le précédent.
+sJN_108|REGICE
+sJH_108|REGICE. GROTTE DE GLACE sur l'ÎLE\n4, tout au fond. Chaque ÉCHO\ns'ouvre après le précédent.
+sJN_109|REGISTEEL
+sJH_109|REGISTEEL. Le PRÉ sur l'ÎLE 5.\nChaque ÉCHO s'ouvre après le\nprécédent.
+sJN_110|REGIROCK
+sJH_110|REGIROCK. VALLÉE RUINE sur l'ÎLE 6.\nChaque ÉCHO s'ouvre après le\nprécédent.
+sJN_111|CELEBI
+sJH_111|CELEBI. CANYON SESOR sur l'ÎLE SEPT\n(la grotte moussue). Chaque ÉCHO\ns'ouvre après le précédent.
+sJN_112|LE SOMMET
+sJH_112|CANYON SESOR, ÎLE 7 : grimpe à la\ngrotte nord, tout en haut. SILVER\net GIOVANNI t'y attendent.
+sJN_113|KYOGRE
+sJH_113|KYOGRE repose dans la grotte des\nlégendes, au sommet du CANYON\nSESOR.
+sJN_114|GROUDON
+sJH_114|GROUDON repose dans la grotte des\nlégendes, au sommet du CANYON\nSESOR.
+sJN_115|RAYQUAZA
+sJH_115|RAYQUAZA repose dans la grotte des\nlégendes, au sommet du CANYON\nSESOR.
+sJN_116|LATIAS
+sJH_116|LATIAS repose dans la grotte des\nlégendes, au sommet du CANYON\nSESOR.
+sJN_117|LATIOS
+sJH_117|LATIOS repose dans la grotte des\nlégendes, au sommet du CANYON\nSESOR.
+sJN_118|JIRACHI
+sJH_118|JIRACHI repose dans la grotte des\nlégendes, au sommet du CANYON\nSESOR.
+sJN_119|RED, LE SOMMET
+sJH_119|RED s'entraîne tout en haut du\nsommet SEVAULT. Parle-lui pour un 1\ncontre 1 : le combat ultime.
+sJN_120|ARTIKODIN
+sJH_120|Il dort dans une clairière de\nquartz derrière un arbre près du\nBOURG QUARTZ.
+sJN_121|ELECTHOR
+sJH_121|La CENTRALE, ROUTE 10. Quatre\ncanaliseurs l'entourent : bats-les\ntous.
+sJN_122|SULFURA
+sJH_122|Sommet du MONT BRAISE, ÎLE 1. Il\nfaut ÉCLATE-ROC et FORCE.
+sJN_123|MEWTWO
+sJH_123|TOURMALIA : prends le chemin ouest\nvers la grotte de cristal, coin NO.\nCAVERNE AZURÉE, tout au fond.
+sJN_124|MEW
+sJH_124|Un étrange camion est garé près des\ndocks d'APATIA.
+sJN_125|THOMAS
+sJH_125|ROUTE 3 : un spécialiste INSECTE.\nIl faut avoir battu la LIGUE.
+sJN_126|LOLA
+sJH_126|ROUTE 25 : une spécialiste GLACE.\nIl faut avoir battu la LIGUE.
+sJN_127|JORDAN
+sJH_127|ROUTE 6 : un spécialiste NORMAL. Il\nfaut avoir battu la LIGUE.
+sJN_128|VIOLETTE
+sJH_128|SAFRANIA : une spécialiste PSY. Il\nfaut avoir battu la LIGUE.
+sJN_129|EDOUARD
+sJH_129|ROUTE 10 : un spécialiste ROCHE. Il\nfaut avoir battu la LIGUE.
+sJN_130|EMMA
+sJH_130|ROUTE 12 : une spécialiste PLANTE.\nIl faut avoir battu la LIGUE.
+sJN_131|GAUTHIER
+sJH_131|ROUTE 15 : un spécialiste COMBAT.\nIl faut avoir battu la LIGUE.
+sJN_132|CHLOE
+sJH_132|CRAMOIS'ÎLE : une spécialiste FEU.\nIl faut avoir battu la LIGUE.
+sJN_133|VINCENT
+sJH_133|ROUTE 22 : un spécialiste ÉLECTRIK.\nIl faut avoir battu la LIGUE.
