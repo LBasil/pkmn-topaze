@@ -61,7 +61,7 @@
  },
  "FourIsland_Text_ProcheDylan_Intro": {
   "en": "{PLAYER}! You beat the LEAGUE? Then\\nyou can handle my dragons. Do not\\phold back!",
-  "fr": "{PLAYER} ! T'as battu la LIGUE ?\\nAlors tu peux affronter mes\\ldragons. Retiens-toi pas !"
+  "fr": "{PLAYER} ! T'as battu la LIGUE ?\\nAlors tu peux affronter mes\\ldragons. Ne te retiens pas !"
  },
  "FourIsland_Text_ProcheDylan_NoRoom": {
   "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",
@@ -77,7 +77,7 @@
  },
  "FourIsland_Text_RefAsk": {
   "en": "MAYA: A strange fish lives in a cold\\npond. It is ill and nobody can\\lsee it. Three ICE HEALS, please.",
-  "fr": "MAYA : Un étrange poisson vit dans\\nun étang froid. Il est malade et\\lpersonne le voit. Trois\\nANTI-GEL, s'il te plaît."
+  "fr": "MAYA : Un étrange poisson vit dans\\nun étang froid. Il est malade et\\lpersonne ne le voit. Trois\\nANTI-GEL, s'il te plaît."
  },
  "FourIsland_Text_RefDone": {
   "en": "MAYA: Thank you again. The REFUGE\\nis safer because of you.",

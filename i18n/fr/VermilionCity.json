@@ -33,7 +33,7 @@
  },
  "VermilionCity_Text_EastBlocked": {
   "en": "Sorry, the east road is closed.\\pThieves are lurking around the\\nharbor. Until things are settled,\\lnobody leaves APATIA this way.",
-  "fr": "Désolé, la route de l'est est\\nfermée.\\pDes voleurs rôdent autour du port.\\nTant que c'est pas réglé,\\lpersonne quitte APATIA par ici."
+  "fr": "Désolé, la route de l'est est\\nfermée.\\pDes voleurs rôdent autour du port.\\nTant que c'est pas réglé,\\lpersonne ne quitte APATIA par ici."
  },
  "VermilionCity_Text_FerryHint": {
   "en": "From the dock, a SAILOR is waving\\nat you. He seems to have something\\pfor you. He can also take you to\\nthe SEVII ISLANDS by ferry.",

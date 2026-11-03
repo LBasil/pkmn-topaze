@@ -197,7 +197,7 @@
  },
  "PokemonLeague_LoreleisRoom_Text_Intro": {
   "en": "THE GRAND FINAL.\\pI am LORELEI, the ELITE FOUR's\\nfirst guard, and this year's wild\\pcard.\\pNo one outlasts me when it comes\\nto icy POKéMON.\\pThe crowd is waiting. Are you\\nready?{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
-  "fr": "LA GRANDE FINALE.\\pJe suis LORELEI, la première garde\\ndu CONSEIL 4, et la wild card\\lde cette année.\\pPersonne me surpasse en matière\\nde POKéMON de glace.\\pLa foule attend. T'es prêt ?{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
+  "fr": "LA GRANDE FINALE.\\pJe suis LORELEI, la première garde\\ndu CONSEIL 4, et la wild card\\lde cette année.\\pPersonne ne me surpasse en matière\\nde POKéMON de glace.\\pLa foule attend. T'es prêt ?{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
  },
  "PokemonLeague_LoreleisRoom_Text_NextElder": {
   "en": "Well fought!\\pThe next veteran steps forward.\\nRecover your strength.",

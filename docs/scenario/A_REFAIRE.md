@@ -380,3 +380,6 @@ Lots 0–1750 relus à la main, passes regex (suppression de "ne" après pronom 
 
 ## 03-11 (soir) — Réécriture ton officiel terminée
 Tous les textes originaux (0–4312) relus à la main, puis passe de suppression du "ne" après pronom sujet. Correctif : l outil de relecture lisait un instantané périmé et avait écrasé une partie des retouches ; tout a été réappliqué.
+
+## 03-11 (19h) — Passe grammaire
+Impératifs négatifs corrigés (Ne te fie jamais, Ne te mêle pas…), « personne/rien » sujets remis avec « ne », registre de la maîtresse (tu es, Puis-je, Cela ne me regarde pas).

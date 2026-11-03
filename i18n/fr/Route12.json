@@ -181,7 +181,7 @@
  },
  "Route12_Text_TimeHint": {
   "en": "The fishing spot sign: BEST HOUR TO\\nFISH... crossed out. Nobody knows\\pthe hour anymore.",
-  "fr": "Le panneau du coin de pêche :\\nMEILLEURE HEURE POUR PÊCHER…\\pbarré. Plus personne connaît\\nl'heure."
+  "fr": "Le panneau du coin de pêche :\\nMEILLEURE HEURE POUR PÊCHER…\\pbarré. Plus personne ne connaît\\nl'heure."
  },
  "Text_PlayedPokeFlute": {
   "en": "{PLAYER} played the POKé FLUTE.",

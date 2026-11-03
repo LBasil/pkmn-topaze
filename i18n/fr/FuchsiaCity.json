@@ -541,7 +541,7 @@
  },
  "FuchsiaCity_Text_PoliceRaid": {
   "en": "Sorry, the town is sealed until the\\nzoo POKéMON are rounded up.\\pThieves are on the loose. Nobody\\ngoes in or out this way.",
-  "fr": "Désolé, la ville est fermée tant\\nque les POKéMON du zoo sont pas\\lrattrapés.\\pDes voleurs sont en liberté.\\nPersonne entre ni sort par ici."
+  "fr": "Désolé, la ville est fermée tant\\nque les POKéMON du zoo ne sont pas\\lrattrapés.\\pDes voleurs sont en liberté.\\nPersonne n'entre ni ne sort ici."
  },
  "FuchsiaCity_Text_PoliceVolcano": {
   "en": "The sea road south is closed.\\pThe SEAFOAM volcano erupted and\\nthe water is molten rock.\\pLooking for CHRONDROLIA? Go back\\nto GRENALUX and SURF south.",

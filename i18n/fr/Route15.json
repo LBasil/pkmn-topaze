@@ -185,7 +185,7 @@
  },
  "Route15_Text_TimeHint": {
   "en": "A broken alarm clock rings, though\\nnobody set it. It rings for\\pyesterday.",
-  "fr": "Un réveil cassé sonne, bien que\\npersonne l'ait réglé. Il sonne\\lpour hier."
+  "fr": "Un réveil cassé sonne, bien que\\npersonne ne l'ait réglé. Il sonne\\lpour hier."
  },
  "Route15_Text_YazminDefeat": {
   "en": "I was too impatient!",

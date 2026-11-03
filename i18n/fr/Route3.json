@@ -85,7 +85,7 @@
  },
  "Route3_Text_ProcheThomas_Intro": {
   "en": "Yo, {PLAYER}! Nobody takes BUG types\\nseriously. Let me change your mind!",
-  "fr": "Yo, {PLAYER} ! Personne prend les\\ntypes INSECTE au sérieux.\\pLaisse-moi te faire changer\\nd'avis !"
+  "fr": "Yo, {PLAYER} ! Personne ne prend les\\ntypes INSECTE au sérieux.\\pLaisse-moi te faire changer\\nd'avis !"
  },
  "Route3_Text_ProcheThomas_NoRoom": {
   "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",

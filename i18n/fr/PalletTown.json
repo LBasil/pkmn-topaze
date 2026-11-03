@@ -21,7 +21,7 @@
  },
  "PalletTown_Text_AmbGirlB": {
   "en": "The school's GRENAT is gone!\\nThe pond looks sad today.\\pDon't let them take the monument!",
-  "fr": "Le GRENAT de l'école a disparu !\\nL'étang a l'air triste aujourd'hui.\\pLaissez-les pas prendre le\\nmonument !"
+  "fr": "Le GRENAT de l'école a disparu !\\nL'étang a l'air triste aujourd'hui.\\pNe les laissez pas prendre le\\nmonument !"
  },
  "PalletTown_Text_AmbLadyA": {
   "en": "Garnet is the stone of this town.\\nRed roofs, red trees, red stone.\\pThe sea road south needs SURF. Come\\nback when you can ride the waves.",
@@ -185,7 +185,7 @@
  },
  "PalletTown_Text_RanchGruntEnter": {
   "en": "Nobody move!\\nTEAM ONYBRIS is freeing the POKéMON\\lof this ranch!\\pMy friends are at the SCHOOL and the\\nLAB right now. Today, we take it all!",
-  "fr": "Que personne bouge ! La TEAM\\nONYBRIS libère les POKéMON de ce\\lranch !\\pMes amis sont à l'ÉCOLE et au LABO\\nen ce moment. Aujourd'hui, on prend\\ltout !"
+  "fr": "Que personne ne bouge ! La TEAM\\nONYBRIS libère les POKéMON de ce\\lranch !\\pMes amis sont à l'ÉCOLE et au LABO\\nen ce moment. Aujourd'hui, on prend\\ltout !"
  },
  "PalletTown_Text_RanchGruntRetreat": {
   "en": "Forget it. We got what we came for.\\pThe trackers are already on the road.\\nGRENALUX will see us again...",
