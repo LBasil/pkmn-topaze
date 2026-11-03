@@ -323,3 +323,7 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 ## 03-11 (07h22)
 - Giga Drain remis à 60 de puissance (le nerf à 40 du 19-10 est annulé).
 - CT19 (récompense de Sylvestre, arène 2) = TRANCHERBE (Razor Leaf, 55, crit élevé) au lieu de Giga Drain : tables CT, constante ITEM_TM19_RAZOR_LEAF, description, learnsets (87 espèces gardent le bit), texte ExplainTM03 de Tourmalia (+ rewrite_gyms.py). Tous les types Plante l'avaient déjà.
+
+## 03-11 (09h17)
+- Mentions de la CLÉ SECRÈTE retirées : texte du maire de Chrondrolia (« And the SECRET KEY » supprimé, + chrondrolia_raid.py) ; l'objet SECRET KEY du sous-sol de la Centrale (PokemonMansion_B1F) retiré de la carte.
+- Constat : l'arène de Chrondrolia est toujours ouverte (script CheckUnlockGym) ; le texte « The door is locked… » et la scène de Bill vers l'Île 1 (CinnabarIsland_EventScript_BillScene) sont du code mort (VAR_MAP_SCENE_CINNABAR_ISLAND jamais mis à 1). À retirer si Basil le souhaite.

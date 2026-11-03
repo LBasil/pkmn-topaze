@@ -110,8 +110,8 @@ CinnabarIsland_Text_LightsOut::
     .string "died at once.$"
 
 CinnabarIsland_Text_MayorReveal1::
-    .string "MAYOR: A fine badge, trainer. And\n"
-    .string "the SECRET KEY. Well done.\p"
+    .string "MAYOR: A fine badge, trainer.\n"
+    .string "Well done.\p"
     .string "ONYBRIS needed one honest hand to\n"
     .string "open the old vault under the PLANT.$"
 

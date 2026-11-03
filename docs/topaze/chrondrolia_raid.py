@@ -231,7 +231,7 @@ CinnabarIsland_EventScript_LittleGirlDone::
 addtext('data/maps/CinnabarIsland/text.inc',
  mktext('CinnabarIsland_Text_LightsOut',[["Every light in CHRONDROLIA just","died at once."]])+'\n'+
  mktext('CinnabarIsland_Text_MayorReveal1',[
- ["MAYOR: A fine badge, trainer. And","the SECRET KEY. Well done."],
+ ["MAYOR: A fine badge, trainer.","Well done."],
  ["ONYBRIS needed one honest hand to","open the old vault under the PLANT."]])+'\n'+
  mktext('CinnabarIsland_Text_MayorReveal2',[
  ["The TOPAZ sleeps in the transformer","park. Its heat feeds the volcano."],
