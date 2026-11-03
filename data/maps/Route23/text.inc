@@ -3,9 +3,9 @@ Route23_Text_VictoryRoadGateSign::
     .string "POKéMON LEAGUE$"
 
 Route23_Text_RedStares::
-    .string "A trainer in a red cap stands at\n"
-    .string "the cave mouth, staring into the\n"
-    .string "dark.$"
+	.string "A trainer in a red cap stands at\n"
+	.string "the cave mouth, staring into the\l"
+	.string "dark.$"
 
 Route23_Text_RedSilent::
     .string "RED: ……$"

@@ -92,4 +92,6 @@ PewterCity_Museum_1F_Text_AdmissionFree::
     .string "today. Please enjoy the MUSEUM!$"
 
 PewterCity_Museum_1F_Text_MonKabuto::
-    .string "KABUTO: Kabu!\nA revived fossil, warming up\nnext to the lava.$"
+	.string "KABUTO: Kabu!\n"
+	.string "A revived fossil, warming up\l"
+	.string "next to the lava.$"

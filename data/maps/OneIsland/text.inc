@@ -75,9 +75,9 @@ OneIsland_Text_Lord3::
     .string "Keep yours open. Take this.$"
 
 OneIsland_Text_LordEarly::
-    .string "WILL: Not yet. The old LEAGUE\n"
-    .string "and the MASTERS must fall first.\n"
-    .string "FLORA will tell you the way.$"
+	.string "WILL: Not yet. The old LEAGUE\n"
+	.string "and the MASTERS must fall first.\l"
+	.string "FLORA will tell you the way.$"
 
 OneIsland_Text_LordDone::
     .string "WILL: A ruler worthy of the six.\n"
@@ -88,9 +88,9 @@ OneIsland_Text_LordIdle::
     .string "after them, as I always have.$"
 
 OneIsland_Text_RefAsk::
-    .string "JONAH: Poachers took a baby from its\n"
-    .string "mother on the shore. Bring them\n"
-    .string "to justice, please.$"
+	.string "JONAH: Poachers took a baby from its\n"
+	.string "mother on the shore. Bring them\l"
+	.string "to justice, please.$"
 
 OneIsland_Text_RefHunter1::
     .string "HUNTER: Rare ones fetch a fortune!\n"
@@ -109,9 +109,9 @@ OneIsland_Text_RefAfter::
     .string "next REFUGE post is waiting.$"
 
 OneIsland_Text_RefEarly::
-    .string "JONAH: Not yet. Finish the earlier\n"
-    .string "posts first. The KEEPER at the\n"
-    .string "SAFARI ZONE knows the order.$"
+	.string "JONAH: Not yet. Finish the earlier\n"
+	.string "posts first. The KEEPER at the\l"
+	.string "SAFARI ZONE knows the order.$"
 
 OneIsland_Text_RefDone::
     .string "JONAH: Thank you again. The REFUGE\n"

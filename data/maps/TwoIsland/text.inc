@@ -97,9 +97,9 @@ TwoIsland_Text_Lord3::
     .string "they keep following. Take this.$"
 
 TwoIsland_Text_LordEarly::
-    .string "KAREN: Not yet. The old LEAGUE\n"
-    .string "and the MASTERS must fall first.\n"
-    .string "FLORA will tell you the way.$"
+	.string "KAREN: Not yet. The old LEAGUE\n"
+	.string "and the MASTERS must fall first.\l"
+	.string "FLORA will tell you the way.$"
 
 TwoIsland_Text_LordDone::
     .string "KAREN: A ruler worthy of the six.\n"
@@ -110,9 +110,9 @@ TwoIsland_Text_LordIdle::
     .string "after them, as I always have.$"
 
 TwoIsland_Text_RefAsk::
-    .string "KIRA: The forest beetles are hurt by\n"
-    .string "drought. Three HYPER POTIONS will\n"
-    .string "keep the elders alive.$"
+	.string "KIRA: The forest beetles are hurt by\n"
+	.string "drought. Three HYPER POTIONS will\l"
+	.string "keep the elders alive.$"
 
 TwoIsland_Text_RefOffer::
     .string "KIRA: You have them! May I take\n"
@@ -131,9 +131,9 @@ TwoIsland_Text_RefAfter::
     .string "next REFUGE post is waiting.$"
 
 TwoIsland_Text_RefEarly::
-    .string "KIRA: Not yet. Finish the earlier\n"
-    .string "posts first. The KEEPER at the\n"
-    .string "SAFARI ZONE knows the order.$"
+	.string "KIRA: Not yet. Finish the earlier\n"
+	.string "posts first. The KEEPER at the\l"
+	.string "SAFARI ZONE knows the order.$"
 
 TwoIsland_Text_RefDone::
     .string "KIRA: Thank you again. The REFUGE\n"

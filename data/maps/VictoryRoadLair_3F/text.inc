@@ -2,9 +2,9 @@ VictoryRoadLair_3F_Text_RedSilent::
     .string "RED: ……$"
 
 VictoryRoadLair_3F_Text_RedHeals::
-    .string "RED takes out a thermos and lets\n"
-    .string "your POKéMON drink. They feel\n"
-    .string "fine again.$"
+	.string "RED takes out a thermos and lets\n"
+	.string "your POKéMON drink. They feel\l"
+	.string "fine again.$"
 
 VictoryRoadLair_3F_Text_Cold::
     .string "The THRONE ROOM is freezing. RED\n"

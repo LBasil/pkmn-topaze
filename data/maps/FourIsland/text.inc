@@ -69,9 +69,9 @@ FourIsland_Text_Lord3::
     .string "the cold is a good ruler. Take this.$"
 
 FourIsland_Text_LordEarly::
-    .string "GLACIA: Not yet. The old LEAGUE\n"
-    .string "and the MASTERS must fall first.\n"
-    .string "FLORA will tell you the way.$"
+	.string "GLACIA: Not yet. The old LEAGUE\n"
+	.string "and the MASTERS must fall first.\l"
+	.string "FLORA will tell you the way.$"
 
 FourIsland_Text_LordDone::
     .string "GLACIA: A ruler worthy of the six.\n"
@@ -82,9 +82,9 @@ FourIsland_Text_LordIdle::
     .string "after them, as I always have.$"
 
 FourIsland_Text_RefAsk::
-    .string "MAYA: A strange fish lives in a cold\n"
-    .string "pond. It is ill and nobody can\n"
-    .string "see it. Three ICE HEALS, please.$"
+	.string "MAYA: A strange fish lives in a cold\n"
+	.string "pond. It is ill and nobody can\l"
+	.string "see it. Three ICE HEALS, please.$"
 
 FourIsland_Text_RefOffer::
     .string "MAYA: You have them! May I take\n"
@@ -103,9 +103,9 @@ FourIsland_Text_RefAfter::
     .string "next REFUGE post is waiting.$"
 
 FourIsland_Text_RefEarly::
-    .string "MAYA: Not yet. Finish the earlier\n"
-    .string "posts first. The KEEPER at the\n"
-    .string "SAFARI ZONE knows the order.$"
+	.string "MAYA: Not yet. Finish the earlier\n"
+	.string "posts first. The KEEPER at the\l"
+	.string "SAFARI ZONE knows the order.$"
 
 FourIsland_Text_RefDone::
     .string "MAYA: Thank you again. The REFUGE\n"

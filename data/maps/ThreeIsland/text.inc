@@ -180,9 +180,9 @@ ThreeIsland_Text_Lord3::
     .string "to get bored at the top. Take this.$"
 
 ThreeIsland_Text_LordEarly::
-    .string "SIDNEY: Not yet. The old LEAGUE\n"
-    .string "and the MASTERS must fall first.\n"
-    .string "FLORA will tell you the way.$"
+	.string "SIDNEY: Not yet. The old LEAGUE\n"
+	.string "and the MASTERS must fall first.\l"
+	.string "FLORA will tell you the way.$"
 
 ThreeIsland_Text_LordDone::
     .string "SIDNEY: A ruler worthy of the six.\n"
@@ -193,9 +193,9 @@ ThreeIsland_Text_LordIdle::
     .string "after them, as I always have.$"
 
 ThreeIsland_Text_RefAsk::
-    .string "LEON: An ABSOL warned me of danger for\n"
-    .string "weeks. Now I know why: hunters\n"
-    .string "are on the island.$"
+	.string "LEON: An ABSOL warned me of danger for\n"
+	.string "weeks. Now I know why: hunters\l"
+	.string "are on the island.$"
 
 ThreeIsland_Text_RefHunter1::
     .string "HUNTER: Rare ones fetch a fortune!\n"
@@ -214,9 +214,9 @@ ThreeIsland_Text_RefAfter::
     .string "next REFUGE post is waiting.$"
 
 ThreeIsland_Text_RefEarly::
-    .string "LEON: Not yet. Finish the earlier\n"
-    .string "posts first. The KEEPER at the\n"
-    .string "SAFARI ZONE knows the order.$"
+	.string "LEON: Not yet. Finish the earlier\n"
+	.string "posts first. The KEEPER at the\l"
+	.string "SAFARI ZONE knows the order.$"
 
 ThreeIsland_Text_RefDone::
     .string "LEON: Thank you again. The REFUGE\n"

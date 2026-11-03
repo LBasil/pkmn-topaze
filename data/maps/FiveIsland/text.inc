@@ -29,9 +29,9 @@ FiveIsland_Text_Lord3::
     .string "Take this, from the other side.$"
 
 FiveIsland_Text_LordEarly::
-    .string "PHOEBE: Not yet. The old LEAGUE\n"
-    .string "and the MASTERS must fall first.\n"
-    .string "FLORA will tell you the way.$"
+	.string "PHOEBE: Not yet. The old LEAGUE\n"
+	.string "and the MASTERS must fall first.\l"
+	.string "FLORA will tell you the way.$"
 
 FiveIsland_Text_LordDone::
     .string "PHOEBE: A ruler worthy of the six.\n"
@@ -63,9 +63,9 @@ FiveIsland_Text_RefAfter::
     .string "next REFUGE post is waiting.$"
 
 FiveIsland_Text_RefEarly::
-    .string "NOEL: Not yet. Finish the earlier\n"
-    .string "posts first. The KEEPER at the\n"
-    .string "SAFARI ZONE knows the order.$"
+	.string "NOEL: Not yet. Finish the earlier\n"
+	.string "posts first. The KEEPER at the\l"
+	.string "SAFARI ZONE knows the order.$"
 
 FiveIsland_Text_RefDone::
     .string "NOEL: Thank you again. The REFUGE\n"

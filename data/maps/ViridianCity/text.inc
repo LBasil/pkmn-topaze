@@ -127,9 +127,10 @@ ViridianCity_Text_GymDoorsAreLocked::
 
 
 ViridianCity_Text_RefAsk::
-    .string "BRUN: Hunters came last night, looking\n"
-    .string "for rare POKéMON to sell. They\n"
-    .string "want them back in cages.\pI cannot fight them alone.$"
+	.string "BRUN: Hunters came last night, looking\n"
+	.string "for rare POKéMON to sell. They\l"
+	.string "want them back in cages.\p"
+	.string "I cannot fight them alone.$"
 
 ViridianCity_Text_RefHunter1::
     .string "HUNTER: Rare ones fetch a fortune!\n"
@@ -148,9 +149,9 @@ ViridianCity_Text_RefAfter::
     .string "next REFUGE post is waiting.$"
 
 ViridianCity_Text_RefEarly::
-    .string "BRUN: Not yet. Finish the earlier\n"
-    .string "posts first. The KEEPER at the\n"
-    .string "SAFARI ZONE knows the order.$"
+	.string "BRUN: Not yet. Finish the earlier\n"
+	.string "posts first. The KEEPER at the\l"
+	.string "SAFARI ZONE knows the order.$"
 
 ViridianCity_Text_RefDone::
     .string "BRUN: Thank you again. The REFUGE\n"

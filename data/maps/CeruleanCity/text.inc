@@ -128,9 +128,9 @@ CeruleanCity_Text_EastTree::
     .string "small tree. You'll need CUT.$"
 
 CeruleanCity_Text_RefAsk::
-    .string "DANTE: The river is quiet. Too quiet.\n"
-    .string "Hunters set traps near the bridge\n"
-    .string "and I saw them with nets.$"
+	.string "DANTE: The river is quiet. Too quiet.\n"
+	.string "Hunters set traps near the bridge\l"
+	.string "and I saw them with nets.$"
 
 CeruleanCity_Text_RefHunter1::
     .string "HUNTER: Rare ones fetch a fortune!\n"
@@ -149,9 +149,9 @@ CeruleanCity_Text_RefAfter::
     .string "next REFUGE post is waiting.$"
 
 CeruleanCity_Text_RefEarly::
-    .string "DANTE: Not yet. Finish the earlier\n"
-    .string "posts first. The KEEPER at the\n"
-    .string "SAFARI ZONE knows the order.$"
+	.string "DANTE: Not yet. Finish the earlier\n"
+	.string "posts first. The KEEPER at the\l"
+	.string "SAFARI ZONE knows the order.$"
 
 CeruleanCity_Text_RefDone::
     .string "DANTE: Thank you again. The REFUGE\n"

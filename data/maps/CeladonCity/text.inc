@@ -141,9 +141,9 @@ CeladonCity_Text_GeodeClearing::
     .string "Something is sleeping in it, I swear!$"
 
 CeladonCity_Text_RefAsk::
-    .string "GWEN: My LAPRAS hasn't spoken in days.\n"
-    .string "She misses the sea. Three\n"
-    .string "LEMONADES might cheer her up.$"
+	.string "GWEN: My LAPRAS hasn't spoken in days.\n"
+	.string "She misses the sea. Three\l"
+	.string "LEMONADES might cheer her up.$"
 
 CeladonCity_Text_RefOffer::
     .string "GWEN: You have them! May I take\n"
@@ -162,9 +162,9 @@ CeladonCity_Text_RefAfter::
     .string "next REFUGE post is waiting.$"
 
 CeladonCity_Text_RefEarly::
-    .string "GWEN: Not yet. Finish the earlier\n"
-    .string "posts first. The KEEPER at the\n"
-    .string "SAFARI ZONE knows the order.$"
+	.string "GWEN: Not yet. Finish the earlier\n"
+	.string "posts first. The KEEPER at the\l"
+	.string "SAFARI ZONE knows the order.$"
 
 CeladonCity_Text_RefDone::
     .string "GWEN: Thank you again. The REFUGE\n"

@@ -167,9 +167,9 @@ SaffronCity_Text_RefAfter::
     .string "next REFUGE post is waiting.$"
 
 SaffronCity_Text_RefEarly::
-    .string "HUGO: Not yet. Finish the earlier\n"
-    .string "posts first. The KEEPER at the\n"
-    .string "SAFARI ZONE knows the order.$"
+	.string "HUGO: Not yet. Finish the earlier\n"
+	.string "posts first. The KEEPER at the\l"
+	.string "SAFARI ZONE knows the order.$"
 
 SaffronCity_Text_RefDone::
     .string "HUGO: Thank you again. The REFUGE\n"

@@ -293,9 +293,9 @@ SevenIsland_SevaultCanyon_Text_W2Post::
     .string "Go on. The wind allows it.$"
 
 SevenIsland_SevaultCanyon_Text_W3Intro::
-    .string "I am the last guardian of the\n"
-    .string "dreamers. The eon twins and the\n"
-    .string "wish star rest behind me.$"
+	.string "I am the last guardian of the\n"
+	.string "dreamers. The eon twins and the\l"
+	.string "wish star rest behind me.$"
 
 SevenIsland_SevaultCanyon_Text_W3Defeat::
     .string "Awake at last...$"

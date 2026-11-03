@@ -54,9 +54,9 @@ LavenderTown_Text_PokemonTowerSign::
 
 
 LavenderTown_Text_RefAsk::
-    .string "FINN: The old tower is full of lost\n"
-    .string "POKéMON. Hunters know it, and they\n"
-    .string "come at dusk with lanterns.$"
+	.string "FINN: The old tower is full of lost\n"
+	.string "POKéMON. Hunters know it, and they\l"
+	.string "come at dusk with lanterns.$"
 
 LavenderTown_Text_RefHunter1::
     .string "HUNTER: Rare ones fetch a fortune!\n"
@@ -75,9 +75,9 @@ LavenderTown_Text_RefAfter::
     .string "next REFUGE post is waiting.$"
 
 LavenderTown_Text_RefEarly::
-    .string "FINN: Not yet. Finish the earlier\n"
-    .string "posts first. The KEEPER at the\n"
-    .string "SAFARI ZONE knows the order.$"
+	.string "FINN: Not yet. Finish the earlier\n"
+	.string "posts first. The KEEPER at the\l"
+	.string "SAFARI ZONE knows the order.$"
 
 LavenderTown_Text_RefDone::
     .string "FINN: Thank you again. The REFUGE\n"

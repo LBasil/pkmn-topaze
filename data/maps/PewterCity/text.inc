@@ -174,9 +174,9 @@ PewterCity_Text_Guide::
     .string "volcano. Bad timing for us.$"
 
 PewterCity_Text_Grandma::
-    .string "Careful near the CAIRN.\n"
-    .string "The flame there has never gone\n"
-    .string "out, not once.$"
+	.string "Careful near the CAIRN.\n"
+	.string "The flame there has never gone\l"
+	.string "out, not once.$"
 
 PewterCity_Text_Camper::
     .string "I came to see the volcano.\p"
@@ -184,9 +184,9 @@ PewterCity_Text_Camper::
     .string "lava lake. It's hypnotic.$"
 
 PewterCity_Text_RefAsk::
-    .string "CLEO: A DRATINI came down from the\n"
-    .string "mountain, sick and scared. I need\n"
-    .string "three FULL HEALS to cure it.$"
+	.string "CLEO: A DRATINI came down from the\n"
+	.string "mountain, sick and scared. I need\l"
+	.string "three FULL HEALS to cure it.$"
 
 PewterCity_Text_RefOffer::
     .string "CLEO: You have them! May I take\n"
@@ -205,9 +205,9 @@ PewterCity_Text_RefAfter::
     .string "next REFUGE post is waiting.$"
 
 PewterCity_Text_RefEarly::
-    .string "CLEO: Not yet. Finish the earlier\n"
-    .string "posts first. The KEEPER at the\n"
-    .string "SAFARI ZONE knows the order.$"
+	.string "CLEO: Not yet. Finish the earlier\n"
+	.string "posts first. The KEEPER at the\l"
+	.string "SAFARI ZONE knows the order.$"
 
 PewterCity_Text_RefDone::
     .string "CLEO: Thank you again. The REFUGE\n"

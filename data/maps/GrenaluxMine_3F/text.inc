@@ -40,13 +40,13 @@ GrenaluxMine_3F_Text_Vision2::
     .string "POKéMON it touched.$"
 
 GrenaluxMine_3F_Text_Vision3::
-    .string "The AURA was never a weapon.\n"
-    .string "It was a cry for help.\p"
-    .string "The stones of the ten towns are\n"
-    .string "where that cry settled.\p"
-    .string "Your PENDANT is the first of them.\n"
-    .string "It did not choose to be taken.\n"
-    .string "It chose YOU.$"
+	.string "The AURA was never a weapon.\n"
+	.string "It was a cry for help.\p"
+	.string "The stones of the ten towns are\n"
+	.string "where that cry settled.\p"
+	.string "Your PENDANT is the first of them.\n"
+	.string "It did not choose to be taken.\l"
+	.string "It chose YOU.$"
 
 GrenaluxMine_3F_Text_MewAppears::
     .string "A small pink shape drifts out of\n"

@@ -5,7 +5,7 @@ PewterCity_House4_Text_Gentleman::
     .string "I never pay for heating!$"
 
 PewterCity_House4_Text_OldWoman::
-    .string "When the volcano rumbles, the\n"
-    .string "whole town gathers by the\n"
-    .string "CRATERS.\p"
-    .string "Our ancestors said the fire speaks.$"
+	.string "When the volcano rumbles, the\n"
+	.string "whole town gathers by the\l"
+	.string "CRATERS.\p"
+	.string "Our ancestors said the fire speaks.$"

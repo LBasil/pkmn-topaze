@@ -144,9 +144,9 @@ CinnabarIsland_Text_LittleGirlDone::
     .string "Thank you!$"
 
 CinnabarIsland_Text_RefAsk::
-    .string "IRIS: The old lab revived a creature\n"
-    .string "from the amber. It needs two MAX\n"
-    .string "POTIONS to get through the week.$"
+	.string "IRIS: The old lab revived a creature\n"
+	.string "from the amber. It needs two MAX\l"
+	.string "POTIONS to get through the week.$"
 
 CinnabarIsland_Text_RefOffer::
     .string "IRIS: You have them! May I take\n"
@@ -165,9 +165,9 @@ CinnabarIsland_Text_RefAfter::
     .string "next REFUGE post is waiting.$"
 
 CinnabarIsland_Text_RefEarly::
-    .string "IRIS: Not yet. Finish the earlier\n"
-    .string "posts first. The KEEPER at the\n"
-    .string "SAFARI ZONE knows the order.$"
+	.string "IRIS: Not yet. Finish the earlier\n"
+	.string "posts first. The KEEPER at the\l"
+	.string "SAFARI ZONE knows the order.$"
 
 CinnabarIsland_Text_RefDone::
     .string "IRIS: Thank you again. The REFUGE\n"

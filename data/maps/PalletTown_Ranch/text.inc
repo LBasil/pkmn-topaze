@@ -4,7 +4,7 @@ PalletTown_Ranch_Text_Hand1Strike::
 
 PalletTown_Ranch_Text_Hand1::
 	.string "This ranch runs from the town wall\n"
-	.string "to the far fences. It takes ten of\n"
+	.string "to the far fences. It takes ten of\l"
 	.string "us to look after it all.$"
 
 PalletTown_Ranch_Text_Hand2Strike::

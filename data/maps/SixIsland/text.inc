@@ -28,9 +28,9 @@ SixIsland_Text_Lord3::
     .string "Take this for the road.$"
 
 SixIsland_Text_LordEarly::
-    .string "DRAKE: Not yet. The old LEAGUE\n"
-    .string "and the MASTERS must fall first.\n"
-    .string "FLORA will tell you the way.$"
+	.string "DRAKE: Not yet. The old LEAGUE\n"
+	.string "and the MASTERS must fall first.\l"
+	.string "FLORA will tell you the way.$"
 
 SixIsland_Text_LordDone::
     .string "DRAKE: A ruler worthy of the six.\n"
@@ -62,9 +62,9 @@ SixIsland_Text_RefAfter::
     .string "next REFUGE post is waiting.$"
 
 SixIsland_Text_RefEarly::
-    .string "OLGA: Not yet. Finish the earlier\n"
-    .string "posts first. The KEEPER at the\n"
-    .string "SAFARI ZONE knows the order.$"
+	.string "OLGA: Not yet. Finish the earlier\n"
+	.string "posts first. The KEEPER at the\l"
+	.string "SAFARI ZONE knows the order.$"
 
 SixIsland_Text_RefDone::
     .string "OLGA: Thank you again. The REFUGE\n"

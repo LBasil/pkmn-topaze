@@ -50,9 +50,9 @@ SevenIsland_Text_Lord3::
     .string "have seen. Take this, with my thanks.$"
 
 SevenIsland_Text_LordEarly::
-    .string "WALLACE: Not yet. The old LEAGUE\n"
-    .string "and the MASTERS must fall first.\n"
-    .string "FLORA will tell you the way.$"
+	.string "WALLACE: Not yet. The old LEAGUE\n"
+	.string "and the MASTERS must fall first.\l"
+	.string "FLORA will tell you the way.$"
 
 SevenIsland_Text_LordDone::
     .string "WALLACE: A ruler worthy of the six.\n"
@@ -85,9 +85,9 @@ SevenIsland_Text_RefAfter::
     .string "next REFUGE post is waiting.$"
 
 SevenIsland_Text_RefEarly::
-    .string "PAXTON: Not yet. Finish the earlier\n"
-    .string "posts first. The KEEPER at the\n"
-    .string "SAFARI ZONE knows the order.$"
+	.string "PAXTON: Not yet. Finish the earlier\n"
+	.string "posts first. The KEEPER at the\l"
+	.string "SAFARI ZONE knows the order.$"
 
 SevenIsland_Text_RefDone::
     .string "PAXTON: Thank you again. The REFUGE\n"

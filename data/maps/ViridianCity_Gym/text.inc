@@ -17,17 +17,17 @@ ViridianCity_Gym_Text_GiovanniDefeat::
     .string "BADGE.$"
 
 ViridianCity_Gym_Text_GiovanniPostBattle::
-    .string "My furnaces forged the gate of\n"
-    .string "the VICTORY ROAD, long ago.\p"
-    .string "A boy in a red cap came before\n"
-    .string "you. He said nothing. He only\p"
-    .string "pointed at the BLACK OPAL in the\n"
-    .string "square. I understood.\p"
-    .string "The opal is the key of that gate.\n"
-    .string "He took it into the cave himself.\p"
-    .string "Strange men in black went in\n"
-    .string "there too. Hurry, before they\n"
-    .string "reach him.$"
+	.string "My furnaces forged the gate of\n"
+	.string "the VICTORY ROAD, long ago.\p"
+	.string "A boy in a red cap came before\n"
+	.string "you. He said nothing. He only\p"
+	.string "pointed at the BLACK OPAL in the\n"
+	.string "square. I understood.\p"
+	.string "The opal is the key of that gate.\n"
+	.string "He took it into the cave himself.\p"
+	.string "Strange men in black went in\n"
+	.string "there too. Hurry, before they\l"
+	.string "reach him.$"
 
 ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis::
     .string "The OPAL BADGE makes every\n"
@@ -160,14 +160,14 @@ ViridianCity_Gym_Text_SamuelPostBattle::
 
 
 ViridianCity_Gym_Text_GymGuyAdvice::
-    .string "Yo! Champ in the making!\p"
-    .string "This is the FOUNDRY, the last\n"
-    .string "GYM before the LEAGUE.\p"
-    .string "Every TRAINER here uses STEEL-\n"
-    .string "types. Bring FIRE or GROUND.\p"
-    .string "And watch the spinner tiles.\n"
-    .string "They send you straight to the\n"
-    .string "furnace!$"
+	.string "Yo! Champ in the making!\p"
+	.string "This is the FOUNDRY, the last\n"
+	.string "GYM before the LEAGUE.\p"
+	.string "Every TRAINER here uses STEEL-\n"
+	.string "types. Bring FIRE or GROUND.\p"
+	.string "And watch the spinner tiles.\n"
+	.string "They send you straight to the\l"
+	.string "furnace!$"
 
 
 ViridianCity_Gym_Text_GymGuyPostVictory::

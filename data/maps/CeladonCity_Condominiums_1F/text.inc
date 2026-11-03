@@ -16,15 +16,15 @@ CeladonCity_Condominiums_1F_Text_MyDearMonsKeepMeCompany::
     .string "MEOWTH even brings money home!$"
 
 CeladonCity_Condominiums_1F_Text_DaisyComesToBuyTea::
-    .string "Oh, hello, dearie.\n"
-    .string "Did you enjoy my TEA?\p"
-    .string "By the way, dear. Are you, by any\n"
-    .string "chance, from GRENALUX?\p"
-    .string "A girl from GRENALUX, DAISY,\n"
-    .string "she enjoys TEA every day.\p"
-    .string "She visits the BOURG QUARTZ\n"
-    .string "DEPT. STORE\n"
-    .string "to buy some TEA.$"
+	.string "Oh, hello, dearie.\n"
+	.string "Did you enjoy my TEA?\p"
+	.string "By the way, dear. Are you, by any\n"
+	.string "chance, from GRENALUX?\p"
+	.string "A girl from GRENALUX, DAISY,\n"
+	.string "she enjoys TEA every day.\p"
+	.string "She visits the BOURG QUARTZ\n"
+	.string "DEPT. STORE\l"
+	.string "to buy some TEA.$"
 
 CeladonCity_Condominiums_1F_Text_Clefairy::
     .string "CLEFAIRY: Pi pippippi!$"

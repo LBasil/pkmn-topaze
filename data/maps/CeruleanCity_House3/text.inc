@@ -6,7 +6,10 @@ CeruleanCity_House3_Text_PleaseTradeWithMyHusband::
 
 
 CeruleanCity_House3_Text_QuestAsk::
-    .string "I'm a retired TRAINER.\pShow me a POKéMON at level 45\nor higher and I'll give you my\nLINK CABLE.$"
+	.string "I'm a retired TRAINER.\p"
+	.string "Show me a POKéMON at level 45\n"
+	.string "or higher and I'll give you my\l"
+	.string "LINK CABLE.$"
 
 CeruleanCity_House3_Text_QuestOk::
     .string "That is a strong POKéMON!\nTake this LINK CABLE.$"

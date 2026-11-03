@@ -190,9 +190,9 @@ VermilionCity_Text_RefAfter::
     .string "next REFUGE post is waiting.$"
 
 VermilionCity_Text_RefEarly::
-    .string "ELISE: Not yet. Finish the earlier\n"
-    .string "posts first. The KEEPER at the\n"
-    .string "SAFARI ZONE knows the order.$"
+	.string "ELISE: Not yet. Finish the earlier\n"
+	.string "posts first. The KEEPER at the\l"
+	.string "SAFARI ZONE knows the order.$"
 
 VermilionCity_Text_RefDone::
     .string "ELISE: Thank you again. The REFUGE\n"

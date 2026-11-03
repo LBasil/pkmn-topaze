@@ -324,11 +324,12 @@ PalletTown_Text_SceneryMineOpen::
     .string "The garnet hums inside.$"
 
 PalletTown_Text_RefAsk::
-    .string "AYA: I run the first REFUGE post. Our\n"
-    .string "first rule: nobody goes hungry.\n"
-    .string "POKéMON hurt in the wild have\n"
-    .string "nowhere to go but here.\pI need five POTIONS for the new\n"
-    .string "arrivals. Can you spare them?$"
+	.string "AYA: I run the first REFUGE post. Our\n"
+	.string "first rule: nobody goes hungry.\l"
+	.string "POKéMON hurt in the wild have\n"
+	.string "nowhere to go but here.\p"
+	.string "I need five POTIONS for the new\n"
+	.string "arrivals. Can you spare them?$"
 
 PalletTown_Text_RefOffer::
     .string "AYA: You have them! May I take\n"
@@ -347,9 +348,9 @@ PalletTown_Text_RefAfter::
     .string "next REFUGE post is waiting.$"
 
 PalletTown_Text_RefEarly::
-    .string "AYA: Not yet. Finish the earlier\n"
-    .string "posts first. The KEEPER at the\n"
-    .string "SAFARI ZONE knows the order.$"
+	.string "AYA: Not yet. Finish the earlier\n"
+	.string "posts first. The KEEPER at the\l"
+	.string "SAFARI ZONE knows the order.$"
 
 PalletTown_Text_RefDone::
     .string "AYA: Thank you again. The REFUGE\n"

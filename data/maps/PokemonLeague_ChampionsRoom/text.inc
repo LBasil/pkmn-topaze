@@ -16,18 +16,18 @@ PokemonLeague_ChampionsRoom_Text_OakPostBattle::
     .string "You are the new CHAMPION!$"
 
 PokemonLeague_ChampionsRoom_Text_BossIntro::
-    .string "???: So this is the new CHAMPION.\p"
-    .string "Do you know what waits in the\n"
-    .string "HALL OF FAME? JIRACHI.\p"
-    .string "One wish, for whoever stands at\n"
-    .string "the top.\p"
-    .string "I did not come to be a CHAMPION.\n"
-    .string "I came for what a CHAMPION wakes.\p"
-    .string "I will wish every POKéMON free\n"
-    .string "of humans. No more BALLS.\n"
-    .string "Never again.\p"
-    .string "Step aside, child. Or be\n"
-    .string "crushed!$"
+	.string "???: So this is the new CHAMPION.\p"
+	.string "Do you know what waits in the\n"
+	.string "HALL OF FAME? JIRACHI.\p"
+	.string "One wish, for whoever stands at\n"
+	.string "the top.\p"
+	.string "I did not come to be a CHAMPION.\n"
+	.string "I came for what a CHAMPION wakes.\p"
+	.string "I will wish every POKéMON free\n"
+	.string "of humans. No more BALLS.\l"
+	.string "Never again.\p"
+	.string "Step aside, child. Or be\n"
+	.string "crushed!$"
 
 PokemonLeague_ChampionsRoom_Text_BossDefeat::
     .string "Impossible...\n"
@@ -45,14 +45,14 @@ PokemonLeague_ChampionsRoom_Text_BossQuartzLost::
     .string "A gift I did not even ask for.$"
 
 PokemonLeague_ChampionsRoom_Text_BossLegends::
-    .string "???: Enough.\p"
-    .string "I did not want to use them yet.\p"
-    .string "The three birds. And the one\n"
-    .string "who watches over them all.\p"
-    .string "Every one I took bent the\n"
-    .string "world's clocks a little more.\n"
-    .string "Do you feel the time shaking?\p"
-    .string "Come, MEWTWO!$"
+	.string "???: Enough.\p"
+	.string "I did not want to use them yet.\p"
+	.string "The three birds. And the one\n"
+	.string "who watches over them all.\p"
+	.string "Every one I took bent the\n"
+	.string "world's clocks a little more.\l"
+	.string "Do you feel the time shaking?\p"
+	.string "Come, MEWTWO!$"
 
 PokemonLeague_ChampionsRoom_Text_BossDefeat2::
     .string "Even them... Even now...$"

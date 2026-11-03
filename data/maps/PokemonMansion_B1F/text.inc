@@ -21,10 +21,10 @@ PokemonMansion_B1F_Text_IvanPostBattle::
     .string "It's conducive to my studies.$"
 
 PokemonMansion_B1F_Text_MewtwoIsFarTooPowerful::
-    .string "Log: Sept. 1\n"
-    .string "The current down here is far too\n"
-    .string "strong to contain.\p"
-    .string "We have failed to tame the gallery.\n"
-    .string "Leave the key where it lies…$"
+	.string "Log: Sept. 1\n"
+	.string "The current down here is far too\l"
+	.string "strong to contain.\p"
+	.string "We have failed to tame the gallery.\n"
+	.string "Leave the key where it lies…$"
 
 
