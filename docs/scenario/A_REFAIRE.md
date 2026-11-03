@@ -319,3 +319,7 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 
 ## 02-11 (23h30)
 - Hall de verre (CeruleanCity_GlassHall) : l'escalier (8,10) mène bien à CERULEAN_CAVE_1F. Verrou = TRAINER_BIKER_1 (RED). Ajout d'un message « sceller » quand c'est fermé (avant : blocage silencieux). À FAIRE : refonte visuelle du hall (proposée à Basil, non faite).
+
+## 03-11 (07h22)
+- Giga Drain remis à 60 de puissance (le nerf à 40 du 19-10 est annulé).
+- CT19 (récompense de Sylvestre, arène 2) = TRANCHERBE (Razor Leaf, 55, crit élevé) au lieu de Giga Drain : tables CT, constante ITEM_TM19_RAZOR_LEAF, description, learnsets (87 espèces gardent le bit), texte ExplainTM03 de Tourmalia (+ rewrite_gyms.py). Tous les types Plante l'avaient déjà.

@@ -85,9 +85,9 @@ That includes even outsiders you got in trades.
 You can also use CUT anytime, out of battle, if you carry the HM. It clears small trees from your way.
 
 Take my favorite TM too.''')
-setlabel(g,'ExplainTM03','''TM19 contains GIGA DRAIN.
+setlabel(g,'ExplainTM03','''TM19 contains RAZOR LEAF.
 
-It saps the foe and heals you for half the damage. The forest way of fighting.''')
+It slashes with sharp leaves and often lands a critical hit. The forest way of fighting.''')
 p=R+g+'/scripts.inc'; s=open(p).read(); s=s.replace('ITEM_TM03','ITEM_TM19'); open(p,'w').write(s)
 setlabel(g,'GymGuyAdvice','''Yo! Champ in the making!
 

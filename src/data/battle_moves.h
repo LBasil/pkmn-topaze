@@ -2629,7 +2629,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     [MOVE_GIGA_DRAIN] =
     {
         .effect = EFFECT_ABSORB,
-        .power = 40, // Topaze: nerf (feedback 19-10, was 60)
+        .power = 60, // Topaze: back to 60 (03-11; nerf to 40 reverted, TM19 is now Razor Leaf)
         .type = TYPE_GRASS,
         .accuracy = 100,
         .pp = 5,

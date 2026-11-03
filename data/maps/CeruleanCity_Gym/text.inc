@@ -11,10 +11,10 @@ CeruleanCity_Gym_Text_MistyIntro::
     .string "Let's see what you've got!$"
 
 CeruleanCity_Gym_Text_ExplainTM03::
-    .string "TM19 contains GIGA DRAIN.\p"
-    .string "It saps the foe and heals you for\n"
-    .string "half the damage. The forest way\p"
-    .string "of fighting.$"
+    .string "TM19 contains RAZOR LEAF.\p"
+    .string "It slashes with sharp leaves and\n"
+    .string "often lands a critical hit. The\p"
+    .string "forest way of fighting.$"
 
 CeruleanCity_Gym_Text_ExplainCascadeBadge::
     .string "The TOURMALINE BADGE makes all\n"
