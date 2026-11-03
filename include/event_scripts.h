@@ -1087,6 +1087,8 @@ extern const u8 Help_Text_OwnMoveWater[];
 extern const u8 Help_Text_OwnPokemonWater[];
 extern const u8 Help_Text_OwnMoveBug[];
 extern const u8 Help_Text_OwnPokemonBug[];
+extern const u8 Help_Text_OwnMoveFairy[];
+extern const u8 Help_Text_OwnPokemonFairy[];
 extern const u8 Help_Text_HowToUseTypeMatchupList[];
 extern const u8 Help_Text_TypeMatchupOwnMoveDark[];
 extern const u8 Help_Text_TypeMatchupOwnPokemonDark[];
@@ -1122,6 +1124,8 @@ extern const u8 Help_Text_TypeMatchupOwnMoveWater[];
 extern const u8 Help_Text_TypeMatchupOwnPokemonWater[];
 extern const u8 Help_Text_TypeMatchupOwnMoveBug[];
 extern const u8 Help_Text_TypeMatchupOwnPokemonBug[];
+extern const u8 Help_Text_TypeMatchupOwnMoveFairy[];
+extern const u8 Help_Text_TypeMatchupOwnPokemonFairy[];
 
 extern const u8 EventScript_FldEffStrength[];
 extern const u8 EventScript_FailSweetScent[];

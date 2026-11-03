@@ -582,7 +582,8 @@ static const u8 *const sHelpSystemGeneralTopicDescriptionTextPtrs[] = {
     28, 29,                 \
     30, 31,                 \
     32, 33,                 \
-    34, 35                  \
+    34, 35,                 \
+    36, 37                  \
 
 static const u8 *const sHelpSystemTypeMatchupTextPtrs[] = {
     [HELP_NONE] = NULL,
@@ -620,7 +621,9 @@ static const u8 *const sHelpSystemTypeMatchupTextPtrs[] = {
     [32] = Help_Text_OwnMoveWater,
     [33] = Help_Text_OwnPokemonWater,
     [34] = Help_Text_OwnMoveBug,
-    [35] = Help_Text_OwnPokemonBug
+    [35] = Help_Text_OwnPokemonBug,
+    [36] = Help_Text_OwnMoveFairy,
+    [37] = Help_Text_OwnPokemonFairy
 };
 
 static const u8 *const sHelpSystemTypeMatchupDescriptionTextPtrs[] = {
@@ -659,7 +662,9 @@ static const u8 *const sHelpSystemTypeMatchupDescriptionTextPtrs[] = {
     [32] = Help_Text_TypeMatchupOwnMoveWater,
     [33] = Help_Text_TypeMatchupOwnPokemonWater,
     [34] = Help_Text_TypeMatchupOwnMoveBug,
-    [35] = Help_Text_TypeMatchupOwnPokemonBug
+    [35] = Help_Text_TypeMatchupOwnPokemonBug,
+    [36] = Help_Text_TypeMatchupOwnMoveFairy,
+    [37] = Help_Text_TypeMatchupOwnPokemonFairy
 };
 
 static const u8 sAboutGame_TitleScreen[] = {

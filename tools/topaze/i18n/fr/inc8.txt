@@ -32,37 +32,41 @@ Help_Text_OwnMoveWater|Type de mon attaque : EAU$
 Help_Text_OwnPokemonWater|Type de mon POKéMON : EAU$
 Help_Text_OwnMoveBug|Type de mon attaque : INSECTE$
 Help_Text_OwnPokemonBug|Type de mon POKéMON : INSECTE$
-Help_Text_TypeMatchupOwnMoveDark|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: PSY, SPECTRE\p   {TRIANGLE}: COMBAT, TÉNÈBRES, ACIER$
-Help_Text_TypeMatchupOwnPokemonDark|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: COMBAT, INSECTE\p   {TRIANGLE}: SPECTRE, TÉNÈBRES\p   {BIG_MULT_X}: PSY$
+Help_Text_OwnMoveFairy|Type de mon attaque : FÉE$
+Help_Text_OwnPokemonFairy|Type de mon POKéMON : FÉE$
+Help_Text_TypeMatchupOwnMoveDark|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: PSY, SPECTRE\p   {TRIANGLE}: COMBAT, TÉNÈBRES, ACIER, FÉE$
+Help_Text_TypeMatchupOwnPokemonDark|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: COMBAT, INSECTE, FÉE\p   {TRIANGLE}: SPECTRE, TÉNÈBRES\p   {BIG_MULT_X}: PSY$
 Help_Text_TypeMatchupOwnMoveRock|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: FEU, GLACE, VOL, INSECTE\p   {TRIANGLE}: COMBAT, SOL, ACIER$
-Help_Text_TypeMatchupOwnPokemonRock|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: EAU, PLANTE, COMBAT,\n       SOL, ACIER\p   {TRIANGLE}: NORMAL, FEU, POISON, VOL$
+Help_Text_TypeMatchupOwnPokemonRock|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: EAU, PLANTE, COMBAT, SOL, ACIER\p   {TRIANGLE}: NORMAL, FEU, POISON, VOL$
 Help_Text_TypeMatchupOwnMovePsychic|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: COMBAT, POISON\p   {TRIANGLE}: PSY, ACIER\p   {BIG_MULT_X}: TÉNÈBRES$
 Help_Text_TypeMatchupOwnPokemonPsychic|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: INSECTE, SPECTRE, TÉNÈBRES\p   {TRIANGLE}: COMBAT, PSY$
-Help_Text_TypeMatchupOwnMoveFighting|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: NORMAL, GLACE, ROCHE,\n       TÉNÈBRES, ACIER\p   {TRIANGLE}: POISON, VOL, PSY, INSECTE\p   {BIG_MULT_X}: SPECTRE$
-Help_Text_TypeMatchupOwnPokemonFighting|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: VOL, PSY\p   {TRIANGLE}: INSECTE, ROCHE, TÉNÈBRES$
+Help_Text_TypeMatchupOwnMoveFighting|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: NORMAL, GLACE, ROCHE, TÉNÈBRES,\n       ACIER\p   {TRIANGLE}: POISON, VOL, PSY, INSECTE, FÉE$
+Help_Text_TypeMatchupOwnPokemonFighting|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: VOL, PSY, FÉE\p   {TRIANGLE}: INSECTE, ROCHE, TÉNÈBRES$
 Help_Text_TypeMatchupOwnMoveGrass|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: EAU, SOL, ROCHE\p   {TRIANGLE}: FEU, PLANTE, POISON, VOL,\n       INSECTE, DRAGON, ACIER$
 Help_Text_TypeMatchupOwnPokemonGrass|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: FEU, GLACE, POISON, VOL, INSECTE\p   {TRIANGLE}: EAU, ÉLECTRIK, PLANTE, SOL$
 Help_Text_TypeMatchupOwnMoveGhost|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: PSY, SPECTRE\p   {TRIANGLE}: TÉNÈBRES, ACIER\p   {BIG_MULT_X}: NORMAL$
-Help_Text_TypeMatchupOwnPokemonGhost|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: SPECTRE, TÉNÈBRES\p   {TRIANGLE}: POISON, INSECTE\p   {BIG_MULT_X}: NORMAL, COMBAT$
-Help_Text_TypeMatchupOwnMoveIce|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: PLANTE, SOL, VOL, DRAGON\p   {TRIANGLE}: FEU, EAU, GLACE, ACIER$
+Help_Text_TypeMatchupOwnPokemonGhost|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: SPECTRE, TÉNÈBRES\p   {TRIANGLE}: POISON, INSECTE$
+Help_Text_TypeMatchupOwnMoveIce|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: PLANTE, SOL, VOL, DRAGON\p   {TRIANGLE}: EAU, GLACE, ACIER, FEU$
 Help_Text_TypeMatchupOwnPokemonIce|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: FEU, COMBAT, ROCHE, ACIER\p   {TRIANGLE}: GLACE$
-Help_Text_TypeMatchupOwnMoveGround|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: FEU, ÉLECTRIK, POISON, ROCHE,\n       ACIER\p   {TRIANGLE}: PLANTE, INSECTE\n   {BIG_MULT_X}: VOL$
+Help_Text_TypeMatchupOwnMoveGround|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: FEU, ÉLECTRIK, POISON, ROCHE,\n       ACIER\p   {TRIANGLE}: PLANTE, INSECTE\p   {BIG_MULT_X}: VOL$
 Help_Text_TypeMatchupOwnPokemonGround|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: EAU, PLANTE, GLACE\p   {TRIANGLE}: POISON, ROCHE\p   {BIG_MULT_X}: ÉLECTRIK$
 Help_Text_TypeMatchupOwnMoveElectric|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: EAU, VOL\p   {TRIANGLE}: ÉLECTRIK, PLANTE, DRAGON\p   {BIG_MULT_X}: SOL$
 Help_Text_TypeMatchupOwnPokemonElectric|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: SOL\p   {TRIANGLE}: ÉLECTRIK, VOL, ACIER$
-Help_Text_TypeMatchupOwnMovePoison|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: PLANTE\p   {TRIANGLE}: POISON, SOL, ROCHE, SPECTRE\p   {BIG_MULT_X}: ACIER$
-Help_Text_TypeMatchupOwnPokemonPoison|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: SOL, PSY\p   {TRIANGLE}: PLANTE, COMBAT, POISON, INSECTE$
-Help_Text_TypeMatchupOwnMoveDragon|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: DRAGON\p   {TRIANGLE}: ACIER$
-Help_Text_TypeMatchupOwnPokemonDragon|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: GLACE, DRAGON\p   {TRIANGLE}: FEU, EAU, ÉLECTRIK, PLANTE$
-Help_Text_TypeMatchupOwnMoveNormal|Effet sur le POKéMON adverse :\p   {TRIANGLE}: ROCHE, ACIER\p   {BIG_MULT_X}: SPECTRE$
+Help_Text_TypeMatchupOwnMovePoison|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: PLANTE, FÉE\p   {TRIANGLE}: POISON, SOL, ROCHE, SPECTRE\p   {BIG_MULT_X}: ACIER$
+Help_Text_TypeMatchupOwnPokemonPoison|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: SOL, PSY\p   {TRIANGLE}: PLANTE, COMBAT, POISON, INSECTE,\n       FÉE$
+Help_Text_TypeMatchupOwnMoveDragon|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: DRAGON\p   {TRIANGLE}: ACIER\p   {BIG_MULT_X}: FÉE$
+Help_Text_TypeMatchupOwnPokemonDragon|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: GLACE, DRAGON, FÉE\p   {TRIANGLE}: FEU, EAU, ÉLECTRIK, PLANTE$
+Help_Text_TypeMatchupOwnMoveNormal|Effet sur le POKéMON adverse :\p   {TRIANGLE}: ROCHE, ACIER$
 Help_Text_TypeMatchupOwnPokemonNormal|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: COMBAT\p   {BIG_MULT_X}: SPECTRE$
-Help_Text_TypeMatchupOwnMoveSteel|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: GLACE, ROCHE\p   {TRIANGLE}: FEU, EAU, ÉLECTRIK, ACIER$
-Help_Text_TypeMatchupOwnPokemonSteel|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: FEU, COMBAT, SOL\n   {TRIANGLE}: NORMAL, PLANTE, GLACE, VOL,\l       PSY, INSECTE, ROCHE, SPECTRE,\l       DRAGON, TÉNÈBRES, ACIER\l   {BIG_MULT_X}: POISON$
+Help_Text_TypeMatchupOwnMoveSteel|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: GLACE, ROCHE, FÉE\p   {TRIANGLE}: FEU, EAU, ÉLECTRIK, ACIER$
+Help_Text_TypeMatchupOwnPokemonSteel|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: FEU, COMBAT, SOL\p   {TRIANGLE}: NORMAL, PLANTE, GLACE, VOL, PSY,\n       INSECTE, ROCHE, SPECTRE,\n       DRAGON, TÉNÈBRES, ACIER, FÉE\p   {BIG_MULT_X}: POISON$
 Help_Text_TypeMatchupOwnMoveFlying|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: PLANTE, COMBAT, INSECTE\p   {TRIANGLE}: ÉLECTRIK, ROCHE, ACIER$
 Help_Text_TypeMatchupOwnPokemonFlying|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: ÉLECTRIK, GLACE, ROCHE\p   {TRIANGLE}: PLANTE, COMBAT, INSECTE\p   {BIG_MULT_X}: SOL$
 Help_Text_TypeMatchupOwnMoveFire|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: PLANTE, GLACE, INSECTE, ACIER\p   {TRIANGLE}: FEU, EAU, ROCHE, DRAGON$
-Help_Text_TypeMatchupOwnPokemonFire|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: EAU, SOL, ROCHE\p   {TRIANGLE}: FEU, PLANTE, GLACE,\n       INSECTE, ACIER$
+Help_Text_TypeMatchupOwnPokemonFire|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: EAU, SOL, ROCHE\p   {TRIANGLE}: FEU, PLANTE, GLACE, INSECTE,\n       ACIER, FÉE$
 Help_Text_TypeMatchupOwnMoveWater|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: FEU, SOL, ROCHE\p   {TRIANGLE}: EAU, PLANTE, DRAGON$
 Help_Text_TypeMatchupOwnPokemonWater|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: ÉLECTRIK, PLANTE\p   {TRIANGLE}: FEU, EAU, GLACE, ACIER$
-Help_Text_TypeMatchupOwnMoveBug|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: PLANTE, PSY, TÉNÈBRES\p   {TRIANGLE}: FEU, COMBAT, POISON,\n       VOL, SPECTRE, ACIER$
+Help_Text_TypeMatchupOwnMoveBug|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: PLANTE, PSY, TÉNÈBRES\p   {TRIANGLE}: FEU, COMBAT, POISON, VOL,\n       SPECTRE, ACIER, FÉE$
 Help_Text_TypeMatchupOwnPokemonBug|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: FEU, VOL, ROCHE\p   {TRIANGLE}: PLANTE, COMBAT, SOL$
+Help_Text_TypeMatchupOwnMoveFairy|Effet sur le POKéMON adverse :\p   {CIRCLE_DOT}: COMBAT, DRAGON, TÉNÈBRES\p   {TRIANGLE}: FEU, POISON, ACIER$
+Help_Text_TypeMatchupOwnPokemonFairy|Effet de l'attaque adverse sur toi :\p   {CIRCLE_DOT}: POISON, ACIER\p   {TRIANGLE}: COMBAT, INSECTE, TÉNÈBRES\p   {BIG_MULT_X}: DRAGON$
