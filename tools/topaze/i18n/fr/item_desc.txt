@@ -1,0 +1,272 @@
+ITEM_MASTER_BALL|Assurément la Poké Ball la plus\nperformante. Elle permet de capturer\nà coup sûr un Pokémon sauvage.
+ITEM_SAFARI_BALL|Une Poké Ball spéciale anciennement\nutilisée au Parc Safari de Kanto et\nau Grand Marais de Sinnoh.
+ITEM_NET_BALL|Une Poké Ball un peu spéciale qui\nfonctionne particulièrement bien sur\nles Pokémon Eau ou Insecte.
+ITEM_DIVE_BALL|Une Poké Ball un peu spéciale qui\nfonctionne particulièrement bien sur\nles Pokémon sous-marins.
+ITEM_NEST_BALL|Une Poké Ball un peu spéciale qui\nfonctionne particulièrement bien sur\nles Pokémon les plus faibles.
+ITEM_REPEAT_BALL|Une Poké Ball un peu spéciale qui\nfonctionne particulièrement bien sur\nles espèces de Pokémon déjà
+ITEM_TIMER_BALL|Une Poké Ball un peu spéciale qui\nfonctionne de mieux en mieux à\nmesure que le combat s’éternise.
+ITEM_LUXURY_BALL|Une Poké Ball pratique qui permet de\ngagner rapidement l’amitié d’un\nPokémon sauvage attrapé.
+ITEM_PREMIER_BALL|Une Poké Ball assez rare qui fut\ncréée pour un évènement particulier.
+ITEM_POTION|Un spray qui soigne les blessures.\nRestaure 20 PV d’un Pokémon.
+ITEM_ANTIDOTE|Un médicament sous forme de spray.\nGuérit un Pokémon empoisonné.
+ITEM_BURN_HEAL|Un médicament sous forme de spray.\nSoigne les brûlures d’un Pokémon.
+ITEM_ICE_HEAL|Un médicament sous forme de spray.\nRéchauffe un Pokémon gelé.
+ITEM_AWAKENING|Un médicament sous forme de spray.\nRéveille un Pokémon endormi.
+ITEM_PARALYZE_HEAL|Un médicament sous forme de spray.\nSoigne un Pokémon de la paralysie.
+ITEM_FULL_RESTORE|Un médicament qui restaure tous les\nPV d’un Pokémon et soigne toutes ses\naltérations de statut.
+ITEM_MAX_POTION|Un spray qui soigne les blessures.\nRestaure tous les PV d’un Pokémon.
+ITEM_HYPER_POTION|Un spray qui soigne les blessures.\nRestaure 120 PV d’un Pokémon.
+ITEM_SUPER_POTION|Un spray qui soigne les blessures.\nRestaure 60 PV d’un Pokémon.
+ITEM_FULL_HEAL|Un médicament sous forme de spray.\nSoigne toutes les altérations de\nstatut d’un Pokémon.
+ITEM_REVIVE|Un médicament qui ranime un Pokémon\nK.O. et restaure la moitié de ses PV\nmax.
+ITEM_MAX_REVIVE|Un médicament qui ranime un Pokémon\nK.O. et restaure tous ses PV.
+ITEM_FRESH_WATER|Une eau riche en minéraux. Restaure\n30 PV d’un Pokémon.
+ITEM_SODA_POP|Une boisson pétillante. Restaure 50\nPV d’un Pokémon.
+ITEM_LEMONADE|Une boisson très sucrée. Restaure 70\nPV d’un Pokémon.
+ITEM_MOOMOO_MILK|Un lait très nourrissant. Restaure\n100 PV d’un Pokémon.
+ITEM_ENERGY_POWDER|Une poudre médicinale très amère.\nRestaure 60 PV d’un Pokémon.
+ITEM_ENERGY_ROOT|Une racine très amère. Restaure 120\nPV d’un Pokémon.
+ITEM_HEAL_POWDER|Une poudre médicinale très amère.\nSoigne toutes les altérations de\nstatut d’un Pokémon.
+ITEM_REVIVAL_HERB|Une herbe médicinale très amère.\nRanime un Pokémon K.O. et restaure\ntous ses PV.
+ITEM_ETHER|Restaure 10 PP d’une capacité\nsélectionnée.
+ITEM_MAX_ETHER|Restaure tous les PP d’une capacité\nsélectionnée.
+ITEM_ELIXIR|Restaure 10 PP de toutes les\ncapacités d’un Pokémon.
+ITEM_MAX_ELIXIR|Restaure tous les PP de toutes les\ncapacités d’un Pokémon.
+ITEM_LAVA_COOKIE|Une spécialité de Vermilava. Soigne\ntoutes les altérations de statut\nd’un Pokémon.
+ITEM_BLUE_FLUTE|Un jouet en forme de flûte en verre\nbleu. Réveille un Pokémon endormi.
+ITEM_YELLOW_FLUTE|Un jouet en forme de flûte en verre\njaune. Soigne la confusion.
+ITEM_RED_FLUTE|Un jouet en forme de flûte en verre\nrouge. Annule l’effet du statut\nattraction.
+ITEM_BLACK_FLUTE|Un jouet en forme de flûte en verre\nnoir.
+ITEM_WHITE_FLUTE|Un jouet en forme de flûte en verre\nblanc.
+ITEM_BERRY_JUICE|Une boisson 100 % pur Jus de Baie.\nRestaure 20 PV d’un Pokémon.
+ITEM_SACRED_ASH|Ranime tous les Pokémon K.O. et\nrestaure tous leurs PV.
+ITEM_SHOAL_SALT|Du sel provenant de la Grotte\nTréfonds.
+ITEM_SHOAL_SHELL|Un coquillage provenant de la Grotte\nTréfonds.
+ITEM_RED_SHARD|Un petit tesson rouge. Il semble\nprovenir d’un objet très ancien.
+ITEM_BLUE_SHARD|Un petit tesson bleu. Il semble\nprovenir d’un objet très ancien.
+ITEM_YELLOW_SHARD|Un petit tesson jaune. Il semble\nprovenir d’un objet très ancien.
+ITEM_GREEN_SHARD|Un petit tesson vert. Il semble\nprovenir d’un objet très ancien.
+ITEM_HP_UP|Une boisson très nutritive qui\naugmente les PV de base d’un\nPokémon.
+ITEM_PROTEIN|Une boisson très nutritive qui\naugmente l’Attaque de base d’un\nPokémon.
+ITEM_IRON|Une boisson très nutritive qui\naugmente la Défense de base d’un\nPokémon.
+ITEM_CARBOS|Une boisson très nutritive qui\naugmente la Vitesse de base d’un\nPokémon.
+ITEM_CALCIUM|Une boisson très nutritive qui\naugmente l’Attaque Spéciale de base\nd’un Pokémon.
+ITEM_RARE_CANDY|Un bonbon plein d’énergie. Il permet\nà un Pokémon de monter d’un niveau.
+ITEM_PP_UP|Augmente un peu les PP max d’une\ncapacité sélectionnée.
+ITEM_ZINC|Une boisson très nutritive qui\naugmente la Défense Spéciale de base\nd’un Pokémon.
+ITEM_PP_MAX|Augmente sensiblement les PP max\nd’une capacité sélectionnée.
+ITEM_GUARD_SPEC|Empêche la baisse des stats de tous\nles Pokémon de l’équipe pendant cinq\ntours.
+ITEM_DIRE_HIT|Monte fortement le taux de\ncritiques. Utilisable une seule\nfois.
+ITEM_X_ATTACK|Augmente beaucoup l’Attaque pendant\nun combat. L’effet disparaît si le\nPokémon est retiré.
+ITEM_X_DEFEND|Augmente beaucoup la Défense pendant\nun combat. L’effet disparaît si le\nPokémon est retiré.
+ITEM_X_SPEED|Augmente beaucoup la Vitesse pendant\nun combat. L’effet disparaît si le\nPokémon est retiré.
+ITEM_X_ACCURACY|Augmente beaucoup la Précision\npendant un combat. L’effet disparaît\nsi le Pokémon est retiré.
+ITEM_POKE_DOLL|Une poupée qui attire les Pokémon.\nPermet de s’enfuir d’un combat\ncontre un Pokémon sauvage.
+ITEM_FLUFFY_TAIL|Un objet qui attire les Pokémon.\nPermet de s’enfuir d’un combat\ncontre un Pokémon sauvage.
+ITEM_SUPER_REPEL|Repousse les Pokémon sauvages\nfaibles pendant une durée plus\nlongue que celle du Repousse.
+ITEM_MAX_REPEL|Repousse les Pokémon sauvages\nfaibles pendant une durée plus\nlongue que celle du Super Repousse.
+ITEM_ESCAPE_ROPE|Une corde longue et solide\npermettant de sortir rapidement\nd’une grotte ou d’un donjon.
+ITEM_REPEL|Repousse les Pokémon sauvages\nfaibles pendant un court moment.
+ITEM_SUN_STONE|Une pierre étrange qui fait évoluer\ncertaines espèces de Pokémon. Elle\nest rouge comme le soleil couchant.
+ITEM_MOON_STONE|Une pierre étrange qui fait évoluer\ncertaines espèces de Pokémon. Elle\nest sombre comme la nuit.
+ITEM_FIRE_STONE|Une pierre étrange qui fait évoluer\ncertaines espèces de Pokémon. Elle\nest jaune et orange.
+ITEM_THUNDER_STONE|Une pierre étrange qui fait évoluer\ncertaines espèces de Pokémon. Un\néclair est dessiné dessus.
+ITEM_WATER_STONE|Une pierre étrange qui fait évoluer\ncertaines espèces de Pokémon. Elle\nest de couleur bleue.
+ITEM_LEAF_STONE|Une pierre étrange qui fait évoluer\ncertaines espèces de Pokémon. Une\nfeuille est dessinée dessus.
+ITEM_TINY_MUSHROOM|Un petit champignon assez rare. Il\nest plutôt populaire parmi certains\nfans dévoués.
+ITEM_BIG_MUSHROOM|Un grand champignon assez rare. Il\nest très populaire parmi certains\nfans dévoués.
+ITEM_PEARL|Une petite perle qui brille d’une\njolie couleur argent. Peut être\nvendue à bas prix en magasin.
+ITEM_BIG_PEARL|Une grosse perle qui brille d’une\njolie couleur argent. Peut être\nvendue à bon prix en magasin.
+ITEM_STARDUST|Du sable rouge ravissant, aux grains\ntrès fins. Peut être vendu aux\nmagasins pour un peu d’argent.
+ITEM_STAR_PIECE|Un fragment de gemme qui brille d’un\néclat rouge. Peut être vendu à bon\nprix en magasin.
+ITEM_NUGGET|Une pépite d’or pur qui brille d’un\néclat magnifique. Peut être vendue à\nbon prix en magasin.
+ITEM_HEART_SCALE|Une très rare et jolie écaille en\nforme de cœur. Elle brille\nlégèrement d’un éclat arc-en-ciel.
+ITEM_CHERI_BERRY|Une Baie qui soigne la paralysie\nlorsqu’elle est tenue par un\nPokémon.
+ITEM_CHESTO_BERRY|Une Baie qui soigne le sommeil\nlorsqu’elle est tenue par un\nPokémon.
+ITEM_PECHA_BERRY|Une Baie qui soigne l’empoisonnement\nlorsqu’elle est tenue par un\nPokémon.
+ITEM_RAWST_BERRY|Une Baie qui soigne une brûlure\nlorsqu’elle est tenue par un\nPokémon.
+ITEM_ASPEAR_BERRY|Une Baie qui soigne le gel\nlorsqu’elle est tenue par un\nPokémon.
+ITEM_LEPPA_BERRY|Une Baie qui restaure 10 PP\nlorsqu’elle est tenue par un\nPokémon.
+ITEM_ORAN_BERRY|Une Baie qui restaure 10 PV\nlorsqu’elle est tenue par un\nPokémon.
+ITEM_PERSIM_BERRY|Une Baie qui soigne la confusion\nlorsqu’elle est tenue par un\nPokémon.
+ITEM_LUM_BERRY|Une Baie qui soigne toutes les\naltérations de statut lorsqu’elle\nest tenue par un Pokémon.
+ITEM_SITRUS_BERRY|Une Baie qui restaure quelques PV\nlorsqu’elle est tenue par un\nPokémon.
+ITEM_FIGY_BERRY|Tenue, cette Baie restaure des PV en\ncas de besoin, mais rend le Pokémon\nconfus si son goût lui déplaît.
+ITEM_WIKI_BERRY|Tenue, cette Baie restaure des PV en\ncas de besoin, mais rend le Pokémon\nconfus si son goût lui déplaît.
+ITEM_MAGO_BERRY|Tenue, cette Baie restaure des PV en\ncas de besoin, mais rend le Pokémon\nconfus si son goût lui déplaît.
+ITEM_AGUAV_BERRY|Tenue, cette Baie restaure des PV en\ncas de besoin, mais rend le Pokémon\nconfus si son goût lui déplaît.
+ITEM_IAPAPA_BERRY|Tenue, cette Baie restaure des PV en\ncas de besoin, mais rend le Pokémon\nconfus si son goût lui déplaît.
+ITEM_RAZZ_BERRY|Une Baie à donner à un Pokémon\nsauvage pour pouvoir l’attraper un\npeu plus facilement.
+ITEM_BLUK_BERRY|Une Baie très rare à Unys.
+ITEM_NANAB_BERRY|Une Baie à donner à un Pokémon\nsauvage au moment de la capture pour\nle calmer un court instant.
+ITEM_WEPEAR_BERRY|Une Baie très rare à Unys.
+ITEM_PINAP_BERRY|Une Baie très rare à Unys.
+ITEM_POMEG_BERRY|Une Baie qui rend les Pokémon plus\namicaux, mais baisse leurs PV de\nbase.
+ITEM_KELPSY_BERRY|Une Baie qui rend les Pokémon plus\namicaux, mais baisse leur Attaque de\nbase.
+ITEM_QUALOT_BERRY|Une Baie qui rend les Pokémon plus\namicaux, mais baisse leur Défense de\nbase.
+ITEM_HONDEW_BERRY|Une Baie qui rend les Pokémon plus\namicaux, mais baisse leur Attaque\nSpéciale de base.
+ITEM_GREPA_BERRY|Une Baie qui rend les Pokémon plus\namicaux, mais baisse leur Défense\nSpéciale de base.
+ITEM_TAMATO_BERRY|Une Baie qui rend les Pokémon plus\namicaux, mais baisse leur Vitesse de\nbase.
+ITEM_CORNN_BERRY|Une Baie très rare à Unys.
+ITEM_MAGOST_BERRY|Une Baie très rare à Unys.
+ITEM_RABUTA_BERRY|Une Baie très rare à Unys.
+ITEM_NOMEL_BERRY|Une Baie très rare à Unys.
+ITEM_SPELON_BERRY|Une Baie très rare à Unys.
+ITEM_PAMTRE_BERRY|Une Baie très rare à Unys.
+ITEM_WATMEL_BERRY|Une Baie très rare à Unys.
+ITEM_DURIN_BERRY|Une Baie très rare à Unys.
+ITEM_BELUE_BERRY|Une Baie très rare à Unys.
+ITEM_LIECHI_BERRY|Tenue, cette Baie augmente l’Attaque\nen cas de besoin.
+ITEM_GANLON_BERRY|Tenue, cette Baie augmente la\nDéfense en cas de besoin.
+ITEM_SALAC_BERRY|Tenue, cette Baie augmente la\nVitesse en cas de besoin.
+ITEM_PETAYA_BERRY|Tenue, cette Baie augmente l’Attaque\nSpéciale en cas de besoin.
+ITEM_APICOT_BERRY|Tenue, cette Baie augmente la\nDéfense Spéciale en cas de besoin.
+ITEM_LANSAT_BERRY|Tenue, cette Baie augmente le taux\nde critiques en cas de besoin.
+ITEM_STARF_BERRY|Tenue, cette Baie augmente beaucoup\nune des stats en cas de besoin.
+ITEM_ENIGMA_BERRY|Tenue, cette Baie restaure les PV du\nPokémon s’il subit une attaque super\nefficace.
+ITEM_BRIGHT_POWDER|Objet à tenir. Intimide l’ennemi et\nbaisse sa Précision.
+ITEM_WHITE_HERB|Objet à tenir. Restaure les stats\nqui ont subi une baisse. Ne peut\nêtre utilisé qu’une fois.
+ITEM_MACHO_BRACE|Objet à tenir. Un bracelet dur et\nlourd qui rend le porteur plus fort,\nmais baisse sa Vitesse.
+ITEM_EXP_SHARE|Objet à tenir. Le porteur reçoit une\npartie des points Exp. du combat\nsans avoir à combattre.
+ITEM_QUICK_CLAW|Objet à tenir. Une griffe légère\nmais tranchante qui permet parfois\nde frapper en priorité.
+ITEM_SOOTHE_BELL|Objet à tenir. Un grelot dont le\ncarillon calme le porteur et\nfavorise l’amitié.
+ITEM_MENTAL_HERB|Objet à tenir. Empêche le Pokémon de\ntomber amoureux. Ne peut être\nutilisé qu’une fois.
+ITEM_CHOICE_BAND|Objet à tenir. Ce bandeau augmente\nl’Attaque, mais ne permet d’utiliser\nqu’une seule capacité.
+ITEM_KINGS_ROCK|Objet à tenir. Peut apeurer l’ennemi\nlorsque le porteur lui inflige des\ndégâts.
+ITEM_SILVER_POWDER|Objet à tenir. De la poudre d’argent\nbrillante qui augmente la puissance\ndes capacités de type Insecte.
+ITEM_AMULET_COIN|Objet à tenir. Double l’argent gagné\nsi le porteur se joint au combat.
+ITEM_CLEANSE_TAG|Objet à tenir. Aide à repousser les\nPokémon sauvages si le porteur est\nle premier Pokémon de l’équipe.
+ITEM_SOUL_DEW|Orbe prodigieux à faire tenir à\nLatios ou Latias qui monte leur\nAttaque Spéciale et leur Défense
+ITEM_DEEP_SEA_TOOTH|Objet à faire tenir à Coquiperl. Une\ndent de couleur argent qui augmente\nson Attaque Spéciale.
+ITEM_DEEP_SEA_SCALE|Objet à faire tenir à Coquiperl. Une\nécaille de couleur rose qui augmente\nsa Défense Spéciale.
+ITEM_SMOKE_BALL|Objet à tenir. Permet au porteur de\ns’enfuir à coup sûr face à un\nPokémon sauvage.
+ITEM_EVERSTONE|Objet à tenir. Une pierre\nmerveilleuse empêchant l’évolution.
+ITEM_FOCUS_BAND|Objet à tenir pouvant parfois\nempêcher d’être mis K.O., ne\nlaissant qu’un seul PV.
+ITEM_LUCKY_EGG|Objet à tenir. Un œuf rempli de joie\nqui augmente le nombre de Points\nd’Expérience gagnés au combat.
+ITEM_SCOPE_LENS|Objet à tenir. Une lentille qui\naugmente le taux de critiques du\nporteur.
+ITEM_METAL_COAT|Objet à tenir. Pellicule métallique\nspéciale qui monte la puissance des\ncapacités de type Acier.
+ITEM_LEFTOVERS|Objet à tenir. Permet de restaurer\ngraduellement les PV du porteur\ndurant le combat.
+ITEM_DRAGON_SCALE|Une écaille épaisse et dure, parfois\ntenue par les Pokémon de type Dragon\nquand ils sont attrapés.
+ITEM_LIGHT_BALL|Objet à faire tenir à Pikachu. Un\norbe énigmatique qui augmente son\nAttaque et son Attaque Spéciale.
+ITEM_SOFT_SAND|Objet à tenir. Du sable fin et\nsoyeux qui augmente la puissance des\ncapacités de type Sol.
+ITEM_HARD_STONE|Objet à tenir. Une pierre incassable\nqui augmente la puissance des\ncapacités de type Roche.
+ITEM_MIRACLE_SEED|Objet à tenir. Une graine remplie de\nvie qui augmente la puissance des\ncapacités de type Plante.
+ITEM_BLACK_GLASSES|Objet à tenir.
+ITEM_BLACK_BELT|Objet à tenir. Une ceinture d’art\nmartial qui augmente la puissance\ndes capacités de type Combat.
+ITEM_MAGNET|Objet à tenir. Un aimant puissant\nqui augmente la puissance des\ncapacités de type Électrik.
+ITEM_MYSTIC_WATER|Objet à tenir. Une gemme en forme de\ngoutte d’eau qui augmente la\npuissance des capacités de type Eau.
+ITEM_SHARP_BEAK|Objet à tenir. Un bec long et pointu\nqui augmente la puissance des\ncapacités de type Vol.
+ITEM_POISON_BARB|Objet à tenir. Un petit pic\nempoisonné qui augmente la puissance\ndes capacités de type Poison.
+ITEM_NEVER_MELT_ICE|Objet à tenir.
+ITEM_SPELL_TAG|Objet à tenir. Un talisman sinistre\net étrange qui augmente la puissance\ndes capacités de type Spectre.
+ITEM_TWISTED_SPOON|Objet à tenir. Cuillère contenant un\npouvoir télékinésique montant la\npuissance des capacités de type Psy.
+ITEM_CHARCOAL|Objet à tenir. Un combustible qui\naugmente la puissance des capacités\nde type Feu.
+ITEM_DRAGON_FANG|Objet à tenir. Un croc dur et pointu\nqui augmente la puissance des\ncapacités de type Dragon.
+ITEM_SILK_SCARF|Objet à tenir. Un mouchoir somptueux\nqui augmente la puissance des\ncapacités de type Normal.
+ITEM_UP_GRADE|Un dispositif transparent rempli de\ndonnées diverses et variées.\nFabriqué par la Sylphe SARL.
+ITEM_SHELL_BELL|Objet à tenir. Restaure un peu les\nPV du porteur chaque fois qu’il\ninflige des dégâts.
+ITEM_SEA_INCENSE|Objet à tenir. Un encens au parfum\ncurieux augmentant la puissance des\ncapacités de type Eau.
+ITEM_LAX_INCENSE|Objet à tenir. Le parfum trompeur de\ncet encens baisse la Précision de\nl’ennemi.
+ITEM_LUCKY_PUNCH|Objet à faire tenir à Leveinard. Une\npaire de gants qui augmente son taux\nde critiques.
+ITEM_METAL_POWDER|Objet à faire tenir à Métamorph.\nCette poudre étrange, très fine mais\nrésistante, augmente sa Défense.
+ITEM_THICK_CLUB|Objet à faire tenir à Osselait ou\nOssatueur. Un os dur qui augmente\nleur Attaque.
+ITEM_STICK|Un ticket nécessaire pour embarquer\nà bord de L’Océane. Il y a une image\ndu navire dessus.
+ITEM_PRISM_SCALE|Une écaille étrange qui fait évoluer\nune certaine espèce de Pokémon. Elle\na une couleur arc-en-ciel.
+ITEM_RED_SCARF|Objet à tenir. Augmente le\nSang-froid d’un Pokémon dans les\nconcours.
+ITEM_BLUE_SCARF|Objet à tenir. Augmente la Beauté\nd’un Pokémon dans les concours.
+ITEM_PINK_SCARF|Objet à tenir. Augmente la Grâce\nd’un Pokémon dans les concours.
+ITEM_GREEN_SCARF|Objet à tenir. Augmente\nl’Intelligence d’un Pokémon dans les\nconcours.
+ITEM_YELLOW_SCARF|Objet à tenir. Augmente la\nRobustesse d’un Pokémon dans les\nconcours.
+ITEM_MACH_BIKE|Un vélo pliable qui roule jusqu’à\ndeux fois plus vite qu’une\nbicyclette ordinaire.
+ITEM_COIN_CASE|Une boîte pour conserver les Jetons\nobtenus à la salle d’arcade. Peut\ncontenir jusqu’à 50 000 Jetons.
+ITEM_OLD_ROD|Une vieille canne usée. Utilisez-la\npour pêcher des Pokémon sauvages\ndans les points d’eau.
+ITEM_GOOD_ROD|Une canne neuve et de bonne qualité.\nUtilisez-la pour pêcher des Pokémon\nsauvages dans les points d’eau.
+ITEM_SUPER_ROD|Une canne à pêche ultramoderne.\nUtilisez-la pour pêcher des Pokémon\nsauvages dans les points d’eau.
+ITEM_SS_TICKET|Un ticket nécessaire pour embarquer\nà bord de L’Océane. Il y a une image\ndu navire dessus.
+ITEM_CONTEST_PASS|La carte requise pour participer aux\nConcours Pokémon. Il y a un ruban\ndessiné dessus.
+ITEM_NONE|Un objet permettant de trouver les\nPokémon qui se cachent dans l’herbe.\nSe recharge quand vous marchez.
+ITEM_WAILMER_PAIL|Sert à arroser les Baies plantées\ndans le sol.
+ITEM_SOOT_SACK|Un sac utilisé pour ramasser les\ncendres volcaniques accumulées au\nsol.
+ITEM_BASEMENT_KEY|Une clé permettant d’accéder à New\nLavandia, dans les sous-sols de\nLavandia.
+ITEM_ACRO_BIKE|Un vélo pliable qui permet de bondir\net de rouler sur la roue arrière.
+ITEM_LETTER|Une lettre confiée par le directeur\nde Devon.
+ITEM_EON_TICKET|Un billet de ferry pour l’Île du\nSud.
+ITEM_RED_ORB|Une gemme incarnate dont on dit\nqu’elle a un lien très étroit avec\nles légendes de Hoenn.
+ITEM_BLUE_ORB|Une gemme céruléenne dont on dit\nqu’elle a un lien très étroit avec\nles légendes de Hoenn.
+ITEM_SCANNER|Un objet trouvé à Lavandia Sea.
+ITEM_GO_GOGGLES|Une paire de lunettes bien pratique\nqui protège les yeux en cas de\ntempête de sable dans le désert.
+ITEM_METEORITE|Une météorite trouvée au Mont\nChimnée.
+ITEM_STORAGE_KEY|La clé de la réserve de Lavandia\nSea.
+ITEM_ROOT_FOSSIL|Le fossile d’un ancien Pokémon\naquatique. On dirait un morceau de\nracine.
+ITEM_CLAW_FOSSIL|Le fossile d’un ancien Pokémon\naquatique. On dirait un morceau de\ngriffe.
+ITEM_DEVON_SCOPE|Ce produit en série limitée de Devon\német un signal sonore pour signaler\nla présence de Pokémon invisibles.
+ITEM_TM01|Un coup de pied surpuissant qui\nfrappe l’ennemi.
+ITEM_TM02|Des pièces sont lancées sur\nl’ennemi. Permet d’obtenir de\nl’argent à la fin du combat.
+ITEM_TM03|Un coup de poing enflammé vient\nfrapper l’ennemi. Peut le brûler.
+ITEM_TM04|Un coup de poing glacé vient frapper\nl’ennemi. Peut le geler.
+ITEM_TM05|Un coup de poing électrique vient\nfrapper l’ennemi. Peut le paralyser.
+ITEM_TM06|Le lanceur s’envole au premier tour\net frappe au second.
+ITEM_TM07|Envoie une rafale de dards. Peut\ntoucher de deux à cinq fois.
+ITEM_TM08|Projette un puissant rayon sur\nl’ennemi. Le lanceur doit se reposer\nau tour suivant.
+ITEM_TM09|Le lanceur charge l’ennemi de toute\nsa puissance et doit ensuite se\nreposer au tour suivant.
+ITEM_TM10|Le lanceur disperse d’étranges\nfeuilles qui poursuivent l’ennemi.\nN’échoue jamais.
+ITEM_TM11|Absorbe la lumière au premier tour\net envoie un rayon puissant au tour\nsuivant.
+ITEM_TM12|Une attaque dont la puissance double\nlorsque le lanceur est empoisonné,\nparalysé ou brûlé.
+ITEM_TM13|Un tourbillon de flammes emprisonne\nl’ennemi pendant quatre à cinq\ntours.
+ITEM_TM14|Un faible choc électrique frappe\nl’ennemi. Si l’attaque le touche,\ncelui-ci est paralysé.
+ITEM_TM15|Le lanceur creuse au premier tour et\nfrappe au second.
+ITEM_TM16|Le lanceur émet un son strident qui\nbaisse beaucoup la Défense de\nl’ennemi.
+ITEM_TM17|Crée un fabuleux mur de lumière qui\nréduit les dégâts causés par les\ncapacités spéciales pendant cinq
+ITEM_TM18|Invoque de fortes pluies qui durent\ncinq tours et augmentent la\npuissance des capacités de type Eau.
+ITEM_TM19|Crée un champ protecteur qui empêche\ntoutes les altérations de statut\npendant cinq tours.
+ITEM_TM20|Le lanceur explose en blessant tous\nles Pokémon autour de lui. Le\nlanceur tombe K.O.
+ITEM_TM21|Le lanceur regagne tous ses PV et\nsoigne ses altérations de statut,\npuis il dort pendant deux tours.
+ITEM_TM22|Envoie de gros rochers sur l’ennemi\npour infliger des dégâts. Peut aussi\nl’apeurer.
+ITEM_TM23|Le lanceur attaque la cible et vole\nson objet. Le lanceur ne peut rien\nvoler s’il tient déjà un objet.
+ITEM_TM24|Une attaque qui ne fonctionne que si\nle lanceur est endormi. Le boucan\npeut aussi apeurer l’ennemi.
+ITEM_TM25|Le lanceur se protège de toutes les\nattaques. Peut échouer si utilisée\nplusieurs fois de suite.
+ITEM_TM26|Le lanceur fait une grimace qui\neffraie l’ennemi et réduit beaucoup\nsa Vitesse.
+ITEM_TM27|Une bourrasque de vent froid blesse\nl’ennemi. Réduit aussi sa Vitesse.
+ITEM_TM28|Une attaque qui convertit la moitié\ndes dégâts infligés en PV pour le\nlanceur.
+ITEM_TM29|Le lanceur fait les yeux doux pour\nberner l’ennemi et beaucoup réduire\nson Attaque.
+ITEM_TM30|Le lanceur frappe l’ennemi avec des\nailes d’acier. Peut aussi augmenter\nla Défense du lanceur.
+ITEM_TM31|Si l’ennemi est du sexe opposé, il\ntombe amoureux et rechigne alors à\nattaquer.
+ITEM_TM32|Libère une puissante décharge\nlumineuse qui inflige des dégâts à\nl’ennemi.
+ITEM_TM33|Un fabuleux mur de lumière qui\nréduit les dégâts causés par les\nattaques physiques durant 5 tours.
+ITEM_TM34|Le lanceur ouvre la bouche pour\nenvoyer une onde de choc qui frappe\nl’ennemi.
+ITEM_TM35|Invoque une tempête de grêle qui\ndure cinq tours. Blesse tous les\nPokémon, sauf ceux de type Glace.
+ITEM_TM36|Piège l’ennemi dans une trombe d’eau\npendant quatre à cinq tours.
+ITEM_TM37|L’ennemi reçoit un torrent de\nflammes. Peut aussi le brûler.
+ITEM_TM38|Lance un bouquet de flammes\nmaléfiques à l’ennemi pour lui\ninfliger une brûlure.
+ITEM_TM39|Une attaque dont la puissance double\nlorsque le lanceur est empoisonné,\nparalysé ou brûlé.
+ITEM_TM40|Le lanceur envoie des rayons\nd’étoiles. Touche toujours l’ennemi.
+ITEM_TM41|Une capacité qui augmente la\npuissance d’attaque d’un allié.
+ITEM_TM42|Une attaque deux fois plus puissante\nsi le lanceur a été blessé par\nl’ennemi durant ce tour.
+ITEM_TM43|Projette une grande ombre sur\nl’ennemi. Peut aussi faire baisser\nsa Défense Spéciale.
+ITEM_TM44|Si l’ennemi et le lanceur ont des\ncapacités en commun, l’ennemi ne\npourra pas les utiliser.
+ITEM_TM45|Le lanceur plonge sous l’eau au\npremier tour et frappe au second.
+ITEM_TM46|Une attaque dont la puissance et le\ntype varient en fonction du temps\nqu’il fait.
+ITEM_TM47|Le lanceur fait semblant de pleurer\npour troubler l’ennemi et beaucoup\nbaisser sa Défense Spéciale.
+ITEM_TM48|Des rochers frappent l’ennemi.\nRéduit aussi sa Vitesse.
+ITEM_TM49|Le lanceur emprisonne l’ennemi dans\nune tempête de sable terrifiante qui\ndure de quatre à cinq tours.
+ITEM_TM50|Le lanceur atterrit et se repose.\nRestaure jusqu’à la moitié de ses PV\nmax.
+ITEM_HM01|- - -
+ITEM_HM02|- - -
+ITEM_HM03|- - -
+ITEM_HM04|- - -
+ITEM_HM05|- - -
+ITEM_HM06|- - -
+ITEM_HM07|Le lanceur plonge sous l’eau au\npremier tour et frappe au second.
+ITEM_POKE_FLUTE|Une flûte au son si particulier\nqu’elle permet de réveiller les\nPokémon les plus profondément
+ITEM_SECRET_KEY|La clé de la porte de l’Arène de\nCramois’Île. Elle est décorée en\nrouge.
+ITEM_GOLD_TEETH|Un dentier en or perdu par le\ndirecteur du Parc Safari. Il lui\ndonne un sourire étincelant.
+ITEM_OLD_AMBER|Un morceau d’ambre contenant l’ADN\nd’un ancien Pokémon. Il est de\ncouleur jaune.
+ITEM_CARD_KEY|Une carte magnétique pouvant ouvrir\nles portes du siège de la Sylphe\nSARL à Safrania.
+ITEM_LIFT_KEY|Une clé activant l’ascenseur du\nRepaire de la Team Rocket. Elle\nporte la marque de l’organisation.
+ITEM_HELIX_FOSSIL|Le fossile d’un ancien Pokémon\naquatique. On dirait un morceau de\ncoquillage.
+ITEM_DOME_FOSSIL|Le fossile d’un ancien Pokémon\naquatique. On dirait un morceau de\ncarapace.
+ITEM_SILPH_SCOPE|Un appareil permettant de voir les\nPokémon invisibles. Il est fabriqué\npar la Sylphe SARL.
+ITEM_BICYCLE|Une Bicyclette pliable permettant de\nse déplacer bien plus rapidement\nqu’en marchant.
+ITEM_TOWN_MAP|Une carte très pratique pouvant être\nconsultée n’importe quand. Elle\nindique la position actuelle.
+ITEM_TM_CASE|- - -
+ITEM_TEA|Un thé aromatique légèrement amer.\nIl a des vertus désaltérantes.

@@ -1,0 +1,174 @@
+None|Aucun talent spécial.
+Stench|Repousse les POKéMON.
+Drizzle|Fait pleuvoir au combat.
+SpeedBoost|Augmente la VITESSE.
+BattleArmor|Bloque les coups critiques.
+Sturdy|Immunisé contre les K.O.
+Damp|Empêche l'auto-destruction.
+Limber|Empêche la paralysie.
+SandVeil|Esquive sous le sable.
+Static|Paralyse au contact.
+VoltAbsorb|Absorbe l'électricité (PV).
+WaterAbsorb|Absorbe l'eau (PV).
+Oblivious|Empêche l'attraction.
+CloudNine|Annule les effets du temps.
+CompoundEyes|Augmente la précision.
+Insomnia|Empêche le sommeil.
+ColorChange|Prend le type de l'attaque.
+Immunity|Empêche l'empoisonnement.
+FlashFire|Gagne en force si brûlé.
+ShieldDust|Bloque les effets annexes.
+OwnTempo|Empêche la confusion.
+SuctionCups|Ancre fermement le corps.
+Intimidate|Baisse l'ATTAQUE adverse.
+ShadowTag|Empêche la fuite adverse.
+RoughSkin|Blesse au contact.
+WonderGuard|Seulement les coups super.
+Levitate|Immunisé contre le SOL.
+EffectSpore|Spores au contact.
+Synchronize|Transmet les altérations.
+ClearBody|Pas de baisse de stats.
+NaturalCure|Soigne en rentrant.
+LightningRod|Attire l'électricité.
+SereneGrace|Favorise les effets.
+SwiftSwim|VITESSE accrue (pluie).
+Chlorophyll|VITESSE accrue au soleil.
+Illuminate|Rencontres plus fréquentes.
+Trace|Copie le talent adverse.
+HugePower|Augmente l'ATTAQUE.
+PoisonPoint|Empoisonne au contact.
+InnerFocus|Empêche l'apeurement.
+MagmaArmor|Empêche le gel.
+WaterVeil|Empêche les brûlures.
+MagnetPull|Piège les POKéMON ACIER.
+Soundproof|Immunisé contre les sons.
+RainDish|Soigne un peu (pluie).
+SandStream|Fait lever le sable.
+Pressure|Épuise les PP adverses.
+ThickFat|Résiste au chaud et froid.
+EarlyBird|Se réveille vite.
+FlameBody|Brûle au contact.
+RunAway|Facilite la fuite.
+KeenEye|Garde la précision.
+HyperCutter|Garde l'ATTAQUE.
+Pickup|Peut ramasser des objets.
+Truant|Agit un tour sur deux.
+Hustle|Précision contre puissance.
+CuteCharm|Séduit au contact.
+Plus|Renforcé par MOINS.
+Minus|Renforcé par PLUS.
+Forecast|Change avec la météo.
+StickyHold|Empêche le vol d'objet.
+ShedSkin|Se soigne en muant.
+Guts|ATTAQUE accrue si altéré.
+MarvelScale|DÉFENSE accrue si altéré.
+LiquidOoze|Le drain blesse.
+Overgrow|Renforce PLANTE en danger.
+Blaze|Renforce FEU en danger.
+Torrent|Renforce EAU en danger.
+Swarm|Renforce INSECTE en danger.
+RockHead|Annule les dégâts de recul.
+Drought|Fait briller le soleil.
+ArenaTrap|Empêche la fuite.
+VitalSpirit|Empêche le sommeil.
+WhiteSmoke|Pas de baisse de stats.
+PurePower|Augmente l'ATTAQUE.
+ShellArmor|Bloque les coups critiques.
+Cacophony|Immunisé contre les sons.
+Technician|Renforce les coups faibles.
+IronFist|Renforce les poings.
+Reckless|Renforce les coups à recul.
+Adaptability|Renforce son propre type.
+TintedLens|Renforce les coups faibles.
+SolidRock|Atténue les coups super.
+Filter|Atténue les coups super.
+Heatproof|Réduit de moitié le feu.
+SkillLink|Multi-coups : 5 fois.
+Scrappy|Touche SPECTRE en NORMAL.
+MotorDrive|Électricité : VITESSE +.
+DrySkin|Eau soigne ; feu blesse.
+SolarPower|Soleil : +ATK SPÉ, perd PV.
+PoisonHeal|Le poison rend des PV.
+SnowWarning|Fait tomber la grêle.
+SnowCloak|Esquive sous la grêle.
+IceBody|Soigne un peu (grêle).
+Unaware|Ignore les stats adverses.
+Simple|Double les effets de stats.
+NoGuard|Les coups touchent.
+SuperLuck|Augmente les critiques.
+Sniper|Renforce les critiques.
+QuickFeet|VITESSE accrue si altéré.
+Hydration|Soigne sous la pluie.
+AngerPoint|Critique : ATTAQUE au max.
+Steadfast|Apeuré : VITESSE accrue.
+MagicGuard|Seules attaques blessent.
+SlowStart|ATK/VIT réduites au début.
+BadDreams|Blesse les endormis.
+LeafGuard|Pas d'altération (soleil).
+Stall|Agit toujours en dernier.
+Download|S'adapte à la défense.
+TangledFeet|Esquive si confus.
+Aftermath|Blesse qui le met K.O.
+Unburden|VITESSE accrue sans objet.
+Normalize|Tout devient NORMAL.
+AirLock|Annule les effets du temps.
+SheerForce|Plus fort, sans effets.
+ToughClaws|Renforce le contact.
+StrongJaw|Renforce les morsures.
+MegaLauncher|Renforce les ondes.
+Sharpness|Renforce le tranchant.
+Steelworker|Renforce ACIER.
+Transistor|Renforce ÉLECTR.
+DragonsMaw|Renforce DRAGON.
+RockyPayload|Renforce ROCHE.
+WaterBubble|EAU +, pas de brûlure.
+Aerilate|NORMAL devient VOL.
+Pixilate|NORMAL devient FÉE.
+Refrigerate|NORMAL devient GLACE.
+Galvanize|NORMAL devient ÉLECTR.
+Analytic|Fort s'il agit en dernier.
+ToxicBoost|Plus fort si empoisonné.
+FlareBoost|Plus fort si brûlé.
+SandForce|Renforce (sable).
+SandRush|VITESSE x2 dans le sable.
+SlushRush|VITESSE x2 sous la grêle.
+Multiscale|Dégâts réduits à PV max.
+FurCoat|Double la DÉFENSE.
+IceScales|Dégâts spé. réduits.
+Fluffy|Contact réduit de moitié.
+PrismArmor|Réduit les coups super.
+FullMetalBody|Pas de baisse de stats.
+Overcoat|Immunisé contre la météo.
+StormDrain|Attaques EAU: +ATK SPÉ.
+SapSipper|Attaques PLANTE: +ATTAQUE.
+EarthEater|Attaques SOL: rend des PV.
+WellBakedBody|Attaques FEU: +DÉFENSE.
+IronBarbs|Blesse au contact.
+Gooey|Le contact ralentit.
+Stamina|Touché : DÉFENSE accrue.
+WeakArmor|Touché: DÉF -, VITESSE +.
+Rattled|Craint INSECTE/SPECTRE/TÉN.
+Justified|Coup TÉNÈBRES : +ATTAQUE.
+SteamEngine|FEU/EAU : VITESSE accrue.
+WaterCompaction|Touché par EAU: +2 DÉF.
+Mummy|Le contact étend MOMIE.
+PoisonTouch|Peut empoisonner (contact).
+Moxie|Chaque K.O. : +ATTAQUE.
+IntrepidSword|+ATTAQUE à l'entrée.
+DauntlessShield|+DÉFENSE à l'entrée.
+Prankster|Statut : prioritaire.
+GaleWings|VOL prioritaire à PV max.
+Contrary|Inverse les stats.
+Defiant|Baisse de stat : +2 ATK.
+Competitive|Baisse stat : ATK SPÉ +2.
+BigPecks|Protège la DÉFENSE.
+Regenerator|Soigne en rentrant.
+Moody|Une stat monte, une baisse.
+MagicBounce|Renvoie les statuts.
+Protean|Prend le type de l'attaque.
+Libero|Prend le type de l'attaque.
+PunkRock|Renforce les sons.
+SteelySpirit|Renforce ACIER.
+Defeatist|Faible si PV <= 50 %.
+Triage|Soins prioritaires.
+BeastBoost|K.O. : meilleure stat +1.

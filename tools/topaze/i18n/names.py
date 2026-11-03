@@ -78,6 +78,46 @@ def apply(lg):
         open(p, 'w', encoding='utf-8').write(src)
     print('noms localises :', n, '| refuses :', miss)
 
+DESC_TARGETS = [('src/move_descriptions.c', 'move_desc'), ('src/data/items.h', 'item_desc'), ('src/data/text/abilities.h', 'ability_desc')]
+
+def fixtxt(t):
+    t = t.replace('Pokémon', 'POKéMON').replace('Poké Ball', 'POKé BALL').replace('Poké', 'POKé').replace('POKÉ', 'POKé')
+    return t.replace('\u2019', "'").replace('\u202f', ' ').replace('\u00a0', ' ')
+
+def apply_desc(lg):
+    cs = lang.charset(); n = bad = 0
+    for rel, tab in DESC_TARGETS:
+        p = os.path.join(ROOT, rel)
+        src = open(p, encoding='utf-8').read()
+        bk = os.path.join(BACKUP, rel.replace('/', '__'))
+        if not os.path.exists(bk): shutil.copy(p, bk)
+        d = {}
+        for l in open(os.path.join(HERE, lg, tab + '.txt'), encoding='utf-8'):
+            l = l.rstrip('\n')
+            if '|' in l:
+                k, v = l.split('|', 1); d[k] = fixtxt(v)
+        if tab == 'move_desc':
+            sym = dict((c, s) for c, s in re.findall(r'\[(MOVE_\w+)\s*-\s*1\]\s*=\s*(gMoveDescription_\w+)', src))
+            d = dict((sym[k], v) for k, v in d.items() if k in sym)
+            rx = re.compile(r'(const u8 (gMoveDescription_\w+)\[\] = _\(")((?:[^"\\]|\\.)*)("\))')
+        elif tab == 'item_desc':
+            rx = re.compile(r'(const u8 (gItemDescription_\w+)\[\] = _\(")((?:[^"\\]|\\.)*)("\))')
+            d = dict(('gItemDescription_' + k, v) for k, v in d.items())
+        else:
+            rx = re.compile(r'(static const u8 (s\w+Description)\[\] = _\(")((?:[^"\\]|\\.)*)("\))')
+            d = dict(('s' + k + 'Description', v) for k, v in d.items())
+        def rep(m):
+            nonlocal n, bad
+            v = d.get(m.group(2))
+            if v is None: return m.group(0)
+            ch = [c for c in re.sub(r'\\[nlp]', '', v) if c not in cs]
+            if ch: bad += 1; print('! desc', m.group(2), ch); return m.group(0)
+            n += 1
+            return m.group(1) + v + m.group(4)
+        src = rx.sub(rep, src)
+        open(p, 'w', encoding='utf-8').write(src)
+    print('descriptions localisees :', n, '| refusees :', bad)
+
 def restore():
     for b in glob_backups():
         rel = os.path.basename(b).replace('__', '/')
@@ -88,5 +128,5 @@ def glob_backups():
     return [os.path.join(BACKUP, f) for f in os.listdir(BACKUP)] if os.path.isdir(BACKUP) else []
 
 if __name__ == '__main__':
-    if sys.argv[1] == 'apply': apply(sys.argv[2] if len(sys.argv) > 2 else 'fr')
+    if sys.argv[1] == 'apply': apply(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_desc(sys.argv[2] if len(sys.argv) > 2 else 'fr')
     else: restore()

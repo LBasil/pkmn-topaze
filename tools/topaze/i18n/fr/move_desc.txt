@@ -1,0 +1,610 @@
+MOVE_POUND|Écrase l’ennemi avec\nles pattes avant ou\nla queue, par\nexemple.
+MOVE_KARATE_CHOP|L’ennemi est tranché\nviolemment. Taux de\ncritique élevé.
+MOVE_DOUBLE_SLAP|Gifle rapidement\nl’ennemi de deux à\ncinq fois d’affilée.
+MOVE_COMET_PUNCH|Une tornade de coups\nde poing qui frappe\nde deux à cinq fois\nd’affilée.
+MOVE_MEGA_PUNCH|L’ennemi reçoit un\ncoup de poing d’une\npuissance\nincroyable.
+MOVE_PAY_DAY|Des pièces sont\nlancées sur\nl’ennemi.
+MOVE_FIRE_PUNCH|Un coup de poing\nenflammé vient\nfrapper l’ennemi.\nPeut le brûler.
+MOVE_ICE_PUNCH|Un coup de poing\nglacé vient frapper\nl’ennemi. Peut le\ngeler.
+MOVE_THUNDER_PUNCH|Un coup de poing\nélectrique vient\nfrapper l’ennemi.\nPeut le paralyser.
+MOVE_SCRATCH|Lacère l’ennemi avec\ndes griffes acérées\npour lui infliger\ndes dégâts.
+MOVE_VICE_GRIP|L’ennemi est attrapé\net compressé par les\ncôtés.
+MOVE_GUILLOTINE|De méchantes pinces\nlacèrent l’ennemi,\nle mettant K.O.
+MOVE_RAZOR_WIND|Attaque en 2 tours.\nDes lames de vent\nfrappent l’ennemi au\n2è tour.
+MOVE_SWORDS_DANCE|Danse frénétique qui\nexalte l’esprit\ncombatif.
+MOVE_CUT|Coupe l’ennemi avec\ndes lames ou des\ngriffes.
+MOVE_GUST|Le lanceur bat des\nailes pour générer\nune bourrasque qui\nblesse l’ennemi.
+MOVE_WING_ATTACK|L’ennemi est frappé\npar de larges ailes\ndéployées pour\ninfliger des dégâts.
+MOVE_WHIRLWIND|Éjecte le Pokémon\nennemi et le\nremplace par un\nautre.
+MOVE_FLY|Le lanceur s’envole\nau premier tour et\nfrappe au second.
+MOVE_BIND|Ligote l’ennemi avec\nles tentacules ou le\ncorps pour l’écraser\ndurant 4 à 5 tours.
+MOVE_SLAM|Fouette l’ennemi\navec la queue, une\nliane, etc. pour\ninfliger des dégâts.
+MOVE_VINE_WHIP|Fouette l’ennemi\navec de fines lianes\npour infliger des\ndégâts.
+MOVE_STOMP|Écrase l’ennemi avec\nun énorme pied. Peut\naussi l’apeurer.
+MOVE_DOUBLE_KICK|Deux coups de pied\nqui frappent\nl’ennemi deux fois\nd’affilée.
+MOVE_MEGA_KICK|Un coup de pied\nsurpuissant qui\nfrappe l’ennemi.
+MOVE_JUMP_KICK|Le lanceur s’envole\npour décocher un\ncoup de pied sauté.
+MOVE_ROLLING_KICK|Le lanceur effectue\nun coup de pied\ntournoyant et\nextrêmement rapide.
+MOVE_SAND_ATTACK|Lance du sable au\nvisage de l’ennemi\npour baisser sa\nPrécision.
+MOVE_HEADBUTT|Le lanceur donne un\ncoup de tête. Peut\napeurer l’ennemi.
+MOVE_HORN_ATTACK|Frappe l’ennemi d’un\ncoup de corne\npointue pour\ninfliger des dégâts.
+MOVE_FURY_ATTACK|Frappe l’ennemi 2 à\n5 fois d’affilée\navec un bec ou une\ncorne.
+MOVE_HORN_DRILL|Un coup de corne en\nvrille qui empale\nl’ennemi, le mettant\nK.O.
+MOVE_TACKLE|Le lanceur charge\nl’ennemi et le\npercute de tout son\npoids.
+MOVE_BODY_SLAM|Le lanceur se laisse\ntomber sur l’ennemi\nde tout son poids.\nPeut le paralyser.
+MOVE_WRAP|Le lanceur ligote\nl’ennemi avec des\nlianes ou son corps\npour l’écraser
+MOVE_TAKE_DOWN|Une charge violente\nqui blesse aussi\nlégèrement le\nlanceur.
+MOVE_THRASH|Une attaque furieuse\nqui dure de 2 à 3\ntours. Le lanceur\ndevient confus.
+MOVE_DOUBLE_EDGE|Une charge\ndangereuse et\nimprudente.
+MOVE_TAIL_WHIP|Le lanceur remue son\nadorable queue pour\ntromper la vigilance\nde l’ennemi et
+MOVE_POISON_STING|Un dard toxique qui\ntransperce l’ennemi.\nPeut aussi\nl’empoisonner.
+MOVE_TWINEEDLE|Un double coup de\ndard qui transperce\nl’ennemi 2 fois\nd’affilée.
+MOVE_PIN_MISSILE|Envoie une rafale de\ndards. Peut toucher\nde deux à cinq fois.
+MOVE_LEER|Le lanceur fait les\ngros yeux à l’ennemi\npour l’intimider et\nbaisser sa Défense.
+MOVE_BITE|L’ennemi est mordu\npar de tranchantes\ncanines. Peut\nl’apeurer.
+MOVE_GROWL|Le lanceur pousse un\ncri tout mimi pour\ntromper la vigilance\nde l’ennemi et
+MOVE_ROAR|Effraie le Pokémon\nennemi et le\nremplace par un\nautre.
+MOVE_SING|Une berceuse plonge\nl’ennemi dans un\nprofond sommeil.
+MOVE_SUPERSONIC|Le lanceur produit\nd’étranges ondes\nsonores qui rendent\nla cible confuse.
+MOVE_SONIC_BOOM|Une onde de choc\ndestructrice qui\ninflige toujours 20\nPV de dégâts.
+MOVE_DISABLE|Empêche l’ennemi\nd’employer à nouveau\nsa dernière attaque.\nDure quatre tours.
+MOVE_ACID|Le lanceur attaque\nl’ennemi avec un jet\nd’acide corrosif.
+MOVE_EMBER|L’ennemi est attaqué\npar une faible\nflamme. Peut aussi\nle brûler.
+MOVE_FLAMETHROWER|L’ennemi reçoit un\ntorrent de flammes.\nPeut aussi le\nbrûler.
+MOVE_MIST|Une brume blanche\nenveloppe l’équipe\ndu lanceur et\nempêche la réduction
+MOVE_WATER_GUN|De l’eau est\nprojetée avec force\nsur l’ennemi.
+MOVE_HYDRO_PUMP|Un puissant jet\nd’eau est dirigé sur\nl’ennemi.
+MOVE_SURF|Une énorme vague\ns’abat sur le champ\nde bataille.
+MOVE_ICE_BEAM|Un rayon de glace\nfrappe l’ennemi.\nPeut aussi le geler.
+MOVE_BLIZZARD|Une violente tempête\nde neige s’abat sur\nl’ennemi. Peut aussi\nle geler.
+MOVE_PSYBEAM|Un étrange rayon\nfrappe l’ennemi.\nPeut aussi le rendre\nconfus.
+MOVE_BUBBLE_BEAM|Des bulles sont\nenvoyées avec\npuissance sur\nl’ennemi.
+MOVE_AURORA_BEAM|Envoie un rayon\narc-en-ciel sur\nl’ennemi. Peut aussi\nbaisser son Attaque.
+MOVE_HYPER_BEAM|Projette un puissant\nrayon sur l’ennemi.
+MOVE_PECK|Frappe l’ennemi d’un\nbec pointu ou d’une\ncorne pour infliger\ndes dégâts.
+MOVE_DRILL_PECK|Une attaque\nutilisant le bec\ncomme une perceuse.
+MOVE_SUBMISSION|Le lanceur agrippe\nl’ennemi et l’écrase\nau sol.
+MOVE_LOW_KICK|Un puissant coup de\npied bas qui fauche\nl’ennemi.
+MOVE_COUNTER|Une riposte qui\nrépond à toute\nattaque physique en\ninfligeant le double
+MOVE_SEISMIC_TOSS|L’ennemi est projeté\ngrâce au pouvoir de\nla gravité.
+MOVE_STRENGTH|Le lanceur cogne\nl’ennemi de toutes\nses forces.
+MOVE_ABSORB|Une attaque qui\nconvertit la moitié\ndes dégâts infligés\nen PV.
+MOVE_MEGA_DRAIN|Une attaque qui\nconvertit la moitié\ndes dégâts infligés\nen PV.
+MOVE_LEECH_SEED|Une graine est semée\nsur l’ennemi.
+MOVE_GROWTH|Le corps du lanceur\nse développe.
+MOVE_RAZOR_LEAF|Des feuilles\naiguisées comme des\nrasoirs entaillent\nl’ennemi.
+MOVE_SOLAR_BEAM|Absorbe la lumière\nau premier tour et\nenvoie un rayon\npuissant au tour
+MOVE_POISON_POWDER|Une poudre toxique\nempoisonne l’ennemi.
+MOVE_STUN_SPORE|Le lanceur répand\nsur l’ennemi une\npoudre qui le\nparalyse.
+MOVE_SLEEP_POWDER|Le lanceur répand\nune poudre\nsoporifique qui\nendort la cible.
+MOVE_PETAL_DANCE|Le lanceur attaque\nen projetant des\npétales pendant 2 à\n3 tours avant de
+MOVE_STRING_SHOT|Le lanceur crache de\nla soie pour ligoter\nl’ennemi et beaucoup\nbaisser sa Vitesse.
+MOVE_DRAGON_RAGE|La colère du lanceur\ndéclenche une onde\nde choc destructrice\nqui inflige toujours
+MOVE_FIRE_SPIN|Un tourbillon de\nflammes emprisonne\nl’ennemi pendant\nquatre à cinq tours.
+MOVE_THUNDER_SHOCK|Une décharge\nélectrique tombe sur\nl’ennemi. Peut aussi\nle paralyser.
+MOVE_THUNDERBOLT|Une grosse décharge\nélectrique tombe sur\nl’ennemi. Peut aussi\nle paralyser.
+MOVE_THUNDER_WAVE|Un faible choc\nélectrique frappe\nl’ennemi.
+MOVE_THUNDER|La foudre tombe sur\nl’ennemi pour lui\ninfliger des dégâts.
+MOVE_ROCK_THROW|Le lanceur lâche une\npierre sur l’ennemi.
+MOVE_EARTHQUAKE|Le lanceur provoque\nun tremblement de\nterre touchant tous\nles Pokémon autour
+MOVE_FISSURE|Le lanceur fait\ntomber l’ennemi dans\nune crevasse.
+MOVE_DIG|Le lanceur creuse au\npremier tour et\nfrappe au second.
+MOVE_TOXIC|Empoisonne gravement\nl’ennemi.
+MOVE_CONFUSION|Une faible vague\ntélékinésique frappe\nl’ennemi.
+MOVE_PSYCHIC|Une puissante force\ntélékinésique frappe\nl’ennemi.
+MOVE_HYPNOSIS|Le lanceur hypnotise\nl’ennemi pour le\nplonger dans un\nprofond sommeil.
+MOVE_MEDITATE|Le lanceur médite\npour éveiller son\npouvoir latent et\naugmenter son
+MOVE_AGILITY|Le lanceur se relaxe\net allège son corps\npour beaucoup\naugmenter sa
+MOVE_QUICK_ATTACK|Le lanceur fonce sur\nl’ennemi si\nrapidement qu’on\nparvient à peine à
+MOVE_RAGE|Une fois activée,\ncette capacité\naugmente l’Attaque\ndu lanceur à mesure
+MOVE_TELEPORT|Permet de fuir une\nrencontre avec un\nPokémon sauvage.
+MOVE_NIGHT_SHADE|Le lanceur invoque\nun mirage.
+MOVE_MIMIC|Le lanceur copie la\ndernière capacité\nutilisée par la\ncible et la conserve
+MOVE_SCREECH|Le lanceur émet un\nson strident qui\nbaisse beaucoup la\nDéfense de l’ennemi.
+MOVE_DOUBLE_TEAM|Le lanceur se\ndéplace si vite\nqu’il crée des\ncopies illusoires de
+MOVE_RECOVER|Un soin qui permet\nau lanceur de\nrécupérer jusqu’à la\nmoitié de ses PV
+MOVE_HARDEN|Le lanceur contracte\ntous ses muscles\npour augmenter sa\nDéfense.
+MOVE_MINIMIZE|Le lanceur comprime\nson corps pour se\nfaire tout petit et\nbeaucoup augmenter
+MOVE_SMOKESCREEN|Le lanceur disperse\nun nuage d’encre ou\nde fumée.
+MOVE_CONFUSE_RAY|Un rayon sinistre\nqui plonge l’ennemi\ndans un état de\nconfusion.
+MOVE_WITHDRAW|Le lanceur se\nrecroqueville dans\nsa carapace, ce qui\naugmente sa Défense.
+MOVE_DEFENSE_CURL|Le lanceur s’enroule\npour cacher ses\npoints faibles, ce\nqui augmente sa
+MOVE_BARRIER|Le lanceur érige un\nmur solide qui\naugmente beaucoup sa\nDéfense.
+MOVE_LIGHT_SCREEN|Un fabuleux mur de\nlumière qui réduit\nles dégâts causés\npar les attaques
+MOVE_HAZE|Un brouillard qui\nannule les\nchangements de stats\nde tous les Pokémon
+MOVE_REFLECT|Un fabuleux mur de\nlumière qui réduit\nles dégâts causés\npar les attaques
+MOVE_FOCUS_ENERGY|Le lanceur prend une\nprofonde inspiration\net se concentre pour\naugmenter son taux
+MOVE_BIDE|Le lanceur encaisse\nles coups durant 2\ntours et réplique en\ninfligeant le double
+MOVE_METRONOME|Agite un doigt et\nstimule le cerveau\npour utiliser\npresque n’importe
+MOVE_MIRROR_MOVE|Le lanceur riposte à\nl’attaque de\nl’ennemi avec la\nmême attaque.
+MOVE_SELF_DESTRUCT|Le lanceur explose\nen blessant tous les\nPokémon autour de\nlui.
+MOVE_EGG_BOMB|De toutes ses\nforces, le lanceur\njette un gros œuf\nsur l’ennemi pour
+MOVE_LICK|Un grand coup de\nlangue qui inflige\ndes dégâts à\nl’ennemi.
+MOVE_SMOG|Le lanceur attaque à\nl’aide d’une\néruption de gaz\nrépugnants.
+MOVE_SLUDGE|Des détritus\ntoxiques sont\nprojetés sur\nl’ennemi.
+MOVE_BONE_CLUB|Le lanceur frappe\nl’ennemi à grands\ncoups d’os. Peut\naussi l’apeurer.
+MOVE_FIRE_BLAST|Un déluge de flammes\nardentes submerge\nl’ennemi. Peut aussi\nle brûler.
+MOVE_WATERFALL|Le lanceur charge\nl’ennemi à une\nvitesse remarquable,\nce qui peut
+MOVE_CLAMP|Le lanceur piège\nl’ennemi dans sa\ndure coquille et\nl’écrase pendant 4 à
+MOVE_SWIFT|Le lanceur envoie\ndes rayons\nd’étoiles. Touche\ntoujours l’ennemi.
+MOVE_SKULL_BASH|Le lanceur baisse la\ntête pour augmenter\nsa Défense au 1er\ntour et percuter
+MOVE_SPIKE_CANNON|Envoie une rafale de\ndards. Peut toucher\nde deux à cinq fois.
+MOVE_CONSTRICT|De longs tentacules\nou lianes attaquent\nl’ennemi. Peut aussi\nbaisser sa Vitesse.
+MOVE_AMNESIA|Le lanceur fait le\nvide dans son esprit\npour oublier ses\nsoucis.
+MOVE_KINESIS|Le lanceur distrait\nl’ennemi en pliant\nune cuillère, ce qui\nbaisse sa Précision.
+MOVE_SOFT_BOILED|Le lanceur récupère\njusqu’à la moitié de\nses PV max.
+MOVE_HI_JUMP_KICK|Le lanceur s’élance\npour effectuer un\ncoup de genou sauté.
+MOVE_GLARE|Le lanceur intimide\nl’ennemi grâce à son\nregard terrifiant\npour le paralyser.
+MOVE_DREAM_EATER|Le lanceur mange le\nrêve de l’ennemi\nendormi et récupère\nen PV la moitié des
+MOVE_POISON_GAS|Un nuage de gaz\ntoxique est projeté\nau visage de\nl’ennemi pour
+MOVE_BARRAGE|Projette de deux à\ncinq grosses boules\nsur l’ennemi.
+MOVE_LEECH_LIFE|Une attaque qui\naspire le sang de\nl’ennemi.
+MOVE_LOVELY_KISS|Le lanceur fait un\nbisou à l’ennemi en\nprenant une mine\neffrayante.
+MOVE_SKY_ATTACK|Une attaque en 2\ntours au taux de\ncritiques élevé.
+MOVE_TRANSFORM|Le lanceur devient\nune copie de sa\ncible et obtient la\nmême palette de
+MOVE_BUBBLE|Des bulles frappent\nl’ennemi. Peut\nréduire sa Vitesse.
+MOVE_DIZZY_PUNCH|Un enchaînement de\ncoups de poing\ncadencés. Peut aussi\nrendre confus.
+MOVE_SPORE|Le lanceur répand un\nnuage de spores qui\nendort.
+MOVE_FLASH|Explosion lumineuse\nqui fait baisser la\nPrécision de\nl’ennemi.
+MOVE_PSYWAVE|Une étrange onde\nd’énergie chaude\nfrappe l’ennemi.
+MOVE_SPLASH|Le lanceur barbote\net éclabousse les\nenvirons.
+MOVE_ACID_ARMOR|Le lanceur modifie\nsa structure\nmoléculaire pour se\nliquéfier et
+MOVE_CRABHAMMER|Une grande pince\nmartèle l’ennemi.\nTaux de critiques\nélevé.
+MOVE_EXPLOSION|Le lanceur explose\net inflige des\ndégâts à tous les\nPokémon autour de
+MOVE_FURY_SWIPES|L’ennemi est lacéré\npar des faux ou des\ngriffes de deux à\ncinq fois d’affilée.
+MOVE_BONEMERANG|Le lanceur projette\nson os comme un\nboomerang.
+MOVE_REST|Le lanceur dort\npendant 2 tours.
+MOVE_ROCK_SLIDE|Envoie de gros\nrochers sur l’ennemi\npour infliger des\ndégâts.
+MOVE_HYPER_FANG|Le lanceur mord\nl’ennemi à l’aide de\nses incisives\naiguisées.
+MOVE_SHARPEN|Le lanceur réduit\nson nombre de\npolygones pour\naccentuer ses angles
+MOVE_CONVERSION|Le lanceur change de\ntype pour prendre\ncelui de l’une de\nses capacités.
+MOVE_TRI_ATTACK|Le lanceur envoie\ntrois boules\nd’énergie\nsimultanément.
+MOVE_SUPER_FANG|Une vilaine morsure\nd’incisives qui\nréduit de moitié les\nPV de l’ennemi.
+MOVE_SLASH|Un coup de griffe ou\nautre tranche\nl’ennemi. Taux de\ncritiques élevé.
+MOVE_SUBSTITUTE|Le lanceur crée un\nclone en sacrifiant\nquelques PV.
+MOVE_STRUGGLE|Une attaque\ndésespérée, lancée\nquand le lanceur n’a\nplus de PP.
+MOVE_SKETCH|Le lanceur apprend\nle dernier coup\nutilisé par la\ncible.
+MOVE_TRIPLE_KICK|Une salve de 1 à 3\ncoups de pied dont\nla puissance\naugmente à chaque
+MOVE_THIEF|Le lanceur attaque\nla cible et vole son\nobjet.
+MOVE_SPIDER_WEB|Le lanceur enserre\nl’ennemi à l’aide\nd’une fine soie\ngluante pour
+MOVE_MIND_READER|Le lanceur analyse\nles mouvements de\nl’ennemi pour être\nsûr de toucher au
+MOVE_NIGHTMARE|Un cauchemar qui\ninflige des dégâts à\nchaque tour à un\nennemi endormi.
+MOVE_FLAME_WHEEL|Le lanceur s’entoure\nde feu et charge\nl’ennemi. Peut aussi\nle brûler.
+MOVE_SNORE|Une attaque qui ne\nfonctionne que si le\nlanceur est endormi.
+MOVE_CURSE|Une capacité à\nl’effet différent\nselon que le lanceur\nest un Pokémon
+MOVE_FLAIL|Le lanceur fait\ntournoyer son fléau.
+MOVE_CONVERSION_2|Le lanceur change de\ntype pour être\nrésistant au type de\nla dernière attaque
+MOVE_AEROBLAST|Le lanceur projette\nune tornade sur\nl’ennemi pour\ninfliger des dégâts.
+MOVE_COTTON_SPORE|Le lanceur libère\ndes spores\ncotonneuses qui\ncollent à l’ennemi
+MOVE_REVERSAL|Le lanceur ne\nretient plus ses\ncoups.
+MOVE_SPITE|Le lanceur exprime\nson ressentiment en\nretirant 4 PP de la\ndernière attaque de
+MOVE_POWDER_SNOW|Le lanceur projette\nde la neige\npoudreuse.
+MOVE_PROTECT|Le lanceur se\nprotège de toutes\nles attaques.
+MOVE_MACH_PUNCH|Coup de poing\nfulgurant. Frappe en\npriorité.
+MOVE_SCARY_FACE|Le lanceur fait une\ngrimace qui effraie\nl’ennemi et réduit\nbeaucoup sa Vitesse.
+MOVE_FAINT_ATTACK|Le lanceur\ns’approche l’air de\nrien avant de\nfrapper par
+MOVE_SWEET_KISS|Le lanceur envoie un\nbisou si mignon et\ndésarmant qu’il\nplonge l’ennemi dans
+MOVE_BELLY_DRUM|Améliore l’Attaque\nau maximum en\nsacrifiant la moitié\ndes PV max.
+MOVE_SLUDGE_BOMB|Des détritus\ntoxiques sont\nprojetés sur\nl’ennemi.
+MOVE_MUD_SLAP|Le lanceur envoie de\nla boue au visage de\nl’ennemi pour\ninfliger des dégâts
+MOVE_OCTAZOOKA|Le lanceur attaque\nen projetant de\nl’encre au visage de\nl’ennemi.
+MOVE_SPIKES|Le lanceur disperse\ndes piquants sur le\nsol pour blesser\ntout ennemi qui
+MOVE_ZAP_CANNON|Un boulet de canon\nélectrifié qui\ninflige des dégâts\net paralyse
+MOVE_FORESIGHT|Permet de toucher un\nPokémon Spectre avec\nn’importe quelle\ncapacité et de
+MOVE_DESTINY_BOND|Quand cette capacité\nest activée, elle\nmet K.O.
+MOVE_PERISH_SONG|Tout Pokémon qui\nentend ce requiem\nest K.O.
+MOVE_ICY_WIND|Une bourrasque de\nvent froid blesse\nl’ennemi. Réduit\naussi sa Vitesse.
+MOVE_DETECT|Le lanceur se\nprotège de toutes\nles attaques.
+MOVE_BONE_RUSH|Le lanceur frappe\nl’ennemi avec un os\nde deux à cinq fois\nd’affilée.
+MOVE_LOCK_ON|Verrouille l’ennemi\npour ne pas le rater\nau tour suivant.
+MOVE_OUTRAGE|Le lanceur enrage et\nattaque pendant deux\nou trois tours avant\nde devenir confus.
+MOVE_SANDSTORM|Une tempête de sable\nde 5 tours qui\nblesse tous les\nPokémon sauf les
+MOVE_GIGA_DRAIN|Une attaque qui\nconvertit la moitié\ndes dégâts infligés\nen PV.
+MOVE_ENDURE|Le lanceur résiste\naux attaques avec 1\nPV.
+MOVE_CHARM|Le lanceur fait les\nyeux doux pour\nberner l’ennemi et\nbeaucoup réduire son
+MOVE_ROLLOUT|Un rocher roule sur\nl’ennemi pendant 5\ntours.
+MOVE_FALSE_SWIPE|Le lanceur retient\nses coups pour que\nl’ennemi garde au\nmoins 1 PV et ne
+MOVE_SWAGGER|Fait enrager la\ncible et la plonge\ndans la confusion,\nmais augmente
+MOVE_MILK_DRINK|Le lanceur récupère\njusqu’à la moitié de\nses PV max.
+MOVE_SPARK|Lance une charge\nélectrique sur\nl’ennemi. Peut aussi\nle paralyser.
+MOVE_FURY_CUTTER|Un coup de faux ou\nde griffe dont la\nforce augmente quand\nil touche plusieurs
+MOVE_STEEL_WING|Le lanceur frappe\nl’ennemi avec des\nailes d’acier.
+MOVE_MEAN_LOOK|Le lanceur pétrifie\nl’ennemi en lui\nlançant un regard\nnoir.
+MOVE_ATTRACT|Si l’ennemi est du\nsexe opposé, il\ntombe amoureux et\nrechigne alors à
+MOVE_SLEEP_TALK|Le lanceur utilise\nune de ses capacités\nau hasard pendant\nqu’il dort.
+MOVE_HEAL_BELL|Carillon apaisant\nqui soigne les\nproblèmes de statut\nde tous les Pokémon
+MOVE_RETURN|Une attaque furieuse\ndont la puissance\naugmente quand le\nPokémon apprécie son
+MOVE_PRESENT|Le lanceur attaque\nen offrant un cadeau\npiégé à la cible.
+MOVE_FRUSTRATION|Moins le Pokémon\naime son Dresseur,\nplus cette attaque\nest puissante.
+MOVE_SAFEGUARD|Champ protecteur\nempêchant tous les\nproblèmes de statut\npendant 5 tours.
+MOVE_PAIN_SPLIT|Le lanceur ajoute\nses PV à ceux de sa\ncible et les\nrépartit
+MOVE_SACRED_FIRE|Un feu mystique\nd’une intensité\nredoutable attaque\nl’ennemi.
+MOVE_MAGNITUDE|Un tremblement de\nterre d’intensité\nvariable qui affecte\ntous les Pokémon
+MOVE_DYNAMIC_PUNCH|Le lanceur rassemble\nses forces et envoie\nun coup de poing à\nl’ennemi.
+MOVE_MEGAHORN|Le lanceur utilise\nses gigantesques\ncornes pour charger\nl’ennemi.
+MOVE_DRAGON_BREATH|Le lanceur souffle\nfort sur l’ennemi\npour infliger des\ndégâts.
+MOVE_BATON_PASS|Le lanceur échange\nsa place et tout\nchangement de stat\navec un Pokémon de
+MOVE_ENCORE|Oblige l’ennemi à\nrépéter la dernière\ncapacité utilisée\ndurant trois tours.
+MOVE_PURSUIT|Une attaque qui\ninflige deux fois\nplus de dégâts à un\nennemi qui quitte le
+MOVE_RAPID_SPIN|Une attaque\ntournoyante pouvant\naussi annuler par\nex.
+MOVE_SWEET_SCENT|Un doux parfum qui\nréduit beaucoup\nl’Esquive de\nl’ennemi.
+MOVE_IRON_TAIL|Attaque l’ennemi\navec une queue de\nfer. Peut aussi\nbaisser sa Défense.
+MOVE_METAL_CLAW|Attaque avec des\ngriffes d’acier.
+MOVE_VITAL_THROW|Le lanceur porte son\ncoup en dernier.
+MOVE_MORNING_SUN|Un soin qui restaure\ndes PV au lanceur.
+MOVE_SYNTHESIS|Un soin qui restaure\ndes PV au lanceur.
+MOVE_MOONLIGHT|Un soin qui restaure\ndes PV au lanceur.
+MOVE_HIDDEN_POWER|Attaque dont le type\ndépend du Pokémon\nqui l’utilise.
+MOVE_CROSS_CHOP|Le lanceur délivre\nun coup double en\ncroisant les\navant-bras.
+MOVE_TWISTER|Déclenche un\nterrible ouragan sur\nl’ennemi. Peut aussi\nl’apeurer.
+MOVE_RAIN_DANCE|Invoque de fortes\npluies qui durent 5\ntours et améliorent\nles capacités de
+MOVE_SUNNY_DAY|Fait briller le\nsoleil pendant 5\ntours et améliore\nles capacités de
+MOVE_CRUNCH|Le lanceur mord\nl’ennemi de ses\ncrocs pointus.
+MOVE_MIRROR_COAT|Une riposte qui\ncontre n’importe\nquelle attaque\nspéciale en
+MOVE_PSYCH_UP|Une autohypnose qui\npermet au lanceur de\ncopier les\nchangements de stats
+MOVE_EXTREME_SPEED|Le lanceur charge à\nune vitesse\nrenversante. Frappe\nen priorité.
+MOVE_ANCIENT_POWER|Une attaque\npréhistorique qui\npeut augmenter\ntoutes les stats du
+MOVE_SHADOW_BALL|Projette une grande\nombre sur l’ennemi.
+MOVE_FUTURE_SIGHT|De l’énergie\npsychique vient\nfrapper l’ennemi 2\ntours après
+MOVE_ROCK_SMASH|Porte un coup de\npoing à l’ennemi qui\npeut baisser sa\nDéfense.
+MOVE_WHIRLPOOL|Piège l’ennemi dans\nune trombe d’eau\npendant quatre à\ncinq tours.
+MOVE_BEAT_UP|Le lanceur appelle\ntous les Pokémon de\nson équipe à\nattaquer.
+MOVE_FAKE_OUT|Permet de frapper en\npremier et apeure\nl’ennemi.
+MOVE_UPROAR|Le lanceur attaque\nen rugissant durant\n3 tours.
+MOVE_STOCKPILE|Le lanceur accumule\nde la puissance et\naugmente sa Défense\net sa Défense
+MOVE_SPIT_UP|Libère dans une\nattaque la puissance\nprécédemment\naccumulée avec
+MOVE_SWALLOW|Le lanceur absorbe\nla puissance\naccumulée avec\nStockage pour
+MOVE_HEAT_WAVE|Le lanceur provoque\nune vague de\nchaleur. Peut aussi\nbrûler l’ennemi.
+MOVE_HAIL|Invoque une tempête\nde grêle qui dure 5\ntours.
+MOVE_TORMENT|Le lanceur irrite\nl’ennemi pour\nl’empêcher\nd’utiliser la même
+MOVE_FLATTER|Rend la cible\nconfuse, mais\naugmente son Attaque\nSpéciale.
+MOVE_WILL_O_WISP|Lance une sinistre\nflamme violette à\nl’ennemi pour lui\ninfliger une
+MOVE_MEMENTO|Le lanceur est mis\nK.O., mais l’Attaque\net l’Attaque\nSpéciale de l’ennemi
+MOVE_FACADE|Une attaque dont la\npuissance double\nlorsque le lanceur\nest empoisonné,
+MOVE_FOCUS_PUNCH|Le lanceur se\nconcentre avant\nd’attaquer.
+MOVE_SMELLING_SALT|Cette attaque est\ndoublement efficace\nsur les Pokémon\nparalysés, mais elle
+MOVE_FOLLOW_ME|Attire l’attention\ndes ennemis pour les\nforcer à n’attaquer\nque le lanceur.
+MOVE_NATURE_POWER|Une attaque qui tire\nsa force de la\nnature.
+MOVE_CHARGE|Le lanceur concentre\nsa puissance pour sa\nprochaine attaque\nÉlectrik.
+MOVE_TAUNT|Provoque l’ennemi.
+MOVE_HELPING_HAND|Une capacité qui\naugmente la\npuissance d’attaque\nd’un allié.
+MOVE_TRICK|Le lanceur prend la\ncible au dépourvu et\nl’oblige à échanger\nson objet contre le
+MOVE_ROLE_PLAY|Imite la cible et\ncopie son talent.
+MOVE_WISH|Un vœu qui permet de\nrécupérer la moitié\ndes PV max au tour\nsuivant.
+MOVE_ASSIST|Le lanceur se\ndépêche d’utiliser\nune capacité au\nhasard parmi celles
+MOVE_INGRAIN|Le lanceur plante\nses racines et\nrécupère des PV à\nchaque tour.
+MOVE_SUPERPOWER|Une attaque\npuissante, mais qui\nbaisse l’Attaque et\nla Défense du
+MOVE_MAGIC_COAT|Une barrière qui\nrenvoie les\ncapacités comme\nVampigraine et
+MOVE_RECYCLE|Recycle un objet\ntenu à usage unique\ndéjà utilisé lors du\ncombat pour pouvoir
+MOVE_REVENGE|Une attaque deux\nfois plus puissante\nsi le lanceur a été\nblessé par l’ennemi
+MOVE_BRICK_BREAK|Une attaque avec le\ntranchant de la\nmain.
+MOVE_YAWN|Fait bâiller\nl’ennemi qui\ns’endort au tour\nsuivant.
+MOVE_KNOCK_OFF|Le lanceur fait\ntomber l’objet tenu\npar l’ennemi pour le\nrendre inutilisable
+MOVE_ENDEAVOR|Une attaque qui\nréduit les PV de\nl’ennemi au niveau\ndes PV du lanceur.
+MOVE_ERUPTION|Le lanceur laisse\nexploser sa colère.
+MOVE_SKILL_SWAP|Le lanceur utilise\nses pouvoirs\npsychiques pour\néchanger son talent
+MOVE_IMPRISON|Si l’ennemi et le\nlanceur ont des\ncapacités en commun,\nl’ennemi ne pourra
+MOVE_REFRESH|Le lanceur se repose\npour guérir d’un\nempoisonnement,\nd’une brûlure ou
+MOVE_GRUDGE|Si le lanceur est\nmis K.O., sa rancune\népuise les PP de la\ncapacité utilisée
+MOVE_SNATCH|Le lanceur vole\nl’effet des\ncapacités de soin ou\nde changement de
+MOVE_SECRET_POWER|Les effets de cette\nattaque varient en\nfonction de\nl’environnement.
+MOVE_DIVE|Le lanceur plonge\nsous l’eau au\npremier tour et\nfrappe au second.
+MOVE_ARM_THRUST|Un déluge de coups\nadressés avec la\npaume qui frappe de\n2 à 5 fois
+MOVE_CAMOUFLAGE|Modifie le type du\nlanceur en fonction\ndu terrain, comme\nune berge, une
+MOVE_TAIL_GLOW|Le lanceur regarde\nun flash lumineux\nfixement.
+MOVE_LUSTER_PURGE|Le lanceur libère un\néclair lumineux.
+MOVE_MIST_BALL|Une bulle de brume\ninflige des dégâts à\nl’ennemi.
+MOVE_FEATHER_DANCE|Une montagne de\nplumes ensevelit\nl’ennemi et réduit\nbeaucoup son
+MOVE_TEETER_DANCE|Danse qui rend\nconfus tous les\nPokémon autour du\nlanceur.
+MOVE_BLAZE_KICK|Le lanceur envoie un\ncoup de pied au taux\nde critique élevé.
+MOVE_MUD_SPORT|Le lanceur se couvre\nde boue pour\naffaiblir les\ncapacités Électrik
+MOVE_ICE_BALL|Frappe l’ennemi\npendant cinq tours.
+MOVE_NEEDLE_ARM|Le lanceur attaque\nen fouettant\nl’ennemi de ses bras\népineux.
+MOVE_SLACK_OFF|Le lanceur se tourne\nles pouces et\nrécupère jusqu’à la\nmoitié de ses PV
+MOVE_HYPER_VOICE|Le lanceur pousse un\ncri dont l’écho\nterrifiant a le\npouvoir d’infliger
+MOVE_POISON_FANG|Le lanceur mord\nl’ennemi de ses\ncrocs toxiques.
+MOVE_CRUSH_CLAW|Lacère l’ennemi avec\ndes griffes solides\net aiguisées.
+MOVE_BLAST_BURN|Une explosion\nardente souffle\nl’adversaire.
+MOVE_HYDRO_CANNON|Une trombe d’eau\nheurte l’ennemi.
+MOVE_METEOR_MASH|Un coup de poing\nlancé à la vitesse\nd’un météore.
+MOVE_ASTONISH|Le lanceur attaque\nl’ennemi en poussant\nun cri terrifiant.
+MOVE_WEATHER_BALL|Une attaque dont la\npuissance et le type\nvarient en fonction\ndu temps qu’il fait.
+MOVE_AROMATHERAPY|Le lanceur libère un\nparfum apaisant qui\nguérit tous les\nproblèmes de statut
+MOVE_FAKE_TEARS|Le lanceur fait\nsemblant de pleurer\npour troubler\nl’ennemi et beaucoup
+MOVE_AIR_CUTTER|Le lanceur appelle\ndes vents tranchants\nqui lacèrent\nl’ennemi.
+MOVE_OVERHEAT|Attaque l’ennemi à\npleine puissance.
+MOVE_ODOR_SLEUTH|Permet de toucher un\nPokémon Spectre avec\nn’importe quelle\ncapacité et de
+MOVE_ROCK_TOMB|Des rochers frappent\nl’ennemi. Réduit\naussi sa Vitesse.
+MOVE_SILVER_WIND|Vent qui projette\ndes écailles\npoudreuses sur\nl’ennemi.
+MOVE_METAL_SOUND|Un cri horrible tel\nun crissement\nmétallique qui\nréduit beaucoup la
+MOVE_GRASS_WHISTLE|Le lanceur joue une\ndouce mélodie qui\nplonge l’ennemi dans\nun profond sommeil.
+MOVE_TICKLE|Le lanceur\nchatouille l’ennemi,\nce qui baisse son\nAttaque et sa
+MOVE_COSMIC_POWER|Le lanceur absorbe\nun pouvoir mystique\nspatial qui augmente\nsa Défense et sa
+MOVE_WATER_SPOUT|Le lanceur attaque\navec un jet d’eau.
+MOVE_SIGNAL_BEAM|Le lanceur projette\nun rayon de lumière\nsinistre.
+MOVE_SHADOW_PUNCH|Le lanceur surgit\ndes ombres et donne\nun coup de poing.\nN’échoue jamais.
+MOVE_EXTRASENSORY|Le lanceur attaque\navec un pouvoir\nétrange et\ninvisible.
+MOVE_SKY_UPPERCUT|Le lanceur attaque\navec un uppercut.
+MOVE_SAND_TOMB|Le lanceur\nemprisonne l’ennemi\ndans une tempête de\nsable terrifiante
+MOVE_SHEER_COLD|Une vague de froid\nglacial frappe\nl’ennemi.
+MOVE_MUDDY_WATER|Le lanceur attaque\nen projetant de\nl’eau boueuse.
+MOVE_BULLET_SEED|Le lanceur mitraille\nl’ennemi avec une\nrafale de graines.
+MOVE_AERIAL_ACE|Le lanceur prend\nl’ennemi de vitesse\net le lacère.\nN’échoue jamais.
+MOVE_ICICLE_SPEAR|Le lanceur jette des\npics de glace sur\nl’ennemi, de deux à\ncinq fois de suite.
+MOVE_IRON_DEFENSE|L’épiderme du\nlanceur devient dur\ncomme du fer, ce qui\naugmente beaucoup sa
+MOVE_BLOCK|Le lanceur bloque la\nroute de l’ennemi\npour empêcher sa\nfuite.
+MOVE_HOWL|Le lanceur grogne\npour se rassurer, ce\nqui augmente son\nAttaque.
+MOVE_DRAGON_CLAW|Le lanceur lacère\nl’ennemi de ses\ngrandes griffes\naiguisées.
+MOVE_FRENZY_PLANT|Un violent coup de\nracines s’abat sur\nl’ennemi.
+MOVE_BULK_UP|Le lanceur tend ses\nmuscles pour se\ngonfler, ce qui\nbooste son Attaque
+MOVE_BOUNCE|Le lanceur bondit\ntrès haut et plonge\nsur l’ennemi au\nsecond tour.
+MOVE_MUD_SHOT|Le lanceur attaque\nen projetant de la\nboue sur l’ennemi.
+MOVE_POISON_TAIL|Attaque à taux de\ncritique élevé. Peut\naussi empoisonner\nl’ennemi.
+MOVE_COVET|Le lanceur\ns’approche de la\ncible avec un air\nangélique afin de
+MOVE_VOLT_TACKLE|Le lanceur\nélectrifie son corps\navant de charger.
+MOVE_MAGICAL_LEAF|Le lanceur disperse\nd’étranges feuilles\nqui poursuivent\nl’ennemi.
+MOVE_WATER_SPORT|Asperge d’eau les\nalentours. Affaiblit\nles capacités Feu\npendant cinq tours.
+MOVE_CALM_MIND|Le lanceur se\nconcentre et fait le\nvide dans son esprit\npour monter son
+MOVE_LEAF_BLADE|Une feuille coupante\ncomme une lame\nentaille l’ennemi.
+MOVE_DRAGON_DANCE|Une danse mystique\ndont le rythme\neffréné augmente\nl’Attaque et la
+MOVE_ROCK_BLAST|Le lanceur projette\nun rocher sur\nl’ennemi de deux à\ncinq fois d’affilée.
+MOVE_SHOCK_WAVE|Le lanceur envoie un\nchoc électrique\nrapide à l’ennemi.
+MOVE_WATER_PULSE|Le lanceur envoie un\npuissant jet d’eau\nsur l’ennemi. Peut\nle rendre confus.
+MOVE_DOOM_DESIRE|Le lanceur génère\nune sphère lumineuse\nqu’il projette sur\nl’ennemi 2 tours
+MOVE_PSYCHO_BOOST|Attaque l’ennemi à\npleine puissance.
+MOVE_MOONBLAST|Attaque l’ennemi\ngrâce au pouvoir de\nla lune.
+MOVE_DAZZLING_GLEAM|Libère une puissante\ndécharge lumineuse\nqui inflige des\ndégâts à l’ennemi.
+MOVE_PLAY_ROUGH|Attaque l’ennemi\navec un câlin. Peut\ndiminuer son\nAttaque.
+MOVE_DRAINING_KISS|Aspire la force\nvitale de l’ennemi\npar un baiser.
+MOVE_FAIRY_WIND|Déchaîne un vent\nmagique qui cingle\nl’ennemi.
+MOVE_DISARMING_VOICE|Laisse s’échapper\nune voix\nenchanteresse qui\ninflige des dégâts
+MOVE_SPIRIT_BREAK|Le lanceur attaque\nson adversaire avec\nune telle force que\nce dernier peut s’en
+MOVE_STEAM_BLAST|Si le lanceur est\nTéracristallisé, il\nlibère l'énergie de\nson Type
+MOVE_FLARE_BLITZ|Le lanceur s’embrase\navant de charger\nl’ennemi.
+MOVE_FIRE_FANG|Le lanceur utilise\nune morsure\nenflammée.
+MOVE_LAVA_PLUME|Des boules de feu\ns’abattent sur tous\nles Pokémon autour\ndu lanceur.
+MOVE_INFERNO|L’ennemi est entouré\nd’un torrent de\nflammes ardentes qui\nle brûlent.
+MOVE_FLAME_CHARGE|Le lanceur s’entoure\nde flammes pour\nattaquer l’ennemi.
+MOVE_MYSTICAL_FIRE|Attaque avec des\nflammes brûlantes\nsoufflées de la\nbouche du lanceur.
+MOVE_SEARING_SHOT|Des boules de feu\ns’abattent sur tous\nles Pokémon autour\ndu lanceur.
+MOVE_SCALD|L’ennemi est attaqué\npar un jet d’eau\nbouillante. Peut\naussi le brûler.
+MOVE_AQUA_JET|Le lanceur fonce sur\nl’ennemi si\nrapidement qu’on\nparvient à peine à
+MOVE_AQUA_TAIL|Le lanceur attaque\nen balançant sa\nqueue comme une lame\nde fond en pleine
+MOVE_LIQUIDATION|Le lanceur utilise\nla force de l’eau\npour attaquer.
+MOVE_ENERGY_BALL|Utilise les pouvoirs\nde la nature pour\nattaquer l’ennemi.
+MOVE_SEED_BOMB|Le lanceur fait\npleuvoir un déluge\nde graines solides\nsur l’ennemi.
+MOVE_LEAF_STORM|Invoque une tempête\nde feuilles acérées.
+MOVE_WOOD_HAMMER|Le lanceur heurte\nl’ennemi de son\ncorps robuste.
+MOVE_WILD_CHARGE|Une charge\nélectrique violente\nqui blesse aussi\nlégèrement le
+MOVE_DISCHARGE|Un flamboiement\nd’électricité frappe\ntous les Pokémon\nautour du lanceur.
+MOVE_THUNDER_FANG|Le lanceur utilise\nune morsure\nélectrifiée.
+MOVE_NUZZLE|Le lanceur attaque\nen frottant ses\nbajoues chargées\nd’électricité.
+MOVE_ICE_FANG|Le lanceur utilise\nune morsure\nglaciale.
+MOVE_FROST_BREATH|Un souffle froid\nblesse l’ennemi.\nL’effet est toujours\ncritique.
+MOVE_ICICLE_CRASH|Envoie de gros blocs\nde glace sur\nl’ennemi pour lui\ninfliger des dégâts.
+MOVE_FREEZE_DRY|Refroidit violemment\nl’ennemi et peut le\ngeler.
+MOVE_AURA_SPHERE|Le lanceur dégage\nune aura et projette\nde l’énergie.\nN’échoue jamais.
+MOVE_DRAIN_PUNCH|Un coup de poing qui\ndraine l’énergie.
+MOVE_GUNK_SHOT|Le lanceur envoie\ndes détritus sur\nl’ennemi. Peut aussi\nl’empoisonner.
+MOVE_POISON_JAB|Attaque l’ennemi\navec un tentacule ou\nun bras plein de\npoison.
+MOVE_CROSS_POISON|Un coup tranchant\nqui peut empoisonner\nl’ennemi. Taux de\ncritiques élevé.
+MOVE_VENOSHOCK|Le lanceur inocule\nun poison spécial à\nl’ennemi.
+MOVE_ACID_SPRAY|Un liquide acide qui\nfait fondre\nl’ennemi.
+MOVE_EARTH_POWER|De terribles séismes\nsecouent l’ennemi.\nPeut aussi baisser\nsa Défense Spéciale.
+MOVE_BULLDOZE|Le lanceur piétine\nle sol et inflige\ndes dégâts à tous\nles Pokémon autour
+MOVE_DRILL_RUN|Le lanceur tourne\nsur lui-même comme\nune perceuse et se\njette sur l’ennemi.
+MOVE_BRAVE_BIRD|Le lanceur replie\nses ailes et charge\nen rase-mottes.
+MOVE_ACROBATICS|Attaque agile.
+MOVE_HURRICANE|Le lanceur déclenche\nune tempête de vents\nviolents qui s’abat\nsur l’ennemi.
+MOVE_AIR_SLASH|Le lanceur attaque\navec une lame d’air\nqui fend tout.
+MOVE_ROOST|Le lanceur atterrit\net se repose.
+MOVE_ZEN_HEADBUTT|Le lanceur concentre\nsa volonté et donne\nun coup de tête.
+MOVE_BUG_BUZZ|Le lanceur fait\nvibrer ses ailes\npour lancer une\nvague sonique.
+MOVE_X_SCISSOR|Le lanceur taillade\nl’ennemi en\nutilisant ses faux\nou ses griffes comme
+MOVE_U_TURN|Après son attaque,\nle lanceur revient à\ntoute vitesse et\nchange de place avec
+MOVE_LUNGE|Le lanceur se jette\nsur la cible de\ntoutes ses forces\npour lui infliger
+MOVE_POWER_GEM|Le lanceur attaque\navec un rayon de\nlumière qui\nscintille comme s’il
+MOVE_STONE_EDGE|Fait surgir des\npierres aiguisées\nsous l’ennemi. Taux\nde critiques élevé.
+MOVE_HEAD_SMASH|Le lanceur assène un\ncoup de tête\ndésespéré.
+MOVE_ROCK_POLISH|Le lanceur polit son\ncorps pour diminuer\nsa résistance au\nvent.
+MOVE_SHADOW_CLAW|Attaque avec une\ngriffe puissante\nfaite d’ombres. Taux\nde critiques élevé.
+MOVE_SHADOW_SNEAK|Le lanceur étend son\nombre pour frapper\npar-derrière. Frappe\nen priorité.
+MOVE_HEX|Attaque acharnée qui\ncause davantage de\ndégâts à l’ennemi\ns’il a un problème
+MOVE_OMINOUS_WIND|Le lanceur crée une\nviolente bourrasque.\nPeut aussi augmenter\ntoutes ses stats.
+MOVE_DRAGON_PULSE|Le lanceur ouvre la\nbouche pour envoyer\nune onde de choc qui\nfrappe l’ennemi.
+MOVE_DRAGON_RUSH|Le lanceur frappe\nl’ennemi d’un air\nmenaçant. Peut aussi\napeurer l’ennemi.
+MOVE_DRACO_METEOR|Le lanceur invoque\ndes comètes.
+MOVE_DRAGON_TAIL|Un coup puissant qui\nblesse la cible et\nl’envoie balader.
+MOVE_DARK_PULSE|Le lanceur dégage\nune horrible aura\nchargée d’idées\nnoires.
+MOVE_NIGHT_SLASH|Le lanceur lacère\nl’ennemi à la\npremière occasion.
+MOVE_FOUL_PLAY|Le lanceur utilise\nla force de\nl’ennemi.
+MOVE_SUCKER_PUNCH|Permet au lanceur de\nfrapper en premier.
+MOVE_FLASH_CANNON|Le lanceur concentre\nson énergie\nlumineuse et la fait\nexploser.
+MOVE_IRON_HEAD|Le lanceur heurte\nl’ennemi avec sa\ntête dure comme de\nl’acier.
+MOVE_BULLET_PUNCH|Le lanceur envoie\ndes coups de poing\naussi rapides que\ndes balles de
+MOVE_GYRO_BALL|Le lanceur effectue\nune rotation et\nfrappe l’ennemi.
+MOVE_MIRROR_SHOT|Le corps poli du\nlanceur libère un\néclair d’énergie.
+MOVE_CLOSE_COMBAT|Le lanceur combat au\ncorps à corps sans\nse protéger.
+MOVE_HAMMER_ARM|Le lanceur donne un\npuissant coup de\npoing à l’ennemi.
+MOVE_POWER_UP_PUNCH|À force de frapper,\nles poings\ndeviennent plus\ndurs.
+MOVE_VACUUM_WAVE|Le lanceur agite son\npoing pour projeter\nune onde de vide.\nFrappe en priorité.
+MOVE_SACRED_SWORD|Un coup de lame\nviolent qui lacère\nl’ennemi et lui\ninflige des dégâts
+MOVE_STORM_THROW|Un coup très\npuissant dont\nl’effet est toujours\ncritique.
+MOVE_LOW_SWEEP|Un coup rapide qui\naffecte la mobilité\nde l’ennemi et\ndiminue sa Vitesse.
+MOVE_FOCUS_BLAST|Le lanceur rassemble\nses forces et laisse\néclater son pouvoir.
+MOVE_PSYCHO_CUT|Le lanceur entaille\nl’ennemi grâce à des\nlames faites\nd’énergie psychique.
+MOVE_HEART_STAMP|Déconcentre l’ennemi\navec des mouvements\nmignons avant de le\nfrapper violemment.
+MOVE_PSYSTRIKE|Le lanceur\nmatérialise des\nondes mystérieuses\nqu’il projette sur
+MOVE_PSYCHIC_FANGS|Le lanceur mord la\ncible avec ses\npouvoirs psychiques.
+MOVE_ESPER_WING|Le lanceur entaille\nla cible avec ses\nailes renforcées par\nune émanation
+MOVE_TWIN_BEAM|Le lanceur projette\nd'étranges rayons\nlumineux avec ses\nyeux et inflige des
+MOVE_NASTY_PLOT|Stimule l’esprit par\nde mauvaises\npensées.
+MOVE_ASSURANCE|Cette attaque est\ndeux fois plus\nefficace si l’ennemi\na déjà été blessé
+MOVE_SNARL|Le lanceur hurle sur\nl’ennemi. Baisse\nl’Attaque Spéciale\nde l’ennemi.
+MOVE_FIERY_WRATH|Le lanceur canalise\nsa colère et la\ntransforme en aura\nbrûlante, avec
+MOVE_KOWTOW_CLEAVE|Le lanceur se\nprosterne devant la\ncible et profite de\ncette distraction
+MOVE_WICKED_BLOW|Le lanceur assène un\ncoup puissant à\nl’ennemi.
+MOVE_DARK_VOID|L’ennemi est plongé\ndans les ténèbres.\nIl tombe dans un\nprofond sommeil.
+MOVE_AUTOTOMIZE|Le lanceur se\ndébarrasse des\nparties inutiles de\nson corps.
+MOVE_DOUBLE_IRON_BASH|Le lanceur fait\npivoter l’écrou de\nsa poitrine deux\nfois d’affilée pour
+MOVE_BEHEMOTH_BLADE|Le lanceur se\ntransforme en une\nimmense épée et\npourfend son
+MOVE_MAGNET_BOMB|Le lanceur projette\ndes bombes d’acier\nqui collent à\nl’ennemi.
+MOVE_GEAR_GRIND|Le lanceur jette\ndeux écrous d’acier\nqui frappent\nl’ennemi deux fois
+MOVE_SHADOW_BONE|Le lanceur frappe\navec un os possédé\npar l’âme d’un\ndéfunt.
+MOVE_POLTERGEIST|Le lanceur manipule\nl’objet tenu par\nl’ennemi pour\nl’attaquer.
+MOVE_ASTRAL_BARRAGE|Le lanceur attaque\nl’ennemi avec une\nmultitude de petits\nspectres.
+MOVE_STRUGGLE_BUG|Le lanceur se débat\nde toutes ses\nforces, et baisse\nl’Attaque Spéciale
+MOVE_QUIVER_DANCE|Une danse mystique\ndont le rythme\nparfait augmente\nl’Attaque Spéciale,
+MOVE_BUG_BITE|Le lanceur pique\nl’ennemi.
+MOVE_ATTACK_ORDER|Le lanceur appelle\nses sous-fifres pour\nfrapper l’ennemi.
+MOVE_FIRST_IMPRESSION|Une capacité très\npuissante, mais qui\nne fonctionne qu’au\npremier tour.
+MOVE_DEFEND_ORDER|Le lanceur appelle\nses sous-fifres pour\nformer un bouclier\nqui augmente sa
+MOVE_HEAL_ORDER|Le lanceur appelle\nses sous-fifres pour\nle soigner.
+MOVE_POUNCE|Le lanceur attaque\nen bondissant sur la\ncible, ce qui baisse\nla Vitesse de
+MOVE_SKITTER_SMACK|Le lanceur rampe\nderrière l’ennemi\npour l’attaquer.
+MOVE_SLUDGE_WAVE|Une vague de\ndétritus attaque\ntous les Pokémon\nautour du lanceur.
+MOVE_TOXIC_SPIKES|Lance des pics\nautour de l’ennemi.
+MOVE_CLEAR_SMOG|Le lanceur jette un\ntas de détritus\nspéciaux sur la\ncible.
+MOVE_COIL|Le lanceur s’enroule\nsur lui-même et se\nconcentre.
+MOVE_MUD_BOMB|Le lanceur attaque à\nl’aide d’une boule\nde boue solidifiée.
+MOVE_SHORE_UP|Le lanceur récupère\njusqu’à la moitié de\nses PV max.
+MOVE_HIGH_HORSEPOWER|Le lanceur attaque\nviolemment en\nutilisant tout son\npoids.
+MOVE_STOMPING_TANTRUM|Le lanceur attaque\nen utilisant sa\nfrustration.
+MOVE_SCORCHING_SANDS|Le lanceur projette\ndu sable chauffé à\nblanc sur l’ennemi.
+MOVE_HEADLONG_RUSH|Le lanceur charge\nl'ennemi de toutes\nses forces.
+MOVE_STEALTH_ROCK|Lance des pierres\nflottantes autour de\nl’ennemi, qui\nblessent tout ennemi
+MOVE_ROCK_WRECKER|Le lanceur attaque\nen projetant un gros\nrocher sur l’ennemi.
+MOVE_ACCELEROCK|Le lanceur charge\nl’ennemi à toute\nvitesse. Frappe en\npriorité.
+MOVE_SMACK_DOWN|Le lanceur jette\ntoutes sortes de\nprojectiles à un\nennemi.
+MOVE_DIAMOND_STORM|Provoque une tempête\nde diamants qui\ninflige des dégâts.
+MOVE_DRAGON_HAMMER|Le lanceur utilise\nson corps comme un\nvéritable marteau\npour écraser la
+MOVE_SCALE_SHOT|Le lanceur projette\ndes écailles sur la\ncible de deux à cinq\nfois d’affilée.
+MOVE_DRAGON_DARTS|Le lanceur attaque\nen propulsant deux\nFantyrm.
+MOVE_DUAL_CHOP|Le lanceur frappe\nl’ennemi deux fois\nd’affilée avec les\nparties les plus
+MOVE_ROAR_OF_TIME|Le lanceur frappe si\nfort qu’il affecte\nle cours du temps.
+MOVE_SPACIAL_REND|Le lanceur déchire\nl’ennemi et l’espace\nautour de lui. Taux\nde critiques élevé.
+MOVE_CLANGING_SCALES|Le lanceur déclenche\nun vacarme en\nfrottant ses\nécailles les unes
+MOVE_FIERY_DANCE|Le lanceur enveloppe\nl’ennemi de flammes.
+MOVE_BLUE_FLARE|De magnifiques et\nredoutables flammes\nbleues fondent sur\nl’ennemi.
+MOVE_V_CREATE|Le lanceur projette\nune flamme ardente\nde son front et se\njette sur l’ennemi.
+MOVE_TORCH_SONG|Le lanceur carbonise\nla cible en\nprojetant sur elle\nde vives flammes
+MOVE_FLAME_BURST|Quand l’attaque\natteint sa cible,\nelle projette des\nflammes qui touchent
+MOVE_PYRO_BALL|Le lanceur attaque\navec un ballon fait\nà partir d’un\ncaillou enflammé.
+MOVE_SPARKLING_ARIA|Le lanceur émet\nplusieurs bulles en\nchantant.
+MOVE_FLIP_TURN|Après son attaque,\nle lanceur revient à\ntoute vitesse et\nchange de place avec
+MOVE_RAZOR_SHELL|Un coquillage\naiguisé lacère\nl’ennemi. Peut aussi\nbaisser sa Défense.
+MOVE_SHELL_SMASH|Le lanceur brise sa\ncoquille. Il baisse\nsa Défense et Déf.
+MOVE_WAVE_CRASH|Le lanceur se\nrecouvre entièrement\nd'eau avant de\ncharger sa cible.
+MOVE_ORIGIN_PULSE|D’innombrables\nrayons lumineux d’un\nbleu étincelant\ns’abattent sur la
+MOVE_JET_PUNCH|Le lanceur enveloppe\nson poing d'un\ntorrent furieux et\nattaque si
+MOVE_STEAM_ERUPTION|Plonge l’ennemi dans\nune chaleur\nétouffante. Peut le\nbrûler.
+MOVE_POWER_WHIP|Le lanceur fait\nvirevolter\nviolemment ses\nlianes ou ses
+MOVE_HORN_LEECH|Un coup de corne qui\ndraine l’énergie de\nl’ennemi.
+MOVE_SEED_FLARE|Le corps du lanceur\német une onde de\nchoc.
+MOVE_PETAL_BLIZZARD|Déclenche une\nviolente tempête de\nfleurs qui inflige\ndes dégâts à tous
+MOVE_GRASSY_GLIDE|Le lanceur attaque\nl’ennemi en glissant\nsur le terrain.
+MOVE_LEAFAGE|Le lanceur attaque\nl’ennemi avec des\nfeuilles.
+MOVE_DRUM_BEATING|Le lanceur bat son\ntambour pour en\ndiriger les racines\nsur la cible,
+MOVE_LEAF_TORNADO|L’ennemi est pris\ndans un tourbillon\nde feuilles acérées.
+MOVE_COTTON_GUARD|Le lanceur se\nprotège en\ns’emmitouflant dans\ndu coton.
+MOVE_VOLT_SWITCH|Après son attaque,\nle lanceur revient à\ntoute vitesse et\nchange de place avec
+MOVE_ZING_ZAP|Le lanceur fonce sur\nla cible et lui\nenvoie un puissant\nchoc électrique.
+MOVE_PARABOLIC_CHARGE|Inflige des dégâts à\ntous les Pokémon\nautour du lanceur.
+MOVE_ELECTROWEB|Attrape l’ennemi\ndans un filet\nélectrique.
+MOVE_PLASMA_FISTS|Le lanceur attaque\nen projetant de\nl’électricité avec\nses poings.
+MOVE_BOLT_STRIKE|S’enveloppe d’une\ncharge électrique\nsurpuissante et se\njette sur l’ennemi.
+MOVE_FUSION_BOLT|Projette un orbe\nélectrique\ngigantesque.
+MOVE_CHARGE_BEAM|Le lanceur tire un\nrayon chargé\nd’électricité.
+MOVE_EERIE_IMPULSE|Le corps du lanceur\nproduit des ondes\nanormales qui\nenveloppent l’ennemi
+MOVE_ICE_SHARD|Le lanceur crée des\néclats de glace\nqu’il envoie sur\nl’ennemi.
+MOVE_AVALANCHE|Une attaque deux\nfois plus puissante\nsi le lanceur a été\nblessé par l’ennemi
+MOVE_GLACIATE|Un souffle de vent\nqui congèle tout sur\nson passage s’abat\nsur l’ennemi.
+MOVE_FREEZE_SHOCK|Projette un bloc de\nglace électrifié sur\nl’ennemi au second\ntour.
+MOVE_ICE_BURN|Au second tour, le\nlanceur projette un\nsouffle de vent\nglacial dévastateur
+MOVE_DRAGON_ASCENT|Le Pokémon s’abat à\ntoute vitesse sur la\ncible depuis les\nhautes couches de
+MOVE_OBLIVION_WING|Vole l’énergie de la\ncible.
+MOVE_PLUCK|Le lanceur picore la\ncible.
+MOVE_DUAL_WINGBEAT|Le lanceur frappe\nl’ennemi avec ses\nailes deux fois\nd’affilée.
+MOVE_BLEAKWIND_STORM|Frappe l'ennemi d'un\ntyphon froid et\nbrutal, qui fait\ntrembler le cœur et
+MOVE_CHATTER|Le lanceur envoie\nune onde musicale en\nrécitant des mots.
+MOVE_GIGA_IMPACT|Le lanceur charge\nl’ennemi de toute sa\npuissance et doit\nensuite se reposer
+MOVE_DOUBLE_HIT|Un coup de queue ou\nde liane qui frappe\nl’ennemi deux fois\nd’affilée.
+MOVE_BOOMBURST|Attaque les Pokémon\nalentour grâce à une\nonde sonore\nassourdissante qui
+MOVE_WORK_UP|Le lanceur se\nrengorge. Augmente\nl’Attaque et\nl’Attaque Spéciale.
+MOVE_HONE_CLAWS|Le lanceur s’aiguise\nles griffes.\nAugmente l’Attaque\net la Précision.
+MOVE_BABY_DOLL_EYES|Fixe l’ennemi d’un\nair très\nattendrissant qui le\ntouche et diminue
+MOVE_RETALIATE|Venge un Pokémon de\nl’équipe mis K.O.
+MOVE_ECHOED_VOICE|Un cri retentissant\nblesse l’ennemi.
+MOVE_TECHNO_BLAST|Le lanceur projette\nun rayon lumineux\nsur l’ennemi.
+MOVE_JUDGMENT|Le lanceur libère\nune myriade de\nrayons de lumière.
+MOVE_MULTI_ATTACK|Le Pokémon s’entoure\nd’une puissante\nénergie avant de\nfoncer sur sa cible.
+MOVE_RELIC_SONG|Le lanceur attaque\nl’ennemi en lui\nchantant une chanson\nd’un autre temps.
+MOVE_RAGING_BULL|Le lanceur effectue\nun plaquage comme un\ntaureau enragé.
+MOVE_HYPER_DRILL|Le lanceur fait\ntourner à toute\nvitesse la partie\npointue de son corps
+MOVE_BLOOD_MOON|Le lanceur concentre\ntoute son énergie\ndans la lune rouge\nsang sur son front
+MOVE_TERRAIN_PULSE|Une attaque qui tire\nsa force des champs.
+MOVE_HEAL_PULSE|Une aura de\nbien-être fait\nrécupérer la moitié\nde ses PV max à la
+MOVE_LIFE_DEW|Le lanceur projette\nune eau mystérieuse\nautour du terrain\npour restaurer ses
+MOVE_FORCE_PALM|Une onde de choc\nfrappe l’ennemi.\nPeut aussi paralyser\nla cible.
+MOVE_SECRET_SWORD|L’ennemi est lacéré\npar une longue\ncorne.
+MOVE_BODY_PRESS|Le lanceur utilise\nson corps pour\nattaquer sa cible.
+MOVE_COLLISION_COURSE|Le lanceur change de\nforme et s'écrase\nsur la cible dans\nune explosion
+MOVE_THUNDEROUS_KICK|Le lanceur assène un\ncoup de pied à la\ncible à la vitesse\nde l’éclair.
+MOVE_AXE_KICK|Le lanceur donne un\ncoup de talon\ndescendant à la\ncible, ce qui peut
+MOVE_CIRCLE_THROW|Projette le Pokémon\nennemi et le\nremplace par un\nautre.
+MOVE_PRECIPICE_BLADES|Le Pokémon\ntransforme la\npuissance de la\nterre et attaque la
+MOVE_LANDS_WRATH|Utilise la puissance\ndu sol et la\nconcentre sur\nl’ennemi pour
+MOVE_MIGHTY_CLEAVE|Le lanceur pourfend\nla cible avec la\nlumière accumulée\nsur sa tête.
+MOVE_SHELL_SIDE_ARM|Une attaque physique\nou spéciale, en\nfonction de ce qui\nest le plus efficace
+MOVE_MALIGNANT_CHAIN|Le lanceur ligote la\ncible avec une\nchaîne faite de\npoison et lui
+MOVE_MORTAL_SPIN|Le lanceur attaque\nen tournant sur\nlui-même et\nempoisonne la cible.
+MOVE_BARB_BARRAGE|Une multitude de\npointes toxiques\nfrappent la cible et\npeuvent
+MOVE_STEAMROLLER|Le lanceur se roule\nen boule et écrase\nson ennemi. Peut\naussi l’apeurer.
+MOVE_FELL_STINGER|Augmente beaucoup\nl’Attaque du lanceur\nsi un ennemi est mis\nK.O.
+MOVE_MOONGEIST_BEAM|Le lanceur attaque\navec un rayon de\nlumière mystérieux.
+MOVE_SPECTRAL_THIEF|Le lanceur plonge\ndans l’ombre de la\ncible, vole ses\naugmentations de
+MOVE_BITTER_MALICE|Une rancœur glaciale\nfrappe la cible et\nbaisse son Attaque.
+MOVE_RAGE_FIST|Le lanceur\ntransforme sa colère\nen énergie pour\nattaquer.
+MOVE_LAST_RESPECTS|Le lanceur attaque\npour venger ses\nalliés.
+MOVE_STEEL_BEAM|Le lanceur concentre\ndu métal issu de\ntout son corps en un\nrayon qu’il projette
+MOVE_SUNSTEEL_STRIKE|Le lanceur fonce sur\nla cible à la\nvitesse d’une\nmétéorite.
+MOVE_SMART_STRIKE|Le lanceur\ntransperce la cible\navec sa corne\neffilée.
+MOVE_ANCHOR_SHOT|Le lanceur jette son\nancre sur la cible\npour l’attaquer.
+MOVE_SPIN_OUT|Le lanceur met tout\nson poids sur ses\npattes et effectue\nde violentes
+MOVE_HARD_PRESS|Le lanceur écrase la\ncible avec ses bras\nou ses pinces.
+MOVE_TACHYON_CUTTER|Le lanceur concentre\ndes particules\nélémentaires pour\ncréer une lame qui
+MOVE_ICE_HAMMER|Le lanceur donne un\npuissant coup de\npoing à l’ennemi.
+MOVE_GLACIAL_LANCE|Le lanceur attaque\nl’ennemi avec une\nlance de glace\nentourée d’un
+MOVE_FREEZING_GLARE|Les yeux du lanceur\ntirent des rayons\npsychiques.
+MOVE_EXPANDING_FORCE|Le lanceur attaque\nla cible avec ses\npouvoirs psychiques.
+MOVE_PSYBLADE|Le lanceur lacère la\ncible à l'aide d'une\nlame intangible.
+MOVE_PSYCHIC_NOISE|Le lanceur attaque\navec des ondes\nsonores dissonantes.
+MOVE_EERIE_SPELL|Le lanceur attaque\navec de puissants\npouvoirs psychiques\net retire 3 PP de la
+MOVE_HYPERSPACE_HOLE|Crée une faille\ndimensionnelle pour\nattaquer\nsoudainement
+MOVE_BRUTAL_SWING|Le lanceur pivote\npour prendre de\nl’élan et infliger\ndes dégâts.
+MOVE_DARKEST_LARIAT|Le Pokémon étend les\nbras et frappe\nl’adversaire en\ntournant violemment.
+MOVE_LASH_OUT|Le lanceur frappe\nl’ennemi avec toute\nsa rancune.
+MOVE_THROAT_CHOP|Inflige une douleur\ntellement violente à\nla cible qu’elle ne\npeut plus émettre de
+MOVE_CORE_ENFORCER|La cible subit des\ndégâts et, si elle a\ndéjà agi à ce tour,\nelle perd aussi son
+MOVE_DRAGON_ENERGY|Le lanceur utilise\nson énergie vitale\npour attaquer\nl’ennemi.
+MOVE_FICKLE_BEAM|Le lanceur attaque\nen tirant un rayon\nlumineux.
+MOVE_FUSION_FLARE|Projette une boule\nde feu gigantesque.
+MOVE_MAGMA_STORM|L’ennemi est pris\ndans un tourbillon\nde feu qui dure de\nquatre à cinq tours.
+MOVE_ARMOR_CANNON|Le lanceur tire un\nboulet de canon\nardent provenant de\nsa propre armure sur
+MOVE_BURNING_JEALOUSY|Le lanceur attaque\nsa cible avec toute\nsa jalousie.
+MOVE_TEMPER_FLARE|Le lanceur utilise\nla force de son\ndépit pour attaquer.
+MOVE_HYDRO_STEAM|Le lanceur asperge\nla cible avec un\npuissant jet d'eau\nbouillante.
+MOVE_AQUA_CUTTER|Le lanceur projette\nde l'eau pressurisée\nqui entaille la\ncible comme une
+MOVE_TROP_KICK|Un coup de pied\nchaud comme les\ntropiques qui\ninflige des dégâts à
+MOVE_SYRUP_BOMB|Le lanceur jette une\nbombe qui recouvre\nla cible de sirop\ngluant et fait
+MOVE_IVY_CUDGEL|Le lanceur frappe\navec un gourdin\nenveloppé de lierre.
+MOVE_MATCHA_GOTCHA|Le lanceur remue son\nthé et en bombarde\nla cible.
+MOVE_RISING_VOLTAGE|Des éclairs\nsurgissent du sol et\nfrappent l’ennemi.
+MOVE_THUNDERCLAP|Permet au lanceur\nd'attaquer la cible\nen priorité avec une\ndécharge électrique.
+MOVE_ELECTRO_DRIFT|Le lanceur change de\nforme et fonce sur\nla cible en la\nperforant
+MOVE_SUPERCELL_SLAM|Le lanceur se charge\nen électricité et\nfond sur la cible.
+MOVE_THUNDER_CAGE|Le lanceur frappe\nl’ennemi, et le\npiège dans une\nprison électrique
+MOVE_LIGHT_OF_RUIN|Utilise la puissance\nde la Fleur\nÉternelle pour\nlancer un formidable
+MOVE_MISTY_EXPLOSION|Le lanceur frappe\ntous les Pokémon\nautour de lui en\nexplosant, ce qui le
+MOVE_ALLURING_VOICE|Le lanceur attaque\nla cible avec sa\nvoix angélique.
+MOVE_SHIFT_GEAR|Le lanceur fait\ntourner ses\nengrenages.
