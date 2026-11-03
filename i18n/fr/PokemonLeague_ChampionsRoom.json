@@ -37,7 +37,7 @@
  },
  "PokemonLeague_ChampionsRoom_Text_OakIntro": {
   "en": "OAK: {PLAYER}! You made it.\\pThe tournament is only a test.\\nNow you face the reigning\\lCHAMPION.\\pI have studied POKéMON all my life.\\nShow me what you have learned!",
-  "fr": "CHEN : {PLAYER} ! T'as réussi.\\pLe tournoi est qu'un test.\\nMaintenant tu affrontes le CHAMPION\\len titre.\\pJ'ai étudié les POKéMON toute ma\\nvie. Montre-moi ce que t'as\\lappris !"
+  "fr": "CHEN : {PLAYER} ! T'as réussi.\\pLe tournoi n'est qu'un test.\\nMaintenant tu affrontes le CHAMPION\\len titre.\\pJ'ai étudié les POKéMON toute ma\\nvie. Montre-moi ce que t'as\\lappris !"
  },
  "PokemonLeague_ChampionsRoom_Text_OakPostBattle": {
   "en": "OAK: Your POKéMON trust you and\\nyou trust them.\\pThat is the whole secret.\\nYou are the new CHAMPION!",

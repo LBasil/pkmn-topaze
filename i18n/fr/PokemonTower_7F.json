@@ -1,11 +1,11 @@
 {
  "PokemonTower_7F_Text_AdminBeatsYou": {
   "en": "In an instant, {PLAYER}'s POKéMON\\nwere swept aside by his power!\\pKRONOS: Hmph. Not even worth a\\nbattle. Remember my name, child.\\pThe boss says a POKé BALL is only\\na cage with a pretty color.\\pI am only one of the boss's\\nADMINS. Farewell!",
-  "fr": "En un instant, les POKéMON de\\n{PLAYER} ont été balayés par sa\\lpuissance !\\pKRONOS : Hmph. Même pas digne d'un\\ncombat. Retiens mon nom.\\pLe boss dit qu'une POKé BALL est\\nqu'une cage d'une jolie couleur.\\pJe suis qu'un des ADMINS du\\nboss. Adieu !"
+  "fr": "En un instant, les POKéMON de\\n{PLAYER} ont été balayés par sa\\lpuissance !\\pKRONOS : Hmph. Même pas digne d'un\\ncombat. Retiens mon nom.\\pLe boss dit qu'une POKé BALL n'est\\nqu'une cage d'une jolie couleur.\\pJe suis qu'un des ADMINS du\\nboss. Adieu !"
  },
  "PokemonTower_7F_Text_AdminThanks": {
   "en": "KRONOS: Well, well. Thank you,\\nchild. You calmed the dead for us.\\pWe could never get past them. Now\\nthe SPINEL is ours for the taking.\\pDo not bother with your POKé BALLS.\\nYou are far below my notice.",
-  "fr": "KRONOS : Tiens, tiens. Merci. T'as\\ncalmé les morts pour nous.\\pOn a jamais pu les\\ndépasser. Maintenant le SPINEL est\\là prendre.\\pInutile de sortir tes POKé BALLS.\\nT'es bien en dessous de mon\\lattention."
+  "fr": "KRONOS : Tiens, tiens. Merci. T'as\\ncalmé les morts pour nous.\\pOn a jamais pu les dépasser.\\nMaintenant le SPINELLE est à\\lprendre.\\pInutile de sortir tes POKé BALLS.\\nT'es bien en dessous de mon\\lattention."
  },
  "PokemonTower_7F_Text_FujiHeals": {
   "en": "MR. FUJI: Your POKéMON are weak.\\nRest them here, child.\\p...They are well again. Do not\\nblame yourself. Go, and be careful.",
@@ -53,11 +53,11 @@
  },
  "PokemonTower_7F_Text_MrFujiAfter": {
   "en": "MR. FUJI: The SPINEL is gone, but\\nthe spirits are calm. That matters.\\pThank you, child. Please, go on.",
-  "fr": "M. FUJI : Le SPINEL a disparu, mais\\nles esprits sont calmes. C'est ce\\lqui compte.\\pMerci. Continue, s'il te plaît."
+  "fr": "M. FUJI : Le SPINELLE a disparu,\\nmais les esprits sont calmes.\\pC'est ce qui compte.\\pMerci. Continue, s'il te plaît."
  },
  "PokemonTower_7F_Text_MrFujiCrypt": {
   "en": "MR. FUJI: Shh... Quietly, child.\\nI am calming the restless spirits.\\pThieves came for the SPINEL, and\\nthe dead rose against them. They\\lfled without the stone.\\pYou eased the spirit below, thank\\nyou. The SPINEL is safe on the\\laltar, up here at the top...",
-  "fr": "M. FUJI : Chut… Doucement. J'apaise\\nles esprits agités.\\pDes voleurs sont venus pour le\\nSPINEL, et les morts se sont\\ldressés contre eux. Ils ont fui\\nsans la pierre.\\pTu as apaisé l'esprit en bas,\\nmerci. Le SPINEL est en sécurité\\lsur l'autel, ici tout en haut…"
+  "fr": "M. FUJI : Chut… Doucement. J'apaise\\nles esprits agités.\\pDes voleurs sont venus pour le\\nSPINEL, et les morts se sont\\ldressés contre eux. Ils ont fui\\nsans la pierre.\\pTu as apaisé l'esprit en bas,\\nmerci. Le SPINELLE est en sécurité\\lsur l'autel, ici tout en haut…"
  },
  "PokemonTower_7F_Text_MrFujiThankYouFollowMe": {
   "en": "MR. FUJI: Heh?\\nYou came to save me?\\pThank you. But, I came here of my\\nown free will.\\pI came to calm the spirit of\\nCUBONE's mother.\\pI think MAROWAK's spirit has\\nfinally left us.\\pThe men in black took the SPINEL\\nfrom the crypt, and left me here.\\pI must thank you for your kind\\nconcern.\\pFollow me to my home, POKéMON\\nHOUSE, at the foot of this tower.",
@@ -65,6 +65,6 @@
  },
  "PokemonTower_7F_Text_StoneGlows": {
   "en": "A crystal glows faintly on the\\naltar at the top: the SPINEL.",
-  "fr": "Un cristal luit faiblement sur\\nl'autel en haut : le SPINEL."
+  "fr": "Un cristal luit faiblement sur\\nl'autel en haut : le SPINELLE."
  }
 }

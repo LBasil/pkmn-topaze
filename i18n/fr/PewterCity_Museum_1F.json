@@ -21,7 +21,7 @@
  },
  "PewterCity_Museum_1F_Text_ComeAgain": {
   "en": "Come again!",
-  "fr": "A bientôt !"
+  "fr": "À bientôt !"
  },
  "PewterCity_Museum_1F_Text_DoYouKnowWhatAmberIs": {
   "en": "You can't sneak in the back way!\\nNice try, kid, but no.\\pOh, whatever!\\nDo you know what AMBER is?",
@@ -73,6 +73,6 @@
  },
  "PewterCity_Museum_1F_Text_WeHaveTwoFossilsOnExhibit": {
   "en": "The thieves walked right past our\\nfossils. They wanted only the\\pPYROPE.",
-  "fr": "Les voleurs sont passés devant nos\\nfossiles. Ils voulaient que le\\lPYROPE."
+  "fr": "Les voleurs sont passés devant nos\\nfossiles. Ils ne voulaient que le\\lPYROPE."
  }
 }

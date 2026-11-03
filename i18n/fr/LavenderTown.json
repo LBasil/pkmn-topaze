@@ -17,11 +17,11 @@
  },
  "LavenderTown_Text_PoliceClosed": {
   "en": "POLICEMAN: Thieves tried to take\\nthe SPINEL, and woke the dead.\\pThe town is sealed until the TOWER\\nis calm. MR. FUJI is at the top.",
-  "fr": "POLICIER : Des voleurs ont tenté de\\nprendre le SPINEL, et ont réveillé\\lles morts.\\pLa ville est scellée jusqu'à ce que\\nla TOUR soit calme. M. FUJI est au\\lsommet."
+  "fr": "POLICIER : Des voleurs ont tenté\\nde prendre le SPINELLE, et ont\\lréveillé les morts.\\pLa ville est scellée jusqu'à ce que\\nla TOUR soit calme. M. FUJI est au\\lsommet."
  },
  "LavenderTown_Text_PoliceOpen": {
   "en": "POLICEMAN: A powerful man in black\\ntook the SPINEL, we heard.\\pThe roads are open again. Be\\ncareful out there!",
-  "fr": "POLICIER : Un homme puissant en\\nnoir a pris le SPINEL, d'après ce\\lqu'on a entendu.\\pLes routes sont de nouveau\\nouvertes. Fais attention !"
+  "fr": "POLICIER : Un homme puissant en\\nnoir a pris le SPINELLE, d'après ce\\lqu'on a entendu.\\pLes routes sont de nouveau\\nouvertes. Fais attention !"
  },
  "LavenderTown_Text_ProcheNathan_After": {
   "en": "Some shadows are only friends in\\ndisguise.",
@@ -105,7 +105,7 @@
  },
  "LavenderTown_Text_TownKnownAsMonGraveSite": {
   "en": "Men in black tried to steal the\\nSPINEL at the top of the TOWER!\\pThe dead rose against them. Now\\nthe whole TOWER is haunted.",
-  "fr": "Des hommes en noir ont tenté de\\nvoler le SPINEL au sommet de la\\lTOUR !\\pLes morts se sont dressés contre\\neux. Maintenant toute la TOUR est\\lhantée."
+  "fr": "Des hommes en noir ont tenté de\\nvoler le SPINELLE au sommet de la\\lTOUR !\\pLes morts se sont dressés contre\\neux. Maintenant toute la TOUR est\\lhantée."
  },
  "LavenderTown_Text_TownSign": {
   "en": "SPINELLIA\\nThe Spinel Tower Town",

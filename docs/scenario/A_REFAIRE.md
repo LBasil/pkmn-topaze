@@ -386,3 +386,6 @@ Impératifs négatifs corrigés (Ne te fie jamais, Ne te mêle pas…), « perso
 
 ## 03-11 (19h45) — Père du rival
 Le père du rival devient ALBAN (nom court dans le dialogue, « Mon fils {RIVAL} »). Réplique du rival au ranch reformulée (adversaire qui flanche, plus de fuite).
+
+## 03-11 (21h) — Relecture grammaticale (LanguageTool) + corrections
+Passage de LanguageTool sur 5613 textes. Corrigés : À majuscule accentué, « ne…que » remis (n'est qu'un…), « du PARC SAFARI », Va-t'en, Captures-en, SPINEL→SPINELLE partout, MAÎTRE PÊCHEUR, etc. Le reste (négations sans « ne », élisions orales) est volontaire (ton officiel).

@@ -45,7 +45,7 @@
  },
  "TrainerTower_Lobby_Text_TrainersUpToFloorNum": {
   "en": "TRAINERS from all over the world\\ngather here to battle.\\pLet me see…\\pRight now, there are TRAINERS only\\nup to Floor {STR_VAR_1}.",
-  "fr": "Des DRESSEURS du monde entier se\\nrassemblent ici pour combattre.\\pVoyons voir…\\pEn ce moment, il y a des\\nDRESSEURS que jusqu'à l'étage\\l{STR_VAR_1}."
+  "fr": "Des DRESSEURS du monde entier se\\nrassemblent ici pour combattre.\\pVoyons voir…\\pEn ce moment, il n'y a de\\nDRESSEURS que jusqu'à l'étage\\l{STR_VAR_1}."
  },
  "TrainerTower_Lobby_Text_WelcomeToTrainerTower": {
   "en": "Hello!\\pWelcome to TRAINER TOWER where\\nTRAINERS gather from all over!",
