@@ -29,19 +29,19 @@
  },
  "PewterCity_Museum_2F_Text_BrockAfterKay": {
   "en": "BROCK: So you beat KAY. Good.\\nShe always burned too bright.\\pI'll stay and watch the MUSEUM.\\nThey may come back.\\pGo on to TOURMALIA, {PLAYER}.\\nThe next gem sleeps there.",
-  "fr": "BROCK : Alors tu as battu KAY.\\nBien. Elle a toujours brûlé trop\\lfort.\\pJe reste pour surveiller le MUSÉE.\\nIls pourraient revenir.\\pVa à TOURMALIA, {PLAYER}. La\\nprochaine gemme y dort."
+  "fr": "PIERRE : Alors tu as battu KAY.\\nBien. Elle a toujours brûlé trop\\lfort.\\pJe reste pour surveiller le MUSÉE.\\nIls pourraient revenir.\\pVa à TOURMALIA, {PLAYER}. La\\nprochaine gemme y dort."
  },
  "PewterCity_Museum_2F_Text_BrockBeforeKay": {
   "en": "BROCK: I was GYM LEADER here until\\nthe AURA changed everything.\\pKAY holds the GYM now. I look after\\nthis MUSEUM instead.\\pLast night they took the PYROPE.\\nOne of them beat me. Me!\\p...That pendant around your neck.\\nIt hums like the PYROPE did.\\pKeep it close, kid.\\pEvery town keeps a gem, and TEAM\\nONYBRIS is collecting them.\\pThe next one sleeps in TOURMALIA.\\nBut first, go see KAY at the GYM.",
-  "fr": "BROCK : J'étais CHAMPION ici\\njusqu'à ce que l'AURA change tout.\\pKAY tient l'ARÈNE maintenant. Je\\nveille sur ce MUSÉE à la place.\\pLa nuit dernière ils ont pris le\\nPYROPE. L'un d'eux m'a battu. Moi !\\p…Ce pendentif à ton cou. Il\\nbourdonne comme le PYROPE.\\pGarde-le près de toi.\\pChaque ville garde une gemme, et la\\nTEAM ONYBRIS les collectionne.\\pLa prochaine dort à TOURMALIA. Mais\\nd'abord, va voir KAY à l'ARÈNE."
+  "fr": "PIERRE : J'étais CHAMPION ici\\njusqu'à ce que l'AURA change tout.\\pKAY tient l'ARÈNE maintenant. Je\\nveille sur ce MUSÉE à la place.\\pLa nuit dernière ils ont pris le\\nPYROPE. L'un d'eux m'a battu. Moi !\\p…Ce pendentif à ton cou. Il\\nbourdonne comme le PYROPE.\\pGarde-le près de toi.\\pChaque ville garde une gemme, et la\\nTEAM ONYBRIS les collectionne.\\pLa prochaine dort à TOURMALIA. Mais\\nd'abord, va voir KAY à l'ARÈNE."
  },
  "PewterCity_Museum_2F_Text_BrockFossil": {
   "en": "BROCK: CHAMPION! The whole museum\\nheard the news.\\pA piece of the past should live\\nagain. This one was stored in the\\lvault. It is yours.",
-  "fr": "BROCK : CHAMPION ! Tout le musée a\\nentendu la nouvelle.\\pUn morceau du passé devrait\\nrevivre. Celui-ci était rangé dans\\lla chambre forte. Il est à toi."
+  "fr": "PIERRE : CHAMPION ! Tout le musée a\\nentendu la nouvelle.\\pUn morceau du passé devrait\\nrevivre. Celui-ci était rangé dans\\lla chambre forte. Il est à toi."
  },
  "PewterCity_Museum_2F_Text_BrockFossilAfter": {
   "en": "BROCK: Have it revived at the\\nlab on CHRONDROLIA. Bring it back to\\lthe world, as it should be.",
-  "fr": "BROCK : Fais-le ressusciter au labo\\nde CHRONDROLIA. Rends-le au monde,\\lcomme il se doit."
+  "fr": "PIERRE : Fais-le ressusciter au\\nlabo de CHRONDROLIA. Rends-le au\\lmonde, comme il se doit."
  },
  "PewterCity_Museum_2F_Text_MonSlowpoke": {
   "en": "SLOWPOKE: ...Yawn.\\nIt basks in the glow of the lava.",

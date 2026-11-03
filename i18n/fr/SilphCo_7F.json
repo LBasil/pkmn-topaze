@@ -85,7 +85,7 @@
  },
  "SilphCo_7F_Text_RivalPostBattle": {
   "en": "Well, {PLAYER}!\\nI'm moving on up and ahead!\\pBy checking my POKéDEX, I'm\\nstarting to see what's strong and\\lhow they evolve!\\pAm I a genius or what?\\pI'm going to the POKéMON LEAGUE to\\nboot out the ELITE FOUR.\\pI'll become the world's most\\npowerful TRAINER!\\p{PLAYER}, well, good luck to you!\\nDon't sweat it!\\lSmell ya!",
-  "fr": "Eh bien, {PLAYER} ! Je monte et je\\nprends de l'avance !\\pEn consultant mon POKéDEX, je\\ncommence à voir ce qui est fort et\\lcomment ils évoluent !\\pSuis-je un génie ou quoi ?\\pJe vais à la LIGUE POKéMON pour\\nvirer le CONSEIL DES QUATRE.\\pJe deviendrai le DRESSEUR le plus\\npuissant du monde !\\p{PLAYER}, eh bien, bonne chance ! Ne\\nt'inquiète pas ! À plus !"
+  "fr": "Eh bien, {PLAYER} ! Je monte et je\\nprends de l'avance !\\pEn consultant mon POKéDEX, je\\ncommence à voir ce qui est fort et\\lcomment ils évoluent !\\pSuis-je un génie ou quoi ?\\pJe vais à la LIGUE POKéMON pour\\nvirer le CONSEIL 4.\\pJe deviendrai le DRESSEUR le plus\\npuissant du monde !\\p{PLAYER}, eh bien, bonne chance ! Ne\\nt'inquiète pas ! À plus !"
  },
  "SilphCo_7F_Text_RivalWhatKeptYou": {
   "en": "{RIVAL}: What kept you, {PLAYER}?",

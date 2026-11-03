@@ -85,15 +85,15 @@
  },
  "Route25_Text_MistyHighHopesAboutThisPlace": {
   "en": "MISTY: I followed some creeps\\nto this cape. It's a lovely spot,\\peven with the old cottage so\\nempty and quiet.",
-  "fr": "MISTY : J'ai suivi des sinistres\\njusqu'à ce cap. C'est un bel\\lendroit, même avec ce vieux cottage\\nvide et silencieux."
+  "fr": "ONDINE : J'ai suivi des sinistres\\njusqu'à ce cap. C'est un bel\\lendroit, même avec ce vieux cottage\\nvide et silencieux."
  },
  "Route25_Text_MistyIdle": {
   "en": "MISTY: Quiet. They're in there.",
-  "fr": "MISTY : Chut. Ils sont là-dedans."
+  "fr": "ONDINE : Chut. Ils sont là-dedans."
  },
  "Route25_Text_MistyMeet": {
   "en": "MISTY: Stop right there!\\p…Oh. You're not one of them.\\pI'm MISTY. I've tracked some\\nblack-suited creeps all day.\\pTwo of them slipped into that old\\ncottage. BILL left months ago, so\\pnobody should be inside.\\pYou're after them too, aren't you?\\nYou have the same look as a friend\\pof mine. Stubborn, never backs off.\\pFine. Let's go in together.\\nI'll go first. Follow me!",
-  "fr": "MISTY : Stop !\\p…Oh. Tu n'es pas l'un d'eux.\\pJe suis MISTY. Je traque des\\nsinistres en noir depuis ce matin.\\pDeux d'entre eux se sont glissés\\ndans ce vieux cottage. BILL est\\lparti il y a des mois, personne ne\\ndevrait y être.\\pToi aussi, tu les cherches,\\nn'est-ce pas ? Tu as le même regard\\lqu'un ami à moi.\\pTêtu, il ne recule jamais.\\pBon. Entrons ensemble. J'y vais la\\npremière. Suis-moi !"
+  "fr": "ONDINE : Stop !\\p…Oh. Tu n'es pas l'un d'eux.\\pJe suis ONDINE. Je traque des\\nsinistres en noir depuis ce matin.\\pDeux d'entre eux se sont glissés\\ndans ce vieux cottage. LÉO est\\lparti il y a des mois, personne ne\\ndevrait y être.\\pToi aussi, tu les cherches,\\nn'est-ce pas ? Tu as le même regard\\lqu'un ami à moi.\\pTêtu, il ne recule jamais.\\pBon. Entrons ensemble. J'y vais la\\npremière. Suis-moi !"
  },
  "Route25_Text_NobDefeat": {
   "en": "You done got me, and real good,\\ntoo!",
@@ -133,7 +133,7 @@
  },
  "Route25_Text_SeaCottageSign": {
   "en": "SEA COTTAGE\\nBILL's old lab. Empty now.",
-  "fr": "COTTAGE MARIN\\nL'ancien labo de BILL. Vide."
+  "fr": "COTTAGE MARIN\\nL'ancien labo de LÉO. Vide."
  },
  "Route25_Text_WayneDefeat": {
   "en": "You're something.",
@@ -141,7 +141,7 @@
  },
  "Route25_Text_WayneIntro": {
   "en": "You're going to see BILL?\\nFirst, we battle!",
-  "fr": "Tu vas voir BILL ?\\nD'abord, on se bat !"
+  "fr": "Tu vas voir LÉO ?\\nD'abord, on se bat !"
  },
  "Route25_Text_WaynePostBattle": {
   "en": "The trail below is a shortcut to\\nTOURMALIA, if you know the way.",

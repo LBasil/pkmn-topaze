@@ -1,0 +1,65 @@
+Text_BootedUpPC|{PLAYER} a allumé le PC.$
+Text_AccessWhichPC|Quel PC veux-tu consulter ?$
+Text_AccessedSomeonesPC|Accès au PC de QUELQU'UN.$
+Text_OpenedPkmnStorage|Système de stockage POKéMON\nouvert.$
+Text_AccessedPlayersPC|Accès au PC de {PLAYER}.$
+Text_AccessedBillsPC|Accès au PC de LÉO.$
+gText_WouldYouLikeToSaveTheGame|Veux-tu sauvegarder la partie ?$
+gText_AlreadySaveFile_WouldLikeToOverwrite|Une sauvegarde existe déjà.\nVeux-tu l'écraser ?$
+gText_SavingDontTurnOffThePower|SAUVEGARDE EN COURS…\nNE COUPE PAS L'ALIMENTATION.$
+gText_PlayerSavedTheGame|{PLAYER} a sauvegardé la partie.$
+gText_DifferentGameFile|ATTENTION !\pUne autre sauvegarde différente\nexiste déjà.\pSi tu sauvegardes maintenant,\nl'aventure de l'autre fichier,\lobjets et POKéMON compris, sera\lperdue à jamais.\pEs-tu sûr de vouloir sauvegarder\net écraser l'autre fichier ?$
+Text_MayIHelpYou|Bonjour !\nPuis-je vous aider ?$
+Text_FillOutQuestionnaire|Il y a un questionnaire.\nVoulez-vous le remplir ?$
+Text_QuestionnaireThankYou|Merci d'avoir pris le temps de\nremplir notre questionnaire.\pVos réponses nous serviront\nde référence.$
+Text_YouKnowThoseWords|Oh, bonjour !\nTu connais ces mots ?\pÇa veut dire que tu connais le\nCADEAU MYSTÈRE.\pDésormais, tu devrais recevoir\ndes CADEAUX MYSTÈRE !$
+Text_YouCanAccessMysteryGift|Une fois la partie sauvegardée,\ntu pourras accéder au CADEAU\lMYSTÈRE.$
+Text_ThankYouForAccessingMysteryGift|Merci d'avoir utilisé le système\nCADEAU MYSTÈRE.$
+Text_ObtainedTheX|Tu as obtenu {STR_VAR_2} !$
+Text_BagIsFull|Le SAC est plein…$
+Text_PutItemAway|{PLAYER} range {STR_VAR_2}\ndans la poche {STR_VAR_3}.$
+Text_FoundOneItem|{PLAYER} a trouvé {STR_VAR_2} !$
+Text_TooBadBagFull|Dommage !\nLe SAC est plein…$
+Text_FoundXCoins|{PLAYER} a trouvé\n{STR_VAR_1} {STR_VAR_2} !$
+Text_PutCoinsAwayInCoinCase|{PLAYER} range les JETONS dans\nla BOÎTE JETONS.$
+Text_CoinCaseIsFull|Dommage !\nLa BOÎTE JETONS est pleine…$
+Text_NothingToPutThemIn|Dommage !\nRien pour les ranger…$
+Text_FoundXItems|{PLAYER} a trouvé\n{STR_VAR_1} {STR_VAR_2} !$
+Text_ObtainedTheDecor|Tu as obtenu {STR_VAR_2} !$
+Text_NoRoomForAnotherDecor|Dommage ! Il n'y a plus de place\npour un autre {STR_VAR_2}…$
+Text_DecorTransferredToPC|{STR_VAR_2} a été envoyé\nau PC.$
+Text_FirstShouldRestoreMonsHealth|Tu devrais d'abord soigner tes\nPOKéMON.$
+Text_MonsHealedShouldBuyPotions|Tes POKéMON sont en pleine forme.\pSi l'énergie de tes POKéMON,\nleurs PV, baisse, viens nous voir.\pSi tu pars loin, achète quelques\nPOTIONS à la BOUTIQUE POKéMON.\pNous te souhaitons de réussir !$
+Text_MonsHealed|Tes POKéMON sont en pleine forme.\pNous te souhaitons de réussir !$
+Text_HadQuiteAnExperienceTakeRest|MAMAN : {PLAYER} !\nBienvenue à la maison.\pOn dirait que tu as vécu\nquelque chose d'incroyable.\pTu devrais te reposer un peu.$
+Text_MomExplainHPGetPotions|MAMAN : Oh, très bien ! Toi et\ntes POKéMON avez bonne mine.\pJe viens d'avoir le PROF. CHEN.\pIl dit que l'énergie des POKéMON\nse mesure en PV.\pSi tes POKéMON perdent leurs PV,\ntu peux les soigner dans tout\lCENTRE POKéMON.\pSi tu pars loin, le DRESSEUR\nmalin fait le plein de POTIONS\là la BOUTIQUE POKéMON.\pFais-moi honneur, mon chéri !\pPrends soin de toi !$
+Text_WhitedOutLostMoney|{PLAYER} n'a plus de POKéMON\ncapable de se battre !\p{PLAYER} panique et perd ¥{STR_VAR_1}…\p… … … …\p{PLAYER} s'évanouit !$
+Text_WhitedOut|{PLAYER} n'a plus de POKéMON\ncapable de se battre !\p{PLAYER} s'évanouit !$
+Text_WantToSurf|L'eau est d'un bleu profond…\nVeux-tu utiliser SURF ?$
+Text_UsedSurf|{STR_VAR_1} utilise SURF !$
+Text_CurrentTooFast|Le courant est bien trop fort !\nSURF est impossible ici…$
+Text_WantToSurfLava|La lave brille d'un orange épais…\nUn POKéMON d'eau pourrait la\lrefroidir en croûte. Utiliser SURF ?$
+Text_UsedSurfLava|{STR_VAR_1} utilise SURF !\pLa lave durcit en croûte\nsous ses pattes !$
+Text_DugUpItemFromGround|{PLAYER} a déterré {STR_VAR_2}\ndu fond de la terre.$
+Text_AllAboardSeagallopNum|Très bien !\nTous à bord du FERRY RAPIDE\n{STR_VAR_1} !$
+Text_OnlySkilledTrainersAllowedThrough|Seuls les DRESSEURS vraiment\ncompétents peuvent passer.\pTu n'as pas encore le\n{STR_VAR_1} !$
+Text_CantLetYouPass|Les règles, c'est les règles.\nJe ne peux pas te laisser passer.$
+Text_OhThatsBadgeGoRightAhead|Oh ! C'est le {STR_VAR_1} !\nVas-y, passe.$
+Text_OnlyPassWithBadgeDontHaveYet|On ne passe ici qu'avec le\n{STR_VAR_1}.\pTu n'as pas encore le\n{STR_VAR_1}.\pIl faut l'avoir pour rejoindre\nla LIGUE POKéMON.$
+Text_OnlyPassWithBadgeOhGoAhead|On ne passe ici qu'avec le\n{STR_VAR_1}.\pOh ! C'est le {STR_VAR_1} !{PAUSE_MUSIC}{PLAY_BGM}{MUS_LEVEL_UP}{PAUSE 0x60}{RESUME_MUSIC}\pTrès bien.\nVas-y, passe donc.$
+PalletTown_Text_HmmIsThatRight|Hmm…\nC'est bien ça…$
+PalletTown_Text_OhLookLook|Oh !\nRegarde, regarde !$
+PalletTown_Text_ReadItReadIt|Lis-le, lis-le !$
+PalletTown_Text_PressStartToOpenMenu|CONSEILS AUX DRESSEURS\pAppuie sur START pour ouvrir\nle MENU !$
+PalletTown_Text_SignsAreUsefulArentThey|Les panneaux sont utiles, non ?$
+PalletTown_Text_LookCopiedTrainerTipsSign|Regarde !\pJ'ai copié ce qui était écrit sur\nun panneau de CONSEILS !$
+PalletTown_Text_PressStartToOpenMenuCopy|CONSEILS AUX DRESSEURS !\pAppuie sur START pour ouvrir\nle MENU !$
+Text_MonSentToBoxInSomeonesPC|{STR_VAR_2} a été envoyé au PC\nde QUELQU'UN.\pIl a été placé dans\nla BOÎTE “{STR_VAR_1}”.$
+Text_MonSentToBoxInBillsPC|{STR_VAR_2} a été envoyé au PC\nde LÉO.\pIl a été placé dans\nla BOÎTE “{STR_VAR_1}”.$
+Text_MonSentToBoxSomeonesBoxFull|La BOÎTE “{STR_VAR_3}” du PC\nde QUELQU'UN était pleine.\p{STR_VAR_2} a été envoyé dans\nla BOÎTE “{STR_VAR_1}”.$
+Text_MonSentToBoxBillsBoxFull|La BOÎTE “{STR_VAR_3}” du PC\nde LÉO était pleine.\p{STR_VAR_2} a été envoyé dans\nla BOÎTE “{STR_VAR_1}”.$
+Text_PlayerObtainedTheMon|{PLAYER} a obtenu\n{STR_VAR_1} !$
+Text_NoMoreRoomForPokemon|Il n'y a plus de place pour\nles POKéMON !\pLes BOÎTES POKéMON sont pleines\net ne peuvent rien accepter !$
+Aide_Text_HaventCaughtEnoughMonsForItem|Voyons voir…\nOh oh ! Tu n'as capturé que\l{STR_VAR_3} espèces de POKéMON !\pIl t'en faut {STR_VAR_1}\npour avoir {STR_VAR_2}.$
+Aide_Text_GetEnoughMonsComeBackForItem|…Oh. Je vois.\pQuand tu auras {STR_VAR_1} espèces de\nPOKéMON, reviens chercher\l{STR_VAR_2}.$
+Aide_Text_DontHaveAnyRoomForItem|Oh ! Tu n'as plus de place\npour {STR_VAR_2}.$

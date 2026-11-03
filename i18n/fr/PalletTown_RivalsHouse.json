@@ -9,7 +9,7 @@
  },
  "PalletTown_RivalsHouse_Text_DaisyStrike": {
   "en": "DAISY: Dad is mending the fence,\\nand Grandpa is not himself.\\pPlease be careful out there,\\n{PLAYER}. And take care of {RIVAL}.",
-  "fr": "DAISY : Papa répare la clôture, et\\nPapy n'est pas dans son assiette.\\pFais attention là-bas, {PLAYER}. Et\\nprends soin de {RIVAL}."
+  "fr": "MARGUERITE : Papa répare la\\nclôture, et Papy n'est pas dans son\\lassiette.\\pFais attention là-bas, {PLAYER}. Et\\nprends soin de {RIVAL}."
  },
  "PalletTown_RivalsHouse_Text_DontHaveSpaceForThis": {
   "en": "You don't have space for this in\\nyour BAG.",
@@ -37,11 +37,11 @@
  },
  "PalletTown_RivalsHouse_Text_HeardYouBattledRival": {
   "en": "DAISY: {PLAYER}, I heard you had\\na battle against {RIVAL}.\\pI wish I'd seen that!",
-  "fr": "DAISY : {PLAYER}, j'ai entendu dire\\nque tu as combattu {RIVAL}.\\pJ'aurais aimé voir ça !"
+  "fr": "MARGUERITE : {PLAYER}, j'ai entendu\\ndire que tu as combattu {RIVAL}.\\pJ'aurais aimé voir ça !"
  },
  "PalletTown_RivalsHouse_Text_HiBrothersAtLab": {
   "en": "DAISY: Hi, {PLAYER}!\\pMy brother, {RIVAL}, is out at\\nGrandpa's LAB.",
-  "fr": "DAISY : Salut, {PLAYER} !\\pMon frère, {RIVAL}, est au LABO de\\nPapy."
+  "fr": "MARGUERITE : Salut, {PLAYER} !\\pMon frère, {RIVAL}, est au LABO de\\nPapy."
  },
  "PalletTown_RivalsHouse_Text_ItLooksVeryHappy": {
   "en": "It looks very happy.\\pI wish {RIVAL} could see this and\\nlearn something from it.",
@@ -61,11 +61,11 @@
  },
  "PalletTown_RivalsHouse_Text_LikeMeToGroomMon": {
   "en": "DAISY: Hi, {PLAYER}!\\nGood timing.\\pI'm about to have some tea.\\nWould you like to join me?\\pOh, but look.\\nYour POKéMON are a little dirty.\\pWould you like me to groom one?",
-  "fr": "DAISY : Salut, {PLAYER} !\\nTu tombes bien.\\pJe vais prendre le thé.\\nVeux-tu te joindre à moi ?\\pOh, mais regarde.\\nTes POKéMON sont un peu sales.\\pVeux-tu que j'en toilette un ?"
+  "fr": "MARGUERITE : Salut, {PLAYER} !\\nTu tombes bien.\\pJe vais prendre le thé.\\nVeux-tu te joindre à moi ?\\pOh, mais regarde.\\nTes POKéMON sont un peu sales.\\pVeux-tu que j'en toilette un ?"
  },
  "PalletTown_RivalsHouse_Text_LookingNiceInNoTime": {
   "en": "DAISY: Okay, I'll get it looking\\nnice in no time.",
-  "fr": "DAISY : D'accord, je vais le rendre\\nbeau en un rien de temps."
+  "fr": "MARGUERITE : D'accord, je vais le\\nrendre beau en un rien de temps."
  },
  "PalletTown_RivalsHouse_Text_LovelyAndSweetClefairy": {
   "en": "“The lovely and sweet\\nCLEFAIRY”",
@@ -73,7 +73,7 @@
  },
  "PalletTown_RivalsHouse_Text_MayISeeFirstMon": {
   "en": "DAISY: Your POKéMON grow to love\\nyou if you raise them with love.\\pFor example, {PLAYER}, may I see\\nyour first POKéMON?",
-  "fr": "DAISY : Tes POKéMON t'aiment si tu\\nles élèves avec amour.\\pPar exemple, {PLAYER}, puis-je voir\\nton premier POKéMON ?"
+  "fr": "MARGUERITE : Tes POKéMON t'aiment\\nsi tu les élèves avec amour.\\pPar exemple, {PLAYER}, puis-je voir\\nton premier POKéMON ?"
  },
  "PalletTown_RivalsHouse_Text_NotFamiliarWithYouYet": {
   "en": "It's not quite familiar with you\\nyet.\\pPOKéMON are all quite wary when\\nyou first get them.",
@@ -81,11 +81,11 @@
  },
  "PalletTown_RivalsHouse_Text_PleaseGiveMonsRest": {
   "en": "DAISY: Just like people, POKéMON\\nare living things.\\pWhen they get tired, please give\\nthem a rest.",
-  "fr": "DAISY : Comme les gens, les POKéMON\\nsont des êtres vivants.\\pQuand ils sont fatigués, laisse-les\\nse reposer, s'il te plaît."
+  "fr": "MARGUERITE : Comme les gens, les\\nPOKéMON sont des êtres vivants.\\pQuand ils sont fatigués, laisse-les\\nse reposer, s'il te plaît."
  },
  "PalletTown_RivalsHouse_Text_ReceivedTownMapFromDaisy": {
   "en": "{PLAYER} received a TOWN MAP\\nfrom DAISY.",
-  "fr": "{PLAYER} a reçu une CARTE\\nde DAISY."
+  "fr": "{PLAYER} a reçu une CARTE\\nde MARGUERITE."
  },
  "PalletTown_RivalsHouse_Text_ShelvesCrammedFullOfBooks": {
   "en": "The shelves are crammed full of\\nbooks on POKéMON.",

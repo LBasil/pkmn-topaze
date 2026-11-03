@@ -1,0 +1,89 @@
+Text_CutTreeDown|Cet arbre a l'air de pouvoir\nêtre COUPÉ !\pVeux-tu utiliser COUPE ?$
+Text_MonUsedMove|{STR_VAR_1} utilise {STR_VAR_2} !$
+Text_TreeCanBeCutDown|Cet arbre a l'air de pouvoir\nêtre COUPÉ !$
+Text_UseRockSmash|Ce rocher semble fragile.\nVeux-tu utiliser ÉCLATE-ROC ?$
+Text_MonMaySmashRock|C'est un rocher solide, mais un\nPOKéMON pourrait le briser.$
+Text_UseStrength|C'est un gros rocher, mais un\nPOKéMON pourrait le pousser.\pVeux-tu utiliser FORCE ?$
+Text_MonUsedStrengthCanMoveBoulders|{STR_VAR_1} utilise FORCE !\p{STR_VAR_1} peut maintenant\ndéplacer les rochers !$
+Text_MonMayPushBoulder|C'est un gros rocher, mais un\nPOKéMON pourrait le pousser.$
+Text_StrengthMadeMovingBouldersPossible|FORCE permet de déplacer\nles rochers.$
+Text_WallOfWaterCrashingDown|Un mur d'eau s'écrase dans\nun rugissement puissant.$
+Text_UseWaterfall|C'est une grande cascade.\nVeux-tu utiliser CASCADE ?$
+Text_MonUsedWaterfall|{STR_VAR_1} utilise CASCADE.$
+Text_MonMayGoUnderwater|La mer est profonde ici. Un\nPOKéMON pourrait y plonger.$
+Text_SeaIsDeepUseDive|La mer est profonde ici.\nVeux-tu utiliser PLONGÉE ?$
+Text_MonUsedDive|{STR_VAR_1} utilise PLONGÉE.$
+Text_MonMaySurface|La lumière filtre d'en haut.\nUn POKéMON pourrait remonter.$
+Text_LightFilteringUseDive|La lumière filtre d'en haut.\nVeux-tu utiliser PLONGÉE ?$
+Text_DiveCantBeUsedHere|Il y a un obstacle au-dessus.\nPLONGÉE est impossible ici.$
+Text_LooksLikeNothingHere|On dirait qu'il n'y a rien ici…$
+Text_PokeRadarNoMons|Aucun POKéMON déjà vu ne vit\nici (herbe, grotte ou mer).$
+Text_PokeRadarNoGrass|Il n'y a pas d'endroit adapté\nà proximité.$
+Text_PokeRadarNeedSurf|Ce POKéMON vit dans l'eau.\nUtilise SURF, puis réessaie.$
+Text_PokeRadarNeedLand|Ce POKéMON vit sur terre.\nQuitte d'abord l'eau.$
+Text_PokeRadarNotNow|Tu ne peux pas utiliser le\nPOKé RADAR à vélo.$
+Text_PokeRadarFound|Quelque chose bouge ! Approche\nlentement (sans courir).$
+Text_PokeRadarFled|Le {STR_VAR_1} sauvage t'a repéré\net s'est enfui !$
+EchoCompass_Text_Free|La boussole tourne librement.\nLes ÉCHOS sont tous fermés.\pDes légendes errent désormais\nsur les îles.$
+EchoCompass_Text_1|RAIKOU. Va au nord de la ville\nde l'ÎLE 1 : ROUTE TISON.$
+EchoCompass_Text_2|L'ÉCHO est fermé. Va voir CELIO,\nCENTRE POKéMON de l'ÎLE 1.$
+EchoCompass_Text_3|LÉO a des nouvelles pour toi\nau CENTRE POKéMON de l'ÎLE 1.$
+EchoCompass_Text_4|ENTEI. Va au CAP FALAISE,\nsur l'ÎLE 2.$
+EchoCompass_Text_5|L'ÉCHO est fermé. Va voir LÉO\nau CENTRE POKéMON de l'ÎLE 1.$
+EchoCompass_Text_6|CELIO a des nouvelles pour toi\nau CENTRE POKéMON de l'ÎLE 1.$
+EchoCompass_Text_7|SUICUNE. Traverse le PONT DU\nLIEN sur l'ÎLE 3.$
+EchoCompass_Text_8|L'ÉCHO est fermé. Va voir CELIO\nau CENTRE POKéMON de l'ÎLE 1.$
+EchoCompass_Text_9|LORELEI t'attend chez elle,\nsur l'ÎLE 4.$
+EchoCompass_Text_10|REGICE. Va à la GROTTE DE GLACE\nde l'ÎLE 4, tout au fond.$
+EchoCompass_Text_11|L'ÉCHO est fermé. Va voir LORELEI\nchez elle, sur l'ÎLE 4.$
+EchoCompass_Text_12|LÉO a des nouvelles pour toi\nau CENTRE POKéMON de l'ÎLE 1.$
+EchoCompass_Text_13|REGISTEEL. Va au PRÉ de l'ÎLE 5.$
+EchoCompass_Text_14|L'ÉCHO est fermé. Va voir LÉO\nau CENTRE POKéMON de l'ÎLE 1.$
+EchoCompass_Text_15|CELIO a des nouvelles pour toi\nau CENTRE POKéMON de l'ÎLE 1.$
+EchoCompass_Text_16|REGIROCK. Va à la VALLÉE RUINE\nsur l'ÎLE 6.$
+EchoCompass_Text_17|L'ÉCHO est fermé. Va voir CELIO\nau CENTRE POKéMON de l'ÎLE 1.$
+EchoCompass_Text_18|LÉO a des nouvelles pour toi\nau CENTRE POKéMON de l'ÎLE 1.$
+EchoCompass_Text_19|CELEBI. Va au CANYON SESOR\nsur l'ÎLE 7.$
+EchoCompass_Text_20|L'ÉCHO est fermé. Va voir LÉO\nau CENTRE POKéMON de l'ÎLE 1.$
+EchoCompass_Text_21|Un signal fort sur l'ÎLE 7 :\nCANYON SESOR, jusqu'au sommet.$
+Topaze_News_Text_TurnOn|L'écran est réglé sur les infos.$
+Topaze_News_Text_T1A|INFOS : Une série de vols secoue\nla région. Des gemmes disparaissent\ldes musées, écoles et ranchs.\pLa police accuse des bandes\nisolées. Tous les témoins décrivent\ldes uniformes noirs.$
+Topaze_News_Text_T1B|INFOS : Un groupe nommé TEAM\nONYBRIS a publié un message.\pLes POKéMON n'ont jamais été faits\npour être possédés. Nous sommes\lceux qui écoutent.\pSes partisans se comptent déjà\npar centaines.$
+Topaze_News_Text_T2A|INFOS : La TEAM ONYBRIS n'est plus\nune simple bande. Les autorités\ladmettent qu'elle a des rangs,\ldes bases et des fonds.\pOn parle de SBIRES sur le terrain,\nd'ADMINS donnant les ordres,\let de quelqu'un au-dessus.$
+Topaze_News_Text_T2B|INFOS : Les pierres volées ne sont\npas revendues. Selon les experts,\lles vols suivent un plan unique.\pLes gemmes sont réunies, quelque\npart, par quelqu'un de patient.$
+Topaze_News_Text_T3A|INFOS : Une ville s'est tue.\nLes lumières des tours brûlent\ltoute la nuit sous une bannière\lnoire, et personne ne sort parler.\pLes habitants disent que les\nrecrues ONYBRIS ne quittent pas\lleur poste.$
+Topaze_News_Text_T3B|INFOS : Les recruteurs d'ONYBRIS\nopèrent ouvertement dans bien des\lvilles et distribuent des tracts :\lLibérez les POKéMON.\pLe groupe revendique des milliers\nde membres. La police ne peut ni\lle confirmer ni le démentir.$
+Topaze_News_Text_T4A|INFOS : La plupart des pierres\nont disparu. Les dernières sont\lsous bonne garde, et la mer elle-\lmême a été fermée par le feu.\pLa LIGUE a tenu une séance\nurgente. Sa réponse : attendre.$
+Topaze_News_Text_T4B|INFOS : Une voix a coupé toutes\nles radios à midi.\pLes dix pierres. Bientôt, toutes.\nN'ayez pas peur.\pPersonne n'a vu l'orateur. Ses\npartisans l'appellent LE BOSS.$
+Topaze_News_Text_T5A|INFOS : Des silhouettes vêtues de\nnoir ont été vues sur la route du\lPLATEAU, en silence, en rangs.\pLe tournoi aura lieu. Personne\nn'ose dire qu'il ne le devrait pas.$
+Topaze_News_Text_T5B|INFOS : La rumeur dit que dix\npierres sont réunies dans une\lseule main.\pLe ciel au-dessus du PLATEAU est\ndevenu étrange. Il est conseillé\laux dresseurs de rester chez eux.\pPeu écoutent.$
+Topaze_News_Text_Quiet|INFOS : La TEAM ONYBRIS s'est tue.\nSes partisans se réunissent en\lpetits groupes, sans savoir à\lquoi croire.\pLe monde attend la suite.$
+Topaze_Recruiter_Text_T1A|RECRUE : Détends-toi. Je ne suis\npas là pour me battre, juste\lpour parler.\pJ'avais une tournée de livraison.\nMes POKéMON portaient des caisses\lquatorze heures par jour pour rien.\pPuis quelqu'un m'a donné un\nuniforme noir et une raison.$
+Topaze_Recruiter_Text_T1B|RECRUE : Il y a des gens comme\nmoi dans chaque ville. Des discrets.\pNous ne volons pas. Nous\nécoutons, recrutons, portons des\lmessages.\pCeux qui se battent sont les\nSBIRES. Au-dessus, les ADMINS.\lAu-dessus, quelqu'un qu'on ne\lnomme pas.$
+Topaze_Recruiter_Text_T2A|RECRUE : Tu as su ? HÉMATOWN est\ntombée sans un seul cri.\pLes gardes ont pointé et ne sont\njamais revenus. C'est comme ça :\lon ne force pas les portes, on\lréécrit les règles.\pNous sommes des milliers.$
+Topaze_Recruiter_Text_T2B|RECRUE : Rejoins-nous ou non. Les\npierres quittent cette région et\lpersonne ne peut l'empêcher.\pJe ne suis pas payé. J'ai juste\narrêté d'avoir peur du noir.$
+Topaze_Recruiter_Text_T3A|RECRUE : Dix pierres, une main.\nOn avait dit que ça arriverait.\pQuoi que la LIGUE ait prévu, il\nest trop tard. Je suis là pour\lque la route reste libre pour lui.$
+Topaze_Recruiter_Text_T3B|RECRUE : Je suis venu soigner un\nPOKéMON qui n'a jamais été à moi.\pIls m'ont dit : tu comprendras\ndans quelques jours.\pJe crois que j'ai déjà compris.$
+Topaze_Cameo_Text_Vesper|VESPER : ...Oui. Compris. HEMATEK\nest dans les temps. Non, l'enfant\lne pose pas de problème. Pas encore.\p...Oh. Le pendentif.\pDétends-toi, je suis hors service.\nLe BOSS interdit les bagarres dans\lun CENTRE POKéMON. Même nous\lavons des règles.\pSept branches, une par coin de\nla carte. Je ne dirige que la\lcalme. Essaie de suivre.$
+Topaze_Cameo_Text_Selene|SELENE : Oui. La tour est de\nnouveau calme. La pierre est\lpartie avec KRONOS.\p...Toi. Celui qui avance alors que\nses mains tremblent. J'aime ça.\pNe nous prends pas pour des\nvoleurs. Un voleur a besoin de se\lcacher. Nous avons des milliers\lde voix qui sont d'accord.\pVa. Nous nous reverrons.$
+Topaze_Cameo_Text_Kronos|KRONOS : ...Compris. Toutes les\nbranches ont fait leur rapport.\lLa voie est libre.\pUne précision, petit. Nous n'avons\njamais eu besoin de nous presser.\lC'est toi qui cours.\pNous ne sommes pas derrière toi.\nNous attendons là où tu vas.$
+Pokedude_Text_SpeedierBattlerGoesFirst|POKé DUDE : Le plus rapide des\ncombattants attaque en premier.$
+Pokedude_Text_MyRattataFasterThanPidgey|On dirait que mon RATTATA était\nplus rapide que le ROUCOOL.$
+Pokedude_Text_BattlersTakeTurnsAttacking|Les combattants attaquent chacun\nleur tour pour réduire les PV.$
+Pokedude_Text_MyRattataWonGetsEXP|Mon RATTATA a réduit les PV de\nl'adversaire à zéro, il gagne !\pLes POKéMON qui ont participé au\ncombat gagnent des points d'EXP.\pQuand un POKéMON a assez de\npoints d'EXP, il monte de niveau.\pMonter de niveau rend ton\nPOKéMON plus fort qu'avant.$
+Pokedude_Text_UhOhRattataPoisoned|POKé DUDE : Oh oh…\nMon RATTATA est empoisonné…\pUn POKéMON empoisonné perd\ndes PV peu à peu.$
+Pokedude_Text_HealStatusRightAway|Si un POKéMON a un problème de\nstatut, soigne-le tout de suite.$
+Pokedude_Text_UsingItemTakesTurn|Utiliser un objet sur un POKéMON\ncoûte un tour, par contre.\pÀ l'adversaire de jouer !$
+Pokedude_Text_YayWeManagedToWin|Youpi !\nOn a réussi à gagner !$
+Pokedude_Text_WaterNotVeryEffectiveAgainstGrass|POKé DUDE : L'attaque BULLES\nest de type EAU.\pLa cible, MYSTHERBE, est un POKéMON\nde type PLANTE/POISON.\pL'attaque de type EAU est\nabsorbée par le type PLANTE…\pRésultat : l'attaque n'est pas\ntrès efficace et ne fait que\lla moitié des dégâts.$
+Pokedude_Text_GrassEffectiveAgainstWater|Oh oh, ça tourne mal !\pL'attaque ABSORBER que tu viens\nde voir est de type PLANTE.\pPTITARD est un POKéMON de\ntype EAU.\pAlors ABSORBER devient super\nefficace et double les dégâts.$
+Pokedude_Text_LetsTryShiftingMons|Ça ne sera pas facile de gagner\navec ce duel…\pEssayons de changer de POKéMON !$
+Pokedude_Text_ShiftingUsesTurn|Changer de POKéMON coûte\nun tour.\pÀ l'adversaire de jouer.$
+Pokedude_Text_ButterfreeDoubleResistsGrass|PAPILUSION est un POKéMON de\ntype INSECTE/VOL.\pContre lui, une attaque de type\nPLANTE…\p…ne fait que la moitié des\ndégâts à un type INSECTE…\p…et ne fait aussi que la moitié\ndes dégâts à un type VOL.\pAinsi, PAPILUSION, INSECTE/VOL,\nne subit que le quart des\ldégâts habituels.$
+Pokedude_Text_ButterfreeGoodAgainstOddish|MYSTHERBE est un POKéMON de type\nPLANTE/POISON.\pUne attaque de type VOL ou PSY\nest super efficace contre lui.\pCes types d'attaque infligent\ndeux fois les dégâts habituels.\pAllez, c'est parti !$
+Pokedude_Text_YeahWeWon|Ouais !\nOn a gagné !$
+Pokedude_Text_WeakenMonBeforeCatching|POKé DUDE : Pour capturer un\nPOKéMON, ne lance pas tout de\lsuite une POKé BALL.\pD'abord, affaiblis-le en\nréduisant ses PV.$
+Pokedude_Text_BestIfTargetStatused|Voilà, ça devrait suffire.\pMais si possible, mieux vaut que\nla cible ait un problème de statut.\pPar exemple, il est plus facile\nde capturer un POKéMON endormi\lou paralysé.$
+Pokedude_Text_CantDoubleUpOnStatus|Ce POKéMON sera bien plus facile\nà capturer !\pAh oui. Si tu paralyses un\nPOKéMON, tu ne peux pas en plus\lle endormir.\pEn clair, on ne peut pas cumuler\nles problèmes de statut, ok ?$
+Pokedude_Text_LetMeThrowBall|Bien !\nJe lance ma POKé BALL !$
+Pokedude_Text_PickBestKindOfBall|Avant de lancer une POKé BALL,\nconsidère l'état et le type du\lPOKéMON, et choisis la BALL\lla plus adaptée.$

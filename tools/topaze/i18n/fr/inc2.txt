@@ -1,0 +1,114 @@
+DayCare_Text_ImDaycareManSpeakToMyWife|Je suis le MONSIEUR de la\nPENSION.\pJe m'occupe des précieux POKéMON\ndes DRESSEURS.\pSi tu veux que j'élève tes\nPOKéMON, parle à ma femme.$
+DayCare_Text_DoYouWantEgg|Ah, c'est toi !\pNous élevions ton POKéMON et,\nma foi, quelle surprise !\pTon POKéMON avait un ŒUF !\pNous ne savons pas d'où il vient,\nmais ton POKéMON l'avait.\pTu le veux, n'est-ce pas ?$
+DayCare_Text_YourMonIsDoingFine|Ah, c'est toi ! Content de te voir.\n{STR_VAR_1} va très bien.$
+DayCare_Text_IllKeepIt|Eh bien, je le garde.\nMerci !$
+DayCare_Text_YouHaveNoRoomForIt|Tu n'as plus de place…\nReviens quand tu en auras.$
+DayCare_Text_ReceivedEgg|{PLAYER} reçoit l'ŒUF du\nMONSIEUR de la PENSION.$
+DayCare_Text_TakeGoodCareOfIt|Prends-en bien soin.$
+DayCare_Text_YourMonsAreDoingFine|Ah, c'est toi ! {STR_VAR_1} et\n{STR_VAR_2} vont très bien.$
+DayCare_Text_IWillKeepDoYouWantIt|Je le garde vraiment.\nTu le veux bien, n'est-ce pas ?$
+DayCare_Text_WouldYouLikeUsToRaiseMon|Je suis la MADAME de la PENSION.\pNous pouvons élever des POKéMON\npour toi.\pVeux-tu que nous en élevions un ?$
+DayCare_Text_WhichMonShouldWeRaise|Quel POKéMON devons-nous\nélever pour toi ?$
+DayCare_Text_WellRaiseYourMon|Très bien, nous élèverons\n{STR_VAR_1} un moment.\pReviens le chercher plus tard.$
+DayCare_Text_WeCanRaiseOneMore|Nous pouvons élever deux de tes\nPOKéMON.\pVeux-tu que nous en élevions\nencore un ?$
+DayCare_Text_HusbandWasLookingForYou|Mon mari te cherchait.$
+DayCare_Text_FineThenComeAgain|Oh, très bien.\nReviens quand tu veux.$
+DayCare_Text_NotEnoughMoney|Tu n'as pas assez d'argent…$
+DayCare_Text_TakeOtherOneBackToo|Reprends-tu aussi l'autre ?$
+DayCare_Text_ComeAgain|Très bien.\nReviens quand tu veux.$
+DayCare_Text_GoodToSeeYou|Ah, c'est toi !\nContent de te voir.\pTes POKéMON ne peuvent aller\nque bien !$
+DayCare_Text_YourMonHasGrownXLevels|{STR_VAR_1} a gagné\n{STR_VAR_2} niveau(x).$
+DayCare_Text_YourPartyIsFull|Ton équipe est pleine.\nFais de la place, puis reviens.$
+DayCare_Text_ItWillCostX|Pour récupérer {STR_VAR_1},\nça fera ¥{STR_VAR_2}.$
+DayCare_Text_HeresYourMon|Parfait !\nVoici ton POKéMON.$
+DayCare_Text_TookBackMon|{PLAYER} reprend {STR_VAR_1} à\nla MADAME de la PENSION.$
+DayCare_Text_YouHaveJustOneMon|Oh ? Mais tu n'as qu'un seul\nPOKéMON.\pReviens une autre fois.$
+DayCare_Text_TakeYourMonBack|Veux-tu reprendre ton POKéMON ?$
+DayCare_Text_WhatWillYouBattleWith|Si tu me laisses ce POKéMON,\navec quoi te battras-tu ?\pReviens une autre fois.$
+DayCare_Text_Huh|Hein ?$
+PokedexRating_Text_HowIsPokedexComingAlong|CHEN : Content de te voir !\nComment avance ton POKéDEX ?\pVoyons ça.$
+PokedexRating_Text_SeenXOwnedY|Les progrès de ton POKéDEX :\p{STR_VAR_1} POKéMON vus et\n{STR_VAR_2} POKéMON capturés.\p{FONT_NORMAL}Évaluation du PROF. CHEN :$
+PokedexRating_Text_LessThan10|Il te reste beaucoup à faire.\pVa dans toutes les hautes herbes\net cherche des POKéMON !$
+PokedexRating_Text_LessThan20|On dirait que tu es sur la\nbonne voie !\pJ'ai confié la CS FLASH à l'un\nde mes ASSISTANTS. Va la chercher !$
+PokedexRating_Text_LessThan30|Ton POKéDEX manque encore\nun peu de volume !\pEssaie de capturer d'autres\nespèces de POKéMON !$
+PokedexRating_Text_LessThan40|Bien, on voit que tu fais\ndes efforts !\pJ'ai confié un CHERCHE-OBJET à\nl'un de mes ASSISTANTS. Prends-le !$
+PokedexRating_Text_LessThan50|Ton POKéDEX avance plutôt bien !\pJ'ai confié une PIÈCE RUNE à\nl'un de mes ASSISTANTS. Prends-la !$
+PokedexRating_Text_LessThan60|Ah, tu as enfin dépassé les 50\nespèces !\pJ'ai confié un PARTAGE EXP à\nl'un de mes ASSISTANTS. Prends-le !$
+PokedexRating_Text_LessThan70|Hoho ! Voilà un POKéDEX qui\ndevient très respectable !$
+PokedexRating_Text_LessThan80|Très bien !\pJe pense que tu captureras\nencore plus de POKéMON en pêchant !$
+PokedexRating_Text_LessThan90|Magnifique ! Laisse-moi deviner…\nTu aimes collectionner, non ?$
+PokedexRating_Text_LessThan100|Je suis impressionné !\nÇa a dû être difficile !$
+PokedexRating_Text_LessThan110|Tu as enfin atteint 100 espèces !\nJe n'en reviens pas !$
+PokedexRating_Text_LessThan120|Tu as même les formes évoluées\ndes POKéMON ! Super !$
+PokedexRating_Text_LessThan130|Excellent ! Échange avec des amis\npour en obtenir d'autres !$
+PokedexRating_Text_LessThan140|Remarquable !\nTu es devenu un vrai pro !$
+PokedexRating_Text_LessThan150|Je n'ai plus rien à dire !\nC'est toi le PROFESSEUR POKéMON !$
+PokedexRating_Text_Complete|Ton POKéDEX est complet !\nFélicitations !!$
+PokedexRating_Text_NationalDexSeenXOwnedY|Et ton POKéDEX NATIONAL :\p{STR_VAR_1} POKéMON vus et\n{STR_VAR_2} POKéMON capturés.$
+PokedexRating_Text_LookForwardToFilledNationalDex|J'ai hâte de voir ton POKéDEX\nNATIONAL se remplir !$
+PokedexRating_Text_YouveCompletedDex|Enfin…\pTu as enfin complété le\nPOKéDEX !\pC'est magnifique !\nVraiment, quel exploit !$
+PokedexRating_Text_Wroooaaarrr|Wroooooooaaaaaarrrr !$
+PokedexRating_Text_ThankYouMadeDreamReality|Merci, {PLAYER} !\nSincèrement, merci !\lTu as réalisé mon rêve !$
+PokedexRating_Text_LoveSeeingYourPokedex|CHEN : Ah, bienvenue !\pDis-moi, comment avance ton\nPOKéDEX ?\pWahaha !\pEn fait, je le sais déjà, mais\nj'adore le voir !\pVoyons…$
+CeladonCity_GameCorner_Text_TryPokemonPrinter|C'est une IMPRIMANTE POKéMON !\pElle imprime ton POKéMON au dos\nde ta CARTE DRESSEUR.\pÇa ne coûte que ¥50.\nVeux-tu essayer ?$
+CeladonCity_GameCorner_Text_DontHaveEnoughMoney|Tu n'as pas assez d'argent.$
+CeladonCity_GameCorner_Text_ChoosePrintType|Choisis le type d'impression.$
+CeladonCity_GameCorner_Text_BigSmileForPhoto|Un grand sourire pour la photo !\nTrois… Deux… Un…\pFlash !$
+CeladonCity_GameCorner_Text_PrintIsReadyCheckTrainerCard|L'impression est prête !\nRegarde ta CARTE DRESSEUR.$
+FourIsland_House2_Text_WishICouldShowOffStickers|Hihi…\nJ'ai plein d'AUTOCOLLANTS.\lJ'aimerais les montrer…$
+FourIsland_House2_Text_GiveYouStickerIfYouBrag|Oh, parfait !\nTu es au bon endroit !\pRegarde, regarde ! Tu vois ?\nCe sont mes AUTOCOLLANTS !\lRegarde combien j'en ai !\pJe parie que tu en veux.\nJe parie que oui !\pJe te donne un AUTOCOLLANT si tu\nme dis un truc génial sur toi.\pDe quoi vas-tu te vanter ?$
+FourIsland_House2_Text_BragAboutSomethingForMe|Vante-toi de quelque chose.\nJe te donnerai un AUTOCOLLANT.$
+FourIsland_House2_Text_BragAboutWhatToday|Oh, salut !\nVoilà le vantard.\pDe quoi vas-tu te vanter\naujourd'hui ?$
+FourIsland_House2_Text_WowHoFLowest|Oh, ça alors, tu es entré au\nPANTHÉON.\pC'est plutôt bien, ouais !\nJe te donne un de ceux-ci.$
+FourIsland_House2_Text_WowHoFLow|Oh, ça alors, tu es entré au\nPANTHÉON plusieurs fois !\pC'est impressionnant, ouais !\nJe te donne un de ceux-ci.$
+FourIsland_House2_Text_WowHoFHigh|Waouh ! Tu es entré au PANTHÉON\naussi souvent que ça ?\lC'est vraiment incroyable !\pTu règnes sur la LIGUE POKéMON !\nJe te donne un de ceux-ci.$
+FourIsland_House2_Text_WowHoFHighest|Pas possible ! Tu es entré au\nPANTHÉON autant de fois ?\pTu es plus qu'incroyable, ouais !\nÇa y est, je dois te donner ça.$
+FourIsland_House2_Text_HoFStickerApplied|L'AUTOCOLLANT PANTHÉON a été\ncollé sur la CARTE DRESSEUR.$
+FourIsland_House2_Text_ComeBackWithBetterStoryHoF|Hmm…\pReviens avec une meilleure\nhistoire une autre fois, ok ?$
+FourIsland_House2_Text_LivingLegendHoF|Oh non, impossible.\pTu es presque une légende vivante.\nJe n'ai plus d'AUTOCOLLANT à donner.$
+FourIsland_House2_Text_WowEggsLowest|Oh, ça alors, il y a des ŒUFS\nPOKéMON ? Je ne savais pas !\pC'est plutôt bien, ouais !\nJe te donne un de ceux-ci.$
+FourIsland_House2_Text_WowEggsLow|Tu as fait éclore autant d'ŒUFS ?\nTu dois vraiment les aimer !\pC'est impressionnant, ouais !\nJe te donne un de ceux-ci.$
+FourIsland_House2_Text_WowEggsHigh|Waouh ! Tu as fait éclore plein\nd'ŒUFS !\pTu es une machine à éclosion !\nJe te donne un de ceux-ci.$
+FourIsland_House2_Text_WowEggsHighest|Qu… Tu as fait éclore autant\nd'ŒUFS ?\pD'où te vient cet amour des ŒUFS ?\nC'est plus qu'incroyable, ouais !\pTu es trop fort, je te le dis.\nÇa y est, je dois te donner ça.$
+FourIsland_House2_Text_EggStickerApplied|L'AUTOCOLLANT ŒUF a été collé\nsur la CARTE DRESSEUR.$
+FourIsland_House2_Text_ComeBackWithBetterStoryEggs|Hmm…\pReviens avec une meilleure\nhistoire une autre fois, ok ?$
+FourIsland_House2_Text_LivingLegendEggs|Oh non, impossible.\pTu es presque une légende vivante.\nJe n'ai plus d'AUTOCOLLANT à donner.$
+FourIsland_House2_Text_WowLinkWinsLowest|Oh, ça alors, tu as gagné des\ncombats par câble ?\pTu es plutôt fort, ouais !\nJe te donne un de ceux-ci.$
+FourIsland_House2_Text_WowLinkWinsLow|Tu as battu tes amis souvent\npar câble, hein ?\pTu es drôlement fort, ouais !\nJe te donne un de ceux-ci.$
+FourIsland_House2_Text_WowLinkWinsHigh|Waouh ! Tu as battu tes amis un\nnombre effrayant de fois.\pAs-tu perdu des amis pour ça ?\nJe te donne un de ceux-ci.$
+FourIsland_House2_Text_WowLinkWinsHighest|Qu… Incroyable !\nTu as gagné à un point fou !\pÇa me fait un choc de penser\nà ta force.\pTu es l'objet de nos cauchemars !\nÇa y est, je dois te donner ça.$
+FourIsland_House2_Text_VictoryStickerApplied|L'AUTOCOLLANT VICTOIRE a été\ncollé sur la CARTE DRESSEUR.$
+FourIsland_House2_Text_ComeBackWithBetterStoryLinkWins|Hmm…\pReviens avec une meilleure\nhistoire une autre fois, ok ?$
+FourIsland_House2_Text_LivingLegendLinkWins|Oh non, impossible.\pTu es presque une légende vivante.\nJe n'ai plus d'AUTOCOLLANT à donner.$
+Trade_Text_LookingForMonWannaTradeForMon|Je cherche le POKéMON\n{STR_VAR_1} !\pVeux-tu l'échanger contre mon\n{STR_VAR_2} ?$
+Trade_Text_AwwOhWell|Oh…\nTant pis…$
+Trade_Text_WhatThatsNoMon|Quoi ?\nCe n'est pas un {STR_VAR_1} !$
+Trade_Text_HeyThanks|Hé, merci !$
+Trade_Text_IsntMyOldMonGreat|Il est super, mon ancien\n{STR_VAR_2}, non ?$
+Trade_Text_DoYouHaveMonWouldYouTradeForMon|Bonjour ! Aurais-tu par hasard\nun {STR_VAR_1} ?\pAccepterais-tu de l'échanger\ncontre mon {STR_VAR_2} ?$
+Trade_Text_WellIfYouDontWantTo|Eh bien, si tu ne veux pas…$
+Trade_Text_ThisIsntMon|Hmmm ?\nCe n'est pas un {STR_VAR_1}.\pPense à moi si tu en trouves un.$
+Trade_Text_Thanks|Merci !$
+Trade_Text_HasTradedMonGrownStronger|Le {STR_VAR_2} que je t'ai\néchangé, a-t-il gagné en force ?$
+Trade_Text_DoYouHaveMonWantToTradeForMon|Salut !\nAs-tu un {STR_VAR_1} ?\pVeux-tu l'échanger contre mon\n{STR_VAR_2} ?$
+Trade_Text_ThatsTooBad|Dommage.$
+Trade_Text_ThisIsNoMon|…Ce n'est pas un {STR_VAR_1}.\pSi tu en trouves un, échange-le\navec moi.$
+Trade_Text_ThanksYoureAPal|Merci, tu es un chic type !$
+Trade_Text_HowIsMyOldMon|Comment va mon ancien {STR_VAR_2} ?\nMon {STR_VAR_1} va très bien !$
+SafariZone_Text_WouldYouLikeToExit|Veux-tu quitter la ZONE SAFARI\nmaintenant ?$
+SafariZone_Text_TimesUp|HP : Ding-dong !\pLe temps est écoulé !\pHP : Ta PARTIE SAFARI est finie !$
+SafariZone_Text_OutOfBalls|HP : Ding-dong !\pTu n'as plus de SAFARI BALLS !\pHP : Ta PARTIE SAFARI est finie !$
+SafariZone_Text_ExcuseMeYourPCBoxIsFull|Excusez-moi !\nVotre BOÎTE PC est pleine.$
+Text_RepelWoreOff|L'effet du REPOUSSE a disparu…$
+Text_RepelUseAnother|Utiliser un autre {STR_VAR_1} ?$
+Text_RepelUsedAnother|{PLAYER} utilise {STR_VAR_1}.$
+Text_MoveCoachRadarIntro|COACH ATTAQUES : Un dresseur !\nPrends ce prototype que j'ai\lconçu pour pister les POKéMON.$
+Text_MoveCoachReceivedRadar|{PLAYER} reçoit un POKé RADAR !$
+Text_MoveCoachRadarExplain|Ouvre-le depuis le menu START et\nchoisis un POKéMON déjà vu ici.\nApproche de l'herbe qui bouge,\nmais ne cours pas : il fuirait !\pBats ou capture la même espèce\nd'affilée pour faire une chaîne :\ples chromatiques sont bien plus\nprobables !$
+Text_MoveCoachHello|COACH ATTAQUES : J'enseigne les\nattaques oubliées, les attaques\lŒuf et celles des tuteurs.$
+Text_MoveCoachBye|COACH ATTAQUES : Reviens quand\ntu veux.$
+Text_PkmnCenterRelearnAsk|Dois-je aider un POKéMON à se\nrappeler une attaque oubliée ?$
+Text_PkmnCenterRelearnWhich|Quel POKéMON doit réviser ?$
+Text_PkmnCenterRelearnMove|Quelle attaque doit-il se\nrappeler ?$
+Text_PkmnCenterRelearnNone|Je n'ai rien à enseigner à ce\nPOKéMON pour le moment.$
+Text_PkmnCenterRelearnEgg|Un ŒUF ne connaît encore aucune\nattaque !$

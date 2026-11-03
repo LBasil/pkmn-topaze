@@ -25,7 +25,7 @@
  },
  "IndigoPlateau_PokemonCenter_1F_Text_Brief4": {
   "en": "MISTY: And the snow in summer? The\\ncaves that burn? The clocks that\\lskip a beat?\\pThat does not stop because we are\\nafraid. Every stone he holds bends\\lthe world a little more.",
-  "fr": "MISTY : Et la neige en été ? Les\\ngrottes qui brûlent ? Les horloges\\lqui sautent un battement ?\\pÇa ne s'arrête pas parce que nous\\navons peur. Chaque pierre qu'il\\ldétient tord le monde un peu plus."
+  "fr": "ONDINE : Et la neige en été ? Les\\ngrottes qui brûlent ? Les horloges\\lqui sautent un battement ?\\pÇa ne s'arrête pas parce que nous\\navons peur. Chaque pierre qu'il\\ldétient tord le monde un peu plus."
  },
  "IndigoPlateau_PokemonCenter_1F_Text_Brief5": {
   "en": "BRICE: Look at it from his side.\\nHe cannot wish unless he holds the\\lstar. And the star will not wake\\lfor him.\\pIt asks the CHAMPION first. A wish\\nin your hands is still a wish in\\lyour hands.",
@@ -45,7 +45,7 @@
  },
  "IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourGoodLuck": {
   "en": "From here on, you face the\\nELITE FOUR one by one.\\pIf you win, a door opens to the\\nnext TRAINER. Good luck!",
-  "fr": "À partir d'ici, tu affrontes le\\nCONSEIL DES 4 un par un.\\pSi tu gagnes, une porte s'ouvre sur\\nle DRESSEUR suivant. Bonne chance !"
+  "fr": "À partir d'ici, tu affrontes le\\nCONSEIL 4 un par un.\\pSi tu gagnes, une porte s'ouvre sur\\nle DRESSEUR suivant. Bonne chance !"
  },
  "IndigoPlateau_PokemonCenter_1F_Text_FloraAfter": {
   "en": "FLORA: You did it, CHAMPION.\\pI saw the end from the stands.\\nBe proud of that wish, whichever\\lone you make.",
@@ -57,11 +57,11 @@
  },
  "IndigoPlateau_PokemonCenter_1F_Text_GymGuyAdvice": {
   "en": "Yo!\\nChamp in the making!\\pAt the POKéMON LEAGUE, you will\\nface the ELITE FOUR all in a row.\\pIf you lose, you have to start all\\nover again!\\pThis is it!\\nGo for it!",
-  "fr": "Yo !\\nFutur champion !\\pÀ la LIGUE POKéMON, tu affronteras\\nle CONSEIL DES 4 d'affilée.\\pSi tu perds, il faut tout\\nrecommencer !\\pÇa y est !\\nFonce !"
+  "fr": "Yo !\\nFutur champion !\\pÀ la LIGUE POKéMON, tu affronteras\\nle CONSEIL 4 d'affilée.\\pSi tu perds, il faut tout\\nrecommencer !\\pÇa y est !\\nFonce !"
  },
  "IndigoPlateau_PokemonCenter_1F_Text_LancesCousinGymLeaderFarAway": {
   "en": "Maybe becoming an ELITE FOUR\\nmember is in the blood.\\pFrom what I've heard, LANCE has\\na cousin who's a GYM LEADER\\lsomewhere far away.",
-  "fr": "Peut-être que devenir membre du\\nCONSEIL DES 4 est dans le sang.\\pD'après ce que j'ai entendu, LANCE\\na un cousin CHAMPION quelque part\\lau loin."
+  "fr": "Peut-être que devenir membre du\\nCONSEIL 4 est dans le sang.\\pD'après ce que j'ai entendu, PETER\\na un cousin CHAMPION quelque part\\lau loin."
  },
  "IndigoPlateau_PokemonCenter_1F_Text_MarketAsk": {
   "en": "FLORA: Do you wish to visit the\\nTHRONE MARKET?",
@@ -69,11 +69,11 @@
  },
  "IndigoPlateau_PokemonCenter_1F_Text_MistyAfter": {
   "en": "MISTY: CHAMPION! I am so proud.\\pCome see me at the SEA COTTAGE\\nwhen you have a moment.",
-  "fr": "MISTY : CHAMPION ! Je suis si\\nfière.\\pViens me voir au COTTAGE MARIN\\nquand tu auras un moment."
+  "fr": "ONDINE : CHAMPION ! Je suis si\\nfière.\\pViens me voir au COTTAGE MARIN\\nquand tu auras un moment."
  },
  "IndigoPlateau_PokemonCenter_1F_Text_MistyBefore": {
   "en": "MISTY: Oh, it is you!\\pI heard whispers in the stands.\\nThe winner of this tournament\\pgets to meet JIRACHI. A wish for\\nwhoever stands at the top.\\pONYBRIS would not miss that.\\nWatch your back out there!",
-  "fr": "MISTY : Oh, c'est toi !\\pJ'ai entendu des murmures dans les\\ngradins. Le vainqueur de ce tournoi\\lrencontre JIRACHI. Un vœu pour\\ncelui qui est au sommet.\\pONYBRIS ne le manquerait pas. Fais\\nattention à tes arrières !"
+  "fr": "ONDINE : Oh, c'est toi !\\pJ'ai entendu des murmures dans les\\ngradins. Le vainqueur de ce tournoi\\lrencontre JIRACHI. Un vœu pour\\ncelui qui est au sommet.\\pONYBRIS ne le manquerait pas. Fais\\nattention à tes arrières !"
  },
  "IndigoPlateau_PokemonCenter_1F_Text_RebelDefeat": {
   "en": "REBEL: Hmph. Even so, we kneel...\\nto nobody. We just lost.",

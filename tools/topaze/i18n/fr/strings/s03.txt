@@ -56,7 +56,7 @@ gText_MailReturnedToBagMessageErased|La LETTRE est dans le SAC,\nson message eff
 gText_WithdrawItem|RETIRER\nOBJET
 gText_Withdraw|RETIRER
 gText_ReturnToPC|Retourner au PC.
-gText_LtSurge|LT. SURGE
+gText_LtSurge|MAJOR BOB
 gText_Koga|KOGA
 gText_Info|INFO
 gText_Eggs|ŒUFS

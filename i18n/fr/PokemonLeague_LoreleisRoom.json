@@ -105,7 +105,7 @@
  },
  "PokemonLeague_LoreleisRoom_Text_Elder2Intro": {
   "en": "COUNCIL OF ELDERS, 3 OF 20.\\pLT. SURGE: Hey, kid! I heard you\\nbecame CHAMPION!\\pLet me test that voltage!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
-  "fr": "CONSEIL DES ANCIENS, 3 SUR 20.\\pLT. SURGE : Hé ! J'ai entendu que\\ntu as décroché le titre de\\lCHAMPION !\\pLaisse-moi tester ce voltage !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
+  "fr": "CONSEIL DES ANCIENS, 3 SUR 20.\\pLT. BOB : Hé ! J'ai entendu que\\ntu as décroché le titre de\\lCHAMPION !\\pLaisse-moi tester ce voltage !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
  },
  "PokemonLeague_LoreleisRoom_Text_Elder3Defeat": {
   "en": "Oh my... You bloomed beautifully.",
@@ -173,19 +173,19 @@
  },
  "PokemonLeague_LoreleisRoom_Text_Interlude1": {
   "en": "BROCK: Four of us have fallen.\\nThe others watch from the hall.\\pMISTY: Do you know why we\\ngathered? Years ago the AURA first\\ltwisted the TYPES of POKéMON.\\pERIKA: The GYMS noticed first.\\nThe LEAGUE called it a rumor.\\pSURGE: Rumors do not wake a whole\\nregion. Something is calling.\\pTake these, CHAMPION. You will need\\nthem more than we do.",
-  "fr": "BROCK : Quatre d'entre nous sont\\ntombés. Les autres regardent depuis\\lla salle.\\pMISTY : Sais-tu pourquoi nous nous\\nsommes réunis ? Il y a des années\\ll'AURA a d'abord tordu les TYPES\\ndes POKéMON.\\pERIKA : Les ARÈNES l'ont remarqué\\nen premier. La LIGUE y a vu une\\lrumeur.\\pSURGE : Les rumeurs ne réveillent\\npas toute une région. Quelque chose\\lappelle.\\pPrends ça, CHAMPION. Tu en auras\\nplus besoin que nous."
+  "fr": "PIERRE : Quatre d'entre nous sont\\ntombés. Les autres regardent depuis\\lla salle.\\pMISTY : Sais-tu pourquoi nous nous\\nsommes réunis ? Il y a des années\\ll'AURA a d'abord tordu les TYPES\\ndes POKéMON.\\pERIKA : Les ARÈNES l'ont remarqué\\nen premier. La LIGUE y a vu une\\lrumeur.\\pSURGE : Les rumeurs ne réveillent\\npas toute une région. Quelque chose\\lappelle.\\pPrends ça, CHAMPION. Tu en auras\\nplus besoin que nous."
  },
  "PokemonLeague_LoreleisRoom_Text_Interlude2": {
   "en": "LORELEI: Four more. Let me tell you\\nwhat I felt in the ICEFALL CAVE.\\pThe sea there remembers an echo.\\nA living memory of a POKéMON.\\pSABRINA: I have seen them too.\\nSeven echoes, scattered across the\\lSEVII ISLANDS.\\pBLAINE: Three beasts, three golems,\\nand one that travels through time.\\pGIOVANNI: Ask BILL on ONE ISLAND.\\nHe has been listening for years.\\pHere. A gift from the old guard.",
-  "fr": "LORELEI : Quatre de plus.\\nLaisse-moi te dire ce que j'ai\\lressenti dans la GROTTE GIVRÉE.\\pLa mer s'y souvient d'un écho. Un\\nsouvenir vivant d'un POKéMON.\\pSABRINA : Je les ai vus aussi. Sept\\néchos, éparpillés dans les ÎLES\\lSEVII.\\pBLAINE : Trois bêtes, trois golems,\\net un qui voyage dans le temps.\\pGIOVANNI : Demande à BILL sur l'ÎLE\\n1. Il écoute depuis des années.\\pTiens. Un cadeau de la vieille\\ngarde."
+  "fr": "LORELEI : Quatre de plus.\\nLaisse-moi te dire ce que j'ai\\lressenti dans la GROTTE GIVRÉE.\\pLa mer s'y souvient d'un écho. Un\\nsouvenir vivant d'un POKéMON.\\pSABRINA : Je les ai vus aussi. Sept\\néchos, éparpillés dans les ÎLES\\lSEVII.\\pBLAINE : Trois bêtes, trois golems,\\net un qui voyage dans le temps.\\pGIOVANNI : Demande à LÉO sur l'ÎLE\\n1. Il écoute depuis des années.\\pTiens. Un cadeau de la vieille\\ngarde."
  },
  "PokemonLeague_LoreleisRoom_Text_Interlude2Known": {
   "en": "LORELEI: Four more. The word has\\nreached us: you are closing the\\lECHOES, one after another.\\pSABRINA: I saw them in my visions\\nlong before you set out.\\pBLAINE: Beasts, golems, and one that\\ntravels through time. Quite a hunt!\\pGIOVANNI: BILL listened to them for\\nyears. You are the one who answers.\\pHere. A gift from the old guard.",
-  "fr": "LORELEI : Quatre de plus. La\\nnouvelle nous est parvenue : tu\\lrefermes les ÉCHOS, l'un après\\nl'autre.\\pSABRINA : Je les ai vus dans mes\\nvisions bien avant que tu partes.\\pBLAINE : Des bêtes, des golems, et\\nun qui voyage dans le temps. Quelle\\lchasse !\\pGIOVANNI : BILL les écoute depuis\\ndes années. Tu es celui qui répond.\\pTiens. Un cadeau de la vieille\\ngarde."
+  "fr": "LORELEI : Quatre de plus. La\\nnouvelle nous est parvenue : tu\\lrefermes les ÉCHOS, l'un après\\nl'autre.\\pSABRINA : Je les ai vus dans mes\\nvisions bien avant que tu partes.\\pBLAINE : Des bêtes, des golems, et\\nun qui voyage dans le temps. Quelle\\lchasse !\\pGIOVANNI : LÉO les écoute depuis\\ndes années. Tu es celui qui répond.\\pTiens. Un cadeau de la vieille\\ngarde."
  },
  "PokemonLeague_LoreleisRoom_Text_Interlude3": {
   "en": "LANCE: A dragon's trust is earned,\\nnever commanded. The boss forgot.\\pAGATHA: He does not crave power for\\nits own sake. He wants to be heard.\\pBRUNO: And he believes the strong\\nmust speak for the weak.\\pWILL: I read the old books. The AURA\\nis not a weapon. It is a cry.\\pWhatever you wished for, CHAMPION,\\nyou already proved him wrong.",
-  "fr": "LANCE : La confiance d'un dragon se\\nmérite, ne s'ordonne jamais. Le\\lboss l'a oublié.\\pAGATHA : Il ne convoite pas le\\npouvoir pour lui-même. Il veut être\\lentendu.\\pBRUNO : Et il croit que les forts\\ndoivent parler pour les faibles.\\pWILL : J'ai lu les vieux livres.\\nL'AURA n'est pas une arme. C'est un\\lcri.\\pQuel que soit ton vœu, CHAMPION, tu\\nlui as déjà prouvé qu'il avait\\ltort."
+  "fr": "PETER : La confiance d'un dragon se\\nmérite, ne s'ordonne jamais. Le\\lboss l'a oublié.\\pAGATHA : Il ne convoite pas le\\npouvoir pour lui-même. Il veut être\\lentendu.\\pBRUNO : Et il croit que les forts\\ndoivent parler pour les faibles.\\pWILL : J'ai lu les vieux livres.\\nL'AURA n'est pas une arme. C'est un\\lcri.\\pQuel que soit ton vœu, CHAMPION, tu\\nlui as déjà prouvé qu'il avait\\ltort."
  },
  "PokemonLeague_LoreleisRoom_Text_Interlude4": {
   "en": "KOGA: His followers have nothing.\\nThat is why they follow.\\pKAREN: Darkness is not evil. But a\\nheart that hides from it is lost.\\pSIDNEY: Ha! Fifteen fights, and\\nthis one is still smiling!\\pPHOEBE: Four left. The sea is calm,\\nbut something stirs far away.\\pKeep going. We will wait.",
@@ -193,7 +193,7 @@
  },
  "PokemonLeague_LoreleisRoom_Text_Intro": {
   "en": "THE GRAND FINAL.\\pI am LORELEI, the ELITE FOUR's\\nfirst guard, and this year's wild\\pcard.\\pNo one outlasts me when it comes\\nto icy POKéMON.\\pThe crowd is waiting. Are you\\nready?{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
-  "fr": "LA GRANDE FINALE.\\pJe suis LORELEI, la première garde\\ndu CONSEIL DES 4, et la wild card\\lde cette année.\\pPersonne ne me surpasse en matière\\nde POKéMON de glace.\\pLa foule attend. Es-tu prêt ?{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
+  "fr": "LA GRANDE FINALE.\\pJe suis LORELEI, la première garde\\ndu CONSEIL 4, et la wild card\\lde cette année.\\pPersonne ne me surpasse en matière\\nde POKéMON de glace.\\pLa foule attend. Es-tu prêt ?{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
  },
  "PokemonLeague_LoreleisRoom_Text_NextElder": {
   "en": "Well fought!\\pThe next veteran steps forward.\\nRecover your strength.",
@@ -209,7 +209,7 @@
  },
  "PokemonLeague_LoreleisRoom_Text_RematchIntro": {
   "en": "Welcome to the POKéMON LEAGUE.\\pI, LORELEI of the ELITE FOUR,\\nhave returned!\\pYou know how it goes.\\nNo one can best me when it comes\\lto icy POKéMON.\\pFreezing moves are powerful.\\pYour POKéMON will be at my mercy\\nwhen they are frozen solid.\\pHahaha!\\nAre you ready?{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
-  "fr": "Bienvenue à la LIGUE POKéMON.\\pMoi, LORELEI du CONSEIL DES 4, je\\nsuis de retour !\\pTu connais la chanson. Personne ne\\npeut me battre avec des POKéMON de\\lglace.\\pLes attaques de gel sont\\npuissantes.\\pTes POKéMON seront à ma merci quand\\nils seront gelés.\\pHahaha ! On y va ?{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
+  "fr": "Bienvenue à la LIGUE POKéMON.\\pMoi, LORELEI du CONSEIL 4, je\\nsuis de retour !\\pTu connais la chanson. Personne ne\\npeut me battre avec des POKéMON de\\lglace.\\pLes attaques de gel sont\\npuissantes.\\pTes POKéMON seront à ma merci quand\\nils seront gelés.\\pHahaha ! On y va ?{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
  },
  "PokemonLeague_LoreleisRoom_Text_Round0Defeat": {
   "en": "Remarkable! Your POKéMON have\\ngrown so much!",
