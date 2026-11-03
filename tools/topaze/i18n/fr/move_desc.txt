@@ -359,7 +359,7 @@ MOVE_DRAINING_KISS|Aspire la force\nvitale de l’ennemi\npar un baiser.
 MOVE_FAIRY_WIND|Déchaîne un vent\nmagique qui cingle\nl’ennemi.
 MOVE_DISARMING_VOICE|Laisse s’échapper\nune voix\nenchanteresse qui\ninflige des dégâts
 MOVE_SPIRIT_BREAK|Le lanceur attaque\nson adversaire avec\nune telle force que\nce dernier peut s’en
-MOVE_STEAM_BLAST|Si le lanceur est\nTéracristallisé, il\nlibère l'énergie de\nson Type
+MOVE_STEAM_BLAST|Le lanceur émet de la\nvapeur pour attaquer.\nPeut rendre la cible\nconfuse.
 MOVE_FLARE_BLITZ|Le lanceur s’embrase\navant de charger\nl’ennemi.
 MOVE_FIRE_FANG|Le lanceur utilise\nune morsure\nenflammée.
 MOVE_LAVA_PLUME|Des boules de feu\ns’abattent sur tous\nles Pokémon autour\ndu lanceur.
@@ -608,3 +608,5 @@ MOVE_LIGHT_OF_RUIN|Utilise la puissance\nde la Fleur\nÉternelle pour\nlancer un
 MOVE_MISTY_EXPLOSION|Le lanceur frappe\ntous les Pokémon\nautour de lui en\nexplosant, ce qui le
 MOVE_ALLURING_VOICE|Le lanceur attaque\nla cible avec sa\nvoix angélique.
 MOVE_SHIFT_GEAR|Le lanceur fait\ntourner ses\nengrenages.
+MOVE_THOUSAND_ARROWS|Des flèches pleuvent\ndu sol et touchent\nmême les cibles\nvolantes.
+MOVE_THOUSAND_WAVES|Des vagues de terre\nsubmergent l'ennemi\net l'empêchent\nde fuir.

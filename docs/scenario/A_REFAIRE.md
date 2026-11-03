@@ -354,3 +354,9 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - Décorations (120 noms, fr/literals.txt) et abréviations de types de la barre de vie (NOR/COM/VOL...).
 - À vérifier en jeu : natures HARDI/LÂCHE, Water Compaction, STEAM BLAST, « INFOS MIRACLE », « TAMPON », mots du Chat Facile (sens/longueur).
 - Volontairement non traduits : berry.c (JP inutilisé), crédits, noms de dresseurs.
+
+## 03-11 14h26 : vérifs en ligne + derniers textes
+- Natures corrigées via PokeAPI : HARDI, LÂCHE. Sable Humide (Water Compaction) confirmé.
+- STEAM BLAST était en fait Vapeur Féérique (Fée, 90, confusion) : nom + description corrigés (la description était celle de Téra Explosion).
+- FAME CHECKER = MEMORYDEX (Poképédia). CARTE MIRACLE / CADEAU MYSTÈRE confirmés ; « INFOS MIRACLE » et « TAMPON » : aucun nom officiel trouvé, gardés.
+- 37 descriptions d'objets, 2 descriptions d'attaques (Mille Flèches/Mille Vagues) et le texte du Tableau d'échanges traduits.

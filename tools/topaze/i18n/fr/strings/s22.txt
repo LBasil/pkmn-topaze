@@ -175,3 +175,4 @@ sText_GladToMeetYouMale|{DYNAMIC 1} : Ravi de t'avoir rencontré !{PAUSE 60}
 sText_GladToMeetYouFemale|{DYNAMIC 1} : Ravie de t'avoir rencontré !{PAUSE 60}
 gText_UR_FinishedCheckingPlayersTrainerCard|Fin de la lecture de la CARTE\nDRESSEUR de {DYNAMIC 1}.{PAUSE 60}
 sText_CanceledReadingCard|Lecture de la carte annulée.
+gText_UR_TradingBoardInfo|Ce TABLEAU D'ÉCHANGES sert à\nproposer un POKéMON à l'échange.\pIl suffit d'y inscrire un\nPOKéMON à échanger.\pUn autre DRESSEUR pourra offrir\nun POKéMON de son équipe en retour.\pNous espérons que tu inscriras des\nPOKéMON et en échangeras avec de\nnombreux autres DRESSEURS.\pVeux-tu inscrire un de\ntes POKéMON ?

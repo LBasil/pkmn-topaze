@@ -20,7 +20,7 @@ gText_PpUp_3000|PP PLUS{CLEAR_TO 0x65}{FONT_SMALL}3,000
 gString_BattleRecords_PlayersBattleResults|RÉSULTATS DE {PLAYER}
 gString_BattleRecords_TotalRecord|TOTAL V:{STR_VAR_1} D:{STR_VAR_2} N:{STR_VAR_3}
 gString_BattleRecords_ColumnHeaders|VICT.{CLEAR_TO 0x30}DÉF.{CLEAR_TO 0x60}NUL
-gFameCheckerText_FameCheckerWillBeClosed|Le FAME CHECKER va se fermer.
+gFameCheckerText_FameCheckerWillBeClosed|Le MEMORYDEX va se fermer.
 gText_ExitFromBox|Quitter la BOÎTE.
 gText_WhatDoYouWantToDo|Que veux-tu faire ?
 gText_PleasePickATheme|Choisis un thème.

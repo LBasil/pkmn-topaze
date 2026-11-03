@@ -270,3 +270,35 @@ ITEM_BICYCLE|Une Bicyclette pliable permettant de\nse déplacer bien plus rapide
 ITEM_TOWN_MAP|Une carte très pratique pouvant être\nconsultée n’importe quand. Elle\nindique la position actuelle.
 ITEM_TM_CASE|- - -
 ITEM_TEA|Un thé aromatique légèrement amer.\nIl a des vertus désaltérantes.
+ITEM_POKE_BALL|Une Ball lancée pour capturer\nun Pokémon sauvage. Elle a un\ndesign en forme de capsule.
+ITEM_X_SPECIAL|Augmente l'Attaque Spéciale\nd'un Pokémon en combat. L'effet\ndisparaît s'il est rappelé.
+ITEM_ORANGE_MAIL|Une lettre ornée d'un joli\nmotif Zigzaton.\nÀ faire porter à un Pokémon.
+ITEM_HARBOR_MAIL|Une lettre ornée d'un joli\nmotif Goélise.\nÀ faire porter à un Pokémon.
+ITEM_GLITTER_MAIL|Une lettre ornée d'un joli\nmotif Pikachu.\nÀ faire porter à un Pokémon.
+ITEM_MECH_MAIL|Une lettre ornée d'un joli\nmotif Magnéti.\nÀ faire porter à un Pokémon.
+ITEM_WOOD_MAIL|Une lettre ornée d'un joli\nmotif Parecool.\nÀ faire porter à un Pokémon.
+ITEM_WAVE_MAIL|Une lettre ornée d'un joli\nmotif Wailmer.\nÀ faire porter à un Pokémon.
+ITEM_BEAD_MAIL|Une lettre à faire porter à un\nPokémon. Elle portera le motif\ndu Pokémon qui la tient.
+ITEM_DREAM_MAIL|Une lettre à faire porter à un\nPokémon. Elle portera le motif\ndu Pokémon qui la tient.
+ITEM_SHADOW_MAIL|Une lettre ornée d'un joli\nmotif Skelénox.\nÀ faire porter à un Pokémon.
+ITEM_TROPIC_MAIL|Une lettre ornée d'un joli\nmotif Joliflor.\nÀ faire porter à un Pokémon.
+ITEM_FAB_MAIL|Une lettre au motif somptueux\net extravagant.\nÀ faire porter à un Pokémon.
+ITEM_RETRO_MAIL|Une lettre ornée du motif de\ntrois mignons Pokémon.\nÀ faire porter à un Pokémon.
+ITEM_ITEMFINDER|Un appareil qui détecte les\nobjets. Il émet un signal si un\nobjet caché se trouve à proximité.
+ITEM_DEVON_GOODS|Un colis contenant des pièces\nmécaniques fabriquées par la\nSociété Devon.
+ITEM_POKEBLOCK_CASE|Une boîte pour ranger les\nPokéblocs faits au Mixeur.\nSecouée, elle libère un Pokébloc.
+ITEM_ROOM_1_KEY|Ouvre la porte de la cabine 1\nde l'Épave. Elle est vieille et\nsemble fragile.
+ITEM_ROOM_2_KEY|Ouvre la porte de la cabine 2\nde l'Épave. Elle est vieille et\nsemble fragile.
+ITEM_ROOM_4_KEY|Ouvre la porte de la cabine 4\nde l'Épave. Elle est vieille et\nsemble fragile.
+ITEM_ROOM_6_KEY|Ouvre la porte de la cabine 6\nde l'Épave. Elle est vieille et\nsemble fragile.
+ITEM_HM08|Attaque en 2 tours : le lanceur\nplonge au premier tour, puis\nfrappe au tour suivant.
+ITEM_OAKS_PARCEL|Un colis à remettre au Prof.\nChen, venant de la boutique\nPokémon d'Opanihrum.
+ITEM_BIKE_VOUCHER|À présenter au Magasin de\nVélos de Tourmalia pour\nl'échanger contre un vélo.
+ITEM_VS_SEEKER|Indique le prochain ÉCHO.\nÀ utiliser quand on ne sait\nplus où aller.
+ITEM_FAME_CHECKER|Un appareil qui permet de se\nrappeler ce qu'on a vu et entendu\nsur des gens importants.
+ITEM_BERRY_POUCH|Une sacoche pour les Baies.\nElle se fixe au compartiment\ndes objets importants du Sac.
+ITEM_TEACHY_TV|Un téléviseur réglé sur une\némission de conseils utiles\npour les Dresseurs débutants.
+ITEM_TRI_PASS|Un passe pour les ferrys entre\nles Îles 1, 2 et 3.\nIl porte un dessin de trois îles.
+ITEM_RAINBOW_PASS|Un passe pour les ferrys entre\nCarmin sur Mer et les Îles Sevii.\nIl porte un dessin d'arc-en-ciel.
+ITEM_MYSTIC_TICKET|Un ticket pour embarquer vers\nle Roc Nombril.\nIl brille d'une lueur mystique.
+ITEM_AURORA_TICKET|Un ticket pour embarquer vers\nl'Île Aurore.\nIl brille magnifiquement.
