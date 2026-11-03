@@ -5,7 +5,7 @@ os.chdir('/home/claude/pkmn-topaze')
 from drive import Emu, KEYS, step
 import route_test as R
 
-FLB, VRB, SB = 0xEE0, 0x1000, 0x03005048
+FLB, VRB, SB = 0xEE0, 0x1000, 0x03005108
 def _sym(name, elf='/tmp/gx/dbg2.elf'):
     import subprocess
     for l in subprocess.run(['arm-none-eabi-nm', elf], capture_output=True, text=True).stdout.splitlines():
@@ -40,19 +40,19 @@ def mid(name):
 class T:
     def __init__(s, mapname, x, y, rom='/tmp/gx/dbg2.gba', party=True, nocombat=True, pre=(), prevars=None, badges=0, god=True):
         s.e = Emu(rom); s.mapname = mapname; g, n = mid(mapname)
-        a = 0x03007520; e = s.e
+        a = 0x030075e0; e = s.e
         for i, v in enumerate((1, g, n, x, y, 1 if nocombat else 0, 0, 9 if party else 0)): e.cmd('pin %x %x' % (a + i, v))
         e.run(60, 0)
-        e.cmd('poke8 %x %x' % (0x03007528, 1 if god else 0))
+        e.cmd('poke8 %x %x' % (0x030075e8, 1 if god else 0))
         fl = list(pre) + ['FLAG_BADGE%02d_GET' % i for i in range(1, badges + 1)]
         assert len(fl) <= 24 and len(prevars or {}) <= 8
         for i, f in enumerate(fl):
             k = val(f)
-            e.cmd('poke8 %x %x' % (0x030074f0 + 2 * i, k & 255)); e.cmd('poke8 %x %x' % (0x030074f0 + 2 * i + 1, k >> 8))
+            e.cmd('poke8 %x %x' % (0x030075b0 + 2 * i, k & 255)); e.cmd('poke8 %x %x' % (0x030075b0 + 2 * i + 1, k >> 8))
         for i, (vn, vv) in enumerate((prevars or {}).items()):
             k = val(vn)
             for j, w in enumerate((k, vv)):
-                e.cmd('poke8 %x %x' % (0x030074d0 + 4 * i + 2 * j, w & 255)); e.cmd('poke8 %x %x' % (0x030074d0 + 4 * i + 2 * j + 1, w >> 8))
+                e.cmd('poke8 %x %x' % (0x03007590 + 4 * i + 2 * j, w & 255)); e.cmd('poke8 %x %x' % (0x03007590 + 4 * i + 2 * j + 1, w >> 8))
         for i in range(900):
             e.run(15, KEYS['A'] if (i // 2) % 2 == 0 else KEYS['START'])
             p = e.pos()
@@ -60,7 +60,7 @@ class T:
         e.cmd('unpin')
         if nocombat: e.cmd('pin %x 1' % (a + 5))
         e.run(90, 0)
-        sb2 = e.u32(0x0300504c); b = e.peek(sb2 + 0x15, 1)[0]; e.cmd('poke8 %x %x' % (sb2 + 0x15, b | 6))   # style SET + animations off
+        sb2 = e.u32(0x0300510c); b = e.peek(sb2 + 0x15, 1)[0]; e.cmd('poke8 %x %x' % (sb2 + 0x15, b | 6))   # style SET + animations off
         s.shots = []
     # --- état du jeu
     def sb(s): return s.e.u32(SB)
@@ -104,7 +104,7 @@ class T:
         if all((v & 0x3ff) < 640 + len(nav.sa) for v in g): nav.g = tuple(g)   # sinon (carte en cours de chargement) : grille statique
         return nav
     def live_objs(s):
-        b = s.e.peek(0x02036e3c, 0x24 * 16); out = set()
+        b = s.e.peek(0x0203716c, 0x24 * 16); out = set()
         for i in range(16):
             o = b[i * 0x24:(i + 1) * 0x24]
             if o[0] & 1 and not (o[2] & 1) and not (o[1] >> 5) & 1:   # actif, pas le joueur, visible
@@ -183,10 +183,10 @@ class T:
             if s.pos()[:2] != p0[:2]: s.mapname = dest; return True
         return False
 
-    def inbattle(s): return bool(s.e.peek(0x03003130 + 0x439, 1)[0] & 3)      # bit1 = gMain.inBattle (bit0 = oamLoadDisabled)
+    def inbattle(s): return bool(s.e.peek(0x030031f0 + 0x439, 1)[0] & 3)      # bit1 = gMain.inBattle (bit0 = oamLoadDisabled)
     def idle(s):
         e = s.e
-        return e.u32(0x03003130 + 4) == _CB2 and not (e.peek(0x03003130 + 0x439, 1)[0] & 3) and e.peek(0x03000f9c, 1)[0] == 0
+        return e.u32(0x030031f0 + 4) == _CB2 and not (e.peek(0x030031f0 + 0x439, 1)[0] & 3) and e.peek(0x03000f9c, 1)[0] == 0
     def scene(s, maxn=600, key='A', shot=None):
         """Fait avancer une scène/un combat (A en combat, `key` sinon) jusqu'à ce que le jeu soit redevenu libre ; renvoie le nb d'appuis."""
         n = 0; calm = 0; reset = False
@@ -271,7 +271,7 @@ def _chain(s, steps, rounds=14, name=None):
 T.chain = _chain
 
 def _combat(s, on):
-    s.e.cmd('unpin'); s.e.cmd('pin %x %x' % (0x03007525, 0 if on else 1))
+    s.e.cmd('unpin'); s.e.cmd('pin %x %x' % (0x030075e5, 0 if on else 1))
 T.combat = _combat
 
 

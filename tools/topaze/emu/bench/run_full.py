@@ -211,7 +211,7 @@ class Auto(T):
         return s.pos()[:2] != m0
     def live_gfx(s):
         """{case: graphicsId} des objets vivants (hors joueur)."""
-        b = s.e.peek(0x02036e3c, 0x24 * 16); out = {}
+        b = s.e.peek(0x0203716c, 0x24 * 16); out = {}
         for i in range(16):
             o = b[i * 0x24:(i + 1) * 0x24]
             if o[0] & 1 and not (o[2] & 1) and not (o[1] >> 5) & 1:
@@ -857,7 +857,7 @@ def stage_pg_mine(t):
 
 def give_hms(t):
     """LIMITE DU BOT : CS04 (Force) et CS06 (Eclate-Roc) mises directement dans le sac (la CS04 vient du gardien du Parc Safari, la CS06 de la source chaude de l'Ile 1 : non rejoues)."""
-    sb = t.e.u32(0x03005048); sb2 = t.e.u32(0x0300504c); key = t.e.u32(sb2 + 0xF20) & 0xffff; slot = sb + 0x464
+    sb = t.e.u32(0x03005108); sb2 = t.e.u32(0x0300510c); key = t.e.u32(sb2 + 0xF20) & 0xffff; slot = sb + 0x464
     for it in (342, 344):
         for i in range(58):
             a = slot + 4 * i; cur = struct.unpack('<H', t.e.peek(a, 2))[0]
