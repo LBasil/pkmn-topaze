@@ -25,7 +25,7 @@
  },
  "TwoIsland_Text_HaveYouTriedJumpingGame": {
   "en": "Boing! Boing!\\nHave you tried the jumping game?\\pThe POKéMON you can enter…\\nBoing!\\pSome go boing!\\pAnd some go boooooooing!\\pDid you know that?\\nBoing!",
-  "fr": "Boing ! Boing !\\nAs-tu essayé le jeu de saut ?\\pLes POKéMON que tu peux inscrire…\\nBoing !\\pCertains font boing !\\pEt d'autres font booooooing !\\pTu le savais ?\\nBoing !"
+  "fr": "Boing ! Boing !\\nT'as essayé le jeu de saut ?\\pLes POKéMON que tu peux inscrire…\\nBoing !\\pCertains font boing !\\pEt d'autres font booooooing !\\pTu le savais ?\\nBoing !"
  },
  "TwoIsland_Text_HopeYouGiveItYourBest": {
   "en": "Hi! I'm giving it my best here.\\nI hope you do too, {PLAYER}.",
@@ -97,7 +97,7 @@
  },
  "TwoIsland_Text_RefOffer": {
   "en": "KIRA: You have them! May I take\\n3 of them for the post?",
-  "fr": "KIRA : Tu en as ! Puis-je en\\nprendre 3 pour le poste ?"
+  "fr": "KIRA : T'en as ! Je peux en\\nprendre 3 pour le poste ?"
  },
  "TwoIsland_Text_ShopkeepersBrotherWorksGameCorner": {
   "en": "The shopkeeper's brother took\\na job at the GAME CORNER.\\pHe's trying to pull together money\\nso they can buy more merchandise.",

@@ -5,7 +5,7 @@
  },
  "PewterCity_Text_BrockOnlySeriousTrainerHere": {
   "en": "There aren't many serious POKéMON\\nTRAINERS here.\\pThey're all like BUG CATCHERS,\\nyou know, just hobbyists.\\pBut PYROPIA GYM's KAY isn't like\\nthat, not one bit.",
-  "fr": "Il y a pas beaucoup de sérieux\\nDRESSEURS POKéMON ici.\\pCe sont tous comme des CHASSEURS\\nD'INSECTES, tu sais, de simples\\lamateurs.\\pMais KAY de l'ARÈNE DE PYROPIA\\nn'est pas comme ça, pas du tout."
+  "fr": "Il y a pas beaucoup de sérieux\\nDRESSEURS POKéMON ici.\\pCe sont tous comme des CHASSEURS\\nD'INSECTES, tu sais, de simples\\lamateurs.\\pMais KAY de l'ARÈNE DE PYROPIA\\nest pas comme ça, pas du tout."
  },
  "PewterCity_Text_BrocksLookingForChallengersFollowMe": {
   "en": "You're a TRAINER, right?\\pKAY is looking for new\\nchallengers. Follow me!",
@@ -49,7 +49,7 @@
  },
  "PewterCity_Text_Guide": {
   "en": "They got into the MUSEUM last\\nnight, and no one heard a thing.\\pKAY's POKéMON were up on the\\nvolcano. Bad timing for us.",
-  "fr": "Ils sont entrés dans le MUSÉE hier\\nsoir, et personne n'a rien entendu.\\pLes POKéMON de KAY étaient sur le\\nvolcan. Mauvais timing pour nous."
+  "fr": "Ils sont entrés dans le MUSÉE hier\\nsoir, et personne a rien entendu.\\pLes POKéMON de KAY étaient sur le\\nvolcan. Mauvais timing pour nous."
  },
  "PewterCity_Text_GymSign": {
   "en": "PYROPIA POKéMON GYM\\nLEADER: KAY",
@@ -61,7 +61,7 @@
  },
  "PewterCity_Text_Miner": {
   "en": "The crater lake never cools.\\pKAY says that's why the FIRE\\nPOKéMON here are so strong.",
-  "fr": "Le lac du cratère ne refroidit\\njamais.\\pKAY dit que c'est pour ça que les\\nPOKéMON FEU d'ici sont si forts."
+  "fr": "Le lac du cratère refroidit\\njamais.\\pKAY dit que c'est pour ça que les\\nPOKéMON FEU d'ici sont si forts."
  },
  "PewterCity_Text_MuseumOfScience": {
   "en": "PYROPIA MUSEUM OF SCIENCE",
@@ -117,11 +117,11 @@
  },
  "PewterCity_Text_RunningShoesLetterFromMom": {
   "en": "There's a letter attached…\\pDear {PLAYER},\\pHere is a pair of RUNNING SHOES\\nfor my beloved challenger.\\pRemember, I'll always cheer for\\nyou! Don't ever give up!\\pFrom Mom",
-  "fr": "Une lettre est attachée…\\pCher(e) {PLAYER},\\pVoici une paire de CHAUSSURES DE\\nCOURSE pour mon challenger\\lbien-aimé.\\pRappelle-toi, je t'encouragerai\\ntoujours ! N'abandonne jamais !\\pDe Maman"
+  "fr": "Une lettre est attachée…\\pCher(e) {PLAYER},\\pVoici une paire de CHAUSSURES DE\\nCOURSE pour mon challenger\\lbien-aimé.\\pRappelle-toi, je t'encouragerai\\ntoujours ! Abandonne jamais !\\pDe Maman"
  },
  "PewterCity_Text_Scientist": {
   "en": "I measure the lava every morning.\\pIt's rising. A little. Don't tell\\nthe MAYOR.",
-  "fr": "Je mesure la lave chaque matin.\\pElle monte. Un peu. Ne le dis pas\\nau MAIRE."
+  "fr": "Je mesure la lave chaque matin.\\pElle monte. Un peu. Le dis pas\\nau MAIRE."
  },
  "PewterCity_Text_SprayingRepelToKeepWildMonsOut": {
   "en": "I'm spraying REPEL to keep wild\\nPOKéMON out of my garden!",

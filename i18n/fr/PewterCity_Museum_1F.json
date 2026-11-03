@@ -29,7 +29,7 @@
  },
  "PewterCity_Museum_1F_Text_DontHaveEnoughMoney": {
   "en": "You don't have enough money.",
-  "fr": "Vous n'avez pas assez d'argent."
+  "fr": "T'as pas assez d'argent."
  },
  "PewterCity_Museum_1F_Text_DontHaveSpaceForThis": {
   "en": "You don't have space for this.",
@@ -73,6 +73,6 @@
  },
  "PewterCity_Museum_1F_Text_WeHaveTwoFossilsOnExhibit": {
   "en": "The thieves walked right past our\\nfossils. They wanted only the\\pPYROPE.",
-  "fr": "Les voleurs sont passés devant nos\\nfossiles. Ils ne voulaient que le\\lPYROPE."
+  "fr": "Les voleurs sont passés devant nos\\nfossiles. Ils voulaient que le\\lPYROPE."
  }
 }

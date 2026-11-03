@@ -21,7 +21,7 @@
  },
  "Route20_Text_DarrinIntro": {
   "en": "Why are you riding a POKéMON?\\nCan't you swim?",
-  "fr": "Pourquoi chevauches-tu un POKéMON ?\\nTu ne sais pas nager ?"
+  "fr": "Pourquoi tu chevauches un POKéMON ?\\nTu sais pas nager ?"
  },
  "Route20_Text_DarrinPostBattle": {
   "en": "Riding a POKéMON sure looks fun!",
@@ -69,7 +69,7 @@
  },
  "Route20_Text_MissyIntro": {
   "en": "I swam here from CHRONDROLIA.\\nIt wasn't easy, I tell you.",
-  "fr": "J'ai nagé ici depuis CHRONDROLIA.\\nCe n'était pas facile, je te le\\ldis."
+  "fr": "J'ai nagé ici depuis CHRONDROLIA.\\nC'était pas facile, je te le\\ldis."
  },
  "Route20_Text_MissyPostBattle": {
   "en": "POKéMON have taken over an\\nabandoned mansion on CHRONDROLIA.\\pThey call it the POKéMON MANSION\\nnow.",

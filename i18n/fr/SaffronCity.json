@@ -1,7 +1,7 @@
 {
  "SaffronCity_Text_AlliesMeet1": {
   "en": "N: …Wait. Do not go in, child.\\pThat pendant. It hums like the\\nstones. So it is true.",
-  "fr": "N : …Attends. N'entre pas,\\nenfant.\\pCe pendentif. Il vibre comme les\\npierres. Alors c'est vrai."
+  "fr": "N : …Attends. Entre pas,\\nenfant.\\pCe pendentif. Il vibre comme les\\npierres. Alors c'est vrai."
  },
  "SaffronCity_Text_AlliesMeet2": {
   "en": "BRICE: I'm BRICE. I walked this\\nregion long before ONYBRIS.\\pTheir MASTER is in this tower.\\nHe came for the HEMATITE himself.",
@@ -9,11 +9,11 @@
  },
  "SaffronCity_Text_AlliesMeet3": {
   "en": "FLORA: We are going up to face\\nhim. Every trainer that can still\\pstand has to try.\\pYou are not strong enough yet,\\nlittle one. Not for him.",
-  "fr": "FLORA : Nous montons l'affronter.\\nChaque dresseur encore debout doit\\lessayer.\\pTu es pas encore assez fort. Pas\\npour lui."
+  "fr": "FLORA : On monte l'affronter.\\nChaque dresseur encore debout doit\\lessayer.\\pT'es pas encore assez fort. Pas\\npour lui."
  },
  "SaffronCity_Text_AlliesMeet4": {
   "en": "N: Follow us if you must.\\nStay one floor behind.\\pAnd {PLAYER}… if we do not come\\ndown, remember what you saw.",
-  "fr": "N : Suis-nous si tu dois. Reste un\\nétage derrière.\\pEt {PLAYER}… si nous ne redescendons\\npas, souviens-toi de ce que tu as\\lvu."
+  "fr": "N : Suis-nous si tu dois. Reste un\\nétage derrière.\\pEt {PLAYER}… si on redescend\\npas, souviens-toi de ce que t'as\\lvu."
  },
  "SaffronCity_Text_BossTakeTownForTeamRocket": {
   "en": "BOSS said he'll take this town\\nin the name of TEAM ONYBRIS!",
@@ -45,7 +45,7 @@
  },
  "SaffronCity_Text_DontGetDefiantOrIllHurtYou": {
   "en": "Don't get defiant!\\nOr I'll have to hurt you!",
-  "fr": "Ne fais pas le rebelle !\\nOu je devrai te faire mal !"
+  "fr": "Fais pas le rebelle !\\nOu je devrai te faire mal !"
  },
  "SaffronCity_Text_FightingDojo": {
   "en": "FIGHTING DOJO",
@@ -69,7 +69,7 @@
  },
  "SaffronCity_Text_GuardScared": {
   "en": "I didn't see anything!\\nThose three… I'm not paid enough!",
-  "fr": "J'ai rien vu ! Ces trois-là…\\nje ne suis pas assez payé !"
+  "fr": "J'ai rien vu ! Ces trois-là…\\nje suis pas assez payé !"
  },
  "SaffronCity_Text_GymSign": {
   "en": "HEMATOWN POKéMON GYM\\nLEADER: NOX\\lThe Shadow of the City!",
@@ -81,7 +81,7 @@
  },
  "SaffronCity_Text_HowCanClubNotRecognizeLance": {
   "en": "This FAN CLUB…\\nNo one here has a clue!\\pHow could they not recognize\\nthe brilliance that is LANCE?\\pHe stands for justice!\\nHe's cool, and yet passionate!\\lHe's the greatest, LANCE!",
-  "fr": "Ce CLUB DE FANS… Personne ici n'y\\ncomprend rien !\\pComment peuvent-ils pas\\nreconnaître la brillance de PETER ?\\pIl incarne la justice ! Il est\\ncool, et pourtant passionné ! C'est\\lle plus grand, PETER !"
+  "fr": "Ce CLUB DE FANS… Personne ici y\\ncomprend rien !\\pComment ils peuvent pas\\nreconnaître la brillance de PETER ?\\pIl incarne la justice ! Il est\\ncool, et pourtant passionné ! C'est\\lle plus grand, PETER !"
  },
  "SaffronCity_Text_ImASecurityGuard": {
   "en": "I'm a security guard.\\pSuspicious kids I don't allow in!",
@@ -93,7 +93,7 @@
  },
  "SaffronCity_Text_Market_Closed": {
   "en": "Come back when the LEAGUE is behind\\nyou. The market is not open for you\\pyet.",
-  "fr": "Reviens quand la LIGUE sera\\nderrière toi. Le marché n'est pas\\lencore ouvert pour toi."
+  "fr": "Reviens quand la LIGUE sera\\nderrière toi. Le marché est pas\\lencore ouvert pour toi."
  },
  "SaffronCity_Text_Market_Open": {
   "en": "The night market opens when the\\nclocks stop. Look around, {PLAYER}.",
@@ -113,7 +113,7 @@
  },
  "SaffronCity_Text_ProcheViolette_After": {
   "en": "The future is not fixed. You proved\\nthat today.",
-  "fr": "L'avenir n'est pas figé. Tu l'as\\nprouvé aujourd'hui."
+  "fr": "L'avenir est pas figé. T'l'as\\nprouvé aujourd'hui."
  },
  "SaffronCity_Text_ProcheViolette_Defeat": {
   "en": "So you did see it coming...",

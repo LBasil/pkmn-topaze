@@ -9,11 +9,11 @@
  },
  "RocketHideout_B4F_Text_GiovanniIntro": {
   "en": "VESPER: So you are the brat who\\nkeeps wrecking my plans.\\pROCKET left this base to rot. I\\nonly took what was worth taking:\\lthe vault, and this office.\\pNow, scram!",
-  "fr": "VESPER : Alors c'est toi le gamin\\nqui gâche sans cesse mes plans.\\pROCKET a laissé cette base pourrir.\\nJe n'ai pris que ce qui valait la\\lpeine : la chambre forte, et ce\\nbureau.\\pMaintenant, dégage !"
+  "fr": "VESPER : Alors c'est toi le gamin\\nqui gâche sans cesse mes plans.\\pROCKET a laissé cette base pourrir.\\nJ'ai pris que ce qui valait la\\lpeine : la chambre forte, et ce\\nbureau.\\pMaintenant, dégage !"
  },
  "RocketHideout_B4F_Text_GiovanniPostBattle": {
   "en": "VESPER: Hmph. You beat me...\\nin a fight. Fights are for fools.\\pI have the QUARTZ in my pocket.\\nThe boss wants ten stones. Ten!\\pDo not ask me why. I only collect.\\pLet us settle it like adults: at my\\ntable in the GAME CORNER, upstairs.\\pWin, and you keep it. Lose, and it\\nis mine. Come, if you dare!",
-  "fr": "VESPER : Hmph. Tu m'as battu… au\\ncombat. Les combats sont pour les\\lfous.\\pJ'ai le QUARTZ dans ma poche. Le\\nboss veut dix pierres. Dix !\\pNe me demande pas pourquoi. Je ne\\nfais que collectionner.\\pRéglons ça en adultes : à ma table\\ndu CASINO, à l'étage.\\pGagne, et tu le gardes. Perds, et\\nil est à moi. Viens, si tu l'oses !"
+  "fr": "VESPER : Hmph. Tu m'as battu… au\\ncombat. Les combats sont pour les\\lfous.\\pJ'ai le QUARTZ dans ma poche. Le\\nboss veut dix pierres. Dix !\\pMe demande pas pourquoi. Je fais\\nque collectionner.\\pRéglons ça en adultes : à ma table\\ndu CASINO, à l'étage.\\pGagne, et tu le gardes. Perds, et\\nil est à moi. Viens, si t'oses !"
  },
  "RocketHideout_B4F_Text_Grunt1Defeat": {
   "en": "No!",
@@ -45,7 +45,7 @@
  },
  "RocketHideout_B4F_Text_Grunt3Intro": {
   "en": "How can you not see the beauty of\\nour business?",
-  "fr": "Comment peux-tu pas voir la\\nbeauté de notre business ?"
+  "fr": "Comment tu peux pas voir la\\nbeauté de notre business ?"
  },
  "RocketHideout_B4F_Text_Grunt3PostBattle": {
   "en": "BOSS!\\nI'm sorry I failed you!",

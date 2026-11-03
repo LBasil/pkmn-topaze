@@ -65,11 +65,11 @@
  },
  "Route13_Text_Quest4_Ask": {
   "en": "My best fighter is out of PP. Got 2\\nETHERS for an old angler?",
-  "fr": "Mon meilleur combattant n'a plus de\\nPP. T'as 2 ÉTHERS pour un vieux\\lpêcheur ?"
+  "fr": "Mon meilleur combattant a plus de\\nPP. T'as 2 ÉTHERS pour un vieux\\lpêcheur ?"
  },
  "Route13_Text_Quest4_Done": {
   "en": "The big one did not get away this\\ntime.",
-  "fr": "Le gros ne s'est pas échappé cette\\nfois."
+  "fr": "Le gros s'est pas échappé cette\\nfois."
  },
  "Route13_Text_Quest4_NoRoom": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
@@ -121,7 +121,7 @@
  },
  "Route13_Text_SheilaPostBattle": {
   "en": "Men in black were asking about a\\nPOKé FLUTE. Nobody here has one.",
-  "fr": "Des hommes en noir demandaient une\\nFLÛTE POKé. Personne ici n'en a."
+  "fr": "Des hommes en noir demandaient une\\nFLÛTE POKé. Personne en a ici."
  },
  "Route13_Text_SusieDefeat": {
   "en": "Ohh!\\nI lost!",

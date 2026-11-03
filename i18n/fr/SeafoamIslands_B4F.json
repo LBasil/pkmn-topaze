@@ -25,7 +25,7 @@
  },
  "SeafoamIslands_B4F_Text_KronosIntro": {
   "en": "KRONOS: Ah, the last piece. Do\\ncome in. We were just waiting.\\pThese two have held me here all\\nafternoon. A fine show, truly.\\pNow you, child. Show me what you\\ncarry in that bag.",
-  "fr": "KRONOS : Ah, la dernière pièce.\\nEntre donc. Nous n'attendions que\\ltoi.\\pCes deux-là m'ont retenu ici tout\\nl'après-midi. Un beau spectacle,\\lvraiment.\\pMaintenant à toi, enfant.\\nMontre-moi ce que tu portes dans ce\\lsac."
+  "fr": "KRONOS : Ah, la dernière pièce.\\nEntre donc. On n'attendait que\\ltoi.\\pCes deux-là m'ont retenu ici tout\\nl'après-midi. Un beau spectacle,\\lvraiment.\\pMaintenant à toi, enfant.\\nMontre-moi ce que tu portes dans ce\\lsac."
  },
  "SeafoamIslands_B4F_Text_KronosPost": {
   "en": "KRONOS: Look around. Nothing but\\nash and me. SELENE failed, yes.\\pBut the TOPAZ in your bag was only\\nthe spark. The MASTER already took\\pwhat he needed from this volcano.\\nThis place was a curtain.\\pTime is the one thing nobody gets\\nback. The MASTER only needs one\\lmore thing: a thousand-year star.\\pThe LAST BASE awaits,\\pwhere the road ends and the\\nLEAGUE begins.",
@@ -41,7 +41,7 @@
  },
  "SeafoamIslands_B4F_Text_SilverBeaten": {
   "en": "SILVER: Do not look at me like\\nthat. Go and finish the job.",
-  "fr": "SILVER : Ne me regarde pas comme\\nça. Va finir le travail."
+  "fr": "SILVER : Me regarde pas comme\\nça. Va finir le travail."
  },
  "Text_RockSlideDeclined": {
   "en": "Oh, so you are scared after all.",

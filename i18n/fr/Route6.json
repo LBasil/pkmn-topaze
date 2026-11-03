@@ -13,7 +13,7 @@
  },
  "Route6_Text_IsabelleDefeat": {
   "en": "Things just didn't work…",
-  "fr": "Ça n'a juste pas marché…"
+  "fr": "Ça a juste pas marché…"
  },
  "Route6_Text_IsabelleIntro": {
   "en": "Me?\\nWell, okay. I'll play!",
@@ -25,7 +25,7 @@
  },
  "Route6_Text_JeffDefeat": {
   "en": "This stinks…\\nI couldn't beat your challenge…",
-  "fr": "C'est nul…\\nJe n'ai pas pu relever ton défi…"
+  "fr": "C'est nul…\\nJ'ai pas pu relever ton défi…"
  },
  "Route6_Text_JeffIntro": {
   "en": "Huh?\\nYou want to talk to me?",
@@ -73,7 +73,7 @@
  },
  "Route6_Text_ProcheJordan_Intro": {
   "en": "Normal is not boring, {PLAYER}.\\nNormal is solid. Prove me wrong!",
-  "fr": "Normal n'est pas ennuyeux, {PLAYER}.\\nNormal est solide. Prouve-moi le\\lcontraire !"
+  "fr": "Normal est pas ennuyeux, {PLAYER}.\\nNormal est solide. Prouve-moi le\\lcontraire !"
  },
  "Route6_Text_ProcheJordan_NoRoom": {
   "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",
@@ -85,7 +85,7 @@
  },
  "Route6_Text_RQuest_Ask": {
   "en": "My partner is wounded. Two SUPER\\nPOTIONS, if you please.",
-  "fr": "Mon partenaire est blessé. Deux\\nSUPER POTIONS, je vous prie."
+  "fr": "Mon partenaire est blessé. Deux\\nSUPER POTIONS, s'il te plaît."
  },
  "Route6_Text_RQuest_Done": {
   "en": "He is as good as new.",

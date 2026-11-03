@@ -25,7 +25,7 @@
  },
  "ViridianCity_Text_GrandpaHasntHadCoffeeYet": {
   "en": "Oh, Grandpa!\\nDon't be so mean!\\pI'm so sorry. Since the TEAM ONYBRIS\\nnews, he doesn't trust strangers.",
-  "fr": "Oh, Papy !\\nNe sois pas si méchant !\\pJe suis désolée. Depuis les\\nnouvelles de la TEAM ONYBRIS, il se\\lméfie des inconnus."
+  "fr": "Oh, Papy !\\nSois pas si méchant !\\pJe suis désolée. Depuis les\\nnouvelles de la TEAM ONYBRIS, il se\\lméfie des inconnus."
  },
  "ViridianCity_Text_GymClosedWonderWhoLeaderIs": {
   "en": "This GYM has been closed ever since\\nthe LEADER left on a long trip.\\pRumor says HEPHA forges her own\\nsteel. I'd love to see it.",
@@ -53,7 +53,7 @@
  },
  "ViridianCity_Text_OfferCatchDemo": {
   "en": "Well, now, I've had my coffee!\\nHm? You're working on a POKéDEX?\\pWhenever you catch a POKéMON, the\\nPOKéDEX updates its data.\\pShall I show you how to catch\\none?",
-  "fr": "Bon, j'ai pris mon café !\\nHm ? Tu travailles sur un POKéDEX ?\\pÀ chaque capture, le POKéDEX met à\\njour ses données.\\pVeux-tu que je te montre comment en\\ncapturer un ?"
+  "fr": "Bon, j'ai pris mon café !\\nHm ? Tu travailles sur un POKéDEX ?\\pÀ chaque capture, le POKéDEX met à\\njour ses données.\\pTu veux que je te montre comment en\\ncapturer un ?"
  },
  "ViridianCity_Text_OhOkayThen": {
   "en": "Oh, okay then!",
@@ -81,7 +81,7 @@
  },
  "ViridianCity_Text_RefHunter1": {
   "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!",
-  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Ne te mêle pas de ça,\\ppetit !"
+  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Mêle-toi pas de ça,\\ppetit !"
  },
  "ViridianCity_Text_RefHunter2": {
   "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!",
@@ -97,7 +97,7 @@
  },
  "ViridianCity_Text_TQ_Ask": {
   "en": "A NUGGET for my collection. Bring\\nme one, will you?",
-  "fr": "Une PÉPITE pour ma collection.\\nApporte-m'en une, veux-tu ?"
+  "fr": "Une PÉPITE pour ma collection.\\nApporte-m'en une, tu veux ?"
  },
  "ViridianCity_Text_TQ_Done": {
   "en": "My shelf has never looked better.",

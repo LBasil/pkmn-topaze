@@ -1,7 +1,7 @@
 {
  "PewterCity_House2_Text_LittleBoyAsk": {
   "en": "My POKéMON fell asleep in battle\\nand never woke up!\\pIf you have an AWAKENING, can\\nyou help us?",
-  "fr": "Mon POKéMON s'est endormi en combat\\net ne s'est jamais réveillé !\\pSi t'as un RÉVEIL, peux-tu nous\\naider ?"
+  "fr": "Mon POKéMON s'est endormi en combat\\net s'est jamais réveillé !\\pSi t'as un RÉVEIL, tu peux nous\\naider ?"
  },
  "PewterCity_House2_Text_LittleBoyGives": {
   "en": "It's awake! It's awake!\\pHere, my dad gave me these for\\ntraining. You can have them!",
@@ -25,7 +25,7 @@
  },
  "PewterCity_House2_Text_OldManAsk": {
   "en": "My old POKéMON got burned on the\\nPyropia volcano road. The\\lheat never forgets.\\pTwo BURN HEALS would ease it.",
-  "fr": "Mon vieux POKéMON s'est brûlé sur\\nla route du volcan de Pyropia. La\\lchaleur n'oublie jamais.\\pDeux ANTI-BRÛLE le soulageraient."
+  "fr": "Mon vieux POKéMON s'est brûlé sur\\nla route du volcan de Pyropia. La\\lchaleur oublie jamais.\\pDeux ANTI-BRÛLE le soulageraient."
  },
  "PewterCity_House2_Text_OldManGives": {
   "en": "Ah, the pain is gone. Thank you!\\pTake this IRON. It makes a\\nPOKéMON sturdier, I'm told.",
@@ -37,6 +37,6 @@
  },
  "PewterCity_House2_Text_OldManOffer": {
   "en": "BURN HEALS! May I have two for my\\nold friend?",
-  "fr": "Des ANTI-BRÛLE ! Puis-je en avoir\\ndeux pour mon vieil ami ?"
+  "fr": "Des ANTI-BRÛLE ! Je peux en avoir\\ndeux pour mon vieil ami ?"
  }
 }

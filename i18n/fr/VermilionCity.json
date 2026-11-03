@@ -33,7 +33,7 @@
  },
  "VermilionCity_Text_EastBlocked": {
   "en": "Sorry, the east road is closed.\\pThieves are lurking around the\\nharbor. Until things are settled,\\lnobody leaves APATIA this way.",
-  "fr": "Désolé, la route de l'est est\\nfermée.\\pDes voleurs rôdent autour du port.\\nTant que ce n'est pas réglé,\\lpersonne ne quitte APATIA par ici."
+  "fr": "Désolé, la route de l'est est\\nfermée.\\pDes voleurs rôdent autour du port.\\nTant que c'est pas réglé,\\lpersonne quitte APATIA par ici."
  },
  "VermilionCity_Text_FerryHint": {
   "en": "From the dock, a SAILOR is waving\\nat you. He seems to have something\\pfor you. He can also take you to\\nthe SEVII ISLANDS by ferry.",
@@ -41,7 +41,7 @@
  },
  "VermilionCity_Text_FerryTicketsIntro": {
   "en": "The champion! Word travels fast\\non the docks.\\pTwo old tickets turned up in the\\nlost-and-found, one for a rock in\\lthe sea and one for an island that\\lno chart shows.\\pThey are yours. Please take them.",
-  "fr": "Le champion ! Les nouvelles vont\\nvite dans le port.\\pDeux vieux tickets sont apparus aux\\nobjets trouvés, un pour un rocher\\len mer et un pour une île qu'aucune\\ncarte ne montre.\\pIls sont à toi. Prends-les, s'il te\\nplaît."
+  "fr": "Le champion ! Les nouvelles vont\\nvite dans le port.\\pDeux vieux tickets sont apparus aux\\nobjets trouvés, un pour un rocher\\len mer et un pour une île qu'aucune\\ncarte montre.\\pIls sont à toi. Prends-les, s'il te\\nplaît."
  },
  "VermilionCity_Text_FerryTicketsNoRoom": {
   "en": "Your BAG is full. Make some room\\nfirst and talk to me again!",
@@ -57,7 +57,7 @@
  },
  "VermilionCity_Text_GrimerMultipliesInSludge": {
   "en": "HERA lent her APATITE to the\\nS.S. ANNE for the cruise's gala.\\pBetween us, I hope nothing happens\\nto it. Folks in black were seen\\lnear the harbor!",
-  "fr": "HERA a prêté son APATITE au S.S.\\nANNE pour le gala de la croisière.\\pEntre nous, j'espère qu'il ne lui\\narrivera rien. On a vu des gens en\\lnoir près du port !"
+  "fr": "HERA a prêté son APATITE au S.S.\\nANNE pour le gala de la croisière.\\pEntre nous, j'espère qu'il lui\\narrivera rien. On a vu des gens en\\lnoir près du port !"
  },
  "VermilionCity_Text_GymSign": {
   "en": "APATIA POKéMON GYM\\nLEADER: HERA\\lThe Queen of the Peaks!",
@@ -121,11 +121,11 @@
  },
  "VermilionCity_Text_RefOffer": {
   "en": "ELISE: You have them! May I take\\n2 of them for the post?",
-  "fr": "ELISE : Tu en as ! Puis-je en\\nprendre 2 pour le poste ?"
+  "fr": "ELISE : T'en as ! Je peux en\\nprendre 2 pour le poste ?"
  },
  "VermilionCity_Text_Route2AideHasPackageForYou": {
   "en": "Oh, hello, {PLAYER}!\\nHow are you doing?\\pIt's me, one of PROF. OAK's AIDES.\\pDid you meet the other AIDE?\\pHe had a package from PROF. OAK\\nfor you, {PLAYER}.\\pHe said he'd look for you around\\nROUTE 2, {PLAYER}.\\pIf you're in the ROUTE 2 area,\\nplease look for him.",
-  "fr": "Oh, bonjour, {PLAYER} !\\nComment vas-tu ?\\pC'est moi, l'un des ASSISTANTS du\\nPROF. CHEN.\\pAs-tu rencontré l'autre ASSISTANT ?\\pIl avait un colis du PROF. CHEN\\npour toi, {PLAYER}.\\pIl a dit qu'il te chercherait vers\\nla ROUTE 2, {PLAYER}.\\pSi t'es dans la zone de la ROUTE\\n2, cherche-le, s'il te plaît."
+  "fr": "Oh, bonjour, {PLAYER} !\\nComment ça va ?\\pC'est moi, l'un des ASSISTANTS du\\nPROF. CHEN.\\pT'as rencontré l'autre ASSISTANT ?\\pIl avait un colis du PROF. CHEN\\npour toi, {PLAYER}.\\pIl a dit qu'il te chercherait vers\\nla ROUTE 2, {PLAYER}.\\pSi t'es dans la zone de la ROUTE\\n2, cherche-le, s'il te plaît."
  },
  "VermilionCity_Text_SSAnneHasDepartedForYear": {
   "en": "So, the S.S. ANNE has departed?\\pShe'll be back in APATIA about\\nthis time next year.",
@@ -173,7 +173,7 @@
  },
  "VermilionCity_Text_TruckDriver": {
   "en": "DRIVER: Don't mind the truck!\\nI just park here.\\p...Why does it keep shaking?\\nIs something under there?",
-  "fr": "CHAUFFEUR : Ne fais pas attention\\nau camion ! Je me gare juste ici.\\p…Pourquoi ça n'arrête pas de\\nbouger ? Y a-t-il quelque chose en\\ldessous ?"
+  "fr": "CHAUFFEUR : Fais pas attention\\nau camion ! Je me gare juste ici.\\p…Pourquoi ça arrête pas de\\nbouger ? Il y a quelque chose en\\ldessous ?"
  },
  "VermilionCity_Text_VermilionHarbor": {
   "en": "APATIA HARBOR",

@@ -37,7 +37,7 @@
  },
  "Route24_Text_ImOutOfHere": {
   "en": "I'm out of here!\\nDon't follow me!",
-  "fr": "Je me barre !\\nNe me suis pas !"
+  "fr": "Je me barre !\\nMe suis pas !"
  },
  "Route24_Text_JoinTeamRocket": {
   "en": "Hah! You'd make a fine recruit.\\nHow about joining TEAM ONYBRIS?\\pNo? Then we do this the hard way!",
@@ -45,7 +45,7 @@
  },
  "Route24_Text_JustEarnedFabulousPrize": {
   "en": "Hold it right there!\\pSo you beat the bridge TRAINERS.\\nNot bad, kid.\\pI'm with TEAM ONYBRIS. My job is\\nto make sure nobody follows us!",
-  "fr": "Halte-là !\\pAlors tu as battu les DRESSEURS du\\npont. Pas mal.\\pJe suis de la TEAM ONYBRIS. Mon\\ntravail est de m'assurer que\\lpersonne ne nous suit !"
+  "fr": "Halte-là !\\pAlors t'as battu les DRESSEURS du\\npont. Pas mal.\\pJe suis de la TEAM ONYBRIS. Mon\\ntravail est de m'assurer que\\lpersonne nous suit !"
  },
  "Route24_Text_RQuest_Ask": {
   "en": "I guard this bridge. 2 MAX REPELS\\nwould keep it calm.",
@@ -105,7 +105,7 @@
  },
  "Route24_Text_TimmyIntro": {
   "en": "Here's No. 3!\\nI won't be easy!",
-  "fr": "Voici le No.3 !\\nJe ne serai pas facile !"
+  "fr": "Voici le No.3 !\\nJe serai pas facile !"
  },
  "Route24_Text_TimmyPostBattle": {
   "en": "The river under the bridge is\\ncalm. It runs down to the forest.",

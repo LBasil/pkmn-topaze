@@ -1,11 +1,11 @@
 {
  "PokemonTower_7F_Text_AdminBeatsYou": {
   "en": "In an instant, {PLAYER}'s POKéMON\\nwere swept aside by his power!\\pKRONOS: Hmph. Not even worth a\\nbattle. Remember my name, child.\\pThe boss says a POKé BALL is only\\na cage with a pretty color.\\pI am only one of the boss's\\nADMINS. Farewell!",
-  "fr": "En un instant, les POKéMON de\\n{PLAYER} ont été balayés par sa\\lpuissance !\\pKRONOS : Hmph. Même pas digne d'un\\ncombat. Retiens mon nom.\\pLe boss dit qu'une POKé BALL n'est\\nqu'une cage d'une jolie couleur.\\pJe ne suis qu'un des ADMINS du\\nboss. Adieu !"
+  "fr": "En un instant, les POKéMON de\\n{PLAYER} ont été balayés par sa\\lpuissance !\\pKRONOS : Hmph. Même pas digne d'un\\ncombat. Retiens mon nom.\\pLe boss dit qu'une POKé BALL est\\nqu'une cage d'une jolie couleur.\\pJe suis qu'un des ADMINS du\\nboss. Adieu !"
  },
  "PokemonTower_7F_Text_AdminThanks": {
   "en": "KRONOS: Well, well. Thank you,\\nchild. You calmed the dead for us.\\pWe could never get past them. Now\\nthe SPINEL is ours for the taking.\\pDo not bother with your POKé BALLS.\\nYou are far below my notice.",
-  "fr": "KRONOS : Tiens, tiens. Merci. T'as\\ncalmé les morts pour nous.\\pNous n'avons jamais pu les\\ndépasser. Maintenant le SPINEL est\\là prendre.\\pInutile de sortir tes POKé BALLS.\\nTu es bien en dessous de mon\\lattention."
+  "fr": "KRONOS : Tiens, tiens. Merci. T'as\\ncalmé les morts pour nous.\\pOn a jamais pu les\\ndépasser. Maintenant le SPINEL est\\là prendre.\\pInutile de sortir tes POKé BALLS.\\nT'es bien en dessous de mon\\lattention."
  },
  "PokemonTower_7F_Text_FujiHeals": {
   "en": "MR. FUJI: Your POKéMON are weak.\\nRest them here, child.\\p...They are well again. Do not\\nblame yourself. Go, and be careful.",
@@ -37,7 +37,7 @@
  },
  "PokemonTower_7F_Text_Grunt3Defeat": {
   "en": "Don't fight us ONYBRIS!",
-  "fr": "Ne t'en prends pas à ONYBRIS !"
+  "fr": "T'en prends pas à ONYBRIS !"
  },
  "PokemonTower_7F_Text_Grunt3Intro": {
   "en": "You're not saving anyone, kid!",

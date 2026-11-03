@@ -81,7 +81,7 @@
  },
  "Route19_Text_LiaNotEnoughMons": {
   "en": "LIA: I want to battle together\\nwith my little brother.\\pDon't you have two POKéMON?",
-  "fr": "LIA : Je veux combattre avec mon\\npetit frère.\\pTu as pas deux POKéMON ?"
+  "fr": "LIA : Je veux combattre avec mon\\npetit frère.\\pT'as pas deux POKéMON ?"
  },
  "Route19_Text_LiaPostBattle": {
   "en": "LIA: Do you have a younger\\nbrother?\\pI hope you're teaching him all\\nsorts of things.",
@@ -145,7 +145,7 @@
  },
  "Route19_Text_TimeHint": {
   "en": "The tide has not turned since the\\nlights went out in CHRONDROLIA.",
-  "fr": "La marée n'a pas tourné depuis que\\nles lumières se sont éteintes à\\lCHRONDROLIA."
+  "fr": "La marée a pas tourné depuis que\\nles lumières se sont éteintes à\\lCHRONDROLIA."
  },
  "Route19_Text_TonyDefeat": {
   "en": "Ooh!\\nTraumatic!",

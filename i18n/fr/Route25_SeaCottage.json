@@ -21,11 +21,11 @@
  },
  "Route25_SeaCottage_Text_GruntBDown": {
   "en": "GRUNT: Gaah! Washed out!\\nI'm not staying for this!",
-  "fr": "SBIRE : Gaah ! Lessivé !\\nJe ne reste pas pour ça !"
+  "fr": "SBIRE : Gaah ! Lessivé !\\nJe reste pas pour ça !"
  },
  "Route25_SeaCottage_Text_GruntsAppear": {
   "en": "GRUNT: Tch! How did you find us?\\pGRUNT: The boss said nobody would\\nlook in this dump!",
-  "fr": "SBIRE : Tch ! Comment nous as-tu\\ntrouvés ?\\pSBIRE : Le boss disait que personne\\nne viendrait dans ce trou !"
+  "fr": "SBIRE : Tch ! Comment tu nous as\\ntrouvés ?\\pSBIRE : Le boss disait que personne\\nviendrait dans ce trou !"
  },
  "Route25_SeaCottage_Text_MistyBattle": {
   "en": "MISTY: STARMIE, go!\\nHit him with WATER GUN!",

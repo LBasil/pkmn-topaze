@@ -5,7 +5,7 @@
  },
  "Route21_North_Text_IanIntro": {
   "en": "IAN: My sis doesn't get enough\\nexercise, so I made her come.",
-  "fr": "IAN : Ma sœur ne fait pas assez\\nd'exercice, alors je l'ai fait\\lvenir."
+  "fr": "IAN : Ma sœur fait pas assez\\nd'exercice, alors je l'ai fait\\lvenir."
  },
  "Route21_North_Text_IanNotEnoughMons": {
   "en": "IAN: We want a two-on-two battle.\\nSo can you bring two POKéMON?",
@@ -25,7 +25,7 @@
  },
  "Route21_North_Text_LilNotEnoughMons": {
   "en": "LIL: Huh? A battle?\\nI can't be bothered to do it alone.\\lBring two POKéMON, won't you?",
-  "fr": "LIL : Hein ? Un combat ? J'ai\\npas envie de le faire seule. Viens\\lavec deux POKéMON, tu veux ?"
+  "fr": "LIL : Hein ? Un combat ? J'ai pas\\nenvie de le faire seule. Viens\\lavec deux POKéMON, tu veux ?"
  },
  "Route21_North_Text_LilPostBattle": {
   "en": "LIL: I'm tired.\\nCan't we go home already?",
@@ -33,11 +33,11 @@
  },
  "Route21_South_Text_ClaudeDefeat": {
   "en": "Sorry! I'm just so frustrated from\\nnot catching anything.",
-  "fr": "Désolé ! Je suis juste frustré de\\nne rien attraper."
+  "fr": "Désolé ! Je suis juste frustré de\\nrien attraper."
  },
  "Route21_South_Text_ClaudeIntro": {
   "en": "Hey, don't scare away the fish!",
-  "fr": "Hé, n'effraie pas les poissons !"
+  "fr": "Hé, effraie pas les poissons !"
  },
  "Route21_South_Text_ClaudePostBattle": {
   "en": "Sheesh, I haven't caught a thing.\\nCould this place actually be a\\lgiant pool or something?",

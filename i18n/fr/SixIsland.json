@@ -33,7 +33,7 @@
  },
  "SixIsland_Text_RefAsk": {
   "en": "OLGA: A PINSIR was caught in a trap\\nand it is badly hurt. Two FULL\\lRESTORES, please.",
-  "fr": "OLGA : Un SCARABRUTE a été pris\\ndans un piège et il est gravement\\lblessé.\\pDeux\\pRESTAURATIONS TOTALES, s'il vous\\nplaît."
+  "fr": "OLGA : Un SCARABRUTE a été pris\\ndans un piège et il est gravement\\lblessé.\\pDeux\\pRESTAURATIONS TOTALES, s'il te\\nplaît."
  },
  "SixIsland_Text_RefDone": {
   "en": "OLGA: Thank you again. The REFUGE\\nis safer because of you.",
@@ -57,7 +57,7 @@
  },
  "SixIsland_Text_RefOffer": {
   "en": "OLGA: You have them! May I take\\n2 of them for the post?",
-  "fr": "OLGA : Tu en as ! Puis-je en\\nprendre 2 pour le poste ?"
+  "fr": "OLGA : T'en as ! Je peux en\\nprendre 2 pour le poste ?"
  },
  "SixIsland_Text_SkyAtNightIsFantastic": {
   "en": "The sky at night is fantastic\\nout here.\\pLately the stars move too fast.\\nI counted them twice, and they\\ldid not match.",

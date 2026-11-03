@@ -5,7 +5,7 @@
  },
  "Route14_Text_BeckIntro": {
   "en": "They have TMs on sale at the\\nBOURG QUARTZ DEPT. STORE.\\pTMs aren't really rare, but not\\nmany people have HMs.",
-  "fr": "Ils vendent des CT au GRAND MAGASIN\\nDE BOURG QUARTZ.\\pLes CT ne sont pas vraiment rares,\\nmais peu de gens ont des CS."
+  "fr": "Ils vendent des CT au GRAND MAGASIN\\nDE BOURG QUARTZ.\\pLes CT sont pas vraiment rares,\\nmais peu de gens ont des CS."
  },
  "Route14_Text_BeckPostBattle": {
   "en": "The old FISHER at the pier tells\\ntales of the sea glowing violet.",
@@ -57,7 +57,7 @@
  },
  "Route14_Text_GeraldPostBattle": {
   "en": "We came from every town on this\\nroad. We are not a gang.\\pWe are a union.",
-  "fr": "Nous venons de toutes les villes de\\ncette route. Nous ne sommes pas un\\lgang.\\pNous sommes un syndicat."
+  "fr": "On vient de toutes les villes de\\ncette route. On est pas un\\lgang.\\pOn est un syndicat."
  },
  "Route14_Text_IsaacDefeat": {
   "en": "Crate dropped.",
@@ -69,7 +69,7 @@
  },
  "Route14_Text_IsaacPostBattle": {
   "en": "Some of us carry stones. I only\\ncarry the bad news.",
-  "fr": "Certains d'entre nous transportent\\ndes pierres. Moi je ne porte que\\lles mauvaises nouvelles."
+  "fr": "Certains d'entre nous transportent\\ndes pierres. Moi je porte que\\lles mauvaises nouvelles."
  },
  "Route14_Text_JanDefeat": {
   "en": "JAN: Eeeeh!\\nNo fair!",
@@ -81,7 +81,7 @@
  },
  "Route14_Text_JanNotEnoughMons": {
   "en": "JAN: You want to battle?\\nYou don't have enough POKéMON.",
-  "fr": "JAN : Tu veux te battre ?\\nTu n'as pas assez de POKéMON."
+  "fr": "JAN : Tu veux te battre ?\\nT'as pas assez de POKéMON."
  },
  "Route14_Text_JanPostBattle": {
   "en": "JAN: KIRI, don't cry!\\nWe'll just try harder next time.",
@@ -121,11 +121,11 @@
  },
  "Route14_Text_MalikIntro": {
   "en": "The boss pays better than the\\ngym ever did.",
-  "fr": "Le boss paie mieux que l'arène ne\\nl'a jamais fait."
+  "fr": "Le boss paie mieux que l'arène a\\njamais fait."
  },
  "Route14_Text_MalikPostBattle": {
   "en": "Ask any of us. We signed up of our\\nown will. Mostly.",
-  "fr": "Demande à n'importe lequel d'entre\\nnous. Nous nous sommes engagés de\\lnotre plein gré. Surtout."
+  "fr": "Demande à n'importe lequel d'entre\\nnous. On s'est engagés de\\lnotre plein gré. Surtout."
  },
  "Route14_Text_MarlonDefeat": {
   "en": "Shot down in flames!",

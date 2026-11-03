@@ -1,7 +1,7 @@
 {
  "ThreeIsland_BondBridge_TideDen_Text_GuardsLeft": {
   "en": "The beast does not stir.\\nIts guardians still stand watch.",
-  "fr": "La bête ne bouge pas.\\nSes gardiens veillent toujours."
+  "fr": "La bête bouge pas.\\nSes gardiens veillent toujours."
  },
  "ThreeIsland_BondBridge_TideDen_Text_T0Defeat": {
   "en": "Washed away...",
@@ -25,7 +25,7 @@
  },
  "ThreeIsland_BondBridge_TideDen_Text_T1Post": {
   "en": "The ORACLE will not be so gentle.",
-  "fr": "L'ORACLE ne sera pas aussi doux."
+  "fr": "L'ORACLE sera pas aussi doux."
  },
  "ThreeIsland_BondBridge_TideDen_Text_T2Defeat": {
   "en": "Dry as ever...",

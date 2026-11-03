@@ -33,11 +33,11 @@
  },
  "PalletTown_ProfessorOaksLab_Text_OakAddedNothingToPokedex": {
   "en": "Ah, {PLAYER}!\\nHow is your POKéDEX shaping up?\\p{RIVAL} has already caught some\\nPOKéMON and added to the data.\\pSo, {PLAYER}, let's have a look at\\nyour POKéDEX.\\p…What's the matter?\\nYou've added no new data at all.\\pI'll give you these, so do try a\\nlittle harder.",
-  "fr": "Ah, {PLAYER} !\\nComment avance ton POKéDEX ?\\p{RIVAL} a déjà capturé quelques\\nPOKéMON et ajouté des données.\\pAlors, {PLAYER}, voyons ton POKéDEX.\\p…Qu'y a-t-il ? Tu as ajouté\\naucune nouvelle donnée.\\pJe te donne ceci, alors fais un\\npeu plus d'efforts."
+  "fr": "Ah, {PLAYER} !\\nComment avance ton POKéDEX ?\\p{RIVAL} a déjà capturé quelques\\nPOKéMON et ajouté des données.\\pAlors, {PLAYER}, voyons ton POKéDEX.\\p…Qu'y a-t-il ? T'as ajouté\\naucune nouvelle donnée.\\pJe te donne ça, alors fais un\\npeu plus d'efforts."
  },
  "PalletTown_ProfessorOaksLab_Text_OakAfterRaid": {
   "en": "OAK: {PLAYER}! {RIVAL}! Both of you\\nin one piece. Good.\\pThey got into my LAB too. Nothing\\nwas broken, but every file on gems,\\lAURA and JIRACHI was copied.\\pWhoever leads them is looking for\\nsomething, and I can't chase it\\lalone. That is why I need you two.",
-  "fr": "CHEN : {PLAYER} ! {RIVAL} ! Vous\\nêtes tous deux entiers. Bien.\\pIls sont aussi entrés dans mon\\nLABO. Rien n'a été cassé, mais tous\\lles fichiers sur les gemmes, l'AURA\\net JIRACHI ont été copiés.\\pCelui qui les dirige cherche\\nquelque chose, et je peux pas le\\lpoursuivre seul. C'est pourquoi\\nj'ai besoin de vous deux."
+  "fr": "CHEN : {PLAYER} ! {RIVAL} ! Vous\\nêtes entiers tous les deux. Bien.\\pIls sont aussi entrés dans mon\\nLABO. Rien n'a été cassé, mais tous\\lles fichiers sur les gemmes, l'AURA\\net JIRACHI ont été copiés.\\pCelui qui les dirige cherche\\nquelque chose, et je peux pas le\\lpoursuivre seul. C'est pourquoi\\nj'ai besoin de vous deux."
  },
  "PalletTown_ProfessorOaksLab_Text_OakBattleMonForItToGrow": {
   "en": "OAK: {PLAYER}, raise your young\\nPOKéMON by making it battle.\\pIt has to battle for it to grow.",
@@ -53,7 +53,7 @@
  },
  "PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese": {
   "en": "OAK: You can't get detailed data\\non POKéMON by just seeing them.\\pYou must catch them to obtain\\ncomplete data.\\pSo, here are some tools for\\ncatching wild POKéMON.",
-  "fr": "CHEN : On peut pas obtenir de\\ndonnées détaillées sur les POKéMON\\len les voyant.\\pIl faut les capturer pour obtenir\\ndes données complètes.\\pAlors, voici quelques outils pour\\ncapturer des POKéMON sauvages."
+  "fr": "CHEN : On peut pas obtenir de\\ndonnées détaillées sur les POKéMON\\nen les voyant.\\pIl faut les capturer pour obtenir\\ndes données complètes.\\pAlors, voilà quelques outils pour\\ncapturer des POKéMON sauvages."
  },
  "PalletTown_ProfessorOaksLab_Text_OakChoosingBulbasaur": {
   "en": "I see! BULBASAUR is your choice.\\nIt's very easy to raise.\\pSo, {PLAYER}, you want to go with\\nthe GRASS POKéMON BULBASAUR?",
@@ -93,7 +93,7 @@
  },
  "PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMe": {
   "en": "OAK: Oh, {PLAYER}!\\nHow is my old POKéMON?\\pWell, it seems to be growing more\\nattached to you.\\pYou must be talented as a POKéMON\\nTRAINER.\\pWhat's that?\\nYou have something for me?",
-  "fr": "CHEN : Oh, {PLAYER} !\\nComment va mon ancien POKéMON ?\\pEh bien, il semble s'attacher de\\nplus en plus à toi.\\pTu dois avoir du talent comme\\nDRESSEUR de POKéMON.\\pQu'est-ce que c'est ?\\nTu as quelque chose pour moi ?"
+  "fr": "CHEN : Oh, {PLAYER} !\\nComment va mon ancien POKéMON ?\\pEh bien, il semble s'attacher de\\nplus en plus à toi.\\pT'as dû avoir du talent comme\\nDRESSEUR de POKéMON.\\pQu'est-ce que c'est ?\\nT'as quelque chose pour moi ?"
  },
  "PalletTown_ProfessorOaksLab_Text_OakHeyDontGoAwayYet": {
   "en": "OAK: Hey!\\nDon't go away yet!",
@@ -113,7 +113,7 @@
  },
  "PalletTown_ProfessorOaksLab_Text_OakMustReallyWorkToFillPokedex": {
   "en": "Now, {PLAYER} and {RIVAL}!\\pThis time, you really must work\\ntowards filling your POKéDEXES.\\pI urge you to make them the best\\nand the most complete of all time!\\pTruly, this is a monumentally great\\nundertaking in POKéMON history!",
-  "fr": "Maintenant, {PLAYER} et {RIVAL} !\\pCette fois, vous devez vraiment\\ntravailler à remplir vos POKéDEX.\\pJe vous exhorte à en faire les\\nmeilleurs et les plus complets de\\ltous les temps !\\pVraiment, c'est une entreprise\\nmonumentale dans l'histoire des\\lPOKéMON !"
+  "fr": "Maintenant, {PLAYER} et {RIVAL} !\\pCette fois, il faut vraiment\\ntravailler à remplir vos POKéDEX.\\pJe vous demande d'en faire les\\nmeilleurs et les plus complets de\\ltous les temps !\\pVraiment, c'est une entreprise\\nmonumentale dans l'histoire des\\lPOKéMON !"
  },
  "PalletTown_ProfessorOaksLab_Text_OakNeedYourHelpTooNeedToSeePokedexes": {
   "en": "OAK: I know, I know.\\nOf course I need your help, too.\\pNow, I need to see both your\\nPOKéDEXES.",
@@ -145,7 +145,7 @@
  },
  "PalletTown_ProfessorOaksLab_Text_OakThreeMonsChooseOne": {
   "en": "OAK: {RIVAL}?\\nLet me think…\\pOh, that's right, I told you to\\ncome! Just wait!\\pHere, {PLAYER}.\\pThere are three POKéMON here.\\pHaha!\\pThe POKéMON are held inside\\nthese POKé BALLS.\\pWhen I was young, I was a serious\\nPOKéMON TRAINER.\\pBut now, in my old age, I have\\nonly these three left.\\pYou can have one.\\nGo on, choose!",
-  "fr": "CHEN : {RIVAL} ?\\nVoyons…\\pAh oui, je t'ai dit de venir !\\nAttends un peu !\\pTiens, {PLAYER}.\\pIl y a trois POKéMON ici.\\pHaha !\\pLes POKéMON sont dans ces\\nPOKé BALLS.\\pQuand j'étais jeune, j'étais un\\nsérieux DRESSEUR POKéMON.\\pMais maintenant, à mon âge, il ne\\nm'en reste que trois.\\pTu peux en avoir un.\\nVas-y, choisis !"
+  "fr": "CHEN : {RIVAL} ?\\nVoyons…\\pAh oui, je t'ai dit de venir !\\nAttends un peu !\\pTiens, {PLAYER}.\\pIl y a trois POKéMON ici.\\pHaha !\\pLes POKéMON sont dans ces\\nPOKé BALLS.\\pQuand j'étais jeune, j'étais un\\nsérieux DRESSEUR POKéMON.\\pMais maintenant, à mon âge, il m'en\\nreste que trois.\\pTu peux en avoir un.\\nVas-y, choisis !"
  },
  "PalletTown_ProfessorOaksLab_Text_OakTookBothPokedexUnits": {
   "en": "PROF. OAK took both POKéDEX\\nunits.",
@@ -205,7 +205,7 @@
  },
  "PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex": {
   "en": "{RIVAL}: Gramps, calm down.\\nDon't get so excited.\\pI'll get the POKéDEX completed,\\ndon't you worry about a thing.\\pI think I'll try looking around\\nONE ISLAND first…\\pAnyways, I'm outta here!",
-  "fr": "{RIVAL} : Papy, calme-toi.\\nNe t'emballe pas.\\pJe compléterai le POKéDEX, ne\\nt'inquiète de rien.\\pJe crois que je vais d'abord faire\\nun tour sur l'ÎLE 1…\\pEnfin bref, je me tire !"
+  "fr": "{RIVAL} : Papy, calme-toi.\\nT'emballe pas.\\pJe vais compléter le POKéDEX,\\nt'inquiète pas.\\pJe crois que je vais d'abord faire\\nun tour sur l'ÎLE 1…\\pEnfin bref, je me tire !"
  },
  "PalletTown_ProfessorOaksLab_Text_RivalIllTakeThisOneThen": {
   "en": "{RIVAL}: I'll take this one, then!",
@@ -237,7 +237,7 @@
  },
  "PalletTown_ProfessorOaksLab_Text_RivalTellSisNotToGiveYouMap": {
   "en": "{PLAYER}, I hate to say it, but you\\nwon't be necessary for this.\\pI know! I'll borrow a TOWN MAP\\nfrom my sis!\\pI'll tell her not to lend you one,\\n{PLAYER}! Hahaha!\\pDon't bother coming around to\\nmy place after this!",
-  "fr": "{PLAYER}, désolé de le dire, mais\\ntu n'es pas nécessaire pour ça.\\pJe sais ! Je vais emprunter une\\nCARTE DE LA VILLE à ma sœur !\\pJe lui dirai de ne pas t'en prêter\\nune, {PLAYER} ! Hahaha !\\pPas la peine de venir chez moi\\naprès ça !"
+  "fr": "{PLAYER}, désolé de te le dire, mais\\ntu sers à rien pour ça.\\pJe sais ! Je vais emprunter une\\nCARTE DE LA VILLE à ma sœur !\\pJe lui dirai de pas t'en prêter\\nune, {PLAYER} ! Hahaha !\\pPas la peine de venir chez moi\\naprès ça !"
  },
  "PalletTown_ProfessorOaksLab_Text_RivalWhatDidYouCallMeFor": {
   "en": "{RIVAL}: I almost forgot!\\nWhat did you call me for?",

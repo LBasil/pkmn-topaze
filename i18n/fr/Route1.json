@@ -37,7 +37,7 @@
  },
  "Route1_Text_RQuest_Ask": {
   "en": "My buddy is hurt! Could you spare 3\\nPOTIONS?",
-  "fr": "Mon copain est blessé ! Pourrais-tu\\ncéder 3 POTIONS ?"
+  "fr": "Mon copain est blessé ! Tu pourrais\\nme céder 3 POTIONS ?"
  },
  "Route1_Text_RQuest_Done": {
   "en": "He is up and running again!",
@@ -61,7 +61,7 @@
  },
  "Route1_Text_Walker": {
   "en": "Wild POKéMON hide in the tall grass.\\nSince the AURA, they are not what\\lthey used to be.\\pThat little PIDGEY? Part DARK now.\\nCheck your TYPE MEMO before you\\lfight anything.",
-  "fr": "Les POKéMON sauvages se cachent\\ndans l'herbe haute. Depuis l'AURA,\\lils ne sont plus ce qu'ils étaient.\\pCe petit ROUCOOL ? Un peu TÉNÈBRES\\nmaintenant. Vérifie ton MÉMO DES\\pTYPES avant de te battre contre\\nquoi que ce soit."
+  "fr": "Les POKéMON sauvages se cachent\\ndans l'herbe haute. Depuis l'AURA,\\lils sont plus ce qu'ils étaient.\\pCe petit ROUCOOL ? Un peu TÉNÈBRES\\nmaintenant. Vérifie ton MÉMO DES\\pTYPES avant de te battre contre\\nquoi que ce soit."
  },
  "Route1_Text_WorkAtPokeMartTakeSample": {
   "en": "Hi!\\nI work at a POKéMON MART.\\pIt's part of a convenient chain\\nselling all sorts of items.\\pPlease, visit us in OPANIHRUM.\\pI know, I'll give you a sample.\\nHere you go!",

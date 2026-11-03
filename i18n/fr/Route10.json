@@ -1,11 +1,11 @@
 {
  "Route10_Text_CarolDefeat": {
   "en": "I'm too tired.\\nI wasn't up for it.",
-  "fr": "Je suis trop fatigué.\\nJe n'étais pas à la hauteur."
+  "fr": "Je suis trop fatigué.\\nJ'étais pas à la hauteur."
  },
  "Route10_Text_CarolIntro": {
   "en": "I'm feeling a bit faint.\\nI haven't hiked in some time.",
-  "fr": "Je me sens un peu faible. J'ai\\npas randonné depuis longtemps."
+  "fr": "Je me sens un peu faible. J'ai pas\\nrandonné depuis longtemps."
  },
  "Route10_Text_CarolPostBattle": {
   "en": "The POKéMON here are so chunky...\\pThe strange men in black were\\nthin as rails. Odd, no?",
@@ -49,7 +49,7 @@
  },
  "Route10_Text_MarkDefeat": {
   "en": "Humph.\\nI'm not angry!",
-  "fr": "Hmpf.\\nJe ne suis pas fâché !"
+  "fr": "Hmpf.\\nJe suis pas fâché !"
  },
  "Route10_Text_MarkIntro": {
   "en": "Wow, you came all the way here?\\nMaybe you're a POKéMANIAC, too?\\lWant to see my collection?",

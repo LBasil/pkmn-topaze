@@ -5,7 +5,7 @@
  },
  "PowerPlant_Text_Guard0Intro": {
   "en": "The STORM roars in these halls.\\pYou are not invited.",
-  "fr": "L'ORAGE gronde dans ces salles.\\pTu es pas invité."
+  "fr": "L'ORAGE gronde dans ces salles.\\pT'es pas invité."
  },
  "PowerPlant_Text_Guard0Post": {
   "en": "The ORACLE feels the thunder.",
@@ -45,7 +45,7 @@
  },
  "PowerPlant_Text_Guard3Post": {
   "en": "Go. Do not waste the lightning.",
-  "fr": "Va. Ne gaspille pas la foudre."
+  "fr": "Va. Gaspille pas la foudre."
  },
  "PowerPlant_Text_ZapdosGuarded": {
   "en": "Sparks crackle around ZAPDOS.\\nThe four channelers still guard\\lit. They must all yield first.",

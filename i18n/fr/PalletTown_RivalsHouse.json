@@ -9,7 +9,7 @@
  },
  "PalletTown_RivalsHouse_Text_DaisyStrike": {
   "en": "DAISY: Dad is mending the fence,\\nand Grandpa is not himself.\\pPlease be careful out there,\\n{PLAYER}. And take care of {RIVAL}.",
-  "fr": "NINA : Papa répare la\\nclôture, et Papy n'est pas dans son\\lassiette.\\pFais attention là-bas, {PLAYER}. Et\\nprends soin de {RIVAL}."
+  "fr": "NINA : Papa répare la clôture, et\\nPapy est pas dans son assiette.\\pFais attention là-bas, {PLAYER}. Et\\nprends soin de {RIVAL}."
  },
  "PalletTown_RivalsHouse_Text_DontHaveSpaceForThis": {
   "en": "You don't have space for this in\\nyour BAG.",
@@ -61,7 +61,7 @@
  },
  "PalletTown_RivalsHouse_Text_LikeMeToGroomMon": {
   "en": "DAISY: Hi, {PLAYER}!\\nGood timing.\\pI'm about to have some tea.\\nWould you like to join me?\\pOh, but look.\\nYour POKéMON are a little dirty.\\pWould you like me to groom one?",
-  "fr": "NINA : Salut, {PLAYER} !\\nTu tombes bien.\\pJe vais prendre le thé.\\nVeux-tu te joindre à moi ?\\pOh, mais regarde.\\nTes POKéMON sont un peu sales.\\pVeux-tu que j'en toilette un ?"
+  "fr": "NINA : Salut, {PLAYER} !\\nTu tombes bien.\\pJe vais prendre le thé.\\nTu veux te joindre à moi ?\\pOh, mais regarde.\\nTes POKéMON sont un peu sales.\\pTu veux que j'en toilette un ?"
  },
  "PalletTown_RivalsHouse_Text_LookingNiceInNoTime": {
   "en": "DAISY: Okay, I'll get it looking\\nnice in no time.",

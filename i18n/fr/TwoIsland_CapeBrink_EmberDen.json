@@ -1,7 +1,7 @@
 {
  "TwoIsland_CapeBrink_EmberDen_Text_GuardsLeft": {
   "en": "The beast does not stir.\\nIts guardians still stand watch.",
-  "fr": "La bête ne bouge pas.\\nSes gardiens veillent toujours."
+  "fr": "La bête bouge pas.\\nSes gardiens veillent toujours."
  },
  "TwoIsland_CapeBrink_EmberDen_Text_T0Defeat": {
   "en": "Burnt out...",
@@ -21,7 +21,7 @@
  },
  "TwoIsland_CapeBrink_EmberDen_Text_T1Intro": {
   "en": "Our flame never dies, and neither\\ndo we!",
-  "fr": "Notre flamme ne s'éteint jamais, et\\nnous non plus !"
+  "fr": "Notre flamme s'éteint jamais, et\\nnous non plus !"
  },
  "TwoIsland_CapeBrink_EmberDen_Text_T1Post": {
   "en": "The ORACLE keeps the last room.",
@@ -41,7 +41,7 @@
  },
  "TwoIsland_CapeBrink_EmberDen_Text_T3Defeat": {
   "en": "Only ash remains.",
-  "fr": "Il ne reste que des cendres."
+  "fr": "Il reste que des cendres."
  },
  "TwoIsland_CapeBrink_EmberDen_Text_T3Intro": {
   "en": "You smell of rain. Leave, or\\nburn!",

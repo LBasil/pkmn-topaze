@@ -17,7 +17,7 @@
  },
  "RocketHideout_B1F_Text_Grunt1PostBattle": {
   "en": "ROCKET vanished years ago and left\\nthe whole base behind.\\pONYBRIS moved in, scrubbed three\\nrooms blue, and called it a bank.\\pOur boss never calls. Orders just\\nappear in our heads. Creepy, huh?",
-  "fr": "ROCKET a disparu il y a des années\\net a laissé toute la base.\\pONYBRIS s'y est installé, a repeint\\ntrois salles en bleu, et l'a\\lappelée une banque.\\pNotre boss n'appelle jamais. Les\\nordres apparaissent juste dans nos\\ltêtes. Flippant, non ?"
+  "fr": "ROCKET a disparu il y a des années\\net a laissé toute la base.\\pONYBRIS s'y est installé, a repeint\\ntrois salles en bleu, et l'a\\lappelée une banque.\\pNotre boss appelle jamais. Les\\nordres apparaissent juste dans nos\\ltêtes. Flippant, non ?"
  },
  "RocketHideout_B1F_Text_Grunt2Defeat": {
   "en": "Boom!",
@@ -25,7 +25,7 @@
  },
  "RocketHideout_B1F_Text_Grunt2Intro": {
   "en": "A customer in the new reception?\\nManagement does not allow that.",
-  "fr": "Un client à la nouvelle réception ?\\nLa direction ne l'autorise pas."
+  "fr": "Un client à la nouvelle réception ?\\nLa direction l'autorise pas."
  },
  "RocketHideout_B1F_Text_Grunt2PostBattle": {
   "en": "ONYBRIS paid for the paint. The\\nrest of the floor is still ROCKET's\\lold mess. Watch your step.\\pThis branch pays for the whole\\nnetwork. Touch it and you answer\\lto VESPER.",
@@ -45,15 +45,15 @@
  },
  "RocketHideout_B1F_Text_Grunt4Defeat": {
   "en": "This won't do!",
-  "fr": "Ça ne va pas !"
+  "fr": "Ça va pas !"
  },
  "RocketHideout_B1F_Text_Grunt4Intro": {
   "en": "Why did you come here?",
-  "fr": "Pourquoi viens-tu ici ?"
+  "fr": "Pourquoi t'es ici ?"
  },
  "RocketHideout_B1F_Text_Grunt4PostBattle": {
   "en": "Okay, I'll talk...\\nThese were ROCKET's bunks. Nobody\\lcleaned them. Nobody dares.\\pTake the elevator to see VESPER.\\nBut the LIFT KEY went missing.\\lAsk the guards on the lower floors.",
-  "fr": "D'accord, je parle… C'étaient les\\ncouchettes de ROCKET. Personne ne\\lles a nettoyées. Personne n'ose.\\pPrends l'ascenseur pour voir\\nVESPER. Mais la CLÉ DE L'ASCENSEUR\\la disparu. Demande aux gardes des\\nétages inférieurs."
+  "fr": "D'accord, je parle… C'étaient les\\ncouchettes de ROCKET. Personne les\\la nettoyées. Personne ose.\\pPrends l'ascenseur pour voir\\nVESPER. Mais la CLÉ DE L'ASCENSEUR\\la disparu. Demande aux gardes des\\nétages inférieurs."
  },
  "RocketHideout_B1F_Text_Grunt5Defeat": {
   "en": "Why…?",

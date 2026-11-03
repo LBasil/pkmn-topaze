@@ -1,7 +1,7 @@
 {
  "ViridianCity_House_Text_GirlAsk": {
   "en": "SPEARY has a hurt wing. Daddy's\\nout of POTIONS and the MART is\\lfar when you are small.\\pIf you find three POTIONS, please\\ncome back and tell me!",
-  "fr": "SPEARY a une aile blessée. Papa n'a\\nplus de POTIONS et la BOUTIQUE est\\lloin quand on est petit.\\pSi tu trouves trois POTIONS,\\nreviens me le dire, s'il te plaît !"
+  "fr": "SPEARY a une aile blessée. Papa a\\nplus de POTIONS et la BOUTIQUE est\\lloin quand on est petit.\\pSi tu trouves trois POTIONS,\\nreviens me le dire, s'il te plaît !"
  },
  "ViridianCity_House_Text_GirlGives": {
   "en": "Thank you! SPEARY chirped!\\pDaddy kept this for a special day.\\nIt is yours now.",
@@ -9,7 +9,7 @@
  },
  "ViridianCity_House_Text_GirlOffer": {
   "en": "You have POTIONS! Can I have three\\nfor SPEARY's wing?",
-  "fr": "T'as des POTIONS ! Puis-je en\\navoir trois pour l'aile de SPEARY ?"
+  "fr": "T'as des POTIONS ! Je peux en\\navoir trois pour l'aile de SPEARY ?"
  },
  "ViridianCity_House_Text_GirlSad": {
   "en": "Oh... SPEARY will wait. He is brave.",

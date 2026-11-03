@@ -89,7 +89,7 @@
  },
  "Route15_Text_KindraIntro": {
   "en": "I just got some POKéMON in trades.\\nCan I try them out on you?",
-  "fr": "Je viens d'obtenir des POKéMON par\\néchange. Puis-je les essayer sur\\ltoi ?"
+  "fr": "Je viens d'obtenir des POKéMON par\\néchange. Je peux les essayer sur\\ltoi ?"
  },
  "Route15_Text_KindraPostBattle": {
   "en": "You can't change the nickname of\\nany POKéMON you get in a trade.\\pOnly the Original TRAINER can get\\nthe nickname changed.",
@@ -185,7 +185,7 @@
  },
  "Route15_Text_TimeHint": {
   "en": "A broken alarm clock rings, though\\nnobody set it. It rings for\\pyesterday.",
-  "fr": "Un réveil cassé sonne, bien que\\npersonne ne l'ait réglé. Il sonne\\lpour hier."
+  "fr": "Un réveil cassé sonne, bien que\\npersonne l'ait réglé. Il sonne\\lpour hier."
  },
  "Route15_Text_YazminDefeat": {
   "en": "I was too impatient!",

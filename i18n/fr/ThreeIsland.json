@@ -49,7 +49,7 @@
  },
  "ThreeIsland_Text_FollowersRaisingHavoc": {
   "en": "Your gang of followers have been\\nraising havoc on their bikes.\\pDo you have any idea how much\\ntrouble they've caused us on the\\lisland?",
-  "fr": "Ta bande de suiveurs sème le chaos\\navec ses motos.\\pAs-tu idée du mal qu'ils nous ont\\ncausé sur l'île ?"
+  "fr": "Ta bande de suiveurs sème le chaos\\navec ses motos.\\pT'as idée du mal qu'ils nous ont\\ncausé sur l'île ?"
  },
  "ThreeIsland_Text_GetOffIslandNow": {
   "en": "W-what!? Not on your life!\\nGet off the island now!",
@@ -61,7 +61,7 @@
  },
  "ThreeIsland_Text_GoBackToKanto": {
   "en": "We don't need you people bringing\\nyour noise and trouble here!\\pWe're asking you to go back to\\nKANTO!",
-  "fr": "On n'a pas besoin que vous\\napportiez votre bruit et vos ennuis\\lici !\\pOn vous demande de retourner à\\nKANTO !"
+  "fr": "On a pas besoin que vous\\napportiez votre bruit et vos ennuis\\lici !\\pOn vous demande de retourner à\\nKANTO !"
  },
  "ThreeIsland_Text_IslandBelongsToUs": {
   "en": "Hyahoo!\\pFrom this day on, this island\\nbelongs to us!",
@@ -85,7 +85,7 @@
  },
  "ThreeIsland_Text_Lord3": {
   "en": "SIDNEY: Keep that fire. And try not\\nto get bored at the top. Take this.",
-  "fr": "SIDNEY : Garde cette flamme. Et\\nessaie de ne pas t'ennuyer au\\lsommet. Prends ça."
+  "fr": "SIDNEY : Garde cette flamme. Et\\nessaie de t'ennuyer pas au\\lsommet. Prends ça."
  },
  "ThreeIsland_Text_LordDone": {
   "en": "SIDNEY: A ruler worthy of the six.\\nI will remember this day.",
@@ -165,7 +165,7 @@
  },
  "ThreeIsland_Text_WannaMakeSomethingOfYourStaring": {
   "en": "You, what are you staring at?\\nDon't you know it's not polite?\\pYou wanna make something of it\\nor what?",
-  "fr": "Toi, qu'est-ce que tu regardes ? Tu\\nne sais pas que c'est pas poli ?\\pTu veux en faire quelque chose ou\\nquoi ?"
+  "fr": "Toi, qu'est-ce que tu regardes ? Tu\\nsais pas que c'est pas poli ?\\pTu veux en faire quelque chose ou\\nquoi ?"
  },
  "ThreeIsland_Text_WhenDodouEvolvesGoingToPlayGame": {
   "en": "I'm going to train my DODUO in the\\nBERRY FOREST.\\pWhen it evolves, I'm going to play\\na game on TWO ISLAND.",

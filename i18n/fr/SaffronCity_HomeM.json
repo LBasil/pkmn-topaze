@@ -5,7 +5,7 @@
  },
  "SaffronCity_HomeM_Text_Beat2": {
   "en": "A minute is not enough.",
-  "fr": "Une minute ne suffit pas."
+  "fr": "Une minute suffit pas."
  },
  "SaffronCity_HomeM_Text_Beat3": {
   "en": "An hour well spent... for you.",
@@ -25,7 +25,7 @@
  },
  "SaffronCity_HomeM_Text_Decline": {
   "en": "Time waits for no one. But I will.",
-  "fr": "Le temps n'attend personne. Mais\\nmoi, si."
+  "fr": "Le temps attend personne. Mais\\nmoi, si."
  },
  "SaffronCity_HomeM_Text_Early": {
   "en": "Not yet. Come back with all 8\\nBADGES.",

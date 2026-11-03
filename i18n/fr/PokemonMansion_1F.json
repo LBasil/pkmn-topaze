@@ -1,7 +1,7 @@
 {
  "PokemonMansion_1F_Text_JohnsonDefeat": {
   "en": "Tch!\\nI can't get any wins.",
-  "fr": "Tch !\\nJe n'arrive pas à gagner."
+  "fr": "Tch !\\nJ'arrive pas à gagner."
  },
  "PokemonMansion_1F_Text_JohnsonIntro": {
   "en": "W-w-waah! You startled me!\\nI thought you were ONYBRIS.",
@@ -41,7 +41,7 @@
  },
  "PokemonMansion_1F_Text_TedIntro": {
   "en": "Who are you?\\nThere shouldn't be anyone here.",
-  "fr": "Qui es-tu ?\\nIl ne devrait y avoir personne ici."
+  "fr": "Qui es-tu ?\\nIl devrait y avoir personne ici."
  },
  "PokemonMansion_1F_Text_TedPostBattle": {
   "en": "A key? I don't know what you're\\ntalking about.",

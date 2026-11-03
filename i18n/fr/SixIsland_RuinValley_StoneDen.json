@@ -1,7 +1,7 @@
 {
  "SixIsland_RuinValley_StoneDen_Text_GuardsLeft": {
   "en": "The beast does not stir.\\nIts guardians still stand watch.",
-  "fr": "La bête ne bouge pas.\\nSes gardiens veillent toujours."
+  "fr": "La bête bouge pas.\\nSes gardiens veillent toujours."
  },
  "SixIsland_RuinValley_StoneDen_Text_T0Defeat": {
   "en": "Crumbled...",
@@ -9,7 +9,7 @@
  },
  "SixIsland_RuinValley_StoneDen_Text_T0Intro": {
   "en": "Nothing leaves this valley. Nothing\\nenters.",
-  "fr": "Rien ne quitte cette vallée. Rien\\nn'y entre."
+  "fr": "Rien quitte cette vallée. Rien\\ny entre."
  },
  "SixIsland_RuinValley_StoneDen_Text_T0Post": {
   "en": "Deeper in, the stone is older.",
@@ -25,7 +25,7 @@
  },
  "SixIsland_RuinValley_StoneDen_Text_T1Post": {
   "en": "The WARDEN does not bend.",
-  "fr": "Le GARDIEN ne plie pas."
+  "fr": "Le GARDIEN plie pas."
  },
  "SixIsland_RuinValley_StoneDen_Text_T2Defeat": {
   "en": "The wall gave way.",

@@ -73,7 +73,7 @@
  },
  "Route25_Text_KelseyDefeat": {
   "en": "My conditioning isn't the best…",
-  "fr": "Ma condition physique n'est pas\\ntop…"
+  "fr": "Ma condition physique est pas\\ntop…"
  },
  "Route25_Text_KelseyIntro": {
   "en": "Hi!\\nMy boyfriend is cool!",
@@ -129,7 +129,7 @@
  },
  "Route25_Text_ProcheLola_Win": {
   "en": "Keep this one. It never melts!",
-  "fr": "Garde ça. Ça ne fond jamais !"
+  "fr": "Garde ça. Ça fond jamais !"
  },
  "Route25_Text_SeaCottageSign": {
   "en": "SEA COTTAGE\\nBILL's old lab. Empty now.",

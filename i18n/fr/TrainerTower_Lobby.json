@@ -1,7 +1,7 @@
 {
  "TrainerTower_Lobby_Text_ExplainTrainerTower": {
   "en": "Here at TRAINER TOWER, there is an\\nevent called TIME ATTACK.\\pYou will be timed on how quickly\\nyou can get from the reception\\lcounter to the OWNER on the roof.\\pThe best times will be recorded on\\nthe Time Board.\\pTry competing with friends to see\\nwho can beat it the fastest.\\pYou will not earn any EXP. Points\\nor money by beating TRAINERS here.",
-  "fr": "Ici, à la TOUR DES DRESSEURS, il y\\na un événement appelé\\pCONTRE-LA-MONTRE.\\pTu seras chronométré sur ta vitesse\\npour aller de l'accueil au\\pPROPRIÉTAIRE sur le toit.\\pLes meilleurs temps seront inscrits\\nsur le Tableau des Temps.\\pEssaie de rivaliser avec des amis\\npour voir qui est le plus rapide.\\pTu ne gagneras ni points d'EXP. ni\\nargent en battant les DRESSEURS\\lici."
+  "fr": "Ici, à la TOUR DES DRESSEURS, il y\\na un événement appelé\\pCONTRE-LA-MONTRE.\\pTu seras chronométré sur ta vitesse\\npour aller de l'accueil au\\pPROPRIÉTAIRE sur le toit.\\pLes meilleurs temps seront inscrits\\nsur le Tableau des Temps.\\pEssaie de rivaliser avec des amis\\npour voir qui est le plus rapide.\\pTu gagneras ni points d'EXP. ni\\nargent en battant les DRESSEURS\\lici."
  },
  "TrainerTower_Lobby_Text_GiveItYourBest": {
   "en": "I hope you give it your best.",
@@ -29,7 +29,7 @@
  },
  "TrainerTower_Lobby_Text_StartClockGetSetGo": {
   "en": "Okay, I'll get the clock started,\\nso give it everything you have.\\pOn your marks…\\pGet set…\\pGo!",
-  "fr": "D'accord, je lance le chronomètre,\\nalors donne tout ce que tu as.\\pÀ vos marques…\\pPrêts…\\pPartez !"
+  "fr": "D'accord, je lance le chronomètre,\\ndonne tout ce que t'as.\\pÀ vos marques…\\pPrêts…\\pPartez !"
  },
  "TrainerTower_Lobby_Text_ThanksForCompeting": {
   "en": "Thank you for competing!",
@@ -45,7 +45,7 @@
  },
  "TrainerTower_Lobby_Text_TrainersUpToFloorNum": {
   "en": "TRAINERS from all over the world\\ngather here to battle.\\pLet me see…\\pRight now, there are TRAINERS only\\nup to Floor {STR_VAR_1}.",
-  "fr": "Des DRESSEURS du monde entier se\\nrassemblent ici pour combattre.\\pVoyons voir…\\pEn ce moment, il n'y a des\\nDRESSEURS que jusqu'à l'étage\\l{STR_VAR_1}."
+  "fr": "Des DRESSEURS du monde entier se\\nrassemblent ici pour combattre.\\pVoyons voir…\\pEn ce moment, il y a des\\nDRESSEURS que jusqu'à l'étage\\l{STR_VAR_1}."
  },
  "TrainerTower_Lobby_Text_WelcomeToTrainerTower": {
   "en": "Hello!\\pWelcome to TRAINER TOWER where\\nTRAINERS gather from all over!",

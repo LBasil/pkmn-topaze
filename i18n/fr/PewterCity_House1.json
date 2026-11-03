@@ -1,7 +1,7 @@
 {
  "PewterCity_House1_Text_ManAsk": {
   "en": "My NIDORAN got stung by a bug in\\nthe forest. Poisoned, poor thing.\\pI need two ANTIDOTES. If you ever\\nhave spare ones, think of me.",
-  "fr": "Mon NIDORAN s'est fait piquer par\\nun insecte dans la forêt.\\pEmpoisonné, le pauvre.\\pJ'ai besoin de deux ANTIDOTES. Si\\ntu en as en trop, pense à moi."
+  "fr": "Mon NIDORAN s'est fait piquer par\\nun insecte dans la forêt.\\pEmpoisonné, le pauvre.\\pJ'ai besoin de deux ANTIDOTES. Si\\nt'en as en trop, pense à moi."
  },
  "PewterCity_House1_Text_ManGives": {
   "en": "Bless you! Look, he is already\\neating again.\\pTake this. It was in my family a\\nlong time.",
@@ -9,7 +9,7 @@
  },
  "PewterCity_House1_Text_ManOffer": {
   "en": "Is that ANTIDOTE I see? Could you\\nspare two for my NIDORAN?",
-  "fr": "C'est de l'ANTIDOTE que je vois ?\\nPourrais-tu m'en céder deux pour\\lmon NIDORAN ?"
+  "fr": "C'est de l'ANTIDOTE que je vois ?\\nTu pourrais m'en céder deux pour\\lmon NIDORAN ?"
  },
  "PewterCity_House1_Text_ManSad": {
   "en": "I understand. Everyone needs their\\nown supplies out there.",

@@ -17,7 +17,7 @@
  },
  "PokemonMansion_1F_Text_NewMonDiscoveredInGuyanaJungle": {
   "en": "Log: Oct. 5\\nThe turbines hum louder every day.\\pSince the aura changed the types,\\nthe output has never been so high…",
-  "fr": "Journal : 5 oct. Les turbines\\nbourdonnent plus fort chaque jour.\\pDepuis que l'aura a changé les\\ntypes, le rendement n'a jamais été\\laussi élevé…"
+  "fr": "Journal : 5 oct. Les turbines\\nbourdonnent plus fort chaque jour.\\pDepuis que l'aura a changé les\\ntypes, le rendement a jamais été\\laussi élevé…"
  },
  "PokemonMansion_2F_Text_Onybris3Defeat": {
   "en": "Short circuit!",
@@ -29,7 +29,7 @@
  },
  "PokemonMansion_2F_Text_Onybris3Post": {
   "en": "We cut the lights. You fetched the\\nkey. Thanks for that!\\pThe boss says the stones are only\\na lock. Every theft is a key.",
-  "fr": "On a coupé les lumières. Tu as\\nrécupéré la clé. Merci pour ça !\\pLe boss dit que les pierres ne sont\\nqu'une serrure. Chaque vol est une\\lclé."
+  "fr": "On a coupé les lumières. T'as\\nrécupéré la clé. Merci pour ça !\\pLe boss dit que les pierres sont\\nqu'une serrure. Chaque vol est une\\lclé."
  },
  "PokemonMansion_Text_NotQuiteYet": {
   "en": "Not quite yet!",

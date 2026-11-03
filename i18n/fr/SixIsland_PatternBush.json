@@ -17,7 +17,7 @@
  },
  "SixIsland_PatternBush_Text_BethanyIntro": {
   "en": "I'm curious, how do you raise your\\nPOKéMON?",
-  "fr": "Je suis curieux, comment élèves-tu\\ntes POKéMON ?"
+  "fr": "Je suis curieux, comment tu élèves\\ntes POKéMON ?"
  },
  "SixIsland_PatternBush_Text_BethanyPostBattle": {
   "en": "In the same way your mother raised\\nyou full of love, you should raise\\lyour POKéMON.",
@@ -41,7 +41,7 @@
  },
  "SixIsland_PatternBush_Text_DaliaIntro": {
   "en": "Take a deep breath.\\nIsn't the air delicious?",
-  "fr": "Respire à fond.\\nL'air n'est-il pas délicieux ?"
+  "fr": "Respire à fond.\\nL'air est pas délicieux ?"
  },
  "SixIsland_PatternBush_Text_DaliaPostBattle": {
   "en": "First, exhale.\\nBlow everything out.\\pWhen you can't exhale anymore,\\ninhale the clean air!\\pIsn't it refreshing?",
@@ -77,7 +77,7 @@
  },
  "SixIsland_PatternBush_Text_JonahIntro": {
   "en": "You know, it just doesn't feel right\\nif I don't use BUG POKéMON.",
-  "fr": "Tu sais, ça ne fait pas bien si je\\nn'utilise pas de POKéMON INSECTE."
+  "fr": "Tu sais, ça fait pas bien si\\nj'utilise pas de POKéMON INSECTE."
  },
  "SixIsland_PatternBush_Text_JonahPostBattle": {
   "en": "By the way, “appeal” is a weird\\nword, if you think about it.\\pLike, is it like an orange peel?\\nOr like a ringing bell?",
@@ -97,7 +97,7 @@
  },
  "SixIsland_PatternBush_Text_MarcyDefeat": {
   "en": "It wasn't a bug.\\nI cut my shin on some grass.",
-  "fr": "Ce n'était pas un insecte. Je me\\nsuis coupé le tibia sur de l'herbe."
+  "fr": "C'était pas un insecte. Je me\\nsuis coupé le tibia sur de l'herbe."
  },
  "SixIsland_PatternBush_Text_MarcyIntro": {
   "en": "Oh, yuck!\\nI think a bug stung me!",

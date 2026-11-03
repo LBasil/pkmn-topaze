@@ -29,7 +29,7 @@
  },
  "SaffronCity_PokemonTrainerFanClub_Text_CanYouAutographShorts": {
   "en": "Oh! It's {PLAYER}!\\nToo cool!\\pOh!\\nOh, yeah!\\pCan you autograph something?\\nHow about my shorts?",
-  "fr": "Oh ! C'est {PLAYER} !\\nTrop cool !\\pOh !\\nOh, ouais !\\pTu peux dédicacer quelque chose ?\\nQue dirais-tu de mon short ?"
+  "fr": "Oh ! C'est {PLAYER} !\\nTrop cool !\\pOh !\\nOh, ouais !\\pTu peux dédicacer quelque chose ?\\nUn autographe sur mon short ?"
  },
  "SaffronCity_PokemonTrainerFanClub_Text_CountingOnYou": {
   "en": "However hot it's been…\\pAnd however cold it may get…\\pI've always believed in, and worn,\\nshorts!\\pI'm counting on you to keep\\nwinning!\\pI believe in you just as much as\\nI believe in shorts!",
@@ -121,7 +121,7 @@
  },
  "SaffronCity_PokemonTrainerFanClub_Text_WhyCantOthersSeeMastersDignity": {
   "en": "Master {STR_VAR_1} is so dignified…\\nHe is so my type.\\pWhy can't the others see the\\ndignity he simply oozes?",
-  "fr": "Maître {STR_VAR_1} est si digne…\\nIl est tellement mon type.\\pPourquoi les autres ne voient-ils\\npas la dignité qu'il dégage ?"
+  "fr": "Maître {STR_VAR_1} est si digne…\\nIl est tellement mon type.\\pPourquoi les autres voient pas\\nla dignité qu'il dégage ?"
  },
  "SaffronCity_PokemonTrainerFanClub_Text_WontStopBeingSabrinasFan": {
   "en": "Even if I'm the only one, I won't\\nstop being SABRINA's fan.\\pMy dream is to be like SABRINA,\\ncute, but cool.\\pI want to be a psychic girl just\\nlike her!",
@@ -149,6 +149,6 @@
  },
  "SaffronCity_PokemonTrainerFanClub_Text_YouveStillAWaysToGo": {
   "en": "Ah, so you are the much-\\ntalked-about {PLAYER}.\\pYou certainly do have the look of\\na winner.\\pBut for me to accept you as\\na true POKéMON great…\\p… …\\pYou've still a ways to go!",
-  "fr": "Ah, donc vous êtes {PLAYER}, dont\\non parle tant.\\pVous avez certainement l'air d'un\\ngagnant.\\pMais pour que je vous accepte comme\\nun vrai grand des POKéMON…\\p… …\\pIl vous reste du chemin à faire !"
+  "fr": "Ah, donc t'es {PLAYER}, dont\\non parle tant.\\pT'as certainement l'air d'un\\ngagnant.\\pMais pour que je t'accepte comme\\nun vrai grand des POKéMON…\\p… …\\pIl te reste du chemin à faire !"
  }
 }

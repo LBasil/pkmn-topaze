@@ -9,11 +9,11 @@
  },
  "SilphCo_11F_Text_AfterN": {
   "en": "N: Do not look so grim. We are\\nalive. That is a first victory.",
-  "fr": "N : Ne fais pas cette tête sombre.\\nNous sommes vivants. C'est une\\lpremière victoire."
+  "fr": "N : Fais pas cette tête sombre.\\nOn est vivants. C'est une\\lpremière victoire."
  },
  "SilphCo_11F_Text_BossBrice": {
   "en": "BRICE: …Not even a scratch on him.\\nOne POKéMON. He only used one.\\pHe took the HEMATITE and walked\\nout like we were furniture.",
-  "fr": "BRICE : …Pas une égratignure sur\\nlui. Un seul POKéMON. Il n'en a\\lutilisé qu'un.\\pIl a pris l'HÉMATITE et est sorti\\ncomme si nous étions des meubles."
+  "fr": "BRICE : …Pas une égratignure sur\\nlui. Un seul POKéMON. Il en a\\lutilisé qu'un.\\pIl a pris l'HÉMATITE et est sorti\\ncomme si on était des meubles."
  },
  "SilphCo_11F_Text_BossFlora": {
   "en": "FLORA: He knew you were here,\\n{PLAYER}. He looked right at you.\\pHe said you would find him.\\nWhen you are ready.",
@@ -57,7 +57,7 @@
  },
  "SilphCo_11F_Text_Grunt2Intro": {
   "en": "Stop right there!\\nDon't you move!",
-  "fr": "Stop !\\nNe bouge pas !"
+  "fr": "Stop !\\nBouge pas !"
  },
  "SilphCo_11F_Text_Grunt2PostBattle": {
   "en": "So, you want to see my BOSS?",

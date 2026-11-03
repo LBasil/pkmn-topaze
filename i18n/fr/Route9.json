@@ -53,7 +53,7 @@
  },
  "Route9_Text_CaitlinIntro": {
   "en": "Don't you dare patronize me!",
-  "fr": "Ne t'avise pas de me prendre de\\nhaut !"
+  "fr": "T'avise pas de me prendre de\\nhaut !"
  },
  "Route9_Text_CaitlinPostBattle": {
   "en": "You're obviously talented.\\nGood luck to you!",
@@ -97,7 +97,7 @@
  },
  "Route9_Text_JeremyDefeat": {
   "en": "Keep it coming, eh!\\pOh wait.\\nI'm out of POKéMON!",
-  "fr": "Continue, hein !\\pOh, attends.\\nJe n'ai plus de POKéMON !"
+  "fr": "Continue, hein !\\pOh, attends.\\nJ'ai plus de POKéMON !"
  },
  "Route9_Text_JeremyIntro": {
   "en": "Bwahaha!\\nGreat! I was bored, eh!",
@@ -109,11 +109,11 @@
  },
  "Route9_Text_Quest3_Ask": {
   "en": "Wild POKéMON keep jumping me. 3\\nREPELS would save my trip!",
-  "fr": "Des POKéMON sauvages n'arrêtent pas\\nde me sauter dessus. 3 REPOUSSES\\lsauveraient mon voyage !"
+  "fr": "Des POKéMON sauvages arrêtent pas\\nde me sauter dessus. 3 REPOUSSES\\lsauveraient mon voyage !"
  },
  "Route9_Text_Quest3_Done": {
   "en": "Not a single POKéMON bothers me\\nnow.",
-  "fr": "Plus aucun POKéMON ne me dérange."
+  "fr": "Plus aucun POKéMON me dérange."
  },
  "Route9_Text_Quest3_NoRoom": {
   "en": "Your BAG is full. Make room, then\\ncome back.",

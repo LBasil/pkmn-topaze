@@ -1,10 +1,10 @@
 {
  "Route2_ViridianForest_SouthEntrance_Text_ForestIsMaze": {
   "en": "Are you going into CINDER FOREST?\\nIt burned long ago, and the paths\\ltwist like a maze. Don't get lost.",
-  "fr": "Tu entres dans la FORÊT DE\\nCENDRES ? Elle a brûlé il y a\\llongtemps, et les chemins forment\\nun labyrinthe. Ne te perds pas."
+  "fr": "Tu entres dans la FORÊT DE\\nCENDRES ? Elle a brûlé il y a\\llongtemps, et les chemins forment\\nun labyrinthe. Te perds pas."
  },
  "Route2_ViridianForest_SouthEntrance_Text_RattataHasWickedBite": {
   "en": "RATTATA may be small, but don't\\nunderestimate its wicked bite.\\pHave you caught one already?",
-  "fr": "RATTATA est petit, mais ne\\nsous-estime pas sa morsure\\lvicieuse.\\pEn as-tu déjà capturé un ?"
+  "fr": "RATTATA est petit, mais sous-estime\\npas sa morsure vicieuse.\\pT'en as déjà capturé un ?"
  }
 }

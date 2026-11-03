@@ -9,7 +9,7 @@
  },
  "PalletTown_Text_AmbGardenerA": {
   "en": "These berries are for ranch animals.\\nNot for picking, sorry!\\pThe pens are east, beyond the trees.",
-  "fr": "Ces baies sont pour les animaux du\\nranch. Pas pour cueillir, désolé !\\pLes enclos sont à l'est, derrière\\nles arbres."
+  "fr": "Ces baies, c'est pour les animaux\\ndu ranch. On cueille pas, désolé !\\pLes enclos sont à l'est, derrière\\nles arbres."
  },
  "PalletTown_Text_AmbGardenerB": {
   "en": "The ranch lost its tracker POKéMON.\\nThe berries just sit there now.\\pWhoever took them will have to feed\\nthem. I hope they know how.",
@@ -21,7 +21,7 @@
  },
  "PalletTown_Text_AmbGirlB": {
   "en": "The school's GRENAT is gone!\\nThe pond looks sad today.\\pDon't let them take the monument!",
-  "fr": "Le GRENAT de l'école a disparu !\\nL'étang a l'air triste aujourd'hui.\\pNe les laissez pas prendre le\\nmonument !"
+  "fr": "Le GRENAT de l'école a disparu !\\nL'étang a l'air triste aujourd'hui.\\pLaissez-les pas prendre le\\nmonument !"
  },
  "PalletTown_Text_AmbLadyA": {
   "en": "Garnet is the stone of this town.\\nRed roofs, red trees, red stone.\\pThe sea road south needs SURF. Come\\nback when you can ride the waves.",
@@ -73,7 +73,7 @@
  },
  "PalletTown_Text_Archive_Solved": {
   "en": "Seven ECHOES, seven stories closed.\\nThe archive is complete. You may\\pkeep these, they never fit on my\\nshelves.",
-  "fr": "Sept ÉCHOS, sept histoires closes.\\nL'archive est complète. Tu peux les\\lgarder, ils tenaient jamais sur\\nmes étagères."
+  "fr": "Sept ÉCHOS, sept histoires closes.\\nL'archive est complète. Garde-les,\\lils tenaient jamais sur mes\\létagères."
  },
  "PalletTown_Text_CanStoreItemsAndMonsInPC": {
   "en": "Technology is incredible!\\pYou can now store and recall items\\nand POKéMON as data via PC.",
@@ -109,7 +109,7 @@
  },
  "PalletTown_Text_OakGrassUnsafeNeedMon": {
   "en": "OAK: Hey, kid! Be careful!\\nWild POKéMON live in tall grass.\\p{PLAYER}: But how can I catch my\\nfirst POKéMON if I never meet one?\\pOAK: Hm… Tell me, how old are you?\\p{PLAYER}: Fourteen.\\pOAK: I see. Come with me to my\\nLAB, kid.",
-  "fr": "CHEN : Hé, petit ! Fais attention !\\nDes POKéMON sauvages vivent dans\\lles hautes herbes.\\p{PLAYER} : Mais comment capturer mon\\npremier POKéMON si j'en croise\\ljamais ?\\pCHEN : Hm… Quel âge as-tu ?\\p{PLAYER} : Quatorze ans.\\pCHEN : Je vois. Suis-moi à mon\\nLABO, petit."
+  "fr": "CHEN : Hé, petit ! Fais attention !\\nIl y a des POKéMON sauvages dans\\lles hautes herbes.\\p{PLAYER} : Mais comment capturer mon\\npremier POKéMON si j'en croise\\ljamais ?\\pCHEN : Hm… T'as quel âge ?\\p{PLAYER} : Quatorze ans.\\pCHEN : Je vois. Suis-moi à mon\\nLABO, petit."
  },
  "PalletTown_Text_OakLetMeSeePokedex": {
   "en": "OAK: Ah, {PLAYER}!\\nYou're back, are you?\\pHow much have you filled in your\\nPOKéDEX?\\pMay I see it?\\pLet's see…",
@@ -125,7 +125,7 @@
  },
  "PalletTown_Text_OnybrisGruntDefeat": {
   "en": "Tch... it fights for you by\\nchoice? That's... not what the\\lboss told us.",
-  "fr": "Tch… il se bat pour toi par choix ?\\nCe… n'est pas ce que le boss nous a\\ldit."
+  "fr": "Tch… il se bat pour toi par choix ?\\nC'est pas ce que le boss nous a\\ldit."
  },
  "PalletTown_Text_OnybrisGruntVictory": {
   "en": "Hah! Too easy.\\nBut we don't need you anyway.",
@@ -145,11 +145,11 @@
  },
  "PalletTown_Text_ProcheAdrian_Early": {
   "en": "Not yet, {PLAYER}. Finish your\\njourney first, then come and find\\pme.",
-  "fr": "Pas encore, {PLAYER}. Termine\\nd'abord ton voyage, puis viens me\\ltrouver."
+  "fr": "Pas encore, {PLAYER}. Finis\\nd'abord ton voyage, puis viens me\\ltrouver."
  },
  "PalletTown_Text_ProcheAdrian_Gather": {
   "en": "{PLAYER}. THOMAS, LOLA, JORDAN,\\nVIOLETTE, EDOUARD, EMMA... they all\\ptold me about you. GAUTHIER, CHLOE,\\nVINCENT, THIBAULT, NATHAN, DYLAN\\ptoo. We were all waiting here, in\\nour own time. You came for each of\\pus.",
-  "fr": "{PLAYER}. THOMAS, LOLA, JORDAN,\\nVIOLETTE, EDOUARD, EMMA… tous m'ont\\lparlé de toi. GAUTHIER, CHLOE,\\nVINCENT, THIBAULT, NATHAN, DYLAN\\laussi. Nous attendions tous ici,\\ndans notre propre temps. Tu viens\\lpour chacun de nous."
+  "fr": "{PLAYER}. THOMAS, LOLA, JORDAN,\\nVIOLETTE, EDOUARD, EMMA… tous m'ont\\lparlé de toi. GAUTHIER, CHLOE,\\nVINCENT, THIBAULT, NATHAN, DYLAN\\laussi. On attendait tous ici, dans\\nnotre propre temps. Tu viens pour\\lchacun de nous."
  },
  "PalletTown_Text_ProcheAdrian_Intro": {
   "en": "{PLAYER}. You met all of them. So\\nnow it is my turn. Let us see the\\psky together.",
@@ -173,11 +173,11 @@
  },
  "PalletTown_Text_RanchDadHello": {
   "en": "{RIVAL}'s DAD: So you're {PLAYER}.\\n{RIVAL} never stops talking about you.",
-  "fr": "Le PÈRE de {RIVAL} : Alors c'est\\ntoi, {PLAYER}. {RIVAL} n'arrête pas\\lde parler de toi."
+  "fr": "Le PÈRE de {RIVAL} : Alors c'est\\ntoi, {PLAYER}. {RIVAL} arrête pas\\lde parler de toi."
  },
  "PalletTown_Text_RanchGrunt2Taunt": {
   "en": "A kid with a borrowed POKéMON?\\nThis will take two seconds!",
-  "fr": "Un gamin avec un POKéMON emprunté ?\\nÇa va prendre deux secondes !"
+  "fr": "Un gamin avec un POKéMON emprunté ?\\nÇa va être vite réglé !"
  },
  "PalletTown_Text_RanchGruntChallenge": {
   "en": "GRUNT: Hah! A kid with a brand new\\npartner?\\pLet's see if it fights for you, or\\njust obeys!",
@@ -185,7 +185,7 @@
  },
  "PalletTown_Text_RanchGruntEnter": {
   "en": "Nobody move!\\nTEAM ONYBRIS is freeing the POKéMON\\lof this ranch!\\pMy friends are at the SCHOOL and the\\nLAB right now. Today, we take it all!",
-  "fr": "Que personne ne bouge ! La TEAM\\nONYBRIS libère les POKéMON de ce\\lranch !\\pMes amis sont à l'ÉCOLE et au LABO\\nen ce moment. Aujourd'hui, on prend\\ltout !"
+  "fr": "Que personne bouge ! La TEAM\\nONYBRIS libère les POKéMON de ce\\lranch !\\pMes amis sont à l'ÉCOLE et au LABO\\nen ce moment. Aujourd'hui, on prend\\ltout !"
  },
  "PalletTown_Text_RanchGruntRetreat": {
   "en": "Forget it. We got what we came for.\\pThe trackers are already on the road.\\nGRENALUX will see us again...",
@@ -193,15 +193,15 @@
  },
  "PalletTown_Text_RanchMom1": {
   "en": "MOM: {PLAYER}!!\\nAre you hurt? The whole town heard\\lthe alarm!\\p...Is that a POKéMON? Your first one?\\nOh, look at you. You look so proud.\\pListen, the SCHOOL was broken into\\ntoo. Your teacher is waiting for you.\\pIf you're going to travel with that\\nlittle one, you should learn what has\\lchanged first.\\pAnd take this with you. It has been in\\nour family a long time.",
-  "fr": "MAMAN : {PLAYER} !! T'as rien ?\\nToute la ville a entendu l'alarme !\\p…C'est un POKéMON ? Ton premier ?\\nOh, regarde-toi. T'as l'air si\\lfier.\\pÉcoute, l'ÉCOLE a été cambriolée\\naussi. Ta maîtresse t'attend.\\pSi tu voyages avec ce petit, tu\\ndois d'abord apprendre ce qui a\\lchangé.\\pEt emporte ça avec toi. C'est dans\\nnotre famille depuis longtemps."
+  "fr": "MAMAN : {PLAYER} !! T'as rien ?\\nToute la ville a entendu l'alarme !\\p…C'est un POKéMON ? Ton premier ?\\nOh, regarde-toi. T'as l'air si\\lfier.\\pÉcoute, l'ÉCOLE a été cambriolée\\naussi. Ta maîtresse t'attend.\\pSi tu pars avec ce petit, faut\\nd'abord que tu saches ce qui a\\lchangé.\\pEt prends ça avec toi. C'est dans\\nnotre famille depuis longtemps."
  },
  "PalletTown_Text_RanchMom2": {
   "en": "MOM: Keep it close, and don't lose it.\\pCome home whenever you need a rest.\\nI'll be waiting.",
-  "fr": "MAMAN : Garde-le près de toi, et ne\\nle perds pas.\\pReviens à la maison quand t'as\\nbesoin de repos. Je t'attendrai."
+  "fr": "MAMAN : Garde-le près de toi, et le\\nperds pas.\\pReviens à la maison quand t'as\\nbesoin de repos. Je t'attendrai."
  },
  "PalletTown_Text_RanchOakAfter": {
   "en": "OAK: ...Well! That was a real battle,\\n{PLAYER}. Your partner trusts you.\\pI must see what they did to my LAB.\\nStay safe, both of you!",
-  "fr": "CHEN : …Eh bien ! C'était un vrai\\ncombat, {PLAYER}. Ton partenaire te\\lfait confiance.\\pJe dois voir ce qu'ils ont fait à\\nmon LABO. Restez prudents, tous les\\ldeux !"
+  "fr": "CHEN : …Eh bien ! C'était un vrai\\ncombat, {PLAYER}. Ton partenaire te\\lfait confiance.\\pJe dois voir ce qu'ils ont fait à\\nmon LABO. Faites attention, tous\\lles deux !"
  },
  "PalletTown_Text_RanchOakChoose": {
   "en": "OAK: Which one?\\nHurry, hurry!",
@@ -209,11 +209,11 @@
  },
  "PalletTown_Text_RanchOakIntro": {
   "en": "OAK: Good, we're all here.\\pTen years ago the AURA changed every\\nPOKéMON. Lately my trackers have been\\lrestless, as if they felt something.\\pThat is why I brought three POKé\\nBALLS with me today. {PLAYER}, {RIVAL},\\lyou have both waited long\\nenough, and--",
-  "fr": "CHEN : Bien, nous sommes tous là.\\pIl y a dix ans l'AURA a changé tous\\nles POKéMON. Dernièrement mes\\ltraqueurs sont agités, comme s'ils\\nsentaient quelque chose.\\pC'est pourquoi j'ai apporté trois\\nPOKé BALLS aujourd'hui. {PLAYER},\\p{RIVAL}, vous avez assez attendu\\ntous les deux, et--"
+  "fr": "CHEN : Bien, on est tous là.\\pIl y a dix ans l'AURA a changé tous\\nles POKéMON. Dernièrement mes\\ltraqueurs sont agités, comme s'ils\\nsentaient quelque chose.\\pC'est pourquoi j'ai apporté trois\\nPOKé BALLS aujourd'hui. {PLAYER},\\p{RIVAL}, vous avez assez attendu\\ntous les deux, et--"
  },
  "PalletTown_Text_RanchOakPanic": {
   "en": "OAK: Oh no, oh no, oh no!\\nWhat do we do?!\\pThere is no time to be polite!\\n{PLAYER}, take one of these, quick!",
-  "fr": "CHEN : Oh non, oh non, oh non ! Que\\nfaire ?!\\pPas le temps de faire des\\nmanières ! {PLAYER}, prends-en un,\\lvite !"
+  "fr": "CHEN : Oh non, oh non, oh non !\\nQu'est-ce qu'on fait ?!\\pPas le temps de faire des\\nmanières ! {PLAYER}, prends-en un,\\lvite !"
  },
  "PalletTown_Text_RanchRivalChallenge": {
   "en": "{RIVAL}: {PLAYER}, you take the big one.\\nThe other one is mine!",
@@ -225,7 +225,7 @@
  },
  "PalletTown_Text_RanchRivalWin": {
   "en": "{RIVAL}: Mine ran off after one hit!\\p...Yours too? Not bad, {PLAYER}.\\nBut next time I win first!",
-  "fr": "{RIVAL} : Le mien s'est enfui après\\nun coup !\\p…Le tien aussi ? Pas mal, {PLAYER}.\\nMais la prochaine fois je gagne\\ld'abord !"
+  "fr": "{RIVAL} : Le mien s'est enfui après\\nun coup !\\p…Le tien aussi ? Pas mal, {PLAYER}.\\nMais la prochaine fois, je gagne\\ld'abord !"
  },
  "PalletTown_Text_RanchTrackersHowl": {
   "en": "...Do you hear that?\\nThe trackers are howling.",
@@ -269,11 +269,11 @@
  },
  "PalletTown_Text_RivalDontGoOut": {
   "en": "{RIVAL}: Hey, {PLAYER}! Wait!\\nDon't go out there!",
-  "fr": "{RIVAL} : Hé, {PLAYER} ! Attends !\\nNe sors pas !"
+  "fr": "{RIVAL} : Hé, {PLAYER} ! Attends !\\nSors pas !"
  },
  "PalletTown_Text_RivalGrassUnsafeNeedMon": {
   "en": "{RIVAL}: The tall grass is full of\\nwild POKéMON, and you've got\\lnothing to fight with!\\p{PLAYER}: But I've waited all my life\\nto start my journey!\\p{RIVAL}: Then come to our RANCH.\\nMy dad and PROF. OAK are there.\\pThey'll know what to do.\\nFollow me!",
-  "fr": "{RIVAL} : L'herbe haute est pleine\\nde POKéMON sauvages, et tu as\\lrien pour te battre !\\p{PLAYER} : Mais j'ai attendu toute\\nma vie pour commencer mon voyage !\\p{RIVAL} : Alors viens à notre\\nRANCH. Mon père et le PROF. CHEN y\\lsont.\\pIls sauront quoi faire. Suis-moi !"
+  "fr": "{RIVAL} : L'herbe haute est pleine\\nde POKéMON sauvages, et t'as\\lrien pour te battre !\\p{PLAYER} : Mais j'ai attendu toute\\nma vie pour commencer mon voyage !\\p{RIVAL} : Alors viens à notre\\nRANCH. Mon père et le PROF. CHEN y\\lsont.\\pIls sauront quoi faire. Suis-moi !"
  },
  "PalletTown_Text_RivalsHouse": {
   "en": "{RIVAL}'s family RANCH",
@@ -281,7 +281,7 @@
  },
  "PalletTown_Text_SceneryBerries": {
   "en": "Berry bushes for the ranch animals.\\nThey are not for picking!",
-  "fr": "Des buissons de baies pour les\\nanimaux du ranch. Pas pour\\lcueillir !"
+  "fr": "Des buissons de baies pour les\\nanimaux du ranch. On cueille pas !"
  },
  "PalletTown_Text_SceneryGuardian": {
   "en": "A garnet crystal, tall as a house.\\nIt watches over the road north.",

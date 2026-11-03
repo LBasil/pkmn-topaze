@@ -33,7 +33,7 @@
  },
  "ThreeIsland_BondBridge_Text_DenLocked": {
   "en": "Mist rolls out of the cave mouth.\\nThe tide is not ready for you.",
-  "fr": "La brume sort de l'entrée de la\\ngrotte. La marée n'est pas prête\\lpour toi."
+  "fr": "La brume sort de l'entrée de la\\ngrotte. La marée est pas prête\\lpour toi."
  },
  "ThreeIsland_BondBridge_Text_JoyDefeat": {
   "en": "JOY: Ohh…\\nMEG!",
@@ -61,7 +61,7 @@
  },
  "ThreeIsland_BondBridge_Text_MegNotEnoughMons": {
   "en": "MEG: I want to battle together\\nwith JOY.\\pOne POKéMON isn't enough.",
-  "fr": "MEG : Je veux me battre ensemble\\navec JOY.\\pUn POKéMON ne suffit pas."
+  "fr": "MEG : Je veux me battre ensemble\\navec JOY.\\pUn POKéMON suffit pas."
  },
  "ThreeIsland_BondBridge_Text_MegPostBattle": {
   "en": "MEG: JOY, wasn't that fun?",
@@ -85,7 +85,7 @@
  },
  "ThreeIsland_BondBridge_Text_TishaIntro": {
   "en": "Oh, no, don't come here!\\nPlease, stay away from me!",
-  "fr": "Oh non, ne viens pas ici !\\nReste loin de moi, s'il te plaît !"
+  "fr": "Oh non, viens pas ici !\\nReste loin de moi, s'il te plaît !"
  },
  "ThreeIsland_BondBridge_Text_TishaPostBattle": {
   "en": "A POKéMON bit through my \\nswimsuit.\\pI can't get out of the water!",

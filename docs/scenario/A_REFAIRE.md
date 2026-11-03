@@ -377,3 +377,6 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 
 ## 03-11 — Réécriture ton officiel (suite)
 Lots 0–1750 relus à la main, passes regex (suppression de "ne" après pronom sujet avec négation) sur les ~4300 textes originaux. Reste à relire à la main : ~1750–4312.
+
+## 03-11 (soir) — Réécriture ton officiel terminée
+Tous les textes originaux (0–4312) relus à la main, puis passe de suppression du "ne" après pronom sujet. Correctif : l outil de relecture lisait un instantané périmé et avait écrasé une partie des retouches ; tout a été réappliqué.

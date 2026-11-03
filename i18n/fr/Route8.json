@@ -73,7 +73,7 @@
  },
  "Route8_Text_EliNotEnoughMons": {
   "en": "ELI: We can't battle if you don't\\nhave two POKéMON.",
-  "fr": "ELI : On peut pas se battre si\\ntu n'as pas deux POKéMON."
+  "fr": "ELI : On peut pas se battre si\\nt'as pas deux POKéMON."
  },
  "Route8_Text_EliPostBattle": {
   "en": "ELI: I caught my POKéMON with\\nANNE!",
@@ -105,7 +105,7 @@
  },
  "Route8_Text_JuliaDefeat": {
   "en": "Stop!\\pDon't be so mean to my CLEFAIRY!",
-  "fr": "Stop !\\pNe sois pas méchant avec mon\\nMÉLOFÉE !"
+  "fr": "Stop !\\nSois pas méchant avec mon\\lMÉLOFÉE !"
  },
  "Route8_Text_JuliaIntro": {
   "en": "What's a cute, round, and fluffy\\nPOKéMON?",
@@ -137,7 +137,7 @@
  },
  "Route8_Text_MeganPostBattle": {
   "en": "HEMATOWN's gatekeeper won't let us\\ngo through.\\pI know he's doing his job, but I\\nthink he's mean.",
-  "fr": "Le gardien d'HEMATOWN ne nous\\nlaisse pas passer.\\pJe sais qu'il fait son travail,\\nmais je le trouve méchant."
+  "fr": "Le gardien d'HEMATOWN nous laisse\\npas passer.\\pJe sais qu'il fait son travail,\\nmais je le trouve méchant."
  },
  "Route8_Text_MonMeowth": {
   "en": "MEOWTH: Nyaa!\\nIt is chasing something shiny.",
@@ -177,7 +177,7 @@
  },
  "Route8_Text_RicardoDefeat": {
   "en": "Aww, man.\\nI'm not into this.",
-  "fr": "Aww, mec.\\nJe ne suis pas dedans."
+  "fr": "Aww, mec.\\nJe suis pas dedans."
  },
  "Route8_Text_RicardoIntro": {
   "en": "My bike's acting up, man.",

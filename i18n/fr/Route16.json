@@ -25,7 +25,7 @@
  },
  "Route16_Text_HideoPostBattle": {
   "en": "We'll always be hanging around here\\neven if you don't like it.\\pYou can detour to APATIA from\\nAMETHIOLITE going along the coast.",
-  "fr": "On traînera toujours par ici même\\nsi ça ne te plaît pas.\\pTu peux faire un détour vers APATIA\\ndepuis AMETHIOLITE en longeant la\\lcôte."
+  "fr": "On traînera toujours par ici même\\nsi ça te plaît pas.\\pTu peux faire un détour vers APATIA\\ndepuis AMETHIOLITE en longeant la\\lcôte."
  },
  "Route16_Text_JedDefeat": {
   "en": "JED: Oh, no!\\nMy love has seen me as a loser!",
@@ -33,7 +33,7 @@
  },
  "Route16_Text_JedIntro": {
   "en": "JED: Our love knows no bounds.\\nWe're in love and we show it!",
-  "fr": "JED : Notre amour ne connaît pas de\\nlimites. On s'aime et on le\\lmontre !"
+  "fr": "JED : Notre amour connaît pas de\\nlimites. On s'aime et on le\\lmontre !"
  },
  "Route16_Text_JedNotEnoughMons": {
   "en": "JED: You have just one POKéMON?\\nIs there no love in your heart?",
@@ -57,7 +57,7 @@
  },
  "Route16_Text_LaoDefeat": {
   "en": "Don't you dare laugh!",
-  "fr": "Ne ris pas !"
+  "fr": "Ris pas !"
  },
  "Route16_Text_LaoIntro": {
   "en": "What do you want?",
@@ -77,7 +77,7 @@
  },
  "Route16_Text_LeaNotEnoughMons": {
   "en": "LEA: Oh, you don't have two\\nPOKéMON with you?\\pDoesn't it feel lonely for you or\\nyour POKéMON?",
-  "fr": "LEA : Oh, t'as pas deux POKéMON\\navec toi ?\\pNe te sens-tu pas seul, toi ou\\ntes POKéMON ?"
+  "fr": "LEA : Oh, t'as pas deux POKéMON\\navec toi ?\\pTu te sens pas seul, toi ou\\ntes POKéMON ?"
  },
  "Route16_Text_LeaPostBattle": {
   "en": "LEA: Ehehe, I'm sorry.\\nJED is so cool.",
@@ -121,7 +121,7 @@
  },
  "Route16_Text_RubenDefeat": {
   "en": "Don't make me mad!",
-  "fr": "Ne me mets pas en colère !"
+  "fr": "Me mets pas en colère !"
  },
  "Route16_Text_RubenIntro": {
   "en": "Hey, there!\\nLet's have ourselves a good time!",

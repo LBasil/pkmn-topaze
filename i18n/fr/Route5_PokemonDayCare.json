@@ -13,7 +13,7 @@
  },
  "Route5_PokemonDayCare_Text_DontHaveEnoughMoney": {
   "en": "You don't have enough money.",
-  "fr": "Vous n'avez pas assez d'argent."
+  "fr": "T'as pas assez d'argent."
  },
  "Route5_PokemonDayCare_Text_LookAfterMonForAWhile": {
   "en": "Fine, I'll look after your\\n{STR_VAR_1} for a while.",

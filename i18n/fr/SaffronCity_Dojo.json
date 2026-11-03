@@ -5,7 +5,7 @@
  },
  "SaffronCity_Dojo_Text_AaronIntro": {
   "en": "Hiyah!\\nI have no fear for anything tough!\\pI shatter boulders for training\\nevery day!",
-  "fr": "Hiyah !\\nJe n'ai peur de rien de dur !\\pJe brise des rochers à\\nl'entraînement chaque jour !"
+  "fr": "Hiyah !\\nJ'ai peur de rien de dur !\\pJe brise des rochers à\\nl'entraînement chaque jour !"
  },
  "SaffronCity_Dojo_Text_AaronPostBattle": {
   "en": "The only thing that frightens us is\\npsychic power!",
@@ -17,7 +17,7 @@
  },
  "SaffronCity_Dojo_Text_ChoosePrizedFightingMon": {
   "en": "Indeed, I have lost!\\pBut, I beseech you, do not take\\nour emblem as your trophy!\\pIn return, I will give you both\\nprized FIGHTING POKéMON!\\pTake them, you have earned it!",
-  "fr": "En effet, j'ai perdu !\\pMais je t'en supplie, ne prends pas\\nnotre emblème comme trophée !\\pEn échange, je te donnerai les deux\\nprécieux POKéMON COMBAT !\\pPrends-les, tu les as mérités !"
+  "fr": "En effet, j'ai perdu !\\pMais je t'en supplie, prends pas\\nnotre emblème comme trophée !\\pEn échange, je te donnerai les deux\\nprécieux POKéMON COMBAT !\\pPrends-les, tu les as mérités !"
  },
  "SaffronCity_Dojo_Text_EnemiesOnEverySide": {
   "en": "Enemies on every side!",
@@ -73,7 +73,7 @@
  },
  "SaffronCity_Dojo_Text_MikePostBattle": {
   "en": "You wait 'til you see our MASTER!\\nI'm a small fry compared to him!",
-  "fr": "Attends de voir notre MAÎTRE !\\nJe ne suis rien comparé à lui !"
+  "fr": "Attends de voir notre MAÎTRE !\\nJe suis rien comparé à lui !"
  },
  "SaffronCity_Dojo_Text_ReceivedMonFromKarateMaster": {
   "en": "{PLAYER} received the {STR_VAR_1}\\nfrom the KARATE MASTER.",

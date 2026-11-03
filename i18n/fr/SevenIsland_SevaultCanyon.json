@@ -1,7 +1,7 @@
 {
  "SevenIsland_SevaultCanyon_Text_BrunoTrainedWithBrawly": {
   "en": "Training by oneself is certainly\\nnot a bad thing.\\pBut it's also not bad to aim for\\nthe top with a partner.\\pEven BRUNO…\\nHe trained with a fellow by the\\lname of BRAWLY before.",
-  "fr": "S'entraîner seul n'est certainement\\npas une mauvaise chose.\\pMais viser le sommet avec un\\npartenaire n'est pas mal non plus.\\pMême BRUNO… Il s'est entraîné\\navec un certain BRAWLY autrefois."
+  "fr": "S'entraîner seul est certainement\\npas une mauvaise chose.\\pMais viser le sommet avec un\\npartenaire est pas mal non plus.\\pMême BRUNO… Il s'est entraîné\\navec un certain BRAWLY autrefois."
  },
  "SevenIsland_SevaultCanyon_Text_CyndyDefeat": {
   "en": "Huh?\\nSomething's not right…",
@@ -21,7 +21,7 @@
  },
  "SevenIsland_SevaultCanyon_Text_EvanIntro": {
   "en": "It doesn't matter if you happen to\\nhave the strongest POKéMON…\\pIt doesn't mean a thing if you don't\\nknow how to use them properly!",
-  "fr": "Peu importe que tu aies les POKéMON\\nles plus forts…\\pÇa ne veut rien dire si tu sais\\npas les utiliser correctement !"
+  "fr": "Peu importe que t'aies les POKéMON\\nles plus forts…\\pÇa veut rien dire si tu sais\\npas les utiliser correctement !"
  },
  "SevenIsland_SevaultCanyon_Text_EvanPostBattle": {
   "en": "You see them every so often,\\nTRAINERS with awesome POKéMON\\lwho have no idea what to do.\\pBefore training POKéMON, TRAINERS\\nthemselves need to grow up.",
@@ -101,7 +101,7 @@
  },
  "SevenIsland_SevaultCanyon_Text_GuardsLeft": {
   "en": "The beast does not stir.\\nIts guardians still stand watch.",
-  "fr": "La bête ne bouge pas.\\nSes gardiens veillent toujours."
+  "fr": "La bête bouge pas.\\nSes gardiens veillent toujours."
  },
  "SevenIsland_SevaultCanyon_Text_JacksonDefeat": {
   "en": "Whoa! You're tough!\\nHow about protecting me?",
@@ -149,7 +149,7 @@
  },
  "SevenIsland_SevaultCanyon_Text_LexNotEnoughMons": {
   "en": "LEX: May I ask you to battle the\\nboth of us at the same time?",
-  "fr": "LEX : Puis-je te demander de nous\\naffronter tous les deux en même\\ltemps ?"
+  "fr": "LEX : Je peux te demander de nous\\naffronter tous les deux en même\\ltemps ?"
  },
  "SevenIsland_SevaultCanyon_Text_LexPostBattle": {
   "en": "LEX: I think it was a good\\nexperience for NYA.\\pYou have my gratitude.",
@@ -197,7 +197,7 @@
  },
  "SevenIsland_SevaultCanyon_Text_SceneGiovanni2": {
   "en": "I looked.\\pEvery single day, from far away.\\pI am proud of you, son.\\nI never knew how to say it.",
-  "fr": "J'ai regardé.\\pChaque jour, de loin.\\pJe suis fier de toi, fils.\\nJe n'ai jamais su comment le dire."
+  "fr": "J'ai regardé.\\pChaque jour, de loin.\\pJe suis fier de toi, fils.\\nJ'ai jamais su comment le dire."
  },
  "SevenIsland_SevaultCanyon_Text_SceneGiovanni3": {
   "en": "GIOVANNI: CHAMPION. No pause. Let\\nme see what my son measured\\lhimself against.",
@@ -209,7 +209,7 @@
  },
  "SevenIsland_SevaultCanyon_Text_SceneGiovanni5": {
   "en": "GIOVANNI: And you, RED. Still\\nstanding there in silence.\\pWe never settled it, you and I.",
-  "fr": "GIOVANNI : Et toi, RED. Toujours\\nlà, en silence.\\pNous n'avons jamais réglé ça, toi\\net moi."
+  "fr": "GIOVANNI : Et toi, RED. Toujours\\nlà, en silence.\\pOn a jamais réglé ça, toi\\net moi."
  },
  "SevenIsland_SevaultCanyon_Text_SceneGiovanni6": {
   "en": "GIOVANNI: Not today. Today I walk\\nhome with my son.",
@@ -233,7 +233,7 @@
  },
  "SevenIsland_SevaultCanyon_Text_SceneSilver1": {
   "en": "SILVER: ...You came. All the way\\nto the edge of time.\\pThe ECHO showed me something.\\nA boy in a dark room, waiting\\lfor a man who never came back.",
-  "fr": "SILVER : …T'as fait le voyage.\\nJusqu'au bord du temps.\\pL'ÉCHO m'a montré quelque chose. Un\\ngarçon dans une pièce sombre,\\lattendant un homme qui n'est jamais\\nrevenu."
+  "fr": "SILVER : …T'as fait le voyage.\\nJusqu'au bord du temps.\\pL'ÉCHO m'a montré quelque chose. Un\\ngarçon dans une pièce sombre,\\lattendant un homme qui est jamais\\nrevenu."
  },
  "SevenIsland_SevaultCanyon_Text_SceneSilver2": {
   "en": "SILVER: Afraid?! You left me alone!\\pI became strong so you would\\nlook at me. Just once.",
@@ -245,7 +245,7 @@
  },
  "SevenIsland_SevaultCanyon_Text_SceneSilver4": {
   "en": "SILVER: {PLAYER}. Fight us. Both of\\nus, back to back. No rest between.\\pIf you cannot stand before the\\ntwo of us, you cannot stand\\lbefore the ECHO.",
-  "fr": "SILVER : {PLAYER}. Bats-toi contre\\nnous. Contre nous deux, dos à dos.\\pSans repos.\\pSi tu peux pas tenir devant nous\\ndeux, tu peux pas tenir devant\\ll'ÉCHO."
+  "fr": "SILVER : {PLAYER}. Bats-toi contre\\nnous. Contre nous deux, dos à dos.\\pSans repos.\\pSi tu tiens pas devant nous\\ndeux, tu tiens pas devant\\ll'ÉCHO."
  },
  "SevenIsland_SevaultCanyon_Text_SceneSilver5": {
   "en": "SILVER: Thank you. I will walk\\nbeside him now. Not behind.",
@@ -257,7 +257,7 @@
  },
  "SevenIsland_SevaultCanyon_Text_SceneSilverDefeat": {
   "en": "I lost. But for the first time...\\nI do not mind.",
-  "fr": "J'ai perdu. Mais pour la première\\nfois… cela ne me dérange pas."
+  "fr": "J'ai perdu. Mais pour la première\\nfois… ça me dérange pas."
  },
  "SevenIsland_SevaultCanyon_Text_SceneSilverRed": {
   "en": "SILVER: RED trains here again, on\\nthe highest peak. I came for a\\lrematch. He has not answered yet.",

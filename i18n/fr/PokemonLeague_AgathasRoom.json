@@ -5,7 +5,7 @@
  },
  "PokemonLeague_AgathasRoom_Text_Intro": {
   "en": "I am AGATHA of the ELITE FOUR.\\pI hear OAK's taken a lot of\\ninterest in you, child.\\pThat old duff was once tough and\\nhandsome.\\pBut that was decades ago.\\nHe's a shadow of his former self.\\pNow he just wants to fiddle with\\nhis POKéDEX.\\pHe's wrong.\\nPOKéMON are for battling!\\p{PLAYER}! I'll show you how a real\\nTRAINER battles!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
-  "fr": "Je suis AGATHA du CONSEIL 4.\\pJ'ai entendu dire que CHEN s'est\\nbeaucoup intéressé à toi.\\pCe vieux bonhomme était autrefois\\nsolide et beau.\\pMais c'était il y a des décennies.\\nIl n'est plus que l'ombre de\\llui-même.\\pMaintenant il veut juste bricoler\\navec son POKéDEX.\\pIl a tort. Les POKéMON sont faits\\npour combattre !\\p{PLAYER} ! Je vais te montrer\\ncomment combat un vrai DRESSEUR !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
+  "fr": "Je suis AGATHA du CONSEIL 4.\\pJ'ai entendu dire que CHEN s'est\\nbeaucoup intéressé à toi.\\pCe vieux bonhomme était autrefois\\nsolide et beau.\\pMais c'était il y a des décennies.\\nIl est plus que l'ombre de\\llui-même.\\pMaintenant il veut juste bricoler\\navec son POKéDEX.\\pIl a tort. Les POKéMON sont faits\\npour combattre !\\p{PLAYER} ! Je vais te montrer\\ncomment combat un vrai DRESSEUR !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
  },
  "PokemonLeague_AgathasRoom_Text_PostBattle": {
   "en": "You win!\\pI see what the old duff sees in\\nyou now.\\pI have nothing else to say.\\nRun along now, child!",
@@ -13,6 +13,6 @@
  },
  "PokemonLeague_AgathasRoom_Text_RematchIntro": {
   "en": "I am AGATHA of the ELITE FOUR.\\pYou're the child that OAK's taken\\nunder his wing, aren't you?\\pThat old duff was once tough and\\nhandsome.\\pBut that was decades ago.\\nHe's a shadow of his former self.\\pNow he just wants to fiddle with\\nhis POKéDEX.\\pHe's wrong.\\nPOKéMON are for battling!\\p{PLAYER}! I'll show you how a real\\nTRAINER battles!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
-  "fr": "Je suis AGATHA du CONSEIL 4.\\pTu es le gamin que CHEN a pris sous\\nson aile, pas vrai ?\\pCe vieux bonhomme était autrefois\\nsolide et beau.\\pMais c'était il y a des décennies.\\nIl n'est plus que l'ombre de\\llui-même.\\pMaintenant il veut juste bricoler\\navec son POKéDEX.\\pIl a tort. Les POKéMON sont faits\\npour combattre !\\p{PLAYER} ! Je vais te montrer\\ncomment combat un vrai DRESSEUR !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
+  "fr": "Je suis AGATHA du CONSEIL 4.\\pT'es le gamin que CHEN a pris sous\\nson aile, pas vrai ?\\pCe vieux bonhomme était autrefois\\nsolide et beau.\\pMais c'était il y a des décennies.\\nIl est plus que l'ombre de\\llui-même.\\pMaintenant il veut juste bricoler\\navec son POKéDEX.\\pIl a tort. Les POKéMON sont faits\\npour combattre !\\p{PLAYER} ! Je vais te montrer\\ncomment combat un vrai DRESSEUR !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
  }
 }

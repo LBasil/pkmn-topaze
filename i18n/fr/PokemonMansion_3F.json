@@ -37,7 +37,7 @@
  },
  "PokemonMansion_3F_Text_Onybris4Intro": {
   "en": "Last stop, kid! Hold it there!",
-  "fr": "Dernier arrêt ! Ne bouge\\nplus !"
+  "fr": "Dernier arrêt ! Bouge\\nplus !"
  },
  "PokemonMansion_3F_Text_Onybris4Post": {
   "en": "The TOPAZ is on the pedestal.\\nSELENE guards it. Good luck.",
@@ -57,7 +57,7 @@
  },
  "PokemonMansion_3F_Text_SeleneStops": {
   "en": "SELENE: Hands off the pedestal!\\nYou do not walk past ME, brat!",
-  "fr": "SELENE : Pas touche au piédestal !\\nTu ne passes pas devant MOI !"
+  "fr": "SELENE : Touche pas au piédestal !\\nTu passes pas devant MOI !"
  },
  "PokemonMansion_3F_Text_TopazPedestal": {
   "en": "A golden crystal hums on the\\npedestal. The real TOPAZ!",

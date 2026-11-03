@@ -9,7 +9,7 @@
  },
  "Route12_FishingHouse_Text_DoesntLookLikeMagikarp": {
   "en": "Uh… That doesn't look much like\\na MAGIKARP.",
-  "fr": "Euh… Ça ne ressemble pas beaucoup\\nà un MAGICARPE."
+  "fr": "Euh… Ça ressemble pas beaucoup\\nà un MAGICARPE."
  },
  "Route12_FishingHouse_Text_HmmXInchesDoesntMeasureUp": {
   "en": "Hmm…\\nThis one is {STR_VAR_2} inches long.\\pIt doesn't measure up to the\\n{STR_VAR_3}-inch one you brought before.",
@@ -29,7 +29,7 @@
  },
  "Route12_FishingHouse_Text_Lore": {
   "en": "Hm? You carry a stone. I can feel\\nit, the way fish feel a storm.\\pSit, child. Ten years ago, one\\nnight, the sea off this pier\\lglowed violet.\\pEvery POKéMON in the water leapt\\nat once. By dawn their TYPES had\\lchanged. That was the AURA.\\pThe big sleeper out on the pier\\nsaw it all, and has not woken\\lsince. I think it is waiting.\\pThe stones are older than the\\nAURA. They were made to hold it.\\pTake this, for listening to an\\nold man.",
-  "fr": "Hm ? Tu portes une pierre. Je la\\nsens, comme les poissons sentent\\ll'orage.\\pAssieds-toi. Il y a dix ans, une\\nnuit, la mer au large de cette\\ljetée a brillé en violet.\\pTous les POKéMON dans l'eau ont\\nbondi en même temps. À l'aube leurs\\pTYPES avaient changé. C'était\\nl'AURA.\\pLe gros dormeur sur la jetée a tout\\nvu, et ne s'est pas réveillé\\ldepuis. Je crois qu'il attend.\\pLes pierres sont plus vieilles que\\nl'AURA. Elles ont été faites pour\\lla contenir.\\pPrends ça, pour avoir écouté un\\nvieil homme."
+  "fr": "Hm ? Tu portes une pierre. Je la\\nsens, comme les poissons sentent\\ll'orage.\\pAssieds-toi. Il y a dix ans, une\\nnuit, la mer au large de cette\\ljetée a brillé en violet.\\pTous les POKéMON dans l'eau ont\\nbondi en même temps. À l'aube leurs\\pTYPES avaient changé. C'était\\nl'AURA.\\pLe gros dormeur sur la jetée a tout\\nvu, et s'est pas réveillé\\ldepuis. Je crois qu'il attend.\\pLes pierres sont plus vieilles que\\nl'AURA. Elles ont été faites pour\\lla contenir.\\pPrends ça, pour avoir écouté un\\nvieil homme."
  },
  "Route12_FishingHouse_Text_LoreEnd": {
   "en": "If a man in black asks, I told you\\nnothing. Shall we talk fishing?",

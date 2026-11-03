@@ -17,7 +17,7 @@
  },
  "SixIsland_WaterPath_House1_Text_ItsXInchesYInchesWasBiggest": {
   "en": "Oh, it's just {STR_VAR_2} inches.\\nThe HERACROSS before was bigger.\\pIt was {STR_VAR_3} inches, the biggest\\nHERACROSS you've brought me.",
-  "fr": "Oh, ça ne fait que {STR_VAR_2} pouces.\\nLe SCARHINO d'avant était plus\\lgrand.\\pIl faisait {STR_VAR_3} pouces, le plus\\ngrand SCARHINO que tu m'aies\\lapporté."
+  "fr": "Oh, ça fait que {STR_VAR_2} pouces.\\nLe SCARHINO d'avant était plus\\lgrand.\\pIl faisait {STR_VAR_3} pouces, le plus\\ngrand SCARHINO que tu m'aies\\lapporté."
  },
  "SixIsland_WaterPath_House1_Text_LoveItNeedItHeracross": {
   "en": "Hera, hera, HERACROSS!\\nBig and shiny, it's the bug boss!\\lLove it, need it, HERACROSS!",
@@ -29,7 +29,7 @@
  },
  "SixIsland_WaterPath_House1_Text_ThisWontDo": {
   "en": "Oh, no! This won't do!\\pHERACROSS looks much more macho\\nand cool, and has a lovely horn!",
-  "fr": "Oh non ! Ça ne va pas !\\pSCARHINO a l'air bien plus viril\\net cool, et il a une belle corne !"
+  "fr": "Oh non ! Ça va pas !\\pSCARHINO a l'air bien plus viril\\net cool, et il a une belle corne !"
  },
  "SixIsland_WaterPath_House1_Text_WantToSeeBiggerOne": {
   "en": "I want to see a much, much bigger\\nHERACROSS than that one.\\pOh, how I adore them, big\\nHERACROSS!",

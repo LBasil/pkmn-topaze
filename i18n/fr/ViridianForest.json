@@ -1,11 +1,11 @@
 {
  "ViridianForest_Text_AnthonyDefeat": {
   "en": "Oh, boo.\\nNothing went right.",
-  "fr": "Oh, zut.\\nRien n'a marché."
+  "fr": "Oh, zut.\\nRien a marché."
  },
  "ViridianForest_Text_AnthonyIntro": {
   "en": "I might be little, but I won't like\\nit if you go easy on me!",
-  "fr": "Je suis peut-être petit, mais je\\nn'aimerais pas que tu y ailles\\ldoucement !"
+  "fr": "Je suis petit, mais j'aimerais pas\\nque tu y ailles doucement !"
  },
  "ViridianForest_Text_AnthonyPostBattle": {
   "en": "I lost some of my allowance…",
@@ -73,7 +73,7 @@
  },
  "ViridianForest_Text_SammyDefeat": {
   "en": "I give!\\nYou're good at this!",
-  "fr": "Je me rends !\\nTu es doué !"
+  "fr": "Je me rends !\\nT'es doué !"
  },
  "ViridianForest_Text_SammyIntro": {
   "en": "Hey, wait up!\\nWhat's the hurry? Why the rush?",

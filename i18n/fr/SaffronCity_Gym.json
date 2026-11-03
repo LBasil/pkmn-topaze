@@ -81,15 +81,15 @@
  },
  "SaffronCity_Gym_Text_SabrinaBusy": {
   "en": "NOX: Not now, child.\\pThree of the strongest trainers\\nwent into the tower.\\pWait for them to come back,\\nor not. Then we talk.",
-  "fr": "NOX : Pas maintenant, enfant.\\pTrois des plus forts dresseurs sont\\nentrés dans la tour.\\pAttends qu'ils reviennent, ou pas.\\nEnsuite nous parlerons."
+  "fr": "NOX : Pas maintenant, enfant.\\pTrois des plus forts dresseurs sont\\nentrés dans la tour.\\pAttends qu'ils reviennent, ou pas.\\nEnsuite on parlera."
  },
  "SaffronCity_Gym_Text_SabrinaDefeat": {
   "en": "So you can fight what you cannot\\nsee.\\pTake the HEMATITE BADGE.",
-  "fr": "Alors tu sais combattre ce que tu\\nne vois pas.\\pPrends le BADGE HÉMATITE."
+  "fr": "Alors tu sais combattre ce que tu\\nvois pas.\\pPrends le BADGE HÉMATITE."
  },
  "SaffronCity_Gym_Text_SabrinaIntro": {
   "en": "You find your way here in the\\ndark, challenger. Good.\\pI am NOX. HEMATOWN never sees the\\nsun, and neither do my DARK\\pPOKéMON.\\pThey hide, they steal, they\\nstrike where you do not look. Let\\pme show you!",
-  "fr": "Tu as trouvé ton chemin ici dans le\\nnoir, challenger. Bien.\\pJe suis NOX. HEMATOWN ne voit\\njamais le soleil, et mes POKéMON\\pTÉNÈBRES non plus.\\pIls se cachent, ils volent, ils\\nfrappent là où tu regardes pas.\\pLaisse-moi te montrer !"
+  "fr": "T'as trouvé ton chemin ici dans le\\nnoir, challenger. Bien.\\pJe suis NOX. HEMATOWN voit\\njamais le soleil, et mes POKéMON\\pTÉNÈBRES non plus.\\pIls se cachent, ils volent, ils\\nfrappent là où tu regardes pas.\\pLaisse-moi te montrer !"
  },
  "SaffronCity_Gym_Text_SabrinaPostBattle": {
   "en": "Light fades when too many people\\nwant it.\\pThere is one more LEADER before\\nthe road ends. And a certain wish\\pstill floating out there.",
@@ -153,7 +153,7 @@
  },
  "SaffronCity_Gym_Text_TyronIntro": {
   "en": "You understand, don't you?\\pThat power alone isn't enough to\\nwin in the world of POKéMON?",
-  "fr": "Tu comprends, pas vrai ?\\pQue la puissance seule ne suffit\\npas pour gagner dans le monde des\\lPOKéMON ?"
+  "fr": "Tu comprends, pas vrai ?\\pQue la puissance seule suffit\\npas pour gagner dans le monde des\\lPOKéMON ?"
  },
  "SaffronCity_Gym_Text_TyronPostBattle": {
   "en": "NOX just wiped out the KARATE\\nMASTER next door.",

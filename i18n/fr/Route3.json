@@ -17,7 +17,7 @@
  },
  "Route3_Text_CalvinIntro": {
   "en": "Hey! You're not wearing shorts!\\nWhat's wrong with you?",
-  "fr": "Hé ! Tu portes pas de short !\\nQu'est-ce qui ne va pas chez toi ?"
+  "fr": "Hé ! Tu portes pas de short !\\nQu'est-ce qui va pas chez toi ?"
  },
  "Route3_Text_CalvinPostBattle": {
   "en": "I always wear shorts, even in\\nwinter. That's my policy.",
@@ -73,7 +73,7 @@
  },
  "Route3_Text_ProcheThomas_After": {
   "en": "Never underestimate bugs. They\\nalways come back stronger.",
-  "fr": "Ne sous-estime jamais les insectes.\\nIls reviennent toujours plus forts."
+  "fr": "Sous-estime jamais les insectes.\\nIls reviennent toujours plus forts."
  },
  "Route3_Text_ProcheThomas_Defeat": {
   "en": "Ha! Not bad at all!",
@@ -85,7 +85,7 @@
  },
  "Route3_Text_ProcheThomas_Intro": {
   "en": "Yo, {PLAYER}! Nobody takes BUG types\\nseriously. Let me change your mind!",
-  "fr": "Yo, {PLAYER} ! Personne ne prend les\\ntypes INSECTE au sérieux.\\pLaisse-moi te faire changer\\nd'avis !"
+  "fr": "Yo, {PLAYER} ! Personne prend les\\ntypes INSECTE au sérieux.\\pLaisse-moi te faire changer\\nd'avis !"
  },
  "Route3_Text_ProcheThomas_NoRoom": {
   "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",
