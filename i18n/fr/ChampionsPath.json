@@ -1,0 +1,18 @@
+{
+ "ChampionsPath_Text_Npc0": {
+  "fr": "Chaque champion a emprunté ce\\nchemin une fois.",
+  "en": "Every champion has walked this path\\nonce."
+ },
+ "ChampionsPath_Text_Npc1": {
+  "fr": "J'étais fort, autrefois. Maintenant\\nje suis sage.",
+  "en": "I was strong, once. Now I am wise."
+ },
+ "ChampionsPath_Text_ReturnAsk": {
+  "fr": "Prêt à retourner au port ?",
+  "en": "Ready to go back to the dock?"
+ },
+ "ChampionsPath_Text_Stay": {
+  "fr": "Prends ton temps. La marée peut\\nattendre.",
+  "en": "Take your time. The tide can wait."
+ }
+}

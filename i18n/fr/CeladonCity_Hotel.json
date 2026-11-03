@@ -1,0 +1,34 @@
+{
+ "CeladonCity_Hotel_Text_SisBroughtMeOnVacation": {
+  "fr": "Youpi ! Je suis en vacances !\\nMa sœur m'a emmené ! Génial !",
+  "en": "Yippee! I'm on vacation!\\nMy sis brought me along! Awesome!"
+ },
+ "CeladonCity_Hotel_Text_SpaDecline": {
+  "fr": "Bien sûr. Profite de la ville !",
+  "en": "Of course. Enjoy the city!"
+ },
+ "CeladonCity_Hotel_Text_SpaDone": {
+  "fr": "{STR_VAR_1} a l'air aux anges...\\pReviens quand tu veux !",
+  "en": "{STR_VAR_1} looks dreamily content…\\pCome back any time!"
+ },
+ "CeladonCity_Hotel_Text_SpaNoMoney": {
+  "fr": "Oh, tu n'as pas assez d'argent.\\nReviens quand tu en auras !",
+  "en": "Oh, you don't have enough money.\\nCome back when you do!"
+ },
+ "CeladonCity_Hotel_Text_SpaOffer": {
+  "fr": "Je suis en vacances, mais je tiens\\nun petit spa POKéMON pour les\\lclients.\\pUn massage pour un POKéMON coûte\\n300 ¥. Tu en veux un ?",
+  "en": "I'm on vacation, but I run a little\\nPOKéMON spa for guests.\\pA massage for one POKéMON is ¥300.\\nWould you like one?"
+ },
+ "CeladonCity_Hotel_Text_SpaWhich": {
+  "fr": "Quel POKéMON a besoin d'amour ?",
+  "en": "Which POKéMON needs some love?"
+ },
+ "CeladonCity_Hotel_Text_ThisHotelIsForPeople": {
+  "fr": "Des POKéMON ? Non, c'est un hôtel\\npour les humains.\\pNous sommes complets,\\nmalheureusement.",
+  "en": "POKéMON?\\nNo, this is a hotel for people.\\pWe're full up, unfortunately."
+ },
+ "CeladonCity_Hotel_Text_WhyDidSheBringBrother": {
+  "fr": "Pourquoi ?\\nPourquoi a-t-elle amené son frère ?",
+  "en": "Why?\\nWhy did she bring her brother?"
+ }
+}

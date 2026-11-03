@@ -1,0 +1,34 @@
+{
+ "CeladonCity_Restaurant_Text_MakeRoomForThis": {
+  "fr": "Fais de la place pour ça !",
+  "en": "Make room for this!"
+ },
+ "CeladonCity_Restaurant_Text_ManLostItAllAtSlots": {
+  "fr": "Miam...\\pL'homme à cette table a tout perdu\\naux machines à sous.",
+  "en": "Munch…\\pThe man at that table lost it all\\nat the slots."
+ },
+ "CeladonCity_Restaurant_Text_OftenGoToDrugstore": {
+  "fr": "Mes POKéMON sont faibles, alors je\\ndois souvent aller à la PHARMACIE.",
+  "en": "My POKéMON are weak, so I often\\nhave to go to the DRUGSTORE."
+ },
+ "CeladonCity_Restaurant_Text_PsstBasementUnderGameCorner": {
+  "fr": "Psst ! Il paraît qu'il y a un\\nsous-sol sous le CASINO.",
+  "en": "Psst! There's a basement under the\\nGAME CORNER, I hear."
+ },
+ "CeladonCity_Restaurant_Text_ReceivedCoinCaseFromMan": {
+  "fr": "{PLAYER} a reçu une BOÎTE À JETONS\\nde la part de l'homme.",
+  "en": "{PLAYER} received a COIN CASE\\nfrom the man."
+ },
+ "CeladonCity_Restaurant_Text_TakeThisImBusted": {
+  "fr": "Vas-y ! Ris !\\nJe suis complètement fauché !\\pFini les machines à sous pour moi !\\nJe me range !\\pTiens !\\nJe n'en aurai plus besoin !",
+  "en": "Go ahead! Laugh!\\nI'm flat-out busted!\\pNo more slots for me!\\nI'm going straight!\\pHere!\\nI won't be needing this anymore!"
+ },
+ "CeladonCity_Restaurant_Text_TakingBreakRightNow": {
+  "fr": "Salut !\\pDésolé, mais nous faisons une\\npause en ce moment.",
+  "en": "Hi!\\pSorry, but we're taking a break\\nright now."
+ },
+ "CeladonCity_Restaurant_Text_ThoughtIdWinItBack": {
+  "fr": "J'ai toujours cru que je\\nrattraperais tout...",
+  "en": "I always thought I was going to\\nwin it back…"
+ }
+}

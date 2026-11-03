@@ -1,0 +1,18 @@
+{
+ "SaffronCity_Text_Clock_NoRoom": {
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
+  "en": "Your BAG is full. Make room, then\\ncome back."
+ },
+ "SaffronCity_Text_RefHunter1": {
+  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Ne te mêle pas de ça,\\ppetit !",
+  "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!"
+ },
+ "SaffronCity_Text_RefHunter2": {
+  "fr": "CHASSEUR : Tu as battu mon associé ?\\nSoit, je n'ai pas peur d'un\\lranger !",
+  "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!"
+ },
+ "SaffronCity_Text_TQ_NoRoom": {
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
+  "en": "Your BAG is full. Make room, then\\ncome back."
+ }
+}

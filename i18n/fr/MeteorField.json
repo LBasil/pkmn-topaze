@@ -1,0 +1,10 @@
+{
+ "MeteorField_Text_ReturnAsk": {
+  "fr": "Prêt à retourner au port ?",
+  "en": "Ready to go back to the dock?"
+ },
+ "MeteorField_Text_Stay": {
+  "fr": "Prends ton temps. La marée peut\\nattendre.",
+  "en": "Take your time. The tide can wait."
+ }
+}

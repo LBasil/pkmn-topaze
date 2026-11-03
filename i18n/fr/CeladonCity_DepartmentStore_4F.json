@@ -1,0 +1,14 @@
+{
+ "CeladonCity_DepartmentStore_4F_Text_CanRunAwayWithPokeDoll": {
+  "fr": "J'ai entendu un truc utile.\\pSi un POKéMON sauvage apparaît, tu\\npeux le distraire avec une\\lPOKé POUPÉE.\\pTu peux t'enfuir pendant que le\\nPOKéMON sauvage est distrait.",
+  "en": "I heard something useful.\\pIf a wild POKéMON appears, you can\\ndistract it with a POKé DOLL.\\pYou can run away while the wild\\nPOKéMON is distracted."
+ },
+ "CeladonCity_DepartmentStore_4F_Text_FloorSign": {
+  "fr": "Exprime-toi avec des cadeaux !\\n4F : CADEAUX DU SAGE\\pSpécial Évolution !\\nPIERRES élémentaires en promo !",
+  "en": "Express yourself with gifts!\\n4F: WISE MAN GIFTS\\pEvolution Special!\\nElement STONES on sale now!"
+ },
+ "CeladonCity_DepartmentStore_4F_Text_GettingPokeDollAsPresent": {
+  "fr": "Je cherche un cadeau pour ma\\ncopine.\\pJe crois que ce sera une\\nPOKé POUPÉE. C'est à la mode.",
+  "en": "I'm getting a present for my\\ngirlfriend.\\pI guess a POKé DOLL will be it.\\nIt's the popular thing."
+ }
+}

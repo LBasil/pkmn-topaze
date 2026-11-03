@@ -1,0 +1,42 @@
+{
+ "PalletTown_Text_Archive_NoRoom": {
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
+  "en": "Your BAG is full. Make room, then\\ncome back."
+ },
+ "PalletTown_Text_CaughtXPuttingInHonestEffort": {
+  "fr": "Tu en as capturé {STR_VAR_2}...\\pOn voit que tu y mets du tien.\\pReviens me voir quand tu en auras\\nattrapé d'autres.",
+  "en": "You've caught {STR_VAR_2}…\\pHm, it looks as if you're putting\\nin an honest effort.\\pWhen you manage to fill it some\\nmore, come show me, please."
+ },
+ "PalletTown_Text_OakLetMeSeePokedex": {
+  "fr": "CHEN: Ah, {PLAYER} !\\nEnfin de retour.\\pOù en est ton POKéDEX ?\\pJe peux l'analyser si tu veux.\\pVoyons...",
+  "en": "OAK: Ah, {PLAYER}!\\nYou're back, are you?\\pHow much have you filled in your\\nPOKéDEX?\\pMay I see it?\\pLet's see…"
+ },
+ "PalletTown_Text_OakPokemonResearchLab": {
+  "fr": "LABORATOIRE DU PROFESSEUR CHEN",
+  "en": "OAK POKéMON RESEARCH LAB"
+ },
+ "PalletTown_Text_PlayersHouse": {
+  "fr": "Maison de {PLAYER}",
+  "en": "{PLAYER}'s house"
+ },
+ "PalletTown_Text_RaisingMonsToo": {
+  "fr": "Moi aussi j'ai des POKéMON.\\pUne fois qu'ils seront forts,\\nils me protègeront.",
+  "en": "I'm raising POKéMON, too.\\pWhen they get strong, they can\\nprotect me."
+ },
+ "PalletTown_Text_RivalsHouse": {
+  "fr": "Maison de {RIVAL}",
+  "en": "{RIVAL}'s family RANCH"
+ },
+ "PalletTown_Text_SchoolSign": {
+  "fr": "ÉCOLE DE GRENALUX\\nLà où tout dresseur débute.",
+  "en": "GRENALUX SCHOOL\\nWhere every trainer begins."
+ },
+ "PalletTown_Text_TQ_NoRoom": {
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
+  "en": "Your BAG is full. Make room, then\\ncome back."
+ },
+ "PalletTown_Text_TownSign": {
+  "fr": "GRENALUX\\pLà où toutes les aventures\\ncommencent !",
+  "en": "GRENALUX\\nWhere every journey begins!"
+ }
+}

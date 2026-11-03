@@ -1,0 +1,18 @@
+{
+ "KindleTrail_Text_Quest0_NoRoomT": {
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
+  "en": "Your BAG is full. Make room, then\\ncome back."
+ },
+ "KindleTrail_Text_ReturnAsk": {
+  "fr": "Prêt à retourner au port ?",
+  "en": "Ready to go back to the dock?"
+ },
+ "KindleTrail_Text_Stay": {
+  "fr": "Prends ton temps. La marée peut\\nattendre.",
+  "en": "Take your time. The tide can wait."
+ },
+ "KindleTrail_Text_TopazeFindFull": {
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
+  "en": "Something shines here, but your BAG\\nis full."
+ }
+}

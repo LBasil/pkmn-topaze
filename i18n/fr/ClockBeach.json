@@ -1,0 +1,14 @@
+{
+ "ClockBeach_Text_Boss_NoRoom": {
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
+  "en": "Your BAG is full. Make room, then\\ncome back."
+ },
+ "ClockBeach_Text_ReturnAsk": {
+  "fr": "Prêt à retourner au port ?",
+  "en": "Ready to go back to the dock?"
+ },
+ "ClockBeach_Text_Stay": {
+  "fr": "Prends ton temps. La marée peut\\nattendre.",
+  "en": "Take your time. The tide can wait."
+ }
+}

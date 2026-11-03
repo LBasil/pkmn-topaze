@@ -1,0 +1,18 @@
+{
+ "FrostHollow_Text_Quest0_MissT": {
+  "fr": "Deux ANTI-BRÛLE, s'il vous plaît.",
+  "en": "Two BURN HEALs, please."
+ },
+ "FrostHollow_Text_Quest0_NoRoomT": {
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
+  "en": "Your BAG is full. Make room, then\\ncome back."
+ },
+ "FrostHollow_Text_ReturnAsk": {
+  "fr": "Prêt à retourner au port ?",
+  "en": "Ready to go back to the dock?"
+ },
+ "FrostHollow_Text_Stay": {
+  "fr": "Prends ton temps. La marée peut\\nattendre.",
+  "en": "Take your time. The tide can wait."
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "CollectorShop_Text_ReturnAsk": {
+  "fr": "Prêt à retourner au port ?",
+  "en": "Ready to go back to the dock?"
+ },
+ "CollectorShop_Text_ShopBye": {
+  "fr": "Reviens quand tu veux.",
+  "en": "Come back any time."
+ },
+ "CollectorShop_Text_Stay": {
+  "fr": "Prends ton temps. La marée peut\\nattendre.",
+  "en": "Take your time. The tide can wait."
+ }
+}

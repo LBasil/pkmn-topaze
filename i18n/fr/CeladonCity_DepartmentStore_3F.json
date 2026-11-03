@@ -1,0 +1,62 @@
+{
+ "CeladonCity_DepartmentStore_3F_Text_AnRPG": {
+  "fr": "Un RPG !\\nPas le temps pour ça !",
+  "en": "An RPG!\\nThere's no time for that!"
+ },
+ "CeladonCity_DepartmentStore_3F_Text_BuddyTradingKangaskhanForHaunter": {
+  "fr": "Super !\\pMon pote va m'échanger son\\nKANGOUREX contre mon SPECTRUM !",
+  "en": "All right!\\pMy buddy's going to trade me his\\nKANGASKHAN for my HAUNTER!"
+ },
+ "CeladonCity_DepartmentStore_3F_Text_CanIdentifyTradeMonsByID": {
+  "fr": "Tu peux reconnaître les POKéMON\\nreçus par échange à leur No. ID.",
+  "en": "You can identify POKéMON you get\\nin trades by their ID Numbers."
+ },
+ "CeladonCity_DepartmentStore_3F_Text_FightingGame": {
+  "fr": "Un jeu de combat !\\nÇa a l'air dur !",
+  "en": "A fighting game!\\nLooks tough!"
+ },
+ "CeladonCity_DepartmentStore_3F_Text_HaunterEvolvedOnTrade": {
+  "fr": "Allez, SPECTRUM !\\pJ'adore SPECTRUM !\\nJe les collectionne !\\pHein ?\\pSPECTRUM s'est transformé en un\\nautre POKéMON pendant l'échange !",
+  "en": "Come on, HAUNTER!\\pI love HAUNTER!\\nI collect them!\\pHuh?\\pHAUNTER turned into a different\\nPOKéMON while being traded!"
+ },
+ "CeladonCity_DepartmentStore_3F_Text_ItsSuperNES": {
+  "fr": "C'est une Super NES.",
+  "en": "It's a Super NES."
+ },
+ "CeladonCity_DepartmentStore_3F_Text_OTStandsForOriginalTrainer": {
+  "fr": "Les POKéMON capturés sont\\nenregistrés avec No. ID et DO.\\pDO = « Dresseur d'Origine » :\\nle DRESSEUR qui l'a capturé.",
+  "en": "Captured POKéMON are registered\\nwith an ID No. and the OT.\\pOT stands for “Original TRAINER” -\\nthe TRAINER that caught it first."
+ },
+ "CeladonCity_DepartmentStore_3F_Text_PuzzleGame": {
+  "fr": "Un jeu de puzzle !\\nÇa a l'air addictif !",
+  "en": "A puzzle game!\\nLooks addictive!"
+ },
+ "CeladonCity_DepartmentStore_3F_Text_RedGreenBothArePokemon": {
+  "fr": "Rouge et Vert !\\nLes deux sont des jeux POKéMON !",
+  "en": "Red and Green!\\nBoth are POKéMON!"
+ },
+ "CeladonCity_DepartmentStore_3F_Text_SportsGame": {
+  "fr": "Un jeu de sport !\\nPapa va aimer !",
+  "en": "A sports game!\\nDad'll like that!"
+ },
+ "CeladonCity_DepartmentStore_3F_Text_TVGameShop": {
+  "fr": "3F : BOUTIQUE DE JEUX VIDÉO",
+  "en": "3F: TV GAME SHOP"
+ },
+ "Text_CounterDeclined": {
+  "fr": "Ça ne t'intéresse pas ? Viens me\\nvoir si tu changes d'avis.",
+  "en": "You're not interested? Come see\\nme if you change your mind."
+ },
+ "Text_CounterTaught": {
+  "fr": "Tu utilises la capacité RIPOSTE que\\nj'ai enseignée à ton POKéMON ?",
+  "en": "Are you using that COUNTER move\\nI taught your POKéMON?"
+ },
+ "Text_CounterTeach": {
+  "fr": "Oh, salut !\\nJ'ai enfin fini POKéMON.\\pPas encore fini ? Et si je\\nt'enseignais une bonne capacité ?\\pCelle que j'ai en tête, c'est\\nRIPOSTE.\\pIl faut une bonne répartie pour\\nl'utiliser !",
+  "en": "Oh, hi!\\nI finally finished POKéMON.\\pNot done yet? How about I teach\\nyou a good move?\\pThe move I have in mind is\\nCOUNTER.\\pNot like the one I'm leaning on,\\nmind you!"
+ },
+ "Text_CounterWhichMon": {
+  "fr": "À quel POKéMON dois-je enseigner\\nRIPOSTE ?",
+  "en": "Which POKéMON should I teach\\nCOUNTER to?"
+ }
+}

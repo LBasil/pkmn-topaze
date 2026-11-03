@@ -1,0 +1,90 @@
+{
+ "BabyNursery_Text_G0": {
+  "fr": "Prends-en bien soin !",
+  "en": "Take good care of it!"
+ },
+ "BabyNursery_Text_G1": {
+  "fr": "Prends-en bien soin !",
+  "en": "Take good care of it!"
+ },
+ "BabyNursery_Text_G2": {
+  "fr": "Prends-en bien soin !",
+  "en": "Take good care of it!"
+ },
+ "BabyNursery_Text_G3": {
+  "fr": "Prends-en bien soin !",
+  "en": "Take good care of it!"
+ },
+ "BabyNursery_Text_G4": {
+  "fr": "Prends-en bien soin !",
+  "en": "Take good care of it!"
+ },
+ "BabyNursery_Text_G5": {
+  "fr": "Prends-en bien soin !",
+  "en": "Take good care of it!"
+ },
+ "BabyNursery_Text_G6": {
+  "fr": "Prends-en bien soin !",
+  "en": "Take good care of it!"
+ },
+ "BabyNursery_Text_G7": {
+  "fr": "Prends-en bien soin !",
+  "en": "Take good care of it!"
+ },
+ "BabyNursery_Text_G8": {
+  "fr": "Prends-en bien soin !",
+  "en": "Take good care of it!"
+ },
+ "BabyNursery_Text_Hello": {
+  "fr": "Les petits ont besoin d'un foyer.\\nChaque BADGE ouvre un nouveau\\pberceau. Tu en prends un ?",
+  "en": "Little ones need a home. Each BADGE\\nopens a new cradle. Take one?"
+ },
+ "BabyNursery_Text_Nothing": {
+  "fr": "Rien pour toi pour l'instant.\\nReviens avec plus.",
+  "en": "Nothing for you right now. Come\\nback with more."
+ },
+ "BabyNursery_Text_O0": {
+  "fr": "Un PICHU, timide et tout mignon.\\nAs-tu un coup de foudre ?",
+  "en": "A PICHU, shy and sparkling. Adopt\\nit?"
+ },
+ "BabyNursery_Text_O1": {
+  "fr": "Un MÉLO tombé des étoiles.\\nTu souhaites l'adopter ?",
+  "en": "A CLEFFA fell from the stars. Adopt\\nit?"
+ },
+ "BabyNursery_Text_O2": {
+  "fr": "Un TOUDOUDOU, doux comme un nuage.\\nL'adopter ?",
+  "en": "An IGGLYBUFF, soft as a cloud.\\nAdopt it?"
+ },
+ "BabyNursery_Text_O3": {
+  "fr": "Un AZURILL, rebondissant et bleu.\\nL'adopter ?",
+  "en": "An AZURILL, bouncy and blue. Adopt\\nit?"
+ },
+ "BabyNursery_Text_O4": {
+  "fr": "Un LIPPOUTI, toujours prêt pour un\\nbisou. L'adopter ?",
+  "en": "A SMOOCHUM, always ready for a\\nkiss. Adopt it?"
+ },
+ "BabyNursery_Text_O5": {
+  "fr": "Un ÉLEKID, plein d'étincelles.\\nL'adopter ?",
+  "en": "An ELEKID, full of sparks. Adopt\\nit?"
+ },
+ "BabyNursery_Text_O6": {
+  "fr": "Un MAGBY, chaud et curieux.\\nL'adopter ?",
+  "en": "A MAGBY, warm and curious. Adopt\\nit?"
+ },
+ "BabyNursery_Text_O7": {
+  "fr": "Un DÉBUGANT, prêt à se battre.\\nL'adopter ?",
+  "en": "A TYROGUE, ready to brawl. Adopt\\nit?"
+ },
+ "BabyNursery_Text_O8": {
+  "fr": "Un OKÉOKÉ, toujours souriant.\\nL'adopter ?",
+  "en": "A WYNAUT, always smiling. Adopt it?"
+ },
+ "BabyNursery_Text_ReturnAsk": {
+  "fr": "Prêt à retourner au port ?",
+  "en": "Ready to go back to the dock?"
+ },
+ "BabyNursery_Text_Stay": {
+  "fr": "Prends ton temps. La marée peut\\nattendre.",
+  "en": "Take your time. The tide can wait."
+ }
+}

@@ -1,0 +1,18 @@
+{
+ "BerryBrook_Text_Npc0": {
+  "fr": "Les baies d'ici ont un goût de\\nbonbon.",
+  "en": "The berries here taste like candy."
+ },
+ "BerryBrook_Text_Npc1": {
+  "fr": "Les ZIGZATON les volent.\\nIls sont mignons.",
+  "en": "ZIGZAGOON steals them. Cute thief."
+ },
+ "BerryBrook_Text_ReturnAsk": {
+  "fr": "Prêt à retourner au port ?",
+  "en": "Ready to go back to the dock?"
+ },
+ "BerryBrook_Text_Stay": {
+  "fr": "Prends ton temps. La marée peut\\nattendre.",
+  "en": "Take your time. The tide can wait."
+ }
+}

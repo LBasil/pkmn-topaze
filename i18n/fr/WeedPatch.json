@@ -1,0 +1,18 @@
+{
+ "WeedPatch_Text_Npc0": {
+  "fr": "Les insectes grandissent vite.\\nCapture-en deux de chaque,\\lau cas où.",
+  "en": "Bugs grow fast. Catch two of each,\\njust in case."
+ },
+ "WeedPatch_Text_Npc1": {
+  "fr": "ARMULYS et BLINDALYS finissent tous\\ndeux par voler.",
+  "en": "CASCOON and SILCOON both end up\\nflying."
+ },
+ "WeedPatch_Text_ReturnAsk": {
+  "fr": "Prêt à retourner au port ?",
+  "en": "Ready to go back to the dock?"
+ },
+ "WeedPatch_Text_Stay": {
+  "fr": "Prends ton temps. La marée peut\\nattendre.",
+  "en": "Take your time. The tide can wait."
+ }
+}

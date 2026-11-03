@@ -1,0 +1,82 @@
+{
+ "BarterHouse_Text_G0": {
+  "fr": "Prends-en bien soin !",
+  "en": "Take good care of it!"
+ },
+ "BarterHouse_Text_G1": {
+  "fr": "Prends-en bien soin !",
+  "en": "Take good care of it!"
+ },
+ "BarterHouse_Text_G2": {
+  "fr": "Prends-en bien soin !",
+  "en": "Take good care of it!"
+ },
+ "BarterHouse_Text_G3": {
+  "fr": "Prends-en bien soin !",
+  "en": "Take good care of it!"
+ },
+ "BarterHouse_Text_G4": {
+  "fr": "Prends-en bien soin !",
+  "en": "Take good care of it!"
+ },
+ "BarterHouse_Text_G5": {
+  "fr": "Prends-en bien soin !",
+  "en": "Take good care of it!"
+ },
+ "BarterHouse_Text_G6": {
+  "fr": "Prends-en bien soin !",
+  "en": "Take good care of it!"
+ },
+ "BarterHouse_Text_G7": {
+  "fr": "Prends-en bien soin !",
+  "en": "Take good care of it!"
+ },
+ "BarterHouse_Text_Hello": {
+  "fr": "J'échange de petits trésors contre\\ndes POKéMON rares.\\lVoyons ce que tu as.",
+  "en": "I trade small treasures for rare\\nPOKéMON. Let us see what you carry."
+ },
+ "BarterHouse_Text_Nothing": {
+  "fr": "Rien pour toi pour l'instant.\\nReviens avec plus.",
+  "en": "Nothing for you right now. Come\\nback with more."
+ },
+ "BarterHouse_Text_O0": {
+  "fr": "3 ÉCAILLES CŒUR contre un\\nBARPAU. Marché conclu ?",
+  "en": "3 HEART SCALES for a FEEBAS. Deal?"
+ },
+ "BarterHouse_Text_O1": {
+  "fr": "Une COQUILLE TRÉFOND contre un\\nOBALIE. Marché conclu ?",
+  "en": "A SHOAL SHELL for a SPHEAL. Deal?"
+ },
+ "BarterHouse_Text_O2": {
+  "fr": "Un SEL TRÉFONDS contre un\\nSTALGAMIN. Marché conclu ?",
+  "en": "A SHOAL SALT for a SNORUNT. Deal?"
+ },
+ "BarterHouse_Text_O3": {
+  "fr": "Un PETIT CHAMPI contre un\\nBALIGNON. Marché conclu ?",
+  "en": "A TINY MUSHROOM for a SHROOMISH.\\nDeal?"
+ },
+ "BarterHouse_Text_O4": {
+  "fr": "Un GROS CHAMPI contre un\\nCHAPIGNON. Marché conclu ?",
+  "en": "A BIG MUSHROOM for a BRELOOM. Deal?"
+ },
+ "BarterHouse_Text_O5": {
+  "fr": "Une PERLE contre un COQUIPERL.\\nMarché conclu ?",
+  "en": "A PEARL for a CLAMPERL. Deal?"
+ },
+ "BarterHouse_Text_O6": {
+  "fr": "Une POUSSIÈRE ÉTOILE contre un\\nSÉLÉROC. Marché conclu ?",
+  "en": "A STARDUST for a LUNATONE. Deal?"
+ },
+ "BarterHouse_Text_O7": {
+  "fr": "2 MORCEAUX D'ÉTOILE contre un\\nSOLAROC. Marché conclu ?",
+  "en": "2 STAR PIECES for a SOLROCK. Deal?"
+ },
+ "BarterHouse_Text_ReturnAsk": {
+  "fr": "Prêt à retourner au port ?",
+  "en": "Ready to go back to the dock?"
+ },
+ "BarterHouse_Text_Stay": {
+  "fr": "Prends ton temps. La marée peut\\nattendre.",
+  "en": "Take your time. The tide can wait."
+ }
+}

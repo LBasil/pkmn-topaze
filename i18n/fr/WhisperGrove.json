@@ -1,0 +1,38 @@
+{
+ "WhisperGrove_Text_Npc0": {
+  "fr": "Écoute. Les arbres murmurent les\\nnoms de ceux qui ne sont plus là.",
+  "en": "Listen. The trees whisper names of\\nthose who passed."
+ },
+ "WhisperGrove_Text_Npc1": {
+  "fr": "FEUFORÊVE chante la nuit. Ne\\nchante pas en retour.",
+  "en": "MISDREAVUS sings at night. Do not\\nsing back."
+ },
+ "WhisperGrove_Text_Quest0_AfterT": {
+  "fr": "Le bosquet est plus calme\\nmaintenant.",
+  "en": "The grove is quieter now."
+ },
+ "WhisperGrove_Text_Quest0_Ask": {
+  "fr": "Une PÉPITE paie le passeur pour une\\nâme perdue. Apporte-m'en une.",
+  "en": "A NUGGET pays the ferryman for a\\nlost soul. Bring me one."
+ },
+ "WhisperGrove_Text_Quest0_Done": {
+  "fr": "L'âme est apaisée. Prends cette\\nRUNE SORT.",
+  "en": "The soul rests. Take this SPELL\\nTAG."
+ },
+ "WhisperGrove_Text_Quest0_MissT": {
+  "fr": "Pas encore de PÉPITE. Cherche sur\\nles routes.",
+  "en": "No NUGGET yet. Look on the routes."
+ },
+ "WhisperGrove_Text_Quest0_NoRoomT": {
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
+  "en": "Your BAG is full. Make room, then\\ncome back."
+ },
+ "WhisperGrove_Text_ReturnAsk": {
+  "fr": "Prêt à retourner au port ?",
+  "en": "Ready to go back to the dock?"
+ },
+ "WhisperGrove_Text_Stay": {
+  "fr": "Prends ton temps. La marée peut\\nattendre.",
+  "en": "Take your time. The tide can wait."
+ }
+}

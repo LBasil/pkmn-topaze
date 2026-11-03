@@ -1,0 +1,42 @@
+{
+ "BlossomCrest_Text_Npc0": {
+  "fr": "La PIERRE SOLEIL et la PIERRE\\nPLANTE les font fleurir.\\pTu peux aller voir à la SERRE.",
+  "en": "SUN STONE and LEAF STONE make these\\nbloom. See the GREENHOUSE."
+ },
+ "BlossomCrest_Text_Npc1": {
+  "fr": "ROSELIA a une fleur dans chaque\\nmain !",
+  "en": "ROSELIA has a flower in each hand!"
+ },
+ "BlossomCrest_Text_Quest0_AfterT": {
+  "fr": "Tout est en fleur.",
+  "en": "Everything is in flower."
+ },
+ "BlossomCrest_Text_Quest0_Ask": {
+  "fr": "Mon jardin a besoin d'une PIERRE\\nPLANTE.\\pJe donne une GRAINE MIRACLE\\nen échange.",
+  "en": "My garden needs a LEAF STONE. I\\nwill give a MIRACLE SEED."
+ },
+ "BlossomCrest_Text_Quest0_Done": {
+  "fr": "La floraison peut commencer !\\nPrends donc cette GRAINE MIRACLE.",
+  "en": "Bloom time! Take this MIRACLE SEED."
+ },
+ "BlossomCrest_Text_Quest0_MissT": {
+  "fr": "Une PIERRE PLANTE, s'il te plaît.",
+  "en": "One LEAF STONE, please."
+ },
+ "BlossomCrest_Text_Quest0_NoRoomT": {
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
+  "en": "Your BAG is full. Make room, then\\ncome back."
+ },
+ "BlossomCrest_Text_ReturnAsk": {
+  "fr": "Prêt à retourner au port ?",
+  "en": "Ready to go back to the dock?"
+ },
+ "BlossomCrest_Text_Stay": {
+  "fr": "Prends ton temps. La marée peut\\nattendre.",
+  "en": "Take your time. The tide can wait."
+ },
+ "BlossomCrest_Text_TopazeFindFull": {
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
+  "en": "Something shines here, but your BAG\\nis full."
+ }
+}

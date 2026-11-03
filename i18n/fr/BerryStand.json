@@ -1,0 +1,22 @@
+{
+ "BerryStand_Text_Npc0": {
+  "fr": "Une baie dans la main vaut mieux\\nqu'une potion.",
+  "en": "A berry in the right hand beats a\\npotion."
+ },
+ "BerryStand_Text_ReturnAsk": {
+  "fr": "Prêt à retourner au port ?",
+  "en": "Ready to go back to the dock?"
+ },
+ "BerryStand_Text_ShopBye": {
+  "fr": "Reviens quand tu veux.",
+  "en": "Come back any time."
+ },
+ "BerryStand_Text_ShopHi": {
+  "fr": "Cueillies ce matin. Choisis la\\ntienne.",
+  "en": "Picked this morning. Take your\\npick."
+ },
+ "BerryStand_Text_Stay": {
+  "fr": "Prends ton temps. La marée peut\\nattendre.",
+  "en": "Take your time. The tide can wait."
+ }
+}

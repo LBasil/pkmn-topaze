@@ -1,0 +1,10 @@
+{
+ "Route8_Text_Echo_NoRoom": {
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
+  "en": "Your BAG is full. Make room, then\\ncome back."
+ },
+ "Route8_Text_RQuest_NoRoom": {
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
+  "en": "Your BAG is full. Make room, then\\ncome back."
+ }
+}

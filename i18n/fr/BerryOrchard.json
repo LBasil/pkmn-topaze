@@ -1,0 +1,38 @@
+{
+ "BerryOrchard_Text_Npc0": {
+  "fr": "Les baies mûrissent ici toute\\nl'année. Prends ce que tu trouves,\\pmais laisse les arbres.",
+  "en": "Berries ripen here all year. Take\\nwhat you find, but leave the trees."
+ },
+ "BerryOrchard_Text_Npc1": {
+  "fr": "Les POKéMON Insecte adorent le\\nverger. Moi aussi.",
+  "en": "Bug POKéMON love the orchard. Me\\ntoo."
+ },
+ "BerryOrchard_Text_Quest0_AfterT": {
+  "fr": "Le verger te remercie.",
+  "en": "The orchard thanks you."
+ },
+ "BerryOrchard_Text_Quest0_Ask": {
+  "fr": "Une BAIE PRINE soigne tout.\\nApporte-m'en une et je t'échange\\pune herbe.",
+  "en": "A LUM BERRY cures anything. Bring\\nme one and I will trade you a herb."
+ },
+ "BerryOrchard_Text_Quest0_Done": {
+  "fr": "Frais comme la rosée. Prends cette\\nHERBE BLANCHE.",
+  "en": "Fresh as the morning. Take this\\nWHITE HERB."
+ },
+ "BerryOrchard_Text_Quest0_MissT": {
+  "fr": "Pas encore de BAIE PRINE.\\nCherche dans l'herbe.",
+  "en": "No LUM BERRY yet. Search the grass."
+ },
+ "BerryOrchard_Text_Quest0_NoRoomT": {
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
+  "en": "Your BAG is full. Make room, then\\ncome back."
+ },
+ "BerryOrchard_Text_ReturnAsk": {
+  "fr": "Prêt à retourner au port ?",
+  "en": "Ready to go back to the dock?"
+ },
+ "BerryOrchard_Text_Stay": {
+  "fr": "Prends ton temps. La marée peut\\nattendre.",
+  "en": "Take your time. The tide can wait."
+ }
+}

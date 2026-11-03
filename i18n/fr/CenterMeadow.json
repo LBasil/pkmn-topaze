@@ -1,0 +1,42 @@
+{
+ "CenterMeadow_Text_Npc0": {
+  "fr": "Les anciennes bêtes du Safari\\nerrent encore dans les champs\\ldu centre.",
+  "en": "Safari stock still roams the center\\nfields."
+ },
+ "CenterMeadow_Text_Npc1": {
+  "fr": "LEVEINARD, KANGOUREX... le rêve\\nd'un collectionneur.",
+  "en": "CHANSEY, KANGASKHAN... a\\ncollector's dream."
+ },
+ "CenterMeadow_Text_Quest0_AfterT": {
+  "fr": "Quelle belle prairie.",
+  "en": "What a fine meadow."
+ },
+ "CenterMeadow_Text_Quest0_Ask": {
+  "fr": "Deux HYPER BALLS pour ma\\ncollection. ŒUF CHANCE en échange !",
+  "en": "Two ULTRA BALLs for my collection.\\nLUCKY EGG for you!"
+ },
+ "CenterMeadow_Text_Quest0_Done": {
+  "fr": "Merveilleux ! Prends cet ŒUF\\nCHANCE.",
+  "en": "Wonderful! Take this LUCKY EGG."
+ },
+ "CenterMeadow_Text_Quest0_MissT": {
+  "fr": "Deux HYPER BALLS, s'il te plaît.",
+  "en": "Two ULTRA BALLs, please."
+ },
+ "CenterMeadow_Text_Quest0_NoRoomT": {
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
+  "en": "Your BAG is full. Make room, then\\ncome back."
+ },
+ "CenterMeadow_Text_ReturnAsk": {
+  "fr": "Prêt à retourner au port ?",
+  "en": "Ready to go back to the dock?"
+ },
+ "CenterMeadow_Text_Stay": {
+  "fr": "Prends ton temps. La marée peut\\nattendre.",
+  "en": "Take your time. The tide can wait."
+ },
+ "CenterMeadow_Text_TopazeFindFull": {
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
+  "en": "Something shines here, but your BAG\\nis full."
+ }
+}

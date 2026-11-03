@@ -1,0 +1,22 @@
+{
+ "BallBoutique_Text_Npc0": {
+  "fr": "FILET pour insectes et eau, PLONGEE\\npour les profondeurs, NID pour les\\pfaibles.",
+  "en": "NET for bugs and water, DIVE for\\nthe deep, NEST for the weak."
+ },
+ "BallBoutique_Text_ReturnAsk": {
+  "fr": "Prêt à retourner au port ?",
+  "en": "Ready to go back to the dock?"
+ },
+ "BallBoutique_Text_ShopBye": {
+  "fr": "Reviens quand tu veux.",
+  "en": "Come back any time."
+ },
+ "BallBoutique_Text_ShopHi": {
+  "fr": "Chaque Ball a son histoire.\\nChoisis la tienne.",
+  "en": "Every ball has a story. Choose\\nyours."
+ },
+ "BallBoutique_Text_Stay": {
+  "fr": "Prends ton temps. La marée peut\\nattendre.",
+  "en": "Take your time. The tide can wait."
+ }
+}

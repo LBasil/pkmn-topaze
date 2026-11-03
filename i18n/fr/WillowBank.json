@@ -1,0 +1,18 @@
+{
+ "WillowBank_Text_Npc0": {
+  "fr": "Je pêche ici tous les jours.\\nJ'attrape des souvenirs.",
+  "en": "I fish here every day. I catch\\nmemories."
+ },
+ "WillowBank_Text_Npc1": {
+  "fr": "LOMBRE rit quand tu perds.\\nC'est un petit fourbe.",
+  "en": "LOMBRE laughs when you lose. Rude."
+ },
+ "WillowBank_Text_ReturnAsk": {
+  "fr": "Prêt à retourner au port ?",
+  "en": "Ready to go back to the dock?"
+ },
+ "WillowBank_Text_Stay": {
+  "fr": "Prends ton temps. La marée peut\\nattendre.",
+  "en": "Take your time. The tide can wait."
+ }
+}

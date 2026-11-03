@@ -1,0 +1,46 @@
+{
+ "CeruleanCity_House3_Text_OldWomanAsk": {
+  "fr": "Mon mari a soif à force d'échanger.\\nNotre puits est à sec.\\pDeux bouteilles d'EAU FRAÎCHE lui\\nsauveraient la journée.",
+  "en": "My husband is thirsty from all that\\ntrading. Our well went dry.\\pTwo bottles of FRESH WATER would\\nsave his day, dear."
+ },
+ "CeruleanCity_House3_Text_OldWomanGives": {
+  "fr": "Oh, merci ! Il boit comme un trou\\nmaintenant.\\pPrends ça, un dresseur le lui a\\noffert il y a longtemps.",
+  "en": "Oh, bless you! He drinks like a\\nfish now.\\pTake this, it was a gift to him\\nfrom a trainer long ago."
+ },
+ "CeruleanCity_House3_Text_OldWomanNo": {
+  "fr": "Bien sûr, bien sûr. Il se\\ndébrouillera.",
+  "en": "Of course, of course. He will\\nmanage."
+ },
+ "CeruleanCity_House3_Text_OldWomanOffer": {
+  "fr": "C'est de l'EAU FRAÎCHE ? Peux-tu\\nm'en donner deux pour mon mari ?",
+  "en": "Is that FRESH WATER? Could you\\nspare two for my husband?"
+ },
+ "CeruleanCity_House3_Text_PleaseTradeWithMyHusband": {
+  "fr": "Mon mari aime échanger des POKéMON.\\pTu collectionnes des POKéMON pour\\nton POKéDEX, n'est-ce pas ?\\pVoudrais-tu échanger avec lui ?",
+  "en": "My husband likes trading POKéMON.\\pYou're collecting POKéMON for your\\nPOKéDEX, aren't you?\\pWould you please trade with him?"
+ },
+ "CeruleanCity_House3_Text_QuestAsk": {
+  "fr": "Je suis une DRESSEUSE à la\\nretraite.\\pMontre-moi un POKéMON de niveau\\n45 ou plus et je te donne mon\\nCÂBLE LINK.",
+  "en": "I'm a retired TRAINER.\\pShow me a POKéMON at level 45\\nor higher and I'll give you my\\nLINK CABLE."
+ },
+ "CeruleanCity_House3_Text_QuestDone": {
+  "fr": "Le CÂBLE LINK fonctionne bien ?",
+  "en": "Does the LINK CABLE work well?"
+ },
+ "CeruleanCity_House3_Text_QuestGot": {
+  "fr": "{PLAYER} a reçu un CÂBLE LINK !",
+  "en": "{PLAYER} received a LINK CABLE!"
+ },
+ "CeruleanCity_House3_Text_QuestNo": {
+  "fr": "Aucun de tes POKéMON n'est encore\\nassez fort. Entraîne-les !",
+  "en": "None of your POKéMON are strong\\nenough yet. Train them!"
+ },
+ "CeruleanCity_House3_Text_QuestNoRoom": {
+  "fr": "Ton SAC est plein. Fais d'abord\\nde la place !",
+  "en": "Your BAG is full. Make some\\nroom first!"
+ },
+ "CeruleanCity_House3_Text_QuestOk": {
+  "fr": "Quel POKéMON puissant !\\nPrends ce CÂBLE LINK.",
+  "en": "That is a strong POKéMON!\\nTake this LINK CABLE."
+ }
+}
