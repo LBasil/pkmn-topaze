@@ -1,0 +1,38 @@
+sText_WishLetGo|Laisser
+sText_WishNoBalls|Plus de BALLS
+sText_WishRuleAll|Les dominer tous
+sText_StarterBulbasaur|BULBIZARRE
+sText_StarterSquirtle|CARAPUCE
+sText_StarterCharmander|SALAMÈCHE
+sText_FerryNext|SUIVANT
+sText_FerrySkip|PASSER 5
+sText_FerryStop|STOP
+sText_Water|EAU (surf)
+sText_Land|TERRE (herbe, grotte)
+sText_None|rien ici
+sText_NotSeen|Pas encore vu.
+sText_Ability|TALENT
+sText_Item|OBJET TENU
+sText_Chain|SÉRIE 
+sText_Footer1|A : chercher    B : fermer
+sText_Footer2|Eau : d'abord surfer. Terre : à pied.
+sText_OnFoot|  (à pied)
+sText_Surfing|  (surf)
+gTeachyTvString_TeachBattle|Apprends-moi à combattre.
+gTeachyTvString_StatusProblems|Les problèmes de statut ?
+gTeachyTvString_TypeMatchups|Les affinités de types ?
+gTeachyTvString_CatchPkmn|Capturer des POKéMON.
+gTeachyTvString_AboutTMs|Parle-moi des CT.
+gTeachyTvString_RegisterItem|Enregistrer un objet ?
+gTeachyTvString_Cancel|ANNULER
+gText_MysteryGiftBerry|Tu obtiens une BAIE {STR_VAR_2} !\nPapa l'a à l'ARÈNE de MÉROUVILLE.
+gText_MysteryGiftBerryTransform|La BAIE {STR_VAR_1} s'est changée en\nune BAIE {STR_VAR_2}.
+gText_MysteryGiftBerryObtained|La BAIE {STR_VAR_1} a déjà été\nobtenue.
+gText_MysteryGiftSpecialRibbon|Un RUBAN spécial a été remis à\ntes POKéMON d'équipe.
+gText_MysteryGiftNationalDex|Le POKéDEX passe en\nMODE NATIONAL.
+gText_MysteryGiftRareWord|Un mot rare a été ajouté.
+gText_MysteryGiftSentOver|{STR_VAR_1} a été envoyé !
+gText_MysteryGiftFullParty|Ton équipe est pleine.\n{STR_VAR_1} n'a pas pu être envoyé.
+gText_MysteryGiftNewTrainer|Un nouveau DRESSEUR est arrivé à\nHOENN.
+gText_MysteryGiftCantBeUsed|Ces données sont inutilisables\ndans cette version.
+sText_CollectedAllStamps|Tu as tous les TAMPONS !\nEnregistrer une CARTE en prix ?

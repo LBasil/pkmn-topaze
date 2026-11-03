@@ -348,3 +348,9 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - battle_message.c, topaze_journal.h, quest_log.h, region_map_entry_strings.h traduits (fr/strings/s10–s19). Préfixes combat : sauvage = vide, adverse = « ADV. ».
 - Restent EN : SALLE UNION/Link (union_room_message.c), WONDER CARD, crédits, décorations, mots du chat, Trainer Tower, berry.c (JP inutilisé).
 - À vérifier en jeu : largeur des lignes de combat (≤ ~30 car.), « fortement en hausse ! », noms de lieux hack vs officiels.
+
+## 03-11 14h07 : fin de la localisation FR
+- s20 Mystery Gift (CARTE MIRACLE), s21 starters/ferry/Teachy TV/événements, s22 Salle Union, s23 Chat Facile (~1000 mots, 12 car. max).
+- Décorations (120 noms, fr/literals.txt) et abréviations de types de la barre de vie (NOR/COM/VOL...).
+- À vérifier en jeu : natures HARDI/LÂCHE, Water Compaction, STEAM BLAST, « INFOS MIRACLE », « TAMPON », mots du Chat Facile (sens/longueur).
+- Volontairement non traduits : berry.c (JP inutilisé), crédits, noms de dresseurs.

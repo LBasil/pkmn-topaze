@@ -1,0 +1,1006 @@
+sEasyChatWord_Meets|RENCONTRE
+sEasyChatWord_Concede|ADMETS
+sEasyChatWord_Give|DONNE
+sEasyChatWord_Gives|DONNENT
+sEasyChatWord_Played|JOUÉ
+sEasyChatWord_Plays|JOUE
+sEasyChatWord_Collect|COLLECTE
+sEasyChatWord_Walking|MARCHANT
+sEasyChatWord_Walks|MARCHE
+sEasyChatWord_Says|DIT
+sEasyChatWord_Went|ALLÉ
+sEasyChatWord_Said|DIT
+sEasyChatWord_WakeUp|RÉVEILLE
+sEasyChatWord_WakesUp|SE RÉVEILLE
+sEasyChatWord_Angers|FÂCHE
+sEasyChatWord_Teach|ENSEIGNE
+sEasyChatWord_Teaches|ENSEIGNENT
+sEasyChatWord_Please|SVP
+sEasyChatWord_Learn|APPRENDS
+sEasyChatWord_Change|CHANGE
+sEasyChatWord_Story|HISTOIRE
+sEasyChatWord_Trust|CONFIANCE
+sEasyChatWord_Lavish|LUXUEUX
+sEasyChatWord_Listens|ÉCOUTE
+sEasyChatWord_Hearing|ENTENDANT
+sEasyChatWord_Trains|ENTRAÎNE
+sEasyChatWord_Choose|CHOISIS
+sEasyChatWord_Come|VIENS
+sEasyChatWord_Came|VENU
+sEasyChatWord_Search|CHERCHE
+sEasyChatWord_Make|FAIS
+sEasyChatWord_Cause|CAUSE
+sEasyChatWord_Know|SAIS
+sEasyChatWord_Knows|SAIT
+sEasyChatWord_Refuse|REFUSE
+sEasyChatWord_Stores|RANGE
+sEasyChatWord_Brag|SE VANTE
+sEasyChatWord_Ignorant|IGNORANT
+sEasyChatWord_Thinks|PENSE
+sEasyChatWord_Believe|CROIS
+sEasyChatWord_Slide|GLISSE
+sEasyChatWord_Eats|MANGE
+sEasyChatWord_Use|UTILISER
+sEasyChatWord_Uses|UTILISE
+sEasyChatWord_Using|UTILISANT
+sEasyChatWord_Couldnt|POUVAIT PAS
+sEasyChatWord_Capable|CAPABLE
+sEasyChatWord_Disappear|DISPARAÎT
+sEasyChatWord_Appear|APPARAÎT
+sEasyChatWord_Throw|LANCE
+sEasyChatWord_Worry|S'INQUIÈTE
+sEasyChatWord_Slept|DORMI
+sEasyChatWord_Sleep|DORMIR
+sEasyChatWord_Release|LIBÈRE
+sEasyChatWord_Drinks|BOIT
+sEasyChatWord_Runs|COURT
+sEasyChatWord_Run|COURIR
+sEasyChatWord_Works|TRAVAILLE
+sEasyChatWord_Working|TRAVAILLANT
+sEasyChatWord_Talking|PARLANT
+sEasyChatWord_Talk|PARLER
+sEasyChatWord_Sink|COULE
+sEasyChatWord_Smack|CLAQUE
+sEasyChatWord_Pretend|FAIT SEMBLAN
+sEasyChatWord_Praise|LOUE
+sEasyChatWord_Overdo|EXAGÈRE
+sEasyChatWord_Show|MONTRE
+sEasyChatWord_Looks|AIR
+sEasyChatWord_Sees|VOIT
+sEasyChatWord_Seek|CHERCHER
+sEasyChatWord_Own|POSSÈDE
+sEasyChatWord_Take|PRENDS
+sEasyChatWord_Allow|PERMETS
+sEasyChatWord_Forget|OUBLIE
+sEasyChatWord_Forgets|OUBLIENT
+sEasyChatWord_Appears|APPARAISSENT
+sEasyChatWord_Faint|S'ÉVANOUIT
+sEasyChatWord_Fainted|ÉVANOUI
+sEasyChatWord_Wandering|ERRANT
+sEasyChatWord_Rickety|BRANLANT
+sEasyChatWord_RockSolid|SOLIDE
+sEasyChatWord_Hungry|AFFAMÉ
+sEasyChatWord_Tight|SERRÉ
+sEasyChatWord_Ticklish|CHATOUILLEUX
+sEasyChatWord_Twirling|TOURNOYANT
+sEasyChatWord_Spiraling|EN SPIRALE
+sEasyChatWord_Thirsty|ASSOIFFÉ
+sEasyChatWord_Lolling|AFFALÉ
+sEasyChatWord_Silky|SOYEUX
+sEasyChatWord_Sadly|TRISTEMENT
+sEasyChatWord_Hopeless|DÉSESPÉRÉ
+sEasyChatWord_Useless|INUTILE
+sEasyChatWord_Drooling|BAVANT
+sEasyChatWord_Exciting|EXCITANT
+sEasyChatWord_Thick|ÉPAIS
+sEasyChatWord_Smooth|LISSE
+sEasyChatWord_Slimy|VISQUEUX
+sEasyChatWord_Thin|FIN
+sEasyChatWord_Break|CASSE
+sEasyChatWord_Voracious|VORACE
+sEasyChatWord_Scatter|ÉPARPILLE
+sEasyChatWord_Awesome|GÉNIAL
+sEasyChatWord_Wimpy|MOLLASSON
+sEasyChatWord_Wobbly|CHANCELANT
+sEasyChatWord_Shaky|TREMBLANT
+sEasyChatWord_Ripped|DÉCHIRÉ
+sEasyChatWord_Shredded|EN LAMBEAUX
+sEasyChatWord_Increasing|CROISSANT
+sEasyChatWord_Yet|ENCORE
+sEasyChatWord_Destroyed|DÉTRUIT
+sEasyChatWord_Fiery|ENFLAMMÉ
+sEasyChatWord_LoveyDovey|AMOUREUX
+sEasyChatWord_Happily|HEUREUX
+sEasyChatWord_Anticipation|IMPATIENCE
+sEasyChatWord_MatchUp|AFFRONTER
+sEasyChatWord_Go|ALLONS
+sEasyChatWord_No1|No.1
+sEasyChatWord_Decide|DÉCIDE
+sEasyChatWord_LetMeWin|JE TE LAISSE
+sEasyChatWord_Wins|GAGNE
+sEasyChatWord_Win|GAGNER
+sEasyChatWord_Won|GAGNÉ
+sEasyChatWord_IfIWin|SI JE GAGNE
+sEasyChatWord_WhenIWin|SI JE GAGNE
+sEasyChatWord_CantWin|PERDANT
+sEasyChatWord_CanWin|PEUT GAGNER
+sEasyChatWord_NoMatch|PAS DE MATCH
+sEasyChatWord_Spirit|ESPRIT
+sEasyChatWord_Decided|DÉCIDÉ
+sEasyChatWord_TrumpCard|ATOUT
+sEasyChatWord_TakeThat|PRENDS ÇA
+sEasyChatWord_ComeOn|ALLEZ
+sEasyChatWord_Attack|ATTAQUE
+sEasyChatWord_Surrender|CÈDE
+sEasyChatWord_Gutsy|COURAGEUX
+sEasyChatWord_Talent|TALENT
+sEasyChatWord_Strategy|STRATÉGIE
+sEasyChatWord_Smite|FRAPPE
+sEasyChatWord_Match|MATCH
+sEasyChatWord_Victory|VICTOIRE
+sEasyChatWord_Offensive|OFFENSIF
+sEasyChatWord_Sense|SENS
+sEasyChatWord_Versus|CONTRE
+sEasyChatWord_Fights|SE BAT
+sEasyChatWord_Power|PUISSANCE
+sEasyChatWord_Challenge|DÉFI
+sEasyChatWord_Strong|FORT
+sEasyChatWord_TooStrong|TROP FORT
+sEasyChatWord_GoEasy|SOIS DOUX
+sEasyChatWord_Foe|ADVERSAIRE
+sEasyChatWord_Genius|GÉNIE
+sEasyChatWord_Legend|LÉGENDE
+sEasyChatWord_Escape|FUITE
+sEasyChatWord_Aim|VISE
+sEasyChatWord_Battle|COMBAT
+sEasyChatWord_Resuscitate|RANIME
+sEasyChatWord_Points|POINTS
+sEasyChatWord_Serious|SÉRIEUX
+sEasyChatWord_GiveUp|ABANDONNE
+sEasyChatWord_Loss|DÉFAITE
+sEasyChatWord_IfILose|SI JE PERDS
+sEasyChatWord_Lost|PERDU
+sEasyChatWord_Lose|PERDRE
+sEasyChatWord_Guard|GARDE
+sEasyChatWord_Partner|PARTENAIRE
+sEasyChatWord_Reject|REJETTE
+sEasyChatWord_Accept|ACCEPTE
+sEasyChatWord_Invincible|INVINCIBLE
+sEasyChatWord_Received|REÇU
+sEasyChatWord_Easy|FACILE
+sEasyChatWord_Weak|FAIBLE
+sEasyChatWord_TooWeak|TROP FAIBLE
+sEasyChatWord_Pushover|FACILE
+sEasyChatWord_Leader|CHEF
+sEasyChatWord_Rule|RÈGLE
+sEasyChatWord_Move|BOUGE
+sEasyChatWord_Hot|CHAUD
+sEasyChatWord_Exists|EXISTE
+sEasyChatWord_Excess|EXCÈS
+sEasyChatWord_Approved|APPROUVÉ
+sEasyChatWord_Has|A
+sEasyChatWord_Good|BON
+sEasyChatWord_Less|MOINS
+sEasyChatWord_Momentum|ÉLAN
+sEasyChatWord_Going|ALLANT
+sEasyChatWord_Weird|BIZARRE
+sEasyChatWord_Busy|OCCUPÉ
+sEasyChatWord_Together|ENSEMBLE
+sEasyChatWord_Full|PLEIN
+sEasyChatWord_Absent|ABSENT
+sEasyChatWord_Being|ÉTANT
+sEasyChatWord_Need|BESOIN
+sEasyChatWord_Tasty|DÉLICIEUX
+sEasyChatWord_Skilled|HABILE
+sEasyChatWord_Noisy|BRUYANT
+sEasyChatWord_Big|GRAND
+sEasyChatWord_Late|TARD
+sEasyChatWord_Close|PROCHE
+sEasyChatWord_Docile|DOCILE
+sEasyChatWord_Amusing|AMUSANT
+sEasyChatWord_Entertaining|DIVERTISSANT
+sEasyChatWord_Perfection|PERFECTION
+sEasyChatWord_Pretty|JOLI
+sEasyChatWord_Healthy|EN FORME
+sEasyChatWord_Excellent|EXCELLENT
+sEasyChatWord_UpsideDown|À L'ENVERS
+sEasyChatWord_Cold|FROID
+sEasyChatWord_Refreshing|RAFRAÎCHIS.
+sEasyChatWord_Unavoidable|INÉVITABLE
+sEasyChatWord_Much|BEAUCOUP
+sEasyChatWord_Overwhelming|ÉCRASANT
+sEasyChatWord_Fabulous|FABULEUX
+sEasyChatWord_Else|AUTRE
+sEasyChatWord_Expensive|CHER
+sEasyChatWord_Correct|CORRECT
+sEasyChatWord_Impossible|IMPOSSIBLE
+sEasyChatWord_Small|PETIT
+sEasyChatWord_Different|DIFFÉRENT
+sEasyChatWord_Tired|FATIGUÉ
+sEasyChatWord_Skill|HABILETÉ
+sEasyChatWord_Top|SOMMET
+sEasyChatWord_NonStop|SANS ARRÊT
+sEasyChatWord_Preposterous|ABSURDE
+sEasyChatWord_None|AUCUN
+sEasyChatWord_Nothing|RIEN
+sEasyChatWord_Natural|NATUREL
+sEasyChatWord_Becomes|DEVIENT
+sEasyChatWord_Lukewarm|TIÈDE
+sEasyChatWord_Fast|RAPIDE
+sEasyChatWord_Low|BAS
+sEasyChatWord_Awful|HORRIBLE
+sEasyChatWord_Alone|SEUL
+sEasyChatWord_Bored|ENNUYÉ
+sEasyChatWord_Secret|SECRET
+sEasyChatWord_Mystery|MYSTÈRE
+sEasyChatWord_Lacks|MANQUE
+sEasyChatWord_Best|MEILLEUR
+sEasyChatWord_Lousy|NUL
+sEasyChatWord_Mistake|ERREUR
+sEasyChatWord_Kind|GENRE
+sEasyChatWord_Well|BIEN
+sEasyChatWord_Weakened|AFFAIBLI
+sEasyChatWord_Simple|SIMPLE
+sEasyChatWord_Seems|SEMBLE
+sEasyChatWord_Badly|MAL
+sEasyChatWord_Will|VA
+sEasyChatWord_WillBeHere|SERA LÀ
+sEasyChatWord_Or|OU
+sEasyChatWord_Times|FOIS
+sEasyChatWord_Wonder|JE ME DEMAND
+sEasyChatWord_IsItQues|EST-CE ?
+sEasyChatWord_Be|ÊTRE
+sEasyChatWord_Gimme|DONNE-MOI
+sEasyChatWord_Could|POURRAIT
+sEasyChatWord_LikelyTo|SUSCEPTIBLE
+sEasyChatWord_Would|SERAIT
+sEasyChatWord_Is|EST
+sEasyChatWord_IsntItQues|N'EST-CE PAS
+sEasyChatWord_Lets|ALLONS
+sEasyChatWord_Other|AUTRE
+sEasyChatWord_Are|SONT
+sEasyChatWord_Was|ÉTAIT
+sEasyChatWord_Were|ÉTAIENT
+sEasyChatWord_Those|CEUX-LÀ
+sEasyChatWord_Isnt|N'EST PAS
+sEasyChatWord_Wont|NE VEUT PAS
+sEasyChatWord_Cant|NE PEUT PAS
+sEasyChatWord_Can|PEUT
+sEasyChatWord_Dont|NE PAS
+sEasyChatWord_Do|FAIRE
+sEasyChatWord_Does|FAIT
+sEasyChatWord_Whom|QUI
+sEasyChatWord_Which|QUEL
+sEasyChatWord_Wasnt|N'ÉTAIT PAS
+sEasyChatWord_Werent|ÉTAIENT PAS
+sEasyChatWord_Have|AVOIR
+sEasyChatWord_Havent|N'AI PAS
+sEasyChatWord_A|UN
+sEasyChatWord_An|UN
+sEasyChatWord_Not|PAS
+sEasyChatWord_There|LÀ
+sEasyChatWord_OkQues|OK ?
+sEasyChatWord_So|DONC
+sEasyChatWord_Maybe|PEUT-ÊTRE
+sEasyChatWord_About|À PROPOS
+sEasyChatWord_Over|SUR
+sEasyChatWord_It|ÇA
+sEasyChatWord_All|TOUT
+sEasyChatWord_For|POUR
+sEasyChatWord_On|SUR
+sEasyChatWord_Off|ÉTEINT
+sEasyChatWord_As|COMME
+sEasyChatWord_To|À
+sEasyChatWord_With|AVEC
+sEasyChatWord_Better|MIEUX
+sEasyChatWord_Ever|JAMAIS
+sEasyChatWord_Since|DEPUIS
+sEasyChatWord_Of|DE
+sEasyChatWord_BelongsTo|APPARTIENT À
+sEasyChatWord_At|À
+sEasyChatWord_In|DANS
+sEasyChatWord_Out|DEHORS
+sEasyChatWord_Too|TROP
+sEasyChatWord_Like|COMME
+sEasyChatWord_Did|A FAIT
+sEasyChatWord_Didnt|N'A PAS FAIT
+sEasyChatWord_Doesnt|NE FAIT PAS
+sEasyChatWord_Without|SANS
+sEasyChatWord_After|APRÈS
+sEasyChatWord_Before|AVANT
+sEasyChatWord_While|PENDANT
+sEasyChatWord_Than|QUE
+sEasyChatWord_Once|UNE FOIS
+sEasyChatWord_Anywhere|N'IMPORTE OÙ
+sEasyChatWord_Appeal|CHARME
+sEasyChatWord_Events|ÉVÉNEMENTS
+sEasyChatWord_StayAtHome|CASANIER
+sEasyChatWord_Berry|BAIE
+sEasyChatWord_Contest|CONCOURS
+sEasyChatWord_Mc|MC
+sEasyChatWord_Judge|JUGE
+sEasyChatWord_Super|SUPER
+sEasyChatWord_Stage|SCÈNE
+sEasyChatWord_HallOfFame|PANTHÉON
+sEasyChatWord_Evolution|ÉVOLUTION
+sEasyChatWord_Hyper|HYPER
+sEasyChatWord_BattleTower|TOUR COMBAT
+sEasyChatWord_Leaders|CHEFS
+sEasyChatWord_BattleRoom|SALLE COMBAT
+sEasyChatWord_Hidden|CACHÉ
+sEasyChatWord_SecretBase|BASE SECRÈTE
+sEasyChatWord_Blend|MÉLANGE
+sEasyChatWord_POKEBLOCK|{POKEBLOCK}
+sEasyChatWord_Master|MAÎTRE
+sEasyChatWord_Rank|RANG
+sEasyChatWord_Ribbon|RUBAN
+sEasyChatWord_Crush|BÉGUIN
+sEasyChatWord_Direct|DIRECT
+sEasyChatWord_Tower|TOUR
+sEasyChatWord_Union|UNION
+sEasyChatWord_Room|SALLE
+sEasyChatWord_Wireless|SANS FIL
+sEasyChatWord_Meet|RENCONTRER
+sEasyChatWord_Play|JOUER
+sEasyChatWord_Hurried|PRESSÉ
+sEasyChatWord_Goes|VA
+sEasyChatWord_Giddy|GRISÉ
+sEasyChatWord_Happy|CONTENT
+sEasyChatWord_Happiness|BONHEUR
+sEasyChatWord_Excite|EXCITER
+sEasyChatWord_Important|IMPORTANT
+sEasyChatWord_Funny|DRÔLE
+sEasyChatWord_Got|OBTENU
+sEasyChatWord_GoHome|RENTRER
+sEasyChatWord_Disappointed|DÉÇU
+sEasyChatWord_Disappoints|DÉCEVANT
+sEasyChatWord_Sad|TRISTE
+sEasyChatWord_Try|ESSAIE
+sEasyChatWord_Tries|ESSAIE
+sEasyChatWord_Hears|ENTEND
+sEasyChatWord_Think|PENSER
+sEasyChatWord_Hear|ENTENDRE
+sEasyChatWord_Wants|VEUT
+sEasyChatWord_Misheard|MAL ENTENDU
+sEasyChatWord_Dislike|DÉTESTE
+sEasyChatWord_Angry|EN COLÈRE
+sEasyChatWord_Anger|COLÈRE
+sEasyChatWord_Scary|EFFRAYANT
+sEasyChatWord_Lonesome|SEULET
+sEasyChatWord_Disappoint|DÉCEVOIR
+sEasyChatWord_Joy|JOIE
+sEasyChatWord_Gets|REÇOIT
+sEasyChatWord_Never|JAMAIS
+sEasyChatWord_Darn|ZUT
+sEasyChatWord_Downcast|ABATTU
+sEasyChatWord_Incredible|INCROYABLE
+sEasyChatWord_Likes|AIME
+sEasyChatWord_Dislikes|N'AIME PAS
+sEasyChatWord_Boring|ENNUYEUX
+sEasyChatWord_Care|SOUCI
+sEasyChatWord_Cares|SE SOUCIE
+sEasyChatWord_AllRight|D'ACCORD
+sEasyChatWord_Adore|ADORE
+sEasyChatWord_Disaster|DÉSASTRE
+sEasyChatWord_Enjoy|PROFITER
+sEasyChatWord_Enjoys|PROFITE
+sEasyChatWord_Eat|MANGER
+sEasyChatWord_Lacking|MANQUANT
+sEasyChatWord_Bad|MAUVAIS
+sEasyChatWord_Hard|DIFFICILE
+sEasyChatWord_Terrible|TERRIBLE
+sEasyChatWord_Should|DEVRAIT
+sEasyChatWord_Nice|GENTIL
+sEasyChatWord_Drink|BOIRE
+sEasyChatWord_Surprise|SURPRISE
+sEasyChatWord_Fear|PEUR
+sEasyChatWord_Want|VOULOIR
+sEasyChatWord_Wait|ATTENDS
+sEasyChatWord_Satisfied|SATISFAIT
+sEasyChatWord_See|VOIR
+sEasyChatWord_Rare|RARE
+sEasyChatWord_Negative|NÉGATIF
+sEasyChatWord_Done|FINI
+sEasyChatWord_Danger|DANGER
+sEasyChatWord_Defeated|VAINCU
+sEasyChatWord_Beat|BATTRE
+sEasyChatWord_Great|FORMIDABLE
+sEasyChatWord_Romantic|ROMANTIQUE
+sEasyChatWord_Question|QUESTION
+sEasyChatWord_Understand|COMPRENDRE
+sEasyChatWord_Understands|COMPREND
+sEasyChatWord_Thanks|MERCI
+sEasyChatWord_Yes|OUI
+sEasyChatWord_HereGoes|J'Y VAIS
+sEasyChatWord_HereICome|ME VOICI
+sEasyChatWord_HereItIs|VOILÀ
+sEasyChatWord_Yeah|OUAIS
+sEasyChatWord_Welcome|BIENVENUE
+sEasyChatWord_Oi|HÉ
+sEasyChatWord_HowDo|COMMENT
+sEasyChatWord_Congrats|BRAVO
+sEasyChatWord_GiveMe|DONNE-MOI
+sEasyChatWord_Sorry|DÉSOLÉ
+sEasyChatWord_Apologize|S'EXCUSER
+sEasyChatWord_Forgive|PARDONNER
+sEasyChatWord_HeyThere|SALUT
+sEasyChatWord_Hello|BONJOUR
+sEasyChatWord_GoodBye|AU REVOIR
+sEasyChatWord_ThankYou|REMERCIE
+sEasyChatWord_IveArrived|ME VOILÀ
+sEasyChatWord_Pardon|PARDON
+sEasyChatWord_Excuse|EXCUSE
+sEasyChatWord_SeeYa|À PLUS
+sEasyChatWord_ExcuseMe|EXCUSEZ-MOI
+sEasyChatWord_WellThen|BON, ALORS
+sEasyChatWord_GoAhead|VAS-Y
+sEasyChatWord_Appreciate|APPRÉCIE
+sEasyChatWord_HeyQues|HEIN ?
+sEasyChatWord_WhatsUpQues|QUOI DE NEUF
+sEasyChatWord_HuhQues|HM ?
+sEasyChatWord_No|NON
+sEasyChatWord_Hi|COUCOU
+sEasyChatWord_YeahYeah|OUI, OUI
+sEasyChatWord_ByeBye|BYE-BYE
+sEasyChatWord_MeetYou|ENCHANTÉ
+sEasyChatWord_Hey|HEY
+sEasyChatWord_Smell|ODEUR
+sEasyChatWord_Listening|À L'ÉCOUTE
+sEasyChatWord_HooHah|YOUPI
+sEasyChatWord_Yahoo|YAHOU
+sEasyChatWord_Yo|YO
+sEasyChatWord_ComeOver|VIENS ICI
+sEasyChatWord_CountOn|COMPTE SUR
+sEasyChatWord_Idol|IDOLE
+sEasyChatWord_Anime|ANIMÉ
+sEasyChatWord_Song|CHANSON
+sEasyChatWord_Movie|FILM
+sEasyChatWord_Sweets|SUCRERIES
+sEasyChatWord_Chat|BAVARDAGE
+sEasyChatWord_ChildsPlay|JEU D'ENFANT
+sEasyChatWord_Toys|JOUETS
+sEasyChatWord_Music|MUSIQUE
+sEasyChatWord_Cards|CARTES
+sEasyChatWord_Shopping|SHOPPING
+sEasyChatWord_Camera|APPAREIL
+sEasyChatWord_Viewing|VISIONNAGE
+sEasyChatWord_Spectator|SPECTATEUR
+sEasyChatWord_Gourmet|GOURMET
+sEasyChatWord_Game|JEU
+sEasyChatWord_Rpg|JDR
+sEasyChatWord_Collection|COLLECTION
+sEasyChatWord_Complete|COMPLET
+sEasyChatWord_Magazine|MAGAZINE
+sEasyChatWord_Walk|PROMENADE
+sEasyChatWord_Bike|VÉLO
+sEasyChatWord_Hobby|PASSE-TEMPS
+sEasyChatWord_Sports|SPORTS
+sEasyChatWord_Software|LOGICIEL
+sEasyChatWord_Songs|CHANSONS
+sEasyChatWord_Diet|RÉGIME
+sEasyChatWord_Treasure|TRÉSOR
+sEasyChatWord_Travel|VOYAGE
+sEasyChatWord_Dance|DANSE
+sEasyChatWord_Channel|CHAÎNE
+sEasyChatWord_Making|FABRICATION
+sEasyChatWord_Fishing|PÊCHE
+sEasyChatWord_Date|RENDEZ-VOUS
+sEasyChatWord_Design|DESSIN
+sEasyChatWord_Locomotive|LOCOMOTIVE
+sEasyChatWord_PlushDoll|PELUCHE
+sEasyChatWord_Pc|PC
+sEasyChatWord_Flowers|FLEURS
+sEasyChatWord_Hero|HÉROS
+sEasyChatWord_Nap|SIESTE
+sEasyChatWord_Heroine|HÉROÏNE
+sEasyChatWord_Fashion|MODE
+sEasyChatWord_Adventure|AVENTURE
+sEasyChatWord_Board|PLATEAU
+sEasyChatWord_Ball|BALLON
+sEasyChatWord_Book|LIVRE
+sEasyChatWord_Festival|FESTIVAL
+sEasyChatWord_Comics|BD
+sEasyChatWord_Holiday|FÊTE
+sEasyChatWord_Plans|PROJETS
+sEasyChatWord_Trendy|BRANCHÉ
+sEasyChatWord_Vacation|VACANCES
+sEasyChatWord_Look|ASPECT
+sEasyChatWord_Chores|CORVÉES
+sEasyChatWord_Home|MAISON
+sEasyChatWord_Money|ARGENT
+sEasyChatWord_Allowance|ARGENT POCHE
+sEasyChatWord_Bath|BAIN
+sEasyChatWord_Conversation|CONVERSATION
+sEasyChatWord_School|ÉCOLE
+sEasyChatWord_Commemorate|COMMÉMORER
+sEasyChatWord_Habit|HABITUDE
+sEasyChatWord_Group|GROUPE
+sEasyChatWord_Word|MOT
+sEasyChatWord_Store|MAGASIN
+sEasyChatWord_Service|SERVICE
+sEasyChatWord_Work|TRAVAIL
+sEasyChatWord_System|SYSTÈME
+sEasyChatWord_Train|TRAIN
+sEasyChatWord_Class|CLASSE
+sEasyChatWord_Lessons|LEÇONS
+sEasyChatWord_Information|INFOS
+sEasyChatWord_Living|VIVANT
+sEasyChatWord_Teacher|PROF
+sEasyChatWord_Tournament|TOURNOI
+sEasyChatWord_Letter|LETTRE
+sEasyChatWord_Event|ÉVÉNEMENT
+sEasyChatWord_Digital|NUMÉRIQUE
+sEasyChatWord_Test|TEST
+sEasyChatWord_DeptStore|GD MAGASIN
+sEasyChatWord_Television|TÉLÉVISION
+sEasyChatWord_Phone|TÉLÉPHONE
+sEasyChatWord_Item|OBJET
+sEasyChatWord_Name|NOM
+sEasyChatWord_News|NOUVELLES
+sEasyChatWord_Popular|POPULAIRE
+sEasyChatWord_Party|SOIRÉE
+sEasyChatWord_Study|ÉTUDE
+sEasyChatWord_Machine|MACHINE
+sEasyChatWord_Mail|COURRIER
+sEasyChatWord_Message|MESSAGE
+sEasyChatWord_Promise|PROMESSE
+sEasyChatWord_Dream|RÊVE
+sEasyChatWord_Kindergarten|MATERNELLE
+sEasyChatWord_Life|VIE
+sEasyChatWord_Radio|RADIO
+sEasyChatWord_Rental|LOCATION
+sEasyChatWord_World|MONDE
+sEasyChatWord_Highs|HAUTS
+sEasyChatWord_Lows|BAS
+sEasyChatWord_Um|EUH
+sEasyChatWord_Rear|ARRIÈRE
+sEasyChatWord_Things|CHOSES
+sEasyChatWord_Thing|CHOSE
+sEasyChatWord_Below|EN DESSOUS
+sEasyChatWord_Above|AU-DESSUS
+sEasyChatWord_Back|DOS
+sEasyChatWord_High|HAUT
+sEasyChatWord_Here|ICI
+sEasyChatWord_Inside|DEDANS
+sEasyChatWord_Outside|DEHORS
+sEasyChatWord_Beside|À CÔTÉ
+sEasyChatWord_ThisIsItExcl|C'EST ÇA !
+sEasyChatWord_This|CECI
+sEasyChatWord_Every|CHAQUE
+sEasyChatWord_These|CEUX-CI
+sEasyChatWord_TheseWere|ILS ÉTAIENT
+sEasyChatWord_Down|EN BAS
+sEasyChatWord_That|CELA
+sEasyChatWord_ThoseAre|CE SONT
+sEasyChatWord_ThoseWere|C'ÉTAIENT
+sEasyChatWord_ThatsItExcl|VOILÀ !
+sEasyChatWord_Am|SUIS
+sEasyChatWord_ThatWas|C'ÉTAIT
+sEasyChatWord_Front|DEVANT
+sEasyChatWord_Up|EN HAUT
+sEasyChatWord_Choice|CHOIX
+sEasyChatWord_Far|LOIN
+sEasyChatWord_Away|AU LOIN
+sEasyChatWord_Near|PRÈS
+sEasyChatWord_Where|OÙ
+sEasyChatWord_When|QUAND
+sEasyChatWord_What|QUOI
+sEasyChatWord_Deep|PROFOND
+sEasyChatWord_Shallow|SUPERFICIEL
+sEasyChatWord_Why|POURQUOI
+sEasyChatWord_Confused|CONFUS
+sEasyChatWord_Opposite|OPPOSÉ
+sEasyChatWord_Left|GAUCHE
+sEasyChatWord_Right|DROITE
+sEasyChatWord_Opponent|ADVERSAIRE
+sEasyChatWord_I|JE
+sEasyChatWord_You|TOI
+sEasyChatWord_Yours|À TOI
+sEasyChatWord_Son|FILS
+sEasyChatWord_Your|TON
+sEasyChatWord_Youre|TU ES
+sEasyChatWord_Youve|TU AS
+sEasyChatWord_Mother|MÈRE
+sEasyChatWord_Grandfather|PAPY
+sEasyChatWord_Uncle|ONCLE
+sEasyChatWord_Father|PÈRE
+sEasyChatWord_Boy|GARÇON
+sEasyChatWord_Adult|ADULTE
+sEasyChatWord_Brother|FRÈRE
+sEasyChatWord_Sister|SŒUR
+sEasyChatWord_Grandmother|MAMIE
+sEasyChatWord_Aunt|TANTE
+sEasyChatWord_Parent|PARENT
+sEasyChatWord_Man|HOMME
+sEasyChatWord_Me|MOI
+sEasyChatWord_Girl|FILLE
+sEasyChatWord_Babe|BÉBÉ
+sEasyChatWord_Family|FAMILLE
+sEasyChatWord_Her|ELLE
+sEasyChatWord_Him|LUI
+sEasyChatWord_He|IL
+sEasyChatWord_Place|ENDROIT
+sEasyChatWord_Daughter|FILLE
+sEasyChatWord_His|SON
+sEasyChatWord_Hes|IL EST
+sEasyChatWord_Arent|NE SONT PAS
+sEasyChatWord_Siblings|FRATRIE
+sEasyChatWord_Kid|GOSSE
+sEasyChatWord_Children|ENFANTS
+sEasyChatWord_Mr|M.
+sEasyChatWord_Mrs|MME
+sEasyChatWord_Myself|MOI-MÊME
+sEasyChatWord_IWas|J'ÉTAIS
+sEasyChatWord_ToMe|À MOI
+sEasyChatWord_My|MON
+sEasyChatWord_IAm|JE SUIS
+sEasyChatWord_Ive|J'AI
+sEasyChatWord_Who|QUI
+sEasyChatWord_Someone|QUELQU'UN
+sEasyChatWord_WhoWas|QUI ÉTAIT
+sEasyChatWord_ToWhom|À QUI
+sEasyChatWord_Whose|DONT
+sEasyChatWord_WhoIs|QUI EST
+sEasyChatWord_Its|C'EST
+sEasyChatWord_Lady|DAME
+sEasyChatWord_Friend|AMI
+sEasyChatWord_Ally|ALLIÉ
+sEasyChatWord_Person|PERSONNE
+sEasyChatWord_Dude|MEC
+sEasyChatWord_They|ILS
+sEasyChatWord_TheyWere|ILS ÉTAIENT
+sEasyChatWord_ToThem|À EUX
+sEasyChatWord_Their|LEUR
+sEasyChatWord_Theyre|ILS SONT
+sEasyChatWord_Theyve|ILS ONT
+sEasyChatWord_We|NOUS
+sEasyChatWord_Been|ÉTÉ
+sEasyChatWord_ToUs|À NOUS
+sEasyChatWord_Our|NOTRE
+sEasyChatWord_WeAre|NOUS SOMMES
+sEasyChatWord_Rival|RIVAL
+sEasyChatWord_Weve|NOUS AVONS
+sEasyChatWord_Woman|FEMME
+sEasyChatWord_She|ELLE
+sEasyChatWord_SheWas|ELLE ÉTAIT
+sEasyChatWord_ToHer|À ELLE
+sEasyChatWord_Hers|LE SIEN
+sEasyChatWord_SheIs|ELLE EST
+sEasyChatWord_Some|QUELQUES
+sEasyChatWord_Listen|ÉCOUTE
+sEasyChatWord_NotVery|PAS TRÈS
+sEasyChatWord_Mean|MÉCHANT
+sEasyChatWord_Lie|MENSONGE
+sEasyChatWord_Lay|POSE
+sEasyChatWord_Recommend|CONSEILLE
+sEasyChatWord_Nitwit|NIGAUD
+sEasyChatWord_Quite|ASSEZ
+sEasyChatWord_From|VENANT DE
+sEasyChatWord_Feeling|SENTIMENT
+sEasyChatWord_But|MAIS
+sEasyChatWord_However|POURTANT
+sEasyChatWord_Case|CAS
+sEasyChatWord_The|LE
+sEasyChatWord_Miss|MANQUER
+sEasyChatWord_How|COMMENT
+sEasyChatWord_Hit|COUP
+sEasyChatWord_Enough|SUFFISANT
+sEasyChatWord_ALot|UN TAS
+sEasyChatWord_ALittle|UN PEU
+sEasyChatWord_Absolutely|ABSOLUMENT
+sEasyChatWord_And|ET
+sEasyChatWord_Only|SEULEMENT
+sEasyChatWord_Around|AUTOUR
+sEasyChatWord_Probably|PROBABLEMENT
+sEasyChatWord_If|SI
+sEasyChatWord_Very|TRÈS
+sEasyChatWord_ATinyBit|TOUT PETIT
+sEasyChatWord_Wild|SAUVAGE
+sEasyChatWord_Thats|ÇA, C'EST
+sEasyChatWord_Just|JUSTE
+sEasyChatWord_EvenSo|MÊME AINSI
+sEasyChatWord_MustBe|DOIT ÊTRE
+sEasyChatWord_Naturally|BIEN SÛR
+sEasyChatWord_ForNow|POUR L'HEURE
+sEasyChatWord_Understood|COMPRIS
+sEasyChatWord_Joking|BLAGUE
+sEasyChatWord_Ready|PRÊT
+sEasyChatWord_Something|UNE CHOSE
+sEasyChatWord_Somehow|COMME ÇA
+sEasyChatWord_Although|BIEN QUE
+sEasyChatWord_Also|AUSSI
+sEasyChatWord_Perfect|PARFAIT
+sEasyChatWord_AsMuchAs|AUTANT QUE
+sEasyChatWord_Really|VRAIMENT
+sEasyChatWord_Truly|RÉELLEMENT
+sEasyChatWord_Seriously|SÉRIEUSEMENT
+sEasyChatWord_Totally|TOTALEMENT
+sEasyChatWord_Until|JUSQU'À
+sEasyChatWord_AsIf|COMME SI
+sEasyChatWord_Mood|HUMEUR
+sEasyChatWord_Rather|PLUTÔT
+sEasyChatWord_Awfully|ATROCEMENT
+sEasyChatWord_Mode|MODE
+sEasyChatWord_More|PLUS
+sEasyChatWord_TooLate|TROP TARD
+sEasyChatWord_Finally|ENFIN
+sEasyChatWord_Any|N'IMPORTE
+sEasyChatWord_Instead|AU LIEU
+sEasyChatWord_Fantastic|FANTASTIQUE
+sEasyChatWord_Color|COULEUR
+sEasyChatWord_AltColor|AUTRE COUL.
+sEasyChatWord_Beautiful|BEAU
+sEasyChatWord_Beauty|BEAUTÉ
+sEasyChatWord_Fighting|COMBAT
+sEasyChatWord_Smart|INTELLIGENT
+sEasyChatWord_Smartness|INTELLIGENCE
+sEasyChatWord_Cool|CLASSE
+sEasyChatWord_Coolness|STYLE
+sEasyChatWord_Cute|MIGNON
+sEasyChatWord_Cuteness|GRÂCE
+sEasyChatWord_Type|TYPE
+sEasyChatWord_Tough|ROBUSTE
+sEasyChatWord_Toughness|ROBUSTESSE
+sEasyChatWord_Electric|ÉLECTRIQUE
+sEasyChatWord_Shine|BRILLE
+sEasyChatWord_Pkrs|{PK}RS
+sEasyChatWord_Pattern|MOTIF
+sEasyChatWord_Fall|AUTOMNE
+sEasyChatWord_Morning|MATIN
+sEasyChatWord_Tomorrow|DEMAIN
+sEasyChatWord_Last|DERNIER
+sEasyChatWord_Day|JOUR
+sEasyChatWord_Sometime|UN JOUR
+sEasyChatWord_Always|TOUJOURS
+sEasyChatWord_Current|ACTUEL
+sEasyChatWord_Forever|À JAMAIS
+sEasyChatWord_Days|JOURS
+sEasyChatWord_End|BOUT
+sEasyChatWord_Tuesday|MARDI
+sEasyChatWord_Yesterday|HIER
+sEasyChatWord_Today|AUJOURD'HUI
+sEasyChatWord_Friday|VENDREDI
+sEasyChatWord_Monday|LUNDI
+sEasyChatWord_Later|PLUS TARD
+sEasyChatWord_Earlier|PLUS TÔT
+sEasyChatWord_Another|UN AUTRE
+sEasyChatWord_Time|TEMPS
+sEasyChatWord_Finish|TERMINER
+sEasyChatWord_Wednesday|MERCREDI
+sEasyChatWord_Soon|BIENTÔT
+sEasyChatWord_Start|DÉBUT
+sEasyChatWord_Month|MOIS
+sEasyChatWord_Stop|STOP
+sEasyChatWord_Now|MAINTENANT
+sEasyChatWord_Final|FINAL
+sEasyChatWord_Next|SUIVANT
+sEasyChatWord_Age|ÂGE
+sEasyChatWord_Saturday|SAMEDI
+sEasyChatWord_Summer|ÉTÉ
+sEasyChatWord_Sunday|DIMANCHE
+sEasyChatWord_Beginning|COMMENCER
+sEasyChatWord_Spring|PRINTEMPS
+sEasyChatWord_Daytime|JOURNÉE
+sEasyChatWord_Winter|HIVER
+sEasyChatWord_Daily|QUOTIDIEN
+sEasyChatWord_Olden|AUTREFOIS
+sEasyChatWord_Almost|PRESQUE
+sEasyChatWord_Nearly|QUASIMENT
+sEasyChatWord_Thursday|JEUDI
+sEasyChatWord_Nighttime|NOCTURNE
+sEasyChatWord_Night|NUIT
+sEasyChatWord_Week|SEMAINE
+sEasyChatWord_IChooseYou|C'EST TOI !
+sEasyChatWord_Gotcha|ATTRAPÉ
+sEasyChatWord_Trade|ÉCHANGE
+sEasyChatWord_Sapphire|SAPHIR
+sEasyChatWord_Evolve|ÉVOLUER
+sEasyChatWord_Encyclopedia|ENCYCLOPÉDIE
+sEasyChatWord_Nature|NATURE
+sEasyChatWord_Center|CENTRE
+sEasyChatWord_Egg|ŒUF
+sEasyChatWord_Link|LIEN
+sEasyChatWord_SpAbility|TALENT
+sEasyChatWord_Trainer|DRESSEUR
+sEasyChatWord_Version|VERSION
+sEasyChatWord_Pokenav|POKéNAV
+sEasyChatWord_Pokemon|POKéMON
+sEasyChatWord_Get|OBTENIR
+sEasyChatWord_Pokedex|POKéDEX
+sEasyChatWord_Ruby|RUBIS
+sEasyChatWord_Level|NIVEAU
+sEasyChatWord_Red|ROUGE
+sEasyChatWord_Green|VERT
+sEasyChatWord_Bag|SAC
+sEasyChatWord_Flame|FLAMME
+sEasyChatWord_Gold|OR
+sEasyChatWord_Leaf|FEUILLE
+sEasyChatWord_Silver|ARGENT
+sEasyChatWord_KthxBye|OK, SALUT.
+sEasyChatWord_YesSirExcl|OUI, CHEF !
+sEasyChatWord_AvantGarde|AVANT-GARDE
+sEasyChatWord_Couple|COUPLE
+sEasyChatWord_MuchObliged|OBLIGÉ
+sEasyChatWord_YeehawExcl|YIHAA !
+sEasyChatWord_Mega|MÉGA
+sEasyChatWord_1HitKOExcl|K.O. 1 COUP!
+sEasyChatWord_Destiny|DESTIN
+sEasyChatWord_Cancel|ANNULER
+sEasyChatWord_New|NOUVEAU
+sEasyChatWord_Flatten|ÉCRASER
+sEasyChatWord_Kidding|POUR RIRE
+sEasyChatWord_Loser|PERDANT
+sEasyChatWord_Losing|EN PERTE
+sEasyChatWord_Happening|ARRIVE
+sEasyChatWord_HipAnd|COOL ET
+sEasyChatWord_Shake|SECOUE
+sEasyChatWord_Shady|LOUCHE
+sEasyChatWord_Upbeat|ENTRAIN
+sEasyChatWord_Modern|MODERNE
+sEasyChatWord_SmellYa|À BIENTÔT
+sEasyChatWord_Bang|BANG
+sEasyChatWord_Knockout|K.O.
+sEasyChatWord_Hassle|GALÈRE
+sEasyChatWord_Winner|GAGNANT
+sEasyChatWord_Fever|FIÈVRE
+sEasyChatWord_Wannabe|APPRENTI
+sEasyChatWord_Baby|BÉBÉ
+sEasyChatWord_Heart|CŒUR
+sEasyChatWord_Old|VIEUX
+sEasyChatWord_Young|JEUNE
+sEasyChatWord_Ugly|LAID
+sEasyChatWord_Excl|!
+sEasyChatWord_ExclExcl|!!
+sEasyChatWord_QuesExcl|?!
+sEasyChatWord_Ques|?
+sEasyChatWord_Ellipsis|…
+sEasyChatWord_EllipsisExcl|…!
+sEasyChatWord_EllipsisEllipsisEllipsis|………
+sEasyChatWord_Dash|-
+sEasyChatWord_DashDashDash|- - -
+sEasyChatWord_UhOh|OH-OH
+sEasyChatWord_Waaah|OUINNN
+sEasyChatWord_Ahaha|AHAHA
+sEasyChatWord_OhQues|OH ?
+sEasyChatWord_Nope|NAN
+sEasyChatWord_Urgh|BEURK
+sEasyChatWord_Hmm|HMM
+sEasyChatWord_Whoah|OUAH
+sEasyChatWord_WroooaarExcl|GRRROAR !
+sEasyChatWord_Wow|WOW
+sEasyChatWord_Giggle|RICANE
+sEasyChatWord_Sigh|SOUPIR
+sEasyChatWord_Unbelievable|INCONCEVABLE
+sEasyChatWord_Cries|PLEURE
+sEasyChatWord_Agree|ÇA ME VA
+sEasyChatWord_EhQues|EH ?
+sEasyChatWord_Cry|PLEURER
+sEasyChatWord_Ehehe|EHEHE
+sEasyChatWord_OiOiOi|HÉ, HÉ, HÉ
+sEasyChatWord_OhYeah|OH, OUI
+sEasyChatWord_Oh|OH
+sEasyChatWord_Oops|OUPS
+sEasyChatWord_Shocked|CHOQUÉ
+sEasyChatWord_Eek|AÏE
+sEasyChatWord_Graaah|GRAAAH
+sEasyChatWord_Gwahahaha|GOUAHAHAHA
+sEasyChatWord_Way|MANIÈRE
+sEasyChatWord_Tch|TSS
+sEasyChatWord_Hehe|HIHI
+sEasyChatWord_Hah|HA
+sEasyChatWord_Yup|OUAIP
+sEasyChatWord_Hahaha|HAHAHA
+sEasyChatWord_Aiyeeh|AÏÏÏE
+sEasyChatWord_Hiyah|HIYAH
+sEasyChatWord_Fufufu|FUFUFU
+sEasyChatWord_Lol|MDR
+sEasyChatWord_Snort|RENIFLE
+sEasyChatWord_Humph|PFF
+sEasyChatWord_Hehehe|HIHIHI
+sEasyChatWord_Heh|HÉ HÉ
+sEasyChatWord_Hohoho|HOHOHO
+sEasyChatWord_UhHuh|HUM-HUM
+sEasyChatWord_OhDear|OH LÀ LÀ
+sEasyChatWord_Arrgh|ARGH
+sEasyChatWord_Mufufu|MUFUFU
+sEasyChatWord_Mmm|MMM
+sEasyChatWord_OhKay|O-KAY
+sEasyChatWord_Okay|OK
+sEasyChatWord_Lalala|LALALA
+sEasyChatWord_Yay|YEAH
+sEasyChatWord_Aww|OH…
+sEasyChatWord_Wowee|WAOUH
+sEasyChatWord_Gwah|GOUAH
+sEasyChatWord_Wahahaha|OUAHAHAHA
+sEasyChatWord_Fight|COMBAT
+sEasyChatWord_Dark|TÉNÈBR
+sEasyChatWord_Stench|PUANTEUR
+sEasyChatWord_ThickFat|ISOGRAISSE
+sEasyChatWord_RainDish|CUVETTE
+sEasyChatWord_Drizzle|CRACHIN
+sEasyChatWord_ArenaTrap|PIÈGE SABLE
+sEasyChatWord_Intimidate|INTIMIDATION
+sEasyChatWord_RockHead|TÊTE DE ROC
+sEasyChatWord_Rock|ROCHE
+sEasyChatWord_AirLock|AIR LOCK
+sEasyChatWord_Psychic|PSYKO
+sEasyChatWord_HyperCutter|HYPER CUTTER
+sEasyChatWord_ShadowTag|MARQUE OMBRE
+sEasyChatWord_SpeedBoost|TURBO
+sEasyChatWord_BattleArmor|ARMURBASTON
+sEasyChatWord_Sturdy|FERMETÉ
+sEasyChatWord_SuctionCups|VENTOUSE
+sEasyChatWord_Grass|PLANTE
+sEasyChatWord_ClearBody|CORPS SAIN
+sEasyChatWord_Torrent|TORRENT
+sEasyChatWord_Ghost|SPECTRE
+sEasyChatWord_Ice|GLACE
+sEasyChatWord_Guts|CRAN
+sEasyChatWord_RoughSkin|PEAU DURE
+sEasyChatWord_ShellArmor|COQUE ARMURE
+sEasyChatWord_NaturalCure|MÉDIC NATURE
+sEasyChatWord_Damp|MOITEUR
+sEasyChatWord_Ground|SOL
+sEasyChatWord_Limber|ÉCHAUFFEMENT
+sEasyChatWord_MagnetPull|MAGNÉPIÈGE
+sEasyChatWord_WhiteSmoke|ÉCRAN FUMÉE
+sEasyChatWord_Synchronize|SYNCHRO
+sEasyChatWord_Overgrow|ENGRAIS
+sEasyChatWord_SwiftSwim|GLISSADE
+sEasyChatWord_SandStream|SABLE VOLANT
+sEasyChatWord_SandVeil|VOILE SABLE
+sEasyChatWord_KeenEye|REGARD VIF
+sEasyChatWord_InnerFocus|ATTENTION
+sEasyChatWord_Static|STATIK
+sEasyChatWord_ShedSkin|MUE
+sEasyChatWord_HugePower|COLOFORCE
+sEasyChatWord_VoltAbsorb|ABSORBE-VOLT
+sEasyChatWord_WaterAbsorb|ABSORBE-EAU
+sEasyChatWord_Forecast|MÉTÉO
+sEasyChatWord_SereneGrace|SÉRÉNITÉ
+sEasyChatWord_Poison|POISON
+sEasyChatWord_PoisonPoint|POINT POISON
+sEasyChatWord_Dragon|DRAGON
+sEasyChatWord_Trace|CALQUE
+sEasyChatWord_Oblivious|BENÊT
+sEasyChatWord_Truant|ABSENTÉISME
+sEasyChatWord_RunAway|FUITE
+sEasyChatWord_StickyHold|GLU
+sEasyChatWord_CloudNine|CIEL GRIS
+sEasyChatWord_Normal|NORMAL
+sEasyChatWord_Steel|ACIER
+sEasyChatWord_Illuminate|LUMIATTIRE
+sEasyChatWord_EarlyBird|MATINAL
+sEasyChatWord_Hustle|AGITATION
+sEasyChatWord_Flying|VOL
+sEasyChatWord_Drought|SÉCHERESSE
+sEasyChatWord_Lightningrod|PARATONNERRE
+sEasyChatWord_Compoundeyes|ŒIL COMPOSÉ
+sEasyChatWord_MarvelScale|ÉCAILLE SPÉ.
+sEasyChatWord_WonderGuard|GARDE MYSTIK
+sEasyChatWord_Insomnia|INSOMNIA
+sEasyChatWord_Levitate|LÉVITATION
+sEasyChatWord_Plus|PLUS
+sEasyChatWord_Pressure|PRESSION
+sEasyChatWord_LiquidOoze|SUINTEMENT
+sEasyChatWord_ColorChange|HOMOCHROMIE
+sEasyChatWord_Soundproof|ANTI-BRUIT
+sEasyChatWord_EffectSpore|POSE SPORE
+sEasyChatWord_Fire|FEU
+sEasyChatWord_FlameBody|CORPS ARDENT
+sEasyChatWord_Minus|MOINS
+sEasyChatWord_OwnTempo|TEMPO PERSO
+sEasyChatWord_MagmaArmor|ARMUMAGMA
+sEasyChatWord_Water|EAU
+sEasyChatWord_WaterVeil|IGNIFU-VOILE
+sEasyChatWord_Bug|INSECTE
+sEasyChatWord_Swarm|ESSAIM
+sEasyChatWord_CuteCharm|JOLI SOURIRE
+sEasyChatWord_Immunity|VACCIN
+sEasyChatWord_Blaze|BRASIER
+sEasyChatWord_Pickup|RAMASSAGE
+sEasyChatWord_FlashFire|TORCHE
+sEasyChatWord_VitalSpirit|ESPRIT VITAL
+sEasyChatWord_Chlorophyll|CHLOROPHYLLE
+sEasyChatWord_PurePower|FORCE PURE
+sEasyChatWord_ShieldDust|ÉCRAN POUDRE

@@ -1,0 +1,177 @@
+gText_UR_PleaseStartOver|Recommence depuis le début.
+gText_UR_WirelessSearchCanceled|La recherche du SYSTÈME DE\nCOMMUNICATION SANS FIL est annulée.
+gText_UR_AwaitingCommunication|{STR_VAR_1} ! En attente d'un\nautre joueur.
+gText_UR_AwaitingLinkPressStart|{STR_VAR_1} ! En attente du Link !\nAppuie sur START quand tous sont prêts.
+sText_1PlayerNeeded|Il faut 1\njoueur.
+sText_2PlayersNeeded|Il faut 2\njoueurs.
+sText_3PlayersNeeded|Il faut 3\njoueurs.
+sText_2PlayerMode|MODE\n2 JOUEURS
+sText_3PlayerMode|MODE\n3 JOUEURS
+sText_4PlayerMode|MODE\n4 JOUEURS
+sText_5PlayerMode|MODE\n5 JOUEURS
+gText_UR_BButtonCancel|{B_BUTTON}ANNULER
+gText_UR_PlayerContactedYouForXAccept|{STR_VAR_2} te contacte pour\n{STR_VAR_1}. Accepter ?
+gText_UR_PlayerContactedYouShareX|{STR_VAR_2} te contacte.\nPartager {STR_VAR_1} ?
+gText_UR_PlayerContactedYouAddToMembers|{STR_VAR_2} te contacte.\nL'ajouter aux membres ?
+gText_UR_AreTheseMembersOK|{STR_VAR_1} !\nCes membres te conviennent ?
+gText_UR_CancelModeWithTheseMembers|Annuler le MODE {STR_VAR_1}\navec ces membres ?
+gText_UR_AnOKWasSentToPlayer|Un “OK” a été envoyé\nà {STR_VAR_1}.
+sText_OtherTrainerUnavailableNow|L'autre DRESSEUR ne semble pas\ndisponible pour l'instant…\p
+sText_CantTransmitTrainerTooFar|Tu ne peux pas communiquer avec un\nDRESSEUR trop éloigné.\p
+sText_TrainersNotReadyYet|Le(s) autre(s) DRESSEUR(S)\nn'est/ne sont pas encore prêt(s).\p
+gText_UR_ModeWithTheseMembersWillBeCanceled|Le MODE {STR_VAR_1} avec ces\nmembres sera annulé.{PAUSE 90}
+sText_MemberNoLongerAvailable|Un membre n'est plus\ndisponible.\p
+sText_TrainerAppearsUnavailable|L'autre DRESSEUR semble\nindisponible…\p
+gText_UR_PlayerSentBackOK|{STR_VAR_1} a renvoyé un “OK” !
+gText_UR_PlayerOKdRegistration|{STR_VAR_1} a accepté ton inscription\ncomme membre.
+sText_PlayerRepliedNo|{STR_VAR_1} a répondu “Non…”\p
+gText_UR_AwaitingOtherMembers|{STR_VAR_1} !\nEn attente des autres membres !
+gText_UR_QuitBeingMember|Quitter le groupe ?
+sText_StoppedBeingMember|Tu as quitté le groupe.\p
+gText_UR_WirelessLinkEstablished|Le lien du SYSTÈME DE\nCOMMUNICATION SANS FIL est établi.
+gText_UR_WirelessLinkDropped|Le lien du SYSTÈME DE\nCOMMUNICATION SANS FIL est coupé…
+gText_UR_LinkWithFriendDropped|Le lien avec ton ami\na été coupé…
+sText_PlayerRepliedNo2|{STR_VAR_1} a répondu “Non…”
+sText_DoYouWantXMode|Veux-tu le MODE\n{STR_VAR_2} ?
+sText_DoYouWantXMode2|Veux-tu le MODE\n{STR_VAR_2} ?
+gText_UR_AwaitingPlayersResponseAboutTrade|En attente de la réponse de {STR_VAR_1}\nsur l'échange…
+sText_Communicating|Communication{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.
+sText_CommunicatingWithPlayer|Communication avec {STR_VAR_1}{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.
+sText_PleaseWaitAWhile|Patiente un moment{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.
+sText_HiDoSomethingMale|Salut ! Tu voulais faire\nquelque chose ?
+sText_HiDoSomethingFemale|Bonjour !\nTu voudrais faire quelque chose ?
+sText_HiDoSomethingAgainMale|{STR_VAR_1} : Salut, on se revoit !\nTu veux faire quoi cette fois ?
+sText_HiDoSomethingAgainFemale|{STR_VAR_1} : Oh ! {PLAYER}, bonjour !\nTu voudrais faire quelque chose ?
+sText_DoSomethingMale|Tu veux faire quelque chose ?
+sText_DoSomethingFemale|Tu voudrais faire quelque chose ?
+sText_DoSomethingAgainMale|{STR_VAR_1} : Que veux-tu\nfaire maintenant ?
+sText_SomebodyHasContactedYou|Quelqu'un t'a contacté.{PAUSE 60}
+sText_PlayerHasContactedYou|{STR_VAR_1} t'a contacté.{PAUSE 60}
+sText_AwaitingResponseFromTrainer|En attente d'une réponse de\nl'autre DRESSEUR…
+sText_AwaitingResponseFromPlayer|En attente d'une réponse de\n{STR_VAR_1}…
+gText_UR_ShowTrainerCard|L'autre DRESSEUR t'a montré sa\nCARTE DRESSEUR.\pVeux-tu montrer la tienne ?
+gText_UR_BattleChallenge|L'autre DRESSEUR te défie\nen combat.\pAcceptes-tu le défi ?
+gText_UR_ChatInvitation|L'autre DRESSEUR t'invite\nà discuter.\pAcceptes-tu l'invitation ?
+gText_UR_OfferToTradeMon|On te propose d'échanger ton\n{DYNAMIC 1} niv. {DYNAMIC 0} enregistré\pcontre un {DYNAMIC 3} niv. {DYNAMIC 2}.\pAcceptes-tu cette offre ?
+gText_UR_OfferToTradeEgg|On te propose d'échanger ton\nŒUF enregistré.\lAcceptes-tu cette offre ?
+gText_UR_ChatDropped|La discussion a été interrompue.\p
+gText_UR_OfferDeclined1|Tu as refusé l'offre.\p
+gText_UR_OfferDeclined2|Tu as refusé l'offre.\p
+gText_UR_ChatEnded|La discussion est terminée.\p
+sText_JoinChatMale|Oh, salut ! On discute là.\nTu veux te joindre à nous ?
+sText_PlayerJoinChatMale|{STR_VAR_1} : Salut, {PLAYER} !\nOn discute en ce moment.\lTu veux te joindre à nous ?
+sText_JoinChatFemale|Oh, bonjour ! On discute.\nTu voudrais te joindre à nous ?
+sText_PlayerJoinChatFemale|{STR_VAR_1} : Oh, bonjour {PLAYER} !\nOn discute en ce moment.\lTu voudrais te joindre à nous ?
+gText_UR_TrainerAppearsBusy|……\nLe DRESSEUR semble occupé…\p
+sText_WaitForBattleMale|Un combat ?\nD'accord, laisse-moi un moment.
+sText_WaitForChatMale|Tu veux discuter ?\nOK, attends un peu.
+sText_ShowTrainerCardMale|Pas de souci ! En guise de “salut”,\nvoici ma CARTE DRESSEUR.
+sText_WaitForBattleFemale|Un combat ? Bien sûr, mais il me\nfaut le temps de me préparer.
+sText_WaitForChatFemale|Tu voulais discuter ?\nD'accord, patiente un instant.
+sText_ShowTrainerCardFemale|En guise de présentation, je te\nmontre ma CARTE DRESSEUR.
+sText_DoneWaitingBattleMale|Merci d'avoir attendu !\nCommençons notre combat !{PAUSE 60}
+sText_DoneWaitingChatMale|D'accord !\nDiscutons !{PAUSE 60}
+sText_DoneWaitingBattleFemale|Désolée de t'avoir fait attendre !\nCommençons !{PAUSE 60}
+sText_DoneWaitingChatFemale|Désolée de t'avoir fait attendre !\nDiscutons.{PAUSE 60}
+sText_TradeWillBeStarted|L'échange va commencer.{PAUSE 60}
+sText_BattleWillBeStarted|Le combat va commencer.{PAUSE 60}
+sText_EnteringChat|Entrée dans la discussion…{PAUSE 60}
+sText_BattleDeclinedMale|Désolé ! Mes POKéMON ne semblent\npas en forme en ce moment.\lAffrontons-nous une autre fois.\p
+sText_BattleDeclinedFemale|Je suis vraiment désolée, mais mes\nPOKéMON ne sont pas en forme…\pAffrontons-nous une autre fois.\p
+sText_ShowTrainerCardDeclinedMale|Hein ? Ma CARTE DRESSEUR…\nOù est-elle passée ?\lDésolé ! Je te la montrerai plus tard !\p
+sText_ShowTrainerCardDeclinedFemale|Oh ? Où ai-je mis ma\nCARTE DRESSEUR ?…\lDésolée ! Je te la montrerai plus tard !\p
+sText_IfYouWantToDoSomethingMale|Si tu veux faire quelque chose avec\nmoi, n'hésite pas à m'appeler !\p
+sText_IfYouWantToDoSomethingFemale|Si tu veux faire quelque chose avec\nmoi, ne sois pas timide.\p
+gText_UR_TrainerBattleBusy|Oups ! Désolé, mais j'ai autre\nchose à faire.\lUne autre fois, d'accord ?\p
+gText_UR_NeedTwoMonsOfLevel30OrLower1|Pour un combat, il te faut deux\nPOKéMON de niveau 30 maximum.\p
+gText_UR_NeedTwoMonsOfLevel30OrLower2|Pour un combat, il te faut deux\nPOKéMON de niveau 30 maximum.\p
+sText_DeclineChatMale|Oh, d'accord.\nViens me voir quand tu veux.\p
+stext_DeclineChatFemale|Oh…\nViens me voir quand tu veux.\p
+sText_ChatDeclinedMale|Oh, désolé !\nJe ne peux pas là, tout de suite.\lDiscutons une autre fois.\p
+sText_ChatDeclinedFemale|Oh, désolée.\nJ'ai trop à faire en ce moment.\lDiscutons une autre fois.\p
+sText_YoureToughMale|Waouh !\nTu as l'air plutôt fort !\p
+sText_UsedGoodMoveMale|Tu as utilisé cette attaque ?\nBonne stratégie !\p
+sText_BattleSurpriseMale|Bien joué !\nÇa m'a ouvert les yeux !\p
+sText_SwitchedMonsMale|Oh ! Comment as-tu pu utiliser ce\nPOKéMON dans cette situation ?\p
+sText_YoureToughFemale|Ce POKéMON…\nIl est vraiment bien élevé !\p
+sText_UsedGoodMoveFemale|C'est ça !\nC'est la bonne attaque !\p
+sText_BattleSurpriseFemale|Génial !\nOn peut se battre comme ça ?\p
+sText_SwitchedMonsFemale|Tu as un timing exquis pour\nchanger de POKéMON !\p
+sText_LearnedSomethingMale|Ah, je vois !\nC'est instructif !\p
+sText_ThatsFunnyMale|Arrête de dire des blagues !\nJ'ai mal de tant rire !\p
+sText_RandomChatMale1|Oh ?\nIl s'est passé un truc comme ça.\p
+sText_RandomChatMale2|Hmhm… Quoi ?\nC'est donc ça que tu veux dire ?\p
+sText_LearnedSomethingFemale|C'est vrai ?\nJe ne le savais pas.\p
+sText_ThatsFunnyFemale|Haha !\nC'est quoi cette histoire ?\p
+sText_RandomChatFemale1|Oui, exactement !\nC'est ce que je voulais dire.\p
+sText_RandomChatFemale2|En d'autres termes…\nOui ! C'est ça !\p
+sText_ShowedTrainerCardMale1|Je montre juste ma CARTE DRESSEUR\npour te saluer.\p
+sText_ShowedTrainerCardMale2|J'espère mieux te connaître !\p
+sText_ShowedTrainerCardFemale1|On se montre nos CARTES DRESSEUR\npour faire connaissance.\p
+sText_ShowedTrainerCardFemale2|Ravie de te rencontrer.\nReste en contact !\p
+sText_MaleTraded1|Ouais !\nJe voulais vraiment ce POKéMON !\p
+sText_MaleTraded2|Enfin, un échange m'a donné ce\nPOKéMON que je voulais depuis longtemps.\p
+sText_FemaleTraded1|Je suis en train d'échanger\ndes POKéMON.\p
+sText_FemaleTraded2|J'ai enfin obtenu ce POKéMON que\nje voulais grâce à un échange !\p
+gText_UR_XCheckedTradingBoard|{STR_VAR_1} a consulté le\nTABLEAU D'ÉCHANGES.\p
+gText_UR_RegisterMonAtTradingBoard|Bienvenue au TABLEAU D'ÉCHANGES.\pTu peux y inscrire ton POKéMON\net le proposer à l'échange.\pVeux-tu inscrire un de\ntes POKéMON ?
+gText_UR_ChooseRequestedMonType|Choisis le type de POKéMON que\ntu souhaites en échange.\n
+gText_UR_WhichMonWillYouOffer|Lequel de tes POKéMON\nproposes-tu à l'échange ?\p
+gText_UR_RegistrationCanceled|L'inscription a été annulée.\p
+gText_UR_RegistraionCompleted|L'inscription est terminée.\p
+gText_UR_TradeCanceled|L'échange a été annulé.\p
+gText_UR_CancelRegistrationOfMon|Annuler l'inscription de ton\n{STR_VAR_1} niv. {STR_VAR_2} ?
+gText_UR_CancelRegistrationOfEgg|Annuler l'inscription de ton\nŒUF ?
+gText_UR_RegistrationCanceled2|L'inscription a été annulée.\p
+gText_UR_AskTrainerToMakeTrade|Proposer un échange à\n{STR_VAR_1} ?
+gText_UR_DontHaveTypeTrainerWants|Tu n'as pas de POKéMON de type {STR_VAR_2}\nque {STR_VAR_1} veut.\p
+gText_UR_DontHaveEggTrainerWants|Tu n'as pas d'ŒUF que\n{STR_VAR_1} veut.\p
+sText_PlayerCantTradeForYourMon|{STR_VAR_1} ne peut pas échanger\nton POKéMON pour l'instant.\p
+sText_CantTradeForPartnersMon|Tu ne peux pas échanger le POKéMON\nde {STR_VAR_1} pour l'instant.\p
+gText_UR_TradeOfferRejected|Ton offre d'échange a été refusée.\p
+gText_UR_EggTrade|ÉCHANGE D'ŒUF
+gText_UR_ChooseJoinCancel|{DPAD_UPDOWN}CHOIX  {A_BUTTON}REJOINDRE  {B_BUTTON}ANNULER
+gText_UR_ChooseTrainer|Choisis un DRESSEUR.
+sText_ChooseTrainerSingleBattle|Choisis un DRESSEUR pour un\nCOMBAT SIMPLE.
+sText_ChooseTrainerDoubleBattle|Choisis un DRESSEUR pour un\nCOMBAT DOUBLE.
+sText_ChooseLeaderMultiBattle|Choisis le CHEF pour un\nCOMBAT MULTI.
+sText_ChooseTrainerToTradeWith|Choisis le DRESSEUR avec qui\néchanger.
+sText_ChooseTrainerToShareWonderCards|Choisis le DRESSEUR qui partage\ndes CARTES MIRACLE.
+sText_ChooseTrainerToShareWonderNews|Choisis le DRESSEUR qui partage\ndes INFOS MIRACLE.
+sText_ChooseLeaderPokemonJump|Sautez avec les mini POKéMON !\nChoisis le CHEF.
+sText_ChooseLeaderBerryCrush|BAIES EN FOLIE !\nChoisis le CHEF.
+sText_ChooseLeaderBerryPicking|CUEILLETTE DODRIO !\nChoisis le CHEF.
+gText_UR_SearchingForWirelessSystemWait|Recherche d'un SYSTÈME DE\nCOMMUNICATION SANS FIL. Patiente…
+gText_UR_AwaitingPlayersResponse|En attente de la réponse de {STR_VAR_1}…
+gText_UR_PlayerHasBeenAskedToRegisterYouPleaseWait|On a demandé à {STR_VAR_1} de t'inscrire\ncomme membre. Patiente.
+gText_UR_AwaitingResponseFromWirelessSystem|En attente d'une réponse du\nSYSTÈME DE COMMUNICATION SANS FIL.
+sText_NoCardsSharedRightNow|Aucune CARTE n'est partagée\npour l'instant.
+sText_NoNewsSharedRightNow|Aucune INFO n'est partagée\npour l'instant.
+gText_UR_Battle|COMBAT
+gText_UR_Chat2|DISCUSSION
+gText_UR_Greetings|SALUTATIONS
+gText_UR_Exit|SORTIR
+gText_UR_Exit2|SORTIR
+gText_UR_NameWantedOfferLv|NOM{CLEAR_TO 0x3C}VEUT{CLEAR_TO 0x6E}OFFRE{CLEAR_TO 0xC6}NIV.
+gText_UR_SingleBattle|COMBAT SIMPLE
+gText_UR_DoubleBattle|COMBAT DOUBLE
+gText_UR_MultiBattle|COMBAT MULTI
+gText_UR_PokemonTrades|ÉCHANGES POKéMON
+gText_UR_Chat|DISCUSSION
+gText_UR_Cards|CARTES
+gText_UR_WonderCards|CARTES MIRACLE
+gText_UR_WonderNews|INFOS MIRACLE
+gText_UR_BerryCrush|BAIES EN FOLIE
+gText_UR_BerryPicking|CUEILLETTE
+gText_UR_Search|CHERCHER
+sText_ItsNormalCard|C'est une CARTE NORMALE.
+sText_ItsBronzeCard|C'est une CARTE BRONZE !
+sText_ItsCopperCard|C'est une CARTE CUIVRE !
+sText_ItsSilverCard|C'est une CARTE ARGENT !
+sText_ItsGoldCard|C'est une CARTE OR !
+gText_UR_TrainerCardInfoPage1|Voici la CARTE DRESSEUR de\n{DYNAMIC 0} {DYNAMIC 1}…\l{DYNAMIC 2}\pPOKéDEX : {DYNAMIC 3}\nTEMPS :   {DYNAMIC 4}:{DYNAMIC 5}\p
+gText_UR_TrainerCardInfoPage2|COMBATS : {DYNAMIC 0} V  {DYNAMIC 2} D\nÉCHANGES : {DYNAMIC 3} fois\p“{DYNAMIC 4} {DYNAMIC 5}\n{DYNAMIC 6} {DYNAMIC 7}”\p
+sText_GladToMeetYouMale|{DYNAMIC 1} : Ravi de t'avoir rencontré !{PAUSE 60}
+sText_GladToMeetYouFemale|{DYNAMIC 1} : Ravie de t'avoir rencontré !{PAUSE 60}
+gText_UR_FinishedCheckingPlayersTrainerCard|Fin de la lecture de la CARTE\nDRESSEUR de {DYNAMIC 1}.{PAUSE 60}
+sText_CanceledReadingCard|Lecture de la carte annulée.

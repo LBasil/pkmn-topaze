@@ -1,0 +1,62 @@
+gText_SpacePoints| points
+gString_PokemonFireRed_Staff|Pokémon Version Rouge Feu\nÉquipe
+gString_PokemonLeafGreen_Staff|Pokémon Version Vert Feuille\nÉquipe
+gText_VarietyOfEventsImportedWireless|Des événements variés seront importés\npar communication sans fil.
+gText_WonderCardsInPossession|Lis les CARTES MIRACLE que tu\npossèdes.
+gText_ReadNewsThatArrived|Lis les INFOS arrivées.
+gText_ReturnToTitle|Retourner à l'écran titre.
+gText_DontHaveCardNewOneInput|Tu n'as pas de CARTE MIRACLE,\nune nouvelle CARTE sera enregistrée.
+gText_DontHaveNewsNewOneInput|Tu n'as pas d'INFO MIRACLE,\nune nouvelle INFO sera enregistrée.
+gText_WhereShouldCardBeAccessed|Où accéder à la\nCARTE MIRACLE ?
+gText_WhereShouldNewsBeAccessed|Où accéder à l'INFO\nMIRACLE ?
+gText_LinkStandyBButtonCancel|Attente du Link...\n... ... Bouton B : Annuler
+gText_Communicating|Communication…
+gText_CommunicationCompleted|Communication terminée.
+gText_CommunicationError|Erreur de communication.
+gText_CommunicationCanceled|La communication a été annulée.
+gText_ThrowAwayWonderCard|Jeter la CARTE MIRACLE\net en enregistrer une nouvelle ?
+gText_HaventReceivedCardsGift|Tu n'as pas encore reçu le cadeau de\nla CARTE. Enregistrer quand même ?
+gText_WonderCardReceivedFrom|Une CARTE MIRACLE a été reçue\nde {STR_VAR_1}.
+gText_WonderNewsReceivedFrom|Une INFO MIRACLE a été\nreçue de {STR_VAR_1}.
+gText_WonderCardReceived|Une nouvelle CARTE MIRACLE a été\nreçue.
+gText_WonderNewsReceived|Une nouvelle INFO MIRACLE a été\nreçue.
+gText_NewStampReceived|Un nouveau TAMPON a été reçu.
+gText_NewTrainerReceived|Un nouveau DRESSEUR est arrivé.
+gText_AlreadyHadCard|Tu avais déjà cette\nCARTE MIRACLE.
+gText_AlreadyHadNews|Tu avais déjà cette\nINFO MIRACLE.
+gText_AlreadyHadStamp|Tu avais déjà ce\nTAMPON.
+gText_NoMoreRoomForStamps|Il n'y a plus de place pour\najouter des TAMPONS.
+gText_RecordUploadedViaWireless|Ton record a été envoyé par\nCOMMUNICATION SANS FIL.
+gText_CantAcceptCardFromTrainer|Tu ne peux pas accepter de CARTE\nMIRACLE de ce DRESSEUR.
+gText_CantAcceptNewsFromTrainer|Tu ne peux pas accepter d'INFO\nMIRACLE de ce DRESSEUR.
+gText_NothingSentOver|Rien n'a été envoyé…
+gText_WhatToDoWithCards|Que faire des\nCARTES MIRACLE ?
+gText_WhatToDoWithNews|Que faire des\nINFOS MIRACLE ?
+gText_SendingWonderCard|Envoi de ta CARTE MIRACLE…
+gText_SendingWonderNews|Envoi de ton INFO MIRACLE…
+gText_WonderCardSentTo|Ta CARTE MIRACLE a été\nenvoyée à {STR_VAR_1}.
+gText_WonderNewsSentTo|Ton INFO MIRACLE a été\nenvoyée à {STR_VAR_1}.
+gText_StampSentTo|Un TAMPON a été envoyé à {STR_VAR_1}.
+gText_GiftSentTo|Un CADEAU a été envoyé à {STR_VAR_1}.
+gText_OtherTrainerHasCard|L'autre DRESSEUR a déjà la même\nCARTE MIRACLE.
+gText_OtherTrainerHasNews|L'autre DRESSEUR a déjà la même\nINFO MIRACLE.
+gText_OtherTrainerHasStamp|L'autre DRESSEUR a déjà le même\nTAMPON.
+gText_OtherTrainerCanceled|L'autre DRESSEUR a annulé\nla communication.
+gText_CantSendGiftToTrainer|Tu ne peux pas envoyer de CADEAU\nMYSTÈRE à ce DRESSEUR.
+gText_IfThrowAwayCardEventWontHappen|Si tu jettes la CARTE, son\névénement n'aura pas lieu. D'accord ?
+gText_OkayToDiscardNews|Jeter cette INFO ?
+gText_HaventReceivedGiftOkayToDiscard|Tu n'as pas reçu le CADEAU.\nLe jeter quand même ?
+gText_DataWillBeSaved|Les données vont être sauvegardées.\nPatiente un instant.
+gText_SaveCompletedPressA|Sauvegarde terminée.\nAppuie sur le bouton A.
+gText_WonderCardThrownAway|La CARTE MIRACLE a été jetée.
+gText_WonderNewsThrownAway|L'INFO MIRACLE a été jetée.
+gText_MysteryGift2|CADEAU MYSTÈRE
+gText_WonderCards|CARTES MIRACLE
+gText_WonderNews|INFOS MIRACLE
+gText_WirelessCommunication|COMM. SANS FIL
+gText_Friend2|AMI
+gText_Exit3|SORTIR
+gText_Receive|RECEVOIR
+gText_Send|ENVOYER
+gText_Toss|JETER
+gText_PickOKCancel|{DPAD_UPDOWN}CHOIX {A_BUTTON}OK {B_BUTTON}SORTIE

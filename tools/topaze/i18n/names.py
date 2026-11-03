@@ -142,7 +142,7 @@ def apply_dex(lg):
     open(pe, 'w', encoding='utf-8').write(ent); open(pt, 'w', encoding='utf-8').write(txt)
     print('pokedex localise :', n, '| refuses :', bad)
 
-STR_FILES = ['src/strings.c', 'src/battle_message.c', 'src/union_room_message.c', 'src/berry.c', 'src/data/text/quest_log.h', 'src/data/region_map/region_map_entry_strings.h', 'src/data/topaze_journal.h']
+STR_FILES = ['src/strings.c', 'src/battle_message.c', 'src/union_room_message.c', 'src/berry.c', 'src/data/text/quest_log.h', 'src/data/region_map/region_map_entry_strings.h', 'src/data/topaze_journal.h', 'src/script_menu.c', 'src/topaze_dexnav.c', 'src/data/text/teachy_tv.h', 'src/mystery_event_msg.c', 'src/mystery_gift_scripts.c'] + ['src/data/easy_chat/easy_chat_group_%s.h' % g for g in 'actions adjectives battle conditions endings events feelings greetings hobbies lifestyle misc move_1 move_2 people pokemon pokemon2 speech status time trainer trendy_saying voices'.split()]
 
 def apply_strings(lg):
     import glob
@@ -171,6 +171,34 @@ def apply_strings(lg):
         open(p, 'w', encoding='utf-8').write(src)
     print('chaines localisees :', n, '| refusees :', bad)
 
+TYPE_ABBR = {'NOR': 'NOR', 'FIG': 'COM', 'FLY': 'VOL', 'PSN': 'POI', 'GRD': 'SOL', 'RCK': 'ROC', 'BUG': 'INS', 'GHO': 'SPE', 'STL': 'ACI',
+             'FIR': 'FEU', 'WAT': 'EAU', 'GRS': 'PLA', 'ELE': 'ÉLE', 'PSY': 'PSY', 'ICE': 'GLA', 'DRA': 'DRA', 'DRK': 'TÉN', 'FAI': 'FÉE'}
+
+def apply_literals(lg):
+    cs = lang.charset(); n = bad = 0
+    d = {}
+    for l in open(os.path.join(HERE, lg, 'literals.txt'), encoding='utf-8'):
+        if '=' in l:
+            k, v = l.rstrip('\n').split('=', 1); d[k] = v
+    for rel, tab in (('src/data/decoration/header.h', d), ('src/battle_interface.c', TYPE_ABBR)):
+        p = os.path.join(ROOT, rel)
+        src = open(p, encoding='utf-8').read()
+        bk = os.path.join(BACKUP, rel.replace('/', '__'))
+        if not os.path.exists(bk): shutil.copy(p, bk)
+        a, b = 0, len(src)
+        if tab is TYPE_ABBR: a = src.index('sTopazeTypeAbbr'); b = src.index('};', a)
+        def rep(m):
+            nonlocal n, bad
+            v = tab.get(m.group(1))
+            if v is None: return m.group(0)
+            ch = [c for c in v if c not in cs]
+            if ch: bad += 1; print('! lit', m.group(1), ch); return m.group(0)
+            n += 1
+            return '_("%s")' % v
+        src = src[:a] + LINE.sub(rep, src[a:b]) + src[b:]
+        open(p, 'w', encoding='utf-8').write(src)
+    print('litteraux localises :', n, '| refuses :', bad)
+
 def restore():
     for b in glob_backups():
         rel = os.path.basename(b).replace('__', '/')
@@ -181,5 +209,5 @@ def glob_backups():
     return [os.path.join(BACKUP, f) for f in os.listdir(BACKUP)] if os.path.isdir(BACKUP) else []
 
 if __name__ == '__main__':
-    if sys.argv[1] == 'apply': apply(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_desc(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_dex(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_strings(sys.argv[2] if len(sys.argv) > 2 else 'fr')
+    if sys.argv[1] == 'apply': apply(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_desc(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_dex(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_strings(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_literals(sys.argv[2] if len(sys.argv) > 2 else 'fr')
     else: restore()
