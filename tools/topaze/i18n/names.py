@@ -199,6 +199,37 @@ def apply_literals(lg):
         open(p, 'w', encoding='utf-8').write(src)
     print('litteraux localises :', n, '| refuses :', bad)
 
+def apply_inc(lg):
+    """textes .string des data/text/*.inc et data/scripts/*.inc : fr/inc*.txt -> 'label|texte' (\\n \\p \\l litteraux, $ final)."""
+    import glob
+    cs = lang.charset(); d = {}
+    for f in sorted(glob.glob(os.path.join(HERE, lg, 'inc*.txt'))):
+        for l in open(f, encoding='utf-8'):
+            l = l.rstrip('\n')
+            if '|' in l and not l.startswith('#'):
+                k, v = l.split('|', 1); d[k] = v.replace('\u2019', "'")
+    n = bad = 0
+    files = sorted(glob.glob(os.path.join(ROOT, 'data/text/*.inc')) + glob.glob(os.path.join(ROOT, 'data/scripts/*.inc')))
+    rx = re.compile(r'^(\w+)::\n((?:[ \t]*\.string "[^\n]*\n)+)', re.M)
+    for p in files:
+        rel = p[len(ROOT) + 1:]
+        src = open(p, encoding='utf-8').read()
+        def rep(m):
+            nonlocal n, bad
+            v = d.get(m.group(1))
+            if v is None: return m.group(0)
+            ch = [c for c in re.sub(r'\{[^{}]+\}|\\[nlpc]|\$', '', v) if c not in cs]
+            if ch: bad += 1; print('! inc', m.group(1), ch); return m.group(0)
+            n += 1
+            parts = re.split(r'(?<=\\[nlp])', v)
+            return m.group(1) + '::\n' + ''.join('\t.string "%s"\n' % x for x in parts if x)
+        out = rx.sub(rep, src)
+        if out != src:
+            bk = os.path.join(BACKUP, rel.replace('/', '__'))
+            if not os.path.exists(bk): shutil.copy(p, bk)
+            open(p, 'w', encoding='utf-8').write(out)
+    print('textes .inc localises :', n, '| refuses :', bad)
+
 def restore():
     for b in glob_backups():
         rel = os.path.basename(b).replace('__', '/')
@@ -209,5 +240,5 @@ def glob_backups():
     return [os.path.join(BACKUP, f) for f in os.listdir(BACKUP)] if os.path.isdir(BACKUP) else []
 
 if __name__ == '__main__':
-    if sys.argv[1] == 'apply': apply(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_desc(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_dex(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_strings(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_literals(sys.argv[2] if len(sys.argv) > 2 else 'fr')
+    if sys.argv[1] == 'apply': apply(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_desc(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_dex(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_strings(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_literals(sys.argv[2] if len(sys.argv) > 2 else 'fr'); apply_inc(sys.argv[2] if len(sys.argv) > 2 else 'fr')
     else: restore()

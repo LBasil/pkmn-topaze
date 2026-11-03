@@ -1,0 +1,24 @@
+gOtherText_NewName|NOUVEAU NOM$
+gControlsGuide_Text_Intro|Les touches vont être expliquées\npar ordre d'importance.$
+gControlsGuide_Text_DPad|Déplace le personnage.\nSert aussi à choisir les\nrubriques.$
+gControlsGuide_Text_AButton|Sert à confirmer un choix, à\nexaminer, parler et faire\ndéfiler le texte.$
+gControlsGuide_Text_BButton|Sert à sortir, annuler un choix\net quitter un mode.$
+gControlsGuide_Text_StartButton|Appuie ici pour ouvrir le\nMENU.$
+gControlsGuide_Text_SelectButton|Sert à déplacer les objets et à\nutiliser l'objet enregistré.$
+gControlsGuide_Text_LRButtons|Si tu as besoin d'aide pour\njouer ou savoir quoi faire,\nappuie sur L ou R.$
+gOakSpeech_Text_AskPlayerGender|Dis-moi. Es-tu un garçon\nou une fille ?$
+gPikachuIntro_Text_Page1|Dans le monde où tu vas entrer,\ntu vivras une grande aventure\ndont tu es le héros.\n\nParle aux gens et examine tout\npartout où tu vas : villes,\nroutes ou grottes. Récolte des\ninfos et des indices partout.$
+gPikachuIntro_Text_Page2|De nouvelles voies s'ouvriront en\naidant les gens, en surmontant\ndes défis et en résolvant des\nmystères.\n\nParfois, d'autres te défieront\nou des créatures sauvages\nt'attaqueront. Sois courageux.$
+gPikachuIntro_Text_Page3|Durant ton aventure, nous\nespérons que tu rencontreras\nbeaucoup de gens et que tu\ngrandiras. C'est notre but.\n\nAppuie sur A, et que l'aventure\ncommence !$
+gOakSpeech_Text_WelcomeToTheWorld|Bonjour !\nContent de te rencontrer !\pBienvenue dans le monde des\nPOKéMON !\pJe m'appelle CHEN.\pLes gens m'appellent\naffectueusement le PROFESSEUR\nPOKéMON.\p$
+gOakSpeech_Text_ThisWorld|Ce monde…$
+gOakSpeech_Text_IsInhabitedFarAndWide|…est peuplé un peu partout de\ncréatures appelées POKéMON.\p$
+gOakSpeech_Text_IStudyPokemon|Pour certains, les POKéMON sont\ndes animaux de compagnie.\nD'autres s'en servent pour se\nbattre.\pQuant à moi…\pJe les étudie, c'est mon métier.\p$
+gOakSpeech_Text_TellMeALittleAboutYourself|Mais d'abord, parle-moi un peu\nde toi.\p$
+gOakSpeech_Text_YourNameWhatIsIt|Commençons par ton nom.\nComment t'appelles-tu ?\p$
+gOakSpeech_Text_SoYourNameIsPlayer|Très bien…\nTu t'appelles donc {PLAYER}.$
+gOakSpeech_Text_WhatWasHisName|Voici mon petit-fils.\pC'est ton rival depuis que vous\nêtes bébés.\p…Euh, comment s'appelait-il\ndéjà ?$
+gOakSpeech_Text_YourRivalsNameWhatWasIt|Le nom de ton rival, c'était\nquoi déjà ?$
+gOakSpeech_Text_ConfirmRivalName|…Euh, c'était {RIVAL} ?$
+gOakSpeech_Text_RememberRivalsName|C'est ça ! Je me souviens !\nIl s'appelle {RIVAL} !\p$
+gOakSpeech_Text_LetsGo|{PLAYER} !\pTa propre légende POKéMON est\nsur le point de commencer !\pUn monde de rêves et\nd'aventures avec les POKéMON\nt'attend ! En route !$
