@@ -5,8 +5,9 @@ set -e
 L=${1:-en}
 cd "$(dirname "$0")/../../.."
 if [ "$L" = "en" ]; then make -j8 && cp pokefirered.gba Topaze_EN.gba && echo "OK Topaze_EN.gba"; exit 0; fi
-trap 'python3 tools/topaze/i18n/lang.py restore; rm -f build/firered/data/maps.o' EXIT
+trap 'python3 tools/topaze/i18n/lang.py restore; python3 tools/topaze/i18n/names.py restore; rm -f build/firered/data/maps.o' EXIT
 python3 tools/topaze/i18n/lang.py apply "$L"
+python3 tools/topaze/i18n/names.py apply "$L"
 rm -f build/firered/data/maps.o
 make -j8
 cp pokefirered.gba "Topaze_$(echo $L | tr a-z A-Z).gba"

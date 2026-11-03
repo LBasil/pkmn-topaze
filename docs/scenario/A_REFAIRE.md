@@ -334,3 +334,8 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - Champion/championne partout à la place de « chef d'arène » (KAY, ACHLYS, HERA, HEPHA, GRIM = championnes ; NOX, EDDIE, SYLVESTRE = champions).
 - lang.py : les codes {PLAY_BGM}, {MUS_*}, {PAUSE ..} ne comptent plus dans la largeur.
 - RESTE EN ANGLAIS DANS LA ROM : noms d'objets, d'attaques, d'espèces, menus. Les dialogues FR citent des noms FR (NOSFERAPTI, BONBONS RARES) qui ne correspondent donc pas à ceux affichés en jeu. À décider avec Basil.
+
+## 03-11 (13h07) — Noms localisés dans la ROM FR
+- tools/topaze/i18n/names.py + tools/topaze/i18n/fr/*.txt : espèces (386), attaques (617), talents (174), objets (375, CT/CS), types, natures. Appliqué au build FR puis restauré (build_lang.sh).
+- Noms officiels FR de mémoire (gen 1-3 fiables ; gen 4-9 des attaques et certains talents à vérifier). Les noms trop longs sont abrégés automatiquement (fit()).
+- PAS ENCORE FAIT : descriptions (objets/attaques/talents), menus, textes de combat.
