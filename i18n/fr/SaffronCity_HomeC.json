@@ -1,6 +1,18 @@
 {
+ "SaffronCity_HomeC_Text_Ask": {
+  "en": "LOST AND FOUND. Three things were\\nlost on the routes: SCOPE LENS\\p(ROUTE 4), KINGS ROCK (ROUTE 10),\\nBLACK GLASSES (ROUTE 14). Bring\\pthem back.",
+  "fr": "OBJETS TROUVÉS. Trois choses ont\\nété perdues sur les routes : LOUPE\\lSCOPE\\p(ROUTE 4), PIERRE ROYALE (ROUTE\\n10), LUNETTES NOIRES (ROUTE 14).\\pRapporte-les."
+ },
+ "SaffronCity_HomeC_Text_Done": {
+  "en": "Nothing left to find. The routes\\nfeel a bit lighter now.",
+  "fr": "Plus rien à trouver. Les routes\\nsemblent un peu plus légères\\lmaintenant."
+ },
  "SaffronCity_HomeC_Text_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "SaffronCity_HomeC_Text_Thanks": {
+  "en": "All three! Their owners will be so\\nhappy. Here, a reward.",
+  "fr": "Les trois ! Leurs propriétaires\\nseront ravis. Tiens, une\\lrécompense."
  }
 }

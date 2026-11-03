@@ -1,0 +1,14 @@
+{
+ "Route2_ViridianForest_NorthEntrance_Text_CanCancelEvolution": {
+  "en": "Do you know the evolution-cancel\\ntechnique?\\pWhen a POKéMON is evolving, you\\ncan stop the process.\\pIt's a technique for raising\\nPOKéMON the way they are.",
+  "fr": "Connais-tu la technique\\nd'annulation d'évolution ?\\pQuand un POKéMON évolue, on peut\\narrêter le processus.\\pC'est une technique pour élever les\\nPOKéMON tels qu'ils sont."
+ },
+ "Route2_ViridianForest_NorthEntrance_Text_CanCutSkinnyTrees": {
+  "en": "Have you noticed the skinny trees\\non the roadside?\\pThey can be cut down by a special\\nPOKéMON move, I hear.",
+  "fr": "As-tu remarqué les arbres maigres\\nau bord de la route ?\\pOn peut les abattre avec une\\ncapacité POKéMON spéciale,\\lparaît-il."
+ },
+ "Route2_ViridianForest_NorthEntrance_Text_ManyMonsOnlyInForests": {
+  "en": "Many POKéMON live only in forests \\nand caves.\\pYou need to be persistent and look\\neverywhere to get different kinds.",
+  "fr": "Beaucoup de POKéMON ne vivent que\\ndans les forêts et les grottes.\\pIl faut persévérer et chercher\\npartout pour trouver différentes\\lespèces."
+ }
+}

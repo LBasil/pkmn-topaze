@@ -1,0 +1,78 @@
+{
+ "SilphCo_5F_Text_BeauDefeat": {
+  "en": "Dang!\\nBlast it!",
+  "fr": "Mince !\\nZut alors !"
+ },
+ "SilphCo_5F_Text_BeauIntro": {
+  "en": "We study POKé BALL technology on\\nthis floor.",
+  "fr": "On étudie la technologie des POKé\\nBALLS à cet étage."
+ },
+ "SilphCo_5F_Text_BeauPostBattle": {
+  "en": "We worked on the ultimate POKé\\nBALL which would catch anything.",
+  "fr": "On travaillait sur la POKé BALL\\nultime qui capturerait tout."
+ },
+ "SilphCo_5F_Text_DaltonDefeat": {
+  "en": "Oh, goodness!",
+  "fr": "Oh, mon Dieu !"
+ },
+ "SilphCo_5F_Text_DaltonIntro": {
+  "en": "Whaaat?\\pThere shouldn't be any children\\nhere!",
+  "fr": "Quoiii ?\\pIl ne devrait pas y avoir d'enfants\\nici !"
+ },
+ "SilphCo_5F_Text_DaltonPostBattle": {
+  "en": "You're only on 5F.\\nIt's a long way to my BOSS!",
+  "fr": "Tu n'es qu'au 5F. C'est un long\\nchemin jusqu'à mon BOSS !"
+ },
+ "SilphCo_5F_Text_FloorSign": {
+  "en": "HEMATEK CO. HEAD OFFICE\\n5F",
+  "fr": "HEMATEK CO. SIÈGE\\n5F"
+ },
+ "SilphCo_5F_Text_Grunt1Defeat": {
+  "en": "Boom!",
+  "fr": "Boum !"
+ },
+ "SilphCo_5F_Text_Grunt1Intro": {
+  "en": "I heard a kid was wandering\\naround.",
+  "fr": "J'ai entendu dire qu'un gamin\\nrôdait."
+ },
+ "SilphCo_5F_Text_Grunt1PostBattle": {
+  "en": "It's not smart to pick a fight with\\nTEAM ONYBRIS!",
+  "fr": "Ce n'est pas malin de chercher\\nnoise à la TEAM ONYBRIS !"
+ },
+ "SilphCo_5F_Text_Grunt2Defeat": {
+  "en": "Cough…\\nCough…",
+  "fr": "Toux…\\nToux…"
+ },
+ "SilphCo_5F_Text_Grunt2Intro": {
+  "en": "Show TEAM ONYBRIS a little respect!",
+  "fr": "Montre un peu de respect à la TEAM\\nONYBRIS !"
+ },
+ "SilphCo_5F_Text_Grunt2PostBattle": {
+  "en": "Which reminds me.\\pKOFFING evolves into WEEZING!",
+  "fr": "Ce qui me rappelle.\\pSMOGO évolue en SMOGOGO !"
+ },
+ "SilphCo_5F_Text_Over350TechniquesConfirmed": {
+  "en": "It's a POKéMON REPORT!\\pOver 350 POKéMON techniques have\\nbeen confirmed.",
+  "fr": "C'est un RAPPORT POKéMON !\\pPlus de 350 techniques POKéMON ont\\nété confirmées."
+ },
+ "SilphCo_5F_Text_PorygonFirstVRMon": {
+  "en": "It's a POKéMON REPORT!\\pPOKéMON LAB created PORYGON,\\nthe first virtual-reality POKéMON.",
+  "fr": "C'est un RAPPORT POKéMON !\\pLe LABO POKéMON a créé PORYGON, le\\npremier POKéMON de réalité\\lvirtuelle."
+ },
+ "SilphCo_5F_Text_RocketBossLookingForStrongMons": {
+  "en": "Those thugs that took over our\\nbuilding…\\pTheir BOSS said he was looking for\\nstrong POKéMON.\\pI hope our PRESIDENT managed to\\navoid trouble…",
+  "fr": "Ces voyous qui ont pris notre\\nbâtiment…\\pLeur BOSS a dit qu'il cherchait des\\nPOKéMON puissants.\\pJ'espère que notre PRÉSIDENT a\\nréussi à éviter les ennuis…"
+ },
+ "SilphCo_5F_Text_RocketsInUproarAboutIntruder": {
+  "en": "TEAM ONYBRIS is in an uproar over\\nsome intruder.\\pThat's you, right?",
+  "fr": "La TEAM ONYBRIS est en ébullition à\\ncause d'un intrus.\\pC'est toi, non ?"
+ },
+ "SilphCo_5F_Text_SomeMonsEvolveWhenTraded": {
+  "en": "It's a POKéMON REPORT!\\pSome POKéMON have been confirmed\\nto evolve when they are traded.",
+  "fr": "C'est un RAPPORT POKéMON !\\pCertains POKéMON évoluent\\nlorsqu'ils sont échangés, c'est\\lconfirmé."
+ },
+ "SilphCo_5F_Text_YoureOurHeroThankYou": {
+  "en": "TEAM ONYBRIS took off!\\nYou're our hero! Thank you!",
+  "fr": "La TEAM ONYBRIS a décollé !\\nTu es notre héros ! Merci !"
+ }
+}

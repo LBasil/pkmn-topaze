@@ -1,14 +1,38 @@
 {
+ "HoennEastReserve_Text_Npc0": {
+  "en": "CLAMPERL evolves with the right\\nitem and a trade. I only know half\\pthe story.",
+  "fr": "COQUIPERL évolue avec le bon objet\\net un échange. Je ne connais que la\\lmoitié de l'histoire."
+ },
+ "HoennEastReserve_Text_Npc1": {
+  "en": "LUVDISC and CORSOLA like warm\\nwater. RELICANTH hides deep.",
+  "fr": "LOVDISC et CORAYON aiment l'eau\\nchaude. RELICANTH se cache en\\lprofondeur."
+ },
+ "HoennEastReserve_Text_Quest0_AfterT": {
+  "en": "The sea gives, the sea takes.",
+  "fr": "La mer donne, la mer reprend."
+ },
+ "HoennEastReserve_Text_Quest0_Ask": {
+  "en": "Seasalt from the beach! Bring me\\none SHOAL SALT, I will pay in\\ppearls.",
+  "fr": "Du sel de mer de la plage !\\nApporte-moi un SEL MARIN, je\\lpaierai en perles."
+ },
+ "HoennEastReserve_Text_Quest0_Done": {
+  "en": "Perfect. A BIG PEARL for you.",
+  "fr": "Parfait. Une GROSSE PERLE pour toi."
+ },
+ "HoennEastReserve_Text_Quest0_MissT": {
+  "en": "Not yet. Look along the shore.",
+  "fr": "Pas encore. Cherche le long du\\nrivage."
+ },
  "HoennEastReserve_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "HoennEastReserve_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "HoennEastReserve_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

@@ -1,0 +1,54 @@
+{
+ "SafariZone_West_Text_AreaSign": {
+  "en": "AREA 3\\nEAST: CENTER AREA",
+  "fr": "ZONE 3\\nEST : ZONE CENTRALE"
+ },
+ "SafariZone_West_Text_OnybrisGrunt1Defeat": {
+  "en": "Overrun...",
+  "fr": "Submergé…"
+ },
+ "SafariZone_West_Text_OnybrisGrunt1Intro": {
+  "en": "No trespassers in the WEST AREA!",
+  "fr": "Pas d'intrus dans la ZONE OUEST !"
+ },
+ "SafariZone_West_Text_OnybrisGrunt1Post": {
+  "en": "SELENE waits in the big clearing\\nto the east. Good luck!",
+  "fr": "SELENE attend dans la grande\\nclairière à l'est. Bonne chance !"
+ },
+ "SafariZone_West_Text_OnybrisGrunt2Defeat": {
+  "en": "The boss will be furious.",
+  "fr": "Le boss va être furieux."
+ },
+ "SafariZone_West_Text_OnybrisGrunt2Intro": {
+  "en": "Free POKéMON, free world, kid!",
+  "fr": "POKéMON libres, monde libre !"
+ },
+ "SafariZone_West_Text_OnybrisGrunt2Post": {
+  "en": "ONYBRIS never loses...\\nusually.",
+  "fr": "ONYBRIS ne perd jamais…\\nd'habitude."
+ },
+ "SafariZone_West_Text_PleaseFindWardensLostTeeth": {
+  "en": "REQUEST NOTICE\\pPlease find the SAFARI WARDEN's\\nlost GOLD TEETH.\\lThey're around here somewhere.\\pReward offered!\\nContact: WARDEN",
+  "fr": "AVIS DE RECHERCHE\\pMerci de retrouver les DENTS EN OR\\nperdues du GARDIEN DU SAFARI. Elles\\lsont quelque part par ici.\\pRécompense offerte ! Contact :\\nGARDIEN"
+ },
+ "SafariZone_West_Text_RestHouse": {
+  "en": "REST HOUSE",
+  "fr": "MAISON DE REPOS"
+ },
+ "SafariZone_West_Text_SearchForSecretHouse": {
+  "en": "TRAINER TIPS\\pZone Exploration Campaign!\\nThe Search for the SECRET HOUSE!",
+  "fr": "CONSEILS AUX DRESSEURS\\pCampagne d'exploration de la Zone !\\nLa Recherche de la MAISON SECRÈTE !"
+ },
+ "SafariZone_West_Text_SeleneDefeat": {
+  "en": "How can a child do this?!",
+  "fr": "Comment un enfant peut-il faire\\nça ?!"
+ },
+ "SafariZone_West_Text_SeleneIntro": {
+  "en": "SELENE: So the little hero arrives.\\pWe opened the cages to free the\\nPOKéMON. They are happier now.\\pBut the old WARDEN fooled us.\\nThe stone on display was a fake!\\pWe kept his gold teeth, so he\\ncannot tell anyone where it is.\\pEnough talk. Step back, child!",
+  "fr": "SELENE : Voilà donc le petit héros.\\pNous avons ouvert les cages pour\\nlibérer les POKéMON. Ils sont plus\\lheureux.\\pMais le vieux GARDIEN nous a\\nbernés. La pierre exposée était un\\lfaux !\\pNous avons gardé ses dents en or,\\nil ne peut donc dire à personne où\\lelle est.\\pAssez parlé. Recule, enfant !"
+ },
+ "SafariZone_West_Text_SelenePost": {
+  "en": "SELENE: Fine. I dropped the old\\nman's teeth over there. Take them.\\pThe more you guard the stones,\\nthe harder ONYBRIS hunts them.\\pWe will free the POKéMON. All of\\nthem. Farewell, child!",
+  "fr": "SELENE : Bien. J'ai laissé tomber\\nles dents du vieux là-bas.\\pPrends-les.\\pPlus tu gardes les pierres, plus\\nONYBRIS les traque.\\pNous libérerons les POKéMON. Tous.\\nAdieu, enfant !"
+ }
+}

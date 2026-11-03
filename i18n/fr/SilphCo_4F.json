@@ -1,0 +1,50 @@
+{
+ "SilphCo_4F_Text_CantYouSeeImHiding": {
+  "en": "Sssh!\\nCan't you see I'm hiding?",
+  "fr": "Chut !\\nTu ne vois pas que je me cache ?"
+ },
+ "SilphCo_4F_Text_FloorSign": {
+  "en": "HEMATEK CO. HEAD OFFICE\\n4F",
+  "fr": "HEMATEK CO. SIÈGE\\n4F"
+ },
+ "SilphCo_4F_Text_Grunt1Defeat": {
+  "en": "Arrgh!",
+  "fr": "Arrgh !"
+ },
+ "SilphCo_4F_Text_Grunt1Intro": {
+  "en": "TEAM ONYBRIS has taken control\\nof HEMATEK CO.!",
+  "fr": "La TEAM ONYBRIS a pris le contrôle\\nd'HEMATEK CO. !"
+ },
+ "SilphCo_4F_Text_Grunt1PostBattle": {
+  "en": "Fwahahaha!\\nMy BOSS has been after this place!",
+  "fr": "Fwahahaha !\\nMon BOSS convoitait cet endroit !"
+ },
+ "SilphCo_4F_Text_Grunt2Defeat": {
+  "en": "Who are you?",
+  "fr": "Qui es-tu ?"
+ },
+ "SilphCo_4F_Text_Grunt2Intro": {
+  "en": "Intruder spotted!",
+  "fr": "Intrus repéré !"
+ },
+ "SilphCo_4F_Text_Grunt2PostBattle": {
+  "en": "I better tell the BOSS on 11F!",
+  "fr": "Je ferais mieux de prévenir le BOSS\\nau 11F !"
+ },
+ "SilphCo_4F_Text_RodneyDefeat": {
+  "en": "Darn!\\nYou weak POKéMON!",
+  "fr": "Zut !\\nEspèce de POKéMON faible !"
+ },
+ "SilphCo_4F_Text_RodneyIntro": {
+  "en": "My POKéMON is my loyal servant.",
+  "fr": "Mon POKéMON est mon fidèle\\nserviteur."
+ },
+ "SilphCo_4F_Text_RodneyPostBattle": {
+  "en": "The doors are electronically\\nlocked.\\pIt takes a CARD KEY to open the\\ndoors here.",
+  "fr": "Les portes sont verrouillées\\nélectroniquement.\\pIl faut une CARTE MAGNÉTIQUE pour\\nouvrir les portes ici."
+ },
+ "SilphCo_4F_Text_TeamRocketIsGone": {
+  "en": "Huh?\\nTEAM ONYBRIS is gone?",
+  "fr": "Hein ?\\nLa TEAM ONYBRIS est partie ?"
+ }
+}

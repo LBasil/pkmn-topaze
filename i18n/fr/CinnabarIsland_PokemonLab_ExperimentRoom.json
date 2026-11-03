@@ -1,6 +1,74 @@
 {
+ "CinnabarIsland_PokemonLab_ExperimentRoom_Text_FossilMonBackToLife": {
+  "en": "You late.\\nWhere were you?\\pYour fossil is back to life!\\nIt was {STR_VAR_1} like I think!",
+  "fr": "Tu es en retard.\\nOù étais-tu ?\\pTon fossile est revenu à la vie !\\nC'était {STR_VAR_1} comme je pensais !"
+ },
+ "CinnabarIsland_PokemonLab_ExperimentRoom_Text_GarettQuestAsk": {
+  "en": "I research the limits of POKéMON.\\pShow me a POKéMON at level 60\\nor higher and I'll give you a\\lPP MAX.",
+  "fr": "Je recherche les limites des\\nPOKéMON.\\pMontre-moi un POKéMON de niveau 60\\nou plus et je te donne un PP MAX."
+ },
+ "CinnabarIsland_PokemonLab_ExperimentRoom_Text_GarettQuestDone": {
+  "en": "Keep pushing the limits!",
+  "fr": "Continue à repousser les limites !"
+ },
+ "CinnabarIsland_PokemonLab_ExperimentRoom_Text_GarettQuestGot": {
+  "en": "{PLAYER} received a PP MAX!",
+  "fr": "{PLAYER} a reçu un PP MAX !"
+ },
+ "CinnabarIsland_PokemonLab_ExperimentRoom_Text_GarettQuestNo": {
+  "en": "None of your POKéMON has reached\\nlevel 60 yet.",
+  "fr": "Aucun de tes POKéMON n'a encore\\natteint le niveau 60."
+ },
+ "CinnabarIsland_PokemonLab_ExperimentRoom_Text_GarettQuestOk": {
+  "en": "Remarkable power!\\nTake this PP MAX.",
+  "fr": "Puissance remarquable !\\nPrends ce PP MAX."
+ },
+ "CinnabarIsland_PokemonLab_ExperimentRoom_Text_HandedFossilToWeirdDoctor": {
+  "en": "So!\\nYou hurry and give me that!\\p{FONT_NORMAL}{PLAYER} handed over the\\n{STR_VAR_2} to the weird doctor.",
+  "fr": "Alors !\\nDépêche-toi de me le donner !\\p{FONT_NORMAL}{PLAYER} a remis le(la)\\n{STR_VAR_2} au drôle de docteur."
+ },
+ "CinnabarIsland_PokemonLab_ExperimentRoom_Text_HaveYouAFossilForMe": {
+  "en": "Hiya!\\pI am important doctor.\\nYes, very much so, indeed.\\pHere, I study rare POKéMON fossils.\\nAll the time, I study.\\pYou!\\nHave you a fossil for me?",
+  "fr": "Salut !\\pJe suis important docteur.\\nOui, très important, vraiment.\\pIci, j'étudie les fossiles rares de\\nPOKéMON. Tout le temps, j'étudie.\\pToi !\\nTu as un fossile pour moi ?"
+ },
+ "CinnabarIsland_PokemonLab_ExperimentRoom_Text_NoIsTooBad": {
+  "en": "No!\\nIs too bad!",
+  "fr": "Non !\\nC'est dommage !"
+ },
  "CinnabarIsland_PokemonLab_ExperimentRoom_Text_QuestNoRoom": {
-  "fr": "Ton SAC est plein. Fais d'abord\\nde la place !",
-  "en": "Your BAG is full. Make some\\nroom first!"
+  "en": "Your BAG is full. Make some\\nroom first!",
+  "fr": "Ton SAC est plein. Fais d'abord\\nde la place !"
+ },
+ "CinnabarIsland_PokemonLab_ExperimentRoom_Text_ReceivedMonFromDoctor": {
+  "en": "{PLAYER} received the {STR_VAR_1}\\nfrom the doctor.",
+  "fr": "{PLAYER} a reçu {STR_VAR_1}\\ndu docteur."
+ },
+ "CinnabarIsland_PokemonLab_ExperimentRoom_Text_TakesTimeGoForWalk": {
+  "en": "I take a little time!\\nYou go for walk a little while!",
+  "fr": "Je prends un peu de temps !\\nVa te promener un moment !"
+ },
+ "CinnabarIsland_PokemonLab_ExperimentRoom_Text_ThatFossilIsOfMonMakeItLiveAgain": {
+  "en": "Oh!\\nThat is {STR_VAR_2}, it is!\\pIt is fossil of {STR_VAR_1},\\na POKéMON that is already extinct!\\pMy Resurrection Machine will make\\nthat POKéMON live again!",
+  "fr": "Oh !\\nC'est {STR_VAR_2}, oui !\\pC'est un fossile de {STR_VAR_1},\\nun POKéMON déjà éteint !\\pMa Machine de Résurrection va faire\\nrevivre ce POKéMON !"
+ },
+ "CinnabarIsland_PokemonLab_ExperimentRoom_Text_YouComeAgain": {
+  "en": "Aiyah!\\nYou come again!",
+  "fr": "Aïe !\\nReviens !"
+ },
+ "Text_MetronomeDeclined": {
+  "en": "I tell you, it's a lot of fun!",
+  "fr": "Je te dis, c'est très amusant !"
+ },
+ "Text_MetronomeTaught": {
+  "en": "Tch-tch-tch!\\nThat's the sound of a METRONOME.\\pIt tweaks your POKéMON's brain into\\nusing moves it doesn't even know.",
+  "fr": "Tch-tch-tch ! C'est le son d'un\\nMETRONOME.\\pIl chamboule le cerveau de ton\\nPOKéMON pour utiliser des capacités\\lqu'il ne connaît même pas."
+ },
+ "Text_MetronomeTeach": {
+  "en": "Tch-tch-tch!\\nI'll teach you a nifty move.\\pTeach it to a POKéMON, and watch\\nthe fun unfold!\\pIt's a move called METRONOME.\\nDoes it strike your fancy?",
+  "fr": "Tch-tch-tch ! Je vais t'apprendre\\nune capacité sympa.\\pApprends-la à un POKéMON et\\nregarde le spectacle !\\pC'est une capacité appelée\\nMETRONOME. Ça te tente ?"
+ },
+ "Text_MetronomeWhichMon": {
+  "en": "Okay!\\nWhich POKéMON should I teach?",
+  "fr": "D'accord !\\nQuel POKéMON dois-je enseigner ?"
  }
 }

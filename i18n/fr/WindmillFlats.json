@@ -1,18 +1,18 @@
 {
  "WindmillFlats_Text_Npc0": {
-  "fr": "Le moulin tourne. Les années aussi.",
-  "en": "The windmill turns. So do the\\nyears."
+  "en": "The windmill turns. So do the\\nyears.",
+  "fr": "Le moulin tourne. Les années aussi."
  },
  "WindmillFlats_Text_Npc1": {
-  "fr": "ÉCRÉMEUH donne le meilleur lait.\\nDemande gentiment.",
-  "en": "MILTANK gives the best milk. Ask\\nnicely."
+  "en": "MILTANK gives the best milk. Ask\\nnicely.",
+  "fr": "ÉCRÉMEUH donne le meilleur lait.\\nDemande gentiment."
  },
  "WindmillFlats_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "WindmillFlats_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

@@ -1,0 +1,102 @@
+{
+ "SixIsland_WaterPath_Text_DeniseDefeat": {
+  "en": "Awww, I knew this would happen!",
+  "fr": "Awww, je savais que ça arriverait !"
+ },
+ "SixIsland_WaterPath_Text_DeniseIntro": {
+  "en": "My boyfriend's always busy, so I\\ncome swimming by myself.",
+  "fr": "Mon copain est toujours occupé,\\nalors je viens nager toute seule."
+ },
+ "SixIsland_WaterPath_Text_DenisePostBattle": {
+  "en": "When I can't be with my boyfriend,\\nI spend time with the POKéMON he\\lgave me.",
+  "fr": "Quand je ne peux pas être avec mon\\ncopain, je passe du temps avec les\\pPOKéMON qu'il m'a donnés."
+ },
+ "SixIsland_WaterPath_Text_EarlDefeat": {
+  "en": "I lost my way while I was busy\\nbattling!",
+  "fr": "Je me suis perdu pendant que\\nj'étais occupé à combattre !"
+ },
+ "SixIsland_WaterPath_Text_EarlIntro": {
+  "en": "Tell me, where are the mountains\\naround these parts?",
+  "fr": "Dis-moi, où sont les montagnes par\\nici ?"
+ },
+ "SixIsland_WaterPath_Text_EarlPostBattle": {
+  "en": "Aren't there any mountains around\\nthese parts?",
+  "fr": "N'y a-t-il pas de montagnes dans\\nles environs ?"
+ },
+ "SixIsland_WaterPath_Text_EdwardDefeat": {
+  "en": "Nobody saw me losing, right?",
+  "fr": "Personne ne m'a vu perdre, n'est-ce\\npas ?"
+ },
+ "SixIsland_WaterPath_Text_EdwardIntro": {
+  "en": "I'm practicing in secret so no one\\ncan see me.",
+  "fr": "Je m'entraîne en secret pour que\\npersonne ne me voie."
+ },
+ "SixIsland_WaterPath_Text_EdwardPostBattle": {
+  "en": "As a performer, I don't want people\\nto know about the effort I put in.",
+  "fr": "En tant qu'artiste, je ne veux pas\\nque les gens sachent l'effort que\\lje fournis."
+ },
+ "SixIsland_WaterPath_Text_MiaDefeat": {
+  "en": "MIA: You're mean!\\nYou're bad for winning!",
+  "fr": "MIA : Tu es méchant !\\nC'est mal de gagner !"
+ },
+ "SixIsland_WaterPath_Text_MiaIntro": {
+  "en": "MIA: Hello, POKéMON!\\nIt's time to battle!",
+  "fr": "MIA : Bonjour, POKéMON !\\nC'est l'heure de se battre !"
+ },
+ "SixIsland_WaterPath_Text_MiaNotEnoughMons": {
+  "en": "MIA: Oh, you only have one\\nPOKéMON?\\pDon't you feel lonesome?",
+  "fr": "MIA : Oh, tu n'as qu'un seul\\nPOKéMON ?\\pTu ne te sens pas seul ?"
+ },
+ "SixIsland_WaterPath_Text_MiaPostBattle": {
+  "en": "MIA: Ohh…\\nI'm sorry, my POKéMON…",
+  "fr": "MIA : Ohh…\\nPardon, mes POKéMON…"
+ },
+ "SixIsland_WaterPath_Text_MiuDefeat": {
+  "en": "MIU: Oh, no!\\nMommy!",
+  "fr": "MIU : Oh non !\\nMaman !"
+ },
+ "SixIsland_WaterPath_Text_MiuIntro": {
+  "en": "MIU: Hello, POKéMON!\\nIt's time to play!",
+  "fr": "MIU : Bonjour, POKéMON !\\nC'est l'heure de jouer !"
+ },
+ "SixIsland_WaterPath_Text_MiuNotEnoughMons": {
+  "en": "MIU: MIA and I are TWINS.\\nWe want to battle together.",
+  "fr": "MIU : MIA et moi sommes JUMELLES.\\nOn veut se battre ensemble."
+ },
+ "SixIsland_WaterPath_Text_MiuPostBattle": {
+  "en": "MIU: It makes me all sad inside\\nwhen we lose…",
+  "fr": "MIU : Ça me rend toute triste à\\nl'intérieur quand on perd…"
+ },
+ "SixIsland_WaterPath_Text_RoseDefeat": {
+  "en": "Giggle… You're so cute when you're\\ndetermined.",
+  "fr": "Hihi… Tu es si mignon quand tu es\\ndéterminé."
+ },
+ "SixIsland_WaterPath_Text_RoseIntro": {
+  "en": "I let a pleasant breeze lead me\\nall the way here.",
+  "fr": "Je me suis laissé guider par une\\nbrise agréable jusqu'ici."
+ },
+ "SixIsland_WaterPath_Text_RosePostBattle": {
+  "en": "I want to go to the woods over\\nthere, but…\\pThere are lots of BUG POKéMON.\\nThey scare me a little.",
+  "fr": "Je veux aller dans les bois là-bas,\\nmais…\\pIl y a plein de POKéMON INSECTE.\\nIls me font un peu peur."
+ },
+ "SixIsland_WaterPath_Text_RouteSign": {
+  "en": "WATER PATH\\nLeads to RUIN VALLEY",
+  "fr": "CHEMIN DE L'EAU\\nMène à la VALLÉE DES RUINES"
+ },
+ "SixIsland_WaterPath_Text_SamirDefeat": {
+  "en": "Oh, no, no, no.",
+  "fr": "Oh, non, non, non."
+ },
+ "SixIsland_WaterPath_Text_SamirIntro": {
+  "en": "What, you're suggesting that you're\\nsick of seeing SWIMMERS like me?\\pAww, don't be hatin'!",
+  "fr": "Quoi, tu insinues que tu en as\\nmarre de voir des NAGEURS comme\\lmoi ?\\pAww, ne sois pas jaloux !"
+ },
+ "SixIsland_WaterPath_Text_SamirPostBattle": {
+  "en": "I couldn't lift the stigma of being\\na SWIMMER…",
+  "fr": "Je n'ai pas pu lever la honte\\nd'être NAGEUR…"
+ },
+ "SixIsland_WaterPath_Text_WantedUltimateHorn": {
+  "en": "Wanted!\\nThe Ultimate Horn!",
+  "fr": "Recherché !\\nLa Corne Ultime !"
+ }
+}

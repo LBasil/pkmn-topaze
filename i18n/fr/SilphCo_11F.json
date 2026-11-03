@@ -1,0 +1,102 @@
+{
+ "SilphCo_11F_Text_AfterBrice": {
+  "en": "BRICE: Go. We will live. Barely.\\nCheck on NOX in the gym.",
+  "fr": "BRICE : Va. Nous vivrons. De\\njustesse. Va voir NOX à l'arène."
+ },
+ "SilphCo_11F_Text_AfterFlora": {
+  "en": "FLORA: I am fine, really.\\nLook after yourself first.",
+  "fr": "FLORA : Je vais bien, vraiment.\\nOccupe-toi d'abord de toi."
+ },
+ "SilphCo_11F_Text_AfterN": {
+  "en": "N: Do not look so grim. We are\\nalive. That is a first victory.",
+  "fr": "N : Ne fais pas cette tête sombre.\\nNous sommes vivants. C'est une\\lpremière victoire."
+ },
+ "SilphCo_11F_Text_BossBrice": {
+  "en": "BRICE: …Not even a scratch on him.\\nOne POKéMON. He only used one.\\pHe took the HEMATITE and walked\\nout like we were furniture.",
+  "fr": "BRICE : …Pas une égratignure sur\\nlui. Un seul POKéMON. Il n'en a\\lutilisé qu'un.\\pIl a pris l'HÉMATITE et est sorti\\ncomme si nous étions des meubles."
+ },
+ "SilphCo_11F_Text_BossFlora": {
+  "en": "FLORA: He knew you were here,\\n{PLAYER}. He looked right at you.\\pHe said you would find him.\\nWhen you are ready.",
+  "fr": "FLORA : Il savait que tu étais là,\\n{PLAYER}. Il t'a regardé droit dans\\lles yeux.\\pIl a dit que tu le trouverais.\\nQuand tu serais prêt."
+ },
+ "SilphCo_11F_Text_BossN": {
+  "en": "N: I heard his POKéMON. They are\\nnot afraid. They are empty.\\pGet stronger, {PLAYER}. We could\\nnot stop him. Maybe you can.",
+  "fr": "N : J'ai entendu ses POKéMON. Ils\\nn'ont pas peur. Ils sont vides.\\pDeviens plus fort, {PLAYER}. Nous\\nn'avons pas pu l'arrêter. Toi,\\lpeut-être."
+ },
+ "SilphCo_11F_Text_FloorSign": {
+  "en": "HEMATEK CO. HEAD OFFICE\\n11F",
+  "fr": "HEMATEK CO. SIÈGE\\n11F"
+ },
+ "SilphCo_11F_Text_GiovanniDefeat": {
+  "en": "Hmph…\\nYou are stronger than you look.",
+  "fr": "Hmph… Tu es plus fort que tu n'en\\nas l'air."
+ },
+ "SilphCo_11F_Text_GiovanniIntro": {
+  "en": "KRONOS: You again, child.\\nI warned you once.\\pBRICE, FLORA, N… the old heroes\\nof KANTO went in to face the\\pMASTER. They will not come out\\nstanding.\\pRun home. Or pay for staying!",
+  "fr": "KRONOS : Toi encore, enfant. Je\\nt'avais prévenu.\\pBRICE, FLORA, N… les anciens héros\\nde KANTO sont entrés affronter le\\pMAÎTRE. Ils ne ressortiront pas\\ndebout.\\pRentre chez toi. Ou paie pour être\\nresté !"
+ },
+ "SilphCo_11F_Text_GiovanniPostBattle": {
+  "en": "KRONOS: Good. Strong enough to\\nwatch. Not strong enough to\\pstand against him.\\pHe asked me once why you keep your\\npartners inside BALLS. Think on it.\\pListen. That sound is the end of\\nthe old heroes.",
+  "fr": "KRONOS : Bien. Assez fort pour\\nregarder. Pas assez fort pour lui\\ltenir tête.\\pIl m'a demandé un jour pourquoi tu\\ngardes tes partenaires dans des\\pBALLS. Médite-le.\\pÉcoute. Ce bruit est la fin des\\nanciens héros."
+ },
+ "SilphCo_11F_Text_Grunt1Defeat": {
+  "en": "Gaah!\\nDemolished!",
+  "fr": "Gaah !\\nDémoli !"
+ },
+ "SilphCo_11F_Text_Grunt1Intro": {
+  "en": "Halt! Do you have an appointment\\nwith my BOSS?",
+  "fr": "Halte ! As-tu rendez-vous avec mon\\nBOSS ?"
+ },
+ "SilphCo_11F_Text_Grunt1PostBattle": {
+  "en": "Watch your step…\\nMy BOSS likes his POKéMON tough!",
+  "fr": "Fais attention… Mon BOSS aime ses\\nPOKéMON coriaces !"
+ },
+ "SilphCo_11F_Text_Grunt2Defeat": {
+  "en": "Don't…\\nPlease!",
+  "fr": "Non…\\nS'il te plaît !"
+ },
+ "SilphCo_11F_Text_Grunt2Intro": {
+  "en": "Stop right there!\\nDon't you move!",
+  "fr": "Stop !\\nNe bouge pas !"
+ },
+ "SilphCo_11F_Text_Grunt2PostBattle": {
+  "en": "So, you want to see my BOSS?",
+  "fr": "Alors, tu veux voir mon BOSS ?"
+ },
+ "SilphCo_11F_Text_HeroesStagger": {
+  "en": "Three figures stagger out of the\\nruined office: BRICE, FLORA and N,\\pthe heroes of KANTO.\\nTheir leader… was just beaten.",
+  "fr": "Trois silhouettes titubent hors du\\nbureau ravagé : BRICE, FLORA et N,\\lles héros de KANTO. Leur chef…\\nvient d'être battu."
+ },
+ "SilphCo_11F_Text_MuffledCrash": {
+  "en": "A crash shakes the floor.\\nIt came from behind the doors!",
+  "fr": "Un fracas secoue le sol.\\nIl vient de derrière les portes !"
+ },
+ "SilphCo_11F_Text_ObtainedMasterBallFromPresident": {
+  "en": "{PLAYER} obtained a MASTER BALL\\nfrom the PRESIDENT!",
+  "fr": "{PLAYER} a obtenu une MASTER BALL\\ndu PRÉSIDENT !"
+ },
+ "SilphCo_11F_Text_ShadowPasses": {
+  "en": "…The lights flicker. A black shape\\nglides past the windows.\\pThen it is gone. Only silence.",
+  "fr": "…Les lumières vacillent. Une forme\\nnoire glisse devant les fenêtres.\\pPuis elle disparaît. Seul le\\nsilence reste."
+ },
+ "SilphCo_11F_Text_ThanksForRescuingUs": {
+  "en": "SECRETARY: Thank you for rescuing\\nall of us.\\pWe, from the PRESIDENT down,\\nare indebted to you.",
+  "fr": "SECRÉTAIRE : Merci de nous avoir\\nsauvés tous.\\pNous, du PRÉSIDENT jusqu'en bas,\\nte sommes redevables."
+ },
+ "SilphCo_11F_Text_ThanksForSavingMeDearBoy": {
+  "en": "PRESIDENT: Oh, dear boy!\\nThank you for saving HEMATEK.\\pI will never forget you saved us in\\nour moment of peril.\\pI have to thank you in some way.\\pBecause I am rich, I can give you\\nanything.\\pHere, maybe this will do.",
+  "fr": "PRÉSIDENT : Oh, cher garçon ! Merci\\nd'avoir sauvé HEMATEK.\\pJe n'oublierai jamais que tu nous\\nas sauvés dans notre moment de\\lpéril.\\pJe dois te remercier d'une façon ou\\nd'une autre.\\pComme je suis riche, je peux te\\ndonner n'importe quoi.\\pTiens, ceci conviendra peut-être."
+ },
+ "SilphCo_11F_Text_ThanksForSavingMeDearGirl": {
+  "en": "PRESIDENT: Oh, dear girl!\\nThank you for saving HEMATEK.\\pI will never forget you saved us in\\nour moment of peril.\\pI have to thank you in some way.\\pBecause I am rich, I can give you\\nanything.\\pHere, maybe this will do.",
+  "fr": "PRÉSIDENT : Oh, chère fille ! Merci\\nd'avoir sauvé HEMATEK.\\pJe n'oublierai jamais que tu nous\\nas sauvés dans notre moment de\\lpéril.\\pJe dois te remercier d'une façon ou\\nd'une autre.\\pComme je suis riche, je peux te\\ndonner n'importe quoi.\\pTiens, ceci conviendra peut-être."
+ },
+ "SilphCo_11F_Text_ThatsOurSecretPrototype": {
+  "en": "PRESIDENT: You can't buy that\\nanywhere.\\pIt's our secret prototype MASTER\\nBALL.\\pIt will catch any POKéMON without\\nfail!\\pYou should be quiet about using it,\\nthough.",
+  "fr": "PRÉSIDENT : On ne peut pas\\nl'acheter ailleurs.\\pC'est notre prototype secret de\\nMASTER BALL.\\pElle capture n'importe quel POKéMON\\nsans faute !\\pTu devrais rester discret sur son\\nusage, cependant."
+ },
+ "SilphCo_11F_Text_YouHaveNoRoomForThis": {
+  "en": "You have no room for this.",
+  "fr": "Tu n'as pas de place pour ça."
+ }
+}

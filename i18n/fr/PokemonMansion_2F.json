@@ -1,0 +1,46 @@
+{
+ "PokemonMansion_1F_Text_ArnieDefeat": {
+  "en": "Oh, no!\\nMy bag of loot!",
+  "fr": "Oh non !\\nMon sac de butin !"
+ },
+ "PokemonMansion_1F_Text_ArnieIntro": {
+  "en": "I can't get out!\\nThis plant is one big maze.",
+  "fr": "Je ne peux pas sortir ! Cette\\ncentrale est un grand labyrinthe."
+ },
+ "PokemonMansion_1F_Text_ArniePostBattle": {
+  "en": "Follow the grated walkways.\\nThey lead to every control room.",
+  "fr": "Suis les passerelles grillagées.\\nElles mènent à toutes les salles de\\lcontrôle."
+ },
+ "PokemonMansion_1F_Text_ChristenedDiscoveredMonMew": {
+  "en": "Log: Oct. 10\\nThe transformers run hot at night.\\pSomething underground answers\\nwhenever we cut the power…",
+  "fr": "Journal : 10 oct. Les\\ntransformateurs chauffent la nuit.\\pQuelque chose sous terre répond\\nchaque fois qu'on coupe le courant…"
+ },
+ "PokemonMansion_1F_Text_NewMonDiscoveredInGuyanaJungle": {
+  "en": "Log: Oct. 5\\nThe turbines hum louder every day.\\pSince the aura changed the types,\\nthe output has never been so high…",
+  "fr": "Journal : 5 oct. Les turbines\\nbourdonnent plus fort chaque jour.\\pDepuis que l'aura a changé les\\ntypes, le rendement n'a jamais été\\laussi élevé…"
+ },
+ "PokemonMansion_2F_Text_Onybris3Defeat": {
+  "en": "Short circuit!",
+  "fr": "Court-circuit !"
+ },
+ "PokemonMansion_2F_Text_Onybris3Intro": {
+  "en": "The control room is off limits!",
+  "fr": "La salle de contrôle est\\ninterdite !"
+ },
+ "PokemonMansion_2F_Text_Onybris3Post": {
+  "en": "We cut the lights. You fetched the\\nkey. Thanks for that!\\pThe boss says the stones are only\\na lock. Every theft is a key.",
+  "fr": "On a coupé les lumières. Tu as\\nrécupéré la clé. Merci pour ça !\\pLe boss dit que les pierres ne sont\\nqu'une serrure. Chaque vol est une\\lclé."
+ },
+ "PokemonMansion_Text_NotQuiteYet": {
+  "en": "Not quite yet!",
+  "fr": "Pas tout à fait encore !"
+ },
+ "PokemonMansion_Text_PressSecretSwitch": {
+  "en": "A secret switch!\\pPress it?",
+  "fr": "Un interrupteur secret !\\pL'actionner ?"
+ },
+ "PokemonMansion_Text_WhoWouldnt": {
+  "en": "Who wouldn't?",
+  "fr": "Qui ne le ferait pas ?"
+ }
+}

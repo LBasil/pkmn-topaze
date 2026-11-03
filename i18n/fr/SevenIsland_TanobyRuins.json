@@ -1,0 +1,50 @@
+{
+ "SevenIsland_TanobyRuins_Text_BenjaminDefeat": {
+  "en": "I'm not much good in battle.",
+  "fr": "Je ne suis pas très doué au combat."
+ },
+ "SevenIsland_TanobyRuins_Text_BenjaminIntro": {
+  "en": "A mystic POKéMON is said to sleep\\ninside here.",
+  "fr": "On dit qu'un POKéMON mystique dort\\nici."
+ },
+ "SevenIsland_TanobyRuins_Text_BenjaminPostBattle": {
+  "en": "I hear there are other ruins like\\nthe one here.\\pMight they be the resting places\\nof other mystic POKéMON?",
+  "fr": "J'ai entendu dire qu'il existe\\nd'autres ruines comme celle-ci.\\pSeraient-ce les lieux de repos\\nd'autres POKéMON mystiques ?"
+ },
+ "SevenIsland_TanobyRuins_Text_BrandonDefeat": {
+  "en": "That was uncalled for.\\nYou didn't have to be so rough.",
+  "fr": "C'était déplacé.\\nTu n'avais pas à être si brutal."
+ },
+ "SevenIsland_TanobyRuins_Text_BrandonIntro": {
+  "en": "Do you know anything about this\\nstone chamber?",
+  "fr": "Sais-tu quelque chose sur cette\\nchambre de pierre ?"
+ },
+ "SevenIsland_TanobyRuins_Text_BrandonPostBattle": {
+  "en": "The TANOBY RUINS date back at\\nleast 1,500 years.\\pBut it's a baffling mystery as to\\nwhy it was built in the first place.",
+  "fr": "Les RUINES TANOBY remontent à au\\nmoins 1 500 ans.\\pMais pourquoi elles ont été\\nconstruites reste un mystère\\ldéroutant."
+ },
+ "SevenIsland_TanobyRuins_Text_CliffordDefeat": {
+  "en": "My, how extraordinary.",
+  "fr": "Tiens, comme c'est extraordinaire."
+ },
+ "SevenIsland_TanobyRuins_Text_CliffordIntro": {
+  "en": "Today, in addition to our lesson,\\nwe came to see the chamber.",
+  "fr": "Aujourd'hui, en plus de notre\\nleçon, nous sommes venus voir la\\lchambre."
+ },
+ "SevenIsland_TanobyRuins_Text_CliffordPostBattle": {
+  "en": "Ah, so you are studying POKéMON\\non your own…\\pYes, you certainly are quite the\\nextraordinary person, indeed.",
+  "fr": "Ah, donc tu étudies les POKéMON\\nseul…\\pOui, tu es certainement quelqu'un\\nd'extraordinaire, en effet."
+ },
+ "SevenIsland_TanobyRuins_Text_EdnaDefeat": {
+  "en": "We might get in trouble for being\\nnoisy here.",
+  "fr": "On pourrait avoir des ennuis à\\nfaire du bruit ici."
+ },
+ "SevenIsland_TanobyRuins_Text_EdnaIntro": {
+  "en": "CLIFFORD is teaching me how to\\npaint.",
+  "fr": "CLIFFORD m'apprend à peindre."
+ },
+ "SevenIsland_TanobyRuins_Text_EdnaPostBattle": {
+  "en": "I said that I wanted to paint an\\nold building.\\pSo CLIFFORD brought me here.",
+  "fr": "J'ai dit que je voulais peindre un\\nvieux bâtiment.\\pAlors CLIFFORD m'a amené ici."
+ }
+}

@@ -1,0 +1,98 @@
+{
+ "FiveIsland_RocketWarehouse_Text_Admin1Defeat": {
+  "en": "I…\\nI'm shattered…",
+  "fr": "Je…\\nJe suis brisé…"
+ },
+ "FiveIsland_RocketWarehouse_Text_Admin1Intro": {
+  "en": "I don't know or care if what I'm\\ndoing is right or wrong…\\pI just put my faith in GIOVANNI\\nand do as I am told.",
+  "fr": "Je ne sais pas ni ne me soucie de\\nsavoir si ce que je fais est bien…\\pJ'ai juste foi en GIOVANNI et je\\nfais ce qu'on me dit."
+ },
+ "FiveIsland_RocketWarehouse_Text_Admin1PostBattle": {
+  "en": "You're doing things according to\\nyour beliefs and morals.\\pI understand now…",
+  "fr": "Tu agis selon tes croyances et ta\\nmorale.\\pJe comprends maintenant…"
+ },
+ "FiveIsland_RocketWarehouse_Text_Admin2Defeat": {
+  "en": "Urgh…\\nYou were too strong…\\p…\\nTh-that's a CHAMPION's crest!\\pSo it's true?\\nTEAM ROCKET really has disbanded?",
+  "fr": "Argh…\\nTu étais trop fort…\\p…\\nC-c'est l'emblème d'un CHAMPION !\\pDonc c'est vrai ? La TEAM ROCKET\\ns'est vraiment dissoute ?"
+ },
+ "FiveIsland_RocketWarehouse_Text_Admin2Intro": {
+  "en": "That's quite enough of you \\nplaying the hero, kid.\\pSpreading lies about how TEAM\\nROCKET has disbanded…\\pIt's such an obvious attempt to\\ncause confusion in our ranks.\\pFortunately, we're not so ignorant\\nto fall for the lies of a child!\\pAnd now, I'll show you how scary\\nan angry adult can be!",
+  "fr": "Ça suffit, de jouer au héros.\\pRépandre des mensonges sur la\\ndissolution de la TEAM ROCKET…\\pC'est une tentative évidente de\\nsemer la confusion dans nos rangs.\\pHeureusement, nous ne sommes pas\\nassez ignorants pour croire les\\lmensonges d'un enfant !\\pEt maintenant, je vais te montrer à\\nquel point un adulte en colère fait\\lpeur !"
+ },
+ "FiveIsland_RocketWarehouse_Text_Admin2PostBattle": {
+  "en": "We will abandon this WAREHOUSE…\\pBut don't think this is over.\\nI won't let this be the end.\\pI will find GIOVANNI.\\nAnd I will resurrect TEAM ROCKET!\\lI will…\\pUntil then, farewell!",
+  "fr": "Nous abandonnons cet ENTREPÔT…\\pMais ne crois pas que c'est fini.\\nJe ne laisserai pas ça se terminer\\lainsi.\\pJe retrouverai GIOVANNI. Et je\\nressusciterai la TEAM ROCKET ! Je\\lle ferai…\\pD'ici là, adieu !"
+ },
+ "FiveIsland_RocketWarehouse_Text_GetLostLeaveMeBe": {
+  "en": "What do you want now?\\nGo on, get lost, leave me be.",
+  "fr": "Qu'est-ce que tu veux encore ?\\nAllez, va-t'en, laisse-moi\\ltranquille."
+ },
+ "FiveIsland_RocketWarehouse_Text_GideonDefeat": {
+  "en": "Gah! Darn!\\nDarn! Darn!",
+  "fr": "Grr ! Zut !\\nZut ! Zut !"
+ },
+ "FiveIsland_RocketWarehouse_Text_GideonIntro": {
+  "en": "I almost managed to sell the\\nSAPPHIRE for huge money…\\pThen, you just had to come along\\nand blow the whole deal apart!\\pFufu… Fufufufu…\\nThere's no forgiveness for you!",
+  "fr": "J'avais presque réussi à vendre le\\nSAPHIR pour une fortune…\\pEt tu as fallu que tu arrives et\\nque tu fasses tout capoter !\\pFufu… Fufufufu…\\nIl n'y a pas de pardon pour toi !"
+ },
+ "FiveIsland_RocketWarehouse_Text_GideonPostBattle": {
+  "en": "If I can't sell it, it's worthless!\\nGo ahead, take it!",
+  "fr": "Si je ne peux pas le vendre, ça ne\\nvaut rien ! Vas-y, prends-le !"
+ },
+ "FiveIsland_RocketWarehouse_Text_GiovannisKidHasRedHair": {
+  "en": "What, you again?\\pYou… You're not GIOVANNI's kid,\\nare you?\\pNo, that can't be right!\\nGIOVANNI's kid has red hair.\\pYou don't have any reasons for\\nbugging me. Leave me alone!",
+  "fr": "Quoi, encore toi ?\\pTu… Tu n'es pas le gamin de\\nGIOVANNI, n'est-ce pas ?\\pNon, ça ne peut pas être ça ! Le\\nfils de GIOVANNI a les cheveux\\lroux.\\pTu n'as aucune raison de m'embêter.\\nLaisse-moi tranquille !"
+ },
+ "FiveIsland_RocketWarehouse_Text_Grunt1Defeat": {
+  "en": "Oh, but…\\nToo much!",
+  "fr": "Oh, mais…\\nTrop !"
+ },
+ "FiveIsland_RocketWarehouse_Text_Grunt1Intro": {
+  "en": "Oh, now your POKéMON look strong.\\nYou're willing to sell them?\\pOh?\\nYou wanted to battle?",
+  "fr": "Oh, tes POKéMON ont l'air forts.\\nTu serais prêt à les vendre ?\\pOh ?\\nTu voulais te battre ?"
+ },
+ "FiveIsland_RocketWarehouse_Text_Grunt1PostBattle": {
+  "en": "We can give you a great price.\\nSell us your POKéMON!",
+  "fr": "On peut t'en donner un bon prix.\\nVends-nous tes POKéMON !"
+ },
+ "FiveIsland_RocketWarehouse_Text_Grunt2Defeat": {
+  "en": "What do you think you're doing?!",
+  "fr": "Qu'est-ce que tu crois faire ?!"
+ },
+ "FiveIsland_RocketWarehouse_Text_Grunt2Intro": {
+  "en": "Did you come here knowing it's\\nTEAM ROCKET's WAREHOUSE?",
+  "fr": "Viens-tu ici en sachant que c'est\\nl'ENTREPÔT de la TEAM ROCKET ?"
+ },
+ "FiveIsland_RocketWarehouse_Text_Grunt2PostBattle": {
+  "en": "TEAM ROCKET broke up?\\nWhat planet are you from?",
+  "fr": "La TEAM ROCKET s'est dissoute ?\\nTu viens de quelle planète ?"
+ },
+ "FiveIsland_RocketWarehouse_Text_Grunt3Defeat": {
+  "en": "Don't…you…dare…laugh…",
+  "fr": "N'ose… pas… rire…"
+ },
+ "FiveIsland_RocketWarehouse_Text_Grunt3Intro": {
+  "en": "I got word about you from the\\nothers.\\pBut there's no way a kid like you'd\\nknow our BOSS GIOVANNI!",
+  "fr": "J'ai entendu parler de toi par les\\nautres.\\pMais un gamin comme toi ne peut pas\\nconnaître notre BOSS GIOVANNI !"
+ },
+ "FiveIsland_RocketWarehouse_Text_Grunt3PostBattle": {
+  "en": "Don't mess in the doings of adults,\\nyou jumped-up pip-squeak!",
+  "fr": "Ne te mêle pas des affaires des\\nadultes, petit prétentieux !"
+ },
+ "FiveIsland_RocketWarehouse_Text_MadeItSoYouCanComeBackThrough": {
+  "en": "I've made it so you can come back\\nin through there.\\pWhy don't you go get rested and\\nrefreshed for what lies ahead?\\pThe ADMIN after me outranks me\\nthoroughly as a TRAINER.\\pYou'd better steel yourself for one\\nharsh challenge.",
+  "fr": "J'ai fait en sorte que tu puisses\\nrevenir par là.\\pPourquoi n'irais-tu pas te reposer\\net te refaire pour la suite ?\\pL'ADMIN après moi me surpasse\\nlargement en tant que DRESSEUR.\\pTu ferais bien de te préparer à un\\ndéfi difficile."
+ },
+ "FiveIsland_RocketWarehouse_Text_ManyMonsLockedInPen": {
+  "en": "There are many POKéMON locked\\naway in the pen…",
+  "fr": "Beaucoup de POKéMON sont enfermés\\ndans l'enclos…"
+ },
+ "FiveIsland_RocketWarehouse_Text_PenUnlockedMonsFled": {
+  "en": "The pen door is unlocked.\\nThe POKéMON appear to have fled.",
+  "fr": "La porte de l'enclos est\\ndéverrouillée. Les POKéMON semblent\\ls'être enfuis."
+ },
+ "FiveIsland_RocketWarehouse_Text_ReportWithGraphsAndText": {
+  "en": "A report with graphs and text is on\\nthe PC monitor.\\p“The Influence of Magnetic Waves\\non POKéMON Evolution”…\\p… … … … … …\\pIt's too difficult to understand…",
+  "fr": "Un rapport avec graphiques et texte\\nest affiché sur l'écran du PC.\\p“ L'influence des ondes magnétiques\\nsur l'évolution des POKéMON ”…\\p… … … … … …\\pC'est trop difficile à\\ncomprendre…"
+ }
+}

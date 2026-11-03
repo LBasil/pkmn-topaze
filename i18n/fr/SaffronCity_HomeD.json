@@ -1,6 +1,26 @@
 {
+ "SaffronCity_HomeD_Text_Ask": {
+  "en": "ROUTE TOURNAMENT. Beat one trainer\\non each of ten routes: R3, R4, R24,\\pR25, R6, R11, R9, R10, R8, R12.\\nThen face the ROUTE KING.",
+  "fr": "TOURNOI DES ROUTES. Bats un\\ndresseur sur chacune de dix\\lroutes : R3, R4, R24,\\pR25, R6, R11, R9, R10, R8, R12.\\nPuis affronte le ROI DES ROUTES."
+ },
+ "SaffronCity_HomeD_Text_Beaten": {
+  "en": "The crown is yours... for now.",
+  "fr": "La couronne est à toi… pour\\nl'instant."
+ },
+ "SaffronCity_HomeD_Text_Done": {
+  "en": "You are the ROUTE KING. The routes\\nwill remember.",
+  "fr": "Tu es le ROI DES ROUTES. Les routes\\ns'en souviendront."
+ },
  "SaffronCity_HomeD_Text_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "SaffronCity_HomeD_Text_Prize": {
+  "en": "A new KING of the routes! Here,\\nyour prize.",
+  "fr": "Un nouveau ROI des routes ! Tiens,\\nton prix."
+ },
+ "SaffronCity_HomeD_Text_Ready": {
+  "en": "Ten routes, ten victories. The KING\\nis waiting. Ready?",
+  "fr": "Dix routes, dix victoires. Le ROI\\nt'attend. Prêt ?"
  }
 }

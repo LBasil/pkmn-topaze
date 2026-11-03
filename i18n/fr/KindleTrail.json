@@ -1,18 +1,42 @@
 {
+ "KindleTrail_Text_Npc0": {
+  "en": "Hit hard, stay humble. That is the\\nway.",
+  "fr": "Frappe fort, reste humble. C'est la\\nvoie."
+ },
+ "KindleTrail_Text_Npc1": {
+  "en": "TYROGUE grows into three forms.\\nTrain it well!",
+  "fr": "DÉBUGANT devient trois formes.\\nEntraîne-le bien !"
+ },
+ "KindleTrail_Text_Quest0_AfterT": {
+  "en": "Train every day.",
+  "fr": "Entraîne-toi chaque jour."
+ },
+ "KindleTrail_Text_Quest0_Ask": {
+  "en": "Strong body needs PROTEIN. Bring\\none, get a FOCUS BAND.",
+  "fr": "Un corps fort a besoin de PROTÉINE.\\nApportes-en une, reçois une BANDE\\lFOCUS."
+ },
+ "KindleTrail_Text_Quest0_Done": {
+  "en": "Hah! Wear this FOCUS BAND.",
+  "fr": "Hah ! Porte cette BANDE FOCUS."
+ },
+ "KindleTrail_Text_Quest0_MissT": {
+  "en": "One PROTEIN, please. The APOTHECARY\\nsells it.",
+  "fr": "Une PROTÉINE, s'il vous plaît.\\nL'APOTHICAIRE en vend."
+ },
  "KindleTrail_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "KindleTrail_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "KindleTrail_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "KindleTrail_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

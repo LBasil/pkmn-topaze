@@ -1,14 +1,22 @@
 {
+ "CollectorShop_Text_Npc0": {
+  "en": "Small things make a big difference\\nin a fight.",
+  "fr": "Les petites choses font une grande\\ndifférence dans un combat."
+ },
  "CollectorShop_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "CollectorShop_Text_ShopBye": {
-  "fr": "Reviens quand tu veux.",
-  "en": "Come back any time."
+  "en": "Come back any time.",
+  "fr": "Reviens quand tu veux."
+ },
+ "CollectorShop_Text_ShopHi": {
+  "en": "Welcome. Take a look around.",
+  "fr": "Bienvenue. Jette un œil autour de\\ntoi."
  },
  "CollectorShop_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

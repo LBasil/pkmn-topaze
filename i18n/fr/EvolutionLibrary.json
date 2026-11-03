@@ -1,10 +1,30 @@
 {
+ "EvolutionLibrary_Text_Npc0": {
+  "en": "STONES change many: FIRE, WATER,\\nTHUNDER, LEAF, MOON and SUN. The\\pGREENHOUSE sells them.",
+  "fr": "Les PIERRES changent beaucoup :\\nFEU, EAU, FOUDRE, PLANTE, LUNE et\\lSOLEIL.\\pLa SERRE en vend."
+ },
+ "EvolutionLibrary_Text_Npc1": {
+  "en": "A LINK CABLE works like a trade.\\nKADABRA, MACHOKE, GRAVELER and\\pHAUNTER like it.",
+  "fr": "Un CÂBLE LINK fonctionne comme un\\néchange. KADABRA, MACHOPEUR,\\lGRAVALANCH et\\pSPECTRUM l'aiment."
+ },
+ "EvolutionLibrary_Text_Npc2": {
+  "en": "Some change only with a held item:\\nKING'S ROCK, METAL COAT, DRAGON\\pSCALE, UP-GRADE.",
+  "fr": "Certains évoluent seulement avec un\\nobjet tenu : ROCHE ROYALE, REVÊT\\lMÉTAL,\\pÉCAILLE DRAGON, AMÉLIORATEUR."
+ },
+ "EvolutionLibrary_Text_Npc3": {
+  "en": "Love changes some: EEVEE, GOLBAT,\\nCHANSEY. The CYCLE POND spa raises\\pthe bond.",
+  "fr": "L'amour en change certains : ÉVOLI,\\nNOSFERALTO, LEVEINARD. Le spa du\\lLAC\\pCYCLE renforce le lien."
+ },
+ "EvolutionLibrary_Text_Npc4": {
+  "en": "FEEBAS changes with beauty, not\\nlevel. Raise its looks with the\\pright food.",
+  "fr": "BARPAU change avec la beauté, pas\\nle niveau. Améliore son allure avec\\lla bonne nourriture."
+ },
  "EvolutionLibrary_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "EvolutionLibrary_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

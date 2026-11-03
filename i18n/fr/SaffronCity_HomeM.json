@@ -1,6 +1,46 @@
 {
+ "SaffronCity_HomeM_Text_Beat1": {
+  "en": "Too slow...",
+  "fr": "Trop lent…"
+ },
+ "SaffronCity_HomeM_Text_Beat2": {
+  "en": "A minute is not enough.",
+  "fr": "Une minute ne suffit pas."
+ },
+ "SaffronCity_HomeM_Text_Beat3": {
+  "en": "An hour well spent... for you.",
+  "fr": "Une heure bien employée… pour\\ntoi."
+ },
+ "SaffronCity_HomeM_Text_Beat4": {
+  "en": "The day is yours.",
+  "fr": "La journée est à toi."
+ },
+ "SaffronCity_HomeM_Text_Beat5": {
+  "en": "A whole year lost to you...",
+  "fr": "Une année entière perdue pour\\ntoi…"
+ },
+ "SaffronCity_HomeM_Text_Clear": {
+  "en": "All five down! Time itself bows to\\nyou. Take these as proof.",
+  "fr": "Les cinq à terre ! Le temps\\nlui-même s'incline. Prends ça comme\\lpreuve."
+ },
+ "SaffronCity_HomeM_Text_Decline": {
+  "en": "Time waits for no one. But I will.",
+  "fr": "Le temps n'attend personne. Mais\\nmoi, si."
+ },
+ "SaffronCity_HomeM_Text_Early": {
+  "en": "Not yet. Come back with all 8\\nBADGES.",
+  "fr": "Pas encore. Reviens avec les 8\\nBADGES."
+ },
+ "SaffronCity_HomeM_Text_Go": {
+  "en": "Then begin. SECOND is first.",
+  "fr": "Alors commence. La SECONDE est la\\npremière."
+ },
+ "SaffronCity_HomeM_Text_Intro": {
+  "en": "This is the TRIAL TOWER. Five\\nrivals, back to back, no healing\\pbetween rounds. Ready to race the\\nclock?",
+  "fr": "Ceci est la TOUR D'ÉPREUVE. Cinq\\nrivaux, à la suite, sans soin entre\\lles manches. Prêt à défier la\\nmontre ?"
+ },
  "SaffronCity_HomeM_Text_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  }
 }

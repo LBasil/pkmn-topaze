@@ -1,0 +1,162 @@
+{
+ "Route19_Text_AliceDefeat": {
+  "en": "Shocker!",
+  "fr": "Choc !"
+ },
+ "Route19_Text_AliceIntro": {
+  "en": "Swimming's great!\\nSunburns aren't!",
+  "fr": "Nager, c'est génial !\\nLes coups de soleil, non !"
+ },
+ "Route19_Text_AlicePostBattle": {
+  "en": "My boyfriend wanted to swim to\\nSEAFOAM ISLANDS.",
+  "fr": "Mon copain voulait nager jusqu'aux\\nÎLES ÉCUME."
+ },
+ "Route19_Text_AnyaDefeat": {
+  "en": "Oh! I lost!",
+  "fr": "Oh ! J'ai perdu !"
+ },
+ "Route19_Text_AnyaIntro": {
+  "en": "Oh, I just love your ride!\\nCan I have it if I win?",
+  "fr": "Oh, j'adore ta monture !\\nJe peux l'avoir si je gagne ?"
+ },
+ "Route19_Text_AnyaPostBattle": {
+  "en": "It's still a long way to go to\\nSEAFOAM ISLANDS…\\pI want to go back to AMETHIOLITE…",
+  "fr": "Il reste un long chemin jusqu'aux\\nÎLES ÉCUME…\\pJe veux retourner à AMETHIOLITE…"
+ },
+ "Route19_Text_AxleDefeat": {
+  "en": "Ooh!\\nDangerous!",
+  "fr": "Ooh !\\nDangereux !"
+ },
+ "Route19_Text_AxleIntro": {
+  "en": "Ahoy, there!\\nThese waters are treacherous!",
+  "fr": "Ohé !\\nCes eaux sont traîtresses !"
+ },
+ "Route19_Text_AxlePostBattle": {
+  "en": "M-my legs! They cramped up!\\nGlub, glub…",
+  "fr": "M-mes jambes ! Des crampes !\\nGlou, glou…"
+ },
+ "Route19_Text_ConnieDefeat": {
+  "en": "I'm exhausted…",
+  "fr": "Je suis épuisé…"
+ },
+ "Route19_Text_ConnieIntro": {
+  "en": "I swam here with my friends…\\nI'm tired…",
+  "fr": "J'ai nagé jusqu'ici avec mes\\namis… Je suis fatigué…"
+ },
+ "Route19_Text_ConniePostBattle": {
+  "en": "If I were to ride a POKéMON on\\nthe sea, I'd like a LAPRAS.\\pLAPRAS is so big, I bet it\\nwould keep me dry on water.",
+  "fr": "Si je chevauchais un POKéMON en\\nmer, je voudrais un LOKHLASS.\\pLOKHLASS est si gros que je\\nresterais au sec sur l'eau, j'en\\lsuis sûr."
+ },
+ "Route19_Text_DavidDefeat": {
+  "en": "Help!",
+  "fr": "Au secours !"
+ },
+ "Route19_Text_DavidIntro": {
+  "en": "I tried diving for POKéMON, but it\\nwas a no-go.",
+  "fr": "J'ai essayé de plonger pour trouver\\ndes POKéMON, mais en vain."
+ },
+ "Route19_Text_DavidPostBattle": {
+  "en": "I guess you have to fish for sea\\nPOKéMON.",
+  "fr": "Il faut pêcher les POKéMON marins,\\nje suppose."
+ },
+ "Route19_Text_DouglasDefeat": {
+  "en": "Glub!",
+  "fr": "Glou !"
+ },
+ "Route19_Text_DouglasIntro": {
+  "en": "What's beyond the horizon?",
+  "fr": "Qu'y a-t-il au-delà de l'horizon ?"
+ },
+ "Route19_Text_DouglasPostBattle": {
+  "en": "I see a couple of islands over\\nyonder!",
+  "fr": "Je vois deux îles là-bas !"
+ },
+ "Route19_Text_LiaDefeat": {
+  "en": "LIA: That's no way to treat my\\nlittle brother!",
+  "fr": "LIA : On ne traite pas mon petit\\nfrère comme ça !"
+ },
+ "Route19_Text_LiaIntro": {
+  "en": "LIA: I'm looking after my brother.\\nHe just became a TRAINER.",
+  "fr": "LIA : Je surveille mon frère.\\nIl vient de devenir DRESSEUR."
+ },
+ "Route19_Text_LiaNotEnoughMons": {
+  "en": "LIA: I want to battle together\\nwith my little brother.\\pDon't you have two POKéMON?",
+  "fr": "LIA : Je veux combattre avec mon\\npetit frère.\\pTu n'as pas deux POKéMON ?"
+ },
+ "Route19_Text_LiaPostBattle": {
+  "en": "LIA: Do you have a younger\\nbrother?\\pI hope you're teaching him all\\nsorts of things.",
+  "fr": "LIA : As-tu un petit frère ?\\pJ'espère que tu lui apprends plein\\nde choses."
+ },
+ "Route19_Text_LucDefeat": {
+  "en": "LUC: Oh, wow!\\nSomeone tougher than my big sis!",
+  "fr": "LUC : Oh, wow ! Quelqu'un de plus\\nfort que ma sœur !"
+ },
+ "Route19_Text_LucIntro": {
+  "en": "LUC: My big sis taught me how\\nto swim and train POKéMON.",
+  "fr": "LUC : Ma grande sœur m'a appris à\\nnager et à entraîner des POKéMON."
+ },
+ "Route19_Text_LucNotEnoughMons": {
+  "en": "LUC: I don't want to if I can't\\nbattle you with my big sis.\\pDon't you have two POKéMON?",
+  "fr": "LUC : Je ne veux pas, si je ne peux\\npas combattre avec ma grande sœur.\\pTu n'as pas deux POKéMON ?"
+ },
+ "Route19_Text_LucPostBattle": {
+  "en": "LUC: My big sis is strong and nice.\\nI think she's awesome!",
+  "fr": "LUC : Ma grande sœur est forte et\\ngentille. Je la trouve géniale !"
+ },
+ "Route19_Text_MatthewDefeat": {
+  "en": "Belly flop!",
+  "fr": "Plat ventre !"
+ },
+ "Route19_Text_MatthewIntro": {
+  "en": "I love swimming!\\nWhat about you?",
+  "fr": "J'adore nager !\\nEt toi ?"
+ },
+ "Route19_Text_MatthewPostBattle": {
+  "en": "I can beat even marine POKéMON\\nat swimming.",
+  "fr": "Je peux battre même les POKéMON\\nmarins à la nage."
+ },
+ "Route19_Text_ReeceDefeat": {
+  "en": "Ooh!\\nThat's chilly!",
+  "fr": "Ooh !\\nBrrr, quel froid !"
+ },
+ "Route19_Text_ReeceIntro": {
+  "en": "Wait! Slow down!\\nYou'll have a heart attack!",
+  "fr": "Attends ! Doucement !\\nTu vas avoir une crise cardiaque !"
+ },
+ "Route19_Text_ReecePostBattle": {
+  "en": "Watch out for TENTACOOL.\\nThey sting so painfully.",
+  "fr": "Attention aux TENTACOOL.\\nLeurs piqûres font très mal."
+ },
+ "Route19_Text_RichardDefeat": {
+  "en": "All warmed up!",
+  "fr": "Bien échauffé !"
+ },
+ "Route19_Text_RichardIntro": {
+  "en": "I have to exercise and warm up\\nbefore going out for a swim.",
+  "fr": "Je dois m'échauffer et m'étirer\\navant d'aller nager."
+ },
+ "Route19_Text_RichardPostBattle": {
+  "en": "Thanks, kid!\\nI'm ready for a swim.",
+  "fr": "Merci !\\nJe suis prêt à nager."
+ },
+ "Route19_Text_RouteSign": {
+  "en": "SEA ROUTE 19\\nAMETHIOLITE - SEAFOAM ISLANDS",
+  "fr": "ROUTE MARINE 19\\nAMETHIOLITE - ÎLES ÉCUME"
+ },
+ "Route19_Text_TimeHint": {
+  "en": "The tide has not turned since the\\nlights went out in CHRONDROLIA.",
+  "fr": "La marée n'a pas tourné depuis que\\nles lumières se sont éteintes à\\lCHRONDROLIA."
+ },
+ "Route19_Text_TonyDefeat": {
+  "en": "Ooh!\\nTraumatic!",
+  "fr": "Ooh !\\nTraumatisant !"
+ },
+ "Route19_Text_TonyIntro": {
+  "en": "I look at the sea to forget all\\nthe bad things that happened.",
+  "fr": "Je regarde la mer pour oublier\\ntoutes les mauvaises choses qui\\lsont arrivées."
+ },
+ "Route19_Text_TonyPostBattle": {
+  "en": "I'm looking at the sea to forget\\nthe bad thing that happened!",
+  "fr": "Je regarde la mer pour oublier la\\nmauvaise chose qui est arrivée !"
+ }
+}

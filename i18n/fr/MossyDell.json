@@ -1,18 +1,42 @@
 {
+ "MossyDell_Text_Npc0": {
+  "en": "PIKACHU likes the thick moss here.",
+  "fr": "PIKACHU aime l'épaisse mousse\\nd'ici."
+ },
+ "MossyDell_Text_Npc1": {
+  "en": "It never gets dry in the dell.",
+  "fr": "Il ne fait jamais sec dans le\\nvallon."
+ },
+ "MossyDell_Text_Quest0_AfterT": {
+  "en": "No more stings.",
+  "fr": "Plus de piqûres."
+ },
+ "MossyDell_Text_Quest0_Ask": {
+  "en": "Poison everywhere! Two ANTIDOTEs, a\\nSILVER POWDER for you.",
+  "fr": "Du poison partout ! Deux ANTIDOTES,\\nune POUDRE ARGENT pour toi."
+ },
+ "MossyDell_Text_Quest0_Done": {
+  "en": "Safe now! Take this SILVER POWDER.",
+  "fr": "Sauvé ! Prends cette POUDRE ARGENT."
+ },
+ "MossyDell_Text_Quest0_MissT": {
+  "en": "Two ANTIDOTEs, please.",
+  "fr": "Deux ANTIDOTES, s'il vous plaît."
+ },
  "MossyDell_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "MossyDell_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "MossyDell_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "MossyDell_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

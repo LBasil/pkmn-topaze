@@ -1,0 +1,30 @@
+{
+ "Route12_NorthEntrance_2F_Text_DontHaveRoomForThis": {
+  "en": "You don't have room for this.",
+  "fr": "Tu n'as pas de place pour ça."
+ },
+ "Route12_NorthEntrance_2F_Text_ExplainTM27": {
+  "en": "TM27 is a move called RETURN…\\pIf you treat your POKéMON good,\\nit will return your love by working\\lits hardest in battle.",
+  "fr": "La CT27 est une capacité appelée\\nRETOUR…\\pSi tu traites bien ton POKéMON, il\\nte rendra ton amour en travaillant\\lde son mieux en combat."
+ },
+ "Route12_NorthEntrance_2F_Text_ItsPokemonTower": {
+  "en": "Let's see what the binoculars have\\nto show…\\pIt's POKéMON TOWER!",
+  "fr": "Voyons ce que les jumelles\\nmontrent…\\pC'est la TOUR POKéMON !"
+ },
+ "Route12_NorthEntrance_2F_Text_ReceivedTM27FromLittleGirl": {
+  "en": "{PLAYER} received TM27\\nfrom the little girl.",
+  "fr": "{PLAYER} a reçu la CT27\\nde la petite fille."
+ },
+ "Route12_NorthEntrance_2F_Text_TakeTMDontNeedAnymoreFemale": {
+  "en": "My POKéMON's ashes are stored in\\nPOKéMON TOWER.\\pYou can have this TM.\\nI don't need it anymore…",
+  "fr": "Les cendres de mon POKéMON sont\\nconservées dans la TOUR POKéMON.\\pTu peux avoir cette CT.\\nJe n'en ai plus besoin…"
+ },
+ "Route12_NorthEntrance_2F_Text_TakeTMDontNeedAnymoreMale": {
+  "en": "My POKéMON's ashes are stored in\\nPOKéMON TOWER.\\pYou can have this TM.\\nI don't need it anymore…",
+  "fr": "Les cendres de mon POKéMON sont\\nconservées dans la TOUR POKéMON.\\pTu peux avoir cette CT.\\nJe n'en ai plus besoin…"
+ },
+ "Route12_NorthEntrance_2F_Text_TheresManFishing": {
+  "en": "Let's see what the binoculars have\\nto show…\\pThere's a man fishing!",
+  "fr": "Voyons ce que les jumelles\\nmontrent…\\pIl y a un homme qui pêche !"
+ }
+}

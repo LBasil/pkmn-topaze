@@ -1,42 +1,42 @@
 {
  "CenterMeadow_Text_Npc0": {
-  "fr": "Les anciennes bêtes du Safari\\nerrent encore dans les champs\\ldu centre.",
-  "en": "Safari stock still roams the center\\nfields."
+  "en": "Safari stock still roams the center\\nfields.",
+  "fr": "Les anciennes bêtes du Safari\\nerrent encore dans les champs\\ldu centre."
  },
  "CenterMeadow_Text_Npc1": {
-  "fr": "LEVEINARD, KANGOUREX... le rêve\\nd'un collectionneur.",
-  "en": "CHANSEY, KANGASKHAN... a\\ncollector's dream."
+  "en": "CHANSEY, KANGASKHAN... a\\ncollector's dream.",
+  "fr": "LEVEINARD, KANGOUREX... le rêve\\nd'un collectionneur."
  },
  "CenterMeadow_Text_Quest0_AfterT": {
-  "fr": "Quelle belle prairie.",
-  "en": "What a fine meadow."
+  "en": "What a fine meadow.",
+  "fr": "Quelle belle prairie."
  },
  "CenterMeadow_Text_Quest0_Ask": {
-  "fr": "Deux HYPER BALLS pour ma\\ncollection. ŒUF CHANCE en échange !",
-  "en": "Two ULTRA BALLs for my collection.\\nLUCKY EGG for you!"
+  "en": "Two ULTRA BALLs for my collection.\\nLUCKY EGG for you!",
+  "fr": "Deux HYPER BALLS pour ma\\ncollection. ŒUF CHANCE en échange !"
  },
  "CenterMeadow_Text_Quest0_Done": {
-  "fr": "Merveilleux ! Prends cet ŒUF\\nCHANCE.",
-  "en": "Wonderful! Take this LUCKY EGG."
+  "en": "Wonderful! Take this LUCKY EGG.",
+  "fr": "Merveilleux ! Prends cet ŒUF\\nCHANCE."
  },
  "CenterMeadow_Text_Quest0_MissT": {
-  "fr": "Deux HYPER BALLS, s'il te plaît.",
-  "en": "Two ULTRA BALLs, please."
+  "en": "Two ULTRA BALLs, please.",
+  "fr": "Deux HYPER BALLS, s'il te plaît."
  },
  "CenterMeadow_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "CenterMeadow_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "CenterMeadow_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "CenterMeadow_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

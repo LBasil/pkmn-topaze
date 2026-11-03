@@ -1,6 +1,106 @@
 {
  "FourIsland_IcefallCave_Back_Text_G0Defeat": {
-  "fr": "Dégelée...",
-  "en": "Thawed..."
+  "en": "Thawed...",
+  "fr": "Dégelée..."
+ },
+ "FourIsland_IcefallCave_Back_Text_G0Intro": {
+  "en": "The cold keeps what it is given.",
+  "fr": "Le froid garde ce qu'on lui donne."
+ },
+ "FourIsland_IcefallCave_Back_Text_G0Post": {
+  "en": "The WARDEN is further on.",
+  "fr": "Le GARDIEN est plus loin."
+ },
+ "FourIsland_IcefallCave_Back_Text_G1Defeat": {
+  "en": "Cracked.",
+  "fr": "Fissuré."
+ },
+ "FourIsland_IcefallCave_Back_Text_G1Intro": {
+  "en": "The ancient one chills the air when\\nthe sky cracks. We keep it calm.",
+  "fr": "L'ancien glace l'air quand le ciel\\nse fend. Nous le gardons calme."
+ },
+ "FourIsland_IcefallCave_Back_Text_G1Post": {
+  "en": "Keep going. It only gets colder.",
+  "fr": "Continue. Il ne fait que se\\nrefroidir."
+ },
+ "FourIsland_IcefallCave_Back_Text_G2Defeat": {
+  "en": "Melted away.",
+  "fr": "Fondu."
+ },
+ "FourIsland_IcefallCave_Back_Text_G2Intro": {
+  "en": "No one walks in alone anymore.",
+  "fr": "Plus personne n'entre seul."
+ },
+ "FourIsland_IcefallCave_Back_Text_G2Post": {
+  "en": "The WARDEN has felt you coming.",
+  "fr": "Le GARDIEN t'a senti venir."
+ },
+ "FourIsland_IcefallCave_Back_Text_G3Defeat": {
+  "en": "The hail stops.",
+  "fr": "La grêle s'arrête."
+ },
+ "FourIsland_IcefallCave_Back_Text_G3Intro": {
+  "en": "The beast gave us shelter when\\nthe sky turned. We stay for it.",
+  "fr": "La bête nous a abrités quand le\\nciel a tourné. Nous restons pour\\lelle."
+ },
+ "FourIsland_IcefallCave_Back_Text_G3Post": {
+  "en": "Almost there. Mind your pride.",
+  "fr": "Presque arrivé. Fais attention à\\nton orgueil."
+ },
+ "FourIsland_IcefallCave_Back_Text_G4Defeat": {
+  "en": "...Then the ice has chosen you.",
+  "fr": "…Alors la glace t'a choisi."
+ },
+ "FourIsland_IcefallCave_Back_Text_G4Intro": {
+  "en": "I am the WARDEN of the ICE.\\nThe beast sleeps in my care.\\pProve that your will is worth\\nmore than my fear.",
+  "fr": "Je suis le GARDIEN de la GLACE.\\nLa bête dort sous ma garde.\\pProuve que ta volonté vaut plus que\\nma peur."
+ },
+ "FourIsland_IcefallCave_Back_Text_G4Post": {
+  "en": "Go. Do not let it melt.",
+  "fr": "Va. Ne la laisse pas fondre."
+ },
+ "FourIsland_IcefallCave_Back_Text_GruntDefeat": {
+  "en": "We didn't plan on this!",
+  "fr": "On ne s'y attendait pas !"
+ },
+ "FourIsland_IcefallCave_Back_Text_GruntIntro": {
+  "en": "W-what?!\\pWho says we can't do what we want\\nwith the POKéMON we catch?",
+  "fr": "Q-quoi ?!\\pQui dit qu'on ne peut pas faire ce\\nqu'on veut des POKéMON qu'on\\lcapture ?"
+ },
+ "FourIsland_IcefallCave_Back_Text_GuardsLeft": {
+  "en": "The beast does not stir.\\nIts guardians still stand watch.",
+  "fr": "La bête ne bouge pas.\\nSes gardiens veillent toujours."
+ },
+ "FourIsland_IcefallCave_Back_Text_LoreleiKeepHandsOffMons": {
+  "en": "LORELEI: Keep your filthy hands\\noff the POKéMON in the cave!\\pDo as I say, or you'll have me to\\nanswer to!",
+  "fr": "LORELEI : Bas les pattes devant les\\nPOKéMON de la grotte !\\pFais ce que je dis, ou tu auras\\naffaire à moi !"
+ },
+ "FourIsland_IcefallCave_Back_Text_LoreleiPlayerHelpMeKickPoachersOut": {
+  "en": "LORELEI: {PLAYER}?!\\nWhat are you doing here?\\pNo, we can catch up later.\\nRight now, I need your help.\\pHelp me kick these poachers out\\nbefore they do anything else.\\pThey've been catching POKéMON\\nhere, then selling them off!\\pAre you ready?\\nYou take that one, please!",
+  "fr": "LORELEI : {PLAYER} ?! Que fais-tu\\nici ?\\pNon, on discutera plus tard. J'ai\\nbesoin de ton aide maintenant.\\pAide-moi à chasser ces braconniers\\navant qu'ils ne fassent autre\\lchose.\\pIls capturent des POKéMON ici, puis\\nles revendent !\\pTu es prêt ? Prends celui-là, s'il\\nte plaît !"
+ },
+ "FourIsland_IcefallCave_Back_Text_LoreleiWellDeepFreezeYou": {
+  "en": "LORELEI: If you won't confess,\\nwe'll deep-freeze you.\\pMy LAPRAS is furious for what\\nyou've done to its friends.\\pGo, LAPRAS!\\nICE BEAM…",
+  "fr": "LORELEI : Si tu n'avoues pas,\\non te congèle.\\pMon LOKHLASS est furieux de ce que\\ntu as fait à ses amis.\\pVas-y, LOKHLASS !\\nRAYON GLACE…"
+ },
+ "FourIsland_IcefallCave_Back_Text_LoreleiWhereHaveYouTakenMons": {
+  "en": "LORELEI: Humph.\\nSo despicably weak.\\pYou!\\nTell me!\\pWhere have you taken the captured\\nPOKéMON?\\pI'm smashing your ring once and\\nfor all!",
+  "fr": "LORELEI : Hmpf.\\nSi pitoyablement faible.\\pToi !\\nDis-moi !\\pOù as-tu emmené les POKéMON\\ncapturés ?\\pJe vais détruire ton réseau une\\nbonne fois pour toutes !"
+ },
+ "FourIsland_IcefallCave_Back_Text_NotTellingYouThat": {
+  "en": "N-no way!\\nI'm not telling you that!",
+  "fr": "Pas question !\\nJe ne te le dirai pas !"
+ },
+ "FourIsland_IcefallCave_Back_Text_OkayRocketWareHouseFiveIsland": {
+  "en": "Wawaah! Okay!\\nI'll talk!\\pThe POKéMON are in the ONYBRIS\\nWAREHOUSE on FIVE ISLAND.\\pThere! I said it!\\nWe'll be going now!\\p…But I doubt you'll ever make it\\ninto the ONYBRIS WAREHOUSE!\\pHeheheheh!",
+  "fr": "Waaah ! D'accord !\\nJe parle !\\pLes POKéMON sont dans l'ENTREPÔT\\nd'ONYBRIS sur l'ÎLE 5.\\pVoilà ! Je l'ai dit !\\nOn s'en va !\\p…Mais je doute que tu entres un\\njour dans l'ENTREPÔT d'ONYBRIS !\\pHéhéhéhé !"
+ },
+ "FourIsland_IcefallCave_Back_Text_ShutItLadyLeaveUsBe": {
+  "en": "Aww, shut it, lady, and leave\\nus be.\\pDon't let your glasses get all\\nsteamed up!",
+  "fr": "Aww, tais-toi, madame, et\\nlaisse-nous tranquilles.\\pNe laisse pas tes lunettes\\ns'embuer !"
+ },
+ "FourIsland_IcefallCave_Back_Text_ThankYouThisIsAwful": {
+  "en": "{PLAYER}, thank you.\\nBut this is awful…\\pI was born and raised here on\\nthese islands.\\pI had no idea that those horrible\\ncriminals were loose here…",
+  "fr": "{PLAYER}, merci.\\nMais c'est affreux…\\pJe suis née et j'ai grandi sur\\nces îles.\\pJe n'avais aucune idée que ces\\nhorribles criminels rôdaient ici…"
  }
 }

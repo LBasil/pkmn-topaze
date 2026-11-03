@@ -1,18 +1,42 @@
 {
+ "FrozenMarsh_Text_Npc0": {
+  "en": "The marsh froze twenty years ago.\\nIt never thawed.",
+  "fr": "Le marais a gelé il y a vingt ans.\\nIl n'a jamais dégelé."
+ },
+ "FrozenMarsh_Text_Npc1": {
+  "en": "DEWGONG sleeps on the ice. Do not\\nwake it.",
+  "fr": "LAMANTINE dort sur la glace. Ne le\\nréveille pas."
+ },
+ "FrozenMarsh_Text_Quest0_AfterT": {
+  "en": "The ice keeps its cold.",
+  "fr": "La glace garde son froid."
+ },
+ "FrozenMarsh_Text_Quest0_Ask": {
+  "en": "A PEARL for my wife. A NEVER-MELT\\nICE for you.",
+  "fr": "Une PERLE pour ma femme. Une GLACE\\nÉTERNELLE pour toi."
+ },
+ "FrozenMarsh_Text_Quest0_Done": {
+  "en": "She will smile. Take this NEVER-\\nMELT ICE.",
+  "fr": "Elle sourira. Prends cette GLACE\\nÉTERNELLE."
+ },
+ "FrozenMarsh_Text_Quest0_MissT": {
+  "en": "One PEARL, please.",
+  "fr": "Une PERLE, s'il vous plaît."
+ },
  "FrozenMarsh_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "FrozenMarsh_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "FrozenMarsh_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "FrozenMarsh_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

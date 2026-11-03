@@ -1,0 +1,38 @@
+{
+ "SSAnne_2F_Corridor_Text_BobMachoke": {
+  "en": "MACHOKE: Gwoh! Goh!",
+  "fr": "MACHOPEUR : Gwoh ! Goh !"
+ },
+ "SSAnne_2F_Corridor_Text_GruntA": {
+  "en": "GRUNT: Out of my way, kid!\\nThose two won't let us reach the\\lCAPTAIN's office!",
+  "fr": "SBIRE : Dégage ! Ces deux-là nous\\nempêchent d'atteindre le bureau du\\lCAPITAINE !"
+ },
+ "SSAnne_2F_Corridor_Text_GruntB": {
+  "en": "GRUNT: Tch! That MAJOR BOB is a\\nwall, and his MACHOKE is worse.",
+  "fr": "SBIRE : Tch ! Ce MAJOR BOB est un\\nmur, et son MACHOPEUR est pire."
+ },
+ "SSAnne_2F_Corridor_Text_Hera": {
+  "en": "HERA: Stay behind us, kid!\\pThe strongest of those thieves are\\nours. We keep them busy here.\\pGo on to the CAPTAIN's office.\\nMind the one waiting inside!",
+  "fr": "HERA : Reste derrière nous !\\pLes plus forts de ces voleurs sont\\nà nous. On les occupe ici.\\pVa au bureau du CAPITAINE.\\nMéfie-toi de celui qui attend à\\ll'intérieur !"
+ },
+ "SSAnne_2F_Corridor_Text_MajorBob": {
+  "en": "MAJOR BOB: Hah! Not one gets past\\nme and HERA, trainee.\\pSmall fry slip by, so the rest is\\nup to you. Move out, at the double!",
+  "fr": "MAJOR BOB : Hah ! Personne ne passe\\ndevant moi et HERA, recrue.\\pLes petits poissons se faufilent,\\ndonc le reste est pour toi. En\\lavant, au pas de course !"
+ },
+ "SSAnne_2F_Corridor_Text_RivalDefeat": {
+  "en": "Humph!\\pAt least you're raising your\\nPOKéMON!",
+  "fr": "Humph !\\pAu moins, tu élèves tes POKéMON !"
+ },
+ "SSAnne_2F_Corridor_Text_RivalIntro": {
+  "en": "{RIVAL}: {PLAYER}! You too?\\pI followed those guys in black\\nall the way from TOURMALIA.\\pThey came aboard, and then...\\npoof. Gone. This ship's a maze.\\pSince you're here, let's see if\\nyou're strong enough to catch\\lthem. Show me your POKéMON!",
+  "fr": "{RIVAL} : {PLAYER} ! Toi aussi ?\\pJ'ai suivi ces types en noir depuis\\nTOURMALIA.\\pIls sont montés à bord, puis… pouf.\\nDisparus. Ce navire est un\\llabyrinthe.\\pPuisque tu es là, voyons si tu es\\nassez fort pour les attraper.\\pMontre-moi tes POKéMON !"
+ },
+ "SSAnne_2F_Corridor_Text_RivalPostBattle": {
+  "en": "{RIVAL}: The crew says the thieves\\nwent for the CAPTAIN's office.\\pThe CAPTAIN is a seasick old man,\\nbut he has the APATITE!\\pHurry there, you can use CUT too\\nif you help him. Smell ya!",
+  "fr": "{RIVAL} : L'équipage dit que les\\nvoleurs ont foncé vers le bureau du\\lCAPITAINE.\\pLe CAPITAINE est un vieil homme\\nbarbouillé, mais il a l'APATITE !\\pDépêche-toi, tu peux aussi utiliser\\nCOUPE si tu l'aides. À plus !"
+ },
+ "SSAnne_2F_Corridor_Text_ThisShipIsLuxuryLiner": {
+  "en": "This ship, she is a luxury liner for\\nTRAINERS of the world!\\pAt every port, we hold parties with\\ninvited TRAINERS.",
+  "fr": "Ce navire est un paquebot de luxe\\npour les DRESSEURS du monde\\lentier !\\pÀ chaque port, nous donnons des\\nfêtes avec des DRESSEURS invités."
+ }
+}

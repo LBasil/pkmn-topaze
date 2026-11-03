@@ -1,6 +1,38 @@
 {
  "Route21_North_Text_RonaldDefeat": {
-  "fr": "Zut !",
-  "en": "Dang!"
+  "en": "Dang!",
+  "fr": "Zut !"
+ },
+ "Route21_North_Text_RonaldIntro": {
+  "en": "You want to know if the fish are\\nbiting?",
+  "fr": "Tu veux savoir si ça mord ?"
+ },
+ "Route21_North_Text_RonaldPostBattle": {
+  "en": "I can't catch anything good.\\nNot one good POKéMON to be had!",
+  "fr": "Je n'attrape rien de bien.\\nPas un seul bon POKéMON !"
+ },
+ "Route21_North_Text_SpencerDefeat": {
+  "en": "Ayah!",
+  "fr": "Ayah !"
+ },
+ "Route21_North_Text_SpencerIntro": {
+  "en": "The sea cleanses my body and soul!",
+  "fr": "La mer purifie mon corps et mon\\nâme !"
+ },
+ "Route21_North_Text_SpencerPostBattle": {
+  "en": "The sea is great and all, but I\\nlike the mountains, too.",
+  "fr": "La mer, c'est super, mais j'aime\\naussi les montagnes."
+ },
+ "Route21_North_Text_WadeDefeat": {
+  "en": "Heheh, MAGIKARP just don't make\\nthe grade, do they?",
+  "fr": "Héhéhé, les MAGICARPE ne font pas\\nle poids, hein ?"
+ },
+ "Route21_North_Text_WadeIntro": {
+  "en": "I got a big haul!\\nWanna go for it?",
+  "fr": "J'ai fait une belle prise !\\nTu veux tenter ta chance ?"
+ },
+ "Route21_North_Text_WadePostBattle": {
+  "en": "I seem to only catch MAGIKARP!",
+  "fr": "Je n'attrape que des MAGICARPE !"
  }
 }

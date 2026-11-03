@@ -1,0 +1,86 @@
+{
+ "VictoryRoadLair_1F_Text_Grunt1Defeat": {
+  "en": "Burnt out.",
+  "fr": "Grillé."
+ },
+ "VictoryRoadLair_1F_Text_Grunt1Intro": {
+  "en": "This hall is the MASTER's. Turn\\nback while you still can!",
+  "fr": "Cette salle est celle du MAÎTRE.\\nFais demi-tour tant que tu le\\lpeux !"
+ },
+ "VictoryRoadLair_1F_Text_Grunt1Post": {
+  "en": "The lair is a maze of statues.\\nThe Hall of Stones is north.",
+  "fr": "Le repaire est un labyrinthe de\\nstatues. La Salle des Pierres est\\lau nord."
+ },
+ "VictoryRoadLair_1F_Text_Grunt2Defeat": {
+  "en": "He was right about you…",
+  "fr": "Il avait raison à ton sujet…"
+ },
+ "VictoryRoadLair_1F_Text_Grunt2Intro": {
+  "en": "You came through the CAVE? Then\\nyou are the one the boss expects.",
+  "fr": "Tu es passé par la GROTTE ? Alors\\ntu es celui que le boss attend."
+ },
+ "VictoryRoadLair_1F_Text_Grunt2Post": {
+  "en": "Do not touch the stones. They\\nbite.",
+  "fr": "Ne touche pas les pierres. Elles\\nmordent."
+ },
+ "VictoryRoadLair_1F_Text_Grunt3Defeat": {
+  "en": "Beaten by a kid!",
+  "fr": "Battu par un gamin !"
+ },
+ "VictoryRoadLair_1F_Text_Grunt3Intro": {
+  "en": "Fists first, questions later!",
+  "fr": "Les poings d'abord, les questions\\naprès !"
+ },
+ "VictoryRoadLair_1F_Text_Grunt3Post": {
+  "en": "The red-capped boy went up the\\nstairs on his own. We let him.",
+  "fr": "Le garçon à casquette rouge est\\nmonté seul par l'escalier. On l'a\\llaissé faire."
+ },
+ "VictoryRoadLair_1F_Text_Grunt4Defeat": {
+  "en": "The ritual is broken…",
+  "fr": "Le rituel est brisé…"
+ },
+ "VictoryRoadLair_1F_Text_Grunt4Intro": {
+  "en": "Ruins, relics, ritual! You do not\\nbelong in this one!",
+  "fr": "Ruines, reliques, rituel ! Tu n'as\\npas ta place dans celui-ci !"
+ },
+ "VictoryRoadLair_1F_Text_Grunt4Post": {
+  "en": "Ten stones, ten seats. The boss\\nonly needs two more.",
+  "fr": "Dix pierres, dix sièges. Le boss\\nn'en a plus besoin que de deux."
+ },
+ "VictoryRoadLair_1F_Text_Grunt5Defeat": {
+  "en": "My treasure!",
+  "fr": "Mon trésor !"
+ },
+ "VictoryRoadLair_1F_Text_Grunt5Intro": {
+  "en": "The treasure room is mine!",
+  "fr": "La salle au trésor est à moi !"
+ },
+ "VictoryRoadLair_1F_Text_Grunt5Post": {
+  "en": "Take it. It is only a medicine\\nchest. The real prize is upstairs.",
+  "fr": "Prends-le. Ce n'est qu'un coffre à\\nmédicaments. Le vrai prix est à\\ll'étage."
+ },
+ "VictoryRoadLair_1F_Text_Speaker1": {
+  "en": "A speaker on the wall crackles.\\p“Hall guards: he took the ladder.\\nHold your posts.”",
+  "fr": "Un haut-parleur grésille sur le\\nmur.\\p“ Gardes de la salle : il a pris\\nl'échelle. Tenez vos postes. ”"
+ },
+ "VictoryRoadLair_1F_Text_Speaker2": {
+  "en": "“…No. Let him come. The master\\nwants him to see all of it.”\\p“Every stone. Every statue.\\nEvery face that waited for him.”",
+  "fr": "“ …Non. Laissez-le venir. Le\\nmaître veut qu'il voie tout. ”\\p“ Chaque pierre. Chaque statue.\\nChaque visage qui l'attendait. ”"
+ },
+ "VictoryRoadLair_1F_Text_Speaker3": {
+  "en": "Nobody tried to stop you at the\\ndoor. That is what worries you.",
+  "fr": "Personne n'a essayé de t'arrêter à\\nla porte. C'est ce qui t'inquiète."
+ },
+ "VictoryRoadLair_1F_Text_VesperDefeat": {
+  "en": "…Again. Again you break the\\npattern.",
+  "fr": "…Encore. Encore tu brises le\\nschéma."
+ },
+ "VictoryRoadLair_1F_Text_VesperIntro": {
+  "en": "VESPER: Third time, child. Do you\\nknow where you are standing?\\pThe MASTER's HALL. The old\\nheroes died on that threshold.\\pI will not let you pass it.",
+  "fr": "VESPER : Troisième fois, enfant.\\nSais-tu où tu te tiens ?\\pLa SALLE du MAÎTRE. Les anciens\\nhéros sont morts sur ce seuil.\\pJe ne te laisserai pas le franchir."
+ },
+ "VictoryRoadLair_1F_Text_VesperPost": {
+  "en": "VESPER: The red-capped one is in\\nthe HALL of STONES, then beyond.\\pThe MASTER says every POKé BALL is\\na cage, and he wants them gone.\\pWhat he seeks answers wishes. One\\nwish, spoken by the right voice.\\pGo. SELENE keeps the door.",
+  "fr": "VESPER : Celui à casquette rouge\\nest dans la SALLE des PIERRES, puis\\lau-delà.\\pLe MAÎTRE dit que chaque POKé BALL\\nest une cage, et il veut qu'elles\\ldisparaissent.\\pCe qu'il cherche exauce les vœux.\\nUn seul vœu, prononcé par la bonne\\lvoix.\\pVa. SELENE garde la porte."
+ }
+}

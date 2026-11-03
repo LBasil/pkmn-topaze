@@ -1,0 +1,42 @@
+{
+ "PewterCity_House2_Text_LittleBoyAsk": {
+  "en": "My POKéMON fell asleep in battle\\nand never woke up!\\pIf you have an AWAKENING, can\\nyou help us?",
+  "fr": "Mon POKéMON s'est endormi en combat\\net ne s'est jamais réveillé !\\pSi tu as un RÉVEIL, peux-tu nous\\naider ?"
+ },
+ "PewterCity_House2_Text_LittleBoyGives": {
+  "en": "It's awake! It's awake!\\pHere, my dad gave me these for\\ntraining. You can have them!",
+  "fr": "Il est réveillé ! Il est réveillé !\\pTiens, mon père m'a donné ça pour\\nl'entraînement. Tu peux les avoir !"
+ },
+ "PewterCity_House2_Text_LittleBoyNo": {
+  "en": "Oh... I'll let it nap, then.",
+  "fr": "Oh… Je le laisse dormir, alors."
+ },
+ "PewterCity_House2_Text_LittleBoyOffer": {
+  "en": "An AWAKENING! Can you give me\\none?",
+  "fr": "Un RÉVEIL ! Peux-tu m'en donner\\nun ?"
+ },
+ "PewterCity_House2_Text_MonsEasierCatchIfStatused": {
+  "en": "A POKéMON becomes easier to \\ncatch if it has a status problem.\\pSleep, poison, burn, or paralysis…\\nThose are all effective.\\pBut catching POKéMON is never\\na sure thing!",
+  "fr": "Un POKéMON est plus facile à\\ncapturer s'il a un problème de\\lstatut.\\pSommeil, poison, brûlure, ou\\nparalysie… Tout cela est efficace.\\pMais capturer des POKéMON n'est\\njamais une certitude !"
+ },
+ "PewterCity_House2_Text_MonsLearnTechniquesAsTheyGrow": {
+  "en": "POKéMON learn new techniques as\\nthey grow.\\pBut some moves must be taught to\\nthem by people.",
+  "fr": "Les POKéMON apprennent de nouvelles\\ntechniques en grandissant.\\pMais certaines capacités doivent\\nleur être enseignées par les gens."
+ },
+ "PewterCity_House2_Text_OldManAsk": {
+  "en": "My old POKéMON got burned on the\\nPyropia volcano road. The\\lheat never forgets.\\pTwo BURN HEALS would ease it.",
+  "fr": "Mon vieux POKéMON s'est brûlé sur\\nla route du volcan de Pyropia. La\\lchaleur n'oublie jamais.\\pDeux ANTI-BRÛLE le soulageraient."
+ },
+ "PewterCity_House2_Text_OldManGives": {
+  "en": "Ah, the pain is gone. Thank you!\\pTake this IRON. It makes a\\nPOKéMON sturdier, I'm told.",
+  "fr": "Ah, la douleur est partie. Merci !\\pPrends ce FER. Il rend un POKéMON\\nplus robuste, paraît-il."
+ },
+ "PewterCity_House2_Text_OldManNo": {
+  "en": "No hurry. Old burns heal slowly.",
+  "fr": "Pas de hâte. Les vieilles brûlures\\nguérissent lentement."
+ },
+ "PewterCity_House2_Text_OldManOffer": {
+  "en": "BURN HEALS! May I have two for my\\nold friend?",
+  "fr": "Des ANTI-BRÛLE ! Puis-je en avoir\\ndeux pour mon vieil ami ?"
+ }
+}

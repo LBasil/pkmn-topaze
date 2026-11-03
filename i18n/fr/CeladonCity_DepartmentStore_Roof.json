@@ -1,78 +1,78 @@
 {
  "CeladonCity_DepartmentStore_Roof_Text_DontHaveSpaceForThis": {
-  "fr": "Tu n'as pas de place pour ça !",
-  "en": "You don't have space for this!"
+  "en": "You don't have space for this!",
+  "fr": "Tu n'as pas de place pour ça !"
  },
  "CeladonCity_DepartmentStore_Roof_Text_DrinkCanPoppedOut": {
-  "fr": "Une canette de {STR_VAR_1} est\\ntombée !",
-  "en": "A can of {STR_VAR_1} popped out!"
+  "en": "A can of {STR_VAR_1} popped out!",
+  "fr": "Une canette de {STR_VAR_1} est\\ntombée !"
  },
  "CeladonCity_DepartmentStore_Roof_Text_ExplainTM16": {
-  "fr": "La CT16 contient MUR LUMIÈRE.\\pCette capacité réduit la puissance\\ndes attaques spéciales adverses.",
-  "en": "TM16 contains LIGHT SCREEN.\\pIt's a move that weakens the power\\nof special attacks by your foe."
+  "en": "TM16 contains LIGHT SCREEN.\\pIt's a move that weakens the power\\nof special attacks by your foe.",
+  "fr": "La CT16 contient MUR LUMIÈRE.\\pCette capacité réduit la puissance\\ndes attaques spéciales adverses."
  },
  "CeladonCity_DepartmentStore_Roof_Text_ExplainTM20": {
-  "fr": "La CT20 contient RUNE PROTECT.\\pCette capacité protège ton équipe\\ndes problèmes de statut.",
-  "en": "TM20 contains SAFEGUARD.\\pIt's a move that prevents status\\nproblems among your POKéMON."
+  "en": "TM20 contains SAFEGUARD.\\pIt's a move that prevents status\\nproblems among your POKéMON.",
+  "fr": "La CT20 contient RUNE PROTECT.\\pCette capacité protège ton équipe\\ndes problèmes de statut."
  },
  "CeladonCity_DepartmentStore_Roof_Text_ExplainTM33": {
-  "fr": "La CT33 contient PROTECTION.\\pCette capacité réduit la puissance\\ndes attaques physiques adverses.",
-  "en": "TM33 contains REFLECT.\\pIt's a move that weakens the power\\nof physical attacks by your foe."
+  "en": "TM33 contains REFLECT.\\pIt's a move that weakens the power\\nof physical attacks by your foe.",
+  "fr": "La CT33 contient PROTECTION.\\pCette capacité réduit la puissance\\ndes attaques physiques adverses."
  },
  "CeladonCity_DepartmentStore_Roof_Text_FloorSign": {
-  "fr": "TOIT :\\nDISTRIBUTEURS",
-  "en": "ROOFTOP SQUARE:\\nVENDING MACHINES"
+  "en": "ROOFTOP SQUARE:\\nVENDING MACHINES",
+  "fr": "TOIT :\\nDISTRIBUTEURS"
  },
  "CeladonCity_DepartmentStore_Roof_Text_GiveWhichDrink": {
-  "fr": "Lui donner quelle boisson ?",
-  "en": "Give her which drink?"
+  "en": "Give her which drink?",
+  "fr": "Lui donner quelle boisson ?"
  },
  "CeladonCity_DepartmentStore_Roof_Text_ImNotThirstyAfterAll": {
-  "fr": "Non merci !\\nFinalement, je n'ai pas soif !",
-  "en": "No, thank you!\\nI'm not thirsty after all!"
+  "en": "No, thank you!\\nI'm not thirsty after all!",
+  "fr": "Non merci !\\nFinalement, je n'ai pas soif !"
  },
  "CeladonCity_DepartmentStore_Roof_Text_ImThirstyGiveHerDrink": {
-  "fr": "J'ai soif !\\nJe veux quelque chose à boire !\\p{FONT_NORMAL}Lui donner à boire ?",
-  "en": "I'm thirsty!\\nI want something to drink!\\p{FONT_NORMAL}Give her a drink?"
+  "en": "I'm thirsty!\\nI want something to drink!\\p{FONT_NORMAL}Give her a drink?",
+  "fr": "J'ai soif !\\nJe veux quelque chose à boire !\\p{FONT_NORMAL}Lui donner à boire ?"
  },
  "CeladonCity_DepartmentStore_Roof_Text_ImThirstyIWantDrink": {
-  "fr": "J'ai soif !\\nJe veux quelque chose à boire !",
-  "en": "I'm thirsty!\\nI want something to drink!"
+  "en": "I'm thirsty!\\nI want something to drink!",
+  "fr": "J'ai soif !\\nJe veux quelque chose à boire !"
  },
  "CeladonCity_DepartmentStore_Roof_Text_MySisterIsImmature": {
-  "fr": "Ma sœur est DRESSEUSE, je le jure.\\pMais elle est si immature qu'elle\\nme rend dingue !",
-  "en": "My sister is a TRAINER, believe it\\nor not.\\pBut, she's so immature, she drives\\nme nuts!"
+  "en": "My sister is a TRAINER, believe it\\nor not.\\pBut, she's so immature, she drives\\nme nuts!",
+  "fr": "Ma sœur est DRESSEUSE, je le jure.\\pMais elle est si immature qu'elle\\nme rend dingue !"
  },
  "CeladonCity_DepartmentStore_Roof_Text_NoMoreRoomForStuff": {
-  "fr": "Il n'y a plus de place pour\\nd'autres objets !",
-  "en": "There's no more room for stuff!"
+  "en": "There's no more room for stuff!",
+  "fr": "Il n'y a plus de place pour\\nd'autres objets !"
  },
  "CeladonCity_DepartmentStore_Roof_Text_NotEnoughMoney": {
-  "fr": "Oups, pas assez d'argent !",
-  "en": "Oops, not enough money!"
+  "en": "Oops, not enough money!",
+  "fr": "Oups, pas assez d'argent !"
  },
  "CeladonCity_DepartmentStore_Roof_Text_NotThirsty": {
-  "fr": "Pas soif !",
-  "en": "Not thirsty!"
+  "en": "Not thirsty!",
+  "fr": "Pas soif !"
  },
  "CeladonCity_DepartmentStore_Roof_Text_VendingMachineWhatDoesItHave": {
-  "fr": "Un distributeur !\\nQu'y a-t-il dedans ?",
-  "en": "A vending machine!\\nWhat does it have?"
+  "en": "A vending machine!\\nWhat does it have?",
+  "fr": "Un distributeur !\\nQu'y a-t-il dedans ?"
  },
  "CeladonCity_DepartmentStore_Roof_Text_YayFreshWaterHaveThis": {
-  "fr": "Youpi !\\pEAU FRAÎCHE !\\pMerci !\\nTu peux avoir ça de ma part !",
-  "en": "Yay!\\pFRESH WATER!\\pThank you!\\nYou can have this from me!"
+  "en": "Yay!\\pFRESH WATER!\\pThank you!\\nYou can have this from me!",
+  "fr": "Youpi !\\pEAU FRAÎCHE !\\pMerci !\\nTu peux avoir ça de ma part !"
  },
  "CeladonCity_DepartmentStore_Roof_Text_YayLemonadeHaveThis": {
-  "fr": "Youpi !\\pLIMONADE !\\pMerci !\\nTu peux avoir ça de ma part !",
-  "en": "Yay!\\pLEMONADE!\\pThank you!\\nYou can have this from me!"
+  "en": "Yay!\\pLEMONADE!\\pThank you!\\nYou can have this from me!",
+  "fr": "Youpi !\\pLIMONADE !\\pMerci !\\nTu peux avoir ça de ma part !"
  },
  "CeladonCity_DepartmentStore_Roof_Text_YaySodaPopHaveThis": {
-  "fr": "Youpi !\\pSODA COOL !\\pMerci !\\nTu peux avoir ça de ma part !",
-  "en": "Yay!\\pSODA POP!\\pThank you!\\nYou can have this from me!"
+  "en": "Yay!\\pSODA POP!\\pThank you!\\nYou can have this from me!",
+  "fr": "Youpi !\\pSODA COOL !\\pMerci !\\nTu peux avoir ça de ma part !"
  },
  "Text_ReceivedItemFromLittleGirl": {
-  "fr": "{PLAYER} a reçu {STR_VAR_2}\\nde la petite fille.",
-  "en": "{PLAYER} received a {STR_VAR_2}\\nfrom the little girl."
+  "en": "{PLAYER} received a {STR_VAR_2}\\nfrom the little girl.",
+  "fr": "{PLAYER} a reçu {STR_VAR_2}\\nde la petite fille."
  }
 }

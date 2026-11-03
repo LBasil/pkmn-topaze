@@ -1,34 +1,34 @@
 {
  "AshenMine_Text_Npc0": {
-  "fr": "Les gemmes se cachent dans la\\nroche. Les pierres aussi.\\pCherche les reflets.",
-  "en": "Gems hide in the rock. Stones too.\\nKeep your eyes on the shiny spots."
+  "en": "Gems hide in the rock. Stones too.\\nKeep your eyes on the shiny spots.",
+  "fr": "Les gemmes se cachent dans la\\nroche. Les pierres aussi.\\pCherche les reflets."
  },
  "AshenMine_Text_Quest0_AfterT": {
-  "fr": "La mine est généreuse aujourd'hui.",
-  "en": "The mine is generous today."
+  "en": "The mine is generous today.",
+  "fr": "La mine est généreuse aujourd'hui."
  },
  "AshenMine_Text_Quest0_Ask": {
-  "fr": "POUSSIÈRE ÉTOILE ! Il m'en faut\\ndeux pour ma collection. Je te\\pdonne une écaille rare.",
-  "en": "STARDUST! I need two for my\\ncollection. I will give you a rare\\pscale."
+  "en": "STARDUST! I need two for my\\ncollection. I will give you a rare\\pscale.",
+  "fr": "POUSSIÈRE ÉTOILE ! Il m'en faut\\ndeux pour ma collection. Je te\\pdonne une écaille rare."
  },
  "AshenMine_Text_Quest0_Done": {
-  "fr": "Merveilleux ! Voici une ÉCAILLE\\nDRACO pour toi.",
-  "en": "Wonderful! A DRAGON SCALE for you."
+  "en": "Wonderful! A DRAGON SCALE for you.",
+  "fr": "Merveilleux ! Voici une ÉCAILLE\\nDRACO pour toi."
  },
  "AshenMine_Text_Quest0_MissT": {
-  "fr": "Deux POUSSIÈRES ÉTOILE. Regarde\\nautour des reflets.",
-  "en": "Two STARDUST. Look around the\\nshiny spots."
+  "en": "Two STARDUST. Look around the\\nshiny spots.",
+  "fr": "Deux POUSSIÈRES ÉTOILE. Regarde\\nautour des reflets."
  },
  "AshenMine_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "AshenMine_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "AshenMine_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

@@ -1,42 +1,42 @@
 {
  "CinderPlain_Text_Npc0": {
-  "fr": "Le sol brille la nuit. Ne dors pas\\nici.",
-  "en": "The ground glows at night. Do not\\nsleep here."
+  "en": "The ground glows at night. Do not\\nsleep here.",
+  "fr": "Le sol brille la nuit. Ne dors pas\\nici."
  },
  "CinderPlain_Text_Npc1": {
-  "fr": "ARCANIN court plus vite que mes\\ninstruments.",
-  "en": "ARCANINE runs faster than my\\ninstruments."
+  "en": "ARCANINE runs faster than my\\ninstruments.",
+  "fr": "ARCANIN court plus vite que mes\\ninstruments."
  },
  "CinderPlain_Text_Quest0_AfterT": {
-  "fr": "La plaine bouillonne.",
-  "en": "The plain simmers."
+  "en": "The plain simmers.",
+  "fr": "La plaine bouillonne."
  },
  "CinderPlain_Text_Quest0_Ask": {
-  "fr": "Une PIERRE FEU pour mon étude. Un\\nCHARBON en échange.",
-  "en": "A FIRE STONE for my study. A\\nCHARCOAL in return."
+  "en": "A FIRE STONE for my study. A\\nCHARCOAL in return.",
+  "fr": "Une PIERRE FEU pour mon étude. Un\\nCHARBON en échange."
  },
  "CinderPlain_Text_Quest0_Done": {
-  "fr": "Données brûlantes ! Prends ce\\nCHARBON.",
-  "en": "Hot data! Take this CHARCOAL."
+  "en": "Hot data! Take this CHARCOAL.",
+  "fr": "Données brûlantes ! Prends ce\\nCHARBON."
  },
  "CinderPlain_Text_Quest0_MissT": {
-  "fr": "Une PIERRE FEU, s'il vous plaît.",
-  "en": "One FIRE STONE, please."
+  "en": "One FIRE STONE, please.",
+  "fr": "Une PIERRE FEU, s'il vous plaît."
  },
  "CinderPlain_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "CinderPlain_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "CinderPlain_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "CinderPlain_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

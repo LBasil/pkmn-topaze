@@ -1,0 +1,86 @@
+{
+ "MtMoon_B2F_Text_Grunt1Defeat": {
+  "en": "Urgh!\\nNow I'm mad!",
+  "fr": "Argh !\\nMaintenant je suis furieux !"
+ },
+ "MtMoon_B2F_Text_Grunt1Intro": {
+  "en": "We, TEAM ONYBRIS, shall find the\\nfossils!\\pReviving POKéMON from them will\\nearn us huge riches!",
+  "fr": "Nous, la TEAM ONYBRIS, trouverons\\nles fossiles !\\pRessusciter des POKéMON à partir\\nd'eux nous rapportera d'énormes\\lrichesses !"
+ },
+ "MtMoon_B2F_Text_Grunt1PostBattle": {
+  "en": "You made me mad!\\nTEAM ONYBRIS will blacklist you!",
+  "fr": "Tu m'as mis en colère !\\nLa TEAM ONYBRIS va te blacklister !"
+ },
+ "MtMoon_B2F_Text_Grunt2Defeat": {
+  "en": "I blew it!",
+  "fr": "J'ai tout raté !"
+ },
+ "MtMoon_B2F_Text_Grunt2Intro": {
+  "en": "We, TEAM ONYBRIS, are POKéMON\\ngangsters!\\lWe strike fear with our strength!",
+  "fr": "Nous, la TEAM ONYBRIS, sommes des\\ngangsters de POKéMON ! Nous semons\\lla peur par notre force !"
+ },
+ "MtMoon_B2F_Text_Grunt2PostBattle": {
+  "en": "Darn it all!\\nMy associates won't stand for this!",
+  "fr": "Zut de zut ! Mes associés ne vont\\npas apprécier !"
+ },
+ "MtMoon_B2F_Text_Grunt3Defeat": {
+  "en": "So, you are good…",
+  "fr": "Alors, tu es bon…"
+ },
+ "MtMoon_B2F_Text_Grunt3Intro": {
+  "en": "We're pulling a big job here!\\nGet lost, kid!",
+  "fr": "On est sur un gros coup ici !\\nDégage !"
+ },
+ "MtMoon_B2F_Text_Grunt3PostBattle": {
+  "en": "If you find a fossil, give it to me\\nand scram!",
+  "fr": "Si tu trouves un fossile, donne-le\\nmoi et file !"
+ },
+ "MtMoon_B2F_Text_Grunt4Defeat": {
+  "en": "I'm steamed!",
+  "fr": "Je suis furieux !"
+ },
+ "MtMoon_B2F_Text_Grunt4Intro": {
+  "en": "Little kids shouldn't be messing\\naround with grown-ups!\\pIt could be bad news!",
+  "fr": "Les petits ne devraient pas se\\nmêler aux grandes personnes !\\pÇa pourrait mal tourner !"
+ },
+ "MtMoon_B2F_Text_Grunt4PostBattle": {
+  "en": "POKéMON lived here long before\\npeople came.",
+  "fr": "Les POKéMON vivaient ici bien avant\\nl'arrivée des humains."
+ },
+ "MtMoon_B2F_Text_LabOnCinnabarRegeneratesFossils": {
+  "en": "Far away, on CHRONDROLIA,\\nthere's a POKéMON LAB.\\pThey do research on regenerating\\nfossils.",
+  "fr": "Loin d'ici, à CHRONDROLIA,\\nil y a un LABO POKéMON.\\pIls font des recherches sur la\\nrégénération des fossiles."
+ },
+ "MtMoon_B2F_Text_MiguelDefeat": {
+  "en": "Okay!\\nI'll share!",
+  "fr": "D'accord !\\nJe partage !"
+ },
+ "MtMoon_B2F_Text_MiguelIntro": {
+  "en": "Hey, stop!\\pI found these fossils!\\nThey're both mine!",
+  "fr": "Hé, stop !\\pJ'ai trouvé ces fossiles !\\nIls sont tous les deux à moi !"
+ },
+ "MtMoon_B2F_Text_ObtainedDomeFossil": {
+  "en": "Obtained the DOME FOSSIL!",
+  "fr": "Tu as obtenu le FOSSILE DÔME !"
+ },
+ "MtMoon_B2F_Text_ObtainedHelixFossil": {
+  "en": "Obtained the HELIX FOSSIL!",
+  "fr": "Tu as obtenu le FOSSILE HÉLIX !"
+ },
+ "MtMoon_B2F_Text_ThenThisFossilIsMine": {
+  "en": "All right.\\nThen this fossil is mine!",
+  "fr": "Très bien.\\nAlors ce fossile est à moi !"
+ },
+ "MtMoon_B2F_Text_WellEachTakeAFossil": {
+  "en": "We'll each take a fossil!\\nNo being greedy!",
+  "fr": "On prend un fossile chacun !\\nPas de gourmandise !"
+ },
+ "MtMoon_B2F_Text_YouWantDomeFossil": {
+  "en": "Do you want the DOME FOSSIL?",
+  "fr": "Veux-tu le FOSSILE DÔME ?"
+ },
+ "MtMoon_B2F_Text_YouWantHelixFossil": {
+  "en": "Do you want the HELIX FOSSIL?",
+  "fr": "Veux-tu le FOSSILE HÉLIX ?"
+ }
+}

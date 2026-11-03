@@ -1,0 +1,86 @@
+{
+ "SilphCo_6F_Text_Ally": {
+  "en": "FLORA: Oh. You came after all.\\pThese POKéMON are not evil.\\nThey were just told to be.\\pPlease be gentle with them.\\nI must go. He does not wait.",
+  "fr": "FLORA : Oh. Tu as fini par venir.\\pCes POKéMON ne sont pas mauvais.\\nOn leur a juste dit de l'être.\\pSois doux avec eux, s'il te plaît.\\nJe dois y aller. Il n'attend pas."
+ },
+ "SilphCo_6F_Text_BetterGetBackToWork": {
+  "en": "Well, better get back to work.",
+  "fr": "Bon, je ferais mieux de retourner\\nau travail."
+ },
+ "SilphCo_6F_Text_ComeWorkForSilphWhenYoureOlder": {
+  "en": "Come work for HEMATEK when you\\nget older.",
+  "fr": "Viens travailler pour HEMATEK quand\\ntu seras plus grand."
+ },
+ "SilphCo_6F_Text_FloorSign": {
+  "en": "HEMATEK CO. HEAD OFFICE\\n6F",
+  "fr": "HEMATEK CO. SIÈGE\\n6F"
+ },
+ "SilphCo_6F_Text_Grunt1Defeat": {
+  "en": "Flame out!",
+  "fr": "Grillé !"
+ },
+ "SilphCo_6F_Text_Grunt1Intro": {
+  "en": "I am one of the four ONYBRIS\\nBROTHERS!",
+  "fr": "Je suis l'un des quatre FRÈRES\\nONYBRIS !"
+ },
+ "SilphCo_6F_Text_Grunt1PostBattle": {
+  "en": "No matter!\\nMy brothers will avenge me!",
+  "fr": "Peu importe !\\nMes frères me vengeront !"
+ },
+ "SilphCo_6F_Text_Grunt2Defeat": {
+  "en": "You traitor!",
+  "fr": "Traître !"
+ },
+ "SilphCo_6F_Text_Grunt2Intro": {
+  "en": "You dare betray TEAM ONYBRIS?",
+  "fr": "Tu oses trahir la TEAM ONYBRIS ?"
+ },
+ "SilphCo_6F_Text_Grunt2PostBattle": {
+  "en": "If you stand for justice, you\\nbetray us bad guys!",
+  "fr": "Si tu défends la justice, tu nous\\ntrahis, nous les méchants !"
+ },
+ "SilphCo_6F_Text_HelpMePlease": {
+  "en": "Oh dear, oh dear.\\nHelp me, please!",
+  "fr": "Oh là là, oh là là.\\nAidez-moi, s'il vous plaît !"
+ },
+ "SilphCo_6F_Text_NeedsMeToLookAfterHim": {
+  "en": "He's so helpless, he needed\\nsomeone like me to look after him.",
+  "fr": "Il est si démuni qu'il avait besoin\\nde quelqu'un comme moi pour veiller\\lsur lui."
+ },
+ "SilphCo_6F_Text_RocketsRanAwayBecauseOfYou": {
+  "en": "TEAM ONYBRIS ran away, and it's all\\nbecause of you!",
+  "fr": "La TEAM ONYBRIS s'est enfuie, et\\ntout ça grâce à toi !"
+ },
+ "SilphCo_6F_Text_RocketsTookOverBuilding": {
+  "en": "The ONYBRIS came and took over\\nthe building!",
+  "fr": "Les ONYBRIS sont venus et ont pris\\nle bâtiment !"
+ },
+ "SilphCo_6F_Text_RocketsTryingToConquerWorld": {
+  "en": "TEAM ONYBRIS is trying to conquer\\nthe world with POKéMON.",
+  "fr": "La TEAM ONYBRIS essaie de conquérir\\nle monde avec les POKéMON."
+ },
+ "SilphCo_6F_Text_TargetedSilphForOurMonProducts": {
+  "en": "They must have targeted HEMATEK for\\nour POKéMON products.",
+  "fr": "Ils ont dû cibler HEMATEK pour nos\\nproduits POKéMON."
+ },
+ "SilphCo_6F_Text_TaylorDefeat": {
+  "en": "Shoot!",
+  "fr": "Zut !"
+ },
+ "SilphCo_6F_Text_TaylorIntro": {
+  "en": "That rotten PRESIDENT!\\pServes him right for shipping me\\noff to the TIKSI BRANCH!\\pThat's why TEAM ONYBRIS came after\\nus, I'm sure of it!",
+  "fr": "Ce PRÉSIDENT pourri !\\pBien fait pour lui de m'avoir\\nexpédié à la SUCCURSALE de TIKSI !\\pC'est pour ça que la TEAM ONYBRIS\\ns'en est prise à nous, j'en suis\\lsûr !"
+ },
+ "SilphCo_6F_Text_TaylorPostBattle": {
+  "en": "TIKSI BRANCH?\\nIt's in Russian no-man's-land!",
+  "fr": "SUCCURSALE de TIKSI ? C'est en\\nplein no man's land russe !"
+ },
+ "SilphCo_6F_Text_ThatManIsSuchACoward": {
+  "en": "That man next to me…\\nHe's such a coward!",
+  "fr": "Cet homme à côté de moi…\\nC'est un tel lâche !"
+ },
+ "SilphCo_6F_Text_WeGotEngaged": {
+  "en": "We got engaged.\\nHeheh!",
+  "fr": "On s'est fiancés.\\nHéhéh !"
+ }
+}

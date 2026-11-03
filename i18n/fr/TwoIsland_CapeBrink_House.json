@@ -1,0 +1,38 @@
+{
+ "Text_AllowMeToTeachMonUltimateMove": {
+  "en": "Oh! This is the one!\\nThis is the POKéMON!\\pThis {STR_VAR_1} is worthy of\\nlearning my ultimate move!\\pWill you allow it?\\pWill you allow your {STR_VAR_1} to\\nlearn my {STR_VAR_2}?",
+  "fr": "Oh ! C'est lui !\\nC'est ce POKéMON !\\pCe {STR_VAR_1} est digne d'apprendre\\nmon ultime capacité !\\pLe permets-tu ?\\pPermettras-tu à ton {STR_VAR_1}\\nd'apprendre mon {STR_VAR_2} ?"
+ },
+ "Text_FeelRejuvenated": {
+  "en": "After I passed on my knowledge to\\nyou, I felt so much relief.\\pIn fact, I feel rejuvenated,\\nas if I were younger again!",
+  "fr": "Après t'avoir transmis mon savoir,\\nj'ai ressenti un tel soulagement.\\pEn fait, je me sens rajeuni, comme\\nsi j'avais retrouvé ma jeunesse !"
+ },
+ "Text_JustMistaken": {
+  "en": "…No…\\nI was just mistaken.",
+  "fr": "…Non…\\nJe me suis juste trompé."
+ },
+ "Text_LetMeConferUltimateMove": {
+  "en": "You will allow it?\\pThen, let me confer my ultimate\\n{STR_VAR_2} on your {STR_VAR_1}.\\pGgggrah-awooo!",
+  "fr": "Tu le permets ?\\pAlors laisse-moi conférer mon\\nultime {STR_VAR_2} à ton {STR_VAR_1}.\\pGgggrah-awooo !"
+ },
+ "Text_MakeBestUseOfMove": {
+  "en": "I implore you to make the best\\nuse of that move and gain power!",
+  "fr": "Je t'implore de faire le meilleur\\nusage de cette capacité et\\ld'acquérir de la puissance !"
+ },
+ "Text_PassedOnEverythingIKnow": {
+  "en": "Gasp, gasp, gasp…\\pI have no regrets now.\\nI've passed on everything I know.\\pNow I can live out my life knowing\\nmy work is done.",
+  "fr": "Souffle, souffle, souffle…\\pJe n'ai plus de regrets maintenant.\\nJ'ai transmis tout ce que je sais.\\pMaintenant je peux finir ma vie en\\nsachant mon œuvre accomplie."
+ },
+ "Text_TaughtMove": {
+  "en": "Gasp, gasp, gasp…\\pI didn't think I could teach that\\nmove while I still lived…",
+  "fr": "Souffle, souffle, souffle…\\pJe ne pensais pas pouvoir enseigner\\ncette capacité de mon vivant…"
+ },
+ "Text_UltimateMoveThatMon": {
+  "en": "I perfected the ultimate move of\\nits type…\\pBut will no one take it for\\nfuture use?\\p…Hm? Hmmm!\\pY-you…\\nTh-that {STR_VAR_1}…",
+  "fr": "J'ai perfectionné l'ultime capacité\\nde son type…\\pMais personne ne la prendra-t-il\\npour un usage futur ?\\p…Hm ? Hmmm !\\pT-toi…\\nC-ce {STR_VAR_1}…"
+ },
+ "Text_YouRejectIt": {
+  "en": "Gaah! You reject it?\\nNo, I won't be dissuaded!",
+  "fr": "Gaah ! Tu refuses ? Non, je ne me\\nlaisserai pas dissuader !"
+ }
+}

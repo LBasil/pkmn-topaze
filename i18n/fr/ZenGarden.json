@@ -1,38 +1,38 @@
 {
  "ZenGarden_Text_Npc0": {
-  "fr": "Assieds-toi. Respire. Les POKéMON\\nviendront à toi.",
-  "en": "Sit. Breathe. The POKéMON will come\\nto you."
+  "en": "Sit. Breathe. The POKéMON will come\\nto you.",
+  "fr": "Assieds-toi. Respire. Les POKéMON\\nviendront à toi."
  },
  "ZenGarden_Text_Npc1": {
-  "fr": "ABRA se téléporte quand il se sent\\nen danger. Sois rapide.",
-  "en": "ABRA teleports when it senses a\\nfight. Be quick."
+  "en": "ABRA teleports when it senses a\\nfight. Be quick.",
+  "fr": "ABRA se téléporte quand il se sent\\nen danger. Sois rapide."
  },
  "ZenGarden_Text_Quest0_AfterT": {
-  "fr": "Le jardin est en paix.",
-  "en": "The garden is at peace."
+  "en": "The garden is at peace.",
+  "fr": "Le jardin est en paix."
  },
  "ZenGarden_Text_Quest0_Ask": {
-  "fr": "L'heure du thé ! Deux LIMONADES\\npour le jardin et un cadeau pour\\ptoi.",
-  "en": "Tea time! Two LEMONADEs for the\\ngarden and a gift for you."
+  "en": "Tea time! Two LEMONADEs for the\\ngarden and a gift for you.",
+  "fr": "L'heure du thé ! Deux LIMONADES\\npour le jardin et un cadeau pour\\ptoi."
  },
  "ZenGarden_Text_Quest0_Done": {
-  "fr": "Délicieux ! Prends cette CUILLER\\nTORDUE.",
-  "en": "Delicious! Take this TWISTED SPOON."
+  "en": "Delicious! Take this TWISTED SPOON.",
+  "fr": "Délicieux ! Prends cette CUILLER\\nTORDUE."
  },
  "ZenGarden_Text_Quest0_MissT": {
-  "fr": "Deux LIMONADES, s'il te plaît. Le\\ncafé en vend.",
-  "en": "Two LEMONADEs, please. The cafe\\nsells them."
+  "en": "Two LEMONADEs, please. The cafe\\nsells them.",
+  "fr": "Deux LIMONADES, s'il te plaît. Le\\ncafé en vend."
  },
  "ZenGarden_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "ZenGarden_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "ZenGarden_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

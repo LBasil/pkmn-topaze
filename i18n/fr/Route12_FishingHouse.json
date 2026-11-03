@@ -1,0 +1,74 @@
+{
+ "Route12_FishingHouse_Text_BlankChartOfSomeSort": {
+  "en": "It's a blank chart of some sort.\\pIt has spaces for writing in\\nrecords of some kind.",
+  "fr": "C'est une sorte de tableau vierge.\\pIl a des espaces pour inscrire des\\nrecords de je ne sais quoi."
+ },
+ "Route12_FishingHouse_Text_DoYouLikeToFish": {
+  "en": "I'm the FISHING GURU's younger\\nbrother.\\pI simply looove fishing!\\nI can't bear to go without.\\pTell me, do you like to fish?",
+  "fr": "Je suis le petit frère du GOUROU DE\\nLA PÊCHE.\\pJ'adoooore pêcher !\\nJe ne supporte pas de m'en passer.\\pDis-moi, tu aimes pêcher ?"
+ },
+ "Route12_FishingHouse_Text_DoesntLookLikeMagikarp": {
+  "en": "Uh… That doesn't look much like\\na MAGIKARP.",
+  "fr": "Euh… Ça ne ressemble pas beaucoup\\nà un MAGICARPE."
+ },
+ "Route12_FishingHouse_Text_HmmXInchesDoesntMeasureUp": {
+  "en": "Hmm…\\nThis one is {STR_VAR_2} inches long.\\pIt doesn't measure up to the\\n{STR_VAR_3}-inch one you brought before.",
+  "fr": "Hmm…\\nCelui-ci mesure {STR_VAR_2} pouces.\\pIl n'égale pas celui de {STR_VAR_3}\\npouces que tu as apporté avant."
+ },
+ "Route12_FishingHouse_Text_HuhXInchesSameSizeAsLast": {
+  "en": "Huh?\\n{STR_VAR_2} inches?\\pThis is the same size as the one\\nI saw before.",
+  "fr": "Hein ?\\n{STR_VAR_2} pouces ?\\pC'est la même taille que celui que\\nj'ai vu avant."
+ },
+ "Route12_FishingHouse_Text_IfYouCatchBigMagikarpShowMe": {
+  "en": "Fishing is a way of life!\\nIt is like the finest poetry.\\pFrom the seas to rivers, go out\\nand land the big one, my friend.\\pNow, I have a request.\\pIf you catch a big MAGIKARP \\nwith that ROD, I want to see it.\\pAs much as I love to fish, I also\\nlove seeing gigantic MAGIKARP.",
+  "fr": "La pêche est un art de vivre !\\nC'est comme la plus belle poésie.\\pDes mers aux rivières, va attraper\\nle gros poisson, mon ami.\\pMaintenant, j'ai une requête.\\pSi tu attrapes un gros MAGICARPE\\navec cette CANNE, je veux le voir.\\pAutant j'aime pêcher, autant j'aime\\nvoir des MAGICARPE gigantesques."
+ },
+ "Route12_FishingHouse_Text_LookForwardToGreaterRecords": {
+  "en": "I'll look forward to seeing greater\\nrecords from you!",
+  "fr": "J'attends de voir de plus grands\\nrecords de ta part !"
+ },
+ "Route12_FishingHouse_Text_Lore": {
+  "en": "Hm? You carry a stone. I can feel\\nit, the way fish feel a storm.\\pSit, child. Ten years ago, one\\nnight, the sea off this pier\\lglowed violet.\\pEvery POKéMON in the water leapt\\nat once. By dawn their TYPES had\\lchanged. That was the AURA.\\pThe big sleeper out on the pier\\nsaw it all, and has not woken\\lsince. I think it is waiting.\\pThe stones are older than the\\nAURA. They were made to hold it.\\pTake this, for listening to an\\nold man.",
+  "fr": "Hm ? Tu portes une pierre. Je la\\nsens, comme les poissons sentent\\ll'orage.\\pAssieds-toi. Il y a dix ans, une\\nnuit, la mer au large de cette\\ljetée a brillé en violet.\\pTous les POKéMON dans l'eau ont\\nbondi en même temps. À l'aube leurs\\pTYPES avaient changé. C'était\\nl'AURA.\\pLe gros dormeur sur la jetée a tout\\nvu, et ne s'est pas réveillé\\ldepuis. Je crois qu'il attend.\\pLes pierres sont plus vieilles que\\nl'AURA. Elles ont été faites pour\\lla contenir.\\pPrends ça, pour avoir écouté un\\nvieil homme."
+ },
+ "Route12_FishingHouse_Text_LoreEnd": {
+  "en": "If a man in black asks, I told you\\nnothing. Shall we talk fishing?",
+  "fr": "Si un homme en noir demande, je ne\\nt'ai rien dit. On parle pêche ?"
+ },
+ "Route12_FishingHouse_Text_MostGiganticMagikarpXInches": {
+  "en": "The most gigantic MAGIKARP\\nI have ever witnessed…\\p{STR_VAR_3} inches!",
+  "fr": "Le plus gigantesque MAGICARPE que\\nj'aie jamais vu…\\p{STR_VAR_3} pouces !"
+ },
+ "Route12_FishingHouse_Text_NoRoomForGift": {
+  "en": "Oh, no!\\pI had a gift for you, but you have\\nno room for it.",
+  "fr": "Oh non !\\pJ'avais un cadeau pour toi, mais tu\\nn'as pas de place pour le prendre."
+ },
+ "Route12_FishingHouse_Text_OhMagikarpAllowMeToSee": {
+  "en": "Oh? {PLAYER}?\\nWhy, if it isn't a MAGIKARP!\\pAllow me to see it, quick!",
+  "fr": "Oh ? {PLAYER} ?\\nMais c'est un MAGICARPE !\\pLaisse-moi le voir, vite !"
+ },
+ "Route12_FishingHouse_Text_OhThatsDisappointing": {
+  "en": "Oh…\\nThat's so disappointing…",
+  "fr": "Oh…\\nC'est tellement décevant…"
+ },
+ "Route12_FishingHouse_Text_ReceivedPPUp": {
+  "en": "{PLAYER} received a PP UP.",
+  "fr": "{PLAYER} a reçu un PP PLUS."
+ },
+ "Route12_FishingHouse_Text_ReceivedSuperRod": {
+  "en": "{PLAYER} received a SUPER ROD from\\nthe FISHING GURU's brother.",
+  "fr": "{PLAYER} a reçu une SUPER CANNE du\\nfrère du GOUROU DE LA PÊCHE."
+ },
+ "Route12_FishingHouse_Text_TakeThisAndFish": {
+  "en": "Grand! I like your style.\\nI think we can be friends.\\pTake this and fish, young friend!",
+  "fr": "Formidable ! J'aime ton style.\\nJe crois qu'on peut être amis.\\pPrends ça et pêche, jeune ami !"
+ },
+ "Route12_FishingHouse_Text_TryFishingBringMeMagikarp": {
+  "en": "Hello there, {PLAYER}!\\nHave you been fishing?\\pTry fishing with the SUPER ROD in\\nany body of water.\\pYou'll find different POKéMON in\\ndifferent places.\\pOh, and don't forget to bring me\\ngigantic MAGIKARP.",
+  "fr": "Salut, {PLAYER} ! Tu as pêché ?\\pEssaie de pêcher avec la SUPER\\nCANNE dans n'importe quel plan\\ld'eau.\\pTu trouveras différents POKéMON à\\ndifférents endroits.\\pAh, et n'oublie pas de m'apporter\\ndes MAGICARPE gigantesques."
+ },
+ "Route12_FishingHouse_Text_WhoaXInchesTakeThis": {
+  "en": "… … …Whoa!\\n{STR_VAR_2} inches!\\pYou have a rare appreciation for\\nthe fine, poetic aspects of fishing!\\pYou must take this.\\nI insist!",
+  "fr": "… … …Whoa ! {STR_VAR_2} pouces !\\pTu as une rare appréciation des\\naspects fins et poétiques de la\\lpêche !\\pTu dois prendre ceci. J'insiste !"
+ }
+}

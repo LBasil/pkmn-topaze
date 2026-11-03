@@ -1,0 +1,34 @@
+{
+ "Route16_NorthEntrance_2F_Text_ExplainAmuletCoin": {
+  "en": "An AMULET COIN is an item to be\\nheld by a POKéMON.\\pIf the POKéMON appears in a winning\\nbattle, you will earn more money.",
+  "fr": "Une PIÈCE RUNE est un objet à faire\\ntenir par un POKéMON.\\pSi le POKéMON participe à un combat\\ngagné, tu gagneras plus d'argent."
+ },
+ "Route16_NorthEntrance_2F_Text_GiveAmuletCoinIfCaught40": {
+  "en": "Hi! Remember me?\\nI'm one of PROF. OAK's AIDES.\\pIf your POKéDEX has complete data\\non 40 species, I'm supposed to\\lgive you a reward.\\pPROF. OAK entrusted me with an\\nAMULET COIN for you.\\pSo, {PLAYER}, let me ask you.\\pHave you gathered data on at least\\n40 kinds of POKéMON?",
+  "fr": "Salut ! Tu te souviens de moi ? Je\\nsuis l'un des ASSISTANTS du PROF.\\pCHEN.\\pSi ton POKéDEX a des données\\ncomplètes sur 40 espèces, je dois\\lte donner une récompense.\\pLe PROF. CHEN m'a confié une PIÈCE\\nRUNE pour toi.\\pAlors, {PLAYER}, laisse-moi te\\ndemander.\\pAs-tu rassemblé des données sur au\\nmoins 40 espèces de POKéMON ?"
+ },
+ "Route16_NorthEntrance_2F_Text_GreatHereYouGo": {
+  "en": "Great! You have caught or owned\\n{STR_VAR_3} kinds of POKéMON!\\pCongratulations!\\nHere you go!",
+  "fr": "Super ! Tu as capturé ou possédé\\n{STR_VAR_3} espèces de POKéMON !\\pFélicitations !\\nVoilà !"
+ },
+ "Route16_NorthEntrance_2F_Text_ItsCeladonDeptStore": {
+  "en": "Let's see what the binoculars have\\nto show…\\pIt's the BOURG QUARTZ DEPT. STORE!",
+  "fr": "Voyons ce que les jumelles\\nmontrent…\\pC'est le GRAND MAGASIN DE BOURG\\nQUARTZ !"
+ },
+ "Route16_NorthEntrance_2F_Text_LongPathOverWater": {
+  "en": "Let's see what the binoculars have\\nto show…\\pThere's a long path over water far\\naway.",
+  "fr": "Voyons ce que les jumelles\\nmontrent…\\pIl y a un long chemin sur l'eau au\\nloin."
+ },
+ "Route16_NorthEntrance_2F_Text_OnBikeRideWithGirlfriend": {
+  "en": "I'm on a relaxing ride on my new\\nbike with my girlfriend.",
+  "fr": "Je fais une balade relaxante avec\\nmon nouveau vélo et ma copine."
+ },
+ "Route16_NorthEntrance_2F_Text_ReceivedAmuletCoinFromAide": {
+  "en": "{PLAYER} received the AMULET COIN\\nfrom the AIDE.",
+  "fr": "{PLAYER} a reçu la PIÈCE RUNE\\nde l'ASSISTANT."
+ },
+ "Route16_NorthEntrance_2F_Text_RidingTogetherOnNewBikes": {
+  "en": "We're going riding together on our\\nnew bikes.",
+  "fr": "On fait du vélo ensemble avec nos\\nnouveaux vélos."
+ }
+}

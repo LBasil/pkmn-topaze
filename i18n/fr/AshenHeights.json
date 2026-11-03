@@ -1,42 +1,42 @@
 {
  "AshenHeights_Text_Npc0": {
-  "fr": "Le sol est chaud, même en hiver.",
-  "en": "The ground is warm even in winter."
+  "en": "The ground is warm even in winter.",
+  "fr": "Le sol est chaud, même en hiver."
  },
  "AshenHeights_Text_Npc1": {
-  "fr": "CHARTOR porte du charbon sur le\\ndos. Du vrai charbon !",
-  "en": "TORKOAL carries coal on its back.\\nReal coal!"
+  "en": "TORKOAL carries coal on its back.\\nReal coal!",
+  "fr": "CHARTOR porte du charbon sur le\\ndos. Du vrai charbon !"
  },
  "AshenHeights_Text_Quest0_AfterT": {
-  "fr": "Frais comme un gardon.",
-  "en": "Cool as a cucumber."
+  "en": "Cool as a cucumber.",
+  "fr": "Frais comme un gardon."
  },
  "AshenHeights_Text_Quest0_Ask": {
-  "fr": "Je me brûle sans arrêt. Deux ANTI-\\nBRÛLE, et un CHARBON pour toi.",
-  "en": "I keep getting burned. Two BURN\\nHEALs, a CHARCOAL for you."
+  "en": "I keep getting burned. Two BURN\\nHEALs, a CHARCOAL for you.",
+  "fr": "Je me brûle sans arrêt. Deux ANTI-\\nBRÛLE, et un CHARBON pour toi."
  },
  "AshenHeights_Text_Quest0_Done": {
-  "fr": "Ouf ! Prends ce CHARBON.",
-  "en": "Phew! Take this CHARCOAL."
+  "en": "Phew! Take this CHARCOAL.",
+  "fr": "Ouf ! Prends ce CHARBON."
  },
  "AshenHeights_Text_Quest0_MissT": {
-  "fr": "Deux ANTI-BRÛLE, s'il vous plaît.",
-  "en": "Two BURN HEALs, please."
+  "en": "Two BURN HEALs, please.",
+  "fr": "Deux ANTI-BRÛLE, s'il vous plaît."
  },
  "AshenHeights_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "AshenHeights_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "AshenHeights_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "AshenHeights_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

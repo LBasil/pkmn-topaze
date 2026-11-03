@@ -1,10 +1,18 @@
 {
+ "TwilightGlen_Text_Npc0": {
+  "en": "It is always dusk here. Do not ask\\nme why.",
+  "fr": "C'est toujours le crépuscule ici.\\nNe me demande pas pourquoi."
+ },
+ "TwilightGlen_Text_Npc1": {
+  "en": "MISDREAVUS whispers my name. I am\\nleaving.",
+  "fr": "FEUFORÊVE murmure mon nom. Je\\npars."
+ },
  "TwilightGlen_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "TwilightGlen_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

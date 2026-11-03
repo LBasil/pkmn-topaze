@@ -1,14 +1,118 @@
 {
+ "LavenderTown_Text_DoYouBelieveInGhosts": {
+  "en": "Do you believe in ghosts?",
+  "fr": "Crois-tu aux fantômes ?"
+ },
+ "LavenderTown_Text_GhostsAppearedInTower": {
+  "en": "Ghosts walk the POKéMON TOWER\\nsince the thieves tried their luck.\\pMR. FUJI, the keeper, went up to\\ncalm them. He is very brave.",
+  "fr": "Des fantômes hantent la TOUR\\nPOKéMON depuis que les voleurs ont\\ltenté leur chance.\\pM. FUJI, le gardien, est monté les\\ncalmer. Il est très courageux."
+ },
+ "LavenderTown_Text_JustImaginingWhiteHand": {
+  "en": "Hahaha, I guess not.\\pThat white hand on your shoulder…\\nI'm just imagining it.",
+  "fr": "Hahaha, je suppose que non.\\pCette main blanche sur ton\\népaule… Je l'imagine juste."
+ },
+ "LavenderTown_Text_PokemonTowerSign": {
+  "en": "POKéMON TOWER\\nBecalm the Spirits of POKéMON",
+  "fr": "TOUR POKéMON\\nApaise les Esprits des POKéMON"
+ },
+ "LavenderTown_Text_PoliceClosed": {
+  "en": "POLICEMAN: Thieves tried to take\\nthe SPINEL, and woke the dead.\\pThe town is sealed until the TOWER\\nis calm. MR. FUJI is at the top.",
+  "fr": "POLICIER : Des voleurs ont tenté de\\nprendre le SPINEL, et ont réveillé\\lles morts.\\pLa ville est scellée jusqu'à ce que\\nla TOUR soit calme. M. FUJI est au\\lsommet."
+ },
+ "LavenderTown_Text_PoliceOpen": {
+  "en": "POLICEMAN: A powerful man in black\\ntook the SPINEL, we heard.\\pThe roads are open again. Be\\ncareful out there!",
+  "fr": "POLICIER : Un homme puissant en\\nnoir a pris le SPINEL, d'après ce\\lqu'on a entendu.\\pLes routes sont de nouveau\\nouvertes. Fais attention !"
+ },
+ "LavenderTown_Text_ProcheNathan_After": {
+  "en": "Some shadows are only friends in\\ndisguise.",
+  "fr": "Certaines ombres ne sont que des\\namis déguisés."
+ },
+ "LavenderTown_Text_ProcheNathan_Defeat": {
+  "en": "Even the dead cheer for you...",
+  "fr": "Même les morts t'acclament…"
+ },
+ "LavenderTown_Text_ProcheNathan_Early": {
+  "en": "Not yet, {PLAYER}. Finish your\\njourney first, then come and find\\pme.",
+  "fr": "Pas encore, {PLAYER}. Termine\\nd'abord ton voyage, puis viens me\\ltrouver."
+ },
+ "LavenderTown_Text_ProcheNathan_Intro": {
+  "en": "{PLAYER}. I felt you coming. This\\ntown keeps its secrets... and so\\pdoes my team.",
+  "fr": "{PLAYER}. Je t'ai senti venir. Cette\\nville garde ses secrets… et mon\\léquipe aussi."
+ },
+ "LavenderTown_Text_ProcheNathan_NoRoom": {
+  "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reparle-moi."
+ },
+ "LavenderTown_Text_ProcheNathan_Win": {
+  "en": "Take it. It whispers your name.",
+  "fr": "Prends-le. Il murmure ton nom."
+ },
+ "LavenderTown_Text_RefAfter": {
+  "en": "FINN: Take good care of it. The\\nnext REFUGE post is waiting.",
+  "fr": "FINN : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
+ },
+ "LavenderTown_Text_RefAsk": {
+  "en": "FINN: The old tower is full of lost\\nPOKéMON. Hunters know it, and they\\ncome at dusk with lanterns.",
+  "fr": "FINN : La vieille tour est pleine\\nde POKéMON perdus. Les chasseurs le\\lsavent, et ils viennent au\\ncrépuscule avec des lanternes."
+ },
+ "LavenderTown_Text_RefDone": {
+  "en": "FINN: Thank you again. The REFUGE\\nis safer because of you.",
+  "fr": "FINN : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
+ },
+ "LavenderTown_Text_RefEarly": {
+  "en": "FINN: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "fr": "FINN : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\ldu PARC SAFARI connaît l'ordre."
+ },
+ "LavenderTown_Text_RefGives": {
+  "en": "FINN: You saved the day. The post\\nhas a gift for you: PORYGON!",
+  "fr": "FINN : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\pPORYGON !"
+ },
  "LavenderTown_Text_RefHunter1": {
-  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Ne te mêle pas de ça,\\ppetit !",
-  "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!"
+  "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!",
+  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Ne te mêle pas de ça,\\ppetit !"
  },
  "LavenderTown_Text_RefHunter2": {
-  "fr": "CHASSEUR : Tu as battu mon associé ?\\nSoit, je n'ai pas peur d'un\\lranger !",
-  "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!"
+  "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!",
+  "fr": "CHASSEUR : Tu as battu mon\\nassocié ? Soit, je n'ai pas peur\\ld'un ranger !"
+ },
+ "LavenderTown_Text_RefIdle": {
+  "en": "FINN: I watch over the animals here.\\nThe world is quieter now.",
+  "fr": "FINN : Je veille sur les animaux\\nici. Le monde est plus calme\\lmaintenant."
+ },
+ "LavenderTown_Text_SilphScopeNotice": {
+  "en": "NOTICE!\\nThe TOWER's spirits are restless.\\pEnter at your own risk.\\nSPINELLIA POLICE",
+  "fr": "AVIS !\\nLes esprits de la TOUR sont agités.\\pEntre à tes risques et périls.\\nPOLICE DE SPINELLIA"
+ },
+ "LavenderTown_Text_SoThereAreBelievers": {
+  "en": "Really?\\nSo there are believers…",
+  "fr": "Vraiment ?\\nIl y a donc des croyants…"
+ },
+ "LavenderTown_Text_TQ_Ask": {
+  "en": "The spirits ask for a SPELL TAG.\\nCan you find one?",
+  "fr": "Les esprits demandent un TALISMAN.\\nPeux-tu en trouver un ?"
+ },
+ "LavenderTown_Text_TQ_Done": {
+  "en": "The tower is quieter now.",
+  "fr": "La tour est plus calme maintenant."
  },
  "LavenderTown_Text_TQ_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "LavenderTown_Text_TQ_Ok": {
+  "en": "They are at peace. Take these\\nglasses.",
+  "fr": "Ils sont en paix. Prends ces\\nlunettes."
+ },
+ "LavenderTown_Text_TownKnownAsMonGraveSite": {
+  "en": "Men in black tried to steal the\\nSPINEL at the top of the TOWER!\\pThe dead rose against them. Now\\nthe whole TOWER is haunted.",
+  "fr": "Des hommes en noir ont tenté de\\nvoler le SPINEL au sommet de la\\lTOUR !\\pLes morts se sont dressés contre\\neux. Maintenant toute la TOUR est\\lhantée."
+ },
+ "LavenderTown_Text_TownSign": {
+  "en": "SPINELLIA\\nThe Spinel Tower Town",
+  "fr": "SPINELLIA\\nLa Ville de la Tour de Spinelle"
+ },
+ "LavenderTown_Text_VolunteerPokemonHouse": {
+  "en": "SPINELLIA VOLUNTEER\\nPOKéMON HOUSE",
+  "fr": "BÉNÉVOLE DE SPINELLIA\\nMAISON POKéMON"
  }
 }

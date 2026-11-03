@@ -1,0 +1,54 @@
+{
+ "ThreeIsland_BondBridge_TideDen_Text_GuardsLeft": {
+  "en": "The beast does not stir.\\nIts guardians still stand watch.",
+  "fr": "La bête ne bouge pas.\\nSes gardiens veillent toujours."
+ },
+ "ThreeIsland_BondBridge_TideDen_Text_T0Defeat": {
+  "en": "Washed away...",
+  "fr": "Emporté…"
+ },
+ "ThreeIsland_BondBridge_TideDen_Text_T0Intro": {
+  "en": "The TIDE keeps its distance from\\nstrangers.",
+  "fr": "La MARÉE garde ses distances avec\\nles étrangers."
+ },
+ "ThreeIsland_BondBridge_TideDen_Text_T0Post": {
+  "en": "The water runs deeper ahead.",
+  "fr": "L'eau est plus profonde devant."
+ },
+ "ThreeIsland_BondBridge_TideDen_Text_T1Defeat": {
+  "en": "The tide turns.",
+  "fr": "La marée tourne."
+ },
+ "ThreeIsland_BondBridge_TideDen_Text_T1Intro": {
+  "en": "The beast calmed the sea when\\nthe sky broke. We stay for it.",
+  "fr": "La bête a apaisé la mer quand le\\nciel s'est brisé. Nous restons pour\\lelle."
+ },
+ "ThreeIsland_BondBridge_TideDen_Text_T1Post": {
+  "en": "The ORACLE will not be so gentle.",
+  "fr": "L'ORACLE ne sera pas aussi doux."
+ },
+ "ThreeIsland_BondBridge_TideDen_Text_T2Defeat": {
+  "en": "Dry as ever...",
+  "fr": "Sec comme toujours…"
+ },
+ "ThreeIsland_BondBridge_TideDen_Text_T2Intro": {
+  "en": "You smell of dry land. You do\\nnot belong in the water's hall.",
+  "fr": "Tu sens la terre ferme. Tu n'as pas\\nta place dans la salle de l'eau."
+ },
+ "ThreeIsland_BondBridge_TideDen_Text_T2Post": {
+  "en": "Almost there. Mind your breath.",
+  "fr": "Presque arrivé. Retiens ton\\nsouffle."
+ },
+ "ThreeIsland_BondBridge_TideDen_Text_T3Defeat": {
+  "en": "...Then the tide has chosen you.",
+  "fr": "…Alors la marée t'a choisi."
+ },
+ "ThreeIsland_BondBridge_TideDen_Text_T3Intro": {
+  "en": "I am the ORACLE of the TIDE.\\nThe beast sleeps in my care.\\pProve that your water is worth\\nmore than my fear.",
+  "fr": "Je suis l'ORACLE de la MARÉE.\\nLa bête dort sous ma garde.\\pProuve que ton eau vaut plus que\\nma peur."
+ },
+ "ThreeIsland_BondBridge_TideDen_Text_T3Post": {
+  "en": "Go. Treat the sea kindly.",
+  "fr": "Va. Traite bien la mer."
+ }
+}

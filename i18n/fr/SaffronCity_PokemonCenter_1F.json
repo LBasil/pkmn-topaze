@@ -1,0 +1,30 @@
+{
+ "SaffronCity_PokemonCenter_1F_Text_Brice": {
+  "en": "BRICE: The nurse says we'll walk\\nagain by tomorrow.\\pI'm going back to the mountains.\\nMaybe there I'll think of a plan.",
+  "fr": "BRICE : L'infirmière dit qu'on\\nremarchera demain.\\pJe retourne dans les montagnes.\\nJ'y trouverai peut-être un plan."
+ },
+ "SaffronCity_PokemonCenter_1F_Text_Flora": {
+  "en": "FLORA: He wants all ten stones.\\nThat is what the MASTER said.\\pYou carry more of them than he\\ndoes. Keep them close.",
+  "fr": "FLORA : Il veut les dix pierres.\\nC'est ce qu'a dit le MAÎTRE.\\pTu en portes plus que lui.\\nGarde-les près de toi."
+ },
+ "SaffronCity_PokemonCenter_1F_Text_GreatIfEliteFourCameBeatRockets": {
+  "en": "Sigh…\\nWouldn't this be great?\\pIf the ELITE FOUR came and\\nstomped TEAM ONYBRIS?",
+  "fr": "Soupir…\\nNe serait-ce pas génial ?\\pSi le CONSEIL DES QUATRE venait\\nécraser la TEAM ONYBRIS ?"
+ },
+ "SaffronCity_PokemonCenter_1F_Text_GrowthRatesDifferBySpecies": {
+  "en": "POKéMON growth rates differ from\\nspecies to species.",
+  "fr": "Les taux de croissance des POKéMON\\ndiffèrent d'une espèce à l'autre."
+ },
+ "SaffronCity_PokemonCenter_1F_Text_N": {
+  "en": "N: They say two travelers are\\nalready near the volcano.\\pOld friends of the road. Meet\\nthem. Learn from them.",
+  "fr": "N : On dit que deux voyageurs sont\\ndéjà près du volcan.\\pDe vieux amis de la route.\\nRencontre-les. Apprends d'eux."
+ },
+ "SaffronCity_PokemonCenter_1F_Text_SilphCoVictimOfFame": {
+  "en": "HEMATEK is widely known to all.\\pIt's a victim of its own fame - it\\nattracted TEAM ONYBRIS.",
+  "fr": "HEMATEK est connue de tous.\\pElle est victime de sa propre\\ncélébrité : elle a attiré la TEAM\\lONYBRIS."
+ },
+ "SaffronCity_PokemonCenter_1F_Text_TeamRocketTookOff": {
+  "en": "TEAM ONYBRIS took off!\\nWe can go out safely again!\\lThat's great!",
+  "fr": "La TEAM ONYBRIS a décollé ! On peut\\nsortir en sécurité à nouveau !\\pC'est super !"
+ }
+}

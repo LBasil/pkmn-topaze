@@ -1,10 +1,18 @@
 {
+ "SandboxGrove_Text_Npc0": {
+  "en": "I dig and dig. Look what came up!",
+  "fr": "Je creuse et je creuse. Regarde ce\\nqui est sorti !"
+ },
+ "SandboxGrove_Text_Npc1": {
+  "en": "Ground types dislike the rain. Keep\\nthat in mind.",
+  "fr": "Les types SOL n'aiment pas la\\npluie. Garde-le en tête."
+ },
  "SandboxGrove_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "SandboxGrove_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

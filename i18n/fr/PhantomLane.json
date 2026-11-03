@@ -1,18 +1,42 @@
 {
+ "PhantomLane_Text_Npc0": {
+  "en": "Walk fast. Do not look behind.",
+  "fr": "Marche vite. Ne regarde pas\\nderrière toi."
+ },
+ "PhantomLane_Text_Npc1": {
+  "en": "DUSCLOPS is a gate between two\\nworlds.",
+  "fr": "TÉRACLOPE est une porte entre deux\\nmondes."
+ },
+ "PhantomLane_Text_Quest0_AfterT": {
+  "en": "Rest well, friend.",
+  "fr": "Repose-toi bien, ami."
+ },
+ "PhantomLane_Text_Quest0_Ask": {
+  "en": "A MAX REVIVE for my old friend. A\\nSPELL TAG for you.",
+  "fr": "Un MAX RAPPEL pour mon vieil ami.\\nUn TALISMAN pour toi."
+ },
+ "PhantomLane_Text_Quest0_Done": {
+  "en": "He lives! Take this SPELL TAG.",
+  "fr": "Il vit ! Prends ce TALISMAN."
+ },
+ "PhantomLane_Text_Quest0_MissT": {
+  "en": "One MAX REVIVE, please.",
+  "fr": "Un MAX RAPPEL, s'il vous plaît."
+ },
  "PhantomLane_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "PhantomLane_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "PhantomLane_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "PhantomLane_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

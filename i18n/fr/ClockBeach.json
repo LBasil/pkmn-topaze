@@ -1,14 +1,34 @@
 {
+ "ClockBeach_Text_Boss_After": {
+  "en": "The sea keeps what it likes. Today\\nit kept nothing of yours.",
+  "fr": "La mer garde ce qui lui plaît.\\nAujourd'hui elle n'a rien gardé de\\ltoi."
+ },
+ "ClockBeach_Text_Boss_Defeat": {
+  "en": "The tide turned for you.",
+  "fr": "La marée a tourné pour toi."
+ },
+ "ClockBeach_Text_Boss_Intro": {
+  "en": "Another stopped clock washed up:\\nyou. Let the sea decide how long\\pyou stay!",
+  "fr": "Une autre horloge arrêtée échouée :\\ntoi. Laisse la mer décider combien\\lde temps tu restes !"
+ },
  "ClockBeach_Text_Boss_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "ClockBeach_Text_Npc0": {
+  "en": "A clock washed up at dawn. Another\\nat noon. They all say 3:07.",
+  "fr": "Une horloge échouée à l'aube. Une\\nautre à midi. Toutes disent 3h07."
+ },
+ "ClockBeach_Text_Npc1": {
+  "en": "I found a shell shaped like a\\nclock. It ticks when it rains.",
+  "fr": "J'ai trouvé un coquillage en forme\\nd'horloge. Il tictaque quand il\\lpleut."
  },
  "ClockBeach_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "ClockBeach_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

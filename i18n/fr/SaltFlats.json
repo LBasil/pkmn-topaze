@@ -1,10 +1,18 @@
 {
+ "SaltFlats_Text_Npc0": {
+  "en": "Salt, sand and sea. A strange mix\\nof POKéMON.",
+  "fr": "Sel, sable et mer. Un étrange\\nmélange de POKéMON."
+ },
+ "SaltFlats_Text_Npc1": {
+  "en": "TRAPINCH digs where the sand is\\nsoftest.",
+  "fr": "KRAKNOIX creuse là où le sable est\\nle plus meuble."
+ },
  "SaltFlats_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "SaltFlats_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

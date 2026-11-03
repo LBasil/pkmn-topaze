@@ -1,10 +1,18 @@
 {
+ "CopperCanyon_Text_Npc0": {
+  "en": "Shout. The canyon will answer.",
+  "fr": "Crie. Le canyon te répondra."
+ },
+ "CopperCanyon_Text_Npc1": {
+  "en": "RHYHORN charged me. I ran very\\nfast.",
+  "fr": "RHINOCORNE m'a chargé. J'ai couru\\ntrès vite."
+ },
  "CopperCanyon_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "CopperCanyon_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

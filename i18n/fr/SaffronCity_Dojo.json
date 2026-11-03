@@ -1,0 +1,90 @@
+{
+ "SaffronCity_Dojo_Text_AaronDefeat": {
+  "en": "Yow!\\nStubbed fingers!",
+  "fr": "Aïe !\\nDoigts écorchés !"
+ },
+ "SaffronCity_Dojo_Text_AaronIntro": {
+  "en": "Hiyah!\\nI have no fear for anything tough!\\pI shatter boulders for training\\nevery day!",
+  "fr": "Hiyah !\\nJe n'ai peur de rien de dur !\\pJe brise des rochers à\\nl'entraînement chaque jour !"
+ },
+ "SaffronCity_Dojo_Text_AaronPostBattle": {
+  "en": "The only thing that frightens us is\\npsychic power!",
+  "fr": "La seule chose qui nous effraie,\\nc'est la puissance psychique !"
+ },
+ "SaffronCity_Dojo_Text_ChoosePrizedFightingMon": {
+  "en": "Indeed, I have lost!\\pBut, I beseech you, do not take\\nour emblem as your trophy!\\pIn return, I will give you both\\nprized FIGHTING POKéMON!\\pTake them, you have earned it!",
+  "fr": "En effet, j'ai perdu !\\pMais je t'en supplie, ne prends pas\\nnotre emblème comme trophée !\\pEn échange, je te donnerai les deux\\nprécieux POKéMON COMBAT !\\pPrends-les, tu les as mérités !"
+ },
+ "SaffronCity_Dojo_Text_EnemiesOnEverySide": {
+  "en": "Enemies on every side!",
+  "fr": "Des ennemis de tous côtés !"
+ },
+ "SaffronCity_Dojo_Text_FightingDojo": {
+  "en": "FIGHTING DOJO",
+  "fr": "DOJO DE COMBAT"
+ },
+ "SaffronCity_Dojo_Text_GoesAroundComesAround": {
+  "en": "What goes around comes around.",
+  "fr": "Ce qui part revient."
+ },
+ "SaffronCity_Dojo_Text_HidekiDefeat": {
+  "en": "Judge!\\nOne point!",
+  "fr": "Juge !\\nUn point !"
+ },
+ "SaffronCity_Dojo_Text_HidekiIntro": {
+  "en": "I hear you're good!\\nShow me!",
+  "fr": "J'ai entendu dire que tu es bon !\\nMontre-moi !"
+ },
+ "SaffronCity_Dojo_Text_HidekiPostBattle": {
+  "en": "Our MASTER is a pro fighter.\\nBe prepared to lose!",
+  "fr": "Notre MAÎTRE est un combattant pro.\\nPrépare-toi à perdre !"
+ },
+ "SaffronCity_Dojo_Text_HitoshiDefeat": {
+  "en": "Oof!\\nI give up!",
+  "fr": "Ouf !\\nJ'abandonne !"
+ },
+ "SaffronCity_Dojo_Text_HitoshiIntro": {
+  "en": "Hwaah!\\pYou're trespassing in our\\nFIGHTING DOJO!",
+  "fr": "Hwaah !\\pTu es en train de violer notre\\nDOJO DE COMBAT !"
+ },
+ "SaffronCity_Dojo_Text_HitoshiPostBattle": {
+  "en": "The prime fighters across the land\\ntrain here.",
+  "fr": "Les meilleurs combattants du pays\\ns'entraînent ici."
+ },
+ "SaffronCity_Dojo_Text_MasterKoichiDefeat": {
+  "en": "Hwa!\\nArrgh! Beaten!",
+  "fr": "Hwa !\\nArrgh ! Battu !"
+ },
+ "SaffronCity_Dojo_Text_MasterKoichiIntro": {
+  "en": "Grunt!\\pI am the KARATE MASTER!\\nI am the LEADER here!\\pYou wish to challenge us?\\nExpect no mercy!\\pFwaaa!",
+  "fr": "Grunt !\\pJe suis le MAÎTRE KARATÉ !\\nJe suis le CHEF ici !\\pTu veux nous défier ?\\nAttends-toi à aucune pitié !\\pFwaaa !"
+ },
+ "SaffronCity_Dojo_Text_MikeDefeat": {
+  "en": "I give up!",
+  "fr": "J'abandonne !"
+ },
+ "SaffronCity_Dojo_Text_MikeIntro": {
+  "en": "Hoargh!\\nTake your shoes off!",
+  "fr": "Hoargh !\\nEnlève tes chaussures !"
+ },
+ "SaffronCity_Dojo_Text_MikePostBattle": {
+  "en": "You wait 'til you see our MASTER!\\nI'm a small fry compared to him!",
+  "fr": "Attends de voir notre MAÎTRE !\\nJe ne suis rien comparé à lui !"
+ },
+ "SaffronCity_Dojo_Text_ReceivedMonFromKarateMaster": {
+  "en": "{PLAYER} received the {STR_VAR_1}\\nfrom the KARATE MASTER.",
+  "fr": "{PLAYER} a reçu {STR_VAR_1}\\ndu MAÎTRE KARATÉ."
+ },
+ "SaffronCity_Dojo_Text_StayAndTrainWithUs": {
+  "en": "Grunt!\\nStay and train at karate with us!",
+  "fr": "Grunt ! Reste t'entraîner au karaté\\navec nous !"
+ },
+ "SaffronCity_Dojo_Text_YouWantHitmonchan": {
+  "en": "You want the piston-punching\\nHITMONCHAN?",
+  "fr": "Tu veux le HITMONCHAN aux coups de\\npoing de piston ?"
+ },
+ "SaffronCity_Dojo_Text_YouWantHitmonlee": {
+  "en": "You want the hard-kicking\\nHITMONLEE?",
+  "fr": "Tu veux le redoutable HITMONLEE\\naux coups de pied ?"
+ }
+}

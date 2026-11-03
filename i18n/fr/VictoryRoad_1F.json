@@ -1,0 +1,38 @@
+{
+ "VictoryRoad_1F_Text_NaomiDefeat": {
+  "en": "You are a pest…",
+  "fr": "Tu es une peste…"
+ },
+ "VictoryRoad_1F_Text_NaomiIntro": {
+  "en": "No challengers today, kid.",
+  "fr": "Pas de challengers aujourd'hui."
+ },
+ "VictoryRoad_1F_Text_NaomiPostBattle": {
+  "en": "That silent kid in red walked\\nright past us. Scary.",
+  "fr": "Ce gamin silencieux en rouge est\\npassé juste devant nous. Effrayant."
+ },
+ "VictoryRoad_1F_Text_NurseHeal": {
+  "en": "I am the road's NURSE. I set up\\nnext to this ladder, where the\\lair feels wrong.\\pThe ONYBRIS crews went down\\nthere and the tunnel behind you\\lwas brought down. Heal up first.",
+  "fr": "Je suis l'INFIRMIÈRE de la route.\\nJe me suis installée près de cette\\léchelle, où l'air me semble\\nétrange.\\pLes équipes d'ONYBRIS sont\\ndescendues là et le tunnel derrière\\ltoi a été abattu. Soigne-toi\\nd'abord."
+ },
+ "VictoryRoad_1F_Text_NurseHealed": {
+  "en": "All better! Come back any time.",
+  "fr": "Tout est réparé ! Reviens quand tu\\nveux."
+ },
+ "VictoryRoad_1F_Text_RolandoDefeat": {
+  "en": "Burned out.",
+  "fr": "Grillé."
+ },
+ "VictoryRoad_1F_Text_RolandoIntro": {
+  "en": "The League road belongs to us!",
+  "fr": "La route de la Ligue nous\\nappartient !"
+ },
+ "VictoryRoad_1F_Text_RolandoPostBattle": {
+  "en": "The MASTER is ahead. RED went\\nin before you. Alone.",
+  "fr": "Le MAÎTRE est devant. RED est entré\\navant toi. Seul."
+ },
+ "VictoryRoad_1F_Text_Rubble": {
+  "en": "The tunnel ahead is buried under\\nfresh rubble. Pickaxe marks.\\pSomebody brought this wall down on\\npurpose. The way to the next floor\\lis shut.\\pA cold draft blows in from the\\nnorth-east end of the cave.",
+  "fr": "Le tunnel devant est enseveli sous\\ndes décombres récents. Des traces\\lde pioche.\\pQuelqu'un a fait tomber ce mur\\nexprès. Le chemin vers l'étage\\lsuivant est fermé.\\pUn courant d'air froid souffle du\\nbout nord-est de la grotte."
+ }
+}

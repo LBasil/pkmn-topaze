@@ -1,14 +1,134 @@
 {
+ "ViridianCity_Text_CanCarryMonsAnywhere": {
+  "en": "Ten years ago, the AURA changed\\nevery POKéMON's TYPE overnight.\\pMy dad still can't believe his\\nGROWLITHE is part ICE now.",
+  "fr": "Il y a dix ans, l'AURA a changé le\\nTYPE de chaque POKéMON en une nuit.\\pMon père n'arrive toujours pas à\\ncroire que son CANINOS est en\\lpartie GLACE maintenant."
+ },
+ "ViridianCity_Text_CatchMonsForEasierBattles": {
+  "en": "TRAINER TIPS\\pCatch POKéMON and expand your\\ncollection.\\pThe more you have, the easier it\\nis to battle.",
+  "fr": "CONSEILS AUX DRESSEURS\\pCapture des POKéMON et agrandis ta\\ncollection.\\pPlus tu en as, plus il est facile\\nde combattre."
+ },
+ "ViridianCity_Text_CitySign": {
+  "en": "OPANIHRUM \\nCity of the Black Opal",
+  "fr": "OPANIHRUM\\nVille de l'Opale Noire"
+ },
+ "ViridianCity_Text_DemoAnytime": {
+  "en": "Suit yourself.\\nCome back whenever you like.",
+  "fr": "Comme tu veux.\\nReviens quand tu veux."
+ },
+ "ViridianCity_Text_ExplainCaterpieWeedle": {
+  "en": "They look alike, but since the\\nAURA they are not the same.\\pCATERPIE has a PSYCHIC side.\\nWEEDLE has an ELECTRIC one.\\pMind WEEDLE's sting. It shocks!",
+  "fr": "Ils se ressemblent, mais depuis\\nl'AURA ils ne sont plus pareils.\\pCHENIPAN a un côté PSY.\\nASPICOT en a un ÉLECTRIK.\\pAttention au dard de ASPICOT. Il\\nélectrise !"
+ },
+ "ViridianCity_Text_GoShoppingInPewterOccasionally": {
+  "en": "I go shopping in PYROPIA\\noccasionally.\\pI have to take the winding trail in\\nCINDER FOREST when I go.",
+  "fr": "Je vais faire des courses à PYROPIA\\nde temps en temps.\\pJe dois prendre le sentier sinueux\\nde la FORÊT DE CENDRES pour y\\laller."
+ },
+ "ViridianCity_Text_GymClosedWonderWhoLeaderIs": {
+  "en": "This GYM has been closed ever since\\nthe LEADER left on a long trip.\\pRumor says HEPHA forges her own\\nsteel. I'd love to see it.",
+  "fr": "Cette ARÈNE est fermée depuis que\\nla CHAMPIONNE est partie en long\\lvoyage.\\pLa rumeur dit qu'HEPHA forge son\\npropre acier. J'adorerais le voir."
+ },
+ "ViridianCity_Text_GymDoorsAreLocked": {
+  "en": "OPANIHRUM GYM's doors are locked…",
+  "fr": "Les portes de l'ARÈNE d'OPANIHRUM\\nsont verrouillées…"
+ },
+ "ViridianCity_Text_GymSign": {
+  "en": "OPANIHRUM POKéMON GYM\\nTHE FOUNDRY - LEADER: HEPHA",
+  "fr": "ARÈNE POKéMON D'OPANIHRUM\\nLA FONDERIE - CHAMPIONNE : HEPHA"
+ },
+ "ViridianCity_Text_HowsTeachyTVHelping": {
+  "en": "Well, now, I've had my coffee, and\\nthat's what I need to get going!\\pBut I made it too strong.\\nIt gave me a headache…\\pIncidentally, is my old TEACHY TV\\nhelping you?",
+  "fr": "Bon, j'ai pris mon café, et c'est\\nce qu'il me faut pour démarrer !\\pMais je l'ai fait trop fort.\\nJ'ai mal à la tête…\\pAu fait, ma vieille TEACHY TV\\nt'aide-t-elle ?"
+ },
+ "ViridianCity_Text_MovesLimitedByPP": {
+  "en": "TRAINER TIPS\\pThe battle moves of POKéMON are\\nlimited by their POWER POINTS, PP.\\pTo replenish PP, rest your tired\\nPOKéMON at a POKéMON CENTER.",
+  "fr": "CONSEILS AUX DRESSEURS\\pLes capacités de combat des POKéMON\\nsont limitées par leurs POINTS DE\\lPOUVOIR, PP.\\pPour reconstituer les PP, fais\\nreposer tes POKéMON fatigués dans\\lun CENTRE POKéMON."
+ },
+ "ViridianCity_Text_MyGrandsonOnTheShow": {
+  "en": "Wahaha!\\nIt's my grandson on the show!\\pSince he's the one doing the\\nteaching, you're bound to learn.",
+  "fr": "Wahaha ! C'est mon petit-fils dans\\nl'émission !\\pComme c'est lui qui enseigne, tu es\\nsûr d'apprendre."
+ },
+ "ViridianCity_Text_OfferCatchDemo": {
+  "en": "Well, now, I've had my coffee!\\nHm? You're working on a POKéDEX?\\pWhenever you catch a POKéMON, the\\nPOKéDEX updates its data.\\pShall I show you how to catch\\none?",
+  "fr": "Bon, j'ai pris mon café !\\nHm ? Tu travailles sur un POKéDEX ?\\pÀ chaque capture, le POKéDEX met à\\njour ses données.\\pVeux-tu que je te montre comment en\\ncapturer un ?"
+ },
+ "ViridianCity_Text_OhOkayThen": {
+  "en": "Oh, okay then!",
+  "fr": "Oh, d'accord alors !"
+ },
+ "ViridianCity_Text_RefAfter": {
+  "en": "BRUN: Take good care of it. The\\nnext REFUGE post is waiting.",
+  "fr": "BRUN : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
+ },
+ "ViridianCity_Text_RefAsk": {
+  "en": "BRUN: Hunters came last night, looking\\nfor rare POKéMON to sell. They\\nwant them back in cages.\\pI cannot fight them alone.",
+  "fr": "BRUN : Des chasseurs sont venus\\nhier soir, à la recherche de\\pPOKéMON rares à vendre. Ils veulent\\nles remettre en cage.\\pJe ne peux pas les combattre seul."
+ },
+ "ViridianCity_Text_RefDone": {
+  "en": "BRUN: Thank you again. The REFUGE\\nis safer because of you.",
+  "fr": "BRUN : Merci encore. Le REFUGE est\\nplus sûr grâce à toi."
+ },
+ "ViridianCity_Text_RefEarly": {
+  "en": "BRUN: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "fr": "BRUN : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\lde la ZONE SAFARI connaît l'ordre."
+ },
+ "ViridianCity_Text_RefGives": {
+  "en": "BRUN: You saved the day. The post\\nhas a gift for you: LARVITAR!",
+  "fr": "BRUN : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\pEMBRYLEX !"
+ },
  "ViridianCity_Text_RefHunter1": {
-  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Ne te mêle pas de ça,\\ppetit !",
-  "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!"
+  "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!",
+  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Ne te mêle pas de ça,\\ppetit !"
  },
  "ViridianCity_Text_RefHunter2": {
-  "fr": "CHASSEUR : Tu as battu mon associé ?\\nSoit, je n'ai pas peur d'un\\lranger !",
-  "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!"
+  "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!",
+  "fr": "CHASSEUR : Tu as battu mon\\nassocié ? Soit, je n'ai pas peur\\ld'un ranger !"
+ },
+ "ViridianCity_Text_RefIdle": {
+  "en": "BRUN: I watch over the animals here.\\nThe world is quieter now.",
+  "fr": "BRUN : Je veille sur les animaux\\nici. Le monde est plus calme\\lmaintenant."
+ },
+ "ViridianCity_Text_ShowYouHowToCatchMons": {
+  "en": "Watch closely, then!",
+  "fr": "Regarde bien, alors !"
+ },
+ "ViridianCity_Text_TQ_Ask": {
+  "en": "A NUGGET for my collection. Bring\\nme one, will you?",
+  "fr": "Une PÉPITE pour ma collection.\\nApporte-m'en une, veux-tu ?"
+ },
+ "ViridianCity_Text_TQ_Done": {
+  "en": "My shelf has never looked better.",
+  "fr": "Mon étagère n'a jamais été aussi\\nbelle."
  },
  "ViridianCity_Text_TQ_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "ViridianCity_Text_TQ_Ok": {
+  "en": "How it shines! Take this SCARF.",
+  "fr": "Comme elle brille ! Prends cette\\nÉCHARPE."
+ },
+ "ViridianCity_Text_ThatWasEducationalTakeThis": {
+  "en": "There! Now tell me, that was\\neducational, was it not?\\pAnd here, take this, too.",
+  "fr": "Voilà ! Dis-moi, c'était\\ninstructif, non ?\\pEt tiens, prends ceci aussi."
+ },
+ "ViridianCity_Text_TooBusyForTeachyTV": {
+  "en": "Hm… You're too busy to not even\\nhave the time for TEACHY TV…\\pTime is money, and neither should\\nbe ill spent…",
+  "fr": "Hm… Tu es trop occupé pour ne même\\npas avoir le temps de regarder\\lTEACHY TV…\\pLe temps, c'est de l'argent, et ni\\nl'un ni l'autre ne doivent être mal\\ldépensés…"
+ },
+ "ViridianCity_Text_ViridiansGymLeaderReturned": {
+  "en": "OPANIHRUM GYM's LEADER returned!",
+  "fr": "La CHAMPIONNE d'OPANIHRUM est\\nrevenue !"
+ },
+ "ViridianCity_Text_WantToKnowAboutCaterpillarMons": {
+  "en": "You want to know about the two\\nkinds of caterpillar POKéMON?",
+  "fr": "Tu veux en savoir plus sur les deux\\nsortes de POKéMON chenilles ?"
+ },
+ "ViridianCity_Text_WatchThatToLearnBasics": {
+  "en": "If there's something you don't\\nunderstand, watch that.\\pIt will teach you about the basics\\nof being a POKéMON TRAINER.",
+  "fr": "S'il y a quelque chose que tu ne\\ncomprends pas, regarde ça.\\pÇa t'apprendra les bases pour être\\nDRESSEUR POKéMON."
+ },
+ "ViridianCity_Text_WeakenMonsFirstToCatch": {
+  "en": "Well, now, I've had my coffee, and\\nthat's what I need to get going!\\pBut I made it too strong.\\nIt gave me a headache…\\pIncidentally, are you filling your\\nPOKéDEX?\\pAt first, focus on weakening the\\nPOKéMON before trying to catch it.",
+  "fr": "Bon, j'ai pris mon café, et c'est\\nce qu'il me faut pour démarrer !\\pMais je l'ai fait trop fort. J'ai\\nmal à la tête…\\pAu fait, remplis-tu ton POKéDEX ?\\pAu début, concentre-toi à affaiblir\\nles POKéMON avant d'essayer de les\\lcapturer."
  }
 }

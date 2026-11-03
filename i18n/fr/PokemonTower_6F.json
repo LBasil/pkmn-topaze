@@ -1,0 +1,50 @@
+{
+ "PokemonTower_6F_Text_AngelicaDefeat": {
+  "en": "Groan!",
+  "fr": "Gémissement !"
+ },
+ "PokemonTower_6F_Text_AngelicaIntro": {
+  "en": "Give…me…\\nblood…",
+  "fr": "Donne… moi…\\ndu sang…"
+ },
+ "PokemonTower_6F_Text_AngelicaPostBattle": {
+  "en": "I feel anemic and weak…",
+  "fr": "Je me sens anémié et faible…"
+ },
+ "PokemonTower_6F_Text_BeGoneIntruders": {
+  "en": "Be gone…\\nIntruders…",
+  "fr": "Va-t'en…\\nIntrus…"
+ },
+ "PokemonTower_6F_Text_EmiliaDefeat": {
+  "en": "Something fell out!",
+  "fr": "Quelque chose est tombé !"
+ },
+ "PokemonTower_6F_Text_EmiliaIntro": {
+  "en": "Urff…\\nKwaah!",
+  "fr": "Urff…\\nKwaah !"
+ },
+ "PokemonTower_6F_Text_EmiliaPostBattle": {
+  "en": "My hair didn't fall out!\\nIt was a malevolent spirit!",
+  "fr": "Mes cheveux ne sont pas tombés !\\nC'était un esprit malveillant !"
+ },
+ "PokemonTower_6F_Text_GhostWasCubonesMother": {
+  "en": "The ghost was the restless spirit\\nof CUBONE's mother!",
+  "fr": "Le fantôme était l'esprit agité de\\nla mère de OSSELAIT !"
+ },
+ "PokemonTower_6F_Text_JenniferDefeat": {
+  "en": "Keee!",
+  "fr": "Keee !"
+ },
+ "PokemonTower_6F_Text_JenniferIntro": {
+  "en": "Ke…ke…ke…\\nke…ke…ke!",
+  "fr": "Ke… ke… ke…\\nke… ke… ke !"
+ },
+ "PokemonTower_6F_Text_JenniferPostBattle": {
+  "en": "What's going on here?",
+  "fr": "Que se passe-t-il ici ?"
+ },
+ "PokemonTower_6F_Text_MothersSpiritWasCalmed": {
+  "en": "The mother's spirit was calmed.\\pIt departed to the afterlife…",
+  "fr": "L'esprit de la mère a été apaisé.\\pIl est parti vers l'au-delà…"
+ }
+}

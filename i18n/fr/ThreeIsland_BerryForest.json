@@ -1,0 +1,30 @@
+{
+ "ThreeIsland_BerryForest_Text_BerryPouchIsFull": {
+  "en": "Your BERRY POUCH is full.\\nI guess you don't want this.",
+  "fr": "Ta BOÎTE À BAIES est pleine. Je\\nsuppose que tu ne veux pas de ça."
+ },
+ "ThreeIsland_BerryForest_Text_BewareWildBerryLovingMons": {
+  "en": "Beware of wild, BERRY-loving\\nPOKéMON!",
+  "fr": "Méfiez-vous des POKéMON sauvages\\namateurs de BAIES !"
+ },
+ "ThreeIsland_BerryForest_Text_HelpScaryPokemon": {
+  "en": "LOSTELLE: Whimper… Sniff…\\nOh! Please, help!\\pA scary POKéMON appeared there\\na little while ago.\\pIt kept scaring.\\nIt made LOSTELLE scared.\\pI'm too scared to move!\\nBut I want to go home…",
+  "fr": "LOSTELLE : Snif… Reniflement…\\nOh ! À l'aide, s'il te plaît !\\pUn POKéMON effrayant est apparu\\nlà-bas il y a peu.\\pIl n'arrêtait pas de faire peur.\\nIl a fait peur à LOSTELLE.\\pJ'ai trop peur pour bouger !\\nMais je veux rentrer…"
+ },
+ "ThreeIsland_BerryForest_Text_HereItComesAgain": {
+  "en": "Oh! Here it comes again!\\nNo! Go away! It's scaring me!\\pWaaaaaaah!\\nI want my daddy!",
+  "fr": "Oh ! Le revoilà !\\nNon ! Va-t'en ! Il me fait peur !\\pWaaaaaaah !\\nJe veux mon papa !"
+ },
+ "ThreeIsland_BerryForest_Text_LetsGoHome": {
+  "en": "What's your name?\\pLOSTELLE's scared, so can I go\\nwith you to my daddy's house?\\pOkay!\\nLet's go home!",
+  "fr": "Comment tu t'appelles ?\\pLOSTELLE a peur, alors puis-je\\nvenir avec toi chez mon papa ?\\pD'accord !\\nRentrons à la maison !"
+ },
+ "ThreeIsland_BerryForest_Text_ThankYouHaveThis": {
+  "en": "Ohh! That was so scary!\\nThank you!\\pLOSTELLE came to pick some\\nBERRIES.\\pYou can have this!",
+  "fr": "Ohh ! C'était si effrayant !\\nMerci !\\pLOSTELLE est venue cueillir des\\nBAIES.\\pTu peux prendre ça !"
+ },
+ "ThreeIsland_BerryForest_Text_WelcomeToBerryForest": {
+  "en": "Welcome to the BERRY FOREST\\pBe friendly and share BERRIES with\\nothers and POKéMON.",
+  "fr": "Bienvenue dans la FORÊT DES BAIES\\pSoyez amicaux et partagez les BAIES\\navec les autres et les POKéMON."
+ }
+}

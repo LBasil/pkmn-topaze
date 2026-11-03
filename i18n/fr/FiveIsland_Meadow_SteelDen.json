@@ -1,0 +1,66 @@
+{
+ "FiveIsland_Meadow_SteelDen_Text_GuardsLeft": {
+  "en": "The beast does not stir.\\nIts guardians still stand watch.",
+  "fr": "La bête ne bouge pas.\\nSes gardiens veillent toujours."
+ },
+ "FiveIsland_Meadow_SteelDen_Text_T0Defeat": {
+  "en": "Rusted through...",
+  "fr": "Rouillé jusqu'à la moelle…"
+ },
+ "FiveIsland_Meadow_SteelDen_Text_T0Intro": {
+  "en": "Steel does not rust, and neither\\ndoes our watch.",
+  "fr": "L'acier ne rouille pas, et notre\\nveille non plus."
+ },
+ "FiveIsland_Meadow_SteelDen_Text_T0Post": {
+  "en": "The WARDEN is further on.",
+  "fr": "Le GARDIEN est plus loin."
+ },
+ "FiveIsland_Meadow_SteelDen_Text_T1Defeat": {
+  "en": "Bent out of shape.",
+  "fr": "Déformé."
+ },
+ "FiveIsland_Meadow_SteelDen_Text_T1Intro": {
+  "en": "The ancient one hums when the\\nsky cracks. We keep it quiet.",
+  "fr": "L'ancien gronde quand le ciel se\\nfend. Nous le gardons silencieux."
+ },
+ "FiveIsland_Meadow_SteelDen_Text_T1Post": {
+  "en": "Keep going. It only gets harder.",
+  "fr": "Continue. Ça ne fait que se corser."
+ },
+ "FiveIsland_Meadow_SteelDen_Text_T2Defeat": {
+  "en": "The seam gave way.",
+  "fr": "La couture a cédé."
+ },
+ "FiveIsland_Meadow_SteelDen_Text_T2Intro": {
+  "en": "No one walks to the shore alone\\nanymore.",
+  "fr": "Plus personne ne marche seul vers\\nle rivage."
+ },
+ "FiveIsland_Meadow_SteelDen_Text_T2Post": {
+  "en": "The WARDEN has heard you coming.",
+  "fr": "Le GARDIEN t'a entendu venir."
+ },
+ "FiveIsland_Meadow_SteelDen_Text_T3Defeat": {
+  "en": "The forge cools.",
+  "fr": "La forge refroidit."
+ },
+ "FiveIsland_Meadow_SteelDen_Text_T3Intro": {
+  "en": "The beast gave us shelter when\\nthe sky turned. We stay for it.",
+  "fr": "La bête nous a abrités quand le\\nciel a tourné. Nous restons pour\\lelle."
+ },
+ "FiveIsland_Meadow_SteelDen_Text_T3Post": {
+  "en": "Almost there. Mind your pride.",
+  "fr": "Presque arrivé. Fais attention à\\nton orgueil."
+ },
+ "FiveIsland_Meadow_SteelDen_Text_T4Defeat": {
+  "en": "...Then the iron has chosen you.",
+  "fr": "…Alors le fer t'a choisi."
+ },
+ "FiveIsland_Meadow_SteelDen_Text_T4Intro": {
+  "en": "I am the WARDEN of the STEEL.\\nThe beast sleeps in my care.\\pProve that your will is worth\\nmore than my fear.",
+  "fr": "Je suis le GARDIEN de l'ACIER.\\nLa bête dort sous ma garde.\\pProuve que ta volonté vaut plus que\\nma peur."
+ },
+ "FiveIsland_Meadow_SteelDen_Text_T4Post": {
+  "en": "Go. Do not let it rust.",
+  "fr": "Va. Ne le laisse pas rouiller."
+ }
+}

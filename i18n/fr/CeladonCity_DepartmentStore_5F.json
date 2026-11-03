@@ -1,14 +1,14 @@
 {
  "CeladonCity_DepartmentStore_5F_Text_Drugstore": {
-  "fr": "5F : PHARMACIE",
-  "en": "5F: DRUGSTORE"
+  "en": "5F: DRUGSTORE",
+  "fr": "5F : PHARMACIE"
  },
  "CeladonCity_DepartmentStore_5F_Text_ExplainStatEnhancers": {
-  "fr": "Les boosters de stats POKéMON ne\\ns'achètent qu'ici.\\pPV PLUS augmente les PV de base\\nd'un POKéMON.\\pCALCIUM augmente l'ATQ SPÉ. de base\\nd'un POKéMON.\\pZINC augmente la DÉF SPÉ. de base\\nd'un POKéMON.\\pCARBONE améliore la VITESSE de\\nbase.",
-  "en": "POKéMON stat enhancers can be\\nbought only here.\\pHP UP increases the base HP of a\\nPOKéMON.\\pCALCIUM raises the base SP. ATK\\nstat of one POKéMON.\\pZINC boosts the base SP. DEF stat\\nof one POKéMON.\\pCARBOS enhances the base SPEED\\nstat."
+  "en": "POKéMON stat enhancers can be\\nbought only here.\\pHP UP increases the base HP of a\\nPOKéMON.\\pCALCIUM raises the base SP. ATK\\nstat of one POKéMON.\\pZINC boosts the base SP. DEF stat\\nof one POKéMON.\\pCARBOS enhances the base SPEED\\nstat.",
+  "fr": "Les boosters de stats POKéMON ne\\ns'achètent qu'ici.\\pPV PLUS augmente les PV de base\\nd'un POKéMON.\\pCALCIUM augmente l'ATQ SPÉ. de base\\nd'un POKéMON.\\pZINC augmente la DÉF SPÉ. de base\\nd'un POKéMON.\\pCARBONE améliore la VITESSE de\\nbase."
  },
  "CeladonCity_DepartmentStore_5F_Text_HereForStatEnhancers": {
-  "fr": "Je suis là pour les boosters de\\nstats POKéMON.\\pPROTÉINE augmente l'ATTAQUE de\\nbase.\\pFER augmente la DÉFENSE de base.",
-  "en": "I'm here for POKéMON stat\\nenhancers.\\pPROTEIN increases the base ATTACK\\npower.\\pIRON increases the base DEFENSE\\nstat."
+  "en": "I'm here for POKéMON stat\\nenhancers.\\pPROTEIN increases the base ATTACK\\npower.\\pIRON increases the base DEFENSE\\nstat.",
+  "fr": "Je suis là pour les boosters de\\nstats POKéMON.\\pPROTÉINE augmente l'ATTAQUE de\\nbase.\\pFER augmente la DÉFENSE de base."
  }
 }

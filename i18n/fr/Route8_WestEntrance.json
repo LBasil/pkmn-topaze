@@ -1,0 +1,18 @@
+{
+ "Route8_WestEntrance_Text_HiHowsItGoing": {
+  "en": "Hi, how's it going?",
+  "fr": "Salut, comment ça va ?"
+ },
+ "Route8_WestEntrance_Text_ThanksIllShareTeaWithGuards": {
+  "en": "Huh? I can have this drink?\\nGee, thanks!\\l… …\\lGlug, glug…\\l… …\\lGulp…\\lIf you want to go to HEMATOWN\\lCITY…\\l… …\\lYou can go on through.\\pI'll share this TEA with the other\\nguards!",
+  "fr": "Hein ? Je peux avoir cette\\nboisson ? Merci beaucoup ! … …\\lGlou, glou… … … Gulp… Si tu veux\\naller à HEMATOWN… … … Tu peux\\lpasser.\\pJe partagerai ce THÉ avec les\\nautres gardes !"
+ },
+ "Route8_WestEntrance_Text_ThatTeaLooksTasty": {
+  "en": "Oh, that TEA…\\nIt looks awfully tasty…",
+  "fr": "Oh, ce THÉ…\\nIl a l'air délicieux…"
+ },
+ "Route8_WestEntrance_Text_ThirstyOnGuardDuty": {
+  "en": "I'm on guard duty. Gee, I'm so\\nthirsty!\\pHEMATOWN is shut by order of the\\ncouncil. Thieves are about.\\pTake the UNDERGROUND PATH instead.",
+  "fr": "Je suis de garde. Mince, j'ai\\ntellement soif !\\pHEMATOWN est fermée sur ordre du\\nconseil. Des voleurs rôdent.\\pPrends plutôt le CHEMIN SOUTERRAIN."
+ }
+}

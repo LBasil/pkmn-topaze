@@ -1,18 +1,42 @@
 {
+ "OutcastShore_Text_Npc0": {
+  "en": "SHARPEDO bites hard. Bring a strong\\nteam.",
+  "fr": "SHARPEDO mord fort. Amène une\\néquipe solide."
+ },
+ "OutcastShore_Text_Npc1": {
+  "en": "MANTINE glides above the waves\\nhere.",
+  "fr": "DÉMANTA glisse au-dessus des vagues\\nici."
+ },
+ "OutcastShore_Text_Quest0_AfterT": {
+  "en": "Quiet shore.",
+  "fr": "Rivage calme."
+ },
+ "OutcastShore_Text_Quest0_Ask": {
+  "en": "Bring me a MAX REPEL and I give you\\na SOUL DEW.",
+  "fr": "Apporte-moi un MAX REPOUSSE et je\\nte donne une ROSÉE ÂME."
+ },
+ "OutcastShore_Text_Quest0_Done": {
+  "en": "Safe at last! Take this SOUL DEW.",
+  "fr": "Enfin en sécurité ! Prends cette\\nROSÉE ÂME."
+ },
+ "OutcastShore_Text_Quest0_MissT": {
+  "en": "One MAX REPEL, please.",
+  "fr": "Un MAX REPOUSSE, s'il vous plaît."
+ },
  "OutcastShore_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "OutcastShore_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "OutcastShore_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "OutcastShore_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

@@ -1,14 +1,14 @@
 {
  "CeladonCity_DepartmentStore_1F_Text_FloorDescriptions": {
-  "fr": "1F : COMPTOIR DE SERVICE\\p2F : MARCHÉ DES DRESSEURS\\p3F : BOUTIQUE DE JEUX VIDÉO\\p4F : CADEAUX DU SAGE\\p5F : PHARMACIE\\pTOIT : DISTRIBUTEURS",
-  "en": "1F: SERVICE COUNTER\\p2F: TRAINER'S MARKET\\p3F: TV GAME SHOP\\p4F: WISE MAN GIFTS\\p5F: DRUGSTORE\\pROOFTOP SQUARE: VENDING MACHINES"
+  "en": "1F: SERVICE COUNTER\\p2F: TRAINER'S MARKET\\p3F: TV GAME SHOP\\p4F: WISE MAN GIFTS\\p5F: DRUGSTORE\\pROOFTOP SQUARE: VENDING MACHINES",
+  "fr": "1F : COMPTOIR DE SERVICE\\p2F : MARCHÉ DES DRESSEURS\\p3F : BOUTIQUE DE JEUX VIDÉO\\p4F : CADEAUX DU SAGE\\p5F : PHARMACIE\\pTOIT : DISTRIBUTEURS"
  },
  "CeladonCity_DepartmentStore_1F_Text_ServiceCounter": {
-  "fr": "1F : COMPTOIR DE SERVICE",
-  "en": "1F: SERVICE COUNTER"
+  "en": "1F: SERVICE COUNTER",
+  "fr": "1F : COMPTOIR DE SERVICE"
  },
  "CeladonCity_DepartmentStore_1F_Text_WelcomeToDeptStore": {
-  "fr": "Bonjour ! Bienvenue au GRAND\\nMAGASIN DE BOURG QUARTZ.\\pLe panneau à droite décrit\\nl'organisation du magasin.",
-  "en": "Hello!\\nWelcome to BOURG QUARTZ DEPT. STORE.\\pThe board on the right describes\\nthe store layout."
+  "en": "Hello!\\nWelcome to BOURG QUARTZ DEPT. STORE.\\pThe board on the right describes\\nthe store layout.",
+  "fr": "Bonjour ! Bienvenue au GRAND\\nMAGASIN DE BOURG QUARTZ.\\pLe panneau à droite décrit\\nl'organisation du magasin."
  }
 }

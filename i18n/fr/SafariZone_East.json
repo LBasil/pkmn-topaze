@@ -1,0 +1,38 @@
+{
+ "SafariZone_East_Text_AreaSign": {
+  "en": "AREA 1\\nWEST: CENTER AREA",
+  "fr": "ZONE 1\\nOUEST : ZONE CENTRALE"
+ },
+ "SafariZone_East_Text_OnybrisGrunt1Defeat": {
+  "en": "Argh!",
+  "fr": "Argh !"
+ },
+ "SafariZone_East_Text_OnybrisGrunt1Intro": {
+  "en": "This park is under ONYBRIS control!",
+  "fr": "Ce parc est sous le contrôle\\nd'ONYBRIS !"
+ },
+ "SafariZone_East_Text_OnybrisGrunt1Post": {
+  "en": "The old WARDEN hid something.\\nWe will find it!",
+  "fr": "Le vieux GARDIEN a caché quelque\\nchose. Nous le trouverons !"
+ },
+ "SafariZone_East_Text_OnybrisGrunt2Defeat": {
+  "en": "Fine, fine!",
+  "fr": "D'accord, d'accord !"
+ },
+ "SafariZone_East_Text_OnybrisGrunt2Intro": {
+  "en": "Halt! No visitors today!",
+  "fr": "Halte ! Pas de visiteurs\\naujourd'hui !"
+ },
+ "SafariZone_East_Text_OnybrisGrunt2Post": {
+  "en": "The SAFARI staff ran away like\\nscared RATTATA.",
+  "fr": "Le personnel du SAFARI s'est enfui\\ncomme des RATTATA effrayés."
+ },
+ "SafariZone_East_Text_RestHouse": {
+  "en": "REST HOUSE",
+  "fr": "MAISON DE REPOS"
+ },
+ "SafariZone_East_Text_TimeDeclinesOnlyWhileYouWalk": {
+  "en": "TRAINER TIPS\\pThe remaining time declines only\\nwhile you walk.",
+  "fr": "CONSEILS AUX DRESSEURS\\pLe temps restant ne diminue que\\nquand tu marches."
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "LavenderTown_House2_Text_CritiqueWhichMonsNickname": {
+  "en": "Which POKéMON's nickname should\\nI critique?",
+  "fr": "Le surnom de quel POKéMON dois-je\\ncritiquer ?"
+ },
+ "LavenderTown_House2_Text_FromNowOnShallBeKnownAsName": {
+  "en": "Done! From now on, this POKéMON\\nshall be known as {STR_VAR_1}!\\pIt is a better name than before!\\nHow fortunate for you!",
+  "fr": "Voilà ! Désormais, ce POKéMON\\ns'appellera {STR_VAR_1} !\\pC'est un meilleur nom qu'avant !\\nQuelle chance pour toi !"
+ },
+ "LavenderTown_House2_Text_FromNowOnShallBeKnownAsSameName": {
+  "en": "Done! From now on, this POKéMON\\nshall be known as {STR_VAR_1}!\\pIt looks no different from before,\\nand yet, this is vastly superior!\\pHow fortunate for you!",
+  "fr": "Voilà ! Désormais, ce POKéMON\\ns'appellera {STR_VAR_1} !\\pIl n'a pas l'air différent d'avant,\\net pourtant, c'est bien supérieur !\\pQuelle chance pour toi !"
+ },
+ "LavenderTown_House2_Text_GiveItANicerName": {
+  "en": "{STR_VAR_1}, is it?\\nThat is a decent nickname!\\pBut, would you like me to give it\\na nicer name?\\pHow about it?",
+  "fr": "{STR_VAR_1}, c'est ça ?\\nC'est un surnom correct !\\pMais veux-tu que je lui donne un\\nplus beau nom ?\\pQu'en dis-tu ?"
+ },
+ "LavenderTown_House2_Text_ISeeComeVisitAgain": {
+  "en": "I see.\\nDo come visit again.",
+  "fr": "Je vois.\\nReviens me voir."
+ },
+ "LavenderTown_House2_Text_ThatIsMerelyAnEgg": {
+  "en": "Now, now.\\nThat is merely an EGG!",
+  "fr": "Allons, allons.\\nCe n'est qu'un ŒUF !"
+ },
+ "LavenderTown_House2_Text_TrulyImpeccableName": {
+  "en": "{STR_VAR_1}, is it?\\nThat is a truly impeccable name!\\pTake good care of {STR_VAR_1}!",
+  "fr": "{STR_VAR_1}, c'est ça ?\\nUn nom vraiment impeccable !\\pPrends bien soin de {STR_VAR_1} !"
+ },
+ "LavenderTown_House2_Text_WantMeToRateNicknames": {
+  "en": "Hello, hello!\\nI am the official NAME RATER!\\pWant me to rate the nicknames of\\nyour POKéMON?",
+  "fr": "Bonjour, bonjour ! Je suis le\\nCRITIQUE OFFICIEL DE SURNOMS !\\pVeux-tu que j'évalue les surnoms de\\ntes POKéMON ?"
+ },
+ "LavenderTown_House2_Text_WhatShallNewNicknameBe": {
+  "en": "Ah, good. Then, what shall the new\\nnickname be?",
+  "fr": "Ah, bien. Alors, quel sera le\\nnouveau surnom ?"
+ }
+}

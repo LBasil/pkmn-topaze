@@ -1,18 +1,42 @@
 {
+ "CircusLawn_Text_Npc0": {
+  "en": "MR. MIME builds invisible walls. It\\nis quite the act.",
+  "fr": "M. MIME construit des murs\\ninvisibles. Quel spectacle."
+ },
+ "CircusLawn_Text_Npc1": {
+  "en": "RALTS feels everything you feel.",
+  "fr": "TARSAL ressent tout ce que tu\\nressens."
+ },
+ "CircusLawn_Text_Quest0_AfterT": {
+  "en": "The show goes on.",
+  "fr": "Le spectacle continue."
+ },
+ "CircusLawn_Text_Quest0_Ask": {
+  "en": "Two GREAT BALLs for the show. A\\nTWISTEDSPOON for you.",
+  "fr": "Deux SUPER BALLS pour le spectacle.\\nUne CUILLER COURBE pour toi."
+ },
+ "CircusLawn_Text_Quest0_Done": {
+  "en": "Splendid! Take this TWISTEDSPOON.",
+  "fr": "Splendide ! Prends cette CUILLER\\nCOURBE."
+ },
+ "CircusLawn_Text_Quest0_MissT": {
+  "en": "Two GREAT BALLs, please.",
+  "fr": "Deux SUPER BALLS, s'il vous plaît."
+ },
  "CircusLawn_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "CircusLawn_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "CircusLawn_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "CircusLawn_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

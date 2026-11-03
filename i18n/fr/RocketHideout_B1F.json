@@ -1,0 +1,70 @@
+{
+ "RocketHideout_B1F_Text_Entry1": {
+  "en": "Fresh blue paint, new lights, a new\\ndesk. But under the paint, a faded\\lred R still shows through.\\p",
+  "fr": "Peinture bleue fraîche, nouvelles\\nlumières, nouveau bureau. Mais sous\\lla peinture, un R rouge délavé\\ntransparaît."
+ },
+ "RocketHideout_B1F_Text_Entry2": {
+  "en": "ROCKET abandoned this base long\\nago. Now somebody has taken it\\lback, one blue room at a time.",
+  "fr": "ROCKET a abandonné cette base il y\\na longtemps. Maintenant quelqu'un\\ll'a reprise, une salle bleue à la\\nfois."
+ },
+ "RocketHideout_B1F_Text_Grunt1Defeat": {
+  "en": "Oww!\\nBeaten!",
+  "fr": "Aïe !\\nBattu !"
+ },
+ "RocketHideout_B1F_Text_Grunt1Intro": {
+  "en": "Hold it. ROCKET left this lift to\\nrot. ONYBRIS keeps it running.",
+  "fr": "Stop. ROCKET a laissé cet ascenseur\\npourrir. ONYBRIS le fait\\lfonctionner."
+ },
+ "RocketHideout_B1F_Text_Grunt1PostBattle": {
+  "en": "ROCKET vanished years ago and left\\nthe whole base behind.\\pONYBRIS moved in, scrubbed three\\nrooms blue, and called it a bank.\\pOur boss never calls. Orders just\\nappear in our heads. Creepy, huh?",
+  "fr": "ROCKET a disparu il y a des années\\net a laissé toute la base.\\pONYBRIS s'y est installé, a repeint\\ntrois salles en bleu, et l'a\\lappelée une banque.\\pNotre boss n'appelle jamais. Les\\nordres apparaissent juste dans nos\\ltêtes. Flippant, non ?"
+ },
+ "RocketHideout_B1F_Text_Grunt2Defeat": {
+  "en": "Boom!",
+  "fr": "Boum !"
+ },
+ "RocketHideout_B1F_Text_Grunt2Intro": {
+  "en": "A customer in the new reception?\\nManagement does not allow that.",
+  "fr": "Un client à la nouvelle réception ?\\nLa direction ne l'autorise pas."
+ },
+ "RocketHideout_B1F_Text_Grunt2PostBattle": {
+  "en": "ONYBRIS paid for the paint. The\\nrest of the floor is still ROCKET's\\lold mess. Watch your step.\\pThis branch pays for the whole\\nnetwork. Touch it and you answer\\lto VESPER.",
+  "fr": "ONYBRIS a payé la peinture. Le\\nreste de l'étage est encore le\\lvieux bazar de ROCKET. Fais\\nattention où tu marches.\\pCette succursale finance tout le\\nréseau. Touche-la et tu auras\\laffaire à VESPER."
+ },
+ "RocketHideout_B1F_Text_Grunt3Defeat": {
+  "en": "I can't do it!",
+  "fr": "Je n'y arrive pas !"
+ },
+ "RocketHideout_B1F_Text_Grunt3Intro": {
+  "en": "Intruder alert!",
+  "fr": "Alerte intrus !"
+ },
+ "RocketHideout_B1F_Text_Grunt3PostBattle": {
+  "en": "ROCKET left crates of junk down\\nhere. We sell whatever we find.\\pRusty, dusty... but the cash\\nspends just the same.",
+  "fr": "ROCKET a laissé des caisses de\\nbric-à-brac ici. On vend tout ce\\lqu'on trouve.\\pRouillé, poussiéreux… mais l'argent\\nse dépense pareil."
+ },
+ "RocketHideout_B1F_Text_Grunt4Defeat": {
+  "en": "This won't do!",
+  "fr": "Ça ne va pas !"
+ },
+ "RocketHideout_B1F_Text_Grunt4Intro": {
+  "en": "Why did you come here?",
+  "fr": "Pourquoi viens-tu ici ?"
+ },
+ "RocketHideout_B1F_Text_Grunt4PostBattle": {
+  "en": "Okay, I'll talk...\\nThese were ROCKET's bunks. Nobody\\lcleaned them. Nobody dares.\\pTake the elevator to see VESPER.\\nBut the LIFT KEY went missing.\\lAsk the guards on the lower floors.",
+  "fr": "D'accord, je parle… C'étaient les\\ncouchettes de ROCKET. Personne ne\\lles a nettoyées. Personne n'ose.\\pPrends l'ascenseur pour voir\\nVESPER. Mais la CLÉ DE L'ASCENSEUR\\la disparu. Demande aux gardes des\\nétages inférieurs."
+ },
+ "RocketHideout_B1F_Text_Grunt5Defeat": {
+  "en": "Why…?",
+  "fr": "Pourquoi… ?"
+ },
+ "RocketHideout_B1F_Text_Grunt5Intro": {
+  "en": "Are you lost, you little mouse?\\nThe old bunks are off limits!",
+  "fr": "Tu t'es égaré ? Les anciennes\\ncouchettes sont interdites !"
+ },
+ "RocketHideout_B1F_Text_Grunt5PostBattle": {
+  "en": "Uh-oh, that ruckus somehow opened\\nthe door!",
+  "fr": "Oh oh, ce vacarme a ouvert la porte\\nd'une façon ou d'une autre !"
+ }
+}

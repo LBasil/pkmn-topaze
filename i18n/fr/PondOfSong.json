@@ -1,18 +1,42 @@
 {
+ "PondOfSong_Text_Npc0": {
+  "en": "MARILL sings on the lily pads at\\ndawn.",
+  "fr": "MARILL chante sur les nénuphars à\\nl'aube."
+ },
+ "PondOfSong_Text_Npc1": {
+  "en": "POLIWAG, POLIWHIRL... one needs a\\nKING'S ROCK!",
+  "fr": "TÊTARTE, TARPAUD… l'un d'eux a\\nbesoin d'une ROCHE ROYALE !"
+ },
+ "PondOfSong_Text_Quest0_AfterT": {
+  "en": "The pond is peaceful.",
+  "fr": "L'étang est paisible."
+ },
+ "PondOfSong_Text_Quest0_Ask": {
+  "en": "A NET BALL for my collection, a\\nKING'S ROCK for you.",
+  "fr": "Une FILET BALL pour ma collection,\\nune ROCHE ROYALE pour toi."
+ },
+ "PondOfSong_Text_Quest0_Done": {
+  "en": "Lovely! Take this KING'S ROCK.",
+  "fr": "Adorable ! Prends cette ROCHE\\nROYALE."
+ },
+ "PondOfSong_Text_Quest0_MissT": {
+  "en": "One NET BALL, please.",
+  "fr": "Une FILET BALL, s'il vous plaît."
+ },
  "PondOfSong_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "PondOfSong_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "PondOfSong_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "PondOfSong_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

@@ -1,14 +1,38 @@
 {
+ "SparkGlade_Text_Npc0": {
+  "en": "The air here is full of charge. My\\nhair stands up, even my POKéMON's.",
+  "fr": "L'air ici est plein de charge. Mes\\ncheveux se dressent, même ceux de\\lmon POKéMON."
+ },
+ "SparkGlade_Text_Npc1": {
+  "en": "I touched a VOLTORB. It was a\\nmistake.",
+  "fr": "J'ai touché un VOLTORBE. C'était\\nune erreur."
+ },
+ "SparkGlade_Text_Quest0_AfterT": {
+  "en": "The glade hums happily.",
+  "fr": "La clairière bourdonne joyeusement."
+ },
+ "SparkGlade_Text_Quest0_Ask": {
+  "en": "My coils drain fast. Bring me 2\\nELIXIRS and I will give you a\\pprototype.",
+  "fr": "Mes bobines se vident vite.\\nApporte-moi 2 ÉLIXIRS et je te\\ldonne un prototype."
+ },
+ "SparkGlade_Text_Quest0_Done": {
+  "en": "Perfect! Take this MAGNET.",
+  "fr": "Parfait ! Prends cet AIMANT."
+ },
+ "SparkGlade_Text_Quest0_MissT": {
+  "en": "Two ELIXIRS. Check the grass.",
+  "fr": "Deux ÉLIXIRS. Regarde dans l'herbe."
+ },
  "SparkGlade_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "SparkGlade_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "SparkGlade_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

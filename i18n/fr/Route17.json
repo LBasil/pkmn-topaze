@@ -1,6 +1,150 @@
 {
+ "Route17_Text_BillyDefeat": {
+  "en": "Smoked!",
+  "fr": "Enfumé !"
+ },
+ "Route17_Text_BillyIntro": {
+  "en": "We're BIKERS!\\nWe rule the roads, man!",
+  "fr": "Nous sommes des MOTARDS !\\nOn règne sur les routes, mec !"
+ },
+ "Route17_Text_BillyPostBattle": {
+  "en": "Are you looking for adventure?",
+  "fr": "Tu cherches l'aventure ?"
+ },
+ "Route17_Text_CoreyDefeat": {
+  "en": "Aaaargh!",
+  "fr": "Aaaargh !"
+ },
+ "Route17_Text_CoreyIntro": {
+  "en": "Be a rebel!",
+  "fr": "Sois un rebelle !"
+ },
+ "Route17_Text_CoreyPostBattle": {
+  "en": "Be ready to fight for your beliefs!\\pThe thieves in black? They went\\npast at dawn, in a big hurry.",
+  "fr": "Sois prêt à te battre pour tes\\nconvictions !\\pLes voleurs en noir ? Ils sont\\npassés à l'aube, très pressés."
+ },
+ "Route17_Text_IsaiahDefeat": {
+  "en": "Whoo!",
+  "fr": "Whoo !"
+ },
+ "Route17_Text_IsaiahIntro": {
+  "en": "I'm mighty proud of my bod, kiddo.\\nCome on!",
+  "fr": "Je suis très fier de mon physique.\\nAllez, viens !"
+ },
+ "Route17_Text_IsaiahPostBattle": {
+  "en": "I could belly-bump you outta\\nhere!",
+  "fr": "Je pourrais te dégager d'ici d'un\\ncoup de ventre !"
+ },
+ "Route17_Text_JamalDefeat": {
+  "en": "Whew!\\nGood workout!",
+  "fr": "Ouf !\\nBon entraînement !"
+ },
+ "Route17_Text_JamalIntro": {
+  "en": "I need a little exercise!",
+  "fr": "J'ai besoin d'un peu d'exercice !"
+ },
+ "Route17_Text_JamalPostBattle": {
+  "en": "I'm sure I lost weight there!\\pAsk AMETHIOLITE's WARDEN if you\\nwant weird news. He sees all.",
+  "fr": "Je suis sûr d'avoir perdu du poids\\nlà !\\pDemande au GARDIEN d'AMETHIOLITE si\\ntu veux des nouvelles étranges. Il\\lvoit tout."
+ },
+ "Route17_Text_JaxonDefeat": {
+  "en": "Shoot!",
+  "fr": "Zut !"
+ },
+ "Route17_Text_JaxonIntro": {
+  "en": "Nice BIKE!\\nHow's it handle?",
+  "fr": "Beau VÉLO !\\nComment il se comporte ?"
+ },
+ "Route17_Text_JaxonPostBattle": {
+  "en": "The slope makes it hard to steer.",
+  "fr": "La pente rend la direction\\ndifficile."
+ },
+ "Route17_Text_NikolasDefeat": {
+  "en": "Grounded out!",
+  "fr": "Mis à la terre !"
+ },
+ "Route17_Text_NikolasIntro": {
+  "en": "Let VOLTORB electrify you!",
+  "fr": "Laisse VOLTORBE t'électriser !"
+ },
+ "Route17_Text_NikolasPostBattle": {
+  "en": "I got my VOLTORB at the abandoned\\nPOWER PLANT.",
+  "fr": "J'ai eu mon VOLTORBE à la centrale\\nabandonnée."
+ },
+ "Route17_Text_PressBToStayInPlace": {
+  "en": "TRAINER TIPS\\pPress the B Button to stay in place\\nwhile on a slope.",
+  "fr": "CONSEILS AUX DRESSEURS\\pAppuie sur B pour rester en place\\nsur une pente."
+ },
+ "Route17_Text_Quest5_Ask": {
+  "en": "I collect STONES. Bring me a FIRE\\nSTONE and I will make it worth your\\pwhile.",
+  "fr": "Je collectionne les PIERRES.\\nApporte-moi une PIERRE FEU et j'en\\lvaudrai la peine."
+ },
+ "Route17_Text_Quest5_Done": {
+  "en": "My collection is shining. Thanks,\\nfriend.",
+  "fr": "Ma collection brille. Merci, ami."
+ },
  "Route17_Text_Quest5_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route17_Text_Quest5_Ok": {
+  "en": "Beautiful! Take this for your\\ntrouble.",
+  "fr": "Magnifique ! Prends ça pour ta\\npeine."
+ },
+ "Route17_Text_RaulDefeat": {
+  "en": "Burned out!",
+  "fr": "Grillé !"
+ },
+ "Route17_Text_RaulIntro": {
+  "en": "There's no getting rich quick in\\nbattling kids.",
+  "fr": "On ne s'enrichit pas vite en\\nbattant des gamins."
+ },
+ "Route17_Text_RaulPostBattle": {
+  "en": "You can find good stuff lying\\naround on CYCLING ROAD.\\pThere's good money in picking them\\nup and selling them.",
+  "fr": "On peut trouver de bonnes choses\\nqui traînent sur la ROUTE CYCLABLE.\\pIl y a de l'argent à gagner en les\\nramassant et en les vendant."
+ },
+ "Route17_Text_RouteSign": {
+  "en": "ROUTE 17\\nBOURG QUARTZ - AMETHIOLITE",
+  "fr": "ROUTE 17\\nBOURG QUARTZ - AMETHIOLITE"
+ },
+ "Route17_Text_SameSpeciesGrowDifferentRates": {
+  "en": "TRAINER TIPS\\pAll POKéMON are unique.\\pEven POKéMON of the same species\\nand level grow at different rates.",
+  "fr": "CONSEILS AUX DRESSEURS\\pTous les POKéMON sont uniques.\\pMême les POKéMON de même espèce et\\nde même niveau grandissent à des\\lrythmes différents."
+ },
+ "Route17_Text_VirgilDefeat": {
+  "en": "Crash and burn!",
+  "fr": "Crash et feu !"
+ },
+ "Route17_Text_VirgilIntro": {
+  "en": "You heading to AMETHIOLITE?",
+  "fr": "Tu vas à AMETHIOLITE ?"
+ },
+ "Route17_Text_VirgilPostBattle": {
+  "en": "I love racing downhill!",
+  "fr": "J'adore la course en descente !"
+ },
+ "Route17_Text_WilliamDefeat": {
+  "en": "Are you satisfied?",
+  "fr": "Tu es satisfait ?"
+ },
+ "Route17_Text_WilliamIntro": {
+  "en": "Get lost, kid!\\nI'm bushed!",
+  "fr": "Dégage !\\nJe suis crevé !"
+ },
+ "Route17_Text_WilliamPostBattle": {
+  "en": "I need to catch a few z's!",
+  "fr": "J'ai besoin de dormir un peu !"
+ },
+ "Route17_Text_ZeekDefeat": {
+  "en": "Why, you!",
+  "fr": "Toi, alors !"
+ },
+ "Route17_Text_ZeekIntro": {
+  "en": "I leveled up my POKéMON, but it\\nwon't evolve. Why?",
+  "fr": "J'ai fait monter mon POKéMON de\\nniveau, mais il n'évolue pas.\\pPourquoi ?"
+ },
+ "Route17_Text_ZeekPostBattle": {
+  "en": "Maybe some POKéMON need element\\nSTONES to evolve.",
+  "fr": "Peut-être que certains POKéMON ont\\nbesoin de PIERRES élémentaires pour\\lévoluer."
  }
 }

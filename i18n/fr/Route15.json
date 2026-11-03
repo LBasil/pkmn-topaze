@@ -1,6 +1,202 @@
 {
+ "Route15_Text_AlexDefeat": {
+  "en": "Out of the race.",
+  "fr": "Hors course."
+ },
+ "Route15_Text_AlexIntro": {
+  "en": "I used to race for fun. Now I\\nrace for orders.",
+  "fr": "Avant je faisais la course pour le\\nplaisir. Maintenant je cours pour\\ldes commandes."
+ },
+ "Route15_Text_AlexPostBattle": {
+  "en": "The finish line is past the LEAGUE.\\nThat is what they say.",
+  "fr": "La ligne d'arrivée est après la\\nLIGUE. C'est ce qu'on dit."
+ },
+ "Route15_Text_BeckyDefeat": {
+  "en": "No, wrong!",
+  "fr": "Non, faux !"
+ },
+ "Route15_Text_BeckyIntro": {
+  "en": "You look gentle, so I think I can\\nbeat you.\\pI'll give it a go!",
+  "fr": "Tu as l'air doux, alors je pense\\nque je peux te battre.\\pJe vais essayer !"
+ },
+ "Route15_Text_BeckyPostBattle": {
+  "en": "I'm afraid of BIKERS. They look so\\nugly and mean!",
+  "fr": "J'ai peur des MOTARDS. Ils ont\\nl'air si laids et méchants !"
+ },
+ "Route15_Text_CeliaDefeat": {
+  "en": "I said trade!",
+  "fr": "J'ai dit échange !"
+ },
+ "Route15_Text_CeliaIntro": {
+  "en": "What's cool and happening?\\nTrading POKéMON!",
+  "fr": "Qu'est-ce qui est cool et\\ntendance ? Échanger des POKéMON !"
+ },
+ "Route15_Text_CeliaPostBattle": {
+  "en": "I trade POKéMON with my friends\\nall the time.",
+  "fr": "J'échange tout le temps des POKéMON\\navec mes amis."
+ },
+ "Route15_Text_ChesterDefeat": {
+  "en": "Just as I thought!",
+  "fr": "Comme je le pensais !"
+ },
+ "Route15_Text_ChesterIntro": {
+  "en": "Hmm? My birds are shivering!\\nYou're good, aren't you?",
+  "fr": "Hmm ? Mes oiseaux frissonnent !\\nTu es bon, n'est-ce pas ?"
+ },
+ "Route15_Text_ChesterPostBattle": {
+  "en": "This is so obvious, you should know\\nthis, but…\\pMoves like EARTHQUAKE and FISSURE\\nhave no effect on bird POKéMON.",
+  "fr": "C'est tellement évident que tu\\ndevrais le savoir, mais…\\pDes capacités comme TREMBLEMENT et\\nABÎME n'ont aucun effet sur les\\pPOKéMON oiseaux."
+ },
+ "Route15_Text_EdwinDefeat": {
+  "en": "Ow!\\nThat's tragic!",
+  "fr": "Aïe !\\nC'est tragique !"
+ },
+ "Route15_Text_EdwinIntro": {
+  "en": "When I whistle, I can summon bird\\nPOKéMON.",
+  "fr": "Quand je siffle, je peux appeler\\ndes POKéMON oiseaux."
+ },
+ "Route15_Text_EdwinPostBattle": {
+  "en": "Heading east? Be careful. The sea\\nby the pier glows at night.",
+  "fr": "Tu vas vers l'est ? Fais attention.\\nLa mer près de la jetée brille la\\lnuit."
+ },
+ "Route15_Text_ErnestDefeat": {
+  "en": "...Closed until you win, I guess.",
+  "fr": "…Fermée jusqu'à ce que tu gagnes,\\nje suppose."
+ },
+ "Route15_Text_ErnestIntro": {
+  "en": "Stop. This road is closed for\\nBRANCH business.",
+  "fr": "Stop. Cette route est fermée pour\\naffaires de la SUCCURSALE."
+ },
+ "Route15_Text_ErnestPostBattle": {
+  "en": "Closed means closed. Next time,\\nask before you walk through.",
+  "fr": "Fermé veut dire fermé. La prochaine\\nfois, demande avant de passer."
+ },
+ "Route15_Text_GraceDefeat": {
+  "en": "You looked so cute, too!",
+  "fr": "Tu avais l'air si mignon aussi !"
+ },
+ "Route15_Text_GraceIntro": {
+  "en": "Oh, you're a little cutie!\\nSo like a darling POKéMON!",
+  "fr": "Oh, tu es tout mignon !\\nComme un adorable POKéMON !"
+ },
+ "Route15_Text_GracePostBattle": {
+  "en": "I forgive you.\\nI can take it.\\lI'm a big girl now.",
+  "fr": "Je te pardonne. Je peux encaisser.\\nJe suis une grande fille\\lmaintenant."
+ },
+ "Route15_Text_KindraDefeat": {
+  "en": "Not good enough!",
+  "fr": "Pas assez bon !"
+ },
+ "Route15_Text_KindraIntro": {
+  "en": "I just got some POKéMON in trades.\\nCan I try them out on you?",
+  "fr": "Je viens d'obtenir des POKéMON par\\néchange. Puis-je les essayer sur\\ltoi ?"
+ },
+ "Route15_Text_KindraPostBattle": {
+  "en": "You can't change the nickname of\\nany POKéMON you get in a trade.\\pOnly the Original TRAINER can get\\nthe nickname changed.",
+  "fr": "Tu ne peux pas changer le surnom\\nd'un POKéMON reçu par échange.\\pSeul le DRESSEUR d'Origine peut\\nfaire changer le surnom."
+ },
+ "Route15_Text_MyaDefeat": {
+  "en": "MYA: RON, you have to focus!\\nConcentrate on what you're doing!",
+  "fr": "MYA : RON, tu dois te concentrer !\\nConcentre-toi sur ce que tu fais !"
+ },
+ "Route15_Text_MyaIntro": {
+  "en": "MYA: You're perfect.\\nHelp me train my little brother?",
+  "fr": "MYA : Tu es parfait. Aide-moi à\\nentraîner mon petit frère ?"
+ },
+ "Route15_Text_MyaNotEnoughMons": {
+  "en": "MYA: Do you want to challenge us?\\nYou'll need two POKéMON, though.",
+  "fr": "MYA : Veux-tu nous défier ? Il te\\nfaudra deux POKéMON, cela dit."
+ },
+ "Route15_Text_MyaPostBattle": {
+  "en": "MYA: Okay, we'll turn it up.\\nI'll add to our training menu!",
+  "fr": "MYA : D'accord, on monte d'un cran.\\nJ'ajoute à notre programme\\ld'entraînement !"
+ },
+ "Route15_Text_OliviaDefeat": {
+  "en": "POKéMON isn't about winning or\\nlosing for me.",
+  "fr": "Les POKéMON, ce n'est pas gagner ou\\nperdre pour moi."
+ },
+ "Route15_Text_OliviaIntro": {
+  "en": "I raise POKéMON for protection\\nbecause I live alone.",
+  "fr": "J'élève des POKéMON pour me\\nprotéger car je vis seule."
+ },
+ "Route15_Text_OliviaPostBattle": {
+  "en": "A man in black bought every ROPE\\nin town yesterday. Weird, no?",
+  "fr": "Un homme en noir a acheté toutes\\nles CORDES de la ville hier.\\pBizarre, non ?"
+ },
+ "Route15_Text_ProcheGauthier_After": {
+  "en": "Strength is a habit. Keep training,\\n{PLAYER}.",
+  "fr": "La force est une habitude. Continue\\nde t'entraîner, {PLAYER}."
+ },
+ "Route15_Text_ProcheGauthier_Defeat": {
+  "en": "Haha! THAT is what I was waiting\\nfor!",
+  "fr": "Haha ! C'est CELA que j'attendais !"
+ },
+ "Route15_Text_ProcheGauthier_Early": {
+  "en": "Not yet, {PLAYER}. Finish your\\njourney first, then come and find\\pme.",
+  "fr": "Pas encore, {PLAYER}. Termine\\nd'abord ton voyage, puis viens me\\ltrouver."
+ },
+ "Route15_Text_ProcheGauthier_Intro": {
+  "en": "{PLAYER}! Finally. I have trained\\nevery single day for this. Give me\\peverything!",
+  "fr": "{PLAYER} ! Enfin. Je me suis\\nentraîné tous les jours pour ça.\\pDonne-moi tout ce que tu as !"
+ },
+ "Route15_Text_ProcheGauthier_NoRoom": {
+  "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reparle-moi."
+ },
+ "Route15_Text_ProcheGauthier_Win": {
+  "en": "You earned this. Wear it with\\npride.",
+  "fr": "Tu l'as mérité. Porte-le avec\\nfierté."
+ },
+ "Route15_Text_RQuest_Ask": {
+  "en": "My oldest friend fainted. A single\\nREVIVE would mean everything.",
+  "fr": "Mon plus vieil ami s'est évanoui.\\nUn seul RAPPEL signifierait tout."
+ },
+ "Route15_Text_RQuest_Done": {
+  "en": "He is up. He says thank you.",
+  "fr": "Il est debout. Il dit merci."
+ },
  "Route15_Text_RQuest_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route15_Text_RQuest_Ok": {
+  "en": "You are kind. Take this treasure.",
+  "fr": "Tu es gentil. Prends ce trésor."
+ },
+ "Route15_Text_RonDefeat": {
+  "en": "RON: Oh, no, no…\\nSis, I'm sorry!",
+  "fr": "RON : Oh, non, non…\\nSœurette, pardon !"
+ },
+ "Route15_Text_RonIntro": {
+  "en": "RON: My sister gets scary when we\\nlose.",
+  "fr": "RON : Ma sœur fait peur quand on\\nperd."
+ },
+ "Route15_Text_RonNotEnoughMons": {
+  "en": "RON: Did you want to battle with\\nmy sister and me?\\pYou need two POKéMON, then.",
+  "fr": "RON : Tu voulais te battre avec ma\\nsœur et moi ?\\pIl te faut alors deux POKéMON."
+ },
+ "Route15_Text_RonPostBattle": {
+  "en": "RON: Oh, bleah…\\nI wish I had a nice sister…",
+  "fr": "RON : Oh, bleah… J'aimerais avoir\\nune gentille sœur…"
+ },
+ "Route15_Text_RouteSign": {
+  "en": "ROUTE 15\\nWest to AMETHIOLITE",
+  "fr": "ROUTE 15\\nOuest vers AMETHIOLITE"
+ },
+ "Route15_Text_TimeHint": {
+  "en": "A broken alarm clock rings, though\\nnobody set it. It rings for\\pyesterday.",
+  "fr": "Un réveil cassé sonne, bien que\\npersonne ne l'ait réglé. Il sonne\\lpour hier."
+ },
+ "Route15_Text_YazminDefeat": {
+  "en": "I was too impatient!",
+  "fr": "J'étais trop impatient !"
+ },
+ "Route15_Text_YazminIntro": {
+  "en": "Want to play with my POKéMON?",
+  "fr": "Tu veux jouer avec mes POKéMON ?"
+ },
+ "Route15_Text_YazminPostBattle": {
+  "en": "I'll go train with weaker people.",
+  "fr": "Je vais m'entraîner avec des gens\\nplus faibles."
  }
 }

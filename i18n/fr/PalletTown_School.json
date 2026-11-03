@@ -1,0 +1,58 @@
+{
+ "PalletTown_School_Text_AuraCase": {
+  "en": "The AURA of ten years ago.\\nRecords show every POKéMON's type\\lchanged in a single night.",
+  "fr": "L'AURA d'il y a dix ans. Les\\nregistres montrent que le type de\\lchaque POKéMON a changé en une\\nseule nuit."
+ },
+ "PalletTown_School_Text_GarnetCase": {
+  "en": "A glass case on the science shelf.\\nIt holds the GRENAT, a deep red gem\\lthat glows when POKéMON gather near.",
+  "fr": "Une vitrine sur l'étagère de\\nsciences. Elle contient le GRENAT,\\lune gemme rouge profond qui brille\\nquand des POKéMON s'approchent."
+ },
+ "PalletTown_School_Text_GarnetCaseStrike": {
+  "en": "The glass case is empty. A note is\\nleft behind: POKéMON were never\\lmeant to be owned. - TEAM ONYBRIS",
+  "fr": "La vitrine est vide. Un mot est\\nlaissé : les POKéMON n'ont jamais\\lété faits pour être possédés. -\\nTEAM ONYBRIS"
+ },
+ "PalletTown_School_Text_ReceivedTypeMemo": {
+  "en": "{PLAYER} received the TYPE MEMO!",
+  "fr": "{PLAYER} a reçu le MÉMO DES TYPES !"
+ },
+ "PalletTown_School_Text_SceneRivalAfter": {
+  "en": "{RIVAL}: Tch... lucky.\\pGramps wants us at the LAB, doesn't\\nhe? Race you there!",
+  "fr": "{RIVAL} : Tch… chanceux.\\pPapy veut qu'on aille au LABO,\\nnon ? Je te bats à la course !"
+ },
+ "PalletTown_School_Text_SceneRivalChallenge": {
+  "en": "{RIVAL}: There you are!\\pI took the other POKé BALL Gramps\\nhad, and mine beats yours!\\pLet's see which of us is stronger.\\nCome on, I'll take you on!",
+  "fr": "{RIVAL} : Te voilà !\\pJ'ai pris l'autre POKé BALL que\\nPapy avait, et la mienne bat la\\ltienne !\\pVoyons lequel de nous est le plus\\nfort. Allez, je t'affronte !"
+ },
+ "PalletTown_School_Text_SceneTeacher1": {
+  "en": "TEACHER: {PLAYER}! Thank goodness you\\nare safe.\\pYour MOM called. A first partner, at\\nlast. Good.\\pBut look at that case... They emptied\\nit while the town ran to the RANCH.\\lThe GRENAT is gone.\\pStill, nobody learns anything by\\ncrying over a stone.",
+  "fr": "MAÎTRESSE : {PLAYER} ! Dieu merci tu\\nes sain et sauf.\\pTa MAMAN a appelé. Un premier\\npartenaire, enfin. Bien.\\pMais regarde cette vitrine… Ils\\nl'ont vidée pendant que la ville\\lcourait au RANCH. Le GRENAT a\\ndisparu.\\pPourtant, personne n'apprend rien\\nen pleurant sur une pierre."
+ },
+ "PalletTown_School_Text_SceneTeacherPendant": {
+  "en": "TEACHER: ...That pendant around your\\nneck. May I?\\p...No. Forget it. It is none of my\\nbusiness. Keep it close, {PLAYER}.",
+  "fr": "MAÎTRESSE : …Ce pendentif à ton\\ncou. Puis-je ?\\p…Non. Oublie. Ce ne sont pas mes\\naffaires. Garde-le près de toi,\\l{PLAYER}."
+ },
+ "PalletTown_School_Text_Student": {
+  "en": "My grandpa says FIRE POKéMON were\\nonly FIRE once. Now look at them...\\pHe says the world turned upside down,\\nand all he did was grow old.",
+  "fr": "Mon grand-père dit que les POKéMON\\nFEU n'étaient FEU qu'autrefois.\\pRegarde-les maintenant…\\pIl dit que le monde s'est retourné,\\net que tout ce qu'il a fait, c'est\\lvieillir."
+ },
+ "PalletTown_School_Text_StudentStrike": {
+  "en": "Grandpa says thieves used to hide\\ntheir faces. These ones were proud\\lof it.\\pWe got the day off, but nobody feels\\nlike playing.",
+  "fr": "Papy dit que les voleurs cachaient\\nleur visage. Ceux-là en étaient\\lfiers.\\pOn a congé, mais personne n'a envie\\nde jouer."
+ },
+ "PalletTown_School_Text_Teacher": {
+  "en": "Welcome to the GRENALUX SCHOOL!\\pOur pride is the GRENAT in the science\\ncase, a gem that hums when a POKéMON's\\lAURA is near.\\pLegend says the GRENAT is tied to\\nJIRACHI's wish. Ten years ago, the\\lAURA changed every POKéMON's type...\\pFunny how nobody knows why.",
+  "fr": "Bienvenue à l'ÉCOLE DE GRENALUX !\\pNotre fierté est le GRENAT dans la\\nvitrine de sciences, une gemme qui\\lbourdonne quand l'AURA d'un POKéMON\\nest proche.\\pLa légende dit que le GRENAT est\\nlié au vœu de JIRACHI. Il y a dix\\lans, l'AURA a changé le type de\\nchaque POKéMON…\\pÉtrange que personne ne sache\\npourquoi."
+ },
+ "PalletTown_School_Text_TeacherCourse": {
+  "en": "Since you are here, a short lesson.\\pTen years ago the AURA changed the\\ntypes of many POKéMON. FIRE ones may\\lnow be ICE, and WATER ones STEEL.\\pA new type also appeared: FAIRY.\\nIt beats DRAGON, FIGHTING and DARK,\\lbut POISON and STEEL beat it.\\pNever trust a POKéMON's old type.\\nCheck it in the SUMMARY first!",
+  "fr": "Puisque tu es là, une petite leçon.\\pIl y a dix ans l'AURA a changé les\\ntypes de nombreux POKéMON. Les FEU\\lpeuvent maintenant être GLACE, et\\nles EAU ACIER.\\pUn nouveau type est aussi apparu :\\nFÉE. Il bat DRAGON, COMBAT et\\pTÉNÈBRES, mais POISON et ACIER le\\nbattent.\\pNe te fie jamais à l'ancien type\\nd'un POKéMON. Vérifie-le d'abord\\ldans le RÉSUMÉ !"
+ },
+ "PalletTown_School_Text_TeacherCourseShort": {
+  "en": "Still, a teacher teaches. Types\\nchanged ten years ago, and FAIRY\\lnow beats DRAGON, FIGHTING and DARK.\\pI wrote it down for you.",
+  "fr": "Pourtant, un maître enseigne. Les\\ntypes ont changé il y a dix ans, et\\pFÉE bat maintenant DRAGON, COMBAT\\net TÉNÈBRES.\\pJe te l'ai noté."
+ },
+ "PalletTown_School_Text_TeacherStrike": {
+  "en": "They came while the town ran to the\\nRANCH, all in black. They took the\\lGRENAT before I could reach the alarm.\\pThey said it was for the POKéMON,\\nfor their freedom... What does a\\lgem have to do with freedom?\\pThere is no class today.",
+  "fr": "Ils sont venus pendant que la ville\\ncourait au RANCH, tout en noir. Ils\\lont pris le GRENAT avant que je\\npuisse donner l'alarme.\\pIls ont dit que c'était pour les\\nPOKéMON, pour leur liberté… Quel\\lrapport entre une gemme et la\\nliberté ?\\pIl n'y a pas cours aujourd'hui."
+ }
+}

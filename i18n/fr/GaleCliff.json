@@ -1,18 +1,42 @@
 {
+ "GaleCliff_Text_Npc0": {
+  "en": "FARFETCH'D carries a leek. A rare\\nsight.",
+  "fr": "FARFETCH'D porte un poireau. Un\\nspectacle rare."
+ },
+ "GaleCliff_Text_Npc1": {
+  "en": "The wind has stories. Listen.",
+  "fr": "Le vent a des histoires. Écoute."
+ },
+ "GaleCliff_Text_Quest0_AfterT": {
+  "en": "The wind is kind today.",
+  "fr": "Le vent est doux aujourd'hui."
+ },
+ "GaleCliff_Text_Quest0_Ask": {
+  "en": "Two GREAT BALLs for my grandson.\\nSHARP BEAK for you.",
+  "fr": "Deux SUPER BALLS pour mon\\npetit-fils. Un BEC POINTU pour toi."
+ },
+ "GaleCliff_Text_Quest0_Done": {
+  "en": "Bless you! Take this SHARP BEAK.",
+  "fr": "Que Dieu te bénisse ! Prends ce\\nBEC POINTU."
+ },
+ "GaleCliff_Text_Quest0_MissT": {
+  "en": "Two GREAT BALLs, please.",
+  "fr": "Deux SUPER BALLS, s'il vous plaît."
+ },
  "GaleCliff_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "GaleCliff_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "GaleCliff_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "GaleCliff_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

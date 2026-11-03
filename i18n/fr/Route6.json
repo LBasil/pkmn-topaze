@@ -1,6 +1,122 @@
 {
+ "Route6_Text_ElijahDefeat": {
+  "en": "You're too good!",
+  "fr": "Tu es trop fort !"
+ },
+ "Route6_Text_ElijahIntro": {
+  "en": "I've never seen you around.\\nAre you good?",
+  "fr": "Je ne t'ai jamais vu par ici.\\nTu es bon ?"
+ },
+ "Route6_Text_ElijahPostBattle": {
+  "en": "Are my POKéMON weak?\\nOr, am I just bad?\\lWhich do you think?",
+  "fr": "Mes POKéMON sont-ils faibles ? Ou\\nsuis-je juste mauvais ? Qu'en\\lpenses-tu ?"
+ },
+ "Route6_Text_IsabelleDefeat": {
+  "en": "Things just didn't work…",
+  "fr": "Ça n'a juste pas marché…"
+ },
+ "Route6_Text_IsabelleIntro": {
+  "en": "Me?\\nWell, okay. I'll play!",
+  "fr": "Moi ?\\nEh bien, d'accord. Je joue !"
+ },
+ "Route6_Text_IsabellePostBattle": {
+  "en": "I want to get stronger.\\nWhat's your secret?",
+  "fr": "Je veux devenir plus fort.\\nQuel est ton secret ?"
+ },
+ "Route6_Text_JeffDefeat": {
+  "en": "This stinks…\\nI couldn't beat your challenge…",
+  "fr": "C'est nul…\\nJe n'ai pas pu relever ton défi…"
+ },
+ "Route6_Text_JeffIntro": {
+  "en": "Huh?\\nYou want to talk to me?",
+  "fr": "Hein ?\\nTu veux me parler ?"
+ },
+ "Route6_Text_JeffPostBattle": {
+  "en": "Men in black carried a heavy bag\\nthrough the tunnel at dawn.\\pI hid until they were gone. I\\nshould bring more POKéMON.",
+  "fr": "Des hommes en noir ont porté un\\nlourd sac dans le tunnel à l'aube.\\pJe me suis caché jusqu'à leur\\ndépart. Je devrais prendre plus de\\lPOKéMON."
+ },
+ "Route6_Text_KeigoDefeat": {
+  "en": "No!\\nYou're kidding!",
+  "fr": "Non !\\nTu plaisantes !"
+ },
+ "Route6_Text_KeigoIntro": {
+  "en": "There aren't many bugs out here.\\nThe wind is too strong.",
+  "fr": "Il n'y a pas beaucoup d'insectes\\nici. Le vent est trop fort."
+ },
+ "Route6_Text_KeigoPostBattle": {
+  "en": "I like bugs, so I'm going back to\\nOPANIHRUM FOREST.",
+  "fr": "J'aime les insectes, alors je\\nretourne à la FORÊT d'OPANIHRUM."
+ },
+ "Route6_Text_NancyDefeat": {
+  "en": "Ugh!\\nI hate losing.",
+  "fr": "Pff !\\nJe déteste perdre."
+ },
+ "Route6_Text_NancyIntro": {
+  "en": "Excuse me!\\nThis is a private conversation!",
+  "fr": "Excuse-moi !\\nC'est une conversation privée !"
+ },
+ "Route6_Text_NancyPostBattle": {
+  "en": "Whisper…\\nWhisper…",
+  "fr": "Chuchote…\\nChuchote…"
+ },
+ "Route6_Text_ProcheJordan_After": {
+  "en": "Keep it simple, keep it strong.\\nThat is the way.",
+  "fr": "Reste simple, reste fort.\\nC'est la voie."
+ },
+ "Route6_Text_ProcheJordan_Defeat": {
+  "en": "Solid... and yet you broke through.",
+  "fr": "Solide… et pourtant tu as percé."
+ },
+ "Route6_Text_ProcheJordan_Early": {
+  "en": "Not yet, {PLAYER}. Finish your\\njourney first, then come and find\\pme.",
+  "fr": "Pas encore, {PLAYER}. Termine\\nd'abord ton voyage, puis viens me\\ltrouver."
+ },
+ "Route6_Text_ProcheJordan_Intro": {
+  "en": "Normal is not boring, {PLAYER}.\\nNormal is solid. Prove me wrong!",
+  "fr": "Normal n'est pas ennuyeux, {PLAYER}.\\nNormal est solide. Prouve-moi le\\lcontraire !"
+ },
+ "Route6_Text_ProcheJordan_NoRoom": {
+  "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reparle-moi."
+ },
+ "Route6_Text_ProcheJordan_Win": {
+  "en": "A little gift. Nothing fancy, just\\ngood.",
+  "fr": "Un petit cadeau. Rien de\\nfantaisiste, juste bon."
+ },
+ "Route6_Text_RQuest_Ask": {
+  "en": "My partner is wounded. Two SUPER\\nPOTIONS, if you please.",
+  "fr": "Mon partenaire est blessé. Deux\\nSUPER POTIONS, je vous prie."
+ },
+ "Route6_Text_RQuest_Done": {
+  "en": "He is as good as new.",
+  "fr": "Il est comme neuf."
+ },
  "Route6_Text_RQuest_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route6_Text_RQuest_Ok": {
+  "en": "Excellent. Please accept these.",
+  "fr": "Excellent. Veuillez accepter ceci."
+ },
+ "Route6_Text_RickyDefeat": {
+  "en": "I just can't win!",
+  "fr": "Je n'arrive jamais à gagner !"
+ },
+ "Route6_Text_RickyIntro": {
+  "en": "Who's there?\\nQuit listening in on us!",
+  "fr": "Qui est là ? Arrête d'écouter nos\\nconversations !"
+ },
+ "Route6_Text_RickyPostBattle": {
+  "en": "Whisper…\\nWhisper…",
+  "fr": "Chuchote…\\nChuchote…"
+ },
+ "Route6_Text_TimeHint": {
+  "en": "The signpost shadow points west at\\nnoon. Even the shadows are lost.",
+  "fr": "L'ombre du panneau pointe vers\\nl'ouest à midi. Même les ombres\\lsont perdues."
+ },
+ "Route6_Text_UndergroundPathSign": {
+  "en": "UNDERGROUND PATH\\nTOURMALIA - APATIA",
+  "fr": "CHEMIN SOUTERRAIN\\nTOURMALIA - APATIA"
  }
 }

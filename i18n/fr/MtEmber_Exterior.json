@@ -1,0 +1,106 @@
+{
+ "MtEmber_Exterior_Text_BethDefeat": {
+  "en": "Atchah!\\nYou're shockingly good!",
+  "fr": "Atchoum !\\nTu es étonnamment bon !"
+ },
+ "MtEmber_Exterior_Text_BethIntro": {
+  "en": "Do you know how caves form inside\\nvolcanoes?",
+  "fr": "Sais-tu comment se forment les\\ngrottes dans les volcans ?"
+ },
+ "MtEmber_Exterior_Text_BethPostBattle": {
+  "en": "When lava at the surface of magma\\nhardens, and the magma inside flows\\lout, caverns are left behind.",
+  "fr": "Quand la lave à la surface du magma\\ndurcit, et que le magma à\\ll'intérieur s'écoule, des cavernes\\nrestent."
+ },
+ "MtEmber_Exterior_Text_FirstPasswordGoldeen": {
+  "en": "What, you forgot the password?\\nThere're actually two.\\pThe first one's “GOLDEEN need\\nlog.”\\pAnd the second one is…",
+  "fr": "Quoi, tu as oublié le mot de\\npasse ? Il y en a en fait deux.\\pLe premier est “ POISSIRÈNE a\\nbesoin de bois. ”\\pEt le deuxième est…"
+ },
+ "MtEmber_Exterior_Text_Grunt1Defeat": {
+  "en": "Huh, what?",
+  "fr": "Hein, quoi ?"
+ },
+ "MtEmber_Exterior_Text_Grunt1Intro": {
+  "en": "The boss lost, but nobody told\\nus to leave. Scram!",
+  "fr": "Le boss a perdu, mais personne ne\\nnous a dit de partir. Dégage !"
+ },
+ "MtEmber_Exterior_Text_Grunt1PostBattle": {
+  "en": "Why'd you have to win?",
+  "fr": "Pourquoi as-tu dû gagner ?"
+ },
+ "MtEmber_Exterior_Text_Grunt2Defeat": {
+  "en": "Wait!\\nBut how?",
+  "fr": "Attends !\\nMais comment ?"
+ },
+ "MtEmber_Exterior_Text_Grunt2Intro": {
+  "en": "Our treasure is under that cave.\\nOver my dead RATTATA!",
+  "fr": "Notre trésor est sous cette grotte.\\nIl faudra passer sur le corps de\\lmon RATTATA !"
+ },
+ "MtEmber_Exterior_Text_Grunt2PostBattle": {
+  "en": "Develop amnesia conveniently and\\nforget everything you heard!",
+  "fr": "Fais-toi opportunément amnésique et\\noublie tout ce que tu as entendu !"
+ },
+ "MtEmber_Exterior_Text_JocelynDefeat": {
+  "en": "I think I tried to overdo it…",
+  "fr": "Je crois que j'ai voulu trop en\\nfaire…"
+ },
+ "MtEmber_Exterior_Text_JocelynIntro": {
+  "en": "I've been in training so I can mend\\nmy broken heart…\\pIt toughened me up physically at\\nleast! Hi-yah!",
+  "fr": "Je m'entraîne pour guérir mon cœur\\nbrisé…\\pÇa m'a au moins endurci\\nphysiquement ! Hi-yah !"
+ },
+ "MtEmber_Exterior_Text_JocelynPostBattle": {
+  "en": "The way you battle, it reminds me\\nof the guy who dumped me…",
+  "fr": "Ta façon de combattre me rappelle\\nle type qui m'a larguée…"
+ },
+ "MtEmber_Exterior_Text_LoganDefeat": {
+  "en": "Whew… That was hot!\\nSweat's erupting from me!",
+  "fr": "Ouf… Qu'est-ce qu'il faisait\\nchaud ! La sueur jaillit de moi !"
+ },
+ "MtEmber_Exterior_Text_LoganIntro": {
+  "en": "An active volcano is one that's\\nerupting, or about to.",
+  "fr": "Un volcan actif est un volcan qui\\nentre en éruption, ou va le faire."
+ },
+ "MtEmber_Exterior_Text_LoganPostBattle": {
+  "en": "They say there're over 1,500\\nactive volcanoes in the world.\\pJust thinking about them makes me\\nfeel all hot and gooey inside!",
+  "fr": "On dit qu'il y a plus de 1 500\\nvolcans actifs dans le monde.\\pRien que d'y penser, je suis tout\\nchaud et tout mou à l'intérieur !"
+ },
+ "MtEmber_Exterior_Text_PunchedThroughAtLast": {
+  "en": "Whew, punched through at last.\\nLet's go treasure hunting!",
+  "fr": "Ouf, on a enfin percé.\\nAllons chasser le trésor !"
+ },
+ "MtEmber_Exterior_Text_SnoopsBeenListeningIn": {
+  "en": "Hey!\\nThis snoop's been listening in!",
+  "fr": "Hé !\\nCe fouineur écoutait !"
+ },
+ "MtEmber_Exterior_Text_WellRegroupDontStepInsideThere": {
+  "en": "What a setback…\\nWe'll have to regroup.\\pYou! Don't even think about taking\\na step inside here!\\pIf you know what's good for you,\\ndon't even think about this!",
+  "fr": "Quel revers…\\nIl faut nous regrouper.\\pToi ! Ne pense même pas à faire un\\npas là-dedans !\\pSi tu tiens à toi, n'y pense même\\npas !"
+ },
+ "MtEmber_Exterior_Text_WellTryDiggingHere": {
+  "en": "…I'm telling you, the boss said it\\nagain: our job here is for later.\\pNobody goes near the ruby cave\\nuntil the signal comes.",
+  "fr": "…Je te le dis, le boss l'a redit :\\nnotre travail ici, c'est pour plus\\ltard.\\pPersonne n'approche de la grotte\\nrubis avant le signal."
+ },
+ "MtEmber_Exterior_Text_WhatsPasswordAgain": {
+  "en": "Any treasure we find, we haul back\\nto the WAREHOUSE, understood?\\p…Oh, and what're the passwords?\\nAt the ONYBRIS WAREHOUSE, I mean.",
+  "fr": "Tout trésor trouvé, on le ramène à\\nl'ENTREPÔT, compris ?\\p…Ah, et c'est quoi les mots de\\npasse ? De l'ENTREPÔT d'ONYBRIS, je\\lveux dire."
+ },
+ "MtEmber_Exterior_Text_YoureInTheWayGetLost": {
+  "en": "Yeah, yeah, I know. Later.\\pWe keep watch until the order\\ncomes. Not a minute before.",
+  "fr": "Oui, oui, je sais. Plus tard.\\pOn monte la garde jusqu'à l'ordre.\\nPas une minute avant."
+ },
+ "Text_ExplosionDeclined": {
+  "en": "Yeah, you're right.\\nIt is too terrifying.",
+  "fr": "Oui, tu as raison.\\nC'est trop terrifiant."
+ },
+ "Text_ExplosionTaught": {
+  "en": "Using EXPLOSION while on this\\nvolcano…\\pWhat a terrifying thrill!",
+  "fr": "Utiliser EXPLOSION sur ce volcan…\\pQuelle terrifiante sensation !"
+ },
+ "Text_ExplosionTeach": {
+  "en": "Can you imagine?\\nIf this volcano were to erupt?\\pThe explosion would be the end of\\nus. How terrifying is that?\\pWhile we're terrified, would you\\nlike me to teach EXPLOSION?",
+  "fr": "Tu imagines ? Si ce volcan entrait\\nen éruption ?\\pL'explosion serait notre fin.\\nQuelle horreur, non ?\\pPendant qu'on est terrifiés,\\nveux-tu que je t'apprenne\\lEXPLOSION ?"
+ },
+ "Text_ExplosionWhichMon": {
+  "en": "You're terribly brave!\\pWhich POKéMON should I teach\\nEXPLOSION?",
+  "fr": "Tu es terriblement courageux !\\pÀ quel POKéMON dois-je enseigner\\nEXPLOSION ?"
+ }
+}

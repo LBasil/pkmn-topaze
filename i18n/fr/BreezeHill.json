@@ -1,18 +1,18 @@
 {
  "BreezeHill_Text_Npc0": {
-  "fr": "TARSAL est timide. Sois patient et\\nchanceux.",
-  "en": "RALTS is shy. Be patient and be\\nlucky."
+  "en": "RALTS is shy. Be patient and be\\nlucky.",
+  "fr": "TARSAL est timide. Sois patient et\\nchanceux."
  },
  "BreezeHill_Text_Npc1": {
-  "fr": "Le vent d'ici attire les petits\\nPOKéMON.",
-  "en": "The wind here carries every early\\nPOKéMON to you."
+  "en": "The wind here carries every early\\nPOKéMON to you.",
+  "fr": "Le vent d'ici attire les petits\\nPOKéMON."
  },
  "BreezeHill_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "BreezeHill_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

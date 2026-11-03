@@ -1,0 +1,66 @@
+{
+ "PokemonMansion_1F_Text_BraydonDefeat": {
+  "en": "Whew!\\nOverwhelming!",
+  "fr": "Ouf !\\nÉcrasant !"
+ },
+ "PokemonMansion_1F_Text_BraydonIntro": {
+  "en": "My mentor designed this plant.",
+  "fr": "Mon mentor a conçu cette centrale."
+ },
+ "PokemonMansion_1F_Text_BraydonPostBattle": {
+  "en": "Looking for the TOPAZ? Take the\\ngrated walkway on the east side.",
+  "fr": "Tu cherches la TOPAZE ? Prends la\\npasserelle grillagée côté est."
+ },
+ "PokemonMansion_1F_Text_MewGaveBirthToMewtwo": {
+  "en": "Log: Feb. 6\\nBank 3 is overloaded again.\\pThe cable gallery below is sealed.\\nThe key stays down there.",
+  "fr": "Journal : 6 fév.\\nLe banc 3 est de nouveau surchargé.\\pLa galerie de câbles en dessous est\\nscellée. La clé reste en bas."
+ },
+ "PokemonMansion_1F_Text_SimonDefeat": {
+  "en": "Ayah!",
+  "fr": "Ayah !"
+ },
+ "PokemonMansion_1F_Text_SimonIntro": {
+  "en": "This place is, like, huge!",
+  "fr": "Cet endroit est, genre, énorme !"
+ },
+ "PokemonMansion_1F_Text_SimonPostBattle": {
+  "en": "I wonder where my partner went.",
+  "fr": "Je me demande où est passé mon\\npartenaire."
+ },
+ "PokemonMansion_3F_Text_ObtainedTopaz": {
+  "en": "{PLAYER} obtained the TOPAZ!",
+  "fr": "{PLAYER} a obtenu la TOPAZE !"
+ },
+ "PokemonMansion_3F_Text_Onybris4Defeat": {
+  "en": "I should have gone fishing…",
+  "fr": "J'aurais dû aller pêcher…"
+ },
+ "PokemonMansion_3F_Text_Onybris4Intro": {
+  "en": "Last stop, kid! Hold it there!",
+  "fr": "Dernier arrêt ! Ne bouge\\nplus !"
+ },
+ "PokemonMansion_3F_Text_Onybris4Post": {
+  "en": "The TOPAZ is on the pedestal.\\nSELENE guards it. Good luck.",
+  "fr": "La TOPAZE est sur le piédestal.\\nSELENE la garde. Bonne chance."
+ },
+ "PokemonMansion_3F_Text_SeleneDefeat": {
+  "en": "SELENE: Tch… Stubborn brat.",
+  "fr": "SELENE : Tch… Sale gosse têtu."
+ },
+ "PokemonMansion_3F_Text_SeleneIntro": {
+  "en": "SELENE: You again. Third time now.\\pThe MASTER wants this TOPAZ. Its\\nheat will wake the SEAFOAM volcano.\\pStand aside, or burn with it!",
+  "fr": "SELENE : Toi encore. Troisième\\nfois.\\pLe MAÎTRE veut cette TOPAZE. Sa\\nchaleur réveillera le volcan\\lSEAFOAM.\\pÉcarte-toi, ou brûle avec elle !"
+ },
+ "PokemonMansion_3F_Text_SelenePost": {
+  "en": "SELENE: Keep your pretty rock.\\pThe eruption on the sea road? Our\\ndoing. The sea is a wall for you.\\pThe MASTER waits inside the\\nvolcano. Come, if you dare.",
+  "fr": "SELENE : Garde ta jolie pierre.\\pL'éruption sur la route maritime ?\\nNotre œuvre. La mer est un mur pour\\ltoi.\\pLe MAÎTRE attend dans le volcan.\\nViens, si tu l'oses."
+ },
+ "PokemonMansion_3F_Text_SeleneStops": {
+  "en": "SELENE: Hands off the pedestal!\\nYou do not walk past ME, brat!",
+  "fr": "SELENE : Pas touche au piédestal !\\nTu ne passes pas devant MOI !"
+ },
+ "PokemonMansion_3F_Text_TopazPedestal": {
+  "en": "A golden crystal hums on the\\npedestal. The real TOPAZ!",
+  "fr": "Un cristal doré bourdonne sur le\\npiédestal. La vraie TOPAZE !"
+ }
+}

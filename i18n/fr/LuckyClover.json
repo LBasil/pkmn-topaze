@@ -1,18 +1,42 @@
 {
+ "LuckyClover_Text_Npc0": {
+  "en": "SKITTY loves to chase its own tail.",
+  "fr": "SKITTY adore courir après sa propre\\nqueue."
+ },
+ "LuckyClover_Text_Npc1": {
+  "en": "MEOWTH and SENTRET never run from a\\nfight.",
+  "fr": "MIAOUSS et FOUINETTE ne fuient\\njamais un combat."
+ },
+ "LuckyClover_Text_Quest0_AfterT": {
+  "en": "What a lovely day.",
+  "fr": "Quelle belle journée."
+ },
+ "LuckyClover_Text_Quest0_Ask": {
+  "en": "Three POKé BALLs for my team, and a\\nSILK SCARF for you!",
+  "fr": "Trois POKé BALLS pour mon équipe,\\net un FOULARD SOIE pour toi !"
+ },
+ "LuckyClover_Text_Quest0_Done": {
+  "en": "Thanks! Take this SILK SCARF.",
+  "fr": "Merci ! Prends ce FOULARD SOIE."
+ },
+ "LuckyClover_Text_Quest0_MissT": {
+  "en": "Three POKé BALLs, please.",
+  "fr": "Trois POKé BALLS, s'il vous plaît."
+ },
  "LuckyClover_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "LuckyClover_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "LuckyClover_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "LuckyClover_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

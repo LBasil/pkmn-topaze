@@ -1,0 +1,106 @@
+{
+ "VermilionCity_Gym_Text_BailyDefeat": {
+  "en": "Fried!",
+  "fr": "Frit !"
+ },
+ "VermilionCity_Gym_Text_BailyIntro": {
+  "en": "I'm a lightweight, but I'm good\\nat riding the wind!\\pThat's why I joined this GYM.",
+  "fr": "Je suis léger, mais je suis doué\\npour chevaucher le vent !\\pC'est pour ça que j'ai rejoint\\ncette ARÈNE."
+ },
+ "VermilionCity_Gym_Text_BailyPostBattle": {
+  "en": "Okay, I'll talk!\\pHERA trains in the thinnest air\\nabove the harbor, at sunset.",
+  "fr": "D'accord, je parle !\\pHERA s'entraîne dans l'air le plus\\nmince au-dessus du port, au coucher\\ldu soleil."
+ },
+ "VermilionCity_Gym_Text_DwayneDefeat": {
+  "en": "Wow!\\nSurprised me!",
+  "fr": "Wow !\\nTu m'as surpris !"
+ },
+ "VermilionCity_Gym_Text_DwayneIntro": {
+  "en": "This is no place for kids!\\nNot even if you're good!",
+  "fr": "Ce n'est pas un endroit pour les\\nenfants ! Même si tu es bon !"
+ },
+ "VermilionCity_Gym_Text_DwaynePostBattle": {
+  "en": "HERA built this GYM like a\\nsky temple.\\pEveryone here learned to fight\\nwith the wind at their back.",
+  "fr": "HERA a construit cette ARÈNE comme\\nun temple du ciel.\\pTout le monde ici a appris à se\\nbattre avec le vent dans le dos."
+ },
+ "VermilionCity_Gym_Text_ExplainTM34": {
+  "en": "TM02 contains DRAGON CLAW.\\pA savage slash that suits any\\nPOKéMON with real talons.",
+  "fr": "La CT02 contient GRIFFE-DRAGON.\\pUn coup sauvage qui convient à tout\\nPOKéMON avec de vraies serres."
+ },
+ "VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis": {
+  "en": "The APATITE BADGE lets your\\nPOKéMON use FLY out of battle, if\\pyou carry the HM.\\pIt also makes your POKéMON\\nfaster.\\pTake this too!",
+  "fr": "Le BADGE APATITE permet à tes\\nPOKéMON d'utiliser VOL hors combat,\\lsi tu as la CS.\\pIl rend aussi tes POKéMON plus\\nrapides.\\pPrends ceci aussi !"
+ },
+ "VermilionCity_Gym_Text_GymClosed": {
+  "en": "Sorry, champ. The GYM is closed.\\pHERA and MAJOR BOB went to the\\nS.S. ANNE to guard her APATITE.\\pThieves in black are after it!\\nGo to the harbor and help them!",
+  "fr": "Désolé, l'ARÈNE est fermée.\\pHERA et le MAJOR BOB sont allés sur\\nle S.S. ANNE garder son APATITE.\\pDes voleurs en noir la convoitent !\\nVa au port et aide-les !"
+ },
+ "VermilionCity_Gym_Text_GymGuyAdvice": {
+  "en": "Yo, champ!\\pHERA uses DRAGON and FAIRY\\nPOKéMON. ICE hurts her DRAGONS,\\pand POISON or STEEL hurt her\\nFAIRIES.\\pBut DRAGON moves do nothing to\\nFAIRY POKéMON, and FAIRY moves\\pbeat DRAGONS.",
+  "fr": "Yo !\\pHERA utilise des POKéMON DRAGON et\\nFÉE. GLACE blesse ses DRAGONS, et\\lPOISON ou ACIER blessent ses FÉES.\\pMais les capacités DRAGON n'ont\\naucun effet sur les POKéMON FÉE, et\\lles capacités FÉE battent les\\nDRAGONS."
+ },
+ "VermilionCity_Gym_Text_GymGuyPostVictory": {
+  "en": "Whew!\\nThat match was windswept!",
+  "fr": "Ouf !\\nCe match était balayé par le vent !"
+ },
+ "VermilionCity_Gym_Text_GymStatue": {
+  "en": "APATIA POKéMON GYM\\nLEADER: HERA\\pWINNING TRAINERS:\\n{RIVAL}",
+  "fr": "ARÈNE POKéMON D'APATIA\\nCHAMPIONNE : HERA\\pDRESSEURS VAINQUEURS :\\n{RIVAL}"
+ },
+ "VermilionCity_Gym_Text_GymStatuePlayerWon": {
+  "en": "APATIA POKéMON GYM\\nLEADER: HERA\\pWINNING TRAINERS:\\n{RIVAL}, {PLAYER}",
+  "fr": "ARÈNE POKéMON D'APATIA\\nCHAMPIONNE : HERA\\pDRESSEURS VAINQUEURS :\\n{RIVAL}, {PLAYER}"
+ },
+ "VermilionCity_Gym_Text_LtSurgeDefeat": {
+  "en": "Hah! You flew right through my\\nguard.\\pI respect that. Take the APATITE\\nBADGE!",
+  "fr": "Hah ! Tu as traversé ma garde en\\nvolant.\\pJe respecte ça. Prends le BADGE\\nAPATITE !"
+ },
+ "VermilionCity_Gym_Text_LtSurgeIntro": {
+  "en": "I am HERA, LEADER of APATIA GYM,\\nup here where the air is thin.\\pThey say a FAIRY QUEEN once ruled\\nthese peaks, and that dragons\\pbowed to her. My DRAGON and FAIRY\\nPOKéMON keep the tale alive.\\pShow me you can handle the\\naltitude. Hit me with everything\\pyou've got!",
+  "fr": "Je suis HERA, CHAMPIONNE de\\nl'ARÈNE d'APATIA, ici-haut où l'air\\lest mince.\\pOn dit qu'une REINE DES FÉES\\nrégnait jadis sur ces cimes, et que\\lles dragons s'inclinaient devant\\nelle. Mes POKéMON DRAGON et FÉE\\lfont vivre la légende.\\pMontre-moi que tu supportes\\nl'altitude. Frappe-moi avec tout ce\\lque tu as !"
+ },
+ "VermilionCity_Gym_Text_LtSurgePostBattle": {
+  "en": "The CAPTAIN called me: you saved\\nmy APATITE from those thieves.\\pTake my badge as thanks. Now keep\\nclimbing, kid. Cut the tree east\\nof TOURMALIA: ROCK TUNNEL leads\\lto SPINELLIA.",
+  "fr": "Le CAPITAINE m'a appelée : tu as\\nsauvé mon APATITE de ces voleurs.\\pPrends mon badge en remerciement.\\nMaintenant continue de grimper.\\lCoupe l'arbre à l'est de\\nTOURMALIA : le TUNNEL ROCHE mène à\\lSPINELLIA."
+ },
+ "VermilionCity_Gym_Text_LtSurgeRebel1": {
+  "en": "HERA: I fly where the wind says. And\\nthe wind says you rule everything\\lnow.\\pI will test that wind myself!",
+  "fr": "HERA : Je vole où le vent me mène.\\nEt le vent dit que tu règnes sur\\ltout maintenant.\\pJe mettrai ce vent à l'épreuve\\nmoi-même !"
+ },
+ "VermilionCity_Gym_Text_LtSurgeRebel2": {
+  "en": "Grounded...\\nthe sky respects you.",
+  "fr": "Cloué au sol…\\nle ciel te respecte."
+ },
+ "VermilionCity_Gym_Text_LtSurgeRebel3": {
+  "en": "HERA: The sky is wide enough for\\nthe two of us. Take this and soar.",
+  "fr": "HERA : Le ciel est assez grand pour\\nnous deux. Prends ça et envole-toi."
+ },
+ "VermilionCity_Gym_Text_LtSurgeVisit1": {
+  "en": "HERA: A wish let go. You've got guts,\\nkid. Take this spark.",
+  "fr": "HERA : Un vœu relâché. Tu as du\\ncran. Prends cette étincelle."
+ },
+ "VermilionCity_Gym_Text_LtSurgeVisit2": {
+  "en": "HERA: No balls, no cages. A real\\nsoldier needs rest. Take these.",
+  "fr": "HERA : Pas de balls, pas de cages.\\nUn vrai soldat a besoin de repos.\\pPrends ça."
+ },
+ "VermilionCity_Gym_Text_MakeRoomInYourBag": {
+  "en": "Yo, kid, make room in your BAG!",
+  "fr": "Hé, fais de la place dans ton SAC !"
+ },
+ "VermilionCity_Gym_Text_ReceivedTM34FromLtSurge": {
+  "en": "{PLAYER} received TM02\\nfrom HERA.",
+  "fr": "{PLAYER} a reçu la CT02\\nd'HERA."
+ },
+ "VermilionCity_Gym_Text_TuckerDefeat": {
+  "en": "Stop!\\nYou're very good!",
+  "fr": "Stop !\\nTu es très bon !"
+ },
+ "VermilionCity_Gym_Text_TuckerIntro": {
+  "en": "I trained on the peaks with HERA.\\nShe was my strict teacher.\\pShe was a hard taskmaster.",
+  "fr": "Je me suis entraînée sur les cimes\\navec HERA. C'était ma professeure\\lstricte.\\pC'était une maîtresse exigeante."
+ },
+ "VermilionCity_Gym_Text_TuckerPostBattle": {
+  "en": "Winds howl through this place.\\pHERA says a trainer who can't\\nstay calm in a storm can't fly.",
+  "fr": "Les vents hurlent dans cet endroit.\\pHERA dit qu'un dresseur qui ne\\nreste pas calme dans la tempête ne\\lpeut pas voler."
+ }
+}

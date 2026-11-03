@@ -1,0 +1,50 @@
+{
+ "FiveIsland_ResortGorgeous_House_Text_ButlerBagAppearsToBeFull": {
+  "en": "Butler: Your BAG appears to be\\nunfortunately full.",
+  "fr": "Majordome : Ton SAC semble\\nmalheureusement plein."
+ },
+ "FiveIsland_ResortGorgeous_House_Text_ButlerIShallDoAsYouBid": {
+  "en": "Butler: I shall do as you bid,\\nmy lady.",
+  "fr": "Majordome : Je ferai selon vos\\ndésirs, madame."
+ },
+ "FiveIsland_ResortGorgeous_House_Text_ButlerPleaseAcceptThisAsHerThanks": {
+  "en": "Butler: I sincerely thank you for\\npleasing Lady SELPHY.\\pPlease accept this as her thanks…",
+  "fr": "Majordome : Je te remercie\\nsincèrement d'avoir fait plaisir à\\lMlle SELPHY.\\pJe te prie d'accepter ceci en\\nremerciement…"
+ },
+ "FiveIsland_ResortGorgeous_House_Text_ButlerYesMyLady": {
+  "en": "Butler: Yes, my lady.",
+  "fr": "Majordome : Oui, madame."
+ },
+ "FiveIsland_ResortGorgeous_House_Text_LadySelphySmileHasBrillianceOfSun": {
+  "en": "Butler: The smile of Lady SELPHY\\nhas the brilliance of the sun.\\pPlease, I beg you to bring joy\\nto Lady SELPHY.",
+  "fr": "Majordome : Le sourire de Mlle\\nSELPHY a l'éclat du soleil.\\pJe t'en prie, apporte de la joie à\\nMlle SELPHY."
+ },
+ "FiveIsland_ResortGorgeous_House_Text_MonYouCaughtForMeThankYou": {
+  "en": "SELPHY: Oh, hello, there.\\pOh, my gracious. That must be the\\n{STR_VAR_1} you caught for me.\\pGiggle…\\nI see a resemblance to you.\\pThank you so kindly.\\p… …  … …  … …\\nIs something the matter?\\pYou may leave.\\p… …  … …  … …\\nOh, fine. I understand now.\\pSEBASTIAN!\\nI need you here this instant!",
+  "fr": "SELPHY : Oh, bonjour.\\pOh, mon Dieu. Ce doit être le\\n{STR_VAR_1} que tu as capturé pour moi.\\pHihi…\\nJe vois une ressemblance avec toi.\\pMerci infiniment.\\p… … … … … …\\nQuelque chose ne va pas ?\\pTu peux partir.\\p… … … … … …\\nOh, très bien. Je comprends.\\pSEBASTIAN ! J'ai besoin de toi ici,\\ntout de suite !"
+ },
+ "FiveIsland_ResortGorgeous_House_Text_OhHowDisappointing": {
+  "en": "Oh…\\nHow disappointing.",
+  "fr": "Oh…\\nQuelle déception."
+ },
+ "FiveIsland_ResortGorgeous_House_Text_OhImTiredOfWaiting": {
+  "en": "SELPHY: Oh, I'm tired of this.\\nI'm tired of waiting for you.\\pI'll forgive you this time, but\\nplease don't fail me next time.",
+  "fr": "SELPHY : Oh, j'en ai assez.\\nJ'en ai assez de t'attendre.\\pJe te pardonne cette fois, mais\\nne me déçois pas la prochaine fois."
+ },
+ "FiveIsland_ResortGorgeous_House_Text_PleaseHearMyWish": {
+  "en": "SELPHY: Oh?\\nDo I know you from somewhere?\\pOh, but that doesn't matter.\\pI am exquisitely bored.\\nPlease, hear my wish.",
+  "fr": "SELPHY : Oh ?\\nEst-ce que je te connais ?\\pOh, mais peu importe.\\pJe m'ennuie exquisément.\\nS'il te plaît, écoute mon souhait."
+ },
+ "FiveIsland_ResortGorgeous_House_Text_SelphyGiveTokenOfAppreciation": {
+  "en": "SELPHY: See to it that this person\\nis given a token of appreciation.",
+  "fr": "SELPHY : Veille à ce que cette\\npersonne reçoive un signe de\\lgratitude."
+ },
+ "FiveIsland_ResortGorgeous_House_Text_SelphyWishYouBestOfLuck": {
+  "en": "SELPHY: I wish you the best of\\nluck.",
+  "fr": "SELPHY : Je te souhaite bonne\\nchance."
+ },
+ "FiveIsland_ResortGorgeous_House_Text_WishToSeeMonPlease": {
+  "en": "I wish to see a POKéMON.\\nA darling {STR_VAR_1}.\\pI want to see one right away.\\nPlease, make my wish come true.",
+  "fr": "Je souhaite voir un POKéMON.\\nUn adorable {STR_VAR_1}.\\pJe veux en voir un tout de suite.\\nS'il te plaît, exauce mon souhait."
+ }
+}

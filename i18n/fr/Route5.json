@@ -1,6 +1,22 @@
 {
+ "Route5_Text_Quest2_Ask": {
+  "en": "My POKéMON fainted, and I lost my\\nway. Could you spare 2 REVIVES?",
+  "fr": "Mon POKéMON est K.O., et j'ai perdu\\nmon chemin. Tu pourrais m'offrir 2\\lRAPPELS ?"
+ },
+ "Route5_Text_Quest2_Done": {
+  "en": "Back on my feet. Thanks to you.",
+  "fr": "Me voilà sur pied. Grâce à toi."
+ },
  "Route5_Text_Quest2_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route5_Text_Quest2_Ok": {
+  "en": "Wonderful! A token of my gratitude.",
+  "fr": "Merveilleux ! Un gage de ma\\ngratitude."
+ },
+ "Route5_Text_UndergroundPathSign": {
+  "en": "UNDERGROUND PATH\\nTOURMALIA - APATIA",
+  "fr": "CHEMIN SOUTERRAIN\\nTOURMALIA - APATIA"
  }
 }

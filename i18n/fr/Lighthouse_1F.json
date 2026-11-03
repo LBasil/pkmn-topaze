@@ -1,10 +1,14 @@
 {
+ "Lighthouse_1F_Text_Npc0": {
+  "en": "The tide here has not turned in\\nyears. The lamp keeps waiting for a\\pship.",
+  "fr": "La marée n'a pas tourné ici depuis\\ndes années. La lampe attend\\ltoujours un navire."
+ },
  "Lighthouse_1F_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "Lighthouse_1F_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

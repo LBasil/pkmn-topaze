@@ -1,0 +1,98 @@
+{
+ "RockTunnel_1F_Text_ArianaDefeat": {
+  "en": "You play hard!",
+  "fr": "Tu joues dur !"
+ },
+ "RockTunnel_1F_Text_ArianaIntro": {
+  "en": "You have POKéMON!\\nLet's start!",
+  "fr": "Tu as des POKéMON !\\nCommençons !"
+ },
+ "RockTunnel_1F_Text_ArianaPostBattle": {
+  "en": "Whew!\\nI'm all sweaty now.",
+  "fr": "Ouf !\\nMe voilà tout en sueur."
+ },
+ "RockTunnel_1F_Text_AshtonDefeat": {
+  "en": "Game over!",
+  "fr": "Game over !"
+ },
+ "RockTunnel_1F_Text_AshtonIntro": {
+  "en": "POKéMON fight!\\nReady, go!",
+  "fr": "Combat POKéMON !\\nPrêt, partez !"
+ },
+ "RockTunnel_1F_Text_AshtonPostBattle": {
+  "en": "Oh well, I'll get a ZUBAT as I go!",
+  "fr": "Tant pis, j'aurai un NOSFERAPTI en\\nchemin !"
+ },
+ "RockTunnel_1F_Text_DanaDefeat": {
+  "en": "I'm out of POKéMON!",
+  "fr": "Je n'ai plus de POKéMON !"
+ },
+ "RockTunnel_1F_Text_DanaIntro": {
+  "en": "I came this far looking for wild\\nPOKéMON.",
+  "fr": "Je suis venu jusqu'ici chercher des\\nPOKéMON sauvages."
+ },
+ "RockTunnel_1F_Text_DanaPostBattle": {
+  "en": "You looked cute and harmless.\\nWas I ever wrong!",
+  "fr": "Tu avais l'air mignon et\\ninoffensif. Quelle erreur !"
+ },
+ "RockTunnel_1F_Text_LeahDefeat": {
+  "en": "It was too dark…",
+  "fr": "C'était trop sombre…"
+ },
+ "RockTunnel_1F_Text_LeahIntro": {
+  "en": "Eek!\\pDon't try anything funny in the\\ndark!",
+  "fr": "Eek !\\pNe tente rien de louche dans le\\nnoir !"
+ },
+ "RockTunnel_1F_Text_LeahPostBattle": {
+  "en": "I saw a MACHOP in this tunnel.",
+  "fr": "J'ai vu un MACHOC dans ce tunnel."
+ },
+ "RockTunnel_1F_Text_LennyDefeat": {
+  "en": "Doh!\\nYou win!",
+  "fr": "Zut !\\nTu gagnes !"
+ },
+ "RockTunnel_1F_Text_LennyIntro": {
+  "en": "This tunnel goes a long way, kid!",
+  "fr": "Ce tunnel est long !"
+ },
+ "RockTunnel_1F_Text_LennyPostBattle": {
+  "en": "Watch for ONIX.\\nThey appear only occasionally.\\pHigh-level ones can put the\\nsqueeze on you!",
+  "fr": "Fais attention aux ONIX. Ils\\nn'apparaissent\\lqu'occasionnellement.\\pLes plus puissants peuvent te\\nserrer la vis !"
+ },
+ "RockTunnel_1F_Text_LucasDefeat": {
+  "en": "I give!",
+  "fr": "Je me rends !"
+ },
+ "RockTunnel_1F_Text_LucasIntro": {
+  "en": "Outsiders like you need to show me\\nsome respect!",
+  "fr": "Les étrangers comme toi doivent me\\nmontrer du respect !"
+ },
+ "RockTunnel_1F_Text_LucasPostBattle": {
+  "en": "You're talented enough to hike!",
+  "fr": "Tu as assez de talent pour\\nrandonner !"
+ },
+ "RockTunnel_1F_Text_MonMachop": {
+  "en": "MACHOP: Gooh!\\nIt is pushing a boulder around.",
+  "fr": "MACHOC : Gooh !\\nIl pousse un rocher."
+ },
+ "RockTunnel_1F_Text_MonNidorino": {
+  "en": "NIDORINO: Gyuu!\\nIt sniffs around for ore.",
+  "fr": "NIDORINO : Gyuu ! Il renifle à la\\nrecherche de minerai."
+ },
+ "RockTunnel_1F_Text_OliverDefeat": {
+  "en": "Ease up!\\nWhat am I doing?\\lWhich way is out?",
+  "fr": "Doucement ! Qu'est-ce que je fais ?\\nPar où on sort ?"
+ },
+ "RockTunnel_1F_Text_OliverIntro": {
+  "en": "Hmm. The map says I should be\\nout by now. I run this project!\\pFine, a battle then. Maybe the\\nexit is behind you.",
+  "fr": "Hmm. La carte dit que je devrais\\nêtre sorti. C'est moi qui dirige ce\\lprojet !\\pBon, un combat alors. La sortie est\\npeut-être derrière toi."
+ },
+ "RockTunnel_1F_Text_OliverPostBattle": {
+  "en": "That sleeping POKéMON on ROUTE 12\\nforced me to take this detour.\\pTell the team the schedule is\\nfine. Mostly.",
+  "fr": "Ce POKéMON endormi sur la ROUTE 12\\nm'a forcé à faire ce détour.\\pDis à l'équipe que le planning est\\nbon. En gros."
+ },
+ "RockTunnel_1F_Text_RouteSign": {
+  "en": "ROCK TUNNEL\\nTOURMALIA - SPINELLIA",
+  "fr": "TUNNEL ROCHE\\nTOURMALIA - SPINELLIA"
+ }
+}

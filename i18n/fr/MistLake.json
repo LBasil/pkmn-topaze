@@ -1,10 +1,18 @@
 {
+ "MistLake_Text_Npc0": {
+  "en": "The fog hides the best fishing\\nspots.",
+  "fr": "Le brouillard cache les meilleurs\\ncoins de pêche."
+ },
+ "MistLake_Text_Npc1": {
+  "en": "MARILL bounces on the water. So\\ncute!",
+  "fr": "MARILL rebondit sur l'eau. Trop\\nmignon !"
+ },
  "MistLake_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "MistLake_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

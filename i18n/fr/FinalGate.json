@@ -1,10 +1,18 @@
 {
+ "FinalGate_Text_Npc0": {
+  "en": "No one has walked past this gate.\\nYet.",
+  "fr": "Personne n'a franchi cette porte.\\nPas encore."
+ },
+ "FinalGate_Text_Npc1": {
+  "en": "I stopped here. Wisely.",
+  "fr": "Je me suis arrêté ici. Sagement."
+ },
  "FinalGate_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "FinalGate_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

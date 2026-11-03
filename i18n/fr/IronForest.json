@@ -1,10 +1,18 @@
 {
+ "IronForest_Text_Npc0": {
+  "en": "The leaves cut. Wear long sleeves.",
+  "fr": "Les feuilles coupent. Porte des\\nmanches longues."
+ },
+ "IronForest_Text_Npc1": {
+  "en": "SCIZOR is my hero. It is also my\\nnightmare.",
+  "fr": "CIZAYOX est mon héros. C'est aussi\\nmon cauchemar."
+ },
  "IronForest_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "IronForest_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

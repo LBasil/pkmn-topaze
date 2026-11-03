@@ -1,0 +1,54 @@
+{
+ "FiveIsland_Meadow_Text_DenLocked": {
+  "en": "The cliff is cold. Something inside\\ndoes not rust. Not yet.",
+  "fr": "La falaise est froide. Quelque\\nchose à l'intérieur ne rouille pas.\\pPas encore."
+ },
+ "FiveIsland_Meadow_Text_EnteredPasswordAnotherNeeded": {
+  "en": "{PLAYER} entered a password.\\p“GOLDEEN need log.”\\p… …  … …  … …\\pAnother password is needed to\\nopen the door…",
+  "fr": "{PLAYER} a saisi un mot de passe.\\p“ POISSIRÈNE a besoin de bois. ”\\p… … … … … …\\pUn autre mot de passe est\\nnécessaire pour ouvrir la porte…"
+ },
+ "FiveIsland_Meadow_Text_EnteredPasswordDoorOpened": {
+  "en": "{PLAYER} entered two passwords.\\p“GOLDEEN need log.”\\n“Yes, nah, CHANSEY.”\\p… …  … …  … …\\pThe WAREHOUSE's door opened!",
+  "fr": "{PLAYER} a saisi deux mots de passe.\\p“ POISSIRÈNE a besoin de bois. ”\\n“ Oui, non, LEVEINARD. ”\\p… … … … … …\\pLa porte de l'ENTREPÔT s'est\\nouverte !"
+ },
+ "FiveIsland_Meadow_Text_Rocket1Defeat": {
+  "en": "Is this for real?",
+  "fr": "C'est pour de vrai ?"
+ },
+ "FiveIsland_Meadow_Text_Rocket1Intro": {
+  "en": "This area's strictly off-limits!\\nOut, out!",
+  "fr": "Cette zone est strictement\\ninterdite ! Dehors, dehors !"
+ },
+ "FiveIsland_Meadow_Text_Rocket1PostBattle": {
+  "en": "You don't have any business here!\\nGo home!",
+  "fr": "Tu n'as rien à faire ici !\\nRentre chez toi !"
+ },
+ "FiveIsland_Meadow_Text_Rocket2Defeat": {
+  "en": "That wasn't supposed to happen…",
+  "fr": "Ça n'était pas censé arriver…"
+ },
+ "FiveIsland_Meadow_Text_Rocket2Intro": {
+  "en": "There's nothing past here except\\nour WAREHOUSE.\\pSo what brings you here?",
+  "fr": "Il n'y a rien après ici, à part\\nnotre ENTREPÔT.\\pAlors qu'est-ce qui t'amène ?"
+ },
+ "FiveIsland_Meadow_Text_Rocket2PostBattle": {
+  "en": "You're wanting to know what's inside\\nthis WAREHOUSE?\\pIt's better you didn't know.\\nFor your own sake, I mean.",
+  "fr": "Tu veux savoir ce qu'il y a dans\\ncet ENTREPÔT ?\\pMieux vaut ne pas le savoir.\\nPour ton propre bien, je veux dire."
+ },
+ "FiveIsland_Meadow_Text_Rocket3Defeat": {
+  "en": "Oh, that makes me furious!",
+  "fr": "Oh, ça me met en fureur !"
+ },
+ "FiveIsland_Meadow_Text_Rocket3Intro": {
+  "en": "You'd be wasting time even if you\\nwere to get by me.",
+  "fr": "Tu perdrais ton temps même si tu\\nme passais."
+ },
+ "FiveIsland_Meadow_Text_Rocket3PostBattle": {
+  "en": "You won't be able to get in without\\nthe passwords anyway.",
+  "fr": "Tu ne pourras pas entrer sans les\\nmots de passe de toute façon."
+ },
+ "FiveIsland_Meadow_Text_WarehouseDoorAlreadyOpen": {
+  "en": "The WAREHOUSE's door is already\\nopen.",
+  "fr": "La porte de l'ENTREPÔT est déjà\\nouverte."
+ }
+}

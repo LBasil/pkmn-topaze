@@ -1,34 +1,34 @@
 {
  "CeladonCity_GameCorner_PrizeRoom_Text_CoinCaseRequired": {
-  "fr": "Une BOÎTE À JETONS est requise...",
-  "en": "A COIN CASE is required…"
+  "en": "A COIN CASE is required…",
+  "fr": "Une BOÎTE À JETONS est requise..."
  },
  "CeladonCity_GameCorner_PrizeRoom_Text_FancyThatPorygon": {
-  "fr": "J'adore ce PORYGON ! Mais c'est dur\\nde gagner aux machines à sous !",
-  "en": "I sure do fancy that PORYGON!\\nBut, it's hard to win at slots!"
+  "en": "I sure do fancy that PORYGON!\\nBut, it's hard to win at slots!",
+  "fr": "J'adore ce PORYGON ! Mais c'est dur\\nde gagner aux machines à sous !"
  },
  "CeladonCity_GameCorner_PrizeRoom_Text_NeedMoreCoins": {
-  "fr": "Désolé, il te faut plus de JETONS\\nque ça.",
-  "en": "Sorry, you'll need more COINS\\nthan that."
+  "en": "Sorry, you'll need more COINS\\nthan that.",
+  "fr": "Désolé, il te faut plus de JETONS\\nque ça."
  },
  "CeladonCity_GameCorner_PrizeRoom_Text_RakedItInToday": {
-  "fr": "Gahaha ! J'ai ramassé le pactole\\naujourd'hui ! Si seulement chaque\\pjour était comme ça...",
-  "en": "Gahaha! I raked it in today!\\nIf only every day were like this…"
+  "en": "Gahaha! I raked it in today!\\nIf only every day were like this…",
+  "fr": "Gahaha ! J'ai ramassé le pactole\\naujourd'hui ! Si seulement chaque\\pjour était comme ça..."
  },
  "CeladonCity_GameCorner_PrizeRoom_Text_WeExchangeCoinsForPrizes": {
-  "fr": "Nous échangeons tes JETONS contre\\ndes lots.",
-  "en": "We exchange your COINS for prizes."
+  "en": "We exchange your COINS for prizes.",
+  "fr": "Nous échangeons tes JETONS contre\\ndes lots."
  },
  "CeladonCity_GameCorner_PrizeRoom_Text_WhichPrize": {
-  "fr": "Quel lot veux-tu ?",
-  "en": "Which prize would you like?"
+  "en": "Which prize would you like?",
+  "fr": "Quel lot veux-tu ?"
  },
  "CeladonCity_GameCorner_PrizeRoom_Text_YouWantPrize": {
-  "fr": "Alors, tu veux {STR_VAR_1} ?",
-  "en": "So, you want the {STR_VAR_1}?"
+  "en": "So, you want the {STR_VAR_1}?",
+  "fr": "Alors, tu veux {STR_VAR_1} ?"
  },
  "CeladonCity_GameCorner_PrizeRoom_Text_YouWantTM": {
-  "fr": "D'accord, tu veux la CT de\\n{STR_VAR_2} ?",
-  "en": "Okay, a TM of {STR_VAR_2}\\nis what you want?"
+  "en": "Okay, a TM of {STR_VAR_2}\\nis what you want?",
+  "fr": "D'accord, tu veux la CT de\\n{STR_VAR_2} ?"
  }
 }

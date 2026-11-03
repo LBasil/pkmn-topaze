@@ -1,6 +1,34 @@
 {
+ "Route23_Text_Quest7_Ask": {
+  "en": "I study evolution. Bring me a LEAF\\nSTONE for my research.",
+  "fr": "J'étudie l'évolution. Apporte-moi\\nune PIERRE PLANTE pour mes\\lrecherches."
+ },
+ "Route23_Text_Quest7_Done": {
+  "en": "My research is moving forward.\\nThanks!",
+  "fr": "Mes recherches avancent. Merci !"
+ },
  "Route23_Text_Quest7_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route23_Text_Quest7_Ok": {
+  "en": "Fascinating! Please take this in\\nreturn.",
+  "fr": "Fascinant ! Prends ceci en échange."
+ },
+ "Route23_Text_RedEnters": {
+  "en": "Something black glints in his hand:\\nthe BLACK OPAL of OPANIHRUM.\\pHe tips his cap and walks into\\nthe VICTORY ROAD alone.",
+  "fr": "Quelque chose de noir brille dans\\nsa main : l'OPALE NOIRE\\ld'OPANIHRUM.\\pIl touche sa casquette et entre\\nseul sur la ROUTE VICTOIRE."
+ },
+ "Route23_Text_RedSilent": {
+  "en": "RED: ……",
+  "fr": "RED : ……"
+ },
+ "Route23_Text_RedStares": {
+  "en": "A trainer in a red cap stands at\\nthe cave mouth, staring into the\\ndark.",
+  "fr": "Un dresseur à casquette rouge se\\ntient à l'entrée de la grotte, le\\lregard perdu dans le noir."
+ },
+ "Route23_Text_VictoryRoadGateSign": {
+  "en": "VICTORY ROAD GATE -\\nPOKéMON LEAGUE",
+  "fr": "PORTAIL DE LA ROUTE VICTOIRE -\\nLIGUE POKéMON"
  }
 }

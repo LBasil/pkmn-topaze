@@ -1,0 +1,110 @@
+{
+ "TwoIsland_Text_AddedMerchandiseForLostelle": {
+  "en": "I can't tell you how grateful I am\\nfor your rescue of LOSTELLE.\\pThanks to your feat, the people of\\nTHREE ISLAND have changed their\\lattitudes about KANTO people.\\pAnd, I'm from KANTO, you see.\\pThe people of THREE ISLAND\\nhelped me add to my merchandise.",
+  "fr": "Je ne peux pas dire à quel point je\\nte suis reconnaissant d'avoir sauvé\\lLOSTELLE.\\pGrâce à ton exploit, les habitants\\nde L'ÎLE TROIS ont changé\\ld'attitude envers les gens de\\nKANTO.\\pEt je viens de KANTO, tu vois.\\pLes habitants de L'ÎLE TROIS m'ont\\naidé à étoffer ma marchandise."
+ },
+ "TwoIsland_Text_BringingItemsFromDistantLands": {
+  "en": "Oh, hello, {PLAYER}!\\nWelcome!\\pI've started bringing in items from\\ndistant lands.\\pI've got some rare items in, too.\\nPlease have a look!",
+  "fr": "Oh, bonjour, {PLAYER} !\\nBienvenue !\\pJ'ai commencé à importer des objets\\nde contrées lointaines.\\pJ'ai aussi quelques objets rares.\\nJette un œil !"
+ },
+ "TwoIsland_Text_BrunoCameToIslandWhileBack": {
+  "en": "Listen, listen.\\nDid you know?\\pA famous TRAINER came to the\\nISLAND a little while back.\\pHe's one of the ELITE FOUR.\\nHis name is BRUNO.\\pHe went away disappointed when he\\nfound out that they were all sold\\lout of Rage Candybars.",
+  "fr": "Écoute, écoute. Tu savais ?\\pUn DRESSEUR célèbre est venu sur\\nl'ÎLE il y a peu.\\pC'est l'un du CONSEIL DES QUATRE.\\nIl s'appelle BRUNO.\\pIl est reparti déçu en apprenant\\nqu'il n'y avait plus de barres Rage\\lCandybar."
+ },
+ "TwoIsland_Text_BuyRareItemsHere": {
+  "en": "The discerning TRAINER knows to\\nbuy rare items here!",
+  "fr": "Le DRESSEUR averti sait qu'il faut\\nacheter les objets rares ici !"
+ },
+ "TwoIsland_Text_DangerFastCurrent": {
+  "en": "DANGER! FAST CURRENT!\\nFishing and surfing prohibited!",
+  "fr": "DANGER ! COURANT RAPIDE !\\nPêche et surf interdits !"
+ },
+ "TwoIsland_Text_FellowMovedFromCeladonCity": {
+  "en": "That fellow there, he moved here\\nfrom BOURG QUARTZ.\\pHe started up a shop with his\\nyounger brother.\\pYou have to wonder if he knew what\\nhe was getting into.",
+  "fr": "Ce type là-bas, il a déménagé ici\\ndepuis BOURG QUARTZ.\\pIl a monté une boutique avec son\\npetit frère.\\pOn se demande s'il savait dans quoi\\nil s'embarquait."
+ },
+ "TwoIsland_Text_HaveYouTriedJumpingGame": {
+  "en": "Boing! Boing!\\nHave you tried the jumping game?\\pThe POKéMON you can enter…\\nBoing!\\pSome go boing!\\pAnd some go boooooooing!\\pDid you know that?\\nBoing!",
+  "fr": "Boing ! Boing !\\nAs-tu essayé le jeu de saut ?\\pLes POKéMON que tu peux inscrire…\\nBoing !\\pCertains font boing !\\pEt d'autres font booooooing !\\pTu le savais ?\\nBoing !"
+ },
+ "TwoIsland_Text_HopeYouGiveItYourBest": {
+  "en": "Hi! I'm giving it my best here.\\nI hope you do too, {PLAYER}.",
+  "fr": "Salut ! Je fais de mon mieux ici.\\nJ'espère que toi aussi, {PLAYER}."
+ },
+ "TwoIsland_Text_IslandSign": {
+  "en": "TWO ISLAND\\nCliffs where the old guard walks",
+  "fr": "ÎLE DEUX\\nFalaises où marche la vieille garde"
+ },
+ "TwoIsland_Text_JoyfulGameCornerSign": {
+  "en": "Skip & Chomp!\\nJoyful GAME CORNER",
+  "fr": "Saute & Croque !\\nGAME CORNER joyeux"
+ },
+ "TwoIsland_Text_Lord1": {
+  "en": "KAREN: Strong people, weak people... I\\ncare only about the Pokémon who\\lfollow you. Do they love you?",
+  "fr": "KAREN : Forts, faibles… Seuls\\nm'importent les Pokémon qui te\\lsuivent. Ils t'aiment ?"
+ },
+ "TwoIsland_Text_Lord2": {
+  "en": "They do. I can see it.",
+  "fr": "Oui. Je le vois."
+ },
+ "TwoIsland_Text_Lord3": {
+  "en": "KAREN: Then you may rule, as long as\\nthey keep following. Take this.",
+  "fr": "KAREN : Alors tu peux régner, tant\\nqu'ils continuent de te suivre.\\pPrends ceci."
+ },
+ "TwoIsland_Text_LordDone": {
+  "en": "KAREN: A ruler worthy of the six.\\nI will remember this day.",
+  "fr": "KAREN : Un souverain digne des six.\\nJe me souviendrai de ce jour."
+ },
+ "TwoIsland_Text_LordEarly": {
+  "en": "KAREN: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\nFLORA will tell you the way.",
+  "fr": "KAREN : Pas encore. L'ancienne\\nLIGUE et les MAÎTRES doivent\\ld'abord tomber. FLORA te dira le\\nchemin."
+ },
+ "TwoIsland_Text_LordIdle": {
+  "en": "KAREN: The islands are quiet. I look\\nafter them, as I always have.",
+  "fr": "KAREN : Les îles sont calmes. Je\\nveille sur elles, comme toujours."
+ },
+ "TwoIsland_Text_OldWomanLivesOutOnCape": {
+  "en": "There's an old woman who lives in\\na cottage out on the cape.\\pShe gives the eye to POKéMON.\\nIt's a bit unnerving.",
+  "fr": "Une vieille dame vit dans une\\nchaumière sur le cap.\\pElle jette un œil aux POKéMON.\\nC'est un peu troublant."
+ },
+ "TwoIsland_Text_RefAfter": {
+  "en": "KIRA: Take good care of it. The\\nnext REFUGE post is waiting.",
+  "fr": "KIRA : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
+ },
+ "TwoIsland_Text_RefAsk": {
+  "en": "KIRA: The forest beetles are hurt by\\ndrought. Three HYPER POTIONS will\\nkeep the elders alive.",
+  "fr": "KIRA : Les scarabées de la forêt\\nsouffrent de la sécheresse. Trois\\pHYPER POTIONS garderont les anciens\\nen vie."
+ },
+ "TwoIsland_Text_RefDone": {
+  "en": "KIRA: Thank you again. The REFUGE\\nis safer because of you.",
+  "fr": "KIRA : Merci encore. Le REFUGE est\\nplus sûr grâce à toi."
+ },
+ "TwoIsland_Text_RefEarly": {
+  "en": "KIRA: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "fr": "KIRA : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\lde la ZONE SAFARI connaît l'ordre."
+ },
+ "TwoIsland_Text_RefGives": {
+  "en": "KIRA: You saved the day. The post\\nhas a gift for you: HERACROSS!",
+  "fr": "KIRA : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\pSCARHINO !"
+ },
+ "TwoIsland_Text_RefIdle": {
+  "en": "KIRA: I watch over the animals here.\\nThe world is quieter now.",
+  "fr": "KIRA : Je veille sur les animaux\\nici. Le monde est plus calme\\lmaintenant."
+ },
+ "TwoIsland_Text_RefNo": {
+  "en": "KIRA: I understand. It is a lot to\\nask. The offer stands.",
+  "fr": "KIRA : Je comprends. C'est beaucoup\\ndemander. L'offre tient toujours."
+ },
+ "TwoIsland_Text_RefOffer": {
+  "en": "KIRA: You have them! May I take\\n3 of them for the post?",
+  "fr": "KIRA : Tu en as ! Puis-je en\\nprendre 3 pour le poste ?"
+ },
+ "TwoIsland_Text_ShopkeepersBrotherWorksGameCorner": {
+  "en": "The shopkeeper's brother took\\na job at the GAME CORNER.\\pHe's trying to pull together money\\nso they can buy more merchandise.",
+  "fr": "Le frère du boutiquier a pris un\\nemploi au CASINO.\\pIl essaie de réunir de l'argent\\npour acheter plus de marchandise."
+ },
+ "TwoIsland_Text_WelcomeToShopMerchandiseLimited": {
+  "en": "Oh!\\nHello, welcome to my shop!\\pWe've only opened up recently.\\pOur merchandise is limited, but I\\nhope we can serve your needs.",
+  "fr": "Oh ! Bonjour, bienvenue dans ma\\nboutique !\\pNous venons juste d'ouvrir.\\pNotre marchandise est limitée, mais\\nj'espère pouvoir répondre à tes\\lbesoins."
+ }
+}

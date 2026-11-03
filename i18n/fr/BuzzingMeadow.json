@@ -1,18 +1,18 @@
 {
  "BuzzingMeadow_Text_Npc0": {
-  "fr": "J'ai compte une centaine d'ailes\\navant de perdre le compte.",
-  "en": "I counted a hundred wings. Then I\\nlost count."
+  "en": "I counted a hundred wings. Then I\\nlost count.",
+  "fr": "J'ai compte une centaine d'ailes\\navant de perdre le compte."
  },
  "BuzzingMeadow_Text_Npc1": {
-  "fr": "COXY dort toute la journée.\\nQuelle chance.",
-  "en": "LEDYBA sleeps all day. Lucky."
+  "en": "LEDYBA sleeps all day. Lucky.",
+  "fr": "COXY dort toute la journée.\\nQuelle chance."
  },
  "BuzzingMeadow_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "BuzzingMeadow_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

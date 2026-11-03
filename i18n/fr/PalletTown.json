@@ -1,42 +1,314 @@
 {
+ "PalletTown_Text_AmbBoyA": {
+  "en": "Some POKéMON got new types when the\\nAURA changed. Even FAIRY is new!\\pTeacher knows everything about it.\\nGo to the school and ask!",
+  "fr": "Certains POKéMON ont reçu de\\nnouveaux types quand l'AURA a\\lchangé. Même FÉE est nouveau !\\pLa maîtresse sait tout là-dessus.\\nVa à l'école et demande !"
+ },
+ "PalletTown_Text_AmbBoyB": {
+  "en": "No school today, because of the\\nrobbery. But teacher still gives the\\lTYPE MEMO to trainers who ask.",
+  "fr": "Pas d'école aujourd'hui, à cause du\\ncambriolage. Mais la maîtresse\\ldonne toujours le MÉMO DES TYPES\\naux dresseurs qui le demandent."
+ },
+ "PalletTown_Text_AmbGardenerA": {
+  "en": "These berries are for ranch animals.\\nNot for picking, sorry!\\pThe pens are east, beyond the trees.",
+  "fr": "Ces baies sont pour les animaux du\\nranch. Pas pour cueillir, désolé !\\pLes enclos sont à l'est, derrière\\nles arbres."
+ },
+ "PalletTown_Text_AmbGardenerB": {
+  "en": "The ranch lost its tracker POKéMON.\\nThe berries just sit there now.\\pWhoever took them will have to feed\\nthem. I hope they know how.",
+  "fr": "Le ranch a perdu ses POKéMON\\ntraqueurs. Les baies restent là\\lmaintenant.\\pCelui qui les a pris devra les\\nnourrir. J'espère qu'il sait\\lcomment."
+ },
+ "PalletTown_Text_AmbGirlA": {
+  "en": "The pond turns purple at dusk!\\nMy teacher says it is the garnet.\\pShe has a real GRENAT at school!",
+  "fr": "L'étang devient violet au\\ncrépuscule ! Ma maîtresse dit que\\lc'est le grenat.\\pElle a un vrai GRENAT à l'école !"
+ },
+ "PalletTown_Text_AmbGirlB": {
+  "en": "The school's GRENAT is gone!\\nThe pond looks sad today.\\pDon't let them take the monument!",
+  "fr": "Le GRENAT de l'école a disparu !\\nL'étang a l'air triste aujourd'hui.\\pNe les laissez pas prendre le\\nmonument !"
+ },
+ "PalletTown_Text_AmbLadyA": {
+  "en": "Garnet is the stone of this town.\\nRed roofs, red trees, red stone.\\pThe sea road south needs SURF. Come\\nback when you can ride the waves.",
+  "fr": "Le grenat est la pierre de cette\\nville. Toits rouges, arbres rouges,\\lpierre rouge.\\pLa route maritime au sud demande\\nSURF. Reviens quand tu pourras\\lchevaucher les vagues."
+ },
+ "PalletTown_Text_AmbLadyB": {
+  "en": "Red roofs, red trees, red stone...\\nAnd now an empty case at school.\\pTired, {PLAYER}? Go home and let\\nMOM tend to your POKéMON.",
+  "fr": "Toits rouges, arbres rouges, pierre\\nrouge… Et maintenant une vitrine\\lvide à l'école.\\pFatigué, {PLAYER} ? Rentre et laisse\\nMAMAN soigner tes POKéMON."
+ },
+ "PalletTown_Text_AmbMinerA": {
+  "en": "The vein under this hill is old.\\nGarnet grows like frost in the dark.\\pWe cut only what the mine lets go.",
+  "fr": "Le filon sous cette colline est\\nancien. Le grenat pousse comme du\\lgivre dans le noir.\\pOn ne coupe que ce que la mine\\nlâche."
+ },
+ "PalletTown_Text_AmbMinerB": {
+  "en": "They took the GRENAT from the school.\\nThe mine is sealed, but I can feel\\lthe vein humming under my boots.\\pOnly the LEAGUE can open that gate.\\nBeat it, and maybe it lets go.",
+  "fr": "Ils ont pris le GRENAT à l'école.\\nLa mine est scellée, mais je sens\\lle filon vibrer sous mes bottes.\\pSeule la LIGUE peut ouvrir cette\\nporte. Bats-la, et peut-être\\lqu'elle lâchera."
+ },
+ "PalletTown_Text_AmbMinerD": {
+  "en": "The LEAGUE sent word, CHAMPION.\\nThe mine gate may open again.\\pThe vein hums for you now. Mind the\\ndark down there.",
+  "fr": "La LIGUE a envoyé un message,\\nCHAMPION. La porte de la mine peut\\lrouvrir.\\pLe filon vibre pour toi maintenant.\\nFais attention à l'obscurité en\\lbas."
+ },
+ "PalletTown_Text_AmbOldmanA": {
+  "en": "My grandfather carried the first\\ncrystal up from the mine. They say\\lthe monument hums at night.\\pLately, it hums louder.",
+  "fr": "Mon grand-père a remonté le premier\\ncristal de la mine. On dit que le\\lmonument bourdonne la nuit.\\pDernièrement, il bourdonne plus\\nfort."
+ },
+ "PalletTown_Text_AmbOldmanB": {
+  "en": "Every town keeps a stone of its own,\\nthey say. Garnet is ours.\\pTake the stones, and a town forgets\\nits own name.",
+  "fr": "Chaque ville garde sa propre\\npierre, dit-on. Le grenat est la\\lnôtre.\\pPrends les pierres, et une ville\\noublie son propre nom."
+ },
+ "PalletTown_Text_AmbScientistA": {
+  "en": "The lab measures the aura of every\\ncrystal in town. The readings jumped\\lthis morning.\\pAs if something answered from far\\naway.",
+  "fr": "Le labo mesure l'aura de chaque\\ncristal de la ville. Les relevés\\lont bondi ce matin.\\pComme si quelque chose répondait de\\ntrès loin."
+ },
+ "PalletTown_Text_AmbScientistB": {
+  "en": "The robbers copied our gem files!\\nNow they know where every gem sleeps.\\pSomeone must warn the other towns,\\n{PLAYER}!",
+  "fr": "Les voleurs ont copié nos fichiers\\nde gemmes ! Maintenant ils savent\\loù dort chaque gemme.\\pQuelqu'un doit prévenir les autres\\nvilles, {PLAYER} !"
+ },
+ "PalletTown_Text_Archive_Ask": {
+  "en": "I keep a record of every ECHO that\\nwashed ashore. Seven fragments,\\pseven stories. Close them all and\\nthe archive is complete.",
+  "fr": "Je tiens un registre de chaque ÉCHO\\néchoué sur le rivage. Sept\\lfragments, sept histoires.\\nFerme-les tous et l'archive est\\lcomplète."
+ },
+ "PalletTown_Text_Archive_Done": {
+  "en": "The archive is complete. Thank you\\nfor writing its last pages.",
+  "fr": "L'archive est complète. Merci\\nd'avoir écrit ses dernières pages."
+ },
  "PalletTown_Text_Archive_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "PalletTown_Text_Archive_Solved": {
+  "en": "Seven ECHOES, seven stories closed.\\nThe archive is complete. You may\\pkeep these, they never fit on my\\nshelves.",
+  "fr": "Sept ÉCHOS, sept histoires closes.\\nL'archive est complète. Tu peux les\\lgarder, ils ne tenaient jamais sur\\nmes étagères."
+ },
+ "PalletTown_Text_CaughtXImpressiveFollowMe": {
+  "en": "You've caught… {STR_VAR_2}!?\\nNow, this is impressive!\\pThere's something I wanted to ask\\nof you, {PLAYER}.\\pCome.\\nFollow me.",
+  "fr": "Tu as capturé… {STR_VAR_2} !?\\nVoilà qui est impressionnant !\\pIl y a quelque chose que je voulais\\nte demander, {PLAYER}.\\pViens.\\nSuis-moi."
  },
  "PalletTown_Text_CaughtXPuttingInHonestEffort": {
-  "fr": "Tu en as capturé {STR_VAR_2}...\\pOn voit que tu y mets du tien.\\pReviens me voir quand tu en auras\\nattrapé d'autres.",
-  "en": "You've caught {STR_VAR_2}…\\pHm, it looks as if you're putting\\nin an honest effort.\\pWhen you manage to fill it some\\nmore, come show me, please."
+  "en": "You've caught {STR_VAR_2}…\\pHm, it looks as if you're putting\\nin an honest effort.\\pWhen you manage to fill it some\\nmore, come show me, please.",
+  "fr": "Tu en as capturé {STR_VAR_2}...\\pOn voit que tu y mets du tien.\\pReviens me voir quand tu en auras\\nattrapé d'autres."
+ },
+ "PalletTown_Text_ExitGate": {
+  "en": "{PLAYER}: Not yet. MOM said to see\\nthe SCHOOL first, and PROF. OAK is\\lwaiting at the LAB.",
+  "fr": "{PLAYER} : Pas encore. MAMAN a dit\\nd'aller d'abord à l'ÉCOLE, et le\\pPROF. CHEN attend au LABO."
+ },
+ "PalletTown_Text_FatManA": {
+  "en": "Technology is incredible!\\nYou can now store and recall items\\land POKéMON as data via PC.",
+  "fr": "La technologie est incroyable ! Tu\\npeux maintenant stocker et rappeler\\ldes objets et POKéMON comme données\\nvia PC."
+ },
+ "PalletTown_Text_FatManB": {
+  "en": "Did you hear? Robbers hit the school\\nand the LAB! They even copied files\\lfrom the PC network.\\pDon't leave anything precious in the\\nPC today.",
+  "fr": "Tu as entendu ? Des voleurs ont\\nfrappé l'école et le LABO ! Ils ont\\lmême copié des fichiers du réseau\\nde PC.\\pNe laisse rien de précieux dans le\\nPC aujourd'hui."
+ },
+ "PalletTown_Text_MineHint": {
+  "en": "A rumble comes from the old mine\\nnorth of town. Its gate is open.\\pWhatever the AURA left down there,\\nit is waiting at the bottom.\\p(Then follow MEW to APATIA's dock,\\nand talk to the sailor.)",
+  "fr": "Un grondement vient de l'ancienne\\nmine au nord de la ville. Sa porte\\lest ouverte.\\pQuoi que l'AURA ait laissé\\nlà-dessous, il attend au fond.\\p(Puis suis MEW jusqu'au quai\\nd'APATIA, et parle au marin.)"
  },
  "PalletTown_Text_OakLetMeSeePokedex": {
-  "fr": "CHEN: Ah, {PLAYER} !\\nEnfin de retour.\\pOù en est ton POKéDEX ?\\pJe peux l'analyser si tu veux.\\pVoyons...",
-  "en": "OAK: Ah, {PLAYER}!\\nYou're back, are you?\\pHow much have you filled in your\\nPOKéDEX?\\pMay I see it?\\pLet's see…"
+  "en": "OAK: Ah, {PLAYER}!\\nYou're back, are you?\\pHow much have you filled in your\\nPOKéDEX?\\pMay I see it?\\pLet's see…",
+  "fr": "CHEN: Ah, {PLAYER} !\\nEnfin de retour.\\pOù en est ton POKéDEX ?\\pJe peux l'analyser si tu veux.\\pVoyons..."
  },
  "PalletTown_Text_OakPokemonResearchLab": {
-  "fr": "LABORATOIRE DU PROFESSEUR CHEN",
-  "en": "OAK POKéMON RESEARCH LAB"
+  "en": "OAK POKéMON RESEARCH LAB",
+  "fr": "LABORATOIRE DU PROFESSEUR CHEN"
+ },
+ "PalletTown_Text_OakYouEnjoyingTraveling": {
+  "en": "OAK: Ah, {PLAYER}!\\nYou seem to be enjoying traveling.\\pKnowing you, {PLAYER}, I can easily\\nimagine you going out to even more\\lexotic locales.\\pGood for you, good for you.\\nHohoho.",
+  "fr": "CHEN : Ah, {PLAYER} ! Tu as l'air de\\nbien apprécier voyager.\\pTe connaissant, {PLAYER}, je\\nt'imagine facilement partir vers\\ldes contrées encore plus exotiques.\\pTant mieux pour toi, tant mieux.\\nHohoho."
+ },
+ "PalletTown_Text_OnybrisGruntDefeat": {
+  "en": "Tch... it fights for you by\\nchoice? That's... not what the\\lboss told us.",
+  "fr": "Tch… il se bat pour toi par choix ?\\nCe… n'est pas ce que le boss nous a\\ldit."
+ },
+ "PalletTown_Text_OnybrisGruntVictory": {
+  "en": "Hah! Too easy.\\nBut we don't need you anyway.",
+  "fr": "Hah ! Trop facile. Mais on n'a pas\\nbesoin de toi de toute façon."
  },
  "PalletTown_Text_PlayersHouse": {
-  "fr": "Maison de {PLAYER}",
-  "en": "{PLAYER}'s house"
+  "en": "{PLAYER}'s house",
+  "fr": "Maison de {PLAYER}"
+ },
+ "PalletTown_Text_ProcheAdrian_After": {
+  "en": "We will always be here, {PLAYER}.\\nFly high.",
+  "fr": "Nous serons toujours là, {PLAYER}.\\nVole haut."
+ },
+ "PalletTown_Text_ProcheAdrian_Defeat": {
+  "en": "You flew higher than all of us.",
+  "fr": "Tu as volé plus haut que nous tous."
+ },
+ "PalletTown_Text_ProcheAdrian_Early": {
+  "en": "Not yet, {PLAYER}. Finish your\\njourney first, then come and find\\pme.",
+  "fr": "Pas encore, {PLAYER}. Termine\\nd'abord ton voyage, puis viens me\\ltrouver."
+ },
+ "PalletTown_Text_ProcheAdrian_Gather": {
+  "en": "{PLAYER}. THOMAS, LOLA, JORDAN,\\nVIOLETTE, EDOUARD, EMMA... they all\\ptold me about you. GAUTHIER, CHLOE,\\nVINCENT, THIBAULT, NATHAN, DYLAN\\ptoo. We were all waiting here, in\\nour own time. You came for each of\\pus.",
+  "fr": "{PLAYER}. THOMAS, LOLA, JORDAN,\\nVIOLETTE, EDOUARD, EMMA… tous m'ont\\lparlé de toi. GAUTHIER, CHLOE,\\nVINCENT, THIBAULT, NATHAN, DYLAN\\laussi. Nous attendions tous ici,\\ndans notre propre temps. Tu viens\\lpour chacun de nous."
+ },
+ "PalletTown_Text_ProcheAdrian_Intro": {
+  "en": "{PLAYER}. You met all of them. So\\nnow it is my turn. Let us see the\\psky together.",
+  "fr": "{PLAYER}. Tu les as tous rencontrés.\\nAlors c'est mon tour. Voyons le\\lciel ensemble."
+ },
+ "PalletTown_Text_ProcheAdrian_NoRoom": {
+  "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reparle-moi."
+ },
+ "PalletTown_Text_ProcheAdrian_Win": {
+  "en": "Take it. You have earned the sky.",
+  "fr": "Prends-le. Tu as mérité le ciel."
  },
  "PalletTown_Text_RaisingMonsToo": {
-  "fr": "Moi aussi j'ai des POKéMON.\\pUne fois qu'ils seront forts,\\nils me protègeront.",
-  "en": "I'm raising POKéMON, too.\\pWhen they get strong, they can\\nprotect me."
+  "en": "I'm raising POKéMON, too.\\pWhen they get strong, they can\\nprotect me.",
+  "fr": "Moi aussi j'ai des POKéMON.\\pUne fois qu'ils seront forts,\\nils me protègeront."
+ },
+ "PalletTown_Text_RanchDadFlees": {
+  "en": "{RIVAL}'s DAD: My pens! Stay here!",
+  "fr": "Le PÈRE de {RIVAL} : Mes enclos !\\nRestez ici !"
+ },
+ "PalletTown_Text_RanchDadHello": {
+  "en": "{RIVAL}'s DAD: So you're {PLAYER}.\\n{RIVAL} never stops talking about you.",
+  "fr": "Le PÈRE de {RIVAL} : Alors c'est\\ntoi, {PLAYER}. {RIVAL} n'arrête pas\\lde parler de toi."
+ },
+ "PalletTown_Text_RanchGrunt2Taunt": {
+  "en": "A kid with a borrowed POKéMON?\\nThis will take two seconds!",
+  "fr": "Un gamin avec un POKéMON emprunté ?\\nÇa va prendre deux secondes !"
+ },
+ "PalletTown_Text_RanchGruntChallenge": {
+  "en": "GRUNT: Hah! A kid with a brand new\\npartner?\\pLet's see if it fights for you, or\\njust obeys!",
+  "fr": "GRUNT : Hah ! Un gamin avec un tout\\nnouveau partenaire ?\\pVoyons s'il se bat pour toi, ou\\ns'il obéit juste !"
+ },
+ "PalletTown_Text_RanchGruntEnter": {
+  "en": "Nobody move!\\nTEAM ONYBRIS is freeing the POKéMON\\lof this ranch!\\pMy friends are at the SCHOOL and the\\nLAB right now. Today, we take it all!",
+  "fr": "Que personne ne bouge ! La TEAM\\nONYBRIS libère les POKéMON de ce\\lranch !\\pMes amis sont à l'ÉCOLE et au LABO\\nen ce moment. Aujourd'hui, on prend\\ltout !"
+ },
+ "PalletTown_Text_RanchGruntRetreat": {
+  "en": "Forget it. We got what we came for.\\pThe trackers are already on the road.\\nGRENALUX will see us again...",
+  "fr": "Laisse tomber. On a ce qu'on\\nvoulait.\\pLes traqueurs sont déjà sur la\\nroute. GRENALUX nous reverra…"
+ },
+ "PalletTown_Text_RanchMom1": {
+  "en": "MOM: {PLAYER}!!\\nAre you hurt? The whole town heard\\lthe alarm!\\p...Is that a POKéMON? Your first one?\\nOh, look at you. You look so proud.\\pListen, the SCHOOL was broken into\\ntoo. Your teacher is waiting for you.\\pIf you're going to travel with that\\nlittle one, you should learn what has\\lchanged first.\\pAnd take this with you. It has been in\\nour family a long time.",
+  "fr": "MAMAN : {PLAYER} !! Tu n'as rien ?\\nToute la ville a entendu l'alarme !\\p…C'est un POKéMON ? Ton premier ?\\nOh, regarde-toi. Tu as l'air si\\lfier.\\pÉcoute, l'ÉCOLE a été cambriolée\\naussi. Ta maîtresse t'attend.\\pSi tu voyages avec ce petit, tu\\ndois d'abord apprendre ce qui a\\lchangé.\\pEt emporte ça avec toi. C'est dans\\nnotre famille depuis longtemps."
+ },
+ "PalletTown_Text_RanchMom2": {
+  "en": "MOM: Keep it close, and don't lose it.\\pCome home whenever you need a rest.\\nI'll be waiting.",
+  "fr": "MAMAN : Garde-le près de toi, et ne\\nle perds pas.\\pReviens à la maison quand tu as\\nbesoin de repos. Je t'attendrai."
+ },
+ "PalletTown_Text_RanchOakAfter": {
+  "en": "OAK: ...Well! That was a real battle,\\n{PLAYER}. Your partner trusts you.\\pI must see what they did to my LAB.\\nStay safe, both of you!",
+  "fr": "CHEN : …Eh bien ! C'était un vrai\\ncombat, {PLAYER}. Ton partenaire te\\lfait confiance.\\pJe dois voir ce qu'ils ont fait à\\nmon LABO. Restez prudents, tous les\\ldeux !"
+ },
+ "PalletTown_Text_RanchOakChoose": {
+  "en": "OAK: Which one?\\nHurry, hurry!",
+  "fr": "CHEN : Lequel ?\\nVite, vite !"
+ },
+ "PalletTown_Text_RanchOakIntro": {
+  "en": "OAK: Good, we're all here.\\pTen years ago the AURA changed every\\nPOKéMON. Lately my trackers have been\\lrestless, as if they felt something.\\pThat is why I brought three POKé\\nBALLS with me today. {PLAYER}, {RIVAL},\\lyou have both waited long\\nenough, and--",
+  "fr": "CHEN : Bien, nous sommes tous là.\\pIl y a dix ans l'AURA a changé tous\\nles POKéMON. Dernièrement mes\\ltraqueurs sont agités, comme s'ils\\nsentaient quelque chose.\\pC'est pourquoi j'ai apporté trois\\nPOKé BALLS aujourd'hui. {PLAYER},\\p{RIVAL}, vous avez assez attendu\\ntous les deux, et--"
+ },
+ "PalletTown_Text_RanchOakPanic": {
+  "en": "OAK: Oh no, oh no, oh no!\\nWhat do we do?!\\pThere is no time to be polite!\\n{PLAYER}, take one of these, quick!",
+  "fr": "CHEN : Oh non, oh non, oh non ! Que\\nfaire ?!\\pPas le temps de faire des\\nmanières ! {PLAYER}, prends-en un,\\lvite !"
+ },
+ "PalletTown_Text_RanchRivalChallenge": {
+  "en": "{RIVAL}: {PLAYER}, you take the big one.\\nThe other one is mine!",
+  "fr": "{RIVAL} : {PLAYER}, prends le gros.\\nL'autre est à moi !"
+ },
+ "PalletTown_Text_RanchRivalTakes": {
+  "en": "{RIVAL}: Then I'll take the one that\\nbeats yours! Gramps, give it here!",
+  "fr": "{RIVAL} : Alors je prends celui qui\\nbat le tien ! Papy, donne-le !"
+ },
+ "PalletTown_Text_RanchRivalWin": {
+  "en": "{RIVAL}: Mine ran off after one hit!\\p...Yours too? Not bad, {PLAYER}.\\nBut next time I win first!",
+  "fr": "{RIVAL} : Le mien s'est enfui après\\nun coup !\\p…Le tien aussi ? Pas mal, {PLAYER}.\\nMais la prochaine fois je gagne\\ld'abord !"
+ },
+ "PalletTown_Text_RanchTrackersHowl": {
+  "en": "...Do you hear that?\\nThe trackers are howling.",
+  "fr": "…Tu entends ça ?\\nLes traqueurs hurlent."
+ },
+ "PalletTown_Text_ReceivedPendant": {
+  "en": "{PLAYER} received the PENDANT!",
+  "fr": "{PLAYER} a reçu le PENDENTIF !"
+ },
+ "PalletTown_Text_RefAfter": {
+  "en": "AYA: Take good care of it. The\\nnext REFUGE post is waiting.",
+  "fr": "AYA : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
+ },
+ "PalletTown_Text_RefAsk": {
+  "en": "AYA: I run the first REFUGE post. Our\\nfirst rule: nobody goes hungry.\\nPOKéMON hurt in the wild have\\nnowhere to go but here.\\pI need five POTIONS for the new\\narrivals. Can you spare them?",
+  "fr": "AYA : Je tiens le premier poste du\\nREFUGE. Notre première règle :\\ppersonne n'a faim. Les POKéMON\\nblessés dans la nature n'ont nulle\\lpart où aller sauf ici.\\pJ'ai besoin de cinq POTIONS pour\\nles nouveaux arrivants. Peux-tu les\\lcéder ?"
+ },
+ "PalletTown_Text_RefDone": {
+  "en": "AYA: Thank you again. The REFUGE\\nis safer because of you.",
+  "fr": "AYA : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
+ },
+ "PalletTown_Text_RefEarly": {
+  "en": "AYA: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "fr": "AYA : Pas encore. Finis d'abord les\\npostes précédents. Le GARDIEN du\\pPARC SAFARI connaît l'ordre."
+ },
+ "PalletTown_Text_RefGives": {
+  "en": "AYA: You saved the day. The post\\nhas a gift for you: EEVEE!",
+  "fr": "AYA : Tu as sauvé la mise. Le poste\\na un cadeau pour toi : ÉVOLI !"
+ },
+ "PalletTown_Text_RefIdle": {
+  "en": "AYA: I watch over the animals here.\\nThe world is quieter now.",
+  "fr": "AYA : Je veille sur les animaux\\nici. Le monde est plus calme\\lmaintenant."
+ },
+ "PalletTown_Text_RefNo": {
+  "en": "AYA: I understand. It is a lot to\\nask. The offer stands.",
+  "fr": "AYA : Je comprends. C'est beaucoup\\ndemander. L'offre tient toujours."
+ },
+ "PalletTown_Text_RefOffer": {
+  "en": "AYA: You have them! May I take\\n5 of them for the post?",
+  "fr": "AYA : Tu les as ! Puis-je en\\nprendre 5 pour le poste ?"
+ },
+ "PalletTown_Text_RivalDontGoOut": {
+  "en": "{RIVAL}: Hey, {PLAYER}! Wait!\\nDon't go out there!",
+  "fr": "{RIVAL} : Hé, {PLAYER} ! Attends !\\nNe sors pas !"
+ },
+ "PalletTown_Text_RivalGrassUnsafeNeedMon": {
+  "en": "{RIVAL}: The tall grass is full of\\nwild POKéMON, and you've got\\lnothing to fight with!\\p{PLAYER}: But I've waited all my life\\nto start my journey!\\p{RIVAL}: Then come to our RANCH.\\nMy dad and PROF. OAK are there.\\pThey'll know what to do.\\nFollow me!",
+  "fr": "{RIVAL} : L'herbe haute est pleine\\nde POKéMON sauvages, et tu n'as\\lrien pour te battre !\\p{PLAYER} : Mais j'ai attendu toute\\nma vie pour commencer mon voyage !\\p{RIVAL} : Alors viens à notre\\nRANCH. Mon père et le PROF. CHEN y\\lsont.\\pIls sauront quoi faire. Suis-moi !"
  },
  "PalletTown_Text_RivalsHouse": {
-  "fr": "Maison de {RIVAL}",
-  "en": "{RIVAL}'s family RANCH"
+  "en": "{RIVAL}'s family RANCH",
+  "fr": "Maison de {RIVAL}"
+ },
+ "PalletTown_Text_SceneryBerries": {
+  "en": "Berry bushes for the ranch animals.\\nThey are not for picking!",
+  "fr": "Des buissons de baies pour les\\nanimaux du ranch. Pas pour\\lcueillir !"
+ },
+ "PalletTown_Text_SceneryGuardian": {
+  "en": "A garnet crystal, tall as a house.\\nIt watches over the road north.",
+  "fr": "Un cristal de grenat, haut comme\\nune maison. Il veille sur la route\\ldu nord."
+ },
+ "PalletTown_Text_SceneryMine": {
+  "en": "The old mine, sealed for safety.\\nSomething glints deep inside...",
+  "fr": "L'ancienne mine, scellée par\\nsécurité. Quelque chose brille tout\\lau fond…"
+ },
+ "PalletTown_Text_SceneryMineOpen": {
+  "en": "The old mine gate stands open.\\nThe garnet hums inside.",
+  "fr": "La vieille porte de la mine est\\nouverte. Le grenat bourdonne à\\ll'intérieur."
+ },
+ "PalletTown_Text_SceneryMonument": {
+  "en": "A giant garnet crystal.\\nIt hums softly, as if alive.",
+  "fr": "Un cristal de grenat géant. Il\\nbourdonne doucement, comme vivant."
  },
  "PalletTown_Text_SchoolSign": {
-  "fr": "ÉCOLE DE GRENALUX\\nLà où tout dresseur débute.",
-  "en": "GRENALUX SCHOOL\\nWhere every trainer begins."
+  "en": "GRENALUX SCHOOL\\nWhere every trainer begins.",
+  "fr": "ÉCOLE DE GRENALUX\\nLà où tout dresseur débute."
+ },
+ "PalletTown_Text_TQ_Ask": {
+  "en": "The lab kids love MOOMOO MILK.\\nBring me 2 and I will reward you.",
+  "fr": "Les enfants du labo adorent le LAIT\\nMEUMEU. Apporte-m'en 2 et je te\\lrécompense."
+ },
+ "PalletTown_Text_TQ_Done": {
+  "en": "The lab is happy, thanks to you.",
+  "fr": "Le labo est content, grâce à toi."
  },
  "PalletTown_Text_TQ_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "PalletTown_Text_TQ_Ok": {
+  "en": "Wonderful! A little help for your\\nteam.",
+  "fr": "Merveilleux ! Un petit coup de main\\npour ton équipe."
  },
  "PalletTown_Text_TownSign": {
-  "fr": "GRENALUX\\pLà où toutes les aventures\\ncommencent !",
-  "en": "GRENALUX\\nWhere every journey begins!"
+  "en": "GRENALUX\\nWhere every journey begins!",
+  "fr": "GRENALUX\\pLà où toutes les aventures\\ncommencent !"
  }
 }

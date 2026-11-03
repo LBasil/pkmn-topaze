@@ -1,0 +1,30 @@
+{
+ "FourIsland_PokemonCenter_1F_Text_DayCarePeopleFoundEggBefore": {
+  "en": "Oh? A POKéMON EGG?\\n…I have no idea.\\p…Oh, wait. The DAY-CARE people\\nin town were saying something.\\pThey said that they'd found EGGS\\nbefore on their property.",
+  "fr": "Oh ? Un ŒUF POKéMON ? …Aucune idée.\\p…Oh, attends. Les gens de la\\nGARDERIE en ville disaient quelque\\lchose.\\pIls disaient avoir déjà trouvé des\\nŒUFS sur leur terrain."
+ },
+ "FourIsland_PokemonCenter_1F_Text_NewPokemonJournalHasntArrived": {
+  "en": "What's this?\\pThe new POKéMON JOURNAL hasn't\\narrived on this island?",
+  "fr": "Qu'est-ce que c'est ?\\pLe nouveau JOURNAL POKéMON n'est\\npas arrivé sur cette île ?"
+ },
+ "FourIsland_PokemonCenter_1F_Text_RareIceMonsInCave": {
+  "en": "There's a rare kind of ICE POKéMON\\nthat lives in the cave.\\pWe get a lot of visitors hoping to\\nsee that POKéMON.",
+  "fr": "Il y a une espèce rare de POKéMON\\nGLACE dans la grotte.\\pBeaucoup de visiteurs viennent\\ndans l'espoir de le voir."
+ },
+ "Text_BodySlamDeclined": {
+  "en": "Come again!\\nBoing!",
+  "fr": "Reviens quand tu veux !\\nBoing !"
+ },
+ "Text_BodySlamTaught": {
+  "en": "Boioing!",
+  "fr": "Boioing !"
+ },
+ "Text_BodySlamTeach": {
+  "en": "Ready?\\nBoing!\\pWe're having a BODY SLAM match\\nto see who wimps out first.\\pIf you were to join us, you'd be\\nsquashed like a bug, though…\\pHow about I teach BODY SLAM to\\na POKéMON of yours instead?",
+  "fr": "Prêt ?\\nBoing !\\pOn fait un concours de PLAQUAGE\\npour voir qui flanche le premier.\\pSi tu te joignais à nous, tu serais\\nécrasé comme une mouche…\\pEt si j'apprenais PLAQUAGE à un de\\ntes POKéMON à la place ?"
+ },
+ "Text_BodySlamWhichMon": {
+  "en": "Which POKéMON wants to learn how\\nto BODY SLAM?",
+  "fr": "Quel POKéMON veut apprendre\\nPLAQUAGE ?"
+ }
+}

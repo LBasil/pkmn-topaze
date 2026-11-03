@@ -1,0 +1,42 @@
+{
+ "FiveIsland_WaterLabyrinth_Text_AlizeDefeat": {
+  "en": "Your POKéMON are growing up\\nadmirably well!",
+  "fr": "Tes POKéMON grandissent à\\nmerveille !"
+ },
+ "FiveIsland_WaterLabyrinth_Text_AlizeIntro": {
+  "en": "This is an excellent environment\\nfor raising POKéMON.",
+  "fr": "C'est un excellent environnement\\npour élever des POKéMON."
+ },
+ "FiveIsland_WaterLabyrinth_Text_AlizePostBattle": {
+  "en": "You know, I think you have the\\ntalent to be a good BREEDER.",
+  "fr": "Tu sais, je pense que tu as le\\ntalent pour être un bon ÉLEVEUR."
+ },
+ "FiveIsland_WaterLabyrinth_Text_CuteMonRemindsMeOfDaisy": {
+  "en": "Oh, hello.\\nThat's a cute {STR_VAR_2}.\\pSeeing it reminds me of a sweet \\nlittle girl I met while traveling.\\pShe was gently grooming POKéMON…\\nShe was a little angel.\\pThat little girl's name…\\nI think it was DAISY.",
+  "fr": "Oh, bonjour. Quel mignon {STR_VAR_2}.\\pÇa me rappelle une gentille petite\\nfille que j'ai rencontrée en\\lvoyage.\\pElle toilettait doucement des\\nPOKéMON… Un vrai petit ange.\\pLe nom de cette petite fille… Je\\ncrois que c'était DAISY."
+ },
+ "FiveIsland_WaterLabyrinth_Text_DontHaveSpaceInYourParty": {
+  "en": "…Unfortunately, you don't have\\nspace for this in your party.\\pYou'd better come back for it\\nanother time.",
+  "fr": "…Malheureusement, tu n'as pas de\\nplace pour ça dans ton équipe.\\pReviens le chercher une autre fois."
+ },
+ "FiveIsland_WaterLabyrinth_Text_GladIMetSomeoneLikeYou": {
+  "en": "I received that EGG while I was\\ntraveling.\\pI'm glad I met someone like you.",
+  "fr": "J'ai reçu cet ŒUF pendant mes\\nvoyages.\\pJe suis content d'avoir rencontré\\nquelqu'un comme toi."
+ },
+ "FiveIsland_WaterLabyrinth_Text_HmmISeeIsee": {
+  "en": "Ah, hmm…\\nI see, I see…",
+  "fr": "Ah, hmm…\\nJe vois, je vois…"
+ },
+ "FiveIsland_WaterLabyrinth_Text_LetMeTakeLookAtMons": {
+  "en": "You travel all over the place,\\ndon't you?\\pYou're not driving your POKéMON\\ntoo harshly, are you?\\pLet me take a look.\\n… … …   … … …",
+  "fr": "Tu voyages beaucoup, n'est-ce pas ?\\pTu ne forces pas trop tes POKéMON,\\nj'espère ?\\pLaisse-moi regarder.\\n… … … … … …"
+ },
+ "FiveIsland_WaterLabyrinth_Text_ReceivedEggFromMan": {
+  "en": "{PLAYER} received an EGG\\nfrom the man!",
+  "fr": "{PLAYER} a reçu un ŒUF\\nde l'homme !"
+ },
+ "FiveIsland_WaterLabyrinth_Text_TreatMonRightHaveThis": {
+  "en": "Oh, impressive.\\nYou treat your POKéMON right.\\pI think you can be entrusted with\\nthis.\\pPlease, I'd like you to have this.",
+  "fr": "Oh, impressionnant.\\nTu traites bien tes POKéMON.\\pJe pense qu'on peut te confier\\nceci.\\pJe voudrais que tu l'aies."
+ }
+}

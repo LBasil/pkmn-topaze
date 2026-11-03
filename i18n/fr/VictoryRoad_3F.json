@@ -1,0 +1,98 @@
+{
+ "Text_DoubleEdgeDeclined": {
+  "en": "I'll teach you the technique\\nanytime.",
+  "fr": "Je t'enseignerai la technique quand\\ntu veux."
+ },
+ "Text_DoubleEdgeTaught": {
+  "en": "Keep that drive going for the\\nPOKéMON LEAGUE!\\pTake a run at them and knock 'em\\nout!",
+  "fr": "Garde cet élan pour la LIGUE\\nPOKéMON !\\pFonce sur eux et mets-les K.O. !"
+ },
+ "Text_DoubleEdgeTeach": {
+  "en": "You should be proud of yourself,\\nhaving battled your way through\\lVICTORY ROAD so courageously.\\pIn recognition of your feat,\\nI'll teach you DOUBLE-EDGE.\\pWould you like me to teach that\\ntechnique?",
+  "fr": "Tu devrais être fier de toi,\\nd'avoir combattu si courageusement\\lsur la ROUTE VICTOIRE.\\pEn reconnaissance de ton exploit,\\nje t'enseignerai DAMOCLÈS.\\pVeux-tu que je t'enseigne cette\\ntechnique ?"
+ },
+ "Text_DoubleEdgeWhichMon": {
+  "en": "Which POKéMON should I teach\\nDOUBLE-EDGE?",
+  "fr": "À quel POKéMON dois-je enseigner\\nDAMOCLÈS ?"
+ },
+ "VictoryRoad_3F_Text_AlexaDefeat": {
+  "en": "Oh!\\nSo strong!",
+  "fr": "Oh !\\nSi fort !"
+ },
+ "VictoryRoad_3F_Text_AlexaIntro": {
+  "en": "TRAINERS live to seek stronger\\nopponents.",
+  "fr": "Les DRESSEURS vivent pour chercher\\ndes adversaires plus forts."
+ },
+ "VictoryRoad_3F_Text_AlexaPostBattle": {
+  "en": "By fighting tough battles, you get\\nstronger.",
+  "fr": "En livrant de rudes combats, tu\\ndeviens plus fort."
+ },
+ "VictoryRoad_3F_Text_CarolineDefeat": {
+  "en": "I'm furious!",
+  "fr": "Je suis furieux !"
+ },
+ "VictoryRoad_3F_Text_CarolineIntro": {
+  "en": "I'll show you just how good you\\nare. Not!",
+  "fr": "Je vais te montrer à quel point tu\\nes bon. Pas !"
+ },
+ "VictoryRoad_3F_Text_CarolinePostBattle": {
+  "en": "You showed me just how good\\nI was…",
+  "fr": "Tu m'as montré à quel point j'étais\\nbon…"
+ },
+ "VictoryRoad_3F_Text_ColbyDefeat": {
+  "en": "I don't believe it!",
+  "fr": "Je n'en reviens pas !"
+ },
+ "VictoryRoad_3F_Text_ColbyIntro": {
+  "en": "Only the chosen can pass here!",
+  "fr": "Seuls les élus peuvent passer ici !"
+ },
+ "VictoryRoad_3F_Text_ColbyPostBattle": {
+  "en": "All TRAINERS here are headed to\\nthe POKéMON LEAGUE.\\pDon't let down your guard.",
+  "fr": "Tous les DRESSEURS ici se dirigent\\nvers la LIGUE POKéMON.\\pNe baisse pas ta garde."
+ },
+ "VictoryRoad_3F_Text_GeorgeDefeat": {
+  "en": "The rumors were true!",
+  "fr": "Les rumeurs étaient vraies !"
+ },
+ "VictoryRoad_3F_Text_GeorgeIntro": {
+  "en": "I heard rumors of a child prodigy.",
+  "fr": "J'ai entendu des rumeurs sur un\\nenfant prodige."
+ },
+ "VictoryRoad_3F_Text_GeorgePostBattle": {
+  "en": "So, it was you who beat GIOVANNI\\nof TEAM ONYBRIS?",
+  "fr": "Alors c'est toi qui as battu\\nGIOVANNI de la TEAM ONYBRIS ?"
+ },
+ "VictoryRoad_3F_Text_RayDefeat": {
+  "en": "RAY: Ludicrous!\\nThis can't be!",
+  "fr": "RAY : Ridicule !\\nCe n'est pas possible !"
+ },
+ "VictoryRoad_3F_Text_RayIntro": {
+  "en": "RAY: Together, the two of us are\\ndestined for greatness!",
+  "fr": "RAY : À nous deux, nous sommes\\ndestinés à la grandeur !"
+ },
+ "VictoryRoad_3F_Text_RayNotEnoughMons": {
+  "en": "RAY: Together, the two of us are\\nstriving for the pinnacle.\\pWe need you to bring two POKéMON\\ninto battle with us.",
+  "fr": "RAY : À nous deux, nous visons le\\nsommet.\\pNous avons besoin que tu amènes\\ndeux POKéMON au combat contre nous."
+ },
+ "VictoryRoad_3F_Text_RayPostBattle": {
+  "en": "RAY: You've beaten us.\\nGreatness remains elusive…",
+  "fr": "RAY : Tu nous as battus.\\nLa grandeur reste insaisissable…"
+ },
+ "VictoryRoad_3F_Text_TyraDefeat": {
+  "en": "TYRA: Oh, but…",
+  "fr": "TYRA : Oh, mais…"
+ },
+ "VictoryRoad_3F_Text_TyraIntro": {
+  "en": "TYRA: We're trying to become\\nchampions together.",
+  "fr": "TYRA : Nous essayons de devenir\\nchampions ensemble."
+ },
+ "VictoryRoad_3F_Text_TyraNotEnoughMons": {
+  "en": "TYRA: You can't battle with us if\\nyou have only one POKéMON.",
+  "fr": "TYRA : Tu ne peux pas te battre\\ncontre nous si tu n'as qu'un seul\\lPOKéMON."
+ },
+ "VictoryRoad_3F_Text_TyraPostBattle": {
+  "en": "TYRA: You've taught me that power\\ncan be infinite in shape and form.",
+  "fr": "TYRA : Tu m'as appris que la\\npuissance peut prendre une infinité\\lde formes."
+ }
+}

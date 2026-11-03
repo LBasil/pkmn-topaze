@@ -1,0 +1,22 @@
+{
+ "Route2_House_Text_FaintedMonsCanUseFieldMoves": {
+  "en": "A fainted POKéMON just has no\\nenergy left to battle.\\pIt can still use moves like CUT\\noutside of battle.",
+  "fr": "Un POKéMON K.O. n'a plus d'énergie\\npour combattre.\\pIl peut quand même utiliser des\\ncapacités comme COUPE hors combat."
+ },
+ "Route2_House_Text_ScientistAsk": {
+  "en": "My research stalled. Field moves\\ndrain PP faster than I planned.\\pTwo ETHERS would let me finish\\nthe study.",
+  "fr": "Ma recherche est au point mort. Les\\ncapacités de terrain vident les PP\\lplus vite que prévu.\\pDeux ÉTHERS me permettraient de\\nfinir l'étude."
+ },
+ "Route2_House_Text_ScientistGives": {
+  "en": "Wonderful! The data is clean.\\pAs thanks, take this PP UP. It\\nis a tiny contribution to science.",
+  "fr": "Merveilleux ! Les données sont\\npropres.\\pEn remerciement, prends ce PP PLUS.\\nC'est une petite contribution à la\\lscience."
+ },
+ "Route2_House_Text_ScientistNo": {
+  "en": "Of course. Science can wait.",
+  "fr": "Bien sûr. La science peut attendre."
+ },
+ "Route2_House_Text_ScientistOffer": {
+  "en": "ETHERS! Can I borrow two for my\\nexperiments?",
+  "fr": "Des ÉTHERS ! Je peux en emprunter\\ndeux pour mes expériences ?"
+ }
+}

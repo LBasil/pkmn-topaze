@@ -1,74 +1,166 @@
 {
  "CinnabarIsland_Text_AllRightLetsGo": {
-  "fr": "Très bien, alors.\\nAllons-y !",
-  "en": "All right, then.\\nLet's go!"
+  "en": "All right, then.\\nLet's go!",
+  "fr": "Très bien, alors.\\nAllons-y !"
  },
  "CinnabarIsland_Text_BlaineLivedHereSinceBeforeLab": {
-  "fr": "EDDIE, de l'ARÈNE DE CHRONDROLIA,\\nest un drôle de personnage.\\pIl vit sur l'île depuis bien avant\\nla construction du LABO.",
-  "en": "CHRONDROLIA GYM's EDDIE is quite the\\nodd fellow.\\pHe's lived on the island since way\\nbefore the LAB was built."
+  "en": "CHRONDROLIA GYM's EDDIE is quite the\\nodd fellow.\\pHe's lived on the island since way\\nbefore the LAB was built.",
+  "fr": "EDDIE, de l'ARÈNE DE CHRONDROLIA,\\nest un drôle de personnage.\\pIl vit sur l'île depuis bien avant\\nla construction du LABO."
  },
  "CinnabarIsland_Text_ComeWithMeToOneIsland": {
-  "fr": "Regarde, c'est moi, BILL.\\nÇa fait longtemps !\\pJ'espère que tu utilises toujours\\nmon système PC.\\pBon, écoute, puisqu'on se retrouve\\nici, et si on passait du temps\\nensemble ?\\pIl y a une petite île tout au sud,\\nappelée ÎLE 1.\\pUn ami m'a invité, alors j'y vais.\\pÇa te dit ?\\nTu veux venir avec moi ?",
-  "en": "Look, it's me, BILL.\\nLong time no see!\\pI hope you're still using my\\nPC system.\\pWell, listen, since we met up here,\\nhow about spending time with me?\\pThere's this little island in the far\\nsouth called ONE ISLAND.\\pA friend invited me, so I'm on my\\nway out there.\\pHow about it?\\nDo you feel like coming with me?"
+  "en": "Look, it's me, BILL.\\nLong time no see!\\pI hope you're still using my\\nPC system.\\pWell, listen, since we met up here,\\nhow about spending time with me?\\pThere's this little island in the far\\nsouth called ONE ISLAND.\\pA friend invited me, so I'm on my\\nway out there.\\pHow about it?\\nDo you feel like coming with me?",
+  "fr": "Regarde, c'est moi, BILL.\\nÇa fait longtemps !\\pJ'espère que tu utilises toujours\\nmon système PC.\\pBon, écoute, puisqu'on se retrouve\\nici, et si on passait du temps\\nensemble ?\\pIl y a une petite île tout au sud,\\nappelée ÎLE 1.\\pUn ami m'a invité, alors j'y vais.\\pÇa te dit ?\\nTu veux venir avec moi ?"
  },
  "CinnabarIsland_Text_DoorIsLocked": {
-  "fr": "La porte est verrouillée...",
-  "en": "The door is locked…"
+  "en": "The door is locked…",
+  "fr": "La porte est verrouillée..."
  },
  "CinnabarIsland_Text_GymSign": {
-  "fr": "ARÈNE POKéMON DE CHRONDROLIA\\nCHAMPION : EDDIE\\lLe Maître du Quiz !",
-  "en": "CHRONDROLIA POKéMON GYM\\nLEADER: EDDIE\\lThe Hotheaded Quiz Master!"
+  "en": "CHRONDROLIA POKéMON GYM\\nLEADER: EDDIE\\lThe Hotheaded Quiz Master!",
+  "fr": "ARÈNE POKéMON DE CHRONDROLIA\\nCHAMPION : EDDIE\\lLe Maître du Quiz !"
  },
  "CinnabarIsland_Text_HeyIfItIsntPlayer": {
-  "fr": "Hein ?\\nHé, mais c'est {PLAYER} !",
-  "en": "Huh?\\nHey, if it isn't {PLAYER}!"
+  "en": "Huh?\\nHey, if it isn't {PLAYER}!",
+  "fr": "Hein ?\\nHé, mais c'est {PLAYER} !"
  },
  "CinnabarIsland_Text_IfYouHaveTriPassYouCanGoAgain": {
-  "fr": "Hé, c'était une sacrée croisière,\\nnon ?\\pMon pote CELIO a semblé apprécier\\nta compagnie.\\pJe suis sûr qu'il t'accueillerait\\nsi tu lui rendais visite.\\pSi tu as un TRI-PASS, tu peux\\ntoujours prendre un ferry depuis le\\lPORT D'APATIA.\\pBon, merci pour ta compagnie !",
-  "en": "Hey, wasn't that a long cruise?\\pMy buddy CELIO seemed to enjoy\\nyour company.\\pI'm sure he'd welcome you if you\\nwere to visit him again.\\pIf you have a TRI-PASS, you can\\nalways take a ferry there from\\lAPATIA PORT.\\pAll right, thanks for your company!"
+  "en": "Hey, wasn't that a long cruise?\\pMy buddy CELIO seemed to enjoy\\nyour company.\\pI'm sure he'd welcome you if you\\nwere to visit him again.\\pIf you have a TRI-PASS, you can\\nalways take a ferry there from\\lAPATIA PORT.\\pAll right, thanks for your company!",
+  "fr": "Hé, c'était une sacrée croisière,\\nnon ?\\pMon pote CELIO a semblé apprécier\\nta compagnie.\\pJe suis sûr qu'il t'accueillerait\\nsi tu lui rendais visite.\\pSi tu as un TRI-PASS, tu peux\\ntoujours prendre un ferry depuis le\\lPORT D'APATIA.\\pBon, merci pour ta compagnie !"
  },
  "CinnabarIsland_Text_IllBeWaitingInPokeCenter": {
-  "fr": "Quoi, tu es trop occupé ?\\pBon, d'accord. De toute façon, le\\nbateau n'est pas encore arrivé.\\pJe t'attendrai au CENTRE POKéMON\\nlà-bas.\\pViens me voir quand tu auras fini\\ntes affaires ici.",
-  "en": "What, are you too busy?\\pWell, all right.\\nThe boat hasn't arrived yet anyway.\\pI'll be waiting at the POKéMON\\nCENTER over there.\\pCome see me when you're done with\\nyour business here."
+  "en": "What, are you too busy?\\pWell, all right.\\nThe boat hasn't arrived yet anyway.\\pI'll be waiting at the POKéMON\\nCENTER over there.\\pCome see me when you're done with\\nyour business here.",
+  "fr": "Quoi, tu es trop occupé ?\\pBon, d'accord. De toute façon, le\\nbateau n'est pas encore arrivé.\\pJe t'attendrai au CENTRE POKéMON\\nlà-bas.\\pViens me voir quand tu auras fini\\ntes affaires ici."
  },
  "CinnabarIsland_Text_IslandSign": {
-  "fr": "CHRONDROLIA\\nLa Ville Jaune de la Topaze",
-  "en": "CHRONDROLIA\\nThe Yellow City of Topaz"
+  "en": "CHRONDROLIA\\nThe Yellow City of Topaz",
+  "fr": "CHRONDROLIA\\nLa Ville Jaune de la Topaze"
  },
  "CinnabarIsland_Text_LightsOut": {
-  "fr": "Toutes les lumières de CHRONDROLIA\\nviennent de s'éteindre d'un coup.",
-  "en": "Every light in CHRONDROLIA just\\ndied at once."
+  "en": "Every light in CHRONDROLIA just\\ndied at once.",
+  "fr": "Toutes les lumières de CHRONDROLIA\\nviennent de s'éteindre d'un coup."
  },
  "CinnabarIsland_Text_LittleGirl": {
-  "fr": "Mamie dit que la pierre de cette\\nville n'est qu'un conte de fées.\\pMais le grand pylône bourdonne la\\nnuit. J'adore ça !",
-  "en": "Grandma says the stone of this\\ntown is only a fairy tale.\\pBut the big pylon hums at night.\\nI like it!"
+  "en": "Grandma says the stone of this\\ntown is only a fairy tale.\\pBut the big pylon hums at night.\\nI like it!",
+  "fr": "Mamie dit que la pierre de cette\\nville n'est qu'un conte de fées.\\pMais le grand pylône bourdonne la\\nnuit. J'adore ça !"
+ },
+ "CinnabarIsland_Text_LittleGirlDone": {
+  "en": "The pylon hums happy again!\\nThank you!",
+  "fr": "Le pylône bourdonne de nouveau\\njoyeusement ! Merci !"
  },
  "CinnabarIsland_Text_Mayor": {
-  "fr": "MAIRE : Bienvenue à CHRONDROLIA !\\pDes voleurs ? Des pierres ? On a\\nentendu les rumeurs. Rien n'est\\nvenu ici.\\pIl n'y a aucune pierre précieuse\\nsur cette île. La TOPAZE n'est\\nqu'un nom.\\pDétends-toi. Visite l'ARÈNE,\\nprofite des lumières.",
-  "en": "MAYOR: Welcome to CHRONDROLIA!\\pThieves? Stones? We heard the\\nrumors. None of it came here.\\pThere is no precious stone on this\\nisland. The TOPAZ is only a name.\\pRelax, trainer. Visit the GYM,\\nenjoy the lights."
+  "en": "MAYOR: Welcome to CHRONDROLIA!\\pThieves? Stones? We heard the\\nrumors. None of it came here.\\pThere is no precious stone on this\\nisland. The TOPAZ is only a name.\\pRelax, trainer. Visit the GYM,\\nenjoy the lights.",
+  "fr": "MAIRE : Bienvenue à CHRONDROLIA !\\pDes voleurs ? Des pierres ? On a\\nentendu les rumeurs. Rien n'est\\nvenu ici.\\pIl n'y a aucune pierre précieuse\\nsur cette île. La TOPAZE n'est\\nqu'un nom.\\pDétends-toi. Visite l'ARÈNE,\\nprofite des lumières."
+ },
+ "CinnabarIsland_Text_MayorReveal1": {
+  "en": "MAYOR: A fine badge, trainer.\\nWell done.\\pONYBRIS needed one honest hand to\\nopen the old vault under the PLANT.",
+  "fr": "MAIRE : Un beau badge. Bien joué.\\pONYBRIS avait besoin d'une main\\nhonnête pour ouvrir l'ancienne\\lchambre forte sous la CENTRALE."
+ },
+ "CinnabarIsland_Text_MayorReveal2": {
+  "en": "The TOPAZ sleeps in the transformer\\npark. Its heat feeds the volcano.\\pSELENE is already there. And the\\nPLANT is ours. All of it.",
+  "fr": "La TOPAZE dort dans le parc de\\ntransformateurs. Sa chaleur nourrit\\lle volcan.\\pSELENE y est déjà. Et la CENTRALE\\nest à nous. Tout entière."
+ },
+ "CinnabarIsland_Text_MayorReveal3": {
+  "en": "Do not take it personally. The\\nMASTER pays far better than the\\pcouncil. Now, excuse me. I have a\\nlot of lights to switch on… later.",
+  "fr": "Ne le prends pas personnellement.\\nLe MAÎTRE paie bien mieux que le\\lconseil. Maintenant, excuse-moi.\\nJ'ai beaucoup de lumières à\\lrallumer… plus tard."
  },
  "CinnabarIsland_Text_MyPalsBoatArrived": {
-  "fr": "On dirait que le bateau de mon\\nami est arrivé aussi.\\pIl l'a envoyé exprès à CHRONDROLIA\\npour me chercher.",
-  "en": "Looks like my pal's boat arrived,\\ntoo.\\pHe sent it specially here to\\nCHRONDROLIA to pick me up."
+  "en": "Looks like my pal's boat arrived,\\ntoo.\\pHe sent it specially here to\\nCHRONDROLIA to pick me up.",
+  "fr": "On dirait que le bateau de mon\\nami est arrivé aussi.\\pIl l'a envoyé exprès à CHRONDROLIA\\npour me chercher."
  },
  "CinnabarIsland_Text_PlantWorker": {
-  "fr": "OUVRIER : Tu te demandes pourquoi\\nla CENTRALE est sur cette île ?\\pLe volcan SEAFOAM dort juste sous\\nla mer. Toute cette chaleur fait\\nbouillir notre eau en vapeur. La\\pvapeur fait tourner les turbines.\\nÉnergie gratuite !\\pLa moitié des lumières de KANTO\\nvient de ce rocher.",
-  "en": "WORKER: Ever wonder why the PLANT\\nstands on this island?\\pThe SEAFOAM volcano sleeps right\\nunder the sea. All that heat boils\\pour water into steam. The steam\\nspins the turbines. Free power!\\pHalf the lights in KANTO come\\nfrom this rock."
+  "en": "WORKER: Ever wonder why the PLANT\\nstands on this island?\\pThe SEAFOAM volcano sleeps right\\nunder the sea. All that heat boils\\pour water into steam. The steam\\nspins the turbines. Free power!\\pHalf the lights in KANTO come\\nfrom this rock.",
+  "fr": "OUVRIER : Tu te demandes pourquoi\\nla CENTRALE est sur cette île ?\\pLe volcan SEAFOAM dort juste sous\\nla mer. Toute cette chaleur fait\\nbouillir notre eau en vapeur. La\\pvapeur fait tourner les turbines.\\nÉnergie gratuite !\\pLa moitié des lumières de KANTO\\nvient de ce rocher."
+ },
+ "CinnabarIsland_Text_PlantWorkerDone": {
+  "en": "WORKER: Those 'workers' were\\nONYBRIS for weeks!\\pThe grid is ours again. And the\\nlights are back on. Thanks, kid!",
+  "fr": "OUVRIER : Ces “ ouvriers ” étaient\\nONYBRIS depuis des semaines !\\pLe réseau est de nouveau à nous. Et\\nles lumières sont revenues. Merci !"
  },
  "CinnabarIsland_Text_PokemonLab": {
-  "fr": "LABO POKéMON",
-  "en": "POKéMON LAB"
+  "en": "POKéMON LAB",
+  "fr": "LABO POKéMON"
+ },
+ "CinnabarIsland_Text_ProcheChloe_After": {
+  "en": "Stay fiery, {PLAYER}. Never let the\\nflame go out.",
+  "fr": "Reste ardent, {PLAYER}. Ne laisse\\njamais la flamme s'éteindre."
+ },
+ "CinnabarIsland_Text_ProcheChloe_Defeat": {
+  "en": "Okay okay, you are on fire too!",
+  "fr": "D'accord, d'accord, toi aussi tu es\\nen feu !"
+ },
+ "CinnabarIsland_Text_ProcheChloe_Early": {
+  "en": "Not yet, {PLAYER}. Finish your\\njourney first, then come and find\\pme.",
+  "fr": "Pas encore, {PLAYER}. Termine\\nd'abord ton voyage, puis viens me\\ltrouver."
+ },
+ "CinnabarIsland_Text_ProcheChloe_Intro": {
+  "en": "Hey {PLAYER}! Hot day, hotter team.\\nTry not to get burned!",
+  "fr": "Salut {PLAYER} ! Journée chaude,\\néquipe plus chaude. Ne te brûle\\lpas !"
+ },
+ "CinnabarIsland_Text_ProcheChloe_NoRoom": {
+  "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reparle-moi."
+ },
+ "CinnabarIsland_Text_ProcheChloe_Win": {
+  "en": "Here, a little spark for your team.",
+  "fr": "Tiens, une petite étincelle pour\\nton équipe."
+ },
+ "CinnabarIsland_Text_RefAfter": {
+  "en": "IRIS: Take good care of it. The\\nnext REFUGE post is waiting.",
+  "fr": "IRIS : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
+ },
+ "CinnabarIsland_Text_RefAsk": {
+  "en": "IRIS: The old lab revived a creature\\nfrom the amber. It needs two MAX\\nPOTIONS to get through the week.",
+  "fr": "IRIS : Le vieux labo a ressuscité\\nune créature de l'ambre. Il lui\\lfaut deux MAX POTIONS pour tenir la\\nsemaine."
+ },
+ "CinnabarIsland_Text_RefDone": {
+  "en": "IRIS: Thank you again. The REFUGE\\nis safer because of you.",
+  "fr": "IRIS : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
+ },
+ "CinnabarIsland_Text_RefEarly": {
+  "en": "IRIS: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "fr": "IRIS : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\ldu PARC SAFARI connaît l'ordre."
+ },
+ "CinnabarIsland_Text_RefGives": {
+  "en": "IRIS: You saved the day. The post\\nhas a gift for you: AERODACTYL!",
+  "fr": "IRIS : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\lPTÉRA !"
+ },
+ "CinnabarIsland_Text_RefIdle": {
+  "en": "IRIS: I watch over the animals here.\\nThe world is quieter now.",
+  "fr": "IRIS : Je veille sur les animaux\\nici. Le monde est plus calme\\lmaintenant."
+ },
+ "CinnabarIsland_Text_RefNo": {
+  "en": "IRIS: I understand. It is a lot to\\nask. The offer stands.",
+  "fr": "IRIS : Je comprends. C'est beaucoup\\ndemander. L'offre tient toujours."
+ },
+ "CinnabarIsland_Text_RefOffer": {
+  "en": "IRIS: You have them! May I take\\n2 of them for the post?",
+  "fr": "IRIS : Tu les as ! Puis-je en\\nprendre 2 pour le poste ?"
  },
  "CinnabarIsland_Text_Scientist": {
-  "fr": "SCIENTIFIQUE : Il y a dix ans\\nl'AURA a changé le type de chaque\\nPOKéMON.\\pPas notre réseau. Pas notre île.\\nLe volcan le garde stable.\\pTout est sûr ici. Vraiment.",
-  "en": "SCIENTIST: Ten years ago the AURA\\nchanged every POKéMON's type.\\pNot our grid. Not our island.\\nThe volcano keeps it stable.\\pEverything is safe here. Really."
+  "en": "SCIENTIST: Ten years ago the AURA\\nchanged every POKéMON's type.\\pNot our grid. Not our island.\\nThe volcano keeps it stable.\\pEverything is safe here. Really.",
+  "fr": "SCIENTIFIQUE : Il y a dix ans\\nl'AURA a changé le type de chaque\\nPOKéMON.\\pPas notre réseau. Pas notre île.\\nLe volcan le garde stable.\\pTout est sûr ici. Vraiment."
+ },
+ "CinnabarIsland_Text_ScientistDone": {
+  "en": "SCIENTIST: The cadre said the\\neruption was their doing.\\pThe coast guard lifted the sea\\nroad ban. Be careful out there.",
+  "fr": "SCIENTIFIQUE : Le cadre a dit que\\nl'éruption était leur œuvre.\\pLes garde-côtes ont levé\\nl'interdiction de la route\\lmaritime. Sois prudent."
  },
  "CinnabarIsland_Text_ScientistsExperimentInMansion": {
-  "fr": "Ce grand bâtiment, c'est la\\nCENTRALE.\\pOn dit que c'était un manoir brûlé\\nil y a longtemps. Maintenant elle\\nfonctionne à la chaleur.\\pLa chaleur du volcan. De l'énergie\\ngratuite, pour toujours.",
-  "en": "That big building is the PLANT.\\pThey say it was a burned mansion\\nlong ago. Now it runs on heat.\\pVolcano heat. Free power, forever."
+  "en": "That big building is the PLANT.\\pThey say it was a burned mansion\\nlong ago. Now it runs on heat.\\pVolcano heat. Free power, forever.",
+  "fr": "Ce grand bâtiment, c'est la\\nCENTRALE.\\pOn dit que c'était un manoir brûlé\\nil y a longtemps. Maintenant elle\\nfonctionne à la chaleur.\\pLa chaleur du volcan. De l'énergie\\ngratuite, pour toujours."
+ },
+ "CinnabarIsland_Text_TQ_Ask": {
+  "en": "I need a MAGNET for my experiment.\\nCan you spare one?",
+  "fr": "J'ai besoin d'un AIMANT pour mon\\nexpérience. Peux-tu m'en céder un ?"
+ },
+ "CinnabarIsland_Text_TQ_Done": {
+  "en": "The experiment is a success.",
+  "fr": "L'expérience est un succès."
  },
  "CinnabarIsland_Text_TQ_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "CinnabarIsland_Text_TQ_Ok": {
+  "en": "Fascinating! Take this ICE.",
+  "fr": "Fascinant ! Prends cette GLACE."
  }
 }

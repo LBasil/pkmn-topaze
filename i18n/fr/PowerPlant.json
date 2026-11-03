@@ -1,6 +1,54 @@
 {
+ "PowerPlant_Text_Guard0Defeat": {
+  "en": "Fried...",
+  "fr": "Grillé…"
+ },
+ "PowerPlant_Text_Guard0Intro": {
+  "en": "The STORM roars in these halls.\\pYou are not invited.",
+  "fr": "L'ORAGE gronde dans ces salles.\\pTu n'es pas invité."
+ },
+ "PowerPlant_Text_Guard0Post": {
+  "en": "The ORACLE feels the thunder.",
+  "fr": "L'ORACLE sent le tonnerre."
+ },
+ "PowerPlant_Text_Guard1Defeat": {
+  "en": "Short circuit...",
+  "fr": "Court-circuit…"
+ },
+ "PowerPlant_Text_Guard1Intro": {
+  "en": "We keep the bird's sky safe.",
+  "fr": "Nous gardons le ciel de l'oiseau en\\nsécurité."
+ },
+ "PowerPlant_Text_Guard1Post": {
+  "en": "Keep going, if you dare.",
+  "fr": "Continue, si tu l'oses."
+ },
+ "PowerPlant_Text_Guard2Defeat": {
+  "en": "Power out...",
+  "fr": "Panne de courant…"
+ },
+ "PowerPlant_Text_Guard2Intro": {
+  "en": "Hear that hum? It is a warning.",
+  "fr": "Tu entends ce bourdonnement ? C'est\\nun avertissement."
+ },
  "PowerPlant_Text_Guard2Post": {
-  "fr": "L'ORACLE est juste devant.",
-  "en": "The ORACLE is just ahead."
+  "en": "The ORACLE is just ahead.",
+  "fr": "L'ORACLE est juste devant."
+ },
+ "PowerPlant_Text_Guard3Defeat": {
+  "en": "...Then the storm has chosen you.",
+  "fr": "…Alors l'orage t'a choisi."
+ },
+ "PowerPlant_Text_Guard3Intro": {
+  "en": "I am the ORACLE of the STORM.\\nThe bird sleeps under my watch.\\pProve that your spark is worth\\nmore than my fear.",
+  "fr": "Je suis l'ORACLE de l'ORAGE.\\nL'oiseau dort sous ma garde.\\pProuve que ton étincelle vaut plus\\nque ma peur."
+ },
+ "PowerPlant_Text_Guard3Post": {
+  "en": "Go. Do not waste the lightning.",
+  "fr": "Va. Ne gaspille pas la foudre."
+ },
+ "PowerPlant_Text_ZapdosGuarded": {
+  "en": "Sparks crackle around ZAPDOS.\\nThe four channelers still guard\\lit. They must all yield first.",
+  "fr": "Des étincelles crépitent autour de\\nÉLECTHOR. Les quatre médiums le\\lgardent encore. Ils doivent tous\\ncéder d'abord."
  }
 }

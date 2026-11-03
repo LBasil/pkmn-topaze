@@ -1,0 +1,70 @@
+{
+ "Route4East_Text_EastSign": {
+  "en": "TOURMALINE TRAIL\\nTOURMALIA - MT. MOON",
+  "fr": "SENTIER DE LA TOURMALINE\\nTOURMALIA - MT. MOON"
+ },
+ "Route4East_Text_LeoDefeat": {
+  "en": "You ruined my evening.",
+  "fr": "Tu as gâché ma soirée."
+ },
+ "Route4East_Text_LeoIntro": {
+  "en": "Camping here is great. No one\\nbothers you, except TRAINERS!",
+  "fr": "Camper ici est génial. Personne ne\\nte dérange, sauf les DRESSEURS !"
+ },
+ "Route4East_Text_LeoPostBattle": {
+  "en": "The trees get thicker toward the\\ncrystals. Watch your step.",
+  "fr": "Les arbres s'épaississent vers les\\ncristaux. Fais attention."
+ },
+ "Route4East_Text_MarcoDefeat": {
+  "en": "My legs are fine.\\nMy POKéMON, less so.",
+  "fr": "Mes jambes vont bien.\\nMes POKéMON, moins."
+ },
+ "Route4East_Text_MarcoIntro": {
+  "en": "I climbed the whole MT. MOON\\nflank. This trail is easy!",
+  "fr": "J'ai grimpé tout le flanc du MT.\\nMOON. Ce sentier est facile !"
+ },
+ "Route4East_Text_MarcoPostBattle": {
+  "en": "The dust turns to moss further\\neast. That is where the\\pTOURMALINE starts to grow.",
+  "fr": "La poussière devient mousse plus à\\nl'est. C'est là que la\\pTOURMALINE commence à pousser."
+ },
+ "Route4East_Text_NinaDefeat": {
+  "en": "You broke my concentration!",
+  "fr": "Tu as brisé ma concentration !"
+ },
+ "Route4East_Text_NinaIntro": {
+  "en": "These crystals sing when the\\nwind blows. Listen!",
+  "fr": "Ces cristaux chantent quand le vent\\nsouffle. Écoute !"
+ },
+ "Route4East_Text_NinaPostBattle": {
+  "en": "TOURMALIA is just ahead. Its\\nhouses are built in the trees.",
+  "fr": "TOURMALIA est juste devant. Ses\\nmaisons sont construites dans les\\larbres."
+ },
+ "Route4East_Text_RioDefeat": {
+  "en": "My bugs are special!",
+  "fr": "Mes insectes sont spéciaux !"
+ },
+ "Route4East_Text_RioIntro": {
+  "en": "Bugs are different since the\\nAURA. Check their types!",
+  "fr": "Les insectes ont changé depuis\\nl'AURA. Vérifie leurs types !"
+ },
+ "Route4East_Text_RioPostBattle": {
+  "en": "CATERPIE is PSYCHIC now.\\nWEEDLE is ELECTRIC.\\pMind its sting.",
+  "fr": "CHENIPAN est PSY maintenant.\\nASPICOT est ÉLECTRIK.\\pAttention à son dard."
+ },
+ "Route4East_Text_TessaDefeat": {
+  "en": "Oh no, my sparkles!",
+  "fr": "Oh non, mes paillettes !"
+ },
+ "Route4East_Text_TessaIntro": {
+  "en": "The ground sparkles here!\\nIt's moon dust, you know.",
+  "fr": "Le sol scintille ici ! C'est de la\\npoussière de lune, tu sais."
+ },
+ "Route4East_Text_TessaPostBattle": {
+  "en": "CLEFAIRY dance in the moon dust\\nwhen the sky is clear.",
+  "fr": "Les MÉLOFÉE dansent dans la\\npoussière de lune quand le ciel est\\ldégagé."
+ },
+ "Route4East_Text_WestSign": {
+  "en": "TOURMALINE TRAIL\\nMT. MOON - TOURMALIA",
+  "fr": "SENTIER DE LA TOURMALINE\\nMT. MOON - TOURMALIA"
+ }
+}

@@ -1,6 +1,178 @@
 {
+ "PewterCity_Text_AskedToDeliverThis": {
+  "en": "I'm glad I caught up to you.\\nI'm PROF. OAK's AIDE.\\pI've been asked to deliver this,\\nso here you go.",
+  "fr": "Content de t'avoir rattrapé.\\nJe suis l'ASSISTANT du PROF. CHEN.\\pOn m'a demandé de te livrer ceci,\\nalors tiens."
+ },
+ "PewterCity_Text_BrockOnlySeriousTrainerHere": {
+  "en": "There aren't many serious POKéMON\\nTRAINERS here.\\pThey're all like BUG CATCHERS,\\nyou know, just hobbyists.\\pBut PYROPIA GYM's KAY isn't like\\nthat, not one bit.",
+  "fr": "Il n'y a pas beaucoup de sérieux\\nDRESSEURS POKéMON ici.\\pCe sont tous comme des CHASSEURS\\nD'INSECTES, tu sais, de simples\\lamateurs.\\pMais KAY de l'ARÈNE DE PYROPIA\\nn'est pas comme ça, pas du tout."
+ },
+ "PewterCity_Text_BrocksLookingForChallengersFollowMe": {
+  "en": "You're a TRAINER, right?\\pKAY is looking for new\\nchallengers. Follow me!",
+  "fr": "Tu es DRESSEUR, non ?\\pKAY cherche de nouveaux\\nchallengers. Suis-moi !"
+ },
+ "PewterCity_Text_CallPoliceIfInfoOnThieves": {
+  "en": "NOTICE!\\pThe PYROPE gem was stolen from the\\nMUSEUM by TEAM ONYBRIS.\\pPlease call the PYROPIA POLICE if\\nyou have any information.",
+  "fr": "AVIS !\\pLa gemme PYROPE a été volée au\\nMUSÉE par la TEAM ONYBRIS.\\pAppelez la POLICE DE PYROPIA si\\nvous avez des informations."
+ },
+ "PewterCity_Text_Camper": {
+  "en": "I came to see the volcano.\\pNow I can't stop looking at the\\nlava lake. It's hypnotic.",
+  "fr": "Je suis venu voir le volcan.\\pMaintenant je ne peux plus quitter\\ndes yeux le lac de lave. C'est\\lhypnotique."
+ },
+ "PewterCity_Text_CitySign": {
+  "en": "PYROPIA\\nCity at the Foot of the Volcano",
+  "fr": "PYROPIA\\nLa Ville au Pied du Volcan"
+ },
+ "PewterCity_Text_ClefairyCameFromMoon": {
+  "en": "CLEFAIRY came from the moon.\\nThat's what the rumor is.\\pThey appeared after MOON STONES\\nfell on MT. MOON.",
+  "fr": "MÉLOFÉE vient de la lune.\\nC'est la rumeur.\\pIls sont apparus après la chute de\\nPIERRES LUNE sur le MT. MOON."
+ },
+ "PewterCity_Text_DidYouCheckOutMuseum": {
+  "en": "Did you check out the MUSEUM?",
+  "fr": "As-tu visité le MUSÉE ?"
+ },
+ "PewterCity_Text_DoYouKnowWhatImDoing": {
+  "en": "Psssst!\\nDo you know what I'm doing?",
+  "fr": "Pssst !\\nSais-tu ce que je fais ?"
+ },
+ "PewterCity_Text_ExplainRunningShoes": {
+  "en": "Press the B Button to run.\\nBut only where there's room to run!",
+  "fr": "Appuie sur le bouton B pour courir.\\nMais seulement là où il y a de la\\lplace !"
+ },
+ "PewterCity_Text_GoTakeOnBrock": {
+  "en": "If you have the right stuff,\\ngo take on KAY!",
+  "fr": "Si tu as ce qu'il faut, va défier\\nKAY !"
+ },
+ "PewterCity_Text_Grandma": {
+  "en": "Careful near the CAIRN.\\nThe flame there has never gone\\nout, not once.",
+  "fr": "Attention près du CAIRN. La flamme\\nn'y a jamais été éteinte, pas une\\lseule fois."
+ },
+ "PewterCity_Text_Guide": {
+  "en": "They got into the MUSEUM last\\nnight, and no one heard a thing.\\pKAY's POKéMON were up on the\\nvolcano. Bad timing for us.",
+  "fr": "Ils sont entrés dans le MUSÉE hier\\nsoir, et personne n'a rien entendu.\\pLes POKéMON de KAY étaient sur le\\nvolcan. Mauvais timing pour nous."
+ },
+ "PewterCity_Text_GymSign": {
+  "en": "PYROPIA POKéMON GYM\\nLEADER: KAY",
+  "fr": "ARÈNE POKéMON DE PYROPIA\\nCHAMPIONNE : KAY"
+ },
+ "PewterCity_Text_Kid": {
+  "en": "The stairs are warm! Even in\\nwinter!\\pI like to sit on them.",
+  "fr": "Les marches sont chaudes ! Même en\\nhiver !\\pJ'aime m'y asseoir."
+ },
+ "PewterCity_Text_Miner": {
+  "en": "The crater lake never cools.\\pKAY says that's why the FIRE\\nPOKéMON here are so strong.",
+  "fr": "Le lac du cratère ne refroidit\\njamais.\\pKAY dit que c'est pour ça que les\\nPOKéMON FEU d'ici sont si forts."
+ },
+ "PewterCity_Text_MuseumOfScience": {
+  "en": "PYROPIA MUSEUM OF SCIENCE",
+  "fr": "MUSÉE DES SCIENCES DE PYROPIA"
+ },
+ "PewterCity_Text_MustBeGoingBackToLab": {
+  "en": "Well, I must be going back to\\nthe LAB.\\pBye-bye!",
+  "fr": "Bon, je dois retourner au LABO.\\pAu revoir !"
+ },
+ "PewterCity_Text_OhPlayer": {
+  "en": "Oh, {PLAYER}{KUN}!",
+  "fr": "Oh, {PLAYER}{KUN} !"
+ },
+ "PewterCity_Text_ReallyYouHaveToGo": {
+  "en": "Really?\\nYou absolutely have to go!",
+  "fr": "Vraiment ?\\nTu dois absolument y aller !"
+ },
+ "PewterCity_Text_ReceivedRunningShoesFromAide": {
+  "en": "{PLAYER} received the\\nRUNNING SHOES from the AIDE.",
+  "fr": "{PLAYER} a reçu les CHAUSSURES DE\\nCOURSE de l'ASSISTANT."
+ },
+ "PewterCity_Text_RefAfter": {
+  "en": "CLEO: Take good care of it. The\\nnext REFUGE post is waiting.",
+  "fr": "CLEO : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
+ },
+ "PewterCity_Text_RefAsk": {
+  "en": "CLEO: A DRATINI came down from the\\nmountain, sick and scared. I need\\nthree FULL HEALS to cure it.",
+  "fr": "CLEO : Un MINIDRACO est descendu de\\nla montagne, malade et effrayé.\\pJ'ai besoin de trois TOUT-SOIN pour\\nle guérir."
+ },
+ "PewterCity_Text_RefDone": {
+  "en": "CLEO: Thank you again. The REFUGE\\nis safer because of you.",
+  "fr": "CLEO : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
+ },
+ "PewterCity_Text_RefEarly": {
+  "en": "CLEO: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "fr": "CLEO : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\ldu PARC SAFARI connaît l'ordre."
+ },
+ "PewterCity_Text_RefGives": {
+  "en": "CLEO: You saved the day. The post\\nhas a gift for you: DRATINI!",
+  "fr": "CLEO : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\pMINIDRACO !"
+ },
+ "PewterCity_Text_RefIdle": {
+  "en": "CLEO: I watch over the animals here.\\nThe world is quieter now.",
+  "fr": "CLEO : Je veille sur les animaux\\nici. Le monde est plus calme\\lmaintenant."
+ },
+ "PewterCity_Text_RefNo": {
+  "en": "CLEO: I understand. It is a lot to\\nask. The offer stands.",
+  "fr": "CLEO : Je comprends. C'est beaucoup\\ndemander. L'offre tient toujours."
+ },
+ "PewterCity_Text_RefOffer": {
+  "en": "CLEO: You have them! May I take\\n3 of them for the post?",
+  "fr": "CLEO : Tu les as ! Puis-je en\\nprendre 3 pour le poste ?"
+ },
+ "PewterCity_Text_RunningShoesLetterFromMom": {
+  "en": "There's a letter attached…\\pDear {PLAYER},\\pHere is a pair of RUNNING SHOES\\nfor my beloved challenger.\\pRemember, I'll always cheer for\\nyou! Don't ever give up!\\pFrom Mom",
+  "fr": "Une lettre est attachée…\\pCher(e) {PLAYER},\\pVoici une paire de CHAUSSURES DE\\nCOURSE pour mon challenger\\lbien-aimé.\\pRappelle-toi, je t'encouragerai\\ntoujours ! N'abandonne jamais !\\pDe Maman"
+ },
+ "PewterCity_Text_Scientist": {
+  "en": "I measure the lava every morning.\\pIt's rising. A little. Don't tell\\nthe MAYOR.",
+  "fr": "Je mesure la lave chaque matin.\\pElle monte. Un peu. Ne le dis pas\\nau MAIRE."
+ },
+ "PewterCity_Text_SprayingRepelToKeepWildMonsOut": {
+  "en": "I'm spraying REPEL to keep wild\\nPOKéMON out of my garden!",
+  "fr": "Je vaporise du REPOUSSE pour tenir\\nles POKéMON sauvages hors de mon\\ljardin !"
+ },
+ "PewterCity_Text_SwitchedShoesWithRunningShoes": {
+  "en": "{PLAYER} switched shoes with the\\nRUNNING SHOES.",
+  "fr": "{PLAYER} a changé de chaussures pour\\nles CHAUSSURES DE COURSE."
+ },
+ "PewterCity_Text_TQ_Ask": {
+  "en": "A STAR PIECE would complete my rock\\ncollection.",
+  "fr": "Un MORCEAU D'ÉTOILE compléterait ma\\ncollection de roches."
+ },
+ "PewterCity_Text_TQ_Done": {
+  "en": "It sparkles above my desk.",
+  "fr": "Il brille au-dessus de mon bureau."
+ },
  "PewterCity_Text_TQ_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "PewterCity_Text_TQ_Ok": {
+  "en": "Beautiful! A HARD STONE for you.",
+  "fr": "Magnifique ! Une PIERRE DURE pour\\ntoi."
+ },
+ "PewterCity_Text_ThatsRightItsHardWork": {
+  "en": "That's right!\\nIt's hard work!",
+  "fr": "C'est ça !\\nC'est un dur travail !"
+ },
+ "PewterCity_Text_ThisIsTheMuseum": {
+  "en": "This is it, the MUSEUM.\\pYou have to pay to get in, but it's\\nworth it. See you around!",
+  "fr": "Voilà, le MUSÉE.\\pIl faut payer pour entrer, mais ça\\nen vaut la peine. À plus !"
+ },
+ "PewterCity_Text_WerentThoseFossilsAmazing": {
+  "en": "Weren't those fossils from MT. MOON\\namazing?",
+  "fr": "Ces fossiles du MT. MOON\\nn'étaient-ils pas incroyables ?"
+ },
+ "Text_DreamEaterDeclined": {
+  "en": "…Snore…",
+  "fr": "…Ronflement…"
+ },
+ "Text_DreamEaterTaught": {
+  "en": "…ZZZ…\\nI…can't eat…anymore…",
+  "fr": "…ZZZ…\\nJe… ne peux plus… manger…"
+ },
+ "Text_DreamEaterTeach": {
+  "en": "Yawn!\\nI must have dozed off in the sun.\\pI had this weird dream about\\na DROWZEE eating my dream.\\pAnd…\\nI learned how to eat dreams…\\pOogh, this is too spooky!\\pLet me teach it to a POKéMON so\\nI can forget about it!",
+  "fr": "Bâillement !\\nJ'ai dû m'endormir au soleil.\\pJ'ai fait un drôle de rêve où un\\nSOPORIFIK mangeait mon rêve.\\pEt…\\nJ'ai appris à manger les rêves…\\pOuh, c'est trop flippant !\\pLaisse-moi l'apprendre à un POKéMON\\npour que je l'oublie !"
+ },
+ "Text_DreamEaterWhichMon": {
+  "en": "Which POKéMON wants to learn\\nDREAM EATER?",
+  "fr": "Quel POKéMON veut apprendre\\nDÉVORÊVE ?"
  }
 }

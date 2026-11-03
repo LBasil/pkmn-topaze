@@ -1,0 +1,18 @@
+{
+ "Route6_NorthEntrance_Text_HiHowsItGoing": {
+  "en": "Hi, how's it going?",
+  "fr": "Salut, comment ça va ?"
+ },
+ "Route6_NorthEntrance_Text_ThanksIllShareTeaWithGuards": {
+  "en": "Huh? I can have this drink?\\nGee, thanks!\\l… …\\lGlug, glug…\\l… …\\lGulp…\\lIf you want to go to HEMATOWN\\lCITY…\\l… …\\lYou can go on through.\\pI'll share this TEA with the other\\nguards!",
+  "fr": "Hein ? Je peux avoir cette\\nboisson ? Merci beaucoup ! … …\\lGlou, glou… … … Gulp… Si tu veux\\naller à HEMATOWN… … … Tu peux\\lpasser.\\pJe partagerai ce THÉ avec les\\nautres gardes !"
+ },
+ "Route6_NorthEntrance_Text_ThatTeaLooksTasty": {
+  "en": "Oh, that TEA…\\nIt looks awfully tasty…",
+  "fr": "Oh, ce THÉ…\\nIl a l'air délicieux…"
+ },
+ "Route6_NorthEntrance_Text_ThirstyOnGuardDuty": {
+  "en": "I'm on guard duty.\\nGee, I'm thirsty, though!\\pOh, wait there, the road's closed.",
+  "fr": "Je suis de garde.\\nMince, j'ai tellement soif !\\pOh, attends, la route est fermée."
+ }
+}

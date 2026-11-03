@@ -1,18 +1,42 @@
 {
+ "EeveeGrove_Text_Npc0": {
+  "en": "EEVEE can become many things.\\nStones, bonds, patience.",
+  "fr": "ÉVOLI peut devenir bien des choses.\\nPierres, liens, patience."
+ },
+ "EeveeGrove_Text_Npc1": {
+  "en": "I saw all of the family under the\\nsame tree.",
+  "fr": "J'ai vu toute la famille sous le\\nmême arbre."
+ },
+ "EeveeGrove_Text_Quest0_AfterT": {
+  "en": "The grove is happy.",
+  "fr": "Le bosquet est heureux."
+ },
+ "EeveeGrove_Text_Quest0_Ask": {
+  "en": "A fizzy drink for my little one,\\nand a bell for you.",
+  "fr": "Une boisson pétillante pour mon\\npetit, et une cloche pour toi."
+ },
+ "EeveeGrove_Text_Quest0_Done": {
+  "en": "Cheers! Take this SOOTHE BELL.",
+  "fr": "À la tienne ! Prends cette CLOCHE\\nAPAISANTE."
+ },
+ "EeveeGrove_Text_Quest0_MissT": {
+  "en": "One SODA POP, please. The cafe\\nsells them.",
+  "fr": "Un SODA COOL, s'il vous plaît. Le\\ncafé en vend."
+ },
  "EeveeGrove_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "EeveeGrove_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "EeveeGrove_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "EeveeGrove_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

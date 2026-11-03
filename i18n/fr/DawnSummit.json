@@ -1,10 +1,18 @@
 {
+ "DawnSummit_Text_Npc0": {
+  "en": "The sun rises here first. It is\\nworth the climb.",
+  "fr": "Le soleil se lève ici en premier.\\nÇa vaut la montée."
+ },
+ "DawnSummit_Text_Npc1": {
+  "en": "Only the strongest reach the\\nsummit.",
+  "fr": "Seuls les plus forts atteignent le\\nsommet."
+ },
  "DawnSummit_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "DawnSummit_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

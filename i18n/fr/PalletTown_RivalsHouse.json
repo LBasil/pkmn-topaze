@@ -1,0 +1,98 @@
+{
+ "PalletTown_RivalsHouse_Text_CantGroomAnEgg": {
+  "en": "Oh, sorry. I honestly can't\\ngroom an EGG.",
+  "fr": "Oh, désolée. Je ne peux vraiment\\npas toiletter un ŒUF."
+ },
+ "PalletTown_RivalsHouse_Text_CouldntLoveYouMore": {
+  "en": "It couldn't possibly love you\\nany more than it does now.\\pYour POKéMON is happy beyond\\nwords.",
+  "fr": "Il ne pourrait pas t'aimer plus\\nqu'il ne le fait déjà.\\pTon POKéMON est heureux au-delà des\\nmots."
+ },
+ "PalletTown_RivalsHouse_Text_DaisyStrike": {
+  "en": "DAISY: Dad is mending the fence,\\nand Grandpa is not himself.\\pPlease be careful out there,\\n{PLAYER}. And take care of {RIVAL}.",
+  "fr": "DAISY : Papa répare la clôture, et\\nPapy n'est pas dans son assiette.\\pFais attention là-bas, {PLAYER}. Et\\nprends soin de {RIVAL}."
+ },
+ "PalletTown_RivalsHouse_Text_DontHaveSpaceForThis": {
+  "en": "You don't have space for this in\\nyour BAG.",
+  "fr": "Tu n'as pas de place pour ça dans\\nton SAC."
+ },
+ "PalletTown_RivalsHouse_Text_DontLikeWayItGlaresAtYou": {
+  "en": "{PLAYER}, I don't like the way it\\nglares at you.\\pCould you try being a little nicer\\nto it?",
+  "fr": "{PLAYER}, je n'aime pas la façon\\ndont il te regarde de travers.\\pPourrais-tu essayer d'être un peu\\nplus gentil avec lui ?"
+ },
+ "PalletTown_RivalsHouse_Text_DontNeedAnyGrooming": {
+  "en": "You don't need any grooming done?\\nOkay, we'll just have tea.",
+  "fr": "Tu n'as pas besoin de toilettage ?\\nD'accord, on prendra juste le thé."
+ },
+ "PalletTown_RivalsHouse_Text_ErrandForGrandpaThisWillHelp": {
+  "en": "Grandpa asked you to run an\\nerrand?\\pGee, that's lazy of him.\\nHere, this will help you.",
+  "fr": "Papy t'a demandé de faire une\\ncourse ?\\pQuel paresseux.\\nTiens, ça t'aidera."
+ },
+ "PalletTown_RivalsHouse_Text_ExplainTownMap": {
+  "en": "You can use the TOWN MAP to find\\nout where you are, or check the\\lnames of places.",
+  "fr": "Tu peux utiliser la CARTE pour\\nsavoir où tu es, ou vérifier le nom\\ldes lieux."
+ },
+ "PalletTown_RivalsHouse_Text_GroomWhichOne": {
+  "en": "Which one should I groom?",
+  "fr": "Lequel dois-je toiletter ?"
+ },
+ "PalletTown_RivalsHouse_Text_HeardYouBattledRival": {
+  "en": "DAISY: {PLAYER}, I heard you had\\na battle against {RIVAL}.\\pI wish I'd seen that!",
+  "fr": "DAISY : {PLAYER}, j'ai entendu dire\\nque tu as combattu {RIVAL}.\\pJ'aurais aimé voir ça !"
+ },
+ "PalletTown_RivalsHouse_Text_HiBrothersAtLab": {
+  "en": "DAISY: Hi, {PLAYER}!\\pMy brother, {RIVAL}, is out at\\nGrandpa's LAB.",
+  "fr": "DAISY : Salut, {PLAYER} !\\pMon frère, {RIVAL}, est au LABO de\\nPapy."
+ },
+ "PalletTown_RivalsHouse_Text_ItLooksVeryHappy": {
+  "en": "It looks very happy.\\pI wish {RIVAL} could see this and\\nlearn something from it.",
+  "fr": "Il a l'air très heureux.\\pJ'aimerais que {RIVAL} voie ça et\\nen tire une leçon."
+ },
+ "PalletTown_RivalsHouse_Text_ItsBigMapOfKanto": {
+  "en": "It's a big map of the KANTO region.\\nNow this would be useful!",
+  "fr": "C'est une grande carte de la région\\nde KANTO. Elle serait bien utile !"
+ },
+ "PalletTown_RivalsHouse_Text_ItsQuiteFriendly": {
+  "en": "It's quite friendly with you.\\nKeep being good to it!",
+  "fr": "Il est assez amical avec toi.\\nContinue d'être gentil avec lui !"
+ },
+ "PalletTown_RivalsHouse_Text_ItsWarmingUpToYou": {
+  "en": "It's warming up to you.\\nTrust must be growing between you.",
+  "fr": "Il se rapproche de toi. La\\nconfiance doit grandir entre vous."
+ },
+ "PalletTown_RivalsHouse_Text_LikeMeToGroomMon": {
+  "en": "DAISY: Hi, {PLAYER}!\\nGood timing.\\pI'm about to have some tea.\\nWould you like to join me?\\pOh, but look.\\nYour POKéMON are a little dirty.\\pWould you like me to groom one?",
+  "fr": "DAISY : Salut, {PLAYER} !\\nTu tombes bien.\\pJe vais prendre le thé.\\nVeux-tu te joindre à moi ?\\pOh, mais regarde.\\nTes POKéMON sont un peu sales.\\pVeux-tu que j'en toilette un ?"
+ },
+ "PalletTown_RivalsHouse_Text_LookingNiceInNoTime": {
+  "en": "DAISY: Okay, I'll get it looking\\nnice in no time.",
+  "fr": "DAISY : D'accord, je vais le rendre\\nbeau en un rien de temps."
+ },
+ "PalletTown_RivalsHouse_Text_LovelyAndSweetClefairy": {
+  "en": "“The lovely and sweet\\nCLEFAIRY”",
+  "fr": "“ L'adorable et douce\\nMÉLOFÉE ”"
+ },
+ "PalletTown_RivalsHouse_Text_MayISeeFirstMon": {
+  "en": "DAISY: Your POKéMON grow to love\\nyou if you raise them with love.\\pFor example, {PLAYER}, may I see\\nyour first POKéMON?",
+  "fr": "DAISY : Tes POKéMON t'aiment si tu\\nles élèves avec amour.\\pPar exemple, {PLAYER}, puis-je voir\\nton premier POKéMON ?"
+ },
+ "PalletTown_RivalsHouse_Text_NotFamiliarWithYouYet": {
+  "en": "It's not quite familiar with you\\nyet.\\pPOKéMON are all quite wary when\\nyou first get them.",
+  "fr": "Il ne te connaît pas encore très\\nbien.\\pLes POKéMON sont tous méfiants\\nquand on les reçoit."
+ },
+ "PalletTown_RivalsHouse_Text_PleaseGiveMonsRest": {
+  "en": "DAISY: Just like people, POKéMON\\nare living things.\\pWhen they get tired, please give\\nthem a rest.",
+  "fr": "DAISY : Comme les gens, les POKéMON\\nsont des êtres vivants.\\pQuand ils sont fatigués, laisse-les\\nse reposer, s'il te plaît."
+ },
+ "PalletTown_RivalsHouse_Text_ReceivedTownMapFromDaisy": {
+  "en": "{PLAYER} received a TOWN MAP\\nfrom DAISY.",
+  "fr": "{PLAYER} a reçu une CARTE\\nde DAISY."
+ },
+ "PalletTown_RivalsHouse_Text_ShelvesCrammedFullOfBooks": {
+  "en": "The shelves are crammed full of\\nbooks on POKéMON.",
+  "fr": "Les étagères sont remplies de\\nlivres sur les POKéMON."
+ },
+ "PalletTown_RivalsHouse_Text_WhyWouldMonHateYouSoMuch": {
+  "en": "…Um, it's not easy for me to say\\nthis, but…\\pIs there some reason why your\\nPOKéMON would hate you so much?",
+  "fr": "…Euh, ce n'est pas facile à dire,\\nmais…\\pY a-t-il une raison pour laquelle\\nton POKéMON te détesterait autant ?"
+ }
+}

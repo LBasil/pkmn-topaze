@@ -1,42 +1,42 @@
 {
  "CeruleanCity_BikeShop_Text_BikesCoolButExpensive": {
-  "fr": "Ces vélos sont super, mais ils\\ncoûtent trop cher !",
-  "en": "These bikes are cool, but they're\\nway expensive!"
+  "en": "These bikes are cool, but they're\\nway expensive!",
+  "fr": "Ces vélos sont super, mais ils\\ncoûtent trop cher !"
  },
  "CeruleanCity_BikeShop_Text_CityBikeGoodEnoughForMe": {
-  "fr": "Un simple vélo de ville me suffit.\\pAprès tout, on ne peut pas mettre\\nun panier de courses sur un VTT.",
-  "en": "A plain city bike is good enough\\nfor me.\\pAfter all, you can't put a shopping\\nbasket on a mountain bike."
+  "en": "A plain city bike is good enough\\nfor me.\\pAfter all, you can't put a shopping\\nbasket on a mountain bike.",
+  "fr": "Un simple vélo de ville me suffit.\\pAprès tout, on ne peut pas mettre\\nun panier de courses sur un VTT."
  },
  "CeruleanCity_BikeShop_Text_ExchangedVoucherForBicycle": {
-  "fr": "{PLAYER} a échangé le BON POUR UN\\nVÉLO contre une BICYCLETTE.",
-  "en": "{PLAYER} exchanged the\\nBIKE VOUCHER for a BICYCLE."
+  "en": "{PLAYER} exchanged the\\nBIKE VOUCHER for a BICYCLE.",
+  "fr": "{PLAYER} a échangé le BON POUR UN\\nVÉLO contre une BICYCLETTE."
  },
  "CeruleanCity_BikeShop_Text_HowDoYouLikeNewBicycle": {
-  "fr": "Comment tu trouves ta BICYCLETTE ?\\nElle roule bien ?\\pTu peux l'emmener sur la PISTE\\nCYCLABLE et même dans les grottes !",
-  "en": "How do you like your new BICYCLE?\\nDo you like how it rides?\\pYou can take it out on CYCLING\\nROAD and even into caves!"
+  "en": "How do you like your new BICYCLE?\\nDo you like how it rides?\\pYou can take it out on CYCLING\\nROAD and even into caves!",
+  "fr": "Comment tu trouves ta BICYCLETTE ?\\nElle roule bien ?\\pTu peux l'emmener sur la PISTE\\nCYCLABLE et même dans les grottes !"
  },
  "CeruleanCity_BikeShop_Text_OhBikeVoucherHereYouGo": {
-  "fr": "Oh, c'est...\\pUn BON POUR UN VÉLO !\\pD'accord !\\nTiens, voilà !",
-  "en": "Oh, that's…\\pA BIKE VOUCHER!\\pOkay!\\nHere you go!"
+  "en": "Oh, that's…\\pA BIKE VOUCHER!\\pOkay!\\nHere you go!",
+  "fr": "Oh, c'est...\\pUn BON POUR UN VÉLO !\\pD'accord !\\nTiens, voilà !"
  },
  "CeruleanCity_BikeShop_Text_ShinyNewBicycle": {
-  "fr": "Une BICYCLETTE flambant neuve !",
-  "en": "A shiny new BICYCLE!"
+  "en": "A shiny new BICYCLE!",
+  "fr": "Une BICYCLETTE flambant neuve !"
  },
  "CeruleanCity_BikeShop_Text_SorryYouCantAffordIt": {
-  "fr": "Désolé !\\nTu n'as pas les moyens !",
-  "en": "Sorry!\\nYou can't afford it!"
+  "en": "Sorry!\\nYou can't afford it!",
+  "fr": "Désolé !\\nTu n'as pas les moyens !"
  },
  "CeruleanCity_BikeShop_Text_ThankYouComeAgain": {
-  "fr": "Merci !\\nReviens quand tu veux !",
-  "en": "Thank you!\\nCome back again sometime!"
+  "en": "Thank you!\\nCome back again sometime!",
+  "fr": "Merci !\\nReviens quand tu veux !"
  },
  "CeruleanCity_BikeShop_Text_WelcomeToBikeShop": {
-  "fr": "Salut ! Bienvenue dans notre\\nBOUTIQUE DE VÉLOS.\\pOn a le VÉLO qu'il te faut !",
-  "en": "Hi!\\nWelcome to our BIKE SHOP.\\pHave we got just the BIKE for\\nyou!"
+  "en": "Hi!\\nWelcome to our BIKE SHOP.\\pHave we got just the BIKE for\\nyou!",
+  "fr": "Salut ! Bienvenue dans notre\\nBOUTIQUE DE VÉLOS.\\pOn a le VÉLO qu'il te faut !"
  },
  "CeruleanCity_BikeShop_Text_WowYourBikeIsCool": {
-  "fr": "Waouh.\\nTon VÉLO est vraiment classe !",
-  "en": "Wow.\\nYour BIKE is really cool!"
+  "en": "Wow.\\nYour BIKE is really cool!",
+  "fr": "Waouh.\\nTon VÉLO est vraiment classe !"
  }
 }

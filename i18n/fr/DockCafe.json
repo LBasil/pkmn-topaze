@@ -1,14 +1,38 @@
 {
+ "DockCafe_Text_Npc0": {
+  "en": "Everyone passes through the DOCK\\nCAFE sooner or later.",
+  "fr": "Tout le monde passe au CAFÉ DU QUAI\\ntôt ou tard."
+ },
+ "DockCafe_Text_Npc1": {
+  "en": "A hot drink fixes any tide.",
+  "fr": "Une boisson chaude répare n'importe\\nquelle marée."
+ },
+ "DockCafe_Text_RestNo": {
+  "en": "Another time, then.",
+  "fr": "Une autre fois, alors."
+ },
+ "DockCafe_Text_RestOffer": {
+  "en": "Sit down. A hot drink and a nap for\\nyour team?",
+  "fr": "Assieds-toi. Une boisson chaude et\\nune sieste pour ton équipe ?"
+ },
+ "DockCafe_Text_Rested": {
+  "en": "Rested and ready. Come again.",
+  "fr": "Reposés et prêts. Reviens quand tu\\nveux."
+ },
  "DockCafe_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "DockCafe_Text_ShopBye": {
-  "fr": "Reviens quand tu veux.",
-  "en": "Come back any time."
+  "en": "Come back any time.",
+  "fr": "Reviens quand tu veux."
+ },
+ "DockCafe_Text_ShopHi": {
+  "en": "Welcome. Take a look around.",
+  "fr": "Bienvenue. Jette un œil autour de\\ntoi."
  },
  "DockCafe_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

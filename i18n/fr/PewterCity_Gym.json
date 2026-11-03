@@ -1,0 +1,90 @@
+{
+ "PewterCity_Gym_Text_BrockDefeat": {
+  "en": "Hah... I was burning too bright\\nand you stayed calm. Fair enough.\\pTake the PYROPE BADGE.\\p{FONT_NORMAL}{PLAYER} received the PYROPE BADGE\\nfrom KAY!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\\p{FONT_MALE}The PYROPE BADGE makes your\\nPOKéMON more powerful.\\pIt also lets you use FLASH outside\\nof battle, if you carry the HM.",
+  "fr": "Hah… Je brûlais trop fort et tu es\\nresté calme. C'est de bonne guerre.\\pPrends le BADGE PYROPE.\\p{FONT_NORMAL}{PLAYER} a reçu le BADGE PYROPE de\\nKAY!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\\p{FONT_MALE}Le BADGE PYROPE rend tes POKéMON\\nplus puissants.\\pIl permet aussi d'utiliser FLASH\\nhors combat, si tu as la CS."
+ },
+ "PewterCity_Gym_Text_BrockIntro": {
+  "en": "So, you made it through OPANIHRUM\\nand the forest. I'm KAY, LEADER\\pof PYROPIA GYM.\\pThis town sleeps on a volcano.\\nHeat, pressure, patience... that\\pis how we live, and that is how\\nmy POKéMON fight.\\pThey are all FIRE-type! Since the\\nAURA changed everything ten years\\pago, even ordinary flames burn\\ndifferently.\\pIf you think you can take the\\nheat, come on. Show me your\\pbest!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
+  "fr": "Alors, tu as traversé OPANIHRUM et\\nla forêt. Je suis KAY, CHAMPIONNE\\lde l'ARÈNE DE PYROPIA.\\pCette ville dort sur un volcan.\\nChaleur, pression, patience…\\pc'est ainsi que nous vivons, et\\nainsi que mes POKéMON combattent.\\pIls sont tous de type FEU ! Depuis\\nque l'AURA a tout changé il y a dix\\lans, même les flammes ordinaires\\nbrûlent différemment.\\pSi tu penses pouvoir supporter la\\nchaleur, viens. Montre-moi ton\\lmeilleur !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
+ },
+ "PewterCity_Gym_Text_BrockPostBattle": {
+  "en": "Last night TEAM ONYBRIS broke into\\nthe MUSEUM and took the PYROPE, our\\ptown's garnet. I heard they hit\\nGRENALUX the same way.\\pThey left by the east road with a\\nfull night's head start.\\pThey say POKé BALLS are chains.\\nMaybe so. But a chain you choose\\pand a chain someone forces on you\\nare not the same thing.\\pGo on to TOURMALIA. SYLVESTRE\\nwill not go easy on you.",
+  "fr": "La nuit dernière la TEAM ONYBRIS\\nest entrée dans le MUSÉE et a pris\\lle PYROPE, le grenat de notre\\nville. J'ai appris qu'ils ont\\lfrappé GRENALUX de même.\\pIls sont partis par la route de\\nl'est avec une nuit d'avance.\\pOn dit que les POKé BALLS sont des\\nchaînes. Peut-être. Mais une chaîne\\lqu'on choisit et une chaîne qu'on\\nnous impose ne sont pas la même\\lchose.\\pVa à TOURMALIA. SYLVESTRE ne te\\nménagera pas."
+ },
+ "PewterCity_Gym_Text_BrockRebel1": {
+  "en": "KAY: The Council is over, but my rocks\\nnever stopped training, CHAMPION.\\pYou hold the six legends. Let me see\\nif a mountain can hold you!",
+  "fr": "KAY : Le Conseil est fini, mais mes\\nroches n'ont jamais cessé de\\ls'entraîner, CHAMPION.\\pTu tiens les six légendes. Voyons\\nsi une montagne peut te tenir !"
+ },
+ "PewterCity_Gym_Text_BrockRebel2": {
+  "en": "Cracked...\\nbut not broken.",
+  "fr": "Fissurée…\\nmais pas brisée."
+ },
+ "PewterCity_Gym_Text_BrockRebel3": {
+  "en": "KAY: The REBELS are not your enemies.\\nWe only wanted to be asked.\\pTake this. Go on, the others wait.",
+  "fr": "KAY : Les REBELLES ne sont pas tes\\nennemis. Nous voulions seulement\\lqu'on nous demande.\\pPrends ça. Va, les autres\\nattendent."
+ },
+ "PewterCity_Gym_Text_BrockVisit1": {
+  "en": "KAY: Let go of JIRACHI? Rock-solid\\ndecision. Take this as thanks.",
+  "fr": "KAY : Laisser partir JIRACHI ?\\nDécision solide comme le roc.\\pPrends ça en remerciement."
+ },
+ "PewterCity_Gym_Text_BrockVisit2": {
+  "en": "KAY: No more POKé BALLS. My ROCK\\nPOKéMON sleep easier. Take these.",
+  "fr": "KAY : Plus de POKé BALLS. Mes\\nPOKéMON ROCHE dorment mieux. Prends\\lça."
+ },
+ "PewterCity_Gym_Text_DontHaveRoomForThis": {
+  "en": "You don't have room for this.",
+  "fr": "Tu n'as pas de place pour ça."
+ },
+ "PewterCity_Gym_Text_ExplainTM39": {
+  "en": "TM39 contains FLAME CHARGE.\\pRamming the foe wrapped in\\nflames. Light but reliable.\\pTeach it to a POKéMON that\\ncan really use it.",
+  "fr": "La CT39 contient CHARGE-FLAMME.\\pPercuter l'ennemi enveloppé de\\nflammes. Léger mais fiable.\\pApprends-la à un POKéMON qui saura\\nvraiment s'en servir."
+ },
+ "PewterCity_Gym_Text_GymStatue": {
+  "en": "PYROPIA POKéMON GYM\\nLEADER: KAY\\pWINNING TRAINERS:\\n{RIVAL}",
+  "fr": "ARÈNE POKéMON DE PYROPIA\\nCHAMPIONNE : KAY\\pDRESSEURS VAINQUEURS :\\n{RIVAL}"
+ },
+ "PewterCity_Gym_Text_GymStatuePlayerWon": {
+  "en": "PYROPIA POKéMON GYM\\nLEADER: KAY\\pWINNING TRAINERS:\\n{RIVAL}, {PLAYER}",
+  "fr": "ARÈNE POKéMON DE PYROPIA\\nCHAMPIONNE : KAY\\pDRESSEURS VAINQUEURS :\\n{RIVAL}, {PLAYER}"
+ },
+ "PewterCity_Gym_Text_ItsFreeLetsGetHappening": {
+  "en": "It's a free service!\\nLet's get happening!",
+  "fr": "C'est un service gratuit !\\nAllons-y !"
+ },
+ "PewterCity_Gym_Text_LetMeTakeYouToTheTop": {
+  "en": "Hiya!\\nDo you want to dream big?\\pDo you dare to dream of becoming\\nthe POKéMON champ?\\pI'm no TRAINER, but I can advise\\nyou on how to win.\\pLet me take you to the top!",
+  "fr": "Salut !\\nVeux-tu rêver grand ?\\pOses-tu rêver de devenir champion\\nPOKéMON ?\\pJe ne suis pas DRESSEUR, mais je\\npeux te conseiller pour gagner.\\pLaisse-moi t'emmener au sommet !"
+ },
+ "PewterCity_Gym_Text_LetsGetHappening": {
+  "en": "All right!\\nLet's get happening!",
+  "fr": "D'accord !\\nAllons-y !"
+ },
+ "PewterCity_Gym_Text_LiamDefeat": {
+  "en": "Darn!\\pMy fire went out too soon...",
+  "fr": "Zut !\\pMon feu s'est éteint trop tôt…"
+ },
+ "PewterCity_Gym_Text_LiamIntro": {
+  "en": "Stop right there, kid!\\pYou'll melt long before you\\never reach KAY!",
+  "fr": "Stop !\\pTu auras fondu bien avant\\nd'atteindre KAY !"
+ },
+ "PewterCity_Gym_Text_LiamPostBattle": {
+  "en": "You're pretty hot. ...But not as\\nhot as KAY!",
+  "fr": "Tu es plutôt chaud. …Mais pas\\naussi chaud que KAY !"
+ },
+ "PewterCity_Gym_Text_ReceivedTM39FromBrock": {
+  "en": "{PLAYER} received TM39\\nfrom KAY.",
+  "fr": "{PLAYER} a reçu la CT39\\nde KAY."
+ },
+ "PewterCity_Gym_Text_TakeThisWithYou": {
+  "en": "Wait!\\nTake this with you.",
+  "fr": "Attends !\\nPrends ceci avec toi."
+ },
+ "PewterCity_Gym_Text_TryDifferentPartyOrders": {
+  "en": "The first POKéMON out in a match is\\nat the left of the POKéMON LIST.\\pBy changing the order of POKéMON,\\nyou may gain an advantage.\\pTry different orders to suit your\\nopponent's party.",
+  "fr": "Le premier POKéMON envoyé en combat\\nest à gauche de la LISTE POKéMON.\\pEn changeant l'ordre des POKéMON,\\ntu peux gagner un avantage.\\pEssaie différents ordres selon\\nl'équipe de ton adversaire."
+ },
+ "PewterCity_Gym_Text_YoureChampMaterial": {
+  "en": "Just as I thought!\\nYou're POKéMON champ material!",
+  "fr": "Comme je le pensais ! Tu as\\nl'étoffe d'un champion POKéMON !"
+ }
+}

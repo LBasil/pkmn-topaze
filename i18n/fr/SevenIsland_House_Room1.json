@@ -1,0 +1,46 @@
+{
+ "SevenIsland_House_Room1_Text_AstoundingBattle": {
+  "en": "Bravo!\\pBravo, indeed!\\nWhat an astounding battle!\\pIt was so astounding, why, it keeps\\nfilling my eyes with tears!\\pThe thrust and parry of expertly\\nused techniques!\\pThe clash of power upon power!\\pYes!\\nIt was sheer magnificence!",
+  "fr": "Bravo !\\pBravo, vraiment !\\nQuel combat stupéfiant !\\pSi stupéfiant que mes yeux se\\nremplissent de larmes !\\pLes parades et les estocades de\\ntechniques magistrales !\\pLe choc de la puissance contre la\\npuissance !\\pOui !\\nC'était d'une pure magnificence !"
+ },
+ "SevenIsland_House_Room1_Text_ChallengeVisitingTrainer": {
+  "en": "Ah!\\nWelcome, my friend!\\pLet me tell you something. There's\\na hidden room in the basement.\\pA TRAINER named {STR_VAR_1} is\\nwaiting there now.\\pTell me, you did come to challenge\\n{STR_VAR_1}, am I right?",
+  "fr": "Ah ! Bienvenue, mon ami !\\pLaisse-moi te dire quelque chose.\\nIl y a une salle cachée au\\lsous-sol.\\pUn DRESSEUR nommé {STR_VAR_1} y attend\\nen ce moment.\\pDis-moi, tu es bien venu défier\\n{STR_VAR_1}, n'est-ce pas ?"
+ },
+ "SevenIsland_House_Room1_Text_DontHoldAnythingBack": {
+  "en": "All right.\\nDon't hold anything back!",
+  "fr": "D'accord.\\nNe retiens rien !"
+ },
+ "SevenIsland_House_Room1_Text_DrawWasIt": {
+  "en": "A draw, was it?\\pHowever, let me say that it was\\na worthy spectacle.\\pI'd say it was a wonderful battle\\nwith a real sense of depth!",
+  "fr": "Un nul, donc ?\\pCependant, laisse-moi dire que\\nc'était un spectacle digne de ce\\lnom.\\pJe dirais que c'était un\\nmerveilleux combat plein de\\lprofondeur !"
+ },
+ "SevenIsland_House_Room1_Text_FeelYourDisappointment": {
+  "en": "Too bad!\\nI feel your disappointment.\\pHowever, that disappointment is\\nwhat will make you better.\\pUse it, learn from it, and make it\\nmotivate you to seek greatness.\\pForget not this disappointment\\nand redouble your training!",
+  "fr": "Dommage ! Je ressens ta déception.\\pCependant, cette déception te fera\\nprogresser.\\pUtilise-la, apprends d'elle, et\\nlaisse-la te motiver à viser la\\lgrandeur.\\pN'oublie pas cette déception et\\nredouble ton entraînement !"
+ },
+ "SevenIsland_House_Room1_Text_LimitThreeMonsPerSide": {
+  "en": "Ah!\\nYou will battle for me?\\pIt was worth my time moving the\\nbox aside, then.\\p… …\\nBut there is one slight problem.\\pThis hidden room is not built very\\nsturdy.\\pCan I get you to limit it to\\nbattles of three POKéMON per side?",
+  "fr": "Ah ! Tu te battras pour moi ?\\pÇa valait donc la peine de déplacer\\nla boîte.\\p… … Mais il y a un léger problème.\\pCette salle cachée n'est pas très\\nsolide.\\pPuis-je te demander de limiter à\\ndes combats de trois POKéMON par\\lcamp ?"
+ },
+ "SevenIsland_House_Room1_Text_OhYouWontBattle": {
+  "en": "Oh…\\nYou won't battle…\\pI see, I see.\\n… …\\pWell, perhaps if you change your\\nmind, do come back.",
+  "fr": "Oh…\\nTu ne veux pas te battre…\\pJe vois, je vois.\\n… …\\pEh bien, si tu changes d'avis,\\nreviens."
+ },
+ "SevenIsland_House_Room1_Text_OnlyEnjoymentWatchingBattles": {
+  "en": "I may not look like much now,\\nbut when I was younger…\\pI flew everywhere, challenging\\nTRAINERS wherever I found them.\\pNow, my only source of enjoyment\\nis reminiscing about the past while\\lwatching battles.",
+  "fr": "Je n'ai peut-être pas l'air de\\ngrand-chose maintenant, mais quand\\lj'étais plus jeune…\\pJe volais partout, défiant les\\nDRESSEURS là où je les trouvais.\\pMaintenant, mon seul plaisir est de\\nme remémorer le passé en regardant\\ldes combats."
+ },
+ "SevenIsland_House_Room1_Text_SaveProgressBeforeBattle": {
+  "en": "Fine! Before your battle, would\\nyou like to save your game?",
+  "fr": "Bien ! Avant ton combat, veux-tu\\nsauvegarder ta partie ?"
+ },
+ "SevenIsland_House_Room1_Text_SlightBreezeAroundBox": {
+  "en": "There is a slight breeze blowing\\naround the box.",
+  "fr": "Une légère brise souffle autour\\nde la boîte."
+ },
+ "SevenIsland_House_Room2_Text_MatchEndedUpDraw": {
+  "en": "The match ended up a draw.",
+  "fr": "Le match s'est terminé par un nul."
+ }
+}

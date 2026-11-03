@@ -1,10 +1,18 @@
 {
+ "PineRow_Text_Npc0": {
+  "en": "PINECO hangs from the trunks. Shake\\ngently.",
+  "fr": "POMDEPIK pend aux troncs. Secoue\\ndoucement."
+ },
+ "PineRow_Text_Npc1": {
+  "en": "These trees are older than the\\ntown.",
+  "fr": "Ces arbres sont plus vieux que la\\nville."
+ },
  "PineRow_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "PineRow_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

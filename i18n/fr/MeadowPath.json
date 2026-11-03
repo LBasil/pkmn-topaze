@@ -1,18 +1,42 @@
 {
+ "MeadowPath_Text_Npc0": {
+  "en": "Good spot to meet every early\\nPOKéMON.",
+  "fr": "Bon endroit pour rencontrer tous\\nles premiers POKéMON."
+ },
+ "MeadowPath_Text_Npc1": {
+  "en": "Both NIDORAN live here. Catch a\\npair!",
+  "fr": "Les deux NIDORAN vivent ici.\\nAttrape la paire !"
+ },
+ "MeadowPath_Text_Quest0_AfterT": {
+  "en": "We are training again.",
+  "fr": "Nous nous entraînons de nouveau."
+ },
+ "MeadowPath_Text_Quest0_Ask": {
+  "en": "My POKéMON are hurt. Two POTIONs\\nfor an EXP SHARE?",
+  "fr": "Mes POKéMON sont blessés. Deux\\nPOTIONS contre un PARTAGE EXP. ?"
+ },
+ "MeadowPath_Text_Quest0_Done": {
+  "en": "You saved us! Take this EXP SHARE.",
+  "fr": "Tu nous as sauvés ! Prends ce\\nPARTAGE EXP."
+ },
+ "MeadowPath_Text_Quest0_MissT": {
+  "en": "Two POTIONs, please.",
+  "fr": "Deux POTIONS, s'il vous plaît."
+ },
  "MeadowPath_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "MeadowPath_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "MeadowPath_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "MeadowPath_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

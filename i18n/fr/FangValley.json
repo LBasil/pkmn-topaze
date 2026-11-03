@@ -1,18 +1,42 @@
 {
+ "FangValley_Text_Npc0": {
+  "en": "HOUNDOUR hunts in packs. Never run\\nalone.",
+  "fr": "MALOSSE chasse en meute. Ne cours\\njamais seul."
+ },
+ "FangValley_Text_Npc1": {
+  "en": "ZANGOOSE and SEVIPER fight each\\nother. Always.",
+  "fr": "MANGRIFF et SÉVIPER se battent\\ntoujours."
+ },
+ "FangValley_Text_Quest0_AfterT": {
+  "en": "The valley bites less now.",
+  "fr": "La vallée mord moins maintenant."
+ },
+ "FangValley_Text_Quest0_Ask": {
+  "en": "Poison is everywhere. Two FULL\\nHEALs, and BLACK GLASSES are yours.",
+  "fr": "Le poison est partout. Deux\\nTOUT-SOIN, et les LUNETTES NOIRES\\lsont à toi."
+ },
+ "FangValley_Text_Quest0_Done": {
+  "en": "You are a lifesaver! Take these\\nBLACK GLASSES.",
+  "fr": "Tu es un sauveur ! Prends ces\\nLUNETTES NOIRES."
+ },
+ "FangValley_Text_Quest0_MissT": {
+  "en": "Two FULL HEALs, please.",
+  "fr": "Deux TOUT-SOIN, s'il vous plaît."
+ },
  "FangValley_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "FangValley_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "FangValley_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "FangValley_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

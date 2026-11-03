@@ -1,0 +1,110 @@
+{
+ "FourIsland_Text_IslandSign": {
+  "en": "FOUR ISLAND\\nWhere the cold remembers",
+  "fr": "ÎLE 4\\nOù le froid se souvient"
+ },
+ "FourIsland_Text_Lord1": {
+  "en": "GLACIA: Frozen cities, frozen\\nkings... it happened before. I will\\lsee how your crown holds against\\nice!",
+  "fr": "GLACIA : Des villes gelées, des\\nrois gelés… c'est déjà arrivé.\\pVoyons comment ta couronne tient\\nface à la glace !"
+ },
+ "FourIsland_Text_Lord2": {
+  "en": "Warm. You are warm.",
+  "fr": "Chaud. Tu es chaud."
+ },
+ "FourIsland_Text_Lord3": {
+  "en": "GLACIA: A ruler who can still feel\\nthe cold is a good ruler. Take this.",
+  "fr": "GLACIA : Un souverain qui sent\\nencore le froid est un bon\\lsouverain. Prends ça."
+ },
+ "FourIsland_Text_LordDone": {
+  "en": "GLACIA: A ruler worthy of the six.\\nI will remember this day.",
+  "fr": "GLACIA : Un souverain digne des\\nsix. Je me souviendrai de ce jour."
+ },
+ "FourIsland_Text_LordEarly": {
+  "en": "GLACIA: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\nFLORA will tell you the way.",
+  "fr": "GLACIA : Pas encore. L'ancienne\\nLIGUE et les MAÎTRES doivent\\ld'abord tomber. FLORA te montrera\\nle chemin."
+ },
+ "FourIsland_Text_LordIdle": {
+  "en": "GLACIA: The islands are quiet. I look\\nafter them, as I always have.",
+  "fr": "GLACIA : Les îles sont calmes. Je\\nveille sur elles, comme toujours."
+ },
+ "FourIsland_Text_LoreleiHasLotsOfStuffedDolls": {
+  "en": "Oh, you found me!\\nPlease don't tell LORELEI.\\pDid you know that LORELEI has lots\\nand lots of stuffed dolls?\\pEvery time she comes back to\\nFOUR ISLAND, her collection grows!",
+  "fr": "Oh, tu m'as trouvé ! S'il te plaît,\\nne le dis pas à LORELEI.\\pTu savais que LORELEI a plein,\\nplein de poupées en peluche ?\\pChaque fois qu'elle revient sur\\nl'ÎLE 4, sa collection grandit !"
+ },
+ "FourIsland_Text_LoreleiHasReturned": {
+  "en": "LORELEI has returned.\\pDid she find the city life too\\nstressful, I wonder?",
+  "fr": "LORELEI est de retour.\\pLa vie en ville était-elle trop\\nstressante pour elle, je me\\ldemande ?"
+ },
+ "FourIsland_Text_LoreleiMetLaprasAsChild": {
+  "en": "LORELEI has gone back.\\pThe LAPRAS she has, I imagine it\\nto be the one she met as a child.\\pI believe it was in ICEFALL CAVE\\nthat she caught it.\\pPerhaps that POKéMON has been with\\nher ever since.",
+  "fr": "LORELEI est repartie.\\pLe LOKHLASS qu'elle a, j'imagine\\nque c'est celui qu'elle a rencontré\\lenfant.\\pJe crois que c'est dans la GROTTE\\nGIVRÉE qu'elle l'a capturé.\\pPeut-être que ce POKéMON est resté\\navec elle depuis."
+ },
+ "FourIsland_Text_LoreleisHouse": {
+  "en": "LORELEI'S HOUSE",
+  "fr": "MAISON DE LORELEI"
+ },
+ "FourIsland_Text_MadeSlushieUsingIcefallCaveIce": {
+  "en": "Ooh, chilly!\\pI made a slushie using ice I\\nshaved inside ICEFALL CAVE.\\pIt's chilly and tasty!",
+  "fr": "Ooh, frais !\\pJ'ai fait une granita avec de la\\nglace râpée dans la GROTTE GIVRÉE.\\pC'est frais et délicieux !"
+ },
+ "FourIsland_Text_ProcheDylan_After": {
+  "en": "Dragons respect strength. You have\\nit.",
+  "fr": "Les dragons respectent la force.\\nTu l'as."
+ },
+ "FourIsland_Text_ProcheDylan_Defeat": {
+  "en": "Magnificent! The dragons approve!",
+  "fr": "Magnifique ! Les dragons\\napprouvent !"
+ },
+ "FourIsland_Text_ProcheDylan_Early": {
+  "en": "Not yet, {PLAYER}. Finish your\\njourney first, then come and find\\pme.",
+  "fr": "Pas encore, {PLAYER}. Termine\\nd'abord ton voyage, puis viens me\\ltrouver."
+ },
+ "FourIsland_Text_ProcheDylan_Intro": {
+  "en": "{PLAYER}! You beat the LEAGUE? Then\\nyou can handle my dragons. Do not\\phold back!",
+  "fr": "{PLAYER} ! Tu as battu la LIGUE ?\\nAlors tu peux affronter mes\\ldragons. Ne te retiens pas !"
+ },
+ "FourIsland_Text_ProcheDylan_NoRoom": {
+  "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reparle-moi."
+ },
+ "FourIsland_Text_ProcheDylan_Win": {
+  "en": "A fang from my oldest dragon. Take\\nit.",
+  "fr": "Un croc de mon plus vieux dragon.\\nPrends-le."
+ },
+ "FourIsland_Text_RefAfter": {
+  "en": "MAYA: Take good care of it. The\\nnext REFUGE post is waiting.",
+  "fr": "MAYA : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
+ },
+ "FourIsland_Text_RefAsk": {
+  "en": "MAYA: A strange fish lives in a cold\\npond. It is ill and nobody can\\nsee it. Three ICE HEALS, please.",
+  "fr": "MAYA : Un étrange poisson vit dans\\nun étang froid. Il est malade et\\lpersonne ne le voit. Trois\\nANTI-GEL, s'il vous plaît."
+ },
+ "FourIsland_Text_RefDone": {
+  "en": "MAYA: Thank you again. The REFUGE\\nis safer because of you.",
+  "fr": "MAYA : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
+ },
+ "FourIsland_Text_RefEarly": {
+  "en": "MAYA: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "fr": "MAYA : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\ldu PARC SAFARI connaît l'ordre."
+ },
+ "FourIsland_Text_RefGives": {
+  "en": "MAYA: You saved the day. The post\\nhas a gift for you: FEEBAS!",
+  "fr": "MAYA : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\lBARPAU !"
+ },
+ "FourIsland_Text_RefIdle": {
+  "en": "MAYA: I watch over the animals here.\\nThe world is quieter now.",
+  "fr": "MAYA : Je veille sur les animaux\\nici. Le monde est plus calme\\lmaintenant."
+ },
+ "FourIsland_Text_RefNo": {
+  "en": "MAYA: I understand. It is a lot to\\nask. The offer stands.",
+  "fr": "MAYA : Je comprends. C'est beaucoup\\ndemander. L'offre tient toujours."
+ },
+ "FourIsland_Text_RefOffer": {
+  "en": "MAYA: You have them! May I take\\n3 of them for the post?",
+  "fr": "MAYA : Tu les as ! Puis-je en\\nprendre 3 pour le poste ?"
+ },
+ "FourIsland_Text_RivalAlreadyGotEggBeSmellingYa": {
+  "en": "{RIVAL}: Hey!\\n{PLAYER}!\\pWhat are you doing here in the\\nSEVII ISLANDS?\\pYou should quit copying me,\\nyou know?\\pAnyways, I already got my POKéMON\\nEGG, so I'm done with this island.\\pHeh, I bet you don't even know\\nabout POKéMON EGGS.\\pYou'll never fill your NATIONAL\\nPOKéDEX that way.\\pBy the way, I saw someone we both\\nknow on this island.\\pWhy don't you go look around if\\nit makes you curious?\\pMe, I don't have the time to\\nwaste.\\pBe smelling ya!",
+  "fr": "{RIVAL} : Hé ! {PLAYER} !\\pQu'est-ce que tu fais ici, dans les\\nÎLES SEVII ?\\pTu devrais arrêter de me copier, tu\\nsais ?\\pEnfin bref, j'ai déjà mon ŒUF\\nPOKéMON, j'en ai fini avec cette\\lîle.\\pHeh, je parie que tu ne sais même\\npas ce que sont les ŒUFS POKéMON.\\pTu ne rempliras jamais ton POKéDEX\\nNATIONAL comme ça.\\pAu fait, j'ai vu quelqu'un que nous\\nconnaissons tous les deux sur cette\\lîle.\\pPourquoi n'irais-tu pas jeter un\\nœil si ça t'intrigue ?\\pMoi, je n'ai pas de temps à perdre.\\pÀ la prochaine !"
+ }
+}

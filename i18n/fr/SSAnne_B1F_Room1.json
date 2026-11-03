@@ -1,0 +1,26 @@
+{
+ "SSAnne_B1F_Room1_Text_BarnyDefeat": {
+  "en": "Darn!\\nI let that one get away!",
+  "fr": "Zut !\\nJ'ai laissé celui-là s'échapper !"
+ },
+ "SSAnne_B1F_Room1_Text_BarnyIntro": {
+  "en": "Hello, stranger!\\pI can't tell if you're from the seas\\nor mountains, but stop and chat.\\pAll my POKéMON are from the sea.",
+  "fr": "Bonjour, étranger !\\pJe ne sais pas si tu viens des mers\\nou des montagnes, mais arrête-toi\\let discute.\\pTous mes POKéMON viennent de la\\nmer."
+ },
+ "SSAnne_B1F_Room1_Text_BarnyPostBattle": {
+  "en": "I was going to make you my\\nassistant, too!",
+  "fr": "J'allais aussi faire de toi mon\\nassistant !"
+ },
+ "SSAnne_B1F_Room1_Text_PhillipDefeat": {
+  "en": "Argh!\\nBeaten by a kid!",
+  "fr": "Argh !\\nBattu par un gamin !"
+ },
+ "SSAnne_B1F_Room1_Text_PhillipIntro": {
+  "en": "Matey, you're walking the plank if\\nyou lose!",
+  "fr": "Moussaillon, tu passes à la planche\\nsi tu perds !"
+ },
+ "SSAnne_B1F_Room1_Text_PhillipPostBattle": {
+  "en": "When we're out at sea, jellyfish\\nPOKéMON sometimes drift by.",
+  "fr": "Quand on est en mer, des POKéMON\\nméduses passent parfois à la\\ldérive."
+ }
+}

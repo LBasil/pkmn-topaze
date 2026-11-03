@@ -1,10 +1,18 @@
 {
+ "StarlitSteppe_Text_Npc0": {
+  "en": "LARVITAR hides in the tall grass at\\nnight.",
+  "fr": "EMBRYLEX se cache dans les hautes\\nherbes la nuit."
+ },
+ "StarlitSteppe_Text_Npc1": {
+  "en": "Even DUNSPARCE shows up, if you are\\nlucky.",
+  "fr": "Même INSOLOURDO se montre, si tu as\\nde la chance."
+ },
  "StarlitSteppe_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "StarlitSteppe_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

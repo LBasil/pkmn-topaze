@@ -1,0 +1,22 @@
+{
+ "Route2_EastBuilding_Text_CanGetThroughRockTunnel": {
+  "en": "Once a POKéMON learns FLASH, you\\ncan get through ROCK TUNNEL.",
+  "fr": "Dès qu'un POKéMON connaît FLASH, tu\\npeux traverser le TUNNEL ROCHE."
+ },
+ "Route2_EastBuilding_Text_ExplainHM05": {
+  "en": "HM05 contains the hidden move\\nFLASH.\\pFLASH lights up even the darkest\\nof caves and dungeons.",
+  "fr": "La CS05 contient la capacité cachée\\nFLASH.\\pFLASH éclaire même les grottes et\\nles donjons les plus sombres."
+ },
+ "Route2_EastBuilding_Text_GiveHM05IfSeen10Mons": {
+  "en": "Hi! Remember me?\\nI'm one of PROF. OAK's AIDES.\\pIf your POKéDEX has complete data\\non ten species, I'm supposed to\\lgive you a reward.\\pPROF. OAK entrusted me with\\nHM05 for you.\\pSo, {PLAYER}, let me ask you.\\pHave you gathered data on at least\\nten kinds of POKéMON?",
+  "fr": "Salut ! Tu te souviens de moi ? Je\\nsuis l'un des ASSISTANTS du PROF.\\pCHEN.\\pSi ton POKéDEX a des données\\ncomplètes sur dix espèces, je dois\\lte donner une récompense.\\pLe PROF. CHEN m'a confié la CS05\\npour toi.\\pAlors, {PLAYER}, laisse-moi te\\ndemander.\\pAs-tu rassemblé des données sur au\\nmoins dix espèces de POKéMON ?"
+ },
+ "Route2_EastBuilding_Text_GreatHereYouGo": {
+  "en": "Great! You have caught or owned\\n{STR_VAR_3} kinds of POKéMON!\\pCongratulations!\\nHere you go!",
+  "fr": "Super ! Tu as capturé ou possédé\\n{STR_VAR_3} espèces de POKéMON !\\pFélicitations !\\nVoilà !"
+ },
+ "Route2_EastBuilding_Text_ReceivedHM05FromAide": {
+  "en": "{PLAYER} received HM05\\nfrom the AIDE.",
+  "fr": "{PLAYER} a reçu la CS05\\nde l'ASSISTANT."
+ }
+}

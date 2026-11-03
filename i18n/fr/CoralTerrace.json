@@ -1,10 +1,18 @@
 {
+ "CoralTerrace_Text_Npc0": {
+  "en": "The steps are coral. Mind your\\nfeet.",
+  "fr": "Les marches sont en corail. Fais\\nattention à tes pieds."
+ },
+ "CoralTerrace_Text_Npc1": {
+  "en": "CORSOLA is a tiny reef that walks.",
+  "fr": "CORAYON est un petit récif qui\\nmarche."
+ },
  "CoralTerrace_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "CoralTerrace_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

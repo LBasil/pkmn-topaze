@@ -1,10 +1,18 @@
 {
+ "EdgeOfTheWorld_Text_Npc0": {
+  "en": "Beyond is just sea. And rumors.",
+  "fr": "Au-delà, il n'y a que la mer. Et\\ndes rumeurs."
+ },
+ "EdgeOfTheWorld_Text_Npc1": {
+  "en": "Only the bold stand here.",
+  "fr": "Seuls les audacieux se tiennent\\nici."
+ },
  "EdgeOfTheWorld_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "EdgeOfTheWorld_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

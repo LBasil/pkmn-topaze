@@ -1,86 +1,86 @@
 {
  "CeruleanCity_Gym_Text_BetterMakeRoomForThis": {
-  "fr": "Tu ferais mieux de faire de la\\nplace !",
-  "en": "You better make room for this!"
+  "en": "You better make room for this!",
+  "fr": "Tu ferais mieux de faire de la\\nplace !"
  },
  "CeruleanCity_Gym_Text_DianaDefeat": {
-  "fr": "Tu m'as écrasée !",
-  "en": "You overwhelmed me!"
+  "en": "You overwhelmed me!",
+  "fr": "Tu m'as écrasée !"
  },
  "CeruleanCity_Gym_Text_DianaIntro": {
-  "fr": "Quoi ? Toi ? Je suis largement\\nassez bonne pour toi !\\pSYLVESTRE n'a pas à être dérangé.",
-  "en": "What? You?\\nI'm more than good enough for you!\\pSYLVESTRE won't have to be bothered."
+  "en": "What? You?\\nI'm more than good enough for you!\\pSYLVESTRE won't have to be bothered.",
+  "fr": "Quoi ? Toi ? Je suis largement\\nassez bonne pour toi !\\pSYLVESTRE n'a pas à être dérangé."
  },
  "CeruleanCity_Gym_Text_DianaPostBattle": {
-  "fr": "Il faut affronter d'autres\\nDRESSEURS pour voir ce que tu vaux\\pvraiment.",
-  "en": "You have to face other TRAINERS\\nto see how good you really are."
+  "en": "You have to face other TRAINERS\\nto see how good you really are.",
+  "fr": "Il faut affronter d'autres\\nDRESSEURS pour voir ce que tu vaux\\pvraiment."
  },
  "CeruleanCity_Gym_Text_ExplainCascadeBadge": {
-  "fr": "Le BADGE TOURMALINE fait obéir tous\\nles POKéMON jusqu'au Niv. 30.\\pMême les étrangers reçus par\\néchange.\\pTu peux aussi utiliser COUPE hors\\ncombat, si tu as la CS.\\pElle dégage les petits arbres de\\nton chemin.\\pPrends aussi ma CT préférée.",
-  "en": "The TOURMALINE BADGE makes all\\nPOKéMON up to Lv. 30 obey.\\pThat includes even outsiders you\\ngot in trades.\\pYou can also use CUT anytime, out\\nof battle, if you carry the HM.\\pIt clears small trees from your\\nway.\\pTake my favorite TM too."
+  "en": "The TOURMALINE BADGE makes all\\nPOKéMON up to Lv. 30 obey.\\pThat includes even outsiders you\\ngot in trades.\\pYou can also use CUT anytime, out\\nof battle, if you carry the HM.\\pIt clears small trees from your\\nway.\\pTake my favorite TM too.",
+  "fr": "Le BADGE TOURMALINE fait obéir tous\\nles POKéMON jusqu'au Niv. 30.\\pMême les étrangers reçus par\\néchange.\\pTu peux aussi utiliser COUPE hors\\ncombat, si tu as la CS.\\pElle dégage les petits arbres de\\nton chemin.\\pPrends aussi ma CT préférée."
  },
  "CeruleanCity_Gym_Text_ExplainTM03": {
-  "fr": "La CT19 contient TRANCHERBE.\\pElle tranche avec des feuilles\\ncoupantes et touche souvent un\\pcoup critique. Le combat façon\\nforêt.",
-  "en": "TM19 contains RAZOR LEAF.\\pIt slashes with sharp leaves and\\noften lands a critical hit. The\\pforest way of fighting."
+  "en": "TM19 contains RAZOR LEAF.\\pIt slashes with sharp leaves and\\noften lands a critical hit. The\\pforest way of fighting.",
+  "fr": "La CT19 contient TRANCHERBE.\\pElle tranche avec des feuilles\\ncoupantes et touche souvent un\\pcoup critique. Le combat façon\\nforêt."
  },
  "CeruleanCity_Gym_Text_GymGuyAdvice": {
-  "fr": "Yo ! Futur champion !\\pLe CHAMPION, SYLVESTRE, utilise des\\nPOKéMON INSECTE et PLANTE.\\pFEU est super efficace contre les\\ndeux, VOL frappe fort les insectes,\\pet POISON est bon contre les\\nplantes. GLACE marche aussi !",
-  "en": "Yo! Champ in the making!\\pThe LEADER, SYLVESTRE, uses BUG\\nand GRASS-type POKéMON.\\pFIRE is great against both,\\nFLYING hits bugs hard, and POISON\\pis good against plants. ICE works\\ntoo!"
+  "en": "Yo! Champ in the making!\\pThe LEADER, SYLVESTRE, uses BUG\\nand GRASS-type POKéMON.\\pFIRE is great against both,\\nFLYING hits bugs hard, and POISON\\pis good against plants. ICE works\\ntoo!",
+  "fr": "Yo ! Futur champion !\\pLe CHAMPION, SYLVESTRE, utilise des\\nPOKéMON INSECTE et PLANTE.\\pFEU est super efficace contre les\\ndeux, VOL frappe fort les insectes,\\pet POISON est bon contre les\\nplantes. GLACE marche aussi !"
  },
  "CeruleanCity_Gym_Text_GymStatue": {
-  "fr": "ARÈNE POKéMON DE TOURMALIA\\nCHAMPION : SYLVESTRE\\pDRESSEURS VAINQUEURS :\\n{RIVAL}",
-  "en": "TOURMALIA POKéMON GYM\\nLEADER: SYLVESTRE\\pWINNING TRAINERS:\\n{RIVAL}"
+  "en": "TOURMALIA POKéMON GYM\\nLEADER: SYLVESTRE\\pWINNING TRAINERS:\\n{RIVAL}",
+  "fr": "ARÈNE POKéMON DE TOURMALIA\\nCHAMPION : SYLVESTRE\\pDRESSEURS VAINQUEURS :\\n{RIVAL}"
  },
  "CeruleanCity_Gym_Text_GymStatuePlayerWon": {
-  "fr": "ARÈNE POKéMON DE TOURMALIA\\nCHAMPION : SYLVESTRE\\pDRESSEURS VAINQUEURS :\\n{RIVAL}, {PLAYER}",
-  "en": "TOURMALIA POKéMON GYM\\nLEADER: SYLVESTRE\\pWINNING TRAINERS:\\n{RIVAL}, {PLAYER}"
+  "en": "TOURMALIA POKéMON GYM\\nLEADER: SYLVESTRE\\pWINNING TRAINERS:\\n{RIVAL}, {PLAYER}",
+  "fr": "ARÈNE POKéMON DE TOURMALIA\\nCHAMPION : SYLVESTRE\\pDRESSEURS VAINQUEURS :\\n{RIVAL}, {PLAYER}"
  },
  "CeruleanCity_Gym_Text_LuisDefeat": {
-  "fr": "Impossible !",
-  "en": "That can't be!"
+  "en": "That can't be!",
+  "fr": "Impossible !"
  },
  "CeruleanCity_Gym_Text_LuisIntro": {
-  "fr": "Bzzz !\\pJe suis le premier !\\nAllons-y !",
-  "en": "Bzzz!\\pI'm first up!\\nLet's do it!"
+  "en": "Bzzz!\\pI'm first up!\\nLet's do it!",
+  "fr": "Bzzz !\\pJe suis le premier !\\nAllons-y !"
  },
  "CeruleanCity_Gym_Text_LuisPostBattle": {
-  "fr": "SYLVESTRE garde cet arbre en vie.\\nIl ne perdra pas contre toi !",
-  "en": "SYLVESTRE keeps this tree alive.\\nHe won't lose to someone like you!"
+  "en": "SYLVESTRE keeps this tree alive.\\nHe won't lose to someone like you!",
+  "fr": "SYLVESTRE garde cet arbre en vie.\\nIl ne perdra pas contre toi !"
  },
  "CeruleanCity_Gym_Text_MistyDefeat": {
-  "fr": "Eh bien. Une coupe nette.\\pSoit. Prends le BADGE TOURMALINE,\\ntu l'as mérité.\\pLes voleurs ont pris notre\\nTOURMALINE au cœur de cet arbre.\\pIls sont partis au nord, par le\\npont. Arrête-les avant que la\\pprochaine gemme ne tombe.",
-  "en": "Well. That was a clean cut.\\pFine. Take the TOURMALINE BADGE,\\nyou earned it.\\pThe thieves took our TOURMALINE\\nfrom this tree's heart.\\pThey went north, over the bridge.\\nStop them before the next gem falls."
+  "en": "Well. That was a clean cut.\\pFine. Take the TOURMALINE BADGE,\\nyou earned it.\\pThe thieves took our TOURMALINE\\nfrom this tree's heart.\\pThey went north, over the bridge.\\nStop them before the next gem falls.",
+  "fr": "Eh bien. Une coupe nette.\\pSoit. Prends le BADGE TOURMALINE,\\ntu l'as mérité.\\pLes voleurs ont pris notre\\nTOURMALINE au cœur de cet arbre.\\pIls sont partis au nord, par le\\npont. Arrête-les avant que la\\pprochaine gemme ne tombe."
  },
  "CeruleanCity_Gym_Text_MistyIntro": {
-  "fr": "Bienvenue à l'ARÈNE DE TOURMALIA.\\nJe suis SYLVESTRE.\\pUne forêt cache bien des choses :\\nspores, soie, dards et racines\\pqui t'agrippent les chevilles. Mes\\nPOKéMON INSECTE et PLANTE ont tout\\pappris des bois.\\pTu viens de loin pour perdre,\\nmais j'avoue aimer ton audace.\\pVoyons ce que tu vaux !",
-  "en": "Welcome to TOURMALIA GYM. I'm\\nSYLVESTRE.\\pForests hide a lot of things:\\nspores, silk, stingers and roots\\pthat grip your ankles. My BUG and\\nGRASS POKéMON learned it all from\\pthe woods.\\pYou came a long way to lose, but\\nI'll admit I like the nerve.\\pLet's see what you've got!"
+  "en": "Welcome to TOURMALIA GYM. I'm\\nSYLVESTRE.\\pForests hide a lot of things:\\nspores, silk, stingers and roots\\pthat grip your ankles. My BUG and\\nGRASS POKéMON learned it all from\\pthe woods.\\pYou came a long way to lose, but\\nI'll admit I like the nerve.\\pLet's see what you've got!",
+  "fr": "Bienvenue à l'ARÈNE DE TOURMALIA.\\nJe suis SYLVESTRE.\\pUne forêt cache bien des choses :\\nspores, soie, dards et racines\\pqui t'agrippent les chevilles. Mes\\nPOKéMON INSECTE et PLANTE ont tout\\pappris des bois.\\pTu viens de loin pour perdre,\\nmais j'avoue aimer ton audace.\\pVoyons ce que tu vaux !"
  },
  "CeruleanCity_Gym_Text_MistyRebel1": {
-  "fr": "SYLVESTRE : Insectes et feuilles\\nmettent des années à repousser.\\pNous avons grandi, CHAMPION.\\pMontre-moi pourquoi ils devraient\\nte suivre !",
-  "en": "SYLVESTRE: Bugs and leaves take\\nyears to grow back. We have grown,\\lCHAMPION.\\pShow me why they should follow you!"
+  "en": "SYLVESTRE: Bugs and leaves take\\nyears to grow back. We have grown,\\lCHAMPION.\\pShow me why they should follow you!",
+  "fr": "SYLVESTRE : Insectes et feuilles\\nmettent des années à repousser.\\pNous avons grandi, CHAMPION.\\pMontre-moi pourquoi ils devraient\\nte suivre !"
  },
  "CeruleanCity_Gym_Text_MistyRebel2": {
-  "fr": "Pressé comme une fleur\\ndans un livre...",
-  "en": "Pressed like a flower\\nin a book..."
+  "en": "Pressed like a flower\\nin a book...",
+  "fr": "Pressé comme une fleur\\ndans un livre..."
  },
  "CeruleanCity_Gym_Text_MistyRebel3": {
-  "fr": "SYLVESTRE : J'ai dit que nous ne\\nnous inclinerions devant personne.\\pPas que nous n'écouterions pas.\\nPrends ça.",
-  "en": "SYLVESTRE: I said we would bow to\\nno one. I did not say we would not\\llisten. Take this."
+  "en": "SYLVESTRE: I said we would bow to\\nno one. I did not say we would not\\llisten. Take this.",
+  "fr": "SYLVESTRE : J'ai dit que nous ne\\nnous inclinerions devant personne.\\pPas que nous n'écouterions pas.\\nPrends ça."
  },
  "CeruleanCity_Gym_Text_MistyVisit1": {
-  "fr": "SYLVESTRE : Tu as laissé partir\\nl'étoile. Comme une graine au vent.\\pPrends ça.",
-  "en": "SYLVESTRE: You let the star go.\\nLike a seed on the wind. Take this."
+  "en": "SYLVESTRE: You let the star go.\\nLike a seed on the wind. Take this.",
+  "fr": "SYLVESTRE : Tu as laissé partir\\nl'étoile. Comme une graine au vent.\\pPrends ça."
  },
  "CeruleanCity_Gym_Text_MistyVisit2": {
-  "fr": "SYLVESTRE : Une forêt silencieuse,\\nenfin. Prends ça, tu l'as mérité.",
-  "en": "SYLVESTRE: A silent forest at last.\\nTake these, you earned them."
+  "en": "SYLVESTRE: A silent forest at last.\\nTake these, you earned them.",
+  "fr": "SYLVESTRE : Une forêt silencieuse,\\nenfin. Prends ça, tu l'as mérité."
  },
  "CeruleanCity_Gym_Text_ReceivedTM03FromMisty": {
-  "fr": "{PLAYER} a reçu la CT19\\nde SYLVESTRE.",
-  "en": "{PLAYER} received TM19\\nfrom SYLVESTRE."
+  "en": "{PLAYER} received TM19\\nfrom SYLVESTRE.",
+  "fr": "{PLAYER} a reçu la CT19\\nde SYLVESTRE."
  },
  "CeruleanCity_Gym_Text_WeMakePrettyGoodTeam": {
-  "fr": "Tu as battu SYLVESTRE ! Tu vois,\\nqu'est-ce que je te disais ?\\pToi et moi, petit, on forme une\\nsacrée équipe !",
-  "en": "You beat SYLVESTRE!\\nSee, what'd I tell ya?\\pYou and me, kid, we make a pretty\\ndarn-good team!"
+  "en": "You beat SYLVESTRE!\\nSee, what'd I tell ya?\\pYou and me, kid, we make a pretty\\ndarn-good team!",
+  "fr": "Tu as battu SYLVESTRE ! Tu vois,\\nqu'est-ce que je te disais ?\\pToi et moi, petit, on forme une\\nsacrée équipe !"
  }
 }

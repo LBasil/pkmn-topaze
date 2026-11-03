@@ -1,0 +1,30 @@
+{
+ "FuchsiaCity_House2_Text_DoYouLikeToFish": {
+  "en": "I'm the FISHING GURU's older\\nbrother.\\pI simply looove fishing!\\nI can't bear to go without.\\pTell me, do you like to fish?",
+  "fr": "Je suis le grand frère du GOUROU\\nDE LA PÊCHE.\\pJ'adoooore pêcher !\\nJe ne supporte pas de m'en passer.\\pDis-moi, tu aimes pêcher ?"
+ },
+ "FuchsiaCity_House2_Text_GoodRodCanCatchBetterMons": {
+  "en": "Fishing is a way of life!\\nIt is like the finest poetry.\\pA crummy OLD ROD could only catch\\nMAGIKARP, yes?\\pBut with a GOOD ROD, you can\\ncatch much better POKéMON.",
+  "fr": "La pêche est un art de vivre !\\nC'est comme la plus belle poésie.\\pUne VIEILLE CANNE minable ne pêche\\nque du MAGICARPE, oui ?\\pMais avec une BONNE CANNE, tu peux\\nattraper de bien meilleurs POKéMON."
+ },
+ "FuchsiaCity_House2_Text_HowAreTheFishBiting": {
+  "en": "Hello there, {PLAYER}!\\pHow are the fish biting?",
+  "fr": "Salut, {PLAYER} !\\pAlors, ça mord ?"
+ },
+ "FuchsiaCity_House2_Text_LikeYourStyleTakeThis": {
+  "en": "Grand! I like your style.\\nI think we can be friends.\\pTake this and fish, young friend!",
+  "fr": "Formidable ! J'aime ton style.\\nJe crois qu'on peut être amis.\\pPrends ça et pêche, jeune ami !"
+ },
+ "FuchsiaCity_House2_Text_OhThatsDisappointing": {
+  "en": "Oh…\\nThat's so disappointing…",
+  "fr": "Oh…\\nC'est tellement décevant…"
+ },
+ "FuchsiaCity_House2_Text_ReceivedGoodRod": {
+  "en": "{PLAYER} received a GOOD ROD from\\nthe FISHING GURU's brother.",
+  "fr": "{PLAYER} a reçu une BONNE CANNE du\\nfrère du GOUROU DE LA PÊCHE."
+ },
+ "FuchsiaCity_House2_Text_YouHaveNoRoomForGift": {
+  "en": "Oh, no!\\pI had a gift for you, but you have\\nno room for it!",
+  "fr": "Oh non !\\pJ'avais un cadeau pour toi, mais tu\\nn'as pas de place pour le prendre !"
+ }
+}

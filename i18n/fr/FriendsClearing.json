@@ -1,14 +1,34 @@
 {
+ "FriendsClearing_Text_Boss_After": {
+  "en": "Come back anytime. There is always\\na seat for you.",
+  "fr": "Reviens quand tu veux. Il y aura\\ntoujours une place pour toi."
+ },
+ "FriendsClearing_Text_Boss_Defeat": {
+  "en": "We lost! But we lost together.",
+  "fr": "On a perdu ! Mais on a perdu\\nensemble."
+ },
+ "FriendsClearing_Text_Boss_Intro": {
+  "en": "All of us, together. One team, for\\none last fight, {PLAYER}. Ready?",
+  "fr": "Tous ensemble. Une équipe, pour un\\ndernier combat, {PLAYER}. Prêt ?"
+ },
  "FriendsClearing_Text_Boss_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "FriendsClearing_Text_Npc0": {
+  "en": "Each of us left something here. A\\nmemory, an object. Look around.",
+  "fr": "Chacun de nous a laissé quelque\\nchose ici. Un souvenir, un objet.\\pRegarde."
+ },
+ "FriendsClearing_Text_Npc1": {
+  "en": "We train in the morning. Rest at\\nnoon. Fight at dusk.",
+  "fr": "Nous nous entraînons le matin. Nous\\nnous reposons à midi. Nous\\lcombattons au crépuscule."
  },
  "FriendsClearing_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "FriendsClearing_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

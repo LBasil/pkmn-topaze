@@ -1,10 +1,18 @@
 {
+ "FernGully_Text_Npc0": {
+  "en": "Ferns hide everything. Even my net.",
+  "fr": "Les fougères cachent tout. Même mon\\nfilet."
+ },
+ "FernGully_Text_Npc1": {
+  "en": "I found a WEEDLE. It found me back.",
+  "fr": "J'ai trouvé un ASPICOT.\\nIl m'a retrouvé aussi."
+ },
  "FernGully_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "FernGully_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

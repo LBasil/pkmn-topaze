@@ -1,0 +1,70 @@
+{
+ "SilphCo_2F_Text_ConnorDefeat": {
+  "en": "How did you know\\nI was a ONYBRIS?",
+  "fr": "Comment as-tu su que\\nj'étais d'ONYBRIS ?"
+ },
+ "SilphCo_2F_Text_ConnorIntro": {
+  "en": "Help!\\nI'm a HEMATEK employee.",
+  "fr": "Au secours !\\nJe suis employé d'HEMATEK."
+ },
+ "SilphCo_2F_Text_ConnorPostBattle": {
+  "en": "I work for both HEMATEK and TEAM\\nONYBRIS.",
+  "fr": "Je travaille pour HEMATEK et pour\\nla TEAM ONYBRIS."
+ },
+ "SilphCo_2F_Text_FloorSign": {
+  "en": "HEMATEK CO. HEAD OFFICE\\n2F",
+  "fr": "HEMATEK CO. SIÈGE\\n2F"
+ },
+ "SilphCo_2F_Text_Grunt1Defeat": {
+  "en": "Tough!",
+  "fr": "Coriace !"
+ },
+ "SilphCo_2F_Text_Grunt1Intro": {
+  "en": "No kids are allowed in here!",
+  "fr": "Les enfants sont interdits ici !"
+ },
+ "SilphCo_2F_Text_Grunt1PostBattle": {
+  "en": "Diamond-shaped tiles are teleport\\nblocks.\\pThey're transporters for this\\nhigh-tech building.",
+  "fr": "Les carreaux en losange sont des\\nblocs de téléportation.\\pCe sont des transporteurs pour ce\\nbâtiment high-tech."
+ },
+ "SilphCo_2F_Text_Grunt2Defeat": {
+  "en": "I goofed!",
+  "fr": "J'ai fait une bourde !"
+ },
+ "SilphCo_2F_Text_Grunt2Intro": {
+  "en": "Hey, kid!\\nWhat are you wandering here for?",
+  "fr": "Hé !\\nQu'est-ce que tu fais à rôder ici ?"
+ },
+ "SilphCo_2F_Text_Grunt2PostBattle": {
+  "en": "HEMATEK CO. will be associated with\\nTEAM ONYBRIS!",
+  "fr": "HEMATEK CO. sera associée à la TEAM\\nONYBRIS !"
+ },
+ "SilphCo_2F_Text_JerryDefeat": {
+  "en": "You're good.",
+  "fr": "Tu es bon."
+ },
+ "SilphCo_2F_Text_JerryIntro": {
+  "en": "It's off-limits here!\\nGo home!",
+  "fr": "C'est interdit ici !\\nRentre chez toi !"
+ },
+ "SilphCo_2F_Text_JerryPostBattle": {
+  "en": "Can you solve the maze in here?\\nIt's not easy, I tell you!",
+  "fr": "Peux-tu résoudre le labyrinthe\\nici ? Ce n'est pas facile, je te le\\ldis !"
+ },
+ "Text_ThunderWaveDeclined": {
+  "en": "Oh…\\nBut THUNDER WAVE is convenient…",
+  "fr": "Oh…\\nMais CAGE-ÉCLAIR est pratique…"
+ },
+ "Text_ThunderWaveTaught": {
+  "en": "THUNDER WAVE causes paralysis in\\nthe target POKéMON.\\pA paralyzed POKéMON may be unable\\nto move in battle.\\pIt's an ELECTRIC-type move, so it\\nwon't work on some POKéMON.",
+  "fr": "CAGE-ÉCLAIR paralyse le POKéMON\\nciblé.\\pUn POKéMON paralysé peut être\\nincapable de bouger au combat.\\pC'est une capacité de type\\nÉLECTRIK, donc elle n'agit pas sur\\lcertains POKéMON."
+ },
+ "Text_ThunderWaveTeach": {
+  "en": "Eeek!\\nNo! Stop! Help!\\pOh, you're not with TEAM ONYBRIS.\\nI'm sorry, I thought…\\pWill you forgive me if I teach\\nyou the THUNDER WAVE technique?",
+  "fr": "Aïe !\\nNon ! Stop ! Au secours !\\pOh, tu n'es pas de la TEAM ONYBRIS.\\nDésolé, je pensais…\\pMe pardonneras-tu si je t'enseigne\\nla technique CAGE-ÉCLAIR ?"
+ },
+ "Text_ThunderWaveWhichMon": {
+  "en": "Which POKéMON should I teach\\nTHUNDER WAVE?",
+  "fr": "À quel POKéMON dois-je enseigner\\nCAGE-ÉCLAIR ?"
+ }
+}

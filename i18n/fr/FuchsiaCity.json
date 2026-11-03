@@ -1,6 +1,770 @@
 {
+ "FuchsiaCity_Text_Apprentice_Ask0": {
+  "en": "The BABY NURSERY: little POKéMON\\nneed a home. Visit?",
+  "fr": "La PÉPINIÈRE : les petits POKéMON\\nont besoin d'un foyer. Visiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Ask1": {
+  "en": "The BARTER HOUSE: trade treasures\\nfor rare POKéMON. Visit?",
+  "fr": "La MAISON DU TROC : échange des\\ntrésors contre des POKéMON rares.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Ask10": {
+  "en": "The PEBBLE BEACH: smooth stones and\\ntiny tides. Visit?",
+  "fr": "La PLAGE DE GALETS : pierres lisses\\net minuscules marées. Visiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Ask11": {
+  "en": "The LANTERN MEADOW: glowing flowers\\nat dusk. Visit?",
+  "fr": "La PRAIRIE DES LANTERNES : fleurs\\nlumineuses au crépuscule. Visiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Ask12": {
+  "en": "The CRICK POND: small ripples,\\nsmall friends. Visit?",
+  "fr": "L'ÉTANG DES GRILLONS : petites\\nondes, petits amis. Visiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Ask13": {
+  "en": "The DAISY HILL: flowers all the way\\nup. Visit?",
+  "fr": "La COLLINE DES MARGUERITES : des\\nfleurs jusqu'au sommet. Visiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Ask14": {
+  "en": "The BERRY BROOK: a sweet stream.\\nVisit?",
+  "fr": "Le RUISSEAU DE BAIES : un cours\\nd'eau sucré. Visiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Ask15": {
+  "en": "The TUMBLEWEED TRAIL: dry wind,\\nrolling bushes. Visit?",
+  "fr": "Le SENTIER DES VIRE-VOLTANTES :\\nvent sec, buissons qui roulent.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Ask16": {
+  "en": "The FERN GULLY: a green dip full of\\ntiny wings. Visit?",
+  "fr": "Le RAVIN DE FOUGÈRES : un creux\\nvert plein de petites ailes.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Ask17": {
+  "en": "The LILY LAGOON: pads to hop and\\ntiny frogs. Visit?",
+  "fr": "Le LAGON DES LYS : nénuphars à\\nsauter et minuscules grenouilles.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Ask18": {
+  "en": "The HARVEST HOLLOW: golden fields\\nand scarecrows. Visit?",
+  "fr": "Le CREUX DES RÉCOLTES : champs\\ndorés et épouvantails. Visiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Ask19": {
+  "en": "The BUZZING MEADOW: wings\\neverywhere. Visit?",
+  "fr": "La PRAIRIE BOURDONNANTE : des ailes\\npartout. Visiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Ask2": {
+  "en": "The APOTHECARY: boosters for your\\nwhole team. Visit?",
+  "fr": "L'APOTHICAIRE : des boosters pour\\ntoute ton équipe. Visiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Ask3": {
+  "en": "The MEADOW PATH: a calm start for\\nnew collectors. Visit?",
+  "fr": "Le CHEMIN DE LA PRAIRIE : un début\\ntranquille pour les nouveaux\\lcollectionneurs. Visiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Ask4": {
+  "en": "The COTTON FIELD: soft grass,\\nsleepy POKéMON. Visit?",
+  "fr": "Le CHAMP DE COTON : herbe douce,\\nPOKéMON somnolents. Visiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Ask5": {
+  "en": "The BREEZE HILL: wind, grass and\\nfirst catches. Visit?",
+  "fr": "La COLLINE DE LA BRISE : vent,\\nherbe et premières captures.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Ask6": {
+  "en": "The DROWSY DOWN: sleepy hills full\\nof dozing POKéMON. Visit?",
+  "fr": "Le COTEAU SOMNOLENT : collines\\nendormies pleines de POKéMON\\lassoupis. Visiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Ask7": {
+  "en": "The WEED PATCH: tall grass and tiny\\nbugs. Visit?",
+  "fr": "Le MASSIF D'HERBES : hautes herbes\\net minuscules insectes. Visiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Ask8": {
+  "en": "The FOX FIELD: sly hunters in\\ngolden grass. Visit?",
+  "fr": "Le CHAMP DES RENARDS : chasseurs\\nrusés dans l'herbe dorée. Visiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Ask9": {
+  "en": "The CROWN FIELD: the strongest wild\\nPOKéMON gather here. Visit?",
+  "fr": "Le CHAMP DE LA COURONNE : les\\nPOKéMON sauvages les plus forts s'y\\lrassemblent. Visiter ?"
+ },
+ "FuchsiaCity_Text_Apprentice_Closed": {
+  "en": "The boat is not ready. Come back\\nwhen the clocks make sense.",
+  "fr": "Le bateau n'est pas prêt. Reviens\\nquand les horloges auront un sens."
+ },
+ "FuchsiaCity_Text_Apprentice_Hello": {
+  "en": "The master is busy. I row the small\\ntrips, {PLAYER}.",
+  "fr": "Le maître est occupé. Je ne fais\\nque les petits trajets, {PLAYER}."
+ },
+ "FuchsiaCity_Text_Apprentice_Never": {
+  "en": "Another time, then.",
+  "fr": "Une autre fois, alors."
+ },
+ "FuchsiaCity_Text_CitySign": {
+  "en": "AMETHIOLITE CITY\\nThe Amethyst Lake Town",
+  "fr": "AMETHIOLITE\\nLa Ville du Lac Améthyste"
+ },
+ "FuchsiaCity_Text_DidYouTrySafariGame": {
+  "en": "Did you try the SAFARI GAME?\\pThere are some rare POKéMON that\\ncan only be caught there.",
+  "fr": "As-tu essayé le JEU SAFARI ?\\pCertains POKéMON rares ne peuvent\\nêtre capturés que là-bas."
+ },
+ "FuchsiaCity_Text_DockGuide0": {
+  "en": "Seven ferries leave from this dock.\\nEchoes and time, tides and capture,\\planterns and calm shores, babies\\nand trades, dusk, the scribe and\\pthe seasons. Ask them all.",
+  "fr": "Sept ferrys partent de ce port.\\nÉchos et temps, marées et capture,\\llanternes et rivages calmes, bébés\\net échanges, crépuscule, scribe et\\lsaisons. Demande-les tous."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask0": {
+  "en": "The GROVE OF WHISPERS: spirits\\ndrift between the trees. Visit?",
+  "fr": "Le BOSQUET DES MURMURES : des\\nesprits dérivent entre les arbres.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask1": {
+  "en": "The SPARK GLADE hums with static.\\nVisit?",
+  "fr": "La CLAIRIÈRE ÉTINCELLE bourdonne\\nd'électricité statique. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask10": {
+  "en": "The CENTER MEADOW: the old safari\\ngrounds. Visit?",
+  "fr": "La PRAIRIE CENTRALE : l'ancien\\nterrain du safari. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask11": {
+  "en": "The BERRY STAND: fresh berries for\\nevery need. Visit?",
+  "fr": "Le STAND DE BAIES : baies fraîches\\npour chaque besoin. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask12": {
+  "en": "The MIST LAKE: soft fog, calm\\nwater. Visit?",
+  "fr": "Le LAC DE BRUME : brouillard doux,\\neau calme. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask13": {
+  "en": "The FANG VALLEY: fierce hunters and\\nsharp teeth. Visit?",
+  "fr": "La VALLÉE DES CROCS : chasseurs\\nféroces et dents acérées. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask14": {
+  "en": "The SILENT HOLLOW: no wind, no\\nsound. Visit?",
+  "fr": "Le CREUX SILENCIEUX : pas de vent,\\npas de bruit. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask15": {
+  "en": "The IVY MAZE: twisting paths of\\ngreen. Visit?",
+  "fr": "Le LABYRINTHE DE LIERRE : chemins\\ntortueux de verdure. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask16": {
+  "en": "The STONE CIRCLE: dragons gather\\nunder standing stones. Visit?",
+  "fr": "Le CERCLE DE PIERRES : les dragons\\nse rassemblent sous les menhirs.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask17": {
+  "en": "The ASHEN HEIGHTS: warm rock and\\nsmoking cracks. Visit?",
+  "fr": "Les HAUTEURS DE CENDRE : roche\\nchaude et fissures fumantes.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask18": {
+  "en": "The GALE CLIFF: wind-whipped rocks.\\nVisit?",
+  "fr": "La FALAISE DES BOURRASQUES :\\nrochers fouettés par le vent.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask19": {
+  "en": "The MIRROR POND: still water,\\nstrong swimmers. Visit?",
+  "fr": "L'ÉTANG MIROIR : eau calme, nageurs\\npuissants. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask2": {
+  "en": "The DRAGON PERCH: the air is thin\\nand the wings are large. Visit?",
+  "fr": "Le PERCHOIR DES DRAGONS : l'air est\\nmince et les ailes sont grandes.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask20": {
+  "en": "The CINDER PLAIN: burnt grass, hot\\nwinds. Visit?",
+  "fr": "La PLAINE DE CENDRES : herbe\\nbrûlée, vents chauds. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask21": {
+  "en": "The EMBER RIDGE: warm rocks and red\\nsparks. Visit?",
+  "fr": "La CRÊTE DE BRAISE : roches chaudes\\net étincelles rouges. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask22": {
+  "en": "The DAWN SUMMIT: the first light of\\nthe region. Visit?",
+  "fr": "Le SOMMET DE L'AUBE : la première\\nlumière de la région. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask23": {
+  "en": "The TWILIGHT GLEN: everything is a\\nshade of blue. Visit?",
+  "fr": "Le VALLON CRÉPUSCULAIRE : tout est\\nd'une nuance de bleu. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask24": {
+  "en": "The RAINBOW FALLS: a rainbow, a\\nwaterfall and big splashes. Visit?",
+  "fr": "Les CHUTES ARC-EN-CIEL : un\\narc-en-ciel, une cascade et de gros\\léclaboussements. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask25": {
+  "en": "The SUNSET ROAD: a long walk toward\\nthe red sky. Visit?",
+  "fr": "La ROUTE DU COUCHANT : une longue\\nmarche vers le ciel rouge.\\lVisiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask26": {
+  "en": "The ANCIENT LIBRARY: old books and\\nolder minds. Visit?",
+  "fr": "L'ANCIENNE BIBLIOTHÈQUE : vieux\\nlivres et esprits plus vieux.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask27": {
+  "en": "The GLIMMER BAY: the sea sparkles\\nat noon. Visit?",
+  "fr": "La BAIE SCINTILLANTE : la mer\\nbrille à midi. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask28": {
+  "en": "The MYTHIC SPRING: a pool that\\ngrants wishes, they say. Visit?",
+  "fr": "La SOURCE MYTHIQUE : un bassin qui\\nexauce les vœux, dit-on. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask29": {
+  "en": "The LAVA LAGOON: red water, hot\\nair. Visit?",
+  "fr": "Le LAGON DE LAVE : eau rouge, air\\nchaud. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask3": {
+  "en": "The ZEN GARDEN: still water, calm\\nminds. Visit?",
+  "fr": "Le JARDIN ZEN : eau calme, esprits\\nsereins. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask30": {
+  "en": "The CHAMPIONS PATH: only the best\\nwalk here. Visit?",
+  "fr": "Le CHEMIN DES CHAMPIONS : seuls les\\nmeilleurs y marchent. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask31": {
+  "en": "The VENOM SWAMP: the air itself\\nbites. Visit?",
+  "fr": "Le MARAIS VENIMEUX : l'air lui-même\\nmord. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask32": {
+  "en": "The ROYAL GARDEN: the most perfect\\nhedges you will see. Visit?",
+  "fr": "Le JARDIN ROYAL : les haies les\\nplus parfaites que tu verras.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask33": {
+  "en": "The SPIRE YARD: a graveyard around\\na tall tower. Visit?",
+  "fr": "La COUR DE LA FLÈCHE : un cimetière\\nautour d'une haute tour. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask34": {
+  "en": "The EDGE OF THE WORLD: the last\\ncliff. Visit?",
+  "fr": "LE BOUT DU MONDE : la dernière\\nfalaise. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask35": {
+  "en": "The SEA GLASS SHORE: green shards,\\nsoft waves. Visit?",
+  "fr": "Le RIVAGE DE VERRE MARIN : éclats\\nverts, vagues douces. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask36": {
+  "en": "The SKY GARDEN: flowers above the\\nclouds. Visit?",
+  "fr": "Le JARDIN DU CIEL : des fleurs\\nau-dessus des nuages. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask37": {
+  "en": "The ELECTRIC AVENUE: street lights\\nthat bite. Visit?",
+  "fr": "L'AVENUE ÉLECTRIQUE : des\\nlampadaires qui mordent. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask38": {
+  "en": "The FINAL GATE: beyond it, only\\nlegends. Visit?",
+  "fr": "La PORTE FINALE : au-delà,\\nseulement des légendes. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask4": {
+  "en": "The PLAIN OF GIANTS: wide grass and\\nbig POKéMON. Visit?",
+  "fr": "La PLAINE DES GÉANTS : herbe\\nétendue et gros POKéMON. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask5": {
+  "en": "The DUNE SEA: sand as far as the\\neye can see. Visit?",
+  "fr": "La MER DE DUNES : du sable à perte\\nde vue. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask6": {
+  "en": "The RUIN HOLLOW: old stones, older\\nsecrets. Visit?",
+  "fr": "Le CREUX DES RUINES : vieilles\\npierres, secrets plus vieux encore.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask7": {
+  "en": "The TIDE CAVE: deep water, strange\\nlights. Visit?",
+  "fr": "La GROTTE DE LA MARÉE : eau\\nprofonde, lumières étranges.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask8": {
+  "en": "The SOUL PILLAR: the quiet place of\\nremembrance. Visit?",
+  "fr": "Le PILIER DES ÂMES : le lieu calme\\ndu souvenir. Visiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Ask9": {
+  "en": "The OUTCAST SHORE: wild waters,\\nwild POKéMON. Visit?",
+  "fr": "Le RIVAGE DES EXILÉS : eaux\\nsauvages, POKéMON sauvages.\\lVisiter ?"
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Closed": {
+  "en": "The dusk is not ready. Come back\\nwhen the clocks make sense.",
+  "fr": "Le crépuscule n'est pas prêt.\\nReviens quand les horloges auront\\lun sens."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Hello": {
+  "en": "At dusk the strangest places open,\\n{PLAYER}.",
+  "fr": "Au crépuscule, les endroits les\\nplus étranges s'ouvrent, {PLAYER}."
+ },
+ "FuchsiaCity_Text_DuskFerrywoman_Never": {
+  "en": "Another time. Dusk will come again.",
+  "fr": "Une autre fois. Le crépuscule\\nreviendra."
+ },
+ "FuchsiaCity_Text_FerryLocked": {
+  "en": "Some places need more BADGES. Come\\nback later.",
+  "fr": "Certains lieux nécessitent plus de\\nBADGES. Reviens plus tard."
+ },
+ "FuchsiaCity_Text_Ferry_Ask0": {
+  "en": "The old LIGHTHOUSE? Its lamp turns\\nbackwards. Want to see it?",
+  "fr": "Le vieux PHARE ? Sa lampe tourne à\\nl'envers. Tu veux le voir ?"
+ },
+ "FuchsiaCity_Text_Ferry_Ask1": {
+  "en": "The CLOCK BEACH? Every wave brings\\nin a broken clock. Want to see it?",
+  "fr": "La PLAGE DES HORLOGES ? Chaque\\nvague apporte une horloge cassée.\\pTu veux la voir ?"
+ },
+ "FuchsiaCity_Text_Ferry_Ask2": {
+  "en": "A village where today never ends?\\nDo you want to go?",
+  "fr": "Un village où aujourd'hui ne finit\\njamais ? Veux-tu y aller ?"
+ },
+ "FuchsiaCity_Text_Ferry_Ask3": {
+  "en": "The BOTTOMLESS CAVE? Every time you\\ngo down, the floor count changes.\\pBrave enough?",
+  "fr": "La GROTTE SANS FOND ? Chaque fois\\nque tu descends, le nombre d'étages\\lchange.\\pAssez courageux ?"
+ },
+ "FuchsiaCity_Text_Ferry_Ask4": {
+  "en": "The GARDEN OF ECHOES blooms with\\nwhat the ECHOES left behind. Visit?",
+  "fr": "Le JARDIN DES ÉCHOS fleurit de ce\\nque les ÉCHOS ont laissé. Visiter ?"
+ },
+ "FuchsiaCity_Text_Ferry_Ask5": {
+  "en": "The ISLAND OF THE LAST DAY... no\\none has come back from there\\punchanged. Go anyway?",
+  "fr": "L'ÎLE DU DERNIER JOUR… personne\\nn'en est revenu inchangé. Y aller\\lquand même ?"
+ },
+ "FuchsiaCity_Text_Ferry_Ask6": {
+  "en": "A clearing where your friends rest\\nbetween battles. Visit?",
+  "fr": "Une clairière où tes amis se\\nreposent entre les combats.\\lVisiter ?"
+ },
+ "FuchsiaCity_Text_Ferry_Closed": {
+  "en": "The ferry is not running. The\\nclocks of the routes are still\\punread. Come back when you know why\\nthey stopped.",
+  "fr": "Le ferry ne circule pas. Les\\nhorloges des routes sont encore\\lillisibles. Reviens quand tu sauras\\npourquoi elles se sont arrêtées."
+ },
+ "FuchsiaCity_Text_Ferry_Hello": {
+  "en": "I row where time runs differently.\\nWhere do you want to go, {PLAYER}?",
+  "fr": "Je rame là où le temps s'écoule\\ndifféremment. Où veux-tu aller,\\l{PLAYER} ?"
+ },
+ "FuchsiaCity_Text_Ferry_Never": {
+  "en": "Another time, then. The tide will\\nwait.",
+  "fr": "Une autre fois, alors. La marée\\nattendra."
+ },
+ "FuchsiaCity_Text_GymSign": {
+  "en": "AMETHIOLITE POKéMON GYM\\nLEADER: ACHLYS\\lThe Violet Venom Witch!",
+  "fr": "ARÈNE POKéMON D'AMETHIOLITE\\nCHAMPIONNE : ACHLYS\\lLa Sorcière du Venin Violet !"
+ },
+ "FuchsiaCity_Text_ItemBallInThere": {
+  "en": "That item ball in there…\\nWere you wanting that?\\pMe, too!\\n…Huh? That's a POKéMON?",
+  "fr": "Cette Ball dans le coin…\\nTu la voulais ?\\pMoi aussi !\\n…Hein ? C'est un POKéMON ?"
+ },
+ "FuchsiaCity_Text_Lantern_Ask0": {
+  "en": "The WEST RESERVE, home of POKéMON\\nfrom a far region. Visit?",
+  "fr": "La RÉSERVE OUEST, foyer de POKéMON\\nd'une région lointaine. Visiter ?"
+ },
+ "FuchsiaCity_Text_Lantern_Ask1": {
+  "en": "The EAST RESERVE: sea and cliffs\\nfrom a far region. Visit?",
+  "fr": "La RÉSERVE EST : mer et falaises\\nd'une région lointaine. Visiter ?"
+ },
+ "FuchsiaCity_Text_Lantern_Ask2": {
+  "en": "The SUNRISE MEADOW: POKéMON from\\nthe other side of the sea. Visit?",
+  "fr": "La PRAIRIE DU LEVANT : POKéMON de\\nl'autre côté de la mer. Visiter ?"
+ },
+ "FuchsiaCity_Text_Lantern_Ask3": {
+  "en": "The ASHEN MINE: gems, stones, odd\\nPOKéMON. Visit?",
+  "fr": "La MINE DE CENDRE : gemmes,\\npierres, POKéMON étranges.\\lVisiter ?"
+ },
+ "FuchsiaCity_Text_Lantern_Ask4": {
+  "en": "The BERRY ORCHARD grows every kind\\nof berry. Visit?",
+  "fr": "Le VERGER DE BAIES fait pousser\\ntoutes les sortes de baies.\\lVisiter ?"
+ },
+ "FuchsiaCity_Text_Lantern_Ask5": {
+  "en": "The DOCK CAFE: rest, a drink and a\\nchat. Visit?",
+  "fr": "Le CAFÉ DU QUAI : repos, boisson et\\ndiscussion. Visiter ?"
+ },
+ "FuchsiaCity_Text_Lantern_Ask6": {
+  "en": "The EVOLUTION LIBRARY: every way a\\nPOKéMON can change. Visit?",
+  "fr": "La BIBLIOTHÈQUE DE L'ÉVOLUTION :\\ntoutes les façons dont un POKéMON\\lpeut changer. Visiter ?"
+ },
+ "FuchsiaCity_Text_Lantern_Ask7": {
+  "en": "The COLLECTOR SHOP: little\\ntreasures for sale. Visit?",
+  "fr": "La BOUTIQUE DU COLLECTIONNEUR :\\npetits trésors à vendre. Visiter ?"
+ },
+ "FuchsiaCity_Text_Lantern_Closed": {
+  "en": "The lantern is lit only for those\\nwho read the clocks.",
+  "fr": "La lanterne n'est allumée que pour\\nceux qui lisent les horloges."
+ },
+ "FuchsiaCity_Text_Lantern_Hello": {
+  "en": "My lantern lights the way to calmer\\nplaces, {PLAYER}.",
+  "fr": "Ma lanterne éclaire le chemin vers\\ndes lieux plus calmes, {PLAYER}."
+ },
+ "FuchsiaCity_Text_Lantern_Never": {
+  "en": "Another time. The lantern stays\\nlit.",
+  "fr": "Une autre fois. La lanterne reste\\nallumée."
+ },
+ "FuchsiaCity_Text_LooseMonChansey": {
+  "en": "CHANSEY: Chansey! Chansey!\\pIt escaped from the zoo, and does\\nnot seem to want to go back.",
+  "fr": "LEVEINARD : Chansey ! Chansey !\\pIl s'est échappé du zoo, et ne\\nsemble pas vouloir y retourner."
+ },
+ "FuchsiaCity_Text_LooseMonKangaskhan": {
+  "en": "KANGASKHAN: Garuu!\\pIt escaped from the zoo, and does\\nnot seem to want to go back.",
+  "fr": "KANGOUREX : Garuu !\\pIl s'est échappé du zoo, et ne\\nsemble pas vouloir y retourner."
+ },
+ "FuchsiaCity_Text_LooseMonPsyduck": {
+  "en": "PSYDUCK: Psy... duck?\\pIt escaped from the zoo, and does\\nnot seem to want to go back.",
+  "fr": "PSYKOKWAK : Psy… duck ?\\pIl s'est échappé du zoo, et ne\\nsemble pas vouloir y retourner."
+ },
+ "FuchsiaCity_Text_LooseMonSlowpoke": {
+  "en": "SLOWPOKE: ...Yawn?\\pIt escaped from the zoo, and does\\nnot seem to want to go back.",
+  "fr": "RAMOLOSS : …Bâillement ?\\pIl s'est échappé du zoo, et ne\\nsemble pas vouloir y retourner."
+ },
+ "FuchsiaCity_Text_LooseMonVoltorb": {
+  "en": "VOLTORB: Zzzt!\\pIt escaped from the zoo, and does\\nnot seem to want to go back.",
+  "fr": "VOLTORBE : Zzzt !\\pIl s'est échappé du zoo, et ne\\nsemble pas vouloir y retourner."
+ },
+ "FuchsiaCity_Text_MyFatherIsGymLeader": {
+  "en": "My father is the GYM LEADER of\\nthis town.\\pI'm training to use POISON POKéMON\\nas well as my father.",
+  "fr": "Mon père est le CHAMPION de cette\\nville.\\pJe m'entraîne à utiliser les\\nPOKéMON POISON aussi bien que mon\\lpère."
+ },
+ "FuchsiaCity_Text_PoliceBadge": {
+  "en": "The thieves slipped away, so we\\nkeep watch. Only trainers who can\\lprove themselves may pass.\\pBeat the GYM LEADER first, kid.",
+  "fr": "Les voleurs se sont échappés, alors\\nnous montons la garde. Seuls les\\ldresseurs qui ont fait leurs\\npreuves peuvent passer.\\pBats d'abord le CHAMPION."
+ },
+ "FuchsiaCity_Text_PoliceRaid": {
+  "en": "Sorry, the town is sealed until the\\nzoo POKéMON are rounded up.\\pThieves are on the loose. Nobody\\ngoes in or out this way.",
+  "fr": "Désolé, la ville est fermée tant\\nque les POKéMON du zoo ne sont pas\\lrattrapés.\\pDes voleurs sont en liberté.\\nPersonne n'entre ni ne sort par\\lici."
+ },
+ "FuchsiaCity_Text_PoliceVolcano": {
+  "en": "The sea road south is closed.\\pThe SEAFOAM volcano erupted and\\nthe water is molten rock.\\pLooking for CHRONDROLIA? Go back\\nto GRENALUX and SURF south.",
+  "fr": "La route maritime du sud est\\nfermée.\\pLe volcan SEAFOAM est entré en\\néruption et l'eau est de la roche\\len fusion.\\pTu cherches CHRONDROLIA ? Retourne\\nà GRENALUX et SURF vers le sud."
+ },
+ "FuchsiaCity_Text_ProcheThibault_After": {
+  "en": "The sea is calm now. Thanks for the\\nfight, {PLAYER}.",
+  "fr": "La mer est calme maintenant. Merci\\npour le combat, {PLAYER}."
+ },
+ "FuchsiaCity_Text_ProcheThibault_Defeat": {
+  "en": "Washed away... what a wave!",
+  "fr": "Emporté… quelle vague !"
+ },
+ "FuchsiaCity_Text_ProcheThibault_Early": {
+  "en": "Not yet, {PLAYER}. Finish your\\njourney first, then come and find\\pme.",
+  "fr": "Pas encore, {PLAYER}. Termine\\nd'abord ton voyage, puis viens me\\ltrouver."
+ },
+ "FuchsiaCity_Text_ProcheThibault_Intro": {
+  "en": "{PLAYER}! The tide is perfect today.\\nCome, ride the wave with me!",
+  "fr": "{PLAYER} ! La marée est parfaite\\naujourd'hui. Viens, chevauche la\\lvague avec moi !"
+ },
+ "FuchsiaCity_Text_ProcheThibault_NoRoom": {
+  "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reparle-moi."
+ },
+ "FuchsiaCity_Text_ProcheThibault_Win": {
+  "en": "From the deep. A gift for you.",
+  "fr": "Des profondeurs. Un cadeau pour\\ntoi."
+ },
+ "FuchsiaCity_Text_SafariZoneZooInFront": {
+  "en": "The SAFARI ZONE has a zoo in front\\nof the entrance.\\pOut back is the SAFARI GAME for\\ncatching POKéMON.",
+  "fr": "Le PARC SAFARI a un zoo devant\\nl'entrée.\\pÀ l'arrière se trouve le JEU SAFARI\\npour capturer des POKéMON."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask0": {
+  "en": "The HALL OF THE POKéDEX: rewards\\nfor every milestone. Visit?",
+  "fr": "Le HALL DU POKéDEX : des\\nrécompenses à chaque palier.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask1": {
+  "en": "The THORN THICKET: bugs of every\\nkind hide here. Visit?",
+  "fr": "Le FOURRÉ ÉPINEUX : des insectes de\\ntoutes sortes s'y cachent.\\lVisiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask10": {
+  "en": "The NORTH WIND: bitter gusts and\\ncold fur. Visit?",
+  "fr": "Le VENT DU NORD : rafales amères et\\nfourrure froide. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask11": {
+  "en": "The MOSSY DELL: old trees and\\nPikachu. Visit?",
+  "fr": "Le VALLON MOUSSU : vieux arbres et\\nPikachu. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask12": {
+  "en": "The HUSHED BOG: slime, mist and\\npoison types. Visit?",
+  "fr": "Le MARÉCAGE FEUTRÉ : vase, brume et\\ntypes POISON. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask13": {
+  "en": "The OBSIDIAN PASS: black rock and\\nheavy hitters. Visit?",
+  "fr": "Le COL D'OBSIDIENNE : roche noire\\net gros cogneurs. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask14": {
+  "en": "The HONEY GROVE: sweet air and busy\\nwings. Visit?",
+  "fr": "Le BOSQUET DE MIEL : air sucré et\\nailes affairées. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask15": {
+  "en": "The FROZEN MARSH: ice on the reeds.\\nVisit?",
+  "fr": "Le MARAIS GELÉ : glace sur les\\nroseaux. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask16": {
+  "en": "The RUSTY YARD: old scrap and new\\nfriends. Visit?",
+  "fr": "La COUR ROUILLÉE : vieille\\nferraille et nouveaux amis.\\lVisiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask17": {
+  "en": "The GLASS CAVERN: shining walls and\\nsharp echoes. Visit?",
+  "fr": "La CAVERNE DE VERRE : murs\\nbrillants et échos tranchants.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask18": {
+  "en": "The PINE ROW: tall trunks and quiet\\nneedles. Visit?",
+  "fr": "La RANGÉE DE PINS : hauts troncs et\\naiguilles silencieuses. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask19": {
+  "en": "The STEEL GARDEN: metal flowers\\nthat never wilt. Visit?",
+  "fr": "Le JARDIN D'ACIER : des fleurs de\\nmétal qui ne fanent jamais.\\lVisiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask2": {
+  "en": "The KINDLE TRAIL: a training path\\nfor fighters. Visit?",
+  "fr": "Le SENTIER BRAISE : un parcours\\nd'entraînement pour combattants.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask20": {
+  "en": "The MUDDY CREEK: brown water and\\nslippery friends. Visit?",
+  "fr": "Le RUISSEAU BOUEUX : eau brune et\\namis glissants. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask21": {
+  "en": "The THUNDER PLAIN: static in the\\nair. Visit?",
+  "fr": "La PLAINE DU TONNERRE : statique\\ndans l'air. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask22": {
+  "en": "The HAUNTED ORCHARD: the apples\\nwhisper. Visit?",
+  "fr": "Le VERGER HANTÉ : les pommes\\nchuchotent. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask23": {
+  "en": "The IRON FOREST: leaves like\\nblades. Visit?",
+  "fr": "La FORÊT DE FER : des feuilles\\ncomme des lames. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask24": {
+  "en": "The MARBLE HALL: a quiet gallery\\nopen to the sky. Visit?",
+  "fr": "La SALLE DE MARBRE : une galerie\\ntranquille ouverte sur le ciel.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask25": {
+  "en": "The SLEEPY HOLLOW: naps are\\nmandatory. Visit?",
+  "fr": "Le CREUX ENDORMI : les siestes sont\\nobligatoires. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask26": {
+  "en": "The CLIFFSIDE COVE: a hidden beach\\nunder the rocks. Visit?",
+  "fr": "La CRIQUE DE LA FALAISE : une plage\\ncachée sous les rochers. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask27": {
+  "en": "The WINDMILL FLATS: wide fields and\\nslow blades. Visit?",
+  "fr": "Les PLAINES DES MOULINS : vastes\\nchamps et pales lentes. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask28": {
+  "en": "The PRAIRIE DUSK: tall grass,\\norange sky. Visit?",
+  "fr": "La PRAIRIE DU CRÉPUSCULE : herbe\\nhaute, ciel orange. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask29": {
+  "en": "The QUARTZ QUARRY: pale rock and\\nloud hammers. Visit?",
+  "fr": "La CARRIÈRE DE QUARTZ : roche pâle\\net marteaux bruyants. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask3": {
+  "en": "The MIRROR BRIDGE: calm water, calm\\nreflections. Visit?",
+  "fr": "Le PONT MIROIR : eau calme, reflets\\ncalmes. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask30": {
+  "en": "The MIRROR MARSH: still water that\\ncopies the sky. Visit?",
+  "fr": "Le MARAIS MIROIR : une eau calme\\nqui copie le ciel. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask31": {
+  "en": "The DEEP EMBER CAVE: hot stone,\\nhotter echoes. Visit?",
+  "fr": "La GROTTE DE BRAISE PROFONDE :\\nroche chaude, échos plus chauds.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask32": {
+  "en": "The PUDDLE LANE: it rained. It\\nalways rains. Visit?",
+  "fr": "La RUELLE AUX FLAQUES : il a plu.\\nIl pleut toujours. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask33": {
+  "en": "The SPIRIT FALLS: a waterfall with\\na voice. Visit?",
+  "fr": "Les CHUTES DES ESPRITS : une\\ncascade qui a une voix. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask4": {
+  "en": "The QUARRY HEIGHTS: rock, steel and\\nhard heads. Visit?",
+  "fr": "Les HAUTEURS DE LA CARRIÈRE :\\nroche, acier et têtes dures.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask5": {
+  "en": "The BATTLE STALL: small boosts for\\nhard fights. Visit?",
+  "fr": "Le STAND DE COMBAT : petits boosts\\npour combats difficiles. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask6": {
+  "en": "The STARLIT STEPPE: wide plains\\nunder a thousand stars. Visit?",
+  "fr": "La STEPPE ÉTOILÉE : vastes plaines\\nsous mille étoiles. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask7": {
+  "en": "The BLOSSOM CREST: a hill covered\\nin flowers. Visit?",
+  "fr": "La CRÊTE FLEURIE : une colline\\ncouverte de fleurs. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask8": {
+  "en": "The LUCKY CLOVER: normal types, big\\nhearts. Visit?",
+  "fr": "Le TRÈFLE PORTE-BONHEUR : types\\nNORMAL, grands cœurs. Visiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Ask9": {
+  "en": "The SKY PERCH: cliffs for birds and\\nwind riders. Visit?",
+  "fr": "Le PERCHOIR DU CIEL : falaises pour\\noiseaux et chevaucheurs de vent.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Closed": {
+  "en": "The ledger is closed. Come back\\nwhen the clocks make sense.",
+  "fr": "Le registre est fermé. Reviens\\nquand les horloges auront un sens."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Hello": {
+  "en": "The scribe waits for you with his\\nledger, {PLAYER}.",
+  "fr": "Le scribe t'attend avec son\\nregistre, {PLAYER}."
+ },
+ "FuchsiaCity_Text_ScribeFerryman_Never": {
+  "en": "Another time, then.",
+  "fr": "Une autre fois, alors."
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask0": {
+  "en": "The FROST HOLLOW: ice, silence and\\ncold POKéMON. Visit?",
+  "fr": "Le CREUX GIVRÉ : glace, silence et\\nPOKéMON de froid. Visiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask1": {
+  "en": "The EMBER RIM: lava glows below the\\nrock. Visit?",
+  "fr": "Le BORD DE BRAISE : la lave luit\\nsous la roche. Visiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask10": {
+  "en": "The THUNDER RIDGE: static in the\\nair, storms on the horizon. Visit?",
+  "fr": "La CRÊTE DU TONNERRE : statique\\ndans l'air, orages à l'horizon.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask11": {
+  "en": "The SANDBOX GROVE: a sandy\\nplayground for ground types. Visit?",
+  "fr": "Le BOSQUET DU BAC À SABLE : un\\nterrain de jeu sablonneux pour\\ltypes SOL. Visiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask12": {
+  "en": "The BRIGHT SHALLOWS: warm water,\\neasy fishing. Visit?",
+  "fr": "Les BAS-FONDS LUMINEUX : eau\\nchaude, pêche facile. Visiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask13": {
+  "en": "The SOUND MEADOW: songs, echoes and\\nNormal types. Visit?",
+  "fr": "La PRAIRIE SONORE : chants, échos\\net types NORMAL. Visiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask14": {
+  "en": "The PHANTOM LANE: a road for ghosts\\nand shadows. Visit?",
+  "fr": "La RUELLE FANTÔME : une route pour\\nfantômes et ombres. Visiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask15": {
+  "en": "The CIRCUS LAWN: psychic acts and\\nstrange shows. Visit?",
+  "fr": "La PELOUSE DU CIRQUE : numéros psy\\net spectacles étranges. Visiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask16": {
+  "en": "The THORNY TRAIL: a sharp path for\\nsharp teeth. Visit?",
+  "fr": "Le SENTIER ÉPINEUX : un chemin\\ntranchant pour dents tranchantes.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask17": {
+  "en": "The WILLOW BANK: a slow river and\\ncalm shade. Visit?",
+  "fr": "La BERGE DES SAULES : une rivière\\nlente et une ombre calme. Visiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask18": {
+  "en": "The SALTY DUNES: sand, wind and sea\\nspray. Visit?",
+  "fr": "Les DUNES SALÉES : sable, vent et\\nembruns. Visiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask19": {
+  "en": "The CRYSTAL GROTTO: gems in every\\nwall. Visit?",
+  "fr": "La GROTTE DE CRISTAL : des gemmes\\ndans chaque mur. Visiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask2": {
+  "en": "The NOCTURNE WOOD: the owls sing\\nall day long. Visit?",
+  "fr": "Le BOIS NOCTURNE : les hiboux\\nchantent toute la journée.\\lVisiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask20": {
+  "en": "The COPPER CANYON: red walls and\\necho. Visit?",
+  "fr": "Le CANYON DE CUIVRE : murs rouges\\net écho. Visiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask21": {
+  "en": "The BONEYARD RISE: old bones, old\\nstories. Visit?",
+  "fr": "La BUTTE DES OSSEMENTS : vieux os,\\nvieilles histoires. Visiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask22": {
+  "en": "The METEOR FIELD: craters and star\\ndust. Visit?",
+  "fr": "Le CHAMP DE MÉTÉORITES : cratères\\net poussière d'étoiles. Visiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask23": {
+  "en": "The CORAL TERRACE: stone steps\\nbuilt by the tide. Visit?",
+  "fr": "La TERRASSE DE CORAIL : marches de\\npierre bâties par la marée.\\lVisiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask24": {
+  "en": "The HIGH PINES: thin air and strong\\nbugs. Visit?",
+  "fr": "Les HAUTS PINS : air mince et\\ninsectes forts. Visiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask25": {
+  "en": "The GRANITE BLUFF: heavy stone and\\nheavy boots. Visit?",
+  "fr": "Le PROMONTOIRE DE GRANIT : pierre\\nlourde et grosses bottes. Visiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask3": {
+  "en": "The SHELL COAST: the tide leaves\\ntreasure behind. Visit?",
+  "fr": "La CÔTE AUX COQUILLAGES : la marée\\nlaisse des trésors derrière elle.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask4": {
+  "en": "The EEVEE GROVE: every shade of one\\nfamily lives here. Visit?",
+  "fr": "Le BOSQUET D'ÉVOLI : toutes les\\nnuances d'une même famille y\\lvivent. Visiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask5": {
+  "en": "The PROFESSOR'S RESERVE: first\\npartners run free here. Visit?",
+  "fr": "La RÉSERVE DU PROFESSEUR : les\\npremiers partenaires courent\\llibrement. Visiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask6": {
+  "en": "The SUNKEN BEACH: shells, sand and\\nearly water types. Visit?",
+  "fr": "La PLAGE ENGLOUTIE : coquillages,\\nsable et premiers types EAU.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask7": {
+  "en": "The POND OF SONG: frogs, ducks and\\ngentle ripples. Visit?",
+  "fr": "L'ÉTANG DU CHANT : grenouilles,\\ncanards et douces ondulations.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask8": {
+  "en": "The BALL BOUTIQUE: rare balls for\\nkeen collectors. Visit?",
+  "fr": "La BOUTIQUE DES BALLS : des balls\\nrares pour collectionneurs\\lpassionnés. Visiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Ask9": {
+  "en": "The SALT FLATS: dry crust and\\nbright shores. Visit?",
+  "fr": "Les SALINES : croûte sèche et\\nrivages éclatants. Visiter ?"
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Closed": {
+  "en": "The seasons are frozen. Come back\\nwhen the clocks make sense.",
+  "fr": "Les saisons sont figées. Reviens\\nquand les horloges auront un sens."
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Hello": {
+  "en": "Each season has its own shore,\\n{PLAYER}.",
+  "fr": "Chaque saison a son propre rivage,\\n{PLAYER}."
+ },
+ "FuchsiaCity_Text_SeasonsFerryman_Never": {
+  "en": "Another time, then.",
+  "fr": "Une autre fois, alors."
+ },
+ "FuchsiaCity_Text_StafferAlarm": {
+  "en": "Help! Men in black burst into the\\nzoo and threw open every cage!\\pPOKéMON are running loose, and\\nthey went for the WARDEN's HOUSE!\\pHis AMETHIOLITE is on display\\nthere. Please, stop them!",
+  "fr": "Au secours ! Des hommes en noir ont\\nfait irruption dans le zoo et\\louvert toutes les cages !\\pDes POKéMON courent en liberté, et\\nils ont filé vers la MAISON DU\\lGARDIEN !\\pSon AMETHIOLITE y est exposée. S'il\\nvous plaît, arrêtez-les !"
+ },
+ "FuchsiaCity_Text_TQ_Ask": {
+  "en": "A SITRUS BERRY would warm me up. I\\nwill pay in charcoal.",
+  "fr": "Une BAIE CITRON me réchaufferait.\\nJe paierai en charbon."
+ },
+ "FuchsiaCity_Text_TQ_Done": {
+  "en": "I am warm all night.",
+  "fr": "J'ai chaud toute la nuit."
+ },
  "FuchsiaCity_Text_TQ_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "FuchsiaCity_Text_TQ_Ok": {
+  "en": "Delicious! Here is your charcoal.",
+  "fr": "Délicieux ! Voici ton charbon."
+ },
+ "FuchsiaCity_Text_Tide_Ask0": {
+  "en": "The MARSH OF REFLECTIONS shows what\\nPOKéMON could become, or were.\\pVisit?",
+  "fr": "Le MARAIS DES REFLETS montre ce que\\nles POKéMON pourraient devenir, ou\\lont été.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_Tide_Ask1": {
+  "en": "The STONE GREENHOUSE grows POKéMON\\nthat wait for a stone. Visit?",
+  "fr": "La SERRE DE PIERRE fait pousser les\\nPOKéMON qui attendent une pierre.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_Tide_Ask2": {
+  "en": "The TRADE DOCK, where POKéMON that\\nevolve by trade wait on the pier.\\pVisit?",
+  "fr": "Le QUAI D'ÉCHANGE, où les POKéMON\\nqui évoluent par échange attendent\\lsur la jetée.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_Tide_Ask3": {
+  "en": "The FOSSIL DIG: five fossils sleep\\nin the sand. Visit?",
+  "fr": "Les FOUILLES DE FOSSILES : cinq\\nfossiles dorment dans le sable.\\pVisiter ?"
+ },
+ "FuchsiaCity_Text_Tide_Ask4": {
+  "en": "The POND OF CYCLES: water, patience\\nand rare catches. Visit?",
+  "fr": "L'ÉTANG DES CYCLES : eau, patience\\net captures rares. Visiter ?"
+ },
+ "FuchsiaCity_Text_Tide_Closed": {
+  "en": "The tide is not ready. Come back\\nonce the clocks make sense.",
+  "fr": "La marée n'est pas prête. Reviens\\nquand les horloges auront un sens."
+ },
+ "FuchsiaCity_Text_Tide_Hello": {
+  "en": "I row to places where POKéMON\\ngather to become something else,\\p{PLAYER}.",
+  "fr": "Je rame vers des lieux où les\\nPOKéMON se rassemblent pour devenir\\lautre chose, {PLAYER}."
+ },
+ "FuchsiaCity_Text_Tide_Never": {
+  "en": "Another time, then. The tide can\\nwait.",
+  "fr": "Une autre fois, alors. La marée\\npeut attendre."
+ },
+ "FuchsiaCity_Text_WheresSara": {
+  "en": "ERIK: Where's SARA?\\nI said I'd meet her here.",
+  "fr": "ERIK : Où est SARA ? J'avais dit\\nque je la retrouverais ici."
+ },
+ "Text_SubstituteDeclined": {
+  "en": "Oh, really?\\nSUBSTITUTE seems so fun…",
+  "fr": "Oh, vraiment ?\\nCLONAGE a l'air si amusant…"
+ },
+ "Text_SubstituteTaught": {
+  "en": "Boy, what I'd give to crawl inside\\na KANGASKHAN belly pouch…",
+  "fr": "Ah, ce que je donnerais pour me\\nglisser dans la poche d'un\\lKANGOUREX…"
+ },
+ "Text_SubstituteTeach": {
+  "en": "Aww, I wish I was a KANGASKHAN\\nbaby.\\pI'd love to be a substitute for the\\nbaby…\\pAnd snuggle in the mother\\nKANGASKHAN's belly pouch.\\pBut only POKéMON can use the\\ntechnique SUBSTITUTE…\\pWant me to teach SUBSTITUTE to\\none of your POKéMON?",
+  "fr": "Aww, j'aimerais être un bébé\\nKANGOUREX.\\pJ'adorerais remplacer le bébé…\\pEt me blottir dans la poche\\nventrale de la mère KANGOUREX.\\pMais seuls les POKéMON peuvent\\nutiliser la technique CLONAGE…\\pVeux-tu que j'apprenne CLONAGE à\\nun de tes POKéMON ?"
+ },
+ "Text_SubstituteWhichMon": {
+  "en": "Which POKéMON wants to learn\\nSUBSTITUTE?",
+  "fr": "Quel POKéMON veut apprendre\\nCLONAGE ?"
  }
 }

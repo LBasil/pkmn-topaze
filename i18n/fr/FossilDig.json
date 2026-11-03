@@ -1,10 +1,78 @@
 {
+ "FossilDig_Text_Ghost1_After": {
+  "en": "It was a good home, in the end.",
+  "fr": "Finalement, c'était un bon foyer."
+ },
+ "FossilDig_Text_Ghost1_Got": {
+  "en": "Take good care of it.",
+  "fr": "Prends-en bien soin."
+ },
+ "FossilDig_Text_Ghost1_Offer": {
+  "en": "A ghost left this egg-shaped dream\\nbehind. Take care of a LARVITAR?",
+  "fr": "Un fantôme a laissé ce rêve en\\nforme d'œuf. Veux-tu t'occuper d'un\\lEMBRYLEX ?"
+ },
+ "FossilDig_Text_Ghost1_Refuse": {
+  "en": "Then I will wait a little longer.",
+  "fr": "Alors j'attendrai encore un peu."
+ },
+ "FossilDig_Text_Ghost2_After": {
+  "en": "It was a good home, in the end.",
+  "fr": "Finalement, c'était un bon foyer."
+ },
+ "FossilDig_Text_Ghost2_Got": {
+  "en": "Take good care of it.",
+  "fr": "Prends-en bien soin."
+ },
+ "FossilDig_Text_Ghost2_Offer": {
+  "en": "A ghost left this egg-shaped dream\\nbehind. Take care of a DRATINI?",
+  "fr": "Un fantôme a laissé ce rêve en\\nforme d'œuf. Veux-tu t'occuper d'un\\lMINIDRACO ?"
+ },
+ "FossilDig_Text_Ghost2_Refuse": {
+  "en": "Then I will wait a little longer.",
+  "fr": "Alors j'attendrai encore un peu."
+ },
+ "FossilDig_Text_Ghost3_After": {
+  "en": "It was a good home, in the end.",
+  "fr": "Finalement, c'était un bon foyer."
+ },
+ "FossilDig_Text_Ghost3_Got": {
+  "en": "Take good care of it.",
+  "fr": "Prends-en bien soin."
+ },
+ "FossilDig_Text_Ghost3_Offer": {
+  "en": "A ghost left this egg-shaped dream\\nbehind. Take care of a BAGON?",
+  "fr": "Un fantôme a laissé ce rêve en\\nforme d'œuf. Veux-tu t'occuper d'un\\lDRABY ?"
+ },
+ "FossilDig_Text_Ghost3_Refuse": {
+  "en": "Then I will wait a little longer.",
+  "fr": "Alors j'attendrai encore un peu."
+ },
+ "FossilDig_Text_Ghost4_After": {
+  "en": "It was a good home, in the end.",
+  "fr": "Finalement, c'était un bon foyer."
+ },
+ "FossilDig_Text_Ghost4_Got": {
+  "en": "Take good care of it.",
+  "fr": "Prends-en bien soin."
+ },
+ "FossilDig_Text_Ghost4_Offer": {
+  "en": "A ghost left this egg-shaped dream\\nbehind. Take care of a BELDUM?",
+  "fr": "Un fantôme a laissé ce rêve en\\nforme d'œuf. Veux-tu t'occuper d'un\\lTERHAL ?"
+ },
+ "FossilDig_Text_Ghost4_Refuse": {
+  "en": "Then I will wait a little longer.",
+  "fr": "Alors j'attendrai encore un peu."
+ },
+ "FossilDig_Text_Npc0": {
+  "en": "Brush the sand with care. A fossil\\nwaits under the five spots that\\pshine.",
+  "fr": "Brosse le sable avec soin. Un\\nfossile attend sous les cinq\\lendroits qui brillent."
+ },
  "FossilDig_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "FossilDig_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

@@ -1,14 +1,38 @@
 {
+ "NocturneWood_Text_Npc0": {
+  "en": "The trees here never sleep. Neither\\ndo I.",
+  "fr": "Les arbres ici ne dorment jamais.\\nMoi non plus."
+ },
+ "NocturneWood_Text_Npc1": {
+  "en": "HOOTHOOT knows the time better than\\nany clock.",
+  "fr": "HOOTHOOT connaît l'heure mieux que\\nn'importe quelle horloge."
+ },
+ "NocturneWood_Text_Quest0_AfterT": {
+  "en": "The wood is gentle today.",
+  "fr": "Le bois est doux aujourd'hui."
+ },
+ "NocturneWood_Text_Quest0_Ask": {
+  "en": "Three ANTIDOTEs, young one. The\\nwood bites back.",
+  "fr": "Trois ANTIDOTES. Le bois\\nmord en retour."
+ },
+ "NocturneWood_Text_Quest0_Done": {
+  "en": "Gratitude. Take this SILVER POWDER.",
+  "fr": "Merci. Prends cette POUDRE ARGENT."
+ },
+ "NocturneWood_Text_Quest0_MissT": {
+  "en": "Three ANTIDOTEs, please.",
+  "fr": "Trois ANTIDOTES, s'il vous plaît."
+ },
  "NocturneWood_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "NocturneWood_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "NocturneWood_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

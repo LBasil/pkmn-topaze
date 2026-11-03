@@ -1,18 +1,42 @@
 {
+ "HushedBog_Text_Npc0": {
+  "en": "GRIMER thrives here. I do not.",
+  "fr": "TADMORV prospère ici. Pas moi."
+ },
+ "HushedBog_Text_Npc1": {
+  "en": "Do not breathe too deep, son.",
+  "fr": "Ne respire pas trop profondément."
+ },
+ "HushedBog_Text_Quest0_AfterT": {
+  "en": "Research continues.",
+  "fr": "La recherche continue."
+ },
+ "HushedBog_Text_Quest0_Ask": {
+  "en": "A FULL HEAL for my research. A\\nPOISON BARB in return.",
+  "fr": "Un TOUT-SOIN pour ma recherche. Un\\nPIQUANT POISON en retour."
+ },
+ "HushedBog_Text_Quest0_Done": {
+  "en": "Splendid! Take this POISON BARB.",
+  "fr": "Splendide ! Prends ce PIQUANT\\nPOISON."
+ },
+ "HushedBog_Text_Quest0_MissT": {
+  "en": "One FULL HEAL, please.",
+  "fr": "Un TOUT-SOIN, s'il vous plaît."
+ },
  "HushedBog_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "HushedBog_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "HushedBog_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "HushedBog_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

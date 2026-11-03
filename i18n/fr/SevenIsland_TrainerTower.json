@@ -1,0 +1,34 @@
+{
+ "SevenIsland_TrainerTower_Text_DarioDefeat": {
+  "en": "Give up…",
+  "fr": "J'abandonne…"
+ },
+ "SevenIsland_TrainerTower_Text_DarioIntro": {
+  "en": "I sensed your approach.",
+  "fr": "J'ai senti ton approche."
+ },
+ "SevenIsland_TrainerTower_Text_DarioPostBattle": {
+  "en": "In your future, I sense that you\\nwill meet many others.\\pI think you will be linked to each\\nother by a strange power.",
+  "fr": "Dans ton avenir, je sens que tu\\nrencontreras beaucoup d'autres\\lpersonnes.\\pJe pense que vous serez liés par un\\nétrange pouvoir."
+ },
+ "SevenIsland_TrainerTower_Text_RodetteDefeat": {
+  "en": "What an amazing TRAINER!",
+  "fr": "Quel DRESSEUR incroyable !"
+ },
+ "SevenIsland_TrainerTower_Text_RodetteIntro": {
+  "en": "Somewhere on this island, peculiar\\nPOKéMON are sleeping.",
+  "fr": "Quelque part sur cette île, de\\ncurieux POKéMON dorment."
+ },
+ "SevenIsland_TrainerTower_Text_RodettePostBattle": {
+  "en": "Somewhere on this island, peculiar\\nPOKéMON are sleeping.\\pCould it be that they're waiting\\nfor you?",
+  "fr": "Quelque part sur cette île, de\\ncurieux POKéMON dorment.\\pSe pourrait-il qu'ils t'attendent ?"
+ },
+ "SevenIsland_TrainerTower_Text_TrainerTowerAhead": {
+  "en": "TRAINER TOWER AHEAD",
+  "fr": "TOUR DES DRESSEURS DEVANT"
+ },
+ "SevenIsland_TrainerTower_Text_TrainerTowerSign": {
+  "en": "TRAINER TOWER ENTRANCE\\nRise to the Challenge, TRAINERS!",
+  "fr": "ENTRÉE DE LA TOUR DES DRESSEURS\\nRelevez le défi, DRESSEURS !"
+ }
+}

@@ -1,0 +1,34 @@
+{
+ "FuchsiaCity_House3_Text_ComeAgainToForgetOtherMoves": {
+  "en": "Come again if there are other\\nmoves to be forgotten.",
+  "fr": "Reviens s'il y a d'autres capacités\\nà oublier."
+ },
+ "FuchsiaCity_House3_Text_MonHasForgottenMoveCompletely": {
+  "en": "It worked to perfection!\\p{STR_VAR_1} has forgotten\\n{STR_VAR_2} completely.",
+  "fr": "Ça a parfaitement marché !\\p{STR_VAR_1} a complètement oublié\\n{STR_VAR_2}."
+ },
+ "FuchsiaCity_House3_Text_MonOnlyKnowsOneMove": {
+  "en": "{STR_VAR_1} seems to know only one\\nmove…",
+  "fr": "{STR_VAR_1} semble ne connaître\\nqu'une seule capacité…"
+ },
+ "FuchsiaCity_House3_Text_MonsMoveShouldBeForgotten": {
+  "en": "Hm! {STR_VAR_1}'s {STR_VAR_2}?\\nThat move should be forgotten?",
+  "fr": "Hm ! {STR_VAR_2} de {STR_VAR_1} ?\\nCette capacité doit être oubliée ?"
+ },
+ "FuchsiaCity_House3_Text_NoEggShouldKnowMoves": {
+  "en": "What?\\nNo EGG should know any moves.",
+  "fr": "Quoi ? Un ŒUF ne devrait connaître\\naucune capacité."
+ },
+ "FuchsiaCity_House3_Text_WhichMonShouldForgetMove": {
+  "en": "Which POKéMON should forget a\\nmove?",
+  "fr": "Quel POKéMON doit oublier une\\ncapacité ?"
+ },
+ "FuchsiaCity_House3_Text_WhichMoveShouldBeForgotten": {
+  "en": "Which move should be forgotten?",
+  "fr": "Quelle capacité doit être oubliée ?"
+ },
+ "FuchsiaCity_House3_Text_WouldYouLikeToForgetMove": {
+  "en": "Uh…\\nOh, yes, I'm the MOVE DELETER.\\pI can make POKéMON forget their\\nmoves.\\pWould you like me to do that?",
+  "fr": "Euh…\\nOh, oui, je suis le MAÎTRE OUBLI.\\pJe peux faire oublier ses capacités\\nà un POKéMON.\\pVeux-tu que je le fasse ?"
+ }
+}

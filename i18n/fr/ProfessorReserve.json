@@ -1,18 +1,42 @@
 {
+ "ProfessorReserve_Text_Npc0": {
+  "en": "Every trainer starts with one. Here\\nthey roam free.",
+  "fr": "Chaque dresseur commence avec un.\\nIci ils vagabondent librement."
+ },
+ "ProfessorReserve_Text_Npc1": {
+  "en": "I come here to remember my first\\npartner.",
+  "fr": "Je viens ici pour me souvenir de\\nmon premier partenaire."
+ },
+ "ProfessorReserve_Text_Quest0_AfterT": {
+  "en": "The research goes on.",
+  "fr": "La recherche continue."
+ },
+ "ProfessorReserve_Text_Quest0_Ask": {
+  "en": "A RARE CANDY for my research. I\\nwill give you a PP MAX.",
+  "fr": "Un BONBON RARE pour ma recherche.\\nJe te donnerai un PP MAX."
+ },
+ "ProfessorReserve_Text_Quest0_Done": {
+  "en": "Excellent! Here is a PP MAX.",
+  "fr": "Excellent ! Voici un PP MAX."
+ },
+ "ProfessorReserve_Text_Quest0_MissT": {
+  "en": "One RARE CANDY, please.",
+  "fr": "Un BONBON RARE, s'il vous plaît."
+ },
  "ProfessorReserve_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "ProfessorReserve_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "ProfessorReserve_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "ProfessorReserve_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

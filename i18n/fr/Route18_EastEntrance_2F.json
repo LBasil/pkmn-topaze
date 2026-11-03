@@ -1,6 +1,34 @@
 {
+ "Route18_EastEntrance_2F_Text_PalletTownInWest": {
+  "en": "Let's see what the binoculars have\\nto show…\\pGRENALUX is in the west.",
+  "fr": "Voyons ce que les jumelles\\nmontrent…\\pGRENALUX est à l'ouest."
+ },
+ "Route18_EastEntrance_2F_Text_PeopleSwimming": {
+  "en": "Let's see what the binoculars have\\nto show…\\pThere are people swimming.",
+  "fr": "Voyons ce que les jumelles\\nmontrent…\\pDes gens nagent."
+ },
+ "Route18_EastEntrance_2F_Text_QuestAsk": {
+  "en": "From here you can see all the\\nroute. I watch POKéMON all day.\\pCatch 80 kinds of POKéMON and\\nI'll give you a rare scale.",
+  "fr": "D'ici, on voit toute la route. Je\\nregarde les POKéMON toute la\\ljournée.\\pCapture 80 espèces de POKéMON et je\\nte donnerai une écaille rare."
+ },
+ "Route18_EastEntrance_2F_Text_QuestDone": {
+  "en": "The PRISM SCALE suits you.",
+  "fr": "L'ÉCAILLE PRISME te va bien."
+ },
+ "Route18_EastEntrance_2F_Text_QuestGot": {
+  "en": "{PLAYER} received a PRISM SCALE!",
+  "fr": "{PLAYER} a reçu une ÉCAILLE PRISME !"
+ },
+ "Route18_EastEntrance_2F_Text_QuestNo": {
+  "en": "You've caught {STR_VAR_1} kinds.\\nCome back at 80!",
+  "fr": "Tu as capturé {STR_VAR_1} espèces.\\nReviens à 80 !"
+ },
  "Route18_EastEntrance_2F_Text_QuestNoRoom": {
-  "fr": "Ton SAC est plein. Fais d'abord\\nde la place !",
-  "en": "Your BAG is full. Make some\\nroom first!"
+  "en": "Your BAG is full. Make some\\nroom first!",
+  "fr": "Ton SAC est plein. Fais d'abord\\nde la place !"
+ },
+ "Route18_EastEntrance_2F_Text_QuestOk": {
+  "en": "Incredible, {STR_VAR_1} kinds!\\pPlease take this PRISM SCALE.",
+  "fr": "Incroyable, {STR_VAR_1} espèces !\\pPrends cette ÉCAILLE PRISME."
  }
 }

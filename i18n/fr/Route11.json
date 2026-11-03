@@ -1,6 +1,146 @@
 {
+ "Route11_Text_BernieDefeat": {
+  "en": "Whoa!\\nYou spark plug!",
+  "fr": "Whoa !\\nToi, étincelle !"
+ },
+ "Route11_Text_BernieIntro": {
+  "en": "Watch out for live wires!",
+  "fr": "Attention aux fils électriques !"
+ },
+ "Route11_Text_BerniePostBattle": {
+  "en": "Well, better get back to work.",
+  "fr": "Bon, je ferais mieux de retourner\\nau travail."
+ },
+ "Route11_Text_BraxtonDefeat": {
+  "en": "That was electric!",
+  "fr": "C'était électrique !"
+ },
+ "Route11_Text_BraxtonIntro": {
+  "en": "Careful!\\nI'm laying down some cables!",
+  "fr": "Attention !\\nJe pose des câbles !"
+ },
+ "Route11_Text_BraxtonPostBattle": {
+  "en": "Spread the word to save energy!",
+  "fr": "Faites passer le mot pour\\néconomiser l'énergie !"
+ },
+ "Route11_Text_DarianDefeat": {
+  "en": "I saw this coming…",
+  "fr": "Je m'y attendais…"
+ },
+ "Route11_Text_DarianIntro": {
+  "en": "I have never won before…",
+  "fr": "Je n'ai jamais gagné avant…"
+ },
+ "Route11_Text_DarianPostBattle": {
+  "en": "The men in black pushed past me.\\nThey carried a heavy sack.",
+  "fr": "Les hommes en noir m'ont bousculé.\\nIls portaient un lourd sac."
+ },
+ "Route11_Text_DaveDefeat": {
+  "en": "Bye-bye!\\nThank you, and good-bye!",
+  "fr": "Au revoir !\\nMerci, et au revoir !"
+ },
+ "Route11_Text_DaveIntro": {
+  "en": "I raised my POKéMON carefully.\\nThey should be ready by now!",
+  "fr": "J'ai élevé mes POKéMON avec soin.\\nIls devraient être prêts\\lmaintenant !"
+ },
+ "Route11_Text_DavePostBattle": {
+  "en": "Tch...\\nMen in black dug through the\\pDIGLETT burrows and scared them.\\nThe tunnel is a mess.",
+  "fr": "Tch… Des hommes en noir ont fouillé\\nles terriers de TAUPIQUEUR et les\\lont effrayés. Le tunnel est un\\ndésastre."
+ },
+ "Route11_Text_DiglettsCave": {
+  "en": "DIGLETT'S CAVE",
+  "fr": "GROTTE DE TAUPIQUEUR"
+ },
+ "Route11_Text_DillonDefeat": {
+  "en": "My POKéMON couldn't win…\\nHaven't they grown enough?",
+  "fr": "Mes POKéMON n'ont pas pu gagner…\\nNe sont-ils pas assez grandis ?"
+ },
+ "Route11_Text_DillonIntro": {
+  "en": "I just became a TRAINER.\\nBut, I think I can win.",
+  "fr": "Je viens de devenir DRESSEUR.\\nMais je crois que je peux gagner."
+ },
+ "Route11_Text_DillonPostBattle": {
+  "en": "What now?\\nLeave me alone!",
+  "fr": "Quoi encore ?\\nLaisse-moi tranquille !"
+ },
+ "Route11_Text_DirkDefeat": {
+  "en": "My first loss!",
+  "fr": "Ma première défaite !"
+ },
+ "Route11_Text_DirkIntro": {
+  "en": "Fwahaha!\\nI have never lost!",
+  "fr": "Fwahaha !\\nJe n'ai jamais perdu !"
+ },
+ "Route11_Text_DirkPostBattle": {
+  "en": "You were just lucky, that's all.",
+  "fr": "Tu as juste eu de la chance, c'est\\ntout."
+ },
+ "Route11_Text_EddieDefeat": {
+  "en": "Huh?\\nThat's not right!",
+  "fr": "Hein ?\\nCe n'est pas normal !"
+ },
+ "Route11_Text_EddieIntro": {
+  "en": "Let's go, but don't cheat!",
+  "fr": "Allons-y, mais ne triche pas !"
+ },
+ "Route11_Text_EddiePostBattle": {
+  "en": "I dig burrows with my POKéMON.\\nMen in black asked me for the\\pquickest way underground. Weird.",
+  "fr": "Je creuse des terriers avec mes\\nPOKéMON. Des hommes en noir m'ont\\ldemandé le chemin le plus rapide\\nsous terre. Bizarre."
+ },
+ "Route11_Text_HugoDefeat": {
+  "en": "Atcha!\\nDidn't go my way!",
+  "fr": "Atcha !\\nÇa n'a pas marché !"
+ },
+ "Route11_Text_HugoIntro": {
+  "en": "Win, lose, or draw!",
+  "fr": "Gagner, perdre, ou égalité !"
+ },
+ "Route11_Text_HugoPostBattle": {
+  "en": "POKéMON is life!\\nAnd to live is to play games!",
+  "fr": "POKéMON, c'est la vie !\\nEt vivre, c'est jouer !"
+ },
+ "Route11_Text_JasperDefeat": {
+  "en": "I had a chance!",
+  "fr": "J'avais une chance !"
+ },
+ "Route11_Text_JasperIntro": {
+  "en": "Competition!\\nI can't get enough!",
+  "fr": "La compétition !\\nJe n'en ai jamais assez !"
+ },
+ "Route11_Text_JasperPostBattle": {
+  "en": "You can't be a coward in the world\\nof POKéMON!",
+  "fr": "On ne peut pas être lâche dans le\\nmonde des POKéMON !"
+ },
+ "Route11_Text_RQuest_Ask": {
+  "en": "My catch froze solid! 2 ICE HEALS,\\nplease.",
+  "fr": "Ma prise a gelé complètement ! 2\\nANTI-GEL, s'il vous plaît."
+ },
+ "Route11_Text_RQuest_Done": {
+  "en": "It swam off, warm and happy.",
+  "fr": "Il a nagé au loin, chaud et\\nheureux."
+ },
  "Route11_Text_RQuest_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route11_Text_RQuest_Ok": {
+  "en": "Thaw complete! Here.",
+  "fr": "Dégel terminé ! Tiens."
+ },
+ "Route11_Text_TimeHint": {
+  "en": "A clock on a post. Its hands spin\\nbackwards. Slowly. Then fast.",
+  "fr": "Une horloge sur un poteau. Ses\\naiguilles tournent à l'envers.\\pLentement. Puis vite."
+ },
+ "Route11_Text_YasuDefeat": {
+  "en": "Darn!\\nMy POKéMON need to be stronger!",
+  "fr": "Zut ! Mes POKéMON doivent être plus\\nforts !"
+ },
+ "Route11_Text_YasuIntro": {
+  "en": "I'm the best in my class.\\nI train every morning.",
+  "fr": "Je suis le meilleur de ma classe.\\nJe m'entraîne tous les matins."
+ },
+ "Route11_Text_YasuPostBattle": {
+  "en": "The huge sleeper on ROUTE 12 will\\nnot budge. Go back to TOURMALIA,\\pthen east through ROCK TUNNEL.",
+  "fr": "Le gros dormeur de la ROUTE 12 ne\\nbougera pas. Retourne à TOURMALIA,\\lpuis à l'est par le TUNNEL ROCHE."
  }
 }

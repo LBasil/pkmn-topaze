@@ -1,10 +1,202 @@
 {
+ "Route12_Text_AndrewDefeat": {
+  "en": "Lost it!",
+  "fr": "Raté !"
+ },
+ "Route12_Text_AndrewIntro": {
+  "en": "What's catching?\\pYou never know what you could\\ncatch!",
+  "fr": "Qu'est-ce qui mord ?\\pOn ne sait jamais ce qu'on peut\\nattraper !"
+ },
+ "Route12_Text_AndrewPostBattle": {
+  "en": "What, MAGIKARP?\\pI catch them all the time, sure.\\nBut the fish here feel... strange.\\pThey glow, sometimes. Ask the\\nFISHER by the pier.",
+  "fr": "Quoi, MAGICARPE ?\\pJ'en attrape tout le temps, bien\\nsûr. Mais les poissons d'ici sont…\\létranges.\\pIls brillent, parfois. Demande au\\nPÊCHEUR près de la jetée."
+ },
+ "Route12_Text_ChipDefeat": {
+  "en": "That one got away!",
+  "fr": "Celui-là s'est échappé !"
+ },
+ "Route12_Text_ChipIntro": {
+  "en": "Be patient.\\nFishing is a waiting game.",
+  "fr": "Sois patient.\\nLa pêche est un jeu d'attente."
+ },
+ "Route12_Text_ChipPostBattle": {
+  "en": "With a better ROD, I could catch\\nbetter POKéMON…",
+  "fr": "Avec une meilleure CANNE, je\\npourrais attraper de meilleurs\\lPOKéMON…"
+ },
+ "Route12_Text_ElliotDefeat": {
+  "en": "It's not easy…",
+  "fr": "Ce n'est pas facile…"
+ },
+ "Route12_Text_ElliotIntro": {
+  "en": "I love fishing, don't get me wrong.\\pBut it'd be best if I also had more\\nwork.",
+  "fr": "J'adore pêcher, ne te méprends pas.\\pMais ce serait mieux si j'avais\\naussi plus de travail."
+ },
+ "Route12_Text_ElliotPostBattle": {
+  "en": "It's all right.\\nLosing doesn't bug me anymore.",
+  "fr": "Ça va.\\nPerdre ne me dérange plus."
+ },
+ "Route12_Text_GiaDefeat": {
+  "en": "GIA: Oh, but why?",
+  "fr": "GIA : Oh, mais pourquoi ?"
+ },
+ "Route12_Text_GiaIntro": {
+  "en": "GIA: Hey, JES…\\pIf we win, I'll marry you!",
+  "fr": "GIA : Hé, JES…\\pSi on gagne, je t'épouse !"
+ },
+ "Route12_Text_GiaNotEnoughMons": {
+  "en": "GIA: I can't bear to battle\\nwithout my JES!\\pDon't you have one more POKéMON?",
+  "fr": "GIA : Je ne supporte pas de\\ncombattre sans mon JES !\\pN'as-tu pas un autre POKéMON ?"
+ },
+ "Route12_Text_GiaPostBattle": {
+  "en": "GIA: JES, you silly!\\nYou ruined this!",
+  "fr": "GIA : JES, espèce d'idiot !\\nTu as tout gâché !"
+ },
+ "Route12_Text_HankDefeat": {
+  "en": "Touch too much!",
+  "fr": "J'ai trop touché !"
+ },
+ "Route12_Text_HankIntro": {
+  "en": "The FISHING FOOL versus POKéMON\\nKID!",
+  "fr": "Le FOU DE PÊCHE contre le GAMIN\\nPOKéMON !"
+ },
+ "Route12_Text_HankPostBattle": {
+  "en": "I guess you get to be good at\\nwhat you like.\\pWell, you beat me at POKéMON,\\nbut you can't top me at fishing.",
+  "fr": "Je suppose qu'on devient bon dans\\nce qu'on aime.\\pEh bien, tu m'as battu aux POKéMON,\\nmais tu ne me surpasses pas à la\\lpêche."
+ },
+ "Route12_Text_JesDefeat": {
+  "en": "JES: Oh, please, why couldn't you\\nlet us win?",
+  "fr": "JES : Oh, pitié, pourquoi n'as-tu\\npas pu nous laisser gagner ?"
+ },
+ "Route12_Text_JesIntro": {
+  "en": "JES: If I win, I'm going to\\npropose to GIA.",
+  "fr": "JES : Si je gagne, je demanderai\\nGIA en mariage."
+ },
+ "Route12_Text_JesNotEnoughMons": {
+  "en": "JES: GIA and I, we'll be\\ntogether forever.\\pWe won't battle unless you have\\ntwo POKéMON of your own.",
+  "fr": "JES : GIA et moi, nous serons\\nensemble pour toujours.\\pNous ne combattrons que si tu as\\ndeux POKéMON à toi."
+ },
+ "Route12_Text_JesPostBattle": {
+  "en": "JES: Oh, GIA, forgive me,\\nmy love!",
+  "fr": "JES : Oh, GIA, pardonne-moi,\\nmon amour !"
+ },
+ "Route12_Text_JustinDefeat": {
+  "en": "Oww!",
+  "fr": "Aïe !"
+ },
+ "Route12_Text_JustinIntro": {
+  "en": "I'm searching for a MOON STONE.\\nHave you found one?",
+  "fr": "Je cherche une PIERRE LUNE.\\nTu en as trouvé une ?"
+ },
+ "Route12_Text_JustinPostBattle": {
+  "en": "I could have made my POKéMON\\nevolve with a MOON STONE.\\pThe big SNORLAX out there has slept\\non the pier for ten years.",
+  "fr": "J'aurais pu faire évoluer mon\\nPOKéMON avec une PIERRE LUNE.\\pLe gros RONFLEX là-bas dort sur la\\njetée depuis dix ans."
+ },
+ "Route12_Text_LucaDefeat": {
+  "en": "Unplugged!",
+  "fr": "Débranché !"
+ },
+ "Route12_Text_LucaIntro": {
+  "en": "Electricity is my specialty.\\pI don't know a thing about POKéMON\\nof the sea, though.",
+  "fr": "L'électricité est ma spécialité.\\pJe ne connais rien aux POKéMON de\\nla mer, cela dit."
+ },
+ "Route12_Text_LucaPostBattle": {
+  "en": "Water conducts electricity, so you\\nshould zap sea POKéMON.\\pStrange. The sea glows violet at\\nnight, near the old FISHER's house.",
+  "fr": "L'eau conduit l'électricité, donc\\ntu devrais électrocuter les POKéMON\\lmarins.\\pÉtrange. La mer brille en violet la\\nnuit, près de la maison du vieux\\lPÊCHEUR."
+ },
+ "Route12_Text_MonSprawledOutInSlumber": {
+  "en": "A POKéMON is sprawled out in\\na deep and comfortable slumber.",
+  "fr": "Un POKéMON est étendu dans un\\nsommeil profond et confortable."
+ },
+ "Route12_Text_NedDefeat": {
+  "en": "Tch!\\nJust a small fry…",
+  "fr": "Tch !\\nJuste un petit poisson…"
+ },
+ "Route12_Text_NedIntro": {
+  "en": "Yeah!\\nI got a bite here!",
+  "fr": "Ouais !\\nJ'ai une touche !"
+ },
+ "Route12_Text_NedPostBattle": {
+  "en": "Hang on!\\nMy line's snagged!",
+  "fr": "Attends !\\nMa ligne est coincée !"
+ },
+ "Route12_Text_PierKronos1": {
+  "en": "KRONOS: Well. The child who plays\\nwith stones. You went to the old\\lfisher, did you not?\\pGood. Then you know what the AURA\\nis, and what we mean to do.\\pTen stones. Ten gates. When the\\nlast one opens, the world is set\\lfree, POKéMON and all.",
+  "fr": "KRONOS : Tiens. L'enfant qui joue\\navec les pierres. Tu as rendu\\lvisite à le vieux pêcheur, n'est-ce\\npas ?\\pBien. Alors tu sais ce qu'est\\nl'AURA, et ce que nous comptons\\lfaire.\\pDix pierres. Dix portes. Quand la\\ndernière s'ouvrira, le monde sera\\llibéré, POKéMON compris."
+ },
+ "Route12_Text_PierKronos1b": {
+  "en": "KRONOS: Well. The child who plays\\nwith stones. You did not even ask\\lthe old fisher about the AURA?\\pNo matter. Know this: ten stones,\\nten gates. When the last one opens,\\lthe world is set free, POKéMON\\land all.",
+  "fr": "KRONOS : Tiens. L'enfant qui joue\\navec les pierres. Tu n'as même pas\\ldemandé au vieux pêcheur à propos\\nde l'AURA ?\\pPeu importe. Sache ceci : dix\\npierres, dix portes. Quand la\\ldernière s'ouvrira, le monde sera\\nlibéré, POKéMON compris."
+ },
+ "Route12_Text_PierKronos2": {
+  "en": "KRONOS: Keep collecting them,\\nchild. You do my work better than\\lany of my ADMINS.\\pThe next stone sleeps in HEMATOWN,\\nbehind its thirsty gates. Hurry,\\lor I will take it before you.\\pDo not follow me. This pier is\\nmine tonight. Farewell!",
+  "fr": "KRONOS : Continue de les\\ncollectionner. Tu fais mon travail\\lmieux que n'importe lequel de mes\\nADMINS.\\pLa prochaine pierre dort à\\nHEMATOWN, derrière ses portes\\lassoiffées. Dépêche-toi, ou je la\\nprendrai avant toi.\\pNe me suis pas. Cette jetée est à\\nmoi ce soir. Adieu !"
+ },
+ "Route12_Text_ProcheEmma_After": {
+  "en": "Come back in spring. Everything is\\nprettier then.",
+  "fr": "Reviens au printemps. Tout est plus\\njoli alors."
+ },
+ "Route12_Text_ProcheEmma_Defeat": {
+  "en": "Oh my... you trampled my garden!",
+  "fr": "Oh là là… tu as piétiné mon\\njardin !"
+ },
+ "Route12_Text_ProcheEmma_Early": {
+  "en": "Not yet, {PLAYER}. Finish your\\njourney first, then come and find\\pme.",
+  "fr": "Pas encore, {PLAYER}. Termine\\nd'abord ton voyage, puis viens me\\ltrouver."
+ },
+ "Route12_Text_ProcheEmma_Intro": {
+  "en": "Oh, {PLAYER}, what a lovely day for\\na battle! My flowers are in full\\pbloom.",
+  "fr": "Oh, {PLAYER}, quel beau jour pour un\\ncombat ! Mes fleurs sont en pleine\\lfloraison."
+ },
+ "Route12_Text_ProcheEmma_NoRoom": {
+  "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reparle-moi."
+ },
+ "Route12_Text_ProcheEmma_Win": {
+  "en": "For you. It grew in my garden.",
+  "fr": "Pour toi. Il a poussé dans mon\\njardin."
+ },
+ "Route12_Text_RQuest_Ask": {
+  "en": "Wild POKéMON scare the fish. 2\\nSUPER REPELS, please.",
+  "fr": "Les POKéMON sauvages effraient les\\npoissons. 2 SUPER REPOUSSES, s'il\\lvous plaît."
+ },
  "Route12_Text_RQuest_Done": {
-  "fr": "Les poissons mordent.",
-  "en": "The fish are biting."
+  "en": "The fish are biting.",
+  "fr": "Les poissons mordent."
  },
  "Route12_Text_RQuest_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route12_Text_RQuest_Ok": {
+  "en": "Peace and quiet. Thanks!",
+  "fr": "Paix et tranquillité. Merci !"
+ },
+ "Route12_Text_RouteSign": {
+  "en": "ROUTE 12 \\nNorth to SPINELLIA",
+  "fr": "ROUTE 12\\nNord vers SPINELLIA"
+ },
+ "Route12_Text_SportfishingArea": {
+  "en": "SPORTFISHING AREA",
+  "fr": "ZONE DE PÊCHE SPORTIVE"
+ },
+ "Route12_Text_TimeHint": {
+  "en": "The fishing spot sign: BEST HOUR TO\\nFISH... crossed out. Nobody knows\\pthe hour anymore.",
+  "fr": "Le panneau du coin de pêche :\\nMEILLEURE HEURE POUR PÊCHER…\\pbarré. Personne ne connaît plus\\nl'heure."
+ },
+ "Text_PlayedPokeFlute": {
+  "en": "{PLAYER} played the POKé FLUTE.",
+  "fr": "{PLAYER} a joué de la FLÛTE POKé."
+ },
+ "Text_SnorlaxReturnedToMountains": {
+  "en": "SNORLAX calmed down.\\nIt gave a huge yawn…\\lAnd returned to the mountains.",
+  "fr": "RONFLEX s'est calmé. Il a poussé un\\nénorme bâillement… Et est retourné\\ldans les montagnes."
+ },
+ "Text_SnorlaxWokeUp": {
+  "en": "SNORLAX woke up!\\pIt attacked in a grumpy rage!",
+  "fr": "RONFLEX s'est réveillé !\\pIl a attaqué dans une rage\\ngrincheuse !"
+ },
+ "Text_WantToUsePokeFlute": {
+  "en": "Want to use the POKé FLUTE?",
+  "fr": "Veux-tu utiliser la FLÛTE POKé ?"
  }
 }

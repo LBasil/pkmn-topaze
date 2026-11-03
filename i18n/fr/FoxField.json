@@ -1,18 +1,42 @@
 {
+ "FoxField_Text_Npc0": {
+  "en": "VULPIX hides its tails. Nobody has\\ncounted them all.",
+  "fr": "GOUPIX cache ses queues. Personne\\nne les a toutes comptées."
+ },
+ "FoxField_Text_Npc1": {
+  "en": "DITTO copies whatever it sees. Even\\nme!",
+  "fr": "MÉTAMORPH copie tout ce qu'il voit.\\nMême moi !"
+ },
+ "FoxField_Text_Quest0_AfterT": {
+  "en": "The foxes are fine.",
+  "fr": "Les renards vont bien."
+ },
+ "FoxField_Text_Quest0_Ask": {
+  "en": "Two POTIONs for my hurt foxes.\\nCHARCOAL for you!",
+  "fr": "Deux POTIONS pour mes renards\\nblessés. Du CHARBON pour toi !"
+ },
+ "FoxField_Text_Quest0_Done": {
+  "en": "Thanks! Take this CHARCOAL.",
+  "fr": "Merci ! Prends ce CHARBON."
+ },
+ "FoxField_Text_Quest0_MissT": {
+  "en": "Two POTIONs, please.",
+  "fr": "Deux POTIONS, s'il vous plaît."
+ },
  "FoxField_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "FoxField_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "FoxField_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "FoxField_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

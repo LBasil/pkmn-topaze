@@ -1,0 +1,178 @@
+{
+ "OneIsland_KindleRoad_Text_AbigailDefeat": {
+  "en": "Oh, you're so awful.",
+  "fr": "Oh, tu es horrible."
+ },
+ "OneIsland_KindleRoad_Text_AbigailIntro": {
+  "en": "I'm beginning to get a sunburn…",
+  "fr": "Je commence à prendre un coup de\\nsoleil…"
+ },
+ "OneIsland_KindleRoad_Text_AbigailPostBattle": {
+  "en": "I like that cap you have.\\nMaybe I should wear one, too…",
+  "fr": "J'aime ta casquette. Je devrais\\npeut-être en porter une aussi…"
+ },
+ "OneIsland_KindleRoad_Text_BryceDefeat": {
+  "en": "Awww, blown!",
+  "fr": "Aww, raté !"
+ },
+ "OneIsland_KindleRoad_Text_BryceIntro": {
+  "en": "You know, everything tastes great\\nwhen you're out in the wild.",
+  "fr": "Tu sais, tout a bon goût en pleine\\nnature."
+ },
+ "OneIsland_KindleRoad_Text_BrycePostBattle": {
+  "en": "The water in volcanic regions is\\ndelicious.",
+  "fr": "L'eau des régions volcaniques est\\ndélicieuse."
+ },
+ "OneIsland_KindleRoad_Text_ClaireDefeat": {
+  "en": "That made me all sweaty.",
+  "fr": "Ça m'a mis en sueur."
+ },
+ "OneIsland_KindleRoad_Text_ClaireIntro": {
+  "en": "My lunch filled us up, so will you\\nbattle us for some exercise?",
+  "fr": "Mon déjeuner nous a rassasiés,\\nalors veux-tu nous affronter pour\\ll'exercice ?"
+ },
+ "OneIsland_KindleRoad_Text_ClairePostBattle": {
+  "en": "What should I do?\\nI feel famished again.",
+  "fr": "Que dois-je faire ?\\nJ'ai de nouveau très faim."
+ },
+ "OneIsland_KindleRoad_Text_DenLockedBill": {
+  "en": "A cave mouth hums with static.\\nSomething forbids the way.\\pMaybe BILL, at the POKéMON CENTER\\non this island, knows more.",
+  "fr": "Une entrée de grotte bourdonne\\nd'électricité statique. Quelque\\lchose interdit le passage.\\pBILL, au CENTRE POKéMON de cette\\nîle, en sait peut-être plus."
+ },
+ "OneIsland_KindleRoad_Text_EmberSpaSign": {
+  "en": "Light the Fire in Your Heart!\\nEMBER SPA",
+  "fr": "Allume le Feu dans ton Cœur !\\nSPA EMBER"
+ },
+ "OneIsland_KindleRoad_Text_FinnDefeat": {
+  "en": "Well, aren't you tough?",
+  "fr": "Eh bien, tu es costaud, dis donc ?"
+ },
+ "OneIsland_KindleRoad_Text_FinnIntro": {
+  "en": "Seen from here, MT. EMBER towers\\ninto the sky.",
+  "fr": "Vu d'ici, le MT. EMBER se dresse\\ndans le ciel."
+ },
+ "OneIsland_KindleRoad_Text_FinnPostBattle": {
+  "en": "The sky is immense around these\\nparts.",
+  "fr": "Le ciel est immense dans le coin."
+ },
+ "OneIsland_KindleRoad_Text_GarrettDefeat": {
+  "en": "Hey, what the…\\nYou're good, you!",
+  "fr": "Hé, mais…\\nTu es bon, toi !"
+ },
+ "OneIsland_KindleRoad_Text_GarrettIntro": {
+  "en": "I took a break from swimming,\\nonly to have you challenge me?",
+  "fr": "J'ai fait une pause de natation, et\\ntu me défies ?"
+ },
+ "OneIsland_KindleRoad_Text_GarrettPostBattle": {
+  "en": "Instead of using SURF all the time,\\nyou should swim some.",
+  "fr": "Au lieu d'utiliser SURF tout le\\ntemps, tu devrais nager un peu."
+ },
+ "OneIsland_KindleRoad_Text_HughDefeat": {
+  "en": "Why me?!",
+  "fr": "Pourquoi moi ?!"
+ },
+ "OneIsland_KindleRoad_Text_HughIntro": {
+  "en": "Dress appropriately for battle!\\nLose that frivolous outfit!",
+  "fr": "Habille-toi comme il faut pour\\ncombattre ! Quitte cette tenue\\lfrivole !"
+ },
+ "OneIsland_KindleRoad_Text_HughPostBattle": {
+  "en": "Even martial artists are becoming\\nfashion conscious these days…",
+  "fr": "Même les artistes martiaux\\ndeviennent soucieux de mode ces\\ljours-ci…"
+ },
+ "OneIsland_KindleRoad_Text_KiaDefeat": {
+  "en": "KIA: Huh?!\\nI can't believe it!",
+  "fr": "KIA : Hein ?!\\nJe n'arrive pas à y croire !"
+ },
+ "OneIsland_KindleRoad_Text_KiaIntro": {
+  "en": "KIA: My big brother and I make\\nan awesome combination!",
+  "fr": "KIA : Mon grand frère et moi, on\\nforme une combinaison géniale !"
+ },
+ "OneIsland_KindleRoad_Text_KiaNotEnoughMons": {
+  "en": "KIA: If you want to battle with\\nus, you have to bring at least two\\lPOKéMON with you.",
+  "fr": "KIA : Si tu veux nous affronter, tu\\ndois amener au moins deux POKéMON."
+ },
+ "OneIsland_KindleRoad_Text_KiaPostBattle": {
+  "en": "KIA: How could there be anyone\\nbetter than my big brother?",
+  "fr": "KIA : Comment peut-il y avoir\\nquelqu'un de meilleur que mon grand\\lfrère ?"
+ },
+ "OneIsland_KindleRoad_Text_MariaDefeat": {
+  "en": "Aiyeeeeh!",
+  "fr": "Aïeeeeeh !"
+ },
+ "OneIsland_KindleRoad_Text_MariaIntro": {
+  "en": "The weather's gorgeous!\\nPerfect for a battle!",
+  "fr": "Le temps est magnifique !\\nParfait pour un combat !"
+ },
+ "OneIsland_KindleRoad_Text_MariaPostBattle": {
+  "en": "Please don't splash my face!\\nYou'll ruin the makeup.",
+  "fr": "S'il te plaît, ne m'éclabousse pas\\nle visage ! Tu vas ruiner mon\\lmaquillage."
+ },
+ "OneIsland_KindleRoad_Text_MikDefeat": {
+  "en": "MIK: Whoa!\\nThat's too much!",
+  "fr": "MIK : Whoa !\\nC'est trop !"
+ },
+ "OneIsland_KindleRoad_Text_MikIntro": {
+  "en": "MIK: Together with KIA, I'm afraid\\nof nothing!",
+  "fr": "MIK : Avec KIA, je n'ai peur de\\nrien !"
+ },
+ "OneIsland_KindleRoad_Text_MikNotEnoughMons": {
+  "en": "MIK: Hey, do you want to battle\\nwith us two?\\pBring two or more POKéMON with\\nyou, then.",
+  "fr": "MIK : Hé, veux-tu nous affronter,\\nnous deux ?\\pAmène alors deux POKéMON ou plus."
+ },
+ "OneIsland_KindleRoad_Text_MikPostBattle": {
+  "en": "MIK: How could my combination\\nwith KIA fail?",
+  "fr": "MIK : Comment ma combinaison avec\\nKIA a-t-elle pu échouer ?"
+ },
+ "OneIsland_KindleRoad_Text_RouteSign": {
+  "en": "This is KINDLE ROAD.\\pGo straight for MT. EMBER.",
+  "fr": "Voici la ROUTE BRASIER.\\pVa tout droit vers le MT. EMBER."
+ },
+ "OneIsland_KindleRoad_Text_SharonDefeat": {
+  "en": "You were a cut above me.",
+  "fr": "Tu étais un cran au-dessus de moi."
+ },
+ "OneIsland_KindleRoad_Text_SharonIntro": {
+  "en": "Could you help me out with my\\ntraining?",
+  "fr": "Pourrais-tu m'aider dans mon\\nentraînement ?"
+ },
+ "OneIsland_KindleRoad_Text_SharonPostBattle": {
+  "en": "It's clear that you're skilled.\\nI like you!",
+  "fr": "Il est clair que tu es doué.\\nJe t'aime bien !"
+ },
+ "OneIsland_KindleRoad_Text_SheaDefeat": {
+  "en": "Gasp…\\nGasp…",
+  "fr": "Souffle…\\nSouffle…"
+ },
+ "OneIsland_KindleRoad_Text_SheaIntro": {
+  "en": "Every morning, before breakfast,\\nI swim around this island.",
+  "fr": "Chaque matin, avant le\\npetit-déjeuner, je fais le tour de\\lcette île à la nage."
+ },
+ "OneIsland_KindleRoad_Text_SheaPostBattle": {
+  "en": "I lost because I'm pooped from all\\nthe running I did…",
+  "fr": "J'ai perdu car je suis épuisé par\\ntoute la course que j'ai faite…"
+ },
+ "OneIsland_KindleRoad_Text_TanyaDefeat": {
+  "en": "I'm such a fool!",
+  "fr": "Quel idiot je suis !"
+ },
+ "OneIsland_KindleRoad_Text_TanyaIntro": {
+  "en": "There isn't a day in which we don't\\ntrain!",
+  "fr": "Il ne se passe pas un jour sans que\\nnous nous entraînions !"
+ },
+ "OneIsland_KindleRoad_Text_TanyaPostBattle": {
+  "en": "I'll train even harder from now on!",
+  "fr": "Je m'entraînerai encore plus dur\\ndésormais !"
+ },
+ "OneIsland_KindleRoad_Text_TommyDefeat": {
+  "en": "I've lost it all again…",
+  "fr": "J'ai encore tout perdu…"
+ },
+ "OneIsland_KindleRoad_Text_TommyIntro": {
+  "en": "Wait! Wait a second!\\nI think I've hooked a big one!",
+  "fr": "Attends ! Attends une seconde !\\nJe crois que j'ai ferré un gros !"
+ },
+ "OneIsland_KindleRoad_Text_TommyPostBattle": {
+  "en": "Not only did I lose, the big one\\ngot away from me, too!",
+  "fr": "Non seulement j'ai perdu, mais le\\ngros m'a échappé aussi !"
+ }
+}

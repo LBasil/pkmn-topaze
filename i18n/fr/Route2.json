@@ -1,6 +1,34 @@
 {
+ "Route2_Text_ForestSign": {
+  "en": "CINDER FOREST\\nNothing grows there anymore...",
+  "fr": "FORÊT DE CENDRES\\nRien n'y pousse plus…"
+ },
+ "Route2_Text_Hiker": {
+  "en": "See how the dusk follows the road?\\nSlate blue behind you, embers ahead.\\pThe burnt wood under this cliff is the\\nonly way through. Mind the bugs!",
+  "fr": "Tu vois comme le crépuscule suit la\\nroute ? Bleu ardoise derrière toi,\\lbraises devant.\\pLe bois brûlé sous cette falaise\\nest le seul passage. Attention aux\\linsectes !"
+ },
+ "Route2_Text_Miner": {
+  "en": "Obsidian forms where the mountain\\nbleeds. PYROPIA sits right on it.\\pSmell that smoke? The volcano is\\njust warming up.",
+  "fr": "L'obsidienne se forme là où la\\nmontagne saigne. PYROPIA est juste\\ldessus.\\pTu sens cette fumée ? Le volcan ne\\nfait que s'échauffer."
+ },
+ "Route2_Text_Quest1_Ask": {
+  "en": "Ouch! The bugs here bite so hard.\\nPlease bring me 3 ANTIDOTES!",
+  "fr": "Aïe ! Les insectes d'ici mordent\\nfort. Apporte-moi 3 ANTIDOTES, s'il\\lte plaît !"
+ },
+ "Route2_Text_Quest1_Done": {
+  "en": "My poison is gone. You are a\\nlifesaver!",
+  "fr": "Mon poison est parti. Tu m'as\\nsauvé !"
+ },
  "Route2_Text_Quest1_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route2_Text_Quest1_Ok": {
+  "en": "Thank you! Take this as thanks.",
+  "fr": "Merci ! Prends ceci en\\nremerciement."
+ },
+ "Route2_Text_RouteSign": {
+  "en": "ROUTE 2\\nOPANIHRUM - PYROPIA",
+  "fr": "ROUTE 2\\nOPANIHRUM - PYROPIA"
  }
 }

@@ -1,0 +1,42 @@
+{
+ "SilphCo_3F_Text_Ally": {
+  "en": "BRICE: Careful. The goons on this\\nfloor are small fry.\\pThe ones above are real fighters.\\nI will hold the stairs for you.\\pFLORA is ahead of us, N higher\\nstill. Do not rush, kid.",
+  "fr": "BRICE : Prudence. Les brutes de cet\\nétage sont de la petite monnaie.\\pCeux d'au-dessus sont de vrais\\ncombattants. Je tiens l'escalier\\lpour toi.\\pFLORA est devant nous, N encore\\nplus haut. Ne te précipite pas."
+ },
+ "SilphCo_3F_Text_FloorSign": {
+  "en": "HEMATEK CO. HEAD OFFICE\\n3F",
+  "fr": "HEMATEK CO. SIÈGE\\n3F"
+ },
+ "SilphCo_3F_Text_GruntDefeat": {
+  "en": "I give up!",
+  "fr": "J'abandonne !"
+ },
+ "SilphCo_3F_Text_GruntIntro": {
+  "en": "Quit messing with us, kid!",
+  "fr": "Arrête de nous embêter !"
+ },
+ "SilphCo_3F_Text_GruntPostBattle": {
+  "en": "A hint? You can open doors with\\na CARD KEY!",
+  "fr": "Un indice ? Tu peux ouvrir les\\nportes avec une CARTE MAGNÉTIQUE !"
+ },
+ "SilphCo_3F_Text_JoseDefeat": {
+  "en": "You really got me!",
+  "fr": "Tu m'as bien eu !"
+ },
+ "SilphCo_3F_Text_JoseIntro": {
+  "en": "I support TEAM ONYBRIS more than\\nI support HEMATEK CO.!",
+  "fr": "Je soutiens la TEAM ONYBRIS plus\\nqu'HEMATEK CO. !"
+ },
+ "SilphCo_3F_Text_JosePostBattle": {
+  "en": "Humph…\\pTEAM ONYBRIS said that if I helped\\nthem, they'd let me study POKéMON.",
+  "fr": "Humph…\\pLa TEAM ONYBRIS a dit que si je les\\naidais, ils me laisseraient étudier\\lles POKéMON."
+ },
+ "SilphCo_3F_Text_WhatAmIToDo": {
+  "en": "I work for HEMATEK CO.\\nWhat am I to do?",
+  "fr": "Je travaille pour HEMATEK CO.\\nQue dois-je faire ?"
+ },
+ "SilphCo_3F_Text_YouAndYourMonsSavedUs": {
+  "en": "{PLAYER}!\\nYou and your POKéMON saved us!",
+  "fr": "{PLAYER} ! Toi et tes POKéMON nous\\navez sauvés !"
+ }
+}

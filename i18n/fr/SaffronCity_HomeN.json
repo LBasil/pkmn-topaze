@@ -1,0 +1,38 @@
+{
+ "SaffronCity_HomeN_Text_Blank": {
+  "en": "The plate is blank. Nothing has\\nbeen written here yet.",
+  "fr": "La plaque est vierge. Rien n'y a\\nencore été écrit."
+ },
+ "SaffronCity_HomeN_Text_Guide": {
+  "en": "Welcome to the MUSEUM OF TIME. One\\nplate for each ECHO. Read them in\\pthe order you met them.",
+  "fr": "Bienvenue au MUSÉE DU TEMPS. Une\\nplaque pour chaque ÉCHO. Lis-les\\ldans l'ordre où tu les as\\nrencontrés."
+ },
+ "SaffronCity_HomeN_Text_Plate0": {
+  "en": "RAIKOU: It crossed KINDLE ROAD\\nonce. The ground still remembers\\pits thunder.",
+  "fr": "RAIKOU : Il a traversé la ROUTE\\nBRAISE une fois. Le sol se souvient\\lencore de son tonnerre."
+ },
+ "SaffronCity_HomeN_Text_Plate1": {
+  "en": "ENTEI: It burned a path across CAPE\\nBRINK. The ash never settled.",
+  "fr": "ENTEI : Il a brûlé un chemin à\\ntravers le CAP BRINK. La cendre ne\\ls'est jamais posée."
+ },
+ "SaffronCity_HomeN_Text_Plate2": {
+  "en": "SUICUNE: The BOND BRIDGE rings when\\nit passes. The water clears for it.",
+  "fr": "SUICUNE : Le PONT DES LIENS résonne\\nquand il passe. L'eau s'éclaircit\\lpour lui."
+ },
+ "SaffronCity_HomeN_Text_Plate3": {
+  "en": "REGICE: Cold older than the island.\\nIt waits at the end of ICEFALL\\pCAVE.",
+  "fr": "REGICE : Un froid plus vieux que\\nl'île. Il attend au bout de la\\lGROTTE DU GLACIER."
+ },
+ "SaffronCity_HomeN_Text_Plate4": {
+  "en": "REGISTEEL: Iron that was never\\nforged. The MEADOW grows around it.",
+  "fr": "REGISTEEL : Du fer jamais forgé. La\\nPRAIRIE pousse autour de lui."
+ },
+ "SaffronCity_HomeN_Text_Plate5": {
+  "en": "REGIROCK: Stone that remembers\\nevery footstep in RUIN VALLEY.",
+  "fr": "REGIROCK : Une pierre qui se\\nsouvient de chaque pas dans la\\pVALLÉE DES RUINES."
+ },
+ "SaffronCity_HomeN_Text_Plate6": {
+  "en": "CELEBI: It showed the way through\\ntime. The moss still glows where it\\pslept.",
+  "fr": "CELEBI : Il a montré le chemin à\\ntravers le temps. La mousse brille\\lencore là où il a dormi."
+ }
+}

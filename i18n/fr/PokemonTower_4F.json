@@ -1,0 +1,42 @@
+{
+ "PokemonTower_4F_Text_JodyDefeat": {
+  "en": "Huh?\\nWho? What?",
+  "fr": "Hein ?\\nQui ? Quoi ?"
+ },
+ "PokemonTower_4F_Text_JodyIntro": {
+  "en": "Huhuhu…\\nBeat me not!",
+  "fr": "Huhuhu…\\nNe me bats pas !"
+ },
+ "PokemonTower_4F_Text_JodyPostBattle": {
+  "en": "May the departed POKéMON rest in\\npeace…",
+  "fr": "Que les POKéMON disparus reposent\\nen paix…"
+ },
+ "PokemonTower_4F_Text_LaurelDefeat": {
+  "en": "What!",
+  "fr": "Quoi !"
+ },
+ "PokemonTower_4F_Text_LaurelIntro": {
+  "en": "Be cursed with me!\\nKwaaah!",
+  "fr": "Sois maudit avec moi !\\nKwaaah !"
+ },
+ "PokemonTower_4F_Text_LaurelPostBattle": {
+  "en": "We can't determine the identity of\\nthe ghosts…",
+  "fr": "Nous ne pouvons pas déterminer\\nl'identité des fantômes…"
+ },
+ "PokemonTower_4F_Text_MonClefairy": {
+  "en": "CLEFAIRY: Pippi!\\nIt hums softly near the crystals.",
+  "fr": "MÉLOFÉE : Pippi ! Il fredonne\\ndoucement près des cristaux."
+ },
+ "PokemonTower_4F_Text_PaulaDefeat": {
+  "en": "Where is the ghost?",
+  "fr": "Où est le fantôme ?"
+ },
+ "PokemonTower_4F_Text_PaulaIntro": {
+  "en": "Ghost! No!\\nKwaaah!",
+  "fr": "Fantôme ! Non !\\nKwaaah !"
+ },
+ "PokemonTower_4F_Text_PaulaPostBattle": {
+  "en": "I must have been dreaming…",
+  "fr": "J'ai dû rêver…"
+ }
+}

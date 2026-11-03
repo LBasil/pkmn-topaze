@@ -1,10 +1,18 @@
 {
+ "CliffsideCove_Text_Npc0": {
+  "en": "Nobody comes here. Except me and\\nWINGULL.",
+  "fr": "Personne ne vient ici. Sauf moi et\\nGOÉLISE."
+ },
+ "CliffsideCove_Text_Npc1": {
+  "en": "The tide covers the path at night.",
+  "fr": "La marée recouvre le chemin la\\nnuit."
+ },
  "CliffsideCove_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "CliffsideCove_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

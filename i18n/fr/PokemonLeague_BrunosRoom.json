@@ -1,0 +1,18 @@
+{
+ "PokemonLeague_BrunosRoom_Text_Defeat": {
+  "en": "Why?\\nHow could I lose?",
+  "fr": "Pourquoi ?\\nComment ai-je pu perdre ?"
+ },
+ "PokemonLeague_BrunosRoom_Text_Intro": {
+  "en": "I am BRUNO of the ELITE FOUR!\\pThrough rigorous training, people\\nand POKéMON can become stronger\\lwithout limit.\\pI've lived and trained with my\\nfighting POKéMON!\\lAnd that will never change!\\p{PLAYER}!\\pWe will grind you down with our\\nsuperior power!\\pHoo hah!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
+  "fr": "Je suis BRUNO du CONSEIL DES 4 !\\pPar un entraînement rigoureux, les\\ngens et les POKéMON peuvent devenir\\lplus forts sans limite.\\pJ'ai vécu et m'entraîne avec mes\\nPOKéMON combattants ! Et cela ne\\lchangera jamais !\\p{PLAYER} !\\pNous te broierons par notre\\npuissance supérieure !\\pHoo hah !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
+ },
+ "PokemonLeague_BrunosRoom_Text_PostBattle": {
+  "en": "My job is done.\\nGo face your next challenge.",
+  "fr": "Mon travail est fait.\\nVa affronter ton prochain défi."
+ },
+ "PokemonLeague_BrunosRoom_Text_RematchIntro": {
+  "en": "I am BRUNO of the ELITE FOUR!\\pThrough rigorous training, people\\nand POKéMON can become stronger\\lwithout limit.\\pI've lived and trained with my\\nfighting POKéMON!\\lAnd that will never change!\\p{PLAYER}!\\pWe will grind you down with our\\nsuperior power!\\pHoo hah!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
+  "fr": "Je suis BRUNO du CONSEIL DES 4 !\\pPar un entraînement rigoureux, les\\ngens et les POKéMON peuvent devenir\\lplus forts sans limite.\\pJ'ai vécu et m'entraîne avec mes\\nPOKéMON combattants ! Et cela ne\\lchangera jamais !\\p{PLAYER} !\\pNous te broierons par notre\\npuissance supérieure !\\pHoo hah !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
+ }
+}

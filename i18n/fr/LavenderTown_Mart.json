@@ -1,0 +1,14 @@
+{
+ "LavenderTown_Mart_Text_DidYouBuyRevives": {
+  "en": "Did you buy some REVIVES?\\nThey revive any fainted POKéMON!",
+  "fr": "As-tu acheté des RAPPELS ?\\nIls raniment tout POKéMON K.O. !"
+ },
+ "LavenderTown_Mart_Text_SearchingForStatRaiseItems": {
+  "en": "I'm searching for items that raise\\nthe stats of POKéMON.\\pThey're effective over the course\\nof a single battle.\\pX ATTACK, X DEFEND, X SPEED, \\nand X SPECIAL are what I'm after.\\pDo you know where I can get them?",
+  "fr": "Je cherche des objets qui\\naugmentent les stats des POKéMON.\\pIls sont efficaces le temps d'un\\nseul combat.\\pATTAQUE X, DÉFENSE X, VITESSE X et\\nSPÉCIAL X sont ce que je cherche.\\pSais-tu où je peux en trouver ?"
+ },
+ "LavenderTown_Mart_Text_TrainerDuosCanChallengeYou": {
+  "en": "Sometimes, a TRAINER duo will\\nchallenge you with two POKéMON\\lat the same time.\\pIf that happens, you have to send\\nout two POKéMON to battle, too.",
+  "fr": "Parfois, un duo de DRESSEURS te\\ndéfie avec deux POKéMON en même\\ltemps.\\pDans ce cas, tu dois aussi envoyer\\ndeux POKéMON au combat."
+ }
+}

@@ -1,10 +1,18 @@
 {
+ "GraniteBluff_Text_Npc0": {
+  "en": "The rock is solid. So am I.",
+  "fr": "La roche est solide. Moi aussi."
+ },
+ "GraniteBluff_Text_Npc1": {
+  "en": "I tried to climb. I tried twice.",
+  "fr": "J'ai essayé de grimper. Deux fois."
+ },
  "GraniteBluff_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "GraniteBluff_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

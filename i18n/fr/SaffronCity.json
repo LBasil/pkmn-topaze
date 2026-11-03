@@ -1,18 +1,226 @@
 {
+ "SaffronCity_Text_AlliesMeet1": {
+  "en": "N: …Wait. Do not go in, child.\\pThat pendant. It hums like the\\nstones. So it is true.",
+  "fr": "N : …Attends. N'entre pas,\\nenfant.\\pCe pendentif. Il vibre comme les\\npierres. Alors c'est vrai."
+ },
+ "SaffronCity_Text_AlliesMeet2": {
+  "en": "BRICE: I'm BRICE. I walked this\\nregion long before ONYBRIS.\\pTheir MASTER is in this tower.\\nHe came for the HEMATITE himself.",
+  "fr": "BRICE : Je suis BRICE. J'ai\\nparcouru cette région bien avant\\lONYBRIS.\\pLeur MAÎTRE est dans cette tour. Il\\nest venu chercher l'HÉMATITE\\llui-même."
+ },
+ "SaffronCity_Text_AlliesMeet3": {
+  "en": "FLORA: We are going up to face\\nhim. Every trainer that can still\\pstand has to try.\\pYou are not strong enough yet,\\nlittle one. Not for him.",
+  "fr": "FLORA : Nous montons l'affronter.\\nChaque dresseur encore debout doit\\lessayer.\\pTu n'es pas encore assez fort. Pas\\npour lui."
+ },
+ "SaffronCity_Text_AlliesMeet4": {
+  "en": "N: Follow us if you must.\\nStay one floor behind.\\pAnd {PLAYER}… if we do not come\\ndown, remember what you saw.",
+  "fr": "N : Suis-nous si tu dois. Reste un\\nétage derrière.\\pEt {PLAYER}… si nous ne redescendons\\npas, souviens-toi de ce que tu as\\lvu."
+ },
+ "SaffronCity_Text_BossTakeTownForTeamRocket": {
+  "en": "BOSS said he'll take this town\\nin the name of TEAM ONYBRIS!",
+  "fr": "Le BOSS a dit qu'il prendrait cette\\nville au nom de la TEAM ONYBRIS !"
+ },
+ "SaffronCity_Text_CitySign": {
+  "en": "HEMATOWN\\nThe City the Sun Forgot",
+  "fr": "HEMATOWN\\nLa Ville oubliée du Soleil"
+ },
+ "SaffronCity_Text_Clock_Ask": {
+  "en": "The big clock stopped the day the\\nlights died. Read the clocks on\\pROUTE 1, ROUTE 11 and ROUTE 22 for\\nme, then come back.",
+  "fr": "La grande horloge s'est arrêtée le\\njour où les lumières sont mortes.\\pLis les horloges de\\pROUTE 1, ROUTE 11 et ROUTE 22 pour\\nmoi, puis reviens."
+ },
+ "SaffronCity_Text_Clock_Done": {
+  "en": "I stopped fixing the clock. I watch\\nit now. It helps to know where time\\pwent.",
+  "fr": "J'ai arrêté de réparer l'horloge.\\nJe la regarde maintenant. Ça aide\\lde savoir où est passé le temps."
+ },
  "SaffronCity_Text_Clock_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "SaffronCity_Text_Clock_Solved": {
+  "en": "3:07 stuck, hands spinning\\nbackwards, sand falling up. The\\psame stop, three times. So the\\nclock is not broken. Time is. Take\\pthis, it will help you.",
+  "fr": "3h07 bloquée, aiguilles tournant à\\nl'envers, sable remontant. Le même\\larrêt, trois fois. Donc l'horloge\\nn'est pas cassée. Le temps l'est.\\lPrends ceci, ça t'aidera."
+ },
+ "SaffronCity_Text_CriminalLifeMakesMeFeelAlive": {
+  "en": "My life as a criminal makes me feel\\nso alive!",
+  "fr": "Ma vie de criminel me fait me\\nsentir si vivant !"
+ },
+ "SaffronCity_Text_DontGetDefiantOrIllHurtYou": {
+  "en": "Don't get defiant!\\nOr I'll have to hurt you!",
+  "fr": "Ne fais pas le rebelle !\\nOu je devrai te faire mal !"
+ },
+ "SaffronCity_Text_FightingDojo": {
+  "en": "FIGHTING DOJO",
+  "fr": "DOJO DE COMBAT"
+ },
+ "SaffronCity_Text_FlewHereOnPidgeot": {
+  "en": "I flew here on my PIDGEOT when\\nI read about HEMATEK.\\pIt's already over?\\nI missed the media action…",
+  "fr": "Je suis venu ici sur mon ROUCARNAGE\\nquand j'ai lu à propos d'HEMATEK.\\pC'est déjà fini ?\\nJ'ai raté l'action médiatique…"
+ },
+ "SaffronCity_Text_FullHealCuresStatus": {
+  "en": "TRAINER TIPS\\pFULL HEAL cures all ailments like\\nburns, paralysis, poisoning,\\lfreezing, and sleep.\\pIt costs a bit more, but it's more\\nconvenient than buying other items.",
+  "fr": "CONSEILS AUX DRESSEURS\\pLe TOUT-SOIN guérit tous les maux\\ncomme les brûlures, la paralysie,\\ll'empoisonnement, le gel et le\\nsommeil.\\pIl coûte un peu plus, mais il est\\nplus pratique que d'acheter\\ld'autres objets."
+ },
+ "SaffronCity_Text_GreatBallImprovedCatchRate": {
+  "en": "TRAINER TIPS\\pThe new GREAT BALL offers improved\\ncatching rates.\\pTry it on those hard-to-catch\\nPOKéMON.",
+  "fr": "CONSEILS AUX DRESSEURS\\pLa nouvelle SUPER BALL offre de\\nmeilleurs taux de capture.\\pEssaie-la sur les POKéMON\\ndifficiles à capturer."
+ },
+ "SaffronCity_Text_GuardGone": {
+  "en": "The MASTER is gone. Half of us\\nran. I think I'll quit too.",
+  "fr": "Le MAÎTRE est parti. La moitié\\nd'entre nous s'est enfuie. Je crois\\lque je démissionne."
+ },
+ "SaffronCity_Text_GuardScared": {
+  "en": "I didn't see anything!\\nThose three… I'm not paid enough!",
+  "fr": "Je n'ai rien vu ! Ces trois-là…\\nje ne suis pas assez payé !"
+ },
+ "SaffronCity_Text_GymSign": {
+  "en": "HEMATOWN POKéMON GYM\\nLEADER: NOX\\lThe Shadow of the City!",
+  "fr": "ARÈNE POKéMON D'HEMATOWN\\nCHAMPION : NOX\\lL'Ombre de la Ville !"
+ },
+ "SaffronCity_Text_HesTakingASnooze": {
+  "en": "…\\nSnore…\\pHah! He's taking a snooze!",
+  "fr": "…\\nRonfle…\\pHah ! Il fait une sieste !"
+ },
+ "SaffronCity_Text_HowCanClubNotRecognizeLance": {
+  "en": "This FAN CLUB…\\nNo one here has a clue!\\pHow could they not recognize\\nthe brilliance that is LANCE?\\pHe stands for justice!\\nHe's cool, and yet passionate!\\lHe's the greatest, LANCE!",
+  "fr": "Ce CLUB DE FANS… Personne ici n'y\\ncomprend rien !\\pComment peuvent-ils ne pas\\nreconnaître la brillance de LANCE ?\\pIl incarne la justice ! Il est\\ncool, et pourtant passionné ! C'est\\lle plus grand, LANCE !"
+ },
+ "SaffronCity_Text_ImASecurityGuard": {
+  "en": "I'm a security guard.\\pSuspicious kids I don't allow in!",
+  "fr": "Je suis agent de sécurité.\\pLes gamins suspects, je ne les\\nlaisse pas entrer !"
+ },
+ "SaffronCity_Text_Market_Bye": {
+  "en": "The market closes whenever time\\nsays so.",
+  "fr": "Le marché ferme quand le temps le\\ndit."
+ },
+ "SaffronCity_Text_Market_Closed": {
+  "en": "Come back when the LEAGUE is behind\\nyou. The market is not open for you\\pyet.",
+  "fr": "Reviens quand la LIGUE sera\\nderrière toi. Le marché n'est pas\\lencore ouvert pour toi."
+ },
+ "SaffronCity_Text_Market_Open": {
+  "en": "The night market opens when the\\nclocks stop. Look around, {PLAYER}.",
+  "fr": "Le marché de nuit ouvre quand les\\nhorloges s'arrêtent. Regarde autour\\lde toi, {PLAYER}."
+ },
+ "SaffronCity_Text_MrPsychicsHouse": {
+  "en": "MR. PSYCHIC'S HOUSE",
+  "fr": "MAISON DE M. PSY"
+ },
+ "SaffronCity_Text_PeopleComingBackToSaffron": {
+  "en": "People fled from here in droves\\nwhen those ONYBRIS came.\\pThey should be flocking back to\\nHEMATOWN now.",
+  "fr": "Les gens ont fui d'ici en masse\\nquand ces ONYBRIS sont venus.\\pIls devraient revenir en foule à\\nHEMATOWN maintenant."
+ },
+ "SaffronCity_Text_Pidgeot": {
+  "en": "PIDGEOT: Bi bibii!",
+  "fr": "ROUCARNAGE : Bi bibii !"
+ },
+ "SaffronCity_Text_ProcheViolette_After": {
+  "en": "The future is not fixed. You proved\\nthat today.",
+  "fr": "L'avenir n'est pas figé. Tu l'as\\nprouvé aujourd'hui."
+ },
+ "SaffronCity_Text_ProcheViolette_Defeat": {
+  "en": "So you did see it coming...",
+  "fr": "Alors tu l'as vu venir…"
+ },
+ "SaffronCity_Text_ProcheViolette_Early": {
+  "en": "Not yet, {PLAYER}. Finish your\\njourney first, then come and find\\pme.",
+  "fr": "Pas encore, {PLAYER}. Termine\\nd'abord ton voyage, puis viens me\\ltrouver."
+ },
+ "SaffronCity_Text_ProcheViolette_Intro": {
+  "en": "I knew you would come, {PLAYER}. I\\nsaw it. Now let us see if you can\\psee my moves.",
+  "fr": "Je savais que tu viendrais,\\n{PLAYER}. Je l'ai vu. Voyons\\lmaintenant si tu peux voir mes\\ncoups."
+ },
+ "SaffronCity_Text_ProcheViolette_NoRoom": {
+  "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reparle-moi."
+ },
+ "SaffronCity_Text_ProcheViolette_Win": {
+  "en": "Take this. I foresaw you would win.",
+  "fr": "Prends ça. J'avais prévu que tu\\ngagnerais."
+ },
+ "SaffronCity_Text_RefAfter": {
+  "en": "HUGO: Take good care of it. The\\nnext REFUGE post is waiting.",
+  "fr": "HUGO : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
+ },
+ "SaffronCity_Text_RefAsk": {
+  "en": "HUGO: A big sleeper blocks the road\\nand the hunters want it. They came\\lwith ropes and a truck.",
+  "fr": "HUGO : Un gros dormeur bloque la\\nroute et les chasseurs le veulent.\\pIls sont venus avec des cordes et\\nun camion."
+ },
+ "SaffronCity_Text_RefDone": {
+  "en": "HUGO: Thank you again. The REFUGE\\nis safer because of you.",
+  "fr": "HUGO : Merci encore. Le REFUGE est\\nplus sûr grâce à toi."
+ },
+ "SaffronCity_Text_RefEarly": {
+  "en": "HUGO: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "fr": "HUGO : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\lde la ZONE SAFARI connaît l'ordre."
+ },
+ "SaffronCity_Text_RefGives": {
+  "en": "HUGO: You saved the day. The post\\nhas a gift for you: SNORLAX!",
+  "fr": "HUGO : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\pRONFLEX !"
  },
  "SaffronCity_Text_RefHunter1": {
-  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Ne te mêle pas de ça,\\ppetit !",
-  "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!"
+  "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!",
+  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Ne te mêle pas de ça,\\ppetit !"
  },
  "SaffronCity_Text_RefHunter2": {
-  "fr": "CHASSEUR : Tu as battu mon associé ?\\nSoit, je n'ai pas peur d'un\\lranger !",
-  "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!"
+  "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!",
+  "fr": "CHASSEUR : Tu as battu mon\\nassocié ? Soit, je n'ai pas peur\\ld'un ranger !"
+ },
+ "SaffronCity_Text_RefIdle": {
+  "en": "HUGO: I watch over the animals here.\\nThe world is quieter now.",
+  "fr": "HUGO : Je veille sur les animaux\\nici. Le monde est plus calme\\lmaintenant."
+ },
+ "SaffronCity_Text_SafeToGoOutAgain": {
+  "en": "Yeah! TEAM ONYBRIS is gone!\\nIt's safe to go out again!",
+  "fr": "Ouais ! La TEAM ONYBRIS est\\npartie ! On peut ressortir sans\\lrisque !"
+ },
+ "SaffronCity_Text_SaffronBelongsToTeamRocket": {
+  "en": "HEMATOWN belongs to TEAM ONYBRIS!",
+  "fr": "HEMATOWN appartient à la TEAM\\nONYBRIS !"
+ },
+ "SaffronCity_Text_SawRocketBossEscaping": {
+  "en": "I saw the BOSS escaping\\nHEMATEK's building.",
+  "fr": "J'ai vu le BOSS s'échapper du\\nbâtiment d'HEMATEK."
+ },
+ "SaffronCity_Text_SilphCoSign": {
+  "en": "HEMATEK CO. OFFICE BUILDING",
+  "fr": "BUREAUX DE HEMATEK CO."
+ },
+ "SaffronCity_Text_SilphsLatestProduct": {
+  "en": "HEMATEK's latest product!\\nRelease to be determined…",
+  "fr": "Dernier produit d'HEMATEK !\\nDate de sortie à déterminer…"
+ },
+ "SaffronCity_Text_TQ_Ask": {
+  "en": "A TWISTED SPOON helps my fortune\\ntelling. Bring me one.",
+  "fr": "Une CUILLER TORDUE aide ma voyance.\\nApporte-m'en une."
+ },
+ "SaffronCity_Text_TQ_Done": {
+  "en": "I see good things for you.",
+  "fr": "Je vois de bonnes choses pour toi."
  },
  "SaffronCity_Text_TQ_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "SaffronCity_Text_TQ_Ok": {
+  "en": "The future is clear. Take this\\npowder.",
+  "fr": "L'avenir est clair. Prends cette\\npoudre."
+ },
+ "SaffronCity_Text_TrainerFanClubSign": {
+  "en": "POKéMON TRAINER FAN CLUB\\pMany TRAINERS have scribbled their\\nnames on this sign.",
+  "fr": "CLUB DE FANS DES DRESSEURS POKéMON\\pBeaucoup de DRESSEURS ont griffonné\\nleurs noms sur ce panneau."
+ },
+ "SaffronCity_Text_WatchWhereYoureWalking": {
+  "en": "Ow!\\nWatch where you're walking!",
+  "fr": "Aïe !\\nRegarde où tu marches !"
+ },
+ "SaffronCity_Text_WeCanExploitMonsAroundWorld": {
+  "en": "With HEMATEK under control, we can\\nexploit POKéMON around the world!\\pWe'll get stinking rich, yeahah!",
+  "fr": "Avec HEMATEK sous contrôle, on\\npourra exploiter les POKéMON du\\lmonde entier !\\pOn sera immensément riches,\\nyeahah !"
+ },
+ "SaffronCity_Text_WhatDoYouWantGetLost": {
+  "en": "What do you want?\\nGet lost!",
+  "fr": "Qu'est-ce que tu veux ?\\nDégage !"
+ },
+ "SaffronCity_Text_YouBeatTeamRocket": {
+  "en": "You beat TEAM ONYBRIS all alone?\\nThat's amazing!",
+  "fr": "Tu as battu la TEAM ONYBRIS tout\\nseul ? C'est incroyable !"
  }
 }

@@ -1,0 +1,18 @@
+{
+ "SaffronCity_HomeA_Text_Guest": {
+  "en": "I checked in at noon. The sun has\\nset three times since.",
+  "fr": "Je me suis enregistré à midi. Le\\nsoleil s'est couché trois fois\\ldepuis."
+ },
+ "SaffronCity_HomeA_Text_No": {
+  "en": "The sand keeps falling. Come back\\nwhen you are tired.",
+  "fr": "Le sable continue de tomber.\\nReviens quand tu voudras te\\lreposer."
+ },
+ "SaffronCity_HomeA_Text_Offer": {
+  "en": "Welcome to the HOURGLASS INN. A\\nbed, free of charge. Sleep a while?",
+  "fr": "Bienvenue à l'AUBERGE DU SABLIER.\\nUn lit, gratuit. Dormir un moment ?"
+ },
+ "SaffronCity_HomeA_Text_Rested": {
+  "en": "You slept... for an hour? A day?\\nYour team feels brand new.",
+  "fr": "Tu as dormi… une heure ? Un jour ?\\nTon équipe est comme neuve."
+ }
+}

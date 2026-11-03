@@ -1,198 +1,198 @@
 {
  "CeladonCity_Text_BlewItAllAtSlots": {
-  "fr": "Snif...\\nJ'ai tout perdu aux machines !\\pJe savais que j'aurais dû échanger\\nmes JETONS contre des lots !",
-  "en": "Moan…\\nI blew it all at the slots!\\pI knew I should have cashed in my\\nCOINS for prizes!"
+  "en": "Moan…\\nI blew it all at the slots!\\pI knew I should have cashed in my\\nCOINS for prizes!",
+  "fr": "Snif...\\nJ'ai tout perdu aux machines !\\pJe savais que j'aurais dû échanger\\nmes JETONS contre des lots !"
  },
  "CeladonCity_Text_CitySign": {
-  "fr": "BOURG QUARTZ\\nLa Ville du Quartz Cristallin",
-  "en": "BOURG QUARTZ\\nThe Crystal Quartz Town"
+  "en": "BOURG QUARTZ\\nThe Crystal Quartz Town",
+  "fr": "BOURG QUARTZ\\nLa Ville du Quartz Cristallin"
  },
  "CeladonCity_Text_DeptStoreSign": {
-  "fr": "Trouve ce qu'il te faut au\\nGRAND MAGASIN DE BOURG QUARTZ !",
-  "en": "Find what you need at the\\nBOURG QUARTZ DEPT. STORE!"
+  "en": "Find what you need at the\\nBOURG QUARTZ DEPT. STORE!",
+  "fr": "Trouve ce qu'il te faut au\\nGRAND MAGASIN DE BOURG QUARTZ !"
  },
  "CeladonCity_Text_ExplainXAccuracyDireHit": {
-  "fr": "CONSEILS AUX DRESSEURS\\pPRÉCISION + augmente la précision\\ndes capacités.\\pMUSCLE + augmente les chances\\nde coups critiques.\\pProcure-toi tes objets au GRAND\\nMAGASIN DE BOURG QUARTZ !",
-  "en": "TRAINER TIPS\\pX ACCURACY boosts the accuracy of\\ntechniques.\\pDIRE HIT jacks up the likelihood\\nof critical hits.\\pGet your items at the BOURG QUARTZ\\nDEPT. STORE!"
+  "en": "TRAINER TIPS\\pX ACCURACY boosts the accuracy of\\ntechniques.\\pDIRE HIT jacks up the likelihood\\nof critical hits.\\pGet your items at the BOURG QUARTZ\\nDEPT. STORE!",
+  "fr": "CONSEILS AUX DRESSEURS\\pPRÉCISION + augmente la précision\\ndes capacités.\\pMUSCLE + augmente les chances\\nde coups critiques.\\pProcure-toi tes objets au GRAND\\nMAGASIN DE BOURG QUARTZ !"
  },
  "CeladonCity_Text_GameCornerIsBadForCitysImage": {
-  "fr": "BOURG QUARTZ est fier de ses\\nefforts pour garder la ville belle.\\pC'est pourquoi le nouveau CASINO\\nnuit à l'image de notre ville.",
-  "en": "BOURG QUARTZ takes pride in its\\nefforts to keep the city beautiful.\\pThat's why the new GAME CORNER is\\nbad for our city's image."
+  "en": "BOURG QUARTZ takes pride in its\\nefforts to keep the city beautiful.\\pThat's why the new GAME CORNER is\\nbad for our city's image.",
+  "fr": "BOURG QUARTZ est fier de ses\\nefforts pour garder la ville belle.\\pC'est pourquoi le nouveau CASINO\\nnuit à l'image de notre ville."
  },
  "CeladonCity_Text_GameCornerSign": {
-  "fr": "CASINO D'ONYBRIS\\nLe terrain de jeu des adultes !",
-  "en": "ONYBRIS GAME CORNER\\nThe playground for grown-ups!"
+  "en": "ONYBRIS GAME CORNER\\nThe playground for grown-ups!",
+  "fr": "CASINO D'ONYBRIS\\nLe terrain de jeu des adultes !"
  },
  "CeladonCity_Text_GeodeClearing": {
-  "fr": "Tu savais ? Il y a une clairière au\\nnord de la fontaine, cachée\\pderrière un arbre.\\pLes cristaux y sont glacials.\\nQuelque chose y dort, je le jure !",
-  "en": "Did you know? There's a clearing north\\nof the fountain, hidden behind a tree.\\pThe crystals there are freezing cold.\\nSomething is sleeping in it, I swear!"
+  "en": "Did you know? There's a clearing north\\nof the fountain, hidden behind a tree.\\pThe crystals there are freezing cold.\\nSomething is sleeping in it, I swear!",
+  "fr": "Tu savais ? Il y a une clairière au\\nnord de la fontaine, cachée\\pderrière un arbre.\\pLes cristaux y sont glacials.\\nQuelque chose y dort, je le jure !"
  },
  "CeladonCity_Text_GetLostOrIllPunchYou": {
-  "fr": "Qu'est-ce que tu regardes ?\\nDégage, ou je te frappe.",
-  "en": "What are you staring at?\\nGet lost, or I'll punch you."
+  "en": "What are you staring at?\\nGet lost, or I'll punch you.",
+  "fr": "Qu'est-ce que tu regardes ?\\nDégage, ou je te frappe."
  },
  "CeladonCity_Text_GotMyKoffingInCinnabar": {
-  "fr": "Mon SMOGO vient de CHRONDROLIA.\\pIl est gentil mais il peut souffler\\ndu poison si on l'ennuie.",
-  "en": "I got my KOFFING in CHRONDROLIA.\\pIt's usually nice, but it breathes\\npoison when it's angry."
+  "en": "I got my KOFFING in CHRONDROLIA.\\pIt's usually nice, but it breathes\\npoison when it's angry.",
+  "fr": "Mon SMOGO vient de CHRONDROLIA.\\pIl est gentil mais il peut souffler\\ndu poison si on l'ennuie."
  },
  "CeladonCity_Text_Guard0Defeat": {
-  "fr": "Dégelée...",
-  "en": "Thawed..."
+  "en": "Thawed...",
+  "fr": "Dégelée..."
  },
  "CeladonCity_Text_Guard0Intro": {
-  "fr": "Cette clairière est fermée aux\\nétrangers.",
-  "en": "This clearing is closed to\\noutsiders."
+  "en": "This clearing is closed to\\noutsiders.",
+  "fr": "Cette clairière est fermée aux\\nétrangers."
  },
  "CeladonCity_Text_Guard0Post": {
-  "fr": "L'ORACLE n'aime pas le bruit.",
-  "en": "The ORACLE does not like noise."
+  "en": "The ORACLE does not like noise.",
+  "fr": "L'ORACLE n'aime pas le bruit."
  },
  "CeladonCity_Text_Guard1Defeat": {
-  "fr": "Fondue...",
-  "en": "Melted..."
+  "en": "Melted...",
+  "fr": "Fondue..."
  },
  "CeladonCity_Text_Guard1Intro": {
-  "fr": "L'oiseau du froid a choisi ce lieu.",
-  "en": "The cold bird chose this place."
+  "en": "The cold bird chose this place.",
+  "fr": "L'oiseau du froid a choisi ce lieu."
  },
  "CeladonCity_Text_Guard1Post": {
-  "fr": "Doucement, maintenant. Marche\\nsans bruit.",
-  "en": "Quiet, now. Walk softly."
+  "en": "Quiet, now. Walk softly.",
+  "fr": "Doucement, maintenant. Marche\\nsans bruit."
  },
  "CeladonCity_Text_Guard2Defeat": {
-  "fr": "Fissuré...",
-  "en": "Cracked..."
+  "en": "Cracked...",
+  "fr": "Fissuré..."
  },
  "CeladonCity_Text_Guard2Intro": {
-  "fr": "Tu as piétiné notre neige.",
-  "en": "You trampled our snow."
+  "en": "You trampled our snow.",
+  "fr": "Tu as piétiné notre neige."
  },
  "CeladonCity_Text_Guard2Post": {
-  "fr": "L'ORACLE est juste devant.",
-  "en": "The ORACLE is just ahead."
+  "en": "The ORACLE is just ahead.",
+  "fr": "L'ORACLE est juste devant."
  },
  "CeladonCity_Text_Guard3Defeat": {
-  "fr": "...Alors le gel t'a choisi.",
-  "en": "...Then the frost has chosen you."
+  "en": "...Then the frost has chosen you.",
+  "fr": "...Alors le gel t'a choisi."
  },
  "CeladonCity_Text_Guard3Intro": {
-  "fr": "Je suis l'ORACLE du GEL.\\nL'oiseau dort sous ma garde.\\pProuve que ton froid vaut plus que\\nma peur.",
-  "en": "I am the ORACLE of the FROST.\\nThe bird sleeps under my watch.\\pProve that your cold is worth\\nmore than my fear."
+  "en": "I am the ORACLE of the FROST.\\nThe bird sleeps under my watch.\\pProve that your cold is worth\\nmore than my fear.",
+  "fr": "Je suis l'ORACLE du GEL.\\nL'oiseau dort sous ma garde.\\pProuve que ton froid vaut plus que\\nma peur."
  },
  "CeladonCity_Text_Guard3Post": {
-  "fr": "Va. Marche à pas de loup.",
-  "en": "Go. Tread lightly."
+  "en": "Go. Tread lightly.",
+  "fr": "Va. Marche à pas de loup."
  },
  "CeladonCity_Text_GuardSpecProtectsFromStatus": {
-  "fr": "CONSEILS AUX DRESSEURS\\pGARDE STATS. protège les POKéMON\\ndes capacités qui baissent les\\pstatistiques pendant le combat.\\pProcure-toi tes objets au\\nGRAND MAGASIN DE BOURG QUARTZ !",
-  "en": "TRAINER TIPS\\pGUARD SPEC. protects POKéMON\\nfrom status-reduction moves during\\lbattle.\\pGet your items at the\\nBOURG QUARTZ DEPT. STORE!"
+  "en": "TRAINER TIPS\\pGUARD SPEC. protects POKéMON\\nfrom status-reduction moves during\\lbattle.\\pGet your items at the\\nBOURG QUARTZ DEPT. STORE!",
+  "fr": "CONSEILS AUX DRESSEURS\\pGARDE STATS. protège les POKéMON\\ndes capacités qui baissent les\\pstatistiques pendant le combat.\\pProcure-toi tes objets au\\nGRAND MAGASIN DE BOURG QUARTZ !"
  },
  "CeladonCity_Text_GymIsGreatFullOfWomen": {
-  "fr": "Les jeunes d'aujourd'hui pensent\\nque le CASINO a toujours été un\\lsimple casino.\\pIl y a 10 ans, c'était le repère de\\nla TEAM ROCKET. Tout le monde le\\lsavait, personne n'osait le dire.\\pPuis ROCKET a disparu... et la\\nbande d'ONYBRIS s'y est installée.",
-  "en": "Heheh! Kids today think the GAME\\nCORNER was always a casino.\\pTen years ago it was the HIDEOUT of\\nTEAM ROCKET. Everybody knew, nobody\\ldared say it.\\pThen ROCKET fell apart... and the\\nONYBRIS crowd moved right in."
+  "en": "Heheh! Kids today think the GAME\\nCORNER was always a casino.\\pTen years ago it was the HIDEOUT of\\nTEAM ROCKET. Everybody knew, nobody\\ldared say it.\\pThen ROCKET fell apart... and the\\nONYBRIS crowd moved right in.",
+  "fr": "Les jeunes d'aujourd'hui pensent\\nque le CASINO a toujours été un\\lsimple casino.\\pIl y a 10 ans, c'était le repère de\\nla TEAM ROCKET. Tout le monde le\\lsavait, personne n'osait le dire.\\pPuis ROCKET a disparu... et la\\nbande d'ONYBRIS s'y est installée."
  },
  "CeladonCity_Text_GymSign": {
-  "fr": "ARÈNE POKéMON DE BOURG QUARTZ\\nCHAMPIONNE : GRIM\\lLa Recluse Glacée !",
-  "en": "BOURG QUARTZ POKéMON GYM\\nLEADER: GRIM\\lThe Frozen Recluse!"
+  "en": "BOURG QUARTZ POKéMON GYM\\nLEADER: GRIM\\lThe Frozen Recluse!",
+  "fr": "ARÈNE POKéMON DE BOURG QUARTZ\\nCHAMPIONNE : GRIM\\lLa Recluse Glacée !"
  },
  "CeladonCity_Text_KeepOutOfTeamRocketsWay": {
-  "fr": "Ne gêne pas la TEAM ONYBRIS !",
-  "en": "Keep out of TEAM ONYBRIS's way!"
+  "en": "Keep out of TEAM ONYBRIS's way!",
+  "fr": "Ne gêne pas la TEAM ONYBRIS !"
  },
  "CeladonCity_Text_MansionSign": {
-  "fr": "MANOIR DE BOURG QUARTZ",
-  "en": "BOURG QUARTZ MANSION"
+  "en": "BOURG QUARTZ MANSION",
+  "fr": "MANOIR DE BOURG QUARTZ"
  },
  "CeladonCity_Text_MyTrustedPalPoliwrath": {
-  "fr": "Voici mon fidèle compagnon,\\nTARTARD.\\pIl a évolué d'un TÊTARTE quand\\nj'ai utilisé une PIERRE EAU.",
-  "en": "This is my trusted pal, POLIWRATH.\\pIt evolved from a POLIWHIRL when\\nI used a WATER STONE."
+  "en": "This is my trusted pal, POLIWRATH.\\pIt evolved from a POLIWHIRL when\\nI used a WATER STONE.",
+  "fr": "Voici mon fidèle compagnon,\\nTARTARD.\\pIl a évolué d'un TÊTARTE quand\\nj'ai utilisé une PIERRE EAU."
  },
  "CeladonCity_Text_Poliwrath": {
-  "fr": "TARTARD : Tar tard !",
-  "en": "POLIWRATH: Ribi ribit!"
+  "en": "POLIWRATH: Ribi ribit!",
+  "fr": "TARTARD : Tar tard !"
  },
  "CeladonCity_Text_PrizeExchangeSign": {
-  "fr": "JETONS échangés contre des lots !\\nÉCHANGE DE LOTS",
-  "en": "COINS exchanged for prizes!\\nPRIZE EXCHANGE"
+  "en": "COINS exchanged for prizes!\\nPRIZE EXCHANGE",
+  "fr": "JETONS échangés contre des lots !\\nÉCHANGE DE LOTS"
  },
  "CeladonCity_Text_RefAfter": {
-  "fr": "GWEN : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend.",
-  "en": "GWEN: Take good care of it. The\\nnext REFUGE post is waiting."
+  "en": "GWEN: Take good care of it. The\\nnext REFUGE post is waiting.",
+  "fr": "GWEN : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
  },
  "CeladonCity_Text_RefAsk": {
-  "fr": "GWEN : Mon LOKHLASS n'a pas parlé\\ndepuis des jours. La mer lui\\nmanque. Trois LIMONADES pourraient\\nlui remonter le moral.",
-  "en": "GWEN: My LAPRAS hasn't spoken in days.\\nShe misses the sea. Three\\nLEMONADES might cheer her up."
+  "en": "GWEN: My LAPRAS hasn't spoken in days.\\nShe misses the sea. Three\\nLEMONADES might cheer her up.",
+  "fr": "GWEN : Mon LOKHLASS n'a pas parlé\\ndepuis des jours. La mer lui\\nmanque. Trois LIMONADES pourraient\\nlui remonter le moral."
  },
  "CeladonCity_Text_RefDone": {
-  "fr": "GWEN : Merci encore. Le REFUGE est\\nplus sûr grâce à toi.",
-  "en": "GWEN: Thank you again. The REFUGE\\nis safer because of you."
+  "en": "GWEN: Thank you again. The REFUGE\\nis safer because of you.",
+  "fr": "GWEN : Merci encore. Le REFUGE est\\nplus sûr grâce à toi."
  },
  "CeladonCity_Text_RefEarly": {
-  "fr": "GWEN : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\pdu PARC SAFARI connaît l'ordre.",
-  "en": "GWEN: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order."
+  "en": "GWEN: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "fr": "GWEN : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\pdu PARC SAFARI connaît l'ordre."
  },
  "CeladonCity_Text_RefGives": {
-  "fr": "GWEN : Tu as sauvé la situation. Le\\nposte du REFUGE a un cadeau pour\\ntoi : LOKHLASS !",
-  "en": "GWEN: You saved the day. The post\\nhas a gift for you: LAPRAS!"
+  "en": "GWEN: You saved the day. The post\\nhas a gift for you: LAPRAS!",
+  "fr": "GWEN : Tu as sauvé la situation. Le\\nposte du REFUGE a un cadeau pour\\ntoi : LOKHLASS !"
  },
  "CeladonCity_Text_RefIdle": {
-  "fr": "GWEN : Je veille sur les animaux\\nd'ici. Le monde est plus calme.",
-  "en": "GWEN: I watch over the animals here.\\nThe world is quieter now."
+  "en": "GWEN: I watch over the animals here.\\nThe world is quieter now.",
+  "fr": "GWEN : Je veille sur les animaux\\nd'ici. Le monde est plus calme."
  },
  "CeladonCity_Text_RefNo": {
-  "fr": "GWEN : Je comprends. Mais si tu\\nchanges d'avis,\\pl'offre tient toujours.",
-  "en": "GWEN: I understand. It is a lot to\\nask. The offer stands."
+  "en": "GWEN: I understand. It is a lot to\\nask. The offer stands.",
+  "fr": "GWEN : Je comprends. Mais si tu\\nchanges d'avis,\\pl'offre tient toujours."
  },
  "CeladonCity_Text_RefOffer": {
-  "fr": "GWEN : Tu les as ! Pourrais-tu m'en\\ndonner 3 pour le poste du REFUGE ?",
-  "en": "GWEN: You have them! May I take\\n3 of them for the post?"
+  "en": "GWEN: You have them! May I take\\n3 of them for the post?",
+  "fr": "GWEN : Tu les as ! Pourrais-tu m'en\\ndonner 3 pour le poste du REFUGE ?"
  },
  "CeladonCity_Text_ScaldedTongueOnTea": {
-  "fr": "Aaaah, aïe...\\nJe me suis brûlé la langue !\\pLa gentille vieille dame du MANOIR\\nm'a donné du THÉ.\\pMais il était bouillant !\\nIl faut le refroidir pour le boire.",
-  "en": "Aaaagh, ow…\\nI scalded my tongue!\\pThis nice old lady in the MANSION\\ngave me some TEA.\\pBut it was boiling hot!\\nGotta cool it to drink it."
+  "en": "Aaaagh, ow…\\nI scalded my tongue!\\pThis nice old lady in the MANSION\\ngave me some TEA.\\pBut it was boiling hot!\\nGotta cool it to drink it.",
+  "fr": "Aaaah, aïe...\\nJe me suis brûlé la langue !\\pLa gentille vieille dame du MANOIR\\nm'a donné du THÉ.\\pMais il était bouillant !\\nIl faut le refroidir pour le boire."
  },
  "CeladonCity_Text_SomeoneStoleSilphScope": {
-  "fr": "Oh, que vais-je faire...\\pMon défunt mari tenait ce CASINO,\\nil y a longtemps.\\pLa TEAM ROCKET le payait pour se\\ntaire sur le sous-sol. Maintenant\\pONYBRIS paie le même prix.\\pMêmes masques, nouveau nom.\\nC'est terrible.",
-  "en": "Oh, what am I to do...\\pMy late husband used to run that\\nGAME CORNER, long ago.\\pTEAM ROCKET paid him to keep quiet\\nabout the basement. Now ONYBRIS\\lpays the same price.\\pSame masks, new name. Awful."
+  "en": "Oh, what am I to do...\\pMy late husband used to run that\\nGAME CORNER, long ago.\\pTEAM ROCKET paid him to keep quiet\\nabout the basement. Now ONYBRIS\\lpays the same price.\\pSame masks, new name. Awful.",
+  "fr": "Oh, que vais-je faire...\\pMon défunt mari tenait ce CASINO,\\nil y a longtemps.\\pLa TEAM ROCKET le payait pour se\\ntaire sur le sous-sol. Maintenant\\pONYBRIS paie le même prix.\\pMêmes masques, nouveau nom.\\nC'est terrible."
  },
  "CeladonCity_Text_TQ_Ask": {
-  "fr": "Il me faut un ÉLIXIR pour ma\\njournée au spa. Tu en as un ?",
-  "en": "I need an ELIXIR for my spa day. Do\\nyou have one?"
+  "en": "I need an ELIXIR for my spa day. Do\\nyou have one?",
+  "fr": "Il me faut un ÉLIXIR pour ma\\njournée au spa. Tu en as un ?"
  },
  "CeladonCity_Text_TQ_Done": {
-  "fr": "Ma peau n'a jamais été aussi belle.",
-  "en": "My skin has never been so good."
+  "en": "My skin has never been so good.",
+  "fr": "Ma peau n'a jamais été aussi belle."
  },
  "CeladonCity_Text_TQ_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "CeladonCity_Text_TQ_Ok": {
-  "fr": "Quel bonheur ! C'est pour toi.",
-  "en": "Bliss! This is for you."
+  "en": "Bliss! This is for you.",
+  "fr": "Quel bonheur ! C'est pour toi."
  },
  "CeladonCity_Text_WestBlocked": {
-  "fr": "Désolé, personne ne quitte BOURG\\nQUARTZ par la route de l'ouest.\\pDes brutes d'ONYBRIS infestent\\nl'ancienne base ROCKET sous le\\pCASINO.\\pNettoie-la, et nous rouvrirons\\nla route.",
-  "en": "Sorry, nobody leaves BOURG QUARTZ\\nby the west road for now.\\pONYBRIS thugs are swarming the old\\nROCKET base under the GAME CORNER.\\pClear it out, and we will open\\nthe road."
+  "en": "Sorry, nobody leaves BOURG QUARTZ\\nby the west road for now.\\pONYBRIS thugs are swarming the old\\nROCKET base under the GAME CORNER.\\pClear it out, and we will open\\nthe road.",
+  "fr": "Désolé, personne ne quitte BOURG\\nQUARTZ par la route de l'ouest.\\pDes brutes d'ONYBRIS infestent\\nl'ancienne base ROCKET sous le\\pCASINO.\\pNettoie-la, et nous rouvrirons\\nla route."
  },
  "CeladonCity_Text_WhySnowHere": {
-  "fr": "Il neige à BOURG QUARTZ chaque\\nhiver depuis avant ma naissance.\\pLes anciens disent qu'un grand\\noiseau bleu a jadis traversé le\\pciel au-dessus de la ville.\\pLà où il se repose, le froid ne\\npart jamais.",
-  "en": "It has snowed in QUARTZ TOWN every\\nwinter since before I was born.\\pThe old folks say a great blue bird\\nonce crossed the sky over the town.\\pWhere it rests, the cold never leaves."
+  "en": "It has snowed in QUARTZ TOWN every\\nwinter since before I was born.\\pThe old folks say a great blue bird\\nonce crossed the sky over the town.\\pWhere it rests, the cold never leaves.",
+  "fr": "Il neige à BOURG QUARTZ chaque\\nhiver depuis avant ma naissance.\\pLes anciens disent qu'un grand\\noiseau bleu a jadis traversé le\\pciel au-dessus de la ville.\\pLà où il se repose, le froid ne\\npart jamais."
  },
  "Text_SoftboiledDeclined": {
-  "fr": "Je garderai toujours un œil sur\\ntoi.\\pJ'espère qu'on pourra rediscuter.",
-  "en": "I'll always be keeping an eye out\\nfor you.\\pI hope we can chat again."
+  "en": "I'll always be keeping an eye out\\nfor you.\\pI hope we can chat again.",
+  "fr": "Je garderai toujours un œil sur\\ntoi.\\pJ'espère qu'on pourra rediscuter."
  },
  "Text_SoftboiledTaught": {
-  "fr": "Je te souhaite bonne chance !",
-  "en": "I wish you the best of luck!"
+  "en": "I wish you the best of luck!",
+  "fr": "Je te souhaite bonne chance !"
  },
  "Text_SoftboiledTeach": {
-  "fr": "Bonjour !\\pJe t'ai déjà croisé, mais je n'ai\\njamais eu l'occasion de discuter.\\pC'est sûrement la chance qui nous\\nréunit enfin.\\pPour fêter ça, je veux t'enseigner\\nla capacité E-COQUE.",
-  "en": "Hello, there!\\pI've seen you about, but I never\\nhad a chance to chat.\\pIt must be good luck that brought\\nus together finally.\\pI'd like to celebrate by teaching\\nyou the move SOFTBOILED."
+  "en": "Hello, there!\\pI've seen you about, but I never\\nhad a chance to chat.\\pIt must be good luck that brought\\nus together finally.\\pI'd like to celebrate by teaching\\nyou the move SOFTBOILED.",
+  "fr": "Bonjour !\\pJe t'ai déjà croisé, mais je n'ai\\njamais eu l'occasion de discuter.\\pC'est sûrement la chance qui nous\\nréunit enfin.\\pPour fêter ça, je veux t'enseigner\\nla capacité E-COQUE."
  },
  "Text_SoftboiledWhichMon": {
-  "fr": "Alors, quel POKéMON aura la chance\\nd'apprendre E-COQUE ?",
-  "en": "So, who's the POKéMON that gets\\nthe chance to learn SOFTBOILED?"
+  "en": "So, who's the POKéMON that gets\\nthe chance to learn SOFTBOILED?",
+  "fr": "Alors, quel POKéMON aura la chance\\nd'apprendre E-COQUE ?"
  }
 }

@@ -1,18 +1,42 @@
 {
+ "CrownField_Text_Npc0": {
+  "en": "Only champions walk this field. And\\ntheir luck.",
+  "fr": "Seuls les champions marchent dans\\nce champ. Et leur chance."
+ },
+ "CrownField_Text_Npc1": {
+  "en": "Everything here hits hard.\\nEverything.",
+  "fr": "Tout ici frappe fort.\\nTout."
+ },
+ "CrownField_Text_Quest0_AfterT": {
+  "en": "Fit for a champion.",
+  "fr": "Digne d'un champion."
+ },
+ "CrownField_Text_Quest0_Ask": {
+  "en": "A RARE CANDY for my prize. A PP MAX\\nfor you.",
+  "fr": "Un BONBON RARE pour mon trophée. Un\\nPP MAX pour toi."
+ },
+ "CrownField_Text_Quest0_Done": {
+  "en": "Magnificent! Take this PP MAX.",
+  "fr": "Magnifique ! Prends ce PP MAX."
+ },
+ "CrownField_Text_Quest0_MissT": {
+  "en": "One RARE CANDY, please.",
+  "fr": "Un BONBON RARE, s'il vous plaît."
+ },
  "CrownField_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "CrownField_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "CrownField_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "CrownField_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

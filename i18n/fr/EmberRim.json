@@ -1,14 +1,38 @@
 {
+ "EmberRim_Text_Npc0": {
+  "en": "Heat makes POKéMON bold. It makes\\nme thirsty.",
+  "fr": "La chaleur rend les POKéMON hardis.\\nElle me donne soif."
+ },
+ "EmberRim_Text_Npc1": {
+  "en": "MAGBY juggle sparks. I do not\\nrecommend catching them barehanded.",
+  "fr": "MAGBY jongle avec des étincelles.\\nJe déconseille de les attraper à\\lmains nues."
+ },
+ "EmberRim_Text_Quest0_AfterT": {
+  "en": "The rim is warm and cozy.",
+  "fr": "Le bord est chaud et douillet."
+ },
+ "EmberRim_Text_Quest0_Ask": {
+  "en": "Two ICE HEALs would cool my pot. I\\nwill pay in charcoal.",
+  "fr": "Deux ANTI-GEL refroidiraient ma\\nmarmite. Je paierai en charbon."
+ },
+ "EmberRim_Text_Quest0_Done": {
+  "en": "Cool as snow. Take this CHARCOAL.",
+  "fr": "Frais comme la neige. Prends ce\\nCHARBON."
+ },
+ "EmberRim_Text_Quest0_MissT": {
+  "en": "Two ICE HEALs, please.",
+  "fr": "Deux ANTI-GEL, s'il vous plaît."
+ },
  "EmberRim_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "EmberRim_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "EmberRim_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

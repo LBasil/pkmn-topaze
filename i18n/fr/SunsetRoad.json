@@ -1,10 +1,18 @@
 {
+ "SunsetRoad_Text_Npc0": {
+  "en": "I walk here every evening. It never\\nends.",
+  "fr": "Je me promène ici chaque soir. Ça\\nne finit jamais."
+ },
+ "SunsetRoad_Text_Npc1": {
+  "en": "ARCANINE glows in the setting sun.",
+  "fr": "ARCANIN brille dans le soleil\\ncouchant."
+ },
  "SunsetRoad_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "SunsetRoad_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

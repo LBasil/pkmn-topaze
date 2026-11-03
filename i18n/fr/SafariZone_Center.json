@@ -1,0 +1,38 @@
+{
+ "SafariZone_Center_Text_CenterArea": {
+  "en": "CENTER AREA",
+  "fr": "ZONE CENTRALE"
+ },
+ "SafariZone_Center_Text_OnybrisGrunt1Defeat": {
+  "en": "Free to lose, huh...",
+  "fr": "Libre de perdre, hein…"
+ },
+ "SafariZone_Center_Text_OnybrisGrunt1Intro": {
+  "en": "Free park, free POKéMON!\\nGet lost, this is ONYBRIS ground!",
+  "fr": "Parc libre, POKéMON libres !\\nDégage, c'est le terrain\\ld'ONYBRIS !"
+ },
+ "SafariZone_Center_Text_OnybrisGrunt1Post": {
+  "en": "We opened every cage. POKéMON\\nbelong to nobody!",
+  "fr": "Nous avons ouvert toutes les cages.\\nLes POKéMON n'appartiennent à\\lpersonne !"
+ },
+ "SafariZone_Center_Text_OnybrisGrunt2Defeat": {
+  "en": "Lost to a trainer...",
+  "fr": "Battu par un dresseur…"
+ },
+ "SafariZone_Center_Text_OnybrisGrunt2Intro": {
+  "en": "Trainers are what is wrong with\\nthis world!",
+  "fr": "Les dresseurs sont ce qui ne va pas\\ndans ce monde !"
+ },
+ "SafariZone_Center_Text_OnybrisGrunt2Post": {
+  "en": "Our cadre SELENE is in the WEST\\nAREA. She is looking for something.",
+  "fr": "Notre cadre SELENE est dans la ZONE\\nOUEST. Elle cherche quelque chose."
+ },
+ "SafariZone_Center_Text_PressStartToCheckTime": {
+  "en": "TRAINER TIPS\\pPress START to check\\nremaining time.",
+  "fr": "CONSEILS AUX DRESSEURS\\pAppuie sur START pour vérifier le\\ntemps restant."
+ },
+ "SafariZone_Center_Text_RestHouse": {
+  "en": "REST HOUSE",
+  "fr": "MAISON DE REPOS"
+ }
+}

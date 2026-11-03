@@ -1,10 +1,18 @@
 {
+ "ElectricAvenue_Text_Npc0": {
+  "en": "Every pole here is a free charger.",
+  "fr": "Chaque poteau ici est un chargeur\\ngratuit."
+ },
+ "ElectricAvenue_Text_Npc1": {
+  "en": "VOLTORB rolls into the road. Watch\\nout.",
+  "fr": "VOLTORBE roule sur la route.\\nAttention."
+ },
  "ElectricAvenue_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "ElectricAvenue_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

@@ -1,10 +1,46 @@
 {
+ "CyclePond_Text_Hermit": {
+  "en": "Some POKéMON should never evolve.\\nThis stone will keep them as they\\pare. Take it.",
+  "fr": "Certains POKéMON ne devraient\\njamais évoluer. Cette pierre les\\lgarde tels qu'ils sont. Prends-la."
+ },
+ "CyclePond_Text_HermitDone": {
+  "en": "Hold it, and nothing changes. That\\nis the point.",
+  "fr": "Fais-la tenir, et rien ne change.\\nC'est le but."
+ },
+ "CyclePond_Text_HermitFull": {
+  "en": "Your BAG is full.",
+  "fr": "Ton SAC est plein."
+ },
+ "CyclePond_Text_Npc0": {
+  "en": "The rarest fish bite when nobody is\\nwatching. FEEBAS likes the quiet\\pwater.",
+  "fr": "Les poissons les plus rares mordent\\nquand personne ne regarde. BARPAU\\laime l'eau calme."
+ },
  "CyclePond_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
+ },
+ "CyclePond_Text_SpaDone": {
+  "en": "Wonderful! {STR_VAR_1} adores you now.\\nEvolutions that need bonds will\\pfollow.",
+  "fr": "Merveilleux ! {STR_VAR_1} t'adore\\nmaintenant. Les évolutions qui\\lnécessitent un lien suivront."
+ },
+ "CyclePond_Text_SpaNo": {
+  "en": "Another time, then.",
+  "fr": "Une autre fois, alors."
+ },
+ "CyclePond_Text_SpaOffer": {
+  "en": "A bond treatment for 2000 turns a\\nPOKéMON into your best friend.\\pInterested?",
+  "fr": "Un traitement de lien à 2000 fait\\nde ton POKéMON ton meilleur ami.\\pÇa t'intéresse ?"
+ },
+ "CyclePond_Text_SpaPoor": {
+  "en": "The treatment costs 2000. Come back\\nwith enough.",
+  "fr": "Le traitement coûte 2000. Reviens\\navec assez."
+ },
+ "CyclePond_Text_SpaWhich": {
+  "en": "Which POKéMON needs the treatment?",
+  "fr": "Quel POKéMON a besoin du\\ntraitement ?"
  },
  "CyclePond_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

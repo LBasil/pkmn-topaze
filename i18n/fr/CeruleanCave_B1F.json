@@ -1,18 +1,18 @@
 {
  "CeruleanCave_B1F_Text_Mew": {
-  "fr": "Mew !",
-  "en": "Mew!"
+  "en": "Mew!",
+  "fr": "Mew !"
  },
  "CeruleanCave_B1F_Text_RedAfter": {
-  "fr": "BASIL : MEWTWO n'est pas mon\\nPOKéMON. C'est mon ami.\\pIl se bat à mes côtés parce qu'il\\nle choisit. Il est libre de partir\\lquand il veut.\\pLibre, comme chaque POKéMON devrait\\nl'être. Souviens-t'en.\\pBASIL sourit et s'en va.",
-  "en": "BASIL: MEWTWO is not my POKéMON.\\nHe is my friend.\\pHe fights at my side because he\\nchooses to. He is free to leave\\lwhenever he wants.\\pFree, like every POKéMON should\\nbe. Remember that.\\pBASIL smiles and walks out."
+  "en": "BASIL: MEWTWO is not my POKéMON.\\nHe is my friend.\\pHe fights at my side because he\\nchooses to. He is free to leave\\lwhenever he wants.\\pFree, like every POKéMON should\\nbe. Remember that.\\pBASIL smiles and walks out.",
+  "fr": "BASIL : MEWTWO n'est pas mon\\nPOKéMON. C'est mon ami.\\pIl se bat à mes côtés parce qu'il\\nle choisit. Il est libre de partir\\lquand il veut.\\pLibre, comme chaque POKéMON devrait\\nl'être. Souviens-t'en.\\pBASIL sourit et s'en va."
  },
  "CeruleanCave_B1F_Text_RedDefeat": {
-  "fr": "BASIL : ...Ha ! C'est le combat\\nque j'attendais.",
-  "en": "BASIL: ...Ha! That is the fight\\nI was waiting for."
+  "en": "BASIL: ...Ha! That is the fight\\nI was waiting for.",
+  "fr": "BASIL : ...Ha ! C'est le combat\\nque j'attendais."
  },
  "CeruleanCave_B1F_Text_RedIntro": {
-  "fr": "BASIL : ...Alors tu as réussi à\\ndescendre jusqu'ici.\\pJ'ai attendu près de MEWTWO un\\ncombat qui vaille la marche.\\pPas de discours. Mon équipe parle\\nà ma place.",
-  "en": "BASIL: ...So you made it down here.\\pI waited next to MEWTWO for a fight\\nworth the walk.\\pNo speeches. My team does the\\ntalking."
+  "en": "BASIL: ...So you made it down here.\\pI waited next to MEWTWO for a fight\\nworth the walk.\\pNo speeches. My team does the\\ntalking.",
+  "fr": "BASIL : ...Alors tu as réussi à\\ndescendre jusqu'ici.\\pJ'ai attendu près de MEWTWO un\\ncombat qui vaille la marche.\\pPas de discours. Mon équipe parle\\nà ma place."
  }
 }

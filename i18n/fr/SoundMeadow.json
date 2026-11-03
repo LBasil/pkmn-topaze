@@ -1,18 +1,42 @@
 {
+ "SoundMeadow_Text_Npc0": {
+  "en": "JIGGLYPUFF sings until you fall\\nasleep.",
+  "fr": "RONDOUDOU chante jusqu'à ce que tu\\nt'endormes."
+ },
+ "SoundMeadow_Text_Npc1": {
+  "en": "SPINDA never walks the same path\\ntwice.",
+  "fr": "SPINDA ne prend jamais deux fois le\\nmême chemin."
+ },
+ "SoundMeadow_Text_Quest0_AfterT": {
+  "en": "Bravo!",
+  "fr": "Bravo !"
+ },
+ "SoundMeadow_Text_Quest0_Ask": {
+  "en": "A LEPPA BERRY for my concert. A\\nSOFT SAND for you.",
+  "fr": "Une BAIE LEPPA pour mon concert. Du\\nSABLE DOUX pour toi."
+ },
+ "SoundMeadow_Text_Quest0_Done": {
+  "en": "Marvelous! Take this SOFT SAND.",
+  "fr": "Merveilleux ! Prends ce SABLE DOUX."
+ },
+ "SoundMeadow_Text_Quest0_MissT": {
+  "en": "One LEPPA BERRY, please.",
+  "fr": "Une BAIE LEPPA, s'il te plaît."
+ },
  "SoundMeadow_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "SoundMeadow_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "SoundMeadow_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "SoundMeadow_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

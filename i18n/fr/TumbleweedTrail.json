@@ -1,10 +1,18 @@
 {
+ "TumbleweedTrail_Text_Npc0": {
+  "en": "The tumbleweeds are faster than my\\nknees.",
+  "fr": "Les pelotes de ronces sont plus\\nrapides que mes genoux."
+ },
+ "TumbleweedTrail_Text_Npc1": {
+  "en": "I chased one for an hour. It won.",
+  "fr": "J'en ai poursuivi une pendant une\\nheure. Elle a gagné."
+ },
  "TumbleweedTrail_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "TumbleweedTrail_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

@@ -1,0 +1,34 @@
+{
+ "RocketHideout_B3F_Text_Grunt1Defeat": {
+  "en": "Oof!\\nTaken down!",
+  "fr": "Ouf !\\nTerrassé !"
+ },
+ "RocketHideout_B3F_Text_Grunt1Intro": {
+  "en": "Stop meddling in TEAM ONYBRIS's\\naffairs or else!",
+  "fr": "Cesse de te mêler des affaires de\\nla TEAM ONYBRIS ou sinon !"
+ },
+ "RocketHideout_B3F_Text_Grunt1PostBattle": {
+  "en": "The LIFT KEY? One of the guards\\nbelow keeps it on him.\\pRead the ledger in the office if\\nyou want to know what you are up\\lagainst.",
+  "fr": "La CLÉ DE L'ASCENSEUR ? Un des\\ngardes en bas l'a sur lui.\\pLis le registre dans le bureau si\\ntu veux savoir à quoi tu\\lt'attaques."
+ },
+ "RocketHideout_B3F_Text_Grunt2Defeat": {
+  "en": "What?\\nI lost? No!",
+  "fr": "Quoi ?\\nJ'ai perdu ? Non !"
+ },
+ "RocketHideout_B3F_Text_Grunt2Intro": {
+  "en": "We got word from upstairs that you\\nwere coming!",
+  "fr": "On nous a prévenus d'en haut que tu\\nvenais !"
+ },
+ "RocketHideout_B3F_Text_Grunt2PostBattle": {
+  "en": "Go ahead and go!\\pBut you can't run the elevator\\nwithout the LIFT KEY.",
+  "fr": "Vas-y, passe !\\pMais tu ne peux pas faire marcher\\nl'ascenseur sans la CLÉ DE\\lL'ASCENSEUR."
+ },
+ "RocketHideout_B3F_Text_Ledger": {
+  "en": "A ledger lies open on the new desk.\\p“BRANCH 3 of 7: the money branch.\\nCasino takings: sorted, counted,\\lsent up to V.”\\p“Old ROCKET base: 4 rooms cleaned,\\nthe rest is junk. Do not bother.”\\p“Quartz is in V.'s pocket. The\\nboss wants ten stones, not one.”\\pYou keep one page: a cash voucher.",
+  "fr": "Un registre est ouvert sur le\\nnouveau bureau.\\p“ SUCCURSALE 3 sur 7 : la\\nsuccursale financière. Recettes du\\lcasino : triées, comptées, envoyées\\nà V. ”\\p“ Ancienne base ROCKET : 4 salles\\nnettoyées, le reste est du\\lbric-à-brac. Inutile de s'en\\noccuper. ”\\p“ Le quartz est dans la poche de V.\\nLe boss veut dix pierres, pas une.\\p”\\pTu gardes une page : un bon de\\ncaisse."
+ },
+ "RocketHideout_B3F_Text_LedgerDone": {
+  "en": "Only dull numbers and a stamp:\\n“BRANCH 3 of 7”.",
+  "fr": "Seulement des chiffres ennuyeux et\\nun tampon : “ SUCCURSALE 3 sur 7 ”."
+ }
+}

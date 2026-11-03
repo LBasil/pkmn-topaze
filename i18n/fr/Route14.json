@@ -1,6 +1,174 @@
 {
+ "Route14_Text_BeckDefeat": {
+  "en": "Aww, bummer!",
+  "fr": "Zut alors !"
+ },
+ "Route14_Text_BeckIntro": {
+  "en": "They have TMs on sale at the\\nBOURG QUARTZ DEPT. STORE.\\pTMs aren't really rare, but not\\nmany people have HMs.",
+  "fr": "Ils vendent des CT au GRAND MAGASIN\\nDE BOURG QUARTZ.\\pLes CT ne sont pas vraiment rares,\\nmais peu de gens ont des CS."
+ },
+ "Route14_Text_BeckPostBattle": {
+  "en": "The old FISHER at the pier tells\\ntales of the sea glowing violet.",
+  "fr": "Le vieux PÊCHEUR de la jetée\\nraconte des histoires de mer qui\\lbrille en violet."
+ },
+ "Route14_Text_BennyDefeat": {
+  "en": "I knew it!",
+  "fr": "Je le savais !"
+ },
+ "Route14_Text_BennyIntro": {
+  "en": "I'm not into it, but okay.\\nLet's go!",
+  "fr": "Je n'aime pas ça, mais bon.\\nAllons-y !"
+ },
+ "Route14_Text_BennyPostBattle": {
+  "en": "Winning, losing… It's insignificant\\nunder this huge sky.",
+  "fr": "Gagner, perdre… C'est\\ninsignifiant sous ce grand ciel."
+ },
+ "Route14_Text_CarterDefeat": {
+  "en": "Not good enough quite yet.",
+  "fr": "Pas encore assez bon."
+ },
+ "Route14_Text_CarterIntro": {
+  "en": "You need to use TMs to teach good\\nmoves to POKéMON.",
+  "fr": "Il faut utiliser des CT pour\\nenseigner de bonnes capacités aux\\lPOKéMON."
+ },
+ "Route14_Text_CarterPostBattle": {
+  "en": "You have some HMs, right? POKéMON\\ncan't forget those moves easily.",
+  "fr": "Tu as des CS, n'est-ce pas ? Les\\nPOKéMON ne peuvent pas facilement\\loublier ces capacités."
+ },
+ "Route14_Text_DonaldDefeat": {
+  "en": "Why?\\nWhy'd I lose?",
+  "fr": "Pourquoi ?\\nPourquoi ai-je perdu ?"
+ },
+ "Route14_Text_DonaldIntro": {
+  "en": "Have you heard the legend of the\\nwinged mirages?",
+  "fr": "As-tu entendu la légende des\\nmirages ailés ?"
+ },
+ "Route14_Text_DonaldPostBattle": {
+  "en": "Well, the winged mirages are the\\nlegendary bird POKéMON.\\pThere are three of them: ARTICUNO,\\nZAPDOS, and MOLTRES.",
+  "fr": "Eh bien, les mirages ailés sont les\\nPOKéMON oiseaux légendaires.\\pIl y en a trois : ARTIKODIN,\\nÉLECTHOR et SULFURA."
+ },
+ "Route14_Text_GeraldDefeat": {
+  "en": "Wipeout.",
+  "fr": "Raté."
+ },
+ "Route14_Text_GeraldIntro": {
+  "en": "Nice bike, kid? No? Then walk\\nback the way you came.",
+  "fr": "Beau vélo ? Non ? Alors\\nretourne par où tu viens."
+ },
+ "Route14_Text_GeraldPostBattle": {
+  "en": "We came from every town on this\\nroad. We are not a gang.\\pWe are a union.",
+  "fr": "Nous venons de toutes les villes de\\ncette route. Nous ne sommes pas un\\lgang.\\pNous sommes un syndicat."
+ },
+ "Route14_Text_IsaacDefeat": {
+  "en": "Crate dropped.",
+  "fr": "Caisse tombée."
+ },
+ "Route14_Text_IsaacIntro": {
+  "en": "Pedals, crates, orders.\\nThat is my week.",
+  "fr": "Pédales, caisses, commandes.\\nVoilà ma semaine."
+ },
+ "Route14_Text_IsaacPostBattle": {
+  "en": "Some of us carry stones. I only\\ncarry the bad news.",
+  "fr": "Certains d'entre nous transportent\\ndes pierres. Moi je ne porte que\\lles mauvaises nouvelles."
+ },
+ "Route14_Text_JanDefeat": {
+  "en": "JAN: Eeeeh!\\nNo fair!",
+  "fr": "JAN : Eeeeh !\\nC'est pas juste !"
+ },
+ "Route14_Text_JanIntro": {
+  "en": "JAN: KIRI, here we go!\\nWe have to try hard!",
+  "fr": "JAN : KIRI, c'est parti !\\nOn doit essayer fort !"
+ },
+ "Route14_Text_JanNotEnoughMons": {
+  "en": "JAN: You want to battle?\\nYou don't have enough POKéMON.",
+  "fr": "JAN : Tu veux te battre ?\\nTu n'as pas assez de POKéMON."
+ },
+ "Route14_Text_JanPostBattle": {
+  "en": "JAN: KIRI, don't cry!\\nWe'll just try harder next time.",
+  "fr": "JAN : KIRI, ne pleure pas ! On\\nessaiera plus fort la prochaine\\lfois."
+ },
+ "Route14_Text_KiriDefeat": {
+  "en": "KIRI: Whimper…\\nWe lost, didn't we?",
+  "fr": "KIRI : Snif…\\nOn a perdu, non ?"
+ },
+ "Route14_Text_KiriIntro": {
+  "en": "KIRI: JAN, let's try really,\\nreally hard together.",
+  "fr": "KIRI : JAN, essayons vraiment,\\nvraiment fort ensemble."
+ },
+ "Route14_Text_KiriNotEnoughMons": {
+  "en": "KIRI: We can battle if you have\\ntwo POKéMON.",
+  "fr": "KIRI : On peut se battre si tu as\\ndeux POKéMON."
+ },
+ "Route14_Text_KiriPostBattle": {
+  "en": "KIRI: Did we lose because of me?",
+  "fr": "KIRI : A-t-on perdu à cause de\\nmoi ?"
+ },
+ "Route14_Text_LukasDefeat": {
+  "en": "Arrg!\\nLost! Get lost!",
+  "fr": "Arrg !\\nPerdu ! Dégage !"
+ },
+ "Route14_Text_LukasIntro": {
+  "en": "C'mon, c'mon.\\nLet's go, let's go, let's go!",
+  "fr": "Allez, allez.\\nAllons-y, allons-y, allons-y !"
+ },
+ "Route14_Text_LukasPostBattle": {
+  "en": "What, what, what?\\nWhat do you want still?",
+  "fr": "Quoi, quoi, quoi ?\\nQu'est-ce que tu veux encore ?"
+ },
+ "Route14_Text_MalikDefeat": {
+  "en": "I still get paid, right?",
+  "fr": "Je suis toujours payé, non ?"
+ },
+ "Route14_Text_MalikIntro": {
+  "en": "The boss pays better than the\\ngym ever did.",
+  "fr": "Le boss paie mieux que l'arène ne\\nl'a jamais fait."
+ },
+ "Route14_Text_MalikPostBattle": {
+  "en": "Ask any of us. We signed up of our\\nown will. Mostly.",
+  "fr": "Demande à n'importe lequel d'entre\\nnous. Nous nous sommes engagés de\\lnotre plein gré. Surtout."
+ },
+ "Route14_Text_MarlonDefeat": {
+  "en": "Shot down in flames!",
+  "fr": "Descendu en flammes !"
+ },
+ "Route14_Text_MarlonIntro": {
+  "en": "Have you taught your bird POKéMON\\nhow to FLY?\\pYou'll be able to soar with it into\\nthe sky!",
+  "fr": "As-tu appris à ton POKéMON oiseau à\\nutiliser VOL ?\\pTu pourras t'envoler avec lui dans\\nle ciel !"
+ },
+ "Route14_Text_MarlonPostBattle": {
+  "en": "Bird POKéMON are my one true love.\\nI don't want to raise anything else.",
+  "fr": "Les POKéMON oiseaux sont mon seul\\nvrai amour. Je ne veux rien élever\\ld'autre."
+ },
+ "Route14_Text_MitchDefeat": {
+  "en": "Not ready yet!",
+  "fr": "Pas encore prêt !"
+ },
+ "Route14_Text_MitchIntro": {
+  "en": "My bird POKéMON should be ready\\nfor battle.",
+  "fr": "Mes POKéMON oiseaux devraient être\\nprêts au combat."
+ },
+ "Route14_Text_MitchPostBattle": {
+  "en": "My bird POKéMON need to learn\\nbetter moves.",
+  "fr": "Mes POKéMON oiseaux doivent\\napprendre de meilleures capacités."
+ },
+ "Route14_Text_RQuest_Ask": {
+  "en": "My crew is a mess. 2 FULL HEALS and\\nI owe you.",
+  "fr": "Mon équipe est un désastre. 2\\nTOUT-SOIN et je te dois une faveur."
+ },
+ "Route14_Text_RQuest_Done": {
+  "en": "The engine purrs again.",
+  "fr": "Le moteur ronronne de nouveau."
+ },
  "Route14_Text_RQuest_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route14_Text_RQuest_Ok": {
+  "en": "Back on the road! Thanks.",
+  "fr": "De retour sur la route ! Merci."
+ },
+ "Route14_Text_RouteSign": {
+  "en": "ROUTE 14\\nWest to AMETHIOLITE",
+  "fr": "ROUTE 14\\nOuest vers AMETHIOLITE"
  }
 }

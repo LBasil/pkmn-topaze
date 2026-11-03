@@ -1,18 +1,42 @@
 {
+ "TideCave_Text_Npc0": {
+  "en": "Rare fish hide in the deep. Bring a\\nGOOD ROD.",
+  "fr": "Les poissons rares se cachent dans\\nles profondeurs. Apporte une CANNE."
+ },
+ "TideCave_Text_Npc1": {
+  "en": "SEADRA, RELICANTH... the sea keeps\\nits treasures.",
+  "fr": "HYPOCÉAN, RELICANTH… la mer garde\\nses trésors."
+ },
+ "TideCave_Text_Quest0_AfterT": {
+  "en": "The tide is calm.",
+  "fr": "La marée est calme."
+ },
+ "TideCave_Text_Quest0_Ask": {
+  "en": "A PEARL for my collection, a MYSTIC\\nWATER for you.",
+  "fr": "Une PERLE pour ma collection, une\\nEAU MYSTIQUE pour toi."
+ },
+ "TideCave_Text_Quest0_Done": {
+  "en": "Beautiful! Take this MYSTIC WATER.",
+  "fr": "Magnifique ! Prends cette EAU\\nMYSTIQUE."
+ },
+ "TideCave_Text_Quest0_MissT": {
+  "en": "One PEARL, please.",
+  "fr": "Une PERLE, s'il vous plaît."
+ },
  "TideCave_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "TideCave_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "TideCave_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "TideCave_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

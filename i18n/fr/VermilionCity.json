@@ -1,6 +1,174 @@
 {
+ "VermilionCity_Text_BoardSeagallopFerry": {
+  "en": "Would you like to board\\na SEAGALLOP ferry?",
+  "fr": "Voulez-vous monter à bord\\nd'un ferry SEAGALLOP ?"
+ },
+ "VermilionCity_Text_BoardSeagallopRainbowPass": {
+  "en": "Ah, you have a RAINBOW PASS.\\pWould you like to board\\na SEAGALLOP ferry?",
+  "fr": "Ah, vous avez un PASS ARC-EN-CIEL.\\pVoulez-vous monter à bord\\nd'un ferry SEAGALLOP ?"
+ },
+ "VermilionCity_Text_BoardSeagallopTriPass": {
+  "en": "Ah, you have a TRI-PASS.\\pWould you like to board\\na SEAGALLOP ferry?",
+  "fr": "Ah, vous avez un TRI-PASS.\\pVoulez-vous monter à bord\\nd'un ferry SEAGALLOP ?"
+ },
+ "VermilionCity_Text_BuildingOnThisLand": {
+  "en": "I'm putting up a building on this\\nplot of land. I own it all.\\pMy POKéMON is tamping the land\\nto lay the foundation.",
+  "fr": "Je fais construire un bâtiment sur\\nce terrain. Tout m'appartient.\\pMon POKéMON tasse le sol pour poser\\nles fondations."
+ },
+ "VermilionCity_Text_CitySign": {
+  "en": "APATIA\\nThe Port of Exquisite Sunsets",
+  "fr": "APATIA Le Port aux Couchers de\\nSoleil Exquis"
+ },
+ "VermilionCity_Text_DidYouSeeSSAnneInHarbor": {
+  "en": "The S.S. ANNE is moored in the\\nharbor. HERA's APATITE is aboard!\\pStrange men in black went on board\\nbefore dawn. I smell trouble.",
+  "fr": "Le S.S. ANNE est amarré au port.\\nL'APATITE d'HERA est à bord !\\pD'étranges hommes en noir sont\\nmontés à bord avant l'aube. Je sens\\ldes ennuis."
+ },
+ "VermilionCity_Text_DoYouHaveATicket": {
+  "en": "Welcome to the S.S. ANNE!\\pExcuse me, do you have a ticket?",
+  "fr": "Bienvenue sur le S.S. ANNE !\\pExcusez-moi, avez-vous un ticket ?"
+ },
+ "VermilionCity_Text_DontHaveNeededSSTicket": {
+  "en": "{FONT_NORMAL}{PLAYER} doesn't have the needed\\nS.S. TICKET.\\p{FONT_MALE}Sorry!\\pYou need a ticket to get aboard.",
+  "fr": "{FONT_NORMAL}{PLAYER} n'a pas le TICKET\\nS.S. nécessaire.\\p{FONT_MALE}Désolé !\\pIl faut un ticket pour monter à\\nbord."
+ },
+ "VermilionCity_Text_EastBlocked": {
+  "en": "Sorry, the east road is closed.\\pThieves are lurking around the\\nharbor. Until things are settled,\\lnobody leaves APATIA this way.",
+  "fr": "Désolé, la route de l'est est\\nfermée.\\pDes voleurs rôdent autour du port.\\nTant que ce n'est pas réglé,\\lpersonne ne quitte APATIA par ici."
+ },
+ "VermilionCity_Text_FerryHint": {
+  "en": "From the dock, a SAILOR is waving\\nat you. He seems to have something\\pfor you. He can also take you to\\nthe SEVII ISLANDS by ferry.",
+  "fr": "Depuis le port, un MARIN te fait\\nsigne. Il semble avoir quelque\\lchose pour toi. Il peut aussi\\nt'emmener aux ÎLES SEVII en ferry."
+ },
+ "VermilionCity_Text_FerryTicketsIntro": {
+  "en": "The champion! Word travels fast\\non the docks.\\pTwo old tickets turned up in the\\nlost-and-found, one for a rock in\\lthe sea and one for an island that\\lno chart shows.\\pThey are yours. Please take them.",
+  "fr": "Le champion ! Les nouvelles vont\\nvite dans le port.\\pDeux vieux tickets sont apparus aux\\nobjets trouvés, un pour un rocher\\len mer et un pour une île qu'aucune\\ncarte ne montre.\\pIls sont à toi. Prends-les, s'il te\\nplaît."
+ },
+ "VermilionCity_Text_FerryTicketsNoRoom": {
+  "en": "Your BAG is full. Make some room\\nfirst and talk to me again!",
+  "fr": "Ton SAC est plein. Fais de la place\\nd'abord et reparle-moi !"
+ },
+ "VermilionCity_Text_FerryTicketsOutro": {
+  "en": "Ask the ferry about them.\\nBe careful out there!",
+  "fr": "Renseigne-toi auprès du ferry.\\nSois prudent là-bas !"
+ },
+ "VermilionCity_Text_FlashedSSTicket": {
+  "en": "{FONT_NORMAL}{PLAYER} flashed the S.S. TICKET!\\p{FONT_MALE}Great!\\nWelcome to the S.S. ANNE!",
+  "fr": "{FONT_NORMAL}{PLAYER} a brandi le TICKET\\nS.S. !\\p{FONT_MALE}Parfait !\\nBienvenue sur le S.S. ANNE !"
+ },
+ "VermilionCity_Text_GrimerMultipliesInSludge": {
+  "en": "HERA lent her APATITE to the\\nS.S. ANNE for the cruise's gala.\\pBetween us, I hope nothing happens\\nto it. Folks in black were seen\\lnear the harbor!",
+  "fr": "HERA a prêté son APATITE au S.S.\\nANNE pour le gala de la croisière.\\pEntre nous, j'espère qu'il ne lui\\narrivera rien. On a vu des gens en\\lnoir près du port !"
+ },
+ "VermilionCity_Text_Machop": {
+  "en": "MACHOP: Guoh! Gogogoh!",
+  "fr": "MACHOC : Guoh ! Gogogoh !"
+ },
+ "VermilionCity_Text_MachopStompingLandFlat": {
+  "en": "A MACHOP is stomping the land flat.",
+  "fr": "Un MACHOC piétine le terrain pour\\nl'aplanir."
+ },
+ "VermilionCity_Text_OhAuroraTicketTakeYouToBirthIsland": {
+  "en": "Oh! That's an AURORATICKET!\\nNow that is rare.\\pWe'll be happy to take you to\\nBIRTH ISLAND anytime.",
+  "fr": "Oh ! C'est un TICKET AURORE !\\nVoilà qui est rare.\\pNous serons ravis de vous emmener à\\nl'ÎLE NAISSANCE à tout moment."
+ },
+ "VermilionCity_Text_OhMysticTicketTakeYouToNavelRock": {
+  "en": "Oh! That's a MYSTICTICKET!\\nNow that is rare.\\pWe'll be happy to take you to\\nNAVEL ROCK anytime.",
+  "fr": "Oh ! C'est un TICKET MYSTIQUE !\\nVoilà qui est rare.\\pNous serons ravis de vous emmener\\nau ROCHER NOMBRIL à tout moment."
+ },
+ "VermilionCity_Text_PokemonFanClubSign": {
+  "en": "POKéMON FAN CLUB\\nAll POKéMON fans welcome!",
+  "fr": "CLUB DE FANS DES POKéMON Tous les\\nfans de POKéMON sont les\\lbienvenus !"
+ },
+ "VermilionCity_Text_ReceivedAuroraTicket": {
+  "en": "{PLAYER} received an AURORA TICKET!",
+  "fr": "{PLAYER} a reçu un TICKET AURORE !"
+ },
+ "VermilionCity_Text_ReceivedMysticTicket": {
+  "en": "{PLAYER} received a MYSTIC TICKET!",
+  "fr": "{PLAYER} a reçu un TICKET MYSTIQUE !"
+ },
+ "VermilionCity_Text_RefAfter": {
+  "en": "ELISE: Take good care of it. The\\nnext REFUGE post is waiting.",
+  "fr": "ELISE : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
+ },
+ "VermilionCity_Text_RefAsk": {
+  "en": "ELISE: A BELDUM was found half-buried\\nafter the storm. It barely moves.\\pTwo REVIVES, please. It deserves a\\nchance.",
+  "fr": "ELISE : Un TERHAL a été trouvé à\\nmoitié enterré après la tempête. Il\\lbouge à peine.\\pDeux RAPPELS, s'il vous plaît. Il\\nmérite une chance."
+ },
+ "VermilionCity_Text_RefDone": {
+  "en": "ELISE: Thank you again. The REFUGE\\nis safer because of you.",
+  "fr": "ELISE : Merci encore. Le REFUGE est\\nplus sûr grâce à toi."
+ },
+ "VermilionCity_Text_RefEarly": {
+  "en": "ELISE: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "fr": "ELISE : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\lde la ZONE SAFARI connaît l'ordre."
+ },
+ "VermilionCity_Text_RefGives": {
+  "en": "ELISE: You saved the day. The post\\nhas a gift for you: BELDUM!",
+  "fr": "ELISE : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\lTERHAL !"
+ },
+ "VermilionCity_Text_RefIdle": {
+  "en": "ELISE: I watch over the animals here.\\nThe world is quieter now.",
+  "fr": "ELISE : Je veille sur les animaux\\nici. Le monde est plus calme\\lmaintenant."
+ },
+ "VermilionCity_Text_RefNo": {
+  "en": "ELISE: I understand. It is a lot to\\nask. The offer stands.",
+  "fr": "ELISE : Je comprends. C'est\\nbeaucoup demander. L'offre tient\\ltoujours."
+ },
+ "VermilionCity_Text_RefOffer": {
+  "en": "ELISE: You have them! May I take\\n2 of them for the post?",
+  "fr": "ELISE : Tu en as ! Puis-je en\\nprendre 2 pour le poste ?"
+ },
+ "VermilionCity_Text_Route2AideHasPackageForYou": {
+  "en": "Oh, hello, {PLAYER}!\\nHow are you doing?\\pIt's me, one of PROF. OAK's AIDES.\\pDid you meet the other AIDE?\\pHe had a package from PROF. OAK\\nfor you, {PLAYER}.\\pHe said he'd look for you around\\nROUTE 2, {PLAYER}.\\pIf you're in the ROUTE 2 area,\\nplease look for him.",
+  "fr": "Oh, bonjour, {PLAYER} !\\nComment vas-tu ?\\pC'est moi, l'un des ASSISTANTS du\\nPROF. CHEN.\\pAs-tu rencontré l'autre ASSISTANT ?\\pIl avait un colis du PROF. CHEN\\npour toi, {PLAYER}.\\pIl a dit qu'il te chercherait vers\\nla ROUTE 2, {PLAYER}.\\pSi tu es dans la zone de la ROUTE\\n2, cherche-le, s'il te plaît."
+ },
+ "VermilionCity_Text_SSAnneHasDepartedForYear": {
+  "en": "So, the S.S. ANNE has departed?\\pShe'll be back in APATIA about\\nthis time next year.",
+  "fr": "Alors, le S.S. ANNE est parti ?\\pIl reviendra à APATIA à peu près à\\nla même époque l'an prochain."
+ },
+ "VermilionCity_Text_SSAnneVisitsOnceAYear": {
+  "en": "The S.S. ANNE is a famous luxury\\ncruise ship.\\pIt visits APATIA once a year.",
+  "fr": "Le S.S. ANNE est un célèbre\\npaquebot de luxe.\\pIl visite APATIA une fois par an."
+ },
+ "VermilionCity_Text_Seagallop10Departing": {
+  "en": "Okay, everything's in order for you\\nto board a special ferry.\\pSEAGALLOP HI-SPEED 10 will be\\ndeparting immediately.",
+  "fr": "Très bien, tout est en ordre pour\\nque vous montiez à bord d'un ferry\\lspécial.\\pLe SEAGALLOP HI-SPEED 10 partira\\nimmédiatement."
+ },
+ "VermilionCity_Text_Seagallop12Departing": {
+  "en": "Okay, everything's in order for you\\nto board a special ferry.\\pSEAGALLOP HI-SPEED 12 will be\\ndeparting immediately.",
+  "fr": "Très bien, tout est en ordre pour\\nque vous montiez à bord d'un ferry\\lspécial.\\pLe SEAGALLOP HI-SPEED 12 partira\\nimmédiatement."
+ },
+ "VermilionCity_Text_Seagallop7Departing": {
+  "en": "Okay, everything's in order.\\pSEAGALLOP HI-SPEED 7 will be\\ndeparting immediately.",
+  "fr": "Très bien, tout est en ordre.\\pLe SEAGALLOP HI-SPEED 7 partira\\nimmédiatement."
+ },
+ "VermilionCity_Text_TQ_Ask": {
+  "en": "A BIG PEARL! My wife would cry. I\\nwill trade a charm.",
+  "fr": "Une GROSSE PERLE ! Ma femme\\npleurerait. J'échange un\\lporte-bonheur."
+ },
+ "VermilionCity_Text_TQ_Done": {
+  "en": "The sea has been kind lately.",
+  "fr": "La mer a été clémente dernièrement."
+ },
  "VermilionCity_Text_TQ_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "VermilionCity_Text_TQ_Ok": {
+  "en": "She will be overjoyed. Take this\\nMYSTIC WATER.",
+  "fr": "Elle sera aux anges. Prends cette\\nEAU MYSTIQUE."
+ },
+ "VermilionCity_Text_TheShipSetSail": {
+  "en": "The ship set sail.",
+  "fr": "Le navire a appareillé."
+ },
+ "VermilionCity_Text_TruckDriver": {
+  "en": "DRIVER: Don't mind the truck!\\nI just park here.\\p...Why does it keep shaking?\\nIs something under there?",
+  "fr": "CHAUFFEUR : Ne fais pas attention\\nau camion ! Je me gare juste ici.\\p…Pourquoi ça n'arrête pas de\\nbouger ? Y a-t-il quelque chose en\\ldessous ?"
+ },
+ "VermilionCity_Text_WelcomeToTheSSAnne": {
+  "en": "Welcome to the S.S. ANNE!",
+  "fr": "Bienvenue sur le S.S. ANNE !"
  }
 }

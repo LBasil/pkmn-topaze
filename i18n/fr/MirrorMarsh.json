@@ -1,10 +1,18 @@
 {
+ "MirrorMarsh_Text_Npc0": {
+  "en": "Stand still. The sky will fall in\\nthe water.",
+  "fr": "Reste immobile. Le ciel tombera\\ndans l'eau."
+ },
+ "MirrorMarsh_Text_Npc1": {
+  "en": "I saw myself wave. I did not wave.",
+  "fr": "Je me suis vu faire un signe. Je\\nn'ai pas fait de signe."
+ },
  "MirrorMarsh_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "MirrorMarsh_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

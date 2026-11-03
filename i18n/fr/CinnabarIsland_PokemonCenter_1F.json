@@ -1,0 +1,26 @@
+{
+ "CinnabarIsland_PokemonCenter_1F_Text_CinnabarGymLocked": {
+  "en": "I came to visit the CHRONDROLIA GYM,\\nbut the door is locked tight.\\pThere should be a key for it\\nsomewhere.\\pCould it be in that burned-out\\nmansion?\\pThe GYM LEADER's friend used to\\nlive there, they say.",
+  "fr": "Je suis venu visiter l'ARÈNE DE\\nCHRONDROLIA, mais la porte est bien\\lverrouillée.\\pIl doit y avoir une clé quelque\\npart.\\pSerait-elle dans ce manoir brûlé ?\\pL'ami du CHAMPION y habitait,\\nparaît-il."
+ },
+ "CinnabarIsland_PokemonCenter_1F_Text_EvolutionCanWaitForNewMoves": {
+  "en": "POKéMON can still learn techniques\\nafter canceling evolution.\\pEvolution can wait until new moves\\nhave been learned.",
+  "fr": "Les POKéMON peuvent encore\\napprendre des capacités après avoir\\lannulé l'évolution.\\pL'évolution peut attendre que de\\nnouvelles capacités soient\\lapprises."
+ },
+ "CinnabarIsland_PokemonCenter_1F_Text_LetsGo": {
+  "en": "Well, that's it.\\nLet's go!",
+  "fr": "Bon, ça y est.\\nAllons-y !"
+ },
+ "CinnabarIsland_PokemonCenter_1F_Text_OhNotDoneYet": {
+  "en": "Oh, you're still not done yet?",
+  "fr": "Oh, tu n'as pas encore fini ?"
+ },
+ "CinnabarIsland_PokemonCenter_1F_Text_ReadyToSailToOneIsland": {
+  "en": "BILL: Hey, you kept me waiting!\\nReady to set sail to ONE ISLAND?",
+  "fr": "BILL : Hé, tu m'as fait attendre !\\nPrêt à embarquer pour l'ÎLE 1 ?"
+ },
+ "CinnabarIsland_PokemonCenter_1F_Text_VisitUnionRoom": {
+  "en": "Do you have lots of friends?\\pLinking up with the usual friends\\nis fun, of course.\\pBut how about visiting the\\nUNION ROOM every so often?\\pWho knows, you may end up making\\nnew friends.\\pI think it would be worth your time\\nto check the UNION ROOM.",
+  "fr": "Tu as beaucoup d'amis ?\\pSe relier avec ses amis habituels,\\nc'est amusant, bien sûr.\\pMais que dirais-tu de visiter la\\nSALLE UNION de temps en temps ?\\pQui sait, tu pourrais te faire de\\nnouveaux amis.\\pJe pense que ça vaudrait le coup\\nd'aller voir la SALLE UNION."
+ }
+}

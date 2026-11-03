@@ -1,18 +1,42 @@
 {
+ "RuinHollow_Text_Npc0": {
+  "en": "UNOWN carved these walls. Nobody\\nread them yet.",
+  "fr": "Les ZARBI ont gravé ces murs.\\nPersonne ne les a encore lus."
+ },
+ "RuinHollow_Text_Npc1": {
+  "en": "Do not stare at the walls too long,\\ndear.",
+  "fr": "Ne fixe pas trop longtemps les\\nmurs, mon chéri."
+ },
+ "RuinHollow_Text_Quest0_AfterT": {
+  "en": "The hollow whispers.",
+  "fr": "Le creux murmure."
+ },
+ "RuinHollow_Text_Quest0_Ask": {
+  "en": "Bring me an ULTRA BALL and I give\\nyou a SPELL TAG.",
+  "fr": "Apporte-moi une ULTRA BALL et je te\\ndonne un TALISMAN."
+ },
+ "RuinHollow_Text_Quest0_Done": {
+  "en": "Thank you, dear. A SPELL TAG for\\nyou.",
+  "fr": "Merci, mon chéri. Un TALISMAN pour\\ntoi."
+ },
+ "RuinHollow_Text_Quest0_MissT": {
+  "en": "One ULTRA BALL, please.",
+  "fr": "Une ULTRA BALL, s'il te plaît."
+ },
  "RuinHollow_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "RuinHollow_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "RuinHollow_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "RuinHollow_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

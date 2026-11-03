@@ -1,0 +1,30 @@
+{
+ "SSAnne_1F_Room2_Text_AnnDefeat": {
+  "en": "Oh, no!\\nI went around the world for these!",
+  "fr": "Oh non ! J'ai fait le tour du monde\\npour eux !"
+ },
+ "SSAnne_1F_Room2_Text_AnnIntro": {
+  "en": "I collected these POKéMON\\nfrom all around the world!",
+  "fr": "J'ai collectionné ces POKéMON\\npartout dans le monde !"
+ },
+ "SSAnne_1F_Room2_Text_AnnPostBattle": {
+  "en": "You hurt my poor POKéMON!\\pI demand that you heal them at a\\nPOKéMON CENTER!",
+  "fr": "Tu as blessé mon pauvre POKéMON !\\pJ'exige que tu les soignes dans un\\nCENTRE POKéMON !"
+ },
+ "SSAnne_1F_Room2_Text_CruisingAroundWorld": {
+  "en": "We are cruising around the world,\\nmy children and I.",
+  "fr": "Nous faisons le tour du monde en\\ncroisière, mes enfants et moi."
+ },
+ "SSAnne_1F_Room2_Text_TylerDefeat": {
+  "en": "Wow! \\nYou're great!",
+  "fr": "Waouh !\\nTu es génial !"
+ },
+ "SSAnne_1F_Room2_Text_TylerIntro": {
+  "en": "I love POKéMON!\\nDo you?",
+  "fr": "J'adore les POKéMON !\\nEt toi ?"
+ },
+ "SSAnne_1F_Room2_Text_TylerPostBattle": {
+  "en": "Listen, listen!\\nLet me be your friend, okay?\\pThen we can trade POKéMON and\\ndo stuff.",
+  "fr": "Écoute, écoute !\\nLaisse-moi être ton ami, d'accord ?\\pOn pourra échanger des POKéMON et\\nfaire des trucs."
+ }
+}

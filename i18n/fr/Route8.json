@@ -1,10 +1,222 @@
 {
+ "Route8_Text_AidanDefeat": {
+  "en": "Ow!\\nMeltdown!",
+  "fr": "Aïe !\\nFusion !"
+ },
+ "Route8_Text_AidanIntro": {
+  "en": "You look good at POKéMON, but how\\nis your chemistry grade?",
+  "fr": "Tu es doué en POKéMON, mais comment\\nest ta note en chimie ?"
+ },
+ "Route8_Text_AidanPostBattle": {
+  "en": "The big city west of here is\\nshut. Thieves on the loose!\\pThe guard says he is thirsty.\\nMaybe someone has a drink for him.",
+  "fr": "La grande ville à l'ouest est\\nfermée. Des voleurs rôdent !\\pLe garde dit qu'il a soif.\\nQuelqu'un a peut-être une boisson\\lpour lui."
+ },
+ "Route8_Text_AndreaDefeat": {
+  "en": "Meeeeyow!",
+  "fr": "Miiiiaou !"
+ },
+ "Route8_Text_AndreaIntro": {
+  "en": "MEOWTH is so cute, meow, meow,\\nmeow!",
+  "fr": "MIAOUSS est trop mignon, miaou,\\nmiaou, miaou !"
+ },
+ "Route8_Text_AndreaPostBattle": {
+  "en": "I think PIDGEY and RATTATA are\\ncute, too!",
+  "fr": "Je trouve ROUCOOL et RATTATA\\nmignons aussi !"
+ },
+ "Route8_Text_AnneDefeat": {
+  "en": "ANNE: Our twin power…",
+  "fr": "ANNE : Notre pouvoir de jumeaux…"
+ },
+ "Route8_Text_AnneIntro": {
+  "en": "ANNE: We'll shock you with our twin\\npower!",
+  "fr": "ANNE : On va te choquer avec notre\\npouvoir de jumeaux !"
+ },
+ "Route8_Text_AnneNotEnoughMons": {
+  "en": "ANNE: Hi, hi! Let's battle!\\nBut bring two POKéMON.",
+  "fr": "ANNE : Salut, salut !\\nBattons-nous ! Mais viens avec deux\\lPOKéMON."
+ },
+ "Route8_Text_AnnePostBattle": {
+  "en": "ANNE: I'm raising POKéMON with\\nELI.",
+  "fr": "ANNE : J'élève des POKéMON avec\\nELI."
+ },
+ "Route8_Text_Echo_After": {
+  "en": "Tell me when you beat me. I would\\nlike to know which day it was.",
+  "fr": "Dis-moi quand tu me bats.\\nJ'aimerais savoir quel jour\\lc'était."
+ },
+ "Route8_Text_Echo_Defeat": {
+  "en": "Again! I lose again. At least it is\\nconsistent.",
+  "fr": "Encore ! Je perds encore. Au moins,\\nc'est constant."
+ },
+ "Route8_Text_Echo_Early": {
+  "en": "Not yet, {PLAYER}. Come back with 4\\nBADGES. Or I already told you that?",
+  "fr": "Pas encore, {PLAYER}. Reviens avec 4\\nBADGES. Ou je te l'ai déjà dit ?"
+ },
+ "Route8_Text_Echo_Intro": {
+  "en": "{PLAYER}! There you are. You beat me\\nyesterday, remember? ...Or\\ptomorrow. The days are tangled.",
+  "fr": "{PLAYER} ! Te voilà. Tu m'as battu\\nhier, tu te souviens ? …Ou demain.\\pLes jours sont emmêlés."
+ },
  "Route8_Text_Echo_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route8_Text_Echo_Win": {
+  "en": "Take these. I owe them to you. I\\nthink.",
+  "fr": "Prends ça. Je te les dois. Je\\ncrois."
+ },
+ "Route8_Text_EliDefeat": {
+  "en": "ELI: But…\\nWe used our twin power…",
+  "fr": "ELI : Mais… On a utilisé notre\\npouvoir de jumeaux…"
+ },
+ "Route8_Text_EliIntro": {
+  "en": "ELI: Twin power is fantastic.\\nDid you know?",
+  "fr": "ELI : Le pouvoir des jumeaux est\\nfantastique. Tu le savais ?"
+ },
+ "Route8_Text_EliNotEnoughMons": {
+  "en": "ELI: We can't battle if you don't\\nhave two POKéMON.",
+  "fr": "ELI : On ne peut pas se battre si\\ntu n'as pas deux POKéMON."
+ },
+ "Route8_Text_EliPostBattle": {
+  "en": "ELI: I caught my POKéMON with\\nANNE!",
+  "fr": "ELI : J'ai capturé mon POKéMON avec\\nANNE !"
+ },
+ "Route8_Text_GlennDefeat": {
+  "en": "It's not logical!",
+  "fr": "Ce n'est pas logique !"
+ },
+ "Route8_Text_GlennIntro": {
+  "en": "You should be informed.\\nYou need strategy to win at this!",
+  "fr": "Tu devrais être informé. Il faut de\\nla stratégie pour gagner !"
+ },
+ "Route8_Text_GlennPostBattle": {
+  "en": "Go with GRIMER first…and…\\n…and…then…",
+  "fr": "Commence avec TADMORV… et…\\n…et… puis…"
+ },
+ "Route8_Text_JarenDefeat": {
+  "en": "You for real, kid?",
+  "fr": "Tu es sérieux ?"
+ },
+ "Route8_Text_JarenIntro": {
+  "en": "Clear the way, or I'll run you\\ndown!",
+  "fr": "Dégage, ou je te roule dessus !"
+ },
+ "Route8_Text_JarenPostBattle": {
+  "en": "Don't think you're all special and\\nall just because of this.",
+  "fr": "Ne te crois pas spécial juste à\\ncause de ça."
+ },
+ "Route8_Text_JuliaDefeat": {
+  "en": "Stop!\\pDon't be so mean to my CLEFAIRY!",
+  "fr": "Stop !\\pNe sois pas méchant avec mon\\nMÉLOFÉE !"
+ },
+ "Route8_Text_JuliaIntro": {
+  "en": "What's a cute, round, and fluffy\\nPOKéMON?",
+  "fr": "C'est quoi, un POKéMON mignon, rond\\net duveteux ?"
+ },
+ "Route8_Text_JuliaPostBattle": {
+  "en": "I read that CLEFAIRY evolves when\\nit's exposed to a MOON STONE.\\pI read that in a POKéMON JOURNAL.\\nI wonder if it's true?",
+  "fr": "J'ai lu que MÉLOFÉE évolue au\\ncontact d'une PIERRE LUNE.\\pJe l'ai lu dans un JOURNAL POKéMON.\\nJe me demande si c'est vrai ?"
+ },
+ "Route8_Text_LeslieDefeat": {
+  "en": "You made it clear to me that\\nI should stick with school.",
+  "fr": "Tu m'as fait comprendre que je\\ndevrais rester à l'école."
+ },
+ "Route8_Text_LeslieIntro": {
+  "en": "School is fun, but so are POKéMON.",
+  "fr": "L'école, c'est amusant, mais les\\nPOKéMON aussi."
+ },
+ "Route8_Text_LesliePostBattle": {
+  "en": "I was planning on getting some\\nfresh air for a change, but…\\pWe're stuck here because of the\\ngates at HEMATOWN.",
+  "fr": "Je comptais prendre l'air pour\\nchanger, mais…\\pOn est bloqués ici à cause des\\nportes d'HEMATOWN."
+ },
+ "Route8_Text_MeganDefeat": {
+  "en": "Look what you did to my poor, cute\\nPOKéMON!",
+  "fr": "Regarde ce que tu as fait à mon\\npauvre et mignon POKéMON !"
+ },
+ "Route8_Text_MeganIntro": {
+  "en": "We must look silly standing here\\nlike this.",
+  "fr": "On doit avoir l'air bête, debout\\ncomme ça."
+ },
+ "Route8_Text_MeganPostBattle": {
+  "en": "HEMATOWN's gatekeeper won't let us\\ngo through.\\pI know he's doing his job, but I\\nthink he's mean.",
+  "fr": "Le gardien d'HEMATOWN ne nous\\nlaisse pas passer.\\pJe sais qu'il fait son travail,\\nmais je le trouve méchant."
+ },
+ "Route8_Text_MonMeowth": {
+  "en": "MEOWTH: Nyaa!\\nIt is chasing something shiny.",
+  "fr": "MIAOUSS : Nyaa ! Il court après\\nquelque chose de brillant."
+ },
+ "Route8_Text_MonSpearow": {
+  "en": "SPEAROW: Kerr!\\nIt pecks at the crystals.",
+  "fr": "PIAFABEC : Kerr !\\nIl picore les cristaux."
+ },
+ "Route8_Text_PaigeDefeat": {
+  "en": "Why?\\nWhy??",
+  "fr": "Pourquoi ?\\nPourquoi ??"
+ },
+ "Route8_Text_PaigeIntro": {
+  "en": "I like NIDORAN, so I collect them!",
+  "fr": "J'aime NIDORAN, alors je les\\ncollectionne !"
+ },
+ "Route8_Text_PaigePostBattle": {
+  "en": "When POKéMON grow up, they get\\nugly! They shouldn't evolve.",
+  "fr": "Quand les POKéMON grandissent, ils\\ndeviennent moches ! Ils ne\\ldevraient pas évoluer."
+ },
+ "Route8_Text_RQuest_Ask": {
+  "en": "My team will not wake up. I need 2\\nAWAKENINGS.",
+  "fr": "Mon équipe ne se réveille pas. J'ai\\nbesoin de 2 RÉVEILS."
+ },
+ "Route8_Text_RQuest_Done": {
+  "en": "We are wide awake now.",
+  "fr": "Nous sommes bien réveillés\\nmaintenant."
  },
  "Route8_Text_RQuest_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route8_Text_RQuest_Ok": {
+  "en": "They are up! Take these.",
+  "fr": "Ils sont debout ! Prends ça."
+ },
+ "Route8_Text_RicardoDefeat": {
+  "en": "Aww, man.\\nI'm not into this.",
+  "fr": "Aww, mec.\\nJe ne suis pas dedans."
+ },
+ "Route8_Text_RicardoIntro": {
+  "en": "My bike's acting up, man.",
+  "fr": "Mon vélo fait des siennes, mec."
+ },
+ "Route8_Text_RicardoPostBattle": {
+  "en": "I got grass caught up in my\\nspokes, man.",
+  "fr": "J'ai de l'herbe coincée dans mes\\nrayons, mec."
+ },
+ "Route8_Text_RichDefeat": {
+  "en": "Missed the big chance!",
+  "fr": "Grosse occasion ratée !"
+ },
+ "Route8_Text_RichIntro": {
+  "en": "I'm a rambling, gaming dude!",
+  "fr": "Je suis un vagabond flambeur !"
+ },
+ "Route8_Text_RichPostBattle": {
+  "en": "Playing games and POKéMON are like\\neating peanuts! I just can't stop!",
+  "fr": "Jouer aux jeux et aux POKéMON,\\nc'est comme manger des cacahuètes !\\pImpossible d'arrêter !"
+ },
+ "Route8_Text_StanDefeat": {
+  "en": "Drat!\\nCame up short!",
+  "fr": "Zut !\\nPas assez !"
+ },
+ "Route8_Text_StanIntro": {
+  "en": "All right!\\nLet's play a game!",
+  "fr": "Très bien !\\nFaisons un jeu !"
+ },
+ "Route8_Text_StanPostBattle": {
+  "en": "Men in black went by, heading\\nfor the UNDERGROUND PATH.\\pThey were walking toward the cold\\ncity, BOURG QUARTZ.",
+  "fr": "Des hommes en noir sont passés vers\\nle CHEMIN SOUTERRAIN.\\pIls marchaient vers la ville\\nfroide, BOURG QUARTZ."
+ },
+ "Route8_Text_TimeHint": {
+  "en": "A hiker mutters: I left at dawn and\\narrived at dusk. The walk took ten\\pminutes.",
+  "fr": "Un randonneur marmonne : je suis\\nparti à l'aube et arrivé au\\lcrépuscule. La marche a duré dix\\nminutes."
+ },
+ "Route8_Text_UndergroundPathSign": {
+  "en": "UNDERGROUND PATH\\nBOURG QUARTZ - SPINELLIA",
+  "fr": "CHEMIN SOUTERRAIN\\nBOURG QUARTZ - SPINELLIA"
  }
 }

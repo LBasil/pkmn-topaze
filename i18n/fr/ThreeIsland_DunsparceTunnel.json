@@ -1,0 +1,18 @@
+{
+ "ThreeIsland_DunsparceTunnel_Text_ProspectingForGold": {
+  "en": "Hey, there!\\nHow's it going?\\pWhat am I doing here, you ask?\\nWhy, I'm prospecting for gold!\\pWhen I strike it rich, I'm buying\\na house in KANTO.",
+  "fr": "Salut, toi !\\nComment ça va ?\\pCe que je fais ici, tu demandes ?\\nEh bien, je cherche de l'or !\\pQuand je ferai fortune, j'achèterai\\nune maison à KANTO."
+ },
+ "ThreeIsland_DunsparceTunnel_Text_StruckGoldThisIsForYou": {
+  "en": "Hey, there! How's it going?\\nDid you hear? I've struck gold!\\pYou remembered that I was\\nprospecting, didn't you?\\pYou can't begin to imagine just\\nhow happy I am.\\pSo, I'll show you!\\nThis is for you!",
+  "fr": "Salut, toi ! Comment ça va ? Tu as\\nentendu ? J'ai trouvé de l'or !\\pTu te souvenais que je prospectais,\\nn'est-ce pas ?\\pTu ne peux pas imaginer à quel\\npoint je suis heureux.\\pAlors, je vais te le montrer !\\nC'est pour toi !"
+ },
+ "ThreeIsland_DunsparceTunnel_Text_ThatsANugget": {
+  "en": "That's a NUGGET!\\pI can't give you any nuggets of\\nwisdom, so that'll have to do!",
+  "fr": "C'est une PÉPITE !\\pJe ne peux pas te donner de pépites\\nde sagesse, alors ça fera\\ll'affaire !"
+ },
+ "ThreeIsland_DunsparceTunnel_Text_WhoopsBagCrammedFull": {
+  "en": "Whoops, your BAG is crammed full!\\nI'll give this to you later.",
+  "fr": "Oups, ton SAC est bourré !\\nJe te le donnerai plus tard."
+ }
+}

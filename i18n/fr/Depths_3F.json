@@ -1,14 +1,26 @@
 {
+ "Depths_3F_Text_Boss_After": {
+  "en": "The cave is quiet now. For today.",
+  "fr": "La grotte est calme maintenant.\\nPour aujourd'hui."
+ },
+ "Depths_3F_Text_Boss_Defeat": {
+  "en": "So there was a floor after all.",
+  "fr": "Il y avait donc un sol, après tout."
+ },
+ "Depths_3F_Text_Boss_Intro": {
+  "en": "The bottom? There is no bottom.\\nThere is only me, wherever you\\pstop.",
+  "fr": "Le fond ? Il n'y a pas de fond. Il\\nn'y a que moi, où que tu t'arrêtes."
+ },
  "Depths_3F_Text_Boss_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "Depths_3F_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "Depths_3F_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

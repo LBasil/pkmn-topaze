@@ -1,14 +1,54 @@
 {
+ "SunriseMeadow_Text_Gift0_After": {
+  "en": "I hope it is happy with you.",
+  "fr": "J'espère qu'il est heureux avec\\ntoi."
+ },
+ "SunriseMeadow_Text_Gift0_Got": {
+  "en": "Please look after it.",
+  "fr": "Prends-en soin, s'il te plaît."
+ },
+ "SunriseMeadow_Text_Gift0_Offer": {
+  "en": "A little egg hatched on this\\nmeadow. It needs a friend. Will you\\ptake it?",
+  "fr": "Un petit œuf a éclos sur cette\\nprairie. Il a besoin d'un ami.\\pVeux-tu le prendre ?"
+ },
+ "SunriseMeadow_Text_Gift0_Refuse": {
+  "en": "Then I will keep it a little\\nlonger.",
+  "fr": "Alors je le garderai encore un peu."
+ },
+ "SunriseMeadow_Text_Npc0": {
+  "en": "The sun comes up here before\\nanywhere else.",
+  "fr": "Le soleil se lève ici avant tout\\nautre endroit."
+ },
+ "SunriseMeadow_Text_Npc1": {
+  "en": "MAREEP and HOPPIP love the morning\\ndew.",
+  "fr": "WATTOUAT et GRANIVOL adorent la\\nrosée du matin."
+ },
+ "SunriseMeadow_Text_Quest0_AfterT": {
+  "en": "The meadow shines brighter today.",
+  "fr": "La prairie brille plus fort\\naujourd'hui."
+ },
+ "SunriseMeadow_Text_Quest0_Ask": {
+  "en": "A STAR PIECE glints like the\\nmorning. Find me one, I will pay in\\pluck.",
+  "fr": "Un MORCEAU D'ÉTOILE brille comme le\\nmatin. Trouve-m'en un, je paierai\\len chance."
+ },
+ "SunriseMeadow_Text_Quest0_Done": {
+  "en": "It shines! Take this LUCKY EGG.",
+  "fr": "Ça brille ! Prends cet ŒUF CHANCE."
+ },
+ "SunriseMeadow_Text_Quest0_MissT": {
+  "en": "No STAR PIECE yet. Try digging in\\nthe mine.",
+  "fr": "Pas encore de MORCEAU D'ÉTOILE.\\nEssaie de creuser dans la mine."
+ },
  "SunriseMeadow_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "SunriseMeadow_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "SunriseMeadow_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

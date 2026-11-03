@@ -1,14 +1,34 @@
 {
+ "DragonPerch_Text_Npc0": {
+  "en": "Dragons come here to nest. Be\\nrespectful and be fast.",
+  "fr": "Les dragons viennent nicher ici.\\nSois respectueux et rapide."
+ },
+ "DragonPerch_Text_Quest0_AfterT": {
+  "en": "The nest is whole again.",
+  "fr": "Le nid est de nouveau entier."
+ },
+ "DragonPerch_Text_Quest0_Ask": {
+  "en": "A DRAGON SCALE for the old nest.\\nBring me one.",
+  "fr": "Une ÉCAILLE DRAGON pour l'ancien\\nnid. Apporte-m'en une."
+ },
+ "DragonPerch_Text_Quest0_Done": {
+  "en": "It fits perfectly. Take this DRAGON\\nFANG.",
+  "fr": "Elle va parfaitement. Prends ce\\nCROC DRAGON."
+ },
+ "DragonPerch_Text_Quest0_MissT": {
+  "en": "No DRAGON SCALE yet. The stone\\ngreenhouse sells them.",
+  "fr": "Pas encore d'ÉCAILLE DRAGON. La\\nserre de pierre en vend."
+ },
  "DragonPerch_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "DragonPerch_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "DragonPerch_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

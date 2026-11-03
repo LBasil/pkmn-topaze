@@ -1,18 +1,38 @@
 {
+ "FrostHollow_Text_Npc0": {
+  "en": "It is always winter in here. The\\nice remembers everything.",
+  "fr": "Il fait toujours hiver ici. La\\nglace se souvient de tout."
+ },
+ "FrostHollow_Text_Npc1": {
+  "en": "SNEASEL steal what they can. Keep\\nyour berries close.",
+  "fr": "FARFURET vole ce qu'il peut. Garde\\ntes baies près de toi."
+ },
+ "FrostHollow_Text_Quest0_AfterT": {
+  "en": "The hollow stays frozen. Good.",
+  "fr": "Le creux reste gelé. Bien."
+ },
+ "FrostHollow_Text_Quest0_Ask": {
+  "en": "I study how ice melts. Two BURN\\nHEALs would help my tests.",
+  "fr": "J'étudie la fonte de la glace. Deux\\nANTI-BRÛLE aideraient mes tests."
+ },
+ "FrostHollow_Text_Quest0_Done": {
+  "en": "Perfect data! Take this NEVER-MELT\\nICE.",
+  "fr": "Données parfaites ! Prends cette\\nGLACE ÉTERNELLE."
+ },
  "FrostHollow_Text_Quest0_MissT": {
-  "fr": "Deux ANTI-BRÛLE, s'il vous plaît.",
-  "en": "Two BURN HEALs, please."
+  "en": "Two BURN HEALs, please.",
+  "fr": "Deux ANTI-BRÛLE, s'il vous plaît."
  },
  "FrostHollow_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "FrostHollow_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "FrostHollow_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

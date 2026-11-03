@@ -1,0 +1,62 @@
+{
+ "PokemonTower_5F_Text_JanaeDefeat": {
+  "en": "Whoo!",
+  "fr": "Whoo !"
+ },
+ "PokemonTower_5F_Text_JanaeIntro": {
+  "en": "Urgah…\\nUrff…",
+  "fr": "Urgah…\\nUrff…"
+ },
+ "PokemonTower_5F_Text_JanaePostBattle": {
+  "en": "I fell to evil spirits despite my\\ntraining in the mountains…",
+  "fr": "J'ai succombé aux mauvais esprits\\nmalgré mon entraînement dans les\\lmontagnes…"
+ },
+ "PokemonTower_5F_Text_KarinaDefeat": {
+  "en": "Ha?",
+  "fr": "Ha ?"
+ },
+ "PokemonTower_5F_Text_KarinaIntro": {
+  "en": "Zombies!",
+  "fr": "Des zombies !"
+ },
+ "PokemonTower_5F_Text_KarinaPostBattle": {
+  "en": "I regained my senses.",
+  "fr": "J'ai repris mes esprits."
+ },
+ "PokemonTower_5F_Text_MonJigglypuff": {
+  "en": "JIGGLYPUFF: Purin...\\nIt sings a lullaby for the spirits.",
+  "fr": "RONDOUDOU : Purin… Il chante une\\nberceuse pour les esprits."
+ },
+ "PokemonTower_5F_Text_PurifiedZoneMonsFullyHealed": {
+  "en": "Entered the purified and protected\\nzone.\\p{PLAYER}'s POKéMON were fully\\nhealed.",
+  "fr": "Entré dans la zone purifiée et\\nprotégée.\\pLes POKéMON de {PLAYER} ont été\\ncomplètement soignés."
+ },
+ "PokemonTower_5F_Text_RestHereInPurifiedSpace": {
+  "en": "Come, child!\\nI have purified this space.\\lYou can rest here.",
+  "fr": "Viens ! J'ai purifié cet\\nespace. Tu peux te reposer ici."
+ },
+ "PokemonTower_5F_Text_RuthDefeat": {
+  "en": "What a nightmare!",
+  "fr": "Quel cauchemar !"
+ },
+ "PokemonTower_5F_Text_RuthIntro": {
+  "en": "You…shall…\\njoin…us…",
+  "fr": "Tu… vas…\\nnous… rejoindre…"
+ },
+ "PokemonTower_5F_Text_RuthPostBattle": {
+  "en": "I was possessed.",
+  "fr": "J'étais possédé."
+ },
+ "PokemonTower_5F_Text_TammyDefeat": {
+  "en": "Gasp!",
+  "fr": "Souffle !"
+ },
+ "PokemonTower_5F_Text_TammyIntro": {
+  "en": "Give…me…\\nyour…all…",
+  "fr": "Donne… moi…\\nton… tout…"
+ },
+ "PokemonTower_5F_Text_TammyPostBattle": {
+  "en": "I was under possession.",
+  "fr": "J'étais possédé."
+ }
+}

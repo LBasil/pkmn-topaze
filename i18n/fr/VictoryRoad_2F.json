@@ -1,0 +1,62 @@
+{
+ "VictoryRoad_2F_Text_DaisukeDefeat": {
+  "en": "Knocked flat!",
+  "fr": "Mis à plat !"
+ },
+ "VictoryRoad_2F_Text_DaisukeIntro": {
+  "en": "Fists or POKéMON, I do not mind!",
+  "fr": "Poings ou POKéMON, ça m'est égal !"
+ },
+ "VictoryRoad_2F_Text_DaisukePostBattle": {
+  "en": "The last base is ours. Not for\\nlong, it seems.",
+  "fr": "La dernière base est à nous. Pas\\npour longtemps, on dirait."
+ },
+ "VictoryRoad_2F_Text_DawsonDefeat": {
+  "en": "Lights out…",
+  "fr": "Lumière éteinte…"
+ },
+ "VictoryRoad_2F_Text_DawsonIntro": {
+  "en": "We took the whole cave. Even the\\ntrainers ran away.",
+  "fr": "On a pris toute la grotte. Même les\\ndresseurs ont fui."
+ },
+ "VictoryRoad_2F_Text_DawsonPostBattle": {
+  "en": "Strongest in KANTO, they say.\\nHe did not even draw a weapon.",
+  "fr": "Le plus fort de KANTO, dit-on.\\nIl n'a même pas sorti d'arme."
+ },
+ "VictoryRoad_2F_Text_GregoryDefeat": {
+  "en": "Doors slam…",
+  "fr": "Les portes claquent…"
+ },
+ "VictoryRoad_2F_Text_GregoryIntro": {
+  "en": "Welcome to the back door!",
+  "fr": "Bienvenue par la porte de\\nderrière !"
+ },
+ "VictoryRoad_2F_Text_GregoryPostBattle": {
+  "en": "The MASTER used this cave as his\\nstage. We only guard it.",
+  "fr": "Le MAÎTRE a utilisé cette grotte\\ncomme scène. Nous ne faisons que la\\lgarder."
+ },
+ "VictoryRoad_2F_Text_NelsonDefeat": {
+  "en": "Show is over…",
+  "fr": "Le spectacle est fini…"
+ },
+ "VictoryRoad_2F_Text_NelsonIntro": {
+  "en": "Hehe! Watch my POKéMON dance!",
+  "fr": "Hehe ! Regarde mes POKéMON danser !"
+ },
+ "VictoryRoad_2F_Text_NelsonPostBattle": {
+  "en": "Everyone on the exit side fears\\nVESPER. Be careful.",
+  "fr": "Tous ceux du côté de la sortie\\ncraignent VESPER. Sois prudent."
+ },
+ "VictoryRoad_2F_Text_VincentDefeat": {
+  "en": "I lost my way…",
+  "fr": "Je me suis perdu…"
+ },
+ "VictoryRoad_2F_Text_VincentIntro": {
+  "en": "Lost? Then follow my POKéMON!",
+  "fr": "Perdu ? Alors suis mes POKéMON !"
+ },
+ "VictoryRoad_2F_Text_VincentPostBattle": {
+  "en": "The way out is east. VESPER\\nwaits there.",
+  "fr": "La sortie est à l'est. VESPER\\ny attend."
+ }
+}

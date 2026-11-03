@@ -1,18 +1,42 @@
 {
+ "DrowsyDown_Text_Npc0": {
+  "en": "Nap here and nothing bothers you.\\nAlmost nothing.",
+  "fr": "Fais une sieste ici et rien ne te\\ndérange. Presque rien."
+ },
+ "DrowsyDown_Text_Npc1": {
+  "en": "DROWZEE eats dreams. Keep an eye on\\nyours.",
+  "fr": "SOPORIFIK mange les rêves.\\nSurveille les tiens."
+ },
+ "DrowsyDown_Text_Quest0_AfterT": {
+  "en": "Zzz... oh, hello.",
+  "fr": "Zzz… oh, bonjour."
+ },
+ "DrowsyDown_Text_Quest0_Ask": {
+  "en": "A CHESTO BERRY keeps me awake.\\nTrade for LEFTOVERS?",
+  "fr": "Une BAIE CERIZ me garde éveillé.\\nÉchange contre des RESTES ?"
+ },
+ "DrowsyDown_Text_Quest0_Done": {
+  "en": "Wide awake! Take these LEFTOVERS.",
+  "fr": "Bien éveillé ! Prends ces RESTES."
+ },
+ "DrowsyDown_Text_Quest0_MissT": {
+  "en": "One CHESTO BERRY, please.",
+  "fr": "Une BAIE CERIZ, s'il vous plaît."
+ },
  "DrowsyDown_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "DrowsyDown_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "DrowsyDown_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "DrowsyDown_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

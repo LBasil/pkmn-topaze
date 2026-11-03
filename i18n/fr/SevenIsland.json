@@ -1,10 +1,86 @@
 {
+ "SevenIsland_Text_IslandSign": {
+  "en": "SEVEN ISLAND\\nThe last echo waits at the end",
+  "fr": "ÎLE SEPT\\nLe dernier écho attend au bout"
+ },
+ "SevenIsland_Text_IslandVirtuallyUntouched": {
+  "en": "This island is almost untouched.\\nHiking is hard, but the old stones\\lin the canyon keep their secrets\\lbetter than any vault.",
+  "fr": "Cette île est presque intacte. La\\nrandonnée est dure, mais les\\lvieilles pierres du canyon gardent\\nleurs secrets mieux que n'importe\\lquel coffre-fort."
+ },
+ "SevenIsland_Text_IslandsMadeInSevenDays": {
+  "en": "They say these islands were made\\nin seven days.\\pNow people whisper that something\\nis unmaking the days, one by one.\\pFunny. I always thought time was\\nthe one thing nobody could steal.",
+  "fr": "On dit que ces îles ont été faites\\nen sept jours.\\pMaintenant on murmure que quelque\\nchose défait les jours, un par un.\\pDrôle. J'ai toujours pensé que le\\ntemps était la seule chose qu'on ne\\lpouvait voler."
+ },
+ "SevenIsland_Text_Lord1": {
+  "en": "WALLACE: Beauty and strength should\\nrule together. Shall we see if your\\lcrown is as beautiful as it is\\nheavy?",
+  "fr": "WALLACE : La beauté et la force\\ndevraient régner ensemble. Voyons\\lsi ta couronne est aussi belle\\nqu'elle est lourde ?"
+ },
+ "SevenIsland_Text_Lord2": {
+  "en": "Splendid. Truly splendid.",
+  "fr": "Splendide. Vraiment splendide."
+ },
+ "SevenIsland_Text_Lord3": {
+  "en": "WALLACE: You are the finest ruler I\\nhave seen. Take this, with my thanks.",
+  "fr": "WALLACE : Tu es le plus beau\\nsouverain que j'aie vu. Prends\\lceci, avec mes remerciements."
+ },
+ "SevenIsland_Text_LordDone": {
+  "en": "WALLACE: A ruler worthy of the six.\\nI will remember this day.",
+  "fr": "WALLACE : Un souverain digne des\\nsix. Je me souviendrai de ce jour."
+ },
+ "SevenIsland_Text_LordEarly": {
+  "en": "WALLACE: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\nFLORA will tell you the way.",
+  "fr": "WALLACE : Pas encore. L'ancienne\\nLIGUE et les MAÎTRES doivent\\ld'abord tomber. FLORA te dira le\\nchemin."
+ },
+ "SevenIsland_Text_LordIdle": {
+  "en": "WALLACE: The islands are quiet. I look\\nafter them, as I always have.",
+  "fr": "WALLACE : Les îles sont calmes. Je\\nveille sur elles, comme toujours."
+ },
+ "SevenIsland_Text_RefAfter": {
+  "en": "PAXTON: Take good care of it. The\\nnext REFUGE post is waiting.",
+  "fr": "PAXTON : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
+ },
+ "SevenIsland_Text_RefAsk": {
+  "en": "PAXTON: This is the last post. The\\nhunters' leader is somewhere near.\\lBeat his two henchmen and he will\\nshow up.",
+  "fr": "PAXTON : C'est le dernier poste. Le\\nchef des chasseurs est quelque part\\lprès d'ici. Bats ses deux sbires et\\nil apparaîtra."
+ },
+ "SevenIsland_Text_RefDone": {
+  "en": "PAXTON: Thank you again. The REFUGE\\nis safer because of you.",
+  "fr": "PAXTON : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
+ },
+ "SevenIsland_Text_RefEarly": {
+  "en": "PAXTON: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "fr": "PAXTON : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\lde la ZONE SAFARI connaît l'ordre."
+ },
+ "SevenIsland_Text_RefGives": {
+  "en": "PAXTON: You saved the day. The post\\nhas a gift for you: SKARMORY!",
+  "fr": "PAXTON : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\pAIRMURE !"
+ },
  "SevenIsland_Text_RefHunter1": {
-  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Ne te mêle pas de ça,\\ppetit !",
-  "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!"
+  "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!",
+  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Ne te mêle pas de ça,\\ppetit !"
  },
  "SevenIsland_Text_RefHunter2": {
-  "fr": "CHASSEUR : Tu as battu mon associé ?\\nSoit, je n'ai pas peur d'un\\lranger !",
-  "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!"
+  "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!",
+  "fr": "CHASSEUR : Tu as battu mon\\nassocié ? Soit, je n'ai pas peur\\ld'un ranger !"
+ },
+ "SevenIsland_Text_RefIdle": {
+  "en": "PAXTON: I watch over the animals here.\\nThe world is quieter now.",
+  "fr": "PAXTON : Je veille sur les animaux\\nici. Le monde est plus calme\\lmaintenant."
+ },
+ "Text_SwordsDanceDeclined": {
+  "en": "Well, that's fine, too.",
+  "fr": "Bon, c'est très bien aussi."
+ },
+ "Text_SwordsDanceTaught": {
+  "en": "If only we could keep getting\\nstronger and stronger, eh?",
+  "fr": "Si seulement on pouvait devenir de\\nplus en plus fort, hein ?"
+ },
+ "Text_SwordsDanceTeach": {
+  "en": "Not many people come out here.\\pIf I train here, I'm convinced that\\nI'll get stronger and stronger.\\pYep, stronger and stronger…\\pHow would you like to learn a move\\nlike that? It's SWORDS DANCE.",
+  "fr": "Peu de gens viennent ici.\\pSi je m'entraîne ici, je suis\\nconvaincu que je deviendrai de plus\\len plus fort.\\pOui, de plus en plus fort…\\pÇa te dirait d'apprendre une\\ncapacité comme ça ? C'est\\lDANSE-LAMES."
+ },
+ "Text_SwordsDanceWhichMon": {
+  "en": "All right, pick which POKéMON\\nI should teach it to.",
+  "fr": "D'accord, choisis à quel POKéMON je\\ndois l'enseigner."
  }
 }

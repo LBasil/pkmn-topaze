@@ -1,6 +1,26 @@
 {
+ "VermilionCity_House2_Text_QuestAsk": {
+  "en": "I found this stone near the old\\nquarry. It glows at night!\\pI'll give it to a POKéMON that\\ntruly loves its TRAINER.\\pShow me your lead POKéMON!",
+  "fr": "J'ai trouvé cette pierre près de\\nl'ancienne carrière. Elle brille la\\lnuit !\\pJe la donnerai à un POKéMON qui\\naime vraiment son DRESSEUR.\\pMontre-moi ton POKéMON de tête !"
+ },
+ "VermilionCity_House2_Text_QuestDone": {
+  "en": "Is your POKéMON still happy?\\nI'm glad.",
+  "fr": "Ton POKéMON est-il toujours\\nheureux ? J'en suis ravi."
+ },
+ "VermilionCity_House2_Text_QuestGot": {
+  "en": "{PLAYER} received a MOON STONE!",
+  "fr": "{PLAYER} a reçu une PIERRE LUNE !"
+ },
+ "VermilionCity_House2_Text_QuestNo": {
+  "en": "Hmm… it's a little shy with you.\\pSpend more time together, take\\nwalks, get it brushed.\\pThen come back!",
+  "fr": "Hmm… il est un peu timide avec\\ntoi.\\pPassez plus de temps ensemble,\\nfaites des promenades, brossez-le.\\pPuis reviens !"
+ },
  "VermilionCity_House2_Text_QuestNoRoom": {
-  "fr": "Ton SAC est plein. Fais d'abord\\nde la place !",
-  "en": "Your BAG is full. Make some\\nroom first!"
+  "en": "Your BAG is full. Make some\\nroom first!",
+  "fr": "Ton SAC est plein. Fais d'abord\\nde la place !"
+ },
+ "VermilionCity_House2_Text_QuestOk": {
+  "en": "Oh! It adores you!\\pPlease, take this MOON STONE.",
+  "fr": "Oh ! Il t'adore !\\pPrends cette PIERRE LUNE, s'il te\\nplaît."
  }
 }

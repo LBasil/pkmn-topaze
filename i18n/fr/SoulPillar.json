@@ -1,18 +1,42 @@
 {
+ "SoulPillar_Text_Npc0": {
+  "en": "Speak softly here. Many rest\\nbeneath.",
+  "fr": "Parle doucement ici. Beaucoup\\nreposent en dessous."
+ },
+ "SoulPillar_Text_Npc1": {
+  "en": "CUBONE carries its mother's memory.",
+  "fr": "OSSELAIT porte le souvenir de sa\\nmère."
+ },
+ "SoulPillar_Text_Quest0_AfterT": {
+  "en": "Rest in peace.",
+  "fr": "Repose en paix."
+ },
+ "SoulPillar_Text_Quest0_Ask": {
+  "en": "Bring me a ZINC and I give you a\\nLUCKY EGG.",
+  "fr": "Apporte-moi du ZINC et je te donne\\nun ŒUF CHANCE."
+ },
+ "SoulPillar_Text_Quest0_Done": {
+  "en": "Bless you. Take this LUCKY EGG.",
+  "fr": "Que le ciel te bénisse. Prends cet\\nŒUF CHANCE."
+ },
+ "SoulPillar_Text_Quest0_MissT": {
+  "en": "One ZINC, please. The APOTHECARY\\nsells it.",
+  "fr": "Un ZINC, s'il te plaît.\\nL'APOTHICAIRE en vend."
+ },
  "SoulPillar_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "SoulPillar_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "SoulPillar_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "SoulPillar_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

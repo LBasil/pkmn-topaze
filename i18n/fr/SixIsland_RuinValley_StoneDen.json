@@ -1,0 +1,66 @@
+{
+ "SixIsland_RuinValley_StoneDen_Text_GuardsLeft": {
+  "en": "The beast does not stir.\\nIts guardians still stand watch.",
+  "fr": "La bête ne bouge pas.\\nSes gardiens veillent toujours."
+ },
+ "SixIsland_RuinValley_StoneDen_Text_T0Defeat": {
+  "en": "Crumbled...",
+  "fr": "Effrité…"
+ },
+ "SixIsland_RuinValley_StoneDen_Text_T0Intro": {
+  "en": "Nothing leaves this valley. Nothing\\nenters.",
+  "fr": "Rien ne quitte cette vallée. Rien\\nn'y entre."
+ },
+ "SixIsland_RuinValley_StoneDen_Text_T0Post": {
+  "en": "Deeper in, the stone is older.",
+  "fr": "Plus profond, la pierre est plus\\nvieille."
+ },
+ "SixIsland_RuinValley_StoneDen_Text_T1Defeat": {
+  "en": "Ground to dust.",
+  "fr": "Réduit en poussière."
+ },
+ "SixIsland_RuinValley_StoneDen_Text_T1Intro": {
+  "en": "The ancient one woke when the sky\\ncracked. We keep watch.",
+  "fr": "L'ancien s'est réveillé quand le\\nciel s'est fendu. Nous veillons."
+ },
+ "SixIsland_RuinValley_StoneDen_Text_T1Post": {
+  "en": "The WARDEN does not bend.",
+  "fr": "Le GARDIEN ne plie pas."
+ },
+ "SixIsland_RuinValley_StoneDen_Text_T2Defeat": {
+  "en": "The wall gave way.",
+  "fr": "Le mur a cédé."
+ },
+ "SixIsland_RuinValley_StoneDen_Text_T2Intro": {
+  "en": "Turn back. Stone remembers\\neverything.",
+  "fr": "Fais demi-tour. La pierre se\\nsouvient de tout."
+ },
+ "SixIsland_RuinValley_StoneDen_Text_T2Post": {
+  "en": "Mind your footing ahead.",
+  "fr": "Fais attention où tu mets les\\npieds."
+ },
+ "SixIsland_RuinValley_StoneDen_Text_T3Defeat": {
+  "en": "The cairn falls.",
+  "fr": "Le cairn s'effondre."
+ },
+ "SixIsland_RuinValley_StoneDen_Text_T3Intro": {
+  "en": "The beast shelters us from the\\nbroken sky. We stay for it.",
+  "fr": "La bête nous abrite du ciel brisé.\\nNous restons pour elle."
+ },
+ "SixIsland_RuinValley_StoneDen_Text_T3Post": {
+  "en": "Last room. Mind your pride.",
+  "fr": "Dernière salle. Attention à ton\\norgueil."
+ },
+ "SixIsland_RuinValley_StoneDen_Text_T4Defeat": {
+  "en": "...Then the stone has chosen you.",
+  "fr": "…Alors la pierre t'a choisi."
+ },
+ "SixIsland_RuinValley_StoneDen_Text_T4Intro": {
+  "en": "I am the WARDEN of the STONE.\\nThe beast sleeps in my care.\\pProve that your will is worth\\nmore than my fear.",
+  "fr": "Je suis le GARDIEN de la PIERRE.\\nLa bête dort sous ma garde.\\pProuve que ta volonté vaut plus que\\nma peur."
+ },
+ "SixIsland_RuinValley_StoneDen_Text_T4Post": {
+  "en": "Go. Let it rest after.",
+  "fr": "Va. Laisse-la se reposer après."
+ }
+}

@@ -1,18 +1,18 @@
 {
  "CeruleanCity_House2_Text_MakeRoomForTM28": {
-  "fr": "Ton SAC est plein. Fais de la place\\net reviens chercher la CT.",
-  "en": "Your bag is full. Make room\\nand come back for the TM."
+  "en": "Your bag is full. Make room\\nand come back for the TM.",
+  "fr": "Ton SAC est plein. Fais de la place\\net reviens chercher la CT."
  },
  "CeruleanCity_House2_Text_RocketsStoleTMForDig": {
-  "fr": "J'ai trouvé cette CT sur un sentier\\nde la forêt. Elle enseigne TUNNEL.\\pMes POKéMON ne s'en servent pas.\\nPrends-la, tu en auras besoin !",
-  "en": "I found this TM on a forest trail.\\nIt teaches DIG.\\pMy POKéMON can't use it. Take it,\\nyou look like you'll need it!"
+  "en": "I found this TM on a forest trail.\\nIt teaches DIG.\\pMy POKéMON can't use it. Take it,\\nyou look like you'll need it!",
+  "fr": "J'ai trouvé cette CT sur un sentier\\nde la forêt. Elle enseigne TUNNEL.\\pMes POKéMON ne s'en servent pas.\\nPrends-la, tu en auras besoin !"
  },
  "CeruleanCity_House2_Text_TeachDiglettDigWithoutTM": {
-  "fr": "Les ponts craquent un peu avec\\nle vent. On s'y habitue.",
-  "en": "The bridges creak a little in\\nthe wind. You get used to it."
+  "en": "The bridges creak a little in\\nthe wind. You get used to it.",
+  "fr": "Les ponts craquent un peu avec\\nle vent. On s'y habitue."
  },
  "CeruleanCity_House2_Text_TeamRocketTryingToDigIntoNoGood": {
-  "fr": "J'adore vivre au bord de la\\nrivière. L'eau chante la nuit.",
-  "en": "I love living by the river.\\nThe water sings at night."
+  "en": "I love living by the river.\\nThe water sings at night.",
+  "fr": "J'adore vivre au bord de la\\nrivière. L'eau chante la nuit."
  }
 }

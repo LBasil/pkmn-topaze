@@ -1,18 +1,42 @@
 {
+ "HoneyGrove_Text_Npc0": {
+  "en": "ILLUMISE and VOLBEAT dance together\\nat night.",
+  "fr": "ILLUMISE et VOLBEAT dansent\\nensemble la nuit."
+ },
+ "HoneyGrove_Text_Npc1": {
+  "en": "Mind the stingers. The honey is\\nworth it.",
+  "fr": "Attention aux dards. Le miel en\\nvaut la peine."
+ },
+ "HoneyGrove_Text_Quest0_AfterT": {
+  "en": "Sweet as honey.",
+  "fr": "Doux comme le miel."
+ },
+ "HoneyGrove_Text_Quest0_Ask": {
+  "en": "I got stung twice. Two ANTIDOTEs\\nfor a SILVER POWDER?",
+  "fr": "Je me suis fait piquer deux fois.\\nDeux ANTIDOTES contre de la POUDRE\\lARGENT ?"
+ },
+ "HoneyGrove_Text_Quest0_Done": {
+  "en": "Much better! Take this SILVER\\nPOWDER.",
+  "fr": "Bien mieux ! Prends cette POUDRE\\nARGENT."
+ },
+ "HoneyGrove_Text_Quest0_MissT": {
+  "en": "Two ANTIDOTEs, please.",
+  "fr": "Deux ANTIDOTES, s'il vous plaît."
+ },
  "HoneyGrove_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "HoneyGrove_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "HoneyGrove_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "HoneyGrove_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

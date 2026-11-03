@@ -1,10 +1,34 @@
 {
+ "ReflectionMarsh_Text_Npc0": {
+  "en": "Everything here looks like another\\nPOKéMON, before or after.",
+  "fr": "Tout ici ressemble à un autre\\nPOKéMON, avant ou après."
+ },
+ "ReflectionMarsh_Text_Npc1": {
+  "en": "I caught an EEVEE here. It would\\nnot stop looking at its reflection.",
+  "fr": "J'ai attrapé un ÉVOLI ici. Il ne\\ncessait de regarder son reflet."
+ },
+ "ReflectionMarsh_Text_Radar0": {
+  "en": "I track rare POKéMON. Today my\\nradar says...",
+  "fr": "Je piste les POKéMON rares.\\nAujourd'hui mon radar indique…"
+ },
+ "ReflectionMarsh_Text_Radar1": {
+  "en": "FEEBAS bites in the quiet water of\\nthe POND OF CYCLES, by fishing.",
+  "fr": "BARPAU mord dans l'eau calme de\\nl'ÉTANG DES CYCLES, à la pêche."
+ },
+ "ReflectionMarsh_Text_Radar2": {
+  "en": "AERODACTYL is sighted in the FOSSIL\\nDIG, among the rocks.",
+  "fr": "PTÉRA est repéré aux FOUILLES\\nDE FOSSILES, parmi les rochers."
+ },
+ "ReflectionMarsh_Text_Radar3": {
+  "en": "DRATINI hides under the water of\\nthe POND and the TRADE DOCK.",
+  "fr": "MINIDRACO se cache sous l'eau de\\nl'ÉTANG et du QUAI D'ÉCHANGE."
+ },
  "ReflectionMarsh_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "ReflectionMarsh_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

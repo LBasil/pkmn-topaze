@@ -1,122 +1,122 @@
 {
  "CeruleanCity_Text_BikeShopSign": {
-  "fr": "HALL DE VERRE\\nOuvert aux visiteurs.",
-  "en": "GLASS HALL\\nOpen to visitors."
+  "en": "GLASS HALL\\nOpen to visitors.",
+  "fr": "HALL DE VERRE\\nOuvert aux visiteurs."
  },
  "CeruleanCity_Text_CitySign": {
-  "fr": "TOURMALIA\\nLà où la forêt devient cristal\\pOUEST : ROUTE 4 (cette route)\\nSUD : ROUTE 5 (échelle en bas)\\pEST : ROUTE 9 (après le dôme)\\nNORD : ROUTE 24 (par le hall)",
-  "en": "TOURMALIA CITY\\nWhere the forest grows crystal\\pWEST:  ROUTE 4 (this road)\\nSOUTH: ROUTE 5 (ladder below)\\pEAST:  ROUTE 9 (past the dome)\\nNORTH: ROUTE 24 (via glass hall)"
+  "en": "TOURMALIA CITY\\nWhere the forest grows crystal\\pWEST:  ROUTE 4 (this road)\\nSOUTH: ROUTE 5 (ladder below)\\pEAST:  ROUTE 9 (past the dome)\\nNORTH: ROUTE 24 (via glass hall)",
+  "fr": "TOURMALIA\\nLà où la forêt devient cristal\\pOUEST : ROUTE 4 (cette route)\\nSUD : ROUTE 5 (échelle en bas)\\pEST : ROUTE 9 (après le dôme)\\nNORD : ROUTE 24 (par le hall)"
  },
  "CeruleanCity_Text_EastTree": {
-  "fr": "POLICIER : Les routes sont\\nrouvertes. Va vers le sud, à\\pAPATIA.\\pLe col de l'est est bloqué par un\\npetit arbre. Il te faudra COUPE.",
-  "en": "POLICEMAN: The roads are open\\nagain. Head south to APATIA.\\pThe east pass is blocked by a\\nsmall tree. You'll need CUT."
+  "en": "POLICEMAN: The roads are open\\nagain. Head south to APATIA.\\pThe east pass is blocked by a\\nsmall tree. You'll need CUT.",
+  "fr": "POLICIER : Les routes sont\\nrouvertes. Va vers le sud, à\\pAPATIA.\\pLe col de l'est est bloqué par un\\npetit arbre. Il te faudra COUPE."
  },
  "CeruleanCity_Text_ExitSignEast": {
-  "fr": "PORTE EST :\\nROUTE 9",
-  "en": "EAST GATE:\\nROUTE 9"
+  "en": "EAST GATE:\\nROUTE 9",
+  "fr": "PORTE EST :\\nROUTE 9"
  },
  "CeruleanCity_Text_ExitSignNorth": {
-  "fr": "NORD :\\nROUTE 24",
-  "en": "NORTH:\\nROUTE 24"
+  "en": "NORTH:\\nROUTE 24",
+  "fr": "NORD :\\nROUTE 24"
  },
  "CeruleanCity_Text_ExitSignSouth": {
-  "fr": "SUD :\\nROUTE 5",
-  "en": "SOUTH:\\nROUTE 5"
+  "en": "SOUTH:\\nROUTE 5",
+  "fr": "SUD :\\nROUTE 5"
  },
  "CeruleanCity_Text_ExitSignWest": {
-  "fr": "OUEST :\\nROUTE 4 EST",
-  "en": "WEST:\\nROUTE 4 EAST"
+  "en": "WEST:\\nROUTE 4 EAST",
+  "fr": "OUEST :\\nROUTE 4 EST"
  },
  "CeruleanCity_Text_ExplainFameCheckerSmellYa": {
-  "fr": "Un bavard comme toi...\\nCe truc est parfait.\\pJe n'en ai pas besoin, je me fiche\\ndes autres.\\pBon, cette fois je pars vraiment.\\nÀ plus !",
-  "en": "A chatty gossip like you…\\nThat thing's perfect.\\pI don't need it because I don't\\ngive a hoot about others.\\pAll right, this time I really am\\ngone. Smell ya!"
+  "en": "A chatty gossip like you…\\nThat thing's perfect.\\pI don't need it because I don't\\ngive a hoot about others.\\pAll right, this time I really am\\ngone. Smell ya!",
+  "fr": "Un bavard comme toi...\\nCe truc est parfait.\\pJe n'en ai pas besoin, je me fiche\\ndes autres.\\pBon, cette fois je pars vraiment.\\nÀ plus !"
  },
  "CeruleanCity_Text_GymSign": {
-  "fr": "ARÈNE POKéMON DE TOURMALIA\\nCHAMPION : SYLVESTRE\\lLe Gardien de la Forêt !",
-  "en": "TOURMALIA POKéMON GYM\\nLEADER: SYLVESTRE\\lThe Warden of the Forest!"
+  "en": "TOURMALIA POKéMON GYM\\nLEADER: SYLVESTRE\\lThe Warden of the Forest!",
+  "fr": "ARÈNE POKéMON DE TOURMALIA\\nCHAMPION : SYLVESTRE\\lLe Gardien de la Forêt !"
  },
  "CeruleanCity_Text_IfSlowbroWasntThereCouldCutTree": {
-  "fr": "La police a fermé la route du sud\\net le col de l'est.\\pSeul le pont au nord est ouvert,\\npour les DRESSEURS forts.",
-  "en": "The police closed the south road\\nand the east pass.\\pOnly the bridge north is open,\\nfor strong TRAINERS."
+  "en": "The police closed the south road\\nand the east pass.\\pOnly the bridge north is open,\\nfor strong TRAINERS.",
+  "fr": "La police a fermé la route du sud\\net le col de l'est.\\pSeul le pont au nord est ouvert,\\npour les DRESSEURS forts."
  },
  "CeruleanCity_Text_NorthPolice": {
-  "fr": "POLICIER : Halte ! Le pont est\\nfermé. La TEAM ONYBRIS est passée\\ppar là.\\pSeuls les DRESSEURS assez forts\\npeuvent passer. Gagne d'abord le\\pBADGE de l'ARÈNE auprès de\\nSYLVESTRE.",
-  "en": "POLICEMAN: Halt! The bridge is\\nclosed. TEAM ONYBRIS went that way.\\pOnly TRAINERS proven strong enough\\nmay pass. Earn the GYM's BADGE\\pfrom SYLVESTRE first."
+  "en": "POLICEMAN: Halt! The bridge is\\nclosed. TEAM ONYBRIS went that way.\\pOnly TRAINERS proven strong enough\\nmay pass. Earn the GYM's BADGE\\pfrom SYLVESTRE first.",
+  "fr": "POLICIER : Halte ! Le pont est\\nfermé. La TEAM ONYBRIS est passée\\ppar là.\\pSeuls les DRESSEURS assez forts\\npeuvent passer. Gagne d'abord le\\pBADGE de l'ARÈNE auprès de\\nSYLVESTRE."
  },
  "CeruleanCity_Text_OhRightLittlePresentAsFavor": {
-  "fr": "Ah oui, c'est vrai.\\pTu me fais de la peine. Non,\\nvraiment. Tu traînes toujours\\pderrière moi.\\pAlors tiens, je te fais un petit\\ncadeau, en service.",
-  "en": "Oh, yeah, right.\\pI feel sorry for you. No, really.\\nYou're always plodding behind me.\\pSo here, I'll give you a little\\npresent as a favor."
+  "en": "Oh, yeah, right.\\pI feel sorry for you. No, really.\\nYou're always plodding behind me.\\pSo here, I'll give you a little\\npresent as a favor.",
+  "fr": "Ah oui, c'est vrai.\\pTu me fais de la peine. Non,\\nvraiment. Tu traînes toujours\\pderrière moi.\\pAlors tiens, je te fais un petit\\ncadeau, en service."
  },
  "CeruleanCity_Text_PokemonEncyclopediaAmusing": {
-  "fr": "Tu fais une encyclopédie des\\nPOKéMON ? Ça a l'air amusant.",
-  "en": "You're making an encyclopedia on\\nPOKéMON? That sounds amusing."
+  "en": "You're making an encyclopedia on\\nPOKéMON? That sounds amusing.",
+  "fr": "Tu fais une encyclopédie des\\nPOKéMON ? Ça a l'air amusant."
  },
  "CeruleanCity_Text_RefAfter": {
-  "fr": "DANTE : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend.",
-  "en": "DANTE: Take good care of it. The\\nnext REFUGE post is waiting."
+  "en": "DANTE: Take good care of it. The\\nnext REFUGE post is waiting.",
+  "fr": "DANTE : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
  },
  "CeruleanCity_Text_RefAsk": {
-  "fr": "DANTE : La rivière est calme. Trop\\ncalme. Des chasseurs ont posé des\\ppièges près du pont, avec des\\nfilets.",
-  "en": "DANTE: The river is quiet. Too quiet.\\nHunters set traps near the bridge\\nand I saw them with nets."
+  "en": "DANTE: The river is quiet. Too quiet.\\nHunters set traps near the bridge\\nand I saw them with nets.",
+  "fr": "DANTE : La rivière est calme. Trop\\ncalme. Des chasseurs ont posé des\\ppièges près du pont, avec des\\nfilets."
  },
  "CeruleanCity_Text_RefDone": {
-  "fr": "DANTE : Merci encore. Le REFUGE\\nest plus sûr grâce à toi.",
-  "en": "DANTE: Thank you again. The REFUGE\\nis safer because of you."
+  "en": "DANTE: Thank you again. The REFUGE\\nis safer because of you.",
+  "fr": "DANTE : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
  },
  "CeruleanCity_Text_RefEarly": {
-  "fr": "DANTE : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\pdu PARC SAFARI connaît l'ordre.",
-  "en": "DANTE: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order."
+  "en": "DANTE: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "fr": "DANTE : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\pdu PARC SAFARI connaît l'ordre."
  },
  "CeruleanCity_Text_RefGives": {
-  "fr": "DANTE : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\pDRABY !",
-  "en": "DANTE: You saved the day. The post\\nhas a gift for you: BAGON!"
+  "en": "DANTE: You saved the day. The post\\nhas a gift for you: BAGON!",
+  "fr": "DANTE : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\pDRABY !"
  },
  "CeruleanCity_Text_RefHunter1": {
-  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Ne te mêle pas de ça,\\ppetit !",
-  "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!"
+  "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!",
+  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Ne te mêle pas de ça,\\ppetit !"
  },
  "CeruleanCity_Text_RefHunter2": {
-  "fr": "CHASSEUR : Tu as battu mon associé ?\\nSoit, je n'ai pas peur d'un\\lranger !",
-  "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!"
+  "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!",
+  "fr": "CHASSEUR : Tu as battu mon\\nassocié ? Soit, je n'ai pas peur\\ld'un ranger !"
  },
  "CeruleanCity_Text_RefIdle": {
-  "fr": "DANTE : Je veille sur les animaux\\nici. Le monde est plus calme\\pmaintenant.",
-  "en": "DANTE: I watch over the animals here.\\nThe world is quieter now."
+  "en": "DANTE: I watch over the animals here.\\nThe world is quieter now.",
+  "fr": "DANTE : Je veille sur les animaux\\nici. Le monde est plus calme\\pmaintenant."
  },
  "CeruleanCity_Text_RivalDefeat": {
-  "fr": "Hé ! Doucement ! Tu as déjà gagné !",
-  "en": "Hey!\\nTake it easy!\\lYou won already!"
+  "en": "Hey!\\nTake it easy!\\lYou won already!",
+  "fr": "Hé ! Doucement ! Tu as déjà gagné !"
  },
  "CeruleanCity_Text_RivalIntro": {
-  "fr": "{RIVAL} : Stop, {PLAYER} !\\pLa police a fermé le pont à tous\\nceux qui ne sont pas assez forts.\\pLes voleurs d'ONYBRIS sont passés\\npar là. Je ne te laisserai pas me\\pralentir.\\pMontre-moi que tu peux le faire !",
-  "en": "{RIVAL}: Hold it, {PLAYER}!\\pThe police closed the bridge to\\nanyone who isn't strong enough.\\pThe ONYBRIS thieves went that way.\\nI won't have you slow me down.\\pShow me you can handle it!"
+  "en": "{RIVAL}: Hold it, {PLAYER}!\\pThe police closed the bridge to\\nanyone who isn't strong enough.\\pThe ONYBRIS thieves went that way.\\nI won't have you slow me down.\\pShow me you can handle it!",
+  "fr": "{RIVAL} : Stop, {PLAYER} !\\pLa police a fermé le pont à tous\\nceux qui ne sont pas assez forts.\\pLes voleurs d'ONYBRIS sont passés\\npar là. Je ne te laisserai pas me\\pralentir.\\pMontre-moi que tu peux le faire !"
  },
  "CeruleanCity_Text_RivalPostBattle": {
-  "fr": "{RIVAL} : Hmph. Pas mal.\\pLes ONYBRIS ont pris la TOURMALINE\\net ont traversé le pont au nord.\\pJe les poursuis. Suis-moi si tu\\npeux. À plus !",
-  "en": "{RIVAL}: Hmph. Not bad.\\pThe ONYBRIS took the TOURMALINE\\nand crossed the bridge north.\\pI'm going after them. Keep up if\\nyou can. Smell ya!"
+  "en": "{RIVAL}: Hmph. Not bad.\\pThe ONYBRIS took the TOURMALINE\\nand crossed the bridge north.\\pI'm going after them. Keep up if\\nyou can. Smell ya!",
+  "fr": "{RIVAL} : Hmph. Pas mal.\\pLes ONYBRIS ont pris la TOURMALINE\\net ont traversé le pont au nord.\\pJe les poursuis. Suis-moi si tu\\npeux. À plus !"
  },
  "CeruleanCity_Text_RoadsClosed": {
-  "fr": "POLICIER : La TEAM ONYBRIS est en\\ncavale. Toutes les routes sont\\pscellées sauf celle de PYROPIA.\\nLe seul passage : le pont au nord,\\pet seulement pour les DRESSEURS\\nforts.",
-  "en": "POLICEMAN: TEAM ONYBRIS is loose.\\nWe sealed every road out of town\\pexcept the one to PYROPIA. The\\nonly way on is the north bridge,\\pand only for strong TRAINERS."
+  "en": "POLICEMAN: TEAM ONYBRIS is loose.\\nWe sealed every road out of town\\pexcept the one to PYROPIA. The\\nonly way on is the north bridge,\\pand only for strong TRAINERS.",
+  "fr": "POLICIER : La TEAM ONYBRIS est en\\ncavale. Toutes les routes sont\\pscellées sauf celle de PYROPIA.\\nLe seul passage : le pont au nord,\\pet seulement pour les DRESSEURS\\nforts."
  },
  "CeruleanCity_Text_RoadsOpen": {
-  "fr": "POLICIER : La route du sud est\\nrouverte. Sois prudent !",
-  "en": "POLICEMAN: The south road is open\\nagain. Stay safe out there!"
+  "en": "POLICEMAN: The south road is open\\nagain. Stay safe out there!",
+  "fr": "POLICIER : La route du sud est\\nrouverte. Sois prudent !"
  },
  "CeruleanCity_Text_TrainerLifeIsToughIsntIt": {
-  "fr": "Toi aussi, tu es DRESSEUR ?\\pCollectionner, combattre...\\nC'est une vie dure, non ?",
-  "en": "You're a TRAINER, too?\\pCollecting, battling…\\nIt's a tough life, isn't it?"
+  "en": "You're a TRAINER, too?\\pCollecting, battling…\\nIt's a tough life, isn't it?",
+  "fr": "Toi aussi, tu es DRESSEUR ?\\pCollectionner, combattre...\\nC'est une vie dure, non ?"
  },
  "CeruleanCity_Text_TrainerTipsHeldItems": {
-  "fr": "CONSEILS AUX DRESSEURS\\pUn POKéMON peut tenir un objet.\\pCertains objets peuvent même être\\nutilisés par le POKéMON en combat.",
-  "en": "TRAINER TIPS\\pA POKéMON can be made to hold\\nan item.\\pSome items can even be used by\\nthe holding POKéMON in battle."
+  "en": "TRAINER TIPS\\pA POKéMON can be made to hold\\nan item.\\pSome items can even be used by\\nthe holding POKéMON in battle.",
+  "fr": "CONSEILS AUX DRESSEURS\\pUn POKéMON peut tenir un objet.\\pCertains objets peuvent même être\\nutilisés par le POKéMON en combat."
  },
  "CeruleanCity_Text_WantBrightRedBicycle": {
-  "fr": "Je veux un vélo rouge vif.\\pJe le garderai à la maison, pour\\nqu'il ne se salisse pas.",
-  "en": "I want a bright red bicycle.\\pI'll keep it at home, so it won't\\nget dirty."
+  "en": "I want a bright red bicycle.\\pI'll keep it at home, so it won't\\nget dirty.",
+  "fr": "Je veux un vélo rouge vif.\\pJe le garderai à la maison, pour\\nqu'il ne se salisse pas."
  },
  "CeruleanCity_Text_YouCanCutDownSmallTrees": {
-  "fr": "Tu savais que tu peux COUPER les\\npetits arbres ?\\pL'arbre dans le col de l'est\\npourrait être coupé avec COUPE.\\pIl paraît que le capitaine du S.S.\\nANNE possède la CS.",
-  "en": "Did you know you can CUT down\\nsmall trees?\\pThat tree in the east pass could\\nbe cleared with CUT.\\pI hear the captain of the S.S.\\nANNE owns the HM."
+  "en": "Did you know you can CUT down\\nsmall trees?\\pThat tree in the east pass could\\nbe cleared with CUT.\\pI hear the captain of the S.S.\\nANNE owns the HM.",
+  "fr": "Tu savais que tu peux COUPER les\\npetits arbres ?\\pL'arbre dans le col de l'est\\npourrait être coupé avec COUPE.\\pIl paraît que le capitaine du S.S.\\nANNE possède la CS."
  }
 }

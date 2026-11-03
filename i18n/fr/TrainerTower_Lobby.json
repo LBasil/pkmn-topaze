@@ -1,0 +1,82 @@
+{
+ "TrainerTower_Lobby_Text_ExplainTrainerTower": {
+  "en": "Here at TRAINER TOWER, there is an\\nevent called TIME ATTACK.\\pYou will be timed on how quickly\\nyou can get from the reception\\lcounter to the OWNER on the roof.\\pThe best times will be recorded on\\nthe Time Board.\\pTry competing with friends to see\\nwho can beat it the fastest.\\pYou will not earn any EXP. Points\\nor money by beating TRAINERS here.",
+  "fr": "Ici, à la TOUR DES DRESSEURS, il y\\na un événement appelé\\pCONTRE-LA-MONTRE.\\pTu seras chronométré sur ta vitesse\\npour aller de l'accueil au\\pPROPRIÉTAIRE sur le toit.\\pLes meilleurs temps seront inscrits\\nsur le Tableau des Temps.\\pEssaie de rivaliser avec des amis\\npour voir qui est le plus rapide.\\pTu ne gagneras ni points d'EXP. ni\\nargent en battant les DRESSEURS\\lici."
+ },
+ "TrainerTower_Lobby_Text_GiveItYourBest": {
+  "en": "I hope you give it your best.",
+  "fr": "J'espère que tu donneras le\\nmeilleur de toi-même."
+ },
+ "TrainerTower_Lobby_Text_LikeToChallengeTrainers": {
+  "en": "Would you like to challenge the\\nwaiting TRAINERS?",
+  "fr": "Veux-tu défier les DRESSEURS qui\\nattendent ?"
+ },
+ "TrainerTower_Lobby_Text_MoveCounterHereWhenTrainersSwitch": {
+  "en": "When the TRAINERS switch places,\\nthe movement can be hectic.\\pTo avoid the stampede, we moved\\nthe reception counter here.\\pI'm sorry for the inconvenience.",
+  "fr": "Quand les DRESSEURS changent de\\nplace, le mouvement peut être\\lagité.\\pPour éviter la bousculade, nous\\navons déplacé l'accueil ici.\\pDésolé pour la gêne occasionnée."
+ },
+ "TrainerTower_Lobby_Text_NeedTwoMonsForDouble": {
+  "en": "This is a two-on-two battle.\\pYou may not battle unless you have\\nat least two POKéMON.",
+  "fr": "C'est un combat deux contre deux.\\pTu ne peux pas combattre à moins\\nd'avoir au moins deux POKéMON."
+ },
+ "TrainerTower_Lobby_Text_PleaseVisitUsAgain": {
+  "en": "Please do visit us again!",
+  "fr": "Reviens nous voir !"
+ },
+ "TrainerTower_Lobby_Text_StairsTougherThanAnyBattle": {
+  "en": "Gasp, gasp…\\nGasp…\\pNever mind battling! These stairs…\\nThey're tougher than any battle…",
+  "fr": "Souffle, souffle… Souffle…\\pOublie les combats ! Ces escaliers…\\nIls sont plus durs que n'importe\\lquel combat…"
+ },
+ "TrainerTower_Lobby_Text_StartClockGetSetGo": {
+  "en": "Okay, I'll get the clock started,\\nso give it everything you have.\\pOn your marks…\\pGet set…\\pGo!",
+  "fr": "D'accord, je lance le chronomètre,\\nalors donne tout ce que tu as.\\pÀ vos marques…\\pPrêts…\\pPartez !"
+ },
+ "TrainerTower_Lobby_Text_ThanksForCompeting": {
+  "en": "Thank you for competing!",
+  "fr": "Merci d'avoir participé !"
+ },
+ "TrainerTower_Lobby_Text_TooBadComeBackTryAgain": {
+  "en": "That was too bad.\\pI think you put in a tremendous\\neffort in your battling.\\pPlease come back and try again!",
+  "fr": "Dommage.\\pJe pense que tu as fourni un effort\\nénorme au combat.\\pReviens et réessaie, s'il te\\nplaît !"
+ },
+ "TrainerTower_Lobby_Text_TrainersUpEighthFloor": {
+  "en": "TRAINERS are awaiting your\\nchallenge up to the eighth floor.",
+  "fr": "Des DRESSEURS attendent ton défi\\njusqu'au huitième étage."
+ },
+ "TrainerTower_Lobby_Text_TrainersUpToFloorNum": {
+  "en": "TRAINERS from all over the world\\ngather here to battle.\\pLet me see…\\pRight now, there are TRAINERS only\\nup to Floor {STR_VAR_1}.",
+  "fr": "Des DRESSEURS du monde entier se\\nrassemblent ici pour combattre.\\pVoyons voir…\\pEn ce moment, il n'y a des\\nDRESSEURS que jusqu'à l'étage\\l{STR_VAR_1}."
+ },
+ "TrainerTower_Lobby_Text_WelcomeToTrainerTower": {
+  "en": "Hello!\\pWelcome to TRAINER TOWER where\\nTRAINERS gather from all over!",
+  "fr": "Bonjour !\\pBienvenue à la TOUR DES DRESSEURS\\noù les DRESSEURS se rassemblent de\\lpartout !"
+ },
+ "TrainerTower_Lobby_Text_WonderWhatKindsOfTrainers": {
+  "en": "I'm here to see how good I am.\\pI wonder what kinds of TRAINERS\\nare waiting for me?\\pIt's nerve-racking!",
+  "fr": "Je suis ici pour voir mon niveau.\\pJe me demande quels genres de\\nDRESSEURS m'attendent ?\\pC'est stressant !"
+ },
+ "TrainerTower_Roof_Text_DoneItInRecordTime": {
+  "en": "Oh!\\nStupendous!\\pIt's marvelous how you've come up\\nhere so quickly.\\pThe fact is, you've done it in\\nrecord time…\\pI'll have your record posted at\\nthe reception counter.",
+  "fr": "Oh !\\nStupéfiant !\\pC'est merveilleux que tu sois\\narrivé ici si vite.\\pEn fait, tu l'as fait en un temps\\nrecord…\\pJe ferai afficher ton record à\\nl'accueil."
+ },
+ "TrainerTower_Roof_Text_IdLikeToSeeBetterTime": {
+  "en": "What I would like to see is a\\nbetter time out of you…\\pI'm counting on you.\\pUntil then, farewell…",
+  "fr": "Ce que j'aimerais voir, c'est un\\nmeilleur temps de ta part…\\pJe compte sur toi.\\pD'ici là, adieu…"
+ },
+ "TrainerTower_Roof_Text_ImOwnerBattledPerfectly": {
+  "en": "Hello…\\pI am the owner of this TOWER…\\pHow the sky soars above this\\nrooftop…\\pThe caress of the winds up here…\\pIt's all so perfect…\\pThe way you battled…\\nIt, too, was perfection…",
+  "fr": "Bonjour…\\pJe suis le propriétaire de cette\\nTOUR…\\pComme le ciel s'élève au-dessus de\\nce toit…\\pLa caresse des vents ici…\\pTout est si parfait…\\pTa façon de combattre…\\nElle aussi était parfaite…"
+ },
+ "TrainerTower_Roof_Text_ThisIsForYou": {
+  "en": "This is for you…",
+  "fr": "C'est pour toi…"
+ },
+ "TrainerTower_Roof_Text_TookSweetTimeGettingHere": {
+  "en": "You seem to have taken your sweet\\ntime getting here…",
+  "fr": "Tu sembles avoir pris ton temps\\npour arriver…"
+ },
+ "TrainerTower_Text_XMinYZSec": {
+  "en": "{STR_VAR_1} min. {STR_VAR_2}.{STR_VAR_3} sec.",
+  "fr": "{STR_VAR_1} min {STR_VAR_2}.{STR_VAR_3} s"
+ }
+}

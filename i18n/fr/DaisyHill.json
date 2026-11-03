@@ -1,10 +1,18 @@
 {
+ "DaisyHill_Text_Npc0": {
+  "en": "I pick one daisy a day. One only.",
+  "fr": "Je cueille une marguerite par jour.\\nUne seule."
+ },
+ "DaisyHill_Text_Npc1": {
+  "en": "SUNKERN is just a seed with legs.",
+  "fr": "TOURNEGRIN n'est qu'une graine à\\npattes."
+ },
  "DaisyHill_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "DaisyHill_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

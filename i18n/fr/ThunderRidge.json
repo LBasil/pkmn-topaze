@@ -1,18 +1,42 @@
 {
+ "ThunderRidge_Text_Npc0": {
+  "en": "Thunder here is old and angry.\\nPIKACHU love it.",
+  "fr": "Le tonnerre ici est vieux et en\\ncolère. PIKACHU adore ça."
+ },
+ "ThunderRidge_Text_Npc1": {
+  "en": "My hair stands up every time I\\nclimb!",
+  "fr": "Mes cheveux se dressent chaque fois\\nque je grimpe !"
+ },
+ "ThunderRidge_Text_Quest0_AfterT": {
+  "en": "The ridge hums.",
+  "fr": "La crête bourdonne."
+ },
+ "ThunderRidge_Text_Quest0_Ask": {
+  "en": "A THUNDER STONE for my lab. A\\nMAGNET for you.",
+  "fr": "Une PIERRE FOUDRE pour mon labo. Un\\nAIMANT pour toi."
+ },
+ "ThunderRidge_Text_Quest0_Done": {
+  "en": "Shocking! Take this MAGNET.",
+  "fr": "Choquant ! Prends cet AIMANT."
+ },
+ "ThunderRidge_Text_Quest0_MissT": {
+  "en": "One THUNDER STONE, please.",
+  "fr": "Une PIERRE FOUDRE, s'il te plaît."
+ },
  "ThunderRidge_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "ThunderRidge_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "ThunderRidge_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "ThunderRidge_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

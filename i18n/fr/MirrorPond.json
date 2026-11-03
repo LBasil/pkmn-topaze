@@ -1,18 +1,42 @@
 {
+ "MirrorPond_Text_Npc0": {
+  "en": "LAPRAS crosses the pond at dusk.",
+  "fr": "LOKHLASS traverse l'étang au\\ncrépuscule."
+ },
+ "MirrorPond_Text_Npc1": {
+  "en": "See your face in the water? It\\nlooks tired.",
+  "fr": "Tu vois ton visage dans l'eau ? Il\\na l'air fatigué."
+ },
+ "MirrorPond_Text_Quest0_AfterT": {
+  "en": "The pond shines.",
+  "fr": "L'étang brille."
+ },
+ "MirrorPond_Text_Quest0_Ask": {
+  "en": "A WATER STONE for the pond. MYSTIC\\nWATER for you.",
+  "fr": "Une PIERRE EAU pour l'étang. De\\nl'EAU MYSTIQUE pour toi."
+ },
+ "MirrorPond_Text_Quest0_Done": {
+  "en": "Thank you. Take this MYSTIC WATER.",
+  "fr": "Merci. Prends cette EAU MYSTIQUE."
+ },
+ "MirrorPond_Text_Quest0_MissT": {
+  "en": "One WATER STONE, please.",
+  "fr": "Une PIERRE EAU, s'il vous plaît."
+ },
  "MirrorPond_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "MirrorPond_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "MirrorPond_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "MirrorPond_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

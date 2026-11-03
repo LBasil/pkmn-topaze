@@ -1,0 +1,14 @@
+{
+ "SixIsland_PokemonCenter_1F_Text_RivalImpossibleToGetAllMonsAroundHere": {
+  "en": "{RIVAL}: Hey, {PLAYER}!\\nHow's your POKéDEX filling up?\\pIt looks like it's impossible to get\\nall the POKéMON by hanging around\\ljust these parts.\\pMaybe there are POKéMON we don't\\nknow about somewhere far away…\\p… … …  … … …  … … …\\pWell, if I can't do it, there's no\\nway for you to get it done.\\pI'm not going to get all desperate\\nover this.\\pI'll keep collecting POKéMON at my\\nown pace while I train them.\\pThat's what I'll do.\\nSo there's no point staying here.\\lI may as well leave for home.\\pThat's that, then!\\nSmell ya later!",
+  "fr": "{RIVAL} : Hé, {PLAYER} ! Comment se\\nremplit ton POKéDEX ?\\pIl semble impossible d'avoir tous\\nles POKéMON en traînant juste dans\\lle coin.\\pPeut-être qu'il y a des POKéMON que\\nnous ne connaissons pas, loin\\ld'ici…\\p… … … … … … … … …\\pBon, si je n'y arrive pas, tu n'as\\naucune chance d'y arriver.\\pJe ne vais pas me mettre dans tous\\nmes états pour ça.\\pJe continuerai à collectionner les\\nPOKéMON à mon rythme tout en les\\lentraînant.\\pC'est ce que je ferai. Donc ça ne\\nsert à rien de rester ici. Autant\\lrentrer chez moi.\\pVoilà ! À plus tard !"
+ },
+ "SixIsland_PokemonCenter_1F_Text_SomeMonsEvolveByTradingWithHeldItem": {
+  "en": "You know of POKéMON that evolve\\nonly upon trading, yes?\\pBut did you know that there are\\nstill others?\\pSome POKéMON evolve only when\\ntraded while holding specific items.",
+  "fr": "Tu connais les POKéMON qui\\nn'évoluent que par échange, oui ?\\pMais savais-tu qu'il y en a encore\\nd'autres ?\\pCertains POKéMON n'évoluent que\\nlorsqu'ils sont échangés en tenant\\lun objet précis."
+ },
+ "SixIsland_PokemonCenter_1F_Text_SomethingHiddenOnThisIsland": {
+  "en": "For ten years, I've searched for\\nRUINS.\\pNo, make that twenty years.\\pI get this feeling that there's\\nsomething hidden on this island.",
+  "fr": "Depuis dix ans, je cherche des\\nRUINES.\\pNon, disons vingt ans.\\pJ'ai le sentiment que quelque chose\\nest caché sur cette île."
+ }
+}

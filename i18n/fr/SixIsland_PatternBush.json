@@ -1,0 +1,146 @@
+{
+ "SixIsland_PatternBush_Text_AllisonDefeat": {
+  "en": "Oh, for someone so young, you are\\ntremendous!",
+  "fr": "Oh, pour quelqu'un de si jeune, tu\\nes formidable !"
+ },
+ "SixIsland_PatternBush_Text_AllisonIntro": {
+  "en": "I'm working to preserve the natural\\necology of POKéMON here.",
+  "fr": "Je travaille à préserver l'écologie\\nnaturelle des POKéMON ici."
+ },
+ "SixIsland_PatternBush_Text_AllisonPostBattle": {
+  "en": "I'm not saying that you shouldn't\\ncatch POKéMON.\\pI just want people to raise their\\nPOKéMON responsibly.",
+  "fr": "Je ne dis pas qu'il ne faut pas\\ncapturer de POKéMON.\\pJe veux juste que les gens élèvent\\nleurs POKéMON de façon responsable."
+ },
+ "SixIsland_PatternBush_Text_BethanyDefeat": {
+  "en": "You raise your POKéMON with a\\nwhole lot of love!",
+  "fr": "Tu élèves tes POKéMON avec\\nénormément d'amour !"
+ },
+ "SixIsland_PatternBush_Text_BethanyIntro": {
+  "en": "I'm curious, how do you raise your\\nPOKéMON?",
+  "fr": "Je suis curieux, comment élèves-tu\\ntes POKéMON ?"
+ },
+ "SixIsland_PatternBush_Text_BethanyPostBattle": {
+  "en": "In the same way your mother raised\\nyou full of love, you should raise\\lyour POKéMON.",
+  "fr": "De la même façon que ta mère t'a\\nélevé avec amour, tu devrais élever\\ltes POKéMON."
+ },
+ "SixIsland_PatternBush_Text_CordellDefeat": {
+  "en": "I bet you think I'm weak,\\ndon't you, eh?",
+  "fr": "Je parie que tu me crois faible,\\nhein ?"
+ },
+ "SixIsland_PatternBush_Text_CordellIntro": {
+  "en": "I bet you think I'm just some guy,\\ndon't you, eh?",
+  "fr": "Je parie que tu penses que je ne\\nsuis qu'un type quelconque, hein ?"
+ },
+ "SixIsland_PatternBush_Text_CordellPostBattle": {
+  "en": "Ayup, you townies come around all\\nso dandy with a hat that flashy…\\pHow about giving me that?",
+  "fr": "Ouais, vous les citadins, vous\\nvenez tout pimpants avec un chapeau\\lsi voyant…\\pTu me le donnes ?"
+ },
+ "SixIsland_PatternBush_Text_DaliaDefeat": {
+  "en": "If you'd like, I can teach you how\\nto breathe properly.",
+  "fr": "Si tu veux, je peux t'apprendre à\\nbien respirer."
+ },
+ "SixIsland_PatternBush_Text_DaliaIntro": {
+  "en": "Take a deep breath.\\nIsn't the air delicious?",
+  "fr": "Respire à fond.\\nL'air n'est-il pas délicieux ?"
+ },
+ "SixIsland_PatternBush_Text_DaliaPostBattle": {
+  "en": "First, exhale.\\nBlow everything out.\\pWhen you can't exhale anymore,\\ninhale the clean air!\\pIsn't it refreshing?",
+  "fr": "D'abord, expire.\\nSouffle tout.\\pQuand tu ne peux plus expirer,\\ninspire l'air pur !\\pN'est-ce pas rafraîchissant ?"
+ },
+ "SixIsland_PatternBush_Text_GarretDefeat": {
+  "en": "Heheh…\\nIsn't my POKéMON awesome?",
+  "fr": "Héhéh…\\nMon POKéMON est génial, non ?"
+ },
+ "SixIsland_PatternBush_Text_GarretIntro": {
+  "en": "I caught a BUG POKéMON that lives\\nonly around here!",
+  "fr": "J'ai capturé un POKéMON INSECTE qui\\nne vit qu'ici !"
+ },
+ "SixIsland_PatternBush_Text_GarretPostBattle": {
+  "en": "There's a girl near the BUSH who\\nmeasures HERACROSS for TRAINERS.",
+  "fr": "Il y a une fille près du BUISSON\\nqui mesure les SCARHINO pour les\\lDRESSEURS."
+ },
+ "SixIsland_PatternBush_Text_JoanaDefeat": {
+  "en": "I lost, but I'm still laughing.\\nAm I the only girl like that?",
+  "fr": "J'ai perdu, mais je ris encore.\\nSuis-je la seule fille comme ça ?"
+ },
+ "SixIsland_PatternBush_Text_JoanaIntro": {
+  "en": "I love BUG POKéMON.\\nThat's why I'm here all the time.\\pAm I the only girl like that?",
+  "fr": "J'adore les POKéMON INSECTE. C'est\\npour ça que je suis toujours ici.\\pSuis-je la seule fille comme ça ?"
+ },
+ "SixIsland_PatternBush_Text_JoanaPostBattle": {
+  "en": "I'm going to keep on collecting\\nBUG POKéMON.\\pAm I the only girl like that?",
+  "fr": "Je vais continuer à collectionner\\nles POKéMON INSECTE.\\pSuis-je la seule fille comme ça ?"
+ },
+ "SixIsland_PatternBush_Text_JonahDefeat": {
+  "en": "It's okay, losing is a fun part of\\nPOKéMON's appeal, too.",
+  "fr": "C'est bon, perdre fait aussi partie\\ndu charme des POKéMON."
+ },
+ "SixIsland_PatternBush_Text_JonahIntro": {
+  "en": "You know, it just doesn't feel right\\nif I don't use BUG POKéMON.",
+  "fr": "Tu sais, ça ne fait pas bien si je\\nn'utilise pas de POKéMON INSECTE."
+ },
+ "SixIsland_PatternBush_Text_JonahPostBattle": {
+  "en": "By the way, “appeal” is a weird\\nword, if you think about it.\\pLike, is it like an orange peel?\\nOr like a ringing bell?",
+  "fr": "Au fait, “ charme ” est un mot\\nbizarre, quand on y pense.\\pC'est comme l'arbre ? Ou comme\\nun sortilège ?"
+ },
+ "SixIsland_PatternBush_Text_LaytonDefeat": {
+  "en": "Have you taken a good look around\\nyour feet?",
+  "fr": "As-tu bien regardé autour de tes\\npieds ?"
+ },
+ "SixIsland_PatternBush_Text_LaytonIntro": {
+  "en": "Have you noticed something odd\\nabout these parts?",
+  "fr": "As-tu remarqué quelque chose\\nd'étrange par ici ?"
+ },
+ "SixIsland_PatternBush_Text_LaytonPostBattle": {
+  "en": "There are places here in PATTERN\\nBUSH where grass won't grow.\\pWhat could be the cause of such\\na phenomenon?",
+  "fr": "Il y a des endroits dans le BUISSON\\nMOTIF où l'herbe ne pousse pas.\\pQuelle peut être la cause d'un tel\\nphénomène ?"
+ },
+ "SixIsland_PatternBush_Text_MarcyDefeat": {
+  "en": "It wasn't a bug.\\nI cut my shin on some grass.",
+  "fr": "Ce n'était pas un insecte. Je me\\nsuis coupé le tibia sur de l'herbe."
+ },
+ "SixIsland_PatternBush_Text_MarcyIntro": {
+  "en": "Oh, yuck!\\nI think a bug stung me!",
+  "fr": "Oh, beurk !\\nJe crois qu'un insecte m'a piqué !"
+ },
+ "SixIsland_PatternBush_Text_MarcyPostBattle": {
+  "en": "A little cut like that…\\nA little spit's enough to cure it!",
+  "fr": "Une petite coupure comme ça… Un\\npeu de salive suffit à la guérir !"
+ },
+ "SixIsland_PatternBush_Text_NashDefeat": {
+  "en": "Super awesome!",
+  "fr": "Super génial !"
+ },
+ "SixIsland_PatternBush_Text_NashIntro": {
+  "en": "Look, look! There are funny\\npatterns on the ground.",
+  "fr": "Regarde, regarde ! Il y a de drôles\\nde motifs par terre."
+ },
+ "SixIsland_PatternBush_Text_NashPostBattle": {
+  "en": "The funny patterns on the ground…\\pThey look like the patterns on my\\ngrandpa's clothes.",
+  "fr": "Les drôles de motifs par terre…\\pIls ressemblent aux motifs des\\nvêtements de mon grand-père."
+ },
+ "SixIsland_PatternBush_Text_RileyDefeat": {
+  "en": "Wimped out…",
+  "fr": "Dégonflé…"
+ },
+ "SixIsland_PatternBush_Text_RileyIntro": {
+  "en": "This is a good spot.\\nI'll pitch my tent here.",
+  "fr": "C'est un bon endroit.\\nJe vais planter ma tente ici."
+ },
+ "SixIsland_PatternBush_Text_RileyPostBattle": {
+  "en": "I'm going to observe the night sky\\nhere.",
+  "fr": "Je vais observer le ciel nocturne\\nici."
+ },
+ "SixIsland_PatternBush_Text_VanceDefeat": {
+  "en": "I got beat while I was still busy\\ncelebrating!",
+  "fr": "J'ai été battu alors que j'étais\\nencore occupé à fêter ça !"
+ },
+ "SixIsland_PatternBush_Text_VanceIntro": {
+  "en": "Yeah, yeah, yeah!\\nLook at all the BUG POKéMON!",
+  "fr": "Ouais, ouais, ouais !\\nRegarde tous ces POKéMON INSECTE !"
+ },
+ "SixIsland_PatternBush_Text_VancePostBattle": {
+  "en": "I'm going to bring my little brother\\nhere next time.",
+  "fr": "J'amènerai mon petit frère ici la\\nprochaine fois."
+ }
+}

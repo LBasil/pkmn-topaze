@@ -1,0 +1,22 @@
+{
+ "SixIsland_GreenPath_Text_JaclynDefeat": {
+  "en": "Big boo-boo!",
+  "fr": "Grosse bobo !"
+ },
+ "SixIsland_GreenPath_Text_JaclynIntro": {
+  "en": "…Huh?\\pI was envisioning my house, but\\nthis is where I TELEPORT?",
+  "fr": "…Hein ?\\pJ'imaginais ma maison, mais c'est\\nici que je me TÉLÉPORTE ?"
+ },
+ "SixIsland_GreenPath_Text_JaclynPostBattle": {
+  "en": "I am so scatterbrained!\\pI need to focus so I can TELEPORT\\nproperly to my house!",
+  "fr": "Je suis si distrait !\\pJe dois me concentrer pour me\\nTÉLÉPORTER correctement chez moi !"
+ },
+ "SixIsland_GreenPath_Text_LeftRouteSign": {
+  "en": "GREEN PATH\\nPATTERN BUSH AHEAD",
+  "fr": "SENTIER VERT\\nBUISSON MOTIF DEVANT"
+ },
+ "SixIsland_GreenPath_Text_RightRouteSign": {
+  "en": "GREEN PATH\\nThink Green, Keep Nature Clean!",
+  "fr": "SENTIER VERT Pensez vert, gardez la\\nnature propre !"
+ }
+}

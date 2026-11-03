@@ -1,0 +1,38 @@
+{
+ "SilphCo_10F_Text_FloorSign": {
+  "en": "HEMATEK CO. HEAD OFFICE\\n10F",
+  "fr": "HEMATEK CO. SIÈGE\\n10F"
+ },
+ "SilphCo_10F_Text_GruntDefeat": {
+  "en": "I'm stunned!",
+  "fr": "Je suis stupéfait !"
+ },
+ "SilphCo_10F_Text_GruntIntro": {
+  "en": "Welcome to 10F!\\nSo good of you to join me!",
+  "fr": "Bienvenue au 10F !\\nC'est si gentil de me rejoindre !"
+ },
+ "SilphCo_10F_Text_GruntPostBattle": {
+  "en": "Nice try, but the boardroom is up\\none more floor.",
+  "fr": "Bien tenté, mais la salle du\\nconseil est un étage plus haut."
+ },
+ "SilphCo_10F_Text_KeepMeCryingASecret": {
+  "en": "About me crying…\\nPlease keep it a secret.",
+  "fr": "À propos de mes pleurs…\\nGarde-le secret, s'il te plaît."
+ },
+ "SilphCo_10F_Text_TravisDefeat": {
+  "en": "No continues left!",
+  "fr": "Plus de continues !"
+ },
+ "SilphCo_10F_Text_TravisIntro": {
+  "en": "Enough of your silly games!",
+  "fr": "Assez de tes jeux stupides !"
+ },
+ "SilphCo_10F_Text_TravisPostBattle": {
+  "en": "Are you satisfied with beating me?\\nThen go on home!",
+  "fr": "Tu es satisfait de m'avoir battu ?\\nAlors rentre chez toi !"
+ },
+ "SilphCo_10F_Text_WaaaImScared": {
+  "en": "Waaaaa!\\nI'm scared!",
+  "fr": "Waaaaa !\\nJ'ai peur !"
+ }
+}

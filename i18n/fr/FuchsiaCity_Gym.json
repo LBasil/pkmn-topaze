@@ -1,0 +1,138 @@
+{
+ "FuchsiaCity_Gym_Text_EdgarDefeat": {
+  "en": "Awoo!",
+  "fr": "Awoo !"
+ },
+ "FuchsiaCity_Gym_Text_EdgarIntro": {
+  "en": "I also study the way of the ninja\\nwith Master ACHLYS!\\pNinja have a long history of using\\nanimals!",
+  "fr": "J'étudie aussi la voie du ninja\\navec Maître ACHLYS !\\pLes ninjas utilisent les animaux\\ndepuis longtemps !"
+ },
+ "FuchsiaCity_Gym_Text_EdgarPostBattle": {
+  "en": "I still have much to learn.",
+  "fr": "J'ai encore beaucoup à apprendre."
+ },
+ "FuchsiaCity_Gym_Text_GymGuyAdvice": {
+  "en": "Yo!\\nChamp in the making!\\pAMETHIOLITE GYM is a tricked-up place.\\nIt's riddled with invisible walls!\\pACHLYS might appear close, but she's\\nblocked off.\\pYou have to find gaps in the walls\\nto reach her.",
+  "fr": "Yo ! Futur champion !\\pL'ARÈNE D'AMETHIOLITE est truquée.\\nElle est pleine de murs\\linvisibles !\\pACHLYS peut sembler proche, mais\\nelle est coupée de toi.\\pIl faut trouver les brèches dans\\nles murs pour l'atteindre."
+ },
+ "FuchsiaCity_Gym_Text_GymGuyPostVictory": {
+  "en": "It's amazing how ninja can terrify,\\neven now!",
+  "fr": "C'est incroyable que les ninjas\\npuissent encore terrifier !"
+ },
+ "FuchsiaCity_Gym_Text_GymStatue": {
+  "en": "AMETHIOLITE POKéMON GYM\\nLEADER: ACHLYS\\pWINNING TRAINERS:\\n{RIVAL}",
+  "fr": "ARÈNE POKéMON D'AMETHIOLITE\\nCHAMPIONNE : ACHLYS\\pDRESSEURS VAINQUEURS :\\n{RIVAL}"
+ },
+ "FuchsiaCity_Gym_Text_GymStatuePlayerWon": {
+  "en": "AMETHIOLITE POKéMON GYM\\nLEADER: ACHLYS\\pWINNING TRAINERS:\\n{RIVAL}, {PLAYER}",
+  "fr": "ARÈNE POKéMON D'AMETHIOLITE\\nCHAMPIONNE : ACHLYS\\pDRESSEURS VAINQUEURS :\\n{RIVAL}, {PLAYER}"
+ },
+ "FuchsiaCity_Gym_Text_KaydenDefeat": {
+  "en": "What?\\nExtraordinary!",
+  "fr": "Quoi ?\\nExtraordinaire !"
+ },
+ "FuchsiaCity_Gym_Text_KaydenIntro": {
+  "en": "Strength isn't the key for POKéMON.\\nDo you understand this?\\pPOKéMON is about strategy!\\pI'll show you how strategy can\\nbeat brute strength.",
+  "fr": "La force n'est pas la clé pour les\\nPOKéMON. Tu comprends ?\\pLes POKéMON, c'est de la\\nstratégie !\\pJe vais te montrer comment la\\nstratégie bat la force brute."
+ },
+ "FuchsiaCity_Gym_Text_KaydenPostBattle": {
+  "en": "So, you mix brawn with brains?\\nGood strategy!\\pThat's remarkable for a child\\nTRAINER.",
+  "fr": "Alors, tu mêles muscles et\\ncerveau ? Bonne stratégie !\\pC'est remarquable pour un jeune\\nDRESSEUR."
+ },
+ "FuchsiaCity_Gym_Text_KirkDefeat": {
+  "en": "I'm done for!",
+  "fr": "Je suis fini !"
+ },
+ "FuchsiaCity_Gym_Text_KirkIntro": {
+  "en": "I was a magician once upon a time.\\pBut I dreamed of becoming a ninja,\\nso I joined this GYM.",
+  "fr": "J'étais magicien il y a longtemps.\\pMais je rêvais de devenir ninja,\\nalors j'ai rejoint cette ARÈNE."
+ },
+ "FuchsiaCity_Gym_Text_KirkPostBattle": {
+  "en": "Even though I've lost, I will keep\\ntraining according to the teachings\\lof ACHLYS, my ninja master.",
+  "fr": "Même si j'ai perdu, je continuerai\\nà m'entraîner selon les\\lenseignements d'ACHLYS, mon maître\\nninja."
+ },
+ "FuchsiaCity_Gym_Text_KogaDefeat": {
+  "en": "Hm. You cleaned the toxin out of\\nyour own team. Impressive.\\pHere. Take the AMETHYST BADGE.",
+  "fr": "Hm. Tu as purgé la toxine de ta\\npropre équipe. Impressionnant.\\pTiens. Prends le BADGE AMÉTHYSTE."
+ },
+ "FuchsiaCity_Gym_Text_KogaExplainSoulBadge": {
+  "en": "Now that you have the AMETHYST\\nBADGE, the DEFENSE of your\\pPOKéMON rises.\\pIt also lets you SURF outside of\\nbattle, if you carry the HM.\\pAh! Take this, too!",
+  "fr": "Maintenant que tu as le BADGE\\nAMÉTHYSTE, la DÉFENSE de tes\\pPOKéMON augmente.\\pIl te permet aussi d'utiliser SURF\\nhors combat, si tu as la CS.\\pAh ! Prends ça aussi !"
+ },
+ "FuchsiaCity_Gym_Text_KogaExplainTM06": {
+  "en": "TM06 contains TOXIC.\\pIt poisons the foe and gets worse\\nevery turn. Poison, as I said, is\\ppatience.",
+  "fr": "La CT06 contient TOXIK.\\pElle empoisonne l'ennemi et empire\\nà chaque tour. Le poison, je l'ai\\ldit, c'est de la patience."
+ },
+ "FuchsiaCity_Gym_Text_KogaIntro": {
+  "en": "Welcome to AMETHIOLITE GYM. I am\\nACHLYS.\\pVenom is not cruelty. It is\\npatience. A little, then a little\\pmore, and the fight is already\\nwon.\\pMy POKéMON are POISON-types, like\\nthe violet mist of this town. Do\\pyou have the nerve to breathe it?\\pLet us begin!",
+  "fr": "Bienvenue à l'ARÈNE D'AMETHIOLITE.\\nJe suis ACHLYS.\\pLe venin n'est pas de la cruauté.\\nC'est de la patience. Un peu, puis\\lun peu plus, et le combat est déjà\\ngagné.\\pMes POKéMON sont de type POISON,\\ncomme la brume violette de cette\\lville.\\pAs-tu le cran de la respirer ?\\pCommençons !"
+ },
+ "FuchsiaCity_Gym_Text_KogaPostBattle": {
+  "en": "The AURA twisted us all... but\\npoison stayed poison. Some things\\phold.\\pYou are ready for HEMATOWN. Its\\nLEADER hides in the dark. Keep\\pyour eyes sharp.",
+  "fr": "L'AURA nous a tous tordus… mais le\\npoison est resté poison.\\pCertaines choses tiennent.\\pEn route pour HEMATOWN. Son CHEF se\\ncache dans l'ombre. Garde les yeux\\louverts."
+ },
+ "FuchsiaCity_Gym_Text_KogaRebel1": {
+  "en": "ACHLYS: My poison once served the\\nshadows. Now I serve the question:\\lshould one trainer rule it all?",
+  "fr": "ACHLYS : Mon poison a jadis servi\\nles ombres. Maintenant je sers la\\lquestion : un seul dresseur doit-il\\ntout régner ?"
+ },
+ "FuchsiaCity_Gym_Text_KogaRebel2": {
+  "en": "A cure...\\nyou found it.",
+  "fr": "Un remède…\\ntu l'as trouvé."
+ },
+ "FuchsiaCity_Gym_Text_KogaRebel3": {
+  "en": "ACHLYS: The answer is not yes or no.\\nIt is how. Take this antidote.",
+  "fr": "ACHLYS : La réponse n'est pas oui\\nou non. C'est comment. Prends cet\\lantidote."
+ },
+ "FuchsiaCity_Gym_Text_KogaVisit1": {
+  "en": "ACHLYS: You let the wish fly. A ninja\\nunderstands. Take this.",
+  "fr": "ACHLYS : Tu as laissé le vœu\\ns'envoler. Un ninja comprend.\\pPrends ça."
+ },
+ "FuchsiaCity_Gym_Text_KogaVisit2": {
+  "en": "ACHLYS: No balls. Even a ninja can\\nrest. Take these potions.",
+  "fr": "ACHLYS : Pas de balls. Même un\\nninja peut se reposer. Prends ces\\lpotions."
+ },
+ "FuchsiaCity_Gym_Text_MakeSpaceForThis": {
+  "en": "Make space for this, child!",
+  "fr": "Fais de la place pour ça !"
+ },
+ "FuchsiaCity_Gym_Text_NateDefeat": {
+  "en": "You had me fooled!",
+  "fr": "Tu m'as bien eu !"
+ },
+ "FuchsiaCity_Gym_Text_NateIntro": {
+  "en": "Let's see you beat my special\\ntechniques!",
+  "fr": "Voyons si tu bats mes techniques\\nspéciales !"
+ },
+ "FuchsiaCity_Gym_Text_NatePostBattle": {
+  "en": "I like poison and sleep techniques,\\nas they linger after battle!",
+  "fr": "J'aime les techniques de poison et\\nde sommeil, car elles durent après\\lle combat !"
+ },
+ "FuchsiaCity_Gym_Text_PhilDefeat": {
+  "en": "Whoa!\\nYou've got it!",
+  "fr": "Whoa !\\nTu as compris !"
+ },
+ "FuchsiaCity_Gym_Text_PhilIntro": {
+  "en": "Stop right there!\\pThe famed invisible walls of\\nAMETHIOLITE GYM have you frustrated?",
+  "fr": "Stop !\\pLes célèbres murs invisibles de\\nl'ARÈNE D'AMETHIOLITE te\\lfrustrent ?"
+ },
+ "FuchsiaCity_Gym_Text_PhilPostBattle": {
+  "en": "You impressed me!\\nHere's a hint!\\pLook very closely for gaps in the\\ninvisible walls!",
+  "fr": "Tu m'as impressionné !\\nVoici un indice !\\pCherche bien les brèches dans les\\nmurs invisibles !"
+ },
+ "FuchsiaCity_Gym_Text_ReceivedTM06FromKoga": {
+  "en": "{PLAYER} received TM06\\nfrom ACHLYS.",
+  "fr": "{PLAYER} a reçu la CT06\\nd'ACHLYS."
+ },
+ "FuchsiaCity_Gym_Text_ShawnDefeat": {
+  "en": "You're more skilled than I'd\\nthought!",
+  "fr": "Tu es plus habile que je ne\\npensais !"
+ },
+ "FuchsiaCity_Gym_Text_ShawnIntro": {
+  "en": "Master ACHLYS comes from a long line\\nof ninjas.\\pWhat did you descend from?",
+  "fr": "Maître ACHLYS descend d'une longue\\nlignée de ninjas.\\pEt toi, de qui descends-tu ?"
+ },
+ "FuchsiaCity_Gym_Text_ShawnPostBattle": {
+  "en": "Where there is light, there is\\nshadow!\\pLight and shadow!\\nWhich do you choose?",
+  "fr": "Là où il y a de la lumière, il y a\\nde l'ombre !\\pLumière et ombre !\\nQue choisis-tu ?"
+ }
+}

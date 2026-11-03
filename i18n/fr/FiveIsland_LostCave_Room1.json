@@ -1,0 +1,14 @@
+{
+ "FiveIsland_LostCave_Room1_Text_LawsonDefeat": {
+  "en": "Aiyeeeeeh!\\nMercy!",
+  "fr": "Aïeeeeeeh !\\nPitié !"
+ },
+ "FiveIsland_LostCave_Room1_Text_LawsonIntro": {
+  "en": "Aiyeeeeeh!\\pI thought this was an ancient ruin.\\nBut it's teeming with ghosts!",
+  "fr": "Aïeeeeeeh !\\pJe croyais que c'était une ruine\\nancienne. Mais elle grouille de\\lfantômes !"
+ },
+ "FiveIsland_LostCave_Room1_Text_LawsonPostBattle": {
+  "en": "I'm trying to get out of here, but\\nI always end up at the same spot.\\pMaybe the number of boulders is\\na hint…",
+  "fr": "J'essaie de sortir d'ici, mais je\\nreviens toujours au même endroit.\\pPeut-être que le nombre de rochers\\nest un indice…"
+ }
+}

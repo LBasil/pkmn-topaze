@@ -1,0 +1,34 @@
+{
+ "VermilionCity_House3_Text_BoyAsk": {
+  "en": "My PIDGEY can't fly to HEMATOWN,\\nits wing is numb. It was shocked\\lat the GYM!\\pI need two PARALYZE HEALS.",
+  "fr": "Mon ROUCOOL ne peut pas voler\\njusqu'à HEMATOWN, son aile est\\lengourdie. Il a été électrisé à\\nl'ARÈNE !\\pJ'ai besoin de deux ANTI-PARA."
+ },
+ "VermilionCity_House3_Text_BoyGives": {
+  "en": "Yes! PIDGEY flapped! It can fly\\nagain!\\pMy brother brought this from the\\nPOWER PLANT. You take it!",
+  "fr": "Oui ! ROUCOOL a battu des ailes !\\nIl peut voler à nouveau !\\pMon frère a rapporté ça de la\\nCENTRALE. Prends-le !"
+ },
+ "VermilionCity_House3_Text_BoyNo": {
+  "en": "Aw... PIDGEY will walk, then.",
+  "fr": "Aw… ROUCOOL ira à pied, alors."
+ },
+ "VermilionCity_House3_Text_BoyOffer": {
+  "en": "You have PARALYZE HEALS! Please,\\ncan I have two for PIDGEY?",
+  "fr": "Tu as des ANTI-PARA ! S'il te\\nplaît, puis-je en avoir deux pour\\lROUCOOL ?"
+ },
+ "VermilionCity_House3_Text_DearPippiLetter": {
+  "en": "Dear PIPPI,\\nI hope to see you soon.\\pI heard HEMATOWN has problems with\\nTEAM ONYBRIS.\\pAPATIA appears to be safe.",
+  "fr": "Chère PIPPI,\\nJ'espère te voir bientôt.\\pJ'ai entendu qu'HEMATOWN a des\\nproblèmes avec la TEAM ONYBRIS.\\pAPATIA semble sûre."
+ },
+ "VermilionCity_House3_Text_Pidgey": {
+  "en": "PIDGEY: Kurukkoo!",
+  "fr": "ROUCOOL : Kurukkoo !"
+ },
+ "VermilionCity_House3_Text_PidgeyFlyLetterToSaffron": {
+  "en": "I'm getting my PIDGEY to fly a\\nletter to HEMATOWN in the north.",
+  "fr": "Je fais voler mon ROUCOOL avec une\\nlettre pour HEMATOWN, au nord."
+ },
+ "VermilionCity_House3_Text_SendMyPidgeyToUnionRoom": {
+  "en": "I want to exchange MAIL with all\\nsorts of people.\\pI send my PIDGEY to a UNION ROOM\\nto exchange MAIL for me.",
+  "fr": "Je veux échanger du COURRIER avec\\ntoutes sortes de gens.\\pJ'envoie mon ROUCOOL dans une SALLE\\nUNION pour échanger du COURRIER à\\lma place."
+ }
+}

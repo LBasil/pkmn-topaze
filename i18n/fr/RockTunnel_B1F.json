@@ -1,0 +1,102 @@
+{
+ "RockTunnel_B1F_Text_AllenDefeat": {
+  "en": "I give!\\nYou're a better technician!",
+  "fr": "Je me rends !\\nTu es meilleur technicien !"
+ },
+ "RockTunnel_B1F_Text_AllenIntro": {
+  "en": "My POKéMON techniques will leave\\nyou crying!",
+  "fr": "Mes techniques POKéMON te feront\\npleurer !"
+ },
+ "RockTunnel_B1F_Text_AllenPostBattle": {
+  "en": "In mountains, you'll often find\\nROCK-type POKéMON.",
+  "fr": "En montagne, on trouve souvent des\\nPOKéMON de type ROCHE."
+ },
+ "RockTunnel_B1F_Text_CooperDefeat": {
+  "en": "Shoot!\\nI am so jealous!",
+  "fr": "Zut !\\nJe suis si jaloux !"
+ },
+ "RockTunnel_B1F_Text_CooperIntro": {
+  "en": "You have a POKéDEX?\\nI want one, too.",
+  "fr": "Tu as un POKéDEX ?\\nJ'en veux un aussi."
+ },
+ "RockTunnel_B1F_Text_CooperPostBattle": {
+  "en": "When you finish your POKéDEX,\\ncan I have it?",
+  "fr": "Quand tu auras fini ton POKéDEX,\\nje peux l'avoir ?"
+ },
+ "RockTunnel_B1F_Text_DudleyDefeat": {
+  "en": "Oops!\\nOutmuscled!",
+  "fr": "Oups !\\nSurpassé en force !"
+ },
+ "RockTunnel_B1F_Text_DudleyIntro": {
+  "en": "Hahaha!\\nCan you beat my power?",
+  "fr": "Hahaha !\\nPeux-tu battre ma puissance ?"
+ },
+ "RockTunnel_B1F_Text_DudleyPostBattle": {
+  "en": "I go for power because I hate\\nthinking.",
+  "fr": "Je joue la puissance parce que je\\ndéteste réfléchir."
+ },
+ "RockTunnel_B1F_Text_EricDefeat": {
+  "en": "Fired away!",
+  "fr": "Tiré !"
+ },
+ "RockTunnel_B1F_Text_EricIntro": {
+  "en": "Hit me with your best shot!",
+  "fr": "Frappe-moi avec ton meilleur coup !"
+ },
+ "RockTunnel_B1F_Text_EricPostBattle": {
+  "en": "I'll raise my POKéMON to beat\\nyours, kid.",
+  "fr": "J'élèverai mes POKéMON pour battre\\nles tiens."
+ },
+ "RockTunnel_B1F_Text_MarthaDefeat": {
+  "en": "Oh!\\nI lost!",
+  "fr": "Oh !\\nJ'ai perdu !"
+ },
+ "RockTunnel_B1F_Text_MarthaIntro": {
+  "en": "I don't often come here, but I will\\nbattle you.",
+  "fr": "Je viens rarement ici, mais je te\\ncombattrai."
+ },
+ "RockTunnel_B1F_Text_MarthaPostBattle": {
+  "en": "I like tiny POKéMON.\\nBig ones are too scary!",
+  "fr": "J'aime les petits POKéMON.\\nLes gros font trop peur !"
+ },
+ "RockTunnel_B1F_Text_MonSlowpoke": {
+  "en": "SLOWPOKE: ...Yawn.\\nIt dozes in the cool air.",
+  "fr": "RAMOLOSS : …Bâillement.\\nIl somnole dans l'air frais."
+ },
+ "RockTunnel_B1F_Text_SofiaDefeat": {
+  "en": "Ohhh!\\nI did my best!",
+  "fr": "Ohhh !\\nJ'ai fait de mon mieux !"
+ },
+ "RockTunnel_B1F_Text_SofiaIntro": {
+  "en": "Do you know how you can avoid\\ngetting lost in the mountains?\\pYou can bend twigs as trail\\nmarkers.",
+  "fr": "Sais-tu comment éviter de te perdre\\nen montagne ?\\pTu peux plier des brindilles comme\\nrepères de sentier."
+ },
+ "RockTunnel_B1F_Text_SofiaPostBattle": {
+  "en": "I want to go home!",
+  "fr": "Je veux rentrer à la maison !"
+ },
+ "RockTunnel_B1F_Text_SteveDefeat": {
+  "en": "Well, that's that.",
+  "fr": "Eh bien, voilà."
+ },
+ "RockTunnel_B1F_Text_SteveIntro": {
+  "en": "Um… Do you know about POKéMON\\ncosplay?",
+  "fr": "Euh… Tu connais le cosplay\\nPOKéMON ?"
+ },
+ "RockTunnel_B1F_Text_StevePostBattle": {
+  "en": "POKéMON cosplay is dressing up as\\nPOKéMON for fun.\\pCLEFAIRY is a favorite.",
+  "fr": "Le cosplay POKéMON, c'est se\\ndéguiser en POKéMON pour s'amuser.\\pMÉLOFÉE est un favori."
+ },
+ "RockTunnel_B1F_Text_WinstonDefeat": {
+  "en": "Whew…\\nI'm exhausted…",
+  "fr": "Ouf…\\nJe suis épuisé…"
+ },
+ "RockTunnel_B1F_Text_WinstonIntro": {
+  "en": "I draw illustrations of POKéMON\\nwhen I'm home.",
+  "fr": "Je dessine des illustrations de\\nPOKéMON quand je suis chez moi."
+ },
+ "RockTunnel_B1F_Text_WinstonPostBattle": {
+  "en": "I'm an artist, not a fighter.\\nI'll go home to draw.",
+  "fr": "Je suis un artiste, pas un\\ncombattant. Je rentre dessiner."
+ }
+}

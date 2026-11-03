@@ -1,0 +1,46 @@
+{
+ "SafariZone_North_Text_Area2": {
+  "en": "AREA 2",
+  "fr": "ZONE 2"
+ },
+ "SafariZone_North_Text_OnybrisGrunt1Defeat": {
+  "en": "Spotted...",
+  "fr": "Repéré…"
+ },
+ "SafariZone_North_Text_OnybrisGrunt1Intro": {
+  "en": "Stay out of our sight, kid!",
+  "fr": "Reste hors de notre vue !"
+ },
+ "SafariZone_North_Text_OnybrisGrunt1Post": {
+  "en": "SELENE wants the real stone.\\nThe one on show was a fake!",
+  "fr": "SELENE veut la vraie pierre.\\nCelle exposée était un faux !"
+ },
+ "SafariZone_North_Text_OnybrisGrunt2Defeat": {
+  "en": "Impossible!",
+  "fr": "Impossible !"
+ },
+ "SafariZone_North_Text_OnybrisGrunt2Intro": {
+  "en": "You are the one who beat my pals?",
+  "fr": "C'est toi qui as battu mes potes ?"
+ },
+ "SafariZone_North_Text_OnybrisGrunt2Post": {
+  "en": "The WARDEN's gold teeth are the\\nkey. SELENE keeps them.\\pOnce the stones are together, the\\nworld will… never mind. Forget it!",
+  "fr": "Les dents en or du GARDIEN sont la\\nclé. SELENE les garde.\\pQuand les pierres seront réunies,\\nle monde va… peu importe. Oublie\\lça !"
+ },
+ "SafariZone_North_Text_RestHouse": {
+  "en": "REST HOUSE",
+  "fr": "MAISON DE REPOS"
+ },
+ "SafariZone_North_Text_SecretHouseStillAhead": {
+  "en": "TRAINER TIPS\\pThe SECRET HOUSE is still ahead.",
+  "fr": "CONSEILS AUX DRESSEURS\\pLa MAISON SECRÈTE est encore\\ndevant."
+ },
+ "SafariZone_North_Text_WinFreeHMFindSecretHouse": {
+  "en": "TRAINER TIPS\\pWin a free HM for finding the\\nSECRET HOUSE.",
+  "fr": "CONSEILS AUX DRESSEURS\\pGagne une CS gratuite en trouvant\\nla MAISON SECRÈTE."
+ },
+ "SafariZone_North_Text_ZigzagThroughTallGrass": {
+  "en": "TRAINER TIPS\\pPOKéMON hide in tall grass.\\pZigzag through grassy areas to\\nflush them out.",
+  "fr": "CONSEILS AUX DRESSEURS\\pLes POKéMON se cachent dans les\\nhautes herbes.\\pZigzague dans les herbes pour les\\ndébusquer."
+ }
+}

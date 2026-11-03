@@ -1,6 +1,70 @@
 {
+ "Route1_Text_AnimalLeaves": {
+  "en": "It calms down, then trots off\\ntoward GRENALUX, tail high.",
+  "fr": "Il se calme, puis trotte vers\\nGRENALUX, la queue haute."
+ },
+ "Route1_Text_AnimalMore": {
+  "en": "Some of the others are still\\nout here. Keep looking.",
+  "fr": "Certains des autres sont encore\\ndehors. Continue de chercher."
+ },
+ "Route1_Text_AnimalsHome": {
+  "en": "That was the last one!\\nAll three strays are safe at home.\\pThe RANCH hands will be glad.",
+  "fr": "C'était le dernier ! Les trois\\négarés sont en sécurité à la\\lmaison.\\pLes palefreniers du RANCH seront\\ncontents."
+ },
+ "Route1_Text_CanJumpFromLedges": {
+  "en": "Notice how the grass changes color\\nas you walk this road?\\pRed near GRENALUX, black and teal\\nnear OPANIHRUM.\\pGrown-ups say the crystals do it.",
+  "fr": "Tu remarques comme l'herbe change\\nde couleur sur cette route ?\\pRouge près de GRENALUX, noire et\\nturquoise près d'OPANIHRUM.\\pLes adultes disent que ce sont les\\ncristaux."
+ },
+ "Route1_Text_ComeSeeUsIfYouNeedPokeBalls": {
+  "en": "Please come see us if you need\\nPOKé BALLS for catching POKéMON.",
+  "fr": "Viens nous voir si tu as besoin de\\nPOKé BALLS pour capturer des\\lPOKéMON."
+ },
+ "Route1_Text_Doduo": {
+  "en": "DODUO: Kwek! Kwek!\\nIt is shaking. Its collar says\\lGRENALUX RANCH.",
+  "fr": "DODUO : Kwek ! Kwek ! Il tremble.\\nSon collier dit RANCH DE GRENALUX."
+ },
+ "Route1_Text_Nidoranf": {
+  "en": "NIDORAN: Kyuu!\\nIt runs to the others, relieved.",
+  "fr": "NIDORAN : Kyuu !\\nIl court vers les autres, soulagé."
+ },
+ "Route1_Text_Nidoranm": {
+  "en": "NIDORAN: Gyuu!\\nIt hid in the grass all night.",
+  "fr": "NIDORAN : Gyuu ! Il s'est caché\\ndans l'herbe toute la nuit."
+ },
+ "Route1_Text_PutPotionAway": {
+  "en": "{PLAYER} put the POTION away in\\nthe BAG's ITEMS POCKET.",
+  "fr": "{PLAYER} a rangé la POTION dans la\\nPOCHE OBJETS du SAC."
+ },
+ "Route1_Text_RQuest_Ask": {
+  "en": "My buddy is hurt! Could you spare 3\\nPOTIONS?",
+  "fr": "Mon copain est blessé ! Pourrais-tu\\ncéder 3 POTIONS ?"
+ },
+ "Route1_Text_RQuest_Done": {
+  "en": "He is up and running again!",
+  "fr": "Il est de nouveau sur pied !"
+ },
  "Route1_Text_RQuest_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route1_Text_RQuest_Ok": {
+  "en": "Thanks! Take these BALLS.",
+  "fr": "Merci ! Prends ces BALLS."
+ },
+ "Route1_Text_RouteSign": {
+  "en": "ROUTE 1\\nGRENALUX - OPANIHRUM",
+  "fr": "ROUTE 1\\nGRENALUX - OPANIHRUM"
+ },
+ "Route1_Text_TimeHint": {
+  "en": "A roadside clock. It says 3:07. It\\nhas said 3:07 all week.",
+  "fr": "Une horloge au bord de la route.\\nElle indique 3h07. Elle indique\\p3h07 toute la semaine."
+ },
+ "Route1_Text_Walker": {
+  "en": "Wild POKéMON hide in the tall grass.\\nSince the AURA, they are not what\\lthey used to be.\\pThat little PIDGEY? Part DARK now.\\nCheck your TYPE MEMO before you\\lfight anything.",
+  "fr": "Les POKéMON sauvages se cachent\\ndans l'herbe haute. Depuis l'AURA,\\lils ne sont plus ce qu'ils étaient.\\pCe petit ROUCOOL ? Un peu TÉNÈBRES\\nmaintenant. Vérifie ton MÉMO DES\\pTYPES avant de te battre contre\\nquoi que ce soit."
+ },
+ "Route1_Text_WorkAtPokeMartTakeSample": {
+  "en": "Hi!\\nI work at a POKéMON MART.\\pIt's part of a convenient chain\\nselling all sorts of items.\\pPlease, visit us in OPANIHRUM.\\pI know, I'll give you a sample.\\nHere you go!",
+  "fr": "Salut ! Je travaille dans une\\nBOUTIQUE POKéMON.\\pElle fait partie d'une chaîne\\npratique qui vend toutes sortes\\ld'objets.\\pViens nous voir à OPANIHRUM.\\pTiens, je vais te donner un\\néchantillon. Voilà !"
  }
 }

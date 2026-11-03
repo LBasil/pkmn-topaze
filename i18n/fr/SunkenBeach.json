@@ -1,18 +1,42 @@
 {
+ "SunkenBeach_Text_Npc0": {
+  "en": "Easy waters. Perfect for a first\\nrod.",
+  "fr": "Eaux calmes. Parfait pour une\\npremière canne."
+ },
+ "SunkenBeach_Text_Npc1": {
+  "en": "I found a pretty shell here\\nyesterday!",
+  "fr": "J'ai trouvé un joli coquillage ici\\nhier !"
+ },
+ "SunkenBeach_Text_Quest0_AfterT": {
+  "en": "Shells everywhere!",
+  "fr": "Des coquillages partout !"
+ },
+ "SunkenBeach_Text_Quest0_Ask": {
+  "en": "I love shiny things. Bring a HEART\\nSCALE, get a SHELL BELL!",
+  "fr": "J'aime les choses brillantes.\\nApporte une ÉCAILLE CŒUR, reçois\\lune CLOCHE COQUE !"
+ },
+ "SunkenBeach_Text_Quest0_Done": {
+  "en": "So pretty! Take this SHELL BELL.",
+  "fr": "Si joli ! Prends cette CLOCHE\\nCOQUE."
+ },
+ "SunkenBeach_Text_Quest0_MissT": {
+  "en": "One HEART SCALE, please.",
+  "fr": "Une ÉCAILLE CŒUR, s'il te plaît."
+ },
  "SunkenBeach_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "SunkenBeach_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "SunkenBeach_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "SunkenBeach_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

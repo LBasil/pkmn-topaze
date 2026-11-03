@@ -1,0 +1,66 @@
+{
+ "TwoIsland_CapeBrink_EmberDen_Text_GuardsLeft": {
+  "en": "The beast does not stir.\\nIts guardians still stand watch.",
+  "fr": "La bête ne bouge pas.\\nSes gardiens veillent toujours."
+ },
+ "TwoIsland_CapeBrink_EmberDen_Text_T0Defeat": {
+  "en": "Burnt out...",
+  "fr": "Consumé…"
+ },
+ "TwoIsland_CapeBrink_EmberDen_Text_T0Intro": {
+  "en": "The EMBER hall is closed to\\nstrangers.",
+  "fr": "La salle de BRAISE est fermée aux\\nétrangers."
+ },
+ "TwoIsland_CapeBrink_EmberDen_Text_T0Post": {
+  "en": "Deeper in, the heat is worse.",
+  "fr": "Plus profond, la chaleur est pire."
+ },
+ "TwoIsland_CapeBrink_EmberDen_Text_T1Defeat": {
+  "en": "The flame flickers.",
+  "fr": "La flamme vacille."
+ },
+ "TwoIsland_CapeBrink_EmberDen_Text_T1Intro": {
+  "en": "Our flame never dies, and neither\\ndo we!",
+  "fr": "Notre flamme ne s'éteint jamais, et\\nnous non plus !"
+ },
+ "TwoIsland_CapeBrink_EmberDen_Text_T1Post": {
+  "en": "The ORACLE keeps the last room.",
+  "fr": "L'ORACLE garde la dernière salle."
+ },
+ "TwoIsland_CapeBrink_EmberDen_Text_T2Defeat": {
+  "en": "Warmth fades...",
+  "fr": "La chaleur s'éteint…"
+ },
+ "TwoIsland_CapeBrink_EmberDen_Text_T2Intro": {
+  "en": "The beast gave us warmth when\\nthe sky turned cold.",
+  "fr": "La bête nous a donné de la chaleur\\nquand le ciel s'est refroidi."
+ },
+ "TwoIsland_CapeBrink_EmberDen_Text_T2Post": {
+  "en": "Mind the lava. It is hungry.",
+  "fr": "Attention à la lave. Elle a faim."
+ },
+ "TwoIsland_CapeBrink_EmberDen_Text_T3Defeat": {
+  "en": "Only ash remains.",
+  "fr": "Il ne reste que des cendres."
+ },
+ "TwoIsland_CapeBrink_EmberDen_Text_T3Intro": {
+  "en": "You smell of rain. Leave, or\\nburn!",
+  "fr": "Tu sens la pluie. Pars, ou brûle !"
+ },
+ "TwoIsland_CapeBrink_EmberDen_Text_T3Post": {
+  "en": "The ORACLE is waiting.",
+  "fr": "L'ORACLE attend."
+ },
+ "TwoIsland_CapeBrink_EmberDen_Text_T4Defeat": {
+  "en": "...Then the flame has chosen you.",
+  "fr": "…Alors la flamme t'a choisi."
+ },
+ "TwoIsland_CapeBrink_EmberDen_Text_T4Intro": {
+  "en": "I am the ORACLE of the EMBER.\\nThe beast sleeps in my care.\\pProve that your fire is worth\\nmore than my fear.",
+  "fr": "Je suis l'ORACLE de la BRAISE.\\nLa bête dort sous ma garde.\\pProuve que ton feu vaut plus que\\nma peur."
+ },
+ "TwoIsland_CapeBrink_EmberDen_Text_T4Post": {
+  "en": "Go. Keep it burning.",
+  "fr": "Va. Garde-la allumée."
+ }
+}

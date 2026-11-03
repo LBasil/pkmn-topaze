@@ -1,18 +1,42 @@
 {
+ "MirrorLabyrinth_Text_Npc0": {
+  "en": "WYNAUT never attacks first. It\\nwaits.",
+  "fr": "OKÉOKÉ n'attaque jamais en premier.\\nIl attend."
+ },
+ "MirrorLabyrinth_Text_Npc1": {
+  "en": "LUVDISC means love in the sea!",
+  "fr": "LOVDISC signifie l'amour dans la\\nmer !"
+ },
+ "MirrorLabyrinth_Text_Quest0_AfterT": {
+  "en": "So pretty!",
+  "fr": "Si joli !"
+ },
+ "MirrorLabyrinth_Text_Quest0_Ask": {
+  "en": "A WATER STONE shines like a mirror.\\nTrade for a MIRACLE SEED?",
+  "fr": "Une PIERRE EAU brille comme un\\nmiroir. Échange contre une GRAINE\\lMIRACLE ?"
+ },
+ "MirrorLabyrinth_Text_Quest0_Done": {
+  "en": "Sparkly! Take this MIRACLE SEED.",
+  "fr": "Étincelant ! Prends cette GRAINE\\nMIRACLE."
+ },
+ "MirrorLabyrinth_Text_Quest0_MissT": {
+  "en": "One WATER STONE, please.",
+  "fr": "Une PIERRE EAU, s'il vous plaît."
+ },
  "MirrorLabyrinth_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "MirrorLabyrinth_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "MirrorLabyrinth_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "MirrorLabyrinth_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

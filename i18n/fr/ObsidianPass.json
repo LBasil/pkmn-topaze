@@ -1,18 +1,42 @@
 {
+ "ObsidianPass_Text_Npc0": {
+  "en": "STEELIX digs through this like\\nbutter.",
+  "fr": "STEELIX creuse là-dedans comme dans\\ndu beurre."
+ },
+ "ObsidianPass_Text_Npc1": {
+  "en": "Rock hard. My head too.",
+  "fr": "Dur comme la pierre. Ma tête aussi."
+ },
+ "ObsidianPass_Text_Quest0_AfterT": {
+  "en": "Stay strong.",
+  "fr": "Reste fort."
+ },
+ "ObsidianPass_Text_Quest0_Ask": {
+  "en": "A MAX REPEL for the walk home. HARD\\nSTONE for you.",
+  "fr": "Un MAX REPOUSSE pour le chemin du\\nretour. Une PIERRE DURE pour toi."
+ },
+ "ObsidianPass_Text_Quest0_Done": {
+  "en": "Thanks! Take this HARD STONE.",
+  "fr": "Merci ! Prends cette PIERRE DURE."
+ },
+ "ObsidianPass_Text_Quest0_MissT": {
+  "en": "One MAX REPEL, please.",
+  "fr": "Un MAX REPOUSSE, s'il vous plaît."
+ },
  "ObsidianPass_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "ObsidianPass_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "ObsidianPass_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "ObsidianPass_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

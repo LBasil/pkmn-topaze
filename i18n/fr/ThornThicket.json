@@ -1,18 +1,42 @@
 {
+ "ThornThicket_Text_Npc0": {
+  "en": "HERACROSS and PINSIR live here.\\nBring a good ball!",
+  "fr": "SCARHINO et SCARABRUTE vivent ici.\\nApporte une bonne ball !"
+ },
+ "ThornThicket_Text_Npc1": {
+  "en": "SCYTHER and SHUCKLE are shy, but\\nworth the wait.",
+  "fr": "INSÉCATEUR et CARATROC sont\\ntimides, mais valent l'attente."
+ },
+ "ThornThicket_Text_Quest0_AfterT": {
+  "en": "No more bugs on my sandwich.",
+  "fr": "Plus d'insectes sur mon sandwich."
+ },
+ "ThornThicket_Text_Quest0_Ask": {
+  "en": "Bugs keep eating my lunch. Bring 2\\nREPELs and I pay you!",
+  "fr": "Les insectes mangent sans cesse mon\\ndéjeuner. Apporte 2 REPOUSSES et je\\lte paie !"
+ },
+ "ThornThicket_Text_Quest0_Done": {
+  "en": "Peace at last! Take this SILVER\\nPOWDER.",
+  "fr": "Enfin la paix ! Prends cette POUDRE\\nARGENT."
+ },
+ "ThornThicket_Text_Quest0_MissT": {
+  "en": "Two REPELs, please.",
+  "fr": "Deux REPOUSSES, s'il te plaît."
+ },
  "ThornThicket_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "ThornThicket_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "ThornThicket_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "ThornThicket_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

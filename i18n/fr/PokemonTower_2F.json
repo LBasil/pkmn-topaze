@@ -1,0 +1,18 @@
+{
+ "PokemonTower_2F_Text_RivalDefeat": {
+  "en": "What?\\nYou stinker!\\pI took it easy on you, too!",
+  "fr": "Quoi ?\\nSale type !\\pJe t'avais ménagé, moi aussi !"
+ },
+ "PokemonTower_2F_Text_RivalIntro": {
+  "en": "{RIVAL}: Hey, {PLAYER}!\\nWhat brings you here?\\lIs your POKéMON dead?\\pHey! It's alive!\\pI can at least make them faint!\\nLet's go!",
+  "fr": "{RIVAL} : Hé, {PLAYER} ! Qu'est-ce\\nqui t'amène ici ? Ton POKéMON est\\lmort ?\\pHé ! Il est vivant !\\pJe peux au moins les faire\\ns'évanouir ! Allons-y !"
+ },
+ "PokemonTower_2F_Text_RivalPostBattle": {
+  "en": "{RIVAL}: I lost them!\\pI tracked those guys in black to\\nthis tower, and then... nothing.\\pNot a trace. They could be anywhere,\\nso watch your back up there.\\pI'm going to search the town again.\\nSmell ya later!",
+  "fr": "{RIVAL} : Je les ai perdus !\\pJ'ai suivi ces types en noir\\njusqu'à cette tour, et puis…\\prien.\\pPas une trace. Ils peuvent être\\nn'importe où, alors fais attention\\llà-haut.\\pJe vais fouiller la ville encore. À\\nplus tard !"
+ },
+ "PokemonTower_2F_Text_SilphScopeCouldUnmaskGhosts": {
+  "en": "The dead have been restless since\\nthe thieves came.\\pEven we cannot calm the wayward\\nghosts. Be careful up there.",
+  "fr": "Les morts sont agités depuis que\\nles voleurs sont venus.\\pMême nous ne pouvons calmer les\\nfantômes égarés. Sois prudent\\llà-haut."
+ }
+}

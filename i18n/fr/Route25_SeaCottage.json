@@ -1,0 +1,62 @@
+{
+ "Route25_SeaCottage_Text_AbandonedPC": {
+  "en": "The screen is dead. A note says:\\nGone to the islands. - BILL",
+  "fr": "L'écran est éteint. Une note dit :\\nParti aux îles. - BILL"
+ },
+ "Route25_SeaCottage_Text_FoundSSTicket": {
+  "en": "{PLAYER} got an S.S. TICKET\\nfrom the TEAM ONYBRIS GRUNT!",
+  "fr": "{PLAYER} a reçu un TICKET S.S.\\ndu SBIRE de la TEAM ONYBRIS !"
+ },
+ "Route25_SeaCottage_Text_GruntADefeat": {
+  "en": "No way! I lost!",
+  "fr": "Pas possible ! J'ai perdu !"
+ },
+ "Route25_SeaCottage_Text_GruntADrops": {
+  "en": "GRUNT: Argh! Take this stupid\\npass! The boss wanted it for the\\pship, but I'm done with this job!",
+  "fr": "SBIRE : Argh ! Prends ce satané\\npass ! Le boss le voulait pour le\\lbateau, mais j'en ai fini avec ce\\nboulot !"
+ },
+ "Route25_SeaCottage_Text_GruntAIntro": {
+  "en": "GRUNT: You think you can beat me\\non your own, kid?",
+  "fr": "SBIRE : Tu crois pouvoir me battre\\ntout seul ?"
+ },
+ "Route25_SeaCottage_Text_GruntBDown": {
+  "en": "GRUNT: Gaah! Washed out!\\nI'm not staying for this!",
+  "fr": "SBIRE : Gaah ! Lessivé !\\nJe ne reste pas pour ça !"
+ },
+ "Route25_SeaCottage_Text_GruntsAppear": {
+  "en": "GRUNT: Tch! How did you find us?\\pGRUNT: The boss said nobody would\\nlook in this dump!",
+  "fr": "SBIRE : Tch ! Comment nous as-tu\\ntrouvés ?\\pSBIRE : Le boss disait que personne\\nne viendrait dans ce trou !"
+ },
+ "Route25_SeaCottage_Text_MistyBattle": {
+  "en": "MISTY: STARMIE, go!\\nHit him with WATER GUN!",
+  "fr": "MISTY : STAROSS, go !\\nFrappe-le avec PISTOLET À O !"
+ },
+ "Route25_SeaCottage_Text_MistyBye": {
+  "en": "MISTY: The tide always comes back.\\nSo do I. Take care, {PLAYER}.",
+  "fr": "MISTY : La marée revient toujours.\\nMoi aussi. Prends soin de toi,\\l{PLAYER}."
+ },
+ "Route25_SeaCottage_Text_MistyEnd1": {
+  "en": "MISTY: I watched the sky go quiet\\non the day you let JIRACHI go.\\pA wish is lighter when it is\\ngiven away. Take this, it's from\\lthe cold water where I grew up.",
+  "fr": "MISTY : J'ai vu le ciel se taire le\\njour où tu as laissé partir\\lJIRACHI.\\pUn vœu est plus léger quand on le\\ndonne. Prends ça, il vient de l'eau\\lfroide où j'ai grandi."
+ },
+ "Route25_SeaCottage_Text_MistyEnd2": {
+  "en": "MISTY: No more POKé BALLS. My\\nWATER POKéMON laugh about it.\\pNobody is a trophy now. Good.\\nKeep these ready, you will need\\lthem for the Park.",
+  "fr": "MISTY : Plus de POKé BALLS. Mes\\nPOKéMON EAU en rient.\\pPlus personne n'est un trophée.\\nBien. Garde-les prêts, tu en auras\\lbesoin pour le Parc."
+ },
+ "Route25_SeaCottage_Text_MistyEnd3": {
+  "en": "MISTY: You hold the six legends.\\nI do not know whether to cheer.\\pPower asks for care. Take these\\nand use them for your friends,\\lnot for yourself.",
+  "fr": "MISTY : Tu possèdes les six\\nlégendes. Je ne sais pas s'il faut\\lse réjouir.\\pLa puissance demande des égards.\\nPrends ça et utilise-le pour tes\\lamis, pas pour toi."
+ },
+ "Route25_SeaCottage_Text_MistyFarewell": {
+  "en": "MISTY: Nice work. You have guts.\\pYou really do remind me of a\\nfriend of mine. He would have\\pcharged in just the same.\\pThe S.S. ANNE docks at APATIA.\\nI'll see you around. Good luck!",
+  "fr": "MISTY : Beau travail. Tu as du\\ncran.\\pTu me rappelles vraiment un ami à\\nmoi. Il aurait foncé de la même\\lfaçon.\\pLe S.S. ANNE accoste à APATIA. À\\nbientôt. Bonne chance !"
+ },
+ "Route25_SeaCottage_Text_MistySplit": {
+  "en": "MISTY: I'll take the one on the\\nright. You take the left!",
+  "fr": "MISTY : Je prends celui de droite.\\nToi, celui de gauche !"
+ },
+ "Route25_SeaCottage_Text_MistyWhisper": {
+  "en": "MISTY: Careful. I can hear them\\nbreathing behind those machines.",
+  "fr": "MISTY : Prudence. Je les entends\\nrespirer derrière ces machines."
+ }
+}

@@ -1,6 +1,22 @@
 {
+ "Route7_Text_RQuest_Ask": {
+  "en": "I played with fire. I need 2 BURN\\nHEALS!",
+  "fr": "J'ai joué avec le feu. J'ai besoin\\nde 2 ANTI-BRÛLE !"
+ },
+ "Route7_Text_RQuest_Done": {
+  "en": "No more burns. Promise.",
+  "fr": "Plus de brûlures. Promis."
+ },
  "Route7_Text_RQuest_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route7_Text_RQuest_Ok": {
+  "en": "Phew! This is for you.",
+  "fr": "Ouf ! C'est pour toi."
+ },
+ "Route7_Text_UndergroundPathSign": {
+  "en": "UNDERGROUND PATH\\nBOURG QUARTZ - SPINELLIA",
+  "fr": "CHEMIN SOUTERRAIN\\nBOURG QUARTZ - SPINELLIA"
  }
 }

@@ -1,14 +1,38 @@
 {
+ "DuneSea_Text_Npc0": {
+  "en": "Water is gold here. Watch your\\nsupplies.",
+  "fr": "L'eau est de l'or ici. Surveille\\ntes provisions."
+ },
+ "DuneSea_Text_Npc1": {
+  "en": "TRAPINCH waits in a pit. Do not\\nfall in.",
+  "fr": "KRAKNOIX attend dans un trou.\\nNe tombe pas dedans."
+ },
+ "DuneSea_Text_Quest0_AfterT": {
+  "en": "The dunes sing for you.",
+  "fr": "Les dunes chantent pour toi."
+ },
+ "DuneSea_Text_Quest0_Ask": {
+  "en": "Two FRESH WATERs and I will give\\nyou the sand that sings.",
+  "fr": "Deux EAUX FRAÎCHES et je te donne\\nle sable qui chante."
+ },
+ "DuneSea_Text_Quest0_Done": {
+  "en": "Water! Take this SOFT SAND.",
+  "fr": "De l'eau ! Prends ce SABLE DOUX."
+ },
+ "DuneSea_Text_Quest0_MissT": {
+  "en": "Two FRESH WATERs, please. The cafe\\nsells them.",
+  "fr": "Deux EAUX FRAÎCHES, s'il vous\\nplaît. Le café en vend."
+ },
  "DuneSea_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "DuneSea_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "DuneSea_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

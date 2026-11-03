@@ -1,18 +1,42 @@
 {
+ "PebbleBeach_Text_Npc0": {
+  "en": "I collect round pebbles. Want one?\\nNo.",
+  "fr": "Je collectionne les galets ronds.\\nTu en veux un ? Non."
+ },
+ "PebbleBeach_Text_Npc1": {
+  "en": "The waves bring something new every\\nday.",
+  "fr": "Les vagues apportent du nouveau\\nchaque jour."
+ },
+ "PebbleBeach_Text_Quest0_AfterT": {
+  "en": "My bucket is full.",
+  "fr": "Mon seau est plein."
+ },
+ "PebbleBeach_Text_Quest0_Ask": {
+  "en": "A POKé BALL for my bucket! I trade\\na NET BALL.",
+  "fr": "Une POKé BALL pour mon seau !\\nJ'échange une FILET BALL."
+ },
+ "PebbleBeach_Text_Quest0_Done": {
+  "en": "Cool! Take this NET BALL.",
+  "fr": "Cool ! Prends cette FILET BALL."
+ },
+ "PebbleBeach_Text_Quest0_MissT": {
+  "en": "One POKé BALL, please.",
+  "fr": "Une POKé BALL, s'il vous plaît."
+ },
  "PebbleBeach_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "PebbleBeach_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "PebbleBeach_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "PebbleBeach_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

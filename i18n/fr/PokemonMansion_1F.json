@@ -1,0 +1,50 @@
+{
+ "PokemonMansion_1F_Text_JohnsonDefeat": {
+  "en": "Tch!\\nI can't get any wins.",
+  "fr": "Tch !\\nJe n'arrive pas à gagner."
+ },
+ "PokemonMansion_1F_Text_JohnsonIntro": {
+  "en": "W-w-waah! You startled me!\\nI thought you were ONYBRIS.",
+  "fr": "W-w-waah ! Tu m'as fait peur !\\nJe croyais que tu étais d'ONYBRIS."
+ },
+ "PokemonMansion_1F_Text_JohnsonPostBattle": {
+  "en": "I came to see the turbines.\\nNow there are thugs everywhere.\\pI ought to leave while I can.",
+  "fr": "Je suis venu voir les turbines.\\nMaintenant il y a des brutes\\lpartout.\\pJe ferais mieux de partir tant que\\nje peux."
+ },
+ "PokemonMansion_1F_Text_Onybris1Defeat": {
+  "en": "Zzzapped…",
+  "fr": "Électrocuté…"
+ },
+ "PokemonMansion_1F_Text_Onybris1Intro": {
+  "en": "The PLANT is ours now, kid!",
+  "fr": "La CENTRALE est à nous maintenant !"
+ },
+ "PokemonMansion_1F_Text_Onybris1Post": {
+  "en": "SELENE is at the transformers.\\nGo and get crushed!",
+  "fr": "SELENE est aux transformateurs.\\nVa te faire écraser !"
+ },
+ "PokemonMansion_1F_Text_Onybris2Defeat": {
+  "en": "Overloaded…",
+  "fr": "Surchargé…"
+ },
+ "PokemonMansion_1F_Text_Onybris2Intro": {
+  "en": "No visitors in the turbine hall!",
+  "fr": "Pas de visiteurs dans la salle des\\nturbines !"
+ },
+ "PokemonMansion_1F_Text_Onybris2Post": {
+  "en": "The MAYOR opened every door for\\nus. Smart man.",
+  "fr": "Le MAIRE nous a ouvert toutes les\\nportes. Un homme malin."
+ },
+ "PokemonMansion_1F_Text_TedDefeat": {
+  "en": "Ouch!",
+  "fr": "Aïe !"
+ },
+ "PokemonMansion_1F_Text_TedIntro": {
+  "en": "Who are you?\\nThere shouldn't be anyone here.",
+  "fr": "Qui es-tu ?\\nIl ne devrait y avoir personne ici."
+ },
+ "PokemonMansion_1F_Text_TedPostBattle": {
+  "en": "A key? I don't know what you're\\ntalking about.",
+  "fr": "Une clé ? Je ne vois pas de quoi\\ntu parles."
+ }
+}

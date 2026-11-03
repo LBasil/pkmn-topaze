@@ -1,14 +1,34 @@
 {
+ "EchoGarden_Text_Boss_After": {
+  "en": "Come back in spring. Or any time.\\nIt is always spring here.",
+  "fr": "Reviens au printemps. Ou n'importe\\nquand. C'est toujours le printemps\\lici."
+ },
+ "EchoGarden_Text_Boss_Defeat": {
+  "en": "Oh! The flowers are cheering for\\nyou.",
+  "fr": "Oh ! Les fleurs t'acclament."
+ },
+ "EchoGarden_Text_Boss_Intro": {
+  "en": "Every flower here grew from an\\nECHO. Please do not trample them.\\pBattle me instead!",
+  "fr": "Chaque fleur ici est née d'un ÉCHO.\\nS'il te plaît, ne les piétine pas.\\pBats-toi contre moi plutôt !"
+ },
  "EchoGarden_Text_Boss_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "EchoGarden_Text_Npc0": {
+  "en": "These seeds fell from ECHOES. I\\nwater them with sea air.",
+  "fr": "Ces graines sont tombées des ÉCHOS.\\nJe les arrose avec l'air marin."
+ },
+ "EchoGarden_Text_Npc1": {
+  "en": "Do not pick the blue ones. They\\nremember too much.",
+  "fr": "Ne cueille pas les bleues. Elles\\nse souviennent trop."
  },
  "EchoGarden_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "EchoGarden_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

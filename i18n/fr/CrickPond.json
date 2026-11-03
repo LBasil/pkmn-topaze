@@ -1,10 +1,18 @@
 {
+ "CrickPond_Text_Npc0": {
+  "en": "I heard a splash. Then nothing.\\nSpooky.",
+  "fr": "J'ai entendu un plouf. Puis plus\\nrien. Sinistre."
+ },
+ "CrickPond_Text_Npc1": {
+  "en": "MARILL floats like a ball. Cute.",
+  "fr": "MARILL flotte comme une balle.\\nMignon."
+ },
  "CrickPond_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "CrickPond_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

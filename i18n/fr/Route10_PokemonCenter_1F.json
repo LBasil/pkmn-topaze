@@ -1,0 +1,30 @@
+{
+ "Route10_PokemonCenter_1F_Text_EveryTypeStrongerThanOthers": {
+  "en": "The types of POKéMON match up\\ndifferently with each other.\\pEvery type is stronger than some\\ntypes and weaker than others.",
+  "fr": "Les types de POKéMON s'affrontent\\ndifféremment les uns aux autres.\\pChaque type est plus fort que\\ncertains types et plus faible que\\ld'autres."
+ },
+ "Route10_PokemonCenter_1F_Text_ExplainEverstone": {
+  "en": "Making POKéMON evolve certainly\\ncan add to the POKéDEX.\\pHowever, at times, you may not\\nwant a certain POKéMON to evolve.\\pIn that case, give the EVERSTONE\\nto that POKéMON.\\pIt will prevent evolution according\\nto the PROFESSOR.",
+  "fr": "Faire évoluer des POKéMON peut\\ncertes enrichir le POKéDEX.\\pCependant, parfois, tu ne voudras\\npas qu'un certain POKéMON évolue.\\pDans ce cas, donne la PIERRE\\nÉTERNITÉ à ce POKéMON.\\pElle empêche l'évolution, selon le\\nPROFESSEUR."
+ },
+ "Route10_PokemonCenter_1F_Text_GiveEverstoneIfCaught20Mons": {
+  "en": "Oh… {PLAYER}!\\nI've been looking for you!\\pIt's me, one of the ever-present\\nAIDES to PROF. OAK.\\pIf your POKéDEX has complete data\\non twenty species, I'm supposed to\\lgive you a reward from PROF. OAK.\\pHe entrusted me with this\\nEVERSTONE.\\pSo, {PLAYER}, let me ask you.\\pHave you gathered data on at least\\ntwenty kinds of POKéMON?",
+  "fr": "Oh… {PLAYER} ! Je te cherchais !\\pC'est moi, l'un des ASSISTANTS\\ntoujours présents du PROF. CHEN.\\pSi ton POKéDEX a des données\\ncomplètes sur vingt espèces, je\\ldois te donner une récompense du\\nPROF. CHEN.\\pIl m'a confié cette PIERRE\\nÉTERNITÉ.\\pAlors, {PLAYER}, laisse-moi te\\ndemander.\\pAs-tu rassemblé des données sur au\\nmoins vingt espèces de POKéMON ?"
+ },
+ "Route10_PokemonCenter_1F_Text_GreatHereYouGo": {
+  "en": "Great! You have caught or owned\\n{STR_VAR_3} kinds of POKéMON!\\pCongratulations!\\nHere you go!",
+  "fr": "Super ! Tu as capturé ou possédé\\n{STR_VAR_3} espèces de POKéMON !\\pFélicitations !\\nVoilà !"
+ },
+ "Route10_PokemonCenter_1F_Text_HeardGhostsHauntLavender": {
+  "en": "I heard that ghosts haunt\\nSPINELLIA.",
+  "fr": "J'ai entendu dire que des fantômes\\nhantent SPINELLIA."
+ },
+ "Route10_PokemonCenter_1F_Text_NuggetUselessSoldFor5000": {
+  "en": "A NUGGET is totally useless.\\nSo I sold it for ¥5000.",
+  "fr": "Une PÉPITE est totalement inutile.\\nAlors je l'ai vendue 5000 ¥."
+ },
+ "Route10_PokemonCenter_1F_Text_ReceivedEverstoneFromAide": {
+  "en": "{PLAYER} received the EVERSTONE\\nfrom the AIDE.",
+  "fr": "{PLAYER} a reçu la PIERRE ÉTERNITÉ\\nde l'ASSISTANT."
+ }
+}

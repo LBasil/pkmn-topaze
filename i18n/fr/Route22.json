@@ -1,0 +1,58 @@
+{
+ "Route22_Text_EarlyRivalDefeat": {
+  "en": "Awww!\\nYou just lucked out!",
+  "fr": "Awww !\\nTu as eu de la chance !"
+ },
+ "Route22_Text_EarlyRivalIntro": {
+  "en": "{RIVAL}: Hey! {PLAYER}!\\pYou're off to the POKéMON LEAGUE?\\nForget about it!\\pYou probably don't have any\\nBADGES, do you?\\pThe guard won't let you through\\nwithout them.\\pBy the way, did your POKéMON get\\nany stronger?",
+  "fr": "{RIVAL} : Hé ! {PLAYER} !\\pTu vas à la LIGUE POKéMON ?\\nOublie ça !\\pTu n'as sûrement aucun BADGE, non ?\\pLe garde ne te laissera pas passer\\nsans eux.\\pAu fait, tes POKéMON sont-ils\\ndevenus plus forts ?"
+ },
+ "Route22_Text_EarlyRivalPostBattle": {
+  "en": "I heard the POKéMON LEAGUE is\\ncrawling with tough TRAINERS.\\pI have to figure out how to get\\npast them.\\pYou should quit dawdling and get a\\nmove on!",
+  "fr": "J'ai entendu dire que la LIGUE\\nPOKéMON grouille de DRESSEURS\\lcoriaces.\\pJe dois trouver comment les\\ndépasser.\\pTu devrais arrêter de traîner et te\\nmagner !"
+ },
+ "Route22_Text_LateRivalDefeat": {
+  "en": "What!?\\pI was just careless, you!",
+  "fr": "Quoi !?\\pJ'ai juste été imprudent, toi !"
+ },
+ "Route22_Text_LateRivalIntro": {
+  "en": "{RIVAL}: What? {PLAYER}!\\nWhat a surprise to see you here!\\pSo you're going to the POKéMON\\nLEAGUE?\\pYou collected all the BADGES, too?\\nThat's cool!\\pThen I'll whip you, {PLAYER}, as a\\nwarm-up for the POKéMON LEAGUE!\\pCome on!",
+  "fr": "{RIVAL} : Quoi ? {PLAYER} ! Quelle\\nsurprise de te voir ici !\\pAlors tu vas à la LIGUE POKéMON ?\\pTu as aussi tous les BADGES ?\\nCool !\\pAlors je te bats, {PLAYER}, en guise\\nd'échauffement pour la LIGUE\\lPOKéMON !\\pAllez, viens !"
+ },
+ "Route22_Text_LateRivalPostBattle": {
+  "en": "That loosened me up.\\nI'm ready for the POKéMON LEAGUE!\\p{PLAYER}, you need more practice.\\pBut hey, you know that!\\nI'm out of here. Smell ya!",
+  "fr": "Ça m'a détendu. Je suis prêt pour\\nla LIGUE POKéMON !\\p{PLAYER}, tu as besoin de\\nt'entraîner.\\pMais bon, tu le sais !\\nJe m'en vais. À plus !"
+ },
+ "Route22_Text_LeagueGateSign": {
+  "en": "POKéMON LEAGUE\\nFront Gate",
+  "fr": "LIGUE POKéMON\\nPortail d'entrée"
+ },
+ "Route22_Text_ProcheVincent_After": {
+  "en": "Stay shocking, {PLAYER}!",
+  "fr": "Reste électrisant, {PLAYER} !"
+ },
+ "Route22_Text_ProcheVincent_Defeat": {
+  "en": "Lights out... for me.",
+  "fr": "Lumière éteinte… pour moi."
+ },
+ "Route22_Text_ProcheVincent_Early": {
+  "en": "Not yet, {PLAYER}. Finish your\\njourney first, then come and find\\pme.",
+  "fr": "Pas encore, {PLAYER}. Termine\\nd'abord ton voyage, puis viens me\\ltrouver."
+ },
+ "Route22_Text_ProcheVincent_Intro": {
+  "en": "Whoa, {PLAYER}! You look charged up.\\nLet us see whose spark is brighter!",
+  "fr": "Whoa, {PLAYER} ! Tu as l'air chargé.\\nVoyons dont l'étincelle est la plus\\lvive !"
+ },
+ "Route22_Text_ProcheVincent_NoRoom": {
+  "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reparle-moi."
+ },
+ "Route22_Text_ProcheVincent_Win": {
+  "en": "Plug this in. It will serve you\\nwell.",
+  "fr": "Branche ça. Ça te servira bien."
+ },
+ "Route22_Text_TimeHint": {
+  "en": "A cracked hourglass. The sand falls\\nup.",
+  "fr": "Un sablier fêlé. Le sable remonte."
+ }
+}

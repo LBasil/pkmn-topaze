@@ -1,6 +1,58 @@
 {
+ "RocketHideout_B4F_Text_FoundRocketLedger": {
+  "en": "{PLAYER} searched VESPER's desk.\\pUnder a stack of vouchers lay a\\nbattered case: the POKé FLUTE,\\lstolen from MR. FUJI!",
+  "fr": "{PLAYER} a fouillé le bureau de\\nVESPER.\\pSous une pile de bons gisait une\\nvalise cabossée : la FLÛTE POKé,\\lvolée à M. FUJI !"
+ },
+ "RocketHideout_B4F_Text_GiovanniDefeat": {
+  "en": "Impossible...!",
+  "fr": "Impossible… !"
+ },
+ "RocketHideout_B4F_Text_GiovanniIntro": {
+  "en": "VESPER: So you are the brat who\\nkeeps wrecking my plans.\\pROCKET left this base to rot. I\\nonly took what was worth taking:\\lthe vault, and this office.\\pNow, scram!",
+  "fr": "VESPER : Alors c'est toi le gamin\\nqui gâche sans cesse mes plans.\\pROCKET a laissé cette base pourrir.\\nJe n'ai pris que ce qui valait la\\lpeine : la chambre forte, et ce\\nbureau.\\pMaintenant, dégage !"
+ },
+ "RocketHideout_B4F_Text_GiovanniPostBattle": {
+  "en": "VESPER: Hmph. You beat me...\\nin a fight. Fights are for fools.\\pI have the QUARTZ in my pocket.\\nThe boss wants ten stones. Ten!\\pDo not ask me why. I only collect.\\pLet us settle it like adults: at my\\ntable in the GAME CORNER, upstairs.\\pWin, and you keep it. Lose, and it\\nis mine. Come, if you dare!",
+  "fr": "VESPER : Hmph. Tu m'as battu… au\\ncombat. Les combats sont pour les\\lfous.\\pJ'ai le QUARTZ dans ma poche. Le\\nboss veut dix pierres. Dix !\\pNe me demande pas pourquoi. Je ne\\nfais que collectionner.\\pRéglons ça en adultes : à ma table\\ndu CASINO, à l'étage.\\pGagne, et tu le gardes. Perds, et\\nil est à moi. Viens, si tu l'oses !"
+ },
  "RocketHideout_B4F_Text_Grunt1Defeat": {
-  "fr": "Non !",
-  "en": "No!"
+  "en": "No!",
+  "fr": "Non !"
+ },
+ "RocketHideout_B4F_Text_Grunt1Intro": {
+  "en": "The elevator doesn't work?\\nROCKET's old key has vanished!",
+  "fr": "L'ascenseur ne marche pas ? La\\nvieille clé de ROCKET a disparu !"
+ },
+ "RocketHideout_B4F_Text_Grunt1PostBattle": {
+  "en": "Oh, no!\\nI dropped the LIFT KEY!",
+  "fr": "Oh non ! J'ai laissé tomber la CLÉ\\nDE L'ASCENSEUR !"
+ },
+ "RocketHideout_B4F_Text_Grunt2Defeat": {
+  "en": "Burned again!",
+  "fr": "Encore brûlé !"
+ },
+ "RocketHideout_B4F_Text_Grunt2Intro": {
+  "en": "I know you!\\nYou have been all over our network!",
+  "fr": "Je te connais !\\nTu as écumé tout notre réseau !"
+ },
+ "RocketHideout_B4F_Text_Grunt2PostBattle": {
+  "en": "Do you have something against TEAM\\nONYBRIS?",
+  "fr": "As-tu quelque chose contre la TEAM\\nONYBRIS ?"
+ },
+ "RocketHideout_B4F_Text_Grunt3Defeat": {
+  "en": "Ayaya!",
+  "fr": "Ayaya !"
+ },
+ "RocketHideout_B4F_Text_Grunt3Intro": {
+  "en": "How can you not see the beauty of\\nour business?",
+  "fr": "Comment peux-tu ne pas voir la\\nbeauté de notre business ?"
+ },
+ "RocketHideout_B4F_Text_Grunt3PostBattle": {
+  "en": "BOSS!\\nI'm sorry I failed you!",
+  "fr": "BOSS !\\nJe suis désolé de t'avoir déçu !"
+ },
+ "RocketHideout_B4F_Text_ReceivedPokeFlute": {
+  "en": "{PLAYER} received the POKé FLUTE.\\pIt wakes sleeping POKéMON.",
+  "fr": "{PLAYER} a reçu la FLÛTE POKé.\\pElle réveille les POKéMON endormis."
  }
 }

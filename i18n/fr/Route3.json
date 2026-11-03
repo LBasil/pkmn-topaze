@@ -1,6 +1,150 @@
 {
+ "Route3_Text_BenDefeat": {
+  "en": "I don't believe it!",
+  "fr": "Je n'en reviens pas !"
+ },
+ "Route3_Text_BenIntro": {
+  "en": "Hi!\\nI like shorts!\\pThey're delightfully comfy and\\neasy to wear!",
+  "fr": "Salut !\\nJ'adore les shorts !\\pIls sont délicieusement\\nconfortables et faciles à porter !"
+ },
+ "Route3_Text_BenPostBattle": {
+  "en": "Are you using a POKéMON CENTER's\\nPC for storing your POKéMON?\\pEach BOX can hold up to\\n30 POKéMON.",
+  "fr": "Utilises-tu le PC d'un CENTRE\\nPOKéMON pour stocker tes POKéMON ?\\pChaque BOÎTE peut contenir jusqu'à\\n30 POKéMON."
+ },
+ "Route3_Text_CalvinDefeat": {
+  "en": "Lost!\\nLost! Lost!",
+  "fr": "Perdu !\\nPerdu ! Perdu !"
+ },
+ "Route3_Text_CalvinIntro": {
+  "en": "Hey! You're not wearing shorts!\\nWhat's wrong with you?",
+  "fr": "Hé ! Tu ne portes pas de short !\\nQu'est-ce qui ne va pas chez toi ?"
+ },
+ "Route3_Text_CalvinPostBattle": {
+  "en": "I always wear shorts, even in\\nwinter. That's my policy.",
+  "fr": "Je porte toujours un short, même en\\nhiver. C'est ma politique."
+ },
+ "Route3_Text_ColtonDefeat": {
+  "en": "You beat me again!",
+  "fr": "Tu m'as encore battu !"
+ },
+ "Route3_Text_ColtonIntro": {
+  "en": "Hey!\\nI saw you in CINDER FOREST!",
+  "fr": "Hé ! Je t'ai vu dans la FORÊT DE\\nCENDRES !"
+ },
+ "Route3_Text_ColtonPostBattle": {
+  "en": "There are other kinds of POKéMON\\nthan the ones you find in forests.",
+  "fr": "Il y a d'autres types de POKéMON\\nque ceux qu'on trouve en forêt."
+ },
+ "Route3_Text_GregDefeat": {
+  "en": "If I had new POKéMON, I would've\\nwon!",
+  "fr": "Si j'avais eu de nouveaux POKéMON,\\nj'aurais gagné !"
+ },
+ "Route3_Text_GregIntro": {
+  "en": "Are you a TRAINER?\\nLet's get with it right away!",
+  "fr": "Tu es DRESSEUR ?\\nAllons-y tout de suite !"
+ },
+ "Route3_Text_GregPostBattle": {
+  "en": "If a POKéMON BOX on the PC gets\\nfull, just switch to another BOX.",
+  "fr": "Si une BOÎTE POKéMON du PC est\\npleine, passe simplement à une\\lautre BOÎTE."
+ },
+ "Route3_Text_JamesDefeat": {
+  "en": "Done like dinner!",
+  "fr": "Cuit à point !"
+ },
+ "Route3_Text_JamesIntro": {
+  "en": "I'll battle you with the POKéMON\\nI just caught.",
+  "fr": "Je te combattrai avec le POKéMON\\nque je viens de capturer."
+ },
+ "Route3_Text_JamesPostBattle": {
+  "en": "Trained POKéMON are stronger than\\nthe wild ones.",
+  "fr": "Les POKéMON entraînés sont plus\\nforts que les sauvages."
+ },
+ "Route3_Text_JaniceDefeat": {
+  "en": "You're mean!",
+  "fr": "Tu es méchant !"
+ },
+ "Route3_Text_JaniceIntro": {
+  "en": "Excuse me!\\nYou looked at me, didn't you?",
+  "fr": "Excuse-moi !\\nTu m'as regardé, n'est-ce pas ?"
+ },
+ "Route3_Text_JanicePostBattle": {
+  "en": "You shouldn't be staring if you\\ndon't want to battle!",
+  "fr": "Tu ne devrais pas regarder si tu ne\\nveux pas te battre !"
+ },
+ "Route3_Text_ProcheThomas_After": {
+  "en": "Never underestimate bugs. They\\nalways come back stronger.",
+  "fr": "Ne sous-estime jamais les insectes.\\nIls reviennent toujours plus forts."
+ },
+ "Route3_Text_ProcheThomas_Defeat": {
+  "en": "Ha! Not bad at all!",
+  "fr": "Ha ! Pas mal du tout !"
+ },
+ "Route3_Text_ProcheThomas_Early": {
+  "en": "Not yet, {PLAYER}. Finish your\\njourney first, then come and find\\pme.",
+  "fr": "Pas encore, {PLAYER}. Termine\\nd'abord ton voyage, puis viens me\\ltrouver."
+ },
+ "Route3_Text_ProcheThomas_Intro": {
+  "en": "Yo, {PLAYER}! Nobody takes BUG types\\nseriously. Let me change your mind!",
+  "fr": "Yo, {PLAYER} ! Personne ne prend les\\ntypes INSECTE au sérieux.\\pLaisse-moi te faire changer\\nd'avis !"
+ },
+ "Route3_Text_ProcheThomas_NoRoom": {
+  "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reparle-moi."
+ },
+ "Route3_Text_ProcheThomas_Win": {
+  "en": "Take this. Bugs love it. You earned\\nit!",
+  "fr": "Prends ça. Les insectes adorent. Tu\\nl'as mérité !"
+ },
+ "Route3_Text_RQuest_Ask": {
+  "en": "My team is paralyzed. Please bring\\n2 PARALYZE HEALS!",
+  "fr": "Mon équipe est paralysée.\\nApporte-moi 2 ANTI-PARA, s'il te\\lplaît !"
+ },
+ "Route3_Text_RQuest_Done": {
+  "en": "They are dancing again!",
+  "fr": "Ils dansent de nouveau !"
+ },
  "Route3_Text_RQuest_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route3_Text_RQuest_Ok": {
+  "en": "Wonderful! A little thank you.",
+  "fr": "Merveilleux ! Un petit merci."
+ },
+ "Route3_Text_RobinDefeat": {
+  "en": "That's it?",
+  "fr": "C'est tout ?"
+ },
+ "Route3_Text_RobinIntro": {
+  "en": "Eek!\\nDid you touch me?",
+  "fr": "Eek !\\nTu m'as touché ?"
+ },
+ "Route3_Text_RobinPostBattle": {
+  "en": "ROUTE 4 is at the foot of\\nMT. MOON.",
+  "fr": "La ROUTE 4 est au pied du\\nMT. MOON."
+ },
+ "Route3_Text_RouteSign": {
+  "en": "ROUTE 3\\nMT. MOON AHEAD",
+  "fr": "ROUTE 3\\nMT. MOON DEVANT"
+ },
+ "Route3_Text_SallyDefeat": {
+  "en": "Be nice!",
+  "fr": "Sois gentil !"
+ },
+ "Route3_Text_SallyIntro": {
+  "en": "That look you gave me…\\nIt's so intriguing!",
+  "fr": "Ce regard que tu m'as lancé…\\nC'est si intrigant !"
+ },
+ "Route3_Text_SallyPostBattle": {
+  "en": "You can avoid battles by not\\nletting TRAINERS see you.",
+  "fr": "Tu peux éviter les combats en ne te\\nfaisant pas voir des DRESSEURS."
+ },
+ "Route3_Text_TimeHint": {
+  "en": "Someone scratched on the rock: THE\\nSUN ROSE TWICE TODAY.",
+  "fr": "Quelqu'un a gratté sur la roche :\\nLE SOLEIL S'EST LEVÉ DEUX FOIS\\lAUJOURD'HUI."
+ },
+ "Route3_Text_TunnelFromCeruleanTiring": {
+  "en": "Whew… I better take a rest…\\nGroan…\\pThat tunnel from TOURMALIA takes a\\nlot out of you!",
+  "fr": "Ouf… Je ferais mieux de me\\nreposer… Gémis…\\pCe tunnel depuis TOURMALIA épuise !"
  }
 }

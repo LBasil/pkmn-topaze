@@ -1,0 +1,86 @@
+{
+ "SevenIsland_SevaultCanyon_Entrance_Text_EveDefeat": {
+  "en": "EVE: Me and JON, we lost.\\nEhehe.",
+  "fr": "EVE : Moi et JON, on a perdu.\\nÉhéhé."
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_EveIntro": {
+  "en": "EVE: I'll team up with JON and\\nbattle together.",
+  "fr": "EVE : Je m'associe avec JON et on\\nse bat ensemble."
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_EveNotEnoughMons": {
+  "en": "EVE: I want to team up with JON\\nwhen I battle you.\\pCome back with two POKéMON, okay?",
+  "fr": "EVE : Je veux faire équipe avec JON\\nquand je me bats contre toi.\\pReviens avec deux POKéMON,\\nd'accord ?"
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_EvePostBattle": {
+  "en": "EVE: I'm going to work harder with\\nJON.",
+  "fr": "EVE : Je vais travailler plus dur\\navec JON."
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_JonDefeat": {
+  "en": "JON: When I'm with EVE,\\nit doesn't feel like I've lost!",
+  "fr": "JON : Quand je suis avec EVE, je\\nn'ai pas l'impression d'avoir\\lperdu !"
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_JonIntro": {
+  "en": "JON: When I'm with EVE, it feels\\nlike we could never lose.",
+  "fr": "JON : Quand je suis avec EVE, on\\ndirait qu'on ne pourrait jamais\\lperdre."
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_JonNotEnoughMons": {
+  "en": "JON: If it's with EVE, I'll be\\nhappy to battle with you.\\pSo, I'd like to make it a\\ntwo-on-two battle, if I may.",
+  "fr": "JON : Si c'est avec EVE, je serai\\nheureux de me battre avec toi.\\pAlors, j'aimerais en faire un\\ncombat deux contre deux, si\\lpossible."
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_JonPostBattle": {
+  "en": "JON: When I'm with EVE, I feel\\ngiddy whether I win or lose.\\pIt's magical!",
+  "fr": "JON : Quand je suis avec EVE, je\\nsuis grisé, qu'on gagne ou qu'on\\lperde.\\pC'est magique !"
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_MadelineDefeat": {
+  "en": "You don't seem to be a problem\\nTRAINER.",
+  "fr": "Tu ne sembles pas être un DRESSEUR\\nproblématique."
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_MadelineIntro": {
+  "en": "I punish people who abuse\\nPOKéMON!",
+  "fr": "Je punis ceux qui maltraitent les\\nPOKéMON !"
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_MadelinePostBattle": {
+  "en": "If you treat your POKéMON with\\nkindness, they'll understand.",
+  "fr": "Si tu traites tes POKéMON avec\\ngentillesse, ils comprendront."
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_MasonDefeat": {
+  "en": "Oh, so you're not a fan…\\pWell, I can change that.\\nLet me sing for you!",
+  "fr": "Oh, donc tu n'es pas fan…\\pEh bien, je peux changer ça.\\nLaisse-moi chanter pour toi !"
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_MasonIntro": {
+  "en": "Howdy!\\nAre you a member of my fan club?",
+  "fr": "Salut !\\nEs-tu membre de mon club de fans ?"
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_MasonPostBattle": {
+  "en": "Lalalah…\\nMy POKéMON, I send them out,\\lall the girls scream and shout!",
+  "fr": "Lalalah… Mes POKéMON, je les\\nenvoie, toutes les filles crient et\\lhurlent !"
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_MiahDefeat": {
+  "en": "Tch!\\nToo strong for me!",
+  "fr": "Tch !\\nTrop fort pour moi !"
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_MiahIntro": {
+  "en": "Kyahaha!\\nI'll flick you away effortlessly!",
+  "fr": "Kyahaha !\\nJe vais te balayer sans effort !"
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_MiahPostBattle": {
+  "en": "What's that?\\nI don't act the way I look?\\pHeh, that's a part of my strategy!",
+  "fr": "C'est quoi ? Je ne ressemble pas à\\nmon allure ?\\pHeh, ça fait partie de ma\\nstratégie !"
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_NicolasDefeat": {
+  "en": "Uh-huh…",
+  "fr": "Uh-huh…"
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_NicolasIntro": {
+  "en": "This island is too spread out…\\nIt's not easy patrolling the place.",
+  "fr": "Cette île est trop étendue… Ce\\nn'est pas facile de la patrouiller."
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_NicolasPostBattle": {
+  "en": "TRAINERS like you from cities,\\nthey sure are tough.\\pYou'll be headed for the TOWER,\\nwon't you?",
+  "fr": "Les DRESSEURS comme toi, des\\nvilles, ils sont vraiment forts.\\pTu vas à la TOUR, n'est-ce pas ?"
+ },
+ "SevenIsland_SevaultCanyon_Entrance_Text_RouteSign": {
+  "en": "SEVAULT CANYON ENTRANCE\\pTRAINERS are asked to refrain from\\ndamaging plants in the CANYON.",
+  "fr": "ENTRÉE DU CANYON SEVAULT\\pLes DRESSEURS sont priés de ne pas\\nabîmer les plantes du CANYON."
+ }
+}

@@ -1,6 +1,130 @@
 {
+ "Route9_Text_AlanDefeat": {
+  "en": "Hahahaha!\\nYou beat me fair!",
+  "fr": "Hahahaha !\\nTu m'as battu à la loyale !"
+ },
+ "Route9_Text_AlanIntro": {
+  "en": "Hahahaha!\\nBring it on!",
+  "fr": "Hahahaha !\\nVas-y, viens !"
+ },
+ "Route9_Text_AlanPostBattle": {
+  "en": "Hahahaha!\\nUs hearty guys always laugh!",
+  "fr": "Hahahaha ! Nous, les gaillards, on\\nrit toujours !"
+ },
+ "Route9_Text_AliciaDefeat": {
+  "en": "You deceived me…",
+  "fr": "Tu m'as trompé…"
+ },
+ "Route9_Text_AliciaIntro": {
+  "en": "You have POKéMON with you!\\nYou're mine!",
+  "fr": "Tu as des POKéMON avec toi !\\nTu es à moi !"
+ },
+ "Route9_Text_AliciaPostBattle": {
+  "en": "Men in black went by at dawn.\\nThey hurried toward ROCK TUNNEL.",
+  "fr": "Des hommes en noir sont passés à\\nl'aube. Ils se sont dépêchés vers\\lle TUNNEL ROCHE."
+ },
+ "Route9_Text_BrentDefeat": {
+  "en": "WHAT?\\pWhat a total waste of time!",
+  "fr": "QUOI ?\\pQuelle perte de temps totale !"
+ },
+ "Route9_Text_BrentIntro": {
+  "en": "I got up early every day to raise\\nmy POKéMON from cocoons!",
+  "fr": "Je me levais tôt chaque jour pour\\nélever mes POKéMON depuis leurs\\lcocons !"
+ },
+ "Route9_Text_BrentPostBattle": {
+  "en": "I have to collect more than bugs\\nto get stronger…",
+  "fr": "Je dois collectionner plus que des\\ninsectes pour devenir plus fort…"
+ },
+ "Route9_Text_BriceDefeat": {
+  "en": "What's that?",
+  "fr": "C'est quoi, ça ?"
+ },
+ "Route9_Text_BriceIntro": {
+  "en": "Hahaha!\\nAren't you a little toughie!",
+  "fr": "Hahaha !\\nQuel petit dur tu fais !"
+ },
+ "Route9_Text_BricePostBattle": {
+  "en": "Hahaha!\\nKids should be tough!",
+  "fr": "Hahaha !\\nLes gosses doivent être costauds !"
+ },
+ "Route9_Text_CaitlinDefeat": {
+  "en": "No!\\nYou're too much.",
+  "fr": "Non !\\nTu es trop fort."
+ },
+ "Route9_Text_CaitlinIntro": {
+  "en": "Don't you dare patronize me!",
+  "fr": "Ne t'avise pas de me prendre de\\nhaut !"
+ },
+ "Route9_Text_CaitlinPostBattle": {
+  "en": "You're obviously talented.\\nGood luck to you!",
+  "fr": "Tu es manifestement doué.\\nBonne chance !"
+ },
+ "Route9_Text_ChrisDefeat": {
+  "en": "Out like a light!",
+  "fr": "K.O. net !"
+ },
+ "Route9_Text_ChrisIntro": {
+  "en": "Who's that walking there with those\\ngood-looking POKéMON?",
+  "fr": "Qui marche là avec ces beaux\\nPOKéMON ?"
+ },
+ "Route9_Text_ChrisPostBattle": {
+  "en": "Their bags clinked like stones.\\nI did not dare ask what was in.",
+  "fr": "Leurs sacs tintaient comme des\\npierres. Je n'ai pas osé demander\\lce qu'il y avait."
+ },
+ "Route9_Text_ConnerDefeat": {
+  "en": "My bugs…",
+  "fr": "Mes insectes…"
+ },
+ "Route9_Text_ConnerIntro": {
+  "en": "Go, my super BUG POKéMON!",
+  "fr": "Allez, mes super POKéMON INSECTE !"
+ },
+ "Route9_Text_ConnerPostBattle": {
+  "en": "If you don't like BUG POKéMON,\\nyou bug me!",
+  "fr": "Si tu n'aimes pas les POKéMON\\nINSECTE, tu m'embêtes !"
+ },
+ "Route9_Text_DrewDefeat": {
+  "en": "Can't measure up…",
+  "fr": "Je ne fais pas le poids…"
+ },
+ "Route9_Text_DrewIntro": {
+  "en": "I'm taking the ROCK TUNNEL to\\ngo to SPINELLIA…",
+  "fr": "Je prends le TUNNEL ROCHE pour\\naller à SPINELLIA…"
+ },
+ "Route9_Text_DrewPostBattle": {
+  "en": "Are you off to ROCK TUNNEL, too?",
+  "fr": "Tu vas au TUNNEL ROCHE, toi aussi ?"
+ },
+ "Route9_Text_JeremyDefeat": {
+  "en": "Keep it coming, eh!\\pOh wait.\\nI'm out of POKéMON!",
+  "fr": "Continue, hein !\\pOh, attends.\\nJe n'ai plus de POKéMON !"
+ },
+ "Route9_Text_JeremyIntro": {
+  "en": "Bwahaha!\\nGreat! I was bored, eh!",
+  "fr": "Bwahaha !\\nGénial ! Je m'ennuyais, hein !"
+ },
+ "Route9_Text_JeremyPostBattle": {
+  "en": "You sure had guts standing up to\\nme there, eh?",
+  "fr": "T'avais du cran de me tenir tête,\\nhein ?"
+ },
+ "Route9_Text_Quest3_Ask": {
+  "en": "Wild POKéMON keep jumping me. 3\\nREPELS would save my trip!",
+  "fr": "Des POKéMON sauvages n'arrêtent pas\\nde me sauter dessus. 3 REPOUSSES\\lsauveraient mon voyage !"
+ },
+ "Route9_Text_Quest3_Done": {
+  "en": "Not a single POKéMON bothers me\\nnow.",
+  "fr": "Plus aucun POKéMON ne me dérange."
+ },
  "Route9_Text_Quest3_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route9_Text_Quest3_Ok": {
+  "en": "Ahh, peace! Take this. I do not\\nneed it.",
+  "fr": "Ahh, la paix ! Prends ça. Je n'en\\nai pas besoin."
+ },
+ "Route9_Text_RouteSign": {
+  "en": "ROUTE 9\\nTOURMALIA - ROCK TUNNEL",
+  "fr": "ROUTE 9\\nTOURMALIA - TUNNEL ROCHE"
  }
 }

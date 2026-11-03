@@ -1,6 +1,122 @@
 {
+ "Route24_Text_AliDefeat": {
+  "en": "How could I lose?",
+  "fr": "Comment ai-je pu perdre ?"
+ },
+ "Route24_Text_AliIntro": {
+  "en": "I'm second!\\nNow it's serious!",
+  "fr": "Je suis le deuxième !\\nMaintenant, c'est du sérieux !"
+ },
+ "Route24_Text_AliPostBattle": {
+  "en": "The crystals on this bridge glow\\nat dusk. It's pretty.",
+  "fr": "Les cristaux de ce pont brillent au\\ncrépuscule. C'est joli."
+ },
+ "Route24_Text_CaleDefeat": {
+  "en": "Whoo!\\nGood stuff!",
+  "fr": "Whoo !\\nC'est du bon !"
+ },
+ "Route24_Text_CaleIntro": {
+  "en": "People call this the NUGGET\\nBRIDGE! Beat us five TRAINERS and\\pprove you're strong enough to\\ncross. Think you've got it?",
+  "fr": "On appelle ça le PONT PÉPITE ! Bats\\ncinq DRESSEURS comme nous et prouve\\lque tu es assez fort pour\\ntraverser. Tu te sens prêt ?"
+ },
+ "Route24_Text_CalePostBattle": {
+  "en": "A boy in a hurry ran right past\\nus. He wouldn't even battle!\\pHe bolted north over the bridge.",
+  "fr": "Un garçon pressé nous a dépassés en\\ncourant. Il n'a même pas voulu\\lcombattre !\\pIl a filé vers le nord sur le pont."
+ },
+ "Route24_Text_EthanDefeat": {
+  "en": "Whoa!\\nToo much!",
+  "fr": "Whoa !\\nTrop fort !"
+ },
+ "Route24_Text_EthanIntro": {
+  "en": "Okay! I'm No. 5!\\nI'll stomp you!",
+  "fr": "D'accord ! Je suis le No.5 !\\nJe vais t'écraser !"
+ },
+ "Route24_Text_EthanPostBattle": {
+  "en": "I did my best. I have no regrets!",
+  "fr": "J'ai fait de mon mieux. Aucun\\nregret !"
+ },
+ "Route24_Text_ImOutOfHere": {
+  "en": "I'm out of here!\\nDon't follow me!",
+  "fr": "Je me barre !\\nNe me suis pas !"
+ },
+ "Route24_Text_JoinTeamRocket": {
+  "en": "Hah! You'd make a fine recruit.\\nHow about joining TEAM ONYBRIS?\\pNo? Then we do this the hard way!",
+  "fr": "Hah ! Tu ferais un bon recrue. Et\\nsi tu rejoignais la TEAM ONYBRIS ?\\pNon ? Alors on le fait à la dure !"
+ },
+ "Route24_Text_JustEarnedFabulousPrize": {
+  "en": "Hold it right there!\\pSo you beat the bridge TRAINERS.\\nNot bad, kid.\\pI'm with TEAM ONYBRIS. My job is\\nto make sure nobody follows us!",
+  "fr": "Halte-là !\\pAlors tu as battu les DRESSEURS du\\npont. Pas mal.\\pJe suis de la TEAM ONYBRIS. Mon\\ntravail est de m'assurer que\\lpersonne ne nous suit !"
+ },
+ "Route24_Text_RQuest_Ask": {
+  "en": "I guard this bridge. 2 MAX REPELS\\nwould keep it calm.",
+  "fr": "Je garde ce pont. 2 SUPER REPOUSSES\\nle garderaient calme."
+ },
+ "Route24_Text_RQuest_Done": {
+  "en": "The bridge is quiet.",
+  "fr": "Le pont est tranquille."
+ },
  "Route24_Text_RQuest_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route24_Text_RQuest_Ok": {
+  "en": "Calm at last. Take these.",
+  "fr": "Enfin le calme. Prends ça."
+ },
+ "Route24_Text_ReceivedNuggetFromMysteryTrainer": {
+  "en": "{PLAYER} received a NUGGET\\nfrom the TEAM ONYBRIS GRUNT!",
+  "fr": "{PLAYER} a reçu une PÉPITE\\ndu SBIRE de la TEAM ONYBRIS !"
+ },
+ "Route24_Text_ReliDefeat": {
+  "en": "I lost, too!",
+  "fr": "J'ai perdu aussi !"
+ },
+ "Route24_Text_ReliIntro": {
+  "en": "I'm No. 4!\\nGetting tired?",
+  "fr": "Je suis le No.4 !\\nTu fatigues ?"
+ },
+ "Route24_Text_ReliPostBattle": {
+  "en": "I did my best, so I've no regrets!",
+  "fr": "J'ai fait de mon mieux, donc pas de\\nregret !"
+ },
+ "Route24_Text_RocketDefeat": {
+  "en": "Arrgh!\\nYou are good!",
+  "fr": "Arrgh !\\nTu es bon !"
+ },
+ "Route24_Text_ShaneDefeat": {
+  "en": "I thought not!",
+  "fr": "Je m'en doutais !"
+ },
+ "Route24_Text_ShaneIntro": {
+  "en": "I saw you beat them from the\\ngrass! Now it's my turn!",
+  "fr": "Je t'ai vu les battre depuis les\\nherbes ! C'est mon tour !"
+ },
+ "Route24_Text_ShanePostBattle": {
+  "en": "I hid because the strangers on\\nthe bridge frightened me.",
+  "fr": "Je me suis caché car les inconnus\\nsur le pont m'ont fait peur."
+ },
+ "Route24_Text_TimeHint": {
+  "en": "A stopped wristwatch lies in the\\ngrass. The second hand trembles but\\pnever moves.",
+  "fr": "Une montre-bracelet arrêtée gît\\ndans l'herbe. La trotteuse tremble\\lmais ne bouge jamais."
+ },
+ "Route24_Text_TimmyDefeat": {
+  "en": "Ow!\\nStomped flat!",
+  "fr": "Aïe !\\nÉcrasé !"
+ },
+ "Route24_Text_TimmyIntro": {
+  "en": "Here's No. 3!\\nI won't be easy!",
+  "fr": "Voici le No.3 !\\nJe ne serai pas facile !"
+ },
+ "Route24_Text_TimmyPostBattle": {
+  "en": "The river under the bridge is\\ncalm. It runs down to the forest.",
+  "fr": "La rivière sous le pont est calme.\\nElle descend vers la forêt."
+ },
+ "Route24_Text_YouDontHaveAnyRoom": {
+  "en": "Make room in your bag first!\\nI'm not leaving until you take it.",
+  "fr": "Fais de la place dans ton sac\\nd'abord ! Je ne partirai pas avant\\lque tu la prennes."
+ },
+ "Route24_Text_YoudBecomeTopRocketLeader": {
+  "en": "Tch! You beat me.\\pThe others are long gone with the\\nTOURMALINE. I only had to keep you\\pbusy. Take this NUGGET, it's all I\\nhave on me. Now leave me alone!",
+  "fr": "Tch ! Tu m'as battu.\\pLes autres sont loin avec la\\nTOURMALINE. Je devais seulement te\\lretenir.\\pPrends cette PÉPITE, c'est tout ce\\nque j'ai sur moi. Maintenant,\\llaisse-moi !"
  }
 }

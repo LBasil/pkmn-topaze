@@ -1,10 +1,18 @@
 {
+ "DeepEmberCave_Text_Npc0": {
+  "en": "Do not go any deeper. I mean it.",
+  "fr": "N'va pas plus profond. Je suis\\nsérieux."
+ },
+ "DeepEmberCave_Text_Npc1": {
+  "en": "The walls are warm. The floor is\\nwarmer.",
+  "fr": "Les murs sont chauds. Le sol est\\nencore plus chaud."
+ },
  "DeepEmberCave_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "DeepEmberCave_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

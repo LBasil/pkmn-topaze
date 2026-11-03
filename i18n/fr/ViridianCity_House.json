@@ -1,0 +1,34 @@
+{
+ "ViridianCity_House_Text_GirlAsk": {
+  "en": "SPEARY has a hurt wing. Daddy's\\nout of POTIONS and the MART is\\lfar when you are small.\\pIf you find three POTIONS, please\\ncome back and tell me!",
+  "fr": "SPEARY a une aile blessée. Papa n'a\\nplus de POTIONS et la BOUTIQUE est\\lloin quand on est petit.\\pSi tu trouves trois POTIONS,\\nreviens me le dire, s'il te plaît !"
+ },
+ "ViridianCity_House_Text_GirlGives": {
+  "en": "Thank you! SPEARY chirped!\\pDaddy kept this for a special day.\\nIt is yours now.",
+  "fr": "Merci ! SPEARY a pépié !\\pPapa gardait ça pour un jour\\nspécial. C'est à toi maintenant."
+ },
+ "ViridianCity_House_Text_GirlOffer": {
+  "en": "You have POTIONS! Can I have three\\nfor SPEARY's wing?",
+  "fr": "Tu as des POTIONS ! Puis-je en\\navoir trois pour l'aile de SPEARY ?"
+ },
+ "ViridianCity_House_Text_GirlSad": {
+  "en": "Oh... SPEARY will wait. He is brave.",
+  "fr": "Oh… SPEARY attendra. Il est\\ncourageux."
+ },
+ "ViridianCity_House_Text_MyDaddyLovesMonsToo": {
+  "en": "My daddy loves POKéMON, too.",
+  "fr": "Mon papa aime aussi les POKéMON."
+ },
+ "ViridianCity_House_Text_NicknamingIsFun": {
+  "en": "Coming up with nicknames is fun,\\nbut it's not so easy to do.\\pClever names are nice, but simple\\nnames are easier to remember.",
+  "fr": "Trouver des surnoms est amusant,\\nmais ce n'est pas si facile.\\pLes noms malins sont sympas, mais\\nles noms simples sont plus faciles\\là retenir."
+ },
+ "ViridianCity_House_Text_SpearowNameSpeary": {
+  "en": "SPEAROW\\nName: SPEARY",
+  "fr": "PIAFABEC\\nNom : SPEARY"
+ },
+ "ViridianCity_House_Text_Speary": {
+  "en": "SPEARY: Tetweet!",
+  "fr": "SPEARY : Tetweet !"
+ }
+}

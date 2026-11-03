@@ -1,10 +1,22 @@
 {
+ "StoneGreenhouse_Text_Bye": {
+  "en": "May your POKéMON become what they\\ndream of.",
+  "fr": "Que tes POKéMON deviennent ce dont\\nils rêvent."
+ },
+ "StoneGreenhouse_Text_Merchant": {
+  "en": "Evolution items, all in one place.\\nWhat do you need?",
+  "fr": "Objets d'évolution, tous au même\\nendroit. De quoi as-tu besoin ?"
+ },
+ "StoneGreenhouse_Text_Npc0": {
+  "en": "Each stone has a POKéMON that waits\\nfor it.",
+  "fr": "Chaque pierre a un POKéMON qui\\nl'attend."
+ },
  "StoneGreenhouse_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "StoneGreenhouse_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

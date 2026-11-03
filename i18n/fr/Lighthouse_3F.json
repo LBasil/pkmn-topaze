@@ -1,6 +1,18 @@
 {
+ "Lighthouse_3F_Text_Boss_After": {
+  "en": "Go on, take it. The light was never\\nmine.",
+  "fr": "Vas-y, prends-le. La lumière n'a\\njamais été à moi."
+ },
+ "Lighthouse_3F_Text_Boss_Defeat": {
+  "en": "The lamp... it turned the right\\nway. Just once.",
+  "fr": "La lampe… elle a tourné dans le\\nbon sens. Une seule fois."
+ },
+ "Lighthouse_3F_Text_Boss_Intro": {
+  "en": "You climbed all this way? The lamp\\nnever lights for visitors. Only for\\pships that left long ago.",
+  "fr": "Tu as grimpé jusqu'ici ? La lampe\\nne s'allume jamais pour les\\lvisiteurs.\\pSeulement pour les navires partis\\nil y a longtemps."
+ },
  "Lighthouse_3F_Text_Boss_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  }
 }

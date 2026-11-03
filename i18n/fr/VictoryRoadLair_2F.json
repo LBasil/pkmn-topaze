@@ -1,0 +1,54 @@
+{
+ "VictoryRoadLair_2F_Text_PedestalApatite": {
+  "en": "An empty pedestal. Carved on it:\\nAPATITE.\\pSomething is meant to rest here.",
+  "fr": "Un piédestal vide. Gravé dessus :\\nAPATITE.\\pQuelque chose doit reposer ici."
+ },
+ "VictoryRoadLair_2F_Text_PedestalOpal": {
+  "en": "An empty pedestal. Carved on it:\\nOPAL.\\pSomething is meant to rest here.",
+  "fr": "Un piédestal vide. Gravé dessus :\\nOPALE.\\pQuelque chose doit reposer ici."
+ },
+ "VictoryRoadLair_2F_Text_PedestalTopaz": {
+  "en": "An empty pedestal. Carved on it:\\nTOPAZ.\\pSomething is meant to rest here.",
+  "fr": "Un piédestal vide. Gravé dessus :\\nTOPAZE.\\pQuelque chose doit reposer ici."
+ },
+ "VictoryRoadLair_2F_Text_SeleneDefeat": {
+  "en": "…Fine. Go and see for yourself.",
+  "fr": "…Bien. Va voir par toi-même."
+ },
+ "VictoryRoadLair_2F_Text_SeleneIntro": {
+  "en": "SELENE: The HALL of STONES. Seven\\ngather here, three are missing.\\pAPATITE, TOPAZ, OPAL. You hold\\none. The boy in red carried the\\pother. The MASTER will have\\nthem all. Over my dead body? No.\\pOver yours.",
+  "fr": "SELENE : La SALLE des PIERRES. Sept\\nse réunissent ici, trois manquent.\\pAPATITE, TOPAZE, OPALE. Tu en tiens\\nune. Le garçon en rouge portait\\ll'autre. Le MAÎTRE les aura toutes.\\nSur mon cadavre ? Non.\\pSur le tien."
+ },
+ "VictoryRoadLair_2F_Text_SelenePost": {
+  "en": "SELENE: Go up. The THRONE ROOM\\nis beyond that door.\\pWhatever you find, remember: we\\nonly wanted the POKéMON free.",
+  "fr": "SELENE : Monte. La SALLE DU TRÔNE\\nest derrière cette porte.\\pQuoi que tu trouves, souviens-toi :\\nnous voulions seulement libérer les\\lPOKéMON."
+ },
+ "VictoryRoadLair_2F_Text_StoneAmethiolite": {
+  "en": "The AMETHIOLITE STONE rests\\non a black pedestal.\\pIt was taken from its town.\\nIt pulses, as if it wanted home.",
+  "fr": "La PIERRE AMETHIOLITE repose sur un\\npiédestal noir.\\pElle a été arrachée à sa ville.\\nElle pulse, comme si elle voulait\\lrentrer."
+ },
+ "VictoryRoadLair_2F_Text_StoneGrenat": {
+  "en": "The GRENAT STONE rests\\non a black pedestal.\\pIt was taken from its town.\\nIt pulses, as if it wanted home.",
+  "fr": "La PIERRE GRENAT repose sur un\\npiédestal noir.\\pElle a été arrachée à sa ville.\\nElle pulse, comme si elle voulait\\lrentrer."
+ },
+ "VictoryRoadLair_2F_Text_StoneHematite": {
+  "en": "The HEMATITE STONE rests\\non a black pedestal.\\pIt was taken from its town.\\nIt pulses, as if it wanted home.",
+  "fr": "La PIERRE HÉMATITE repose sur un\\npiédestal noir.\\pElle a été arrachée à sa ville.\\nElle pulse, comme si elle voulait\\lrentrer."
+ },
+ "VictoryRoadLair_2F_Text_StonePyrope": {
+  "en": "The PYROPE STONE rests\\non a black pedestal.\\pIt was taken from its town.\\nIt pulses, as if it wanted home.",
+  "fr": "La PIERRE PYROPE repose sur un\\npiédestal noir.\\pElle a été arrachée à sa ville.\\nElle pulse, comme si elle voulait\\lrentrer."
+ },
+ "VictoryRoadLair_2F_Text_StoneQuartz": {
+  "en": "The QUARTZ STONE rests\\non a black pedestal.\\pIt was taken from its town.\\nIt pulses, as if it wanted home.",
+  "fr": "La PIERRE QUARTZ repose sur un\\npiédestal noir.\\pElle a été arrachée à sa ville.\\nElle pulse, comme si elle voulait\\lrentrer."
+ },
+ "VictoryRoadLair_2F_Text_StoneSpinelle": {
+  "en": "The SPINELLE STONE rests\\non a black pedestal.\\pIt was taken from its town.\\nIt pulses, as if it wanted home.",
+  "fr": "La PIERRE SPINELLE repose sur un\\npiédestal noir.\\pElle a été arrachée à sa ville.\\nElle pulse, comme si elle voulait\\lrentrer."
+ },
+ "VictoryRoadLair_2F_Text_StoneTourmaline": {
+  "en": "The TOURMALINE STONE rests\\non a black pedestal.\\pIt was taken from its town.\\nIt pulses, as if it wanted home.",
+  "fr": "La PIERRE TOURMALINE repose sur un\\npiédestal noir.\\pElle a été arrachée à sa ville.\\nElle pulse, comme si elle voulait\\lrentrer."
+ }
+}

@@ -1,14 +1,62 @@
 {
+ "DexHall_Text_Hello": {
+  "en": "I judge the POKéDEX. Every caught\\nspecies earns a reward at each\\pmilestone. Let me count.",
+  "fr": "Je juge le POKéDEX. Chaque espèce\\ncapturée mérite une récompense à\\lchaque palier. Laisse-moi compter."
+ },
+ "DexHall_Text_M100": {
+  "en": "You have caught 100 species! A\\nreward for you.",
+  "fr": "Tu as capturé 100 espèces ! Une\\nrécompense pour toi."
+ },
+ "DexHall_Text_M150": {
+  "en": "You have caught 150 species! A\\nreward for you.",
+  "fr": "Tu as capturé 150 espèces ! Une\\nrécompense pour toi."
+ },
+ "DexHall_Text_M200": {
+  "en": "You have caught 200 species! A\\nreward for you.",
+  "fr": "Tu as capturé 200 espèces ! Une\\nrécompense pour toi."
+ },
+ "DexHall_Text_M25": {
+  "en": "You have caught 25 species! A\\nreward for you.",
+  "fr": "Tu as capturé 25 espèces ! Une\\nrécompense pour toi."
+ },
+ "DexHall_Text_M250": {
+  "en": "You have caught 250 species! A\\nreward for you.",
+  "fr": "Tu as capturé 250 espèces ! Une\\nrécompense pour toi."
+ },
+ "DexHall_Text_M300": {
+  "en": "You have caught 300 species! A\\nreward for you.",
+  "fr": "Tu as capturé 300 espèces ! Une\\nrécompense pour toi."
+ },
+ "DexHall_Text_M350": {
+  "en": "You have caught 350 species! A\\nreward for you.",
+  "fr": "Tu as capturé 350 espèces ! Une\\nrécompense pour toi."
+ },
+ "DexHall_Text_M386": {
+  "en": "You have caught 386 species! A\\nreward for you.",
+  "fr": "Tu as capturé 386 espèces ! Une\\nrécompense pour toi."
+ },
+ "DexHall_Text_M50": {
+  "en": "You have caught 50 species! A\\nreward for you.",
+  "fr": "Tu as capturé 50 espèces ! Une\\nrécompense pour toi."
+ },
+ "DexHall_Text_M75": {
+  "en": "You have caught 75 species! A\\nreward for you.",
+  "fr": "Tu as capturé 75 espèces ! Une\\nrécompense pour toi."
+ },
  "DexHall_Text_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "DexHall_Text_Nothing": {
+  "en": "No new milestone yet. Keep catching\\nthem all.",
+  "fr": "Pas de nouveau palier. Continue à\\ntous les attraper."
  },
  "DexHall_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "DexHall_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

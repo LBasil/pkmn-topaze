@@ -327,3 +327,10 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 ## 03-11 (09h17)
 - Mentions de la CLÉ SECRÈTE retirées : texte du maire de Chrondrolia (« And the SECRET KEY » supprimé, + chrondrolia_raid.py) ; l'objet SECRET KEY du sous-sol de la Centrale (PokemonMansion_B1F) retiré de la carte.
 - Constat : l'arène de Chrondrolia est toujours ouverte (script CheckUnlockGym) ; le texte « The door is locked… » et la scène de Bill vers l'Île 1 (CinnabarIsland_EventScript_BillScene) sont du code mort (VAR_MAP_SCENE_CINNABAR_ISLAND jamais mis à 1). À retirer si Basil le souhaite.
+
+## 03-11 (10h58) — Passe IA FR complète + ROM FR
+- Les 5453 dialogues sont en FR (942 validés par Basil + 4511 brouillons IA nettoyés). Basil garde la priorité (colonne `tr`).
+- Nettoyage auto : « » → “ ”, "..." → "…", césures de boîtes en milieu de phrase, lignes ≤35, vocatifs genrés (petit/gamin/fiston/dresseur) retirés, « tu es venu/prêt/fort » reformulés en neutre.
+- Champion/championne partout à la place de « chef d'arène » (KAY, ACHLYS, HERA, HEPHA, GRIM = championnes ; NOX, EDDIE, SYLVESTRE = champions).
+- lang.py : les codes {PLAY_BGM}, {MUS_*}, {PAUSE ..} ne comptent plus dans la largeur.
+- RESTE EN ANGLAIS DANS LA ROM : noms d'objets, d'attaques, d'espèces, menus. Les dialogues FR citent des noms FR (NOSFERAPTI, BONBONS RARES) qui ne correspondent donc pas à ceux affichés en jeu. À décider avec Basil.

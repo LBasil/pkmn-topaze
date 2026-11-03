@@ -1,10 +1,94 @@
 {
+ "OneIsland_Text_BillLetsGoSeeCelio": {
+  "en": "BILL: Here we are!\\nThis is ONE ISLAND.\\pThere are several islands around\\nhere, and this is one of them.\\pMy friend CELIO sent the boat to\\nfetch me here.\\pHe's in charge of the island's PC\\nnetwork by his lonesome.\\p…Why am I telling you this now?\\nLet's just go see CELIO!",
+  "fr": "BILL : Nous voilà !\\nVoici l'ÎLE 1.\\pIl y a plusieurs îles par ici, et\\ncelle-ci en est une.\\pMon ami CELIO a envoyé le bateau me\\nchercher ici.\\pIl gère seul le réseau de PC de\\nl'île.\\p…Pourquoi je te raconte ça\\nmaintenant ? Allons voir CELIO !"
+ },
+ "OneIsland_Text_BillWaiting": {
+  "en": "BILL: There you are! CELIO and I\\nare waiting at the POKéMON CENTER.\\pThe Echoes are all over the\\nislands. Come, we will explain!",
+  "fr": "BILL : Te voilà ! CELIO et moi\\nt'attendons au CENTRE POKéMON.\\pLes Échos sont partout sur les\\nîles. Viens, on t'explique !"
+ },
+ "OneIsland_Text_HavePCLinkageWithHoenn": {
+  "en": "My granddaughter was in a tizzy\\nover a new breakthrough.\\pShe said we finally have PC linkage\\nwith people in HOENN.\\pI'm not sure what that means, but\\nCELIO is quite the man.\\pHe would make a fine husband for\\nmy granddaughter!",
+  "fr": "Ma petite-fille était toute excitée\\nà propos d'une nouvelle percée.\\pElle a dit que nous avons enfin une\\nliaison PC avec des gens de HOENN.\\pJe ne sais pas ce que ça veut dire,\\nmais CELIO est un homme\\lremarquable.\\pIl ferait un excellent mari pour ma\\npetite-fille !"
+ },
+ "OneIsland_Text_HavePCLinkageWithKanto": {
+  "en": "My granddaughter was in a tizzy\\nover a new breakthrough.\\pShe said we now have PC linkage\\nwith people in KANTO.\\pI'm not sure what that means, but\\nCELIO is quite the man!",
+  "fr": "Ma petite-fille était toute excitée\\nà propos d'une nouvelle percée.\\pElle a dit que nous avons\\nmaintenant une liaison PC avec des\\lgens de KANTO.\\pJe ne sais pas ce que ça veut dire,\\nmais CELIO est un homme\\lremarquable !"
+ },
+ "OneIsland_Text_IslandSign": {
+  "en": "ONE ISLAND\\nThe first stop. Embers never die.",
+  "fr": "ÎLE 1 Première étape. Les braises\\nne meurent jamais."
+ },
+ "OneIsland_Text_IsntWarmClimateHereGreat": {
+  "en": "Sight-seeing? Nice time for it.\\pThe sun here sets a little late\\nthese days. The clocks at the port\\ldon't agree with each other.",
+  "fr": "Du tourisme ? Bon moment pour ça.\\pLe soleil se couche un peu tard ici\\nces temps-ci. Les horloges du port\\lne sont pas d'accord entre elles."
+ },
+ "OneIsland_Text_Lord1": {
+  "en": "WILL: I read your thoughts before you\\nspeak, CHAMPION. You hold six\\llegends and fear your own power.\\pLet me test that fear!",
+  "fr": "WILL : Je lis tes pensées avant que\\ntu parles, CHAMPION. Tu tiens six\\llégendes et tu crains ton propre\\npouvoir.\\pLaisse-moi tester cette peur !"
+ },
+ "OneIsland_Text_Lord2": {
+  "en": "I saw the wrong future.",
+  "fr": "J'ai vu le mauvais futur."
+ },
+ "OneIsland_Text_Lord3": {
+  "en": "WILL: The mind is a door, not a wall.\\nKeep yours open. Take this.",
+  "fr": "WILL : L'esprit est une porte, pas\\nun mur. Garde le tien ouvert.\\pPrends ça."
+ },
+ "OneIsland_Text_LordDone": {
+  "en": "WILL: A ruler worthy of the six.\\nI will remember this day.",
+  "fr": "WILL : Un souverain digne des six.\\nJe me souviendrai de ce jour."
+ },
+ "OneIsland_Text_LordEarly": {
+  "en": "WILL: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\nFLORA will tell you the way.",
+  "fr": "WILL : Pas encore. L'ancienne LIGUE\\net les MAÎTRES doivent d'abord\\ltomber. FLORA te montrera le\\nchemin."
+ },
+ "OneIsland_Text_LordIdle": {
+  "en": "WILL: The islands are quiet. I look\\nafter them, as I always have.",
+  "fr": "WILL : Les îles sont calmes. Je\\nveille sur elles, comme toujours."
+ },
+ "OneIsland_Text_LuckyToHaveCelioHere": {
+  "en": "Here we are on an island smack in\\nthe middle of nowhere.\\pWe're lucky to have an upstanding\\nyoung man like CELIO here.\\pMy granddaughter was in a tizzy\\nover CELIO's friend.\\pSomething about a famous\\nPOKéMANIAC?\\pI'm not sure what that means, but\\nCELIO is quite the man!",
+  "fr": "Nous voici sur une île au beau\\nmilieu de nulle part.\\pNous avons de la chance d'avoir un\\njeune homme respectable comme CELIO\\lici.\\pMa petite-fille était toute excitée\\nà propos de l'ami de CELIO.\\pQuelque chose à propos d'un célèbre\\nPOKéMANIAC ?\\pJe ne sais pas ce que ça veut dire,\\nmais CELIO est un homme\\lremarquable !"
+ },
+ "OneIsland_Text_PokemonNetCenterSign": {
+  "en": "Expanding the POKéMON World!\\nPOKéMON NET CENTER",
+  "fr": "Élargir le Monde POKéMON !\\nCENTRE RÉSEAU POKéMON"
+ },
+ "OneIsland_Text_RefAfter": {
+  "en": "JONAH: Take good care of it. The\\nnext REFUGE post is waiting.",
+  "fr": "JONAH : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
+ },
+ "OneIsland_Text_RefAsk": {
+  "en": "JONAH: Poachers took a baby from its\\nmother on the shore. Bring them\\nto justice, please.",
+  "fr": "JONAH : Des braconniers ont pris un\\nbébé à sa mère sur le rivage.\\pFais-les traduire en justice, s'il\\nte plaît."
+ },
+ "OneIsland_Text_RefDone": {
+  "en": "JONAH: Thank you again. The REFUGE\\nis safer because of you.",
+  "fr": "JONAH : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
+ },
+ "OneIsland_Text_RefEarly": {
+  "en": "JONAH: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "fr": "JONAH : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\ldu PARC SAFARI connaît l'ordre."
+ },
+ "OneIsland_Text_RefGives": {
+  "en": "JONAH: You saved the day. The post\\nhas a gift for you: KANGASKHAN!",
+  "fr": "JONAH : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\pKANGOUREX !"
+ },
  "OneIsland_Text_RefHunter1": {
-  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Ne te mêle pas de ça,\\ppetit !",
-  "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!"
+  "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!",
+  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Ne te mêle pas de ça,\\ppetit !"
  },
  "OneIsland_Text_RefHunter2": {
-  "fr": "CHASSEUR : Tu as battu mon associé ?\\nSoit, je n'ai pas peur d'un\\lranger !",
-  "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!"
+  "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!",
+  "fr": "CHASSEUR : Tu as battu mon\\nassocié ? Soit, je n'ai pas peur\\ld'un ranger !"
+ },
+ "OneIsland_Text_RefIdle": {
+  "en": "JONAH: I watch over the animals here.\\nThe world is quieter now.",
+  "fr": "JONAH : Je veille sur les animaux\\nici. Le monde est plus calme\\lmaintenant."
+ },
+ "Text_WhereDoYouWantToSail": {
+  "en": "Ahoy, there!\\nWhere do you want to sail?",
+  "fr": "Ohé !\\nOù veux-tu naviguer ?"
  }
 }

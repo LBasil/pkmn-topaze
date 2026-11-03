@@ -1,6 +1,66 @@
 {
+ "Route18_Text_CyclingRoadSign": {
+  "en": "CYCLING ROAD\\nNo pedestrians permitted!",
+  "fr": "ROUTE CYCLABLE\\nInterdit aux piétons !"
+ },
+ "Route18_Text_JacobDefeat": {
+  "en": "Darn!",
+  "fr": "Zut !"
+ },
+ "Route18_Text_JacobIntro": {
+  "en": "This is my turf!\\nGet out of here!",
+  "fr": "C'est mon territoire !\\nDégage d'ici !"
+ },
+ "Route18_Text_JacobPostBattle": {
+  "en": "Men in black flew past toward\\nAMETHIOLITE. Birds can tell.\\pMy SPEAROW screamed at them.",
+  "fr": "Des hommes en noir ont filé vers\\nAMETHIOLITE. Les oiseaux le savent.\\pMon PIAFABEC leur a hurlé dessus."
+ },
+ "Route18_Text_RQuest_Ask": {
+  "en": "One MAX POTION would let me finish\\nmy training run.",
+  "fr": "Une HYPER POTION m'aiderait à finir\\nmon entraînement de course."
+ },
+ "Route18_Text_RQuest_Done": {
+  "en": "Run complete. Thanks.",
+  "fr": "Course terminée. Merci."
+ },
  "Route18_Text_RQuest_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route18_Text_RQuest_Ok": {
+  "en": "Strong! Take this reward.",
+  "fr": "Fort ! Prends cette récompense."
+ },
+ "Route18_Text_RamiroDefeat": {
+  "en": "I had to bug you!",
+  "fr": "Il fallait que je t'embête !"
+ },
+ "Route18_Text_RamiroIntro": {
+  "en": "Kurukkoo!\\nHow do you like my birdcall?",
+  "fr": "Kurukkoo ! Comment trouves-tu mon\\ncri d'oiseau ?"
+ },
+ "Route18_Text_RamiroPostBattle": {
+  "en": "I collect sea POKéMON on weekends\\nbecause the sea is so close.",
+  "fr": "Je collectionne les POKéMON marins\\nle week-end, la mer est si proche."
+ },
+ "Route18_Text_RouteSign": {
+  "en": "ROUTE 18\\nBOURG QUARTZ - AMETHIOLITE",
+  "fr": "ROUTE 18\\nBOURG QUARTZ - AMETHIOLITE"
+ },
+ "Route18_Text_TimeHint": {
+  "en": "A bench plaque: RESERVED FOR 6:00\\nPM. The sky above is dark. The\\pplaque is dry. It is not raining.",
+  "fr": "Une plaque sur un banc : RÉSERVÉ À\\n18H00. Le ciel est sombre. La\\lplaque est sèche.\\pIl ne pleut pas."
+ },
+ "Route18_Text_WiltonDefeat": {
+  "en": "Tch!",
+  "fr": "Tch !"
+ },
+ "Route18_Text_WiltonIntro": {
+  "en": "I always check every grassy area\\nfor new POKéMON.",
+  "fr": "Je fouille toujours chaque herbe\\npour trouver de nouveaux POKéMON."
+ },
+ "Route18_Text_WiltonPostBattle": {
+  "en": "I wish I had a BIKE!",
+  "fr": "J'aimerais avoir un VÉLO !"
  }
 }

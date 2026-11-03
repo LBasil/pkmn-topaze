@@ -1,0 +1,54 @@
+{
+ "SilphCo_8F_Text_FloorSign": {
+  "en": "HEMATEK CO. HEAD OFFICE\\n8F",
+  "fr": "HEMATEK CO. SIÈGE\\n8F"
+ },
+ "SilphCo_8F_Text_Grunt1Defeat": {
+  "en": "Not enough grit!",
+  "fr": "Pas assez de cran !"
+ },
+ "SilphCo_8F_Text_Grunt1Intro": {
+  "en": "That's as far as you'll go!",
+  "fr": "Tu n'iras pas plus loin !"
+ },
+ "SilphCo_8F_Text_Grunt1PostBattle": {
+  "en": "If you don't turn back…\\nI'll call for backup!",
+  "fr": "Si tu ne fais pas demi-tour…\\nJ'appelle des renforts !"
+ },
+ "SilphCo_8F_Text_Grunt2Defeat": {
+  "en": "Whoo!\\nOh, Brothers!",
+  "fr": "Whoo !\\nOh, frères !"
+ },
+ "SilphCo_8F_Text_Grunt2Intro": {
+  "en": "I am one of the four ONYBRIS\\nBROTHERS!",
+  "fr": "Je suis l'un des quatre FRÈRES\\nONYBRIS !"
+ },
+ "SilphCo_8F_Text_Grunt2PostBattle": {
+  "en": "I'll leave you up to my brothers.",
+  "fr": "Je te laisse à mes frères."
+ },
+ "SilphCo_8F_Text_ParkerDefeat": {
+  "en": "Huh?\\nI lost?",
+  "fr": "Hein ?\\nJ'ai perdu ?"
+ },
+ "SilphCo_8F_Text_ParkerIntro": {
+  "en": "You're causing us problems!",
+  "fr": "Tu nous causes des problèmes !"
+ },
+ "SilphCo_8F_Text_ParkerPostBattle": {
+  "en": "So, what do you think of HEMATEK\\nBUILDING's maze?",
+  "fr": "Alors, que penses-tu du labyrinthe\\ndu BÂTIMENT HEMATEK ?"
+ },
+ "SilphCo_8F_Text_ThanksForSavingUs": {
+  "en": "Thanks for saving us!",
+  "fr": "Merci de nous avoir sauvés !"
+ },
+ "SilphCo_8F_Text_ToRocketBossMonsAreTools": {
+  "en": "TEAM ONYBRIS's BOSS is terribly\\ncruel!\\pTo him, POKéMON are just tools to\\nbe used.\\pWhat will happen if that tyrant\\ntakes over our company…",
+  "fr": "Le BOSS de la TEAM ONYBRIS est\\nterriblement cruel !\\pPour lui, les POKéMON ne sont que\\ndes outils.\\pQue se passera-t-il si ce tyran\\nprend le contrôle de notre société…"
+ },
+ "SilphCo_8F_Text_WonderIfSilphIsFinished": {
+  "en": "I wonder if HEMATEK is finished…",
+  "fr": "Je me demande si HEMATEK est\\nfinie…"
+ }
+}

@@ -1,10 +1,18 @@
 {
+ "IvyMaze_Text_Npc0": {
+  "en": "Lost twice already. Worth it for\\nPARAS.",
+  "fr": "Déjà perdu deux fois. Ça vaut le\\ncoup pour PARAS."
+ },
+ "IvyMaze_Text_Npc1": {
+  "en": "SHROOMISH is shy, so stay still.",
+  "fr": "BALIGNON est timide, alors reste\\nimmobile."
+ },
  "IvyMaze_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "IvyMaze_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

@@ -1,0 +1,78 @@
+{
+ "PalletTown_Ranch_Text_BarnDoor": {
+  "en": "The barn door is bolted shut.\\nFeed and tools are stored inside.",
+  "fr": "La porte de la grange est\\nverrouillée. Nourriture et outils y\\lsont rangés."
+ },
+ "PalletTown_Ranch_Text_Doduo": {
+  "en": "DODUO: Kwek! Kwek!\\nIts two heads argue about the hay.",
+  "fr": "DODUO : Kwek ! Kwek ! Ses deux\\ntêtes se disputent à propos du\\lfoin."
+ },
+ "PalletTown_Ranch_Text_Girl": {
+  "en": "I came to help, but I got lost\\ntwice. The ranch is HUGE!",
+  "fr": "Je suis venu aider, mais je me suis\\nperdu deux fois. Le ranch est\\lÉNORME !"
+ },
+ "PalletTown_Ranch_Text_Hand1": {
+  "en": "This ranch runs from the town wall\\nto the far fences. It takes ten of\\nus to look after it all.",
+  "fr": "Ce ranch va du mur de la ville aux\\nclôtures lointaines. Il faut dix\\ld'entre nous pour tout entretenir."
+ },
+ "PalletTown_Ranch_Text_Hand1Reward": {
+  "en": "DODUO and both NIDORAN just trotted\\nback into the pens, safe!\\pThe boss says you found them on the\\nroad. Please, take these.",
+  "fr": "DODUO et les deux NIDORAN viennent\\nde retourner dans les enclos, sains\\let saufs !\\pLe patron dit que tu les as trouvés\\nsur la route. Prends ceci, s'il te\\lplaît."
+ },
+ "PalletTown_Ranch_Text_Hand1Reward2": {
+  "en": "The boss says it is the least we can\\ndo. Take care of them out there.",
+  "fr": "Le patron dit que c'est le moins\\nqu'on puisse faire. Prends soin\\ld'eux là-bas."
+ },
+ "PalletTown_Ranch_Text_Hand1Strike": {
+  "en": "The east fence was cut this morning.\\nOn a ranch this big, no one saw.",
+  "fr": "La clôture a été coupée ce matin à\\nl'est. Sur un ranch si grand,\\lpersonne n'a rien vu."
+ },
+ "PalletTown_Ranch_Text_Hand1Thanks": {
+  "en": "The animals are calm again.\\nThank you for everything.",
+  "fr": "Les animaux sont de nouveau calmes.\\nMerci pour tout."
+ },
+ "PalletTown_Ranch_Text_Hand2": {
+  "en": "The east pasture is so far out, we\\nonly check it twice a day.",
+  "fr": "Le pâturage de l'est est si loin\\nqu'on ne le vérifie que deux fois\\lpar jour."
+ },
+ "PalletTown_Ranch_Text_Hand2Strike": {
+  "en": "They took the tracker POKéMON from\\nthe pens. The fence was cut open.",
+  "fr": "Ils ont pris les POKéMON traqueurs\\ndans les enclos. La clôture a été\\lcoupée."
+ },
+ "PalletTown_Ranch_Text_Hand3": {
+  "en": "The pens were shut tight this morning.\\nNow look at this fence...",
+  "fr": "Les enclos étaient bien fermés ce\\nmatin. Maintenant regarde cette\\lclôture…"
+ },
+ "PalletTown_Ranch_Text_Jigglypuff": {
+  "en": "JIGGLYPUFF: Jiggly...\\nIt hums softly to the other animals.",
+  "fr": "RONDOUDOU : Jiggly… Il fredonne\\ndoucement aux autres animaux."
+ },
+ "PalletTown_Ranch_Text_Meowth": {
+  "en": "MEOWTH: Nyaa!\\nIt keeps the barn free of mice.",
+  "fr": "MIAOUSS : Nyaa !\\nIl garde la grange sans souris."
+ },
+ "PalletTown_Ranch_Text_Nidoranf": {
+  "en": "NIDORAN: Kyuu!\\nIt nibbles the garnet-dusted grass.",
+  "fr": "NIDORAN : Kyuu ! Il grignote\\nl'herbe poudrée de grenat."
+ },
+ "PalletTown_Ranch_Text_Nidoranm": {
+  "en": "NIDORAN: Gyuu!\\nIts ears twitch at every sound.",
+  "fr": "NIDORAN : Gyuu ! Ses oreilles\\nfrémissent au moindre bruit."
+ },
+ "PalletTown_Ranch_Text_Psyduck": {
+  "en": "PSYDUCK: Gwaa?\\nIt looks like it has a headache.",
+  "fr": "PSYKOKWAK : Gwaa ?\\nIl a l'air d'avoir mal à la tête."
+ },
+ "PalletTown_Ranch_Text_ReceivedBalls": {
+  "en": "{PLAYER} received five POKé BALLS!",
+  "fr": "{PLAYER} a reçu cinq POKé BALLS !"
+ },
+ "PalletTown_Ranch_Text_ReceivedPotion": {
+  "en": "{PLAYER} received a POTION!",
+  "fr": "{PLAYER} a reçu une POTION !"
+ },
+ "PalletTown_Ranch_Text_Slowpoke": {
+  "en": "SLOWPOKE: ...Yawn.",
+  "fr": "RAMOLOSS : …Bâillement."
+ }
+}

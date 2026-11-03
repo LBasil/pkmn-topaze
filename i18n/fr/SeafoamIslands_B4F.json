@@ -1,0 +1,62 @@
+{
+ "SeafoamIslands_B4F_Text_BouldersMightChangeWaterFlow": {
+  "en": "Hint: Boulders might change the\\nflow of water.",
+  "fr": "Indice : Les rochers peuvent\\nchanger le cours de l'eau."
+ },
+ "SeafoamIslands_B4F_Text_DangerFastCurrent": {
+  "en": "DANGER\\nFast current!",
+  "fr": "DANGER\\nCourant rapide !"
+ },
+ "SeafoamIslands_B4F_Text_FloorScene": {
+  "en": "The air is scorching. GOLD and\\nSILVER stand back to back on the\\pbasalt, panting. Around them lie\\nfainted grunts. KRONOS waits, calm.",
+  "fr": "L'air est brûlant. GOLD et SILVER\\nse tiennent dos à dos sur le\\lbasalte, haletants. Autour d'eux\\ngisent des sbires K.O. KRONOS\\lattend, calme."
+ },
+ "SeafoamIslands_B4F_Text_GoldAfterScene": {
+  "en": "GOLD: We won, and it was all for\\nnothing. A whole day, gone!\\p…Okay. Great fight, {PLAYER}.\\nStill stings, though.",
+  "fr": "GOLD : On a gagné, et tout ça pour\\nrien. Une journée entière, perdue !\\p…Bon. Beau combat, {PLAYER}.\\nÇa pique quand même."
+ },
+ "SeafoamIslands_B4F_Text_GoldBeaten": {
+  "en": "GOLD: Go on, I'll catch my breath.\\nSee you at the LEAGUE!",
+  "fr": "GOLD : Vas-y, je reprends mon\\nsouffle. À la LIGUE !"
+ },
+ "SeafoamIslands_B4F_Text_KronosDefeat": {
+  "en": "…Well fought. Truly.\\nBut I never needed to win.",
+  "fr": "…Bien combattu. Vraiment. Mais je\\nn'ai jamais eu besoin de gagner."
+ },
+ "SeafoamIslands_B4F_Text_KronosIntro": {
+  "en": "KRONOS: Ah, the last piece. Do\\ncome in. We were just waiting.\\pThese two have held me here all\\nafternoon. A fine show, truly.\\pNow you, child. Show me what you\\ncarry in that bag.",
+  "fr": "KRONOS : Ah, la dernière pièce.\\nEntre donc. Nous n'attendions que\\ltoi.\\pCes deux-là m'ont retenu ici tout\\nl'après-midi. Un beau spectacle,\\lvraiment.\\pMaintenant à toi, enfant.\\nMontre-moi ce que tu portes dans ce\\lsac."
+ },
+ "SeafoamIslands_B4F_Text_KronosPost": {
+  "en": "KRONOS: Look around. Nothing but\\nash and me. SELENE failed, yes.\\pBut the TOPAZ in your bag was only\\nthe spark. The MASTER already took\\pwhat he needed from this volcano.\\nThis place was a curtain.\\pTime is the one thing nobody gets\\nback. The MASTER only needs one\\lmore thing: a thousand-year star.\\pThe LAST BASE awaits,\\pwhere the road ends and the\\nLEAGUE begins.",
+  "fr": "KRONOS : Regarde autour de toi.\\nRien que des cendres et moi. SELENE\\la échoué, oui.\\pMais la TOPAZE dans ton sac n'était\\nque l'étincelle. Le MAÎTRE a déjà\\lpris ce dont il avait besoin dans\\nce volcan. Ce lieu n'était qu'un\\lrideau.\\pLe temps est la seule chose qu'on\\nne récupère jamais. Le MAÎTRE n'a\\lplus besoin que d'une chose : une\\nétoile millénaire.\\pLa DERNIÈRE BASE t'attend, là où la\\nroute finit et où la LIGUE\\lcommence."
+ },
+ "SeafoamIslands_B4F_Text_Sealed": {
+  "en": "A wall of heat rolls up from the\\nlava and pushes you back.\\pSomething in the volcano is not\\nfinished with you yet.\\p{STR_VAR_1} ONYBRIS member(s) still lurk\\non the floors above…",
+  "fr": "Un mur de chaleur remonte de la\\nlave et te repousse.\\pQuelque chose dans le volcan n'en a\\npas encore fini avec toi.\\p{STR_VAR_1} membre(s) d'ONYBRIS rôdent\\nencore aux étages supérieurs…"
+ },
+ "SeafoamIslands_B4F_Text_SilverAfterScene": {
+  "en": "SILVER: He stalled us on purpose.\\nI hate that it worked.\\pThe last base is near the LEAGUE.\\nWe will get there. Before you.",
+  "fr": "SILVER : Il nous a retardés exprès.\\nJe déteste que ça ait marché.\\pLa dernière base est près de la\\nLIGUE. On y arrivera. Avant toi."
+ },
+ "SeafoamIslands_B4F_Text_SilverBeaten": {
+  "en": "SILVER: Do not look at me like\\nthat. Go and finish the job.",
+  "fr": "SILVER : Ne me regarde pas comme\\nça. Va finir le travail."
+ },
+ "Text_RockSlideDeclined": {
+  "en": "Oh, so you are scared after all.",
+  "fr": "Oh, alors tu as peur après tout."
+ },
+ "Text_RockSlideTaught": {
+  "en": "It might be scary to use it in this\\ntunnel…",
+  "fr": "Ça pourrait être effrayant de\\nl'utiliser dans ce tunnel…"
+ },
+ "Text_RockSlideTeach": {
+  "en": "When you're up on a rocky mountain\\nlike this, rockslides are a threat.\\pCan you imagine?\\nBoulders tumbling down on you?\\pThat'd be, like, waaaaaaaaaaah!\\nTotal terror!\\pYou don't seem to be scared.\\nWant to try using ROCK SLIDE?",
+  "fr": "Quand on est sur une montagne\\nrocheuse comme celle-ci, les\\léboulements sont une menace.\\pTu imagines ? Des rochers qui\\ndégringolent sur toi ?\\pCe serait, genre, waaaaaaaaaaah !\\nTerreur totale !\\pTu n'as pas l'air d'avoir peur. Tu\\nveux essayer ÉBOULEMENT ?"
+ },
+ "Text_RockSlideWhichMon": {
+  "en": "Which POKéMON should I teach\\nROCK SLIDE?",
+  "fr": "À quel POKéMON dois-je enseigner\\nÉBOULEMENT ?"
+ }
+}

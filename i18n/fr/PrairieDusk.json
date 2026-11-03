@@ -1,10 +1,18 @@
 {
+ "PrairieDusk_Text_Npc0": {
+  "en": "TAUROS stampedes at sunset. Stay\\nbehind a tree.",
+  "fr": "TAUROS charge au coucher du soleil.\\nReste derrière un arbre."
+ },
+ "PrairieDusk_Text_Npc1": {
+  "en": "I race PONYTA. I lose. Every time.",
+  "fr": "Je fais la course contre PONYTA. Je\\nperds. À chaque fois."
+ },
  "PrairieDusk_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "PrairieDusk_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

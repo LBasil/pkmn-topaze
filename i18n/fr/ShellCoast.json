@@ -1,14 +1,38 @@
 {
+ "ShellCoast_Text_Npc0": {
+  "en": "The shells sing at night. If you\\nlisten, you hear your name.",
+  "fr": "Les coquillages chantent la nuit.\\nSi tu écoutes, tu entends ton nom."
+ },
+ "ShellCoast_Text_Npc1": {
+  "en": "FEEBAS hides in plain water.\\nPatience, always patience.",
+  "fr": "BARPAU se cache dans l'eau simple.\\nDe la patience, toujours de la\\lpatience."
+ },
+ "ShellCoast_Text_Quest0_AfterT": {
+  "en": "The coast is a lovely place.",
+  "fr": "La côte est un endroit charmant."
+ },
+ "ShellCoast_Text_Quest0_Ask": {
+  "en": "A cold LEMONADE for my seashell\\nstand. I will trade you a rare\\ptooth.",
+  "fr": "Une LIMONADE fraîche pour mon stand\\nde coquillages. Je t'échange une\\ldent rare."
+ },
+ "ShellCoast_Text_Quest0_Done": {
+  "en": "Refreshing! Take this DEEP SEA\\nTOOTH.",
+  "fr": "Rafraîchissant ! Prends cette DENT\\nDES ABYSSES."
+ },
+ "ShellCoast_Text_Quest0_MissT": {
+  "en": "One LEMONADE, please.",
+  "fr": "Une LIMONADE, s'il te plaît."
+ },
  "ShellCoast_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "ShellCoast_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "ShellCoast_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

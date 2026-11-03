@@ -1,0 +1,46 @@
+{
+ "SaffronCity_CopycatsHouse_2F_Text_Doduo": {
+  "en": "DODUO: Giiih!\\pPRETTY MIRROR LOOK AT ME,\\nSEE HOW PRETTY I CAN BE?",
+  "fr": "DODUO : Giiih !\\pMIROIR MIROIR, REGARDE-MOI,\\nVOIS COMME JE PEUX ÊTRE BEAU ?"
+ },
+ "SaffronCity_CopycatsHouse_2F_Text_MarioWearingABucket": {
+  "en": "A game with MARIO wearing a bucket\\non his head!",
+  "fr": "Un jeu avec MARIO portant un seau\\nsur la tête !"
+ },
+ "SaffronCity_CopycatsHouse_2F_Text_MimickingFavoriteHobbyFemale": {
+  "en": "{PLAYER}: Hi.\\nYou must like POKéMON.\\p{PLAYER}: No, not me.\\nI asked you.\\p{PLAYER}: Pardon?\\nYou're weird!\\l \\lCOPYCAT: Hmm? Quit mimicking?\\lBut that's my favorite hobby!",
+  "fr": "{PLAYER} : Salut. Tu dois aimer les\\nPOKéMON.\\p{PLAYER} : Non, pas moi. C'est à toi\\nque je demande.\\p{PLAYER} : Pardon ? Tu es bizarre !\\pCOPYCAT : Hmm ? Arrête d'imiter ?\\nMais c'est mon passe-temps\\lpréféré !"
+ },
+ "SaffronCity_CopycatsHouse_2F_Text_MimickingFavoriteHobbyMale": {
+  "en": "{PLAYER}: Hi!\\nDo you like POKéMON?\\p{PLAYER}: Uh, no, I just asked you.\\p{PLAYER}: Huh?\\nYou're strange!\\pCOPYCAT: Hmm? Quit mimicking?\\nBut, that's my favorite hobby!",
+  "fr": "{PLAYER} : Salut ! Tu aimes les\\nPOKéMON ?\\p{PLAYER} : Euh, non, je viens de te\\nle demander.\\p{PLAYER} : Hein ? Tu es bizarre !\\pCOPYCAT : Hmm ? Arrête d'imiter ?\\nMais c'est mon passe-temps\\lpréféré !"
+ },
+ "SaffronCity_CopycatsHouse_2F_Text_MySecrets": {
+  "en": "…\\pMy Secrets!\\pSkill: Mimicry!\\nHobby: Collecting dolls!\\lFavorite POKéMON: CLEFAIRY!",
+  "fr": "…\\pMes Secrets !\\pTalent : Mimétisme ! Passe-temps :\\nCollectionner les poupées ! POKéMON\\lpréféré : MÉLOFÉE !"
+ },
+ "SaffronCity_CopycatsHouse_2F_Text_RareMonOnlyDoll": {
+  "en": "This is a rare POKéMON!\\nHuh? It's only a doll!",
+  "fr": "C'est un POKéMON rare !\\nHein ? Ce n'est qu'une poupée !"
+ },
+ "Text_MimicDeclined": {
+  "en": "Don't you like MIMIC?",
+  "fr": "Tu n'aimes pas COPIE ?"
+ },
+ "Text_MimicTaughtFemale": {
+  "en": "{PLAYER}: Hi!\\nThanks for what you did for us.\\p{PLAYER}: Pardon?\\p{PLAYER}: Is it really that fun to\\ncopy what I say and do?\\pCOPYCAT: You bet!\\nIt's a scream!",
+  "fr": "{PLAYER} : Salut ! Merci pour ce que\\ntu as fait pour nous.\\p{PLAYER} : Pardon ?\\p{PLAYER} : C'est vraiment si amusant\\nde copier ce que je dis et fais ?\\pCOPYCAT : Et comment !\\nC'est à mourir de rire !"
+ },
+ "Text_MimicTaughtMale": {
+  "en": "{PLAYER}: Hi!\\nThanks for earlier!\\p{PLAYER}: Pardon?\\p{PLAYER}: Is it that fun to mimic my\\nevery move?\\pCOPYCAT: You bet!\\nIt's a scream!",
+  "fr": "{PLAYER} : Salut !\\nMerci pour tout à l'heure !\\p{PLAYER} : Pardon ?\\p{PLAYER} : C'est si amusant d'imiter\\nchacun de mes gestes ?\\pCOPYCAT : Et comment !\\nC'est à mourir de rire !"
+ },
+ "Text_MimicTeach": {
+  "en": "Oh wow!\\nA POKé DOLL!\\pFor me?\\nThank you!\\pYou know what?\\nI can teach the move MIMIC.",
+  "fr": "Oh wow !\\nUne POUPÉE POKé !\\pPour moi ?\\nMerci !\\pTu sais quoi ? Je peux enseigner la\\ncapacité COPIE."
+ },
+ "Text_MimicWhichMon": {
+  "en": "I really love MIMIC!\\nWho's going to learn it?",
+  "fr": "J'adore COPIE !\\nQui va l'apprendre ?"
+ }
+}

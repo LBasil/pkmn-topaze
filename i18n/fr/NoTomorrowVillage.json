@@ -1,14 +1,50 @@
 {
+ "NoTomorrowVillage_Text_Boss_After": {
+  "en": "The sun is rising. Really rising.\\nThank you.",
+  "fr": "Le soleil se lève. Vraiment. Merci."
+ },
+ "NoTomorrowVillage_Text_Boss_Defeat": {
+  "en": "So tomorrow finally... arrives.",
+  "fr": "Alors demain… arrive enfin."
+ },
+ "NoTomorrowVillage_Text_Boss_Intro": {
+  "en": "Today again. It was a good day, so\\nit stayed. Break it, if you can!",
+  "fr": "Aujourd'hui encore. C'était une\\nbonne journée, alors elle est\\lrestée. Brise-la si tu peux !"
+ },
  "NoTomorrowVillage_Text_Boss_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "NoTomorrowVillage_Text_Npc0": {
+  "en": "Good morning! Good morning! It is\\nalways morning here.",
+  "fr": "Bonjour ! Bonjour ! Il est toujours\\nmatin ici."
+ },
+ "NoTomorrowVillage_Text_Npc0_A": {
+  "en": "Good evening! Evening! It is\\nevening!",
+  "fr": "Bonsoir ! Bonsoir ! C'est le soir !"
+ },
+ "NoTomorrowVillage_Text_Npc1": {
+  "en": "I bought bread yesterday. Today I\\nbought it again. Same bread.",
+  "fr": "J'ai acheté du pain hier.\\nAujourd'hui je l'ai racheté. Le\\lmême pain."
+ },
+ "NoTomorrowVillage_Text_Npc1_A": {
+  "en": "Fresh bread, today. A new loaf. How\\nstrange!",
+  "fr": "Du pain frais, aujourd'hui. Une\\nnouvelle miche. Comme c'est\\létrange !"
+ },
+ "NoTomorrowVillage_Text_Npc2": {
+  "en": "Mama says tomorrow never comes. I\\nthink it is hiding.",
+  "fr": "Maman dit que demain ne vient\\njamais. Je crois qu'il se cache."
+ },
+ "NoTomorrowVillage_Text_Npc2_A": {
+  "en": "Mama says tomorrow came. I told you\\nit was hiding.",
+  "fr": "Maman dit que demain est venu. Je\\nt'avais dit qu'il se cachait."
  },
  "NoTomorrowVillage_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "NoTomorrowVillage_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

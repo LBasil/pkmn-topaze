@@ -1,0 +1,190 @@
+{
+ "FuchsiaCity_SafariZone_Entrance_Text_CallYouOnPAWhenYouRunOut": {
+  "en": "We'll call you on the PA when you\\nrun out of time or SAFARI BALLS.\\pWell, I'll wish you the best of\\nluck!",
+  "fr": "On t'appellera au micro quand tu\\nn'auras plus de temps ou de SAFARI\\lBALLS.\\pAllez, je te souhaite bonne\\nchance !"
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_CatchFairShareComeAgain": {
+  "en": "Did you catch your fair share?\\nCome again!",
+  "fr": "Tu as attrapé ta part ?\\nReviens quand tu veux !"
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_ExplainSafariZone": {
+  "en": "The SAFARI ZONE actually has\\nfour zones in it.\\pEach zone has different kinds of\\nPOKéMON, even some rare ones.\\pUse the supplied SAFARI BALLS to\\ncatch them.\\pYou can also throw BAIT or ROCKS\\nbesides the SAFARI BALLS.\\pIf you throw BAIT, the POKéMON\\nbecomes less likely to flee, but\\lharder to catch.\\pIf you throw ROCKS, the POKéMON\\nbecomes more likely to flee, but\\leasier to catch.\\pWhen you run out of time or SAFARI\\nBALLS, it's game over for you!",
+  "fr": "Le PARC SAFARI compte en fait\\nquatre zones.\\pChaque zone abrite différents\\nPOKéMON, même des rares.\\pUtilise les SAFARI BALLS fournies\\npour les capturer.\\pTu peux aussi lancer des APPÂTS ou\\ndes CAILLOUX en plus des SAFARI\\lBALLS.\\pSi tu lances un APPÂT, le POKéMON\\nfuit moins, mais est plus dur à\\lcapturer.\\pSi tu lances des CAILLOUX, le\\nPOKéMON fuit plus, mais est plus\\lfacile à capturer.\\pQuand tu n'as plus de temps ou de\\nSAFARI BALLS, c'est la fin du jeu !"
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_FirstTimeAtSafariZone": {
+  "en": "Hi! Is it your first time here at\\nthe SAFARI ZONE?",
+  "fr": "Salut ! C'est ta première fois au\\nPARC SAFARI ?"
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_GoingToLeaveSafariZoneEarly": {
+  "en": "Are you going to leave the\\nSAFARI ZONE early?",
+  "fr": "Tu vas quitter le PARC SAFARI\\nplus tôt ?"
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_GoodLuck": {
+  "en": "Good luck!",
+  "fr": "Bonne chance !"
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_KeeperBye": {
+  "en": "KEEPER: Come back any time.",
+  "fr": "GARDIEN : Reviens quand tu veux."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_KeeperCount": {
+  "en": "KEEPER: Let me see... You have\\ncaught {STR_VAR_1} different species.",
+  "fr": "GARDIEN : Voyons… Tu as capturé\\n{STR_VAR_1} espèces différentes."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_KeeperHello": {
+  "en": "KEEPER: Welcome to the REFUGE.\\nSince the BALLS vanished, rare\\lPOKéMON hide in the park.\\pI keep a record of every species\\nyou have befriended.",
+  "fr": "GARDIEN : Bienvenue au REFUGE.\\nDepuis la disparition des BALLS,\\lles POKéMON rares se cachent dans\\nle parc.\\pJe tiens un registre de chaque\\nespèce dont tu t'es fait un ami."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_KeeperNone": {
+  "en": "KEEPER: Nothing new this time.\\nMilestones: 100, 150, 200, 250 and\\l300 species. Keep exploring!",
+  "fr": "GARDIEN : Rien de nouveau cette\\nfois. Paliers : 100, 150, 200, 250\\let 300 espèces. Continue\\nd'explorer !"
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_KeeperShopAsk": {
+  "en": "KEEPER: Would you like to see the\\nREFUGE MARKET?",
+  "fr": "GARDIEN : Veux-tu voir le MARCHÉ du\\nREFUGE ?"
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_KeeperThanks": {
+  "en": "KEEPER: A wonderful record! The\\nREFUGE thanks you.",
+  "fr": "GARDIEN : Un magnifique bilan ! Le\\nREFUGE te remercie."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_Occupied": {
+  "en": "Sir! Miss! The SAFARI GAME is off.\\nONYBRIS thugs took over the park!\\pWe got everyone out. Go in for\\nfree, with no ball or step limit.\\pPlease, clear them out. And be\\ncareful, they hit hard!",
+  "fr": "Monsieur ! Mademoiselle ! Le JEU\\nSAFARI est suspendu. Des brutes\\ld'ONYBRIS ont pris le parc !\\pOn a évacué tout le monde. Entre\\ngratuitement, sans limite de balls\\lni de pas.\\pJe t'en prie, chasse-les. Et fais\\nattention, ils frappent fort !"
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_OkayPleaseComeAgain": {
+  "en": "Okay.\\nPlease come again!",
+  "fr": "D'accord.\\nReviens quand tu veux !"
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_OopsNotEnoughMoney": {
+  "en": "Oops!\\nNot enough money!",
+  "fr": "Oups !\\nPas assez d'argent !"
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_PlaySafariGameFor500": {
+  "en": "For just ¥500, you can play the\\nSAFARI GAME.\\pYou can roam the wide-open safari\\nand catch what you like.\\pWould you like to play?",
+  "fr": "Pour seulement 500 ¥, tu peux jouer\\nau JEU SAFARI.\\pTu peux parcourir le vaste safari\\net capturer ce que tu veux.\\pVeux-tu jouer ?"
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_PlayerReceived30SafariBalls": {
+  "en": "{PLAYER} received 30 SAFARI BALLS\\nfrom the attendant.",
+  "fr": "{PLAYER} a reçu 30 SAFARI BALLS\\nde l'employé."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_PleaseReturnSafariBalls": {
+  "en": "Please return any SAFARI BALLS\\nyou may have left.",
+  "fr": "Merci de rendre les SAFARI BALLS\\nqu'il te reste."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeDeoxys1": {
+  "en": "KEEPER: 300 species! A visitor from\\nthe stars asks to be your friend.",
+  "fr": "GARDIEN : 300 espèces ! Un visiteur\\ndes étoiles demande à être ton ami."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeDeoxysNo": {
+  "en": "KEEPER: One more guest is coming from\\nthe stars. Register 300 species.",
+  "fr": "GARDIEN : Un autre invité vient des\\nétoiles. Enregistre 300 espèces."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeGift": {
+  "en": "Since the POKé BALLS vanished, the\\nwild POKéMON left the world.\\lOnly this PARK still shelters them.\\pThe Warden asked me to give you these\\nsix partners. Take good care of them.",
+  "fr": "Depuis la disparition des POKé\\nBALLS, les POKéMON sauvages ont\\lquitté le monde. Seul ce PARC les\\nabrite encore.\\pLe Gardien m'a demandé de te donner\\nces six partenaires. Prends-en\\lsoin."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeGift2": {
+  "en": "The SAFARI ZONE is the last refuge.\\nCome in whenever you wish.",
+  "fr": "Le PARC SAFARI est le dernier\\nrefuge. Entre quand tu veux."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeHint0": {
+  "en": "KEEPER: Post 1 of 16 awaits in\\nGRENALUX. Talk to the ranger there.",
+  "fr": "GARDIEN : Le poste 1 sur 16\\nt'attend à GRENALUX. Parle au\\lranger là-bas."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeHint1": {
+  "en": "KEEPER: Post 2 of 16 awaits in\\nOPANIHRUM. Talk to the ranger there.",
+  "fr": "GARDIEN : Le poste 2 sur 16\\nt'attend à OPANIHRUM. Parle au\\lranger là-bas."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeHint10": {
+  "en": "KEEPER: Post 11 of 16 awaits in\\nTWO ISLAND. Talk to the ranger there.",
+  "fr": "GARDIEN : Le poste 11 sur 16\\nt'attend à ÎLE 2. Parle au ranger\\llà-bas."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeHint11": {
+  "en": "KEEPER: Post 12 of 16 awaits in\\nTHREE ISLAND. Talk to the ranger\\lthere.",
+  "fr": "GARDIEN : Le poste 12 sur 16\\nt'attend à ÎLE 3. Parle au ranger\\llà-bas."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeHint12": {
+  "en": "KEEPER: Post 13 of 16 awaits in\\nFOUR ISLAND. Talk to the ranger there.",
+  "fr": "GARDIEN : Le poste 13 sur 16\\nt'attend à ÎLE 4. Parle au ranger\\llà-bas."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeHint13": {
+  "en": "KEEPER: Post 14 of 16 awaits in\\nFIVE ISLAND. Talk to the ranger there.",
+  "fr": "GARDIEN : Le poste 14 sur 16\\nt'attend à ÎLE 5. Parle au ranger\\llà-bas."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeHint14": {
+  "en": "KEEPER: Post 15 of 16 awaits in\\nSIX ISLAND. Talk to the ranger there.",
+  "fr": "GARDIEN : Le poste 15 sur 16\\nt'attend à ÎLE 6. Parle au ranger\\llà-bas."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeHint15": {
+  "en": "KEEPER: Post 16 of 16 awaits in\\nSEVEN ISLAND. Talk to the ranger\\lthere.",
+  "fr": "GARDIEN : Le poste 16 sur 16\\nt'attend à ÎLE 7. Parle au ranger\\llà-bas."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeHint2": {
+  "en": "KEEPER: Post 3 of 16 awaits in\\nPYROPIA. Talk to the ranger there.",
+  "fr": "GARDIEN : Le poste 3 sur 16\\nt'attend à PYROPIA. Parle au ranger\\llà-bas."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeHint3": {
+  "en": "KEEPER: Post 4 of 16 awaits in\\nTOURMALIA. Talk to the ranger there.",
+  "fr": "GARDIEN : Le poste 4 sur 16\\nt'attend à TOURMALIA. Parle au\\lranger là-bas."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeHint4": {
+  "en": "KEEPER: Post 5 of 16 awaits in\\nAPATIA. Talk to the ranger there.",
+  "fr": "GARDIEN : Le poste 5 sur 16\\nt'attend à APATIA. Parle au ranger\\llà-bas."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeHint5": {
+  "en": "KEEPER: Post 6 of 16 awaits in\\nSPINELLIA. Talk to the ranger there.",
+  "fr": "GARDIEN : Le poste 6 sur 16\\nt'attend à SPINELLIA. Parle au\\lranger là-bas."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeHint6": {
+  "en": "KEEPER: Post 7 of 16 awaits in BOURG\\nQUARTZ. Talk to the ranger there.",
+  "fr": "GARDIEN : Le poste 7 sur 16\\nt'attend à BOURG QUARTZ. Parle au\\lranger là-bas."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeHint7": {
+  "en": "KEEPER: Post 8 of 16 awaits in\\nHEMATOWN. Talk to the ranger there.",
+  "fr": "GARDIEN : Le poste 8 sur 16\\nt'attend à HEMATOWN. Parle au\\lranger là-bas."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeHint8": {
+  "en": "KEEPER: Post 9 of 16 awaits in\\nCHRONDROLIA. Talk to the ranger there.",
+  "fr": "GARDIEN : Le poste 9 sur 16\\nt'attend à CHRONDROLIA. Parle au\\lranger là-bas."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeHint9": {
+  "en": "KEEPER: Post 10 of 16 awaits in\\nONE ISLAND. Talk to the ranger there.",
+  "fr": "GARDIEN : Le poste 10 sur 16\\nt'attend à ÎLE 1. Parle au ranger\\llà-bas."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeHoOh1": {
+  "en": "KEEPER: 200 species! The rainbow\\nbird honors the REFUGE.",
+  "fr": "GARDIEN : 200 espèces ! L'oiseau\\narc-en-ciel honore le REFUGE."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeHoOhNo": {
+  "en": "KEEPER: The rainbow bird waits. Come\\nback with 200 species registered.",
+  "fr": "GARDIEN : L'oiseau arc-en-ciel\\nattend. Reviens avec 200 espèces\\lenregistrées."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeKing1": {
+  "en": "KEEPER: The hunters sent their chief.\\nHe waits at the gate of the REFUGE.\\pHe says POKé BALLS must come back.\\nStop him, WARDEN!",
+  "fr": "GARDIEN : Les chasseurs ont envoyé\\nleur chef. Il attend à la porte du\\lREFUGE.\\pIl dit que les POKé BALLS doivent\\nrevenir. Arrête-le, GARDIEN !"
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeKing2": {
+  "en": "CHIEF: The cages... will rust...",
+  "fr": "CHEF : Les cages… vont\\nrouiller…"
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeKing3": {
+  "en": "KEEPER: The REFUGE is safe. The\\nlegend of the sea answers your call.",
+  "fr": "GARDIEN : Le REFUGE est sauf. La\\nlégende de la mer répond à ton\\lappel."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_RefugeKing4": {
+  "en": "KEEPER: Come back with 200 species\\nregistered. The rainbow awaits.",
+  "fr": "GARDIEN : Reviens avec 200 espèces\\nenregistrées. L'arc-en-ciel\\lt'attend."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_SorryYoureARegularHere": {
+  "en": "Sorry, you're a regular here!",
+  "fr": "Désolé, tu es un habitué !"
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_ThatllBe500WeOnlyUseSpecialBalls": {
+  "en": "That'll be ¥500, please!\\pWe only use a special kind of \\nPOKé BALLS here.",
+  "fr": "Ce sera 500 ¥, s'il vous plaît !\\pNous n'utilisons ici qu'un type\\nspécial de POKé BALLS."
+ },
+ "FuchsiaCity_SafariZone_Entrance_Text_WelcomeToSafariZone": {
+  "en": "Welcome to the SAFARI ZONE!",
+  "fr": "Bienvenue au PARC SAFARI !"
+ }
+}

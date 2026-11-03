@@ -1,0 +1,106 @@
+{
+ "ThreeIsland_BondBridge_Text_AlexisDefeat": {
+  "en": "What happens now?",
+  "fr": "Qu'est-ce qui se passe maintenant ?"
+ },
+ "ThreeIsland_BondBridge_Text_AlexisIntro": {
+  "en": "Yay, yay!\\nPOKéMON!",
+  "fr": "Youpi, youpi !\\nPOKéMON !"
+ },
+ "ThreeIsland_BondBridge_Text_AlexisPostBattle": {
+  "en": "Did I just win?\\nOr did I lose?",
+  "fr": "Je viens de gagner ?\\nOu j'ai perdu ?"
+ },
+ "ThreeIsland_BondBridge_Text_AmiraDefeat": {
+  "en": "Waaah!\\nWaaah!",
+  "fr": "Waaah !\\nWaaah !"
+ },
+ "ThreeIsland_BondBridge_Text_AmiraIntro": {
+  "en": "My mommy said that I can't swim\\nwithout my float ring.",
+  "fr": "Maman a dit que je ne pouvais pas\\nnager sans ma bouée."
+ },
+ "ThreeIsland_BondBridge_Text_AmiraPostBattle": {
+  "en": "This year, I'm going to finally\\nlearn how to swim!",
+  "fr": "Cette année, je vais enfin\\napprendre à nager !"
+ },
+ "ThreeIsland_BondBridge_Text_BerryForestAhead": {
+  "en": "BERRY FOREST AHEAD",
+  "fr": "FORÊT DES BAIES DEVANT"
+ },
+ "ThreeIsland_BondBridge_Text_BondBridgeSign": {
+  "en": "BOND BRIDGE\\nPlease be quiet when crossing.\\pBERRY FOREST AHEAD",
+  "fr": "PONT DES LIENS Merci de rester\\nsilencieux en traversant.\\pFORÊT DES BAIES DEVANT"
+ },
+ "ThreeIsland_BondBridge_Text_DenLocked": {
+  "en": "Mist rolls out of the cave mouth.\\nThe tide is not ready for you.",
+  "fr": "La brume sort de l'entrée de la\\ngrotte. La marée n'est pas prête\\lpour toi."
+ },
+ "ThreeIsland_BondBridge_Text_JoyDefeat": {
+  "en": "JOY: Ohh…\\nMEG!",
+  "fr": "JOY : Ohh…\\nMEG !"
+ },
+ "ThreeIsland_BondBridge_Text_JoyIntro": {
+  "en": "JOY: We'll teach you what our\\nfavorite POKéMON is!",
+  "fr": "JOY : On va te montrer quel est\\nnotre POKéMON préféré !"
+ },
+ "ThreeIsland_BondBridge_Text_JoyNotEnoughMons": {
+  "en": "JOY: I really want to battle with\\nMEG.\\pOne POKéMON isn't enough.",
+  "fr": "JOY : J'ai vraiment envie de me\\nbattre avec MEG.\\pUn POKéMON ne suffit pas."
+ },
+ "ThreeIsland_BondBridge_Text_JoyPostBattle": {
+  "en": "JOY: Wasn't that fun?\\nI hope we can battle again!",
+  "fr": "JOY : C'était amusant, non ?\\nJ'espère qu'on pourra se battre\\lencore !"
+ },
+ "ThreeIsland_BondBridge_Text_MegDefeat": {
+  "en": "MEG: Ohh…\\nJOY!",
+  "fr": "MEG : Ohh…\\nJOY !"
+ },
+ "ThreeIsland_BondBridge_Text_MegIntro": {
+  "en": "MEG: We'll show you our favorite\\nPOKéMON.",
+  "fr": "MEG : On va te montrer notre\\nPOKéMON préféré."
+ },
+ "ThreeIsland_BondBridge_Text_MegNotEnoughMons": {
+  "en": "MEG: I want to battle together\\nwith JOY.\\pOne POKéMON isn't enough.",
+  "fr": "MEG : Je veux me battre ensemble\\navec JOY.\\pUn POKéMON ne suffit pas."
+ },
+ "ThreeIsland_BondBridge_Text_MegPostBattle": {
+  "en": "MEG: JOY, wasn't that fun?",
+  "fr": "MEG : JOY, c'était amusant, non ?"
+ },
+ "ThreeIsland_BondBridge_Text_NikkiDefeat": {
+  "en": "…Sniff, sniff…\\nSomething smells unpleasant…",
+  "fr": "…Renifle, renifle…\\nQuelque chose sent mauvais…"
+ },
+ "ThreeIsland_BondBridge_Text_NikkiIntro": {
+  "en": "The salty tang of the sea…\\nIt tickles my heart.",
+  "fr": "Le goût salé de la mer…\\nIl me chatouille le cœur."
+ },
+ "ThreeIsland_BondBridge_Text_NikkiPostBattle": {
+  "en": "Perhaps that reek is your sweaty\\nPOKéMON's body odor…",
+  "fr": "Peut-être que cette puanteur vient\\nde l'odeur corporelle de ton\\pPOKéMON en sueur…"
+ },
+ "ThreeIsland_BondBridge_Text_TishaDefeat": {
+  "en": "Okay, you've won!\\nNow will you please go away?",
+  "fr": "D'accord, tu as gagné !\\nMaintenant, tu veux bien partir ?"
+ },
+ "ThreeIsland_BondBridge_Text_TishaIntro": {
+  "en": "Oh, no, don't come here!\\nPlease, stay away from me!",
+  "fr": "Oh non, ne viens pas ici !\\nReste loin de moi, s'il te plaît !"
+ },
+ "ThreeIsland_BondBridge_Text_TishaPostBattle": {
+  "en": "A POKéMON bit through my \\nswimsuit.\\pI can't get out of the water!",
+  "fr": "Un POKéMON a mordu mon maillot de\\nbain.\\pJe ne peux pas sortir de l'eau !"
+ },
+ "ThreeIsland_BondBridge_Text_VioletDefeat": {
+  "en": "You're raising some wonderful\\nPOKéMON.",
+  "fr": "Tu élèves de merveilleux POKéMON."
+ },
+ "ThreeIsland_BondBridge_Text_VioletIntro": {
+  "en": "Where are you off to in such\\na hurry?",
+  "fr": "Où vas-tu si vite ?"
+ },
+ "ThreeIsland_BondBridge_Text_VioletPostBattle": {
+  "en": "If you keep going this way, you'll\\neventually reach BERRY FOREST.",
+  "fr": "Si tu continues dans cette\\ndirection, tu finiras par arriver à\\lla FORÊT DES BAIES."
+ }
+}

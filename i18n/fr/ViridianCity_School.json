@@ -1,0 +1,62 @@
+{
+ "ViridianCity_School_Text_BlackboardListsStatusProblems": {
+  "en": "The blackboard lists POKéMON\\nSTATUS problems during battles.",
+  "fr": "Le tableau noir énumère les\\nproblèmes de STATUT des POKéMON en\\lcombat."
+ },
+ "ViridianCity_School_Text_ExplainBurn": {
+  "en": "A burn reduces ATTACK power.\\nIt also causes ongoing HP loss.\\pA burn remains after a battle.\\nUse BURN HEAL to cure a burn.",
+  "fr": "Une brûlure réduit la puissance\\nd'ATTAQUE. Elle provoque aussi une\\lperte de PV continue.\\pUne brûlure persiste après le\\ncombat. Utilise un ANTI-BRÛLE pour\\lla guérir."
+ },
+ "ViridianCity_School_Text_ExplainFreeze": {
+  "en": "A frozen POKéMON becomes\\nhelplessly immobile.\\pIt stays frozen even after the\\nbattle ends.\\pUse ICE HEAL to thaw out the\\nsuffering POKéMON.",
+  "fr": "Un POKéMON gelé devient totalement\\nimmobile.\\pIl reste gelé même après la fin du\\ncombat.\\pUtilise un ANTI-GEL pour dégeler le\\nPOKéMON souffrant."
+ },
+ "ViridianCity_School_Text_ExplainParalysis": {
+  "en": "Paralysis reduces SPEED and may\\nprevent the POKéMON from moving.\\pParalysis remains after battles.\\nUse PARLYZ HEAL for treatment.",
+  "fr": "La paralysie réduit la VITESSE et\\npeut empêcher le POKéMON de bouger.\\pLa paralysie persiste après les\\ncombats. Utilise un ANTI-PARA pour\\lla soigner."
+ },
+ "ViridianCity_School_Text_ExplainPoison": {
+  "en": "When poisoned, a POKéMON's health\\nsteadily drops.\\pPoison lingers after battles.\\nUse an ANTIDOTE to cure poison!",
+  "fr": "Quand il est empoisonné, la santé\\nd'un POKéMON baisse régulièrement.\\pLe poison persiste après les\\ncombats. Utilise un ANTIDOTE pour\\lguérir le poison !"
+ },
+ "ViridianCity_School_Text_ExplainSleep": {
+  "en": "A POKéMON can't attack if it's\\nasleep.\\pPOKéMON will stay asleep even\\nafter battles.\\pUse AWAKENING to awaken one\\nfrom sleep.",
+  "fr": "Un POKéMON ne peut pas attaquer\\ns'il dort.\\pLes POKéMON restent endormis même\\naprès les combats.\\pUtilise un RÉVEIL pour réveiller\\nun POKéMON."
+ },
+ "ViridianCity_School_Text_HeyDontLookAtMyNotes": {
+  "en": "GIRL: Hey!\\nDon't look at my notes!",
+  "fr": "FILLE : Hé !\\nNe regarde pas mes notes !"
+ },
+ "ViridianCity_School_Text_NotebookFirstPage": {
+  "en": "Let's check out the notebook.\\pFirst page…\\pPOKé BALLS are used to catch\\nPOKéMON.\\pUp to six POKéMON can be carried\\nin your party.\\pPeople who raise and battle\\nwith POKéMON are called TRAINERS.",
+  "fr": "Regardons le cahier.\\pPremière page…\\pLes POKé BALLS servent à capturer\\ndes POKéMON.\\pOn peut porter jusqu'à six POKéMON\\ndans son équipe.\\pLes gens qui élèvent des POKéMON et\\nse battent avec eux sont appelés\\lDRESSEURS."
+ },
+ "ViridianCity_School_Text_NotebookFourthPage": {
+  "en": "Fourth page…\\pThe ultimate goal for all POKéMON\\nTRAINERS is simple.\\pIt is to defeat the top eight\\nPOKéMON GYM LEADERS.\\pDo so to earn the right to face…\\pThe ELITE FOUR of the POKéMON\\nLEAGUE!",
+  "fr": "Quatrième page…\\pLe but ultime de tous les DRESSEURS\\nPOKéMON est simple.\\pC'est de vaincre les huit meilleurs\\nCHAMPIONS POKéMON.\\pFaites-le pour gagner le droit\\nd'affronter…\\pLe CONSEIL DES QUATRE de la LIGUE\\nPOKéMON !"
+ },
+ "ViridianCity_School_Text_NotebookSecondPage": {
+  "en": "Second page…\\pA healthy POKéMON may be hard to\\ncatch, so weaken it first.\\pPoison, burn, or cause another\\nstatus problem to weaken it.",
+  "fr": "Deuxième page…\\pUn POKéMON en bonne santé peut être\\ndur à capturer, alors affaiblis-le\\ld'abord.\\pEmpoisonne-le, brûle-le ou inflige\\nun autre problème de statut pour\\ll'affaiblir."
+ },
+ "ViridianCity_School_Text_NotebookThirdPage": {
+  "en": "Third page…\\pPOKéMON TRAINERS seek others to\\nengage in POKéMON battles.\\pTo TRAINERS, the taste of victory\\nis sweet, indeed.\\pBattles are constantly waged at\\nPOKéMON GYMS everywhere.",
+  "fr": "Troisième page…\\pLes DRESSEURS POKéMON cherchent\\nd'autres personnes pour des combats\\lPOKéMON.\\pPour les DRESSEURS, le goût de la\\nvictoire est vraiment doux.\\pDes combats ont lieu en permanence\\ndans les ARÈNES POKéMON partout."
+ },
+ "ViridianCity_School_Text_ReadBlackboardCarefully": {
+  "en": "Okay!\\pBe sure to read what's on the\\nblackboard carefully!",
+  "fr": "D'accord !\\pLis bien ce qui est écrit sur le\\ntableau noir !"
+ },
+ "ViridianCity_School_Text_ReadWhichTopic": {
+  "en": "Which topic do you want to read?",
+  "fr": "Quel sujet veux-tu lire ?"
+ },
+ "ViridianCity_School_Text_TryingToMemorizeNotes": {
+  "en": "Whew! I'm trying to memorize all my\\nnotes.",
+  "fr": "Ouf ! J'essaie de mémoriser toutes\\nmes notes."
+ },
+ "ViridianCity_School_Text_TurnThePage": {
+  "en": "Turn the page?",
+  "fr": "Tourner la page ?"
+ }
+}

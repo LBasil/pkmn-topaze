@@ -1,38 +1,38 @@
 {
  "CeladonCity_Condominiums_3F_Text_CompletedPokedexCongratulations": {
-  "fr": "Waouh ! Excellent !\\nTu as complété ton POKéDEX !\\lFélicitations !\\l…",
-  "en": "Wow! Excellent!\\nYou completed your POKéDEX!\\lCongratulations!\\l…"
+  "en": "Wow! Excellent!\\nYou completed your POKéDEX!\\lCongratulations!\\l…",
+  "fr": "Waouh ! Excellent !\\nTu as complété ton POKéDEX !\\lFélicitations !\\l…"
  },
  "CeladonCity_Condominiums_3F_Text_GameFreakDevelopmentRoom": {
-  "fr": "Salle de développement GAME FREAK\\nOu bien celle de UNSURCENT.",
-  "en": "GAME FREAK Development Room"
+  "en": "GAME FREAK Development Room",
+  "fr": "Salle de développement GAME FREAK\\nOu bien celle de UNSURCENT."
  },
  "CeladonCity_Condominiums_3F_Text_IWroteTheStory": {
-  "fr": "J'ai écrit l'histoire !\\nÉRIKA est mignonne, non ?\\pJ'aime beaucoup ONDINE aussi !\\nAh, et SABRINA, je l'aime bien !",
-  "en": "I wrote the story!\\nIsn't ERIKA cute?\\pI like MISTY a lot, too!\\nOh, and SABRINA, I like her!"
+  "en": "I wrote the story!\\nIsn't ERIKA cute?\\pI like MISTY a lot, too!\\nOh, and SABRINA, I like her!",
+  "fr": "J'ai écrit l'histoire !\\nÉRIKA est mignonne, non ?\\pJ'aime beaucoup ONDINE aussi !\\nAh, et SABRINA, je l'aime bien !"
  },
  "CeladonCity_Condominiums_3F_Text_ImGameDesignerShowMeFinishedPokedex": {
-  "fr": "C'est vrai ?\\pJe suis le concepteur du jeu !\\pRemplir ton POKéDEX est difficile,\\nmais n'abandonne pas !\\pQuand tu auras fini, viens me le\\ndire !",
-  "en": "Is that right?\\pI'm the game designer!\\pFilling up your POKéDEX is tough,\\nbut don't quit!\\pWhen you finish, come tell me!"
+  "en": "Is that right?\\pI'm the game designer!\\pFilling up your POKéDEX is tough,\\nbut don't quit!\\pWhen you finish, come tell me!",
+  "fr": "C'est vrai ?\\pJe suis le concepteur du jeu !\\pRemplir ton POKéDEX est difficile,\\nmais n'abandonne pas !\\pQuand tu auras fini, viens me le\\ndire !"
  },
  "CeladonCity_Condominiums_3F_Text_ImTheGraphicArtist": {
-  "fr": "Je suis le graphiste !\\nC'est moi qui t'ai dessiné !",
-  "en": "I'm the graphic artist!\\nI drew you!"
+  "en": "I'm the graphic artist!\\nI drew you!",
+  "fr": "Je suis le graphiste !\\nC'est moi qui t'ai dessiné !"
  },
  "CeladonCity_Condominiums_3F_Text_ImTheProgrammer": {
-  "fr": "Moi ?\\nJe suis le programmeur !",
-  "en": "Me?\\nI'm the programmer!"
+  "en": "Me?\\nI'm the programmer!",
+  "fr": "Moi ?\\nJe suis le programmeur !"
  },
  "CeladonCity_Condominiums_3F_Text_ItsScriptBetterNotLookAtEnding": {
-  "fr": "C'est le scénario !\\nMieux vaut ne pas lire la fin !",
-  "en": "It's the script!\\nBetter not look at the ending!"
+  "en": "It's the script!\\nBetter not look at the ending!",
+  "fr": "C'est le scénario !\\nMieux vaut ne pas lire la fin !"
  },
  "CeladonCity_Condominiums_3F_Text_ItsTheGameProgram": {
-  "fr": "C'est le programme du jeu ! Y\\ntoucher pourrait le faire bugger !",
-  "en": "It's the game program! Messing with\\nit could bug out the game!"
+  "en": "It's the game program! Messing with\\nit could bug out the game!",
+  "fr": "C'est le programme du jeu ! Y\\ntoucher pourrait le faire bugger !"
  },
  "CeladonCity_Condominiums_3F_Text_SomeonesPlayingGame": {
-  "fr": "Quelqu'un joue au lieu de\\ntravailler !",
-  "en": "Someone's playing a game instead of\\nworking!"
+  "en": "Someone's playing a game instead of\\nworking!",
+  "fr": "Quelqu'un joue au lieu de\\ntravailler !"
  }
 }

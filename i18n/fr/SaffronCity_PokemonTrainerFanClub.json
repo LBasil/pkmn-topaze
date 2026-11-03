@@ -1,0 +1,154 @@
+{
+ "SaffronCity_PokemonTrainerFanClub_Text_AdoreWayYouBattle": {
+  "en": "Oh, my goodness!\\nIs it really you, {PLAYER}?\\pI have to tell you, I adore the\\nway you battle.\\pI hope you'll keep at it.\\nI'll be your number one fan!",
+  "fr": "Oh, mon Dieu !\\nC'est vraiment toi, {PLAYER} ?\\pJe dois te dire que j'adore ta\\nfaçon de combattre.\\pJ'espère que tu continueras.\\nJe serai ta fan numéro un !"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_AlwaysCheerForYou": {
+  "en": "I'll always be cheering for you!\\pGo, {PLAYER}, go!",
+  "fr": "Je t'encouragerai toujours !\\pAllez, {PLAYER}, allez !"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_BelieveInMasterWithAllMyHeart": {
+  "en": "I believe in Master {STR_VAR_1}\\nwith all my heart.\\pEven if I am the only one to\\nbelieve in him.\\pI won't ever feel lonesome, though.\\pNot if I keep thinking about Master\\n{STR_VAR_1}.",
+  "fr": "Je crois en Maître {STR_VAR_1} de tout\\nmon cœur.\\pMême si je suis le seul à croire en\\nlui.\\pJe ne me sentirai jamais seul,\\npourtant.\\pPas tant que je penserai à Maître\\n{STR_VAR_1}."
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_BrocksFanToBitterEnd": {
+  "en": "…  …\\p…  …\\nI'm BROCK's fan!\\pEven if I were his only fan,\\nI swear it on my rock-hard will,\\land on my shorts!\\pI'll be his fan to the bitter end!",
+  "fr": "… …\\p… … Je suis fan de BROCK !\\pMême si j'étais son seul fan, je le\\njure sur ma volonté de roc, et sur\\lmon short !\\pJe serai son fan jusqu'au bout !"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_BrocksLastWordOnCool": {
+  "en": "BROCK's the last word on cool,\\nend of story!\\pNow there's a guy who I want to\\nbe like!",
+  "fr": "BROCK est le summum de la classe,\\npoint final !\\pVoilà un gars à qui je veux\\nressembler !"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_BrocksMyHero": {
+  "en": "BROCK's my hero!\\nHe's a man among men!\\pHeheh, I got my mom to do\\nsomething for me.\\pI got her to embroider “BROCK”\\non my shorts!",
+  "fr": "BROCK est mon héros !\\nC'est un homme parmi les hommes !\\pHéhéhé, j'ai fait faire quelque\\nchose à ma mère.\\pJe lui ai fait broder “ BROCK ” sur\\nmon short !"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_CanIBecomeCoolTrainerOneDay": {
+  "en": "I wonder if I can become a cool\\nTRAINER one day?",
+  "fr": "Je me demande si je pourrai devenir\\nun DRESSEUR cool un jour ?"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_CanYouAutographShorts": {
+  "en": "Oh! It's {PLAYER}!\\nToo cool!\\pOh!\\nOh, yeah!\\pCan you autograph something?\\nHow about my shorts?",
+  "fr": "Oh ! C'est {PLAYER} !\\nTrop cool !\\pOh !\\nOh, ouais !\\pTu peux dédicacer quelque chose ?\\nQue dirais-tu de mon short ?"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_CountingOnYou": {
+  "en": "However hot it's been…\\pAnd however cold it may get…\\pI've always believed in, and worn,\\nshorts!\\pI'm counting on you to keep\\nwinning!\\pI believe in you just as much as\\nI believe in shorts!",
+  "fr": "Peu importe la chaleur…\\pEt peu importe le froid…\\pJ'ai toujours cru aux shorts, et\\nj'en ai toujours porté !\\pJe compte sur toi pour continuer à\\ngagner !\\pJe crois en toi autant que je crois\\naux shorts !"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_EveryoneButMeStoppedBeingYourFan": {
+  "en": "Everyone stopped being {PLAYER}'s\\nfan…\\pBut that means I can have {PLAYER}\\nall to myself!\\pYay! Go for it!\\nMy one and only {PLAYER}!",
+  "fr": "Tout le monde a cessé d'être fan de\\n{PLAYER}…\\pMais ça veut dire que je peux avoir\\n{PLAYER} pour moi tout seul !\\pHourra ! Vas-y !\\nMon unique {PLAYER} !"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_EveryoneTalksAboutYou": {
+  "en": "Oh, hello!\\nIf it isn't {PLAYER}!\\pLately, all everyone talks about\\nis you.\\pI'm feeling lonesome because I\\nprefer {STR_VAR_1}.",
+  "fr": "Oh, bonjour !\\nMais c'est {PLAYER} !\\pDernièrement, tout le monde ne\\nparle que de toi.\\pJe me sens seule parce que je\\npréfère {STR_VAR_1}."
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_EveryonesYourFanButICantBe": {
+  "en": "Oh!\\n{PLAYER}!\\pEveryone's been all excited about\\nyou recently.\\pI can understand why.\\nI know that you're strong.\\pBut, do you know what?\\pOnce I became {STR_VAR_1}'s fan,\\nI can't just stop being a fan.",
+  "fr": "Oh !\\n{PLAYER} !\\pTout le monde est très enthousiaste\\nà ton sujet ces derniers temps.\\pJe comprends pourquoi.\\nJe sais que tu as du talent.\\pMais tu sais quoi ?\\pUne fois devenu fan de {STR_VAR_1},\\nje ne peux pas simplement arrêter."
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_HadPleasureOfWatchingYouBattle": {
+  "en": "{PLAYER}, I've had the pleasure of\\nwatching you battle.\\pIt brings back sweet memories of\\nmy own long-lost youth.\\pMay you continue to find success.\\nYou have a fan in me!",
+  "fr": "{PLAYER}, j'ai eu le plaisir de te\\nregarder combattre.\\pÇa me rappelle de doux souvenirs de\\nma jeunesse perdue.\\pPuisses-tu continuer à réussir.\\nTu as un fan en moi !"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_HmmAndYouAre": {
+  "en": "Hmm…\\nAnd you are?\\pWere you hoping to sign up for\\na membership in our FAN CLUB?",
+  "fr": "Hmm…\\nEt vous êtes ?\\pEspériez-vous vous inscrire à\\nnotre CLUB DE FANS ?"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_HuhYou": {
+  "en": "Huh?\\nYou…",
+  "fr": "Hein ?\\nToi…"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_IllAlwaysBelieveInYou": {
+  "en": "I'll always believe in you,\\n{PLAYER}.\\pPlease show the others what you're\\nlike when you battle seriously.",
+  "fr": "Je croirai toujours en toi,\\n{PLAYER}.\\pMontre aux autres comment tu es\\nquand tu te bats sérieusement."
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_ImLoneTrainerFan": {
+  "en": "Huh, can you believe it?\\nEveryone turned into your fans.\\pSo after all we've been through,\\nI'm the lone {STR_VAR_1} fan?\\pEh, being the one and only\\n{STR_VAR_1} fan's my style, anyway.",
+  "fr": "Tu y crois ?\\nTout le monde est devenu ton fan.\\pAlors après tout ce qu'on a vécu,\\nje suis le seul fan de {STR_VAR_1} ?\\pBah, être l'unique fan de {STR_VAR_1},\\nc'est mon style de toute façon."
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_ImOnlyOneLeftOfYourFans": {
+  "en": "Yo, {PLAYER}!\\pLooks like I'm the only one left\\nout of your fans.\\pBut, you know, I like being an only\\nfan… It's less stressful.\\pKeep up and at it!",
+  "fr": "Yo, {PLAYER} !\\pOn dirait que je suis le seul fan\\nqui te reste.\\pMais tu sais, j'aime être le seul\\nfan… C'est moins stressant.\\pContinue comme ça !"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_ImYourNumberOneFan": {
+  "en": "Oh, my goodness!\\nIf it isn't {PLAYER}!\\pIt's so disappointing… I realized\\nI'm your number-one-and-only fan!\\pWell, it can't be helped!\\nLet me cheer you on, at least!\\pHurray, hurray, {PLAYER}!",
+  "fr": "Oh, mon Dieu ! Mais c'est {PLAYER} !\\pC'est si décevant… J'ai réalisé que\\nje suis ta seule et unique fan !\\pBon, on n'y peut rien ! Laisse-moi\\nau moins t'encourager !\\pHourra, hourra, {PLAYER} !"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_ImYourOnlyFan": {
+  "en": "I'm your only fan…\\nSigh… This is lonely…\\pCan't you try harder and make the\\nothers take notice of you?",
+  "fr": "Je suis ton seul fan…\\nSoupir… C'est solitaire…\\pTu ne peux pas faire un effort pour\\nque les autres te remarquent ?"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_LoveWayTrainerTalks": {
+  "en": "{STR_VAR_1}'s cool, huh?\\nI love the way he talks.\\pI'd really relish a chance to meet\\nhim in person once.",
+  "fr": "{STR_VAR_1} est cool, non ? J'adore sa\\nfaçon de parler.\\pJ'aimerais vraiment avoir\\nl'occasion de le rencontrer en\\lpersonne."
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_NeverBeFanOfAnyoneButMaster": {
+  "en": "Hiyah! I respect my MASTER at the\\nFIGHTING DOJO.\\pI will never become a fan of\\nanyone other than my MASTER!\\pI will even sneak out of the DOJO\\nto spread word of his greatness.\\pHiyah!",
+  "fr": "Hiyah ! Je respecte mon MAÎTRE du\\nDOJO DE COMBAT.\\pJe ne deviendrai jamais fan de\\npersonne d'autre que mon MAÎTRE !\\pJe me faufilerai même hors du DOJO\\npour répandre sa grandeur.\\pHiyah !"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_NeverSeenTrainerOfYourMagnificence": {
+  "en": "I have journeyed far and wide\\nacross the lands.\\pBut never have I seen a TRAINER\\nof your magnificence.\\pTake courage in your abilities\\nand keep battling on!\\pMake that a promise to me,\\nmy young idol!",
+  "fr": "J'ai voyagé aux quatre coins du\\nmonde.\\pMais jamais je n'ai vu un DRESSEUR\\naussi magnifique que toi.\\pAie confiance en tes capacités et\\ncontinue de te battre !\\pFais-m'en la promesse,\\nmon jeune idole !"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_OnlyMasterHasMyRespect": {
+  "en": "Hiyah! There is but one TRAINER\\nwho has my respect.\\pAnd that is none other than my\\nMASTER at the FIGHTING DOJO.\\pYou should become a fan of my\\nMASTER like me! Hiyah!",
+  "fr": "Hiyah ! Il n'y a qu'un seul\\nDRESSEUR qui ait mon respect.\\pEt ce n'est autre que mon MAÎTRE du\\nDOJO DE COMBAT.\\pTu devrais devenir fan de mon\\nMAÎTRE comme moi ! Hiyah !"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_TheWayYouBattleIsCool": {
+  "en": "Oh, man, oh, man!\\nCool! Too cool!\\p…Huh?\\nNo, not you.\\pJust the way you battle.\\nThat's cool.",
+  "fr": "Oh là là !\\nCool ! Trop cool !\\p…Hein ?\\nNon, pas toi.\\pJuste ta façon de combattre.\\nC'est cool."
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_TrainerHasBeenOnFire": {
+  "en": "Recently, {STR_VAR_1} has been on\\nfire.\\pThe way he battles… It's just \\nthe way that I like it!",
+  "fr": "Récemment, {STR_VAR_1} est en feu.\\pSa façon de combattre… C'est\\nexactement comme je l'aime !"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_TrainersCoolWhenBattling": {
+  "en": "I think TRAINERS are so cool when\\nthey're battling.\\pDon't you think so, too?",
+  "fr": "Je trouve les DRESSEURS trop cool\\nquand ils se battent.\\pTu ne trouves pas aussi ?"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_WantToBeLikeSabrina": {
+  "en": "Do you know what?\\nI want to be like SABRINA!\\pI want to be a psychic girl just\\nlike her!",
+  "fr": "Tu sais quoi ?\\nJe veux être comme SABRINA !\\pJe veux être une fille psychique\\ncomme elle !"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_WantToBeLikeYouOneDay": {
+  "en": "It's {PLAYER}!\\nIt's {PLAYER}!\\pI want to be like {PLAYER} one day!",
+  "fr": "C'est {PLAYER} ! C'est {PLAYER} !\\pJe veux être comme {PLAYER} un\\njour !"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_WasYourFanNotAnymore": {
+  "en": "I'm sorry.\\nI was your fan before.\\pBut now, you seem to have lost\\nthe drive you had before.\\pLately, I think {STR_VAR_1} has been\\na lot cooler.",
+  "fr": "Désolé.\\nJ'étais ton fan avant.\\pMais maintenant, tu semble avoir\\nperdu l'élan que tu avais.\\pDernièrement, je trouve que {STR_VAR_1}\\nest bien plus cool."
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_WhyCantOthersSeeMastersDignity": {
+  "en": "Master {STR_VAR_1} is so dignified…\\nHe is so my type.\\pWhy can't the others see the\\ndignity he simply oozes?",
+  "fr": "Maître {STR_VAR_1} est si digne…\\nIl est tellement mon type.\\pPourquoi les autres ne voient-ils\\npas la dignité qu'il dégage ?"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_WontStopBeingSabrinasFan": {
+  "en": "Even if I'm the only one, I won't\\nstop being SABRINA's fan.\\pMy dream is to be like SABRINA,\\ncute, but cool.\\pI want to be a psychic girl just\\nlike her!",
+  "fr": "Même si je suis la seule, je ne\\ncesserai pas d'être fan de SABRINA.\\pMon rêve est d'être comme SABRINA,\\nmignonne, mais cool.\\pJe veux être une fille psychique\\ncomme elle !"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_WontStopBeingYourFan": {
+  "en": "Instead of just watching others\\nbattle, battle yourself!\\p…My DOJO's MASTER chewed me out\\nlike that…\\pBut I won't let that stop me from\\nbeing your fan!\\pI can't stop being your fan!",
+  "fr": "Au lieu de regarder les autres se\\nbattre, bats-toi toi-même !\\p…Le MAÎTRE de mon DOJO m'a passé\\nun savon comme ça…\\pMais je ne le laisserai pas\\nm'empêcher d'être ton fan !\\pJe ne peux pas cesser d'être ton\\nfan !"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_YouReallyAreAmazing": {
+  "en": "Amazing!\\n{PLAYER}, you really are amazing!\\pInstead of just watching, maybe\\nI should become a TRAINER, too.",
+  "fr": "Incroyable ! {PLAYER}, tu es\\nvraiment incroyable !\\pAu lieu de regarder, je devrais\\npeut-être devenir DRESSEUR aussi."
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_YoullBeTalkedAboutIfYouKeepWinning": {
+  "en": "All of us gathered here are fans\\nof POKéMON TRAINERS.\\pThe way they look in battle…\\nThey are the picture of coolness.\\pPerhaps you will be talked about\\nhere, too, if you keep winning.",
+  "fr": "Nous tous réunis ici sommes fans de\\nDRESSEURS POKéMON.\\pLeur allure au combat…\\nIls sont l'image même de la classe.\\pOn parlera peut-être de toi ici\\naussi, si tu continues à gagner."
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_YourBattleStyleIsEducational": {
+  "en": "Hiyah!\\pYour battling style is most\\neducational.\\pI hope that you will keep plugging\\naway at success, hiyah!",
+  "fr": "Hiyah !\\pTon style de combat est très\\ninstructif.\\pJ'espère que tu continueras à\\npoursuivre le succès, hiyah !"
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_YourePlayerWereYourFansNow": {
+  "en": "Are you maybe…\\n… …\\pYou are!\\nYou are {PLAYER}!\\pWe were just talking about you!\\pWe were talking about how an\\nincredibly good TRAINER appeared.\\pAnd that someone is you!\\nYou're so cool!\\pSo, we decided that we'll become\\nyour FAN CLUB!\\pWe all hope you'll keep battling\\nand show us how cool you are.\\pThat way, maybe other people will\\nbecome fans just like me.",
+  "fr": "Serais-tu peut-être… … …\\pMais oui ! Tu es {PLAYER} !\\pOn parlait justement de toi !\\pOn parlait d'un DRESSEUR\\nincroyablement bon qui est apparu.\\pEt ce quelqu'un, c'est toi ! Tu es\\ntrop cool !\\pAlors nous avons décidé de devenir\\nton CLUB DE FANS !\\pNous espérons tous que tu\\ncontinueras à te battre et à nous\\lmontrer ta classe.\\pComme ça, d'autres gens deviendront\\npeut-être fans, comme moi."
+ },
+ "SaffronCity_PokemonTrainerFanClub_Text_YouveStillAWaysToGo": {
+  "en": "Ah, so you are the much-\\ntalked-about {PLAYER}.\\pYou certainly do have the look of\\na winner.\\pBut for me to accept you as\\na true POKéMON great…\\p… …\\pYou've still a ways to go!",
+  "fr": "Ah, donc vous êtes {PLAYER}, dont\\non parle tant.\\pVous avez certainement l'air d'un\\ngagnant.\\pMais pour que je vous accepte comme\\nun vrai grand des POKéMON…\\p… …\\pIl vous reste du chemin à faire !"
+ }
+}

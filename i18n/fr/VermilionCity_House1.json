@@ -1,0 +1,30 @@
+{
+ "VermilionCity_House1_Text_FishingIsAWayOfLife": {
+  "en": "Fishing is a way of life!\\nIt is like the finest poetry.\\pFrom the seas to rivers, go out\\nand land the big one, my friend.",
+  "fr": "La pêche est un art de vivre !\\nC'est comme la plus belle poésie.\\pDes mers aux rivières, va attraper\\nle gros poisson, mon ami."
+ },
+ "VermilionCity_House1_Text_HowAreTheFishBiting": {
+  "en": "Hello there, {PLAYER}!\\pHow are the fish biting?",
+  "fr": "Salut, {PLAYER} !\\pAlors, ça mord ?"
+ },
+ "VermilionCity_House1_Text_ImFishingGuruDoYouLikeToFish": {
+  "en": "I'm the FISHING GURU!\\pI simply looove fishing!\\nI can't bear to go without.\\pTell me, do you like to fish?",
+  "fr": "Je suis le GOUROU DE LA PÊCHE !\\pJ'adoooore pêcher !\\nJe ne supporte pas de m'en passer.\\pDis-moi, aimes-tu pêcher ?"
+ },
+ "VermilionCity_House1_Text_NoRoomForNiceGift": {
+  "en": "Oh, no!\\pI had a nice gift for you, but you\\nhave no room for it!",
+  "fr": "Oh non !\\pJ'avais un joli cadeau pour toi,\\nmais tu n'as pas de place !"
+ },
+ "VermilionCity_House1_Text_OhThatsSoDisappointing": {
+  "en": "Oh…\\nThat's so disappointing…",
+  "fr": "Oh…\\nC'est tellement décevant…"
+ },
+ "VermilionCity_House1_Text_ReceivedOldRodFromFishingGuru": {
+  "en": "{PLAYER} received an OLD ROD from\\nthe FISHING GURU.",
+  "fr": "{PLAYER} a reçu une VIEILLE CANNE du\\nGOUROU DE LA PÊCHE."
+ },
+ "VermilionCity_House1_Text_TakeThisAndFish": {
+  "en": "Grand! I like your style.\\nI think we can be friends.\\pTake this and fish, young friend!",
+  "fr": "Formidable ! J'aime ton style.\\nJe crois qu'on peut être amis.\\pPrends ça et pêche, jeune ami !"
+ }
+}

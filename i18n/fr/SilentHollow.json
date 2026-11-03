@@ -1,18 +1,42 @@
 {
+ "SilentHollow_Text_Npc0": {
+  "en": "Nothing makes noise here. Not even\\nyou.",
+  "fr": "Rien ne fait de bruit ici. Même pas\\ntoi."
+ },
+ "SilentHollow_Text_Npc1": {
+  "en": "GENGAR evolves only through trade.\\nOdd, no?",
+  "fr": "ECTOPLASMA n'évolue que par\\néchange. Étrange, non ?"
+ },
+ "SilentHollow_Text_Quest0_AfterT": {
+  "en": "Hush now.",
+  "fr": "Chut maintenant."
+ },
+ "SilentHollow_Text_Quest0_Ask": {
+  "en": "A MAX ELIXIR will help me sleep. I\\ntrade a SPELL TAG.",
+  "fr": "Un MAX ÉLIXIR m'aidera à dormir.\\nJ'échange un TALISMAN."
+ },
+ "SilentHollow_Text_Quest0_Done": {
+  "en": "Peace at last. Take this SPELL TAG.",
+  "fr": "Enfin la paix. Prends ce TALISMAN."
+ },
+ "SilentHollow_Text_Quest0_MissT": {
+  "en": "One MAX ELIXIR, please.",
+  "fr": "Un MAX ÉLIXIR, s'il te plaît."
+ },
  "SilentHollow_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "SilentHollow_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "SilentHollow_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "SilentHollow_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

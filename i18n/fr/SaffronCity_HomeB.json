@@ -1,6 +1,22 @@
 {
+ "SaffronCity_HomeB_Text_Done": {
+  "en": "No more letters today. Or\\nyesterday. Or tomorrow.",
+  "fr": "Plus de lettres aujourd'hui. Ni\\nhier. Ni demain."
+ },
+ "SaffronCity_HomeB_Text_Letter": {
+  "en": "A letter just arrived for you,\\n{PLAYER}. It is dated... tomorrow.\\pThe handwriting is yours.",
+  "fr": "Une lettre vient d'arriver pour\\ntoi, {PLAYER}. Elle est datée… de\\ldemain.\\pL'écriture est la tienne."
+ },
  "SaffronCity_HomeB_Text_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "SaffronCity_HomeB_Text_None": {
+  "en": "No mail for you yet. Odd. The\\npostman says letters are arriving\\pbefore they are written.",
+  "fr": "Pas de courrier pour toi pour\\nl'instant. Étrange. Le facteur dit\\lque les lettres arrivent avant\\nd'être écrites."
+ },
+ "SaffronCity_HomeB_Text_Read": {
+  "en": "It reads: THE FERRYMAN AT\\nAMETHIOLITE KNOWS WHERE TIME RUNS\\pELSEWHERE. ASK HIM. Signed: you.",
+  "fr": "Elle dit : LE PASSEUR D'AMETHIOLITE\\nSAIT OÙ LE TEMPS COULE AILLEURS.\\pDEMANDE-LUI.\\pSigné : toi."
  }
 }

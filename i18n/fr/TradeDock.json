@@ -1,10 +1,34 @@
 {
+ "TradeDock_Text_Npc0": {
+  "en": "Some POKéMON only change when\\ntraded. Here they arrive already\\pchanged.",
+  "fr": "Certains POKéMON ne changent que\\npar échange. Ici ils arrivent déjà\\lchangés."
+ },
+ "TradeDock_Text_Npc1": {
+  "en": "Three birds, three beasts and a\\ndreamer sleep in this world. Listen\\pto the wind and the water.",
+  "fr": "Trois oiseaux, trois bêtes et un\\nrêveur dorment dans ce monde.\\pÉcoute le vent et l'eau."
+ },
  "TradeDock_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
+ },
+ "TradeDock_Text_Sage0": {
+  "en": "I read the winds. Listen.",
+  "fr": "Je lis les vents. Écoute."
+ },
+ "TradeDock_Text_Sage1": {
+  "en": "The bird of ice sleeps where frozen\\nwater falls.",
+  "fr": "L'oiseau de glace dort là où l'eau\\ngelée tombe."
+ },
+ "TradeDock_Text_Sage2": {
+  "en": "The bird of lightning waits where\\nthe lamps went out.",
+  "fr": "L'oiseau de foudre attend là où les\\nlampes se sont éteintes."
+ },
+ "TradeDock_Text_Sage3": {
+  "en": "The bird of fire dreams in the\\nmountain that never sleeps.",
+  "fr": "L'oiseau de feu rêve dans la\\nmontagne qui ne dort jamais."
  },
  "TradeDock_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

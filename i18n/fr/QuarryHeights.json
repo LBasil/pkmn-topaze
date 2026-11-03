@@ -1,18 +1,42 @@
 {
+ "QuarryHeights_Text_Npc0": {
+  "en": "ARON eats the rails. The workers\\nhate it.",
+  "fr": "GALEKID mange les rails. Les\\nouvriers le détestent."
+ },
+ "QuarryHeights_Text_Npc1": {
+  "en": "METAL COAT is somewhere in the pit,\\nthey say.",
+  "fr": "La PROTECTION MÉTAL est quelque\\npart dans la fosse, paraît-il."
+ },
+ "QuarryHeights_Text_Quest0_AfterT": {
+  "en": "Rock on!",
+  "fr": "Rock on !"
+ },
+ "QuarryHeights_Text_Quest0_Ask": {
+  "en": "Bring me some IRON and I give you a\\nMETAL COAT.",
+  "fr": "Apporte-moi du FER et je te donne\\nun REVÊT MÉTAL."
+ },
+ "QuarryHeights_Text_Quest0_Done": {
+  "en": "Solid! Take this METAL COAT.",
+  "fr": "Solide ! Prends ce REVÊT MÉTAL."
+ },
+ "QuarryHeights_Text_Quest0_MissT": {
+  "en": "One IRON, please. The APOTHECARY\\nsells it.",
+  "fr": "Un FER, s'il vous plaît.\\nL'APOTHICAIRE en vend."
+ },
  "QuarryHeights_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "QuarryHeights_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "QuarryHeights_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  },
  "QuarryHeights_Text_TopazeFindFull": {
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein.",
-  "en": "Something shines here, but your BAG\\nis full."
+  "en": "Something shines here, but your BAG\\nis full.",
+  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
  }
 }

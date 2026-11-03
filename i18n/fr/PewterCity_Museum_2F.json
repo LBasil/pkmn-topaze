@@ -1,0 +1,66 @@
+{
+ "PewterCity_Museum_1F_Text_AskedDaddyToCatchPikachu": {
+  "en": "I want a PIKACHU!\\nIt's so cute!\\pI asked my daddy to catch me one!",
+  "fr": "Je veux un PIKACHU !\\nIl est trop mignon !\\pJ'ai demandé à mon papa de m'en\\nattraper un !"
+ },
+ "PewterCity_Museum_1F_Text_BoughtColorTVForMoonLanding": {
+  "en": "July 20, 1969!\\pHumankind first set foot on the\\nmoon that day.\\pI bought a color TV just so I\\ncould watch that news.",
+  "fr": "Le 20 juillet 1969 !\\pL'humanité a posé le pied sur la\\nlune ce jour-là.\\pJ'ai acheté une télé couleur juste\\npour regarder cette nouvelle."
+ },
+ "PewterCity_Museum_1F_Text_MeteoriteThatFellOnMtMoon": {
+  "en": "The display case is empty. A note\\nis left behind: POKéMON were never\\pmeant to be owned. - TEAM ONYBRIS",
+  "fr": "La vitrine est vide. Un mot est\\nlaissé : les POKéMON n'ont jamais\\lété faits pour être possédés. -\\nTEAM ONYBRIS"
+ },
+ "PewterCity_Museum_1F_Text_PikachuSoonIPromise": {
+  "en": "Yeah, a PIKACHU soon, I promise!",
+  "fr": "Oui, un PIKACHU bientôt, promis !"
+ },
+ "PewterCity_Museum_1F_Text_RunningSpaceExhibitThisMonth": {
+  "en": "The PYROPE hummed whenever a\\nPOKéMON's AURA came near.\\pThe thieves left only a note.\\nWe called the police at dawn.",
+  "fr": "Le PYROPE bourdonnait chaque fois\\nque l'AURA d'un POKéMON approchait.\\pLes voleurs n'ont laissé qu'un mot.\\nNous avons appelé la police à\\ll'aube."
+ },
+ "PewterCity_Museum_1F_Text_SpaceShuttle": {
+  "en": "Space Shuttle",
+  "fr": "Navette spatiale"
+ },
+ "PewterCity_Museum_1F_Text_WhatsSpecialAboutMoonStone": {
+  "en": "That case held the PYROPE.\\nDeep red, warm to the touch.\\pGone in one night, and not a\\nsingle alarm went off.",
+  "fr": "Cette vitrine contenait le PYROPE.\\nRouge profond, chaud au toucher.\\pDisparu en une nuit, et pas une\\nseule alarme n'a sonné."
+ },
+ "PewterCity_Museum_2F_Text_BrockAfterKay": {
+  "en": "BROCK: So you beat KAY. Good.\\nShe always burned too bright.\\pI'll stay and watch the MUSEUM.\\nThey may come back.\\pGo on to TOURMALIA, {PLAYER}.\\nThe next gem sleeps there.",
+  "fr": "BROCK : Alors tu as battu KAY.\\nBien. Elle a toujours brûlé trop\\lfort.\\pJe reste pour surveiller le MUSÉE.\\nIls pourraient revenir.\\pVa à TOURMALIA, {PLAYER}. La\\nprochaine gemme y dort."
+ },
+ "PewterCity_Museum_2F_Text_BrockBeforeKay": {
+  "en": "BROCK: I was GYM LEADER here until\\nthe AURA changed everything.\\pKAY holds the GYM now. I look after\\nthis MUSEUM instead.\\pLast night they took the PYROPE.\\nOne of them beat me. Me!\\p...That pendant around your neck.\\nIt hums like the PYROPE did.\\pKeep it close, kid.\\pEvery town keeps a gem, and TEAM\\nONYBRIS is collecting them.\\pThe next one sleeps in TOURMALIA.\\nBut first, go see KAY at the GYM.",
+  "fr": "BROCK : J'étais CHAMPION ici\\njusqu'à ce que l'AURA change tout.\\pKAY tient l'ARÈNE maintenant. Je\\nveille sur ce MUSÉE à la place.\\pLa nuit dernière ils ont pris le\\nPYROPE. L'un d'eux m'a battu. Moi !\\p…Ce pendentif à ton cou. Il\\nbourdonne comme le PYROPE.\\pGarde-le près de toi.\\pChaque ville garde une gemme, et la\\nTEAM ONYBRIS les collectionne.\\pLa prochaine dort à TOURMALIA. Mais\\nd'abord, va voir KAY à l'ARÈNE."
+ },
+ "PewterCity_Museum_2F_Text_BrockFossil": {
+  "en": "BROCK: CHAMPION! The whole museum\\nheard the news.\\pA piece of the past should live\\nagain. This one was stored in the\\lvault. It is yours.",
+  "fr": "BROCK : CHAMPION ! Tout le musée a\\nentendu la nouvelle.\\pUn morceau du passé devrait\\nrevivre. Celui-ci était rangé dans\\lla chambre forte. Il est à toi."
+ },
+ "PewterCity_Museum_2F_Text_BrockFossilAfter": {
+  "en": "BROCK: Have it revived at the\\nlab on CHRONDROLIA. Bring it back to\\lthe world, as it should be.",
+  "fr": "BROCK : Fais-le ressusciter au labo\\nde CHRONDROLIA. Rends-le au monde,\\lcomme il se doit."
+ },
+ "PewterCity_Museum_2F_Text_MonSlowpoke": {
+  "en": "SLOWPOKE: ...Yawn.\\nIt basks in the glow of the lava.",
+  "fr": "RAMOLOSS : …Bâillement. Il se\\nprélasse dans la lueur de la lave."
+ },
+ "Text_SeismicTossDeclined": {
+  "en": "Is that so?\\nI'm sure you'll be back for it.",
+  "fr": "Ah bon ?\\nJe suis sûr que tu reviendras."
+ },
+ "Text_SeismicTossTaught": {
+  "en": "I hope you won't toss in the towel.\\nKeep it up.",
+  "fr": "J'espère que tu ne jetteras pas\\nl'éponge. Continue comme ça."
+ },
+ "Text_SeismicTossTeach": {
+  "en": "The secrets of space…\\nThe mysteries of earth…\\pThere are so many things about\\nwhich we know so little.\\pBut that should spur us to study\\nharder, not toss in the towel.\\pThe only thing you should toss…\\pWell, how about SEISMIC TOSS?\\nShould I teach that to a POKéMON?",
+  "fr": "Les secrets de l'espace… Les\\nmystères de la terre…\\pIl y a tant de choses dont nous\\nsavons si peu.\\pMais cela devrait nous pousser à\\nétudier plus dur, pas à jeter\\ll'éponge.\\pLa seule chose que tu devrais\\njeter…\\pEh bien, que dirais-tu de FRAPPE\\nATLAS ? Dois-je l'apprendre à un\\lPOKéMON ?"
+ },
+ "Text_SeismicTossWhichMon": {
+  "en": "Which POKéMON wants to learn\\nSEISMIC TOSS?",
+  "fr": "Quel POKéMON veut apprendre\\nFRAPPE ATLAS ?"
+ }
+}

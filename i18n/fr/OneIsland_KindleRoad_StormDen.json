@@ -1,0 +1,66 @@
+{
+ "OneIsland_KindleRoad_StormDen_Text_Acolyte1Defeat": {
+  "en": "Your storm is stronger...",
+  "fr": "Ton orage est plus fort…"
+ },
+ "OneIsland_KindleRoad_StormDen_Text_Acolyte1Intro": {
+  "en": "Another seeker of the beast?\\nThe STORM does not like visitors.",
+  "fr": "Un autre chercheur de la bête ?\\nL'ORAGE n'aime pas les visiteurs."
+ },
+ "OneIsland_KindleRoad_StormDen_Text_Acolyte1Post": {
+  "en": "The beast sleeps at the end of\\nthe cave. Many guard its sleep.",
+  "fr": "La bête dort au bout de la grotte.\\nBeaucoup veillent sur son sommeil."
+ },
+ "OneIsland_KindleRoad_StormDen_Text_Acolyte2Defeat": {
+  "en": "Quiet at last.",
+  "fr": "Enfin le calme."
+ },
+ "OneIsland_KindleRoad_StormDen_Text_Acolyte2Intro": {
+  "en": "We keep the thunder company.\\nYou are only noise.",
+  "fr": "Nous tenons compagnie au tonnerre.\\nTu n'es que du bruit."
+ },
+ "OneIsland_KindleRoad_StormDen_Text_Acolyte2Post": {
+  "en": "Follow the humming. It grows.",
+  "fr": "Suis le bourdonnement. Il grandit."
+ },
+ "OneIsland_KindleRoad_StormDen_Text_Acolyte3Defeat": {
+  "en": "The light forgives you.",
+  "fr": "La lumière te pardonne."
+ },
+ "OneIsland_KindleRoad_StormDen_Text_Acolyte3Intro": {
+  "en": "The beast gave us light when the\\nworld went dark. We repay it.",
+  "fr": "La bête nous a donné de la lumière\\nquand le monde s'est assombri. Nous\\lla remboursons."
+ },
+ "OneIsland_KindleRoad_StormDen_Text_Acolyte3Post": {
+  "en": "Only the ORACLE can open the\\nlast gate.",
+  "fr": "Seul l'ORACLE peut ouvrir la\\ndernière porte."
+ },
+ "OneIsland_KindleRoad_StormDen_Text_Acolyte4Defeat": {
+  "en": "The temple is quiet again.",
+  "fr": "Le temple est de nouveau calme."
+ },
+ "OneIsland_KindleRoad_StormDen_Text_Acolyte4Intro": {
+  "en": "Turn back, runner! This cave is\\na temple, not a playground!",
+  "fr": "Fais demi-tour, coureur ! Cette\\ngrotte est un temple, pas un\\lterrain de jeu !"
+ },
+ "OneIsland_KindleRoad_StormDen_Text_Acolyte4Post": {
+  "en": "The ORACLE heard you coming.",
+  "fr": "L'ORACLE t'a entendu venir."
+ },
+ "OneIsland_KindleRoad_StormDen_Text_GuardsLeft": {
+  "en": "The beast does not stir.\\nIts guardians still stand watch.",
+  "fr": "La bête ne bouge pas.\\nSes gardiens veillent toujours."
+ },
+ "OneIsland_KindleRoad_StormDen_Text_OracleDefeat": {
+  "en": "...Then the storm has chosen you.",
+  "fr": "…Alors l'orage t'a choisi."
+ },
+ "OneIsland_KindleRoad_StormDen_Text_OracleIntro": {
+  "en": "I am the ORACLE of the STORM.\\nSince the ECHO opened, the beast\\phas slept in our hall, and we\\nhave kept it safe.",
+  "fr": "Je suis l'ORACLE de l'ORAGE. Depuis\\nque l'ÉCHO s'est ouvert, la bête\\ldort dans notre salle, et nous la\\ngardons en sécurité."
+ },
+ "OneIsland_KindleRoad_StormDen_Text_OraclePost": {
+  "en": "Go. But treat it as the storm\\ntreats us: with respect.",
+  "fr": "Va. Mais traite-le comme l'orage\\nnous traite : avec respect."
+ }
+}

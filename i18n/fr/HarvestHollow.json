@@ -1,10 +1,18 @@
 {
+ "HarvestHollow_Text_Npc0": {
+  "en": "The scarecrow moved last night. I\\nswear.",
+  "fr": "L'épouvantail a bougé hier soir. Je\\nle jure."
+ },
+ "HarvestHollow_Text_Npc1": {
+  "en": "I hid in the corn. They never found\\nme.",
+  "fr": "Je me suis caché dans le maïs. Ils\\nne m'ont jamais trouvé."
+ },
  "HarvestHollow_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "HarvestHollow_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

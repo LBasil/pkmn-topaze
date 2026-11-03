@@ -1,0 +1,26 @@
+{
+ "VermilionCity_PokemonCenter_1F_Text_AllMonWeakToSpecificTypes": {
+  "en": "It is true that a higher-level\\nPOKéMON will be more powerful…\\pBut, all POKéMON will have weak\\npoints against specific types.\\pSo, there appears to be no\\nuniversally strong POKéMON.",
+  "fr": "Il est vrai qu'un POKéMON de niveau\\nsupérieur sera plus puissant…\\pMais tous les POKéMON ont des\\npoints faibles face à certains\\ltypes.\\pIl semble donc n'y avoir aucun\\nPOKéMON universellement fort."
+ },
+ "VermilionCity_PokemonCenter_1F_Text_ExplainVSSeeker": {
+  "en": "How do you use the VS SEEKER?\\nThere's nothing to it.\\pUse it like beep-beep-beep, and\\nTRAINERS around you will notice.\\pIf any TRAINER wants a rematch,\\nit will let you know immediately.\\pCharge its battery and use it\\nwhile you're on a road.",
+  "fr": "Comment utiliser le CHERCHE-VS ?\\nC'est tout simple.\\pUtilise-le en faisant bip-bip-bip,\\net les DRESSEURS autour de toi le\\lremarqueront.\\pSi un DRESSEUR veut une revanche,\\nil te le fera savoir immédiatement.\\pCharge sa batterie et utilise-le\\nsur une route."
+ },
+ "VermilionCity_PokemonCenter_1F_Text_PoisonedMonFaintedWhileWalking": {
+  "en": "My POKéMON was poisoned!\\nIt fainted while we were walking!",
+  "fr": "Mon POKéMON a été empoisonné ! Il\\ns'est évanoui pendant qu'on\\lmarchait !"
+ },
+ "VermilionCity_PokemonCenter_1F_Text_TrainerMonsStrongerThanWild": {
+  "en": "Even if they are the same level,\\nPOKéMON can have very different\\lstats and abilities.\\pA POKéMON raised by a TRAINER is\\nstronger than one in the wild.",
+  "fr": "Même au même niveau, les POKéMON\\npeuvent avoir des stats et\\lcapacités très différentes.\\pUn POKéMON élevé par un DRESSEUR\\nest plus fort qu'un sauvage."
+ },
+ "VermilionCity_PokemonCenter_1F_Text_UrgeToBattleSomeoneAgain": {
+  "en": "The urge to battle with someone\\nyou've tangled with before…\\pHave you ever had that urge?\\nI'm sure you have.\\pI wanted to battle certain people\\nagain over and over, too.\\pSo, I've been giving these away.\\nPlease, take one!",
+  "fr": "L'envie de combattre quelqu'un que\\ntu as déjà affronté…\\pAs-tu déjà ressenti cette envie ?\\nJe suis sûr que oui.\\pJe voulais aussi combattre\\ncertaines personnes encore et\\lencore.\\pAlors, j'ai distribué ceci.\\nPrends-en un, s'il te plaît !"
+ },
+ "VermilionCity_PokemonCenter_1F_Text_UseDeviceForRematches": {
+  "en": "Use that device and you'll find\\nTRAINERS looking for a rematch.\\pYou have to charge its battery to\\nuse it, though.",
+  "fr": "Utilise cet appareil et tu\\ntrouveras des DRESSEURS qui\\lcherchent une revanche.\\pIl faut charger sa batterie pour\\nl'utiliser, cependant."
+ }
+}

@@ -1,0 +1,86 @@
+{
+ "SixIsland_RuinValley_Text_CantFigureOutHowToGetInside": {
+  "en": "I can't figure out how I'm supposed\\nto get inside.",
+  "fr": "Je n'arrive pas à comprendre\\ncomment je suis censé entrer."
+ },
+ "SixIsland_RuinValley_Text_CheckDoorMoreThoroughly": {
+  "en": "The door doesn't budge at all.\\nCheck it more thoroughly?",
+  "fr": "La porte ne bouge pas du tout.\\nLa vérifier plus en détail ?"
+ },
+ "SixIsland_RuinValley_Text_DarylDefeat": {
+  "en": "Oh, the heartbreak of losing so\\neasily to you!",
+  "fr": "Oh, le chagrin de perdre si\\nfacilement contre toi !"
+ },
+ "SixIsland_RuinValley_Text_DarylIntro": {
+  "en": "A battle with you, so high up!",
+  "fr": "Un combat avec toi, si haut !"
+ },
+ "SixIsland_RuinValley_Text_DarylPostBattle": {
+  "en": "Experience the joy of climbing!",
+  "fr": "Découvre la joie de grimper !"
+ },
+ "SixIsland_RuinValley_Text_DoorIsOpen": {
+  "en": "The door is open.",
+  "fr": "La porte est ouverte."
+ },
+ "SixIsland_RuinValley_Text_FosterDefeat": {
+  "en": "It's been so long since I battled,\\nmy instincts are off.",
+  "fr": "Cela fait si longtemps que je n'ai\\npas combattu que mon instinct est\\lrouillé."
+ },
+ "SixIsland_RuinValley_Text_FosterIntro": {
+  "en": "I'm curious, what compelled you to\\ncome here?",
+  "fr": "Je suis curieux, qu'est-ce qui t'a\\npoussé à venir ici ?"
+ },
+ "SixIsland_RuinValley_Text_FosterPostBattle": {
+  "en": "There are several ruins on the\\nSEVII ISLANDS.\\pThe majority of them date back\\na long way.",
+  "fr": "Il y a plusieurs ruines sur les\\nÎLES SEVII.\\pLa majorité d'entre elles remontent\\nà très longtemps."
+ },
+ "SixIsland_RuinValley_Text_HectorDefeat": {
+  "en": "You don't need to be so pushy.\\nI'll be happy to tell you.",
+  "fr": "Pas besoin d'être aussi pressant.\\nJe te le dirai avec plaisir."
+ },
+ "SixIsland_RuinValley_Text_HectorIntro": {
+  "en": "I'm pretty familiar with the land\\naround these parts.",
+  "fr": "Je connais assez bien le terrain\\npar ici."
+ },
+ "SixIsland_RuinValley_Text_HectorPostBattle": {
+  "en": "The door to the ruins…\\nIt has these strange patterns\\lengraved on the outside.\\pI don't know what they mean,\\nthough.",
+  "fr": "La porte des ruines… Elle porte\\nd'étranges motifs gravés à\\ll'extérieur.\\pJe ne sais pas ce qu'ils\\nsignifient, cependant."
+ },
+ "SixIsland_RuinValley_Text_IFoundThisPlace": {
+  "en": "Let me tell you, I found this\\nplace.\\pDon't look so envious, will you?",
+  "fr": "Laisse-moi te dire, c'est moi qui\\nai trouvé cet endroit.\\pNe fais pas cette tête envieuse,\\ns'il te plaît."
+ },
+ "SixIsland_RuinValley_Text_LarryDefeat": {
+  "en": "Oh, interesting.",
+  "fr": "Oh, intéressant."
+ },
+ "SixIsland_RuinValley_Text_LarryIntro": {
+  "en": "It's been said that there are\\nmysterious stones on this island.\\pI suspect it has something to do\\nwith the ruins here.",
+  "fr": "On dit qu'il y a des pierres\\nmystérieuses sur cette île.\\pJe soupçonne un lien avec les\\nruines d'ici."
+ },
+ "SixIsland_RuinValley_Text_LarryPostBattle": {
+  "en": "Those ruins over there…\\pI haven't had any luck in finding\\nhow I can get inside.",
+  "fr": "Ces ruines là-bas…\\pJe n'ai pas trouvé comment entrer."
+ },
+ "SixIsland_RuinValley_Text_LeftDoorAlone": {
+  "en": "{PLAYER} left the door alone.",
+  "fr": "{PLAYER} a laissé la porte\\ntranquille."
+ },
+ "SixIsland_RuinValley_Text_SeveralDotsOnTheDoor": {
+  "en": "On closer inspection, there are\\nseveral dots on the door…",
+  "fr": "En y regardant de plus près, il y a\\nplusieurs points sur la porte…"
+ },
+ "SixIsland_RuinValley_Text_StanlyDefeat": {
+  "en": "Hmm…",
+  "fr": "Hmm…"
+ },
+ "SixIsland_RuinValley_Text_StanlyIntro": {
+  "en": "There appear to be many secrets\\nstill unsolved in this world.",
+  "fr": "Il semble y avoir encore de\\nnombreux secrets non résolus en ce\\lmonde."
+ },
+ "SixIsland_RuinValley_Text_StanlyPostBattle": {
+  "en": "I suggest to you that you, too,\\ngive a thought to the secrets and\\lmysteries of our world once a day.",
+  "fr": "Je te suggère, à toi aussi, de\\nréfléchir une fois par jour aux\\lsecrets et mystères de notre monde."
+ }
+}

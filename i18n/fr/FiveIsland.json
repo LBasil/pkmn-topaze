@@ -1,10 +1,70 @@
 {
+ "FiveIsland_Text_BeenGettingBusierAroundHere": {
+  "en": "It's been getting busier around\\nthese parts lately.\\pI haven't been catching many good\\nfish lately, either.",
+  "fr": "Ça devient plus animé par ici\\nces derniers temps.\\pJe n'attrape plus beaucoup de bons\\npoissons non plus."
+ },
+ "FiveIsland_Text_IslandSign": {
+  "en": "FIVE ISLAND\\nVoices of those who stayed",
+  "fr": "ÎLE 5\\nVoix de ceux qui sont restés"
+ },
+ "FiveIsland_Text_Lord1": {
+  "en": "PHOEBE: The spirits whisper that you\\nhold six legends. They are not\\lafraid.\\pThey are curious. So am I!",
+  "fr": "PHOEBE : Les esprits murmurent que\\ntu tiens six légendes. Elles n'ont\\lpas peur.\\pElles sont curieuses. Moi aussi !"
+ },
+ "FiveIsland_Text_Lord2": {
+  "en": "The spirits are laughing.",
+  "fr": "Les esprits rient."
+ },
+ "FiveIsland_Text_Lord3": {
+  "en": "PHOEBE: They like you. That is rare.\\nTake this, from the other side.",
+  "fr": "PHOEBE : Ils t'aiment bien. C'est\\nrare. Prends ça, de l'autre côté."
+ },
+ "FiveIsland_Text_LordDone": {
+  "en": "PHOEBE: A ruler worthy of the six.\\nI will remember this day.",
+  "fr": "PHOEBE : Un souverain digne des\\nsix. Je me souviendrai de ce jour."
+ },
+ "FiveIsland_Text_LordEarly": {
+  "en": "PHOEBE: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\nFLORA will tell you the way.",
+  "fr": "PHOEBE : Pas encore. L'ancienne\\nLIGUE et les MAÎTRES doivent\\ld'abord tomber. FLORA te montrera\\nle chemin."
+ },
+ "FiveIsland_Text_LordIdle": {
+  "en": "PHOEBE: The islands are quiet. I look\\nafter them, as I always have.",
+  "fr": "PHOEBE : Les îles sont calmes. Je\\nveille sur elles, comme toujours."
+ },
+ "FiveIsland_Text_RefAfter": {
+  "en": "NOEL: Take good care of it. The\\nnext REFUGE post is waiting.",
+  "fr": "NOEL : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
+ },
+ "FiveIsland_Text_RefAsk": {
+  "en": "NOEL: The herd is spooked. Hunters\\nburn the meadow to drive them into\\ltheir nets.",
+  "fr": "NOEL : Le troupeau est effrayé. Les\\nchasseurs brûlent la prairie pour\\lles pousser dans leurs filets."
+ },
+ "FiveIsland_Text_RefDone": {
+  "en": "NOEL: Thank you again. The REFUGE\\nis safer because of you.",
+  "fr": "NOEL : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
+ },
+ "FiveIsland_Text_RefEarly": {
+  "en": "NOEL: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "fr": "NOEL : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\ldu PARC SAFARI connaît l'ordre."
+ },
+ "FiveIsland_Text_RefGives": {
+  "en": "NOEL: You saved the day. The post\\nhas a gift for you: TAUROS!",
+  "fr": "NOEL : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\lTAUROS !"
+ },
  "FiveIsland_Text_RefHunter1": {
-  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Ne te mêle pas de ça,\\ppetit !",
-  "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!"
+  "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!",
+  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Ne te mêle pas de ça,\\ppetit !"
  },
  "FiveIsland_Text_RefHunter2": {
-  "fr": "CHASSEUR : Tu as battu mon associé ?\\nSoit, je n'ai pas peur d'un\\lranger !",
-  "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!"
+  "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!",
+  "fr": "CHASSEUR : Tu as battu mon\\nassocié ? Soit, je n'ai pas peur\\ld'un ranger !"
+ },
+ "FiveIsland_Text_RefIdle": {
+  "en": "NOEL: I watch over the animals here.\\nThe world is quieter now.",
+  "fr": "NOEL : Je veille sur les animaux\\nici. Le monde est plus calme\\lmaintenant."
+ },
+ "FiveIsland_Text_WeirdBuildingInMeadow": {
+  "en": "Oh, this stinks. I wanted to play in\\nthe MEADOW.\\pBut they put up a weird building\\non it, so I can't play there.",
+  "fr": "Oh, c'est nul. Je voulais jouer\\ndans la PRAIRIE.\\pMais ils ont construit un drôle de\\nbâtiment dessus, alors je ne peux\\lpas."
  }
 }

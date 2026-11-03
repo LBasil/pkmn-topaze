@@ -1,10 +1,18 @@
 {
+ "QuartzQuarry_Text_Npc0": {
+  "en": "I mine all day. My team smashes all\\nnight.",
+  "fr": "Je mine toute la journée. Mon\\néquipe casse toute la nuit."
+ },
+ "QuartzQuarry_Text_Npc1": {
+  "en": "Clear stone. Clear mind.",
+  "fr": "Pierre claire. Esprit clair."
+ },
  "QuartzQuarry_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "QuartzQuarry_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

@@ -1,10 +1,18 @@
 {
+ "SaltyDunes_Text_Npc0": {
+  "en": "The sea is just beyond. The sand\\ntells me so.",
+  "fr": "La mer est juste derrière. Le sable\\nme le dit."
+ },
+ "SaltyDunes_Text_Npc1": {
+  "en": "I built a castle. A TRAPINCH ate\\nit.",
+  "fr": "J'ai construit un château. Un\\nKRAKNOIX l'a mangé."
+ },
  "SaltyDunes_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "SaltyDunes_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

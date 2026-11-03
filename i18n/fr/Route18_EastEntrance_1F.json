@@ -1,0 +1,14 @@
+{
+ "Route18_EastEntrance_1F_Text_CyclingRoadAllUphillFromHere": {
+  "en": "CYCLING ROAD is all uphill from\\nhere.",
+  "fr": "La ROUTE CYCLABLE est tout en\\nmontée à partir d'ici."
+ },
+ "Route18_EastEntrance_1F_Text_ExcuseMe": {
+  "en": "Excuse me!",
+  "fr": "Excusez-moi !"
+ },
+ "Route18_EastEntrance_1F_Text_NeedBicycleForCyclingRoad": {
+  "en": "You need a BICYCLE to go out on\\nCYCLING ROAD!",
+  "fr": "Il te faut un VÉLO pour aller sur\\nla ROUTE CYCLABLE !"
+ }
+}

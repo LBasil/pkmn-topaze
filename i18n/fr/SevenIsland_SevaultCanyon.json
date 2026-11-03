@@ -1,0 +1,310 @@
+{
+ "SevenIsland_SevaultCanyon_Text_BrunoTrainedWithBrawly": {
+  "en": "Training by oneself is certainly\\nnot a bad thing.\\pBut it's also not bad to aim for\\nthe top with a partner.\\pEven BRUNO…\\nHe trained with a fellow by the\\lname of BRAWLY before.",
+  "fr": "S'entraîner seul n'est certainement\\npas une mauvaise chose.\\pMais viser le sommet avec un\\npartenaire n'est pas mal non plus.\\pMême BRUNO… Il s'est entraîné\\navec un certain BRAWLY autrefois."
+ },
+ "SevenIsland_SevaultCanyon_Text_CyndyDefeat": {
+  "en": "Huh?\\nSomething's not right…",
+  "fr": "Hein ?\\nQuelque chose ne va pas…"
+ },
+ "SevenIsland_SevaultCanyon_Text_CyndyIntro": {
+  "en": "My conditioning's in top form!",
+  "fr": "Ma condition est au top !"
+ },
+ "SevenIsland_SevaultCanyon_Text_CyndyPostBattle": {
+  "en": "The way I am now, I may have to\\nhold off on TRAINER TOWER…",
+  "fr": "Dans mon état, je devrai peut-être\\nremettre la TOUR DES DRESSEURS…"
+ },
+ "SevenIsland_SevaultCanyon_Text_EvanDefeat": {
+  "en": "You're a master at this.",
+  "fr": "Tu es un maître en la matière."
+ },
+ "SevenIsland_SevaultCanyon_Text_EvanIntro": {
+  "en": "It doesn't matter if you happen to\\nhave the strongest POKéMON…\\pIt doesn't mean a thing if you don't\\nknow how to use them properly!",
+  "fr": "Peu importe que tu aies les POKéMON\\nles plus forts…\\pÇa ne veut rien dire si tu ne sais\\npas les utiliser correctement !"
+ },
+ "SevenIsland_SevaultCanyon_Text_EvanPostBattle": {
+  "en": "You see them every so often,\\nTRAINERS with awesome POKéMON\\lwho have no idea what to do.\\pBefore training POKéMON, TRAINERS\\nthemselves need to grow up.",
+  "fr": "On en voit de temps en temps, des\\nDRESSEURS avec d'excellents POKéMON\\lqui ne savent pas quoi en faire.\\pAvant d'entraîner des POKéMON, les\\nDRESSEURS eux-mêmes doivent\\lgrandir."
+ },
+ "SevenIsland_SevaultCanyon_Text_G0Defeat": {
+  "en": "Wilted...",
+  "fr": "Flétri…"
+ },
+ "SevenIsland_SevaultCanyon_Text_G0Intro": {
+  "en": "The little guardian sleeps in the\\ngrove. Not one step further.",
+  "fr": "Le petit gardien dort dans le\\nbosquet. Pas un pas de plus."
+ },
+ "SevenIsland_SevaultCanyon_Text_G0Post": {
+  "en": "The WARDEN waits at the top.",
+  "fr": "Le GARDIEN attend au sommet."
+ },
+ "SevenIsland_SevaultCanyon_Text_G1Defeat": {
+  "en": "Pruned.",
+  "fr": "Taillé."
+ },
+ "SevenIsland_SevaultCanyon_Text_G1Intro": {
+  "en": "Time folds around it. We keep the\\ngrove from folding with it.",
+  "fr": "Le temps se replie autour de lui.\\nNous empêchons le bosquet de se\\lreplier avec."
+ },
+ "SevenIsland_SevaultCanyon_Text_G1Post": {
+  "en": "Keep climbing. It gets greener.",
+  "fr": "Continue de grimper. Ça verdit."
+ },
+ "SevenIsland_SevaultCanyon_Text_G2Defeat": {
+  "en": "Snapped.",
+  "fr": "Brisé."
+ },
+ "SevenIsland_SevaultCanyon_Text_G2Intro": {
+  "en": "No one should reach the top alone.",
+  "fr": "Personne ne devrait atteindre le\\nsommet seul."
+ },
+ "SevenIsland_SevaultCanyon_Text_G2Post": {
+  "en": "The WARDEN has felt you coming.",
+  "fr": "Le GARDIEN t'a senti venir."
+ },
+ "SevenIsland_SevaultCanyon_Text_G3Defeat": {
+  "en": "Uprooted.",
+  "fr": "Déraciné."
+ },
+ "SevenIsland_SevaultCanyon_Text_G3Intro": {
+  "en": "The forest spirit gave us shelter\\nwhen the sky turned. We stay.",
+  "fr": "L'esprit de la forêt nous a abrités\\nquand le ciel a tourné. Nous\\lrestons."
+ },
+ "SevenIsland_SevaultCanyon_Text_G3Post": {
+  "en": "Almost there. Mind your pride.",
+  "fr": "Presque arrivé. Fais attention à\\nton orgueil."
+ },
+ "SevenIsland_SevaultCanyon_Text_G4Defeat": {
+  "en": "...Then the grove has chosen you.",
+  "fr": "…Alors le bosquet t'a choisi."
+ },
+ "SevenIsland_SevaultCanyon_Text_G4Intro": {
+  "en": "I am the WARDEN of the GROVE.\\nThe little one sleeps in my care.\\pProve that your will is worth\\nmore than my fear.",
+  "fr": "Je suis le GARDIEN du BOSQUET.\\nLe petit dort sous ma garde.\\pProuve que ta volonté vaut plus que\\nma peur."
+ },
+ "SevenIsland_SevaultCanyon_Text_G4Post": {
+  "en": "Go. Let it sleep after.",
+  "fr": "Va. Laisse-le dormir après."
+ },
+ "SevenIsland_SevaultCanyon_Text_GroveLocked": {
+  "en": "A mossy cave mouth. Something small\\nstirs within. Not yet.",
+  "fr": "Une entrée de grotte moussue.\\nQuelque chose de petit remue à\\ll'intérieur. Pas encore."
+ },
+ "SevenIsland_SevaultCanyon_Text_GuardsLeft": {
+  "en": "The beast does not stir.\\nIts guardians still stand watch.",
+  "fr": "La bête ne bouge pas.\\nSes gardiens veillent toujours."
+ },
+ "SevenIsland_SevaultCanyon_Text_JacksonDefeat": {
+  "en": "Whoa! You're tough!\\nHow about protecting me?",
+  "fr": "Whoa ! Quelle force !\\nEt si tu me protégeais ?"
+ },
+ "SevenIsland_SevaultCanyon_Text_JacksonIntro": {
+  "en": "I work to protect the environment.\\nIn turn, nature protects me!",
+  "fr": "Je travaille à protéger\\nl'environnement. En retour, la\\lnature me protège !"
+ },
+ "SevenIsland_SevaultCanyon_Text_JacksonPostBattle": {
+  "en": "From far out among the stars, our\\nplanet is just a drop of water.\\pBut we want to protect that drop\\nof water for everyone.",
+  "fr": "Depuis les étoiles lointaines,\\nnotre planète n'est qu'une goutte\\ld'eau.\\pMais nous voulons protéger cette\\ngoutte d'eau pour tous."
+ },
+ "SevenIsland_SevaultCanyon_Text_KatelynDefeat": {
+  "en": "You're hot stuff in spite of your\\ncute looks.",
+  "fr": "Tu es un as malgré ton air mignon."
+ },
+ "SevenIsland_SevaultCanyon_Text_KatelynIntro": {
+  "en": "Those shoes you have are pretty\\nsnazzy.",
+  "fr": "Tes chaussures sont plutôt chics."
+ },
+ "SevenIsland_SevaultCanyon_Text_KatelynPostBattle": {
+  "en": "Your mom bought those snazzy\\nRUNNING SHOES for you?\\pShe must adore you.",
+  "fr": "Ta maman t'a acheté ces CHAUSSURES\\nDE COURSE chics ?\\pElle doit t'adorer."
+ },
+ "SevenIsland_SevaultCanyon_Text_LeroyDefeat": {
+  "en": "I knew it!\\nYou're as tough as I thought!",
+  "fr": "Je le savais ! Tu es aussi fort que\\nje le pensais !"
+ },
+ "SevenIsland_SevaultCanyon_Text_LeroyIntro": {
+  "en": "You look strong.\\nLet me battle you, please!",
+  "fr": "Tu as l'air fort. Laisse-moi te\\ndéfier, s'il te plaît !"
+ },
+ "SevenIsland_SevaultCanyon_Text_LeroyPostBattle": {
+  "en": "The way you battle has given me\\na lot of useful data.\\pThanks so much!",
+  "fr": "Ta façon de combattre m'a donné\\nbeaucoup de données utiles.\\pMerci beaucoup !"
+ },
+ "SevenIsland_SevaultCanyon_Text_LexDefeat": {
+  "en": "LEX: I seem to have been too\\ncareless…",
+  "fr": "LEX : Il semble que j'ai été trop\\nimprudent…"
+ },
+ "SevenIsland_SevaultCanyon_Text_LexIntro": {
+  "en": "LEX: My darling NYA, together\\nwe could win!",
+  "fr": "LEX : Ma chère NYA, ensemble nous\\npourrions gagner !"
+ },
+ "SevenIsland_SevaultCanyon_Text_LexNotEnoughMons": {
+  "en": "LEX: May I ask you to battle the\\nboth of us at the same time?",
+  "fr": "LEX : Puis-je te demander de nous\\naffronter tous les deux en même\\ltemps ?"
+ },
+ "SevenIsland_SevaultCanyon_Text_LexPostBattle": {
+  "en": "LEX: I think it was a good\\nexperience for NYA.\\pYou have my gratitude.",
+  "fr": "LEX : Je pense que c'était une\\nbonne expérience pour NYA.\\pTu as ma gratitude."
+ },
+ "SevenIsland_SevaultCanyon_Text_MichelleDefeat": {
+  "en": "Thank you. I feel like I've been\\nset free by losing to you.",
+  "fr": "Merci. J'ai l'impression d'être\\nlibéré en perdant contre toi."
+ },
+ "SevenIsland_SevaultCanyon_Text_MichelleIntro": {
+  "en": "I was given the best possible\\neducation to become this strong.\\pI don't want to lose to anyone!",
+  "fr": "J'ai reçu la meilleure éducation\\npossible pour devenir si fort.\\pJe ne veux perdre contre personne !"
+ },
+ "SevenIsland_SevaultCanyon_Text_MichellePostBattle": {
+  "en": "For some reason, I get furious\\nover the slightest thing.\\pI'll calm myself by breathing\\ndeeply.",
+  "fr": "Pour une raison inconnue, je\\nm'énerve pour la moindre chose.\\pJe vais me calmer en respirant\\nprofondément."
+ },
+ "SevenIsland_SevaultCanyon_Text_NyaDefeat": {
+  "en": "NYA: Oh, no…\\nI'm so sorry, I…",
+  "fr": "NYA : Oh non…\\nJe suis vraiment désolée, je…"
+ },
+ "SevenIsland_SevaultCanyon_Text_NyaIntro": {
+  "en": "NYA: I'll do my best so I won't\\ndrag down my mentor, LEX!",
+  "fr": "NYA : Je ferai de mon mieux pour ne\\npas tirer vers le bas mon mentor,\\lLEX !"
+ },
+ "SevenIsland_SevaultCanyon_Text_NyaNotEnoughMons": {
+  "en": "NYA: I'm sorry, but may we battle\\nin two-on-two style?",
+  "fr": "NYA : Désolée, mais pouvons-nous\\nnous battre en deux contre deux ?"
+ },
+ "SevenIsland_SevaultCanyon_Text_NyaPostBattle": {
+  "en": "NYA: I think I'm going to need\\nmuch more seasoning and tutoring\\lunder LEX…\\p…So, LEX, please, may I stay with\\nyou like this?",
+  "fr": "NYA : Je crois que j'aurai besoin\\nde beaucoup plus d'expérience et de\\lleçons auprès de LEX…\\p…Alors, LEX, s'il te plaît, puis-je\\nrester avec toi comme ça ?"
+ },
+ "SevenIsland_SevaultCanyon_Text_RouteSign": {
+  "en": "SEVAULT CANYON\\nTANOBY RUINS AHEAD",
+  "fr": "CANYON SEVAULT\\nRUINES TANOBY DEVANT"
+ },
+ "SevenIsland_SevaultCanyon_Text_SceneEnd": {
+  "en": "The sky falls silent. Behind the\\npeak, a dark passage has opened.",
+  "fr": "Le ciel se tait. Derrière le pic,\\nun sombre passage s'est ouvert."
+ },
+ "SevenIsland_SevaultCanyon_Text_SceneGiovanni1": {
+  "en": "...I saw it too, SILVER.\\pI left because I was afraid of\\nwhat I would turn you into.",
+  "fr": "…Je l'ai vu aussi, SILVER.\\pJe suis parti parce que j'avais\\npeur de ce que je ferais de toi."
+ },
+ "SevenIsland_SevaultCanyon_Text_SceneGiovanni2": {
+  "en": "I looked.\\pEvery single day, from far away.\\pI am proud of you, son.\\nI never knew how to say it.",
+  "fr": "J'ai regardé.\\pChaque jour, de loin.\\pJe suis fier de toi, fils.\\nJe n'ai jamais su comment le dire."
+ },
+ "SevenIsland_SevaultCanyon_Text_SceneGiovanni3": {
+  "en": "GIOVANNI: CHAMPION. No pause. Let\\nme see what my son measured\\lhimself against.",
+  "fr": "GIOVANNI : CHAMPION. Sans pause.\\nMontre-moi à quoi mon fils s'est\\lmesuré."
+ },
+ "SevenIsland_SevaultCanyon_Text_SceneGiovanni4": {
+  "en": "GIOVANNI: ...So that is what it\\nlooks like. A trainer worth\\lfollowing.",
+  "fr": "GIOVANNI : …Alors c'est à ça que ça\\nressemble. Un dresseur digne d'être\\lsuivi."
+ },
+ "SevenIsland_SevaultCanyon_Text_SceneGiovanni5": {
+  "en": "GIOVANNI: And you, RED. Still\\nstanding there in silence.\\pWe never settled it, you and I.",
+  "fr": "GIOVANNI : Et toi, RED. Toujours\\nlà, en silence.\\pNous n'avons jamais réglé ça, toi\\net moi."
+ },
+ "SevenIsland_SevaultCanyon_Text_SceneGiovanni6": {
+  "en": "GIOVANNI: Not today. Today I walk\\nhome with my son.",
+  "fr": "GIOVANNI : Pas aujourd'hui.\\nAujourd'hui je rentre avec mon\\lfils."
+ },
+ "SevenIsland_SevaultCanyon_Text_SceneGiovanniDefeat": {
+  "en": "Hm. The earth bows to you.",
+  "fr": "Hm. La terre s'incline devant toi."
+ },
+ "SevenIsland_SevaultCanyon_Text_SceneGiovanniKnew": {
+  "en": "GIOVANNI: I knew I would find you\\nboth here. The strong always end\\lup at the top of the world.",
+  "fr": "GIOVANNI : Je savais que je vous\\ntrouverais tous les deux ici. Les\\lforts finissent toujours au sommet\\ndu monde."
+ },
+ "SevenIsland_SevaultCanyon_Text_SceneRed1": {
+  "en": "...",
+  "fr": "…"
+ },
+ "SevenIsland_SevaultCanyon_Text_SceneRed2": {
+  "en": "RED: ...\\p(He tips his cap. Then he taps his\\nchest. He is ready, whenever you\\lare.)",
+  "fr": "RED : …\\p(Il touche sa casquette. Puis il se\\ntape la poitrine. Il est prêt,\\lquand tu le seras.)"
+ },
+ "SevenIsland_SevaultCanyon_Text_SceneSilver1": {
+  "en": "SILVER: ...You came. All the way\\nto the edge of time.\\pThe ECHO showed me something.\\nA boy in a dark room, waiting\\lfor a man who never came back.",
+  "fr": "SILVER : …Tu as fait le voyage.\\nJusqu'au bord du temps.\\pL'ÉCHO m'a montré quelque chose. Un\\ngarçon dans une pièce sombre,\\lattendant un homme qui n'est jamais\\nrevenu."
+ },
+ "SevenIsland_SevaultCanyon_Text_SceneSilver2": {
+  "en": "SILVER: Afraid?! You left me alone!\\pI became strong so you would\\nlook at me. Just once.",
+  "fr": "SILVER : Peur ?! Tu m'as laissé\\nseul !\\pJe suis devenu fort pour que tu me\\nregardes. Rien qu'une fois."
+ },
+ "SevenIsland_SevaultCanyon_Text_SceneSilver3": {
+  "en": "SILVER: ...\\pThen do not say it.\\nShow me. Let me earn it.",
+  "fr": "SILVER : …\\pAlors ne le dis pas. Montre-le-moi.\\nLaisse-moi le mériter."
+ },
+ "SevenIsland_SevaultCanyon_Text_SceneSilver4": {
+  "en": "SILVER: {PLAYER}. Fight us. Both of\\nus, back to back. No rest between.\\pIf you cannot stand before the\\ntwo of us, you cannot stand\\lbefore the ECHO.",
+  "fr": "SILVER : {PLAYER}. Bats-toi contre\\nnous. Contre nous deux, dos à dos.\\pSans repos.\\pSi tu ne peux pas tenir devant nous\\ndeux, tu ne peux pas tenir devant\\ll'ÉCHO."
+ },
+ "SevenIsland_SevaultCanyon_Text_SceneSilver5": {
+  "en": "SILVER: Thank you. I will walk\\nbeside him now. Not behind.",
+  "fr": "SILVER : Merci. Je marcherai à ses\\ncôtés maintenant. Pas derrière."
+ },
+ "SevenIsland_SevaultCanyon_Text_SceneSilver6": {
+  "en": "SILVER: ...Come on. Father.",
+  "fr": "SILVER : …Viens. Père."
+ },
+ "SevenIsland_SevaultCanyon_Text_SceneSilverDefeat": {
+  "en": "I lost. But for the first time...\\nI do not mind.",
+  "fr": "J'ai perdu. Mais pour la première\\nfois… cela ne me dérange pas."
+ },
+ "SevenIsland_SevaultCanyon_Text_SceneSilverRed": {
+  "en": "SILVER: RED trains here again, on\\nthe highest peak. I came for a\\lrematch. He has not answered yet.",
+  "fr": "SILVER : RED s'entraîne de nouveau\\nici, sur le plus haut pic. Je suis\\lvenu pour une revanche. Il n'a pas\\nencore répondu."
+ },
+ "SevenIsland_SevaultCanyon_Text_SummitLocked": {
+  "en": "A dark passage climbs into the\\nclouds. The ECHO is still silent.",
+  "fr": "Un sombre passage monte dans les\\nnuages. L'ÉCHO est encore\\lsilencieux."
+ },
+ "SevenIsland_SevaultCanyon_Text_W0Defeat": {
+  "en": "Ebbed...",
+  "fr": "Reflué…"
+ },
+ "SevenIsland_SevaultCanyon_Text_W0Intro": {
+  "en": "The tide keeps this canyon.\\nTurn back, or be washed away.",
+  "fr": "La marée garde ce canyon.\\nFais demi-tour, ou sois emporté."
+ },
+ "SevenIsland_SevaultCanyon_Text_W0Post": {
+  "en": "The grove is open. Mind the top.",
+  "fr": "Le bosquet est ouvert. Méfie-toi du\\nsommet."
+ },
+ "SevenIsland_SevaultCanyon_Text_W1Defeat": {
+  "en": "Burnt out...",
+  "fr": "Consumé…"
+ },
+ "SevenIsland_SevaultCanyon_Text_W1Intro": {
+  "en": "Fire and earth sleep above.\\nNone wake them on my watch.",
+  "fr": "Le feu et la terre dorment là-haut.\\nPersonne ne les réveille sous ma\\lgarde."
+ },
+ "SevenIsland_SevaultCanyon_Text_W1Post": {
+  "en": "The way is open. Go on.",
+  "fr": "Le chemin est ouvert. Continue."
+ },
+ "SevenIsland_SevaultCanyon_Text_W2Defeat": {
+  "en": "Grounded...",
+  "fr": "Cloué au sol…"
+ },
+ "SevenIsland_SevaultCanyon_Text_W2Intro": {
+  "en": "The sky dragon dreams up there.\\nYou must earn the wind first.",
+  "fr": "Le dragon du ciel rêve là-haut.\\nTu dois d'abord mériter le vent."
+ },
+ "SevenIsland_SevaultCanyon_Text_W2Post": {
+  "en": "Go on. The wind allows it.",
+  "fr": "Continue. Le vent le permet."
+ },
+ "SevenIsland_SevaultCanyon_Text_W3Defeat": {
+  "en": "Awake at last...",
+  "fr": "Enfin éveillé…"
+ },
+ "SevenIsland_SevaultCanyon_Text_W3Intro": {
+  "en": "I am the last guardian of the\\ndreamers. The eon twins and the\\nwish star rest behind me.",
+  "fr": "Je suis le dernier gardien des\\nrêveurs. Les jumeaux de l'éon et\\ll'étoile des vœux reposent derrière\\nmoi."
+ },
+ "SevenIsland_SevaultCanyon_Text_W3Post": {
+  "en": "Go. Be gentle with them.",
+  "fr": "Va. Sois doux avec eux."
+ }
+}

@@ -1,0 +1,50 @@
+{
+ "MtEmber_Summit_Text_Guard0Defeat": {
+  "en": "Burnt out...",
+  "fr": "Consumé…"
+ },
+ "MtEmber_Summit_Text_Guard0Intro": {
+  "en": "The mountain's fire is ours to\\nkeep.",
+  "fr": "Le feu de la montagne est à nous."
+ },
+ "MtEmber_Summit_Text_Guard0Post": {
+  "en": "The ORACLE stands at the peak.",
+  "fr": "L'ORACLE se tient au sommet."
+ },
+ "MtEmber_Summit_Text_Guard1Defeat": {
+  "en": "Smothered...",
+  "fr": "Étouffé…"
+ },
+ "MtEmber_Summit_Text_Guard1Intro": {
+  "en": "Turn back before you scorch.",
+  "fr": "Fais demi-tour avant de te brûler."
+ },
+ "MtEmber_Summit_Text_Guard1Post": {
+  "en": "The heat only grows.",
+  "fr": "La chaleur ne fait qu'augmenter."
+ },
+ "MtEmber_Summit_Text_Guard2Defeat": {
+  "en": "Embers...",
+  "fr": "Braises…"
+ },
+ "MtEmber_Summit_Text_Guard2Intro": {
+  "en": "The bird warms the whole island.",
+  "fr": "L'oiseau réchauffe toute l'île."
+ },
+ "MtEmber_Summit_Text_Guard2Post": {
+  "en": "The ORACLE is waiting.",
+  "fr": "L'ORACLE attend."
+ },
+ "MtEmber_Summit_Text_Guard3Defeat": {
+  "en": "...Then the flame has chosen you.",
+  "fr": "…Alors la flamme t'a choisi."
+ },
+ "MtEmber_Summit_Text_Guard3Intro": {
+  "en": "I am the ORACLE of the FLAME.\\nThe bird sleeps under my watch.\\pProve that your fire is worth\\nmore than my fear.",
+  "fr": "Je suis l'ORACLE de la FLAMME.\\nL'oiseau dort sous ma garde.\\pProuve que ton feu vaut plus que\\nma peur."
+ },
+ "MtEmber_Summit_Text_Guard3Post": {
+  "en": "Go. Keep it burning.",
+  "fr": "Va. Garde-la allumée."
+ }
+}

@@ -1,6 +1,78 @@
 {
+ "Route4_Text_CrissyDefeat": {
+  "en": "After all I did to catch them!",
+  "fr": "Après tout ce que j'ai fait pour\\nles capturer !"
+ },
+ "Route4_Text_CrissyIntro": {
+  "en": "I came to MT. MOON in search of\\nmushroom POKéMON.",
+  "fr": "Je suis venu au MT. MOON à la\\nrecherche de POKéMON champignons."
+ },
+ "Route4_Text_CrissyPostBattle": {
+  "en": "There might not be any more\\nmushrooms here.\\pI think I got them all.",
+  "fr": "Il n'y a peut-être plus de\\nchampignons ici.\\pJe crois que je les ai tous eus."
+ },
+ "Route4_Text_MtMoonEntrance": {
+  "en": "MT. MOON\\nTunnel Entrance",
+  "fr": "MT. MOON\\nEntrée du tunnel"
+ },
+ "Route4_Text_PeopleLikeAndRespectBrock": {
+  "en": "Oh, wow, that's the PYROPE BADGE!\\nYou got it from KAY, didn't you?\\pKAY is cool. She's not just tough.\\nPeople like and respect her.\\pI want to become a GYM LEADER\\nlike her.",
+  "fr": "Oh, wow, c'est le BADGE PYROPE ! Tu\\nl'as eu de KAY, n'est-ce pas ?\\pKAY est cool. Elle n'est pas que\\nforte. Les gens l'aiment et la\\lrespectent.\\pJe veux devenir CHAMPION comme\\nelle."
+ },
+ "Route4_Text_RQuest_Ask": {
+  "en": "I got lost in the cave. One ESCAPE\\nROPE would save me.",
+  "fr": "Je me suis perdu dans la grotte.\\nUne CORDE SORTIE me sauverait."
+ },
+ "Route4_Text_RQuest_Done": {
+  "en": "I am never going back in without a\\nrope.",
+  "fr": "Je ne retournerai jamais là-dedans\\nsans corde."
+ },
  "Route4_Text_RQuest_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route4_Text_RQuest_Ok": {
+  "en": "Saved! Take this, I found it down\\nthere.",
+  "fr": "Sauvé ! Prends ça, je l'ai trouvé\\nlà-dessous."
+ },
+ "Route4_Text_RouteSign": {
+  "en": "ROUTE 4\\nMT. MOON - TOURMALIA",
+  "fr": "ROUTE 4\\nMT. MOON - TOURMALIA"
+ },
+ "Route4_Text_TrippedOverGeodude": {
+  "en": "Ouch! I tripped over a rocky\\nPOKéMON, GEODUDE!",
+  "fr": "Aïe ! J'ai trébuché sur un POKéMON\\nrocheux, RACAILLOU !"
+ },
+ "Text_MegaKickDeclined": {
+  "en": "You'll come crawling back when you\\nrealize the value of MEGA KICK.",
+  "fr": "Tu reviendras en rampant quand tu\\nréaliseras la valeur de\\lULTIMAWASHI."
+ },
+ "Text_MegaKickTaught": {
+  "en": "Now, we are soul mates in the way\\nof kicking!\\pYou should run before you're seen\\nby the deluded nitwit who trains\\lonly simple punching over there.",
+  "fr": "Désormais, nous sommes âmes sœurs\\nsur la voie du pied !\\pTu devrais fuir avant d'être vu par\\nl'idiot abusé qui n'entraîne que de\\lsimples coups de poing, là-bas."
+ },
+ "Text_MegaKickTeach": {
+  "en": "A kick of brutal ferocity!\\pPacked with destructive power!\\pWhen you get right down to it,\\nMEGA KICK is the ultimate attack!\\lDon't you agree?\\pOkay!\\nI'll teach it to your POKéMON!",
+  "fr": "Un coup de pied d'une férocité\\nbrutale !\\pRempli de puissance destructrice !\\pAu fond, ULTIMAWASHI est l'attaque\\nsuprême ! Tu ne trouves pas ?\\pD'accord !\\nJe vais l'enseigner à ton POKéMON !"
+ },
+ "Text_MegaKickWhichMon": {
+  "en": "All right!\\nWhich POKéMON wants to learn it?",
+  "fr": "Très bien !\\nQuel POKéMON veut l'apprendre ?"
+ },
+ "Text_MegaPunchDeclined": {
+  "en": "You'll be back when you understand\\nthe worth of MEGA PUNCH.",
+  "fr": "Tu reviendras quand tu comprendras\\nla valeur de ULTIMAPOING."
+ },
+ "Text_MegaPunchTaught": {
+  "en": "Now, we are comrades in the way of\\npunching!\\pYou should go before you're seen\\nby the misguided fool who trains\\lonly his silly kicking over there.",
+  "fr": "Désormais, nous sommes frères\\nd'armes sur la voie du poing !\\pTu devrais partir avant d'être vu\\npar l'imbécile égaré qui n'entraîne\\lque ses stupides coups de pied,\\nlà-bas."
+ },
+ "Text_MegaPunchTeach": {
+  "en": "A punch of roaring ferocity!\\pPacked with destructive power!\\pWhen the chips are down,\\nMEGA PUNCH is the ultimate attack!\\lYou agree, yes?\\pNow!\\nLet me teach it to your POKéMON!",
+  "fr": "Un coup de poing d'une férocité\\nrugissante !\\pRempli de puissance destructrice !\\pQuand tout est perdu, ULTIMAPOING\\nest l'attaque suprême ! Tu es\\ld'accord, non ?\\pMaintenant ! Laisse-moi l'enseigner\\nà ton POKéMON !"
+ },
+ "Text_MegaPunchWhichMon": {
+  "en": "Fine!\\nWhich POKéMON will learn it?",
+  "fr": "Parfait !\\nQuel POKéMON va l'apprendre ?"
  }
 }

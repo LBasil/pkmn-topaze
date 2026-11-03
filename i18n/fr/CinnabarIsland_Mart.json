@@ -1,0 +1,26 @@
+{
+ "CinnabarIsland_Mart_Text_DontTheyHaveXAttack": {
+  "en": "Don't they have X ATTACK?\\pI like it because it raises the\\nATTACK stat in battle.",
+  "fr": "Ils n'ont pas de X ATTAQUE ?\\pJe l'aime parce qu'il augmente la\\nstat ATTAQUE en combat."
+ },
+ "CinnabarIsland_Mart_Text_ExtraItemsNeverHurt": {
+  "en": "It never hurts to have extra items.\\nYou never know what might happen.",
+  "fr": "Ça ne fait jamais de mal d'avoir\\ndes objets en plus. On ne sait\\ljamais."
+ },
+ "CinnabarIsland_Mart_Text_ScientistAsk": {
+  "en": "We are testing REPEL on the volcano\\nbugs. I'm out of samples.\\pThree REPELS would finish my\\nresearch, young one.",
+  "fr": "Nous testons REPOUSSE sur les\\ninsectes du volcan. Je n'ai plus\\ld'échantillons.\\pTrois REPOUSSES termineraient ma\\nrecherche."
+ },
+ "CinnabarIsland_Mart_Text_ScientistGives": {
+  "en": "Fascinating! They flee beautifully!\\pTake this from the lab stock. It\\nwas meant for the trial group.",
+  "fr": "Fascinant ! Ils fuient à\\nmerveille !\\pPrends ça du stock du labo. C'était\\ndestiné au groupe test."
+ },
+ "CinnabarIsland_Mart_Text_ScientistNo": {
+  "en": "Hm. Science will wait, I suppose.",
+  "fr": "Hm. La science attendra, je\\nsuppose."
+ },
+ "CinnabarIsland_Mart_Text_ScientistOffer": {
+  "en": "REPELS! Could you give me three\\nfor my research?",
+  "fr": "Des REPOUSSES ! Pourrais-tu m'en\\ndonner trois pour ma recherche ?"
+ }
+}

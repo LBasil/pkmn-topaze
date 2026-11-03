@@ -1,10 +1,18 @@
 {
+ "RoyalGarden_Text_Npc0": {
+  "en": "The gardener has not slept in a\\nweek.",
+  "fr": "Le jardinier n'a pas dormi depuis\\nune semaine."
+ },
+ "RoyalGarden_Text_Npc1": {
+  "en": "The roses here bloom out of season.",
+  "fr": "Les roses fleurissent ici hors\\nsaison."
+ },
  "RoyalGarden_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "RoyalGarden_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

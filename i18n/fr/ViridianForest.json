@@ -1,0 +1,94 @@
+{
+ "ViridianForest_Text_AnthonyDefeat": {
+  "en": "Oh, boo.\\nNothing went right.",
+  "fr": "Oh, zut.\\nRien n'a marché."
+ },
+ "ViridianForest_Text_AnthonyIntro": {
+  "en": "I might be little, but I won't like\\nit if you go easy on me!",
+  "fr": "Je suis peut-être petit, mais je\\nn'aimerais pas que tu y ailles\\ldoucement !"
+ },
+ "ViridianForest_Text_AnthonyPostBattle": {
+  "en": "I lost some of my allowance…",
+  "fr": "J'ai perdu une partie de mon argent\\nde poche…"
+ },
+ "ViridianForest_Text_AvoidGrassyAreasWhenWeak": {
+  "en": "TRAINER TIPS\\pIf your POKéMON are weak and you\\nwant to avoid battles, stay away\\lfrom grassy areas!",
+  "fr": "CONSEILS AUX DRESSEURS\\pSi tes POKéMON sont faibles et que\\ntu veux éviter les combats, reste\\lloin des hautes herbes !"
+ },
+ "ViridianForest_Text_CantCatchOwnedMons": {
+  "en": "TRAINER TIPS\\pYou can't catch a POKéMON that\\nbelongs to someone else.\\pThrow POKé BALLS only at wild\\nPOKéMON to catch them!",
+  "fr": "CONSEILS AUX DRESSEURS\\pTu ne peux pas capturer un POKéMON\\nqui appartient à quelqu'un d'autre.\\pLance des POKé BALLS seulement sur\\nles POKéMON sauvages pour les\\lcapturer !"
+ },
+ "ViridianForest_Text_CharlieDefeat": {
+  "en": "Oh!\\nI lost!",
+  "fr": "Oh !\\nJ'ai perdu !"
+ },
+ "ViridianForest_Text_CharlieIntro": {
+  "en": "Did you know the ground here is\\nstill hot under the ash?",
+  "fr": "Savais-tu que le sol ici est encore\\nchaud sous la cendre ?"
+ },
+ "ViridianForest_Text_CharliePostBattle": {
+  "en": "The AURA changed every POKéMON,\\nbut the embers stayed the same.",
+  "fr": "L'AURA a changé chaque POKéMON,\\nmais les braises sont restées les\\lmêmes."
+ },
+ "ViridianForest_Text_ContactOakViaPCToRatePokedex": {
+  "en": "TRAINER TIPS\\pContact PROF. OAK via a PC to\\nget your POKéDEX evaluated!",
+  "fr": "CONSEILS AUX DRESSEURS\\pContacte le PROF. CHEN via un PC\\npour faire évaluer ton POKéDEX !"
+ },
+ "ViridianForest_Text_DougDefeat": {
+  "en": "Huh?\\nMy rock-solid team crumbled!",
+  "fr": "Hein ? Mon équipe solide comme le\\nroc s'est effritée !"
+ },
+ "ViridianForest_Text_DougIntro": {
+  "en": "Rocks, ash and tunnels!\\nThis forest is a hiker's dream!",
+  "fr": "Roches, cendres et tunnels ! Cette\\nforêt est le rêve d'un randonneur !"
+ },
+ "ViridianForest_Text_DougPostBattle": {
+  "en": "Mind the lava pool to the west.\\nI almost lost a boot there.",
+  "fr": "Attention à la mare de lave à\\nl'ouest. J'y ai presque perdu une\\lbotte."
+ },
+ "ViridianForest_Text_FriendsItchingToBattle": {
+  "en": "The trees burned long ago, but the\\nground here is still warm.\\pPOKéMON that love ash and ember live\\nhere now. My friends are itching to\\lbattle!",
+  "fr": "Les arbres ont brûlé il y a\\nlongtemps, mais le sol est encore\\lchaud ici.\\pDes POKéMON qui aiment la cendre et\\nla braise y vivent maintenant. Mes\\lamis ont hâte de se battre !"
+ },
+ "ViridianForest_Text_LeavingViridianForest": {
+  "en": "LEAVING CINDER FOREST\\nPYROPIA AHEAD",
+  "fr": "SORTIE DE LA FORÊT DE CENDRES\\nPYROPIA DEVANT"
+ },
+ "ViridianForest_Text_RanOutOfPokeBalls": {
+  "en": "I was throwing POKé BALLS to\\ncatch POKéMON, and I ran out.\\pThat's why you can never have too\\nmany POKé BALLS.",
+  "fr": "Je lançais des POKé BALLS pour\\ncapturer des POKéMON, et j'en ai\\lmanqué.\\pC'est pour ça qu'on n'a jamais trop\\nde POKé BALLS."
+ },
+ "ViridianForest_Text_RickDefeat": {
+  "en": "No!\\nMy VULPIX cooled off!",
+  "fr": "Non !\\nMon GOUPIX a refroidi !"
+ },
+ "ViridianForest_Text_RickIntro": {
+  "en": "Camping on warm ground is the best!\\nHey, you! Battle me!",
+  "fr": "Camper sur un sol chaud, c'est le\\ntop ! Hé, toi ! Bats-toi contre\\lmoi !"
+ },
+ "ViridianForest_Text_RickPostBattle": {
+  "en": "Ssh! You will wake the embers.\\nAnother time, okay?",
+  "fr": "Chut ! Tu vas réveiller les\\nbraises. Une autre fois, d'accord ?"
+ },
+ "ViridianForest_Text_SammyDefeat": {
+  "en": "I give!\\nYou're good at this!",
+  "fr": "Je me rends !\\nTu es doué !"
+ },
+ "ViridianForest_Text_SammyIntro": {
+  "en": "Hey, wait up!\\nWhat's the hurry? Why the rush?",
+  "fr": "Hé, attends ! Pourquoi cette hâte ?\\nPourquoi cette course ?"
+ },
+ "ViridianForest_Text_SammyPostBattle": {
+  "en": "Sometimes, you can find stuff on\\nthe ground.\\pI'm looking for the stuff I\\ndropped. Can you help me?",
+  "fr": "Parfois, on trouve des trucs par\\nterre.\\pJe cherche ce que j'ai laissé\\ntomber. Peux-tu m'aider ?"
+ },
+ "ViridianForest_Text_UseAntidoteForPoison": {
+  "en": "For poison, use ANTIDOTE!\\nGet it at POKéMON MARTS!",
+  "fr": "Pour le poison, utilise un\\nANTIDOTE ! En vente dans les\\lBOUTIQUES POKéMON !"
+ },
+ "ViridianForest_Text_WeakenMonsBeforeCapture": {
+  "en": "TRAINER TIPS\\pWeaken POKéMON before attempting\\ncapture!\\pWhen healthy, they may escape!",
+  "fr": "CONSEILS AUX DRESSEURS\\pAffaiblis les POKéMON avant de\\ntenter la capture !\\pEn bonne santé, ils peuvent\\ns'échapper !"
+ }
+}

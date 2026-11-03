@@ -1,10 +1,18 @@
 {
+ "SpireYard_Text_Npc0": {
+  "en": "The tower bell rings. No one rings\\nit.",
+  "fr": "La cloche de la tour sonne.\\nPersonne ne la sonne."
+ },
+ "SpireYard_Text_Npc1": {
+  "en": "The ghosts are polite. Mostly.",
+  "fr": "Les fantômes sont polis. Pour la\\nplupart."
+ },
  "SpireYard_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "SpireYard_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

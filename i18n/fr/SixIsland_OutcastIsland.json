@@ -1,0 +1,82 @@
+{
+ "SixIsland_OutcastIsland_Text_AvaDefeat": {
+  "en": "AVA: Oh, you're amazing!\\nEven better, you're on your own!",
+  "fr": "AVA : Oh, tu es incroyable !\\nEt en plus, tu es tout seul !"
+ },
+ "SixIsland_OutcastIsland_Text_AvaIntro": {
+  "en": "AVA: Let's have a two-on-two\\nmarine battle!",
+  "fr": "AVA : Faisons un combat marin deux\\ncontre deux !"
+ },
+ "SixIsland_OutcastIsland_Text_AvaNotEnoughMons": {
+  "en": "AVA: You're challenging us to\\na battle?\\pYou'll need at least two POKéMON\\nif you want to do that.",
+  "fr": "AVA : Tu nous défies en combat ?\\pIl te faudra au moins deux POKéMON\\npour ça."
+ },
+ "SixIsland_OutcastIsland_Text_AvaPostBattle": {
+  "en": "AVA: You know, I do prefer the\\nsea over any pool.",
+  "fr": "AVA : Tu sais, je préfère la mer à\\nn'importe quelle piscine."
+ },
+ "SixIsland_OutcastIsland_Text_GebDefeat": {
+  "en": "GEB: Wow, Big Sister, this person's\\nreally good!",
+  "fr": "GEB : Wow, Grande Sœur, cette\\npersonne est vraiment forte !"
+ },
+ "SixIsland_OutcastIsland_Text_GebIntro": {
+  "en": "GEB: Big Sister, help!\\nPlease battle with me!",
+  "fr": "GEB : Grande Sœur, à l'aide !\\nBats-toi avec moi, s'il te plaît !"
+ },
+ "SixIsland_OutcastIsland_Text_GebNotEnoughMons": {
+  "en": "GEB: Please battle against me and\\nmy sister!\\p…Oh, you don't have two POKéMON?",
+  "fr": "GEB : Bats-toi contre moi et ma\\nsœur, s'il te plaît !\\p…Oh, tu n'as pas deux POKéMON ?"
+ },
+ "SixIsland_OutcastIsland_Text_GebPostBattle": {
+  "en": "GEB: I'm hanging onto my sister\\nbecause I can't touch the bottom.",
+  "fr": "GEB : Je m'accroche à ma sœur parce\\nque je ne touche pas le fond."
+ },
+ "SixIsland_OutcastIsland_Text_MymoDefeat": {
+  "en": "Gasp…\\nGasp…",
+  "fr": "Souffle…\\nSouffle…"
+ },
+ "SixIsland_OutcastIsland_Text_MymoIntro": {
+  "en": "Gasp… Gasp…\\pI swam here from SIX ISLE PORT\\nin one go.",
+  "fr": "Haletant… Haletant…\\pJ'ai nagé jusqu'ici depuis le PORT\\nde L'ÎLE SIX d'une traite."
+ },
+ "SixIsland_OutcastIsland_Text_MymoPostBattle": {
+  "en": "I'm only at the halfway point…\\nI'm beat…",
+  "fr": "Je ne suis qu'à mi-chemin…\\nJe suis crevé…"
+ },
+ "SixIsland_OutcastIsland_Text_NicoleDefeat": {
+  "en": "I didn't lose to you at swimming.\\nThis doesn't bother me.",
+  "fr": "Je n'ai pas perdu contre toi à la\\nnage. Ça ne me dérange pas."
+ },
+ "SixIsland_OutcastIsland_Text_NicoleIntro": {
+  "en": "It's not so easy sending POKéMON\\nout while swimming, you know?",
+  "fr": "Ce n'est pas facile d'envoyer des\\nPOKéMON en nageant, tu sais ?"
+ },
+ "SixIsland_OutcastIsland_Text_NicolePostBattle": {
+  "en": "Are you headed for the island up\\npast here?\\pI didn't see anything interesting\\nthere.",
+  "fr": "Tu vas à l'île plus haut ?\\pJe n'y ai rien vu d'intéressant."
+ },
+ "SixIsland_OutcastIsland_Text_RocketDefeat": {
+  "en": "…Huh?",
+  "fr": "…Hein ?"
+ },
+ "SixIsland_OutcastIsland_Text_RocketIntro": {
+  "en": "There're no rare POKéMON around\\nthese parts! Not a one!\\pThat burns me up, man.\\nI'll take it out on you!",
+  "fr": "Il n'y a pas de POKéMON rares par\\nici ! Pas un seul !\\pÇa me met en rogne, mec.\\nJe vais me défouler sur toi !"
+ },
+ "SixIsland_OutcastIsland_Text_RocketPostBattle": {
+  "en": "So listen, you haven't seen any\\nrare POKéMON, have you?",
+  "fr": "Dis donc, tu n'as pas vu de POKéMON\\nrares, par hasard ?"
+ },
+ "SixIsland_OutcastIsland_Text_TylorDefeat": {
+  "en": "Nope, no luck at all…",
+  "fr": "Non, aucune chance…"
+ },
+ "SixIsland_OutcastIsland_Text_TylorIntro": {
+  "en": "I'm having no luck at all.\\nA battle'd be a change of pace!",
+  "fr": "Je n'ai aucune chance.\\nUn combat changerait un peu !"
+ },
+ "SixIsland_OutcastIsland_Text_TylorPostBattle": {
+  "en": "I can't very well go home without\\ncatching something, though.",
+  "fr": "Je ne peux pas rentrer chez moi\\nsans rien capturer, pourtant."
+ }
+}

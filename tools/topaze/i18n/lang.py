@@ -46,6 +46,7 @@ def lines_of(raw):
     return re.split(r'\\n|\\l|\\p', raw)
 
 def vis_len(line):
+    line = re.sub(r'\{(PLAY_BGM|MUS_\w+|PAUSE_MUSIC|RESUME_MUSIC|FONT_\w+|PAUSE[ _\w]*)\}', '', line)
     return len(re.sub(r'\{[A-Z_0-9]+\}', 'XXXXXXX', line))
 
 def check(raw):
@@ -55,7 +56,7 @@ def check(raw):
         if vis_len(ln) > MAXW:
             pb.append('ligne trop longue (%d>%d) : %s' % (vis_len(ln), MAXW, ln))
     cs = charset()
-    for ch in re.sub(r'\{[A-Z_0-9]+\}|\\[nlpc]', '', raw):
+    for ch in re.sub(r'\{[^{}]+\}|\\[nlpc]', '', raw):
         if ch not in cs:
             pb.append('caractere absent de la police : %r' % ch)
     if '$' in raw or '"' in raw:

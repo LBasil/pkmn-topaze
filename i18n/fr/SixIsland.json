@@ -1,0 +1,70 @@
+{
+ "SixIsland_Text_IslandSign": {
+  "en": "SIX ISLAND\\nThe oldest stones, the oldest echo",
+  "fr": "ÎLE SIX Les plus vieilles pierres,\\nle plus vieil écho"
+ },
+ "SixIsland_Text_Lord1": {
+  "en": "DRAKE: I sailed every sea to learn one\\nthing: respect is earned, never\\lgiven. So earn it, CHAMPION!",
+  "fr": "DRAKE : J'ai parcouru toutes les\\nmers pour apprendre une chose : le\\lrespect se mérite, il ne se donne\\njamais. Alors mérite-le, CHAMPION !"
+ },
+ "SixIsland_Text_Lord2": {
+  "en": "Hah! The sea bows to you.",
+  "fr": "Hah ! La mer s'incline devant toi."
+ },
+ "SixIsland_Text_Lord3": {
+  "en": "DRAKE: Fair winds, ruler of the six.\\nTake this for the road.",
+  "fr": "DRAKE : Bon vent, souverain des\\nsix. Prends ceci pour la route."
+ },
+ "SixIsland_Text_LordDone": {
+  "en": "DRAKE: A ruler worthy of the six.\\nI will remember this day.",
+  "fr": "DRAKE : Un souverain digne des six.\\nJe me souviendrai de ce jour."
+ },
+ "SixIsland_Text_LordEarly": {
+  "en": "DRAKE: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\nFLORA will tell you the way.",
+  "fr": "DRAKE : Pas encore. L'ancienne\\nLIGUE et les MAÎTRES doivent\\ld'abord tomber. FLORA te dira le\\nchemin."
+ },
+ "SixIsland_Text_LordIdle": {
+  "en": "DRAKE: The islands are quiet. I look\\nafter them, as I always have.",
+  "fr": "DRAKE : Les îles sont calmes. Je\\nveille sur elles, comme toujours."
+ },
+ "SixIsland_Text_RefAfter": {
+  "en": "OLGA: Take good care of it. The\\nnext REFUGE post is waiting.",
+  "fr": "OLGA : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
+ },
+ "SixIsland_Text_RefAsk": {
+  "en": "OLGA: A PINSIR was caught in a trap\\nand it is badly hurt. Two FULL\\lRESTORES, please.",
+  "fr": "OLGA : Un SCARABRUTE a été pris\\ndans un piège et il est gravement\\lblessé.\\pDeux\\pRESTAURATIONS TOTALES, s'il vous\\nplaît."
+ },
+ "SixIsland_Text_RefDone": {
+  "en": "OLGA: Thank you again. The REFUGE\\nis safer because of you.",
+  "fr": "OLGA : Merci encore. Le REFUGE est\\nplus sûr grâce à toi."
+ },
+ "SixIsland_Text_RefEarly": {
+  "en": "OLGA: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\nSAFARI ZONE knows the order.",
+  "fr": "OLGA : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\lde la ZONE SAFARI connaît l'ordre."
+ },
+ "SixIsland_Text_RefGives": {
+  "en": "OLGA: You saved the day. The post\\nhas a gift for you: PINSIR!",
+  "fr": "OLGA : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\lSCARABRUTE !"
+ },
+ "SixIsland_Text_RefIdle": {
+  "en": "OLGA: I watch over the animals here.\\nThe world is quieter now.",
+  "fr": "OLGA : Je veille sur les animaux\\nici. Le monde est plus calme\\lmaintenant."
+ },
+ "SixIsland_Text_RefNo": {
+  "en": "OLGA: I understand. It is a lot to\\nask. The offer stands.",
+  "fr": "OLGA : Je comprends. C'est beaucoup\\ndemander. L'offre tient toujours."
+ },
+ "SixIsland_Text_RefOffer": {
+  "en": "OLGA: You have them! May I take\\n2 of them for the post?",
+  "fr": "OLGA : Tu en as ! Puis-je en\\nprendre 2 pour le poste ?"
+ },
+ "SixIsland_Text_SkyAtNightIsFantastic": {
+  "en": "The sky at night is fantastic\\nout here.\\pLately the stars move too fast.\\nI counted them twice, and they\\ldid not match.",
+  "fr": "Le ciel nocturne est fantastique\\nici.\\pDernièrement les étoiles bougent\\ntrop vite. Je les ai comptées deux\\lfois, et ça ne correspondait pas."
+ },
+ "SixIsland_Text_ThatWayToWaterPathRuinValley": {
+  "en": "Keep going this way and you'll get\\nto the WATER PATH.\\pStay on that and you'll get to\\nthe RUIN VALLEY.",
+  "fr": "Continue dans cette direction et tu\\narriveras au CHEMIN DE L'EAU.\\pReste dessus et tu arriveras à la\\nVALLÉE DES RUINES."
+ }
+}

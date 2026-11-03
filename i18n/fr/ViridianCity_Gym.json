@@ -1,0 +1,142 @@
+{
+ "ViridianCity_Gym_Text_AtsushiDefeat": {
+  "en": "My hammer slipped!",
+  "fr": "Mon marteau a glissé !"
+ },
+ "ViridianCity_Gym_Text_AtsushiIntro": {
+  "en": "I hammer ore for a living.\\nYou are next on the anvil!",
+  "fr": "Je martèle le minerai pour vivre.\\nTu es le prochain sur l'enclume !"
+ },
+ "ViridianCity_Gym_Text_AtsushiPostBattle": {
+  "en": "The black opal glows when HEPHA\\nis angry. Do not make her angry.",
+  "fr": "L'opale noire brille quand HEPHA\\nest en colère. Ne la mets pas en\\lcolère."
+ },
+ "ViridianCity_Gym_Text_ColeDefeat": {
+  "en": "Dulled!",
+  "fr": "Émoussé !"
+ },
+ "ViridianCity_Gym_Text_ColeIntro": {
+  "en": "Wings of steel cut through\\nanything. Even you.",
+  "fr": "Les ailes d'acier tranchent tout.\\nMême toi."
+ },
+ "ViridianCity_Gym_Text_ColePostBattle": {
+  "en": "Not all steel is for show.\\nSome is for the war ahead.",
+  "fr": "Tout l'acier n'est pas pour la\\nparade. Certains est pour la guerre\\là venir."
+ },
+ "ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis": {
+  "en": "The OPAL BADGE makes every\\nPOKéMON obey, regardless of\\plevel.\\pIt is the last stone on your road\\nto the POKéMON LEAGUE.\\pTake this, too.",
+  "fr": "Le BADGE OPALE fait obéir tous les\\nPOKéMON, quel que soit leur niveau.\\pC'est la dernière pierre sur ta\\nroute vers la LIGUE POKéMON.\\pPrends ceci aussi."
+ },
+ "ViridianCity_Gym_Text_ExplainTM26": {
+  "en": "TM47 contains STEEL WING.\\pA strong, fast strike. Honest\\nmetal.",
+  "fr": "La CT47 contient AILE D'ACIER.\\pUne frappe puissante et rapide.\\nDu métal honnête."
+ },
+ "ViridianCity_Gym_Text_GiovanniDefeat": {
+  "en": "Hmph... A crack. Just one.\\pYou are the first to leave one in\\na long while. Take the OPAL\\pBADGE.",
+  "fr": "Hmph… Une fissure. Une seule.\\pTu es le premier à en laisser une\\ndepuis longtemps. Prends le BADGE\\lOPALE."
+ },
+ "ViridianCity_Gym_Text_GiovanniIntro": {
+  "en": "So the gate opens at last. I am\\nHEPHA.\\pI forge my own steel. It does not\\nrust, it does not bend, and it\\pdoes not forget.\\pMy POKéMON are STEEL-types, born\\nin the black opal furnaces under\\pthis city.\\pDo you think you can break what I\\nmade? Come and try!",
+  "fr": "Alors le portail s'ouvre enfin. Je\\nsuis HEPHA.\\pJe forge mon propre acier. Il ne\\nrouille pas, il ne plie pas, et il\\ln'oublie pas.\\pMes POKéMON sont de type ACIER, nés\\ndans les fournaises d'opale noire\\lsous cette ville.\\pPenses-tu pouvoir briser ce que\\nj'ai fait ? Viens essayer !"
+ },
+ "ViridianCity_Gym_Text_GiovanniPostBattle": {
+  "en": "My furnaces forged the gate of\\nthe VICTORY ROAD, long ago.\\pA boy in a red cap came before\\nyou. He said nothing. He only\\ppointed at the BLACK OPAL in the\\nsquare. I understood.\\pThe opal is the key of that gate.\\nHe took it into the cave himself.\\pStrange men in black went in\\nthere too. Hurry, before they\\nreach him.",
+  "fr": "Mes fournaises ont forgé le portail\\nde la ROUTE VICTOIRE, il y a\\llongtemps.\\pUn garçon à casquette rouge est\\nvenu avant toi. Il n'a rien dit. Il\\la seulement montré l'OPALE NOIRE\\nsur la place. J'ai compris.\\pL'opale est la clé de ce portail.\\nIl l'a emportée lui-même dans la\\lgrotte.\\pD'étranges hommes en noir y sont\\naussi entrés. Dépêche-toi, avant\\lqu'ils ne l'atteignent."
+ },
+ "ViridianCity_Gym_Text_GymGuyAdvice": {
+  "en": "Yo! Champ in the making!\\pThis is the FOUNDRY, the last\\nGYM before the LEAGUE.\\pEvery TRAINER here uses STEEL-\\ntypes. Bring FIRE or GROUND.\\pAnd watch the spinner tiles.\\nThey send you straight to the\\nfurnace!",
+  "fr": "Yo ! Futur champion !\\pCeci est la FONDERIE, la dernière\\nARÈNE avant la LIGUE.\\pTous les DRESSEURS ici utilisent\\ndes types ACIER. Apporte du FEU ou\\ldu SOL.\\pEt attention aux dalles tournantes.\\nElles t'envoient droit à la\\lfournaise !"
+ },
+ "ViridianCity_Gym_Text_GymGuyPostVictory": {
+  "en": "Eight badges! Go to the VICTORY\\nROAD. But mind the men in black.",
+  "fr": "Huit badges ! Va à la ROUTE\\nVICTOIRE. Mais méfie-toi des hommes\\len noir."
+ },
+ "ViridianCity_Gym_Text_GymStatue": {
+  "en": "OPANIHRUM POKéMON GYM\\nLEADER: ?\\pWINNING TRAINERS:\\n{RIVAL}",
+  "fr": "ARÈNE POKéMON D'OPANIHRUM\\nCHAMPIONNE : ?\\pDRESSEURS VAINQUEURS :\\n{RIVAL}"
+ },
+ "ViridianCity_Gym_Text_GymStatuePlayerWon": {
+  "en": "OPANIHRUM POKéMON GYM\\nLEADER: HEPHA\\pWINNING TRAINERS:\\n{RIVAL}, {PLAYER}",
+  "fr": "ARÈNE POKéMON D'OPANIHRUM\\nCHAMPIONNE : HEPHA\\pDRESSEURS VAINQUEURS :\\n{RIVAL}, {PLAYER}"
+ },
+ "ViridianCity_Gym_Text_JasonDefeat": {
+  "en": "Out of tune…",
+  "fr": "Désaccordé…"
+ },
+ "ViridianCity_Gym_Text_JasonIntro": {
+  "en": "Clang, clang! My POKéMON and I\\nmake the best forge music!",
+  "fr": "Clang, clang ! Mes POKéMON et moi\\nfaisons la meilleure musique de\\lforge !"
+ },
+ "ViridianCity_Gym_Text_JasonPostBattle": {
+  "en": "Wonder who taught HEPHA to\\nsmith? Not me. Not anyone.",
+  "fr": "Je me demande qui a appris à HEPHA\\nà forger ? Pas moi. Personne."
+ },
+ "ViridianCity_Gym_Text_KiyoDefeat": {
+  "en": "I bent…",
+  "fr": "J'ai plié…"
+ },
+ "ViridianCity_Gym_Text_KiyoIntro": {
+  "en": "Steel is patient. So am I.",
+  "fr": "L'acier est patient. Moi aussi."
+ },
+ "ViridianCity_Gym_Text_KiyoPostBattle": {
+  "en": "Patience, kid. You'll need it\\nagainst HEPHA.",
+  "fr": "Patience. Tu en auras besoin\\ncontre HEPHA."
+ },
+ "ViridianCity_Gym_Text_ReceivedTM26FromGiovanni": {
+  "en": "{PLAYER} received TM47\\nfrom HEPHA.",
+  "fr": "{PLAYER} a reçu la CT47\\nd'HEPHA."
+ },
+ "ViridianCity_Gym_Text_SamuelDefeat": {
+  "en": "Too much heat…",
+  "fr": "Trop de chaleur…"
+ },
+ "ViridianCity_Gym_Text_SamuelIntro": {
+  "en": "OPANIHRUM's FOUNDRY forged the\\nLEAGUE's gate. Impressed?",
+  "fr": "La FONDERIE d'OPANIHRUM a forgé le\\nportail de la LIGUE. Impressionné ?"
+ },
+ "ViridianCity_Gym_Text_SamuelPostBattle": {
+  "en": "Beyond the gate is the VICTORY\\nROAD. Strange men went in.",
+  "fr": "Au-delà du portail se trouve la\\nROUTE VICTOIRE. D'étranges hommes y\\lsont entrés."
+ },
+ "ViridianCity_Gym_Text_TakashiDefeat": {
+  "en": "My magnets failed!",
+  "fr": "Mes aimants ont lâché !"
+ },
+ "ViridianCity_Gym_Text_TakashiIntro": {
+  "en": "I guard the furnace! No one\\npasses my magnets!",
+  "fr": "Je garde la fournaise ! Personne ne\\npasse mes aimants !"
+ },
+ "ViridianCity_Gym_Text_TakashiPostBattle": {
+  "en": "Eight badges and the LEAGUE.\\nThen the VICTORY ROAD.",
+  "fr": "Huit badges et la LIGUE.\\nPuis la ROUTE VICTOIRE."
+ },
+ "ViridianCity_Gym_Text_WarrenDefeat": {
+  "en": "Cracked under pressure!",
+  "fr": "Craqué sous la pression !"
+ },
+ "ViridianCity_Gym_Text_WarrenIntro": {
+  "en": "Only the best alloy makes it\\nthrough this door.",
+  "fr": "Seul le meilleur alliage passe\\ncette porte."
+ },
+ "ViridianCity_Gym_Text_WarrenPostBattle": {
+  "en": "HEPHA will melt me down for\\nthis loss…",
+  "fr": "HEPHA va me fondre pour cette\\ndéfaite…"
+ },
+ "ViridianCity_Gym_Text_YouDoNotHaveSpace": {
+  "en": "You do not have space for this!",
+  "fr": "Tu n'as pas de place pour ça !"
+ },
+ "ViridianCity_Gym_Text_YujiDefeat": {
+  "en": "Quenched…",
+  "fr": "Trempé…"
+ },
+ "ViridianCity_Gym_Text_YujiIntro": {
+  "en": "Hot metal does not wait for you!",
+  "fr": "Le métal chaud n'attend pas !"
+ },
+ "ViridianCity_Gym_Text_YujiPostBattle": {
+  "en": "HEPHA tempers every one of us\\nin the opal furnace.",
+  "fr": "HEPHA nous trempe tous dans la\\nfournaise d'opale."
+ }
+}

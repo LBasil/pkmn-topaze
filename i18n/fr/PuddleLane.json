@@ -1,10 +1,18 @@
 {
+ "PuddleLane_Text_Npc0": {
+  "en": "I jump in every puddle. Every\\nsingle one.",
+  "fr": "Je saute dans chaque flaque.\\nAbsolument toutes."
+ },
+ "PuddleLane_Text_Npc1": {
+  "en": "Bring a coat. Or a POLIWAG.",
+  "fr": "Apporte un manteau. Ou un TÊTARTE."
+ },
  "PuddleLane_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "PuddleLane_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

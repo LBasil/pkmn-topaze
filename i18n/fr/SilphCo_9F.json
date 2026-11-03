@@ -1,0 +1,58 @@
+{
+ "SilphCo_9F_Text_Ally": {
+  "en": "N: I can hear their POKéMON.\\nThey are afraid of him.\\pNot of us. Of HIM.\\pStay here a moment, {PLAYER}.\\nSome doors should be opened by\\pthose who can survive behind them.",
+  "fr": "N : J'entends leurs POKéMON. Ils\\nont peur de lui.\\pPas de nous. De LUI.\\pReste ici un moment, {PLAYER}.\\nCertaines portes doivent être\\louvertes par ceux qui peuvent\\nsurvivre derrière."
+ },
+ "SilphCo_9F_Text_DontGiveUp": {
+  "en": "Don't give up!",
+  "fr": "N'abandonne pas !"
+ },
+ "SilphCo_9F_Text_EdDefeat": {
+  "en": "You hammered me!",
+  "fr": "Tu m'as martelé !"
+ },
+ "SilphCo_9F_Text_EdIntro": {
+  "en": "Your POKéMON have weak points!\\nI can nail them!",
+  "fr": "Tes POKéMON ont des points\\nfaibles ! Je peux les viser !"
+ },
+ "SilphCo_9F_Text_EdPostBattle": {
+  "en": "Exploiting weak spots does work.\\nThink about type advantages.",
+  "fr": "Exploiter les points faibles\\nmarche. Pense aux avantages de\\ltype."
+ },
+ "SilphCo_9F_Text_FloorSign": {
+  "en": "HEMATEK CO. HEAD OFFICE\\n9F",
+  "fr": "HEMATEK CO. SIÈGE\\n9F"
+ },
+ "SilphCo_9F_Text_Grunt1Defeat": {
+  "en": "Ghaaah!",
+  "fr": "Ghaaah !"
+ },
+ "SilphCo_9F_Text_Grunt1Intro": {
+  "en": "Your POKéMON seem to adore you,\\nkid!",
+  "fr": "Tes POKéMON semblent t'adorer !"
+ },
+ "SilphCo_9F_Text_Grunt1PostBattle": {
+  "en": "If I had started as a TRAINER at\\nyour age…",
+  "fr": "Si j'avais commencé comme DRESSEUR\\nà ton âge…"
+ },
+ "SilphCo_9F_Text_Grunt2Defeat": {
+  "en": "Warg!\\nBrothers, I lost!",
+  "fr": "Warg !\\nFrères, j'ai perdu !"
+ },
+ "SilphCo_9F_Text_Grunt2Intro": {
+  "en": "I am one of the four ONYBRIS\\nBROTHERS!",
+  "fr": "Je suis l'un des quatre FRÈRES\\nONYBRIS !"
+ },
+ "SilphCo_9F_Text_Grunt2PostBattle": {
+  "en": "My brothers will avenge me!",
+  "fr": "Mes frères me vengeront !"
+ },
+ "SilphCo_9F_Text_ThankYouSoMuch": {
+  "en": "Thank you so much.",
+  "fr": "Merci beaucoup."
+ },
+ "SilphCo_9F_Text_YouShouldTakeQuickNap": {
+  "en": "You look tired.\\nYou should take a quick nap.",
+  "fr": "Tu as l'air fatigué.\\nTu devrais faire une petite sieste."
+ }
+}

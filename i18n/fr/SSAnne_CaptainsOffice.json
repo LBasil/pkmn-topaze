@@ -1,0 +1,46 @@
+{
+ "SSAnne_CaptainsOffice_Text_CaptainIFeelSeasick": {
+  "en": "CAPTAIN: Ooargh…\\nI feel hideous…\\lUrrp! Seasick…",
+  "fr": "CAPITAINE : Ooargh… Je me sens\\naffreux… Urrp ! Le mal de mer…"
+ },
+ "SSAnne_CaptainsOffice_Text_ExplainCut": {
+  "en": "Using CUT, you can chop down\\nsmall trees.\\pA small tree blocks the pass east\\nof TOURMALIA. That way leads to\\lROCK TUNNEL and SPINELLIA.",
+  "fr": "Avec COUPE, tu peux abattre les\\npetits arbres.\\pUn petit arbre bloque le passage à\\nl'est de TOURMALIA. Ce chemin mène\\lau TUNNEL ROCHE et à SPINELLIA."
+ },
+ "SSAnne_CaptainsOffice_Text_HowToConquerSeasickness": {
+  "en": "How to Conquer Seasickness…\\nThe CAPTAIN's reading this!",
+  "fr": "Comment vaincre le mal de mer…\\nLe CAPITAINE lit ça !"
+ },
+ "SSAnne_CaptainsOffice_Text_ObtainedHM01FromCaptain": {
+  "en": "{PLAYER} obtained HM01\\nfrom the CAPTAIN!",
+  "fr": "{PLAYER} a obtenu la CS01\\ndu CAPITAINE !"
+ },
+ "SSAnne_CaptainsOffice_Text_RubbedCaptainsBack": {
+  "en": "{PLAYER} rubbed the CAPTAIN's\\nback!\\pRub-rub…\\nRub-rub…",
+  "fr": "{PLAYER} a massé le dos du\\nCAPITAINE !\\pFrotte-frotte… Frotte-frotte…"
+ },
+ "SSAnne_CaptainsOffice_Text_SSAnneWillSetSailSoon": {
+  "en": "CAPTAIN: …Whew!\\pNow that I'm not sick anymore,\\nI guess it's time.\\pThe S.S. ANNE will set sail soon!\\pFarewell, until our return to\\nAPATIA!",
+  "fr": "CAPITAINE : …Ouf !\\pMaintenant que je ne suis plus\\nmalade, je crois qu'il est temps.\\pLe S.S. ANNE va bientôt\\nappareiller !\\pAdieu, jusqu'à notre retour à\\nAPATIA !"
+ },
+ "SSAnne_CaptainsOffice_Text_ThankYouHaveHMForCut": {
+  "en": "CAPTAIN: Whew! Thank you!\\nI'm feeling much better now.\\pThose men in black wanted the\\nAPATITE HERA lent me for the gala.\\pI hid it in my safe, and you\\narrived just in time! Splendid!\\pThey'll flee by speedboat, far\\nacross the sea, I bet.\\pHere, a HIDDEN MACHINE as thanks.\\nTeach CUT to your POKéMON, and\\lchop down small trees!\\pI'll return the APATITE to HERA\\nmyself. Go and challenge her!",
+  "fr": "CAPITAINE : Ouf ! Merci ! Je me\\nsens bien mieux maintenant.\\pCes hommes en noir voulaient\\nl'APATITE que HERA m'a prêtée pour\\lle gala.\\pJe l'ai cachée dans mon coffre, et\\ntu as atteint les lieux juste à\\ltemps !\\pSplendide !\\pIls s'enfuiront en hors-bord, loin\\nau-delà de la mer, je parie.\\pTiens, une CAPACITÉ CACHÉE en\\nremerciement. Enseigne COUPE à ton\\pPOKéMON, et abats les petits\\narbres !\\pJe rendrai l'APATITE à HERA\\nmoi-même. Va la défier !"
+ },
+ "SSAnne_CaptainsOffice_Text_VesperDefeat": {
+  "en": "Impossible... I lost to a mere\\nchild?",
+  "fr": "Impossible… J'ai perdu contre un\\nsimple enfant ?"
+ },
+ "SSAnne_CaptainsOffice_Text_VesperIntro": {
+  "en": "VESPER: The APATITE belongs to\\nTEAM ONYBRIS now, old man.\\pA child? HERA and her friend are\\nbusy outside, so you will do.\\pI am VESPER, one of the boss's\\nchosen. Do not disappoint me!",
+  "fr": "VESPER : L'APATITE appartient à la\\nTEAM ONYBRIS maintenant, vieil\\lhomme.\\pUn enfant ? HERA et son ami sont\\noccupés dehors, donc tu feras\\ll'affaire.\\pJe suis VESPER, l'une des élues du\\nboss. Ne me déçois pas !"
+ },
+ "SSAnne_CaptainsOffice_Text_VesperPostBattle": {
+  "en": "VESPER: The boss was right to\\nwatch you. We have the sea chart\\lanyway.\\pNext time, the gems are ours.\\nFarewell!",
+  "fr": "VESPER : Le boss avait raison de te\\nsurveiller. Nous avons la carte\\lmarine de toute façon.\\pLa prochaine fois, les gemmes\\nseront à nous. Adieu !"
+ },
+ "SSAnne_CaptainsOffice_Text_YuckShouldntHaveLooked": {
+  "en": "Yuck!\\nShouldn't have looked!",
+  "fr": "Beurk !\\nIl ne fallait pas regarder !"
+ }
+}

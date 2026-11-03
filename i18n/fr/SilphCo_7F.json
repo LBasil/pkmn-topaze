@@ -1,0 +1,110 @@
+{
+ "SilphCo_7F_Text_BadIfTeamRocketTookOver": {
+  "en": "It would be bad if TEAM ONYBRIS\\ntook over HEMATEK or our POKéMON.",
+  "fr": "Ce serait mauvais que la TEAM\\nONYBRIS prenne le contrôle\\ld'HEMATEK ou de nos POKéMON."
+ },
+ "SilphCo_7F_Text_CanceledMasterBallProject": {
+  "en": "We canceled the MASTER BALL\\nproject because of TEAM ONYBRIS.",
+  "fr": "Nous avons annulé le projet MASTER\\nBALL à cause de la TEAM ONYBRIS."
+ },
+ "SilphCo_7F_Text_ExplainLapras": {
+  "en": "It's a LAPRAS.\\nIt's a very intelligent POKéMON.\\pWe kept it in our lab, but it will\\nbe much better off with you.\\pI think you will be a good TRAINER\\nfor LAPRAS!\\pIt's a good swimmer.\\nIt'll give you a lift across water!",
+  "fr": "C'est un LOKHLASS.\\nC'est un POKéMON très intelligent.\\pNous le gardions dans notre labo,\\nmais il sera bien mieux avec toi.\\pJe pense que tu seras un bon\\nDRESSEUR pour LOKHLASS !\\pC'est un bon nageur.\\nIl te fera traverser l'eau !"
+ },
+ "SilphCo_7F_Text_FloorSign": {
+  "en": "HEMATEK CO. HEAD OFFICE\\n7F",
+  "fr": "HEMATEK CO. SIÈGE\\n7F"
+ },
+ "SilphCo_7F_Text_Grunt1Defeat": {
+  "en": "Aack!\\nBrothers, I lost!",
+  "fr": "Aaaah !\\nFrères, j'ai perdu !"
+ },
+ "SilphCo_7F_Text_Grunt1Intro": {
+  "en": "I am one of the four ONYBRIS\\nBROTHERS!",
+  "fr": "Je suis l'un des quatre FRÈRES\\nONYBRIS !"
+ },
+ "SilphCo_7F_Text_Grunt1PostBattle": {
+  "en": "Doesn't matter.\\nMy brothers will repay the favor!",
+  "fr": "Peu importe. Mes frères me rendront\\nla pareille !"
+ },
+ "SilphCo_7F_Text_Grunt2Defeat": {
+  "en": "Fine!\\nI lost!",
+  "fr": "Bon !\\nJ'ai perdu !"
+ },
+ "SilphCo_7F_Text_Grunt2Intro": {
+  "en": "A child intruder?\\nThat must be you!",
+  "fr": "Un enfant intrus ?\\nCe doit être toi !"
+ },
+ "SilphCo_7F_Text_Grunt2PostBattle": {
+  "en": "Go on home before my BOSS gets\\nticked off!",
+  "fr": "Rentre chez toi avant que mon BOSS\\nne s'énerve !"
+ },
+ "SilphCo_7F_Text_Grunt3Defeat": {
+  "en": "Lights out!",
+  "fr": "Lumière éteinte !"
+ },
+ "SilphCo_7F_Text_Grunt3Intro": {
+  "en": "Uh-oh!\\nI smell a little mouse!",
+  "fr": "Oh-oh !\\nJe sens une petite souris !"
+ },
+ "SilphCo_7F_Text_Grunt3PostBattle": {
+  "en": "You won't find my BOSS by just\\nscurrying around!",
+  "fr": "Tu ne trouveras pas mon BOSS en\\ncourant partout comme ça !"
+ },
+ "SilphCo_7F_Text_HaveMonForSavingUs": {
+  "en": "Oh! Hi! You're not a ONYBRIS!\\nYou came to save us?\\lWhy, thank you!\\pI want you to have this POKéMON\\nfor saving us.",
+  "fr": "Oh ! Salut ! Tu n'es pas\\nd'ONYBRIS ! Tu viens nous sauver ?\\lEh bien, merci !\\pJe veux que tu aies ce POKéMON pour\\nnous avoir sauvés."
+ },
+ "SilphCo_7F_Text_JoshuaDefeat": {
+  "en": "I'm done!",
+  "fr": "J'ai fini !"
+ },
+ "SilphCo_7F_Text_JoshuaIntro": {
+  "en": "Heheh!\\pYou mistook me for a worker?",
+  "fr": "Héhéh !\\pTu m'as pris pour un employé ?"
+ },
+ "SilphCo_7F_Text_JoshuaPostBattle": {
+  "en": "Despite your age, you are a\\nskilled TRAINER!",
+  "fr": "Malgré ton âge, tu es un DRESSEUR\\ncompétent !"
+ },
+ "SilphCo_7F_Text_ObtainedLaprasFromEmployee": {
+  "en": "{PLAYER} obtained a LAPRAS from\\nthe HEMATEK employee!",
+  "fr": "{PLAYER} a obtenu un LOKHLASS de\\nl'employé d'HEMATEK !"
+ },
+ "SilphCo_7F_Text_ReallyDangerousHere": {
+  "en": "You!\\nIt's really dangerous here!\\pYou came to save me?\\nYou can't!",
+  "fr": "Toi !\\nC'est vraiment dangereux ici !\\pTu viens me sauver ?\\nTu ne peux pas !"
+ },
+ "SilphCo_7F_Text_RivalDefeat": {
+  "en": "Oh, man!\\nSo, you are ready for BOSS\\lONYBRIS!",
+  "fr": "Oh là là ! Alors tu es prêt pour le\\nBOSS ONYBRIS !"
+ },
+ "SilphCo_7F_Text_RivalIntro": {
+  "en": "{RIVAL}: Hahaha! I thought you'd\\nturn up if I waited here!\\pI guess TEAM ONYBRIS slowed you\\ndown! Not that I care!\\pI saw you in HEMATOWN, so I decided\\nto see if you got better!",
+  "fr": "{RIVAL} : Hahaha ! Je pensais que\\ntu viendrais si j'attendais ici !\\pJe suppose que la TEAM ONYBRIS t'a\\nretardé ! Ça m'est égal !\\pJe t'ai vu à HEMATOWN, alors j'ai\\ndécidé de voir si tu t'étais\\lamélioré !"
+ },
+ "SilphCo_7F_Text_RivalPostBattle": {
+  "en": "Well, {PLAYER}!\\nI'm moving on up and ahead!\\pBy checking my POKéDEX, I'm\\nstarting to see what's strong and\\lhow they evolve!\\pAm I a genius or what?\\pI'm going to the POKéMON LEAGUE to\\nboot out the ELITE FOUR.\\pI'll become the world's most\\npowerful TRAINER!\\p{PLAYER}, well, good luck to you!\\nDon't sweat it!\\lSmell ya!",
+  "fr": "Eh bien, {PLAYER} ! Je monte et je\\nprends de l'avance !\\pEn consultant mon POKéDEX, je\\ncommence à voir ce qui est fort et\\lcomment ils évoluent !\\pSuis-je un génie ou quoi ?\\pJe vais à la LIGUE POKéMON pour\\nvirer le CONSEIL DES QUATRE.\\pJe deviendrai le DRESSEUR le plus\\npuissant du monde !\\p{PLAYER}, eh bien, bonne chance ! Ne\\nt'inquiète pas ! À plus !"
+ },
+ "SilphCo_7F_Text_RivalWhatKeptYou": {
+  "en": "{RIVAL}: What kept you, {PLAYER}?",
+  "fr": "{RIVAL} : Qu'est-ce qui t'a\\nretardé, {PLAYER} ?"
+ },
+ "SilphCo_7F_Text_RocketBossWentToBoardroom": {
+  "en": "TEAM ONYBRIS's BOSS went to the\\nboardroom!\\pIs our PRESIDENT okay?\\nI'm worried.",
+  "fr": "Le BOSS de la TEAM ONYBRIS est allé\\ndans la salle du conseil !\\pNotre PRÉSIDENT va-t-il bien ?\\nJe m'inquiète."
+ },
+ "SilphCo_7F_Text_RocketsAfterMasterBall": {
+  "en": "TEAM ONYBRIS was after the MASTER\\nBALL, which catches any POKéMON.",
+  "fr": "La TEAM ONYBRIS en voulait à la\\nMASTER BALL, qui capture tout\\lPOKéMON."
+ },
+ "SilphCo_7F_Text_ThankYouSoMuch": {
+  "en": "Thank you so much!",
+  "fr": "Merci beaucoup !"
+ },
+ "SilphCo_7F_Text_WowYouChasedOffTeamRocket": {
+  "en": "Wow!\\pYou chased off TEAM ONYBRIS all by\\nyourself?",
+  "fr": "Wow !\\pTu as chassé la TEAM ONYBRIS tout\\nseul ?"
+ }
+}

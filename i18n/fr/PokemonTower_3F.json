@@ -1,0 +1,42 @@
+{
+ "PokemonTower_3F_Text_CarlyDefeat": {
+  "en": "Hmm?\\nWhat am I doing?",
+  "fr": "Hmm ?\\nQue suis-je en train de faire ?"
+ },
+ "PokemonTower_3F_Text_CarlyIntro": {
+  "en": "Kekeke…\\nKwaaah!",
+  "fr": "Kekeke…\\nKwaaah !"
+ },
+ "PokemonTower_3F_Text_CarlyPostBattle": {
+  "en": "Sorry!\\nI was possessed!",
+  "fr": "Désolé !\\nJ'étais possédé !"
+ },
+ "PokemonTower_3F_Text_HopeDefeat": {
+  "en": "Hwa!\\nI'm saved!",
+  "fr": "Hwa !\\nJe suis sauvé !"
+ },
+ "PokemonTower_3F_Text_HopeIntro": {
+  "en": "Urrg… Awaa…\\nHuhu… Graa…",
+  "fr": "Urrg… Awaa…\\nHuhu… Graa…"
+ },
+ "PokemonTower_3F_Text_HopePostBattle": {
+  "en": "The ghosts are angry. They have\\nbeen since the thieves came.",
+  "fr": "Les fantômes sont en colère. Ils le\\nsont depuis que les voleurs sont\\lvenus."
+ },
+ "PokemonTower_3F_Text_MonCubone": {
+  "en": "CUBONE: Kyarugoo...\\nIt keeps vigil over a grave.",
+  "fr": "OSSELAIT : Kyarugoo…\\nIl veille sur une tombe."
+ },
+ "PokemonTower_3F_Text_PatriciaDefeat": {
+  "en": "Whew!\\nThe spirit left!",
+  "fr": "Ouf !\\nL'esprit est parti !"
+ },
+ "PokemonTower_3F_Text_PatriciaIntro": {
+  "en": "Be gone!\\nMalevolent spirit!",
+  "fr": "Va-t'en !\\nEsprit malveillant !"
+ },
+ "PokemonTower_3F_Text_PatriciaPostBattle": {
+  "en": "The others above…\\nThey must have been possessed.",
+  "fr": "Les autres au-dessus…\\nIls ont dû être possédés."
+ }
+}

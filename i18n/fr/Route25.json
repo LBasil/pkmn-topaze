@@ -1,0 +1,150 @@
+{
+ "Route25_Text_ChadDefeat": {
+  "en": "I knew I'd lose, too!",
+  "fr": "Je savais aussi que je perdrais !"
+ },
+ "Route25_Text_ChadIntro": {
+  "en": "I had this feeling…\\nI knew I had to battle you!",
+  "fr": "J'avais ce pressentiment… Je\\nsavais que je devais t'affronter !"
+ },
+ "Route25_Text_ChadPostBattle": {
+  "en": "If your POKéMON gets confused,\\nswitch it out.\\pThat's a good tactic.",
+  "fr": "Si ton POKéMON est confus,\\nchange-le.\\pC'est une bonne tactique."
+ },
+ "Route25_Text_DanDefeat": {
+  "en": "I'm not mad!",
+  "fr": "Je ne suis pas fâché !"
+ },
+ "Route25_Text_DanIntro": {
+  "en": "Dad took me to a great party on\\nthe S.S. ANNE at APATIA.",
+  "fr": "Papa m'a emmené à une super fête\\nsur le S.S. ANNE à APATIA."
+ },
+ "Route25_Text_DanPostBattle": {
+  "en": "On the S.S. ANNE, I saw TRAINERS\\nfrom around the world.",
+  "fr": "Sur le S.S. ANNE, j'ai vu des\\nDRESSEURS du monde entier."
+ },
+ "Route25_Text_FlintDefeat": {
+  "en": "Aww, darn…",
+  "fr": "Aww, zut…"
+ },
+ "Route25_Text_FlintIntro": {
+  "en": "I'm a cool guy.\\nI've got a girlfriend!",
+  "fr": "Je suis un mec cool.\\nJ'ai une copine !"
+ },
+ "Route25_Text_FlintPostBattle": {
+  "en": "Oh, well.\\nMy girlfriend will cheer me up.",
+  "fr": "Bah.\\nMa copine me remontera le moral."
+ },
+ "Route25_Text_FranklinDefeat": {
+  "en": "You worked hard!",
+  "fr": "Tu as travaillé dur !"
+ },
+ "Route25_Text_FranklinIntro": {
+  "en": "I just got down from MT. MOON,\\nbut I've still got gas in the tank!",
+  "fr": "Je viens de descendre du MT. MOON,\\nmais j'ai encore de l'énergie !"
+ },
+ "Route25_Text_FranklinPostBattle": {
+  "en": "Drat!\\nA ZUBAT bit me back in that cave.",
+  "fr": "Zut ! Un NOSFERAPTI m'a mordu dans\\ncette grotte."
+ },
+ "Route25_Text_HaleyDefeat": {
+  "en": "I'm not so jealous!",
+  "fr": "Je ne suis pas si jalouse !"
+ },
+ "Route25_Text_HaleyIntro": {
+  "en": "My friend has many cute POKéMON.\\nI'm so jealous!",
+  "fr": "Mon amie a plein de mignons\\nPOKéMON. Je suis si jalouse !"
+ },
+ "Route25_Text_HaleyPostBattle": {
+  "en": "You came from MT. MOON?\\nMay I have a CLEFAIRY?",
+  "fr": "Tu viens du MT. MOON ?\\nJe peux avoir un MÉLOFÉE ?"
+ },
+ "Route25_Text_JoeyDefeat": {
+  "en": "You're decent.",
+  "fr": "Tu es correct."
+ },
+ "Route25_Text_JoeyIntro": {
+  "en": "Local TRAINERS come here to\\npractice.",
+  "fr": "Les DRESSEURS locaux viennent ici\\ns'entraîner."
+ },
+ "Route25_Text_JoeyPostBattle": {
+  "en": "People in black ran past here at\\ndawn, heading for the cape.\\pThey looked like they were in a\\nhurry. Weird, right?",
+  "fr": "Des gens en noir sont passés ici à\\nl'aube, vers le cap.\\pIls avaient l'air pressés.\\nBizarre, non ?"
+ },
+ "Route25_Text_KelseyDefeat": {
+  "en": "My conditioning isn't the best…",
+  "fr": "Ma condition physique n'est pas\\ntop…"
+ },
+ "Route25_Text_KelseyIntro": {
+  "en": "Hi!\\nMy boyfriend is cool!",
+  "fr": "Salut !\\nMon copain est cool !"
+ },
+ "Route25_Text_KelseyPostBattle": {
+  "en": "I wish my boyfriend was as good\\nas you.",
+  "fr": "J'aimerais que mon copain soit\\naussi bon que toi."
+ },
+ "Route25_Text_MistyHighHopesAboutThisPlace": {
+  "en": "MISTY: I followed some creeps\\nto this cape. It's a lovely spot,\\peven with the old cottage so\\nempty and quiet.",
+  "fr": "MISTY : J'ai suivi des sinistres\\njusqu'à ce cap. C'est un bel\\lendroit, même avec ce vieux cottage\\nvide et silencieux."
+ },
+ "Route25_Text_MistyIdle": {
+  "en": "MISTY: Quiet. They're in there.",
+  "fr": "MISTY : Chut. Ils sont là-dedans."
+ },
+ "Route25_Text_MistyMeet": {
+  "en": "MISTY: Stop right there!\\p…Oh. You're not one of them.\\pI'm MISTY. I've tracked some\\nblack-suited creeps all day.\\pTwo of them slipped into that old\\ncottage. BILL left months ago, so\\pnobody should be inside.\\pYou're after them too, aren't you?\\nYou have the same look as a friend\\pof mine. Stubborn, never backs off.\\pFine. Let's go in together.\\nI'll go first. Follow me!",
+  "fr": "MISTY : Stop !\\p…Oh. Tu n'es pas l'un d'eux.\\pJe suis MISTY. Je traque des\\nsinistres en noir depuis ce matin.\\pDeux d'entre eux se sont glissés\\ndans ce vieux cottage. BILL est\\lparti il y a des mois, personne ne\\ndevrait y être.\\pToi aussi, tu les cherches,\\nn'est-ce pas ? Tu as le même regard\\lqu'un ami à moi.\\pTêtu, il ne recule jamais.\\pBon. Entrons ensemble. J'y vais la\\npremière. Suis-moi !"
+ },
+ "Route25_Text_NobDefeat": {
+  "en": "You done got me, and real good,\\ntoo!",
+  "fr": "Tu m'as eu, et bien eu, en plus !"
+ },
+ "Route25_Text_NobIntro": {
+  "en": "I'm off to see a POKéMANIAC's\\ncollection at the cape.",
+  "fr": "Je vais voir la collection d'un\\nPOKéMANIAC au cap."
+ },
+ "Route25_Text_NobPostBattle": {
+  "en": "The POKéMANIAC sure lives up to\\nhis name.\\pHis collection includes many rare\\nspecies of POKéMON.",
+  "fr": "Le POKéMANIAC mérite bien son nom.\\pSa collection compte de nombreuses\\nespèces rares de POKéMON."
+ },
+ "Route25_Text_ProcheLola_After": {
+  "en": "Winter is my favorite season. Come\\nsee me anytime.",
+  "fr": "L'hiver est ma saison préférée.\\nViens me voir quand tu veux."
+ },
+ "Route25_Text_ProcheLola_Defeat": {
+  "en": "You melted my team...",
+  "fr": "Tu as fait fondre mon équipe…"
+ },
+ "Route25_Text_ProcheLola_Early": {
+  "en": "Not yet, {PLAYER}. Finish your\\njourney first, then come and find\\pme.",
+  "fr": "Pas encore, {PLAYER}. Termine\\nd'abord ton voyage, puis viens me\\ltrouver."
+ },
+ "Route25_Text_ProcheLola_Intro": {
+  "en": "There you are, {PLAYER}! Cold hands,\\nwarm heart... but my team is pure\\pice!",
+  "fr": "Te voilà, {PLAYER} ! Mains froides,\\ncœur chaud… mais mon équipe est de\\lglace pure !"
+ },
+ "Route25_Text_ProcheLola_NoRoom": {
+  "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reparle-moi."
+ },
+ "Route25_Text_ProcheLola_Win": {
+  "en": "Keep this one. It never melts!",
+  "fr": "Garde ça. Ça ne fond jamais !"
+ },
+ "Route25_Text_SeaCottageSign": {
+  "en": "SEA COTTAGE\\nBILL's old lab. Empty now.",
+  "fr": "COTTAGE MARIN\\nL'ancien labo de BILL. Vide."
+ },
+ "Route25_Text_WayneDefeat": {
+  "en": "You're something.",
+  "fr": "Tu es quelqu'un."
+ },
+ "Route25_Text_WayneIntro": {
+  "en": "You're going to see BILL?\\nFirst, we battle!",
+  "fr": "Tu vas voir BILL ?\\nD'abord, on se bat !"
+ },
+ "Route25_Text_WaynePostBattle": {
+  "en": "The trail below is a shortcut to\\nTOURMALIA, if you know the way.",
+  "fr": "Le sentier plus bas est un\\nraccourci vers TOURMALIA, si tu\\lconnais le chemin."
+ }
+}

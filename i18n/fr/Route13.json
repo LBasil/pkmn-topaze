@@ -1,6 +1,142 @@
 {
+ "Route13_Text_AlmaDefeat": {
+  "en": "Oh, too bad!\\nI just messed up!",
+  "fr": "Oh, dommage !\\nJe viens de me tromper !"
+ },
+ "Route13_Text_AlmaIntro": {
+  "en": "I found CARBOS in a cave once\\nwhile I was spelunking.",
+  "fr": "J'ai trouvé du CARBONE dans une\\ngrotte une fois en faisant de la\\lspéléo."
+ },
+ "Route13_Text_AlmaPostBattle": {
+  "en": "CARBOS boosted the SPEED of my\\nPOKéMON.",
+  "fr": "Le CARBONE a boosté la VITESSE de\\nmes POKéMON."
+ },
+ "Route13_Text_GwenDefeat": {
+  "en": "Good going!\\nYou totally won!",
+  "fr": "Bien joué !\\nTu as totalement gagné !"
+ },
+ "Route13_Text_GwenIntro": {
+  "en": "My cute POKéMON wish to make your\\nacquaintance.",
+  "fr": "Mes mignons POKéMON souhaitent\\nfaire ta connaissance."
+ },
+ "Route13_Text_GwenPostBattle": {
+  "en": "You have to make POKéMON battle\\nto toughen them up.",
+  "fr": "Il faut faire combattre les POKéMON\\npour les endurcir."
+ },
+ "Route13_Text_JaredDefeat": {
+  "en": "Management will not\\nlike this.",
+  "fr": "La direction n'aimera pas ça."
+ },
+ "Route13_Text_JaredIntro": {
+  "en": "Route 13 is under new\\nmanagement.",
+  "fr": "La Route 13 est sous nouvelle\\ndirection."
+ },
+ "Route13_Text_JaredPostBattle": {
+  "en": "I just keep the road quiet. Others\\ndo the loud work in the towns.",
+  "fr": "Je garde juste la route calme.\\nD'autres font le travail bruyant\\ldans les villes."
+ },
+ "Route13_Text_LolaDefeat": {
+  "en": "Oh!\\nYou little beast!",
+  "fr": "Oh !\\nPetit monstre !"
+ },
+ "Route13_Text_LolaIntro": {
+  "en": "Sure, I'll play with you, sweetie.",
+  "fr": "Bien sûr, je jouerai avec toi, ma\\nchère."
+ },
+ "Route13_Text_LolaPostBattle": {
+  "en": "I wonder which is stronger, male or\\nfemale POKéMON?",
+  "fr": "Je me demande qui est le plus fort,\\nles POKéMON mâles ou femelles ?"
+ },
+ "Route13_Text_PerryDefeat": {
+  "en": "The wind turned!",
+  "fr": "Le vent a tourné !"
+ },
+ "Route13_Text_PerryIntro": {
+  "en": "I'm not going to lose.\\nNot when the wind's blowing my way!",
+  "fr": "Je ne vais pas perdre. Pas quand le\\nvent souffle pour moi !"
+ },
+ "Route13_Text_PerryPostBattle": {
+  "en": "The big sleeper on the pier is\\nolder than this whole road.",
+  "fr": "Le gros dormeur sur la jetée est\\nplus vieux que toute cette route."
+ },
+ "Route13_Text_Quest4_Ask": {
+  "en": "My best fighter is out of PP. Got 2\\nETHERS for an old angler?",
+  "fr": "Mon meilleur combattant n'a plus de\\nPP. Tu as 2 ÉTHERS pour un vieux\\lpêcheur ?"
+ },
+ "Route13_Text_Quest4_Done": {
+  "en": "The big one did not get away this\\ntime.",
+  "fr": "Le gros ne s'est pas échappé cette\\nfois."
+ },
  "Route13_Text_Quest4_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route13_Text_Quest4_Ok": {
+  "en": "That did it! Here, a reward.",
+  "fr": "Ça y est ! Tiens, une récompense."
+ },
+ "Route13_Text_RobertDefeat": {
+  "en": "Out of power!",
+  "fr": "Plus de courant !"
+ },
+ "Route13_Text_RobertIntro": {
+  "en": "I always go with bird POKéMON.\\nI've dedicated myself to them.",
+  "fr": "Je choisis toujours des POKéMON\\noiseaux. Je me suis dévoué à eux."
+ },
+ "Route13_Text_RobertPostBattle": {
+  "en": "I wish I could fly like PIDGEY and\\nPIDGEOTTO…",
+  "fr": "J'aimerais pouvoir voler comme\\nROUCOOL et ROUCOUPS…"
+ },
+ "Route13_Text_RouteSign": {
+  "en": "ROUTE 13\\nNorth to SILENCE BRIDGE",
+  "fr": "ROUTE 13\\nNord vers le PONT DU SILENCE"
+ },
+ "Route13_Text_SebastianDefeat": {
+  "en": "My PIDGEY and PIDGEOTTO combo\\nlost?",
+  "fr": "Mon duo ROUCOOL et ROUCOUPS a\\nperdu ?"
+ },
+ "Route13_Text_SebastianIntro": {
+  "en": "My bird POKéMON want to battle\\nwith you!",
+  "fr": "Mes POKéMON oiseaux veulent se\\nbattre avec toi !"
+ },
+ "Route13_Text_SebastianPostBattle": {
+  "en": "My POKéMON look happy even though\\nthey lost.",
+  "fr": "Mes POKéMON ont l'air heureux\\nmême s'ils ont perdu."
+ },
+ "Route13_Text_SheilaDefeat": {
+  "en": "It's over already?",
+  "fr": "C'est déjà fini ?"
+ },
+ "Route13_Text_SheilaIntro": {
+  "en": "Do you want to battle some\\nPOKéMON with me?",
+  "fr": "Veux-tu combattre quelques POKéMON\\navec moi ?"
+ },
+ "Route13_Text_SheilaPostBattle": {
+  "en": "Men in black were asking about a\\nPOKé FLUTE. Nobody here has one.",
+  "fr": "Des hommes en noir demandaient une\\nFLÛTE POKé. Personne ici n'en a."
+ },
+ "Route13_Text_SusieDefeat": {
+  "en": "Ohh!\\nI lost!",
+  "fr": "Ohh !\\nJ'ai perdu !"
+ },
+ "Route13_Text_SusieIntro": {
+  "en": "I'm told I'm good for a kid.",
+  "fr": "On me dit que je suis bon pour un\\ngamin."
+ },
+ "Route13_Text_SusiePostBattle": {
+  "en": "I want to become a good TRAINER.\\nI'll train hard, just watch.",
+  "fr": "Je veux devenir un bon DRESSEUR.\\nJe m'entraînerai dur, tu verras."
+ },
+ "Route13_Text_ValerieDefeat": {
+  "en": "Not enough!",
+  "fr": "Pas assez !"
+ },
+ "Route13_Text_ValerieIntro": {
+  "en": "Wow!\\nYour BADGES are too cool!",
+  "fr": "Waouh !\\nTes BADGES sont trop cool !"
+ },
+ "Route13_Text_ValeriePostBattle": {
+  "en": "You got those BADGES from GYM\\nLEADERS. I know!",
+  "fr": "Tu as eu ces BADGES des CHAMPIONS.\\nJe sais !"
  }
 }

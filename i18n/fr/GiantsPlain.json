@@ -1,14 +1,54 @@
 {
+ "GiantsPlain_Text_Gift0_After": {
+  "en": "I hope it is happy with you.",
+  "fr": "J'espère qu'il est heureux avec\\ntoi."
+ },
+ "GiantsPlain_Text_Gift0_Got": {
+  "en": "Please look after it.",
+  "fr": "Prends-en soin, s'il te plaît."
+ },
+ "GiantsPlain_Text_Gift0_Offer": {
+  "en": "A baby PHANPY got separated from\\nits herd. Can you look after it?",
+  "fr": "Un bébé PHANPY s'est séparé de son\\ntroupeau. Peux-tu t'en occuper ?"
+ },
+ "GiantsPlain_Text_Gift0_Refuse": {
+  "en": "Then I will keep it a little\\nlonger.",
+  "fr": "Alors je le garderai encore un peu."
+ },
+ "GiantsPlain_Text_Npc0": {
+  "en": "Big POKéMON need big space. Mind\\nthe herds.",
+  "fr": "Les gros POKéMON ont besoin de\\ngrands espaces. Attention aux\\ltroupeaux."
+ },
+ "GiantsPlain_Text_Npc1": {
+  "en": "TAUROS charge when they see red.\\nWear green.",
+  "fr": "TAUROS charge quand il voit du\\nrouge. Porte du vert."
+ },
+ "GiantsPlain_Text_Quest0_AfterT": {
+  "en": "The plain is a good place.",
+  "fr": "La plaine est un bon endroit."
+ },
+ "GiantsPlain_Text_Quest0_Ask": {
+  "en": "Two SODA POPs for the road, friend.\\nI will make it worth it.",
+  "fr": "Deux SODA COOL pour la route, ami.\\nJe ferai en sorte que ça vaille le\\lcoup."
+ },
+ "GiantsPlain_Text_Quest0_Done": {
+  "en": "Fizzy! Take this BLACK BELT.",
+  "fr": "Pétillant ! Prends cette CEINTURE\\nNOIRE."
+ },
+ "GiantsPlain_Text_Quest0_MissT": {
+  "en": "Two SODA POPs, please. The cafe\\nsells them.",
+  "fr": "Deux SODA COOL, s'il vous plaît. Le\\ncafé en vend."
+ },
  "GiantsPlain_Text_Quest0_NoRoomT": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
  },
  "GiantsPlain_Text_ReturnAsk": {
-  "fr": "Prêt à retourner au port ?",
-  "en": "Ready to go back to the dock?"
+  "en": "Ready to go back to the dock?",
+  "fr": "Prêt à retourner au port ?"
  },
  "GiantsPlain_Text_Stay": {
-  "fr": "Prends ton temps. La marée peut\\nattendre.",
-  "en": "Take your time. The tide can wait."
+  "en": "Take your time. The tide can wait.",
+  "fr": "Prends ton temps. La marée peut\\nattendre."
  }
 }

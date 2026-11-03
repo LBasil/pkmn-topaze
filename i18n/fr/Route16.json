@@ -1,6 +1,134 @@
 {
+ "Route16_Text_CamronDefeat": {
+  "en": "Bad, bad, bad!",
+  "fr": "Mal, mal, mal !"
+ },
+ "Route16_Text_CamronIntro": {
+  "en": "I'm feeling hungry and mean!\\nI need a punching bag!",
+  "fr": "J'ai faim et je suis méchant !\\nJ'ai besoin d'un punching-ball !"
+ },
+ "Route16_Text_CamronPostBattle": {
+  "en": "If I'm going to have POKéMON, they\\nmay as well be ferocious.\\pI'd use them to leave my enemies\\nin tatters.",
+  "fr": "Si je dois avoir des POKéMON,\\nautant qu'ils soient féroces.\\pJe les utiliserais pour mettre mes\\nennemis en lambeaux."
+ },
+ "Route16_Text_HideoDefeat": {
+  "en": "Kaboom!",
+  "fr": "Kaboum !"
+ },
+ "Route16_Text_HideoIntro": {
+  "en": "Hey, you just bumped me!",
+  "fr": "Hé, tu viens de me bousculer !"
+ },
+ "Route16_Text_HideoPostBattle": {
+  "en": "We'll always be hanging around here\\neven if you don't like it.\\pYou can detour to APATIA from\\nAMETHIOLITE going along the coast.",
+  "fr": "On traînera toujours par ici même\\nsi ça ne te plaît pas.\\pTu peux faire un détour vers APATIA\\ndepuis AMETHIOLITE en longeant la\\lcôte."
+ },
+ "Route16_Text_JedDefeat": {
+  "en": "JED: Oh, no!\\nMy love has seen me as a loser!",
+  "fr": "JED : Oh non !\\nMon amour m'a vu perdant !"
+ },
+ "Route16_Text_JedIntro": {
+  "en": "JED: Our love knows no bounds.\\nWe're in love and we show it!",
+  "fr": "JED : Notre amour ne connaît pas de\\nlimites. On s'aime et on le\\lmontre !"
+ },
+ "Route16_Text_JedNotEnoughMons": {
+  "en": "JED: You have just one POKéMON?\\nIs there no love in your heart?",
+  "fr": "JED : Tu n'as qu'un seul POKéMON ?\\nN'y a-t-il pas d'amour dans ton\\lcœur ?"
+ },
+ "Route16_Text_JedPostBattle": {
+  "en": "JED: Listen, LEA.\\nYou need to focus less on me.",
+  "fr": "JED : Écoute, LEA. Tu dois moins te\\nconcentrer sur moi."
+ },
+ "Route16_Text_KojiDefeat": {
+  "en": "Knockout!",
+  "fr": "K.O. !"
+ },
+ "Route16_Text_KojiIntro": {
+  "en": "Nice BIKE!\\nHand it over!",
+  "fr": "Beau VÉLO !\\nDonne-le !"
+ },
+ "Route16_Text_KojiPostBattle": {
+  "en": "Forget it, who needs your BIKE!\\pThe men in black rode down the\\nCYCLING ROAD. Fast. Not our gang.",
+  "fr": "Laisse tomber, qui a besoin de ton\\nVÉLO !\\pLes hommes en noir sont descendus\\npar la ROUTE CYCLABLE. Vite. Pas\\lnotre gang."
+ },
+ "Route16_Text_LaoDefeat": {
+  "en": "Don't you dare laugh!",
+  "fr": "Ne ris pas !"
+ },
+ "Route16_Text_LaoIntro": {
+  "en": "What do you want?",
+  "fr": "Qu'est-ce que tu veux ?"
+ },
+ "Route16_Text_LaoPostBattle": {
+  "en": "We like just hanging here.\\nMen in black came through, too.\\pThey paid us to look away.\\nWe took the money. So what?",
+  "fr": "On aime juste traîner ici. Des\\nhommes en noir sont passés aussi.\\pIls nous ont payés pour détourner\\nle regard. On a pris l'argent. Et\\lalors ?"
+ },
+ "Route16_Text_LeaDefeat": {
+  "en": "LEA: Ohh! But JED looks cool\\neven in a loss!",
+  "fr": "LEA : Ohh ! Mais JED a l'air cool\\nmême dans la défaite !"
+ },
+ "Route16_Text_LeaIntro": {
+  "en": "LEA: Sometimes, the intensity of\\nour love scares me.",
+  "fr": "LEA : Parfois, l'intensité de notre\\namour me fait peur."
+ },
+ "Route16_Text_LeaNotEnoughMons": {
+  "en": "LEA: Oh, you don't have two\\nPOKéMON with you?\\pDoesn't it feel lonely for you or\\nyour POKéMON?",
+  "fr": "LEA : Oh, tu n'as pas deux POKéMON\\navec toi ?\\pNe te sens-tu pas seul, toi ou\\ntes POKéMON ?"
+ },
+ "Route16_Text_LeaPostBattle": {
+  "en": "LEA: Ehehe, I'm sorry.\\nJED is so cool.",
+  "fr": "LEA : Ehehe, désolée.\\nJED est si cool."
+ },
+ "Route16_Text_LukeDefeat": {
+  "en": "You little rat!",
+  "fr": "Sale rat !"
+ },
+ "Route16_Text_LukeIntro": {
+  "en": "Come out and play, little mouse!",
+  "fr": "Sors jouer, petite souris !"
+ },
+ "Route16_Text_LukePostBattle": {
+  "en": "I hate losing!\\nGet out of my face!",
+  "fr": "Je déteste perdre !\\nDégage de ma vue !"
+ },
+ "Route16_Text_MonSprawledOutInSlumber": {
+  "en": "A POKéMON is sprawled out in\\na deep and comfortable slumber.",
+  "fr": "Un POKéMON est étendu dans un\\nsommeil profond et confortable."
+ },
+ "Route16_Text_RQuest_Ask": {
+  "en": "Poison all over my team. 3\\nANTIDOTES, fast!",
+  "fr": "Du poison sur toute mon équipe. 3\\nANTIDOTES, vite !"
+ },
+ "Route16_Text_RQuest_Done": {
+  "en": "We are riding again.",
+  "fr": "On roule de nouveau."
+ },
  "Route16_Text_RQuest_NoRoom": {
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens.",
-  "en": "Your BAG is full. Make room, then\\ncome back."
+  "en": "Your BAG is full. Make room, then\\ncome back.",
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+ },
+ "Route16_Text_RQuest_Ok": {
+  "en": "You saved the ride. Here.",
+  "fr": "Tu as sauvé la balade. Tiens."
+ },
+ "Route16_Text_RouteSign": {
+  "en": "ROUTE 16\\nBOURG QUARTZ - AMETHIOLITE",
+  "fr": "ROUTE 16\\nBOURG QUARTZ - AMETHIOLITE"
+ },
+ "Route16_Text_RubenDefeat": {
+  "en": "Don't make me mad!",
+  "fr": "Ne me mets pas en colère !"
+ },
+ "Route16_Text_RubenIntro": {
+  "en": "Hey, there!\\nLet's have ourselves a good time!",
+  "fr": "Salut !\\nPassons un bon moment !"
+ },
+ "Route16_Text_RubenPostBattle": {
+  "en": "I get my kicks by harassing people\\nwith my stinking POKéMON.\\pThey're great for startling people.\\nAnd, they bite, too.",
+  "fr": "Je prends mon pied à harceler les\\ngens avec mes POKéMON puants.\\pIls sont géniaux pour effrayer. Et\\nils mordent aussi."
+ },
+ "Route16_Text_TimeHint": {
+  "en": "Two calendars nailed to a post show\\ndifferent days. Both are wrong.",
+  "fr": "Deux calendriers cloués à un poteau\\nmontrent des jours différents. Les\\ldeux sont faux."
  }
 }
