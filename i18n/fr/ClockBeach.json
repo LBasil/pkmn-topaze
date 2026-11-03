@@ -13,7 +13,7 @@
  },
  "ClockBeach_Text_Boss_NoRoom": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+  "fr": "Ton SAC est plein ! Fais de la\\nplace et reviens me voir."
  },
  "ClockBeach_Text_Npc0": {
   "en": "A clock washed up at dawn. Another\\nat noon. They all say 3:07.",
@@ -25,10 +25,10 @@
  },
  "ClockBeach_Text_ReturnAsk": {
   "en": "Ready to go back to the dock?",
-  "fr": "Prêt à retourner au port ?"
+  "fr": "On retourne au port ?"
  },
  "ClockBeach_Text_Stay": {
   "en": "Take your time. The tide can wait.",
-  "fr": "Prends ton temps. La marée peut\\nattendre."
+  "fr": "Prends ton temps, la marée\\nattendra !"
  }
 }

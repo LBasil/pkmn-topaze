@@ -41,7 +41,7 @@
  },
  "Route14_Text_DonaldIntro": {
   "en": "Have you heard the legend of the\\nwinged mirages?",
-  "fr": "As-tu entendu la légende des\\nmirages ailés ?"
+  "fr": "T'as entendu la légende des\\nmirages ailés ?"
  },
  "Route14_Text_DonaldPostBattle": {
   "en": "Well, the winged mirages are the\\nlegendary bird POKéMON.\\pThere are three of them: ARTICUNO,\\nZAPDOS, and MOLTRES.",
@@ -133,7 +133,7 @@
  },
  "Route14_Text_MarlonIntro": {
   "en": "Have you taught your bird POKéMON\\nhow to FLY?\\pYou'll be able to soar with it into\\nthe sky!",
-  "fr": "As-tu appris à ton POKéMON oiseau à\\nutiliser VOL ?\\pTu pourras t'envoler avec lui dans\\nle ciel !"
+  "fr": "T'as appris à ton POKéMON oiseau à\\nutiliser VOL ?\\pTu pourras t'envoler avec lui dans\\nle ciel !"
  },
  "Route14_Text_MarlonPostBattle": {
   "en": "Bird POKéMON are my one true love.\\nI don't want to raise anything else.",
@@ -161,7 +161,7 @@
  },
  "Route14_Text_RQuest_NoRoom": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+  "fr": "Ton SAC est plein ! Fais de la\\nplace et reviens me voir."
  },
  "Route14_Text_RQuest_Ok": {
   "en": "Back on the road! Thanks.",

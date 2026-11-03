@@ -9,7 +9,7 @@
  },
  "BlossomCrest_Text_Quest0_AfterT": {
   "en": "Everything is in flower.",
-  "fr": "Tout est en fleur."
+  "fr": "Tout est en fleur !"
  },
  "BlossomCrest_Text_Quest0_Ask": {
   "en": "My garden needs a LEAF STONE. I\\nwill give a MIRACLE SEED.",
@@ -17,23 +17,23 @@
  },
  "BlossomCrest_Text_Quest0_Done": {
   "en": "Bloom time! Take this MIRACLE SEED.",
-  "fr": "La floraison peut commencer !\\nPrends donc cette GRAINE MIRACLE."
+  "fr": "Ça va pouvoir fleurir !\\nTiens, prends cette GRAINE MIRACLE."
  },
  "BlossomCrest_Text_Quest0_MissT": {
   "en": "One LEAF STONE, please.",
-  "fr": "Une PIERRE PLANTE, s'il te plaît."
+  "fr": "Une PIERRE PLANTE, s'il te plaît !"
  },
  "BlossomCrest_Text_Quest0_NoRoomT": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+  "fr": "Ton SAC est plein ! Fais de la\\nplace et reviens me voir."
  },
  "BlossomCrest_Text_ReturnAsk": {
   "en": "Ready to go back to the dock?",
-  "fr": "Prêt à retourner au port ?"
+  "fr": "On retourne au port ?"
  },
  "BlossomCrest_Text_Stay": {
   "en": "Take your time. The tide can wait.",
-  "fr": "Prends ton temps. La marée peut\\nattendre."
+  "fr": "Prends ton temps, la marée\\nattendra !"
  },
  "BlossomCrest_Text_TopazeFindFull": {
   "en": "Something shines here, but your BAG\\nis full.",

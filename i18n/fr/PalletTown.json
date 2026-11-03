@@ -69,7 +69,7 @@
  },
  "PalletTown_Text_Archive_NoRoom": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+  "fr": "Ton SAC est plein ! Fais de la\\nplace et reviens me voir."
  },
  "PalletTown_Text_Archive_Solved": {
   "en": "Seven ECHOES, seven stories closed.\\nThe archive is complete. You may\\pkeep these, they never fit on my\\nshelves.",
@@ -241,7 +241,7 @@
  },
  "PalletTown_Text_RefAsk": {
   "en": "AYA: I run the first REFUGE post. Our\\nfirst rule: nobody goes hungry.\\lPOKéMON hurt in the wild have\\nnowhere to go but here.\\pI need five POTIONS for the new\\narrivals. Can you spare them?",
-  "fr": "AYA : Je tiens le premier poste du\\nREFUGE. Notre première règle :\\ppersonne n'a faim. Les POKéMON\\nblessés dans la nature n'ont nulle\\lpart où aller sauf ici.\\pJ'ai besoin de cinq POTIONS pour\\nles nouveaux arrivants. Peux-tu les\\lcéder ?"
+  "fr": "AYA : Je tiens le premier poste du\\nREFUGE. Notre première règle :\\ppersonne n'a faim. Les POKéMON\\nblessés dans la nature n'ont nulle\\lpart où aller sauf ici.\\pJ'ai besoin de cinq POTIONS pour\\nles nouveaux arrivants. Tu peux les\\lcéder ?"
  },
  "PalletTown_Text_RefDone": {
   "en": "AYA: Thank you again. The REFUGE\\nis safer because of you.",
@@ -313,7 +313,7 @@
  },
  "PalletTown_Text_TQ_NoRoom": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+  "fr": "Ton SAC est plein ! Fais de la\\nplace et reviens me voir."
  },
  "PalletTown_Text_TQ_Ok": {
   "en": "Wonderful! A little help for your\\nteam.",

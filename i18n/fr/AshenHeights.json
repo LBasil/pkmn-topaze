@@ -5,38 +5,38 @@
  },
  "AshenHeights_Text_Npc1": {
   "en": "TORKOAL carries coal on its back.\\nReal coal!",
-  "fr": "CHARTOR porte du charbon sur le\\ndos. Du vrai charbon !"
+  "fr": "CHARTOR porte du charbon sur le\\ndos. Du vrai de vrai !"
  },
  "AshenHeights_Text_Quest0_AfterT": {
   "en": "Cool as a cucumber.",
-  "fr": "Frais comme un gardon."
+  "fr": "Frais comme un gardon !"
  },
  "AshenHeights_Text_Quest0_Ask": {
   "en": "I keep getting burned. Two BURN\\nHEALs, a CHARCOAL for you.",
-  "fr": "Je me brûle sans arrêt. Deux ANTI-\\nBRÛLE, et un CHARBON pour toi."
+  "fr": "J'arrête pas de me brûler ! Deux\\nANTI-BRÛLE et je te donne un\\lCHARBON."
  },
  "AshenHeights_Text_Quest0_Done": {
   "en": "Phew! Take this CHARCOAL.",
-  "fr": "Ouf ! Prends ce CHARBON."
+  "fr": "Ouf, merci ! Tiens, prends ce\\nCHARBON."
  },
  "AshenHeights_Text_Quest0_MissT": {
   "en": "Two BURN HEALs, please.",
-  "fr": "Deux ANTI-BRÛLE, s'il vous plaît."
+  "fr": "Deux ANTI-BRÛLE, s'il te plaît."
  },
  "AshenHeights_Text_Quest0_NoRoomT": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+  "fr": "Ton SAC est plein ! Fais de la\\nplace et reviens me voir."
  },
  "AshenHeights_Text_ReturnAsk": {
   "en": "Ready to go back to the dock?",
-  "fr": "Prêt à retourner au port ?"
+  "fr": "On retourne au port ?"
  },
  "AshenHeights_Text_Stay": {
   "en": "Take your time. The tide can wait.",
-  "fr": "Prends ton temps. La marée peut\\nattendre."
+  "fr": "Prends ton temps, la marée\\nattendra !"
  },
  "AshenHeights_Text_TopazeFindFull": {
   "en": "Something shines here, but your BAG\\nis full.",
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
+  "fr": "Y a un truc qui brille ici, mais\\nton SAC est plein."
  }
 }

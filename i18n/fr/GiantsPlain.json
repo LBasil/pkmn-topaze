@@ -9,7 +9,7 @@
  },
  "GiantsPlain_Text_Gift0_Offer": {
   "en": "A baby PHANPY got separated from\\nits herd. Can you look after it?",
-  "fr": "Un bébé PHANPY s'est séparé de son\\ntroupeau. Peux-tu t'en occuper ?"
+  "fr": "Un bébé PHANPY s'est séparé de son\\ntroupeau. Tu peux t'en occuper ?"
  },
  "GiantsPlain_Text_Gift0_Refuse": {
   "en": "Then I will keep it a little\\nlonger.",
@@ -41,14 +41,14 @@
  },
  "GiantsPlain_Text_Quest0_NoRoomT": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+  "fr": "Ton SAC est plein ! Fais de la\\nplace et reviens me voir."
  },
  "GiantsPlain_Text_ReturnAsk": {
   "en": "Ready to go back to the dock?",
-  "fr": "Prêt à retourner au port ?"
+  "fr": "On retourne au port ?"
  },
  "GiantsPlain_Text_Stay": {
   "en": "Take your time. The tide can wait.",
-  "fr": "Prends ton temps. La marée peut\\nattendre."
+  "fr": "Prends ton temps, la marée\\nattendra !"
  }
 }

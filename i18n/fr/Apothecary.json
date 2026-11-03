@@ -1,22 +1,22 @@
 {
  "Apothecary_Text_Npc0": {
   "en": "The boosters work best on young\\nPOKéMON. Do not wait too long.",
-  "fr": "Les boosters marchent mieux sur les\\njeunes POKéMON. N'attends pas trop."
+  "fr": "Les boosters marchent mieux sur les\\njeunes POKéMON. Traîne pas trop !"
  },
  "Apothecary_Text_ReturnAsk": {
   "en": "Ready to go back to the dock?",
-  "fr": "Prêt à retourner au port ?"
+  "fr": "On retourne au port ?"
  },
  "Apothecary_Text_ShopBye": {
   "en": "Strength has a price. Pay it\\nwisely.",
-  "fr": "La force a un prix. Paie-le\\navec sagesse."
+  "fr": "La force a un prix. Paie-le\\nà sa juste valeur."
  },
  "Apothecary_Text_ShopHi": {
   "en": "Tonics and boosters, made fresh.\\nWhat is your team missing?",
-  "fr": "Toniques et boosters, tout frais.\\nQue manque-t-il à ton équipe ?"
+  "fr": "Toniques et boosters tout frais !\\nQu'est-ce qui manque à ton équipe ?"
  },
  "Apothecary_Text_Stay": {
   "en": "Take your time. The tide can wait.",
-  "fr": "Prends ton temps. La marée peut\\nattendre."
+  "fr": "Prends ton temps, la marée\\nattendra !"
  }
 }

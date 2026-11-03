@@ -109,7 +109,7 @@
  },
  "Route16_Text_RQuest_NoRoom": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+  "fr": "Ton SAC est plein ! Fais de la\\nplace et reviens me voir."
  },
  "Route16_Text_RQuest_Ok": {
   "en": "You saved the ride. Here.",

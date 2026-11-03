@@ -5,30 +5,30 @@
  },
  "AshenMine_Text_Quest0_AfterT": {
   "en": "The mine is generous today.",
-  "fr": "La mine est généreuse aujourd'hui."
+  "fr": "La mine est généreuse aujourd'hui !"
  },
  "AshenMine_Text_Quest0_Ask": {
   "en": "STARDUST! I need two for my\\ncollection. I will give you a rare\\pscale.",
-  "fr": "POUSSIÈRE ÉTOILE ! Il m'en faut\\ndeux pour ma collection. Je te\\pdonne une écaille rare."
+  "fr": "De la POUSSIÈRE ÉTOILE ! Il m'en\\nfaut deux pour ma collection.\\pEn échange, je te donne une écaille\\nrare."
  },
  "AshenMine_Text_Quest0_Done": {
   "en": "Wonderful! A DRAGON SCALE for you.",
-  "fr": "Merveilleux ! Voici une ÉCAILLE\\nDRACO pour toi."
+  "fr": "Super ! Tiens, voici une ÉCAILLE\\nDRACO pour toi."
  },
  "AshenMine_Text_Quest0_MissT": {
   "en": "Two STARDUST. Look around the\\nshiny spots.",
-  "fr": "Deux POUSSIÈRES ÉTOILE. Regarde\\nautour des reflets."
+  "fr": "Deux POUSSIÈRES ÉTOILE. Regarde\\nautour des reflets !"
  },
  "AshenMine_Text_Quest0_NoRoomT": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+  "fr": "Ton SAC est plein ! Fais de la\\nplace et reviens me voir."
  },
  "AshenMine_Text_ReturnAsk": {
   "en": "Ready to go back to the dock?",
-  "fr": "Prêt à retourner au port ?"
+  "fr": "On retourne au port ?"
  },
  "AshenMine_Text_Stay": {
   "en": "Take your time. The tide can wait.",
-  "fr": "Prends ton temps. La marée peut\\nattendre."
+  "fr": "Prends ton temps, la marée\\nattendra !"
  }
 }

@@ -1,18 +1,18 @@
 {
  "BoneyardRise_Text_Npc0": {
   "en": "CUBONE wears its mother skull.\\nRespect.",
-  "fr": "OSSELAIT porte le crâne de sa mère.\\nRespecte ses souffrances."
+  "fr": "OSSELAIT porte le crâne de sa mère.\\nRespecte sa peine, d'accord ?"
  },
  "BoneyardRise_Text_Npc1": {
   "en": "Do not take a bone. They remember.",
-  "fr": "Ne prends pas d'os. Ils se\\nsouviennent."
+  "fr": "Touche pas aux os ! Ils se\\nsouviennent."
  },
  "BoneyardRise_Text_ReturnAsk": {
   "en": "Ready to go back to the dock?",
-  "fr": "Prêt à retourner au port ?"
+  "fr": "On retourne au port ?"
  },
  "BoneyardRise_Text_Stay": {
   "en": "Take your time. The tide can wait.",
-  "fr": "Prends ton temps. La marée peut\\nattendre."
+  "fr": "Prends ton temps, la marée\\nattendra !"
  }
 }

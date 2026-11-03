@@ -5,7 +5,7 @@
  },
  "SevenIsland_House_Room1_Text_ChallengeVisitingTrainer": {
   "en": "Ah!\\nWelcome, my friend!\\pLet me tell you something. There's\\na hidden room in the basement.\\pA TRAINER named {STR_VAR_1} is\\nwaiting there now.\\pTell me, you did come to challenge\\n{STR_VAR_1}, am I right?",
-  "fr": "Ah ! Bienvenue, mon ami !\\pLaisse-moi te dire quelque chose.\\nIl y a une salle cachée au\\lsous-sol.\\pUn DRESSEUR nommé {STR_VAR_1} y attend\\nen ce moment.\\pDis-moi, tu es bien venu défier\\n{STR_VAR_1}, n'est-ce pas ?"
+  "fr": "Ah ! Bienvenue, mon ami !\\pLaisse-moi te dire quelque chose.\\nIl y a une salle cachée au\\lsous-sol.\\pUn DRESSEUR nommé {STR_VAR_1} y attend\\nen ce moment.\\pDis-moi, tu es bien venu défier\\n{STR_VAR_1}, pas vrai ?"
  },
  "SevenIsland_House_Room1_Text_DontHoldAnythingBack": {
   "en": "All right.\\nDon't hold anything back!",

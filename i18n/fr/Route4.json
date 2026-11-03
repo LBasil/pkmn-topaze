@@ -17,7 +17,7 @@
  },
  "Route4_Text_PeopleLikeAndRespectBrock": {
   "en": "Oh, wow, that's the PYROPE BADGE!\\nYou got it from KAY, didn't you?\\pKAY is cool. She's not just tough.\\nPeople like and respect her.\\pI want to become a GYM LEADER\\nlike her.",
-  "fr": "Oh, wow, c'est le BADGE PYROPE ! Tu\\nl'as eu de KAY, n'est-ce pas ?\\pKAY est cool. Elle n'est pas que\\nforte. Les gens l'aiment et la\\lrespectent.\\pJe veux devenir CHAMPION comme\\nelle."
+  "fr": "Oh, wow, c'est le BADGE PYROPE ! Tu\\nl'as eu de KAY, pas vrai ?\\pKAY est cool. Elle n'est pas que\\nforte. Les gens l'aiment et la\\lrespectent.\\pJe veux devenir CHAMPION comme\\nelle."
  },
  "Route4_Text_RQuest_Ask": {
   "en": "I got lost in the cave. One ESCAPE\\nROPE would save me.",
@@ -29,7 +29,7 @@
  },
  "Route4_Text_RQuest_NoRoom": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+  "fr": "Ton SAC est plein ! Fais de la\\nplace et reviens me voir."
  },
  "Route4_Text_RQuest_Ok": {
   "en": "Saved! Take this, I found it down\\nthere.",

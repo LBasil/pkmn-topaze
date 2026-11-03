@@ -57,7 +57,7 @@
  },
  "Route8_Text_Echo_NoRoom": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+  "fr": "Ton SAC est plein ! Fais de la\\nplace et reviens me voir."
  },
  "Route8_Text_Echo_Win": {
   "en": "Take these. I owe them to you. I\\nthink.",
@@ -169,7 +169,7 @@
  },
  "Route8_Text_RQuest_NoRoom": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+  "fr": "Ton SAC est plein ! Fais de la\\nplace et reviens me voir."
  },
  "Route8_Text_RQuest_Ok": {
   "en": "They are up! Take these.",

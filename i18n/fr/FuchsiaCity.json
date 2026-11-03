@@ -409,7 +409,7 @@
  },
  "FuchsiaCity_Text_Ferry_Ask2": {
   "en": "A village where today never ends?\\nDo you want to go?",
-  "fr": "Un village où aujourd'hui ne finit\\njamais ? Veux-tu y aller ?"
+  "fr": "Un village où aujourd'hui ne finit\\njamais ? Tu veux y aller ?"
  },
  "FuchsiaCity_Text_Ferry_Ask3": {
   "en": "The BOTTOMLESS CAVE? Every time you\\ngo down, the floor count changes.\\pBrave enough?",
@@ -993,7 +993,7 @@
  },
  "FuchsiaCity_Text_TQ_NoRoom": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+  "fr": "Ton SAC est plein ! Fais de la\\nplace et reviens me voir."
  },
  "FuchsiaCity_Text_TQ_Ok": {
   "en": "Delicious! Here is your charcoal.",

@@ -21,11 +21,11 @@
  },
  "DockCafe_Text_ReturnAsk": {
   "en": "Ready to go back to the dock?",
-  "fr": "Prêt à retourner au port ?"
+  "fr": "On retourne au port ?"
  },
  "DockCafe_Text_ShopBye": {
   "en": "Come back any time.",
-  "fr": "Reviens quand tu veux."
+  "fr": "Reviens quand tu veux !"
  },
  "DockCafe_Text_ShopHi": {
   "en": "Welcome. Take a look around.",
@@ -33,6 +33,6 @@
  },
  "DockCafe_Text_Stay": {
   "en": "Take your time. The tide can wait.",
-  "fr": "Prends ton temps. La marée peut\\nattendre."
+  "fr": "Prends ton temps, la marée\\nattendra !"
  }
 }

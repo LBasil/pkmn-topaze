@@ -41,50 +41,50 @@
  },
  "BabyNursery_Text_Nothing": {
   "en": "Nothing for you right now. Come\\nback with more.",
-  "fr": "Rien pour toi pour l'instant.\\nReviens avec plus."
+  "fr": "J'ai rien pour toi pour l'instant.\\nReviens quand t'en auras plus !"
  },
  "BabyNursery_Text_O0": {
   "en": "A PICHU, shy and sparkling. Adopt\\nit?",
-  "fr": "Un PICHU, timide et tout mignon.\\nAs-tu un coup de foudre ?"
+  "fr": "Un PICHU, timide et tout mignon !\\nC'est le coup de foudre ?"
  },
  "BabyNursery_Text_O1": {
   "en": "A CLEFFA fell from the stars. Adopt\\nit?",
-  "fr": "Un MÉLO tombé des étoiles.\\nTu souhaites l'adopter ?"
+  "fr": "Un MÉLO tombé des étoiles !\\nTu veux l'adopter ?"
  },
  "BabyNursery_Text_O2": {
   "en": "An IGGLYBUFF, soft as a cloud.\\nAdopt it?",
-  "fr": "Un TOUDOUDOU, doux comme un nuage.\\nL'adopter ?"
+  "fr": "Un TOUDOUDOU, doux comme un nuage !\\nTu veux l'adopter ?"
  },
  "BabyNursery_Text_O3": {
   "en": "An AZURILL, bouncy and blue. Adopt\\nit?",
-  "fr": "Un AZURILL, rebondissant et bleu.\\nL'adopter ?"
+  "fr": "Un AZURILL, tout bleu et plein de\\nrebonds ! Tu veux l'adopter ?"
  },
  "BabyNursery_Text_O4": {
   "en": "A SMOOCHUM, always ready for a\\nkiss. Adopt it?",
-  "fr": "Un LIPPOUTI, toujours prêt pour un\\nbisou. L'adopter ?"
+  "fr": "Un LIPPOUTI, toujours prêt pour un\\nbisou ! Tu veux l'adopter ?"
  },
  "BabyNursery_Text_O5": {
   "en": "An ELEKID, full of sparks. Adopt\\nit?",
-  "fr": "Un ÉLEKID, plein d'étincelles.\\nL'adopter ?"
+  "fr": "Un ÉLEKID, plein d'étincelles !\\nTu veux l'adopter ?"
  },
  "BabyNursery_Text_O6": {
   "en": "A MAGBY, warm and curious. Adopt\\nit?",
-  "fr": "Un MAGBY, chaud et curieux.\\nL'adopter ?"
+  "fr": "Un MAGBY, chaud et curieux !\\nTu veux l'adopter ?"
  },
  "BabyNursery_Text_O7": {
   "en": "A TYROGUE, ready to brawl. Adopt\\nit?",
-  "fr": "Un DÉBUGANT, prêt à se battre.\\nL'adopter ?"
+  "fr": "Un DÉBUGANT, prêt à se battre !\\nTu veux l'adopter ?"
  },
  "BabyNursery_Text_O8": {
   "en": "A WYNAUT, always smiling. Adopt it?",
-  "fr": "Un OKÉOKÉ, toujours souriant.\\nL'adopter ?"
+  "fr": "Un OKÉOKÉ, toujours souriant !\\nTu veux l'adopter ?"
  },
  "BabyNursery_Text_ReturnAsk": {
   "en": "Ready to go back to the dock?",
-  "fr": "Prêt à retourner au port ?"
+  "fr": "On retourne au port ?"
  },
  "BabyNursery_Text_Stay": {
   "en": "Take your time. The tide can wait.",
-  "fr": "Prends ton temps. La marée peut\\nattendre."
+  "fr": "Prends ton temps, la marée\\nattendra !"
  }
 }

@@ -65,7 +65,7 @@
  },
  "Route3_Text_JaniceIntro": {
   "en": "Excuse me!\\nYou looked at me, didn't you?",
-  "fr": "Excuse-moi !\\nTu m'as regardé, n'est-ce pas ?"
+  "fr": "Excuse-moi !\\nTu m'as regardé, pas vrai ?"
  },
  "Route3_Text_JanicePostBattle": {
   "en": "You shouldn't be staring if you\\ndon't want to battle!",
@@ -105,7 +105,7 @@
  },
  "Route3_Text_RQuest_NoRoom": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+  "fr": "Ton SAC est plein ! Fais de la\\nplace et reviens me voir."
  },
  "Route3_Text_RQuest_Ok": {
   "en": "Wonderful! A little thank you.",

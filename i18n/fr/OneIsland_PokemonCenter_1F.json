@@ -53,7 +53,7 @@
  },
  "OneIsland_PokemonCenter_1F_Text_BillsHometownInGoldenrod": {
   "en": "By the way, {PLAYER}, you're from\\nGRENALUX, aren't you?\\pI've heard that it's a quiet and\\npleasant place.\\pBILL's hometown is GOLDENROD CITY,\\nwhere his folks still live.\\pI've heard that it's quite the\\nfestive, bustling city.\\pI'd like to go there one day.",
-  "fr": "Au fait, {PLAYER}, tu viens de\\nGRENALUX, n'est-ce pas ?\\pJ'ai entendu dire que c'est un\\nendroit calme et agréable.\\pLa ville natale de LÉO est\\nGOLDENROD CITY, où vivent encore\\lses parents.\\pJ'ai entendu dire que c'est une\\nville festive et animée.\\pJ'aimerais y aller un jour."
+  "fr": "Au fait, {PLAYER}, tu viens de\\nGRENALUX, pas vrai ?\\pJ'ai entendu dire que c'est un\\nendroit calme et agréable.\\pLa ville natale de LÉO est\\nGOLDENROD CITY, où vivent encore\\lses parents.\\pJ'ai entendu dire que c'est une\\nville festive et animée.\\pJ'aimerais y aller un jour."
  },
  "OneIsland_PokemonCenter_1F_Text_CameFromPalletDontKnowIt": {
   "en": "Oh, you're a stranger here!\\nHi! Where did you come from?\\p…GRENALUX?\\nI don't know it!",

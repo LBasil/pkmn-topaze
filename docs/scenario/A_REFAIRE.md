@@ -372,3 +372,5 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - 03-11 16h53 : FR — 1131 dialogues repris de la VF officielle de Rouge Feu (voir docs/scenario/COMPARAISON_FR_OFFICIEL.md) ; Daisy = NINA ; accents des majuscules officielles restaurés.
 
 - 03-11 17h19 : FR — passage complet sur la VF officielle : 8 dialogues, 370 chaînes système/.inc (phrases complètes) repris de Rouge Feu ; fragments et noms localisés exclus.
+
+- 03-11 17h47 : FR — réécriture ton officiel des textes Topaze (≈470 entrées : formules répétées, tutoiement, inversions « Veux-tu » → « Tu veux », etc.).

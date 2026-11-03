@@ -177,7 +177,7 @@
  },
  "PokemonLeague_LoreleisRoom_Text_Interlude1": {
   "en": "BROCK: Four of us have fallen.\\nThe others watch from the hall.\\pMISTY: Do you know why we\\ngathered? Years ago the AURA first\\ltwisted the TYPES of POKéMON.\\pERIKA: The GYMS noticed first.\\nThe LEAGUE called it a rumor.\\pSURGE: Rumors do not wake a whole\\nregion. Something is calling.\\pTake these, CHAMPION. You will need\\nthem more than we do.",
-  "fr": "PIERRE : Quatre d'entre nous sont\\ntombés. Les autres regardent depuis\\lla salle.\\pMISTY : Sais-tu pourquoi nous nous\\nsommes réunis ? Il y a des années\\ll'AURA a d'abord tordu les TYPES\\ndes POKéMON.\\pERIKA : Les ARÈNES l'ont remarqué\\nen premier. La LIGUE y a vu une\\lrumeur.\\pSURGE : Les rumeurs ne réveillent\\npas toute une région. Quelque chose\\lappelle.\\pPrends ça, CHAMPION. Tu en auras\\nplus besoin que nous."
+  "fr": "PIERRE : Quatre d'entre nous sont\\ntombés. Les autres regardent depuis\\lla salle.\\pMISTY : Tu sais pourquoi nous nous\\nsommes réunis ? Il y a des années\\ll'AURA a d'abord tordu les TYPES\\ndes POKéMON.\\pERIKA : Les ARÈNES l'ont remarqué\\nen premier. La LIGUE y a vu une\\lrumeur.\\pSURGE : Les rumeurs ne réveillent\\npas toute une région. Quelque chose\\lappelle.\\pPrends ça, CHAMPION. Tu en auras\\nplus besoin que nous."
  },
  "PokemonLeague_LoreleisRoom_Text_Interlude2": {
   "en": "LORELEI: Four more. Let me tell you\\nwhat I felt in the ICEFALL CAVE.\\pThe sea there remembers an echo.\\nA living memory of a POKéMON.\\pSABRINA: I have seen them too.\\nSeven echoes, scattered across the\\lSEVII ISLANDS.\\pBLAINE: Three beasts, three golems,\\nand one that travels through time.\\pGIOVANNI: Ask BILL on ONE ISLAND.\\nHe has been listening for years.\\pHere. A gift from the old guard.",
@@ -197,7 +197,7 @@
  },
  "PokemonLeague_LoreleisRoom_Text_Intro": {
   "en": "THE GRAND FINAL.\\pI am LORELEI, the ELITE FOUR's\\nfirst guard, and this year's wild\\pcard.\\pNo one outlasts me when it comes\\nto icy POKéMON.\\pThe crowd is waiting. Are you\\nready?{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
-  "fr": "LA GRANDE FINALE.\\pJe suis LORELEI, la première garde\\ndu CONSEIL 4, et la wild card\\lde cette année.\\pPersonne ne me surpasse en matière\\nde POKéMON de glace.\\pLa foule attend. Es-tu prêt ?{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
+  "fr": "LA GRANDE FINALE.\\pJe suis LORELEI, la première garde\\ndu CONSEIL 4, et la wild card\\lde cette année.\\pPersonne ne me surpasse en matière\\nde POKéMON de glace.\\pLa foule attend. T'es prêt ?{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
  },
  "PokemonLeague_LoreleisRoom_Text_NextElder": {
   "en": "Well fought!\\pThe next veteran steps forward.\\nRecover your strength.",

@@ -41,7 +41,7 @@
  },
  "Route15_Text_ChesterIntro": {
   "en": "Hmm? My birds are shivering!\\nYou're good, aren't you?",
-  "fr": "Hmm ? Mes oiseaux frissonnent !\\nTu es bon, n'est-ce pas ?"
+  "fr": "Hmm ? Mes oiseaux frissonnent !\\nTu es bon, pas vrai ?"
  },
  "Route15_Text_ChesterPostBattle": {
   "en": "This is so obvious, you should know\\nthis, but…\\pMoves like EARTHQUAKE and FISSURE\\nhave no effect on bird POKéMON.",
@@ -157,7 +157,7 @@
  },
  "Route15_Text_RQuest_NoRoom": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+  "fr": "Ton SAC est plein ! Fais de la\\nplace et reviens me voir."
  },
  "Route15_Text_RQuest_Ok": {
   "en": "You are kind. Take this treasure.",

@@ -1,22 +1,22 @@
 {
  "BattleStall_Text_Npc0": {
   "en": "Items last one battle. Use them on\\nthe boss, not on rats.",
-  "fr": "Les objets durent un combat.\\nUtilise-les sur le boss."
+  "fr": "Les objets durent un combat.\\nUtilise-les contre le boss !"
  },
  "BattleStall_Text_ReturnAsk": {
   "en": "Ready to go back to the dock?",
-  "fr": "Prêt à retourner au port ?"
+  "fr": "On retourne au port ?"
  },
  "BattleStall_Text_ShopBye": {
   "en": "Come back any time.",
-  "fr": "Reviens quand tu veux."
+  "fr": "Reviens quand tu veux !"
  },
  "BattleStall_Text_ShopHi": {
   "en": "Win before the fight begins.",
-  "fr": "Gagne avant que le combat ne\\ncommence."
+  "fr": "Gagne avant que le combat\\ncommence !"
  },
  "BattleStall_Text_Stay": {
   "en": "Take your time. The tide can wait.",
-  "fr": "Prends ton temps. La marée peut\\nattendre."
+  "fr": "Prends ton temps, la marée\\nattendra !"
  }
 }

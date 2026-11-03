@@ -33,11 +33,11 @@
  },
  "BarterHouse_Text_Hello": {
   "en": "I trade small treasures for rare\\nPOKéMON. Let us see what you carry.",
-  "fr": "J'échange de petits trésors contre\\ndes POKéMON rares.\\lVoyons ce que tu as."
+  "fr": "J'échange des petits trésors contre\\ndes POKéMON rares.\\lVoyons ce que t'as !"
  },
  "BarterHouse_Text_Nothing": {
   "en": "Nothing for you right now. Come\\nback with more.",
-  "fr": "Rien pour toi pour l'instant.\\nReviens avec plus."
+  "fr": "J'ai rien pour toi pour l'instant.\\nReviens quand t'en auras plus !"
  },
  "BarterHouse_Text_O0": {
   "en": "3 HEART SCALES for a FEEBAS. Deal?",
@@ -73,10 +73,10 @@
  },
  "BarterHouse_Text_ReturnAsk": {
   "en": "Ready to go back to the dock?",
-  "fr": "Prêt à retourner au port ?"
+  "fr": "On retourne au port ?"
  },
  "BarterHouse_Text_Stay": {
   "en": "Take your time. The tide can wait.",
-  "fr": "Prends ton temps. La marée peut\\nattendre."
+  "fr": "Prends ton temps, la marée\\nattendra !"
  }
 }

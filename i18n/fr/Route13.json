@@ -73,7 +73,7 @@
  },
  "Route13_Text_Quest4_NoRoom": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+  "fr": "Ton SAC est plein ! Fais de la\\nplace et reviens me voir."
  },
  "Route13_Text_Quest4_Ok": {
   "en": "That did it! Here, a reward.",
@@ -117,7 +117,7 @@
  },
  "Route13_Text_SheilaIntro": {
   "en": "Do you want to battle some\\nPOKéMON with me?",
-  "fr": "Veux-tu combattre quelques POKéMON\\navec moi ?"
+  "fr": "Tu veux combattre quelques POKéMON\\navec moi ?"
  },
  "Route13_Text_SheilaPostBattle": {
   "en": "Men in black were asking about a\\nPOKé FLUTE. Nobody here has one.",

@@ -149,7 +149,7 @@
  },
  "CinnabarIsland_Text_TQ_Ask": {
   "en": "I need a MAGNET for my experiment.\\nCan you spare one?",
-  "fr": "J'ai besoin d'un AIMANT pour mon\\nexpérience. Peux-tu m'en céder un ?"
+  "fr": "J'ai besoin d'un AIMANT pour mon\\nexpérience. Tu peux m'en céder un ?"
  },
  "CinnabarIsland_Text_TQ_Done": {
   "en": "The experiment is a success.",
@@ -157,7 +157,7 @@
  },
  "CinnabarIsland_Text_TQ_NoRoom": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+  "fr": "Ton SAC est plein ! Fais de la\\nplace et reviens me voir."
  },
  "CinnabarIsland_Text_TQ_Ok": {
   "en": "Fascinating! Take this ICE.",

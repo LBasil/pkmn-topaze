@@ -33,7 +33,7 @@
  },
  "SaffronCity_Text_Clock_NoRoom": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+  "fr": "Ton SAC est plein ! Fais de la\\nplace et reviens me voir."
  },
  "SaffronCity_Text_Clock_Solved": {
   "en": "3:07 stuck, hands spinning\\nbackwards, sand falling up. The\\psame stop, three times. So the\\nclock is not broken. Time is. Take\\pthis, it will help you.",
@@ -197,7 +197,7 @@
  },
  "SaffronCity_Text_TQ_NoRoom": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens."
+  "fr": "Ton SAC est plein ! Fais de la\\nplace et reviens me voir."
  },
  "SaffronCity_Text_TQ_Ok": {
   "en": "The future is clear. Take this\\npowder.",

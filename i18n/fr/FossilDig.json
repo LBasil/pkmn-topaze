@@ -9,7 +9,7 @@
  },
  "FossilDig_Text_Ghost1_Offer": {
   "en": "A ghost left this egg-shaped dream\\nbehind. Take care of a LARVITAR?",
-  "fr": "Un fantôme a laissé ce rêve en\\nforme d'œuf. Veux-tu t'occuper d'un\\lEMBRYLEX ?"
+  "fr": "Un fantôme a laissé ce rêve en\\nforme d'œuf. Tu veux t'occuper d'un\\lEMBRYLEX ?"
  },
  "FossilDig_Text_Ghost1_Refuse": {
   "en": "Then I will wait a little longer.",
@@ -25,7 +25,7 @@
  },
  "FossilDig_Text_Ghost2_Offer": {
   "en": "A ghost left this egg-shaped dream\\nbehind. Take care of a DRATINI?",
-  "fr": "Un fantôme a laissé ce rêve en\\nforme d'œuf. Veux-tu t'occuper d'un\\lMINIDRACO ?"
+  "fr": "Un fantôme a laissé ce rêve en\\nforme d'œuf. Tu veux t'occuper d'un\\lMINIDRACO ?"
  },
  "FossilDig_Text_Ghost2_Refuse": {
   "en": "Then I will wait a little longer.",
@@ -41,7 +41,7 @@
  },
  "FossilDig_Text_Ghost3_Offer": {
   "en": "A ghost left this egg-shaped dream\\nbehind. Take care of a BAGON?",
-  "fr": "Un fantôme a laissé ce rêve en\\nforme d'œuf. Veux-tu t'occuper d'un\\lDRABY ?"
+  "fr": "Un fantôme a laissé ce rêve en\\nforme d'œuf. Tu veux t'occuper d'un\\lDRABY ?"
  },
  "FossilDig_Text_Ghost3_Refuse": {
   "en": "Then I will wait a little longer.",
@@ -57,7 +57,7 @@
  },
  "FossilDig_Text_Ghost4_Offer": {
   "en": "A ghost left this egg-shaped dream\\nbehind. Take care of a BELDUM?",
-  "fr": "Un fantôme a laissé ce rêve en\\nforme d'œuf. Veux-tu t'occuper d'un\\lTERHAL ?"
+  "fr": "Un fantôme a laissé ce rêve en\\nforme d'œuf. Tu veux t'occuper d'un\\lTERHAL ?"
  },
  "FossilDig_Text_Ghost4_Refuse": {
   "en": "Then I will wait a little longer.",
@@ -69,10 +69,10 @@
  },
  "FossilDig_Text_ReturnAsk": {
   "en": "Ready to go back to the dock?",
-  "fr": "Prêt à retourner au port ?"
+  "fr": "On retourne au port ?"
  },
  "FossilDig_Text_Stay": {
   "en": "Take your time. The tide can wait.",
-  "fr": "Prends ton temps. La marée peut\\nattendre."
+  "fr": "Prends ton temps, la marée\\nattendra !"
  }
 }
