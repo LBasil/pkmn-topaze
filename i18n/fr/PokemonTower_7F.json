@@ -5,7 +5,7 @@
  },
  "PokemonTower_7F_Text_AdminThanks": {
   "en": "KRONOS: Well, well. Thank you,\\nchild. You calmed the dead for us.\\pWe could never get past them. Now\\nthe SPINEL is ours for the taking.\\pDo not bother with your POKé BALLS.\\nYou are far below my notice.",
-  "fr": "KRONOS : Tiens, tiens. Merci. Tu as\\ncalmé les morts pour nous.\\pNous n'avons jamais pu les\\ndépasser. Maintenant le SPINEL est\\là prendre.\\pInutile de sortir tes POKé BALLS.\\nTu es bien en dessous de mon\\lattention."
+  "fr": "KRONOS : Tiens, tiens. Merci. T'as\\ncalmé les morts pour nous.\\pNous n'avons jamais pu les\\ndépasser. Maintenant le SPINEL est\\là prendre.\\pInutile de sortir tes POKé BALLS.\\nTu es bien en dessous de mon\\lattention."
  },
  "PokemonTower_7F_Text_FujiHeals": {
   "en": "MR. FUJI: Your POKéMON are weak.\\nRest them here, child.\\p...They are well again. Do not\\nblame yourself. Go, and be careful.",
@@ -41,7 +41,7 @@
  },
  "PokemonTower_7F_Text_Grunt3Intro": {
   "en": "You're not saving anyone, kid!",
-  "fr": "Tu ne sauves personne, petit !"
+  "fr": "Tu sauves personne, petit !"
  },
  "PokemonTower_7F_Text_Grunt3PostBattle": {
   "en": "You're not getting away with this!",

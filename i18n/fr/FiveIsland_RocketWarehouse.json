@@ -5,7 +5,7 @@
  },
  "FiveIsland_RocketWarehouse_Text_Admin1Intro": {
   "en": "I don't know or care if what I'm\\ndoing is right or wrong…\\pI just put my faith in GIOVANNI\\nand do as I am told.",
-  "fr": "Je ne sais pas ni ne me soucie de\\nsavoir si ce que je fais est bien…\\pJ'ai juste foi en GIOVANNI et je\\nfais ce qu'on me dit."
+  "fr": "Je sais pas et je m'en fiche de\\nsavoir si ce que je fais est bien…\\pJ'ai juste foi en GIOVANNI et je\\nfais ce qu'on me dit."
  },
  "FiveIsland_RocketWarehouse_Text_Admin1PostBattle": {
   "en": "You're doing things according to\\nyour beliefs and morals.\\pI understand now…",
@@ -13,11 +13,11 @@
  },
  "FiveIsland_RocketWarehouse_Text_Admin2Defeat": {
   "en": "Urgh…\\nYou were too strong…\\p…\\nTh-that's a CHAMPION's crest!\\pSo it's true?\\nTEAM ROCKET really has disbanded?",
-  "fr": "Argh…\\nTu étais trop fort…\\p…\\nC-c'est l'emblème d'un CHAMPION !\\pDonc c'est vrai ? La TEAM ROCKET\\ns'est vraiment dissoute ?"
+  "fr": "Argh…\\nT'étais trop fort…\\p…\\nC-c'est l'emblème d'un CHAMPION !\\pDonc c'est vrai ? La TEAM ROCKET\\ns'est vraiment dissoute ?"
  },
  "FiveIsland_RocketWarehouse_Text_Admin2Intro": {
   "en": "That's quite enough of you \\nplaying the hero, kid.\\pSpreading lies about how TEAM\\nROCKET has disbanded…\\pIt's such an obvious attempt to\\ncause confusion in our ranks.\\pFortunately, we're not so ignorant\\nto fall for the lies of a child!\\pAnd now, I'll show you how scary\\nan angry adult can be!",
-  "fr": "Ça suffit, de jouer au héros.\\pRépandre des mensonges sur la\\ndissolution de la TEAM ROCKET…\\pC'est une tentative évidente de\\nsemer la confusion dans nos rangs.\\pHeureusement, nous ne sommes pas\\nassez ignorants pour croire les\\lmensonges d'un enfant !\\pEt maintenant, je vais te montrer à\\nquel point un adulte en colère fait\\lpeur !"
+  "fr": "Ça suffit, de jouer au héros.\\pRépandre des mensonges sur la\\ndissolution de la TEAM ROCKET…\\pC'est une tentative évidente de\\nsemer la confusion dans nos rangs.\\pHeureusement, on est pas\\nassez bêtes pour croire les\\lmensonges d'un gamin !\\pEt maintenant, je vais te montrer à\\nquel point un adulte en colère fait\\lpeur !"
  },
  "FiveIsland_RocketWarehouse_Text_Admin2PostBattle": {
   "en": "We will abandon this WAREHOUSE…\\pBut don't think this is over.\\nI won't let this be the end.\\pI will find GIOVANNI.\\nAnd I will resurrect TEAM ROCKET!\\lI will…\\pUntil then, farewell!",
@@ -33,7 +33,7 @@
  },
  "FiveIsland_RocketWarehouse_Text_GideonIntro": {
   "en": "I almost managed to sell the\\nSAPPHIRE for huge money…\\pThen, you just had to come along\\nand blow the whole deal apart!\\pFufu… Fufufufu…\\nThere's no forgiveness for you!",
-  "fr": "J'avais presque réussi à vendre le\\nSAPHIR pour une fortune…\\pEt tu as fallu que tu arrives et\\nque tu fasses tout capoter !\\pFufu… Fufufufu…\\nIl n'y a pas de pardon pour toi !"
+  "fr": "J'avais presque réussi à vendre le\\nSAPHIR pour une fortune…\\pEt fallait que tu arrives et\\nque tu fasses tout capoter !\\pFufu… Fufufufu…\\nIl y a pas de pardon pour toi !"
  },
  "FiveIsland_RocketWarehouse_Text_GideonPostBattle": {
   "en": "If I can't sell it, it's worthless!\\nGo ahead, take it!",
@@ -61,7 +61,7 @@
  },
  "FiveIsland_RocketWarehouse_Text_Grunt2Intro": {
   "en": "Did you come here knowing it's\\nTEAM ROCKET's WAREHOUSE?",
-  "fr": "Viens-tu ici en sachant que c'est\\nl'ENTREPÔT de la TEAM ROCKET ?"
+  "fr": "Tu viens ici en sachant que c'est\\nl'ENTREPÔT de la TEAM ROCKET ?"
  },
  "FiveIsland_RocketWarehouse_Text_Grunt2PostBattle": {
   "en": "TEAM ROCKET broke up?\\nWhat planet are you from?",
@@ -73,7 +73,7 @@
  },
  "FiveIsland_RocketWarehouse_Text_Grunt3Intro": {
   "en": "I got word about you from the\\nothers.\\pBut there's no way a kid like you'd\\nknow our BOSS GIOVANNI!",
-  "fr": "J'ai entendu parler de toi par les\\nautres.\\pMais un gamin comme toi ne peut pas\\nconnaître notre BOSS GIOVANNI !"
+  "fr": "J'ai entendu parler de toi par les\\nautres.\\pMais un gamin comme toi peut pas\\nconnaître notre BOSS GIOVANNI !"
  },
  "FiveIsland_RocketWarehouse_Text_Grunt3PostBattle": {
   "en": "Don't mess in the doings of adults,\\nyou jumped-up pip-squeak!",

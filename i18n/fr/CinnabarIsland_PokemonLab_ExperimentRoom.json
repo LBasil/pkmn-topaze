@@ -17,7 +17,7 @@
  },
  "CinnabarIsland_PokemonLab_ExperimentRoom_Text_GarettQuestNo": {
   "en": "None of your POKéMON has reached\\nlevel 60 yet.",
-  "fr": "Aucun de tes POKéMON n'a encore\\natteint le niveau 60."
+  "fr": "Aucun de tes POKéMON a encore\\natteint le niveau 60."
  },
  "CinnabarIsland_PokemonLab_ExperimentRoom_Text_GarettQuestOk": {
   "en": "Remarkable power!\\nTake this PP MAX.",
@@ -61,7 +61,7 @@
  },
  "Text_MetronomeTaught": {
   "en": "Tch-tch-tch!\\nThat's the sound of a METRONOME.\\pIt tweaks your POKéMON's brain into\\nusing moves it doesn't even know.",
-  "fr": "Tch-tch-tch ! C'est le son d'un\\nMETRONOME.\\pIl chamboule le cerveau de ton\\nPOKéMON pour utiliser des capacités\\lqu'il ne connaît même pas."
+  "fr": "Tch-tch-tch ! C'est le bruit d'un\\nMETRONOME.\\pIl chamboule le cerveau de ton\\nPOKéMON pour qu'il utilise des\\lcapacités qu'il connaît même pas."
  },
  "Text_MetronomeTeach": {
   "en": "Tch-tch-tch!\\nI'll teach you a nifty move.\\pTeach it to a POKéMON, and watch\\nthe fun unfold!\\pIt's a move called METRONOME.\\nDoes it strike your fancy?",

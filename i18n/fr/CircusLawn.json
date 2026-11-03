@@ -1,7 +1,7 @@
 {
  "CircusLawn_Text_Npc0": {
   "en": "MR. MIME builds invisible walls. It\\nis quite the act.",
-  "fr": "M. MIME construit des murs\\ninvisibles. Quel spectacle."
+  "fr": "M. MIME construit des murs\\ninvisibles. Quel spectacle !"
  },
  "CircusLawn_Text_Npc1": {
   "en": "RALTS feels everything you feel.",
@@ -21,7 +21,7 @@
  },
  "CircusLawn_Text_Quest0_MissT": {
   "en": "Two GREAT BALLs, please.",
-  "fr": "Deux SUPER BALLS, s'il vous plaît."
+  "fr": "Deux SUPER BALLS, s'il te plaît."
  },
  "CircusLawn_Text_Quest0_NoRoomT": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
@@ -37,6 +37,6 @@
  },
  "CircusLawn_Text_TopazeFindFull": {
   "en": "Something shines here, but your BAG\\nis full.",
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
+  "fr": "Y a un truc qui brille ici, mais\\nton SAC est plein."
  }
 }

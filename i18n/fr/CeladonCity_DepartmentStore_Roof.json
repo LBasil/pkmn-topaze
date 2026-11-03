@@ -1,7 +1,7 @@
 {
  "CeladonCity_DepartmentStore_Roof_Text_DontHaveSpaceForThis": {
   "en": "You don't have space for this!",
-  "fr": "Tu n'as pas de place pour ça !"
+  "fr": "T'as pas de place pour ça !"
  },
  "CeladonCity_DepartmentStore_Roof_Text_DrinkCanPoppedOut": {
   "en": "A can of {STR_VAR_1} popped out!",
@@ -33,7 +33,7 @@
  },
  "CeladonCity_DepartmentStore_Roof_Text_ImThirstyGiveHerDrink": {
   "en": "I'm thirsty!\\nI want something to drink!\\p{FONT_NORMAL}Give her a drink?",
-  "fr": "J'ai soif !\\nJe veux quelque chose à boire !\\p{FONT_NORMAL}Lui donner à boire ?"
+  "fr": "J'ai soif !\\nJe veux quelque chose à boire !\\p{FONT_NORMAL}On lui donne à boire ?"
  },
  "CeladonCity_DepartmentStore_Roof_Text_ImThirstyIWantDrink": {
   "en": "I'm thirsty!\\nI want something to drink!",

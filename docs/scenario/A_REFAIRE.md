@@ -374,3 +374,6 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - 03-11 17h19 : FR — passage complet sur la VF officielle : 8 dialogues, 370 chaînes système/.inc (phrases complètes) repris de Rouge Feu ; fragments et noms localisés exclus.
 
 - 03-11 17h47 : FR — réécriture ton officiel des textes Topaze (≈470 entrées : formules répétées, tutoiement, inversions « Veux-tu » → « Tu veux », etc.).
+
+## 03-11 — Réécriture ton officiel (suite)
+Lots 0–1750 relus à la main, passes regex (suppression de "ne" après pronom sujet avec négation) sur les ~4300 textes originaux. Reste à relire à la main : ~1750–4312.

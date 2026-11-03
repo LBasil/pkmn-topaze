@@ -21,7 +21,7 @@
  },
  "MirrorPond_Text_Quest0_MissT": {
   "en": "One WATER STONE, please.",
-  "fr": "Une PIERRE EAU, s'il vous plaît."
+  "fr": "Une PIERRE EAU, s'il te plaît."
  },
  "MirrorPond_Text_Quest0_NoRoomT": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
@@ -37,6 +37,6 @@
  },
  "MirrorPond_Text_TopazeFindFull": {
   "en": "Something shines here, but your BAG\\nis full.",
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
+  "fr": "Y a un truc qui brille ici, mais\\nton SAC est plein."
  }
 }

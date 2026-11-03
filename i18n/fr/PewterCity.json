@@ -5,11 +5,11 @@
  },
  "PewterCity_Text_BrockOnlySeriousTrainerHere": {
   "en": "There aren't many serious POKéMON\\nTRAINERS here.\\pThey're all like BUG CATCHERS,\\nyou know, just hobbyists.\\pBut PYROPIA GYM's KAY isn't like\\nthat, not one bit.",
-  "fr": "Il n'y a pas beaucoup de sérieux\\nDRESSEURS POKéMON ici.\\pCe sont tous comme des CHASSEURS\\nD'INSECTES, tu sais, de simples\\lamateurs.\\pMais KAY de l'ARÈNE DE PYROPIA\\nn'est pas comme ça, pas du tout."
+  "fr": "Il y a pas beaucoup de sérieux\\nDRESSEURS POKéMON ici.\\pCe sont tous comme des CHASSEURS\\nD'INSECTES, tu sais, de simples\\lamateurs.\\pMais KAY de l'ARÈNE DE PYROPIA\\nn'est pas comme ça, pas du tout."
  },
  "PewterCity_Text_BrocksLookingForChallengersFollowMe": {
   "en": "You're a TRAINER, right?\\pKAY is looking for new\\nchallengers. Follow me!",
-  "fr": "Tu es DRESSEUR, non ?\\pKAY cherche de nouveaux\\nchallengers. Suis-moi !"
+  "fr": "T'es DRESSEUR, non ?\\pKAY cherche de nouveaux\\nchallengers. Suis-moi !"
  },
  "PewterCity_Text_CallPoliceIfInfoOnThieves": {
   "en": "NOTICE!\\pThe PYROPE gem was stolen from the\\nMUSEUM by TEAM ONYBRIS.\\pPlease call the PYROPIA POLICE if\\nyou have any information.",
@@ -17,7 +17,7 @@
  },
  "PewterCity_Text_Camper": {
   "en": "I came to see the volcano.\\pNow I can't stop looking at the\\nlava lake. It's hypnotic.",
-  "fr": "Je suis venu voir le volcan.\\pMaintenant je ne peux plus quitter\\ndes yeux le lac de lave. C'est\\lhypnotique."
+  "fr": "Je suis venu voir le volcan.\\pMaintenant je peux plus quitter\\ndes yeux le lac de lave. C'est\\lhypnotique."
  },
  "PewterCity_Text_CitySign": {
   "en": "PYROPIA\\nCity at the Foot of the Volcano",
@@ -41,7 +41,7 @@
  },
  "PewterCity_Text_GoTakeOnBrock": {
   "en": "If you have the right stuff,\\ngo take on KAY!",
-  "fr": "Si tu as ce qu'il faut, va défier\\nKAY !"
+  "fr": "Si t'as ce qu'il faut, va défier\\nKAY !"
  },
  "PewterCity_Text_Grandma": {
   "en": "Careful near the CAIRN.\\nThe flame there has never gone\\lout, not once.",
@@ -101,7 +101,7 @@
  },
  "PewterCity_Text_RefGives": {
   "en": "CLEO: You saved the day. The post\\nhas a gift for you: DRATINI!",
-  "fr": "CLEO : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\pMINIDRACO !"
+  "fr": "CLEO : T'as sauvé la mise. Le\\nposte a un cadeau pour toi :\\pMINIDRACO !"
  },
  "PewterCity_Text_RefIdle": {
   "en": "CLEO: I watch over the animals here.\\nThe world is quieter now.",

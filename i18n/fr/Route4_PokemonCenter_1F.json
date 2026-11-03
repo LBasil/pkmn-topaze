@@ -5,7 +5,7 @@
  },
  "Route4_PokemonCenter_1F_Text_IDontGiveRefunds": {
   "en": "MAN: Well, I don't give refunds.\\nYou knew what you were getting!",
-  "fr": "HOMME : Eh bien, je ne rembourse\\npas. Tu savais ce que tu achetais !"
+  "fr": "HOMME : Eh bien, je rembourse\\npas. Tu savais ce que tu achetais !"
  },
  "Route4_PokemonCenter_1F_Text_ItsANewspaper": {
   "en": "It's a newspaper.",
@@ -17,7 +17,7 @@
  },
  "Route4_PokemonCenter_1F_Text_NoRoomForMorePokemon": {
   "en": "There's no more room for any more\\nPOKéMON, it looks like.",
-  "fr": "Il n'y a plus de place pour\\nd'autres POKéMON, on dirait."
+  "fr": "Il y a plus de place pour\\nd'autres POKéMON, on dirait."
  },
  "Route4_PokemonCenter_1F_Text_OnlyDoingThisAsFavorToYou": {
   "en": "No? You say no? I'm only doing this\\nas a favor to you!",

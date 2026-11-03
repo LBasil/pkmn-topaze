@@ -9,7 +9,7 @@
  },
  "FuchsiaCity_SafariZone_Entrance_Text_ExplainSafariZone": {
   "en": "The SAFARI ZONE actually has\\nfour zones in it.\\pEach zone has different kinds of\\nPOKéMON, even some rare ones.\\pUse the supplied SAFARI BALLS to\\ncatch them.\\pYou can also throw BAIT or ROCKS\\nbesides the SAFARI BALLS.\\pIf you throw BAIT, the POKéMON\\nbecomes less likely to flee, but\\lharder to catch.\\pIf you throw ROCKS, the POKéMON\\nbecomes more likely to flee, but\\leasier to catch.\\pWhen you run out of time or SAFARI\\nBALLS, it's game over for you!",
-  "fr": "Le PARC SAFARI compte en fait\\nquatre zones.\\pChaque zone abrite différents\\nPOKéMON, même des rares.\\pUtilise les SAFARI BALLS fournies\\npour les capturer.\\pTu peux aussi lancer des APPÂTS ou\\ndes CAILLOUX en plus des SAFARI\\lBALLS.\\pSi tu lances un APPÂT, le POKéMON\\nfuit moins, mais est plus dur à\\lcapturer.\\pSi tu lances des CAILLOUX, le\\nPOKéMON fuit plus, mais est plus\\lfacile à capturer.\\pQuand tu n'as plus de temps ou de\\nSAFARI BALLS, c'est la fin du jeu !"
+  "fr": "Le PARC SAFARI compte en fait\\nquatre zones.\\pChaque zone abrite différents\\nPOKéMON, même des rares.\\pUtilise les SAFARI BALLS fournies\\npour les capturer.\\pTu peux aussi lancer des APPÂTS ou\\ndes CAILLOUX en plus des SAFARI\\lBALLS.\\pSi tu lances un APPÂT, le POKéMON\\nfuit moins, mais est plus dur à\\lcapturer.\\pSi tu lances des CAILLOUX, le\\nPOKéMON fuit plus, mais est plus\\lfacile à capturer.\\pQuand t'as plus de temps ou de\\nSAFARI BALLS, c'est la fin du jeu !"
  },
  "FuchsiaCity_SafariZone_Entrance_Text_FirstTimeAtSafariZone": {
   "en": "Hi! Is it your first time here at\\nthe SAFARI ZONE?",
@@ -29,7 +29,7 @@
  },
  "FuchsiaCity_SafariZone_Entrance_Text_KeeperCount": {
   "en": "KEEPER: Let me see... You have\\ncaught {STR_VAR_1} different species.",
-  "fr": "GARDIEN : Voyons… Tu as capturé\\n{STR_VAR_1} espèces différentes."
+  "fr": "GARDIEN : Voyons… T'as capturé\\n{STR_VAR_1} espèces différentes."
  },
  "FuchsiaCity_SafariZone_Entrance_Text_KeeperHello": {
   "en": "KEEPER: Welcome to the REFUGE.\\nSince the BALLS vanished, rare\\lPOKéMON hide in the park.\\pI keep a record of every species\\nyou have befriended.",
@@ -177,7 +177,7 @@
  },
  "FuchsiaCity_SafariZone_Entrance_Text_SorryYoureARegularHere": {
   "en": "Sorry, you're a regular here!",
-  "fr": "Désolé, tu es un habitué !"
+  "fr": "Désolé, t'es un habitué !"
  },
  "FuchsiaCity_SafariZone_Entrance_Text_ThatllBe500WeOnlyUseSpecialBalls": {
   "en": "That'll be ¥500, please!\\pWe only use a special kind of \\nPOKé BALLS here.",

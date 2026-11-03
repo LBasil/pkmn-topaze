@@ -1,7 +1,7 @@
 {
  "DrowsyDown_Text_Npc0": {
   "en": "Nap here and nothing bothers you.\\nAlmost nothing.",
-  "fr": "Fais une sieste ici et rien ne te\\ndérange. Presque rien."
+  "fr": "Fais une sieste ici et rien te\\ndérange. Presque rien."
  },
  "DrowsyDown_Text_Npc1": {
   "en": "DROWZEE eats dreams. Keep an eye on\\nyours.",
@@ -21,7 +21,7 @@
  },
  "DrowsyDown_Text_Quest0_MissT": {
   "en": "One CHESTO BERRY, please.",
-  "fr": "Une BAIE CERIZ, s'il vous plaît."
+  "fr": "Une BAIE CERIZ, s'il te plaît."
  },
  "DrowsyDown_Text_Quest0_NoRoomT": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
@@ -37,6 +37,6 @@
  },
  "DrowsyDown_Text_TopazeFindFull": {
   "en": "Something shines here, but your BAG\\nis full.",
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
+  "fr": "Y a un truc qui brille ici, mais\\nton SAC est plein."
  }
 }

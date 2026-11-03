@@ -57,7 +57,7 @@
  },
  "Route13_Text_PerryIntro": {
   "en": "I'm not going to lose.\\nNot when the wind's blowing my way!",
-  "fr": "Je ne vais pas perdre. Pas quand le\\nvent souffle pour moi !"
+  "fr": "Je vais pas perdre. Pas quand le\\nvent souffle pour moi !"
  },
  "Route13_Text_PerryPostBattle": {
   "en": "The big sleeper on the pier is\\nolder than this whole road.",
@@ -65,7 +65,7 @@
  },
  "Route13_Text_Quest4_Ask": {
   "en": "My best fighter is out of PP. Got 2\\nETHERS for an old angler?",
-  "fr": "Mon meilleur combattant n'a plus de\\nPP. Tu as 2 ÉTHERS pour un vieux\\lpêcheur ?"
+  "fr": "Mon meilleur combattant n'a plus de\\nPP. T'as 2 ÉTHERS pour un vieux\\lpêcheur ?"
  },
  "Route13_Text_Quest4_Done": {
   "en": "The big one did not get away this\\ntime.",

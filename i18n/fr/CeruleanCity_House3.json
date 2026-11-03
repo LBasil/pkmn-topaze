@@ -5,7 +5,7 @@
  },
  "CeruleanCity_House3_Text_OldWomanGives": {
   "en": "Oh, bless you! He drinks like a\\nfish now.\\pTake this, it was a gift to him\\nfrom a trainer long ago.",
-  "fr": "Oh, merci ! Il boit comme un trou\\nmaintenant.\\pPrends ça, un dresseur le lui a\\noffert il y a longtemps."
+  "fr": "Oh, merci ! Il boit comme un trou\\nmaintenant.\\pTiens, un dresseur lui a offert ça\\nil y a longtemps."
  },
  "CeruleanCity_House3_Text_OldWomanNo": {
   "en": "Of course, of course. He will\\nmanage.",
@@ -17,7 +17,7 @@
  },
  "CeruleanCity_House3_Text_PleaseTradeWithMyHusband": {
   "en": "My husband likes trading POKéMON.\\pYou're collecting POKéMON for your\\nPOKéDEX, aren't you?\\pWould you please trade with him?",
-  "fr": "Mon mari aime échanger des POKéMON.\\pTu collectionnes des POKéMON pour\\nton POKéDEX, pas vrai ?\\pVoudrais-tu échanger avec lui ?"
+  "fr": "Mon mari aime échanger des POKéMON.\\pTu collectionnes les POKéMON pour\\nton POKéDEX, pas vrai ?\\pT'aimerais échanger avec lui ?"
  },
  "CeruleanCity_House3_Text_QuestAsk": {
   "en": "I'm a retired TRAINER.\\pShow me a POKéMON at level 45\\nor higher and I'll give you my\\lLINK CABLE.",
@@ -33,7 +33,7 @@
  },
  "CeruleanCity_House3_Text_QuestNo": {
   "en": "None of your POKéMON are strong\\nenough yet. Train them!",
-  "fr": "Aucun de tes POKéMON n'est encore\\nassez fort. Entraîne-les !"
+  "fr": "Aucun de tes POKéMON est encore\\nassez fort. Entraîne-les !"
  },
  "CeruleanCity_House3_Text_QuestNoRoom": {
   "en": "Your BAG is full. Make some\\nroom first!",
@@ -41,6 +41,6 @@
  },
  "CeruleanCity_House3_Text_QuestOk": {
   "en": "That is a strong POKéMON!\\nTake this LINK CABLE.",
-  "fr": "Quel POKéMON puissant !\\nPrends ce CÂBLE LINK."
+  "fr": "Quel POKéMON puissant !\\nTiens, prends ce CÂBLE LINK."
  }
 }

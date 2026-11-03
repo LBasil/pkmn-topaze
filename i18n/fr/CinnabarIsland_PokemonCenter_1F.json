@@ -1,7 +1,7 @@
 {
  "CinnabarIsland_PokemonCenter_1F_Text_CinnabarGymLocked": {
   "en": "I came to visit the CHRONDROLIA GYM,\\nbut the door is locked tight.\\pThere should be a key for it\\nsomewhere.\\pCould it be in that burned-out\\nmansion?\\pThe GYM LEADER's friend used to\\nlive there, they say.",
-  "fr": "Je suis venu visiter l'ARÈNE DE\\nCHRONDROLIA, mais la porte est bien\\lverrouillée.\\pIl doit y avoir une clé quelque\\npart.\\pSerait-elle dans ce manoir brûlé ?\\pL'ami du CHAMPION y habitait,\\nparaît-il."
+  "fr": "Je suis venu visiter l'ARÈNE DE\\nCHRONDROLIA, mais la porte est\\lverrouillée.\\pIl doit y avoir une clé quelque\\npart.\\pPeut-être dans ce manoir brûlé ?\\pL'ami du CHAMPION y habitait,\\nparaît-il."
  },
  "CinnabarIsland_PokemonCenter_1F_Text_EvolutionCanWaitForNewMoves": {
   "en": "POKéMON can still learn techniques\\nafter canceling evolution.\\pEvolution can wait until new moves\\nhave been learned.",

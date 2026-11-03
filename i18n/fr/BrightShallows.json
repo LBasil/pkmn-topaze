@@ -1,7 +1,7 @@
 {
  "BrightShallows_Text_Npc0": {
   "en": "A GOOD ROD brings the best fish\\nhere.",
-  "fr": "Une SUPER CANNE attire les\\nmeilleurs poissons ici."
+  "fr": "Avec une SUPER CANNE, tu pêches\\nles meilleurs poissons ici !"
  },
  "BrightShallows_Text_Npc1": {
   "en": "The water is so clear! I can see\\nthe fish.",
@@ -13,7 +13,7 @@
  },
  "BrightShallows_Text_Quest0_Ask": {
   "en": "A SUPER POTION for a tired\\nfisherman. MYSTIC WATER for you.",
-  "fr": "Une SUPER POTION pour un pêcheur\\nfatigué.\\pDe l'EAU MYSTIQUE pour toi."
+  "fr": "Une SUPER POTION pour un pêcheur\\nfatigué ?\\pJe te donne de l'EAU MYSTIQUE !"
  },
  "BrightShallows_Text_Quest0_Done": {
   "en": "Good as new! Take this MYSTIC\\nWATER.",
@@ -37,6 +37,6 @@
  },
  "BrightShallows_Text_TopazeFindFull": {
   "en": "Something shines here, but your BAG\\nis full.",
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
+  "fr": "Y a un truc qui brille ici, mais\\nton SAC est plein."
  }
 }

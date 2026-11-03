@@ -25,7 +25,7 @@
  },
  "Route12_Text_ElliotDefeat": {
   "en": "It's not easy…",
-  "fr": "Ce n'est pas facile…"
+  "fr": "C'est pas facile…"
  },
  "Route12_Text_ElliotIntro": {
   "en": "I love fishing, don't get me wrong.\\pBut it'd be best if I also had more\\nwork.",
@@ -45,7 +45,7 @@
  },
  "Route12_Text_GiaNotEnoughMons": {
   "en": "GIA: I can't bear to battle\\nwithout my JES!\\pDon't you have one more POKéMON?",
-  "fr": "GIA : Je ne supporte pas de\\ncombattre sans mon JES !\\pN'as-tu pas un autre POKéMON ?"
+  "fr": "GIA : Je supporte pas de\\ncombattre sans mon JES !\\pN'as-tu pas un autre POKéMON ?"
  },
  "Route12_Text_GiaPostBattle": {
   "en": "GIA: JES, you silly!\\nYou ruined this!",
@@ -61,7 +61,7 @@
  },
  "Route12_Text_HankPostBattle": {
   "en": "I guess you get to be good at\\nwhat you like.\\pWell, you beat me at POKéMON,\\nbut you can't top me at fishing.",
-  "fr": "Je suppose qu'on devient bon dans\\nce qu'on aime.\\pEh bien, tu m'as battu aux POKéMON,\\nmais tu ne me surpasses pas à la\\lpêche."
+  "fr": "Je suppose qu'on devient bon dans\\nce qu'on aime.\\pEh bien, tu m'as battu aux POKéMON,\\nmais tu me surpasses pas à la\\lpêche."
  },
  "Route12_Text_JesDefeat": {
   "en": "JES: Oh, please, why couldn't you\\nlet us win?",
@@ -97,7 +97,7 @@
  },
  "Route12_Text_LucaIntro": {
   "en": "Electricity is my specialty.\\pI don't know a thing about POKéMON\\nof the sea, though.",
-  "fr": "L'électricité est ma spécialité.\\pJe ne connais rien aux POKéMON de\\nla mer, cela dit."
+  "fr": "L'électricité est ma spécialité.\\pJe connais rien aux POKéMON de\\nla mer, cela dit."
  },
  "Route12_Text_LucaPostBattle": {
   "en": "Water conducts electricity, so you\\nshould zap sea POKéMON.\\pStrange. The sea glows violet at\\nnight, near the old FISHER's house.",
@@ -125,7 +125,7 @@
  },
  "Route12_Text_PierKronos1b": {
   "en": "KRONOS: Well. The child who plays\\nwith stones. You did not even ask\\lthe old fisher about the AURA?\\pNo matter. Know this: ten stones,\\nten gates. When the last one opens,\\lthe world is set free, POKéMON\\land all.",
-  "fr": "KRONOS : Tiens. L'enfant qui joue\\navec les pierres. Tu n'as même pas\\ldemandé au vieux pêcheur à propos\\nde l'AURA ?\\pPeu importe. Sache ceci : dix\\npierres, dix portes. Quand la\\ldernière s'ouvrira, le monde sera\\nlibéré, POKéMON compris."
+  "fr": "KRONOS : Tiens. L'enfant qui joue\\navec les pierres. T'as même pas\\ldemandé au vieux pêcheur à propos\\nde l'AURA ?\\pPeu importe. Sache ceci : dix\\npierres, dix portes. Quand la\\ldernière s'ouvrira, le monde sera\\nlibéré, POKéMON compris."
  },
  "Route12_Text_PierKronos2": {
   "en": "KRONOS: Keep collecting them,\\nchild. You do my work better than\\lany of my ADMINS.\\pThe next stone sleeps in HEMATOWN,\\nbehind its thirsty gates. Hurry,\\lor I will take it before you.\\pDo not follow me. This pier is\\nmine tonight. Farewell!",
@@ -137,7 +137,7 @@
  },
  "Route12_Text_ProcheEmma_Defeat": {
   "en": "Oh my... you trampled my garden!",
-  "fr": "Oh là là… tu as piétiné mon\\njardin !"
+  "fr": "Oh là là… t'as piétiné mon\\njardin !"
  },
  "Route12_Text_ProcheEmma_Early": {
   "en": "Not yet, {PLAYER}. Finish your\\njourney first, then come and find\\pme.",

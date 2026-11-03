@@ -1,7 +1,7 @@
 {
  "CyclePond_Text_Hermit": {
   "en": "Some POKéMON should never evolve.\\nThis stone will keep them as they\\pare. Take it.",
-  "fr": "Certains POKéMON ne devraient\\njamais évoluer. Cette pierre les\\lgarde tels qu'ils sont. Prends-la."
+  "fr": "Certains POKéMON devraient\\njamais évoluer. Cette pierre les\\lgarde tels qu'ils sont. Prends-la."
  },
  "CyclePond_Text_HermitDone": {
   "en": "Hold it, and nothing changes. That\\nis the point.",
@@ -29,7 +29,7 @@
  },
  "CyclePond_Text_SpaOffer": {
   "en": "A bond treatment for 2000 turns a\\nPOKéMON into your best friend.\\pInterested?",
-  "fr": "Un traitement de lien à 2000 fait\\nde ton POKéMON ton meilleur ami.\\pÇa t'intéresse ?"
+  "fr": "Un traitement de lien à 2000, ça\\nfait de ton POKéMON ton meilleur\\lami.\\pÇa t'intéresse ?"
  },
  "CyclePond_Text_SpaPoor": {
   "en": "The treatment costs 2000. Come back\\nwith enough.",

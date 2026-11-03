@@ -25,7 +25,7 @@
  },
  "SixIsland_OutcastIsland_Text_GebNotEnoughMons": {
   "en": "GEB: Please battle against me and\\nmy sister!\\p…Oh, you don't have two POKéMON?",
-  "fr": "GEB : Bats-toi contre moi et ma\\nsœur, s'il te plaît !\\p…Oh, tu n'as pas deux POKéMON ?"
+  "fr": "GEB : Bats-toi contre moi et ma\\nsœur, s'il te plaît !\\p…Oh, t'as pas deux POKéMON ?"
  },
  "SixIsland_OutcastIsland_Text_GebPostBattle": {
   "en": "GEB: I'm hanging onto my sister\\nbecause I can't touch the bottom.",
@@ -45,11 +45,11 @@
  },
  "SixIsland_OutcastIsland_Text_NicoleDefeat": {
   "en": "I didn't lose to you at swimming.\\nThis doesn't bother me.",
-  "fr": "Je n'ai pas perdu contre toi à la\\nnage. Ça ne me dérange pas."
+  "fr": "J'ai pas perdu contre toi à la\\nnage. Ça ne me dérange pas."
  },
  "SixIsland_OutcastIsland_Text_NicoleIntro": {
   "en": "It's not so easy sending POKéMON\\nout while swimming, you know?",
-  "fr": "Ce n'est pas facile d'envoyer des\\nPOKéMON en nageant, tu sais ?"
+  "fr": "C'est pas facile d'envoyer des\\nPOKéMON en nageant, tu sais ?"
  },
  "SixIsland_OutcastIsland_Text_NicolePostBattle": {
   "en": "Are you headed for the island up\\npast here?\\pI didn't see anything interesting\\nthere.",
@@ -61,7 +61,7 @@
  },
  "SixIsland_OutcastIsland_Text_RocketIntro": {
   "en": "There're no rare POKéMON around\\nthese parts! Not a one!\\pThat burns me up, man.\\nI'll take it out on you!",
-  "fr": "Il n'y a pas de POKéMON rares par\\nici ! Pas un seul !\\pÇa me met en rogne, mec.\\nJe vais me défouler sur toi !"
+  "fr": "Il y a pas de POKéMON rares par\\nici ! Pas un seul !\\pÇa me met en rogne, mec.\\nJe vais me défouler sur toi !"
  },
  "SixIsland_OutcastIsland_Text_RocketPostBattle": {
   "en": "So listen, you haven't seen any\\nrare POKéMON, have you?",
@@ -73,10 +73,10 @@
  },
  "SixIsland_OutcastIsland_Text_TylorIntro": {
   "en": "I'm having no luck at all.\\nA battle'd be a change of pace!",
-  "fr": "Je n'ai aucune chance.\\nUn combat changerait un peu !"
+  "fr": "J'ai aucune chance.\\nUn combat changerait un peu !"
  },
  "SixIsland_OutcastIsland_Text_TylorPostBattle": {
   "en": "I can't very well go home without\\ncatching something, though.",
-  "fr": "Je ne peux pas rentrer chez moi\\nsans rien capturer, pourtant."
+  "fr": "Je peux pas rentrer chez moi\\nsans rien capturer, pourtant."
  }
 }

@@ -21,7 +21,7 @@
  },
  "KindleTrail_Text_Quest0_MissT": {
   "en": "One PROTEIN, please. The APOTHECARY\\nsells it.",
-  "fr": "Une PROTÉINE, s'il vous plaît.\\nL'APOTHICAIRE en vend."
+  "fr": "Une PROTÉINE, s'il te plaît.\\nL'APOTHICAIRE en vend."
  },
  "KindleTrail_Text_Quest0_NoRoomT": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
@@ -37,6 +37,6 @@
  },
  "KindleTrail_Text_TopazeFindFull": {
   "en": "Something shines here, but your BAG\\nis full.",
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
+  "fr": "Y a un truc qui brille ici, mais\\nton SAC est plein."
  }
 }

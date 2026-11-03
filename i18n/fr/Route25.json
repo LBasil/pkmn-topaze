@@ -13,7 +13,7 @@
  },
  "Route25_Text_DanDefeat": {
   "en": "I'm not mad!",
-  "fr": "Je ne suis pas fâché !"
+  "fr": "Je suis pas fâché !"
  },
  "Route25_Text_DanIntro": {
   "en": "Dad took me to a great party on\\nthe S.S. ANNE at APATIA.",
@@ -37,7 +37,7 @@
  },
  "Route25_Text_FranklinDefeat": {
   "en": "You worked hard!",
-  "fr": "Tu as travaillé dur !"
+  "fr": "T'as travaillé dur !"
  },
  "Route25_Text_FranklinIntro": {
   "en": "I just got down from MT. MOON,\\nbut I've still got gas in the tank!",
@@ -49,7 +49,7 @@
  },
  "Route25_Text_HaleyDefeat": {
   "en": "I'm not so jealous!",
-  "fr": "Je ne suis pas si jalouse !"
+  "fr": "Je suis pas si jalouse !"
  },
  "Route25_Text_HaleyIntro": {
   "en": "My friend has many cute POKéMON.\\nI'm so jealous!",
@@ -61,7 +61,7 @@
  },
  "Route25_Text_JoeyDefeat": {
   "en": "You're decent.",
-  "fr": "Tu es correct."
+  "fr": "T'es correct."
  },
  "Route25_Text_JoeyIntro": {
   "en": "Local TRAINERS come here to\\npractice.",
@@ -93,7 +93,7 @@
  },
  "Route25_Text_MistyMeet": {
   "en": "MISTY: Stop right there!\\p…Oh. You're not one of them.\\pI'm MISTY. I've tracked some\\nblack-suited creeps all day.\\pTwo of them slipped into that old\\ncottage. BILL left months ago, so\\pnobody should be inside.\\pYou're after them too, aren't you?\\nYou have the same look as a friend\\pof mine. Stubborn, never backs off.\\pFine. Let's go in together.\\nI'll go first. Follow me!",
-  "fr": "ONDINE : Stop !\\p…Oh. Tu n'es pas l'un d'eux.\\pJe suis ONDINE. Je traque des\\nsinistres en noir depuis ce matin.\\pDeux d'entre eux se sont glissés\\ndans ce vieux cottage. LÉO est\\lparti il y a des mois, personne ne\\ndevrait y être.\\pToi aussi, tu les cherches,\\nn'est-ce pas ? Tu as le même regard\\lqu'un ami à moi.\\pTêtu, il ne recule jamais.\\pBon. Entrons ensemble. J'y vais la\\npremière. Suis-moi !"
+  "fr": "ONDINE : Stop !\\p…Oh. T'es pas l'un d'eux.\\pJe suis ONDINE. Je traque des\\nsinistres en noir depuis ce matin.\\pDeux d'entre eux se sont glissés\\ndans ce vieux cottage. LÉO est\\lparti il y a des mois, personne ne\\ndevrait y être.\\pToi aussi, tu les cherches,\\nn'est-ce pas ? T'as le même regard\\lqu'un ami à moi.\\pTêtu, il recule jamais.\\pBon. Entrons ensemble. J'y vais la\\npremière. Suis-moi !"
  },
  "Route25_Text_NobDefeat": {
   "en": "You done got me, and real good,\\ntoo!",
@@ -113,7 +113,7 @@
  },
  "Route25_Text_ProcheLola_Defeat": {
   "en": "You melted my team...",
-  "fr": "Tu as fait fondre mon équipe…"
+  "fr": "T'as fait fondre mon équipe…"
  },
  "Route25_Text_ProcheLola_Early": {
   "en": "Not yet, {PLAYER}. Finish your\\njourney first, then come and find\\pme.",
@@ -137,7 +137,7 @@
  },
  "Route25_Text_WayneDefeat": {
   "en": "You're something.",
-  "fr": "Tu es quelqu'un."
+  "fr": "T'es quelqu'un."
  },
  "Route25_Text_WayneIntro": {
   "en": "You're going to see BILL?\\nFirst, we battle!",

@@ -21,7 +21,7 @@
  },
  "FuchsiaCity_Text_Apprentice_Ask13": {
   "en": "The DAISY HILL: flowers all the way\\nup. Visit?",
-  "fr": "La COLLINE DES NINAS : des\\nfleurs jusqu'au sommet. Visiter ?"
+  "fr": "La COLLINE DES MARGUERITES : des\\nfleurs jusqu'au sommet. Visiter ?"
  },
  "FuchsiaCity_Text_Apprentice_Ask14": {
   "en": "The BERRY BROOK: a sweet stream.\\nVisit?",
@@ -81,7 +81,7 @@
  },
  "FuchsiaCity_Text_Apprentice_Closed": {
   "en": "The boat is not ready. Come back\\nwhen the clocks make sense.",
-  "fr": "Le bateau n'est pas prêt. Reviens\\nquand les horloges auront un sens."
+  "fr": "Le bateau est pas prêt. Reviens\\nquand les horloges auront un sens."
  },
  "FuchsiaCity_Text_Apprentice_GateText10": {
   "en": "Come back with 1 BADGE.",
@@ -125,7 +125,7 @@
  },
  "FuchsiaCity_Text_Apprentice_Hello": {
   "en": "The master is busy. I row the small\\ntrips, {PLAYER}.",
-  "fr": "Le maître est occupé. Je ne fais\\nque les petits trajets, {PLAYER}."
+  "fr": "Le maître est occupé. Je fais que\\nles petits trajets, {PLAYER}."
  },
  "FuchsiaCity_Text_Apprentice_Never": {
   "en": "Another time, then.",
@@ -449,7 +449,7 @@
  },
  "FuchsiaCity_Text_ItemBallInThere": {
   "en": "That item ball in there…\\nWere you wanting that?\\pMe, too!\\n…Huh? That's a POKéMON?",
-  "fr": "Cette Ball dans le coin…\\nTu la voulais ?\\pMoi aussi !\\n…Hein ? C'est un POKéMON ?"
+  "fr": "Cette BALL dans le coin…\\nTu la voulais ?\\pMoi aussi !\\n…Hein ? C'est un POKéMON ?"
  },
  "FuchsiaCity_Text_KabutoSign": {
   "en": "Name: KABUTO\\nAn extremely rare POKéMON that was\\lregenerated from a fossil.",
@@ -529,7 +529,7 @@
  },
  "FuchsiaCity_Text_MyFatherIsGymLeader": {
   "en": "My father is the GYM LEADER of\\nthis town.\\pI'm training to use POISON POKéMON\\nas well as my father.",
-  "fr": "Mon père est le CHAMPION de cette\\nville.\\pJe m'entraîne à utiliser les\\nPOKéMON POISON aussi bien que mon\\lpère."
+  "fr": "Mon père est le CHAMPION de cette\\nville.\\pJ'm'entraîne à utiliser les\\nPOKéMON POISON aussi bien que lui."
  },
  "FuchsiaCity_Text_OmanyteSign": {
   "en": "Name: OMANYTE\\nAn extremely rare POKéMON that was\\lregenerated from a fossil.",
@@ -537,11 +537,11 @@
  },
  "FuchsiaCity_Text_PoliceBadge": {
   "en": "The thieves slipped away, so we\\nkeep watch. Only trainers who can\\lprove themselves may pass.\\pBeat the GYM LEADER first, kid.",
-  "fr": "Les voleurs se sont échappés, alors\\nnous montons la garde. Seuls les\\ldresseurs qui ont fait leurs\\npreuves peuvent passer.\\pBats d'abord le CHAMPION."
+  "fr": "Les voleurs se sont échappés, alors\\non monte la garde. Seuls les\\ldresseurs qui ont fait leurs\\npreuves peuvent passer.\\pBats d'abord le CHAMPION."
  },
  "FuchsiaCity_Text_PoliceRaid": {
   "en": "Sorry, the town is sealed until the\\nzoo POKéMON are rounded up.\\pThieves are on the loose. Nobody\\ngoes in or out this way.",
-  "fr": "Désolé, la ville est fermée tant\\nque les POKéMON du zoo ne sont pas\\lrattrapés.\\pDes voleurs sont en liberté.\\nPersonne n'entre ni ne sort par\\lici."
+  "fr": "Désolé, la ville est fermée tant\\nque les POKéMON du zoo sont pas\\lrattrapés.\\pDes voleurs sont en liberté.\\nPersonne entre ni sort par ici."
  },
  "FuchsiaCity_Text_PoliceVolcano": {
   "en": "The sea road south is closed.\\pThe SEAFOAM volcano erupted and\\nthe water is molten rock.\\pLooking for CHRONDROLIA? Go back\\nto GRENALUX and SURF south.",
@@ -557,7 +557,7 @@
  },
  "FuchsiaCity_Text_ProcheThibault_Early": {
   "en": "Not yet, {PLAYER}. Finish your\\njourney first, then come and find\\pme.",
-  "fr": "Pas encore, {PLAYER}. Termine\\nd'abord ton voyage, puis viens me\\ltrouver."
+  "fr": "Pas encore, {PLAYER}. Finis\\nd'abord ton voyage, puis viens me\\ltrouver."
  },
  "FuchsiaCity_Text_ProcheThibault_Intro": {
   "en": "{PLAYER}! The tide is perfect today.\\nCome, ride the wave with me!",
@@ -565,7 +565,7 @@
  },
  "FuchsiaCity_Text_ProcheThibault_NoRoom": {
   "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reparle-moi."
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens me voir."
  },
  "FuchsiaCity_Text_ProcheThibault_Win": {
   "en": "From the deep. A gift for you.",

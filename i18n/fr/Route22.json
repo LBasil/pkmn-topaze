@@ -41,7 +41,7 @@
  },
  "Route22_Text_ProcheVincent_Intro": {
   "en": "Whoa, {PLAYER}! You look charged up.\\nLet us see whose spark is brighter!",
-  "fr": "Whoa, {PLAYER} ! Tu as l'air chargé.\\nVoyons dont l'étincelle est la plus\\lvive !"
+  "fr": "Whoa, {PLAYER} ! T'as l'air chargé.\\nVoyons dont l'étincelle est la plus\\lvive !"
  },
  "Route22_Text_ProcheVincent_NoRoom": {
   "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",

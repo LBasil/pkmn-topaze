@@ -45,7 +45,7 @@
  },
  "PalletTown_School_Text_TeacherCourse": {
   "en": "Since you are here, a short lesson.\\pTen years ago the AURA changed the\\ntypes of many POKéMON. FIRE ones may\\lnow be ICE, and WATER ones STEEL.\\pA new type also appeared: FAIRY.\\nIt beats DRAGON, FIGHTING and DARK,\\lbut POISON and STEEL beat it.\\pNever trust a POKéMON's old type.\\nCheck it in the SUMMARY first!",
-  "fr": "Puisque tu es là, une petite leçon.\\pIl y a dix ans l'AURA a changé les\\ntypes de nombreux POKéMON. Les FEU\\lpeuvent maintenant être GLACE, et\\nles EAU ACIER.\\pUn nouveau type est aussi apparu :\\nFÉE. Il bat DRAGON, COMBAT et\\pTÉNÈBRES, mais POISON et ACIER le\\nbattent.\\pNe te fie jamais à l'ancien type\\nd'un POKéMON. Vérifie-le d'abord\\ldans le RÉSUMÉ !"
+  "fr": "Puisque t'es là, une petite leçon.\\pIl y a dix ans l'AURA a changé les\\ntypes de nombreux POKéMON. Les FEU\\lpeuvent maintenant être GLACE, et\\nles EAU ACIER.\\pUn nouveau type est aussi apparu :\\nFÉE. Il bat DRAGON, COMBAT et\\pTÉNÈBRES, mais POISON et ACIER le\\nbattent.\\pNe te fie jamais à l'ancien type\\nd'un POKéMON. Vérifie-le d'abord\\ldans le RÉSUMÉ !"
  },
  "PalletTown_School_Text_TeacherCourseDone": {
   "en": "Remember: check a POKéMON's type in\\nthe SUMMARY. The old ones lie.",
@@ -61,6 +61,6 @@
  },
  "PalletTown_School_Text_TeacherStrike": {
   "en": "They came while the town ran to the\\nRANCH, all in black. They took the\\lGRENAT before I could reach the alarm.\\pThey said it was for the POKéMON,\\nfor their freedom... What does a\\lgem have to do with freedom?\\pThere is no class today.",
-  "fr": "Ils sont venus pendant que la ville\\ncourait au RANCH, tout en noir. Ils\\lont pris le GRENAT avant que je\\npuisse donner l'alarme.\\pIls ont dit que c'était pour les\\nPOKéMON, pour leur liberté… Quel\\lrapport entre une gemme et la\\nliberté ?\\pIl n'y a pas cours aujourd'hui."
+  "fr": "Ils sont venus pendant que la ville\\ncourait au RANCH, tout en noir. Ils\\lont pris le GRENAT avant que je\\npuisse donner l'alarme.\\pIls ont dit que c'était pour les\\nPOKéMON, pour leur liberté… Quel\\lrapport entre une gemme et la\\nliberté ?\\pIl y a pas cours aujourd'hui."
  }
 }

@@ -13,7 +13,7 @@
  },
  "Route21_North_Text_IanPostBattle": {
   "en": "IAN: Come on, Sis!\\pYou're not going to lose weight\\nlike this!",
-  "fr": "IAN : Allez, Sœurette !\\pTu ne vas pas maigrir comme ça !"
+  "fr": "IAN : Allez, Sœurette !\\pTu vas pas maigrir comme ça !"
  },
  "Route21_North_Text_LilDefeat": {
   "en": "LIL: Oh, see?\\nWe lost. Happy now?",
@@ -21,11 +21,11 @@
  },
  "Route21_North_Text_LilIntro": {
   "en": "LIL: Huh? A battle?\\nIAN, can't you do it alone?",
-  "fr": "LIL : Hein ? Un combat ?\\nIAN, tu ne peux pas le faire seul ?"
+  "fr": "LIL : Hein ? Un combat ?\\nIAN, tu peux pas le faire seul ?"
  },
  "Route21_North_Text_LilNotEnoughMons": {
   "en": "LIL: Huh? A battle?\\nI can't be bothered to do it alone.\\lBring two POKéMON, won't you?",
-  "fr": "LIL : Hein ? Un combat ? Je n'ai\\npas envie de le faire seule. Viens\\lavec deux POKéMON, tu veux ?"
+  "fr": "LIL : Hein ? Un combat ? J'ai\\npas envie de le faire seule. Viens\\lavec deux POKéMON, tu veux ?"
  },
  "Route21_North_Text_LilPostBattle": {
   "en": "LIL: I'm tired.\\nCan't we go home already?",
@@ -41,7 +41,7 @@
  },
  "Route21_South_Text_ClaudePostBattle": {
   "en": "Sheesh, I haven't caught a thing.\\nCould this place actually be a\\lgiant pool or something?",
-  "fr": "Mince, je n'ai rien attrapé. Cet\\nendroit serait-il une immense\\lpiscine ?"
+  "fr": "Mince, j'ai rien attrapé. Cet\\nendroit serait-il une immense\\lpiscine ?"
  },
  "Route21_South_Text_JackDefeat": {
   "en": "Diver!!\\nDown!!",

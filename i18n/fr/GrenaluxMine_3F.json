@@ -29,10 +29,10 @@
  },
  "GrenaluxMine_3F_Text_Vision3": {
   "en": "The AURA was never a weapon.\\nIt was a cry for help.\\pThe stones of the ten towns are\\nwhere that cry settled.\\pYour PENDANT is the first of them.\\nIt did not choose to be taken.\\lIt chose YOU.",
-  "fr": "L'AURA n'a jamais été une arme.\\nC'était un appel à l'aide.\\pLes pierres des dix villes sont\\nl'endroit où cet appel s'est\\ldéposé.\\pTon PENDENTIF est la première\\nd'entre elles. Il n'a pas choisi\\ld'être pris. Il t'a choisi, TOI."
+  "fr": "L'AURA n'a jamais été une arme.\\nC'était un appel à l'aide.\\pLes pierres des dix villes sont\\nl'endroit où cet appel s'est\\ldéposé.\\pTon PENDENTIF est la première\\nd'entre elles. Il a pas choisi\\ld'être pris. Il t'a choisi, TOI."
  },
  "GrenaluxMine_3F_Text_Whisper": {
   "en": "…{PLAYER}…\\pA voice, thin as dust, drifts out\\nof the rock. It does not come\\lfrom any direction.\\p…remember…",
-  "fr": "…{PLAYER}…\\pUne voix, fine comme la poussière,\\nsort de la roche. Elle ne vient\\ld'aucune direction.\\p…souviens-toi…"
+  "fr": "…{PLAYER}…\\pUne voix, fine comme la poussière,\\nsort de la roche. Elle vient\\ld'aucune direction.\\p…souviens-toi…"
  }
 }

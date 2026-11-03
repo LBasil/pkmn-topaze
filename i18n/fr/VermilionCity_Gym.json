@@ -17,7 +17,7 @@
  },
  "VermilionCity_Gym_Text_DwayneIntro": {
   "en": "This is no place for kids!\\nNot even if you're good!",
-  "fr": "Ce n'est pas un endroit pour les\\nenfants ! Même si tu es bon !"
+  "fr": "C'est pas un endroit pour les\\nenfants ! Même si t'es bon !"
  },
  "VermilionCity_Gym_Text_DwaynePostBattle": {
   "en": "HERA built this GYM like a\\nsky temple.\\pEveryone here learned to fight\\nwith the wind at their back.",
@@ -29,7 +29,7 @@
  },
  "VermilionCity_Gym_Text_ExplainThunderBadgeTakeThis": {
   "en": "The APATITE BADGE lets your\\nPOKéMON use FLY out of battle, if\\pyou carry the HM.\\pIt also makes your POKéMON\\nfaster.\\pTake this too!",
-  "fr": "Le BADGE APATITE permet à tes\\nPOKéMON d'utiliser VOL hors combat,\\lsi tu as la CS.\\pIl rend aussi tes POKéMON plus\\nrapides.\\pPrends ceci aussi !"
+  "fr": "Le BADGE APATITE permet à tes\\nPOKéMON d'utiliser VOL hors combat,\\lsi t'as la CS.\\pIl rend aussi tes POKéMON plus\\nrapides.\\pPrends ceci aussi !"
  },
  "VermilionCity_Gym_Text_GymClosed": {
   "en": "Sorry, champ. The GYM is closed.\\pHERA and MAJOR BOB went to the\\nS.S. ANNE to guard her APATITE.\\pThieves in black are after it!\\nGo to the harbor and help them!",
@@ -53,15 +53,15 @@
  },
  "VermilionCity_Gym_Text_LtSurgeDefeat": {
   "en": "Hah! You flew right through my\\nguard.\\pI respect that. Take the APATITE\\nBADGE!",
-  "fr": "Hah ! Tu as traversé ma garde en\\nvolant.\\pJe respecte ça. Prends le BADGE\\nAPATITE !"
+  "fr": "Hah ! T'as traversé ma garde en\\nvolant.\\pJe respecte ça. Prends le BADGE\\nAPATITE !"
  },
  "VermilionCity_Gym_Text_LtSurgeIntro": {
   "en": "I am HERA, LEADER of APATIA GYM,\\nup here where the air is thin.\\pThey say a FAIRY QUEEN once ruled\\nthese peaks, and that dragons\\pbowed to her. My DRAGON and FAIRY\\nPOKéMON keep the tale alive.\\pShow me you can handle the\\naltitude. Hit me with everything\\pyou've got!",
-  "fr": "Je suis HERA, CHAMPIONNE de\\nl'ARÈNE d'APATIA, ici-haut où l'air\\lest mince.\\pOn dit qu'une REINE DES FÉES\\nrégnait jadis sur ces cimes, et que\\lles dragons s'inclinaient devant\\nelle. Mes POKéMON DRAGON et FÉE\\lfont vivre la légende.\\pMontre-moi que tu supportes\\nl'altitude. Frappe-moi avec tout ce\\lque tu as !"
+  "fr": "Je suis HERA, CHAMPIONNE de\\nl'ARÈNE d'APATIA, ici-haut où l'air\\lest mince.\\pOn dit qu'une REINE DES FÉES\\nrégnait jadis sur ces cimes, et que\\lles dragons s'inclinaient devant\\nelle. Mes POKéMON DRAGON et FÉE\\lfont vivre la légende.\\pMontre-moi que tu supportes\\nl'altitude. Frappe-moi avec tout ce\\lque t'as !"
  },
  "VermilionCity_Gym_Text_LtSurgePostBattle": {
   "en": "The CAPTAIN called me: you saved\\nmy APATITE from those thieves.\\pTake my badge as thanks. Now keep\\nclimbing, kid. Cut the tree east\\lof TOURMALIA: ROCK TUNNEL leads\\lto SPINELLIA.",
-  "fr": "Le CAPITAINE m'a appelée : tu as\\nsauvé mon APATITE de ces voleurs.\\pPrends mon badge en remerciement.\\nMaintenant continue de grimper.\\lCoupe l'arbre à l'est de\\nTOURMALIA : le TUNNEL ROCHE mène à\\lSPINELLIA."
+  "fr": "Le CAPITAINE m'a appelée : t'as\\nsauvé mon APATITE de ces voleurs.\\pPrends mon badge en remerciement.\\nMaintenant continue de grimper.\\lCoupe l'arbre à l'est de\\nTOURMALIA : le TUNNEL ROCHE mène à\\lSPINELLIA."
  },
  "VermilionCity_Gym_Text_LtSurgeRebel1": {
   "en": "HERA: I fly where the wind says. And\\nthe wind says you rule everything\\lnow.\\pI will test that wind myself!",
@@ -77,7 +77,7 @@
  },
  "VermilionCity_Gym_Text_LtSurgeVisit1": {
   "en": "HERA: A wish let go. You've got guts,\\nkid. Take this spark.",
-  "fr": "HERA : Un vœu relâché. Tu as du\\ncran. Prends cette étincelle."
+  "fr": "HERA : Un vœu relâché. T'as du\\ncran. Prends cette étincelle."
  },
  "VermilionCity_Gym_Text_LtSurgeVisit2": {
   "en": "HERA: No balls, no cages. A real\\nsoldier needs rest. Take these.",

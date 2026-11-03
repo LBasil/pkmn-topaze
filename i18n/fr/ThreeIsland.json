@@ -109,7 +109,7 @@
  },
  "ThreeIsland_Text_OughtToBeThankingUs": {
   "en": "No, man, I don't get it at all.\\pLook at this place.\\nWhat do you do for entertainment?\\pYou ought to be thanking us for\\nlivening up this sleepy village.\\pBut hey, if you insist, you can try\\nmaking us leave.",
-  "fr": "Non, mec, je ne comprends pas du\\ntout.\\pRegarde cet endroit. Qu'est-ce que\\nvous faites pour vous amuser ?\\pVous devriez nous remercier\\nd'animer ce village endormi.\\pMais bon, si tu insistes, essaie de\\nnous faire partir."
+  "fr": "Non, mec, je comprends pas du\\ntout.\\pRegarde cet endroit. Qu'est-ce que\\nvous faites pour vous amuser ?\\pVous devriez nous remercier\\nd'animer ce village endormi.\\pMais bon, si tu insistes, essaie de\\nnous faire partir."
  },
  "ThreeIsland_Text_PaxtonDefeat": {
   "en": "All right, enough!\\nWe'll leave like you wanted!\\pWe'll be happy to see the last of\\nthis boring island!",
@@ -141,7 +141,7 @@
  },
  "ThreeIsland_Text_RefGives": {
   "en": "LEON: You saved the day. The post\\nhas a gift for you: ABSOL!",
-  "fr": "LEON : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\lABSOL !"
+  "fr": "LEON : T'as sauvé la mise. Le\\nposte a un cadeau pour toi :\\lABSOL !"
  },
  "ThreeIsland_Text_RefHunter1": {
   "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!",
@@ -149,7 +149,7 @@
  },
  "ThreeIsland_Text_RefHunter2": {
   "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!",
-  "fr": "CHASSEUR : Tu as battu mon\\nassocié ? Soit, je n'ai pas peur\\ld'un ranger !"
+  "fr": "CHASSEUR : T'as battu mon\\nassocié ? Soit, j'ai pas peur\\ld'un ranger !"
  },
  "ThreeIsland_Text_RefIdle": {
   "en": "LEON: I watch over the animals here.\\nThe world is quieter now.",
@@ -165,7 +165,7 @@
  },
  "ThreeIsland_Text_WannaMakeSomethingOfYourStaring": {
   "en": "You, what are you staring at?\\nDon't you know it's not polite?\\pYou wanna make something of it\\nor what?",
-  "fr": "Toi, qu'est-ce que tu regardes ? Tu\\nne sais pas que ce n'est pas poli ?\\pTu veux en faire quelque chose ou\\nquoi ?"
+  "fr": "Toi, qu'est-ce que tu regardes ? Tu\\nne sais pas que c'est pas poli ?\\pTu veux en faire quelque chose ou\\nquoi ?"
  },
  "ThreeIsland_Text_WhenDodouEvolvesGoingToPlayGame": {
   "en": "I'm going to train my DODUO in the\\nBERRY FOREST.\\pWhen it evolves, I'm going to play\\na game on TWO ISLAND.",

@@ -17,7 +17,7 @@
  },
  "Route9_Text_AliciaIntro": {
   "en": "You have POKéMON with you!\\nYou're mine!",
-  "fr": "Tu as des POKéMON avec toi !\\nTu es à moi !"
+  "fr": "T'as des POKéMON avec toi !\\nTu es à moi !"
  },
  "Route9_Text_AliciaPostBattle": {
   "en": "Men in black went by at dawn.\\nThey hurried toward ROCK TUNNEL.",
@@ -69,7 +69,7 @@
  },
  "Route9_Text_ChrisPostBattle": {
   "en": "Their bags clinked like stones.\\nI did not dare ask what was in.",
-  "fr": "Leurs sacs tintaient comme des\\npierres. Je n'ai pas osé demander\\lce qu'il y avait."
+  "fr": "Leurs sacs tintaient comme des\\npierres. J'ai pas osé demander\\lce qu'il y avait."
  },
  "Route9_Text_ConnerDefeat": {
   "en": "My bugs…",
@@ -85,7 +85,7 @@
  },
  "Route9_Text_DrewDefeat": {
   "en": "Can't measure up…",
-  "fr": "Je ne fais pas le poids…"
+  "fr": "Je fais pas le poids…"
  },
  "Route9_Text_DrewIntro": {
   "en": "I'm taking the ROCK TUNNEL to\\ngo to SPINELLIA…",
@@ -121,7 +121,7 @@
  },
  "Route9_Text_Quest3_Ok": {
   "en": "Ahh, peace! Take this. I do not\\nneed it.",
-  "fr": "Ahh, la paix ! Prends ça. Je n'en\\nai pas besoin."
+  "fr": "Ahh, la paix ! Prends ça. J'en\\nai pas besoin."
  },
  "Route9_Text_RouteSign": {
   "en": "ROUTE 9\\nTOURMALIA - ROCK TUNNEL",

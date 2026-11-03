@@ -1,7 +1,7 @@
 {
  "SeafoamIslands_1F_Text_GoldMeet": {
   "en": "GOLD: Hey! You are the kid from\\nHEMATOWN, right? I am GOLD.\\pThat grumpy one is SILVER.",
-  "fr": "GOLD : Hé ! Tu es le gamin\\nd'HEMATOWN, non ? Je suis GOLD.\\pLe grincheux, c'est SILVER."
+  "fr": "GOLD : Hé ! T'es le gamin\\nd'HEMATOWN, non ? Je suis GOLD.\\pLe grincheux, c'est SILVER."
  },
  "SeafoamIslands_1F_Text_GoldPlan": {
   "en": "GOLD: This volcano is ONYBRIS base\\nnumber four. The boss went down\\pwith the stone. We follow him\\nall the way to the bottom.\\pBRICE and FLORA fell to him.\\nWe will not.\\pDeeper down the lava flows like\\nwater, since the AURA twisted the\\pworld. Any water POKéMON can cool\\nit into a crust. Just SURF over.",
@@ -9,7 +9,7 @@
  },
  "SeafoamIslands_1F_Text_SilverMeet": {
   "en": "SILVER: …Tch. I can introduce\\nmyself, you know.\\pI heard what you did to KRONOS.\\nNot bad. For a beginner.",
-  "fr": "SILVER : …Tch. Je peux me\\nprésenter tout seul, tu sais.\\pJ'ai entendu ce que tu as fait à\\nKRONOS. Pas mal. Pour un débutant."
+  "fr": "SILVER : …Tch. Je peux me\\nprésenter tout seul, tu sais.\\pJ'ai entendu ce que t'as fait à\\nKRONOS. Pas mal. Pour un débutant."
  },
  "SeafoamIslands_1F_Text_SilverPlan": {
   "en": "SILVER: Stay behind us, {PLAYER}.\\nWe take the lower floors first.\\pMop up the grunts we leave.\\nAnd do not die on me.",

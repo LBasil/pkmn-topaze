@@ -9,7 +9,7 @@
  },
  "EchoGarden_Text_Boss_Intro": {
   "en": "Every flower here grew from an\\nECHO. Please do not trample them.\\pBattle me instead!",
-  "fr": "Chaque fleur ici est née d'un ÉCHO.\\nS'il te plaît, ne les piétine pas.\\pBats-toi contre moi plutôt !"
+  "fr": "Chaque fleur ici est née d'un ÉCHO.\\nS'il te plaît, piétine-les pas !\\pBats-toi contre moi plutôt !"
  },
  "EchoGarden_Text_Boss_NoRoom": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
@@ -21,7 +21,7 @@
  },
  "EchoGarden_Text_Npc1": {
   "en": "Do not pick the blue ones. They\\nremember too much.",
-  "fr": "Ne cueille pas les bleues. Elles\\nse souviennent trop."
+  "fr": "Cueille pas les bleues. Elles\\nse souviennent trop."
  },
  "EchoGarden_Text_ReturnAsk": {
   "en": "Ready to go back to the dock?",

@@ -21,7 +21,7 @@
  },
  "GaleCliff_Text_Quest0_MissT": {
   "en": "Two GREAT BALLs, please.",
-  "fr": "Deux SUPER BALLS, s'il vous plaît."
+  "fr": "Deux SUPER BALLS, s'il te plaît."
  },
  "GaleCliff_Text_Quest0_NoRoomT": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
@@ -37,6 +37,6 @@
  },
  "GaleCliff_Text_TopazeFindFull": {
   "en": "Something shines here, but your BAG\\nis full.",
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
+  "fr": "Y a un truc qui brille ici, mais\\nton SAC est plein."
  }
 }

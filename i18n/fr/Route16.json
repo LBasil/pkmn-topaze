@@ -77,7 +77,7 @@
  },
  "Route16_Text_LeaNotEnoughMons": {
   "en": "LEA: Oh, you don't have two\\nPOKéMON with you?\\pDoesn't it feel lonely for you or\\nyour POKéMON?",
-  "fr": "LEA : Oh, tu n'as pas deux POKéMON\\navec toi ?\\pNe te sens-tu pas seul, toi ou\\ntes POKéMON ?"
+  "fr": "LEA : Oh, t'as pas deux POKéMON\\navec toi ?\\pNe te sens-tu pas seul, toi ou\\ntes POKéMON ?"
  },
  "Route16_Text_LeaPostBattle": {
   "en": "LEA: Ehehe, I'm sorry.\\nJED is so cool.",
@@ -113,7 +113,7 @@
  },
  "Route16_Text_RQuest_Ok": {
   "en": "You saved the ride. Here.",
-  "fr": "Tu as sauvé la balade. Tiens."
+  "fr": "T'as sauvé la balade. Tiens."
  },
  "Route16_Text_RouteSign": {
   "en": "ROUTE 16\\nBOURG QUARTZ - AMETHIOLITE",

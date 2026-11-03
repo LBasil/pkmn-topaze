@@ -1,7 +1,7 @@
 {
  "PokemonLeague_LancesRoom_Text_Defeat": {
   "en": "That's it!\\pI hate to admit it, but you are a\\nPOKéMON master!",
-  "fr": "Ça y est !\\pJe déteste l'admettre, mais tu es\\nun maître POKéMON !"
+  "fr": "Ça y est !\\pJe déteste l'admettre, mais t'es\\nun maître POKéMON !"
  },
  "PokemonLeague_LancesRoom_Text_Intro": {
   "en": "Ah! I've heard about you,\\n{PLAYER}!\\pI lead the ELITE FOUR.\\pYou can call me LANCE the dragon\\nTRAINER.\\pYou know that dragons are\\nmythical POKéMON.\\pThey're hard to catch and raise,\\nbut their powers are superior.\\pThey're virtually indestructible.\\nThere's no being clever with them.\\pWell, are you ready to lose?\\pYour LEAGUE challenge ends with\\nme, {PLAYER}!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
@@ -13,6 +13,6 @@
  },
  "PokemonLeague_LancesRoom_Text_RematchIntro": {
   "en": "Ah!\\nSo, you've returned, {PLAYER}!\\pI lead the ELITE FOUR.\\pYou can call me LANCE the dragon\\nTRAINER.\\pYou know that dragons are\\nmythical POKéMON.\\pThey're hard to catch and raise,\\nbut their powers are superior.\\pThey're virtually indestructible.\\nThere's no being clever with them.\\pWell, are you ready to lose?\\pYour LEAGUE challenge ends with\\nme, {PLAYER}!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
-  "fr": "Ah ! Alors, tu es revenu, {PLAYER} !\\pJe dirige le CONSEIL 4.\\pTu peux m'appeler PETER le DRESSEUR\\nde dragons.\\pTu sais que les dragons sont des\\nPOKéMON mythiques.\\pIls sont difficiles à capturer et à\\nélever, mais leurs pouvoirs sont\\lsupérieurs.\\pIls sont pratiquement\\nindestructibles. Impossible de les\\lprendre par la ruse.\\pAlors, es-tu prêt à perdre ?\\pTon défi de la LIGUE s'achève avec\\nmoi, {PLAYER} !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
+  "fr": "Ah ! Alors, t'es revenu, {PLAYER} !\\pJe dirige le CONSEIL 4.\\pTu peux m'appeler PETER le DRESSEUR\\nde dragons.\\pTu sais que les dragons sont des\\nPOKéMON mythiques.\\pIls sont difficiles à capturer et à\\nélever, mais leurs pouvoirs sont\\lsupérieurs.\\pIls sont pratiquement\\nindestructibles. Impossible de les\\lprendre par la ruse.\\pAlors, es-tu prêt à perdre ?\\pTon défi de la LIGUE s'achève avec\\nmoi, {PLAYER} !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
  }
 }

@@ -1,7 +1,7 @@
 {
  "CinderPlain_Text_Npc0": {
   "en": "The ground glows at night. Do not\\nsleep here.",
-  "fr": "Le sol brille la nuit. Ne dors pas\\nici."
+  "fr": "Le sol brille la nuit. Dors pas\\nici."
  },
  "CinderPlain_Text_Npc1": {
   "en": "ARCANINE runs faster than my\\ninstruments.",
@@ -9,19 +9,19 @@
  },
  "CinderPlain_Text_Quest0_AfterT": {
   "en": "The plain simmers.",
-  "fr": "La plaine bouillonne."
+  "fr": "La plaine bouillonne !"
  },
  "CinderPlain_Text_Quest0_Ask": {
   "en": "A FIRE STONE for my study. A\\nCHARCOAL in return.",
-  "fr": "Une PIERRE FEU pour mon étude. Un\\nCHARBON en échange."
+  "fr": "Une PIERRE FEU pour mon étude,\\ncontre un CHARBON !"
  },
  "CinderPlain_Text_Quest0_Done": {
   "en": "Hot data! Take this CHARCOAL.",
-  "fr": "Données brûlantes ! Prends ce\\nCHARBON."
+  "fr": "Données brûlantes ! Tiens, ce\\nCHARBON est pour toi."
  },
  "CinderPlain_Text_Quest0_MissT": {
   "en": "One FIRE STONE, please.",
-  "fr": "Une PIERRE FEU, s'il vous plaît."
+  "fr": "Une PIERRE FEU, s'il te plaît !"
  },
  "CinderPlain_Text_Quest0_NoRoomT": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
@@ -37,6 +37,6 @@
  },
  "CinderPlain_Text_TopazeFindFull": {
   "en": "Something shines here, but your BAG\\nis full.",
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
+  "fr": "Y a un truc qui brille ici, mais\\nton SAC est plein."
  }
 }

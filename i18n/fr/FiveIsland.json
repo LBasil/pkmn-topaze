@@ -9,7 +9,7 @@
  },
  "FiveIsland_Text_Lord1": {
   "en": "PHOEBE: The spirits whisper that you\\nhold six legends. They are not\\lafraid.\\pThey are curious. So am I!",
-  "fr": "PHOEBE : Les esprits murmurent que\\ntu tiens six légendes. Elles n'ont\\lpas peur.\\pElles sont curieuses. Moi aussi !"
+  "fr": "PHOEBE : Les esprits murmurent que\\ntu tiens six légendes. Elles ont\\lpas peur.\\pElles sont curieuses. Moi aussi !"
  },
  "FiveIsland_Text_Lord2": {
   "en": "The spirits are laughing.",
@@ -25,7 +25,7 @@
  },
  "FiveIsland_Text_LordEarly": {
   "en": "PHOEBE: Not yet. The old LEAGUE\\nand the MASTERS must fall first.\\lFLORA will tell you the way.",
-  "fr": "PHOEBE : Pas encore. L'ancienne\\nLIGUE et les MAÎTRES doivent\\ld'abord tomber. FLORA te montrera\\nle chemin."
+  "fr": "PHOEBE : Pas encore ! L'ancienne\\nLIGUE et les MAÎTRES doivent\\ld'abord tomber. FLORA te montrera\\nle chemin."
  },
  "FiveIsland_Text_LordIdle": {
   "en": "PHOEBE: The islands are quiet. I look\\nafter them, as I always have.",
@@ -33,7 +33,7 @@
  },
  "FiveIsland_Text_RefAfter": {
   "en": "NOEL: Take good care of it. The\\nnext REFUGE post is waiting.",
-  "fr": "NOEL : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
+  "fr": "NOEL : Prends-en soin ! Le prochain\\nposte du REFUGE t'attend."
  },
  "FiveIsland_Text_RefAsk": {
   "en": "NOEL: The herd is spooked. Hunters\\nburn the meadow to drive them into\\ltheir nets.",
@@ -41,27 +41,27 @@
  },
  "FiveIsland_Text_RefDone": {
   "en": "NOEL: Thank you again. The REFUGE\\nis safer because of you.",
-  "fr": "NOEL : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
+  "fr": "NOEL : Merci encore ! Le REFUGE\\nest plus sûr grâce à toi."
  },
  "FiveIsland_Text_RefEarly": {
   "en": "NOEL: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\lSAFARI ZONE knows the order.",
-  "fr": "NOEL : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\ldu PARC SAFARI connaît l'ordre."
+  "fr": "NOEL : Pas encore ! Finis d'abord\\nles postes précédents. Le GARDIEN\\ldu PARC SAFARI connaît l'ordre."
  },
  "FiveIsland_Text_RefGives": {
   "en": "NOEL: You saved the day. The post\\nhas a gift for you: TAUROS!",
-  "fr": "NOEL : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\lTAUROS !"
+  "fr": "NOEL : T'as sauvé la mise ! Le\\nposte a un cadeau pour toi :\\lun TAUROS !"
  },
  "FiveIsland_Text_RefHunter1": {
   "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!",
-  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Ne te mêle pas de ça,\\ppetit !"
+  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Mêle-toi pas de ça,\\ppetit !"
  },
  "FiveIsland_Text_RefHunter2": {
   "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!",
-  "fr": "CHASSEUR : Tu as battu mon\\nassocié ? Soit, je n'ai pas peur\\ld'un ranger !"
+  "fr": "CHASSEUR : T'as battu mon\\nassocié ? Soit, j'ai pas peur\\ld'un ranger !"
  },
  "FiveIsland_Text_RefIdle": {
   "en": "NOEL: I watch over the animals here.\\nThe world is quieter now.",
-  "fr": "NOEL : Je veille sur les animaux\\nici. Le monde est plus calme\\lmaintenant."
+  "fr": "NOEL : Je veille sur les animaux\\nici. Tout est plus calme\\lmaintenant."
  },
  "FiveIsland_Text_WeirdBuildingInMeadow": {
   "en": "Oh, this stinks. I wanted to play in\\nthe MEADOW.\\pBut they put up a weird building\\non it, so I can't play there.",

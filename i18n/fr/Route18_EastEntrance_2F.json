@@ -21,7 +21,7 @@
  },
  "Route18_EastEntrance_2F_Text_QuestNo": {
   "en": "You've caught {STR_VAR_1} kinds.\\nCome back at 80!",
-  "fr": "Tu as capturé {STR_VAR_1} espèces.\\nReviens à 80 !"
+  "fr": "T'as capturé {STR_VAR_1} espèces.\\nReviens à 80 !"
  },
  "Route18_EastEntrance_2F_Text_QuestNoRoom": {
   "en": "Your BAG is full. Make some\\nroom first!",

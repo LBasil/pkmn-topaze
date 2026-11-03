@@ -9,7 +9,7 @@
  },
  "SaffronCity_Text_AlliesMeet3": {
   "en": "FLORA: We are going up to face\\nhim. Every trainer that can still\\pstand has to try.\\pYou are not strong enough yet,\\nlittle one. Not for him.",
-  "fr": "FLORA : Nous montons l'affronter.\\nChaque dresseur encore debout doit\\lessayer.\\pTu n'es pas encore assez fort. Pas\\npour lui."
+  "fr": "FLORA : Nous montons l'affronter.\\nChaque dresseur encore debout doit\\lessayer.\\pTu es pas encore assez fort. Pas\\npour lui."
  },
  "SaffronCity_Text_AlliesMeet4": {
   "en": "N: Follow us if you must.\\nStay one floor behind.\\pAnd {PLAYER}… if we do not come\\ndown, remember what you saw.",
@@ -69,7 +69,7 @@
  },
  "SaffronCity_Text_GuardScared": {
   "en": "I didn't see anything!\\nThose three… I'm not paid enough!",
-  "fr": "Je n'ai rien vu ! Ces trois-là…\\nje ne suis pas assez payé !"
+  "fr": "J'ai rien vu ! Ces trois-là…\\nje ne suis pas assez payé !"
  },
  "SaffronCity_Text_GymSign": {
   "en": "HEMATOWN POKéMON GYM\\nLEADER: NOX\\lThe Shadow of the City!",
@@ -81,7 +81,7 @@
  },
  "SaffronCity_Text_HowCanClubNotRecognizeLance": {
   "en": "This FAN CLUB…\\nNo one here has a clue!\\pHow could they not recognize\\nthe brilliance that is LANCE?\\pHe stands for justice!\\nHe's cool, and yet passionate!\\lHe's the greatest, LANCE!",
-  "fr": "Ce CLUB DE FANS… Personne ici n'y\\ncomprend rien !\\pComment peuvent-ils ne pas\\nreconnaître la brillance de PETER ?\\pIl incarne la justice ! Il est\\ncool, et pourtant passionné ! C'est\\lle plus grand, PETER !"
+  "fr": "Ce CLUB DE FANS… Personne ici n'y\\ncomprend rien !\\pComment peuvent-ils pas\\nreconnaître la brillance de PETER ?\\pIl incarne la justice ! Il est\\ncool, et pourtant passionné ! C'est\\lle plus grand, PETER !"
  },
  "SaffronCity_Text_ImASecurityGuard": {
   "en": "I'm a security guard.\\pSuspicious kids I don't allow in!",
@@ -153,7 +153,7 @@
  },
  "SaffronCity_Text_RefGives": {
   "en": "HUGO: You saved the day. The post\\nhas a gift for you: SNORLAX!",
-  "fr": "HUGO : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\pRONFLEX !"
+  "fr": "HUGO : T'as sauvé la mise. Le\\nposte a un cadeau pour toi :\\pRONFLEX !"
  },
  "SaffronCity_Text_RefHunter1": {
   "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!",
@@ -161,7 +161,7 @@
  },
  "SaffronCity_Text_RefHunter2": {
   "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!",
-  "fr": "CHASSEUR : Tu as battu mon\\nassocié ? Soit, je n'ai pas peur\\ld'un ranger !"
+  "fr": "CHASSEUR : T'as battu mon\\nassocié ? Soit, j'ai pas peur\\ld'un ranger !"
  },
  "SaffronCity_Text_RefIdle": {
   "en": "HUGO: I watch over the animals here.\\nThe world is quieter now.",
@@ -221,6 +221,6 @@
  },
  "SaffronCity_Text_YouBeatTeamRocket": {
   "en": "You beat TEAM ONYBRIS all alone?\\nThat's amazing!",
-  "fr": "Tu as battu la TEAM ONYBRIS tout\\nseul ? C'est incroyable !"
+  "fr": "T'as battu la TEAM ONYBRIS tout\\nseul ? C'est incroyable !"
  }
 }

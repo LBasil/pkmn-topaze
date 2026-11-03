@@ -5,7 +5,7 @@
  },
  "Route10_Text_CarolIntro": {
   "en": "I'm feeling a bit faint.\\nI haven't hiked in some time.",
-  "fr": "Je me sens un peu faible. Je n'ai\\npas randonné depuis longtemps."
+  "fr": "Je me sens un peu faible. J'ai\\npas randonné depuis longtemps."
  },
  "Route10_Text_CarolPostBattle": {
   "en": "The POKéMON here are so chunky...\\pThe strange men in black were\\nthin as rails. Odd, no?",
@@ -13,7 +13,7 @@
  },
  "Route10_Text_ClarkDefeat": {
   "en": "Ha-haha!\\nNot laughing!\\lHa-hay fever! Haha-ha-choo!",
-  "fr": "Ha-haha ! Je ne ris pas ! Ha-rhume\\ndes foins ! Haha-ha-tchoum !"
+  "fr": "Ha-haha ! Je ris pas ! Ha-rhume\\ndes foins ! Haha-ha-tchoum !"
  },
  "Route10_Text_ClarkIntro": {
   "en": "Ha-hahah-ah-ha!",
@@ -33,7 +33,7 @@
  },
  "Route10_Text_HeidiPostBattle": {
   "en": "Men in black walked into ROCK\\nTUNNEL with a heavy sack.\\pThey did not even use a light.\\nWho does that?",
-  "fr": "Des hommes en noir sont entrés dans\\nle TUNNEL ROCHE avec un lourd sac.\\pIls n'avaient même pas de lumière.\\nQui fait ça ?"
+  "fr": "Des hommes en noir sont entrés dans\\nle TUNNEL ROCHE avec un lourd sac.\\pIls avaient même pas de lumière.\\nQui fait ça ?"
  },
  "Route10_Text_HermanDefeat": {
   "en": "Oh, no!\\nMy POKéMON!",
@@ -53,7 +53,7 @@
  },
  "Route10_Text_MarkIntro": {
   "en": "Wow, you came all the way here?\\nMaybe you're a POKéMANIAC, too?\\lWant to see my collection?",
-  "fr": "Waouh, tu viens jusqu'ici ? Tu es\\npeut-être aussi un POKéMANIAC ? Tu\\lveux voir ma collection ?"
+  "fr": "Waouh, tu viens jusqu'ici ? T'es\\npeut-être aussi un POKéMANIAC ? Tu\\lveux voir ma collection ?"
  },
  "Route10_Text_MarkPostBattle": {
   "en": "I have more rare POKéMON at home!",

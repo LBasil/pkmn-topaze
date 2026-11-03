@@ -73,7 +73,7 @@
  },
  "PalletTown_Text_Archive_Solved": {
   "en": "Seven ECHOES, seven stories closed.\\nThe archive is complete. You may\\pkeep these, they never fit on my\\nshelves.",
-  "fr": "Sept ÉCHOS, sept histoires closes.\\nL'archive est complète. Tu peux les\\lgarder, ils ne tenaient jamais sur\\nmes étagères."
+  "fr": "Sept ÉCHOS, sept histoires closes.\\nL'archive est complète. Tu peux les\\lgarder, ils tenaient jamais sur\\nmes étagères."
  },
  "PalletTown_Text_CanStoreItemsAndMonsInPC": {
   "en": "Technology is incredible!\\pYou can now store and recall items\\nand POKéMON as data via PC.",
@@ -97,7 +97,7 @@
  },
  "PalletTown_Text_FatManB": {
   "en": "Did you hear? Robbers hit the school\\nand the LAB! They even copied files\\lfrom the PC network.\\pDon't leave anything precious in the\\nPC today.",
-  "fr": "Tu as entendu ? Des voleurs ont\\nfrappé l'école et le LABO ! Ils ont\\lmême copié des fichiers du réseau\\nde PC.\\pNe laisse rien de précieux dans le\\nPC aujourd'hui."
+  "fr": "T'as entendu ? Des voleurs ont\\nfrappé l'école et le LABO ! Ils ont\\lmême copié des fichiers du réseau\\nde PC.\\pNe laisse rien de précieux dans le\\nPC aujourd'hui."
  },
  "PalletTown_Text_MineHint": {
   "en": "A rumble comes from the old mine\\nnorth of town. Its gate is open.\\pWhatever the AURA left down there,\\nit is waiting at the bottom.\\p(Then follow MEW to APATIA's dock,\\nand talk to the sailor.)",
@@ -109,7 +109,7 @@
  },
  "PalletTown_Text_OakGrassUnsafeNeedMon": {
   "en": "OAK: Hey, kid! Be careful!\\nWild POKéMON live in tall grass.\\p{PLAYER}: But how can I catch my\\nfirst POKéMON if I never meet one?\\pOAK: Hm… Tell me, how old are you?\\p{PLAYER}: Fourteen.\\pOAK: I see. Come with me to my\\nLAB, kid.",
-  "fr": "CHEN : Hé, petit ! Fais attention !\\nDes POKéMON sauvages vivent dans\\lles hautes herbes.\\p{PLAYER} : Mais comment capturer mon\\npremier POKéMON si je n'en croise\\ljamais ?\\pCHEN : Hm… Quel âge as-tu ?\\p{PLAYER} : Quatorze ans.\\pCHEN : Je vois. Suis-moi à mon\\nLABO, petit."
+  "fr": "CHEN : Hé, petit ! Fais attention !\\nDes POKéMON sauvages vivent dans\\lles hautes herbes.\\p{PLAYER} : Mais comment capturer mon\\npremier POKéMON si j'en croise\\ljamais ?\\pCHEN : Hm… Quel âge as-tu ?\\p{PLAYER} : Quatorze ans.\\pCHEN : Je vois. Suis-moi à mon\\nLABO, petit."
  },
  "PalletTown_Text_OakLetMeSeePokedex": {
   "en": "OAK: Ah, {PLAYER}!\\nYou're back, are you?\\pHow much have you filled in your\\nPOKéDEX?\\pMay I see it?\\pLet's see…",
@@ -129,7 +129,7 @@
  },
  "PalletTown_Text_OnybrisGruntVictory": {
   "en": "Hah! Too easy.\\nBut we don't need you anyway.",
-  "fr": "Hah ! Trop facile. Mais on n'a pas\\nbesoin de toi de toute façon."
+  "fr": "Hah ! Trop facile. Mais on a pas\\nbesoin de toi de toute façon."
  },
  "PalletTown_Text_PlayersHouse": {
   "en": "{PLAYER}'s house",
@@ -141,7 +141,7 @@
  },
  "PalletTown_Text_ProcheAdrian_Defeat": {
   "en": "You flew higher than all of us.",
-  "fr": "Tu as volé plus haut que nous tous."
+  "fr": "T'as volé plus haut que nous tous."
  },
  "PalletTown_Text_ProcheAdrian_Early": {
   "en": "Not yet, {PLAYER}. Finish your\\njourney first, then come and find\\pme.",
@@ -161,7 +161,7 @@
  },
  "PalletTown_Text_ProcheAdrian_Win": {
   "en": "Take it. You have earned the sky.",
-  "fr": "Prends-le. Tu as mérité le ciel."
+  "fr": "Prends-le. T'as mérité le ciel."
  },
  "PalletTown_Text_RaisingMonsToo": {
   "en": "I'm raising POKéMON, too.\\pWhen they get strong, they can\\nprotect me.",
@@ -193,11 +193,11 @@
  },
  "PalletTown_Text_RanchMom1": {
   "en": "MOM: {PLAYER}!!\\nAre you hurt? The whole town heard\\lthe alarm!\\p...Is that a POKéMON? Your first one?\\nOh, look at you. You look so proud.\\pListen, the SCHOOL was broken into\\ntoo. Your teacher is waiting for you.\\pIf you're going to travel with that\\nlittle one, you should learn what has\\lchanged first.\\pAnd take this with you. It has been in\\nour family a long time.",
-  "fr": "MAMAN : {PLAYER} !! Tu n'as rien ?\\nToute la ville a entendu l'alarme !\\p…C'est un POKéMON ? Ton premier ?\\nOh, regarde-toi. Tu as l'air si\\lfier.\\pÉcoute, l'ÉCOLE a été cambriolée\\naussi. Ta maîtresse t'attend.\\pSi tu voyages avec ce petit, tu\\ndois d'abord apprendre ce qui a\\lchangé.\\pEt emporte ça avec toi. C'est dans\\nnotre famille depuis longtemps."
+  "fr": "MAMAN : {PLAYER} !! T'as rien ?\\nToute la ville a entendu l'alarme !\\p…C'est un POKéMON ? Ton premier ?\\nOh, regarde-toi. T'as l'air si\\lfier.\\pÉcoute, l'ÉCOLE a été cambriolée\\naussi. Ta maîtresse t'attend.\\pSi tu voyages avec ce petit, tu\\ndois d'abord apprendre ce qui a\\lchangé.\\pEt emporte ça avec toi. C'est dans\\nnotre famille depuis longtemps."
  },
  "PalletTown_Text_RanchMom2": {
   "en": "MOM: Keep it close, and don't lose it.\\pCome home whenever you need a rest.\\nI'll be waiting.",
-  "fr": "MAMAN : Garde-le près de toi, et ne\\nle perds pas.\\pReviens à la maison quand tu as\\nbesoin de repos. Je t'attendrai."
+  "fr": "MAMAN : Garde-le près de toi, et ne\\nle perds pas.\\pReviens à la maison quand t'as\\nbesoin de repos. Je t'attendrai."
  },
  "PalletTown_Text_RanchOakAfter": {
   "en": "OAK: ...Well! That was a real battle,\\n{PLAYER}. Your partner trusts you.\\pI must see what they did to my LAB.\\nStay safe, both of you!",
@@ -253,7 +253,7 @@
  },
  "PalletTown_Text_RefGives": {
   "en": "AYA: You saved the day. The post\\nhas a gift for you: EEVEE!",
-  "fr": "AYA : Tu as sauvé la mise. Le poste\\na un cadeau pour toi : ÉVOLI !"
+  "fr": "AYA : T'as sauvé la mise. Le poste\\na un cadeau pour toi : ÉVOLI !"
  },
  "PalletTown_Text_RefIdle": {
   "en": "AYA: I watch over the animals here.\\nThe world is quieter now.",
@@ -273,7 +273,7 @@
  },
  "PalletTown_Text_RivalGrassUnsafeNeedMon": {
   "en": "{RIVAL}: The tall grass is full of\\nwild POKéMON, and you've got\\lnothing to fight with!\\p{PLAYER}: But I've waited all my life\\nto start my journey!\\p{RIVAL}: Then come to our RANCH.\\nMy dad and PROF. OAK are there.\\pThey'll know what to do.\\nFollow me!",
-  "fr": "{RIVAL} : L'herbe haute est pleine\\nde POKéMON sauvages, et tu n'as\\lrien pour te battre !\\p{PLAYER} : Mais j'ai attendu toute\\nma vie pour commencer mon voyage !\\p{RIVAL} : Alors viens à notre\\nRANCH. Mon père et le PROF. CHEN y\\lsont.\\pIls sauront quoi faire. Suis-moi !"
+  "fr": "{RIVAL} : L'herbe haute est pleine\\nde POKéMON sauvages, et tu as\\lrien pour te battre !\\p{PLAYER} : Mais j'ai attendu toute\\nma vie pour commencer mon voyage !\\p{RIVAL} : Alors viens à notre\\nRANCH. Mon père et le PROF. CHEN y\\lsont.\\pIls sauront quoi faire. Suis-moi !"
  },
  "PalletTown_Text_RivalsHouse": {
   "en": "{RIVAL}'s family RANCH",

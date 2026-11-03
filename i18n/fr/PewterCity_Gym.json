@@ -1,11 +1,11 @@
 {
  "PewterCity_Gym_Text_BrockDefeat": {
   "en": "Hah... I was burning too bright\\nand you stayed calm. Fair enough.\\pTake the PYROPE BADGE.\\p{FONT_NORMAL}{PLAYER} received the PYROPE BADGE\\nfrom KAY!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\\p{FONT_MALE}The PYROPE BADGE makes your\\nPOKéMON more powerful.\\pIt also lets you use FLASH outside\\nof battle, if you carry the HM.",
-  "fr": "Hah… Je brûlais trop fort et tu es\\nresté calme. C'est de bonne guerre.\\pPrends le BADGE PYROPE.\\p{FONT_NORMAL}{PLAYER} a reçu le BADGE PYROPE de\\nKAY!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\\p{FONT_MALE}Le BADGE PYROPE rend tes POKéMON\\nplus puissants.\\pIl permet aussi d'utiliser FLASH\\nhors combat, si tu as la CS."
+  "fr": "Hah… Je brûlais trop fort et t'es\\nresté calme. C'est de bonne guerre.\\pPrends le BADGE PYROPE.\\p{FONT_NORMAL}{PLAYER} a reçu le BADGE PYROPE de\\nKAY!{PAUSE_MUSIC}{PLAY_BGM}{MUS_OBTAIN_BADGE}{PAUSE 0xFE}{PAUSE 0x56}{RESUME_MUSIC}\\p{FONT_MALE}Le BADGE PYROPE rend tes POKéMON\\nplus puissants.\\pIl permet aussi d'utiliser FLASH\\nhors combat, si t'as la CS."
  },
  "PewterCity_Gym_Text_BrockIntro": {
   "en": "So, you made it through OPANIHRUM\\nand the forest. I'm KAY, LEADER\\pof PYROPIA GYM.\\pThis town sleeps on a volcano.\\nHeat, pressure, patience... that\\pis how we live, and that is how\\nmy POKéMON fight.\\pThey are all FIRE-type! Since the\\nAURA changed everything ten years\\pago, even ordinary flames burn\\ndifferently.\\pIf you think you can take the\\nheat, come on. Show me your\\pbest!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
-  "fr": "Alors, tu as traversé OPANIHRUM et\\nla forêt. Je suis KAY, CHAMPIONNE\\lde l'ARÈNE DE PYROPIA.\\pCette ville dort sur un volcan.\\nChaleur, pression, patience…\\pc'est ainsi que nous vivons, et\\nainsi que mes POKéMON combattent.\\pIls sont tous de type FEU ! Depuis\\nque l'AURA a tout changé il y a dix\\lans, même les flammes ordinaires\\nbrûlent différemment.\\pSi tu penses pouvoir supporter la\\nchaleur, viens. Montre-moi ton\\lmeilleur !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
+  "fr": "Alors, t'as traversé OPANIHRUM et\\nla forêt. Je suis KAY, CHAMPIONNE\\lde l'ARÈNE DE PYROPIA.\\pCette ville dort sur un volcan.\\nChaleur, pression, patience…\\pc'est ainsi que nous vivons, et\\nainsi que mes POKéMON combattent.\\pIls sont tous de type FEU ! Depuis\\nque l'AURA a tout changé il y a dix\\lans, même les flammes ordinaires\\nbrûlent différemment.\\pSi tu penses pouvoir supporter la\\nchaleur, viens. Montre-moi ton\\lmeilleur !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
  },
  "PewterCity_Gym_Text_BrockPostBattle": {
   "en": "Last night TEAM ONYBRIS broke into\\nthe MUSEUM and took the PYROPE, our\\ptown's garnet. I heard they hit\\nGRENALUX the same way.\\pThey left by the east road with a\\nfull night's head start.\\pThey say POKé BALLS are chains.\\nMaybe so. But a chain you choose\\pand a chain someone forces on you\\nare not the same thing.\\pGo on to TOURMALIA. SYLVESTRE\\nwill not go easy on you.",
@@ -57,7 +57,7 @@
  },
  "PewterCity_Gym_Text_LetMeTakeYouToTheTop": {
   "en": "Hiya!\\nDo you want to dream big?\\pDo you dare to dream of becoming\\nthe POKéMON champ?\\pI'm no TRAINER, but I can advise\\nyou on how to win.\\pLet me take you to the top!",
-  "fr": "Salut !\\nVeux-tu rêver grand ?\\pOses-tu rêver de devenir champion\\nPOKéMON ?\\pJe ne suis pas DRESSEUR, mais je\\npeux te conseiller pour gagner.\\pLaisse-moi t'emmener au sommet !"
+  "fr": "Salut !\\nVeux-tu rêver grand ?\\pOses-tu rêver de devenir champion\\nPOKéMON ?\\pJe suis pas DRESSEUR, mais je\\npeux te conseiller pour gagner.\\pLaisse-moi t'emmener au sommet !"
  },
  "PewterCity_Gym_Text_LetsGetHappening": {
   "en": "All right!\\nLet's get happening!",
@@ -73,7 +73,7 @@
  },
  "PewterCity_Gym_Text_LiamPostBattle": {
   "en": "You're pretty hot. ...But not as\\nhot as KAY!",
-  "fr": "Tu es plutôt chaud. …Mais pas\\naussi chaud que KAY !"
+  "fr": "T'es plutôt chaud. …Mais pas\\naussi chaud que KAY !"
  },
  "PewterCity_Gym_Text_ReceivedTM39FromBrock": {
   "en": "{PLAYER} received TM39\\nfrom KAY.",

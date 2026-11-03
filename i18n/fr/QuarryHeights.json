@@ -21,7 +21,7 @@
  },
  "QuarryHeights_Text_Quest0_MissT": {
   "en": "One IRON, please. The APOTHECARY\\nsells it.",
-  "fr": "Un FER, s'il vous plaît.\\nL'APOTHICAIRE en vend."
+  "fr": "Un FER, s'il te plaît.\\nL'APOTHICAIRE en vend."
  },
  "QuarryHeights_Text_Quest0_NoRoomT": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
@@ -37,6 +37,6 @@
  },
  "QuarryHeights_Text_TopazeFindFull": {
   "en": "Something shines here, but your BAG\\nis full.",
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
+  "fr": "Y a un truc qui brille ici, mais\\nton SAC est plein."
  }
 }

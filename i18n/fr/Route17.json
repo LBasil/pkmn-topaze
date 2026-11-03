@@ -105,7 +105,7 @@
  },
  "Route17_Text_RaulIntro": {
   "en": "There's no getting rich quick in\\nbattling kids.",
-  "fr": "On ne s'enrichit pas vite en\\nbattant des gamins."
+  "fr": "On s'enrichit pas vite en\\nbattant des gamins."
  },
  "Route17_Text_RaulPostBattle": {
   "en": "You can find good stuff lying\\naround on CYCLING ROAD.\\pThere's good money in picking them\\nup and selling them.",
@@ -137,7 +137,7 @@
  },
  "Route17_Text_WilliamDefeat": {
   "en": "Are you satisfied?",
-  "fr": "Tu es satisfait ?"
+  "fr": "T'es satisfait ?"
  },
  "Route17_Text_WilliamIntro": {
   "en": "Get lost, kid!\\nI'm bushed!",
@@ -153,7 +153,7 @@
  },
  "Route17_Text_ZeekIntro": {
   "en": "I leveled up my POKéMON, but it\\nwon't evolve. Why?",
-  "fr": "J'ai fait monter mon POKéMON de\\nniveau, mais il n'évolue pas.\\pPourquoi ?"
+  "fr": "J'ai fait monter mon POKéMON de\\nniveau, mais il évolue pas.\\pPourquoi ?"
  },
  "Route17_Text_ZeekPostBattle": {
   "en": "Maybe some POKéMON need element\\nSTONES to evolve.",

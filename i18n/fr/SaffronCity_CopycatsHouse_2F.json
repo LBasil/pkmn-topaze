@@ -9,11 +9,11 @@
  },
  "SaffronCity_CopycatsHouse_2F_Text_MimickingFavoriteHobbyFemale": {
   "en": "{PLAYER}: Hi.\\nYou must like POKéMON.\\p{PLAYER}: No, not me.\\nI asked you.\\p{PLAYER}: Pardon?\\nYou're weird!\\l \\lCOPYCAT: Hmm? Quit mimicking?\\lBut that's my favorite hobby!",
-  "fr": "{PLAYER} : Salut. Tu dois aimer les\\nPOKéMON.\\p{PLAYER} : Non, pas moi. C'est à toi\\nque je demande.\\p{PLAYER} : Pardon ? Tu es bizarre !\\pCOPYCAT : Hmm ? Arrête d'imiter ?\\nMais c'est mon passe-temps\\lpréféré !"
+  "fr": "{PLAYER} : Salut. Tu dois aimer les\\nPOKéMON.\\p{PLAYER} : Non, pas moi. C'est à toi\\nque je demande.\\p{PLAYER} : Pardon ? T'es bizarre !\\pCOPYCAT : Hmm ? Arrête d'imiter ?\\nMais c'est mon passe-temps\\lpréféré !"
  },
  "SaffronCity_CopycatsHouse_2F_Text_MimickingFavoriteHobbyMale": {
   "en": "{PLAYER}: Hi!\\nDo you like POKéMON?\\p{PLAYER}: Uh, no, I just asked you.\\p{PLAYER}: Huh?\\nYou're strange!\\pCOPYCAT: Hmm? Quit mimicking?\\nBut, that's my favorite hobby!",
-  "fr": "{PLAYER} : Salut ! Tu aimes les\\nPOKéMON ?\\p{PLAYER} : Euh, non, je viens de te\\nle demander.\\p{PLAYER} : Hein ? Tu es bizarre !\\pCOPYCAT : Hmm ? Arrête d'imiter ?\\nMais c'est mon passe-temps\\lpréféré !"
+  "fr": "{PLAYER} : Salut ! Tu aimes les\\nPOKéMON ?\\p{PLAYER} : Euh, non, je viens de te\\nle demander.\\p{PLAYER} : Hein ? T'es bizarre !\\pCOPYCAT : Hmm ? Arrête d'imiter ?\\nMais c'est mon passe-temps\\lpréféré !"
  },
  "SaffronCity_CopycatsHouse_2F_Text_MySecrets": {
   "en": "…\\pMy Secrets!\\pSkill: Mimicry!\\nHobby: Collecting dolls!\\lFavorite POKéMON: CLEFAIRY!",

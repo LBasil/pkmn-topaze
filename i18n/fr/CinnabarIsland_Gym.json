@@ -13,19 +13,19 @@
  },
  "CinnabarIsland_Gym_Text_BlaineDefeat": {
   "en": "Whoa! You short-circuited me!\\pThat was a good fight! Take the\\nTOPAZ BADGE!",
-  "fr": "Whoa ! Tu m'as court-circuité !\\pQuel bon combat ! Prends le\\nBADGE TOPAZE !"
+  "fr": "Aïe ! Tu m'as court-circuité !\\pQuel bon combat ! Prends le\\nBADGE TOPAZE !"
  },
  "CinnabarIsland_Gym_Text_BlaineIntro": {
   "en": "Hah! Welcome to CHRONDROLIA GYM!\\pI am EDDIE, and I am wired! My\\nELECTRIC POKéMON light up this\\pwhole yellow city.\\pBefore you get to them, answer my\\nquiz or beat my trainers! Either\\pway, you will feel the shock!\\pCome on, let's turn up the\\nvoltage!",
-  "fr": "Hah ! Bienvenue à l'ARÈNE DE\\nCHRONDROLIA !\\pJe suis EDDIE, et je suis branché !\\nMes POKéMON ÉLECTRIK illuminent\\ltoute cette ville jaune.\\pAvant de les affronter, réponds à\\nmon quiz ou bats mes dresseurs !\\pDe toute façon, tu vas sentir la\\ndécharge !\\pAllez, montons le voltage !"
+  "fr": "Hah ! Bienvenue à l'ARÈNE DE\\nCHRONDROLIA !\\pJe suis EDDIE, et je suis branché !\\nMes POKéMON ÉLECTRIK illuminent\\ltoute cette ville jaune.\\pAvant de les affronter, réponds à\\nmon quiz ou bats mes dresseurs !\\pDe toute façon, tu vas sentir la\\ndécharge !\\pAllez, on monte le voltage !"
  },
  "CinnabarIsland_Gym_Text_BlainePostBattle": {
   "en": "Hah! That was electric!\\pYou are nearly at the top.\\nOPANIHRUM's LEADER is back, and\\pshe is not one to bend easily.",
-  "fr": "Hah ! C'était électrique !\\pTu es presque au sommet. La\\nCHAMPIONNE d'OPANIHRUM est de\\lretour, et elle ne plie pas\\nfacilement."
+  "fr": "Hah ! C'était électrique !\\pTu es presque au sommet. La\\nCHAMPIONNE d'OPANIHRUM est de\\lretour, et elle plie pas\\nfacilement."
  },
  "CinnabarIsland_Gym_Text_BlaineRebel1": {
   "en": "EDDIE: Hot-blooded or cold-hearted,\\nyou took the throne. Let me taste\\lthe fire of your six legends!",
-  "fr": "EDDIE : Sang chaud ou cœur froid,\\ntu as pris le trône. Que je goûte\\lau feu de tes six légendes !"
+  "fr": "EDDIE : Sang chaud ou cœur froid,\\nt'as pris le trône. Que je goûte\\lau feu de tes six légendes !"
  },
  "CinnabarIsland_Gym_Text_BlaineRebel2": {
   "en": "Burnt to ash...\\nbut I am smiling.",
@@ -33,15 +33,15 @@
  },
  "CinnabarIsland_Gym_Text_BlaineRebel3": {
   "en": "EDDIE: Hah! That's the spirit. The\\nflame is yours to guard. Take this.",
-  "fr": "EDDIE : Hah ! Voilà l'esprit. La\\nflamme est à toi de la garder.\\pPrends ça."
+  "fr": "EDDIE : Hah ! Voilà l'esprit ! La\\nflamme, à toi de la garder.\\pPrends ça."
  },
  "CinnabarIsland_Gym_Text_BlaineVisit1": {
   "en": "EDDIE: Hah! You let the star go, kid.\\nBurn bright! Take this.",
-  "fr": "EDDIE : Hah ! Tu as laissé partir\\nl'étoile. Brille de mille feux !\\lPrends ça."
+  "fr": "EDDIE : Hah ! T'as laissé partir\\nl'étoile. Brille de mille feux !\\lPrends ça."
  },
  "CinnabarIsland_Gym_Text_BlaineVisit2": {
   "en": "EDDIE: No more BALLS? Fine by me.\\nTake these, you're warmed up.",
-  "fr": "EDDIE : Plus de BALLS ? Ça me va.\\nPrends ça, tu es échauffé."
+  "fr": "EDDIE : Plus de BALLS ? Ça me va.\\nPrends ça, t'es échauffé."
  },
  "CinnabarIsland_Gym_Text_BlaineVisit3": {
   "en": "EDDIE: Six legends! Hah! Show them\\nthe fire that built you. Take this.",
@@ -61,7 +61,7 @@
  },
  "CinnabarIsland_Gym_Text_DerekPostBattle": {
   "en": "Our LEADER, EDDIE, became lost\\nin the mountains but good.\\pNight fell when a bird of lightning\\nappeared.\\pIts light allowed EDDIE to find\\nhis way down safely.",
-  "fr": "Notre CHAMPION, EDDIE, s'était\\nperdu dans les montagnes, mais bien\\lperdu.\\pLa nuit tombait quand un oiseau de\\nfoudre est apparu.\\pSa lumière a permis à EDDIE de\\nretrouver son chemin en sécurité."
+  "fr": "Notre CHAMPION, EDDIE, s'était\\nperdu dans les montagnes, mais bien\\lperdu.\\pLa nuit tombait quand un oiseau de\\nfoudre est apparu.\\pSa lumière a aidé EDDIE à\\nretrouver son chemin !"
  },
  "CinnabarIsland_Gym_Text_DustyDefeat": {
   "en": "Yowza!\\nToo much current!",
@@ -73,7 +73,7 @@
  },
  "CinnabarIsland_Gym_Text_DustyPostBattle": {
   "en": "PIKACHU, MAGNETON…\\nThose are popular ELECTRIC POKéMON.",
-  "fr": "PIKACHU, MAGNÉTON… Ce sont des\\nPOKéMON ÉLECTRIK populaires."
+  "fr": "PIKACHU, MAGNÉTON… Des POKéMON\\nÉLECTRIK très populaires !"
  },
  "CinnabarIsland_Gym_Text_ErikDefeat": {
   "en": "Yow!\\nWhat a shock!",
@@ -89,7 +89,7 @@
  },
  "CinnabarIsland_Gym_Text_ExplainVolcanoBadge": {
   "en": "The TOPAZ BADGE makes your\\nPOKéMON obey up to Lv. 90.\\pIt also lets you use WATERFALL,\\nif you carry the HM.\\pHere, you can have this, too!",
-  "fr": "Le BADGE TOPAZE fait obéir tes\\nPOKéMON jusqu'au Niv. 90.\\pIl permet aussi d'utiliser CASCADE,\\nsi tu as la CS.\\pTiens, prends ça aussi !"
+  "fr": "Le BADGE TOPAZE fait obéir tes\\nPOKéMON jusqu'au Niv. 90.\\pIl permet aussi d'utiliser CASCADE,\\nsi t'as la CS.\\pTiens, prends ça aussi !"
  },
  "CinnabarIsland_Gym_Text_FireBlastIsUltimateFireMove": {
   "en": "TM24 contains THUNDERBOLT.\\pThe ultimate sparky move. It may\\neven paralyze the target!",
@@ -97,7 +97,7 @@
  },
  "CinnabarIsland_Gym_Text_GymGuyAdvice": {
   "en": "Yo!\\nChamp in the making!\\pThe hotheaded EDDIE is an ELECTRIC\\nPOKéMON pro.\\pGround-types shrug off his shocks!\\pYou'd better take some\\nPARALYZ HEALS, too.",
-  "fr": "Yo !\\nFutur champion !\\pEDDIE la tête brûlée est un pro des\\nPOKéMON ÉLECTRIK.\\pLes types SOL se moquent de ses\\ndécharges !\\pTu ferais bien de prendre aussi des\\nANTI-PARA."
+  "fr": "Yo !\\nFutur champion !\\pEDDIE la tête brûlée est un pro des\\nPOKéMON ÉLECTRIK.\\pLes types SOL se moquent de ses\\ndécharges !\\pT'as intérêt à prendre aussi des\\nANTI-PARA."
  },
  "CinnabarIsland_Gym_Text_GymGuyPostVictory": {
   "en": "{PLAYER}!\\nYou beat that live wire!",
@@ -125,11 +125,11 @@
  },
  "CinnabarIsland_Gym_Text_QuinnIntro": {
   "en": "I was a thief, but I went straight\\nas a TRAINER.",
-  "fr": "J'étais un voleur, mais je suis\\ndevenu DRESSEUR honnête."
+  "fr": "J'étais un voleur, mais je suis\\ndevenu un DRESSEUR honnête."
  },
  "CinnabarIsland_Gym_Text_QuinnPostBattle": {
   "en": "I get this uncontrollable urge to\\nsteal other people's POKéMON.",
-  "fr": "J'ai une envie irrépressible de\\nvoler les POKéMON des autres."
+  "fr": "J'ai une envie irrépressible de\\nvoler les POKéMON des autres !"
  },
  "CinnabarIsland_Gym_Text_QuizQuestion1": {
   "en": "CATERPIE evolves into METAPOD?",
@@ -161,11 +161,11 @@
  },
  "CinnabarIsland_Gym_Text_RamonIntro": {
   "en": "I like using ELECTRIC-type POKéMON.\\nI just do.",
-  "fr": "J'aime utiliser des POKéMON de type\\nÉLECTRIK. C'est comme ça."
+  "fr": "J'aime les POKéMON de type\\nÉLECTRIK. C'est comme ça !"
  },
  "CinnabarIsland_Gym_Text_RamonPostBattle": {
   "en": "I wish there were a thief POKéMON.\\nI'd use that!",
-  "fr": "J'aimerais qu'il existe un POKéMON\\nvoleur. Je l'utiliserais !"
+  "fr": "J'aimerais qu'il existe un POKéMON\\nvoleur. Je m'en servirais !"
  },
  "CinnabarIsland_Gym_Text_ReceivedTM38FromBlaine": {
   "en": "{PLAYER} received TM24\\nfrom EDDIE.",
@@ -185,6 +185,6 @@
  },
  "CinnabarIsland_Gym_Text_ZacPostBattle": {
   "en": "Ground beats electric, of course.\\pBut electric zaps water, so the\\nELECTRIC type beats WATER POKéMON.",
-  "fr": "SOL bat ÉLECTRIK, bien sûr.\\pMais l'électricité frappe l'eau,\\ndonc le type ÉLECTRIK bat les\\lPOKéMON EAU."
+  "fr": "SOL bat ÉLECTRIK, bien sûr.\\pMais l'électricité frappe l'eau,\\ndonc ÉLECTRIK bat les POKéMON\\lEAU."
  }
 }

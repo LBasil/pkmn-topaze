@@ -97,7 +97,7 @@
  },
  "VermilionCity_Text_RefAsk": {
   "en": "ELISE: A BELDUM was found half-buried\\nafter the storm. It barely moves.\\pTwo REVIVES, please. It deserves a\\nchance.",
-  "fr": "ELISE : Un TERHAL a été trouvé à\\nmoitié enterré après la tempête. Il\\lbouge à peine.\\pDeux RAPPELS, s'il vous plaît. Il\\nmérite une chance."
+  "fr": "ELISE : Un TERHAL a été trouvé à\\nmoitié enterré après la tempête. Il\\lbouge à peine.\\pDeux RAPPELS, s'il te plaît. Il\\nmérite une chance."
  },
  "VermilionCity_Text_RefDone": {
   "en": "ELISE: Thank you again. The REFUGE\\nis safer because of you.",
@@ -109,7 +109,7 @@
  },
  "VermilionCity_Text_RefGives": {
   "en": "ELISE: You saved the day. The post\\nhas a gift for you: BELDUM!",
-  "fr": "ELISE : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\lTERHAL !"
+  "fr": "ELISE : T'as sauvé la mise. Le\\nposte a un cadeau pour toi :\\lTERHAL !"
  },
  "VermilionCity_Text_RefIdle": {
   "en": "ELISE: I watch over the animals here.\\nThe world is quieter now.",
@@ -125,7 +125,7 @@
  },
  "VermilionCity_Text_Route2AideHasPackageForYou": {
   "en": "Oh, hello, {PLAYER}!\\nHow are you doing?\\pIt's me, one of PROF. OAK's AIDES.\\pDid you meet the other AIDE?\\pHe had a package from PROF. OAK\\nfor you, {PLAYER}.\\pHe said he'd look for you around\\nROUTE 2, {PLAYER}.\\pIf you're in the ROUTE 2 area,\\nplease look for him.",
-  "fr": "Oh, bonjour, {PLAYER} !\\nComment vas-tu ?\\pC'est moi, l'un des ASSISTANTS du\\nPROF. CHEN.\\pAs-tu rencontré l'autre ASSISTANT ?\\pIl avait un colis du PROF. CHEN\\npour toi, {PLAYER}.\\pIl a dit qu'il te chercherait vers\\nla ROUTE 2, {PLAYER}.\\pSi tu es dans la zone de la ROUTE\\n2, cherche-le, s'il te plaît."
+  "fr": "Oh, bonjour, {PLAYER} !\\nComment vas-tu ?\\pC'est moi, l'un des ASSISTANTS du\\nPROF. CHEN.\\pAs-tu rencontré l'autre ASSISTANT ?\\pIl avait un colis du PROF. CHEN\\npour toi, {PLAYER}.\\pIl a dit qu'il te chercherait vers\\nla ROUTE 2, {PLAYER}.\\pSi t'es dans la zone de la ROUTE\\n2, cherche-le, s'il te plaît."
  },
  "VermilionCity_Text_SSAnneHasDepartedForYear": {
   "en": "So, the S.S. ANNE has departed?\\pShe'll be back in APATIA about\\nthis time next year.",

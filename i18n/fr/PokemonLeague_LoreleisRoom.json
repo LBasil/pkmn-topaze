@@ -9,7 +9,7 @@
  },
  "PokemonLeague_LoreleisRoom_Text_Elder0Defeat": {
   "en": "You cracked my defense...",
-  "fr": "Tu as brisé ma défense…"
+  "fr": "T'as brisé ma défense…"
  },
  "PokemonLeague_LoreleisRoom_Text_Elder0Intro": {
   "en": "COUNCIL OF ELDERS, 1 OF 20.\\pBROCK: My defense is rock solid.\\pShow me you can break it!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
@@ -21,7 +21,7 @@
  },
  "PokemonLeague_LoreleisRoom_Text_Elder10Intro": {
   "en": "COUNCIL OF ELDERS, 11 OF 20.\\pLANCE: The dragons knew you would\\ncome back.\\pLet me see how far you have grown.{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
-  "fr": "CONSEIL DES ANCIENS, 11 SUR 20.\\pLANCE : Les dragons savaient que tu\\nreviendrais.\\pVoyons jusqu'où tu as\\ngrandi.{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
+  "fr": "CONSEIL DES ANCIENS, 11 SUR 20.\\pLANCE : Les dragons savaient que tu\\nreviendrais.\\pVoyons jusqu'où t'as\\ngrandi.{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
  },
  "PokemonLeague_LoreleisRoom_Text_Elder11Defeat": {
   "en": "The dream was true...",
@@ -89,7 +89,7 @@
  },
  "PokemonLeague_LoreleisRoom_Text_Elder19Defeat": {
   "en": "Splendid! You are a true MASTER.",
-  "fr": "Splendide ! Tu es un vrai MAÎTRE."
+  "fr": "Splendide ! T'es un vrai MAÎTRE."
  },
  "PokemonLeague_LoreleisRoom_Text_Elder19Intro": {
   "en": "COUNCIL OF ELDERS, 20 OF 20.\\pWALLACE: Beauty and strength, both.\\pThe last of the old guard\\nstands before you.{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
@@ -97,7 +97,7 @@
  },
  "PokemonLeague_LoreleisRoom_Text_Elder1Defeat": {
   "en": "Wow! You are a real CHAMPION!",
-  "fr": "Waouh ! Tu es un vrai CHAMPION !"
+  "fr": "Waouh ! T'es un vrai CHAMPION !"
  },
  "PokemonLeague_LoreleisRoom_Text_Elder1Intro": {
   "en": "COUNCIL OF ELDERS, 2 OF 20.\\pMISTY: Water POKéMON are not\\njust pretty!\\pDive in, CHAMPION!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
@@ -113,7 +113,7 @@
  },
  "PokemonLeague_LoreleisRoom_Text_Elder3Defeat": {
   "en": "Oh my... You bloomed beautifully.",
-  "fr": "Oh là là… Tu as fleuri\\nmagnifiquement."
+  "fr": "Oh là là… T'as fleuri\\nmagnifiquement."
  },
  "PokemonLeague_LoreleisRoom_Text_Elder3Intro": {
   "en": "COUNCIL OF ELDERS, 4 OF 20.\\pERIKA: Oh, hello. I was watering\\nthe flowers.\\pShall we have a gentle battle?{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
@@ -121,11 +121,11 @@
  },
  "PokemonLeague_LoreleisRoom_Text_Elder4Defeat": {
   "en": "I did not foresee this...",
-  "fr": "Je n'avais pas prévu ça…"
+  "fr": "J'avais pas prévu ça…"
  },
  "PokemonLeague_LoreleisRoom_Text_Elder4Intro": {
   "en": "COUNCIL OF ELDERS, 5 OF 20.\\pSABRINA: I foresaw this battle.\\pI did not foresee how it ends.{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
-  "fr": "CONSEIL DES ANCIENS, 5 SUR 20.\\pSABRINA : J'avais prévu ce combat.\\pJe n'avais pas prévu sa\\nfin.{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
+  "fr": "CONSEIL DES ANCIENS, 5 SUR 20.\\pSABRINA : J'avais prévu ce combat.\\pJ'avais pas prévu sa\\nfin.{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
  },
  "PokemonLeague_LoreleisRoom_Text_Elder5Defeat": {
   "en": "I burned out... Well fought!",
@@ -141,7 +141,7 @@
  },
  "PokemonLeague_LoreleisRoom_Text_Elder6Intro": {
   "en": "COUNCIL OF ELDERS, 7 OF 20.\\pGIOVANNI: ...The ground trembles\\nbefore a true CHAMPION.\\pI will not hold back.{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
-  "fr": "CONSEIL DES ANCIENS, 7 SUR 20.\\pGIOVANNI : …La terre tremble\\ndevant un vrai CHAMPION.\\pJe ne me retiendrai\\npas.{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
+  "fr": "CONSEIL DES ANCIENS, 7 SUR 20.\\pGIOVANNI : …La terre tremble\\ndevant un vrai CHAMPION.\\pJe me retiendrai\\npas.{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
  },
  "PokemonLeague_LoreleisRoom_Text_Elder7Defeat": {
   "en": "Still cold as ever...\\nYou win.",
@@ -185,11 +185,11 @@
  },
  "PokemonLeague_LoreleisRoom_Text_Interlude2Known": {
   "en": "LORELEI: Four more. The word has\\nreached us: you are closing the\\lECHOES, one after another.\\pSABRINA: I saw them in my visions\\nlong before you set out.\\pBLAINE: Beasts, golems, and one that\\ntravels through time. Quite a hunt!\\pGIOVANNI: BILL listened to them for\\nyears. You are the one who answers.\\pHere. A gift from the old guard.",
-  "fr": "LORELEI : Quatre de plus. La\\nnouvelle nous est parvenue : tu\\lrefermes les ÉCHOS, l'un après\\nl'autre.\\pSABRINA : Je les ai vus dans mes\\nvisions bien avant que tu partes.\\pBLAINE : Des bêtes, des golems, et\\nun qui voyage dans le temps. Quelle\\lchasse !\\pGIOVANNI : LÉO les écoute depuis\\ndes années. Tu es celui qui répond.\\pTiens. Un cadeau de la vieille\\ngarde."
+  "fr": "LORELEI : Quatre de plus. La\\nnouvelle nous est parvenue : tu\\lrefermes les ÉCHOS, l'un après\\nl'autre.\\pSABRINA : Je les ai vus dans mes\\nvisions bien avant que tu partes.\\pBLAINE : Des bêtes, des golems, et\\nun qui voyage dans le temps. Quelle\\lchasse !\\pGIOVANNI : LÉO les écoute depuis\\ndes années. T'es celui qui répond.\\pTiens. Un cadeau de la vieille\\ngarde."
  },
  "PokemonLeague_LoreleisRoom_Text_Interlude3": {
   "en": "LANCE: A dragon's trust is earned,\\nnever commanded. The boss forgot.\\pAGATHA: He does not crave power for\\nits own sake. He wants to be heard.\\pBRUNO: And he believes the strong\\nmust speak for the weak.\\pWILL: I read the old books. The AURA\\nis not a weapon. It is a cry.\\pWhatever you wished for, CHAMPION,\\nyou already proved him wrong.",
-  "fr": "PETER : La confiance d'un dragon se\\nmérite, ne s'ordonne jamais. Le\\lboss l'a oublié.\\pAGATHA : Il ne convoite pas le\\npouvoir pour lui-même. Il veut être\\lentendu.\\pBRUNO : Et il croit que les forts\\ndoivent parler pour les faibles.\\pWILL : J'ai lu les vieux livres.\\nL'AURA n'est pas une arme. C'est un\\lcri.\\pQuel que soit ton vœu, CHAMPION, tu\\nlui as déjà prouvé qu'il avait\\ltort."
+  "fr": "PETER : La confiance d'un dragon se\\nmérite, ne s'ordonne jamais. Le\\lboss l'a oublié.\\pAGATHA : Il convoite pas le\\npouvoir pour lui-même. Il veut être\\lentendu.\\pBRUNO : Et il croit que les forts\\ndoivent parler pour les faibles.\\pWILL : J'ai lu les vieux livres.\\nL'AURA n'est pas une arme. C'est un\\lcri.\\pQuel que soit ton vœu, CHAMPION, tu\\nlui as déjà prouvé qu'il avait\\ltort."
  },
  "PokemonLeague_LoreleisRoom_Text_Interlude4": {
   "en": "KOGA: His followers have nothing.\\nThat is why they follow.\\pKAREN: Darkness is not evil. But a\\nheart that hides from it is lost.\\pSIDNEY: Ha! Fifteen fights, and\\nthis one is still smiling!\\pPHOEBE: Four left. The sea is calm,\\nbut something stirs far away.\\pKeep going. We will wait.",
@@ -221,15 +221,15 @@
  },
  "PokemonLeague_LoreleisRoom_Text_Round0Intro": {
   "en": "POOL STAGE, MATCH 1 OF 5.\\pPROF. SEKO: Even a professor enters\\nthe LEAGUE!\\pLet me see what you have learned\\nfrom your journey!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
-  "fr": "PHASE DE POULE, MATCH 1 SUR 5.\\pPROF. SEKO : Même un professeur\\nentre dans la LIGUE !\\pVoyons ce que tu as appris de ton\\nvoyage !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
+  "fr": "PHASE DE POULE, MATCH 1 SUR 5.\\pPROF. SEKO : Même un professeur\\nentre dans la LIGUE !\\pVoyons ce que t'as appris de ton\\nvoyage !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
  },
  "PokemonLeague_LoreleisRoom_Text_Round1Defeat": {
   "en": "Wow, you are strong!\\nI will train even harder!",
-  "fr": "Waouh, tu es fort ! Je vais\\nm'entraîner encore plus dur !"
+  "fr": "Waouh, t'es fort ! Je vais\\nm'entraîner encore plus dur !"
  },
  "PokemonLeague_LoreleisRoom_Text_Round1Intro": {
   "en": "POOL STAGE, MATCH 2 OF 5.\\pMAY: Hi! I trained all the way from\\nHOENN for this!\\pI will not go easy on you!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
-  "fr": "PHASE DE POULE, MATCH 2 SUR 5.\\pMAY : Salut ! Je me suis entraînée\\ndepuis HOENN pour ça !\\pJe ne te ferai pas de cadeau !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
+  "fr": "PHASE DE POULE, MATCH 2 SUR 5.\\pMAY : Salut ! Je me suis entraînée\\ndepuis HOENN pour ça !\\pJe te ferai pas de cadeau !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
  },
  "PokemonLeague_LoreleisRoom_Text_Round2Defeat": {
   "en": "Not bad at all.\\nYou earned that win.",
@@ -249,15 +249,15 @@
  },
  "PokemonLeague_LoreleisRoom_Text_Round4Defeat": {
   "en": "You are through.\\nGood luck in the bracket!",
-  "fr": "Tu es qualifié.\\nBonne chance dans le tableau !"
+  "fr": "T'es qualifié.\\nBonne chance dans le tableau !"
  },
  "PokemonLeague_LoreleisRoom_Text_Round4Intro": {
   "en": "POOL STAGE, MATCH 5 OF 5.\\pCRYSTAL: Last match of the pool!\\pI am not here to lose.\\nLet us fight with two POKéMON\\lat once!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
-  "fr": "PHASE DE POULE, MATCH 5 SUR 5.\\pCRYSTAL : Dernier match de la\\npoule !\\pJe ne suis pas ici pour perdre.\\nCombattons avec deux POKéMON à la\\lfois !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
+  "fr": "PHASE DE POULE, MATCH 5 SUR 5.\\pCRYSTAL : Dernier match de la\\npoule !\\pJe suis pas ici pour perdre.\\nCombattons avec deux POKéMON à la\\lfois !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
  },
  "PokemonLeague_LoreleisRoom_Text_Round5Defeat": {
   "en": "I have no regrets.\\nGo on ahead!",
-  "fr": "Je n'ai aucun regret.\\nPasse !"
+  "fr": "J'ai aucun regret.\\nPasse !"
  },
  "PokemonLeague_LoreleisRoom_Text_Round5Intro": {
   "en": "ROUND OF 16.\\pLEAF: The bracket starts here.\\pI have faced many TRAINERS, but\\nI keep getting stronger.{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
@@ -265,11 +265,11 @@
  },
  "PokemonLeague_LoreleisRoom_Text_Round6Defeat": {
   "en": "Tch... You really have\\ngotten strong.",
-  "fr": "Tch… Tu es vraiment devenu\\nfort."
+  "fr": "Tch… T'es vraiment devenu\\nfort."
  },
  "PokemonLeague_LoreleisRoom_Text_Round6Intro": {
   "en": "QUARTER-FINAL.\\p{RIVAL}: Well, well. You made it\\nthis far.\\pI will not let my rival beat me\\nin front of this crowd!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",
-  "fr": "QUART DE FINALE.\\p{RIVAL} : Tiens, tiens. Tu es\\narrivé jusqu'ici.\\pJe ne laisserai pas mon rival me\\nbattre devant cette foule !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
+  "fr": "QUART DE FINALE.\\p{RIVAL} : Tiens, tiens. T'es\\narrivé jusqu'ici.\\pJe laisserai pas mon rival me\\nbattre devant cette foule !{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}"
  },
  "PokemonLeague_LoreleisRoom_Text_Round7Defeat": {
   "en": "Hmph. Fine. You win this one.",

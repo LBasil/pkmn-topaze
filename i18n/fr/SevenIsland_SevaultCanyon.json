@@ -17,11 +17,11 @@
  },
  "SevenIsland_SevaultCanyon_Text_EvanDefeat": {
   "en": "You're a master at this.",
-  "fr": "Tu es un maître en la matière."
+  "fr": "T'es un maître en la matière."
  },
  "SevenIsland_SevaultCanyon_Text_EvanIntro": {
   "en": "It doesn't matter if you happen to\\nhave the strongest POKéMON…\\pIt doesn't mean a thing if you don't\\nknow how to use them properly!",
-  "fr": "Peu importe que tu aies les POKéMON\\nles plus forts…\\pÇa ne veut rien dire si tu ne sais\\npas les utiliser correctement !"
+  "fr": "Peu importe que tu aies les POKéMON\\nles plus forts…\\pÇa ne veut rien dire si tu sais\\npas les utiliser correctement !"
  },
  "SevenIsland_SevaultCanyon_Text_EvanPostBattle": {
   "en": "You see them every so often,\\nTRAINERS with awesome POKéMON\\lwho have no idea what to do.\\pBefore training POKéMON, TRAINERS\\nthemselves need to grow up.",
@@ -117,7 +117,7 @@
  },
  "SevenIsland_SevaultCanyon_Text_KatelynDefeat": {
   "en": "You're hot stuff in spite of your\\ncute looks.",
-  "fr": "Tu es un as malgré ton air mignon."
+  "fr": "T'es un as malgré ton air mignon."
  },
  "SevenIsland_SevaultCanyon_Text_KatelynIntro": {
   "en": "Those shoes you have are pretty\\nsnazzy.",
@@ -129,11 +129,11 @@
  },
  "SevenIsland_SevaultCanyon_Text_LeroyDefeat": {
   "en": "I knew it!\\nYou're as tough as I thought!",
-  "fr": "Je le savais ! Tu es aussi fort que\\nje le pensais !"
+  "fr": "Je le savais ! T'es aussi fort que\\nje le pensais !"
  },
  "SevenIsland_SevaultCanyon_Text_LeroyIntro": {
   "en": "You look strong.\\nLet me battle you, please!",
-  "fr": "Tu as l'air fort. Laisse-moi te\\ndéfier, s'il te plaît !"
+  "fr": "T'as l'air fort. Laisse-moi te\\ndéfier, s'il te plaît !"
  },
  "SevenIsland_SevaultCanyon_Text_LeroyPostBattle": {
   "en": "The way you battle has given me\\na lot of useful data.\\pThanks so much!",
@@ -161,7 +161,7 @@
  },
  "SevenIsland_SevaultCanyon_Text_MichelleIntro": {
   "en": "I was given the best possible\\neducation to become this strong.\\pI don't want to lose to anyone!",
-  "fr": "J'ai reçu la meilleure éducation\\npossible pour devenir si fort.\\pJe ne veux perdre contre personne !"
+  "fr": "J'ai reçu la meilleure éducation\\npossible pour devenir si fort.\\pJe veux perdre contre personne !"
  },
  "SevenIsland_SevaultCanyon_Text_MichellePostBattle": {
   "en": "For some reason, I get furious\\nover the slightest thing.\\pI'll calm myself by breathing\\ndeeply.",
@@ -233,7 +233,7 @@
  },
  "SevenIsland_SevaultCanyon_Text_SceneSilver1": {
   "en": "SILVER: ...You came. All the way\\nto the edge of time.\\pThe ECHO showed me something.\\nA boy in a dark room, waiting\\lfor a man who never came back.",
-  "fr": "SILVER : …Tu as fait le voyage.\\nJusqu'au bord du temps.\\pL'ÉCHO m'a montré quelque chose. Un\\ngarçon dans une pièce sombre,\\lattendant un homme qui n'est jamais\\nrevenu."
+  "fr": "SILVER : …T'as fait le voyage.\\nJusqu'au bord du temps.\\pL'ÉCHO m'a montré quelque chose. Un\\ngarçon dans une pièce sombre,\\lattendant un homme qui n'est jamais\\nrevenu."
  },
  "SevenIsland_SevaultCanyon_Text_SceneSilver2": {
   "en": "SILVER: Afraid?! You left me alone!\\pI became strong so you would\\nlook at me. Just once.",
@@ -245,7 +245,7 @@
  },
  "SevenIsland_SevaultCanyon_Text_SceneSilver4": {
   "en": "SILVER: {PLAYER}. Fight us. Both of\\nus, back to back. No rest between.\\pIf you cannot stand before the\\ntwo of us, you cannot stand\\lbefore the ECHO.",
-  "fr": "SILVER : {PLAYER}. Bats-toi contre\\nnous. Contre nous deux, dos à dos.\\pSans repos.\\pSi tu ne peux pas tenir devant nous\\ndeux, tu ne peux pas tenir devant\\ll'ÉCHO."
+  "fr": "SILVER : {PLAYER}. Bats-toi contre\\nnous. Contre nous deux, dos à dos.\\pSans repos.\\pSi tu peux pas tenir devant nous\\ndeux, tu peux pas tenir devant\\ll'ÉCHO."
  },
  "SevenIsland_SevaultCanyon_Text_SceneSilver5": {
   "en": "SILVER: Thank you. I will walk\\nbeside him now. Not behind.",
@@ -261,7 +261,7 @@
  },
  "SevenIsland_SevaultCanyon_Text_SceneSilverRed": {
   "en": "SILVER: RED trains here again, on\\nthe highest peak. I came for a\\lrematch. He has not answered yet.",
-  "fr": "SILVER : RED s'entraîne de nouveau\\nici, sur le plus haut pic. Je suis\\lvenu pour une revanche. Il n'a pas\\nencore répondu."
+  "fr": "SILVER : RED s'entraîne de nouveau\\nici, sur le plus haut pic. Je suis\\lvenu pour une revanche. Il a pas\\nencore répondu."
  },
  "SevenIsland_SevaultCanyon_Text_SummitLocked": {
   "en": "A dark passage climbs into the\\nclouds. The ECHO is still silent.",

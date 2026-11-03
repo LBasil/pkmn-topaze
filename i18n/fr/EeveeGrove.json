@@ -21,7 +21,7 @@
  },
  "EeveeGrove_Text_Quest0_MissT": {
   "en": "One SODA POP, please. The cafe\\nsells them.",
-  "fr": "Un SODA COOL, s'il vous plaît. Le\\ncafé en vend."
+  "fr": "Un SODA COOL, s'il te plaît. Le\\ncafé en vend."
  },
  "EeveeGrove_Text_Quest0_NoRoomT": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
@@ -37,6 +37,6 @@
  },
  "EeveeGrove_Text_TopazeFindFull": {
   "en": "Something shines here, but your BAG\\nis full.",
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
+  "fr": "Y a un truc qui brille ici, mais\\nton SAC est plein."
  }
 }

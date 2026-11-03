@@ -13,11 +13,11 @@
  },
  "CeladonCity_Hotel_Text_SpaDone": {
   "en": "{STR_VAR_1} looks dreamily content…\\pCome back any time!",
-  "fr": "{STR_VAR_1} a l'air aux anges...\\pReviens quand tu veux !"
+  "fr": "{STR_VAR_1} a l'air aux anges…\\pReviens quand tu veux !"
  },
  "CeladonCity_Hotel_Text_SpaNoMoney": {
   "en": "Oh, you don't have enough money.\\nCome back when you do!",
-  "fr": "Oh, tu n'as pas assez d'argent.\\nReviens quand tu en auras !"
+  "fr": "Oh, t'as pas assez d'argent.\\nReviens quand t'en auras !"
  },
  "CeladonCity_Hotel_Text_SpaOffer": {
   "en": "I'm on vacation, but I run a little\\nPOKéMON spa for guests.\\pA massage for one POKéMON is ¥300.\\nWould you like one?",

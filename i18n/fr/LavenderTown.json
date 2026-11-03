@@ -33,7 +33,7 @@
  },
  "LavenderTown_Text_ProcheNathan_Early": {
   "en": "Not yet, {PLAYER}. Finish your\\njourney first, then come and find\\pme.",
-  "fr": "Pas encore, {PLAYER}. Termine\\nd'abord ton voyage, puis viens me\\ltrouver."
+  "fr": "Pas encore, {PLAYER}. Finis\\nd'abord ton voyage, puis viens me\\ltrouver."
  },
  "LavenderTown_Text_ProcheNathan_Intro": {
   "en": "{PLAYER}. I felt you coming. This\\ntown keeps its secrets... and so\\pdoes my team.",
@@ -41,7 +41,7 @@
  },
  "LavenderTown_Text_ProcheNathan_NoRoom": {
   "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",
-  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reparle-moi."
+  "fr": "Ton SAC est plein. Fais de la\\nplace, puis reviens me voir."
  },
  "LavenderTown_Text_ProcheNathan_Win": {
   "en": "Take it. It whispers your name.",
@@ -65,15 +65,15 @@
  },
  "LavenderTown_Text_RefGives": {
   "en": "FINN: You saved the day. The post\\nhas a gift for you: PORYGON!",
-  "fr": "FINN : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\pPORYGON !"
+  "fr": "FINN : T'as sauvé la mise. Le\\nposte a un cadeau pour toi :\\pPORYGON !"
  },
  "LavenderTown_Text_RefHunter1": {
   "en": "HUNTER: Rare ones fetch a fortune!\\nStay out of this, child!",
-  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Ne te mêle pas de ça,\\ppetit !"
+  "fr": "CHASSEUR : Les rares valent une\\nfortune ! Mêle-toi pas de ça,\\ppetit !"
  },
  "LavenderTown_Text_RefHunter2": {
   "en": "HUNTER: You beat my partner? Fine,\\nI am not afraid of a ranger!",
-  "fr": "CHASSEUR : Tu as battu mon\\nassocié ? Soit, je n'ai pas peur\\ld'un ranger !"
+  "fr": "CHASSEUR : T'as battu mon\\nassocié ? Soit, j'ai pas peur\\ld'un ranger !"
  },
  "LavenderTown_Text_RefIdle": {
   "en": "FINN: I watch over the animals here.\\nThe world is quieter now.",

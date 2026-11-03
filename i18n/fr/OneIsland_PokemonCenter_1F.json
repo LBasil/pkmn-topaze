@@ -57,7 +57,7 @@
  },
  "OneIsland_PokemonCenter_1F_Text_CameFromPalletDontKnowIt": {
   "en": "Oh, you're a stranger here!\\nHi! Where did you come from?\\p…GRENALUX?\\nI don't know it!",
-  "fr": "Oh, tu n'es pas d'ici !\\nSalut ! D'où viens-tu ?\\p…GRENALUX ?\\nJe ne connais pas !"
+  "fr": "Oh, t'es pas d'ici !\\nSalut ! D'où viens-tu ?\\p…GRENALUX ?\\nJe ne connais pas !"
  },
  "OneIsland_PokemonCenter_1F_Text_CanYouDeliverThisMeteoritePlayer": {
   "en": "{PLAYER}, can I get you to wait for\\nme just a bit?\\p…Actually, can I get you to do\\nme a favor?\\pThe island next to this one's\\ncalled TWO ISLAND.\\pThere's a guy there that runs\\na GAME CORNER.\\pHe has this thing for rare rocks\\nand gems.\\pWe keep in touch, being fellow\\nmaniacs.\\pSo, can I get you to deliver this\\nMETEORITE to him?",
@@ -65,7 +65,7 @@
  },
  "OneIsland_PokemonCenter_1F_Text_CelioCantBelieveYouCameOut": {
   "en": "CELIO: BILL!\\nI can't believe you came out here.",
-  "fr": "CELIO : LÉO ! Je n'arrive pas à\\ncroire que tu sois venu."
+  "fr": "CELIO : LÉO ! J'arrive pas à\\ncroire que tu sois venu."
  },
  "OneIsland_PokemonCenter_1F_Text_CelioCaughtMoreMonMaybeICanBeUseful": {
   "en": "CELIO: {PLAYER}, how have things\\nbeen for you?\\pOh, is that right?\\nYou've caught more POKéMON.\\pDo you know what?\\nMaybe I can be useful to you.",
@@ -77,7 +77,7 @@
  },
  "OneIsland_PokemonCenter_1F_Text_CelioImModifyingMyNetworkMachine": {
   "en": "CELIO: Hello!\\nYou look awfully busy as always.\\pHow am I doing?\\pWell, I'm modifying my Network\\nMachine.\\pWhen I get done with the machine,\\nI hope you'll be first to use it,\\l{PLAYER}.",
-  "fr": "CELIO : Bonjour ! Tu as l'air très\\noccupé, comme toujours.\\pEt moi ?\\pEh bien, je modifie ma Machine\\nRéseau.\\pQuand j'aurai fini, j'espère que tu\\nseras le premier à l'utiliser,\\l{PLAYER}."
+  "fr": "CELIO : Bonjour ! T'as l'air très\\noccupé, comme toujours.\\pEt moi ?\\pEh bien, je modifie ma Machine\\nRéseau.\\pQuand j'aurai fini, j'espère que tu\\nseras le premier à l'utiliser,\\l{PLAYER}."
  },
  "OneIsland_PokemonCenter_1F_Text_CelioJobWentQuick": {
   "en": "CELIO: The job went incredibly\\nquick.\\pBILL is one amazing guy…",
@@ -101,7 +101,7 @@
  },
  "OneIsland_PokemonCenter_1F_Text_CelioThatsReallyImpressive": {
   "en": "CELIO: That's really impressive.\\pI hate to say it, but I have zero\\naptitude for battling.\\pAnyways, I'm glad to meet you.",
-  "fr": "CELIO : C'est vraiment\\nimpressionnant.\\pJe déteste le dire, mais je n'ai\\naucune aptitude au combat.\\pEnfin, je suis ravi de te\\nrencontrer."
+  "fr": "CELIO : C'est vraiment\\nimpressionnant.\\pJe déteste le dire, mais j'ai\\naucune aptitude au combat.\\pEnfin, je suis ravi de te\\nrencontrer."
  },
  "OneIsland_PokemonCenter_1F_Text_Echo5Announce": {
   "en": "BILL: The fifth ECHO is on FIVE\\nISLAND, in the MEADOW.\\pA statue of steel stands there.\\nPlease, calm it down.",
@@ -137,7 +137,7 @@
  },
  "OneIsland_PokemonCenter_1F_Text_Echo7Announce": {
   "en": "BILL: The compass is going wild.\\pThe last ECHO is on SEVEN ISLAND,\\nin SEVAULT CANYON.\\pIt is not a beast this time.\\nIt is the keeper of time itself.\\pGo, CHAMPION. We will be here.",
-  "fr": "LÉO : Le compas s'affole.\\pLe dernier ÉCHO est sur l'ÎLE 7,\\ndans le CANYON SEVAULT.\\pCe n'est pas une bête cette fois.\\nC'est le gardien du temps lui-même.\\pVa, CHAMPION. Nous serons là."
+  "fr": "LÉO : Le compas s'affole.\\pLe dernier ÉCHO est sur l'ÎLE 7,\\ndans le CANYON SEVAULT.\\pC'est pas une bête cette fois.\\nC'est le gardien du temps lui-même.\\pVa, CHAMPION. Nous serons là."
  },
  "OneIsland_PokemonCenter_1F_Text_Echo7Epilogue": {
   "en": "BILL: The clocks are ticking\\nright again!\\pThe keeper told you what the wish\\nreally did: it cracked time open.\\pNow the old legends of land, sea\\nand sky have gathered at the top\\lof SEVAULT CANYON.\\pThey wait for a TRAINER like you.",
@@ -189,7 +189,7 @@
  },
  "OneIsland_PokemonCenter_1F_Text_EchoCelioGift": {
   "en": "CELIO: You closed the ECHO!\\pA POKéMON came through it.\\nIt chose to follow you.",
-  "fr": "CELIO : Tu as refermé l'ÉCHO !\\pUn POKéMON est passé à travers.\\nIl a choisi de te suivre."
+  "fr": "CELIO : T'as refermé l'ÉCHO !\\pUn POKéMON est passé à travers.\\nIl a choisi de te suivre."
  },
  "OneIsland_PokemonCenter_1F_Text_EchoCelioGift3": {
   "en": "CELIO: The ECHO is closed!\\nThe air feels clear again.\\pAnother POKéMON came through.\\nIt wants to travel with you.",
@@ -245,7 +245,7 @@
  },
  "OneIsland_PokemonCenter_1F_Text_EnormousVolcanoOnIsland": {
   "en": "On this island, there's an enormous\\nvolcano.\\pIt hasn't erupted lately, so why\\nnot enjoy a hike?",
-  "fr": "Sur cette île, il y a un énorme\\nvolcan.\\pIl n'est pas entré en éruption\\nrécemment, alors pourquoi ne pas\\lfaire une randonnée ?"
+  "fr": "Sur cette île, il y a un énorme\\nvolcan.\\pIl est pas entré en éruption\\nrécemment, alors pourquoi ne pas\\lfaire une randonnée ?"
  },
  "OneIsland_PokemonCenter_1F_Text_GotPCWorkingStrollAWhileMore": {
   "en": "Oh, hey, {PLAYER}!\\pDid you see?\\nWe got the PC working!\\pI've got a few things to show\\nCELIO here.\\pCan you go out on a stroll or\\nsomething for a while more?",
@@ -285,15 +285,15 @@
  },
  "OneIsland_PokemonCenter_1F_Text_MayIAskOneMoreFavor": {
   "en": "Thank you!\\n{PLAYER}, you're simply amazing.\\p… … …  … … …\\pUm… May I ask one more giant favor\\nof you?",
-  "fr": "Merci ! {PLAYER}, tu es tout\\nsimplement incroyable.\\p… … … … … …\\pHum… Puis-je te demander un autre\\nénorme service ?"
+  "fr": "Merci ! {PLAYER}, t'es tout\\nsimplement incroyable.\\p… … … … … …\\pHum… Puis-je te demander un autre\\nénorme service ?"
  },
  "OneIsland_PokemonCenter_1F_Text_NeedsSpecialGemstone": {
   "en": "But, there is a slight catch.\\pFor the link to work, the Machine\\nneeds a special gemstone.\\pIt's supposed to be on ONE ISLAND,\\nbut I haven't found one yet.\\pWho knows where it could be.",
-  "fr": "Mais il y a un petit hic.\\pPour que le lien fonctionne, la\\nMachine a besoin d'une gemme\\lspéciale.\\pElle est censée être sur l'ÎLE 1,\\nmais je n'en ai pas encore trouvé.\\pQui sait où elle peut être."
+  "fr": "Mais il y a un petit hic.\\pPour que le lien fonctionne, la\\nMachine a besoin d'une gemme\\lspéciale.\\pElle est censée être sur l'ÎLE 1,\\nmais j'en ai pas encore trouvé.\\pQui sait où elle peut être."
  },
  "OneIsland_PokemonCenter_1F_Text_ObtainedExtraMapPage": {
   "en": "Obtained an extra page for the\\nTOWN MAP!",
-  "fr": "Tu as obtenu une page\\nsupplémentaire pour la CARTE !"
+  "fr": "T'as obtenu une page\\nsupplémentaire pour la CARTE !"
  },
  "OneIsland_PokemonCenter_1F_Text_ObtainedTriPass": {
   "en": "Obtained the TRI-PASS!",
@@ -325,7 +325,7 @@
  },
  "OneIsland_PokemonCenter_1F_Text_PleaseINeedYourHelp": {
   "en": "It… It's not anything weird.\\nPlease, I need your help.",
-  "fr": "Ce… Ce n'est rien de bizarre. S'il\\nte plaît, j'ai besoin de ton aide."
+  "fr": "Ce… C'est rien de bizarre. S'il\\nte plaît, j'ai besoin de ton aide."
  },
  "OneIsland_PokemonCenter_1F_Text_ReceivedExtraPageForTownMap": {
   "en": "{PLAYER} received an extra page\\nfor the TOWN MAP!",
@@ -381,7 +381,7 @@
  },
  "OneIsland_PokemonCenter_1F_Text_WishYouBestOfLuck": {
   "en": "I…\\nI'm not crying.\\pThat's enough about me!\\p{PLAYER}, you're going to keep\\nlooking for exotic POKéMON, right?\\pI wish you the best of luck!",
-  "fr": "Je… Je ne pleure pas.\\pAssez parlé de moi !\\p{PLAYER}, tu vas continuer à\\nchercher des POKéMON exotiques,\\ln'est-ce pas ?\\pJe te souhaite bonne chance !"
+  "fr": "Je… Je pleure pas.\\pAssez parlé de moi !\\p{PLAYER}, tu vas continuer à\\nchercher des POKéMON exotiques,\\ln'est-ce pas ?\\pJe te souhaite bonne chance !"
  },
  "OneIsland_PokemonCenter_1F_Text_YoullBeTradingFromTrainersFarAway": {
   "en": "I'm modifying the Network Machine\\nright now.\\pI'm changing it so it can handle\\ntrades over long distances.\\pWhen I get finished, you'll be\\ntrading for exotic POKéMON from\\lTRAINERS far away.",

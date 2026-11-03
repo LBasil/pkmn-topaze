@@ -21,7 +21,7 @@
  },
  "SaffronCity_Gym_Text_CameronIntro": {
   "en": "NOX is young, but he's also\\nour highly skilled LEADER.\\pYou won't reach him easily!",
-  "fr": "NOX est jeune, mais c'est aussi\\nnotre CHAMPION très compétent.\\pTu ne l'atteindras pas facilement !"
+  "fr": "NOX est jeune, mais c'est aussi\\nnotre CHAMPION très compétent.\\pTu l'atteindras pas facilement !"
  },
  "SaffronCity_Gym_Text_CameronPostBattle": {
   "en": "There used to be two POKéMON GYMS\\nin HEMATOWN.\\pThe FIGHTING DOJO next door lost\\nits GYM status, though.\\pWe simply creamed them when we\\ndecided to have just one GYM.",
@@ -29,7 +29,7 @@
  },
  "SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis": {
   "en": "The HEMATITE BADGE makes your\\nPOKéMON obey up to Lv. 70.\\pIt also lets you use ROCK SMASH\\noutside of battle, if you carry\\pthe HM.\\pTake this too.",
-  "fr": "Le BADGE HÉMATITE fait obéir tes\\nPOKéMON jusqu'au Niv. 70.\\pIl te permet aussi d'utiliser ÉCLAT\\nROCHE hors combat, si tu as la CS.\\pPrends ceci aussi."
+  "fr": "Le BADGE HÉMATITE fait obéir tes\\nPOKéMON jusqu'au Niv. 70.\\pIl te permet aussi d'utiliser ÉCLAT\\nROCHE hors combat, si t'as la CS.\\pPrends ceci aussi."
  },
  "SaffronCity_Gym_Text_ExplainTM04": {
   "en": "TM46 contains THIEF.\\pIt snatches the foe's item. That\\nis rude. But effective.",
@@ -53,7 +53,7 @@
  },
  "SaffronCity_Gym_Text_JohanDefeat": {
   "en": "I never foresaw this!",
-  "fr": "Je n'avais pas prévu ça !"
+  "fr": "J'avais pas prévu ça !"
  },
  "SaffronCity_Gym_Text_JohanIntro": {
   "en": "Does our unseen power scare you?",
@@ -89,7 +89,7 @@
  },
  "SaffronCity_Gym_Text_SabrinaIntro": {
   "en": "You find your way here in the\\ndark, challenger. Good.\\pI am NOX. HEMATOWN never sees the\\nsun, and neither do my DARK\\pPOKéMON.\\pThey hide, they steal, they\\nstrike where you do not look. Let\\pme show you!",
-  "fr": "Tu as trouvé ton chemin ici dans le\\nnoir, challenger. Bien.\\pJe suis NOX. HEMATOWN ne voit\\njamais le soleil, et mes POKéMON\\pTÉNÈBRES non plus.\\pIls se cachent, ils volent, ils\\nfrappent là où tu ne regardes pas.\\pLaisse-moi te montrer !"
+  "fr": "Tu as trouvé ton chemin ici dans le\\nnoir, challenger. Bien.\\pJe suis NOX. HEMATOWN ne voit\\njamais le soleil, et mes POKéMON\\pTÉNÈBRES non plus.\\pIls se cachent, ils volent, ils\\nfrappent là où tu regardes pas.\\pLaisse-moi te montrer !"
  },
  "SaffronCity_Gym_Text_SabrinaPostBattle": {
   "en": "Light fades when too many people\\nwant it.\\pThere is one more LEADER before\\nthe road ends. And a certain wish\\pstill floating out there.",
@@ -97,7 +97,7 @@
  },
  "SaffronCity_Gym_Text_SabrinaRebel1": {
   "en": "NOX: I saw you in a dream: a crown\\nwith six gems. I did not see how it\\lends.\\pLet us find out together.",
-  "fr": "NOX : Je t'ai vu dans un rêve : une\\ncouronne à six gemmes. Je n'ai pas\\lvu comment ça finit.\\pDécouvrons-le ensemble."
+  "fr": "NOX : Je t'ai vu dans un rêve : une\\ncouronne à six gemmes. J'ai pas\\lvu comment ça finit.\\pDécouvrons-le ensemble."
  },
  "SaffronCity_Gym_Text_SabrinaRebel2": {
   "en": "The dream breaks.\\nThe morning is yours.",
@@ -109,7 +109,7 @@
  },
  "SaffronCity_Gym_Text_SabrinaVisit1": {
   "en": "NOX: I saw the wish in my dreams.\\nYou chose well. Take this.",
-  "fr": "NOX : J'ai vu le vœu dans mes\\nrêves. Tu as bien choisi. Prends\\lceci."
+  "fr": "NOX : J'ai vu le vœu dans mes\\nrêves. T'as bien choisi. Prends\\lceci."
  },
  "SaffronCity_Gym_Text_SabrinaVisit2": {
   "en": "NOX: A silent world. I like it.\\nTake these, you earned them.",
@@ -133,7 +133,7 @@
  },
  "SaffronCity_Gym_Text_StoneGift": {
   "en": "NOX: The HEMATITE is gone. He\\ntook it before I could hide it.\\pBut you have the others. He needs\\nthem all. Make him wait.\\pGo back to GRENALUX and SURF south\\nalong ROUTE 21. A city of lightning\\pwaits there. The old road by\\nPARMANIE is under fire now.",
-  "fr": "NOX : L'HÉMATITE a disparu. Il l'a\\nprise avant que je puisse la\\lcacher.\\pMais tu as les autres. Il les lui\\nfaut toutes. Fais-le attendre.\\pRetourne à GRENALUX et SURFE vers\\nle sud le long de la ROUTE 21. Une\\lville d'éclairs t'y attend. La\\nvieille route de PARMANIE est sous\\lle feu maintenant."
+  "fr": "NOX : L'HÉMATITE a disparu. Il l'a\\nprise avant que je puisse la\\lcacher.\\pMais t'as les autres. Il les lui\\nfaut toutes. Fais-le attendre.\\pRetourne à GRENALUX et SURFE vers\\nle sud le long de la ROUTE 21. Une\\lville d'éclairs t'y attend. La\\nvieille route de PARMANIE est sous\\lle feu maintenant."
  },
  "SaffronCity_Gym_Text_TashaDefeat": {
   "en": "I lost after all!",
@@ -149,7 +149,7 @@
  },
  "SaffronCity_Gym_Text_TyronDefeat": {
   "en": "I don't believe this!",
-  "fr": "Je n'y crois pas !"
+  "fr": "J'y crois pas !"
  },
  "SaffronCity_Gym_Text_TyronIntro": {
   "en": "You understand, don't you?\\pThat power alone isn't enough to\\nwin in the world of POKéMON?",

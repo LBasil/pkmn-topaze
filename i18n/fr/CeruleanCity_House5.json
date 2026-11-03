@@ -37,7 +37,7 @@
  },
  "CeruleanCity_House1_Text_WhyMustYouLieNoBerries": {
   "en": "Why must you lie to me?\\pHow many BERRIES do you have?\\nNot a one!",
-  "fr": "Pourquoi me mentir ?\\pCombien de BAIES as-tu ?\\nPas une seule !"
+  "fr": "Pourquoi me mentir ?\\pT'as combien de BAIES ?\\nPas une seule !"
  },
  "CeruleanCity_House1_Text_YoullExchangeBerryPowderForItem": {
   "en": "Fine, you'll exchange your BERRY\\nPOWDER for one {STR_VAR_1}?",
@@ -45,6 +45,6 @@
  },
  "CeruleanCity_House5_Text_ExchangeWithWhat": {
   "en": "With what would you like to \\nexchange it?",
-  "fr": "Contre quoi veux-tu l'échanger ?"
+  "fr": "Tu veux l'échanger contre quoi ?"
  }
 }

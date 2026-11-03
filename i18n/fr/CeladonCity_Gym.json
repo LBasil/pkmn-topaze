@@ -13,7 +13,7 @@
  },
  "CeladonCity_Gym_Text_ErikaDefeat": {
   "en": "...Thawed out, have I?\\pYou are strong. I concede. Take\\nthe QUARTZ BADGE.",
-  "fr": "...Je me suis dégelée ?\\pTu es solide. Je m'incline. Prends\\nle BADGE QUARTZ."
+  "fr": "…Je me suis dégelée ?\\pT'es costaud. Je m'incline. Prends\\nle BADGE QUARTZ."
  },
  "CeladonCity_Gym_Text_ErikaIntro": {
   "en": "...Oh. A challenger. I am GRIM.\\pBOURG QUARTZ is quiet under the\\nsnow. My ICE POKéMON like it that\\pway, and so do I.\\pDo not be fooled by the silence.\\nA blizzard is only calm until it\\pmoves.\\pCome, then.",
@@ -21,7 +21,7 @@
  },
  "CeladonCity_Gym_Text_ErikaPostBattle": {
   "en": "The cold keeps old memories\\nfresh. ONYBRIS... I have heard\\pwhat they ask of the world.\\pI understand the dream. I do not\\nforgive the way.\\pGo on. AMETHIOLITE is waiting.",
-  "fr": "Le froid garde les vieux souvenirs\\nfrais. ONYBRIS... j'ai entendu ce\\pqu'ils demandent au monde.\\pJe comprends le rêve. Je ne\\npardonne pas la méthode.\\pVa. AMETHIOLITE t'attend."
+  "fr": "Le froid garde les vieux souvenirs\\nau frais. ONYBRIS… j'ai entendu ce\\pqu'ils demandent au monde.\\pJe comprends le rêve. Je pardonne\\npas la méthode.\\pVa. AMETHIOLITE t'attend."
  },
  "CeladonCity_Gym_Text_ErikaRebel1": {
   "en": "GRIM: Ice keeps what it holds,\\nCHAMPION. Can you hold six legends\\lwithout freezing the world around\\nyou?",
@@ -29,7 +29,7 @@
  },
  "CeladonCity_Gym_Text_ErikaRebel2": {
   "en": "Thawed...\\nI see now.",
-  "fr": "Dégelée...\\nJe vois, maintenant."
+  "fr": "Dégelée…\\nJe vois, maintenant."
  },
  "CeladonCity_Gym_Text_ErikaRebel3": {
   "en": "GRIM: Hold them gently. Ice cracks\\nwhen squeezed. Take this.",
@@ -65,7 +65,7 @@
  },
  "CeladonCity_Gym_Text_KayDefeat": {
   "en": "Brr... You melted me!",
-  "fr": "Brr... Tu m'as fait fondre !"
+  "fr": "Brr… Tu m'as fait fondre !"
  },
  "CeladonCity_Gym_Text_KayIntro": {
   "en": "Welcome to the QUARTZ GYM.\\nIt is cold in here. Deal with it!",
@@ -73,7 +73,7 @@
  },
  "CeladonCity_Gym_Text_KayPostBattle": {
   "en": "GRIM never raises her voice.\\nThat is what scares me.",
-  "fr": "GRIM ne hausse jamais la voix.\\nC'est ça qui me fait peur."
+  "fr": "GRIM élève jamais la voix.\\nC'est ça qui me fait peur."
  },
  "CeladonCity_Gym_Text_LisaDefeat": {
   "en": "Oh!\\nYou!",
@@ -81,7 +81,7 @@
  },
  "CeladonCity_Gym_Text_LisaIntro": {
   "en": "Oh, hey!\\nWe do not let FIRE-types in here!",
-  "fr": "Oh, hé ! Nous n'acceptons pas les\\ntypes FEU ici !"
+  "fr": "Oh, hé ! On n'accepte pas les\\ntypes FEU ici !"
  },
  "CeladonCity_Gym_Text_LisaPostBattle": {
   "en": "Our LEADER GRIM might be quiet,\\nbut she is famous around here.",
@@ -109,7 +109,7 @@
  },
  "CeladonCity_Gym_Text_MaryPostBattle": {
   "en": "I did not bring my best POKéMON.\\nThe lake keeps them company.",
-  "fr": "Je n'ai pas amené mes meilleurs\\nPOKéMON. Le lac leur tient\\lcompagnie."
+  "fr": "J'ai pas amené mes meilleurs\\nPOKéMON. Le lac leur tient\\lcompagnie."
  },
  "CeladonCity_Gym_Text_ReceivedTM19FromErika": {
   "en": "{PLAYER} received TM13\\nfrom GRIM.",
@@ -125,11 +125,11 @@
  },
  "CeladonCity_Gym_Text_TamiaIntro": {
   "en": "Look, look!\\nMy POKéMON never feel the cold.",
-  "fr": "Regarde, regarde ! Mes POKéMON ne\\nsentent jamais le froid."
+  "fr": "Regarde, regarde ! Mes POKéMON\\nont jamais froid !"
  },
  "CeladonCity_Gym_Text_TamiaPostBattle": {
   "en": "Our GYM freezes the whole floor.\\pThat is why we all wear boots\\nand thick scarves.",
-  "fr": "Notre ARÈNE gèle tout le sol.\\pC'est pourquoi nous portons tous\\ndes bottes et de grosses écharpes."
+  "fr": "Notre ARÈNE gèle tout le sol.\\pC'est pour ça qu'on porte tous\\ndes bottes et de grosses écharpes."
  },
  "CeladonCity_Gym_Text_TinaDefeat": {
   "en": "You're an eye-opener!",
@@ -137,7 +137,7 @@
  },
  "CeladonCity_Gym_Text_TinaIntro": {
   "en": "...Weren't you peeking in the\\nGAME CORNER earlier?",
-  "fr": "...Tu ne jetais pas un œil dans le\\nCASINO tout à l'heure ?"
+  "fr": "…T'étais pas en train de jeter un\\nœil dans le CASINO tout à l'heure ?"
  },
  "CeladonCity_Gym_Text_TinaPostBattle": {
   "en": "Men in black have a table down\\nthere. Even GRIM heard them.",

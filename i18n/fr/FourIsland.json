@@ -9,7 +9,7 @@
  },
  "FourIsland_Text_Lord2": {
   "en": "Warm. You are warm.",
-  "fr": "Chaud. Tu es chaud."
+  "fr": "Chaud. T'es chaud."
  },
  "FourIsland_Text_Lord3": {
   "en": "GLACIA: A ruler who can still feel\\nthe cold is a good ruler. Take this.",
@@ -61,7 +61,7 @@
  },
  "FourIsland_Text_ProcheDylan_Intro": {
   "en": "{PLAYER}! You beat the LEAGUE? Then\\nyou can handle my dragons. Do not\\phold back!",
-  "fr": "{PLAYER} ! Tu as battu la LIGUE ?\\nAlors tu peux affronter mes\\ldragons. Ne te retiens pas !"
+  "fr": "{PLAYER} ! T'as battu la LIGUE ?\\nAlors tu peux affronter mes\\ldragons. Retiens-toi pas !"
  },
  "FourIsland_Text_ProcheDylan_NoRoom": {
   "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",
@@ -73,27 +73,27 @@
  },
  "FourIsland_Text_RefAfter": {
   "en": "MAYA: Take good care of it. The\\nnext REFUGE post is waiting.",
-  "fr": "MAYA : Prends-en bien soin. Le\\nprochain poste du REFUGE t'attend."
+  "fr": "MAYA : Prends-en soin ! Le prochain\\nposte du REFUGE t'attend."
  },
  "FourIsland_Text_RefAsk": {
   "en": "MAYA: A strange fish lives in a cold\\npond. It is ill and nobody can\\lsee it. Three ICE HEALS, please.",
-  "fr": "MAYA : Un étrange poisson vit dans\\nun étang froid. Il est malade et\\lpersonne ne le voit. Trois\\nANTI-GEL, s'il vous plaît."
+  "fr": "MAYA : Un étrange poisson vit dans\\nun étang froid. Il est malade et\\lpersonne le voit. Trois\\nANTI-GEL, s'il te plaît."
  },
  "FourIsland_Text_RefDone": {
   "en": "MAYA: Thank you again. The REFUGE\\nis safer because of you.",
-  "fr": "MAYA : Merci encore. Le REFUGE\\nest plus sûr grâce à toi."
+  "fr": "MAYA : Merci encore ! Le REFUGE\\nest plus sûr grâce à toi."
  },
  "FourIsland_Text_RefEarly": {
   "en": "MAYA: Not yet. Finish the earlier\\nposts first. The KEEPER at the\\lSAFARI ZONE knows the order.",
-  "fr": "MAYA : Pas encore. Finis d'abord\\nles postes précédents. Le GARDIEN\\ldu PARC SAFARI connaît l'ordre."
+  "fr": "MAYA : Pas encore ! Finis d'abord\\nles postes précédents. Le GARDIEN\\ldu PARC SAFARI connaît l'ordre."
  },
  "FourIsland_Text_RefGives": {
   "en": "MAYA: You saved the day. The post\\nhas a gift for you: FEEBAS!",
-  "fr": "MAYA : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\lBARPAU !"
+  "fr": "MAYA : T'as sauvé la mise ! Le\\nposte a un cadeau pour toi :\\lun BARPAU !"
  },
  "FourIsland_Text_RefIdle": {
   "en": "MAYA: I watch over the animals here.\\nThe world is quieter now.",
-  "fr": "MAYA : Je veille sur les animaux\\nici. Le monde est plus calme\\lmaintenant."
+  "fr": "MAYA : Je veille sur les animaux\\nici. Tout est plus calme\\lmaintenant."
  },
  "FourIsland_Text_RefNo": {
   "en": "MAYA: I understand. It is a lot to\\nask. The offer stands.",
@@ -101,10 +101,10 @@
  },
  "FourIsland_Text_RefOffer": {
   "en": "MAYA: You have them! May I take\\n3 of them for the post?",
-  "fr": "MAYA : Tu les as ! Puis-je en\\nprendre 3 pour le poste ?"
+  "fr": "MAYA : T'en as ! Je peux en\\nprendre 3 pour le poste ?"
  },
  "FourIsland_Text_RivalAlreadyGotEggBeSmellingYa": {
   "en": "{RIVAL}: Hey!\\n{PLAYER}!\\pWhat are you doing here in the\\nSEVII ISLANDS?\\pYou should quit copying me,\\nyou know?\\pAnyways, I already got my POKéMON\\nEGG, so I'm done with this island.\\pHeh, I bet you don't even know\\nabout POKéMON EGGS.\\pYou'll never fill your NATIONAL\\nPOKéDEX that way.\\pBy the way, I saw someone we both\\nknow on this island.\\pWhy don't you go look around if\\nit makes you curious?\\pMe, I don't have the time to\\nwaste.\\pBe smelling ya!",
-  "fr": "{RIVAL} : Hé ! {PLAYER} !\\pQu'est-ce que tu fais ici, dans les\\nÎLES SEVII ?\\pTu devrais arrêter de me copier, tu\\nsais ?\\pEnfin bref, j'ai déjà mon ŒUF\\nPOKéMON, j'en ai fini avec cette\\lîle.\\pHeh, je parie que tu ne sais même\\npas ce que sont les ŒUFS POKéMON.\\pTu ne rempliras jamais ton POKéDEX\\nNATIONAL comme ça.\\pAu fait, j'ai vu quelqu'un que nous\\nconnaissons tous les deux sur cette\\lîle.\\pPourquoi n'irais-tu pas jeter un\\nœil si ça t'intrigue ?\\pMoi, je n'ai pas de temps à perdre.\\pÀ la prochaine !"
+  "fr": "{RIVAL} : Hé ! {PLAYER} !\\pQu'est-ce que tu fais ici, dans les\\nÎLES SEVII ?\\pTu devrais arrêter de me copier, tu\\nsais ?\\pEnfin bref, j'ai déjà mon ŒUF\\nPOKéMON, j'en ai fini avec cette\\lîle.\\pHeh, je parie que tu ne sais même\\npas ce que sont les ŒUFS POKéMON.\\pTu rempliras jamais ton POKéDEX\\nNATIONAL comme ça.\\pAu fait, j'ai vu quelqu'un que nous\\nconnaissons tous les deux sur cette\\lîle.\\pPourquoi n'irais-tu pas jeter un\\nœil si ça t'intrigue ?\\pMoi, j'ai pas de temps à perdre.\\pÀ la prochaine !"
  }
 }

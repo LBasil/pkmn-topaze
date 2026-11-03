@@ -5,7 +5,7 @@
  },
  "CeladonCity_Restaurant_Text_ManLostItAllAtSlots": {
   "en": "Munch…\\pThe man at that table lost it all\\nat the slots.",
-  "fr": "Miam...\\pL'homme à cette table a tout perdu\\naux machines à sous."
+  "fr": "Miam…\\pLe type à cette table a tout\\nperdu aux machines à sous."
  },
  "CeladonCity_Restaurant_Text_OftenGoToDrugstore": {
   "en": "My POKéMON are weak, so I often\\nhave to go to the DRUGSTORE.",
@@ -13,7 +13,7 @@
  },
  "CeladonCity_Restaurant_Text_PsstBasementUnderGameCorner": {
   "en": "Psst! There's a basement under the\\nGAME CORNER, I hear.",
-  "fr": "Psst ! Il paraît qu'il y a un\\nsous-sol sous le CASINO."
+  "fr": "Psst ! Paraît qu'il y a un\\nsous-sol sous le CASINO."
  },
  "CeladonCity_Restaurant_Text_ReceivedCoinCaseFromMan": {
   "en": "{PLAYER} received a COIN CASE\\nfrom the man.",
@@ -29,6 +29,6 @@
  },
  "CeladonCity_Restaurant_Text_ThoughtIdWinItBack": {
   "en": "I always thought I was going to\\nwin it back…",
-  "fr": "J'ai toujours cru que je\\nrattraperais tout..."
+  "fr": "J'ai toujours cru que je\\nrattraperais tout…"
  }
 }

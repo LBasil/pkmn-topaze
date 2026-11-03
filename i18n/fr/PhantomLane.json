@@ -21,7 +21,7 @@
  },
  "PhantomLane_Text_Quest0_MissT": {
   "en": "One MAX REVIVE, please.",
-  "fr": "Un MAX RAPPEL, s'il vous plaît."
+  "fr": "Un MAX RAPPEL, s'il te plaît."
  },
  "PhantomLane_Text_Quest0_NoRoomT": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
@@ -37,6 +37,6 @@
  },
  "PhantomLane_Text_TopazeFindFull": {
   "en": "Something shines here, but your BAG\\nis full.",
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
+  "fr": "Y a un truc qui brille ici, mais\\nton SAC est plein."
  }
 }

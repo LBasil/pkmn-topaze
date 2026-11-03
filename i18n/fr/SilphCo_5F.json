@@ -17,7 +17,7 @@
  },
  "SilphCo_5F_Text_DaltonIntro": {
   "en": "Whaaat?\\pThere shouldn't be any children\\nhere!",
-  "fr": "Quoiii ?\\pIl ne devrait pas y avoir d'enfants\\nici !"
+  "fr": "Quoiii ?\\pIl devrait pas y avoir d'enfants\\nici !"
  },
  "SilphCo_5F_Text_DaltonPostBattle": {
   "en": "You're only on 5F.\\nIt's a long way to my BOSS!",
@@ -37,7 +37,7 @@
  },
  "SilphCo_5F_Text_Grunt1PostBattle": {
   "en": "It's not smart to pick a fight with\\nTEAM ONYBRIS!",
-  "fr": "Ce n'est pas malin de chercher\\nnoise à la TEAM ONYBRIS !"
+  "fr": "C'est pas malin de chercher\\nnoise à la TEAM ONYBRIS !"
  },
  "SilphCo_5F_Text_Grunt2Defeat": {
   "en": "Cough…\\nCough…",

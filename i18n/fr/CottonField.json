@@ -21,7 +21,7 @@
  },
  "CottonField_Text_Quest0_MissT": {
   "en": "One SUPER POTION, please.",
-  "fr": "Une SUPER POTION, s'il vous plaît."
+  "fr": "Une SUPER POTION, s'il te plaît."
  },
  "CottonField_Text_Quest0_NoRoomT": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
@@ -37,6 +37,6 @@
  },
  "CottonField_Text_TopazeFindFull": {
   "en": "Something shines here, but your BAG\\nis full.",
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
+  "fr": "Y a un truc qui brille ici, mais\\nton SAC est plein."
  }
 }

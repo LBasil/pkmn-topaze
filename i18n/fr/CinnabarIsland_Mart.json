@@ -9,11 +9,11 @@
  },
  "CinnabarIsland_Mart_Text_ScientistAsk": {
   "en": "We are testing REPEL on the volcano\\nbugs. I'm out of samples.\\pThree REPELS would finish my\\nresearch, young one.",
-  "fr": "Nous testons REPOUSSE sur les\\ninsectes du volcan. Je n'ai plus\\ld'échantillons.\\pTrois REPOUSSES termineraient ma\\nrecherche."
+  "fr": "On teste REPOUSSE sur les insectes\\ndu volcan. J'ai plus\\ld'échantillons.\\pTrois REPOUSSES finiraient ma\\nrecherche."
  },
  "CinnabarIsland_Mart_Text_ScientistGives": {
   "en": "Fascinating! They flee beautifully!\\pTake this from the lab stock. It\\nwas meant for the trial group.",
-  "fr": "Fascinant ! Ils fuient à\\nmerveille !\\pPrends ça du stock du labo. C'était\\ndestiné au groupe test."
+  "fr": "Fascinant ! Ils fuient à\\nmerveille !\\pTiens, prends ça du stock du labo.\\nC'était pour le groupe test."
  },
  "CinnabarIsland_Mart_Text_ScientistNo": {
   "en": "Hm. Science will wait, I suppose.",
@@ -21,6 +21,6 @@
  },
  "CinnabarIsland_Mart_Text_ScientistOffer": {
   "en": "REPELS! Could you give me three\\nfor my research?",
-  "fr": "Des REPOUSSES ! Pourrais-tu m'en\\ndonner trois pour ma recherche ?"
+  "fr": "Des REPOUSSES ! Tu pourrais m'en\\ndonner trois pour ma recherche ?"
  }
 }

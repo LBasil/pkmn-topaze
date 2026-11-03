@@ -13,7 +13,7 @@
  },
  "CeladonCity_GameCorner_PrizeRoom_Text_RakedItInToday": {
   "en": "Gahaha! I raked it in today!\\nIf only every day were like this…",
-  "fr": "Gahaha ! J'ai ramassé le pactole\\naujourd'hui ! Si seulement chaque\\pjour était comme ça..."
+  "fr": "Gahaha ! J'ai ramassé le pactole\\naujourd'hui ! Si seulement chaque\\pjour était comme ça…"
  },
  "CeladonCity_GameCorner_PrizeRoom_Text_WeExchangeCoinsForPrizes": {
   "en": "We exchange your COINS for prizes.",
@@ -21,7 +21,7 @@
  },
  "CeladonCity_GameCorner_PrizeRoom_Text_WhichPrize": {
   "en": "Which prize would you like?",
-  "fr": "Quel lot veux-tu ?"
+  "fr": "Quel lot tu veux ?"
  },
  "CeladonCity_GameCorner_PrizeRoom_Text_YouWantPrize": {
   "en": "So, you want the {STR_VAR_1}?",
@@ -29,6 +29,6 @@
  },
  "CeladonCity_GameCorner_PrizeRoom_Text_YouWantTM": {
   "en": "Okay, a TM of {STR_VAR_2}\\nis what you want?",
-  "fr": "D'accord, tu veux la CT de\\n{STR_VAR_2} ?"
+  "fr": "OK, tu veux la CT de\\n{STR_VAR_2} ?"
  }
 }

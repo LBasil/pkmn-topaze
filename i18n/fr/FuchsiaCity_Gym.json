@@ -53,11 +53,11 @@
  },
  "FuchsiaCity_Gym_Text_KogaDefeat": {
   "en": "Hm. You cleaned the toxin out of\\nyour own team. Impressive.\\pHere. Take the AMETHYST BADGE.",
-  "fr": "Hm. Tu as purgé la toxine de ta\\npropre équipe. Impressionnant.\\pTiens. Prends le BADGE AMÉTHYSTE."
+  "fr": "Hm. T'as purgé la toxine de ta\\npropre équipe. Impressionnant.\\pTiens. Prends le BADGE AMÉTHYSTE."
  },
  "FuchsiaCity_Gym_Text_KogaExplainSoulBadge": {
   "en": "Now that you have the AMETHYST\\nBADGE, the DEFENSE of your\\pPOKéMON rises.\\pIt also lets you SURF outside of\\nbattle, if you carry the HM.\\pAh! Take this, too!",
-  "fr": "Maintenant que tu as le BADGE\\nAMÉTHYSTE, la DÉFENSE de tes\\pPOKéMON augmente.\\pIl te permet aussi d'utiliser SURF\\nhors combat, si tu as la CS.\\pAh ! Prends ça aussi !"
+  "fr": "Maintenant que t'as le BADGE\\nAMÉTHYSTE, la DÉFENSE de tes\\pPOKéMON augmente.\\pIl te permet aussi d'utiliser SURF\\nhors combat, si t'as la CS.\\pAh ! Prends ça aussi !"
  },
  "FuchsiaCity_Gym_Text_KogaExplainTM06": {
   "en": "TM06 contains TOXIC.\\pIt poisons the foe and gets worse\\nevery turn. Poison, as I said, is\\ppatience.",
@@ -85,7 +85,7 @@
  },
  "FuchsiaCity_Gym_Text_KogaVisit1": {
   "en": "ACHLYS: You let the wish fly. A ninja\\nunderstands. Take this.",
-  "fr": "ACHLYS : Tu as laissé le vœu\\ns'envoler. Un ninja comprend.\\pPrends ça."
+  "fr": "ACHLYS : T'as laissé le vœu\\ns'envoler. Un ninja comprend.\\pPrends ça."
  },
  "FuchsiaCity_Gym_Text_KogaVisit2": {
   "en": "ACHLYS: No balls. Even a ninja can\\nrest. Take these potions.",
@@ -125,7 +125,7 @@
  },
  "FuchsiaCity_Gym_Text_ShawnDefeat": {
   "en": "You're more skilled than I'd\\nthought!",
-  "fr": "Tu es plus habile que je ne\\npensais !"
+  "fr": "T'es plus habile que je ne\\npensais !"
  },
  "FuchsiaCity_Gym_Text_ShawnIntro": {
   "en": "Master ACHLYS comes from a long line\\nof ninjas.\\pWhat did you descend from?",

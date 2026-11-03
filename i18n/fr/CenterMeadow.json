@@ -5,23 +5,23 @@
  },
  "CenterMeadow_Text_Npc1": {
   "en": "CHANSEY, KANGASKHAN... a\\ncollector's dream.",
-  "fr": "LEVEINARD, KANGOUREX... le rêve\\nd'un collectionneur."
+  "fr": "LEVEINARD, KANGOUREX… Le rêve\\nd'un collectionneur !"
  },
  "CenterMeadow_Text_Quest0_AfterT": {
   "en": "What a fine meadow.",
-  "fr": "Quelle belle prairie."
+  "fr": "Quelle belle prairie !"
  },
  "CenterMeadow_Text_Quest0_Ask": {
   "en": "Two ULTRA BALLs for my collection.\\nLUCKY EGG for you!",
-  "fr": "Deux HYPER BALLS pour ma\\ncollection. ŒUF CHANCE en échange !"
+  "fr": "Deux HYPER BALLS pour ma\\ncollection, contre un ŒUF CHANCE !"
  },
  "CenterMeadow_Text_Quest0_Done": {
   "en": "Wonderful! Take this LUCKY EGG.",
-  "fr": "Merveilleux ! Prends cet ŒUF\\nCHANCE."
+  "fr": "Génial ! Tiens, prends cet ŒUF\\nCHANCE."
  },
  "CenterMeadow_Text_Quest0_MissT": {
   "en": "Two ULTRA BALLs, please.",
-  "fr": "Deux HYPER BALLS, s'il te plaît."
+  "fr": "Deux HYPER BALLS, s'il te plaît !"
  },
  "CenterMeadow_Text_Quest0_NoRoomT": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
@@ -37,6 +37,6 @@
  },
  "CenterMeadow_Text_TopazeFindFull": {
   "en": "Something shines here, but your BAG\\nis full.",
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
+  "fr": "Y a un truc qui brille ici, mais\\nton SAC est plein."
  }
 }

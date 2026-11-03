@@ -33,11 +33,11 @@
  },
  "PalletTown_ProfessorOaksLab_Text_OakAddedNothingToPokedex": {
   "en": "Ah, {PLAYER}!\\nHow is your POKéDEX shaping up?\\p{RIVAL} has already caught some\\nPOKéMON and added to the data.\\pSo, {PLAYER}, let's have a look at\\nyour POKéDEX.\\p…What's the matter?\\nYou've added no new data at all.\\pI'll give you these, so do try a\\nlittle harder.",
-  "fr": "Ah, {PLAYER} !\\nComment avance ton POKéDEX ?\\p{RIVAL} a déjà capturé quelques\\nPOKéMON et ajouté des données.\\pAlors, {PLAYER}, voyons ton POKéDEX.\\p…Qu'y a-t-il ? Tu n'as ajouté\\naucune nouvelle donnée.\\pJe te donne ceci, alors fais un\\npeu plus d'efforts."
+  "fr": "Ah, {PLAYER} !\\nComment avance ton POKéDEX ?\\p{RIVAL} a déjà capturé quelques\\nPOKéMON et ajouté des données.\\pAlors, {PLAYER}, voyons ton POKéDEX.\\p…Qu'y a-t-il ? Tu as ajouté\\naucune nouvelle donnée.\\pJe te donne ceci, alors fais un\\npeu plus d'efforts."
  },
  "PalletTown_ProfessorOaksLab_Text_OakAfterRaid": {
   "en": "OAK: {PLAYER}! {RIVAL}! Both of you\\nin one piece. Good.\\pThey got into my LAB too. Nothing\\nwas broken, but every file on gems,\\lAURA and JIRACHI was copied.\\pWhoever leads them is looking for\\nsomething, and I can't chase it\\lalone. That is why I need you two.",
-  "fr": "CHEN : {PLAYER} ! {RIVAL} ! Vous\\nêtes tous deux entiers. Bien.\\pIls sont aussi entrés dans mon\\nLABO. Rien n'a été cassé, mais tous\\lles fichiers sur les gemmes, l'AURA\\net JIRACHI ont été copiés.\\pCelui qui les dirige cherche\\nquelque chose, et je ne peux pas le\\lpoursuivre seul. C'est pourquoi\\nj'ai besoin de vous deux."
+  "fr": "CHEN : {PLAYER} ! {RIVAL} ! Vous\\nêtes tous deux entiers. Bien.\\pIls sont aussi entrés dans mon\\nLABO. Rien n'a été cassé, mais tous\\lles fichiers sur les gemmes, l'AURA\\net JIRACHI ont été copiés.\\pCelui qui les dirige cherche\\nquelque chose, et je peux pas le\\lpoursuivre seul. C'est pourquoi\\nj'ai besoin de vous deux."
  },
  "PalletTown_ProfessorOaksLab_Text_OakBattleMonForItToGrow": {
   "en": "OAK: {PLAYER}, raise your young\\nPOKéMON by making it battle.\\pIt has to battle for it to grow.",
@@ -53,7 +53,7 @@
  },
  "PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese": {
   "en": "OAK: You can't get detailed data\\non POKéMON by just seeing them.\\pYou must catch them to obtain\\ncomplete data.\\pSo, here are some tools for\\ncatching wild POKéMON.",
-  "fr": "CHEN : On ne peut pas obtenir de\\ndonnées détaillées sur les POKéMON\\len les voyant.\\pIl faut les capturer pour obtenir\\ndes données complètes.\\pAlors, voici quelques outils pour\\ncapturer des POKéMON sauvages."
+  "fr": "CHEN : On peut pas obtenir de\\ndonnées détaillées sur les POKéMON\\len les voyant.\\pIl faut les capturer pour obtenir\\ndes données complètes.\\pAlors, voici quelques outils pour\\ncapturer des POKéMON sauvages."
  },
  "PalletTown_ProfessorOaksLab_Text_OakChoosingBulbasaur": {
   "en": "I see! BULBASAUR is your choice.\\nIt's very easy to raise.\\pSo, {PLAYER}, you want to go with\\nthe GRASS POKéMON BULBASAUR?",

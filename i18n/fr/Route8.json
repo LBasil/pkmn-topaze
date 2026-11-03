@@ -5,7 +5,7 @@
  },
  "Route8_Text_AidanIntro": {
   "en": "You look good at POKéMON, but how\\nis your chemistry grade?",
-  "fr": "Tu es doué en POKéMON, mais comment\\nest ta note en chimie ?"
+  "fr": "T'es doué en POKéMON, mais comment\\nest ta note en chimie ?"
  },
  "Route8_Text_AidanPostBattle": {
   "en": "The big city west of here is\\nshut. Thieves on the loose!\\pThe guard says he is thirsty.\\nMaybe someone has a drink for him.",
@@ -73,7 +73,7 @@
  },
  "Route8_Text_EliNotEnoughMons": {
   "en": "ELI: We can't battle if you don't\\nhave two POKéMON.",
-  "fr": "ELI : On ne peut pas se battre si\\ntu n'as pas deux POKéMON."
+  "fr": "ELI : On peut pas se battre si\\ntu n'as pas deux POKéMON."
  },
  "Route8_Text_EliPostBattle": {
   "en": "ELI: I caught my POKéMON with\\nANNE!",
@@ -81,7 +81,7 @@
  },
  "Route8_Text_GlennDefeat": {
   "en": "It's not logical!",
-  "fr": "Ce n'est pas logique !"
+  "fr": "C'est pas logique !"
  },
  "Route8_Text_GlennIntro": {
   "en": "You should be informed.\\nYou need strategy to win at this!",
@@ -93,7 +93,7 @@
  },
  "Route8_Text_JarenDefeat": {
   "en": "You for real, kid?",
-  "fr": "Tu es sérieux ?"
+  "fr": "T'es sérieux ?"
  },
  "Route8_Text_JarenIntro": {
   "en": "Clear the way, or I'll run you\\ndown!",
@@ -129,7 +129,7 @@
  },
  "Route8_Text_MeganDefeat": {
   "en": "Look what you did to my poor, cute\\nPOKéMON!",
-  "fr": "Regarde ce que tu as fait à mon\\npauvre et mignon POKéMON !"
+  "fr": "Regarde ce que t'as fait à mon\\npauvre et mignon POKéMON !"
  },
  "Route8_Text_MeganIntro": {
   "en": "We must look silly standing here\\nlike this.",

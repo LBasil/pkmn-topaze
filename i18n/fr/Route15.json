@@ -17,7 +17,7 @@
  },
  "Route15_Text_BeckyIntro": {
   "en": "You look gentle, so I think I can\\nbeat you.\\pI'll give it a go!",
-  "fr": "Tu as l'air doux, alors je pense\\nque je peux te battre.\\pJe vais essayer !"
+  "fr": "T'as l'air doux, alors je pense\\nque je peux te battre.\\pJe vais essayer !"
  },
  "Route15_Text_BeckyPostBattle": {
   "en": "I'm afraid of BIKERS. They look so\\nugly and mean!",
@@ -77,7 +77,7 @@
  },
  "Route15_Text_GraceIntro": {
   "en": "Oh, you're a little cutie!\\nSo like a darling POKéMON!",
-  "fr": "Oh, tu es tout mignon !\\nComme un adorable POKéMON !"
+  "fr": "Oh, t'es tout mignon !\\nComme un adorable POKéMON !"
  },
  "Route15_Text_GracePostBattle": {
   "en": "I forgive you.\\nI can take it.\\lI'm a big girl now.",
@@ -101,7 +101,7 @@
  },
  "Route15_Text_MyaIntro": {
   "en": "MYA: You're perfect.\\nHelp me train my little brother?",
-  "fr": "MYA : Tu es parfait. Aide-moi à\\nentraîner mon petit frère ?"
+  "fr": "MYA : T'es parfait. Aide-moi à\\nentraîner mon petit frère ?"
  },
  "Route15_Text_MyaNotEnoughMons": {
   "en": "MYA: Do you want to challenge us?\\nYou'll need two POKéMON, though.",
@@ -113,7 +113,7 @@
  },
  "Route15_Text_OliviaDefeat": {
   "en": "POKéMON isn't about winning or\\nlosing for me.",
-  "fr": "Les POKéMON, ce n'est pas gagner ou\\nperdre pour moi."
+  "fr": "Les POKéMON, c'est pas gagner ou\\nperdre pour moi."
  },
  "Route15_Text_OliviaIntro": {
   "en": "I raise POKéMON for protection\\nbecause I live alone.",
@@ -137,7 +137,7 @@
  },
  "Route15_Text_ProcheGauthier_Intro": {
   "en": "{PLAYER}! Finally. I have trained\\nevery single day for this. Give me\\peverything!",
-  "fr": "{PLAYER} ! Enfin. Je me suis\\nentraîné tous les jours pour ça.\\pDonne-moi tout ce que tu as !"
+  "fr": "{PLAYER} ! Enfin. Je me suis\\nentraîné tous les jours pour ça.\\pDonne-moi tout ce que t'as !"
  },
  "Route15_Text_ProcheGauthier_NoRoom": {
   "en": "Your BAG is full. Make some room\\nfirst, then talk to me again.",
@@ -161,7 +161,7 @@
  },
  "Route15_Text_RQuest_Ok": {
   "en": "You are kind. Take this treasure.",
-  "fr": "Tu es gentil. Prends ce trésor."
+  "fr": "T'es gentil. Prends ce trésor."
  },
  "Route15_Text_RonDefeat": {
   "en": "RON: Oh, no, no…\\nSis, I'm sorry!",

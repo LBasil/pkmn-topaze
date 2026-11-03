@@ -1,7 +1,7 @@
 {
  "TwoIsland_Text_AddedMerchandiseForLostelle": {
   "en": "I can't tell you how grateful I am\\nfor your rescue of LOSTELLE.\\pThanks to your feat, the people of\\nTHREE ISLAND have changed their\\lattitudes about KANTO people.\\pAnd, I'm from KANTO, you see.\\pThe people of THREE ISLAND\\nhelped me add to my merchandise.",
-  "fr": "Je ne peux pas dire à quel point je\\nte suis reconnaissant d'avoir sauvé\\lLOSTELLE.\\pGrâce à ton exploit, les habitants\\nde L'ÎLE TROIS ont changé\\ld'attitude envers les gens de\\nKANTO.\\pEt je viens de KANTO, tu vois.\\pLes habitants de L'ÎLE TROIS m'ont\\naidé à étoffer ma marchandise."
+  "fr": "Je peux pas dire à quel point je\\nte suis reconnaissant d'avoir sauvé\\lLOSTELLE.\\pGrâce à ton exploit, les habitants\\nde L'ÎLE TROIS ont changé\\ld'attitude envers les gens de\\nKANTO.\\pEt je viens de KANTO, tu vois.\\pLes habitants de L'ÎLE TROIS m'ont\\naidé à étoffer ma marchandise."
  },
  "TwoIsland_Text_BringingItemsFromDistantLands": {
   "en": "Oh, hello, {PLAYER}!\\nWelcome!\\pI've started bringing in items from\\ndistant lands.\\pI've got some rare items in, too.\\nPlease have a look!",
@@ -9,7 +9,7 @@
  },
  "TwoIsland_Text_BrunoCameToIslandWhileBack": {
   "en": "Listen, listen.\\nDid you know?\\pA famous TRAINER came to the\\nISLAND a little while back.\\pHe's one of the ELITE FOUR.\\nHis name is BRUNO.\\pHe went away disappointed when he\\nfound out that they were all sold\\lout of Rage Candybars.",
-  "fr": "Écoute, écoute. Tu savais ?\\pUn DRESSEUR célèbre est venu sur\\nl'ÎLE il y a peu.\\pC'est l'un du CONSEIL 4.\\nIl s'appelle BRUNO.\\pIl est reparti déçu en apprenant\\nqu'il n'y avait plus de barres Rage\\lCandybar."
+  "fr": "Écoute, écoute. Tu savais ?\\pUn DRESSEUR célèbre est venu sur\\nl'ÎLE il y a peu.\\pC'est l'un du CONSEIL 4.\\nIl s'appelle BRUNO.\\pIl est reparti déçu en apprenant\\nqu'il y avait plus de barres Rage\\lCandybar."
  },
  "TwoIsland_Text_BuyRareItemsHere": {
   "en": "The discerning TRAINER knows to\\nbuy rare items here!",
@@ -85,7 +85,7 @@
  },
  "TwoIsland_Text_RefGives": {
   "en": "KIRA: You saved the day. The post\\nhas a gift for you: HERACROSS!",
-  "fr": "KIRA : Tu as sauvé la mise. Le\\nposte a un cadeau pour toi :\\pSCARHINO !"
+  "fr": "KIRA : T'as sauvé la mise. Le\\nposte a un cadeau pour toi :\\pSCARHINO !"
  },
  "TwoIsland_Text_RefIdle": {
   "en": "KIRA: I watch over the animals here.\\nThe world is quieter now.",

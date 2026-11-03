@@ -13,11 +13,11 @@
  },
  "CinnabarIsland_PokemonLab_Lounge_Text_CliftonQuestNo": {
   "en": "You've caught {STR_VAR_1} kinds.\\nCome back at 20!",
-  "fr": "Tu as capturé {STR_VAR_1} espèces.\\nReviens à 20 !"
+  "fr": "T'as capturé {STR_VAR_1} espèces.\\nReviens à 20 !"
  },
  "CinnabarIsland_PokemonLab_Lounge_Text_CliftonQuestOk": {
   "en": "{STR_VAR_1} kinds already! Splendid!\\pTake this RARE CANDY.",
-  "fr": "Déjà {STR_VAR_1} espèces ! Splendide !\\pPrends ce BONBON RARE."
+  "fr": "Déjà {STR_VAR_1} espèces ! Splendide !\\pTiens, prends ce BONBON RARE."
  },
  "CinnabarIsland_PokemonLab_Lounge_Text_FoundFossilInMtMoon": {
   "en": "I found this most remarkable fossil\\ninside MT. MOON.\\pI think it's of a rare, prehistoric\\nPOKéMON.",
@@ -25,7 +25,7 @@
  },
  "CinnabarIsland_PokemonLab_Lounge_Text_NormaQuestAsk": {
   "en": "A POKéMON that trusts its TRAINER\\nfully is a beautiful thing.\\pLet me see your lead POKéMON.",
-  "fr": "Un POKéMON qui fait entièrement\\nconfiance à son DRESSEUR est une\\lbelle chose.\\pMontre-moi ton POKéMON de tête."
+  "fr": "Un POKéMON qui fait entièrement\\nconfiance à son DRESSEUR, c'est\\lbeau !\\pMontre-moi ton POKéMON de tête."
  },
  "CinnabarIsland_PokemonLab_Lounge_Text_NormaQuestDone": {
   "en": "Take good care of that bond.",
@@ -37,7 +37,7 @@
  },
  "CinnabarIsland_PokemonLab_Lounge_Text_NormaQuestNo": {
   "en": "It's fond of you, but not\\nquite devoted yet.\\pWalk with it, win battles together,\\nand come back!",
-  "fr": "Il t'aime bien, mais n'est pas\\ntout à fait dévoué.\\pMarche avec lui, gagnez des combats\\nensemble, et reviens !"
+  "fr": "Il t'aime bien, mais il est pas\\ntout à fait dévoué.\\pMarche avec lui, gagnez des combats\\nensemble, et reviens !"
  },
  "CinnabarIsland_PokemonLab_Lounge_Text_NormaQuestOk": {
   "en": "It adores you with all its heart!\\pPlease take this PP UP.",

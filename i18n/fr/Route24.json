@@ -17,11 +17,11 @@
  },
  "Route24_Text_CaleIntro": {
   "en": "People call this the NUGGET\\nBRIDGE! Beat us five TRAINERS and\\pprove you're strong enough to\\ncross. Think you've got it?",
-  "fr": "On appelle ça le PONT PÉPITE ! Bats\\ncinq DRESSEURS comme nous et prouve\\lque tu es assez fort pour\\ntraverser. Tu te sens prêt ?"
+  "fr": "On appelle ça le PONT PÉPITE ! Bats\\ncinq DRESSEURS comme nous et prouve\\lque t'es assez fort pour\\ntraverser. Tu te sens prêt ?"
  },
  "Route24_Text_CalePostBattle": {
   "en": "A boy in a hurry ran right past\\nus. He wouldn't even battle!\\pHe bolted north over the bridge.",
-  "fr": "Un garçon pressé nous a dépassés en\\ncourant. Il n'a même pas voulu\\lcombattre !\\pIl a filé vers le nord sur le pont."
+  "fr": "Un garçon pressé nous a dépassés en\\ncourant. Il a même pas voulu\\lcombattre !\\pIl a filé vers le nord sur le pont."
  },
  "Route24_Text_EthanDefeat": {
   "en": "Whoa!\\nToo much!",
@@ -113,7 +113,7 @@
  },
  "Route24_Text_YouDontHaveAnyRoom": {
   "en": "Make room in your bag first!\\nI'm not leaving until you take it.",
-  "fr": "Fais de la place dans ton sac\\nd'abord ! Je ne partirai pas avant\\lque tu la prennes."
+  "fr": "Fais de la place dans ton sac\\nd'abord ! Je partirai pas avant\\lque tu la prennes."
  },
  "Route24_Text_YoudBecomeTopRocketLeader": {
   "en": "Tch! You beat me.\\pThe others are long gone with the\\nTOURMALINE. I only had to keep you\\pbusy. Take this NUGGET, it's all I\\nhave on me. Now leave me alone!",

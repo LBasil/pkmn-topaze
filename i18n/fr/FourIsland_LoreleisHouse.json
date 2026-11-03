@@ -5,11 +5,11 @@
  },
  "FourIsland_LoreleisHouse_Text_EchoLoreleiEcho": {
   "en": "LORELEI: Two beasts of the old\\nlegends passed through here.\\pNow the fourth ECHO is sealed in\\nthe deepest ICEFALL CAVE.\\pA statue of ice walks there.\\nPlease, calm it down.",
-  "fr": "LORELEI : Deux bêtes des vieilles\\nlégendes sont passées par ici.\\pMaintenant le quatrième ÉCHO est\\nscellé au fond de la GROTTE GIVRÉE.\\pUne statue de glace y marche.\\nCalme-la, s'il te plaît."
+  "fr": "LORELEI : Deux bêtes des vieilles\\nlégendes sont passées par ici.\\pMaintenant, le quatrième ÉCHO est\\nscellé au fond de la GROTTE GIVRÉE.\\pUne statue de glace y marche.\\nCalme-la, s'il te plaît."
  },
  "FourIsland_LoreleisHouse_Text_EchoLoreleiGift": {
   "en": "LORELEI: The cold has lifted.\\nThank you.\\pA little POKéMON came with the\\nECHO. It is yours now.",
-  "fr": "LORELEI : Le froid s'est levé.\\nMerci.\\pUn petit POKéMON est venu avec\\nl'ÉCHO. Il est à toi maintenant."
+  "fr": "LORELEI : Le froid est retombé.\\nMerci !\\pUn petit POKéMON est venu avec\\nl'ÉCHO. Il est à toi maintenant."
  },
  "FourIsland_LoreleisHouse_Text_EchoLoreleiHello": {
   "en": "LORELEI: The ice has been\\nstrange lately, CHAMPION.",
@@ -25,7 +25,7 @@
  },
  "FourIsland_LoreleisHouse_Text_IfAnythingWereToHappenToIsland": {
   "en": "LORELEI: There's something weighing\\nheavily on my mind.\\pIf anything were to happen on\\nthe island where I was born…\\pI wouldn't know about it if I were\\nin the POKéMON LEAGUE.\\pI wonder if that would make me\\nirresponsible to my home…",
-  "fr": "LORELEI : Quelque chose me pèse sur\\nle cœur.\\pS'il arrivait quelque chose sur\\nl'île où je suis née…\\pJe ne le saurais pas si j'étais à\\nla LIGUE POKéMON.\\pJe me demande si ça ferait de moi\\nquelqu'un d'irresponsable envers\\lchez moi…"
+  "fr": "LORELEI : Quelque chose me pèse sur\\nle cœur.\\pS'il arrivait quelque chose sur\\nl'île où je suis née…\\pJe le saurais pas si j'étais à\\nla LIGUE POKéMON.\\pJe me demande si ça ferait de moi\\nquelqu'un d'irresponsable envers\\lchez moi…"
  },
  "FourIsland_LoreleisHouse_Text_IllReturnToLeagueInShortWhile": {
   "en": "LORELEI: So, you managed to solve\\nall the problems here?\\pThat's wonderful.\\pThat means there isn't any reason\\nfor me to be here all the time.\\pThank you…\\pI'll return to the POKéMON LEAGUE\\nin a short while.",

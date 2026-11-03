@@ -1,11 +1,11 @@
 {
  "Route6_Text_ElijahDefeat": {
   "en": "You're too good!",
-  "fr": "Tu es trop fort !"
+  "fr": "T'es trop fort !"
  },
  "Route6_Text_ElijahIntro": {
   "en": "I've never seen you around.\\nAre you good?",
-  "fr": "Je ne t'ai jamais vu par ici.\\nTu es bon ?"
+  "fr": "Je t'ai jamais vu par ici.\\nTu es bon ?"
  },
  "Route6_Text_ElijahPostBattle": {
   "en": "Are my POKéMON weak?\\nOr, am I just bad?\\lWhich do you think?",
@@ -41,7 +41,7 @@
  },
  "Route6_Text_KeigoIntro": {
   "en": "There aren't many bugs out here.\\nThe wind is too strong.",
-  "fr": "Il n'y a pas beaucoup d'insectes\\nici. Le vent est trop fort."
+  "fr": "Il y a pas beaucoup d'insectes\\nici. Le vent est trop fort."
  },
  "Route6_Text_KeigoPostBattle": {
   "en": "I like bugs, so I'm going back to\\nOPANIHRUM FOREST.",
@@ -65,7 +65,7 @@
  },
  "Route6_Text_ProcheJordan_Defeat": {
   "en": "Solid... and yet you broke through.",
-  "fr": "Solide… et pourtant tu as percé."
+  "fr": "Solide… et pourtant t'as percé."
  },
  "Route6_Text_ProcheJordan_Early": {
   "en": "Not yet, {PLAYER}. Finish your\\njourney first, then come and find\\pme.",
@@ -101,7 +101,7 @@
  },
  "Route6_Text_RickyDefeat": {
   "en": "I just can't win!",
-  "fr": "Je n'arrive jamais à gagner !"
+  "fr": "J'arrive jamais à gagner !"
  },
  "Route6_Text_RickyIntro": {
   "en": "Who's there?\\nQuit listening in on us!",

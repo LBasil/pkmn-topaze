@@ -5,7 +5,7 @@
  },
  "SevenIsland_House_Room1_Text_ChallengeVisitingTrainer": {
   "en": "Ah!\\nWelcome, my friend!\\pLet me tell you something. There's\\na hidden room in the basement.\\pA TRAINER named {STR_VAR_1} is\\nwaiting there now.\\pTell me, you did come to challenge\\n{STR_VAR_1}, am I right?",
-  "fr": "Ah ! Bienvenue, mon ami !\\pLaisse-moi te dire quelque chose.\\nIl y a une salle cachée au\\lsous-sol.\\pUn DRESSEUR nommé {STR_VAR_1} y attend\\nen ce moment.\\pDis-moi, tu es bien venu défier\\n{STR_VAR_1}, pas vrai ?"
+  "fr": "Ah ! Bienvenue, mon ami !\\pLaisse-moi te dire quelque chose.\\nIl y a une salle cachée au\\lsous-sol.\\pUn DRESSEUR nommé {STR_VAR_1} y attend\\nen ce moment.\\pDis-moi, t'es bien venu défier\\n{STR_VAR_1}, pas vrai ?"
  },
  "SevenIsland_House_Room1_Text_DontHoldAnythingBack": {
   "en": "All right.\\nDon't hold anything back!",
@@ -29,7 +29,7 @@
  },
  "SevenIsland_House_Room1_Text_OnlyEnjoymentWatchingBattles": {
   "en": "I may not look like much now,\\nbut when I was younger…\\pI flew everywhere, challenging\\nTRAINERS wherever I found them.\\pNow, my only source of enjoyment\\nis reminiscing about the past while\\lwatching battles.",
-  "fr": "Je n'ai peut-être pas l'air de\\ngrand-chose maintenant, mais quand\\lj'étais plus jeune…\\pJe volais partout, défiant les\\nDRESSEURS là où je les trouvais.\\pMaintenant, mon seul plaisir est de\\nme remémorer le passé en regardant\\ldes combats."
+  "fr": "J'ai peut-être pas l'air de\\ngrand-chose maintenant, mais quand\\lj'étais plus jeune…\\pJe volais partout, défiant les\\nDRESSEURS là où je les trouvais.\\pMaintenant, mon seul plaisir est de\\nme remémorer le passé en regardant\\ldes combats."
  },
  "SevenIsland_House_Room1_Text_SaveProgressBeforeBattle": {
   "en": "Fine! Before your battle, would\\nyou like to save your game?",

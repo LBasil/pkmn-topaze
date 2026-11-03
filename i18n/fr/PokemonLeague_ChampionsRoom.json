@@ -9,11 +9,11 @@
  },
  "PokemonLeague_ChampionsRoom_Text_BossIntro": {
   "en": "???: So this is the new CHAMPION.\\pDo you know what waits in the\\nHALL OF FAME? JIRACHI.\\pOne wish, for whoever stands at\\nthe top.\\pI did not come to be a CHAMPION.\\nI came for what a CHAMPION wakes.\\pI will wish every POKéMON free\\nof humans. No more BALLS.\\lNever again.\\pStep aside, child. Or be\\ncrushed!",
-  "fr": "??? : Alors voici le nouveau\\nCHAMPION.\\pSais-tu ce qui attend dans le HALL\\nDES LÉGENDES ? JIRACHI.\\pUn vœu, pour celui qui est au\\nsommet.\\pJe ne suis pas venu pour être\\nCHAMPION. Je suis venu pour ce\\lqu'un CHAMPION éveille.\\pJe souhaiterai que chaque POKéMON\\nsoit libre des humains. Plus de\\pBALLS. Plus jamais.\\pÉcarte-toi. Ou sois écrasé !"
+  "fr": "??? : Alors voici le nouveau\\nCHAMPION.\\pSais-tu ce qui attend dans le HALL\\nDES LÉGENDES ? JIRACHI.\\pUn vœu, pour celui qui est au\\nsommet.\\pJe suis pas venu pour être\\nCHAMPION. Je suis venu pour ce\\lqu'un CHAMPION éveille.\\pJe souhaiterai que chaque POKéMON\\nsoit libre des humains. Plus de\\pBALLS. Plus jamais.\\pÉcarte-toi. Ou sois écrasé !"
  },
  "PokemonLeague_ChampionsRoom_Text_BossLegends": {
   "en": "???: Enough.\\pI did not want to use them yet.\\pThe three birds. And the one\\nwho watches over them all.\\pEvery one I took bent the\\nworld's clocks a little more.\\lDo you feel the time shaking?\\pCome, MEWTWO!",
-  "fr": "??? : Assez.\\pJe ne voulais pas encore les\\nutiliser.\\pLes trois oiseaux. Et celui qui\\nveille sur eux tous.\\pChacun que j'ai pris a tordu un peu\\nplus les horloges du monde. Sens-tu\\lle temps trembler ?\\pViens, MEWTWO !"
+  "fr": "??? : Assez.\\pJe voulais pas encore les\\nutiliser.\\pLes trois oiseaux. Et celui qui\\nveille sur eux tous.\\pChacun que j'ai pris a tordu un peu\\nplus les horloges du monde. Sens-tu\\lle temps trembler ?\\pViens, MEWTWO !"
  },
  "PokemonLeague_ChampionsRoom_Text_BossPost": {
   "en": "???: You fight for them, yet you\\nkeep them in BALLS.\\pThink about that when JIRACHI\\nasks you.\\pThe wish is yours now.\\nChoose well.",
@@ -21,15 +21,15 @@
  },
  "PokemonLeague_ChampionsRoom_Text_BossQuartzLost": {
   "en": "???: And QUARTZ. Thank you for\\nlosing it to my people at that\\lcasino.\\pA gift I did not even ask for.",
-  "fr": "??? : Et le QUARTZ. Merci de\\nl'avoir perdu face à mes hommes à\\lce casino.\\pUn cadeau que je n'avais même pas\\ndemandé."
+  "fr": "??? : Et le QUARTZ. Merci de\\nl'avoir perdu face à mes hommes à\\lce casino.\\pUn cadeau que j'avais même pas\\ndemandé."
  },
  "PokemonLeague_ChampionsRoom_Text_BossQuartzWon": {
   "en": "???: You even kept QUARTZ out of\\nmy hands, at that casino.\\pA lucky streak. It ends here.",
-  "fr": "??? : Tu as même gardé le QUARTZ\\nhors de mes mains, à ce casino.\\pUne série de chance. Elle s'arrête\\nici."
+  "fr": "??? : T'as même gardé le QUARTZ\\nhors de mes mains, à ce casino.\\pUne série de chance. Elle s'arrête\\nici."
  },
  "PokemonLeague_ChampionsRoom_Text_OakCongratulations": {
   "en": "OAK: {PLAYER}, you were\\nmagnificent.\\pYou are the CHAMPION, and you\\nprotected the wish from the\\lwrong hands.\\pCome with me. The HALL OF FAME\\nis waiting for you.",
-  "fr": "CHEN : {PLAYER}, tu as été\\nmagnifique.\\pTu es le CHAMPION, et tu as protégé\\nle vœu des mauvaises mains.\\pViens avec moi. Le HALL DES\\nLÉGENDES t'attend."
+  "fr": "CHEN : {PLAYER}, t'as été\\nmagnifique.\\pTu es le CHAMPION, et t'as protégé\\nle vœu des mauvaises mains.\\pViens avec moi. Le HALL DES\\nLÉGENDES t'attend."
  },
  "PokemonLeague_ChampionsRoom_Text_OakDefeat": {
   "en": "OAK: Hm! Marvelous!",
@@ -41,6 +41,6 @@
  },
  "PokemonLeague_ChampionsRoom_Text_OakPostBattle": {
   "en": "OAK: Your POKéMON trust you and\\nyou trust them.\\pThat is the whole secret.\\nYou are the new CHAMPION!",
-  "fr": "CHEN : Tes POKéMON te font\\nconfiance et tu leur fais\\lconfiance.\\pC'est tout le secret. Tu es le\\nnouveau CHAMPION !"
+  "fr": "CHEN : Tes POKéMON te font\\nconfiance et tu leur fais\\lconfiance.\\pC'est tout le secret. T'es le\\nnouveau CHAMPION !"
  }
 }

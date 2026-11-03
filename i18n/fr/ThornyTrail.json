@@ -5,7 +5,7 @@
  },
  "ThornyTrail_Text_Npc1": {
   "en": "Moon stone, moon stone... I have\\nnone.",
-  "fr": "Pierre lune, pierre lune… Je n'en\\nai pas."
+  "fr": "Pierre lune, pierre lune… J'en\\nai pas."
  },
  "ThornyTrail_Text_Quest0_AfterT": {
   "en": "Back on the trail.",
@@ -37,6 +37,6 @@
  },
  "ThornyTrail_Text_TopazeFindFull": {
   "en": "Something shines here, but your BAG\\nis full.",
-  "fr": "Quelque chose brille ici, mais ton\\nSAC est plein."
+  "fr": "Y a un truc qui brille ici, mais\\nton SAC est plein."
  }
 }

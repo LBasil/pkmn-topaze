@@ -25,7 +25,7 @@
  },
  "Route4_Text_RQuest_Done": {
   "en": "I am never going back in without a\\nrope.",
-  "fr": "Je ne retournerai jamais là-dedans\\nsans corde."
+  "fr": "Je retournerai jamais là-dedans\\nsans corde."
  },
  "Route4_Text_RQuest_NoRoom": {
   "en": "Your BAG is full. Make room, then\\ncome back.",
@@ -53,7 +53,7 @@
  },
  "Text_MegaKickTeach": {
   "en": "A kick of brutal ferocity!\\pPacked with destructive power!\\pWhen you get right down to it,\\nMEGA KICK is the ultimate attack!\\lDon't you agree?\\pOkay!\\nI'll teach it to your POKéMON!",
-  "fr": "Un coup de pied d'une férocité\\nbrutale !\\pRempli de puissance destructrice !\\pAu fond, ULTIMAWASHI est l'attaque\\nsuprême ! Tu ne trouves pas ?\\pD'accord !\\nJe vais l'enseigner à ton POKéMON !"
+  "fr": "Un coup de pied d'une férocité\\nbrutale !\\pRempli de puissance destructrice !\\pAu fond, ULTIMAWASHI est l'attaque\\nsuprême ! Tu trouves pas ?\\pD'accord !\\nJe vais l'enseigner à ton POKéMON !"
  },
  "Text_MegaKickWhichMon": {
   "en": "All right!\\nWhich POKéMON wants to learn it?",
@@ -69,7 +69,7 @@
  },
  "Text_MegaPunchTeach": {
   "en": "A punch of roaring ferocity!\\pPacked with destructive power!\\pWhen the chips are down,\\nMEGA PUNCH is the ultimate attack!\\lYou agree, yes?\\pNow!\\nLet me teach it to your POKéMON!",
-  "fr": "Un coup de poing d'une férocité\\nrugissante !\\pRempli de puissance destructrice !\\pQuand tout est perdu, ULTIMAPOING\\nest l'attaque suprême ! Tu es\\ld'accord, non ?\\pMaintenant ! Laisse-moi l'enseigner\\nà ton POKéMON !"
+  "fr": "Un coup de poing d'une férocité\\nrugissante !\\pRempli de puissance destructrice !\\pQuand tout est perdu, ULTIMAPOING\\nest l'attaque suprême ! T'es\\ld'accord, non ?\\pMaintenant ! Laisse-moi l'enseigner\\nà ton POKéMON !"
  },
  "Text_MegaPunchWhichMon": {
   "en": "Fine!\\nWhich POKéMON will learn it?",
