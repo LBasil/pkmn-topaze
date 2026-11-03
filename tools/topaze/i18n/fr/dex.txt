@@ -1,0 +1,386 @@
+NATIONAL_DEX_BULBASAUR|GRAINE|Au matin de sa vie, la graine sur son dos\nlui fournit les éléments dont il a besoin\npour grandir.
+NATIONAL_DEX_IVYSAUR|GRAINE|Lorsque le bourgeon sur son dos éclot, il\nrépand un doux parfum pour célébrer sa\nfloraison.
+NATIONAL_DEX_VENUSAUR|GRAINE|Le parfum de sa fleur se fait plus\npénétrant les lendemains de pluie. Cela\nappâte les autres POKéMON.
+NATIONAL_DEX_CHARMANDER|LÉZARD|La flamme de sa queue symbolise sa\nvitalité. Elle est intense quand il est en\nbonne santé.
+NATIONAL_DEX_CHARMELEON|FLAMME|La nuit, la queue ardente du REPTINCEL\nbrille comme une étoile dans son repaire\nmontagneux.
+NATIONAL_DEX_CHARIZARD|FLAMME|On raconte que la flamme du DRACAUFEU\ns'intensifie après un combat difficile.
+NATIONAL_DEX_SQUIRTLE|MINITORTUE|Il se réfugie dans sa carapace et réplique\nen éclaboussant l'ennemi à la première\noccasion.
+NATIONAL_DEX_WARTORTLE|TORTUE|On prétend qu'il vit 10 000 ans. Sa queue\nduveteuse est un symbole de longévité\npopulaire.
+NATIONAL_DEX_BLASTOISE|CARAPACE|Les trombes d'eau projetées par les canons\nde sa carapace peuvent percer le métal le\nplus résistant.
+NATIONAL_DEX_CATERPIE|VER|Ses antennes rouges libèrent une puanteur\nqui repousse l'ennemi. Il grandit par mues\nrégulières.
+NATIONAL_DEX_METAPOD|COCON|Son corps frêle est protégé par sa carapace\nd'acier. Il encaisse les coups durs en\nattendant d'évoluer.
+NATIONAL_DEX_BUTTERFREE|PAPILLON|Il raffole du nectar des fleurs. Il est\ncapable de repérer la plus petite quantité\nde pollen.
+NATIONAL_DEX_WEEDLE|INSECTOPIC|Il mange chaque jour son poids en feuilles.\nIl utilise l'aiguillon sur sa tête pour\nrepousser l'ennemi.
+NATIONAL_DEX_KAKUNA|COCON|Il se cache sous les feuilles et les\nbranches pour fuir les prédateurs en\nattendant d'évoluer.
+NATIONAL_DEX_BEEDRILL|GUÊPOISON|Il virevolte rapidement autour de l'ennemi\net frappe de son dard empoisonné avant de\ndécamper.
+NATIONAL_DEX_PIDGEY|MINOISEAU|Ce POKéMON docile préfère éviter le combat.\nToutefois, il se montre très féroce quand\non l'agresse.
+NATIONAL_DEX_PIDGEOTTO|OISEAU|Il survole son vaste territoire en quête\nd'une proie avant de fondre sur elle toutes\ngriffes en avant.
+NATIONAL_DEX_PIDGEOT|OISEAU|En battant des ailes de toutes ses forces,\nROUCARNAGE génère une rafale à en déraciner\nles arbres.
+NATIONAL_DEX_RATTATA|SOURIS|D'une prudence extrême, sa nature robuste\nlui permet de s'adapter à tous les\nterrains.
+NATIONAL_DEX_RATICATE|SOURIS|Il grignote sans cesse pour apaiser la\npoussée de ses crocs. Il peut transpercer\nun mur de parpaings.
+NATIONAL_DEX_SPEAROW|MINOISEAU|Il fait battre vigoureusement ses petites\nailes pour voler et cherche à manger dans\nl'herbe avec le bec.
+NATIONAL_DEX_FEAROW|BEC-OISEAU|Il a assez d'énergie pour voler toute la\njournée avec ses grandes ailes. Il frappe\nde son bec acéré.
+NATIONAL_DEX_EKANS|SERPENT|Il se faufile dans l'herbe sans un bruit et\nfrappe dans le dos quand sa proie s'y\nattend le moins.
+NATIONAL_DEX_ARBOK|COBRA|Il utilise la marque sur son ventre pour\nintimider l'ennemi. Il étouffe l'ennemi\npétrifié par la peur.
+NATIONAL_DEX_PIKACHU|SOURIS|Il lui arrive de remettre d'aplomb un\nPIKACHU allié en lui envoyant une décharge\nélectrique.
+NATIONAL_DEX_RAICHU|SOURIS|Il se protège des décharges grâce à sa\nqueue qui dissipe l'électricité dans le\nsol.
+NATIONAL_DEX_SANDSHREW|SOURIS|Il vit sur des terres arides épargnées par\nla pluie. Il se roule en boule pour se\nprotéger.
+NATIONAL_DEX_SANDSLASH|SOURIS|Il se met en boule pour percuter l'ennemi.\nSes épines aiguisées font beaucoup de\ndégâts.
+NATIONAL_DEX_NIDORAN_F|VÉNÉPIC|Bien qu'il rechigne à se battre, une goutte\ndu poison sécrété par ses piquants peut\ns'avérer fatale.
+NATIONAL_DEX_NIDORINA|VÉNÉPIC|Ce POKéMON dresse ses piquants en cas de\ndanger. Ils poussent moins vite que ceux de\nNIDORINO.
+NATIONAL_DEX_NIDOQUEEN|PERCEUR|Son corps est recouvert d'écailles solides.\nIl donnera sa vie pour secourir les petits\nde son terrier.
+NATIONAL_DEX_NIDORAN_M|VÉNÉPIC|Il jauge le terrain en laissant ses\noreilles dépasser de l'herbe. Il se défend\navec sa corne toxique.
+NATIONAL_DEX_NIDORINO|VÉNÉPIC|D'un tempérament violent, il empale\nl'ennemi sur sa corne qui distille un\npoison puissant.
+NATIONAL_DEX_NIDOKING|PERCEUR|Un coup de sa puissante queue peut briser\nun poteau téléphonique comme une allumette.
+NATIONAL_DEX_CLEFAIRY|FÉE|On dit que ceux qui voient danser un groupe\nde MÉLOFÉE sous la pleine lune connaîtront\nun grand bonheur.
+NATIONAL_DEX_CLEFABLE|FÉE|Il est très farouche et se laisse rarement\napprocher. De plus, il détecte les sons à\nplus d'1 km.
+NATIONAL_DEX_VULPIX|RENARD|Il envoie des boules de feu. Avec l'âge,\nses six queues en forment de nouvelles.
+NATIONAL_DEX_NINETALES|RENARD|On raconte que ses neuf queues détiennent\nun pouvoir mystique. Il peut vivre pendant\nmille ans.
+NATIONAL_DEX_JIGGLYPUFF|BOUBOULE|Lorsqu'il roule ses grands yeux ronds, il\nentonne une berceuse qui endort son\nauditoire.
+NATIONAL_DEX_WIGGLYTUFF|BOUBOULE|Sa fourrure est d'une douceur incomparable\nau toucher. Il peut gonfler en aspirant de\nl'air.
+NATIONAL_DEX_ZUBAT|CHOVSOURIS|Il se repère dans l'espace grâce aux\nultrasons émis par sa gueule.
+NATIONAL_DEX_GOLBAT|CHOVSOURIS|Ses crocs acérés et creux peuvent pénétrer\nla plus épaisse des peaux et sucer le sang\nde la victime.
+NATIONAL_DEX_ODDISH|RACINE|En journée, il plante ses pieds-racines\ndans le sol. La nuit, il se promène en\nsemant des graines.
+NATIONAL_DEX_GLOOM|RACINE|L'odeur du nectar de sa bouche est si\nrépugnante qu'elle agresse les narines à\ndeux kilomètres.
+NATIONAL_DEX_VILEPLUME|FLEUR|Ses pétales sont les plus grands du monde.\nIl marche en répandant un pollen\nextrêmement allergène.
+NATIONAL_DEX_PARAS|CHAMPIGNON|Des champignons appelés “tochukaso”\npoussent sur son dos. Ils évoluent avec le\nPARAS hôte.
+NATIONAL_DEX_PARASECT|CHAMPIGNON|Un champignon parasite plus gros que\nPARASECT contrôle son corps. Il répand des\nspores empoisonnées.
+NATIONAL_DEX_VENONAT|VERMINE|Ses grands yeux sont en fait des amas\nd'yeux minuscules. La nuit, il est attiré\npar la lumière.
+NATIONAL_DEX_VENOMOTH|PAPIPOISON|Il répand ses écailles poudreuses en\nbattant des ailes. Elles sont toxiques au\ntoucher.
+NATIONAL_DEX_DIGLETT|TAUPE|Un POKéMON qui vit sous terre. Habitué aux\nsouterrains, il fuit la lumière du jour.
+NATIONAL_DEX_DUGTRIO|TAUPE|Ses trois têtes creusent le sol à tour de\nrôle. Il peut atteindre des profondeurs de\n100 kilomètres.
+NATIONAL_DEX_MEOWTH|CHADÉGOUT|Son regard s'anime à la vue d'un objet\nbrillant. C'est un POKéMON nocturne.
+NATIONAL_DEX_PERSIAN|CHADEVILLE|Un POKéMON très snob. La taille du joyau\nqui orne son front alimente bien des débats\nparmi ses fans.
+NATIONAL_DEX_PSYDUCK|CANARD|Ses pouvoirs déconcertants et mystérieux\nlui font subir de constantes migraines.
+NATIONAL_DEX_GOLDUCK|CANARD|Ses membres palmés et son corps\nparfaitement adapté font de lui un nageur\nexceptionnel.
+NATIONAL_DEX_MANKEY|PORSINGE|Ils vivent en colonies sylvestres. Quand un\nFÉROSINGE s'énerve, toute la colonie suit\nson exemple.
+NATIONAL_DEX_PRIMEAPE|PORSINGE|Il grogne quand on le toise, rugit quand on\ns'enfuit et devient fou de rage quand on le\nfrappe.
+NATIONAL_DEX_GROWLITHE|CHIOT|Un POKéMON très loyal. Il restera immobile\njusqu'à ce que son Dresseur lui donne un\nordre.
+NATIONAL_DEX_ARCANINE|LÉGENDAIRE|Son port altier et son attitude fière ont\ndepuis longtemps conquis le cœur des\nhommes.
+NATIONAL_DEX_POLIWAG|TÊTARD|Sa peau est si mince qu'on voit ses organes\ninternes. Il tient à peine sur ses nouveaux\npieds.
+NATIONAL_DEX_POLIWHIRL|TÊTARD|La spirale qui orne son ventre ondule\ndoucement. Celui qui la fixe est saisi\nd'une étrange torpeur.
+NATIONAL_DEX_POLIWRATH|TÊTARD|Il possède de sacrés biscoteaux. Il peut\nparcourir sans relâche l'Océan Pacifique.
+NATIONAL_DEX_ABRA|PSY|L'utilisation de ses pouvoirs mentaux le\nfatigue tellement qu'il dort 18 heures par\njour.
+NATIONAL_DEX_KADABRA|PSY|Il fixe sa cuillère d'argent afin de\nconcentrer son esprit et d'émettre un\nmaximum d'ondes alpha.
+NATIONAL_DEX_ALAKAZAM|PSY|On dit que les cuillères qu'il tient en\npermanence ont été créées par la puissance\nde son esprit.
+NATIONAL_DEX_MACHOP|COLOSSE|Malgré sa petite taille, sa force lui\npermet de soulever plusieurs RACAILLOU à la\nfois.
+NATIONAL_DEX_MACHOKE|COLOSSE|Il soulève les plus lourdes charges avec\nplaisir et facilité. Il donne un coup de\nmain tout en s'entraînant!
+NATIONAL_DEX_MACHAMP|COLOSSE|La puissance et la rapidité de ses quatre\nbras puissants font des ravages sur ses\nadversaires.
+NATIONAL_DEX_BELLSPROUT|FLEUR|Il préfère les climats chauds et humides.\nSes lianes peuvent capturer une proie en un\nclin d'œil.
+NATIONAL_DEX_WEEPINBELL|CARNIVORE|Un POKéMON végétal. Il capture les proies\nétourdies en les endormant à l'aide d'une\npoudre toxique.
+NATIONAL_DEX_VICTREEBEL|CARNIVORE|Sa bouche sécrète un fluide à l'odeur de\nmiel, qui s'avère être un acide extrêmement\ncorrosif.
+NATIONAL_DEX_TENTACOOL|MOLLUSQUE|Presque entièrement composé d'eau, son\ncorps a tendance à se dessécher sur la\nterre ferme.
+NATIONAL_DEX_TENTACRUEL|MOLLUSQUE|Ses 80 tentacules lui permettent\nd'emprisonner ses adversaires dans un\nredoutable filet venimeux.
+NATIONAL_DEX_GEODUDE|ROCHE|Au repos, rien ne le distingue d'un\nvulgaire caillou. Malheur à ceux qui lui\nmarchent dessus par mégarde!
+NATIONAL_DEX_GRAVELER|ROCHE|Il dévale les montagnes pour se déplacer.\nUne fois qu'il a pris tout son élan, dur\ndur de l'arrêter!
+NATIONAL_DEX_GOLEM|TITANESQUE|Aucun explosif ne pourrait entamer sa\ncarapace de pierre. Il mue une fois par an.
+NATIONAL_DEX_PONYTA|CHEVAL FEU|Chancelantes à la naissance, ses pattes\ndeviennent très vite sûres et solides à\nforce de galoper.
+NATIONAL_DEX_RAPIDASH|CHEVAL FEU|Au grand galop, sa crinière de feu disperse\nau vent une myriade d'étincelles ardentes.
+NATIONAL_DEX_SLOWPOKE|CRÉTIN|Bien que lent, c'est un pêcheur adroit qui\nutilise sa queue. Elle est insensible aux\nmorsures.
+NATIONAL_DEX_SLOWBRO|SYMBIOSE|Ce grand benêt connaît des éclairs de\nlucidité lorsque le KOKIYAS de sa queue se\nmet à mordre.
+NATIONAL_DEX_MAGNEMITE|MAGNÉTIQUE|Plus la rotation de ses extrémités est\nrapide, plus la force du champ magnétique\nqu'il génère est grande.
+NATIONAL_DEX_MAGNETON|MAGNÉTIQUE|Des groupes apparaissent si des taches\nsolaires couvrent le soleil. Ils brouillent\nles télévisions.
+NATIONAL_DEX_FARFETCHD|CANARD FOU|Il ne peut pas vivre sans son légume, c'est\npourquoi il le protégera au péril de sa\nvie.
+NATIONAL_DEX_DODUO|DUOISEAU|Ses deux cerveaux semblent communiquer\nleurs émotions grâce à un lien\ntélépathique.
+NATIONAL_DEX_DODRIO|TRIOISEAU|Quand DODUO connaît cette étrange\névolution, l'une de ses têtes se dédouble.\nIl atteint les 60 km/h.
+NATIONAL_DEX_SEEL|OTARIE|Un habitant des icebergs. En mer, il\nutilise la corne sur sa tête pour briser la\nbanquise.
+NATIONAL_DEX_DEWGONG|OTARIE|Son corps est couvert d'un grand manteau\nblanc qui, dans la neige, le dissimule aux\nyeux des prédateurs.
+NATIONAL_DEX_GRIMER|DÉGUEU|Il est né d'un torrent de boue exposé aux\nrayons X de la lune. Il vit dans les\nordures.
+NATIONAL_DEX_MUK|DÉGUEU|Son corps exsude un fluide toxique qui tue\ninstantanément les plantes et les arbres au\ncontact.
+NATIONAL_DEX_SHELLDER|BIVALVE|Il nage à reculons en ouvrant et en\nrefermant ses deux coquilles. Il laisse\ntraîner sa large langue.
+NATIONAL_DEX_CLOYSTER|BIVALVE|Il se défend en fermant sa coquille et\nprojette des piquants qui repoussent ses\nagresseurs.
+NATIONAL_DEX_GASTLY|GAZ|Son corps composé de gaz toxique pourrait\nasphyxier n'importe qui en quelques\nsecondes.
+NATIONAL_DEX_HAUNTER|GAZ|Il adore se tapir dans l'ombre et faire\nfrissonner ses proies en leur touchant\nl'épaule.
+NATIONAL_DEX_GENGAR|OMBRE|Si vous croisez un regard inquiétant qui\nperce la nuit, c'est sûrement un\nECTOPLASMA.
+NATIONAL_DEX_ONIX|SERPENROC|Il se nourrit des pierres qu'il rencontre\nen creusant le sol. Il peut creuser à 80\nkm/h!
+NATIONAL_DEX_DROWZEE|HYPNOSE|Son grand nez lui permet de lire les rêves\nd'autrui. Il adore les songes amusants.
+NATIONAL_DEX_HYPNO|HYPNOSE|La vue de son pendule oscillant endort en\ntrois secondes, même quand on vient de se\nréveiller.
+NATIONAL_DEX_KRABBY|DOUX CRABE|Il creuse son terrier sur des plages\nsablonneuses. Ses pinces repoussent si on\nles brise.
+NATIONAL_DEX_KINGLER|PINCE|Sa grande pince possède une puissance de 10\n000 chevaux. Son poids la rend difficile à\nmanier.
+NATIONAL_DEX_VOLTORB|BALLE|Il ressemble à une Poké Ball. Ce POKéMON\ndangereux peut exploser ou s'électrifier au\ntoucher.
+NATIONAL_DEX_ELECTRODE|BALLE|Il se laisse porter par les vents lorsque\nson corps est gonflé d'électricité à en\néclater.
+NATIONAL_DEX_EXEGGCUTE|ŒUF|Ces six œufs communiquent par télépathie.\nIls peuvent se réunir rapidement si on les\nsépare.
+NATIONAL_DEX_EXEGGUTOR|FRUITPALME|On l'appelle “jungle sur pattes”. Si une\ntête devient trop grosse, elle tombe et\nproduit un NOEUNOEUF.
+NATIONAL_DEX_CUBONE|SOLITAIRE|Il pleure en pensant à sa mère disparue, et\nses larmes résonnent dans son crâne creux.
+NATIONAL_DEX_MAROWAK|GARD’OS|Ce POKéMON sauvage possède des os depuis sa\nnaissance. Il s'en sert pour combattre avec\ndextérité.
+NATIONAL_DEX_HITMONLEE|LATTEUR|Ses pattes élastiques s'allongent, ce qui\nne manque jamais de surprendre au premier\ncombat.
+NATIONAL_DEX_HITMONCHAN|PUNCHEUR|Même le béton cède sous ses poings\ndévastateurs. Au combat, il s'essouffle au\nbout de 3 minutes.
+NATIONAL_DEX_LICKITUNG|LÉCHEUR|Quand il déploie sa langue de près de deux\nmètres, sa queue s'agite. Elles seraient\nreliées entre elles.
+NATIONAL_DEX_KOFFING|GAZ MORTEL|Il flotte en retenant des gaz plus légers\nque l'air. Ceux-ci sont explosifs, en plus\nd'être fétides.
+NATIONAL_DEX_WEEZING|GAZ MORTEL|Il grandit en absorbant les gaz des\ndétritus. Des triplés existent, bien qu'ils\nsoient fort rares.
+NATIONAL_DEX_RHYHORN|PIQUANT|Ses puissantes charges pourraient démolir\nn'importe quel bâtiment. Dommage qu'il soit\nstupide.
+NATIONAL_DEX_RHYDON|PERCEUR|La station debout a libéré ses pattes avant\net l'a rendu plus intelligent, mais il est\ndistrait.
+NATIONAL_DEX_CHANSEY|ŒUF|Ce POKéMON très serviable distribue ses\nœufs hautement nutritifs aux humains et\nPOKéMON blessés.
+NATIONAL_DEX_TANGELA|VIGNE|Il se cache derrière des lianes bleues\nrecouvertes d'un fin duvet. Il est\nchatouilleux.
+NATIONAL_DEX_KANGASKHAN|MATERNEL|Il élève ses petits dans sa poche ventrale.\nIl attend d'être en lieu sûr pour les\nlaisser jouer dehors.
+NATIONAL_DEX_HORSEA|DRAGON|Il niche à l'ombre du corail. Quand il se\nsent menacé, il disparaît dans un nuage\nd'encre opaque.
+NATIONAL_DEX_SEADRA|DRAGON|Son épine dorsale le protège. Ses os et ses\nnageoires sont très prisés en médecine\ntraditionnelle.
+NATIONAL_DEX_GOLDEEN|POISSON|Malgré son élégance quand il nage, ses\ncoups de corne sont redoutables.
+NATIONAL_DEX_SEAKING|POISSON|En automne, à la saison des amours, il fait\ndes réserves de graisse et arbore des\ncouleurs chatoyantes.
+NATIONAL_DEX_STARYU|ÉTOILE|Même amoché, son corps se régénère tant que\nle noyau rouge est intact. Le noyau\ns'illumine à minuit.
+NATIONAL_DEX_STARMIE|MYSTÉRIEUX|Un noyau rouge trône en son centre. Il\nenvoie des signaux radio mystérieux vers le\nciel nocturne.
+NATIONAL_DEX_MR_MIME|BLOQUEUR|En modifiant les molécules de l'air du bout\nde ses doigts, il parvient à créer un mur\ninvisible devant lui.
+NATIONAL_DEX_SCYTHER|MANTE|À force de trancher des objets solides, les\nfaux de ses bras sont très aiguisées.
+NATIONAL_DEX_JYNX|HUMANOÏDE|Son cri ressemble à des paroles humaines.\nMais nul n'est jamais parvenu à les\ncomprendre.
+NATIONAL_DEX_ELECTABUZZ|ÉLECTRIQUE|Il fait tournoyer ses bras pour donner de\nla force à ses coups. Profitez-en pour\nfiler!
+NATIONAL_DEX_MAGMAR|CRACHE-FEU|Quand il respire profondément, des vagues\nde chaleur émanent de son corps et le\nrendent difficile à voir.
+NATIONAL_DEX_PINSIR|SCARABÉE|Il serre les proies dans ses pinces pour\nles trancher en deux. S'il n'y arrive pas,\nil les jette au loin.
+NATIONAL_DEX_TAUROS|BUFFLE|Après avoir choisi sa cible, il fonce\ndessus tête baissée. Il est réputé pour sa\nnature violente.
+NATIONAL_DEX_MAGIKARP|POISSON|Un vénérable MAGICARPE peut franchir une\nmontagne en utilisant Trempette. Mais c'est\ntout...
+NATIONAL_DEX_GYARADOS|TERRIFIANT|Quand il se laisse emporter par la rage, il\nne se calme qu'après avoir détruit tout ce\nqui l'entoure.
+NATIONAL_DEX_LAPRAS|TRANSPORT|Il aime naviguer en portant des humains et\ndes POKéMON sur son dos. Il comprend le\nlangage humain.
+NATIONAL_DEX_DITTO|MORPHING|Il a la capacité de modifier sa structure\ncellulaire pour prendre l'apparence de ce\nqu'il voit.
+NATIONAL_DEX_EEVEE|ÉVOLUTIF|Son ADN particulier lui permet de s'adapter\ntrès rapidement à son environnement.
+NATIONAL_DEX_VAPOREON|BULLEUR|Sa composition moléculaire est proche de\ncelle de l'eau, ce qui lui permet de se\nliquéfier.
+NATIONAL_DEX_JOLTEON|ORAGE|Face au danger, il fait appel à\nl'électricité pour dresser ses poils et\nlancer des décharges.
+NATIONAL_DEX_FLAREON|FLAMME|L'air qu'il inspire est chauffé par la\nglande enflammée de son corps, atteignant\nles 1 700 °C.
+NATIONAL_DEX_PORYGON|VIRTUEL|Ce POKéMON créé par des scientifiques peut\narpenter librement le cyberespace.
+NATIONAL_DEX_OMANYTE|SPIRALE|Un POKéMON ramené à la vie par la science à\npartir d'un fossile. Il peuplait autrefois\nles mers.
+NATIONAL_DEX_OMASTAR|SPIRALE|On pense que ce POKéMON a disparu parce que\nsa coquille en spirale était devenue trop\ngrosse.
+NATIONAL_DEX_KABUTO|CARAPACE|On pense qu'il peuplait les plages il y a\n300 millions d'années. Il est protégé par\nune coquille robuste.
+NATIONAL_DEX_KABUTOPS|CARAPACE|On pense que ce POKéMON est venu sur la\nterre ferme pour suivre l'évolution de ses\nproies.
+NATIONAL_DEX_AERODACTYL|FOSSILE|Un POKéMON qui arpentait le ciel au temps\ndes dinosaures. Ses crocs sont pareils à\ndes scies.
+NATIONAL_DEX_SNORLAX|PIONCEUR|Une fois le ventre plein, il est trop\namorphe pour lever le petit doigt. Sautez\nsur son ventre!
+NATIONAL_DEX_ARTICUNO|GLACIAIRE|Un POKéMON Oiseau légendaire. Il peut\nprovoquer des blizzards en gelant\nl'humidité de l'air.
+NATIONAL_DEX_ZAPDOS|ÉLECTRIQUE|Un POKéMON Oiseau légendaire dont on dit\nqu'il vit dans les nuages d'orage. Il\ncontrôle la foudre.
+NATIONAL_DEX_MOLTRES|FLAMME|L'un des POKéMON Oiseaux légendaires. On\ndit que sa venue annonce l'arrivée du\nprintemps.
+NATIONAL_DEX_DRATINI|DRAGON|On l'appelle “POKéMON mirage” en raison de\nsa rareté. On a découvert sa mue.
+NATIONAL_DEX_DRAGONAIR|DRAGON|La météo change brusquement quand il est\nentouré d'une aura. On dit qu'il peuple les\nmers et les lacs.
+NATIONAL_DEX_DRAGONITE|DRAGON|On raconte qu'il vit quelque part en mer.\nIl guide les équipages naufragés jusqu'à la\nterre ferme.
+NATIONAL_DEX_MEWTWO|GÉNÉTIQUE|Un POKéMON conçu en réorganisant les gènes\nde Mew. On raconte qu'il s'agit du POKéMON\nle plus féroce.
+NATIONAL_DEX_MEW|NOUVEAU|Nombre de scientifiques voient en lui\nl'ancêtre des POKéMON car il maîtrise\ntoutes leurs capacités.
+NATIONAL_DEX_CHIKORITA|FEUILLE|Il jauge la température et l'humidité grâce\nà la feuille sur sa tête. Il raffole des\nbains de soleil.
+NATIONAL_DEX_BAYLEEF|FEUILLE|Le collier de bourgeons à son cou répand un\narôme épicé qui vous donne du tonus.
+NATIONAL_DEX_MEGANIUM|HERBE|Son souffle a l'incroyable capacité de\nranimer les plantes et les fleurs flétries.
+NATIONAL_DEX_CYNDAQUIL|SOURIS FEU|Ce POKéMON est un grand timide. Les flammes\nsur son dos s'intensifient lorsqu'il prend\npeur.
+NATIONAL_DEX_QUILAVA|VOLCAN|La chaleur de ses flammes intimide\nl'ennemi. Elles s'intensifient lorsqu'il se\nprépare à combattre.
+NATIONAL_DEX_TYPHLOSION|VOLCAN|Il attaque en projetant des flammes. Il se\ndissimule derrière les vagues de chaleur\nqu'il produit.
+NATIONAL_DEX_TOTODILE|MÂCHOIRE|Il broie tout ce qu'il trouve avec ses\nmâchoires puissantes. Même son Dresseur\ndoit s'en méfier.
+NATIONAL_DEX_CROCONAW|MÂCHOIRE|Quand il mord, il ne lâche pas prise avant\nque ses crocs se brisent. Ils repoussent\npar la suite.
+NATIONAL_DEX_FERALIGATR|MÂCHOIRE|Ce POKéMON à l'air pataud est capable\nd'attaquer à la vitesse de l'éclair pour\nmordre sa proie.
+NATIONAL_DEX_SENTRET|ESPION|Ce POKéMON très nerveux prend appui sur sa\nqueue pour observer ses alentours.
+NATIONAL_DEX_FURRET|ALLONGÉ|La femelle s'enroule autour des petits pour\nles bercer. Il accule l'ennemi grâce à sa\nvitesse.
+NATIONAL_DEX_HOOTHOOT|HIBOU|Il hulule chaque jour à la même heure. Dans\ncertaines cultures, il incarne la sagesse.
+NATIONAL_DEX_NOCTOWL|HIBOU|Ses yeux sont capables de voir\ndistinctement même quand il fait très\nsombre.
+NATIONAL_DEX_LEDYBA|5 ÉTOILES|Il est si timide qu'il ne se déplace qu'au\nmilieu d'un essaim. Il exprime ses émotions\npar l'odeur.
+NATIONAL_DEX_LEDIAN|5 ÉTOILES|Il tire sa force de la lumière des étoiles.\nPlus il y en a et plus ses motifs dorsaux\nsont grands.
+NATIONAL_DEX_SPINARAK|CRACHE FIL|Il tisse une toile fine mais solide pour\nposer des pièges et se poste dans l'attente\nd'une proie.
+NATIONAL_DEX_ARIADOS|LONG-PATTE|Il attache un fil à sa proie avant de la\nlibérer. Il s'en servira pour la retrouver,\nelle et ses amis.
+NATIONAL_DEX_CROBAT|CHOVSOURIS|La transformation de ses pattes en ailes a\ncertes amélioré sa capacité à voler, mais\npas à marcher.
+NATIONAL_DEX_CHINCHOU|POISSON|Il envoie des décharges électriques\npositives et négatives du bout des antennes\npour paralyser sa proie.
+NATIONAL_DEX_LANTURN|LUMIÈRE|La lumière de LANTURN surgit des\nprofondeurs. On le surnomme “étoile des\nprofondeurs”.
+NATIONAL_DEX_PICHU|MINISOURIS|Les poches électriques de ses joues sont\nencore petites, mais risquent de\nl'électrocuter.
+NATIONAL_DEX_CLEFFA|ÉTOILE|On dit qu'il se déplace à dos d'étoile\nfilante. Il se montre souvent quand on en\nvoit.
+NATIONAL_DEX_IGGLYBUFF|BOUBOULE|Son corps est doux et élastique. Quand il\ncommence à rebondir, on ne peut plus\nl'arrêter.
+NATIONAL_DEX_TOGEPI|BALLE PIC|Il transforme les émotions positives des\nautres en bonheur qu'il stocke dans sa\ncoquille.
+NATIONAL_DEX_TOGETIC|BONHEUR|Il parcourt le monde pour distribuer de la\njoie aux êtres bons.
+NATIONAL_DEX_NATU|MINOISEAU|Il mange des cactus en prenant soin\nd'éviter les bourgeons et les épines. Il ne\ntient pas en place.
+NATIONAL_DEX_XATU|MYSTIQUE|Cet étrange POKéMON peut voir l'avenir et\nle passé. Il guette sans cesse la course du\nsoleil.
+NATIONAL_DEX_MAREEP|LAINE|Sa laine fournie enfle lorsqu'il accumule\nde l'électricité statique. Son contact peut\nchoquer.
+NATIONAL_DEX_FLAAFFY|LAINE|Sa queue s'allume lorsque sa laine se\ncharge d'électricité. Il projette des poils\nélectrifiés.
+NATIONAL_DEX_AMPHAROS|LUMIÈRE|Le bout de sa queue brille avec intensité.\nJadis, on s'en servait pour envoyer des\nsignaux.
+NATIONAL_DEX_BELLOSSOM|FLEUR|À la fin de la saison des pluies, il sort\ndanser en plein air, attiré par la chaleur\ndu soleil.
+NATIONAL_DEX_MARILL|AQUASOURIS|Sa queue à l'extrémité remplie d'huile fait\noffice de flotteur et lui permet de ne pas\ncouler.
+NATIONAL_DEX_AZUMARILL|AQUALAPIN|Ses poumons peuvent contenir assez d'air\npour lui permettre de passer une journée\nsous l'eau.
+NATIONAL_DEX_SUDOWOODO|IMITATION|Il prend l'apparence d'un arbre pour éviter\nles attaques, mais il déteste l'eau et fuit\nla pluie.
+NATIONAL_DEX_POLITOED|GRENOUILLE|Il rassemble ses pairs pour les commander.\nIl utilise son cri pour diriger PTITARD.
+NATIONAL_DEX_HOPPIP|PISSENLIT|Il dérive avec le vent. Sa présence en\nnombre dans les champs et les montagnes\nannonce le printemps.
+NATIONAL_DEX_SKIPLOOM|PISSENLIT|Il fleurit lorsque les températures\nremontent. Il flotte dans le ciel pour\nabsorber les rayons du soleil.
+NATIONAL_DEX_JUMPLUFF|PISSENLIT|Poussé par les vents saisonniers, il fait\nle tour du globe en semant des spores de\ncoton.
+NATIONAL_DEX_AIPOM|LONGQUEUE|Sa queue est aussi agile que ses mains. Il\nvit en haut des grands arbres.
+NATIONAL_DEX_SUNKERN|GRAINE|Il tombe du ciel sans crier gare en\nmatinée. On en croise énormément l'année\nsuivant un été froid.
+NATIONAL_DEX_SUNFLORA|SOLEIL|Les rayons du soleil lui donnent de\nl'énergie. Il est connu pour migrer vers\nles régions ensoleillées.
+NATIONAL_DEX_YANMA|TRANSLAILE|La vitesse de ses ailes lui permet un vol\nstationnaire. Il surveille ainsi tout son\nterritoire.
+NATIONAL_DEX_WOOPER|POISSON|Sur la terre ferme, il couvre son corps\nd'un fluide toxique qui le protège de la\ndéshydratation.
+NATIONAL_DEX_QUAGSIRE|POISSON|De nature placide, il a tendance à se\ncogner la tête contre les récifs et autres\nbateaux de passage.
+NATIONAL_DEX_ESPEON|SOLEIL|Sa fourrure est si sensible qu'il peut\ndétecter les vibrations de l'air et prédire\nle temps qu'il fera.
+NATIONAL_DEX_UMBREON|LUNE|Quand il s'expose à la lumière de la lune,\nses anneaux brillent et il obtient un\nmystérieux pouvoir.
+NATIONAL_DEX_MURKROW|OBSCURITÉ|Quand il est en danger, il tente de semer\nses poursuivants dans les chemins\nmontagneux.
+NATIONAL_DEX_SLOWKING|ROYAL|La morsure de KOKIYAS a fait de lui un\ngénie dont l'intelligence rivalise avec\ncelle d'un prix Nobel.
+NATIONAL_DEX_MISDREAVUS|STRIDENT|Il fait peur aux aventuriers en pleine nuit\net se nourrit de leur frayeur.
+NATIONAL_DEX_UNOWN|SYMBOLIQUE|Quand il est seul, il ne se passe rien...\nMais en groupe, il semble habité par un\nmystérieux pouvoir.
+NATIONAL_DEX_WOBBUFFET|PATIENT|Il cherche désespérément à cacher sa queue\nnoire. Certains pensent qu'elle renferme un\nsecret.
+NATIONAL_DEX_GIRAFARIG|LONG-COU|La tête qu'il a sur la queue dispose de son\npropre cerveau et lui permet de couvrir ses\narrières.
+NATIONAL_DEX_PINECO|VER CACHÉ|Il ressemble à une pomme de pin. Sa\ncarapace le protège des POKéMON Oiseaux qui\nle picorent par erreur.
+NATIONAL_DEX_FORRETRESS|VER CACHÉ|Il est prisonnier d'une coquille d'acier.\nSes yeux vigilants sont la seule partie\nvisible de son corps.
+NATIONAL_DEX_DUNSPARCE|SERPENT|Son nid est un véritable labyrinthe qu'il\ncreuse à l'aide de sa queue. Il sait à\npeine voler.
+NATIONAL_DEX_GLIGAR|SCORPIVOL|Il fend l'air et fond sur sa proie pour\ns'agripper à son visage et la frapper avec\nson dard.
+NATIONAL_DEX_STEELIX|SERPENFER|On pense que son corps s'est transformé à\ncause du fer contenu dans la terre dont il\nse nourrit.
+NATIONAL_DEX_SNUBBULL|FÉE|Son visage horrible fait fuir les petits\nPOKéMON. Par contre, les femmes le trouvent\nmignon.
+NATIONAL_DEX_GRANBULL|FÉE|En dépit des apparences, c'est un grand\ntimide. Quand il s'énerve, il mord de ses\nénormes crocs.
+NATIONAL_DEX_QWILFISH|BOUBOULE|Il envoie ses piquants empoisonnés à la\nronde. Sa forme sphérique en fait un piètre\nnageur.
+NATIONAL_DEX_SCIZOR|PINCE|Les yeux sur ses pinces servent à intimider\nl'ennemi avant de passer à l'attaque.
+NATIONAL_DEX_SHUCKLE|POURRI|Il stocke des Baies sous sa carapace. Elles\nfermentent et produisent des jus délicieux.
+NATIONAL_DEX_HERACROSS|UNICORNE|Il défend vaillamment sa réserve de miel\npersonnelle à grand renfort de coups de\ncorne.
+NATIONAL_DEX_SNEASEL|GRIFACÉRÉE|Ce POKéMON rusé agit parfois en équipe pour\nvoler des œufs, l'un d'entre eux faisant\ndiversion.
+NATIONAL_DEX_TEDDIURSA|MINI OURS|Il baigne ses griffes dans le miel pour les\nlécher. Chaque paire de pattes a un goût\nunique.
+NATIONAL_DEX_URSARING|HIBERNANT|Il marque de ses griffes les arbres de son\nterritoire qui portent des Baies ou des\nfruits.
+NATIONAL_DEX_SLUGMA|LAVE|Son corps est fait de magma. S'il cesse de\nbouger, il refroidit et durcit.
+NATIONAL_DEX_MAGCARGO|LAVE|Sa température corporelle avoisine les 10\n000 °C. Des flammes fusent des fissures de\nsa coquille.
+NATIONAL_DEX_SWINUB|COCHON|Son nez très sensible détecte champignons,\nBaies et sources chaudes enfouis sous la\nglace.
+NATIONAL_DEX_PILOSWINE|PORC|Il est protégé du froid mordant par son\népais manteau de fourrure. Ses cornes sont\nformées de glace.
+NATIONAL_DEX_CORSOLA|CORAIL|On en trouve beaucoup dans les mers claires\ndu sud. On dirait qu'il ne peut pas vivre\nen eau polluée.
+NATIONAL_DEX_REMORAID|JET|Son puissant jet d'eau ne manque jamais sa\ncible, même quand il est au fond de l'eau.
+NATIONAL_DEX_OCTILLERY|JET|Il adore se cacher dans les fissures de la\nroche. Il crache parfois de l'encre sur ses\nproies.
+NATIONAL_DEX_DELIBIRD|LIVRAISON|Il dépose sa nourriture dans sa queue\nenroulée. Il l'offre souvent aux gens\négarés en montagne.
+NATIONAL_DEX_MANTINE|CERVOLANT|Il ignore royalement les RÉMORAID qui\ns'accrochent à ses nageoires pour manger\nles restes qu'il sème.
+NATIONAL_DEX_SKARMORY|ARMOISEAU|Son corps est prisonnier d'une armure dure\ncomme l'acier, mais il vole à plus de 300\nkm/h.
+NATIONAL_DEX_HOUNDOUR|SOMBRE|Il est assez évolué pour chasser en meute\net communiquer par des séries de cris\nmodulés.
+NATIONAL_DEX_HOUNDOOM|SOMBRE|En colère, il crache des flammes contenant\nune toxine qui peut causer des dégâts\nirréversibles.
+NATIONAL_DEX_KINGDRA|DRAGON|Chacun de ses déplacements provoque des\ntourbillons. Il vit dans les grottes\nsous-marines.
+NATIONAL_DEX_PHANPY|LONG-NEZ|Il est fort malgré son aspect ramassé. Il\nn'a aucun mal à porter un humain adulte sur\nson dos.
+NATIONAL_DEX_DONPHAN|ARMURE|Il attaque en se roulant en boule pour\npercuter l'ennemi. Il peut abattre une\nmaison d'un seul coup.
+NATIONAL_DEX_PORYGON2|VIRTUEL|Il a subi une mise à jour censée lui\npermettre d'explorer d'autres planètes...\nC'est un échec.
+NATIONAL_DEX_STANTLER|MAXI CORNE|Quiconque observe ses antennes ressent une\nsensation étrange, comme si leur centre\nl'attirait.
+NATIONAL_DEX_SMEARGLE|PEINTRE|Il marque son territoire en maniant sa\nqueue comme un pinceau. On dénombre plus de\n5 000 marques.
+NATIONAL_DEX_TYROGUE|BAGARREUR|Il est réputé pour sa combativité. Il se\nblesse toujours en défiant des ennemis plus\ngrands.
+NATIONAL_DEX_HITMONTOP|POIRIER|Il combat en tournoyant comme une toupie.\nLa force centrifuge décuple sa puissance\ndestructrice.
+NATIONAL_DEX_SMOOCHUM|BISOU|Il goûte à tout du bout des lèvres. Elles\ngardent en mémoire ses goûts et ses\ndégoûts.
+NATIONAL_DEX_ELEKID|ÉLECTRIQUE|Un faible courant électrique circule entre\nses cornes. Attention à ne pas y mettre la\nmain!
+NATIONAL_DEX_MAGBY|CHARBON|Son sang est chaud comme du magma et la\ntempérature de son corps peut atteindre 600\n°C.
+NATIONAL_DEX_MILTANK|VACHALAIT|On raconte que les enfants élevés au lait\nd'ÉCRÉMEUH deviennent des adultes braves et\nrobustes.
+NATIONAL_DEX_BLISSEY|BONHEUR|Les œufs que pond LEUPHORIE sont un\nconcentré de bonheur dont une bouchée\nsuffit à apporter la joie.
+NATIONAL_DEX_RAIKOU|FOUDRE|On prétend qu'il est tombé avec la foudre.\nIl peut lancer des éclairs grâce aux nuages\nsur son dos.
+NATIONAL_DEX_ENTEI|VOLCAN|On raconte qu'à chaque fois qu'il rugit, un\nvolcan entre en éruption quelque part.
+NATIONAL_DEX_SUICUNE|AURORE|Il parcourt le vaste monde pour purifier\nles eaux polluées. Il accompagne le vent du\nnord.
+NATIONAL_DEX_LARVITAR|PEAUPIERRE|Un POKéMON qui se nourrit de terre. Après\navoir dévoré une montagne, il s'endort pour\ngrandir.
+NATIONAL_DEX_PUPITAR|CARAPADURE|Son corps est dur comme la pierre\nsouterraine. Il file comme une fusée en\nexpulsant des gaz.
+NATIONAL_DEX_TYRANITAR|ARMURE|Lorsqu'il est en colère, il abat des\nmontagnes et enterre des fleuves. On doit\nalors modifier les cartes.
+NATIONAL_DEX_LUGIA|PLONGEON|Il dort dans une faille des grands fonds.\nSes battements d'ailes génèrent une tempête\nde 40 jours.
+NATIONAL_DEX_HO_OH|ARCENCIEL|Ses plumes possèdent sept couleurs. On\nprétend que sa vue apporte la joie\néternelle.
+NATIONAL_DEX_CELEBI|TEMPOREL|Il a le pouvoir de voyager dans le temps.\nCependant, on dit qu'il n'apparaît qu'en\ntemps de paix.
+NATIONAL_DEX_TREECKO|BOIS GECKO|Ses plantes de pieds sont couvertes\nd'épines lui permettant de marcher au mur\net au plafond.
+NATIONAL_DEX_GROVYLE|BOIS GECKO|Il vit dans les jungles denses. Il saute de\nbranche en branche pour approcher de sa\nproie.
+NATIONAL_DEX_SCEPTILE|FORÊT|Les feuilles sur ses bras peuvent trancher\ndes troncs épais. C'est le meilleur\ncombattant des jungles.
+NATIONAL_DEX_TORCHIC|POUSSIN|Ses câlins réchauffent car il renferme une\nfournaise. Il envoie des boules de feu à 1\n000 °C.
+NATIONAL_DEX_COMBUSKEN|POULET|Ce maître du coup de pied peut donner 10\ncoups par seconde. Ses cris aigus\nintimident l'ennemi.
+NATIONAL_DEX_BLAZIKEN|ARDENT|Des flammes fusent de ses poignets et ses\ncoups brûlent l'ennemi.
+NATIONAL_DEX_MUDKIP|POISSONBOUE|Il analyse le courant grâce à la nageoire\nsur sa tête. Il est assez fort pour\nsoulever des rochers.
+NATIONAL_DEX_MARSHTOMP|POISSONBOUE|Ses jambes robustes lui donnent un bon\nappui, même dans la boue. Il dort enfoui\ndans la saleté.
+NATIONAL_DEX_SWAMPERT|POISSONBOUE|Il peut traîner un grand bateau en nageant.\nIl assomme l'ennemi d'un grand coup de ses\nbras épais.
+NATIONAL_DEX_POOCHYENA|MORSURE|Un POKéMON très obstiné qui poursuit sa\nproie jusqu'à ce qu'elle soit épuisée.
+NATIONAL_DEX_MIGHTYENA|MORSURE|Il traque ses proies en groupe. Il ne\ndésobéira jamais aux ordres d'un bon\nDresseur.
+NATIONAL_DEX_ZIGZAGOON|PETIT RATON|Il marche en zigzaguant et n'a pas son\npareil pour trouver des objets dans l'herbe\nou sous terre.
+NATIONAL_DEX_LINOONE|FONCEUR|Il fonce sur sa proie à plus de 100 km/h.\nMais il ne peut pas dévier sa course et\nloupe souvent sa cible.
+NATIONAL_DEX_WURMPLE|VER|Cible favorite des POKéMON Oiseaux, il\ntente de se protéger avec ses épines\nvenimeuses.
+NATIONAL_DEX_SILCOON|COCON|Il attend d'évoluer dans son cocon de soie\naccroché aux branches et se nourrit d'eau\nde pluie.
+NATIONAL_DEX_BEAUTIFLY|PAPILLON|Malgré les apparences, il est très agressif\net attaque avec sa trompe quand on le\ndérange.
+NATIONAL_DEX_CASCOON|COCON|Rancunier, il n'oublie aucune des attaques\nsubies dans le cocon et se venge une fois\nqu'il a évolué.
+NATIONAL_DEX_DUSTOX|PAPIPOISON|Il disperse un nuage de poudre toxique à\nchaque coup d'aile. Il aime les feuilles\nd'arbres urbains.
+NATIONAL_DEX_LOTAD|AQUAPLANTE|Il ressemble à une plante aquatique et fait\nla navette pour les POKéMON qui ne savent\npas nager.
+NATIONAL_DEX_LOMBRE|JOVIAL|C'est un mauvais plaisantin. Quand il\nrepère un pêcheur, il tire sur sa ligne\npour le déranger.
+NATIONAL_DEX_LUDICOLO|INSOUCIANT|Ses muscles se tonifient au son d'une\nmusique entraînante. Il ne peut pas\ns'empêcher de danser.
+NATIONAL_DEX_SEEDOT|GLAND|Il ressemble à un gland pendu à une\nbranche. Il adore effrayer les autres\nPOKéMON.
+NATIONAL_DEX_NUZLEAF|MALIN|Le son de sa flûte d'herbe déstabilise\nl'auditeur. Il vit au plus profond des\nforêts.
+NATIONAL_DEX_SHIFTRY|MALVEILLANT|D'un coup de sa feuille éventail, il génère\ndes bourrasques de 30 m/s capables de\nsouffler une maison.
+NATIONAL_DEX_TAILLOW|MINIRONDEL|Ce POKéMON téméraire n'a pas peur\nd'affronter des ennemis puissants. Il vole\nen quête de climats chauds.
+NATIONAL_DEX_SWELLOW|HIRONDELLE|Il vole en cercle en quête d'une proie. Dès\nqu'il l'a repérée, il fond sur elle en un\néclair.
+NATIONAL_DEX_WINGULL|MOUETTE|Il utilise les courants ascendants pour\nplaner en altitude. Son bec lui sert à\ntransporter la nourriture.
+NATIONAL_DEX_PELIPPER|OISEAUDO|Ce messager du ciel transporte petits\nPOKéMON et œufs dans son bec en toute\nsécurité.
+NATIONAL_DEX_RALTS|SENTIMENT|Quand ses cornes captent les ondes\npositives d'un POKéMON ou d'un humain, son\ncorps se réchauffe.
+NATIONAL_DEX_KIRLIA|ÉMOTION|Quand il sent la joie de son Dresseur, il\nse met à danser, débordant d'énergie.
+NATIONAL_DEX_GARDEVOIR|ÉTREINTE|Prêt à tout pour protéger son Dresseur, il\npeut créer un mini trou noir par sa seule\nforce mentale.
+NATIONAL_DEX_SURSKIT|MARESURFEUR|Il semble patiner sur l'eau. Le parfum\ndiffusé par le sommet de sa tête sert à\nattirer ses proies.
+NATIONAL_DEX_MASQUERAIN|BOULE ŒIL|Des motifs en forme d'yeux ornent ses\nantennes. Ses 4 ailes l'aident à voler dans\ntoutes les directions.
+NATIONAL_DEX_SHROOMISH|CHAMPIGNON|Le sommet de sa tête libère des spores\nempoisonnées. Il est dangereux de les\ninhaler.
+NATIONAL_DEX_BRELOOM|CHAMPIGNON|Ses petits bras s'étendent quand il donne\nun coup de poing. Son talent égale celui\nd'un boxeur pro.
+NATIONAL_DEX_SLAKOTH|FLÂNEUR|Il passe le plus clair de son temps affalé.\nRien qu'à le voir, on a envie de bâiller.
+NATIONAL_DEX_VIGOROTH|TURBUSINGE|Son cœur bat dix fois plus vite que la\nnormale, c'est pourquoi il ne tient pas en\nplace.
+NATIONAL_DEX_SLAKING|FAINÉANT|Le POKéMON le plus fainéant du monde. Il\ns'allonge pour économiser ses forces et\ncontre-attaquer.
+NATIONAL_DEX_NINCADA|APPRENTI|Il grandit sous terre et se repère grâce à\nses antennes car ses yeux sont quasiment\naveugles.
+NATIONAL_DEX_NINJASK|NINJA|Il bouge si vite que l'œil a parfois du mal\nà le suivre. Ils se regroupent près de la\nsève des arbres.
+NATIONAL_DEX_SHEDINJA|EXUVIE|Une carapace d'insecte laissée à l'abandon.\nOn dit qu'il vole l'âme de celui qui\nregarde à l'intérieur.
+NATIONAL_DEX_WHISMUR|CHUCHOTEUR|En temps normal, son cri est pareil à un\nmurmure. Effrayé, il atteint le volume d'un\navion à réaction.
+NATIONAL_DEX_LOUDRED|GROSSE VOIX|L'onde de choc provoquée par son cri peut\nrenverser un camion. Il trépigne pour\naugmenter sa force.
+NATIONAL_DEX_EXPLOUD|BRUIT SOURD|Son hurlement s'entend à 10 km à la ronde.\nSes orifices émettent toutes sortes de\nbruits.
+NATIONAL_DEX_MAKUHITA|TENACE|Il fortifie son corps en fonçant sur des\narbres épais. Son nid est entouré d'arbres\nabattus.
+NATIONAL_DEX_HARIYAMA|COGNEUR|Il aime mesurer sa force à celle des plus\ngrands POKéMON. Ses coups de paume peuvent\nprojeter un camion.
+NATIONAL_DEX_AZURILL|POINT POLKA|Sa queue est plus rebondissante qu'une\nballe du même nom. C'est aussi une massue\ntrès puissante.
+NATIONAL_DEX_NOSEPASS|BOUSSOLE|Face au danger, il se protège en augmentant\nson magnétisme et en attirant tout objet\nmétallique.
+NATIONAL_DEX_SKITTY|CHATON|Il poursuit tout ce qui bouge. On le voit\nparfois courir en cercle, chassant sa\npropre queue.
+NATIONAL_DEX_DELCATTY|GUINDÉ|Les femmes Dresseurs raffolent de sa\nsublime fourrure. Il ne possède pas de nid.
+NATIONAL_DEX_SABLEYE|OBSCURITÉ|À force de manger des gemmes, les yeux de\nce POKéMON des grottes obscures sont\ndevenus des joyaux.
+NATIONAL_DEX_MAWILE|TROMPEUR|Ses cornes forment une grande mâchoire\nattachée à sa tête. Elle peut broyer des\nbarres de fer.
+NATIONAL_DEX_ARON|ARMURFER|Il vit habituellement au cœur des\nmontagnes. Affamé, il dévore parfois des\nrails et des voitures.
+NATIONAL_DEX_LAIRON|ARMURFER|Il se nourrit du minerai de fer qu'il fore.\nIl défend son territoire en chargeant avec\nson corps d'acier.
+NATIONAL_DEX_AGGRON|ARMURFER|Il creuse des galeries à travers la pierre\navec ses cornes d'acier pour trouver le fer\nqu'il apprécie.
+NATIONAL_DEX_MEDITITE|MÉDITATION|Son entraînement d'ermite lui permet de\nléviter par le seul pouvoir de la\nméditation.
+NATIONAL_DEX_MEDICHAM|MÉDITATION|Le jeûne lui permet de concentrer son\nesprit au point de déceler l'aura de ses\nadversaires.
+NATIONAL_DEX_ELECTRIKE|ORAGE|Il améliore ses réflexes en stimulant ses\nmuscles grâce à l'électricité dans sa\nfourrure.
+NATIONAL_DEX_MANECTRIC|DÉCHARGE|Il libère l'électricité par sa crinière. Il\ncrée un nuage d'orage pour appeler la\nfoudre.
+NATIONAL_DEX_PLUSLE|ACCLAMEUR|Il absorbe l'énergie des poteaux\nélectriques et encourage ses amis avec des\npompons d'étincelles.
+NATIONAL_DEX_MINUN|ACCLAMEUR|Il encourage ses amis. Son corps produit\nplus d'étincelles quand il est en mauvaise\nposture.
+NATIONAL_DEX_VOLBEAT|LUCIOLE|Il communique avec ses pairs en allumant\nson postérieur la nuit. Il adore le doux\nparfum de LUMIVOLE.
+NATIONAL_DEX_ILLUMISE|LUCIOLE|Il utilise son doux parfum pour aider\nMUCIOLE à décrire des arabesques dans le\nciel nocturne.
+NATIONAL_DEX_ROSELIA|ÉPINE|Plus le ROSÉLIA est en bonne santé et plus\nson parfum est agréable et relaxant pour\nson entourage.
+NATIONAL_DEX_GULPIN|ESTOMAC|Il est principalement composé d'un estomac\ndont les sucs digestifs dissolvent tout ce\nqu'il avale.
+NATIONAL_DEX_SWALOT|SAC POISON|Il avale tout en une bouchée. Ses\nfollicules sécrètent des fluides toxiques\nqui endorment l'ennemi.
+NATIONAL_DEX_CARVANHA|FÉROCE|Il attaque en banc quand on menace son\nterritoire. Ses dents aiguisées peuvent\ncouler un navire.
+NATIONAL_DEX_SHARPEDO|BRUTAL|Ses crocs lacèrent des feuilles d'acier. Il\nnage à 120 km/h. On l'appelle “tyran des\nmers”.
+NATIONAL_DEX_WAILMER|BALEINBOULE|Par beau temps, il se pose sur les plages\npour jouer et rebondir. Il expulse de l'eau\npar son évent.
+NATIONAL_DEX_WAILORD|CACHABOUÉE|Le plus grand des POKéMON. Il peut plonger\nà une profondeur de 3 000 m en retenant son\nsouffle.
+NATIONAL_DEX_NUMEL|ENGOURDI|Son dos bossu renferme une lave\nbouillonnante. Elle refroidit par temps de\npluie, ce qui le ralentit.
+NATIONAL_DEX_CAMERUPT|ÉRUPTION|Il porte des volcans sur son dos. Quand le\nmagma remonte, il frissonne et entre en\néruption.
+NATIONAL_DEX_TORKOAL|CHARBON|Il tire son énergie du charbon qu'il brûle\ndans sa carapace et crache de la suie noire\nen cas de danger.
+NATIONAL_DEX_SPOINK|REBOND|Il utilise sa queue comme un ressort et\nbondit partout. Chaque nouveau choc fait\nbattre son cœur.
+NATIONAL_DEX_GRUMPIG|MAGOUILLEUR|Les perles noires amplifient ses pouvoirs\npsy. Sa danse étrange lui permet de\ncontrôler ses ennemis.
+NATIONAL_DEX_SPINDA|PANDA TACHE|Les motifs sur leur fourrure sont propres à\nchaque SPINDA. Son pas chancelant le rend\ndifficile à viser.
+NATIONAL_DEX_TRAPINCH|PIÉGEUR|Il creuse un trou conique dans le sable du\ndésert et se terre en attendant qu'une\nproie trébuche.
+NATIONAL_DEX_VIBRAVA|VIBRATION|Ses violents battements d'ailes génèrent\ndes vagues d'ultrasons qui donnent mal au\ncrâne.
+NATIONAL_DEX_FLYGON|MYSTIQUE|Son puissant battement d'ailes provoque des\ntempêtes de sable. On l'appelle “esprit du\ndésert”.
+NATIONAL_DEX_CACNEA|CACTUS|En stockant l'eau dans son corps, cet\nhabitant du désert peut survivre 30 jours\nsans boire.
+NATIONAL_DEX_CACTURNE|ÉPOUVANTAIL|Il sort la nuit pour chasser. Il traque les\nproies épuisées après une journée dans le\ndésert.
+NATIONAL_DEX_SWABLU|OISEAUCOTON|Il ne se sent à l'aise que dans un milieu\npropre et repousse la poussière avec ses\nailes.
+NATIONAL_DEX_ALTARIA|VIREVOLTEUR|Il aime enlacer ses amis dans ses ailes\ncotonneuses et ronronner.
+NATIONAL_DEX_ZANGOOSE|CHAT FURET|C'est le rival de SÉVIPER depuis des\ngénérations. Ses griffes aiguisées sont son\nmeilleur atout.
+NATIONAL_DEX_SEVIPER|SERPACROC|Le rival historique de MANGRIFF. Il affûte\nla lame de sa queue sur les rochers avant\nle combat.
+NATIONAL_DEX_LUNATONE|MÉTÉORITE|On suppose qu'il est lié au cycle lunaire,\ncar il ne sort que les soirs de pleine\nlune.
+NATIONAL_DEX_SOLROCK|MÉTÉORITE|Le bruit court que cette nouvelle espèce\nvient du soleil. Il produit de la lumière\nen tournoyant.
+NATIONAL_DEX_BARBOACH|BARBILLON|Son corps glissant est difficile à\nattraper. On dit qu'il a été créé dans de\nla boue solidifiée.
+NATIONAL_DEX_WHISCASH|BARBILLON|Il défend férocement son territoire en\ndéclenchant des secousses terribles.
+NATIONAL_DEX_CORPHISH|BRUTE|Sa nature robuste lui permet de vivre sur\nn'importe quel terrain. Ses pinces ne\nlâchent jamais prise.
+NATIONAL_DEX_CRAWDAUNT|CRAPULE|C'est un voyou qui utilise ses pinces pour\nchasser les autres POKéMON hors de sa mare.
+NATIONAL_DEX_BALTOY|POUPARGILE|Il se déplace en tournoyant sur son pied.\nCe POKéMON rare fut découvert dans de\nvieilles ruines.
+NATIONAL_DEX_CLAYDOL|POUPARGILE|Une ancienne figurine d'argile qui s'est\nanimée suite à son exposition à un rayon de\nlumière étrange.
+NATIONAL_DEX_LILEEP|LIS D’EAU|Il vivait au fond de la mer il y a 100\nmillions d'années. La science a permis de\nle ressusciter.
+NATIONAL_DEX_CRADILY|BERNACLE|Vit dans les hauts-fonds des mers chaudes.\nIl déterre sa proie du sable quand la marée\nse retire.
+NATIONAL_DEX_ANORITH|CRUSTAGE|Un ancêtre POKéMON réanimé à partir d'un\nfossile. Il vivait en mer et chassait avec\nses pinces.
+NATIONAL_DEX_ARMALDO|BLINDAGE|Il a gagné la côte après son évolution. Une\narmure robuste recouvre son corps.
+NATIONAL_DEX_FEEBAS|POISSON|Ce POKéMON a peut-être un physique\ndisgracieux, mais il est robuste et peut\nsurvivre dans très peu d'eau.
+NATIONAL_DEX_MILOTIC|TENDRE|Ses splendides écailles aux couleurs de\nl'arc-en-ciel changent de teinte selon\nl'angle de vue.
+NATIONAL_DEX_CASTFORM|CLIMAT|Son aspect change avec la météo. On a\nrécemment découvert que ses molécules\nétaient pareilles à l'eau.
+NATIONAL_DEX_KECLEON|MULTICOLOR|Il change de couleur à volonté, mais le\nmotif en zigzag qui orne son ventre reste\nle même.
+NATIONAL_DEX_SHUPPET|POUPÉE|Il aime le goût de la vengeance. Ils vivent\nen rangs sous les gouttières des gens\nvindicatifs.
+NATIONAL_DEX_BANETTE|MARIONNETTE|Une poupée mue par la tristesse qui la\nronge depuis qu'on l'a délaissée. Elle\nrecherche son propriétaire.
+NATIONAL_DEX_DUSKULL|REQUIEM|Les cris des enfants l'amusent. Il effraie\nles moins sages d'entre eux en traversant\nles murs.
+NATIONAL_DEX_DUSCLOPS|APPEL|Il cherche des feux follets pour les\navaler. Ce qui se passe alors dans son\ncorps est un mystère.
+NATIONAL_DEX_TROPIUS|FRUIT|À force de toujours manger le même fruit\nsucculent, il en pousse à la base de son\ncou.
+NATIONAL_DEX_CHIMECHO|CARILLON|Ses cris se répercutent dans son corps\ncreux avant d'exploser en notes mélodieuses\net saisissantes.
+NATIONAL_DEX_ABSOL|DÉSASTRE|La capacité de sa corne à sentir les\ncatastrophes ayant trop attiré l'attention\nsur lui, il vit reclus.
+NATIONAL_DEX_WYNAUT|RAVI|Il se muscle en bousculant ses semblables\nlors de mêlées. Il raffole des fruits\nsucrés.
+NATIONAL_DEX_SNORUNT|CAPUCHE|On dit que des groupes entiers de STALGAMIN\nvivent en harmonie sous des feuilles\ngigantesques.
+NATIONAL_DEX_GLALIE|FACE|Il empêche ses proies de prendre la fuite\nen gelant instantanément l'humidité de\nl'air.
+NATIONAL_DEX_SPHEAL|CLAP CLAP|Il gagne la côte en roulant sur les blocs\nde glace car sa morphologie n'est pas\nadaptée à la nage.
+NATIONAL_DEX_SEALEO|ROULE BOULE|Il fait souvent tourner des objets sur son\nmuseau pour connaître leur odeur et leur\ntexture.
+NATIONAL_DEX_WALREIN|BRISE GLACE|Il brise la glace avec ses grosses\ndéfenses. Sa graisse le protège du froid,\nmais aussi des attaques.
+NATIONAL_DEX_CLAMPERL|BIVALVE|Il ne produit qu'une perle durant son\nexistence. On raconte qu'elle amplifie les\npouvoirs psychiques.
+NATIONAL_DEX_HUNTAIL|ABYSSE|Il vit loin sous la mer. Il appâte les\nproies crédules avec sa queue qui rappelle\nun petit poisson.
+NATIONAL_DEX_GOREBYSS|MER DU SUD|Au printemps, son corps rose se fait plus\nvif sans que l'on sache pourquoi. Il vit au\nfond de la mer.
+NATIONAL_DEX_RELICANTH|LONGÉVITÉ|Un POKéMON rare aperçu lors d'une\nexploration sous-marine. Il n'a pas évolué\ndepuis 100 millions d'années.
+NATIONAL_DEX_LUVDISC|RENDEZVOUS|Un habitant des mers chaudes. On dit que le\ncouple qui tombe sur ce POKéMON connaîtra\nl'amour éternel.
+NATIONAL_DEX_BAGON|TÊTE DE ROC|Il rêve de pouvoir voler un jour. Pour\nl'heure, il s'entraîne en sautant du haut\ndes falaises.
+NATIONAL_DEX_SHELGON|ENDURANT|Ses cellules ont commencé à changer dans sa\nrobuste coquille. Il la perd en évoluant.
+NATIONAL_DEX_SALAMENCE|DRAGON|À force de rêver de pouvoir voler, sa\nstructure cellulaire a évolué et il s'est\nvu pousser des ailes.
+NATIONAL_DEX_BELDUM|BOULEFER|Il dialogue avec les siens par impulsions\nmagnétiques. En bande, ils se déplacent à\nl'unisson.
+NATIONAL_DEX_METANG|PINCEFER|Il est formé de deux TERHAL soudés. Son\ncorps de fer résiste à un choc avec un\navion à réaction.
+NATIONAL_DEX_METAGROSS|PATTEFER|Il est né de la fusion de plusieurs MÉTANG.\nSes quatre cerveaux en font l'égal d'un\nsuperordinateur.
+NATIONAL_DEX_REGIROCK|PIC ROCHEUX|Tout son corps est fait de roche. S'il\ns'ébrèche au combat, il utilise des pierres\npour le réparer.
+NATIONAL_DEX_REGICE|ICEBERG|Son corps est fait de glace datant de l'ère\nglaciaire. Il contrôle un air gelé de -200\n°C.
+NATIONAL_DEX_REGISTEEL|FER|Son corps invulnérable fut forgé par la\npression souterraine durant des dizaines de\nmilliers d'années.
+NATIONAL_DEX_LATIAS|ÉON|Son corps est recouvert d'un duvet qui\nreflète la lumière et le rend invisible.
+NATIONAL_DEX_LATIOS|ÉON|Un POKéMON très intelligent. Il peut voler\nplus vite qu'un avion à réaction en\nrepliant ses ailes.
+NATIONAL_DEX_KYOGRE|BASSINMARIN|On dit qu'il a fait monter les eaux en\ncausant des pluies diluviennes. Il\nsomnolait dans une fosse marine.
+NATIONAL_DEX_GROUDON|CONTINENT|Il dormait dans le magma souterrain depuis\nsa lutte féroce contre KYOGRE, il y a\nlongtemps de cela.
+NATIONAL_DEX_RAYQUAZA|CIEUX|Il vit dans la couche d'ozone, au dessus\ndes nuages. Il est invisible depuis le sol.
+NATIONAL_DEX_JIRACHI|SOUHAIT|On raconte qu'une fois tous les mille ans,\nil a la capacité d'exaucer tous les vœux\ndurant une semaine.
+NATIONAL_DEX_DEOXYS|ADN|Il vient d'un virus extraterrestre arrivé\navec une météorite et ayant subi une\nmutation génétique.
