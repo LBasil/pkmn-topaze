@@ -1,0 +1,91 @@
+gExpandedPlaceholder_Sapphire|SAPHIR
+gExpandedPlaceholder_Ruby|RUBIS
+gExpandedPlaceholder_Archie|ARCHIE
+gExpandedPlaceholder_Maxie|MAXIME
+gExpandedPlaceholder_Red|ROUGE
+gExpandedPlaceholder_Green|VERT
+gText_EggNickname|ŒUF
+gText_NewGame|NOUVELLE PARTIE
+gText_Continue|CONTINUER
+gText_MysteryGift|CADEAU MYSTÈRE
+gText_WirelessNotConnected|L'adaptateur sans fil n'est pas\nbranché.
+gText_MysteryGiftCantUse|CADEAU MYSTÈRE est inutilisable avec\nl'adaptateur sans fil branché.
+gText_SaveFileCorrupted|Le fichier de sauvegarde est\ncorrompu.\pLa sauvegarde précédente sera\nchargée.
+gText_SaveFileHasBeenDeleted|Le fichier de sauvegarde a été\nsupprimé...
+gText_1MSubCircuitBoardNotInstalled|La carte sous-circuit 1M n'est pas\ninstallée.
+gText_MainMenuTime|TEMPS
+gText_Controls|COMMANDES
+gText_PickOk|{DPAD_UPDOWN}CHOISIR {A_BUTTON}OK
+gText_ABUTTONNext|{A_BUTTON}SUIVANT
+gText_ABUTTONNext_BBUTTONBack|{A_BUTTON}SUIVANT {B_BUTTON}RETOUR
+gText_UPDOWNPick_ABUTTONNext_BBUTTONBack|{DPAD_UPDOWN}CHOISIR {A_BUTTON}SUIV. {B_BUTTON}ANNULER
+gText_UPDOWNPick_ABUTTONBBUTTONCancel|{DPAD_UPDOWN}CHOISIR {A_BUTTON}{B_BUTTON}ANNULER
+gText_ABUTTONExit|{A_BUTTON}QUITTER
+gText_Boy|GARÇON
+gText_Girl|FILLE
+gText_PokedexTableOfContents|POKéDEX   SOMMAIRE
+gText_PickOK|{DPAD_UPDOWN}CHOISIR {A_BUTTON}OK
+gText_Seen|Vus :
+gText_Owned|Capturés :
+gText_Kanto|KANTO
+gText_National|NATIONAL
+gText_PokemonHabitats|{COLOR DYNAMIC_COLOR6}{SHADOW DYNAMIC_COLOR5}HABITATS DES POKéMON
+gText_DexCategory_GrasslandPkmn|POKéMON des prairies
+gText_DexCategory_ForestPkmn|POKéMON des forêts
+gText_DexCategory_WatersEdgePkmn|POKéMON du bord de l'eau
+gText_DexCategory_SeaPkmn|POKéMON marins
+gText_DexCategory_CavePkmn|POKéMON des cavernes
+gText_DexCategory_MountainPkmn|POKéMON des montagnes
+gText_DexCategory_RoughTerrainPkmn|POKéMON des terrains rudes
+gText_DexCategory_UrbanPkmn|POKéMON des villes
+gText_DexCategory_RarePkmn|POKéMON rares
+gText_Search|{COLOR DYNAMIC_COLOR6}{SHADOW DYNAMIC_COLOR5}RECHERCHE
+gText_NumericalMode|MODE NUMÉRIQUE
+gText_AToZMode|MODE A À Z
+gText_PokedexOther|{COLOR DYNAMIC_COLOR6}{SHADOW DYNAMIC_COLOR5}AUTRE
+gText_ClosePokedex|FERMER POKéDEX
+gText_TypeMode|MODE TYPE
+gText_LightestMode|MODE POIDS
+gText_SmallestMode|MODE TAILLE
+gText_PokemonList|{COLOR DYNAMIC_COLOR6}{SHADOW DYNAMIC_COLOR5}LISTE DES POKéMON
+gText_NumericalModeKanto|MODE NUMÉRIQUE : KANTO
+gText_NumericalModeNational|MODE NUMÉRIQUE : NATIONAL
+gText_PokemonListNoColor|LISTE DES POKéMON
+gText_SearchNoColor|RECHERCHE
+gText_PickOKExit|{DPAD_UPDOWN}CHOISIR {A_BUTTON}OK {B_BUTTON}ANNULER
+gText_PickFlipPageCheckCancel|{DPAD_LEFTRIGHT}CHOISIR{PLUS}PAGE {A_BUTTON}VOIR {B_BUTTON}ANNULER
+gText_HT|TAIL
+gText_WT|POIDS
+gText_Lbs|kg
+gText_Cry|{START_BUTTON}CRI
+gText_NextDataCancel|{A_BUTTON}SUITE {B_BUTTON}ANNULER
+gText_Next|{A_BUTTON}SUIVANT
+gText_CancelPreviousData|{A_BUTTON}ANNULER {B_BUTTON}PRÉCÉDENT
+gText_Area|ZONE
+gText_Size|TAILLE
+gText_AreaUnknown|ZONE INCONNUE
+gText_HintBreeding|ÉLEVAGE
+gText_HintFossil|FOSSILE
+gText_HintEvolution|ÉVOLUTION
+gText_HintGiftEvent|CADEAU OU ÉVÉNEMENT
+gText_Page|PAGE
+gText_WelcomeToHOF|Bienvenue au HALL DES LÉGENDES !
+gText_HOFCorrupted|Les données du HALL DES LÉGENDES\nsont corrompues.
+gText_HOFNumber|HALL DES LÉGENDES n°{STR_VAR_1}
+gText_LeagueChamp|CHAMPION DE LA LIGUE !\nFÉLICITATIONS !
+gText_Number|N°
+gText_Level|Nv.
+gText_Name|NOM
+gText_IDNumber|N°ID
+gText_SaveError_PleaseExchangeBackupMemory|Erreur de sauvegarde.\pVeuillez changer la mémoire\nde secours.
+gSaveStatName_Player|JOUEUR
+gSaveStatName_Badges|BADGES
+gSaveStatName_Pokedex|POKéDEX
+gSaveStatName_Time|TEMPS
+gOtherText_Use|UTILISER
+gOtherText_Toss|JETER
+gOtherText_Register|ASSIGNER
+gOtherText_Give|DONNER
+gOtherText_Walk|MARCHER
+gFameCheckerText_Cancel|ANNULER
+gOtherText_Exit|QUITTER

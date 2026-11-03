@@ -1,0 +1,167 @@
+gExpandedPlaceholder_Kyogre|KYOGRE
+gText_MenuPokemon|POKéMON
+gText_Item|OBJET
+gText_Mail|LETTRE
+gText_Take|PRENDRE
+gText_Store|RANGER
+gOtherText_Check|VOIR
+gText_PokeSum_Item_None|AUCUN
+gOtherText_Open|OUVRIR
+gOtherText_Deselect|ANNULER
+gText_YesNo|OUI\nNON
+gText_GoBackToThePreviousMenu|Retourner au\nmenu précédent.
+gText_WhatWouldYouLikeToDo|Que voulez-vous faire ?
+gText_MenuPokedex|POKéDEX
+gText_MenuBag|SAC
+gText_MenuSave|SAUVER
+gText_MenuOption|OPTION
+gText_MenuExit|QUITTER
+gText_MenuRadar|RADAR
+gText_MenuJournal|JOURNAL
+gText_MenuRetire|ABANDON
+gText_MenuSafariStats|{STR_VAR_1}/{STR_VAR_2}\nBALLS  {STR_VAR_3}
+gText_Berry| BAIE
+gText_Coins|{STR_VAR_1} JETONS
+gText_Items2|OBJETS
+gText_PokeBalls2|POKé BALLS
+gText_KeyItems2|OBJ. CLÉS
+gText_DepositItem|DÉPOSER
+gText_CloseBag|FERMER SAC
+gText_Var1IsSelected|{STR_VAR_1} est\nsélectionné.
+gText_CantWriteMailHere|Impossible d'écrire\nune LETTRE ici.
+gText_ThereIsNoPokemon|Il n'y a aucun\nPOKéMON.
+gOtherText_WhereShouldTheStrVar1BePlaced|Où placer l'objet\n{STR_VAR_1} ?
+gText_ItemCantBeHeld|Impossible de tenir\n{STR_VAR_1}.
+gText_TheStrVar1CantBeHeldHere|Impossible de tenir\n{STR_VAR_1} ici.
+gText_DepositHowManyStrVars1|Déposer combien de\n{STR_VAR_1} ?
+gText_DepositedStrVar2StrVar1s|{STR_VAR_2} {STR_VAR_1}\ndéposé(s).
+gText_NoRoomToStoreItems|Plus de place pour\nranger des objets.
+gText_TossOutHowManyStrVar1s|Jeter combien de\n{STR_VAR_1} ?
+gText_ThrewAwayStrVar2StrVar1s|{STR_VAR_2} {STR_VAR_1}\njeté(s).
+gText_ThrowAwayStrVar2OfThisItemQM|Jeter {STR_VAR_2} de\ncet objet ?
+gText_OakForbidsUseOfItemHere|CHEN : {PLAYER} !\nCe n'est pas le moment !{PAUSE_UNTIL_PRESS}
+gText_CantDismountBike|Impossible de descendre du VÉLO ici.{PAUSE_UNTIL_PRESS}
+gText_ItemfinderResponding|Hein ?\nLe CHERCHE-OBJET réagit !\pIl y a un objet enterré ici !{PAUSE_UNTIL_PRESS}
+gText_ItemfinderShakingWildly|Oh !\nLe CHERCHE-OBJET s'agite !\pIl y a un objet sous tes pieds !\p‥ ‥ ‥ ‥ ‥ ‥{PAUSE_UNTIL_PRESS}
+gText_NopeTheresNoResponse|‥ ‥ ‥ ‥Non !\nAucune réaction.{PAUSE_UNTIL_PRESS}
+gText_CoinCase|Tes JETONS :\n{STR_VAR_1}{PAUSE_UNTIL_PRESS}
+gText_PlayerUsedVar2|{PLAYER} utilise\n{STR_VAR_2}.{PAUSE_UNTIL_PRESS}
+gText_RepelEffectsLingered|Mais l'effet d'un REPOUSSE\nse prolonge.{PAUSE_UNTIL_PRESS}
+gText_UsedVar2WildLured|{PLAYER} utilise\n{STR_VAR_2}.\pLes POKéMON sauvages seront\nattirés.{PAUSE_UNTIL_PRESS}
+gText_UsedVar2WildRepelled|{PLAYER} utilise\n{STR_VAR_2}.\pLes POKéMON sauvages seront\nrepoussés.{PAUSE_UNTIL_PRESS}
+gText_BoxFull|La BOÎTE est pleine.{PAUSE_UNTIL_PRESS}
+gText_PowderQty|POUDRE : {STR_VAR_1}{PAUSE_UNTIL_PRESS}
+gText_ExpShareOn|Le partage d'EXP. est activé.\nToute l'équipe gagne de l'EXP.
+gText_ExpShareOff|Le partage d'EXP. est désactivé.\nSeuls les POKéMON ayant\lcombattu gagnent de l'EXP.
+gOtherText_Powder|POUDRE
+gText_PlayedPokeFluteCatchy|{PLAYER} joue de la POKé FLÛTE.\pQuel air entraînant !{PAUSE_UNTIL_PRESS}
+gText_PlayedPokeFlute|{PLAYER} joue de la POKé FLÛTE.
+gText_PokeFluteAwakenedMon|La POKé FLÛTE réveille les\nPOKéMON endormis.{PAUSE_UNTIL_PRESS}
+gText_TMCase|BOÎTE CT
+gText_Close|FERMER
+gText_TMCaseWillBePutAway|La BOÎTE CT sera\nrangée.
+gText_BerryPouch|SAC À BAIES
+gText_TheBerryPouchWillBePutAway|Le SAC À BAIES sera\nrangé.
+gText_ShopBuy|ACHETER
+gText_ShopSell|VENDRE
+gText_ShopQuit|AU REVOIR
+gText_InBagVar1|DANS SAC :{FONT_SMALL} {STR_VAR_1}
+gText_QuitShopping|Quitter la boutique.
+gText_Var1CertainlyHowMany|{STR_VAR_1} ? Bien sûr.\nCombien en voulez-vous ?
+gText_Var1AndYouWantedVar2|{STR_VAR_1}, en {STR_VAR_2} exemplaire(s).\nÇa fera ¥{STR_VAR_3}. D'accord ?
+gText_HereYouGoThankYou|Voilà pour vous !\nMerci !
+gText_YouDontHaveMoney|Vous n'avez pas assez d'argent.{PAUSE_UNTIL_PRESS}
+gText_NoMoreRoomForThis|Vous n'avez plus de place pour\ncet objet.{PAUSE_UNTIL_PRESS}
+gText_AnythingElseICanHelp|Puis-je faire autre chose ?
+gText_OhNoICantBuyThat|{STR_VAR_1} ? Ah non.\nJe ne peux pas l'acheter.{PAUSE_UNTIL_PRESS}
+gText_HowManyWouldYouLikeToSell|{STR_VAR_1} ?\nCombien en vendez-vous ?
+gText_ICanPayThisMuch_WouldThatBeOkay|Je peux vous donner ¥{STR_VAR_3}.\nÇa vous convient ?
+gText_Shift|CHANGER
+gText_SendOut|ENVOYER
+gText_Switch2|CHANGER
+gText_Summary5|RÉSUMÉ
+gText_Enter|ENTRER
+gText_NoEntry|ANNULER
+gText_Take2|PRENDRE
+gText_Read2|LIRE
+gText_Trade4|ÉCHANGE
+gText_ItemEffect_SpAtk|ATQ. SPÉ
+gText_ItemEffect_SpDef|DÉF. SPÉ
+gText_WontHaveEffect|Cela n'aura aucun effet.{PAUSE_UNTIL_PRESS}
+gText_CantBeUsedOnPkmn|Impossible de l'utiliser sur\nce POKéMON.{PAUSE_UNTIL_PRESS}
+gText_PkmnCantSwitchOut|{STR_VAR_1} ne peut pas être\nrappelé !{PAUSE_UNTIL_PRESS}
+gText_PkmnAlreadyInBattle|{STR_VAR_1} est déjà\nau combat !{PAUSE_UNTIL_PRESS}
+gText_PkmnAlreadySelected|{STR_VAR_1} est déjà\nsélectionné.{PAUSE_UNTIL_PRESS}
+gText_PkmnHasNoEnergy|{STR_VAR_1} n'a plus assez\nd'énergie pour combattre !{PAUSE_UNTIL_PRESS}
+gText_CantSwitchWithAlly|Impossible d'échanger les POKéMON\nde {STR_VAR_1} avec les tiens !{PAUSE_UNTIL_PRESS}
+gText_EggCantBattle|Un ŒUF ne peut pas combattre !{PAUSE_UNTIL_PRESS}
+gText_CantUseUntilNewBadge|Inutilisable avant d'avoir un\nnouveau BADGE.{PAUSE_UNTIL_PRESS}
+gText_NoMoreThanThreeMayEnter|Pas plus de trois POKéMON\npeuvent entrer.{PAUSE_UNTIL_PRESS}
+gText_NoMoreThanTwoMayEnter|Pas plus de deux POKéMON\npeuvent entrer.{PAUSE_UNTIL_PRESS}
+gText_SendMailToPC|Envoyer la LETTRE retirée\nsur ton PC ?
+gText_MailSentToPC|La LETTRE a été envoyée sur ton PC.{PAUSE_UNTIL_PRESS}
+gText_PCMailboxFull|La BOÎTE AUX LETTRES du PC est pleine.{PAUSE_UNTIL_PRESS}
+gText_MailMessageWillBeLost|Si la LETTRE est retirée, son\nmessage sera perdu. D'accord ?
+gText_RemoveMailBeforeItem|Retire la LETTRE avant de\nlui donner un objet.{PAUSE_UNTIL_PRESS}
+gText_PkmnWasGivenItem|{STR_VAR_1} reçoit l'objet\n{STR_VAR_2} à tenir.{PAUSE_UNTIL_PRESS}
+gText_PkmnAlreadyHoldingItemSwitch|{STR_VAR_1} tient déjà\nl'objet {STR_VAR_2}.\pVoulez-vous échanger les\ndeux objets ?
+gText_PkmnNotHolding|{STR_VAR_1} ne tient\nrien.{PAUSE_UNTIL_PRESS}
+gText_ReceivedItemFromPkmn|Tu reprends l'objet {STR_VAR_2}\nde {STR_VAR_1}.{PAUSE_UNTIL_PRESS}
+gText_MailTakenFromPkmn|La LETTRE a été retirée du\nPOKéMON.{PAUSE_UNTIL_PRESS}
+gText_SwitchedPkmnItem|{STR_VAR_2} est retiré et\nremplacé par {STR_VAR_1}.{PAUSE_UNTIL_PRESS}
+gText_PkmnHoldingItemCantHoldMail|Ce POKéMON tient un objet.\nIl ne peut pas tenir de LETTRE.{PAUSE_UNTIL_PRESS}
+gText_MailTransferredFromMailbox|La LETTRE a été transférée de\nla BOÎTE AUX LETTRES.{PAUSE_UNTIL_PRESS}
+gText_BagFullCouldNotRemoveItem|La poche {STR_VAR_1} est pleine. L'objet\ndu POKéMON n'a pu être retiré.{PAUSE_UNTIL_PRESS}
+gText_PkmnLearnedMove3|{STR_VAR_1} apprend\n{STR_VAR_2} !
+gText_PkmnCantLearnMove|{STR_VAR_1} et {STR_VAR_2}\nne sont pas compatibles.\p{STR_VAR_2} ne peut pas\nêtre appris.{PAUSE_UNTIL_PRESS}
+gText_PkmnNeedsToReplaceMove|{STR_VAR_1} veut apprendre\n{STR_VAR_2}.\pMais {STR_VAR_1} connaît déjà\nquatre attaques.\pOublier une attaque pour\napprendre {STR_VAR_2} ?
+gText_StopLearningMove2|Renoncer à enseigner\n{STR_VAR_2} ?
+gText_MoveNotLearned|{STR_VAR_1} n'a pas appris\n{STR_VAR_2}.{PAUSE_UNTIL_PRESS}
+gText_WhichMoveToForget|Quelle attaque oublier ?{PAUSE_UNTIL_PRESS}
+gText_12PoofForgotMove|1, {PAUSE 0x0F}2, et{PAUSE 0x0F}‥ {PAUSE 0x0F}‥ {PAUSE 0x0F}‥ {PAUSE 0x0F}{PLAY_SE SE_BALL_BOUNCE_1}Hop !\p{STR_VAR_1} a oublié comment\nutiliser {STR_VAR_2}.\pEt...{PAUSE_UNTIL_PRESS}
+gText_PkmnAlreadyKnows|{STR_VAR_1} connaît déjà\n{STR_VAR_2}.{PAUSE_UNTIL_PRESS}
+gText_PkmnHPRestoredByVar2|{STR_VAR_1} récupère\n{STR_VAR_2} PV.{PAUSE_UNTIL_PRESS}
+gText_PkmnCuredOfPoison|{STR_VAR_1} n'est plus\nempoisonné.{PAUSE_UNTIL_PRESS}
+gText_PkmnCuredOfParalysis|{STR_VAR_1} n'est plus\nparalysé.{PAUSE_UNTIL_PRESS}
+gText_PkmnWokeUp2|{STR_VAR_1} se réveille.{PAUSE_UNTIL_PRESS}
+gText_PkmnBurnHealed|{STR_VAR_1} n'est plus brûlé.{PAUSE_UNTIL_PRESS}
+gText_PkmnThawedOut|{STR_VAR_1} n'est plus gelé.{PAUSE_UNTIL_PRESS}
+gText_PPWasRestored|Les PP sont restaurés.{PAUSE_UNTIL_PRESS}
+gText_PkmnBecameHealthy|{STR_VAR_1} est en pleine forme.{PAUSE_UNTIL_PRESS}
+gText_MovesPPIncreased|Les PP de {STR_VAR_1} augmentent.{PAUSE_UNTIL_PRESS}
+gText_PkmnElevatedToLvVar2|{STR_VAR_1} passe au\nNv. {STR_VAR_2}.
+gText_PkmnBaseVar2StatIncreased|La stat. {STR_VAR_2} de base de\n{STR_VAR_1} augmente.{PAUSE_UNTIL_PRESS}
+gText_PkmnSnappedOutOfConfusion|{STR_VAR_1} n'est plus\nconfus.{PAUSE_UNTIL_PRESS}
+gText_PkmnGotOverInfatuation|{STR_VAR_1} n'est plus\namoureux.{PAUSE_UNTIL_PRESS}
+gText_OnlyPkmnForBattle|C'est ton seul\nPOKéMON apte au combat.
+gText_PkmnCantBeTradedNow|Ce POKéMON ne peut pas être\néchangé maintenant.
+gText_EggCantBeTradedNow|Un ŒUF ne peut pas être\néchangé maintenant.
+gText_OtherTrainersPkmnCantBeTraded|Le POKéMON de l'autre DRESSEUR\nne peut pas être échangé.
+gText_OtherTrainerCantAcceptPkmn|L'autre DRESSEUR ne peut pas\naccepter ce POKéMON.
+gText_CantTradeWithTrainer|Tu ne peux pas échanger avec\nce DRESSEUR maintenant.
+gText_NotPkmnOtherTrainerWants|Ce n'est pas le type de POKéMON\nque veut l'autre DRESSEUR.
+gText_ThatIsntAnEgg|Ce n'est pas un ŒUF.
+gText_ChoosePokemon|Choisis un POKéMON.
+gText_MoveToWhere|Déplacer où ?
+gText_TeachWhichPokemon|Enseigner à quel POKéMON ?
+gText_UseOnWhichPokemon|Utiliser sur quel POKéMON ?
+gText_GiveToWhichPokemon|Donner à quel POKéMON ?
+gText_DoWhatWithPokemon|Que faire de ce {PKMN} ?
+gText_NothingToCut|Rien à COUPER.
+gText_CantSurfHere|Impossible de SURFER ici !
+gText_AlreadySurfing|Tu SURFES déjà.
+gText_CantUseHere|Inutilisable ici.
+gText_RestoreWhichMove|Restaurer quelle attaque ?
+gText_BoostPp|Augmenter les PP de laquelle ?
+gText_DoWhatWithItem|Que faire d'un objet ?
+gText_NoPokemonForBattle|Combat impossible ainsi !
+gText_ChoosePokemon2|Choisis un POKéMON.
+gText_NotEnoughHp|PV insuffisants‥
+gText_ThreePkmnAreNeeded|Il faut trois {PKMN}.
+gText_PokemonCantBeSame|Les {PKMN} doivent être différents.
+gText_NoIdenticalHoldItems|Pas deux objets identiques !
+gText_CurrentIsTooFast|Le courant est bien trop fort !
+gText_DoWhatWithMail|Que faire de la LETTRE ?
+gText_ChoosePokemonCancel|Choisis un POKéMON ou ANNULER.
+gText_ChoosePokemonConfirm|Choisis un POKéMON et valide.
+gText_TwoPokemonAreNeeded|Il faut deux POKéMON.
