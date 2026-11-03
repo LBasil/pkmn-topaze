@@ -180,7 +180,8 @@ def apply_literals(lg):
     for l in open(os.path.join(HERE, lg, 'literals.txt'), encoding='utf-8'):
         if '=' in l:
             k, v = l.rstrip('\n').split('=', 1); d[k] = v
-    for rel, tab in (('src/data/decoration/header.h', d), ('src/battle_interface.c', TYPE_ABBR)):
+    TR = {'GRUNT': 'SBIRE', 'WARDEN': 'GARDIEN'}
+    for rel, tab in (('src/data/decoration/header.h', d), ('src/battle_interface.c', TYPE_ABBR), ('src/data/trainers.h', TR)):
         p = os.path.join(ROOT, rel)
         src = open(p, encoding='utf-8').read()
         bk = os.path.join(BACKUP, rel.replace('/', '__'))

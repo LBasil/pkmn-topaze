@@ -366,3 +366,5 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - 03-11 15h04 : FR — 151 dialogues de cartes restants traduits (panneaux, BADGES, Chen/Grenalux, Tour Pokémon, etc.) ; 50 entrées « à revoir » rafraîchies. Reste 56 textes japonais inutilisés (hérités).
 
 - 03-11 15h23 : AIDE — table des types régénérée d'après la table réelle du jeu (type FÉE inclus, 2 pages ajoutées), FR et EN.
+
+- 03-11 16h03 : FR — « GRUNT » → SBIRE (noms de dresseurs + dialogue), WARDEN → GARDIEN, 8 noms d'espèces restés en anglais dans les dialogues corrigés.
