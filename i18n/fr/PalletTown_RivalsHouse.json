@@ -1,7 +1,7 @@
 {
  "PalletTown_RivalsHouse_Text_CantGroomAnEgg": {
   "en": "Oh, sorry. I honestly can't\\ngroom an EGG.",
-  "fr": "NINA : Oh, désolée. Je ne peux pas\\nm'occuper d'un OEUF."
+  "fr": "NINA : Oh, désolée. Je ne peux pas\\nm'occuper d'un ŒUF."
  },
  "PalletTown_RivalsHouse_Text_CouldntLoveYouMore": {
   "en": "It couldn't possibly love you\\nany more than it does now.\\pYour POKéMON is happy beyond\\nwords.",
@@ -13,7 +13,7 @@
  },
  "PalletTown_RivalsHouse_Text_DontHaveSpaceForThis": {
   "en": "You don't have space for this in\\nyour BAG.",
-  "fr": "Tu n'as pas de place pour ça dans\\nton SAC."
+  "fr": "Ton inventaire est plein."
  },
  "PalletTown_RivalsHouse_Text_DontLikeWayItGlaresAtYou": {
   "en": "{PLAYER}, I don't like the way it\\nglares at you.\\pCould you try being a little nicer\\nto it?",
@@ -37,11 +37,11 @@
  },
  "PalletTown_RivalsHouse_Text_HeardYouBattledRival": {
   "en": "DAISY: {PLAYER}, I heard you had\\na battle against {RIVAL}.\\pI wish I'd seen that!",
-  "fr": "NINA : {PLAYER}, j'ai entendu\\ndire que tu as combattu {RIVAL}.\\pJ'aurais aimé voir ça !"
+  "fr": "NINA : {PLAYER}, il paraît que tu as\\ncombattu {RIVAL}.\\pJ'aurais aimé voir ça !"
  },
  "PalletTown_RivalsHouse_Text_HiBrothersAtLab": {
   "en": "DAISY: Hi, {PLAYER}!\\pMy brother, {RIVAL}, is out at\\nGrandpa's LAB.",
-  "fr": "NINA : Salut, {PLAYER} !\\pMon frère, {RIVAL}, est au LABO de\\nPapy."
+  "fr": "NINA : Salut {PLAYER} !\\p{RIVAL} est dans le labo de pépé !"
  },
  "PalletTown_RivalsHouse_Text_ItLooksVeryHappy": {
   "en": "It looks very happy.\\pI wish {RIVAL} could see this and\\nlearn something from it.",
@@ -65,7 +65,7 @@
  },
  "PalletTown_RivalsHouse_Text_LookingNiceInNoTime": {
   "en": "DAISY: Okay, I'll get it looking\\nnice in no time.",
-  "fr": "NINA : D'accord, je vais le\\nrendre beau en un rien de temps."
+  "fr": "NINA : OK, je vais le faire beau en\\ndeux secondes."
  },
  "PalletTown_RivalsHouse_Text_LovelyAndSweetClefairy": {
   "en": "“The lovely and sweet\\nCLEFAIRY”",
@@ -73,7 +73,7 @@
  },
  "PalletTown_RivalsHouse_Text_MayISeeFirstMon": {
   "en": "DAISY: Your POKéMON grow to love\\nyou if you raise them with love.\\pFor example, {PLAYER}, may I see\\nyour first POKéMON?",
-  "fr": "NINA : Tes POKéMON t'aiment\\nsi tu les élèves avec amour.\\pPar exemple, {PLAYER}, puis-je voir\\nton premier POKéMON ?"
+  "fr": "NINA : Tes POKéMON te le rendront\\nbien si tu les élèves avec amour.\\pPar exemple, {PLAYER}, je peux voir\\nton premier POKéMON ?"
  },
  "PalletTown_RivalsHouse_Text_NotFamiliarWithYouYet": {
   "en": "It's not quite familiar with you\\nyet.\\pPOKéMON are all quite wary when\\nyou first get them.",
@@ -81,7 +81,7 @@
  },
  "PalletTown_RivalsHouse_Text_PleaseGiveMonsRest": {
   "en": "DAISY: Just like people, POKéMON\\nare living things.\\pWhen they get tired, please give\\nthem a rest.",
-  "fr": "NINA : Comme les gens, les\\nPOKéMON sont des êtres vivants.\\pQuand ils sont fatigués, laisse-les\\nse reposer, s'il te plaît."
+  "fr": "NINA : Comme les gens, les POKéMON\\nsont des êtres vivants.\\pIls doivent aussi se reposer quand\\nils sont fatigués."
  },
  "PalletTown_RivalsHouse_Text_ReceivedTownMapFromDaisy": {
   "en": "{PLAYER} received a TOWN MAP\\nfrom DAISY.",
@@ -89,7 +89,7 @@
  },
  "PalletTown_RivalsHouse_Text_ShelvesCrammedFullOfBooks": {
   "en": "The shelves are crammed full of\\nbooks on POKéMON.",
-  "fr": "Les étagères sont remplies de\\nlivres sur les POKéMON."
+  "fr": "Des bouquins sur les POKéMON !"
  },
  "PalletTown_RivalsHouse_Text_WhyWouldMonHateYouSoMuch": {
   "en": "…Um, it's not easy for me to say\\nthis, but…\\pIs there some reason why your\\nPOKéMON would hate you so much?",

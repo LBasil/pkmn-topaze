@@ -81,7 +81,7 @@
  },
  "OneIsland_KindleRoad_Text_KiaDefeat": {
   "en": "KIA: Huh?!\\nI can't believe it!",
-  "fr": "KIA : Hein ?!\\nJe n'arrive pas à y croire !"
+  "fr": "KIA : Hein? ! J'arrive pas à le\\ncroire !"
  },
  "OneIsland_KindleRoad_Text_KiaIntro": {
   "en": "KIA: My big brother and I make\\nan awesome combination!",
@@ -89,7 +89,7 @@
  },
  "OneIsland_KindleRoad_Text_KiaNotEnoughMons": {
   "en": "KIA: If you want to battle with\\nus, you have to bring at least two\\lPOKéMON with you.",
-  "fr": "KIA : Si tu veux nous affronter, tu\\ndois amener au moins deux POKéMON."
+  "fr": "KIA : Si tu veux te battre contre\\nnous, alors il te faut au moins\\ldeux POKéMON."
  },
  "OneIsland_KindleRoad_Text_KiaPostBattle": {
   "en": "KIA: How could there be anyone\\nbetter than my big brother?",
@@ -161,7 +161,7 @@
  },
  "OneIsland_KindleRoad_Text_TanyaPostBattle": {
   "en": "I'll train even harder from now on!",
-  "fr": "À partir de maintenant, je vais\\nm'entraîner encore plus !"
+  "fr": "A partir de maintenant, je vais\\nm'entraîner encore plus !"
  },
  "OneIsland_KindleRoad_Text_TommyDefeat": {
   "en": "I've lost it all again…",

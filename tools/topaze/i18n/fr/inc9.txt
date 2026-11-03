@@ -1,27 +1,27 @@
-Help_Text_DefineAccuracy|PRÉCISION indique la probabilité que\nl'attaque touche l'adversaire.\lPlus ce nombre est élevé, plus il\lest probable que l'attaque touche.$
-Help_Text_DefineFNT|K.O. signifie “hors de combat”.\nUn POKéMON est K.O. si ses PV tombent\là zéro. Il ne peut plus participer\lau combat.\lSoigne un POKéMON K.O. au CENTRE\lPOKéMON ou avec un objet.$
-Help_Text_DefineItems|Les objets ordinaires achetés dans une\nBOUTIQUE POKéMON vont dans la poche\lOBJETS. On peut les utiliser, les\lfaire porter ou les jeter.$
+Help_Text_DefineAccuracy|PRÉCISION indique la probabilité\nd'une attaque à toucher sa cible.\lPlus ce nombre est grand, et plus les\lchances de toucher la cible sont\limportantes.$
+Help_Text_DefineFNT|KO apparaît quand un POKéMON\nne peut plus combattre. Un POKéMON\lest incapable de se battre si ses PV\latteignent zéro. Ranime un POKéMON\lKO en allant dans un CENTRE POKéMON\lou en utilisant un objet.$
+Help_Text_DefineItems|Les objets achetés dans les\nBOUTIQUES POKéMON sont rangés\ldans la POCHE OBJETS. Les objets\lpeuvent être utilisés, donnés à\lporter aux POKéMON ou jetés\laux ordures.$
 Help_Text_DefineKeyItems|Les objets importants trouvés ou reçus\nvont dans la poche OBJETS RARES.\lOn peut les utiliser ou les\lenregistrer pour les utiliser vite\lavec SELECT. Une fois enregistré, il\lse sert sans ouvrir le MENU ni le SAC.$
-Help_Text_DefinePokeBalls|Les POKé BALLS, qui servent à capturer\ndes POKéMON sauvages, vont dans la\lpoche POKé BALLS.\lOn en achète dans les BOUTIQUES\lPOKéMON. On peut les utiliser, les\lfaire porter ou les jeter.$
-Help_Text_DefinePokedex|Indique le nombre d'espèces de POKéMON\nque tu as capturées ou fait évoluer\lpour remplir le POKéDEX.\lEfforce-toi de capturer toutes sortes\lde POKéMON !$
-Help_Text_DefinePlayTime|C'est le temps total que tu as passé\nà jouer à ce jeu.$
-Help_Text_DefineBadges|Les BADGES de la LIGUE POKéMON que tu\nas gagnés sont enregistrés et affichés.\lGagne des BADGES en battant les\lCHAMPIONS d'ARÈNE des villes.$
-Help_Text_DefineTextSpeed|Tu peux régler la vitesse d'affichage\ndu texte : LENT, MOYEN ou RAPIDE.$
-Help_Text_DefineBattleScene|Tu peux activer ou désactiver les\nanimations de combat.$
-Help_Text_DefineBattleStyle|Tu peux choisir si un DRESSEUR peut\nchanger de POKéMON après avoir mis\lson adversaire K.O.\lRègle sur “CHANGER” pour pouvoir\lremplacer un POKéMON après qu'il a\lmis son adversaire K.O.$
-Help_Text_DefineSound|Tu peux choisir entre une sortie\nson MONO et STÉRÉO.$
-Help_Text_DefineButtonMode|“AIDE” affiche l'aide avec L ou R.\n“LR” permet de changer de pages du\lPOKéDEX et de poches du SAC avec\lles touches L et R.\l“L=A” donne à la touche L la même\lfonction que la touche A.$
-Help_Text_DefineFrame|Tu peux choisir le dessin du cadre\nde certains menus. Essaie-les et\lchoisis celui qui te plaît.$
-Help_Text_DefineCancel2|Les réglages seront remplacés par\nles choix affichés en rouge, et tu\lretourneras au MENU.$
-Help_Text_DefineTM|Une CT (Capsule Technique) sert à\nenseigner une attaque à un POKéMON.\lIl en existe beaucoup.\lUne attaque ne s'enseigne qu'aux\lPOKéMON capables de l'utiliser.\lUne CT se brise après un usage.$
-Help_Text_DefineHM|Une CS (Capsule Secrète) sert à\nenseigner une attaque CACHÉE.\lElle ne s'enseigne qu'aux POKéMON\lcapables de l'utiliser.\lContrairement à une CT, une CS est\lréutilisable. Un POKéMON oublie\ldifficilement une attaque CACHÉE.$
+Help_Text_DefinePokeBalls|Les POKé BALLS, qui servent à\nattraper les POKéMON, sont placées\ldans la POCHE POKé BALLS. Elles\ls'achètent dans les BOUTIQUES\lPOKéMON. Elles peuvent être\lutilisées, données à porter aux\lPOKéMON ou jetées aux ordures.$
+Help_Text_DefinePokedex|Indique le nombre d'espèces de\nPOKéMON attrapées et/ou qui ont\lévolué pour remplir le POKéDEX.\lFais de ton mieux pour tous\lles attraper !$
+Help_Text_DefinePlayTime|C'est le temps total que tu as\npassé à jouer.$
+Help_Text_DefineBadges|Les BADGES DE LA LIGUE POKéMON\nque tu as gagnés sont enregistrés et\lexposés. Gagne des BADGES en\laffrontant les CHAMPIONS D'ARENE\ldans chaque ville.$
+Help_Text_DefineTextSpeed|Pour choisir la vitesse de défilement\ndu texte. Tu peux choisir entre trois\lvitesses différentes.$
+Help_Text_DefineBattleScene|Tu peux choisir de voir ou non les\nanimations des combats.$
+Help_Text_DefineBattleStyle|Pour choisir si un DRESSEUR peut\nchanger ou non de POKéMON après\lavoir mis un POKéMON adverse KO.\lSélectionne CHOIX si tu veux pouvoir\lchanger de POKéMON après un combat.$
+Help_Text_DefineSound|Pour choisir entre MONO et STÉRÉO.$
+Help_Text_DefineButtonMode|AIDE pour afficher les messages\nd'aide avec les boutons L ou R.\lLR pour changer les pages du\lPOKéDEX et les POCHES DU SAC\lavec les boutons L et R.\lL=A pour que le bouton L ait la\lmême fonction que le bouton A.$
+Help_Text_DefineFrame|Tu peux choisir la forme de la\nfenêtre autour des menus. Essaie\lun peu et choisis ta préférée.$
+Help_Text_DefineCancel2|Les paramètres correspondront aux\nsélections indiquées en rouge, tu\lretourneras au menu.$
+Help_Text_DefineTM|Une CT (Capsule Technique) sert à\nenseigner des capacités aux POKéMON.\lIl en existe plusieurs sortes.\lSeuls les POKéMON aptes sont\lcapables de les apprendre.\lUne CT n'est utilisable qu'une\lseule fois.$
+Help_Text_DefineHM|Une CS (Capsule Secrète) sert à\nenseigner des capacités SECRETES.\lSeuls les POKéMON aptes sont\lcapables d'utiliser une CS.\lContrairement aux CT, les CS sont\lutilisables plusieurs fois, mais elles\lsont dures à oublier.$
 Help_Text_DefineHMMove|Les attaques CACHÉES sont\nparticulièrement importantes pour\ltoute ton aventure. Pour en utiliser\lune hors combat, ouvre le MENU\l“POKéMON” et fais-la utiliser par\lle POKéMON qui la connaît. Un POKéMON\lK.O. peut l'utiliser hors combat.$
-Help_Text_DefineEvolution|Certains POKéMON subissent de grands\nchangements (évolution) en atteignant\ldes niveaux précis. L'évolution change\lsa forme, son nom, et peut-être les\lattaques qu'il apprend. Certains\lévoluent pour d'autres raisons que\lle niveau.$
-Help_Text_DefineStatusProblem|Les problèmes de statut :\nSommeil : attaques impossibles.\lPoison : perte de PV continue.\lParalysie : peut bloquer l'attaque.\lBrûlure : perte de PV, ATTAQUE baisse.\lGel : attaques impossibles.\lOn les soigne avec des objets, etc.$
-Help_Text_DefinePokemon|POKéMON est le nom donné aux\ncréatures merveilleuses qui peuplent\ltous les recoins de ce monde.\lOn les élève comme animaux de\lcompagnie, pour se battre, etc.$
-Help_Text_DefineIDNo2|Le No. ID est un numéro spécial attribué\nà toi seul en tant que DRESSEUR.\lAvec le nom du DO, il sert à\lidentifier précisément le Dresseur\ld'Origine.\lIl ne change pas même si le POKéMON\lest échangé.$
-Help_Text_DefineMoney2|Chaque fois que tu bats un DRESSEUR,\ntu reçois une récompense.\lMets-la de côté pour faire des\lachats à la BOUTIQUE POKéMON !$
-Help_Text_DefineBadges2|Indique le nombre de BADGES de la\nLIGUE POKéMON que tu as gagnés.\lGagne des BADGES en battant les\lCHAMPIONS d'ARÈNE des villes.$
+Help_Text_DefineEvolution|Parmi les POKéMON, certains\nconnaissent de grands changements\l(évolution) en changeant de niveau.\lQuand ils évoluent en changeant de\lniveau ou pour d'autres raisons, les\lPOKéMON changent de forme et peuvent\lapprendre de nouvelles capacités.$
+Help_Text_DefineStatusProblem|Les problèmes de statut sont :\nSommeil : Attaques inutilisables.\lPoison : Perte progressive des PV.\lParalysie : Peut empêcher d'attaquer.\lBrûlure : Perte de PV, baisse ATTAQ.\lGel : Attaques inutilisables.\lIls sont soignables par des objets.$
+Help_Text_DefinePokemon|POKéMON est le nom donné à ces\ncréatures incroyables qui habitent\laux quatre coins du monde.\lLes gens les dressent pour leur\ltenir compagnie mais aussi pour\lcombattre ou pour bien d'autres\lchoses.$
+Help_Text_DefineIDNo2|Le NºID est un numéro d'identification\nattribué à chaque DRESSEUR. Il est\lutilisé avec le nom du DO pour\lidentifier le DRESSEUR ORIGINAL.\lLe NºID ne change pas même\lsi le POKéMON est échangé.$
+Help_Text_DefineMoney2|Tu reçois de l'argent chaque fois\nque tu remportes un combat contre\lun DRESSEUR. Economise pour\lpouvoir acheter des objets dans les\lBOUTIQUES POKéMON.$
+Help_Text_DefineBadges2|Indique le nombre de BADGES DE\nLIGUE POKéMON que tu as gagnés.\lRemporte les combats contre les\lCHAMPIONS d'ARÈNE de chaque ville\lpour gagner ces BADGES.$
 Help_Text_TheHelpSystem|Le système d'AIDE$
 Help_Text_TheGame|Le jeu$
 Help_Text_WirelessAdapter|Adaptateur sans fil$
@@ -29,12 +29,12 @@ Help_Text_GameFundamentals1|Bases du jeu 1$
 Help_Text_GameFundamentals2|Bases du jeu 2$
 Help_Text_GameFundamentals3|Bases du jeu 3$
 Help_Text_WhatArePokemon|Que sont les POKéMON ?$
-Help_Text_DescTheHelpSystem|Les messages d'aide changent selon ta\nprogression dans le jeu. Ils sont\lconçus pour t'aider quand tu en as\lbesoin. Si tu ne comprends pas\lquelque chose, consulte le système\ld'AIDE !$
-Help_Text_DescTheGame|Tu deviens le héros et explores le\nmonde des POKéMON !\lEn parlant aux gens et en résolvant\ldes mystères, de nouvelles voies\ls'ouvriront. Vise le but avec tes\lmerveilleux POKéMON !$
-Help_Text_DescWirelessAdapter|Ce jeu communique en liaison sans fil\navec l'adaptateur sans fil.\pJoue sans fil n'importe où,\nn'importe quand, avec n'importe qui !\pEssaie de jouer avec l'adaptateur\nsans fil toujours branché !$
-Help_Text_DescGameFundamentals1|Visite chaque ville, parcours chaque\nroute, explore chaque grotte et relève\lchaque défi pour devenir le plus\lgrand DRESSEUR de POKéMON !$
-Help_Text_DescGameFundamentals2|Dans ton aventure, tu feras face à\nbien des obstacles. Chacun peut être\lsurmonté en agissant ou en résolvant\ldes mystères. Certains dépendent de\lquelque chose qui se passe loin.$
-Help_Text_DescGameFundamentals3|Certains obstacles disparaissent\nquand tes POKéMON apprennent des\lattaques précises.$
-Help_Text_DescWhatArePokemon|Les POKéMON sont des créatures\nmerveilleuses nimbées de mystère.\lTu peux les rencontrer partout…\ldans l'herbe, les grottes, la mer.\lIls semblent devenir obéissants\lenvers les DRESSEURS qui les ont\lcapturés.$
+Help_Text_DescTheHelpSystem|Les messages d'aide changent\nselon ta progression dans le jeu.\lIls sont conçus pour t'aider selon\ltes besoins. Utilise le système\ld'AIDE s'il y a quelque chose que\ltu ne comprends pas.$
+Help_Text_DescTheGame|Tu incarnes le personnage principal\ndu jeu parti explorer le monde des\lPOKéMON. En parlant aux gens\let en résolvant des énigmes, tu\louvriras de nouvelles voies. Tu\lpourras compter sur tes POKéMON\lpour finir ta quête.$
+Help_Text_DescWirelessAdapter|Ce jeu utilise un adaptateur sans fil\nGBA pour communiquer en réseau.\pTu peux te connecter n'importe quand\net avec n'importe qui !\pEssaie de jouer en gardant toujours\nl'adaptateur sans fil GBA branché !$
+Help_Text_DescGameFundamentals1|Visite chaque ville, voyage sur\ntoutes les routes, explore chaque\lgrotte et affronte tous les\lDRESSEURS pour devenir le\lplus grand DRESSEUR POKéMON !$
+Help_Text_DescGameFundamentals2|Dans ton aventure, tu devras\nfaire face à de nombreux obstacles\lque tu pourras contourner en\lrésolvant des énigmes ou en\laccomplissant certaines choses,\lmême très éloignées.$
+Help_Text_DescGameFundamentals3|Certains obstacles ne peuvent\nêtre franchis que lorsque tes\lPOKéMON apprennent des capacités\lspécifiques.$
+Help_Text_DescWhatArePokemon|Les POKéMON sont des créatures\nentourées de mystère. On peut les\lvoir dans les herbes, la mer ou les\lgrottes. Ils obéissent au DRESSEUR\lqui les a attrapés.$
 Help_Text_UsingTypeMatchupList|Utiliser la table des types$
 Help_Text_HowToUseTypeMatchupList|Selon l'affinité entre le type de\nl'attaque et celui de la cible,\ll'efficacité varie :\l{CIRCLE_DOT} : Super efficace !\l{TRIANGLE} : Pas très efficace\l{BIG_MULT_X} : Aucun effet\l(Pas de changement sinon.)$

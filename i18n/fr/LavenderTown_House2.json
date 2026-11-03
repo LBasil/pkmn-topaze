@@ -5,11 +5,11 @@
  },
  "LavenderTown_House2_Text_FromNowOnShallBeKnownAsName": {
   "en": "Done! From now on, this POKéMON\\nshall be known as {STR_VAR_1}!\\pIt is a better name than before!\\nHow fortunate for you!",
-  "fr": "Très bien ! À partir de maintenant,\\nce POKéMON sera surnommé {STR_VAR_1} !\\pC'est mieux qu'avant ! Tu en as de\\nla chance !"
+  "fr": "Très bien ! A partir de maintenant,\\nce POKéMON sera surnommé {STR_VAR_1} !\\pC'est mieux qu'avant ! Tu en as de\\nla chance !"
  },
  "LavenderTown_House2_Text_FromNowOnShallBeKnownAsSameName": {
   "en": "Done! From now on, this POKéMON\\nshall be known as {STR_VAR_1}!\\pIt looks no different from before,\\nand yet, this is vastly superior!\\pHow fortunate for you!",
-  "fr": "Ça y est ! À partir de maintenant,\\nce POKéMON sera surnommé {STR_VAR_1} !\\pCe surnom ne semble pas très\\ndifférent de l'autre et pourtant,\\lil est bien mieux !\\pTu en as de la chance !"
+  "fr": "Ça y est ! A partir de maintenant,\\nce POKéMON sera surnommé {STR_VAR_1} !\\pCe surnom ne semble pas très\\ndifférent de l'autre et pourtant,\\lil est bien mieux !\\pTu en as de la chance !"
  },
  "LavenderTown_House2_Text_GiveItANicerName": {
   "en": "{STR_VAR_1}, is it?\\nThat is a decent nickname!\\pBut, would you like me to give it\\na nicer name?\\pHow about it?",
@@ -21,7 +21,7 @@
  },
  "LavenderTown_House2_Text_ThatIsMerelyAnEgg": {
   "en": "Now, now.\\nThat is merely an EGG!",
-  "fr": "Voyons, voyons… Ce n'est qu'un OEUF\\n!"
+  "fr": "Voyons, voyons… Ce n'est qu'un ŒUF\\n!"
  },
  "LavenderTown_House2_Text_TrulyImpeccableName": {
   "en": "{STR_VAR_1}, is it?\\nThat is a truly impeccable name!\\pTake good care of {STR_VAR_1}!",

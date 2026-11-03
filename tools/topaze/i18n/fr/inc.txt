@@ -1,15 +1,15 @@
 gOtherText_NewName|NOUVEAU NOM$
 gControlsGuide_Text_Intro|Les touches vont être expliquées\npar ordre d'importance.$
-gControlsGuide_Text_DPad|Déplace le personnage.\nSert aussi à choisir les\nrubriques.$
-gControlsGuide_Text_AButton|Sert à confirmer un choix, à\nexaminer, parler et faire\ndéfiler le texte.$
-gControlsGuide_Text_BButton|Sert à sortir, annuler un choix\net quitter un mode.$
+gControlsGuide_Text_DPad|Déplacer le personnage.\nFaire une sélection.$
+gControlsGuide_Text_AButton|Confirmer un choix, observer,\nparler et faire défiler le texte.$
+gControlsGuide_Text_BButton|Quitter, annuler un choix ou\nun mode.$
 gControlsGuide_Text_StartButton|Appuie ici pour ouvrir le\nMENU.$
-gControlsGuide_Text_SelectButton|Sert à déplacer les objets et à\nutiliser l'objet enregistré.$
-gControlsGuide_Text_LRButtons|Si tu as besoin d'aide pour\njouer ou savoir quoi faire,\nappuie sur L ou R.$
+gControlsGuide_Text_SelectButton|Changer les objets ou utiliser\nun objet enregistré.$
+gControlsGuide_Text_LRButtons|Obtenir de l'aide ou des\nexplications pendant la partie.$
 gOakSpeech_Text_AskPlayerGender|Dis-moi. Es-tu un garçon\nou une fille ?$
-gPikachuIntro_Text_Page1|Dans le monde où tu vas entrer,\ntu vivras une grande aventure\ndont tu es le héros.\n\nParle aux gens et examine tout\npartout où tu vas : villes,\nroutes ou grottes. Récolte des\ninfos et des indices partout.$
-gPikachuIntro_Text_Page2|De nouvelles voies s'ouvriront en\naidant les gens, en surmontant\ndes défis et en résolvant des\nmystères.\n\nParfois, d'autres te défieront\nou des créatures sauvages\nt'attaqueront. Sois courageux.$
-gPikachuIntro_Text_Page3|Durant ton aventure, nous\nespérons que tu rencontreras\nbeaucoup de gens et que tu\ngrandiras. C'est notre but.\n\nAppuie sur A, et que l'aventure\ncommence !$
+gPikachuIntro_Text_Page1|Prépare-toi à te lancer dans une\ngrande aventure, à la découverte\nd'un nouveau monde.\n\nTu vas faire de nouvelles rencontres\net découvrir de nouvelles villes.\nProfites-en pour récolter autant\nd'informations que possible.$
+gPikachuIntro_Text_Page2|En résolvant des mystères et en aidant\nles gens, tu pourras ouvrir de\nnouvelles voies.\n\nAttends-toi à te faire défier par de\nnombreux DRESSEURS et à\naffronter des créatures sauvages.\nSois brave et ne perds pas espoir.$
+gPikachuIntro_Text_Page3|Nous espérons que tu rencontreras\ntoutes sortes de gens pendant ce\nvoyage et que tu prendras\ngoût à la découverte.\nC'est notre objectif principal.\n\nAppuie sur le bouton A et plonge\ndans cette nouvelle aventure.$
 gOakSpeech_Text_WelcomeToTheWorld|Bonjour !\nContent de te rencontrer !\pBienvenue dans le monde des\nPOKéMON !\pJe m'appelle CHEN.\pLes gens m'appellent\naffectueusement le PROFESSEUR\nPOKéMON.\p$
 gOakSpeech_Text_ThisWorld|Ce monde…$
 gOakSpeech_Text_IsInhabitedFarAndWide|…est peuplé un peu partout de\ncréatures appelées POKéMON.\p$

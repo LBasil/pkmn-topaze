@@ -94,18 +94,18 @@ gText_DepositPokemon|DÉPOSER POKéMON
 gText_MovePokemon|DÉPLACER POKéMON
 gText_MoveItems|DÉPLACER OBJETS
 gText_SeeYa|À BIENTÔT !
-gText_WithdrawMonDescription|Retire un POKéMON d'une BOÎTE.
-gText_DepositMonDescription|Dépose un POKéMON de ton équipe\ndans une BOÎTE.
-gText_MoveMonDescription|Déplace les POKéMON rangés\ndans les BOÎTES.
-gText_MoveItemsDescription|Déplace les objets tenus par un\nPOKéMON de BOÎTE ou d'équipe.
+gText_WithdrawMonDescription|Intégrer dans l'équipe des\nPOKéMON pris des BOITES.
+gText_DepositMonDescription|Déposer des POKéMON de l'équipe\ndans des BOITES.
+gText_MoveMonDescription|Organiser les POKéMON dans les\nBOÎTES et dans l'équipe.
+gText_MoveItemsDescription|Vous pouvez déplacer des objets\ntenus dans une BOÎTE ou l'équipe.
 gText_SeeYaDescription|À la prochaine !
 gText_JustOnePkmn|Dernier POKéMON : impossible !
 gText_PartyFull|Équipe pleine : impossible !
 gText_Box|BOÎTE
 gText_CombineFourWordsOrPhrases|Combine quatre mots ou phrases
 gText_AndMakeYourProfile|pour faire ton profil.
-gText_MakeMessageSixPhrases|Fais un message de six phrases.
-gText_MaxTwoTwelveLetterPhrases|Max. 2 phrases de 12 lettres/ligne.
+gText_MakeMessageSixPhrases|Créez un message avec six mots.
+gText_MaxTwoTwelveLetterPhrases|Max. deux (groupes) mots/ligne.
 gText_FindWordsThatDescribeYour|Trouve des mots qui décrivent
 gText_FeelingsRightNow|tes émotions du moment.
 gText_CombineNineWordsOrPhrases|Combine neuf mots ou phrases

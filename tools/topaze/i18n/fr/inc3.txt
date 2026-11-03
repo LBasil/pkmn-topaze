@@ -1,20 +1,20 @@
-Text_CutTreeDown|Cet arbre a l'air de pouvoir\nêtre COUPÉ !\pVeux-tu utiliser COUPE ?$
-Text_MonUsedMove|{STR_VAR_1} utilise {STR_VAR_2} !$
-Text_TreeCanBeCutDown|Cet arbre a l'air de pouvoir\nêtre COUPÉ !$
-Text_UseRockSmash|Ce rocher semble fragile.\nVeux-tu utiliser ÉCLATE-ROC ?$
-Text_MonMaySmashRock|C'est un rocher solide, mais un\nPOKéMON pourrait le briser.$
-Text_UseStrength|C'est un gros rocher, mais un\nPOKéMON pourrait le pousser.\pVeux-tu utiliser FORCE ?$
-Text_MonUsedStrengthCanMoveBoulders|{STR_VAR_1} utilise FORCE !\p{STR_VAR_1} peut maintenant\ndéplacer les rochers !$
-Text_MonMayPushBoulder|C'est un gros rocher, mais un\nPOKéMON pourrait le pousser.$
-Text_StrengthMadeMovingBouldersPossible|FORCE permet de déplacer\nles rochers.$
-Text_WallOfWaterCrashingDown|Un mur d'eau s'écrase dans\nun rugissement puissant.$
-Text_UseWaterfall|C'est une grande cascade.\nVeux-tu utiliser CASCADE ?$
+Text_CutTreeDown|Cet arbre semble pouvoir être\nCOUPE.\pVoulez-vous utiliser COUPE ?$
+Text_MonUsedMove|{STR_VAR_1} utilise {STR_VAR_2}.$
+Text_TreeCanBeCutDown|Cet arbre semble pouvoir être\nCOUPÉ.$
+Text_UseRockSmash|Cette pierre peut être brisée.\nVoulez-vous utiliser ÉCLATE-ROC ?$
+Text_MonMaySmashRock|C'est une pierre solide, mais un\nPOKéMON pourrait la briser.$
+Text_UseStrength|C'est un gros rocher, mais un\nPOKéMON peut être apte à le\ldéplacer.\pVoulez-vous utiliser FORCE ?$
+Text_MonUsedStrengthCanMoveBoulders|{STR_VAR_1} utilise FORCE.\pLa capacité FORCE de {STR_VAR_1}\npermet de déplacer le rocher.$
+Text_MonMayPushBoulder|C'est un gros rocher, mais un\nPOKéMON peut être apte à le\ldéplacer.$
+Text_StrengthMadeMovingBouldersPossible|FORCE permet de déplacer le\nrocher.$
+Text_WallOfWaterCrashingDown|Un mur d'eau s'abat dans un vacarme\nassourdissant.$
+Text_UseWaterfall|C'est une grande chute d'eau.\nVoulez-vous utiliser CASCADE ?$
 Text_MonUsedWaterfall|{STR_VAR_1} utilise CASCADE.$
-Text_MonMayGoUnderwater|La mer est profonde ici. Un\nPOKéMON pourrait y plonger.$
-Text_SeaIsDeepUseDive|La mer est profonde ici.\nVeux-tu utiliser PLONGÉE ?$
+Text_MonMayGoUnderwater|La mer est profonde. Un POKéMON\ndoit pouvoir aller sous l'eau ici.$
+Text_SeaIsDeepUseDive|La mer est profonde ici.\nVoulez-vous utiliser PLONGÉE ?$
 Text_MonUsedDive|{STR_VAR_1} utilise PLONGÉE.$
-Text_MonMaySurface|La lumière filtre d'en haut.\nUn POKéMON pourrait remonter.$
-Text_LightFilteringUseDive|La lumière filtre d'en haut.\nVeux-tu utiliser PLONGÉE ?$
+Text_MonMaySurface|Une lumière vient d'en haut.\nUn POKéMON doit pouvoir remonter\là la surface.$
+Text_LightFilteringUseDive|Une lumière vient d'en haut.\nVoulez-vous utiliser PLONGÉE ?$
 Text_DiveCantBeUsedHere|Il y a un obstacle au-dessus.\nPLONGÉE est impossible ici.$
 Text_LooksLikeNothingHere|On dirait qu'il n'y a rien ici…$
 Text_PokeRadarNoMons|Aucun POKéMON déjà vu ne vit\nici (herbe, grotte ou mer).$
@@ -68,22 +68,22 @@ Topaze_Cameo_Text_Vesper|VESPER : ...Oui. Compris. HEMATEK\nest dans les temps. 
 Topaze_Cameo_Text_Selene|SELENE : Oui. La tour est de\nnouveau calme. La pierre est\lpartie avec KRONOS.\p...Toi. Celui qui avance alors que\nses mains tremblent. J'aime ça.\pNe nous prends pas pour des\nvoleurs. Un voleur a besoin de se\lcacher. Nous avons des milliers\lde voix qui sont d'accord.\pVa. Nous nous reverrons.$
 Topaze_Cameo_Text_Kronos|KRONOS : ...Compris. Toutes les\nbranches ont fait leur rapport.\lLa voie est libre.\pUne précision, petit. Nous n'avons\njamais eu besoin de nous presser.\lC'est toi qui cours.\pNous ne sommes pas derrière toi.\nNous attendons là où tu vas.$
 Pokedude_Text_SpeedierBattlerGoesFirst|POKé DUDE : Le plus rapide des\ncombattants attaque en premier.$
-Pokedude_Text_MyRattataFasterThanPidgey|On dirait que mon RATTATA était\nplus rapide que le ROUCOOL.$
+Pokedude_Text_MyRattataFasterThanPidgey|On dirait que mon RATTATA a\nété plus rapide que le ROUCOOL.$
 Pokedude_Text_BattlersTakeTurnsAttacking|Les combattants attaquent chacun\nleur tour pour réduire les PV.$
 Pokedude_Text_MyRattataWonGetsEXP|Mon RATTATA a réduit les PV de\nl'adversaire à zéro, il gagne !\pLes POKéMON qui ont participé au\ncombat gagnent des points d'EXP.\pQuand un POKéMON a assez de\npoints d'EXP, il monte de niveau.\pMonter de niveau rend ton\nPOKéMON plus fort qu'avant.$
 Pokedude_Text_UhOhRattataPoisoned|POKé DUDE : Oh oh…\nMon RATTATA est empoisonné…\pUn POKéMON empoisonné perd\ndes PV peu à peu.$
 Pokedude_Text_HealStatusRightAway|Si un POKéMON a un problème de\nstatut, soigne-le tout de suite.$
-Pokedude_Text_UsingItemTakesTurn|Utiliser un objet sur un POKéMON\ncoûte un tour, par contre.\pÀ l'adversaire de jouer !$
+Pokedude_Text_UsingItemTakesTurn|Mais utiliser un objet sur un\nPOKéMON compte comme un tour.\pC'est au tour de l'adversaire de\njouer.$
 Pokedude_Text_YayWeManagedToWin|Youpi !\nOn a réussi à gagner !$
 Pokedude_Text_WaterNotVeryEffectiveAgainstGrass|POKé DUDE : L'attaque BULLES\nest de type EAU.\pLa cible, MYSTHERBE, est un POKéMON\nde type PLANTE/POISON.\pL'attaque de type EAU est\nabsorbée par le type PLANTE…\pRésultat : l'attaque n'est pas\ntrès efficace et ne fait que\lla moitié des dégâts.$
-Pokedude_Text_GrassEffectiveAgainstWater|Oh oh, ça tourne mal !\pL'attaque ABSORBER que tu viens\nde voir est de type PLANTE.\pPTITARD est un POKéMON de\ntype EAU.\pAlors ABSORBER devient super\nefficace et double les dégâts.$
+Pokedude_Text_GrassEffectiveAgainstWater|Oh oh, c'est mauvais !\pL'attaque VOL-VIE que tu viens de\nvoir est du type PLANTE.\pPTITARD est du type EAU.\pVOL-VIE est donc super efficace,\net ses dégâts sont doublés.$
 Pokedude_Text_LetsTryShiftingMons|Ça ne sera pas facile de gagner\navec ce duel…\pEssayons de changer de POKéMON !$
-Pokedude_Text_ShiftingUsesTurn|Changer de POKéMON coûte\nun tour.\pÀ l'adversaire de jouer.$
+Pokedude_Text_ShiftingUsesTurn|Changer de POKéMON pendant un\ncombat coûte un tour.\pC'est à l'adversaire de jouer\nmaintenant.$
 Pokedude_Text_ButterfreeDoubleResistsGrass|PAPILUSION est un POKéMON de\ntype INSECTE/VOL.\pContre lui, une attaque de type\nPLANTE…\p…ne fait que la moitié des\ndégâts à un type INSECTE…\p…et ne fait aussi que la moitié\ndes dégâts à un type VOL.\pAinsi, PAPILUSION, INSECTE/VOL,\nne subit que le quart des\ldégâts habituels.$
-Pokedude_Text_ButterfreeGoodAgainstOddish|MYSTHERBE est un POKéMON de type\nPLANTE/POISON.\pUne attaque de type VOL ou PSY\nest super efficace contre lui.\pCes types d'attaque infligent\ndeux fois les dégâts habituels.\pAllez, c'est parti !$
+Pokedude_Text_ButterfreeGoodAgainstOddish|MYSTHERBE est un POKéMON de\ntype PLANTE/POISON.\pUne attaque de type VOL ou PSY\nest super efficace contre lui.\pUne attaque de ces types inflige\nle double de dégâts.\pAllez, on y va !$
 Pokedude_Text_YeahWeWon|Ouais !\nOn a gagné !$
 Pokedude_Text_WeakenMonBeforeCatching|POKé DUDE : Pour capturer un\nPOKéMON, ne lance pas tout de\lsuite une POKé BALL.\pD'abord, affaiblis-le en\nréduisant ses PV.$
 Pokedude_Text_BestIfTargetStatused|Voilà, ça devrait suffire.\pMais si possible, mieux vaut que\nla cible ait un problème de statut.\pPar exemple, il est plus facile\nde capturer un POKéMON endormi\lou paralysé.$
-Pokedude_Text_CantDoubleUpOnStatus|Ce POKéMON sera bien plus facile\nà capturer !\pAh oui. Si tu paralyses un\nPOKéMON, tu ne peux pas en plus\lle endormir.\pEn clair, on ne peut pas cumuler\nles problèmes de statut, ok ?$
-Pokedude_Text_LetMeThrowBall|Bien !\nJe lance ma POKé BALL !$
-Pokedude_Text_PickBestKindOfBall|Avant de lancer une POKé BALL,\nconsidère l'état et le type du\lPOKéMON, et choisis la BALL\lla plus adaptée.$
+Pokedude_Text_CantDoubleUpOnStatus|Avec ça, le POKéMON sera bien\nplus facile à attraper !\pMais si tu paralyses un POKéMON,\ntu ne peux pas en plus l'endormir.\pEn résumé, tu ne peux pas doubler\nles problèmes de statut, compris ?$
+Pokedude_Text_LetMeThrowBall|OK, laisse-moi lancer une\nPOKé BALL !$
+Pokedude_Text_PickBestKindOfBall|Avant de lancer une POKé BALL,\npense à la condition et au type du\lPOKéMON pour choisir la BALL\lla plus efficace.$

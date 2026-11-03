@@ -5,7 +5,7 @@ sText_PkmnMoveDisabledNoMore|{B_ATK_NAME_WITH_PREFIX} n'est\nplus entravé !
 sText_PkmnGotEncore|{B_DEF_NAME_WITH_PREFIX} subit\nun ENCORE !
 sText_PkmnEncoreEnded|L'ENCORE de {B_ATK_NAME_WITH_PREFIX}\nest terminé !
 sText_NoPPLeft|Il n'y a plus de PP\npour cette attaque !\p
-sText_ButNoPPLeft|Mais il n'y a plus de PP\npour cette attaque !
+sText_ButNoPPLeft|Mais il n'y a plus de PP pour\ncette capacité !
 sText_PkmnIgnoresAsleep|{B_ATK_NAME_WITH_PREFIX} ignore les\nordres en dormant !
 sText_PkmnIgnoredOrders|{B_ATK_NAME_WITH_PREFIX} ignore\nles ordres !
 sText_PkmnBeganToNap|{B_ATK_NAME_WITH_PREFIX} fait la sieste !
@@ -86,14 +86,14 @@ sText_PlayerUsedItem|{B_PLAYER_NAME} utilise\n{B_LAST_ITEM} !
 sText_OldManUsedItem|Le vieil homme utilise\n{B_LAST_ITEM} !
 sText_PokedudeUsedItem|Le POKé DUDE utilise\n{B_LAST_ITEM} !
 sText_Trainer1UsedItem|{B_TRAINER1_CLASS} {B_TRAINER1_NAME}\nutilise {B_LAST_ITEM} !
-sText_TrainerBlockedBall|Le DRESSEUR bloque la BALL !
+sText_TrainerBlockedBall|Le DRESSEUR détourne la BALL !
 sText_DontBeAThief|Ne sois pas un voleur !
-sText_ItDodgedBall|Il esquive la BALL lancée !\nCe POKéMON est incapturable !
+sText_ItDodgedBall|Il a évité la BALL !\nCe POKéMON ne se laisse pas faire !
 sText_YouMissedPkmn|Tu as raté le POKéMON !
-sText_PkmnBrokeFree|Oh non !\nLe POKéMON s'est libéré !
-sText_ItAppearedCaught|Zut !\nIl semblait capturé !
+sText_PkmnBrokeFree|Oh, non !\nLe POKéMON s'est libéré !
+sText_ItAppearedCaught|Raaah !\nÇa y était presque !
 sText_AarghAlmostHadIt|Argh !\nPresque !
-sText_ShootSoClose|Mince !\nC'était tout près !
+sText_ShootSoClose|Mince !\nÇa y était presque !
 sText_GotchaPkmnCaught|Ça y est !\n{B_OPPONENT_MON1_NAME} est capturé !{WAIT_SE}{PLAY_BGM MUS_CAUGHT}\p
 sText_GotchaPkmnCaught2|Ça y est !\n{B_OPPONENT_MON1_NAME} est capturé !{WAIT_SE}{PLAY_BGM MUS_CAUGHT}{PAUSE 127}
 sText_GiveNicknameCaptured|Donner un surnom au\n{B_OPPONENT_MON1_NAME} capturé ?
@@ -122,8 +122,8 @@ sText_ItemAllowsOnlyYMove|L'effet de {B_LAST_ITEM} ne permet\nque {B_CURRENT_MOV
 sText_PkmnHungOnWithX|{B_DEF_NAME_WITH_PREFIX} tient bon\ngrâce à {B_LAST_ITEM} !
 sText_PlayedFluteCatchyTune|{B_PLAYER_NAME} joue de {B_LAST_ITEM}.\pQuel air entraînant !
 sText_PlayedThe|{B_PLAYER_NAME} joue de\n{B_LAST_ITEM}.
-sText_PkmnHearingFluteAwoke|Les POKéMON qui entendent la FLÛTE\nse réveillent !
-sText_YouThrowABallNowRight|Tu lances une BALL maintenant, non ?\nJe… je ferai de mon mieux !
+sText_PkmnHearingFluteAwoke|La FLÛTE réveille\nle POKéMON !
+sText_YouThrowABallNowRight|Il faut lancer une BALL, non ?\nJe… je ferai de mon mieux !
 gText_PkmnIsEvolving|Quoi ?\n{STR_VAR_1} évolue !
 gText_CongratsPkmnEvolved|Félicitations ! Ton {STR_VAR_1}\névolue en {STR_VAR_2} !{WAIT_SE}\p
 gText_PkmnStoppedEvolving|Hein ? {STR_VAR_1}\nn'évolue plus !\p

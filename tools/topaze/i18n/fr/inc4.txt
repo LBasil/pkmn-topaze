@@ -1,103 +1,103 @@
 CableClub_Text_WelcomeWhichCableClubService|Bienvenue au CLUB CÂBLE\nPOKéMON.\pQuel service souhaites-tu\nutiliser ?$
-CableClub_Text_WhichService|Quel service souhaites-tu\nutiliser ?$
-CableClub_Text_TradeMonsUsingLinkCable|Échange des POKéMON avec un autre\njoueur via un câble GBA.$
+CableClub_Text_WhichService|Lequel de nos services\nsouhaiteriez-vous utiliser ?$
+CableClub_Text_TradeMonsUsingLinkCable|Echanger ses POKéMON avec un\ncâble GBA Game Link.$
 CableClub_Text_BattleUsingLinkCable|Tu peux affronter un autre\nDRESSEUR via un câble GBA.$
 CableClub_Text_NeedTwoMonsForDoubleBattle|Pour un COMBAT DOUBLE, il faut\nau moins deux POKéMON.$
 CableClub_Text_NeedTwoMonsToTrade|Pour échanger, il faut avoir au\nmoins deux POKéMON avec soi.$
-CableClub_Text_CantTradeEnigmaBerry|Un POKéMON portant la BAIE\n{STR_VAR_1} ne peut être échangé.$
+CableClub_Text_CantTradeEnigmaBerry|Un POKéMON tenant la BAIE\n{STR_VAR_1} ne peut pas être échangé.$
 CableClub_Text_PleaseWaitBCancel|Patiente.\n… … Touche B : Annuler$
 CableClub_Text_WhenAllPlayersReadyAConfirmBCancel|Quand tous les joueurs sont prêts…\nTouche A : Confirmer\lTouche B : Annuler$
 CableClub_Text_StartLinkWithXPlayersAConfirmBCancel|Lancer la liaison à {STR_VAR_1} joueurs.\nTouche A : Confirmer\lTouche B : Annuler$
 CableClub_Text_AwaitingLinkupBCancel|En attente de liaison…\n… … Touche B : Annuler$
 CableClub_Text_PleaseEnter|Entre, je te prie.$
 CableClub_Text_DirectYouToYourRoom|Je te conduis à ta salle.$
-CableClub_Text_SomeoneIsNotReadyToLink|Quelqu'un n'est pas prêt.\pRevenez quand tout le monde\nsera prêt.$
-CableClub_Text_LinkErrorPleaseReset|Désolé, erreur de liaison…\nRedémarre et réessaie.$
-CableClub_Text_PlayersMadeDifferentSelections|Les partenaires semblent avoir\nfait des choix différents.$
+CableClub_Text_SomeoneIsNotReadyToLink|Quelqu'un n'est pas prêt à se\nconnecter.\pVeuillez revenir une fois que tous\nles joueurs seront prêts.$
+CableClub_Text_LinkErrorPleaseReset|Erreur de connexion…\nVérifier les branchements et\lréinitialiser les consoles.$
+CableClub_Text_PlayersMadeDifferentSelections|Les joueurs connectés semblent\nne pas avoir fait le même choix.$
 CableClub_Text_PleaseVisitAgain|N'hésite pas à revenir.$
-CableClub_Text_IncorrectNumberOfParticipants|Le nombre de participants est\nincorrect.$
-CableClub_Text_CantSingleBattleWithXPlayers|Le COMBAT SIMPLE ne peut pas\nse jouer à {STR_VAR_1} joueurs.$
+CableClub_Text_IncorrectNumberOfParticipants|Le nombre de participants n'est pas\ncorrect.$
+CableClub_Text_CantSingleBattleWithXPlayers|Il est impossible de jouer avec {STR_VAR_1}\njoueurs en mode COMBAT SOLO.$
 CableClub_Text_CantDoubleBattleWithXPlayers|Le COMBAT DOUBLE ne peut pas\nse jouer à {STR_VAR_1} joueurs.$
-CableClub_Text_NeedFourPlayers|Il faut quatre joueurs pour ce\nmode de combat.$
-CableClub_Text_PleaseConfirmNumberAndRestart|Confirme le nombre de joueurs\net recommence.$
-Text_TerminateLinkIfYouLeaveRoom|La liaison sera coupée si tu\nquittes la salle. D'accord ?$
+CableClub_Text_NeedFourPlayers|Il faut être quatre joueurs pour\njouer à ce mode de combat.$
+CableClub_Text_PleaseConfirmNumberAndRestart|Veuillez confirmer le nombre de\njoueurs et recommencer.$
+Text_TerminateLinkIfYouLeaveRoom|La connexion prendra fin si vous\nquittez la pièce. Sortir ?$
 Text_TerminateLinkConfirmation|Coupure de la liaison…\nOn va te raccompagner hors de\lla salle. Patiente.$
-Text_TrainerTooBusyToNotice|Ce DRESSEUR est trop occupé\npour te remarquer…$
-Text_LookedAtPlayersTrainerCard|Génial ! Tu as vu la CARTE\nDRESSEUR de {STR_VAR_1} !$
-Text_LookedAtPlayersTrainerCardColored|Génial ! Tu as vu la CARTE\nDRESSEUR de {STR_VAR_1} !\pC'est une carte {STR_VAR_2} !$
-Text_TakeSeatStartBattle|Installe-toi et commence\nton combat.$
-Text_TakeSeatStartTrade|Installe-toi et commence\ntes échanges.$
+Text_TrainerTooBusyToNotice|Ce DRESSEUR est trop occupé\npour vous voir…$
+Text_LookedAtPlayersTrainerCard|Bravo ! Tu peux regarder la CARTE\nDRESSEUR de {STR_VAR_1} !$
+Text_LookedAtPlayersTrainerCardColored|Bravo ! Tu peux regarder la CARTE\nDRESSEUR de {STR_VAR_1} !\pC'est une carte en {STR_VAR_2} !$
+Text_TakeSeatStartBattle|Veuillez prendre place et\ncommencer à combattre.$
+Text_TakeSeatStartTrade|Veuillez prendre place et\ncommencer l'échange.$
 CableClub_Text_TrainerCardDataOverwritten|Les données de la CARTE DRESSEUR\nseront écrasées.$
 CableClub_Text_HopeToSeeYouAgain|J'espère te revoir !$
-CableClub_Text_NotSetUpForFarAwayRegion|Je suis vraiment désolée.\pNous ne pouvons pas encore faire\ndes échanges avec des DRESSEURS\lde régions lointaines…$
+CableClub_Text_NotSetUpForFarAwayRegion|Je suis terriblement désolée.\pNous ne sommes pas équipés pour\neffectuer des échanges avec des\lDRESSEURS d'une région si lointaine.$
 CableClub_Text_OtherTrainerNotReady|L'autre DRESSEUR n'est pas prêt.$
-CableClub_Text_YouHaveAMonThatCantBeTaken|Tu as au moins un POKéMON qui\nne peut pas être pris.$
-CableClub_Text_AdapterNotConnected|L'adaptateur sans fil n'est pas\nbien branché.$
-CableClub_Text_ParticipantsStepUpToCounter|Les participants sont priés de\nse présenter à l'accueil.$
-CableClub_Text_YouMayTradeHere|Tu peux échanger tes POKéMON ici\navec un autre DRESSEUR.$
-CableClub_Text_YouMayBattleHere|Tu peux te battre contre tes\namis ici.$
-CableClub_Text_CanMakeBerryPowder|De deux à cinq DRESSEURS peuvent\nfaire de la POUDRE DE BAIE ensemble.$
-CableClub_Text_CancelSelectedItem|Annule l'option du MENU choisie.$
-CableClub_Text_NeedBerryForBerryCrush|Pour utiliser BAIES BROYÉES,\nil faut au moins une BAIE.$
-CableClub_Text_NeedTwoMonsForUnionRoom|Pour entrer dans la SALLE UNION,\nil faut au moins deux POKéMON.$
-CableClub_Text_NoEnigmaBerryInUnionRoom|Aucun POKéMON portant la BAIE\n{STR_VAR_1} ne peut entrer en\lSALLE UNION.$
-CableClub_Text_UnionRoomAdapterNotConnected|Voici la SALLE UNION du CLUB\nSANS FIL POKéMON.\pMalheureusement, ton adaptateur\nsans fil n'est pas bien branché.\pReviens nous voir.$
+CableClub_Text_YouHaveAMonThatCantBeTaken|Au moins un POKéMON ne peut\npas être pris.$
+CableClub_Text_AdapterNotConnected|L'adaptateur sans fil GBA n'est pas\nconnecté correctement.$
+CableClub_Text_ParticipantsStepUpToCounter|Les participants doivent se\nprésenter à la réception.$
+CableClub_Text_YouMayTradeHere|Vous pouvez y faire des échanges\nde POKéMON avec un ami.$
+CableClub_Text_YouMayBattleHere|Vous pouvez affronter vos amis ici.$
+CableClub_Text_CanMakeBerryPowder|De deux à cinq DRESSEURS peuvent\nfaire de la POUDRE BAIE ensemble.$
+CableClub_Text_CancelSelectedItem|Annule le MENU sélectionné.$
+CableClub_Text_NeedBerryForBerryCrush|Pour utiliser le BROYEUR DE BAIES,\nil faut avoir au moins une BAIE.$
+CableClub_Text_NeedTwoMonsForUnionRoom|Pour entrer dans la SALLE UNION,\nil faut avoir au moins deux PKMN.$
+CableClub_Text_NoEnigmaBerryInUnionRoom|Un PKMN tenant la BAIE {STR_VAR_1} ne\npeut entrer dans la SALLE UNION.$
+CableClub_Text_UnionRoomAdapterNotConnected|C'est la SALLE UNION du\nCLUB SANS FIL POKéMON.\pVotre adaptateur sans fil GBA\nn'est pas connecté correctement.\pRevenez plus tard.$
 Text_PlayerIsPlayingRightNowGoForIt|On dirait que {STR_VAR_1} joue\nen ce moment.\lFonce !$
 Text_DescribeWhichGame|Je peux t'expliquer les règles\ndes jeux, si tu veux.\pQuel jeu dois-je décrire ?$
 Text_PokemonJumpInfo|“POKéMON SAUTE-CORDE”\pFais sauter ton POKéMON par-dessus\nla corde avec la touche A.\pSeuls les mini POKéMON d'environ\n70 cm ou moins peuvent participer.\pLes POKéMON qui ne font que\nnager, creuser ou voler ne sont\lpas doués pour sauter.\pIls ne peuvent donc pas participer.\pDe bonnes choses arrivent si\ntout le monde saute en rythme.$
 Text_DodrioBerryPickingInfo|“CUEILLETTE DODRIO”\pCommande les trois têtes de DODRIO\npour attraper les BAIES qui tombent.\pAppuie à droite, en haut ou à\ngauche sur la {PLUS} Croix pour bouger\lles têtes.\pPour jouer, il faut avoir\nun DODRIO.$
-Text_TalkToManToPlay|Si tu veux jouer, parle à\nl'homme à côté de moi.$
+Text_TalkToManToPlay|Si vous voulez commencer un jeu,\nallez voir l'homme à côté.$
 Text_WelcomeCanYouWait|Salut, bienvenue !\nTu peux jouer via le système de\lcommunication sans fil.\pPeux-tu patienter un peu ?$
 CableClub_Text_ComeAgain|Très bien, reviens quand tu veux !$
-Text_AdapterNotConnectedMinigame|L'adaptateur sans fil n'est pas\nbranché.\pReviens quand il le sera !$
+Text_AdapterNotConnectedMinigame|L'adaptateur sans fil GBA n'est\npas connecté.\pRevenez quand il sera branché !$
 Text_PlayWhichGame|Très bien, à quel jeu veux-tu\njouer ?$
-Text_EnterWhichPokemon|Quel POKéMON veux-tu inscrire ?$
+Text_EnterWhichPokemon|Quel POKéMON choisissez-vous ?$
 Text_AllGoodToGo|Parfait, tout est prêt.\nNe te laisse pas battre !$
-EventScript_ExplainPokemonJumpRequirements|On dirait que tu n'as aucun\nPOKéMON qui puisse participer…\pVeux-tu que je t'explique quels\nPOKéMON peuvent participer ?$
+EventScript_ExplainPokemonJumpRequirements|Aucun de vos POKéMON ne peut\nparticiper…\pVoulez-vous savoir quels POKéMON\npeuvent participer ?$
 Text_ShortJumpingPokemonAllowed|“POKéMON SAUTE-CORDE” est ouvert\naux POKéMON d'environ 70 cm\lou moins.\pTu ne peux pas inscrire ceux qui\nne savent pas sauter.\pTu sais, les POKéMON qui ne font\nque nager, creuser ou voler.\pC'est tout ce qu'il faut savoir.$
 Text_OnlyDodrioAllowed|“CUEILLETTE DODRIO”…\nLe nom dit tout.\pIl faut avoir un DODRIO pour\njouer à ce jeu.$
 CableClub_Text_WelcomeWhichDirectCornerRoom|Bienvenue au COIN DIRECT du CLUB\nSANS FIL POKéMON.\pTu peux interagir directement\navec tes amis ici.\pQuelle salle veux-tu rejoindre ?$
-CableClub_Text_TradePokemon|Veux-tu échanger des POKéMON ?$
+CableClub_Text_TradePokemon|Voulez-vous échanger un POKéMON ?$
 CableClub_Text_PlayWhichBattleMode|À quel mode de combat veux-tu\njouer ?$
-CableClub_Text_UseBerryCrush|Veux-tu utiliser le système\nBAIES BROYÉES ?$
+CableClub_Text_UseBerryCrush|Voulez-vous utiliser le\nBROYEUR DE BAIES ?$
 CableClub_Text_ExplainBattleModes|Il y a trois modes de combat.\pLe COMBAT SIMPLE oppose deux\nDRESSEURS avec un ou plusieurs\lPOKéMON chacun.\pChaque DRESSEUR n'a qu'un POKéMON\nau combat à la fois.\pLe COMBAT DOUBLE oppose deux\nDRESSEURS avec deux POKéMON ou\lplus chacun.\pChaque DRESSEUR envoie deux\nPOKéMON au combat à la fois.\pLe COMBAT MULTI oppose quatre\nDRESSEURS avec un ou plusieurs\lPOKéMON chacun.\pChaque DRESSEUR n'a qu'un POKéMON\nau combat à la fois.$
 CableClub_Text_ChooseGroupLeaderOfTwo|Décidez lequel de vous deux sera\nle CHEF.\pL'autre joueur devra choisir\n“REJOINDRE LE GROUPE”.$
 CableClub_Text_ChooseGroupLeaderOfFour|Décidez lequel de vous quatre\nsera le CHEF DE GROUPE.\pLes autres joueurs devront choisir\n“REJOINDRE LE GROUPE”.$
 CableClub_Text_ChooseGroupLeader|Décidez qui sera le CHEF DE\nGROUPE.\pLes autres joueurs devront choisir\n“REJOINDRE LE GROUPE”.$
 CableClub_Text_WelcomeUnionRoomEnter|Bienvenue dans la SALLE UNION du\nCLUB SANS FIL POKéMON.\pTu peux interagir directement\navec d'autres DRESSEURS, dont\ncertains que tu ne connais pas.\pVeux-tu entrer dans la SALLE ?$
 CableClub_Text_UnionRoomInfo|Les DRESSEURS de la SALLE UNION\nsont les joueurs autour de toi\lqui sont aussi entrés dans la SALLE.\pTu peux y faire plein de choses,\ncomme échanger des salutations.\pTu peux inscrire deux POKéMON\njusqu'au N. 30 pour un duel.\pTu peux discuter à deux\nà cinq personnes.\pOu inscrire un POKéMON à\nl'échange.\pVeux-tu entrer dans la SALLE ?$
-CableClub_Text_EnjoyUnionRoom|J'espère que tu passeras un bon\nmoment dans la SALLE UNION.$
+CableClub_Text_EnjoyUnionRoom|J'espère que vous aimerez votre\nvisite dans la SALLE UNION.$
 CableClub_Text_FirstTimeRightThisWay|Bonjour !\nJe m'appelle TEALA.\pC'est sûrement ta première\nfois ici.\pJe vais t'expliquer comment\nfonctionne la communication\lsans fil.\pD'abord, je dois te montrer cet\nétage de notre CENTRE POKéMON.\pPar ici, je te prie.$
 CableClub_Text_ExplainWirelessClubFirstTime|À l'étage, il y a deux salles.\pD'abord, la salle de gauche.\nC'est la SALLE UNION.\pTu peux te lier aux DRESSEURS\nautour de toi qui sont aussi\lentrés dans la SALLE UNION.\pAvec eux, tu peux discuter,\nte battre et échanger.\pEnsuite, la salle de droite est\nle COIN DIRECT.\pTu peux y échanger ou te battre\navec tes amis.\pParfois, tu ne trouveras pas tes\namis dans la SALLE UNION ou le\lCOIN DIRECT.\pDans ce cas, rapproche-toi\nde tes amis.\pSi l'adaptateur sans fil n'est pas\nbranché, tu peux quand même\lte lier par câble GBA.\pDans ce cas, va au COIN DIRECT.\pJ'espère que tu apprécieras\nla communication sans fil.$
 CableClub_Text_AskAboutLinking|Bonjour, {PLAYER} !\pC'est moi, TEALA, l'hôtesse du\n1er étage du CENTRE POKéMON.\pAs-tu une question sur\nla liaison ?$
 CableClub_Text_ExplainWirelessClub|Je t'explique le fonctionnement\ndu CLUB SANS FIL POKéMON.\pÀ cet étage, il y a deux salles.\pD'abord, la salle de gauche.\nC'est la SALLE UNION.\pTu peux te lier aux DRESSEURS\nautour de toi qui sont aussi\lentrés dans la SALLE UNION.\pAvec eux, tu peux discuter,\nte battre et échanger.\pEnsuite, la salle de droite est\nle COIN DIRECT.\pTu peux y échanger ou te battre\navec tes amis.\pParfois, tu ne trouveras pas tes\namis dans la SALLE UNION ou le\lCOIN DIRECT.\pDans ce cas, rapproche-toi\nde tes amis.\pSi l'adaptateur sans fil n'est pas\nbranché, tu peux quand même\lte lier par câble GBA.\pDans ce cas, va au COIN DIRECT.\pJ'espère que tu apprécieras\nla communication sans fil.$
-CableClub_Text_HopeYouEnjoyWirelessSystem|J'espère que tu apprécieras la\ncommunication sans fil.$
-Text_Bookshelf|Elle est pleine de livres sur\nles POKéMON.$
+CableClub_Text_HopeYouEnjoyWirelessSystem|J'espère que vous apprécierez\nle système sans fil.$
+Text_Bookshelf|Des bouquins sur les POKéMON !$
 Text_ATownMap|Une CARTE DE LA VILLE.$
-Text_PokeMartShelf|Waouh !\nPlein d'articles POKéMON !$
-Text_DishesPlatesNeatlyLinedUp|Les assiettes et les plats sont\nbien alignés.$
-Text_Kitchen|Ça sent bon !\nQuelqu'un a cuisiné ici.$
-Text_Dresser|Une belle commode.\nElle peut contenir beaucoup.$
-Text_Snacks|Il y a un tas de friandises ici.$
+Text_PokeMartShelf|Cool ! Plein de machins sur les\nPOKéMON !$
+Text_DishesPlatesNeatlyLinedUp|De la vaisselle est rangée\ndans ce placard.$
+Text_Kitchen|Quelqu'un a cuisiné ici,\nça sent vraiment bon.$
+Text_Dresser|C'est une belle commode.\nOn peut y ranger plein de trucs.$
+Text_Snacks|Il y a plusieurs sandwichs.$
 Text_PokemartSign|Tous vos besoins en objets !\nBOUTIQUE POKéMON$
 Text_PokecenterSign|Soignez vos POKéMON !\nCENTRE POKéMON$
 Text_Indigo_UltimateGoal|PLATEAU INDIGO\pLe but ultime des DRESSEURS !\nQG DE LA LIGUE POKéMON$
 Text_Indigo_HighestAuthority|PLATEAU INDIGO\pLa plus haute autorité POKéMON !\nQG DE LA LIGUE POKéMON$
-Text_Food|Elle doit regorger de bonnes\nchoses à manger.$
-Text_Blueprints|Un plan de quelque chose.\nIl est plein de schémas et de texte.$
-Text_Painting|Un joli tableau d'un POKéMON.\nIl a l'air de bien se porter.$
-Text_PowerPlantMachine|Que peut bien être cette machine ?\nMieux vaut ne pas y toucher !$
-Text_Telephone|C'est un téléphone.\nMieux vaut ne pas l'utiliser.$
-Text_Computer|Des mots compliqués et des\nchiffres qui n'ont aucun sens…$
-Text_AdvertisingPoster|Une affiche publicitaire pour\ntoutes sortes de produits.$
-Text_TastyFood|Oh, ça sent bon !\nÇa pourrait te donner faim !$
-Text_TrashBin|Dedans…\n……\pIl n'y a rien !$
-Text_Cup|Une tasse avec un logo POKéMON.$
-Text_PolishedWindow|La fenêtre est très bien\nastiquée.$
-Text_BeautifulSkyWindow|Dehors, par la fenêtre…\pLe ciel est magnifique.$
-Text_BlinkingLights|Des lumières de différentes\ncouleurs clignotent.$
-Text_NeatlyLinedUpTools|Toutes sortes d'outils sont bien\nalignés.$
-Text_ImpressiveMachine|Une machine de quelque sorte.\nElle est impressionnante.$
-Text_VideoGame|C'est le tout dernier jeu vidéo !\nÇa a l'air amusant !$
-Text_Burglary|Il y a des signes évidents de\ncambriolage ici…$
-Text_PlayerFacingTVScreen|Il y a un POKéMON à la télé !\nIl a l'air de s'amuser.$
+Text_Food|Il doit y avoir plein de bonnes\nchoses à manger.$
+Text_Blueprints|C'est une sorte de plan. Il y a\nquelque chose d'écrit dessus.$
+Text_Painting|Une belle image d'un POKéMON.\nIl semble heureux.$
+Text_PowerPlantMachine|A quoi ça peut bien servir ? Mieux\nvaut ne pas y toucher !$
+Text_Telephone|C'est un téléphone. Il vaut mieux\nne pas l'utiliser.$
+Text_Computer|C'est rempli de mots et de chiffres\nincompréhensibles.$
+Text_AdvertisingPoster|C'est une publicité pour de\nnombreux articles.$
+Text_TastyFood|Mmm, quelle bonne odeur.\nÇa donne vraiment faim !$
+Text_TrashBin|Alors ici…\n… …\pIl n'y a absolument rien !$
+Text_Cup|C'est une tasse avec une\nmarque de POKéMON.$
+Text_PolishedWindow|La fenêtre est super propre !$
+Text_BeautifulSkyWindow|A l'extérieur…\pIl fait un temps magnifique !$
+Text_BlinkingLights|Il y a plein de petites lampes\nqui clignotent.$
+Text_NeatlyLinedUpTools|Plusieurs outils sont rangés ici.$
+Text_ImpressiveMachine|C'est une sorte de machine.\nElle est vraiment impressionnante.$
+Text_VideoGame|Le dernier jeu vidéo qui vient de\nsortir. Ça a l'air génial.$
+Text_Burglary|Il y a des signes d'effraction ici…$
+Text_PlayerFacingTVScreen|Une émission avec des POKéMON.\nÇa a l'air cool !$

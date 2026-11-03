@@ -9,7 +9,7 @@ gText_PokeSum_Item_None|AUCUN
 gOtherText_Open|OUVRIR
 gOtherText_Deselect|ANNULER
 gText_YesNo|OUI\nNON
-gText_GoBackToThePreviousMenu|Retourner au\nmenu précédent.
+gText_GoBackToThePreviousMenu|Retourner au menu\nprécédent.
 gText_WhatWouldYouLikeToDo|Que voulez-vous faire ?
 gText_MenuPokedex|POKéDEX
 gText_MenuBag|SAC
@@ -133,13 +133,13 @@ gText_PkmnElevatedToLvVar2|{STR_VAR_1} passe au\nNv. {STR_VAR_2}.
 gText_PkmnBaseVar2StatIncreased|La stat. {STR_VAR_2} de base de\n{STR_VAR_1} augmente.{PAUSE_UNTIL_PRESS}
 gText_PkmnSnappedOutOfConfusion|{STR_VAR_1} n'est plus\nconfus.{PAUSE_UNTIL_PRESS}
 gText_PkmnGotOverInfatuation|{STR_VAR_1} n'est plus\namoureux.{PAUSE_UNTIL_PRESS}
-gText_OnlyPkmnForBattle|C'est ton seul\nPOKéMON apte au combat.
-gText_PkmnCantBeTradedNow|Ce POKéMON ne peut pas être\néchangé maintenant.
+gText_OnlyPkmnForBattle|C'est votre seul\nPOKéMON pour combattre.
+gText_PkmnCantBeTradedNow|Ce POKéMON ne peut\npas être échangé maintenant.
 gText_EggCantBeTradedNow|Un ŒUF ne peut pas être\néchangé maintenant.
-gText_OtherTrainersPkmnCantBeTraded|Le POKéMON de l'autre DRESSEUR\nne peut pas être échangé.
-gText_OtherTrainerCantAcceptPkmn|L'autre DRESSEUR ne peut pas\naccepter ce POKéMON.
-gText_CantTradeWithTrainer|Tu ne peux pas échanger avec\nce DRESSEUR maintenant.
-gText_NotPkmnOtherTrainerWants|Ce n'est pas le type de POKéMON\nque veut l'autre DRESSEUR.
+gText_OtherTrainersPkmnCantBeTraded|Le POKéMON du DRESSEUR\nne peut pas être échangé.
+gText_OtherTrainerCantAcceptPkmn|L'autre DRESSEUR ne peut pas\naccepter ce POKéMON maintenant.
+gText_CantTradeWithTrainer|Impossible d'échanger avec\nce DRESSEUR maintenant.
+gText_NotPkmnOtherTrainerWants|Le DRESSEUR ne cherche\npas ce type de POKéMON.
 gText_ThatIsntAnEgg|Ce n'est pas un ŒUF.
 gText_ChoosePokemon|Choisis un POKéMON.
 gText_MoveToWhere|Déplacer où ?

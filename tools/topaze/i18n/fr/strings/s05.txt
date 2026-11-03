@@ -31,15 +31,15 @@ gText_PokeSum_FatefulEncounterHatched|Nature {DYNAMIC 0x00}. Rencontre\nproviden
 gText_PokeSum_FatefulEncounterHatched_BoldGentleGrammar|Nature {DYNAMIC 0x00}. Rencontre\nprovidentielle (éclos : {DYNAMIC 0x02}\nau {LV_2} {DYNAMIC 0x01}).
 gText_PokeSum_ApparentlyFatefulEncounterHatched|Nature {DYNAMIC 0x00}. Apparemment une\nrencontre providentielle (éclos :\n{DYNAMIC 0x02}, {LV_2} {DYNAMIC 0x01}).
 gText_PokeSum_ApparentlyFatefulEncounterHatched_BoldGentleGrammar|Nature {DYNAMIC 0x00}. Apparemment une\nrencontre providentielle (éclos :\n{DYNAMIC 0x02}, {LV_2} {DYNAMIC 0x01}).
-gText_PokeSum_EggOrigin_DayCare|Un ŒUF POKéMON étrange trouvé\npar le couple de la GARDERIE.
-gText_PokeSum_EggOrigin_TravelingMan|Un ŒUF POKéMON étrange reçu\nd'un voyageur.
-gText_PokeSum_EggOrigin_NicePlace|Un ŒUF POKéMON étrangement rare\nobtenu dans un bel endroit.
-gText_PokeSum_EggOrigin_Spa|Un ŒUF POKéMON étrange reçu\nd'une vieille dame aux THERMES.
-gText_PokeSum_EggOrigin_Trade|Un ŒUF POKéMON étrange obtenu\nlors d'un échange.
-gText_PokeSum_EggHatch_LongTime|Cet ŒUF semble\ndevoir mettre\nlongtemps à éclore.
-gText_PokeSum_EggHatch_SomeTime|Que va-t-il\nen sortir ? Ça\nprendra du temps.
-gText_PokeSum_EggHatch_Soon|Il bouge de temps\nen temps. Il devrait\néclore bientôt.
-gText_PokeSum_EggHatch_AlmostReady|Il fait du bruit.\nIl est presque\nprêt à éclore !
+gText_PokeSum_EggOrigin_DayCare|Drôle d'ŒUF de POKéMON trouvé\npar le couple de la PENSION.
+gText_PokeSum_EggOrigin_TravelingMan|Drôle d'ŒUF de POKéMON donné\npar un voyageur.
+gText_PokeSum_EggOrigin_NicePlace|Drôle d'ŒUF de POKéMON\nobtenu dans un bel endroit.
+gText_PokeSum_EggOrigin_Spa|Drôle d'ŒUF de POKéMON\ndonné par une vieille dame.
+gText_PokeSum_EggOrigin_Trade|Drôle d'ŒUF de POKéMON\nobtenu lors d'un échange.
+gText_PokeSum_EggHatch_LongTime|Cet ŒUF va mettre\ndu temps à éclore !
+gText_PokeSum_EggHatch_SomeTime|Qu'y a-t-il dedans ?\nIl faut attendre\nencore un peu.
+gText_PokeSum_EggHatch_Soon|Je le sens bouger.\nIl est sur le point\nd'éclore !
+gText_PokeSum_EggHatch_AlmostReady|Cela fait du bruit\nà l'intérieur. Il\nva bientôt éclore !
 gText_PokeSum_ATrade|un échange
 gText_Somewhere|Quelque part
 gText_PokeSum_PageName_PokemonInfo|INFOS POKéMON

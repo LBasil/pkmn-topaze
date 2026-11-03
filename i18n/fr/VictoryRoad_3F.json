@@ -13,7 +13,7 @@
  },
  "Text_DoubleEdgeWhichMon": {
   "en": "Which POKéMON should I teach\\nDOUBLE-EDGE?",
-  "fr": "À quel POKéMON enseigner DAMOCLÈS ?"
+  "fr": "A quel POKéMON enseigner DAMOCLÈS ?"
  },
  "VictoryRoad_3F_Text_AlexaDefeat": {
   "en": "Oh!\\nSo strong!",
@@ -85,11 +85,11 @@
  },
  "VictoryRoad_3F_Text_TyraIntro": {
   "en": "TYRA: We're trying to become\\nchampions together.",
-  "fr": "TYRA : Nous essayons de devenir\\nchampions ensemble."
+  "fr": "TYRA : Nous allons devenir\\nchampions ensemble."
  },
  "VictoryRoad_3F_Text_TyraNotEnoughMons": {
   "en": "TYRA: You can't battle with us if\\nyou have only one POKéMON.",
-  "fr": "TYRA : Tu ne peux pas te battre\\ncontre nous si tu n'as qu'un seul\\lPOKéMON."
+  "fr": "TYRA : Tu ne peux pas te battre\\ncontre nous avec un seul POKéMON."
  },
  "VictoryRoad_3F_Text_TyraPostBattle": {
   "en": "TYRA: You've taught me that power\\ncan be infinite in shape and form.",

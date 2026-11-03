@@ -1,8 +1,8 @@
 gText_SpacePoints| points
 gString_PokemonFireRed_Staff|Pokémon Version Rouge Feu\nÉquipe
 gString_PokemonLeafGreen_Staff|Pokémon Version Vert Feuille\nÉquipe
-gText_VarietyOfEventsImportedWireless|Des événements variés seront importés\npar communication sans fil.
-gText_WonderCardsInPossession|Lis les CARTES MIRACLE que tu\npossèdes.
+gText_VarietyOfEventsImportedWireless|A variety of events will be imported\nover Wireless Communication.
+gText_WonderCardsInPossession|Read the WONDER CARDS in your\npossession.
 gText_ReadNewsThatArrived|Lis les INFOS arrivées.
 gText_ReturnToTitle|Retourner à l'écran titre.
 gText_DontHaveCardNewOneInput|Tu n'as pas de CARTE MIRACLE,\nune nouvelle CARTE sera enregistrée.

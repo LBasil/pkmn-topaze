@@ -109,22 +109,22 @@ Help_Text_Pokemon|POKéMON$
 Help_Text_IDNo2|No. ID$
 Help_Text_Money2|ARGENT$
 Help_Text_Badges2|BADGES$
-Help_Text_DefineHP|PV indique la vitalité d'un POKéMON.\nSi ses PV tombent à zéro, il est K.O.\let ne peut plus se battre.\lL'essentiel au combat est de réduire\lles PV adverses à zéro.\lSi tes POKéMON sont blessés, rends-\lleur des PV au CENTRE POKéMON ou avec\ldes objets.$
-Help_Text_DefineEXP|EXP. signifie “points d'expérience”.\nLes POKéMON en gagnent en participant\là des combats victorieux.\lQuand un POKéMON en accumule assez,\lil monte de niveau. La barre d'EXP.\lmontre les points accumulés.\lElle revient à zéro à chaque niveau.$
-Help_Text_DefineMoves|Un POKéMON peut apprendre jusqu'à\nquatre attaques. Il y en a de\ltoutes sortes : attaques et effets\lspéciaux. Les attaques apprenables\lvarient selon le POKéMON. Certaines\ls'apprennent avec des objets.$
-Help_Text_DefineAttack|ATTAQUE indique la puissance d'une\nattaque offensive. Plus la stat est\lélevée, plus l'attaque est puissante.\lElle s'applique aux types : NORMAL,\lPOISON, SOL, VOL, INSECTE, COMBAT,\lROCHE, SPECTRE et ACIER.$
-Help_Text_DefineDefense|DÉFENSE indique la résistance d'un\nPOKéMON aux attaques physiques.\lPlus la stat est élevée, moins il subit\lde dégâts d'une attaque physique.$
-Help_Text_DefineSpAtk|ATQ. SPÉ. (Attaque Spéciale) indique\nla puissance d'une attaque spéciale.\lPlus la stat est élevée, plus\ll'attaque spéciale est puissante.\lElle s'applique aux types : FEU, EAU,\lÉLECTRIK, PLANTE, GLACE, PSY, DRAGON\let TÉNÈBRES.$
-Help_Text_DefineSpDef|DÉF. SPÉ. (Défense Spéciale) indique\nla résistance d'un POKéMON aux\lattaques spéciales.\lPlus la stat est élevée, moins il subit\lde dégâts d'une attaque spéciale.$
-Help_Text_DefineSpeed|VITESSE indique l'agilité d'un POKéMON.\nSi elle dépasse celle de l'adversaire,\lle POKéMON peut agir avant lui.$
-Help_Text_DefineLevel|N. (Niveau) indique la croissance et la\nforce d'un POKéMON.\lEn général, en montant de niveau, ses\lstats comme PV, ATTAQUE et DÉFENSE\lmontent, le rendant plus fort.\lIl peut aussi apprendre une nouvelle\lattaque en montant de niveau.$
-Help_Text_DefineType|Les POKéMON et attaques sont classés\npar type. Chaque type a des avantages\let des désavantages face aux autres.\lPar exemple, comme à pierre-feuille-\lciseaux, le type EAU est fort contre\lle type FEU et faible contre le type\lPLANTE.$
-Help_Text_DefineOT|DO signifie “Dresseur d'Origine”,\nle premier DRESSEUR à avoir capturé\lle POKéMON choisi.\lMême échangé, le nom du DO ne change\lpas.$
-Help_Text_DefineItem|Tout POKéMON peut porter un objet.\nCertains objets sont utilisés\lautomatiquement par le POKéMON dans\lcertaines situations. Pour en faire\lporter un, choisis l'objet dans le\lSAC et “DONNE-LE” au POKéMON.$
-Help_Text_DefineAbility|Tout POKéMON possède un TALENT\nspécial. Il en existe de nombreux,\ldont certains servent au combat et\ld'autres ailleurs. Les talents varient\lselon l'espèce. Certaines espèces\lpeuvent en avoir plusieurs sortes.$
-Help_Text_DefineMoney|Chaque fois que tu bats un DRESSEUR,\ntu reçois une récompense.\lMets-la de côté pour faire des\lachats à la BOUTIQUE POKéMON !$
-Help_Text_DefineMoveType|Les attaques ont aussi un type.\nSi un POKéMON d'un certain type\lutilise une attaque du même type,\lsa puissance augmente. Si le type de\ll'attaque a l'avantage sur la cible,\lson efficacité augmente aussi.$
-Help_Text_DefineNature|Tout POKéMON a une personnalité,\nou “NATURE”. Elle semble influer\lsur la croissance du POKéMON\lquand il monte de niveau.$
-Help_Text_DefineIDNo|Le No. ID est un numéro spécial attribué\nà toi seul en tant que DRESSEUR.\lAvec le nom du DO, il sert à\lidentifier précisément le Dresseur\ld'Origine.\lIl ne change pas même si le POKéMON\lest échangé.$
-Help_Text_DefinePP|PP signifie “Points de Pouvoir”.\nIls indiquent combien de fois une\lattaque peut être utilisée au combat.\lComme les PV, les PP se rendent au\lCENTRE POKéMON ou avec certains\lobjets.$
-Help_Text_DefinePower|PUISSANCE indique la force d'une\nattaque. Plus ce nombre est élevé,\lplus les dégâts infligés à l'adversaire\lsont importants !$
+Help_Text_DefineHP|Les PV indiquent la vitalité des\nPOKéMON. Si les PV d'un POKéMON\ltombent à zéro, il est KO et ne peut\lplus se battre. Tu gagnes un combat\lquand le POKéMON ennemi n'a\lplus de PV. Restaure les PV de tes\lPOKéMON quand tu en as l'occasion.$
+Help_Text_DefineEXP|Les points EXP. correspondent aux\npoints d'expérience d'un POKéMON.\lAccumule les points EXP. en gagnant\ldes combats pour faire monter le\lniveau de tes POKéMON. La jauge\lEXP. se remet à zéro quand un\lPOKéMON change de niveau.$
+Help_Text_DefineMoves|Les POKéMON peuvent apprendre\njusqu'à quatre techniques, ou\lcapacités. Certaines servent\lseulement à attaquer et d'autres ont\ldes effets spéciaux. Les types de\lcapacités qui peuvent être apprises\ldépendent du POKéMON.$
+Help_Text_DefineAttack|ATTAQUE indique la puissance\noffensive d'une capacité. Plus cette\lstat est élevée, et plus le coup\lest  puissant. Cela s'applique aux\ltypes suivants : NORMAL, VOL,\lPOISON, SOL, INSECTE, COMBAT,\lROCHE, SPECTRE et ACIER.$
+Help_Text_DefineDefense|DÉFENSE indique la résistance d'un\nPOKéMON aux attaques physiques.\lPlus cette stat est élevée, et moins\lles attaques physiques infligent\lde dégâts.$
+Help_Text_DefineSpAtk|ATQ. SPÉ. (attaque spéciale) indique\nla puissance d'une capacité spéciale.\lPlus cette stat est élevée, et plus\ll'attaque spéciale est puissante.\lCela s'applique aux types suivants :\lFEU, EAU, ÉLECTRIK, PLANTE, GLACE,\lPSY, DRAGON et TÉNÈBRES.$
+Help_Text_DefineSpDef|DÉF. SPÉ. (défense spéciale) indique\nla résistance d'un POKéMON aux\lattaques spéciales. Plus cette stat\lest élevée, et moins les attaques\lspéciales infligent de dégâts.$
+Help_Text_DefineSpeed|VITESSE indique l'agilité d'un\nPOKéMON. Si cette stat est\lsupérieure à celle de ton adversaire,\lton POKéMON peut utiliser une\lcapacité en premier.$
+Help_Text_DefineLevel|N. (niveau) indique la croissance et\nla force d'un POKéMON. Quand le\lniveau monte, cela augmente PV,\lATTAQUE et DÉFENSE, rendant le\lPOKéMON plus fort. En changeant\lde niveau, un POKéMON peut\lapprendre de nouvelles capacités.$
+Help_Text_DefineType|Les POKéMON et capacités sont\nclassés par type. Chaque type a des\lavantages et des inconvénients contre\ld'autres types. Comme dans le jeu\lpierre, papier, ciseaux, le type EAU\lest fort contre le FEU et faible\lcontre le type PLANTE.$
+Help_Text_DefineOT|DO signifie DRESSEUR ORIGINAL, le\npremier DRESSEUR à avoir attrapé le\lPOKéMON sélectionné. Ce nom reste\lmême quand le POKéMON est\léchangé.$
+Help_Text_DefineItem|Chaque POKéMON peut porter un\nobjet. Certains objets sont utilisés\lautomatiquement selon la situation.\lPour faire tenir un objet à un\lPOKéMON, choisis-en un dans ton\lSAC et sélectionne DONNER pour\lqu'un POKéMON le porte.$
+Help_Text_DefineAbility|Tous les POKéMON ont une capacité\nspéciale. Il existe plusieurs types\lde capacités, toutes ne sont pas\lutilisées au combat. Les capacités\ldiffèrent d'une espèce à l'autre.\lCertaines espèces peuvent avoir\lplus d'un type de capacité.$
+Help_Text_DefineMoney|Tu reçois de l'argent chaque fois\nque tu remportes un combat contre\lun DRESSEUR. Economise pour\lpouvoir acheter des objets dans les\lBOUTIQUES POKéMON.$
+Help_Text_DefineMoveType|Les capacités sont classées par type.\nLa puissance d'une attaque est\lboostée si son type est le même que\lcelui du POKéMON. Si le type d'une\lcapacité prend l'avantage sur le type\lde la cible, son efficacité est aussi\lboostée.$
+Help_Text_DefineNature|Tous les POKéMON ont une\npersonnalité, ou NATURE. La nature\ld'un POKéMON affecte la façon dont\lcelui-ci monte de niveau.$
+Help_Text_DefineIDNo|Le NºID est un numéro d'identification\nattribué à chaque DRESSEUR. Il est\lutilisé avec le nom du DO pour\lidentifier le DRESSEUR ORIGINAL.\lLe NºID ne change pas même\lsi le POKéMON est échangé.$
+Help_Text_DefinePP|Les PP correspondent aux points de\npuissance. Ils indiquent le nombre de\lfois qu'une capacité peut être\lutilisée dans un combat. Comme les\lPV, les PP peuvent être restaurés\ldans un  CENTRE POKéMON.$
+Help_Text_DefinePower|POUVOIR indique la force d'une\nattaque. Plus ce chiffre est grand,\let plus les dégâts infligés à la\lcible sont importants.$

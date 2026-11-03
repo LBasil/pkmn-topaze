@@ -200,6 +200,6 @@ PokemonJournal_Text_SpecialFeatureLorelei|JOURNAL POKéMON\pDossier :\nLORELEI d
 PokemonJournal_Text_SpecialFeatureBruno|JOURNAL POKéMON\pDossier :\nBRUNO du CONSEIL 4 !\pBRUNO a apparemment rejoint le\nCONSEIL 4 par ambition\lde combattre les meilleurs\lDRESSEURS.$
 PokemonJournal_Text_SpecialFeatureAgatha|JOURNAL POKéMON\pDossier :\nAGATHA du CONSEIL 4 !\pDans sa jeunesse, AGATHA et le\nPROF. CHEN étaient rivaux et se\ldisputaient la suprématie.$
 PokemonJournal_Text_SpecialFeatureLance|JOURNAL POKéMON\pDossier :\nPETER du CONSEIL 4 !\pOn pense que le grand-père de\nPETER est l'ancien d'un célèbre\lclan de maîtres dragons.$
-PokemonJournal_Text_SpecialFeatureProfOak|JOURNAL POKéMON\pDossier : PROF. CHEN,\nle chercheur POKéMON !\pLe PROF. CHEN vivrait avec ses\npetits-enfants NINA\let {RIVAL}.$
+PokemonJournal_Text_SpecialFeatureProfOak|JOURNAL POKéMON\pAvec le PROF. CHEN,\nle chercheur POKéMON !\pIl s'occupe de sa petite-fille NINA\net de {RIVAL}.$
 PokemonJournal_Text_SpecialFeatureDaisyOak|Voici un JOURNAL POKéMON d'il y\na des années…\pJOURNAL POKéMON\nSpécial CONCOURS !\pLa Grande Championne du\nCONCOURS POKéMON du printemps est\lNINA CHEN de GRENALUX !$
 PokemonJournal_Text_SpecialFeatureMrFuji|JOURNAL POKéMON\pDossier :\nM. FUJI de la MAISON POKéMON !\pRédaction : le timide M. FUJI a\nrefusé nos demandes d'interview.\pC'est un homme bon, adoré et\nrespecté à SPINELLIA.$

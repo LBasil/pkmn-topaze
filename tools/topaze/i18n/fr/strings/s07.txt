@@ -17,7 +17,7 @@ gText_SoundMono|MONO
 gText_SoundStereo|STÉRÉO
 gText_CommErrorCheckConnections|Erreur de communication…\nVérifie toutes les connexions,\npuis éteins et rallume la console.
 gText_CommErrorEllipsis|Erreur de communication…
-gText_MoveCloserToLinkPartner|Rapproche-toi de ton partenaire.\nÉvite les obstacles entre vous.
+gText_MoveCloserToLinkPartner|Rapprochez-vous de vos partenaires.\nEvitez tout obstacle entre vous.
 gText_ABtnRegistrationCounter|Bouton A : Comptoir d'inscription
 gText_ABtnTitleScreen|Bouton A : Écran titre
 gText_NumPlayerLink|LINK {STR_VAR_1}J
@@ -61,7 +61,7 @@ gText_Trade_CommunicationStandby|{COLOR DARK_GRAY}{HIGHLIGHT WHITE}{SHADOW LIGHT
 gText_TradeHasBeenCanceled|{COLOR DARK_GRAY}{HIGHLIGHT WHITE}{SHADOW LIGHT_GRAY}L'échange a été annulé.
 gText_Trade_OnlyPkmnForBattle|{COLOR DARK_GRAY}{HIGHLIGHT WHITE}{SHADOW LIGHT_GRAY}C'est ton seul POKéMON\npour combattre.
 gText_WaitingForFriendToFinish|{COLOR DARK_GRAY}{HIGHLIGHT WHITE}{SHADOW LIGHT_GRAY}En attente de ton ami…
-gText_FriendWantsToTrade|Ton ami veut échanger\ndes POKéMON.
+gText_FriendWantsToTrade|Votre ami(e) veut\néchanger des POKéMON.
 gText_XWillBeSentToY|{STR_VAR_2} sera\nenvoyé à {STR_VAR_1}.
 gText_ByeByeVar1|Bye-bye, {STR_VAR_2} !
 gText_XSentOverY|{STR_VAR_1} a envoyé {STR_VAR_3}.
@@ -78,10 +78,10 @@ gText_Dynamic2Players|{DYNAMIC 0x02} joueurs
 gText_Dynamic3Players|{DYNAMIC 0x03} joueurs
 gText_BButtonCancel|{B_BUTTON}ANNULER
 gText_CommunicationStandby5|Communication en attente…
-gDaycareText_GetAlongVeryWell|Les deux semblent très bien\ns'entendre.
+gDaycareText_GetAlongVeryWell|Ils ont l'air de très bien\ns'entendre.
 gDaycareText_GetAlong|Les deux semblent s'entendre.
-gDaycareText_DontLikeOther|Les deux ne semblent pas trop\ns'apprécier.
-gDaycareText_PlayOther|Les deux préfèrent jouer avec\nd'autres POKéMON.
+gDaycareText_DontLikeOther|Ils ont l'air de ne pas s'aimer.
+gDaycareText_PlayOther|Ils préfèrent jouer avec d'autres\nPOKéMON plutôt qu'ensemble.
 gText_TeachWhichMoveToMon|Apprendre quelle attaque à\n{STR_VAR_1} ?
 gText_TeachMoveQues|Apprendre {STR_VAR_2} ?
 gText_MonLearnedMove|{STR_VAR_1} apprend\n{STR_VAR_2}.

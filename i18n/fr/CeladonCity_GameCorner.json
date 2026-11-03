@@ -85,7 +85,7 @@
  },
  "CeladonCity_GameCorner_Text_Received20CoinsFromNiceGuy": {
   "en": "{PLAYER} received 20 COINS\\nfrom the nice guy.",
-  "fr": "{PLAYER} a reçu 20 JETONS\\ndu gentil monsieur."
+  "fr": "{PLAYER} reçoit 20 JETONS !"
  },
  "CeladonCity_GameCorner_Text_RumoredTeamRocketRunsThisPlace": {
   "en": "Keep this quiet.\\pThis place was the old ROCKET\\ngang's front. They ran away...\\pNow it's rumored TEAM ONYBRIS\\nruns it.",

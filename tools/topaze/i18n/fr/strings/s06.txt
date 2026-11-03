@@ -2,16 +2,16 @@ gText_ButtonTypeHelp|AIDE
 gText_FrameType|TYPE
 gText_PickSwitchCancel|{DPAD_UPDOWN}CHOIX {DPAD_LEFTRIGHT}CHANGER {A_BUTTON}{B_BUTTON}ANNULER
 gText_SavingDontTurnOffThePower2|SAUVEGARDE…\nNE PAS ÉTEINDRE LA CONSOLE.
-gStartMenuDesc_Pokedex|Appareil qui enregistre les secrets\ndes POKéMON rencontrés ou capturés.
-gStartMenuDesc_Pokemon|Vérifie et organise les POKéMON\nqui voyagent avec toi.
-gStartMenuDesc_Bag|Poches pour ranger les objets\nachetés, reçus ou trouvés.
-gStartMenuDesc_Player|Vérifie ton argent et d'autres\ndonnées de jeu.
-gStartMenuDesc_Save|Sauvegarde ta progression pour\nfaire une pause.
+gStartMenuDesc_Pokedex|Un appareil enregistrant les infos sur\nles POKéMON lors d'une rencontre.
+gStartMenuDesc_Pokemon|Examiner et organiser les POKéMON\nde votre équipe.
+gStartMenuDesc_Bag|Avec des poches pour ranger les\nobjets collectés.
+gStartMenuDesc_Player|Vérifier vos comptes et d'autres\ndonnées.
+gStartMenuDesc_Save|Sauvegarder toute votre partie\npour faire une pause.
 gStartMenuDesc_Option|Règle divers paramètres : vitesse\ndu texte, règles du jeu, etc.
 gStartMenuDesc_Exit|Ferme cette fenêtre MENU.
 gStartMenuDesc_Journal|Tes objectifs, triés : ce qui est\nfait et ce qu'il reste à faire.
 gStartMenuDesc_Radar|Cherche dans les hautes herbes un\nPOKéMON que tu as déjà vu.
-gStartMenuDesc_Retire|Quitte la SAFARI ZONE et retourne\nau comptoir d'inscription.
+gStartMenuDesc_Retire|Quitter le JEU SAFARI et retourner\nà l'accueil.
 gText_WasUsedOn| a été utilisé sur\n
 gText_LevelRoseTo| passe au niveau\n
 gText_LevelUp_MaxHP|{FONT_SMALL}PV{FONT_NORMAL} MAX.
@@ -102,12 +102,12 @@ gText_WantToPlayAgain|Rejouer ?
 gText_SomeoneDroppedOut|Quelqu'un a abandonné.\nLa connexion est annulée.
 gText_CommunicationStandby3|Communication en attente…
 gText_BerryCrush_AreYouReady|Prêt pour BAIES EN FOLIE ?\nChoisis une BAIE à utiliser.\p
-gText_BerryCrush_WaitForOthersToChooseBerry|Patiente pendant que chacun\nchoisit une BAIE.
+gText_BerryCrush_WaitForOthersToChooseBerry|Patientez le temps que tous les\nparticipants aient choisi une BAIE.
 gText_BerryCrush_GainedXUnitsOfPowder|{PAUSE_MUSIC}{PLAY_BGM MUS_LEVEL_UP}Tu obtiens {STR_VAR_1} unités de\nPOUDRE BAIE bien soyeuse.{RESUME_MUSIC}\pTon total de POUDRE BAIE\nest de {STR_VAR_2}.\p
-gText_BerryCrush_RecordingGameResults|Enregistrement des résultats\ndans la sauvegarde.\nPatiente un instant.
-gText_BerryCrush_WantToPlayAgain|Rejouer à BAIES EN FOLIE ?
-gText_BerryCrush_NoBerries|Tu n'as pas de BAIES.\nLa partie est annulée.
-gText_BerryCrush_MemberDroppedOut|Un membre a abandonné.\nLa partie est annulée.
+gText_BerryCrush_RecordingGameResults|Sauvegarde de vos résultas en\ncours. Veuillez patienter.
+gText_BerryCrush_WantToPlayAgain|Voulez-vous encore utiliser le\nBROYEUR DE BAIES ?
+gText_BerryCrush_NoBerries|Vous n'avez pas de BAIES.\nLa partie est annulée.
+gText_BerryCrush_MemberDroppedOut|Un participant est parti. Le jeu\nva se terminer.
 gText_BerryCrush_TimeUp|Temps écoulé.\pOn n'a pas pu faire de bonne\nPOUDRE BAIE…\p
 gText_BerryCrush_CommunicationStandby|Communication en attente…
 gText_SpaceTimes2| fois

@@ -9,7 +9,7 @@
  },
  "SevenIsland_House_Room1_Text_DontHoldAnythingBack": {
   "en": "All right.\\nDon't hold anything back!",
-  "fr": "D'accord.\\nNe retiens rien !"
+  "fr": "Parfait. Bon courage."
  },
  "SevenIsland_House_Room1_Text_DrawWasIt": {
   "en": "A draw, was it?\\pHowever, let me say that it was\\na worthy spectacle.\\pI'd say it was a wonderful battle\\nwith a real sense of depth!",
@@ -53,6 +53,6 @@
  },
  "SevenIsland_House_Room2_Text_MatchEndedUpDraw": {
   "en": "The match ended up a draw.",
-  "fr": "Le match s'est terminé par un nul."
+  "fr": "Il y a égalité."
  }
 }

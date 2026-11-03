@@ -9,7 +9,7 @@ sText_PkmnFellIntoNightmare|{B_DEF_NAME_WITH_PREFIX} sombre\ndans un CAUCHEMAR !
 sText_PkmnLockedInNightmare|{B_ATK_NAME_WITH_PREFIX} est pris\ndans un CAUCHEMAR !
 sText_PkmnLaidCurse|{B_ATK_NAME_WITH_PREFIX} sacrifie des PV et\nmaudit {B_DEF_NAME_WITH_PREFIX} !
 sText_PkmnAfflictedByCurse|{B_ATK_NAME_WITH_PREFIX} est frappé\npar la MALÉDICTION !
-sText_SpikesScattered|Des PICOTS sont éparpillés\ncôté adverse !
+sText_SpikesScattered|Des PICOTS s'éparpillent autour\nde l'équipe de l'ennemi !
 sText_PkmnHurtBySpikes|{B_SCR_ACTIVE_NAME_WITH_PREFIX} souffre\ndes PICOTS !
 sText_PkmnIdentified|{B_ATK_NAME_WITH_PREFIX} identifie\n{B_DEF_NAME_WITH_PREFIX} !
 sText_PkmnPerishCountFell|Le compte à rebours de\n{B_ATK_NAME_WITH_PREFIX} passe à {B_BUFF1} !
@@ -57,7 +57,7 @@ sText_PkmnSnatchedMove|{B_DEF_NAME_WITH_PREFIX} VOLE l'attaque\nde {B_SCR_ACTIVE
 sText_ElectricityWeakened|La puissance de l'électricité\nest affaiblie !
 sText_FireWeakened|La puissance du feu\nest affaiblie !
 sText_XFoundOneY|{B_ATK_NAME_WITH_PREFIX} trouve\n{B_LAST_ITEM} !
-sText_SoothingAroma|Un doux parfum se répand\nalentour !
+sText_SoothingAroma|Une odeur apaisante\nflotte dans les airs !
 sText_ItemsCantBeUsedNow|Impossible d'utiliser des objets.{PAUSE 64}
 sText_ForXCommaYZ|Pour {B_SCR_ACTIVE_NAME_WITH_PREFIX},\n{B_LAST_ITEM} {B_BUFF1}
 sText_PkmnUsedXToGetPumped|{B_SCR_ACTIVE_NAME_WITH_PREFIX} utilise\n{B_LAST_ITEM} pour se motiver !
@@ -117,7 +117,7 @@ sText_TopazeProtean|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nc
 sText_TopazeMoody0|CAPRICE de {B_SCR_ACTIVE_NAME_WITH_PREFIX} :\n{B_BUFF1} monte, {B_BUFF2} baisse !
 sText_TopazeMoody1|CAPRICE de {B_SCR_ACTIVE_NAME_WITH_PREFIX} monte\nbeaucoup son {B_BUFF1} !
 sText_TopazeBadDreams|{B_SCR_ACTIVE_NAME_WITH_PREFIX} est tourmenté\npar de mauvais rêves !
-sText_ItSuckedLiquidOoze|Il a aspiré la\nBOUE LIQUIDE !
+sText_ItSuckedLiquidOoze|Il aspire le\nSUINTEMENT !
 sText_PkmnTransformed|{B_SCR_ACTIVE_NAME_WITH_PREFIX} se transforme !
 sText_PkmnsXTookAttack|{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\nabsorbe l'attaque !
 gText_PkmnsXPreventsSwitching|{B_LAST_ABILITY} de {B_BUFF1}\nempêche le changement !\p
@@ -163,7 +163,7 @@ sText_NoRunningFromTrainers|Non ! On ne fuit pas\nun combat de DRESSEUR !\p
 sText_CantEscape|Impossible de fuir !\p
 sText_ButNothingHappened|Mais rien ne se passe !
 sText_ButItFailed|Mais ça échoue !
-sText_ItHurtConfusion|Dans sa confusion, il\nse blesse tout seul !
+sText_ItHurtConfusion|Sa folie lui inflige\ndes dégâts !
 sText_MirrorMoveFailed|MIROIR a échoué !
 sText_StartedToRain|Il se met à pleuvoir !
 sText_DownpourStarted|Une averse commence !
@@ -179,12 +179,12 @@ sText_SunlightFaded|Le soleil a faibli.
 sText_StartedHail|Il se met à grêler !
 sText_HailContinues|La grêle continue de tomber.
 sText_HailStopped|La grêle s'est arrêtée.
-sText_FailedToSpitUp|Mais il n'a rien à\nCRACHER !
-sText_FailedToSwallow|Mais il n'a rien à\nAVALER !
-sText_WindBecameHeatWave|Le vent se change en\nVAGUE DE CHALEUR !
-sText_StatChangesGone|Tous les changements de\nstats sont annulés !
+sText_FailedToSpitUp|Mais la RELACHE a échoué !
+sText_FailedToSwallow|Mais AVALE a échoué !
+sText_WindBecameHeatWave|Le vent se transforme\nen CANICULE !
+sText_StatChangesGone|Les changements de stats\nont tous été annulés !
 sText_CoinsScattered|Des pièces volent partout !
-sText_TooWeakForSubstitute|Il est trop faible pour\ncréer un clone !
-sText_SharedPain|Les combattants partagent\nleur douleur !
+sText_TooWeakForSubstitute|Trop faible pour créer\nun CLONE !
+sText_SharedPain|Les adversaires se partagent\nles dégâts !
 sText_BellChimed|Une cloche a sonné !
-sText_FaintInThree|Tous les POKéMON touchés\nseront K.O. dans trois tours !
+sText_FaintInThree|Les POKéMON au combat seront KO\ndans 3 tours !

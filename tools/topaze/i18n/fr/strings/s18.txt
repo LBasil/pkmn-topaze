@@ -20,7 +20,7 @@ gText_QuestLog_MultiBattleWithPeopleResultedInOutcome|{DYNAMIC 0x00} et {DYNAMIC
 gText_QuestLog_Win|une victoire
 gText_QuestLog_Loss|une défaite
 gText_QuestLog_MingledInUnionRoom|S'est mêlé aux autres DRESSEURS\ndans la SALLE UNION.
-gText_QuestLog_DepartedPlaceInTownForNextDestination|A quitté {STR_VAR_2}\nà {STR_VAR_1} pour la prochaine\ndestination.
+gText_QuestLog_DepartedPlaceInTownForNextDestination|Quitte {STR_VAR_2}\n({STR_VAR_1}) vers\nune nouvelle destination.
 gText_QuestLog_SwitchedMonsBetweenBoxes|Après réflexion, a échangé\n{DYNAMIC 0x01} de {DYNAMIC 0x00} avec\n{DYNAMIC 0x03} de {DYNAMIC 0x02}.
 gText_QuestLog_MovedMonToNewBox|Après mûre réflexion, a déplacé\n{DYNAMIC 0x01} de la BOÎTE “{DYNAMIC 0x00}” vers\nla BOÎTE “{DYNAMIC 0x02}”.
 gText_QuestLog_SwitchedMonsWithinBox|A permuté {DYNAMIC 0x01} et\n{DYNAMIC 0x02} dans {DYNAMIC 0x00}.
@@ -43,8 +43,8 @@ gText_QuestLog_BoughtItemsIncludingItem|Est allé à la BOUTIQUE POKéMON de\n{D
 gText_QuestLog_SoldNumOfItem|{DYNAMIC 0x00} est allé à la BOUTIQUE POKéMON de\n{DYNAMIC 0x01} et a vendu {DYNAMIC 0x03}\nde l'objet {DYNAMIC 0x02}.
 gText_QuestLog_SoldItemsIncludingItem|A vendu des objets dont {DYNAMIC 0x01} à\nla BOUTIQUE POKéMON de {DYNAMIC 0x00},\npour ¥{DYNAMIC 0x02}.
 gText_QuestLog_JustOne|un seul
-gText_QuestLog_UsedSoftboiled|{STR_VAR_1} a partagé ses PV avec\nla capacité E-COQUE.
-gText_QuestLog_UsedMilkDrink|{STR_VAR_1} a partagé ses PV avec\nla capacité LAIT À BOIRE.
+gText_QuestLog_UsedSoftboiled|{STR_VAR_1} partage ses PV avec\nla capacité E-COQUE.
+gText_QuestLog_UsedMilkDrink|{STR_VAR_1} partage ses PV avec\nla capacité LAIT A BOIRE.
 gText_QuestLog_MonLearnedMoveFromHM|{STR_VAR_1} a appris sans risque l'attaque\n{STR_VAR_2} grâce à une CS.
 gText_QuestLog_MonReplacedMoveWithHM|{STR_VAR_1} a appris sans risque l'attaque\n{STR_VAR_2} grâce à une CS et a\noublié l'attaque {STR_VAR_3}.
 gText_QuestLog_DefeatedWildMon|{DYNAMIC 0x05} a réussi à vaincre {DYNAMIC 0x01}\nsauvage à {DYNAMIC 0x00}.
@@ -57,21 +57,21 @@ gText_QuestLog_DefeatedWildMonsAndCaughtWildMon|{DYNAMIC 0x05} a vaincu {DYNAMIC
 gText_QuestLog_DefeatedWildMonsAndCaughtWildMons|A vaincu {DYNAMIC 0x02} POKéMON dont\n{DYNAMIC 0x01} et capturé {DYNAMIC 0x04} POKéMON\ndont {DYNAMIC 0x03} à {DYNAMIC 0x00}.
 gText_QuestLog_GaveMonHeldItem|A fait tenir l'objet\n{STR_VAR_2} à {STR_VAR_1}.
 gText_QuestLog_GaveMonHeldItem2|{PLAYER} a fait tenir l'objet\n{STR_VAR_2} à {STR_VAR_1}.
-gText_QuestLog_UsedCut|{STR_VAR_1} a utilisé la CS\nCOUPE ici.
-gText_QuestLog_UsedFly|{STR_VAR_1} a utilisé la CS\nVOL et s'est envolé vers {STR_VAR_2}.
-gText_QuestLog_UsedSurf|{STR_VAR_1} a utilisé la CS\nSURF et chevauché les vagues.
-gText_QuestLog_UsedStrength|{STR_VAR_1} a utilisé la CS\nFORCE ici.
-gText_QuestLog_UsedFlash|{STR_VAR_1} a utilisé la CS\nFLASH et éclairé une grotte\nplongée dans le noir.
-gText_QuestLog_UsedRockSmash|{STR_VAR_1} a utilisé la CS\nÉCLATE-ROC ici.
-gText_QuestLog_UsedWaterfall|{STR_VAR_1} a utilisé la CS\nCASCADE pour gravir un torrent furieux.
-gText_QuestLog_UsedDigInLocation|{STR_VAR_1} a utilisé TUNNEL pour\nfuir {STR_VAR_2}.
-gText_QuestLog_UsedSweetScent|{STR_VAR_1} a utilisé DOUX PARFUM pour attirer\ndes POKéMON sauvages.
-gText_QuestLog_UsedTeleportToLocation|{STR_VAR_1} a utilisé TÉLÉPORT, menant\nl'équipe à {STR_VAR_3} de {STR_VAR_2}.
-gText_QuestLog_LeftTownsLocationForNextDestination|{PLAYER} a quitté {STR_VAR_2} de\n{STR_VAR_1} pour la prochaine\ndestination.
-gText_QuestLog_PlayedGamesAtGameCorner|A beaucoup joué à la SALLE DE JEUX\nROCKET de {STR_VAR_1}.
-gText_QuestLog_RestedAtHome|{PLAYER} s'est bien reposé à la maison.
-gText_QuestLog_LeftOaksLab|{PLAYER} a quitté le LABO POKéMON\ndu PROF. CHEN.
-gText_QuestLog_GymWasFullOfToughTrainers|L'ARÈNE de {STR_VAR_1} était pleine de\nDRESSEURS coriaces…\nIl fallait se préparer.
+gText_QuestLog_UsedCut|{STR_VAR_1} utilise la CS\nCOUPE ici.
+gText_QuestLog_UsedFly|{STR_VAR_1} utilise la CS VOL\net part vers une nouvelle\ndestination ({STR_VAR_2}).
+gText_QuestLog_UsedSurf|{STR_VAR_1} utilise la CS SURF\npour prendre la vague.
+gText_QuestLog_UsedStrength|{STR_VAR_1} utilise la CS\nFORCE ici.
+gText_QuestLog_UsedFlash|{STR_VAR_1} utilise la CS FLASH\npour illuminer la grotte.
+gText_QuestLog_UsedRockSmash|{STR_VAR_1} utilise la CS\nÉCLATE-ROC ici.
+gText_QuestLog_UsedWaterfall|{STR_VAR_1} utilise la CS CASCADE\npour franchir la chute d'eau.
+gText_QuestLog_UsedDigInLocation|{STR_VAR_1} utilise la CS TUNNEL\npour quitter {STR_VAR_2}.
+gText_QuestLog_UsedSweetScent|{STR_VAR_1} utilise DOUX PARFUM\npour attirer les POKéMON sauvages.
+gText_QuestLog_UsedTeleportToLocation|{STR_VAR_1} utilise TÉLÉPORT pour aller\nvers {STR_VAR_3}\n({STR_VAR_2}).
+gText_QuestLog_LeftTownsLocationForNextDestination|{PLAYER} quitte\n{STR_VAR_2}\n({STR_VAR_1}).
+gText_QuestLog_PlayedGamesAtGameCorner|Joue à de nombreux jeux au\nCASINO ROCKET à {STR_VAR_1}.
+gText_QuestLog_RestedAtHome|{PLAYER} se repose tranquillement à\nla maison.
+gText_QuestLog_LeftOaksLab|{PLAYER} quitte le LABO POKéMON\ndu PROF. CHEN.
+gText_QuestLog_GymWasFullOfToughTrainers|L'ARÈNE de {STR_VAR_1} est pleine\nde bons DRESSEURS…\nIl faut s'entraîner plus.
 gText_QuestLog_DepartedGym|A quitté l'ARÈNE de {STR_VAR_1}.
 gText_QuestLog_HadGreatTimeInSafariZone|{PLAYER} s'est bien amusé avec les\nPOKéMON dans la ZONE SAFARI.
 gText_QuestLog_ManagedToGetOutOfLocation|A réussi à sortir de {STR_VAR_2}\naprès avoir erré.
@@ -82,8 +82,8 @@ gText_QuestLog_Coolly|avec classe
 gText_QuestLog_Barely|de justesse
 gText_QuestLog_UsedEscapeRope|{PLAYER} a utilisé une CORDE SORTIE\npour quitter {STR_VAR_2}.
 gText_QuestLog_Draw|un match nul
-gText_QuestLog_DepartedTheLocationForNextDestination|A quitté {STR_VAR_2}\npour la prochaine destination.
-gText_QuestLog_DepartedFromLocationToNextDestination|{PLAYER} a quitté\n{STR_VAR_2} et s'est mis en route\nvers la prochaine destination.
+gText_QuestLog_DepartedTheLocationForNextDestination|Quitte {STR_VAR_2}\npour se rendre\nà la destination suivante.
+gText_QuestLog_DepartedFromLocationToNextDestination|{PLAYER} quitte\n{STR_VAR_2} et se\nrend vers la prochaine destination.
 gText_QuestLog_ObtainedItemInLocation|Ici, à {STR_VAR_1}, {PLAYER}\na obtenu l'objet {STR_VAR_2}.
 gText_QuestLog_ArrivedInLocation|Arrivé à {STR_VAR_1}.
 gText_QuestLog_SavedGameAtLocation|Et {PLAYER} a sauvegardé la partie\nà cet endroit : {STR_VAR_1}.

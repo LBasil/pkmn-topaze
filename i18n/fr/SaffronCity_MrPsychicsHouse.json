@@ -1,7 +1,7 @@
 {
  "SaffronCity_MrPsychicsHouse_Text_ExplainTM29": {
   "en": "You already know, don't you?\\nTM29 is PSYCHIC.\\pIt's an attack that may also lower\\nthe target's special stats.",
-  "fr": "Tu le sais déjà, n'est-ce pas ? La\\nCT29 est PSYKO.\\pC'est une attaque qui peut aussi\\nbaisser les stats spéciales de la\\lcible."
+  "fr": "CT29 : PSYKO !\\pCette attaque diminue le SPECIAL de\\nla cible."
  },
  "SaffronCity_MrPsychicsHouse_Text_ReceivedTM29FromMrPsychic": {
   "en": "{PLAYER} received TM29\\nfrom MR. PSYCHIC.",

@@ -1,7 +1,7 @@
 {
  "FourIsland_PokemonCenter_1F_Text_DayCarePeopleFoundEggBefore": {
   "en": "Oh? A POKéMON EGG?\\n…I have no idea.\\p…Oh, wait. The DAY-CARE people\\nin town were saying something.\\pThey said that they'd found EGGS\\nbefore on their property.",
-  "fr": "Oh ? Un OEUF POKéMON ? … Aucune\\nidée.\\pOh, attends, il me semble que les\\ngens de la PENSION en parlaient.\\pIls disaient en avoir déjà eu chez\\neux."
+  "fr": "Oh ? Un ŒUF POKéMON ? … Aucune\\nidée.\\pOh, attends, il me semble que les\\ngens de la PENSION en parlaient.\\pIls disaient en avoir déjà eu chez\\neux."
  },
  "FourIsland_PokemonCenter_1F_Text_NewPokemonJournalHasntArrived": {
   "en": "What's this?\\pThe new POKéMON JOURNAL hasn't\\narrived on this island?",
@@ -25,6 +25,6 @@
  },
  "Text_BodySlamWhichMon": {
   "en": "Which POKéMON wants to learn how\\nto BODY SLAM?",
-  "fr": "À quel POKéMON vais-je enseigner\\nPLAQUAGE ?"
+  "fr": "A quel POKéMON vais-je enseigner\\nPLAQUAGE ?"
  }
 }

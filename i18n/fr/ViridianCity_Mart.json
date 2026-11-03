@@ -5,7 +5,7 @@
  },
  "ViridianCity_Mart_Text_ReceivedOaksParcelFromClerk": {
   "en": "{PLAYER} received OAK'S PARCEL\\nfrom the POKéMON MART clerk.",
-  "fr": "{PLAYER} a reçu le COLIS DE CHEN\\ndu vendeur de la BOUTIQUE POKéMON."
+  "fr": "{PLAYER} obtient le COLIS DE CHEN !"
  },
  "ViridianCity_Mart_Text_SayHiToOakForMe": {
   "en": "Okay, thanks! Please say hi to\\nPROF. OAK for me, too.",

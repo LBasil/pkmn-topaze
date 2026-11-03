@@ -38,36 +38,36 @@ gText_UR_AwaitingPlayersResponseAboutTrade|En attente de la réponse de {STR_VAR
 sText_Communicating|Communication{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.
 sText_CommunicatingWithPlayer|Communication avec {STR_VAR_1}{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.
 sText_PleaseWaitAWhile|Patiente un moment{PAUSE 15}.{PAUSE 15}.{PAUSE 15}.
-sText_HiDoSomethingMale|Salut ! Tu voulais faire\nquelque chose ?
-sText_HiDoSomethingFemale|Bonjour !\nTu voudrais faire quelque chose ?
-sText_HiDoSomethingAgainMale|{STR_VAR_1} : Salut, on se revoit !\nTu veux faire quoi cette fois ?
-sText_HiDoSomethingAgainFemale|{STR_VAR_1} : Oh ! {PLAYER}, bonjour !\nTu voudrais faire quelque chose ?
+sText_HiDoSomethingMale|Salut ! Vous vouliez quelque chose ?
+sText_HiDoSomethingFemale|Bonjour jeune fille.\nJe peux vous aider ?
+sText_HiDoSomethingAgainMale|{STR_VAR_1} : Content de vous revoir !\nQu'est-ce que ça sera cette fois ?
+sText_HiDoSomethingAgainFemale|{STR_VAR_1} : Oh ! Bonjour, {PLAYER} !\nVous désirez quelque chose ?
 sText_DoSomethingMale|Tu veux faire quelque chose ?
-sText_DoSomethingFemale|Tu voudrais faire quelque chose ?
-sText_DoSomethingAgainMale|{STR_VAR_1} : Que veux-tu\nfaire maintenant ?
+sText_DoSomethingFemale|Vous désirez quelque chose ?
+sText_DoSomethingAgainMale|{STR_VAR_1} : Qu'est-ce que vous\nvoulez faire maintenant ?
 sText_SomebodyHasContactedYou|Quelqu'un t'a contacté.{PAUSE 60}
 sText_PlayerHasContactedYou|{STR_VAR_1} t'a contacté.{PAUSE 60}
 sText_AwaitingResponseFromTrainer|En attente d'une réponse de\nl'autre DRESSEUR…
 sText_AwaitingResponseFromPlayer|En attente d'une réponse de\n{STR_VAR_1}…
-gText_UR_ShowTrainerCard|L'autre DRESSEUR t'a montré sa\nCARTE DRESSEUR.\pVeux-tu montrer la tienne ?
-gText_UR_BattleChallenge|L'autre DRESSEUR te défie\nen combat.\pAcceptes-tu le défi ?
-gText_UR_ChatInvitation|L'autre DRESSEUR t'invite\nà discuter.\pAcceptes-tu l'invitation ?
+gText_UR_ShowTrainerCard|L'autre DRESSEUR vous montre\nsa CARTE DE DRESSEUR.\pVoulez-vous montrer votre\nCARTE DE DRESSEUR ?
+gText_UR_BattleChallenge|L'autre DRESSEUR veut se\nbattre contre vous.\pAccepter le combat ?
+gText_UR_ChatInvitation|L'autre DRESSEUR vous invite\nà discuter.\pAccepter l'invitation ?
 gText_UR_OfferToTradeMon|On te propose d'échanger ton\n{DYNAMIC 1} niv. {DYNAMIC 0} enregistré\pcontre un {DYNAMIC 3} niv. {DYNAMIC 2}.\pAcceptes-tu cette offre ?
 gText_UR_OfferToTradeEgg|On te propose d'échanger ton\nŒUF enregistré.\lAcceptes-tu cette offre ?
 gText_UR_ChatDropped|La discussion a été interrompue.\p
 gText_UR_OfferDeclined1|Tu as refusé l'offre.\p
 gText_UR_OfferDeclined2|Tu as refusé l'offre.\p
 gText_UR_ChatEnded|La discussion est terminée.\p
-sText_JoinChatMale|Oh, salut ! On discute là.\nTu veux te joindre à nous ?
-sText_PlayerJoinChatMale|{STR_VAR_1} : Salut, {PLAYER} !\nOn discute en ce moment.\lTu veux te joindre à nous ?
-sText_JoinChatFemale|Oh, bonjour ! On discute.\nTu voudrais te joindre à nous ?
-sText_PlayerJoinChatFemale|{STR_VAR_1} : Oh, bonjour {PLAYER} !\nOn discute en ce moment.\lTu voudrais te joindre à nous ?
+sText_JoinChatMale|On est en plein dans un tchat.\nTu nous rejoins ?
+sText_PlayerJoinChatMale|{STR_VAR_1} : Salut, {PLAYER} !\nOn est en train de tchater.\lTu veux nous rejoindre ?
+sText_JoinChatFemale|Bonjour ! On est en plein dans\nun tchat. Tu nous rejoins ?
+sText_PlayerJoinChatFemale|{STR_VAR_1} : Oh, coucou, {PLAYER} !\nNous sommes en train de tchater.\lTu te joins à nous ?
 gText_UR_TrainerAppearsBusy|……\nLe DRESSEUR semble occupé…\p
 sText_WaitForBattleMale|Un combat ?\nD'accord, laisse-moi un moment.
 sText_WaitForChatMale|Tu veux discuter ?\nOK, attends un peu.
-sText_ShowTrainerCardMale|Pas de souci ! En guise de “salut”,\nvoici ma CARTE DRESSEUR.
-sText_WaitForBattleFemale|Un combat ? Bien sûr, mais il me\nfaut le temps de me préparer.
-sText_WaitForChatFemale|Tu voulais discuter ?\nD'accord, patiente un instant.
+sText_ShowTrainerCardMale|Pareil pour moi !\nVoilà ma CARTE DE DRESSEUR.
+sText_WaitForBattleFemale|Un combat ? Bien sûr !\nJuste un instant, je me prépare.
+sText_WaitForChatFemale|Un tchat ?\nPas de problème, juste un instant.
 sText_ShowTrainerCardFemale|En guise de présentation, je te\nmontre ma CARTE DRESSEUR.
 sText_DoneWaitingBattleMale|Merci d'avoir attendu !\nCommençons notre combat !{PAUSE 60}
 sText_DoneWaitingChatMale|D'accord !\nDiscutons !{PAUSE 60}
@@ -132,15 +132,15 @@ gText_UR_TradeOfferRejected|Ton offre d'échange a été refusée.\p
 gText_UR_EggTrade|ÉCHANGE D'ŒUF
 gText_UR_ChooseJoinCancel|{DPAD_UPDOWN}CHOIX  {A_BUTTON}REJOINDRE  {B_BUTTON}ANNULER
 gText_UR_ChooseTrainer|Choisis un DRESSEUR.
-sText_ChooseTrainerSingleBattle|Choisis un DRESSEUR pour un\nCOMBAT SIMPLE.
+sText_ChooseTrainerSingleBattle|Veuillez choisir un DRESSEUR\npour un combat SOLO.
 sText_ChooseTrainerDoubleBattle|Choisis un DRESSEUR pour un\nCOMBAT DOUBLE.
-sText_ChooseLeaderMultiBattle|Choisis le CHEF pour un\nCOMBAT MULTI.
-sText_ChooseTrainerToTradeWith|Choisis le DRESSEUR avec qui\néchanger.
-sText_ChooseTrainerToShareWonderCards|Choisis le DRESSEUR qui partage\ndes CARTES MIRACLE.
-sText_ChooseTrainerToShareWonderNews|Choisis le DRESSEUR qui partage\ndes INFOS MIRACLE.
-sText_ChooseLeaderPokemonJump|Sautez avec les mini POKéMON !\nChoisis le CHEF.
-sText_ChooseLeaderBerryCrush|BAIES EN FOLIE !\nChoisis le CHEF.
-sText_ChooseLeaderBerryPicking|CUEILLETTE DODRIO !\nChoisis le CHEF.
+sText_ChooseLeaderMultiBattle|Veuillez choisir un DRESSEUR\npour un combat MULTI.
+sText_ChooseTrainerToTradeWith|Veuillez choisir le DRESSEUR avec\nqui faire l'échange.
+sText_ChooseTrainerToShareWonderCards|Veuillez choisir le DRESSEUR qui\npartage les CARTES MIRACLE.
+sText_ChooseTrainerToShareWonderNews|Veuillez choisir le DRESSEUR qui\npartage les INFOS MIRACLE.
+sText_ChooseLeaderPokemonJump|Sautez avec un mini POKéMON !\nChoisissez le MENEUR.
+sText_ChooseLeaderBerryCrush|BROYEUR DE BAIES !\nChoisissez le MENEUR.
+sText_ChooseLeaderBerryPicking|ATTRAPE-BAIES DODRIO !\nChoisissez le MENEUR.
 gText_UR_SearchingForWirelessSystemWait|Recherche d'un SYSTÈME DE\nCOMMUNICATION SANS FIL. Patiente…
 gText_UR_AwaitingPlayersResponse|En attente de la réponse de {STR_VAR_1}…
 gText_UR_PlayerHasBeenAskedToRegisterYouPleaseWait|On a demandé à {STR_VAR_1} de t'inscrire\ncomme membre. Patiente.

@@ -25,7 +25,7 @@
  },
  "Route8_Text_AnneDefeat": {
   "en": "ANNE: Our twin power…",
-  "fr": "ANNE : Notre pouvoir de jumeaux…"
+  "fr": "ANNE : Notre force de jumelles…"
  },
  "Route8_Text_AnneIntro": {
   "en": "ANNE: We'll shock you with our twin\\npower!",
@@ -33,7 +33,7 @@
  },
  "Route8_Text_AnneNotEnoughMons": {
   "en": "ANNE: Hi, hi! Let's battle!\\nBut bring two POKéMON.",
-  "fr": "ANNE : Salut, salut !\\nBattons-nous ! Mais viens avec deux\\lPOKéMON."
+  "fr": "ANNE : Hi, hi. Si tu veux\\ncombattre, il te faut deux POKéMON."
  },
  "Route8_Text_AnnePostBattle": {
   "en": "ANNE: I'm raising POKéMON with\\nELI.",
@@ -197,7 +197,7 @@
  },
  "Route8_Text_RichPostBattle": {
   "en": "Playing games and POKéMON are like\\neating peanuts! I just can't stop!",
-  "fr": "Jouer aux jeux et aux POKéMON,\\nc'est comme manger des cacahuètes !\\pImpossible d'arrêter !"
+  "fr": "ANNE : Je dresse mes POKéMON avec\\nELI."
  },
  "Route8_Text_StanDefeat": {
   "en": "Drat!\\nCame up short!",
