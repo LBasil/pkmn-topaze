@@ -1,0 +1,66 @@
+gText_ForPetesSake|CHEN : Oh, bon sang…\nToujours aussi pressant.\p{B_PLAYER_NAME}.\pTu n'as jamais fait de combat\nPOKéMON, n'est-ce pas ?\pUn combat POKéMON, c'est quand des\nDRESSEURS opposent leurs POKéMON\lles uns aux autres.\p
+gText_TheTrainerThat|Le DRESSEUR qui met K.O. les POKéMON\nde l'autre en faisant tomber leurs\lPV à “0” gagne.\p
+gText_TryBattling|Mais plutôt que d'en parler,\ntu apprendras mieux en pratiquant.\pEssaie de te battre pour voir.\p
+gText_InflictingDamageIsKey|CHEN : Infliger des dégâts à\nl'ennemi est la clé de tout combat.\p
+gText_LoweringStats|CHEN : Baisser les stats de l'ennemi\nte donne l'avantage.\p
+gText_KeepAnEyeOnHP|CHEN : Garde un œil sur les PV\nde ton POKéMON.\pIl sera K.O. si ses PV tombent\nà “0”.\p
+gText_OakNoRunningFromATrainer|CHEN : Non ! On ne fuit pas\nun combat contre un DRESSEUR !\p
+gText_WinEarnsPrizeMoney|CHEN : Hm ! Excellent !\pSi tu gagnes, tu empoches de\nl'argent et tes POKéMON grandissent !\pCombats d'autres DRESSEURS et rends\ntes POKéMON forts !\p
+gText_HowDissapointing|CHEN : Hm…\nQuelle déception…\pSi tu gagnes, tu empoches de\nl'argent et tes POKéMON grandissent.\pMais si tu perds, {B_PLAYER_NAME}, tu\ndois payer…\pCette fois, comme tu n'étais pas\nprévenu, je paie pour toi.\pMais ça ne se passera pas ainsi\ndès que tu auras passé cette porte.\pC'est pourquoi tu dois renforcer\ntes POKéMON en affrontant des\lPOKéMON sauvages.\p
+gText_WhatWillPkmnDo|Que doit faire\n{B_ACTIVE_NAME_WITH_PREFIX} ?
+gText_TopazeBallHintL|{B_ACTIVE_NAME_WITH_PREFIX} ?\nL : BALL
+gText_TopazeBallHintR|{B_ACTIVE_NAME_WITH_PREFIX} ?\nR : BALL
+gText_WhatWillPlayerThrow|Que lance\n{B_PLAYER_NAME} ?
+gText_WhatWillOldManDo|Que fait\nle vieil homme ?
+gText_LinkStandby|{PAUSE 16}Attente du Link…
+gText_BattleMenu|{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}ATTAQUE{CLEAR_TO 56}SAC\nPOKéMON{CLEAR_TO 56}FUITE
+gText_SafariZoneMenu|{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}BALL{CLEAR_TO 56}APPÂT\nCAILLOU{CLEAR_TO 56}FUITE
+gText_MoveInterfaceType|TYPE/
+gText_BattleYesNoChoice|{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}Oui\nNon
+gText_BattleSwitchWhich|{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}Échanger\nlequel ?
+sText_MaxHP|{FONT_SMALL}PV{FONT_NORMAL} max
+sText_Attack|ATTAQUE 
+sText_Defense|DÉFENSE
+sText_SpAtk|ATQ. SPÉ.
+sText_SpDef|DÉF. SPÉ.
+gText_HighlightRed_Left|{HIGHLIGHT 2}Reste : 
+gText_Sleep|sommeil
+gText_Poison|poison
+gText_Burn|brûlure
+gText_Paralysis|paralysie
+gText_Ice|gel
+gText_Confusion|confusion
+gText_Love|amour
+gText_BattleTowerBan_Is1| est
+gText_BattleTowerBan_Is2| est
+gText_BadEgg|MAUVAIS ŒUF
+gText_Win|{HIGHLIGHT 0}Victoire
+gText_Loss|{HIGHLIGHT 0}Défaite
+gText_Draw|{HIGHLIGHT 0}Nul
+sText_SpaceIs| est
+sText_ApostropheS| de
+gText_ANormalMove|une attaque NORMAL
+gText_AFightingMove|une attaque COMBAT
+gText_AFlyingMove|une attaque VOL
+gText_APoisonMove|une attaque POISON
+gText_AGroundMove|une attaque SOL
+gText_ARockMove|une attaque ROCHE
+gText_ABugMove|une attaque INSECTE
+gText_AGhostMove|une attaque SPECTRE
+gText_ASteelMove|une attaque ACIER
+gText_AMysteryMove|une attaque ???
+gText_AFireMove|une attaque FEU
+gText_AWaterMove|une attaque EAU
+gText_AGrassMove|une attaque PLANTE
+gText_AnElectricMove|une attaque ÉLECTRIK
+gText_APsychicMove|une attaque PSY
+gText_AnIceMove|une attaque GLACE
+gText_ADragonMove|une attaque DRAGON
+gText_ADarkMove|une attaque TÉNÈBRES
+gText_AFairyMove|une attaque FÉE
+gText_TimeBoard|TABLEAU DES TEMPS
+gText_ClearTime|TEMPS RÉALISÉ
+gText_XMinYZSec|{STR_VAR_1}MIN. {STR_VAR_2}.{STR_VAR_3}S.
+sText_Trainer1Fled|{PLAY_SE SE_FLEE}{B_TRAINER1_CLASS} {B_TRAINER1_NAME} a fui !
+sText_PlayerLostAgainstTrainer1|Le joueur a perdu contre\n{B_TRAINER1_CLASS} {B_TRAINER1_NAME} !
+sText_PlayerBattledToDrawTrainer1|Match nul contre\n{B_TRAINER1_CLASS} {B_TRAINER1_NAME} !

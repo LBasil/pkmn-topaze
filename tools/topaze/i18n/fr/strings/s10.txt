@@ -1,0 +1,134 @@
+sText_Trainer1RecallPkmn1|{B_TRAINER1_NAME} : {B_OPPONENT_MON1_NAME}, reviens !
+sText_Trainer1RecallPkmn2|{B_TRAINER1_NAME} : {B_OPPONENT_MON2_NAME}, reviens !
+sText_Trainer1RecallBoth|{B_TRAINER1_NAME} : {B_OPPONENT_MON1_NAME} et\n{B_OPPONENT_MON2_NAME}, revenez !
+sText_PkmnGainedEXP|{B_BUFF1} gagne{B_BUFF2}\n{B_BUFF3} points d'EXP. !\p
+sText_ABoosted| avec un bonus de
+sText_PkmnGrewToLv|{B_BUFF1} passe au\nNIV. {B_BUFF2} !{WAIT_SE}\p
+sText_PkmnLearnedMove|{B_BUFF1} apprend\n{B_BUFF2} !{WAIT_SE}\p
+sText_TryToLearnMove1|{B_BUFF1} veut apprendre\n{B_BUFF2}.\p
+sText_TryToLearnMove2|Mais {B_BUFF1} ne peut pas\napprendre plus de 4 attaques.\p
+sText_TryToLearnMove3|Oublier une attaque pour\napprendre {B_BUFF2} ?
+sText_PkmnForgotMove|{B_BUFF1} oublie\n{B_BUFF2}.\p
+sText_StopLearningMove|{PAUSE 32}Renoncer à apprendre\n{B_BUFF2} ?
+sText_DidNotLearnMove|{B_BUFF1} n'apprend pas\n{B_BUFF2}.\p
+sText_UseNextPkmn|Envoyer le POKéMON suivant ?
+sText_AttackMissed|L'attaque de\n{B_ATK_NAME_WITH_PREFIX} échoue !
+sText_PkmnProtectedItself|{B_DEF_NAME_WITH_PREFIX}\nse protège !
+sText_AvoidedDamage|{B_DEF_NAME_WITH_PREFIX} évite les\ndégâts avec {B_DEF_ABILITY} !
+sText_PkmnMakesGroundMiss|{B_DEF_NAME_WITH_PREFIX} esquive le\ntype SOL avec {B_DEF_ABILITY} !
+sText_PkmnAvoidedAttack|{B_DEF_NAME_WITH_PREFIX} évite\nl'attaque !
+sText_ItDoesntAffect|Ça n'affecte pas\n{B_DEF_NAME_WITH_PREFIX}…
+sText_AttackerFainted|{B_ATK_NAME_WITH_PREFIX}\nest K.O. !\p
+sText_TargetFainted|{B_DEF_NAME_WITH_PREFIX}\nest K.O. !\p
+sText_PlayerGotMoney|{B_PLAYER_NAME} gagne ¥{B_BUFF1}\npour sa victoire !\p
+sText_PlayerWhiteout|{B_PLAYER_NAME} n'a plus de\nPOKéMON capable de se battre !\p
+sText_PlayerPanicked|{B_PLAYER_NAME} panique et perd ¥{B_BUFF1}…\p… … … …\p{B_PLAYER_NAME} tombe de fatigue !{PAUSE_UNTIL_PRESS}
+sText_PlayerWhiteoutAgainstTrainer|{B_PLAYER_NAME} n'a plus de\nPOKéMON capable de se battre !\pLe joueur a perdu contre\n{B_TRAINER1_CLASS} {B_TRAINER1_NAME} !{PAUSE_UNTIL_PRESS}
+sText_PlayerPaidAsPrizeMoney|{B_PLAYER_NAME} verse ¥{B_BUFF1} de gain\nà son adversaire…\p… … … …\p{B_PLAYER_NAME} tombe de fatigue !{PAUSE_UNTIL_PRESS}
+sText_PlayerWhiteout2|{B_PLAYER_NAME} tombe de fatigue !{PAUSE_UNTIL_PRESS}
+sText_PreventsEscape|{B_SCR_ACTIVE_NAME_WITH_PREFIX} empêche la\nfuite avec {B_SCR_ACTIVE_ABILITY} !\p
+sText_CantEscape2|Impossible de fuir !\p
+sText_AttackerCantEscape|{B_ATK_NAME_WITH_PREFIX} ne peut pas fuir !
+sText_HitXTimes|Touché {B_BUFF1} fois !
+sText_PkmnFellAsleep|{B_EFF_NAME_WITH_PREFIX}\ns'endort !
+sText_PkmnMadeSleep|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nendort {B_EFF_NAME_WITH_PREFIX} !
+sText_PkmnAlreadyAsleep|{B_DEF_NAME_WITH_PREFIX}\ndort déjà !
+sText_PkmnAlreadyAsleep2|{B_ATK_NAME_WITH_PREFIX}\ndort déjà !
+sText_PkmnWasntAffected|{B_DEF_NAME_WITH_PREFIX}\nn'est pas affecté !
+sText_PkmnWasPoisoned|{B_EFF_NAME_WITH_PREFIX}\nest empoisonné !
+sText_PkmnPoisonedBy|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nempoisonne {B_EFF_NAME_WITH_PREFIX} !
+sText_PkmnHurtByPoison|{B_ATK_NAME_WITH_PREFIX} souffre\ndu poison !
+sText_PkmnAlreadyPoisoned|{B_DEF_NAME_WITH_PREFIX} est déjà\nempoisonné.
+sText_PkmnBadlyPoisoned|{B_EFF_NAME_WITH_PREFIX} est\ngravement empoisonné !
+sText_PkmnEnergyDrained|{B_DEF_NAME_WITH_PREFIX} se fait\ndrainer son énergie !
+sText_PkmnWasBurned|{B_EFF_NAME_WITH_PREFIX} est brûlé !
+sText_PkmnBurnedBy|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nbrûle {B_EFF_NAME_WITH_PREFIX} !
+sText_PkmnHurtByBurn|{B_ATK_NAME_WITH_PREFIX} souffre\nde sa brûlure !
+sText_PkmnAlreadyHasBurn|{B_DEF_NAME_WITH_PREFIX} est\ndéjà brûlé.
+sText_PkmnWasFrozen|{B_EFF_NAME_WITH_PREFIX} est\ncomplètement gelé !
+sText_PkmnFrozenBy|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\ngèle {B_EFF_NAME_WITH_PREFIX} !
+sText_PkmnIsFrozen|{B_ATK_NAME_WITH_PREFIX} est\ncomplètement gelé !
+sText_PkmnWasDefrosted|{B_DEF_NAME_WITH_PREFIX}\nn'est plus gelé !
+sText_PkmnWasDefrosted2|{B_ATK_NAME_WITH_PREFIX}\nn'est plus gelé !
+sText_PkmnWasDefrostedBy|{B_ATK_NAME_WITH_PREFIX} dégèle\ngrâce à {B_CURRENT_MOVE} !
+sText_PkmnWasParalyzed|{B_EFF_NAME_WITH_PREFIX} est paralysé !\nIl aura du mal à bouger !
+sText_PkmnWasParalyzedBy|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nparalyse {B_EFF_NAME_WITH_PREFIX} !\lIl aura du mal à bouger !
+sText_PkmnIsParalyzed|{B_ATK_NAME_WITH_PREFIX} est paralysé !\nIl ne peut pas bouger !
+sText_PkmnIsAlreadyParalyzed|{B_DEF_NAME_WITH_PREFIX}\nest déjà paralysé !
+sText_PkmnHealedParalysis|{B_DEF_NAME_WITH_PREFIX} est\nguéri de sa paralysie !
+sText_PkmnDreamEaten|Le rêve de\n{B_DEF_NAME_WITH_PREFIX} est dévoré !
+sText_StatsWontIncrease|{B_BUFF1} de {B_ATK_NAME_WITH_PREFIX}\nne peut plus monter !
+sText_StatsWontDecrease|{B_BUFF1} de {B_DEF_NAME_WITH_PREFIX}\nne peut plus baisser !
+sText_TeamStoppedWorking|{B_BUFF1} de ton équipe\nne fait plus effet !
+sText_FoeStoppedWorking|{B_BUFF1} de l'adversaire\nne fait plus effet !
+sText_PkmnIsConfused|{B_ATK_NAME_WITH_PREFIX}\nest confus !
+sText_PkmnHealedConfusion|{B_ATK_NAME_WITH_PREFIX} n'est\nplus confus !
+sText_PkmnWasConfused|{B_EFF_NAME_WITH_PREFIX}\nest pris de confusion !
+sText_PkmnAlreadyConfused|{B_DEF_NAME_WITH_PREFIX}\nest déjà confus !
+sText_PkmnFellInLove|{B_DEF_NAME_WITH_PREFIX}\ntombe amoureux !
+sText_PkmnInLove|{B_ATK_NAME_WITH_PREFIX} est amoureux\nde {B_SCR_ACTIVE_NAME_WITH_PREFIX} !
+sText_PkmnImmobilizedByLove|{B_ATK_NAME_WITH_PREFIX} est\nparalysé d'amour !
+sText_PkmnBlownAway|{B_DEF_NAME_WITH_PREFIX}\nest projeté au loin !
+sText_PkmnChangedType|{B_ATK_NAME_WITH_PREFIX} prend le\ntype {B_BUFF1} !
+sText_PkmnFlinched|{B_ATK_NAME_WITH_PREFIX} a eu peur !
+sText_PkmnRegainedHealth|{B_DEF_NAME_WITH_PREFIX}\nrécupère des PV !
+sText_PkmnHPFull|Les PV de\n{B_DEF_NAME_WITH_PREFIX} sont au max. !
+sText_PkmnRaisedSpDef|{B_CURRENT_MOVE} monte la DÉF. SPÉ.\nde {B_ATK_PREFIX2} !
+sText_PkmnRaisedSpDefALittle|{B_CURRENT_MOVE} monte un peu la\nDÉF. SPÉ. de {B_ATK_PREFIX2} !
+sText_PkmnRaisedDef|{B_CURRENT_MOVE} monte la DÉFENSE\nde {B_ATK_PREFIX2} !
+sText_PkmnRaisedDefALittle|{B_CURRENT_MOVE} monte un peu la\nDÉFENSE de {B_ATK_PREFIX2} !
+sText_PkmnCoveredByVeil|Un voile couvre\n{B_ATK_PREFIX2} !
+sText_PkmnUsedSafeguard|{B_DEF_NAME_WITH_PREFIX} protège son équipe\navec RUNE PROTECT !
+sText_PkmnSafeguardExpired|RUNE PROTECT de {B_ATK_PREFIX3}\nse dissipe !
+sText_PkmnWentToSleep|{B_ATK_NAME_WITH_PREFIX}\ns'endort !
+sText_PkmnSleptHealthy|{B_ATK_NAME_WITH_PREFIX} dort et\nrecouvre la santé !
+sText_PkmnWhippedWhirlwind|{B_ATK_NAME_WITH_PREFIX} soulève\nun tourbillon !
+sText_PkmnTookSunlight|{B_ATK_NAME_WITH_PREFIX} absorbe\nla lumière du soleil !
+sText_PkmnLoweredHead|{B_ATK_NAME_WITH_PREFIX} baisse\nla tête !
+sText_PkmnIsGlowing|{B_ATK_NAME_WITH_PREFIX} se met à briller !
+sText_PkmnFlewHigh|{B_ATK_NAME_WITH_PREFIX} s'envole\nhaut dans le ciel !
+sText_PkmnDugHole|{B_ATK_NAME_WITH_PREFIX} creuse un trou !
+sText_PkmnHidUnderwater|{B_ATK_NAME_WITH_PREFIX} se cache\nsous l'eau !
+sText_PkmnSprangUp|{B_ATK_NAME_WITH_PREFIX} bondit !
+sText_PkmnSqueezedByBind|{B_DEF_NAME_WITH_PREFIX} est serré par\nl'ÉTREINTE de {B_ATK_NAME_WITH_PREFIX} !
+sText_PkmnTrappedInVortex|{B_DEF_NAME_WITH_PREFIX} est piégé\ndans le tourbillon !
+sText_PkmnTrappedBySandTomb|{B_DEF_NAME_WITH_PREFIX} est piégé\npar TOURBI-SABLE !
+sText_PkmnWrappedBy|{B_DEF_NAME_WITH_PREFIX} est ligoté par\n{B_ATK_NAME_WITH_PREFIX} !
+sText_PkmnClamped|{B_ATK_NAME_WITH_PREFIX} SERRE\n{B_DEF_NAME_WITH_PREFIX} !
+sText_PkmnHurtBy|{B_ATK_NAME_WITH_PREFIX} souffre\nde {B_BUFF1} !
+sText_PkmnFreedFrom|{B_ATK_NAME_WITH_PREFIX} se libère\nde {B_BUFF1} !
+sText_PkmnCrashed|{B_ATK_NAME_WITH_PREFIX} continue\net s'écrase !
+gBattleText_MistShroud|BRUME enveloppe\n{B_ATK_PREFIX2} !
+sText_PkmnProtectedByMist|{B_SCR_ACTIVE_NAME_WITH_PREFIX} est protégé\npar la BRUME !
+gBattleText_GetPumped|{B_ATK_NAME_WITH_PREFIX} se\ngonfle à bloc !
+sText_PkmnHitWithRecoil|{B_ATK_NAME_WITH_PREFIX} subit\nle contrecoup !
+sText_PkmnProtectedItself2|{B_ATK_NAME_WITH_PREFIX}\nse protège !
+sText_PkmnBuffetedBySandstorm|{B_ATK_NAME_WITH_PREFIX} est fouetté\npar la tempête de sable !
+sText_PkmnPeltedByHail|{B_ATK_NAME_WITH_PREFIX} est criblé\npar la GRÊLE !
+sText_PkmnsXWoreOff|{B_BUFF1} de {B_ATK_PREFIX1}\nse dissipe !
+sText_PkmnSeeded|{B_DEF_NAME_WITH_PREFIX} est infecté !
+sText_PkmnEvadedAttack|{B_DEF_NAME_WITH_PREFIX} esquive\nl'attaque !
+sText_PkmnSappedByLeechSeed|VAMPIGRAINE draine la santé\nde {B_ATK_NAME_WITH_PREFIX} !
+sText_PkmnFastAsleep|{B_ATK_NAME_WITH_PREFIX} dort\nà poings fermés.
+sText_PkmnWokeUp|{B_ATK_NAME_WITH_PREFIX} se réveille !
+sText_PkmnUproarKeptAwake|Mais le BROUHAHA de\n{B_SCR_ACTIVE_NAME_WITH_PREFIX} le tient éveillé !
+sText_PkmnWokeUpInUproar|{B_ATK_NAME_WITH_PREFIX} se réveille\nà cause du BROUHAHA !
+sText_PkmnCausedUproar|{B_ATK_NAME_WITH_PREFIX} fait\nun BROUHAHA !
+sText_PkmnMakingUproar|{B_ATK_NAME_WITH_PREFIX} fait\nun BROUHAHA !
+sText_PkmnCalmedDown|{B_ATK_NAME_WITH_PREFIX} se calme.
+sText_PkmnCantSleepInUproar|Mais {B_DEF_NAME_WITH_PREFIX} ne peut\npas dormir avec ce BROUHAHA !
+sText_PkmnStockpiled|{B_ATK_NAME_WITH_PREFIX} a STOCKÉ\n{B_BUFF1} !
+sText_PkmnCantStockpile|{B_ATK_NAME_WITH_PREFIX} ne peut\nplus STOCKER !
+sText_PkmnCantSleepInUproar2|Mais {B_DEF_NAME_WITH_PREFIX} ne peut\npas dormir avec ce BROUHAHA !
+sText_UproarKeptPkmnAwake|Mais le BROUHAHA tient\n{B_DEF_NAME_WITH_PREFIX} éveillé !
+sText_PkmnStayedAwakeUsing|{B_DEF_NAME_WITH_PREFIX} reste éveillé\navec {B_DEF_ABILITY} !
+sText_PkmnStoringEnergy|{B_ATK_NAME_WITH_PREFIX} emmagasine\nde l'énergie !
+sText_PkmnUnleashedEnergy|{B_ATK_NAME_WITH_PREFIX} libère\nson énergie !
+sText_PkmnFatigueConfusion|{B_ATK_NAME_WITH_PREFIX} est confus\nde fatigue !
+sText_PkmnPickedUpItem|{B_PLAYER_NAME} ramasse\n¥{B_BUFF1} !\p
+sText_PkmnUnaffected|{B_DEF_NAME_WITH_PREFIX}\nn'est pas affecté !
+sText_PkmnTransformedInto|{B_ATK_NAME_WITH_PREFIX} se\ntransforme en {B_BUFF1} !
+sText_PkmnMadeSubstitute|{B_ATK_NAME_WITH_PREFIX} crée\nun clone !
+sText_PkmnHasSubstitute|{B_ATK_NAME_WITH_PREFIX} a\ndéjà un clone !
+sText_SubstituteDamaged|Le clone subit les dégâts\nà la place de {B_DEF_NAME_WITH_PREFIX} !\p
+sText_PkmnSubstituteFaded|Le clone de\n{B_DEF_NAME_WITH_PREFIX} disparaît !\p

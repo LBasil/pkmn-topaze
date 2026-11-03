@@ -1,0 +1,129 @@
+sText_PkmnMustRecharge|{B_ATK_NAME_WITH_PREFIX} doit\nse reposer !
+sText_PkmnRageBuilding|La COLÈRE de {B_DEF_NAME_WITH_PREFIX}\nmonte !
+sText_PkmnMoveWasDisabled|{B_BUFF1} de {B_DEF_NAME_WITH_PREFIX}\nest bloquée !
+sText_PkmnMoveDisabledNoMore|{B_ATK_NAME_WITH_PREFIX} n'est\nplus entravé !
+sText_PkmnGotEncore|{B_DEF_NAME_WITH_PREFIX} subit\nun ENCORE !
+sText_PkmnEncoreEnded|L'ENCORE de {B_ATK_NAME_WITH_PREFIX}\nest terminé !
+sText_NoPPLeft|Il n'y a plus de PP\npour cette attaque !\p
+sText_ButNoPPLeft|Mais il n'y a plus de PP\npour cette attaque !
+sText_PkmnIgnoresAsleep|{B_ATK_NAME_WITH_PREFIX} ignore les\nordres en dormant !
+sText_PkmnIgnoredOrders|{B_ATK_NAME_WITH_PREFIX} ignore\nles ordres !
+sText_PkmnBeganToNap|{B_ATK_NAME_WITH_PREFIX} fait la sieste !
+sText_PkmnLoafing|{B_ATK_NAME_WITH_PREFIX} flâne\nsans rien faire !
+sText_PkmnWontObey|{B_ATK_NAME_WITH_PREFIX} refuse\nd'obéir !
+sText_PkmnTurnedAway|{B_ATK_NAME_WITH_PREFIX} détourne\nle regard !
+sText_PkmnPretendNotNotice|{B_ATK_NAME_WITH_PREFIX} fait\nsemblant de ne rien voir !
+sText_EnemyAboutToSwitchPkmn|{B_TRAINER1_CLASS} {B_TRAINER1_NAME} va\nenvoyer {B_BUFF2}.\p{B_PLAYER_NAME} change-t-il\nde POKéMON ?
+sText_PkmnLearnedMove2|{B_ATK_NAME_WITH_PREFIX} apprend\n{B_BUFF1} !
+sText_PlayerDefeatedLinkTrainerTrainer1|Le joueur a battu\n{B_TRAINER1_CLASS} {B_TRAINER1_NAME} !\p
+sText_ThrewARock|{B_PLAYER_NAME} lance un CAILLOU\nsur {B_OPPONENT_MON1_NAME} !
+sText_ThrewSomeBait|{B_PLAYER_NAME} lance un APPÂT\nsur {B_OPPONENT_MON1_NAME} !
+sText_PkmnWatchingCarefully|{B_OPPONENT_MON1_NAME} observe\navec attention !
+sText_PkmnIsAngry|{B_OPPONENT_MON1_NAME} est furieux !
+sText_PkmnIsEating|{B_OPPONENT_MON1_NAME} mange !
+sText_OutOfSafariBalls|{PLAY_SE SE_DING_DONG}ANNONCE : Vous n'avez plus de\nSAFARI BALLS ! Fin du jeu !\p
+sText_WildPkmnAppeared|Un {B_OPPONENT_MON1_NAME} sauvage\napparaît !\p
+sText_WildPkmnAppeared2|Un {B_OPPONENT_MON1_NAME} sauvage\napparaît !\p
+sText_WildPkmnAppearedPause|Un {B_OPPONENT_MON1_NAME} sauvage\napparaît !{PAUSE 127}
+sText_TwoWildPkmnAppeared|{B_OPPONENT_MON1_NAME} et {B_OPPONENT_MON2_NAME}\nsauvages apparaissent !\p
+sText_GhostAppearedCantId|Le SPECTRE apparaît !\pZut !\nOn ne peut pas l'identifier !\p
+sText_TheGhostAppeared|Le SPECTRE apparaît !\p
+sText_SilphScopeUnveil|Le SILPH SCOPE dévoile l'identité\ndu SPECTRE !
+sText_TheGhostWas|Le SPECTRE était OSSELAIT !\p\n
+sText_Trainer1WantsToBattle|{B_TRAINER1_CLASS} {B_TRAINER1_NAME}\nveut se battre !\p
+sText_LinkTrainerWantsToBattle|{B_LINK_OPPONENT1_NAME}\nveut se battre !
+sText_TwoLinkTrainersWantToBattle|{B_LINK_OPPONENT1_NAME} et {B_LINK_OPPONENT2_NAME}\nveulent se battre !
+sText_Trainer1SentOutPkmn|{B_TRAINER1_CLASS} {B_TRAINER1_NAME}\nenvoie {B_OPPONENT_MON1_NAME} !{PAUSE 60}
+sText_Trainer1SentOutTwoPkmn|{B_TRAINER1_CLASS} {B_TRAINER1_NAME} envoie\n{B_OPPONENT_MON1_NAME} et {B_OPPONENT_MON2_NAME} !{PAUSE 60}
+sText_Trainer1SentOutPkmn2|{B_TRAINER1_CLASS} {B_TRAINER1_NAME}\nenvoie {B_BUFF1} !
+sText_LinkTrainerSentOutPkmn|{B_LINK_OPPONENT1_NAME} envoie\n{B_OPPONENT_MON1_NAME} !
+sText_LinkTrainerSentOutTwoPkmn|{B_LINK_OPPONENT1_NAME} envoie\n{B_OPPONENT_MON1_NAME} et {B_OPPONENT_MON2_NAME} !
+sText_TwoLinkTrainersSentOutPkmn|{B_LINK_OPPONENT1_NAME} envoie {B_LINK_OPPONENT_MON1_NAME} !\n{B_LINK_OPPONENT2_NAME} envoie {B_LINK_OPPONENT_MON2_NAME} !
+sText_LinkTrainerSentOutPkmn2|{B_LINK_OPPONENT1_NAME} envoie\n{B_BUFF1} !
+sText_LinkTrainerMultiSentOutPkmn|{B_LINK_SCR_TRAINER_NAME} envoie\n{B_BUFF1} !
+sText_GoPkmn|{B_PLAYER_MON1_NAME}, go !
+sText_GoTwoPkmn|{B_PLAYER_MON1_NAME} et\n{B_PLAYER_MON2_NAME}, go !
+sText_GoPkmn2|{B_BUFF1}, go !
+sText_DoItPkmn|À toi, {B_BUFF1} !
+sText_GoForItPkmn|Vas-y, {B_BUFF1} !
+sText_YourFoesWeakGetEmPkmn|L'ennemi est faible !\nAttrape-le, {B_BUFF1} !
+sText_LinkPartnerSentOutPkmnGoPkmn|{B_LINK_PARTNER_NAME} envoie {B_LINK_PLAYER_MON2_NAME} !\n{B_LINK_PLAYER_MON1_NAME}, go !
+sText_PkmnThatsEnough|{B_BUFF1}, ça suffit !\nReviens !
+sText_PkmnComeBack|{B_BUFF1}, reviens !
+sText_PkmnOkComeBack|{B_BUFF1}, OK !\nReviens !
+sText_PkmnGoodComeBack|{B_BUFF1}, bien !\nReviens !
+sText_Trainer1WithdrewPkmn|{B_TRAINER1_CLASS} {B_TRAINER1_NAME}\nrappelle {B_BUFF1} !
+sText_LinkTrainer1WithdrewPkmn|{B_LINK_OPPONENT1_NAME} rappelle\n{B_BUFF1} !
+sText_LinkTrainer2WithdrewPkmn|{B_LINK_SCR_TRAINER_NAME} rappelle\n{B_BUFF1} !
+sText_WildPkmnPrefix|
+sText_FoePkmnPrefix|ADV. 
+sText_FoePkmnPrefix2|l'équipe adverse
+sText_AllyPkmnPrefix|ton équipe
+sText_FoePkmnPrefix3|l'équipe adverse
+sText_AllyPkmnPrefix2|ton équipe
+sText_FoePkmnPrefix4|l'équipe adverse
+sText_AllyPkmnPrefix3|ton équipe
+sText_AttackerUsedX|{B_ATK_NAME_WITH_PREFIX} utilise\n{B_BUFF2}
+sText_ExclamationMark| !
+sText_ExclamationMark2| !
+sText_ExclamationMark3| !
+sText_ExclamationMark4| !
+sText_ExclamationMark5| !
+sText_HP2|PV
+sText_Attack2|ATTAQUE
+sText_Defense2|DÉFENSE
+sText_Speed|VITESSE
+sText_SpAtk2|ATQ. SPÉ.
+sText_SpDef2|DÉF. SPÉ.
+sText_Accuracy|PRÉCISION
+sText_Evasiveness|ESQUIVE
+sText_PokeblockWasTooSpicy|était trop épicé !
+sText_PokeblockWasTooDry|était trop sec !
+sText_PokeblockWasTooSweet|était trop sucré !
+sText_PokeblockWasTooBitter|était trop amer !
+sText_PokeblockWasTooSour|était trop acide !
+sText_PlayerUsedItem|{B_PLAYER_NAME} utilise\n{B_LAST_ITEM} !
+sText_OldManUsedItem|Le vieil homme utilise\n{B_LAST_ITEM} !
+sText_PokedudeUsedItem|Le POKé DUDE utilise\n{B_LAST_ITEM} !
+sText_Trainer1UsedItem|{B_TRAINER1_CLASS} {B_TRAINER1_NAME}\nutilise {B_LAST_ITEM} !
+sText_TrainerBlockedBall|Le DRESSEUR bloque la BALL !
+sText_DontBeAThief|Ne sois pas un voleur !
+sText_ItDodgedBall|Il esquive la BALL lancée !\nCe POKéMON est incapturable !
+sText_YouMissedPkmn|Tu as raté le POKéMON !
+sText_PkmnBrokeFree|Oh non !\nLe POKéMON s'est libéré !
+sText_ItAppearedCaught|Zut !\nIl semblait capturé !
+sText_AarghAlmostHadIt|Argh !\nPresque !
+sText_ShootSoClose|Mince !\nC'était tout près !
+sText_GotchaPkmnCaught|Ça y est !\n{B_OPPONENT_MON1_NAME} est capturé !{WAIT_SE}{PLAY_BGM MUS_CAUGHT}\p
+sText_GotchaPkmnCaught2|Ça y est !\n{B_OPPONENT_MON1_NAME} est capturé !{WAIT_SE}{PLAY_BGM MUS_CAUGHT}{PAUSE 127}
+sText_GiveNicknameCaptured|Donner un surnom au\n{B_OPPONENT_MON1_NAME} capturé ?
+sText_PkmnSentToPC|{B_OPPONENT_MON1_NAME} est envoyé\nau PC de {B_PC_CREATOR_NAME}.
+sText_Someones|quelqu'un
+sText_Bills|LANORIS
+sText_PkmnDataAddedToDex|Les données de {B_OPPONENT_MON1_NAME}\nsont ajoutées au POKéDEX.\p
+sText_ItIsRaining|Il pleut.
+sText_SandstormIsRaging|Une tempête de sable fait rage.
+sText_BoxIsFull|La BOÎTE est pleine !\nImpossible d'en capturer plus !\p
+sText_EnigmaBerry|BAIE ENIGMA
+sText_BerrySuffix| BAIE
+sText_PkmnsItemCuredParalysis|{B_LAST_ITEM} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nguérit la paralysie !
+sText_PkmnsItemCuredPoison|{B_LAST_ITEM} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nguérit le poison !
+sText_PkmnsItemHealedBurn|{B_LAST_ITEM} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nsoigne sa brûlure !
+sText_PkmnsItemDefrostedIt|{B_LAST_ITEM} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nle dégèle !
+sText_PkmnsItemWokeIt|{B_LAST_ITEM} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nle réveille !
+sText_PkmnsItemSnappedOut|{B_LAST_ITEM} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\ndissipe sa confusion !
+sText_PkmnsItemCuredProblem|{B_LAST_ITEM} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nguérit son problème de {B_BUFF1} !
+sText_PkmnsItemNormalizedStatus|{B_LAST_ITEM} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nnormalise son statut !
+sText_PkmnsItemRestoredHealth|{B_LAST_ITEM} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nrestaure sa santé !
+sText_PkmnsItemRestoredPP|{B_LAST_ITEM} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nrestaure les PP de {B_BUFF1} !
+sText_PkmnsItemRestoredStatus|{B_LAST_ITEM} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nrestaure son statut !
+sText_PkmnsItemRestoredHPALittle|{B_LAST_ITEM} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nrestaure un peu de PV !
+sText_ItemAllowsOnlyYMove|L'effet de {B_LAST_ITEM} ne permet\nque {B_CURRENT_MOVE} !\p
+sText_PkmnHungOnWithX|{B_DEF_NAME_WITH_PREFIX} tient bon\ngrâce à {B_LAST_ITEM} !
+sText_PlayedFluteCatchyTune|{B_PLAYER_NAME} joue de {B_LAST_ITEM}.\pQuel air entraînant !
+sText_PlayedThe|{B_PLAYER_NAME} joue de\n{B_LAST_ITEM}.
+sText_PkmnHearingFluteAwoke|Les POKéMON qui entendent la FLÛTE\nse réveillent !
+sText_YouThrowABallNowRight|Tu lances une BALL maintenant, non ?\nJe… je ferai de mon mieux !
+gText_PkmnIsEvolving|Quoi ?\n{STR_VAR_1} évolue !
+gText_CongratsPkmnEvolved|Félicitations ! Ton {STR_VAR_1}\névolue en {STR_VAR_2} !{WAIT_SE}\p
+gText_PkmnStoppedEvolving|Hein ? {STR_VAR_1}\nn'évolue plus !\p

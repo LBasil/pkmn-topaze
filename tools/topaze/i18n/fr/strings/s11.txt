@@ -1,0 +1,190 @@
+sText_PkmnTookAim|{B_ATK_NAME_WITH_PREFIX} prend\n{B_DEF_NAME_WITH_PREFIX} pour cible !
+sText_PkmnSketchedMove|{B_ATK_NAME_WITH_PREFIX} COPIE\n{B_BUFF1} !
+sText_PkmnTryingToTakeFoe|{B_ATK_NAME_WITH_PREFIX} veut emporter\nson adversaire avec lui !
+sText_PkmnTookFoe|{B_DEF_NAME_WITH_PREFIX} emporte\n{B_ATK_NAME_WITH_PREFIX} avec lui !
+sText_PkmnReducedPP|{B_BUFF1} de {B_DEF_NAME_WITH_PREFIX}\nperd {B_BUFF2} PP !
+sText_PkmnStoleItem|{B_ATK_NAME_WITH_PREFIX} vole\n{B_LAST_ITEM} de {B_DEF_NAME_WITH_PREFIX} !
+sText_TargetCantEscapeNow|{B_DEF_NAME_WITH_PREFIX} ne peut\nplus fuir !
+sText_PkmnFellIntoNightmare|{B_DEF_NAME_WITH_PREFIX} sombre\ndans un CAUCHEMAR !
+sText_PkmnLockedInNightmare|{B_ATK_NAME_WITH_PREFIX} est pris\ndans un CAUCHEMAR !
+sText_PkmnLaidCurse|{B_ATK_NAME_WITH_PREFIX} sacrifie des PV et\nmaudit {B_DEF_NAME_WITH_PREFIX} !
+sText_PkmnAfflictedByCurse|{B_ATK_NAME_WITH_PREFIX} est frappé\npar la MALÉDICTION !
+sText_SpikesScattered|Des PICOTS sont éparpillés\ncôté adverse !
+sText_PkmnHurtBySpikes|{B_SCR_ACTIVE_NAME_WITH_PREFIX} souffre\ndes PICOTS !
+sText_PkmnIdentified|{B_ATK_NAME_WITH_PREFIX} identifie\n{B_DEF_NAME_WITH_PREFIX} !
+sText_PkmnPerishCountFell|Le compte à rebours de\n{B_ATK_NAME_WITH_PREFIX} passe à {B_BUFF1} !
+sText_PkmnBracedItself|{B_ATK_NAME_WITH_PREFIX}\nse tient prêt !
+sText_PkmnEnduredHit|{B_DEF_NAME_WITH_PREFIX} ENCAISSE\nle coup !
+sText_MagnitudeStrength|MAGNITUDE {B_BUFF1} !
+sText_PkmnCutHPMaxedAttack|{B_ATK_NAME_WITH_PREFIX} sacrifie des PV\net maximise son ATTAQUE !
+sText_PkmnCopiedStatChanges|{B_ATK_NAME_WITH_PREFIX} copie les changements\nde stats de {B_DEF_NAME_WITH_PREFIX} !
+sText_PkmnGotFree|{B_ATK_NAME_WITH_PREFIX} se libère de\n{B_BUFF1} de {B_DEF_NAME_WITH_PREFIX} !
+sText_PkmnShedLeechSeed|{B_ATK_NAME_WITH_PREFIX} se débarrasse\nde VAMPIGRAINE !
+sText_PkmnBlewAwaySpikes|{B_ATK_NAME_WITH_PREFIX} balaie\nles PICOTS !
+sText_PkmnFledFromBattle|{B_ATK_NAME_WITH_PREFIX} a fui\nle combat !
+sText_PkmnForesawAttack|{B_ATK_NAME_WITH_PREFIX} a prévu\nune attaque !
+sText_PkmnTookAttack|{B_DEF_NAME_WITH_PREFIX} subit\nl'attaque {B_BUFF1} !
+sText_PkmnChoseXAsDestiny|{B_ATK_NAME_WITH_PREFIX} choisit\n{B_CURRENT_MOVE} pour destin !
+sText_PkmnAttack|Attaque de {B_BUFF1} !
+sText_PkmnCenterAttention|{B_ATK_NAME_WITH_PREFIX} devient\nle centre d'attention !
+sText_PkmnChargingPower|{B_ATK_NAME_WITH_PREFIX} commence\nà charger sa puissance !
+sText_NaturePowerTurnedInto|PUISSANCE NATURE devient\n{B_CURRENT_MOVE} !
+sText_PkmnStatusNormal|Le statut de {B_ATK_NAME_WITH_PREFIX}\nredevient normal !
+sText_PkmnSubjectedToTorment|{B_DEF_NAME_WITH_PREFIX} subit\nTOURMENTE !
+sText_PkmnTighteningFocus|{B_ATK_NAME_WITH_PREFIX} resserre\nsa concentration !
+sText_PkmnFellForTaunt|{B_DEF_NAME_WITH_PREFIX} tombe dans\nle piège de RAILLERIE !
+sText_PkmnReadyToHelp|{B_ATK_NAME_WITH_PREFIX} est prêt à\naider {B_DEF_NAME_WITH_PREFIX} !
+sText_PkmnSwitchedItems|{B_ATK_NAME_WITH_PREFIX} échange ses objets\navec son adversaire !
+sText_PkmnObtainedX|{B_ATK_NAME_WITH_PREFIX} obtient\n{B_BUFF1}.
+sText_PkmnObtainedX2|{B_DEF_NAME_WITH_PREFIX} obtient\n{B_BUFF2}.
+sText_PkmnObtainedXYObtainedZ|{B_ATK_NAME_WITH_PREFIX} obtient\n{B_BUFF1}.\p{B_DEF_NAME_WITH_PREFIX} obtient\n{B_BUFF2}.
+sText_PkmnCopiedFoe|{B_ATK_NAME_WITH_PREFIX} copie\n{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX} !
+sText_PkmnMadeWish|{B_ATK_NAME_WITH_PREFIX} fait un VOEU !
+sText_PkmnWishCameTrue|Le VOEU de {B_BUFF1}\nse réalise !
+sText_PkmnPlantedRoots|{B_ATK_NAME_WITH_PREFIX} plante ses racines !
+sText_PkmnAbsorbedNutrients|{B_ATK_NAME_WITH_PREFIX} absorbe des\nnutriments avec ses racines !
+sText_PkmnAnchoredItself|{B_DEF_NAME_WITH_PREFIX} s'ancre\navec ses racines !
+sText_PkmnWasMadeDrowsy|{B_ATK_NAME_WITH_PREFIX} rend\n{B_DEF_NAME_WITH_PREFIX} somnolent !
+sText_PkmnKnockedOff|{B_ATK_NAME_WITH_PREFIX} fait tomber\n{B_LAST_ITEM} de {B_DEF_NAME_WITH_PREFIX} !
+sText_PkmnSwappedAbilities|{B_ATK_NAME_WITH_PREFIX} échange son talent\navec son adversaire !
+sText_PkmnSealedOpponentMove|{B_ATK_NAME_WITH_PREFIX} scelle les\nattaques adverses !
+sText_PkmnWantsGrudge|{B_ATK_NAME_WITH_PREFIX} veut que son\nadversaire garde RANCUNE !
+sText_PkmnLostPPGrudge|{B_BUFF1} de {B_ATK_NAME_WITH_PREFIX} perd\ntous ses PP à cause de RANCUNE !
+sText_PkmnShroudedItself|{B_ATK_NAME_WITH_PREFIX} s'enveloppe\ndans {B_CURRENT_MOVE} !
+sText_PkmnMoveBounced|{B_CURRENT_MOVE} de {B_ATK_NAME_WITH_PREFIX}\nest renvoyée par MIROIR MAGIK !
+sText_PkmnWaitsForTarget|{B_ATK_NAME_WITH_PREFIX} attend que son\nadversaire agisse !
+sText_PkmnSnatchedMove|{B_DEF_NAME_WITH_PREFIX} VOLE l'attaque\nde {B_SCR_ACTIVE_NAME_WITH_PREFIX} !
+sText_ElectricityWeakened|La puissance de l'électricité\nest affaiblie !
+sText_FireWeakened|La puissance du feu\nest affaiblie !
+sText_XFoundOneY|{B_ATK_NAME_WITH_PREFIX} trouve\n{B_LAST_ITEM} !
+sText_SoothingAroma|Un doux parfum se répand\nalentour !
+sText_ItemsCantBeUsedNow|Impossible d'utiliser des objets.{PAUSE 64}
+sText_ForXCommaYZ|Pour {B_SCR_ACTIVE_NAME_WITH_PREFIX},\n{B_LAST_ITEM} {B_BUFF1}
+sText_PkmnUsedXToGetPumped|{B_SCR_ACTIVE_NAME_WITH_PREFIX} utilise\n{B_LAST_ITEM} pour se motiver !
+sText_PkmnLostFocus|{B_ATK_NAME_WITH_PREFIX} perd sa\nconcentration et ne bouge pas !
+sText_PkmnWasDraggedOut|{B_DEF_NAME_WITH_PREFIX} est\nentraîné dehors !\p
+sText_TheWallShattered|Le mur est brisé !
+sText_ButNoEffect|Mais ça n'a aucun effet !
+sText_PkmnHasNoMovesLeft|{B_ACTIVE_NAME_WITH_PREFIX} n'a plus\nd'attaque !\p
+sText_PkmnMoveIsDisabled|{B_CURRENT_MOVE} de {B_ACTIVE_NAME_WITH_PREFIX}\nest bloquée !\p
+sText_PkmnCantUseMoveTorment|{B_ACTIVE_NAME_WITH_PREFIX} ne peut pas rejouer\nla même attaque (TOURMENTE) !\p
+sText_PkmnCantUseMoveTaunt|{B_ACTIVE_NAME_WITH_PREFIX} ne peut pas utiliser\n{B_CURRENT_MOVE} après RAILLERIE !\p
+sText_PkmnCantUseMoveSealed|{B_ACTIVE_NAME_WITH_PREFIX} ne peut pas utiliser\n{B_CURRENT_MOVE}, scellée !\p
+sText_PkmnMadeItRain|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nfait pleuvoir !
+sText_PkmnRaisedSpeed|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nmonte sa VITESSE !
+sText_PkmnProtectedBy|{B_DEF_NAME_WITH_PREFIX} est protégé\npar {B_DEF_ABILITY} !
+sText_PkmnPreventsUsage|{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\nempêche {B_ATK_NAME_WITH_PREFIX}\ld'utiliser {B_CURRENT_MOVE} !
+sText_PkmnRestoredHPUsing|{B_DEF_NAME_WITH_PREFIX} récupère des PV\navec {B_DEF_ABILITY} !
+sText_PkmnsXMadeYUseless|{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\nrend {B_CURRENT_MOVE} inutile !
+sText_PkmnChangedTypeWith|{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\nlui donne le type {B_BUFF1} !
+sText_PkmnPreventsParalysisWith|{B_DEF_ABILITY} de {B_EFF_NAME_WITH_PREFIX}\nempêche la paralysie !
+sText_PkmnPreventsRomanceWith|{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\nempêche l'amour !
+sText_PkmnPreventsPoisoningWith|{B_DEF_ABILITY} de {B_EFF_NAME_WITH_PREFIX}\nempêche l'empoisonnement !
+sText_PkmnPreventsConfusionWith|{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\nempêche la confusion !
+sText_PkmnRaisedFirePowerWith|{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\nmonte sa puissance FEU !
+sText_PkmnAnchorsItselfWith|{B_DEF_NAME_WITH_PREFIX} s'ancre\navec {B_DEF_ABILITY} !
+sText_PkmnCutsAttackWith|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nbaisse l'ATTAQUE de {B_DEF_NAME_WITH_PREFIX} !
+sText_PkmnPreventsStatLossWith|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nempêche la baisse de stats !
+sText_PkmnHurtsWith|{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\nblesse {B_ATK_NAME_WITH_PREFIX} !
+sText_PkmnTraced|{B_SCR_ACTIVE_NAME_WITH_PREFIX} CALQUE\n{B_BUFF2} de {B_BUFF1} !
+sText_PkmnsXPreventsBurns|{B_EFF_ABILITY} de {B_EFF_NAME_WITH_PREFIX}\nempêche les brûlures !
+sText_PkmnsXBlocksY|{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\nbloque {B_CURRENT_MOVE} !
+sText_PkmnsXBlocksY2|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nbloque {B_CURRENT_MOVE} !
+sText_PkmnsXRestoredHPALittle2|{B_ATK_ABILITY} de {B_ATK_NAME_WITH_PREFIX}\nrestaure un peu de PV !
+sText_PkmnsXWhippedUpSandstorm|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nsoulève une tempête de sable !
+sText_PkmnsXIntensifiedSun|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nintensifie les rayons du soleil !
+sText_PkmnsXPreventsYLoss|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nempêche la baisse de {B_BUFF1} !
+sText_PkmnsXInfatuatedY|{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\ncharme {B_ATK_NAME_WITH_PREFIX} !
+sText_PkmnsXMadeYIneffective|{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\nrend {B_CURRENT_MOVE} inefficace !
+sText_PkmnsXCuredYProblem|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nguérit son problème de {B_BUFF1} !
+sText_TopazeAbilHurt|{B_SCR_ACTIVE_NAME_WITH_PREFIX} souffre\nde {B_SCR_ACTIVE_ABILITY} !
+sText_TopazeHailStart|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nfait tomber la grêle !
+sText_TopazeSlowStart|{B_SCR_ACTIVE_NAME_WITH_PREFIX} n'arrive\npas à démarrer !
+sText_TopazeSlowStartEnd|{B_SCR_ACTIVE_NAME_WITH_PREFIX} retrouve\nenfin ses moyens !
+sText_TopazeAngerPoint|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nmaximise son ATTAQUE !
+sText_TopazeAftermath|{B_ATK_NAME_WITH_PREFIX} est blessé\npar RANCUNE FINALE !
+sText_TopazeRockSet|Des pierres pointues flottent\nautour de l'équipe adverse !
+sText_TopazeRockHurt|Des pierres pointues\nentaillent {B_SCR_ACTIVE_NAME_WITH_PREFIX} !
+sText_TopazeRockFree|{B_ATK_NAME_WITH_PREFIX} balaie les\npierres pointues !
+sText_TopazeTSpikesSet|Des pics empoisonnés sont éparpillés\nautour de l'adversaire !
+sText_TopazeTSpikesGone|{B_SCR_ACTIVE_NAME_WITH_PREFIX} absorbe\nles PICS TOXIK !
+sText_TopazeTSpikesFree|{B_ATK_NAME_WITH_PREFIX} balaie\nles PICS TOXIK !
+sText_TopazeAbilUp|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nmonte son {B_BUFF1} !
+sText_TopazeAbilUp2|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nmonte beaucoup son {B_BUFF1} !
+sText_TopazeAbilDown|{B_BUFF1} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nbaisse à cause d'un talent !
+sText_TopazeMummy|Le talent de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\ndevient MOMIE !
+sText_TopazeProtean|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nchange son type en {B_BUFF1} !
+sText_TopazeMoody0|CAPRICE de {B_SCR_ACTIVE_NAME_WITH_PREFIX} :\n{B_BUFF1} monte, {B_BUFF2} baisse !
+sText_TopazeMoody1|CAPRICE de {B_SCR_ACTIVE_NAME_WITH_PREFIX} monte\nbeaucoup son {B_BUFF1} !
+sText_TopazeBadDreams|{B_SCR_ACTIVE_NAME_WITH_PREFIX} est tourmenté\npar de mauvais rêves !
+sText_ItSuckedLiquidOoze|Il a aspiré la\nBOUE LIQUIDE !
+sText_PkmnTransformed|{B_SCR_ACTIVE_NAME_WITH_PREFIX} se transforme !
+sText_PkmnsXTookAttack|{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\nabsorbe l'attaque !
+gText_PkmnsXPreventsSwitching|{B_LAST_ABILITY} de {B_BUFF1}\nempêche le changement !\p
+sText_PreventedFromWorking|{B_DEF_ABILITY} de {B_DEF_NAME_WITH_PREFIX}\nempêche {B_BUFF1} de\l{B_SCR_ACTIVE_NAME_WITH_PREFIX} de fonctionner !
+sText_PkmnsXMadeItIneffective|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nl'a rendu inefficace !
+sText_PkmnsXPreventsFlinching|{B_EFF_ABILITY} de {B_EFF_NAME_WITH_PREFIX}\nempêche la peur !
+sText_PkmnsXPreventsYsZ|{B_ATK_ABILITY} de {B_ATK_NAME_WITH_PREFIX}\nempêche {B_DEF_ABILITY} de\l{B_DEF_NAME_WITH_PREFIX} de fonctionner !
+sText_PkmnsXCuredItsYProblem|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nguérit son problème de {B_BUFF1} !
+sText_PkmnsXHadNoEffectOnY|{B_SCR_ACTIVE_ABILITY} de {B_SCR_ACTIVE_NAME_WITH_PREFIX}\nn'a aucun effet sur {B_EFF_NAME_WITH_PREFIX} !
+sText_TooScaredToMove|{B_ATK_NAME_WITH_PREFIX} a trop peur pour bouger !
+sText_GetOutGetOut|SPECTRE : Va-t-en…… Va-t-en……
+sText_StatSharply|fortement 
+gBattleText_Rose|en hausse !
+sText_StatHarshly|fortement 
+sText_StatFell|en baisse !
+sText_AttackersStatRose|{B_BUFF1} de {B_ATK_NAME_WITH_PREFIX}\n{B_BUFF2}
+gText_DefendersStatRose|{B_BUFF1} de {B_DEF_NAME_WITH_PREFIX}\n{B_BUFF2}
+sText_UsingItemTheStatOfPkmnRose|Grâce à {B_LAST_ITEM}, {B_BUFF1}\nde {B_SCR_ACTIVE_NAME_WITH_PREFIX} {B_BUFF2}
+sText_AttackersStatFell|{B_BUFF1} de {B_ATK_NAME_WITH_PREFIX}\n{B_BUFF2}
+sText_DefendersStatFell|{B_BUFF1} de {B_DEF_NAME_WITH_PREFIX}\n{B_BUFF2}
+sText_StatsWontIncrease2|Les stats de {B_ATK_NAME_WITH_PREFIX}\nne peuvent plus monter !
+sText_StatsWontDecrease2|Les stats de {B_DEF_NAME_WITH_PREFIX}\nne peuvent plus baisser !
+sText_CriticalHit|Coup critique !
+sText_OneHitKO|K.O. en un coup !
+sText_123Poof|{PAUSE 32}1, {PAUSE 15}2 et{PAUSE 15}… {PAUSE 15}… {PAUSE 15}… {PAUSE 15}{PLAY_SE SE_BALL_BOUNCE_1}Hop !\p
+sText_AndEllipsis|Et…\p
+sText_HMMovesCantBeForgotten|Impossible d'oublier\nune CS maintenant.\p
+sText_NotVeryEffective|Ce n'est pas très efficace…
+sText_SuperEffective|C'est super efficace !
+sText_GotAwaySafely|{PLAY_SE SE_FLEE}Fuite réussie !\p
+sText_PkmnFledUsingIts|{PLAY_SE SE_FLEE}{B_ATK_NAME_WITH_PREFIX} fuit\navec {B_LAST_ITEM} !\p
+sText_PkmnFledUsing|{PLAY_SE SE_FLEE}{B_ATK_NAME_WITH_PREFIX} fuit\navec {B_ATK_ABILITY} !\p
+sText_WildPkmnFled|{PLAY_SE SE_FLEE}{B_BUFF1} sauvage a fui !
+sText_PlayerDefeatedLinkTrainer|Le joueur a battu\n{B_LINK_OPPONENT1_NAME} !
+sText_TwoLinkTrainersDefeated|Le joueur a battu {B_LINK_OPPONENT1_NAME}\net {B_LINK_OPPONENT2_NAME} !
+sText_PlayerLostAgainstLinkTrainer|Le joueur a perdu contre\n{B_LINK_OPPONENT1_NAME} !
+sText_PlayerLostToTwo|Le joueur a perdu contre\n{B_LINK_OPPONENT1_NAME} et {B_LINK_OPPONENT2_NAME} !
+sText_PlayerBattledToDrawLinkTrainer|Match nul contre\n{B_LINK_OPPONENT1_NAME} !
+sText_PlayerBattledToDrawVsTwo|Match nul contre\n{B_LINK_OPPONENT1_NAME} et {B_LINK_OPPONENT2_NAME} !
+sText_WildFled|{PLAY_SE SE_FLEE}{B_LINK_OPPONENT1_NAME} a fui !
+sText_TwoWildFled|{PLAY_SE SE_FLEE}{B_LINK_OPPONENT1_NAME} et\n{B_LINK_OPPONENT2_NAME} ont fui !
+sText_NoRunningFromTrainers|Non ! On ne fuit pas\nun combat de DRESSEUR !\p
+sText_CantEscape|Impossible de fuir !\p
+sText_ButNothingHappened|Mais rien ne se passe !
+sText_ButItFailed|Mais ça échoue !
+sText_ItHurtConfusion|Dans sa confusion, il\nse blesse tout seul !
+sText_MirrorMoveFailed|MIROIR a échoué !
+sText_StartedToRain|Il se met à pleuvoir !
+sText_DownpourStarted|Une averse commence !
+sText_RainContinues|La pluie continue de tomber.
+sText_DownpourContinues|L'averse continue.
+sText_RainStopped|La pluie s'est arrêtée.
+sText_SandstormBrewed|Une tempête de sable se lève !
+sText_SandstormRages|La tempête de sable fait rage.
+sText_SandstormSubsided|La tempête de sable se calme.
+sText_SunlightGotBright|Le soleil brille plus fort !
+sText_SunlightStrong|Le soleil est ardent.
+sText_SunlightFaded|Le soleil a faibli.
+sText_StartedHail|Il se met à grêler !
+sText_HailContinues|La grêle continue de tomber.
+sText_HailStopped|La grêle s'est arrêtée.
+sText_FailedToSpitUp|Mais il n'a rien à\nCRACHER !
+sText_FailedToSwallow|Mais il n'a rien à\nAVALER !
+sText_WindBecameHeatWave|Le vent se change en\nVAGUE DE CHALEUR !
+sText_StatChangesGone|Tous les changements de\nstats sont annulés !
+sText_CoinsScattered|Des pièces volent partout !
+sText_TooWeakForSubstitute|Il est trop faible pour\ncréer un clone !
+sText_SharedPain|Les combattants partagent\nleur douleur !
+sText_BellChimed|Une cloche a sonné !
+sText_FaintInThree|Tous les POKéMON touchés\nseront K.O. dans trois tours !
