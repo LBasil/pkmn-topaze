@@ -38,6 +38,7 @@ TARGETS = [  # (fichier, table, limite)
     ('src/data/items.h', 'items', 13),
     ('src/battle_main.c', 'types', 6),
     ('src/data/text/nature_names.h', 'natures', 99),
+    ('src/data/text/trainer_class_names.h', 'classes', 12),
 ]
 LINE = re.compile(r'_\("([^"]*)"\)')
 
@@ -53,14 +54,14 @@ def apply(lg):
         def rep(m):
             nonlocal n, miss
             en = m.group(1)
-            if '{' in en: return m.group(0)
+            if '{' in en and tab != 'classes': return m.group(0)
             fr = t.get(en)
             if fr is None and tab == 'items':
                 mm = re.fullmatch(r'(TM|HM)(\d\d)', en)
                 if mm: fr = ('CT' if mm.group(1) == 'TM' else 'CS') + mm.group(2)
             if fr is None: return m.group(0)
-            fr = fit(fr, lim)
-            bad = [c for c in fr if c not in cs and c not in '{}']
+            fr = fr if '{' in fr else fit(fr, lim)
+            bad = [c for c in re.sub(r'\{[A-Z]+\}', '', fr) if c not in cs]
             if bad:
                 print('! %s -> %s : %r' % (en, fr, bad)); miss += 1; return m.group(0)
             n += 1
