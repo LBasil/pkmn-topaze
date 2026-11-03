@@ -93,11 +93,11 @@
  },
  "VermilionCity_Gym_Text_NopeOnlyTrashHere": {
   "en": "Nope!\\nThere's only trash here.",
-  "fr": "Non !\\nIl n'y a que des ordures ici."
+  "fr": "Non ! Il y a juste une poubelle\\nici."
  },
  "VermilionCity_Gym_Text_OnlyTrashLocksWereReset": {
   "en": "Nope!\\nThere's only trash here.\\pHey!\\nThe electric locks were reset!",
-  "fr": "Non !\\nIl n'y a que des ordures ici.\\pHé !\\nLes verrous électriques se sont\\lréinitialisés !"
+  "fr": "Non ! Il y a juste une poubelle\\nici.\\pOups… Les verrous sont en place !"
  },
  "VermilionCity_Gym_Text_ReceivedTM34FromLtSurge": {
   "en": "{PLAYER} received TM02\\nfrom HERA.",
@@ -105,11 +105,11 @@
  },
  "VermilionCity_Gym_Text_SecondLockOpened": {
   "en": "The second electric lock opened!\\nThe motorized door opened!",
-  "fr": "Le deuxième verrou électrique s'est\\nouvert !\\lLa porte motorisée s'est ouverte !"
+  "fr": "Le deuxième verrou est levé ! La\\nporte s'ouvre !"
  },
  "VermilionCity_Gym_Text_SwitchUnderTrashFirstLockOpened": {
   "en": "Hey! There's a switch under the\\ntrash! Turn it on!\\pThe first electric lock opened!",
-  "fr": "Hé ! Il y a un interrupteur sous\\nles ordures ! Active-le !\\pLe premier verrou électrique s'est\\nouvert !"
+  "fr": "Oh ! Un bouton sous la poubelle !\\nDingue !\\pLe premier verrou est levé !"
  },
  "VermilionCity_Gym_Text_TuckerDefeat": {
   "en": "Stop!\\nYou're very good!",

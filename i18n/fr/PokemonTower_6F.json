@@ -9,11 +9,11 @@
  },
  "PokemonTower_6F_Text_AngelicaPostBattle": {
   "en": "I feel anemic and weak…",
-  "fr": "Je me sens anémié et faible…"
+  "fr": "Je me sens faible…"
  },
  "PokemonTower_6F_Text_BeGoneIntruders": {
   "en": "Be gone…\\nIntruders…",
-  "fr": "Va-t'en…\\nIntrus…"
+  "fr": "Fuis… Misérable…"
  },
  "PokemonTower_6F_Text_EmiliaDefeat": {
   "en": "Something fell out!",
@@ -25,7 +25,7 @@
  },
  "PokemonTower_6F_Text_EmiliaPostBattle": {
   "en": "My hair didn't fall out!\\nIt was a malevolent spirit!",
-  "fr": "Mes cheveux ne sont pas tombés !\\nC'était un esprit malveillant !"
+  "fr": "J'étais sous l'emprise d'un esprit\\n!"
  },
  "PokemonTower_6F_Text_GhostWasCubonesMother": {
   "en": "The ghost was the restless spirit\\nof CUBONE's mother!",
@@ -41,10 +41,10 @@
  },
  "PokemonTower_6F_Text_JenniferPostBattle": {
   "en": "What's going on here?",
-  "fr": "Que se passe-t-il ici ?"
+  "fr": "Mais qu'est-ce qui se passe ici ?"
  },
  "PokemonTower_6F_Text_MothersSpiritWasCalmed": {
   "en": "The mother's spirit was calmed.\\pIt departed to the afterlife…",
-  "fr": "L'esprit de la mère a été apaisé.\\pIl est parti vers l'au-delà…"
+  "fr": "L'âme de la mère a été apaisée.\\pElle est partie vers l'autre monde\\n!"
  }
 }

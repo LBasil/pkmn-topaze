@@ -41,7 +41,7 @@
  },
  "SaffronCity_Text_CriminalLifeMakesMeFeelAlive": {
   "en": "My life as a criminal makes me feel\\nso alive!",
-  "fr": "Ma vie de criminel me fait me\\nsentir si vivant !"
+  "fr": "Rien de mieux qu'une vie de\\ncriminel pour se sentir vivant !"
  },
  "SaffronCity_Text_DontGetDefiantOrIllHurtYou": {
   "en": "Don't get defiant!\\nOr I'll have to hurt you!",
@@ -61,7 +61,7 @@
  },
  "SaffronCity_Text_GreatBallImprovedCatchRate": {
   "en": "TRAINER TIPS\\pThe new GREAT BALL offers improved\\ncatching rates.\\pTry it on those hard-to-catch\\nPOKéMON.",
-  "fr": "CONSEILS AUX DRESSEURS\\pLa nouvelle SUPER BALL offre de\\nmeilleurs taux de capture.\\pEssaie-la sur les POKéMON\\ndifficiles à capturer."
+  "fr": "ASTUCE\\pLa SUPER BALL augmente les chances\\nde capture.\\pFaites un essai sur des POKéMON\\ndifficiles à attraper."
  },
  "SaffronCity_Text_GuardGone": {
   "en": "The MASTER is gone. Half of us\\nran. I think I'll quit too.",
@@ -77,7 +77,7 @@
  },
  "SaffronCity_Text_HesTakingASnooze": {
   "en": "…\\nSnore…\\pHah! He's taking a snooze!",
-  "fr": "…\\nRonfle…\\pHah ! Il fait une sieste !"
+  "fr": "… (ronffl)…\\pAh ! Il dort !"
  },
  "SaffronCity_Text_HowCanClubNotRecognizeLance": {
   "en": "This FAN CLUB…\\nNo one here has a clue!\\pHow could they not recognize\\nthe brilliance that is LANCE?\\pHe stands for justice!\\nHe's cool, and yet passionate!\\lHe's the greatest, LANCE!",
@@ -85,7 +85,7 @@
  },
  "SaffronCity_Text_ImASecurityGuard": {
   "en": "I'm a security guard.\\pSuspicious kids I don't allow in!",
-  "fr": "Je suis agent de sécurité.\\pLes gamins suspects, je ne les\\nlaisse pas entrer !"
+  "fr": "Moi… J'suis un garde.\\pLes nabots tout louches, moi, j'les\\nlaisse pas passer !"
  },
  "SaffronCity_Text_Market_Bye": {
   "en": "The market closes whenever time\\nsays so.",
@@ -101,7 +101,7 @@
  },
  "SaffronCity_Text_MrPsychicsHouse": {
   "en": "MR. PSYCHIC'S HOUSE",
-  "fr": "MAISON DE M. PSY"
+  "fr": "MAISON DE MR. PSY"
  },
  "SaffronCity_Text_PeopleComingBackToSaffron": {
   "en": "People fled from here in droves\\nwhen those ONYBRIS came.\\pThey should be flocking back to\\nHEMATOWN now.",
@@ -109,7 +109,7 @@
  },
  "SaffronCity_Text_Pidgeot": {
   "en": "PIDGEOT: Bi bibii!",
-  "fr": "ROUCARNAGE : Bi bibii !"
+  "fr": "ROUCARNAGE : Rou !"
  },
  "SaffronCity_Text_ProcheViolette_After": {
   "en": "The future is not fixed. You proved\\nthat today.",
@@ -205,11 +205,11 @@
  },
  "SaffronCity_Text_TrainerFanClubSign": {
   "en": "POKéMON TRAINER FAN CLUB\\pMany TRAINERS have scribbled their\\nnames on this sign.",
-  "fr": "CLUB DE FANS DES DRESSEURS POKéMON\\pBeaucoup de DRESSEURS ont griffonné\\nleurs noms sur ce panneau."
+  "fr": "FAN CLUB DES DRESSEURS POKéMON\\pDes noms de DRESSEURS sont inscrits\\nsur le panneau…"
  },
  "SaffronCity_Text_WatchWhereYoureWalking": {
   "en": "Ow!\\nWatch where you're walking!",
-  "fr": "Aïe !\\nRegarde où tu marches !"
+  "fr": "Tu m'as marché sur le pied, non ?"
  },
  "SaffronCity_Text_WeCanExploitMonsAroundWorld": {
   "en": "With HEMATEK under control, we can\\nexploit POKéMON around the world!\\pWe'll get stinking rich, yeahah!",
@@ -217,7 +217,7 @@
  },
  "SaffronCity_Text_WhatDoYouWantGetLost": {
   "en": "What do you want?\\nGet lost!",
-  "fr": "Qu'est-ce que tu veux ?\\nDégage !"
+  "fr": "Kess tu veux ? Du vent !"
  },
  "SaffronCity_Text_YouBeatTeamRocket": {
   "en": "You beat TEAM ONYBRIS all alone?\\nThat's amazing!",

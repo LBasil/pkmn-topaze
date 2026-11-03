@@ -1,7 +1,7 @@
 {
  "LavenderTown_Text_DoYouBelieveInGhosts": {
   "en": "Do you believe in ghosts?",
-  "fr": "Crois-tu aux fantômes ?"
+  "fr": "Crois-tu aux SPECTRES ?"
  },
  "LavenderTown_Text_GhostsAppearedInTower": {
   "en": "Ghosts walk the POKéMON TOWER\\nsince the thieves tried their luck.\\pMR. FUJI, the keeper, went up to\\ncalm them. He is very brave.",
@@ -9,11 +9,11 @@
  },
  "LavenderTown_Text_JustImaginingWhiteHand": {
   "en": "Hahaha, I guess not.\\pThat white hand on your shoulder…\\nI'm just imagining it.",
-  "fr": "Hahaha, je suppose que non.\\pCette main blanche sur ton\\népaule… Je l'imagine juste."
+  "fr": "T'as raison.\\pLa main toute blanche sur ton\\népaule est fausse alors…"
  },
  "LavenderTown_Text_PokemonTowerSign": {
   "en": "POKéMON TOWER\\nBecalm the Spirits of POKéMON",
-  "fr": "TOUR POKéMON\\nApaise les Esprits des POKéMON"
+  "fr": "Paix à l'âme des POKéMON TOUR\\nPOKéMON"
  },
  "LavenderTown_Text_PoliceClosed": {
   "en": "POLICEMAN: Thieves tried to take\\nthe SPINEL, and woke the dead.\\pThe town is sealed until the TOWER\\nis calm. MR. FUJI is at the top.",
@@ -85,7 +85,7 @@
  },
  "LavenderTown_Text_SoThereAreBelievers": {
   "en": "Really?\\nSo there are believers…",
-  "fr": "Vraiment ?\\nIl y a donc des croyants…"
+  "fr": "Vraiment ? Il en faut…"
  },
  "LavenderTown_Text_TQ_Ask": {
   "en": "The spirits ask for a SPELL TAG.\\nCan you find one?",

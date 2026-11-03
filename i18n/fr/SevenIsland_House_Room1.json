@@ -25,7 +25,7 @@
  },
  "SevenIsland_House_Room1_Text_OhYouWontBattle": {
   "en": "Oh…\\nYou won't battle…\\pI see, I see.\\n… …\\pWell, perhaps if you change your\\nmind, do come back.",
-  "fr": "Oh…\\nTu ne veux pas te battre…\\pJe vois, je vois.\\n… …\\pEh bien, si tu changes d'avis,\\nreviens."
+  "fr": "Oh… Tu ne veux pas te battre ?\\pJe vois, je vois. …\\pBon, si jamais tu changes d'avis."
  },
  "SevenIsland_House_Room1_Text_OnlyEnjoymentWatchingBattles": {
   "en": "I may not look like much now,\\nbut when I was younger…\\pI flew everywhere, challenging\\nTRAINERS wherever I found them.\\pNow, my only source of enjoyment\\nis reminiscing about the past while\\lwatching battles.",
@@ -33,11 +33,11 @@
  },
  "SevenIsland_House_Room1_Text_SaveProgressBeforeBattle": {
   "en": "Fine! Before your battle, would\\nyou like to save your game?",
-  "fr": "Bien ! Avant ton combat, veux-tu\\nsauvegarder ta partie ?"
+  "fr": "Bien ! Veux-tu sauvegarder avant de\\ncombattre ?"
  },
  "SevenIsland_House_Room1_Text_SlightBreezeAroundBox": {
   "en": "There is a slight breeze blowing\\naround the box.",
-  "fr": "Une légère brise souffle autour\\nde la boîte."
+  "fr": "Il y a un courant d'air derrière\\nles cartons."
  },
  "SevenIsland_House_Room1_Text_StrVar1_1": {
   "en": "{STR_VAR_1}",

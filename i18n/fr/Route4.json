@@ -9,7 +9,7 @@
  },
  "Route4_Text_CrissyPostBattle": {
   "en": "There might not be any more\\nmushrooms here.\\pI think I got them all.",
-  "fr": "Il n'y a peut-être plus de\\nchampignons ici.\\pJe crois que je les ai tous eus."
+  "fr": "Je crois qu'il n'y a plus de\\nchampignons dans le coin.\\pJe les ai tous ramassés."
  },
  "Route4_Text_MtMoonEntrance": {
   "en": "MT. MOON\\nTunnel Entrance",
@@ -41,7 +41,7 @@
  },
  "Route4_Text_TrippedOverGeodude": {
   "en": "Ouch! I tripped over a rocky\\nPOKéMON, GEODUDE!",
-  "fr": "Aïe ! J'ai trébuché sur un POKéMON\\nrocheux, RACAILLOU !"
+  "fr": "Ha ! J'ai trébuché sur un POKéMON\\nROCHE : RACAILLOU !"
  },
  "Text_MegaKickDeclined": {
   "en": "You'll come crawling back when you\\nrealize the value of MEGA KICK.",
@@ -73,6 +73,6 @@
  },
  "Text_MegaPunchWhichMon": {
   "en": "Fine!\\nWhich POKéMON will learn it?",
-  "fr": "Parfait !\\nQuel POKéMON va l'apprendre ?"
+  "fr": "Parfait ! Quel POKéMON doit\\nl'apprendre ?"
  }
 }

@@ -33,7 +33,7 @@
  },
  "CeruleanCity_Text_ExplainFameCheckerSmellYa": {
   "en": "A chatty gossip like you…\\nThat thing's perfect.\\pI don't need it because I don't\\ngive a hoot about others.\\pAll right, this time I really am\\ngone. Smell ya!",
-  "fr": "Un bavard comme toi...\\nCe truc est parfait.\\pJe n'en ai pas besoin, je me fiche\\ndes autres.\\pBon, cette fois je pars vraiment.\\nÀ plus !"
+  "fr": "C'est parfait pour une pipelette\\ncomme toi.\\pJ'en ai pas besoin parce que j'en\\nai rien à faire des autres.\\pAllez, j'suis plus là, tchao !"
  },
  "CeruleanCity_Text_GymSign": {
   "en": "TOURMALIA POKéMON GYM\\nLEADER: SYLVESTRE\\lThe Warden of the Forest!",
@@ -49,11 +49,11 @@
  },
  "CeruleanCity_Text_OhRightLittlePresentAsFavor": {
   "en": "Oh, yeah, right.\\pI feel sorry for you. No, really.\\nYou're always plodding behind me.\\pSo here, I'll give you a little\\npresent as a favor.",
-  "fr": "Ah oui, c'est vrai.\\pTu me fais de la peine. Non,\\nvraiment. Tu traînes toujours\\pderrière moi.\\pAlors tiens, je te fais un petit\\ncadeau, en service."
+  "fr": "Ouais, c'est ça…\\pJ'ai les boules pour toi. J'te\\njure, t'es toujours derrière moi.\\pBon, j'vais te donner un cadeau,\\nmais c'est une faveur."
  },
  "CeruleanCity_Text_PokemonEncyclopediaAmusing": {
   "en": "You're making an encyclopedia on\\nPOKéMON? That sounds amusing.",
-  "fr": "Tu fais une encyclopédie des\\nPOKéMON ? Ça a l'air amusant."
+  "fr": "Tu fais une encyclopédie sur les\\nPOKéMON ? Pas mal."
  },
  "CeruleanCity_Text_RefAfter": {
   "en": "DANTE: Take good care of it. The\\nnext REFUGE post is waiting.",
@@ -113,15 +113,15 @@
  },
  "CeruleanCity_Text_TrainerLifeIsToughIsntIt": {
   "en": "You're a TRAINER, too?\\pCollecting, battling…\\nIt's a tough life, isn't it?",
-  "fr": "Toi aussi, tu es DRESSEUR ?\\pCollectionner, combattre...\\nC'est une vie dure, non ?"
+  "fr": "T'es un DRESSEUR aussi ?\\pCapturer… Collectionner… Combattre…\\nDur, hein ?"
  },
  "CeruleanCity_Text_TrainerTipsHeldItems": {
   "en": "TRAINER TIPS\\pA POKéMON can be made to hold\\nan item.\\pSome items can even be used by\\nthe holding POKéMON in battle.",
-  "fr": "CONSEILS AUX DRESSEURS\\pUn POKéMON peut tenir un objet.\\pCertains objets peuvent même être\\nutilisés par le POKéMON en combat."
+  "fr": "ASTUCE\\pLes POKéMON peuvent porter des\\nobjets.\\pCertains objets portés peuvent même\\nêtre utilisés en combat."
  },
  "CeruleanCity_Text_WantBrightRedBicycle": {
   "en": "I want a bright red bicycle.\\pI'll keep it at home, so it won't\\nget dirty.",
-  "fr": "Je veux un vélo rouge vif.\\pJe le garderai à la maison, pour\\nqu'il ne se salisse pas."
+  "fr": "Je veux une jolie bicyclette !\\pJe la veux toute rouge !"
  },
  "CeruleanCity_Text_YouCanCutDownSmallTrees": {
   "en": "Did you know you can CUT down\\nsmall trees?\\pThat tree in the east pass could\\nbe cleared with CUT.\\pI hear the captain of the S.S.\\nANNE owns the HM.",

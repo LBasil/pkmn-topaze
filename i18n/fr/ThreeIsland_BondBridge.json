@@ -9,7 +9,7 @@
  },
  "ThreeIsland_BondBridge_Text_AlexisPostBattle": {
   "en": "Did I just win?\\nOr did I lose?",
-  "fr": "Je viens de gagner ?\\nOu j'ai perdu ?"
+  "fr": "J'ai gagné ou… ? Je viens de perdre\\nlà !"
  },
  "ThreeIsland_BondBridge_Text_AmiraDefeat": {
   "en": "Waaah!\\nWaaah!",
@@ -21,15 +21,15 @@
  },
  "ThreeIsland_BondBridge_Text_AmiraPostBattle": {
   "en": "This year, I'm going to finally\\nlearn how to swim!",
-  "fr": "Cette année, je vais enfin\\napprendre à nager !"
+  "fr": "Juré craché, cette année\\nj'apprendrai à nager !"
  },
  "ThreeIsland_BondBridge_Text_BerryForestAhead": {
   "en": "BERRY FOREST AHEAD",
-  "fr": "FORÊT DES BAIES DEVANT"
+  "fr": "BOIS BAIES DROIT DEVANT"
  },
  "ThreeIsland_BondBridge_Text_BondBridgeSign": {
   "en": "BOND BRIDGE\\nPlease be quiet when crossing.\\pBERRY FOREST AHEAD",
-  "fr": "PONT DES LIENS Merci de rester\\nsilencieux en traversant.\\pFORÊT DES BAIES DEVANT"
+  "fr": "PONT DU LIEN Silence en traversant.\\pBOIS BAIES DROIT DEVANT"
  },
  "ThreeIsland_BondBridge_Text_DenLocked": {
   "en": "Mist rolls out of the cave mouth.\\nThe tide is not ready for you.",
@@ -77,7 +77,7 @@
  },
  "ThreeIsland_BondBridge_Text_NikkiPostBattle": {
   "en": "Perhaps that reek is your sweaty\\nPOKéMON's body odor…",
-  "fr": "Peut-être que cette puanteur vient\\nde l'odeur corporelle de ton\\pPOKéMON en sueur…"
+  "fr": "Tu laves jamais tes POKéMON ? Ça\\nsent vraiment pas bon…"
  },
  "ThreeIsland_BondBridge_Text_TishaDefeat": {
   "en": "Okay, you've won!\\nNow will you please go away?",
@@ -101,6 +101,6 @@
  },
  "ThreeIsland_BondBridge_Text_VioletPostBattle": {
   "en": "If you keep going this way, you'll\\neventually reach BERRY FOREST.",
-  "fr": "Si tu continues dans cette\\ndirection, tu finiras par arriver à\\lla FORÊT DES BAIES."
+  "fr": "Si tu continues ton chemin, tu vas\\ntomber sur les BOIS BAIES."
  }
 }

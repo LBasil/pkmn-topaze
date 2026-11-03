@@ -1,23 +1,23 @@
 {
  "Route5_PokemonDayCare_Text_ComeAgain": {
   "en": "Come again.",
-  "fr": "Reviens quand tu veux."
+  "fr": "À plus tard."
  },
  "Route5_PokemonDayCare_Text_ComeAnytimeYouLike": {
   "en": "Fine.\\nCome anytime you like.",
-  "fr": "Très bien.\\nViens quand tu veux."
+  "fr": "Je vois. Reviens me voir."
  },
  "Route5_PokemonDayCare_Text_ComeSeeMeInAWhile": {
   "en": "Come see me in a while.",
-  "fr": "Reviens me voir dans un moment."
+  "fr": "Reviens un peu plus tard."
  },
  "Route5_PokemonDayCare_Text_DontHaveEnoughMoney": {
   "en": "You don't have enough money.",
-  "fr": "Tu n'as pas assez d'argent."
+  "fr": "Vous n'avez pas assez d'argent."
  },
  "Route5_PokemonDayCare_Text_LookAfterMonForAWhile": {
   "en": "Fine, I'll look after your\\n{STR_VAR_1} for a while.",
-  "fr": "Très bien, je m'occuperai de ton\\n{STR_VAR_1} pendant un moment."
+  "fr": "Très bien, je vais m'occuper de\\n{STR_VAR_1}."
  },
  "Route5_PokemonDayCare_Text_MonHasGrownByXLevels": {
   "en": "Your {STR_VAR_1} has grown a lot.\\nYes, quite a lot, I'd say.\\pLet me see…\\nBy level, it's grown by {STR_VAR_2}.\\pAren't I great?",
@@ -25,15 +25,15 @@
  },
  "Route5_PokemonDayCare_Text_MonNeedsToSpendMoreTime": {
   "en": "You're back already?\\pYour {STR_VAR_1} needs to spend\\nsome more time with me.",
-  "fr": "Déjà de retour ?\\pTon {STR_VAR_1} doit passer\\nencore un peu de temps avec moi."
+  "fr": "Déjà de retour ?\\pTon {STR_VAR_1} doit rester encore un\\npeu."
  },
  "Route5_PokemonDayCare_Text_OnlyHaveOneMonWithYou": {
   "en": "Oh? You only have one POKéMON\\nwith you.",
-  "fr": "Oh ? Tu n'as qu'un seul POKéMON\\navec toi."
+  "fr": "Oh ! Tu n'as qu'un POKéMON sur toi."
  },
  "Route5_PokemonDayCare_Text_OweMeXForMonsReturn": {
   "en": "You owe me ¥{STR_VAR_2} for the return\\nof this POKéMON.",
-  "fr": "Tu me dois {STR_VAR_2} ¥ pour le retour\\nde ce POKéMON."
+  "fr": "Donne-moi {STR_VAR_2}¥ pour que je te\\nrende ton POKéMON."
  },
  "Route5_PokemonDayCare_Text_PlayerGotMonBack": {
   "en": "{PLAYER} got {STR_VAR_1} back\\nfrom the DAY-CARE MAN.",
@@ -41,22 +41,22 @@
  },
  "Route5_PokemonDayCare_Text_ThankYouHeresMon": {
   "en": "Thank you!\\nHere's your POKéMON.",
-  "fr": "Merci !\\nVoici ton POKéMON."
+  "fr": "Merci ! Voilà ton p'tit POKéMON !"
  },
  "Route5_PokemonDayCare_Text_WantMeToRaiseMon": {
   "en": "I run the DAY-CARE service.\\pWould you like me to raise one of\\nyour POKéMON?",
-  "fr": "Je tiens la PENSION.\\pVeux-tu que j'élève un de tes\\nPOKéMON ?"
+  "fr": "Je m'occupe de la PENSION.\\pVeux-tu que j'élève un de tes\\nPOKéMON ?"
  },
  "Route5_PokemonDayCare_Text_WhatWillYouBattleWith": {
   "en": "If you leave me that POKéMON,\\nwhat will you battle with?",
-  "fr": "Si tu me laisses ce POKéMON,\\navec quoi vas-tu te battre ?"
+  "fr": "Si tu me le laisses, avec quoi\\nvas-tu pouvoir combattre ?"
  },
  "Route5_PokemonDayCare_Text_WhichMonShouldIRaise": {
   "en": "Which POKéMON should I raise?",
-  "fr": "Quel POKéMON dois-je élever ?"
+  "fr": "Quel POKéMON veux-tu me confier ?"
  },
  "Route5_PokemonDayCare_Text_YouveGotNoRoomForIt": {
   "en": "You can't take this POKéMON back\\nif you've got no room for it.",
-  "fr": "Tu ne peux pas reprendre ce POKéMON\\nsi tu n'as pas de place."
+  "fr": "Tu n'as plus de place pour ce\\nPOKéMON !"
  }
 }

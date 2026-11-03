@@ -17,7 +17,7 @@
  },
  "FuchsiaCity_Gym_Text_GymGuyPostVictory": {
   "en": "It's amazing how ninja can terrify,\\neven now!",
-  "fr": "C'est incroyable que les ninjas\\npuissent encore terrifier !"
+  "fr": "C'est incroyable de voir comme les\\nninjas peuvent faire peur."
  },
  "FuchsiaCity_Gym_Text_GymStatue": {
   "en": "AMETHIOLITE POKéMON GYM\\nLEADER: ACHLYS\\pWINNING TRAINERS:\\n{RIVAL}",
@@ -37,7 +37,7 @@
  },
  "FuchsiaCity_Gym_Text_KaydenPostBattle": {
   "en": "So, you mix brawn with brains?\\nGood strategy!\\pThat's remarkable for a child\\nTRAINER.",
-  "fr": "Alors, tu mêles muscles et\\ncerveau ? Bonne stratégie !\\pC'est remarquable pour un jeune\\nDRESSEUR."
+  "fr": "Alors tu mélanges la force et\\nl'esprit.\\pC'est remarquable pour un DRESSEUR\\nde ton âge."
  },
  "FuchsiaCity_Gym_Text_KirkDefeat": {
   "en": "I'm done for!",
@@ -93,7 +93,7 @@
  },
  "FuchsiaCity_Gym_Text_MakeSpaceForThis": {
   "en": "Make space for this, child!",
-  "fr": "Fais de la place pour ça !"
+  "fr": "Ton inventaire est plein !"
  },
  "FuchsiaCity_Gym_Text_NateDefeat": {
   "en": "You had me fooled!",
@@ -105,7 +105,7 @@
  },
  "FuchsiaCity_Gym_Text_NatePostBattle": {
   "en": "I like poison and sleep techniques,\\nas they linger after battle!",
-  "fr": "J'aime les techniques de poison et\\nde sommeil, car elles durent après\\lle combat !"
+  "fr": "Les attaques de poison et de\\nsommeil sont très puissantes ! Oui\\l!"
  },
  "FuchsiaCity_Gym_Text_PhilDefeat": {
   "en": "Whoa!\\nYou've got it!",

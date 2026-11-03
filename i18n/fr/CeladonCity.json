@@ -1,7 +1,7 @@
 {
  "CeladonCity_Text_BlewItAllAtSlots": {
   "en": "Moan…\\nI blew it all at the slots!\\pI knew I should have cashed in my\\nCOINS for prizes!",
-  "fr": "Snif...\\nJ'ai tout perdu aux machines !\\pJe savais que j'aurais dû échanger\\nmes JETONS contre des lots !"
+  "fr": "Pfff… J'ai tout perdu au CASINO !\\pJ'aurais dû acheter un prix avec\\nmes JETONS avant de tout dépenser !"
  },
  "CeladonCity_Text_CitySign": {
   "en": "BOURG QUARTZ\\nThe Crystal Quartz Town",
@@ -105,15 +105,15 @@
  },
  "CeladonCity_Text_MyTrustedPalPoliwrath": {
   "en": "This is my trusted pal, POLIWRATH.\\pIt evolved from a POLIWHIRL when\\nI used a WATER STONE.",
-  "fr": "Voici mon fidèle compagnon,\\nTARTARD.\\pIl a évolué d'un TÊTARTE quand\\nj'ai utilisé une PIERRE EAU."
+  "fr": "C'est mon copain : TARTARD !\\pCe n'était qu'un TÊTARTE avant\\nd'utiliser une PIERRE EAU !"
  },
  "CeladonCity_Text_Poliwrath": {
   "en": "POLIWRATH: Ribi ribit!",
-  "fr": "TARTARD : Tar tard !"
+  "fr": "TARTARD : Tarta ! Taaaar !"
  },
  "CeladonCity_Text_PrizeExchangeSign": {
   "en": "COINS exchanged for prizes!\\nPRIZE EXCHANGE",
-  "fr": "JETONS échangés contre des lots !\\nÉCHANGE DE LOTS"
+  "fr": "CHANGE des JETONS contre de super\\nprix !"
  },
  "CeladonCity_Text_RefAfter": {
   "en": "GWEN: Take good care of it. The\\nnext REFUGE post is waiting.",
@@ -149,7 +149,7 @@
  },
  "CeladonCity_Text_ScaldedTongueOnTea": {
   "en": "Aaaagh, ow…\\nI scalded my tongue!\\pThis nice old lady in the MANSION\\ngave me some TEA.\\pBut it was boiling hot!\\nGotta cool it to drink it.",
-  "fr": "Aaaah, aïe...\\nJe me suis brûlé la langue !\\pLa gentille vieille dame du MANOIR\\nm'a donné du THÉ.\\pMais il était bouillant !\\nIl faut le refroidir pour le boire."
+  "fr": "Aaaah ! je me suis brûlé la langue\\n!\\pLa gentille dame de la PENSION m'a\\ndonné du THÉ.\\pMais c'était brûlant ! J'aurais dû\\nsouffler un peu dessus avant."
  },
  "CeladonCity_Text_SomeoneStoleSilphScope": {
   "en": "Oh, what am I to do...\\pMy late husband used to run that\\nGAME CORNER, long ago.\\pTEAM ROCKET paid him to keep quiet\\nabout the basement. Now ONYBRIS\\lpays the same price.\\pSame masks, new name. Awful.",
@@ -181,7 +181,7 @@
  },
  "Text_SoftboiledDeclined": {
   "en": "I'll always be keeping an eye out\\nfor you.\\pI hope we can chat again.",
-  "fr": "Je garderai toujours un œil sur\\ntoi.\\pJ'espère qu'on pourra rediscuter."
+  "fr": "Je serai toujours là si tu as\\nbesoin.\\pJ'espère qu'on se reverra bientôt."
  },
  "Text_SoftboiledTaught": {
   "en": "I wish you the best of luck!",

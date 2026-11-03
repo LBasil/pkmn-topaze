@@ -9,7 +9,7 @@
  },
  "SilphCo_7F_Text_ExplainLapras": {
   "en": "It's a LAPRAS.\\nIt's a very intelligent POKéMON.\\pWe kept it in our lab, but it will\\nbe much better off with you.\\pI think you will be a good TRAINER\\nfor LAPRAS!\\pIt's a good swimmer.\\nIt'll give you a lift across water!",
-  "fr": "C'est un LOKHLASS.\\nC'est un POKéMON très intelligent.\\pNous le gardions dans notre labo,\\nmais il sera bien mieux avec toi.\\pJe pense que tu seras un bon\\nDRESSEUR pour LOKHLASS !\\pC'est un bon nageur.\\nIl te fera traverser l'eau !"
+  "fr": "C'est un LOKHLASS. Il est très\\nintelligent.\\pNous le gardions dans le labo, mais\\nil sera mieux avec toi !\\pTu seras un bon DRESSEUR pour\\nLOKHLASS !\\pC'est un bon nageur, il pourra même\\nte transporter sur l'eau !"
  },
  "SilphCo_7F_Text_FloorSign": {
   "en": "HEMATEK CO. HEAD OFFICE\\n7F",
@@ -25,7 +25,7 @@
  },
  "SilphCo_7F_Text_Grunt1PostBattle": {
   "en": "Doesn't matter.\\nMy brothers will repay the favor!",
-  "fr": "Peu importe. Mes frères me rendront\\nla pareille !"
+  "fr": "Pas grave. Mes frères se chargeront\\nde toi, mon petit !"
  },
  "SilphCo_7F_Text_Grunt2Defeat": {
   "en": "Fine!\\nI lost!",
@@ -65,7 +65,7 @@
  },
  "SilphCo_7F_Text_JoshuaPostBattle": {
   "en": "Despite your age, you are a\\nskilled TRAINER!",
-  "fr": "Malgré ton âge, tu es un DRESSEUR\\ncompétent !"
+  "fr": "Bien que tu sois jeune, tu te\\ndébrouilles pas trop mal !"
  },
  "SilphCo_7F_Text_ObtainedLaprasFromEmployee": {
   "en": "{PLAYER} obtained a LAPRAS from\\nthe HEMATEK employee!",
@@ -73,7 +73,7 @@
  },
  "SilphCo_7F_Text_ReallyDangerousHere": {
   "en": "You!\\nIt's really dangerous here!\\pYou came to save me?\\nYou can't!",
-  "fr": "Toi !\\nC'est vraiment dangereux ici !\\pTu viens me sauver ?\\nTu ne peux pas !"
+  "fr": "Hé toi ! C'est dangereux par ici !\\pTu es là pour me sauver ?\\nImpossible !"
  },
  "SilphCo_7F_Text_RivalDefeat": {
   "en": "Oh, man!\\nSo, you are ready for BOSS\\lONYBRIS!",
@@ -89,7 +89,7 @@
  },
  "SilphCo_7F_Text_RivalWhatKeptYou": {
   "en": "{RIVAL}: What kept you, {PLAYER}?",
-  "fr": "{RIVAL} : Qu'est-ce qui t'a\\nretardé, {PLAYER} ?"
+  "fr": "{RIVAL} : Qu'est-ce qui t'a retenu\\n{PLAYER} ?"
  },
  "SilphCo_7F_Text_RocketBossWentToBoardroom": {
   "en": "TEAM ONYBRIS's BOSS went to the\\nboardroom!\\pIs our PRESIDENT okay?\\nI'm worried.",
@@ -101,7 +101,7 @@
  },
  "SilphCo_7F_Text_ThankYouSoMuch": {
   "en": "Thank you so much!",
-  "fr": "Merci beaucoup !"
+  "fr": "Enfin libre ! Merci merci !"
  },
  "SilphCo_7F_Text_WowYouChasedOffTeamRocket": {
   "en": "Wow!\\pYou chased off TEAM ONYBRIS all by\\nyourself?",

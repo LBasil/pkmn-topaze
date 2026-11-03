@@ -9,7 +9,7 @@
  },
  "RockTunnel_B1F_Text_AllenPostBattle": {
   "en": "In mountains, you'll often find\\nROCK-type POKéMON.",
-  "fr": "En montagne, on trouve souvent des\\nPOKéMON de type ROCHE."
+  "fr": "Les montagnes regorgent de POKéMON\\ndu type ROCHE."
  },
  "RockTunnel_B1F_Text_CooperDefeat": {
   "en": "Shoot!\\nI am so jealous!",
@@ -21,7 +21,7 @@
  },
  "RockTunnel_B1F_Text_CooperPostBattle": {
   "en": "When you finish your POKéDEX,\\ncan I have it?",
-  "fr": "Quand tu auras fini ton POKéDEX,\\nje peux l'avoir ?"
+  "fr": "Tu me donneras ton POKéDEX plus\\ntard ?"
  },
  "RockTunnel_B1F_Text_DudleyDefeat": {
   "en": "Oops!\\nOutmuscled!",
@@ -33,7 +33,7 @@
  },
  "RockTunnel_B1F_Text_DudleyPostBattle": {
   "en": "I go for power because I hate\\nthinking.",
-  "fr": "Je joue la puissance parce que je\\ndéteste réfléchir."
+  "fr": "J'aime pas penser alors je cogne."
  },
  "RockTunnel_B1F_Text_EricDefeat": {
   "en": "Fired away!",
@@ -45,7 +45,7 @@
  },
  "RockTunnel_B1F_Text_EricPostBattle": {
   "en": "I'll raise my POKéMON to beat\\nyours, kid.",
-  "fr": "J'élèverai mes POKéMON pour battre\\nles tiens."
+  "fr": "Je vais encore m'entraîner !"
  },
  "RockTunnel_B1F_Text_MarthaDefeat": {
   "en": "Oh!\\nI lost!",
@@ -57,7 +57,7 @@
  },
  "RockTunnel_B1F_Text_MarthaPostBattle": {
   "en": "I like tiny POKéMON.\\nBig ones are too scary!",
-  "fr": "J'aime les petits POKéMON.\\nLes gros font trop peur !"
+  "fr": "J'aime les petits POKéMON, les gros\\nme font peur !"
  },
  "RockTunnel_B1F_Text_MonSlowpoke": {
   "en": "SLOWPOKE: ...Yawn.\\nIt dozes in the cool air.",
@@ -73,7 +73,7 @@
  },
  "RockTunnel_B1F_Text_SofiaPostBattle": {
   "en": "I want to go home!",
-  "fr": "Je veux rentrer à la maison !"
+  "fr": "J'veux rentrer à ma maison !"
  },
  "RockTunnel_B1F_Text_SteveDefeat": {
   "en": "Well, that's that.",
@@ -85,7 +85,7 @@
  },
  "RockTunnel_B1F_Text_StevePostBattle": {
   "en": "POKéMON cosplay is dressing up as\\nPOKéMON for fun.\\pCLEFAIRY is a favorite.",
-  "fr": "Le cosplay POKéMON, c'est se\\ndéguiser en POKéMON pour s'amuser.\\pMÉLOFÉE est un favori."
+  "fr": "Les DRESSEURS costumés se déguisent\\nen POKéMON pour s'amuser.\\pIls adorent le costume de MÉLOFÉE."
  },
  "RockTunnel_B1F_Text_WinstonDefeat": {
   "en": "Whew…\\nI'm exhausted…",
@@ -97,6 +97,6 @@
  },
  "RockTunnel_B1F_Text_WinstonPostBattle": {
   "en": "I'm an artist, not a fighter.\\nI'll go home to draw.",
-  "fr": "Je suis un artiste, pas un\\ncombattant. Je rentre dessiner."
+  "fr": "J'suis un artiste, pas un violent."
  }
 }

@@ -9,7 +9,7 @@
  },
  "Route20_Text_BarryPostBattle": {
   "en": "I wish I could ride my POKéMON.\\nI bet you're not tired.",
-  "fr": "J'aimerais pouvoir chevaucher mon\\nPOKéMON. Toi, tu ne dois pas être\\lfatigué."
+  "fr": "Ah, si je pouvais monter sur mes\\nPOKéMON."
  },
  "Route20_Text_CaveClosed": {
   "en": "A wall of heat and steam blasts\\nout of the cave!\\pThe way in is far too hot.",
@@ -25,7 +25,7 @@
  },
  "Route20_Text_DarrinPostBattle": {
   "en": "Riding a POKéMON sure looks fun!",
-  "fr": "Chevaucher un POKéMON a l'air\\namusant !"
+  "fr": "Surfer sur un POKéMON, c'est cool !"
  },
  "Route20_Text_DeanDefeat": {
   "en": "Wimpy!",
@@ -37,7 +37,7 @@
  },
  "Route20_Text_DeanPostBattle": {
   "en": "I should've been buffing up my\\nPOKéMON, not me!",
-  "fr": "J'aurais dû muscler mes POKéMON,\\npas moi !"
+  "fr": "J'aurais dû entraîner un peu plus\\nmes POKéMON !"
  },
  "Route20_Text_IreneDefeat": {
   "en": "No mercy at all!",
@@ -49,7 +49,7 @@
  },
  "Route20_Text_IrenePostBattle": {
   "en": "SEAFOAM used to be a single island\\nin the distant past.",
-  "fr": "ÉCUME n'était qu'une seule île, il\\ny a très longtemps."
+  "fr": "Avant, ben, les ILES ECUMES ne\\nformaient qu'une seule île !"
  },
  "Route20_Text_MelissaDefeat": {
   "en": "Wait!\\nYou're supposed to wait!",
@@ -89,7 +89,7 @@
  },
  "Route20_Text_NoraPostBattle": {
   "en": "Will my pearls grow bigger inside\\nCLOYSTER?",
-  "fr": "Mes perles grossiront-elles dans\\nun CRUSTABRI ?"
+  "fr": "Et si je mettais mes perles dans un\\nCRUSTABRI ?"
  },
  "Route20_Text_Quest6_Ask": {
   "en": "Long swim ahead. 2 ELIXIRS would\\nkeep my team going!",
@@ -117,7 +117,7 @@
  },
  "Route20_Text_RogerPostBattle": {
   "en": "My birds are exhausted.\\nThey can't FLY me back!",
-  "fr": "Mes oiseaux sont épuisés. Ils ne\\npeuvent pas me ramener en VOL !"
+  "fr": "Mes oiseaux sont trop fatigués pour\\nutiliser VOL !"
  },
  "Route20_Text_SeaClosed": {
   "en": "COAST GUARD: Turn back!\\pThe SEAFOAM volcano erupted. The\\nsea ahead is lava and steam.\\pNobody passes. Not even POKéMON.",
@@ -137,7 +137,7 @@
  },
  "Route20_Text_ShirleyPostBattle": {
   "en": "There's a huge cavern underneath\\nthis island.",
-  "fr": "Il y a une immense caverne sous\\ncette île."
+  "fr": "Il y a une grande caverne sous\\ncette île."
  },
  "Route20_Text_TiffanyDefeat": {
   "en": "Yowch!",
@@ -149,6 +149,6 @@
  },
  "Route20_Text_TiffanyPostBattle": {
   "en": "Want to float with me?",
-  "fr": "Tu veux flotter avec moi ?"
+  "fr": "Tu veux nager avec moi ?"
  }
 }

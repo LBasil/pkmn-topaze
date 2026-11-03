@@ -1,39 +1,39 @@
 {
  "CeruleanCity_House1_Text_AnyInterestInBerries": {
   "en": "I concoct a variety of medicine\\nfrom BERRY POWDER.\\pUsing good BERRY POWDER, I can\\nmake any kind of medicine.\\pNow tell me, have you any interest\\nin BERRIES?",
-  "fr": "Je concocte divers remèdes à partir\\nde POUDRE BAIE.\\pAvec de la bonne POUDRE BAIE, je\\npeux faire n'importe quel remède.\\pDis-moi, t'intéresses-tu aux\\nBAIES ?"
+  "fr": "En utilisant de la bonne POUDRE\\nBAIE, je peux préparer\\ptoutes sortes de médicaments.\\pDis-moi, tu t'y connais un peu en\\nBAIES ?"
  },
  "CeruleanCity_House1_Text_DontHaveEnoughBerryPowder": {
   "en": "Hm? You don't have enough\\nBERRY POWDER.",
-  "fr": "Hm ? Tu n'as pas assez de\\nPOUDRE BAIE."
+  "fr": "Hmm. Tu n'as pas assez de POUDRE\\nBAIE."
  },
  "CeruleanCity_House1_Text_GoCrushBerriesAtDirectCorner": {
   "en": "There's something new on the second\\nfloor of POKéMON CENTERS, at the\\lDIRECT CORNER.\\pThey installed a Wireless Adapter\\nmachine for crushing BERRIES.\\pThis is where you come in.\\pI have a favor to ask, one that\\nI can entrust only to you.\\pCould you make BERRY POWDER for\\nme using that machine?\\pDon't forget, the machine is at the\\nDIRECT CORNER of POKéMON CENTERS.\\pI'll concoct medicine for you if\\nyou bring me some BERRY POWDER.\\pDon't forget, crush BERRIES into\\nBERRY POWDER and bring it to me.",
-  "fr": "Il y a du nouveau au deuxième étage\\ndes CENTRES POKéMON, au COIN\\lDIRECT.\\pIls ont installé une machine\\nsans fil pour écraser les BAIES.\\pC'est là que tu interviens.\\pJ'ai une faveur à te demander, que\\nje ne peux confier qu'à toi.\\pPourrais-tu me faire de la POUDRE\\nBAIE avec cette machine ?\\pN'oublie pas, la machine est au\\nCOIN DIRECT des CENTRES POKéMON.\\pJe te concocterai un remède si tu\\nm'apportes de la POUDRE BAIE.\\pN'oublie pas, écrase des BAIES en\\nPOUDRE BAIE et apporte-la-moi."
+  "fr": "Il y a du nouveau au premier étage\\ndes CENTRES POKéMON.\\pIls ont ajouté une machine pour\\nbroyer les BAIES dans\\pla SALLE LINK DIRECT. C'est là que\\ntu interviens.\\pPourrais-tu aller faire de la\\nPOUDRE pour moi en\\putilisant cette machine ?\\pN'oublie pas, la machine se trouve\\ndans la SALLE LINK DIRECT.\\pJe ferai une préparation juste pour\\ntoi si tu arrives à broyer\\pdes BAIES et à me ramener la\\nPOUDRE."
  },
  "CeruleanCity_House1_Text_HaveJustTheThing": {
   "en": "Ah, good! For you, then, I have\\njust the thing.",
-  "fr": "Ah, bien ! Pour toi, alors, j'ai\\nexactement ce qu'il faut."
+  "fr": "Parfait ! Alors j'ai juste ce qu'il\\nte faut."
  },
  "CeruleanCity_House1_Text_HaveYouBroughtBerryPowder": {
   "en": "Er-hem! Have you brought me some\\nBERRY POWDER?",
-  "fr": "Ahem ! M'as-tu apporté de la\\nPOUDRE BAIE ?"
+  "fr": "M'as-tu amené de la POUDRE BAIE ?"
  },
  "CeruleanCity_House1_Text_HopeToSeeYouAgain": {
   "en": "That's fine, then.\\nI'll hope to see you back again.",
-  "fr": "Très bien, alors.\\nJ'espère te revoir."
+  "fr": "Tant pis. J'espère te revoir\\nbientôt."
  },
  "CeruleanCity_House1_Text_SeeMeIfYoudLikeToTradePowder": {
   "en": "Come see me if you'd like to trade\\nyour BERRY POWDER.",
-  "fr": "Viens me voir si tu veux échanger\\nta POUDRE BAIE."
+  "fr": "Reviens me voir si tu veux encore\\néchanger de la POUDRE BAIE."
  },
  "CeruleanCity_House1_Text_TakeInterestInAllSortsOfThings": {
   "en": "You have no interest in BERRIES?\\pYoung one, it's important to take an\\ninterest in all sorts of things.",
-  "fr": "Tu ne t'intéresses pas aux BAIES ?\\pMon enfant, il est important de\\ns'intéresser à tout."
+  "fr": "Les BAIES t'intéressent pas ?\\pA ton âge, il faut s'intéresser à\\nplein de choses."
  },
  "CeruleanCity_House1_Text_TradeMoreBerryPowder": {
   "en": "This is fine BERRY POWDER indeed.\\nIt will make excellent medicine.\\pWould you like to trade more BERRY\\nPOWDER for something else?",
-  "fr": "Voilà de la bonne POUDRE BAIE.\\nElle fera un excellent remède.\\pVeux-tu échanger encore de la\\nPOUDRE BAIE contre autre chose ?"
+  "fr": "Cette POUDRE BAIE a l'air bonne. Ça\\nfera de bons médicaments.\\pTu veux échanger ce qui te reste\\ncontre autre chose ?"
  },
  "CeruleanCity_House1_Text_WhyMustYouLieNoBerries": {
   "en": "Why must you lie to me?\\pHow many BERRIES do you have?\\nNot a one!",
@@ -41,7 +41,7 @@
  },
  "CeruleanCity_House1_Text_YoullExchangeBerryPowderForItem": {
   "en": "Fine, you'll exchange your BERRY\\nPOWDER for one {STR_VAR_1}?",
-  "fr": "Bien, tu échanges ta POUDRE BAIE\\ncontre un(e) {STR_VAR_1} ?"
+  "fr": "Je vais te donner 1 {STR_VAR_1} contre\\nla POUDRE BAIE."
  },
  "CeruleanCity_House5_Text_ExchangeWithWhat": {
   "en": "With what would you like to \\nexchange it?",

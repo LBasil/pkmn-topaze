@@ -13,7 +13,7 @@
  },
  "VermilionCity_Text_BuildingOnThisLand": {
   "en": "I'm putting up a building on this\\nplot of land. I own it all.\\pMy POKéMON is tamping the land\\nto lay the foundation.",
-  "fr": "Je fais construire un bâtiment sur\\nce terrain. Tout m'appartient.\\pMon POKéMON tasse le sol pour poser\\nles fondations."
+  "fr": "Je construis un immeuble sur ce\\nterrain.\\pMes POKéMON dament le sol pour\\nfaire les fondations."
  },
  "VermilionCity_Text_CitySign": {
   "en": "APATIA\\nThe Port of Exquisite Sunsets",
@@ -69,15 +69,15 @@
  },
  "VermilionCity_Text_MachopStompingLandFlat": {
   "en": "A MACHOP is stomping the land flat.",
-  "fr": "Un MACHOC piétine le terrain pour\\nl'aplanir."
+  "fr": "Un MACHOC pilonne le sol."
  },
  "VermilionCity_Text_OhAuroraTicketTakeYouToBirthIsland": {
   "en": "Oh! That's an AURORATICKET!\\nNow that is rare.\\pWe'll be happy to take you to\\nBIRTH ISLAND anytime.",
-  "fr": "Oh ! C'est un TICKET AURORE !\\nVoilà qui est rare.\\pNous serons ravis de vous emmener à\\nl'ÎLE NAISSANCE à tout moment."
+  "fr": "Oh, c'est le TICKETAURORA ! C'est\\nun ticket très rare.\\pNous serons heureux de vous amener\\nà l'ÎLE AURORE."
  },
  "VermilionCity_Text_OhMysticTicketTakeYouToNavelRock": {
   "en": "Oh! That's a MYSTICTICKET!\\nNow that is rare.\\pWe'll be happy to take you to\\nNAVEL ROCK anytime.",
-  "fr": "Oh ! C'est un TICKET MYSTIQUE !\\nVoilà qui est rare.\\pNous serons ravis de vous emmener\\nau ROCHER NOMBRIL à tout moment."
+  "fr": "Oh, c'est le TICKETMYSTIK ! C'est\\nun ticket très rare.\\pNous serons heureux de vous amener\\nau ROC NOMBRI."
  },
  "VermilionCity_Text_PokemonFanClubSign": {
   "en": "POKéMON FAN CLUB\\nAll POKéMON fans welcome!",
@@ -169,7 +169,7 @@
  },
  "VermilionCity_Text_TheShipSetSail": {
   "en": "The ship set sail.",
-  "fr": "Le navire a appareillé."
+  "fr": "L'OCEANE a levé l'ancre."
  },
  "VermilionCity_Text_TruckDriver": {
   "en": "DRIVER: Don't mind the truck!\\nI just park here.\\p...Why does it keep shaking?\\nIs something under there?",

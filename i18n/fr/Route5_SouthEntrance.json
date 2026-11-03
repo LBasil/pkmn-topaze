@@ -1,7 +1,7 @@
 {
  "Route5_SouthEntrance_Text_HiHowsItGoing": {
   "en": "Hi, how's it going?",
-  "fr": "Salut, comment ça va ?"
+  "fr": "Salut ! Comment ça va ?"
  },
  "Route5_SouthEntrance_Text_ThanksIllShareTeaWithGuards": {
   "en": "Huh? I can have this drink?\\nGee, thanks!\\l… …\\lGlug, glug…\\l… …\\lGulp…\\lIf you want to go to HEMATOWN\\lCITY…\\l… …\\lYou can go on through.\\pI'll share this TEA with the other\\nguards!",
@@ -9,10 +9,10 @@
  },
  "Route5_SouthEntrance_Text_ThatTeaLooksTasty": {
   "en": "Oh, that TEA…\\nIt looks awfully tasty…",
-  "fr": "Oh, ce THÉ…\\nIl a l'air délicieux…"
+  "fr": "Oh, ce THÉ… Il a l'air délicieux…"
  },
  "Route5_SouthEntrance_Text_ThirstyOnGuardDuty": {
   "en": "I'm on guard duty.\\nGee, I'm thirsty, though!\\pOh, wait there, the road's closed.",
-  "fr": "Je suis de garde.\\nMince, j'ai tellement soif !\\pOh, attends, la route est fermée."
+  "fr": "Je suis de garde ici… Je crève de\\nsoif !\\pOh, la route est fermée. On ne\\npasse pas !"
  }
 }

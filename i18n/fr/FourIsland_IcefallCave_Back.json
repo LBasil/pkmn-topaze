@@ -65,7 +65,7 @@
  },
  "FourIsland_IcefallCave_Back_Text_GruntIntro": {
   "en": "W-what?!\\pWho says we can't do what we want\\nwith the POKéMON we catch?",
-  "fr": "Q-quoi ?!\\pQui dit qu'on ne peut pas faire ce\\nqu'on veut des POKéMON qu'on\\lcapture ?"
+  "fr": "Qu-Quoi? ?\\pQui vous êtes pour nous dire ce\\nqu'on doit faire avec nos POKéMON ?"
  },
  "FourIsland_IcefallCave_Back_Text_GuardsLeft": {
   "en": "The beast does not stir.\\nIts guardians still stand watch.",
@@ -89,7 +89,7 @@
  },
  "FourIsland_IcefallCave_Back_Text_NotTellingYouThat": {
   "en": "N-no way!\\nI'm not telling you that!",
-  "fr": "Pas question !\\nJe ne te le dirai pas !"
+  "fr": "Ja-jamais ! Je ne dirai rien !"
  },
  "FourIsland_IcefallCave_Back_Text_OkayRocketWareHouseFiveIsland": {
   "en": "Wawaah! Okay!\\nI'll talk!\\pThe POKéMON are in the ONYBRIS\\nWAREHOUSE on FIVE ISLAND.\\pThere! I said it!\\nWe'll be going now!\\p…But I doubt you'll ever make it\\ninto the ONYBRIS WAREHOUSE!\\pHeheheheh!",
@@ -97,10 +97,10 @@
  },
  "FourIsland_IcefallCave_Back_Text_ShutItLadyLeaveUsBe": {
   "en": "Aww, shut it, lady, and leave\\nus be.\\pDon't let your glasses get all\\nsteamed up!",
-  "fr": "Aww, tais-toi, madame, et\\nlaisse-nous tranquilles.\\pNe laisse pas tes lunettes\\ns'embuer !"
+  "fr": "Pour qui tu te prends ?\\pLaisse-nous tranquilles et\\noccupe-toi de tes affaires."
  },
  "FourIsland_IcefallCave_Back_Text_ThankYouThisIsAwful": {
   "en": "{PLAYER}, thank you.\\nBut this is awful…\\pI was born and raised here on\\nthese islands.\\pI had no idea that those horrible\\ncriminals were loose here…",
-  "fr": "{PLAYER}, merci.\\nMais c'est affreux…\\pJe suis née et j'ai grandi sur\\nces îles.\\pJe n'avais aucune idée que ces\\nhorribles criminels rôdaient ici…"
+  "fr": "{PLAYER}, merzi beaucoup. Mais z'est\\nvraiment affreux…\\pJe zuis née et j'ai grandi sur zes\\nILES.\\pJe ne me doutais pas que zes\\nbandits étaient izi…"
  }
 }

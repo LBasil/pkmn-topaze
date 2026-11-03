@@ -21,7 +21,7 @@
  },
  "Route14_Text_BennyPostBattle": {
   "en": "Winning, losing… It's insignificant\\nunder this huge sky.",
-  "fr": "Gagner, perdre… C'est\\ninsignifiant sous ce grand ciel."
+  "fr": "Perdre ou gagner, c'est pas le plus\\nimportant !"
  },
  "Route14_Text_CarterDefeat": {
   "en": "Not good enough quite yet.",
@@ -33,7 +33,7 @@
  },
  "Route14_Text_CarterPostBattle": {
   "en": "You have some HMs, right? POKéMON\\ncan't forget those moves easily.",
-  "fr": "Tu as des CS, n'est-ce pas ? Les\\nPOKéMON ne peuvent pas facilement\\loublier ces capacités."
+  "fr": "Tu as des CS ? Les POKéMON ne\\npeuvent pas les oublier."
  },
  "Route14_Text_DonaldDefeat": {
   "en": "Why?\\nWhy'd I lose?",
@@ -45,7 +45,7 @@
  },
  "Route14_Text_DonaldPostBattle": {
   "en": "Well, the winged mirages are the\\nlegendary bird POKéMON.\\pThere are three of them: ARTICUNO,\\nZAPDOS, and MOLTRES.",
-  "fr": "Eh bien, les mirages ailés sont les\\nPOKéMON oiseaux légendaires.\\pIl y en a trois : ARTIKODIN,\\nÉLECTHOR et SULFURA."
+  "fr": "Les mirages ailés seraient les\\nPOKéMON oiseau légendaires.\\pIls sont trois : ARTIKODIN,\\nÉLECTHOR et SULFURA."
  },
  "Route14_Text_GeraldDefeat": {
   "en": "Wipeout.",
@@ -113,7 +113,7 @@
  },
  "Route14_Text_LukasPostBattle": {
   "en": "What, what, what?\\nWhat do you want still?",
-  "fr": "Quoi, quoi, quoi ?\\nQu'est-ce que tu veux encore ?"
+  "fr": "Quoi ? Quoi ? Tu veux quoi ?"
  },
  "Route14_Text_MalikDefeat": {
   "en": "I still get paid, right?",
@@ -137,7 +137,7 @@
  },
  "Route14_Text_MarlonPostBattle": {
   "en": "Bird POKéMON are my one true love.\\nI don't want to raise anything else.",
-  "fr": "Les POKéMON oiseaux sont mon seul\\nvrai amour. Je ne veux rien élever\\ld'autre."
+  "fr": "J'adore les POKéMON oiseau, je ne\\nm'intéresse qu'à eux !"
  },
  "Route14_Text_MitchDefeat": {
   "en": "Not ready yet!",
@@ -149,7 +149,7 @@
  },
  "Route14_Text_MitchPostBattle": {
   "en": "My bird POKéMON need to learn\\nbetter moves.",
-  "fr": "Mes POKéMON oiseaux doivent\\napprendre de meilleures capacités."
+  "fr": "Il leur faut de bonnes attaques."
  },
  "Route14_Text_RQuest_Ask": {
   "en": "My crew is a mess. 2 FULL HEALS and\\nI owe you.",

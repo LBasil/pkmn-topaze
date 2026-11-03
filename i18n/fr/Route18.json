@@ -1,7 +1,7 @@
 {
  "Route18_Text_CyclingRoadSign": {
   "en": "CYCLING ROAD\\nNo pedestrians permitted!",
-  "fr": "ROUTE CYCLABLE\\nInterdit aux piétons !"
+  "fr": "PISTE CYCLABLE Interdite aux\\npiétons !"
  },
  "Route18_Text_JacobDefeat": {
   "en": "Darn!",
@@ -41,7 +41,7 @@
  },
  "Route18_Text_RamiroPostBattle": {
   "en": "I collect sea POKéMON on weekends\\nbecause the sea is so close.",
-  "fr": "Je collectionne les POKéMON marins\\nle week-end, la mer est si proche."
+  "fr": "Le week-end, je collectionne les\\nPOKéMON EAU !"
  },
  "Route18_Text_RouteSign": {
   "en": "ROUTE 18\\nBOURG QUARTZ - AMETHIOLITE",
@@ -61,6 +61,6 @@
  },
  "Route18_Text_WiltonPostBattle": {
   "en": "I wish I had a BIKE!",
-  "fr": "J'aimerais avoir un VÉLO !"
+  "fr": "Ah, si j'avais un VÉLO !"
  }
 }

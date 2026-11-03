@@ -33,7 +33,7 @@
  },
  "Route24_Text_EthanPostBattle": {
   "en": "I did my best. I have no regrets!",
-  "fr": "J'ai fait de mon mieux. Aucun\\nregret !"
+  "fr": "J'ai fait de mon mieux !"
  },
  "Route24_Text_ImOutOfHere": {
   "en": "I'm out of here!\\nDon't follow me!",
@@ -77,7 +77,7 @@
  },
  "Route24_Text_ReliPostBattle": {
   "en": "I did my best, so I've no regrets!",
-  "fr": "J'ai fait de mon mieux, donc pas de\\nregret !"
+  "fr": "J'ai participé, et j'ai perdu !"
  },
  "Route24_Text_RocketDefeat": {
   "en": "Arrgh!\\nYou are good!",

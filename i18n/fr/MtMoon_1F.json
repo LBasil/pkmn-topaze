@@ -13,7 +13,7 @@
  },
  "MtMoon_1F_Text_IrisPostBattle": {
   "en": "I came because I heard there are\\nsome very rare fossils here.",
-  "fr": "Je suis venu car j'ai entendu qu'il\\ny a des fossiles très rares ici."
+  "fr": "Y paraît qu'il y a des fossiles\\ntrès anciens dans le coin."
  },
  "MtMoon_1F_Text_JoshDefeat": {
   "en": "Losing stinks!\\nIt's so uncool.",
@@ -25,7 +25,7 @@
  },
  "MtMoon_1F_Text_JoshPostBattle": {
   "en": "I came all the way down here to\\nshow off to girls.",
-  "fr": "Je suis descendu jusqu'ici pour\\népater les filles."
+  "fr": "J'suis venu jusque-là pour\\nimpressionner les filles !"
  },
  "MtMoon_1F_Text_JovanDefeat": {
   "en": "My POKéMON won't do!",
@@ -37,7 +37,7 @@
  },
  "MtMoon_1F_Text_JovanPostBattle": {
   "en": "I have to find stronger POKéMON.\\nWhere might they be?",
-  "fr": "Je dois trouver des POKéMON plus\\nforts. Où peuvent-ils être ?"
+  "fr": "J'dois m'trouver des POKéMON plus\\ncostauds !"
  },
  "MtMoon_1F_Text_KentDefeat": {
   "en": "You got me!",
@@ -61,7 +61,7 @@
  },
  "MtMoon_1F_Text_MarcosPostBattle": {
   "en": "Kids like you shouldn't be\\nwandering around here in the dark.",
-  "fr": "Les gamins comme toi ne devraient\\npas errer ici dans le noir."
+  "fr": "Cet endroit n'est pas pour les\\nmioches comme toi !"
  },
  "MtMoon_1F_Text_MiriamDefeat": {
   "en": "Oh!\\nI lost it!",
@@ -73,7 +73,7 @@
  },
  "MtMoon_1F_Text_MiriamPostBattle": {
   "en": "How do you get out of here?\\nIt's so big, I may get lost.",
-  "fr": "Comment on sort d'ici ? C'est si\\ngrand que je vais me perdre."
+  "fr": "Comment on fait pour sortir d'ici ?"
  },
  "MtMoon_1F_Text_RobbyDefeat": {
   "en": "I lost.",
@@ -85,10 +85,10 @@
  },
  "MtMoon_1F_Text_RobbyPostBattle": {
   "en": "ZUBAT is tough!\\nBut if you can catch one, you'll\\lbe able to count on it.",
-  "fr": "NOSFERAPTI est coriace ! Mais si tu\\nen captures un, tu pourras compter\\lsur lui."
+  "fr": "Les NOSFERAPTI sont puissants ! En\\nattraper peut être utile !"
  },
  "MtMoon_1F_Text_ZubatIsABloodsucker": {
   "en": "Beware!\\nZUBAT is a bloodsucker!",
-  "fr": "Attention !\\nNOSFERAPTI est un suceur de sang !"
+  "fr": "Attention ! Les NOSFERAPTI sont des\\nsuceurs de sang !"
  }
 }

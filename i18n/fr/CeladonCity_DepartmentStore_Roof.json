@@ -9,19 +9,19 @@
  },
  "CeladonCity_DepartmentStore_Roof_Text_ExplainTM16": {
   "en": "TM16 contains LIGHT SCREEN.\\pIt's a move that weakens the power\\nof special attacks by your foe.",
-  "fr": "La CT16 contient MUR LUMIÈRE.\\pCette capacité réduit la puissance\\ndes attaques spéciales adverses."
+  "fr": "CT16 : MUR LUMIÈRE !\\pC'est une capacité qui affaiblit\\nl'attaque spéciale de l'ennemi."
  },
  "CeladonCity_DepartmentStore_Roof_Text_ExplainTM20": {
   "en": "TM20 contains SAFEGUARD.\\pIt's a move that prevents status\\nproblems among your POKéMON.",
-  "fr": "La CT20 contient RUNE PROTECT.\\pCette capacité protège ton équipe\\ndes problèmes de statut."
+  "fr": "CT20 : RUNE PROTECT !\\pC'est une capacité qui empêche les\\nproblèmes de statut."
  },
  "CeladonCity_DepartmentStore_Roof_Text_ExplainTM33": {
   "en": "TM33 contains REFLECT.\\pIt's a move that weakens the power\\nof physical attacks by your foe.",
-  "fr": "La CT33 contient PROTECTION.\\pCette capacité réduit la puissance\\ndes attaques physiques adverses."
+  "fr": "CT33 : PROTECTION !\\pC'est une capacité qui affaiblit\\nles attaques physiques de l'ennemi."
  },
  "CeladonCity_DepartmentStore_Roof_Text_FloorSign": {
   "en": "ROOFTOP SQUARE:\\nVENDING MACHINES",
-  "fr": "TOIT :\\nDISTRIBUTEURS"
+  "fr": "TOIT : DISTRIBUTEURS"
  },
  "CeladonCity_DepartmentStore_Roof_Text_GiveWhichDrink": {
   "en": "Give her which drink?",
@@ -29,7 +29,7 @@
  },
  "CeladonCity_DepartmentStore_Roof_Text_ImNotThirstyAfterAll": {
   "en": "No, thank you!\\nI'm not thirsty after all!",
-  "fr": "Non merci !\\nFinalement, je n'ai pas soif !"
+  "fr": "Heu… Non merci. J'ai plus soif en\\nfait !"
  },
  "CeladonCity_DepartmentStore_Roof_Text_ImThirstyGiveHerDrink": {
   "en": "I'm thirsty!\\nI want something to drink!\\p{FONT_NORMAL}Give her a drink?",
@@ -37,11 +37,11 @@
  },
  "CeladonCity_DepartmentStore_Roof_Text_ImThirstyIWantDrink": {
   "en": "I'm thirsty!\\nI want something to drink!",
-  "fr": "J'ai soif !\\nJe veux quelque chose à boire !"
+  "fr": "J'ai soif ! Je veux boire !"
  },
  "CeladonCity_DepartmentStore_Roof_Text_MySisterIsImmature": {
   "en": "My sister is a TRAINER, believe it\\nor not.\\pBut, she's so immature, she drives\\nme nuts!",
-  "fr": "Ma sœur est DRESSEUSE, je le jure.\\pMais elle est si immature qu'elle\\nme rend dingue !"
+  "fr": "Ma sœur est DRESSEUR. Tu le crois,\\nça ?\\pMais c'est une p'tite peste ! Elle\\nm'agace !"
  },
  "CeladonCity_DepartmentStore_Roof_Text_NoMoreRoomForStuff": {
   "en": "There's no more room for stuff!",
@@ -49,7 +49,7 @@
  },
  "CeladonCity_DepartmentStore_Roof_Text_NotEnoughMoney": {
   "en": "Oops, not enough money!",
-  "fr": "Oups, pas assez d'argent !"
+  "fr": "Oups ! Pas assez d'argent !"
  },
  "CeladonCity_DepartmentStore_Roof_Text_NotThirsty": {
   "en": "Not thirsty!",
@@ -61,15 +61,15 @@
  },
  "CeladonCity_DepartmentStore_Roof_Text_YayFreshWaterHaveThis": {
   "en": "Yay!\\pFRESH WATER!\\pThank you!\\nYou can have this from me!",
-  "fr": "Youpi !\\pEAU FRAÎCHE !\\pMerci !\\nTu peux avoir ça de ma part !"
+  "fr": "Ouais ouais !\\pDe l'EAU FRAÎCHE !\\pC'est cool ! Tiens… c'est pour toi\\n!"
  },
  "CeladonCity_DepartmentStore_Roof_Text_YayLemonadeHaveThis": {
   "en": "Yay!\\pLEMONADE!\\pThank you!\\nYou can have this from me!",
-  "fr": "Youpi !\\pLIMONADE !\\pMerci !\\nTu peux avoir ça de ma part !"
+  "fr": "Ouaiiis !\\pD'la LIMONADE !\\pMerci beaucoup ! V'là pour toi !"
  },
  "CeladonCity_DepartmentStore_Roof_Text_YaySodaPopHaveThis": {
   "en": "Yay!\\pSODA POP!\\pThank you!\\nYou can have this from me!",
-  "fr": "Youpi !\\pSODA COOL !\\pMerci !\\nTu peux avoir ça de ma part !"
+  "fr": "Ouaiiis !\\pDu SODA COOL !\\pMerciiii ! Tiens, prends ça !"
  },
  "Text_ReceivedItemFromLittleGirl": {
   "en": "{PLAYER} received a {STR_VAR_2}\\nfrom the little girl.",

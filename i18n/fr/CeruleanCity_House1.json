@@ -1,23 +1,23 @@
 {
  "CeruleanCity_House1_Text_AllMonsWillObeyYou": {
   "en": "All POKéMON will obey you!",
-  "fr": "Tous les POKéMON t'obéiront !"
+  "fr": "Tous les POKéMON obéiront à tes\\nordres !"
  },
  "CeruleanCity_House1_Text_AttackStatFlash": {
   "en": "The ATTACK stat of all your\\nPOKéMON increases a little bit.\\pIt also lets you use the move\\nFLASH outside of battle.",
-  "fr": "La stat ATTAQUE de tous tes\\nPOKéMON augmente un peu.\\pIl permet aussi d'utiliser la\\ncapacité FLASH hors combat."
+  "fr": "L'ATTAQUE de tous tes POKéMON est\\naugmentée.\\pIl permet aussi d'utiliser la CS\\nFLASH hors des combats."
  },
  "CeruleanCity_House1_Text_BadgesHaveAmazingSecrets": {
   "en": "Only skilled TRAINERS can collect\\nPOKéMON BADGES.\\pI see you have at least one.\\pThose BADGES have amazing secrets,\\ndid you know?",
-  "fr": "Seuls les DRESSEURS talentueux\\npeuvent collecter des BADGES\\pPOKéMON.\\pJe vois que tu en as au moins un.\\pCes BADGES ont des secrets\\nétonnants, tu savais ?"
+  "fr": "Les BADGES sont portés par des\\nDRESSEURS de haut niveau.\\pMmm… Tu en as au moins un.\\pCes BADGES ont d'étranges pouvoirs\\n!"
  },
  "CeruleanCity_House1_Text_ComeVisitAnytime": {
   "en": "Come visit me anytime you wish.",
-  "fr": "Viens me voir quand tu veux."
+  "fr": "Reviens me voir quand tu veux."
  },
  "CeruleanCity_House1_Text_DefenseStatSurf": {
   "en": "The DEFENSE stat of all your\\nPOKéMON increases a little bit.\\pIt also lets you use the move\\nSURF outside of battle.",
-  "fr": "La stat DÉFENSE de tous tes\\nPOKéMON augmente un peu.\\pIl permet aussi d'utiliser la\\ncapacité SURF hors combat."
+  "fr": "La DÉFENSE de tous tes POKéMON sera\\naugmentée.\\pTu pourras aussi utiliser la CS\\nSURF hors des combats."
  },
  "CeruleanCity_House1_Text_DescribeWhichBadge": {
   "en": "Now then…\\pWhich of the eight BADGES should\\nI describe?",
@@ -25,22 +25,22 @@
  },
  "CeruleanCity_House1_Text_ObeyLv30Cut": {
   "en": "POKéMON up to Lv. 30 will obey\\nyou.\\pThat includes even outsiders you\\nobtain in trades.\\pPOKéMON of higher levels will\\nbe unruly in battle, however.\\pIt also lets you use the move\\nCUT outside of battle.",
-  "fr": "Les POKéMON jusqu'au Niv. 30\\nt'obéissent.\\pMême les étrangers reçus par\\néchange.\\pLes POKéMON de niveau supérieur\\nseront rebelles en combat.\\pIl permet aussi d'utiliser la\\ncapacité COUPE hors combat."
+  "fr": "Les POKéMON d'un niveau inférieur à\\n30 t'obéiront.\\pCela comprend aussi les POKéMON\\nobtenus pendant un échange.\\pS'ils sont d'un niveau supérieur,\\nils seront incontrôlables !\\pTu pourras aussi utiliser la CS\\nCOUPE hors des combats."
  },
  "CeruleanCity_House1_Text_ObeyLv50Strength": {
   "en": "POKéMON up to Lv. 50 will obey\\nyou.\\pThat includes even outsiders you\\nobtain in trades.\\pPOKéMON of higher levels will\\nbe unruly in battle, however.\\pIt also lets you use the move\\nSTRENGTH outside of battle.",
-  "fr": "Les POKéMON jusqu'au Niv. 50\\nt'obéissent.\\pMême les étrangers reçus par\\néchange.\\pLes POKéMON de niveau supérieur\\nseront rebelles en combat.\\pIl permet aussi d'utiliser la\\ncapacité FORCE hors combat."
+  "fr": "Les POKéMON jusqu'au niveau 50\\nt'obéiront.\\pCela comprend aussi les POKéMON\\nobtenus pendant un échange.\\pCeux d'un niveau supérieur seront\\nincontrôlables !\\pTu pourras aussi utiliser la CS\\nFORCE hors des combats."
  },
  "CeruleanCity_House1_Text_ObeyLv70RockSmash": {
   "en": "POKéMON up to Lv. 70 will obey\\nyou.\\pThat includes even outsiders you\\nobtain in trades.\\pPOKéMON of higher levels will\\nbe unruly in battle, however.\\pIt also lets you use the move\\nROCK SMASH outside of battle.",
-  "fr": "Les POKéMON jusqu'au Niv. 70\\nt'obéissent.\\pMême les étrangers reçus par\\néchange.\\pLes POKéMON de niveau supérieur\\nseront rebelles en combat.\\pIl permet aussi d'utiliser la\\ncapacité ÉCLATE-ROC hors combat."
+  "fr": "Les POKéMON de niveau 70 ou moins\\nt'obéiront.\\pCela comprend aussi les POKéMON\\nobtenus pendant un échange.\\pS'ils sont d'un niveau supérieur,\\nils seront incontrôlables !\\pTu pourras aussi utiliser la CS\\nÉCLATE-ROC hors des combats."
  },
  "CeruleanCity_House1_Text_SpStatsWaterfall": {
   "en": "The SP. ATK and SP. DEF stats of\\nall your POKéMON rise a little bit.\\pIt also lets you use the move\\nWATERFALL outside of battle.",
-  "fr": "Les stats ATQ SPÉ. et DÉF SPÉ. de\\ntous tes POKéMON augmentent un peu.\\pIl permet aussi d'utiliser la\\ncapacité CASCADE hors combat."
+  "fr": "Les stats des ATQ. SPÉ. et DÉF.\\nSPÉ. augmentent un peu.\\pTu pourras aussi utiliser CASCADE\\nhors des combats."
  },
  "CeruleanCity_House1_Text_SpeedStatFly": {
   "en": "The SPEED stat of all your\\nPOKéMON increases a little bit.\\pIt also lets you use the move\\nFLY outside of battle.",
-  "fr": "La stat VITESSE de tous tes\\nPOKéMON augmente un peu.\\pIl permet aussi d'utiliser la\\ncapacité VOL hors combat."
+  "fr": "La VITESSE de tous tes POKéMON sera\\nun peu augmentée.\\pTu pourras aussi utiliser la CS VOL\\nhors des combats."
  }
 }

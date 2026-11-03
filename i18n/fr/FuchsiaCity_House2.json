@@ -1,7 +1,7 @@
 {
  "FuchsiaCity_House2_Text_DoYouLikeToFish": {
   "en": "I'm the FISHING GURU's older\\nbrother.\\pI simply looove fishing!\\nI can't bear to go without.\\pTell me, do you like to fish?",
-  "fr": "Je suis le grand frère du GOUROU\\nDE LA PÊCHE.\\pJ'adoooore pêcher !\\nJe ne supporte pas de m'en passer.\\pDis-moi, tu aimes pêcher ?"
+  "fr": "Je suis le grand frère du MAITRE\\nPECHEUR !\\pMoi, mon truc, c'est la pêche !\\pT'aimes la pêche ?"
  },
  "FuchsiaCity_House2_Text_GoodRodCanCatchBetterMons": {
   "en": "Fishing is a way of life!\\nIt is like the finest poetry.\\pA crummy OLD ROD could only catch\\nMAGIKARP, yes?\\pBut with a GOOD ROD, you can\\ncatch much better POKéMON.",
@@ -9,15 +9,15 @@
  },
  "FuchsiaCity_House2_Text_HowAreTheFishBiting": {
   "en": "Hello there, {PLAYER}!\\pHow are the fish biting?",
-  "fr": "Salut, {PLAYER} !\\pAlors, ça mord ?"
+  "fr": "Tiens, salut {PLAYER} !\\pAlors, ça mord ?"
  },
  "FuchsiaCity_House2_Text_LikeYourStyleTakeThis": {
   "en": "Grand! I like your style.\\nI think we can be friends.\\pTake this and fish, young friend!",
-  "fr": "Formidable ! J'aime ton style.\\nJe crois qu'on peut être amis.\\pPrends ça et pêche, jeune ami !"
+  "fr": "Cool ! T'as l'air de quelqu'un de\\nbien !\\pPrends ça ! Que la Grand' Pêche\\nsoit avec toi !"
  },
  "FuchsiaCity_House2_Text_OhThatsDisappointing": {
   "en": "Oh…\\nThat's so disappointing…",
-  "fr": "Oh…\\nC'est tellement décevant…"
+  "fr": "Oh… Je suis très déçu…"
  },
  "FuchsiaCity_House2_Text_ReceivedGoodRod": {
   "en": "{PLAYER} received a GOOD ROD from\\nthe FISHING GURU's brother.",

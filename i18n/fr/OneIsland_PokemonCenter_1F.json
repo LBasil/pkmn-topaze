@@ -13,7 +13,7 @@
  },
  "OneIsland_PokemonCenter_1F_Text_BillCantStomachMilk": {
   "en": "{PLAYER}, is there anything that\\nyou can't stand?\\pApparently, BILL simply can't\\nstomach milk at all.",
-  "fr": "{PLAYER}, y a-t-il quelque chose que\\ntu ne supportes pas ?\\pApparemment, LÉO ne supporte pas\\ndu tout le lait."
+  "fr": "{PLAYER}, y a-t-il des choses que tu\\nne supportes pas ?\\pApparemment, LÉO est allergique au\\nlait, c'est dingue."
  },
  "OneIsland_PokemonCenter_1F_Text_BillCatchYouLater": {
   "en": "BILL: I'll catch you later!\\nSay hi to the guy for me!",
@@ -33,11 +33,11 @@
  },
  "OneIsland_PokemonCenter_1F_Text_BillOhHeyPlayer": {
   "en": "BILL: Oh, hey!\\n{PLAYER}!",
-  "fr": "LÉO : Oh, salut !\\n{PLAYER} !"
+  "fr": "LÉO : Oh ! {PLAYER} !"
  },
  "OneIsland_PokemonCenter_1F_Text_BillWeGotItDone": {
   "en": "BILL: What kept you so long?\\nBeen out having a good time?\\pWe got it done.\\nThe PCs are up and running!",
-  "fr": "LÉO : Qu'est-ce qui t'a retenu si\\nlongtemps ? Tu t'es bien amusé ?\\pC'est fait.\\nLes PC sont opérationnels !"
+  "fr": "LÉO : Qu'est-ce qui t'a retenu\\ncomme ça ?\\pNous, on a terminé ! Les PC\\nfonctionnent à merveille."
  },
  "OneIsland_PokemonCenter_1F_Text_BillWeShouldHeadBackToKanto": {
   "en": "BILL: Well, there you have it.\\nI'm finished with the job.\\lWe should head back to KANTO.\\pCELIO, I'll be seeing you again.",
@@ -45,11 +45,11 @@
  },
  "OneIsland_PokemonCenter_1F_Text_BillYouveLearnedALot": {
   "en": "BILL: No, no! There was almost\\nnothing left for me to do.\\pCELIO, I have to hand it to you.\\nYou've learned a lot.",
-  "fr": "LÉO : Non, non ! Il ne restait\\npresque rien à faire.\\pCELIO, je dois te féliciter.\\nTu as beaucoup appris."
+  "fr": "LÉO : Non, non. C'était vraiment\\nrien.\\pTout ça c'est grâce à toi CILEO,\\nj'aurais rien pu faire seul."
  },
  "OneIsland_PokemonCenter_1F_Text_BillsFirstMonWasAbra": {
   "en": "{PLAYER}, what's your favorite kind\\nof POKéMON?\\pBILL is a POKéMANIAC, so he loves\\nevery kind.\\pApparently, the first one he caught\\nwas an ABRA.",
-  "fr": "{PLAYER}, quel est ton type de\\nPOKéMON préféré ?\\pBILL est un POKéMANIAC, il les aime\\ntous.\\pApparemment, le premier qu'il ait\\ncapturé était un ABRA."
+  "fr": "{PLAYER}, c'est quoi ton type de\\nPOKéMON préféré ?\\pLEO est un POKéMANIAC, il aime tous\\nles types de POKéMON.\\pApparemment, son premier POKéMON\\nétait un ABRA."
  },
  "OneIsland_PokemonCenter_1F_Text_BillsHometownInGoldenrod": {
   "en": "By the way, {PLAYER}, you're from\\nGRENALUX, aren't you?\\pI've heard that it's a quiet and\\npleasant place.\\pBILL's hometown is GOLDENROD CITY,\\nwhere his folks still live.\\pI've heard that it's quite the\\nfestive, bustling city.\\pI'd like to go there one day.",
@@ -249,7 +249,7 @@
  },
  "OneIsland_PokemonCenter_1F_Text_GotPCWorkingStrollAWhileMore": {
   "en": "Oh, hey, {PLAYER}!\\pDid you see?\\nWe got the PC working!\\pI've got a few things to show\\nCELIO here.\\pCan you go out on a stroll or\\nsomething for a while more?",
-  "fr": "Oh, salut, {PLAYER} !\\pTu as vu ?\\nLe PC marche !\\pJ'ai quelques trucs à montrer à\\nCELIO.\\pPeux-tu faire un tour un moment ?"
+  "fr": "Oh, {PLAYER} !\\pTu as vu ? Le PC fonctionne enfin !\\pMais j'ai encore quelques trucs à\\nmontrer à CILEO.\\pTu peux repasser un peu plus tard ?"
  },
  "OneIsland_PokemonCenter_1F_Text_HandedRubyToCelio": {
   "en": "{PLAYER} handed the RUBY\\nto CELIO.",
@@ -269,11 +269,11 @@
  },
  "OneIsland_PokemonCenter_1F_Text_MachineLinkedWithKanto": {
   "en": "Network Machine\\nLink Level 1\\pLink established with the KANTO\\nregion.",
-  "fr": "Machine Réseau\\nNiveau de liaison 1\\pLiaison établie avec la région de\\nKANTO."
+  "fr": "NIVEAU DE CONNEXION 1\\pLien établi avec la région de\\nKANTO."
  },
  "OneIsland_PokemonCenter_1F_Text_MachineLinkedWithKantoAndHoenn": {
   "en": "Network Machine\\nLink Level 2\\pLink established with the KANTO\\nand HOENN regions.",
-  "fr": "Machine Réseau\\nNiveau de liaison 2\\pLiaison établie avec les régions de\\nKANTO et HOENN."
+  "fr": "NIVEAU DE CONNEXION 2\\pLien établi avec les régions de\\nKANTO et HOENN."
  },
  "OneIsland_PokemonCenter_1F_Text_MachineUnderAdjustment": {
   "en": "Network Machine\\nLink Level 0\\p…POKéMON Storage System under\\nadjustment…",
@@ -281,7 +281,7 @@
  },
  "OneIsland_PokemonCenter_1F_Text_ManagedToLinkWithHoennThankYou": {
   "en": "{PLAYER}…\\n{PLAYER}, I did it!\\pI've managed to link up with\\nTRAINERS in the HOENN region!\\pFinally, the Network Machine is\\nfully operational!\\p{PLAYER}, I owe it all to you!\\pThanks to you, my dream came\\ntrue…",
-  "fr": "{PLAYER}…\\n{PLAYER}, j'ai réussi !\\pJ'ai réussi à me relier à des\\nDRESSEURS de la région de HOENN !\\pEnfin, la Machine Réseau est\\npleinement opérationnelle !\\p{PLAYER}, je te dois tout !\\pGrâce à toi, mon rêve s'est\\nréalisé…"
+  "fr": "{PLAYER}… {PLAYER}, j'ai réussi !\\pJ'ai réussi à me connecter avec les\\nDRESSEURS de HOENN.\\pMa machine est complètement\\nopérationnelle !\\p{PLAYER}, tout ça, c'est grâce à toi\\n!\\pMerci, mes rêves se sont enfin\\nréalisés…"
  },
  "OneIsland_PokemonCenter_1F_Text_MayIAskOneMoreFavor": {
   "en": "Thank you!\\n{PLAYER}, you're simply amazing.\\p… … …  … … …\\pUm… May I ask one more giant favor\\nof you?",
@@ -297,15 +297,15 @@
  },
  "OneIsland_PokemonCenter_1F_Text_ObtainedTriPass": {
   "en": "Obtained the TRI-PASS!",
-  "fr": "Tu as obtenu le TRI-PASS !"
+  "fr": "Obtient le TRI-PASSE !"
  },
  "OneIsland_PokemonCenter_1F_Text_OhThats": {
   "en": "Oh!\\nTh-that's…",
-  "fr": "Oh !\\nC-c'est…"
+  "fr": "Oh ! M-mais c'est…"
  },
  "OneIsland_PokemonCenter_1F_Text_OkayThisIsGood": {
   "en": "Okay, this is good…",
-  "fr": "Bon, c'est bien…"
+  "fr": "OK, c'est bon…"
  },
  "OneIsland_PokemonCenter_1F_Text_PassLetYouGetToAllIslands": {
   "en": "This is my own ferry PASS.\\pIt will let you get to all the\\nSEVII ISLANDS.\\p{PLAYER}, please, I can't do\\nit without your help.",
@@ -313,7 +313,7 @@
  },
  "OneIsland_PokemonCenter_1F_Text_PassLetsYouTravelBetweenIslands": {
   "en": "It's a PASS for the ferry service\\nserving the local islands.\\pIt will let you travel between the\\nISLANDS ONE, TWO, and THREE.\\pOh, you should have this, too.",
-  "fr": "C'est un PASS pour le service de\\nferry desservant les îles locales.\\pIl te permettra de voyager entre\\nles ÎLES 1, 2 et 3.\\pOh, tu devrais avoir ça aussi."
+  "fr": "C'est un PASSE pour le ferry\\nreliant les îles entre elles.\\pAvec ça, tu pourras aller sur les\\nÎLES 1, 2 et 3.\\pOh, il faudrait aussi que tu\\nprennes ça."
  },
  "OneIsland_PokemonCenter_1F_Text_PlayerIsReigningPokemonChamp": {
   "en": "CELIO, this is {PLAYER}, the\\nreigning POKéMON CHAMP!",
@@ -341,7 +341,7 @@
  },
  "OneIsland_PokemonCenter_1F_Text_SorryForBeingPoorHost": {
   "en": "I'm sorry for taking up so much of\\nBILL's time.\\pI'm also sorry for being such a \\npoor host on your visit here.",
-  "fr": "Je suis désolé de prendre tant de\\ntemps à LÉO.\\pJe suis aussi désolé d'être un si\\nmauvais hôte pour ta visite."
+  "fr": "Je suis vraiment désolé d'accaparer\\nLÉO.\\pJ'espère que tu ne m'en voudras pas\\ntrop."
  },
  "OneIsland_PokemonCenter_1F_Text_ThankYouGiveMeTime": {
   "en": "CELIO: So this is the gem that\\nforms a pair with the RUBY…\\p{PLAYER}, you've gone through a lot\\nto get this, didn't you?\\pYou don't have to tell me. I know\\nit wasn't easy.\\pThank you so much!\\pNow it's my turn to work for you!\\nPlease give me a little time.",
@@ -369,11 +369,11 @@
  },
  "OneIsland_PokemonCenter_1F_Text_TryingToFindGem": {
   "en": "I was trying to find the gem\\neven while I was studying.\\pAs a result, I've made no headway\\nin both my search and studies…\\pIf I relied on BILL, I'm sure my\\nresearch would progress.\\pBut this time, I want to try to do\\nthings by myself.",
-  "fr": "J'essayais de trouver la gemme même\\npendant mes études.\\pRésultat, je n'avance ni dans ma\\nrecherche ni dans mes études…\\pSi je comptais sur LÉO, ma\\nrecherche avancerait sûrement.\\pMais cette fois, je veux essayer de\\nfaire les choses moi-même."
+  "fr": "Je cherchais déjà cette pierre\\npendant mes études.\\pRésultat, je n'ai ni mon diplôme,\\nni la pierre…\\pJe sais que je peux compter sur LÉO\\npour faire avancer mes\\precherches. Mais cette fois, je\\nvoudrais réussir tout seul."
  },
  "OneIsland_PokemonCenter_1F_Text_UsualPCServicesUnavailable": {
   "en": "The usual PC services aren't\\navailable…",
-  "fr": "Les services PC habituels ne sont\\npas disponibles…"
+  "fr": "Services habituels inaccessibles…"
  },
  "OneIsland_PokemonCenter_1F_Text_WishICouldTradeWithBoyfriend": {
   "en": "I wish I could trade POKéMON with\\nmy boyfriend who lives far away…",

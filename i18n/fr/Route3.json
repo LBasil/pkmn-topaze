@@ -9,7 +9,7 @@
  },
  "Route3_Text_BenPostBattle": {
   "en": "Are you using a POKéMON CENTER's\\nPC for storing your POKéMON?\\pEach BOX can hold up to\\n30 POKéMON.",
-  "fr": "Utilises-tu le PC d'un CENTRE\\nPOKéMON pour stocker tes POKéMON ?\\pChaque BOÎTE peut contenir jusqu'à\\n30 POKéMON."
+  "fr": "Pour ranger tes POKéMON, utilise un\\nPC.\\pChaque boîte contient 30 POKéMON !"
  },
  "Route3_Text_CalvinDefeat": {
   "en": "Lost!\\nLost! Lost!",
@@ -21,7 +21,7 @@
  },
  "Route3_Text_CalvinPostBattle": {
   "en": "I always wear shorts, even in\\nwinter. That's my policy.",
-  "fr": "Je porte toujours un short, même en\\nhiver. C'est ma politique."
+  "fr": "Je porte toujours des shorts, même\\nen hiver !"
  },
  "Route3_Text_ColtonDefeat": {
   "en": "You beat me again!",
@@ -33,7 +33,7 @@
  },
  "Route3_Text_ColtonPostBattle": {
   "en": "There are other kinds of POKéMON\\nthan the ones you find in forests.",
-  "fr": "Il y a d'autres types de POKéMON\\nque ceux qu'on trouve en forêt."
+  "fr": "Il y a beaucoup de POKéMON\\ndifférents dans la forêt !"
  },
  "Route3_Text_GregDefeat": {
   "en": "If I had new POKéMON, I would've\\nwon!",
@@ -45,7 +45,7 @@
  },
  "Route3_Text_GregPostBattle": {
   "en": "If a POKéMON BOX on the PC gets\\nfull, just switch to another BOX.",
-  "fr": "Si une BOÎTE POKéMON du PC est\\npleine, passe simplement à une\\lautre BOÎTE."
+  "fr": "Quand l'une des boîtes de ton PC\\nest pleine, active une autre boîte\\l!"
  },
  "Route3_Text_JamesDefeat": {
   "en": "Done like dinner!",
@@ -57,7 +57,7 @@
  },
  "Route3_Text_JamesPostBattle": {
   "en": "Trained POKéMON are stronger than\\nthe wild ones.",
-  "fr": "Les POKéMON entraînés sont plus\\nforts que les sauvages."
+  "fr": "Les POKéMON dressés sont plus forts\\nque les POKéMON sauvages !"
  },
  "Route3_Text_JaniceDefeat": {
   "en": "You're mean!",
@@ -69,7 +69,7 @@
  },
  "Route3_Text_JanicePostBattle": {
   "en": "You shouldn't be staring if you\\ndon't want to battle!",
-  "fr": "Tu ne devrais pas regarder si tu ne\\nveux pas te battre !"
+  "fr": "Baisse les yeux si tu veux éviter\\nla baston !"
  },
  "Route3_Text_ProcheThomas_After": {
   "en": "Never underestimate bugs. They\\nalways come back stronger.",
@@ -137,7 +137,7 @@
  },
  "Route3_Text_SallyPostBattle": {
   "en": "You can avoid battles by not\\nletting TRAINERS see you.",
-  "fr": "Tu peux éviter les combats en ne te\\nfaisant pas voir des DRESSEURS."
+  "fr": "Évite les regards si tu ne veux pas\\ncombattre !"
  },
  "Route3_Text_TimeHint": {
   "en": "Someone scratched on the rock: THE\\nSUN ROSE TWICE TODAY.",

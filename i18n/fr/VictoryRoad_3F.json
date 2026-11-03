@@ -1,19 +1,19 @@
 {
  "Text_DoubleEdgeDeclined": {
   "en": "I'll teach you the technique\\nanytime.",
-  "fr": "Je t'enseignerai la technique quand\\ntu veux."
+  "fr": "Très bien. N'hésite pas à revenir\\nsi tu changes d'avis."
  },
  "Text_DoubleEdgeTaught": {
   "en": "Keep that drive going for the\\nPOKéMON LEAGUE!\\pTake a run at them and knock 'em\\nout!",
-  "fr": "Garde cet élan pour la LIGUE\\nPOKéMON !\\pFonce sur eux et mets-les K.O. !"
+  "fr": "Continue comme ça jusqu'à la LIGUE\\nPOKéMON !\\pJe sais que tu peux tous les battre\\nfacilement."
  },
  "Text_DoubleEdgeTeach": {
   "en": "You should be proud of yourself,\\nhaving battled your way through\\lVICTORY ROAD so courageously.\\pIn recognition of your feat,\\nI'll teach you DOUBLE-EDGE.\\pWould you like me to teach that\\ntechnique?",
-  "fr": "Tu devrais être fier de toi,\\nd'avoir combattu si courageusement\\lsur la ROUTE VICTOIRE.\\pEn reconnaissance de ton exploit,\\nje t'enseignerai DAMOCLÈS.\\pVeux-tu que je t'enseigne cette\\ntechnique ?"
+  "fr": "Je suis impressionné, tu as réussi\\nà arriver jusque-là si\\lcourageusement.\\pPour la peine, je veux bien\\nt'apprendre DAMOCLÈS.\\pVeux-tu que j'enseigne cette\\ntechnique à un de tes POKéMON ?"
  },
  "Text_DoubleEdgeWhichMon": {
   "en": "Which POKéMON should I teach\\nDOUBLE-EDGE?",
-  "fr": "À quel POKéMON dois-je enseigner\\nDAMOCLÈS ?"
+  "fr": "À quel POKéMON enseigner DAMOCLÈS ?"
  },
  "VictoryRoad_3F_Text_AlexaDefeat": {
   "en": "Oh!\\nSo strong!",
@@ -25,7 +25,7 @@
  },
  "VictoryRoad_3F_Text_AlexaPostBattle": {
   "en": "By fighting tough battles, you get\\nstronger.",
-  "fr": "En livrant de rudes combats, tu\\ndeviens plus fort."
+  "fr": "Il faut se battre souvent pour\\nprogresser."
  },
  "VictoryRoad_3F_Text_CarolineDefeat": {
   "en": "I'm furious!",
@@ -37,7 +37,7 @@
  },
  "VictoryRoad_3F_Text_CarolinePostBattle": {
   "en": "You showed me just how good\\nI was…",
-  "fr": "Tu m'as montré à quel point j'étais\\nbon…"
+  "fr": "Ben, j'suis pas si forte que ça !"
  },
  "VictoryRoad_3F_Text_ColbyDefeat": {
   "en": "I don't believe it!",
@@ -49,7 +49,7 @@
  },
  "VictoryRoad_3F_Text_ColbyPostBattle": {
   "en": "All TRAINERS here are headed to\\nthe POKéMON LEAGUE.\\pDon't let down your guard.",
-  "fr": "Tous les DRESSEURS ici se dirigent\\nvers la LIGUE POKéMON.\\pNe baisse pas ta garde."
+  "fr": "Ces DRESSEURS sont de la LIGUE\\nPOKéMON !\\pFais attention !"
  },
  "VictoryRoad_3F_Text_GeorgeDefeat": {
   "en": "The rumors were true!",
@@ -93,6 +93,6 @@
  },
  "VictoryRoad_3F_Text_TyraPostBattle": {
   "en": "TYRA: You've taught me that power\\ncan be infinite in shape and form.",
-  "fr": "TYRA : Tu m'as appris que la\\npuissance peut prendre une infinité\\lde formes."
+  "fr": "TYRA : Grâce à toi, j'ai enfin\\ncompris que la puissance seule ne\\lsuffit pas."
  }
 }

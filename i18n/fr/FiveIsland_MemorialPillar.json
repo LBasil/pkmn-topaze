@@ -1,7 +1,7 @@
 {
  "FiveIsland_MemorialPillar_Text_BeGoodToYourMonsToo": {
   "en": "Please be good to your POKéMON,\\ntoo.",
-  "fr": "Sois gentil avec tes POKéMON aussi."
+  "fr": "Soyez toujours aussi bon envers vos\\nPOKéMON."
  },
  "FiveIsland_MemorialPillar_Text_ChazDefeat": {
   "en": "Flap, flap!",
@@ -13,11 +13,11 @@
  },
  "FiveIsland_MemorialPillar_Text_ChazPostBattle": {
   "en": "There was a really somber guy\\nover that way.",
-  "fr": "Il y avait un type vraiment sombre\\npar là-bas."
+  "fr": "Il y avait un type super maussade\\npar là-bas."
  },
  "FiveIsland_MemorialPillar_Text_DontHaveRoomForIt": {
   "en": "If you don't have room for it,\\nI'll hold it for you till next time.",
-  "fr": "Si tu n'as pas de place, je le\\ngarde pour toi jusqu'à la prochaine\\lfois."
+  "fr": "Si vous n'avez plus de place,\\nrevenez me voir plus tard."
  },
  "FiveIsland_MemorialPillar_Text_HaroldDefeat": {
   "en": "Down is so comfy…\\nIt makes me drowsy…",
@@ -29,19 +29,19 @@
  },
  "FiveIsland_MemorialPillar_Text_HaroldPostBattle": {
   "en": "It fills me with happiness when\\nbird POKéMON beg playfully…",
-  "fr": "Ça me comble de bonheur quand les\\nPOKéMON oiseaux quémandent en\\ljouant…"
+  "fr": "Je suis content quand je vois les\\nPOKéMON oiseau jouer ensemble."
  },
  "FiveIsland_MemorialPillar_Text_HereLiesTectonix": {
   "en": "Boulders and rocks are neatly piled\\nup as a cairn.\\p“Here lies TECTONIX” is engraved\\non a boulder.",
-  "fr": "Des rochers sont empilés en un\\ncairn.\\p“ Ci-gît TECTONIX ” est gravé sur\\nun rocher."
+  "fr": "Les rochers sont empilés devant une\\nplaque.\\pOn peut y lire : “Ici repose\\nTECTONIX”."
  },
  "FiveIsland_MemorialPillar_Text_HereLiesTectonixLemonadeOffering": {
   "en": "“Here lies TECTONIX” is engraved\\non a boulder.\\pThere is a LEMONADE placed as an\\noffering in front of the grave.",
-  "fr": "“ Ci-gît TECTONIX ” est gravé sur\\nun rocher.\\pUne LIMONADE est déposée en\\noffrande devant la tombe."
+  "fr": "On peut lire sur une pierre : “Ici\\nrepose TECTONIX”.\\pIl y a une LIMONADE placée ici en\\nsigne d'offrande."
  },
  "FiveIsland_MemorialPillar_Text_LeaveAnotherLemonadeOffering": {
   "en": "Would you like to leave another\\nLEMONADE as an offering?",
-  "fr": "Veux-tu laisser une autre LIMONADE\\nen offrande ?"
+  "fr": "Voulez-vous placer une autre\\nLIMONADE en offrande ?"
  },
  "FiveIsland_MemorialPillar_Text_MiloDefeat": {
   "en": "Oh, so sharp!",
@@ -53,34 +53,34 @@
  },
  "FiveIsland_MemorialPillar_Text_MiloPostBattle": {
   "en": "You can fly to FOUR ISLAND from\\nhere.",
-  "fr": "Tu peux voler vers l'ÎLE 4 d'ici."
+  "fr": "À partir d'ici, tu peux voler\\njusqu'à l'ÎLE 4."
  },
  "FiveIsland_MemorialPillar_Text_PlacedCanOfLemonade": {
   "en": "{PLAYER} placed a can of LEMONADE\\nin front of the grave.",
-  "fr": "{PLAYER} a posé une canette de\\nLIMONADE devant la tombe."
+  "fr": "{PLAYER} place une LIMONADE en face\\nde la stèle."
  },
  "FiveIsland_MemorialPillar_Text_ScrubScrub": {
   "en": "Scrub, scrub…",
-  "fr": "Frotte, frotte…"
+  "fr": "Gratt, gratt…"
  },
  "FiveIsland_MemorialPillar_Text_ScrubScrubTectonix": {
   "en": "Scrub, scrub…\\p… … …\\nTECTONIX…",
-  "fr": "Frotte, frotte…\\p… … …\\nTECTONIX…"
+  "fr": "Gratt, gratt…\\p… … … TECTONIX…"
  },
  "FiveIsland_MemorialPillar_Text_StillHaveThingAsMyThanks": {
   "en": "Oh, it's you from that time…\\pI still have that thing I wanted\\nyou to have as my thanks.",
-  "fr": "Oh, c'est toi, de l'autre fois…\\pJ'ai toujours ce que je voulais te\\ndonner en remerciement."
+  "fr": "Oh, vous revoilà.\\pJ'ai toujours cet objet que je\\nvoulais vous donner l'autre fois."
  },
  "FiveIsland_MemorialPillar_Text_ThankYouPleaseTakeThis": {
   "en": "Th-thank you…\\pThat was my TECTONIX's favorite\\ndrink…\\pI don't even know you, but your\\nact of kindness…\\pIt's uplifted me a little.\\pCan you please take this as my\\nthanks?",
-  "fr": "M-merci…\\pC'était la boisson préférée de\\nmon TECTONIX…\\pJe ne te connais même pas, mais ton\\ngeste de bonté…\\pM'a un peu remonté le moral.\\pPeux-tu accepter ceci en\\nremerciement ?"
+  "fr": "M-Merci…\\pC'était la boisson favorite de\\nTECTONIX…\\pJe ne vous connais pas, mais je\\nsuis très touché par\\pvotre bonté.\\pTenez, prenez ceci en remerciement."
  },
  "FiveIsland_MemorialPillar_Text_ThisIsWhereIBuriedMyOnix": {
   "en": "This is where I buried my ONIX…\\nIt was named TECTONIX…",
-  "fr": "C'est ici que j'ai enterré mon\\nONIX… Il s'appelait TECTONIX…"
+  "fr": "C'est ici qu'est enterré mon ONIX…\\nJe l'appelais TECTONIX…"
  },
  "FiveIsland_MemorialPillar_Text_YourMonsLookHealthy": {
   "en": "Hello…\\nYour POKéMON look healthy…",
-  "fr": "Bonjour… Tes POKéMON ont l'air en\\nbonne santé…"
+  "fr": "Bonjour… Ils ont l'air en forme vos\\nPOKéMON."
  }
 }

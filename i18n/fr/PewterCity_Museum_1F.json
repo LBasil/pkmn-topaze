@@ -5,47 +5,47 @@
  },
  "PewterCity_Museum_1F_Text_AerodactylFossil": {
   "en": "AERODACTYL Fossil\\nA primitive and rare POKéMON.",
-  "fr": "Fossile d'PTÉRA\\nUn POKéMON primitif et rare."
+  "fr": "Fossile de PTÉRA Un POKéMON rare et\\nancien."
  },
  "PewterCity_Museum_1F_Text_AmberContainsGeneticMatter": {
   "en": "AMBER contains the genetic matter\\nof ancient POKéMON.\\pThere's a LAB somewhere trying to\\nresurrect POKéMON from AMBER.",
-  "fr": "L'AMBRE contient le matériel\\ngénétique de POKéMON anciens.\\pIl y a un LABO quelque part qui\\nessaie de ressusciter des POKéMON à\\lpartir d'AMBRE."
+  "fr": "Dans un certain labo, on essaie de\\nrégénérer les anciens POKéMON\\pgrâce à leur information génétique\\ncontenue dans de l'AMBRE."
  },
  "PewterCity_Museum_1F_Text_AmberIsFossilizedSap": {
   "en": "AMBER is actually sap, that gooey\\nstuff that oozes from trees.\\pThe ancient sap fossilized over\\ntime to become rock-hard AMBER.",
-  "fr": "L'AMBRE est en fait de la sève, ce\\ntruc poisseux qui suinte des\\larbres.\\pLa sève ancienne s'est fossilisée\\navec le temps en AMBRE dur comme la\\lpierre."
+  "fr": "L'AMBRE est en fait de la sève\\ntombée des arbres.\\pAvec le temps, la sève se fossilise\\npour devenir de l'AMBRE."
  },
  "PewterCity_Museum_1F_Text_BeautifulPieceOfAmber": {
   "en": "There is a beautiful piece of\\nAMBER in a clear gold color.",
-  "fr": "Il y a un beau morceau d'AMBRE\\nd'une claire couleur dorée."
+  "fr": "Il y a un beau morceau d'AMBRE d'un\\néclat doré! !"
  },
  "PewterCity_Museum_1F_Text_ComeAgain": {
   "en": "Come again!",
-  "fr": "Reviens nous voir !"
+  "fr": "À bientôt !"
  },
  "PewterCity_Museum_1F_Text_DoYouKnowWhatAmberIs": {
   "en": "You can't sneak in the back way!\\nNice try, kid, but no.\\pOh, whatever!\\nDo you know what AMBER is?",
-  "fr": "Tu ne peux pas te faufiler par\\nl'arrière ! Bien essayé, mais non.\\pOh, peu importe !\\nSais-tu ce qu'est l'AMBRE ?"
+  "fr": "Ne te cache pas dans l'ombre !\\pEnfin, si ça t'amuse ! Au fait,\\nsais-tu ce que c'est l'AMBRE ?"
  },
  "PewterCity_Museum_1F_Text_DontHaveEnoughMoney": {
   "en": "You don't have enough money.",
-  "fr": "Tu n'as pas assez d'argent."
+  "fr": "Vous n'avez pas assez d'argent."
  },
  "PewterCity_Museum_1F_Text_DontHaveSpaceForThis": {
   "en": "You don't have space for this.",
-  "fr": "Tu n'as pas de place pour ça."
+  "fr": "Ton inventaire est plein !"
  },
  "PewterCity_Museum_1F_Text_GetOldAmberChecked": {
   "en": "Ssh!\\nGet the OLD AMBER checked!",
-  "fr": "Chut !\\nFais examiner le VIEIL AMBRE !"
+  "fr": "Chut ! Va faire examiner ce morceau\\nd'AMBRE !"
  },
  "PewterCity_Museum_1F_Text_Its50YForChildsTicket": {
   "en": "Yes, yes.\\nIt's ¥50 for a child's ticket.\\pWould you like to come in?",
-  "fr": "Oui, oui.\\nC'est 50¥ le billet enfant.\\pVeux-tu entrer ?"
+  "fr": "50¥ le ticket pour un enfant.\\pVoulez-vous entrer ?"
  },
  "PewterCity_Museum_1F_Text_KabutopsFossil": {
   "en": "KABUTOPS Fossil\\nA primitive and rare POKéMON.",
-  "fr": "Fossile de KABUTOPS\\nUn POKéMON primitif et rare."
+  "fr": "Fossile du KABUTOPS Un POKéMON rare\\net ancien."
  },
  "PewterCity_Museum_1F_Text_MonKabuto": {
   "en": "KABUTO: Kabu!\\nA revived fossil, warming up\\lnext to the lava.",
@@ -53,23 +53,23 @@
  },
  "PewterCity_Museum_1F_Text_PleaseEnjoyYourself": {
   "en": "Please enjoy yourself.",
-  "fr": "Profite bien de ton séjour."
+  "fr": "Bonne visite !"
  },
  "PewterCity_Museum_1F_Text_ReceivedOldAmberFromMan": {
   "en": "{PLAYER} received the OLD AMBER\\nfrom the man.",
-  "fr": "{PLAYER} a reçu le VIEIL AMBRE\\nde l'homme."
+  "fr": "{PLAYER} obtient le VIEIL AMBRE !"
  },
  "PewterCity_Museum_1F_Text_Right50YThankYou": {
   "en": "Right, ¥50!\\nThank you!",
-  "fr": "Bien, 50¥ !\\nMerci !"
+  "fr": "50¥ ! Parfait ! Merci !"
  },
  "PewterCity_Museum_1F_Text_ShouldBeGratefulForLongLife": {
   "en": "I should be grateful for my long\\nlife.\\pNever did I think I would get to\\nsee the bones of a dragon!",
-  "fr": "Je devrais être reconnaissant pour\\nma longue vie.\\pJamais je n'aurais cru voir les os\\nd'un dragon !"
+  "fr": "Je ne pensais pas que je pourrais\\nvivre suffisamment vieux pour\\ppouvoir voir des os de dragon."
  },
  "PewterCity_Museum_1F_Text_WantYouToGetAmberExamined": {
   "en": "Ssh! Listen, I need to share a\\nsecret with someone.\\pI think that this chunk of AMBER\\ncontains POKéMON DNA!\\pIt would be a shattering scientific\\nbreakthrough if POKéMON could be\\lresurrected from it.\\pBut, my colleagues just ignore\\nwhat I have to say.\\pSo, I have a favor to ask!\\pI want you to get this examined at\\na POKéMON LAB somewhere.",
-  "fr": "Chut ! Écoute, je dois partager un\\nsecret avec quelqu'un.\\pJe pense que ce morceau d'AMBRE\\ncontient de l'ADN de POKéMON !\\pCe serait une avancée scientifique\\nfracassante si on pouvait\\lressusciter des POKéMON à partir de\\nlui.\\pMais mes collègues ignorent ce que\\nj'ai à dire.\\pAlors, j'ai un service à te\\ndemander !\\pJe veux que tu le fasses examiner\\ndans un LABO POKéMON quelque part."
+  "fr": "Je crois qu'il y a des traces d'ADN\\nde POKéMON dans ce morceau d'ambre.\\pÇa serait une avancée scientifique\\nincroyable si on pouvait\\prégénérer un POKéMON à partir de\\ncette pierre ! Non ? Hein ?\\pMais personne ne m'écoute !\\pJ'ai une faveur à te demander !\\pApporte ça à mon LABO POKéMON pour\\nl'examiner !"
  },
  "PewterCity_Museum_1F_Text_WeHaveTwoFossilsOnExhibit": {
   "en": "The thieves walked right past our\\nfossils. They wanted only the\\pPYROPE.",

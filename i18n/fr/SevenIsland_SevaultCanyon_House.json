@@ -5,22 +5,22 @@
  },
  "SevenIsland_SevaultCanyon_House_Text_ChanseyDanceJoinIn": {
   "en": "Dance, dance!\\nCHANSEY Dance!\\pYou join in, too!\\nDance, dance!",
-  "fr": "Danse, danse !\\nDanse du LEVEINARD !\\pJoins-toi à nous aussi !\\nDanse, danse !"
+  "fr": "Danse, danse ! Danse LEVEINARD !\\pTu te joins à nous ? Allez, danse,\\ndanse !"
  },
  "SevenIsland_SevaultCanyon_House_Text_ComeOnDance": {
   "en": "Come on, dance!",
-  "fr": "Allez, danse !"
+  "fr": "Allez, sois pas timide !"
  },
  "SevenIsland_SevaultCanyon_House_Text_DancedChanseyDance": {
   "en": "{PLAYER} danced the CHANSEY Dance!",
-  "fr": "{PLAYER} a dansé la Danse du\\nLEVEINARD !"
+  "fr": "{PLAYER} exécute la danse de\\nLEVEINARD !"
  },
  "SevenIsland_SevaultCanyon_House_Text_WouldYouLikeToDance": {
   "en": "Would you like to dance?",
-  "fr": "Voudrais-tu danser ?"
+  "fr": "Tu veux danser ?"
  },
  "SevenIsland_SevaultCanyon_House_Text_YoureAllChipperNow": {
   "en": "Ahahahaha!\\pThere, you're all chipper now!\\nLucky!",
-  "fr": "Ahahahaha !\\pVoilà, te voilà tout guilleret !\\nQuelle chance !"
+  "fr": "Ahahahaha !\\pJe suis content que ça te plaise !"
  }
 }

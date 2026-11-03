@@ -1,11 +1,11 @@
 {
  "CeladonCity_DepartmentStore_2F_Text_BuyReviveForLongOutings": {
   "en": "For long outings, you should buy\\nREVIVE.",
-  "fr": "Pour les longues sorties, tu\\ndevrais acheter des RAPPELS."
+  "fr": "Equipe-toi de RAPPELS avant de\\npartir à l'aventure."
  },
  "CeladonCity_DepartmentStore_2F_Text_FloorSign": {
   "en": "Top-Grade Items for TRAINERS!\\p2F: TRAINER'S MARKET",
-  "fr": "Articles de choix pour DRESSEURS !\\p2F : MARCHÉ DES DRESSEURS"
+  "fr": "Les objets de premier choix !\\p1er : MARCHÉ DES DRESSEURS"
  },
  "CeladonCity_DepartmentStore_2F_Text_LanceComesToBuyCapes": {
   "en": "We have a customer, LANCE, who\\noccasionally comes.\\pHe always buys capes.\\pI wonder… Does he have many\\nidentical capes at home?",
@@ -13,6 +13,6 @@
  },
  "CeladonCity_DepartmentStore_2F_Text_SuperRepelMorePowerfulRepel": {
   "en": "SUPER REPEL keeps weak POKéMON at\\nbay…\\pHmm, it's a more powerful REPEL.",
-  "fr": "Le SUPER REPOUSSE tient les POKéMON\\nfaibles à distance…\\pHmm, c'est un REPOUSSE plus fort."
+  "fr": "Le SUPEREPOUSSE tient les POKéMON\\nfaibles à l'écart…\\pC'est un REPOUSSE plus puissant !"
  }
 }

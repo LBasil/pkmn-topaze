@@ -1,7 +1,7 @@
 {
  "CeladonCity_Restaurant_Text_MakeRoomForThis": {
   "en": "Make room for this!",
-  "fr": "Fais de la place pour ça !"
+  "fr": "Ton inventaire est plein !"
  },
  "CeladonCity_Restaurant_Text_ManLostItAllAtSlots": {
   "en": "Munch…\\pThe man at that table lost it all\\nat the slots.",
@@ -9,7 +9,7 @@
  },
  "CeladonCity_Restaurant_Text_OftenGoToDrugstore": {
   "en": "My POKéMON are weak, so I often\\nhave to go to the DRUGSTORE.",
-  "fr": "Mes POKéMON sont faibles, alors je\\ndois souvent aller à la PHARMACIE."
+  "fr": "Mes POKéMON sont faibles alors je\\nvais souvent acheter des\\laccélérateurs."
  },
  "CeladonCity_Restaurant_Text_PsstBasementUnderGameCorner": {
   "en": "Psst! There's a basement under the\\nGAME CORNER, I hear.",
@@ -17,15 +17,15 @@
  },
  "CeladonCity_Restaurant_Text_ReceivedCoinCaseFromMan": {
   "en": "{PLAYER} received a COIN CASE\\nfrom the man.",
-  "fr": "{PLAYER} a reçu une BOÎTE À JETONS\\nde la part de l'homme."
+  "fr": "{PLAYER} reçoit BOÎTE JETONS !"
  },
  "CeladonCity_Restaurant_Text_TakeThisImBusted": {
   "en": "Go ahead! Laugh!\\nI'm flat-out busted!\\pNo more slots for me!\\nI'm going straight!\\pHere!\\nI won't be needing this anymore!",
-  "fr": "Vas-y ! Ris !\\nJe suis complètement fauché !\\pFini les machines à sous pour moi !\\nJe me range !\\pTiens !\\nJe n'en aurai plus besoin !"
+  "fr": "Vas-y ! Rigole ! J'ai plus une\\nthune !\\pC'est marrant, hein ? Pfff… Je te\\nhais !\\pPrends ça tiens ! Et surtout, perds\\ntout ton blé !"
  },
  "CeladonCity_Restaurant_Text_TakingBreakRightNow": {
   "en": "Hi!\\pSorry, but we're taking a break\\nright now.",
-  "fr": "Salut !\\pDésolé, mais nous faisons une\\npause en ce moment."
+  "fr": "Salut !\\pOn fait une p'tite pause là."
  },
  "CeladonCity_Restaurant_Text_ThoughtIdWinItBack": {
   "en": "I always thought I was going to\\nwin it back…",

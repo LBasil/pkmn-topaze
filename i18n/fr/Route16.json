@@ -13,7 +13,7 @@
  },
  "Route16_Text_CyclingRoadSign": {
   "en": "Enjoy the slope!\\nCYCLING ROAD",
-  "fr": "Profite de la pente !\\nPISTE CYCLABLE"
+  "fr": "Bonne descente ! PISTE CYCLABLE"
  },
  "Route16_Text_HideoDefeat": {
   "en": "Kaboom!",
@@ -93,11 +93,11 @@
  },
  "Route16_Text_LukePostBattle": {
   "en": "I hate losing!\\nGet out of my face!",
-  "fr": "Je déteste perdre !\\nDégage de ma vue !"
+  "fr": "Je déteste perdre… Surtout dans ces\\nconditions !"
  },
  "Route16_Text_MonSprawledOutInSlumber": {
   "en": "A POKéMON is sprawled out in\\na deep and comfortable slumber.",
-  "fr": "Un POKéMON est étendu dans un\\nsommeil profond et confortable."
+  "fr": "Un POKéMON endormi bloque le chemin\\n!"
  },
  "Route16_Text_RQuest_Ask": {
   "en": "Poison all over my team. 3\\nANTIDOTES, fast!",
@@ -129,7 +129,7 @@
  },
  "Route16_Text_RubenPostBattle": {
   "en": "I get my kicks by harassing people\\nwith my stinking POKéMON.\\pThey're great for startling people.\\nAnd, they bite, too.",
-  "fr": "Je prends mon pied à harceler les\\ngens avec mes POKéMON puants.\\pIls sont géniaux pour effrayer. Et\\nils mordent aussi."
+  "fr": "Je terrorise mes adversaires avec\\nmes POKéMON super vicieux !\\pIls sont super pour faire flipper.\\nEt en plus ils mordent !"
  },
  "Route16_Text_TimeHint": {
   "en": "Two calendars nailed to a post show\\ndifferent days. Both are wrong.",

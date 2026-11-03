@@ -17,7 +17,7 @@
  },
  "TwoIsland_Text_DangerFastCurrent": {
   "en": "DANGER! FAST CURRENT!\\nFishing and surfing prohibited!",
-  "fr": "DANGER ! COURANT RAPIDE !\\nPêche et surf interdits !"
+  "fr": "DANGER ! RAPIDES ! Surf et pêche\\ninterdits !"
  },
  "TwoIsland_Text_FellowMovedFromCeladonCity": {
   "en": "That fellow there, he moved here\\nfrom BOURG QUARTZ.\\pHe started up a shop with his\\nyounger brother.\\pYou have to wonder if he knew what\\nhe was getting into.",
@@ -101,7 +101,7 @@
  },
  "TwoIsland_Text_ShopkeepersBrotherWorksGameCorner": {
   "en": "The shopkeeper's brother took\\na job at the GAME CORNER.\\pHe's trying to pull together money\\nso they can buy more merchandise.",
-  "fr": "Le frère du boutiquier a pris un\\nemploi au CASINO.\\pIl essaie de réunir de l'argent\\npour acheter plus de marchandise."
+  "fr": "Le frère du vendeur du STAND a un\\njob à la SALLE DE JEU.\\pIls essaient d'économiser à deux\\npour acheter plus de marchandises."
  },
  "TwoIsland_Text_WelcomeToShopMerchandiseLimited": {
   "en": "Oh!\\nHello, welcome to my shop!\\pWe've only opened up recently.\\pOur merchandise is limited, but I\\nhope we can serve your needs.",

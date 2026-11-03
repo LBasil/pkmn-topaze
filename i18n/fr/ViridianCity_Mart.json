@@ -1,7 +1,7 @@
 {
  "ViridianCity_Mart_Text_GotToBuySomePotions": {
   "en": "I've got to buy some POTIONS.\\pYou never know when your POKéMON\\nwill need quick healing.",
-  "fr": "Je dois acheter des POTIONS.\\pOn ne sait jamais quand ses POKéMON\\nauront besoin de soins rapides."
+  "fr": "Je dois acheter des POTIONS.\\pOn ne sait jamais quand un POKéMON\\npeut en avoir besoin !"
  },
  "ViridianCity_Mart_Text_ReceivedOaksParcelFromClerk": {
   "en": "{PLAYER} received OAK'S PARCEL\\nfrom the POKéMON MART clerk.",
@@ -9,15 +9,15 @@
  },
  "ViridianCity_Mart_Text_SayHiToOakForMe": {
   "en": "Okay, thanks! Please say hi to\\nPROF. OAK for me, too.",
-  "fr": "D'accord, merci ! Salue aussi le\\nPROF. CHEN de ma part."
+  "fr": "Cool ! Tu diras bonjour au PROF.\\nCHEN de ma part !"
  },
  "ViridianCity_Mart_Text_ShopDoesGoodBusinessInAntidotes": {
   "en": "This shop does good business in\\nANTIDOTES, I've heard.",
-  "fr": "Cette boutique fait de bonnes\\naffaires avec les ANTIDOTES,\\lparaît-il."
+  "fr": "On vend des ANTIDOTES dans cette\\nboutique."
  },
  "ViridianCity_Mart_Text_TakeThisToProfOak": {
   "en": "You know PROF. OAK, right?\\pHis order came in.\\nCan I get you to take it to him?",
-  "fr": "Tu connais le PROF. CHEN, n'est-ce\\npas ?\\pSa commande est arrivée.\\nPeux-tu la lui apporter ?"
+  "fr": "Tu connais le PROF. CHEN ?\\pSa commande vient d'arriver.\\nPeux-tu la lui porter ?"
  },
  "ViridianCity_Mart_Text_YouCameFromPallet": {
   "en": "Hey!\\nYou came from GRENALUX?",

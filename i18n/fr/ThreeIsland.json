@@ -1,7 +1,7 @@
 {
  "ThreeIsland_Text_AreYouBossGoBackToKanto": {
   "en": "Are you the boss?\\nGo back to KANTO right now!",
-  "fr": "C'est toi le boss ?\\nRetourne à KANTO tout de suite !"
+  "fr": "C'est toi le chef de cette bande ?\\nRepartez pour KANTO maintenant !"
  },
  "ThreeIsland_Text_Biker1Defeat": {
   "en": "Wha…\\nWhat is this kid?!",
@@ -9,11 +9,11 @@
  },
  "ThreeIsland_Text_Biker1Intro": {
   "en": "Heh, I like your guts.\\nYou'll be losing money to me, but…",
-  "fr": "Heh, j'aime ton cran. Tu vas me\\nperdre de l'argent, mais…"
+  "fr": "Hahaha, t'as du cran au moins. Tu\\nvas te souvenir de cette raclée…"
  },
  "ThreeIsland_Text_Biker1PostBattle": {
   "en": "Aww, man…\\nDon't you dare laugh!",
-  "fr": "Aww, mec…\\nN'ose pas rire !"
+  "fr": "Ne t'avise pas de te moquer !"
  },
  "ThreeIsland_Text_Biker2Defeat": {
   "en": "Stop fooling around!",
@@ -21,11 +21,11 @@
  },
  "ThreeIsland_Text_Biker2Intro": {
   "en": "Aren't you from KANTO?\\nYou should be on our side!",
-  "fr": "Tu n'es pas de KANTO ?\\nTu devrais être de notre côté !"
+  "fr": "T'es pas de KANTO ? Tu devrais être\\nde notre côté !"
  },
  "ThreeIsland_Text_Biker2PostBattle": {
   "en": "What's the matter with you,\\ngetting all hot like that?\\pTotally uncool, man!",
-  "fr": "Qu'est-ce qui te prend, à t'énerver\\ncomme ça ?\\pComplètement pas cool, mec !"
+  "fr": "C'est quoi ton problème ? T'as pas\\nbesoin de t'énerver !\\pVraiment pas cool !"
  },
  "ThreeIsland_Text_Biker3Defeat": {
   "en": "… … …   … … …",
@@ -33,11 +33,11 @@
  },
  "ThreeIsland_Text_Biker3Intro": {
   "en": "We invited the boss out here,\\nbut you had to mess it up!\\pYou embarrassed us, man!",
-  "fr": "On a invité le boss ici, et tu as\\ntout gâché !\\pTu nous as humiliés, mec !"
+  "fr": "On a demandé au chef de venir ici,\\nmais t'as tout gâché !\\pTu nous fous la honte !"
  },
  "ThreeIsland_Text_Biker3PostBattle": {
   "en": "Boss, I'm telling you, you've gotta\\ndo something about this kid!",
-  "fr": "Boss, je te le dis, il faut faire\\nquelque chose pour ce gamin !"
+  "fr": "Boss, tu dois faire quelque chose\\ncontre c'mioche !"
  },
  "ThreeIsland_Text_BossIsOnHisWay": {
   "en": "Hey, go cry somewhere else.\\nOur boss is on his way.\\pWhen he gets here, we'll give you\\na k-rad motorbike show you won't\\lsoon forget!",
@@ -45,7 +45,7 @@
  },
  "ThreeIsland_Text_Doduo": {
   "en": "DODUO: Gigiih!",
-  "fr": "DODUO : Gigiih !"
+  "fr": "DODUO : Dudoo !"
  },
  "ThreeIsland_Text_FollowersRaisingHavoc": {
   "en": "Your gang of followers have been\\nraising havoc on their bikes.\\pDo you have any idea how much\\ntrouble they've caused us on the\\lisland?",
@@ -57,7 +57,7 @@
  },
  "ThreeIsland_Text_GivenFullRestore": {
   "en": "{PLAYER} was given\\na FULL RESTORE.",
-  "fr": "{PLAYER} a reçu\\nune RESTAURATION TOTALE."
+  "fr": "{PLAYER} reçoit une GUERISON."
  },
  "ThreeIsland_Text_GoBackToKanto": {
   "en": "We don't need you people bringing\\nyour noise and trouble here!\\pWe're asking you to go back to\\nKANTO!",
@@ -65,7 +65,7 @@
  },
  "ThreeIsland_Text_IslandBelongsToUs": {
   "en": "Hyahoo!\\pFrom this day on, this island\\nbelongs to us!",
-  "fr": "Hyahoo !\\pÀ partir d'aujourd'hui, cette île\\nnous appartient !"
+  "fr": "Yahaaa !\\pA partir d'aujourd'hui, cette île\\nnous appartient !"
  },
  "ThreeIsland_Text_IslandSign": {
   "en": "THREE ISLAND\\nBridges, berries and old scars",
@@ -101,7 +101,7 @@
  },
  "ThreeIsland_Text_LostelleWentOffTowardsBondBridge": {
   "en": "It'd be fantastic if someone as\\nstrong as you lived here.\\pI hope you'll at least stay here\\na while.\\p…I beg your pardon?\\nYou're looking for LOSTELLE?\\pLOSTELLE went off towards BOND\\nBRIDGE a while ago.",
-  "fr": "Ce serait fantastique que quelqu'un\\nd'aussi fort que toi vive ici.\\pJ'espère que tu resteras au moins\\nun peu.\\p…Pardon ?\\nTu cherches LOSTELLE ?\\pLOSTELLE est partie vers le PONT\\nDES LIENS il y a un moment."
+  "fr": "Si seulement quelqu'un fort comme\\ntoi pouvait habiter ici…\\pJ'espère au moins que tu resteras\\nquelque temps.\\p… Pardon ? Oh, tu cherches LOSTELLE\\n?\\pElle est partie vers le PONT DU\\nLIEN il n'y a pas longtemps."
  },
  "ThreeIsland_Text_OhYourBagIsFull": {
   "en": "Oh?\\nYour BAG is full.",
@@ -117,11 +117,11 @@
  },
  "ThreeIsland_Text_PaxtonIntro": {
   "en": "I've been watching you, and I'd say\\nyou've done enough.\\pWhat are you, their friend or\\nsomething?\\pThen I guess you'll be battling me\\nin their place.",
-  "fr": "Je t'ai observé, et je dirais que\\ntu en as assez fait.\\pQu'est-ce que tu es, leur ami ou\\nquoi ?\\pAlors je suppose que tu vas me\\ncombattre à leur place."
+  "fr": "Je t'ai regardé, t'en as vraiment\\nfait assez, tu crois pas ?\\pT'es qui ? T'es avec eux ou quoi ?\\pAlors tu vas te battre à leur\\nplace, OK ?"
  },
  "ThreeIsland_Text_PaxtonPostBattle": {
   "en": "Humph! Yeah, go right on hanging\\naround with these hayseeds!",
-  "fr": "Humph ! Ouais, continue donc de\\ntraîner avec ces ploucs !"
+  "fr": "On en avait marre de ces bouseux de\\ntoute façon !"
  },
  "ThreeIsland_Text_RefAfter": {
   "en": "LEON: Take good care of it. The\\nnext REFUGE post is waiting.",
@@ -157,11 +157,11 @@
  },
  "ThreeIsland_Text_ThankYouOhYourMonGotHurt": {
   "en": "Thank you! Those goons were\\nnothing but bad trouble.\\pOh, look, your POKéMON got hurt\\non my account.",
-  "fr": "Merci ! Ces voyous n'étaient que\\ndes ennuis.\\pOh, regarde, tes POKéMON ont été\\nblessés à cause de moi."
+  "fr": "Merci du fond du cœur. Ces voyous\\nne créaient que des problèmes.\\pOh, regarde. Tu as un POKéMON\\nblessé."
  },
  "ThreeIsland_Text_ThatsSmart": {
   "en": "That's smart.\\nKeep your nose out of this.",
-  "fr": "C'est malin.\\nGarde ton nez hors de ça."
+  "fr": "Bonne réponse. Alors fais-moi de\\nl'air maintenant."
  },
  "ThreeIsland_Text_WannaMakeSomethingOfYourStaring": {
   "en": "You, what are you staring at?\\nDon't you know it's not polite?\\pYou wanna make something of it\\nor what?",
@@ -169,15 +169,15 @@
  },
  "ThreeIsland_Text_WhenDodouEvolvesGoingToPlayGame": {
   "en": "I'm going to train my DODUO in the\\nBERRY FOREST.\\pWhen it evolves, I'm going to play\\na game on TWO ISLAND.",
-  "fr": "Je vais entraîner mon DODUO dans la\\nFORÊT DES BAIES.\\pQuand il évoluera, je jouerai à un\\njeu sur L'ÎLE DEUX."
+  "fr": "Je vais aller dresser mon DODUO\\ndans les BOIS BAIES.\\pQuand il aura évolué, on ira jouer\\nà un jeu sur l'ILE 2."
  },
  "ThreeIsland_Text_WhosGonnaMakeMe": {
   "en": "Who's gonna make me?",
-  "fr": "Qui va m'y forcer ?"
+  "fr": "Et qui me fera partir ?"
  },
  "ThreeIsland_Text_WouldntWantToSeeBikersHereAgain": {
   "en": "THREE ISLAND is actually the most\\npopulous of the islands here.\\pStill, it could be less sleepy.\\pBut I wouldn't want to see goons\\nlike those BIKERS here again.",
-  "fr": "L'ÎLE TROIS est en fait la plus\\npeuplée des îles d'ici.\\pPourtant, elle pourrait être moins\\nendormie.\\pMais je ne voudrais pas revoir ici\\ndes voyous comme ces MOTARDS."
+  "fr": "L'ÎLE 3 est l'île la plus populaire\\ndu coin.\\pBon, ça manque pourtant quelquefois\\nd'animation.\\pMais je souhaite vraiment que ces\\nMOTARDS ne reviennent pas."
  },
  "ThreeIsland_Text_YouCowardsToughInPack": {
   "en": "Grr… You cowards…\\nSo tough in a pack…",
@@ -185,6 +185,6 @@
  },
  "ThreeIsland_Text_YouveGotImpressiveMons": {
   "en": "You've got seriously impressive\\nPOKéMON with you.",
-  "fr": "Tu as des POKéMON vraiment\\nimpressionnants avec toi."
+  "fr": "Tes POKéMON sont vraiment\\nimpressionnants."
  }
 }

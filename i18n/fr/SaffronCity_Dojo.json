@@ -9,7 +9,7 @@
  },
  "SaffronCity_Dojo_Text_AaronPostBattle": {
   "en": "The only thing that frightens us is\\npsychic power!",
-  "fr": "La seule chose qui nous effraie,\\nc'est la puissance psychique !"
+  "fr": "La seule chose qui nous fait peur\\nc'est les pouvoirs psy !"
  },
  "SaffronCity_Dojo_Text_BetterNotGetGreedy": {
   "en": "Better not get greedy…",
@@ -21,7 +21,7 @@
  },
  "SaffronCity_Dojo_Text_EnemiesOnEverySide": {
   "en": "Enemies on every side!",
-  "fr": "Des ennemis de tous côtés !"
+  "fr": "Ne compte que sur toi !"
  },
  "SaffronCity_Dojo_Text_FightingDojo": {
   "en": "FIGHTING DOJO",
@@ -29,7 +29,7 @@
  },
  "SaffronCity_Dojo_Text_GoesAroundComesAround": {
   "en": "What goes around comes around.",
-  "fr": "Ce qui part revient."
+  "fr": "Respecte ton ennemi !"
  },
  "SaffronCity_Dojo_Text_HidekiDefeat": {
   "en": "Judge!\\nOne point!",
@@ -41,7 +41,7 @@
  },
  "SaffronCity_Dojo_Text_HidekiPostBattle": {
   "en": "Our MASTER is a pro fighter.\\nBe prepared to lose!",
-  "fr": "Notre MAÎTRE est un combattant pro.\\nPrépare-toi à perdre !"
+  "fr": "Notre maître est un pro.\\nPrépare-toi à perdre !"
  },
  "SaffronCity_Dojo_Text_HitoshiDefeat": {
   "en": "Oof!\\nI give up!",
@@ -53,7 +53,7 @@
  },
  "SaffronCity_Dojo_Text_HitoshiPostBattle": {
   "en": "The prime fighters across the land\\ntrain here.",
-  "fr": "Les meilleurs combattants du pays\\ns'entraînent ici."
+  "fr": "Les meilleurs combattants du pays\\nsont ici !"
  },
  "SaffronCity_Dojo_Text_MasterKoichiDefeat": {
   "en": "Hwa!\\nArrgh! Beaten!",
@@ -85,10 +85,10 @@
  },
  "SaffronCity_Dojo_Text_YouWantHitmonchan": {
   "en": "You want the piston-punching\\nHITMONCHAN?",
-  "fr": "Tu veux le TYGNON aux coups de\\npoing de piston ?"
+  "fr": "Tu veux TYGNON, le puncheur ?"
  },
  "SaffronCity_Dojo_Text_YouWantHitmonlee": {
   "en": "You want the hard-kicking\\nHITMONLEE?",
-  "fr": "Tu veux le redoutable KICKLEE\\naux coups de pied ?"
+  "fr": "Tu veux KICKLEE, l'expert en coups\\nde pied ?"
  }
 }

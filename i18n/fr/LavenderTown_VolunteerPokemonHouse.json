@@ -5,11 +5,11 @@
  },
  "LavenderTown_VolunteerPokemonHouse_Text_ExplainPokeFlute": {
   "en": "Upon hearing the POKé FLUTE,\\nsleeping POKéMON will spring awake.\\pTry using it on POKéMON that are\\nsleeping obstacles.",
-  "fr": "En entendant la FLÛTE POKé, les\\nPOKéMON endormis se réveillent.\\pEssaie de l'utiliser sur les\\nPOKéMON qui dorment en barrant la\\lroute."
+  "fr": "En jouant de la POKéFLÛTE, les\\nPOKéMON endormis se réveilleront.\\pElle marche sur tous les POKéMON."
  },
  "LavenderTown_VolunteerPokemonHouse_Text_GrandPrizeDrawingClipped": {
   "en": "POKéMON FAN MAGAZINE\\nMonthly Grand Prize Drawing!\\pThe application form is…\\pGone! It's been clipped out.\\nSomeone must have applied already.",
-  "fr": "MAGAZINE POKéMON FAN\\nGrand Tirage au sort mensuel !\\pLe bulletin de participation est…\\pParti ! Il a été découpé.\\nQuelqu'un a déjà participé."
+  "fr": "Grand concours de dessin du\\nmagazine des fans de POKéMON !\\pLe formulaire d'inscription est…\\pIl a disparu ! Quelqu'un a déjà dû\\nl'utiliser."
  },
  "LavenderTown_VolunteerPokemonHouse_Text_HasPokeFluteHelpedYou": {
   "en": "MR. FUJI: Has my POKé FLUTE\\nhelped you?",
@@ -21,23 +21,23 @@
  },
  "LavenderTown_VolunteerPokemonHouse_Text_MonsNiceToHug": {
   "en": "It's so warm!\\nPOKéMON are so nice to hug.",
-  "fr": "Il fait si chaud ! Les POKéMON sont\\nsi agréables à câliner."
+  "fr": "C'est si doux ! Faire un câlin à un\\nPOKéMON, c'est chou !"
  },
  "LavenderTown_VolunteerPokemonHouse_Text_MrFujiLooksAfterOrphanedMons": {
   "en": "This is really MR. FUJI's house.\\pHe's really kind.\\pHe looks after abandoned and\\norphaned POKéMON.",
-  "fr": "C'est vraiment la maison de M.\\nFUJI.\\pIl est vraiment gentil.\\pIl s'occupe des POKéMON abandonnés\\net orphelins."
+  "fr": "Voici la maison de MR. FUJI.\\pC'est vraiment un chic type !\\pIl est à la recherche des POKéMON\\norphelins et abandonnés !"
  },
  "LavenderTown_VolunteerPokemonHouse_Text_MrFujiWasPrayingForCubonesMother": {
   "en": "MR. FUJI had been praying alone\\nfor CUBONE's mother.",
-  "fr": "M. FUJI priait seul pour la mère de\\nOSSELAIT."
+  "fr": "MR. FUJI a prié pour le repos de la\\nmère d'OSSELAIT."
  },
  "LavenderTown_VolunteerPokemonHouse_Text_MustMakeRoomForThis": {
   "en": "You must make room for this!",
-  "fr": "Tu dois faire de la place pour ça !"
+  "fr": "Ton inventaire est plein !"
  },
  "LavenderTown_VolunteerPokemonHouse_Text_Nidorino": {
   "en": "NIDORINO: Gaoo!",
-  "fr": "NIDORINO : Gaoo !"
+  "fr": "NIDORINO : Nido !"
  },
  "LavenderTown_VolunteerPokemonHouse_Text_PokemonMagazinesLineShelf": {
   "en": "POKéMON magazines line the shelf.\\pPOKéMON INSIDER…\\pPOKéMON FAN…",
@@ -45,7 +45,7 @@
  },
  "LavenderTown_VolunteerPokemonHouse_Text_Psyduck": {
   "en": "PSYDUCK: Gwappa!",
-  "fr": "PSYKOKWAK : Gwappa !"
+  "fr": "PSYKOKWAK : Kwak !"
  },
  "LavenderTown_VolunteerPokemonHouse_Text_ReceivedPokeFluteFromMrFuji": {
   "en": "{PLAYER} received a POKé FLUTE\\nfrom MR. FUJI.",
@@ -53,6 +53,6 @@
  },
  "LavenderTown_VolunteerPokemonHouse_Text_WhereDidMrFujiGo": {
   "en": "That's odd, MR. FUJI isn't here.\\nWhere'd he go?",
-  "fr": "C'est bizarre, M. FUJI n'est pas\\nlà. Où est-il allé ?"
+  "fr": "Ce sacré MR. FUJI n'est pas là. Où\\nest-il ?"
  }
 }

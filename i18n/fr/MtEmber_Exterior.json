@@ -13,7 +13,7 @@
  },
  "MtEmber_Exterior_Text_FirstPasswordGoldeen": {
   "en": "What, you forgot the password?\\nThere're actually two.\\pThe first one's “GOLDEEN need\\nlog.”\\pAnd the second one is…",
-  "fr": "Quoi, tu as oublié le mot de\\npasse ? Il y en a en fait deux.\\pLe premier est “ POISSIRÈNE a\\nbesoin de bois. ”\\pEt le deuxième est…"
+  "fr": "Quoi, tu as oublié les deux mots de\\npasse ? Imbécile !\\pLe premier c'est : “ICI, GIRAFARIG,\\nICI”.\\pEt le deuxième…"
  },
  "MtEmber_Exterior_Text_Grunt1Defeat": {
   "en": "Huh, what?",
@@ -37,7 +37,7 @@
  },
  "MtEmber_Exterior_Text_Grunt2PostBattle": {
   "en": "Develop amnesia conveniently and\\nforget everything you heard!",
-  "fr": "Fais-toi opportunément amnésique et\\noublie tout ce que tu as entendu !"
+  "fr": "Je vais développer une amnésie\\nsélective et oublier ce combat."
  },
  "MtEmber_Exterior_Text_JocelynDefeat": {
   "en": "I think I tried to overdo it…",
@@ -65,15 +65,15 @@
  },
  "MtEmber_Exterior_Text_PunchedThroughAtLast": {
   "en": "Whew, punched through at last.\\nLet's go treasure hunting!",
-  "fr": "Ouf, on a enfin percé.\\nAllons chasser le trésor !"
+  "fr": "Ouf, une bonne chose de faite. A\\nnous les trésors maintenant !"
  },
  "MtEmber_Exterior_Text_SnoopsBeenListeningIn": {
   "en": "Hey!\\nThis snoop's been listening in!",
-  "fr": "Hé !\\nCe fouineur écoutait !"
+  "fr": "Hey ! Quelqu'un nous écoute !"
  },
  "MtEmber_Exterior_Text_WellRegroupDontStepInsideThere": {
   "en": "What a setback…\\nWe'll have to regroup.\\pYou! Don't even think about taking\\na step inside here!\\pIf you know what's good for you,\\ndon't even think about this!",
-  "fr": "Quel revers…\\nIl faut nous regrouper.\\pToi ! Ne pense même pas à faire un\\npas là-dedans !\\pSi tu tiens à toi, n'y pense même\\npas !"
+  "fr": "Quelle déculottée… On doit se\\nreplier.\\pToi, n'essaie même pas d'entrer\\nlà-dedans !\\pSi tu tiens à ta peau, je te\\nconseille de rester dehors !"
  },
  "MtEmber_Exterior_Text_WellTryDiggingHere": {
   "en": "…I'm telling you, the boss said it\\nagain: our job here is for later.\\pNobody goes near the ruby cave\\nuntil the signal comes.",
@@ -89,18 +89,18 @@
  },
  "Text_ExplosionDeclined": {
   "en": "Yeah, you're right.\\nIt is too terrifying.",
-  "fr": "Oui, tu as raison.\\nC'est trop terrifiant."
+  "fr": "Tu as raison, ça fait trop peur."
  },
  "Text_ExplosionTaught": {
   "en": "Using EXPLOSION while on this\\nvolcano…\\pWhat a terrifying thrill!",
-  "fr": "Utiliser EXPLOSION sur ce volcan…\\pQuelle terrifiante sensation !"
+  "fr": "Utiliser EXPLOSION sur ce volcan,\\nça serait…\\pJe préfère ne pas y penser !"
  },
  "Text_ExplosionTeach": {
   "en": "Can you imagine?\\nIf this volcano were to erupt?\\pThe explosion would be the end of\\nus. How terrifying is that?\\pWhile we're terrified, would you\\nlike me to teach EXPLOSION?",
-  "fr": "Tu imagines ? Si ce volcan entrait\\nen éruption ?\\pL'explosion serait notre fin.\\nQuelle horreur, non ?\\pPendant qu'on est terrifiés,\\nveux-tu que je t'apprenne\\lEXPLOSION ?"
+  "fr": "Tu imagines ? Si ce volcan se\\nmettait en éruption ?\\pÇa serait la fin de tout. C'est\\nterrible, non ?\\pPendant qu'on tremble de peur, tu\\nveux apprendre EXPLOSION ?"
  },
  "Text_ExplosionWhichMon": {
   "en": "You're terribly brave!\\pWhich POKéMON should I teach\\nEXPLOSION?",
-  "fr": "Tu es terriblement courageux !\\pÀ quel POKéMON dois-je enseigner\\nEXPLOSION ?"
+  "fr": "T'as vraiment du courage !\\pA quel POKéMON enseigner EXPLOSION\\n?"
  }
 }

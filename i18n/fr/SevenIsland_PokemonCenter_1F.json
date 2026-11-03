@@ -1,7 +1,7 @@
 {
  "SevenIsland_PokemonCenter_1F_Text_CheckOutTrainerTower": {
   "en": "If you're confident, you should\\ncheck out TRAINER TOWER.",
-  "fr": "Si tu es sûr de toi, tu devrais\\naller voir la TOUR DES DRESSEURS."
+  "fr": "Si tu crois en toi, tu devrais\\naller à la TOUR DRESSEURS."
  },
  "SevenIsland_PokemonCenter_1F_Text_DidYouRideSeagallopHere": {
   "en": "Did you ride a SEAGALLOP ferry\\nto get here?\\pThere are at least ten of those\\nhigh-speed ships.\\pI don't know where they all go,\\nthough.",
@@ -9,6 +9,6 @@
  },
  "SevenIsland_PokemonCenter_1F_Text_EventsDependingOnConnections": {
   "en": "On this island, different events\\noccur depending on connections.\\pWhat are those connections?\\pThey are for you to discover on\\nyour own.",
-  "fr": "Sur cette île, différents\\névénements se produisent selon les\\lliens.\\pQuels sont ces liens ?\\pC'est à toi de les découvrir."
+  "fr": "Sur cette île, des évènements se\\nproduisent selon les connexions.\\pTu me demandes lesquelles ?\\pIl y en a quatre que tu devras\\ndécouvrir par toi-même."
  }
 }

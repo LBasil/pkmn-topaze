@@ -98,6 +98,6 @@ gFameCheckerText_MainScreenUI|{START_BUTTON}CHOIX {DPAD_UPDOWN}SÉLECT. {A_BUTTO
 gFameCheckerText_PickScreenUI|{START_BUTTON}CHOIX {DPAD_UPDOWN}SÉLECT. {B_BUTTON}ANNULER
 gFameCheckerText_FlavorTextUI|{DPAD_ANY}CHOIX {A_BUTTON}LIRE {B_BUTTON}ANNULER
 gFameCheckerOakName|CHEN
-gFameCheckerDaisyName|MARGUERITE
+gFameCheckerDaisyName|NINA
 gFameCheckerBillName|LANORIS
 gFameCheckerMrFujiName|M. FUJI

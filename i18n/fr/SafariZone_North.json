@@ -1,7 +1,7 @@
 {
  "SafariZone_North_Text_Area2": {
   "en": "AREA 2",
-  "fr": "ZONE 2"
+  "fr": "PARC 2"
  },
  "SafariZone_North_Text_OnybrisGrunt1Defeat": {
   "en": "Spotted...",
@@ -33,14 +33,14 @@
  },
  "SafariZone_North_Text_SecretHouseStillAhead": {
   "en": "TRAINER TIPS\\pThe SECRET HOUSE is still ahead.",
-  "fr": "CONSEILS AUX DRESSEURS\\pLa MAISON SECRÈTE est encore\\ndevant."
+  "fr": "ASTUCE\\pLa CABANE SECRÈTE est tout droit !"
  },
  "SafariZone_North_Text_WinFreeHMFindSecretHouse": {
   "en": "TRAINER TIPS\\pWin a free HM for finding the\\nSECRET HOUSE.",
-  "fr": "CONSEILS AUX DRESSEURS\\pGagne une CS gratuite en trouvant\\nla MAISON SECRÈTE."
+  "fr": "ASTUCE\\pDécouvrez la CABANE SECRÈTE et\\ngagnez une CS !"
  },
  "SafariZone_North_Text_ZigzagThroughTallGrass": {
   "en": "TRAINER TIPS\\pPOKéMON hide in tall grass.\\pZigzag through grassy areas to\\nflush them out.",
-  "fr": "CONSEILS AUX DRESSEURS\\pLes POKéMON se cachent dans les\\nhautes herbes.\\pZigzague dans les herbes pour les\\ndébusquer."
+  "fr": "ASTUCE\\pLes POKéMON se cachent dans les\\nhautes herbes !\\pExplorez ces zones pour les faire\\nsortir."
  }
 }

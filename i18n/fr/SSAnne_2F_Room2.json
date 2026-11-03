@@ -9,7 +9,7 @@
  },
  "SSAnne_2F_Room2_Text_BrooksPostBattle": {
   "en": "Fifteen years ago, I would\\nhave won!",
-  "fr": "Il y a quinze ans, j'aurais gagné !"
+  "fr": "Hmm ! Il y a 15 ans, j'aurais\\ngagné…"
  },
  "SSAnne_2F_Room2_Text_DaleDefeat": {
   "en": "I'm all out!",
@@ -21,6 +21,6 @@
  },
  "SSAnne_2F_Room2_Text_DalePostBattle": {
   "en": "Party?\\pThe cruise ship's party should be\\nover by now.",
-  "fr": "La fête ?\\pLa fête de la croisière doit être\\nfinie à cette heure."
+  "fr": "Une fête ?\\pElle doit être finie maintenant."
  }
 }

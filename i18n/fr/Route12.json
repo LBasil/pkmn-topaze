@@ -21,7 +21,7 @@
  },
  "Route12_Text_ChipPostBattle": {
   "en": "With a better ROD, I could catch\\nbetter POKéMON…",
-  "fr": "Avec une meilleure CANNE, je\\npourrais attraper de meilleurs\\lPOKéMON…"
+  "fr": "C'est bon. Perdre ne me fait plus\\npeur."
  },
  "Route12_Text_ElliotDefeat": {
   "en": "It's not easy…",
@@ -49,7 +49,7 @@
  },
  "Route12_Text_GiaPostBattle": {
   "en": "GIA: JES, you silly!\\nYou ruined this!",
-  "fr": "GIA : JES, espèce d'idiot !\\nTu as tout gâché !"
+  "fr": "GIA : JES, t'as fait exprès de\\nperdre !"
  },
  "Route12_Text_HankDefeat": {
   "en": "Touch too much!",
@@ -77,7 +77,7 @@
  },
  "Route12_Text_JesPostBattle": {
   "en": "JES: Oh, GIA, forgive me,\\nmy love!",
-  "fr": "JES : Oh, GIA, pardonne-moi,\\nmon amour !"
+  "fr": "JES : Oh, GIA, pardonne-moi !"
  },
  "Route12_Text_JustinDefeat": {
   "en": "Oww!",
@@ -105,7 +105,7 @@
  },
  "Route12_Text_MonSprawledOutInSlumber": {
   "en": "A POKéMON is sprawled out in\\na deep and comfortable slumber.",
-  "fr": "Un POKéMON est étendu dans un\\nsommeil profond et confortable."
+  "fr": "Un POKéMON endormi bloque le chemin\\n!"
  },
  "Route12_Text_NedDefeat": {
   "en": "Tch!\\nJust a small fry…",
@@ -177,7 +177,7 @@
  },
  "Route12_Text_SportfishingArea": {
   "en": "SPORTFISHING AREA",
-  "fr": "ZONE DE PÊCHE SPORTIVE"
+  "fr": "ZONE DE PÊCHE"
  },
  "Route12_Text_TimeHint": {
   "en": "The fishing spot sign: BEST HOUR TO\\nFISH... crossed out. Nobody knows\\pthe hour anymore.",
@@ -189,14 +189,14 @@
  },
  "Text_SnorlaxReturnedToMountains": {
   "en": "SNORLAX calmed down.\\nIt gave a huge yawn…\\lAnd returned to the mountains.",
-  "fr": "RONFLEX s'est calmé. Il a poussé un\\nénorme bâillement… Et est retourné\\ldans les montagnes."
+  "fr": "RONFLEX, une fois calmé, s'en\\nretourne vers la montagne !"
  },
  "Text_SnorlaxWokeUp": {
   "en": "SNORLAX woke up!\\pIt attacked in a grumpy rage!",
-  "fr": "RONFLEX s'est réveillé !\\pIl a attaqué dans une rage\\ngrincheuse !"
+  "fr": "RONFLEX se réveille !\\pIl est de mauvais poil ! Il vous\\nattaque !"
  },
  "Text_WantToUsePokeFlute": {
   "en": "Want to use the POKé FLUTE?",
-  "fr": "Veux-tu utiliser la FLÛTE POKé ?"
+  "fr": "Tu veux utiliser la POKéFLÛTE ?"
  }
 }

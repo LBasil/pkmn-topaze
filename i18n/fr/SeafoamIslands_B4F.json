@@ -1,11 +1,11 @@
 {
  "SeafoamIslands_B4F_Text_BouldersMightChangeWaterFlow": {
   "en": "Hint: Boulders might change the\\nflow of water.",
-  "fr": "Indice : Les rochers peuvent\\nchanger le cours de l'eau."
+  "fr": "Les rochers peuvent faire changer\\nle niveau de l'eau !"
  },
  "SeafoamIslands_B4F_Text_DangerFastCurrent": {
   "en": "DANGER\\nFast current!",
-  "fr": "DANGER\\nCourant rapide !"
+  "fr": "DANGER ! Rapides !"
  },
  "SeafoamIslands_B4F_Text_FloorScene": {
   "en": "The air is scorching. GOLD and\\nSILVER stand back to back on the\\pbasalt, panting. Around them lie\\nfainted grunts. KRONOS waits, calm.",
@@ -45,18 +45,18 @@
  },
  "Text_RockSlideDeclined": {
   "en": "Oh, so you are scared after all.",
-  "fr": "Oh, alors tu as peur après tout."
+  "fr": "Oh, donc ça te fait peur…"
  },
  "Text_RockSlideTaught": {
   "en": "It might be scary to use it in this\\ntunnel…",
-  "fr": "Ça pourrait être effrayant de\\nl'utiliser dans ce tunnel…"
+  "fr": "Il vaudrait peut-être mieux éviter\\nde l'utiliser dans ce tunnel…"
  },
  "Text_RockSlideTeach": {
   "en": "When you're up on a rocky mountain\\nlike this, rockslides are a threat.\\pCan you imagine?\\nBoulders tumbling down on you?\\pThat'd be, like, waaaaaaaaaaah!\\nTotal terror!\\pYou don't seem to be scared.\\nWant to try using ROCK SLIDE?",
-  "fr": "Quand on est sur une montagne\\nrocheuse comme celle-ci, les\\léboulements sont une menace.\\pTu imagines ? Des rochers qui\\ndégringolent sur toi ?\\pCe serait, genre, waaaaaaaaaaah !\\nTerreur totale !\\pTu n'as pas l'air d'avoir peur. Tu\\nveux essayer ÉBOULEMENT ?"
+  "fr": "À la montagne, il faut faire\\nattention aux chutes de pierres.\\pTu imagines ? Des rochers en train\\nde tomber sur toi ?\\pBrrrr, ça serait terrible !\\pÇa te fait pas peur ? Tu voudrais\\napprendre ÉBOULEMENT ?"
  },
  "Text_RockSlideWhichMon": {
   "en": "Which POKéMON should I teach\\nROCK SLIDE?",
-  "fr": "À quel POKéMON dois-je enseigner\\nÉBOULEMENT ?"
+  "fr": "À quel POKéMON enseigner ÉBOULEMENT\\n?"
  }
 }

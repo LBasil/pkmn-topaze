@@ -77,7 +77,7 @@
  },
  "SilphCo_11F_Text_ObtainedMasterBallFromPresident": {
   "en": "{PLAYER} obtained a MASTER BALL\\nfrom the PRESIDENT!",
-  "fr": "{PLAYER} a obtenu une MASTER BALL\\ndu PRÉSIDENT !"
+  "fr": "{PLAYER} obtient une MASTER BALL du\\nPRÉSIDENT !"
  },
  "SilphCo_11F_Text_ShadowPasses": {
   "en": "…The lights flicker. A black shape\\nglides past the windows.\\pThen it is gone. Only silence.",
@@ -85,7 +85,7 @@
  },
  "SilphCo_11F_Text_ThanksForRescuingUs": {
   "en": "SECRETARY: Thank you for rescuing\\nall of us.\\pWe, from the PRESIDENT down,\\nare indebted to you.",
-  "fr": "SECRÉTAIRE : Merci de nous avoir\\nsauvés tous.\\pNous, du PRÉSIDENT jusqu'en bas,\\nte sommes redevables."
+  "fr": "SECRÉTAIRE : Merci de nous avoir\\ntous sauvés !\\pTon courage est exemplaire."
  },
  "SilphCo_11F_Text_ThanksForSavingMeDearBoy": {
   "en": "PRESIDENT: Oh, dear boy!\\nThank you for saving HEMATEK.\\pI will never forget you saved us in\\nour moment of peril.\\pI have to thank you in some way.\\pBecause I am rich, I can give you\\nanything.\\pHere, maybe this will do.",
@@ -97,10 +97,10 @@
  },
  "SilphCo_11F_Text_ThatsOurSecretPrototype": {
   "en": "PRESIDENT: You can't buy that\\nanywhere.\\pIt's our secret prototype MASTER\\nBALL.\\pIt will catch any POKéMON without\\nfail!\\pYou should be quiet about using it,\\nthough.",
-  "fr": "PRÉSIDENT : On ne peut pas\\nl'acheter ailleurs.\\pC'est notre prototype secret de\\nMASTER BALL.\\pElle capture n'importe quel POKéMON\\nsans faute !\\pTu devrais rester discret sur son\\nusage, cependant."
+  "fr": "PRÉSIDENT : Tu ne peux en acheter\\nnulle part !\\pC'est notre prototype secret : la\\nMASTER BALL !\\pElle peut attraper n'importe quel\\nPOKéMON !\\pAlors utilise-la avec sagesse."
  },
  "SilphCo_11F_Text_YouHaveNoRoomForThis": {
   "en": "You have no room for this.",
-  "fr": "Tu n'as pas de place pour ça."
+  "fr": "Tu n'as pas assez de place sur toi."
  }
 }

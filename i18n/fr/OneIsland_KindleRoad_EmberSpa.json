@@ -1,23 +1,23 @@
 {
  "OneIsland_KindleRoad_EmberSpa_Text_BrunoVisitsSpaOnOccasion": {
   "en": "After an honest day of training,\\nnothing beats a relaxing soak in\\lthe hot spring pool.\\pBRUNO, who's a senior ahead of me,\\nvisits the SPA on occasion.\\pHe comes to rehab injuries, both\\nhis own and his POKéMON's.",
-  "fr": "Après une honnête journée\\nd'entraînement, rien ne vaut un\\lbain relaxant dans la source\\nthermale.\\pBRUNO, mon aîné, vient parfois au\\nSPA.\\pIl vient soigner ses blessures, les\\nsiennes et celles de ses POKéMON."
+  "fr": "Après une journée d'entraînement,\\nil suffit de se plonger dans ce\\pbassin pour retrouver la forme.\\nD'ailleurs, ALDO vient souvent ici.\\pIl vient pour soigner ses blessures\\net celles de ses POKéMON."
  },
  "OneIsland_KindleRoad_EmberSpa_Text_EnjoyBowlOfChowder": {
   "en": "My favorite part of bathing comes\\nup right after this.\\pI enjoy a bowl of chowder to\\nwarm me from the inside, too!",
-  "fr": "Ma partie préférée du bain vient\\njuste après.\\pJ'aime un bol de soupe pour me\\nréchauffer de l'intérieur aussi !"
+  "fr": "Le moment que je préfère vient\\njuste après.\\pRien de mieux qu'un bol de soupe\\npour se réchauffer de l'intérieur !"
  },
  "OneIsland_KindleRoad_EmberSpa_Text_ExplainHM06": {
   "en": "That shatters boulders as if they\\nwere made of crackers.",
-  "fr": "Ça fracasse les rochers comme s'ils\\nétaient en biscuit."
+  "fr": "Avec ça, tu peux briser la roche\\ncomme si c'était du verre."
  },
  "OneIsland_KindleRoad_EmberSpa_Text_HotSpringIsTherapeutic": {
   "en": "Soaking in a hot spring pool is\\ntherapeutic, people say.",
-  "fr": "Se tremper dans un bain thermal est\\nthérapeutique, dit-on."
+  "fr": "Rien de mieux pour le corps que de\\nse relaxer dans l'eau chaude."
  },
  "OneIsland_KindleRoad_EmberSpa_Text_SeeHowSmoothMySkinIs": {
   "en": "Have a look at my face.\\nSee how smooth my skin is?\\pThe hot spring's water keeps my\\nskin younger than my age.",
-  "fr": "Regarde mon visage.\\nVois comme ma peau est lisse ?\\pL'eau de la source thermale garde\\nma peau plus jeune que mon âge."
+  "fr": "Regarde-moi bien. Tu vois comme ma\\npeau est belle et lisse ?\\pC'est grâce à l'eau de la source si\\nj'ai l'air plus jeune que mon âge."
  },
  "OneIsland_KindleRoad_EmberSpa_Text_UsedThisToMakeEmberSpa": {
   "en": "Hot springs go hand-in-hand with\\nvolcanoes.\\pThe EMBER SPA here, well,\\nI made it years ago.\\pI hewed the pool right out of a\\ngigantic boulder by hand.\\pI was using this at the time.\\nI suppose I can part with it.",
@@ -25,10 +25,10 @@
  },
  "OneIsland_KindleRoad_EmberSpa_Text_WaterExquisiteFullyRefreshed": {
   "en": "The water is perfectly warm.\\nIt feels exquisite…\\p{PLAYER} and the POKéMON were\\nfully refreshed!",
-  "fr": "L'eau est parfaitement chaude.\\nC'est exquis…\\p{PLAYER} et les POKéMON sont\\ncomplètement revigorés !"
+  "fr": "Cette eau est à la température\\nidéale. C'est le bonheur…\\p{PLAYER} et ses POKéMON retrouvent\\ntoute leur énergie."
  },
  "OneIsland_KindleRoad_EmberSpa_Text_WaterWarmsMeToCore": {
   "en": "Hm!\\nHaaaaaaaaaaah!\\pAaaah! This is heavenly!\\nThe water warms me to my core!\\pYou should jump in, too.\\pGo to the middle, relax, and get\\ngood and warm!",
-  "fr": "Hm !\\nHaaaaaaaaaah !\\pAaaah ! C'est divin !\\nL'eau me réchauffe jusqu'au cœur !\\pTu devrais plonger aussi.\\pVa au milieu, détends-toi, et\\nréchauffe-toi bien !"
+  "fr": "Hmmm… Haaa…\\pC'est trop bon ! Je suis\\ncomplètement détendu…\\pSaute dedans, tu verras comme ça\\nfait du bien.\\pVa au milieu, relaxe-toi et tu m'en\\ndiras des nouvelles."
  }
 }

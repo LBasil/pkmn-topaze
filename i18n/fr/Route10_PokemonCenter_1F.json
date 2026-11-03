@@ -5,7 +5,7 @@
  },
  "Route10_PokemonCenter_1F_Text_ExplainEverstone": {
   "en": "Making POKéMON evolve certainly\\ncan add to the POKéDEX.\\pHowever, at times, you may not\\nwant a certain POKéMON to evolve.\\pIn that case, give the EVERSTONE\\nto that POKéMON.\\pIt will prevent evolution according\\nto the PROFESSOR.",
-  "fr": "Faire évoluer des POKéMON peut\\ncertes enrichir le POKéDEX.\\pCependant, parfois, tu ne voudras\\npas qu'un certain POKéMON évolue.\\pDans ce cas, donne la PIERRE\\nÉTERNITÉ à ce POKéMON.\\pElle empêche l'évolution, selon le\\nPROFESSEUR."
+  "fr": "Tu peux agrandir ton POKéDEX en\\nfaisant évoluer tes POKéMON.\\pMais il se peut que tu ne veuilles\\npas faire évoluer un POKéMON.\\pDans ce cas, donne cette PIERRE\\nSTASE à ton POKéMON.\\pSelon le PROFESSEUR, ça l'empêchera\\nd'évoluer."
  },
  "Route10_PokemonCenter_1F_Text_GiveEverstoneIfCaught20Mons": {
   "en": "Oh… {PLAYER}!\\nI've been looking for you!\\pIt's me, one of the ever-present\\nAIDES to PROF. OAK.\\pIf your POKéDEX has complete data\\non twenty species, I'm supposed to\\lgive you a reward from PROF. OAK.\\pHe entrusted me with this\\nEVERSTONE.\\pSo, {PLAYER}, let me ask you.\\pHave you gathered data on at least\\ntwenty kinds of POKéMON?",
@@ -13,7 +13,7 @@
  },
  "Route10_PokemonCenter_1F_Text_GreatHereYouGo": {
   "en": "Great! You have caught or owned\\n{STR_VAR_3} kinds of POKéMON!\\pCongratulations!\\nHere you go!",
-  "fr": "Super ! Tu as capturé ou possédé\\n{STR_VAR_3} espèces de POKéMON !\\pFélicitations !\\nVoilà !"
+  "fr": "Super ! Tu as {STR_VAR_3} POKéMON\\ndifférents !\\pFélicitations ! Voici ta récompense\\n!"
  },
  "Route10_PokemonCenter_1F_Text_HeardGhostsHauntLavender": {
   "en": "I heard that ghosts haunt\\nSPINELLIA.",
@@ -21,10 +21,10 @@
  },
  "Route10_PokemonCenter_1F_Text_NuggetUselessSoldFor5000": {
   "en": "A NUGGET is totally useless.\\nSo I sold it for ¥5000.",
-  "fr": "Une PÉPITE est totalement inutile.\\nAlors je l'ai vendue 5000 ¥."
+  "fr": "J'ai vendu une PÉPITE pour 5000¥ !"
  },
  "Route10_PokemonCenter_1F_Text_ReceivedEverstoneFromAide": {
   "en": "{PLAYER} received the EVERSTONE\\nfrom the AIDE.",
-  "fr": "{PLAYER} a reçu la PIERRE ÉTERNITÉ\\nde l'ASSISTANT."
+  "fr": "{PLAYER} obtient une PIERRE STASE !"
  }
 }

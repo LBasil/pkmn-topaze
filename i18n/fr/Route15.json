@@ -21,7 +21,7 @@
  },
  "Route15_Text_BeckyPostBattle": {
   "en": "I'm afraid of BIKERS. They look so\\nugly and mean!",
-  "fr": "J'ai peur des MOTARDS. Ils ont\\nl'air si laids et méchants !"
+  "fr": "Les MOTARDS me font peur, ils sont\\nsi méchants !"
  },
  "Route15_Text_CeliaDefeat": {
   "en": "I said trade!",
@@ -33,7 +33,7 @@
  },
  "Route15_Text_CeliaPostBattle": {
   "en": "I trade POKéMON with my friends\\nall the time.",
-  "fr": "J'échange tout le temps des POKéMON\\navec mes amis."
+  "fr": "J'échange des POKéMON avec mes amis\\n!"
  },
  "Route15_Text_ChesterDefeat": {
   "en": "Just as I thought!",
@@ -45,7 +45,7 @@
  },
  "Route15_Text_ChesterPostBattle": {
   "en": "This is so obvious, you should know\\nthis, but…\\pMoves like EARTHQUAKE and FISSURE\\nhave no effect on bird POKéMON.",
-  "fr": "C'est tellement évident que tu\\ndevrais le savoir, mais…\\pDes capacités comme TREMBLEMENT et\\nABÎME n'ont aucun effet sur les\\pPOKéMON oiseaux."
+  "fr": "Les attaques comme SEISME ou ABÎME\\nne font rien aux oiseaux.\\pTu l'savais ?"
  },
  "Route15_Text_EdwinDefeat": {
   "en": "Ow!\\nThat's tragic!",
@@ -81,7 +81,7 @@
  },
  "Route15_Text_GracePostBattle": {
   "en": "I forgive you.\\nI can take it.\\lI'm a big girl now.",
-  "fr": "Je te pardonne. Je peux encaisser.\\nJe suis une grande fille\\lmaintenant."
+  "fr": "Je te pardonne ! T'es trop adorable\\n!"
  },
  "Route15_Text_KindraDefeat": {
   "en": "Not good enough!",
@@ -93,7 +93,7 @@
  },
  "Route15_Text_KindraPostBattle": {
   "en": "You can't change the nickname of\\nany POKéMON you get in a trade.\\pOnly the Original TRAINER can get\\nthe nickname changed.",
-  "fr": "Tu ne peux pas changer le surnom\\nd'un POKéMON reçu par échange.\\pSeul le DRESSEUR d'Origine peut\\nfaire changer le surnom."
+  "fr": "Tu ne peux pas renommer un POKéMON\\néchangé.\\pSeul son premier DRESSEUR peut le\\nfaire."
  },
  "Route15_Text_MyaDefeat": {
   "en": "MYA: RON, you have to focus!\\nConcentrate on what you're doing!",
@@ -109,7 +109,7 @@
  },
  "Route15_Text_MyaPostBattle": {
   "en": "MYA: Okay, we'll turn it up.\\nI'll add to our training menu!",
-  "fr": "MYA : D'accord, on monte d'un cran.\\nJ'ajoute à notre programme\\ld'entraînement !"
+  "fr": "MYA : OK, il va falloir revoir mon\\nprogramme d'entraînement."
  },
  "Route15_Text_OliviaDefeat": {
   "en": "POKéMON isn't about winning or\\nlosing for me.",
@@ -177,7 +177,7 @@
  },
  "Route15_Text_RonPostBattle": {
   "en": "RON: Oh, bleah…\\nI wish I had a nice sister…",
-  "fr": "RON : Oh, bleah… J'aimerais avoir\\nune gentille sœur…"
+  "fr": "RON : … Elle me traite comme un\\ngamin."
  },
  "Route15_Text_RouteSign": {
   "en": "ROUTE 15\\nWest to AMETHIOLITE",
@@ -197,6 +197,6 @@
  },
  "Route15_Text_YazminPostBattle": {
   "en": "I'll go train with weaker people.",
-  "fr": "Je vais m'entraîner avec des gens\\nplus faibles."
+  "fr": "Je vais me battre avec des\\nDRESSEURS moins forts !"
  }
 }

@@ -21,7 +21,7 @@
  },
  "FuchsiaCity_Text_Apprentice_Ask13": {
   "en": "The DAISY HILL: flowers all the way\\nup. Visit?",
-  "fr": "La COLLINE DES MARGUERITES : des\\nfleurs jusqu'au sommet. Visiter ?"
+  "fr": "La COLLINE DES NINAS : des\\nfleurs jusqu'au sommet. Visiter ?"
  },
  "FuchsiaCity_Text_Apprentice_Ask14": {
   "en": "The BERRY BROOK: a sweet stream.\\nVisit?",
@@ -141,7 +141,7 @@
  },
  "FuchsiaCity_Text_DidYouTrySafariGame": {
   "en": "Did you try the SAFARI GAME?\\pThere are some rare POKéMON that\\ncan only be caught there.",
-  "fr": "As-tu essayé le JEU SAFARI ?\\pCertains POKéMON rares ne peuvent\\nêtre capturés que là-bas."
+  "fr": "Connais-tu le jeu du SAFARI ?\\pCertains POKéMON n'apparaissent\\nqu'à cet endroit."
  },
  "FuchsiaCity_Text_DockGuide0": {
   "en": "Seven ferries leave from this dock.\\nEchoes and time, tides and capture,\\planterns and calm shores, babies\\nand trades, dusk, the scribe and\\pthe seasons. Ask them all.",
@@ -573,7 +573,7 @@
  },
  "FuchsiaCity_Text_SafariGameSign": {
   "en": "SAFARI GAME\\nPOKéMON-U-CATCH!",
-  "fr": "JEU SAFARI\\nATTRAPE-LES-TOUS !"
+  "fr": "JEU SAFARI Attrape-les tous !"
  },
  "FuchsiaCity_Text_SafariZoneOfficeSign": {
   "en": "POKéMON PARADISE!\\nWelcome to the SAFARI ZONE!\\lSAFARI ZONE OFFICE",
@@ -581,11 +581,11 @@
  },
  "FuchsiaCity_Text_SafariZoneSign": {
   "en": "POKéMON PARADISE\\nSAFARI ZONE",
-  "fr": "PARADIS DES POKéMON\\nPARC SAFARI"
+  "fr": "LE PARADIS DES POKéMON PARC SAFARI"
  },
  "FuchsiaCity_Text_SafariZoneZooInFront": {
   "en": "The SAFARI ZONE has a zoo in front\\nof the entrance.\\pOut back is the SAFARI GAME for\\ncatching POKéMON.",
-  "fr": "Le PARC SAFARI a un zoo devant\\nl'entrée.\\pÀ l'arrière se trouve le JEU SAFARI\\npour capturer des POKéMON."
+  "fr": "Il y a un zoo devant l'entrée du\\nPARC SAFARI.\\pLe jeu du SAFARI permet d'attraper\\ndes POKéMON."
  },
  "FuchsiaCity_Text_ScribeFerryman_Ask0": {
   "en": "The HALL OF THE POKéDEX: rewards\\nfor every milestone. Visit?",
@@ -1037,7 +1037,7 @@
  },
  "FuchsiaCity_Text_WardensHomeSign": {
   "en": "SAFARI ZONE\\nWARDEN'S HOME",
-  "fr": "PARC SAFARI\\nMAISON DU GARDIEN"
+  "fr": "PARC SAFARI MAISON DU GARDIEN"
  },
  "FuchsiaCity_Text_WheresSara": {
   "en": "ERIK: Where's SARA?\\nI said I'd meet her here.",
@@ -1049,14 +1049,14 @@
  },
  "Text_SubstituteTaught": {
   "en": "Boy, what I'd give to crawl inside\\na KANGASKHAN belly pouch…",
-  "fr": "Ah, ce que je donnerais pour me\\nglisser dans la poche d'un\\lKANGOUREX…"
+  "fr": "Aaah, je donnerais tout pour être\\ndans la poche d'un KANGOUREX."
  },
  "Text_SubstituteTeach": {
   "en": "Aww, I wish I was a KANGASKHAN\\nbaby.\\pI'd love to be a substitute for the\\nbaby…\\pAnd snuggle in the mother\\nKANGASKHAN's belly pouch.\\pBut only POKéMON can use the\\ntechnique SUBSTITUTE…\\pWant me to teach SUBSTITUTE to\\none of your POKéMON?",
-  "fr": "Aww, j'aimerais être un bébé\\nKANGOUREX.\\pJ'adorerais remplacer le bébé…\\pEt me blottir dans la poche\\nventrale de la mère KANGOUREX.\\pMais seuls les POKéMON peuvent\\nutiliser la technique CLONAGE…\\pVeux-tu que j'apprenne CLONAGE à\\nun de tes POKéMON ?"
+  "fr": "J'aimerais tellement être un bébé\\nKANGOUREX.\\pSi je pouvais, je me clonerais\\njuste pour rester dans la\\ppoche confortable d'un KANGOUREX.\\pMais seuls les POKéMON peuvent\\nutiliser CLONAGE…\\pTu veux que j'apprenne CLONAGE à un\\nde tes POKéMON ?"
  },
  "Text_SubstituteWhichMon": {
   "en": "Which POKéMON wants to learn\\nSUBSTITUTE?",
-  "fr": "Quel POKéMON veut apprendre\\nCLONAGE ?"
+  "fr": "À quel POKéMON enseigner CLONAGE ?"
  }
 }

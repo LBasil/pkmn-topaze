@@ -1,15 +1,15 @@
 {
  "Route16_House_Text_DontHaveAnyRoomForThis": {
   "en": "You don't have any room for this.",
-  "fr": "Tu n'as pas de place pour ça."
+  "fr": "Ton inventaire est plein."
  },
  "Route16_House_Text_ExplainHM02": {
   "en": "HM02 is FLY.\\nIt's a wonderfully convenient move.\\pPlease, put it to good use.",
-  "fr": "La CS02 est VOL. C'est une capacité\\nmerveilleusement pratique.\\pS'il te plaît, fais-en bon usage."
+  "fr": "CS02 : VOL. C'est une capacité très\\npratique.\\pFais-en bon usage !"
  },
  "Route16_House_Text_Fearow": {
   "en": "FEAROW: Kyueen!",
-  "fr": "RAPASDEPIC : Kyueen !"
+  "fr": "RAPASDEPIC : Piiiiiik !"
  },
  "Route16_House_Text_FoundMySecretRetreat": {
   "en": "Oh, dear.\\nYou've found my secret retreat.\\pPlease don't tell anyone I'm here.\\nI'll make it up to you with this!",
@@ -17,6 +17,6 @@
  },
  "Route16_House_Text_ReceivedHM02FromGirl": {
   "en": "{PLAYER} received HM02\\nfrom the girl.",
-  "fr": "{PLAYER} a reçu la CS02\\nde la fille."
+  "fr": "{PLAYER} obtient la CS02 !"
  }
 }

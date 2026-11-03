@@ -9,7 +9,7 @@
  },
  "SixIsland_PatternBush_Text_AllisonPostBattle": {
   "en": "I'm not saying that you shouldn't\\ncatch POKéMON.\\pI just want people to raise their\\nPOKéMON responsibly.",
-  "fr": "Je ne dis pas qu'il ne faut pas\\ncapturer de POKéMON.\\pJe veux juste que les gens élèvent\\nleurs POKéMON de façon responsable."
+  "fr": "Je ne dis pas que tu ne dois pas\\nattraper de POKéMON.\\pJe dis juste qu'il faut les élever\\navec plus de responsabilité."
  },
  "SixIsland_PatternBush_Text_BethanyDefeat": {
   "en": "You raise your POKéMON with a\\nwhole lot of love!",
@@ -21,7 +21,7 @@
  },
  "SixIsland_PatternBush_Text_BethanyPostBattle": {
   "en": "In the same way your mother raised\\nyou full of love, you should raise\\lyour POKéMON.",
-  "fr": "De la même façon que ta mère t'a\\nélevé avec amour, tu devrais élever\\ltes POKéMON."
+  "fr": "Tu dois élever tes POKéMON comme\\nune mère élèverait ses enfants."
  },
  "SixIsland_PatternBush_Text_CordellDefeat": {
   "en": "I bet you think I'm weak,\\ndon't you, eh?",
@@ -33,7 +33,7 @@
  },
  "SixIsland_PatternBush_Text_CordellPostBattle": {
   "en": "Ayup, you townies come around all\\nso dandy with a hat that flashy…\\pHow about giving me that?",
-  "fr": "Ouais, vous les citadins, vous\\nvenez tout pimpants avec un chapeau\\lsi voyant…\\pTu me le donnes ?"
+  "fr": "Vous les gens de la ville, toujours\\nà frimer avec vos fringues.\\pHum… Ça m'irait bien… Tu veux pas\\nme le donner ?"
  },
  "SixIsland_PatternBush_Text_DaliaDefeat": {
   "en": "If you'd like, I can teach you how\\nto breathe properly.",
@@ -45,7 +45,7 @@
  },
  "SixIsland_PatternBush_Text_DaliaPostBattle": {
   "en": "First, exhale.\\nBlow everything out.\\pWhen you can't exhale anymore,\\ninhale the clean air!\\pIsn't it refreshing?",
-  "fr": "D'abord, expire.\\nSouffle tout.\\pQuand tu ne peux plus expirer,\\ninspire l'air pur !\\pN'est-ce pas rafraîchissant ?"
+  "fr": "D'abord, expire bien fort. Fais\\ntout sortir d'un coup.\\pQuand tes poumons sont vides,\\ninspire cet air pur !\\pC'est rafraîchissant, non ?"
  },
  "SixIsland_PatternBush_Text_GarretDefeat": {
   "en": "Heheh…\\nIsn't my POKéMON awesome?",
@@ -57,7 +57,7 @@
  },
  "SixIsland_PatternBush_Text_GarretPostBattle": {
   "en": "There's a girl near the BUSH who\\nmeasures HERACROSS for TRAINERS.",
-  "fr": "Il y a une fille près du BUISSON\\nqui mesure les SCARHINO pour les\\lDRESSEURS."
+  "fr": "Il y a une fille près des BUISSONS\\nqui fait combattre son SCARHINO."
  },
  "SixIsland_PatternBush_Text_JoanaDefeat": {
   "en": "I lost, but I'm still laughing.\\nAm I the only girl like that?",
@@ -69,7 +69,7 @@
  },
  "SixIsland_PatternBush_Text_JoanaPostBattle": {
   "en": "I'm going to keep on collecting\\nBUG POKéMON.\\pAm I the only girl like that?",
-  "fr": "Je vais continuer à collectionner\\nles POKéMON INSECTE.\\pSuis-je la seule fille comme ça ?"
+  "fr": "Je vais continuer à collectionner\\nles POKéMON INSECTE.\\pEst-ce que je suis la seule fille\\ncomme ça ?"
  },
  "SixIsland_PatternBush_Text_JonahDefeat": {
   "en": "It's okay, losing is a fun part of\\nPOKéMON's appeal, too.",
@@ -81,7 +81,7 @@
  },
  "SixIsland_PatternBush_Text_JonahPostBattle": {
   "en": "By the way, “appeal” is a weird\\nword, if you think about it.\\pLike, is it like an orange peel?\\nOr like a ringing bell?",
-  "fr": "Au fait, “ charme ” est un mot\\nbizarre, quand on y pense.\\pC'est comme l'arbre ? Ou comme\\nun sortilège ?"
+  "fr": "C'est comme quand tu attrapes des\\ninsectes. Tu n'abandonnes\\ppas au premier papillon qui\\nt'échappe, non ?"
  },
  "SixIsland_PatternBush_Text_LaytonDefeat": {
   "en": "Have you taken a good look around\\nyour feet?",
@@ -93,7 +93,7 @@
  },
  "SixIsland_PatternBush_Text_LaytonPostBattle": {
   "en": "There are places here in PATTERN\\nBUSH where grass won't grow.\\pWhat could be the cause of such\\na phenomenon?",
-  "fr": "Il y a des endroits dans le BUISSON\\nMOTIF où l'herbe ne pousse pas.\\pQuelle peut être la cause d'un tel\\nphénomène ?"
+  "fr": "Dans les FORBUISSONS, l'herbe ne\\nrepousse pas partout.\\pDe quoi ça pourrait bien venir ?"
  },
  "SixIsland_PatternBush_Text_MarcyDefeat": {
   "en": "It wasn't a bug.\\nI cut my shin on some grass.",
@@ -105,7 +105,7 @@
  },
  "SixIsland_PatternBush_Text_MarcyPostBattle": {
   "en": "A little cut like that…\\nA little spit's enough to cure it!",
-  "fr": "Une petite coupure comme ça… Un\\npeu de salive suffit à la guérir !"
+  "fr": "Avec ce genre de coupure, un petit\\nbisou et ça repart !"
  },
  "SixIsland_PatternBush_Text_NashDefeat": {
   "en": "Super awesome!",
@@ -117,7 +117,7 @@
  },
  "SixIsland_PatternBush_Text_NashPostBattle": {
   "en": "The funny patterns on the ground…\\pThey look like the patterns on my\\ngrandpa's clothes.",
-  "fr": "Les drôles de motifs par terre…\\pIls ressemblent aux motifs des\\nvêtements de mon grand-père."
+  "fr": "Les formes qui sont sur le sol…\\pÇa ressemble à ce qu'il y a sur les\\nchemises de mon grand-père."
  },
  "SixIsland_PatternBush_Text_RileyDefeat": {
   "en": "Wimped out…",
@@ -129,7 +129,7 @@
  },
  "SixIsland_PatternBush_Text_RileyPostBattle": {
   "en": "I'm going to observe the night sky\\nhere.",
-  "fr": "Je vais observer le ciel nocturne\\nici."
+  "fr": "Je vais observer les étoiles à\\npartir d'ici."
  },
  "SixIsland_PatternBush_Text_VanceDefeat": {
   "en": "I got beat while I was still busy\\ncelebrating!",
@@ -141,6 +141,6 @@
  },
  "SixIsland_PatternBush_Text_VancePostBattle": {
   "en": "I'm going to bring my little brother\\nhere next time.",
-  "fr": "J'amènerai mon petit frère ici la\\nprochaine fois."
+  "fr": "La prochaine fois, je viendrai avec\\nmon petit frère."
  }
 }

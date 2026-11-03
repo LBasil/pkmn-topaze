@@ -9,7 +9,7 @@
  },
  "PokemonTower_5F_Text_JanaePostBattle": {
   "en": "I fell to evil spirits despite my\\ntraining in the mountains…",
-  "fr": "J'ai succombé aux mauvais esprits\\nmalgré mon entraînement dans les\\lmontagnes…"
+  "fr": "Mon Tao à moi, c'est le plus beau\\ndes Taos !"
  },
  "PokemonTower_5F_Text_KarinaDefeat": {
   "en": "Ha?",
@@ -21,7 +21,7 @@
  },
  "PokemonTower_5F_Text_KarinaPostBattle": {
   "en": "I regained my senses.",
-  "fr": "J'ai repris mes esprits."
+  "fr": "Je suis revenue à la raison !"
  },
  "PokemonTower_5F_Text_MonJigglypuff": {
   "en": "JIGGLYPUFF: Purin...\\nIt sings a lullaby for the spirits.",
@@ -29,7 +29,7 @@
  },
  "PokemonTower_5F_Text_PurifiedZoneMonsFullyHealed": {
   "en": "Entered the purified and protected\\nzone.\\p{PLAYER}'s POKéMON were fully\\nhealed.",
-  "fr": "Entré dans la zone purifiée et\\nprotégée.\\pLes POKéMON de {PLAYER} ont été\\ncomplètement soignés."
+  "fr": "Vous pénétrez dans une zone\\nsanctuaire !\\pLes POKéMON de {PLAYER} sont soignés\\n!"
  },
  "PokemonTower_5F_Text_RestHereInPurifiedSpace": {
   "en": "Come, child!\\nI have purified this space.\\lYou can rest here.",
@@ -45,7 +45,7 @@
  },
  "PokemonTower_5F_Text_RuthPostBattle": {
   "en": "I was possessed.",
-  "fr": "J'étais possédé."
+  "fr": "J'étais possédée !"
  },
  "PokemonTower_5F_Text_TammyDefeat": {
   "en": "Gasp!",
@@ -57,6 +57,6 @@
  },
  "PokemonTower_5F_Text_TammyPostBattle": {
   "en": "I was under possession.",
-  "fr": "J'étais possédé."
+  "fr": "J'étais possédée !"
  }
 }

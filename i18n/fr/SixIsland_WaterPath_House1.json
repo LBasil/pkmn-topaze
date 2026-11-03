@@ -5,7 +5,7 @@
  },
  "SixIsland_WaterPath_House1_Text_BlankChartOfSomeSort": {
   "en": "It's a blank chart of some sort.\\pIt has spaces for writing in\\nrecords of some kind.",
-  "fr": "C'est une sorte de tableau vierge.\\pIl a des espaces pour inscrire des\\nrecords de je ne sais quoi."
+  "fr": "C'est un classement vierge.\\pIl y a de la place pour inscrire\\ndes records."
  },
  "SixIsland_WaterPath_House1_Text_ItsXInchesDeserveReward": {
   "en": "Eeeek, it's {STR_VAR_2} inches!\\nI've never seen anything like this!\\lYou deserve a reward!",
@@ -33,7 +33,7 @@
  },
  "SixIsland_WaterPath_House1_Text_WantToSeeBiggerOne": {
   "en": "I want to see a much, much bigger\\nHERACROSS than that one.\\pOh, how I adore them, big\\nHERACROSS!",
-  "fr": "Je veux voir un SCARHINO bien,\\nbien plus grand que celui-là.\\pOh, comme j'adore les gros\\nSCARHINO !"
+  "fr": "Je veux en voir un beaucoup plus\\ngros que celui-là.\\pOh, comme je les adore !"
  },
  "SixIsland_WaterPath_House1_Text_YourBagIsFull": {
   "en": "Your BAG is full.\\nMy reward won't fit.",

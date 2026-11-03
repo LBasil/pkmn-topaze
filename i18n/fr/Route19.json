@@ -9,7 +9,7 @@
  },
  "Route19_Text_AlicePostBattle": {
   "en": "My boyfriend wanted to swim to\\nSEAFOAM ISLANDS.",
-  "fr": "Mon copain voulait nager jusqu'aux\\nÎLES ÉCUME."
+  "fr": "Mon p'tit copain veut nager\\njusqu'aux ÎLES ÉCUME."
  },
  "Route19_Text_AnyaDefeat": {
   "en": "Oh! I lost!",
@@ -33,7 +33,7 @@
  },
  "Route19_Text_AxlePostBattle": {
   "en": "M-my legs! They cramped up!\\nGlub, glub…",
-  "fr": "M-mes jambes ! Des crampes !\\nGlou, glou…"
+  "fr": "J'ai une crampe ! Gloup ! Argl !"
  },
  "Route19_Text_ConnieDefeat": {
   "en": "I'm exhausted…",
@@ -45,7 +45,7 @@
  },
  "Route19_Text_ConniePostBattle": {
   "en": "If I were to ride a POKéMON on\\nthe sea, I'd like a LAPRAS.\\pLAPRAS is so big, I bet it\\nwould keep me dry on water.",
-  "fr": "Si je chevauchais un POKéMON en\\nmer, je voudrais un LOKHLASS.\\pLOKHLASS est si gros que je\\nresterais au sec sur l'eau, j'en\\lsuis sûr."
+  "fr": "Un LOKHLASS, c'est grand et gros !\\pSi je montes sur son dos, je ne\\nserai pas mouillée !"
  },
  "Route19_Text_DavidDefeat": {
   "en": "Help!",
@@ -57,7 +57,7 @@
  },
  "Route19_Text_DavidPostBattle": {
   "en": "I guess you have to fish for sea\\nPOKéMON.",
-  "fr": "Il faut pêcher les POKéMON marins,\\nje suppose."
+  "fr": "C'est en pêchant que tu attraperas\\ndes POKéMON EAU !"
  },
  "Route19_Text_DouglasDefeat": {
   "en": "Glub!",
@@ -69,7 +69,7 @@
  },
  "Route19_Text_DouglasPostBattle": {
   "en": "I see a couple of islands over\\nyonder!",
-  "fr": "Je vois deux îles là-bas !"
+  "fr": "Je vois des îles au loin !"
  },
  "Route19_Text_LiaDefeat": {
   "en": "LIA: That's no way to treat my\\nlittle brother!",
@@ -113,7 +113,7 @@
  },
  "Route19_Text_MatthewPostBattle": {
   "en": "I can beat even marine POKéMON\\nat swimming.",
-  "fr": "Je peux battre même les POKéMON\\nmarins à la nage."
+  "fr": "Je nage plus vite que les POKéMON !"
  },
  "Route19_Text_ReeceDefeat": {
   "en": "Ooh!\\nThat's chilly!",
@@ -157,6 +157,6 @@
  },
  "Route19_Text_TonyPostBattle": {
   "en": "I'm looking at the sea to forget\\nthe bad thing that happened!",
-  "fr": "Je regarde la mer pour oublier la\\nmauvaise chose qui est arrivée !"
+  "fr": "Je cherche la paix intérieure dans\\nla mer !"
  }
 }

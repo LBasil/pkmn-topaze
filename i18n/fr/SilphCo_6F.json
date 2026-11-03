@@ -5,7 +5,7 @@
  },
  "SilphCo_6F_Text_BetterGetBackToWork": {
   "en": "Well, better get back to work.",
-  "fr": "Bon, je ferais mieux de retourner\\nau travail."
+  "fr": "Allez, hop ! Au boulot !"
  },
  "SilphCo_6F_Text_ComeWorkForSilphWhenYoureOlder": {
   "en": "Come work for HEMATEK when you\\nget older.",
@@ -25,7 +25,7 @@
  },
  "SilphCo_6F_Text_Grunt1PostBattle": {
   "en": "No matter!\\nMy brothers will avenge me!",
-  "fr": "Peu importe !\\nMes frères me vengeront !"
+  "fr": "Pas grave ! Mes frères me vengeront\\n!"
  },
  "SilphCo_6F_Text_Grunt2Defeat": {
   "en": "You traitor!",
@@ -37,15 +37,15 @@
  },
  "SilphCo_6F_Text_Grunt2PostBattle": {
   "en": "If you stand for justice, you\\nbetray us bad guys!",
-  "fr": "Si tu défends la justice, tu nous\\ntrahis, nous les méchants !"
+  "fr": "Si t'es gentil, t'es pas méchant !"
  },
  "SilphCo_6F_Text_HelpMePlease": {
   "en": "Oh dear, oh dear.\\nHelp me, please!",
-  "fr": "Oh là là, oh là là.\\nAidez-moi, s'il vous plaît !"
+  "fr": "Pitié, pitié… Aidez-moi !"
  },
  "SilphCo_6F_Text_NeedsMeToLookAfterHim": {
   "en": "He's so helpless, he needed\\nsomeone like me to look after him.",
-  "fr": "Il est si démuni qu'il avait besoin\\nde quelqu'un comme moi pour veiller\\lsur lui."
+  "fr": "Il a besoin de quelqu'un… Alors je\\nvais l'épouser !"
  },
  "SilphCo_6F_Text_RocketsRanAwayBecauseOfYou": {
   "en": "TEAM ONYBRIS ran away, and it's all\\nbecause of you!",
@@ -77,10 +77,10 @@
  },
  "SilphCo_6F_Text_ThatManIsSuchACoward": {
   "en": "That man next to me…\\nHe's such a coward!",
-  "fr": "Cet homme à côté de moi…\\nC'est un tel lâche !"
+  "fr": "Regarde-moi ça ! Quel froussard\\ncelui-là !"
  },
  "SilphCo_6F_Text_WeGotEngaged": {
   "en": "We got engaged.\\nHeheh!",
-  "fr": "On s'est fiancés.\\nHéhéh !"
+  "fr": "On va s'marier ! Haha !"
  }
 }

@@ -1,7 +1,7 @@
 {
  "SSAnne_CaptainsOffice_Text_CaptainIFeelSeasick": {
   "en": "CAPTAIN: Ooargh…\\nI feel hideous…\\lUrrp! Seasick…",
-  "fr": "CAPITAINE : Ooargh… Je me sens\\naffreux… Urrp ! Le mal de mer…"
+  "fr": "CAPITAINE : Blorf. J'suis pas bien.\\nBeurp…"
  },
  "SSAnne_CaptainsOffice_Text_ExplainCut": {
   "en": "Using CUT, you can chop down\\nsmall trees.\\pA small tree blocks the pass east\\nof TOURMALIA. That way leads to\\lROCK TUNNEL and SPINELLIA.",
@@ -9,7 +9,7 @@
  },
  "SSAnne_CaptainsOffice_Text_HowToConquerSeasickness": {
   "en": "How to Conquer Seasickness…\\nThe CAPTAIN's reading this!",
-  "fr": "Comment vaincre le mal de mer…\\nLe CAPITAINE lit ça !"
+  "fr": "Comment guérir le mal de mer… Le\\nCAPITAINE lit le manuel !"
  },
  "SSAnne_CaptainsOffice_Text_ObtainedHM01FromCaptain": {
   "en": "{PLAYER} obtained HM01\\nfrom the CAPTAIN!",
@@ -41,10 +41,10 @@
  },
  "SSAnne_CaptainsOffice_Text_YouHaveNoRoomForThis": {
   "en": "Oh, no!\\nYou have no room for this!",
-  "fr": "Oh non !\\nTu n'as plus de place pour ça !"
+  "fr": "Ha zut ! Tu n'as plus de place pour\\ncet objet !"
  },
  "SSAnne_CaptainsOffice_Text_YuckShouldntHaveLooked": {
   "en": "Yuck!\\nShouldn't have looked!",
-  "fr": "Beurk !\\nIl ne fallait pas regarder !"
+  "fr": "Quoi?! ? Il a mangé ça?? ?"
  }
 }

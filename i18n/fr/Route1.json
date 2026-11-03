@@ -17,7 +17,7 @@
  },
  "Route1_Text_ComeSeeUsIfYouNeedPokeBalls": {
   "en": "Please come see us if you need\\nPOKé BALLS for catching POKéMON.",
-  "fr": "Viens nous voir si tu as besoin de\\nPOKé BALLS pour capturer des\\lPOKéMON."
+  "fr": "Nous avons aussi des POKé BALLS\\npour capturer les POKéMON !"
  },
  "Route1_Text_Doduo": {
   "en": "DODUO: Kwek! Kwek!\\nIt is shaking. Its collar says\\lGRENALUX RANCH.",
@@ -33,7 +33,7 @@
  },
  "Route1_Text_PutPotionAway": {
   "en": "{PLAYER} put the POTION away in\\nthe BAG's ITEMS POCKET.",
-  "fr": "{PLAYER} a rangé la POTION dans la\\nPOCHE OBJETS du SAC."
+  "fr": "{PLAYER} range la POTION dans la\\nPOCHE OBJETS du SAC."
  },
  "Route1_Text_RQuest_Ask": {
   "en": "My buddy is hurt! Could you spare 3\\nPOTIONS?",

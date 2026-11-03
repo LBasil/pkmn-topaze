@@ -5,7 +5,7 @@
  },
  "ViridianCity_Text_CatchMonsForEasierBattles": {
   "en": "TRAINER TIPS\\pCatch POKéMON and expand your\\ncollection.\\pThe more you have, the easier it\\nis to battle.",
-  "fr": "CONSEILS AUX DRESSEURS\\pCapture des POKéMON et agrandis ta\\ncollection.\\pPlus tu en as, plus il est facile\\nde combattre."
+  "fr": "ASTUCE\\pAttrapez des POKéMON et agrandissez\\nvotre collection !\\pPlus vous en capturez, plus les\\ncombats sont faciles !"
  },
  "ViridianCity_Text_CitySign": {
   "en": "OPANIHRUM \\nCity of the Black Opal",
@@ -45,11 +45,11 @@
  },
  "ViridianCity_Text_MovesLimitedByPP": {
   "en": "TRAINER TIPS\\pThe battle moves of POKéMON are\\nlimited by their POWER POINTS, PP.\\pTo replenish PP, rest your tired\\nPOKéMON at a POKéMON CENTER.",
-  "fr": "CONSEILS AUX DRESSEURS\\pLes capacités de combat des POKéMON\\nsont limitées par leurs POINTS DE\\lPOUVOIR, PP.\\pPour reconstituer les PP, fais\\nreposer tes POKéMON fatigués dans\\lun CENTRE POKéMON."
+  "fr": "ASTUCE\\pLes attaques sont limitées par des\\nPP (Points de Pouvoir).\\pPour disposer de tous vos PP,\\nfaites soigner vos POKéMON dans un\\lCENTRE POKéMON !"
  },
  "ViridianCity_Text_MyGrandsonOnTheShow": {
   "en": "Wahaha!\\nIt's my grandson on the show!\\pSince he's the one doing the\\nteaching, you're bound to learn.",
-  "fr": "Wahaha ! C'est mon petit-fils dans\\nl'émission !\\pComme c'est lui qui enseigne, tu es\\nsûr d'apprendre."
+  "fr": "Ahaha ! C'est mon petit-fils à la\\ntélé !\\pAvec lui, tu vas tout comprendre !"
  },
  "ViridianCity_Text_OfferCatchDemo": {
   "en": "Well, now, I've had my coffee!\\nHm? You're working on a POKéDEX?\\pWhenever you catch a POKéMON, the\\nPOKéDEX updates its data.\\pShall I show you how to catch\\none?",
@@ -57,7 +57,7 @@
  },
  "ViridianCity_Text_OhOkayThen": {
   "en": "Oh, okay then!",
-  "fr": "Oh, d'accord alors !"
+  "fr": "Bon, OK !"
  },
  "ViridianCity_Text_RefAfter": {
   "en": "BRUN: Take good care of it. The\\nnext REFUGE post is waiting.",
@@ -113,15 +113,15 @@
  },
  "ViridianCity_Text_ThatWasEducationalTakeThis": {
   "en": "There! Now tell me, that was\\neducational, was it not?\\pAnd here, take this, too.",
-  "fr": "Voilà ! Dis-moi, c'était\\ninstructif, non ?\\pEt tiens, prends ceci aussi."
+  "fr": "Et voilà ! Si tu n'as pas compris\\navec ça…\\pJe voudrais aussi que tu prennes\\nceci."
  },
  "ViridianCity_Text_ThisIsPrivateProperty": {
   "en": "I absolutely forbid you from\\ngoing through here!\\pThis is private property!",
-  "fr": "Je t'interdis formellement de\\npasser par ici !\\pC'est une propriété privée !"
+  "fr": "Je t'interdis de passer par là !\\pC'est une propriété privée !"
  },
  "ViridianCity_Text_TooBusyForTeachyTV": {
   "en": "Hm… You're too busy to not even\\nhave the time for TEACHY TV…\\pTime is money, and neither should\\nbe ill spent…",
-  "fr": "Hm… Tu es trop occupé pour ne même\\npas avoir le temps de regarder\\lTEACHY TV…\\pLe temps, c'est de l'argent, et ni\\nl'un ni l'autre ne doivent être mal\\ldépensés…"
+  "fr": "Hum. Tu dois avoir trop de choses à\\nfaire pour regarder la télé.\\pLe temps c'est de l'argent, t'as\\nbien raison."
  },
  "ViridianCity_Text_ViridiansGymLeaderReturned": {
   "en": "OPANIHRUM GYM's LEADER returned!",
@@ -129,14 +129,14 @@
  },
  "ViridianCity_Text_WantToKnowAboutCaterpillarMons": {
   "en": "You want to know about the two\\nkinds of caterpillar POKéMON?",
-  "fr": "Tu veux en savoir plus sur les deux\\nsortes de POKéMON chenilles ?"
+  "fr": "Tu veux tout savoir sur les deux\\ntypes de POKéMON chenille ?"
  },
  "ViridianCity_Text_WatchThatToLearnBasics": {
   "en": "If there's something you don't\\nunderstand, watch that.\\pIt will teach you about the basics\\nof being a POKéMON TRAINER.",
-  "fr": "S'il y a quelque chose que tu ne\\ncomprends pas, regarde ça.\\pÇa t'apprendra les bases pour être\\nDRESSEUR POKéMON."
+  "fr": "S'il y a quelque chose que tu ne\\ncomprends pas, regarde bien.\\pCela t'apprendra les bases pour\\nêtre DRESSEUR de POKéMON."
  },
  "ViridianCity_Text_WeakenMonsFirstToCatch": {
   "en": "Well, now, I've had my coffee, and\\nthat's what I need to get going!\\pBut I made it too strong.\\nIt gave me a headache…\\pIncidentally, are you filling your\\nPOKéDEX?\\pAt first, focus on weakening the\\nPOKéMON before trying to catch it.",
-  "fr": "Bon, j'ai pris mon café, et c'est\\nce qu'il me faut pour démarrer !\\pMais je l'ai fait trop fort. J'ai\\nmal à la tête…\\pAu fait, remplis-tu ton POKéDEX ?\\pAu début, concentre-toi à affaiblir\\nles POKéMON avant d'essayer de les\\lcapturer."
+  "fr": "Ahh… Un p'tit somme, un bon café et\\nhop ! La pêche pour la journée !\\pMais j'ai dû le faire trop fort.\\nJ'ai la migraine maintenant.\\pAu fait, est-ce que tu remplis ton\\nPOKéDEX ?\\pPense à bien affaiblir les POKéMON\\navant de les attraper."
  }
 }

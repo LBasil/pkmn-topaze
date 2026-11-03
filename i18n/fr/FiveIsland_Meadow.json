@@ -5,7 +5,7 @@
  },
  "FiveIsland_Meadow_Text_EnteredPasswordAnotherNeeded": {
   "en": "{PLAYER} entered a password.\\p“GOLDEEN need log.”\\p… …  … …  … …\\pAnother password is needed to\\nopen the door…",
-  "fr": "{PLAYER} a saisi un mot de passe.\\p“ POISSIRÈNE a besoin de bois. ”\\p… … … … … …\\pUn autre mot de passe est\\nnécessaire pour ouvrir la porte…"
+  "fr": "{PLAYER} entre le mot de passe.\\p“ICI, GIRAFARIG, ICI”.\\p… … … … … …\\pIl faut un autre mot de passe pour\\nouvrir la porte…"
  },
  "FiveIsland_Meadow_Text_EnteredPasswordDoorOpened": {
   "en": "{PLAYER} entered two passwords.\\p“GOLDEEN need log.”\\n“Yes, nah, CHANSEY.”\\p… …  … …  … …\\pThe WAREHOUSE's door opened!",
@@ -21,7 +21,7 @@
  },
  "FiveIsland_Meadow_Text_Rocket1PostBattle": {
   "en": "You don't have any business here!\\nGo home!",
-  "fr": "Tu n'as rien à faire ici !\\nRentre chez toi !"
+  "fr": "Tu n'as rien à faire ici ! Rentre\\nchez toi !"
  },
  "FiveIsland_Meadow_Text_Rocket2Defeat": {
   "en": "That wasn't supposed to happen…",
@@ -33,7 +33,7 @@
  },
  "FiveIsland_Meadow_Text_Rocket2PostBattle": {
   "en": "You're wanting to know what's inside\\nthis WAREHOUSE?\\pIt's better you didn't know.\\nFor your own sake, I mean.",
-  "fr": "Tu veux savoir ce qu'il y a dans\\ncet ENTREPÔT ?\\pMieux vaut ne pas le savoir.\\nPour ton propre bien, je veux dire."
+  "fr": "Tu veux savoir ce qui se passe dans\\nl'ENTREPÔT ?\\pCrois-moi, pour ta sécurité, il\\nvaut mieux que tu le saches pas."
  },
  "FiveIsland_Meadow_Text_Rocket3Defeat": {
   "en": "Oh, that makes me furious!",
@@ -45,7 +45,7 @@
  },
  "FiveIsland_Meadow_Text_Rocket3PostBattle": {
   "en": "You won't be able to get in without\\nthe passwords anyway.",
-  "fr": "Tu ne pourras pas entrer sans les\\nmots de passe de toute façon."
+  "fr": "De toute façon, tu ne pourras pas\\ncontinuer sans mot de passe."
  },
  "FiveIsland_Meadow_Text_WarehouseDoorAlreadyOpen": {
   "en": "The WAREHOUSE's door is already\\nopen.",

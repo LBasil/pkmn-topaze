@@ -13,7 +13,7 @@
  },
  "Route2_EastBuilding_Text_GreatHereYouGo": {
   "en": "Great! You have caught or owned\\n{STR_VAR_3} kinds of POKéMON!\\pCongratulations!\\nHere you go!",
-  "fr": "Super ! Tu as capturé ou possédé\\n{STR_VAR_3} espèces de POKéMON !\\pFélicitations !\\nVoilà !"
+  "fr": "Super ! Tu as {STR_VAR_3} POKéMON\\ndifférents !\\pFélicitations ! Voici ta récompense\\n!"
  },
  "Route2_EastBuilding_Text_ReceivedHM05FromAide": {
   "en": "{PLAYER} received HM05\\nfrom the AIDE.",

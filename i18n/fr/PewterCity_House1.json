@@ -17,7 +17,7 @@
  },
  "PewterCity_House1_Text_Nidoran": {
   "en": "NIDORAN♂: Bowbow!",
-  "fr": "NIDORAN♂ : Bowbow !"
+  "fr": "NIDORAN♂ : Nidoni !"
  },
  "PewterCity_House1_Text_NidoranSit": {
   "en": "NIDORAN, sit!",
@@ -25,6 +25,6 @@
  },
  "PewterCity_House1_Text_TradeMonsAreFinicky": {
   "en": "Our POKéMON's an outsider, so it's\\nfinicky and hard to handle.\\pAn outsider is a POKéMON that you\\nget in a trade.\\pIt grows fast, but it may ignore an\\nunskilled TRAINER in battle.\\pIf only we had some BADGES…",
-  "fr": "Notre POKéMON est un étranger,\\nalors il est capricieux et\\ldifficile à gérer.\\pUn étranger est un POKéMON obtenu\\npar échange.\\pIl grandit vite, mais peut ignorer\\nun DRESSEUR inexpérimenté en\\lcombat.\\pSi seulement on avait quelques\\nBADGES…"
+  "fr": "Notre POKéMON est un échangé, il\\nest difficile à maîtriser.\\pUn échangé est un POKéMON échangé\\navec un autre joueur.\\pIl grandit vite, mais il n'en fait\\nqu'à sa tête pendant les combats !\\pSi seulement nous avions des\\nBADGES…"
  }
 }

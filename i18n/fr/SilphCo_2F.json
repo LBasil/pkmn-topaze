@@ -25,7 +25,7 @@
  },
  "SilphCo_2F_Text_Grunt1PostBattle": {
   "en": "Diamond-shaped tiles are teleport\\nblocks.\\pThey're transporters for this\\nhigh-tech building.",
-  "fr": "Les carreaux en losange sont des\\nblocs de téléportation.\\pCe sont des transporteurs pour ce\\nbâtiment high-tech."
+  "fr": "Les dalles en forme de diamant sont\\ndes téléporteurs !\\pC'est de la super technologie !"
  },
  "SilphCo_2F_Text_Grunt2Defeat": {
   "en": "I goofed!",
@@ -53,11 +53,11 @@
  },
  "Text_ThunderWaveDeclined": {
   "en": "Oh…\\nBut THUNDER WAVE is convenient…",
-  "fr": "Oh…\\nMais CAGE-ÉCLAIR est pratique…"
+  "fr": "Oh… Mais CAGE-ÉCLAIR est utile…"
  },
  "Text_ThunderWaveTaught": {
   "en": "THUNDER WAVE causes paralysis in\\nthe target POKéMON.\\pA paralyzed POKéMON may be unable\\nto move in battle.\\pIt's an ELECTRIC-type move, so it\\nwon't work on some POKéMON.",
-  "fr": "CAGE-ÉCLAIR paralyse le POKéMON\\nciblé.\\pUn POKéMON paralysé peut être\\nincapable de bouger au combat.\\pC'est une capacité de type\\nÉLECTRIK, donc elle n'agit pas sur\\lcertains POKéMON."
+  "fr": "CAGE-ÉCLAIR paralyse le POKéMON\\nattaqué.\\pUn POKéMON paralysé peut être\\nincapable d'attaquer en combat.\\pC'est une capacité de type\\nÉLECTRIK, ça ne marchera pas sur\\ltous les POKéMON."
  },
  "Text_ThunderWaveTeach": {
   "en": "Eeek!\\nNo! Stop! Help!\\pOh, you're not with TEAM ONYBRIS.\\nI'm sorry, I thought…\\pWill you forgive me if I teach\\nyou the THUNDER WAVE technique?",
@@ -65,6 +65,6 @@
  },
  "Text_ThunderWaveWhichMon": {
   "en": "Which POKéMON should I teach\\nTHUNDER WAVE?",
-  "fr": "À quel POKéMON dois-je enseigner\\nCAGE-ÉCLAIR ?"
+  "fr": "À quel POKéMON enseigner\\nCAGE-ÉCLAIR ?"
  }
 }

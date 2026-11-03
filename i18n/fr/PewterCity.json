@@ -1,7 +1,7 @@
 {
  "PewterCity_Text_AskedToDeliverThis": {
   "en": "I'm glad I caught up to you.\\nI'm PROF. OAK's AIDE.\\pI've been asked to deliver this,\\nso here you go.",
-  "fr": "Content de t'avoir rattrapé.\\nJe suis l'ASSISTANT du PROF. CHEN.\\pOn m'a demandé de te livrer ceci,\\nalors tiens."
+  "fr": "Content de te voir. Je suis\\nl'ASSISTANT du PROF. CHEN.\\pOn m'a demandé de te donner ça,\\nalors voilà…"
  },
  "PewterCity_Text_BrockOnlySeriousTrainerHere": {
   "en": "There aren't many serious POKéMON\\nTRAINERS here.\\pThey're all like BUG CATCHERS,\\nyou know, just hobbyists.\\pBut PYROPIA GYM's KAY isn't like\\nthat, not one bit.",
@@ -29,7 +29,7 @@
  },
  "PewterCity_Text_DidYouCheckOutMuseum": {
   "en": "Did you check out the MUSEUM?",
-  "fr": "As-tu visité le MUSÉE ?"
+  "fr": "T'as déjà visité le MUSÉE ?"
  },
  "PewterCity_Text_DoYouKnowWhatImDoing": {
   "en": "Psssst!\\nDo you know what I'm doing?",
@@ -77,7 +77,7 @@
  },
  "PewterCity_Text_ReallyYouHaveToGo": {
   "en": "Really?\\nYou absolutely have to go!",
-  "fr": "Vraiment ?\\nTu dois absolument y aller !"
+  "fr": "Non ? Mais il faut y aller, voyons\\n!"
  },
  "PewterCity_Text_ReceivedRunningShoesFromAide": {
   "en": "{PLAYER} received the\\nRUNNING SHOES from the AIDE.",
@@ -129,7 +129,7 @@
  },
  "PewterCity_Text_SwitchedShoesWithRunningShoes": {
   "en": "{PLAYER} switched shoes with the\\nRUNNING SHOES.",
-  "fr": "{PLAYER} a changé de chaussures pour\\nles CHAUSSURES DE COURSE."
+  "fr": "{PLAYER} enlève ses chaussures pour\\nmettre les CHAUSSURES DE SPORT."
  },
  "PewterCity_Text_TQ_Ask": {
   "en": "A STAR PIECE would complete my rock\\ncollection.",
@@ -165,18 +165,18 @@
  },
  "Text_DreamEaterDeclined": {
   "en": "…Snore…",
-  "fr": "…Ronflement…"
+  "fr": "… Ronfl…"
  },
  "Text_DreamEaterTaught": {
   "en": "…ZZZ…\\nI…can't eat…anymore…",
-  "fr": "…ZZZ…\\nJe… ne peux plus… manger…"
+  "fr": "… Zzz… Peux… plus… rien… manger…"
  },
  "Text_DreamEaterTeach": {
   "en": "Yawn!\\nI must have dozed off in the sun.\\pI had this weird dream about\\na DROWZEE eating my dream.\\pAnd…\\nI learned how to eat dreams…\\pOogh, this is too spooky!\\pLet me teach it to a POKéMON so\\nI can forget about it!",
-  "fr": "Bâillement !\\nJ'ai dû m'endormir au soleil.\\pJ'ai fait un drôle de rêve où un\\nSOPORIFIK mangeait mon rêve.\\pEt…\\nJ'ai appris à manger les rêves…\\pOuh, c'est trop flippant !\\pLaisse-moi l'apprendre à un POKéMON\\npour que je l'oublie !"
+  "fr": "(Bâiiiille) J'ai dû m'endormir au\\nsoleil.\\pJ'ai rêvé qu'un SOPORIFIK dévorait\\nmes rêves…\\pEt j'ai appris comment dévorer les\\nrêves…\\pC'est dingue ça !\\pLaisse-moi l'apprendre aussi à un\\nPOKéMON."
  },
  "Text_DreamEaterWhichMon": {
   "en": "Which POKéMON wants to learn\\nDREAM EATER?",
-  "fr": "Quel POKéMON veut apprendre\\nDÉVORÊVE ?"
+  "fr": "À quel POKéMON enseigner DÉVORÊVE ?"
  }
 }

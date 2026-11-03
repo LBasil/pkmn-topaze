@@ -1,7 +1,7 @@
 {
  "SilphCo_4F_Text_CantYouSeeImHiding": {
   "en": "Sssh!\\nCan't you see I'm hiding?",
-  "fr": "Chut !\\nTu ne vois pas que je me cache ?"
+  "fr": "Chut ! Tu n'vois pas que je me\\ncache ?"
  },
  "SilphCo_4F_Text_FloorSign": {
   "en": "HEMATEK CO. HEAD OFFICE\\n4F",
@@ -17,7 +17,7 @@
  },
  "SilphCo_4F_Text_Grunt1PostBattle": {
   "en": "Fwahahaha!\\nMy BOSS has been after this place!",
-  "fr": "Fwahahaha !\\nMon BOSS convoitait cet endroit !"
+  "fr": "Le BOSS attend ce moment depuis\\nlongtemps !"
  },
  "SilphCo_4F_Text_Grunt2Defeat": {
   "en": "Who are you?",
@@ -41,7 +41,7 @@
  },
  "SilphCo_4F_Text_RodneyPostBattle": {
   "en": "The doors are electronically\\nlocked.\\pIt takes a CARD KEY to open the\\ndoors here.",
-  "fr": "Les portes sont verrouillées\\nélectroniquement.\\pIl faut une CARTE MAGNÉTIQUE pour\\nouvrir les portes ici."
+  "fr": "Les portes sont sécurisées !\\pIl te faut une CARTE MAGN. pour les\\nouvrir !"
  },
  "SilphCo_4F_Text_TeamRocketIsGone": {
   "en": "Huh?\\nTEAM ONYBRIS is gone?",

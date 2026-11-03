@@ -9,7 +9,7 @@
  },
  "RockTunnel_1F_Text_ArianaPostBattle": {
   "en": "Whew!\\nI'm all sweaty now.",
-  "fr": "Ouf !\\nMe voilà tout en sueur."
+  "fr": "Hé ben ! Me voilà en sueur !"
  },
  "RockTunnel_1F_Text_AshtonDefeat": {
   "en": "Game over!",
@@ -21,7 +21,7 @@
  },
  "RockTunnel_1F_Text_AshtonPostBattle": {
   "en": "Oh well, I'll get a ZUBAT as I go!",
-  "fr": "Tant pis, j'aurai un NOSFERAPTI en\\nchemin !"
+  "fr": "Bon, il me faut un NOSFERAPTI !"
  },
  "RockTunnel_1F_Text_DanaDefeat": {
   "en": "I'm out of POKéMON!",
@@ -33,7 +33,7 @@
  },
  "RockTunnel_1F_Text_DanaPostBattle": {
   "en": "You looked cute and harmless.\\nWas I ever wrong!",
-  "fr": "Tu avais l'air mignon et\\ninoffensif. Quelle erreur !"
+  "fr": "Dire que je pensais que tu ne\\nsavais pas te battre."
  },
  "RockTunnel_1F_Text_LeahDefeat": {
   "en": "It was too dark…",
@@ -45,7 +45,7 @@
  },
  "RockTunnel_1F_Text_LeahPostBattle": {
   "en": "I saw a MACHOP in this tunnel.",
-  "fr": "J'ai vu un MACHOC dans ce tunnel."
+  "fr": "J'ai vu un MACHOC dans ce tunnel !"
  },
  "RockTunnel_1F_Text_LennyDefeat": {
   "en": "Doh!\\nYou win!",
@@ -57,7 +57,7 @@
  },
  "RockTunnel_1F_Text_LennyPostBattle": {
   "en": "Watch for ONIX.\\nThey appear only occasionally.\\pHigh-level ones can put the\\nsqueeze on you!",
-  "fr": "Fais attention aux ONIX. Ils\\nn'apparaissent\\lqu'occasionnellement.\\pLes plus puissants peuvent te\\nserrer la vis !"
+  "fr": "Attention aux ONIX ! Ils\\napparaissent souvent ici.\\pIls pourraient facilement\\nt'écrabouiller, fais attention !"
  },
  "RockTunnel_1F_Text_LucasDefeat": {
   "en": "I give!",
@@ -69,7 +69,7 @@
  },
  "RockTunnel_1F_Text_LucasPostBattle": {
   "en": "You're talented enough to hike!",
-  "fr": "Tu as assez de talent pour\\nrandonner !"
+  "fr": "Tu as le niveau des meilleurs\\nmontagnards !"
  },
  "RockTunnel_1F_Text_MonMachop": {
   "en": "MACHOP: Gooh!\\nIt is pushing a boulder around.",

@@ -9,14 +9,14 @@
  },
  "SixIsland_GreenPath_Text_JaclynPostBattle": {
   "en": "I am so scatterbrained!\\pI need to focus so I can TELEPORT\\nproperly to my house!",
-  "fr": "Je suis si distrait !\\pJe dois me concentrer pour me\\nTÉLÉPORTER correctement chez moi !"
+  "fr": "J'suis trop stressée du cerveau !\\pJe dois me concentrer correctement\\npour me TÉLÉPORTER chez moi."
  },
  "SixIsland_GreenPath_Text_LeftRouteSign": {
   "en": "GREEN PATH\\nPATTERN BUSH AHEAD",
-  "fr": "SENTIER VERT\\nBUISSON MOTIF DEVANT"
+  "fr": "CHEMIN VERT FORBUISSONS DROIT\\nDEVANT"
  },
  "SixIsland_GreenPath_Text_RightRouteSign": {
   "en": "GREEN PATH\\nThink Green, Keep Nature Clean!",
-  "fr": "SENTIER VERT Pensez vert, gardez la\\nnature propre !"
+  "fr": "CHEMIN VERT Respectez la nature !"
  }
 }

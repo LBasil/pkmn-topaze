@@ -9,7 +9,7 @@
  },
  "FuchsiaCity_WardensHouse_Text_ExplainStrength": {
   "en": "WARDEN: Inside HM04 you'll find\\nSTRENGTH.\\pIt lets POKéMON move boulders when\\nyou're outside of battle.\\pOh yes, did you find the SECRET\\nHOUSE in the SAFARI ZONE?",
-  "fr": "GARDIEN : Dans la CS04 tu trouveras\\nFORCE.\\pElle permet aux POKéMON de déplacer\\ndes rochers hors combat.\\pOh oui, as-tu trouvé la MAISON\\nSECRÈTE du PARC SAFARI ?"
+  "fr": "GARDIEN : la CS04 contient FORCE !\\pTes POKéMON pourront déplacer des\\nrochers.\\pAu fait, as-tu trouvé la CABANE\\nSECRÈTE dans le PARC SAFARI ?"
  },
  "FuchsiaCity_WardensHouse_Text_GaveGoldTeethToWarden": {
   "en": "{PLAYER} gave the GOLD TEETH\\nto the WARDEN.",
@@ -25,15 +25,15 @@
  },
  "FuchsiaCity_WardensHouse_Text_HeOhayHeHaHoo": {
   "en": "Ha?\\nHe ohay heh ha hoo ee haheh!",
-  "fr": "Ha ?\\nHe ohay heh ha hoo ee haheh !"
+  "fr": "Ha ? Hai fou heh ha hoo ih haheh !"
  },
  "FuchsiaCity_WardensHouse_Text_HifFuffHefifoo": {
   "en": "WARDEN: Hif fuff hefifoo!\\pHa lof ha feef ee hafahi ho.\\nHeff hee fwee!",
-  "fr": "GARDIEN : Hif fuff hefifoo !\\pHa lof ha feef ee hafahi ho.\\nHeff hee fwee !"
+  "fr": "GARDIEN : Hif fuff hefifou !\\pHa fof ha fif eu hafahi ho. Heff hi\\nfwi !"
  },
  "FuchsiaCity_WardensHouse_Text_MonPhotosFossilsOnDisplay": {
   "en": "POKéMON photos and fossils are on\\ndisplay.",
-  "fr": "Des photos et fossiles de POKéMON\\nsont exposés."
+  "fr": "Photos et fossiles de POKéMON."
  },
  "FuchsiaCity_WardensHouse_Text_ObtainedAmethiolite": {
   "en": "{PLAYER} got the AMETHIOLITE!",
@@ -41,7 +41,7 @@
  },
  "FuchsiaCity_WardensHouse_Text_OldMonMerchandiseOnDisplay": {
   "en": "Old POKéMON merchandise is on\\ndisplay.",
-  "fr": "D'anciens articles POKéMON sont\\nexposés."
+  "fr": "Tout plein de trucs POKéMON !"
  },
  "FuchsiaCity_WardensHouse_Text_RaidAfter": {
   "en": "Their leader already took the case\\nand bolted out the back.\\pThe two thugs follow, laughing.\\nThey cannot be caught now.",
@@ -69,6 +69,6 @@
  },
  "FuchsiaCity_WardensHouse_Text_WardenPoppedInHisTeeth": {
   "en": "The WARDEN popped in his teeth!",
-  "fr": "Le GARDIEN a mis ses dents !"
+  "fr": "Le GARDIEN peut remettre son\\ndentier !"
  }
 }

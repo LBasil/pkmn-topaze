@@ -1,7 +1,7 @@
 {
  "SaffronCity_CopycatsHouse_2F_Text_Doduo": {
   "en": "DODUO: Giiih!\\pPRETTY MIRROR LOOK AT ME,\\nSEE HOW PRETTY I CAN BE?",
-  "fr": "DODUO : Giiih !\\pMIROIR MIROIR, REGARDE-MOI,\\nVOIS COMME JE PEUX ÊTRE BEAU ?"
+  "fr": "DODUO : Doduuu !\\pJOLI MIROIR, DIS-MOI QUI EST LA\\nPLUS BELLE !"
  },
  "SaffronCity_CopycatsHouse_2F_Text_MarioWearingABucket": {
   "en": "A game with MARIO wearing a bucket\\non his head!",
@@ -25,7 +25,7 @@
  },
  "Text_MimicDeclined": {
   "en": "Don't you like MIMIC?",
-  "fr": "Tu n'aimes pas COPIE ?"
+  "fr": "T'aimes pas COPIE ?"
  },
  "Text_MimicTaughtFemale": {
   "en": "{PLAYER}: Hi!\\nThanks for what you did for us.\\p{PLAYER}: Pardon?\\p{PLAYER}: Is it really that fun to\\ncopy what I say and do?\\pCOPYCAT: You bet!\\nIt's a scream!",
@@ -37,10 +37,10 @@
  },
  "Text_MimicTeach": {
   "en": "Oh wow!\\nA POKé DOLL!\\pFor me?\\nThank you!\\pYou know what?\\nI can teach the move MIMIC.",
-  "fr": "Oh wow !\\nUne POUPÉE POKé !\\pPour moi ?\\nMerci !\\pTu sais quoi ? Je peux enseigner la\\ncapacité COPIE."
+  "fr": "Whaaaaaa ! Une POKéPOUPÉE !\\pC'est pour moi ? Merci !\\pTiens, prends ça en échange !"
  },
  "Text_MimicWhichMon": {
   "en": "I really love MIMIC!\\nWho's going to learn it?",
-  "fr": "J'adore COPIE !\\nQui va l'apprendre ?"
+  "fr": "Moi aussi j'adore ! Alors, qui va\\nl'apprendre ?"
  }
 }

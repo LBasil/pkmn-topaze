@@ -209,7 +209,7 @@
  },
  "PokemonLeague_LoreleisRoom_Text_PostBattle": {
   "en": "You're better than I thought.\\nGo on ahead.\\pYou only got a taste of the\\nPOKéMON LEAGUE's power.",
-  "fr": "Tu es meilleur que je ne pensais.\\nPasse.\\pTu n'as eu qu'un aperçu de la\\npuissance de la LIGUE POKéMON."
+  "fr": "Tu sais te battre. Z'est bien.\\pMais la LIGUE POKéMON te rézerve\\nd'autres zurprizes !"
  },
  "PokemonLeague_LoreleisRoom_Text_RematchIntro": {
   "en": "Welcome to the POKéMON LEAGUE.\\pI, LORELEI of the ELITE FOUR,\\nhave returned!\\pYou know how it goes.\\nNo one can best me when it comes\\lto icy POKéMON.\\pFreezing moves are powerful.\\pYour POKéMON will be at my mercy\\nwhen they are frozen solid.\\pHahaha!\\nAre you ready?{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}",

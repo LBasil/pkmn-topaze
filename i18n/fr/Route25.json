@@ -9,7 +9,7 @@
  },
  "Route25_Text_ChadPostBattle": {
   "en": "If your POKéMON gets confused,\\nswitch it out.\\pThat's a good tactic.",
-  "fr": "Si ton POKéMON est confus,\\nchange-le.\\pC'est une bonne tactique."
+  "fr": "Si ton POKéMON est confus,\\nrappelle-le !\\pC'est une bonne tactique."
  },
  "Route25_Text_DanDefeat": {
   "en": "I'm not mad!",
@@ -33,7 +33,7 @@
  },
  "Route25_Text_FlintPostBattle": {
   "en": "Oh, well.\\nMy girlfriend will cheer me up.",
-  "fr": "Bah.\\nMa copine me remontera le moral."
+  "fr": "La route, en bas, est un raccourci\\nvers AZURIA."
  },
  "Route25_Text_FranklinDefeat": {
   "en": "You worked hard!",
@@ -45,7 +45,7 @@
  },
  "Route25_Text_FranklinPostBattle": {
   "en": "Drat!\\nA ZUBAT bit me back in that cave.",
-  "fr": "Zut ! Un NOSFERAPTI m'a mordu dans\\ncette grotte."
+  "fr": "Aaaaaaargh ! Je me suis fait mordre\\npar un NOSFERAPTI."
  },
  "Route25_Text_HaleyDefeat": {
   "en": "I'm not so jealous!",
@@ -81,7 +81,7 @@
  },
  "Route25_Text_KelseyPostBattle": {
   "en": "I wish my boyfriend was as good\\nas you.",
-  "fr": "J'aimerais que mon copain soit\\naussi bon que toi."
+  "fr": "J'aimerais que mon copain soit\\naussi fort que toi !"
  },
  "Route25_Text_MistyHighHopesAboutThisPlace": {
   "en": "MISTY: I followed some creeps\\nto this cape. It's a lovely spot,\\peven with the old cottage so\\nempty and quiet.",

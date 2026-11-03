@@ -9,7 +9,7 @@
  },
  "SevenIsland_TrainerTower_Text_DarioPostBattle": {
   "en": "In your future, I sense that you\\nwill meet many others.\\pI think you will be linked to each\\nother by a strange power.",
-  "fr": "Dans ton avenir, je sens que tu\\nrencontreras beaucoup d'autres\\lpersonnes.\\pJe pense que vous serez liés par un\\nétrange pouvoir."
+  "fr": "Dans le futur, je pressens que tu\\naffronteras de nombreux DRESSEURS.\\pUn lien étrange et invisible te\\nreliera à eux."
  },
  "SevenIsland_TrainerTower_Text_RodetteDefeat": {
   "en": "What an amazing TRAINER!",
@@ -21,14 +21,14 @@
  },
  "SevenIsland_TrainerTower_Text_RodettePostBattle": {
   "en": "Somewhere on this island, peculiar\\nPOKéMON are sleeping.\\pCould it be that they're waiting\\nfor you?",
-  "fr": "Quelque part sur cette île, de\\ncurieux POKéMON dorment.\\pSe pourrait-il qu'ils t'attendent ?"
+  "fr": "Quelque part sur cette île, des\\nPOKéMON spéciaux se reposent.\\pSe pourrait-il qu'ils attendent ta\\nvenue ?"
  },
  "SevenIsland_TrainerTower_Text_TrainerTowerAhead": {
   "en": "TRAINER TOWER AHEAD",
-  "fr": "TOUR DES DRESSEURS DEVANT"
+  "fr": "TOUR DRESSEURS DROIT DEVANT"
  },
  "SevenIsland_TrainerTower_Text_TrainerTowerSign": {
   "en": "TRAINER TOWER ENTRANCE\\nRise to the Challenge, TRAINERS!",
-  "fr": "ENTRÉE DE LA TOUR DES DRESSEURS\\nRelevez le défi, DRESSEURS !"
+  "fr": "ENTRÉE de la TOUR DRESSEURS Relevez\\nle défi !"
  }
 }

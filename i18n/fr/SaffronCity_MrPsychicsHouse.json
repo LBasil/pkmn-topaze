@@ -5,11 +5,11 @@
  },
  "SaffronCity_MrPsychicsHouse_Text_ReceivedTM29FromMrPsychic": {
   "en": "{PLAYER} received TM29\\nfrom MR. PSYCHIC.",
-  "fr": "{PLAYER} a reçu la CT29\\nde M. PSY."
+  "fr": "{PLAYER} obtient la CT29 !"
  },
  "SaffronCity_MrPsychicsHouse_Text_YouWantedThis": {
   "en": "…Wait! Don't say a word!\\pYou wanted this!",
-  "fr": "…Attends ! Ne dis rien !\\pTu voulais ça !"
+  "fr": "… Chut ! Pas un mot !\\pTu veux ça ?"
  },
  "SaffronCity_MrPsychicsHouse_Text_YouveNoRoom": {
   "en": "Where do you plan to put this?\\nYou've no room.",

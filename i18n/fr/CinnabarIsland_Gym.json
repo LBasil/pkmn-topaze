@@ -5,11 +5,11 @@
  },
  "CinnabarIsland_Gym_Text_AveryIntro": {
   "en": "I've studied POKéMON thoroughly.\\nYou can't win!",
-  "fr": "J'ai étudié les POKéMON à fond.\\nTu ne peux pas gagner !"
+  "fr": "Les POKéMON, je maîtrise, alors\\ntoi, tu peux pas gagner !"
  },
  "CinnabarIsland_Gym_Text_AveryPostBattle": {
   "en": "My theories are too complicated\\nfor you to understand.",
-  "fr": "Mes théories sont trop compliquées\\npour que tu les comprennes."
+  "fr": "J'suis un cérébral, tu peux pas\\ncomprendre !"
  },
  "CinnabarIsland_Gym_Text_BlaineDefeat": {
   "en": "Whoa! You short-circuited me!\\pThat was a good fight! Take the\\nTOPAZ BADGE!",
@@ -49,7 +49,7 @@
  },
  "CinnabarIsland_Gym_Text_CorrectGoOnThrough": {
   "en": "You're absolutely correct!\\pGo on through!",
-  "fr": "Tout à fait exact !\\pEntre !"
+  "fr": "Bonne réponse !\\pEn avant !"
  },
  "CinnabarIsland_Gym_Text_DerekDefeat": {
   "en": "Ow!",
@@ -69,7 +69,7 @@
  },
  "CinnabarIsland_Gym_Text_DustyIntro": {
   "en": "I've been to many GYMS, but this\\none best suits my style.",
-  "fr": "J'ai fait beaucoup d'ARÈNES, mais\\ncelle-ci correspond le mieux à mon\\lstyle."
+  "fr": "J'ai bourlingué dans pas mal\\nd'ARÈNES mon p'tit ! Mais ma\\lpréférée c'est celle-ci !"
  },
  "CinnabarIsland_Gym_Text_DustyPostBattle": {
   "en": "PIKACHU, MAGNETON…\\nThose are popular ELECTRIC POKéMON.",
@@ -113,11 +113,11 @@
  },
  "CinnabarIsland_Gym_Text_MakeSpaceForThis": {
   "en": "Make space for this, child!",
-  "fr": "Fais de la place pour ça !"
+  "fr": "Ton inventaire est plein !"
  },
  "CinnabarIsland_Gym_Text_PokemonQuizRules": {
   "en": "POKéMON Quiz!\\pGet it right, and the door opens to\\nthe next room.\\pGet it wrong, and face a TRAINER!\\pIf you want to conserve your\\nPOKéMON for the GYM LEADER…\\pThen get it right!\\nHere we go!",
-  "fr": "Quiz POKéMON !\\pRéponds juste, et la porte s'ouvre\\nsur la salle suivante.\\pRéponds faux, et affronte un\\nDRESSEUR !\\pSi tu veux garder tes POKéMON pour\\nle CHAMPION…\\pAlors réponds juste !\\nC'est parti !"
+  "fr": "Quiz POKéMON !\\pUne bonne réponse ouvrira la porte\\n!\\pUne erreur et tu devras affronter\\nun DRESSEUR !\\pPour préserver une équipe avant\\nd'affronter le CHAMPION…\\pMieux vaut éviter les erreurs !"
  },
  "CinnabarIsland_Gym_Text_QuinnDefeat": {
   "en": "I surrender!",
@@ -141,19 +141,19 @@
  },
  "CinnabarIsland_Gym_Text_QuizQuestion3": {
   "en": "POLIWAG evolves three times?",
-  "fr": "TÊTARTE évolue trois fois ?"
+  "fr": "PTITARD évolue 3 fois ?"
  },
  "CinnabarIsland_Gym_Text_QuizQuestion4": {
   "en": "Are electric moves effective\\nagainst GROUND-type POKéMON?",
-  "fr": "Les attaques électriques sont-elles\\nefficaces contre les POKéMON SOL ?"
+  "fr": "Les capacités ELECTRIK sont\\nefficaces contre les POKéMON SOL ?"
  },
  "CinnabarIsland_Gym_Text_QuizQuestion5": {
   "en": "POKéMON of the same kind and level\\nare not identical?",
-  "fr": "Deux POKéMON de même espèce et de\\nmême niveau ne sont pas\\lidentiques ?"
+  "fr": "Les POKéMON du même type et du même\\nniveau sont différents ?"
  },
  "CinnabarIsland_Gym_Text_QuizQuestion6": {
   "en": "TM28 contains TOMBSTONY?",
-  "fr": "La CT28 contient TOMBEROCHE ?"
+  "fr": "CT28 contient FOSSE ?"
  },
  "CinnabarIsland_Gym_Text_RamonDefeat": {
   "en": "Too hot to handle! Zzzt!",
@@ -173,7 +173,7 @@
  },
  "CinnabarIsland_Gym_Text_SorryBadCall": {
   "en": "Sorry!\\nBad call!",
-  "fr": "Désolé !\\nMauvaise réponse !"
+  "fr": "Dommage ! Mauvaise réponse."
  },
  "CinnabarIsland_Gym_Text_ZacDefeat": {
   "en": "Oh!\\nGrounded!",

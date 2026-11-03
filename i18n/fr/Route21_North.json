@@ -21,7 +21,7 @@
  },
  "Route21_North_Text_SpencerPostBattle": {
   "en": "The sea is great and all, but I\\nlike the mountains, too.",
-  "fr": "La mer, c'est super, mais j'aime\\naussi les montagnes."
+  "fr": "J'adore la mer mais j'ai rien\\ncontre la montagne !"
  },
  "Route21_North_Text_WadeDefeat": {
   "en": "Heheh, MAGIKARP just don't make\\nthe grade, do they?",
@@ -33,6 +33,6 @@
  },
  "Route21_North_Text_WadePostBattle": {
   "en": "I seem to only catch MAGIKARP!",
-  "fr": "Je n'attrape que des MAGICARPE !"
+  "fr": "Je ne pêche que des MAGICARPE !"
  }
 }

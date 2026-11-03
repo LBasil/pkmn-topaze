@@ -21,7 +21,7 @@
  },
  "FiveIsland_ResortGorgeous_Text_DaisyPostBattle": {
   "en": "Uh-oh, my paint tubes have\\nscattered everywhere!",
-  "fr": "Oh non, mes tubes de peinture sont\\néparpillés partout !"
+  "fr": "Noooon, mes tubes de peinture se\\nsont répandus partout !"
  },
  "FiveIsland_ResortGorgeous_Text_DestinDefeat": {
   "en": "Oops!\\nI rushed things!",
@@ -33,7 +33,7 @@
  },
  "FiveIsland_ResortGorgeous_Text_DestinPostBattle": {
   "en": "When I run with the wind, it feels\\nlike I could fly!",
-  "fr": "Quand je cours avec le vent, j'ai\\nl'impression de pouvoir voler !"
+  "fr": "Quand je cours avec le vent, j'ai\\nl'impression de voler."
  },
  "FiveIsland_ResortGorgeous_Text_GillianDefeat": {
   "en": "Oh, my goodness gracious!",
@@ -45,7 +45,7 @@
  },
  "FiveIsland_ResortGorgeous_Text_GillianPostBattle": {
   "en": "A pool would be nice, but I must\\nsay, a sun-room may be sublime.",
-  "fr": "Une piscine serait agréable, mais\\nune véranda serait sublime."
+  "fr": "Plutôt qu'une piscine, un solarium\\nserait formidable."
  },
  "FiveIsland_ResortGorgeous_Text_JackiDefeat": {
   "en": "Oh, my, so strong.",
@@ -57,7 +57,7 @@
  },
  "FiveIsland_ResortGorgeous_Text_JackiPostBattle": {
   "en": "I find it pleasurable to leisurely\\nbattle in the gentle sea breeze.",
-  "fr": "J'aime combattre tranquillement\\ndans la douce brise marine."
+  "fr": "J'adore les combats de POKéMON sous\\nune brise légère."
  },
  "FiveIsland_ResortGorgeous_Text_RaynaDefeat": {
   "en": "Oh…\\nMy feelings, they are blue…",
@@ -69,7 +69,7 @@
  },
  "FiveIsland_ResortGorgeous_Text_RaynaPostBattle": {
   "en": "The sky and the sea…\\nThey are so fickle.\\pTheir changing expressions make\\nthem difficult to capture.",
-  "fr": "Le ciel et la mer…\\nIls sont si changeants.\\pLeurs expressions changeantes les\\nrendent difficiles à saisir."
+  "fr": "Le ciel et la mer. Ils changent\\nsans arrêt de couleur.\\pJe crois que je vais me mettre à la\\nphoto, c'est plus simple."
  },
  "FiveIsland_ResortGorgeous_Text_SelphyThanksYouMayGoNow": {
   "en": "SELPHY: Thank you.\\pYou may go now.",
@@ -77,7 +77,7 @@
  },
  "FiveIsland_ResortGorgeous_Text_SelphysHouse": {
   "en": "SELPHY'S HOUSE",
-  "fr": "MAISON DE SELPHY"
+  "fr": "MAISON DE THEMIS"
  },
  "FiveIsland_ResortGorgeous_Text_TobyDefeat": {
   "en": "That's a shocker!\\nYou must be joking.",
@@ -89,6 +89,6 @@
  },
  "FiveIsland_ResortGorgeous_Text_TobyPostBattle": {
   "en": "Getting so serious over this…\\nHow nonsensical.",
-  "fr": "Prendre ça tellement au sérieux…\\nQuel non-sens."
+  "fr": "Faut pas le prendre comme ça. C'est\\ndébile !"
  }
 }

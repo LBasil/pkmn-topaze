@@ -25,11 +25,11 @@
  },
  "ViridianCity_School_Text_HeyDontLookAtMyNotes": {
   "en": "GIRL: Hey!\\nDon't look at my notes!",
-  "fr": "FILLE : Hé !\\nNe regarde pas mes notes !"
+  "fr": "FILLE : Hé ! Ne lis pas mon journal\\n!"
  },
  "ViridianCity_School_Text_NotebookFirstPage": {
   "en": "Let's check out the notebook.\\pFirst page…\\pPOKé BALLS are used to catch\\nPOKéMON.\\pUp to six POKéMON can be carried\\nin your party.\\pPeople who raise and battle\\nwith POKéMON are called TRAINERS.",
-  "fr": "Regardons le cahier.\\pPremière page…\\pLes POKé BALLS servent à capturer\\ndes POKéMON.\\pOn peut porter jusqu'à six POKéMON\\ndans son équipe.\\pLes gens qui élèvent des POKéMON et\\nse battent avec eux sont appelés\\lDRESSEURS."
+  "fr": "Vous examinez le journal !\\pPremière page…\\pLes POKé BALLS peuvent capturer les\\nPOKéMON.\\pJusqu'à 6 POKéMON sont\\ntransportables.\\pLes personnes s'occupant des\\nPOKéMON sont des DRESSEURS de\\lPOKéMON."
  },
  "ViridianCity_School_Text_NotebookFourthPage": {
   "en": "Fourth page…\\pThe ultimate goal for all POKéMON\\nTRAINERS is simple.\\pIt is to defeat the top eight\\nPOKéMON GYM LEADERS.\\pDo so to earn the right to face…\\pThe ELITE FOUR of the POKéMON\\nLEAGUE!",
@@ -37,7 +37,7 @@
  },
  "ViridianCity_School_Text_NotebookSecondPage": {
   "en": "Second page…\\pA healthy POKéMON may be hard to\\ncatch, so weaken it first.\\pPoison, burn, or cause another\\nstatus problem to weaken it.",
-  "fr": "Deuxième page…\\pUn POKéMON en bonne santé peut être\\ndur à capturer, alors affaiblis-le\\ld'abord.\\pEmpoisonne-le, brûle-le ou inflige\\nun autre problème de statut pour\\ll'affaiblir."
+  "fr": "Deuxième page…\\pUn POKéMON sauvage et en pleine\\nforme est difficile à capturer,\\lalors affaiblissez-le !\\pLe poison, la brûlure et les autres\\ntypes de dégâts sont aussi\\lefficaces !"
  },
  "ViridianCity_School_Text_NotebookThirdPage": {
   "en": "Third page…\\pPOKéMON TRAINERS seek others to\\nengage in POKéMON battles.\\pTo TRAINERS, the taste of victory\\nis sweet, indeed.\\pBattles are constantly waged at\\nPOKéMON GYMS everywhere.",
@@ -45,7 +45,7 @@
  },
  "ViridianCity_School_Text_ReadBlackboardCarefully": {
   "en": "Okay!\\pBe sure to read what's on the\\nblackboard carefully!",
-  "fr": "D'accord !\\pLis bien ce qui est écrit sur le\\ntableau noir !"
+  "fr": "OK !\\pLis attentivement le tableau avant\\nde partir !"
  },
  "ViridianCity_School_Text_ReadWhichTopic": {
   "en": "Which topic do you want to read?",
@@ -53,7 +53,7 @@
  },
  "ViridianCity_School_Text_TryingToMemorizeNotes": {
   "en": "Whew! I'm trying to memorize all my\\nnotes.",
-  "fr": "Ouf ! J'essaie de mémoriser toutes\\nmes notes."
+  "fr": "Pfouh ! J'essaie d'apprendre mes\\nleçons."
  },
  "ViridianCity_School_Text_TurnThePage": {
   "en": "Turn the page?",

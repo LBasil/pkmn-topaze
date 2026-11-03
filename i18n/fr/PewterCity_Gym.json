@@ -37,7 +37,7 @@
  },
  "PewterCity_Gym_Text_DontHaveRoomForThis": {
   "en": "You don't have room for this.",
-  "fr": "Tu n'as pas de place pour ça."
+  "fr": "Ton inventaire est plein !"
  },
  "PewterCity_Gym_Text_ExplainTM39": {
   "en": "TM39 contains FLAME CHARGE.\\pRamming the foe wrapped in\\nflames. Light but reliable.\\pTeach it to a POKéMON that\\ncan really use it.",
@@ -53,7 +53,7 @@
  },
  "PewterCity_Gym_Text_ItsFreeLetsGetHappening": {
   "en": "It's a free service!\\nLet's get happening!",
-  "fr": "C'est un service gratuit !\\nAllons-y !"
+  "fr": "C'est gratuit, profites-en !"
  },
  "PewterCity_Gym_Text_LetMeTakeYouToTheTop": {
   "en": "Hiya!\\nDo you want to dream big?\\pDo you dare to dream of becoming\\nthe POKéMON champ?\\pI'm no TRAINER, but I can advise\\nyou on how to win.\\pLet me take you to the top!",
@@ -81,14 +81,14 @@
  },
  "PewterCity_Gym_Text_TakeThisWithYou": {
   "en": "Wait!\\nTake this with you.",
-  "fr": "Attends !\\nPrends ceci avec toi."
+  "fr": "Attends ! Prends ça avec toi !"
  },
  "PewterCity_Gym_Text_TryDifferentPartyOrders": {
   "en": "The first POKéMON out in a match is\\nat the left of the POKéMON LIST.\\pBy changing the order of POKéMON,\\nyou may gain an advantage.\\pTry different orders to suit your\\nopponent's party.",
-  "fr": "Le premier POKéMON envoyé en combat\\nest à gauche de la LISTE POKéMON.\\pEn changeant l'ordre des POKéMON,\\ntu peux gagner un avantage.\\pEssaie différents ordres selon\\nl'équipe de ton adversaire."
+  "fr": "Le 1er POKéMON apparaissant dans un\\ncombat est celui à gauche dans la\\lLISTE POKéMON !\\pEn changeant l'ordre des POKéMON,\\ntu peux changer de stratégie !\\pEssaye différents ordres pour\\nt'adapter à ton adversaire."
  },
  "PewterCity_Gym_Text_YoureChampMaterial": {
   "en": "Just as I thought!\\nYou're POKéMON champ material!",
-  "fr": "Comme je le pensais ! Tu as\\nl'étoffe d'un champion POKéMON !"
+  "fr": "Je le savais ! Tu as l'âme d'un\\nCHAMPION !"
  }
 }

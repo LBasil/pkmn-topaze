@@ -1,11 +1,11 @@
 {
  "SaffronCity_House_Text_DontLookAtMyLetter": {
   "en": "…Thank you for writing.\\nI hope to see you soon!\\p…Hey!\\nDon't look at my letter!",
-  "fr": "…Merci d'avoir écrit.\\nJ'espère te revoir bientôt !\\p…Hé !\\nNe regarde pas ma lettre !"
+  "fr": "Merci pour cette belle lettre, à\\nbientôt !\\pHé ! R'garde pas c'que j'écris !\\nJ'suis amoureuse !"
  },
  "SaffronCity_House_Text_ExplainPPUp": {
   "en": "I was given a PP UP as a gift.\\pIt's used to increase the PP of\\na POKéMON's move.\\pI should use it on a powerful move\\nwith only a few PP.",
-  "fr": "On m'a offert un PP PLUS.\\pIl sert à augmenter les PP d'une\\ncapacité de POKéMON.\\pJe devrais l'utiliser sur une\\ncapacité puissante avec peu de PP."
+  "fr": "J'ai reçu comme récompense un PP\\nPLUS.\\pIl sert à augmenter les PP d'une\\nattaque d'un POKéMON.\\pJe devrais choisir une attaque avec\\npeu de PP."
  },
  "SaffronCity_House_Text_GettingCopycatPokeDoll": {
   "en": "The COPYCAT is cute!\\nI'm getting her a POKé DOLL.",
@@ -13,6 +13,6 @@
  },
  "SaffronCity_House_Text_Pidgey": {
   "en": "PIDGEY: Kurukkoo!",
-  "fr": "ROUCOOL : Kurukkoo !"
+  "fr": "ROUCOOL : Rourou !"
  }
 }

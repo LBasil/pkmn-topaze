@@ -77,15 +77,15 @@
  },
  "PalletTown_Text_CanStoreItemsAndMonsInPC": {
   "en": "Technology is incredible!\\pYou can now store and recall items\\nand POKéMON as data via PC.",
-  "fr": "La technologie est incroyable !\\pOn peut désormais stocker et\\nrécupérer objets et POKéMON sous\\lforme de données via le PC."
+  "fr": "Le progrès… C'est dément !\\pOn peut désormais stocker et même\\nretirer des objets ou des POKéMON\\lvia un PC !"
  },
  "PalletTown_Text_CaughtXImpressiveFollowMe": {
   "en": "You've caught… {STR_VAR_2}!?\\nNow, this is impressive!\\pThere's something I wanted to ask\\nof you, {PLAYER}.\\pCome.\\nFollow me.",
-  "fr": "Tu as capturé… {STR_VAR_2} !?\\nVoilà qui est impressionnant !\\pIl y a quelque chose que je voulais\\nte demander, {PLAYER}.\\pViens.\\nSuis-moi."
+  "fr": "Tu en as attrapé… {STR_VAR_2}! ? C'est\\nvraiment impressionant !\\pIl y a quelque chose que je\\nvoudrais te donner, {PLAYER}.\\pViens. Suis-moi."
  },
  "PalletTown_Text_CaughtXPuttingInHonestEffort": {
   "en": "You've caught {STR_VAR_2}…\\pHm, it looks as if you're putting\\nin an honest effort.\\pWhen you manage to fill it some\\nmore, come show me, please.",
-  "fr": "Tu en as capturé {STR_VAR_2}...\\pOn voit que tu y mets du tien.\\pReviens me voir quand tu en auras\\nattrapé d'autres."
+  "fr": "Tu as attrapé {STR_VAR_2} POKéMON.\\pHum, on dirait que tu te donnes du\\nmal.\\pMais reviens me voir quand tu en\\nauras plus, s'il te plaît."
  },
  "PalletTown_Text_ExitGate": {
   "en": "{PLAYER}: Not yet. MOM said to see\\nthe SCHOOL first, and PROF. OAK is\\lwaiting at the LAB.",
@@ -117,7 +117,7 @@
  },
  "PalletTown_Text_OakPokemonResearchLab": {
   "en": "OAK POKéMON RESEARCH LAB",
-  "fr": "LABORATOIRE DU PROFESSEUR CHEN"
+  "fr": "LABO POKéMON DU PROF. CHEN"
  },
  "PalletTown_Text_OakYouEnjoyingTraveling": {
   "en": "OAK: Ah, {PLAYER}!\\nYou seem to be enjoying traveling.\\pKnowing you, {PLAYER}, I can easily\\nimagine you going out to even more\\lexotic locales.\\pGood for you, good for you.\\nHohoho.",
@@ -165,7 +165,7 @@
  },
  "PalletTown_Text_RaisingMonsToo": {
   "en": "I'm raising POKéMON, too.\\pWhen they get strong, they can\\nprotect me.",
-  "fr": "Moi aussi j'ai des POKéMON.\\pUne fois qu'ils seront forts,\\nils me protègeront."
+  "fr": "J'élève des POKéMON, moi aussi !\\pUne fois forts, ils pourront me\\nprotéger !"
  },
  "PalletTown_Text_RanchDadFlees": {
   "en": "{RIVAL}'s DAD: My pens! Stay here!",

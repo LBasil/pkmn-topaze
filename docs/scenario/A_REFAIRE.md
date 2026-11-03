@@ -368,3 +368,5 @@ Test « joueur réel » (sans god mode, avec captures, soins, achats, entraînem
 - 03-11 15h23 : AIDE — table des types régénérée d'après la table réelle du jeu (type FÉE inclus, 2 pages ajoutées), FR et EN.
 
 - 03-11 16h03 : FR — « GRUNT » → SBIRE (noms de dresseurs + dialogue), WARDEN → GARDIEN, 8 noms d'espèces restés en anglais dans les dialogues corrigés.
+
+- 03-11 16h53 : FR — 1131 dialogues repris de la VF officielle de Rouge Feu (voir docs/scenario/COMPARAISON_FR_OFFICIEL.md) ; Daisy = NINA ; accents des majuscules officielles restaurés.

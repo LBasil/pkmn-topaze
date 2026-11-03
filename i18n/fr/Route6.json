@@ -9,7 +9,7 @@
  },
  "Route6_Text_ElijahPostBattle": {
   "en": "Are my POKéMON weak?\\nOr, am I just bad?\\lWhich do you think?",
-  "fr": "Mes POKéMON sont-ils faibles ? Ou\\nsuis-je juste mauvais ? Qu'en\\lpenses-tu ?"
+  "fr": "Mes POKéMON sont nuls ou je suis\\ntrès mauvais ?"
  },
  "Route6_Text_IsabelleDefeat": {
   "en": "Things just didn't work…",
@@ -21,7 +21,7 @@
  },
  "Route6_Text_IsabellePostBattle": {
   "en": "I want to get stronger.\\nWhat's your secret?",
-  "fr": "Je veux devenir plus fort.\\nQuel est ton secret ?"
+  "fr": "Je veux être forte ! Comme toi !\\nC'est quoi ton secret ?"
  },
  "Route6_Text_JeffDefeat": {
   "en": "This stinks…\\nI couldn't beat your challenge…",
@@ -57,7 +57,7 @@
  },
  "Route6_Text_NancyPostBattle": {
   "en": "Whisper…\\nWhisper…",
-  "fr": "Chuchote…\\nChuchote…"
+  "fr": "Soupirs… Gros soupirs…"
  },
  "Route6_Text_ProcheJordan_After": {
   "en": "Keep it simple, keep it strong.\\nThat is the way.",
@@ -109,7 +109,7 @@
  },
  "Route6_Text_RickyPostBattle": {
   "en": "Whisper…\\nWhisper…",
-  "fr": "Chuchote…\\nChuchote…"
+  "fr": "Soupirs… Gros soupirs…"
  },
  "Route6_Text_TimeHint": {
   "en": "The signpost shadow points west at\\nnoon. Even the shadows are lost.",

@@ -9,7 +9,7 @@
  },
  "Route13_Text_AlmaPostBattle": {
   "en": "CARBOS boosted the SPEED of my\\nPOKéMON.",
-  "fr": "Le CARBONE a boosté la VITESSE de\\nmes POKéMON."
+  "fr": "Le CARBONE a augmenté la vitesse de\\nmon POKéMON."
  },
  "Route13_Text_GwenDefeat": {
   "en": "Good going!\\nYou totally won!",
@@ -21,7 +21,7 @@
  },
  "Route13_Text_GwenPostBattle": {
   "en": "You have to make POKéMON battle\\nto toughen them up.",
-  "fr": "Il faut faire combattre les POKéMON\\npour les endurcir."
+  "fr": "Tu dois faire combattre tes POKéMON\\npour les entraîner !"
  },
  "Route13_Text_JaredDefeat": {
   "en": "Management will not\\nlike this.",
@@ -45,7 +45,7 @@
  },
  "Route13_Text_LolaPostBattle": {
   "en": "I wonder which is stronger, male or\\nfemale POKéMON?",
-  "fr": "Je me demande qui est le plus fort,\\nles POKéMON mâles ou femelles ?"
+  "fr": "C'est quoi le plus fort, un POKéMON\\nmâle ou femelle ?"
  },
  "Route13_Text_LookToLeftOfThatPost": {
   "en": "TRAINER TIPS\\pLook, look!\\nLook to the left of that post!",
@@ -89,11 +89,11 @@
  },
  "Route13_Text_RobertPostBattle": {
   "en": "I wish I could fly like PIDGEY and\\nPIDGEOTTO…",
-  "fr": "J'aimerais pouvoir voler comme\\nROUCOOL et ROUCOUPS…"
+  "fr": "J'aimerais voler comme ROUCOOL ou\\nROUCOUPS…"
  },
  "Route13_Text_RouteSign": {
   "en": "ROUTE 13\\nNorth to SILENCE BRIDGE",
-  "fr": "ROUTE 13\\nNord vers le PONT DU SILENCE"
+  "fr": "ROUTE 13 PONT DU SILENCE au Nord"
  },
  "Route13_Text_SebastianDefeat": {
   "en": "My PIDGEY and PIDGEOTTO combo\\nlost?",
@@ -105,11 +105,11 @@
  },
  "Route13_Text_SebastianPostBattle": {
   "en": "My POKéMON look happy even though\\nthey lost.",
-  "fr": "Mes POKéMON ont l'air heureux\\nmême s'ils ont perdu."
+  "fr": "Mes POKéMON ont l'air contents,\\nmême s'ils ont perdu."
  },
  "Route13_Text_SelectToSwitchItems": {
   "en": "TRAINER TIPS\\pUse SELECT to switch items in the\\nITEMS window.",
-  "fr": "CONSEILS AUX DRESSEURS\\pUtilise SELECT pour échanger des\\nobjets dans la fenêtre OBJETS."
+  "fr": "ASTUCE\\pUtilisez SELECT pour organiser\\nvotre inventaire !"
  },
  "Route13_Text_SheilaDefeat": {
   "en": "It's over already?",
@@ -133,7 +133,7 @@
  },
  "Route13_Text_SusiePostBattle": {
   "en": "I want to become a good TRAINER.\\nI'll train hard, just watch.",
-  "fr": "Je veux devenir un bon DRESSEUR.\\nJe m'entraînerai dur, tu verras."
+  "fr": "Je veux être un bon DRESSEUR. Je\\ntravaille dur."
  },
  "Route13_Text_ValerieDefeat": {
   "en": "Not enough!",
@@ -145,6 +145,6 @@
  },
  "Route13_Text_ValeriePostBattle": {
   "en": "You got those BADGES from GYM\\nLEADERS. I know!",
-  "fr": "Tu as eu ces BADGES des CHAMPIONS.\\nJe sais !"
+  "fr": "Tu as gagné ces BADGES chez les\\nCHAMPIONS !"
  }
 }

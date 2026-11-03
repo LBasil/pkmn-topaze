@@ -1,7 +1,7 @@
 {
  "CeladonCity_GameCorner_PrizeRoom_Text_CoinCaseRequired": {
   "en": "A COIN CASE is required…",
-  "fr": "Une BOÎTE À JETONS est requise..."
+  "fr": "Vous n'avez pas de BOÎTE JETON !"
  },
  "CeladonCity_GameCorner_PrizeRoom_Text_FancyThatPorygon": {
   "en": "I sure do fancy that PORYGON!\\nBut, it's hard to win at slots!",
@@ -9,7 +9,7 @@
  },
  "CeladonCity_GameCorner_PrizeRoom_Text_NeedMoreCoins": {
   "en": "Sorry, you'll need more COINS\\nthan that.",
-  "fr": "Désolé, il te faut plus de JETONS\\nque ça."
+  "fr": "Vous n'avez pas assez de JETONS."
  },
  "CeladonCity_GameCorner_PrizeRoom_Text_RakedItInToday": {
   "en": "Gahaha! I raked it in today!\\nIf only every day were like this…",
@@ -17,7 +17,7 @@
  },
  "CeladonCity_GameCorner_PrizeRoom_Text_WeExchangeCoinsForPrizes": {
   "en": "We exchange your COINS for prizes.",
-  "fr": "Nous échangeons tes JETONS contre\\ndes lots."
+  "fr": "Nous échangeons des prix contre des\\nJETONS."
  },
  "CeladonCity_GameCorner_PrizeRoom_Text_WhichPrize": {
   "en": "Which prize would you like?",

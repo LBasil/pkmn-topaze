@@ -9,11 +9,11 @@
  },
  "SSAnne_1F_Room2_Text_AnnPostBattle": {
   "en": "You hurt my poor POKéMON!\\pI demand that you heal them at a\\nPOKéMON CENTER!",
-  "fr": "Tu as blessé mon pauvre POKéMON !\\pJ'exige que tu les soignes dans un\\nCENTRE POKéMON !"
+  "fr": "Tu as fait mal à mes POKéMON !\\pIl faut que tu les soignes dans un\\nCENTRE POKéMON!! !"
  },
  "SSAnne_1F_Room2_Text_CruisingAroundWorld": {
   "en": "We are cruising around the world,\\nmy children and I.",
-  "fr": "Nous faisons le tour du monde en\\ncroisière, mes enfants et moi."
+  "fr": "Nous parcourons les mers du monde\\nentier !"
  },
  "SSAnne_1F_Room2_Text_TylerDefeat": {
   "en": "Wow! \\nYou're great!",
@@ -25,6 +25,6 @@
  },
  "SSAnne_1F_Room2_Text_TylerPostBattle": {
   "en": "Listen, listen!\\nLet me be your friend, okay?\\pThen we can trade POKéMON and\\ndo stuff.",
-  "fr": "Écoute, écoute !\\nLaisse-moi être ton ami, d'accord ?\\pOn pourra échanger des POKéMON et\\nfaire des trucs."
+  "fr": "Soyons amis, OK ?\\pComme ça, on pourra échanger nos\\nPOKéMON !"
  }
 }

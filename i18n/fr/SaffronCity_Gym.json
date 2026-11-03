@@ -13,7 +13,7 @@
  },
  "SaffronCity_Gym_Text_BagFullOfOtherItems": {
   "en": "Your BAG is full of other items.",
-  "fr": "Ton SAC est plein d'autres objets."
+  "fr": "Ton inventaire est plein !"
  },
  "SaffronCity_Gym_Text_CameronDefeat": {
   "en": "Ow!\\nDown and out!",
@@ -61,7 +61,7 @@
  },
  "SaffronCity_Gym_Text_JohanPostBattle": {
   "en": "PSYCHIC POKéMON fear only ghosts\\nand bugs!",
-  "fr": "Les POKéMON PSY ne craignent que\\nles fantômes et les insectes !"
+  "fr": "Les POKéMON PSY craignent les\\nINSECTES et les SPECTRES !"
  },
  "SaffronCity_Gym_Text_PrestonDefeat": {
   "en": "Arrrgh!",
@@ -73,7 +73,7 @@
  },
  "SaffronCity_Gym_Text_PrestonPostBattle": {
   "en": "That's right! I used telepathy to\\nread your mind!",
-  "fr": "Exact ! J'ai utilisé la télépathie\\npour lire dans tes pensées !"
+  "fr": "J'ai lu dans ton esprit ! C'est pas\\ntrès clair dedans !"
  },
  "SaffronCity_Gym_Text_ReceivedTM04FromSabrina": {
   "en": "{PLAYER} received TM46 from\\nNOX.",
@@ -129,7 +129,7 @@
  },
  "SaffronCity_Gym_Text_StacyPostBattle": {
   "en": "I have much to learn still…\\pI must master PSYCHIC and teach it\\nto my POKéMON…",
-  "fr": "J'ai encore beaucoup à apprendre…\\pJe dois maîtriser PSY et\\nl'enseigner à mes POKéMON…"
+  "fr": "J'ai encore beaucoup à apprendre…\\pJe dois maîtriser PSYKO et\\nl'enseigner à mes POKéMON."
  },
  "SaffronCity_Gym_Text_StoneGift": {
   "en": "NOX: The HEMATITE is gone. He\\ntook it before I could hide it.\\pBut you have the others. He needs\\nthem all. Make him wait.\\pGo back to GRENALUX and SURF south\\nalong ROUTE 21. A city of lightning\\pwaits there. The old road by\\nPARMANIE is under fire now.",
@@ -145,7 +145,7 @@
  },
  "SaffronCity_Gym_Text_TashaPostBattle": {
   "en": "I knew that this was going to take\\nplace.",
-  "fr": "Je savais que cela allait arriver."
+  "fr": "J'avais prévu ce qui s'est passé."
  },
  "SaffronCity_Gym_Text_TyronDefeat": {
   "en": "I don't believe this!",

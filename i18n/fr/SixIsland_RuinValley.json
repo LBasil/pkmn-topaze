@@ -1,11 +1,11 @@
 {
  "SixIsland_RuinValley_Text_CantFigureOutHowToGetInside": {
   "en": "I can't figure out how I'm supposed\\nto get inside.",
-  "fr": "Je n'arrive pas à comprendre\\ncomment je suis censé entrer."
+  "fr": "Je ne vois pas ce que je dois faire\\npour entrer dedans."
  },
  "SixIsland_RuinValley_Text_CheckDoorMoreThoroughly": {
   "en": "The door doesn't budge at all.\\nCheck it more thoroughly?",
-  "fr": "La porte ne bouge pas du tout.\\nLa vérifier plus en détail ?"
+  "fr": "La porte ne bouge pas d'un pouce.\\nL'examiner plus attentivement ?"
  },
  "SixIsland_RuinValley_Text_DarylDefeat": {
   "en": "Oh, the heartbreak of losing so\\neasily to you!",
@@ -17,7 +17,7 @@
  },
  "SixIsland_RuinValley_Text_DarylPostBattle": {
   "en": "Experience the joy of climbing!",
-  "fr": "Découvre la joie de grimper !"
+  "fr": "À nous les joies de l'escalade !"
  },
  "SixIsland_RuinValley_Text_DenLocked": {
   "en": "The stone is silent. Inside,\\nsomething has waited long.",
@@ -37,7 +37,7 @@
  },
  "SixIsland_RuinValley_Text_FosterPostBattle": {
   "en": "There are several ruins on the\\nSEVII ISLANDS.\\pThe majority of them date back\\na long way.",
-  "fr": "Il y a plusieurs ruines sur les\\nÎLES SEVII.\\pLa majorité d'entre elles remontent\\nà très longtemps."
+  "fr": "Il y a plusieurs ruines sur les\\nÎLES SEVII.\\pLa majorité d'entre elles date de\\nmilliers d'années."
  },
  "SixIsland_RuinValley_Text_HectorDefeat": {
   "en": "You don't need to be so pushy.\\nI'll be happy to tell you.",
@@ -49,7 +49,7 @@
  },
  "SixIsland_RuinValley_Text_HectorPostBattle": {
   "en": "The door to the ruins…\\nIt has these strange patterns\\lengraved on the outside.\\pI don't know what they mean,\\nthough.",
-  "fr": "La porte des ruines… Elle porte\\nd'étranges motifs gravés à\\ll'extérieur.\\pJe ne sais pas ce qu'ils\\nsignifient, cependant."
+  "fr": "La porte de ces ruines… Il y a des\\nformes étranges dessus.\\pMais bon, je sais pas ce que ça\\nveut dire."
  },
  "SixIsland_RuinValley_Text_IFoundThisPlace": {
   "en": "Let me tell you, I found this\\nplace.\\pDon't look so envious, will you?",
@@ -65,15 +65,15 @@
  },
  "SixIsland_RuinValley_Text_LarryPostBattle": {
   "en": "Those ruins over there…\\pI haven't had any luck in finding\\nhow I can get inside.",
-  "fr": "Ces ruines là-bas…\\pJe n'ai pas trouvé comment entrer."
+  "fr": "À propos de ces ruines…\\pJe n'ai jamais trouvé le moyen d'y\\npénétrer."
  },
  "SixIsland_RuinValley_Text_LeftDoorAlone": {
   "en": "{PLAYER} left the door alone.",
-  "fr": "{PLAYER} a laissé la porte\\ntranquille."
+  "fr": "{PLAYER} s'éloigne de la porte."
  },
  "SixIsland_RuinValley_Text_SeveralDotsOnTheDoor": {
   "en": "On closer inspection, there are\\nseveral dots on the door…",
-  "fr": "En y regardant de plus près, il y a\\nplusieurs points sur la porte…"
+  "fr": "En regardant de plus près, on peut\\nvoir plusieurs points sur la porte."
  },
  "SixIsland_RuinValley_Text_StanlyDefeat": {
   "en": "Hmm…",

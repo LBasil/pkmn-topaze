@@ -9,7 +9,7 @@
  },
  "Route9_Text_AlanPostBattle": {
   "en": "Hahahaha!\\nUs hearty guys always laugh!",
-  "fr": "Hahahaha ! Nous, les gaillards, on\\nrit toujours !"
+  "fr": "Hahahaha ! Quand j'perds, j'me\\nmarre !"
  },
  "Route9_Text_AliciaDefeat": {
   "en": "You deceived me…",
@@ -33,7 +33,7 @@
  },
  "Route9_Text_BrentPostBattle": {
   "en": "I have to collect more than bugs\\nto get stronger…",
-  "fr": "Je dois collectionner plus que des\\ninsectes pour devenir plus fort…"
+  "fr": "Il me faut autre chose que des\\ninsectes pour être plus fort…"
  },
  "Route9_Text_BriceDefeat": {
   "en": "What's that?",
@@ -45,7 +45,7 @@
  },
  "Route9_Text_BricePostBattle": {
   "en": "Hahaha!\\nKids should be tough!",
-  "fr": "Hahaha !\\nLes gosses doivent être costauds !"
+  "fr": "Les gosses, c'est pas assez fort !"
  },
  "Route9_Text_CaitlinDefeat": {
   "en": "No!\\nYou're too much.",
@@ -57,7 +57,7 @@
  },
  "Route9_Text_CaitlinPostBattle": {
   "en": "You're obviously talented.\\nGood luck to you!",
-  "fr": "Tu es manifestement doué.\\nBonne chance !"
+  "fr": "Tu iras loin ! Bonne chance à toi !"
  },
  "Route9_Text_ChrisDefeat": {
   "en": "Out like a light!",
@@ -81,7 +81,7 @@
  },
  "Route9_Text_ConnerPostBattle": {
   "en": "If you don't like BUG POKéMON,\\nyou bug me!",
-  "fr": "Si tu n'aimes pas les POKéMON\\nINSECTE, tu m'embêtes !"
+  "fr": "T'aimes pas les POKéMON INSECTE ?\\nT'es pas chouette !"
  },
  "Route9_Text_DrewDefeat": {
   "en": "Can't measure up…",
@@ -105,7 +105,7 @@
  },
  "Route9_Text_JeremyPostBattle": {
   "en": "You sure had guts standing up to\\nme there, eh?",
-  "fr": "T'avais du cran de me tenir tête,\\nhein ?"
+  "fr": "J'ai rencontré des POKéMANIACS dans\\nle coin."
  },
  "Route9_Text_Quest3_Ask": {
   "en": "Wild POKéMON keep jumping me. 3\\nREPELS would save my trip!",

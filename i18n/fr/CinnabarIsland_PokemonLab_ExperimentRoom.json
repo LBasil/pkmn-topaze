@@ -1,7 +1,7 @@
 {
  "CinnabarIsland_PokemonLab_ExperimentRoom_Text_FossilMonBackToLife": {
   "en": "You late.\\nWhere were you?\\pYour fossil is back to life!\\nIt was {STR_VAR_1} like I think!",
-  "fr": "Tu es en retard.\\nOù étais-tu ?\\pTon fossile est revenu à la vie !\\nC'était {STR_VAR_1} comme je pensais !"
+  "fr": "Tu es en retard. Où étais-tu ?\\pTon fossile est VIVANT ! On dirait\\nun {STR_VAR_1} !"
  },
  "CinnabarIsland_PokemonLab_ExperimentRoom_Text_GarettQuestAsk": {
   "en": "I research the limits of POKéMON.\\pShow me a POKéMON at level 60\\nor higher and I'll give you a\\lPP MAX.",
@@ -29,11 +29,11 @@
  },
  "CinnabarIsland_PokemonLab_ExperimentRoom_Text_HaveYouAFossilForMe": {
   "en": "Hiya!\\pI am important doctor.\\nYes, very much so, indeed.\\pHere, I study rare POKéMON fossils.\\nAll the time, I study.\\pYou!\\nHave you a fossil for me?",
-  "fr": "Salut !\\pJe suis important docteur.\\nOui, très important, vraiment.\\pIci, j'étudie les fossiles rares de\\nPOKéMON. Tout le temps, j'étudie.\\pToi !\\nTu as un fossile pour moi ?"
+  "fr": "Salut !\\pJe suis un scientifique très\\nsérieux !\\pJ'étudie les fossiles anciens de\\nPOKéMON !\\pDis-moi. Tu n'aurais pas un fossile\\npour moi ?"
  },
  "CinnabarIsland_PokemonLab_ExperimentRoom_Text_NoIsTooBad": {
   "en": "No!\\nIs too bad!",
-  "fr": "Non !\\nC'est dommage !"
+  "fr": "Non ? C'est bien dommage !"
  },
  "CinnabarIsland_PokemonLab_ExperimentRoom_Text_QuestNoRoom": {
   "en": "Your BAG is full. Make some\\nroom first!",
@@ -49,15 +49,15 @@
  },
  "CinnabarIsland_PokemonLab_ExperimentRoom_Text_ThatFossilIsOfMonMakeItLiveAgain": {
   "en": "Oh!\\nThat is {STR_VAR_2}, it is!\\pIt is fossil of {STR_VAR_1},\\na POKéMON that is already extinct!\\pMy Resurrection Machine will make\\nthat POKéMON live again!",
-  "fr": "Oh !\\nC'est {STR_VAR_2}, oui !\\pC'est un fossile de {STR_VAR_1},\\nun POKéMON déjà éteint !\\pMa Machine de Résurrection va faire\\nrevivre ce POKéMON !"
+  "fr": "Oh ! C'est un {STR_VAR_2}.\\pC'est un fossile de {STR_VAR_1}, un\\nPOKéMON qui a disparu !\\pMa machine à réanimer va faire\\nrevivre cet ancien POKéMON !"
  },
  "CinnabarIsland_PokemonLab_ExperimentRoom_Text_YouComeAgain": {
   "en": "Aiyah!\\nYou come again!",
-  "fr": "Aïe !\\nReviens !"
+  "fr": "Argayahha ! Tu reviendras !"
  },
  "Text_MetronomeDeclined": {
   "en": "I tell you, it's a lot of fun!",
-  "fr": "Je te dis, c'est très amusant !"
+  "fr": "Crois-moi, c'est super marrant !"
  },
  "Text_MetronomeTaught": {
   "en": "Tch-tch-tch!\\nThat's the sound of a METRONOME.\\pIt tweaks your POKéMON's brain into\\nusing moves it doesn't even know.",
@@ -65,10 +65,10 @@
  },
  "Text_MetronomeTeach": {
   "en": "Tch-tch-tch!\\nI'll teach you a nifty move.\\pTeach it to a POKéMON, and watch\\nthe fun unfold!\\pIt's a move called METRONOME.\\nDoes it strike your fancy?",
-  "fr": "Tch-tch-tch ! Je vais t'apprendre\\nune capacité sympa.\\pApprends-la à un POKéMON et\\nregarde le spectacle !\\pC'est une capacité appelée\\nMETRONOME. Ça te tente ?"
+  "fr": "Tik-Tak-Tik-Tak ! Je veux\\nt'apprendre une super capacité.\\pEnseigne-la à un de tes POKéMON et\\nregarde bien le résultat !\\pCette capacité s'appelle METRONOME.\\nÇa te tente ?"
  },
  "Text_MetronomeWhichMon": {
   "en": "Okay!\\nWhich POKéMON should I teach?",
-  "fr": "D'accord !\\nQuel POKéMON dois-je enseigner ?"
+  "fr": "OK, l'apprendre à quel POKéMON ?"
  }
 }

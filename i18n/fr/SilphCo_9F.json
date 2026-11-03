@@ -5,7 +5,7 @@
  },
  "SilphCo_9F_Text_DontGiveUp": {
   "en": "Don't give up!",
-  "fr": "N'abandonne pas !"
+  "fr": "Courage !"
  },
  "SilphCo_9F_Text_EdDefeat": {
   "en": "You hammered me!",
@@ -17,7 +17,7 @@
  },
  "SilphCo_9F_Text_EdPostBattle": {
   "en": "Exploiting weak spots does work.\\nThink about type advantages.",
-  "fr": "Exploiter les points faibles\\nmarche. Pense aux avantages de\\ltype."
+  "fr": "Jouer sur les points faibles est la\\nclé ! Pense aux différents types !"
  },
  "SilphCo_9F_Text_FloorSign": {
   "en": "HEMATEK CO. HEAD OFFICE\\n9F",
@@ -33,7 +33,7 @@
  },
  "SilphCo_9F_Text_Grunt1PostBattle": {
   "en": "If I had started as a TRAINER at\\nyour age…",
-  "fr": "Si j'avais commencé comme DRESSEUR\\nà ton âge…"
+  "fr": "Si j'avais commencé avec les\\nPOKéMON à ton âge…"
  },
  "SilphCo_9F_Text_Grunt2Defeat": {
   "en": "Warg!\\nBrothers, I lost!",
@@ -49,10 +49,10 @@
  },
  "SilphCo_9F_Text_ThankYouSoMuch": {
   "en": "Thank you so much.",
-  "fr": "Merci beaucoup."
+  "fr": "Merci mille fois !"
  },
  "SilphCo_9F_Text_YouShouldTakeQuickNap": {
   "en": "You look tired.\\nYou should take a quick nap.",
-  "fr": "Tu as l'air fatigué.\\nTu devrais faire une petite sieste."
+  "fr": "Après tant d'efforts, tu devrais\\nfaire une sieste !"
  }
 }

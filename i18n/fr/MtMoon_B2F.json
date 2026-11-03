@@ -21,7 +21,7 @@
  },
  "MtMoon_B2F_Text_Grunt2PostBattle": {
   "en": "Darn it all!\\nMy associates won't stand for this!",
-  "fr": "Zut de zut ! Mes associés ne vont\\npas apprécier !"
+  "fr": "Hein ? Mes compagnons vont me\\nvenger !"
  },
  "MtMoon_B2F_Text_Grunt3Defeat": {
   "en": "So, you are good…",
@@ -33,7 +33,7 @@
  },
  "MtMoon_B2F_Text_Grunt3PostBattle": {
   "en": "If you find a fossil, give it to me\\nand scram!",
-  "fr": "Si tu trouves un fossile, donne-le\\nmoi et file !"
+  "fr": "Si tu trouves un fossile, tu me le\\ndonnes et tu décampes, pigé ?"
  },
  "MtMoon_B2F_Text_Grunt4Defeat": {
   "en": "I'm steamed!",
@@ -45,7 +45,7 @@
  },
  "MtMoon_B2F_Text_Grunt4PostBattle": {
   "en": "POKéMON lived here long before\\npeople came.",
-  "fr": "Les POKéMON vivaient ici bien avant\\nl'arrivée des humains."
+  "fr": "Les POKéMON existaient bien avant\\nles Hommes…"
  },
  "MtMoon_B2F_Text_LabOnCinnabarRegeneratesFossils": {
   "en": "Far away, on CHRONDROLIA,\\nthere's a POKéMON LAB.\\pThey do research on regenerating\\nfossils.",
@@ -61,11 +61,11 @@
  },
  "MtMoon_B2F_Text_ObtainedDomeFossil": {
   "en": "Obtained the DOME FOSSIL!",
-  "fr": "Tu as obtenu le FOSSILE DÔME !"
+  "fr": "Fossile DÔME obtenu !"
  },
  "MtMoon_B2F_Text_ObtainedHelixFossil": {
   "en": "Obtained the HELIX FOSSIL!",
-  "fr": "Tu as obtenu le FOSSILE HÉLIX !"
+  "fr": "Fossile NAUTILE obtenu !"
  },
  "MtMoon_B2F_Text_ThenThisFossilIsMine": {
   "en": "All right.\\nThen this fossil is mine!",
@@ -73,14 +73,14 @@
  },
  "MtMoon_B2F_Text_WellEachTakeAFossil": {
   "en": "We'll each take a fossil!\\nNo being greedy!",
-  "fr": "On prend un fossile chacun !\\nPas de gourmandise !"
+  "fr": "Chacun le sien ! Comme ça, pas de\\njaloux !"
  },
  "MtMoon_B2F_Text_YouWantDomeFossil": {
   "en": "Do you want the DOME FOSSIL?",
-  "fr": "Veux-tu le FOSSILE DÔME ?"
+  "fr": "Tu veux le fossile DÔME ?"
  },
  "MtMoon_B2F_Text_YouWantHelixFossil": {
   "en": "Do you want the HELIX FOSSIL?",
-  "fr": "Veux-tu le FOSSILE HÉLIX ?"
+  "fr": "Tu veux le fossile NAUTILE ?"
  }
 }

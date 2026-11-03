@@ -1,7 +1,7 @@
 {
  "FiveIsland_ResortGorgeous_House_Text_ButlerBagAppearsToBeFull": {
   "en": "Butler: Your BAG appears to be\\nunfortunately full.",
-  "fr": "Majordome : Ton SAC semble\\nmalheureusement plein."
+  "fr": "MAJORDOME : Quel dommage, votre SAC\\nsemble être déjà plein."
  },
  "FiveIsland_ResortGorgeous_House_Text_ButlerIShallDoAsYouBid": {
   "en": "Butler: I shall do as you bid,\\nmy lady.",
@@ -13,7 +13,7 @@
  },
  "FiveIsland_ResortGorgeous_House_Text_ButlerYesMyLady": {
   "en": "Butler: Yes, my lady.",
-  "fr": "Majordome : Oui, madame."
+  "fr": "MAJORDOME : Oui ?"
  },
  "FiveIsland_ResortGorgeous_House_Text_LadySelphySmileHasBrillianceOfSun": {
   "en": "Butler: The smile of Lady SELPHY\\nhas the brilliance of the sun.\\pPlease, I beg you to bring joy\\nto Lady SELPHY.",
@@ -25,7 +25,7 @@
  },
  "FiveIsland_ResortGorgeous_House_Text_OhHowDisappointing": {
   "en": "Oh…\\nHow disappointing.",
-  "fr": "Oh…\\nQuelle déception."
+  "fr": "Oh… Comme c'est dommage."
  },
  "FiveIsland_ResortGorgeous_House_Text_OhImTiredOfWaiting": {
   "en": "SELPHY: Oh, I'm tired of this.\\nI'm tired of waiting for you.\\pI'll forgive you this time, but\\nplease don't fail me next time.",
@@ -45,6 +45,6 @@
  },
  "FiveIsland_ResortGorgeous_House_Text_WishToSeeMonPlease": {
   "en": "I wish to see a POKéMON.\\nA darling {STR_VAR_1}.\\pI want to see one right away.\\nPlease, make my wish come true.",
-  "fr": "Je souhaite voir un POKéMON.\\nUn adorable {STR_VAR_1}.\\pJe veux en voir un tout de suite.\\nS'il te plaît, exauce mon souhait."
+  "fr": "Il y a un POKéMON que j'aimerais\\nvoir. C'est {STR_VAR_1}.\\pJe veux en voir un maintenant.\\nExauce mon souhait !"
  }
 }

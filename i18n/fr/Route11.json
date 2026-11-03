@@ -9,7 +9,7 @@
  },
  "Route11_Text_BerniePostBattle": {
   "en": "Well, better get back to work.",
-  "fr": "Bon, je ferais mieux de retourner\\nau travail."
+  "fr": "Allez, hop ! Au boulot !"
  },
  "Route11_Text_BraxtonDefeat": {
   "en": "That was electric!",
@@ -21,7 +21,7 @@
  },
  "Route11_Text_BraxtonPostBattle": {
   "en": "Spread the word to save energy!",
-  "fr": "Faites passer le mot pour\\néconomiser l'énergie !"
+  "fr": "Il faut économiser l'énergie !"
  },
  "Route11_Text_DarianDefeat": {
   "en": "I saw this coming…",
@@ -49,7 +49,7 @@
  },
  "Route11_Text_DiglettsCave": {
   "en": "DIGLETT'S CAVE",
-  "fr": "GROTTE DE TAUPIQUEUR"
+  "fr": "CAVE TAUPIQUEUR"
  },
  "Route11_Text_DillonDefeat": {
   "en": "My POKéMON couldn't win…\\nHaven't they grown enough?",
@@ -61,7 +61,7 @@
  },
  "Route11_Text_DillonPostBattle": {
   "en": "What now?\\nLeave me alone!",
-  "fr": "Quoi encore ?\\nLaisse-moi tranquille !"
+  "fr": "Quoi encore ? Laisse-moi !"
  },
  "Route11_Text_DirkDefeat": {
   "en": "My first loss!",
@@ -73,7 +73,7 @@
  },
  "Route11_Text_DirkPostBattle": {
   "en": "You were just lucky, that's all.",
-  "fr": "Tu as juste eu de la chance, c'est\\ntout."
+  "fr": "Tu as la chance des débutants !"
  },
  "Route11_Text_EddieDefeat": {
   "en": "Huh?\\nThat's not right!",
@@ -97,7 +97,7 @@
  },
  "Route11_Text_HugoPostBattle": {
   "en": "POKéMON is life!\\nAnd to live is to play games!",
-  "fr": "POKéMON, c'est la vie !\\nEt vivre, c'est jouer !"
+  "fr": "Les POKéMON c'est la vie ! Et la\\nvie c'est le jeu !"
  },
  "Route11_Text_JasperDefeat": {
   "en": "I had a chance!",
@@ -109,7 +109,7 @@
  },
  "Route11_Text_JasperPostBattle": {
   "en": "You can't be a coward in the world\\nof POKéMON!",
-  "fr": "On ne peut pas être lâche dans le\\nmonde des POKéMON !"
+  "fr": "Dans le monde merveilleux des\\nPOKéMON, y'a pas de lâches !"
  },
  "Route11_Text_RQuest_Ask": {
   "en": "My catch froze solid! 2 ICE HEALS,\\nplease.",

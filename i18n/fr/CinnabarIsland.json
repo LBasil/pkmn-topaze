@@ -1,7 +1,7 @@
 {
  "CinnabarIsland_Text_AllRightLetsGo": {
   "en": "All right, then.\\nLet's go!",
-  "fr": "Très bien, alors.\\nAllons-y !"
+  "fr": "Très bien alors, on y va !"
  },
  "CinnabarIsland_Text_BlaineLivedHereSinceBeforeLab": {
   "en": "CHRONDROLIA GYM's EDDIE is quite the\\nodd fellow.\\pHe's lived on the island since way\\nbefore the LAB was built.",
@@ -9,11 +9,11 @@
  },
  "CinnabarIsland_Text_ComeWithMeToOneIsland": {
   "en": "Look, it's me, BILL.\\nLong time no see!\\pI hope you're still using my\\nPC system.\\pWell, listen, since we met up here,\\nhow about spending time with me?\\pThere's this little island in the far\\nsouth called ONE ISLAND.\\pA friend invited me, so I'm on my\\nway out there.\\pHow about it?\\nDo you feel like coming with me?",
-  "fr": "Regarde, c'est moi, LÉO.\\nÇa fait longtemps !\\pJ'espère que tu utilises toujours\\nmon système PC.\\pBon, écoute, puisqu'on se retrouve\\nici, et si on passait du temps\\nensemble ?\\pIl y a une petite île tout au sud,\\nappelée ÎLE 1.\\pUn ami m'a invité, alors j'y vais.\\pÇa te dit ?\\nTu veux venir avec moi ?"
+  "fr": "C'est moi, LÉO ! Ça fait un bail\\ndis-moi !\\pJ'espère que tu utilises toujours\\nmon PC.\\pPuisqu'on est là ensemble, ça te\\ndirait de venir avec moi\\psur cette île au Sud qu'on appelle\\nÎLE 1 ?\\pJ'ai reçu une invitation et je m'y\\nrends justement.\\pT'en penses quoi ? Tu viens avec\\nmoi ?"
  },
  "CinnabarIsland_Text_DoorIsLocked": {
   "en": "The door is locked…",
-  "fr": "La porte est verrouillée..."
+  "fr": "La porte est fermée…"
  },
  "CinnabarIsland_Text_GymSign": {
   "en": "CHRONDROLIA POKéMON GYM\\nLEADER: EDDIE\\lThe Hotheaded Quiz Master!",
@@ -29,7 +29,7 @@
  },
  "CinnabarIsland_Text_IllBeWaitingInPokeCenter": {
   "en": "What, are you too busy?\\pWell, all right.\\nThe boat hasn't arrived yet anyway.\\pI'll be waiting at the POKéMON\\nCENTER over there.\\pCome see me when you're done with\\nyour business here.",
-  "fr": "Quoi, tu es trop occupé ?\\pBon, d'accord. De toute façon, le\\nbateau n'est pas encore arrivé.\\pJe t'attendrai au CENTRE POKéMON\\nlà-bas.\\pViens me voir quand tu auras fini\\ntes affaires ici."
+  "fr": "Quoi! ? T'as pas le temps ?\\pBon, tant pis. Le bateau n'est pas\\nencore là de toute façon.\\pJ'attendrai au centre POKéMON qui\\nest là-bas.\\pPasse-me voir quand ça te dit."
  },
  "CinnabarIsland_Text_IslandSign": {
   "en": "CHRONDROLIA\\nThe Yellow City of Topaz",

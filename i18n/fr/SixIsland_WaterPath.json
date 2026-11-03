@@ -21,7 +21,7 @@
  },
  "SixIsland_WaterPath_Text_EarlPostBattle": {
   "en": "Aren't there any mountains around\\nthese parts?",
-  "fr": "N'y a-t-il pas de montagnes dans\\nles environs ?"
+  "fr": "C'est bien des montagnes par là ?"
  },
  "SixIsland_WaterPath_Text_EdwardDefeat": {
   "en": "Nobody saw me losing, right?",
@@ -49,7 +49,7 @@
  },
  "SixIsland_WaterPath_Text_MiaPostBattle": {
   "en": "MIA: Ohh…\\nI'm sorry, my POKéMON…",
-  "fr": "MIA : Ohh…\\nPardon, mes POKéMON…"
+  "fr": "MIA : Ohh… Mes pauvres POKéMON…"
  },
  "SixIsland_WaterPath_Text_MiuDefeat": {
   "en": "MIU: Oh, no!\\nMommy!",
@@ -65,7 +65,7 @@
  },
  "SixIsland_WaterPath_Text_MiuPostBattle": {
   "en": "MIU: It makes me all sad inside\\nwhen we lose…",
-  "fr": "MIU : Ça me rend toute triste à\\nl'intérieur quand on perd…"
+  "fr": "MIU : Bah moi, perdre, ça me rend\\ntoute triste."
  },
  "SixIsland_WaterPath_Text_RoseDefeat": {
   "en": "Giggle… You're so cute when you're\\ndetermined.",
@@ -77,11 +77,11 @@
  },
  "SixIsland_WaterPath_Text_RosePostBattle": {
   "en": "I want to go to the woods over\\nthere, but…\\pThere are lots of BUG POKéMON.\\nThey scare me a little.",
-  "fr": "Je veux aller dans les bois là-bas,\\nmais…\\pIl y a plein de POKéMON INSECTE.\\nIls me font un peu peur."
+  "fr": "Je voudrais traverser les bois qui\\nsont plus loin, mais…\\pC'est plein de POKéMON INSECTE qui\\nme fichent la trouille."
  },
  "SixIsland_WaterPath_Text_RouteSign": {
   "en": "WATER PATH\\nLeads to RUIN VALLEY",
-  "fr": "CHEMIN DE L'EAU\\nMène à la VALLÉE DES RUINES"
+  "fr": "AGUALCANAL Conduit à la VALLÉE\\nRUINE"
  },
  "SixIsland_WaterPath_Text_SamirDefeat": {
   "en": "Oh, no, no, no.",
@@ -97,6 +97,6 @@
  },
  "SixIsland_WaterPath_Text_WantedUltimateHorn": {
   "en": "Wanted!\\nThe Ultimate Horn!",
-  "fr": "Recherché !\\nLa Corne Ultime !"
+  "fr": "Attention ! Dernier avertissement !"
  }
 }

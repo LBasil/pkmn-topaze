@@ -1,15 +1,15 @@
 {
  "CeladonCity_Condominiums_RoofRoom_Text_ExplainDirectCorner": {
   "en": "To link only with a friend, go to\\nthe DIRECT CORNER.\\pIt is the right counter at the\\nPOKéMON WIRELESS CLUB.\\pGo into the TRADE CORNER or the\\nCOLOSSEUM with your friend.",
-  "fr": "Pour te relier seulement à un ami,\\nva au COIN DIRECT.\\pC'est le comptoir de droite du\\nCLUB SANS FIL POKéMON.\\pVa au COIN ÉCHANGE ou au COLISÉE\\navec ton ami."
+  "fr": "Pour te connecter à un seul ami, va\\nà la SALLE LINK DIRECT.\\pC'est le comptoir de droite au CLUB\\nSANS FIL POKéMON.\\pTu devrais essayer le COIN ÉCHANGE\\nou le COLISÉE avec un ami."
  },
  "CeladonCity_Condominiums_RoofRoom_Text_ExplainUnionRoom": {
   "en": "To link and communicate with\\nanyone, go to the UNION ROOM.\\pIt is the left counter at the\\nPOKéMON WIRELESS CLUB.\\pGo to the UNION ROOM and enjoy\\nmeeting other TRAINERS.",
-  "fr": "Pour te relier et communiquer avec\\nn'importe qui, va à la SALLE UNION.\\pC'est le comptoir de gauche du\\nCLUB SANS FIL POKéMON.\\pVa à la SALLE UNION et amuse-toi\\nà rencontrer d'autres DRESSEURS."
+  "fr": "Pour se connecter à plusieurs,\\nrends-toi à la SALLE UNION.\\pC'est le comptoir de gauche au CLUB\\nSANS FIL POKéMON.\\pLa SALLE UNION est parfaite pour\\nfaire de nouvelles connaissances."
  },
  "CeladonCity_Condominiums_RoofRoom_Text_ExplainWirelessClub": {
   "en": "The POKéMON WIRELESS CLUB is\\nupstairs at any POKéMON CENTER.\\pVisit one to link up with friend(s)\\nusing your Wireless Adapter.",
-  "fr": "Le CLUB SANS FIL POKéMON est à\\nl'étage de chaque CENTRE POKéMON.\\pVa dans l'un pour te relier à tes\\namis avec l'adaptateur sans fil."
+  "fr": "Le CLUB SANS FIL POKéMON est à\\nl'étage des CENTRES POKéMON.\\pUtilise un adaptateur sans fil GBA\\npour te connecter avec des amis."
  },
  "CeladonCity_Condominiums_RoofRoom_Text_ObtainedAnEevee": {
   "en": "{PLAYER} obtained an EEVEE!",
@@ -17,7 +17,7 @@
  },
  "CeladonCity_Condominiums_RoofRoom_Text_PamphletOnTMs": {
   "en": "It's a pamphlet on TMs.\\p… …\\pThere are fifty TMs in all.\\pThere are also seven HMs that\\ncan be used repeatedly.\\pSILPH CO.",
-  "fr": "C'est une brochure sur les CT.\\p… …\\pIl y a cinquante CT en tout.\\pIl y a aussi sept CS qui peuvent\\nêtre utilisées à répétition.\\pSILPH SARL"
+  "fr": "C'est un rapport sur les CT.\\p…\\pIl existe en tout 50 CT (Capsule\\nTechnique).\\p7 CS (Capsule Secrète) sont à\\nutiliser à l'infini.\\pSYLPHE SARL."
  },
  "CeladonCity_Condominiums_RoofRoom_Text_ReadWhichHeading": {
   "en": "Which heading do you want to read?",
@@ -29,6 +29,6 @@
  },
  "CeladonCity_Condominiums_RoofRoom_Text_WirelessAdapterLecture": {
   "en": "POKéMON Lecture\\pPlaying with the Wireless Adapter",
-  "fr": "Conférence POKéMON\\pJouer avec l'adaptateur sans fil"
+  "fr": "Lecture POKéMON\\pJouer avec l'adaptateur sans fil\\nGBA"
  }
 }

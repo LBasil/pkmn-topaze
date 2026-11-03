@@ -1,11 +1,11 @@
 {
  "PewterCity_Museum_1F_Text_AskedDaddyToCatchPikachu": {
   "en": "I want a PIKACHU!\\nIt's so cute!\\pI asked my daddy to catch me one!",
-  "fr": "Je veux un PIKACHU !\\nIl est trop mignon !\\pJ'ai demandé à mon papa de m'en\\nattraper un !"
+  "fr": "Je veux un PIKACHU !\\pPapa va m'en trouver un !"
  },
  "PewterCity_Museum_1F_Text_BoughtColorTVForMoonLanding": {
   "en": "July 20, 1969!\\pHumankind first set foot on the\\nmoon that day.\\pI bought a color TV just so I\\ncould watch that news.",
-  "fr": "Le 20 juillet 1969 !\\pL'humanité a posé le pied sur la\\nlune ce jour-là.\\pJ'ai acheté une télé couleur juste\\npour regarder cette nouvelle."
+  "fr": "20 Juillet 1969 !\\pL'homme a marché sur la lune !\\pJ'ai acheté une télé couleur pour\\nvoir toutes les nuances de la lune\\l!"
  },
  "PewterCity_Museum_1F_Text_MeteoriteThatFellOnMtMoon": {
   "en": "The display case is empty. A note\\nis left behind: POKéMON were never\\pmeant to be owned. - TEAM ONYBRIS",
@@ -13,7 +13,7 @@
  },
  "PewterCity_Museum_1F_Text_PikachuSoonIPromise": {
   "en": "Yeah, a PIKACHU soon, I promise!",
-  "fr": "Oui, un PIKACHU bientôt, promis !"
+  "fr": "Oui, oui, tu vas l'avoir ton\\nPIKACHU… C'est ça."
  },
  "PewterCity_Museum_1F_Text_RunningSpaceExhibitThisMonth": {
   "en": "The PYROPE hummed whenever a\\nPOKéMON's AURA came near.\\pThe thieves left only a note.\\nWe called the police at dawn.",
@@ -21,7 +21,7 @@
  },
  "PewterCity_Museum_1F_Text_SpaceShuttle": {
   "en": "Space Shuttle",
-  "fr": "Navette spatiale"
+  "fr": "NAVETTE SPATIALE"
  },
  "PewterCity_Museum_1F_Text_WhatsSpecialAboutMoonStone": {
   "en": "That case held the PYROPE.\\nDeep red, warm to the touch.\\pGone in one night, and not a\\nsingle alarm went off.",
@@ -53,14 +53,14 @@
  },
  "Text_SeismicTossTaught": {
   "en": "I hope you won't toss in the towel.\\nKeep it up.",
-  "fr": "J'espère que tu ne jetteras pas\\nl'éponge. Continue comme ça."
+  "fr": "Je suis sûr que ça te sera utile.\\nBon courage."
  },
  "Text_SeismicTossTeach": {
   "en": "The secrets of space…\\nThe mysteries of earth…\\pThere are so many things about\\nwhich we know so little.\\pBut that should spur us to study\\nharder, not toss in the towel.\\pThe only thing you should toss…\\pWell, how about SEISMIC TOSS?\\nShould I teach that to a POKéMON?",
-  "fr": "Les secrets de l'espace… Les\\nmystères de la terre…\\pIl y a tant de choses dont nous\\nsavons si peu.\\pMais cela devrait nous pousser à\\nétudier plus dur, pas à jeter\\ll'éponge.\\pLa seule chose que tu devrais\\njeter…\\pEh bien, que dirais-tu de FRAPPE\\nATLAS ? Dois-je l'apprendre à un\\lPOKéMON ?"
+  "fr": "Les secrets de l'espace… Les\\nmystères de la terre…\\pIl y a tant de choses que nous ne\\ncomprenons pas encore.\\pMais cela doit nous motiver à\\napprendre davantage.\\pD'ailleurs, désires-tu que\\nj'apprenne FRAPPE ATLAS\\pà un de tes POKéMON ?"
  },
  "Text_SeismicTossWhichMon": {
   "en": "Which POKéMON wants to learn\\nSEISMIC TOSS?",
-  "fr": "Quel POKéMON veut apprendre\\nFRAPPE ATLAS ?"
+  "fr": "À quel POKéMON dois-je l'enseigner\\n?"
  }
 }

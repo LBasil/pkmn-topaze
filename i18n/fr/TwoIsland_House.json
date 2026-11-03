@@ -1,11 +1,11 @@
 {
  "TwoIsland_House_Text_CantTeachAnEgg": {
   "en": "Hunh? There isn't a single move\\nthat I can teach an EGG.",
-  "fr": "Hein ? Il n'y a pas une seule\\ncapacité que je puisse enseigner à\\lun ŒUF."
+  "fr": "Quoi ? Mais je ne peux pas\\napprendre une attaque à un OEUF."
  },
  "TwoIsland_House_Text_HandedOverOneBigMushroom": {
   "en": "{PLAYER} handed over one\\nBIG MUSHROOM in exchange.",
-  "fr": "{PLAYER} a remis un\\nGROS CHAMPIGNON en échange."
+  "fr": "{PLAYER} donne un GROS CHAMPI en\\néchange."
  },
  "TwoIsland_House_Text_HandedOverTwoTinyMushrooms": {
   "en": "{PLAYER} handed over two\\nTINYMUSHROOMS in exchange.",
@@ -17,26 +17,26 @@
  },
  "TwoIsland_House_Text_NeedMushroomOrTwoToLearnMove": {
   "en": "If your POKéMON need to learn a\\nmove, I need a MUSHROOM or two.",
-  "fr": "Si tes POKéMON doivent apprendre\\nune capacité, il me faut un\\pCHAMPIGNON ou deux."
+  "fr": "Si tu veux que j'enseigne une\\nattaque à ton POKéMON, reviens avec\\lun champignon ou deux."
  },
  "TwoIsland_House_Text_NoMoveICanTeachThatMon": {
   "en": "Sorry…\\pIt doesn't appear as if I have a\\nmove I can teach that POKéMON.",
-  "fr": "Désolé…\\pIl semble que je n'aie aucune\\ncapacité à enseigner à ce POKéMON."
+  "fr": "Désolé…\\pApparemment, il n'y a aucune\\nattaque que je puisse apprendre à\\lce POKéMON."
  },
  "TwoIsland_House_Text_TeachMonMoveForMushroom": {
   "en": "I'm the POKéMON MOVE MANIAC.\\pI know every single move that\\nPOKéMON learn growing up.\\pI'm also a mushroom maniac.\\pBring me two TINYMUSHROOMS,\\nor one BIG MUSHROOM.\\pIf you do that for me, I'll teach\\na move to one POKéMON.",
-  "fr": "Je suis le MANIAQUE DES CAPACITÉS\\nPOKéMON.\\pJe connais chaque capacité que les\\nPOKéMON apprennent en grandissant.\\pJe suis aussi un maniaque de\\nchampignons.\\pApporte-moi deux PETITS\\nCHAMPIGNONS, ou un GROS CHAMPIGNON.\\pSi tu le fais, j'enseignerai une\\ncapacité à un POKéMON."
+  "fr": "Je suis le DINGUE DES CAPACITÉS.\\pJe connais chaque capacité que les\\nPOKéMON peuvent apprendre.\\pJ'adore aussi les champignons.\\pRamène-moi deux PETITS CHAMPIS ou\\nun gros CHAMPI.\\pSi tu fais ça, j'apprendrai une\\ncapacité à un POKéMON."
  },
  "TwoIsland_House_Text_TeachWhichMove": {
   "en": "Which move should I teach?",
-  "fr": "Quelle capacité dois-je enseigner ?"
+  "fr": "Quelle attaque dois-je enseigner ?"
  },
  "TwoIsland_House_Text_TutorWhichMon": {
   "en": "Which POKéMON needs tutoring?",
-  "fr": "Quel POKéMON a besoin d'être\\nformé ?"
+  "fr": "Quel POKéMON choisis-tu ?"
  },
  "TwoIsland_House_Text_WantMeToTeachMove": {
   "en": "Sniff, sniff…\\nHm! You smell of MUSHROOMS!\\pDo you want me to teach a move\\nto a POKéMON of yours?",
-  "fr": "Reniflement…\\nHm ! Tu sens les CHAMPIGNONS !\\pVeux-tu que j'enseigne une capacité\\nà un de tes POKéMON ?"
+  "fr": "Sniff, sniff… Hum, ça sent les\\nCHAMPIS !\\pTu veux que j'enseigne une capacité\\nà un de tes POKéMON ?"
  }
 }

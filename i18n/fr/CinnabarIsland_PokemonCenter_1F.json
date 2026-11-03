@@ -5,22 +5,22 @@
  },
  "CinnabarIsland_PokemonCenter_1F_Text_EvolutionCanWaitForNewMoves": {
   "en": "POKéMON can still learn techniques\\nafter canceling evolution.\\pEvolution can wait until new moves\\nhave been learned.",
-  "fr": "Les POKéMON peuvent encore\\napprendre des capacités après avoir\\lannulé l'évolution.\\pL'évolution peut attendre que de\\nnouvelles capacités soient\\lapprises."
+  "fr": "Les POKéMON peuvent apprendre des\\ntechniques même après avoir annulé\\lune évolution.\\pOn peut lancer une évolution après\\navoir appris une technique!! !"
  },
  "CinnabarIsland_PokemonCenter_1F_Text_LetsGo": {
   "en": "Well, that's it.\\nLet's go!",
-  "fr": "Bon, ça y est.\\nAllons-y !"
+  "fr": "Allez, c'est parti !"
  },
  "CinnabarIsland_PokemonCenter_1F_Text_OhNotDoneYet": {
   "en": "Oh, you're still not done yet?",
-  "fr": "Oh, tu n'as pas encore fini ?"
+  "fr": "Non ? Toujours pas ?"
  },
  "CinnabarIsland_PokemonCenter_1F_Text_ReadyToSailToOneIsland": {
   "en": "BILL: Hey, you kept me waiting!\\nReady to set sail to ONE ISLAND?",
-  "fr": "LÉO : Hé, tu m'as fait attendre !\\nPrêt à embarquer pour l'ÎLE 1 ?"
+  "fr": "LÉO : Hé, tu m'as fait attendre !\\nOn part pour l'ÎLE 1 ?"
  },
  "CinnabarIsland_PokemonCenter_1F_Text_VisitUnionRoom": {
   "en": "Do you have lots of friends?\\pLinking up with the usual friends\\nis fun, of course.\\pBut how about visiting the\\nUNION ROOM every so often?\\pWho knows, you may end up making\\nnew friends.\\pI think it would be worth your time\\nto check the UNION ROOM.",
-  "fr": "Tu as beaucoup d'amis ?\\pSe relier avec ses amis habituels,\\nc'est amusant, bien sûr.\\pMais que dirais-tu de visiter la\\nSALLE UNION de temps en temps ?\\pQui sait, tu pourrais te faire de\\nnouveaux amis.\\pJe pense que ça vaudrait le coup\\nd'aller voir la SALLE UNION."
+  "fr": "T'as beaucoup d'amis ?\\pC'est sympa de se connecter avec\\nses copains.\\pMais qui sait ? En visitant souvent\\nla SALLE UNION, tu pourrais\\ppeut-être tomber sur de nouveaux\\nDRESSEURS et t'en faire des amis.\\pJe pense vraiment que ça vaut le\\ncoup d'y aller souvent."
  }
 }

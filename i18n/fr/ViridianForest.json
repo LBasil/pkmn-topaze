@@ -9,11 +9,11 @@
  },
  "ViridianForest_Text_AnthonyPostBattle": {
   "en": "I lost some of my allowance…",
-  "fr": "J'ai perdu une partie de mon argent\\nde poche…"
+  "fr": "J'oublierai pas cette défaite."
  },
  "ViridianForest_Text_AvoidGrassyAreasWhenWeak": {
   "en": "TRAINER TIPS\\pIf your POKéMON are weak and you\\nwant to avoid battles, stay away\\lfrom grassy areas!",
-  "fr": "CONSEILS AUX DRESSEURS\\pSi tes POKéMON sont faibles et que\\ntu veux éviter les combats, reste\\lloin des hautes herbes !"
+  "fr": "ASTUCE\\pPour éviter les combats, ne marchez\\npas dans les hautes herbes !"
  },
  "ViridianForest_Text_CantCatchOwnedMons": {
   "en": "TRAINER TIPS\\pYou can't catch a POKéMON that\\nbelongs to someone else.\\pThrow POKé BALLS only at wild\\nPOKéMON to catch them!",
@@ -33,7 +33,7 @@
  },
  "ViridianForest_Text_ContactOakViaPCToRatePokedex": {
   "en": "TRAINER TIPS\\pContact PROF. OAK via a PC to\\nget your POKéDEX evaluated!",
-  "fr": "CONSEILS AUX DRESSEURS\\pContacte le PROF. CHEN via un PC\\npour faire évaluer ton POKéDEX !"
+  "fr": "ASTUCE\\pPour évaluer votre POKéDEX, appelez\\nle PROF. CHEN via un PC !"
  },
  "ViridianForest_Text_DougDefeat": {
   "en": "Huh?\\nMy rock-solid team crumbled!",
@@ -81,14 +81,14 @@
  },
  "ViridianForest_Text_SammyPostBattle": {
   "en": "Sometimes, you can find stuff on\\nthe ground.\\pI'm looking for the stuff I\\ndropped. Can you help me?",
-  "fr": "Parfois, on trouve des trucs par\\nterre.\\pJe cherche ce que j'ai laissé\\ntomber. Peux-tu m'aider ?"
+  "fr": "Tu trouveras peut-être des objets\\npar terre !\\pJe cherche les objets que j'ai\\nlaissés tomber…"
  },
  "ViridianForest_Text_UseAntidoteForPoison": {
   "en": "For poison, use ANTIDOTE!\\nGet it at POKéMON MARTS!",
-  "fr": "Pour le poison, utilise un\\nANTIDOTE ! En vente dans les\\lBOUTIQUES POKéMON !"
+  "fr": "L'ANTIDOTE vendu dans les BOUTIQUES\\nPOKéMON guérit du poison."
  },
  "ViridianForest_Text_WeakenMonsBeforeCapture": {
   "en": "TRAINER TIPS\\pWeaken POKéMON before attempting\\ncapture!\\pWhen healthy, they may escape!",
-  "fr": "CONSEILS AUX DRESSEURS\\pAffaiblis les POKéMON avant de\\ntenter la capture !\\pEn bonne santé, ils peuvent\\ns'échapper !"
+  "fr": "ASTUCE\\pUn POKéMON blessé se capture plus\\nfacilement !\\pEn pleine forme, il peut s'enfuir !"
  }
 }

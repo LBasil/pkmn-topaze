@@ -1,23 +1,23 @@
 {
  "CeladonCity_DepartmentStore_3F_Text_AnRPG": {
   "en": "An RPG!\\nThere's no time for that!",
-  "fr": "Un RPG !\\nPas le temps pour ça !"
+  "fr": "Un RPG ! Cool… Mais j'ai pas le\\ntemps !"
  },
  "CeladonCity_DepartmentStore_3F_Text_BuddyTradingKangaskhanForHaunter": {
   "en": "All right!\\pMy buddy's going to trade me his\\nKANGASKHAN for my HAUNTER!",
-  "fr": "Super !\\pMon pote va m'échanger son\\nKANGOUREX contre mon SPECTRUM !"
+  "fr": "Ouaiiis !\\pMon pote va m'échanger son\\nKANGOUREX contre mon GRAVALANCH !"
  },
  "CeladonCity_DepartmentStore_3F_Text_CanIdentifyTradeMonsByID": {
   "en": "You can identify POKéMON you get\\nin trades by their ID Numbers.",
-  "fr": "Tu peux reconnaître les POKéMON\\nreçus par échange à leur No. ID."
+  "fr": "Le numéro d'immatriculation d'un\\nPOKéMON sert à l'identifier lors\\ld'un échange !"
  },
  "CeladonCity_DepartmentStore_3F_Text_FightingGame": {
   "en": "A fighting game!\\nLooks tough!",
-  "fr": "Un jeu de combat !\\nÇa a l'air dur !"
+  "fr": "Un jeu de combat ! Trop coool !"
  },
  "CeladonCity_DepartmentStore_3F_Text_HaunterEvolvedOnTrade": {
   "en": "Come on, HAUNTER!\\pI love HAUNTER!\\nI collect them!\\pHuh?\\pHAUNTER turned into a different\\nPOKéMON while being traded!",
-  "fr": "Allez, SPECTRUM !\\pJ'adore SPECTRUM !\\nJe les collectionne !\\pHein ?\\pSPECTRUM s'est transformé en un\\nautre POKéMON pendant l'échange !"
+  "fr": "Cool ! Un GRAVALANCH !\\pJ'adore les GRAVALANCH !\\pQu… Hein? ?\\pGRAVALANCH se transforme en un\\nautre POKéMON !"
  },
  "CeladonCity_DepartmentStore_3F_Text_ItsSuperNES": {
   "en": "It's a Super NES.",
@@ -29,15 +29,15 @@
  },
  "CeladonCity_DepartmentStore_3F_Text_PuzzleGame": {
   "en": "A puzzle game!\\nLooks addictive!",
-  "fr": "Un jeu de puzzle !\\nÇa a l'air addictif !"
+  "fr": "Un jeu de puzzle ! J'y suis accro !"
  },
  "CeladonCity_DepartmentStore_3F_Text_RedGreenBothArePokemon": {
   "en": "Red and Green!\\nBoth are POKéMON!",
-  "fr": "Rouge et Vert !\\nLes deux sont des jeux POKéMON !"
+  "fr": "Rouge et Vert ! Deux jeux POKéMON !"
  },
  "CeladonCity_DepartmentStore_3F_Text_SportsGame": {
   "en": "A sports game!\\nDad'll like that!",
-  "fr": "Un jeu de sport !\\nPapa va aimer !"
+  "fr": "Un jeu de sport ! Vive le foot !"
  },
  "CeladonCity_DepartmentStore_3F_Text_TVGameShop": {
   "en": "3F: TV GAME SHOP",
@@ -45,11 +45,11 @@
  },
  "Text_CounterDeclined": {
   "en": "You're not interested? Come see\\nme if you change your mind.",
-  "fr": "Ça ne t'intéresse pas ? Viens me\\nvoir si tu changes d'avis."
+  "fr": "Non ? Revenez si vous changez\\nd'avis."
  },
  "Text_CounterTaught": {
   "en": "Are you using that COUNTER move\\nI taught your POKéMON?",
-  "fr": "Tu utilises la capacité RIPOSTE que\\nj'ai enseignée à ton POKéMON ?"
+  "fr": "Vous utilisez la capacité que je\\nvous ai apprise ?"
  },
  "Text_CounterTeach": {
   "en": "Oh, hi!\\nI finally finished POKéMON.\\pNot done yet? How about I teach\\nyou a good move?\\pThe move I have in mind is\\nCOUNTER.\\pNot like the one I'm leaning on,\\nmind you!",
@@ -57,6 +57,6 @@
  },
  "Text_CounterWhichMon": {
   "en": "Which POKéMON should I teach\\nCOUNTER to?",
-  "fr": "À quel POKéMON dois-je enseigner\\nRIPOSTE ?"
+  "fr": "À quel POKéMON enseigner RIPOSTE ?"
  }
 }

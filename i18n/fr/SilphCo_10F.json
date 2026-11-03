@@ -13,11 +13,11 @@
  },
  "SilphCo_10F_Text_GruntPostBattle": {
   "en": "Nice try, but the boardroom is up\\none more floor.",
-  "fr": "Bien tenté, mais la salle du\\nconseil est un étage plus haut."
+  "fr": "Bien joué, mais la salle du conseil\\nest au-dessus !"
  },
  "SilphCo_10F_Text_KeepMeCryingASecret": {
   "en": "About me crying…\\nPlease keep it a secret.",
-  "fr": "À propos de mes pleurs…\\nGarde-le secret, s'il te plaît."
+  "fr": "Ne raconte à personne que j'ai\\npleuré !"
  },
  "SilphCo_10F_Text_TravisDefeat": {
   "en": "No continues left!",
@@ -29,10 +29,10 @@
  },
  "SilphCo_10F_Text_TravisPostBattle": {
   "en": "Are you satisfied with beating me?\\nThen go on home!",
-  "fr": "Tu es satisfait de m'avoir battu ?\\nAlors rentre chez toi !"
+  "fr": "T'as gagné ! Alors retourne chez\\ntoi !"
  },
  "SilphCo_10F_Text_WaaaImScared": {
   "en": "Waaaaa!\\nI'm scared!",
-  "fr": "Waaaaa !\\nJ'ai peur !"
+  "fr": "Waaaaa ! Mamaaaan !"
  }
 }

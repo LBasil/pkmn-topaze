@@ -5,10 +5,10 @@
  },
  "CeladonCity_DepartmentStore_5F_Text_ExplainStatEnhancers": {
   "en": "POKéMON stat enhancers can be\\nbought only here.\\pHP UP increases the base HP of a\\nPOKéMON.\\pCALCIUM raises the base SP. ATK\\nstat of one POKéMON.\\pZINC boosts the base SP. DEF stat\\nof one POKéMON.\\pCARBOS enhances the base SPEED\\nstat.",
-  "fr": "Les boosters de stats POKéMON ne\\ns'achètent qu'ici.\\pPV PLUS augmente les PV de base\\nd'un POKéMON.\\pCALCIUM augmente l'ATQ SPÉ. de base\\nd'un POKéMON.\\pZINC augmente la DÉF SPÉ. de base\\nd'un POKéMON.\\pCARBONE améliore la VITESSE de\\nbase."
+  "fr": "Les accélérateurs de POKéMON sont\\nen vente ici.\\pPV PLUS augmente les PV d'un\\nPOKéMON.\\pLe CALCIUM augmente les capacités\\nSPECIALES.\\pLe ZINC booste la DÉF. SPÉ. d'un\\nPOKéMON.\\pLe CARBONE augmente la VITESSE."
  },
  "CeladonCity_DepartmentStore_5F_Text_HereForStatEnhancers": {
   "en": "I'm here for POKéMON stat\\nenhancers.\\pPROTEIN increases the base ATTACK\\npower.\\pIRON increases the base DEFENSE\\nstat.",
-  "fr": "Je suis là pour les boosters de\\nstats POKéMON.\\pPROTÉINE augmente l'ATTAQUE de\\nbase.\\pFER augmente la DÉFENSE de base."
+  "fr": "J'veux acheter un accélérateur de\\nPOKéMON !\\pUne PROTÉINE augmentera l'ATTAQUE.\\pLe FER augmente la DÉFENSE."
  }
 }

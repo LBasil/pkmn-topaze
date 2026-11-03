@@ -1,35 +1,35 @@
 {
  "CeladonCity_GameCorner_Text_CanExchangeCoinsNextDoor": {
   "en": "Welcome!\\pYou can exchange your COINS for\\nfabulous prizes next door.",
-  "fr": "Bienvenue !\\pTu peux échanger tes JETONS contre\\nde superbes lots à côté."
+  "fr": "Bienvenue !\\pEchangez vos JETONS contre des prix\\nà côté."
  },
  "CeladonCity_GameCorner_Text_CantAffordCoins": {
   "en": "You can't afford the COINS.",
-  "fr": "Tu n'as pas de quoi payer les\\nJETONS."
+  "fr": "Pas d'sous. Pas d'JETONS."
  },
  "CeladonCity_GameCorner_Text_CoinCaseIsFull": {
   "en": "Whoops!\\nYour COIN CASE is full.",
-  "fr": "Oups !\\nTa BOÎTE À JETONS est pleine."
+  "fr": "Oups ! Votre BOÎTE est pleine."
  },
  "CeladonCity_GameCorner_Text_CoinCaseIsRequired": {
   "en": "A COIN CASE is required…",
-  "fr": "Une BOÎTE À JETONS est requise..."
+  "fr": "Vous n'avez pas de BOÎTE JETON !"
  },
  "CeladonCity_GameCorner_Text_ComePlaySometime": {
   "en": "No?\\nPlease come play sometime!",
-  "fr": "Non ?\\nReviens jouer un jour !"
+  "fr": "Non ? Ben pourquoi ?"
  },
  "CeladonCity_GameCorner_Text_DoYouWantToPlay": {
   "en": "Kid, do you want to play?",
-  "fr": "Petit, tu veux jouer ?"
+  "fr": "Petit… Tu veux jouer ?"
  },
  "CeladonCity_GameCorner_Text_DontHaveCoinCase": {
   "en": "Oops!\\nDon't have the COIN CASE!",
-  "fr": "Oups !\\nTu n'as pas la BOÎTE À JETONS !"
+  "fr": "Oups ! Pas de BOÎTE JETON !"
  },
  "CeladonCity_GameCorner_Text_DontNeedMyCoins": {
   "en": "You don't need my COINS!",
-  "fr": "Tu n'as pas besoin de mes JETONS !"
+  "fr": "T'as pas besoin d'mes JETONS !"
  },
  "CeladonCity_GameCorner_Text_GruntDefeat": {
   "en": "Dang!",
@@ -49,15 +49,15 @@
  },
  "CeladonCity_GameCorner_Text_HereAreSomeCoinsShoo": {
   "en": "Hey, what? You're throwing me off!\\nHere are some COINS, so shoo!",
-  "fr": "Hé, quoi ? Tu me déconcentres !\\nTiens, des JETONS, et ouste !"
+  "fr": "Hein ? Des JETONS ? En voilà !\\nMais… Comment dire… Dégage !"
  },
  "CeladonCity_GameCorner_Text_HereAreYourCoins": {
   "en": "Thank you.\\nHere are your COINS!",
-  "fr": "Merci.\\nVoici tes JETONS !"
+  "fr": "Merci ! Voici vos JETONS !"
  },
  "CeladonCity_GameCorner_Text_NeedMoreCoinsForMonIWant": {
   "en": "Darn! I need more COINS for the\\nPOKéMON I want!",
-  "fr": "Zut ! Il me faut plus de JETONS\\npour le POKéMON que je veux !"
+  "fr": "Méga-mince ! Y m'faut des JETONS\\npour acheter un joli POKéMON !"
  },
  "CeladonCity_GameCorner_Text_ObtainedQuartz": {
   "en": "{PLAYER} got the QUARTZ!",
@@ -73,15 +73,15 @@
  },
  "CeladonCity_GameCorner_Text_RareMonsForCoins": {
   "en": "They offer rare POKéMON that can\\nbe exchanged for your COINS.\\pBut, I just can't seem to win!",
-  "fr": "Ils proposent des POKéMON rares\\néchangeables contre tes JETONS.\\pMais je n'arrive jamais à gagner !"
+  "fr": "De très rares POKéMON sont à\\néchanger contre des JETONS.\\pMais c'est trop dur de gagner !"
  },
  "CeladonCity_GameCorner_Text_Received10CoinsFromMan": {
   "en": "{PLAYER} received 10 COINS\\nfrom the man.",
-  "fr": "{PLAYER} a reçu 10 JETONS\\nde l'homme."
+  "fr": "{PLAYER} reçoit 10 JETONS !"
  },
  "CeladonCity_GameCorner_Text_Received20CoinsFromMan": {
   "en": "{PLAYER} received 20 COINS\\nfrom the man.",
-  "fr": "{PLAYER} a reçu 20 JETONS\\nde l'homme."
+  "fr": "{PLAYER} reçoit 20 JETONS !"
  },
  "CeladonCity_GameCorner_Text_Received20CoinsFromNiceGuy": {
   "en": "{PLAYER} received 20 COINS\\nfrom the nice guy.",
@@ -93,11 +93,11 @@
  },
  "CeladonCity_GameCorner_Text_SlotMachineWantToPlay": {
   "en": "A slot machine!\\nWant to play?",
-  "fr": "Une machine à sous !\\nTu veux jouer ?"
+  "fr": "Une machine à sous ! On joue ?"
  },
  "CeladonCity_GameCorner_Text_SoEasyToGetHooked": {
   "en": "Games are scary!\\nIt's so easy to get hooked!",
-  "fr": "Les jeux font peur !\\nOn devient accro si facilement !"
+  "fr": "Jouer ! Jouer ! Encore jouer !\\nJouer et jouer ! Gaaa."
  },
  "CeladonCity_GameCorner_Text_SomeonesKeys": {
   "en": "Someone's keys!\\nThey'll be back.",
@@ -105,7 +105,7 @@
  },
  "CeladonCity_GameCorner_Text_SorryDontHaveCoinCase": {
   "en": "Oh, I'm sorry.\\nYou don't have a COIN CASE.",
-  "fr": "Oh, désolé.\\nTu n'as pas de BOÎTE À JETONS."
+  "fr": "Il vous faut une BOÎTE JETON !"
  },
  "CeladonCity_GameCorner_Text_SwitchBehindPosterPushIt": {
   "en": "Hey!\\pA faded ROCKET stamp is hidden\\nbehind the poster. And a switch!?\\lLet's push it!",
@@ -113,7 +113,7 @@
  },
  "CeladonCity_GameCorner_Text_ThinkMachinesHaveDifferentOdds": {
   "en": "I think these machines have\\ndifferent odds.",
-  "fr": "Je crois que ces machines n'ont\\npas les mêmes probabilités."
+  "fr": "Ces machines ont des mécanismes\\ndifférents… Ça c'est sûr !"
  },
  "CeladonCity_GameCorner_Text_VesperCallIt": {
   "en": "VESPER: Call it, child.\\pYES for HIGH, NO for LOW.",
@@ -145,11 +145,11 @@
  },
  "CeladonCity_GameCorner_Text_WantSomeCoins": {
   "en": "What's up?\\nWant some COINS?",
-  "fr": "Quoi de neuf ?\\nTu veux des JETONS ?"
+  "fr": "Quoi ça ? Tu veux des JETONS ?"
  },
  "CeladonCity_GameCorner_Text_WatchReelsClosely": {
   "en": "The trick is to watch the reels\\nclosely.",
-  "fr": "L'astuce, c'est de bien regarder\\nles rouleaux."
+  "fr": "Le truc c'est de regarder l'écran\\ncomme un dingue !"
  },
  "CeladonCity_GameCorner_Text_WelcomeBuySomeCoins": {
   "en": "Welcome to ONYBRIS GAME CORNER!\\pDo you need some game COINS?\\nWould you like to buy some?",
@@ -157,7 +157,7 @@
  },
  "CeladonCity_GameCorner_Text_WinOrLoseItsOnlyLuck": {
   "en": "These slot games…\\nWin or lose, it's only by luck.",
-  "fr": "Ces machines à sous...\\nGagner ou perdre, tout est chance."
+  "fr": "Ce que j'peux m'éclater ! Yaaa !"
  },
  "CeladonCity_GameCorner_Text_WinsComeAndGo": {
   "en": "Wins seem to come and go.\\nNothing's a sure thing.",
@@ -165,10 +165,10 @@
  },
  "CeladonCity_GameCorner_Text_YouHaveLotsOfCoins": {
   "en": "You have lots of COINS!",
-  "fr": "Tu as plein de JETONS !"
+  "fr": "T'en as des JETONS, toi !"
  },
  "CeladonCity_GameCorner_Text_YouveGotPlentyCoins": {
   "en": "You've got plenty of your own\\nCOINS!",
-  "fr": "Tu as déjà plein de JETONS !"
+  "fr": "T'as tes JETONS ? Alors va jouer…"
  }
 }

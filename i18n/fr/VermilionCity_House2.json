@@ -1,7 +1,7 @@
 {
  "VermilionCity_House2_Text_DoYouHaveMonWantToTradeForMyMon": {
   "en": "Hi!\\nDo you have a {STR_VAR_1}?\\pWant to trade it for my\\n{STR_VAR_2}?",
-  "fr": "Salut !\\nAs-tu un {STR_VAR_1} ?\\pVeux-tu l'échanger contre mon\\n{STR_VAR_2} ?"
+  "fr": "Salut ! T'as un {STR_VAR_1} ?\\pContre un joli {STR_VAR_2}, OK ?"
  },
  "VermilionCity_House2_Text_HowIsMyOldMon": {
   "en": "How is my old {STR_VAR_2}?\\pMy {STR_VAR_1} is doing great!",
@@ -33,7 +33,7 @@
  },
  "VermilionCity_House2_Text_ThankYou": {
   "en": "Thank you!",
-  "fr": "Merci !"
+  "fr": "Merci beaucoup !"
  },
  "VermilionCity_House2_Text_ThatsTooBad": {
   "en": "That's too bad.",
@@ -41,6 +41,6 @@
  },
  "VermilionCity_House2_Text_ThisIsNoMon": {
   "en": "…This is no {STR_VAR_1}.\\pIf you get one, please trade it\\nto me!",
-  "fr": "…Ce n'est pas un {STR_VAR_1}.\\pSi tu en trouves un, échange-le\\navec moi !"
+  "fr": "… C'est pas un {STR_VAR_1}.\\pReviens me voir avec un vrai !"
  }
 }

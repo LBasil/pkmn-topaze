@@ -25,11 +25,11 @@
  },
  "Route17_Text_CyclingRoadSign": {
   "en": "CYCLING ROAD\\nSlope ends here!",
-  "fr": "PISTE CYCLABLE\\nFin de la pente !"
+  "fr": "PISTE CYCLABLE Fin de la descente !"
  },
  "Route17_Text_DontThrowGameThrowBalls": {
   "en": "It's a notice!\\pDon't throw the game, throw POKé\\nBALLS instead!",
-  "fr": "C'est un avis !\\pNe jette pas la partie, jette\\ndes POKé BALLS à la place !"
+  "fr": "Un conseil !\\pNe jetez pas la console, jetez\\nplutôt des POKé BALLS."
  },
  "Route17_Text_IsaiahDefeat": {
   "en": "Whoo!",
@@ -41,7 +41,7 @@
  },
  "Route17_Text_IsaiahPostBattle": {
   "en": "I could belly-bump you outta\\nhere!",
-  "fr": "Je pourrais te dégager d'ici d'un\\ncoup de ventre !"
+  "fr": "Je vais t'éjecter d'ici à coup de\\nclaques !"
  },
  "Route17_Text_JamalDefeat": {
   "en": "Whew!\\nGood workout!",
@@ -65,7 +65,7 @@
  },
  "Route17_Text_JaxonPostBattle": {
   "en": "The slope makes it hard to steer.",
-  "fr": "La pente rend la direction\\ndifficile."
+  "fr": "La pente rend la conduite difficile\\n!"
  },
  "Route17_Text_NikolasDefeat": {
   "en": "Grounded out!",
@@ -77,11 +77,11 @@
  },
  "Route17_Text_NikolasPostBattle": {
   "en": "I got my VOLTORB at the abandoned\\nPOWER PLANT.",
-  "fr": "J'ai eu mon VOLTORBE à la centrale\\nabandonnée."
+  "fr": "J'ai attrapé un VOLTORBE dans la\\nCENTRALE."
  },
  "Route17_Text_PressBToStayInPlace": {
   "en": "TRAINER TIPS\\pPress the B Button to stay in place\\nwhile on a slope.",
-  "fr": "CONSEILS AUX DRESSEURS\\pAppuie sur B pour rester en place\\nsur une pente."
+  "fr": "ASTUCE\\pAppuyez sur le bouton B pour vous\\narrêter dans une descente."
  },
  "Route17_Text_Quest5_Ask": {
   "en": "I collect STONES. Bring me a FIRE\\nSTONE and I will make it worth your\\pwhile.",
@@ -117,7 +117,7 @@
  },
  "Route17_Text_SameSpeciesGrowDifferentRates": {
   "en": "TRAINER TIPS\\pAll POKéMON are unique.\\pEven POKéMON of the same species\\nand level grow at different rates.",
-  "fr": "CONSEILS AUX DRESSEURS\\pTous les POKéMON sont uniques.\\pMême les POKéMON de même espèce et\\nde même niveau grandissent à des\\lrythmes différents."
+  "fr": "ASTUCE\\pChaque POKéMON est unique.\\pDes POKéMON de même type et de même\\nniveau évoluent différemment."
  },
  "Route17_Text_VirgilDefeat": {
   "en": "Crash and burn!",
@@ -133,7 +133,7 @@
  },
  "Route17_Text_WatchOutForDiscardedItems": {
   "en": "It's a notice.\\pWatch out for discarded items.",
-  "fr": "C'est un avis.\\pAttention aux objets jetés."
+  "fr": "Un conseil !\\pAttention de ne pas jeter un objet\\nimportant !"
  },
  "Route17_Text_WilliamDefeat": {
   "en": "Are you satisfied?",
@@ -145,7 +145,7 @@
  },
  "Route17_Text_WilliamPostBattle": {
   "en": "I need to catch a few z's!",
-  "fr": "J'ai besoin de dormir un peu !"
+  "fr": "Je vais aller piquer un somme !"
  },
  "Route17_Text_ZeekDefeat": {
   "en": "Why, you!",
@@ -157,6 +157,6 @@
  },
  "Route17_Text_ZeekPostBattle": {
   "en": "Maybe some POKéMON need element\\nSTONES to evolve.",
-  "fr": "Peut-être que certains POKéMON ont\\nbesoin de PIERRES élémentaires pour\\lévoluer."
+  "fr": "Certains POKéMON ont besoin d'une\\nPIERRE pour évoluer."
  }
 }

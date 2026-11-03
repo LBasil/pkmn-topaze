@@ -9,7 +9,7 @@
  },
  "OneIsland_KindleRoad_Text_AbigailPostBattle": {
   "en": "I like that cap you have.\\nMaybe I should wear one, too…",
-  "fr": "J'aime ta casquette. Je devrais\\npeut-être en porter une aussi…"
+  "fr": "J'aime beaucoup ta casquette. Je\\nm'en achèterais bien une…"
  },
  "OneIsland_KindleRoad_Text_BryceDefeat": {
   "en": "Awww, blown!",
@@ -21,7 +21,7 @@
  },
  "OneIsland_KindleRoad_Text_BrycePostBattle": {
   "en": "The water in volcanic regions is\\ndelicious.",
-  "fr": "L'eau des régions volcaniques est\\ndélicieuse."
+  "fr": "L'eau des régions volcaniques est\\ntrès bonne pour la santé."
  },
  "OneIsland_KindleRoad_Text_ClaireDefeat": {
   "en": "That made me all sweaty.",
@@ -33,7 +33,7 @@
  },
  "OneIsland_KindleRoad_Text_ClairePostBattle": {
   "en": "What should I do?\\nI feel famished again.",
-  "fr": "Que dois-je faire ?\\nJ'ai de nouveau très faim."
+  "fr": "Qu'est-ce que je dois faire ? Je\\nsuis morte de faim."
  },
  "OneIsland_KindleRoad_Text_DenLockedBill": {
   "en": "A cave mouth hums with static.\\nSomething forbids the way.\\pMaybe BILL, at the POKéMON CENTER\\non this island, knows more.",
@@ -53,7 +53,7 @@
  },
  "OneIsland_KindleRoad_Text_FinnPostBattle": {
   "en": "The sky is immense around these\\nparts.",
-  "fr": "Le ciel est immense dans le coin."
+  "fr": "Le ciel est vraiment immense."
  },
  "OneIsland_KindleRoad_Text_GarrettDefeat": {
   "en": "Hey, what the…\\nYou're good, you!",
@@ -65,7 +65,7 @@
  },
  "OneIsland_KindleRoad_Text_GarrettPostBattle": {
   "en": "Instead of using SURF all the time,\\nyou should swim some.",
-  "fr": "Au lieu d'utiliser SURF tout le\\ntemps, tu devrais nager un peu."
+  "fr": "Au lieu d'utiliser SURF tout le\\ntemps, tu ferais bien de nager."
  },
  "OneIsland_KindleRoad_Text_HughDefeat": {
   "en": "Why me?!",
@@ -77,7 +77,7 @@
  },
  "OneIsland_KindleRoad_Text_HughPostBattle": {
   "en": "Even martial artists are becoming\\nfashion conscious these days…",
-  "fr": "Même les artistes martiaux\\ndeviennent soucieux de mode ces\\ljours-ci…"
+  "fr": "Même les vrais guerriers font\\nattention à leur tenue aujourd'hui."
  },
  "OneIsland_KindleRoad_Text_KiaDefeat": {
   "en": "KIA: Huh?!\\nI can't believe it!",
@@ -93,7 +93,7 @@
  },
  "OneIsland_KindleRoad_Text_KiaPostBattle": {
   "en": "KIA: How could there be anyone\\nbetter than my big brother?",
-  "fr": "KIA : Comment peut-il y avoir\\nquelqu'un de meilleur que mon grand\\lfrère ?"
+  "fr": "KIA : Je ne pensais pas que mon\\nfrère pouvait se faire battre."
  },
  "OneIsland_KindleRoad_Text_MariaDefeat": {
   "en": "Aiyeeeeh!",
@@ -105,7 +105,7 @@
  },
  "OneIsland_KindleRoad_Text_MariaPostBattle": {
   "en": "Please don't splash my face!\\nYou'll ruin the makeup.",
-  "fr": "S'il te plaît, ne m'éclabousse pas\\nle visage ! Tu vas ruiner mon\\lmaquillage."
+  "fr": "Non, pas le visage! ! Je ne veux\\npas abîmer mon maquillage."
  },
  "OneIsland_KindleRoad_Text_MikDefeat": {
   "en": "MIK: Whoa!\\nThat's too much!",
@@ -121,7 +121,7 @@
  },
  "OneIsland_KindleRoad_Text_MikPostBattle": {
   "en": "MIK: How could my combination\\nwith KIA fail?",
-  "fr": "MIK : Comment ma combinaison avec\\nKIA a-t-elle pu échouer ?"
+  "fr": "MIK : Comment as-tu fait pour\\nbattre notre super duo ?"
  },
  "OneIsland_KindleRoad_Text_RouteSign": {
   "en": "This is KINDLE ROAD.\\pGo straight for MT. EMBER.",
@@ -137,7 +137,7 @@
  },
  "OneIsland_KindleRoad_Text_SharonPostBattle": {
   "en": "It's clear that you're skilled.\\nI like you!",
-  "fr": "Il est clair que tu es doué.\\nJe t'aime bien !"
+  "fr": "Hum, tu mérites tout mon respect."
  },
  "OneIsland_KindleRoad_Text_SheaDefeat": {
   "en": "Gasp…\\nGasp…",
@@ -149,7 +149,7 @@
  },
  "OneIsland_KindleRoad_Text_SheaPostBattle": {
   "en": "I lost because I'm pooped from all\\nthe running I did…",
-  "fr": "J'ai perdu car je suis épuisé par\\ntoute la course que j'ai faite…"
+  "fr": "J'ai perdu parce que j'ai trop\\ncouru avant."
  },
  "OneIsland_KindleRoad_Text_TanyaDefeat": {
   "en": "I'm such a fool!",
@@ -161,7 +161,7 @@
  },
  "OneIsland_KindleRoad_Text_TanyaPostBattle": {
   "en": "I'll train even harder from now on!",
-  "fr": "Je m'entraînerai encore plus dur\\ndésormais !"
+  "fr": "À partir de maintenant, je vais\\nm'entraîner encore plus !"
  },
  "OneIsland_KindleRoad_Text_TommyDefeat": {
   "en": "I've lost it all again…",
@@ -173,6 +173,6 @@
  },
  "OneIsland_KindleRoad_Text_TommyPostBattle": {
   "en": "Not only did I lose, the big one\\ngot away from me, too!",
-  "fr": "Non seulement j'ai perdu, mais le\\ngros m'a échappé aussi !"
+  "fr": "Non seulement je perds, mais en\\nplus je laisse filer ma prise !"
  }
 }
