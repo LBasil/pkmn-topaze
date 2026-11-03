@@ -1,5 +1,8 @@
 # Lieux et systèmes encore à refaire (liste de Basil, 22/10)
 
+## Corrigé le 03/11 (build 23h45) — trouvé par le test émulateur
+- **BUG BLOQUANT** : la météo WEATHER_DROUGHT (posée le 01/11 sur Route 11, Route 15, Route 22) fige le jeu au chargement de la carte (écran noir, touches mortes). Les 3 routes repassent en WEATHER_SUNNY. Pluie, orage, neige : OK. À revoir plus tard si on veut une vraie sécheresse (le moteur FR boucle dans la fin de Drought_InitAll / init météo).
+
 ## Corrigé le 22/10 (build du soir)
 - Centrale (Manoir 3F) : Selene bloque la pierre ; toucher le piédestal sans l'avoir battue la déclenche.
 - Volcan B4F : Kronos/Gold/Silver déplacés d'une case (ils se tenaient dans la lave) ; texte de Kronos ne dit plus que le boss a la pierre (le joueur a le TOPAZ).
