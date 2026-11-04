@@ -134,5 +134,9 @@
  "FuchsiaCity_Gym_Text_ShawnPostBattle": {
   "en": "Where there is light, there is\\nshadow!\\pLight and shadow!\\nWhich do you choose?",
   "fr": "Là où il y a de la lumière, il y a\\nde l'ombre !\\pLumière et ombre !\\nQue choisis-tu ?"
+ },
+ "FuchsiaCity_Gym_Text_KogaVisit3": {
+  "en": "ACHLYS: Six legends. A ninja would\\nhave hidden them. Use these wisely.",
+  "fr": "ACHLYS : Six légendes. Un ninja les\\naurait cachées. Utilise-les avec\\lsagesse."
  }
 }

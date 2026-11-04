@@ -146,3 +146,20 @@ VermilionCity_House2_Text_CellBDefeat|Tss. Le compte sera faux.$
 VermilionCity_House2_Text_CellMemo|Un bordereau est épinglé sur une\ncaisse.\pBRANCHE 6 sur 7. Division du port.\nTrois navires par semaine, sans\lmarque.\pLa pierre du coup du S.S. ANNE est\nen retard. Rapport à V.\pÀ côté, 3 RAPPELS dans une boîte.$
 VermilionCity_House2_Text_CellMemoLocked|Des caisses empilées jusqu'au\nplafond. Les gardes ne te laisseront\lpas regarder.$
 VermilionCity_House2_Text_CellMemoDone|Les caisses sont vides, maintenant.\nIl ne reste que l'anneau au mur.$
+CeruleanCity_House3_Text_CellAIntro|Rien à voir. Circule, gamin.$
+CeruleanCity_House3_Text_CellBIntro|Le boss ne veut aucun témoin.\nPas d'enfants non plus.$
+FuchsiaCity_House3_Text_CellAIntro|Cette maison est notre réserve.\nDehors.$
+FuchsiaCity_House3_Text_CellBIntro|Tu as fait un long chemin pour\nquelques caisses.$
+FuchsiaCity_House3_Text_CellBPost|Sept branches. Quatre villes sont\ndéjà à nous.$
+IndigoPlateau_Exterior_Text_Grunt1|SBIRE : ...On ne fait que regarder.$
+IndigoPlateau_Exterior_Text_Grunt6|SBIRE : Dix pierres. Une seule main.\nNous sommes patients.$
+LavenderTown_House2_Text_CellAIntro|La tour nous cache bien. Pars.$
+LavenderTown_House2_Text_CellADefeat|La tour ne nous a pas prévenus...$
+LavenderTown_House2_Text_CellBDefeat|...Toi aussi, tu fais plutôt peur.$
+LavenderTown_House2_Text_CellBPost|Un mur de plus à lire. Puis pars.$
+PewterCity_House3_Text_CellBDefeat|...Moi, je ne fais que porter des\ncaisses.$
+UndergroundPath_NorthEntrance_Text_QuestNo|Tu n'as capturé que {STR_VAR_1} espèces.\nContinue jusqu'à 40 !$
+UndergroundPath_NorthEntrance_Text_QuestNoRoom|Ton SAC est plein. Fais-y d'abord\nde la place !$
+VermilionCity_House2_Text_CellAIntro|Le port est à nous. Ceci aussi.$
+VermilionCity_House2_Text_CellADefeat|Le port est... toujours à nous.$
+VermilionCity_House2_Text_CellBPost|Sept branches. Tu ne pourras pas\ntoutes les arrêter.$

@@ -413,3 +413,15 @@ Joué avec le bot « vrai joueur » (captures, XP, soins, CS apprises par la Bo�
 - Poste « parler au gardien » : l'employé du Parc Safari est derrière un comptoir (x=2 bloqué) : on lui parle depuis (3,6) face à gauche.
 - Pas testé : Ho-Oh (200 espèces) et Deoxys (300 espèces) — il faut un Pokédex rempli.
 - Scripts du bot : tools/topaze/emu/bench/refuge.py et refuge_king.py.
+
+## 04-11 (11h) — Passe « joueur » : relecture des traductions
+Logger de textes ajouté au bot (`textlog` dans tools/topaze/emu/bench/real_run.py → /tmp/gx/texts.jsonl : gStringVar4 + gDisplayedStringBattle décodés via charmap.txt, dédoublonnés par carte).
+Trouvailles (toutes corrigées, build 04-11 11h) :
+- `data/event_scripts.s` n'était pas couvert par `names.py apply_inc` → infirmière des Centres, CT trouvée, surnoms, PC, lit, portes… restés en anglais (fr/inc10.txt).
+- Textes en ligne dans `data/maps/*/scripts.inc` (contenu Topaze : cellules Onybris, guides des ports, boussole, « Quelque chose brille ici », grognards d'Indigo, Titans, radar Route 2, quête Pierre Soleil) jamais traduits : `apply_inc` couvre maintenant ces fichiers (fr/inc11.txt). ⚠ Tout nouveau texte écrit en ligne dans scripts.inc doit avoir sa ligne dans inc11.txt (ou un inc*.txt).
+- Descriptions d'objets anglaises (Hyper Ball, Super Ball, Câble Link, Rubis, Saphir, Notes) → item_desc.txt ; « TM CASE » → BOÎTE CT (items.txt).
+- « Le joueur a battu/perdu » → `{B_PLAYER_NAME}` (strings/s10–s13).
+- Classes de Dresseurs tronquées (ÉLEV. OISEA., DAME OMBREL., PIQUE-NIQUE., COLLECTION.) corrigées dans src/data/text/trainer_class_names.h (le .h est versionné en français : classes.txt ne suffit pas).
+- Scène de NINA (RivalsHouse) et KogaVisit3 (JSON).
+Non traduit volontairement : textes de re-combat (trainers.inc, VS Seeker = boussole) et Club Mystery Event (inatteignables).
+Reste à voir : noms d'objets abrégés (COQUILLETRÉF., POUSS. ÉTOILE…, limite 13 car.), préfixe « ADV. » en combat.
