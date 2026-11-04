@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Pilote « joueur reel » : Auto (run_full.py) sans mode dieu + cerveau de combat (real.py)."""
-import sys, os
+import sys, os, struct
 sys.path.insert(0, '/tmp/gx')
 from run_full import *
 import real
@@ -17,6 +17,11 @@ class Real(BattleMixin, Auto):
         s.e.run(n, KEYS[k]); s.e.run(wait, 0)
     def hop(s, e):
         """Si on arrive SUR le tapis de la porte (sortie d'un Centre, d'une maison), le warp ne se redeclenche pas : on pousse vers la sortie."""
+        if e[0] == 'warp' and s.knows(15) and any('CutTree' in o['script'] for o in mj(s.sync())['object_events']):
+            nav = s.nav(); trees = {(o['x'], o['y']) for o in nav.mj['object_events'] if 'CutTree' in o['script'] and not (o.get('flag', '0') not in ('0', 0) and s.getflag(o['flag']))}
+            nav.objs = set(s.live_objs()) | trees; w0 = nav.mj['warp_events'][e[2]]; me = (s.pos()[2], s.pos()[3])
+            if trees and not nav.path(me, (w0['x'], w0['y'])):
+                log('  arbre a couper sur le chemin : COUPE'); s.cut_trees()
         if e[0] == 'warp':
             nv = s.nav(); ws = nv.mj['warp_events']; w = ws[e[2]]; p = s.pos(); m0 = p[:2]
             if (nv.attr(w['x'], w['y']) & 0x1ff) == 0:      # warp pose sur du sol normal (Centre : 3 warps, un seul tapis) : on prend un warp voisin vers la meme carte sur un vrai tapis
@@ -26,7 +31,10 @@ class Real(BattleMixin, Auto):
                 for d in ('DOWN', 'UP', 'DOWN', 'DOWN', 'LEFT', 'RIGHT', 'DOWN'):
                     s.e.run(14, KEYS[d]); s.e.run(70, 0)
                     if s.pos()[:2] != m0: return True
-        return Auto.hop(s, e)
+        r = Auto.hop(s, e)
+        if not r and s.knows(15) and any('CutTree' in o['script'] for o in mj(s.sync())['object_events']):
+            log('  arbre a couper : utilisation de COUPE'); s.cut_trees(); r = Auto.hop(s, e)
+        return r
     def go(s, target, banned=(), tries=4):
         """Auto.go + verification : un trajet au Centre (heal) lance pendant go() peut nous deposer ailleurs que la cible."""
         for _ in range(4):
@@ -67,6 +75,60 @@ class Real(BattleMixin, Auto):
         try: s.center_trip()
         finally: s._healing = False
     def heal_battle(s): pass
+    def knows(s, move):
+        return any(move in q['moves'] for q in s.party())
+    def teach_hm(s, item, move, prefer=(1, 2, 3, 4, 5, 0)):
+        """Vrai joueur : START > SAC > Objets Cles > CT/CS (BOITE CT) > la CS > UTILISER > Pokemon apte. Essaie les Pokemon dans l'ordre `prefer` jusqu'a ce que l'un apprenne `move`."""
+        if s.knows(move): return True
+        sb = s.e.u32(0x03005108)
+        def pocket(off, n): return [i for i in (struct.unpack_from('<H', s.e.peek(sb + off + 4 * k, 4), 0)[0] for k in range(n)) if i]
+        tm = pocket(0x464, 58); keys = pocket(0x3b8, 30)
+        if item not in tm or 364 not in keys: log('  CS ou boite CT absente'); return False
+        pos = len([i for i in tm if 339 <= i < item]); kpos = keys.index(364); n = len(s.party())
+        for slot in prefer:
+            if slot >= n: continue
+            s.press('START', 4, 40)
+            for _ in range(9):
+                if s.e.peek(0x02037428, 1)[0] == 2: break
+                s.press('DOWN', 4, 14)
+            s.press('A', 4, 90)
+            for _ in range(4): s.press('LEFT', 4, 30)
+            s.press('RIGHT', 4, 30)                                   # pochette Objets Cles
+            for _ in range(len(keys) + 2): s.press('UP', 4, 8)
+            for _ in range(kpos): s.press('DOWN', 4, 14)              # TM CASE
+            s.press('A', 4, 40); s.press('A', 4, 60)               # OUVRIR
+            for _ in range(len(tm) + 2): s.press('UP', 4, 8)
+            for _ in range(pos): s.press('DOWN', 4, 14)
+            s.press('A', 4, 50); s.press('A', 4, 90)               # UTILISER
+            for _ in range(8):
+                if s.e.peek(sym('gPartyMenu') + 9, 1)[0] == slot: break
+                s.press('DOWN', 4, 14)
+            s.press('A', 4, 80)
+            for _ in range(30):
+                nm = name_of(s.cb2())
+                if 'Summary' in nm:      # oublier une attaque : la moins puissante
+                    b = s._brain(); pm = b.party()
+                    sl = s.e.peek(sym('gPartyMenu') + 9, 1)[0]
+                    if sl < len(pm):
+                        pw = [((b.move(m)['power'] or 0) if m else -1, i) for i, m in enumerate(pm[sl]['moves'])]
+                        for _ in range(min(pw)[1]): s.press('DOWN', 4, 14)
+                    s.press('A', 4, 60); s.press('A', 4, 60); break
+                s.press('A', 4, 40)
+                if s.idle(): break
+            for _ in range(25):
+                if s.idle(): break
+                s.press('B', 4, 30)
+            if s.knows(move): log('  CS apprise : %d par le slot %d' % (move, slot)); return True
+        log('  CS non apprise', move); return False
+    HMS = ((339, 15), (341, 57), (342, 70), (343, 148), (344, 249), (345, 127), (340, 19), (346, 291))
+    def learn_hms(s):
+        """Apprend toutes les CS du sac qu'aucun membre de l'equipe ne connait encore."""
+        for item, mv in s.HMS:
+            try: s.teach_hm(item, mv) if s.has_tm(item) else None
+            except Exception as e: log('  CS erreur', item, e)
+    def has_tm(s, item):
+        sb = s.e.u32(0x03005108)
+        return item in [struct.unpack_from('<H', s.e.peek(sb + 0x464 + 4 * k, 4), 0)[0] for k in range(58)]
     def shop_balls(s, want=12):
         """Achete des POKE BALLS au Supermarche le plus proche (1er article de la liste ; on baisse la quantite si l'argent manque)."""
         import glob

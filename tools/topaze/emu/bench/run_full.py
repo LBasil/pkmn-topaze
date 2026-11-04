@@ -549,6 +549,7 @@ def trash_puzzle(t, maxtry=80):
         ok = t.approach(cans[k])
         if ok: t.press('A', 4, 40); t.scene(120)      # un seul A : d'autres A rouvriraient la poubelle (et reinitialiseraient les verrous)
         log('  can', k, cans[k], 'ok' if ok else 'ECHEC', t.pos()[2:], 'T1=', t.getflag('FLAG_TEMP_1'))
+    if not cans: return      # Topaze : l'arene d'Apatia n'a plus de puzzle de poubelles
     first = None; todo = list(range(1, 16)); i = 0
     for _ in range(maxtry):
         if t.getflag('FLAG_FOUND_BOTH_VERMILION_GYM_SWITCHES'): break

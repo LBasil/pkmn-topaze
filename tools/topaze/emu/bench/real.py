@@ -32,7 +32,7 @@ BAD_EFFECTS = {7: 'dream eater', 8: 'mirror move', 36: 'razor wind', 38: 'selfde
 class Brain:
     def __init__(s, emu):
         s.e = emu
-        s.mv = emu.peek(sym('gBattleMoves'), 12 * 412)      # table des attaques (ROM)
+        s.mv = emu.peek(sym('gBattleMoves'), 12 * 620)      # table des attaques (ROM)
         s.te = []                                            # table des types
         b = emu.peek(sym('gTypeEffectiveness'), 3 * 120); i = 0
         while i + 2 < len(b) and b[i] != 0xFF:
@@ -43,6 +43,7 @@ class Brain:
     # ---- lecture
     def move(s, mid):
         o = s.mv[mid * 12:(mid + 1) * 12]
+        if len(o) < 12: o = bytes(12)
         return dict(effect=o[0], power=o[1], type=o[2], acc=o[3], pp=o[4], prio=o[7] if o[7] < 128 else o[7] - 256)
     def bm(s, i):
         """Combattant i (0 = joueur, 1 = adversaire) : dict."""
@@ -176,6 +177,13 @@ class BattleMixin:
             s.press('A', 4, 40); return
         if f == (sym('HandleInputChooseMove') & ~1):
             i = b.pick_move()
+            u0, f0 = b.bm(0), b.bm(1); sig = (f0['hp'], u0['hp'], tuple(u0['pp']))
+            if sig == getattr(s, '_msig', None): s._mrep = getattr(s, '_mrep', 0) + 1
+            else: s._msig = sig; s._mrep = 0; s._mtried = set()
+            if s._mrep >= 2:      # meme situation, rien ne se passe : capacite entravee (Entrave...) -> on essaie une autre
+                s._mtried.add(i)
+                alt = [k for k in range(4) if u0['moves'][k] and u0['pp'][k] > 0 and k not in s._mtried]
+                if alt: i = max(alt, key=lambda k: b.bm(0)['moves'][k] and (b.move(u0['moves'][k])['power'] or 0))
             if getattr(s, 'verbose', False):
                 u, f = b.bm(0), b.bm(1)
                 print('   TOUR nous %s n%d %d/%d | adv %s n%d %d/%d (types %d/%d) -> %s' % (u['species'], u['level'], u['hp'], u['maxhp'], f['species'], f['level'], f['hp'], f['maxhp'], f['type1'], f['type2'], u['moves'][i]), flush=True)

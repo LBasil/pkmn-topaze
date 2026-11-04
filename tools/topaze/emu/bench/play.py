@@ -51,6 +51,7 @@ class Player(Real):
         if len(p) < 5 and getattr(s, 'can_catch', True): return False
         return all(l >= lvl - 8 for l in lv[1:3])
     def ensure(s, lvl, maxsteps=300):
+        if not s.getflag('FLAG_GOT_SS_TICKET'): lvl = min(lvl, 30)      # avant le ticket, peu de zones atteignables : on ne s'acharne pas
         if s.ready(s.party(), lvl): return True
         nm = None
         if s.balls() < 3 and getattr(s, 'can_catch', True) and not getattr(s, '_shopped', False):
@@ -64,6 +65,7 @@ class Player(Real):
                 s.train(nm, lvl, maxsteps, until=lambda p: s.ready(p, lvl) or (len(p) >= 5 and s.balls() < 3))
             if len(s.party()) < 5: s.can_catch = False
             return s.ready(s.party(), lvl) or True
+        if not s.getflag('FLAG_GOT_SS_TICKET'): return True
         nm = s.grind_map(lvl)
         if not nm: log('pas de carte d entrainement pour', lvl); return False
         log('ENTRAINEMENT', nm, 'objectif', lvl, [(q['level'], q['hp']) for q in s.party()])
@@ -87,6 +89,7 @@ def main(seq):
         bump = 0
         for attempt in range(10):
             try:
+                if t.idle(): t.learn_hms()
                 t.ensure(LEVELS.get(nm, 0) + bump)
                 RF.STAGES[i][1](t); break
             except AssertionError as e:
