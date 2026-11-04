@@ -13,7 +13,7 @@ import run_full as RF
 # niveau cible de la meilleure creature avant l'etape (repere : run du 24/10, equipes 11-19, 24-25, 26-30, 35-43, ...)
 LEVELS = {'gym1': 14, 'gym2': 22, 'cottage': 24, 'ssanne': 24, 'gym3': 28, 'tower': 30, 'quartz': 30, 'gym4': 38, 'ameth': 38,
           'gym5': 44, 'hema_in': 44, 'hema_tower': 46, 'gym6': 49, 'chron_in': 50, 'chron_key': 50, 'gym7': 52, 'chron_raid': 52,
-          'seafoam': 54, 'gym8': 57, 'victory': 58, 'league': 62}
+          'seafoam': 54, 'gym8': 57, 'victory': 58, 'league': 66}
 
 _ENC = None
 def enc_maps():
@@ -50,7 +50,7 @@ class Player(Real):
         lv = sorted((q['level'] for q in p), reverse=True)
         if not lv or lv[0] < lvl: return False
         if len(p) < 5 and getattr(s, 'can_catch', True): return False
-        return all(l >= lvl - 8 for l in lv[1:3])
+        return all(l >= lvl - (8 if lvl < 60 else 10) for l in lv[1:(3 if lvl < 60 else 5)])
     def ensure(s, lvl, maxsteps=300):
         if not s.getflag('FLAG_GOT_SS_TICKET'): lvl = min(lvl, 30)      # avant le ticket, peu de zones atteignables : on ne s'acharne pas
         if s.ready(s.party(), lvl): return True
@@ -86,12 +86,16 @@ def main(seq):
             real = '/tmp/gx/st/real_%s.ss' % prev
             src = ('real_%s' % prev) if os.path.exists(real) else prev
             t = Player.resume(os.environ.get('FROM') or src)
+        if os.environ.get('BAD'): t.bad_maps = set(os.environ['BAD'].split(','))
         log('=== REAL STAGE', nm, time.strftime('%H:%M:%S'), [(q['level'], q['hp'], q['maxhp']) for q in t.party()])
         bump = 0
         for attempt in range(10):
             try:
-                if t.idle(): t.learn_hms()
+                if t.idle(): t.heal(True); t.learn_hms()
                 t.ensure(LEVELS.get(nm, 0) + bump)
+                if t.idle():
+                    pp = t.party(); b = max(pp, key=lambda q: (q['hp'] > 0, q['level']))
+                    if b['i'] > 0: t.lead_swap(b['i']); log('  tete d equipe remise : niveau', b['level'])
                 RF.STAGES[i][1](t); break
             except AssertionError as e:
                 log('ECHEC etape', nm, 'essai', attempt, e); bump += 3

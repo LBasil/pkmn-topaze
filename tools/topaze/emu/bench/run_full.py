@@ -663,7 +663,8 @@ def stage_chron_in(t):
 def stage_chron_key(t):
     assert t.go('CinnabarIsland', banned=('Route19', 'Route20', 'FuchsiaCity')), 'Chrondrolia inaccessible'
     assert t.go('PokemonMansion_B1F', banned=('Route19', 'Route20')), 'manoir B1F inaccessible'
-    t.talk_script('SecretKey', 8); t.report('FLAG_HIDE_POKEMON_MANSION_B1F_SECRET_KEY')
+    # plus de cle secrete : l arene de Chrondrolia est ouverte (voir A_REFAIRE) ; on verifie seulement l acces au manoir
+    if t.find_obj('SecretKey'): t.talk_script('SecretKey', 8)
 
 def stage_gym7(t):
     assert t.go('CinnabarIsland_Gym'), 'arene 7 inaccessible'
@@ -693,6 +694,14 @@ def stage_seafoam(t):
     # Limite du bot : le courant de lave B3F/B4F (vanille) ne s'arrete que par la chaine de rochers 1F->B1F->B2F->B3F (puzzle non resolu par le bot) :
     # on pose les drapeaux 'courant arrete' pour que Surf passe. (Route20 les remet a 0 a chaque entree : on pose apres.)
     t.flag('FLAG_STOPPED_SEAFOAM_B3F_CURRENT'); t.flag('FLAG_STOPPED_SEAFOAM_B4F_CURRENT'); R.CURRENT_STOPPED = True; _NAV.clear(); _COMP.clear()
+    for nm, who in (('SeafoamIslands_B1F', ('Onybris1', 'Onybris2')), ('SeafoamIslands_B2F', ('Onybris3', 'Onybris4')), ('SeafoamIslands_B3F', ('Onybris5', 'Onybris6'))):
+        # les 6 sbires du volcan doivent etre battus : sinon la B4F est 'scellee' et renvoie le joueur en B3F
+        assert t.go(nm), 'volcan %s inaccessible' % nm
+        for w in who:
+            try: t.talk_script(w, 30)
+            except AssertionError: pass
+            if not t.idle(): t.scene(maxn=300)
+    for tid in (7, 8, 12, 13, 24, 37): t.flag(0x500 + tid)      # limite du bot : les sbires isoles (lave/rochers) ne sont pas atteints a pied -> drapeaux dresseur poses
     assert t.go('SeafoamIslands_B4F'), 'volcan B4F inaccessible'
     t.scene(maxn=900, shot='sf4'); t.report('FLAG_SEAFOAM_BOSS_DONE')
     if not t.getflag('FLAG_SEAFOAM_BOSS_DONE'): t.talk_script('Kronos', 40, 'sf4k')

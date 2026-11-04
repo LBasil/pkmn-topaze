@@ -84,8 +84,9 @@ class Real(BattleMixin, Auto):
             log('  soigne :', [(q['level'], q['hp'], q['maxhp']) for q in s.party()])
             return True
         log('BLOCK aucun Centre Pokemon accessible'); return False
-    def heal(s):
-        if s._healing or not s.need_heal(): return
+    def heal(s, force=False):
+        if s._healing: return
+        if not s.need_heal() and not (force and any(q['hp'] < 0.8 * q['maxhp'] for q in s.party())): return
         s._healing = True
         try: s.center_trip()
         finally: s._healing = False
