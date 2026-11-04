@@ -742,6 +742,24 @@ def league_enter(t):
     t.hold('UP', 20); t.e.run(80, 0); t.scene(maxn=400)
     assert t.sync() == 'PokemonLeague_LoreleisRoom', 'entree de la Ligue sans effet : ' + t.sync()
 
+WISH = 0          # 0 = vœu 1 (laisser partir Jirachi), 1 = vœu 2 (plus de Poke Balls), 2 = vœu 3 (tous les legendaires)
+
+def multichoice_active(t):
+    import struct as _s
+    from real import sym
+    b = t.e.peek(sym('gTasks'), 16 * 0x28); f = sym('Task_MultichoiceMenu_HandleInput') | 1
+    return any(_s.unpack_from('<I', b, i * 0x28)[0] == f and b[i * 0x28 + 4] for i in range(16))
+
+def wish_scene(t, choice, maxn=500):
+    """Salle de la renommee : appuie sur A ; quand le menu des voeux s'affiche, descend `choice` fois avant de valider."""
+    for n in range(maxn):
+        if t.sync() != 'PokemonLeague_HallOfFame': return n
+        if multichoice_active(t):
+            for _ in range(choice): t.press('DOWN', 4, 20)
+            log('  menu des voeux : choix', choice)
+        t.press('A', 4, 30)
+    return maxn
+
 def league_finale(t):
     """Salle du Champion (Chen, boss, legendaires) -> Temple de la renommee (voeu de Jirachi, 3 fins) -> generique."""
     t.save('league_won'); log('  tournoi termine : porte du Champion')
@@ -759,6 +777,7 @@ def league_finale(t):
         for tr in (752, 753, 754): t.flag(0x500 + tr)
         t.heal(); champ()
     t.save('hof_in')
+    if WISH: wish_scene(t, WISH)
     for k in range(6):
         t.scene(maxn=500, shot='hof%d' % k); log('  Temple de la renommee / fin :', t.sync(), t.pos()[2:], 'fin', t.getvar('VAR_TOPAZE_ENDING'))
         if t.sync() not in ('PokemonLeague_HallOfFame', 'PokemonLeague_ChampionsRoom'): break
@@ -799,7 +818,7 @@ def stage_ending1(t):
         for f in ('FLAG_TOPAZE_POSTGAME', 'FLAG_TOPAZE_COUNCIL', 'FLAG_SYS_GAME_CLEAR'): t.flag(f)
         for f in ('FLAG_HIDE_POSTGAME_STRANGER', 'FLAG_HIDE_POSTGAME_GOSSIPERS'): t.flag(f, False)
         log('  fin 1 : generique passe, reprise sur', t.sync(), t.pos()[2:], 'fin', t.getvar('VAR_TOPAZE_ENDING'), 'postgame', t.getflag('FLAG_TOPAZE_POSTGAME'))
-        assert t.sync() == 'IndigoPlateau_Exterior' and t.getvar('VAR_TOPAZE_ENDING') == 1 and t.getflag('FLAG_TOPAZE_POSTGAME'), 'fin 1 non atteinte'
+        assert t.sync() in ('IndigoPlateau_Exterior', 'PalletTown') and t.getvar('VAR_TOPAZE_ENDING') == 1 and t.getflag('FLAG_TOPAZE_POSTGAME'), 'fin 1 non atteinte'
         t.e.run(120, 0); return
     t.walk_fight((6, 3), 10); t.hold('UP', 20); t.e.run(80, 0)
     for i in range(400):
@@ -815,6 +834,7 @@ def stage_ending1(t):
 def stage_pg_pallet(t):
     """Post-game 0/5 : apres la fin 1, le jeu ramene le joueur a Bourg-Palette (reprise apres le generique). On entre dans le Centre du Plateau pour declencher ce retour."""
     t.buff(); t.flag('FLAG_SYS_CAN_LINK_WITH_RS')
+    if t.sync() == 'PalletTown' and t.getflag('FLAG_TOPAZE_POSTGAME'): log('  deja a Bourg-Palette apres le generique'); return
     assert t.go('IndigoPlateau_PokemonCenter_1F'), 'Centre du Plateau inaccessible'
     t.e.run(200, 0)
     t.scene(maxn=200)
@@ -847,6 +867,7 @@ def stage_pg_indigo(t):
 def legend_fight(t, pat, flags=(), n=14):
     """Parle a un legendaire statique (script contenant `pat`), joue le combat, soigne ; renvoie l'etat des drapeaux."""
     t.e.run(90, 0); t.scene(maxn=200)
+    log('  legendaire : carte', t.sync(), t.pos()[2:], 'objet', t.find_obj(pat))
     ok = t.talk_script(pat, n); t.scene(maxn=900)
     for _ in range(6):      # combat long (legendaire a beaucoup de PV) : on le finit avant de continuer
         if not t.inbattle(): break
@@ -889,7 +910,15 @@ def stage_pg_birds(t):
     """Post-game 3/5 : Artikodin (clairiere de Bourg Quartz) et Electhor (centrale) reapparaissent."""
     t.buff()
     assert t.go('CeladonCity'), 'Bourg Quartz inaccessible'
-    t.e.run(90, 0); log('  arbres coupes :', t.cut_trees()); log('  Artikodin : masque ?', t.getflag('FLAG_HIDE_ARTICUNO'))
+    t.e.run(90, 0)
+    for g in ('Guard0', 'Guard1', 'Guard2', 'Guard3'):       # 3 acolytes + 1 Oracle : un combat apres l autre, avec soin entre chaque (le bot ne les enchaine pas)
+        t.heal(True)
+        if t.sync() != 'CeladonCity': t.go('CeladonCity')
+        try: t.talk_script(g, 30)
+        except AssertionError: pass
+        if not t.idle(): t.scene(maxn=300)
+    t.heal(True)
+    log('  arbres coupes :', t.cut_trees()); log('  Artikodin : masque ?', t.getflag('FLAG_HIDE_ARTICUNO'))
     legend_fight(t, 'Articuno', ('FLAG_FOUGHT_ARTICUNO',))
     assert t.go('PowerPlant'), 'centrale inaccessible'
     log('  Electhor : masque ?', t.getflag('FLAG_HIDE_ZAPDOS'))
@@ -901,7 +930,13 @@ def stage_pg_ferry(t):
     # NB : la ROM de test est anterieure au correctif du ferry (var One Island posee par le marin) : on simule le correctif.
     t.var('VAR_MAP_SCENE_ONE_ISLAND_POKEMON_CENTER_1F', 7)
     assert t.go('VermilionCity'), 'Apatia inaccessible'
-    t.e.run(90, 0); t.talk_script('FerrySailor', 40, 'ferry1'); t.scene(maxn=900)
+    t.e.run(90, 0)
+    pos = t.find_obj('FerrySailor'); assert t.approach(tuple(pos)), 'marin inaccessible'
+    for _ in range(60):          # A jusqu'a l'arrivee sur l'Ile 1 (le menu d'arrivee propose APATIA en 1er : on s'arrete des qu'on est arrive)
+        t.press('A', 4, 40)
+        if t.sync().startswith('OneIsland'): break
+    for _ in range(4): t.press('B', 4, 40)
+    t.scene(maxn=300)
     t.report('FLAG_TOPAZE_GOT_TICKETS'); log('  apres ferry :', t.sync(), t.pos()[2:])
     assert t.sync().startswith('OneIsland'), 'ferry non pris'
 
@@ -914,6 +949,7 @@ def stage_pg_sevii(t):
         t.talk_script(who, 40, 'echo_' + who[-4:]); t.report('VAR_ECHO_STAGE')
     t.save('pg_one_pc')
     assert t.go('OneIsland_KindleRoad'), 'Route Braise inaccessible'
+    assert t.go('OneIsland_KindleRoad_StormDen'), 'antre de Raikou inaccessible'
     legend_fight(t, 'Raikou', ('FLAG_ECHO_BEAST_DONE',)); t.report('VAR_ECHO_STAGE', 'FLAG_ECHO_BEAST_DONE')
 
 ISLES = ['Vermilion', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven']

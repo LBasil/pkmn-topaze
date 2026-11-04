@@ -215,7 +215,12 @@ class BattleMixin:
     def lead_swap(s, src):
         """Hors combat : echange le Pokemon de la case `src` avec la tete d'equipe (menu START > POKEMON > CHANGER)."""
         if src <= 0: return
-        s.press('START', 4, 40); s.press('DOWN', 4, 14); s.press('A', 4, 90)
+        s.press('START', 4, 40)
+        for _ in range(9):                        # le curseur du menu START est collant : on le place sur POKEMON (case 1)
+            c = s.e.peek(0x02037428, 1)[0]
+            if c == 1: break
+            s.press('DOWN' if c < 1 else 'UP', 4, 14)
+        s.press('A', 4, 90)
         def goto(n):
             for _ in range(10):
                 cur = s.e.peek(sym('gPartyMenu') + 9, 1)[0]

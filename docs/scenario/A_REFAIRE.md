@@ -397,3 +397,11 @@ Passage de LanguageTool sur 5613 textes. Corrigés : À majuscule accentué, « 
 - **PC inutilisable dans les 17 Centres** : le bg_event `Topaze_EventScript_NewsTV` était posé en (11,1), qui est la case du PC (comportement 0x83) ; il masquait le PC. Retiré (la télé reste en x12–13). 
 - **Soft-lock Parmanie** : le guide du quai (24,23) et le batelier aux lanternes (27,25) bloquaient le chemin du Centre vers l arène ; déplacés en (23,23) et (27,26).
 - **Surf** : aucun Pokémon à pied de l équipe type ne peut l apprendre (INAPTE partout) ; le bot libère une place au PC et capture un Excelangue (Route 11). À vérifier côté joueur : prévoir un Pokémon CS accessible plus tôt (ex. Psykokwak à la pêche, Ronflex/Excelangue).
+
+## 04-11 (matin) — Run joueur réel : jusqu'aux fins 2 et 3
+Joué avec le bot « vrai joueur » (captures, XP, soins, CS apprises par la Boîte CT, PC), sans buff :
+- 8 badges, tour Hematek, raid de Chrondrolia, Volcan Écume (Kronos), Route Victoire, Ligue (tournoi complet, 0 tour sauté avec équipe 71/57-63), fin 1 OK.
+- **Fin 2 (« plus de Poké Balls »)** : atteinte (VAR_TOPAZE_ENDING = 2) ; plus aucune rencontre sauvage sur la Route 1 (25 essais, 0 combat). **Fin 3 (légendaires)** : atteinte (VAR_TOPAZE_ENDING = 3), rencontres normales ; les 6 légendaires partent au PC (équipe pleine).
+- Conseil des Anciens : 14 battus sur 20 avec l'équipe réelle (tours 4, 7, 9, 10, 16, 18 : blanc-out) ; Articuno battu après les 4 gardes de Bourg Quartz (ils s'enchaînent : prévoir un soin entre chaque).
+- Ferry : fonctionne (marin d'Apatia → Île 1) ; attention, le menu d'arrivée propose APATIA en premier : un A de trop ramène à Kanto.
+**À vérifier à la main** (limites du bot, pas forcément des bugs) : Électhor (Centrale), Raikou (antre de Braise), sommet du Mont Brasier (Sulfura) non atteints ; sbires isolés du Volcan Écume (6 à battre pour ouvrir la B4F) non atteignables à pied par le bot ; Surf : aucun Pokémon de l'équipe type ne l'apprend → prévoir un Pokémon CS (ex. Excelangue Route 11).

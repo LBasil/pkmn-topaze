@@ -13,7 +13,7 @@ import run_full as RF
 # niveau cible de la meilleure creature avant l'etape (repere : run du 24/10, equipes 11-19, 24-25, 26-30, 35-43, ...)
 LEVELS = {'gym1': 14, 'gym2': 22, 'cottage': 24, 'ssanne': 24, 'gym3': 28, 'tower': 30, 'quartz': 30, 'gym4': 38, 'ameth': 38,
           'gym5': 44, 'hema_in': 44, 'hema_tower': 46, 'gym6': 49, 'chron_in': 50, 'chron_key': 50, 'gym7': 52, 'chron_raid': 52,
-          'seafoam': 54, 'gym8': 57, 'victory': 58, 'league': 66}
+          'seafoam': 54, 'gym8': 57, 'victory': 58, 'league': 66, 'pg_indigo': 76, 'pg_mine': 70, 'pg_birds': 72, 'pg_ferry': 72, 'pg_sevii': 74, 'pg_sulfura': 76, 'pg_echoes': 76}
 
 _ENC = None
 def enc_maps():
@@ -44,6 +44,7 @@ class Player(Real):
             except Exception: rt = None
             if rt and (best is None or len(rt) < best[0]): best = (len(rt), nm)
         return best[1] if best else None
+    def buff(s, *a, **k): log('  (pas de buff : joueur reel)')
     TEAM_MAPS = ('MtMoon_B1F', 'Route4')      # zones atteignables avant le ticket du S.S. Anne
     def ready(s, p, lvl):
         """Equipe prete : 5 membres (si possible), la meilleure creature a `lvl`, la 2e et la 3e pas trop loin derriere."""
