@@ -193,6 +193,7 @@ class T:
         while n < maxn:
             if getattr(s, 'real', False) and s.inbattle():      # pilote « joueur reel » : le cerveau de combat decide (real_run.py)
                 s.battle_step(); n += 1; calm = 0; continue
+            if getattr(s, 'real', False): s._throws = 0; s._noswitch = False; s._pm_tries = 0; s._turns = 0
             if s.inbattle() and not reset:
                 reset = True; s.press('UP', 4, 20); s.press('LEFT', 4, 20)      # curseur du menu d'actions sur COMBAT (les DOWN de la marche peuvent l'avoir deplace)
             if not s.inbattle(): reset = False
