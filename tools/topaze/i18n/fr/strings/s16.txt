@@ -1,11 +1,11 @@
 sJN_134|THIBAULT
-sJH_134|PARMANIE : un spécialiste EAU. Il\nfaut avoir battu la LIGUE.
+sJH_134|AMETHIOLITE : un spécialiste EAU. Il\nfaut avoir battu la LIGUE.
 sJN_135|NATHAN
-sJH_135|LAVANVILLE : un spécialiste\nSPECTRE. Il faut avoir battu la\nLIGUE.
+sJH_135|SPINELLIA : un spécialiste\nSPECTRE. Il faut avoir battu la\nLIGUE.
 sJN_136|DYLAN
 sJH_136|ÎLE 4 : un spécialiste DRAGON. Il\nfaut avoir battu la LIGUE.
 sJN_137|ADRIAN
-sJH_137|BOURG PALETTE : un spécialiste VOL.\nBats tous tes autres amis.
+sJH_137|GRENALUX : un spécialiste VOL.\nBats tous tes autres amis.
 sJN_138|PIQÛRES D'INSECTES
 sJH_138|ROUTE 2 : une fille veut 3\nANTIDOTES.
 sJN_139|HÉRITAGE PERDU
@@ -23,17 +23,17 @@ sJH_144|ROUTE 23 : un binoclard veut une\nPIERRE PLANTE.
 sJN_145|LE RIVAL D'HIER
 sJH_145|ROUTE 8 : il jure que tu l'as déjà\nbattu. Il faut 4 BADGES.
 sJN_146|L'HORLOGE ARRÊTÉE
-sJH_146|SAFRANIA : un homme te demande de\nlire les horloges des ROUTES 1, 11\net 22.
+sJH_146|HEMATOWN : un homme te demande de\nlire les horloges des ROUTES 1, 11\net 22.
 sJN_147|LES ARCHIVES DES ÉCHOS
-sJH_147|BOURG PALETTE : une femme tient le\nregistre des 7 ÉCHOS. Ferme-les\ntous.
+sJH_147|GRENALUX : une femme tient le\nregistre des 7 ÉCHOS. Ferme-les\ntous.
 sJN_148|LA TOUR DE L'ÉPREUVE
-sJH_148|SAFRANIA : bats 5 rivaux d'affilée,\nsans soin. Il faut 8 BADGES.
+sJH_148|HEMATOWN : bats 5 rivaux d'affilée,\nsans soin. Il faut 8 BADGES.
 sJN_149|UNE LETTRE DE DEMAIN
-sJH_149|POSTE DE SAFRANIA : lis les 3\nhorloges, puis demande ton\ncourrier.
+sJH_149|POSTE D'HEMATOWN : lis les 3\nhorloges, puis demande ton\ncourrier.
 sJN_150|OBJETS TROUVÉS
-sJH_150|SAFRANIA : trouve 3 objets perdus\ncachés sur les ROUTES 4, 10 et 14.
+sJH_150|HEMATOWN : trouve 3 objets perdus\ncachés sur les ROUTES 4, 10 et 14.
 sJN_151|LE TOURNOI DES ROUTES
-sJH_151|SAFRANIA : bats un dresseur sur 10\nroutes, puis affronte le ROI.
+sJH_151|HEMATOWN : bats un dresseur sur 10\nroutes, puis affronte le ROI.
 sJN_152|LE PASSEUR DES ÉCHOS
 sJH_152|Quai d'AMETHIOLITE : un passeur\nrame vers des lieux où le temps se\nperd.
 sJN_153|LE PHARE
@@ -117,14 +117,14 @@ sJH_191|PLAINE DES GÉANTS : un bébé cherche\nun foyer.
 sJN_192|DE L'EAU POUR LES DUNES
 sJH_192|MER DE DUNES : apporte 2 EAUX\nFRAÎCHES.
 sJN_193|DU LAIT POUR LE LABO
-sJH_193|BOURG PALETTE : apporte 2 LAITS\nMEUMEU.
+sJH_193|GRENALUX : apporte 2 LAITS\nMEUMEU.
 sJN_194|LE CADEAU DORÉ
-sJH_194|JADIELLE : apporte une PÉPITE.
+sJH_194|OPANIHRUM : apporte une PÉPITE.
 sJN_195|L'ÉTOILE FILANTE
-sJH_195|ARGENTA : apporte un MORCEAU\nD'ÉTOILE.
+sJH_195|PYROPIA : apporte un MORCEAU\nD'ÉTOILE.
 sJN_196|LA PERLE DU MARIN
-sJH_196|CARMIN SUR MER : apporte une GRANDE\nPERLE.
+sJH_196|APATIA : apporte une GRANDE\nPERLE.
 sJN_197|UNE PLAQUE POUR LES MORTS
-sJH_197|LAVANVILLE : apporte une RUNE SORT.
+sJH_197|SPINELLIA : apporte une RUNE SORT.
 sJN_198|LE CLIENT DES THERMES
-sJH_198|CÉLADOPOLE : apporte un ÉLIXIR.
+sJH_198|BOURG QUARTZ : apporte un ÉLIXIR.

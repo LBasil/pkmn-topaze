@@ -258,10 +258,10 @@ ITEM_HM05|- - -
 ITEM_HM06|- - -
 ITEM_HM07|Le lanceur plonge sous l’eau au\npremier tour et frappe au second.
 ITEM_POKE_FLUTE|Une flûte au son si particulier\nqu’elle permet de réveiller les\nPokémon les plus profondément
-ITEM_SECRET_KEY|La clé de la porte de l’Arène de\nCramois’Île. Elle est décorée en\nrouge.
+ITEM_SECRET_KEY|La clé de la porte de l’Arène de\nChrondrolia. Elle est décorée en\nrouge.
 ITEM_GOLD_TEETH|Un dentier en or perdu par le\ndirecteur du Parc Safari. Il lui\ndonne un sourire étincelant.
 ITEM_OLD_AMBER|Un morceau d’ambre contenant l’ADN\nd’un ancien Pokémon. Il est de\ncouleur jaune.
-ITEM_CARD_KEY|Une carte magnétique pouvant ouvrir\nles portes du siège de la Sylphe\nSARL à Safrania.
+ITEM_CARD_KEY|Une carte magnétique pouvant ouvrir\nles portes du siège de la Sylphe\nSARL à Hematown.
 ITEM_LIFT_KEY|Une clé activant l’ascenseur du\nRepaire de la Team Rocket. Elle\nporte la marque de l’organisation.
 ITEM_HELIX_FOSSIL|Le fossile d’un ancien Pokémon\naquatique. On dirait un morceau de\ncoquillage.
 ITEM_DOME_FOSSIL|Le fossile d’un ancien Pokémon\naquatique. On dirait un morceau de\ncarapace.
@@ -299,7 +299,7 @@ ITEM_FAME_CHECKER|Un appareil qui permet de se\nrappeler ce qu'on a vu et entend
 ITEM_BERRY_POUCH|Une sacoche pour les Baies.\nElle se fixe au compartiment\ndes objets importants du Sac.
 ITEM_TEACHY_TV|Un téléviseur réglé sur une\némission de conseils utiles\npour les Dresseurs débutants.
 ITEM_TRI_PASS|Un passe pour les ferrys entre\nles Îles 1, 2 et 3.\nIl porte un dessin de trois îles.
-ITEM_RAINBOW_PASS|Un passe pour les ferrys entre\nCarmin sur Mer et les Îles Sevii.\nIl porte un dessin d'arc-en-ciel.
+ITEM_RAINBOW_PASS|Un passe pour les ferrys entre\nApatia et les Îles Sevii.\nIl porte un dessin d'arc-en-ciel.
 ITEM_MYSTIC_TICKET|Un ticket pour embarquer vers\nle Roc Nombril.\nIl brille d'une lueur mystique.
 ITEM_AURORA_TICKET|Un ticket pour embarquer vers\nl'Île Aurore.\nIl brille magnifiquement.
 ITEM_POWDER_JAR|Les notes du professeur sur les\nfaiblesses des types. À consulter\nà tout moment.

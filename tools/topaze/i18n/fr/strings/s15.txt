@@ -137,7 +137,7 @@ sJH_126|ROUTE 25 : une spécialiste GLACE.\nIl faut avoir battu la LIGUE.
 sJN_127|JORDAN
 sJH_127|ROUTE 6 : un spécialiste NORMAL. Il\nfaut avoir battu la LIGUE.
 sJN_128|VIOLETTE
-sJH_128|SAFRANIA : une spécialiste PSY. Il\nfaut avoir battu la LIGUE.
+sJH_128|HEMATOWN : une spécialiste PSY. Il\nfaut avoir battu la LIGUE.
 sJN_129|EDOUARD
 sJH_129|ROUTE 10 : un spécialiste ROCHE. Il\nfaut avoir battu la LIGUE.
 sJN_130|EMMA
@@ -145,6 +145,6 @@ sJH_130|ROUTE 12 : une spécialiste PLANTE.\nIl faut avoir battu la LIGUE.
 sJN_131|GAUTHIER
 sJH_131|ROUTE 15 : un spécialiste COMBAT.\nIl faut avoir battu la LIGUE.
 sJN_132|CHLOE
-sJH_132|CRAMOIS'ÎLE : une spécialiste FEU.\nIl faut avoir battu la LIGUE.
+sJH_132|CHRONDROLIA : une spécialiste FEU.\nIl faut avoir battu la LIGUE.
 sJN_133|VINCENT
 sJH_133|ROUTE 22 : un spécialiste ÉLECTRIK.\nIl faut avoir battu la LIGUE.
