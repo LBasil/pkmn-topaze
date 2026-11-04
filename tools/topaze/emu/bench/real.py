@@ -144,6 +144,7 @@ class BattleMixin:
         nm = name_of(cb2)
         if 'Evolution' in nm:      # evolution : on laisse faire (B l'annulerait)
             s.e.run(20, 0); s.press('A', 4, 20) if False else None; return
+        if 'SetUpPSS' in nm: s.e.run(20, 0); return      # chargement de l'ecran de resume : on attend (B l'annulerait en boucle)
         if 'Summary' in nm and s.cb2() != (sym('BattleMainCB2') & ~1):      # ecran de resume = choix de l'attaque a oublier : la moins puissante
             pm = b.party(); a = s.active_slot()
             if a < len(pm):
