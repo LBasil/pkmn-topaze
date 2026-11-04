@@ -24,7 +24,7 @@ sText_PlayerGotMoney|{B_PLAYER_NAME} gagne ¥{B_BUFF1}\npour sa victoire !\p
 sText_PlayerWhiteout|{B_PLAYER_NAME} n'a plus de\nPOKéMON capable de se battre !\p
 sText_PlayerPanicked|{B_PLAYER_NAME} panique et perd ¥{B_BUFF1}…\p… … … …\p{B_PLAYER_NAME} tombe de fatigue !{PAUSE_UNTIL_PRESS}
 sText_PlayerWhiteoutAgainstTrainer|{B_PLAYER_NAME} n'a plus de\nPOKéMON capable de se battre !\p{B_PLAYER_NAME} a perdu contre\n{B_TRAINER1_CLASS} {B_TRAINER1_NAME} !{PAUSE_UNTIL_PRESS}
-sText_PlayerPaidAsPrizeMoney|{B_PLAYER_NAME} verse ¥{B_BUFF1} de gain\nà son adversaire…\p… … … …\p{B_PLAYER_NAME} tombe de fatigue !{PAUSE_UNTIL_PRESS}
+sText_PlayerPaidAsPrizeMoney|{B_PLAYER_NAME} verse ¥{B_BUFF1}\nà son adversaire pour sa victoire…\p… … … …\p{B_PLAYER_NAME} tombe de fatigue !{PAUSE_UNTIL_PRESS}
 sText_PlayerWhiteout2|{B_PLAYER_NAME} tombe de fatigue !{PAUSE_UNTIL_PRESS}
 sText_PreventsEscape|{B_SCR_ACTIVE_NAME_WITH_PREFIX} empêche la\nfuite avec {B_SCR_ACTIVE_ABILITY} !\p
 sText_CantEscape2|Impossible de fuir !\p
