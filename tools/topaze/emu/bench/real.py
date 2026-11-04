@@ -134,7 +134,9 @@ class BattleMixin:
         b = s._brain(); cb2 = s.cb2()
         k = (cb2, s.ctl())
         if k != getattr(s, '_lastk', None):
-            s._lastk = k; print('   [bat] cb2=%s ctl=%s hp=%s/%s foe=%s/%s' % (name_of(k[0]), name_of(k[1]), b.bm(0)['hp'], b.bm(0)['maxhp'], b.bm(1)['hp'], b.bm(1)['maxhp']), flush=True)
+            s._lastk = k
+            if getattr(s, 'dbg_save', False) and hasattr(s, 'save'): s.save('lastbat')
+            print('   [bat] cb2=%s ctl=%s hp=%s/%s foe=%s/%s' % (name_of(k[0]), name_of(k[1]), b.bm(0)['hp'], b.bm(0)['maxhp'], b.bm(1)['hp'], b.bm(1)['maxhp']), flush=True)
         party_cb = sym('CB2_UpdatePartyMenu') & ~1
         if cb2 == party_cb: return s.party_step()
         if cb2 == (sym('CB2_NamingScreen') & ~1):      # surnom : START (curseur sur OK), A (nom par defaut)
@@ -206,6 +208,8 @@ class BattleMixin:
         if getattr(s, '_throws', 0) >= 5: return False
         b = s._brain(); foe = b.bm(1); party = b.party()
         if len(party) >= 6 or s.balls() <= 0: return False
+        only = getattr(s, 'catch_only', None)
+        if only: return foe['species'] in only and not any(q['species'] in only for q in party)
         owned = getattr(s, 'owned', set())
         return foe['species'] not in owned
     def lead_swap(s, src):
@@ -229,6 +233,7 @@ class BattleMixin:
         b = s._brain(); want = getattr(s, '_want', None); s._want = None
         forced = b.bm(0)['hp'] <= 0
         s._pm_tries = getattr(s, '_pm_tries', 0) + 1
+        if s._pm_tries > 5: forced = True      # B n'a rien change : le menu est obligatoire (U-turn et consorts) -> on choisit un remplacant
         if not forced and (getattr(s, '_noswitch', False) or s._pm_tries > 2):      # changement impossible (Piege, Ligotage...) : on renonce
             s._noswitch = True
             for _ in range(3): s.press('B', 4, 40)
@@ -237,6 +242,10 @@ class BattleMixin:
             want = b.best_switch(avoid=(s.active_slot(),))
             if want is None:
                 want = next((p['i'] for p in b.party() if p['hp'] > 0), 0)
+        if s._pm_tries > 3:      # le choix precedent n'a rien donne (deja au combat, apte a rien...) : on essaie les autres Pokemon vivants un par un
+            tried = getattr(s, '_slots_tried', set()); alive = [p['i'] for p in b.party() if p['hp'] > 0 and p['i'] not in tried]
+            if not alive: tried = set(); alive = [p['i'] for p in b.party() if p['hp'] > 0]
+            if alive: want = alive[0]; tried.add(want); s._slots_tried = tried
         for _ in range(14):
             cur = s.e.peek(sym('gPartyMenu') + 9, 1)[0]
             if cur >= 128: cur -= 256

@@ -392,3 +392,8 @@ Le père du rival devient ALBAN (nom court dans le dialogue, « Mon fils {RIVAL}
 
 ## 03-11 (21h) — Relecture grammaticale (LanguageTool) + corrections
 Passage de LanguageTool sur 5613 textes. Corrigés : À majuscule accentué, « ne…que » remis (n'est qu'un…), « du PARC SAFARI », Va-t'en, Captures-en, SPINEL→SPINELLE partout, MAÎTRE PÊCHEUR, etc. Le reste (négations sans « ne », élisions orales) est volontaire (ton officiel).
+
+## 04-11 (nuit) — Run joueur réel : bugs trouvés
+- **PC inutilisable dans les 17 Centres** : le bg_event `Topaze_EventScript_NewsTV` était posé en (11,1), qui est la case du PC (comportement 0x83) ; il masquait le PC. Retiré (la télé reste en x12–13). 
+- **Soft-lock Parmanie** : le guide du quai (24,23) et le batelier aux lanternes (27,25) bloquaient le chemin du Centre vers l arène ; déplacés en (23,23) et (27,26).
+- **Surf** : aucun Pokémon à pied de l équipe type ne peut l apprendre (INAPTE partout) ; le bot libère une place au PC et capture un Excelangue (Route 11). À vérifier côté joueur : prévoir un Pokémon CS accessible plus tôt (ex. Psykokwak à la pêche, Ronflex/Excelangue).

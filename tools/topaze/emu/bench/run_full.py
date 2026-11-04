@@ -508,7 +508,8 @@ def stage_opanihrum(t):
 
 def badge_gym(t, gymmap, leader_pat, badge, n=40):
     assert t.go(gymmap), gymmap + ' inaccessible'
-    for _ in range(6):
+    for _ in range(10):
+        if t.sync() != gymmap: assert t.go(gymmap), gymmap + ' inaccessible'      # un trajet au Centre (soins) a pu nous sortir de l'arene
         t.cut_trees()
         t.talk_script(leader_pat, n, 'gym_' + gymmap)
         if t.getflag(badge): break

@@ -4,10 +4,15 @@ import sys, os, struct
 sys.path.insert(0, '/tmp/gx')
 from run_full import *
 import real
+import run_full as RF
 from real import BattleMixin, sym, name_of
 
 class Real(BattleMixin, Auto):
     _healing = False
+    def inbattle(s):
+        """Combat en cours, y compris pendant l'ecran d'equipe du combat (gMain.inBattle y est a 0)."""
+        if Auto.inbattle(s): return True
+        return s.cb2() in ((sym('CB2_UpdatePartyMenu') & ~1), (sym('CB2_InitPartyMenu') & ~1)) and s.ctl() == (sym('WaitForMonSelection') & ~1)
     def press(s, k, n=4, wait=20):
         """Touche ; si une evolution est en cours (apres un combat gagne), on la laisse aller au bout avec A (B l'annulerait)."""
         for _ in range(60):
@@ -19,9 +24,10 @@ class Real(BattleMixin, Auto):
         """Si on arrive SUR le tapis de la porte (sortie d'un Centre, d'une maison), le warp ne se redeclenche pas : on pousse vers la sortie."""
         if e[0] == 'warp' and s.knows(15) and any('CutTree' in o['script'] for o in mj(s.sync())['object_events']):
             nav = s.nav(); trees = {(o['x'], o['y']) for o in nav.mj['object_events'] if 'CutTree' in o['script'] and not (o.get('flag', '0') not in ('0', 0) and s.getflag(o['flag']))}
+            cd = getattr(s, '_cut_done', set()); trees = {t for t in trees if (s.sync(), t) not in cd}
             nav.objs = set(s.live_objs()) | trees; w0 = nav.mj['warp_events'][e[2]]; me = (s.pos()[2], s.pos()[3])
             if trees and not nav.path(me, (w0['x'], w0['y'])):
-                log('  arbre a couper sur le chemin : COUPE'); s.cut_trees()
+                log('  arbre a couper sur le chemin : COUPE'); s._cut_done = cd | {(s.sync(), t) for t in trees}; s.cut_trees()
         if e[0] == 'warp':
             nv = s.nav(); ws = nv.mj['warp_events']; w = ws[e[2]]; p = s.pos(); m0 = p[:2]
             if (nv.attr(w['x'], w['y']) & 0x1ff) == 0:      # warp pose sur du sol normal (Centre : 3 warps, un seul tapis) : on prend un warp voisin vers la meme carte sur un vrai tapis
@@ -31,16 +37,25 @@ class Real(BattleMixin, Auto):
                 for d in ('DOWN', 'UP', 'DOWN', 'DOWN', 'LEFT', 'RIGHT', 'DOWN'):
                     s.e.run(14, KEYS[d]); s.e.run(70, 0)
                     if s.pos()[:2] != m0: return True
-        r = Auto.hop(s, e)
-        if not r and s.knows(15) and any('CutTree' in o['script'] for o in mj(s.sync())['object_events']):
-            log('  arbre a couper : utilisation de COUPE'); s.cut_trees(); r = Auto.hop(s, e)
-        return r
+        return Auto.hop(s, e)
     def go(s, target, banned=(), tries=4):
         """Auto.go + verification : un trajet au Centre (heal) lance pendant go() peut nous deposer ailleurs que la cible."""
-        for _ in range(4):
+        fought = set()
+        for _ in range(12):
+            RF._NAV.clear(); RF._COMP.clear()      # cartes lues en direct pendant une visite precedente : les PNJ d'alors (battus depuis) barreraient a tort les couloirs
             r = Auto.go(s, target, banned, tries)
             if r and (isinstance(target, tuple) or s.sync() == target): return r
-            if not r: return r
+            if not r:
+                # un dresseur barre peut-etre un couloir : on va l'affronter (vrai joueur), puis on reessaie
+                cur = s.sync(); me = s.pos()
+                if s.knows(15) and ('cut', cur) not in fought and any('CutTree' in o['script'] for o in mj(cur)['object_events']):
+                    fought.add(('cut', cur)); log('  pas de route : COUPE sur', cur); s.cut_trees(); continue
+                tr = [o for o in mj(cur)['object_events'] if o.get('trainer_type', 'TRAINER_TYPE_NONE') != 'TRAINER_TYPE_NONE'
+                      and (cur, o['x'], o['y']) not in fought and not (o.get('flag', '0') not in ('0', 0) and s.getflag(o['flag']))]
+                if not tr: return r
+                o = min(tr, key=lambda o: abs(o['x'] - me[2]) + abs(o['y'] - me[3]))
+                fought.add((cur, o['x'], o['y'])); log('  dresseur sur le chemin : combat', cur, (o['x'], o['y']))
+                s.talk_obj((o['x'], o['y']), 20); s.scene(maxn=900); continue
         return False
     def need_heal(s):
         p = s.party()
@@ -124,8 +139,36 @@ class Real(BattleMixin, Auto):
     def learn_hms(s):
         """Apprend toutes les CS du sac qu'aucun membre de l'equipe ne connait encore."""
         for item, mv in s.HMS:
-            try: s.teach_hm(item, mv) if s.has_tm(item) else None
+            try:
+                if item == 341 and s.has_tm(341) and not s.knows(57): s.get_surfer()
+                s.teach_hm(item, mv) if s.has_tm(item) else None
             except Exception as e: log('  CS erreur', item, e)
+    SURFERS = (108,)       # especes capturables a pied (Kanto) qui peuvent apprendre Surf : Excelangue (Route 11)
+    def pc_deposit(s, slot=5):
+        """Centre le plus proche > PC > DEPOSER POKEMON > la case `slot` > BOITE1 : libere une place dans l'equipe."""
+        if len(s.party()) < 2: return False
+        for dist, nm in s.centers()[:3]:
+            if s.sync() != nm and not s.go(nm): continue
+            n = s.nav(); pc = [(x, y) for y in range(n.h) for x in range(n.w) if (n.attr(x, y) & 0xff) == 0x83]
+            if not pc: continue
+            x, y = pc[0]; s.talk_at((x, y + 1), 'UP', 40); s.press('A', 4, 40)
+            s.press('DOWN', 4, 14); s.press('A', 4, 60)
+            for _ in range(slot): s.press('DOWN', 4, 14)
+            s.press('A', 4, 40); s.press('A', 4, 40); s.press('A', 4, 60)
+            for _ in range(6): s.press('B', 4, 40)
+            log('  PC : depose la case', slot, '->', len(s.party()), 'membres')
+            return True
+        return False
+    def get_surfer(s, mapname='Route11', maxsteps=300):
+        """Surf demande, mais personne ne peut l'apprendre : on libere une place et on capture un Pokemon compatible."""
+        if not s.has_tm(341) or s.knows(57): return True
+        if any(q['species'] in s.SURFERS for q in s.party()): return True
+        if len(s.party()) >= 6 and not s.pc_deposit(5): return False
+        if s.balls() < 3: s.shop_balls()
+        s.catch_only = set(s.SURFERS); log('CAPTURE D UN POKEMON COMPATIBLE SURF', mapname)
+        try: ok = s.train(mapname, 99, maxsteps, until=lambda p: any(q['species'] in s.SURFERS for q in p))
+        finally: s.catch_only = None
+        return ok
     def has_tm(s, item):
         sb = s.e.u32(0x03005108)
         return item in [struct.unpack_from('<H', s.e.peek(sb + 0x464 + 4 * k, 4), 0)[0] for k in range(58)]

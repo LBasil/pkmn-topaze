@@ -31,6 +31,7 @@ def enc_maps():
     return _ENC
 
 class Player(Real):
+    dbg_save = bool(os.environ.get("DBG"))
     def grind_map(s, lvl):
         """Carte avec de l'herbe dont les niveaux sauvages sont proches de `lvl`, la plus proche par le graphe."""
         cur = s.sync(); p = s.pos(); best = None
