@@ -22,8 +22,8 @@ class Real(BattleMixin, Auto):
         s.e.run(n, KEYS[k]); s.e.run(wait, 0)
     def hop(s, e):
         """Si on arrive SUR le tapis de la porte (sortie d'un Centre, d'une maison), le warp ne se redeclenche pas : on pousse vers la sortie."""
-        if e[0] == 'warp' and s.knows(15) and any('CutTree' in o['script'] for o in mj(s.sync())['object_events']):
-            nav = s.nav(); trees = {(o['x'], o['y']) for o in nav.mj['object_events'] if 'CutTree' in o['script'] and not (o.get('flag', '0') not in ('0', 0) and s.getflag(o['flag']))}
+        if e[0] == 'warp' and s.knows(15) and any('CutTree' in o.get('script', '') for o in mj(s.sync())['object_events']):
+            nav = s.nav(); trees = {(o['x'], o['y']) for o in nav.mj['object_events'] if 'CutTree' in o.get('script', '') and not (o.get('flag', '0') not in ('0', 0) and s.getflag(o['flag']))}
             cd = getattr(s, '_cut_done', set()); trees = {t for t in trees if (s.sync(), t) not in cd}
             nav.objs = set(s.live_objs()) | trees; w0 = nav.mj['warp_events'][e[2]]; me = (s.pos()[2], s.pos()[3])
             if trees and not nav.path(me, (w0['x'], w0['y'])):
@@ -48,7 +48,7 @@ class Real(BattleMixin, Auto):
             if not r:
                 # un dresseur barre peut-etre un couloir : on va l'affronter (vrai joueur), puis on reessaie
                 cur = s.sync(); me = s.pos()
-                if s.knows(15) and ('cut', cur) not in fought and any('CutTree' in o['script'] for o in mj(cur)['object_events']):
+                if s.knows(15) and ('cut', cur) not in fought and any('CutTree' in o.get('script', '') for o in mj(cur)['object_events']):
                     fought.add(('cut', cur)); log('  pas de route : COUPE sur', cur); s.cut_trees(); continue
                 tr = [o for o in mj(cur)['object_events'] if o.get('trainer_type', 'TRAINER_TYPE_NONE') != 'TRAINER_TYPE_NONE'
                       and (cur, o['x'], o['y']) not in fought and not (o.get('flag', '0') not in ('0', 0) and s.getflag(o['flag']))]

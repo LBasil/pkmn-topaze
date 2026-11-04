@@ -423,7 +423,7 @@ class Auto(T):
     def find_obj(s, script_pat):
         """Position (carte JSON) de l'objet dont le script contient script_pat sur la carte courante."""
         for o in mj(s.sync())['object_events']:
-            if script_pat in o['script']: return (o['x'], o['y'])
+            if script_pat in o.get('script', ''): return (o['x'], o['y'])
     def talk_script(s, script_pat, n=14, shot=None):
         pos = s.find_obj(script_pat); assert pos, 'objet introuvable ' + script_pat
         near = [o for o in s.live_objs() if abs(o[0] - pos[0]) + abs(o[1] - pos[1]) <= 4]    # PNJ qui se deplace : position reelle
@@ -444,14 +444,14 @@ class Auto(T):
         """Coupe (parle a) tous les arbres de la carte courante atteignables ; renvoie le nombre de passages tentes."""
         n = 0
         for o in mj(s.sync())['object_events']:
-            if 'CutTree' not in o['script']: continue   # hors ecran = pas encore instancie : on s'approche quand meme
+            if 'CutTree' not in o.get('script', ''): continue   # hors ecran = pas encore instancie : on s'approche quand meme
             if s.talk_obj((o['x'], o['y']), 6): n += 1
         return n
     def smash_rocks(s, maxn=12):
         """Brise (parle a) tous les rochers `RockSmash` atteignables de la carte courante ; renvoie le nombre de rochers brises."""
         n = 0
         for o in mj(s.sync())['object_events']:
-            if 'RockSmash' not in o['script']: continue
+            if 'RockSmash' not in o.get('script', ''): continue
             if s.talk_obj((o['x'], o['y']), 10): n += 1
             if n >= maxn: break
         return n

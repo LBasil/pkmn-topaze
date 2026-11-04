@@ -405,3 +405,11 @@ Joué avec le bot « vrai joueur » (captures, XP, soins, CS apprises par la Bo�
 - Conseil des Anciens : 14 battus sur 20 avec l'équipe réelle (tours 4, 7, 9, 10, 16, 18 : blanc-out) ; Articuno battu après les 4 gardes de Bourg Quartz (ils s'enchaînent : prévoir un soin entre chaque).
 - Ferry : fonctionne (marin d'Apatia → Île 1) ; attention, le menu d'arrivée propose APATIA en premier : un A de trop ramène à Kanto.
 **À vérifier à la main** (limites du bot, pas forcément des bugs) : Électhor (Centrale), Raikou (antre de Braise), sommet du Mont Brasier (Sulfura) non atteints ; sbires isolés du Volcan Écume (6 à battre pour ouvrir la B4F) non atteignables à pied par le bot ; Surf : aucun Pokémon de l'équipe type ne l'apprend → prévoir un Pokémon CS (ex. Excelangue Route 11).
+
+## 04-11 (midi) — Fin 2 « Le Refuge » jouée par le bot
+- Postes 1 à 16 (Bourg-Palette → Île 7) : tous franchis, récompenses reçues (Évoli, Embrylex, Minidraco, Draby, Airmure…, Tauros, Scarhino, Airmure) ; stage final = 16.
+- Les objets de livraison (Pépite, Pièce Étoile, Grosse Perle, Rune Sort, Cuillère Tordue, Aimant, etc.) ont été **fournis par le harnais** (pas cherchés en jeu) : à vérifier que chacun est bien obtenable dans le jeu (item balls, boutiques, quêtes).
+- Roi du Refuge (gardien du Parc Safari, après le poste 16) : ECHO_GIOVANNI Persian 72, Dugtrio 72, Nidoking 74, Nidoqueen 74, Kangourex 76, Rhinoféros 78 **+ VAR_TOPAZE_BOOST 16 = niveaux 88–94**. Le bot (équipe 77 / 61–64) perd. Le plus haut niveau sauvage du jeu est 70 (Grotte Azurée B1F) : un joueur ne peut pas atteindre 88+ par les sauvages. **À arbitrer** : baisser le boost (ex. 0–4) ou fournir une source d'XP post-game.
+- Poste « parler au gardien » : l'employé du Parc Safari est derrière un comptoir (x=2 bloqué) : on lui parle depuis (3,6) face à gauche.
+- Pas testé : Ho-Oh (200 espèces) et Deoxys (300 espèces) — il faut un Pokédex rempli.
+- Scripts du bot : tools/topaze/emu/bench/refuge.py et refuge_king.py.
