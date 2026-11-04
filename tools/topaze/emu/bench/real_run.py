@@ -7,6 +7,41 @@ import real
 import run_full as RF
 from real import BattleMixin, sym, name_of
 
+
+import json as _json
+_CM = {}
+for _l in open('/home/claude/pkmn-topaze/charmap.txt'):
+    _m = re.match(r"'(.*)'\s*=\s*([0-9A-Fa-f]{2})\s*$", _l.strip()) if False else None
+import re as _re
+for _l in open('/home/claude/pkmn-topaze/charmap.txt'):
+    _m = _re.match(r"^'(.+?)'\s*=\s*([0-9A-Fa-f]{2})\s*$", _l.strip())
+    if _m: _CM.setdefault(int(_m.group(2), 16), _m.group(1))
+_SEEN = set()
+def dectext(b):
+    o = []
+    i = 0
+    while i < len(b):
+        c = b[i]
+        if c == 0xFF: break
+        if c == 0xFE: o.append(' / ')
+        elif c in (0xFA, 0xFB): o.append(' // ')
+        elif c == 0xFC: i += 2 if b[i+1:i+2] and b[i+1] != 0x10 else 3; 
+        elif c == 0xFD: o.append('{V%d}' % b[i+1]); i += 1
+        elif c in _CM: o.append(_CM[c])
+        else: o.append('?')
+        i += 1
+    return ''.join(o)
+def textlog(t):
+    for a in (0x02021d18, 0x0202298c):
+        try: tx = dectext(t.e.peek(a, 400))
+        except Exception: continue
+        tx = tx.strip()
+        if len(tx) < 4 or tx in _SEEN: continue
+        _SEEN.add(tx)
+        try: mp = t.sync()
+        except Exception: mp = '?'
+        open('/tmp/gx/texts.jsonl', 'a').write(_json.dumps({'map': mp, 'src': 'v4' if a == 0x02021d18 else 'bat', 'text': tx}, ensure_ascii=False) + '\n')
+
 class Real(BattleMixin, Auto):
     _healing = False
     def inbattle(s):
@@ -19,7 +54,7 @@ class Real(BattleMixin, Auto):
             nm = name_of(s.cb2())
             if 'Evolution' not in nm and 'EvolutionScene' not in nm: break
             s.e.run(4, KEYS['A']); s.e.run(40, 0)
-        s.e.run(n, KEYS[k]); s.e.run(wait, 0)
+        s.e.run(n, KEYS[k]); s.e.run(wait, 0); textlog(s)
     def hop(s, e):
         """Si on arrive SUR le tapis de la porte (sortie d'un Centre, d'une maison), le warp ne se redeclenche pas : on pousse vers la sortie."""
         if e[0] == 'warp' and s.knows(15) and any('CutTree' in o.get('script', '') for o in mj(s.sync())['object_events']):
