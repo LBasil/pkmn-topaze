@@ -121,7 +121,7 @@
  },
  "OneIsland_PokemonCenter_1F_Text_Echo6Announce": {
   "en": "CELIO: The sixth ECHO is in\\nRUIN VALLEY, on SIX ISLAND.\\pA statue of stone guards it.\\nIt has waited a long time.",
-  "fr": "CELIO : Le sixième ÉCHO est dans la\\nVALLÉE DES RUINES, sur l'ÎLE 6.\\pUne statue de pierre le garde.\\nElle attend depuis longtemps."
+  "fr": "CELIO : Le sixième ÉCHO est dans la\\nVALLÉE RUINE, sur l'ÎLE 6.\\pUne statue de pierre le garde.\\nElle attend depuis longtemps."
  },
  "OneIsland_PokemonCenter_1F_Text_Echo6Gift": {
   "en": "CELIO: The ECHO is closed!\\pThis POKéMON came with the\\ntide. Take good care of it.",
@@ -133,19 +133,19 @@
  },
  "OneIsland_PokemonCenter_1F_Text_Echo6Wait": {
   "en": "CELIO: RUIN VALLEY, SIX ISLAND.\\nMind the old ruins.",
-  "fr": "CELIO : VALLÉE DES RUINES, ÎLE 6.\\nFais attention aux vieilles ruines."
+  "fr": "CELIO : VALLÉE RUINE, ÎLE 6.\\nFais attention aux vieilles ruines."
  },
  "OneIsland_PokemonCenter_1F_Text_Echo7Announce": {
   "en": "BILL: The compass is going wild.\\pThe last ECHO is on SEVEN ISLAND,\\nin SEVAULT CANYON.\\pIt is not a beast this time.\\nIt is the keeper of time itself.\\pGo, CHAMPION. We will be here.",
-  "fr": "LÉO : Le compas s'affole.\\pLe dernier ÉCHO est sur l'ÎLE 7,\\ndans le CANYON SEVAULT.\\pC'est pas une bête cette fois.\\nC'est le gardien du temps lui-même.\\pVa, CHAMPION. Nous serons là."
+  "fr": "LÉO : Le compas s'affole.\\pLe dernier ÉCHO est sur l'ÎLE 7,\\ndans le CANYON SESOR.\\pC'est pas une bête cette fois.\\nC'est le gardien du temps lui-même.\\pVa, CHAMPION. Nous serons là."
  },
  "OneIsland_PokemonCenter_1F_Text_Echo7Epilogue": {
   "en": "BILL: The clocks are ticking\\nright again!\\pThe keeper told you what the wish\\nreally did: it cracked time open.\\pNow the old legends of land, sea\\nand sky have gathered at the top\\lof SEVAULT CANYON.\\pThey wait for a TRAINER like you.",
-  "fr": "LÉO : Les horloges tournent de\\nnouveau correctement !\\pLe gardien t'a dit ce que le vœu a\\nvraiment fait : il a fendu le\\ltemps.\\pMaintenant les anciennes légendes\\nde la terre, de la mer et du ciel\\lse sont rassemblées au sommet du\\nCANYON SEVAULT.\\pElles attendent un DRESSEUR comme\\ntoi."
+  "fr": "LÉO : Les horloges tournent de\\nnouveau correctement !\\pLe gardien t'a dit ce que le vœu a\\nvraiment fait : il a fendu le\\ltemps.\\pMaintenant les anciennes légendes\\nde la terre, de la mer et du ciel\\lse sont rassemblées au sommet du\\nCANYON SESOR.\\pElles attendent un DRESSEUR comme\\ntoi."
  },
  "OneIsland_PokemonCenter_1F_Text_Echo7Wait": {
   "en": "BILL: SEVAULT CANYON, SEVEN\\nISLAND. The keeper of time.",
-  "fr": "LÉO : CANYON SEVAULT, ÎLE 7.\\nLe gardien du temps."
+  "fr": "LÉO : CANYON SESOR, ÎLE 7.\\nLe gardien du temps."
  },
  "OneIsland_PokemonCenter_1F_Text_EchoBillAfter": {
   "en": "BILL: Every ECHO you close makes\\nthe world a little steadier.",
@@ -157,7 +157,7 @@
  },
  "OneIsland_PokemonCenter_1F_Text_EchoBillEcho2": {
   "en": "BILL: CELIO's guess was right:\\nthe ECHOES are linked.\\pThe second one is on CAPE BRINK,\\non TWO ISLAND.\\pA beast of flames guards it.\\nCalm it down. I will call you.",
-  "fr": "LÉO : L'hypothèse de CELIO était\\njuste : les ÉCHOS sont liés.\\pLe deuxième est au CAP BRINK,\\nsur l'ÎLE 2.\\pUne bête de flammes le garde.\\nCalme-la. Je t'appellerai."
+  "fr": "LÉO : L'hypothèse de CELIO était\\njuste : les ÉCHOS sont liés.\\pLe deuxième est au CAP FALAISE,\\nsur l'ÎLE 2.\\pUne bête de flammes le garde.\\nCalme-la. Je t'appellerai."
  },
  "OneIsland_PokemonCenter_1F_Text_EchoBillGift2": {
   "en": "BILL: The ECHO is closed! The\\ncompass went quiet.\\pThis POKéMON came through it.\\nTake care of it, CHAMPION.",
@@ -181,7 +181,7 @@
  },
  "OneIsland_PokemonCenter_1F_Text_EchoBillWait2": {
   "en": "BILL: CAPE BRINK, on TWO ISLAND.\\nWatch out for the heat.",
-  "fr": "LÉO : CAP BRINK, sur l'ÎLE 2.\\nFais attention à la chaleur."
+  "fr": "LÉO : CAP FALAISE, sur l'ÎLE 2.\\nFais attention à la chaleur."
  },
  "OneIsland_PokemonCenter_1F_Text_EchoCelioEcho3": {
   "en": "CELIO: BILL's compass is\\nringing again!\\pThe third ECHO is on the BOND\\nBRIDGE, near THREE ISLAND.\\pA beast of water and wind runs\\nthere. Please be careful.",
@@ -209,7 +209,7 @@
  },
  "OneIsland_PokemonCenter_1F_Text_EchoCelioWait": {
   "en": "CELIO: The first ECHO is on\\nKINDLE ROAD. Be careful.",
-  "fr": "CELIO : Le premier ÉCHO est sur la\\nROUTE BRASIER. Sois prudent."
+  "fr": "CELIO : Le premier ÉCHO est sur la\\nROUTE TISON. Sois prudent."
  },
  "OneIsland_PokemonCenter_1F_Text_EchoCelioWait3": {
   "en": "CELIO: BOND BRIDGE, THREE\\nISLAND. The beast moves fast.",
