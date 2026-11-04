@@ -4,10 +4,17 @@ import sys, os
 sys.path.insert(0, '/tmp/gx')
 from run_full import *
 import real
-from real import BattleMixin, sym
+from real import BattleMixin, sym, name_of
 
 class Real(BattleMixin, Auto):
     _healing = False
+    def press(s, k, n=4, wait=20):
+        """Touche ; si une evolution est en cours (apres un combat gagne), on la laisse aller au bout avec A (B l'annulerait)."""
+        for _ in range(60):
+            nm = name_of(s.cb2())
+            if 'Evolution' not in nm and 'EvolutionScene' not in nm: break
+            s.e.run(4, KEYS['A']); s.e.run(40, 0)
+        s.e.run(n, KEYS[k]); s.e.run(wait, 0)
     def hop(s, e):
         """Si on arrive SUR le tapis de la porte (sortie d'un Centre, d'une maison), le warp ne se redeclenche pas : on pousse vers la sortie."""
         if e[0] == 'warp':
@@ -60,11 +67,45 @@ class Real(BattleMixin, Auto):
         try: s.center_trip()
         finally: s._healing = False
     def heal_battle(s): pass
+    def shop_balls(s, want=12):
+        """Achete des POKE BALLS au Supermarche le plus proche (1er article de la liste ; on baisse la quantite si l'argent manque)."""
+        import glob
+        cur = s.sync(); p = s.pos(); out = []
+        for d in glob.glob('data/maps/*_Mart'):
+            nm = os.path.basename(d)
+            try: rt = [] if nm == cur else route(cur, (p[2], p[3]), nm)
+            except Exception: rt = None
+            if rt is not None: out.append((len(rt), nm))
+        for _, nm in sorted(out)[:3]:
+            if s.sync() != nm and not s.go(nm): continue
+            ck = s.find_obj('_Clerk')
+            if not ck: continue
+            for qty in (want, 8, 5, 3, 2, 1):
+                n0 = s.balls()
+                s.talk_at((ck[0], ck[1] + 2), 'UP', 50); s.e.run(60, 0)
+                for k in ['A', 'A'] + ['UP'] * (qty - 1) + ['A', 'A']: s.press(k, 4, 50)
+                for _ in range(5): s.press('B', 4, 40)
+                if s.balls() > n0: log('  ACHAT : balls', n0, '->', s.balls()); return True
+            log('BLOCK pas assez d argent pour des balls'); return False
+        return False
     @classmethod
     def resume(cls, name, rom='/tmp/gx/dbg2.gba'):
         t = Auto.resume.__func__(cls, name, rom)
         t.e.cmd('poke8 %x 0' % 0x030075e8)      # gTopazeGod = 0
-        t._b = real.Brain(t.e); return t
+        t._b = real.Brain(t.e)
+        orig = t.e.run; busy = [False]
+        def run(n, keys=0, _o=orig, _t=t):
+            """Toute avance d'emulation : si une evolution est en cours (combat gagne), on la mene au bout avec A (B l'annulerait)."""
+            if not busy[0]:
+                busy[0] = True
+                try:
+                    for _ in range(80):
+                        if 'Evolution' not in name_of(_t.cb2()): break
+                        _o(4, KEYS['A']); _o(40, 0)
+                finally: busy[0] = False
+            return _o(n, keys)
+        t.e.run = run
+        return t
     def grass(s):
         n = s.nav(); g = [(x, y) for y in range(n.h) for x in range(n.w) if (n.attr(x, y) & 0xff) == 2 and not n.blocked(x, y)]
         if g: return g

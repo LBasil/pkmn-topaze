@@ -43,7 +43,7 @@ class Player(Real):
             except Exception: rt = None
             if rt and (best is None or len(rt) < best[0]): best = (len(rt), nm)
         return best[1] if best else None
-    TEAM_MAPS = ('MtMoon_B1F', 'MtMoon_B2F', 'MtMoon_1F', 'Route4')      # zones atteignables avant le ticket du S.S. Anne
+    TEAM_MAPS = ('MtMoon_B1F', 'Route4')      # zones atteignables avant le ticket du S.S. Anne
     def ready(s, p, lvl):
         """Equipe prete : 5 membres (si possible), la meilleure creature a `lvl`, la 2e et la 3e pas trop loin derriere."""
         lv = sorted((q['level'] for q in p), reverse=True)
@@ -53,6 +53,8 @@ class Player(Real):
     def ensure(s, lvl, maxsteps=300):
         if s.ready(s.party(), lvl): return True
         nm = None
+        if s.balls() < 3 and getattr(s, 'can_catch', True) and not getattr(s, '_shopped', False):
+            s._shopped = True; s.shop_balls()
         if not s.getflag('FLAG_GOT_SS_TICKET') and (len(s.party()) < 5 or max(q['level'] for q in s.party()) >= lvl):
             # constitution de l'equipe : captures dans la grotte (especes encore inconnues)
             for nm in s.TEAM_MAPS:
