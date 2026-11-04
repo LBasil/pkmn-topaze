@@ -28,7 +28,7 @@ sText_WildPkmnAppearedPause|Un {B_OPPONENT_MON1_NAME} sauvage\napparaît !{PAUSE
 sText_TwoWildPkmnAppeared|{B_OPPONENT_MON1_NAME} et {B_OPPONENT_MON2_NAME}\nsauvages apparaissent !\p
 sText_GhostAppearedCantId|Le SPECTRE apparaît !\pZut !\nOn ne peut pas l'identifier !\p
 sText_TheGhostAppeared|Le SPECTRE apparaît !\p
-sText_SilphScopeUnveil|Le SILPH SCOPE dévoile l'identité\ndu SPECTRE !
+sText_SilphScopeUnveil|Le SCOPE SYLPHE dévoile l'identité\ndu SPECTRE !
 sText_TheGhostWas|Le SPECTRE était OSSELAIT !\p\n
 sText_Trainer1WantsToBattle|{B_TRAINER1_CLASS} {B_TRAINER1_NAME}\nveut se battre !\p
 sText_LinkTrainerWantsToBattle|{B_LINK_OPPONENT1_NAME}\nveut se battre !

@@ -88,7 +88,7 @@ sJN_37|DÉPLOIE TES AILES
 sJH_37|Une maison sur une longue route\nenseigne l'art de voler.
 sJN_38|LA SUPER CANNE
 sJH_38|Le gourou de la pêche vit dans une\nmaison au bord de l'eau.\nImpressionne-le.
-sJN_39|UN CADEAU DE SILPH
+sJN_39|UN CADEAU DE SYLPHE
 sJH_39|Un employé reconnaissant te donne\nun POKéMON rare.
 sJN_40|PRIX DU DOJO
 sJH_40|Gagne le duel du dojo de combat et\nchoisis ton prix.

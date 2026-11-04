@@ -114,7 +114,7 @@ gText_QuestLog_RocketHideout|REPAIRE ROCKET
 gText_QuestLog_SafariZone|PARC SAFARI
 gText_QuestLog_WardensHome|MAISON DU GARDIEN
 gText_QuestLog_FightingDojo|DOJO DE COMBAT
-gText_QuestLog_SilphCo|SILPH SA
+gText_QuestLog_SilphCo|SYLPHE SARL
 gText_QuestLog_SeafoamIslands|ÎLES ÉCUME
 gText_QuestLog_PokemonMansion|MANOIR POKéMON
 gText_QuestLog_PokemonResearchLab|LABO DE RECHERCHE POKéMON
