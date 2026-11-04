@@ -13,7 +13,7 @@
  },
  "Route4_PokemonCenter_1F_Text_LaddieBuyMagikarpForJust500": {
   "en": "MAN: Hello there, laddie!\\nHave I got a deal just for you!\\pI'll let you have a secret POKéMON\\n- a MAGIKARP - for just ¥500!\\pSo, you'll buy it, am I right?",
-  "fr": "HOMME : Salut !\\nJ'ai une affaire pour toi !\\pJe te laisse un POKéMON secret - un\\nMAGICARPE - pour seulement 500 ¥ !\\pAlors, tu l'achètes, hein ?"
+  "fr": "HOMME : Salut !\\nJ'ai une affaire pour toi !\\pJe te laisse un POKéMON secret - un\\nMAGICARPE - pour seulement ¥500 !\\pAlors, tu l'achètes, hein ?"
  },
  "Route4_PokemonCenter_1F_Text_NoRoomForMorePokemon": {
   "en": "There's no more room for any more\\nPOKéMON, it looks like.",
@@ -25,7 +25,7 @@
  },
  "Route4_PokemonCenter_1F_Text_PaidOutrageouslyForMagikarp": {
   "en": "{PLAYER} paid an outrageous ¥500\\nand bought the MAGIKARP…",
-  "fr": "{PLAYER} a payé la somme scandaleuse\\nde 500 ¥ et acheté le MAGICARPE…"
+  "fr": "{PLAYER} a payé la somme scandaleuse\\nde ¥500 et acheté le MAGICARPE…"
  },
  "Route4_PokemonCenter_1F_Text_ShouldStoreMonsUsingPC": {
   "en": "Sometimes, you'll have too many\\nPOKéMON with you to add any more.\\pIn that case, you should just\\nstore some using any PC.",
@@ -33,7 +33,7 @@
  },
  "Route4_PokemonCenter_1F_Text_SweetieBuyMagikarpForJust500": {
   "en": "MAN: Hello there, sweetie pie!\\nHave I got a deal just for you!\\pI'll let you have a secret POKéMON\\n- a MAGIKARP - for just ¥500!\\pSo, you'll buy it, am I right?",
-  "fr": "HOMME : Salut, ma jolie ! J'ai une\\naffaire rien que pour toi !\\pJe te laisse un POKéMON secret - un\\nMAGICARPE - pour seulement 500 ¥ !\\pAlors, tu l'achètes, n'est-ce pas ?"
+  "fr": "HOMME : Salut, ma jolie ! J'ai une\\naffaire rien que pour toi !\\pJe te laisse un POKéMON secret - un\\nMAGICARPE - pour seulement ¥500 !\\pAlors, tu l'achètes, n'est-ce pas ?"
  },
  "Route4_PokemonCenter_1F_Text_TeamRocketAttacksCerulean": {
   "en": "TEAM ONYBRIS attacks TOURMALIA\\ncitizens…\\pNot a day goes by without TEAM\\nONYBRIS being in the news.",

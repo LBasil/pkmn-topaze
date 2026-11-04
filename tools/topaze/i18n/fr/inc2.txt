@@ -50,7 +50,7 @@ PokedexRating_Text_YouveCompletedDex|Enfin…\pTu as rempli le POKéDEX !\pJe su
 PokedexRating_Text_Wroooaaarrr|Wroooooooaaaaaarrrr !$
 PokedexRating_Text_ThankYouMadeDreamReality|Merci, {PLAYER} !\nMerci de tout cœur !\lTu as exaucé mon rêve !$
 PokedexRating_Text_LoveSeeingYourPokedex|CHEN : Ah, bienvenue !\pDis-moi, à quoi ressemble ton\nPOKéDEX ?\pAhahaha !\pJe sais bien à quoi ça ressemble,\nmais je veux y jeter un œil !\pVoyons voir…$
-CeladonCity_GameCorner_Text_TryPokemonPrinter|C'est une IMPRIMANTE POKéMON !\pElle peut imprimer des POKéMON\nsur ta CARTE DRESSEUR.\pÇa ne coûte que 50¥.\nOn essaie ?$
+CeladonCity_GameCorner_Text_TryPokemonPrinter|C'est une IMPRIMANTE POKéMON !\pElle peut imprimer des POKéMON\nsur ta CARTE DRESSEUR.\pÇa ne coûte que ¥50.\nOn essaie ?$
 CeladonCity_GameCorner_Text_DontHaveEnoughMoney|Tu n'as pas assez d'argent.$
 CeladonCity_GameCorner_Text_ChoosePrintType|Choisis le type d'impression.$
 CeladonCity_GameCorner_Text_BigSmileForPhoto|Un grand sourire pour la photo !\nTrois… Deux… Un…\pFlash !$
