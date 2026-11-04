@@ -302,3 +302,9 @@ ITEM_TRI_PASS|Un passe pour les ferrys entre\nles Îles 1, 2 et 3.\nIl porte un 
 ITEM_RAINBOW_PASS|Un passe pour les ferrys entre\nCarmin sur Mer et les Îles Sevii.\nIl porte un dessin d'arc-en-ciel.
 ITEM_MYSTIC_TICKET|Un ticket pour embarquer vers\nle Roc Nombril.\nIl brille d'une lueur mystique.
 ITEM_AURORA_TICKET|Un ticket pour embarquer vers\nl'Île Aurore.\nIl brille magnifiquement.
+ITEM_POWDER_JAR|Les notes du professeur sur les\nfaiblesses des types. À consulter\nà tout moment.
+ITEM_RUBY|Une pierre précieuse d'une beauté\nexquise, à l'éclat rouge.\nElle symbolise la passion.
+ITEM_SAPPHIRE|Une pierre précieuse d'une beauté\nexquise, à l'éclat bleu.\nElle symbolise la sincérité.
+ITEM_ULTRA_BALL|Une BALL de très haute qualité,\nplus efficace qu'une SUPER BALL\npour capturer les POKéMON.
+ITEM_GREAT_BALL|Une BALL de bonne qualité,\nplus efficace qu'une POKé BALL\npour capturer les POKéMON.
+ITEM_LINK_CABLE|Un câble qui fait évoluer certains\nPOKéMON comme s'ils étaient\néchangés. À utiliser sur eux.

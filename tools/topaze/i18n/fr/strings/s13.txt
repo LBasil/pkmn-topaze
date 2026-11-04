@@ -62,5 +62,5 @@ gText_TimeBoard|TABLEAU DES TEMPS
 gText_ClearTime|TEMPS RÉALISÉ
 gText_XMinYZSec|{STR_VAR_1}MIN. {STR_VAR_2}.{STR_VAR_3}S.
 sText_Trainer1Fled|{PLAY_SE SE_FLEE}{B_TRAINER1_CLASS} {B_TRAINER1_NAME} a fui !
-sText_PlayerLostAgainstTrainer1|Le joueur a perdu contre\n{B_TRAINER1_CLASS} {B_TRAINER1_NAME} !
+sText_PlayerLostAgainstTrainer1|{B_PLAYER_NAME} a perdu contre\n{B_TRAINER1_CLASS} {B_TRAINER1_NAME} !
 sText_PlayerBattledToDrawTrainer1|Match nul contre\n{B_TRAINER1_CLASS} {B_TRAINER1_NAME} !

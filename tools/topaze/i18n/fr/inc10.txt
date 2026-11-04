@@ -1,0 +1,38 @@
+Text_WouldYouLikeToMixRecords|Voulez-vous échanger vos scores\navec d'autres DRESSEURS ?$
+Text_WeHopeToSeeYouAgain2|À bientôt !$
+Text_WelcomeTradeCenter|Bienvenue au CENTRE ÉCHANGE\ndu CLUB LIEN POKéMON.$
+Text_WelcomeColosseum|Bienvenue au COLISÉE\ndu CLUB LIEN POKéMON.$
+Text_WelcomeTimeCapsule|Bienvenue à la CAPSULE TEMPS\ndu CLUB LIEN POKéMON.$
+Text_PleaseComeAgain|Revenez nous voir !$
+Text_HavingDiscountSaleToday|Bienvenue !\pNous faisons des soldes aujourd'hui !$
+Text_PlayerWhatCanIDoForYou|{PLAYER}{KUN}, bienvenue !\pQue puis-je faire pour vous ?$
+Text_MakingPreparations|Préparatifs en cours !$
+Text_WantWhichFloor|À quel étage souhaitez-vous aller ?$
+Text_BagItemCanBeRegistered|Un objet du SAC peut être associé\nà SELECT pour l'utiliser facilement.$
+Text_TrainerSchoolEmail|Un message du cours pour DRESSEURS\nPOKéMON est arrivé sur le PC !\p…… …… ……\pUn POKéMON ne peut connaître\nque 4 capacités !\pChoisir les capacités à lui\napprendre fait toute la différence\nentre les DRESSEURS !\p…… …… ……$
+Text_PlayerBootedUpPC|{PLAYER} allume le PC.$
+Text_LinkWasCanceled|La communication a été annulée.$
+Text_GiveNicknameToReceivedMon|Voulez-vous donner un surnom\nau {STR_VAR_2} que vous avez reçu ?$
+Text_WelcomeWantToHealPkmn|Bienvenue dans notre CENTRE POKéMON !\pVoulez-vous que je soigne\nvos POKéMON ?$
+Text_TakeYourPkmnForFewSeconds|D'accord, je prends vos POKéMON\npour quelques instants.$
+Text_WeHopeToSeeYouAgain|À bientôt !$
+Text_RestoredPkmnToFullHealth|Merci d'avoir patienté.\nVos POKéMON sont en pleine\lforme !$
+Text_DoorOpenedFarAway|Une porte s'est ouverte\nquelque part au loin…$
+Text_BigHoleInTheWall|Il y a un grand trou dans le mur !$
+Text_WirelessClubUndergoingAdjustments|Je suis vraiment désolée.\nLe CLUB SANS FIL POKéMON est\lactuellement en réglage.$
+Text_AppearsToBeUndergoingAdjustments|Il semble être en cours\nde réglage…$
+Text_HandedOverItem|{PLAYER} remet\n{STR_VAR_1}.$
+Text_GiveNicknameToThisMon|Voulez-vous donner un surnom\nà ce {STR_VAR_1} ?$
+Text_CardKeyOpenedDoor|Bingo !\nLa CLÉ MAGNÉTIQUE a ouvert la porte !$
+Text_ItNeedsCardKey|Non !\nIl faut une CLÉ MAGNÉTIQUE !$
+Text_AccessedProfOaksPC|Connexion au PC du PROF. CHEN…\pConnexion au système\nd'évaluation du POKéDEX…$
+Text_HavePokedexRated|Voulez-vous faire évaluer\nvotre POKéDEX ?$
+Text_ClosedLinkToProfOaksPC|Connexion au PC du PROF. CHEN fermée.$
+Text_VoiceRangOutDontRunAway|Une voix a retenti :\nNe t'enfuis pas !$
+Text_ISee|Ah bon…$
+Text_TheDoorIsClosed|La porte est fermée…$
+Text_TheDoorIsOpen|La porte est ouverte…$
+Text_MonFlewAway|Le {STR_VAR_1} s'est enfui !$
+Text_TheresBedLetsRest|Il y a un lit…\nReposons-nous un peu.$
+Text_FoundTMHMContainsMove|{PLAYER} a trouvé {STR_VAR_2} !\nElle contient {STR_VAR_1}.$
+Text_MoveCanOnlyBeLearnedOnce|Cette capacité ne peut être\napprise qu'une seule fois. D'accord ?$

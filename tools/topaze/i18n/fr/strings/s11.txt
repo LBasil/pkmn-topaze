@@ -151,10 +151,10 @@ sText_GotAwaySafely|{PLAY_SE SE_FLEE}Fuite réussie !\p
 sText_PkmnFledUsingIts|{PLAY_SE SE_FLEE}{B_ATK_NAME_WITH_PREFIX} fuit\navec {B_LAST_ITEM} !\p
 sText_PkmnFledUsing|{PLAY_SE SE_FLEE}{B_ATK_NAME_WITH_PREFIX} fuit\navec {B_ATK_ABILITY} !\p
 sText_WildPkmnFled|{PLAY_SE SE_FLEE}{B_BUFF1} sauvage a fui !
-sText_PlayerDefeatedLinkTrainer|Le joueur a battu\n{B_LINK_OPPONENT1_NAME} !
-sText_TwoLinkTrainersDefeated|Le joueur a battu {B_LINK_OPPONENT1_NAME}\net {B_LINK_OPPONENT2_NAME} !
-sText_PlayerLostAgainstLinkTrainer|Le joueur a perdu contre\n{B_LINK_OPPONENT1_NAME} !
-sText_PlayerLostToTwo|Le joueur a perdu contre\n{B_LINK_OPPONENT1_NAME} et {B_LINK_OPPONENT2_NAME} !
+sText_PlayerDefeatedLinkTrainer|{B_PLAYER_NAME} a battu\n{B_LINK_OPPONENT1_NAME} !
+sText_TwoLinkTrainersDefeated|{B_PLAYER_NAME} a battu {B_LINK_OPPONENT1_NAME}\net {B_LINK_OPPONENT2_NAME} !
+sText_PlayerLostAgainstLinkTrainer|{B_PLAYER_NAME} a perdu contre\n{B_LINK_OPPONENT1_NAME} !
+sText_PlayerLostToTwo|{B_PLAYER_NAME} a perdu contre\n{B_LINK_OPPONENT1_NAME} et {B_LINK_OPPONENT2_NAME} !
 sText_PlayerBattledToDrawLinkTrainer|Match nul contre\n{B_LINK_OPPONENT1_NAME} !
 sText_PlayerBattledToDrawVsTwo|Match nul contre\n{B_LINK_OPPONENT1_NAME} et {B_LINK_OPPONENT2_NAME} !
 sText_WildFled|{PLAY_SE SE_FLEE}{B_LINK_OPPONENT1_NAME} a fui !
