@@ -210,8 +210,8 @@ def apply_inc(lg):
             if '|' in l and not l.startswith('#'):
                 k, v = l.split('|', 1); d[k] = v.replace('\u2019', "'")
     n = bad = 0
-    files = sorted(glob.glob(os.path.join(ROOT, 'data/text/*.inc')) + glob.glob(os.path.join(ROOT, 'data/scripts/*.inc')) + [os.path.join(ROOT, 'data/event_scripts.s')])
-    rx = re.compile(r'^(\w+)::\n((?:[ \t]*\.string "[^\n]*\n)+)', re.M)
+    files = sorted(glob.glob(os.path.join(ROOT, 'data/text/*.inc')) + glob.glob(os.path.join(ROOT, 'data/scripts/*.inc')) + glob.glob(os.path.join(ROOT, 'data/maps/*/scripts.inc')) + [os.path.join(ROOT, 'data/event_scripts.s')])
+    rx = re.compile(r'^(\w+)::?\n((?:[ \t]*\.string "[^\n]*\n)+)', re.M)
     for p in files:
         rel = p[len(ROOT) + 1:]
         src = open(p, encoding='utf-8').read()
