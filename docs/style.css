@@ -16,3 +16,12 @@ th{position:sticky;top:0;background:var(--card);cursor:pointer;color:var(--mut);
 .card h3{margin:.1em 0}.mut{color:var(--mut)}.team li{margin:.3em 0}details{margin:.3em 0}summary{cursor:pointer}
 .chart td,.chart th{padding:3px 5px;text-align:center;font-size:12px}.x2{background:#3a9d5d;color:#fff}.x05{background:#c25b4a;color:#fff}.x0{background:#444;color:#fff}
 .note{border-left:4px solid var(--acc);background:var(--card);padding:10px 14px;border-radius:0 8px 8px 0}
+.lang{margin-left:auto;display:flex;gap:2px}.lang button{font:inherit;font-size:13px;padding:3px 9px;border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer}
+.lang button:first-child{border-radius:6px 0 0 6px}.lang button:last-child{border-radius:0 6px 6px 0}.lang button.on{background:var(--acc);border-color:var(--acc);color:#fff}
+footer{max-width:1100px;margin:0 auto;padding:16px;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+.stat{display:grid;grid-template-columns:48px 36px 1fr;gap:8px;align-items:center;font-size:13px;margin:2px 0}.bar{height:9px;border-radius:5px;background:var(--acc)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}.kv td:first-child{color:var(--mut)}
+.badge{display:inline-block;font-size:11px;border:1px solid var(--line);border-radius:8px;padding:0 6px;color:var(--mut)}
+.ok{color:#3a9d5d}.ko{color:var(--acc)}.sp{display:inline-block;margin:2px 6px 2px 0}
+a.chip{display:inline-block;margin:2px 4px 2px 0;padding:1px 8px;border:1px solid var(--line);border-radius:10px;text-decoration:none;background:var(--card)}
+html[lang=fr] .en,html[lang=en] .fr{display:none!important}

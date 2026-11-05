@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kanto 151 – Pokémon Topaze</title><link rel="stylesheet" href="style.css"></head><body><main id="m"></main>
+<script src="app.js"></script><script src="data/pokedex.js"></script><script src="data/meta.js"></script><script>
+const M=document.getElementById("m"),C=META.coverage;
+const wildN=new Set(POKEDEX.filter(p=>p.where.length).map(p=>p.n)),gift=Object.fromEntries(META.gifts.map(g=>[g.n,g]));
+const K=POKEDEX.filter(p=>p.n<=151).map(p=>({p,w:p.where,src:p.where.length?"wild":gift[p.n]?"gift":p.from&&p.from.length?"evo":"?"}));
+M.innerHTML=`<h1>${t("kanto")}</h1><p>${lang==="fr"?`Les <b>151 Pokémon de Kanto sont tous obtenables</b> dans le jeu : ${K.filter(k=>k.w.length).length} à l’état sauvage, les autres par évolution, cadeau ou rencontre fixe.`:`All <b>151 Kanto Pokémon are obtainable</b>: ${K.filter(k=>k.w.length).length} in the wild, the rest through evolution, gifts or static encounters.`}</p><div id="t"></div>`;
+const nloc=k=>new Set(k.w.map(x=>x.loc.en)).size;
+table("t",K,[{h:"#",get:k=>k.p.n,num:1},{h:"name",get:k=>L(k.p.name),html:k=>pLink(k.p.name,k.p.n)},{h:"type",get:k=>k.p.types.join(),html:k=>k.p.types.map(tb).join("")},{h:"source",get:k=>k.src,html:k=>({wild:t("wildc"),gift:t("gift"),evo:t("evoonly"),"?":"?"})[k.src]},{h:"places",get:k=>nloc(k),num:1},{h:"top",get:k=>k.w.length?L(k.w[0].loc):"",html:k=>k.w.length?`${esc(L(k.w[0].loc))} (${k.w[0].pct}%)`:"—"}],{max:200,filters:[{label:t("source"),values:[["wild",t("wildc")],["gift",t("gift")],["evo",t("evoonly")]],test:(k,f)=>k.src===f}]});nav("kanto");
+</script></body></html>

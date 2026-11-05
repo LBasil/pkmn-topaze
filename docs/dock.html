@@ -1,7 +1,6 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Dock – Pokémon Topaze</title><link rel="stylesheet" href="style.css"></head><body><main>
-<h1>The Dock (Amethiolite)</h1>
-<p>Eight ferrymen wait at the harbor of Amethiolite. Each one rows to extra zones: wild areas full of rare Pokémon, quests, hidden items and shops. Talk to a ferryman, choose <b>GO</b>, <b>NEXT</b> or <b>STOP</b>. Zones open with badges; the temporal zones open with the story. Species lists below are generated from the game data.</p>
-<div id="t"></div></main>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Dock – Pokémon Topaze</title><link rel="stylesheet" href="style.css"></head><body><main id="m"></main>
 <script src="app.js"></script><script src="data/dock.js"></script><script>
-table("t",DOCK,[{h:"Ferry",get:x=>x.ferry},{h:"Zone",get:x=>x.name},{h:"Badges",get:x=>x.badges,num:1},{h:"Pokémon",get:x=>x.species.join(", "),html:x=>x.species.length?x.species.join(", "):"<span class='mut'>no wild Pokémon (story / shop / event)</span>"}],{max:200});
-</script><script>nav('dock')</script></body></html>
+const M=document.getElementById("m");
+M.innerHTML=`<h1>${t("dock")}</h1><p>${lang==="fr"?"Huit passeurs attendent au port d’Améthiolite. Chacun mène à des zones supplémentaires : zones sauvages pleines de Pokémon rares, quêtes, objets cachés et boutiques. Parle à un passeur et choisis <b>GO</b>, <b>NEXT</b> ou <b>STOP</b>. Les zones s’ouvrent avec les badges ; les zones temporelles s’ouvrent avec l’histoire.":"Eight ferrymen wait at the harbor of Amethiolite. Each one rows to extra zones: wild areas full of rare Pokémon, quests, hidden items and shops. Talk to a ferryman and choose <b>GO</b>, <b>NEXT</b> or <b>STOP</b>. Zones open with badges; the temporal zones open with the story."}</p><div id="t"></div>`;
+table("t",DOCK,[{h:"ferry",get:x=>x.ferry},{h:"zone",get:x=>L(x.name)},{h:"badges",get:x=>x.badges,num:1},{h:"pokemon",get:x=>x.species.map(s=>L(s.sp)).join(", "),html:x=>x.species.length?x.species.map(s=>`<a class="sp" href="pokedex.html#${s.n}">${esc(L(s.sp))}</a>`).join(""):`<span class="mut">${t("nowild")}</span>`}],{max:200});nav("dock");
+</script></body></html>
