@@ -20,6 +20,12 @@
 <p>Trainers are about 12% higher level than in FireRed, wild Pokémon 2–3 levels higher. Champions have 4–5 Pokémon with themed movesets. About 130 extra moves let Pokémon learn attacks of their new types.</p>
 <h3>Quality of life</h3>
 <ul><li>Built-in Exp. Share: all living party members earn experience.</li><li>Run anywhere with B, from the very start. Fast text by default.</li><li>Gen 7 status rules: burn deals 1/16 per turn, paralysis halves Speed.</li><li>A Move Relearner in every Pokémon Center (free).</li></ul>
+<h2>Recommended levels</h2>
+<p class="mut">Highest-level Pokémon of each champion, taken from the game data. Arrive a few levels above it.</p>
+<div class="lv"></div>
+<h2>Where to start?</h2>
+<ul><li>New to the hack? Look up your starter in the <a href="pokedex.html">Pokédex</a>: its type is not the one you remember.</li><li>Stuck? Check the <a href="items.html">Items & TMs</a> page to know where a TM or HM is given, and the <a href="trainers.html">Trainers</a> page to prepare a fight.</li><li>Building a team: the <a href="kanto.html">Kanto 151</a> page lists where every Pokémon can be found.</li></ul>
+
 <h2>Beyond the League</h2>
 <p>After the main story, the world opens up: the <b>Council of Elders</b>, time-travelling <b>Echoes</b> of the past, the legendary birds, Jirachi's wish, and <b>three different endings</b> each followed by its own post-game (the sanctuary “Refuge”, the “Reconquest” tournament run, or the Echoes). Every one of the 151 Kanto Pokémon can be obtained: see <a href="kanto.html">Kanto 151</a>, and the <a href="dock.html">Dock</a> for the ferry zones.</p>
 <h2>Known limitations</h2>
@@ -46,9 +52,18 @@
 <p>Les dresseurs ont environ 12 % de niveau en plus qu’en Rouge Feu, les Pokémon sauvages 2 à 3 niveaux de plus. Les champions ont 4 à 5 Pokémon avec des attaques thématiques. Environ 130 attaques ont été ajoutées pour que les Pokémon puissent apprendre des capacités de leurs nouveaux types.</p>
 <h3>Confort de jeu</h3>
 <ul><li>Multi Exp. intégré : tous les Pokémon vivants de l’équipe gagnent de l’expérience.</li><li>Course partout avec B, dès le début. Texte rapide par défaut.</li><li>Statuts façon génération 7 : la brûlure retire 1/16 des PV par tour, la paralysie divise la Vitesse par deux.</li><li>Un Tuteur d’attaques dans chaque Centre Pokémon (gratuit).</li></ul>
+<p class="mut en">Highest-level Pokémon of each champion, taken from the game data. Arrive a few levels above it.</p>
+<h2>Niveaux conseillés</h2>
+<p class="mut">Pokémon de plus haut niveau de chaque champion, tiré des données du jeu. Arrive avec quelques niveaux de plus.</p>
+<div class="lv"></div>
+<h2>Par où commencer ?</h2>
+<ul><li>Nouveau sur le hack ? Regarde ton starter dans le <a href="pokedex.html">Pokédex</a> : son type n’est pas celui dont tu te souviens.</li><li>Bloqué ? La page <a href="items.html">Objets & CT</a> indique où trouver chaque CT/CS, et la page <a href="trainers.html">Dresseurs</a> permet de préparer un combat.</li><li>Pour composer ton équipe : la page <a href="kanto.html">Kanto 151</a> liste où trouver chaque Pokémon.</li></ul>
+
 <h2>Après la Ligue</h2>
 <p>Après l’histoire principale, le monde s’ouvre : le <b>Conseil des Anciens</b>, les <b>Échos</b> du Temps, les oiseaux légendaires, le vœu de Jirachi et <b>trois fins différentes</b>, chacune avec son post-game (le « Refuge », la « Reconquête » ou les Échos). Les 151 Pokémon de Kanto sont tous obtenables : voir la page <a href="kanto.html">Kanto 151</a> et le <a href="dock.html">Quai</a> pour les zones en bateau.</p>
 <h2>Limites connues</h2>
 <ul><li>Le projet est en cours de développement ; signale les plantages, les textes qui débordent ou tout ce qui semble bizarre.</li><li>Beaucoup de sprites de PNJ et de champions sont encore empruntés au jeu d’origine.</li><li>Certaines chaînes du post-game ont été testées par script, pas jouées à la main de bout en bout.</li></ul>
 </div>
-</main><script src="app.js"></script><script>nav('guide')</script></body></html>
+</main><script src="app.js"></script><script src="data/champions.js"></script><script>
+document.querySelectorAll(".lv").forEach(e=>e.innerHTML='<div class="wrap"><table><tr><th>#</th><th>'+t("champions")+'</th><th>'+(lang==="fr"?"Ville":"City")+'</th><th>'+t("type")+'</th><th>'+(lang==="fr"?"Niv. max":"Top level")+'</th><th>'+(lang==="fr"?"Pokémon":"Pokémon")+'</th></tr>'+CHAMPIONS.map(c=>{const m=Math.max(...c.team.map(x=>x.lvl));return '<tr><td>'+c.n+'</td><td>'+esc(c.name)+'</td><td>'+esc(c.city)+'</td><td>'+c.type.split(" / ").map(tb).join("")+'</td><td class="n">'+m+'</td><td>'+c.team.length+'</td></tr>'}).join("")+'</table></div>');
+nav('guide')</script></body></html>

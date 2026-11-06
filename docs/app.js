@@ -3,7 +3,7 @@ let lang='en';try{lang=localStorage.getItem('lang')||((navigator.language||'').s
 document.documentElement.lang=lang;
 const UI={
  home:['Home','Accueil'],guide:['Player guide','Guide du joueur'],pokedex:['Pokédex','Pokédex'],movedex:['Movedex','Attaques'],types:['Types','Types'],
- champions:['Gym Champions','Champions d’arène'],wild:['Wild Encounters','Rencontres sauvages'],dock:['The Dock','Le Quai'],kanto:['Kanto 151','Kanto 151'],
+ champions:['Gym Champions','Champions d’arène'],wild:['Wild Encounters','Rencontres sauvages'],dock:['The Dock','Le Quai'],kanto:['Kanto 151','Kanto 151'],class:['Class','Classe'],team:['Team','Équipe'],trainers:['Trainers','Dresseurs'],itemsn:['Items & TMs','Objets & CT'],pocket:['Pocket','Poche'],price:['Price','Prix'],obtain:['How to get','Où l’obtenir'],k_ground:['On the ground','Au sol'],k_hidden:['Hidden','Caché'],k_gift:['Given by an NPC','Donné par un PNJ'],k_shop:['Shop','Boutique'],k_prize:['Prize / reward','Lot / récompense'],nosrc:['no known source in the map scripts','aucune source connue dans les scripts'],
  search:['Search…','Rechercher…'],all_types:['All types','Tous les types'],all_methods:['All methods','Toutes les méthodes'],
  name:['Name','Nom'],type:['Type','Type'],abilities:['Abilities','Talents'],category:['Category','Catégorie'],power:['Power','Puissance'],acc:['Acc.','Préc.'],pp:['PP','PP'],prio:['Priority','Priorité'],
  pokemon:['Pokémon','Pokémon'],location:['Location','Lieu'],method:['Method','Méthode'],levels:['Levels','Niveaux'],rate:['Rate','Taux'],
@@ -28,10 +28,11 @@ const TFR={Normal:'Normal',Fighting:'Combat',Flying:'Vol',Poison:'Poison',Ground
 const tn=x=>lang==='fr'?(TFR[x]||x):x;
 const tb=x=>`<span class="t" style="background:${COL[x]||'#777'}">${tn(x)}</span>`;
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const POCK={ITEMS:['Items','Objets'],POKE_BALLS:['Poké Balls','Poké Balls'],TM_CASE:['TM Case','Boîte à CT'],BERRY_POUCH:['Berry Pouch','Sac à baies'],KEY_ITEMS:['Key items','Objets rares']};const pk=p=>(POCK[p]||[p,p])[lang==='fr'?1:0];
 const catn=c=>t({Physical:'physical',Special:'special',Status:'status'}[c]||c);
 function setLang(l){try{localStorage.setItem('lang',l)}catch(e){}location.reload()}
 function nav(on){
- const p=[['index','home'],['guide','guide'],['pokedex','pokedex'],['kanto','kanto'],['movedex','movedex'],['types','types'],['champions','champions'],['wild','wild'],['dock','dock']];
+ const p=[['index','home'],['guide','guide'],['pokedex','pokedex'],['kanto','kanto'],['movedex','movedex'],['types','types'],['champions','champions'],['items','itemsn'],['trainers','trainers'],['wild','wild'],['dock','dock']];
  document.body.insertAdjacentHTML('afterbegin','<header><nav><b>Pokémon Topaze</b>'+p.map(([h,k])=>`<a href="${h}.html"${h===on?' class="on"':''}>${t(k)}</a>`).join('')+
  `<span class="lang"><button ${lang==='fr'?'class="on"':''} onclick="setLang('fr')">FR</button><button ${lang==='en'?'class="on"':''} onclick="setLang('en')">EN</button></span></nav></header>`);
  document.body.insertAdjacentHTML('beforeend','<footer>'+esc(t('foot'))+'</footer>');

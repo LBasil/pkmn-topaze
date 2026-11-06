@@ -37,7 +37,21 @@ def pair(src, fr_t, r_t):
     if u in fr_t: return dict(en=nice(u), fr=nice(fr_t[u]))    # source en anglais
     return dict(en=nice(src), fr=nice(src))
 def SP(c): return pair(sp_names.get(c, c.replace('_', ' ')), fr_species, rsp)
-def MV(c): return pair(mv_names.get(c, c.replace('_', ' ')), fr_moves, rmv)
+FR_FULL = dict(DAZZLING_GLEAM='Éclat Magique', DISARMING_VOICE='Voix Enjôleuse', MYSTICAL_FIRE='Feu Ensorcelé', FREEZE_DRY='Lyophilisation', ASTRAL_BARRAGE='Éclat Spectral',
+    HIGH_HORSEPOWER='Cavalcade Lourde', HEADLONG_RUSH='Assaut Frontal', DIAMOND_STORM='Orage Adamantin', DRAGON_HAMMER='Draco-Marteau', V_CREATE='Coup Victoire',
+    SPARKLING_ARIA="Aria de l'Écume", STEAM_ERUPTION='Jet de Vapeur', PETAL_BLIZZARD='Tempête Florale', EERIE_IMPULSE='Ondes Étranges', DRAGON_ASCENT='Draco-Ascension',
+    BLEAKWIND_STORM='Typhon Hivernal', BABY_DOLL_EYES='Regard Touchant', MULTI_ATTACK='Coup Varia-Type', TERRAIN_PULSE='Champlification', PRECIPICE_BLADES='Lame Pangéenne',
+    THOUSAND_ARROWS='Mille Flèches', MALIGNANT_CHAIN='Chaîne Maléfique', NOXIOUS_TORQUE='Crash Toxique', MOONGEIST_BEAM='Rayon Spectral', LAST_RESPECTS='Hommage Posthume',
+    TACHYON_CUTTER='Lame Tachyon', FREEZING_GLARE='Regard Glaçant', EXPANDING_FORCE='Vaste Pouvoir', PSYCHIC_NOISE='Dissonance Psy', HYPERSPACE_HOLE='Trou Dimensionnel',
+    DRAGON_ENERGY='Draco-Énergie', BLAZING_TORQUE='Crash Brûlant', MAGICAL_TORQUE='Crash Magique', ALLURING_VOICE='Voix Envoûtante', RISING_VOLTAGE='Monte-Tension',
+    DOUBLE_IRON_BASH="Écrous d'Poing", ORIGIN_PULSE='Onde Originelle', JET_PUNCH='Poing Sonique', EERIE_SPELL='Sort Sinistre')
+def MV(c):
+    for k in (c.replace('_', ' '), c.replace('_', '')):
+        if k in fr_moves: return dict(en=nice(k), fr=nice(fr_moves[k]))
+    r = pair(mv_names.get(c, c.replace('_', ' ')), fr_moves, rmv)
+    if r['en'] == r['fr'] and c in mv_names:   # attaque ajoutée par Topaze : EN depuis la constante, FR complet si connu
+        r = dict(en=nice(c.replace('_', ' ').title().replace(' Of ', ' of ').replace("'S", "'s")), fr=FR_FULL.get(c, r['fr']))
+    return r
 def AB(c): return pair(ab_names.get(c, c.replace('_', ' ')), fr_abil, rab)
 _ij = json.loads(rd('src/data/items.json'))['items']
 it_names = {i['itemId'].replace('ITEM_', ''): i['english'] for i in _ij}
@@ -229,6 +243,18 @@ for e in wjson['encounters']:
         ms = e['fishing_mons']['mons']
         for rod, (idx, rt) in ROD.items():
             add(rod, ROD_FR[rod], [(ms[i]['species'].replace('SPECIES_', ''), ms[i]['min_level'], ms[i]['max_level'], rt[j]) for j, i in enumerate(idx) if i < len(ms)])
+# fusion : une ligne par (espèce, lieu affiché, méthode) ; cartes distinctes de même nom -> meilleur taux, niveaux étendus
+_m = {}
+for w in wild:
+    k = (w['n'], w['sp']['en'], w['loc']['en'], w['how']['en'])
+    if k not in _m: _m[k] = dict(w, _maps={w['map']: w['pct']})
+    else:
+        a = _m[k]; a['min'] = min(a['min'], w['min']); a['max'] = max(a['max'], w['max'])
+        if w['map'] in a['_maps']: a['_maps'][w['map']] = max(a['_maps'][w['map']], w['pct'])
+        else: a['_maps'][w['map']] = w['pct']
+        a['pct'] = max(a['_maps'].values())
+wild = []
+for a in _m.values(): a.pop('_maps'); wild.append(a)
 by_sp = {}
 for w in wild: by_sp.setdefault(w['n'], []).append(w)
 for d in dex:
@@ -290,5 +316,75 @@ for ln in fs.split('\n'):
         dock.append(dict(ferry=ferry.replace('Ferryman', '').replace('Ferrywoman', '').replace('Boatman', ''), name=place(mp), badges=gate, species=[dict(sp=v['sp'], n=v['n'], how=sorted(v['how'])) for v in sp_.values()]))
         ask = None; gate = 0
 out('dock', 'DOCK', dock)
+
+# ---------- objets : où les trouver (sol, cachés, cadeaux, boutiques, lots) ----------
+fr_idesc = {}
+for l in open(R + '/tools/topaze/i18n/fr/item_desc.txt', encoding='utf-8'):
+    if '|' in l: k, v = l.rstrip('\n').split('|', 1); fr_idesc[k] = v.replace('\\n', ' ')
+mach_by_num = {a + '%02d' % b: (a, b, c) for a, b, c in machine.values()}
+def item_id(tok): return tok.replace('ITEM_', '')
+item_src = {}
+def src(tok, kind, mp, extra=''):
+    k = item_id(tok)
+    if k == 'NONE' or k not in it_names: return
+    item_src.setdefault(k, []).append(dict(kind=kind, loc=place(mp), **({'x': extra} if extra else {})))
+ball = {}
+for m in re.finditer(r'^(\w+)::\n\s*finditem (ITEM_\w+)', rd('data/scripts/item_ball_scripts.inc'), re.M): ball[m.group(1)] = m.group(2)
+for p_ in glob.glob(R + '/data/maps/*/map.json'):
+    try: j = json.load(open(p_, encoding='utf-8'))
+    except Exception: continue
+    for o in j.get('object_events', []):
+        if o.get('script') in ball: src(ball[o['script']], 'ground', j['id'])
+    for b in j.get('bg_events', []):
+        if b.get('type') == 'hidden_item': src(b['item'], 'hidden', j['id'])
+for p_ in sorted(glob.glob(R + '/data/maps/*/scripts.inc')):
+    folder = os.path.basename(os.path.dirname(p_)); mp = folder_id.get(folder, 'MAP_' + folder.upper()); txt = open(p_, encoding='utf-8').read()
+    for m in re.finditer(r'^\s*(giveitem_msg|giveitem)\s+(?:\w+,\s*)?(ITEM_\w+)', txt, re.M): src(m.group(2), 'gift', mp)
+    for m in re.finditer(r'(\w+)::\n((?:\s*\.2byte ITEM_\w+\n)+)', txt):
+        for tok in re.findall(r'ITEM_\w+', m.group(2)): src(tok, 'shop', mp)
+    for m in re.finditer(r'^\s*setvar VAR_(?:0x8009|TEMP_1), (ITEM_\w+)', txt, re.M): src(m.group(1), 'prize', mp)
+items_out = []
+for i in _ij:
+    k = i['itemId'].replace('ITEM_', '')
+    if k in ('NONE',) or k.startswith('UNK') or k.startswith('?'): continue
+    seen = set(); ss = []
+    for x in item_src.get(k, []):
+        key = (x['kind'], x['loc']['en'])
+        if key in seen: continue
+        seen.add(key); ss.append(x)
+    tm = re.fullmatch(r'(TM|HM)(\d\d)', k)
+    nm = IT(k)
+    if tm and tm.group(1) + tm.group(2) in mach_by_num:
+        mv_ = MV(mach_by_num[tm.group(1) + tm.group(2)][2]); _tmmv = mach_by_num[tm.group(1) + tm.group(2)][2]; nm = dict(en='%s%s %s' % (tm.group(1), tm.group(2), mv_['en']), fr='%s%s %s' % ('CT' if tm.group(1) == 'TM' else 'CS', tm.group(2), mv_['fr']))
+    items_out.append(dict(id=k, name=nm, desc=(dict(en=move_desc_en.get(_tmmv, ''), fr=md_fr.get(_tmmv, '')) if tm and tm.group(1) + tm.group(2) in mach_by_num else dict(en=i.get('description_english', '').replace('\\n', ' ').replace('\n', ' '), fr=fr_idesc.get(i['itemId'], ''))), pocket=i.get('pocket', '').replace('POCKET_', ''), price=i.get('price', 0), tm=(tm.group(1) + tm.group(2)) if tm else '', src=ss))
+out('items', 'ITEMS', items_out)
+_tmsrc = {x['tm']: x['src'] for x in items_out if x['tm']}
+for mv in moves:
+    mv['tmsrc'] = _tmsrc.get(mv['tm'], []) if mv['tm'] else []
+out('moves', 'MOVES', moves)
+print(len(items_out), 'objets,', sum(1 for x in items_out if x['src']), 'avec source,', sum(1 for x in items_out if x['tm'] and x['src']), '/', sum(1 for x in items_out if x['tm']), 'CT/CS localisées')
+
+# ---------- dresseurs : lieu, classe, équipe ----------
+tr_src = rd('src/data/trainers.h'); tp_all = rd('src/data/trainer_parties.h')
+cls_fr = dict(re.findall(r'\[TRAINER_CLASS_(\w+)\]\s*=\s*_\("([^"]*)"\)', rd('src/data/text/trainer_class_names.h')))
+tr_blocks = {}
+for m in re.finditer(r'\[TRAINER_(\w+)\] = \{(.*?)\n    \},', tr_src, re.S):
+    b = m.group(2)
+    c = re.search(r'\.trainerClass = TRAINER_CLASS_(\w+)', b); n = re.search(r'\.trainerName = _\("([^"]*)"\)', b); pt = re.search(r'\.party = \w+\((\w+)\)', b)
+    if c and n and pt: tr_blocks[m.group(1)] = (c.group(1), n.group(1), pt.group(1), 'doubleBattle = TRUE' in b)
+tr_out = []
+seen_tr = set()
+for p_ in sorted(glob.glob(R + '/data/maps/*/scripts.inc')):
+    folder = os.path.basename(os.path.dirname(p_)); mp = folder_id.get(folder, 'MAP_' + folder.upper()); txt = open(p_, encoding='utf-8').read()
+    for tid in re.findall(r'trainerbattle\w*\s+TRAINER_(\w+)', txt):
+        if tid in seen_tr or tid not in tr_blocks: continue
+        seen_tr.add(tid); cl, nm, pty, dbl = tr_blocks[tid]
+        m = re.search(r'%s\[\] = \{(.*?)\n\};' % pty, tp_all, re.S)
+        if not m: continue
+        team = party(m.group(1))
+        if not team: continue
+        tr_out.append(dict(id=tid, cls=dict(en=nice(cl.replace('_', ' ').title()), fr=nice(cls_fr.get(cl, cl))), name=nm.title() if nm.isupper() else nm, loc=place(mp), dbl=dbl, team=[dict(sp=t_['species'], lvl=t_['lvl'], item=t_['item'], moves=t_['moves']) for t_ in team]))
+out('trainers', 'TRAINERS', tr_out)
+print(len(tr_out), 'dresseurs')
 print(len(dex), 'pokémon,', len(moves), 'attaques,', len(champs), 'champions,', len(wild), 'lignes sauvages,', len(dock), 'destinations quai,', len(gifts), 'cadeaux/statiques')
 print('couverture 1G :', coverage)

@@ -9,7 +9,7 @@ function detail(name){const m=MOVES.find(x=>x.name.en===name);if(!m)return list(
  const ch=(a,f)=>a.map(x=>{const p=f?x[0]:x;return `<a class="chip" href="pokedex.html#${p.n}">${esc(L(p.name))}${f?` <span class="mut">${t("lv")}${x[1]}</span>`:""}</a>`}).join("")||"—";
  M.innerHTML=`<p><a href="movedex.html">${t("back")}</a></p><h1>${esc(L(m.name))} ${tb(m.type)}</h1><p class="mut">${esc(lang==="fr"?m.name.en:m.name.fr)}${m.tm?` · <b>${m.tm}</b>`:""}</p><p>${esc(L(m.desc))}</p>
  <table class="kv"><tr><td>${t("category")}</td><td>${catn(m.cat)}</td></tr><tr><td>${t("power")}</td><td>${m.power||"—"}</td></tr><tr><td>${t("acc")}</td><td>${m.acc||"—"}</td></tr><tr><td>${t("pp")}</td><td>${m.pp}</td></tr><tr><td>${t("prio")}</td><td>${m.prio}</td></tr><tr><td>Contact</td><td>${m.contact?"✔":"—"}</td></tr></table>
- <h2>${t("learners")} — ${t("level")}</h2><p>${ch(lvl,1)}</p>${tm.length?`<h2>${m.tm}</h2><p>${ch(tm)}</p>`:""}<h2>${t("egg")}</h2><p>${ch(egg)}</p>`;window.scrollTo(0,0)}
+ ${m.tmsrc&&m.tmsrc.length?`<h2>${t("obtain")} ${m.tm}</h2><ul>${m.tmsrc.map(x=>`<li>${t("k_"+x.kind)} — ${esc(L(x.loc))}</li>`).join("")}</ul>`:m.tm?`<h2>${t("obtain")} ${m.tm}</h2><p class="mut">${t("nosrc")}</p>`:""}<h2>${t("learners")} — ${t("level")}</h2><p>${ch(lvl,1)}</p>${tm.length?`<h2>${m.tm}</h2><p>${ch(tm)}</p>`:""}<h2>${t("egg")}</h2><p>${ch(egg)}</p>`;window.scrollTo(0,0)}
 function route(){const h=decodeURIComponent(location.hash.slice(1));h?detail(h):list()}
 window.onhashchange=route;route();nav("movedex");
 </script></body></html>
