@@ -77,3 +77,8 @@ __pycache__/
 *.pyc
 /Topaze_EN.gba
 /Topaze_FR.gba
+
+# wiki : les JS de docs/ doivent etre versionnes
+!docs/*.js
+!docs/data/*.js
+!docs/data/map/*.js
