@@ -102,7 +102,9 @@ def gfx_label(g):
     return dict(en=nice(k.replace('_', ' ')), fr=GFX_FR.get(k, nice(k.replace('_', ' '))))
 
 # ---------- noms de cartes ----------
-WORDS_FR = dict(House='Maison', Houses='Maisons', Gym='Arène', Center='Centre', Mart='Boutique', Lab='Labo', Cave='Grotte', Tower='Tour', Room='Salle', Entrance='Entrée', Exit='Sortie', Basement='Sous-sol', Hideout='Planque', Lair='Repaire', Mansion='Manoir', Museum='Musée', Station='Gare', Gate='Poste', Path='Chemin', Tunnel='Tunnel', Forest='Forêt', Mountain='Mont', Mt='Mont', Floor='Étage', Roof='Toit', Rooftop='Toit', Hall='Hall', Office='Bureau', Shop='Magasin', Store='Magasin', Department='Grand Magasin', Library='Bibliothèque', Harbor='Port', Port='Port', Zoo='Zoo', Safari='Safari', Game='Jeux', Corner='Salle', Power='Centrale', Plant='Centrale', Elevator='Ascenseur', Lobby='Hall', Back='Arrière', Front='Avant', Outside='Extérieur', Inside='Intérieur', Chamber='Chambre', Team='Team', North='Nord', South='Sud', East='Est', West='Ouest', Northeast='Nord-Est', Island='Île', Ship='Navire', Deck='Pont', Cabin='Cabine', Dock='Quai', Dojo='Dojo', Pokemon='Pokémon', Move='Attaque', Deleter='Oubli', Relearner='Tuteur', Nursery='Garderie', Daycare='Pension', Restaurant='Restaurant', School='École', Ruins='Ruines', Altar='Autel', Refuge='Refuge', Council='Conseil', Echo='Écho', Echoes='Échos', Time='Temps', Prize='Lots', Trade='Échange', Fan='Fan', Club='Club', Rival='Rival', Cottage='Chaumière', Ranch='Ranch', Mine='Mine', Lighthouse='Phare', Volcano='Volcan', Garden='Jardin', Park='Parc', Bridge='Pont', Hot='Chaud', Spring='Source', Springs='Sources', Door='Porte', Sign='Panneau', Unused='Inutilisé', Upstairs='Étage', Downstairs='Rez-de-chaussée', Stall='Stand', Battle='Combat', Boutique='Boutique', Apothecary='Apothicaire', Library_='Bibliothèque')
+WORDS_FR = dict(House='Maison', Houses='Maisons', Gym='Arène', Center='Centre', Mart='Boutique', Lab='Labo', Cave='Grotte', Tower='Tour', Room='Salle', Entrance='Entrée', Exit='Sortie', Basement='Sous-sol', Hideout='Planque', Lair='Repaire', Mansion='Manoir', Museum='Musée', Station='Gare', Gate='Poste', Path='Chemin', Tunnel='Tunnel', Forest='Forêt', Mountain='Mont', Mt='Mont', Floor='Étage', Roof='Toit', Rooftop='Toit', Hall='Hall', Office='Bureau', Shop='Magasin', Store='Magasin', Department='Grand Magasin', Library='Bibliothèque', Harbor='Port', Port='Port', Zoo='Zoo', Safari='Safari', Game='Jeux', Corner='Salle', Power='Centrale', Plant='Centrale', Elevator='Ascenseur', Lobby='Hall', Back='Arrière', Front='Avant', Outside='Extérieur', Inside='Intérieur', Chamber='Chambre', Team='Team', North='Nord', South='Sud', East='Est', West='Ouest', Northeast='Nord-Est', Island='Île', Ship='Navire', Deck='Pont', Cabin='Cabine', Dock='Quai', Dojo='Dojo', Pokemon='Pokémon', Move='Attaque', Deleter='Oubli', Relearner='Tuteur', Nursery='Garderie', Daycare='Pension', Restaurant='Restaurant', School='École', Ruins='Ruines', Altar='Autel', Refuge='Refuge', Council='Conseil', Echo='Écho', Echoes='Échos', Time='Temps', Prize='Lots', Trade='Échange', Fan='Fan', Club='Club', Rival='Rival', Cottage='Chaumière', Ranch='Ranch', Mine='Mine', Lighthouse='Phare', Volcano='Volcan', Garden='Jardin', Park='Parc', Bridge='Pont', Hot='Chaud', Spring='Source', Springs='Sources', Door='Porte', Sign='Panneau', Unused='Inutilisé', Upstairs='Étage', Downstairs='Rez-de-chaussée', Stall='Stand', Battle='Combat', Boutique='Boutique', Apothecary='Apothicaire', Library_='Bibliothèque', Base='Base', Beach='Plage', Berry='Baies', Bike='Vélo', Bond='Lien', Building='Bâtiment', Bush='Buisson', Canyon='Canyon', Cape='Cap', Care='Soins', Colosseum='Colisée', Condominiums='Résidence', Connection='Liaison', Corridor='Couloir', Day='Jour', Den='Antre', Depths='Profondeurs', Dotted='Pointillé', Experiment='Expérience', Exterior='Extérieur', Fame='Gloire', Fishing='Pêche', Fork='Bifurcation', Glade='Clairière', Glass='Verre', Gorgeous='Splendide', Green='Vert', Grove='Bosquet', Hole='Trou', Home='Maison', Hotel='Hôtel', Icefall='Chute de Glace', Isle='Île', Joyful='Joyeux', Key='Clé', Kindle='Brasier', Kitchen='Cuisine', Labyrinth='Labyrinthe', Lane='Allée', Lost='Perdu', Lounge='Salon', Meadow='Prairie', Memorial='Mémorial', Mr='M.', Of='de', Outcast='Banni', Pattern='Motif', Pillar='Pilier', Prototype='Prototype', Research='Recherche', Resort='Station', Rest='Repos', Rocket='Onybris', Ruby='Rubis', Ruin='Ruine', Sapphire='Saphir', Sea='Mer', Secret='Secret', Spa='Spa', Stairs='Escaliers', Steel='Acier', Stone='Pierre', Storm='Tempête', Summit='Sommet', Treasure='Trésor', Valley='Vallée', Victory='Victoire', Volunteer='Volontaires', Wardens='Gardiens', Warehouse='Entrepôt', Water='Eau', Trainer='Dresseur', Tide='Marée', Indigo='Indigo', Plateau='Plateau')
+POSS_FR = dict(Agathas='Agatha', Brunos='Aldo', Loreleis='Olga', Lances='Peter', Champions='du Maître', Captains='du Capitaine', Copycats='de l’Imitatrice', Psychics='du Médium', Players='du joueur', Rivals='du rival', Oaks='du Prof. Chen')
+TYPE_FR = dict(Room='Salle', House='Maison', Lab='Labo', Home='Maison')
 def camel(seg): return re.sub(r'(?<=[a-z])(?=[A-Z0-9])', ' ', seg)
 SPECIAL_FR = {'Players House': 'Maison du joueur', 'Rivals House': 'Maison du rival', 'Professor Oaks Lab': 'Labo du Prof. Chen', 'Pokemon Center': 'Centre Pokémon', 'Pokemon Mart': 'Boutique Pokémon', 'Mart': 'Boutique', 'Generic House': 'Maison', 'Pokemon League': 'Ligue Pokémon', 'Game Corner': 'Salle de jeux', 'Victory Road': 'Route Victoire', 'Safari Zone': 'Parc Safari', 'Rocket Hideout': 'Planque Onybris', 'Mt Moon': 'Mont Sélénite', 'Department Store': 'Grand Magasin', 'Lances Room': 'Salle de Peter', 'Lorelei': 'Olga'}
 import unicodedata
@@ -112,6 +114,7 @@ def tr_words(ws, lang):
     t = ' '.join(ws)
     if lang == 'fr':
         for k, v in SPECIAL_FR.items(): t = re.sub(r'\b%s\b' % k, v, t)
+        t = re.sub(r'\b(%s) (Room|House|Lab|Home)\b' % '|'.join(POSS_FR), lambda m: '%s %s' % (TYPE_FR[m.group(2)], POSS_FR[m.group(1)] if POSS_FR[m.group(1)].startswith('du') or POSS_FR[m.group(1)].startswith('de') else 'de ' + POSS_FR[m.group(1)]), t)
         t = ' '.join(WORDS_FR.get(w, w) for w in t.split(' '))
     return t
 def phrase(folder, lang, area_en=''):
@@ -133,8 +136,18 @@ def mname(folder):
     ph_en, with_area = phrase(folder, 'en', base_en); ph_fr, _ = phrase(folder, 'fr', base_en)
     if not ph_en: return dict(en=pl['en'], fr=pl['fr'])
     for k_ in ('Players', 'Rivals', 'Oaks', 'Lances'): ph_en = re.sub(r'\b%s\b' % k_, k_[:-1] + "'s", ph_en)
-    if with_area: return dict(en='%s – %s' % (base_en, ph_en), fr='%s – %s' % (base_fr, ph_fr))
-    return dict(en=ph_en, fr=ph_fr)
+    if with_area: return dict(en='%s – %s' % (base_en, ph_en), fr=fixfr('%s – %s' % (base_fr, ph_fr)))
+    return dict(en=ph_en, fr=fixfr(ph_fr))
+def fixfr(n):
+    n = re.sub(r'\bde ([AEIOUYÉ])', r"d'\1", n)
+    n = re.sub(r'\b(Salle|Maison|Labo) d\'(Agatha|Aldo|Olga)', lambda m: m.group(1) + ' d\'' + m.group(2), n)
+    n = n.replace('Cave Taupiqueur', 'Tunnel Taupiqueur').replace('Altering Grotte', 'Grotte Métamo').replace('Grotte Métamo – Grotte Métamo', 'Grotte Métamo')
+    n = re.sub(r'\bSecret Maison\b', 'Maison secrète', n)
+    n = re.sub(r'(\w+) (Maison|Entrée|Sortie)$', lambda m: m.group(2) + ' ' + m.group(1) if m.group(1) not in ('Maison','Entrée') and m.group(1)[0].isupper() and False else m.group(0), n)
+    n = re.sub(r' – (Nord|Sud|Est|Ouest|Nord-Est|Sud-Est) Entrée', r' – Entrée \1', n)
+    n = n.replace('Est Ouest Tunnel', 'Tunnel Est-Ouest').replace('Nord Sud Tunnel', 'Tunnel Nord-Sud')
+    n = n.replace('Victory Road Lair', 'Antre Route Victoire').replace('Grenalux – Mine', 'Grenalux – Mine').replace('Cap Brink', 'Cap Falaise').replace('Cap Falaise – Cap Falaise', 'Cap Falaise')
+    return n
 MJ = {}
 for p_ in glob.glob(R + '/data/maps/*/map.json'):
     try: MJ[os.path.basename(os.path.dirname(p_))] = json.load(open(p_, encoding='utf-8'))
@@ -295,7 +308,7 @@ for sid, e in dex_by_id.items():
     if not f: continue
     pp = pal_.get(pt.get(sid, ''))
     try:
-        conv(os.path.join(R, f, 'front.png'), read_pal(os.path.join(R, pp + '.pal')) if pp and os.path.exists(os.path.join(R, pp + '.pal')) else None, outp); npk += 1
+        conv(next(x for x in (os.path.join(R, f, 'front.png'), os.path.join(R, f, 'normal/front.png'), os.path.join(R, f, 'anim_front.png')) if os.path.exists(x)), read_pal(os.path.join(R, pp + '.pal')) if pp and os.path.exists(os.path.join(R, pp + '.pal')) else None, outp); npk += 1
     except Exception as ex: pass
 ic = dict(re.findall(r'\[ITEM_(\w+)\]\s*=\s*\{gItemIcon_(\w+), gItemIconPalette_(\w+)\}', rd('src/data/item_icon_table.h')) and [(a, (b, c)) for a, b, c in re.findall(r'\[ITEM_(\w+)\]\s*=\s*\{gItemIcon_(\w+), gItemIconPalette_(\w+)\}', rd('src/data/item_icon_table.h'))])
 itx = rd('src/data/graphics/items.h'); icf = dict(re.findall(r'gItemIcon_(\w+)\[\] = INCBIN_U32\("([^"]+)\.4bpp\.lz"', itx)); icp = dict(re.findall(r'gItemIconPalette_(\w+)\[\] = INCBIN_U32\("([^"]+)\.gbapal\.lz"', itx))

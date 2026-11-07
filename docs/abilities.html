@@ -2,5 +2,5 @@
 <script src="app.js"></script><script src="data/abilities.js"></script><script>
 const M=document.getElementById("m");
 M.innerHTML=`<h1>${t("abilities")}</h1><p class="lead">${lang==="fr"?"Tous les talents du jeu, leur effet et les Pokémon qui les possèdent.":"Every ability in the game, its effect and the Pokémon that have it."}</p><div id="t"></div>`;
-table("t",ABILITIES,[{h:"name",get:x=>L(x.name),first:1,nw:1,html:x=>`<b id="${esc(x.id)}">${esc(L(x.name))}</b><div class="mut">${esc(lang==="fr"?x.name.en:x.name.fr)}</div>`},{h:"desc",get:x=>L(x.desc),html:x=>esc(L(x.desc))},{h:"holders",get:x=>x.pokemon.length,html:x=>x.pokemon.map(p=>`<a class="chip" href="pokedex.html#${p.n}">${pimg(p.n)}${esc(L(p.name))}</a>`).join("")||"—"}],{max:60,hashSearch:1});nav("abilities");
+table("t",ABILITIES,[{h:"name",get:x=>L(x.name),first:1,nw:1,html:x=>`<b id="${esc(x.id)}">${esc(L(x.name))}</b><div class="mut">${esc(lang==="fr"?x.name.en:x.name.fr)}</div>`},{blk:1,h:"desc",get:x=>L(x.desc),html:x=>esc(L(x.desc))},{blk:1,h:"holders",get:x=>x.pokemon.length,html:x=>x.pokemon.map(p=>`<a class="chip" href="pokedex.html#${p.n}">${pimg(p.n)}${esc(L(p.name))}</a>`).join("")||"—"}],{max:60,hashSearch:1});nav("abilities");
 </script></body></html>

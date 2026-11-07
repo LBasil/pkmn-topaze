@@ -3,5 +3,5 @@
 const M=document.getElementById("m"),NM=Object.fromEntries(MAPS.map(m=>[m.id,m.name]));
 M.innerHTML=`<h1>${t("dialogues")}</h1><p class="lead">${lang==="fr"?`Tous les textes du jeu (${DIALOGUES.length.toLocaleString("fr")} passages) : PNJ, dresseurs, panneaux, scènes. Cherche une réplique, un nom ou un objet, en français ou en anglais.`:`Every in-game text (${DIALOGUES.length.toLocaleString("en")} passages): NPCs, trainers, signs, cutscenes. Search a line, a name or an item, in French or English.`}</p><div id="t"></div>`;
 const rows=DIALOGUES.map(d=>({map:d[0],who:{en:d[1],fr:d[2]},tx:{en:d[3],fr:d[4]}}));
-table("t",rows,[{h:"map",get:x=>L(NM[x.map]||{en:x.map}),html:x=>placeLink(x.map,NM[x.map]||{en:x.map}),nw:1},{h:"speaker",get:x=>L(x.who),nw:1},{h:"text",get:x=>L(x.tx),html:x=>`<div class="dlg" style="min-width:300px;max-width:70ch">${esc(L(x.tx))}</div>`}],{max:60,hashSearch:1});nav("dialogues");
+table("t",rows,[{h:"map",get:x=>L(NM[x.map]||{en:x.map}),html:x=>placeLink(x.map,NM[x.map]||{en:x.map}),nw:1},{h:"speaker",get:x=>L(x.who),nw:1},{blk:1,h:"text",get:x=>L(x.tx),html:x=>`<div class="dlg" style="min-width:300px;max-width:70ch">${esc(L(x.tx))}</div>`}],{max:60,hashSearch:1});nav("dialogues");
 </script></body></html>

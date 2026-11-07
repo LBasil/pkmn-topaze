@@ -96,7 +96,7 @@ function table(el,rows,cols,opts={}){
  function draw(){const hits=[];for(let i=0;i<rows.length;i++){if(q&&!q.every(w=>idx[i].includes(w)))continue;const x=rows[i];if((opts.filters||[]).every((F,k)=>!fv[k]||F.test(x,fv[k])))hits.push(x)}
   if(sort!==null){const g=cols[sort].get;hits.sort((a,b)=>{const A=g(a),B=g(b);return (A>B?1:A<B?-1:0)*dir})}
   box.querySelector('.cnt').textContent=hits.length+' / '+rows.length;
-  tbody.innerHTML=hits.slice(0,shown).map(x=>'<tr>'+cols.map((c,i)=>`<td data-label="${esc(H(c))}" class="${c.num?'n':''} ${c.first?'first':''} ${c.nw?'nw':''} ${c.cls||''}">${c.html?c.html(x):esc(c.get(x))}</td>`).join('')+'</tr>').join('');
+  tbody.innerHTML=hits.slice(0,shown).map(x=>'<tr>'+cols.map((c,i)=>`<td data-label="${esc(H(c))}" class="${c.num?'n':''} ${c.first?'first':''} ${c.nw?'nw':''} ${c.cls||''} ${c.blk?'blk':''}">${c.html?c.html(x):esc(c.get(x))}</td>`).join('')+'</tr>').join('');
   more.style.display=hits.length>shown?'block':'none';more.textContent=t('more')+' ('+(hits.length-shown)+')'}
  inp.oninput=e=>{q=norm(e.target.value).split(/\s+/).filter(Boolean);shown=max;draw()};
  more.onclick=()=>{shown+=max*2;draw()};
