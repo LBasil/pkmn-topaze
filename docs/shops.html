@@ -1,0 +1,6 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#c9731a"><title>Shops – Pokémon Topaze</title><link rel="stylesheet" href="style.css"></head><body><main id="m"></main>
+<script src="app.js"></script><script src="data/shops.js"></script><script src="data/maps.js"></script><script>
+const M=document.getElementById("m");
+M.innerHTML=`<h1>${t("shops")}</h1><p class="lead">${lang==="fr"?"Toutes les boutiques du jeu : où elles sont et ce qu’elles vendent, avec les prix.":"Every shop in the game: where it is and what it sells, with prices."}</p><div id="t"></div>`;
+table("t",SHOPS,[{h:"location",get:x=>L(x.name),first:1,html:x=>placeLink(x.map,x.name)},{h:"items",get:x=>x.items.length,html:x=>x.items.map(i=>`<span class="chip">${iimg(i.id)}${esc(L(i.item))}${i.price?` <span class="mut">${i.price}₽</span>`:""}</span>`).join("")}],{max:40});nav("shops");
+</script></body></html>

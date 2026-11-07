@@ -1,27 +1,31 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pokédex – Pokémon Topaze</title><link rel="stylesheet" href="style.css"></head><body><main id="m"></main>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#c9731a"><title>Pokédex – Pokémon Topaze</title><link rel="stylesheet" href="style.css"></head><body><main id="m"></main>
 <script src="app.js"></script><script src="data/pokedex.js"></script><script src="data/types.js"></script><script src="data/moves.js"></script><script>
-const M=document.getElementById("m"),P=Object.fromEntries(POKEDEX.map(x=>[x.n,x]));
+const M=document.getElementById("m"),P=Object.fromEntries(POKEDEX.map(x=>[x.n,x])),MV=Object.fromEntries(MOVES.map(m=>[m.name.en,m]));
 const TL=TYPES.list,S=["hp","atk","def","spa","spd","spe"];
-function evoTxt(e){const k=e.kind,p=e.p;let c=k==="LEVEL"?`${t("lv")} ${p}`:k==="ITEM"?esc(L(p)):k==="FRIENDSHIP"?(lang==="fr"?"Bonheur":"Friendship"):k.startsWith("LEVEL_ATK")?`${t("lv")} ${p} (${k.endsWith("LT_DEF")?"Atk < Def":k.endsWith("GT_DEF")?"Atk > Def":"Atk = Def"})`:`${t("lv")} ${p}`;return c}
-function list(){M.innerHTML=`<h1>Pokédex</h1><p class="mut">${lang==="fr"?"Tous les Pokémon du jeu avec leurs <b>types Topaze</b>, stats, talents, attaques et lieux de capture. Clique sur un nom pour la fiche complète ; clique sur une colonne pour trier.":"Every Pokémon in the game with its <b>Topaze types</b>, stats, abilities, moves and capture locations. Click a name for the full entry; click a column to sort."}</p><div id="t"></div>`;
-table("t",POKEDEX,[{h:"#",get:x=>x.n,num:1},{h:"name",get:x=>L(x.name),html:x=>pLink(x.name,x.n)},{h:"type",get:x=>x.types.join(),html:x=>x.types.map(tb).join("")},{h:"hp",get:x=>x.stats[0],num:1},{h:"atk",get:x=>x.stats[1],num:1},{h:"def",get:x=>x.stats[2],num:1},{h:"spa",get:x=>x.stats[3],num:1},{h:"spd",get:x=>x.stats[4],num:1},{h:"spe",get:x=>x.stats[5],num:1},{h:"bst",get:x=>x.bst,num:1},{h:"abilities",get:x=>x.abilities.map(L).join(" / ")}],
-{max:400,filters:[{label:t("all_types"),values:TL.map(v=>[v,tn(v)]),test:(x,f)=>x.types.includes(f)}]})}
+function evoTxt(e){const k=e.kind,p=e.p;return k==="LEVEL"?`${t("lv")} ${p}`:k==="ITEM"?esc(L(p)):k==="FRIENDSHIP"?(lang==="fr"?"Bonheur":"Friendship"):k.startsWith("LEVEL_ATK")?`${t("lv")} ${p} (${k.endsWith("LT_DEF")?"Atk < Def":k.endsWith("GT_DEF")?"Atk > Def":"Atk = Def"})`:`${t("lv")} ${p}`}
+function list(){document.title="Pokédex – Pokémon Topaze";M.innerHTML=`<h1>Pokédex</h1><p class="lead">${lang==="fr"?"Tous les Pokémon du jeu avec leurs <b>types Topaze</b>, stats, talents, attaques et lieux de capture. Clique sur un nom pour la fiche complète.":"Every Pokémon in the game with its <b>Topaze types</b>, stats, abilities, moves and capture locations. Click a name for the full entry."}</p><div id="t"></div>`;
+table("t",POKEDEX,[{h:"#",get:x=>x.n,num:1,nw:1,cls:"hm"},{h:"name",get:x=>L(x.name),first:1,nw:1,html:x=>pLink(x.name,x.n,1)+` <span class="mut mob">#${x.n}</span>`},{h:"type",get:x=>x.types.join(),html:x=>x.types.map(tb).join("")},{h:"hp",cls:"hm",get:x=>x.stats[0],num:1},{h:"atk",cls:"hm",get:x=>x.stats[1],num:1},{h:"def",cls:"hm",get:x=>x.stats[2],num:1},{h:"spa",cls:"hm",get:x=>x.stats[3],num:1},{h:"spd",cls:"hm",get:x=>x.stats[4],num:1},{h:"spe",cls:"hm",get:x=>x.stats[5],num:1},{h:"bst",get:x=>x.bst,num:1,html:x=>x.bst+`<span class="mob mut"> (${x.stats.join("/")})</span>`},{h:"abilities_h",get:x=>x.abilities.map(L).join(" / "),html:x=>x.abilities.map(a=>`<a href="abilities.html#${encodeURIComponent(a.en)}">${esc(L(a))}</a>`).join(" / ")}],
+{max:100,filters:[{label:t("all_types"),values:TL.map(v=>[v,tn(v)]),test:(x,f)=>x.types.includes(f)}]})}
+function moveRow(m,lvl){const d=MV[m.en]||{};return `<tr><td class="n">${lvl}</td><td>${mLink(m)}</td><td>${d.type?tb(d.type):""}</td><td>${d.cat?catn(d.cat):""}</td><td class="n">${d.power||"—"}</td><td class="n">${d.acc||"—"}</td></tr>`}
 function detail(n){const p=P[n];if(!p)return list();document.title=L(p.name)+" – Pokémon Topaze";
- const sb=p.stats.map((v,i)=>`<div class="stat"><span class="mut">${t(S[i])}</span><b>${v}</b><span><div class="bar" style="width:${Math.min(100,v/1.8)}%"></div></span></div>`).join("")+`<div class="stat"><span class="mut">${t("bst")}</span><b>${p.bst}</b><span></span></div>`;
- const kv=[[t("cat"),L(p.cat)],[t("abilities"),p.abilities.map(L).join(" / ")],[t("height"),p.h+" m"],[t("weight"),p.w+" kg"],[t("female"),p.female<0?t("genderless"):p.female+" %"],[t("eggroups"),p.egg.map(L).join(" / ")],[t("growth"),L(p.growth)],[t("catchrate"),p.catch],[t("basexp"),p.xp],[t("ev"),Object.entries(p.ev).map(([k,v])=>`${v} ${k}`).join(", ")||"—"],[t("friend"),p.friend]];
- const chain=(p.from||[]).map(f=>`${t("evofrom")} ${pLink(f.name,f.n)}`).join(" · ");
- const evo=p.evo.map(e=>`→ ${pLink(e.to,e.n)} <span class="badge">${evoTxt(e)}</span>`).join("<br>");
- const lv=p.moves.map(m=>`<tr><td class="n">${m[0]}</td><td>${mLink(m[1])}</td></tr>`).join("");
- const mvOf=Object.fromEntries(MOVES.map(m=>[m.name.en,m]));
- const tm=p.tm.map(x=>`<a class="chip" href="movedex.html#${encodeURIComponent(x.move.en)}"><b>${x.kind}${String(x.n).padStart(2,"0")}</b> ${esc(L(x.move))}</a>`).join("");
- const egg=p.eggmoves.map(mLink).map(x=>`<span class="chip">${x}</span>`).join("");
- const wh=p.where.length?`<div class="wrap"><table><thead><tr><th>${t("location")}</th><th>${t("method")}</th><th>${t("levels")}</th><th>${t("rate")}</th></tr></thead>${p.where.map(w=>`<tr><td>${esc(L(w.loc))}</td><td>${esc(L(w.how))}</td><td>${w.min==w.max?w.min:w.min+"–"+w.max}</td><td>${w.pct}%</td></tr>`).join("")}</table></div>`:`<p class="mut">${t("nowhere")}</p>`;
- const sp=(p.special||[]).map(s=>`<p class="note">${esc(s.kind?L(s.kind):"")} ${esc(L(s.loc||""))} ${s.lvl?`(${t("lv")} ${s.lvl})`:""}</p>`).join("");
- M.innerHTML=`<p><a href="pokedex.html">${t("back")}</a></p><h1>#${p.n} ${esc(L(p.name))} ${p.types.map(tb).join("")}</h1><p class="mut">${lang==="fr"?esc(p.name.en):esc(p.name.fr)}</p>
+ const sb=p.stats.map((v,i)=>`<div class="stat"><span class="mut">${t(S[i])}</span><b>${v}</b><span><div class="bar2" style="width:${Math.min(100,v/1.8)}%"></div></span></div>`).join("")+`<div class="stat"><span class="mut">${t("bst")}</span><b>${p.bst}</b><span></span></div>`;
+ const kv=[[t("cat"),L(p.cat)],[t("abilities_h"),p.abilities.map(a=>`<a href="abilities.html#${encodeURIComponent(a.en)}">${esc(L(a))}</a>`).join(" / ")],[t("height"),p.h+" m"],[t("weight"),p.w+" kg"],[t("female"),p.female<0?t("genderless"):p.female+" %"],[t("eggroups"),p.egg.map(L).join(" / ")],[t("growth"),L(p.growth)],[t("catchrate"),p.catch],[t("basexp"),p.xp],[t("ev"),Object.entries(p.ev).map(([k,v])=>`${v} ${k}`).join(", ")||"—"],[t("friend"),p.friend]];
+ const chain=(p.from||[]).map(f=>`${t("evofrom")} ${pLink(f.name,f.n,1)}`).join(" · ");
+ const evo=p.evo.map(e=>`→ ${pLink(e.to,e.n,1)} <span class="badge">${evoTxt(e)}</span>`).join("<br>");
+ const lv=p.moves.map(m=>moveRow(m[1],m[0])).join("");
+ const tm=p.tm.map(x=>{const d=MV[x.move.en]||{};return `<tr><td class="nw"><b>${x.kind}${String(x.n).padStart(2,"0")}</b></td><td>${mLink(x.move)}</td><td>${d.type?tb(d.type):""}</td><td>${d.cat?catn(d.cat):""}</td><td class="n">${d.power||"—"}</td><td class="n">${d.acc||"—"}</td></tr>`}).join("");
+ const egg=p.eggmoves.map(m=>moveRow(m,"")).join("");
+ const th=`<thead><tr><th>${t("lv")}</th><th>${t("name")}</th><th>${t("type")}</th><th>${t("category")}</th><th>${t("power")}</th><th>${t("acc")}</th></tr></thead>`;
+ const wh=p.where.length?`<div class="wrap"><table><thead><tr><th>${t("location")}</th><th>${t("method")}</th><th>${t("levels")}</th><th>${t("rate")}</th></tr></thead>${p.where.map(w=>`<tr><td>${placeLink(w.mid,w.loc)}</td><td>${esc(L(w.how))}</td><td>${fmtLv(w.min,w.max)}</td><td>${w.pct}%</td></tr>`).join("")}</table></div>`:`<p class="mut">${t("nowhere")}</p>`;
+ const prev=P[n-1],next=P[n+1];
+ M.innerHTML=`<p class="crumbs"><a href="pokedex.html">${t("back")}</a></p><div class="phead">${pimg(p.n,"")}<div><h1 style="margin:0">#${p.n} ${esc(L(p.name))}</h1><div>${p.types.map(tb).join("")}</div><div class="mut">${esc(lang==="fr"?p.name.en:p.name.fr)}</div></div></div>
+ <div class="pnav"><span>${prev?`<a href="pokedex.html#${prev.n}">← #${prev.n} ${esc(L(prev.name))}</a>`:""}</span><span>${next?`<a href="pokedex.html#${next.n}">#${next.n} ${esc(L(next.name))} →</a>`:""}</span></div>
  <p>${esc(L(p.dex))}</p>${chain?`<p>${chain}</p>`:""}${evo?`<p><b>${t("evo")}</b><br>${evo}</p>`:""}
  <div class="grid2"><div><h2>${t("stats")}</h2>${sb}</div><div><h2>${t("info")}</h2><table class="kv">${kv.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join("")}</table></div></div>
- <h2>${t("where")}</h2>${sp}${wh}
- <div class="grid2"><div><h2>${t("levelup")}</h2><div class="wrap"><table><tr><th>${t("lv")}</th><th>${t("movedex")}</th></tr>${lv}</table></div></div><div><h2>${t("tm")}</h2>${tm||"—"}<h2>${t("egg")}</h2>${egg||"—"}</div></div>`;window.scrollTo(0,0)}
+ <h2>${t("where")}</h2>${wh}
+ <h2>${t("levelup")}</h2><div class="wrap"><table>${th}${lv}</table></div>
+ ${tm?`<h2>${t("tm")}</h2><div class="wrap"><table>${th.replace(t("lv"),"CT/CS")}${tm}</table></div>`:""}
+ ${egg?`<h2>${t("egg")}</h2><div class="wrap"><table>${th.replace(t("lv"),"")}${egg}</table></div>`:""}`;window.scrollTo(0,0)}
 function route(){const n=parseInt(location.hash.slice(1));n?detail(n):list()}
 window.onhashchange=route;route();nav("pokedex");
 </script></body></html>

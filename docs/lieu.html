@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#c9731a"><title>Place – Pokémon Topaze</title><link rel="stylesheet" href="style.css"></head><body><main id="m"></main>
+<script src="app.js"></script><script src="data/maps.js"></script><script src="data/trainers.js"></script><script>
+const M=document.getElementById("m");let CUR=null,Z=2,LAYERS={npc:1,tr:1,item:1,warp:1,sign:1,hid:1,trig:1};
+const DIRL={up:"up",down:"down",left:"left",right:"right"},ARW={up:"↑",down:"↓",left:"←",right:"→"};
+const TR=Object.fromEntries(TRAINERS.map(x=>[x.id,x]));
+const txs=a=>(a||[]).map(x=>`<div class="tx">${esc(L(x))}</div>`).join("");
+const team=tid=>{const tr=TR[tid];return tr?`<div>${tr.team.map(m=>`<span class="chip">${pimg(m.n)}<b>${esc(L(m.sp))}</b> <span class="mut">${t("lv")}${m.lvl}</span></span>`).join("")}</div>`:""};
+function sprite(n){return n.gfx?`<img src="img/npc/${n.gfx}.png" alt="">`:""}
+function popup(html){const v=document.createElement("div");v.className="veil";const p=document.createElement("div");p.className="pop";p.innerHTML=`<button class="x" aria-label="Close">×</button>${html}`;const close=()=>{v.remove();p.remove()};v.onclick=close;p.querySelector(".x").onclick=close;document.body.append(v,p);document.addEventListener("keydown",function k(e){if(e.key==="Escape"){close();document.removeEventListener("keydown",k)}})}
+function markerInfo(k,o){
+ if(k==="warp")return `<h3>${t("exits")}</h3><p>→ ${placeLink(o.to,o.name)}</p><p class="mut">x ${o.x}, y ${o.y}</p>`;
+ if(k==="sign")return `<h3>${t("signs")}</h3>${txs(o.texts)}`;
+ if(k==="hid")return `<h3>${t("hiddenitems")}</h3><p>${iimg(o.item.id)} ${esc(L(o.item))}</p>`;
+ if(k==="trig")return `<h3>${t("events")}</h3>${txs(o.texts)}`;
+ if(o.kind==="item")return `<h3>${t("groundi")}</h3><p>${iimg(o.item.id)} ${esc(L(o.item))}</p>`;
+ return `<h3>${sprite(o)} ${esc(L(o.label))}</h3>${o.kind==="trainer"?team(o.tid):""}${txs(o.texts)||'<p class="mut">—</p>'}`}
+function drawMap(){
+ const d=CUR,box=document.getElementById("mv");if(!d.img){box.innerHTML=`<p class="mut">—</p>`;return}
+ const z=Z,S=16*z,W=d.w*S,H=d.h*S;let h=`<div class="mapin" style="width:${W}px;height:${H}px"><img class="pix" src="maps/${d.img}.png" width="${W}" height="${H}" alt="">`;
+ const mk=(k,o,cls,inner,tip)=>`<div class="mk ${cls}" data-k="${k}" data-i="${o._i}" style="left:${o.x*S}px;top:${o.y*S}px;width:${S}px;height:${S}px" title="${esc(tip)}">${inner||""}</div>`;
+ d._all=[];let i=0;
+ const add=(k,o)=>{o._i=i++;d._all.push([k,o])};
+ d.npcs.forEach(n=>add(n.kind==="item"?"item":n.kind==="trainer"?"tr":"npc",n));d.warps.forEach(o=>add("warp",o));d.signs.forEach(o=>add("sign",o));d.hidden.forEach(o=>add("hid",o));d.triggers.forEach(o=>add("trig",o));
+ for(const [k,o] of d._all){if(!LAYERS[k])continue;
+  if(k==="npc"||k==="tr"){h+=mk(k,o,k==="tr"?"tr":"",o.gfx?`<img src="img/npc/${o.gfx}.png" style="width:${S}px;height:auto" alt="">`:'<span style="font-size:'+S+'px;line-height:1">●</span>',L(o.label))}
+  else h+=mk(k,o,"dot "+k,"",k==="item"?L(o.item):k==="warp"?"→ "+L(o.name):k==="hid"?L(o.item.item||o.item):k==="sign"?"":"")}
+ box.innerHTML=h+"</div>";
+ box.querySelectorAll(".mk").forEach(e=>e.onclick=()=>{const [k,o]=d._all[+e.dataset.i];popup(markerInfo(k,o))})}
+function render(d){
+ CUR=d;document.title=L(d.name)+" – Pokémon Topaze";
+ const nm=L(d.name),wh={};for(const w of d.wild)(wh[w.how.en]=wh[w.how.en]||{how:w.how,rows:[]}).rows.push(w);
+ const npcs=d.npcs.filter(n=>n.kind==="npc"||n.kind==="trainer"),ground=d.npcs.filter(n=>n.kind==="item");
+ Z=Math.max(1,Math.min(3,Math.floor((Math.min(innerWidth,1180)-34)/(d.w*16))||1));
+ M.innerHTML=`<p class="crumbs"><a href="lieux.html">${t("places")}</a> › ${esc(L(d.area))}</p><h1>${esc(nm)}</h1>
+ <p><span class="badge">${t(d.kind)}</span> ${d.music?`<span class="badge">♪ ${esc(d.music)}</span> `:""}${d.weather&&d.weather!=="Sunny"&&d.weather!=="None"?`<span class="badge">${esc(d.weather)}</span> `:""}${d.flash?`<span class="badge">Flash</span>`:""} <span class="badge">${d.w}×${d.h}</span></p>
+ ${d.img?`<div class="mapctl"><span>${t("zoom")}</span><button onclick="Z=Math.max(1,Z-1);drawMap()">−</button><button onclick="Z=Math.min(4,Z+1);drawMap()">+</button>
+  ${[["npc",t("npch")],["tr",t("trainersh")],["item",t("groundi")],["warp",t("exits")],["sign",t("signs")],["hid",t("hiddenitems")],["trig",t("events")]].map(([k,l])=>`<label><input type="checkbox" ${LAYERS[k]?"checked":""} onchange="LAYERS['${k}']=this.checked;drawMap()"> ${l}</label>`).join("")}</div><div class="mapbox" id="mv"></div>`:""}
+ ${d.conn.length?`<h2>${t("connections")}</h2><p>${d.conn.map(c=>`<a class="chip" href="lieu.html#${c.to}">${ARW[c.dir]||""} ${esc(L(c.name))}</a>`).join("")}</p>`:""}
+ ${d.warps.length?`<h2>${t("exits")} (${d.warps.length})</h2><p>${[...new Map(d.warps.map(w=>[w.to,w])).values()].map(w=>`<a class="chip" href="lieu.html#${w.to}">${esc(L(w.name))}</a>`).join("")}</p>`:""}
+ ${d.from.length?`<h2>${t("entrances")}</h2><p>${d.from.map(w=>`<a class="chip" href="lieu.html#${w.id}">${esc(L(w.name))}</a>`).join("")}</p>`:""}
+ ${d.wild.length?`<h2>${t("wildh")}</h2>${Object.values(wh).map(g=>`<h3>${esc(L(g.how))}</h3><div class="wrap"><table><thead><tr><th>${t("pokemon")}</th><th>${t("levels")}</th><th>${t("rate")}</th></tr></thead>${g.rows.map(r=>`<tr><td>${pLink(r.sp,r.n,1)}</td><td>${fmtLv(r.min,r.max)}</td><td>${r.pct}%</td></tr>`).join("")}</table></div>`).join("")}`:""}
+ ${d.given.length?`<h2>${t("givenh")}</h2><p>${d.given.map(g=>g.sp?`<a class="chip" href="pokedex.html#${g.n}">${pimg(g.n)}${esc(L(g.sp))} ${g.lvl?`<span class="mut">${t("lv")}${g.lvl}</span>`:""} <span class="badge">${g.kind==="gift"?t("gift"):t("static")}</span></span></a>`:`<span class="chip">${iimg(g.item.id)}${esc(L(g.item))} <span class="badge">${t("gift")}</span></span>`).join("")}</p>`:""}
+ ${d.shops.map(s=>`<h2>${t("shopsh")}</h2><p>${s.items.map(i=>`<span class="chip">${iimg(i.id)}${esc(L(i.item))}${i.price?` <span class="mut">${i.price}₽</span>`:""}</span>`).join("")}</p>`).join("")}
+ ${ground.length||d.hidden.length?`<h2>${t("groundi")} / ${t("hiddenitems")}</h2><p>${ground.map(g=>`<span class="chip">${iimg(g.item.id)}${esc(L(g.item))} <span class="badge">${t("k_ground")}</span></span>`).join("")}${d.hidden.map(g=>`<span class="chip">${iimg(g.item.id)}${esc(L(g.item))} <span class="badge">${t("k_hidden")}</span></span>`).join("")}</p>`:""}
+ ${npcs.length?`<h2>${t("npch")} (${npcs.length})</h2>${npcs.map(n=>`<div class="npc"><div>${sprite(n)}</div><div><h4>${esc(L(n.label))} <span class="mut" style="font-weight:400">(${n.x},${n.y})</span></h4>${n.kind==="trainer"?team(n.tid):""}${txs(n.texts)||`<span class="mut">—</span>`}</div></div>`).join("")}`:""}
+ ${d.signs.length?`<h2>${t("signs")} (${d.signs.length})</h2>${d.signs.map(s=>`<div class="npc"><div><div class="mut">(${s.x},${s.y})</div></div><div>${txs(s.texts)}</div></div>`).join("")}`:""}
+ ${d.triggers.length?`<h2>${t("events")} (${d.triggers.length})</h2>${d.triggers.map(s=>`<div class="npc"><div><div class="mut">(${s.x},${s.y})</div></div><div>${txs(s.texts)}</div></div>`).join("")}`:""}
+ ${d.other.length?`<h2>${t("othertxt")} (${d.other.length})</h2>${d.other.map(x=>`<div class="npc"><div class="tx" style="flex:1">${esc(L(x))}</div></div>`).join("")}`:""}
+ ${d.sib.length?`<h2>${t("samearea")}</h2><p>${d.sib.map(w=>`<a class="chip" href="lieu.html#${w.id}">${esc(L(w.name))}</a>`).join("")}</p>`:""}`;
+ if(d.img)drawMap();window.scrollTo(0,0)}
+function load(){const id=decodeURIComponent(location.hash.slice(1));if(!id){location.href="lieux.html";return}
+ window.MAPDATA=window.MAPDATA||{};if(MAPDATA[id])return render(MAPDATA[id]);
+ const s=document.createElement("script");s.src="data/map/"+id+".js";s.onload=()=>MAPDATA[id]?render(MAPDATA[id]):M.innerHTML="<p>?</p>";s.onerror=()=>M.innerHTML=`<p>404 — <a href="lieux.html">${t("places")}</a></p>`;document.head.appendChild(s)}
+window.onhashchange=load;load();nav("lieux");
+</script></body></html>

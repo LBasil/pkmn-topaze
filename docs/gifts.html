@@ -1,0 +1,6 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#c9731a"><title>Gifts – Pokémon Topaze</title><link rel="stylesheet" href="style.css"></head><body><main id="m"></main>
+<script src="app.js"></script><script src="data/gifts.js"></script><script>
+const M=document.getElementById("m");
+M.innerHTML=`<h1>${t("gifts")}</h1><p class="lead">${lang==="fr"?"Les Pokémon et objets donnés par des PNJ, et les rencontres fixes (légendaires, Ronflex…), avec leur lieu exact.":"Pokémon and items given by NPCs, and fixed encounters (legendaries, Snorlax…), with their exact location."}</p><div id="t"></div>`;
+table("t",GIFTS,[{h:"kind",get:x=>x.kind,nw:1,html:x=>`<span class="badge">${x.kind==="gift"?t("gift"):x.kind==="static"?t("static"):t("k_item")}</span>`},{h:"name",get:x=>L(x.sp||x.item),first:1,html:x=>x.sp?`${pLink(x.sp,x.n,1)}${x.lvl?` <span class="mut">${t("lv")} ${x.lvl}</span>`:""}`:esc(L(x.item))},{h:"location",get:x=>L(x.name),html:x=>placeLink(x.map,x.name)}],{max:100,filters:[{label:t("all_kinds"),values:[["gift",t("gift")],["static",t("static")],["item",t("k_item")]],test:(x,f)=>x.kind===f}]});nav("gifts");
+</script></body></html>

@@ -1,0 +1,174 @@
+NONE|No special ability.
+STENCH|Helps repel wild POKéMON.
+DRIZZLE|Summons rain in battle.
+SPEED_BOOST|Gradually boosts SPEED.
+BATTLE_ARMOR|Blocks critical hits.
+STURDY|Negates 1-hit KO attacks.
+DAMP|Prevents self-destruction.
+LIMBER|Prevents paralysis.
+SAND_VEIL|Ups evasion in a sandstorm.
+STATIC|Paralyzes on contact.
+VOLT_ABSORB|Turns electricity into HP.
+WATER_ABSORB|Changes water into HP.
+OBLIVIOUS|Prevents attraction.
+CLOUD_NINE|Negates weather effects.
+COMPOUND_EYES|Raises accuracy.
+INSOMNIA|Prevents sleep.
+COLOR_CHANGE|Changes type to foe's move.
+IMMUNITY|Prevents poisoning.
+FLASH_FIRE|Powers up if hit by fire.
+SHIELD_DUST|Prevents added effects.
+OWN_TEMPO|Prevents confusion.
+SUCTION_CUPS|Firmly anchors the body.
+INTIMIDATE|Lowers the foe's ATTACK.
+SHADOW_TAG|Prevents the foe's escape.
+ROUGH_SKIN|Hurts to touch.
+WONDER_GUARD|“Super effective” hits.
+LEVITATE|Not hit by GROUND attacks.
+EFFECT_SPORE|Leaves spores on contact.
+SYNCHRONIZE|Passes on status problems.
+CLEAR_BODY|Prevents ability reduction.
+NATURAL_CURE|Heals upon switching out.
+LIGHTNING_ROD|Draws electrical moves.
+SERENE_GRACE|Promotes added effects.
+SWIFT_SWIM|Raises SPEED in rain.
+CHLOROPHYLL|Raises SPEED in sunshine.
+ILLUMINATE|Encounter rate increases.
+TRACE|Copies special ability.
+HUGE_POWER|Raises ATTACK.
+POISON_POINT|Poisons foe on contact.
+INNER_FOCUS|Prevents flinching.
+MAGMA_ARMOR|Prevents freezing.
+WATER_VEIL|Prevents burns.
+MAGNET_PULL|Traps STEEL-type POKéMON.
+SOUNDPROOF|Avoids sound-based moves.
+RAIN_DISH|Slight HP recovery in rain.
+SAND_STREAM|Summons a sandstorm.
+PRESSURE|Raises foe's PP usage.
+THICK_FAT|Heat-and-cold protection.
+EARLY_BIRD|Awakens quickly from sleep.
+FLAME_BODY|Burns the foe on contact.
+RUN_AWAY|Makes escaping easier.
+KEEN_EYE|Prevents loss of accuracy.
+HYPER_CUTTER|Prevents ATTACK reduction.
+PICKUP|May pick up items.
+TRUANT|Moves only every two turns.
+HUSTLE|Trades accuracy for power.
+CUTE_CHARM|Infatuates on contact.
+PLUS|Powers up with MINUS.
+MINUS|Powers up with PLUS.
+FORECAST|Changes with the weather.
+STICKY_HOLD|Prevents item theft.
+SHED_SKIN|Heals the body by shedding.
+GUTS|Ups ATTACK if suffering.
+MARVEL_SCALE|Ups DEFENSE if suffering.
+LIQUID_OOZE|Draining causes injury.
+OVERGROW|Ups GRASS moves in a pinch.
+BLAZE|Ups FIRE moves in a pinch.
+TORRENT|Ups WATER moves in a pinch.
+SWARM|Ups BUG moves in a pinch.
+ROCK_HEAD|Prevents recoil damage.
+DROUGHT|Summons sunlight in battle.
+ARENA_TRAP|Prevents fleeing.
+VITAL_SPIRIT|Prevents sleep.
+WHITE_SMOKE|Prevents ability reduction.
+PURE_POWER|Raises ATTACK.
+SHELL_ARMOR|Blocks critical hits.
+CACOPHONY|Avoids sound-based moves.
+AIR_LOCK|Negates weather effects.
+TECHNICIAN|Powers up weak moves.
+IRON_FIST|Boosts punching moves.
+RECKLESS|Boosts recoil moves.
+ADAPTABILITY|Powers up same-type moves.
+TINTED_LENS|Powers up weak attacks.
+SOLID_ROCK|Eases super effective hits.
+FILTER|Eases super effective hits.
+HEATPROOF|Halves damage from fire.
+SKILL_LINK|Multi-hit moves hit 5x.
+SCRAPPY|Hits GHOST with any move.
+MOTOR_DRIVE|Electricity boosts SPEED.
+DRY_SKIN|Water heals; fire hurts.
+SOLAR_POWER|Sun ups SP. ATK, costs HP.
+POISON_HEAL|Poison restores HP.
+SNOW_WARNING|Summons hail in battle.
+SNOW_CLOAK|Ups evasion in a hailstorm.
+ICE_BODY|Restores HP in a hailstorm.
+UNAWARE|Ignores stat changes.
+SIMPLE|Doubles stat changes.
+NO_GUARD|Moves never miss.
+SUPER_LUCK|Raises critical hit rate.
+SNIPER|Powers up critical hits.
+QUICK_FEET|Ups SPEED when statused.
+HYDRATION|Cures status in the rain.
+ANGER_POINT|Crits maximize ATTACK.
+STEADFAST|Flinching raises SPEED.
+MAGIC_GUARD|Only damaged by attacks.
+SLOW_START|Halves ATK and SPEED early.
+BAD_DREAMS|Hurts sleeping foes.
+LEAF_GUARD|Blocks status in the sun.
+STALL|Always moves last.
+DOWNLOAD|Adapts to foe's defenses.
+TANGLED_FEET|Evasive when confused.
+AFTERMATH|Hurts the foe that KOs it.
+UNBURDEN|Ups SPEED if item is used.
+NORMALIZE|All moves become NORMAL.
+PUNK_ROCK|Boosts sound moves.
+STEELY_SPIRIT|Boosts STEEL moves.
+DEFEATIST|Weak at half HP or less.
+TRIAGE|Healing moves go first.
+BEAST_BOOST|KO raises best stat.
+SHEER_FORCE|Power up, no added effects.
+TOUGH_CLAWS|Boosts contact moves.
+STRONG_JAW|Boosts biting moves.
+MEGA_LAUNCHER|Boosts pulse moves.
+SHARPNESS|Boosts slicing moves.
+STEELWORKER|Boosts STEEL moves.
+TRANSISTOR|Boosts ELECTRIC moves.
+DRAGONS_MAW|Boosts DRAGON moves.
+ROCKY_PAYLOAD|Boosts ROCK moves.
+WATER_BUBBLE|Boosts WATER, blocks burns.
+AERILATE|NORMAL moves turn FLYING.
+PIXILATE|NORMAL moves turn FAIRY.
+REFRIGERATE|NORMAL moves turn ICE.
+GALVANIZE|NORMAL moves turn ELECTRIC.
+ANALYTIC|Boost if it moves last.
+TOXIC_BOOST|Stronger when poisoned.
+FLARE_BOOST|Stronger when burned.
+SAND_FORCE|Boosts some moves in sand.
+SAND_RUSH|Doubles SPEED in sand.
+SLUSH_RUSH|Doubles SPEED in hail.
+MULTISCALE|Halves damage at full HP.
+FUR_COAT|Doubles DEFENSE.
+ICE_SCALES|Halves special damage.
+FLUFFY|Halves contact damage.
+PRISM_ARMOR|Cuts super effective hits.
+FULL_METAL_BODY|Prevents stat reduction.
+OVERCOAT|Immune to weather damage.
+STORM_DRAIN|WATER moves raise SP. ATK.
+SAP_SIPPER|GRASS moves raise ATTACK.
+EARTH_EATER|GROUND moves heal HP.
+WELL_BAKED_BODY|FIRE moves raise DEFENSE.
+IRON_BARBS|Hurts attackers on contact.
+GOOEY|Contact slows the attacker.
+STAMINA|Getting hit raises DEFENSE.
+WEAK_ARMOR|Hit: DEF down, SPEED up.
+RATTLED|Scared by BUG/GHOST/DARK.
+JUSTIFIED|DARK hits raise ATTACK.
+STEAM_ENGINE|FIRE/WATER hits ups SPEED.
+WATER_COMPACTION|WATER hit sharply ups DEF.
+MUMMY|Contact spreads MUMMY.
+POISON_TOUCH|May poison on contact.
+MOXIE|Each KO raises ATTACK.
+INTREPID_SWORD|Raises ATTACK on entry.
+DAUNTLESS_SHIELD|Raises DEFENSE on entry.
+PRANKSTER|Status moves go first.
+GALE_WINGS|FLYING first at full HP.
+CONTRARY|Stat changes are reversed.
+DEFIANT|Stat drop ups ATK a lot.
+COMPETITIVE|Stat drop ups SP. ATK a lot
+BIG_PECKS|Protects DEFENSE.
+REGENERATOR|Heals when switching out.
+MOODY|Random stat up and down.
+MAGIC_BOUNCE|Reflects status moves.
+PROTEAN|Takes the move's type.
+LIBERO|Takes the move's type.

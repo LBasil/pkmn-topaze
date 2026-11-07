@@ -28,7 +28,14 @@ def T(c): return tkey[c.replace('TYPE_', '')]
 sp_names = {c: n for c, n in re.findall(r'\[SPECIES_(\w+)\] = _\("([^"]*)"\)', rd('src/data/text/species_names.h')) if c != 'NONE'}
 mv_names = {c: n for c, n in re.findall(r'\[MOVE_(\w+)\]\s*= _\("([^"]*)"\)', rd('src/data/text/move_names.h'))}
 ab_names = {c: n for c, n in re.findall(r'\[ABILITY_(\w+)\] = _\("([^"]*)"\)', rd('src/data/text/abilities.h'))}
-def nice(en): return en.title().replace("'S", "'s")
+_SMALL = {'de', 'du', 'des', 'la', 'le', 'les', 'en', 'et', 'au', 'aux', 'sur', 'sous', 'à', 'un', 'une', 'dans', 'par', 'pour', 'of', 'the', 'and', 'in', 'on', 'to'}
+def nice(en):
+    t_ = en.title().replace("'S", "'s")
+    ws = t_.split(' ')
+    ws = [re.sub(r"^([DdLl])['’]([A-Za-zÀ-ÿ])", lambda m: m.group(1).lower() + "'" + m.group(2).upper(), w) if i > 0 else w for i, w in enumerate(ws)]
+    t_ = ' '.join(ws)
+    ws = t_.split(' ')
+    return ' '.join(w if i == 0 or w.lower() not in _SMALL else w.lower() for i, w in enumerate(ws))
 def rev(t): return {v.upper(): k for k, v in t.items()}
 rsp, rmv, rab = rev(fr_species), rev(fr_moves), rev(fr_abil)
 def pair(src, fr_t, r_t):
@@ -184,7 +191,7 @@ leaders = [('Kay','Pyropia','Fire','Brock'),('Sylvestre','Tourmalia','Bug / Gras
 def party(arr):
     team = []
     for lvl, sp, it, mv in re.findall(r'\.lvl = (\d+),\s*\.species = SPECIES_(\w+),(?:\s*\.heldItem = ITEM_(\w+),)?(?:\s*\.moves = \{([^}]*)\})?', arr):
-        team.append(dict(species=SP(sp), lvl=int(lvl), item=IT(it) if it else None, moves=[MV(x.strip()[5:]) for x in mv.split(',') if x.strip() and x.strip() != 'MOVE_NONE']))
+        team.append(dict(species=SP(sp), n=(dex_by_id[sp]['n'] if sp in dex_by_id else 0), lvl=int(lvl), item=IT(it) if it else None, moves=[MV(x.strip()[5:]) for x in mv.split(',') if x.strip() and x.strip() != 'MOVE_NONE']))
     return team
 champs = []
 for i, (nm, city, ty, slot) in enumerate(leaders, 1):
@@ -243,6 +250,7 @@ for e in wjson['encounters']:
         ms = e['fishing_mons']['mons']
         for rod, (idx, rt) in ROD.items():
             add(rod, ROD_FR[rod], [(ms[i]['species'].replace('SPECIES_', ''), ms[i]['min_level'], ms[i]['max_level'], rt[j]) for j, i in enumerate(idx) if i < len(ms)])
+wild_raw = [dict(w) for w in wild]
 # fusion : une ligne par (espèce, lieu affiché, méthode) ; cartes distinctes de même nom -> meilleur taux, niveaux étendus
 _m = {}
 for w in wild:
@@ -383,8 +391,9 @@ for p_ in sorted(glob.glob(R + '/data/maps/*/scripts.inc')):
         if not m: continue
         team = party(m.group(1))
         if not team: continue
-        tr_out.append(dict(id=tid, cls=dict(en=nice(cl.replace('_', ' ').title()), fr=nice(cls_fr.get(cl, cl))), name=nm.title() if nm.isupper() else nm, loc=place(mp), dbl=dbl, team=[dict(sp=t_['species'], lvl=t_['lvl'], item=t_['item'], moves=t_['moves']) for t_ in team]))
+        tr_out.append(dict(id=tid, cls=dict(en=nice(cl.replace('_', ' ').title()).replace('{Pkmn}', 'Pokémon'), fr=nice(cls_fr.get(cl, cl)).replace('{Pkmn} Dresseur', 'Dresseur Pokémon').replace('{Pkmn}', 'Pokémon').replace('{pkmn}', 'Pokémon')), name=nm.title() if nm.isupper() else nm, loc=place(mp), map=folder, dbl=dbl, team=[dict(sp=t_['species'], n=t_['n'], lvl=t_['lvl'], item=t_['item'], moves=t_['moves']) for t_ in team]))
 out('trainers', 'TRAINERS', tr_out)
 print(len(tr_out), 'dresseurs')
+exec(compile(open(os.path.join(R, 'tools/topaze/encyclo.py'), encoding='utf-8').read(), 'encyclo.py', 'exec'))
 print(len(dex), 'pokémon,', len(moves), 'attaques,', len(champs), 'champions,', len(wild), 'lignes sauvages,', len(dock), 'destinations quai,', len(gifts), 'cadeaux/statiques')
 print('couverture 1G :', coverage)

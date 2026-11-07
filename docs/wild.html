@@ -3,5 +3,5 @@
 const M=document.getElementById("m");
 M.innerHTML=`<h1>${t("wild")}</h1><p class="mut">${lang==="fr"?"Où trouver chaque Pokémon, avec le niveau et le <b>taux de rencontre</b> (niveaux déjà relevés pour Topaze). Recherche un Pokémon ou un lieu, FR ou EN.":"Where to find each Pokémon, with levels and the <b>encounter rate</b> (levels already raised for Topaze). Search a Pokémon or place, in FR or EN."}</p><div id="t"></div>`;
 const HW=[...new Set(WILD.map(x=>x.how.en))].map(en=>[en,L(WILD.find(x=>x.how.en===en).how)]);
-table("t",WILD,[{h:"#",get:x=>x.n,num:1},{h:"pokemon",get:x=>L(x.sp),html:x=>pLink(x.sp,x.n)},{h:"location",get:x=>L(x.loc)},{h:"method",get:x=>L(x.how)},{h:"levels",get:x=>x.min,html:x=>x.min==x.max?x.min:x.min+"–"+x.max},{h:"rate",get:x=>x.pct,num:1,html:x=>x.pct+"%"}],{max:500,filters:[{label:t("all_methods"),values:HW,test:(x,f)=>x.how.en===f}]});nav("wild");
+table("t",WILD,[{h:"#",get:x=>x.n,num:1},{h:"pokemon",get:x=>L(x.sp),html:x=>pLink(x.sp,x.n,1)},{h:"location",get:x=>L(x.loc),html:x=>placeLink(x.mid,x.loc)},{h:"method",get:x=>L(x.how)},{h:"levels",get:x=>x.min,html:x=>x.min==x.max?x.min:x.min+"–"+x.max},{h:"rate",get:x=>x.pct,num:1,html:x=>x.pct+"%"}],{max:100,filters:[{label:t("all_methods"),values:HW,test:(x,f)=>x.how.en===f}]});nav("wild");
 </script></body></html>

@@ -1,0 +1,8 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#c9731a"><title>Places – Pokémon Topaze</title><link rel="stylesheet" href="style.css"></head><body><main id="m"></main>
+<script src="app.js"></script><script src="data/maps.js"></script><script>
+const M=document.getElementById("m");
+M.innerHTML=`<h1>${t("places")}</h1><p class="lead">${lang==="fr"?`${MAPS.length} cartes du jeu : villes, routes, grottes et intérieurs. Chaque fiche montre la carte, les PNJ et leurs dialogues, les dresseurs, les objets, les boutiques et les Pokémon sauvages.`:`${MAPS.length} maps in the game: towns, routes, caves and interiors. Each entry shows the map, NPCs and their dialogues, trainers, items, shops and wild Pokémon.`}</p><div id="t"></div>`;
+const areas=[...new Set(MAPS.map(m=>m.area.en))].map(en=>[en,L(MAPS.find(m=>m.area.en===en).area)]).sort((a,b)=>a[1].localeCompare(b[1]));
+table("t",MAPS,[{h:"name",get:x=>L(x.name),first:1,html:x=>`<a href="lieu.html#${x.id}">${esc(L(x.name))}</a>`},{h:"area",get:x=>L(x.area)},{h:"kind",get:x=>x.kind,html:x=>`<span class="badge">${t(x.kind)}</span>`},{h:"npcs",get:x=>x.npcs,num:1},{h:"trainers_n",get:x=>x.trainers,num:1,html:x=>x.trainers||"—"},{h:"wildh",get:x=>x.wild,num:1,html:x=>x.wild||"—"},{h:"shopsh",get:x=>x.shops,num:1,html:x=>x.shops||"—"},{h:"texts",get:x=>x.texts,num:1}],
+{max:80,filters:[{label:t("all_kinds"),values:["town","city","route","cave","indoor"].map(k=>[k,t(k)]),test:(x,f)=>x.kind===f},{label:t("area"),values:areas,test:(x,f)=>x.area.en===f}]});nav("lieux");
+</script></body></html>
