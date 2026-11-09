@@ -425,3 +425,6 @@ Trouvailles (toutes corrigées, build 04-11 11h) :
 - Scène de NINA (RivalsHouse) et KogaVisit3 (JSON).
 Non traduit volontairement : textes de re-combat (trainers.inc, VS Seeker = boussole) et Club Mystery Event (inatteignables).
 Reste à voir : noms d'objets abrégés (COQUILLETRÉF., POUSS. ÉTOILE…, limite 13 car.), préfixe « ADV. » en combat.
+
+## Analyseur de cartes (09/11)
+`tools/topaze/maps/analyze.py` (README dans le même dossier) : 608 cartes, comparé à FireRed d'origine. Corrigé : butin de la mine de Grenalux (7 objets/objets cachés + 3 mineurs perdus sur les étages 1F/2F jamais visités) déplacé en 3F (`docs/topaze/mine_relocate.py`) ; 5 panneaux décoratifs inatteignables retirés à Bourg Palette ; tables de pêche/surf retirées sur 5 cartes sans eau (Jadielle, Parmanie, Routes 4/11/23). Conformes aux choix de conception, listés dans `known_intentional.json` : Ligue raccourcie, Route 2 refaite, Phare/Route 16 nord/Résidences de Céladopole non reliés, warps fantômes d'Azuria. À décider : la sortie nord de la Grotte Taupiqueur arrive à l'entrée de la forêt de Jadielle (Route 2 refaite).

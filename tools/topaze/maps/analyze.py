@@ -131,12 +131,17 @@ def analyse_map(R, mid, cache):
                     if back['dest_map'] != mid and back['dest_map'] != 'MAP_DYNAMIC': add('W06', 'W', 'warp@%d,%d>%s' % (c[0], c[1], q['dest_map']), 'warp %d -> %s : le warp %d de là-bas ne revient pas ici (mène à %s)' % (i, q['dest_map'], k, back['dest_map']))
             except ValueError: add('E04', 'E', 'warp@%d,%d' % c, 'dest_warp_id invalide %r' % wid)
         b, col, _, _ = cell[c]
-        if col != 0 and b not in DOORISH:
+        sib = any(abs(q2['x'] - c[0]) + abs(q2['y'] - c[1]) == 1 and q2['dest_map'] == q['dest_map'] for q2 in warps)
+        if col != 0 and b not in DOORISH and not sib:
             add('W07', 'W', 'warp@%d,%d' % c, 'warp %d (%d,%d) sur une case bloquée qui n\'est pas une porte' % (i, *c))
         if c == (0, 0): add('E07', 'E', 'warp@%d,%d' % c, 'warp %d encore en (0,0) : position jamais placée' % i)
     nodoor = [c for c, (b, col, _, _) in cell.items() if b in DOORISH and c not in wcell and b not in (0x66, 0x71) and col == 0]
-    if nodoor:
-        add('I08', 'I', 'doors', '%d tuiles de porte/échelle/tapis de sortie sans warp (ex. %s)' % (len(nodoor), ' '.join('(%d,%d)' % c for c in sorted(nodoor)[:3])))
+    lone = [c for c in nodoor if not any(abs(c[0] - q['x']) + abs(c[1] - q['y']) <= 2 for q in warps)]
+    ferry = not warps or any('ReturnFerry' in str(o.get('script', '')) for o in objs)
+    if lone and not ferry:
+        add('W08', 'W', 'doors', '%d tuile(s) de porte/échelle/tapis de sortie SANS warp à proximité : (%s)' % (len(lone), ' '.join('(%d,%d)' % c for c in sorted(lone)[:4])))
+    elif nodoor:
+        add('I08', 'I', 'doors', '%d tuiles de porte/tapis sans warp (carte à sortie par script/ferry, ou tapis voisin d\'un vrai warp)' % len(nodoor))
     # --- connexions
     for cn in (m.get('connections') or []):
         t = R.maps.get(cn['map'])
@@ -152,7 +157,7 @@ def analyse_map(R, mid, cache):
         if not tl: continue
         tg = cache(R, tl)
         if not tg or isinstance(tg, list): continue
-        tw, th = tl['width'], tl['height']; off = cn['offset']; d = cn['direction']; mism = tot = 0
+        tw, th = tl['width'], tl['height']; off = cn['offset']; d = cn['direction']; mism = tot = both = 0
         rng = range(max(0, off), min(w if d in ('up', 'down') else h, off + (tw if d in ('up', 'down') else th)))
         for s in rng:
             if d == 'up': a = (s, 0); o = (s - off, th - 1)
@@ -162,9 +167,10 @@ def analyse_map(R, mid, cache):
             ob = tg[o[1] * tw + o[0]]; oc = (ob >> 10) & 3; obeh = R.tile(tl, ob & 0x3FF)[0]
             here = a in walk; there = oc == 0 and obeh not in IMPASS and obeh not in WATER
             if here or there: tot += 1
+            if here and there: both += 1
             if here != there and not (a in water or obeh in WATER): mism += 1
-        if tot and mism / tot > 0.34 and mism >= 3:
-            add('W11', 'W', 'edge' + cn['direction'], 'bord %s vers %s : %d/%d cases ne se raccordent pas (marchable d\'un côté, mur de l\'autre)' % (cn['direction'], cn['map'], mism, tot))
+        if tot and mism / tot > 0.34 and mism >= 3 and both == 0:
+            add('W11', 'W', 'edge' + cn['direction'], 'bord %s vers %s : aucun passage possible (%d/%d cases marchables d\'un seul côté)' % (cn['direction'], cn['map'], mism, tot))
     # --- événements
     for kind, lst, key in (('PNJ', objs, 'object'), ('panneau', bgs, 'bg'), ('déclencheur', coords, 'coord')):
         seen = defaultdict(list)
@@ -175,17 +181,14 @@ def analyse_map(R, mid, cache):
             if sc not in NOSCRIPT and sc not in R.labels and not str(sc).startswith(('0x', 'LOCALID')) and not re.fullmatch(r'\d+', str(sc)):
                 add('E14', 'E', '%s@%d,%d' % (key, c[0], c[1]), '%s %d (%d,%d) : script %s inexistant' % (kind, i, c[0], c[1], sc))
             if key == 'object':
-                seen[c].append(o.get('local_id') or o.get('graphics_id'))
+                seen[c].append((o.get('local_id') or o.get('graphics_id'), str(o.get('flag', '0')) not in ('0', '', 'None')))
                 b, col, _, _ = cell[c]
-                if col != 0 and b not in WATER and o.get('graphics_id') not in ('OBJ_EVENT_GFX_ITEM_BALL',):
+                if col != 0 and b not in WATER and b != 0x80 and o.get('graphics_id') not in ('OBJ_EVENT_GFX_ITEM_BALL',) and not any((c[0] + dx, c[1] + dy) in walk for dx, dy in D4):
                     add('W13', 'W', 'object@%d,%d' % c, 'PNJ %d (%s) en (%d,%d) posé sur une case bloquée' % (i, str(o.get('graphics_id')).replace('OBJ_EVENT_GFX_', ''), *c))
-                tt = o.get('trainer_type')
-                if tt not in (None, 'TRAINER_TYPE_NONE', '0') and str(o.get('trainer_sight_or_berry_tree_id', '0')) in ('0', '') and tt != 'TRAINER_TYPE_BURIED':
-                    add('W15', 'W', 'object@%d,%d' % c, 'dresseur %d (%d,%d) avec une portée de vue nulle' % (i, *c))
-            if key == 'coord' and c in cell and cell[c][1] != 0:
+            if key == 'coord' and c in cell and cell[c][1] != 0 and c not in wcell:
                 add('W13', 'W', 'coord@%d,%d' % c, 'déclencheur %d en (%d,%d) sur case bloquée (jamais déclenché)' % (i, *c))
         for c, ids in seen.items():
-            if len(ids) > 1: add('W16', 'W', 'dup%d_%d' % c, '%d PNJ empilés sur (%d,%d)' % (len(ids), *c))
+            if len(ids) > 1 and not any(f for _, f in ids): add('W16', 'W', 'dup%d_%d' % c, '%d PNJ empilés sur (%d,%d)' % (len(ids), *c))
     # --- déplacement (graphe orienté, rebords gérés)
     def step(c, d):
         n = (c[0] + d[0], c[1] + d[1])
@@ -253,15 +256,6 @@ def analyse_map(R, mid, cache):
             if n in main: return True
             if n in cell and cell[n][0] == 0x80 and (n[0] + dx, n[1] + dy) in main: return True     # parler par-dessus un comptoir
         return False
-    for i, o in enumerate(objs):
-        c = (o['x'], o['y'])
-        if inb(*c) and not reach(c):
-            if o.get('movement_type') in ('MOVEMENT_TYPE_WANDER_AROUND',) and False: continue
-            add('W18', 'W', 'object@%d,%d' % c, 'PNJ/objet %d (%s) en (%d,%d) hors de portée du joueur' % (i, str(o.get('graphics_id')).replace('OBJ_EVENT_GFX_', ''), *c))
-    for i, s in enumerate(bgs):
-        c = (s['x'], s['y'])
-        if s['type'] in ('sign', 'hidden_item', 'secret_base') and inb(*c) and not reach(c):
-            add('W18', 'W', 'bg@%d,%d' % c, '%s %d en (%d,%d) hors de portée du joueur' % (s['type'], i, *c))
     if not special and exits:
         # pièges à sens unique : atteignables depuis l'entrée mais sans retour possible vers une sortie
         start = {c for c in main}
@@ -278,7 +272,7 @@ def analyse_map(R, mid, cache):
             add('E20', 'E', 'noexit', 'aucune sortie atteignable dans la zone principale')
     # --- rencontres
     wild = R.wild.get(mid, set())
-    gl = stats['grass']; wl = len(water)
+    gl = stats['grass']; wl = len(water) + sum(1 for v in cell.values() if v[2] == 2)
     if gl and 'land_mons' not in wild and m.get('map_type') in ('MAP_TYPE_ROUTE', 'MAP_TYPE_TOWN', 'MAP_TYPE_CITY') and gl >= 12:
         add('I21', 'I', 'grass', '%d cases d\'herbe/rencontre sans table de Pokémon sauvages' % gl)
     if 'land_mons' in wild and not gl:
@@ -286,6 +280,12 @@ def analyse_map(R, mid, cache):
     if ('water_mons' in wild or 'fishing_mons' in wild) and not wl:
         add('W22', 'W', 'nowater', 'table eau/pêche mais aucune case d\'eau')
     return stats, I, (main, exits, cell, w, h, comp_of, edge_cells)
+
+
+KNOWN = {}
+def load_known(root):
+    p = os.path.join(root, 'tools/topaze/maps/known_intentional.json')
+    return json.load(open(p, encoding='utf-8')) if os.path.exists(p) else {}
 
 
 def run(root, ref=None):
@@ -394,6 +394,15 @@ def global_reach(R, store, start='MAP_PALLET_TOWN_PLAYERS_HOUSE_2F'):
         u = q.popleft()
         for v in adj[u]:
             if v not in seen: seen.add(v); q.append(v)
+    def greach(mid, c):
+        co = info[mid][5]; cell = info[mid][2]
+        if co.get(c) is not None and (mid, co[c]) in seen: return True
+        for dx, dy in D4:
+            n = (c[0] + dx, c[1] + dy)
+            if n in co and (mid, co[n]) in seen: return True
+            n2 = (n[0] + dx, n[1] + dy)
+            if n in cell and cell[n][0] == 0x80 and n2 in co and (mid, co[n2]) in seen: return True     # par-dessus un comptoir
+        return False
     out = defaultdict(list)
     for mid, m in R.maps.items():
         if mid not in info: continue
@@ -405,12 +414,27 @@ def global_reach(R, store, start='MAP_PALLET_TOWN_PLAYERS_HOUSE_2F'):
             for q_ in (m.get('warp_events') or []):
                 if c in comps_at(mid, q_['x'], q_['y']): ev.append('warp (%d,%d)->%s' % (q_['x'], q_['y'], q_['dest_map'].replace('MAP_', '')))
             for o in (m.get('object_events') or []):
-                if c in comps_at(mid, o['x'], o['y']): ev.append('PNJ %s (%d,%d)' % (str(o.get('graphics_id')).replace('OBJ_EVENT_GFX_', ''), o['x'], o['y']))
+                if c in comps_at(mid, o['x'], o['y']) and not greach(mid, (o['x'], o['y'])): ev.append('PNJ %s (%d,%d)' % (str(o.get('graphics_id')).replace('OBJ_EVENT_GFX_', ''), o['x'], o['y']))
             for sgn in (m.get('bg_events') or []):
-                if c in comps_at(mid, sgn['x'], sgn['y']): ev.append('%s (%d,%d)' % (sgn['type'], sgn['x'], sgn['y']))
+                if c in comps_at(mid, sgn['x'], sgn['y']) and not greach(mid, (sgn['x'], sgn['y'])): ev.append('%s (%d,%d)' % (sgn['type'], sgn['x'], sgn['y']))
             if ev:
                 out[mid].append(('G01', 'E' if any(e.startswith('warp') for e in ev) else 'W', 'zone@%d,%d' % min(cells),
                                  'zone de %d cases jamais atteignable depuis le début du jeu, contient : %s%s' % (len(cells), ', '.join(ev[:4]), ' …' if len(ev) > 4 else '')))
+    for mid, m in R.maps.items():
+        if mid not in info: continue
+        w_, h_ = info[mid][3], info[mid][4]
+        for o in m.get('object_events') or []:
+            c = (o['x'], o['y'])
+            if 0 <= c[0] < w_ and 0 <= c[1] < h_ and not greach(mid, c):
+                out[mid].append(('W18', 'W', 'object@%d,%d' % c, 'PNJ/objet %s en (%d,%d) hors de portée du joueur' % (str(o.get('graphics_id')).replace('OBJ_EVENT_GFX_', ''), *c)))
+        for sgn in m.get('bg_events') or []:
+            c = (sgn['x'], sgn['y'])
+            if sgn['type'] in ('sign', 'hidden_item', 'secret_base') and 0 <= c[0] < w_ and 0 <= c[1] < h_ and not greach(mid, c):
+                out[mid].append(('W18', 'W', 'bg@%d,%d' % c, '%s en (%d,%d) hors de portée du joueur' % (sgn['type'], *c)))
+    # cartes entières jamais atteintes : probablement inutilisées -> une seule info, on ne les détaille pas
+    for mid in list(R.maps):
+        if mid in info and not any((mid, c) in seen for c in set(info[mid][5].values())):
+            out[mid] = [('I09', 'I', 'unused', 'carte jamais atteinte depuis le début du jeu (inutilisée ?)')]
     return out
 
 
@@ -429,6 +453,11 @@ def main():
         RR, ref = run(a.ref)
         for mid, extra in list(arrival_checks(RR, ref).items()) + list(global_reach(RR, ref).items()):
             for it in extra: ref[mid]['issues'].append(it)
+    known = load_known(a.root)
+    for mid, r in res.items():
+        why = known.get(mid)
+        if why:
+            r['issues'] = [('I10', 'I', i[2], '[volontaire : %s] %s' % (why, i[3])) if i[1] in 'EW' else i for i in r['issues']]
     report = []
     sev_n = defaultdict(int)
     for mid, r in res.items():

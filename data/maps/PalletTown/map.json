@@ -427,51 +427,11 @@
     },
     {
       "type": "sign",
-      "x": 26,
-      "y": 14,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "PalletTown_EventScript_SceneryGuardian"
-    },
-    {
-      "type": "sign",
       "x": 39,
       "y": 28,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PalletTown_EventScript_SceneryMine"
-    },
-    {
-      "type": "sign",
-      "x": 29,
-      "y": 9,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "PalletTown_EventScript_SceneryBerries"
-    },
-    {
-      "type": "sign",
-      "x": 30,
-      "y": 9,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "PalletTown_EventScript_SceneryBerries"
-    },
-    {
-      "type": "sign",
-      "x": 31,
-      "y": 9,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "PalletTown_EventScript_SceneryBerries"
-    },
-    {
-      "type": "sign",
-      "x": 32,
-      "y": 9,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "PalletTown_EventScript_SceneryBerries"
     },
     {
       "type": "sign",
