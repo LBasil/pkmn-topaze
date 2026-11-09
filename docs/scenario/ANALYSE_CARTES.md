@@ -1,0 +1,472 @@
+# Analyse des cartes Topaze
+
+Problèmes **nouveaux** = absents de la carte FireRed de même identifiant (ou carte inchangée sans le défaut).
+
+| Code | Nb |
+|---|---|
+| E07 | 2 |
+| G01 | 27 |
+| I08 | 93 |
+| I21 | 5 |
+| W06 | 18 |
+| W07 | 11 |
+| W10 | 3 |
+| W11 | 11 |
+| W13 | 12 |
+| W15 | 3 |
+| W16 | 3 |
+| W18 | 54 |
+| W22 | 5 |
+
+## Erreurs (casse le jeu) (23)
+
+- **CeladonCity_Condominiums_1F** (`MAP_CELADON_CITY_CONDOMINIUMS_1F`)
+  - `G01` zone de 18 cases jamais atteignable depuis le début du jeu, contient : warp (4,2)->CELADON_CITY_CONDOMINIUMS_2F, warp (2,1)->CELADON_CITY
+- **CeladonCity_Condominiums_2F** (`MAP_CELADON_CITY_CONDOMINIUMS_2F`)
+  - `G01` zone de 13 cases jamais atteignable depuis le début du jeu, contient : warp (4,2)->CELADON_CITY_CONDOMINIUMS_1F, warp (2,2)->CELADON_CITY_CONDOMINIUMS_3F
+- **CeladonCity_Condominiums_3F** (`MAP_CELADON_CITY_CONDOMINIUMS_3F`)
+  - `G01` zone de 13 cases jamais atteignable depuis le début du jeu, contient : warp (2,2)->CELADON_CITY_CONDOMINIUMS_2F, warp (4,2)->CELADON_CITY_CONDOMINIUMS_ROOF
+- **CeladonCity_Condominiums_Roof** (`MAP_CELADON_CITY_CONDOMINIUMS_ROOF`)
+  - `G01` zone de 47 cases jamais atteignable depuis le début du jeu, contient : warp (4,2)->CELADON_CITY_CONDOMINIUMS_3F, warp (2,12)->CELADON_CITY_CONDOMINIUMS_ROOF_ROOM, sign (4,12), sign (3,12)
+- **CeladonCity_Condominiums_RoofRoom** (`MAP_CELADON_CITY_CONDOMINIUMS_ROOF_ROOM`)
+  - `G01` zone de 55 cases jamais atteignable depuis le début du jeu, contient : warp (3,8)->CELADON_CITY_CONDOMINIUMS_ROOF, warp (4,7)->CELADON_CITY_CONDOMINIUMS_ROOF, warp (5,8)->CELADON_CITY_CONDOMINIUMS_ROOF, PNJ BLACK_BELT (3,5) …
+- **CeruleanCity** (`MAP_CERULEAN_CITY`)
+  - `E07` warp 0 encore en (0,0) : position jamais placée
+  - `E07` warp 8 encore en (0,0) : position jamais placée
+  - `G01` zone de 4 cases jamais atteignable depuis le début du jeu, contient : warp (0,0)->CERULEAN_CITY_HOUSE1, warp (0,0)->CERULEAN_CITY_HOUSE1, warp (0,2)->CERULEAN_CITY_HOUSE2, warp (0,3)->CERULEAN_CITY_HOUSE2 …
+- **CeruleanCity_House1** (`MAP_CERULEAN_CITY_HOUSE1`)
+  - `G01` zone de 67 cases jamais atteignable depuis le début du jeu, contient : warp (2,9)->CERULEAN_CITY, warp (3,8)->CERULEAN_CITY, warp (4,9)->CERULEAN_CITY, warp (3,1)->CERULEAN_CITY …
+- **CeruleanCity_House5** (`MAP_CERULEAN_CITY_HOUSE5`)
+  - `G01` zone de 54 cases jamais atteignable depuis le début du jeu, contient : warp (4,7)->CERULEAN_CITY, PNJ OLD_MAN_2 (7,4), sign (3,1)
+- **GrenaluxMine_2F** (`MAP_GRENALUX_MINE_2F`)
+  - `G01` zone de 33 cases jamais atteignable depuis le début du jeu, contient : warp (39,4)->GRENALUX_MINE_3F, warp (45,4)->PALLET_TOWN, PNJ ITEM_BALL (36,5)
+- **Lighthouse_1F** (`MAP_LIGHTHOUSE_1F`)
+  - `G01` zone de 143 cases jamais atteignable depuis le début du jeu, contient : warp (11,16)->LIGHTHOUSE_2F, warp (18,10)->DYNAMIC, PNJ SAILOR (17,10), PNJ SAILOR (7,12)
+- **Lighthouse_2F** (`MAP_LIGHTHOUSE_2F`)
+  - `G01` zone de 143 cases jamais atteignable depuis le début du jeu, contient : warp (11,16)->LIGHTHOUSE_3F, warp (18,10)->LIGHTHOUSE_1F, PNJ OLD_MAN_1 (12,13)
+- **Lighthouse_3F** (`MAP_LIGHTHOUSE_3F`)
+  - `G01` zone de 143 cases jamais atteignable depuis le début du jeu, contient : warp (11,16)->LIGHTHOUSE_3F, warp (18,10)->LIGHTHOUSE_2F, PNJ MAN (11,8)
+- **PokemonLeague_AgathasRoom** (`MAP_POKEMON_LEAGUE_AGATHAS_ROOM`)
+  - `G01` zone de 79 cases jamais atteignable depuis le début du jeu, contient : warp (6,2)->POKEMON_LEAGUE_LANCES_ROOM, PNJ AGATHA (6,5)
+- **PokemonLeague_LancesRoom** (`MAP_POKEMON_LEAGUE_LANCES_ROOM`)
+  - `G01` zone de 260 cases jamais atteignable depuis le début du jeu, contient : warp (23,13)->POKEMON_LEAGUE_AGATHAS_ROOM, warp (6,5)->POKEMON_LEAGUE_CHAMPIONS_ROOM, PNJ LANCE (6,8)
+- **Route16_NorthEntrance_1F** (`MAP_ROUTE16_NORTH_ENTRANCE_1F`)
+  - `G01` zone de 61 cases jamais atteignable depuis le début du jeu, contient : warp (1,12)->ROUTE16, warp (11,12)->ROUTE16, warp (9,16)->ROUTE16_NORTH_ENTRANCE_2F
+  - `G01` zone de 44 cases jamais atteignable depuis le début du jeu, contient : warp (1,3)->ROUTE16, warp (11,3)->ROUTE16, PNJ OLD_MAN_1 (7,4)
+- **Route16_NorthEntrance_2F** (`MAP_ROUTE16_NORTH_ENTRANCE_2F`)
+  - `G01` zone de 82 cases jamais atteignable depuis le début du jeu, contient : warp (10,9)->ROUTE16_NORTH_ENTRANCE_1F, PNJ LITTLE_BOY (6,3), PNJ LITTLE_GIRL (4,8), PNJ SCIENTIST (10,6) …
+- **Route2_EastBuilding** (`MAP_ROUTE2_EAST_BUILDING`)
+  - `G01` zone de 102 cases jamais atteignable depuis le début du jeu, contient : warp (6,10)->ROUTE2, warp (7,10)->ROUTE2, warp (8,10)->ROUTE2, warp (7,1)->ROUTE2 …
+- **Route2_House** (`MAP_ROUTE2_HOUSE`)
+  - `G01` zone de 60 cases jamais atteignable depuis le début du jeu, contient : warp (3,7)->ROUTE2, warp (4,7)->ROUTE2, warp (5,7)->ROUTE2, PNJ SCIENTIST (4,5)
+- **SaffronCity_Connection** (`MAP_SAFFRON_CITY_CONNECTION`)
+  - `G01` zone de 755 cases jamais atteignable depuis le début du jeu, contient : warp (36,5)->GENERIC_HOUSE_C, warp (12,7)->GENERIC_HOUSE_D, warp (17,14)->GENERIC_HOUSE_A, warp (30,14)->GENERIC_HOUSE_B …
+- **SilphCo_Elevator** (`MAP_SILPH_CO_ELEVATOR`)
+  - `G01` zone de 15 cases jamais atteignable depuis le début du jeu, contient : warp (2,5)->DYNAMIC, sign (0,2)
+
+## Avertissements (126)
+
+- **CeladonCity** (`MAP_CELADON_CITY`)
+  - `G01` zone de 2 cases jamais atteignable depuis le début du jeu, contient : sign (24,12)
+- **CeruleanCity** (`MAP_CERULEAN_CITY`)
+  - `W07` warp 0 (0,0) sur une case bloquée qui n'est pas une porte
+  - `W07` warp 8 (0,0) sur une case bloquée qui n'est pas une porte
+  - `W07` warp 9 (0,2) sur une case bloquée qui n'est pas une porte
+  - `W07` warp 10 (0,3) sur une case bloquée qui n'est pas une porte
+  - `W07` warp 11 (0,1) sur une case bloquée qui n'est pas une porte
+  - `W07` warp 13 (0,1) sur une case bloquée qui n'est pas une porte
+  - `W11` bord down vers MAP_ROUTE5 : 9/18 cases ne se raccordent pas (marchable d'un côté, mur de l'autre)
+  - `W18` PNJ/objet 6 (BLUE) en (48,6) hors de portée du joueur
+  - `W18` PNJ/objet 8 (POLICEMAN) en (49,11) hors de portée du joueur
+  - `W18` sign 5 en (58,2) hors de portée du joueur
+- **CeruleanCity_GateEast** (`MAP_CERULEAN_CITY_GATE_EAST`)
+  - `W07` warp 3 (5,1) sur une case bloquée qui n'est pas une porte
+  - `G01` zone de 13 cases jamais atteignable depuis le début du jeu, contient : PNJ POLICEMAN (7,5)
+- **CeruleanCity_GlassHall** (`MAP_CERULEAN_CITY_GLASS_HALL`)
+  - `G01` zone de 17 cases jamais atteignable depuis le début du jeu, contient : PNJ POLICEMAN (1,5)
+- **DiglettsCave_NorthEntrance** (`MAP_DIGLETTS_CAVE_NORTH_ENTRANCE`)
+  - `W06` warp 1 -> MAP_ROUTE2 : le warp 0 de là-bas ne revient pas ici (mène à MAP_ROUTE2_VIRIDIAN_FOREST_NORTH_ENTRANCE)
+- **FiveIsland_Harbor** (`MAP_FIVE_ISLAND_HARBOR`)
+  - `W13` PNJ 2 (WOMAN_2) en (6,4) posé sur une case bloquée
+- **FourIsland_Harbor** (`MAP_FOUR_ISLAND_HARBOR`)
+  - `W13` PNJ 2 (HIKER) en (6,4) posé sur une case bloquée
+- **FourIsland_IcefallCave_Back** (`MAP_FOUR_ISLAND_ICEFALL_CAVE_BACK`)
+  - `W16` 2 PNJ empilés sur (12,16)
+- **FuchsiaCity** (`MAP_FUCHSIA_CITY`)
+  - `W22` table eau/pêche mais aucune case d'eau
+- **GrenaluxMine_1F** (`MAP_GRENALUX_MINE_1F`)
+  - `W06` warp 3 -> MAP_PALLET_TOWN : le warp 4 de là-bas ne revient pas ici (mène à MAP_GRENALUX_MINE_3F)
+- **GrenaluxMine_2F** (`MAP_GRENALUX_MINE_2F`)
+  - `W06` warp 6 -> MAP_GRENALUX_MINE_3F : le warp 3 de là-bas ne revient pas ici (mène à MAP_PALLET_TOWN)
+  - `W06` warp 7 -> MAP_PALLET_TOWN : le warp 4 de là-bas ne revient pas ici (mène à MAP_GRENALUX_MINE_3F)
+  - `W18` PNJ/objet 2 (ITEM_BALL) en (36,5) hors de portée du joueur
+  - `W18` PNJ/objet 3 (ITEM_BALL) en (34,34) hors de portée du joueur
+  - `W18` hidden_item 0 en (20,5) hors de portée du joueur
+- **GrenaluxMine_3F** (`MAP_GRENALUX_MINE_3F`)
+  - `W18` hidden_item 1 en (28,29) hors de portée du joueur
+- **OneIsland_Harbor** (`MAP_ONE_ISLAND_HARBOR`)
+  - `W13` PNJ 2 (FISHER) en (6,4) posé sur une case bloquée
+- **PalletTown** (`MAP_PALLET_TOWN`)
+  - `W18` sign 8 en (26,14) hors de portée du joueur
+  - `W18` sign 10 en (29,9) hors de portée du joueur
+  - `W18` sign 11 en (30,9) hors de portée du joueur
+  - `W18` sign 12 en (31,9) hors de portée du joueur
+  - `W18` sign 13 en (32,9) hors de portée du joueur
+  - `G01` zone de 4 cases jamais atteignable depuis le début du jeu, contient : sign (29,9), sign (30,9), sign (31,9), sign (32,9)
+  - `G01` zone de 4 cases jamais atteignable depuis le début du jeu, contient : sign (29,9), sign (30,9), sign (31,9), sign (32,9) …
+- **PewterCity** (`MAP_PEWTER_CITY`)
+  - `W16` 2 PNJ empilés sur (3,3)
+- **PewterCity_House4** (`MAP_PEWTER_CITY_HOUSE4`)
+  - `W13` PNJ 1 (OLD_WOMAN) en (5,4) posé sur une case bloquée
+- **PokemonLeague_BrunosRoom** (`MAP_POKEMON_LEAGUE_BRUNOS_ROOM`)
+  - `W06` warp 0 -> MAP_POKEMON_LEAGUE_LORELEIS_ROOM : le warp 1 de là-bas ne revient pas ici (mène à MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM)
+- **PokemonLeague_LancesRoom** (`MAP_POKEMON_LEAGUE_LANCES_ROOM`)
+  - `W06` warp 1 -> MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM : le warp 0 de là-bas ne revient pas ici (mène à MAP_POKEMON_LEAGUE_LORELEIS_ROOM)
+- **PokemonLeague_LoreleisRoom** (`MAP_POKEMON_LEAGUE_LORELEIS_ROOM`)
+  - `W13` déclencheur 0 en (6,12) sur case bloquée (jamais déclenché)
+- **RocketHideout_B1F** (`MAP_ROCKET_HIDEOUT_B1F`)
+  - `W07` warp 3 (23,16) sur une case bloquée qui n'est pas une porte
+  - `W07` warp 5 (25,16) sur une case bloquée qui n'est pas une porte
+- **RocketHideout_B4F** (`MAP_ROCKET_HIDEOUT_B4F`)
+  - `W07` warp 1 (19,19) sur une case bloquée qui n'est pas une porte
+  - `W07` warp 3 (21,19) sur une case bloquée qui n'est pas une porte
+  - `W15` dresseur 4 (19,12) avec une portée de vue nulle
+  - `W15` dresseur 5 (16,12) avec une portée de vue nulle
+- **RockTunnel_1F** (`MAP_ROCK_TUNNEL_1F`)
+  - `W18` PNJ/objet 10 (MACHOP) en (30,15) hors de portée du joueur
+  - `W18` PNJ/objet 11 (NIDORINO) en (16,7) hors de portée du joueur
+- **Route11** (`MAP_ROUTE11`)
+  - `W11` bord left vers MAP_VERMILION_CITY : 3/6 cases ne se raccordent pas (marchable d'un côté, mur de l'autre)
+  - `W18` PNJ/objet 11 (ITEM_BALL) en (69,14) hors de portée du joueur
+  - `W22` table eau/pêche mais aucune case d'eau
+- **Route14** (`MAP_ROUTE14`)
+  - `W11` bord left vers MAP_ROUTE15 : 7/13 cases ne se raccordent pas (marchable d'un côté, mur de l'autre)
+- **Route15** (`MAP_ROUTE15`)
+  - `W11` bord right vers MAP_ROUTE14 : 7/13 cases ne se raccordent pas (marchable d'un côté, mur de l'autre)
+- **Route16** (`MAP_ROUTE16`)
+  - `W11` bord down vers MAP_ROUTE17 : 8/18 cases ne se raccordent pas (marchable d'un côté, mur de l'autre)
+- **Route16_NorthEntrance_1F** (`MAP_ROUTE16_NORTH_ENTRANCE_1F`)
+  - `W06` warp 0 -> MAP_ROUTE16 : le warp 0 de là-bas ne revient pas ici (mène à MAP_ROUTE16_HOUSE)
+  - `W06` warp 1 -> MAP_ROUTE16 : le warp 0 de là-bas ne revient pas ici (mène à MAP_ROUTE16_HOUSE)
+  - `W06` warp 2 -> MAP_ROUTE16 : le warp 0 de là-bas ne revient pas ici (mène à MAP_ROUTE16_HOUSE)
+  - `W06` warp 3 -> MAP_ROUTE16 : le warp 0 de là-bas ne revient pas ici (mène à MAP_ROUTE16_HOUSE)
+- **Route17** (`MAP_ROUTE17`)
+  - `W11` bord up vers MAP_ROUTE16 : 8/18 cases ne se raccordent pas (marchable d'un côté, mur de l'autre)
+- **Route19_UnusedHouse** (`MAP_ROUTE19_UNUSED_HOUSE`)
+  - `W13` PNJ 1 (LITTLE_GIRL) en (6,4) posé sur une case bloquée
+- **Route2** (`MAP_ROUTE2`)
+  - `W18` PNJ/objet 0 (ITEM_BALL) en (21,43) hors de portée du joueur
+  - `W18` PNJ/objet 2 (HIKER) en (21,52) hors de portée du joueur
+  - `W18` sign 0 en (10,52) hors de portée du joueur
+  - `W18` sign 1 en (12,34) hors de portée du joueur
+- **Route23** (`MAP_ROUTE23`)
+  - `W22` table eau/pêche mais aucune case d'eau
+- **Route24** (`MAP_ROUTE24`)
+  - `W11` bord right vers MAP_ROUTE25 : 4/7 cases ne se raccordent pas (marchable d'un côté, mur de l'autre)
+  - `W18` PNJ/objet 0 (MAN) en (11,11) hors de portée du joueur
+  - `W18` PNJ/objet 8 (COOLTRAINER_F) en (17,8) hors de portée du joueur
+  - `W18` hidden_item 0 en (16,3) hors de portée du joueur
+  - `W18` sign 1 en (11,17) hors de portée du joueur
+  - `W18` sign 2 en (6,10) hors de portée du joueur
+  - `W18` sign 3 en (4,25) hors de portée du joueur
+- **Route25** (`MAP_ROUTE25`)
+  - `W11` bord left vers MAP_ROUTE24 : 4/7 cases ne se raccordent pas (marchable d'un côté, mur de l'autre)
+- **Route2_EastBuilding** (`MAP_ROUTE2_EAST_BUILDING`)
+  - `W06` warp 0 -> MAP_ROUTE2 : le warp 0 de là-bas ne revient pas ici (mène à MAP_ROUTE2_VIRIDIAN_FOREST_NORTH_ENTRANCE)
+  - `W06` warp 1 -> MAP_ROUTE2 : le warp 0 de là-bas ne revient pas ici (mène à MAP_ROUTE2_VIRIDIAN_FOREST_NORTH_ENTRANCE)
+  - `W06` warp 2 -> MAP_ROUTE2 : le warp 0 de là-bas ne revient pas ici (mène à MAP_ROUTE2_VIRIDIAN_FOREST_NORTH_ENTRANCE)
+  - `W06` warp 3 -> MAP_ROUTE2 : le warp 0 de là-bas ne revient pas ici (mène à MAP_ROUTE2_VIRIDIAN_FOREST_NORTH_ENTRANCE)
+- **Route2_House** (`MAP_ROUTE2_HOUSE`)
+  - `W06` warp 0 -> MAP_ROUTE2 : le warp 0 de là-bas ne revient pas ici (mène à MAP_ROUTE2_VIRIDIAN_FOREST_NORTH_ENTRANCE)
+  - `W06` warp 1 -> MAP_ROUTE2 : le warp 0 de là-bas ne revient pas ici (mène à MAP_ROUTE2_VIRIDIAN_FOREST_NORTH_ENTRANCE)
+  - `W06` warp 2 -> MAP_ROUTE2 : le warp 0 de là-bas ne revient pas ici (mène à MAP_ROUTE2_VIRIDIAN_FOREST_NORTH_ENTRANCE)
+- **Route4** (`MAP_ROUTE4`)
+  - `W18` PNJ/objet 1 (LASS) en (26,26) hors de portée du joueur
+  - `W18` PNJ/objet 2 (ITEM_BALL) en (21,21) hors de portée du joueur
+  - `W18` PNJ/objet 4 (BLACK_BELT) en (29,36) hors de portée du joueur
+  - `W18` PNJ/objet 5 (BLACK_BELT) en (32,36) hors de portée du joueur
+  - `W18` hidden_item 4 en (36,37) hors de portée du joueur
+  - `W22` table eau/pêche mais aucune case d'eau
+- **Route5** (`MAP_ROUTE5`)
+  - `W11` bord up vers MAP_CERULEAN_CITY : 9/18 cases ne se raccordent pas (marchable d'un côté, mur de l'autre)
+- **Route6** (`MAP_ROUTE6`)
+  - `W18` PNJ/objet 6 (MAN) en (11,19) hors de portée du joueur
+  - `W18` PNJ/objet 7 (GENTLEMAN) en (17,19) hors de portée du joueur
+  - `W18` sign 3 en (16,22) hors de portée du joueur
+  - `W18` sign 4 en (6,13) hors de portée du joueur
+  - `W18` sign 5 en (17,27) hors de portée du joueur
+- **SaffronCity** (`MAP_SAFFRON_CITY`)
+  - `G01` zone de 1 cases jamais atteignable depuis le début du jeu, contient : sign (53,24)
+- **SaffronCity_Connection** (`MAP_SAFFRON_CITY_CONNECTION`)
+  - `W10` connexion up -> MAP_ROUTE5 sans retour
+  - `W10` connexion down -> MAP_ROUTE6 sans retour
+  - `W10` connexion left -> MAP_ROUTE7 sans retour
+- **SeafoamIslands_1F** (`MAP_SEAFOAM_ISLANDS_1F`)
+  - `W18` PNJ/objet 5 (RS_BRENDAN) en (31,16) hors de portée du joueur
+  - `W18` PNJ/objet 6 (BLUE) en (33,16) hors de portée du joueur
+- **SeafoamIslands_B1F** (`MAP_SEAFOAM_ISLANDS_B1F`)
+  - `W18` PNJ/objet 5 (ROCKET_F) en (30,6) hors de portée du joueur
+- **SeafoamIslands_B2F** (`MAP_SEAFOAM_ISLANDS_B2F`)
+  - `W18` PNJ/objet 4 (ROCKET_F) en (31,10) hors de portée du joueur
+- **SevenIsland_Harbor** (`MAP_SEVEN_ISLAND_HARBOR`)
+  - `W13` PNJ 2 (COOLTRAINER_M) en (6,4) posé sur une case bloquée
+- **SevenIsland_SevaultCanyon** (`MAP_SEVEN_ISLAND_SEVAULT_CANYON`)
+  - `W18` PNJ/objet 20 (CHANNELER) en (10,4) hors de portée du joueur
+  - `W18` PNJ/objet 21 (BLACK_BELT) en (12,4) hors de portée du joueur
+  - `W18` PNJ/objet 22 (CHANNELER) en (14,4) hors de portée du joueur
+  - `W18` PNJ/objet 23 (FAT_MAN) en (16,4) hors de portée du joueur
+  - `W18` PNJ/objet 24 (OLD_WOMAN) en (13,4) hors de portée du joueur
+- **SevenIsland_SevaultCanyon_Summit** (`MAP_SEVEN_ISLAND_SEVAULT_CANYON_SUMMIT`)
+  - `W15` dresseur 3 (5,4) avec une portée de vue nulle
+  - `W16` 2 PNJ empilés sur (5,4)
+- **ShellCoast** (`MAP_SHELL_COAST`)
+  - `W18` PNJ/objet 0 (SAILOR) en (14,36) hors de portée du joueur
+  - `W18` PNJ/objet 1 (SAILOR) en (8,35) hors de portée du joueur
+  - `W18` PNJ/objet 2 (FISHER) en (15,38) hors de portée du joueur
+  - `W18` PNJ/objet 3 (WOMAN_3) en (7,27) hors de portée du joueur
+  - `W18` sign 0 en (6,23) hors de portée du joueur
+  - `W18` sign 1 en (9,18) hors de portée du joueur
+  - `W18` sign 2 en (15,18) hors de portée du joueur
+- **SixIsland_Harbor** (`MAP_SIX_ISLAND_HARBOR`)
+  - `W13` PNJ 2 (OLD_WOMAN) en (6,4) posé sur une case bloquée
+- **SixIsland_RuinValley_StoneDen** (`MAP_SIX_ISLAND_RUIN_VALLEY_STONE_DEN`)
+  - `W06` warp 0 -> MAP_SIX_ISLAND_RUIN_VALLEY : le warp 0 de là-bas ne revient pas ici (mène à MAP_SIX_ISLAND_DOTTED_HOLE_1F)
+- **StoneGreenhouse** (`MAP_STONE_GREENHOUSE`)
+  - `W18` PNJ/objet 0 (SAILOR) en (14,36) hors de portée du joueur
+  - `W18` PNJ/objet 1 (WOMAN_1) en (8,35) hors de portée du joueur
+  - `W18` PNJ/objet 2 (FAT_MAN) en (7,28) hors de portée du joueur
+- **ThreeIsland_Harbor** (`MAP_THREE_ISLAND_HARBOR`)
+  - `W13` PNJ 2 (OLD_MAN_1) en (6,4) posé sur une case bloquée
+- **TwoIsland_Harbor** (`MAP_TWO_ISLAND_HARBOR`)
+  - `W13` PNJ 2 (GENTLEMAN) en (6,4) posé sur une case bloquée
+- **VermilionCity** (`MAP_VERMILION_CITY`)
+  - `W11` bord right vers MAP_ROUTE11 : 3/6 cases ne se raccordent pas (marchable d'un côté, mur de l'autre)
+  - `W13` PNJ 7 (SCIENTIST) en (27,8) posé sur une case bloquée
+  - `W13` PNJ 10 (POLICEMAN) en (46,20) posé sur une case bloquée
+- **ViridianCity** (`MAP_VIRIDIAN_CITY`)
+  - `W22` table eau/pêche mais aucune case d'eau
+- **ViridianCity_WestLane** (`MAP_VIRIDIAN_CITY_WEST_LANE`)
+  - `W11` bord left vers MAP_ROUTE22 : 3/5 cases ne se raccordent pas (marchable d'un côté, mur de l'autre)
+
+## Infos (98)
+
+- **AncientLibrary** (`MAP_ANCIENT_LIBRARY`)
+  - `I08` 4 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,9) (8,10) (8,26))
+- **Apothecary** (`MAP_APOTHECARY`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (4,7))
+- **AshenMine** (`MAP_ASHEN_MINE`)
+  - `I08` 3 tuiles de porte/échelle/tapis de sortie sans warp (ex. (7,17) (11,3) (17,3))
+- **BabyNursery** (`MAP_BABY_NURSERY`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (4,7))
+- **BallBoutique** (`MAP_BALL_BOUTIQUE`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (4,7))
+- **BarterHouse** (`MAP_BARTER_HOUSE`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (4,7))
+- **BattleStall** (`MAP_BATTLE_STALL`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (4,7))
+- **BerryOrchard** (`MAP_BERRY_ORCHARD`)
+  - `I08` 3 tuiles de porte/échelle/tapis de sortie sans warp (ex. (42,41) (43,41) (44,41))
+- **BerryStand** (`MAP_BERRY_STAND`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (4,7))
+- **BoneyardRise** (`MAP_BONEYARD_RISE`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (24,63))
+- **BrightShallows** (`MAP_BRIGHT_SHALLOWS`)
+  - `I08` 2 tuiles de porte/échelle/tapis de sortie sans warp (ex. (14,15) (14,21))
+- **CenterMeadow** (`MAP_CENTER_MEADOW`)
+  - `I08` 8 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,17) (8,18) (25,5))
+- **CeruleanCity** (`MAP_CERULEAN_CITY`)
+  - `I21` 36 cases d'herbe/rencontre sans table de Pokémon sauvages
+- **CinderPlain** (`MAP_CINDER_PLAIN`)
+  - `I08` 2 tuiles de porte/échelle/tapis de sortie sans warp (ex. (0,10) (7,10))
+- **CircusLawn** (`MAP_CIRCUS_LAWN`)
+  - `I08` 4 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,9) (8,10) (8,26))
+- **ClockBeach** (`MAP_CLOCK_BEACH`)
+  - `I21` 41 cases d'herbe/rencontre sans table de Pokémon sauvages
+- **CollectorShop** (`MAP_COLLECTOR_SHOP`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (4,7))
+- **CopperCanyon** (`MAP_COPPER_CANYON`)
+  - `I08` 6 tuiles de porte/échelle/tapis de sortie sans warp (ex. (30,5) (31,5) (37,5))
+- **CoralTerrace** (`MAP_CORAL_TERRACE`)
+  - `I08` 6 tuiles de porte/échelle/tapis de sortie sans warp (ex. (30,5) (31,5) (37,5))
+- **CottonField** (`MAP_COTTON_FIELD`)
+  - `I08` 2 tuiles de porte/échelle/tapis de sortie sans warp (ex. (12,5) (13,5))
+- **CrystalGrotto** (`MAP_CRYSTAL_GROTTO`)
+  - `I08` 8 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,17) (8,18) (25,5))
+- **DeepEmberCave** (`MAP_DEEP_EMBER_CAVE`)
+  - `I08` 8 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,17) (8,18) (25,5))
+- **Depths_1F** (`MAP_DEPTHS_1F`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (18,22))
+- **Depths_2F** (`MAP_DEPTHS_2F`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (18,22))
+- **Depths_3F** (`MAP_DEPTHS_3F`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (18,22))
+- **DexHall** (`MAP_DEX_HALL`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (4,7))
+- **DockCafe** (`MAP_DOCK_CAFE`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (4,7))
+- **DrowsyDown** (`MAP_DROWSY_DOWN`)
+  - `I08` 3 tuiles de porte/échelle/tapis de sortie sans warp (ex. (6,7) (58,10) (65,10))
+- **DuneSea** (`MAP_DUNE_SEA`)
+  - `I08` 6 tuiles de porte/échelle/tapis de sortie sans warp (ex. (30,5) (31,5) (37,5))
+- **EchoGarden** (`MAP_ECHO_GARDEN`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (17,28))
+  - `I21` 114 cases d'herbe/rencontre sans table de Pokémon sauvages
+- **EdgeOfTheWorld** (`MAP_EDGE_OF_THE_WORLD`)
+  - `I08` 8 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,17) (8,18) (25,5))
+- **EeveeGrove** (`MAP_EEVEE_GROVE`)
+  - `I08` 6 tuiles de porte/échelle/tapis de sortie sans warp (ex. (3,26) (4,26) (5,26))
+- **ElectricAvenue** (`MAP_ELECTRIC_AVENUE`)
+  - `I08` 8 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,17) (8,18) (25,5))
+- **EmberRidge** (`MAP_EMBER_RIDGE`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (24,63))
+- **EmberRim** (`MAP_EMBER_RIM`)
+  - `I08` 3 tuiles de porte/échelle/tapis de sortie sans warp (ex. (1,4) (5,19) (19,19))
+- **EvolutionLibrary** (`MAP_EVOLUTION_LIBRARY`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (4,7))
+- **FinalGate** (`MAP_FINAL_GATE`)
+  - `I08` 4 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,9) (8,10) (8,26))
+- **FoxField** (`MAP_FOX_FIELD`)
+  - `I08` 2 tuiles de porte/échelle/tapis de sortie sans warp (ex. (0,10) (7,10))
+- **FriendsClearing** (`MAP_FRIENDS_CLEARING`)
+  - `I08` 3 tuiles de porte/échelle/tapis de sortie sans warp (ex. (42,41) (43,41) (44,41))
+  - `I21` 258 cases d'herbe/rencontre sans table de Pokémon sauvages
+- **FrostHollow** (`MAP_FROST_HOLLOW`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (12,23))
+- **FrozenMarsh** (`MAP_FROZEN_MARSH`)
+  - `I08` 8 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,17) (8,18) (25,5))
+- **GiantsPlain** (`MAP_GIANTS_PLAIN`)
+  - `I08` 4 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,9) (8,10) (8,26))
+- **GlassCavern** (`MAP_GLASS_CAVERN`)
+  - `I08` 8 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,17) (8,18) (25,5))
+- **GraniteBluff** (`MAP_GRANITE_BLUFF`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (24,63))
+- **HoennWestReserve** (`MAP_HOENN_WEST_RESERVE`)
+  - `I08` 4 tuiles de porte/échelle/tapis de sortie sans warp (ex. (6,124) (11,6) (12,6))
+- **HoneyGrove** (`MAP_HONEY_GROVE`)
+  - `I08` 3 tuiles de porte/échelle/tapis de sortie sans warp (ex. (42,41) (43,41) (44,41))
+- **HushedBog** (`MAP_HUSHED_BOG`)
+  - `I08` 8 tuiles de porte/échelle/tapis de sortie sans warp (ex. (10,34) (11,34) (20,34))
+- **KindleTrail** (`MAP_KINDLE_TRAIL`)
+  - `I08` 4 tuiles de porte/échelle/tapis de sortie sans warp (ex. (6,124) (11,6) (12,6))
+- **LastDayIsland** (`MAP_LAST_DAY_ISLAND`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (15,24))
+- **LavaLagoon** (`MAP_LAVA_LAGOON`)
+  - `I08` 6 tuiles de porte/échelle/tapis de sortie sans warp (ex. (30,5) (31,5) (37,5))
+- **LuckyClover** (`MAP_LUCKY_CLOVER`)
+  - `I08` 2 tuiles de porte/échelle/tapis de sortie sans warp (ex. (12,5) (13,5))
+- **MarbleHall** (`MAP_MARBLE_HALL`)
+  - `I08` 8 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,17) (8,18) (25,5))
+- **MeadowPath** (`MAP_MEADOW_PATH`)
+  - `I08` 6 tuiles de porte/échelle/tapis de sortie sans warp (ex. (3,26) (4,26) (5,26))
+- **MeteorField** (`MAP_METEOR_FIELD`)
+  - `I08` 4 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,9) (8,10) (8,26))
+- **MirrorLabyrinth** (`MAP_MIRROR_LABYRINTH`)
+  - `I08` 3 tuiles de porte/échelle/tapis de sortie sans warp (ex. (12,6) (13,6) (58,5))
+- **MirrorMarsh** (`MAP_MIRROR_MARSH`)
+  - `I08` 6 tuiles de porte/échelle/tapis de sortie sans warp (ex. (30,5) (31,5) (37,5))
+- **MirrorPond** (`MAP_MIRROR_POND`)
+  - `I08` 4 tuiles de porte/échelle/tapis de sortie sans warp (ex. (2,37) (7,40) (8,19))
+- **MistLake** (`MAP_MIST_LAKE`)
+  - `I08` 4 tuiles de porte/échelle/tapis de sortie sans warp (ex. (2,37) (7,40) (8,19))
+- **MuddyCreek** (`MAP_MUDDY_CREEK`)
+  - `I08` 6 tuiles de porte/échelle/tapis de sortie sans warp (ex. (30,5) (31,5) (37,5))
+- **MythicSpring** (`MAP_MYTHIC_SPRING`)
+  - `I08` 8 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,17) (8,18) (25,5))
+- **NorthWind** (`MAP_NORTH_WIND`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (24,63))
+- **NoTomorrowVillage** (`MAP_NO_TOMORROW_VILLAGE`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (16,13))
+- **ObsidianPass** (`MAP_OBSIDIAN_PASS`)
+  - `I08` 3 tuiles de porte/échelle/tapis de sortie sans warp (ex. (1,4) (5,19) (19,19))
+- **PhantomLane** (`MAP_PHANTOM_LANE`)
+  - `I08` 3 tuiles de porte/échelle/tapis de sortie sans warp (ex. (6,7) (58,10) (65,10))
+- **PokemonMansion_3F** (`MAP_POKEMON_MANSION_3F`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (23,3))
+- **ProfessorReserve** (`MAP_PROFESSOR_RESERVE`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (17,28))
+- **QuarryHeights** (`MAP_QUARRY_HEIGHTS`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (24,63))
+- **QuartzQuarry** (`MAP_QUARTZ_QUARRY`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (24,63))
+- **RainbowFalls** (`MAP_RAINBOW_FALLS`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (24,63))
+- **ReflectionMarsh** (`MAP_REFLECTION_MARSH`)
+  - `I08` 6 tuiles de porte/échelle/tapis de sortie sans warp (ex. (3,26) (4,26) (5,26))
+- **RocketHideout_B1F** (`MAP_ROCKET_HIDEOUT_B1F`)
+  - `I08` 2 tuiles de porte/échelle/tapis de sortie sans warp (ex. (4,24) (10,13))
+- **RocketHideout_B4F** (`MAP_ROCKET_HIDEOUT_B4F`)
+  - `I08` 3 tuiles de porte/échelle/tapis de sortie sans warp (ex. (4,7) (5,23) (11,14))
+- **RoyalGarden** (`MAP_ROYAL_GARDEN`)
+  - `I08` 8 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,17) (8,18) (25,5))
+- **SaltyDunes** (`MAP_SALTY_DUNES`)
+  - `I08` 6 tuiles de porte/échelle/tapis de sortie sans warp (ex. (30,5) (31,5) (37,5))
+- **SaltFlats** (`MAP_SALT_FLATS`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (4,4))
+- **SandboxGrove** (`MAP_SANDBOX_GROVE`)
+  - `I08` 6 tuiles de porte/échelle/tapis de sortie sans warp (ex. (30,5) (31,5) (37,5))
+- **SevenIsland_SevaultCanyon_Summit** (`MAP_SEVEN_ISLAND_SEVAULT_CANYON_SUMMIT`)
+  - `I21` 134 cases d'herbe/rencontre sans table de Pokémon sauvages
+- **ShellCoast** (`MAP_SHELL_COAST`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,24))
+- **SkyGarden** (`MAP_SKY_GARDEN`)
+  - `I08` 4 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,9) (8,10) (8,26))
+- **SoundMeadow** (`MAP_SOUND_MEADOW`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (17,28))
+- **SparkGlade** (`MAP_SPARK_GLADE`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (7,13))
+- **SpireYard** (`MAP_SPIRE_YARD`)
+  - `I08` 4 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,9) (8,10) (8,26))
+- **SpiritFalls** (`MAP_SPIRIT_FALLS`)
+  - `I08` 6 tuiles de porte/échelle/tapis de sortie sans warp (ex. (30,5) (31,5) (37,5))
+- **StarlitSteppe** (`MAP_STARLIT_STEPPE`)
+  - `I08` 2 tuiles de porte/échelle/tapis de sortie sans warp (ex. (0,10) (7,10))
+- **SteelGarden** (`MAP_STEEL_GARDEN`)
+  - `I08` 4 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,9) (8,10) (8,26))
+- **StoneGreenhouse** (`MAP_STONE_GREENHOUSE`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,24))
+- **SunriseMeadow** (`MAP_SUNRISE_MEADOW`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (17,28))
+- **ThornyTrail** (`MAP_THORNY_TRAIL`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (24,63))
+- **ThornThicket** (`MAP_THORN_THICKET`)
+  - `I08` 3 tuiles de porte/échelle/tapis de sortie sans warp (ex. (42,41) (43,41) (44,41))
+- **ThunderPlain** (`MAP_THUNDER_PLAIN`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (24,63))
+- **TradeDock** (`MAP_TRADE_DOCK`)
+  - `I08` 3 tuiles de porte/échelle/tapis de sortie sans warp (ex. (12,6) (13,6) (58,5))
+- **VenomSwamp** (`MAP_VENOM_SWAMP`)
+  - `I08` 6 tuiles de porte/échelle/tapis de sortie sans warp (ex. (30,5) (31,5) (37,5))
+- **VictoryRoadLair_2F** (`MAP_VICTORY_ROAD_LAIR_2F`)
+  - `I08` 5 tuiles de porte/échelle/tapis de sortie sans warp (ex. (6,14) (6,15) (6,16))
+- **WhisperGrove** (`MAP_WHISPER_GROVE`)
+  - `I08` 1 tuiles de porte/échelle/tapis de sortie sans warp (ex. (7,13))
+- **WillowBank** (`MAP_WILLOW_BANK`)
+  - `I08` 4 tuiles de porte/échelle/tapis de sortie sans warp (ex. (8,9) (8,10) (8,26))
+- **ZenGarden** (`MAP_ZEN_GARDEN`)
+  - `I08` 8 tuiles de porte/échelle/tapis de sortie sans warp (ex. (10,34) (11,34) (20,34))
+
+## Écarts de gabarit avec FireRed (info, pas forcément un défaut)
+
+- `MAP_CELADON_CITY_GYM` : taille 17x26 vs 13x20 FireRed
+- `MAP_CERULEAN_CITY` : 17% marchable vs 44% FireRed
+- `MAP_FUCHSIA_CITY_GYM` : 43% marchable vs 70% FireRed
+- `MAP_LAVENDER_TOWN` : taille 40x30 vs 24x20 FireRed
+- `MAP_PALLET_TOWN` : taille 44x40 vs 24x20 FireRed
+- `MAP_PEWTER_CITY_GYM` : taille 17x22 vs 13x16 FireRed
+- `MAP_POKEMON_MANSION_1F` : 4 warps vs 10 FireRed
+- `MAP_POKEMON_MANSION_2F` : taille 22x14 vs 38x38 FireRed ; 1 warps vs 5 FireRed
+- `MAP_POKEMON_MANSION_3F` : taille 26x18 vs 38x35 FireRed ; 1 warps vs 8 FireRed
+- `MAP_POKEMON_MANSION_B1F` : taille 28x20 vs 38x35 FireRed
+- `MAP_ROUTE16` : 1 warps vs 5 FireRed
+- `MAP_ROUTE2` : 2 warps vs 10 FireRed
+- `MAP_ROUTE4` : taille 40x84 vs 108x20 FireRed
+- `MAP_SAFFRON_CITY_GYM` : taille 11x20 vs 29x25 FireRed ; 3 warps vs 33 FireRed
+- `MAP_SILPH_CO_10F` : 2 warps vs 6 FireRed
+- `MAP_SILPH_CO_2F` : 3 warps vs 7 FireRed
+- `MAP_SILPH_CO_3F` : 3 warps vs 10 FireRed
+- `MAP_SILPH_CO_4F` : 2 warps vs 7 FireRed
+- `MAP_SILPH_CO_5F` : 2 warps vs 7 FireRed
+- `MAP_SILPH_CO_6F` : 2 warps vs 5 FireRed
+- `MAP_SILPH_CO_7F` : 2 warps vs 6 FireRed
+- `MAP_SILPH_CO_8F` : 2 warps vs 7 FireRed
+- `MAP_SILPH_CO_9F` : 2 warps vs 5 FireRed
