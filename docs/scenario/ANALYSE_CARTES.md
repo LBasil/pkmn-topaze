@@ -5,11 +5,11 @@ Problèmes **nouveaux** = absents de la carte FireRed de même identifiant (ou c
 | Code | Nb |
 |---|---|
 | I08 | 89 |
-| I09 | 14 |
-| I10 | 53 |
+| I09 | 11 |
+| I10 | 52 |
 | I21 | 5 |
 
-## Infos (161)
+## Infos (157)
 
 - **AncientLibrary** (`MAP_ANCIENT_LIBRARY`)
   - `I08` 4 tuiles de porte/tapis sans warp (carte à sortie par script/ferry, ou tapis voisin d'un vrai warp)
@@ -152,12 +152,6 @@ Problèmes **nouveaux** = absents de la carte FireRed de même identifiant (ou c
   - `I08` 1 tuiles de porte/tapis sans warp (carte à sortie par script/ferry, ou tapis voisin d'un vrai warp)
 - **LavaLagoon** (`MAP_LAVA_LAGOON`)
   - `I08` 6 tuiles de porte/tapis sans warp (carte à sortie par script/ferry, ou tapis voisin d'un vrai warp)
-- **Lighthouse_1F** (`MAP_LIGHTHOUSE_1F`)
-  - `I09` carte jamais atteinte depuis le début du jeu (inutilisée ?)
-- **Lighthouse_2F** (`MAP_LIGHTHOUSE_2F`)
-  - `I09` carte jamais atteinte depuis le début du jeu (inutilisée ?)
-- **Lighthouse_3F** (`MAP_LIGHTHOUSE_3F`)
-  - `I09` carte jamais atteinte depuis le début du jeu (inutilisée ?)
 - **LuckyClover** (`MAP_LUCKY_CLOVER`)
   - `I08` 2 tuiles de porte/tapis sans warp (carte à sortie par script/ferry, ou tapis voisin d'un vrai warp)
 - **MarbleHall** (`MAP_MARBLE_HALL`)
@@ -253,8 +247,6 @@ Problèmes **nouveaux** = absents de la carte FireRed de même identifiant (ou c
   - `I08` 1 tuiles de porte/tapis sans warp (carte à sortie par script/ferry, ou tapis voisin d'un vrai warp)
 - **SilphCo_Elevator** (`MAP_SILPH_CO_ELEVATOR`)
   - `I09` carte jamais atteinte depuis le début du jeu (inutilisée ?)
-- **SixIsland_RuinValley_StoneDen** (`MAP_SIX_ISLAND_RUIN_VALLEY_STONE_DEN`)
-  - `I10` [volontaire : Antre de pierre : atteint par script, la vallée n'a plus de porte retour] warp 0 -> MAP_SIX_ISLAND_RUIN_VALLEY : le warp 0 de là-bas ne revient pas ici (mène à MAP_SIX_ISLAND_DOTTED_HOLE_1F)
 - **SkyGarden** (`MAP_SKY_GARDEN`)
   - `I08` 4 tuiles de porte/tapis sans warp (carte à sortie par script/ferry, ou tapis voisin d'un vrai warp)
 - **SoundMeadow** (`MAP_SOUND_MEADOW`)
