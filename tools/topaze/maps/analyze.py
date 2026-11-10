@@ -371,12 +371,16 @@ def global_reach(R, store, start='MAP_PALLET_TOWN_PLAYERS_HOUSE_2F'):
     seen = set(); q = deque()
     for c in comps_at(start, 6, 6): seen.add((start, c)); q.append((start, c))
     # entrées par script (warp MAP,x,y / setdynamicwarp) et points de Vol : le joueur y arrive sans passer par une porte
-    rx = re.compile(r'^\s*(?:warp|warpsilent|warpdoor|setwarp|setescapewarp)\s+(MAP_\w+)\s*,\s*(?:\w+\s*,\s*)?(-?\d+)\s*,\s*(-?\d+)', re.M)
+    rx = re.compile(r'^\s*(?:warp|warpsilent|warpdoor|setwarp|setescapewarp)\s+(MAP_\w+)\s*,\s*(?:(\w+)\s*,\s*)?(-?\d+)\s*,\s*(-?\d+)', re.M)
     for dp, _, fs in os.walk(os.path.join(R.path, 'data')):
         for f in fs:
             if not f.endswith(('.inc', '.s')): continue
-            for mm, x, y in rx.findall(open(os.path.join(dp, f), encoding='utf-8', errors='ignore').read()):
-                for c in comps_at(mm, int(x), int(y)):
+            for mm, wid, x, y in rx.findall(open(os.path.join(dp, f), encoding='utf-8', errors='ignore').read()):
+                x, y = int(x), int(y)
+                if wid.isdigit() and int(wid) != 255 and mm in info:      # warp vers un numero de warp de la carte : arrivee sur ce warp (x/y du script ignores par le jeu)
+                    dws = R.maps[mm].get('warp_events') or []
+                    if int(wid) < len(dws): x, y = dws[int(wid)]['x'], dws[int(wid)]['y']
+                for c in comps_at(mm, x, y):
                     if (mm, c) not in seen: seen.add((mm, c)); q.append((mm, c))
     hp = os.path.join(R.path, 'src/data/heal_locations.json')
     if os.path.exists(hp):
