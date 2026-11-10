@@ -199,10 +199,8 @@ def analyse_map(R, mid, cache):
             return j if (j in walkall) else None
         return n if n in walkall else None
     LEDGE_C = {c: LEDGE[v[0]] for c, v in cell.items() if v[0] in LEDGE and v[1] == 0}
-    walkall = walk | water | set(LEDGE_C) | {c for c in wcell if inb(*c) and cell[c][1] == 0}
-    walkall = (walkall - set(LEDGE_C)) | set()
-    walkall |= {c for c in wcell if inb(*c)}
-    # cases de rebord : traversables seulement par saut (gérées dans step) ; on les garde hors de walkall
+    # cases de rebord : traversables seulement par saut (gérées dans step), donc hors de walkall ; les cases de warp y sont toujours
+    walkall = ((walk | water) - set(LEDGE_C)) | {c for c in wcell if inb(*c)}
     edge_cells = set()
     for cn in (m.get('connections') or []):
         d = cn['direction']
@@ -258,7 +256,6 @@ def analyse_map(R, mid, cache):
         return False
     if not special and exits:
         # pièges à sens unique : atteignables depuis l'entrée mais sans retour possible vers une sortie
-        start = {c for c in main}
         rev = set(exits & main); q = deque(rev)
         while q:
             u = q.popleft()
@@ -282,13 +279,12 @@ def analyse_map(R, mid, cache):
     return stats, I, (main, exits, cell, w, h, comp_of, edge_cells)
 
 
-KNOWN = {}
 def load_known(root):
     p = os.path.join(root, 'tools/topaze/maps/known_intentional.json')
     return json.load(open(p, encoding='utf-8')) if os.path.exists(p) else {}
 
 
-def run(root, ref=None):
+def run(root):
     R = Root(root); gcache = {}
     def cache(R_, lay):
         k = (R_.path, lay['id'])
@@ -302,7 +298,6 @@ def run(root, ref=None):
         except Exception as e:
             stats, issues = None, [('E99', 'E', 'crash', 'analyse impossible : %r' % e)]
         res[mid] = dict(stats=stats, issues=issues, name=R.maps[mid]['name'])
-    # arrivée dans une zone coupée : pour chaque warp entrant, la case d'arrivée doit être dans la zone principale
     return R, res
 
 
