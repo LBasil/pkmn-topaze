@@ -5,11 +5,11 @@ Problèmes **nouveaux** = absents de la carte FireRed de même identifiant (ou c
 | Code | Nb |
 |---|---|
 | I08 | 89 |
-| I09 | 13 |
-| I10 | 52 |
+| I09 | 14 |
+| I10 | 53 |
 | I21 | 5 |
 
-## Infos (159)
+## Infos (161)
 
 - **AncientLibrary** (`MAP_ANCIENT_LIBRARY`)
   - `I08` 4 tuiles de porte/tapis sans warp (carte à sortie par script/ferry, ou tapis voisin d'un vrai warp)
@@ -93,7 +93,9 @@ Problèmes **nouveaux** = absents de la carte FireRed de même identifiant (ou c
 - **DexHall** (`MAP_DEX_HALL`)
   - `I08` 1 tuiles de porte/tapis sans warp (carte à sortie par script/ferry, ou tapis voisin d'un vrai warp)
 - **DiglettsCave_NorthEntrance** (`MAP_DIGLETTS_CAVE_NORTH_ENTRANCE`)
-  - `I10` [volontaire : Route 2 refaite : la sortie nord de la grotte arrive à l'entrée de la forêt (à décider)] warp 1 -> MAP_ROUTE2 : le warp 0 de là-bas ne revient pas ici (mène à MAP_ROUTE2_VIRIDIAN_FOREST_NORTH_ENTRANCE)
+  - `I10` [volontaire : Grotte Taupiqueur : la sortie nord ne mène nulle part (échelle de B1F bouchée), salle non utilisée] warp 0 -> MAP_DIGLETTS_CAVE_B1F : le warp 0 de là-bas ne revient pas ici (mène à MAP_DIGLETTS_CAVE_SOUTH_ENTRANCE)
+  - `I10` [volontaire : Grotte Taupiqueur : la sortie nord ne mène nulle part (échelle de B1F bouchée), salle non utilisée] 1 tuile(s) de porte/échelle/tapis de sortie SANS warp à proximité : ((4,6))
+  - `I09` carte jamais atteinte depuis le début du jeu (inutilisée ?)
 - **DockCafe** (`MAP_DOCK_CAFE`)
   - `I08` 1 tuiles de porte/tapis sans warp (carte à sortie par script/ferry, ou tapis voisin d'un vrai warp)
 - **DrowsyDown** (`MAP_DROWSY_DOWN`)
