@@ -273,6 +273,7 @@ class BattleMixin:
             s._noswitch = True
             for _ in range(3): s.press('B', 4, 40)
             return
+        if s._pm_tries >= 2 and forced: s.press('B', 4, 40)      # sous-menu ENVOYER/RESUME ouvert sur un Pokemon KO (inutilisable) : on le ferme avant de re-choisir
         if want is None:
             want = b.best_switch(avoid=(s.active_slot(),))
             if want is None:
