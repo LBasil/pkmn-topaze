@@ -66,7 +66,7 @@ class Real(BattleMixin, Auto):
         if e[0] == 'warp':
             nv = s.nav(); ws = nv.mj['warp_events']; w = ws[e[2]]; p = s.pos(); m0 = p[:2]
             if (nv.attr(w['x'], w['y']) & 0x1ff) == 0:      # warp pose sur du sol normal (Centre : 3 warps, un seul tapis) : on prend un warp voisin vers la meme carte sur un vrai tapis
-                alt = [i for i, x in enumerate(ws) if x['dest_map'] == w['dest_map'] and (nv.attr(x['x'], x['y']) & 0x1ff) != 0]
+                alt = [i for i, x in enumerate(ws) if x['dest_map'] == w['dest_map'] and (nv.attr(x['x'], x['y']) & 0x1ff) != 0 and nv.path((p[2], p[3]), (x['x'], x['y']))]
                 if alt: e = (e[0], e[1], alt[0]) + tuple(e[3:]); w = ws[alt[0]]
             if (p[2], p[3]) == (w['x'], w['y']):
                 for d in ('DOWN', 'UP', 'DOWN', 'DOWN', 'LEFT', 'RIGHT', 'DOWN'):
