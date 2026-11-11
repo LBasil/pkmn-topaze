@@ -123,6 +123,9 @@ class Real(BattleMixin, Auto):
     def heal(s, force=False):
         if s._healing: return
         if not s.need_heal() and not (force and any(q['hp'] < 0.8 * q['maxhp'] for q in s.party())): return
+        if not force and s.sync().startswith(('MtEmber',)):      # puzzle de rochers Force : un aller-retour au Centre en plein plan laisse les rochers dans une position sans issue
+            p = s.party(); tot = sum(q['hp'] for q in p) / max(sum(q['maxhp'] for q in p), 1)
+            if tot > 0.3 and any(q['hp'] > 0 for q in p): return
         s._healing = True
         try: s.center_trip()
         finally: s._healing = False
