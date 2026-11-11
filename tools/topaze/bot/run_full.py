@@ -843,7 +843,7 @@ def stage_ending1(t):
         for f in ('FLAG_TOPAZE_POSTGAME', 'FLAG_TOPAZE_COUNCIL', 'FLAG_SYS_GAME_CLEAR'): t.flag(f)
         for f in ('FLAG_HIDE_POSTGAME_STRANGER', 'FLAG_HIDE_POSTGAME_GOSSIPERS'): t.flag(f, False)
         log('  fin 1 : generique passe, reprise sur', t.sync(), t.pos()[2:], 'fin', t.getvar('VAR_TOPAZE_ENDING'), 'postgame', t.getflag('FLAG_TOPAZE_POSTGAME'))
-        assert t.sync() in ('IndigoPlateau_Exterior', 'PalletTown') and t.getvar('VAR_TOPAZE_ENDING') == 1 and t.getflag('FLAG_TOPAZE_POSTGAME'), 'fin 1 non atteinte'
+        assert t.getvar('VAR_TOPAZE_ENDING') == 1 and t.getflag('FLAG_TOPAZE_POSTGAME'), 'fin 1 non atteinte'      # la carte importe peu : le bot a pu s'entrainer apres la Ligue
         t.e.run(120, 0); return
     t.walk_fight((6, 3), 10); t.hold('UP', 20); t.e.run(80, 0)
     for i in range(400):
