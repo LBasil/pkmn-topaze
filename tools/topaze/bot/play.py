@@ -36,10 +36,10 @@ class Player(Real):
         """Vrai joueur : Bon pour un Velo (Fan Club de Carmin sur Mer) puis Velo (magasin d'Azuria) : la porte de la Route Cyclable l'exige."""
         if s.getflag('FLAG_GOT_BICYCLE'): return True
         if not s.getflag('FLAG_GOT_BIKE_VOUCHER'):
-            if not s.go('VermilionCity_PokemonFanClub'): return False
+            if not s.go('VermilionCity_PokemonFanClub', banned=('Route18_EastEntrance_1F',)): return False
             s.talk_script('Chairman', 40, 'chairman')
         if not s.getflag('FLAG_GOT_BIKE_VOUCHER'): log('BLOCK bon pour un velo non obtenu'); return False
-        if not s.go('CeruleanCity_BikeShop'): return False
+        if not s.go('CeruleanCity_BikeShop', banned=('Route18_EastEntrance_1F',)): return False
         s.talk_script('Clerk', 40, 'bikeclerk')
         log('  velo :', s.getflag('FLAG_GOT_BICYCLE')); return s.getflag('FLAG_GOT_BICYCLE')
     def grind_map(s, lvl):
