@@ -200,6 +200,8 @@ class BattleMixin:
                 if top and top['i'] != s.active_slot() and u['level'] + 3 <= top['level'] and sw is None: sw = top['i']
             if sw is not None and not getattr(s, '_noswitch', False):
                 s._want = sw; tgt = 2
+            elif getattr(s, 'flee', False) and not (s.e.u32(sym('gBattleTypeFlags')) & 8):      # simple traversee : on fuit les sauvages (FUITE = 4e entree du menu)
+                tgt = 3
             elif s.want_catch():
                 s._act = 'ball'; s._throws = getattr(s, '_throws', 0) + 1; tgt = 1
             else:

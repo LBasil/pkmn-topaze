@@ -1066,9 +1066,12 @@ def echo_step(t):
     elif st in (9, 11):
         go_isle(t, 4, 'FourIsland_LoreleisHouse'); t.e.run(90, 0); t.talk_script('EventScript_Lorelei', 40, 'echo_lorelei_%d' % st)
     elif st == 21:
+        if hasattr(t, 'use_repel'):      # joueur reel : des sauvages (niv. 48-61, 180-240 PV) usent l'equipe sur le chemin (et pas d'argent pour du Repousse) : on soigne puis on FUIT les combats sauvages
+            go_isle(t, 7, 'SevenIsland_PokemonCenter_1F'); t.heal(True); t.flee = True
         go_isle(t, 7, 'SevenIsland_SevaultCanyon_Summit'); t.e.run(90, 0)      # la scene Silver / Giovanni / Red se declenche au sommet (declencheurs en (11,11) et (12,11))
         t.walk_fight((11, 11), 10); t.scene(maxn=1200, shot='echo_final')      # des dresseurs barrent la montee : chaque duel gagne reste gagne, un soin puis une nouvelle tentative suffisent
         if t.getvar('VAR_ECHO_STAGE') == 21: t.walk_fight((12, 11), 10); t.scene(maxn=1200)
+        t.flee = False
     elif st == 22:
         go_isle(t, 7, 'SevenIsland_SevaultCanyon'); t.e.run(90, 0)
         # les 6 legendaires n'apparaissent qu'au rechargement de la carte (OnTransition) : on sort puis on revient

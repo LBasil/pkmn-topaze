@@ -32,6 +32,43 @@ def enc_maps():
 
 class Player(Real):
     dbg_save = bool(os.environ.get("DBG"))
+    def repel_steps(s):
+        """Pas de Repousse restants (VAR_REPEL_STEP_COUNT)."""
+        try: return s.getvar('VAR_REPEL_STEP_COUNT')
+        except Exception: return 0
+    def item_qty(s, item):
+        sb = s.e.u32(0x03005108); sb2 = s.e.u32(0x0300510c); key = s.e.u32(sb2 + 0xF20) & 0xffff
+        for i in range(42):
+            it, q = struct.unpack_from('<HH', s.e.peek(sb + 0x310 + 4 * i, 4), 0)
+            if it == item: return q ^ key
+        return 0
+    def use_repel(s, item=84):
+        """Vrai joueur : SAC > Objets > Max Repousse > UTILISER (marche quelques centaines de pas sans rencontre sauvage). item 179 = ITEM_MAX_REPEL."""
+        if s.item_qty(item) == 0: return False
+        sb = s.e.u32(0x03005108)
+        pos = [i for i in range(42) if struct.unpack_from('<H', s.e.peek(sb + 0x310 + 4 * i, 4), 0)[0] == item][0]
+        s.press('START', 4, 40)
+        for _ in range(9):
+            if s.e.peek(0x02037428, 1)[0] == 2: break
+            s.press('DOWN', 4, 14)
+        s.press('A', 4, 90)
+        for _ in range(4): s.press('LEFT', 4, 30)
+        for _ in range(45): s.press('UP', 4, 8)
+        for _ in range(pos): s.press('DOWN', 4, 14)
+        s.press('A', 4, 50); s.press('A', 4, 90)
+        for _ in range(6): s.press('B', 4, 40)
+        ok = s.item_qty(item) == 0 or s.repel_steps() > 0
+        log('  Repousse utilise :', ok); return ok
+    def buy_repel(s, qty=3):
+        """Max Repousse au Supermarche de l'Ile 7 (9e article de la liste)."""
+        if not s.go('SevenIsland_Mart'): return False
+        ck = s.find_obj('_Clerk'); n0 = s.item_qty(84)
+        for q in (qty, 2, 1):
+            s.talk_at((ck[0], ck[1] + 2), 'UP', 50); s.e.run(60, 0)
+            for k in ['A'] + ['DOWN'] * 8 + ['A'] + ['UP'] * (q - 1) + ['A', 'A']: s.press(k, 4, 50)
+            for _ in range(5): s.press('B', 4, 40)
+            if s.item_qty(84) > n0: log('  ACHAT : Max Repousse', n0, '->', s.item_qty(84)); return True
+        return False
     def get_bike(s):
         """Vrai joueur : Bon pour un Velo (Fan Club de Carmin sur Mer) puis Velo (magasin d'Azuria) : la porte de la Route Cyclable l'exige."""
         if s.getflag('FLAG_GOT_BICYCLE'): return True
