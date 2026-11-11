@@ -626,7 +626,12 @@ def stage_quartz(t):
         t.talk_script('Giovanni', 40, 'vesper')
         if t.getflag('FLAG_HIDE_CELADON_ROCKETS'): break
     t.report('FLAG_HIDE_CELADON_ROCKETS')
-    t.talk_script('SilphScope', 8); t.report('FLAG_GOT_POKE_FLUTE')
+    for _ in range(4):      # la Sylph Scope / Flute : un soin en pleine scene peut avoir fait quitter le repaire -> on y retourne
+        if t.getflag('FLAG_GOT_POKE_FLUTE'): break
+        if t.sync() != 'RocketHideout_B4F': t.go('RocketHideout_B4F', banned=BAN)
+        t.talk_script('SilphScope', 8); t.scene(maxn=200)
+    t.report('FLAG_GOT_POKE_FLUTE')
+    assert t.getflag('FLAG_GOT_POKE_FLUTE'), 'Flute Poke non obtenue'
     assert t.go('RocketHideout_Elevator', banned=BAN), 'ascenseur (retour) inaccessible'
     lift(t, 0); t.talk_script('Grunt5', 20, 'grunt5')   # garde de la barriere de B1F
     assert t.go('CeladonCity_GameCorner', banned=BAN), 'retour Game Corner impossible'
