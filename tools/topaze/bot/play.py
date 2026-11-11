@@ -32,6 +32,16 @@ def enc_maps():
 
 class Player(Real):
     dbg_save = bool(os.environ.get("DBG"))
+    def get_bike(s):
+        """Vrai joueur : Bon pour un Velo (Fan Club de Carmin sur Mer) puis Velo (magasin d'Azuria) : la porte de la Route Cyclable l'exige."""
+        if s.getflag('FLAG_GOT_BICYCLE'): return True
+        if not s.getflag('FLAG_GOT_BIKE_VOUCHER'):
+            if not s.go('VermilionCity_PokemonFanClub'): return False
+            s.talk_script('Chairman', 40, 'chairman')
+        if not s.getflag('FLAG_GOT_BIKE_VOUCHER'): log('BLOCK bon pour un velo non obtenu'); return False
+        if not s.go('CeruleanCity_BikeShop'): return False
+        s.talk_script('Clerk', 40, 'bikeclerk')
+        log('  velo :', s.getflag('FLAG_GOT_BICYCLE')); return s.getflag('FLAG_GOT_BICYCLE')
     def grind_map(s, lvl):
         """Carte avec de l'herbe dont les niveaux sauvages sont proches de `lvl`, la plus proche par le graphe."""
         cur = s.sync(); p = s.pos(); best = None
@@ -98,6 +108,7 @@ def main(seq):
                 if t.idle():
                     pp = t.party(); b = max(pp, key=lambda q: (q['hp'] > 0, q['level']))
                     if b['i'] > 0: t.lead_swap(b['i']); log('  tete d equipe remise : niveau', b['level'])
+                if nm == 'hema_in' and t.idle(): t.heal(True); assert t.get_bike(), 'velo non obtenu'
                 RF.STAGES[i][1](t); break
             except AssertionError as e:
                 log('ECHEC etape', nm, 'essai', attempt, e); bump += 3
