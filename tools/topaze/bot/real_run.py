@@ -110,6 +110,7 @@ class Real(BattleMixin, Auto):
         return sorted(out)
     def center_trip(s):
         """Va au Centre Pokemon le plus proche (en nombre de composantes de carte) et parle a l'infirmiere."""
+        s._pre_trip = s.sync()      # carte d'ou l'on part : une scene d'etape peut devoir y retourner apres le soin
         for dist, nm in s.centers()[:4]:
             log('  SOINS : trajet vers', nm, 'depuis', s.sync())
             if s.sync() != nm and not s.go(nm): continue

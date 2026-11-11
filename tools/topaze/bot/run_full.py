@@ -434,7 +434,11 @@ class Auto(T):
         for o in mj(s.sync())['object_events']:
             if script_pat in o.get('script', ''): return (o['x'], o['y'])
     def talk_script(s, script_pat, n=14, shot=None):
-        pos = s.find_obj(script_pat); assert pos, 'objet introuvable ' + script_pat
+        pos = s.find_obj(script_pat)
+        if not pos and getattr(s, '_pre_trip', None) and s.sync() != s._pre_trip:      # un trajet au Centre a interrompu la scene : on retourne sur la carte d'origine
+            back = s._pre_trip; s._pre_trip = None; log('  retour apres soin vers', back)
+            if s.go(back): pos = s.find_obj(script_pat)
+        assert pos, 'objet introuvable ' + script_pat
         near = [o for o in s.live_objs() if abs(o[0] - pos[0]) + abs(o[1] - pos[1]) <= 4]    # PNJ qui se deplace : position reelle
         if near: pos = min(near, key=lambda o: abs(o[0] - pos[0]) + abs(o[1] - pos[1]))
         return s.talk_obj(pos, n, shot)
