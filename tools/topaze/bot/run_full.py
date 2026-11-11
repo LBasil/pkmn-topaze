@@ -1081,9 +1081,12 @@ def echo_step(t):
 def stage_pg_echoes(t):
     """Post-game 6 : les 8 Echos du Temps, de l'Ile 1 au Canyon Sevault (ferry entre les iles, Bill/Celio/Lorelei)."""
     R.SURF = True; R.NOWALK = (19,)    # pas de Cascade (CS07) : les chutes d'eau ne sont pas navigables
-    for _ in range(40):
+    fails = collections.Counter()
+    for _ in range(60):
         if not echo_step(t):
-            log('ECHO bloque au stade', t.getvar('VAR_ECHO_STAGE')); break
+            s0 = t.getvar('VAR_ECHO_STAGE'); fails[s0] += 1      # un soin / une defaite peut interrompre un stade : on le rejoue (2 fois) avant d'abandonner
+            if fails[s0] >= 3: log('ECHO bloque au stade', s0); break
+            log('ECHO stade', s0, 'rejoue (essai', fails[s0] + 1, ')'); t.heal(True); continue
         if t.getvar('VAR_ECHO_STAGE') >= 23: break
 
 STAGES = [('ranch', stage_opening_ranch), ('school', stage_school), ('lab', stage_lab), ('route1q', stage_route1_quest), ('opan', stage_opanihrum), ('gym1', stage_gym1), ('gym2', stage_gym2), ('cottage', stage_cottage), ('ssanne', stage_ssanne), ('gym3', stage_gym3), ('tower', stage_tower), ('quartz', stage_quartz), ('gym4', stage_gym4), ('ameth', stage_ameth), ('gym5', stage_gym5), ('hema_in', stage_hema_in), ('hema_tower', stage_hema_tower), ('gym6', stage_gym6), ('chron_in', stage_chron_in), ('chron_key', stage_chron_key), ('gym7', stage_gym7), ('chron_raid', stage_chron_raid), ('seafoam', stage_seafoam), ('gym8', stage_gym8), ('victory', stage_victory), ('league', stage_league), ('ending1', stage_ending1), ('pg_pallet', stage_pg_pallet), ('pg_indigo', stage_pg_indigo), ('pg_mine', stage_pg_mine), ('pg_birds', stage_pg_birds), ('pg_ferry', stage_pg_ferry), ('pg_sevii', stage_pg_sevii), ('pg_sulfura', stage_pg_sulfura), ('pg_echoes', stage_pg_echoes)]
