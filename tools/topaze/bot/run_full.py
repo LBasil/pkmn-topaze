@@ -1069,8 +1069,11 @@ def echo_step(t):
         if hasattr(t, 'use_repel'):      # joueur reel : des sauvages (niv. 48-61, 180-240 PV) usent l'equipe sur le chemin (et pas d'argent pour du Repousse) : on soigne puis on FUIT les combats sauvages
             go_isle(t, 7, 'SevenIsland_PokemonCenter_1F'); t.heal(True); t.flee = True
         go_isle(t, 7, 'SevenIsland_SevaultCanyon_Summit'); t.e.run(90, 0)      # la scene Silver / Giovanni / Red se declenche au sommet (declencheurs en (11,11) et (12,11))
-        t.walk_fight((11, 11), 10); t.scene(maxn=1200, shot='echo_final')      # des dresseurs barrent la montee : chaque duel gagne reste gagne, un soin puis une nouvelle tentative suffisent
-        if t.getvar('VAR_ECHO_STAGE') == 21: t.walk_fight((12, 11), 10); t.scene(maxn=1200)
+        t._healing = True      # la scene soigne elle-meme l'equipe : un trajet au Centre en plein dialogue la casserait (stade bloque a 21)
+        try:
+            t.walk_fight((11, 11), 10); t.scene(maxn=1200, shot='echo_final')
+            if t.getvar('VAR_ECHO_STAGE') == 21: t.walk_fight((12, 11), 10); t.scene(maxn=1200)
+        finally: t._healing = False
         t.flee = False
     elif st == 22:
         go_isle(t, 7, 'SevenIsland_SevaultCanyon'); t.e.run(90, 0)
