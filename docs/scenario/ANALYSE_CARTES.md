@@ -6,10 +6,10 @@ Problèmes **nouveaux** = absents de la carte FireRed de même identifiant (ou c
 |---|---|
 | I08 | 89 |
 | I09 | 11 |
-| I10 | 52 |
+| I10 | 64 |
 | I21 | 5 |
 
-## Infos (157)
+## Infos (169)
 
 - **AncientLibrary** (`MAP_ANCIENT_LIBRARY`)
   - `I08` 4 tuiles de porte/tapis sans warp (carte à sortie par script/ferry, ou tapis voisin d'un vrai warp)
@@ -35,7 +35,9 @@ Problèmes **nouveaux** = absents de la carte FireRed de même identifiant (ou c
   - `I08` 2 tuiles de porte/tapis sans warp (carte à sortie par script/ferry, ou tapis voisin d'un vrai warp)
 - **CeladonCity_Condominiums_1F** (`MAP_CELADON_CITY_CONDOMINIUMS_1F`)
   - `I10` [volontaire : Résidence de Céladopole : porte arrière retirée, étages gauches non utilisés (Évoli donné à Bourg Palette)] warp 0 (11,19) sur une case bloquée qui n'est pas une porte
+  - `I10` [volontaire : Résidence de Céladopole : porte arrière retirée, étages gauches non utilisés (Évoli donné à Bourg Palette)] warp 0 (11,19) sur une case de comportement 0x00 : le jeu ne le déclenche pas (il faut une porte/échelle/flèche, ou la carte dans IsTopazeStepWarpMap)
   - `I10` [volontaire : Résidence de Céladopole : porte arrière retirée, étages gauches non utilisés (Évoli donné à Bourg Palette)] warp 2 (13,19) sur une case bloquée qui n'est pas une porte
+  - `I10` [volontaire : Résidence de Céladopole : porte arrière retirée, étages gauches non utilisés (Évoli donné à Bourg Palette)] warp 2 (13,19) sur une case de comportement 0x00 : le jeu ne le déclenche pas (il faut une porte/échelle/flèche, ou la carte dans IsTopazeStepWarpMap)
   - `I10` [volontaire : Résidence de Céladopole : porte arrière retirée, étages gauches non utilisés (Évoli donné à Bourg Palette)] zone de 18 cases jamais atteignable depuis le début du jeu, contient : warp (4,2)->CELADON_CITY_CONDOMINIUMS_2F, warp (2,1)->CELADON_CITY
 - **CeladonCity_Condominiums_2F** (`MAP_CELADON_CITY_CONDOMINIUMS_2F`)
   - `I10` [volontaire : idem] zone de 13 cases jamais atteignable depuis le début du jeu, contient : warp (4,2)->CELADON_CITY_CONDOMINIUMS_1F, warp (2,2)->CELADON_CITY_CONDOMINIUMS_3F
@@ -47,7 +49,9 @@ Problèmes **nouveaux** = absents de la carte FireRed de même identifiant (ou c
   - `I10` [volontaire : idem] sign en (3,12) hors de portée du joueur
 - **CeladonCity_Condominiums_RoofRoom** (`MAP_CELADON_CITY_CONDOMINIUMS_ROOF_ROOM`)
   - `I10` [volontaire : idem] warp 0 (3,8) sur une case bloquée qui n'est pas une porte
+  - `I10` [volontaire : idem] warp 0 (3,8) sur une case de comportement 0x00 : le jeu ne le déclenche pas (il faut une porte/échelle/flèche, ou la carte dans IsTopazeStepWarpMap)
   - `I10` [volontaire : idem] warp 2 (5,8) sur une case bloquée qui n'est pas une porte
+  - `I10` [volontaire : idem] warp 2 (5,8) sur une case de comportement 0x00 : le jeu ne le déclenche pas (il faut une porte/échelle/flèche, ou la carte dans IsTopazeStepWarpMap)
   - `I09` carte jamais atteinte depuis le début du jeu (inutilisée ?)
 - **CenterMeadow** (`MAP_CENTER_MEADOW`)
   - `I08` 8 tuiles de porte/tapis sans warp (carte à sortie par script/ferry, ou tapis voisin d'un vrai warp)
@@ -62,7 +66,9 @@ Problèmes **nouveaux** = absents de la carte FireRed de même identifiant (ou c
   - `I10` [volontaire : Tourmalia : warps fantômes (0,0)-(0,3) liés aux maisons 1/5 inutilisées, connus et inoffensifs] zone de 4 cases jamais atteignable depuis le début du jeu, contient : warp (0,0)->CERULEAN_CITY_HOUSE1, warp (0,0)->CERULEAN_CITY_HOUSE1, warp (0,2)->CERULEAN_CITY_HOUSE2, warp (0,3)->CERULEAN_CITY_HOUSE2 …
 - **CeruleanCity_House1** (`MAP_CERULEAN_CITY_HOUSE1`)
   - `I10` [volontaire : Azuria (Tourmalia) : maisons 1 et 5 non utilisées, warps fantômes en (0,0)-(0,3) connus et inoffensifs] warp 0 (2,9) sur une case bloquée qui n'est pas une porte
+  - `I10` [volontaire : Azuria (Tourmalia) : maisons 1 et 5 non utilisées, warps fantômes en (0,0)-(0,3) connus et inoffensifs] warp 0 (2,9) sur une case de comportement 0x00 : le jeu ne le déclenche pas (il faut une porte/échelle/flèche, ou la carte dans IsTopazeStepWarpMap)
   - `I10` [volontaire : Azuria (Tourmalia) : maisons 1 et 5 non utilisées, warps fantômes en (0,0)-(0,3) connus et inoffensifs] warp 2 (4,9) sur une case bloquée qui n'est pas une porte
+  - `I10` [volontaire : Azuria (Tourmalia) : maisons 1 et 5 non utilisées, warps fantômes en (0,0)-(0,3) connus et inoffensifs] warp 2 (4,9) sur une case de comportement 0x00 : le jeu ne le déclenche pas (il faut une porte/échelle/flèche, ou la carte dans IsTopazeStepWarpMap)
   - `I09` carte jamais atteinte depuis le début du jeu (inutilisée ?)
 - **CeruleanCity_House5** (`MAP_CERULEAN_CITY_HOUSE5`)
   - `I09` carte jamais atteinte depuis le début du jeu (inutilisée ?)
@@ -182,15 +188,21 @@ Problèmes **nouveaux** = absents de la carte FireRed de même identifiant (ou c
   - `I08` 3 tuiles de porte/tapis sans warp (carte à sortie par script/ferry, ou tapis voisin d'un vrai warp)
 - **PokemonLeague_AgathasRoom** (`MAP_POKEMON_LEAGUE_AGATHAS_ROOM`)
   - `I10` [volontaire : Ligue raccourcie : salle non utilisée] warp 0 (6,12) sur une case bloquée qui n'est pas une porte
+  - `I10` [volontaire : Ligue raccourcie : salle non utilisée] warp 0 (6,12) sur une case de comportement 0x00 : le jeu ne le déclenche pas (il faut une porte/échelle/flèche, ou la carte dans IsTopazeStepWarpMap)
   - `I10` [volontaire : Ligue raccourcie : salle non utilisée] warp 1 (6,2) sur une case bloquée qui n'est pas une porte
+  - `I10` [volontaire : Ligue raccourcie : salle non utilisée] warp 1 (6,2) sur une case de comportement 0x00 : le jeu ne le déclenche pas (il faut une porte/échelle/flèche, ou la carte dans IsTopazeStepWarpMap)
   - `I09` carte jamais atteinte depuis le début du jeu (inutilisée ?)
 - **PokemonLeague_BrunosRoom** (`MAP_POKEMON_LEAGUE_BRUNOS_ROOM`)
   - `I10` [volontaire : Ligue raccourcie : Olga mène directement à la Salle du Maître] warp 0 -> MAP_POKEMON_LEAGUE_LORELEIS_ROOM : le warp 1 de là-bas ne revient pas ici (mène à MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM)
   - `I10` [volontaire : Ligue raccourcie : Olga mène directement à la Salle du Maître] warp 0 (6,12) sur une case bloquée qui n'est pas une porte
+  - `I10` [volontaire : Ligue raccourcie : Olga mène directement à la Salle du Maître] warp 0 (6,12) sur une case de comportement 0x00 : le jeu ne le déclenche pas (il faut une porte/échelle/flèche, ou la carte dans IsTopazeStepWarpMap)
   - `I10` [volontaire : Ligue raccourcie : Olga mène directement à la Salle du Maître] warp 1 (6,2) sur une case bloquée qui n'est pas une porte
+  - `I10` [volontaire : Ligue raccourcie : Olga mène directement à la Salle du Maître] warp 1 (6,2) sur une case de comportement 0x00 : le jeu ne le déclenche pas (il faut une porte/échelle/flèche, ou la carte dans IsTopazeStepWarpMap)
 - **PokemonLeague_LancesRoom** (`MAP_POKEMON_LEAGUE_LANCES_ROOM`)
+  - `I10` [volontaire : Ligue raccourcie : salle non utilisée] warp 0 (23,13) sur une case de comportement 0x00 : le jeu ne le déclenche pas (il faut une porte/échelle/flèche, ou la carte dans IsTopazeStepWarpMap)
   - `I10` [volontaire : Ligue raccourcie : salle non utilisée] warp 1 -> MAP_POKEMON_LEAGUE_CHAMPIONS_ROOM : le warp 0 de là-bas ne revient pas ici (mène à MAP_POKEMON_LEAGUE_LORELEIS_ROOM)
   - `I10` [volontaire : Ligue raccourcie : salle non utilisée] warp 1 (6,5) sur une case bloquée qui n'est pas une porte
+  - `I10` [volontaire : Ligue raccourcie : salle non utilisée] warp 1 (6,5) sur une case de comportement 0x00 : le jeu ne le déclenche pas (il faut une porte/échelle/flèche, ou la carte dans IsTopazeStepWarpMap)
   - `I09` carte jamais atteinte depuis le début du jeu (inutilisée ?)
 - **PokemonMansion_3F** (`MAP_POKEMON_MANSION_3F`)
   - `I10` [volontaire : Manoir raccourci : tuile de sortie d'origine sans effet] 1 tuile(s) de porte/échelle/tapis de sortie SANS warp à proximité : ((23,3))

@@ -23,6 +23,14 @@ LEDGE = {0x38: (1, 0), 0x39: (-1, 0), 0x3A: (0, -1), 0x3B: (0, 1)}
 SPECIAL_MOVE = set(range(0x40, 0x59)) | {0x23, 0x26, 0x27, 0xD0, 0xD1, 0x50, 0x51, 0x52, 0x53}   # glace, glissades, tourniquets, courants
 DOORISH = {0x60, 0x61, 0x62, 0x63, 0x64, 0x65, 0x66, 0x67, 0x68, 0x69, 0x6A, 0x6B, 0x6C, 0x6D, 0x6E, 0x6F, 0x71}
 ARROW = {0x62: (1, 0), 0x63: (-1, 0), 0x64: (0, -1), 0x65: (0, 1)}
+def _step_warp_layouts(root='.'):
+    """Layouts dont les warps se declenchent en marchant dessus (liste IsTopazeStepWarpMap de src/field_control_avatar.c)."""
+    import re
+    try: s = open(os.path.join(root, 'src/field_control_avatar.c'), encoding='utf-8').read()
+    except OSError: return set()
+    m = re.search(r'static bool8 IsTopazeStepWarpMap\(void\)\s*\{(.*?)\n\}', s, re.S)
+    return set(re.findall(r'(LAYOUT_\w+)', m.group(1))) if m else set()
+STEP_WARP_LAYOUTS = set()
 NOSCRIPT = {'', '0x0', '0', 'NULL', None}
 
 
@@ -135,6 +143,8 @@ def analyse_map(R, mid, cache):
         if col != 0 and b not in DOORISH and not sib:
             add('W07', 'W', 'warp@%d,%d' % c, 'warp %d (%d,%d) sur une case bloquée qui n\'est pas une porte' % (i, *c))
         if c == (0, 0): add('E07', 'E', 'warp@%d,%d' % c, 'warp %d encore en (0,0) : position jamais placée' % i)
+        if b not in DOORISH and m['layout'] not in STEP_WARP_LAYOUTS and not sib:
+            add('E10', 'E', 'warp@%d,%d' % c, 'warp %d (%d,%d) sur une case de comportement 0x%02X : le jeu ne le déclenche pas (il faut une porte/échelle/flèche, ou la carte dans IsTopazeStepWarpMap)' % (i, c[0], c[1], b))
     nodoor = [c for c, (b, col, _, _) in cell.items() if b in DOORISH and c not in wcell and b not in (0x66, 0x71) and col == 0]
     lone = [c for c in nodoor if not any(abs(c[0] - q['x']) + abs(c[1] - q['y']) <= 2 for q in warps)]
     ferry = not warps or any('ReturnFerry' in str(o.get('script', '')) for o in objs)
@@ -286,6 +296,7 @@ def load_known(root):
 
 def run(root):
     R = Root(root); gcache = {}
+    STEP_WARP_LAYOUTS.update(_step_warp_layouts(root))
     def cache(R_, lay):
         k = (R_.path, lay['id'])
         if k not in gcache: gcache[k] = R_.grid(lay)
