@@ -309,7 +309,7 @@ class Auto(T):
         if 'SNORLAX' in GATE_GFX and s.getflag('FLAG_GOT_POKE_FLUTE'): open_gate('SNORLAX')
         if not R.SURF and s.getflag('FLAG_GOT_HM03') and s.getflag('FLAG_BADGE05_GET'): R.SURF = True; _NAV.clear(); _COMP.clear()
         for _ in range(tries * 40):
-            cur = s.sync(); s.heal()
+            cur = s.sync(); s.heal(); cur = s.sync()      # re-lecture : un trajet de soin change de carte
             if cur == 'Route23': s.vr_open()
             if isinstance(target, tuple):
                 if cur == target[0] and comps_of(cur, (s.pos()[2], s.pos()[3])) & comps_of(target[0], target[1]): return True
