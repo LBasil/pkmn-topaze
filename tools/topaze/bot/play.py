@@ -55,7 +55,15 @@ class Player(Real):
             try: rt = RF.route(cur, (p[2], p[3]), nm)
             except Exception: rt = None
             if rt and (best is None or len(rt) < best[0]): best = (len(rt), nm)
-        return best[1] if best else None
+        if best: return best[1]
+        # repli : aucune zone ne colle au niveau voulu (haut niveau) -> la zone accessible aux rencontres les plus fortes
+        top = None
+        for nm, (lo, hi) in enc_maps().items():
+            if hi < lvl - 30 or not os.path.isdir('data/maps/' + nm) or nm in getattr(s, 'bad_maps', set()): continue
+            try: rt = RF.route(cur, (p[2], p[3]), nm) if nm != cur else [0]
+            except Exception: rt = None
+            if rt and (top is None or (hi, -len(rt)) > top[0]): top = ((hi, -len(rt)), nm)
+        return top[1] if top else None
     def buff(s, *a, **k): log('  (pas de buff : joueur reel)')
     TEAM_MAPS = ('MtMoon_B1F', 'Route4')      # zones atteignables avant le ticket du S.S. Anne
     def ready(s, p, lvl):
