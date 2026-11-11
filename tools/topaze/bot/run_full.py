@@ -1046,6 +1046,7 @@ def echo_step(t):
             if guards:      # couloir etroit : les gardiens (acolytes puis Oracle) barrent le chemin, un combat apres l'autre (ils disparaissent apres leur defaite)
                 for g in guards:
                     t.heal()
+                    if t.sync() != gm: t.go(gm)      # un soin a pu nous ramener au Centre : on retourne dans l'antre
                     try: t.talk_script(g, 30)
                     except AssertionError: pass
                     if not t.idle(): t.scene(maxn=600)
@@ -1053,8 +1054,11 @@ def echo_step(t):
                         if not t.inbattle(): break
                         t.finish_battle(maxn=600); t.scene(maxn=300)
                     log('  antre :', g.split('EventScript_')[-1], t.sync(), t.pos()[2:])
+                    if t.sync() != gm: t.go(gm)
                 t.heal()
+                if t.sync() != gm: t.go(gm)
             if gm != mp: assert t.go(mp), mp + ' inaccessible'
+            if t.sync() != mp: assert t.go(mp), mp + ' inaccessible'
             legend_fight(t, pat)
         except AssertionError as ex:
             # limite du bot : puzzles de glace / cascade de la grotte Glacon -> Echo 4 non joue, on le saute (a verifier a la main)
