@@ -314,7 +314,7 @@ class Auto(T):
             if isinstance(target, tuple):
                 if cur == target[0] and comps_of(cur, (s.pos()[2], s.pos()[3])) & comps_of(target[0], target[1]): return True
             elif cur == target: return True
-            if cur == 'MtMoon_B2F' and not s.getflag('FLAG_GOT_FOSSIL_FROM_MT_MOON'): s.take_fossil()      # les deux fossiles barrent le couloir de la sortie ouest : il faut en prendre un (vanille)
+            if cur == 'MtMoon_B2F' and not getattr(s, '_healing', False) and not s.getflag('FLAG_GOT_FOSSIL_FROM_MT_MOON'): s.take_fossil()      # les deux fossiles barrent le couloir de la sortie ouest : il faut en prendre un (vanille)
             n_live = s.nav(); n_live.objs = {(o['x'], o['y']) for o in n_live.mj['object_events'] if is_gate(cur, o['graphics_id']) and not (o.get('flag', '0') not in ('0', 0) and s.getflag(o['flag']))}   # objet masque (drapeau HIDE pose) = plus un obstacle
             _NAV[cur] = n_live; _COMP.pop(cur, None)        # la carte courante est lue en direct (barrieres ouvertes par des scripts...)
             p = s.pos(); rt = route(cur, (p[2], p[3]), target, banned)
