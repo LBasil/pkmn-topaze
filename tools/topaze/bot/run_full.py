@@ -1067,11 +1067,8 @@ def echo_step(t):
         go_isle(t, 4, 'FourIsland_LoreleisHouse'); t.e.run(90, 0); t.talk_script('EventScript_Lorelei', 40, 'echo_lorelei_%d' % st)
     elif st == 21:
         go_isle(t, 7, 'SevenIsland_SevaultCanyon_Summit'); t.e.run(90, 0)      # la scene Silver / Giovanni / Red se declenche au sommet (declencheurs en (11,11) et (12,11))
-        t._healing = True      # pas de trajet au Centre en route vers le declencheur (la scene soigne elle-meme l'equipe)
-        try:
-            t.walk_fight((11, 11), 10); t.scene(maxn=1200, shot='echo_final')
-            if t.getvar('VAR_ECHO_STAGE') == 21: t.walk_fight((12, 11), 10); t.scene(maxn=1200)
-        finally: t._healing = False
+        t.walk_fight((11, 11), 10); t.scene(maxn=1200, shot='echo_final')      # des dresseurs barrent la montee : chaque duel gagne reste gagne, un soin puis une nouvelle tentative suffisent
+        if t.getvar('VAR_ECHO_STAGE') == 21: t.walk_fight((12, 11), 10); t.scene(maxn=1200)
     elif st == 22:
         go_isle(t, 7, 'SevenIsland_SevaultCanyon'); t.e.run(90, 0)
         # les 6 legendaires n'apparaissent qu'au rechargement de la carte (OnTransition) : on sort puis on revient
@@ -1087,10 +1084,10 @@ def stage_pg_echoes(t):
     """Post-game 6 : les 8 Echos du Temps, de l'Ile 1 au Canyon Sevault (ferry entre les iles, Bill/Celio/Lorelei)."""
     R.SURF = True; R.NOWALK = (19,)    # pas de Cascade (CS07) : les chutes d'eau ne sont pas navigables
     fails = collections.Counter()
-    for _ in range(60):
+    for _ in range(80):
         if not echo_step(t):
             s0 = t.getvar('VAR_ECHO_STAGE'); fails[s0] += 1      # un soin / une defaite peut interrompre un stade : on le rejoue (2 fois) avant d'abandonner
-            if fails[s0] >= 3: log('ECHO bloque au stade', s0); break
+            if fails[s0] >= 10: log('ECHO bloque au stade', s0); break
             log('ECHO stade', s0, 'rejoue (essai', fails[s0] + 1, ')'); t.heal(True); continue
         if t.getvar('VAR_ECHO_STAGE') >= 23: break
 
