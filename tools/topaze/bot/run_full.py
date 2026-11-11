@@ -1066,7 +1066,9 @@ def echo_step(t):
     elif st in (9, 11):
         go_isle(t, 4, 'FourIsland_LoreleisHouse'); t.e.run(90, 0); t.talk_script('EventScript_Lorelei', 40, 'echo_lorelei_%d' % st)
     elif st == 21:
-        go_isle(t, 7, 'SevenIsland_SevaultCanyon'); t.e.run(90, 0); t.walk_fight((17, 9), 10); t.walk_fight((17, 8), 10); t.scene(maxn=1200, shot='echo_final')
+        go_isle(t, 7, 'SevenIsland_SevaultCanyon_Summit'); t.e.run(90, 0)      # la scene Silver / Giovanni / Red se declenche au sommet (declencheurs en (11,11) et (12,11))
+        t.walk_fight((11, 11), 10); t.scene(maxn=1200, shot='echo_final')
+        if t.getvar('VAR_ECHO_STAGE') == 21: t.walk_fight((12, 11), 10); t.scene(maxn=1200)
     elif st == 22:
         go_isle(t, 7, 'SevenIsland_SevaultCanyon'); t.e.run(90, 0)
         # les 6 legendaires n'apparaissent qu'au rechargement de la carte (OnTransition) : on sort puis on revient
