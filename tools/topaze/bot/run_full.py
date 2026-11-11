@@ -338,9 +338,12 @@ class Auto(T):
         return s.sync() == (target[0] if isinstance(target, tuple) else target)
     def take_fossil(s):
         """Mont Selenite B2F : bat le Binoclard (declenche en approchant) puis prend le Fossile Helix (case (14,7), on parle depuis (14,8))."""
-        for _ in range(3):
-            s.talk_at((14, 8), 'UP', 24)
-            if s.getflag('FLAG_GOT_FOSSIL_FROM_MT_MOON'): log('  fossile pris'); return True
+        old = getattr(s, '_healing', False); s._healing = True      # pas de trajet au Centre au milieu de la scene (il abandonnait le fossile)
+        try:
+            for _ in range(3):
+                s.talk_at((14, 8), 'UP', 24)
+                if s.getflag('FLAG_GOT_FOSSIL_FROM_MT_MOON'): log('  fossile pris'); return True
+        finally: s._healing = old
         log('BLOCK fossile non pris', s.pos()); s.save('nofossil'); return False
     def pause_to_free(s, maxn=300, shot=None):
         return s.scene(maxn=maxn, shot=shot)
