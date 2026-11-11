@@ -40,7 +40,9 @@ class Player(Real):
             s.talk_script('Chairman', 40, 'chairman')
         if not s.getflag('FLAG_GOT_BIKE_VOUCHER'): log('BLOCK bon pour un velo non obtenu'); return False
         if not s.go('CeruleanCity_BikeShop', banned=('Route18_EastEntrance_1F',)): return False
-        s.talk_script('Clerk', 40, 'bikeclerk')
+        for _ in range(3):      # le vendeur est derriere un comptoir : on lui parle depuis la case en face (le pathing generique de talk_obj ne l'atteint pas)
+            if s.approach((9, 4)): s.face('UP'); s.mash(40); s.scene(120)
+            if s.getflag('FLAG_GOT_BICYCLE'): break
         log('  velo :', s.getflag('FLAG_GOT_BICYCLE')); return s.getflag('FLAG_GOT_BICYCLE')
     def grind_map(s, lvl):
         """Carte avec de l'herbe dont les niveaux sauvages sont proches de `lvl`, la plus proche par le graphe."""
