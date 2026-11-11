@@ -174,7 +174,8 @@ class BattleMixin:
         if 'Summary' in nm and s.cb2() != (sym('BattleMainCB2') & ~1):      # ecran de resume = choix de l'attaque a oublier : la moins puissante
             pm = b.party(); a = s.active_slot()
             if a < len(pm):
-                pw = [(b.move(m)['power'] if m else -1, i) for i, m in enumerate(pm[a]['moves'])]
+                HM = {15, 19, 57, 70, 127, 148, 249, 291}      # CS : le jeu refuse de les faire oublier (boucle infinie sur l'ecran de resume)
+                pw = [((b.move(m)['power'] if m else -1) + (10000 if m in HM else 0), i) for i, m in enumerate(pm[a]['moves'])]
                 weakest = min(pw)[1]
                 for _ in range(weakest): s.press('DOWN', 4, 14)
                 s.press('A', 4, 60); s.press('A', 4, 60); return
