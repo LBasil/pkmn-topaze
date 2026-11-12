@@ -604,8 +604,10 @@ def stage_quartz(t):
     assert t.go('CeladonCity_GameCorner', banned=BAN), 'Game Corner inaccessible'
     for _ in range(3):
         if t.getflag('FLAG_OPENED_ROCKET_HIDEOUT'): break
+        if t.sync() != 'CeladonCity_GameCorner': assert t.go('CeladonCity_GameCorner', banned=BAN), 'Game Corner inaccessible'      # un trajet de soin en plein combat nous a deposes au Centre
         gr = [o for o in mj('CeladonCity_GameCorner')['object_events'] if (o['x'], o['y']) == (11, 2) and not (o.get('flag', '0') not in ('0', 0) and t.getflag(o['flag']))]
         if gr: t.talk_obj((11, 2), 10)      # le sbire devant l'affiche (hors camera au depart : on ne se fie pas a live_objs)
+        if t.sync() != 'CeladonCity_GameCorner': continue      # soin pendant le combat : on revient au Game Corner (debut de boucle)
         if t.approach((11, 1)): t.mash(6); t.scene(300)
     t.report('FLAG_OPENED_ROCKET_HIDEOUT')
     assert t.getflag('FLAG_OPENED_ROCKET_HIDEOUT'), 'poster du Game Corner sans effet'
