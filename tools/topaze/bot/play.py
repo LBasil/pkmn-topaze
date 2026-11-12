@@ -94,8 +94,8 @@ class Player(Real):
                 if cb2 == ptl or 'Bag' in nm or 'Menu' in nm: s.press('B', 4, 40)
                 else: s.press('A', 4, 30)
                 if cb2 == ov and s.idle(): break
-            for _ in range(4):
-                if s.cb2() == ov: break
+            for _ in range(12):
+                if s.cb2() == ov and s.idle(): break
                 s.press('B', 4, 40)
             if s.party()[slot]['level'] == lv0 and s.item_qty(68) > 0: log('  bonbon sans effet (niveau', lv0, ') : arret'); break
             n += 1
