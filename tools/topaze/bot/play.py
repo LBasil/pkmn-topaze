@@ -59,6 +59,47 @@ class Player(Real):
         for _ in range(6): s.press('B', 4, 40)
         ok = s.item_qty(item) == 0 or s.repel_steps() > 0
         log('  Repousse utilise :', ok); return ok
+    def use_candies(s, slot=0, upto=None, maxn=60):
+        """Vrai joueur : SAC > Objets > Super Bonbon > UTILISER > Pokemon `slot` (un bonbon par passage), jusqu'a `upto` (niveau) ou plus de bonbons.
+        Attaque a oublier (ecran de resume) : la moins puissante, jamais une CS."""
+        n = 0
+        while n < maxn and s.item_qty(68) > 0:
+            if upto and s.party()[slot]['level'] >= upto: break
+            sb = s.e.u32(0x03005108)
+            pos = [i for i in range(42) if struct.unpack_from('<H', s.e.peek(sb + 0x310 + 4 * i, 4), 0)[0] == 68][0]
+            lv0 = s.party()[slot]['level']
+            s.press('START', 4, 40)
+            for _ in range(9):
+                if s.e.peek(0x02037428, 1)[0] == 2: break
+                s.press('DOWN', 4, 14)
+            s.press('A', 4, 90)
+            for _ in range(4): s.press('LEFT', 4, 30)
+            for _ in range(45): s.press('UP', 4, 8)
+            for _ in range(pos): s.press('DOWN', 4, 14)
+            s.press('A', 4, 50); s.press('A', 4, 90)
+            for _ in range(8):
+                if s.e.peek(sym('gPartyMenu') + 9, 1)[0] == slot: break
+                s.press('DOWN', 4, 20)
+            s.press('A', 4, 60)
+            ov = sym('CB2_Overworld') & ~1; ptl = sym('CB2_UpdatePartyMenu') & ~1
+            for _ in range(60):
+                cb2 = s.cb2(); nm = name_of(cb2)
+                if 'Evolution' in nm or 'SetUpPSS' in nm: s.e.run(20, 0); continue
+                if 'Summary' in nm:
+                    pm = s._brain().party(); HM = {15, 19, 57, 70, 127, 148, 249, 291}
+                    pw = [((s._brain().move(m)['power'] if m else -1) + (10000 if m in HM else 0), i) for i, m in enumerate(pm[slot]['moves'])]
+                    s.e.run(90, 0)
+                    for _ in range(min(pw)[1]): s.press('DOWN', 4, 40)
+                    s.press('A', 4, 60); s.press('A', 4, 60); continue
+                if cb2 == ptl or 'Bag' in nm or 'Menu' in nm: s.press('B', 4, 40)
+                else: s.press('A', 4, 30)
+                if cb2 == ov and s.idle(): break
+            for _ in range(4):
+                if s.cb2() == ov: break
+                s.press('B', 4, 40)
+            if s.party()[slot]['level'] == lv0 and s.item_qty(68) > 0: log('  bonbon sans effet (niveau', lv0, ') : arret'); break
+            n += 1
+        log('  bonbons utilises :', n, 'niveau', s.party()[slot]['level']); return n
     def buy_repel(s, qty=3):
         """Max Repousse au Supermarche de l'Ile 7 (9e article de la liste)."""
         if not s.go('SevenIsland_Mart'): return False

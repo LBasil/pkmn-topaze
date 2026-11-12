@@ -21,12 +21,12 @@ for mp, fl in C.GYMS:
     ld = [k for k in BOOST if k.lower() in pat.lower()]
     if ld:      # niveau exact du duel (niveau de base + bonus de la Reconquete) : on s'entraine AVANT le premier essai
         need = OPP.power(OPP.db()['TRAINER_LEADER_' + TRAINER[ld[0]]])[0] + BOOST[ld[0]] + 2
-        t.too_strong = max(getattr(t, 'too_strong', 0), need); log('  niveau conseille', mp, need); t.ensure(need)
+        t.too_strong = max(getattr(t, 'too_strong', 0), need); log('  niveau conseille', mp, need); t.use_candies(0, upto=need); t.ensure(need)
     for essai in range(4):
         if not t.go(mp + '_Gym'): log('BLOCK arene', mp); break
         C.fight_npc(t, pat, 16)
         if t.getflag(fl): break
-        top = max(q['level'] for q in t.party()); t.too_strong = top + 8; log('  duel perdu : entrainement jusqu au niveau', top + 8); t.ensure(top + 8)
+        top = max(q['level'] for q in t.party()); t.too_strong = top + 8; log('  duel perdu : entrainement jusqu au niveau', top + 8); t.use_candies(0, upto=top + 8); t.ensure(top + 8)
     log('  arene', mp, fl, t.getflag(fl), '%ds' % (time.time() - t1)); t.save('r3_' + mp)
 log('=== arenes', [t.getflag(f) for _, f in C.GYMS])
 assert t.go('IndigoPlateau_PokemonCenter_1F'), 'Centre inaccessible'
