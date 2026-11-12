@@ -200,6 +200,13 @@ static u8 ChooseWildMonLevel(const struct WildPokemon * info)
     }
     mod = hi - lo + 1;
     res = Random() % mod;
+    // Topaze, post-game (Salle d'Honneur franchie, fins 1 et 3) : les zones de fin de jeu (niveau max >= 50) gagnent +10 niveaux,
+    // pour que l'entrainement suive les duels du post-game (fin 2 : monde sauvage silencieux, Zone Safari a part)
+    if (hi >= 50 && FlagGet(FLAG_SYS_GAME_CLEAR) && VarGet(VAR_TOPAZE_ENDING) != 2)
+    {
+        u8 boosted = lo + res + 10;
+        return boosted > 100 ? 100 : boosted;
+    }
     return lo + res;
 }
 
