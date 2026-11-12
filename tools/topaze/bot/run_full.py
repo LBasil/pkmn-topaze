@@ -102,6 +102,7 @@ def exits(name, comp):
                 if k in seen: continue
                 seen.add(k); out.append(('conn', dn, cn, a, b))
     return out
+CLOSED = set()      # passages fermes par le scenario (agents de police) : mis a jour par go() selon les drapeaux
 def route(src_map, src_cell, dst, banned=()):
     """Chemin le plus court de composante en composante jusqu'a la carte dst : liste de sorties (voir exits)."""
     c0s = comps_of(src_map, src_cell)
@@ -112,7 +113,7 @@ def route(src_map, src_cell, dst, banned=()):
         n = q.popleft()
         if (n[0] == dst) if isinstance(dst, str) else (n[0] == dst[0] and n[1] in comps_of(dst[0], dst[1])): end = n; break      # dst : carte, ou (carte, case) = la composante de cette case
         for e in exits(n[0], n[1]):
-            if (n[0], e[1], e[3]) in banned or e[1] in banned: continue
+            if (n[0], e[1], e[3]) in banned or e[1] in banned or (n[0], e[1]) in CLOSED: continue
             for nc in comps_of(e[1], e[4]):
                 nn = (e[1], nc)
                 if nn in prev: continue
@@ -317,6 +318,8 @@ class Auto(T):
             if cur == 'MtMoon_B2F' and not getattr(s, '_healing', False) and not s.getflag('FLAG_GOT_FOSSIL_FROM_MT_MOON'): s.take_fossil()      # les deux fossiles barrent le couloir de la sortie ouest : il faut en prendre un (vanille)
             n_live = s.nav(); n_live.objs = {(o['x'], o['y']) for o in n_live.mj['object_events'] if is_gate(cur, o['graphics_id']) and not (o.get('flag', '0') not in ('0', 0) and s.getflag(o['flag']))}   # objet masque (drapeau HIDE pose) = plus un obstacle
             _NAV[cur] = n_live; _COMP.pop(cur, None)        # la carte courante est lue en direct (barrieres ouvertes par des scripts...)
+            CLOSED.clear()
+            if not s.getflag('FLAG_CHRONDROLIA_RAID_DONE'): CLOSED.add(('FuchsiaCity', 'Route19'))      # la route de mer sud de Parfumia est barree par la police jusqu'au raid de Chronos
             p = s.pos(); rt = route(cur, (p[2], p[3]), target, banned)
             if not rt and s.tele_exit(): continue
             if not rt: log('BLOCK pas de route', cur, (p[2], p[3]), '->', target); s.save('noroute_' + cur); return False
