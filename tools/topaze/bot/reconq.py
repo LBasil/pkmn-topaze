@@ -8,6 +8,11 @@ t.var('VAR_TOPAZE_BOOST', 0)
 t0 = time.time()
 for mp, fl in C.GYMS:
     pat = C.leader_pat(mp); t1 = time.time()
+    objs = RF.mj(mp + '_Gym')['object_events']
+    if not any(pat in o.get('script', '') for o in objs):      # le label du hook n'est pas celui de l'objet (Sabrina...) : on prend le script du chef
+        ld = [o for o in objs if pat.replace('Fight', '').upper() in o['graphics_id']]
+        if ld: pat = ld[0]['script'].split('EventScript_')[1]
+        log('  motif du chef :', pat)
     if t.getflag(fl): continue
     for essai in range(4):
         if not t.go(mp + '_Gym'): log('BLOCK arene', mp); break
