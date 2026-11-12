@@ -32,19 +32,22 @@ for st, mp, need in CHAIN:
     if t.getvar('VAR_REFUGE_STAGE') > st: continue
     t.heal(True)
     for it, q in need: bag_add(t, it, q); log('  objet fourni (a verifier cote jeu) :', it, q)
-    try:
-        if mp in ISL and RF.cur_isle(t) is None: RF.stage_pg_ferry(t)
-        if mp in ISL: RF.go_isle(t, ISL[mp], mp)
-        else: assert t.go(mp), 'inaccessible'
-        t.e.run(60, 0)
-        for k in range(3):
-            if t.getvar('VAR_REFUGE_STAGE') > st: break
-            if not talk_land(t, '_Refuge'): t.talk_script('_Refuge', 40, 'ref%d' % st)
-            for _ in range(8):
-                if not t.inbattle(): break
-                t.finish_battle(maxn=900); t.scene(maxn=300)
-            t.scene(maxn=400)
-    except AssertionError as ex: log('BLOCK poste', st, mp, ex)
+    for essai in range(3):
+        try:
+            if mp in ISL and RF.cur_isle(t) is None: RF.stage_pg_ferry(t)
+            if mp in ISL: RF.go_isle(t, ISL[mp], mp)
+            else: assert t.go(mp), 'inaccessible'
+            t.e.run(60, 0)
+            for k in range(3):
+                if t.getvar('VAR_REFUGE_STAGE') > st: break
+                if not talk_land(t, '_Refuge'): t.talk_script('_Refuge', 40, 'ref%d' % st)
+                for _ in range(8):
+                    if not t.inbattle(): break
+                    t.finish_battle(maxn=900); t.scene(maxn=300)
+                t.scene(maxn=400)
+        except AssertionError as ex: log('BLOCK poste', st, mp, ex)
+        if t.getvar('VAR_REFUGE_STAGE') > st: break
+        top = max(q['level'] for q in t.party()); t.too_strong = top + 5; log('  duel perdu au poste', st, ': entrainement jusqu au niveau', top + 5); t.ensure(top + 5)
     log('POSTE', st, mp, '-> stage', t.getvar('VAR_REFUGE_STAGE'), 'equipe', [(q['level'], q['hp']) for q in t.party()])
     t.save('refuge_%d' % st)
 log('=== FIN REFUGE stage', t.getvar('VAR_REFUGE_STAGE'))
