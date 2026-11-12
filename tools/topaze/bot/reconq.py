@@ -2,6 +2,10 @@ import sys, time
 sys.path.insert(0, '/tmp/gx'); sys.path.insert(0, '/home/claude/pkmn-topaze/tools/topaze/emu/bench')
 from play import *
 import chain_ends as C
+sys.path.insert(0, '/home/claude/pkmn-topaze/tools/topaze/bot')
+import opponents as OPP
+BOOST = {'Brock': 54, 'Misty': 50, 'LtSurge': 45, 'Erika': 41, 'Koga': 38, 'Sabrina': 35, 'Blaine': 32}
+TRAINER = {'Brock': 'BROCK', 'Misty': 'MISTY', 'LtSurge': 'LT_SURGE', 'Erika': 'ERIKA', 'Koga': 'KOGA', 'Sabrina': 'SABRINA', 'Blaine': 'BLAINE'}
 t = Player.resume(sys.argv[1] if len(sys.argv) > 1 else 'end3_done'); RF.R.SURF = True
 log('=== FIN 3 reprise', t.sync(), t.pos()[2:], 'fin', t.getvar('VAR_TOPAZE_ENDING'), [(q['level'], q['hp']) for q in t.party()])
 t.var('VAR_TOPAZE_BOOST', 0)
@@ -14,11 +18,15 @@ for mp, fl in C.GYMS:
         if ld: pat = ld[0]['script'].split('EventScript_')[1]
         log('  motif du chef :', pat)
     if t.getflag(fl): continue
+    ld = [k for k in BOOST if k.lower() in pat.lower()]
+    if ld:      # niveau exact du duel (niveau de base + bonus de la Reconquete) : on s'entraine AVANT le premier essai
+        need = OPP.power(OPP.db()['TRAINER_LEADER_' + TRAINER[ld[0]]])[0] + BOOST[ld[0]] + 2
+        t.too_strong = max(getattr(t, 'too_strong', 0), need); log('  niveau conseille', mp, need); t.ensure(need)
     for essai in range(4):
         if not t.go(mp + '_Gym'): log('BLOCK arene', mp); break
         C.fight_npc(t, pat, 16)
         if t.getflag(fl): break
-        top = max(q['level'] for q in t.party()); t.too_strong = top + 5; log('  duel perdu : entrainement jusqu au niveau', top + 5); t.ensure(top + 5)
+        top = max(q['level'] for q in t.party()); t.too_strong = top + 8; log('  duel perdu : entrainement jusqu au niveau', top + 8); t.ensure(top + 8)
     log('  arene', mp, fl, t.getflag(fl), '%ds' % (time.time() - t1)); t.save('r3_' + mp)
 log('=== arenes', [t.getflag(f) for _, f in C.GYMS])
 assert t.go('IndigoPlateau_PokemonCenter_1F'), 'Centre inaccessible'
