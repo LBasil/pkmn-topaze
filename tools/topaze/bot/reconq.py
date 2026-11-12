@@ -1,8 +1,8 @@
 import sys, time
-sys.path.insert(0, '/tmp/gx'); sys.path.insert(0, '/home/claude/pkmn-topaze/tools/topaze/emu/bench')
+sys.path.insert(0, '/tmp/gx'); sys.path.append('/home/claude/pkmn-topaze/tools/topaze/emu/bench')
 from play import *
 import chain_ends as C
-sys.path.insert(0, '/home/claude/pkmn-topaze/tools/topaze/bot')
+sys.path.append('/home/claude/pkmn-topaze/tools/topaze/bot')
 import opponents as OPP
 BOOST = {'Brock': 54, 'Misty': 50, 'LtSurge': 45, 'Erika': 41, 'Koga': 38, 'Sabrina': 35, 'Blaine': 32}
 TRAINER = {'Brock': 'BROCK', 'Misty': 'MISTY', 'LtSurge': 'LT_SURGE', 'Erika': 'ERIKA', 'Koga': 'KOGA', 'Sabrina': 'SABRINA', 'Blaine': 'BLAINE'}
