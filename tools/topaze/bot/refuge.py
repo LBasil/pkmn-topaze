@@ -17,6 +17,9 @@ def bag_add(t, item, qty):
     for k, b in enumerate(struct.pack('<HH', iid, q ^ key)): t.e.cmd('poke8 %x %x' % (a + k, b))
 def talk_land(t, pat, face_n=40):
     pos = t.find_obj(pat); n = t.nav()
+    if pos is None:      # PNJ hors camera a l'arrivee : on prend sa position dans la carte
+        pos = next(((o['x'], o['y']) for o in RF.mj(t.sync())['object_events'] if pat in o.get('script', '')), None)
+        if pos is None: return False
     for dx, dy, fc in ((0, 1, 'UP'), (0, -1, 'DOWN'), (-1, 0, 'RIGHT'), (1, 0, 'LEFT')):
         c = (pos[0] + dx, pos[1] + dy)
         if not (0 <= c[0] < n.w and 0 <= c[1] < n.h) or n.blocked(*c) or (n.attr(*c) & 0x1ff) in RF.R.WATER: continue
